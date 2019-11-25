@@ -1,5 +1,5 @@
 ---
-title: Element <clear> dla <listeners> dla <source>
+title: Element <clear> dla <listeners> <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,23 +7,23 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 05c20040ef59f4dee6b15bbe0b0369281b532754
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4567f236397435e89371ca4c80730ff964fddd21
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697189"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088931"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<clear > elementu \<listeners > dla @no__t 2source >
+# <a name="clear-element-for-listeners-for-source"></a>\<Wyczyść element > dla odbiorników \<> dla \<źródła >
 Czyści kolekcję `Listeners` dla źródła śledzenia.  
-  
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1clear >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<system. diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sources**](sources-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**Source**](source-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<odbiorników**](listeners-element-for-source.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<wyczyść >**
+
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -50,13 +50,13 @@ Czyści kolekcję `Listeners` dla źródła śledzenia.
 |`listeners`|Określa detektory, które zbierają, przechowują i rozsyłają komunikaty.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element `<clear>` usuwa wszystkie odbiorniki z kolekcji `Listeners` dla źródła śledzenia, w tym <xref:System.Diagnostics.DefaultTraceListener>. Można użyć elementu `<clear>` przed użyciem elementu `<add>`, aby mieć pewność, że w kolekcji nie ma żadnych innych aktywnych odbiorników.  
+ Element `<clear>` usuwa wszystkie odbiorniki z kolekcji `Listeners` dla źródła śledzenia, w tym <xref:System.Diagnostics.DefaultTraceListener>. Można użyć elementu `<clear>` przed użyciem elementu `<add>`, aby się upewnić, że nie ma żadnych innych aktywnych odbiorników w kolekcji.  
   
 ## <a name="configuration-file"></a>Plik konfiguracji  
  Ten element może być używany w pliku konfiguracji komputera (Machine. config) i w pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać elementu `<clear>` przed użyciem elementów `<add>`, aby dodać odbiorniki `console` i `textListener` do kolekcji `Listeners` dla źródła śledzenia `TraceSourceApp`.  
+ Poniższy przykład pokazuje, jak używać elementu `<clear>` przed użyciem elementów `<add>` do dodawania odbiorników `console` i `textListener` do kolekcji `Listeners` dla źródła śledzenia `TraceSourceApp`.  
   
 ```xml  
 <configuration>  

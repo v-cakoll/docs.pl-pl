@@ -4,12 +4,12 @@ description: Poznaj składniki inżynierii funkcji obsługiwane w programie ML.N
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 25da3cceb3c9090661b34254ed240207aaf3b9d7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb191b1688dce8f703bdabcd220eb39efe68fd48
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929254"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977233"
 ---
 # <a name="data-transformations"></a>Przekształcenia danych
 
@@ -21,9 +21,9 @@ Przekształcenia danych są używane do:
 
 Przekształcenia w tym przewodniku zwracają klasy implementujące interfejs [IEstimator](xref:Microsoft.ML.IEstimator%601) . Przekształcenia danych można łączyć ze sobą. Każda transformacja oczekuje i tworzy dane określonych typów i formatów, które są określone w połączonej dokumentacji referencyjnej.
 
-Niektóre przekształcenia danych wymagają danych szkoleniowych do obliczenia ich parametrów. Na przykład: <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> transformator oblicza średnią i wariancję danych szkoleniowych `Fit()` podczas operacji i `Transform()` używa tych parametrów w operacji. 
+Niektóre przekształcenia danych wymagają danych szkoleniowych do obliczenia ich parametrów. Na przykład: transformator <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> oblicza średnią i wariancję danych szkoleniowych podczas operacji `Fit()` i używa tych parametrów w operacji `Transform()`.
 
-Inne przekształcenia danych nie wymagają danych szkoleniowych. Na przykład: <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> transformacja może `Transform()` wykonać operację bez zaobserwować `Fit()` żadnych danych szkoleniowych podczas operacji.
+Inne przekształcenia danych nie wymagają danych szkoleniowych. Na przykład: transformacja <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> może wykonać operację `Transform()` bez wyszukania jakichkolwiek danych szkoleniowych podczas operacji `Fit()`.
 
 ## <a name="column-mapping-and-grouping"></a>Mapowanie i grupowanie kolumn
 
@@ -62,7 +62,7 @@ Inne przekształcenia danych nie wymagają danych szkoleniowych. Na przykład: <
 
 | Transformacja | Definicja |
 | --- | --- |
-| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Przekształcanie kolumny tekstowej w tablicę zmiennoprzecinkową znormalizowanych ngrams i liczby char-Grams | 
+| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Przekształcanie kolumny tekstowej w tablicę zmiennoprzecinkową znormalizowanych ngrams i liczby char-Grams |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords*> | Dzielenie jednej lub więcej kolumn tekstowych na pojedyncze słowa |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoCharactersAsKeys*> | Dzielenie jednej lub więcej kolumn tekstowych na pojedyncze znaki zmiennoprzecinkowe w zestawie tematów |
 | <xref:Microsoft.ML.TextCatalog.NormalizeText*> | Zmień wielkość liter, Usuń znaki diakrytyczne, znaki interpunkcyjne i cyfry |
@@ -80,7 +80,7 @@ Inne przekształcenia danych nie wymagają danych szkoleniowych. Na przykład: <
 | Transformacja | Definicja |
 | --- | --- |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> | Konwertuj obraz na skalę odcieni szarooci |
-| <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToImage*> | Konwertuj wektor pikseli na<xref:Microsoft.ML.Transforms.Image.ImageDataViewType> |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToImage*> | Konwertuj wektor pikseli na <xref:Microsoft.ML.Transforms.Image.ImageDataViewType> |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*> | Konwersja pikseli z obrazu wejściowego do wektora liczb |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*> | Ładowanie obrazów z folderu do pamięci |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*> | Zmień rozmiar obrazów |

@@ -2,12 +2,12 @@
 title: Inspektorzy komunikatów
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 01553084aa049688cd05fa36e46fb6f67983fb21
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7b8cc0f8e8aa0544c531566a8fe35f54a3914896
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424150"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977308"
 ---
 # <a name="message-inspectors"></a>Inspektorzy komunikatów
 W tym przykładzie przedstawiono sposób wdrażania i konfigurowania inspektorów komunikatów klienta i usługi.  
@@ -19,7 +19,7 @@ W tym przykładzie przedstawiono sposób wdrażania i konfigurowania inspektoró
 ## <a name="message-inspector"></a>Inspektor komunikatów  
  Inspektorzy komunikatów klienta implementują interfejs <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> i inspektorów komunikatów usługi implementują interfejs <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector>. Implementacje mogą być połączone w jedną klasę, aby utworzyć inspektora komunikatów, który działa po obu stronach. Ten przykład implementuje ten połączony Inspektor komunikatów. Inspektor jest zbudowany w zestawie schematów, do których są sprawdzane komunikaty przychodzące i wychodzące, i umożliwia deweloperom określenie, czy wiadomości przychodzące lub wychodzące są weryfikowane oraz czy inspektor znajduje się w trybie wysyłania lub klienta, który ma wpływ na obsługę błędów, jak opisano w dalszej części tego tematu.  
   
-```csharp  
+```csharp
 public class SchemaValidationMessageInspector : IClientMessageInspector, IDispatchMessageInspector  
 {  
     XmlSchemaSet schemaSet;  
@@ -206,7 +206,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
   
  Poniższa klasa `SchemaValidationBehavior` jest zachowaniem używanym do dodawania inspektora komunikatów tego przykładu do klienta lub środowiska uruchomieniowego wysyłania. Implementacja jest raczej podstawowa w obu przypadkach. W <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> i <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A>Inspektor komunikatów jest tworzony i dodawany do <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> kolekcji odpowiedniego środowiska uruchomieniowego.  
   
-```csharp  
+```csharp
 public class SchemaValidationBehavior : IEndpointBehavior  
 {  
     XmlSchemaSet schemaSet;   
@@ -299,7 +299,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
   
  Zastąpiona metoda `CreateBehavior` przekształca dane konfiguracji w obiekt zachowań, gdy środowisko uruchomieniowe szacuje dane konfiguracyjne podczas kompilacji klienta lub punktu końcowego.  
   
-```csharp  
+```csharp
 public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement  
 {  
     public SchemaValidationBehaviorExtensionElement()  

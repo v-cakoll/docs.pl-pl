@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: 02a964506d976cb10f3f28f83f0655fecc447e59
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 46c18ab540c90c4147514685c2acc824755b435f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582763"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976863"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Rozszerzanie modelu aplikacji Visual Basic
 
@@ -82,6 +82,7 @@ Jeśli aplikacja jest normalną aplikacją (aplikacja o wielu wystąpieniach) lu
  Konstruktor <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> wywołuje właściwość <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>, aby określić, który aparat renderowania tekstu ma być używany dla formularzy aplikacji. Domyślnie właściwość <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> zwraca `False`, co oznacza, że używany jest aparat renderowania tekstu GDI, który jest domyślny w Visual Basic 2005 i nowszych wersjach. Można zastąpić Właściwość <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>, aby zwracała `True`, co oznacza, że używany jest aparat renderowania tekstu GDI+, który jest wartością domyślną w Visual Basic .NET 2002 i Visual Basic .NET 2003.
 
 ## <a name="configuring-the-application"></a>Konfigurowanie aplikacji
+
  W ramach modelu aplikacji Visual Basic Klasa <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> udostępnia chronione właściwości, które konfigurują aplikację. Te właściwości należy ustawić w konstruktorze klasy implementującej.
 
  W domyślnym projekcie Windows Forms **Projektant projektu** tworzy kod służący do ustawiania właściwości przy użyciu ustawień projektanta. Właściwości są używane tylko wtedy, gdy aplikacja jest uruchamiana. ustawienie ich po uruchomieniu aplikacji nie ma żadnego wpływu.

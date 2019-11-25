@@ -2,12 +2,12 @@
 title: Przykład strumieniowych kanałów informacyjnych
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 1eb9f2194b2c7e4879cf9e443fea337c73986361
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ede1dbb4f5c682b8182dda4888a9cbd373b95dd8
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425358"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976372"
 ---
 # <a name="streaming-feeds-sample"></a>Przykład strumieniowych kanałów informacyjnych
 Ten przykład pokazuje, jak zarządzać źródłami zespolonymi zawierającymi dużą liczbę elementów. Na serwerze przykład ilustruje, jak opóźnić tworzenie pojedynczych obiektów <xref:System.ServiceModel.Syndication.SyndicationItem> w kanale informacyjnym aż do momentu zapisania elementu w strumieniu sieciowym.  
@@ -33,7 +33,7 @@ interface IStreamingFeedService
   
  Usługa implementuje ten kontrakt przy użyciu klasy `ItemGenerator`, aby utworzyć potencjalnie nieskończony strumień wystąpień <xref:System.ServiceModel.Syndication.SyndicationItem> przy użyciu iteratora, jak pokazano w poniższym kodzie.  
   
-```csharp  
+```csharp
 class ItemGenerator  
 {  
     public IEnumerable<SyndicationItem> GenerateItems()  
@@ -51,7 +51,7 @@ class ItemGenerator
   
  Podczas tworzenia źródła danych przez implementację usługi, zamiast buforowanej kolekcji elementów zostanie użyta wartość wyjściowa `ItemGenerator.GenerateItems()`.  
   
-```csharp  
+```csharp
 public Atom10FeedFormatter StreamedFeed()  
 {  
     SyndicationFeed feed = new SyndicationFeed("Streamed feed", "Feed to test streaming", null);  

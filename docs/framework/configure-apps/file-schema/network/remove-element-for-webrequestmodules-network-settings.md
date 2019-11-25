@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: f8209ea89ac8cd214389feddee8c475e10bc939a
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: ca3a78a491c61b6e23dab0f96eebceb3157706ae
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697819"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089136"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<remove > elementu webRequestModules (Ustawienia sieci)
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<usunąć elementu > dla webRequestModules (Ustawienia sieci)
 Usuwa niestandardowy moduł żądania sieci Web z aplikacji.  
   
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<usuń >**
   
 ## <a name="syntax"></a>Składnia  
   

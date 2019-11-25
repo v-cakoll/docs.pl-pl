@@ -1,16 +1,16 @@
 ---
-title: 'Instrukcje: tworzenie usługi WCF komunikującej się przez protokół WebSockets'
+title: 'Instrukcje: Tworzenie usługi WCF komunikującej się przez protokół WebSockets'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 706c2886bda9497835d98eeeb594e68c2191d8d8
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8f8cf715269fd0ed67e2265eee4139a509f70cd1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970002"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977139"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Instrukcje: tworzenie usługi WCF komunikującej się przez protokół WebSockets
-Usługi i klienci WCF mogą używać <xref:System.ServiceModel.NetHttpBinding> powiązania do komunikacji za pośrednictwem obiektów WebSockets.  Usługa WebSockets zostanie użyta, <xref:System.ServiceModel.NetHttpBinding> gdy określi kontrakt usługi definiuje kontrakt wywołania zwrotnego. W tym temacie opisano sposób implementacji usługi WCF i klienta, który używa programu <xref:System.ServiceModel.NetHttpBinding> do komunikacji za pośrednictwem usług WebSockets.  
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Instrukcje: Tworzenie usługi WCF komunikującej się przez protokół WebSockets
+Usługi i klienci WCF mogą używać powiązania <xref:System.ServiceModel.NetHttpBinding>, aby komunikować się za pośrednictwem obiektów WebSockets.  Usługa WebSockets zostanie użyta, gdy <xref:System.ServiceModel.NetHttpBinding> określa kontrakt usługi definiuje kontrakt wywołania zwrotnego. W tym temacie opisano sposób implementacji usługi i klienta programu WCF, który używa <xref:System.ServiceModel.NetHttpBinding> do komunikowania się za pośrednictwem obiektów WebSockets.  
   
 ### <a name="define-the-service"></a>Definiowanie usługi  
   
@@ -27,7 +27,7 @@ Usługi i klienci WCF mogą używać <xref:System.ServiceModel.NetHttpBinding> p
   
      Ta umowa zostanie wdrożona przez aplikację kliencką, aby umożliwić usłudze wysyłanie komunikatów z powrotem do klienta programu.  
   
-2. Zdefiniuj kontrakt usługi i określ `IStockQuoteCallback` interfejs jako kontrakt wywołania zwrotnego.  
+2. Zdefiniuj kontrakt usługi i określ interfejs `IStockQuoteCallback` jako kontrakt wywołania zwrotnego.  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -42,24 +42,24 @@ Usługi i klienci WCF mogą używać <xref:System.ServiceModel.NetHttpBinding> p
   
     ```csharp
     public class StockQuoteService : IStockQuoteService  
+    {  
+        public async Task StartSendingQuotes()  
         {  
-            public async Task StartSendingQuotes()  
+            var callback = OperationContext.Current.GetCallbackChannel<IStockQuoteCallback>();  
+            var random = new Random();  
+            double price = 29.00;  
+
+            while (((IChannel)callback).State == CommunicationState.Opened)  
             {  
-                var callback = OperationContext.Current.GetCallbackChannel<IStockQuoteCallback>();  
-                var random = new Random();  
-                double price = 29.00;  
-  
-                while (((IChannel)callback).State == CommunicationState.Opened)  
-                {  
-                    await callback.SendQuote("MSFT", price);  
-                    price += random.NextDouble();  
-                    await Task.Delay(1000);  
-                }  
+                await callback.SendQuote("MSFT", price);  
+                price += random.NextDouble();  
+                await Task.Delay(1000);  
             }  
         }  
+    }  
     ```  
   
-     Operacja `StartSendingQuotes` usługi jest zaimplementowana jako wywołanie asynchroniczne. Pobieramy kanał wywołania zwrotnego przy `OperationContext` użyciu i Jeśli kanał jest otwarty, my wywołamy wywołanie asynchroniczne w kanale wywołania zwrotnego.  
+     Operacja usługi `StartSendingQuotes` jest zaimplementowana jako wywołanie asynchroniczne. Pobieramy kanał wywołania zwrotnego przy użyciu `OperationContext` i Jeśli kanał jest otwarty, my wywołujemy wywołanie asynchroniczne w kanale wywołania zwrotnego.  
   
 4. Konfigurowanie usługi  
   
@@ -90,7 +90,7 @@ Usługi i klienci WCF mogą używać <xref:System.ServiceModel.NetHttpBinding> p
     </configuration>  
     ```  
   
-     Plik konfiguracji usługi opiera się na domyślnych punktach końcowych programu WCF. Sekcja służy do określenia `NetHttpBinding` , że powinny być używane dla utworzonych domyślnych punktów końcowych. `<protocolMapping>`  
+     Plik konfiguracji usługi opiera się na domyślnych punktach końcowych programu WCF. Sekcja `<protocolMapping>` służy do określenia, czy `NetHttpBinding` mają być używane dla utworzonych domyślnych punktów końcowych.  
   
 ### <a name="define-the-client"></a>Definiowanie klienta  
   

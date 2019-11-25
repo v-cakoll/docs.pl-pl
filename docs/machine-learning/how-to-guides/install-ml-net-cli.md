@@ -3,12 +3,12 @@ title: Jak zainstalować narzędzie ML.NET interfejsu wiersza polecenia (CLI)
 description: Omówienie i instalacja narzędzia ML.NET interfejsu wiersza polecenia (CLI).
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: baced9bbcc72153458d42d4b6d8206921bf187b8
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118002"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977082"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Jak zainstalować narzędzie ML.NET interfejsu wiersza polecenia (CLI)
 
@@ -23,13 +23,13 @@ Interfejs wiersza polecenia ML.NET — narzędzie, które można uruchomić w do
 
 - Obowiązkowe [Visual Studio 2017 lub 2019](https://visualstudio.microsoft.com/vs/)
 
-Można uruchomić wygenerowane C# projekty kodu za pomocą programu Visual Studio F5 lub z `dotnet run` (interfejs wiersza polecenia platformy .NET Core).
+Można uruchomić wygenerowane C# projekty kodu za pomocą programu Visual Studio F5 lub `dotnet run` (interfejs wiersza polecenia platformy .NET Core).
 
-Uwaga: Jeśli po zainstalowaniu [zestawu .NET Core 2,2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) `dotnet tool` polecenie nie działa, Wyloguj się z systemu Windows i zaloguj się ponownie.
+Uwaga: Jeśli po zainstalowaniu [zestawu .NET Core 2,2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) polecenie `dotnet tool` nie działa, Wyloguj się z systemu Windows i zaloguj się ponownie.
 
 ## <a name="install"></a>Zainstaluj
 
-Interfejs wiersza polecenia ML.NET jest instalowany jak każdy inny narzędzie globalne dotnet. Używasz polecenia interfejs wiersza polecenia platformy .NET Core `dotnet tool install` . 
+Interfejs wiersza polecenia ML.NET jest instalowany jak każdy inny narzędzie globalne dotnet. Używasz interfejs wiersza polecenia platformy .NET Core `dotnet tool install` polecenia.
 
 Poniższy przykład pokazuje, jak zainstalować interfejs wiersza polecenia ML.NET w domyślnej lokalizacji źródła danych NuGet:
 
@@ -86,7 +86,7 @@ dotnet tool update -g mlnet
 
 ## <a name="set-up-cli-suggestions-tab-based-auto-completion"></a>Konfigurowanie sugestii interfejsu wiersza polecenia (funkcja automatycznego uzupełniania oparta na kartach)
 
-Ponieważ interfejs wiersza polecenia ml.NET jest oparty `System.CommandLine`na systemie, ma wbudowaną obsługę uzupełniania kart.
+Ponieważ interfejs wiersza polecenia ML.NET jest oparty na `System.CommandLine`, ma wbudowaną obsługę uzupełniania kart.
 
 Przykład sposobu, w jaki działa funkcja automatycznego uzupełniania kart, jest pokazana w następującej animacji:
 
@@ -94,17 +94,17 @@ Przykład sposobu, w jaki działa funkcja automatycznego uzupełniania kart, jes
 
 "Autouzupełnianie oparte na kartach" (sugestie dotyczące parametrów) działają w programie *Windows PowerShell* i *macOS/Linux bash* , ale nie będzie działać w programie *Windows cmd*.
 
-Aby włączyć tę funkcję, w bieżącej wersji zapoznawczej użytkownik końcowy musi wykonać kilka kroków raz na powłokę poniżej. Po wykonaniu tych czynności uzupełnianie będzie działało dla wszystkich aplikacji, które `System.CommandLine` zostały utworzone przy użyciu takiego interfejsu wiersza polecenia ml.NET.
+Aby włączyć tę funkcję, w bieżącej wersji zapoznawczej użytkownik końcowy musi wykonać kilka kroków raz na powłokę poniżej. Po wykonaniu tej czynności uzupełnianie będzie działało dla wszystkich aplikacji pisanych przy użyciu `System.CommandLine`, takich jak interfejs wiersza polecenia ML.NET.
 
 Na komputerze, na którym chcesz włączyć uzupełnianie, musisz wykonać dwie czynności.
 
-1. Zainstaluj narzędzie `dotnet-suggest` globalne, uruchamiając następujące polecenie:
+1. Zainstaluj `dotnet-suggest` narzędzie globalne, uruchamiając następujące polecenie:
 
     ```dotnetcli
     dotnet tool install dotnet-suggest -g
     ```
 
-2. Dodaj odpowiedni skrypt podkładki do profilu powłoki. Może być konieczne utworzenie pliku profilu powłoki. Skrypt podkładki przekaże żądania ukończenia z powłoki do `dotnet-suggest` narzędzia, które deleguje do odpowiedniej `System.CommandLine`aplikacji opartej na usłudze.
+2. Dodaj odpowiedni skrypt podkładki do profilu powłoki. Może być konieczne utworzenie pliku profilu powłoki. Skrypt podkładki przekaże żądania ukończenia z powłoki do narzędzia `dotnet-suggest`, które deleguje do odpowiedniej aplikacji opartej na `System.CommandLine`.
 
     - W przypadku bash Dodaj zawartość elementu [dotnet-sugerował-podkładkę. bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) do `~/.bash_profile`.
 
@@ -112,7 +112,7 @@ Na komputerze, na którym chcesz włączyć uzupełnianie, musisz wykonać dwie 
 
     ```console
     echo $profile
-    ``` 
+    ```
 
 (W przypadku innych powłok należy [poszukać](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) lub otworzyć [problem](https://github.com/dotnet/System.CommandLine/issues)).
 
@@ -120,7 +120,7 @@ Na komputerze, na którym chcesz włączyć uzupełnianie, musisz wykonać dwie 
 
 Interfejs wiersza polecenia ML.NET można zainstalować w katalogu domyślnym lub w określonej lokalizacji. Domyślne katalogi są następujące:
 
-| OS          | Ścieżka                          |
+| Macintosh          | Ścieżka                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -136,5 +136,5 @@ W takim przypadku interfejs wiersza polecenia platformy .NET Core nie dodaje aut
 
 - [Samouczek dotyczący "Wprowadzenie za pomocą narzędzia interfejsu wiersza polecenia ML.NET"](../tutorials/mlnet-cli.md)
 - [Jak automatycznie uczenie modeli za pomocą narzędzia interfejsu wiersza polecenia ML.NET](../automate-training-with-cli.md)
-- [Przewodnik dotyczący poleceń autouczenia interfejsu wiersza polecenia ML.NET](../reference/ml-net-cli-reference.md) 
+- [Przewodnik dotyczący poleceń autouczenia interfejsu wiersza polecenia ML.NET](../reference/ml-net-cli-reference.md)
 - [Dane telemetryczne w interfejsie wiersza polecenia ML.NET](../resources/ml-net-cli-telemetry.md)

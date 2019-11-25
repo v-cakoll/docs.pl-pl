@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <ipv6> element
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-ms.openlocfilehash: bf04b16682c2c1bc677fecbd6dc966090c77e1da
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: c16949171d082bd02abb0a02db83c2e71c2f17df
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698131"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088136"
 ---
-# <a name="ipv6-element-network-settings"></a>\<ipv6 >, element (Ustawienia sieci)
+# <a name="ipv6-element-network-settings"></a>\<> IPv6, element (Ustawienia sieci)
 Włącza odpowiedzi protokołu internetowego w wersji 6 (IPv6) od przestarzałych elementów członkowskich klasy <xref:System.Net.Dns>.  
-  
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<ipv6 >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](settings-element-network-settings.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ipv6 >**
+
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -50,7 +50,7 @@ Włącza odpowiedzi protokołu internetowego w wersji 6 (IPv6) od przestarzałyc
 |[Ustawienia](settings-element-network-settings.md)|Konfiguruje podstawowe opcje sieci dla przestrzeni nazw <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Uwagi  
- To ustawienie umożliwia obsługę protokołu IPv6 dla przestarzałych elementów członkowskich klasy <xref:System.Net.Dns>: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A> i <xref:System.Net.Dns.Resolve%2A>. W przypadku innych elementów członkowskich przestrzeni nazw <xref:System.Net?displayProperty=nameWithType> adresy IPv6 mogą być zwracane w przypadku włączenia protokołu IPv6 w systemie operacyjnym.  
+ To ustawienie umożliwia obsługę protokołu IPv6 dla przestarzałych elementów członkowskich klasy <xref:System.Net.Dns>: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>i <xref:System.Net.Dns.Resolve%2A>. W przypadku innych elementów członkowskich <xref:System.Net?displayProperty=nameWithType> można zwrócić adresy IPv6, jeśli w systemie operacyjnym jest włączony protokół IPv6.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  

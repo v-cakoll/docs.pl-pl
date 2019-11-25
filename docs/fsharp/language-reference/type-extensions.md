@@ -1,13 +1,13 @@
 ---
 title: Rozszerzenia typu
 description: Dowiedz F# się, jak rozszerzenia typów umożliwiają dodawanie nowych elementów członkowskich do wcześniej zdefiniowanego typu obiektu.
-ms.date: 02/08/2019
-ms.openlocfilehash: 5d31d87095d3381e66dc32da4b6d7bb746886406
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 11/04/2019
+ms.openlocfilehash: d26d7b2b507f04e9cb68ade4c0409403643f74ba
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106842"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978248"
 ---
 # <a name="type-extensions"></a>Rozszerzenia typu
 
@@ -66,11 +66,11 @@ type Variant with
 
 Użycie rozszerzenia typu umożliwia rozdzielenie następujących elementów:
 
-- Deklaracja `Variant` typu
-- Funkcja drukowania `Variant` klasy w zależności od jej "kształtu"
-- Sposób uzyskiwania dostępu do funkcji drukowania przy użyciu notacji Object `.`-style
+- Deklaracja typu `Variant`
+- Funkcja drukowania klasy `Variant` w zależności od jej "kształtu"
+- Sposób dostępu do funkcji drukowania przy użyciu notacji `.`w stylu obiektu
 
-Jest to alternatywa dla definiowania wszystkiego jako elementu członkowskiego `Variant`. Chociaż nie jest to jeszcze lepsze rozwiązanie, może to być przejrzysta reprezentacja funkcji w niektórych sytuacjach.
+Jest to alternatywa dla definiowania wszystkiego jako elementu członkowskiego na `Variant`. Chociaż nie jest to jeszcze lepsze rozwiązanie, może to być przejrzysta reprezentacja funkcji w niektórych sytuacjach.
 
 Wewnętrzne rozszerzenia typów są kompilowane jako elementy członkowskie typu, które rozszerzają i pojawiają się w typie, gdy typ jest rozpatrywany przez odbicie.
 
@@ -78,24 +78,21 @@ Wewnętrzne rozszerzenia typów są kompilowane jako elementy członkowskie typu
 
 Opcjonalne rozszerzenie typu to rozszerzenie, które pojawia się poza oryginalnym modułem, przestrzenią nazw lub zestawem rozszerzanego typu.
 
-Opcjonalne rozszerzenia typu są przydatne do rozszerzania typu, który nie został jeszcze zdefiniowany. Przykład:
+Opcjonalne rozszerzenia typu są przydatne do rozszerzania typu, który nie został jeszcze zdefiniowany. Na przykład:
 
 ```fsharp
 module Extensions
-
-open System.Collections.Generic
 
 type IEnumerable<'T> with
     /// Repeat each element of the sequence n times
     member xs.RepeatElements(n: int) =
         seq {
             for x in xs do
-                for i in 1 .. n do
-                    yield x
+                for _ in 1 .. n -> x
         }
 ```
 
-Teraz możesz uzyskać dostęp `RepeatElements` tak, jakby jest <xref:System.Collections.Generic.IEnumerable%601> członkiem, tak długo, jak `Extensions` moduł jest otwarty w zakresie, w którym pracujesz.
+Teraz możesz uzyskiwać dostęp do `RepeatElements` tak, jakby był członkiem <xref:System.Collections.Generic.IEnumerable%601>, tak długo, jak moduł `Extensions` jest otwarty w zakresie, w którym pracujesz.
 
 Rozszerzenia opcjonalne nie są wyświetlane na rozszerzonym typie, gdy są badane według odbicia. Rozszerzenia opcjonalne muszą znajdować się w modułach i są tylko w zakresie, gdy moduł, który zawiera rozszerzenie, jest otwarty lub jest w innym zakresie.
 
@@ -121,9 +118,9 @@ type IEnumerable<'T> with
 
 Nie ma możliwości uzyskania tego kodu do pracy z opcjonalnym rozszerzeniem typu:
 
-- Podobnie jak w przypadku `Sum` , element członkowski ma inne `'T` ograniczenie (`static member get_Zero` i `static member (+)`) niż wartość zdefiniowana przez rozszerzenie typu.
-- Modyfikacja rozszerzenia typu w taki sam sposób jak w przypadku `Sum` , gdy nie będzie już zgodne ze zdefiniowanym `IEnumerable<'T>`ograniczeniem.
-- Zmiana `member this.Sum` na`member inline this.Sum` spowoduje wystąpienie błędu, że ograniczenia typu są niezgodne.
+- W takim przypadku element członkowski `Sum` ma inne ograniczenie dotyczące `'T` (`static member get_Zero` i `static member (+)`) niż zdefiniowane przez rozszerzenie typu.
+- Modyfikowanie rozszerzenia typu tak samo, jak `Sum` nie będzie już zgodne ze zdefiniowanymi ograniczeniami `IEnumerable<'T>`.
+- Zmiana `member this.Sum` na `member inline this.Sum` spowoduje wystąpienie błędu, że ograniczenia typu są niezgodne.
 
 Wymagane są metody statyczne, które "zmiennoprzecinkowe miejsce" i mogą być prezentowane tak, jakby rozszerzali typ. Jest to miejsce, w którym metody rozszerzające stają się niezbędne.
 
@@ -144,7 +141,7 @@ type IEnumerableExtensions() =
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
-Gdy `Sum` jest używany, ten kod będzie wyglądać tak, jakby został zdefiniowany w <xref:System.Collections.Generic.IEnumerable%601>, tak długo, `Extensions` jak został otwarty lub znajduje się w zakresie.
+Gdy jest używany, ten kod będzie wyglądać tak, jakby `Sum` jest zdefiniowany w <xref:System.Collections.Generic.IEnumerable%601>, tak długo, jak `Extensions` został otwarty lub znajduje się w zakresie.
 
 ## <a name="other-remarks"></a>Inne uwagi
 
@@ -152,7 +149,7 @@ Rozszerzenia typu mają również następujące atrybuty:
 
 - Dowolny typ, do którego można uzyskać dostęp, może zostać rozszerzony.
 - Rozszerzenia typu wewnętrznego i opcjonalnego mogą definiować _dowolny_ typ elementu członkowskiego, a nie tylko metody. Możliwe jest również, że właściwości rozszerzenia są na przykład.
-- Token w składni reprezentuje wystąpienie wywoływanego typu, podobnie jak zwykłe elementy członkowskie. [](type-extensions.md#syntax) `self-identifier`
+- Token `self-identifier` w [składni](type-extensions.md#syntax) reprezentuje wystąpienie wywoływanego typu, podobnie jak zwykłe elementy członkowskie.
 - Rozszerzone elementy członkowskie mogą być statyczne lub składowe wystąpienia.
 - Zmienne typu w rozszerzeniu typu muszą być zgodne z ograniczeniami zadeklarowanego typu.
 
@@ -163,7 +160,7 @@ Istnieją również następujące ograniczenia dotyczące rozszerzeń typów:
 - Rozszerzenia typu nie obsługują [statycznie rozpoznanych parametrów typu](./generics/statically-resolved-type-parameters.md).
 - Opcjonalne rozszerzenia typu nie obsługują konstruktorów jako rozszerzeń.
 - Nie można definiować rozszerzeń typu w [skrótach typu](type-abbreviations.md).
-- Rozszerzenia typów są nieprawidłowe dla `byref<'T>` (chociaż można je zadeklarować).
+- Rozszerzenia typów nie są prawidłowe dla `byref<'T>` (chociaż można je zadeklarować).
 - Rozszerzenia typów nie są prawidłowe dla atrybutów (chociaż mogą być deklarowane).
 - Można zdefiniować rozszerzenia, które przeciążą inne metody o tej samej nazwie, F# ale kompilator daje preferencjom metody niewywołujące, jeśli istnieje niejednoznaczne wywołanie.
 

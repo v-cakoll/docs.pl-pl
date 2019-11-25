@@ -5,12 +5,12 @@ ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: f764d2147ec56f8dcc38f96d566ac746cf205650
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 182350cc5143155133385c6fd77986b271f6db91
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799133"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977048"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>Tworzenie prognoz przy użyciu przeszkolonego modelu
 
@@ -55,7 +55,7 @@ class HousingPrediction
 Niezależnie od tego, czy dokonywana jest prognoza pojedyncza, czy wsadowa, należy załadować potok przewidywania do aplikacji. Ten potok zawiera zarówno przekształcenia wstępnego przetwarzania danych, jak i przeszkolony model. Poniższy fragment kodu ładuje potok przewidywania z pliku o nazwie `model.zip`.
 
 ```csharp
-//Create MLContext 
+//Create MLContext
 MLContext mlContext = new MLContext();
 
 // Load Trained Model

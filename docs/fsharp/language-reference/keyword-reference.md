@@ -1,13 +1,13 @@
 ---
 title: Odwołanie do słowa kluczowego
 description: Znajdź linki do informacji o wszystkich słowach F# kluczowych języka.
-ms.date: 05/16/2016
-ms.openlocfilehash: 2be6d078653a4595cbdfe97be7aab8e3b3c10ea9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: 64bb680a0861f4b8287f887ea67edb6fcf4f88a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425085"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976622"
 ---
 # <a name="keyword-reference"></a>Odwołanie do słowa kluczowego
 
@@ -87,7 +87,7 @@ W poniższej tabeli przedstawiono wszystkie F# słowa kluczowe w kolejności alf
 |`when`|[Ograniczenia](./generics/constraints.md)|Używane dla warunków logicznych (w*przypadku funkcji Guard*) w dopasowaniach wzorca i w celu wprowadzenia klauzuli ograniczenia dla parametru typu ogólnego.|
 |`while`|[Pętle: wyrażenie `while...do`](loops-while-do-expression.md)|Wprowadza konstrukcję pętli.|
 |`with`|[Wyrażenia dopasowania](match-expressions.md)<br /><br />[Wyrażenia obiektów](object-expressions.md)<br /><br />[Kopiowanie i aktualizacja wyrażeń rekordów](copy-and-update-record-expressions.md)<br /><br />[Rozszerzenia typu](type-extensions.md)<br /><br />[Wyjątki: wyrażenie `try...with`](./exception-handling/the-try-with-expression.md)|Używane razem ze słowem kluczowym `match` w wyrażeniach dopasowania wzorców. Używane również w wyrażeniach obiektów, rekordach kopiowania i rozszerzeniach w celu wprowadzenia definicji elementów członkowskich i wprowadzenia obsługi wyjątków.|
-|`yield`|[Sekwencje](sequences.md)|Używany w wyrażeniu sekwencji do tworzenia wartości dla sekwencji.|
+|`yield`|[Listy](lists.md), [tablice](arrays.md), [sekwencje](sequences.md)|Używany w wyrażeniu list, tablicy lub sekwencji do tworzenia wartości dla sekwencji. Zazwyczaj można pominąć, ponieważ w większości przypadków jest to niejawne.|
 |`yield!`|[Wyrażenia obliczeń](computation-expressions.md)<br /><br />[Asynchroniczne przepływy pracy](asynchronous-workflows.md)|Używany w wyrażeniu obliczeniowym do dołączania wyniku danego wyrażenia obliczenia do kolekcji wyników dla zawierającego wyrażenie obliczenia.|
 
 Następujące tokeny są zastrzeżone w F# programie, ponieważ są słowami kluczowymi w języku ocaml:

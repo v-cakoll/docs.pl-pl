@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: 30ec24aefcf8c4d1e110238a2c60a958eded5545
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: f3c1a1670139a8262dea449bfff99c7c1c19f088
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699383"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088946"
 ---
-# <a name="assert-element"></a>\<assert > elementu
+# <a name="assert-element"></a>\<Assert > elementu
 Określa, czy podczas wywoływania metody <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> ma być wyświetlane okno komunikatu. określa również nazwę pliku, do którego mają być zapisane wiadomości.  
-  
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<assert >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<system. diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<assert >**
+
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -56,7 +56,7 @@ Określa, czy podczas wywoływania metody <xref:System.Diagnostics.Debug.Assert%
 |`system.diagnostics`|Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, w którym ustawiono przełącznik śledzenia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Oba atrybuty elementu **\<assert >** są opcjonalne. Można wyłączyć okna komunikatów bez określania pliku, w którym mają zostać zapisane komunikaty, lub można określić plik, do którego mają być zapisane komunikaty, pozostawiając pola komunikatów włączone.  
+ Oba atrybuty w **\<assert >** elementu są opcjonalne. Można wyłączyć okna komunikatów bez określania pliku, w którym mają zostać zapisane komunikaty, lub można określić plik, do którego mają być zapisane komunikaty, pozostawiając pola komunikatów włączone.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak wyłączyć wyświetlanie okien komunikatów podczas wywoływania **debugowania. Assert** i Zapisz komunikaty w `c:\log.txt`.  

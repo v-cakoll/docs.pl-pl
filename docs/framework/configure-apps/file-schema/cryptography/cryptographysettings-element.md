@@ -8,20 +8,20 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: 96a8c9accc56274b5cc13dc2a871165857b3a2d9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: ca0a9a4b37f28eb03f58de4fd9b120cb7e654e0c
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699820"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088640"
 ---
-# <a name="cryptographysettings-element"></a>\<cryptographySettings > elementu
+# <a name="cryptographysettings-element"></a>\<element > cryptographySettings
 Zawiera ustawienia kryptografii.  
-  
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<cryptographySettings >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<cryptographySettings >**
+
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -39,8 +39,8 @@ Zawiera ustawienia kryptografii.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[@no__t — 1cryptoNameMapping >](cryptonamemapping-element.md)|Zawiera mapowania klas do przyjaznych nazw.|  
-|[@no__t — 1oidMap >](oidmap-element.md)|Zawiera mapowania identyfikatorów obiektów ASN. 1 (OID) do klas.|  
+|[\<cryptoNameMapping >](cryptonamemapping-element.md)|Zawiera mapowania klas do przyjaznych nazw.|  
+|[\<oidMap >](oidmap-element.md)|Zawiera mapowania identyfikatorów obiektów ASN. 1 (OID) do klas.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -50,7 +50,7 @@ Zawiera ustawienia kryptografii.
 |`mscorlib`|Zawiera element `cryptographySettings`.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać elementu **\<cryptographySettings >** , aby zawierał mapowania nazw kryptograficznych i mapowania identyfikatorów OID. Ten przykład konfiguruje środowisko uruchomieniowe, tak aby <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> zwraca obiekt `MyHashClass`, a Klasa `MyCryptoClass` mapuje do 1.3.36.2.1 identyfikatora obiektu.  
+ Poniższy przykład pokazuje, jak używać elementu **\<cryptographySettings >** , aby zawierał mapowania nazw kryptograficznych i mapowania identyfikatorów OID. Ten przykład umożliwia skonfigurowanie środowiska uruchomieniowego, tak aby <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> zwracał obiekt `MyHashClass`, a Klasa `MyCryptoClass` mapowana na identyfikator obiektu 1.3.36.2.1.  
   
 ```xml  
 <configuration>  

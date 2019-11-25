@@ -8,21 +8,21 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: f3b029e8b931e976bee85c98dd926e020c5b8743
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: c5029a7d1e53c28d0abb232efdc3e0bd2c9658d4
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698278"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088419"
 ---
-# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy >, element (Ustawienia sieci)
+# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<element > defaultHttpCachePolicy (Ustawienia sieci)
 Opisuje, czy buforowanie HTTP jest aktywne i opisuje domyślne zasady buforowania.  
-  
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<defaultHttpCachePolicy >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<requestCaching >** ](requestcaching-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultHttpCachePolicy >**
+
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -56,9 +56,9 @@ Opisuje, czy buforowanie HTTP jest aktywne i opisuje domyślne zasady buforowani
 |[requestCaching](requestcaching-element-network-settings.md)|Kontroluje mechanizm buforowania dla żądań sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość atrybutu `policyLevel` jest równa `BypassCache` lub `Default`.  
+ Wartość atrybutu `policyLevel` jest `BypassCache` lub `Default`.  
   
- Wartości dla elementów `maximumAge`, `maximumStale` i `minimumFresh` są jawnym interwałem czasu w formacie *d*. *hh*:*mm*:*SS* (dni, godziny, minuty i sekundy) lub stałe `minValue` lub `maxValue`, zgodnie z potrzebami.  
+ Wartości dla elementów `maximumAge`, `maximumStale`i `minimumFresh` są jawnym przedziałem czasu o formacie *d*. *hh*:*mm*:*SS* (dni, godziny, minuty i sekundy) albo stałe `minValue` lub `maxValue`, zgodnie z potrzebami.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  

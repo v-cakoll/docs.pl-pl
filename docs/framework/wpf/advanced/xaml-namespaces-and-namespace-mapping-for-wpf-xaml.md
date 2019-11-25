@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 8f381a06aa916be378052d00f0d65f37ef910433
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5cce8ff04dbf163aba95346447f0557da14197da
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740651"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976778"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Przestrzeń nazw XAML i mapowanie przestrzeni nazw dla WPF XAML
 W tym temacie wyjaśniono również obecność i cel dwóch mapowań przestrzeni nazw XAML, jak często znajdują się w tagu głównym pliku XAML WPF. Opisano w nim również, jak generować podobne mapowania dla elementów, które są zdefiniowane w własnym kodzie i/lub w różnych zestawach.  
@@ -112,7 +112,7 @@ End Namespace
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Obszary nazw projektanta i inne prefiksy z szablonów XAML  
  Jeśli pracujesz ze środowiskami deweloperskimi i/lub narzędziami do projektowania dla języka XAML WPF, możesz zauważyć, że istnieją inne zdefiniowane przestrzenie nazw XAML/prefiksy w znaczniku XAML.  
   
- [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] używa przestrzeni nazw projektanta, która jest zwykle mapowana na prefiks `d:`. Nowsze szablony projektów dla WPF mogą wstępnie zmapować tę przestrzeń nazw XAML, aby obsługiwać wymianę kodu XAML między [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] i innymi środowiskami projektowymi. Ta przestrzeń nazw XAML projektowania jest używana do perpetuate stanu projektu, podczas gdy roundtripping interfejs użytkownika oparty na języku XAML w projektancie. Jest on również używany w przypadku funkcji, takich jak `d:IsDataSource`, które umożliwiają tworzenie źródeł danych środowiska uruchomieniowego w projektancie.  
+ Program WPF Designer dla programu Visual Studio używa przestrzeni nazw projektanta, która jest zwykle mapowana na prefiks `d:`. Nowsze szablony projektów dla WPF mogą wstępnie zmapować tę przestrzeń nazw XAML, aby obsługiwać wymianę XAML między programem WPF Designer dla programu Visual Studio i innymi środowiskami projektowymi. Ta przestrzeń nazw XAML projektowania jest używana do perpetuate stanu projektu, podczas gdy roundtripping interfejs użytkownika oparty na języku XAML w projektancie. Jest on również używany w przypadku funkcji, takich jak `d:IsDataSource`, które umożliwiają tworzenie źródeł danych środowiska uruchomieniowego w projektancie.  
   
  Mapowanym innym prefiksem może być `mc:`. `mc:` jest zgodna ze zgodnością znaczników i korzysta ze wzorca zgodności znaczników, który nie musi być specyficzny dla języka XAML. W pewnym zakresie funkcje zgodności znaczników mogą służyć do wymiany kodu XAML między platformami lub między innymi granicami implementacji tworzenia kopii zapasowych, pracy między kontekstami schematu XAML, zapewnienia zgodności z ograniczonymi trybami w projektantach i tak dalej. Aby uzyskać więcej informacji o pojęciach dotyczących zgodności znaczników i sposobie ich powiązania z programem WPF, zobacz [zgodność znaczników (MC:) Funkcje językowe](markup-compatibility-mc-language-features.md).  
   

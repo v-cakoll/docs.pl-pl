@@ -10,19 +10,19 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: f8d50cb4d0112232f86579542650418a1906bda2
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ae4d7f23729f5bd39558902a58d33c6c45572d85
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039844"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977017"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Rozszerz szklaną klatkę na aplikację WPF
 
-W tym temacie pokazano, [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] jak rozciągnąć szklaną ramkę do obszaru klienckiego aplikacji Windows Presentation Foundation (WPF).
+W tym temacie pokazano, jak zwiększyć ramkę szkła systemu Windows Vista do obszaru klienckiego aplikacji Windows Presentation Foundation (WPF).
 
 > [!NOTE]
-> Ten przykład będzie działać tylko na [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] komputerze z uruchomioną Menedżer okien pulpitu (DWM) z włączoną funkcją Glass. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]Wersja Home Basic nie obsługuje przezroczystego efektu szkła. Obszary, które zwykle są renderowane z przezroczystym efektem szkła w innych [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] wersjach, są renderowane nieprzezroczyste.
+> Ten przykład działa tylko na komputerze z systemem Windows Vista z uruchomioną Menedżer okien pulpitu (DWM) z włączoną opcją Glass. System Windows Vista Home Basic nie obsługuje przezroczystego efektu szkła. Obszary, które zwykle są renderowane z przezroczystym efektem szkła w innych wersjach systemu Windows Vista, są renderowane nieprzezroczyste.
 
 ## <a name="example"></a>Przykład
 
@@ -30,7 +30,7 @@ Na poniższej ilustracji przedstawiono szklaną ramkę rozszerzoną na pasku adr
 
 ![Zrzut ekranu przedstawiający ramkę szkła rozszerzoną za paskiem adresu przeglądarki IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Aby można było rozwinąć szklaną ramkę w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, wymagany jest dostęp do niezarządzanego interfejsu API. Poniższy przykład kodu wykonuje wywołanie platformy (PInvoke) dla dwóch interfejsów API, które są konieczne do rozszerania ramki do obszaru klienckiego. Każdy z tych interfejsów API jest zadeklarowany w klasie o nazwie **NonClientRegionAPI**.
+Aby można było rozwinąć szklaną ramkę w aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], wymagany jest dostęp do niezarządzanego interfejsu API. Poniższy przykład kodu wykonuje wywołanie platformy (PInvoke) dla dwóch interfejsów API, które są konieczne do rozszerania ramki do obszaru klienckiego. Każdy z tych interfejsów API jest zadeklarowany w klasie o nazwie **NonClientRegionAPI**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -66,7 +66,7 @@ End Function
 
 ## <a name="example"></a>Przykład
 
-Aby można było użyć funkcji [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) , należy uzyskać uchwyt okna. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]programie uchwyt okna można uzyskać <xref:System.Windows.Interop.HwndSource.Handle%2A> z właściwości <xref:System.Windows.Interop.HwndSource>. W poniższym przykładzie ramka zostanie rozszerzona do obszaru klienckiego w <xref:System.Windows.FrameworkElement.Loaded> zdarzeniu okna.
+Aby można było użyć funkcji [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) , należy uzyskać uchwyt okna. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]można uzyskać uchwyt okna z właściwości <xref:System.Windows.Interop.HwndSource.Handle%2A> <xref:System.Windows.Interop.HwndSource>. W poniższym przykładzie ramka zostanie rozszerzona do obszaru klienckiego w <xref:System.Windows.FrameworkElement.Loaded> zdarzeniu okna.
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -111,7 +111,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano proste okno, w którym ramka zostanie rozszerzona do obszaru klienckiego. Ramka jest rozszerzona za górną krawędzią, która zawiera <xref:System.Windows.Controls.TextBox> dwa obiekty.
+W poniższym przykładzie pokazano proste okno, w którym ramka zostanie rozszerzona do obszaru klienckiego. Ramka jest rozszerzona za górną krawędzią, która zawiera dwa obiekty <xref:System.Windows.Controls.TextBox>.
 
 ```xaml
 <Window x:Class="SDKSample.Window1"
@@ -145,7 +145,7 @@ W poniższym przykładzie pokazano proste okno, w którym ramka zostanie rozszer
 </Window>
 ```
 
-Na poniższej ilustracji przedstawiono szklaną ramkę rozszerzoną [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] do aplikacji:
+Na poniższej ilustracji przedstawiono szklaną ramkę rozszerzoną do aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]:
 
 ![Zrzut ekranu przedstawiający ramkę szklaną rozszerzoną do aplikacji WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 

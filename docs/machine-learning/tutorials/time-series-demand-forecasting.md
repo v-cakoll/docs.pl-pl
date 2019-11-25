@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: e913c27c3501c4c553d7d62f948de31abb3d6f49
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 2482709abfadad0505a40f4c37fd58cee4a2634c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740534"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978201"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Samouczek: prognozowanie popytu na usługę najmu roweru za pomocą analiz szeregów czasowych i ML.NET
 
@@ -37,9 +37,9 @@ Ten przykład to  **C# Aplikacja konsolowa platformy .NET Core** , która progno
 
 ## <a name="understand-the-problem"></a>Omówienie problemu
 
-Aby można było uruchomić wydajną operację, zarządzanie zapasami odgrywa kluczową rolę. Zbyt duża ilość produktu w magazynie oznacza niesprzedane produkty na półkach, które nie generują żadnych przychodów. Zbyt niewielki produkt prowadzi do utraty sprzedaży i klientów, którzy kupują od konkurencji. W związku z tym stałe pytanie to, co jest optymalną ilością zapasów do utrzymania? Analiza szeregów czasowych pomaga udzielić odpowiedzi na te pytania, przeglądając dane historyczne, identyfikując wzorce i korzystając z tych informacji do prognozowania wartości jakiś czas w przyszłości. 
+Aby można było uruchomić wydajną operację, zarządzanie zapasami odgrywa kluczową rolę. Zbyt duża ilość produktu w magazynie oznacza niesprzedane produkty na półkach, które nie generują żadnych przychodów. Zbyt niewielki produkt prowadzi do utraty sprzedaży i klientów, którzy kupują od konkurencji. W związku z tym stałe pytanie to, co jest optymalną ilością zapasów do utrzymania? Analiza szeregów czasowych pomaga udzielić odpowiedzi na te pytania, przeglądając dane historyczne, identyfikując wzorce i korzystając z tych informacji do prognozowania wartości jakiś czas w przyszłości.
 
-Techniką analizowania danych używanych w tym samouczku jest univariate analiza szeregów czasowych. Univariate analiza szeregów czasowych Przyjrzyj się pojedynczej liczbie obserwacji w danym okresie w określonych odstępach czasu, takich jak sprzedaż miesięczna. 
+Techniką analizowania danych używanych w tym samouczku jest univariate analiza szeregów czasowych. Univariate analiza szeregów czasowych Przyjrzyj się pojedynczej liczbie obserwacji w danym okresie w określonych odstępach czasu, takich jak sprzedaż miesięczna.
 
 Algorytm używany w tym samouczku jest [analizą pojedynczego spektrum (SSA)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf). Działanie SSA działa przez złożenie szeregów czasowych w zestawie składników głównych. Te składniki mogą być interpretowane jako części sygnału, które odpowiadają trendom, zakłóceniom, sezonowości i wielu innym czynnikom. Następnie te składniki są ponownie skonstruowane i używane do prognozowania wartości nieco czasu w przyszłości.
 
@@ -62,7 +62,7 @@ Algorytm używany w tym samouczku jest [analizą pojedynczego spektrum (SSA)](ht
 > [!NOTE]
 > Dane używane w tym samouczku pochodzą z [zestawu danych programu UCI rower do udostępniania](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset). Fanaee-T, Hadi i gama, Joao, "zdarzenie Labeling detektory kompletów i wiedza w tle", postęp w sztucznej analizie (2013): PP. 1-15, Springer Berlin Heidelberg, [link sieci Web](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
 
-Oryginalny zestaw danych zawiera kilka kolumn odpowiadających sezonowości i pogoda. W przypadku zwięzłości i ponieważ algorytm używany w tym samouczku wymaga tylko wartości z pojedynczej kolumny liczbowej, oryginalny zestaw danych został skrócony do uwzględnienia tylko następujących kolumn:  
+Oryginalny zestaw danych zawiera kilka kolumn odpowiadających sezonowości i pogoda. W przypadku zwięzłości i ponieważ algorytm używany w tym samouczku wymaga tylko wartości z pojedynczej kolumny liczbowej, oryginalny zestaw danych został skrócony do uwzględnienia tylko następujących kolumn:
 
 - **dteday**: Data obserwacji.
 - **Year**: zakodowany rok obserwacji (0 = 2011, 1 = 2012).
@@ -94,7 +94,7 @@ Poniżej przedstawiono przykład danych:
 
 1. Utwórz klasę `ModelInput`. Poniżej klasy `Program` Dodaj następujący kod.
 
-    [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L120-L127)]    
+    [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L120-L127)]
 
     Klasa `ModelInput` zawiera następujące kolumny:
 
@@ -134,7 +134,7 @@ Poniżej przedstawiono przykład danych:
 
     [!code-csharp [DefineSQLQuery](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L25)]
 
-    Algorytmy ML.NET oczekują, że dane mają być typu [`Single`](xref:System.Single). W związku z tym wartości numeryczne pochodzące z bazy danych, które nie są typu [`Real`](xref:System.Data.SqlDbType), wartości zmiennoprzecinkowej o pojedynczej precyzji, muszą być konwertowane na [`Real`](xref:System.Data.SqlDbType). 
+    Algorytmy ML.NET oczekują, że dane mają być typu [`Single`](xref:System.Single). W związku z tym wartości numeryczne pochodzące z bazy danych, które nie są typu [`Real`](xref:System.Data.SqlDbType), wartości zmiennoprzecinkowej o pojedynczej precyzji, muszą być konwertowane na [`Real`](xref:System.Data.SqlDbType).
 
     Kolumny `Year` i `TotalRental` są typami całkowitymi w bazie danych. Przy użyciu wbudowanej funkcji `CAST` są one rzutowane na `Real`.
 
@@ -146,7 +146,7 @@ Poniżej przedstawiono przykład danych:
 
     [!code-csharp [LoadData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L31)]
 
-1. Zestaw danych zawiera dwa lata dane. Tylko dane z pierwszego roku są używane na potrzeby szkoleń, drugi rok jest przetrzymywany, aby porównać rzeczywiste wartości z prognozami produkowanymi przez model. Filtrowanie danych przy użyciu transformacji [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) . 
+1. Zestaw danych zawiera dwa lata dane. Tylko dane z pierwszego roku są używane na potrzeby szkoleń, drugi rok jest przetrzymywany, aby porównać rzeczywiste wartości z prognozami produkowanymi przez model. Filtrowanie danych przy użyciu transformacji [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) .
 
     [!code-csharp [SplitData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L33-L34)]
 
@@ -158,7 +158,7 @@ Poniżej przedstawiono przykład danych:
 
     [!code-csharp [DefinePipeline](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L36-L45)]
 
-    `forecastingPipeline` pobiera 365 punktów danych przez pierwszy rok i próbuje lub dzieli zestaw danych szeregów czasowych na 30 dni (miesięcznie), zgodnie z parametrem `seriesLength`. Każdy z tych przykładów jest analizowany przez cotygodniowe lub 7-dniowe okno. Podczas określania wartości prognozowanych dla następnych okresów, wartości z poprzednich siedmiu dni są używane do prognozowania. Model jest ustawiony na prognozowanie siedmiu okresów w przyszłości zgodnie z definicją `horizon` parametru. Ze względu na to, że prognoza jest świadomym zgadywaniem, nie zawsze jest poprawna 100%. W związku z tym warto znać zakres wartości w scenariuszach najlepszego i najgorszego przypadku zdefiniowanej przez górną i dolną granicę. W takim przypadku poziom zaufania dla dolnych i górnych granic jest ustawiony na 95%. Poziom zaufania można odpowiednio zwiększyć lub zmniejszyć. Im wyższa wartość, tym szerszy zakres jest między górną i dolną granicą, aby osiągnąć żądany poziom zaufania. 
+    `forecastingPipeline` pobiera 365 punktów danych przez pierwszy rok i próbuje lub dzieli zestaw danych szeregów czasowych na 30 dni (miesięcznie), zgodnie z parametrem `seriesLength`. Każdy z tych przykładów jest analizowany przez cotygodniowe lub 7-dniowe okno. Podczas określania wartości prognozowanych dla następnych okresów, wartości z poprzednich siedmiu dni są używane do prognozowania. Model jest ustawiony na prognozowanie siedmiu okresów w przyszłości zgodnie z definicją `horizon` parametru. Ze względu na to, że prognoza jest świadomym zgadywaniem, nie zawsze jest poprawna 100%. W związku z tym warto znać zakres wartości w scenariuszach najlepszego i najgorszego przypadku zdefiniowanej przez górną i dolną granicę. W takim przypadku poziom zaufania dla dolnych i górnych granic jest ustawiony na 95%. Poziom zaufania można odpowiednio zwiększyć lub zmniejszyć. Im wyższa wartość, tym szerszy zakres jest między górną i dolną granicą, aby osiągnąć żądany poziom zaufania.
 
 1. Użyj metody [`Fit`](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator.Fit*) , aby nauczyć model i dopasować dane do wcześniej zdefiniowanego `forecastingPipeline`.
 
@@ -173,7 +173,7 @@ Oceń, jak dobrze model wykonuje, prognozowanie danych w następnym roku i poró
     ```csharp
     static void Evaluate(IDataView testData, ITransformer model, MLContext mlContext)
     {
-        
+
     }
     ```
 
@@ -200,7 +200,7 @@ Oceń, jak dobrze model wykonuje, prognozowanie danych w następnym roku i poró
     Do oceny wydajności są używane następujące metryki:
 
     - **Średni błąd bezwzględny**: mierzy, jak zamknięte przewidywania są rzeczywistej wartości. Ta wartość mieści się w zakresie od 0 do nieskończoności. Im bliżej wartości 0, tym lepiej jakość modelu.
-    - **Średni błąd oznaczający rdzeń**: podsumowuje błąd thhe w modelu. Ta wartość mieści się w zakresie od 0 do nieskończoności. Im bliżej wartości 0, tym lepiej jakość modelu.
+    - **Średni błąd oznaczający pierwiastek**: zawiera podsumowanie błędu w modelu. Ta wartość mieści się w zakresie od 0 do nieskończoności. Im bliżej wartości 0, tym lepiej jakość modelu.
 
 1. Wyprowadza metryki do konsoli.
 
@@ -278,7 +278,7 @@ Inspekcja wartości rzeczywistych i prognozowanych przedstawia następujące rel
 
 ![Porównanie rzeczywistych i prognoz](./media/time-series-demand-forecasting/forecast.png)
 
-Przewidywane wartości nie przewidywalną dokładnej liczby wynajmu, ale zapewniają bardziej wąski zakres wartości, dzięki którym można przeprowadzić operację w celu zoptymalizowania użycia zasobów. 
+Przewidywane wartości nie przewidywalną dokładnej liczby wynajmu, ale zapewniają bardziej wąski zakres wartości, dzięki którym można przeprowadzić operację w celu zoptymalizowania użycia zasobów.
 
 Nabycia! Pomyślnie skompilowano model uczenia maszynowego w szeregach czasowych do prognozowania popytu na wypożyczenie roweru.
 

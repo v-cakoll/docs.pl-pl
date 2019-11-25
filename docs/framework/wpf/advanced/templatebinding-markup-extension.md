@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 399e4ac223d2fcb728ece2c92d25a087990992f2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 6d89978b907c8f124b5162c97de5edc034cf1e95
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458670"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976669"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding — Rozszerzenie znaczników
 Łączy wartość właściwości w szablonie formantu w taki sposób, że staje się ona wartością innej właściwości w formancie z szablonem.  
@@ -38,7 +38,7 @@ ms.locfileid: "73458670"
 |`sourceProperty`|Inna właściwość zależności, która istnieje w typie tworzonym przez szablon, określony przez jego <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>.<br /><br /> oraz<br /><br /> „Spisana” nazwa właściwości definiowana przez typ inny niż docelowy typ, dla którego jest ustawiany szablon. Jest to w rzeczywistości <xref:System.Windows.PropertyPath>. Zobacz [składnię XAML PropertyPath](propertypath-xaml-syntax.md).|  
   
 ## <a name="remarks"></a>Uwagi  
- `TemplateBinding` to zoptymalizowana postać [powiązania](binding-markup-extension.md) dla scenariuszy szablonów, analogiczna do `Binding` skonstruowana przy użyciu `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding` jest zawsze powiązanie jednokierunkowe, nawet jeśli właściwości są domyślnie powiązane z powiązaniem dwukierunkowym. Obie używane właściwości muszą być właściwościami zależności. Aby uzyskać dwukierunkowe powiązanie z szablonem nadrzędnym, użyj poniższego instrukcji Binding zamiast `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`. 
+ `TemplateBinding` to zoptymalizowana postać [powiązania](binding-markup-extension.md) dla scenariuszy szablonów, analogiczna do `Binding` skonstruowana przy użyciu `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`. `TemplateBinding` jest zawsze powiązanie jednokierunkowe, nawet jeśli właściwości są domyślnie powiązane z powiązaniem dwukierunkowym. Obie używane właściwości muszą być właściwościami zależności. Aby uzyskać dwukierunkowe powiązanie z szablonem nadrzędnym, użyj poniższego instrukcji Binding zamiast `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`. 
   
  [RelativeSource](relativesource-markupextension.md) to inne rozszerzenie znaczników, które jest czasami używane w połączeniu z lub zamiast `TemplateBinding`, aby można było wykonać powiązanie właściwości względnej w ramach szablonu.  
   

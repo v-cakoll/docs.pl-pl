@@ -2,21 +2,21 @@
 title: <add>, element dla schemeSettings (ustawienia identyfikatora URI)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: efd52557ea8b617a39e685ff8ad69bab01322a7a
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: ed40098e8d4c2d1298771e67a618b8d04f59c912
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699594"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087718"
 ---
-# <a name="add-element-for-schemesettings-uri-settings"></a>\<add > elementu schemeSettings (ustawienia identyfikatora URI)
+# <a name="add-element-for-schemesettings-uri-settings"></a>\<dodać elementu > dla schemeSettings (ustawienia identyfikatora URI)
 Dodaje ustawienie schematu dla nazwy schematu.  
-  
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<add >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<uri >** ](uri-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dodaj >**
+
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -48,7 +48,7 @@ Dodaje ustawienie schematu dla nazwy schematu.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<schemeSettings >, element (ustawienia identyfikatora URI)](schemesettings-element-uri-settings.md)|Określa sposób, w jaki <xref:System.Uri> będzie analizowana dla określonych schematów.|  
+|[\<element > schemeSettings (ustawienia identyfikatora URI)](schemesettings-element-uri-settings.md)|Określa, w jaki sposób <xref:System.Uri> będzie analizowana dla określonych schematów.|  
   
 ## <a name="remarks"></a>Uwagi  
  Domyślnie Klasa <xref:System.Uri?displayProperty=nameWithType> cofa ograniczniki ścieżki kodowanej procentowo przed wykonaniem kompresji ścieżki. Ta implementacja została zaimplementowana jako mechanizm zabezpieczeń przed atakami podobnymi do następujących:  
@@ -59,7 +59,7 @@ Dodaje ustawienie schematu dla nazwy schematu.
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Z tego powodu Klasa <xref:System.Uri?displayProperty=nameWithType> najpierw cofa ograniczniki ścieżki, a następnie stosuje kompresję ścieżki. Wynikiem przekazania złośliwego adresu URL powyżej do konstruktora klasy <xref:System.Uri?displayProperty=nameWithType> skutkuje następujący identyfikator URI:  
+ Z tego powodu <xref:System.Uri?displayProperty=nameWithType> klasie najpierw cofa ograniczniki ścieżki, a następnie stosuje kompresję ścieżki. W wyniku przekazania złośliwego adresu URL powyżej do <xref:System.Uri?displayProperty=nameWithType> konstruktora klasy wyniki mają następujący identyfikator URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   

@@ -1,5 +1,5 @@
 ---
-title: „<attribute>' nie może być zastosowane, ponieważ format identyfikatora GUID „<number>' jest nieprawidłowy
+title: „<attribute>" nie może być zastosowane, ponieważ format identyfikatora GUID „<number>" jest nieprawidłowy
 ms.date: 07/20/2015
 f1_keywords:
 - vbc32500
@@ -7,27 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
-ms.openlocfilehash: d27c326b6a88271ba4abf0144e71027f6671b17e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7b6e42480075666ce9f7e8fc6966bd4bb6b888a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054383"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977313"
 ---
-# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>'\<atrybut >' nie można zastosować, ponieważ format identyfikatora GUID '\<liczba >' jest nieprawidłowy
-A `COMClassAttribute` bloku attribute określa unikatowy identyfikator globalny (GUID), który jest niezgodny ze odpowiedni format identyfikatora GUID. `COMClassAttribute` używa identyfikatorów GUID do unikatowego identyfikowania tej klasy, interfejsu i zdarzenie tworzenia.  
+# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>nie można zastosować elementu "\<Attribute >", ponieważ format identyfikatora GUID "\<Number >" jest niepoprawny
+
+Blok atrybutów `COMClassAttribute` określa unikatowy identyfikator globalny (GUID), który jest niezgodny z właściwym formatem identyfikatora GUID. `COMClassAttribute` używa identyfikatorów GUID do unikatowego identyfikowania klasy, interfejsu i zdarzenia utworzenia.  
   
- Identyfikator GUID składa się z 16-bajtowy, z których pierwszych osiem to liczbowe, a ostatnie 8 to: binary. Ona jest generowany przez narzędzia firmy Microsoft, takie jak uuidgen.exe i jest musi być unikatowy w miejsce i czas.  
+ Identyfikator GUID składa się z 16 bajtów, z których pierwsze osiem jest liczbowe, a ostatnie osiem są binarne. Jest on generowany przez narzędzia firmy Microsoft, takie jak uuidgen. exe, i gwarantuje, że jest to unikatowe miejsce i czas.  
   
  **Identyfikator błędu:** BC32500  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Określ prawidłowy identyfikator GUID lub identyfikatory GUID niezbędne do identyfikowania obiektów COM.  
+1. Określ prawidłowy identyfikator GUID lub identyfikatory GUID niezbędne do zidentyfikowania obiektu COM.  
   
-2. Upewnij się, wyświetlone dla ciągów GUID `COMClassAttribute` bloku attribute zostały prawidłowo skopiowane.  
+2. Upewnij się, że ciągi identyfikatorów GUID przedstawiane w bloku atrybutów `COMClassAttribute` są poprawnie kopiowane.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Guid>
-- [Omówienie atrybuty](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Przegląd atrybutów](../../../visual-basic/programming-guide/concepts/attributes/index.md)

@@ -1,63 +1,51 @@
 ---
-title: Przewodniki z instrukcjami strukturze ML.NET
-description: Dowiedz się, jak wykonywać określone zadania na potrzeby niestandardowych tworzenie rozwiązań sztucznej Inteligencji i uczenia maszynowego integracji w aplikacjach .NET.
+title: ML.NET prowadnice
+description: Dowiedz się, jak wykonywać określone zadania, aby pomóc w tworzeniu niestandardowych rozwiązań AI i Machine Learning integrację z aplikacjami platformy .NET.
 ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: c16adf6bf85aec1aef51751c6d4fe8c7f0f3c9f4
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e2b4ff77c7f76282d70c06b5ef534306fe4e93a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645028"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977109"
 ---
-# <a name="net-machine-learning-how-to-guides"></a>Przewodniki z instrukcjami .NET machine learning 
+# <a name="net-machine-learning-how-to-guides"></a>Przewodnik po uczeniu maszynowym dla platformy .NET
 
-W sekcji Przewodnik po strukturze ML.NET jak możesz znaleźć szybkich odpowiedzi na często zadawane pytania. W niektórych przypadkach artykuły mogą być wymienione w wielu sekcjach, aby były łatwe do znalezienia.
+W sekcji jak w przewodniku ML.NET można znaleźć szybkie odpowiedzi na często zadawane pytania. W niektórych przypadkach artykuły mogą być wymienione w wielu sekcjach, aby ułatwić ich znalezienie.
 
-## <a name="load-the-data"></a>Ładowanie danych
+## <a name="load-data"></a>Ładowanie danych
 
-* [Ładowanie danych za pomocą wiele kolumn z pliku CSV, machine learning przetwarzania.](load-data-from-mult-column-csv-ml-net.md)
-
-* [Ładowanie danych z wielu plików, machine learning przetwarzania.](load-data-from-multiple-files-ml-net.md)
-
-* [Ładowanie danych z pliku tekstowego, machine learning przetwarzania.](load-data-from-text-file-ml-net.md)
+* [Ładowanie danych z plików i baz danych SQL.](load-data-ml-net.md)
 
 ### <a name="prepare-the-data"></a>Przygotowywanie danych
 
-* [Przetwarzanie wstępne danych szkoleniowych z normalizers do użycia podczas przetwarzania danych.](normalizers-preprocess-data-ml-net.md)
+* [Przetwarzaj wstępnie dane szkoleniowe za pomocą Normalizer do użycia w przetwarzaniu danych.](normalizers-preprocess-data-ml-net.md)
 
 ## <a name="train-the-model"></a>Uczenie modelu
 
-* [Szkolenie modelu uczenia maszynowego z danymi, które nie znajduje się w pliku tekstowym.](load-non-file-training-data-ml-net.md)
+* [Uczenie modelu uczenia maszynowego przy użyciu funkcji weryfikacji krzyżowej.](train-machine-learning-model-cross-validation-ml-net.md)
 
-* [Szkolenie modelu uczenia maszynowego, za pomocą krzyżowego sprawdzania poprawności.](train-cross-validation-ml-net.md)
-
-* [Uczenie modelu regresji do przewidywania wartości przy użyciu strukturze ML.NET.](train-regression-model-ml-net.md)
+* [Uczenie modelu regresji w celu przewidywania wartości przy użyciu ML.NET.](train-machine-learning-model-ml-net.md)
 
 ### <a name="evaluate-the-model-quality"></a>Oceń jakość modelu
 
-* [Oblicz metryki, aby ocenić jakość modelu.](verify-model-quality-ml-net.md)
+* [Oblicz metryki, aby oszacować jakość modelu.](verify-model-quality-ml-net.md)
 
-### <a name="model-explainability"></a>Explainability modelu
+### <a name="model-explainability"></a>Wyjaśnienie modelu
 
-* [Określ znaczenie funkcji modele o ważności funkcji permutacji.](determine-global-feature-importance-in-model.md)
+* [Ustal znaczenie funkcji dla modeli o ważności funkcji permutacji.](explain-machine-learning-model-permutation-feature-importance-ml-net.md)
 
-* [Na użytek uogólniony modele dodatku i kształtu funkcji explainability modelu.](use-gams-for-model-explainability.md)
-
-### <a name="feature-engineering"></a>Inżynieria funkcji
-
-* [Zastosuj technicznego opracowywania funkcji do trenowania modelu dla danych podzielonych na kategorie.](train-model-categorical-ml-net.md)
-
-* [Zastosuj technicznego opracowywania funkcji do trenowania modelu danych tekstowych za pomocą platformy ML.NET.](train-model-textual-ml-net.md)
+* [Korzystaj z uogólnionych modeli i funkcji kształtu do celów objaśniających model.](use-gams-for-model-explainability.md)
 
 ## <a name="run"></a>Uruchom
 
-* [Sprawdź wartości danych pośrednich podczas przetwarzania potokowego w strukturze ML.NET.](inspect-intermediate-data-ml-net.md)
+* [Inspekcja pośrednich wartości danych podczas przetwarzania potoku ML.NET.](inspect-intermediate-data-ml-net.md)
 
-* [Operacjonalizowanie uczony model, w aplikacjach uczenia maszynowego.](consuming-model-ml-net.md)
+* [Załaduj przeszkolony model uczenia maszynowego.](save-load-machine-learning-models-ml-net.md)
 
-* [Użyj PredictionFunction przewiduje jednego naraz.](single-predict-model-ml-net.md)
+* [Tworzenie prognoz przy użyciu przeszkolonego modelu.](machine-learning-model-predictions-ml-net.md)
 
-## <a name="probabilistic-infernet"></a>Probabilistyczny (Infer.NET)
+## <a name="probabilistic-infernet"></a>Probabilistyczne (Infer.NET)
 
-* [Twórz gry dopasowania listy aplikacji Infer.NET z Probabilistyczne programowania.](matchup-app-infer-net.md)
+* [Utwórz grę pasującą do aplikacji listy z programowaniem Infer.NET i probabilistyczne.](matchup-app-infer-net.md)

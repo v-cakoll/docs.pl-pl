@@ -7,21 +7,21 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-ms.openlocfilehash: 2edc890049d62913d693ad61d8d814d012c0f482
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: db2de681227dfdb7420808963219b9f52381f8fe
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697175"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088963"
 ---
-# <a name="add-element-for-switches"></a>\<add > elementu \<switches >
+# <a name="add-element-for-switches"></a>\<dodać > elementu dla przełączników \<
 Określa poziom, w którym jest ustawiony przełącznik śledzenia.  
-  
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<switches >** ](switches-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<add >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<system. diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<przełączniki**](switches-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dodaj >**
+
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -54,7 +54,7 @@ Określa poziom, w którym jest ustawiony przełącznik śledzenia.
  Możesz zmienić poziom przełącznika śledzenia, umieszczając go w pliku konfiguracji. Jeśli przełącznik jest <xref:System.Diagnostics.BooleanSwitch>, można go włączyć i wyłączyć. Jeśli przełącznik jest <xref:System.Diagnostics.TraceSwitch>, można przypisać do niego różne poziomy, aby określić typy komunikatów śledzenia lub debugowania, które są wyprowadzane przez aplikację.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak użyć elementu **\<add >** , aby ustawić przełącznik śledzenia `General` na poziomie <xref:System.Diagnostics.TraceLevel> i włączyć przełącznik śledzenia wartości logicznej `Data`.  
+ Poniższy przykład pokazuje, jak używać **\<dodaj >** elementu, aby ustawić przełącznik śledzenia `General` na poziom <xref:System.Diagnostics.TraceLevel> i włączyć `Data` logicznego przełącznika śledzenia.  
   
 ```xml  
 <configuration>  

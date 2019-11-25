@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: 34cd7e96442a570a3951e6303d2ac90ce5da6239
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: fbd5006611a0a8e0d90b589df7b2cb6a34101457
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920410"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977033"
 ---
 # <a name="wpf-walkthroughs"></a>Wskazówki dotyczące WPF
 Instruktaże zawierają instrukcje krok po kroku dla typowych scenariuszy. Dzięki temu można zacząć uczenie się o produkcie lub w konkretnym obszarze funkcji.
@@ -21,11 +21,11 @@ Instruktaże zawierają instrukcje krok po kroku dla typowych scenariuszy. Dzię
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Przewodnik: tworzenie prostej aplikacji WPF za pomocą projektanta WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Pokazuje, jak utworzyć prostą aplikację WPF przy użyciu [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].|
+|[Przewodnik: tworzenie prostej aplikacji WPF za pomocą projektanta WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Pokazuje, jak utworzyć prostą aplikację WPF za pomocą projektanta WPF.|
 |[Przewodnik: konstruowanie układu dynamicznego](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|Pokazuje, jak utworzyć układ dynamiczny przy użyciu kontrolki panelu <xref:System.Windows.Controls.Grid>.|
 |[Przewodnik: Tworzenie aplikacji o zmiennym rozmiarze przy użyciu projektanta WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546954(v=vs.100))|Demonstruje sposób tworzenia układów okna, które są zmieniane przez użytkownika w czasie wykonywania.|
-|[Przewodnik: Tworzenie powiązania danych przy użyciu projektanta WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|Pokazuje, jak używać [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] do tworzenia powiązań danych, które łączą dane z kontrolką.|
-|[Wskazówki: używanie rozszerzenie designinstance do tworzenia powiązań z danymi w projektancie](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|Pokazuje, jak używać [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] do tworzenia powiązań danych w czasie projektowania dla kontekstu danych, który jest przypisany w czasie wykonywania.|
+|[Przewodnik: Tworzenie powiązania danych przy użyciu projektanta WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|Pokazuje, jak używać projektanta WPF do tworzenia powiązań danych, które łączą dane z kontrolką.|
+|[Wskazówki: używanie rozszerzenie designinstance do tworzenia powiązań z danymi w projektancie](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|Pokazuje, jak używać projektanta WPF do tworzenia powiązań danych w czasie projektowania dla kontekstu danych, który jest przypisany w czasie wykonywania.|
 
 ## <a name="wpf-walkthroughs"></a>Wskazówki dotyczące WPF
 

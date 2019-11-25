@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f5010f944dba007e24d3c0e22d4e339f9ed0522a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459187"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977358"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Samouczek: prognozowanie cen przy użyciu regresji z konstruktorem modelu
 
@@ -68,7 +68,7 @@ Każdy wiersz w zestawie danych `taxi-fare-train.csv` zawiera szczegółowe info
     - **payment_type:** Forma płatności (karta kasowa lub kredytowa) to funkcja.
     - **fare_amount:** Łączna liczba płatnych opłat za taksówkę to etykieta.
 
-`label` to kolumna, która ma zostać przewidywalna. Podczas wykonywania zadania regresji celem jest przewidywanie wartości liczbowej. W tym scenariuszu prognozowania cen jest przewidywany koszt najazdy z taksówką. W związku z tym **fare_amount** jest etykietą. Określone `features` to dane wejściowe, które umożliwiają modelowi prognozowanie `label`. W takim przypadku pozostałe kolumny z wyjątkiem **trip_time_in_secs** są używane jako funkcje lub dane wejściowe do przewidywania kwoty opłat.
+`label` to kolumna, która ma zostać przewidywalna. Podczas wykonywania zadania regresji celem jest przewidywanie wartości liczbowej. W tym scenariuszu prognozowania cen jest przewidywany koszt najazdy z taksówką. W związku z tym **fare_amount** jest etykietą. Zidentyfikowane `features` są danymi wejściowymi, które umożliwiają modelowi przewidywanie `label`. W takim przypadku pozostałe kolumny z wyjątkiem **trip_time_in_secs** są używane jako funkcje lub dane wejściowe do przewidywania kwoty opłat.
 
 ## <a name="choose-a-scenario"></a>Wybierz scenariusz
 
@@ -83,7 +83,7 @@ Konstruktor modelu akceptuje dane z dwóch źródeł, bazy danych SQL Server lub
 
 1. W kroku dane narzędzia model Builder wybierz pozycję *plik* z listy rozwijanej Źródło danych.
 1. Wybierz przycisk obok pola tekstowego *Wybierz plik* i Użyj Eksploratora plików do przeglądania i wybierania *Taxi-Fare-test. csv* w katalogu *danych*
-1. Wybierz pozycję *fare_amount* w *kolumnie do przewidywania (etykieta)* listy rozwijanej.
+1. Wybierz *fare_amount* w *kolumnie do przewidywania (etykieta)* listy rozwijanej.
 1. Rozwiń listę rozwijaną *kolumny wejściowe (funkcje)* i usuń zaznaczenie kolumny *trip_time_in_secs* , aby wykluczyć ją jako funkcję podczas szkolenia.  Przejdź do kroku uczenia narzędzia model Builder.
 
 ## <a name="train-the-model"></a>Uczenie modelu
@@ -115,7 +115,7 @@ Jeśli Twoje metryki dokładności nie są zadowalające, niektóre proste sposo
 W wyniku procesu szkolenia zostaną utworzone dwa projekty.
 
 - TaxiFarePredictionML. ConsoleApp: Aplikacja konsolowa platformy .NET Core, która zawiera model szkoleń i przykładowego kodu zużycia.
-- TaxiFarePredictionML. model: Biblioteka klas .NET Standard zawierająca modele danych, które definiują schemat danych wejściowych i wyjściowych, zapisana wersja modelu najlepszego przebiegu podczas uczenia i klasy pomocnika o nazwie `ConsumeModel` do prognozowania.
+- TaxiFarePredictionML. model: Biblioteka klas .NET Standard zawierająca modele danych, które definiują schemat danych wejściowych i wyjściowych, zapisana wersja modelu najlepszego przebiegu podczas szkolenia i klasy pomocnika o nazwie `ConsumeModel` do tworzenia prognoz.
 
 1. W kroku Code narzędzia model Builder wybierz pozycję **Dodaj projekty** , aby dodać automatycznie generowane projekty do rozwiązania.
 1. Otwórz plik *program.cs* w projekcie *TaxiFarePrediction* .
@@ -126,7 +126,7 @@ W wyniku procesu szkolenia zostaną utworzone dwa projekty.
     using TaxiFarePredictionML.Model;
     ```
 
-1. Aby przeprowadzić prognozowanie nowych danych przy użyciu modelu, Utwórz nowe wystąpienie klasy `ModelInput` w ramach metody `Main` aplikacji. Zwróć uwagę, że opłata za opłaty nie jest częścią danych wejściowych. Dzieje się tak, ponieważ model generuje dla niego prognozę. 
+1. Aby przeprowadzić prognozowanie nowych danych przy użyciu modelu, Utwórz nowe wystąpienie klasy `ModelInput` wewnątrz metody `Main` aplikacji. Zwróć uwagę, że opłata za opłaty nie jest częścią danych wejściowych. Dzieje się tak, ponieważ model generuje dla niego prognozę.
 
     ```csharp
     // Create sample data
@@ -140,7 +140,7 @@ W wyniku procesu szkolenia zostaną utworzone dwa projekty.
     };
     ```
 
-1. Użyj metody `Predict` z klasy `ConsumeModel`. Metoda `Predict` ładuje przeszkolony model, tworzy [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) dla modelu i używa go do prognozowania nowych danych. 
+1. Użyj metody `Predict` z klasy `ConsumeModel`. Metoda `Predict` ładuje przeszkolony model, tworzy [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) dla modelu i używa go do prognozowania nowych danych.
 
     ```csharp
     // Make prediction

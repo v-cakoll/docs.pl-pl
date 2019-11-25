@@ -1,5 +1,5 @@
 ---
-title: Element <filter> dla <add> dla <listeners> dla <trace>
+title: Element <filter> dla <add> <listeners> dla <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-ms.openlocfilehash: f6b1ec99c5aab8e85df7f1920aca32f49a5be066
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: cc970240ac07ad3ea72be50d1e9af452da638fa9
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699365"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088890"
 ---
-# <a name="filter-element-for-add-for-listeners-for-trace"></a>\<filter > elementu \<add > dla @no__t 2listeners > dla \<trace >
-Dodaje filtr do odbiornika w kolekcji `Listeners` w celu śledzenia.  
-  
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<listeners >** ](listeners-element-for-trace.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0add >** ](add-element-for-listeners-for-trace.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1filter >**  
-  
+# <a name="filter-element-for-add-for-listeners-for-trace"></a>\<filtru > elementu \<Dodaj > dla odbiorników \<> śledzenia \<
+Dodaje filtr do odbiornika w kolekcji `Listeners` do śledzenia.  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<system. diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Trace**](trace-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**odbiorników**](listeners-element-for-trace.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dodaj >** ](add-element-for-listeners-for-trace.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**filter >**
+
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -40,7 +40,7 @@ Dodaje filtr do odbiornika w kolekcji `Listeners` w celu śledzenia.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`type`|Atrybut wymagany.<br /><br /> Określa typ filtru, który powinien dziedziczyć z klasy <xref:System.Diagnostics.TraceFilter>. Można użyć kwalifikowanej przestrzeni nazw typu, który odpowiada właściwości <xref:System.Type.FullName%2A>, lub można użyć w pełni kwalifikowanej nazwy typu, w tym informacji o zestawie, która odpowiada właściwości <xref:System.Type.AssemblyQualifiedName%2A>. Aby uzyskać informacje na temat w pełni kwalifikowanych nazw typów, zobacz [Określanie w pełni kwalifikowanych nazw typów](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`type`|Atrybut wymagany.<br /><br /> Określa typ filtru, który powinien dziedziczyć z klasy <xref:System.Diagnostics.TraceFilter>. Można użyć kwalifikowanej przestrzeni nazw typu, który odpowiada właściwości <xref:System.Type.FullName%2A> typu, lub można użyć w pełni kwalifikowanej nazwy typu, w tym informacji o zestawie, która odpowiada właściwości <xref:System.Type.AssemblyQualifiedName%2A>. Aby uzyskać informacje na temat w pełni kwalifikowanych nazw typów, zobacz [Określanie w pełni kwalifikowanych nazw typów](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |`initializeData`|Atrybut opcjonalny.<br /><br /> Ciąg przesłany do konstruktora dla określonej klasy filtru.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -57,12 +57,12 @@ Dodaje filtr do odbiornika w kolekcji `Listeners` w celu śledzenia.
 |`add`|Dodaje odbiornik do kolekcji `Listeners`.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element `<filter>` musi być zawarty w elemencie `<add>` dla odbiornika śledzenia, który określa typ odbiornika, a nie tylko nazwę odbiornika zdefiniowaną w [> \<sharedListeners](sharedlisteners-element.md). Jeśli odbiornik jest zdefiniowany w [@no__t 1sharedListeners >](sharedlisteners-element.md), filtr dla tego odbiornika musi być zdefiniowany w tym elemencie.  
+ Element `<filter>` musi być zawarty w elemencie `<add>` dla odbiornika śledzenia, który określa typ odbiornika, a nie tylko nazwę odbiornika zdefiniowanego w [\<> sharedListeners](sharedlisteners-element.md). Jeśli odbiornik jest zdefiniowany w [\<sharedListeners >](sharedlisteners-element.md), filtr dla tego odbiornika musi być zdefiniowany w tym elemencie.  
   
  Ten element może być używany w pliku konfiguracji komputera (Machine. config) i w pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak za pomocą elementu `<filter>` dodać filtr do odbiornika `console` w kolekcji `Listeners` w celu śledzenia, określając poziom zdarzeń filtru jako `Error`.  
+ Poniższy przykład pokazuje, jak używać elementu `<filter>`, aby dodać filtr do `console` odbiornika w kolekcji `Listeners` na potrzeby śledzenia, określając poziom zdarzeń filtru jako `Error`.  
   
 ```xml  
 <configuration>  

@@ -4,12 +4,12 @@ description: Poznaj różne zadania uczenia maszynowego i powiązane zadania, kt
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: d19593358361c9c8d3657053e766ec4a2c1ec163
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: d0634ce8a0559ab3cdb5bf27fc5406ab02af8df6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424227"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977253"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Zadania uczenia maszynowego w ML.NET
 
@@ -17,7 +17,7 @@ Podczas kompilowania modelu uczenia maszynowego należy najpierw zdefiniować, c
 
 Po ustaleniu, które zadanie działa w danym scenariuszu, należy wybrać najlepszy algorytm do uczenia modelu. Dostępne algorytmy są wymienione w sekcji dla każdego zadania.
 
-## <a name="binary-classification"></a>Klasyfikacja binarna
+## <a name="binary-classification"></a>klasyfikacja binarna
 
 [Nadzorowane zadanie uczenia maszynowego](glossary.md#supervised-machine-learning) , które jest używane do przewidywania, do których dwóch klas (kategorii) należy wystąpienie danych. Wejściem algorytmu klasyfikacji jest zestaw przykładowych etykiet, gdzie każda etykieta jest liczbą całkowitą równą 0 lub 1. Dane wyjściowe algorytmu klasyfikacji binarnej to klasyfikator, którego można użyć do przewidywania klasy nowych wystąpień bez etykiet. Przykłady scenariuszy klasyfikacji binarnej obejmują:
 
@@ -34,15 +34,15 @@ Można nauczyć model klasyfikacji binarnej przy użyciu następujących algoryt
 
 * <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer> 
-* <xref:Microsoft.ML.Trainers.PriorTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
+* <xref:Microsoft.ML.Trainers.PriorTrainer>
 * <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
 
 ### <a name="binary-classification-inputs-and-outputs"></a>Dane wejściowe i wyjściowe klasyfikacji binarnej
@@ -79,10 +79,10 @@ Można przeszkolić model klasyfikacji wieloklasowej przy użyciu następującyc
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> 
-* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
-* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer> 
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
 
 ### <a name="multiclass-classification-inputs-and-outputs"></a>Dane wejściowe i wyjściowe klasyfikacji wieloklasowej
 
@@ -93,10 +93,10 @@ Ta Trainer wyprowadza następujące dane:
 
 | Nazwa wyjściowa | Typ | Opis|
 | -- | -- | -- |
-| `Score` | Wektor <xref:System.Single> | Wyniki wszystkich klas. Wyższa wartość oznacza wyższe prawdopodobieństwo podzielenia się z klasą skojarzoną. Jeśli element i-ty ma największą wartość, przewidywany indeks etykiet będzie. Zwróć uwagę, że jest indeksem opartym na wartości zero. |
+| `Score` | wektor <xref:System.Single> | Wyniki wszystkich klas. Wyższa wartość oznacza wyższe prawdopodobieństwo podzielenia się z klasą skojarzoną. Jeśli element i-ty ma największą wartość, przewidywany indeks etykiet będzie. Zwróć uwagę, że jest indeksem opartym na wartości zero. |
 | `PredictedLabel` | Typ [klucza](xref:Microsoft.ML.Data.KeyDataViewType) | Indeks przewidywanej etykiety. Jeśli wartość jest równa i, rzeczywista etykieta będzie kategorią i, w typie etykiety wejściowej z wartościami klucza. |
 
-## <a name="regression"></a>Ubytk
+## <a name="regression"></a>ubytk
 
 [Nadzorowane zadanie uczenia maszynowego](glossary.md#supervised-machine-learning) , które jest używane do przewidywania wartości etykiety z zestawu pokrewnych funkcji. Etykieta może być dowolną wartością rzeczywistą i nie pochodzi z skończonego zestawu wartości jako zadań klasyfikacji. Algorytmy regresji modelują zależność etykiety na jej powiązanych funkcjach, aby określić, w jaki sposób etykieta zostanie zmieniona, ponieważ wartości funkcji są różne. Wejście algorytmu regresji jest zestawem przykładów z etykietami znanych wartości. Wynikiem algorytmu regresji jest funkcja, której można użyć do przewidywania wartości etykiety dla każdego nowego zestawu funkcji wejściowych. Przykłady scenariuszy regresji obejmują:
 
@@ -112,7 +112,7 @@ Model regresji można przeszkolić przy użyciu następujących algorytmów:
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.OlsTrainer>
-* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer> 
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
@@ -140,7 +140,7 @@ Nienadzorowane zadanie [uczenia maszynowego](glossary.md#unsupervised-machine-le
 
 Model klastrowania można przeszkolić przy użyciu następującego algorytmu:
 
-* <xref:Microsoft.ML.Trainers.KMeansTrainer> 
+* <xref:Microsoft.ML.Trainers.KMeansTrainer>
 
 ### <a name="clustering-inputs-and-outputs"></a>Klastrowanie danych wejściowych i wyjściowych
 
@@ -193,7 +193,7 @@ Zadanie klasyfikacji konstruuje rangę z zestawu przykładowych etykiet. Ten prz
 Model klasyfikowania można nauczyć przy użyciu następujących algorytmów:
 
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
 
 ### <a name="ranking-input-and-outputs"></a>Klasyfikacja danych wejściowych i wyjściowych
 

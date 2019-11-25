@@ -9,12 +9,12 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
-ms.openlocfilehash: 71b9e46a8c2d60c853af63ee78e2ed5dbe6e98f4
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 030841330ff37cddb0c9e3e466a55a4be098e784
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699140"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088790"
 ---
 # <a name="web-settings-schema"></a>Schemat ustawień sieci Web
 Ustawienia sieci Web określają ustawienia ASP.NET procesora i wykonania, które mają zastosowanie do zachowania całego procesu zarządzanego przez warstwę hostingu ASP.NET. Te ustawienia różnią się od ustawień typu domeny aplikacji, które są określone w pliku Web. config aplikacji ASP.NET.  
@@ -24,15 +24,15 @@ Ustawienia sieci Web są zawarte w plikach ASPNET. config, które znajdują się
 `C:\Windows\Microsoft.NET\Framework\v2.0.50727\`  
   
 Ustawienia sieci Web nie są używane w innych plikach konfiguracyjnych, takich jak plik Machine. config, główny Web. config lub plik Web. config na poziomie aplikacji.  
-  
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. Web >** ](system-web-element-web-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<applicationPool >** ](applicationpool-element-web-settings.md)  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<system. web >** ](system-web-element-web-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<applicationPool >** ](applicationpool-element-web-settings.md)
+
 |Element|Opis|  
 |-------------|-----------------|  
-|[@no__t -1System. Web >](system-web-element-web-settings.md)|Zawiera informacje, które są używane przez warstwę hostingu ASP.NET.|  
-|[@no__t — 1applicationPool >](applicationpool-element-web-settings.md)|Określa ustawienia ASP.NET na poziomie procesora i wykonania, które mają zastosowanie do zachowania całego procesu zarządzanego przez warstwę hostingu ASP.NET.|  
+|[\<> System. Web](system-web-element-web-settings.md)|Zawiera informacje, które są używane przez warstwę hostingu ASP.NET.|  
+|[\<applicationPool >](applicationpool-element-web-settings.md)|Określa ustawienia ASP.NET na poziomie procesora i wykonania, które mają zastosowanie do zachowania całego procesu zarządzanego przez warstwę hostingu ASP.NET.|  
   
 ## <a name="see-also"></a>Zobacz także
 

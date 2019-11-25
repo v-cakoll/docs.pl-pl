@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 99f0e621c7dd56c0a26b51b4725f9fb96ab3cbf9
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 92d267ee9e87e9d204fe76172ca7e0fe33cf1a1b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197903"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976578"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Wskazówki: powiązanie z danymi w aplikacjach hybrydowych
 
@@ -59,7 +59,7 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
     - System. Windows. Forms
 
-3. Otwórz MainWindow. XAML w [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
+3. Otwórz MainWindow. XAML w projektancie WPF.
 
 4. W <xref:System.Windows.Window> elementu Dodaj następujące [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] mapowania przestrzeni nazw.
 

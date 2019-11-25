@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: cbafd29be6855cbb95d17388791ba152230295cc
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 287e36dce65be7a002499d2cd22481018a1f4742
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697843"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089168"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<remove > elementu connectionManagement (Ustawienia sieci)
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<usunąć elementu > dla connectionManagement (Ustawienia sieci)
 Usuwa adres IP lub nazwę DNS z listy zarządzania połączeniami.  
-  
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<usuń >**
+
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -60,7 +60,7 @@ Usuwa adres IP lub nazwę DNS z listy zarządzania połączeniami.
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład usuwa wszystkie wpisy listy zarządzania połączeniami dla serwera `www.adventure-works.com`, a następnie konfiguruje aplikację do używania czterech połączeń z serwerem `www.contoso.com` i dwoma połączeniami z innymi serwerami.  
+ Poniższy przykład usuwa wszystkie wpisy listy zarządzania połączeniami dla serwera `www.adventure-works.com` a następnie konfiguruje aplikację do używania czterech połączeń z serwerem `www.contoso.com` i dwóch połączeń z innymi serwerami.  
   
 ```xml  
 <configuration>  

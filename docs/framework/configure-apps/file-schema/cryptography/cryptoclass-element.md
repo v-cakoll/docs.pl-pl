@@ -8,23 +8,23 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-ms.openlocfilehash: db3681ea141bb7e3905f6a470f5c74ce05f6ef4b
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4872fbd6fa043902e8c69f158bee5d0c915ec83a
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699789"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088662"
 ---
-# <a name="cryptoclass-element"></a>\<cryptoClass > elementu
-Zawiera klasę kryptografii, która ma mapowanie do przyjaznej nazwy w elemencie [\<nameEntry >](nameentry-element.md) .  
-  
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0cryptoClasses >** ](cryptoclasses-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1cryptoClass >**  
-  
+# <a name="cryptoclass-element"></a>\<element > cryptoClass
+Zawiera klasę kryptografii, która ma mapowanie do przyjaznej nazwy w [\<nameEntry >](nameentry-element.md) elementu.  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoNameMapping**](cryptonamemapping-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoClasses >** ](cryptoclasses-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<cryptoClass >**
+
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -48,7 +48,7 @@ Zawiera klasę kryptografii, która ma mapowanie do przyjaznej nazwy w elemencie
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`cryptoClasses`|Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazwy w elemencie [\<nameEntry >](nameentry-element.md) .|  
+|`cryptoClasses`|Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazwy w [\<nameEntry >](nameentry-element.md) elementu.|  
 |`cryptographySettings`|Zawiera ustawienia kryptografii.|  
 |`cryptoNameMapping`|Zawiera mapowania klas do przyjaznych nazw.|  
 |`mscorlib`|Zawiera element [\<cryptographySettings >](cryptographysettings-element.md) .|  

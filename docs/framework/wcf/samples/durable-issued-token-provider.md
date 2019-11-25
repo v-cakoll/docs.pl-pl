@@ -2,12 +2,12 @@
 title: Niezawodny dostawca wystawionych tokenów
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: f1bb95ba676b47d29d5b527b5b93eddcf48f4bde
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 52c4e99f8b2a834d7200c2d2c2383fbdb21bdd1a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989944"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978326"
 ---
 # <a name="durable-issued-token-provider"></a>Niezawodny dostawca wystawionych tokenów
 Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów wystawionych przez klienta.  
@@ -31,12 +31,12 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
   
 - Jak serwer jest uwierzytelniany przez klienta za pomocą certyfikatu X. 509 serwera.  
   
- Ten przykład składa się z programu konsolowego klienta (Client. exe), programu usługi tokenu zabezpieczającego (SecurityTokenService. exe) i programu konsoli usług (Service. exe). Usługa implementuje kontrakt definiujący wzorzec komunikacji żądanie-odpowiedź. Kontrakt jest definiowany przez `ICalculator` interfejs, który udostępnia operacje matematyczne (Dodawanie, odejmowanie, mnożenie i dzielenie). Klient pobiera token zabezpieczający z usługi tokenu zabezpieczającego (STS) i wysyła synchroniczne żądania do usługi dla danej operacji matematycznej i usługi z wynikiem. Aktywność klienta jest widoczna w oknie konsoli.  
+ Ten przykład składa się z programu konsolowego klienta (Client. exe), programu usługi tokenu zabezpieczającego (SecurityTokenService. exe) i programu konsoli usług (Service. exe). Usługa implementuje kontrakt definiujący wzorzec komunikacji żądanie-odpowiedź. Kontrakt jest definiowany przez interfejs `ICalculator`, który udostępnia operacje matematyczne (Dodawanie, odejmowanie, mnożenie i dzielenie). Klient pobiera token zabezpieczający z usługi tokenu zabezpieczającego (STS) i wysyła synchroniczne żądania do usługi dla danej operacji matematycznej i usługi z wynikiem. Aktywność klienta jest widoczna w oknie konsoli.  
   
 > [!NOTE]
 > Procedura konfiguracji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Ten przykład uwidacznia kontrakt ICalculator przy użyciu [ \<> WSHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). Konfiguracja tego powiązania na kliencie jest pokazana w poniższym kodzie.  
+ Ten przykład uwidacznia kontrakt ICalculator za pomocą [\<WSHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). Konfiguracja tego powiązania na kliencie jest pokazana w poniższym kodzie.  
   
 ```xml  
 <bindings>
@@ -54,7 +54,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
 </bindings>  
 ```  
   
- `security` Dla elementu,`mode`wartość określa, który tryb zabezpieczeń ma być używany. `wsFederationHttpBinding` W tym przykładzie zabezpieczenia komunikatów są używane, `message` co oznacza, że `wsFederationHttpBinding` element jest `wsFederationHttpBinding`określony `security` w elemencie elementu. Element wewnątrz elementuokreśla`wsFederationHttpBinding` adres i powiązanie dla usługi tokenów zabezpieczających, która wystawia token zabezpieczający dla klienta, aby klient mógł uwierzytelnić się na Kalkulator `message` `issuer` `wsFederationHttpBinding` usługi.  
+ Na `security` elementu `wsFederationHttpBinding`wartość `mode` służy do konfigurowania trybu zabezpieczeń, który ma być używany. W tym przykładzie zabezpieczenia komunikatów są używane, co oznacza, że element `message` `wsFederationHttpBinding` jest określony wewnątrz elementu `security` `wsFederationHttpBinding`. Element `issuer` `wsFederationHttpBinding` wewnątrz elementu `message` `wsFederationHttpBinding` określa adres i powiązanie dla usługi tokenów zabezpieczających, która wystawia token zabezpieczający dla klienta, aby klient mógł uwierzytelnić się w usłudze Kalkulator.  
   
  Konfiguracja tego powiązania w usłudze jest pokazana w poniższym kodzie.  
   
@@ -80,7 +80,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
 </bindings>  
 ```  
   
- `security` Dla elementu,`mode`wartość określa, który tryb zabezpieczeń ma być używany. `wsFederationHttpBinding` W tym przykładzie zabezpieczenia komunikatów są używane, `message` co oznacza, że `wsFederationHttpBinding` element jest `wsFederationHttpBinding`określony `security` w elemencie elementu. Element wewnątrz elementuokreśla`wsFederationHttpBinding` adres i tożsamość punktu końcowego, którego można użyć do pobrania metadanych usługi tokenu zabezpieczającego. `message` `issuerMetadata` `wsFederationHttpBinding`  
+ Na `security` elementu `wsFederationHttpBinding`wartość `mode` służy do konfigurowania trybu zabezpieczeń, który ma być używany. W tym przykładzie zabezpieczenia komunikatów są używane, co oznacza, że element `message` `wsFederationHttpBinding` jest określony wewnątrz elementu `security` `wsFederationHttpBinding`. Element `issuerMetadata` `wsFederationHttpBinding` wewnątrz elementu `message` `wsFederationHttpBinding` określa adres i tożsamość punktu końcowego, którego można użyć do pobrania metadanych usługi tokenu zabezpieczającego.  
   
  Zachowanie usługi jest pokazane w poniższym kodzie.  
   
@@ -105,7 +105,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
 </behavior>  
 ```  
   
- `issuedTokenAuthentication` Element`serviceCredentials` wewnątrz elementu pozwala usłudze określić ograniczenia dotyczące tokenów, które umożliwiają klientom prezentowanie podczas uwierzytelniania. Ta konfiguracja określa, że tokeny podpisane przez certyfikat, którego nazwa podmiotu to CN = STS, są akceptowane przez usługę.  
+ Element `issuedTokenAuthentication` wewnątrz elementu `serviceCredentials` umożliwia usłudze określenie ograniczeń dotyczących tokenów, które umożliwiają klientom prezentowanie podczas uwierzytelniania. Ta konfiguracja określa, że tokeny podpisane przez certyfikat, którego nazwa podmiotu to CN = STS, są akceptowane przez usługę.  
   
  Usługa token zabezpieczający ujawnia pojedynczy punkt końcowy przy użyciu standardowej wsHttpBinding. Usługa tokenu zabezpieczającego odpowiada na żądanie od klientów tokenów i, pod warunkiem, że klient uwierzytelnia się przy użyciu konta systemu Windows, wystawia token, który zawiera nazwę użytkownika klienta jako zastrzeżenie w wystawionym tokenie. W ramach tworzenia tokenu usługa tokenu zabezpieczającego podpisuje token przy użyciu klucza prywatnego skojarzonego z certyfikatem CN = STS. Ponadto tworzy klucz symetryczny i szyfruje go przy użyciu klucza publicznego skojarzonego z certyfikatem CN = localhost. W programie zwracającym token do klienta usługa tokenu zabezpieczającego zwraca również klucz symetryczny. Klient przedstawia wystawiony token usłudze Kalkulator i potwierdza, że zna klucz symetryczny, podpisując komunikat przy użyciu tego klucza.  
   
@@ -118,7 +118,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
   
      Przykład implementuje niestandardowego dostawcę tokenów, który zwraca token zabezpieczający pobrany z pamięci podręcznej.  
   
-     Aby wykonać to zadanie, dostawca niestandardowego tokenu dziedziczy <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasę i <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> zastępuje metodę. Ta metoda próbuje uzyskać token z pamięci podręcznej lub jeśli nie można znaleźć tokenu w pamięci podręcznej, program pobierze token z bazowego dostawcy, a następnie buforuje ten token. W obu przypadkach Metoda zwraca `SecurityToken`.  
+     Aby wykonać to zadanie, dostawca niestandardowego tokenu dziedziczy klasę <xref:System.IdentityModel.Selectors.SecurityTokenProvider> i zastępuje metodę <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A>. Ta metoda próbuje uzyskać token z pamięci podręcznej lub jeśli nie można znaleźć tokenu w pamięci podręcznej, program pobierze token z bazowego dostawcy, a następnie buforuje ten token. W obu przypadkach Metoda zwraca `SecurityToken`.  
   
     ```csharp  
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
@@ -135,9 +135,9 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
   
 2. Napisz niestandardowego menedżera tokenów zabezpieczających.  
   
-     Służy do tworzenia elementu <xref:System.IdentityModel.Selectors.SecurityTokenProvider> dla konkretnego <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> , który jest przesyłany do niego w `CreateSecurityTokenProvider` metodzie. <xref:System.IdentityModel.Selectors.SecurityTokenManager> Menedżer tokenów zabezpieczających jest również używany do tworzenia wystawców tokenów i serializatorów tokenów, ale nie są one objęte tym przykładem. W tym przykładzie niestandardowy Menedżer tokenów zabezpieczających dziedziczy z <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy i `CreateSecurityTokenProvider` przesłania metodę w celu zwrócenia niestandardowego dostawcy tokenów, gdy spełnione wymagania tokenu wskazują, że zażądano wystawionego tokenu.  
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager> służy do tworzenia <xref:System.IdentityModel.Selectors.SecurityTokenProvider> dla określonego <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>, który jest do niego przesłany w metodzie `CreateSecurityTokenProvider`. Menedżer tokenów zabezpieczających jest również używany do tworzenia wystawców tokenów i serializatorów tokenów, ale nie są one objęte tym przykładem. W tym przykładzie niestandardowy Menedżer tokenów zabezpieczających dziedziczy z klasy <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> i przesłania metodę `CreateSecurityTokenProvider` w celu zwrócenia niestandardowego dostawcy tokenów, gdy spełnione wymagania dotyczące tokenu wskazują, że zażądano wystawionego tokenu.  
   
-    ```csharp  
+    ```csharp
     class DurableIssuedTokenClientCredentialsTokenManager :  
      ClientCredentialsSecurityTokenManager  
     {  
@@ -154,7 +154,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
         {  
           return new DurableIssuedSecurityTokenProvider ((IssuedSecurityTokenProvider)base.CreateSecurityTokenProvider( tokenRequirement), this.cache);  
         }  
-        else  
+        else
         {  
           return base.CreateSecurityTokenProvider(tokenRequirement);  
         }  
@@ -166,7 +166,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
   
      Klasa poświadczeń klienta służy do reprezentowania poświadczeń skonfigurowanych dla serwera proxy klienta i tworzy Menedżera tokenów zabezpieczających, który służy do uzyskiwania wystawców tokenów, dostawców tokenów i serializatorów tokenów.  
   
-    ```csharp  
+    ```csharp
     public class DurableIssuedTokenClientCredentials : ClientCredentials  
     {  
       IssuedTokenCache cache;  
@@ -206,7 +206,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
   
 4. Zaimplementuj pamięć podręczną tokenów. Przykładowa implementacja używa abstrakcyjnej klasy bazowej, za pośrednictwem której konsumenci danej pamięci podręcznej tokenu pracują z pamięcią podręczną.  
   
-    ```csharp  
+    ```csharp
     public abstract class IssuedTokenCache  
     {  
       public abstract void AddToken ( GenericXmlSecurityToken token, EndpointAddress target, EndpointAddress issuer);  
@@ -217,7 +217,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
   
      Aby klient korzystał z niestandardowego poświadczenia klienta, przykład usuwa domyślną klasę poświadczeń klienta i dostarcza nową klasę poświadczeń klienta.  
   
-    ```csharp  
+    ```csharp
     clientFactory.Endpoint.Behaviors.Remove<ClientCredentials>();  
     DurableIssuedTokenClientCredentials durableCreds = new DurableIssuedTokenClientCredentials();  
     durableCreds.IssuedTokenCache = cache;  
@@ -250,6 +250,6 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  

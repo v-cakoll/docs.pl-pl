@@ -1,14 +1,14 @@
 ---
 title: Jak korzystać z interfejsu API zautomatyzowanej ML.NET ML
 description: Interfejs API zautomatyzowanej sieci ML.NET automatyzuje proces tworzenia modelu i generuje model gotowy do wdrożenia. Informacje na temat opcji, których można użyć do konfigurowania automatycznych zadań uczenia maszynowego.
-ms.date: 04/24/2019
+ms.date: 11/7/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: bb1cd66e7341f2ada57d533d8b2dcbb48f08f726
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c1c18decc48bc1499aa55210becff305cdec4a53
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774549"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977114"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Jak korzystać z interfejsu API automatycznego uczenia maszynowego ML.NET
 
@@ -32,11 +32,12 @@ using Microsoft.ML.AutoML;
 ```
 
 ## <a name="select-the-machine-learning-task-type"></a>Wybierz typ zadania uczenia maszynowego
+
 Przed utworzeniem eksperymentu należy określić rodzaj problemu z uczeniem maszynowym, który ma zostać rozwiązany. Automatyczne Uczenie maszynowe obsługuje następujące zadania w ML:
 
 * Klasyfikacja binarna
 * Klasyfikacja wieloklasowa
-* Ubytk
+* ubytk
 
 ## <a name="create-experiment-settings"></a>Utwórz ustawienia eksperymentu
 
@@ -54,7 +55,7 @@ Utwórz ustawienia eksperymentu dla typu zadania o określonej ML:
   var experimentSettings = new MulticlassExperimentSettings();
   ```
 
-* Ubytk
+* ubytk
 
   ```csharp
   var experimentSettings = new RegressionExperimentSettings();
@@ -62,7 +63,7 @@ Utwórz ustawienia eksperymentu dla typu zadania o określonej ML:
 
 ## <a name="configure-experiment-settings"></a>Konfigurowanie ustawień eksperymentu
 
-Eksperymenty są wysoce konfigurowalne. Zobacz dokumentację [interfejsu API AutoML](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet) , aby uzyskać pełną listę ustawień konfiguracji.
+Eksperymenty są wysoce konfigurowalne. Zobacz dokumentację [interfejsu API AutoML](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview) , aby uzyskać pełną listę ustawień konfiguracji.
 
 Oto kilka przykładów:
 

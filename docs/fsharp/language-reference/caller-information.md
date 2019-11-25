@@ -1,13 +1,13 @@
 ---
 title: Informacje o obiekcie wywołującym
 description: Opisuje sposób używania atrybutów argumentów informacji o wywołującym do uzyskiwania informacji o wywołującym z metody.
-ms.date: 04/25/2017
-ms.openlocfilehash: e7bbc3830a95bd25cfc2fb369b204d367b775815
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 11/04/2019
+ms.openlocfilehash: d995b37149277b7c7d1b6217ee484d3c90a7f8b3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106584"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976798"
 ---
 # <a name="caller-information"></a>Informacje o obiekcie wywołującym
 
@@ -31,7 +31,7 @@ open System.Runtime.CompilerServices
 open System.Runtime.InteropServices
 
 type Tracer() =
-    member __.DoTrace(message: string,
+    member _.DoTrace(message: string,
                       [<CallerMemberName; Optional; DefaultParameterValue("")>] memberName: string,
                       [<CallerFilePath; Optional; DefaultParameterValue("")>] path: string,
                       [<CallerLineNumber; Optional; DefaultParameterValue(0)>] line: int) =
@@ -51,10 +51,10 @@ Można jawnie dostarczyć opcjonalne argumenty do sterowania informacjami o obie
 
 ## <a name="member-names"></a>Nazwy elementów członkowskich
 
-Możesz użyć atrybutu, [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) aby uniknąć określania nazwy elementu członkowskiego `String` jako argumentu wywoływanej metody. Korzystając z tej techniki, można uniknąć problemu, którego zmiana nazwy Refaktoryzacja nie zmienia `String` wartości. Jest to szczególnie przydatne w następujących zadaniach:
+Można użyć atrybutu [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) , aby uniknąć określania nazwy elementu członkowskiego jako argumentu `String` dla wywoływanej metody. Korzystając z tej techniki, można uniknąć problemu, którego Refaktoryzacja zmiany nazwy nie zmienia wartości `String`. Jest to szczególnie przydatne w następujących zadaniach:
 
 - Używanie procedur do śledzenia i diagnostycznych.
-- Implementowanie interfejsu [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) podczas wiązania danych. Ten interfejs umożliwia właściwości obiektu powiadamianie powiązanego formantu, że właściwość zmieniła się, dzięki czemu formant może wyświetlić zaktualizowane informacje. [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) Bez atrybutu, należy określić nazwę właściwości jako literału.
+- Implementowanie interfejsu [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) podczas wiązania danych. Ten interfejs umożliwia właściwości obiektu powiadamianie powiązanego formantu, że właściwość zmieniła się, dzięki czemu formant może wyświetlić zaktualizowane informacje. Bez atrybutu [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) należy określić nazwę właściwości jako literału.
 
 Poniższy wykres pokazuje nazwy elementów członkowskich, które są zwracane w przypadku używania atrybutu CallerMemberName.
 

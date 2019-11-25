@@ -1,24 +1,24 @@
 ---
 title: Ponowne trenowanie modelu
-description: Dowiedz się, jak ponowne szkolenie modelu w strukturze ML.NET
+description: Dowiedz się, jak ponownie nauczyć model w ML.NET
 ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 1628d0669d8a9e677ff39b5869d3802d89d96410
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 735782a4a0877a917b6e1885f009aa49d834170f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397702"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976965"
 ---
 # <a name="re-train-a-model"></a>Ponowne trenowanie modelu
 
-Dowiedz się, jak doskonalenie model w strukturze ML.NET uczenia maszynowego.
+Dowiedz się, jak ponownie przeprowadzić uczenie modelu uczenia maszynowego w programie ML.NET.
 
-Na świecie i danych wokół niej zmienić tempie stałej. Jako takie Zmień i zaktualizuj również konieczne modeli. Strukturze ML.NET udostępnia funkcje Ponowne szkolenie modeli za pomocą przedstawiono parametry modelu jako punktu wyjścia ciągle tworzyć na poprzednie środowisko, a nie od zera, każdym razem.  
+Na całym świecie dane zmieniają się w stałym tempie. W związku z tym modele muszą ulec zmianie i zaktualizować. ML.NET oferuje funkcje dla modeli do ponownego uczenia przy użyciu parametrów modelu, które są punktem wyjścia do ciągłego kompilowania na podstawie poprzedniego środowiska, zamiast rozpoczynać się za każdym razem.
 
-Następujące algorytmy są ponownie trainable w strukturze ML.NET:
+Następujące algorytmy są ponownie pouczeni w ML.NET:
 
 - [AveragedPerceptronTrainer](xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer)
 - [FieldAwareFactorizationMachineTrainer](xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer)
@@ -31,9 +31,9 @@ Następujące algorytmy są ponownie trainable w strukturze ML.NET:
 - [SgdNonCalibratedTrainer](xref:Microsoft.ML.Trainers.SgdNonCalibratedTrainer)
 - [SymbolicSgdLogisticRegressionBinaryTrainer](xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer)
 
-## <a name="load-pre-trained-model"></a>Załaduj wstępnie przeszkolonych model
+## <a name="load-pre-trained-model"></a>Załaduj wstępnie szkolony model
 
-Najpierw Załaduj wstępnie uczonego modelu w aplikacji. Aby dowiedzieć się więcej na temat ładowania potokami szkolenia i modeli, zobacz powiązane [instrukcje](./consuming-model-ml-net.md).
+Najpierw Załaduj wstępnie szkolony model do aplikacji. Aby dowiedzieć się więcej na temat ładowania potoków szkoleń i modeli, zobacz [Zapisywanie i ładowanie nauczonego modelu](save-load-machine-learning-models-ml-net.md).
 
 ```csharp
 // Create MLContext
@@ -49,19 +49,19 @@ ITransformer dataPrepPipeline = mlContext.Model.Load("data_preparation_pipeline.
 ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchema);
 ```
 
-## <a name="extract-pre-trained-model-parameters"></a>Wyodrębnianie parametrów wstępnie uczonego modelu
+## <a name="extract-pre-trained-model-parameters"></a>Wyodrębnij wstępnie przeszkolone parametry modelu
 
-Po załadowaniu modelu wyodrębnić parametry nauczony model, uzyskując dostęp do [ `Model` ](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) właściwość wstępnie trenowanego modelu. Wstępnie przeszkolonych model został uczony przy użyciu modelu regresji liniowej [ `OnlineGradientDescentTrainer` ](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) tworzy[ `RegressionPredictionTransformer` ](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) , generuje [ `LinearRegressionModelParameters` ](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters). Te parametry modelu regresji liniowej zawierają nauczony odchylenie i wagi lub współczynników w modelu. Te wartości będzie służyć jako punkt początkowy dla nowych ponownie trenowanego modelu.
+Po załadowaniu modelu Wyodrębnij uzyskane parametry modelu, uzyskując dostęp do właściwości [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) wstępnie nauczonego modelu. Model z góry szkolony został przeszkolony przy użyciu modelu regresji liniowej [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) , który tworzy[`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) , który wyprowadza [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters). Te parametry modelu regresji liniowej zawierają rozmieszczoną wagę i wagi lub współczynniki modelu. Te wartości będą używane jako punkt wyjścia dla nowego modelu ponownie szkolony.
 
 ```csharp
 // Extract trained model parameters
-LinearRegressionModelParameters originalModelParameters = 
+LinearRegressionModelParameters originalModelParameters =
     ((ISingleFeaturePredictionTransformer<object>)trainedModel).Model as LinearRegressionModelParameters;
 ```
 
-## <a name="re-train-model"></a>Ponowne szkolenie modelu
+## <a name="re-train-model"></a>Model ponownego uczenia
 
-Proces ponownego szkolenia modelu nie różni się niż uczenia modelu. Jedyna różnica polega na, [ `Fit` ](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*) metoda oprócz danych również przyjmuje jako dane wejściowe, oryginalnym przedstawiono parametry modelu i wykorzystuje je jako początkowy punkt w procesie ponownego szkolenia.  
+Proces ponownego szkolenia modelu nie różni się od poziomu szkolenia modelu. Jedyną różnicą jest to, że metoda [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*) oprócz danych również przyjmuje jako dane wejściowe parametry oryginalnych informacji o modelu i używa ich jako punktu wyjścia w procesie ponownego uczenia.
 
 ```csharp
 // New Data
@@ -94,21 +94,21 @@ IDataView newData = mlContext.Data.LoadFromEnumerable<HousingData>(housingData);
 IDataView transformedNewData = dataPrepPipeline.Transform(newData);
 
 // Retrain model
-RegressionPredictionTransformer<LinearRegressionModelParameters> retrainedModel = 
+RegressionPredictionTransformer<LinearRegressionModelParameters> retrainedModel =
     mlContext.Regression.Trainers.OnlineGradientDescent()
         .Fit(transformedNewData, originalModelParameters);
 ```
 
 ## <a name="compare-model-parameters"></a>Porównaj parametry modelu
 
-Jak można sprawdzić, czy ponowne szkolenie się faktycznie stało? Jednym ze sposobów byłoby porównać czy ponownie uczonego modelu parametry są inne niż te, oryginalnym modelu. Poniższy przykład kodu porównuje oryginalny względem wagi ponownie uczonego modelu i wysyła je do konsoli.
+Jak można sprawdzić, czy ponowne szkolenie rzeczywiście się zaszło? Jednym ze sposobów jest porównanie, czy parametry modelu, który został przeszkolony, różnią się od modelu oryginalnego. Poniższy przykład kodu porównuje oryginalny z odszkolonymi wagami modelu i wyprowadza je do konsoli.
 
 ```csharp
 // Extract Model Parameters of re-trained model
 LinearRegressionModelParameters retrainedModelParameters = retrainedModel.Model as LinearRegressionModelParameters;
 
 // Inspect Change in Weights
-var weightDiffs = 
+var weightDiffs =
     originalModelParameters.Weights.Zip(
         retrainedModelParameters.Weights, (original, retrained) => original - retrained).ToArray();
 
@@ -119,11 +119,11 @@ for(int i=0;i < weightDiffs.Count();i++)
 }
 ```
 
-W poniższej tabeli przedstawiono, jak może wyglądać dane wyjściowe. 
+W poniższej tabeli pokazano, jak dane wyjściowe mogą wyglądać podobnie.
 
-|Oryginał | Retrained | Różnica |
+|Oryginał | Przeszkol ponownie | Występują |
 |---|---|---|
-| 33039.86 | 56293.76 | -23253.9 |
-| 29099.14 | 49586.03 | -20486.89 |
-| 28938.38 | 48609.23 | -19670.85 |
-| 30484.02 | 53745.43 | -23261.41 |
+| 33039,86 | 56293,76 | -23253,9 |
+| 29099,14 | 49586,03 | -20486,89 |
+| 28938,38 | 48609,23 | -19670,85 |
+| 30484,02 | 53745,43 | -23261,41 |

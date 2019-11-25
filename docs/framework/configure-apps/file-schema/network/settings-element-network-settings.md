@@ -8,20 +8,20 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: ba08f630dc602c950da309bf29482d85b41af7ef
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d510c445c585a36005ed415b14188efc4be03984
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697685"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089117"
 ---
-# <a name="settings-element-network-settings"></a>\<settings >, element (Ustawienia sieci)
+# <a name="settings-element-network-settings"></a>\<Ustawienia > elementu (Ustawienia sieci)
 Konfiguruje podstawowe opcje sieci dla przestrzeni nazw <xref:System.Net?displayProperty=nameWithType>.  
-  
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<settings >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<** >
+
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -49,10 +49,10 @@ Konfiguruje podstawowe opcje sieci dla przestrzeni nazw <xref:System.Net?display
 |[Odbiornika HttpListener](httplistener-element-network-settings.md)|Dostosowuje parametry używane przez klasę <xref:System.Net.HttpListener>.|  
 |[httpWebRequest](httpwebrequest-element-network-settings.md)|Dostosowuje parametry żądania sieci Web.|  
 |[If](ipv6-element-network-settings.md)|Włącza obsługę protokołu internetowego w wersji 6 (IPv6).|  
-|[\<performanceCounter >, element (Ustawienia sieci)](performancecounter-element-network-settings.md)|Włącza liczniki wydajności sieci.|  
+|[\<element > performanceCounter (Ustawienia sieci)](performancecounter-element-network-settings.md)|Włącza liczniki wydajności sieci.|  
 |[ServicePointManager](servicepointmanager-element-network-settings.md)|Konfiguruje połączenia z zasobami sieciowymi.|  
 |[używając](socket-element-network-settings.md)|Określa, czy operacje gniazda używają portów zakończenia.|  
-|[\<webProxyScript >, element (Ustawienia sieci)](webproxyscript-element-network-settings.md)|Konfiguruje charakterystyki skryptu służącego do odnajdywania serwerów proxy sieci Web.|  
+|[\<element > webProxyScript (Ustawienia sieci)](webproxyscript-element-network-settings.md)|Konfiguruje charakterystyki skryptu służącego do odnajdywania serwerów proxy sieci Web.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

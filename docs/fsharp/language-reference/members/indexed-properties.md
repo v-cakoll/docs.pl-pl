@@ -1,17 +1,17 @@
 ---
 title: Właściwości indeksowane
 description: Dowiedz się więcej na F#temat właściwości indeksowanych w programie, które umożliwiają dostęp do danych uporządkowanych w postaci zbliżonej do tablic.
-ms.date: 10/17/2018
-ms.openlocfilehash: 379417e31b8e178d8c939e5b23dc144bfb17e562
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 11/04/2019
+ms.openlocfilehash: f6cf3bfa737d2bf458e379594be5884696cee3e1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627555"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976609"
 ---
 # <a name="indexed-properties"></a>Właściwości indeksowane
 
-Podczas definiowania klasy, która jest abstrakcyjna względem uporządkowanych danych, może być czasem przydatna do zapewnienia indeksowanego dostępu do tych danych bez uwidaczniania podstawowej implementacji. Odbywa się to za pomocą `Item` elementu członkowskiego.
+Podczas definiowania klasy, która jest abstrakcyjna względem uporządkowanych danych, może być czasem przydatna do zapewnienia indeksowanego dostępu do tych danych bez uwidaczniania podstawowej implementacji. Jest to realizowane z `Item` członkiem.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,13 +36,13 @@ member self-identifier.Item
 
 ## <a name="remarks"></a>Uwagi
 
-Formy poprzedniej składni pokazują, jak definiować indeksowane właściwości `get` , które mają zarówno metodę, jak `set` i, mają `get` tylko metodę, lub `set` tylko metodę. Można również połączyć składnię pokazaną tylko do pobrania i składnię wyświetlaną tylko dla zestawu i utworzyć właściwość, która ma oba metody get i Set. Ten ostatni formularz umożliwia umieszczenie różnych modyfikatorów dostępności i atrybutów w metodach get i Set.
+Formy poprzedniej składni pokazują, jak definiować indeksowane właściwości, które mają zarówno `get`, jak i `set`, mają tylko metodę `get` lub mają tylko metodę `set`. Można również połączyć składnię pokazaną tylko do pobrania i składnię wyświetlaną tylko dla zestawu i utworzyć właściwość, która ma oba metody get i Set. Ten ostatni formularz umożliwia umieszczenie różnych modyfikatorów dostępności i atrybutów w metodach get i Set.
 
-Używając nazwy `Item`, kompilator traktuje właściwość jako domyślną właściwość indeksowaną. *Domyślną indeksowaną właściwością* jest właściwość, do której można uzyskać dostęp za pomocą składni podobnej do tablic w wystąpieniu obiektu. Na przykład jeśli `o` jest obiektem typu, który definiuje tę właściwość, składnia `o.[index]` jest używana w celu uzyskania dostępu do właściwości.
+Przy użyciu nazwy `Item`, kompilator traktuje właściwość jako domyślną właściwość indeksowaną. *Domyślną indeksowaną właściwością* jest właściwość, do której można uzyskać dostęp za pomocą składni podobnej do tablic w wystąpieniu obiektu. Na przykład jeśli `o` jest obiektem typu, który definiuje tę właściwość, `o.[index]` składnia jest używana w celu uzyskania dostępu do właściwości.
 
-Składnia służąca do uzyskiwania dostępu do właściwości indeksowanej innej niż domyślna to podanie nazwy właściwości i indeksu w nawiasach, podobnie jak zwykłego elementu członkowskiego. Na przykład, jeśli właściwość `o` jest wywoływana `Ordinal`, nastąpi zapis `o.Ordinal(index)` w celu uzyskania do niej dostępu.
+Składnia służąca do uzyskiwania dostępu do właściwości indeksowanej innej niż domyślna to podanie nazwy właściwości i indeksu w nawiasach, podobnie jak zwykłego elementu członkowskiego. Na przykład jeśli właściwość na `o` jest nazywana `Ordinal`, należy napisać `o.Ordinal(index)`, aby uzyskać do niej dostęp.
 
-Niezależnie od tego, który formularz jest używany, należy zawsze używać formularza rozwinięte dla metody Set dla właściwości indeksowanej. Aby uzyskać informacje o funkcjach rozwinięte [](../functions/index.md), zobacz Functions.
+Niezależnie od tego, który formularz jest używany, należy zawsze używać formularza rozwinięte dla metody Set dla właściwości indeksowanej. Aby uzyskać informacje o funkcjach rozwinięte, zobacz [Functions](../functions/index.md).
 
 ## <a name="example"></a>Przykład
 
@@ -70,7 +70,7 @@ open System.Collections.Generic
 /// Basic implementation of a sparse matrix based on a dictionary
 type SparseMatrix() =
     let table = new Dictionary<(int * int), float>()
-    member __.Item
+    member _.Item
         // Because the key is comprised of two values, 'get' has two index values
         with get(key1, key2) = table.[(key1, key2)]
 

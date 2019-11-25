@@ -1,5 +1,5 @@
 ---
-title: Element <remove> dla <listeners> dla <source>
+title: Element <remove> dla <listeners> <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
@@ -7,23 +7,23 @@ helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-ms.openlocfilehash: 4a11308278f755ec8271477352d91d8797d105c5
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 75db45d4e868ce88e030ec6a43c8bdaf788a1102
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699498"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088850"
 ---
-# <a name="remove-element-for-listeners-for-source"></a>\<remove > elementu \<listeners > dla @no__t 2source >
+# <a name="remove-element-for-listeners-for-source"></a>\<usunąć elementu > dla odbiorników \<> dla \<źródła >
 Usuwa odbiornik z kolekcji `Listeners` dla źródła śledzenia.  
-  
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1remove >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<system. diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sources**](sources-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**Source**](source-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<odbiorników**](listeners-element-for-source.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<usuń >**
+
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -55,12 +55,12 @@ Usuwa odbiornik z kolekcji `Listeners` dla źródła śledzenia.
 ## <a name="remarks"></a>Uwagi  
  Element `<remove>` usuwa określony odbiornik z kolekcji `Listeners` dla źródła śledzenia.  
   
- Można usunąć element z kolekcji `Listeners` dla źródła śledzenia programowo poprzez wywołanie metody <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> na właściwości <xref:System.Diagnostics.TraceSource.Listeners%2A> wystąpienia <xref:System.Diagnostics.TraceSource>.  
+ Można usunąć element z kolekcji `Listeners` dla źródła śledzenia programowo, wywołując metodę <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> na właściwości <xref:System.Diagnostics.TraceSource.Listeners%2A> wystąpienia <xref:System.Diagnostics.TraceSource>.  
   
  Ten element może być używany w pliku konfiguracji komputera (Machine. config) i w pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać elementu `<remove>` przed użyciem elementu `<add>`, aby dodać odbiornik `console` do kolekcji `Listeners` dla źródła śledzenia `TraceSourceApp`.  
+ Poniższy przykład pokazuje, jak używać elementu `<remove>` przed użyciem elementu `<add>` do dodawania `console` odbiornika do kolekcji `Listeners` dla źródła śledzenia `TraceSourceApp`.  
   
 ```xml  
 <configuration>  
@@ -84,5 +84,5 @@ Usuwa odbiornik z kolekcji `Listeners` dla źródła śledzenia.
 - <xref:System.Diagnostics.TraceSource.Listeners%2A>
 - <xref:System.Diagnostics.TraceSource>
 - [Schemat ustawień śledzenia i debugowania](index.md)
-- [@no__t — 1clear >](clear-element-for-listeners-for-source.md)
+- [\<Wyczyść >](clear-element-for-listeners-for-source.md)
 - [Obiekty nasłuchujące śledzenie](../../../debug-trace-profile/trace-listeners.md)

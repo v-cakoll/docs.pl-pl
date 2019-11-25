@@ -2,12 +2,12 @@
 title: Niestandardowy element przechwytujący komunikaty
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: daa041bf63442dace0d33e1e3207d0857b6b7312
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 61f9bae24f5edb70430f4f3eaa16e42da221a7b4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928919"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978298"
 ---
 # <a name="custom-message-interceptor"></a>Niestandardowy element przechwytujący komunikaty
 Ten przykład ilustruje użycie modelu rozszerzalności kanałów. W szczególności pokazano, jak zaimplementować niestandardowy element powiązania, który tworzy fabryki kanałów i odbiorniki kanałów do przechwytywania wszystkich komunikatów przychodzących i wychodzących w konkretnym momencie w stosie czasu wykonywania. Przykład zawiera również klienta i serwer, który pokazuje użycie tych niestandardowych fabryk.  
@@ -22,7 +22,7 @@ Ten przykład ilustruje użycie modelu rozszerzalności kanałów. W szczególno
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
@@ -37,14 +37,14 @@ Ten przykład ilustruje użycie modelu rozszerzalności kanałów. W szczególno
 4. Dodaj sekcję rozszerzenie elementu powiązania, aby udostępnić nowy element powiązania do systemu konfiguracji.  
   
 ## <a name="channel-shapes"></a>Kształty kanału  
- Pierwszym krokiem w przypadku pisania niestandardowego kanału warstwowego jest określenie, które kształty są wymagane dla kanału. W naszym Inspektorze komunikatów obsługujemy dowolny kształt, który obsługuje warstwa poniżej US (na przykład jeśli warstwa poniżej Stanów Zjednoczonych może kompilować <xref:System.ServiceModel.Channels.IOutputChannel> i <xref:System.ServiceModel.Channels.IDuplexSessionChannel> <xref:System.ServiceModel.Channels.IOutputChannel> <xref:System.ServiceModel.Channels.IDuplexSessionChannel>).  
+ Pierwszym krokiem w przypadku pisania niestandardowego kanału warstwowego jest określenie, które kształty są wymagane dla kanału. Nasz Inspektor komunikatów obsługuje dowolny kształt, który obsługuje warstwa poniżej US (na przykład jeśli warstwa poniżej US może tworzyć <xref:System.ServiceModel.Channels.IOutputChannel> i <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, udostępniamy również <xref:System.ServiceModel.Channels.IOutputChannel> i <xref:System.ServiceModel.Channels.IDuplexSessionChannel>).  
   
 ## <a name="channel-factory-and-listener-factory"></a>Fabryka kanałów i fabryka odbiorników  
- Następnym krokiem w przypadku pisania niestandardowego kanału warstwowego jest utworzenie implementacji <xref:System.ServiceModel.Channels.IChannelFactory> dla kanałów klienta <xref:System.ServiceModel.Channels.IChannelListener> i kanałów usługi.  
+ Następnym krokiem przy tworzeniu niestandardowego kanału warstwowego jest utworzenie implementacji <xref:System.ServiceModel.Channels.IChannelFactory> dla kanałów klienta i <xref:System.ServiceModel.Channels.IChannelListener> dla kanałów usługi.  
   
- Klasy te przyjmują wewnętrzną fabrykę i odbiornik oraz umożliwiają delegowanie `OnCreateChannel` wszystkich `OnAcceptChannel` wywołań, ale do wewnętrznej fabryki i odbiornika.  
+ Te klasy przyjmują wewnętrzną fabrykę i odbiornik i umożliwiają delegowanie wszystkich, ale `OnCreateChannel` i `OnAcceptChannel` wywołań do wewnętrznej fabryki i odbiornika.  
   
-```csharp  
+```csharp
 class InterceptingChannelFactory<TChannel> : ChannelFactoryBase<TChannel>  
 { 
     //... 
@@ -57,10 +57,10 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>Dodawanie elementu powiązania  
- Przykład definiuje niestandardowy element powiązania: `InterceptingBindingElement`. `InterceptingBindingElement`przyjmuje jako dane wejściowe i używa tego `ChannelMessageInterceptor` do manipulowania wiadomościami, które przechodzą przez nią. `ChannelMessageInterceptor` Jest to jedyna klasa, która musi być publiczna. Fabryki, odbiornik i kanały mogą być wewnętrznymi implementacjami publicznych interfejsów czasu wykonywania.  
+ Przykład definiuje niestandardowy element powiązania: `InterceptingBindingElement`. `InterceptingBindingElement` pobiera `ChannelMessageInterceptor` jako dane wejściowe i używa tego `ChannelMessageInterceptor` do manipulowania wiadomościami, które przechodzą przez nią. Jest to jedyna klasa, która musi być publiczna. Fabryki, odbiornik i kanały mogą być wewnętrznymi implementacjami publicznych interfejsów czasu wykonywania.  
   
 ```csharp
-public class InterceptingBindingElement : BindingElement 
+public class InterceptingBindingElement : BindingElement
 {
 }
 ```  
@@ -76,12 +76,12 @@ public abstract class InterceptingElement : BindingElementExtensionElement
 ```  
   
 ## <a name="adding-policy"></a>Dodawanie zasad  
- Aby przeprowadzić integrację z naszym systemem `InterceptingBindingElement` zasad, program implementuje IPolicyExportExtension, aby sygnalizować, że będziemy uczestniczyć w generowaniu zasad. Aby umożliwić obsługę importowania zasad na wygenerowanym kliencie, użytkownik może zarejestrować klasę `InterceptingBindingElementImporter` pochodną i zastąpić `CreateMessageInterceptor`() w celu wygenerowania klasy z obsługą `ChannelMessageInterceptor` zasad.  
+ Aby przeprowadzić integrację z naszym systemem zasad, `InterceptingBindingElement` implementuje IPolicyExportExtension, aby sygnalizować, że będziemy uczestniczyć w generowaniu zasad. Aby umożliwić obsługę importowania zasad na wygenerowanym kliencie, użytkownik może zarejestrować klasę pochodną `InterceptingBindingElementImporter` i zastąpić `CreateMessageInterceptor`() w celu wygenerowania klasy `ChannelMessageInterceptor` z obsługą zasad.  
   
-## <a name="example-droppable-message-inspector"></a>Przykład: Inspektor komunikatów droppable  
- W przykładzie przedstawiono przykładową implementację `ChannelMessageInspector` , która odrzuca komunikaty.  
+## <a name="example-droppable-message-inspector"></a>Przykład: droppable — Inspektor komunikatów  
+ W przykładzie przedstawiono przykładową implementację `ChannelMessageInspector`, która odrzuca komunikaty.  
   
-```csharp  
+```csharp
 class DroppingServerElement : InterceptingElement  
 {  
     protected override ChannelMessageInterceptor CreateMessageInterceptor()  
@@ -120,7 +120,7 @@ class DroppingServerElement : InterceptingElement
 </customBinding>  
 ```  
   
- Klient używa `MessageInterceptor` biblioteki programu w celu dodania niestandardowego nagłówka do parzystych wiadomości. Usługa z drugiej strony używa `MessageInterceptor` biblioteki do usuwania wszelkich komunikatów, które nie mają tego nagłówka specjalnego.  
+ Klient używa biblioteki `MessageInterceptor` w celu dodania niestandardowego nagłówka do parzystych wiadomości. Usługa z drugiej strony używa biblioteki `MessageInterceptor` do usuwania wszelkich komunikatów, które nie mają tego nagłówka specjalnego.  
   
  Po uruchomieniu usługi należy zobaczyć następujące dane wyjściowe klienta programu, a następnie klienta.  
   

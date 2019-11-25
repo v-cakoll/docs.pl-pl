@@ -5,54 +5,58 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 0144c92e01e617081ae05003e6a7175c63166891
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa47304cf2bded93bdb95ffe7dfa35bb37d9a643
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622792"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976461"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Omówienie modelu aplikacji Visual Basic
-Dobrze zdefiniowany model zapewnia Visual Basic sterujące zachowaniem aplikacji Windows Forms: model aplikacji Visual Basic. Ten model zawiera zdarzenia do obsługi aplikacji uruchamiania i zamykania, a także zdarzenia dla połowowe nieobsłużonych wyjątków. Zapewnia również obsługę do tworzenia aplikacji w jednym wystąpieniu. Model aplikacji jest rozszerzalny, dzięki czemu deweloperzy, którzy potrzebują więcej kontroli można dostosować jego możliwym do zastąpienia metody.  
+
+Visual Basic udostępnia dobrze zdefiniowany model służący do kontrolowania zachowania aplikacji Windows Forms: model aplikacji Visual Basic. Ten model zawiera zdarzenia do obsługi uruchamiania i zamykania aplikacji oraz zdarzenia dotyczące przechwytywania nieobsłużonych wyjątków. Zapewnia również obsługę tworzenia aplikacji z pojedynczym wystąpieniem. Model aplikacji jest rozszerzalny, dlatego deweloperzy, którzy potrzebują większej kontroli, mogą dostosować swoje metody zamiarowe.  
   
-## <a name="uses-for-the-application-model"></a>Zastosowań Model aplikacji  
- Typowa aplikacja potrzebuje do wykonywania zadań uruchamiania i zamykania. Na przykład podczas uruchamiania, aplikacja może wyświetlić ekran powitalny, tworzenie połączeń bazy danych, obciążenia zapisanego stanu i tak dalej. Po zamknięciu aplikacji go zamknąć połączenia z bazą danych, zapisanie bieżącego stanu i tak dalej. Ponadto aplikacja może wykonać określonego kodu aplikacji w sytuacji nagłego wyłączenia dół nieoczekiwanie, takie jak podczas nieobsługiwany wyjątek.  
+## <a name="uses-for-the-application-model"></a>Używa modelu aplikacji  
+
+ Typowa aplikacja musi wykonywać zadania podczas uruchamiania i zamykania. Na przykład po uruchomieniu aplikacji może być wyświetlany ekran powitalny, tworzenie połączeń z bazą danych, załadowanie zapisanego stanu i tak dalej. Po zamknięciu aplikacji może ona zamykać połączenia z bazą danych, zapisywać bieżący stan i tak dalej. Ponadto aplikacja może wykonywać określony kod w przypadku nieoczekiwanego zamknięcia aplikacji, na przykład podczas nieobsługiwanego wyjątku.  
   
- Model aplikacji Visual Basic można łatwo utworzyć *jednego wystąpienia* aplikacji. Aplikacja o pojedynczym wystąpieniu różni się w z normalnym aplikacji, w tym tylko jedno wystąpienie aplikacji może działać w danym momencie. Próby uruchomienia inne wystąpienie aplikacji jednego wystąpienia powoduje w oryginalnym wystąpieniu bycia powiadamianym — poprzez `StartupNextInstance` zdarzeń — zgłaszający kolejna próba uruchomienia. Powiadomienie zawiera argumenty wiersza polecenia kolejne wystąpienia. Następnie zamknięto kolejne wystąpienie aplikacji, zanim nastąpi inicjowanie.  
+ Visual Basic model aplikacji ułatwia tworzenie aplikacji o *pojedynczym wystąpieniu* . Aplikacja o pojedynczym wystąpieniu różni się od zwykłej aplikacji, która może działać jednocześnie tylko w jednym wystąpieniu aplikacji. Próba uruchomienia innego wystąpienia aplikacji o pojedynczym wystąpieniu spowoduje powiadomienie oryginalnego wystąpienia o wystąpieniu zdarzenia `StartupNextInstance` — od momentu wykonania innej próby uruchomienia. Powiadomienie zawiera argumenty wiersza polecenia kolejnego wystąpienia. Kolejne wystąpienie aplikacji jest następnie zamykane przed wystąpieniem dowolnego inicjalizacji.  
   
- Aplikacja o pojedynczym wystąpieniu rozpoczyna się i sprawdza, czy jest pierwsze wystąpienie lub kolejne wystąpienie aplikacji:  
+ Aplikacja o pojedynczym wystąpieniu jest uruchamiana i sprawdza, czy jest to pierwsze wystąpienie lub następne wystąpienie aplikacji:  
   
-- Jeśli jest pierwsze wystąpienie, rozpoczyna się w zwykły sposób.  
+- Jeśli jest to pierwsze wystąpienie, rozpocznie się w zwykły sposób.  
   
-- Każda próba uruchomienia aplikacji, podczas pierwszego wystąpienia powoduje zachowanie bardzo różnią się. Kolejna próba powiadamia pierwszego wystąpienia o argumenty wiersza polecenia, a następnie natychmiast kończy działanie. Uchwyty pierwszego wystąpienia `StartupNextInstance` zdarzenie, aby określić, co kolejne wystąpienie argumenty wiersza polecenia zostały i kontynuuje działanie.  
+- Każda kolejna próba uruchomienia aplikacji podczas pierwszego wystąpienia powoduje bardzo inne zachowanie. Kolejna próba powiadamia pierwsze wystąpienie o argumentach wiersza polecenia, a następnie natychmiast kończy pracę. Pierwsze wystąpienie obsługuje zdarzenie `StartupNextInstance`, aby określić, jakie argumenty wiersza polecenia dla kolejnych wystąpień były i nadal działają.  
   
-     Ten diagram przedstawia, jak kolejne wystąpienie sygnalizuje pierwsze wystąpienie:  
+     Ten diagram pokazuje, jak kolejne wystąpienie sygnalizuje pierwsze wystąpienie:  
   
-     ![Diagram przedstawiający obrazu aplikacji pojedynczego wystąpienia.](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
+     ![Diagram przedstawiający obraz aplikacji o pojedynczym wystąpieniu.](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
   
- Obsługa `StartupNextInstance` zdarzenia, można kontrolować, jak działa aplikacja o pojedynczym wystąpieniu. Na przykład program Microsoft Outlook jest zazwyczaj uruchamiany jako pojedyncze wystąpienie aplikacji; gdy program Outlook jest uruchomiony, a próba uruchomienia programu Outlook ponownie, otrzymuje fokus do oryginalnego wystąpienia, ale nie można otworzyć inne wystąpienie.  
+ Dzięki obsłudze zdarzenia `StartupNextInstance` można kontrolować działanie aplikacji o pojedynczym wystąpieniu. Na przykład program Microsoft Outlook zazwyczaj działa jako aplikacja pojedynczego wystąpienia; gdy program Outlook jest uruchomiony i próbujesz ponownie uruchomić program Outlook, fokus jest przenoszony do oryginalnego wystąpienia, ale inne wystąpienie nie jest otwarte.  
   
 ## <a name="events-in-the-application-model"></a>Zdarzenia w modelu aplikacji  
- W modelu aplikacji znajdują się następujące zdarzenia:  
+
+ W modelu aplikacji znaleziono następujące zdarzenia:  
   
-- **Uruchamianie aplikacji**. Wywołuje aplikację <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> zdarzenia podczas jego uruchamiania. Dzięki obsłudze to zdarzenie, możesz dodać kod, który inicjuje aplikację przed załadowaniem formularza głównego. `Startup` Zdarzenia są także anulowanie wykonanie aplikacji w tej fazie procesu uruchamiania w razie potrzeby.  
+- **Uruchamianie aplikacji**. Aplikacja wywołuje zdarzenie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> podczas jego uruchamiania. Obsługując to zdarzenie, można dodać kod inicjujący aplikację przed załadowaniem formularza głównego. Zdarzenie `Startup` umożliwia również anulowanie wykonywania aplikacji w tej fazie procesu uruchamiania, jeśli jest to konieczne.  
   
-     Można skonfigurować aplikację, aby wyświetlić ekran powitalny, podczas wykonywania kodu uruchamiania aplikacji. Domyślnie ten model aplikacji pomija powitalny ekranu, gdy albo `/nosplash` lub `-nosplash` argument wiersza polecenia jest używany.  
+     Można skonfigurować aplikację tak, aby wyświetlała ekran powitalny podczas uruchamiania kodu uruchomienia aplikacji. Domyślnie model aplikacji pomija ekran powitalny, gdy jest używany `/nosplash` lub `-nosplash` argument wiersza polecenia.  
   
-- **Aplikacje w jednym wystąpieniu**. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> Zdarzenie jest wywoływane, gdy rozpoczyna się kolejne wystąpienie aplikacja o pojedynczym wystąpieniu. Zdarzenie przekazuje argumenty wiersza polecenia, kolejne wystąpienia.  
+- **Aplikacje o pojedynczym wystąpieniu**. Zdarzenie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> jest zgłaszane, gdy zostanie uruchomione kolejne wystąpienie aplikacji o jednym wystąpieniu. Zdarzenie przekazuje argumenty wiersza polecenia kolejnego wystąpienia.  
   
-- **Nieobsługiwane wyjątki**. Jeśli aplikacja napotkał nieobsługiwany wyjątek, zgłasza <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> zdarzeń. Programu obsługi dla tego zdarzenia można zbadać wyjątek i ustalenia, czy należy kontynuować wykonywanie.  
+- **Nieobsłużone wyjątki**. Jeśli aplikacja napotka nieobsługiwany wyjątek, wywołuje zdarzenie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>. Program obsługi dla tego zdarzenia może sprawdzić wyjątek i określić, czy kontynuować wykonywanie.  
   
-     `UnhandledException` Zdarzeń nie jest zgłaszany w pewnych okolicznościach. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  
+     Zdarzenie `UnhandledException` nie zostanie zgłoszone w pewnych okolicznościach. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  
   
-- **Zmiany łączność sieciową**. Jeśli zmieni się dostępności sieci komputera, aplikacja zgłasza <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged> zdarzeń.  
+- **Zmiany łączności sieciowej**. Jeśli zmieni się dostępność sieci komputera, aplikacja zgłasza zdarzenie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
   
-     `NetworkAvailabilityChanged` Zdarzeń nie jest zgłaszany w pewnych okolicznościach. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
+     Zdarzenie `NetworkAvailabilityChanged` nie zostanie zgłoszone w pewnych okolicznościach. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
   
-- **Zamknij aplikację**. Aplikacja udostępnia <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> zdarzeń w celu sygnalizowania, że po około, aby zamknąć. W takim przypadku program obsługi, możesz upewnić się, że operacje Twoja aplikacja potrzebuje do wykonywania — zamykania i zapisywania, na przykład — są wykonywane. Można skonfigurować aplikację do zamykania po zamknięciu formularza głównego lub do zamykania zamykać tylko wtedy, gdy wszystkie formularze.  
+- **Zamykanie aplikacji**. Aplikacja udostępnia zdarzenie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>, aby sygnalizować, gdy zostanie zamknięte. W tym obsłudze zdarzeń można upewnić się, że operacje wymagane przez aplikację są wykonywane — zamknięcie i zapisanie — na przykład — zostało zakończone. Można skonfigurować aplikację do zamykania, gdy główny formularz zostanie zamknięty lub aby zamknąć tylko wtedy, gdy wszystkie formularze zostały zamknięte.  
   
 ## <a name="availability"></a>Dostępność  
- Domyślnie model aplikacji Visual Basic jest dostępne dla projektów Windows Forms. Jeśli Konfigurowanie aplikacji do korzystania z obiektu uruchamiania różnych, lub uruchomić kod aplikacji niestandardowej `Sub Main`, następnie obiekt lub klasa może być konieczne podanie implementację <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> klasy modelu aplikacji. Aby uzyskać informacje o zmianie obiekt początkowy, zobacz [strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+
+ Domyślnie model aplikacji Visual Basic jest dostępny dla Windows Forms projektów. W przypadku skonfigurowania aplikacji tak, aby korzystała z innego obiektu startowego, lub uruchomić kod aplikacji z niestandardowym `Sub Main`, ten obiekt lub Klasa może wymagać dostarczenia implementacji klasy <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> w celu użycia modelu aplikacji. Aby uzyskać informacje na temat zmiany obiektu uruchomieniowego, zobacz [Strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
 ## <a name="see-also"></a>Zobacz także
 

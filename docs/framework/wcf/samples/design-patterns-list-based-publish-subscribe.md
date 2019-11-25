@@ -1,15 +1,15 @@
 ---
-title: 'Wzorce projektowania: Publikowanie/subskrybowanie oparte na liście'
+title: 'Wzorce projektowe: publikowanie/subskrybowanie oparte na liście'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cd7cc6f68362c7a69256f0488e2fa00caffdabc7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928837"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978215"
 ---
-# <a name="design-patterns-list-based-publish-subscribe"></a>Wzorce projektowania: Publikowanie/subskrybowanie oparte na liście
+# <a name="design-patterns-list-based-publish-subscribe"></a>Wzorce projektowe: publikowanie/subskrybowanie oparte na liście
 Ten przykład ilustruje wzorzec publikowania/subskrybowania opartego na liście wdrożony jako program Windows Communication Foundation (WCF).  
   
 > [!NOTE]
@@ -21,7 +21,7 @@ Ten przykład ilustruje wzorzec publikowania/subskrybowania opartego na liście 
   
  W tym przykładzie klient i źródło danych to programy konsolowe (pliki. exe), a usługa to biblioteka (. dll) hostowana w Internet Information Services (IIS). Na pulpicie są widoczne działania klienta i źródła danych.  
   
- Usługa używa komunikacji dwukierunkowej. Kontrakt usługi jest sparowany `ISampleClientCallback` z kontraktem wywołania zwrotnego. `ISampleContract` Usługa implementuje operacje subskrybowania i anulowania subskrypcji, których klienci używają do przyłączania lub opuszczania listy subskrybentów. Usługa implementuje `PublishPriceChange` również operację usługi, która jest wywoływana przez program źródła danych w celu zapewnienia usłudze nowych informacji. Program kliencki implementuje `PriceChange` operację usługi, która jest wywoływana przez usługę w celu powiadomienia wszystkich subskrybentów o zmianie cen.  
+ Usługa używa komunikacji dwukierunkowej. Kontrakt usługi `ISampleContract` jest sparowany z `ISampleClientCallback` kontraktu wywołania zwrotnego. Usługa implementuje operacje subskrybowania i anulowania subskrypcji, których klienci używają do przyłączania lub opuszczania listy subskrybentów. Usługa implementuje również `PublishPriceChange` operacji usługi, która jest wywoływana przez program źródła danych w celu zapewnienia usłudze nowych informacji. Program kliencki implementuje operację usługi `PriceChange`, która wywołuje usługę w celu powiadomienia wszystkich subskrybentów o zmianie cen.  
   
 ```csharp  
 // Create a service contract and define the service operations.  
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  Usługa używa zdarzenia .NET Framework jako mechanizmu do informowania wszystkich subskrybentów o nowych informacjach. Gdy klient przyłącza się do usługi przez wywołanie funkcji Subskrybuj, zapewnia obsługę zdarzeń. Po opuszczeniu klient anulował subskrypcję jego programu obsługi zdarzeń ze zdarzenia. Gdy źródło danych wywoła usługę w celu zgłoszenia zmiany ceny, usługa zgłasza zdarzenie. To wywołuje każde wystąpienie usługi, jeden dla każdego klienta, który ma subskrypcję, i powoduje wykonanie przez nich programów obsługi zdarzeń. Każdy program obsługi zdarzeń przekazuje informacje do klienta za pomocą funkcji wywołania zwrotnego.  
   
-```csharp  
+```csharp
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  
@@ -120,9 +120,9 @@ public class PriceChangeEventArgs : EventArgs
   
 1. Sprawdź, czy możesz uzyskać dostęp do usługi przy użyciu przeglądarki, wprowadzając następujący adres: `http://localhost/servicemodelsamples/service.svc`. W odpowiedzi powinna zostać wyświetlona strona potwierdzenia.  
   
-2. Uruchom program Client. exe z\\\client\bin, z poziomu folderu specyficznego dla języka. Aktywność klienta jest wyświetlana w oknie konsoli klienta. Uruchom kilku klientów.  
+2. Uruchom program Client. exe z \client\bin\\, z poziomu folderu specyficznego dla języka. Aktywność klienta jest wyświetlana w oknie konsoli klienta. Uruchom kilku klientów.  
   
-3. Uruchom polecenie DataSource. exe z\\\datasource\bin, z poziomu folderu specyficznego dla języka. Działanie źródła danych jest wyświetlane w oknie konsoli. Gdy źródło danych wyśle informacje do usługi, powinna zostać przeniesiona do każdego klienta.  
+3. Uruchom polecenie DataSource. exe z \datasource\bin\\, z poziomu folderu specyficznego dla języka. Działanie źródła danych jest wyświetlane w oknie konsoli. Gdy źródło danych wyśle informacje do usługi, powinna zostać przeniesiona do każdego klienta.  
   
 4. Jeśli klient, źródło danych i programy usług nie będą mogły się komunikować, zobacz Wskazówki dotyczące [rozwiązywania problemów z przykładami programu WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
@@ -157,6 +157,6 @@ public class PriceChangeEventArgs : EventArgs
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  

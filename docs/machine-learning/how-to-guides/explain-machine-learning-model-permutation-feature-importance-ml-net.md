@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8090e4565a7e55aaa9cc9939e61eb728a169de8d
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 4bad8b0ed17a34ba290bf9c00d65cc3f000a2acf
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736869"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976687"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>Wyjaśnij przewidywania modelu przy użyciu ważności funkcji permutacji
 
@@ -18,15 +18,15 @@ Dowiedz się, jak wyjaśnić przewidywania modelu uczenia maszynowego ML.NET prz
 
 Modele uczenia maszynowego często są uważane za czarne pola, które pobierają dane wyjściowe i generują wyjście. Pośrednie kroki lub interakcje między funkcjami, które mają wpływ na dane wyjściowe są rzadko zrozumiałe. Ponieważ uczenie maszynowe jest wprowadzane do większej liczby aspektów codziennego okresu istnienia, takiego jak opieka zdrowotna, ma największe znaczenie, aby zrozumieć, dlaczego model uczenia maszynowego podejmuje podejmowane decyzje. Na przykład jeśli diagnozy są dokonywane przez model uczenia maszynowego, specjaliści ds. opieki zdrowotnej muszą zapoznać się ze wskaźnikami, które zapoznają się w celu rozwiązania tego problemu. Zapewnienie właściwej diagnostyki może być świetnym rozwiązaniem w zakresie tego, czy pacjent ma szybkie odzyskiwanie, czy nie. W związku z tym wyższy poziom wyjaśnień w modelu, pracownicy służby zdrowia większego zaufania muszą zaakceptować lub odrzucić decyzje podjęte przez model.
 
-Różne techniki są używane do wyjaśnienia modeli, z których jeden jest PFI. PFI jest techniką używaną do wyjaśnienia modeli klasyfikacji i regresji, które są [sponsorowane przez papier *losowy lasów* Breiman](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (patrz sekcja 10). Na wysokim poziomie, w jaki działa, jest to spowodowane losowo Shuffling danych jedną funkcją w danym czasie dla całego zestawu danych i obliczaniem, ile metryki wydajności zmniejsza się odsetki. Im większa zmiana, tym bardziej ważna jest funkcja. 
+Różne techniki są używane do wyjaśnienia modeli, z których jeden jest PFI. PFI jest techniką używaną do wyjaśnienia modeli klasyfikacji i regresji, które są [sponsorowane przez papier *losowy lasów* Breiman](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (patrz sekcja 10). Na wysokim poziomie, w jaki działa, jest to spowodowane losowo Shuffling danych jedną funkcją w danym czasie dla całego zestawu danych i obliczaniem, ile metryki wydajności zmniejsza się odsetki. Im większa zmiana, tym bardziej ważna jest funkcja.
 
 Ponadto poprzez wyróżnienie najważniejszych funkcji konstruktory modeli mogą skupić się na użyciu podzestawu bardziej znaczących funkcji, które mogą potencjalnie zmniejszyć liczbę szumów i czas uczenia.
 
 ## <a name="load-the-data"></a>Ładowanie danych
 
-Funkcje w zestawie danych, które są używane na potrzeby tego przykładu, znajdują się w kolumnach 1-12. Celem jest przewidywanie `Price`. 
+Funkcje w zestawie danych, które są używane na potrzeby tego przykładu, znajdują się w kolumnach 1-12. Celem jest przewidywanie `Price`.
 
-| Kolumna | Funkcja | Opis 
+| Kolumna | Funkcja | Opis
 | --- | --- | --- |
 | 1 | CrimeRate | Wskaźnik przestępczości na mieszkańca
 | 2 | ResidentialZones | Strefy mieszkalne w mieście
@@ -50,7 +50,7 @@ Poniżej przedstawiono przykład zestawu danych:
 2,98,16,1,0.25,10,5,1,8,689,13,36,12
 ```
 
-Dane w tym przykładzie mogą być modelowane przez klasę taką jak `HousingPriceData` i ładowane do [`IDataView`](xref:Microsoft.ML.IDataView).
+Dane w tym przykładzie mogą być modelowane przez klasę, taką jak `HousingPriceData` i ładowane do [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ```csharp
 class HousingPriceData
@@ -103,7 +103,7 @@ Poniższy przykład kodu ilustruje proces uczenia modelu regresji liniowej w cel
 
 ```csharp
 // 1. Get the column name of input features.
-string[] featureColumnNames = 
+string[] featureColumnNames =
     data.Schema
         .Select(column => column.Name)
         .Where(columnName => columnName != "Label").ToArray();
@@ -131,15 +131,15 @@ var sdcaModel = sdcaEstimator.Fit(preprocessedTrainData);
 W ML.NET Użyj metody [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) dla odpowiedniego zadania.
 
 ```csharp
-ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance = 
+ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
     mlContext
         .Regression
         .PermutationFeatureImportance(sdcaModel, preprocessedTrainData, permutationCount:3);
 ```
 
-Wynik używania [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) w zestawie danych szkoleniowych to [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) z [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) obiektów. [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) zawiera statystyki podsumowania, takie jak średnia i odchylenie standardowe dla wielu obserwacji [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) równe liczbie permutacji określonej przez parametr `permutationCount`.
+Wynik używania [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) w zestawie danych szkoleniowych jest [`ImmutableArray`em](xref:System.Collections.Immutable.ImmutableArray) obiektów [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) . [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) zapewnia statystyki podsumowania, takie jak średnia i odchylenie standardowe dla wielu obserwacji [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) równe liczbie permutacji określonych przez `permutationCount` parametr.
 
-Istotność, czyli w tym przypadku średni spadek wartości R-kwadratowej obliczony przez [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) może następnie być uporządkowany od najważniejszych do najmniej ważnych.  
+Istotność, czyli w tym przypadku średni spadek średniej wartości R-kwadratowej obliczony przez [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) może być uporządkowany od najważniejszych do najmniej istotnych.
 
 ```csharp
 // Order features by importance
@@ -156,7 +156,7 @@ foreach (var feature in featureImportanceMetrics)
 }
 ```
 
-Drukowanie wartości dla każdej z funkcji w `featureImportanceMetrics` spowoduje wygenerowanie danych wyjściowych podobnych do poniższych. Należy pamiętać, że powinny być widoczne różne wyniki, ponieważ te wartości różnią się w zależności od danych, które są podane.  
+Drukowanie wartości dla każdej z funkcji w `featureImportanceMetrics` generuje dane wyjściowe podobne do poniższych. Należy pamiętać, że powinny być widoczne różne wyniki, ponieważ te wartości różnią się w zależności od danych, które są podane.
 
 | Funkcja | Zmień na R-kwadratowy |
 |:--|:--:|

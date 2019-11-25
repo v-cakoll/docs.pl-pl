@@ -8,21 +8,21 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: 1dda43be8c0e0c94bdf7b57b67aa4d403b547f97
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 7a6c1282c9ca8381d2dbb21ffdc82f95732c42b3
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699542"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087524"
 ---
-# <a name="bypasslist-element-network-settings"></a>\<bypasslist >, element (Ustawienia sieci)
+# <a name="bypasslist-element-network-settings"></a>\<element > BypassList (Ustawienia sieci)
 Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.  
-  
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<bypasslist >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bypasslist >**
+
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -51,9 +51,9 @@ Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzyst
 |[defaultProxy](defaultproxy-element-network-settings.md)|Konfiguruje serwer proxy protokołu HTTP (Hypertext Transfer Protocol).|  
   
 ## <a name="remarks"></a>Uwagi  
- Lista obejścia zawiera wyrażenia regularne, które opisują identyfikatory URI, których wystąpienia <xref:System.Net.WebRequest> uzyskują dostęp bezpośrednio, a nie za pomocą serwera proxy.  
+ Lista obejścia zawiera wyrażenia regularne, które opisują identyfikatory URI, które <xref:System.Net.WebRequest>ją dostęp do wystąpień bezpośrednio, a nie za pomocą serwera proxy.  
   
- Należy zachować ostrożność podczas określania wyrażenia regularnego dla tego elementu. Wyrażenie regularne "[a-z] + @no__t -0.contoso\\.com" jest zgodne z dowolnym hostem w domenie contoso.com, ale również jest zgodne z dowolnym hostem w domenie contoso.com.cpandl.com. Aby dopasować tylko hosta w domenie contoso.com, użyj kotwicy ("$"): "[a-z] + @no__t -0.contoso\\.com $".  
+ Należy zachować ostrożność podczas określania wyrażenia regularnego dla tego elementu. Wyrażenie regularne "[a-z] +\\. contoso\\. com" dopasowuje dowolnego hosta w domenie contoso.com, ale również jest zgodne z dowolnym hostem w domenie contoso.com.cpandl.com. Aby dopasować tylko hosta w domenie contoso.com, użyj kotwicy ("$"): "[a-z] +\\. contoso\\. com $".  
   
  Aby uzyskać więcej informacji na temat wyrażeń regularnych, zobacz. [.NET Framework wyrażeń regularnych](../../../../standard/base-types/regular-expressions.md).  
   

@@ -10,21 +10,21 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: 0248706ed78de160ef0131a0c7595374febf1aa9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 76dad0c0b75d20627e9f57fd1bb467bf17c9294c
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699588"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088511"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a>\<add > elementu webRequestModules (Ustawienia sieci)
+# <a name="add-element-for-webrequestmodules-network-settings"></a>\<dodać elementu > dla webRequestModules (Ustawienia sieci)
 Dodaje niestandardowy moduł żądania sieci Web do aplikacji.  
-  
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<add >**  
-  
+
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dodaj >**
+
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -58,7 +58,7 @@ Dodaje niestandardowy moduł żądania sieci Web do aplikacji.
   
  Moduł żądania sieci Web jest tworzony, gdy do metody <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> jest przesyłany prefiks pasujący do identyfikatora URI.  
   
- Wartość atrybutu `prefix` powinna być wiodącym znakiem prawidłowego identyfikatora URI. Na przykład `http` lub `http://www.contoso.com`.
+ Wartość atrybutu `prefix` powinna być wiodącymi znakami prawidłowego identyfikatora URI. Na przykład `http` lub `http://www.contoso.com`.
   
  Wartość atrybutu `type` powinna być prawidłową nazwą typu i odpowiadającą jej nazwą zestawu, rozdzieloną przecinkami.
   

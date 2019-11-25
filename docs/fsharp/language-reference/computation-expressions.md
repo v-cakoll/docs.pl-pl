@@ -1,13 +1,13 @@
 ---
 title: Wyrażenia obliczeń
 description: Dowiedz się, jak utworzyć wygodną składnię do F# pisania obliczeń w programie, które mogą być sekwencjonowane i łączone przy użyciu konstrukcji przepływu sterowania i powiązań.
-ms.date: 03/15/2019
-ms.openlocfilehash: 2f0eb7686378766f6b379f0401589490f01a1963
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: c9ac0454221782a7ccb3d41850ca6aba4e20a72a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424739"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976788"
 ---
 # <a name="computation-expressions"></a>Wyrażenia obliczeń
 
@@ -112,6 +112,34 @@ for sq in squares do
     printfn "%d" sq
 ```
 
+W większości przypadków może być pominięty przez wywołujących. Najbardziej typowym sposobem pominięcia `yield` jest operator `->`:
+
+```fsharp
+let squares =
+    seq {
+        for i in 1..10 -> i * i
+    }
+
+for sq in squares do
+    printfn "%d" sq
+```
+
+W przypadku bardziej złożonych wyrażeń, które mogą zwracać wiele różnych wartości i może być warunkowo, można po prostu pominąć słowo kluczowe:
+
+```fsharp
+let weekdays includeWeekend =
+    seq {
+        "Monday"
+        "Tuesday"
+        "Wednesday"
+        "Thursday"
+        "Friday"
+        if includeWeekend then
+            "Saturday"
+            "Sunday"
+    }
+```
+
 Podobnie jak w przypadku [słowa kluczowego Yield w C# ](../../csharp/language-reference/keywords/yield.md), każdy element w wyrażeniu obliczenia jest obliczany w miarę wykonywania iteracji.
 
 `yield` jest definiowana przez `Yield(x)` składową w typie konstruktora, gdzie `x` jest elementem, który ma zostać przywrócony.
@@ -143,6 +171,8 @@ printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 Podczas oceniania wyrażenie obliczeniowe wywoływane przez `yield!` będzie miało swoje elementy po jednym z nich, spłaszczony wynik.
 
 `yield!` jest definiowana przez `YieldFrom(x)` składową w typie konstruktora, gdzie `x` jest kolekcją wartości.
+
+W przeciwieństwie do `yield`, `yield!` musi być jawnie określony. Zachowanie nie jest niejawne w wyrażeniach obliczeniowych.
 
 ### `return`
 
@@ -394,7 +424,7 @@ Poniższy przykład pokazuje rozszerzenie istniejącej klasy `Microsoft.FSharp.L
 type Microsoft.FSharp.Linq.QueryBuilder with
 
     [<CustomOperation("existsNot")>]
-    member __.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
+    member _.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
         Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
 ```
 

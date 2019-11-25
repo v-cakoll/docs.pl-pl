@@ -2,12 +2,12 @@
 title: Dostawca tokenów SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 87aef572c2179034d295361c62942cea2ad6ed7a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: d599992949b87f0ac3f178d8f79f244781eda6fa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424236"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976708"
 ---
 # <a name="saml-token-provider"></a>Dostawca tokenów SAML
 Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów SAML klienta. Dostawca tokenu w Windows Communication Foundation (WCF) służy do dostarczania poświadczeń do infrastruktury zabezpieczeń. Dostawca tokenu ogólnie bada cel i wystawia odpowiednie poświadczenia, aby infrastruktura zabezpieczeń mogła zabezpieczyć komunikat. Usługa WCF jest dostarczana z domyślnym dostawcą tokenu Menedżera poświadczeń. Usługa WCF jest również dostarczana z dostawcą tokenu programu CardSpace. Dostawcy tokenów niestandardowych są przydatne w następujących przypadkach:
@@ -161,8 +161,7 @@ Ten przykład pokazuje, jak zaimplementować niestandardowego dostawcę tokenów
      Klasa <xref:System.IdentityModel.Selectors.SecurityTokenManager> służy do tworzenia <xref:System.IdentityModel.Selectors.SecurityTokenProvider> dla konkretnych <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>, które są do niego przesyłane w metodzie `CreateSecurityTokenProvider`. Menedżer tokenów zabezpieczających jest również używany do tworzenia wystawców tokenów i serializatorów tokenów, ale nie są one objęte tym przykładem. W tym przykładzie niestandardowy Menedżer tokenów zabezpieczających dziedziczy z klasy <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> i zastępuje metodę `CreateSecurityTokenProvider`, aby zwracała niestandardowego dostawcę tokenów SAML, gdy spełnione wymagania dotyczące tokenu wskazują, że zażądano tokenu SAML. Jeśli Klasa poświadczeń klienta (zobacz krok 3) nie określiła potwierdzenia, Menedżer tokenów zabezpieczających tworzy odpowiednie wystąpienie.
 
     ```csharp
-    public class SamlSecurityTokenManager :
-     ClientCredentialsSecurityTokenManager
+    public class SamlSecurityTokenManager : ClientCredentialsSecurityTokenManager
     {
      SamlClientCredentials samlClientCredentials;
 

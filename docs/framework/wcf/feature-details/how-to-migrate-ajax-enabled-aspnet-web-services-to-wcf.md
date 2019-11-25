@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: migrowanie usług internetowych obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF'
+title: 'Instrukcje: Migrowanie usług sieci Web obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: f492efe9e364195dce6b73a14e9ca5fa34a6df25
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 60e3088b9075464176c328af1f52676a69c4990f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972303"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976141"
 ---
-# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Instrukcje: migrowanie usług internetowych obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF
+# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Instrukcje: Migrowanie usług sieci Web obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF
 Ten temat zawiera opis procedur migrowania podstawowej usługi ASP.NET AJAX do odpowiedniej usługi Windows Communication Foundation (WCF) z obsługą technologii AJAX. Pokazano, jak utworzyć funkcjonalnie odpowiednikową wersję programu WCF usługi ASP.NET AJAX. Te dwie usługi mogą być następnie używane obok siebie lub można użyć usługi WCF w celu zastąpienia usługi ASP.NET AJAX.
 
  Migrowanie istniejącej usługi ASP.NET AJAX do usługi WCF AJAX zapewnia następujące korzyści:
@@ -22,25 +22,25 @@ Ten temat zawiera opis procedur migrowania podstawowej usługi ASP.NET AJAX do o
 
  Kod, który wynika z procedur przedstawionych w tym temacie, znajduje się w przykładzie poniżej procedur.
 
- Aby uzyskać więcej informacji na temat uwidaczniania usługi WCF za pomocą punktu końcowego z obsługą [technologii AJAX, zobacz How to: Użyj konfiguracji, aby dodać temat punktu końcowego](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) AJAX ASP.NET.
+ Więcej informacji o udostępnianiu usługi WCF za pomocą punktu końcowego z obsługą technologii AJAX można znaleźć w temacie [How to: use Configuration to Add a ASP.NET AJAX Endpoint](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) .
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Aby utworzyć i przetestować aplikację usługi sieci Web ASP.NET
 
-1. Open Visual Studio 2012.
+1. Otwórz program Visual Studio 2012.
 
 2. Z menu **plik** wybierz pozycję **Nowy**, a następnie pozycję **projekt**, **a następnie kliknij**pozycję **aplikacja usługi sieci Web ASP.NET**.
 
-3. Nazwij projekt `ASPHello` , a następnie kliknij przycisk **OK**.
+3. Nazwij projekt `ASPHello` a następnie kliknij przycisk **OK**.
 
-4. Usuń znaczniki komentarza z wiersza w pliku Service1.asmx.cs, `System.Web.Script.Services.ScriptService]` który zawiera, aby włączyć technologię AJAX dla tej usługi.
+4. Usuń komentarz z wiersza w pliku Service1.asmx.cs, który zawiera `System.Web.Script.Services.ScriptService]`, aby włączyć technologię AJAX dla tej usługi.
 
 5. Z menu **kompilacja** wybierz opcję **Kompiluj rozwiązanie**.
 
 6. Z menu **Debuguj** wybierz polecenie **Uruchom bez debugowania**.
 
-7. Na wygenerowanej stronie sieci Web wybierz `HelloWorld` operację.
+7. Na wygenerowanej stronie sieci Web Wybierz operację `HelloWorld`.
 
-8. Kliknij przycisk **Wywołaj** na `HelloWorld` stronie test. Powinna zostać wyświetlona następująca odpowiedź XML.
+8. Kliknij przycisk **Wywołaj** na stronie test `HelloWorld`. Powinna zostać wyświetlona następująca odpowiedź XML.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -55,20 +55,20 @@ Ten temat zawiera opis procedur migrowania podstawowej usługi ASP.NET AJAX do o
 
 1. Kliknij prawym przyciskiem myszy projekt **ASPHello** i wybierz polecenie **Dodaj**, a następnie pozycję **nowy element**, a następnie **usługi WCF z włączoną obsługą technologii AJAX**.
 
-2. Nazwij usługę `WCFHello` i kliknij przycisk **Dodaj**.
+2. Nazwij usługę `WCFHello` a następnie kliknij przycisk **Dodaj**.
 
 3. Otwórz plik WCFHello.svc.cs.
 
-4. Z Service1.asmx.cs Skopiuj następującą implementację `HelloWorld` operacji.
+4. Z Service1.asmx.cs Skopiuj następującą implementację operacji `HelloWorld`.
 
     ```csharp
     public string HelloWorld()
     {
-         return "Hello World";
+        return "Hello World";
     }
     ```
 
-5. Wklej do skopiowanej implementacji `HelloWorld` operacji do pliku WCFHello.svc.cs zamiast poniższego kodu.
+5. Wklej do skopiowanej implementacji operacji `HelloWorld` do pliku WCFHello.svc.cs zamiast poniższego kodu.
 
     ```csharp
     public void DoWork()
@@ -78,7 +78,7 @@ Ten temat zawiera opis procedur migrowania podstawowej usługi ASP.NET AJAX do o
     }
     ```
 
-6. `Namespace` Określ atrybut<xref:System.ServiceModel.ServiceContractAttribute> jako .`WCFHello`
+6. Określ `Namespace` atrybut <xref:System.ServiceModel.ServiceContractAttribute> jako `WCFHello`.
 
     ```csharp
     [ServiceContract(Namespace="WCFHello")]
@@ -87,7 +87,7 @@ Ten temat zawiera opis procedur migrowania podstawowej usługi ASP.NET AJAX do o
     { … }
     ```
 
-7. Dodaj <xref:System.ServiceModel.Web.WebInvokeAttribute> <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> do operacji i ustaw właściwość do zwrócenia <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. `HelloWorld` Należy pamiętać, że jeśli nie zostanie ustawiona, domyślnym typem zwracanym jest <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
+7. Dodaj <xref:System.ServiceModel.Web.WebInvokeAttribute> do operacji `HelloWorld` i ustaw właściwość <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>, aby zwracała <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. Należy pamiętać, że jeśli nie zostanie ustawiona, domyślnym typem zwracanym jest <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
 
     ```csharp
     [OperationContract]
@@ -102,13 +102,13 @@ Ten temat zawiera opis procedur migrowania podstawowej usługi ASP.NET AJAX do o
 
 9. Otwórz plik WCFHello. svc i z menu **Debuguj** wybierz polecenie **Start bez debugowania**.
 
-10. Usługa udostępnia teraz punkt końcowy w lokalizacji `WCFHello.svc/HelloWorld`, który odpowiada na żądania HTTP POST. Nie można przetestować żądań POST protokołu HTTP z przeglądarki, ale punkt końcowy zwraca kod XML po kodzie XML.
+10. Usługa udostępnia teraz punkt końcowy o `WCFHello.svc/HelloWorld`, który reaguje na żądania HTTP POST. Nie można przetestować żądań POST protokołu HTTP z przeglądarki, ale punkt końcowy zwraca kod XML po kodzie XML.
 
     ```xml
     <string xmlns="http://schemas.microsoft.com/2003/10/Serialization/">Hello World</string>
     ```
 
-11. `WCFHello.svc/HelloWorld` Punktykońcowesą`Service1.aspx/HelloWorld` teraz równoważne funkcjonalnie.
+11. `WCFHello.svc/HelloWorld` i punkty końcowe `Service1.aspx/HelloWorld` są teraz równoważne funkcjonalnie.
 
 ## <a name="example"></a>Przykład
  Kod, który wynika z procedur przedstawionych w tym temacie, znajduje się w poniższym przykładzie.
@@ -175,15 +175,15 @@ namespace ASPHello
 }
 ```
 
- Typ nie jest obsługiwany przez element, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ponieważ nie jest możliwy do <xref:System.Xml.Serialization.XmlSerializer>serializacji przez. <xref:System.Xml.XmlDocument> Zamiast tego można użyć dowolnego <xref:System.Xml.Linq.XDocument> typu. <xref:System.Xml.XmlDocument.DocumentElement%2A>
+ Typ <xref:System.Xml.XmlDocument> nie jest obsługiwany przez <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ponieważ nie można go serializować przez <xref:System.Xml.Serialization.XmlSerializer>. Zamiast tego można użyć typu <xref:System.Xml.Linq.XDocument> lub serializować <xref:System.Xml.XmlDocument.DocumentElement%2A>.
 
- Jeśli usługi sieci Web ASMX są uaktualniane i migrowane obok usług WCF, należy unikać mapowania dwóch typów na taką samą nazwę na kliencie. Powoduje to wyjątek w serializatorach, jeśli ten sam typ jest używany w <xref:System.Web.Services.WebMethodAttribute> <xref:System.ServiceModel.ServiceContractAttribute>i:
+ Jeśli usługi sieci Web ASMX są uaktualniane i migrowane obok usług WCF, należy unikać mapowania dwóch typów na taką samą nazwę na kliencie. Powoduje to wyjątek w serializatorach, jeśli ten sam typ jest używany w <xref:System.Web.Services.WebMethodAttribute> i <xref:System.ServiceModel.ServiceContractAttribute>:
 
-- Jeśli najpierw zostanie dodana usługa WCF, wywołanie metody w usłudze sieci Web ASMX powoduje wyjątek <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> , ponieważ definicja stylu WCF zamówienia na serwerze proxy ma pierwszeństwo.
+- Jeśli po raz pierwszy zostanie dodana usługa WCF, wywołanie metody w usłudze sieci Web ASMX powoduje wyjątek w <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29>, ponieważ definicja stylu WCF zamówienia na serwerze proxy ma pierwszeństwo.
 
-- Jeśli najpierw zostanie dodana usługa sieci Web ASMX, Metoda wywoływania w usłudze WCF powoduje wyjątek <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> , ponieważ definicja stylu usługi sieci Web zamówienia na serwerze proxy ma pierwszeństwo.
+- Jeśli najpierw zostanie dodana usługa sieci Web ASMX, Metoda wywoływania w usłudze WCF powoduje wyjątek w <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ponieważ definicja stylu usługi sieci Web zamówienia na serwerze proxy ma pierwszeństwo.
 
- Istnieją znaczne różnice w zachowaniu między <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> i ASP.NET AJAX. <xref:System.Web.Script.Serialization.JavaScriptSerializer> Na przykład <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> reprezentuje słownik jako tablicę par klucz/wartość, natomiast ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> reprezentuje słownik jako rzeczywiste obiekty JSON. Poniżej znajduje się słownik przedstawiony w ASP.NET AJAX.
+ Istnieją znaczne różnice w zachowaniu między <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> i <xref:System.Web.Script.Serialization.JavaScriptSerializer>AJAX ASP.NET. Na przykład <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> reprezentuje słownik jako tablicę par klucz/wartość, natomiast ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> reprezentuje słownik jako rzeczywiste obiekty JSON. Poniżej znajduje się słownik przedstawiony w ASP.NET AJAX.
 
 ```csharp
 Dictionary<string, int> d = new Dictionary<string, int>();
@@ -193,25 +193,25 @@ d.Add("two", 2);
 
  Ten słownik jest reprezentowany w obiektach JSON, jak pokazano na poniższej liście:
 
-- [{"Key": "jeden", "value": 1}, {"Key": "dwa", "value": 2}] przez<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
+- [{"Key": "jeden", "value": 1}, {"Key": "dwa", "value": 2}] przez <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 
-- {"jeden": 1, "dwa": 2} przez ASP.NET AJAX<xref:System.Web.Script.Serialization.JavaScriptSerializer>
+- {"jeden": 1, "dwa": 2} przez ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
- Jest to bardziej wydajne w tym sensie, że może obsługiwać słowniki, w których typ klucza nie jest ciągiem <xref:System.Web.Script.Serialization.JavaScriptSerializer> , podczas gdy nie może. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Jednak ten drugi jest bardziej przyjazny dla kodu JSON.
+ <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> jest bardziej wydajny w sensie, że może obsługiwać słowniki, w których typ klucza nie jest ciągiem, podczas gdy <xref:System.Web.Script.Serialization.JavaScriptSerializer> nie może. Jednak ten drugi jest bardziej przyjazny dla kodu JSON.
 
  Znaczące różnice między tymi serializatorami zostały podsumowane w poniższej tabeli.
 
-|Kategoria różnic|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
+|Kategoria różnic|Klasa DataContractJsonSerializer|ASP.NET AJAX klasy JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
 |Deserializacja pustego buforu (nowy bajt [0]) do <xref:System.Object> (lub <xref:System.Uri>lub innych klas).|SerializationException|wartość null|
-|Serializacja<xref:System.DBNull.Value>|{}(lub {"__type": "#System"})|Null|
+|Serializacja <xref:System.DBNull.Value>|{} (lub {"__type": "#System"})|Null|
 |Serializacja prywatnych składowych typów [Serializable].|serializowana|nie Zserializowano|
-|Serializacja właściwości <xref:System.Runtime.Serialization.ISerializable> publicznych typów.|nie Zserializowano|serializowana|
+|Serializacja właściwości publicznych typów <xref:System.Runtime.Serialization.ISerializable>.|nie Zserializowano|serializowana|
 |"Rozszerzenia" JSON|Jest zgodna ze specyfikacją JSON, która wymaga cudzysłowów w nazwach elementów członkowskich obiektu ({"a": "Hello"}).|Obsługuje nazwy elementów członkowskich obiektów bez cudzysłowów ({a: "Hello"}).|
-|<xref:System.DateTime>Uniwersalny czas koordynowany (UTC)|Nie obsługuje formatu "\\/Date (123456789U)&#124;\\\\\\/" lub "\\/Date (\d{4}++(\\U (-[\d]))")\\ \\\\/)".|Obsługuje format "\\/Date (123456789U)\\/" i "\\/date\\(\d&#124;\\\\+{4}+(-[\d]))")\\ \\ /)\\"jako wartości DateTime.|
+|Uniwersalny czas koordynowany <xref:System.DateTime> (UTC)|Program nie obsługuje formatu "\\/Date (123456789U)\\/" lub "\\/Date\\(\d + (U&#124;(\\+\\-[\d{4}]))?\\)\\\\/) ".|Obsługuje format "\\/Date (123456789U)\\/" i "\\/Date\\(\d + (U&#124;(\\+\\-[\d{4}]))?\\)\\\\/) "jako wartości DateTime.|
 |Reprezentacja słowników|Tablica KeyValuePair\<K, V >, obsługuje typy kluczy, które nie są ciągami.|Jako rzeczywiste obiekty JSON — ale obsługuje tylko typy kluczy, które są ciągami.|
 |Znaki ucieczki|Zawsze z ukośnikiem ucieczki (/); nigdy nie zezwala na anulowanie ucieczki nieprawidłowych znaków JSON, takich jak "\n".|Za pomocą znaku ucieczki (/) dla wartości typu DateTime.|
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Użyj konfiguracji, aby dodać punkt końcowy ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [Instrukcje: dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

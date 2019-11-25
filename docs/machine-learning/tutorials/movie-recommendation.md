@@ -5,12 +5,12 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 2d960a43f7934e262fa0e19abfea0209aa4e9ff0
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5b4541b527559ee05c9b97d84324e9e70599a014
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425242"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977377"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Samouczek: Tworzenie zalecenia dotyczącego filmu przy użyciu factorizaton macierzy z ML.NET
 
@@ -102,7 +102,7 @@ Chcesz przewidzieć klasyfikację filmów, aby kolumna Rating była `Label`. Poz
 | `movieId`      |               |
 | `timestamp`     |               |
 
-Należy określić, które `Features` są używane do przewidywania `Label`. Możesz również użyć metod, takich jak [Funkcja Permutacja](../how-to-guides/determine-global-feature-importance-in-model.md) , aby pomóc w wyborze najlepszego `Features`.
+Należy określić, które `Features` są używane do przewidywania `Label`. Możesz również użyć metod, takich jak [ważność funkcji permutacji](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md) , aby pomóc w wyborze najlepszego `Features`.
 
 W takim przypadku należy wyeliminować `timestamp` kolumnę jako `Feature`, ponieważ sygnatura czasowa nie ma wpływu na to, jak użytkownik ocenia dany film i w związku z tym nie przyczynia się do dokładniejszego przewidywania:
 
@@ -320,7 +320,7 @@ Użyj `PredictionEngine` do przewidywania klasyfikacji, dodając następujący k
 
 [!code-csharp[PredictionEngine](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PredictionEngine "Create Prediction Engine")]
 
-[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest WYGODNYm interfejsem API, który umożliwia prognozowanie jednego wystąpienia danych. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nie jest bezpieczny wątkowo. Jest to możliwe do użycia w środowiskach wielowątkowych lub prototypowych. Aby zwiększyć wydajność i bezpieczeństwo wątków w środowiskach produkcyjnych, Użyj usługi `PredictionEnginePool`, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) obiektów do użycia w całej aplikacji. Zapoznaj się z tym przewodnikiem dotyczącym [korzystania z `PredictionEnginePool` w ASP.NET Core Web API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest WYGODNYm interfejsem API, który umożliwia prognozowanie jednego wystąpienia danych. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nie jest bezpieczna wątkowo. Jest to możliwe do użycia w środowiskach wielowątkowych lub prototypowych. Aby zwiększyć wydajność i bezpieczeństwo wątków w środowiskach produkcyjnych, Użyj usługi `PredictionEnginePool`, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) obiektów do użycia w całej aplikacji. Zapoznaj się z tym przewodnikiem dotyczącym [korzystania z `PredictionEnginePool` w ASP.NET Core Web API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
 > [!NOTE]
 > rozszerzenie usługi `PredictionEnginePool` jest obecnie w wersji zapoznawczej.
@@ -373,7 +373,7 @@ Dodaj następujący kod jako następny wiersz kodu w metodzie `Main()`, aby wywo
 
 ### <a name="use-your-saved-model"></a>Użyj zapisanego modelu
 
-Po zapisaniu przeszkolonego modelu można korzystać z modelu w różnych środowiskach (zobacz [Przewodnik po poradniku](../how-to-guides/consuming-model-ml-net.md) ), aby dowiedzieć się, jak operacjonalizować model uczenia maszynowego w aplikacjach.
+Po zapisaniu przeszkolonego modelu można korzystać z modelu w różnych środowiskach. Zobacz [Zapisywanie i ładowanie modeli szkolonych](../how-to-guides/save-load-machine-learning-models-ml-net.md) , aby dowiedzieć się, jak operacjonalizować model uczenia maszynowego w aplikacjach.
 
 ## <a name="results"></a>Wyniki
 
@@ -420,7 +420,7 @@ Istnieje kilka sposobów na zwiększenie wydajności modelu, dzięki czemu możn
 
 Dodanie więcej danych szkoleniowych, które mają wystarczającą ilość próbek dla każdego użytkownika i identyfikatora filmu, może pomóc w ulepszeniu jakości modelu rekomendacji.
 
-[Krzyżowe sprawdzanie poprawności](../how-to-guides/train-cross-validation-ml-net.md) to technika służąca do oceniania modeli, które losowo dzielą dane na podzestawy (zamiast wyodrębniania danych testowych z zestawu danych, takiego jak w tym samouczku), a także niektóre grupy jako dane dotyczące uczenia i niektóre z tych grup. Ta metoda prowadzi do podzielenia testu pociągowego pod względem jakości modelu.
+[Krzyżowe sprawdzanie poprawności](../how-to-guides/train-machine-learning-model-cross-validation-ml-net.md) to technika służąca do oceniania modeli, które losowo dzielą dane na podzestawy (zamiast wyodrębniania danych testowych z zestawu danych, takiego jak w tym samouczku), a także niektóre grupy jako dane dotyczące uczenia i niektóre z tych grup. Ta metoda prowadzi do podzielenia testu pociągowego pod względem jakości modelu.
 
 ### <a name="features"></a>Funkcje
 
@@ -428,7 +428,7 @@ W tym samouczku używane są tylko trzy `Features` (`user id`, `movie id` i `rat
 
 Chociaż jest to dobry początek, w rzeczywistości warto dodać inne atrybuty lub `Features` (na przykład wiek, płeć, lokalizację geograficzną itp.), jeśli są one zawarte w zestawie danych. Dodanie bardziej odpowiednich `Features` może pomóc w ulepszaniu wydajności modelu rekomendacji.
 
-Jeśli nie masz pewności, co `Features` może być najbardziej odpowiednie dla zadania uczenia maszynowego, możesz również skorzystać z funkcji obliczania udziałów funkcji (FCC) i [cechy permutacji](../how-to-guides/determine-global-feature-importance-in-model.md), która ml.NET zapewnia odnajdowanie najbardziej odpowiedniego  `Features`.
+Jeśli nie masz pewności, które `Features` mogą być najbardziej odpowiednie dla zadania uczenia maszynowego, możesz również użyć funkcji obliczania udziałów funkcji (FCC) i [permutacji](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md), która ml.NET zapewnia odnajdywanie najbardziej znaczących `Features`.
 
 ### <a name="algorithm-hyperparameters"></a>Moje parametry algorytmu
 

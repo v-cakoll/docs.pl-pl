@@ -1,78 +1,78 @@
 ---
-title: Programowanie zorientowane obiektowo (Visual Basic)
+title: Object-oriented programming
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-ms.openlocfilehash: 058d8b932e50f784d4a5cefa9fadfb31953687f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3739919273f4cdd285d519c414c542f1a82a16d2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783516"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348165"
 ---
-# <a name="object-oriented-programming-visual-basic"></a><span data-ttu-id="6526b-102">Programowanie zorientowane obiektowo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6526b-102">Object-oriented programming (Visual Basic)</span></span>
+# <a name="object-oriented-programming-visual-basic"></a><span data-ttu-id="ea493-102">Object-oriented programming (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ea493-102">Object-oriented programming (Visual Basic)</span></span>
 
-<span data-ttu-id="6526b-103">Visual Basic zapewnia pełną obsługę programowanie zorientowane obiektowo, łącznie z hermetyzacji, dziedziczenia i polimorfizmu.</span><span class="sxs-lookup"><span data-stu-id="6526b-103">Visual Basic provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.</span></span>
+<span data-ttu-id="ea493-103">Visual Basic provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.</span><span class="sxs-lookup"><span data-stu-id="ea493-103">Visual Basic provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.</span></span>
 
- <span data-ttu-id="6526b-104">*Hermetyzacja* oznacza, że grupa powiązanych właściwości, metod i inne elementy członkowskie są traktowane jako pojedyncza jednostka lub obiekt.</span><span class="sxs-lookup"><span data-stu-id="6526b-104">*Encapsulation* means that a group of related properties, methods, and other members are treated as a single unit or object.</span></span>
+ <span data-ttu-id="ea493-104">*Encapsulation* means that a group of related properties, methods, and other members are treated as a single unit or object.</span><span class="sxs-lookup"><span data-stu-id="ea493-104">*Encapsulation* means that a group of related properties, methods, and other members are treated as a single unit or object.</span></span>
 
- <span data-ttu-id="6526b-105">*Dziedziczenie* opisuje zdolność do tworzenia nowych klas w oparciu o istniejącą klasą.</span><span class="sxs-lookup"><span data-stu-id="6526b-105">*Inheritance* describes the ability to create new classes based on an existing class.</span></span>
+ <span data-ttu-id="ea493-105">*Inheritance* describes the ability to create new classes based on an existing class.</span><span class="sxs-lookup"><span data-stu-id="ea493-105">*Inheritance* describes the ability to create new classes based on an existing class.</span></span>
 
- <span data-ttu-id="6526b-106">*Polimorfizm* oznacza, że może mieć wiele klas, które mogą być używane zamiennie, mimo że każda klasa implementuje te same właściwości lub metody w różny sposób.</span><span class="sxs-lookup"><span data-stu-id="6526b-106">*Polymorphism* means that you can have multiple classes that can be used interchangeably, even though each class implements the same properties or methods in different ways.</span></span>
+ <span data-ttu-id="ea493-106">*Polymorphism* means that you can have multiple classes that can be used interchangeably, even though each class implements the same properties or methods in different ways.</span><span class="sxs-lookup"><span data-stu-id="ea493-106">*Polymorphism* means that you can have multiple classes that can be used interchangeably, even though each class implements the same properties or methods in different ways.</span></span>
 
- <span data-ttu-id="6526b-107">W tej sekcji opisano następujące pojęcia:</span><span class="sxs-lookup"><span data-stu-id="6526b-107">This section describes the following concepts:</span></span>
+ <span data-ttu-id="ea493-107">This section describes the following concepts:</span><span class="sxs-lookup"><span data-stu-id="ea493-107">This section describes the following concepts:</span></span>
 
-- [<span data-ttu-id="6526b-108">Klasy i obiekty</span><span class="sxs-lookup"><span data-stu-id="6526b-108">Classes and objects</span></span>](#classes-and-objects)
-  - [<span data-ttu-id="6526b-109">Elementy członkowskie klasy</span><span class="sxs-lookup"><span data-stu-id="6526b-109">Class members</span></span>](#class-members)
-    - [<span data-ttu-id="6526b-110">Właściwości i pola</span><span class="sxs-lookup"><span data-stu-id="6526b-110">Properties and fields</span></span>](#properties-and-fields)
-    - [<span data-ttu-id="6526b-111">Metody</span><span class="sxs-lookup"><span data-stu-id="6526b-111">Methods</span></span>](#methods)
-    - [<span data-ttu-id="6526b-112">Konstruktory</span><span class="sxs-lookup"><span data-stu-id="6526b-112">Constructors</span></span>](#constructors)
-    - [<span data-ttu-id="6526b-113">Destruktory</span><span class="sxs-lookup"><span data-stu-id="6526b-113">Destructors</span></span>](#destructors)
-    - [<span data-ttu-id="6526b-114">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="6526b-114">Events</span></span>](#events)
-    - [<span data-ttu-id="6526b-115">Klasy zagnieżdżone</span><span class="sxs-lookup"><span data-stu-id="6526b-115">Nested classes</span></span>](#nested-classes)
-  - [<span data-ttu-id="6526b-116">Modyfikatory dostępu oraz poziomy dostępu</span><span class="sxs-lookup"><span data-stu-id="6526b-116">Access modifiers and access levels</span></span>](#access-modifiers-and-access-levels)
-    - [<span data-ttu-id="6526b-117">Tworzenie wystąpienia klasy</span><span class="sxs-lookup"><span data-stu-id="6526b-117">Instantiating classes</span></span>](#instantiating-classes)
-    - [<span data-ttu-id="6526b-118">Udostępnione klas i składowych</span><span class="sxs-lookup"><span data-stu-id="6526b-118">Shared classes and members</span></span>](#shared-classes-and-members)
-    - [<span data-ttu-id="6526b-119">Typy anonimowe</span><span class="sxs-lookup"><span data-stu-id="6526b-119">Anonymous types</span></span>](#anonymous-types)
-- [<span data-ttu-id="6526b-120">Dziedziczenie</span><span class="sxs-lookup"><span data-stu-id="6526b-120">Inheritance</span></span>](#inheritance)
-  - [<span data-ttu-id="6526b-121">Zastępowanie elementów członkowskich</span><span class="sxs-lookup"><span data-stu-id="6526b-121">Overriding members</span></span>](#overriding-members)
-- [<span data-ttu-id="6526b-122">Interfejsy</span><span class="sxs-lookup"><span data-stu-id="6526b-122">Interfaces</span></span>](#interfaces)
-- [<span data-ttu-id="6526b-123">Typy ogólne</span><span class="sxs-lookup"><span data-stu-id="6526b-123">Generics</span></span>](#generics)
-- [<span data-ttu-id="6526b-124">Delegaty</span><span class="sxs-lookup"><span data-stu-id="6526b-124">Delegates</span></span>](#delegates)
+- [<span data-ttu-id="ea493-108">Klasy i obiekty</span><span class="sxs-lookup"><span data-stu-id="ea493-108">Classes and objects</span></span>](#classes-and-objects)
+  - [<span data-ttu-id="ea493-109">Class members</span><span class="sxs-lookup"><span data-stu-id="ea493-109">Class members</span></span>](#class-members)
+    - [<span data-ttu-id="ea493-110">Properties and fields</span><span class="sxs-lookup"><span data-stu-id="ea493-110">Properties and fields</span></span>](#properties-and-fields)
+    - [<span data-ttu-id="ea493-111">Metody</span><span class="sxs-lookup"><span data-stu-id="ea493-111">Methods</span></span>](#methods)
+    - [<span data-ttu-id="ea493-112">Konstruktory</span><span class="sxs-lookup"><span data-stu-id="ea493-112">Constructors</span></span>](#constructors)
+    - [<span data-ttu-id="ea493-113">Destruktory</span><span class="sxs-lookup"><span data-stu-id="ea493-113">Destructors</span></span>](#destructors)
+    - [<span data-ttu-id="ea493-114">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="ea493-114">Events</span></span>](#events)
+    - [<span data-ttu-id="ea493-115">Nested classes</span><span class="sxs-lookup"><span data-stu-id="ea493-115">Nested classes</span></span>](#nested-classes)
+  - [<span data-ttu-id="ea493-116">Access modifiers and access levels</span><span class="sxs-lookup"><span data-stu-id="ea493-116">Access modifiers and access levels</span></span>](#access-modifiers-and-access-levels)
+    - [<span data-ttu-id="ea493-117">Instantiating classes</span><span class="sxs-lookup"><span data-stu-id="ea493-117">Instantiating classes</span></span>](#instantiating-classes)
+    - [<span data-ttu-id="ea493-118">Shared classes and members</span><span class="sxs-lookup"><span data-stu-id="ea493-118">Shared classes and members</span></span>](#shared-classes-and-members)
+    - [<span data-ttu-id="ea493-119">Anonymous types</span><span class="sxs-lookup"><span data-stu-id="ea493-119">Anonymous types</span></span>](#anonymous-types)
+- [<span data-ttu-id="ea493-120">Dziedziczenie</span><span class="sxs-lookup"><span data-stu-id="ea493-120">Inheritance</span></span>](#inheritance)
+  - [<span data-ttu-id="ea493-121">Overriding members</span><span class="sxs-lookup"><span data-stu-id="ea493-121">Overriding members</span></span>](#overriding-members)
+- [<span data-ttu-id="ea493-122">Interfejsy</span><span class="sxs-lookup"><span data-stu-id="ea493-122">Interfaces</span></span>](#interfaces)
+- [<span data-ttu-id="ea493-123">Typy ogólne</span><span class="sxs-lookup"><span data-stu-id="ea493-123">Generics</span></span>](#generics)
+- [<span data-ttu-id="ea493-124">Delegaci</span><span class="sxs-lookup"><span data-stu-id="ea493-124">Delegates</span></span>](#delegates)
 
-## <a name="classes-and-objects"></a><span data-ttu-id="6526b-125">Klasy i obiekty</span><span class="sxs-lookup"><span data-stu-id="6526b-125">Classes and objects</span></span>
+## <a name="classes-and-objects"></a><span data-ttu-id="ea493-125">Klasy i obiekty</span><span class="sxs-lookup"><span data-stu-id="ea493-125">Classes and objects</span></span>
 
-<span data-ttu-id="6526b-126">Warunki *klasy* i *obiektu* są czasami stosowane zamiennie, jednak w rzeczywistości klasy opisują *typu* obiektów, podczas gdy obiekty to użytkowe  *wystąpienia* klas.</span><span class="sxs-lookup"><span data-stu-id="6526b-126">The terms *class* and *object* are sometimes used interchangeably, but in fact, classes describe the *type* of objects, while objects are usable *instances* of classes.</span></span> <span data-ttu-id="6526b-127">Więc, akt tworzenia obiektu jest nazywany *wystąpienia*.</span><span class="sxs-lookup"><span data-stu-id="6526b-127">So, the act of creating an object is called *instantiation*.</span></span> <span data-ttu-id="6526b-128">Korzystając z analogii planu, klasa to plan, a obiekt to budynek utworzony z tego planu.</span><span class="sxs-lookup"><span data-stu-id="6526b-128">Using the blueprint analogy, a class is a blueprint, and an object is a building made from that blueprint.</span></span>
+<span data-ttu-id="ea493-126">The terms *class* and *object* are sometimes used interchangeably, but in fact, classes describe the *type* of objects, while objects are usable *instances* of classes.</span><span class="sxs-lookup"><span data-stu-id="ea493-126">The terms *class* and *object* are sometimes used interchangeably, but in fact, classes describe the *type* of objects, while objects are usable *instances* of classes.</span></span> <span data-ttu-id="ea493-127">So, the act of creating an object is called *instantiation*.</span><span class="sxs-lookup"><span data-stu-id="ea493-127">So, the act of creating an object is called *instantiation*.</span></span> <span data-ttu-id="ea493-128">Using the blueprint analogy, a class is a blueprint, and an object is a building made from that blueprint.</span><span class="sxs-lookup"><span data-stu-id="ea493-128">Using the blueprint analogy, a class is a blueprint, and an object is a building made from that blueprint.</span></span>
 
-<span data-ttu-id="6526b-129">Aby zdefiniować klasę:</span><span class="sxs-lookup"><span data-stu-id="6526b-129">To define a class:</span></span>
+<span data-ttu-id="ea493-129">To define a class:</span><span class="sxs-lookup"><span data-stu-id="ea493-129">To define a class:</span></span>
 
 ```vb
 Class SampleClass
 End Class
 ```
 
-<span data-ttu-id="6526b-130">Visual Basic oferuje również uproszczonej wersji klasy o nazwie *struktury* są przydatne, gdy trzeba utworzyć duże tablice obiektów i czy chcesz zużyć do tego zbyt dużej ilości pamięci.</span><span class="sxs-lookup"><span data-stu-id="6526b-130">Visual Basic also provides a light version of classes called *structures* that are useful when you need to create large array of objects and do not want to consume too much memory for that.</span></span>
+<span data-ttu-id="ea493-130">Visual Basic also provides a light version of classes called *structures* that are useful when you need to create large array of objects and do not want to consume too much memory for that.</span><span class="sxs-lookup"><span data-stu-id="ea493-130">Visual Basic also provides a light version of classes called *structures* that are useful when you need to create large array of objects and do not want to consume too much memory for that.</span></span>
 
-<span data-ttu-id="6526b-131">Aby zdefiniować strukturę:</span><span class="sxs-lookup"><span data-stu-id="6526b-131">To define a structure:</span></span>
+<span data-ttu-id="ea493-131">To define a structure:</span><span class="sxs-lookup"><span data-stu-id="ea493-131">To define a structure:</span></span>
 
 ```vb
 Structure SampleStructure
 End Structure
 ```
 
-<span data-ttu-id="6526b-132">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="6526b-132">For more information, see:</span></span>
+<span data-ttu-id="ea493-132">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="ea493-132">For more information, see:</span></span>
 
-- [<span data-ttu-id="6526b-133">Class, instrukcja</span><span class="sxs-lookup"><span data-stu-id="6526b-133">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)
-- [<span data-ttu-id="6526b-134">Structure, instrukcja</span><span class="sxs-lookup"><span data-stu-id="6526b-134">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [<span data-ttu-id="ea493-133">Class, instrukcja</span><span class="sxs-lookup"><span data-stu-id="ea493-133">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)
+- [<span data-ttu-id="ea493-134">Structure, instrukcja</span><span class="sxs-lookup"><span data-stu-id="ea493-134">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)
 
-### <a name="class-members"></a><span data-ttu-id="6526b-135">Elementy członkowskie klasy</span><span class="sxs-lookup"><span data-stu-id="6526b-135">Class members</span></span>
+### <a name="class-members"></a><span data-ttu-id="ea493-135">Class members</span><span class="sxs-lookup"><span data-stu-id="ea493-135">Class members</span></span>
 
-<span data-ttu-id="6526b-136">Każda klasa może mieć różne *elementy członkowskie klasy* którzy zawierają właściwości, które opisują dane klasy, metody, które definiują zachowanie klasy i wydarzenia, które zapewniają komunikację między różnych klasami i obiektami.</span><span class="sxs-lookup"><span data-stu-id="6526b-136">Each class can have different *class members* that include properties that describe class data, methods that define class behavior, and events that provide communication between different classes and objects.</span></span>
+<span data-ttu-id="ea493-136">Each class can have different *class members* that include properties that describe class data, methods that define class behavior, and events that provide communication between different classes and objects.</span><span class="sxs-lookup"><span data-stu-id="ea493-136">Each class can have different *class members* that include properties that describe class data, methods that define class behavior, and events that provide communication between different classes and objects.</span></span>
 
-#### <a name="properties-and-fields"></a><span data-ttu-id="6526b-137">Właściwości i pola</span><span class="sxs-lookup"><span data-stu-id="6526b-137">Properties and fields</span></span>
+#### <a name="properties-and-fields"></a><span data-ttu-id="ea493-137">Properties and fields</span><span class="sxs-lookup"><span data-stu-id="ea493-137">Properties and fields</span></span>
 
-<span data-ttu-id="6526b-138">Pola i właściwości reprezentują informacje zawarte w obiekcie.</span><span class="sxs-lookup"><span data-stu-id="6526b-138">Fields and properties represent information that an object contains.</span></span> <span data-ttu-id="6526b-139">Pola przypominają zmienne, ponieważ można je odczytać lub ustawić bezpośrednio.</span><span class="sxs-lookup"><span data-stu-id="6526b-139">Fields are like variables because they can be read or set directly.</span></span>
+<span data-ttu-id="ea493-138">Fields and properties represent information that an object contains.</span><span class="sxs-lookup"><span data-stu-id="ea493-138">Fields and properties represent information that an object contains.</span></span> <span data-ttu-id="ea493-139">Fields are like variables because they can be read or set directly.</span><span class="sxs-lookup"><span data-stu-id="ea493-139">Fields are like variables because they can be read or set directly.</span></span>
 
-<span data-ttu-id="6526b-140">Aby zdefiniować pole:</span><span class="sxs-lookup"><span data-stu-id="6526b-140">To define a field:</span></span>
+<span data-ttu-id="ea493-140">To define a field:</span><span class="sxs-lookup"><span data-stu-id="ea493-140">To define a field:</span></span>
 
 ```vb
 Class SampleClass
@@ -80,11 +80,11 @@ Class SampleClass
 End Class
 ```
 
-<span data-ttu-id="6526b-141">Właściwości mają get i ustawić procedur, które zapewniają większą kontrolę nad jak ustawiania lub zwracania wartości.</span><span class="sxs-lookup"><span data-stu-id="6526b-141">Properties have get and set procedures, which provide more control on how values are set or returned.</span></span>
+<span data-ttu-id="ea493-141">Properties have get and set procedures, which provide more control on how values are set or returned.</span><span class="sxs-lookup"><span data-stu-id="ea493-141">Properties have get and set procedures, which provide more control on how values are set or returned.</span></span>
 
-<span data-ttu-id="6526b-142">Visual Basic zezwala na tworzenie prywatnego pola do przechowywania wartości właściwości lub użyć tzw automatycznie implementowanych właściwości, które tworzą to pole automatycznie w tle i ustanowiają podstawowe logiki dla procedur właściwość.</span><span class="sxs-lookup"><span data-stu-id="6526b-142">Visual Basic allows you either to create a private field for storing the property value or use so-called auto-implemented properties that create this field automatically behind the scenes and provide the basic logic for the property procedures.</span></span>
+<span data-ttu-id="ea493-142">Visual Basic allows you either to create a private field for storing the property value or use so-called auto-implemented properties that create this field automatically behind the scenes and provide the basic logic for the property procedures.</span><span class="sxs-lookup"><span data-stu-id="ea493-142">Visual Basic allows you either to create a private field for storing the property value or use so-called auto-implemented properties that create this field automatically behind the scenes and provide the basic logic for the property procedures.</span></span>
 
-<span data-ttu-id="6526b-143">Aby zdefiniować automatycznie implementowanej właściwości:</span><span class="sxs-lookup"><span data-stu-id="6526b-143">To define an auto-implemented property:</span></span>
+<span data-ttu-id="ea493-143">To define an auto-implemented property:</span><span class="sxs-lookup"><span data-stu-id="ea493-143">To define an auto-implemented property:</span></span>
 
 ```vb
 Class SampleClass
@@ -92,7 +92,7 @@ Class SampleClass
 End Class
 ```
 
-<span data-ttu-id="6526b-144">Jeśli musisz wykonać kilka dodatkowych operacji odczytu i zapisu wartości właściwości, zdefiniuj pole do przechowywania wartości właściwości i Zaoferuj podstawową logikę do przechowywania i pobierania:</span><span class="sxs-lookup"><span data-stu-id="6526b-144">If you need to perform some additional operations for reading and writing the property value, define a field for storing the property value and provide the basic logic for storing and retrieving it:</span></span>
+<span data-ttu-id="ea493-144">If you need to perform some additional operations for reading and writing the property value, define a field for storing the property value and provide the basic logic for storing and retrieving it:</span><span class="sxs-lookup"><span data-stu-id="ea493-144">If you need to perform some additional operations for reading and writing the property value, define a field for storing the property value and provide the basic logic for storing and retrieving it:</span></span>
 
 ```vb
 Class SampleClass
@@ -110,24 +110,24 @@ Class SampleClass
 End Class
 ```
 
-<span data-ttu-id="6526b-145">Większość właściwości posiada metody lub procedury do ustawiania i pobierania wartości właściwości.</span><span class="sxs-lookup"><span data-stu-id="6526b-145">Most properties have methods or procedures to both set and get the property value.</span></span> <span data-ttu-id="6526b-146">Można jednak utworzyć właściwości tylko do odczytu lub tylko do zapisu, aby uniemożliwić ich modyfikację lub odczytanie.</span><span class="sxs-lookup"><span data-stu-id="6526b-146">However, you can create read-only or write-only properties to restrict them from being modified or read.</span></span> <span data-ttu-id="6526b-147">W języku Visual Basic można użyć `ReadOnly` i `WriteOnly` słów kluczowych.</span><span class="sxs-lookup"><span data-stu-id="6526b-147">In Visual Basic you can use `ReadOnly` and `WriteOnly` keywords.</span></span> <span data-ttu-id="6526b-148">Jednak automatycznie implementowanych właściwości nie może być tylko do odczytu lub tylko do zapisu.</span><span class="sxs-lookup"><span data-stu-id="6526b-148">However, auto-implemented properties cannot be read-only or write-only.</span></span>
+<span data-ttu-id="ea493-145">Most properties have methods or procedures to both set and get the property value.</span><span class="sxs-lookup"><span data-stu-id="ea493-145">Most properties have methods or procedures to both set and get the property value.</span></span> <span data-ttu-id="ea493-146">However, you can create read-only or write-only properties to restrict them from being modified or read.</span><span class="sxs-lookup"><span data-stu-id="ea493-146">However, you can create read-only or write-only properties to restrict them from being modified or read.</span></span> <span data-ttu-id="ea493-147">In Visual Basic you can use `ReadOnly` and `WriteOnly` keywords.</span><span class="sxs-lookup"><span data-stu-id="ea493-147">In Visual Basic you can use `ReadOnly` and `WriteOnly` keywords.</span></span> <span data-ttu-id="ea493-148">However, auto-implemented properties cannot be read-only or write-only.</span><span class="sxs-lookup"><span data-stu-id="ea493-148">However, auto-implemented properties cannot be read-only or write-only.</span></span>
 
-<span data-ttu-id="6526b-149">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="6526b-149">For more information, see:</span></span>
+<span data-ttu-id="ea493-149">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="ea493-149">For more information, see:</span></span>
 
-- [<span data-ttu-id="6526b-150">Instrukcja Property</span><span class="sxs-lookup"><span data-stu-id="6526b-150">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)
-- [<span data-ttu-id="6526b-151">Get, instrukcja</span><span class="sxs-lookup"><span data-stu-id="6526b-151">Get Statement</span></span>](../../../visual-basic/language-reference/statements/get-statement.md)
-- [<span data-ttu-id="6526b-152">Set, instrukcja</span><span class="sxs-lookup"><span data-stu-id="6526b-152">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)
-- [<span data-ttu-id="6526b-153">ReadOnly</span><span class="sxs-lookup"><span data-stu-id="6526b-153">ReadOnly</span></span>](../../../visual-basic/language-reference/modifiers/readonly.md)
-- [<span data-ttu-id="6526b-154">WriteOnly</span><span class="sxs-lookup"><span data-stu-id="6526b-154">WriteOnly</span></span>](../../../visual-basic/language-reference/modifiers/writeonly.md)
+- [<span data-ttu-id="ea493-150">Property, instrukcja</span><span class="sxs-lookup"><span data-stu-id="ea493-150">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)
+- [<span data-ttu-id="ea493-151">Get, instrukcja</span><span class="sxs-lookup"><span data-stu-id="ea493-151">Get Statement</span></span>](../../../visual-basic/language-reference/statements/get-statement.md)
+- [<span data-ttu-id="ea493-152">Set, instrukcja</span><span class="sxs-lookup"><span data-stu-id="ea493-152">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)
+- [<span data-ttu-id="ea493-153">ReadOnly</span><span class="sxs-lookup"><span data-stu-id="ea493-153">ReadOnly</span></span>](../../../visual-basic/language-reference/modifiers/readonly.md)
+- [<span data-ttu-id="ea493-154">WriteOnly</span><span class="sxs-lookup"><span data-stu-id="ea493-154">WriteOnly</span></span>](../../../visual-basic/language-reference/modifiers/writeonly.md)
 
-#### <a name="methods"></a><span data-ttu-id="6526b-155">Metody</span><span class="sxs-lookup"><span data-stu-id="6526b-155">Methods</span></span>
+#### <a name="methods"></a><span data-ttu-id="ea493-155">Metody</span><span class="sxs-lookup"><span data-stu-id="ea493-155">Methods</span></span>
 
- <span data-ttu-id="6526b-156">A *metoda* to działanie, którą obiekt może wykonywać.</span><span class="sxs-lookup"><span data-stu-id="6526b-156">A *method* is an action that an object can perform.</span></span>
+ <span data-ttu-id="ea493-156">A *method* is an action that an object can perform.</span><span class="sxs-lookup"><span data-stu-id="ea493-156">A *method* is an action that an object can perform.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="6526b-157">W języku Visual Basic, istnieją dwa sposoby tworzenia metody: `Sub` instrukcja jest używane, jeśli metoda nie zwraca wartości; `Function` instrukcja jest używane, jeśli metoda zwraca wartość.</span><span class="sxs-lookup"><span data-stu-id="6526b-157">In Visual Basic, there are two ways to create a method: the `Sub` statement is used if the method does not return a value; the `Function` statement is used if a method returns a value.</span></span>
+> <span data-ttu-id="ea493-157">In Visual Basic, there are two ways to create a method: the `Sub` statement is used if the method does not return a value; the `Function` statement is used if a method returns a value.</span><span class="sxs-lookup"><span data-stu-id="ea493-157">In Visual Basic, there are two ways to create a method: the `Sub` statement is used if the method does not return a value; the `Function` statement is used if a method returns a value.</span></span>
 
-<span data-ttu-id="6526b-158">Aby zdefiniować metodę klasy:</span><span class="sxs-lookup"><span data-stu-id="6526b-158">To define a method of a class:</span></span>
+<span data-ttu-id="ea493-158">To define a method of a class:</span><span class="sxs-lookup"><span data-stu-id="ea493-158">To define a method of a class:</span></span>
 
 ```vb
 Class SampleClass
@@ -137,9 +137,9 @@ Class SampleClass
 End Class
 ```
 
-<span data-ttu-id="6526b-159">Klasa może mieć kilka implementacji lub *przeciążenia*, z tej samej metody, które różnią się liczbą typów parametru lub parametrów.</span><span class="sxs-lookup"><span data-stu-id="6526b-159">A class can have several implementations, or *overloads*, of the same method that differ in the number of parameters or parameter types.</span></span>
+<span data-ttu-id="ea493-159">A class can have several implementations, or *overloads*, of the same method that differ in the number of parameters or parameter types.</span><span class="sxs-lookup"><span data-stu-id="ea493-159">A class can have several implementations, or *overloads*, of the same method that differ in the number of parameters or parameter types.</span></span>
 
-<span data-ttu-id="6526b-160">Aby przeciążyć metodę</span><span class="sxs-lookup"><span data-stu-id="6526b-160">To overload a method:</span></span>
+<span data-ttu-id="ea493-160">To overload a method:</span><span class="sxs-lookup"><span data-stu-id="ea493-160">To overload a method:</span></span>
 
 ```vb
 Overloads Sub Display(ByVal theChar As Char)
@@ -150,20 +150,20 @@ Overloads Sub Display(ByVal theInteger As Integer)
 End Sub
 ```
 
-<span data-ttu-id="6526b-161">W większości przypadków użytkownik deklaruje metodę w ramach definicji klasy.</span><span class="sxs-lookup"><span data-stu-id="6526b-161">In most cases you declare a method within a class definition.</span></span> <span data-ttu-id="6526b-162">Jednak języka Visual Basic obsługuje również *metody rozszerzenia* umożliwiającą dodawanie metod do istniejącej klasy poza rzeczywistą definicją klasy.</span><span class="sxs-lookup"><span data-stu-id="6526b-162">However, Visual Basic also supports *extension methods* that allow you to add methods to an existing class outside the actual definition of the class.</span></span>
+<span data-ttu-id="ea493-161">In most cases you declare a method within a class definition.</span><span class="sxs-lookup"><span data-stu-id="ea493-161">In most cases you declare a method within a class definition.</span></span> <span data-ttu-id="ea493-162">However, Visual Basic also supports *extension methods* that allow you to add methods to an existing class outside the actual definition of the class.</span><span class="sxs-lookup"><span data-stu-id="ea493-162">However, Visual Basic also supports *extension methods* that allow you to add methods to an existing class outside the actual definition of the class.</span></span>
 
-<span data-ttu-id="6526b-163">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="6526b-163">For more information, see:</span></span>
+<span data-ttu-id="ea493-163">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="ea493-163">For more information, see:</span></span>
 
-- [<span data-ttu-id="6526b-164">Function, instrukcja</span><span class="sxs-lookup"><span data-stu-id="6526b-164">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
-- [<span data-ttu-id="6526b-165">Sub, instrukcja</span><span class="sxs-lookup"><span data-stu-id="6526b-165">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [<span data-ttu-id="6526b-166">Overloads</span><span class="sxs-lookup"><span data-stu-id="6526b-166">Overloads</span></span>](../../../visual-basic/language-reference/modifiers/overloads.md)
-- [<span data-ttu-id="6526b-167">Metody rozszerzeń</span><span class="sxs-lookup"><span data-stu-id="6526b-167">Extension Methods</span></span>](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [<span data-ttu-id="ea493-164">Function, instrukcja</span><span class="sxs-lookup"><span data-stu-id="ea493-164">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="ea493-165">Sub, instrukcja</span><span class="sxs-lookup"><span data-stu-id="ea493-165">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [<span data-ttu-id="ea493-166">Overloads</span><span class="sxs-lookup"><span data-stu-id="ea493-166">Overloads</span></span>](../../../visual-basic/language-reference/modifiers/overloads.md)
+- [<span data-ttu-id="ea493-167">Metody rozszerzeń</span><span class="sxs-lookup"><span data-stu-id="ea493-167">Extension Methods</span></span>](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
 
-#### <a name="constructors"></a><span data-ttu-id="6526b-168">Konstruktorów</span><span class="sxs-lookup"><span data-stu-id="6526b-168">Constructors</span></span>
+#### <a name="constructors"></a><span data-ttu-id="ea493-168">Konstruktorów</span><span class="sxs-lookup"><span data-stu-id="ea493-168">Constructors</span></span>
 
-<span data-ttu-id="6526b-169">Konstruktory są metodami klasy, które są wykonywane automatycznie po utworzeniu obiektu danego typu.</span><span class="sxs-lookup"><span data-stu-id="6526b-169">Constructors are class methods that are executed automatically when an object of a given type is created.</span></span> <span data-ttu-id="6526b-170">Konstruktory zwykle inicjują członków danych nowego obiektu.</span><span class="sxs-lookup"><span data-stu-id="6526b-170">Constructors usually initialize the data members of the new object.</span></span> <span data-ttu-id="6526b-171">Konstruktor można uruchomić tylko raz, po utworzeniu klasy.</span><span class="sxs-lookup"><span data-stu-id="6526b-171">A constructor can run only once when a class is created.</span></span> <span data-ttu-id="6526b-172">Ponadto kod w Konstruktorze zawsze jest uruchamiany przed innymi kodami w klasie.</span><span class="sxs-lookup"><span data-stu-id="6526b-172">Furthermore, the code in the constructor always runs before any other code in a class.</span></span> <span data-ttu-id="6526b-173">Można jednak utworzyć wiele przeciążeń konstruktora w taki sam sposób jak w przypadku każdej innej metody.</span><span class="sxs-lookup"><span data-stu-id="6526b-173">However, you can create multiple constructor overloads in the same way as for any other method.</span></span>
+<span data-ttu-id="ea493-169">Constructors are class methods that are executed automatically when an object of a given type is created.</span><span class="sxs-lookup"><span data-stu-id="ea493-169">Constructors are class methods that are executed automatically when an object of a given type is created.</span></span> <span data-ttu-id="ea493-170">Constructors usually initialize the data members of the new object.</span><span class="sxs-lookup"><span data-stu-id="ea493-170">Constructors usually initialize the data members of the new object.</span></span> <span data-ttu-id="ea493-171">A constructor can run only once when a class is created.</span><span class="sxs-lookup"><span data-stu-id="ea493-171">A constructor can run only once when a class is created.</span></span> <span data-ttu-id="ea493-172">Furthermore, the code in the constructor always runs before any other code in a class.</span><span class="sxs-lookup"><span data-stu-id="ea493-172">Furthermore, the code in the constructor always runs before any other code in a class.</span></span> <span data-ttu-id="ea493-173">However, you can create multiple constructor overloads in the same way as for any other method.</span><span class="sxs-lookup"><span data-stu-id="ea493-173">However, you can create multiple constructor overloads in the same way as for any other method.</span></span>
 
-<span data-ttu-id="6526b-174">Aby zdefiniować Konstruktor dla klasy:</span><span class="sxs-lookup"><span data-stu-id="6526b-174">To define a constructor for a class:</span></span>
+<span data-ttu-id="ea493-174">To define a constructor for a class:</span><span class="sxs-lookup"><span data-stu-id="ea493-174">To define a constructor for a class:</span></span>
 
 ```vb
 Class SampleClass
@@ -173,29 +173,29 @@ Class SampleClass
 End Class
 ```
 
-<span data-ttu-id="6526b-175">Aby uzyskać więcej informacji, zobacz: [Okres istnienia obiektów: Jak obiekty są tworzone i niszczone](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).</span><span class="sxs-lookup"><span data-stu-id="6526b-175">For more information, see: [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).</span></span>
+<span data-ttu-id="ea493-175">For more information, see: [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).</span><span class="sxs-lookup"><span data-stu-id="ea493-175">For more information, see: [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).</span></span>
 
-#### <a name="destructors"></a><span data-ttu-id="6526b-176">Destruktory</span><span class="sxs-lookup"><span data-stu-id="6526b-176">Destructors</span></span>
+#### <a name="destructors"></a><span data-ttu-id="ea493-176">Destruktory</span><span class="sxs-lookup"><span data-stu-id="ea493-176">Destructors</span></span>
 
-<span data-ttu-id="6526b-177">Destruktory są używane do niszczenia wystąpień klas.</span><span class="sxs-lookup"><span data-stu-id="6526b-177">Destructors are used to destruct instances of classes.</span></span> <span data-ttu-id="6526b-178">W .NET Framework moduł odśmiecania pamięci automatycznie zarządza alokacją i zwolnieniem pamięci dla obiektów zarządzanych w Twojej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="6526b-178">In the .NET Framework, the garbage collector automatically manages the allocation and release of memory for the managed objects in your application.</span></span> <span data-ttu-id="6526b-179">Jednakże nadal może być konieczne usunięcie przez destruktory niezarządzanych zasobów tworzonych przez aplikację.</span><span class="sxs-lookup"><span data-stu-id="6526b-179">However, you may still need destructors to clean up any unmanaged resources that your application creates.</span></span> <span data-ttu-id="6526b-180">Może istnieć jedynie jeden destruktor klasy.</span><span class="sxs-lookup"><span data-stu-id="6526b-180">There can be only one destructor for a class.</span></span>
+<span data-ttu-id="ea493-177">Destructors are used to destruct instances of classes.</span><span class="sxs-lookup"><span data-stu-id="ea493-177">Destructors are used to destruct instances of classes.</span></span> <span data-ttu-id="ea493-178">In the .NET Framework, the garbage collector automatically manages the allocation and release of memory for the managed objects in your application.</span><span class="sxs-lookup"><span data-stu-id="ea493-178">In the .NET Framework, the garbage collector automatically manages the allocation and release of memory for the managed objects in your application.</span></span> <span data-ttu-id="ea493-179">However, you may still need destructors to clean up any unmanaged resources that your application creates.</span><span class="sxs-lookup"><span data-stu-id="ea493-179">However, you may still need destructors to clean up any unmanaged resources that your application creates.</span></span> <span data-ttu-id="ea493-180">There can be only one destructor for a class.</span><span class="sxs-lookup"><span data-stu-id="ea493-180">There can be only one destructor for a class.</span></span>
 
-<span data-ttu-id="6526b-181">Aby uzyskać więcej informacji dotyczących destruktorów i wyrzucania elementów bezużytecznych w .NET Framework, zobacz [wyrzucania elementów bezużytecznych](../../../standard/garbage-collection/index.md).</span><span class="sxs-lookup"><span data-stu-id="6526b-181">For more information about destructors and garbage collection in the .NET Framework, see [Garbage Collection](../../../standard/garbage-collection/index.md).</span></span>
+<span data-ttu-id="ea493-181">For more information about destructors and garbage collection in the .NET Framework, see [Garbage Collection](../../../standard/garbage-collection/index.md).</span><span class="sxs-lookup"><span data-stu-id="ea493-181">For more information about destructors and garbage collection in the .NET Framework, see [Garbage Collection](../../../standard/garbage-collection/index.md).</span></span>
 
-#### <a name="events"></a><span data-ttu-id="6526b-182">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="6526b-182">Events</span></span>
+#### <a name="events"></a><span data-ttu-id="ea493-182">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="ea493-182">Events</span></span>
 
-<span data-ttu-id="6526b-183">Zdarzenie pozwala klasie lub obiektowi powiadomić inne klasy lub obiektów, kiedy stanie się coś istotnego.</span><span class="sxs-lookup"><span data-stu-id="6526b-183">Events enable a class or object to notify other classes or objects when something of interest occurs.</span></span> <span data-ttu-id="6526b-184">Nosi nazwę klasy, która wysyła (lub generuje) zdarzenie *wydawcy* i klasy, otrzymywać (lub uchwyt) zdarzenia, które są nazywane *subskrybentów*.</span><span class="sxs-lookup"><span data-stu-id="6526b-184">The class that sends (or raises) the event is called the *publisher* and the classes that receive (or handle) the event are called *subscribers*.</span></span> <span data-ttu-id="6526b-185">Aby uzyskać więcej informacji na temat zdarzeń, jak ich wywoływania i obsługi, zobacz [zdarzenia](../../../standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="6526b-185">For more information about events, how they are raised and handled, see [Events](../../../standard/events/index.md).</span></span>
+<span data-ttu-id="ea493-183">Events enable a class or object to notify other classes or objects when something of interest occurs.</span><span class="sxs-lookup"><span data-stu-id="ea493-183">Events enable a class or object to notify other classes or objects when something of interest occurs.</span></span> <span data-ttu-id="ea493-184">The class that sends (or raises) the event is called the *publisher* and the classes that receive (or handle) the event are called *subscribers*.</span><span class="sxs-lookup"><span data-stu-id="ea493-184">The class that sends (or raises) the event is called the *publisher* and the classes that receive (or handle) the event are called *subscribers*.</span></span> <span data-ttu-id="ea493-185">For more information about events, how they are raised and handled, see [Events](../../../standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="ea493-185">For more information about events, how they are raised and handled, see [Events](../../../standard/events/index.md).</span></span>
 
-- <span data-ttu-id="6526b-186">Aby zadeklarować zdarzenia, użyj [Event — instrukcja](../../../visual-basic/language-reference/statements/event-statement.md).</span><span class="sxs-lookup"><span data-stu-id="6526b-186">To declare events, use the [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>
+- <span data-ttu-id="ea493-186">To declare events, use the [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span><span class="sxs-lookup"><span data-stu-id="ea493-186">To declare events, use the [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>
 
-- <span data-ttu-id="6526b-187">Aby wywołać zdarzenia, należy użyć [RaiseEvent — instrukcja](../../../visual-basic/language-reference/statements/raiseevent-statement.md).</span><span class="sxs-lookup"><span data-stu-id="6526b-187">To raise events, use the [RaiseEvent Statement](../../../visual-basic/language-reference/statements/raiseevent-statement.md).</span></span>
+- <span data-ttu-id="ea493-187">To raise events, use the [RaiseEvent Statement](../../../visual-basic/language-reference/statements/raiseevent-statement.md).</span><span class="sxs-lookup"><span data-stu-id="ea493-187">To raise events, use the [RaiseEvent Statement](../../../visual-basic/language-reference/statements/raiseevent-statement.md).</span></span>
 
-- <span data-ttu-id="6526b-188">Aby określić obsługę zdarzenia przy użyciu deklaratywną metodę, należy użyć [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) instrukcji i [obsługuje](../../../visual-basic/language-reference/statements/handles-clause.md) klauzuli.</span><span class="sxs-lookup"><span data-stu-id="6526b-188">To specify event handlers using a declarative way, use the [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) statement and the [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) clause.</span></span>
+- <span data-ttu-id="ea493-188">To specify event handlers using a declarative way, use the [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) statement and the [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) clause.</span><span class="sxs-lookup"><span data-stu-id="ea493-188">To specify event handlers using a declarative way, use the [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) statement and the [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) clause.</span></span>
 
-- <span data-ttu-id="6526b-189">Aby mieć możliwość dynamicznego dodawania, usuwania i zmiany obsługi zdarzenia powiązanego ze zdarzeniem, użyj [AddHandler — instrukcja](../../../visual-basic/language-reference/statements/addhandler-statement.md) i [RemoveHandler — instrukcja](../../../visual-basic/language-reference/statements/removehandler-statement.md) wraz z [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md).</span><span class="sxs-lookup"><span data-stu-id="6526b-189">To be able to dynamically add, remove, and change the event handler associated with an event, use the [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md) and [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md) together with the [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md).</span></span>
+- <span data-ttu-id="ea493-189">To be able to dynamically add, remove, and change the event handler associated with an event, use the [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md) and [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md) together with the [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md).</span><span class="sxs-lookup"><span data-stu-id="ea493-189">To be able to dynamically add, remove, and change the event handler associated with an event, use the [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md) and [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md) together with the [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md).</span></span>
 
-#### <a name="nested-classes"></a><span data-ttu-id="6526b-190">Klasy zagnieżdżone</span><span class="sxs-lookup"><span data-stu-id="6526b-190">Nested classes</span></span>
+#### <a name="nested-classes"></a><span data-ttu-id="ea493-190">Nested classes</span><span class="sxs-lookup"><span data-stu-id="ea493-190">Nested classes</span></span>
 
-<span data-ttu-id="6526b-191">Nosi nazwę klasy zdefiniowanej w ramach innej klasy *zagnieżdżonych*.</span><span class="sxs-lookup"><span data-stu-id="6526b-191">A class defined within another class is called *nested*.</span></span> <span data-ttu-id="6526b-192">Domyślnie zagnieżdżona klasa jest prywatna.</span><span class="sxs-lookup"><span data-stu-id="6526b-192">By default, the nested class is private.</span></span>
+<span data-ttu-id="ea493-191">A class defined within another class is called *nested*.</span><span class="sxs-lookup"><span data-stu-id="ea493-191">A class defined within another class is called *nested*.</span></span> <span data-ttu-id="ea493-192">By default, the nested class is private.</span><span class="sxs-lookup"><span data-stu-id="ea493-192">By default, the nested class is private.</span></span>
 
 ```vb
 Class Container
@@ -205,37 +205,37 @@ Class Container
 End Class
 ```
 
-<span data-ttu-id="6526b-193">Aby utworzyć wystąpienie klasy zagnieżdżonej, należy użyć nazwy klasy kontenera, następuje kropki (.), a następnie według nazwy zagnieżdżonej klasy:</span><span class="sxs-lookup"><span data-stu-id="6526b-193">To create an instance of the nested class, use the name of the container class followed by the dot and then followed by the name of the nested class:</span></span>
+<span data-ttu-id="ea493-193">To create an instance of the nested class, use the name of the container class followed by the dot and then followed by the name of the nested class:</span><span class="sxs-lookup"><span data-stu-id="ea493-193">To create an instance of the nested class, use the name of the container class followed by the dot and then followed by the name of the nested class:</span></span>
 
 ```vb
 Dim nestedInstance As Container.Nested = New Container.Nested()
 ```
 
-### <a name="access-modifiers-and-access-levels"></a><span data-ttu-id="6526b-194">Modyfikatory dostępu oraz poziomy dostępu</span><span class="sxs-lookup"><span data-stu-id="6526b-194">Access modifiers and access levels</span></span>
+### <a name="access-modifiers-and-access-levels"></a><span data-ttu-id="ea493-194">Access modifiers and access levels</span><span class="sxs-lookup"><span data-stu-id="ea493-194">Access modifiers and access levels</span></span>
 
-<span data-ttu-id="6526b-195">Wszystkie klasy i składowych klasy, można określić poziom dostępu, jaki stanowią dla innych klas przy użyciu *modyfikatorach dostępu*.</span><span class="sxs-lookup"><span data-stu-id="6526b-195">All classes and class members can specify what access level they provide to other classes by using *access modifiers*.</span></span>
+<span data-ttu-id="ea493-195">All classes and class members can specify what access level they provide to other classes by using *access modifiers*.</span><span class="sxs-lookup"><span data-stu-id="ea493-195">All classes and class members can specify what access level they provide to other classes by using *access modifiers*.</span></span>
 
-<span data-ttu-id="6526b-196">Dostępne są następujące modyfikatory dostępu:</span><span class="sxs-lookup"><span data-stu-id="6526b-196">The following access modifiers are available:</span></span>
+<span data-ttu-id="ea493-196">The following access modifiers are available:</span><span class="sxs-lookup"><span data-stu-id="ea493-196">The following access modifiers are available:</span></span>
 
-|<span data-ttu-id="6526b-197">Visual Basic Modifier</span><span class="sxs-lookup"><span data-stu-id="6526b-197">Visual Basic Modifier</span></span>|<span data-ttu-id="6526b-198">Definicja</span><span class="sxs-lookup"><span data-stu-id="6526b-198">Definition</span></span>|
+|<span data-ttu-id="ea493-197">Visual Basic Modifier</span><span class="sxs-lookup"><span data-stu-id="ea493-197">Visual Basic Modifier</span></span>|<span data-ttu-id="ea493-198">Definicja</span><span class="sxs-lookup"><span data-stu-id="ea493-198">Definition</span></span>|
 |---------------------------|----------------|
-|[<span data-ttu-id="6526b-199">Public</span><span class="sxs-lookup"><span data-stu-id="6526b-199">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)|<span data-ttu-id="6526b-200">Typ lub element członkowski może zostać oceniony przez inny kod, w tym samym zestawie lub w innym zestawie, który odwołuje się do niej.</span><span class="sxs-lookup"><span data-stu-id="6526b-200">The type or member can be accessed by any other code in the same assembly or another assembly that references it.</span></span>|
-|[<span data-ttu-id="6526b-201">Private</span><span class="sxs-lookup"><span data-stu-id="6526b-201">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)|<span data-ttu-id="6526b-202">Tylko możliwy typu lub elementu członkowskiego przez kod z tej samej klasy.</span><span class="sxs-lookup"><span data-stu-id="6526b-202">The type or member can only be accessed by code in the same class.</span></span>|
-|[<span data-ttu-id="6526b-203">Protected</span><span class="sxs-lookup"><span data-stu-id="6526b-203">Protected</span></span>](../../../visual-basic/language-reference/modifiers/protected.md)|<span data-ttu-id="6526b-204">Tylko możliwy typu lub elementu członkowskiego przez kod z tej samej klasy lub w klasie pochodnej.</span><span class="sxs-lookup"><span data-stu-id="6526b-204">The type or member can only be accessed by code in the same class or in a derived class.</span></span>|
-|[<span data-ttu-id="6526b-205">Friend</span><span class="sxs-lookup"><span data-stu-id="6526b-205">Friend</span></span>](../../../visual-basic/language-reference/modifiers/friend.md)|<span data-ttu-id="6526b-206">Typ lub element członkowski może zostać oceniony przez każdy kod z tego samego zestawu, ale nie z innego zestawu.</span><span class="sxs-lookup"><span data-stu-id="6526b-206">The type or member can be accessed by any code in the same assembly, but not from another assembly.</span></span>|
-|`Protected Friend`|<span data-ttu-id="6526b-207">Typ lub element członkowski jest możliwy przez każdy kod z tego samego zestawu lub każdą pochodną klasę w innym zestawie.</span><span class="sxs-lookup"><span data-stu-id="6526b-207">The type or member can be accessed by any code in the same assembly, or by any derived class in another assembly.</span></span>|
+|[<span data-ttu-id="ea493-199">Public</span><span class="sxs-lookup"><span data-stu-id="ea493-199">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)|<span data-ttu-id="ea493-200">The type or member can be accessed by any other code in the same assembly or another assembly that references it.</span><span class="sxs-lookup"><span data-stu-id="ea493-200">The type or member can be accessed by any other code in the same assembly or another assembly that references it.</span></span>|
+|[<span data-ttu-id="ea493-201">Private</span><span class="sxs-lookup"><span data-stu-id="ea493-201">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)|<span data-ttu-id="ea493-202">The type or member can only be accessed by code in the same class.</span><span class="sxs-lookup"><span data-stu-id="ea493-202">The type or member can only be accessed by code in the same class.</span></span>|
+|[<span data-ttu-id="ea493-203">Protected</span><span class="sxs-lookup"><span data-stu-id="ea493-203">Protected</span></span>](../../../visual-basic/language-reference/modifiers/protected.md)|<span data-ttu-id="ea493-204">The type or member can only be accessed by code in the same class or in a derived class.</span><span class="sxs-lookup"><span data-stu-id="ea493-204">The type or member can only be accessed by code in the same class or in a derived class.</span></span>|
+|[<span data-ttu-id="ea493-205">Friend</span><span class="sxs-lookup"><span data-stu-id="ea493-205">Friend</span></span>](../../../visual-basic/language-reference/modifiers/friend.md)|<span data-ttu-id="ea493-206">The type or member can be accessed by any code in the same assembly, but not from another assembly.</span><span class="sxs-lookup"><span data-stu-id="ea493-206">The type or member can be accessed by any code in the same assembly, but not from another assembly.</span></span>|
+|`Protected Friend`|<span data-ttu-id="ea493-207">The type or member can be accessed by any code in the same assembly, or by any derived class in another assembly.</span><span class="sxs-lookup"><span data-stu-id="ea493-207">The type or member can be accessed by any code in the same assembly, or by any derived class in another assembly.</span></span>|
 
-<span data-ttu-id="6526b-208">Aby uzyskać więcej informacji, zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="6526b-208">For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>
+<span data-ttu-id="ea493-208">For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="ea493-208">For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>
 
-### <a name="instantiating-classes"></a><span data-ttu-id="6526b-209">Tworzenie wystąpienia klasy</span><span class="sxs-lookup"><span data-stu-id="6526b-209">Instantiating classes</span></span>
+### <a name="instantiating-classes"></a><span data-ttu-id="ea493-209">Instantiating classes</span><span class="sxs-lookup"><span data-stu-id="ea493-209">Instantiating classes</span></span>
 
-<span data-ttu-id="6526b-210">Aby utworzyć obiekt, należy utworzyć wystąpienia klasy lub utworzyć wystąpienie klasy.</span><span class="sxs-lookup"><span data-stu-id="6526b-210">To create an object, you need to instantiate a class, or create a class instance.</span></span>
+<span data-ttu-id="ea493-210">To create an object, you need to instantiate a class, or create a class instance.</span><span class="sxs-lookup"><span data-stu-id="ea493-210">To create an object, you need to instantiate a class, or create a class instance.</span></span>
 
 ```vb
 Dim sampleObject as New SampleClass()
 ```
 
-<span data-ttu-id="6526b-211">Po utworzeniu wystąpienia klasy, można przypisać wartości do pól i właściwości instancji i wywołania metod klasy.</span><span class="sxs-lookup"><span data-stu-id="6526b-211">After instantiating a class, you can assign values to the instance's properties and fields and invoke class methods.</span></span>
+<span data-ttu-id="ea493-211">After instantiating a class, you can assign values to the instance's properties and fields and invoke class methods.</span><span class="sxs-lookup"><span data-stu-id="ea493-211">After instantiating a class, you can assign values to the instance's properties and fields and invoke class methods.</span></span>
 
 ```vb
 ' Set a property value.
@@ -244,23 +244,23 @@ sampleObject.SampleProperty = "Sample String"
 sampleObject.SampleMethod()
 ```
 
-<span data-ttu-id="6526b-212">Aby przypisać wartości do właściwości w procesie tworzenia wystąpienia klasy, użyj inicjalizatorów obiektów:</span><span class="sxs-lookup"><span data-stu-id="6526b-212">To assign values to properties during the class instantiation process, use object initializers:</span></span>
+<span data-ttu-id="ea493-212">To assign values to properties during the class instantiation process, use object initializers:</span><span class="sxs-lookup"><span data-stu-id="ea493-212">To assign values to properties during the class instantiation process, use object initializers:</span></span>
 
 ```vb
 Dim sampleObject = New SampleClass With
     {.FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-<span data-ttu-id="6526b-213">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="6526b-213">For more information, see:</span></span>
+<span data-ttu-id="ea493-213">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="ea493-213">For more information, see:</span></span>
 
-- [<span data-ttu-id="6526b-214">New, operator</span><span class="sxs-lookup"><span data-stu-id="6526b-214">New Operator</span></span>](../../../visual-basic/language-reference/operators/new-operator.md)
-- [<span data-ttu-id="6526b-215">Inicjatory obiektów: Typy nazwane i anonimowe</span><span class="sxs-lookup"><span data-stu-id="6526b-215">Object Initializers: Named and Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [<span data-ttu-id="ea493-214">Operator New</span><span class="sxs-lookup"><span data-stu-id="ea493-214">New Operator</span></span>](../../../visual-basic/language-reference/operators/new-operator.md)
+- [<span data-ttu-id="ea493-215">Inicjatory obiektów: typy nazwane i anonimowe</span><span class="sxs-lookup"><span data-stu-id="ea493-215">Object Initializers: Named and Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-### <a name="shared-classes-and-members"></a><span data-ttu-id="6526b-216">Udostępnione klas i składowych</span><span class="sxs-lookup"><span data-stu-id="6526b-216">Shared classes and members</span></span>
+### <a name="shared-classes-and-members"></a><span data-ttu-id="ea493-216">Shared classes and members</span><span class="sxs-lookup"><span data-stu-id="ea493-216">Shared classes and members</span></span>
 
- <span data-ttu-id="6526b-217">Udostępnione składową klasy jest właściwość, procedura lub pole, który jest współużytkowany przez wszystkie wystąpienia klasy.</span><span class="sxs-lookup"><span data-stu-id="6526b-217">A shared member of the class is a property, procedure, or field that is shared by all instances of a class.</span></span>
+ <span data-ttu-id="ea493-217">A shared member of the class is a property, procedure, or field that is shared by all instances of a class.</span><span class="sxs-lookup"><span data-stu-id="ea493-217">A shared member of the class is a property, procedure, or field that is shared by all instances of a class.</span></span>
 
- <span data-ttu-id="6526b-218">Aby zdefiniować udostępnionego elementu członkowskiego:</span><span class="sxs-lookup"><span data-stu-id="6526b-218">To define a shared member:</span></span>
+ <span data-ttu-id="ea493-218">To define a shared member:</span><span class="sxs-lookup"><span data-stu-id="ea493-218">To define a shared member:</span></span>
 
 ```vb
 Class SampleClass
@@ -268,24 +268,24 @@ Class SampleClass
 End Class
 ```
 
- <span data-ttu-id="6526b-219">Aby uzyskać dostęp do udostępnionej składowej, należy użyć nazwy klasy bez tworzenia obiektu tej klasy:</span><span class="sxs-lookup"><span data-stu-id="6526b-219">To access the shared member, use the name of the class without creating an object of this class:</span></span>
+ <span data-ttu-id="ea493-219">To access the shared member, use the name of the class without creating an object of this class:</span><span class="sxs-lookup"><span data-stu-id="ea493-219">To access the shared member, use the name of the class without creating an object of this class:</span></span>
 
 ```vb
 MsgBox(SampleClass.SampleString)
 ```
 
- <span data-ttu-id="6526b-220">Udostępnione moduły w języku Visual Basic zostały udostępnione tylko elementy członkowskie i nie można utworzyć wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="6526b-220">Shared modules in Visual Basic have shared members only and cannot be instantiated.</span></span> <span data-ttu-id="6526b-221">Udostępniane elementy członkowskie także nie może uzyskać dostępu nieudostępnione właściwości, pól ani metod</span><span class="sxs-lookup"><span data-stu-id="6526b-221">Shared members also cannot access non-shared properties, fields or methods</span></span>
+ <span data-ttu-id="ea493-220">Shared modules in Visual Basic have shared members only and cannot be instantiated.</span><span class="sxs-lookup"><span data-stu-id="ea493-220">Shared modules in Visual Basic have shared members only and cannot be instantiated.</span></span> <span data-ttu-id="ea493-221">Shared members also cannot access non-shared properties, fields or methods</span><span class="sxs-lookup"><span data-stu-id="ea493-221">Shared members also cannot access non-shared properties, fields or methods</span></span>
 
- <span data-ttu-id="6526b-222">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="6526b-222">For more information, see:</span></span>
+ <span data-ttu-id="ea493-222">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="ea493-222">For more information, see:</span></span>
 
-- [<span data-ttu-id="6526b-223">Shared</span><span class="sxs-lookup"><span data-stu-id="6526b-223">Shared</span></span>](../../../visual-basic/language-reference/modifiers/shared.md)
-- [<span data-ttu-id="6526b-224">Instrukcja Module</span><span class="sxs-lookup"><span data-stu-id="6526b-224">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)
+- [<span data-ttu-id="ea493-223">Shared</span><span class="sxs-lookup"><span data-stu-id="ea493-223">Shared</span></span>](../../../visual-basic/language-reference/modifiers/shared.md)
+- [<span data-ttu-id="ea493-224">Module, instrukcja</span><span class="sxs-lookup"><span data-stu-id="ea493-224">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)
 
-### <a name="anonymous-types"></a><span data-ttu-id="6526b-225">Typy anonimowe</span><span class="sxs-lookup"><span data-stu-id="6526b-225">Anonymous types</span></span>
+### <a name="anonymous-types"></a><span data-ttu-id="ea493-225">Anonymous types</span><span class="sxs-lookup"><span data-stu-id="ea493-225">Anonymous types</span></span>
 
-<span data-ttu-id="6526b-226">Typy anonimowe umożliwiają tworzenie obiektów bez konieczności pisania definicji klasy dla typu danych.</span><span class="sxs-lookup"><span data-stu-id="6526b-226">Anonymous types enable you to create objects without writing a class definition for the data type.</span></span> <span data-ttu-id="6526b-227">Zamiast tego kompilator generuje klasę dla Ciebie.</span><span class="sxs-lookup"><span data-stu-id="6526b-227">Instead, the compiler generates a class for you.</span></span> <span data-ttu-id="6526b-228">Klasa nie ma użytecznych nazw i zawiera właściwości, które określisz w odwołaniu do obiektu.</span><span class="sxs-lookup"><span data-stu-id="6526b-228">The class has no usable name and contains the properties you specify in declaring the object.</span></span>
+<span data-ttu-id="ea493-226">Anonymous types enable you to create objects without writing a class definition for the data type.</span><span class="sxs-lookup"><span data-stu-id="ea493-226">Anonymous types enable you to create objects without writing a class definition for the data type.</span></span> <span data-ttu-id="ea493-227">Instead, the compiler generates a class for you.</span><span class="sxs-lookup"><span data-stu-id="ea493-227">Instead, the compiler generates a class for you.</span></span> <span data-ttu-id="ea493-228">The class has no usable name and contains the properties you specify in declaring the object.</span><span class="sxs-lookup"><span data-stu-id="ea493-228">The class has no usable name and contains the properties you specify in declaring the object.</span></span>
 
-<span data-ttu-id="6526b-229">Aby utworzyć wystąpienie typu anonimowego:</span><span class="sxs-lookup"><span data-stu-id="6526b-229">To create an instance of an anonymous type:</span></span>
+<span data-ttu-id="ea493-229">To create an instance of an anonymous type:</span><span class="sxs-lookup"><span data-stu-id="ea493-229">To create an instance of an anonymous type:</span></span>
 
 ```vb
 ' sampleObject is an instance of a simple anonymous type.
@@ -293,16 +293,16 @@ Dim sampleObject =
     New With {Key .FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-<span data-ttu-id="6526b-230">Aby uzyskać więcej informacji, zobacz: [Typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="6526b-230">For more information, see: [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span></span>
+<span data-ttu-id="ea493-230">For more information, see: [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="ea493-230">For more information, see: [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span></span>
 
-## <a name="inheritance"></a><span data-ttu-id="6526b-231">Dziedziczenie</span><span class="sxs-lookup"><span data-stu-id="6526b-231">Inheritance</span></span>
+## <a name="inheritance"></a><span data-ttu-id="ea493-231">Dziedziczenie</span><span class="sxs-lookup"><span data-stu-id="ea493-231">Inheritance</span></span>
 
-<span data-ttu-id="6526b-232">Dziedziczenie umożliwia utworzenie nowej klasy, która używa, rozszerza i modyfikuje zachowanie, która jest zdefiniowana w innej klasy.</span><span class="sxs-lookup"><span data-stu-id="6526b-232">Inheritance enables you to create a new class that reuses, extends, and modifies the behavior that is defined in another class.</span></span> <span data-ttu-id="6526b-233">Nosi nazwę klasy, której członkowie są dziedziczeni *klasy bazowej*, a klasa, która dziedziczy tych członków, jest nazywana *klasy pochodnej*.</span><span class="sxs-lookup"><span data-stu-id="6526b-233">The class whose members are inherited is called the *base class*, and the class that inherits those members is called the *derived class*.</span></span> <span data-ttu-id="6526b-234">Jednakże wszystkie klasy w języku Visual Basic niejawnie dziedziczą z <xref:System.Object> klasy, która obsługuje hierarchię klas .NET i zapewnia niskopoziomowe usługi dla wszystkich klas.</span><span class="sxs-lookup"><span data-stu-id="6526b-234">However, all classes in Visual Basic implicitly inherit from the <xref:System.Object> class that supports .NET class hierarchy and provides low-level services to all classes.</span></span>
+<span data-ttu-id="ea493-232">Inheritance enables you to create a new class that reuses, extends, and modifies the behavior that is defined in another class.</span><span class="sxs-lookup"><span data-stu-id="ea493-232">Inheritance enables you to create a new class that reuses, extends, and modifies the behavior that is defined in another class.</span></span> <span data-ttu-id="ea493-233">The class whose members are inherited is called the *base class*, and the class that inherits those members is called the *derived class*.</span><span class="sxs-lookup"><span data-stu-id="ea493-233">The class whose members are inherited is called the *base class*, and the class that inherits those members is called the *derived class*.</span></span> <span data-ttu-id="ea493-234">However, all classes in Visual Basic implicitly inherit from the <xref:System.Object> class that supports .NET class hierarchy and provides low-level services to all classes.</span><span class="sxs-lookup"><span data-stu-id="ea493-234">However, all classes in Visual Basic implicitly inherit from the <xref:System.Object> class that supports .NET class hierarchy and provides low-level services to all classes.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="6526b-235">Język Visual Basic nie obsługuje wielokrotne dziedziczenie.</span><span class="sxs-lookup"><span data-stu-id="6526b-235">Visual Basic doesn't support multiple inheritance.</span></span> <span data-ttu-id="6526b-236">Oznacza to, że można określić tylko jedną klasę bazową dla klasy pochodnej.</span><span class="sxs-lookup"><span data-stu-id="6526b-236">That is, you can specify only one base class for a derived class.</span></span>
+> <span data-ttu-id="ea493-235">Visual Basic doesn't support multiple inheritance.</span><span class="sxs-lookup"><span data-stu-id="ea493-235">Visual Basic doesn't support multiple inheritance.</span></span> <span data-ttu-id="ea493-236">That is, you can specify only one base class for a derived class.</span><span class="sxs-lookup"><span data-stu-id="ea493-236">That is, you can specify only one base class for a derived class.</span></span>
 
-<span data-ttu-id="6526b-237">Dziedziczenie z klasy bazowej:</span><span class="sxs-lookup"><span data-stu-id="6526b-237">To inherit from a base class:</span></span>
+<span data-ttu-id="ea493-237">To inherit from a base class:</span><span class="sxs-lookup"><span data-stu-id="ea493-237">To inherit from a base class:</span></span>
 
 ```vb
 Class DerivedClass
@@ -310,47 +310,47 @@ Class DerivedClass
 End Class
 ```
 
-<span data-ttu-id="6526b-238">Domyślnie wszystkie klasy mogą być dziedziczone.</span><span class="sxs-lookup"><span data-stu-id="6526b-238">By default all classes can be inherited.</span></span> <span data-ttu-id="6526b-239">Można jednak określić klasy nie może być używany jako klasa bazowa, czy utworzyć klasę, która może służyć jako klasę bazową tylko.</span><span class="sxs-lookup"><span data-stu-id="6526b-239">However, you can specify whether a class must not be used as a base class, or create a class that can be used as a base class only.</span></span>
+<span data-ttu-id="ea493-238">By default all classes can be inherited.</span><span class="sxs-lookup"><span data-stu-id="ea493-238">By default all classes can be inherited.</span></span> <span data-ttu-id="ea493-239">However, you can specify whether a class must not be used as a base class, or create a class that can be used as a base class only.</span><span class="sxs-lookup"><span data-stu-id="ea493-239">However, you can specify whether a class must not be used as a base class, or create a class that can be used as a base class only.</span></span>
 
-<span data-ttu-id="6526b-240">Aby określić, że klasa nie można użyć jako klasa bazowa:</span><span class="sxs-lookup"><span data-stu-id="6526b-240">To specify that a class cannot be used as a base class:</span></span>
+<span data-ttu-id="ea493-240">To specify that a class cannot be used as a base class:</span><span class="sxs-lookup"><span data-stu-id="ea493-240">To specify that a class cannot be used as a base class:</span></span>
 
 ```vb
 NotInheritable Class SampleClass
 End Class
 ```
 
-<span data-ttu-id="6526b-241">Aby określić, że klasa może służyć jako klasę bazową tylko i nie można utworzyć wystąpienia:</span><span class="sxs-lookup"><span data-stu-id="6526b-241">To specify that a class can be used as a base class only and cannot be instantiated:</span></span>
+<span data-ttu-id="ea493-241">To specify that a class can be used as a base class only and cannot be instantiated:</span><span class="sxs-lookup"><span data-stu-id="ea493-241">To specify that a class can be used as a base class only and cannot be instantiated:</span></span>
 
 ```vb
 MustInherit Class BaseClass
 End Class
 ```
 
-<span data-ttu-id="6526b-242">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="6526b-242">For more information, see:</span></span>
+<span data-ttu-id="ea493-242">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="ea493-242">For more information, see:</span></span>
 
-- [<span data-ttu-id="6526b-243">Inherits, instrukcja</span><span class="sxs-lookup"><span data-stu-id="6526b-243">Inherits Statement</span></span>](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [<span data-ttu-id="6526b-244">NotInheritable</span><span class="sxs-lookup"><span data-stu-id="6526b-244">NotInheritable</span></span>](../../../visual-basic/language-reference/modifiers/notinheritable.md)
-- [<span data-ttu-id="6526b-245">MustInherit</span><span class="sxs-lookup"><span data-stu-id="6526b-245">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [<span data-ttu-id="ea493-243">Inherits, instrukcja</span><span class="sxs-lookup"><span data-stu-id="ea493-243">Inherits Statement</span></span>](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [<span data-ttu-id="ea493-244">NotInheritable</span><span class="sxs-lookup"><span data-stu-id="ea493-244">NotInheritable</span></span>](../../../visual-basic/language-reference/modifiers/notinheritable.md)
+- [<span data-ttu-id="ea493-245">MustInherit</span><span class="sxs-lookup"><span data-stu-id="ea493-245">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 
-### <a name="overriding-members"></a><span data-ttu-id="6526b-246">Zastępowanie elementów członkowskich</span><span class="sxs-lookup"><span data-stu-id="6526b-246">Overriding members</span></span>
+### <a name="overriding-members"></a><span data-ttu-id="ea493-246">Overriding members</span><span class="sxs-lookup"><span data-stu-id="ea493-246">Overriding members</span></span>
 
-<span data-ttu-id="6526b-247">Domyślnie Klasa pochodna dziedziczy wszystkie elementy członkowskie w swojej klasie podstawowej.</span><span class="sxs-lookup"><span data-stu-id="6526b-247">By default, a derived class inherits all members from its base class.</span></span> <span data-ttu-id="6526b-248">Jeśli chcesz zmienić zachowanie dziedziczonego elementu członkowskiego, należy go zastąpić.</span><span class="sxs-lookup"><span data-stu-id="6526b-248">If you want to change the behavior of the inherited member, you need to override it.</span></span> <span data-ttu-id="6526b-249">Oznacza to można zdefiniować nową metodę implementacji metody, właściwości lub zdarzenia w klasie pochodnej.</span><span class="sxs-lookup"><span data-stu-id="6526b-249">That is, you can define a new implementation of the method, property or event in the derived class.</span></span>
+<span data-ttu-id="ea493-247">By default, a derived class inherits all members from its base class.</span><span class="sxs-lookup"><span data-stu-id="ea493-247">By default, a derived class inherits all members from its base class.</span></span> <span data-ttu-id="ea493-248">If you want to change the behavior of the inherited member, you need to override it.</span><span class="sxs-lookup"><span data-stu-id="ea493-248">If you want to change the behavior of the inherited member, you need to override it.</span></span> <span data-ttu-id="ea493-249">That is, you can define a new implementation of the method, property or event in the derived class.</span><span class="sxs-lookup"><span data-stu-id="ea493-249">That is, you can define a new implementation of the method, property or event in the derived class.</span></span>
 
-<span data-ttu-id="6526b-250">Następujące Modyfikatory są używane do kontrolowania, jak zastąpić właściwości i metod:</span><span class="sxs-lookup"><span data-stu-id="6526b-250">The following modifiers are used to control how properties and methods are overridden:</span></span>
+<span data-ttu-id="ea493-250">The following modifiers are used to control how properties and methods are overridden:</span><span class="sxs-lookup"><span data-stu-id="ea493-250">The following modifiers are used to control how properties and methods are overridden:</span></span>
 
-|<span data-ttu-id="6526b-251">Visual Basic Modifier</span><span class="sxs-lookup"><span data-stu-id="6526b-251">Visual Basic Modifier</span></span>|<span data-ttu-id="6526b-252">Definicja</span><span class="sxs-lookup"><span data-stu-id="6526b-252">Definition</span></span>|
+|<span data-ttu-id="ea493-251">Visual Basic Modifier</span><span class="sxs-lookup"><span data-stu-id="ea493-251">Visual Basic Modifier</span></span>|<span data-ttu-id="ea493-252">Definicja</span><span class="sxs-lookup"><span data-stu-id="ea493-252">Definition</span></span>|
 |---------------------------|----------------|
-|[<span data-ttu-id="6526b-253">Overridable</span><span class="sxs-lookup"><span data-stu-id="6526b-253">Overridable</span></span>](../../../visual-basic/language-reference/modifiers/overridable.md)|<span data-ttu-id="6526b-254">Zezwala na element członkowski klasy został nadpisany w klasie pochodnej.</span><span class="sxs-lookup"><span data-stu-id="6526b-254">Allows a class member to be overridden in a derived class.</span></span>|
-|[<span data-ttu-id="6526b-255">Overrides</span><span class="sxs-lookup"><span data-stu-id="6526b-255">Overrides</span></span>](../../../visual-basic/language-reference/modifiers/overrides.md)|<span data-ttu-id="6526b-256">Zastępuje wirtualny element członkowski (przesłanialny) zdefiniowany w klasie bazowej.</span><span class="sxs-lookup"><span data-stu-id="6526b-256">Overrides a virtual (overridable) member defined in the base class.</span></span>|
-|[<span data-ttu-id="6526b-257">NotOverridable</span><span class="sxs-lookup"><span data-stu-id="6526b-257">NotOverridable</span></span>](../../../visual-basic/language-reference/modifiers/notoverridable.md)|<span data-ttu-id="6526b-258">Element członkowski zapobiega zastępowaniu w klasie dziedziczącej.</span><span class="sxs-lookup"><span data-stu-id="6526b-258">Prevents a member from being overridden in an inheriting class.</span></span>|
-|[<span data-ttu-id="6526b-259">MustOverride</span><span class="sxs-lookup"><span data-stu-id="6526b-259">MustOverride</span></span>](../../../visual-basic/language-reference/modifiers/mustoverride.md)|<span data-ttu-id="6526b-260">Wymaga, aby element członkowski klasy został nadpisany w klasie pochodnej.</span><span class="sxs-lookup"><span data-stu-id="6526b-260">Requires that a class member to be overridden in the derived class.</span></span>|
-|[<span data-ttu-id="6526b-261">Shadows</span><span class="sxs-lookup"><span data-stu-id="6526b-261">Shadows</span></span>](../../../visual-basic/language-reference/modifiers/shadows.md)|<span data-ttu-id="6526b-262">Ukrywa członka dziedziczonego z klasy bazowej</span><span class="sxs-lookup"><span data-stu-id="6526b-262">Hides a member inherited from a base class</span></span>|
+|[<span data-ttu-id="ea493-253">Overridable</span><span class="sxs-lookup"><span data-stu-id="ea493-253">Overridable</span></span>](../../../visual-basic/language-reference/modifiers/overridable.md)|<span data-ttu-id="ea493-254">Allows a class member to be overridden in a derived class.</span><span class="sxs-lookup"><span data-stu-id="ea493-254">Allows a class member to be overridden in a derived class.</span></span>|
+|[<span data-ttu-id="ea493-255">Overrides</span><span class="sxs-lookup"><span data-stu-id="ea493-255">Overrides</span></span>](../../../visual-basic/language-reference/modifiers/overrides.md)|<span data-ttu-id="ea493-256">Overrides a virtual (overridable) member defined in the base class.</span><span class="sxs-lookup"><span data-stu-id="ea493-256">Overrides a virtual (overridable) member defined in the base class.</span></span>|
+|[<span data-ttu-id="ea493-257">NotOverridable</span><span class="sxs-lookup"><span data-stu-id="ea493-257">NotOverridable</span></span>](../../../visual-basic/language-reference/modifiers/notoverridable.md)|<span data-ttu-id="ea493-258">Prevents a member from being overridden in an inheriting class.</span><span class="sxs-lookup"><span data-stu-id="ea493-258">Prevents a member from being overridden in an inheriting class.</span></span>|
+|[<span data-ttu-id="ea493-259">MustOverride</span><span class="sxs-lookup"><span data-stu-id="ea493-259">MustOverride</span></span>](../../../visual-basic/language-reference/modifiers/mustoverride.md)|<span data-ttu-id="ea493-260">Requires that a class member to be overridden in the derived class.</span><span class="sxs-lookup"><span data-stu-id="ea493-260">Requires that a class member to be overridden in the derived class.</span></span>|
+|[<span data-ttu-id="ea493-261">Shadows</span><span class="sxs-lookup"><span data-stu-id="ea493-261">Shadows</span></span>](../../../visual-basic/language-reference/modifiers/shadows.md)|<span data-ttu-id="ea493-262">Hides a member inherited from a base class</span><span class="sxs-lookup"><span data-stu-id="ea493-262">Hides a member inherited from a base class</span></span>|
 
-## <a name="interfaces"></a><span data-ttu-id="6526b-263">Interfejsy</span><span class="sxs-lookup"><span data-stu-id="6526b-263">Interfaces</span></span>
+## <a name="interfaces"></a><span data-ttu-id="ea493-263">Interfejsy</span><span class="sxs-lookup"><span data-stu-id="ea493-263">Interfaces</span></span>
 
-<span data-ttu-id="6526b-264">Interfejsy, takie jak klasy, definiują zestaw właściwości, metod i zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="6526b-264">Interfaces, like classes, define a set of properties, methods, and events.</span></span> <span data-ttu-id="6526b-265">Jednak w przeciwieństwie do klasy, interfejsy nie zapewniają implementacji.</span><span class="sxs-lookup"><span data-stu-id="6526b-265">But unlike classes, interfaces do not provide implementation.</span></span> <span data-ttu-id="6526b-266">One są implementowane przez klasy i definiowane jako osobne jednostki od klas.</span><span class="sxs-lookup"><span data-stu-id="6526b-266">They are implemented by classes, and defined as separate entities from classes.</span></span> <span data-ttu-id="6526b-267">Interfejs reprezentuje kontrakt, w tym, że klasa implementująca interfejs musi implementować każdy aspekt tego interfejsu, dokładnie tak, jak jest zdefiniowany.</span><span class="sxs-lookup"><span data-stu-id="6526b-267">An interface represents a contract, in that a class that implements an interface must implement every aspect of that interface exactly as it is defined.</span></span>
+<span data-ttu-id="ea493-264">Interfaces, like classes, define a set of properties, methods, and events.</span><span class="sxs-lookup"><span data-stu-id="ea493-264">Interfaces, like classes, define a set of properties, methods, and events.</span></span> <span data-ttu-id="ea493-265">But unlike classes, interfaces do not provide implementation.</span><span class="sxs-lookup"><span data-stu-id="ea493-265">But unlike classes, interfaces do not provide implementation.</span></span> <span data-ttu-id="ea493-266">They are implemented by classes, and defined as separate entities from classes.</span><span class="sxs-lookup"><span data-stu-id="ea493-266">They are implemented by classes, and defined as separate entities from classes.</span></span> <span data-ttu-id="ea493-267">An interface represents a contract, in that a class that implements an interface must implement every aspect of that interface exactly as it is defined.</span><span class="sxs-lookup"><span data-stu-id="ea493-267">An interface represents a contract, in that a class that implements an interface must implement every aspect of that interface exactly as it is defined.</span></span>
 
-<span data-ttu-id="6526b-268">Aby zdefiniować interfejs:</span><span class="sxs-lookup"><span data-stu-id="6526b-268">To define an interface:</span></span>
+<span data-ttu-id="ea493-268">To define an interface:</span><span class="sxs-lookup"><span data-stu-id="ea493-268">To define an interface:</span></span>
 
 ```vb
 Public Interface ISampleInterface
@@ -358,7 +358,7 @@ Public Interface ISampleInterface
 End Interface
 ```
 
-<span data-ttu-id="6526b-269">Aby zaimplementować interfejs w klasie:</span><span class="sxs-lookup"><span data-stu-id="6526b-269">To implement an interface in a class:</span></span>
+<span data-ttu-id="ea493-269">To implement an interface in a class:</span><span class="sxs-lookup"><span data-stu-id="ea493-269">To implement an interface in a class:</span></span>
 
 ```vb
 Class SampleClass
@@ -369,17 +369,17 @@ Class SampleClass
 End Class
 ```
 
-<span data-ttu-id="6526b-270">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="6526b-270">For more information, see:</span></span>
+<span data-ttu-id="ea493-270">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="ea493-270">For more information, see:</span></span>
 
-- [<span data-ttu-id="6526b-271">Interfejsy</span><span class="sxs-lookup"><span data-stu-id="6526b-271">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
-- [<span data-ttu-id="6526b-272">Instrukcja Interface</span><span class="sxs-lookup"><span data-stu-id="6526b-272">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)
-- [<span data-ttu-id="6526b-273">Implements, instrukcja</span><span class="sxs-lookup"><span data-stu-id="6526b-273">Implements Statement</span></span>](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [<span data-ttu-id="ea493-271">Interfejsy</span><span class="sxs-lookup"><span data-stu-id="ea493-271">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [<span data-ttu-id="ea493-272">Interface, instrukcja</span><span class="sxs-lookup"><span data-stu-id="ea493-272">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [<span data-ttu-id="ea493-273">Implements, instrukcja</span><span class="sxs-lookup"><span data-stu-id="ea493-273">Implements Statement</span></span>](../../../visual-basic/language-reference/statements/implements-statement.md)
 
-## <a name="generics"></a><span data-ttu-id="6526b-274">Typy ogólne</span><span class="sxs-lookup"><span data-stu-id="6526b-274">Generics</span></span>
+## <a name="generics"></a><span data-ttu-id="ea493-274">Typy ogólne</span><span class="sxs-lookup"><span data-stu-id="ea493-274">Generics</span></span>
 
-<span data-ttu-id="6526b-275">Klasy, struktury, interfejsy i metody na platformie .NET mogą obejmować *parametry typu* który definiują typy obiektów, które można przechowywać lub używać.</span><span class="sxs-lookup"><span data-stu-id="6526b-275">Classes, structures, interfaces and methods in .NET can include *type parameters* that define types of objects that they can store or use.</span></span> <span data-ttu-id="6526b-276">Najbardziej typowym przykładem typów ogólnych jest kolekcja, której można określić typ obiektów, które mają być przechowywane w kolekcji.</span><span class="sxs-lookup"><span data-stu-id="6526b-276">The most common example of generics is a collection, where you can specify the type of objects to be stored in a collection.</span></span>
+<span data-ttu-id="ea493-275">Classes, structures, interfaces and methods in .NET can include *type parameters* that define types of objects that they can store or use.</span><span class="sxs-lookup"><span data-stu-id="ea493-275">Classes, structures, interfaces and methods in .NET can include *type parameters* that define types of objects that they can store or use.</span></span> <span data-ttu-id="ea493-276">The most common example of generics is a collection, where you can specify the type of objects to be stored in a collection.</span><span class="sxs-lookup"><span data-stu-id="ea493-276">The most common example of generics is a collection, where you can specify the type of objects to be stored in a collection.</span></span>
 
-<span data-ttu-id="6526b-277">Aby zdefiniować klasę ogólną:</span><span class="sxs-lookup"><span data-stu-id="6526b-277">To define a generic class:</span></span>
+<span data-ttu-id="ea493-277">To define a generic class:</span><span class="sxs-lookup"><span data-stu-id="ea493-277">To define a generic class:</span></span>
 
 ```vb
 Class SampleGeneric(Of T)
@@ -387,32 +387,32 @@ Class SampleGeneric(Of T)
 End Class
 ```
 
-<span data-ttu-id="6526b-278">Aby utworzyć wystąpienie klasy ogólnej:</span><span class="sxs-lookup"><span data-stu-id="6526b-278">To create an instance of a generic class:</span></span>
+<span data-ttu-id="ea493-278">To create an instance of a generic class:</span><span class="sxs-lookup"><span data-stu-id="ea493-278">To create an instance of a generic class:</span></span>
 
 ```vb
 Dim sampleObject As New SampleGeneric(Of String)
 sampleObject.Field = "Sample string"
 ```
 
-<span data-ttu-id="6526b-279">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="6526b-279">For more information, see:</span></span>
+<span data-ttu-id="ea493-279">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="ea493-279">For more information, see:</span></span>
 
-- [<span data-ttu-id="6526b-280">Typy ogólne</span><span class="sxs-lookup"><span data-stu-id="6526b-280">Generics</span></span>](../../../standard/generics/index.md)
-- [<span data-ttu-id="6526b-281">Typy ogólne w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6526b-281">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [<span data-ttu-id="ea493-280">Typy ogólne</span><span class="sxs-lookup"><span data-stu-id="ea493-280">Generics</span></span>](../../../standard/generics/index.md)
+- [<span data-ttu-id="ea493-281">Generic Types in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ea493-281">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 
-## <a name="delegates"></a><span data-ttu-id="6526b-282">Delegaty</span><span class="sxs-lookup"><span data-stu-id="6526b-282">Delegates</span></span>
+## <a name="delegates"></a><span data-ttu-id="ea493-282">Delegaty</span><span class="sxs-lookup"><span data-stu-id="ea493-282">Delegates</span></span>
 
- <span data-ttu-id="6526b-283">A *delegować* to typ, który definiuje podpis metody i można podać odwołanie do dowolnej metody mającą zgodny podpis.</span><span class="sxs-lookup"><span data-stu-id="6526b-283">A *delegate* is a type that defines a method signature, and can provide a reference to any method with a compatible signature.</span></span> <span data-ttu-id="6526b-284">Można wywołać (lub wywołać) metodę przez delegat.</span><span class="sxs-lookup"><span data-stu-id="6526b-284">You can invoke (or call) the method through the delegate.</span></span> <span data-ttu-id="6526b-285">Delegaty służą do przekazywania metod jako argumentów do innych metod.</span><span class="sxs-lookup"><span data-stu-id="6526b-285">Delegates are used to pass methods as arguments to other methods.</span></span>
+ <span data-ttu-id="ea493-283">A *delegate* is a type that defines a method signature, and can provide a reference to any method with a compatible signature.</span><span class="sxs-lookup"><span data-stu-id="ea493-283">A *delegate* is a type that defines a method signature, and can provide a reference to any method with a compatible signature.</span></span> <span data-ttu-id="ea493-284">You can invoke (or call) the method through the delegate.</span><span class="sxs-lookup"><span data-stu-id="ea493-284">You can invoke (or call) the method through the delegate.</span></span> <span data-ttu-id="ea493-285">Delegaty służą do przekazywania metod jako argumentów do innych metod.</span><span class="sxs-lookup"><span data-stu-id="ea493-285">Delegates are used to pass methods as arguments to other methods.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="6526b-286">Programy obsługi zdarzeń to po prostu metody, które są wywoływane za pośrednictwem delegatów.</span><span class="sxs-lookup"><span data-stu-id="6526b-286">Event handlers are nothing more than methods that are invoked through delegates.</span></span> <span data-ttu-id="6526b-287">Aby uzyskać więcej informacji dotyczących używania delegatów w obsłudze zdarzeń, zobacz [zdarzenia](../../../standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="6526b-287">For more information about using delegates in event handling, see [Events](../../../standard/events/index.md).</span></span>
+> <span data-ttu-id="ea493-286">Programy obsługi zdarzeń to po prostu metody, które są wywoływane za pośrednictwem delegatów.</span><span class="sxs-lookup"><span data-stu-id="ea493-286">Event handlers are nothing more than methods that are invoked through delegates.</span></span> <span data-ttu-id="ea493-287">For more information about using delegates in event handling, see [Events](../../../standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="ea493-287">For more information about using delegates in event handling, see [Events](../../../standard/events/index.md).</span></span>
 
-<span data-ttu-id="6526b-288">Aby utworzyć delegat:</span><span class="sxs-lookup"><span data-stu-id="6526b-288">To create a delegate:</span></span>
+<span data-ttu-id="ea493-288">To create a delegate:</span><span class="sxs-lookup"><span data-stu-id="ea493-288">To create a delegate:</span></span>
 
 ```vb
 Delegate Sub SampleDelegate(ByVal str As String)
 ```
 
-<span data-ttu-id="6526b-289">Aby utworzyć odwołanie do metody, która pasuje do oznaczenia określonego przez delegat:</span><span class="sxs-lookup"><span data-stu-id="6526b-289">To create a reference to a method that matches the signature specified by the delegate:</span></span>
+<span data-ttu-id="ea493-289">To create a reference to a method that matches the signature specified by the delegate:</span><span class="sxs-lookup"><span data-stu-id="ea493-289">To create a reference to a method that matches the signature specified by the delegate:</span></span>
 
 ```vb
 Class SampleClass
@@ -428,12 +428,12 @@ Class SampleClass
 End Class
 ```
 
-<span data-ttu-id="6526b-290">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="6526b-290">For more information, see:</span></span>
+<span data-ttu-id="ea493-290">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="ea493-290">For more information, see:</span></span>
 
-- [<span data-ttu-id="6526b-291">Delegaty</span><span class="sxs-lookup"><span data-stu-id="6526b-291">Delegates</span></span>](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [<span data-ttu-id="6526b-292">Delegate, instrukcja</span><span class="sxs-lookup"><span data-stu-id="6526b-292">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [<span data-ttu-id="6526b-293">AddressOf, operator</span><span class="sxs-lookup"><span data-stu-id="6526b-293">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [<span data-ttu-id="ea493-291">Delegaci</span><span class="sxs-lookup"><span data-stu-id="ea493-291">Delegates</span></span>](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [<span data-ttu-id="ea493-292">Delegate, instrukcja</span><span class="sxs-lookup"><span data-stu-id="ea493-292">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [<span data-ttu-id="ea493-293">AddressOf, operator</span><span class="sxs-lookup"><span data-stu-id="ea493-293">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)
 
-## <a name="see-also"></a><span data-ttu-id="6526b-294">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6526b-294">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ea493-294">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ea493-294">See also</span></span>
 
-- [<span data-ttu-id="6526b-295">Przewodnik programowania w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6526b-295">Visual Basic Programming Guide</span></span>](../../../visual-basic/programming-guide/index.md)
+- [<span data-ttu-id="ea493-295">Visual Basic Programming Guide</span><span class="sxs-lookup"><span data-stu-id="ea493-295">Visual Basic Programming Guide</span></span>](../../../visual-basic/programming-guide/index.md)

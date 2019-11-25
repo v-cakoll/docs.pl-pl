@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zapisywanie tekstu do plików w języku Visual Basic'
+title: 'Porady: zapisywanie tekstu do plików'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], writing to
@@ -7,55 +7,57 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
-ms.openlocfilehash: 7f9702469afbe9fdaa9bf727f5f70459ce884d6e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ce1ee59ba71af6bb13e05a5bce37a2f7eee37712
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623279"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334472"
 ---
-# <a name="how-to-write-text-to-files-in-visual-basic"></a><span data-ttu-id="c43e7-102">Instrukcje: Zapisywanie tekstu do plików w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c43e7-102">How to: Write Text to Files in Visual Basic</span></span>
-<span data-ttu-id="c43e7-103"><xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> Metoda może służyć do zapisywanie tekstu do plików.</span><span class="sxs-lookup"><span data-stu-id="c43e7-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method can be used to write text to files.</span></span> <span data-ttu-id="c43e7-104">Jeśli określony plik nie istnieje, zostanie utworzony.</span><span class="sxs-lookup"><span data-stu-id="c43e7-104">If the specified file does not exist, it is created.</span></span>  
+# <a name="how-to-write-text-to-files-in-visual-basic"></a><span data-ttu-id="57d86-102">Porady: zapisywanie tekstu do plików w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="57d86-102">How to: Write Text to Files in Visual Basic</span></span>
+
+<span data-ttu-id="57d86-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method can be used to write text to files.</span><span class="sxs-lookup"><span data-stu-id="57d86-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method can be used to write text to files.</span></span> <span data-ttu-id="57d86-104">If the specified file does not exist, it is created.</span><span class="sxs-lookup"><span data-stu-id="57d86-104">If the specified file does not exist, it is created.</span></span>  
   
-## <a name="procedure"></a><span data-ttu-id="c43e7-105">Procedura</span><span class="sxs-lookup"><span data-stu-id="c43e7-105">Procedure</span></span>  
+## <a name="procedure"></a><span data-ttu-id="57d86-105">Procedura</span><span class="sxs-lookup"><span data-stu-id="57d86-105">Procedure</span></span>  
   
-#### <a name="to-write-text-to-a-file"></a><span data-ttu-id="c43e7-106">Aby wpisać tekst w pliku</span><span class="sxs-lookup"><span data-stu-id="c43e7-106">To write text to a file</span></span>  
+#### <a name="to-write-text-to-a-file"></a><span data-ttu-id="57d86-106">To write text to a file</span><span class="sxs-lookup"><span data-stu-id="57d86-106">To write text to a file</span></span>  
   
-- <span data-ttu-id="c43e7-107">Użyj `WriteAllText` metodę, aby wpisać tekst do pliku, określając pliku i tekst do wyświetlenia.</span><span class="sxs-lookup"><span data-stu-id="c43e7-107">Use the `WriteAllText` method to write text to a file, specifying the file and text to be written.</span></span> <span data-ttu-id="c43e7-108">Ten przykład zapisuje linię `"This is new text."` pliku o nazwie `test.txt`, dodając tekst na wszelki istniejący tekst w pliku.</span><span class="sxs-lookup"><span data-stu-id="c43e7-108">This example writes the line `"This is new text."` to the file named `test.txt`, appending the text to any existing text in the file.</span></span>  
+- <span data-ttu-id="57d86-107">Use the `WriteAllText` method to write text to a file, specifying the file and text to be written.</span><span class="sxs-lookup"><span data-stu-id="57d86-107">Use the `WriteAllText` method to write text to a file, specifying the file and text to be written.</span></span> <span data-ttu-id="57d86-108">This example writes the line `"This is new text."` to the file named `test.txt`, appending the text to any existing text in the file.</span><span class="sxs-lookup"><span data-stu-id="57d86-108">This example writes the line `"This is new text."` to the file named `test.txt`, appending the text to any existing text in the file.</span></span>  
   
      [!code-vb[VbFileIOWrite#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#3)]  
   
-#### <a name="to-write-a-series-of-strings-to-a-file"></a><span data-ttu-id="c43e7-109">Do zapisu serii ciągów w pliku</span><span class="sxs-lookup"><span data-stu-id="c43e7-109">To write a series of strings to a file</span></span>  
+#### <a name="to-write-a-series-of-strings-to-a-file"></a><span data-ttu-id="57d86-109">To write a series of strings to a file</span><span class="sxs-lookup"><span data-stu-id="57d86-109">To write a series of strings to a file</span></span>  
   
-- <span data-ttu-id="c43e7-110">W pętli poprzez kolekcji ciągów.</span><span class="sxs-lookup"><span data-stu-id="c43e7-110">Loop through the string collection.</span></span> <span data-ttu-id="c43e7-111">Użyj `WriteAllText` metodę, aby wpisać tekst w pliku, określając pliku docelowego i parametry, które mają zostać dodane i ustawienie `append` do `True`.</span><span class="sxs-lookup"><span data-stu-id="c43e7-111">Use the `WriteAllText` method to write text to a file, specifying the target file and string to be added and setting `append` to `True`.</span></span>  
+- <span data-ttu-id="57d86-110">Loop through the string collection.</span><span class="sxs-lookup"><span data-stu-id="57d86-110">Loop through the string collection.</span></span> <span data-ttu-id="57d86-111">Use the `WriteAllText` method to write text to a file, specifying the target file and string to be added and setting `append` to `True`.</span><span class="sxs-lookup"><span data-stu-id="57d86-111">Use the `WriteAllText` method to write text to a file, specifying the target file and string to be added and setting `append` to `True`.</span></span>  
   
-     <span data-ttu-id="c43e7-112">Ten przykład Przepisuje nazwy plików w `Documents and Settings` do katalogu `FileList.txt`, wstawianie karetki zwracają między nimi w celu zwiększenia czytelności.</span><span class="sxs-lookup"><span data-stu-id="c43e7-112">This example writes the names of the files in the `Documents and Settings` directory to `FileList.txt`, inserting a carriage return between each for better readability.</span></span>  
+     <span data-ttu-id="57d86-112">This example writes the names of the files in the `Documents and Settings` directory to `FileList.txt`, inserting a carriage return between each for better readability.</span><span class="sxs-lookup"><span data-stu-id="57d86-112">This example writes the names of the files in the `Documents and Settings` directory to `FileList.txt`, inserting a carriage return between each for better readability.</span></span>  
   
      [!code-vb[VbFileIOWrite#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#4)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="c43e7-113">Niezawodne programowanie</span><span class="sxs-lookup"><span data-stu-id="c43e7-113">Robust Programming</span></span>  
- <span data-ttu-id="c43e7-114">Następujące warunki mogą spowodować wyjątek:</span><span class="sxs-lookup"><span data-stu-id="c43e7-114">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="57d86-113">Niezawodne programowanie</span><span class="sxs-lookup"><span data-stu-id="57d86-113">Robust Programming</span></span>  
+
+ <span data-ttu-id="57d86-114">Następujące warunki mogą spowodować wyjątek:</span><span class="sxs-lookup"><span data-stu-id="57d86-114">The following conditions may cause an exception:</span></span>  
   
-- <span data-ttu-id="c43e7-115">Ścieżka nie jest prawidłowa dla jednego z następujących przyczyn: jest to ciąg o zerowej długości, zawiera tylko znak odstępu, zawiera nieprawidłowe znaki lub jest ścieżką do urządzenia (rozpoczyna się od \\ \\.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="c43e7-115">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
+- <span data-ttu-id="57d86-115">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="57d86-115">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
   
-- <span data-ttu-id="c43e7-116">Ścieżka jest nieprawidłowa, ponieważ jest on `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="c43e7-116">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
+- <span data-ttu-id="57d86-116">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="57d86-116">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
-- <span data-ttu-id="c43e7-117">`File` Wskazuje ścieżkę, która nie istnieje (<xref:System.IO.FileNotFoundException> lub <xref:System.IO.DirectoryNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="c43e7-117">`File` points to a path that does not exist (<xref:System.IO.FileNotFoundException> or <xref:System.IO.DirectoryNotFoundException>).</span></span>  
+- <span data-ttu-id="57d86-117">`File` points to a path that does not exist (<xref:System.IO.FileNotFoundException> or <xref:System.IO.DirectoryNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="57d86-117">`File` points to a path that does not exist (<xref:System.IO.FileNotFoundException> or <xref:System.IO.DirectoryNotFoundException>).</span></span>  
   
-- <span data-ttu-id="c43e7-118">Plik jest używany przez inny proces lub wystąpi błąd We/Wy (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="c43e7-118">The file is in use by another process, or an I/O error occurs (<xref:System.IO.IOException>).</span></span>  
+- <span data-ttu-id="57d86-118">The file is in use by another process, or an I/O error occurs (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="57d86-118">The file is in use by another process, or an I/O error occurs (<xref:System.IO.IOException>).</span></span>  
   
-- <span data-ttu-id="c43e7-119">Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="c43e7-119">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
+- <span data-ttu-id="57d86-119">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="57d86-119">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
   
-- <span data-ttu-id="c43e7-120">Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="c43e7-120">A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
+- <span data-ttu-id="57d86-120">A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="57d86-120">A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
   
-- <span data-ttu-id="c43e7-121">Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="c43e7-121">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
+- <span data-ttu-id="57d86-121">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="57d86-121">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
   
-- <span data-ttu-id="c43e7-122">Dysk jest pełny i wywołanie `WriteAllText` zakończy się niepowodzeniem (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="c43e7-122">The disk is full, and the call to `WriteAllText` fails (<xref:System.IO.IOException>).</span></span>  
+- <span data-ttu-id="57d86-122">The disk is full, and the call to `WriteAllText` fails (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="57d86-122">The disk is full, and the call to `WriteAllText` fails (<xref:System.IO.IOException>).</span></span>  
   
- <span data-ttu-id="c43e7-123">Jeśli używasz w kontekście częściowego zaufania, kod może zgłosić wyjątek ze względu na niewystarczające uprawnienia.</span><span class="sxs-lookup"><span data-stu-id="c43e7-123">If you are running in a partial-trust context, the code might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="c43e7-124">Aby uzyskać więcej informacji, zobacz [podstawy zabezpieczeń dostępu kodu](../../../../framework/misc/code-access-security-basics.md).</span><span class="sxs-lookup"><span data-stu-id="c43e7-124">For more information, see [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md).</span></span>  
+ <span data-ttu-id="57d86-123">If you are running in a partial-trust context, the code might throw an exception due to insufficient privileges.</span><span class="sxs-lookup"><span data-stu-id="57d86-123">If you are running in a partial-trust context, the code might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="57d86-124">For more information, see [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md).</span><span class="sxs-lookup"><span data-stu-id="57d86-124">For more information, see [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c43e7-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c43e7-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57d86-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="57d86-125">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
-- [<span data-ttu-id="c43e7-126">Instrukcje: Odczyt z plików tekstowych</span><span class="sxs-lookup"><span data-stu-id="c43e7-126">How to: Read from Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+- [<span data-ttu-id="57d86-126">How to: Read from Text Files</span><span class="sxs-lookup"><span data-stu-id="57d86-126">How to: Read from Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)

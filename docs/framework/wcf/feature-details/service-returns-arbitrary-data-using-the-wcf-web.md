@@ -1,22 +1,22 @@
 ---
-title: 'Instrukcje: tworzenie usługi zwracającej dowolne dane za pomocą modelu programowania internetowego protokołu HTTP w programie WCF'
+title: 'Instrukcje: Tworzenie usługi zwracającej dowolne dane za pomocą modelu programowania protokołu HTTP sieci Web w programie WCF'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 6c7dd0debb5c491bca84ea9a4845f46b6b57b4a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41d9f0e53401bcd6b57b04a38e76af5ddb9fb4cc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586245"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976100"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Instrukcje: tworzenie usługi zwracającej dowolne dane za pomocą modelu programowania internetowego protokołu HTTP w programie WCF
-Czasami deweloperzy muszą mieć pełną kontrolę nad jak dane są zwracane z operacji usługi. Dotyczy to sytuacji, gdy operacja usługi musi zwrócić dane w formacie nie jest obsługiwane przez architekturę WCF. W tym temacie omówiono tworzenie takiej usługi przy użyciu programu WCF WEB HTTP modelu programowania. Ta usługa ma jedną operację, która zwraca strumienia.  
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Instrukcje: Tworzenie usługi zwracającej dowolne dane za pomocą modelu programowania protokołu HTTP sieci Web w programie WCF
+Czasami deweloperzy muszą mieć pełną kontrolę nad sposobem zwracania danych z operacji usługi. Dzieje się tak w przypadku, gdy operacja usługi musi zwrócić dane w formacie nieobsługiwanym przez WCF. W tym temacie omówiono korzystanie z modelu programowania HTTP sieci WEB w programie WCF w celu utworzenia takiej usługi. Ta usługa ma jedną operację zwracającą strumień.  
   
 ### <a name="to-implement-the-service-contract"></a>Aby zaimplementować kontrakt usługi  
   
-1. Definiowanie kontraktu usługi. Kontrakt jest nazywany `IImageServer` i jedną metodę o nazwie `GetImage` zwracającego <xref:System.IO.Stream>.  
+1. Zdefiniuj kontrakt usługi. Kontrakt jest nazywany `IImageServer` i ma jedną metodę o nazwie `GetImage`, która zwraca <xref:System.IO.Stream>.  
   
-    ```  
+    ```csharp  
     [ServiceContract]  
         public interface IImageServer  
         {  
@@ -25,41 +25,41 @@ Czasami deweloperzy muszą mieć pełną kontrolę nad jak dane są zwracane z o
         }  
     ```  
   
-     Ponieważ metoda ta zwraca <xref:System.IO.Stream>, WCF przyjęto założenie, że operacja ma pełną kontrolę nad bajtów, które są zwracane z operacji usługi i są one stosowane do danych, który jest zwracany bez formatowania.  
+     Ponieważ metoda zwraca <xref:System.IO.Stream>, WCF zakłada, że operacja ma pełną kontrolę nad bajtami, które są zwracane przez operację usługi i nie ma żadnego formatowania dla zwracanych danych.  
   
-2. Implementowanie kontraktu usługi. Kontrakt ma tylko jedną operację (`GetImage`). Ta metoda generuje mapę bitową, a następnie zapisać go w celu <xref:System.IO.MemoryStream> w formacie jpg. Następnie operacja zwraca strumieniu do obiektu wywołującego.  
+2. Zaimplementuj kontrakt usługi. Kontrakt ma tylko jedną operację (`GetImage`). Ta metoda generuje mapę bitową, a następnie zapisuje ją w <xref:System.IO.MemoryStream> w formacie jpg. Następnie operacja zwraca ten strumień do obiektu wywołującego.  
   
+    ```csharp
+    public class Service : IImageServer
+    {
+        public Stream GetImage(int width, int height)
+        {
+            Bitmap bitmap = new Bitmap(width, height);
+            for (int i = 0; i < bitmap.Width; i++)
+            {
+                for (int j = 0; j < bitmap.Height; j++)
+                {
+                    bitmap.SetPixel(i, j, (Math.Abs(i - j) < 2) ? Color.Blue : Color.Yellow);
+                }
+            }
+            MemoryStream ms = new MemoryStream();
+            bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            ms.Position = 0;
+            WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";
+            return ms;
+        }
+    }
     ```  
-    public class Service : IImageServer  
-       {  
-           public Stream GetImage(int width, int height)  
-           {  
-               Bitmap bitmap = new Bitmap(width, height);  
-               for (int i = 0; i < bitmap.Width; i++)  
-               {  
-                   for (int j = 0; j < bitmap.Height; j++)  
-                   {  
-                       bitmap.SetPixel(i, j, (Math.Abs(i - j) < 2) ? Color.Blue : Color.Yellow);  
-                   }  
-               }  
-               MemoryStream ms = new MemoryStream();  
-               bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);  
-               ms.Position = 0;  
-               WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";  
-               return ms;  
-           }  
-       }  
-    ```  
   
-     Zwróć uwagę, druga do ostatni wiersz kodu: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     Zwróć uwagę na sekundę do ostatniego wiersza kodu: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
-     To ustawia dla nagłówka typu zawartości `"image/jpeg"`. Mimo że w tym przykładzie przedstawiono sposób zwracania plik jpg, można modyfikować do zwracania dowolnego typu danych, który jest wymagany, w dowolnym formacie. Operacja musi pobrać lub generowanie danych i następnie zapisać go w strumieniu.  
+     Spowoduje to ustawienie nagłówka typu zawartości na `"image/jpeg"`. Mimo że ten przykład pokazuje, jak zwrócić plik. jpg, można go zmodyfikować w taki sposób, aby zwracał dowolny wymagany typ danych w dowolnym formacie. Operacja musi pobierać lub generować dane, a następnie zapisywać je w strumieniu.  
   
-### <a name="to-host-the-service"></a>Do obsługi usługi  
+### <a name="to-host-the-service"></a>Aby hostować usługę  
   
-1. Utwórz aplikację konsolową, do obsługi usługi.  
+1. Utwórz aplikację konsolową do hostowania usługi.  
   
-    ```  
+    ```csharp
     class Program  
     {  
         static void Main(string[] args)  
@@ -68,49 +68,49 @@ Czasami deweloperzy muszą mieć pełną kontrolę nad jak dane są zwracane z o
     }  
     ```  
   
-2. Utwórz zmienną do przechowywania adres podstawowy dla usługi w ramach `Main` metody.  
+2. Utwórz zmienną do przechowywania adresu podstawowego dla usługi w ramach metody `Main`.  
   
-    ```  
+    ```csharp
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3. Utwórz <xref:System.ServiceModel.ServiceHost> wystąpienie usługi, określanie klasy usługi i adres podstawowy.  
+3. Utwórz wystąpienie <xref:System.ServiceModel.ServiceHost> dla usługi określającej klasę usługi i adres podstawowy.  
   
-    ```  
+    ```csharp
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
     ```  
   
-4. Dodawanie punktu końcowego za pomocą <xref:System.ServiceModel.WebHttpBinding> i <xref:System.ServiceModel.Description.WebHttpBehavior>.  
+4. Dodaj punkt końcowy przy użyciu <xref:System.ServiceModel.WebHttpBinding> i <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
-    ```  
+    ```csharp  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
-5. Otworzyć hosta usługi.  
+5. Otwórz hosta usługi.  
   
-    ```  
-    host.Open()  
+    ```csharp  
+    host.Open();  
     ```  
   
-6. Poczekaj, aż użytkownik naciśnie klawisz ENTER, aby zakończyć usługi.  
+6. Poczekaj, aż użytkownik naciśnie klawisz ENTER, aby zakończyć działanie usługi.  
   
-    ```  
+    ```csharp
     Console.WriteLine("Service is running");  
     Console.Write("Press ENTER to close the host");  
     Console.ReadLine();  
     host.Close();  
     ```  
   
-### <a name="to-call-the-raw-service-using-internet-explorer"></a>Aby wywołać pierwotne usługę za pomocą programu Internet Explorer  
+### <a name="to-call-the-raw-service-using-internet-explorer"></a>Aby wywołać usługę nieprzetworzoną przy użyciu programu Internet Explorer  
   
-1. Uruchom usługę, powinny być widoczne następujące dane wyjściowe z usługi. `Service is running Press ENTER to close the host`  
+1. Uruchom usługę, dlatego następujące dane wyjściowe powinny zostać wyświetlone w usłudze. `Service is running Press ENTER to close the host`  
   
-2. Otwórz program Internet Explorer i wpisz `http://localhost:8000/Service/GetImage?width=50&height=40` powinna zostać wyświetlona żółta prostokąt z niebieska linia skos, za pośrednictwem Centrum.  
+2. Otwórz program Internet Explorer i wpisz `http://localhost:8000/Service/GetImage?width=50&height=40` powinien zostać wyświetlony żółty prostokąt z niebieską ukośną linią.  
   
 ## <a name="example"></a>Przykład  
- Poniżej przedstawiono pełną listę kodów w tym temacie.  
+ Poniżej znajduje się kompletna lista kodu dla tego tematu.  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Text;  
@@ -173,7 +173,7 @@ namespace RawImageService
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
-- Podczas kompilowania kodu przykładowej odniesienia System.ServiceModel.dll i System.ServiceModel.Web.dll.  
+- Podczas kompilowania przykładowego odwołania do kodu system. ServiceModel. dll i system. ServiceModel. Web. dll.  
   
 ## <a name="see-also"></a>Zobacz także
 

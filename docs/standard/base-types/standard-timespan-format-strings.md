@@ -17,15 +17,16 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 5284eb52d7b50307e51945fc0b4a9deb8818f2e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c699ed68606293b1a49a540e00636cf7f56bdf2f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121696"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972092"
 ---
 # <a name="standard-timespan-format-strings"></a>Standardowe ciągi formatujące TimeSpan
-<a name="Top"></a>Standardowy ciąg formatujący <xref:System.TimeSpan> używa pojedynczego specyfikatora formatu do definiowania tekstowej reprezentacji wartości <xref:System.TimeSpan>, która wynika z operacji formatowania. Dowolny ciąg formatu, który zawiera więcej niż jeden znak, w tym znak odstępu, jest interpretowany jako ciąg niestandardowego formatu <xref:System.TimeSpan>. Aby uzyskać więcej informacji, zobacz [Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  
+
+Standardowy ciąg formatujący <xref:System.TimeSpan> używa pojedynczego specyfikatora formatu do definiowania tekstowej reprezentacji wartości <xref:System.TimeSpan>, która wynika z operacji formatowania. Dowolny ciąg formatu, który zawiera więcej niż jeden znak, w tym znak odstępu, jest interpretowany jako ciąg niestandardowego formatu <xref:System.TimeSpan>. Aby uzyskać więcej informacji, zobacz [Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  
   
  Ciąg reprezentujący wartości <xref:System.TimeSpan> są generowane przez wywołania przeciążenia metody <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>, a także metody obsługujące formatowanie złożone, takie jak <xref:System.String.Format%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [Typy formatowania](../../../docs/standard/base-types/formatting-types.md) i [formatowanie złożone](../../../docs/standard/base-types/composite-formatting.md). Poniższy przykład ilustruje użycie standardowych ciągów formatu w operacjach formatowania.  
   
@@ -37,15 +38,14 @@ ms.locfileid: "73121696"
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
   
-<a name="top"></a>Poniższa tabela zawiera listę specyfikatorów formatu standardowego interwału czasu.  
+Poniższa tabela zawiera listę specyfikatorów formatu standardowego interwału czasu.  
   
 |Specyfikator formatu|Nazwa|Opis|Przykłady|  
 |----------------------|----------|-----------------|--------------|  
-|s|Stały format (niezmienny)|Ten specyfikator nie jest uwzględniany w kulturze. Formularz `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (Ciągi formatu "t" i "T" dają te same wyniki).<br /><br /> Więcej informacji: [specyfikator formatu stałej ("c")](#Constant).|`TimeSpan.Zero`-> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)`-> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)`-> 3.17:25:30.5000000|  
-|„g”|Ogólny krótki format|Ten specyfikator wyprowadza tylko to, co jest potrzebne. Jest ona zależna od kultury i ma postać `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Więcej informacji: [specyfikator formatu ogólnego ("g")](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)`-> 1:3: 16:50.5 (pl-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)`-> 1:3: 16:50, 5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)`-> 1:3: 16:50.599 (pl-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)`-> 1:3: 16:50599 (fr-FR)|  
-|„G”|Format ogólnie długi|Ten specyfikator zawsze Wyprowadza dni i siedem cyfr. Jest ona zależna od kultury i ma postać `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Więcej informacji: [specyfikator formatu ogólnego ("G")](#GeneralLong).|`New TimeSpan(18, 30, 0)`-> 0:18:30:00.0000000 (EN-US)<br /><br /> `New TimeSpan(18, 30, 0)`-> 0:18:30:00, 0000000 (fr-FR)|  
-  
-<a name="Constant"></a>   
+|s|Stały format (niezmienny)|Ten specyfikator nie jest uwzględniany w kulturze. Formularz `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (Ciągi formatu "t" i "T" dają te same wyniki).<br /><br /> Więcej informacji: [specyfikator formatu stałej ("c")](#the-constant-c-format-specifier).|`TimeSpan.Zero`-> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)`-> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)`-> 3.17:25:30.5000000|  
+|„g”|Ogólny krótki format|Ten specyfikator wyprowadza tylko to, co jest potrzebne. Jest ona zależna od kultury i ma postać `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Więcej informacji: [specyfikator formatu ogólnego ("g")](#the-general-short-g-format-specifier).|`New TimeSpan(1, 3, 16, 50, 500)`-> 1:3: 16:50.5 (pl-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)`-> 1:3: 16:50, 5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)`-> 1:3: 16:50.599 (pl-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)`-> 1:3: 16:50599 (fr-FR)|  
+|„G”|Format ogólnie długi|Ten specyfikator zawsze Wyprowadza dni i siedem cyfr. Jest ona zależna od kultury i ma postać `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Więcej informacji: [specyfikator formatu ogólnego ("G")](#the-general-long-g-format-specifier).|`New TimeSpan(18, 30, 0)`-> 0:18:30:00.0000000 (EN-US)<br /><br /> `New TimeSpan(18, 30, 0)`-> 0:18:30:00, 0000000 (fr-FR)|  
+
 ## <a name="the-constant-c-format-specifier"></a>Specyfikator formatu stałej ("c")  
  Specyfikator formatu "c" zwraca reprezentację ciągu <xref:System.TimeSpan> wartości w następującej postaci:  
   
@@ -71,10 +71,7 @@ ms.locfileid: "73121696"
   
  [!code-csharp[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardc1.cs#1)]
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
-  
- [Wróć do tabeli](#Top)  
-  
-<a name="GeneralShort"></a>   
+
 ## <a name="the-general-short-g-format-specifier"></a>Specyfikator formatu ogólnego ("g")  
  Specyfikator formatu <xref:System.TimeSpan> "g" zwraca reprezentację ciągu <xref:System.TimeSpan> wartości w postaci kompaktowej przez uwzględnienie tylko tych elementów, które są niezbędne. Ma następującą postać:  
   
@@ -98,10 +95,7 @@ ms.locfileid: "73121696"
   
  [!code-csharp[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardshort1.cs#4)]
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
-  
- [Wróć do tabeli](#Top)  
-  
-<a name="GeneralLong"></a>   
+
 ## <a name="the-general-long-g-format-specifier"></a>Specyfikator formatu ogólnego ("G")  
  Specyfikator formatu <xref:System.TimeSpan> "G" zwraca reprezentację ciągu <xref:System.TimeSpan> wartości w postaci długiej, która zawsze zawiera dni i ułamki sekund. Ciąg, który jest wynikiem specyfikatora formatu standardowego "G", ma następującą postać:  
   
@@ -124,9 +118,7 @@ ms.locfileid: "73121696"
  Poniższy przykład tworzy wystąpienie dwóch <xref:System.TimeSpan> obiektów, używa ich do wykonywania operacji arytmetycznych i wyświetla wynik. W każdym przypadku używa formatowania złożonego, aby wyświetlić wartość <xref:System.TimeSpan> przy użyciu specyfikatora formatu "G". Ponadto formatuje wartość <xref:System.TimeSpan> przy użyciu Konwencji formatowania bieżącej kultury systemu (w tym przypadku jest to angielski-Stany Zjednoczone lub EN-US) oraz kulturę Francuska-Francja (fr-FR).  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardlong1.cs#5)]
- [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]  
-  
- [Wróć do tabeli](#Top)  
+ [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 ms.custom: seodec18
-ms.openlocfilehash: b427c579b4190acaf715147908b38ea57ab7aea3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd6b24a6dd893f0c522573a0e19914164c15141f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120642"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973947"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Najlepsze rozwiązania dotyczące używania ciągów w programie .NET
 
@@ -316,7 +316,7 @@ W przypadku wyświetlania danych niebędących ciągami, takich jak liczby i dat
 
 Aby jawnie określić, że ciąg powinien być sformatowany przy użyciu konwencji określonej kultury lub [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture), można wykonać następujące czynności:
 
-- Korzystając z metod <xref:System.String.Format%2A?displayProperty=nameWithType> i `ToString`, wywołaj Przeciążenie, które ma `provider` parametr, taki jak <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> lub <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, i przekaż go do właściwości <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, wystąpienia <xref:System.Globalization.CultureInfo>, które reprezentuje pożądaną kulturę lub właściwość <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType>.
+- Korzystając z metod <xref:System.String.Format%2A?displayProperty=nameWithType> i `ToString`, wywołaj Przeciążenie, które ma `provider` parametr, taki jak <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> lub <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, i przekaż mu Właściwość <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, <xref:System.Globalization.CultureInfo> wystąpienie, które reprezentuje pożądaną kulturę, lub właściwość <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType>.
 
 - W przypadku łączenia ciągów nie Zezwalaj kompilatorowi na wykonywanie jakichkolwiek niejawnych konwersji. Zamiast tego należy wykonać jawną konwersję, wywołując Przeciążenie `ToString`, które ma parametr `provider`. Na przykład kompilator niejawnie używa bieżącej kultury podczas konwertowania wartości <xref:System.Double> na ciąg w poniższym C# kodzie:
 
@@ -340,7 +340,7 @@ Dane niebędące ciągami mogą być utrwalane jako dane binarne lub dane sforma
 Poniższy przykład ilustruje ograniczoną przenośność, która wynika z używania formatowania z uwzględnieniem kultury do utrwalania danych. Przykład zapisuje tablicę wartości daty i godziny do pliku. Są one sformatowane przy użyciu Konwencji kultury angielskiej (Stany Zjednoczone). Gdy aplikacja zmieni bieżącą kulturę wątku na francuski (Szwajcaria), próbuje odczytać zapisane wartości przy użyciu Konwencji formatowania bieżącej kultury. Próba odczytania dwóch elementów danych zgłasza wyjątek <xref:System.FormatException>, a tablica dat zawiera teraz dwa niepoprawne elementy, które są równe <xref:System.DateTime.MinValue>.
 
 [!code-csharp[Conceptual.Strings.BestPractices#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
- [!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
+[!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
 
 Jeśli jednak zamienisz Właściwość <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> na <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> w wywołaniach <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> i <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, utrwalone dane daty i godziny zostaną pomyślnie przywrócone, ponieważ następujące dane wyjściowe pokazują:
 

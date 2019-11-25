@@ -9,132 +9,132 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e40f93be7f2dad4a80a4f4d23f61f3c93061751
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 103d668dd7a7436fd1acdccdc0afc2431ed8372a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874942"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975007"
 ---
 # <a name="code-contracts"></a>Kontrakty kodu
 
-Kontrakty kodu zapewniają możliwość określenia warunków wstępnych, warunków końcowych i invariants obiektu w kodzie. Są one wymagania, które muszą zostać spełnione, podczas wprowadzania metodę lub właściwość. Warunków końcowych opisują oczekiwania w czasie, który zamyka kodu metody lub właściwości. Obiekt invariants opisują oczekiwany stan dla klasy, która jest w dobrym stanie.
+Kontrakty kodu umożliwiają określenie nieokreślonych warunków wstępnych, warunki końcowe i niezmiennych obiektów w kodzie. Warunki wstępne to wymagania, które muszą zostać spełnione podczas wprowadzania metody lub właściwości. Warunki końcowe opisują oczekiwania w czasie, gdy metoda lub kod właściwości zostanie zakończony. Nieposiadające obiektu opisują oczekiwany stan klasy, która jest w dobrym stanie.
 
-Kontrakty kodu zawierają klasy służące do oznaczania kodu, statycznej Analizator do analizy w czasie kompilacji i analizatora środowiska uruchomieniowego. Klasy dla kontraktów kodu można znaleźć w <xref:System.Diagnostics.Contracts> przestrzeni nazw.
+Umowy code obejmują klasy do oznaczania kodu, Analizator statyczny dla analizy czasu kompilowania i Analizator środowiska uruchomieniowego. Klasy dla kontraktów kodu można znaleźć w przestrzeni nazw <xref:System.Diagnostics.Contracts>.
 
-Kontrakty kodu zalety następujące czynności:
+Zalety kontraktów kodu obejmują następujące elementy:
 
-- Ulepszone testowania: Kontrakty kodu zapewniają weryfikacji statyczne kontraktu, sprawdzanie w czasie wykonywania i generowanie dokumentacji.
+- Ulepszone testowanie: kontrakty kodu zapewniają weryfikację kontraktu statycznego, sprawdzanie środowiska uruchomieniowego i generowanie dokumentacji.
 
-- Automatyczne narzędzia do testowania: Kontrakty kodu można użyć, aby wygenerować bardziej zrozumiały testy jednostkowe odfiltrowując argumenty znaczenia testów, które nie spełniają warunków wstępnych.
+- Narzędzia do automatycznego testowania: można użyć kontraktów kodu do wygenerowania bardziej zrozumiałych testów jednostkowych przez odfiltrowanie niezgodnych argumentów testowych niespełniających warunków wstępnych.
 
-- Weryfikacja statyczne. Sprawdzanie statycznego można zdecydować, czy istnieją wszelkie naruszenia Umowy, bez konieczności uruchamiania programu. Sprawdza niejawne zamówień, takie jak wartości null wyłuskań i tablicy granice i jawne umów.
+- Weryfikacja statyczna: kontroler statyczny może zdecydować, czy istnieją naruszenia umowy bez uruchamiania programu. Sprawdza niejawne kontrakty, takie jak odwołania do wartości null i granice tablicy oraz jawne umowy.
 
-- Dokumentacja: Generator dokumentacji rozszerza istniejące pliki dokumentacji XML przy użyciu informacje na temat umowy. Dostępne są także arkuszy stylów, które mogą być używane z [Sandcastle](https://github.com/EWSoftware/SHFB) tak, aby strony wygenerowaną dokumentację zawierają sekcje kontraktu.
+- Dokumentacja referencyjna: generator dokumentacji rozszerza istniejące pliki dokumentacji XML o informacje o kontrakcie. Istnieją również arkusze stylów, które mogą być używane z [Sandcastle](https://github.com/EWSoftware/SHFB) , aby wygenerowane strony dokumentacji zawierały sekcje kontraktu.
 
-Wszystkie języki .NET Framework od razu korzystać z zalet umów. nie trzeba napisać specjalny analizator lub kompilatora. Dodatek programu Visual Studio pozwala określić poziom analizy kontraktu kodu do wykonania. Analizatorów można potwierdzić, że kontrakty te są poprawnie sformułowane (kontrola typów i rozpoznawanie nazw) i może wywoływać skompilowanej formy kontraktów w formacie języka intermediate language (MSIL) firmy Microsoft. Tworzenie umów w programie Visual Studio pozwala korzystać ze standardowych funkcji IntelliSense są udostępniane przez narzędzie.
+Wszystkie języki .NET Framework mogą natychmiast korzystać z umów. nie trzeba pisać specjalnego parsera ani kompilatora. Dodatek Visual Studio umożliwia określenie poziomu analizy kontraktu kodu do wykonania. Analizatory mogą potwierdzić, że umowy są dobrze sformułowane (sprawdzanie typu i rozpoznawanie nazw) i mogą generować skompilowaną postać umów w formacie języka pośredniego (MSIL) firmy Microsoft. Kontrakty tworzenia w programie Visual Studio umożliwiają skorzystanie z standardowej technologii IntelliSense dostępnej przez narzędzie.
 
-Większość metod w klasie umowy są warunkowo skompilowany; oznacza to, kompilator generuje wywołania tych metod tylko wtedy, gdy zdefiniować symbol specjalny CONTRACTS_FULL, za pomocą `#define` dyrektywy. CONTRACTS_FULL umożliwia zapisanie kontraktów w kodzie, bez użycia `#ifdef` dyrektyw; można tworzyć różne kompilacje, niektóre z kontraktami i niektóre bez.
+Większość metod w klasie kontraktu jest warunkowo kompilowane; oznacza to, że kompilator emituje wywołania tych metod tylko wtedy, gdy definiujesz symbol specjalny, CONTRACTS_FULL, za pomocą dyrektywy `#define`. CONTRACTS_FULL pozwala pisać kontrakty w kodzie bez stosowania dyrektyw `#ifdef`; Możesz tworzyć różne kompilacje, niektóre z kontraktami i niektóre bez.
 
-Narzędzia i szczegółowe instrukcje dotyczące korzystania z kontraktów kodu, zobacz [kontrakty kodu](https://go.microsoft.com/fwlink/?LinkId=152461) w witrynie MSDN DevLabs w sieci Web.
+Aby poznać narzędzia i szczegółowe instrukcje dotyczące korzystania z kontraktów kodu, zobacz temat [kontrakty kodu](https://marketplace.visualstudio.com/items?itemName=RiSEResearchinSoftwareEngineering.CodeContractsforNET) w witrynie Visual Studio Marketplace.
 
 ## <a name="preconditions"></a>Warunki wstępne
 
-Warunki wstępne można wyrazić za pomocą <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType> metody. Warunki wstępne Określ stan przypadku wywołania metody. Zwykle służą one do określenia prawidłowymi wartościami parametrów. Wszystkie elementy członkowskie, które są wymienione w warunkach wstępnych musi być co najmniej tak samo dostępna jak metoda. w przeciwnym razie warunek wstępny może nie być zrozumiała dla wszystkich obiektów wywołujących metodę. Warunek musi mieć nie efektów ubocznych. Zachowania w czasie wykonywania nie powiodło się warunki wstępne jest określany przez analizator środowiska uruchomieniowego.
+Warunki wstępne można wyrazić za pomocą metody <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType>. Warunki wstępne określają stan, gdy wywoływana jest metoda. Są one zwykle używane do określania prawidłowych wartości parametrów. Wszystkie składowe, które są wymienione w warunkach wstępnych, muszą być co najmniej tak samo samo jak metoda; w przeciwnym razie warunek wstępny może nie być zrozumiały dla wszystkich wywołujących metod. Warunek nie może mieć efektów ubocznych. Zachowanie warunków wstępnych zakończonych niepowodzeniem jest określane przez analizator czasu wykonywania.
 
-Na przykład, następujący warunek wstępny wyraża tego parametru `x` musi być równa null.
+Na przykład następujący warunek wstępny oznacza, że parametr `x` nie może mieć wartości null.
 
 ```csharp
 Contract.Requires(x != null);
 ```
 
-Jeśli Twój kod musi zgłosić określony wyjątek na niepowodzenie warunku wstępnego, możesz użyć przeciążenia ogólne <xref:System.Diagnostics.Contracts.Contract.Requires%2A> w następujący sposób.
+Jeśli kod musi zgłosić konkretny wyjątek w przypadku niepowodzenia warunku wstępnego, można użyć ogólnego przeciążenia <xref:System.Diagnostics.Contracts.Contract.Requires%2A> w następujący sposób.
 
 ```csharp
 Contract.Requires<ArgumentNullException>(x != null, "x");
 ```
 
-### <a name="legacy-requires-statements"></a>Instrukcji #requires starszej wersji
+### <a name="legacy-requires-statements"></a>Starsze instrukcje wymagają instrukcji
 
-Większość kodu zawiera niektóre poprawność parametrów w formie `if` - `then` - `throw` kodu. Narzędzia kontraktu rozpoznać te instrukcje jako warunki wstępne w następujących przypadkach:
+Większość kodu zawiera weryfikację parametrów w postaci `if`-`then`-`throw` kod. Narzędzia kontraktowe rozpoznają te instrukcje jako warunki wstępne w następujących przypadkach:
 
-- Instrukcje są wyświetlane przed wszystkimi innymi instrukcjami w metodzie.
+- Instrukcje są wyświetlane przed innymi instrukcjami w metodzie.
 
-- Cały zestaw instrukcji takich następuje jawnego <xref:System.Diagnostics.Contracts.Contract> wywołania metody, takie jak wywołanie <xref:System.Diagnostics.Contracts.Contract.Requires%2A>, <xref:System.Diagnostics.Contracts.Contract.Ensures%2A>, <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A>, lub <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A> metody.
+- W całym zestawie takich instrukcji następuje jawne wywołanie metody <xref:System.Diagnostics.Contracts.Contract>, takie jak wywołanie metody <xref:System.Diagnostics.Contracts.Contract.Requires%2A>, <xref:System.Diagnostics.Contracts.Contract.Ensures%2A>, <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A>lub <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A>.
 
-Gdy `if` - `then` - `throw` instrukcje pojawiają się w tym formularzu narzędzia rozpoznaje je jako starszy `requires` instrukcji. Jeśli nie ma innych umów `if` - `then` - `throw` sekwencji, end kodu za pomocą <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType> metody.
+Gdy `if`-`then`w tym formularzu pojawiają się instrukcje -`throw`, narzędzia te rozpoznają je jako starsze instrukcje `requires`. Jeśli żadna inna umowa nie postępuje zgodnie z `if`-`then`-`throw` sekwencji, Zakończ kod przy użyciu metody <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType>.
 
 ```csharp
 if (x == null) throw new ...
 Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ```
 
-Należy pamiętać, że warunek w poprzednim teście zanegowanych warunku wstępnego. (Będzie rzeczywiste wstępnym `x != null`.) Warunkiem wstępnym zanegowanych jest o dużych ograniczeniach: Musi być napisana, jak pokazano w poprzednim przykładzie; oznacza to, że powinien on zawierać nie `else` klauzule i treści `then` klauzula musi mieć pojedynczy `throw` instrukcji. `if` Testu podlega reguł czystości i widoczności (zobacz [wytyczne dotyczące użycia](#usage_guidelines)), ale `throw` wyrażenie podlega wyłącznie czystości reguły. Jednak typem wyjątku musi być jako widoczny jako metody, w której występuje umowy.
+Należy zauważyć, że warunek w poprzednim teście to Negacja warunku wstępnego. (Rzeczywisty warunek wstępny będzie `x != null`.) Negacja warunku wstępnego jest wysoce ograniczony: musi być zapisany, jak pokazano w poprzednim przykładzie; oznacza to, że nie powinien zawierać klauzul `else`, a treść klauzuli `then` musi być pojedynczą instrukcją `throw`. Test `if` podlega obu regułom czystości i widoczności (zobacz [wskazówki dotyczące użycia](#usage_guidelines)), ale wyrażenie `throw` podlega tylko regułom czystości. Jednak typ zgłoszonego wyjątku musi być tak widoczny jak metoda, w której występuje kontrakt.
 
-## <a name="postconditions"></a>Warunków końcowych
+## <a name="postconditions"></a>Warunki końcowe
 
-Warunków końcowych są kontrakty dla stanu metody, kończąc działanie. Postcondition jest sprawdzany tuż przed Kończenie wykonywania metody. Zachowania w czasie wykonywania nie powiodło się warunków końcowych jest określany przez analizator środowiska uruchomieniowego.
+Warunki końcowe są kontraktami dla stanu metody po jej zakończeniu. Błąd warunku końcowego jest sprawdzany tuż przed opuszczeniem metody. Zachowanie w czasie wykonywania zakończone niepowodzeniem warunki końcowe jest określane przez analizator czasu wykonywania.
 
-W odróżnieniu od warunków wstępnych warunków końcowych mogą odwoływać się do elementów członkowskich z mniejszą widoczność. Klient nie może być można zrozumieć, lub wprowadzić korzystanie z niektórych informacji wyrażona postcondition, przy użyciu prywatnego stanu, ale nie ma to wpływu na możliwość klienta przy użyciu metody poprawnie.
+W przeciwieństwie do warunków wstępnych, warunki końcowe może odwoływać się do członków z mniej widocznymi elementami. Klient może nie być w stanie zrozumieć ani korzystać z niektórych informacji wyrażonych przez błąd warunku końcowego przy użyciu stanu prywatnego, ale nie ma to wpływu na zdolność klienta do poprawnego używania metody.
 
-### <a name="standard-postconditions"></a>Standardowa warunków końcowych
+### <a name="standard-postconditions"></a>Standardowa warunki końcowe
 
-Standardowa warunków końcowych można wyrazić za pomocą <xref:System.Diagnostics.Contracts.Contract.Ensures%2A> metody. Warunków końcowych express warunek, który musi być `true` na normalne zakończenie metody.
+Standardową warunki końcowe można wyrazić za pomocą metody <xref:System.Diagnostics.Contracts.Contract.Ensures%2A>. Warunki końcowe Express warunek, który musi być `true` przy normalnym zakończeniu metody.
 
 ```csharp
 Contract.Ensures(this.F > 0);
 ```
 
-### <a name="exceptional-postconditions"></a>Wyjątkowych warunków końcowych
+### <a name="exceptional-postconditions"></a>Wyjątkowe warunki końcowe
 
-Wyjątkowych warunków końcowych są warunków końcowych, które powinny być `true` gdy określony wyjątek jest zgłaszany przez metodę. Należy określić tych warunków końcowych, za pomocą <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=nameWithType> metody, jak w poniższym przykładzie pokazano.
+Wyjątkowe warunki końcowe są warunki końcowe, które powinny być `true`, gdy dany wyjątek jest zgłaszany przez metodę. Możesz określić te warunki końcowe za pomocą metody <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=nameWithType>, jak pokazano w poniższym przykładzie.
 
 ```csharp
 Contract.EnsuresOnThrow<T>(this.F > 0);
 ```
 
-Argument jest warunek, który musi być `true` zawsze wtedy, gdy wyjątek, który jest podtypem `T` zgłaszany.
+Argument jest warunkiem, który musi być `true` za każdym razem, gdy zostanie zgłoszony wyjątek, który jest podtypem `T`.
 
-Brak niektórych typów wyjątków, które są trudne do użycia w wyjątkowych postcondition. Na przykład przy użyciu typu <xref:System.Exception> dla `T` wymaga metody w celu zagwarantowania warunku, bez względu na typ wyjątku, który jest zgłaszany, nawet jeśli jest on przepełnienie stosu lub innych wyjątków niemożliwe do sterowania. Tylko dla określonych wyjątków, które mogą być zgłaszany, gdy członek jest wywoływany, na przykład, kiedy należy używać wyjątkowych warunków końcowych <xref:System.InvalidTimeZoneException> jest generowany dla <xref:System.TimeZoneInfo> wywołania metody.
+Istnieją pewne typy wyjątków, których trudno użyć w wyjątkowych błąd warunku końcowego. Na przykład użycie typu <xref:System.Exception> dla `T` wymaga metody do zagwarantowania warunku niezależnie od typu zgłoszonego wyjątku, nawet jeśli jest to przepełnienie stosu lub inny wyjątek niemożliwy do kontroli. Należy używać wyjątkowych warunki końcowe tylko dla określonych wyjątków, które mogą być zgłaszane, gdy element członkowski jest wywoływany, na przykład wtedy, gdy dla wywołania metody <xref:System.TimeZoneInfo> zostanie zgłoszone <xref:System.InvalidTimeZoneException>.
 
-### <a name="special-postconditions"></a>Specjalne warunków końcowych
+### <a name="special-postconditions"></a>Specjalne warunki końcowe
 
-Poniższych metod można stosować tylko w ramach warunków końcowych:
+Następujące metody mogą być używane tylko w warunki końcowe:
 
-- Mogą odwoływać się do wartości zwracane metody w warunków końcowych przy użyciu wyrażenia `Contract.Result<T>()`, gdzie `T` jest zastępowany przez zwracany typ metody. Gdy kompilator nie może wywnioskować typ, należy je jawnie określić. Na przykład C# kompilator nie może wywnioskować typów, metod, które nie przyjmują żadnych argumentów, dzięki czemu wymaga następujących postcondition: `Contract.Ensures(0 <Contract.Result<int>())` Metody z typem zwrotnym `void` nie może odwoływać się do `Contract.Result<T>()` w swoich warunków końcowych.
+- Można odwołać się do wartości zwracanych przez metodę w warunki końcowe przy użyciu wyrażenia `Contract.Result<T>()`, gdzie `T` jest zastępowana przez zwracany typ metody. Gdy kompilator nie może wywnioskować typu, należy go jawnie udostępnić. Na przykład C# kompilator nie może wywnioskować typów dla metod, które nie przyjmują żadnych argumentów, dlatego wymaga następujących błąd warunku końcowego: metody `Contract.Ensures(0 <Contract.Result<int>())` z typem zwracanym `void` nie mogą odwoływać się do `Contract.Result<T>()` w ich warunki końcowe.
 
-- Wartość prestate postcondition odnosi się do wartości wyrażenia na początku metody lub właściwości. Używa wyrażenia `Contract.OldValue<T>(e)`, gdzie `T` jest typem `e`. Można pominąć argument typu ogólnego, zawsze wtedy, gdy kompilator może wywnioskować jej typu. (Na przykład, kompilator języka C# zawsze wnioskuje typ z powodu argumentu.) Ma kilka ograniczeń dotyczących co może mieć miejsce w `e` i konteksty, w których może występować wyrażenie stary. Stare wyrażenie nie może zawierać innego wyrażenia stary. Co najważniejsze stare wyrażenie musi odwoływać się do wartości, które istniały w stanie wstępnym metody. Innymi słowy, musi być wyrażenie, które mogą być obliczane tak długo, jak jest warunkiem wstępnym metody `true`. Poniżej przedstawiono kilka wystąpień tej reguły.
+- Wartość stanu początkowego w błąd warunku końcowego odwołuje się do wartości wyrażenia na początku metody lub właściwości. Używa wyrażenia `Contract.OldValue<T>(e)`, gdzie `T` jest typem `e`. Argument typu ogólnego można pominąć zawsze, gdy kompilator może wywnioskować swój typ. (Na przykład C# kompilator zawsze wnioskuje typ, ponieważ przyjmuje argument). Istnieją pewne ograniczenia dotyczące tego, co może wystąpić w `e` i kontekstów, w których może się pojawić stare wyrażenie. Stare wyrażenie nie może zawierać innego starego wyrażenia. Co najważniejsze, stare wyrażenie musi odwoływać się do wartości, która istniała w stanie warunku wstępnego metody. Innymi słowy, musi być wyrażeniem, które może być oceniane tak długo, jak warunek wstępny metody jest `true`. Oto kilka wystąpień tej reguły.
 
-  - Wartość musi istnieć w stanie wstępnym metody. Aby można było odwoływać się do pola w obiekcie warunki wstępne musi gwarantować, że obiekt zawsze jest różna od null.
+  - Wartość musi istnieć w stanie warunku wstępnego metody. Aby można było odwołać się do pola w obiekcie, warunki wstępne muszą zagwarantować, że obiekt jest zawsze inny niż null.
 
-  - Nie można odwołać się do wartości zwracanej metody w wyrażeniu stare:
+  - Nie można odwołać się do wartości zwracanej metody w starym wyrażeniu:
 
       ```csharp
       Contract.OldValue(Contract.Result<int>() + x) // ERROR
       ```
 
-  - Nie można odwołać się `out` parametrów w wyrażeniu stary.
+  - Nie można odwołać się do `out` parametrów w starym wyrażeniu.
 
-  - Stare wyrażenie nie może zależeć od zmiennej powiązanej kwantyfikator, jeśli wartość zwracaną metody zależy od zakresu kwantyfikator:
+  - Stare wyrażenie nie może zależeć od zmiennej powiązanej kwantyfikatora, jeśli zakres kwantyfikatora zależy od wartości zwracanej przez metodę:
 
       ```csharp
       Contract.ForAll(0, Contract.Result<int>(), i => Contract.OldValue(xs[i]) > 3); // ERROR
       ```
 
-  - Stare wyrażenie nie może odwoływać się do parametru delegata anonimowego w <xref:System.Diagnostics.Contracts.Contract.ForAll%2A> lub <xref:System.Diagnostics.Contracts.Contract.Exists%2A> wywołania, chyba że jest ona używana jako indeksatora lub argument wywołania metody:
+  - Stare wyrażenie nie może odwoływać się do parametru delegata anonimowego w <xref:System.Diagnostics.Contracts.Contract.ForAll%2A> lub <xref:System.Diagnostics.Contracts.Contract.Exists%2A> wywołania, chyba że jest używany jako indeksator lub argument wywołania metody:
 
       ```csharp
       Contract.ForAll(0, xs.Length, i => Contract.OldValue(xs[i]) > 3); // OK
       Contract.ForAll(0, xs.Length, i => Contract.OldValue(i) > 3); // ERROR
       ```
 
-  - Stare wyrażenie nie może wystąpić w treści delegata anonimowego Jeśli wartość wyrażenia stare jest zależna od dowolny z parametrów delegata anonimowego, chyba że argument do delegata anonimowego <xref:System.Diagnostics.Contracts.Contract.ForAll%2A> lub <xref:System.Diagnostics.Contracts.Contract.Exists%2A> metody:
+  - Stare wyrażenie nie może wystąpić w treści delegata anonimowego, jeśli wartość starego wyrażenia zależy od któregokolwiek z parametrów delegata anonimowego, chyba że delegat anonimowy jest argumentem <xref:System.Diagnostics.Contracts.Contract.ForAll%2A> lub <xref:System.Diagnostics.Contracts.Contract.Exists%2A> metody:
 
       ```csharp
       Method(... (T t) => Contract.OldValue(... t ...) ...); // ERROR
       ```
 
-  - `Out` Parametry powodują problemu, ponieważ kontrakty następować przed elementem treści metody, a większość kompilatorów zezwala na odwołania do `out` parametry warunków końcowych. Aby rozwiązać ten problem, <xref:System.Diagnostics.Contracts.Contract> klasa udostępnia <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> metody, która umożliwia postcondition, na podstawie `out` parametru.
+  - `Out` parametry powodują problem, ponieważ kontrakty są wyświetlane przed treścią metody, a większość kompilatorów nie zezwala na odwołania do parametrów `out` w warunki końcowe. Aby rozwiązać ten problem, Klasa <xref:System.Diagnostics.Contracts.Contract> zapewnia metodę <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A>, która umożliwia błąd warunku końcowego na podstawie parametru `out`.
 
       ```csharp
       public void OutParam(out int x)
@@ -144,16 +144,16 @@ Poniższych metod można stosować tylko w ramach warunków końcowych:
       }
       ```
 
-      Podobnie jak w przypadku <xref:System.Diagnostics.Contracts.Contract.OldValue%2A> metody, można pominąć parametr typu ogólnego zawsze wtedy, gdy kompilator może wywnioskować jej typu. Dysków kontraktu zastępuje wywołanie metody z wartością `out` parametru. <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> Metoda może występować tylko w warunków końcowych. Argument do metody musi być `out` parametru lub pola struktury `out` parametru. Drugim jest również przydatne przy odwoływaniu się do pól w postcondition konstruktora struktury.
+      Podobnie jak w przypadku metody <xref:System.Diagnostics.Contracts.Contract.OldValue%2A> można pominąć parametr typu ogólnego, gdy kompilator może wywnioskować swój typ. Zastąpienie kontraktu zastępuje metodę wywołania z wartością parametru `out`. Metoda <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> może występować tylko w warunki końcowe. Argument metody musi być parametrem `out` lub polem struktury `out` parametrem. Ta ostatnia jest również przydatna w przypadku odwoływania się do pól w błąd warunku końcowego konstruktora struktury.
 
       > [!NOTE]
-      > Obecnie narzędzi analizy kodu kontraktu sprawdza, czy `out` parametry są inicjowane poprawnie i pominąć ich wzmiankę w postcondition. W związku z tym, w poprzednim przykładzie, jeśli wiersza po kontrakt gdyby użyto wartości `x` zamiast przypisywać całkowitą do niego, kompilatora nie będzie wystawiać usunąć błąd. Jednakże w przypadku kompilacji, w której symbol preprocesora CONTRACTS_FULL jest niezdefiniowana (takie kompilacji wydania asa), kompilator zgłosi błąd.
+      > Obecnie narzędzia do analizy kontraktu kodu nie sprawdzają, czy `out` parametry są inicjowane prawidłowo i nie można zignorować ich wzmianki w błąd warunku końcowego. W związku z tym w poprzednim przykładzie, jeśli wiersz po kontrakcie używał wartości `x` zamiast przypisywania do niej liczby całkowitej, kompilator nie wystawia poprawnego błędu. Jednak w przypadku kompilacji, w której nie jest zdefiniowany symbol preprocesora CONTRACTS_FULL (takie jak kompilacja w wersji ASA), kompilator wygeneruje błąd.
 
-## <a name="invariants"></a>Invariants
+## <a name="invariants"></a>Nieposiadające wariantów
 
-Obiekt invariants są warunki, które powinny być prawdziwe dla każdego wystąpienia klasy, zawsze wtedy, gdy ten obiekt jest widoczny dla klienta. Warunki, w których obiekt jest uważany za prawidłowy one express.
+Niewarianty obiektu to warunki, które powinny być spełnione dla każdego wystąpienia klasy, gdy ten obiekt jest widoczny dla klienta. Wyrażają one warunki, zgodnie z którymi obiekt jest uznawany za poprawny.
 
-Niezmienna metody są identyfikowane za pomocą oznaczony za pomocą <xref:System.Diagnostics.Contracts.ContractInvariantMethodAttribute> atrybutu. Niezmienna metody muszą zawierać żadnego kodu, z wyjątkiem sekwencję wywołań <xref:System.Diagnostics.Contracts.Contract.Invariant%2A> metody, z których każdy określa poszczególnych niezmiennej, jak pokazano w poniższym przykładzie.
+Niezmienne metody są identyfikowane za pomocą atrybutu <xref:System.Diagnostics.Contracts.ContractInvariantMethodAttribute>. Metody niezmiennej nie mogą zawierać kodu z wyjątkiem sekwencji wywołań do metody <xref:System.Diagnostics.Contracts.Contract.Invariant%2A>, z których każdy określa indywidualną niezmienną, jak pokazano w poniższym przykładzie.
 
 ```csharp
 [ContractInvariantMethod]
@@ -165,54 +165,54 @@ protected void ObjectInvariant ()
 }
 ```
 
-Invariants warunkowo są definiowane przez symbol preprocesora CONTRACTS_FULL. Podczas sprawdzania czasu wykonywania, invariants są sprawdzane na końcu każdej metody publiczne. Jeśli niezmiennej nazwa publicznej metody z tej samej klasy, niezmienna Sprawdź, czy zwykle sytuacja może mieć miejsce na końcu metody publicznej jest wyłączona. Zamiast tego sprawdzanie jest wykonywane tylko na końcu wywołania metody prowadzące do tej klasy. Dzieje się również, jeśli klasa jest ponowne wprowadzenie ze względu na wywołanie metody w innej klasy. Invariants nie są sprawdzane pod kątem finalizatora obiektu i <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementacji.
+Niewarianty są warunkowo definiowane przez symbol preprocesora CONTRACTS_FULL. Podczas sprawdzania w czasie wykonywania, nieposiadanie wariantów jest sprawdzane na końcu każdej metody publicznej. Jeśli niezmienna wymienia metodę publiczną w tej samej klasie, sprawdzenie niezmiennej, które zwykle występuje na końcu tej metody publicznej, jest wyłączone. Zamiast tego sprawdzanie odbywa się tylko na końcu najbardziej zewnętrznego wywołania metody do tej klasy. Dzieje się tak, jeśli Klasa zostanie dodana z powodu wywołania metody w innej klasie. Nie sprawdzono wariantów dla finalizatora obiektu i implementacji <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>.
 
 <a name="usage_guidelines"></a>
 
 ## <a name="usage-guidelines"></a>Zalecenia dotyczące użytkowania
 
-### <a name="contract-ordering"></a>Kolejność kontraktu
+### <a name="contract-ordering"></a>Porządkowanie kontraktu
 
-W poniższej tabeli przedstawiono kolejność elementów, którego należy używać podczas pisania metoda umów.
+W poniższej tabeli przedstawiono kolejność elementów, które powinny być używane podczas pisania kontraktów metod.
 
-|`If-then-throw statements`|Warunki wstępne publicznych zgodne z poprzednimi wersjami|
+|`If-then-throw statements`|Publiczne warunki wstępne zgodne z poprzednimi wersjami|
 |-|-|
-|<xref:System.Diagnostics.Contracts.Contract.Requires%2A>|Wszystkie warunki wstępne publicznych.|
-|<xref:System.Diagnostics.Contracts.Contract.Ensures%2A>|Wszystkich warunków końcowych publiczny (normalne).|
-|<xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A>|Wszystkich warunków końcowych publicznych wyjątkowych.|
-|<xref:System.Diagnostics.Contracts.Contract.Ensures%2A>|Wszystkich warunków końcowych prywatne/wewnętrzny (normalne).|
-|<xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A>|Wszystkich warunków końcowych prywatne/wewnętrzny wyjątkowych.|
-|<xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A>|Jeśli przy użyciu `if` - `then` - `throw` stylu warunki wstępne bez żadnych innych umów, Umieść wywołanie <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A> z informacją, że wszystkie poprzednie, w przypadku sprawdzania warunków wstępnych.|
+|<xref:System.Diagnostics.Contracts.Contract.Requires%2A>|Wszystkie publiczne warunki wstępne.|
+|<xref:System.Diagnostics.Contracts.Contract.Ensures%2A>|Wszystkie publiczne (normalne) warunki końcowe.|
+|<xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A>|Wszystkie publiczne wyjątkowe warunki końcowe.|
+|<xref:System.Diagnostics.Contracts.Contract.Ensures%2A>|Wszystkie prywatne/wewnętrzne (normalne) warunki końcowe.|
+|<xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A>|Wszystkie prywatne/wewnętrzne wyjątkowe warunki końcowe.|
+|<xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A>|W przypadku korzystania z `if`-`then`-`throw` warunków wstępnych bez jakichkolwiek innych umów należy nawiązać połączenie z <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A>, aby wskazać, że wszystkie poprzednie sprawdzenia są warunkiem wstępnym.|
 
 <a name="purity"></a>
 
-### <a name="purity"></a>Czystość
+### <a name="purity"></a>Czystości
 
-Wszystkie metody, które są wywoływane w ramach kontraktu musi być czysty; oznacza to nie muszą zaktualizować dowolny stan przeniosła istniejące wcześniej. Czystej metody może modyfikować obiekty, które zostały utworzone po wejściu w czystej metody.
+Wszystkie metody, które są wywoływane w ramach kontraktu, muszą być czyste; oznacza to, że nie mogą zaktualizować żadnego istniejącego stanu. Czysta Metoda pozwala modyfikować obiekty, które zostały utworzone po wprowadzeniu do czystej metody.
 
-Obecnie narzędzia kontraktu kodu założono, czy czystego następujących elementów kodu:
+Narzędzia kontraktu kodu założono, że następujące elementy kodu są czyste:
 
 - Metody, które są oznaczone <xref:System.Diagnostics.Contracts.PureAttribute>.
 
-- Typy, które są oznaczone <xref:System.Diagnostics.Contracts.PureAttribute> (atrybut ma zastosowanie do wszystkich typów, metod).
+- Typy, które są oznaczone <xref:System.Diagnostics.Contracts.PureAttribute> (atrybut ma zastosowanie do wszystkich metod typu).
 
-- Właściwość metody dostępu get.
+- Metody dostępu get właściwości.
 
-- Operatory (metody statyczne, których nazwy rozpoczynają się od "op" oraz że masz jeden lub dwa parametry oraz zwracany typ inny niż void).
+- Operatory (metody static, których nazwy zaczynają się od "op" i mają jeden lub dwa parametry i typ zwracany non-void).
 
-- Każda metoda, której w pełni kwalifikowana nazwa zaczyna się od "System.Diagnostics.Contracts.Contract", "System.String", "System.IO.Path" lub "System.Type".
+- Każda metoda, której w pełni kwalifikowana nazwa zaczyna się od "System. Diagnostics. Contracts. kontrakcie", "System. String", "System. IO. Path" lub "System. Type".
 
-- Dowolny wywoływany delegat, pod warunkiem, że sam typ delegata jest związana z <xref:System.Diagnostics.Contracts.PureAttribute>. Typy delegatów <xref:System.Predicate%601?displayProperty=nameWithType> i <xref:System.Comparison%601?displayProperty=nameWithType> są traktowane jako czysty.
+- Każdy wywołany delegat, pod warunkiem, że typ delegata jest przypisany do <xref:System.Diagnostics.Contracts.PureAttribute>. Typy delegatów <xref:System.Predicate%601?displayProperty=nameWithType> i <xref:System.Comparison%601?displayProperty=nameWithType> są uważane za czyste.
 
 <a name="visibility"></a>
 
 ### <a name="visibility"></a>Widoczność
 
-Wszystkie elementy członkowskie wymienione w kontraktu musi być co najmniej jako widoczny jako metody, w jakiej są wyświetlane. Na przykład pola prywatnego nie może być wymienione w wstępnym publiczną metodę; Klienci nie można zweryfikować takie umowy, zanim wywołują metodę. Jednakże jeśli pole jest oznaczona atrybutem <xref:System.Diagnostics.Contracts.ContractPublicPropertyNameAttribute>, jest wykluczony z tych reguł.
+Wszystkie elementy członkowskie wymienione w kontrakcie muszą być co najmniej widoczne jako metody, w której się pojawiają. Na przykład pole prywatne nie może być wymienione w warunku wstępnego dla metody publicznej; Klienci nie mogą sprawdzić poprawności takiego kontraktu przed wywołaniem metody. Jeśli jednak pole jest oznaczone <xref:System.Diagnostics.Contracts.ContractPublicPropertyNameAttribute>, jest ono wykluczone z tych reguł.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje użycie kontrakty kodu.
+W poniższym przykładzie przedstawiono użycie kontraktów kodu.
 
 [!code-csharp[ContractExample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#1)]
 [!code-vb[ContractExample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#1)]

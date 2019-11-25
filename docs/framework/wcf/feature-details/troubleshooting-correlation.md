@@ -1,15 +1,15 @@
 ---
-title: Rozwiązywanie problemów z korelacją
+title: Korelacja rozwiązywania problemów
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: d4b7b4ecd724416256cf0b2499d7180200f4e75c
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: be48a55a87d199829de4038e7e2a7642c102acf2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291551"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976017"
 ---
-# <a name="troubleshooting-correlation"></a>Rozwiązywanie problemów z korelacją
+# <a name="troubleshooting-correlation"></a>Korelacja rozwiązywania problemów
 Korelacja jest używana do powiązania komunikatów usługi przepływu pracy ze sobą i do prawidłowego wystąpienia przepływu pracy, ale jeśli nie jest prawidłowo skonfigurowana, komunikaty nie będą odbierane, a aplikacje nie będą działać prawidłowo. Ten temat zawiera omówienie kilku metod rozwiązywania problemów z korelacją, a także listę typowych problemów, które mogą wystąpić w przypadku korzystania z korelacji.
 
 ## <a name="handle-the-unknownmessagereceived-event"></a>Obsługuj zdarzenie UnknownMessageReceived
@@ -47,11 +47,9 @@ class CustomFactory : WorkflowServiceHostFactory
 
  Ten niestandardowy <xref:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory> można następnie określić w pliku `svc` dla usługi.
 
-```
-<% @ServiceHost Language="C#" Service="OrderServiceWorkflow" Factory="CustomFactory" %>
-```
+`<% @ServiceHost Language="C#" Service="OrderServiceWorkflow" Factory="CustomFactory" %>`
 
- Po wywołaniu tej procedury obsługi wiadomości można pobrać przy użyciu właściwości <xref:System.ServiceModel.UnknownMessageReceivedEventArgs.Message%2A> <xref:System.ServiceModel.UnknownMessageReceivedEventArgs> i będzie wyglądać następująco.
+ Po wywołaniu tej procedury obsługi wiadomości można pobrać przy użyciu właściwości <xref:System.ServiceModel.UnknownMessageReceivedEventArgs.Message%2A> <xref:System.ServiceModel.UnknownMessageReceivedEventArgs>i będzie wyglądać następująco.
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -67,21 +65,21 @@ class CustomFactory : WorkflowServiceHostFactory
 </s:Envelope>
 ```
 
- Inspekcja komunikatów wysłanych do programu obsługi <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived> może przedstawiać wskazówki dotyczące przyczyny nieskorelowania komunikatu z wystąpieniem usługi przepływu pracy.
+ Inspekcja komunikatów wysłanych do procedury obsługi <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived> może przedstawiać wskazówki dotyczące przyczyny nieskorelowania komunikatu z wystąpieniem usługi przepływu pracy.
 
 ## <a name="use-tracking-to-monitor-the-progress-of-the-workflow"></a>Monitorowanie postępu przepływu pracy przy użyciu funkcji śledzenia
- Śledzenie umożliwia monitorowanie postępu przepływu pracy. Domyślnie śledzenie rekordów jest emitowane w przypadku zdarzeń cyklu życia przepływu pracy, zdarzeń cyklu życia aktywności, propagacji błędów i wznowienia zakładki. Ponadto niestandardowe rekordy śledzenia mogą być emitowane przez działania niestandardowe. W przypadku rozwiązywania problemów z korelacją rekordy śledzenia działań, rekordy wznawiania z zakładkami i rekordy propagacji błędów są najbardziej przydatne. Rekordy śledzenia działań mogą służyć do określenia bieżącego postępu przepływu pracy i mogą ułatwić identyfikację działania komunikatów oczekujących na komunikaty. Rekordy wznawiania zakładki są przydatne, ponieważ wskazują, że komunikat został odebrany przez przepływ pracy, a rekordy propagacji błędów zawierają rekord błędów w przepływie pracy. Aby włączyć śledzenie, określ żądany <xref:System.Activities.Tracking.TrackingParticipant> w <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> <xref:System.ServiceModel.Activities.WorkflowServiceHost>. W poniższym przykładzie `ConsoleTrackingParticipant` (z niestandardowego przykładu [śledzenia](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) ) jest konfigurowany przy użyciu domyślnego profilu śledzenia.
+ Śledzenie umożliwia monitorowanie postępu przepływu pracy. Domyślnie śledzenie rekordów jest emitowane w przypadku zdarzeń cyklu życia przepływu pracy, zdarzeń cyklu życia aktywności, propagacji błędów i wznowienia zakładki. Ponadto niestandardowe rekordy śledzenia mogą być emitowane przez działania niestandardowe. W przypadku rozwiązywania problemów z korelacją rekordy śledzenia działań, rekordy wznawiania z zakładkami i rekordy propagacji błędów są najbardziej przydatne. Rekordy śledzenia działań mogą służyć do określenia bieżącego postępu przepływu pracy i mogą ułatwić identyfikację działania komunikatów oczekujących na komunikaty. Rekordy wznawiania zakładki są przydatne, ponieważ wskazują, że komunikat został odebrany przez przepływ pracy, a rekordy propagacji błędów zawierają rekord błędów w przepływie pracy. Aby włączyć śledzenie, określ odpowiednie <xref:System.Activities.Tracking.TrackingParticipant> w <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> <xref:System.ServiceModel.Activities.WorkflowServiceHost>. W poniższym przykładzie `ConsoleTrackingParticipant` (z niestandardowego przykładu [śledzenia](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) ) jest konfigurowany przy użyciu domyślnego profilu śledzenia.
 
 ```csharp
 host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 ```
 
- Uczestnik śledzenia, taki jak ConsoleTrackingParticipant, jest przydatny w przypadku samodzielnej usługi przepływu pracy, która ma okno konsoli. W przypadku usługi hostowanej w sieci Web należy użyć śledzenia uczestnika, który rejestruje informacje o śledzeniu do magazynu trwałego, takich jak wbudowana <xref:System.Activities.Tracking.EtwTrackingParticipant> lub niestandardowy Uczestnik śledzenia, który rejestruje informacje w pliku.
+ Uczestnik śledzenia, taki jak ConsoleTrackingParticipant, jest przydatny w przypadku samodzielnej usługi przepływu pracy, która ma okno konsoli. W przypadku usługi hostowanej przez sieć Web Uczestnik śledzenia, który rejestruje informacje o śledzeniu do magazynu trwałego, powinien być używany, taki jak wbudowana <xref:System.Activities.Tracking.EtwTrackingParticipant>lub uczestnik śledzenia niestandardowego, który rejestruje informacje w pliku.
 
  Aby uzyskać więcej informacji na temat śledzenia i konfigurowania śledzenia dla usługi przepływu pracy hostowanej w sieci Web, zobacz [śledzenie i śledzenie przepływów pracy](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [Konfigurowanie śledzenia dla przepływu pracy](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)oraz próbkowanie próbek [ &#91;WF&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) .
 
 ## <a name="use-wcf-tracing"></a>Korzystanie z funkcji śledzenia WCF
- Śledzenie WCF umożliwia śledzenie przepływów komunikatów do i z usługi przepływu pracy. Te informacje śledzenia są przydatne podczas rozwiązywania problemów z korelacją, szczególnie w przypadku korelacji opartej na zawartości. Aby włączyć śledzenie, określ żądane detektory śledzenia w sekcji `system.diagnostics` pliku `web.config`, jeśli usługa przepływu pracy jest hostowana w sieci Web lub plik `app.config`, jeśli usługa przepływu pracy jest samoobsługowa. Aby dołączyć zawartość komunikatów w pliku śledzenia, określ `true` dla `logEntireMessage` w elemencie `messageLogging` w sekcji `diagnostics` w `system.serviceModel`. W poniższym przykładzie informacje o śledzeniu, w tym zawartość wiadomości, są skonfigurowane tak, aby były zapisywane do pliku o nazwie `service.svclog`.
+ Śledzenie WCF umożliwia śledzenie przepływów komunikatów do i z usługi przepływu pracy. Te informacje śledzenia są przydatne podczas rozwiązywania problemów z korelacją, szczególnie w przypadku korelacji opartej na zawartości. Aby włączyć śledzenie, określ żądane detektory śledzenia w sekcji `system.diagnostics` pliku `web.config`, jeśli usługa przepływu pracy jest hostowana w sieci Web lub plik `app.config`, jeśli usługa przepływu pracy jest samodzielna. Aby dołączyć zawartość komunikatów w pliku śledzenia, określ `true` dla `logEntireMessage` w elemencie `messageLogging` w sekcji `diagnostics` w `system.serviceModel`. W poniższym przykładzie informacje o śledzeniu, w tym zawartość wiadomości, są skonfigurowane tak, aby były zapisywane do pliku o nazwie `service.svclog`.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -116,10 +114,10 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 </configuration>
 ```
 
- Aby wyświetlić informacje o śledzeniu zawarte w `service.svclog`, używany jest [Narzędzie przeglądarka śledzenia usługi (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) . Jest to szczególnie przydatne podczas rozwiązywania problemów z korelacją opartą na zawartości, ponieważ można wyświetlić zawartość komunikatu i zobaczyć dokładnie to, co jest przesyłane, oraz czy pasuje do <xref:System.ServiceModel.CorrelationQuery> dla korelacji opartej na zawartości. Aby uzyskać więcej informacji na temat śledzenia WCF, zobacz [narzędzie Podgląd śledzenia usług (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md), [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)i [Używanie śledzenia do rozwiązywania problemów z aplikacją](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
+ Aby wyświetlić informacje o śledzeniu zawarte w `service.svclog`, używany jest [Narzędzie przeglądarka śledzenia usługi (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) . Jest to szczególnie przydatne podczas rozwiązywania problemów z korelacją opartą na zawartości, ponieważ można wyświetlić zawartość komunikatu i zobaczyć dokładnie to, co jest przesyłane, oraz czy jest ona zgodna <xref:System.ServiceModel.CorrelationQuery> z korelacją opartą na zawartości. Aby uzyskać więcej informacji na temat śledzenia WCF, zobacz [narzędzie Podgląd śledzenia usług (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md), [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)i [Używanie śledzenia do rozwiązywania problemów z aplikacją](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 
 ## <a name="common-context-exchange-correlation-issues"></a>Typowe problemy z korelacją z wymianą kontekstu
- Niektóre typy korelacji wymagają, aby do poprawnego działania korelacji był używany konkretny typ powiązania. Przykłady obejmują korelację typu żądanie-odpowiedź, która wymaga dwukierunkowego powiązania, takiego jak <xref:System.ServiceModel.BasicHttpBinding> i korelacji z wymianą kontekstu, która wymaga powiązania opartego na kontekście, takiego jak <xref:System.ServiceModel.BasicHttpContextBinding>. Większość powiązań obsługuje operacje dwukierunkowe, dlatego nie jest to typowy problem związany z korelacją typu żądanie-odpowiedź, ale istnieje tylko kilku powiązań opartych na kontekście, w tym <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> i <xref:System.ServiceModel.NetTcpContextBinding>. Jeśli jedno z tych powiązań nie jest używane, początkowe wywołanie usługi przepływu pracy powiedzie się, ale kolejne wywołania zakończą się niepowodzeniem z następującym <xref:System.ServiceModel.FaultException>.
+ Niektóre typy korelacji wymagają, aby do poprawnego działania korelacji był używany konkretny typ powiązania. Przykłady obejmują korelację typu żądanie-odpowiedź, która wymaga dwukierunkowego powiązania, takiego jak <xref:System.ServiceModel.BasicHttpBinding>, oraz korelacji z wymianą kontekstu, która wymaga powiązania opartego na kontekście, takiego jak <xref:System.ServiceModel.BasicHttpContextBinding>. Większość powiązań obsługuje operacje dwukierunkowe, dlatego nie jest to typowy problem związany z korelacją typu żądanie-odpowiedź, ale istnieje tylko kilku powiązań opartych na kontekście, w tym <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding>i <xref:System.ServiceModel.NetTcpContextBinding>. Jeśli jedno z tych powiązań nie jest używane, początkowe wywołanie usługi przepływu pracy powiedzie się, ale kolejne wywołania zakończą się niepowodzeniem z następującym <xref:System.ServiceModel.FaultException>.
 
 ```output
 There is no context attached to the incoming message for the service
@@ -128,12 +126,12 @@ In order to communicate with this service check whether the incoming binding
 supports the context protocol and has a valid context initialized.
 ```
 
- Informacje kontekstowe, które są używane dla korelacji kontekstu mogą być zwracane przez <xref:System.ServiceModel.Activities.SendReply> do działania <xref:System.ServiceModel.Activities.Receive>, które inicjuje korelację kontekstu przy użyciu operacji dwukierunkowej, lub może być określone przez obiekt wywołujący, jeśli operacja jest jednokierunkowa. Jeśli kontekst nie jest wysyłany przez obiekt wywołujący lub zwracany przez usługę przepływu pracy, wówczas ta sama <xref:System.ServiceModel.FaultException> opisana wcześniej zostanie zwrócona po wywołaniu kolejnej operacji.
+ Informacje kontekstowe, które są używane dla korelacji kontekstu, mogą być zwracane przez <xref:System.ServiceModel.Activities.SendReply> do działania <xref:System.ServiceModel.Activities.Receive>, które inicjuje korelację kontekstu przy użyciu operacji dwukierunkowej, lub może być określony przez obiekt wywołujący, jeśli operacja jest jednokierunkowa. Jeśli kontekst nie jest wysyłany przez obiekt wywołujący lub zwracany przez usługę przepływu pracy, ten sam <xref:System.ServiceModel.FaultException> opisany wcześniej zostanie zwrócony po wywołaniu kolejnej operacji.
 
 ## <a name="common-request-reply-correlation-issues"></a>Typowe problemy z korelacją żądań i odpowiedzi
- Korelacja typu żądanie-odpowiedź jest używana z parą <xref:System.ServiceModel.Activities.Receive> @ no__t-1 @ no__t, aby zaimplementować operację dwukierunkową w usłudze przepływu pracy i z parą <xref:System.ServiceModel.Activities.Send> @ no__t-4 @ no__t-5, która wywołuje operację dwukierunkową w innej usłudze sieci Web. W przypadku wywoływania operacji dwukierunkowej w usłudze WCF usługa może być tradycyjnie zastrzeżonym, autonomiczną usługą WCF lub usługą przepływu pracy. Aby można było użyć korelacji typu żądanie-odpowiedź, należy użyć powiązania dwukierunkowego, takiego jak <xref:System.ServiceModel.BasicHttpBinding>, a operacje muszą być dwukierunkowe.
+ Korelacja typu żądanie-odpowiedź jest używana z parowaniem <xref:System.ServiceModel.Activities.Receive>/<xref:System.ServiceModel.Activities.SendReply> w celu zaimplementowania operacji dwukierunkowej w usłudze przepływu pracy i z <xref:System.ServiceModel.Activities.Send>/<xref:System.ServiceModel.Activities.ReceiveReply> para, która wywołuje operację dwukierunkową w innej usłudze sieci Web. W przypadku wywoływania operacji dwukierunkowej w usłudze WCF usługa może być tradycyjnie zastrzeżonym, autonomiczną usługą WCF lub usługą przepływu pracy. Aby można było użyć korelacji typu żądanie-odpowiedź, należy użyć powiązania dwukierunkowego, takiego jak <xref:System.ServiceModel.BasicHttpBinding>, i operacje muszą być dwukierunkowe.
 
- Jeśli usługa przepływu pracy ma równoległe operacje dwukierunkowe lub nakładające się <xref:System.ServiceModel.Activities.Receive> @ no__t-1 @ no__t-2 lub <xref:System.ServiceModel.Activities.Send> @ no__t-4 @ no__t-5, to niejawne zarządzanie uchwytami korelacji zapewniane przez <xref:System.ServiceModel.Activities.WorkflowServiceHost> może być niewystarczające, szczególnie w przypadku dużego obciążenia scenariusze i komunikaty mogą nie być poprawnie kierowane. Aby zapobiec wystąpieniu tego problemu, zaleca się, aby zawsze jawnie określić <xref:System.ServiceModel.Activities.CorrelationHandle> podczas korzystania z korelacji typu żądanie-odpowiedź. W przypadku korzystania z szablonów **SendAndReceiveReply** i **ReceiveAndSendReply** z sekcji komunikaty w **przyborniku** w projektancie przepływów pracy, domyślnie <xref:System.ServiceModel.Activities.CorrelationHandle> jest jawnie skonfigurowana. Podczas kompilowania przepływu pracy przy użyciu kodu <xref:System.ServiceModel.Activities.CorrelationHandle> jest określony w <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> pierwszego działania w parze. W poniższym przykładzie działanie <xref:System.ServiceModel.Activities.Receive> jest skonfigurowane z jawnym <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> określoną w <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>.
+ Jeśli usługa przepływu pracy ma równoległe operacje dwukierunkowe lub nakładające się <xref:System.ServiceModel.Activities.Receive>/<xref:System.ServiceModel.Activities.SendReply> lub <xref:System.ServiceModel.Activities.Send>/<xref:System.ServiceModel.Activities.ReceiveReply>, to niejawne zarządzanie uchwytami korelacji zapewniane przez <xref:System.ServiceModel.Activities.WorkflowServiceHost> może być niewystarczające, szczególnie w scenariuszach o dużej obciążeniu, a komunikaty mogą nie być poprawnie kierowane. Aby zapobiec wystąpieniu tego problemu, zalecamy, aby zawsze jawnie określić <xref:System.ServiceModel.Activities.CorrelationHandle> podczas korzystania z korelacji z odpowiedzią na żądanie. W przypadku korzystania z szablonów **SendAndReceiveReply** i **ReceiveAndSendReply** z sekcji Obsługa komunikatów w **przyborniku** w Projektancie przepływów pracy, <xref:System.ServiceModel.Activities.CorrelationHandle> jest jawnie konfigurowana domyślnie. Podczas kompilowania przepływu pracy przy użyciu kodu <xref:System.ServiceModel.Activities.CorrelationHandle> jest określony w <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> pierwszego działania w parze. W poniższym przykładzie działanie <xref:System.ServiceModel.Activities.Receive> jest skonfigurowane z jawnym <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> określonym w <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>.
 
 ```csharp
 Variable<CorrelationHandle> RRHandle = new Variable<CorrelationHandle>();
@@ -161,7 +159,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.
 ```
 
- Nie jest dozwolona wartość trwałości między parą <xref:System.ServiceModel.Activities.Receive> @ no__t-1 @ no__t-2 lub <xref:System.ServiceModel.Activities.Send> @ no__t-4 @ no__t-5. Tworzona jest strefa nie utrwalania, która obowiązuje do momentu zakończenia obu działań. Jeśli działanie, takie jak działanie opóźnienia, znajduje się w tej strefie no-utrwalania i powoduje, że przepływ pracy staje się bezczynna, przepływ pracy nie będzie trwał nawet wtedy, gdy host jest skonfigurowany do utrwalania przepływów pracy, gdy staną się bezczynne. Jeśli działanie, takie jak działanie utrwalania, próbuje jawnie pozostać w strefie no-utrwalania, zostanie zgłoszony wyjątek krytyczny, przepływ pracy zostanie przerwany i zostanie zwrócony <xref:System.ServiceModel.FaultException> do obiektu wywołującego. Komunikat o wyjątku krytycznym to "System. InvalidOperationException: działania utrwalania nie mogą być zawarte w blokach trwałości". Ten wyjątek nie jest zwracany do obiektu wywołującego, ale można go zaobserwować, jeśli śledzenie jest włączone. Komunikat dla <xref:System.ServiceModel.FaultException> zwrócony do obiektu wywołującego to "operacja nie może zostać wykonana, ponieważ obiekt WorkflowInstance" 5836145b-7da2-49d0-a052-a49162adeab6 "został ukończony.
+ Nie jest dozwolone utrzymywanie między <xref:System.ServiceModel.Activities.Receive>/<xref:System.ServiceModel.Activities.SendReply> para lub <xref:System.ServiceModel.Activities.Send>/<xref:System.ServiceModel.Activities.ReceiveReply>. Tworzona jest strefa nie utrwalania, która obowiązuje do momentu zakończenia obu działań. Jeśli działanie, takie jak działanie opóźnienia, znajduje się w tej strefie no-utrwalania i powoduje, że przepływ pracy staje się bezczynna, przepływ pracy nie będzie trwał nawet wtedy, gdy host jest skonfigurowany do utrwalania przepływów pracy, gdy staną się bezczynne. Jeśli działanie, takie jak działanie utrwalania, próbuje jawnie pozostać w strefie no-utrwalania, zostanie zgłoszony wyjątek krytyczny, przepływ pracy zostanie przerwany, a <xref:System.ServiceModel.FaultException> jest zwracany do obiektu wywołującego. Komunikat o wyjątku krytycznym to "System. InvalidOperationException: działania utrwalania nie mogą być zawarte w blokach trwałości". Ten wyjątek nie jest zwracany do obiektu wywołującego, ale można go zaobserwować, jeśli śledzenie jest włączone. Komunikat dla <xref:System.ServiceModel.FaultException> zwróconego do obiektu wywołującego to "nie można wykonać operacji, ponieważ obiekt WorkflowInstance" 5836145b-7da2-49d0-a052-a49162adeab6 "został ukończony.
 
  Aby uzyskać więcej informacji na temat korelacji z żądaniem odpowiedzi, zobacz [żądanie-odpowiedź](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).
 
@@ -202,13 +200,13 @@ public class AddItemMessage
 }
 ```
 
- Ten kontrakt komunikatu jest używany przez działanie <xref:System.ServiceModel.Activities.Receive> w przepływie pracy. @No__t-0 w nagłówku wiadomości jest używany do skorelowania komunikatu z właściwym wystąpieniem. Jeśli zapytanie XPath, które pobiera `CartId` jest tworzone przy użyciu okna dialogowego korelacji w Projektancie przepływów pracy, generowane jest następujące nieprawidłowe zapytanie XPath.
+ Ten kontrakt komunikatu jest używany przez działanie <xref:System.ServiceModel.Activities.Receive> w przepływie pracy. `CartId` w nagłówku wiadomości służy do skorelowania komunikatu z właściwym wystąpieniem. Jeśli zapytanie XPath, które pobiera `CartId` jest tworzone przy użyciu okna dialogowego korelacji w Projektancie przepływu pracy, generowane jest następujące nieprawidłowe zapytanie XPath.
 
 ```
 sm:body()/xg0:AddItemMessage/xg0:CartId
 ```
 
- To zapytanie XPath byłoby poprawne, jeśli działanie <xref:System.ServiceModel.Activities.Receive> używało parametrów dla danych, ale ponieważ używa ona kontraktu komunikatu, który jest nieprawidłowy. Następujące zapytanie XPath jest poprawnym zapytaniem XPath, aby pobrać `CartId` z nagłówka.
+ To zapytanie XPath byłoby poprawne, jeśli działanie <xref:System.ServiceModel.Activities.Receive> używało parametrów dla danych, ale ponieważ używa ona kontraktu komunikatu, jest on nieprawidłowy. Następujące zapytanie XPath jest poprawnym zapytaniem XPath, aby pobrać `CartId` z nagłówka.
 
 ```
 sm:header()/tempuri:CartId
@@ -230,7 +228,7 @@ Można to potwierdzić, badając treść wiadomości.
 </s:Envelope>
 ```
 
-W poniższym przykładzie przedstawiono działanie <xref:System.ServiceModel.Activities.Receive> skonfigurowane dla operacji `AddItem`, która używa poprzedniego kontraktu komunikatu do odbierania danych. Zapytanie XPath zostało poprawnie skonfigurowane.
+Poniższy przykład przedstawia działanie <xref:System.ServiceModel.Activities.Receive> skonfigurowane dla operacji `AddItem`, która używa poprzedniego kontraktu komunikatu do odbierania danych. Zapytanie XPath zostało poprawnie skonfigurowane.
 
 ```xaml
 <Receive CorrelatesWith="[CCHandle] OperationName="AddItem" ServiceContractName="p:IService">

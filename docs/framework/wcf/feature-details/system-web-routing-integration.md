@@ -2,20 +2,20 @@
 title: Integracja elementu System.Web.Routing
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: 3d5c3d7586189e0939fd52bc2b5feac51ae00613
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85137689a31573dc10e8f7384007830ab40d31df
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933890"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976036"
 ---
 # <a name="systemwebrouting-integration"></a>Integracja elementu System.Web.Routing
-W przypadku hostowania usługi Windows Communication Foundation (WCF) w Internet Information Service (IIS) możesz umieścić plik .svc w katalogu wirtualnym. Ten plik .svc określa fabryki hostów usług do użycia oraz klasy, która implementuje usługę. W przypadku wysyłania żądań do usługi można określić plików .svc w identyfikatorze URI, na przykład: `http://contoso.com/EmployeeServce.svc`. Programistom pisanie usług REST tego rodzaju identyfikatora URI nie jest optymalne. Identyfikatory URI dla usługi REST Określ określonego zasobu i zwykle nie mają żadnych rozszerzeń. <xref:System.Web.Routing> Funkcji integracji umożliwia hostowanie usługi WCF REST reagującego na identyfikatory URI bez rozszerzenia. Aby uzyskać więcej informacji o routingu, zobacz [routingu ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660).  
+W przypadku hostowania usługi Windows Communication Foundation (WCF) w usłudze Internet Information Service (IIS) Umieść plik. svc w katalogu wirtualnym. Ten plik SVC określa fabrykę hosta usługi, która ma być używana, a także klasy implementującej usługę. Podczas wykonywania żądań do usługi należy określić plik SVC w identyfikatorze URI, na przykład: `http://contoso.com/EmployeeServce.svc`. Dla programistów piszące usługi REST ten typ identyfikatora URI nie jest optymalny. Identyfikatory URI usług REST określają konkretny zasób i zwykle nie mają żadnych rozszerzeń. Funkcja integracji <xref:System.Web.Routing> umożliwia Hostowanie usługi REST WCF, która reaguje na identyfikatory URI bez rozszerzenia. Aby uzyskać więcej informacji na temat routingu, zobacz [ASP.NET routing](https://go.microsoft.com/fwlink/?LinkId=184660).  
   
-## <a name="using-systemwebrouting-integration"></a>Za pomocą integracja elementu System.Web.Routing  
- Aby użyć <xref:System.Web.Routing> używać funkcji integracji <xref:System.ServiceModel.Activation.ServiceRoute> klasy, aby utworzyć jeden lub więcej tras i dodać je do <xref:System.Web.Routing.RouteTable> w pliku Global.asax. Te trasy Określ względne identyfikatory URI, które odpowiada usługa. W przykładzie poniżej pokazano, jak to zrobić.  
+## <a name="using-systemwebrouting-integration"></a>Korzystanie z integracji system. Web. Routing  
+ Aby użyć funkcji integracji <xref:System.Web.Routing>, należy użyć klasy <xref:System.ServiceModel.Activation.ServiceRoute> do utworzenia jednej lub większej liczby tras i dodania ich do <xref:System.Web.Routing.RouteTable> w pliku Global. asax. Te trasy określają względne identyfikatory URI, z którymi usługa reaguje. W przykładzie poniżej pokazano, jak to zrobić.  
   
-```  
+```aspx-csharp  
 <%@ Application Language="C#" %>  
 <%@ Import Namespace="System.Web.Routing" %>  
 <%@ Import Namespace="System.ServiceModel.Activation" %>  
@@ -34,9 +34,9 @@ W przypadku hostowania usługi Windows Communication Foundation (WCF) w Internet
 </script>  
 ```  
   
- Kierowane wszystkie żądania z względny identyfikator URI rozpoczynający się ze swoimi klientami, aby `Service` usługi.  
+ To kieruje wszystkie żądania z względnym identyfikatorem URI, który rozpoczyna się od klientów do usługi `Service`.  
   
- W pliku Web.config musisz dodać `System.Web.Routing.UrlRoutingModule` moduł, ustawia `runAllManagedModulesForAllRequests` atrybutu `true`i Dodaj `UrlRoutingHandler` program obsługi `<system.webServer>` elementu, jak pokazano w poniższym przykładzie.  
+ W pliku Web. config należy dodać moduł `System.Web.Routing.UrlRoutingModule`, ustawić atrybut `runAllManagedModulesForAllRequests` na `true`i dodać obsługę `UrlRoutingHandler` do elementu `<system.webServer>`, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <system.webServer>  
@@ -49,7 +49,7 @@ W przypadku hostowania usługi Windows Communication Foundation (WCF) w Internet
     </system.webServer>  
 ```  
   
- Spowoduje to załadowanie modułu i obsługi wymagane do routingu. Aby uzyskać więcej informacji, zobacz [Routing](../../../../docs/framework/wcf/feature-details/routing.md). Należy także ustawić `aspNetCompatibilityEnabled` atrybutu `true` w `<serviceHostingEnvironment>` elementu, jak pokazano w poniższym przykładzie.  
+ Spowoduje to załadowanie modułu i programu obsługi, który jest wymagany do routingu. Aby uzyskać więcej informacji, zobacz [Routing](../../../../docs/framework/wcf/feature-details/routing.md). Należy również ustawić atrybut `aspNetCompatibilityEnabled`, aby `true` w elemencie `<serviceHostingEnvironment>`, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <system.serviceModel>  
@@ -58,9 +58,9 @@ W przypadku hostowania usługi Windows Communication Foundation (WCF) w Internet
     </system.serviceModel>  
 ```  
   
- Klasa, która implementuje usługę należy włączyć wymagania dotyczące zgodności platformy ASP.NET, jak pokazano w poniższym przykładzie.  
+ Klasa implementująca usługę musi włączać wymagania dotyczące zgodności ASP.NET, jak pokazano w poniższym przykładzie.  
   
-```  
+```csharp 
 [ServiceContract]  
 [AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Allowed)]  
     public class Service  
@@ -72,4 +72,4 @@ W przypadku hostowania usługi Windows Communication Foundation (WCF) w Internet
 ## <a name="see-also"></a>Zobacz także
 
 - [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [ASP.NET Routing](https://go.microsoft.com/fwlink/?LinkId=184660)
+- [Routing ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660)

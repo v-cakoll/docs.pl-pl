@@ -1,20 +1,20 @@
 ---
 title: Sekwencje
 description: Dowiedz się, F# jak używać sekwencji, gdy masz dużą uporządkowaną kolekcję danych, ale niekoniecznie używać wszystkich elementów.
-ms.date: 02/19/2019
-ms.openlocfilehash: 76aeeb8b89ed8146ee1b7f909af6bf0764fcc55d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: 34e03f1cead0a9f678f637afcb6c8397ef7572bc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424978"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971446"
 ---
 # <a name="sequences"></a>Sekwencje
 
 > [!NOTE]
 > Linki do odwołań do interfejsów API w tym artykule przeprowadzą Cię do subskrypcji MSDN.  Dokumentacja interfejsu API docs.microsoft.com nie została ukończona.
 
-*Sekwencja* jest logiczną serią wszystkich elementów jednego typu. Sekwencje są szczególnie przydatne w przypadku dużej, uporządkowanej kolekcji danych, ale niekoniecznie używać wszystkich elementów. Poszczególne elementy sekwencji są obliczane tylko w razie potrzeby, dlatego sekwencja może zapewnić lepszą wydajność niż lista w sytuacjach, w których nie wszystkie elementy są używane. Sekwencje są reprezentowane przez typ `seq<'T>`, który jest aliasem dla `System.Collections.Generic.IEnumerable`. W związku z tym każdy typ .NET Framework implementujący `System.IEnumerable` może być używany jako sekwencja. [Moduł SEQ](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) zapewnia obsługę operacji dla operacji związanych z sekwencjami.
+*Sekwencja* jest logiczną serią wszystkich elementów jednego typu. Sekwencje są szczególnie przydatne w przypadku dużej, uporządkowanej kolekcji danych, ale niekoniecznie używać wszystkich elementów. Poszczególne elementy sekwencji są obliczane tylko w razie potrzeby, dlatego sekwencja może zapewnić lepszą wydajność niż lista w sytuacjach, w których nie wszystkie elementy są używane. Sekwencje są reprezentowane przez typ `seq<'T>`, który jest aliasem dla <xref:System.Collections.Generic.IEnumerable%601>. W związku z tym każdy typ .NET, który implementuje interfejs <xref:System.Collections.Generic.IEnumerable%601>, może być używany jako sekwencja. [Moduł SEQ](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) zapewnia obsługę operacji dla operacji związanych z sekwencjami.
 
 ## <a name="sequence-expressions"></a>Wyrażenia sekwencji
 
@@ -22,17 +22,17 @@ ms.locfileid: "73424978"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Wyrażenia sekwencji składają się z F# wyrażeń, które tworzą wartości sekwencji. Mogą użyć słowa kluczowego `yield`, aby utworzyć wartości, które staną się częścią sekwencji.
-
-Poniżej znajduje się przykład.
+Wyrażenia sekwencji składają się z F# wyrażeń, które tworzą wartości sekwencji. Można również programowo generować wartości:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1503.fs)]
 
-Możesz użyć operatora `->` zamiast `yield`, w takim przypadku można pominąć słowo kluczowe `do`, jak pokazano w poniższym przykładzie.
+Poprzedni przykład używa operatora `->`, który umożliwia określenie wyrażenia, którego wartość stanie się częścią sekwencji. `->` można używać tylko wtedy, gdy każda część kodu, który następuje po zwraca wartość.
+
+Alternatywnie możesz określić słowo kluczowe `do` z opcjonalnymi `yield`, które są następujące:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1504.fs)]
 
-Poniższy kod generuje listę par współrzędnych wraz z indeksem do tablicy, która reprezentuje siatkę.
+Poniższy kod generuje listę par współrzędnych wraz z indeksem do tablicy, która reprezentuje siatkę. Należy zauważyć, że pierwsze wyrażenie `for` wymaga określenia `do`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1505.fs)]
 
@@ -40,9 +40,34 @@ Wyrażenie `if` użyte w sekwencji jest filtrem. Na przykład, aby wygenerować 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1506.fs)]
 
-W przypadku używania `yield` lub `->` w iteracji należy oczekiwać, że każdy z iteracji będzie generował pojedynczy element sekwencji. Jeśli każda iteracja tworzy sekwencję elementów, użyj `yield!`. W takim przypadku elementy generowane na każdej iteracji są łączone w celu utworzenia końcowej sekwencji.
+Jak wspomniano wcześniej, w tym miejscu `do` jest wymagane, ponieważ nie ma `else` gałęzi, która przechodzi z `if`em. Jeśli spróbujesz użyć `->`, zostanie wyświetlony komunikat o błędzie informujący, że nie wszystkie gałęzie zwracają wartość.
 
-W wyrażeniu sekwencji można łączyć wiele wyrażeń. Elementy wygenerowane przez każde wyrażenie są łączone ze sobą. Aby zapoznać się z przykładem, zobacz sekcję "Przykłady" w tym temacie.
+## <a name="the-yield-keyword"></a>Słowo kluczowe `yield!`
+
+Czasami może być konieczne dołączenie sekwencji elementów do innej sekwencji. Aby dołączyć sekwencję w innej sekwencji, należy użyć słowa kluczowego `yield!`:
+
+```fsharp
+// Repeats '1 2 3 4 5' ten times
+seq {
+    for _ in 1..10 do
+        yield! seq { 1; 2; 3; 4; 5}
+}
+```
+
+Innym sposobem na zastanawianie się `yield!` jest to, że spłaszcza sekwencję wewnętrzną, a następnie dołącza ją w sekwencji zawierającej.
+
+Gdy `yield!` jest używany w wyrażeniu, wszystkie pozostałe pojedyncze wartości muszą używać słowa kluczowego `yield`:
+
+```fsharp
+// Combine repeated values with their values
+seq {
+    for x in 1..10 do
+        yield x
+        yield! seq { for i in 1..x -> i}
+}
+```
+
+Określenie tylko `x` w poprzednim przykładzie spowoduje wygenerowanie żadnych wartości przez sekwencję.
 
 ## <a name="examples"></a>Przykłady
 
@@ -50,7 +75,7 @@ W pierwszym przykładzie używane jest wyrażenie sekwencji zawierające iteracj
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1507.fs)]
 
-Poniższy kod używa `yield`, aby utworzyć tabelę mnożenia, która składa się z krotek trzech elementów, z których każdy składa się z dwóch czynników i produktu.
+Poniższy przykład tworzy tabelę mnożenia, która składa się z krotek trzech elementów, z których każdy składa się z dwóch czynników i produktu:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1508.fs)]
 
@@ -62,7 +87,7 @@ Poniższy przykład ilustruje użycie `yield!` do łączenia poszczególnych sek
 
 Sekwencje obsługują wiele takich samych funkcji, jak [listy](lists.md). Sekwencje obsługują również operacje, takie jak grupowanie i zliczanie przy użyciu funkcji generujących klucze. Sekwencje obsługują również bardziej różnorodne funkcje wyodrębniania podsekwencji.
 
-Wiele typów danych, takich jak listy, tablice, zestawy i mapy, to niejawne sekwencje, ponieważ są wyliczalnymi kolekcjami. Funkcja, która przyjmuje sekwencję jako argument, działa z dowolnym wspólnym F# typem danych, oprócz dowolnego .NET Framework typ danych implementującego `System.Collections.Generic.IEnumerable<'T>`. W przeciwieństwie do funkcji, która przyjmuje listę jako argument, który może przyjmować tylko listy. Typ `seq<'T>` jest skrótem typu dla `IEnumerable<'T>`. Oznacza to, że każdy typ implementujący ogólne `System.Collections.Generic.IEnumerable<'T>`, który obejmuje tablice, listy, zestawy i mapy w F#, a także większość .NET Framework typy kolekcji, jest zgodny z typem `seq` i można go użyć wszędzie tam, gdzie jest oczekiwana sekwencja.
+Wiele typów danych, takich jak listy, tablice, zestawy i mapy, to niejawne sekwencje, ponieważ są wyliczalnymi kolekcjami. Funkcja, która przyjmuje sekwencję jako argument, działa z dowolnym wspólnym F# typem danych, oprócz dowolnego typu danych platformy .NET, który implementuje `System.Collections.Generic.IEnumerable<'T>`. W przeciwieństwie do funkcji, która przyjmuje listę jako argument, który może przyjmować tylko listy. Typ `seq<'T>` jest skrótem typu dla `IEnumerable<'T>`. Oznacza to, że każdy typ implementujący ogólne `System.Collections.Generic.IEnumerable<'T>`, który obejmuje tablice, listy, zestawy i mapy w F#, a także większość typów kolekcji .NET, jest zgodny z typem `seq` i może być używany wszędzie tam, gdzie jest oczekiwana sekwencja.
 
 ## <a name="module-functions"></a>Funkcje modułu
 

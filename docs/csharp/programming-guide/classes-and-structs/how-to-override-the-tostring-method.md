@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Zastępowanie metody ToString — C# Przewodnik programowania'
+title: Jak zastąpić metodę ToString — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 9dd567e537768ceb8b9f61ce58dccd443db38ec7
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3d5b63609ea61764d4042d534c40d8032fb82841
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419341"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970472"
 ---
-# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Porady: przesłanianie metody ToString (Przewodnik programowania w języku C#)
+# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Jak zastąpić metodę ToString (C# Przewodnik programowania)
 
 Każda klasa lub struktura w C# niejawnie dziedziczy klasy <xref:System.Object>. W związku z tym każdy C# obiekt w pobiera metodę <xref:System.Object.ToString%2A>, która zwraca ciąg reprezentujący ten obiekt. Na przykład wszystkie zmienne typu `int` mają metodę `ToString`, która umożliwia im zwracanie zawartości jako ciągu:  
   

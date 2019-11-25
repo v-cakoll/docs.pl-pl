@@ -2,12 +2,12 @@
 title: Zagadnienia dotyczące zabezpieczeń (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: d9adf4ed9e340ff589117f160e370c7d1595a207
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039870"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968414"
 ---
 # <a name="security-considerations-entity-framework"></a>Zagadnienia dotyczące zabezpieczeń (Entity Framework)
 W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywania, wdrażania i uruchamiania aplikacji Entity Framework. Należy również postępować zgodnie z zaleceniami dotyczącymi tworzenia bezpiecznych aplikacji .NET Framework. Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń](../security-overview.md).  
@@ -119,11 +119,11 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
  Unikaj zwracania typów <xref:System.Linq.IQueryable%601> z metod, które są dostępne dla potencjalnie niezaufanych wywołujących, z następujących powodów:  
   
 - Konsument zapytania, który ujawnia typ <xref:System.Linq.IQueryable%601>, może wywoływać metody w wyniku, który uwidacznia bezpieczne dane lub zwiększa rozmiar zestawu wyników. Rozważmy na przykład następującą sygnaturę metody:  
-  
-    ```csharp  
-    public IQueryable<Customer> GetCustomer(int customerId)  
-    ```  
-  
+
+    ```csharp
+    public IQueryable<Customer> GetCustomer(int customerId)
+    ```
+
     Odbiorca tego zapytania może wywoływać `.Include("Orders")` na zwróconym `IQueryable<Customer>`, aby pobrać dane, które nie zostały ujawnione. Można to uniknąć przez zmianę zwracanego typu metody na <xref:System.Collections.Generic.IEnumerable%601> i wywołanie metody (takiej jak `.ToList()`), która materializuje wyniki.  
   
 - Ponieważ zapytania <xref:System.Linq.IQueryable%601> są wykonywane, gdy wyniki są powtarzane, odbiorca zapytania, który ujawnia typ <xref:System.Linq.IQueryable%601> może przechwytywać wyjątki, które są generowane. Wyjątki mogą zawierać informacje, które nie są przeznaczone dla konsumenta.  

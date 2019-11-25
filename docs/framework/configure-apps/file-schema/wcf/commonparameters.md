@@ -2,23 +2,23 @@
 title: <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: 6f187e9cdcabc358ee69d65e392bc59aa38e52ca
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: ab21be7b5e2738ac6a7c9bea676d8180c69d1afd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398178"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968564"
 ---
-# <a name="commonparameters"></a>\<Parametry >
+# <a name="commonparameters"></a>\<parametry >
 Reprezentuje kolekcję parametrów, które są globalnie używane w wielu usługach. Ta kolekcja zazwyczaj obejmuje parametry połączenia z bazą danych, które mogą być współużytkowane przez trwałe usługi.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowań**](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceBehaviors**](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowania**](behavior-of-servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> workflowRuntime**](workflowruntime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Parametry >**  
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[**zachowania\<** ](behaviors.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**serviceBehaviors**](servicebehaviors.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<zachowanie**](behavior-of-servicebehaviors.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<workflowRuntime**](workflowruntime.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<parametry >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,27 +41,27 @@ Reprezentuje kolekcję parametrów, które są globalnie używane w wielu usług
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<add>](add-of-commonparameters.md)|Dodaje parę nazwa-wartość wspólnych parametrów używanych przez usługi do kolekcji.|  
+|[\<Dodaj >](add-of-commonparameters.md)|Dodaje parę nazwa-wartość wspólnych parametrów używanych przez usługi do kolekcji.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<workflowRuntime>](workflowruntime.md)|Określa ustawienia dla wystąpienia programu <xref:System.Workflow.Runtime.WorkflowRuntime> do hostowania usług Windows Communication Foundation opartych na przepływie pracy (WCF).|  
+|[\<> workflowRuntime](workflowruntime.md)|Określa ustawienia dla wystąpienia <xref:System.Workflow.Runtime.WorkflowRuntime> do hostowania usług Windows Communication Foundation opartych na przepływie pracy (WCF).|  
   
 ## <a name="remarks"></a>Uwagi  
- Element definiuje wszystkie parametry, które są używane globalnie w wielu usługach, na przykład `ConnectionString` podczas korzystania z <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>. `<commonParameters>`  
+ Element `<commonParameters>` definiuje wszystkie parametry, które są używane globalnie w wielu usługach, na przykład `ConnectionString` przy użyciu <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
   
 > [!NOTE]
-> Usługa śledzenia SQL nie będzie w sposób ciągły używać wartości, `ConnectionString` jeśli została określona `<commonParameters>` w sekcji. Niektóre jego operacje, takie jak pobieranie właściwości `StateMachineWorkflowInstance.StateHistory` , mogą zakończyć się niepowodzeniem. Aby to obejść, określ `ConnectionString` atrybut w sekcji konfiguracji dla dostawcy śledzenia, jak pokazano w poniższym przykładzie.  
+> Usługa śledzenia SQL nie używa spójnej wartości `ConnectionString`, jeśli została określona w sekcji `<commonParameters>`. Niektóre jego operacje, takie jak pobranie właściwości `StateMachineWorkflowInstance.StateHistory`, mogą zakończyć się niepowodzeniem. Aby to obejść, określ atrybut `ConnectionString` w sekcji konfiguracji dla dostawcy śledzenia, jak pokazano w poniższym przykładzie.  
+
+```xml  
+<add
+type="System.Workflow.Runtime.Tracking.SqlTrackingService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" 
+ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />
+```  
   
- `<add`  
-  
- `type="System.Workflow.Runtime.Tracking.SqlTrackingService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"`  
-  
- `ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />`  
-  
- W przypadku usług, które zatwierdzają partie pracy do magazynów <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>trwałości, takich jak <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> i, można umożliwić im ponawianie transakcji `EnableRetries` przy użyciu parametru, jak pokazano w następującym przykładzie:  
+ W przypadku usług, które zatwierdzają partie pracy do magazynów trwałości, takich jak <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> i <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, można umożliwić im ponawianie transakcji przy użyciu parametru `EnableRetries`, jak pokazano w następującym przykładzie:  
   
 ```xml  
 <workflowRuntime name="SampleApplication"
@@ -80,19 +80,19 @@ Reprezentuje kolekcję parametrów, które są globalnie używane w wielu usług
 </workflowRuntime>
 ```  
   
- Należy zauważyć, `EnableRetries` że parametr można ustawić na poziomie globalnym (jak pokazano w sekcji *Parametry* ) lub dla poszczególnych usług, które obsługują `EnableRetries` (jak pokazano w sekcji *usługi* ).  
+ Należy zauważyć, że parametr `EnableRetries` można ustawić na poziomie globalnym (jak pokazano w sekcji *Parametry* ) lub dla poszczególnych usług, które obsługują `EnableRetries` (jak pokazano w sekcji *usługi* ).  
   
- Poniższy przykładowy kod pokazuje, jak zmienić wspólne parametry programowo.  
+ Poniższy przykładowy kod pokazuje, jak zmienić wspólne parametry programowo:
   
-```  
-Configuration config=WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");  
-WorkflowRuntimeSection wfruntime=config.GetSection("WorkflowRuntime") as WorkflowRuntimeSection;  
-NameValueConfigurationCollection commonParameters=wfruntime.CommonParameters;  
+```csharp  
+Configuration config = WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");
+var wfruntime = config.GetSection("WorkflowRuntime") as WorkflowRuntimeSection;  
+NameValueConfigurationCollection commonParameters = wfruntime.CommonParameters;
 commonParameters["ConnectionString"].Value="another connection string";  
 config.Save();  
 ```  
   
- Aby uzyskać więcej informacji o korzystaniu z pliku konfiguracji w celu sterowania zachowaniem <xref:System.Workflow.Runtime.WorkflowRuntime> obiektu Windows Workflow Foundation aplikacji hosta, zobacz [pliki konfiguracji przepływu pracy](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
+ Aby uzyskać więcej informacji o korzystaniu z pliku konfiguracji w celu sterowania zachowaniem obiektu <xref:System.Workflow.Runtime.WorkflowRuntime> aplikacji hosta Windows Workflow Foundation, zobacz [pliki konfiguracji przepływu pracy](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
   
 ## <a name="example"></a>Przykład  
   
@@ -113,4 +113,4 @@ config.Save();
 - <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>
 - <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>
 - [Pliki konfiguracji przepływu pracy](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
-- [\<add>](add-of-commonparameters.md)
+- [\<Dodaj >](add-of-commonparameters.md)

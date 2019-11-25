@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: fd5960f9820e90d49afe3ba748136f1a2d3ce690
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 33195ef77e2f51e52cd9ed69a11b12bed8d9ead1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774110"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969615"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Rzutowanie i konwersje typówC# (Przewodnik programowania)
 
@@ -34,7 +34,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Konwersje zdefiniowane przez użytkownika**: konwersje zdefiniowane przez użytkownika są wykonywane przez specjalne metody, które można zdefiniować, aby włączyć jawne i niejawne konwersje między typami niestandardowymi, które nie mają relacji klasy podstawowej — pochodnej. Aby uzyskać więcej informacji, zobacz [Operatory konwersji zdefiniowane przez użytkownika](../../language-reference/operators/user-defined-conversion-operators.md).  
   
-- **Konwersje z klasami pomocniczymi**: aby konwertować między niezgodnymi typami, takimi jak liczby całkowite i obiekty <xref:System.DateTime?displayProperty=nameWithType>, lub ciągi szesnastkowe i tablice bajtowe, można użyć klasy <xref:System.BitConverter?displayProperty=nameWithType>, klasy <xref:System.Convert?displayProperty=nameWithType> oraz metod `Parse` wbudowanych typy liczbowe, takie jak <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [jak: konwertowanie tablicy bajtów na int](./how-to-convert-a-byte-array-to-an-int.md), [jak: konwertowanie ciągu na liczbę](./how-to-convert-a-string-to-a-number.md)i [instrukcje: konwertowanie między ciągami szesnastkowymi i typami liczbowymi](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
+- **Konwersje z klasami pomocniczymi**: aby konwertować między niezgodnymi typami, takimi jak liczby całkowite i obiekty <xref:System.DateTime?displayProperty=nameWithType>, lub ciągi szesnastkowe i tablice bajtowe, można użyć klasy <xref:System.BitConverter?displayProperty=nameWithType>, klasy <xref:System.Convert?displayProperty=nameWithType> oraz metod `Parse` wbudowanych typów liczbowych, takich jak <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [jak: konwertowanie tablicy bajtów na int](./how-to-convert-a-byte-array-to-an-int.md), [jak: konwertowanie ciągu na liczbę](./how-to-convert-a-string-to-a-number.md)i [instrukcje: konwertowanie między ciągami szesnastkowymi i typami liczbowymi](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
 ## <a name="implicit-conversions"></a>Konwersje niejawne
 
@@ -83,7 +83,7 @@ Giraffe g2 = (Giraffe) a;
   
  [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
- C#udostępnia operator [is](../../language-reference/operators/type-testing-and-cast.md#is-operator) , aby umożliwić przetestowanie pod kątem zgodności przed rzeczywistym przeprowadzeniem rzutowania. Aby uzyskać więcej informacji, zobacz [jak: bezpieczne rzutowanie przy użyciu dopasowania wzorca i operatory AS i is](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
+ C#udostępnia operator [is](../../language-reference/operators/type-testing-and-cast.md#is-operator) , aby umożliwić przetestowanie pod kątem zgodności przed rzeczywistym przeprowadzeniem rzutowania. Aby uzyskać więcej informacji, zobacz [jak bezpiecznie rzutować przy użyciu dopasowania wzorca i operatorów AS i is](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 

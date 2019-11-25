@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określ poświadczenia klienta dla żądania usługi danych (Usługi danych programu WCF)'
+title: 'Instrukcje: Określanie poświadczeń klienta dla żądania usługi danych (Usługi danych programu WCF)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: 4177b7f5138bd3e3ddd63e4a0d8d4bcb2be01fbb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bb25319e3a4b1f8c7a3586c546ce1d589b48e438
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790321"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975152"
 ---
-# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Instrukcje: Określ poświadczenia klienta dla żądania usługi danych (Usługi danych programu WCF)
-Domyślnie Biblioteka klienta nie dostarcza poświadczeń podczas wysyłania żądania do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi. Można jednak określić, że poświadczenia mają być wysyłane w celu uwierzytelniania żądań do usługi danych przez dostarczenie <xref:System.Net.NetworkCredential> <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> właściwości <xref:System.Data.Services.Client.DataServiceContext>. Aby uzyskać więcej informacji, zobacz [zabezpieczanie usługi danych programu WCF](securing-wcf-data-services.md). W przykładzie w tym temacie pokazano, jak jawnie podać poświadczenia, które są używane przez [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] klienta podczas żądania danych z usługi danych.  
+# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Instrukcje: Określanie poświadczeń klienta dla żądania usługi danych (Usługi danych programu WCF)
+Domyślnie Biblioteka klienta nie dostarcza poświadczeń podczas wysyłania żądania do usługi OData. Można jednak określić, że poświadczenia mają być wysyłane w celu uwierzytelniania żądań do usługi danych przez dostarczenie <xref:System.Net.NetworkCredential> właściwości <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> <xref:System.Data.Services.Client.DataServiceContext>. Aby uzyskać więcej informacji, zobacz [zabezpieczanie usługi danych programu WCF](securing-wcf-data-services.md). W przykładzie w tym temacie pokazano, jak jawnie podać poświadczenia, które są używane przez klienta [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] podczas żądania danych z usługi danych.  
   
- W przykładzie w tym temacie jest stosowana usługa danych przykładowych Northwind i klasy usługi danych klientów. Ta usługa i klasy danych klienta są tworzone po zakończeniu [usługi danych programu WCF szybkiego startu](quickstart-wcf-data-services.md). Możesz również użyć [przykładowej usługi danych Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) opublikowanej w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] witrynie sieci Web. Ta przykładowa usługa danych jest tylko do odczytu i próba zapisu spowoduje zwrócenie błędu. Przykładowe usługi danych w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] witrynie sieci Web zezwalają na uwierzytelnianie anonimowe.  
+ W przykładzie w tym temacie jest stosowana usługa danych przykładowych Northwind i klasy usługi danych klientów. Ta usługa i klasy danych klienta są tworzone po zakończeniu [usługi danych programu WCF szybkiego startu](quickstart-wcf-data-services.md). Możesz również użyć [przykładowej usługi danych Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) opublikowanej w witrynie sieci Web OData. Ta przykładowa usługa danych jest tylko do odczytu i próba zapisu spowoduje zwrócenie błędu. Przykładowe usługi danych w witrynie sieci Web OData umożliwiają uwierzytelnianie anonimowe.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pochodzi ze strony powiązanej z kodem dla pliku Extensible Application Markup Language (XAML), który jest stroną główną aplikacji Windows Presentation Framework. Ten przykład wyświetla `LoginWindow` wystąpienie do zbierania poświadczeń uwierzytelniania od użytkownika, a następnie używa tych poświadczeń podczas wysyłania żądania do usługi danych.  
+ Poniższy przykład pochodzi ze strony powiązanej z kodem dla pliku Extensible Application Markup Language (XAML), który jest stroną główną aplikacji Windows Presentation Framework. Ten przykład wyświetla wystąpienie `LoginWindow` do zbierania poświadczeń uwierzytelniania od użytkownika, a następnie używa tych poświadczeń podczas wykonywania żądania do usługi danych.  
   
  [!code-csharp[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentials.xaml.cs#clientcredentials)]  
  [!code-vb[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/clientcredentials.xaml.vb#clientcredentials)]

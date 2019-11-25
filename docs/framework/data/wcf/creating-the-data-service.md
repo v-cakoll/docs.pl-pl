@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: 582f5f2d6d82613736ed795eebe5129284cdac6e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d30b2e30639837730ecb185a2c0f659a63955004
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052980"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975395"
 ---
 # <a name="create-the-data-service"></a>Utworzenie usługi danych
 
-W tym temacie opisano Tworzenie przykładowej usługi danych korzystającej z usługi danych programu WCF w celu udostępnienia [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] kanału informacyjnego opartego na przykładowej bazie danych Northwind. Zadanie obejmuje następujące podstawowe kroki:
+W tym temacie opisano Tworzenie przykładowej usługi danych korzystającej z Usługi danych programu WCF w celu udostępnienia kanału informacyjnego protokołu Open Data Protocol (OData), który jest oparty na przykładowej bazie danych Northwind. Zadanie obejmuje następujące podstawowe kroki:
 
 1. Utwórz aplikację sieci Web ASP.NET.
 
@@ -26,7 +26,7 @@ W tym temacie opisano Tworzenie przykładowej usługi danych korzystającej z us
 
 ## <a name="create-the-aspnet-web-app"></a>Tworzenie aplikacji sieci Web ASP.NET
 
-1. W programie Visual Studio w menu **plik** wybierz pozycję **Nowy** > **projekt**.
+1. W programie Visual Studio w menu **plik** wybierz pozycję **Nowy** **projekt** > .
 
 1. W oknie dialogowym **Nowy projekt** w obszarze Visual Basic lub C# wizualizacji wybierz kategorię **sieci Web** , a następnie wybierz pozycję **aplikacja sieci Web ASP.NET**.
 
@@ -34,7 +34,7 @@ W tym temacie opisano Tworzenie przykładowej usługi danych korzystającej z us
 
 1. W oknie dialogowym **Nowa aplikacja sieci Web ASP.NET** wybierz opcję **pusty** , a następnie wybierz przycisk **OK**.
 
-1. Obowiązkowe Określ konkretny numer portu dla aplikacji sieci Web. Uwaga: numer `12345` portu jest używany w tej serii tematów szybkiego startu.
+1. Obowiązkowe Określ konkretny numer portu dla aplikacji sieci Web. Uwaga: numer portu `12345` jest używany w tej serii tematów szybkiego startu.
 
     1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt ASP.NET, który właśnie został utworzony, a następnie wybierz polecenie **Właściwości**.
 
@@ -52,9 +52,9 @@ W tym temacie opisano Tworzenie przykładowej usługi danych korzystającej z us
 
 5. Aby połączyć model danych z bazą danych, wykonaj jedną z następujących czynności, a następnie kliknij przycisk **dalej**:
 
-    - Jeśli nie masz już skonfigurowanego połączenia z bazą danych, kliknij pozycję **nowe połączenie** i Utwórz nowe połączenie. Aby uzyskać więcej informacji, zobacz [jak: Utwórz połączenia z bazami](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))danych SQL Server. To wystąpienie SQL Server musi mieć dołączoną przykładową bazę danych Northwind.
+    - Jeśli nie masz już skonfigurowanego połączenia z bazą danych, kliknij pozycję **nowe połączenie** i Utwórz nowe połączenie. Aby uzyskać więcej informacji, zobacz [How to: Create Connections to SQL Server Databases](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). To wystąpienie SQL Server musi mieć dołączoną przykładową bazę danych Northwind.
 
-         \- lub —
+         \- lub-
 
     - Jeśli masz już połączenie z bazą danych do łączenia się z bazą danych Northwind, wybierz to połączenie z listy połączeń.
 
@@ -77,14 +77,14 @@ W tym temacie opisano Tworzenie przykładowej usługi danych korzystającej z us
 
      Program Visual Studio tworzy znaczniki XML i pliki kodu dla nowej usługi. Domyślnie zostanie otwarte okno edytora kodu. W **Eksplorator rozwiązań**usługa ma nazwę Northwind z rozszerzeniem *. svc.cs* lub *. svc. vb*.
 
-4. W kodzie usługi danych Zastąp komentarz `/* TODO: put your data source class name here */` w definicji klasy, która definiuje usługę danych z typem, który jest kontenerem jednostek modelu danych, w tym `NorthwindEntities`przypadku. Definicja klasy powinna wyglądać następująco:
+4. W kodzie usługi danych Zastąp komentarz `/* TODO: put your data source class name here */` w definicji klasy, która definiuje usługę danych z typem, który jest kontenerem jednostek modelu danych, które w tym przypadku jest `NorthwindEntities`. Definicja klasy powinna wyglądać następująco:
 
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
 ## <a name="enable-access-to-data-service-resources"></a>Zapewnianie dostępu do zasobów usługi danych
 
-1. W kodzie usługi danych Zastąp symbol zastępczy w `InitializeService` funkcji następującymi elementami:
+1. W kodzie usługi danych Zastąp symbol zastępczy w funkcji `InitializeService` następującym:
 
      [!code-csharp[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#allreadconfig)]
      [!code-vb[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#allreadconfig)]

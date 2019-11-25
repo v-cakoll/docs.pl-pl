@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <TimeSpan_LegacyFormatMode> element
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
-ms.openlocfilehash: c835e1bcef7bbfdc990c8db177eafed4ec6bb30c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d9eedf52f5d711412e4549e39e6ea23abb68ff3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115211"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968906"
 ---
-# <a name="timespan_legacyformatmode-element"></a>\<element > TimeSpan_LegacyFormatMode
+# <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > elementu
 
 Określa, czy środowisko uruchomieniowe zachowuje starsze zachowanie w operacjach formatowania przy użyciu wartości <xref:System.TimeSpan?displayProperty=nameWithType>.
 
 [ **\<configuration >** ](../configuration-element.md) \
 &nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<TimeSpan_LegacyFormatMode >**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<** TimeSpan_LegacyFormatMode >  
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,13 +75,13 @@ Poniższy przykład tworzy wystąpienie obiektu <xref:System.TimeSpan> i próbuj
 
 Po uruchomieniu przykładu w .NET Framework 3,5 lub we wcześniejszej wersji zostaną wyświetlone następujące dane wyjściowe:
 
-```
+```console
 12:30:45
 ```
 
 Różni się to od danych wyjściowych w przypadku uruchomienia przykładu w .NET Framework 4 lub jego nowszej wersji:
 
-```
+```console
 Invalid Format
 ```
 

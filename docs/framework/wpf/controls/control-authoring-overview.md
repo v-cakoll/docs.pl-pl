@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: fe7704b9366bf46f0c9965f78ce441000ead6334
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1ac8964f915206205d5c9e6ab782fcaa59bf2a99
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460783"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975720"
 ---
 # <a name="control-authoring-overview"></a>Przegląd Autorstwo formantów
 
@@ -36,7 +36,7 @@ Historycznie, jeśli chcesz uzyskać dostosowane środowisko z istniejącej kont
   > [!NOTE]
   > Mimo że <xref:System.Windows.Controls.RadioButton> może używać <xref:System.Windows.DataTemplate>, <xref:System.Windows.DataTemplate> w tym przykładzie nie jest wystarczający.  <xref:System.Windows.DataTemplate> definiuje wygląd zawartości kontrolki. W przypadku <xref:System.Windows.Controls.RadioButton>zawartość jest wyświetlana na prawo od okręgu, który wskazuje, czy <xref:System.Windows.Controls.RadioButton> jest zaznaczone.  W przykładzie sygnalizatora ulicznego przycisk radiowy musi być kółkiem, który może "rozjaśnić". Ponieważ wymagania dotyczące wyglądu dla sygnalizatora ulicznego różnią się od domyślnego wyglądu <xref:System.Windows.Controls.RadioButton>, konieczne jest ponowne zdefiniowanie <xref:System.Windows.Controls.ControlTemplate>.  Ogólnie rzecz biorąc <xref:System.Windows.DataTemplate> jest używany do definiowania zawartości (lub danych) kontrolki, a <xref:System.Windows.Controls.ControlTemplate> jest używany do definiowania sposobu, w jaki formant jest strukturalny.
 
-- **Wyzwalacze.** <xref:System.Windows.Trigger> pozwala dynamicznie zmieniać wygląd i zachowanie kontrolki bez tworzenia nowej kontrolki. Załóżmy na przykład, że masz wiele kontrolek <xref:System.Windows.Controls.ListBox> w aplikacji i chcesz, aby elementy w każdym <xref:System.Windows.Controls.ListBox> były pogrubione i czerwone, gdy są zaznaczone. Pierwszym instinctem może być utworzenie klasy, która dziedziczy po <xref:System.Windows.Controls.ListBox> i zastąpienie metody <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> w celu zmiany wyglądu wybranego elementu, ale lepszym rozwiązaniem jest dodanie wyzwalacza do stylu <xref:System.Windows.Controls.ListBoxItem>, który zmienia wygląd wybranego elementu . Wyzwalacz pozwala zmieniać wartości właściwości lub podejmować działania na podstawie wartości właściwości. <xref:System.Windows.EventTrigger> umożliwia podejmowanie akcji w przypadku wystąpienia zdarzenia.
+- **Wyzwalacze.** <xref:System.Windows.Trigger> pozwala dynamicznie zmieniać wygląd i zachowanie kontrolki bez tworzenia nowej kontrolki. Załóżmy na przykład, że masz wiele kontrolek <xref:System.Windows.Controls.ListBox> w aplikacji i chcesz, aby elementy w każdym <xref:System.Windows.Controls.ListBox> były pogrubione i czerwone, gdy są zaznaczone. Pierwszym instinctem może być utworzenie klasy, która dziedziczy po <xref:System.Windows.Controls.ListBox> i zastąpienie metody <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> w celu zmiany wyglądu wybranego elementu, ale lepszym rozwiązaniem jest dodanie wyzwalacza do stylu <xref:System.Windows.Controls.ListBoxItem>, który zmienia wygląd wybranego elementu. Wyzwalacz pozwala zmieniać wartości właściwości lub podejmować działania na podstawie wartości właściwości. <xref:System.Windows.EventTrigger> umożliwia podejmowanie akcji w przypadku wystąpienia zdarzenia.
 
 Aby uzyskać więcej informacji na temat stylów, szablonów i wyzwalaczy, zobacz [Style i tworzenia szablonów](styling-and-templating.md).
 
@@ -187,7 +187,7 @@ Aby uzyskać więcej informacji na temat powiązania danych, zobacz temat [powi�
 
 ### <a name="design-for-designers"></a>Projektowanie dla projektantów
 
-Aby uzyskać pomoc techniczną dla niestandardowych formantów WPF w [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] (na przykład Edytowanie właściwości przy użyciu okno Właściwości), postępuj zgodnie z poniższymi wskazówkami.  Aby uzyskać więcej informacji na temat opracowywania [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)], zobacz [Design XAML in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
+Aby uzyskać pomoc techniczną dla formantów WPF w programie WPF Designer dla programu Visual Studio (na przykład edytowania właściwości z okno Właściwości), postępuj zgodnie z poniższymi wskazówkami.  Aby uzyskać więcej informacji na temat programowania dla projektanta WPF, zobacz [Design XAML w programie Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
 
 #### <a name="dependency-properties"></a>Właściwości zależności
 

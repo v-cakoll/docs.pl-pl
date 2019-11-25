@@ -2,214 +2,214 @@
 title: Rozwiązywanie problemów obsługi komunikatów kolejek
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 3b149d1b422848e1acdd954ebda4191496ddcc7e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: dcff128a7718245fa765c57d3af80665699f4891
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662942"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976053"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Rozwiązywanie problemów obsługi komunikatów kolejek
 
-Ta sekcja zawiera typowe pytania i rozwiązywanie problemów z pomocy dotyczącej korzystania z kolejek w Windows Communication Foundation (WCF).
+Ta sekcja zawiera typowe pytania i pomoc dotycząca rozwiązywania problemów dotyczących korzystania z kolejek w programie Windows Communication Foundation (WCF).
 
 ## <a name="common-questions"></a>Często zadawane pytania
 
-**PYT.:** Czy mogę używać WCF Beta 1 i mam już zainstalowaną poprawkę usługi MSMQ. Należy usunąć poprawkę?
+**P:** Używam programu WCF Beta 1 i zainstalowano poprawkę usługi MSMQ. Czy muszę usunąć poprawkę?
 
-**ODP.:** Tak. Ta poprawka nie jest już obsługiwana. Usługi WCF działa teraz w usłudze MSMQ bez wymogu poprawki.
+Odp **.:** Opcję. Ta poprawka nie jest już obsługiwana. Funkcja WCF działa teraz w usłudze MSMQ bez wymaganej poprawki.
 
-**PYT.:** Istnieją dwa powiązania dla usługi MSMQ: <xref:System.ServiceModel.NetMsmqBinding> i <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Do czego mogę używać i kiedy?
+**P:** Istnieją dwa powiązania usługi MSMQ: <xref:System.ServiceModel.NetMsmqBinding> i <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Czego mam używać i kiedy?
 
-**ODP.:** Użyj <xref:System.ServiceModel.NetMsmqBinding> kiedy chcesz używać usługi MSMQ jako transportu dla komunikacji między dwiema aplikacjami usługi WCF z obsługą kolejek. Użyj <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> kiedy chcesz korzystać z istniejących aplikacji usługi MSMQ do komunikowania się z nowych aplikacji WCF.
+Odp **.:** Użyj <xref:System.ServiceModel.NetMsmqBinding>, jeśli chcesz użyć usługi MSMQ jako transportu do kolejkowanej komunikacji między dwiema aplikacjami WCF. Użyj <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>, jeśli chcesz używać istniejących aplikacji usługi MSMQ do komunikowania się z nowymi aplikacjami WCF.
 
-**PYT.:** Czy muszę uaktualnić usługi MSMQ, aby użyć <xref:System.ServiceModel.NetMsmqBinding> i `MsmqIntegration` powiązania?
+**P:** Czy muszę uaktualnić usługę MSMQ, aby używać powiązań <xref:System.ServiceModel.NetMsmqBinding> i `MsmqIntegration`?
 
-**ODP.:** Nie. Zarówno powiązania pracować MSMQ 3.0 na [!INCLUDE[wxp](../../../../includes/wxp-md.md)] i [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Niektóre funkcje powiązania stają się dostępne po uaktualnieniu do usługi MSMQ 4.0 w [!INCLUDE[wv](../../../../includes/wv-md.md)].
+**Odp.:** Nie. Oba powiązania działają z usługą MSMQ 3,0 w [!INCLUDE[wxp](../../../../includes/wxp-md.md)] i [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Niektóre funkcje powiązań stają się dostępne po uaktualnieniu do usługi MSMQ 4,0 w [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
-**PYT.:** Jakie funkcje <xref:System.ServiceModel.NetMsmqBinding> i <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> powiązania są dostępne w usłudze MSMQ 4.0, ale nie w usłudze MSMQ 3.0?
+**P:** Jakie funkcje powiązań <xref:System.ServiceModel.NetMsmqBinding> i <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> są dostępne w usłudze MSMQ 4,0, ale nie w usłudze MSMQ 3,0?
 
-**ODP.:** Następujące funkcje są dostępne w usłudze MSMQ 4.0, ale nie w usłudze MSMQ 3.0:
+Odp **.:** W przypadku usługi MSMQ 4,0 dostępne są następujące funkcje, ale nie w usłudze MSMQ 3,0:
 
-- Niestandardowe kolejki utraconych wiadomości jest obsługiwana tylko w usłudze MSMQ 4.0.
+- Niestandardowa Kolejka utraconych wiadomości jest obsługiwana tylko w przypadku usługi MSMQ 4,0.
 
-- Usługa MSMQ 3.0 i 4.0 obsłużyć inaczej skażone komunikaty.
+- Usługi MSMQ 3,0 i 4,0 obsługują skażone komunikaty inaczej.
 
-- Tylko usługi MSMQ 4.0 obsługuje odczyt transakcyjne zdalny.
+- Tylko usługa MSMQ 4,0 obsługuje zdalne odczyty transakcyjne.
 
-Aby uzyskać więcej informacji, zobacz [różnice w funkcjach kolejkowania w Windows Vista, Windows Server 2003 i Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).
+Aby uzyskać więcej informacji, zobacz [różnice w funkcjach kolejkowania w systemach Windows Vista, Windows Server 2003 i Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).
 
-**PYT.:** Czy można użyć usługa MSMQ 3.0, po jednej stronie komunikatu w kolejce i MSMQ 4.0 po drugiej stronie?
+**P:** Czy mogę używać usługi MSMQ 3,0 po jednej stronie komunikacji w kolejce i usługi MSMQ 4,0 po drugiej stronie?
 
-**ODP.:** Tak.
+Odp **.:** Opcję.
 
-**PYT.:** Chcę integrowanie istniejących aplikacji usługi MSMQ z nowej usługi WCF klientów lub serwerów. Należy uaktualnić obie strony mojej infrastruktury usługi MSMQ?
+**P:** Chcę zintegrować istniejące aplikacje usługi MSMQ z nowymi klientami lub serwerami WCF. Czy muszę uaktualnić obie strony mojej infrastruktury usługi MSMQ?
 
-**ODP.:** Nie. Jest konieczne uaktualnienie do usługi MSMQ 4.0 po obu stronach.
+**Odp.:** Nie. Po obu stronach nie ma potrzeby uaktualniania do usługi MSMQ 4,0.
 
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów
 
-Ta sekcja zawiera odpowiedzi na typowe problemy dotyczące rozwiązywania problemów. Niektóre problemy, które są znane ograniczenia są także opisane w informacjach o wersji.
+Ta sekcja zawiera odpowiedzi na najczęstsze problemy z rozwiązywaniem problemów. Niektóre problemy, które są znane ograniczenia są również opisane w informacjach o wersji.
 
-**PYT.:** Próbuję użyć kolejki prywatnej i pojawia się następujący wyjątek: `System.InvalidOperationException`: Adres URL jest nieprawidłowy. Adres URL kolejki nie może zawierać znaku "$". Aby rozwiązać kolejki prywatnej, należy użyć składni net.msmq://machine/private/queueName.
+**P:** Próbuję użyć kolejki prywatnej i otrzymuję następujący wyjątek: `System.InvalidOperationException`: adres URL jest nieprawidłowy. Adres URL kolejki nie może zawierać znaku "$". Użyj składni w usłudze net. MSMQ://machine/private/queueName, aby rozwiązać kolejkę prywatną.
 
-**ODP.:** Sprawdź, czy kolejka identyfikator (URI) w swojej konfiguracji i kodu. Nie używaj znaku "$" w identyfikatorze URI. Na przykład aby spełnić kolejki prywatnej o nazwie OrdersQueue, należy określić identyfikator URI jako net.msmq://localhost/private/ordersQueue.
+Odp **.:** Sprawdź Uniform Resource Identifier kolejki (URI) w konfiguracji i kodzie. Nie używaj znaku "$" w identyfikatorze URI. Na przykład, aby rozwiązać kolejkę prywatną o nazwie OrdersQueue, określ identyfikator URI w formacie net. MSMQ://localhost/private/ordersQueue.
 
-**PYT.:** Wywoływanie `ServiceHost.Open()` w mojej aplikacji umieszczonych w kolejce zgłasza następujący wyjątek: `System.ArgumentException`: Adres podstawowy nie może zawierać ciągu zapytania identyfikatora URI. Dlaczego?
+**P:** Wywołanie `ServiceHost.Open()` w Kolejkowanej aplikacji zgłasza następujący wyjątek: `System.ArgumentException`: adres podstawowy nie może zawierać ciągu zapytania identyfikatora URI. Dlaczego?
 
-**ODP.:** Sprawdź kolejki identyfikator URI w pliku konfiguracji i w kodzie. Kolejki usługi MSMQ obsługują korzystanie z '?' znak, identyfikatorów URI interpretuje ten znak jako początek ciągu zapytania. Aby uniknąć tego problemu, należy użyć nazwy kolejek, które nie zawierają "?" znaków.
+Odp **.:** Sprawdź identyfikator URI kolejki w pliku konfiguracji i w kodzie. Podczas gdy kolejki MSMQ obsługują znak "?", identyfikatory URI interpretują ten znak jako początek zapytania ciągu. Aby uniknąć tego problemu, użyj nazw kolejek, które nie zawierają znaków "?".
 
-**PYT.:** Wyślij moje zakończyło się pomyślnie, ale żadna operacja usługi jest wywoływane na odbiorcy. Dlaczego?
+**P:** Moje wysłanie zakończyło się pomyślnie, ale na odbiorniku nie została wywołana żadna operacja usługi. Dlaczego?
 
-**ODP.:** Aby ustalić, odpowiedź na pytanie, pracować przy użyciu poniższej liście kontrolnej:
+Odp **.:** Aby określić odpowiedź, należy wykonać następującą listę kontrolną:
 
-- Upewnij się, że wymagania kolejkę transakcyjną są zgodne z gwarancji określony. Należy zwrócić uwagę następujących zasad:
+- Sprawdź, czy wymagania dotyczące kolejki transakcyjnej są zgodne z określonymi gwarancjami. Należy pamiętać o następujących zasadach:
 
-  - Komunikaty można wysyłać trwałe (datagramy i sesji) za pomocą "dokładnie jednokrotne" gwarancji (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) tylko dla kolejek transakcyjnych.
+  - Można wysyłać trwałe wiadomości (datagramy i sesje) z gwarancjami "dokładnie raz" (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) tylko do kolejki transakcyjnej.
 
-  - Możesz wysłać sesji tylko w przypadku zapewnienia "dokładnie jednokrotne".
+  - Sesje można wysyłać tylko za pomocą gwarancji "dokładnie raz".
 
-  - Transakcja jest wymagany do odbierania komunikatów w sesji z kolejką transakcyjną.
+  - Transakcja jest wymagana do odbierania komunikatów w sesji z kolejki transakcyjnej.
 
-  - Możesz wysyłać lub odbierać lotnych lub trwałe wiadomości (tylko datagramy) z żadnych zapewnień (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) tylko do kolejki nietransakcyjnej.
+  - Można wysyłać i odbierać nietrwałe lub trwałe komunikaty (tylko datagramy) bez gwarancji (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) tylko do kolejki nietransakcyjnej.
 
-- Sprawdź kolejki utraconych wiadomości. Jeśli znajdziesz tam wiadomości, należy ustalić, dlaczego one nie zostały dostarczone.
+- Sprawdź kolejkę utraconych wiadomości. Jeśli znajdziesz tam komunikaty, określ, dlaczego nie zostały one dostarczone.
 
-- Sprawdzanie kolejek wychodzących dla łączności lub odnoszący się problemy.
+- Sprawdź kolejki wychodzące pod kątem problemów z łącznością lub rozruchem.
 
-**PYT.:** Określony niestandardowy kolejki utraconych wiadomości, ale po uruchomieniu aplikacji nadawcy, pojawia się wyjątek, który nie znajduje się kolejka utraconych lub aplikacji wysyłającej nie ma uprawnienia do kolejki utraconych wiadomości. Dlaczego tak się dzieje?
+**P:** Określono niestandardową kolejkę utraconych wiadomości, ale po uruchomieniu aplikacji nadawcy otrzymuję wyjątek, że nie można odnaleźć kolejki utraconych wiadomości lub aplikacja wysyłająca nie ma uprawnień do kolejki utraconych wiadomości. Dlaczego tak się dzieje?
 
-**ODP.:** Niestandardowe kolejki utraconych wiadomości URI musi zawierać wartość "localhost" lub nazwa komputera pierwszy segment, na przykład net.msmq://localhost/private/myAppdead-letter kolejki.
+Odp **.:** Niestandardowy identyfikator URI kolejki utraconych wiadomości musi zawierać "localhost" lub nazwę komputera w pierwszym segmencie, na przykład net. MSMQ://localhost/private/myAppdead-letter Queue.
 
-**PYT.:** Go zawsze jest konieczne do definiowania niestandardowej kolejki utraconych wiadomości, lub czy istnieje kolejka utraconych wiadomości domyślnej?
+**P:** Czy zawsze konieczne jest zdefiniowanie niestandardowej kolejki utraconych wiadomości lub czy istnieje domyślna kolejka utraconych wiadomości?
 
-**ODP.:** W przypadku zapewnienia "dokładnie jednokrotne" (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`), a jeśli nie określisz niestandardowe kolejki utraconych wiadomości, wartością domyślną jest kolejki utraconych wiadomości transakcyjnych całego systemu.
+Odp **.:** Jeśli program Assurances ma wartość "dokładnie raz" (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`), a jeśli nie określisz niestandardowej kolejki utraconych wiadomości, wartością domyślną będzie Kolejka utraconych wiadomości transakcyjnych w całej systemie.
 
-W przypadku zapewnienia none (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`), a następnie wartość domyślna to żadnych funkcji kolejki utraconych wiadomości.
+Jeśli program Assurances nie ma (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`), wartość domyślna nie jest funkcją kolejki utraconych wiadomości.
 
-**PYT.:** Moja usługa zgłoszenie SvcHost.Open za pomocą komunikatu "EndpointListener nie może spełnić wymagań przez ListenerFactory". Dlaczego?
+**P:** Moja usługa zgłasza na SvcHost. Otwórz z komunikatem "EndpointListener wymagania nie mogą być spełnione przez ListenerFactory". Dlaczego?
 
-A. Sprawdź swoje kontraktu usługi. Użytkownik zapomniał do umieszczenia "ustawienie właściwości IsOneWay =`true`" dla wszystkich operacji usługi. Kolejki obsługują tylko operacje jednokierunkowe usługi.
+z. Sprawdź kontrakt usługi. Być może zapomniano umieścić "IsOneWay =`true`" we wszystkich operacjach usługi. Kolejki obsługują tylko jednokierunkowe operacje usługi.
 
-**PYT.:** Występują komunikaty w kolejce, ale jest wywoływana żadna operacja usługi. Na czym polega problem?
+**P:** W kolejce znajdują się komunikaty, ale nie jest wywoływana żadna operacja usługi. Jaki jest problem?
 
-**ODP.:** Określ, jeśli uległa awarii hosta usługi. Możesz sprawdzić, patrząc śledzenia lub implementacji `IErrorHandler`. Błędy hosta usługi domyślnie w przypadku wykrycia Zarządzanie skażonymi komunikatami.
+Odp **.:** Ustal, czy wystąpił błąd hosta usługi. Możesz sprawdzić, patrząc na ślad lub implementując `IErrorHandler`. Błędy hosta usługi domyślnie, jeśli zostanie wykryty Trująca wiadomość.
 
-**PYT.:** Występują komunikaty w kolejce, ale nie włączono wprowadzenie umieszczonych w kolejce usługi hostowanej w sieci Web. Dlaczego?
+**P:** W kolejce znajdują się komunikaty, ale Usługa My hostowana w sieci Web nie jest aktywowana. Dlaczego?
 
-**ODP.:** Najbardziej typową przyczyną jest uprawnień.
+Odp **.:** Najbardziej typową przyczyną są uprawnienia.
 
-1. Upewnij się, że `NetMsmqActivator` proces jest uruchomiony i tożsamość `NetMsmqActivator` proces otrzymuje odczytu i wyszukiwanie uprawnień w kolejce.
+1. Upewnij się, że proces `NetMsmqActivator` jest uruchomiony, a tożsamość procesu `NetMsmqActivator` ma przyznane uprawnienie Odczyt i wyszukiwanie w kolejce.
 
-2. Jeśli `NetMsmqActivator` jest monitorowanie kolejek na komputerze zdalnym, upewnij się, że `NetMsmqActivator` nie jest uruchomiony tokenu ograniczone. Aby uruchomić `NetMsmqActivator` nieograniczony tokenem:
+2. Jeśli `NetMsmqActivator` jest monitorowane kolejki na komputerze zdalnym, należy się upewnić, że `NetMsmqActivator` nie działa w ramach ograniczonego tokenu. Aby uruchomić `NetMsmqActivator` przy użyciu nieograniczonego tokenu:
 
-    ```
+    ```console
     sc sidtype NetMsmqActivator unrestricted
     ```
 
-Powiązane zagadnienia hosta sieci Web niezwiązanych z zabezpieczeniami można znaleźć: [Web hostująca aplikację Zakolejkowaną](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md).
+W przypadku problemów z hostem sieci Web niezwiązanych z zabezpieczeniami odnoszą się do: [hostowanie aplikacji w kolejce](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md).
 
-**PYT.:** Co to jest najłatwiejszym sposobem sesje dostępu?
+**P:** Co to jest najprostszy sposób uzyskiwania dostępu do sesji?
 
-**ODP.:** Ustaw autouzupełniania =`true` na operację, która odnosi się do ostatniego komunikatu w sesji, a następnie ustaw autouzupełniania =`false` dla wszystkich pozostałych operacji usługi.
+Odp **.:** Ustaw Autouzupełnianie =`true` operacji, która odnosi się do ostatniej wiadomości w sesji, i ustaw Autouzupełnianie =`false` dla wszystkich pozostałych operacji usługi.
 
-**PYT.:** Gdzie znaleźć odpowiedzi na często zadawane pytania w usłudze MSMQ
+**P:** Gdzie mogę znaleźć odpowiedzi na często zadawane pytania dotyczące usługi MSMQ?
 
-**ODP.:** Aby uzyskać więcej informacji na temat usługi MSMQ, zobacz [usługi kolejkowania komunikatów Microsoft](https://go.microsoft.com/fwlink/?LinkId=87810).
+Odp **.:** Aby uzyskać więcej informacji na temat usługi MSMQ, zobacz [Usługa kolejkowania komunikatów firmy Microsoft](https://go.microsoft.com/fwlink/?LinkId=87810).
 
-**PYT.:** Dlaczego zgłosi Moja usługa `ProtocolException` podczas czytania z kolejki, który zawiera zarówno sesji wiadomości w kolejce i datagram wiadomości w kolejce?
+**P:** Dlaczego moja usługa zgłasza `ProtocolException` podczas odczytywania z kolejki zawierającej zarówno komunikaty sesji w kolejce, jak i komunikaty datagramu w kolejce?
 
-**ODP.:** Jest główną różnicą w komunikatach umieszczonych w kolejce sposób sesji i składają się datagram umieszczonych w kolejce komunikatów. W związku z tym usługa, która oczekuje na odczytywanie wiadomości w kolejce sesji nie może odbierać wiadomości w kolejce datagram i usługi oczekującej elementu do odczytu komunikatu w kolejce datagram nie może zostać wyświetlony komunikat sesji. Podjęto próbę odczytu oba rodzaje komunikatów z tej samej kolejki zgłasza następujący wyjątek:
+Odp **.:** Istnieje fundamentalna różnica w sposobie, w jaki kolejkowane komunikaty sesji i kolejkowane komunikaty datagramu. Z tego względu usługa, która oczekuje na odczytanie komunikatu sesji z kolejką, nie może odebrać komunikatu dataqueue w kolejce, a usługa oczekuje na odczytanie komunikatu dataqueue w kolejce nie może odebrać komunikatu sesji. Próba odczytania obu rodzajów komunikatów z tej samej kolejki zgłasza następujący wyjątek:
 
-```
+```console
 System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a poison message. This occurred because the message exceeded the maximum number of delivery attempts or because the channel detected a fundamental problem with the message. The inner exception may contain additional information.
 ---> System.ServiceModel.ProtocolException: An incoming MSMQ message contained invalid or unexpected .NET Message Framing information in its body. The message cannot be received. Ensure that the sender is using a compatible service contract with a matching SessionMode.
 ```
 
-Kolejka utraconych wiadomości systemu, jak również wszelkie niestandardowe kolejka utraconych wiadomości jest szczególnie podatne na ten problem, jeśli aplikacja wysyła zarówno sesji wiadomości w kolejce i umieszczonych w kolejce komunikatów datagramów na tym samym komputerze. Nie można pomyślnie wysłać komunikatu, jest przenoszony do kolejki utraconych wiadomości. W poniższych sytuacjach jest możliwość zarówno sesji i datagram wiadomości w kolejce wiadomości utraconych. Nie istnieje sposób, aby oddzielić oba rodzaje komunikatów w czasie wykonywania, podczas czytania z kolejki, dlatego aplikacje publiczni nie mogą wysyłać zarówno sesji wiadomości w kolejce i umieszczonych w kolejce komunikatów datagramów na tym samym komputerze.
+Kolejka utraconych wiadomości systemowych, a także jakakolwiek niestandardowa Kolejka utraconych wiadomości, jest szczególnie podatna na ten problem, jeśli aplikacja wyśle w kolejce komunikaty sesji i dataqueue z tego samego komputera. Jeśli wiadomość nie może zostać wysłana pomyślnie, zostanie ona przeniesiona do kolejki utraconych wiadomości. W takich okolicznościach istnieje możliwość, że zarówno sesja, jak i datagram komunikatów w kolejce utraconych wiadomości. Nie ma możliwości oddzielenia obydwu typów komunikatów w czasie wykonywania podczas odczytywania z kolejki, w związku z tym aplikacje nie powinny wysyłać komunikatów sesji w kolejce i komunikatów dataqueue umieszczonych w kolejce z tego samego komputera.
 
-### <a name="msmq-integration-specific-troubleshooting"></a>Integracja usługi MSMQ: Rozwiązywanie określonych problemów
+### <a name="msmq-integration-specific-troubleshooting"></a>Integracja z usługą MSMQ: konkretne Rozwiązywanie problemów
 
-**PYT.:** Przy wysyłaniu wiadomości lub podczas otwierania hosta usługi, pojawia się błąd, który wskazuje, że schemat jest nieprawidłowy. Dlaczego?
+**P:** Po wysłaniu wiadomości lub po otwarciu hosta usługi otrzymuję komunikat o błędzie informujący, że schemat jest nieprawidłowy. Dlaczego?
 
-**ODP.:** Gdy używasz powiązanie integracji usługi MSMQ, musi używać schematu msmq.formatname. Na przykład msmq.formatname:DIRECT=OS:.\private$\OrdersQueue. Jednak podczas określania niestandardowych kolejki utraconych wiadomości musi używać schematu net.msmq.
+Odp **.:** W przypadku korzystania z powiązania integracji usługi MSMQ należy użyć schematu MSMQ. formatname. Na przykład MSMQ. formatname: DIRECT = OS: .\private $ \OrdersQueue. Ale w przypadku określenia niestandardowej kolejki utraconych wiadomości należy użyć schematu net. MSMQ.
 
-**PYT.:** Kiedy użyć nazwy formatu publicznych lub prywatnych i otworzyć hosta usługi na [!INCLUDE[wv](../../../../includes/wv-md.md)], występuje błąd. Dlaczego?
+**P:** Gdy używam nazwy formatu publicznego lub prywatnego i otworzysz hosta usługi na [!INCLUDE[wv](../../../../includes/wv-md.md)], pojawia się błąd. Dlaczego?
 
-**ODP.:** Kanał integracja WCF na [!INCLUDE[wv](../../../../includes/wv-md.md)] kontroli w celu sprawdzenia, jeśli kolejki podrzędnej będzie można otworzyć kolejki głównej aplikacji do obsługi wiadomości. Nazwa kolejki podrzędnej jest pochodną msmq.formatname przekazanych przez identyfikator URI do odbiornika. Nazwa kolejki podrzędnej, w usłudze MSMQ może zawierać tylko z bezpośrednią nazwą formatu. Dlatego zostanie wyświetlony błąd. Zmień URI kolejki z bezpośrednią nazwą formatu.
+Odp **.:** Kanał integracji WCF na [!INCLUDE[wv](../../../../includes/wv-md.md)] sprawdza, czy podkolejka może być otwarta dla kolejki aplikacji głównej w celu obsługi skażonych komunikatów. Nazwa kolejki podrzędnej pochodzi od identyfikatora URI MSMQ. formatname przesłanego do odbiornika. Nazwa kolejki podrzędnej w usłudze MSMQ może być tylko nazwą formatu bezpośredniego. Zostanie wyświetlony komunikat o błędzie. Zmień identyfikator URI kolejki na nazwę formatu bezpośredniego.
 
-**PYT.:** Podczas odbierania komunikatu z aplikacji usługi MSMQ, wiadomość znajduje się w kolejce i nie został odczytany przez aplikację odbierającą WCF. Dlaczego?
+**P:** W przypadku odebrania komunikatu z aplikacji MSMQ komunikat znajduje się w kolejce i nie jest odczytywany przez odebraną aplikację WCF. Dlaczego?
 
-**ODP.:** Sprawdź, czy wiadomość zawiera treść. Jeśli wiadomość ma bez treści, kanał integracji usługi MSMQ ignoruje komunikat. Implementowanie `IErrorHandler` otrzymywania wyjątków i sprawdź śladów.
+Odp **.:** Sprawdź, czy komunikat ma treść. Jeśli komunikat nie ma treści, kanał integracji usługi MSMQ zignoruje komunikat. Zaimplementuj `IErrorHandler`, aby otrzymywać powiadomienia o wyjątkach i sprawdź dane śledzenia.
 
-### <a name="security-related-troubleshooting"></a>Rozwiązywanie związanych z zabezpieczeniami
+### <a name="security-related-troubleshooting"></a>Rozwiązywanie problemów związanych z zabezpieczeniami
 
-**PYT.:** Po uruchomieniu przykładu, który używa domyślnego powiązania w trybie grupy roboczej, wydaje się, że są wysyłane wiadomości, ale nigdy nie są odbierane przez odbiornik.
+**P:** Gdy uruchamiam przykład, który używa domyślnego powiązania w trybie grupy roboczej, komunikaty pozornie są wysyłane, ale nigdy nie odbierane przez odbiornik.
 
-**ODP.:** Domyślnie komunikaty są podpisywane przy użyciu certyfikatu wewnętrznego MSMQ, która wymaga usługi katalogowej Active Directory. W trybie grupy roboczej ponieważ usługi Active Directory nie jest dostępna, podpisywania wiadomości kończy się niepowodzeniem. Dlatego komunikat trafia do kolejki utraconych wiadomości i wskazuje przyczynę błędu, takie jak "Nieodpowiedni podpis".
+Odp **.:** Domyślnie komunikaty są podpisane przy użyciu wewnętrznego certyfikatu usługi MSMQ, który wymaga usługi katalogowej Active Directory. W trybie grupy roboczej, ponieważ Active Directory nie jest dostępny, podpisywanie komunikatu kończy się niepowodzeniem. W związku z tym komunikat znajduje się w kolejce utraconych wiadomości i Przyczyna niepowodzenia, na przykład "zła sygnatura".
 
-Obejście polega na wyłączyć funkcję zabezpieczeń. Jest to realizowane przez ustawienie <xref:System.ServiceModel.NetMsmqSecurity.Mode%2A>  =  <xref:System.ServiceModel.NetMsmqSecurityMode.None> aby umożliwić jej pracę w trybie grupy roboczej.
+Obejście polega na wyłączeniu zabezpieczeń. W tym celu należy ustawić <xref:System.ServiceModel.NetMsmqSecurity.Mode%2A> = <xref:System.ServiceModel.NetMsmqSecurityMode.None>, aby działał on w trybie grupy roboczej.
 
-Inne obejście jest uzyskanie <xref:System.ServiceModel.MsmqTransportSecurity> z <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A> właściwości i ustaw ją na <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>i ustaw certyfikat klienta.
+Innym obejściem jest uzyskanie <xref:System.ServiceModel.MsmqTransportSecurity> ze właściwości <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A> i ustawienie go na <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>i ustawienie certyfikatu klienta.
 
-Jeszcze inne obejście jest zainstalowanie usługi MSMQ z integracją usługi Active Directory.
+Jeszcze inne obejście polega na zainstalowaniu usługi MSMQ z integracją Active Directory.
 
-**PYT.:** Gdy wysyłanie wiadomości przy użyciu domyślnego powiązania (transportu włączone zabezpieczeń) w usłudze Active Directory do kolejki, wyświetlany jest komunikat "nie można odnaleźć certyfikatu wewnętrznego". Jak rozwiązać ten problem?
+**P:** Gdy wysyłam komunikat z domyślnym powiązaniem (włączone zabezpieczenia transportu) w Active Directory do kolejki, otrzymuję komunikat "nie znaleziono certyfikatu wewnętrznego". Jak mogę rozwiązać ten problem?
 
-**ODP.:** Oznacza to, czy należy odnawiać certyfikat w usłudze Active Directory dla nadawcy. Aby to zrobić, otwórz **Panelu sterowania**, **narzędzia administracyjne**, **Zarządzanie komputerem**, kliknij prawym przyciskiem myszy **MSMQ**i wybierz **Właściwości**. Wybierz **certyfikatu użytkownika** kartę, a następnie kliknij przycisk **Odnów** przycisku.
+Odp **.:** Oznacza to, że należy odnowić certyfikat w Active Directory dla nadawcy. W tym celu Otwórz **Panel sterowania**, **Narzędzia administracyjne**, **Zarządzanie komputerem**, kliknij prawym przyciskiem myszy pozycję **MSMQ**i wybierz pozycję **Właściwości**. Wybierz kartę **certyfikat użytkownika** , a następnie kliknij przycisk **Odnów** .
 
-**PYT.:** Kiedy mogę wysłać komunikat przy użyciu <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> i Określ certyfikat do użycia, wyświetlany jest komunikat "Nieprawidłowy certyfikat". Jak rozwiązać ten problem?
+**P:** Gdy wyślę komunikat przy użyciu <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> i określisz certyfikat do użycia, otrzymuję komunikat o nieprawidłowym certyfikacie. Jak mogę rozwiązać ten problem?
 
-**ODP.:** Tryb certyfikatu nie można używać magazynu certyfikatów komputera lokalnego. Musisz skopiować certyfikat z magazynu certyfikatów komputera w magazynie bieżącego użytkownika za pomocą przystawki certyfikatów. Aby uzyskać certyfikat w przystawce:
+Odp **.:** Nie można użyć magazynu certyfikatów komputera lokalnego z trybem certyfikatu. Należy skopiować certyfikat z magazynu certyfikatów komputera do bieżącego magazynu użytkowników przy użyciu przystawki certyfikat. Aby uzyskać przystawkę certyfikatu:
 
-1. Kliknij przycisk **Start**, wybierz opcję **Uruchom**, typ `mmc`i kliknij przycisk **OK**.
+1. Kliknij przycisk **Start**, wybierz polecenie **uruchom**, wpisz `mmc`i kliknij przycisk **OK**.
 
-2. W **programu Microsoft Management Console**, otwórz **pliku** menu, a następnie wybierz **Dodaj/Usuń przystawkę**.
+2. W programie **Microsoft Management Console**Otwórz menu **plik** i wybierz polecenie **Dodaj/Usuń przystawkę**.
 
-3. W **Dodaj/Usuń przystawkę** okno dialogowe, kliknij przycisk **Dodaj** przycisku.
+3. W oknie dialogowym **Dodaj/Usuń przystawkę** kliknij przycisk **Dodaj** .
 
-4. W **Dodawanie przystawki autonomicznej** okno dialogowe, wybierz opcję certyfikaty i kliknij przycisk **Dodaj**.
+4. W oknie dialogowym **Dodaj autonomiczną przystawkę** wybierz pozycję Certyfikaty, a następnie kliknij przycisk **Dodaj**.
 
-5. W **certyfikaty** przystawki okno dialogowe, zaznacz **Moje konto użytkownika** i kliknij przycisk **Zakończ**.
+5. W oknie dialogowym Przystawka **certyfikatów** wybierz pozycję **Moje konto użytkownika,** a następnie kliknij przycisk **Zakończ**.
 
-6. Następnie dodaj sekundy certyfikatów w przystawce przy użyciu poprzednich kroków, ale tym razem wybierz pozycję **konto komputera** i kliknij przycisk **dalej**.
+6. Następnie Dodaj drugą przystawkę Certyfikaty przy użyciu poprzednich kroków, ale tym razem wybierz pozycję **konto komputera** i kliknij przycisk **dalej**.
 
-7. Wybierz **komputera lokalnego** i kliknij przycisk **Zakończ**. Możesz teraz przeciągać i upuszczać certyfikaty z magazynu certyfikatów komputera w magazynie bieżącego użytkownika.
+7. Wybierz pozycję **komputer lokalny** i kliknij przycisk **Zakończ**. Teraz możesz przeciągać i upuszczać certyfikaty z magazynu certyfikatów komputera do bieżącego magazynu użytkownika.
 
-**PYT.:** Kiedy Moja Usługa odczytuje z kolejki na inny komputer w trybie grupy roboczej, wyświetlany wyjątek "odmowa dostępu".
+**P:** Gdy Usługa My odczytuje z kolejki na innym komputerze w trybie grupy roboczej, otrzymuję wyjątek "odmowa dostępu".
 
-**ODP.:** W trybie grupy roboczej, dla aplikacji zdalnej uzyskać dostęp do kolejki aplikacja musi mieć uprawnienia dostępu do kolejki. Dodaj "Logowanie anonimowe" do listy kontroli dostępu kolejki (ACL) i nadaj mu uprawnienia do odczytu.
+Odp **.:** W trybie grupy roboczej dla aplikacji zdalnej, aby uzyskać dostęp do kolejki, aplikacja musi mieć uprawnienia dostępu do kolejki. Dodaj "Logowanie anonimowe" do listy kontroli dostępu (ACL) kolejki i nadaj im uprawnienie do odczytu.
 
-**PYT.:** Klient usługi sieciowej (lub dowolnego klienta, który nie ma konta domeny) wysyła wiadomość w kolejce, Wyślij nie powiedzie się z nieprawidłowym certyfikatem. Jak rozwiązać ten problem?
+**P:** Gdy klient usługi sieciowej (lub dowolny klient, który nie ma konta domeny) wysyła komunikat w kolejce, wysyłanie kończy się niepowodzeniem z nieprawidłowym certyfikatem. Jak mogę rozwiązać ten problem?
 
-**ODP.:** Sprawdź konfigurację powiązania. Powiązanie domyślnej ma usługi MSMQ z zabezpieczeń transportu włączone do podpisywanie komunikatów. Wyłącz ją.
+Odp **.:** Sprawdź konfigurację powiązania. Domyślne powiązanie ma włączone zabezpieczenia transportu usługi MSMQ w celu podpisania wiadomości. Go wyłączyć.
 
-### <a name="remote-transacted-receives"></a>Odbiera zdalnego dokonana transakcja
+### <a name="remote-transacted-receives"></a>Zdalne odbierane odbiory
 
-**PYT.:** Jeśli mam kolejki dla komputera i usługi WCF, która odczytuje komunikaty z kolejki na komputerze B (zdalne transacted odbieranie scenariusz), wiadomości nie odczytany z kolejki. Informacje śledzenia wskazuje odbieranie nie powiodło się komunikat "transakcji nie można zaimportować." Co mogę zrobić, aby rozwiązać ten problem?
+**P:** Jeśli mam kolejkę na maszynie A, a usługa WCF, która odczytuje komunikaty z kolejki na komputerze B (zdalnie zrealizowany scenariusz odbierania), wiadomości nie są odczytywane z kolejki. Śledzenie informacji wskazuje, że odbieranie nie powiodło się z komunikatem "nie można zaimportować transakcji". Co mogę zrobić, aby rozwiązać ten problem?
 
-**ODP.:** Istnieją trzy możliwe przyczyny to:
+Odp **.:** Istnieją trzy możliwe przyczyny tego:
 
-- Jeśli jesteś w trybie domeny zdalne transacted otrzymywać wymaga dostępu do sieci transakcji Koordynator MSDTC (Microsoft Distributed). Możesz je włączyć za pomocą **Dodaj/Usuń składniki**.
+- W trybie domeny zdalne odbieranie transakcyjne wymaga dostępu do sieci firmy Microsoft Distributed Transaction Coordinator (MSDTC). Możesz włączyć tę funkcję przy użyciu opcji **Dodaj/Usuń składniki**.
 
-  ![Zrzut ekranu przedstawiający Włączanie sieci usługi DTC dostępu.](./media/troubleshooting-queued-messaging/enable-distributed-transaction-coordinator-access.jpg)
+  ![Zrzut ekranu pokazujący Włączanie dostępu do usługi DTC przez sieć.](./media/troubleshooting-queued-messaging/enable-distributed-transaction-coordinator-access.jpg)
 
-- Sprawdź tryb uwierzytelniania podczas komunikowania się z menedżerem transakcji. Jeśli jesteś w trybie grupy roboczej, należy wybrać "Uwierzytelnienie niewymagane". Jeśli jesteś w trybie domeny, należy wybrać "Wymagane uwierzytelnianie wzajemne".
+- Sprawdź tryb uwierzytelniania, aby komunikować się z menedżerem transakcji. Jeśli jesteś w trybie grupy roboczej, należy wybrać opcję "nie jest wymagane uwierzytelnienie". Jeśli jesteś w trybie domeny, należy wybrać opcję "wymagane uwierzytelnianie wzajemne.
 
-  ![Enabling XA transactions](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")
+  ![Włączanie transakcji XA](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")
 
-- Upewnij się, że usługa MSDTC jest na liście wyjątków w **Zapora połączenia internetowego** ustawienia.
+- Upewnij się, że usługa MSDTC znajduje się na liście wyjątków w ustawieniach **zapory połączenia internetowego** .
 
-- Upewnij się, że używasz [!INCLUDE[wv](../../../../includes/wv-md.md)]. Usługa MSMQ na [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje odczyt transakcyjne zdalny. Usługi MSMQ w starszych wersjach Windows nie obsługuje zdalnego odczytu transakcyjnego.
+- Upewnij się, że używasz [!INCLUDE[wv](../../../../includes/wv-md.md)]. Usługa MSMQ w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje zdalnie odczytywanie transakcyjne. Usługa MSMQ w starszych wersjach systemu Windows nie obsługuje zdalnej operacji odczytu.
 
-**PYT.:** Gdy usługa czytania z kolejki jest usługą sieciową, na przykład w sieci Web hosta, dlaczego jest zgłaszany wyjątek odmowy dostępu jest wywoływane podczas czytania z kolejki?
+**P:** Gdy usługa jest odczytywana z kolejki usługi sieciowej, na przykład w hoście sieci Web, Dlaczego otrzymuję wyjątek odmowy dostępu w przypadku odczytu z kolejki?
 
-**ODP.:** Dostęp do odczytu usługi sieciowej należy dodać do kolejki, listy ACL, aby upewnić się, że Usługa sieciowa może odczytać z kolejki.
+Odp **.:** Dostęp do odczytu usługi sieciowej należy dodać do listy ACL kolejki, aby upewnić się, że usługa sieciowa może odczytywać dane z kolejki.
 
-**PYT.:** Jednak aktywować aplikacje w oparciu o wiadomości w kolejce na komputerze zdalnym można używać usługi MSMQ aktywacji?
+**P:** Czy mogę użyć usługi aktywacji usługi MSMQ w celu aktywowania aplikacji na podstawie komunikatów w kolejce na maszynie zdalnej?
 
-**ODP.:** Tak. Aby to zrobić, należy skonfigurować usługę Aktywacja usługi MSMQ, aby uruchomić jako usługę sieci i dodać dostęp do usługi sieciowej do kolejki na komputerze zdalnym.
+Odp **.:** Opcję. W tym celu należy skonfigurować usługę aktywacji usługi MSMQ do uruchamiania jako usługa sieciowa i dodać do kolejki dostęp do usługi sieciowej na maszynie zdalnej.
 
-## <a name="using-custom-msmq-bindings-with-receivecontext-enabled"></a>Przy użyciu usługi MSMQ niestandardowego powiązania za pomocą elementu ReceiveContext włączone
+## <a name="using-custom-msmq-bindings-with-receivecontext-enabled"></a>Używanie niestandardowych powiązań usługi MSMQ z włączonym użyciem funkcji ReceiveContext
 
-Korzystając z niestandardowego powiązania usługi MSMQ z <xref:System.ServiceModel.Channels.ReceiveContext> włączona, przetwarzanie wiadomości przychodzących będą używać wątku z puli wątków, ponieważ natywnej usługi MSMQ nie obsługuje zakończenia operacji We/Wy dla asynchronicznego <xref:System.ServiceModel.Channels.ReceiveContext> odbiera. Jest to spowodowane przetworzenia takiego komunikatu używa wewnętrzne transakcje w <xref:System.ServiceModel.Channels.ReceiveContext> i usługi MSMQ nie obsługuje przetwarzania asynchronicznego. Aby obejść ten problem, można dodać <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> do punktu końcowego, aby wymusić synchronicznego przetwarzania lub ustaw <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> na 1.
+W przypadku używania niestandardowego powiązania usługi MSMQ z <xref:System.ServiceModel.Channels.ReceiveContext> włączonym przetwarzaniem komunikat przychodzący będzie używał wątku puli wątków, ponieważ natywna usługa MSMQ nie obsługuje kończenia operacji we/wy dla odbieranych <xref:System.ServiceModel.Channels.ReceiveContext> asynchronicznych. Wynika to z faktu, że przetwarzanie takich komunikatów używa transakcji wewnętrznych dla <xref:System.ServiceModel.Channels.ReceiveContext>, a usługa MSMQ nie obsługuje przetwarzania asynchronicznego. Aby obejść ten problem, można dodać <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> do punktu końcowego w celu wymuszenia przetwarzania synchronicznego lub ustawienia <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> na 1.

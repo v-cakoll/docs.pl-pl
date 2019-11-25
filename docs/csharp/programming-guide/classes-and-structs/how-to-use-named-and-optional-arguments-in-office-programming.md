@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: użycie argumentów nazwanych i opcjonalnych w programowaniu pakietu C# Office — Przewodnik programowania'
+title: Jak używać argumentów nazwanych i opcjonalnych w programowaniu pakietu C# Office — Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 90b60a6410ffbe7f9802b01bf3303b6e842a1424
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: d7efd13f26912f8cd944bcbc5568e9bbca92c3a0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002789"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970495"
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Porady: użycie argumentów nazwanych i opcjonalnych w programowaniu Office (Przewodnik programowania w języku C#)
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Jak używać argumentów nazwanych i opcjonalnych w programowaniu pakietuC# Office (Przewodnik programowania)
 
 Argumenty nazwane i opcjonalne argumenty, wprowadzone w C# 4, zwiększają wygodę, elastyczność i czytelność C# w programowaniu. Ponadto te funkcje znacznie ułatwiają dostęp do interfejsów COM, takich jak interfejsy API automatyzacji Microsoft Office.
 
@@ -60,7 +60,7 @@ Aby wykonać te procedury, na komputerze musi być zainstalowany program Microso
 
 ## <a name="to-display-text-in-a-word-document"></a>Aby wyświetlić tekst w dokumencie programu Word
 
-1. W klasie `Program` w *program.cs*Dodaj następującą metodę w celu utworzenia aplikacji programu Word i dokumentu programu Word. Metoda [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) ma cztery parametry opcjonalne. W tym przykładzie używane są wartości domyślne. W związku z tym nie są wymagane żadne argumenty w instrukcji wywołującej.
+1. W klasie `Program` w *program.cs*Dodaj następującą metodę, aby utworzyć aplikację programu Word i dokument programu Word. Metoda [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) ma cztery parametry opcjonalne. W tym przykładzie używane są wartości domyślne. W związku z tym nie są wymagane żadne argumenty w instrukcji wywołującej.
 
      [!code-csharp[csProgGuideNamedAndOptional#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#6)]
 
@@ -74,7 +74,7 @@ Aby wykonać te procedury, na komputerze musi być zainstalowany program Microso
 
      [!code-csharp[csProgGuideNamedAndOptional#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#8)]
 
-2. Naciśnij <kbd>klawisze CTRL</kbd>+<kbd>F5</kbd> , aby uruchomić projekt. Zostanie wyświetlony dokument programu Word zawierający określony tekst.
+2. Naciśnij klawisz <kbd>CTRL</kbd>+<kbd>F5</kbd> , aby uruchomić projekt. Zostanie wyświetlony dokument programu Word zawierający określony tekst.
 
 ## <a name="to-change-the-text-to-a-table"></a>Aby zmienić tekst na tabelę
   
@@ -86,19 +86,19 @@ Aby wykonać te procedury, na komputerze musi być zainstalowany program Microso
 
      [!code-csharp[csProgGuideNamedAndOptional#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#9)]
 
-     We wcześniejszych wersjach programu C#wywołanie `ConvertToTable` wymaga argumentu odwołania dla każdego parametru, jak pokazano w poniższym kodzie:
+     We wcześniejszych wersjach programu C#wywołanie do `ConvertToTable` wymaga argumentu odwołania dla każdego parametru, jak pokazano w poniższym kodzie:
   
      [!code-csharp[csProgGuideNamedAndOptional#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#14)]
 
-2. Naciśnij <kbd>klawisze CTRL</kbd>+<kbd>F5</kbd> , aby uruchomić projekt.
+2. Naciśnij klawisz <kbd>CTRL</kbd>+<kbd>F5</kbd> , aby uruchomić projekt.
 
 ## <a name="to-experiment-with-other-parameters"></a>Aby eksperymentować z innymi parametrami
 
-1. Aby zmienić tabelę tak, aby stała się jedną kolumną i trzema wierszami, Zastąp ostatni wiersz w `DisplayInWord` następującą instrukcją, a następnie wpisz <kbd>CTRL</kbd>+<kbd>F5</kbd>.  
+1. Aby zmienić tabelę tak, aby stała się jedną kolumną i trzema wierszami, Zastąp ostatni wiersz w `DisplayInWord` z następującą instrukcją, a następnie wpisz <kbd>CTRL</kbd>+<kbd>F5</kbd>.  
 
      [!code-csharp[csProgGuideNamedAndOptional#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#10)]
 
-2. Aby określić wstępnie zdefiniowany format tabeli, Zastąp ostatni wiersz w `DisplayInWord` następującą instrukcją, a następnie wpisz <kbd>CTRL</kbd>+<kbd>F5</kbd>. Format może być dowolną ze stałych [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>) .
+2. Aby określić wstępnie zdefiniowany format tabeli, Zastąp ostatni wiersz w `DisplayInWord` z następującą instrukcją, a następnie wpisz <kbd>CTRL</kbd>+<kbd>F5</kbd>. Format może być dowolną ze stałych [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>) .
 
      [!code-csharp[csProgGuideNamedAndOptional#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#11)]
 

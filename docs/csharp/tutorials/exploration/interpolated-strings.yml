@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: c3c4927a4afbf69f2101aa2596389e6f94cea243
-  ms.sourcegitcommit: 4aeac5d588ded58246f58030919e56b70a7674e4
+  ms.openlocfilehash: bc2d600afabbac9783e8fb12e3bd47e83a3495b7
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 10/27/2019
-  ms.locfileid: "72966977"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969440"
 items:
 - durationInMinutes: 2
   content: >
@@ -22,7 +22,7 @@ items:
 - title: Utwórz ciąg interpolowany
   durationInMinutes: 2
   content: >
-    Uruchom następujący kod w oknie interaktywnym. W tym celu wpisz kod w oknie interaktywnym (Zastąp `<name>` nazwą) i wybierz pozycję **Uruchom**:
+    Uruchom następujący kod w oknie interaktywnym. Wybierz przycisk **Przejdź do trybu koncentracji uwagi** . Następnie wpisz poniższy blok kodu w oknie interaktywnym (Zastąp `<name>` nazwą) i wybierz pozycję **Uruchom**:
 
 
     ```csharp
@@ -58,7 +58,7 @@ items:
     W poprzednim kroku użyto interpolacji ciągu do wstawienia jednego ciągu wewnątrz innego. Każde wyrażenie interpolacji, które jest częścią interpolowanego wyrażenia ciągu może być dowolnego typu danych, chociaż. Dołączmy wartości różnych wyrażeń typu danych w ciągu interpolowanym.
 
 
-    W poniższym przykładzie najpierw zdefiniujemy [krotkę](../../tuples.md) , która ma `Name`, `Price`i `perPackage` członków. Uruchom następujący kod w oknie interaktywnym:
+    W poniższym przykładzie najpierw zdefiniujemy [krotkę](../../tuples.md) , która ma `Name`, `Price` i `perPackage` członków. Uruchom następujący kod w oknie interaktywnym:
 
 
     ```csharp

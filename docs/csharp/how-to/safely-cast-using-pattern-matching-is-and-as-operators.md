@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: bezpieczne rzutowanie przy użyciu dopasowania wzorca i operatory is i AS'
+title: Jak bezpiecznie rzutować przy użyciu dopasowania wzorca i operatorów is i AS
 description: Dowiedz się, jak używać technik dopasowywania wzorców, aby bezpiecznie rzutować zmienne na inny typ. Możesz użyć dopasowania wzorca oraz operatorów is i AS, aby bezpiecznie skonwertować typy.
 ms.date: 09/05/2018
 helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 8d090df1338c535b11a7fd3ec32f6d1cb00b338f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 762f8135063f7256ce7a167c65013703d9249039
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739685"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973092"
 ---
-# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Instrukcje: bezpieczne rzutowanie przy użyciu dopasowania wzorca i operatory is i AS
+# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Jak bezpiecznie rzutować przy użyciu dopasowania wzorca i operatorów is i AS
 
 Ponieważ obiekty są polimorficzne, istnieje możliwość, aby zmienna typu klasy bazowej była przechowywana [typu](../programming-guide/types/index.md)pochodnego. Aby uzyskać dostęp do elementów członkowskich wystąpienia typu pochodnego, konieczne jest [rzutowanie](../programming-guide/types/casting-and-type-conversions.md) wartości z powrotem na typ pochodny. Jednak rzutowanie tworzy ryzyko wyrzucania <xref:System.InvalidCastException>. C#zawiera instrukcje [dopasowania wzorca](../pattern-matching.md) , które wykonują rzut warunkowy tylko wtedy, gdy powiedzie się. C#zawiera również operatory [is](../language-reference/operators/type-testing-and-cast.md#is-operator) i [as](../language-reference/operators/type-testing-and-cast.md#as-operator) do sprawdzenia, czy wartość jest określonego typu.
 

@@ -6,24 +6,24 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: 7632362339cf9e23599f4f688f98cbc1d0b32114
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: de260e1a6b58fdbac1a2f0f40c7ec2e50b13644e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894253"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975083"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Narzędzie klienta usługi danych WCF (DataSvcUtil.exe)
 
-DataSvcUtil. exe to narzędzie wiersza polecenia zapewniane przez usługi danych programu WCF, które korzysta [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] z kanału informacyjnego i generuje klasy usługi danych klienta, które są konieczne w celu uzyskania dostępu do usługi danych z .NET Framework aplikacji klienckiej. To narzędzie może generować klasy danych przy użyciu następujących źródeł metadanych:
+DataSvcUtil. exe to narzędzie wiersza polecenia zapewniane przez Usługi danych programu WCF, które korzysta z kanału informacyjnego protokołu Open Data Protocol (OData) i generuje klasy usługi danych klienta, które są konieczne w celu uzyskania dostępu do usługi danych z .NET Framework aplikacji klienckiej. To narzędzie może generować klasy danych przy użyciu następujących źródeł metadanych:
 
-- Główny identyfikator URI usługi danych. Narzędzie żąda dokumentu metadanych usługi, który opisuje model danych uwidoczniony przez usługę danych. Aby uzyskać więcej informacji, [zobacz OData: Dokument](https://go.microsoft.com/fwlink/?LinkId=186070)metadanych usługi.
+- Główny identyfikator URI usługi danych. Narzędzie żąda dokumentu metadanych usługi, który opisuje model danych uwidoczniony przez usługę danych. Aby uzyskać więcej informacji, zobacz [dokument metadanych usługi OData: Service](https://go.microsoft.com/fwlink/?LinkId=186070).
 
-- Plik modelu danych (. csdl) zdefiniowany przy użyciu języka z definicją schematu koncepcyjnego (CSDL), zgodnie z definicją w [ \[pliku\]MC-CSDL: Specyfikacja formatu](https://go.microsoft.com/fwlink/?LinkID=159072) pliku definicji schematu koncepcyjnego.
+- Plik modelu danych (CSDL) zdefiniowany przy użyciu języka definicji schematu koncepcyjnego (CSDL), zgodnie z definicją w [\[MC-csdl\]: specyfikacja formatu pliku definicji schematu koncepcyjnego](https://go.microsoft.com/fwlink/?LinkID=159072) .
 
-- Plik. edmx utworzony przy użyciu narzędzi Entity Data Model, które są dostarczane z Entity Framework. Aby uzyskać więcej informacji, zobacz [ \[MC-edmx\]: Entity Data Model Data Services specyfikacji formatu](https://go.microsoft.com/fwlink/?LinkID=178833) pakietu.
+- Plik. edmx utworzony przy użyciu narzędzi Entity Data Model, które są dostarczane z Entity Framework. Aby uzyskać więcej informacji, zobacz [\[MC-EDMX\]: Entity Data Model dla specyfikacji formatu pakietu Data Services](https://go.microsoft.com/fwlink/?LinkID=178833) .
 
-Aby uzyskać więcej informacji, zobacz [jak: Generuj ręcznie klasy](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)usługi danych klienta.
+Aby uzyskać więcej informacji, zobacz [jak: ręczne generowanie klas usługi danych klienta](how-to-manually-generate-client-data-service-classes-wcf-data-services.md).
 
 Narzędzie DataSvcUtil. exe jest instalowane w katalogu .NET Framework. W wielu przypadkach znajduje się to w *C:\Windows\Microsoft.NET\Framework\v4.0*. W przypadku systemów 64-bitowych ten program znajduje się w *C:\Windows\Microsoft.NET\Framework64\v4.0*. Możesz również uzyskać dostęp do narzędzia DataSvcUtil. exe z wiersz polecenia dla deweloperów dla programu Visual Studio.
 
@@ -39,12 +39,12 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |------------|-----------------|
 |`/dataservicecollection`|Określa, że jest również generowany kod wymagany do powiązania obiektów z kontrolkami.|
 |`/help`<br /><br /> —lub—<br /><br /> `/?`|Wyświetla składnię polecenia i opcje narzędzia.|
-|`/in:` *\<file>*|Określa plik CSDL lub edmx lub katalog, w którym znajduje się plik.|
+|`/in:` *\<pliku >*|Określa plik CSDL lub edmx lub katalog, w którym znajduje się plik.|
 |`/language:`[VB&#124;CSharp]|Określa język generowanych plików kodu źródłowego. Język jest wartością domyślną C#.|
 |`/nologo`|Pomija wyświetlanie komunikatu o prawach autorskich.|
-|`/out:` *\<file>*|Określa nazwę pliku kodu źródłowego, który zawiera wygenerowane klasy usługi danych klienta.|
-|`/uri:` *ciąg\<>*|Identyfikator URI źródła danych OData.|
-|`/version:`[1.0&#124;2.0]|Określa najwyższą zaakceptowaną wersję usługi OData. Wersja jest określana na podstawie `DataServiceVersion` atrybutu elementu DataService w metadanych zwracanej usługi danych. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](data-service-versioning-wcf-data-services.md). Po określeniu `/dataservicecollection` parametru należy również określić `/version:2.0` , aby włączyć powiązanie danych.|
+|`/out:` *\<pliku >*|Określa nazwę pliku kodu źródłowego, który zawiera wygenerowane klasy usługi danych klienta.|
+|*ciąg\<`/uri:` >*|Identyfikator URI źródła danych OData.|
+|`/version:`[1,0&#124;2,0]|Określa najwyższą zaakceptowaną wersję usługi OData. Wersja jest określana na podstawie atrybutu `DataServiceVersion` elementu DataService w metadanych zwracanej usługi danych. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](data-service-versioning-wcf-data-services.md). Po określeniu parametru `/dataservicecollection` należy również określić `/version:2.0`, aby włączyć powiązanie danych.|
 
 ## <a name="see-also"></a>Zobacz także
 

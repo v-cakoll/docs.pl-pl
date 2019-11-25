@@ -5,12 +5,12 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: a553d24a12b7ea227325a76d255e2ad53ada716f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 11fe9ba36d32a4c9fe363b48f76a8bb2b24f073b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739622"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974968"
 ---
 # <a name="migrate-from-the-net-framework-11"></a>Migrowanie z .NET Framework 1,1
 
@@ -56,9 +56,9 @@ Jednak w niektórych przypadkach może być konieczne zmodyfikowanie kodu źród
 
 Aby ocenić wpływ ewentualnych zmian w aplikacji, należy przejrzeć następujące listy zmian:
 
-- Istotne [zmiany w .NET Framework 2,0](https://go.microsoft.com/fwlink/?LinkId=125263) dokumenty zmiany w .NET Framework 2,0 SP1, które mogą mieć wpływ na aplikację, która jest przeznaczona .NET Framework 1,1.
+- Istotne [zmiany w .NET Framework 2,0](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10)) dokumenty zmiany w .NET Framework 2,0 SP1, które mogą mieć wpływ na aplikację, która jest przeznaczona .NET Framework 1,1.
 
-- [Zmiany w .NET Framework 3,5 z dodatkiem SP1](https://go.microsoft.com/fwlink/?LinkID=186989) zmieniają się między .NET Framework 3,5 i .NET Framework 3,5 SP1.
+- [Zmiany w .NET Framework 3,5 z dodatkiem SP1](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10)) zmieniają się między .NET Framework 3,5 i .NET Framework 3,5 SP1.
 
 - [.NET Framework 4 problemy z migracją](net-framework-4-migration-issues.md) dokumentów między .NET Framework 3,5 SP1 a .NET Framework 4.
 

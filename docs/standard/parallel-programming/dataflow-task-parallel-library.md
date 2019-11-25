@@ -9,38 +9,27 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: 7f5969bc6f73b2260ae1ffa4b0026d5b4119ff88
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c589e85a0bbfb3f0b5858698ffb2a294ff88cf2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134269"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973784"
 ---
 # <a name="dataflow-task-parallel-library"></a>Przepływ danych (Biblioteka zadań równoległych)
-<a name="top"></a>Biblioteka zadań równoległych (TPL) zawiera składniki przepływu danych, które ułatwiają zwiększenie niezawodności aplikacji korzystających z współbieżności. Te składniki przepływu danych są zbiorczo określane jako *Biblioteka TPL przepływu danych*. Ten model przepływu danych wspiera Programowanie oparte na aktorze, zapewniając w procesie przekazywanie komunikatów w celu uzyskania bardziej szczegółowych zadań przepływu danych i potokowych. Składniki przepływu danych są oparte na typach i planowaniu infrastruktury TPL i integrują się z obsługą C#, Visual Basic i F# językiem w programowaniu asynchronicznym. Te składniki przepływu danych są przydatne, gdy istnieje wiele operacji, które muszą komunikować się ze sobą asynchronicznie, lub gdy chcesz przetwarzać dane, gdy staną się dostępne. Rozważmy na przykład aplikację, która przetwarza dane obrazu z kamery sieci Web. Korzystając z modelu przepływu danych, aplikacja może przetwarzać ramki obrazu w miarę ich udostępniania. Jeśli aplikacja rozszerza ramki obrazu, na przykład przez wykonanie korekcji światła lub zmniejszenie oka, można utworzyć *potok* składników przepływu danych. Każdy etap potoku może korzystać z bardziej precyzyjnych funkcji równoległych, takich jak funkcje dostarczone przez TPL, aby przekształcić obraz.  
+Biblioteka zadań równoległych (TPL) zawiera składniki przepływu danych, które ułatwiają zwiększenie niezawodności aplikacji korzystających z współbieżności. Te składniki przepływu danych są zbiorczo określane jako *Biblioteka TPL przepływu danych*. Ten model przepływu danych wspiera Programowanie oparte na aktorze, zapewniając w procesie przekazywanie komunikatów w celu uzyskania bardziej szczegółowych zadań przepływu danych i potokowych. Składniki przepływu danych są oparte na typach i planowaniu infrastruktury TPL i integrują się z obsługą C#, Visual Basic i F# językiem w programowaniu asynchronicznym. Te składniki przepływu danych są przydatne, gdy istnieje wiele operacji, które muszą komunikować się ze sobą asynchronicznie, lub gdy chcesz przetwarzać dane, gdy staną się dostępne. Rozważmy na przykład aplikację, która przetwarza dane obrazu z kamery sieci Web. Korzystając z modelu przepływu danych, aplikacja może przetwarzać ramki obrazu w miarę ich udostępniania. Jeśli aplikacja rozszerza ramki obrazu, na przykład przez wykonanie korekcji światła lub zmniejszenie oka, można utworzyć *potok* składników przepływu danych. Każdy etap potoku może korzystać z bardziej precyzyjnych funkcji równoległych, takich jak funkcje dostarczone przez TPL, aby przekształcić obraz.  
   
  Ten dokument zawiera omówienie biblioteki przepływu danych TPL. Opisano w nim model programowania, wstępnie zdefiniowane typy bloków przepływu danych oraz sposób konfigurowania bloków przepływu danych w celu spełnienia określonych wymagań aplikacji.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
-  
- Ten dokument zawiera następujące sekcje:  
-  
-- [Model programowania](#model)  
-  
-- [Wstępnie zdefiniowane typy bloków przepływu danych](#predefined_types)  
-  
-- [Konfigurowanie zachowania blokowania przepływu danych](#behavior)  
-  
-- [Niestandardowe bloki przepływu danych](#custom)  
-  
-<a name="model"></a>   
-## <a name="programming-model"></a>Model programowania  
+
+## <a name="programming-model"></a>Model programowania
  Biblioteka TPL przepływu danych stanowi podstawę przekazywania komunikatów i przekształcają intensywnie korzystających z procesora CPU aplikacji intensywnie wykorzystujących procesor i/wy, które mają wysoką przepływność i małe opóźnienia. Zapewnia również jawną kontrolę nad sposobem buforowania danych i poruszaniem się w systemie. Aby lepiej zrozumieć model programowania przepływu danych, weź pod uwagę aplikację, która asynchronicznie ładuje obrazy z dysku i tworzy złożone obrazy. Tradycyjne modele programistyczne zwykle wymagają używania wywołań zwrotnych i obiektów synchronizacji, takich jak blokady, do koordynowania zadań i uzyskiwania dostępu do udostępnionych danych. Za pomocą modelu programowania przepływu danych można tworzyć obiekty przepływu danych, które przetwarzają obrazy w miarę ich odczytu z dysku. W modelu przepływu danych deklaruje, jak dane są obsługiwane, gdy staną się dostępne, a także wszelkie zależności między danymi. Ponieważ środowisko uruchomieniowe zarządza zależnościami między danymi, często można uniknąć konieczności synchronizacji dostępu do udostępnionych danych. Ponadto, ponieważ harmonogramy środowiska uruchomieniowego są wykonywane na podstawie asynchronicznego przybycia danych, przepływu danych może zwiększyć czas reakcji i przepływność przez wydajne zarządzanie wątkami bazowymi. Aby zapoznać się z przykładem wykorzystującym model programowania przepływu danych do implementowania przetwarzania obrazów w aplikacji Windows Forms, zobacz [Przewodnik: używanie przepływu danych w aplikacji Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ### <a name="sources-and-targets"></a>Źródła i obiekty docelowe  
  Biblioteka TPL przepływu danych składa się z *bloków przepływu danych*, które są strukturami danych, które buforują i przetwarzają dane. TPL definiuje trzy rodzaje bloków przepływu danych: *bloków źródłowych*, *bloków docelowych*i *bloków propagacji*. Blok źródłowy działa jako źródło danych i może zostać odczytany. Blok docelowy działa jako odbiorca danych i może być zapisany w. Blok propagator działa zarówno jako blok źródłowy, jak i blok docelowy i może być odczytywany i zapisywana. TPL definiuje interfejs <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> do reprezentowania źródeł, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> do reprezentowania obiektów docelowych oraz <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602?displayProperty=nameWithType> do reprezentowania propagator. <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> dziedziczy z obu <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>i <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>.  
   
- Biblioteka TPL przepływu danych zawiera kilka wstępnie zdefiniowanych typów bloków przepływu danych, które implementują interfejsy <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>i <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602>. Te typy bloków przepływu danych zostały opisane w tym dokumencie w sekcji [wstępnie zdefiniowane typy bloków przepływu danych](#predefined_types).  
+ Biblioteka TPL przepływu danych zawiera kilka wstępnie zdefiniowanych typów bloków przepływu danych, które implementują interfejsy <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>i <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602>. Te typy bloków przepływu danych zostały opisane w tym dokumencie w sekcji [wstępnie zdefiniowane typy bloków przepływu danych](#predefined-dataflow-block-types).  
   
 ### <a name="connecting-blocks"></a>Łączenie bloków  
  Bloki przepływu danych można połączyć z *potokami*, które są sekwencjami liniowymi bloków przepływu danych lub *sieci*, które są wykresami bloków przepływu danych. Potok jest jedną z form sieci. W potoku lub sieci źródła asynchronicznie propagują dane do obiektów docelowych, ponieważ te dane staną się dostępne. Metoda <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> łączy źródłowy blok przepływu danych z blokiem docelowym. Źródło może być połączone z zero lub więcej obiektami docelowymi; elementy docelowe mogą być połączone z zera lub więcej źródeł. Możesz dodawać lub usuwać bloki przepływu danych do lub z potoku lub sieci jednocześnie. Wstępnie zdefiniowane typy bloku przepływu danych obsługują wszystkie aspekty bezpiecznego wątku łączące i odłączania.  
@@ -54,7 +43,7 @@ ms.locfileid: "73134269"
 > Ponieważ każdy wstępnie zdefiniowany typ bloku Source przepływu danych gwarantuje, że komunikaty są rozmnożone w kolejności, w której są odbierane, każdy komunikat musi zostać odczytany z bloku źródłowego, zanim blok źródłowy będzie mógł przetworzyć następny komunikat. Dlatego w przypadku używania filtrowania do łączenia wielu obiektów docelowych ze źródłem upewnij się, że co najmniej jeden blok docelowy otrzymuje każdy komunikat. W przeciwnym razie aplikacja może zakleszczenie.  
   
 ### <a name="message-passing"></a>Przekazywanie komunikatów  
- Model programowania przepływu danych jest powiązany z koncepcją *przekazywania komunikatów*, gdzie niezależne składniki programu komunikują się ze sobą przez wysyłanie komunikatów. Jednym ze sposobów propagowania komunikatów między składnikami aplikacji jest wywołanie <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> metod w celu wysyłania komunikatów do docelowych bloków przepływu danych post (<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> działa synchronicznie, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> działa asynchronicznie) i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A>i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A> metody odbierania wiadomości z bloków źródłowych. Można połączyć te metody z potokami przepływu danych lub sieciami, wysyłając dane wejściowe do węzła głównego (blok docelowy) i pobierając dane wyjściowe z węzła terminalu potoku lub węzłów terminalu sieci (co najmniej jeden blok źródłowy). Można również użyć metody <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Choose%2A>, aby odczytać z pierwszego z udostępnionych źródeł danych i wykonać działania dotyczące tych danych.  
+ Model programowania przepływu danych jest powiązany z koncepcją *przekazywania komunikatów*, gdzie niezależne składniki programu komunikują się ze sobą przez wysyłanie komunikatów. Jednym ze sposobów propagowania komunikatów między składnikami aplikacji jest wywołanie <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> metod w celu wysyłania komunikatów do docelowych bloków przepływu danych post (<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> działa synchronicznie, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> działa asynchronicznie) oraz <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A>i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A> metod odbierania komunikatów z bloków źródłowych. Można połączyć te metody z potokami przepływu danych lub sieciami, wysyłając dane wejściowe do węzła głównego (blok docelowy) i pobierając dane wyjściowe z węzła terminalu potoku lub węzłów terminalu sieci (co najmniej jeden blok źródłowy). Można również użyć metody <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Choose%2A>, aby odczytać z pierwszego z udostępnionych źródeł danych i wykonać działania dotyczące tych danych.  
   
  Bloki źródła oferują dane do bloków docelowych przez wywołanie metody <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A?displayProperty=nameWithType>. Blok docelowy reaguje na oferowany komunikat na jeden z trzech sposobów: może zaakceptować komunikat, odrzucić komunikat lub odłożyć komunikat. Gdy element docelowy akceptuje komunikat, Metoda <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> zwraca <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Accepted>. Gdy obiekt docelowy odrzuci komunikat, Metoda <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> zwraca <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Declined>. Gdy element docelowy wymaga, aby nie odbierał już żadnych komunikatów ze źródła, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> zwraca <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.DecliningPermanently>. Wstępnie zdefiniowane typy bloków źródłowych nie oferują komunikatów do połączonych obiektów docelowych po odebraniu takiej wartości zwracanej i automatycznie odłączają od tych elementów docelowych.  
   
@@ -78,10 +67,7 @@ ms.locfileid: "73134269"
  [!code-vb[TPLDataflow_Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#11)]  
   
  Możesz również użyć właściwości, takich jak <xref:System.Threading.Tasks.Task.IsCanceled%2A> w treści zadania kontynuacji, aby określić dodatkowe informacje o stanie ukończenia bloku przepływu danych. Aby uzyskać więcej informacji na temat zadań kontynuacji i sposobu ich odnoszących do anulowania i obsługi błędów, zobacz Tworzenie [łańcucha zadań przy użyciu zadań kontynuacji](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md), [anulowania zadań](../../../docs/standard/parallel-programming/task-cancellation.md)i [obsługi wyjątków](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
-  
- [[Przejdź do góry](#top)]  
-  
-<a name="predefined_types"></a>   
+
 ## <a name="predefined-dataflow-block-types"></a>Wstępnie zdefiniowane typy bloków przepływu danych  
  Biblioteka TPL przepływu danych zawiera kilka wstępnie zdefiniowanych typów bloków przepływu danych. Te typy są podzielone na trzy kategorie: *buforowanie bloków*, *bloków wykonywania*i *bloków grupowania*. W poniższych sekcjach opisano typy bloków, które składają się na te kategorie.  
   
@@ -201,10 +187,7 @@ ms.locfileid: "73134269"
  [!code-vb[TPLDataflow_Overview#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#9)]  
   
  Pełny przykład, który używa <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> do przechwytywania zarówno wyników, jak i wyjątków, które występują, gdy program odczytuje z bazy danych, zobacz [Przewodnik: korzystanie z BatchBlock i BatchedJoinBlock w celu zwiększenia wydajności](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md).  
-  
- [[Przejdź do góry](#top)]  
-  
-<a name="behavior"></a>   
+
 ## <a name="configuring-dataflow--block-behavior"></a>Konfigurowanie zachowania blokowania przepływu danych  
  Dodatkowe opcje można włączyć, dostarczając obiekt <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions?displayProperty=nameWithType> do konstruktora typów bloku przepływu danych. Te opcje kontrolują zachowanie, takie jak harmonogram zarządzający zadaniem podstawowym i stopień równoległości. <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions> ma również typy pochodne, które określają zachowanie specyficzne dla określonych typów bloku przepływu danych. Poniższa tabela zawiera podsumowanie typów opcji skojarzonych z każdym typem bloku przepływu danych.  
   
@@ -254,16 +237,11 @@ ms.locfileid: "73134269"
   
  W przypadku typów bloku sprzężenia, takich jak <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>, tryb zachłanne oznacza, że blok natychmiast akceptuje dane, nawet jeśli odpowiadające im dane, z którymi mają zostać przyłączone, nie są jeszcze dostępne. Tryb inny niż zachłanne oznacza, że blok opóźnia wszystkie komunikaty przychodzące do momentu, gdy jeden z nich jest dostępny w celu zakończenia przyłączenia. Jeśli którykolwiek z odroczonych komunikatów nie jest już dostępny, blok sprzężenia zwalnia wszystkie odroczone komunikaty i ponownie uruchamia proces. W przypadku klasy <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> zachowanie zachłanne i inne niż zachłanne jest podobne, z tą różnicą, że w trybie innym niż zachłanne, obiekt <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> opóźnia wszystkie komunikaty przychodzące do momentu uzyskania wystarczającej liczby dostępności z różnych źródeł, aby zakończyć partię.  
   
- Aby określić tryb inny niż zachłanne dla bloku przepływu danych, ustaw <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> na `False`. Aby zapoznać się z przykładem, który ilustruje, jak używać trybu zachłanne, aby umożliwić wielokrotne współużytkowanie źródła danych przez wiele bloków join, zobacz [How to: use klasy JoinBlock do odczytywania danych z wielu źródeł](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md).  
-  
- [[Przejdź do góry](#top)]  
-  
-<a name="custom"></a>   
+ Aby określić tryb inny niż zachłanne dla bloku przepływu danych, ustaw <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> na `False`. Aby zapoznać się z przykładem, który ilustruje, jak używać trybu zachłanne, aby umożliwić wielokrotne współużytkowanie źródła danych przez wiele bloków join, zobacz [How to: use klasy JoinBlock do odczytywania danych z wielu źródeł](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md).
+
 ## <a name="custom-dataflow-blocks"></a>Niestandardowe bloki przepływu danych  
- Chociaż biblioteka TPL przepływu danych udostępnia wiele wstępnie zdefiniowanych typów bloków, można utworzyć dodatkowe typy bloku, które wykonują niestandardowe zachowanie. Zaimplementuj interfejsy <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> lub <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> bezpośrednio lub użyj metody <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A>, aby utworzyć blok złożony, który hermetyzuje zachowanie istniejących typów bloków. Przykłady pokazujące sposób implementacji niestandardowej funkcji blokowania przepływu danych można znaleźć w [przewodniku: Tworzenie niestandardowego typu bloku przepływu danych](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md).  
-  
- [[Przejdź do góry](#top)]  
-  
+ Chociaż biblioteka TPL przepływu danych udostępnia wiele wstępnie zdefiniowanych typów bloków, można utworzyć dodatkowe typy bloku, które wykonują niestandardowe zachowanie. Zaimplementuj interfejsy <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> lub <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> bezpośrednio lub użyj metody <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A>, aby utworzyć blok złożony, który hermetyzuje zachowanie istniejących typów bloków. Przykłady pokazujące sposób implementacji niestandardowej funkcji blokowania przepływu danych można znaleźć w [przewodniku: Tworzenie niestandardowego typu bloku przepływu danych](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md).
+
 ## <a name="related-topics"></a>Tematy pokrewne  
   
 |Tytuł|Opis|  

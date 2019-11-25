@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850800"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969408"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: Uruchamianie pierwszego C# programu
   durationInMinutes: 2
   content: >
-    Uruchom następujący kod w oknie interaktywnym. Aby to zrobić, wpisz poniższy blok kodu w oknie interaktywnym i kliknij przycisk **Uruchom** :
+    Uruchom następujący kod w oknie interaktywnym. Wybierz przycisk **Przejdź do trybu koncentracji uwagi** . Następnie wpisz poniższy blok kodu w oknie interaktywnym i wybierz polecenie **Uruchom**:
 
 
     ```csharp
@@ -34,10 +34,10 @@ items:
     ```
 
 
-    Gratulacje! Uruchomiono pierwszy C# program. Jest to prosty program, który drukuje komunikat "Hello world!". Wykorzystano <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> metodę, aby wydrukować ten komunikat. `Console`jest typem, który reprezentuje okno konsoli. `WriteLine`to metoda `Console` typu, która drukuje wiersz tekstu w tej konsoli tekstu.
+    Nabycia! Uruchomiono pierwszy C# program. Jest to prosty program, który drukuje komunikat "Hello world!". Wykorzystano metodę <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, aby wydrukować ten komunikat. `Console` jest typem, który reprezentuje okno konsoli. `WriteLine` to metoda typu `Console`, która drukuje wiersz tekstu w tej konsoli tekstu.
 
 
-    Przejdźmy i Dowiedz się więcej. Pozostała część tej lekcji analizuje pracę z `string` typem, który reprezentuje tekst w. C# Podobnie jak `string` typ, typ ma metody. `Console` `string` Metody współpracują z tekstem.
+    Przejdźmy i Dowiedz się więcej. Pozostała część tej lekcji analizuje pracę z typem `string`, który reprezentuje tekst w C#. Podobnie jak typ `Console`, typ `string` ma metody. Metody `string` współpracują z tekstem.
 
 
     > [!NOTE]
@@ -46,7 +46,7 @@ items:
 - title: Deklarowanie i Używanie zmiennych
   durationInMinutes: 3
   content: >
-    Pierwszy program wydrukował `string` "Hello World!" na ekranie.
+    Pierwszy program wydrukował `string` "Hello world!" na ekranie.
 
 
     > [!TIP]
@@ -68,7 +68,7 @@ items:
     ```
 
 
-    Pierwszy wiersz deklaruje zmienną `aFriend` i przypisuje jej wartość, "Bill". Drugi wiersz drukuje nazwę.
+    Pierwszy wiersz deklaruje zmienną, `aFriend` i przypisuje jej wartość "Bill". Drugi wiersz drukuje nazwę.
 
 
     Można przypisać różne wartości do każdej zadeklarowanej zmiennej. Możesz zmienić nazwę na jednego z znajomych. Dodaj te dwa wiersze w oknie interaktywnym po dodanym już kodzie:
@@ -83,7 +83,7 @@ items:
     ```
 
 
-    Zauważ, że ten sam wiersz kodu drukuje dwa różne komunikaty na podstawie wartości przechowywanej w `aFriend` zmiennej.
+    Zauważ, że ten sam wiersz kodu drukuje dwa różne komunikaty na podstawie wartości przechowywanej w zmiennej `aFriend`.
 
 
     Być może zawarto również zauważyć, że w ostatnich dwóch komunikatach brakuje słowa "Hello". Naprawmy to teraz.  Zmodyfikuj wiersze, które drukują komunikat w następujący sposób:
@@ -96,18 +96,18 @@ items:
     ```
 
 
-    Kliknij przycisk **Uruchom** ponownie, aby zobaczyć wyniki.
+    Wybierz pozycję **Uruchom** ponownie, aby wyświetlić wyniki.
 
 
-    Użyto do kompilowania ciągów ze **zmiennych** i stałych ciągów. **** `+` Istnieje lepszy sposób.
+    Używasz `+` do kompilowania ciągów ze **zmiennych** i ciągów **stałych** . Istnieje lepszy sposób.
 
-    Można umieścić zmienną między `{` i `}` znakami, aby powiedzieć C# , aby zamienić ten tekst na wartość zmiennej.
+    Można umieścić zmienną między `{` i `}` znaków, aby powiedzieć C# , aby zamienić ten tekst na wartość zmiennej.
 
 
     Jest to nazywane [interpolacją ciągu](../../language-reference/tokens/interpolated.md).
 
 
-    Jeśli dodasz `$` przed cudzysłowem otwierającym ciąg, możesz dołączyć zmienne, takie jak `aFriend`w ciągu między nawiasami klamrowymi. Wypróbuj:
+    Jeśli dodasz `$` przed cudzysłowem otwierającym ciąg, możesz dołączyć zmienne, takie jak `aFriend`, wewnątrz ciągu między nawiasami klamrowymi. Wypróbuj:
 
 
 
@@ -118,7 +118,7 @@ items:
     ```
 
 
-    Kliknij przycisk **Uruchom** ponownie, aby zobaczyć wyniki. Zamiast "Hello {aFriend}" komunikat powinien mieć wartość "Hello Maira".
+    Wybierz pozycję **Uruchom** ponownie, aby wyświetlić wyniki. Zamiast "Hello {aFriend}" komunikat powinien mieć wartość "Hello Maira".
 
 
     > [!NOTE]
@@ -144,7 +144,7 @@ items:
     ```
 
 
-    W miarę eksplorowania ciągów można znaleźć, że ciągi są więcej niż kolekcją liter. Można znaleźć długość ciągu przy użyciu `Length`. `Length`jest **właściwością** ciągu i zwraca liczbę znaków w tym ciągu. Dodaj następujący kod w dolnej części okna interaktywnego:
+    W miarę eksplorowania ciągów można znaleźć, że ciągi są więcej niż kolekcją liter. Długość ciągu można znaleźć za pomocą `Length`. `Length` jest **właściwością** ciągu i zwraca liczbę znaków w tym ciągu. Dodaj następujący kod w dolnej części okna interaktywnego:
 
 
     ```csharp
@@ -158,7 +158,7 @@ items:
 
     > [!TIP]
 
-    > Jest to dobry czas na samodzielne Eksplorowanie. Wiesz już, że `Console.WriteLine()` zapisuje tekst na ekranie. Wiesz już, jak deklarować zmienne i łączyć ciągi. Eksperymentuj w oknie interaktywnym. Okno zawiera funkcję **IntelliSense** , która udostępnia sugestie dotyczące tego, co można zrobić. Wpisz a `.` `d` po .`firstFriend` Zobaczysz listę sugestii dotyczących właściwości i metod, których można użyć.
+    > Jest to dobry czas na samodzielne Eksplorowanie. Wiesz już, że `Console.WriteLine()` zapisuje tekst na ekranie. Wiesz już, jak deklarować zmienne i łączyć ciągi. Eksperymentuj w oknie interaktywnym. Okno zawiera funkcję **IntelliSense** , która udostępnia sugestie dotyczące tego, co można zrobić. Wpisz `.` po `d` w `firstFriend`. Zobaczysz listę sugestii dotyczących właściwości i metod, których można użyć.
 
 
     > [!NOTE]
@@ -167,12 +167,12 @@ items:
 - title: Zrób więcej z użyciem ciągów
   durationInMinutes: 5
   content: >
-    Używasz **metody**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, aby drukować wiadomości. **Metoda** jest blokiem kodu, który implementuje niektóre akcje. Ma nazwę, więc możesz uzyskać do niej dostęp.
+    Używasz **metody**<xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, aby drukować komunikaty. **Metoda** jest blokiem kodu, który implementuje niektóre akcje. Ma nazwę, więc możesz uzyskać do niej dostęp.
 
 
     Załóżmy, że ciągi zawierają początkowe lub końcowe spacje, które nie mają być wyświetlane. Chcesz **przyciąć** spacje z ciągów.
 
-    Metody i powiązane metody <xref:System.String.TrimStart%2A> i <xref:System.String.TrimEnd%2A> wykonują tę czynność. <xref:System.String.Trim%2A> Możesz użyć tych metod, aby usunąć spacje wiodące i końcowe. Wypróbuj następujący kod:
+    Metoda <xref:System.String.Trim%2A> i powiązane metody <xref:System.String.TrimStart%2A> i <xref:System.String.TrimEnd%2A> wykonać to działanie. Możesz użyć tych metod, aby usunąć spacje wiodące i końcowe. Wypróbuj następujący kod:
 
 
     ```csharp
@@ -199,10 +199,10 @@ items:
     ```
 
 
-    Ten przykład wzmacnia kilka ważnych koncepcji związanych z pracą z ciągami. Metody służące do manipulowania ciągami zwracają nowe obiekty String zamiast wprowadzania modyfikacji. Można zobaczyć, że każde wywołanie `Trim` metody zwraca nowy ciąg, ale nie zmienia oryginalnego komunikatu.
+    Ten przykład wzmacnia kilka ważnych koncepcji związanych z pracą z ciągami. Metody służące do manipulowania ciągami zwracają nowe obiekty String zamiast wprowadzania modyfikacji. Można zobaczyć, że każde wywołanie dowolnej metody `Trim` zwraca nowy ciąg, ale nie zmienia oryginalnego komunikatu.
 
 
-    Istnieją inne metody do pracy z ciągiem. Można na przykład użyć polecenia Wyszukaj i Zastąp w edytorze lub Edytor tekstów przed. <xref:System.String.Replace%2A> Metoda wykonuje coś podobnego w ciągu. Wyszukuje podciąg i zastępuje go innym tekstem. Metoda przyjmuje dwa **parametry.** <xref:System.String.Replace%2A> Są to ciągi między nawiasami. Pierwszy ciąg to tekst do wyszukania. Drugi ciąg to tekst, w którym ma zostać zamieniony. Wypróbuj ją samodzielnie. Dodaj ten kod. Wpisz je w, aby wyświetlić wskazówki `.Re` `sayHello` po rozpoczęciu wpisywania po zmiennej:
+    Istnieją inne metody do pracy z ciągiem. Można na przykład użyć polecenia Wyszukaj i Zastąp w edytorze lub Edytor tekstów przed. Metoda <xref:System.String.Replace%2A> wykonuje coś podobnego w ciągu. Wyszukuje podciąg i zastępuje go innym tekstem. Metoda <xref:System.String.Replace%2A> przyjmuje dwa **Parametry**. Są to ciągi między nawiasami. Pierwszy ciąg to tekst do wyszukania. Drugi ciąg to tekst, w którym ma zostać zamieniony. Wypróbuj ją samodzielnie. Dodaj ten kod. Wpisz je w, aby wyświetlić wskazówki po rozpoczęciu wpisywania `.Re` po zmiennej `sayHello`:
 
 
     ```csharp
@@ -218,7 +218,7 @@ items:
     ```
 
 
-    Dwie inne przydatne metody tworzą ciąg WERSALIKów lub małych liter. Wypróbuj następujący kod. Wpisz go, aby zobaczyć, w jaki sposób **technologia IntelliSense** udostępnia wskazówki podczas `To`uruchamiania, aby wpisać:
+    Dwie inne przydatne metody tworzą ciąg WERSALIKów lub małych liter. Wypróbuj następujący kod. Wpisz go, aby zobaczyć, w jaki sposób **technologia IntelliSense** udostępnia wskazówki podczas uruchamiania, aby wpisać `To`:
 
 
     ```csharp
@@ -236,7 +236,7 @@ items:
 - title: Wyszukiwanie ciągów
   durationInMinutes: 10
   content: >
-    Druga część operacji *wyszukiwania i zamieniania* polega na znalezieniu tekstu w ciągu. Możesz użyć <xref:System.String.Contains%2A> metody do wyszukania. Informuje o tym, czy ciąg zawiera podciąg. Wypróbuj następujący kod, aby eksplorować <xref:System.String.Contains%2A>:
+    Druga część operacji *wyszukiwania i zamieniania* polega na znalezieniu tekstu w ciągu. Aby wyszukać, można użyć metody <xref:System.String.Contains%2A>. Informuje o tym, czy ciąg zawiera podciąg. Wypróbuj następujący kod, aby eksplorować <xref:System.String.Contains%2A>:
 
 
     ```csharp
@@ -250,13 +250,13 @@ items:
     ```
 
 
-    Metoda zwraca wartość logiczną, która informuje o tym, czy wyszukiwany ciąg został znaleziony. **** <xref:System.String.Contains%2A> `false` Wartość **logiczna** jest przechowywana albo `true` lub. Dowiesz się więcej o wartościach **logicznych** w późniejszej lekcji.
+    Metoda <xref:System.String.Contains%2A> zwraca wartość **logiczną** , która informuje o tym, czy wyszukiwany ciąg został znaleziony. Wartość **logiczna** przechowuje `true` lub `false`. Dowiesz się więcej o wartościach **logicznych** w późniejszej lekcji.
 
 
     ***Sprawdz***
 
 
-    Istnieją dwie podobne metody, <xref:System.String.StartsWith%2A> <xref:System.String.EndsWith%2A> które również szukają podciągów w ciągu. Znajdują się one w podciągu na początku lub na końcu ciągu. Spróbuj zmodyfikować poprzedni przykład, aby użyć <xref:System.String.StartsWith%2A> polecenia i <xref:System.String.EndsWith%2A> zamiast. <xref:System.String.Contains%2A> Wyszukaj "ty" lub "Pożegnanie" na początku ciągu. Wyszukaj ciąg "Hello" lub "Pożegnanie" na końcu ciągu.
+    Istnieją dwie podobne metody, <xref:System.String.StartsWith%2A> i <xref:System.String.EndsWith%2A>, które również szukają podciągów w ciągu. Znajdują się one w podciągu na początku lub na końcu ciągu. Spróbuj zmodyfikować poprzedni przykład, aby użyć <xref:System.String.StartsWith%2A> i <xref:System.String.EndsWith%2A> zamiast <xref:System.String.Contains%2A>. Wyszukaj "ty" lub "Pożegnanie" na początku ciągu. Wyszukaj ciąg "Hello" lub "Pożegnanie" na końcu ciągu.
 
 
     > [!NOTE]
@@ -264,7 +264,7 @@ items:
     > Obejrzyj interpunkcję po przetestowaniu tekstu na końcu ciągu. Jeśli ciąg jest zakończony kropką, należy wyszukać ciąg kończący się kropką.
 
 
-    Należy zacząć `true` od "ty" i kończyć się ciągiem "Hello" i fałszem, aby rozpocząć od lub kończąc na "Pożegnanie".
+    Należy uzyskać `true` do rozpoczęcia od "ty" i kończąc na "Hello", a wartość false, aby rozpocząć od lub kończąc na "Pożegnanie".
 
 
     > [!NOTE]
@@ -296,10 +296,10 @@ items:
 
     > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Wprowadzenie do C# samouczka zostało zakończone C#. Możesz kliknąć poniższe **numery C# ** , aby uruchomić następny Interaktywny samouczek lub odwiedzić [witrynę programu .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) , aby pobrać zestaw .NET Core SDK, utworzyć projekt na maszynie i zachować kodowanie. Sekcja "następne kroki" umożliwia powrót do tych samouczków.
+    Wprowadzenie do C# samouczka zostało zakończone C#. Możesz wybrać poniższe **numery C# ** , aby uruchomić następny Interaktywny samouczek lub odwiedzić [witrynę programu .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) , aby pobrać zestaw .NET Core SDK, utworzyć projekt na maszynie i zachować kodowanie. Sekcja "następne kroki" umożliwia powrót do tych samouczków.
 
 
-    Aby uzyskać więcej informacji na `string` temat typu:
+    Aby uzyskać więcej informacji na temat typu `string`:
 
     - Temat Przewodnik programowania na [ciągach](../../programming-guide/strings/index.md). [ C# ](../../programming-guide/index.md)
 

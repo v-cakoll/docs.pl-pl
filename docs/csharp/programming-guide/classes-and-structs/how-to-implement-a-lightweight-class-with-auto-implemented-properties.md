@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Implementowanie klasy lekkiej z zaimplementowanymi właściwościami Przewodnik C# programowania'
+title: Jak zaimplementować klasę uproszczoną przy użyciu właściwości, które są implementowane, przewodnik C# programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 626a44fbaa65f48e0d9fe66d83c44abb07eba379
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: b5bf2e84ffe47cd1eaf17e877a20a700e98339ff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926757"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970911"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Instrukcje: Implementowanie klasy lekkiej z zaimplementowanymi właściwościami (C# Przewodnik programowania)
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Jak zaimplementować klasę uproszczoną z zaimplementowanymi właściwościami (C# Przewodnik programowania)
 
 Ten przykład przedstawia sposób tworzenia niezmiennej klasy lekkiej, która służy tylko do hermetyzacji zestawu właściwości, które są implementowane. Użyj tego rodzaju konstrukcji zamiast struktury, gdy musisz użyć semantyki typu odwołania.
 
@@ -21,12 +21,12 @@ Można wprowadzić niemodyfikowalną właściwość na dwa sposoby:
 
 - Można zadeklarować metodę dostępu [Set](../../language-reference/keywords/set.md) jako [prywatną](../../language-reference/keywords/private.md).  Właściwość jest tylko settable w obrębie typu, ale jest niezmienna dla odbiorców.
 
-  W przypadku deklarowania prywatnej `set` metody dostępu nie można użyć inicjatora obiektów do zainicjowania właściwości. Musisz użyć konstruktora lub metody fabryki.
+  Po zadeklarowaniu metody dostępu prywatnego `set` nie można użyć inicjatora obiektów do zainicjowania właściwości. Musisz użyć konstruktora lub metody fabryki.
 - Można zadeklarować tylko metodę dostępu [Get](../../language-reference/keywords/get.md) , która sprawia, że właściwość jest niezmienna wszędzie z wyjątkiem konstruktora typu.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia dwa sposoby implementacji niezmiennej klasy, która ma właściwości, które są implementowane. Każdy ze sposobów deklaruje jedną z właściwości z prywatną `set` i jedną z właściwości `get` tylko z.  Pierwsza klasa używa konstruktora tylko w celu zainicjowania właściwości, a druga Klasa używa metody fabryki statycznej, która wywołuje konstruktora.
+Poniższy przykład przedstawia dwa sposoby implementacji niezmiennej klasy, która ma właściwości, które są implementowane. Każdy sposób deklaruje jedną z właściwości z prywatnym `set` i jedną z właściwości tylko z `get`.  Pierwsza klasa używa konstruktora tylko w celu zainicjowania właściwości, a druga Klasa używa metody fabryki statycznej, która wywołuje konstruktora.
 
 ```csharp
 // This class is immutable. After an object is created,

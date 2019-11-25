@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: rejestrowanie i konfigurowanie krótkiej nazwy usługi'
+title: 'Instrukcje: rejestrowanie i Konfigurowanie monikera usługi'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 547e507b4a1115de81532263c34964cd20f15d4e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 47e11ff2bc5b1c3eca152ba1fa429b5785c2f01b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972145"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976123"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a>Instrukcje: rejestrowanie i konfigurowanie krótkiej nazwy usługi
+# <a name="how-to-register-and-configure-a-service-moniker"></a>Instrukcje: rejestrowanie i Konfigurowanie monikera usługi
 Przed użyciem monikera usługi Windows Communication Foundation (WCF) w ramach aplikacji COM z umową z określonym typem, należy zarejestrować wymagane typy z atrybutami COM i skonfigurować aplikację COM oraz moniker z wymaganym powiązaniem skonfigurować.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Aby zarejestrować wymagane typy atrybutów z modelem COM  
@@ -27,7 +27,7 @@ Przed użyciem monikera usługi Windows Communication Foundation (WCF) w ramach 
   
 3. Kompiluj zarządzany klient WCF jako zestaw o silnej nazwie. Wymaga to podpisania za pomocą pary kluczy kryptograficznych. Aby uzyskać więcej informacji, zobacz [podpisywanie zestawu za pomocą silnej nazwy](https://go.microsoft.com/fwlink/?LinkId=94874) w przewodniku dewelopera platformy .NET.  
   
-4. Użyj narzędzia rejestracji zestawu (Regasm. exe) z `/tlb` opcją zarejestrowania typów w zestawie przy użyciu modelu com.  
+4. Użyj narzędzia rejestracji zestawu (Regasm. exe) z opcją `/tlb`, aby zarejestrować typy w zestawie przy użyciu modelu COM.  
   
 5. Użyj narzędzia globalnej pamięci podręcznej zestawów (Gacutil. exe), aby dodać zestaw do globalnej pamięci podręcznej zestawów.  
   
@@ -53,7 +53,7 @@ Przed użyciem monikera usługi Windows Communication Foundation (WCF) w ramach 
     }  
     ```  
   
-     Aplikacja zostanie udostępniona przy użyciu `wsHttpBinding` powiązania. W przypadku danego typu i konfiguracji aplikacji używane są następujące przykładowe ciągi monikera.  
+     Aplikacja zostanie udostępniona przy użyciu powiązania `wsHttpBinding`. W przypadku danego typu i konfiguracji aplikacji używane są następujące przykładowe ciągi monikera.  
   
     ``` 
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1  
@@ -65,9 +65,9 @@ Przed użyciem monikera usługi Windows Communication Foundation (WCF) w ramach 
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1, contract={36ADAD5A-A944-4d5c-9B7C-967E4F00A090}  
     ```  
   
-     Można użyć dowolnego z tych ciągów monikera z poziomu aplikacji Visual Basic 6,0, po dodaniu odwołania do zestawu zawierającego `IMathService` typy, jak pokazano w poniższym przykładowym kodzie.  
+     Można użyć dowolnego z tych ciągów monikera z poziomu aplikacji Visual Basic 6,0, po dodaniu odwołania do zestawu zawierającego typy `IMathService`, jak pokazano w poniższym przykładowym kodzie.  
   
-    ```vb  
+    ```vb
     Dim MathProxy As IMathService  
     Dim result As Integer  
   
@@ -79,7 +79,7 @@ Przed użyciem monikera usługi Windows Communication Foundation (WCF) w ramach 
     result = MathProxy.Add(3, 5)  
     ```  
   
-     W tym przykładzie Definicja konfiguracji `Binding1` powiązania jest przechowywana w pliku konfiguracyjnym o odpowiednich nazwach dla aplikacji klienckiej, takiej jak vb6appname. exe. config.  
+     W tym przykładzie definicja `Binding1` konfiguracji powiązania jest przechowywana w pliku konfiguracyjnym o odpowiednich nazwach dla aplikacji klienckiej, takiej jak vb6appname. exe. config.  
   
     > [!NOTE]
     > Możesz użyć podobnego kodu w C#, a C++lub dowolnej innej aplikacji języka .NET.  
@@ -87,13 +87,13 @@ Przed użyciem monikera usługi Windows Communication Foundation (WCF) w ramach 
     > [!NOTE]
     > : Jeśli moniker jest źle sformułowany lub usługa jest niedostępna, wywołanie do `GetObject` zwraca błąd "Nieprawidłowa składnia". Jeśli wystąpi ten błąd, upewnij się, że moniker, którego używasz, jest poprawna i że usługa jest dostępna.  
   
-     Chociaż ten temat koncentruje się na używaniu monikera usługi w kodzie VB 6,0, można użyć monikera usługi z innych języków. W przypadku używania monikera C++ z kodu, zestaw wygenerowany przez Svcutil. exe powinien zostać zaimportowany za pomocą polecenia "no_namespace named_guids raw_interfaces_only", jak pokazano w poniższym kodzie.  
+     Chociaż ten temat koncentruje się na używaniu monikera usługi w kodzie VB 6,0, można użyć monikera usługi z innych języków. W przypadku używania monikera C++ z kodu, zestaw wygenerowany przez Svcutil. exe powinien zostać zaimportowany z "no_namespace named_guids raw_interfaces_only", jak pokazano w poniższym kodzie.  
   
     ```cpp
     #import "ComTestProxy.tlb" no_namespace named_guids  
     ```  
   
-     Powoduje to modyfikację zaimportowanych definicji interfejsu, tak aby `HResult`wszystkie metody zwracały. Wszystkie inne zwracane wartości są konwertowane na parametry out. Ogólne wykonywanie metod pozostaje bez zmian. Pozwala to określić przyczynę wyjątku podczas wywoływania metody na serwerze proxy. Ta funkcja jest dostępna tylko w C++ kodzie.  
+     Powoduje to modyfikację zaimportowanych definicji interfejsu, tak aby wszystkie metody zwracały `HResult`. Wszystkie inne zwracane wartości są konwertowane na parametry out. Ogólne wykonywanie metod pozostaje bez zmian. Pozwala to określić przyczynę wyjątku podczas wywoływania metody na serwerze proxy. Ta funkcja jest dostępna tylko w C++ kodzie.  
   
 ## <a name="see-also"></a>Zobacz także
 

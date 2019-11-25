@@ -4,25 +4,25 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-ms.openlocfilehash: 4a6079db5e969154c4a9bb6451dd7c698c6d2088
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fd76f456665da76138b927d85a53924e8169c30a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780370"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975371"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>Niestandardowi dostawcy usług danych (Usługi danych programu WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]zawiera zestaw dostawców, które umożliwiają zdefiniowanie modelu danych na podstawie późnych typów danych.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obejmuje zestaw dostawców, który umożliwia zdefiniowanie modelu danych na podstawie późnych typów danych.  
   
-|Dostawca|Opis|  
+|Dostawcy|Opis|  
 |--------------|-----------------|  
-|Dostawca metadanych|Jest to podstawowy dostawca usługi danych niestandardowych, który umożliwia zdefiniowanie niestandardowego modelu danych w środowisku uruchomieniowym przez implementację <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> interfejsu.|  
-|Dostawca zapytań|Ten dostawca umożliwia wykonywanie zapytań względem niestandardowego modelu danych, który jest definiowany przy użyciu <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> interfejsu. Dostawca zapytań jest tworzony przez implementację <xref:System.Data.Services.Providers.IDataServiceQueryProvider> interfejsu.|  
-|Aktualizuj dostawcę|Ten dostawca umożliwia Dokonywanie aktualizacji typów, które są widoczne w niestandardowym dostawcy usług danych i Zarządzanie współbieżnością. Dostawca aktualizacji jest tworzony przez implementację <xref:System.Data.Services.Providers.IDataServiceUpdateProvider> interfejsu|  
-|Dostawca stronicowania|Ten dostawca jest używany z niestandardowym dostawcą usług danych w celu włączenia obsługi stronicowania opartego na serwerze. Dostawca stronicowania dla niestandardowej usługi danych jest tworzony przez implementację <xref:System.Data.Services.Providers.IDataServicePagingProvider> interfejsu.|  
-|Dostawca przesyłania strumieniowego|Ten dostawca pozwala udostępnić binarne typy danych typu binary jako strumień. Dostawca przesyłania strumieniowego jest tworzony przez implementację <xref:System.Data.Services.Providers.IDataServiceStreamProvider> interfejsu. Dostawca przesyłania strumieniowego może być również używany z dostawcami źródeł danych Entity Framework i odbicia. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](streaming-provider-wcf-data-services.md).|  
+|Dostawca metadanych|Jest to podstawowy dostawca usługi danych niestandardowych, który umożliwia zdefiniowanie niestandardowego modelu danych w środowisku uruchomieniowym przez implementację interfejsu <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>.|  
+|Dostawca zapytań|Ten dostawca umożliwia wykonywanie zapytań dotyczących niestandardowego modelu danych, który jest definiowany przy użyciu interfejsu <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>. Dostawca zapytań jest tworzony przez implementację interfejsu <xref:System.Data.Services.Providers.IDataServiceQueryProvider>.|  
+|Aktualizuj dostawcę|Ten dostawca umożliwia Dokonywanie aktualizacji typów, które są widoczne w niestandardowym dostawcy usług danych i Zarządzanie współbieżnością. Dostawca aktualizacji jest tworzony przez implementację interfejsu <xref:System.Data.Services.Providers.IDataServiceUpdateProvider>|  
+|Dostawca stronicowania|Ten dostawca jest używany z niestandardowym dostawcą usług danych w celu włączenia obsługi stronicowania opartego na serwerze. Dostawca stronicowania dla niestandardowej usługi danych jest tworzony przez implementację interfejsu <xref:System.Data.Services.Providers.IDataServicePagingProvider>.|  
+|Dostawca przesyłania strumieniowego|Ten dostawca pozwala udostępnić binarne typy danych typu binary jako strumień. Dostawca przesyłania strumieniowego jest tworzony przez implementację interfejsu <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Dostawca przesyłania strumieniowego może być również używany z dostawcami źródeł danych Entity Framework i odbicia. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](streaming-provider-wcf-data-services.md).|  
   
- Aby uzyskać więcej informacji, zapoznaj się z artykułami [Custom Data Service Providers](https://go.microsoft.com/fwlink/?LinkID=186850) and [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] The Provider Toolkit w [zestawie SDK OData](https://go.microsoft.com/fwlink/?LinkId=186069).  
+ Aby uzyskać więcej informacji, zapoznaj się z artykułem [Custom Data Service Providers](https://go.microsoft.com/fwlink/?LinkID=186850) and The Open Data Protocol (OData) Provider w [zestawie SDK OData](https://go.microsoft.com/fwlink/?LinkId=186069).  
   
 ## <a name="see-also"></a>Zobacz także
 

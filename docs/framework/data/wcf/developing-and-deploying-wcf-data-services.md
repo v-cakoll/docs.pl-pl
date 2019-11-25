@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d7ddae58874c69468eb6ff1762db9083897b1acd
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d6d0f6f357feba903e8345fc45251c146c5406db
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854068"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975316"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Opracowywanie i wdrażanie Usługi danych programu WCF
 
@@ -20,7 +20,7 @@ Ten temat zawiera informacje dotyczące opracowywania i wdrażania Usługi danyc
 
 ## <a name="develop-wcf-data-services"></a>Opracowywanie Usługi danych programu WCF
 
-W przypadku korzystania z usługi danych programu WCF do tworzenia usługi danych, która obsługuje [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]program, podczas tworzenia należy wykonać następujące podstawowe zadania:
+W przypadku używania Usługi danych programu WCF do tworzenia usługi danych, która obsługuje protokół Open Data Protocol (OData), podczas programowania należy wykonać następujące podstawowe zadania:
 
 1. **Definiowanie modelu danych**
 
@@ -28,11 +28,11 @@ W przypadku korzystania z usługi danych programu WCF do tworzenia usługi danyc
 
 2. **Tworzenie usługi danych**
 
-     Najbardziej podstawowa usługa danych uwidacznia klasę, która dziedziczy z <xref:System.Data.Services.DataService%601> klasy, z typem `T` , który jest kwalifikowana nazwaną przestrzenią nazw kontenera jednostek. Aby uzyskać więcej informacji, zobacz [definiowanie usługi danych programu WCF](defining-wcf-data-services.md).
+     Najbardziej podstawowa usługa danych uwidacznia klasę, która dziedziczy z klasy <xref:System.Data.Services.DataService%601>, z typem `T`, który jest kwalifikowana nazwa przestrzeni nazw kontenera jednostek. Aby uzyskać więcej informacji, zobacz [definiowanie usługi danych programu WCF](defining-wcf-data-services.md).
 
 3. **Konfigurowanie usługi danych**
 
-     Domyślnie Usługi danych programu WCF wyłącza dostęp do zasobów, które są udostępniane przez kontener jednostek. <xref:System.Data.Services.DataServiceConfiguration> Interfejs umożliwia konfigurowanie dostępu do zasobów i usług, określanie obsługiwanej wersji usługi OData oraz definiowanie innych zachowań obejmujących wiele usług, takich jak zachowania wsadowe lub maksymalna liczba jednostek, które mogą zostać zwrócone w strumieniu pojedynczej odpowiedzi. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usługi danych](configuring-the-data-service-wcf-data-services.md).
+     Domyślnie Usługi danych programu WCF wyłącza dostęp do zasobów, które są udostępniane przez kontener jednostek. Interfejs <xref:System.Data.Services.DataServiceConfiguration> umożliwia konfigurowanie dostępu do zasobów i usług, określanie obsługiwanej wersji protokołu OData oraz definiowanie innych zachowań dotyczących całej usługi, takich jak zachowania wsadowe lub maksymalna liczba jednostek, które mogą zostać zwrócone w ramach pojedynczego źródła odpowiedzi. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usługi danych](configuring-the-data-service-wcf-data-services.md).
 
 Ten temat dotyczy głównie tworzenia i wdrażania usług danych przy użyciu programu Visual Studio. Aby uzyskać informacje na temat elastyczności zapewnianej przez Usługi danych programu WCF w celu udostępnienia danych jako źródła strumieniowego OData, zobacz [definiowanie usługi danych programu WCF](defining-wcf-data-services.md).
 
@@ -42,7 +42,7 @@ W przypadku tworzenia usługi danych programu WCF jako aplikacji ASP.NET lub wit
 
 1. **Lokalny serwer IIS**
 
-     Podczas tworzenia usługi danych, która jest aplikacją ASP.NET lub witryną sieci Web ASP.NET działającą na Internet Information Services (IIS), zalecamy tworzenie i testowanie usługi danych przy użyciu usług IIS na komputerze lokalnym. Uruchamianie usługi danych na serwerze IIS ułatwia śledzenie żądań HTTP podczas debugowania. Pozwala również wstępnie określić niezbędne uprawnienia wymagane przez program IIS przy uzyskiwaniu dostępu do plików, baz danych i innych zasobów wymaganych przez usługę danych. Aby uruchomić usługę danych na serwerze IIS, należy upewnić się, że zarówno program IIS, jak i Windows Communication Foundation (WCF) są zainstalowane i poprawnie skonfigurowane, oraz udzielić dostępu do kont usług IIS w systemie plików i bazach danych. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi danych programu WCF działającej w](how-to-develop-a-wcf-data-service-running-on-iis.md)usługach IIS.
+     Podczas tworzenia usługi danych, która jest aplikacją ASP.NET lub witryną sieci Web ASP.NET działającą na Internet Information Services (IIS), zalecamy tworzenie i testowanie usługi danych przy użyciu usług IIS na komputerze lokalnym. Uruchamianie usługi danych na serwerze IIS ułatwia śledzenie żądań HTTP podczas debugowania. Pozwala również wstępnie określić niezbędne uprawnienia wymagane przez program IIS przy uzyskiwaniu dostępu do plików, baz danych i innych zasobów wymaganych przez usługę danych. Aby uruchomić usługę danych na serwerze IIS, należy upewnić się, że zarówno program IIS, jak i Windows Communication Foundation (WCF) są zainstalowane i poprawnie skonfigurowane, oraz udzielić dostępu do kont usług IIS w systemie plików i bazach danych. Aby uzyskać więcej informacji, zobacz [How to: programowanie usługi danych programu WCF działającej w usługach IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > Musisz uruchomić program Visual Studio z uprawnieniami administratora, aby umożliwić środowisku programowania skonfigurowanie lokalnego serwera usług IIS.
@@ -55,7 +55,7 @@ W przypadku tworzenia usługi danych programu WCF jako aplikacji ASP.NET lub wit
 
     - Dostęp do tego serwera można uzyskać tylko na komputerze lokalnym.
 
-    - Ten serwer nasłuchuje `localhost` na określonym porcie, a nie na porcie 80, który jest domyślnym portem dla komunikatów http. Aby uzyskać więcej informacji, zobacz [serwery sieci Web w programie Visual Studio for ASP.NET — projekty sieci Web](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
+    - Ten serwer nasłuchuje na `localhost` i na określonym porcie, a nie na porcie 80, który jest domyślnym portem dla komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [serwery sieci Web w programie Visual Studio for ASP.NET — projekty sieci Web](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
 
     - Ten serwer uruchamia usługę danych w kontekście bieżącego konta użytkownika. Na przykład jeśli korzystasz z programu jako użytkownik na poziomie administratora, usługa danych uruchomiona na serwerze deweloperskim programu Visual Studio będzie mieć uprawnienia na poziomie administratora. Może to spowodować, że usługa danych będzie mogła uzyskać dostęp do zasobów, do których nie ma praw dostępu w przypadku jej wdrożenia na serwerze IIS.
 
@@ -63,7 +63,7 @@ W przypadku tworzenia usługi danych programu WCF jako aplikacji ASP.NET lub wit
 
     - Ten serwer nie obsługuje fragmentów strumieni HTTP, które są domyślnie wysyłane przez klienta Usługi danych programu WCF podczas uzyskiwania dostępu do dużych danych binarnych z usługi danych. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](streaming-provider-wcf-data-services.md).
 
-    - Ten serwer ma problemy z przetwarzaniem znaku kropki (`.`) w adresie URL, mimo że ten znak jest obsługiwany przez usługi danych programu WCF w wartościach klucza.
+    - Ten serwer ma problemy z przetwarzaniem znaku kropki (`.`) w adresie URL, mimo że ten znak jest obsługiwany przez Usługi danych programu WCF wartości klucza.
 
     > [!TIP]
     > Mimo że można użyć programu Visual Studio Development Server do testowania usług danych podczas opracowywania, należy przetestować je ponownie po wdrożeniu na serwerze sieci Web, na którym są uruchomione usługi IIS.
@@ -80,7 +80,7 @@ Podczas projektowania usługi danych należy wziąć pod uwagę następujące kw
 
 - Program inspekcji HTTP może być bardzo pomocny podczas debugowania usługi danych, umożliwiając inspekcję zawartości komunikatów żądań i odpowiedzi. Dowolnego analizatora pakietów sieciowych, który może wyświetlać pakiety nieprzetworzone, można używać do inspekcji żądań HTTP i odpowiedzi z usługi danych.
 
-- Podczas debugowania usługi danych warto uzyskać więcej informacji o błędzie z usługi danych niż podczas zwykłej operacji. Możesz uzyskać dodatkowe informacje o błędzie z usługi danych, ustawiając <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> Właściwość <xref:System.Data.Services.DataServiceConfiguration> w <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> na `true` i ustawiając właściwość <xref:System.ServiceModel.Description.ServiceDebugBehavior> atrybutu w klasie `true`usługidanychna. Aby uzyskać więcej informacji, zobacz [usługi danych programu WCF debugowania](https://go.microsoft.com/fwlink/?LinkId=201868). Możesz również włączyć śledzenie w programie WCF, aby wyświetlić wyjątki wywoływane w warstwie komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../wcf/diagnostics/tracing/configuring-tracing.md).
+- Podczas debugowania usługi danych warto uzyskać więcej informacji o błędzie z usługi danych niż podczas zwykłej operacji. Aby uzyskać dodatkowe informacje o błędzie z usługi danych, należy ustawić właściwość <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> w <xref:System.Data.Services.DataServiceConfiguration> na `true` i ustawiając właściwość <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> atrybutu <xref:System.ServiceModel.Description.ServiceDebugBehavior> w klasie usługi danych na `true`. Aby uzyskać więcej informacji, zobacz [usługi danych programu WCF debugowania](https://go.microsoft.com/fwlink/?LinkId=201868). Możesz również włączyć śledzenie w programie WCF, aby wyświetlić wyjątki wywoływane w warstwie komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../wcf/diagnostics/tracing/configuring-tracing.md).
 
 - Usługa danych jest zazwyczaj opracowana jako projekt aplikacji ASP.NET, ale można również utworzyć usługę danych jako projekt witryny sieci Web ASP.NET w programie Visual Studio. Aby uzyskać informacje o różnicach między dwoma typami projektów, zobacz [projekty aplikacji sieci Web a projekty witryn sieci Web w programie Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
@@ -98,20 +98,20 @@ Usługa danych programu WCF zapewnia elastyczność, jeśli chodzi o wybór proc
 
     - [Instrukcje: Tworzenie pakietu wdrożeniowego sieci Web w programie Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
 
-    - [Instrukcje: Wdrażanie projektu sieci Web przy użyciu funkcji publikowania jednym kliknięciem w programie Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
+    - [Instrukcje: wdrażanie projektu sieci Web przy użyciu jednego kliknięcia przycisku Publikuj w programie Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
 
   - **Technologie wdrażania dla witryn sieci Web ASP.NET**
 
-    - [Instrukcje: Kopiowanie plików witryny sieci Web za pomocą narzędzia kopiowania witryny sieci Web](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
+    - [Instrukcje: kopiowanie plików witryny sieci Web za pomocą narzędzia kopiowania witryny sieci Web](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
 
-    - [Instrukcje: Publikowanie witryn sieci Web](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
+    - [Instrukcje: publikowanie witryn sieci Web](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
 
-    - [Przewodnik: Wdrażanie aplikacji sieci Web ASP.NET przy użyciu polecenia XCOPY](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
+    - [Przewodnik: wdrażanie aplikacji sieci Web ASP.NET przy użyciu polecenia XCOPY](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
 
      Aby uzyskać więcej informacji o opcjach wdrażania dla aplikacji ASP.NET, zobacz [Omówienie wdrażania w sieci Web dla programu Visual Studio i ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110)).
 
     > [!TIP]
-    > Przed próbą wdrożenia usługi danych w programie IIS należy przetestować wdrożenie na serwerze sieci Web, na którym działa program IIS. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi danych programu WCF działającej w](how-to-develop-a-wcf-data-service-running-on-iis.md)usługach IIS.
+    > Przed próbą wdrożenia usługi danych w programie IIS należy przetestować wdrożenie na serwerze sieci Web, na którym działa program IIS. Aby uzyskać więcej informacji, zobacz [How to: programowanie usługi danych programu WCF działającej w usługach IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
 - **System Windows Azure**
 
@@ -121,7 +121,7 @@ Usługa danych programu WCF zapewnia elastyczność, jeśli chodzi o wybór proc
 
 Podczas wdrażania usługi danych należy wziąć pod uwagę następujące kwestie:
 
-- Podczas wdrażania usługi danych, która używa dostawcy Entity Framework w celu uzyskania dostępu do bazy danych SQL Server, może być również konieczne propagowanie struktur danych, danych lub obu w ramach wdrożenia usługi danych. Program Visual Studio może automatycznie tworzyć skrypty (pliki SQL) w celu wykonania tej czynności w docelowej bazie danych. te skrypty można dołączać do pakietu wdrożeniowego sieci Web aplikacji ASP.NET. Aby uzyskać więcej informacji, zobacz [jak: Wdróż bazę danych z projektem](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))aplikacji sieci Web. W przypadku witryny sieci Web ASP.NET można to zrobić za pomocą **Kreatora publikowania bazy danych** w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [publikowanie SQL Database](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
+- Podczas wdrażania usługi danych, która używa dostawcy Entity Framework w celu uzyskania dostępu do bazy danych SQL Server, może być również konieczne propagowanie struktur danych, danych lub obu w ramach wdrożenia usługi danych. Program Visual Studio może automatycznie tworzyć skrypty (pliki SQL) w celu wykonania tej czynności w docelowej bazie danych. te skrypty można dołączać do pakietu wdrożeniowego sieci Web aplikacji ASP.NET. Aby uzyskać więcej informacji, zobacz [jak: Wdrażanie bazy danych za pomocą projektu aplikacji sieci Web](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). W przypadku witryny sieci Web ASP.NET można to zrobić za pomocą **Kreatora publikowania bazy danych** w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [publikowanie SQL Database](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
 - Ponieważ Usługi danych programu WCF zawiera podstawową implementację programu WCF, można użyć programu Windows Server AppFabric do monitorowania usługi danych wdrożonej w usługach IIS uruchomionych w systemie Windows Server. Aby uzyskać więcej informacji o używaniu programu Windows Server AppFabric do monitorowania usługi danych, zobacz [śledzenie po stronie śledzenia usługi danych programu WCF z systemem Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
 

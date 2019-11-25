@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: cf621ab5f423e2465999b26f32489af1132bece0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6b4a5379145ebdffde0d5b76d8c7b9ab57261007
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582452"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975787"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optymalizacja wydajności: inne zalecenia
 <a name="introduction"></a>Ten temat zawiera zalecenia dotyczące wydajności, a także te, które zostały omówione w sekcji [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md) .  
@@ -70,7 +70,7 @@ ms.locfileid: "72582452"
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Konfigurowanie Cache Service czcionki w celu skrócenia czasu uruchamiania  
- Usługa [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] buforowania czcionek udostępnia dane czcionki między aplikacjami [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Pierwsza uruchomiona aplikacja [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uruchamia tę usługę, jeśli usługa nie jest już uruchomiona. Jeśli używasz [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], możesz ustawić opcję "Windows Presentation Foundation (WPF) 3.0.0.0 pamięci podręcznej czcionek" z "ręczne" (domyślnie) na "Automatyczne (opóźnione uruchomienie)", aby skrócić początkowy czas uruchamiania aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ Usługa [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] buforowania czcionek udostępnia dane czcionki między aplikacjami [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Pierwsza uruchomiona aplikacja [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uruchamia tę usługę, jeśli usługa nie jest już uruchomiona. W przypadku korzystania z systemu Windows Vista można ustawić "Windows Presentation Foundation (WPF) 3.0.0.0 pamięci podręcznej czcionek" z "ręczne" (domyślnie), aby skrócić czas uruchamiania aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
 ## <a name="see-also"></a>Zobacz także
 

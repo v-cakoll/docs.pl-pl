@@ -17,28 +17,27 @@ helpviewer_keywords:
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 ms.custom: seodec18
-ms.openlocfilehash: bf5e98f895c17a3ab9b16e63601fa40fb9e15417
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 53f16e65a3cd19cd516756f3a2d036039964e021
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140543"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971370"
 ---
 # <a name="anchors-in-regular-expressions"></a>Zakotwiczenia w wyrażeniach regularnych
-<a name="top"></a>Kotwice lub niepodzielne potwierdzenia zerowej szerokości, określ pozycję w ciągu, w którym musi wystąpić dopasowanie. Gdy używasz kotwicy w wyrażeniu wyszukiwania, aparat wyrażeń regularnych nie przeprowadzi przechodzenia przez ciąg lub zużywa znaki; szuka dopasowania tylko w określonej pozycji. Na przykład `^` określa, że dopasowanie musi rozpoczynać się na początku wiersza lub ciągu. Dlatego wyrażenie regularne `^http:` dopasowuje wartość "http:" tylko wtedy, gdy występuje na początku wiersza. W poniższej tabeli wymieniono kotwice obsługiwane przez wyrażenia regularne w programie .NET.  
+Kotwice lub niepodzielne potwierdzenia zerowej szerokości, określ pozycję w ciągu, w którym musi wystąpić dopasowanie. Gdy używasz kotwicy w wyrażeniu wyszukiwania, aparat wyrażeń regularnych nie przeprowadzi przechodzenia przez ciąg lub zużywa znaki; szuka dopasowania tylko w określonej pozycji. Na przykład `^` określa, że dopasowanie musi rozpoczynać się na początku wiersza lub ciągu. Dlatego wyrażenie regularne `^http:` dopasowuje wartość "http:" tylko wtedy, gdy występuje na początku wiersza. W poniższej tabeli wymieniono kotwice obsługiwane przez wyrażenia regularne w programie .NET.  
   
 |Kotwica|Opis|  
 |------------|-----------------|  
-|`^`|Domyślnie dopasowanie musi wystąpić na początku ciągu znaków. w trybie wielowierszowym musi wystąpić na początku wiersza. Aby uzyskać więcej informacji, zobacz [początek ciągu lub wiersza](#Start).|  
-|`$`|Domyślnie dopasowanie musi wystąpić na końcu ciągu lub przed `\n` na końcu ciągu; w trybie wielowierszowym, musi wystąpić na końcu wiersza lub przed `\n` na końcu wiersza. Aby uzyskać więcej informacji, zobacz [koniec ciągu lub wiersza](#End).|  
-|`\A`|Dopasowanie musi wystąpić na początku ciągu znaków (bez obsługi wielu wierszy). Aby uzyskać więcej informacji, zobacz [początek ciągu](#StartOnly).|  
-|`\Z`|Dopasowanie musi wystąpić na końcu ciągu lub przed `\n` na końcu ciągu. Aby uzyskać więcej informacji, zobacz [koniec ciągu lub przed końcowym znakiem nowego wiersza](#EndOrNOnly).|  
-|`\z`|Dopasowanie musi wystąpić na końcu ciągu. Aby uzyskać więcej informacji, zobacz [koniec ciągu](#EndOnly).|  
-|`\G`|Dopasowanie musi rozpoczynać się w miejscu, w którym zakończono poprzednie dopasowanie. Aby uzyskać więcej informacji, zobacz [przyległe dopasowania](#Contiguous).|  
-|`\b`|Dopasowanie musi wystąpić na granicy słowa. Aby uzyskać więcej informacji, zobacz [granica wyrazu](#WordBoundary).|  
-|`\B`|Dopasowanie nie może wystąpić na granicy słowa. Aby uzyskać więcej informacji, zobacz granica niebędąca [słowem](#NonwordBoundary).|  
-  
-<a name="Start"></a>   
+|`^`|Domyślnie dopasowanie musi wystąpić na początku ciągu znaków. w trybie wielowierszowym musi wystąpić na początku wiersza. Aby uzyskać więcej informacji, zobacz [początek ciągu lub wiersza](#start-of-string-or-line-).|  
+|`$`|Domyślnie dopasowanie musi wystąpić na końcu ciągu lub przed `\n` na końcu ciągu; w trybie wielowierszowym, musi wystąpić na końcu wiersza lub przed `\n` na końcu wiersza. Aby uzyskać więcej informacji, zobacz [koniec ciągu lub wiersza](#end-of-string-or-line-).|  
+|`\A`|Dopasowanie musi wystąpić na początku ciągu znaków (bez obsługi wielu wierszy). Aby uzyskać więcej informacji, zobacz [początek ciągu](#start-of-string-only-a).|  
+|`\Z`|Dopasowanie musi wystąpić na końcu ciągu lub przed `\n` na końcu ciągu. Aby uzyskać więcej informacji, zobacz [koniec ciągu lub przed końcowym znakiem nowego wiersza](#end-of-string-or-before-ending-newline-z).|  
+|`\z`|Dopasowanie musi wystąpić na końcu ciągu. Aby uzyskać więcej informacji, zobacz [koniec ciągu](#end-of-string-only-z).|  
+|`\G`|Dopasowanie musi rozpoczynać się w miejscu, w którym zakończono poprzednie dopasowanie. Aby uzyskać więcej informacji, zobacz [przyległe dopasowania](#contiguous-matches-g).|  
+|`\b`|Dopasowanie musi wystąpić na granicy słowa. Aby uzyskać więcej informacji, zobacz [granica wyrazu](#word-boundary-b).|  
+|`\B`|Dopasowanie nie może wystąpić na granicy słowa. Aby uzyskać więcej informacji, zobacz granica niebędąca [słowem](#non-word-boundary-b).|  
+
 ## <a name="start-of-string-or-line-"></a>Początek ciągu lub wiersz: ^  
  Domyślnie kotwica `^` określa, że następujący wzorzec musi rozpoczynać się od pierwszego pozycji znaku ciągu. Jeśli używasz `^` z opcją <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> (zobacz [Opcje wyrażenia regularnego](../../../docs/standard/base-types/regular-expression-options.md)), dopasowanie musi wystąpić na początku każdego wiersza.  
   
@@ -63,59 +62,44 @@ ms.locfileid: "73140543"
 |`\s\d{4}`|Dopasowuje miejsce, po którym następuje cztery cyfry dziesiętne.|  
 |<code>(-(\d{4}&#124;present))?</code>|Dopasowanie do zera lub jednego wystąpienia łącznika, po którym następuje cztery cyfry dziesiętne lub ciąg "obecny". To jest szósta grupa przechwytywania. Obejmuje również siódmą grupę przechwytywania.|  
 |`,?`|Dopasowanie do zera lub jednego wystąpienia przecinka.|  
-|<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|Dopasowuje jedno lub więcej wystąpień następujących elementów: spacja, cztery cyfry dziesiętne, zero lub jedno wystąpienie łącznika, po którym następuje cztery cyfry dziesiętne lub ciąg "obecny" oraz zero lub jeden przecinek. To jest piąta grupa przechwytywania.|  
-  
- [Powrót do początku](#top)  
-  
-<a name="End"></a>   
+|<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|Dopasowuje jedno lub więcej wystąpień następujących elementów: spacja, cztery cyfry dziesiętne, zero lub jedno wystąpienie łącznika, po którym następuje cztery cyfry dziesiętne lub ciąg "obecny" oraz zero lub jeden przecinek. To jest piąta grupa przechwytywania.| 
+
 ## <a name="end-of-string-or-line-"></a>Koniec ciągu lub linii: $  
  Zakotwiczenie `$` określa, że poprzedzający wzorzec musi wystąpić na końcu ciągu wejściowego lub przed `\n` na końcu ciągu wejściowego.  
   
  Jeśli używasz `$` z opcją <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, dopasowanie może również wystąpić na końcu wiersza. Należy zauważyć, że `$` dopasowuje `\n`, ale nie pasuje do `\r\n` (kombinacji znaku powrotu karetki i znaków nowego wiersza lub CR/LF). Aby dopasować kombinację znaków CR/LF, Uwzględnij `\r?$` we wzorcu wyrażenia regularnego.  
   
- Poniższy przykład dodaje kotwicę `$` do wzorca wyrażenia regularnego użytego w przykładzie w sekcji [początku ciągu lub wiersza](#Start) . Gdy jest używany z oryginalnym ciągiem wejściowym, który zawiera pięć wierszy tekstu, Metoda <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> nie może znaleźć dopasowania, ponieważ koniec pierwszego wiersza nie jest zgodny ze wzorcem `$`. Gdy pierwotny ciąg wejściowy jest podzielony na tablicę ciągów, Metoda <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> pomyślnie pasuje do każdego z pięciu wierszy. Gdy metoda <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> jest wywoływana z parametrem `options` ustawionym na <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, nie znaleziono żadnych dopasowań, ponieważ wzorzec wyrażenia regularnego nie jest kontem dla elementu powrotu karetki (\u + 000D). Jeśli jednak wzorzec wyrażenia regularnego jest modyfikowany przez zastępowanie `$` z `\r?$`, wywołanie metody <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> z parametrem `options` ustawionym na <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> spowoduje ponowne znalezienie pięciu dopasowań.  
+ Poniższy przykład dodaje kotwicę `$` do wzorca wyrażenia regularnego użytego w przykładzie w sekcji [początku ciągu lub wiersza](#start-of-string-or-line-) . Gdy jest używany z oryginalnym ciągiem wejściowym, który zawiera pięć wierszy tekstu, Metoda <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> nie może znaleźć dopasowania, ponieważ koniec pierwszego wiersza nie jest zgodny ze wzorcem `$`. Gdy pierwotny ciąg wejściowy jest podzielony na tablicę ciągów, Metoda <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> pomyślnie pasuje do każdego z pięciu wierszy. Gdy metoda <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> jest wywoływana z parametrem `options` ustawionym na <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, nie znaleziono żadnych dopasowań, ponieważ wzorzec wyrażenia regularnego nie jest kontem dla elementu powrotu karetki (\u + 000D). Jeśli jednak wzorzec wyrażenia regularnego jest modyfikowany przez zastępowanie `$` z `\r?$`, wywołanie metody <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> z parametrem `options` ustawionym na <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> spowoduje ponowne znalezienie pięciu dopasowań.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring1.cs#2)]
- [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]  
-  
- [Powrót do początku](#top)  
-  
-<a name="StartOnly"></a>   
+ [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]     
+
 ## <a name="start-of-string-only-a"></a>Tylko początek ciągu: \A  
  Zakotwiczenie `\A` określa, że dopasowanie musi wystąpić na początku ciągu wejściowego. Jest ona identyczna z zakotwiczeniem `^`, z tą różnicą, że `\A` ignoruje <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> opcji. W związku z tym można dopasować tylko początek pierwszego wiersza w wielowierszowym ciągu wejściowym.  
   
  Poniższy przykład jest podobny do przykładów dla zakotwiczenia `^` i `$`. Używa kotwicy `\A` w wyrażeniu regularnym, który wyodrębnia informacje o latach, w których istniały niektóre profesjonalne zespoły siatkówki. Ciąg wejściowy zawiera pięć wierszy. Wywołanie metody <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> powoduje znalezienie tylko pierwszego podciągu w ciągu wejściowym, który pasuje do wzorca wyrażenia regularnego. Jak pokazano w przykładzie, opcja <xref:System.Text.RegularExpressions.RegexOptions.Multiline> nie ma żadnego wpływu.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring2.cs#3)]
- [!code-vb[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring2.vb#3)]  
-  
- [Powrót do początku](#top)  
-  
-<a name="EndOrNOnly"></a>   
+ [!code-vb[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring2.vb#3)]     
+
 ## <a name="end-of-string-or-before-ending-newline-z"></a>Koniec ciągu lub przed zakończeniem nowego wiersza: \Z  
  Zakotwiczenie `\Z` określa, że dopasowanie musi wystąpić na końcu ciągu wejściowego lub przed `\n` na końcu ciągu wejściowego. Jest ona identyczna z zakotwiczeniem `$`, z tą różnicą, że `\Z` ignoruje <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> opcji. W związku z tym w ciągu wielowierszowym można dopasować tylko koniec ostatniego wiersza lub ostatni wiersz przed `\n`.  
   
  Należy zauważyć, że `\Z` pasuje do `\n`, ale nie pasuje do `\r\n` (kombinacja znaków CR/LF). Aby dopasować znaki CR/LF, Uwzględnij `\r?\Z` we wzorcu wyrażenia regularnego.  
   
- Poniższy przykład używa kotwicy `\Z` w wyrażeniu regularnym podobnym do przykładu w sekcji [początku ciągu lub wiersza](#Start) , który wyodrębnia informacje o latach, w których istniały niektóre profesjonalne zespoły siatkówki. Podwyrażenie `\r?\Z` w wyrażeniu regularnym `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\Z` dopasowuje koniec ciągu, a także dopasowuje ciąg kończący się na `\n` lub `\r\n`. W związku z tym każdy element w tablicy jest zgodny ze wzorcem wyrażenia regularnego.  
+ Poniższy przykład używa kotwicy `\Z` w wyrażeniu regularnym podobnym do przykładu w sekcji [początku ciągu lub wiersza](#start-of-string-or-line-) , który wyodrębnia informacje o latach, w których istniały niektóre profesjonalne zespoły siatkówki. Podwyrażenie `\r?\Z` w wyrażeniu regularnym `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\Z` dopasowuje koniec ciągu, a także dopasowuje ciąg kończący się na `\n` lub `\r\n`. W związku z tym każdy element w tablicy jest zgodny ze wzorcem wyrażenia regularnego.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring2.cs#4)]
- [!code-vb[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring2.vb#4)]  
-  
- [Powrót do początku](#top)  
-  
-<a name="EndOnly"></a>   
+ [!code-vb[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring2.vb#4)]     
+
 ## <a name="end-of-string-only-z"></a>Tylko koniec ciągu: \z  
  Zakotwiczenie `\z` określa, że dopasowanie musi wystąpić na końcu ciągu wejściowego. Podobnie jak `$` element języka `\z` ignoruje opcję <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>. W przeciwieństwie do `\Z` elementu języka `\z` nie pasuje do znaku `\n` na końcu ciągu. W związku z tym może pasować tylko do ostatniego wiersza ciągu wejściowego.  
   
  W poniższym przykładzie pokazano kotwicę `\z` w wyrażeniu regularnym, która jest identyczna z przykładem w poprzedniej sekcji, która wyodrębnia informacje o latach, w których istniały niektóre profesjonalne zespoły siatkówki. Przykład próbuje dopasować każdy z pięciu elementów w tablicy ciągów z wzorcem wyrażenia regularnego `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`. Dwa z ciągów kończą się znakiem powrotu karetki i znakami wysuwu wiersza, jednym końcem znaku wysuwu wiersza i dwoma końcami bez znaku powrotu karetki ani znakiem wysuwu wiersza. Ponieważ dane wyjściowe są wyświetlane, tylko ciągi bez znaku powrotu karetki lub wysuwu wiersza pasują do wzorca.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring3.cs#5)]
- [!code-vb[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring3.vb#5)]  
-  
- [Powrót do początku](#top)  
-  
-<a name="Contiguous"></a>   
+ [!code-vb[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring3.vb#5)]    
+
 ## <a name="contiguous-matches-g"></a>Ciągłe dopasowanie: \G  
  Zakotwiczenie `\G` określa, że dopasowanie musi wystąpić w punkcie, w którym zakończono poprzednie dopasowanie. Gdy używasz tej kotwicy z metodą <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType>, gwarantuje to, że wszystkie dopasowania są ciągłe.  
   
@@ -133,11 +117,8 @@ ms.locfileid: "73140543"
 |`\s?`|Dopasowanie do zera lub jednego miejsca.|  
 |`\w*`|Dopasowuje zero lub więcej znaków słowa.|  
 |`(\w+\s?\w*)`|Dopasowuje co najmniej jeden znak słowa, po którym następuje zero lub jeden znak, po którym następuje zero lub więcej znaków wyrazu. Jest to pierwsza grupa przechwytywania.|  
-|`,?`|Dopasowanie do zera lub jednego wystąpienia znaku przecinka literału.|  
-  
- [Powrót do początku](#top)  
-  
-<a name="WordBoundary"></a>   
+|`,?`|Dopasowanie do zera lub jednego wystąpienia znaku przecinka literału.|     
+
 ## <a name="word-boundary-b"></a>Wyszukiwanie granicy wyrazów: \b  
  Zakotwiczenie `\b` określa, że dopasowanie musi wystąpić na granicy między znakiem słowa (element języka `\w`) i znakiem niezawierającym wyrazu (`\W` elementu języka). Znaki słowa składają się z znaków alfanumerycznych i podkreśleń; znak inny niż słowo jest dowolnym znakiem, który nie jest alfanumeryczny ani podkreśleniem. (Aby uzyskać więcej informacji, zobacz [klasy znaków](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)). Dopasowanie może również wystąpić na granicy wyrazu na początku lub na końcu ciągu.  
   
@@ -154,10 +135,7 @@ ms.locfileid: "73140543"
 |`are`|Dopasowuje podciąg "są".|  
 |`\w*`|Dopasowuje zero lub więcej znaków słowa.|  
 |`\b`|Kończy dopasowanie na granicy wyrazu.|  
-  
- [Powrót do początku](#top)  
-  
-<a name="NonwordBoundary"></a>   
+
 ## <a name="non-word-boundary-b"></a>Brak wyszukiwania granicy wyrazów: \B  
  Zakotwiczenie `\B` określa, że dopasowanie nie może wystąpić na granicy słowa. Jest przeciwieństwem zakotwiczenia `\b`.  
   

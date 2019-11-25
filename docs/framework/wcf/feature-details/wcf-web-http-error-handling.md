@@ -2,33 +2,36 @@
 title: Obsługa błędów protokołu HTTP sieci Web w programie WCF
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: 491c39d97c48e2f92ff258ac42b9576d407b898e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34912bccaefb645541f47d083c5c307b20ff77c5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648420"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975953"
 ---
 # <a name="wcf-web-http-error-handling"></a>Obsługa błędów protokołu HTTP sieci Web w programie WCF
-Obsługa błędów protokołu HTTP sieci Web Windows Communication Foundation (WCF) pozwala zwrócić błędy z usług WCF Web HTTP, które określić kod stanu HTTP i zwraca szczegóły błędu przy użyciu tego samego formatu co operacji (na przykład XML lub JSON).  
+Obsługa błędów HTTP sieci Web w programie Windows Communication Foundation (WCF) umożliwia zwracanie błędów z usług HTTP sieci Web w programie WCF, które określają kod stanu HTTP i zwracają szczegóły błędu przy użyciu tego samego formatu co operacja (na przykład XML lub JSON).  
   
 ## <a name="wcf-web-http-error-handling"></a>Obsługa błędów protokołu HTTP sieci Web w programie WCF  
- <xref:System.ServiceModel.Web.WebFaultException> Klasa definiuje konstruktora, który pozwala określić kod stanu HTTP. Ten kod stanu jest zwracany do klienta. Ogólny wersję <xref:System.ServiceModel.Web.WebFaultException> klasy <xref:System.ServiceModel.Web.WebFaultException%601> umożliwia zwracają typ zdefiniowany przez użytkownika, który zawiera informacje o błędzie, który wystąpił. Ten niestandardowy obiekt jest serializowany, przy użyciu formatu określony przez operację i zwracany do klienta. Poniższy przykład pokazuje, jak zwrócić kod stanu HTTP.  
+ Klasa <xref:System.ServiceModel.Web.WebFaultException> definiuje konstruktora, który umożliwia określenie kodu stanu HTTP. Ten kod stanu jest następnie zwracany do klienta. Ogólna wersja klasy <xref:System.ServiceModel.Web.WebFaultException>, <xref:System.ServiceModel.Web.WebFaultException%601> umożliwia zwrócenie typu zdefiniowanego przez użytkownika, który zawiera informacje o błędzie, który wystąpił. Ten obiekt niestandardowy jest serializowany przy użyciu formatu określonego przez operację i zwracany do klienta. Poniższy przykład pokazuje, jak zwrócić kod stanu HTTP.  
   
-```  
-Public string Operation1()  
-{   // Operation logic  
-   // ...  
-   Throw new WebFaultException(HttpStatusCode.Forbidden);  
+```csharp
+public string Operation1()
+{
+    // Operation logic  
+   // ...
+   throw new WebFaultException(HttpStatusCode.Forbidden);
 }  
 ```  
   
- Poniższy przykład pokazuje, jak zwrócić kod stanu HTTP i dodatkowe informacje w typ zdefiniowany przez użytkownika. `MyErrorDetail` jest typ zdefiniowany przez użytkownika, który zawiera dodatkowe informacje o błędzie, który wystąpił.  
+ Poniższy przykład pokazuje, jak zwrócić kod stanu HTTP i dodatkowe informacje w typie zdefiniowanym przez użytkownika. `MyErrorDetail` jest typem zdefiniowanym przez użytkownika, który zawiera dodatkowe informacje o błędzie, który wystąpił.  
   
-```  
-Public string Operation2()  
+```csharp
+public string Operation2()
+{
    // Operation logic  
-   // ...   MyErrorDetail detail = new MyErrorDetail  
+   // ...
+   MyErrorDetail detail = new MyErrorDetail()
    {  
       Message = "Error Message",  
       ErrorCode = 123,  
@@ -37,17 +40,17 @@ Public string Operation2()
 }  
 ```  
   
- Powyższy kod zwraca odpowiedź HTTP z kodem stanu zabronione i treści, która zawiera wystąpienie `MyErrorDetails` obiektu. Format `MyErrorDetails` obiektu jest określana przez:  
+ Poprzedni kod zwraca odpowiedź HTTP z niedozwolonym kodem stanu i treścią zawierającą wystąpienie obiektu `MyErrorDetails`. Format obiektu `MyErrorDetails` jest określany na podstawie:  
   
-- Wartość `ResponseFormat` parametru <xref:System.ServiceModel.Web.WebGetAttribute> lub <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybutu wskazanego w operacji usługi.  
+- Wartość parametru `ResponseFormat` atrybutu <xref:System.ServiceModel.Web.WebGetAttribute> lub <xref:System.ServiceModel.Web.WebInvokeAttribute> określonego w operacji usługi.  
   
 - Wartość <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.  
   
-- Wartość <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> właściwości, uzyskując dostęp do <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.  
+- Wartość właściwości <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> przez uzyskanie dostępu do <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.  
   
- Aby uzyskać więcej informacji na temat wpływu tych wartości na formatowanie operacji, zobacz [WCF Web HTTP formatowanie](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
+ Aby uzyskać więcej informacji o tym, jak te wartości wpływają na formatowanie operacji, zobacz temat [Formatowanie http sieci Web](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)w programie WCF.  
   
- <xref:System.ServiceModel.Web.WebFaultException> jest <xref:System.ServiceModel.FaultException> i dlatego może służyć jako model programowania wyjątków błędów dla usług, które uwidaczniają punkty końcowe protokołu SOAP, a także punktów końcowych HTTP w sieci web.  
+ <xref:System.ServiceModel.Web.WebFaultException> jest <xref:System.ServiceModel.FaultException> i dlatego może służyć jako model programowania wyjątków błędów dla usług, które uwidaczniają punkty końcowe protokołu SOAP, a także punkty końcowe HTTP sieci Web.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: df6806cd77e7ff109d79f7ba61866763de4c7fc1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d0002182c5ae519c36348acdd2587bca499fe72e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790364"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975140"
 ---
 # <a name="quickstart-wcf-data-services"></a>Szybki Start (Usługi danych programu WCF)
 
-Ten przewodnik Szybki Start pomaga zapoznać się z usługi danych programu WCF i [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] z serii zadań, które obsługują tematy w programie [wprowadzenie](getting-started-with-wcf-data-services.md).
+Ten przewodnik Szybki Start pomaga zapoznać się z Usługi danych programu WCF i protokołem Open Data Protocol (OData), korzystając z szeregu zadań, które obsługują tematy w programie [wprowadzenie](getting-started-with-wcf-data-services.md).
 
 ## <a name="what-youll-learn"></a>Dowiesz się
 

@@ -2,25 +2,25 @@
 title: Dostrajanie aplikacji asynchronicznej (C#)
 ms.date: 07/20/2015
 ms.assetid: 97696eb9-81fc-4940-9655-84daa8eb4d5c
-ms.openlocfilehash: a7c730992a9bbb4853b6451323e1c49bd19bdf42
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cff50e62ff62b70e97e7ea6e03714326d774e407
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924430"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970241"
 ---
 # <a name="fine-tuning-your-async-application-c"></a>Dostrajanie aplikacji asynchronicznej (C#)
-Możesz dodać precyzję i elastyczność do aplikacji asynchronicznych przy użyciu metod i właściwości, które <xref:System.Threading.Tasks.Task> udostępnia typ. W tematach w tej sekcji przedstawiono przykłady użycia <xref:System.Threading.CancellationToken> i ważnych `Task` metod, takich <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> jak <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>i.  
+Możesz dodać precyzję i elastyczność do swoich aplikacji asynchronicznych, korzystając z metod i właściwości, które udostępnia typ <xref:System.Threading.Tasks.Task>. W tematach w tej sekcji przedstawiono przykłady, które używają <xref:System.Threading.CancellationToken> i ważnych metod `Task`, takich jak <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>.  
   
- Za pomocą `WhenAny` i `WhenAll`, można łatwiej uruchomić wiele zadań i oczekiwać ich ukończenia przez monitorowanie jednego zadania.  
+ Korzystając z `WhenAny` i `WhenAll`, można łatwiej uruchamiać wiele zadań i czekać ich na ukończenie przez monitorowanie jednego zadania.  
   
-- `WhenAny`zwraca zadanie, które kończy się po zakończeniu każdego zadania w kolekcji.  
+- `WhenAny` zwraca zadanie, które kończy się po zakończeniu każdego zadania w kolekcji.  
   
-     Aby zapoznać się z `WhenAny`przykładami, zobacz [Anulowanie pozostałych zadań asynchronicznych po zakończeniuC#jednego ()](./cancel-remaining-async-tasks-after-one-is-complete.md) i [Uruchamianie wielu zadań asynchronicznych i przetwarzanie ich wC#miarę ich ukończenia ()](./start-multiple-async-tasks-and-process-them-as-they-complete.md).  
+     Aby zapoznać się z przykładami, które używają `WhenAny`, zobacz [Anulowanie pozostałych zadań asynchronicznych po zakończeniu jednegoC#()](./cancel-remaining-async-tasks-after-one-is-complete.md) i [Uruchamianie wielu zadań asynchronicznych iC#przetwarzanie ich w miarę ich ukończenia ()](./start-multiple-async-tasks-and-process-them-as-they-complete.md).  
   
-- `WhenAll`zwraca zadanie, które kończy się po zakończeniu wszystkich zadań w kolekcji.  
+- `WhenAll` zwraca zadanie, które kończy się po zakończeniu wszystkich zadań w kolekcji.  
   
-     Aby uzyskać więcej informacji i przykład korzystania `WhenAll`z programu, zobacz [How to: Rozwiń Przewodnik asynchroniczny za pomocą polecenia Task. WhenAllC#(](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)).  
+     Aby uzyskać więcej informacji i przykład, który używa `WhenAll`, zobacz [jak rozłożyć Instruktaż asynchroniczny za pomocą metody Task.C#WhenAll ()](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
   
  Ta sekcja zawiera następujące przykłady.  
   
@@ -37,9 +37,9 @@ Możesz dodać precyzję i elastyczność do aplikacji asynchronicznych przy uż
   
  Projekty tworzą interfejs użytkownika, który zawiera przycisk uruchamiający proces i przycisk, który go anuluje, jak pokazano na poniższej ilustracji. Przyciski mają nazwę `startButton` i `cancelButton`.  
   
- ![Okno WPF z przyciskiem Anuluj](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "dialogowe z przyciskiem uruchamiania i zatrzymywania")  
+ ![Okno WPF z przyciskiem Anuluj](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "Okno dialogowe z przyciskiem uruchamiania i zatrzymywania")  
   
- Możesz pobrać kompletne projekty Windows Presentation Foundation (WPF) z [przykładu asynchronicznego: Dostosuj aplikację](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Możesz pobrać kompletne projekty Windows Presentation Foundation (WPF) z [przykładu asynchronicznego: dostrajanie aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ## <a name="see-also"></a>Zobacz także
 

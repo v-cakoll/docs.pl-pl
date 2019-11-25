@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 9995a509bf997298d991a1f66cfdf3cae6cd0395
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4beaba24e42b15ebc45ece6e5319a2b14df54ab6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790966"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975379"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Tworzenie aplikacji klienckiej .NET Framework (Usługi danych programu WCF Szybki Start)
 
-To jest końcowe zadanie Usługi danych programu WCF szybkiego startu. W tym zadaniu zostanie dodana Aplikacja konsolowa do rozwiązania, Dodaj odwołanie do [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] kanału informacyjnego do tej nowej aplikacji klienckiej i dostęp do źródła strumieniowego OData z aplikacji klienckiej przy użyciu wygenerowanych klas usługi danych klienta i bibliotek klienckich .
+To jest końcowe zadanie Usługi danych programu WCF szybkiego startu. W tym zadaniu zostanie dodana Aplikacja konsolowa do rozwiązania, Dodaj odwołanie do źródła danych protokołu Open Data Protocol (OData) do tej nowej aplikacji klienckiej i dostęp do źródła danych OData z aplikacji klienckiej przy użyciu wygenerowanych klas i klienta usługi Data Service. bibliotece.
 
 > [!NOTE]
 > Aplikacja kliencka oparta na .NET Framework nie jest wymagana w celu uzyskania dostępu do strumieniowego źródła danych. Dostęp do usługi danych mogą uzyskać każdy składnik aplikacji korzystający z kanału informacyjnego OData. Aby uzyskać więcej informacji, zobacz [Korzystanie z usługi danych w aplikacji klienckiej](using-a-data-service-in-a-client-application-wcf-data-services.md).
@@ -47,20 +47,20 @@ To jest końcowe zadanie Usługi danych programu WCF szybkiego startu. W tym zad
 
 2. W oknie dialogowym **Dodaj odwołanie** kliknij kartę **.NET** , wybierz zestaw system. Data. Services. Client. dll, a następnie kliknij przycisk **OK**.
 
-3. W **Eksplorator rozwiązań** w obszarze **NorthwindClient**Otwórz stronę kodową dla pliku MainWindow. XAML i Dodaj następującą `using` instrukcję (`Imports` w Visual Basic).
+3. W **Eksplorator rozwiązań** w obszarze **NorthwindClient**Otwórz stronę kodową dla pliku MainWindow. XAML i Dodaj następującą instrukcję `using` (`Imports` w Visual Basic).
 
     [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#using)]
     [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#using)]
 
-4. Wstaw następujący kod, który wysyła zapytanie do tej usługi danych i wiąże wynik z <xref:System.Data.Services.Client.DataServiceCollection%601> `MainWindow` klasą:
+4. Wstaw następujący kod, który wysyła zapytanie do tej usługi danych i powiąże wynik z <xref:System.Data.Services.Client.DataServiceCollection%601> w klasie `MainWindow`:
 
     > [!NOTE]
-    > Należy zastąpić nazwę `localhost:12345` hosta serwerem i portem, który hostuje wystąpienie usługi danych Northwind.
+    > Należy zastąpić nazwę hosta `localhost:12345` z serwerem i portem, który hostuje wystąpienie usługi danych Northwind.
 
      [!code-csharp[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#querycode)]
      [!code-vb[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#querycode)]
 
-5. Wstaw następujący kod, który zapisuje zmiany w `MainWindow` klasie:
+5. Wstaw następujący kod, który zapisuje zmiany w klasie `MainWindow`:
 
      [!code-csharp[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#savechanges)]
      [!code-vb[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#savechanges)]

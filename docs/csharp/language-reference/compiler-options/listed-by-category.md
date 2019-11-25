@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 7319d424b84d5edd41fc255e3aea763da55961a9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5cd5607c25dabd8f56ebb58366116666e8e649ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606730"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972703"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opcje kompilatora C# w rozbiciu na kategorie
 
@@ -52,10 +52,10 @@ Poniższe opcje kompilatora są sortowane według kategorii. Aby zapoznać się 
 |[-nostdlib](nostdlib-compiler-option.md)|Instruuje kompilator, aby nie zaimportował biblioteki standardowej (mscorlib. dll).|
 |[-publicsign](publicsign-compiler-option.md)|Zastosuj klucz publiczny bez podpisywania zestawu, ale ustaw bit w zestawie wskazujący, że zestaw jest podpisany.|
 |[-reference](reference-compiler-option.md)|Importuje metadane z pliku, który zawiera zestaw.|
-|-analyzer|Uruchom analizatory z tego zestawu (krótka wersja:/a)|
+|-Analizator|Uruchom analizatory z tego zestawu (krótka wersja:/a)|
 |-additionalfile|Nazywa dodatkowe pliki, które nie wpływają bezpośrednio na generowanie kodu, ale mogą być używane przez analizatory do tworzenia błędów lub ostrzeżeń.|
 |-Osadź|Osadź wszystkie pliki źródłowe w pliku PDB.|
-|-embed:\<lista plików >|Osadź określone pliki w pliku PDB.|
+|-Osadź:\<listy plików >|Osadź określone pliki w pliku PDB.|
 ## <a name="debuggingerror-checking"></a>Debugowanie/sprawdzanie błędów
 
 |Opcja|Cel|
@@ -68,7 +68,7 @@ Poniższe opcje kompilatora są sortowane według kategorii. Aby zapoznać się 
 |[-nowarn](nowarn-compiler-option.md)|Pomija generowanie określonych ostrzeżeń przez kompilator.|
 |[-warn](warn-compiler-option.md)|Ustawia poziom ostrzeżeń.|
 |[-warnaserror](warnaserror-compiler-option.md)|Podwyższa poziom ostrzeżeń do błędów.|
-|-zestaw reguł\<: plik >|Określ plik zestawu reguł, który wyłącza określoną diagnostykę.|
+|-zestaw reguł:\<pliku >|Określ plik zestawu reguł, który wyłącza określoną diagnostykę.|
 
 ## <a name="preprocessor"></a>Preprocesor
 
@@ -76,7 +76,7 @@ Poniższe opcje kompilatora są sortowane według kategorii. Aby zapoznać się 
 |------------|-------------|
 |[-define](define-compiler-option.md)|Definiuje symbole preprocesora.|
 
-## <a name="resources"></a>Zasoby
+## <a name="resources"></a>Resources
 
 |Opcja|Cel|
 |------------|-------------|
@@ -94,17 +94,17 @@ Poniższe opcje kompilatora są sortowane według kategorii. Aby zapoznać się 
 |[-?](help-compiler-option.md)|Wyświetla listę opcji kompilatora do stdout.|
 |[-baseaddress](baseaddress-compiler-option.md)|Określa preferowany adres podstawowy, z którego ma zostać załadowana Biblioteka DLL.|
 |[-codepage](codepage-compiler-option.md)|Określa stronę kodową, która ma być używana dla wszystkich plików kodu źródłowego w kompilacji.|
-|[-help](help-compiler-option.md)|Wyświetla listę opcji kompilatora do stdout.|
+|[-Pomoc](help-compiler-option.md)|Wyświetla listę opcji kompilatora do stdout.|
 |[-highentropyva](highentropyva-compiler-option.md)|Określa, że plik wykonywalny obsługuje generowanie losowe układu przestrzeni adresowej (ASLR).|
-|[-langversion](langversion-compiler-option.md)|Określ wersję języka: Domyślna, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7,1, 7,2, 7,3 lub Najnowsza |
+|[-langversion](langversion-compiler-option.md)|Określ wersję języka: default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7,1, 7,2, 7,3 lub Najnowsza |
 |[-main](main-compiler-option.md)|Określa lokalizację metody **Main** .|
 |[-noconfig](noconfig-compiler-option.md)|Instruuje kompilator, aby nie kompilować z CSC. rsp.|
 |[-nologo](nologo-compiler-option.md)|Pomija informacje transparentu kompilatora.|
 |[-recurse](recurse-compiler-option.md)|Wyszukuje w podkatalogach pliki źródłowe do skompilowania.|
 |[-subsystemversion](subsystemversion-compiler-option.md)|Określa minimalną wersję podsystemu, który może być używany przez plik wykonywalny.|
-|[-unsafe](unsafe-compiler-option.md)|Włącza kompilację kodu, który używa [](../keywords/unsafe.md) słowa kluczowego unsafe.|
+|[-unsafe](unsafe-compiler-option.md)|Włącza kompilację kodu, który używa słowa kluczowego [UNSAFE](../keywords/unsafe.md) .|
 |[-utf8output](utf8output-compiler-option.md)|Wyświetla dane wyjściowe kompilatora przy użyciu kodowania UTF-8.|
-|-parallel[+&#124;-]|Określa, czy ma być używana współbieżna kompilacja (+).|
+|-Parallel [+&#124;-]|Określa, czy ma być używana współbieżna kompilacja (+).|
 |-checksumalgorithm:\<alg >|Określ algorytm obliczania sumy kontrolnej plików źródłowych przechowywanej w pliku PDB.  Obsługiwane są następujące wartości: SHA1 (domyślnie) lub SHA256.<br>Ze względu na kolizje problemów z algorytmem SHA1 firma Microsoft zaleca SHA256.|
 
 ## <a name="obsolete-options"></a>Przestarzałe opcje
@@ -117,4 +117,4 @@ Poniższe opcje kompilatora są sortowane według kategorii. Aby zapoznać się 
 
 - [Opcje kompilatora C#](index.md)
 - [Opcje kompilatora C# w porządku alfabetycznym](listed-alphabetically.md)
-- [Instrukcje: Ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Jak ustawić zmienne środowiskowe dla wiersza polecenia programu Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

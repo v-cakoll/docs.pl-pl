@@ -13,28 +13,28 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 5934a342f653f294c07e00d38d51dae6b159dab9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: db0e2234055c6869c4cf55196d9f3b62a6996c96
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122482"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972061"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Podstawienia w wyrażeniach regularnych
-<a name="Top"></a>Podstawienia są elementami języka, które są rozpoznawane tylko w obrębie wzorców zamiennych. Używają one wzorca wyrażenia regularnego w celu zdefiniowania całości lub części teksu, który ma zastąpić dopasowany tekst w ciągu wejściowym. Wzorzec zamieniania może składać się z co najmniej jednego podstawienia oraz znaków literału. Wzorce zastępujące są dostarczane do przeciążenia metody <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>, która ma parametr `replacement` i metodę <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Metody zastępują pasujący wzorzec ze wzorcem zdefiniowanym przez parametr `replacement`.  
+Podstawienia są elementami języka, które są rozpoznawane tylko we wzorcach zamieniania. Używają one wzorca wyrażenia regularnego w celu zdefiniowania całości lub części teksu, który ma zastąpić dopasowany tekst w ciągu wejściowym. Wzorzec zamieniania może składać się z co najmniej jednego podstawienia oraz znaków literału. Wzorce zastępujące są dostarczane do przeciążenia metody <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>, która ma parametr `replacement` i metodę <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Metody zastępują pasujący wzorzec ze wzorcem zdefiniowanym przez parametr `replacement`.  
   
  Program .NET Framework definiuje elementy podstawień wymienione w poniższej tabeli.  
   
 |Podstawienie|Opis|  
 |------------------|-----------------|  
-|*numer* $ |Zawiera ostatni podciąg dopasowany przez grupę przechwytywania, która jest identyfikowana przez *liczbę*, gdzie *Number* jest wartością dziesiętną w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie numerowanej grupy](#Numbered).|  
-|$ { *name* }|Zawiera ostatni podciąg dopasowany przez nazwaną grupę, która jest oznaczona `(?<`*nazwą*`> )` w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie nazwanej grupy](#Named).|  
-|$$|Zawiera pojedynczy literał „$” w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie symbolu "$"](#DollarSign).|  
-|$&|Zawiera kopię całego dopasowania w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [Podstawianie całego dopasowania](#EntireMatch).|  
-|$\`|Zawiera cały tekst ciągu wejściowego przed dopasowaniem w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie tekstu przed dopasowaniem](#BeforeMatch).|  
-|$'|Zawiera cały tekst ciągu wejściowego po dopasowaniu w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie tekstu po dopasowaniu](#AfterMatch).|  
-|$+|Zawiera ostatnią grupę przechwyconą w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie ostatniej przechwyconej grupy](#LastGroup).|  
-|$_|Zawiera cały ciąg wejściowy w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [Podstawianie całego ciągu wejściowego](#EntireString).|  
+|*numer* $ |Zawiera ostatni podciąg dopasowany przez grupę przechwytywania, która jest identyfikowana przez *liczbę*, gdzie *Number* jest wartością dziesiętną w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie numerowanej grupy](#substituting-a-numbered-group).|  
+|$ { *name* }|Zawiera ostatni podciąg dopasowany przez nazwaną grupę, która jest oznaczona `(?<`*nazwą*`> )` w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie nazwanej grupy](#substituting-a-named-group).|  
+|$$|Zawiera pojedynczy literał „$” w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie symbolu "$"](#substituting-a--character).|  
+|$&|Zawiera kopię całego dopasowania w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [Podstawianie całego dopasowania](#substituting-the-entire-match).|  
+|$\`|Zawiera cały tekst ciągu wejściowego przed dopasowaniem w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie tekstu przed dopasowaniem](#substituting-the-text-before-the-match).|  
+|$'|Zawiera cały tekst ciągu wejściowego po dopasowaniu w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie tekstu po dopasowaniu](#substituting-the-text-after-the-match).|  
+|$+|Zawiera ostatnią grupę przechwyconą w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie ostatniej przechwyconej grupy](#substituting-the-last-captured-group).|  
+|$\_|Zawiera cały ciąg wejściowy w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [Podstawianie całego ciągu wejściowego](#substituting-the-entire-input-string).|  
   
 ## <a name="substitution-elements-and-replacement-patterns"></a>Elementy podstawienia i wzorce zamieniania  
  Podstawienia to jedyne konstrukcje specjalne rozpoznawane we wzorcu zamieniania. Żadne inne elementy języka wyrażeń regularnych, w tym znaki ucieczki i kropka (`.`), które pasują do żadnego znaku, są obsługiwane. Podobnie elementy języka podstawień są rozpoznawane tylko we wzorcach zamieniania, i nigdy nie są prawidłowe we wzorcach wyrażeń regularnych.  
@@ -43,12 +43,11 @@ ms.locfileid: "73122482"
   
 > [!NOTE]
 > Aby w wyrażeniu regularnym uzyskać funkcjonalność podobną do wzorca zamieniania, należy użyć dopasowywania wstecznego. Aby uzyskać więcej informacji na temat odwołań wstecznych, zobacz [konstrukcje odwołań wstecznych](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
-  
-<a name="Numbered"></a>   
+
 ## <a name="substituting-a-numbered-group"></a>Podstawianie numerowanej grupy  
  Element języka `$`*Number* zawiera ostatni podciąg dopasowany przez grupę przechwytywania *liczb* w ciągu zamiennym, gdzie *Number* to indeks grupy przechwytywania. Na przykład `$1` Wzorzec zamieniania wskazuje, że dopasowany podciąg ma zostać zastąpiony przez pierwszą przechwyconą grupę. Aby uzyskać więcej informacji na temat numerowanych grup przechwytywania, zobacz [Grouping konstrukcjes](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
- Wszystkie cyfry, które obserwują `$` są interpretowane jako należące do grupy *Numbers* . Jeśli nie jest to zgodne z zamiarami użytkownika, można podstawić grupę nazwaną. Można na przykład użyć ciągu zamiennego `${1}1` zamiast `$11`, aby zdefiniować ciąg zamienny jako wartość pierwszej przechwyconej grupy wraz z liczbą "1". Aby uzyskać więcej informacji, zobacz [podstawianie nazwanej grupy](#Named).  
+ Wszystkie cyfry, które obserwują `$` są interpretowane jako należące do grupy *Numbers* . Jeśli nie jest to zgodne z zamiarami użytkownika, można podstawić grupę nazwaną. Można na przykład użyć ciągu zamiennego `${1}1` zamiast `$11`, aby zdefiniować ciąg zamienny jako wartość pierwszej przechwyconej grupy wraz z liczbą "1". Aby uzyskać więcej informacji, zobacz [podstawianie nazwanej grupy](#substituting-a-named-group).  
   
  Grupy przechwytywania, które nie są jawnie przypisane nazw przy użyciu *nazwy* `(?<``>)` składnia są numerowane od lewej do prawej, począwszy od jednej. Nazwane grupy także są numerowane od lewej do prawej, począwszy od numeru większego o 1 od indeksu ostatniej nienazwanej grupy. Na przykład w wyrażeniu regularnym `(\w)(?<digit>\d)`indeks `digit` nazwanej grupy wynosi 2.  
   
@@ -69,10 +68,7 @@ ms.locfileid: "73122482"
 |`[.,]?`|Dopasowanie do zera lub jednej kropki lub przecinka.|  
 |`\d*`|Dopasowanie do zera lub większej liczby cyfr dziesiętnych.|  
 |`(\s?\d+[.,]?\d*)`|Dopasowanie do odstępu, po którym następuje co najmniej jedna cyfra dziesiętna, po której następuje zero lub jedna kropka albo przecinek, po którym następuje zero lub większa liczba cyfr dziesiętnych. Jest to pierwsza grupa przechwytywania. Ze względu na to, że wzorzec zamiany jest `$1`, wywołanie metody <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> zastępuje cały dopasowany podciąg tej przechwyconej grupy.|  
-  
- [Powrót do początku](#Top)  
-  
-<a name="Named"></a>   
+
 ## <a name="substituting-a-named-group"></a>Podstawianie nazwanej grupy  
  *Nazwa* `${``}` element języka zastępuje ostatni podciąg dopasowany przez grupę przechwytywania *nazw* , gdzie *name* to nazwa grupy przechwytywania zdefiniowanej przez `(?<`*nazwę*`>)` elementu języka. Aby uzyskać więcej informacji na temat nazwanych grup przechwytywania, zobacz [Grouping konstrukcjes](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
@@ -95,10 +91,7 @@ ms.locfileid: "73122482"
 |`[.,]?`|Dopasowanie do zera lub jednej kropki lub przecinka.|  
 |`\d*`|Dopasowanie do zera lub większej liczby cyfr dziesiętnych.|  
 |`(?<amount>\s?\d[.,]?\d*)`|Dopasowanie do odstępu, po którym następuje co najmniej jedna cyfra dziesiętna, po której następuje zero lub jedna kropka albo przecinek, po którym następuje zero lub większa liczba cyfr dziesiętnych. To jest grupa przechwytywania o nazwie `amount`. Ze względu na to, że wzorzec zamiany jest `${amount}`, wywołanie metody <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> zastępuje cały dopasowany podciąg tej przechwyconej grupy.|  
-  
- [Powrót do początku](#Top)  
-  
-<a name="DollarSign"></a>   
+
 ## <a name="substituting-a--character"></a>Podstawianie znaku „$”  
  Podstawianie `$$` wstawia literał "$" w zastąpionym ciągu.  
   
@@ -116,8 +109,7 @@ ms.locfileid: "73122482"
 |`\.`|Dopasowanie kropki (separator dziesiętny).|  
 |`(\d+)`|Dopasowanie do co najmniej jednej cyfry dziesiętnej. Jest to trzecia grupa przechwytywania.|  
 |`(\.(\d+))?`|Dopasowanie zera lub jednego wystąpienia kropki, po którym następuje co najmniej jedna cyfra dziesiętna. Jest to druga grupa przechwytywania.|  
-  
-<a name="EntireMatch"></a>   
+
 ## <a name="substituting-the-entire-match"></a>Podstawianie całego dopasowania  
  Podstawianie `$&` obejmuje całe dopasowanie w ciągu zamiennym. Często jest używane do dodawania podciągu na początku lub końcu dopasowanego ciągu. Na przykład wzorzec zamiany `($&)` dodaje nawiasy do początku i końca każdego dopasowania. Jeśli nie ma dopasowania, podstawianie `$&` nie ma żadnego wpływu.  
   
@@ -135,10 +127,7 @@ ms.locfileid: "73122482"
 |`$`|Dopasowuje koniec ciągu wejściowego.|  
   
  Wzorzec zamiany `"$&"` dodaje znak cudzysłowu na początku i końcu każdego dopasowania.  
-  
- [Powrót do początku](#Top)  
-  
-<a name="BeforeMatch"></a>   
+
 ## <a name="substituting-the-text-before-the-match"></a>Podstawianie tekstu przed dopasowaniem  
  Podstawienie ``$` `` zastępuje dopasowany ciąg do całego ciągu wejściowego przed dopasowaniem. Oznacza to, że duplikuje ciąg wejściowy przed dopasowaniem, a jednocześnie usuwa dopasowany tekst. Ciąg znajdujący się po dopasowanym tekście zostanie umieszczony w ciągu wynikowym bez zmian. Jeśli w ciągu wejściowym będzie znajdować się wiele dopasowań, tekst zamienny będzie pochodził z oryginalnego ciągu wejściowego, a nie z ciągu, w którym tekst został zamieniony na poprzednie dopasowania. \(przykład zawiera ilustrację.\) Jeśli nie ma dopasowania, podstawianie ``$` `` nie ma żadnego wpływu.  
   
@@ -155,11 +144,8 @@ ms.locfileid: "73122482"
 |2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
 |3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
 |4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**EE5|  
-|5|14,5|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**|  
-  
- [Powrót do początku](#Top)  
-  
-<a name="AfterMatch"></a>   
+|5|14,5|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**| 
+
 ## <a name="substituting-the-text-after-the-match"></a>Podstawianie tekstu po dopasowaniu  
  Podstawienie `$'` zastępuje dopasowany ciąg, używając całego ciągu wejściowego po dopasowaniu. Oznacza to, że duplikuje ciąg wejściowy za dopasowaniem, a jednocześnie usuwa dopasowany tekst. Ciąg znajdujący się przed dopasowanym tekstem zostanie umieszczony w ciągu wynikowym bez zmian. Jeśli nie ma dopasowania, podstawianie `$'` nie ma żadnego wpływu.  
   
@@ -177,10 +163,7 @@ ms.locfileid: "73122482"
 |3|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc**dd4ee5**dd4ee5|  
 |4|11|ee5|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd**EE5**EE5|  
 |5|14,5|<xref:System.String.Empty?displayProperty=nameWithType>|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee|  
-  
- [Powrót do początku](#Top)  
-  
-<a name="LastGroup"></a>   
+
 ## <a name="substituting-the-last-captured-group"></a>Podstawianie ostatniej przechwyconej grupy  
  Podstawienie `$+` zamienia dopasowany ciąg na ostatnią przechwyconą grupę. Jeśli nie ma żadnych przechwyconych grup lub <xref:System.String.Empty?displayProperty=nameWithType>wartość ostatniej przechwyconej grupy, podstawianie `$+` nie ma żadnego skutku.  
   
@@ -198,10 +181,7 @@ ms.locfileid: "73122482"
 |`\s`|Dopasowuje znak odstępu.|  
 |`\1`|Dopasowanie pierwszej przechwyconej grupy.|  
 |`\b`|Kończy dopasowanie na granicy wyrazu.|  
-  
- [Powrót do początku](#Top)  
-  
-<a name="EntireString"></a>   
+
 ## <a name="substituting-the-entire-input-string"></a>Podstawianie całego ciągu wejściowego  
  Podstawienie `$_` zastępuje dopasowany ciąg z użyciem całego ciągu wejściowego. Oznacza to, że usuwa dopasowany tekst i zastępuje go całym ciągiem, w tym dopasowanym tekstem.  
   

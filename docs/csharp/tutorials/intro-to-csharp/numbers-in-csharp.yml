@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Gałęzie i pętle wC#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 31647906dd3e1286220077831d2ce90b65a5b73c
-  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+  ms.openlocfilehash: b417ba7ff340019c74b0c3430242f59d6217b07f
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 10/22/2019
-  ms.locfileid: "72774012"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969354"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: Eksploruj liczbę całkowitą
   durationInMinutes: 4
   content: >
-    Uruchom następujący kod w oknie interaktywnym. Aby to zrobić, wpisz poniższy blok kodu w oknie interaktywnym i kliknij przycisk **Uruchom** :
+    Uruchom następujący kod w oknie interaktywnym. Wybierz przycisk **Przejdź do trybu koncentracji uwagi** . Następnie wpisz poniższy blok kodu w oknie interaktywnym i wybierz polecenie **Uruchom**:
 
 
     ```csharp
@@ -43,12 +43,12 @@ items:
     Jeśli używasz tego środowiska w środowisku, należy postępować zgodnie z instrukcjami dotyczącymi [wersji lokalnej](numbers-in-csharp-local.md) .
 
 
-    Właśnie zaobserwowano jedną z podstawowych operacji matematycznych z liczbami całkowitymi. Typ `int` reprezentuje liczbę **całkowitą**, dodatnią lub ujemną. Użyj symbolu `+` do dodania. Inne typowe operacje matematyczne na liczbach całkowitych obejmują:
+    Właśnie zaobserwowano jedną z podstawowych operacji matematycznych z liczbami całkowitymi. Typ `int` reprezentuje liczbę **całkowitą**, dodatnią lub ujemną liczbą całkowitą. Użyj symbolu `+` do dodania. Inne typowe operacje matematyczne na liczbach całkowitych obejmują:
 
 
-    - `-` w przypadku odejmowania
+    - `-` do odejmowania
 
-    - `*` dla mnożenia
+    - `*` do mnożenia
 
     - `/` dla dzielenia
 
@@ -58,7 +58,7 @@ items:
     > W tym samouczku interaktywnym możesz samodzielnie eksplorować swoje informacje, modyfikując kod zapisany w oknie interaktywnym. W tym samouczku przedstawiono przykłady, które można wykonać w każdym kroku.
 
 
-    Zacznij od eksplorowania tych różnych operacji. Zmodyfikuj trzeci wiersz, aby wypróbować każdą z tych operacji. Po każdej edycji kliknij przycisk **Run (Uruchom** ).
+    Zacznij od eksplorowania tych różnych operacji. Zmodyfikuj trzeci wiersz, aby wypróbować każdą z tych operacji. Po każdej edycji wybierz przycisk **Uruchom** .
 
 
     Odejmowania
@@ -181,7 +181,7 @@ items:
     ```
 
 
-    Kliknij przycisk **Uruchom** ponownie, aby zobaczyć wyniki.
+    Wybierz pozycję **Uruchom** ponownie, aby wyświetlić wyniki.
 
 
     > [!NOTE]
@@ -214,7 +214,7 @@ items:
     ```
 
 
-    Typ C# Integer różni się od matematycznych liczb całkowitych w jeden inny sposób: typ `int` ma limity minimalne i maksymalne. Uruchom ten kod w oknie interaktywnym, aby zobaczyć te limity:
+    Typ C# Integer różni się od matematycznych liczb całkowitych w jeden inny sposób: typ `int` ma minimalne i maksymalne limity. Uruchom ten kod w oknie interaktywnym, aby zobaczyć te limity:
 
 
     ```csharp
@@ -256,7 +256,7 @@ items:
 - title: Pracuj z typem Double
   durationInMinutes: 5
   content: >
-    Typ liczbowy `double` reprezentuje liczbę zmiennoprzecinkową o podwójnej precyzji. Te warunki mogą być nowe dla Ciebie. Liczba **zmiennoprzecinkowa** jest przydatna do reprezentowania numerów niecałkowitych, które mogą być bardzo duże lub małe. **Podwójne precyzja** oznacza, że te liczby są przechowywane z większą dokładnością niż **Pojedyncza precyzja**. Na nowoczesnych komputerach, bardziej powszechne jest użycie podwójnej precyzji niż pojedyncze numery precyzji.
+    `double` typ liczbowy reprezentuje liczbę zmiennoprzecinkową o podwójnej precyzji. Te warunki mogą być nowe dla Ciebie. Liczba **zmiennoprzecinkowa** jest przydatna do reprezentowania numerów niecałkowitych, które mogą być bardzo duże lub małe. **Podwójne precyzja** oznacza, że te liczby są przechowywane z większą dokładnością niż **Pojedyncza precyzja**. Na nowoczesnych komputerach, bardziej powszechne jest użycie podwójnej precyzji niż pojedyncze numery precyzji.
 
     Eksplorujmy. Wypróbuj następujący kod w oknie interaktywnym i zobacz wynik:
 
@@ -308,7 +308,7 @@ items:
     ```
 
 
-    Te wartości są drukowane w notacji wykładniczej. Liczba po lewej stronie `E` to mantysę. Liczba po prawej stronie jest wykładnikiem potęgi od 10.
+    Te wartości są drukowane w notacji wykładniczej. Liczba po lewej stronie `E` jest mantysę. Liczba po prawej stronie jest wykładnikiem potęgi od 10.
 
 
     Podobnie jak w przypadku liczb dziesiętnych w zapisie matematycznym, podwaja w C# może mieć błędy zaokrągleń. Wypróbuj następujący kod:
@@ -323,7 +323,7 @@ items:
     ```
 
 
-    Wiadomo, że powtarzające się `0.3` nie są dokładnie takie same, jak `1/3`.
+    Wiadomo, że `0.3` powtarzane nie są dokładnie takie same, jak `1/3`.
 
 
     ***Sprawdz***
@@ -373,7 +373,7 @@ items:
     ```
 
 
-    Sufiks `M` na liczbie wskazuje, że w przypadku stałej należy użyć typu `decimal`.
+    Sufiks `M` na liczbie wskazuje, że użytkownik musi używać typu `decimal`.
 
 
     Zauważ, że zapis matematyczny przy użyciu typu dziesiętnego ma więcej cyfr po prawej stronie przecinka dziesiętnego.
@@ -382,7 +382,7 @@ items:
     ***Sprawdz***
 
 
-    Teraz, gdy widzisz różne typy liczbowe, napisz kod, który oblicza obszar okręgu, którego promień to 2,50 cm. Należy pamiętać, że obszar okręgu to promień kwadratowy pomnożony przez PI. Jedna Wskazówka: .NET zawiera stałą dla liczby PI, <xref:System.Math.PI?displayProperty=nameWithType>, której można użyć dla tej wartości.
+    Teraz, gdy widzisz różne typy liczbowe, napisz kod, który oblicza obszar okręgu, którego promień to 2,50 cm. Należy pamiętać, że obszar okręgu to promień kwadratowy pomnożony przez PI. Jedna Wskazówka: .NET zawiera stałą dla liczby PI, <xref:System.Math.PI?displayProperty=nameWithType> której można użyć dla tej wartości.
 
 
     > [!NOTE]
@@ -415,7 +415,7 @@ items:
 
     > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Ukończono Samouczek interaktywny "Numbers C#". Możesz kliknąć link **rozgałęzienia i pętle** poniżej, aby uruchomić następny Interaktywny samouczek lub odwiedzić [witrynę programu .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) , aby pobrać zestaw .NET Core SDK, utworzyć projekt na maszynie i zachować kodowanie. Sekcja "następne kroki" umożliwia powrót do tych samouczków.
+    Ukończono Samouczek interaktywny "Numbers C#". Możesz wybrać poniższe łącze **gałęzie i pętle** , aby uruchomić następny Interaktywny samouczek lub odwiedzić [witrynę programu .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) , aby pobrać zestaw .NET Core SDK, utworzyć projekt na maszynie i zachować kodowanie. Sekcja "następne kroki" umożliwia powrót do tych samouczków.
 
 
     Więcej informacji na temat numerów C# można znaleźć w następujących tematach:

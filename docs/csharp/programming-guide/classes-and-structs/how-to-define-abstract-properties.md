@@ -1,28 +1,28 @@
 ---
-title: 'Instrukcje: Definiowanie właściwości abstrakcyjnych C# — Przewodnik programowania'
+title: Jak definiować właściwości abstrakcyjne — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 57fd2ed3a26bf5986f9c8a1a6cae6b041811e84c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1b6dc1dfe932ffff161b0eef667bd35a75b66cf9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970897"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971003"
 ---
-# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Instrukcje: Definiowanie właściwości abstrakcyjnychC# (Przewodnik programowania)
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Jak definiować właściwości abstrakcyjne (C# Przewodnik programowania)
 Poniższy przykład pokazuje, jak definiować właściwości [abstrakcyjne](../../language-reference/keywords/abstract.md) . Deklaracja właściwości abstrakcyjnej nie zapewnia implementacji metod dostępu do właściwości — deklaruje, że Klasa obsługuje właściwości, ale pozostawia implementację metody dostępu do klas pochodnych. W poniższym przykładzie pokazano, jak zaimplementować właściwości abstrakcyjne dziedziczone z klasy bazowej.  
   
  Ten przykład składa się z trzech plików, z których każdy jest kompilowany indywidualnie, a jego wynikający z nich zestaw jest przywoływany przez następną kompilację:  
   
-- abstractshape.cs: `Shape` Klasa, która zawiera właściwość abstrakcyjną `Area` .  
+- abstractshape.cs: Klasa `Shape`, która zawiera właściwość abstrakcyjnej `Area`.  
   
-- shapes.cs: Podklasy `Shape` klasy.  
+- shapes.cs: podklasy klasy `Shape`.  
   
-- shapetest.cs: Program testowy do wyświetlania obszarów niektórych `Shape`obiektów pochodnych.  
+- shapetest.cs: Program testowy do wyświetlania obszarów niektórych obiektów pochodnych `Shape`.  
   
  Aby skompilować przykład, użyj następującego polecenia:  
   
@@ -31,25 +31,25 @@ Poniższy przykład pokazuje, jak definiować właściwości [abstrakcyjne](../.
  Spowoduje to utworzenie pliku wykonywalnego shapetest. exe.  
   
 ## <a name="example"></a>Przykład  
- Ten plik deklaruje `Shape` klasę, która `Area` zawiera właściwość typu `double`.  
+ Ten plik deklaruje klasę `Shape`, która zawiera właściwość `Area` typu `double`.  
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
-- Modyfikatory we właściwości są umieszczane na samej deklaracji właściwości. Przykład:  
+- Modyfikatory we właściwości są umieszczane na samej deklaracji właściwości. Na przykład:  
   
     ```csharp  
     public abstract double Area  
     ```  
   
-- Podczas deklarowania właściwości abstrakcyjnej ( `Area` na przykład w tym przykładzie) można po prostu wskazać, jakie metody dostępu do właściwości są dostępne, ale nie należy ich wdrażać. W tym przykładzie dostępna jest tylko metoda dostępu [Get](../../language-reference/keywords/get.md) , więc właściwość jest tylko do odczytu.  
+- W przypadku deklarowania właściwości abstrakcyjnej (takiej jak `Area` w tym przykładzie) można po prostu wskazać, jakie metody dostępu do właściwości są dostępne, ale nie należy ich wdrażać. W tym przykładzie dostępna jest tylko metoda dostępu [Get](../../language-reference/keywords/get.md) , więc właściwość jest tylko do odczytu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia trzy podklasy `Shape` i sposób, w jaki `Area` zastępują właściwość w celu zapewnienia własnej implementacji.  
+ Poniższy kod przedstawia trzy podklasy `Shape` i sposób przesłania właściwości `Area` w celu zapewnienia własnej implementacji.  
   
  [!code-csharp[csProgGuideInheritance#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#2)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia program testowy, który tworzy wiele `Shape`obiektów pochodnych i drukuje ich obszary.  
+ Poniższy kod przedstawia program testowy, który tworzy wiele obiektów pochodnych `Shape`i drukuje obszary.  
   
  [!code-csharp[csProgGuideInheritance#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#3)]  
   

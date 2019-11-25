@@ -2,12 +2,12 @@
 title: Oszacowanie istotnych zmian — .NET Core
 description: Dowiedz się więcej na temat sposobu, w jaki platforma .NET Core próbuje zachować zgodność dla deweloperów w różnych wersjach programu .NET.
 ms.date: 06/10/2019
-ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739348"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973647"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Oszacowanie istotnych zmian w programie .NET Core
 
@@ -103,7 +103,7 @@ Zmiany w tej kategorii *modyfikują* publiczną powierzchnię typu. Większość
 
   Należy pamiętać, że wprowadzenie przesłonięcia może spowodować, że poprzedni odbiorcy pominięcia przesłonięcia podczas wywoływania [podstawy](../../csharp/language-reference/keywords/base.md).
 
-- **✔️ dodać konstruktora do klasy wraz z domyślnym konstruktorem (bez parametrów), jeśli Klasa nie miała wcześniej konstruktorów**
+- **✔️ dodawania konstruktora do klasy wraz z konstruktorem bez parametrów, jeśli Klasa nie miała wcześniej konstruktorów**
 
    Jednak dodanie konstruktora do klasy, która wcześniej nie miała konstruktorów *bez* dodawania konstruktora bezparametrowego, nie jest dozwolone.
 

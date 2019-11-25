@@ -15,15 +15,15 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: 2cd12ea49723bdac734c6847d337d945a5cfcb5e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 77c9f9131b556e0b8fa639cd723bf1ca8cd6602e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138622"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972306"
 ---
 # <a name="assembly-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń zestawów
-<a name="top"></a>Podczas kompilowania zestawu można określić zestaw uprawnień wymaganych do uruchomienia zestawu. To, czy określone uprawnienia są przyznane do zestawu, czy nie, zależy od dowodów.  
+Podczas kompilowania zestawu można określić zbiór uprawnień, które będą wymagane do jego uruchomienia. To, czy określone uprawnienia są przyznane do zestawu, czy nie, zależy od dowodów.  
   
  Istnieją dwa wyraźnie różniące się sposoby używania dowodów:  
   

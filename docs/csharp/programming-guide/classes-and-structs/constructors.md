@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: ea780fc983ed46c8a5ccb54ab618d1a0a2a928d1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 13597275460c075309b7457485a17655cf93f251
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597103"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971094"
 ---
 # <a name="constructors-c-programming-guide"></a>Konstruktorzy (Przewodnik programowania w języku C#)
 
@@ -20,7 +20,7 @@ Za każdym razem, gdy tworzona jest [Klasa](../../language-reference/keywords/cl
 
 ## <a name="parameterless-constructors"></a>Konstruktory bez parametrów
   
-Jeśli nie podano konstruktora dla klasy, program C# tworzy jedną, domyślnie, tworząc wystąpienie obiektu i ustawia zmienne Członkowskie na wartości domyślne, jak wymieniono w [tabeli wartości domyślnych](../../language-reference/keywords/default-values-table.md). Jeśli nie podano konstruktora dla struktury, zależy on C# od niejawnego *konstruktora bez parametrów* , aby automatycznie inicjować każde pole typu wartości jako wartość domyślną, jak wymieniono w [tabeli wartości domyślnych](../../language-reference/keywords/default-values-table.md). Aby uzyskać więcej informacji i przykładów, zobacz [konstruktory wystąpień](./instance-constructors.md).  
+Jeśli nie podano konstruktora dla klasy, program C# tworzy jedną, domyślnie, tworząc wystąpienie obiektu i ustawia zmienne Członkowskie na wartości domyślne, jak wymieniono w [tabeli wartości domyślnych](../../language-reference/keywords/default-values-table.md). Jeśli nie podano konstruktora dla struktury, zależy on C# od *niejawnego konstruktora bez parametrów* , aby automatycznie inicjować każde pole typu wartości jako wartość domyślną, jak wymieniono w [tabeli wartości domyślnych](../../language-reference/keywords/default-values-table.md). Aby uzyskać więcej informacji i przykładów, zobacz [konstruktory wystąpień](./instance-constructors.md).  
 
 ## <a name="constructor-syntax"></a>Składnia konstruktora
 
@@ -28,7 +28,7 @@ Konstruktor jest metodą, której nazwa jest taka sama jak nazwa jej typu. Podpi
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#1)]  
 
-Jeśli Konstruktor można zaimplementować jako pojedynczą instrukcję, można użyć [definicji treści wyrażenia](../statements-expressions-operators/expression-bodied-members.md). W poniższym przykładzie zdefiniowano `Location` klasę, której Konstruktor ma jeden parametr ciągu o nazwie *name*. Definicja treści wyrażenia przypisuje argument do `locationName` pola.
+Jeśli Konstruktor można zaimplementować jako pojedynczą instrukcję, można użyć [definicji treści wyrażenia](../statements-expressions-operators/expression-bodied-members.md). W poniższym przykładzie zdefiniowano klasę `Location`, której Konstruktor ma jeden parametr ciągu o nazwie *name*. Definicja treści wyrażenia przypisuje argument do pola `locationName`.
 
 [!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
@@ -55,7 +55,7 @@ Aby uzyskać więcej informacji i przykładów, zobacz [statyczne konstruktory](
   
  [Konstruktory statyczne](./static-constructors.md)  
   
- [Instrukcje: Napisz Konstruktor kopiujący](./how-to-write-a-copy-constructor.md)  
+ [Jak napisać Konstruktor kopiujący](./how-to-write-a-copy-constructor.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

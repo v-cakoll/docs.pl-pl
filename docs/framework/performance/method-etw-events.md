@@ -7,32 +7,20 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48e1c2271d6d011296d347e7d74fb363cc4d8527
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: fd29d07b6253cb8c177cc1e8854435ce0079b520
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834550"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974916"
 ---
 # <a name="method-etw-events"></a>Zdarzenia metod ETW
 
-<a name="top"></a>Te zdarzenia zbierają informacje, które są specyficzne dla metod. Ładunek tych zdarzeń jest wymagany do rozpoznawania symboli. Ponadto te zdarzenia zapewniają przydatne informacje, takie jak liczba przypadków wywołania metody.
+Te zdarzenia zbierają informacje, które są specyficzne dla metod. Ładunek tych zdarzeń jest wymagany do rozpoznawania symboli. Ponadto te zdarzenia zapewniają przydatne informacje, takie jak liczba przypadków wywołania metody.
 
 Wszystkie zdarzenia metody mają poziom "informacyjny (4)". Wszystkie zdarzenia verbose metody mają poziom "verbose (5)".
 
-Wszystkie zdarzenia metod są wywoływane za pomocą słowa kluczowego `JITKeyword` (0x10) lub słowa kluczowego `NGenKeyword` (0x20) w ramach dostawcy środowiska uruchomieniowego lub `JitRundownKeyword` (0x10) lub `NGENRundownKeyword` (0x20) w ramach dostawcy uwalniania.
-
-Zdarzenia metod CLR są dalej podzielone na następujące:
-
-- [Zdarzenia metody CLR](#clr_method_events)
-
-- [Zdarzenia znacznika metody CLR](#clr_method_marker_events)
-
-- [Zdarzenia verbose dla metody CLR](#clr_method_verbose_events)
-
-- [Zdarzenie MethodJittingStarted](#methodjittingstarted_event)
-
-<a name="clr_method_events"></a>
+Wszystkie zdarzenia metod są wywoływane za pomocą słowa kluczowego `JITKeyword` (0x10) lub słowa kluczowego `NGenKeyword` (0x20) w ramach dostawcy środowiska uruchomieniowego, lub `JitRundownKeyword` (0x10) lub `NGENRundownKeyword` (0x20) w ramach dostawcy.
 
 ## <a name="clr-method-events"></a>Zdarzenia metody CLR
 
@@ -42,8 +30,8 @@ W poniższej tabeli przedstawiono słowo kluczowe i poziom. Aby uzyskać więcej
 |-----------------------------------|-----------|
 |Dostawca środowiska uruchomieniowego `JITKeyword` (0x10)|Informacyjny (4)|
 |Dostawca środowiska uruchomieniowego `NGenKeyword` (0x20)|Informacyjny (4)|
-|Dostawca uwalniania `JitRundownKeyword` (0x10)|Informacyjny (4)|
-|Dostawca uwalniania `NGENRundownKeyword` (0x20)|Informacyjny (4)|
+|`JitRundownKeyword` (0x10) — dostawca uwalniania|Informacyjny (4)|
+|`NGENRundownKeyword` (0x20) — dostawca uwalniania|Informacyjny (4)|
 
 W poniższej tabeli przedstawiono informacje o zdarzeniu:
 
@@ -66,21 +54,17 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 |MethodFlags|win: UInt32|0x1: metoda dynamiczna.<br /><br /> 0x2: Metoda ogólna.<br /><br /> 0x4: Metoda kodu skompilowana przez JIT (w przeciwnym razie kod natywnego obrazu NGEN).<br /><br /> 0x8: metoda pomocnika.|
 |ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
-[Powrót do początku](#top)
-
-<a name="clr_method_marker_events"></a>
-
 ## <a name="clr-method-marker-events"></a>Zdarzenia znacznika metody CLR
 
-Te zdarzenia są wywoływane tylko w ramach dostawcy uwalniania. Oznacza to koniec wyliczenia metody podczas początkowego lub końcowego uwalniania. (Oznacza to, że są wywoływane, gdy jest włączone słowo kluczowe `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword` lub `AppDomainResourceManagementRundownKeyword`).
+Te zdarzenia są wywoływane tylko w ramach dostawcy uwalniania. Oznacza to koniec wyliczenia metody podczas początkowego lub końcowego uwalniania. (Oznacza to, że są wywoływane, gdy jest włączone słowo kluczowe `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword`lub `AppDomainResourceManagementRundownKeyword`).
 
 W poniższej tabeli przedstawiono słowo kluczowe i poziom:
 
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|
 |-----------------------------------|-----------|
-|Dostawca uwalniania `AppDomainResourceManagementRundownKeyword` (0x800)|Informacyjny (4)|
-|Dostawca uwalniania `JitRundownKeyword` (0x10)|Informacyjny (4)|
-|Dostawca uwalniania `NGENRundownKeyword` (0x20)|Informacyjny (4)|
+|`AppDomainResourceManagementRundownKeyword` (0x800) — dostawca uwalniania|Informacyjny (4)|
+|`JitRundownKeyword` (0x10) — dostawca uwalniania|Informacyjny (4)|
+|`NGENRundownKeyword` (0x20) — dostawca uwalniania|Informacyjny (4)|
 
 W poniższej tabeli przedstawiono informacje o zdarzeniu:
 
@@ -97,10 +81,6 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 |----------------|---------------|-----------------|
 |ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
-[Powrót do początku](#top)
-
-<a name="clr_method_verbose_events"></a>
-
 ## <a name="clr-method-verbose-events"></a>Zdarzenia verbose dla metody CLR
 
 W poniższej tabeli przedstawiono słowo kluczowe i poziom:
@@ -109,8 +89,8 @@ W poniższej tabeli przedstawiono słowo kluczowe i poziom:
 |-----------------------------------|-----------|
 |Dostawca środowiska uruchomieniowego `JITKeyword` (0x10)|Verbose (5)|
 |Dostawca środowiska uruchomieniowego `NGenKeyword` (0x20)|Verbose (5)|
-|Dostawca uwalniania `JitRundownKeyword` (0x10)|Verbose (5)|
-|Dostawca uwalniania `NGENRundownKeyword` (0x20)|Verbose (5)|
+|`JitRundownKeyword` (0x10) — dostawca uwalniania|Verbose (5)|
+|`NGENRundownKeyword` (0x20) — dostawca uwalniania|Verbose (5)|
 
 W poniższej tabeli przedstawiono informacje o zdarzeniu:
 
@@ -136,10 +116,6 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 |MethodSignature|win: UnicodeString|Sygnatura metody (rozdzielana przecinkami lista nazw typów).|
 |ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
-[Powrót do początku](#top)
-
-<a name="methodjittingstarted_event"></a>
-
 ## <a name="methodjittingstarted-event"></a>Zdarzenie MethodJittingStarted
 
 W poniższej tabeli przedstawiono słowo kluczowe i poziom:
@@ -148,8 +124,8 @@ W poniższej tabeli przedstawiono słowo kluczowe i poziom:
 |-----------------------------------|-----------|
 |Dostawca środowiska uruchomieniowego `JITKeyword` (0x10)|Verbose (5)|
 |Dostawca środowiska uruchomieniowego `NGenKeyword` (0x20)|Verbose (5)|
-|Dostawca uwalniania `JitRundownKeyword` (0x10)|Verbose (5)|
-|Dostawca uwalniania `NGENRundownKeyword` (0x20)|Verbose (5)|
+|`JitRundownKeyword` (0x10) — dostawca uwalniania|Verbose (5)|
+|`NGENRundownKeyword` (0x20) — dostawca uwalniania|Verbose (5)|
 
 W poniższej tabeli przedstawiono informacje o zdarzeniu:
 

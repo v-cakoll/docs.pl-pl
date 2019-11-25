@@ -5,14 +5,14 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 7480c86af1acd482adff5e3e24dc229f24af0e5b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 64920f1d226fcc8265d0be252d4751f2ba278cc1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216321"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973291"
 ---
-# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Instrukcje: Port aplikacji klasycznej Windows Forms do programu .NET Core
+# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Jak przenieść aplikację klasyczną Windows Forms na platformę .NET Core
 
 W tym artykule opisano sposób przenoszenia aplikacji klasycznej opartej na Windows Forms z .NET Framework do programu .NET Core 3,0. Zestaw .NET Core 3,0 SDK obejmuje obsługę aplikacji Windows Forms. Windows Forms nadal jest strukturą tylko dla systemu Windows i działa tylko w systemie Windows. W tym przykładzie jest używany interfejs wiersza polecenia zestaw .NET Core SDK do tworzenia projektu i zarządzania nim.
 
@@ -20,10 +20,10 @@ W tym artykule różne nazwy są używane do identyfikowania typów plików uży
 
 | Plik | Opis |
 | ---- | ----------- |
-| **MyApps.sln** | Nazwa pliku rozwiązania. |
-| **MyForms.csproj** | Nazwa .NET Framework Windows Forms projektu do portów. |
-| **MyFormsCore.csproj** | Nazwa nowego projektu .NET Core, który tworzysz. |
-| **MyAppCore.exe** | Plik wykonywalny aplikacji .NET Core Windows Forms. |
+| **Moje Apps. sln** | Nazwa pliku rozwiązania. |
+| **Moje formy. csproj** | Nazwa .NET Framework Windows Forms projektu do portów. |
+| **MyFormsCore. csproj** | Nazwa nowego projektu .NET Core, który tworzysz. |
+| **MyAppCore. exe** | Plik wykonywalny aplikacji .NET Core Windows Forms. |
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -115,20 +115,20 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 
 ## <a name="fix-assembly-info-generation"></a>Napraw generowanie informacji o zestawie
 
-Windows Forms projekty, które zostały utworzone za pomocą .NET Framework `AssemblyInfo.cs` obejmują plik, który zawiera atrybuty zestawu, takie jak wersja zestawu do wygenerowania. Projekty w stylu zestawu SDK automatycznie generują te informacje na podstawie pliku projektu zestawu SDK. W przypadku obu typów "informacje o zestawie" powstaje konflikt. Rozwiąż ten problem, wyłączając automatyczne generowanie, co wymusza, aby projekt korzystał `AssemblyInfo.cs` z istniejącego pliku.
+Windows Forms projekty, które zostały utworzone za pomocą .NET Framework obejmują plik `AssemblyInfo.cs`, który zawiera atrybuty zestawu, takie jak wersja zestawu do wygenerowania. Projekty w stylu zestawu SDK automatycznie generują te informacje na podstawie pliku projektu zestawu SDK. W przypadku obu typów "informacje o zestawie" powstaje konflikt. Rozwiąż ten problem, wyłączając automatyczne generowanie, co wymusza, aby projekt korzystał z istniejącego pliku `AssemblyInfo.cs`.
 
-Istnieją trzy ustawienia do dodania do węzła głównego `<PropertyGroup>` . 
+Istnieją trzy ustawienia do dodania do głównego węzła `<PropertyGroup>`. 
 
 - **GenerateAssemblyInfo**\
-Ustawienie tej właściwości na `false`, nie spowoduje wygenerowanie atrybutów zestawu. Pozwala to uniknąć konfliktu z istniejącym `AssemblyInfo.cs` plikiem z projektu .NET Framework.
+Ustawienie tej właściwości na `false`nie spowoduje wygenerowanie atrybutów zestawu. Pozwala to uniknąć konfliktu z istniejącym plikiem `AssemblyInfo.cs` z projektu .NET Framework.
 
-- **AssemblyName**\
-Wartością tej właściwości jest wyjściowy plik binarny tworzony podczas kompilowania. Nazwa nie wymaga dodanego rozszerzenia. Na przykład przy użyciu `MyCoreApp` polecenia `MyCoreApp.exe`Generuj.
+- \ **AssemblyName**
+Wartością tej właściwości jest wyjściowy plik binarny tworzony podczas kompilowania. Nazwa nie wymaga dodanego rozszerzenia. Na przykład przy użyciu `MyCoreApp` tworzy `MyCoreApp.exe`.
 
 - **RootNamespace**\
 Domyślna przestrzeń nazw używana przez projekt. Powinna być zgodna z domyślną przestrzenią nazw projektu .NET Framework.
 
-Dodaj te trzy elementy do `<PropertyGroup>` węzła `MyFormsCore.csproj` w pliku:
+Dodaj te trzy elementy do węzła `<PropertyGroup>` w pliku `MyFormsCore.csproj`:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
@@ -150,7 +150,7 @@ Dodaj te trzy elementy do `<PropertyGroup>` węzła `MyFormsCore.csproj` w pliku
 
 Teraz projekt **MyFormsCore. csproj** nie kompiluje żadnego kodu. Domyślnie projekty platformy .NET Core automatycznie uwzględniają cały kod źródłowy w bieżącym katalogu i wszystkich katalogach podrzędnych. Należy skonfigurować projekt do dołączania kodu z projektu .NET Framework przy użyciu ścieżki względnej. Jeśli projekt .NET Framework używał plików **resx** dla ikon i zasobów formularzy, należy uwzględnić te pliki. 
 
-Dodaj następujący `<ItemGroup>` węzeł do projektu. Każda instrukcja zawiera wzorzec globalizowania pliku, który zawiera katalogi podrzędne.
+Dodaj następujący węzeł `<ItemGroup>` do projektu. Każda instrukcja zawiera wzorzec globalizowania pliku, który zawiera katalogi podrzędne.
 
 ```xml
   <ItemGroup>
@@ -159,13 +159,13 @@ Dodaj następujący `<ItemGroup>` węzeł do projektu. Każda instrukcja zawiera
   </ItemGroup>
 ```
 
-Alternatywnie można utworzyć `<Compile>` wpis lub `<EmbeddedResource>` dla każdego pliku w projekcie .NET Framework.
+Alternatywnie można utworzyć wpis `<Compile>` lub `<EmbeddedResource>` dla każdego pliku w .NET Framework projekcie.
 
 ## <a name="add-nuget-packages"></a>Dodaj pakiety NuGet
 
 Dodaj każdy pakiet NuGet, do którego odwołuje się projekt .NET Framework, do projektu .NET Core. 
 
-Prawdopodobnie aplikacja Windows Forms .NET Framework ma plik **Packages. config** zawierający listę wszystkich pakietów NuGet, do których odwołuje się projekt. Możesz zapoznać się z tą listą, aby określić, które pakiety NuGet dodać do projektu .NET Core. Na przykład jeśli projekt .NET Framework, do `MetroFramework`którego odwołuje się pakiety `MetroFramework.Fonts` , `MetroFramework.Design`i NuGet, należy dodać każdy do projektu z Visual Studio lub interfejs wiersza polecenia platformy .NET Core z katalogu **SolutionFolder** :
+Prawdopodobnie aplikacja Windows Forms .NET Framework ma plik **Packages. config** zawierający listę wszystkich pakietów NuGet, do których odwołuje się projekt. Możesz zapoznać się z tą listą, aby określić, które pakiety NuGet dodać do projektu .NET Core. Na przykład jeśli projekt .NET Framework odwołuje się do `MetroFramework`, `MetroFramework.Design`i `MetroFramework.Fonts` pakietów NuGet, należy dodać każdy do projektu z Visual Studio lub interfejs wiersza polecenia platformy .NET Core z katalogu **SolutionFolder** :
 
 ```dotnetcli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework
@@ -191,10 +191,10 @@ Korzystając z przykładu poprzedniego kroku, program umożliwia rozwinięcie pr
 
 | Plik | Opis |
 | ---- | ----------- |
-| **MyApps.sln** | Nazwa pliku rozwiązania. |
-| **MyControls.csproj** | Nazwa .NET Framework Windows Forms kontroluje projekt do portu. |
-| **MyControlsCore.csproj** | Nazwa nowego projektu biblioteki .NET Core, który tworzysz. |
-| **MyCoreControls.dll** | Biblioteka formantów Windows Forms .NET Core. |
+| **Moje Apps. sln** | Nazwa pliku rozwiązania. |
+| **Kontrolki. csproj** | Nazwa .NET Framework Windows Forms kontroluje projekt do portu. |
+| **MyControlsCore. csproj** | Nazwa nowego projektu biblioteki .NET Core, który tworzysz. |
+| **MyCoreControls. dll** | Biblioteka formantów Windows Forms .NET Core. |
 
 ```
 SolutionFolder
@@ -210,7 +210,7 @@ SolutionFolder
     └───MyControlsCore.csproj   <--- New project for core controls
 ```
 
-Uwzględnij różnice między `MyControlsCore.csproj` projektem i wcześniej utworzonym `MyFormsCore.csproj` projektem.
+Należy wziąć pod uwagę różnice między projektem `MyControlsCore.csproj` i wcześniej utworzonym projektem `MyFormsCore.csproj`.
 
 ```diff
  <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
@@ -260,7 +260,7 @@ Poniżej znajduje się przykład pliku projektu biblioteki formantów Windows Fo
 </Project>
 ```
 
-Jak widać, `<OutputType>` węzeł został usunięty, który domyślnie kompilator tworzy bibliotekę zamiast pliku wykonywalnego. `<AssemblyName>` I`<RootNamespace>` zostały zmienione. W `<RootNamespace>` odróżnieniu od przestrzeni nazw biblioteki formantów Windows Forms, która jest przeprojektowana. A wreszcie węzły `<Compile>` i `<EmbeddedResource>` zostały dostosowane tak, aby wskazywały folder bibliotek formantów Windows Forms, które są przełączone.
+Jak widać, węzeł `<OutputType>` został usunięty, który domyślnie kompilator tworzy bibliotekę zamiast pliku wykonywalnego. `<AssemblyName>` i `<RootNamespace>` zostały zmienione. W `<RootNamespace>` powinna być zgodna z przestrzenią nazw biblioteki formantów Windows Forms, która jest przeprojektowana. A wreszcie węzły `<Compile>` i `<EmbeddedResource>` zostały dostosowane do folderu bibliotek formantów Windows Forms, które są przełączone.
 
 Następnie w głównym projekcie programu .NET Core **MyFormsCore. csproj** Dodaj odwołanie do nowej biblioteki formantów Windows Forms .NET Core. Dodaj odwołanie z programu Visual Studio lub interfejs wiersza polecenia platformy .NET Core z katalogu **SolutionFolder** :
 
@@ -296,7 +296,7 @@ Poprzednie polecenie dodaje następujący do projektu **MyFormsCore. csproj** :
 
 Zgodnie z opisem w tym artykule program Visual Studio 2019 obsługuje tylko projektanta formularzy w projektach .NET Framework. Tworząc równoległy projekt platformy .NET Core, można testować projekt przy użyciu platformy .NET Core podczas projektowania formularzy przy użyciu projektu .NET Framework. Plik rozwiązania zawiera zarówno projekty .NET Framework, jak i .NET Core. Dodawanie i projektowanie formularzy i kontrolek w projekcie .NET Framework i opartych na wzorcach globalizowania plików dodanych do projektów .NET Core, wszystkie nowe lub zmienione pliki zostaną automatycznie uwzględnione w projektach .NET Core.
 
-Gdy program Visual Studio 2019 obsługuje Projektant formularzy systemu Windows, można skopiować/wkleić zawartość pliku projektu .NET Core do pliku projektu .NET Framework. Następnie usuń pliki wzorców globalizowania dodane z `<Source>` elementami i. `<EmbeddedResource>` Popraw ścieżki do dowolnych odwołań do projektu używanych przez aplikację. Efektywnie uaktualnia projekt .NET Framework do projektu .NET Core.
+Gdy program Visual Studio 2019 obsługuje Projektant formularzy systemu Windows, można skopiować/wkleić zawartość pliku projektu .NET Core do pliku projektu .NET Framework. Następnie usuń pliki wzorców globalizowania dodane z `<Source>` i `<EmbeddedResource>` elementów. Popraw ścieżki do dowolnych odwołań do projektu używanych przez aplikację. Efektywnie uaktualnia projekt .NET Framework do projektu .NET Core.
  
 ## <a name="next-steps"></a>Następne kroki
 

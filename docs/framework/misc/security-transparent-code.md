@@ -7,33 +7,21 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e4e472185b3b2ba39393c029bca3966fb5ec4b3
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f90b64b5e9ab5a167333a594ace7f247b1b2b7e7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206055"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975529"
 ---
 # <a name="security-transparent-code"></a>Kod o przezroczystym poziomie bezpieczeństwa
 
-<a name="top"></a>
-
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-Zabezpieczenia obejmują trzy aktywne elementy: piaskownicy, uprawnienia i wymuszanie. Tryb piaskownicy odnosi się do sposobu tworzenia izolowanych domen, w których jakiś kod jest traktowany jako w pełni zaufany, a inny kod jest ograniczony do uprawnień w odniesieniu do elementu. Kod aplikacji, który działa w ramach zestawu uprawnień piaskownicy, jest traktowany jako przezroczysty. oznacza to, że nie może wykonywać żadnych operacji, które mogą mieć wpływ na zabezpieczenia. Zestaw dotacji dla piaskownicy jest określany na podstawie dowodów<xref:System.Security.Policy.Evidence> (Klasa). Dowody określają, jakie konkretne uprawnienia są wymagane przez Piaskownice i jakie rodzaje piaskownicy mogą być tworzone. Wymuszanie dotyczy zezwalania na wykonywanie przezroczystego kodu tylko w ramach jego zestawu uprawnień.
+Zabezpieczenia obejmują trzy aktywne elementy: piaskownicy, uprawnienia i wymuszanie. Tryb piaskownicy odnosi się do sposobu tworzenia izolowanych domen, w których jakiś kod jest traktowany jako w pełni zaufany, a inny kod jest ograniczony do uprawnień w odniesieniu do elementu. Kod aplikacji, który działa w ramach zestawu uprawnień piaskownicy, jest traktowany jako przezroczysty. oznacza to, że nie może wykonywać żadnych operacji, które mogą mieć wpływ na zabezpieczenia. Zestaw dotacji dla piaskownicy jest określany na podstawie dowodów (Klasa<xref:System.Security.Policy.Evidence>). Dowody określają, jakie konkretne uprawnienia są wymagane przez Piaskownice i jakie rodzaje piaskownicy mogą być tworzone. Wymuszanie dotyczy zezwalania na wykonywanie przezroczystego kodu tylko w ramach jego zestawu uprawnień.
 
 > [!IMPORTANT]
 > Zasada zabezpieczeń była kluczem elementu w poprzednich wersjach .NET Framework. Począwszy od .NET Framework 4, zasady zabezpieczeń są przestarzałe. Eliminowanie zasad zabezpieczeń jest niezależne od przejrzystości zabezpieczeń. Aby uzyskać informacje o efektach tej zmiany, zobacz temat [zgodność i migracja zasad zabezpieczeń dostępu kodu](code-access-security-policy-compatibility-and-migration.md).
-
-W tym temacie opisano model przezroczystości bardziej szczegółowo. Ten temat zawiera następujące sekcje:
-
-- [Cel modelu przezroczystości](#purpose)
-
-- [Określanie poziomu przezroczystości](#level)
-
-- [Wymuszanie przejrzystości](#enforcement)
-
-<a name="purpose"></a>
 
 ## <a name="purpose-of-the-transparency-model"></a>Cel modelu przezroczystości
 
@@ -47,15 +35,11 @@ Głównym celem wymuszenia przejrzystości jest zapewnienie prostego, skuteczneg
 Przejrzystość została wprowadzona w .NET Framework w wersji 2,0, aby uprościć model zabezpieczeń i ułatwić zapisywanie i wdrażanie bezpiecznych bibliotek i aplikacji. Kod przezroczysty jest również używany w programie Microsoft Silverlight, aby uprościć tworzenie częściowo zaufanych aplikacji.
 
 > [!NOTE]
-> Podczas tworzenia częściowo zaufanej aplikacji należy znać wymagania dotyczące uprawnień dla hostów docelowych. Można opracować aplikację korzystającą z zasobów, które nie są dozwolone przez niektóre hosty. Ta aplikacja zostanie skompilowana bez błędu, ale zakończy się niepowodzeniem po załadowaniu do hostowanego środowiska. Jeśli aplikacja została opracowana przy użyciu programu Visual Studio, można włączyć debugowanie w częściowej relacji zaufania lub z ograniczonym zestawem uprawnień ze środowiska deweloperskiego. Aby uzyskać więcej informacji, zobacz [jak: Debuguj aplikację ClickOnce z ograniczonymi uprawnieniami](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). Funkcja obliczania uprawnień udostępniona dla aplikacji ClickOnce jest również dostępna dla dowolnej częściowo zaufanej aplikacji.
-
-[Powrót do początku](#top)
-
-<a name="level"></a>
+> Podczas tworzenia częściowo zaufanej aplikacji należy znać wymagania dotyczące uprawnień dla hostów docelowych. Można opracować aplikację korzystającą z zasobów, które nie są dozwolone przez niektóre hosty. Ta aplikacja zostanie skompilowana bez błędu, ale zakończy się niepowodzeniem po załadowaniu do hostowanego środowiska. Jeśli aplikacja została opracowana przy użyciu programu Visual Studio, można włączyć debugowanie w częściowej relacji zaufania lub z ograniczonym zestawem uprawnień ze środowiska deweloperskiego. Aby uzyskać więcej informacji, zobacz [How to: Debug The ClickOnce Application z ograniczonymi uprawnieniami](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). Funkcja obliczania uprawnień udostępniona dla aplikacji ClickOnce jest również dostępna dla dowolnej częściowo zaufanej aplikacji.
 
 ## <a name="specifying-the-transparency-level"></a>Określanie poziomu przezroczystości
 
-Atrybut poziomu <xref:System.Security.SecurityRulesAttribute> zestawu jawnie <xref:System.Security.SecurityRuleSet> wybiera reguły, których będzie przestrzegać zestaw. Reguły są zorganizowane w systemie, w którym wyższe poziomy oznaczają ściślejsze Wymuszanie reguł zabezpieczeń.
+Atrybut <xref:System.Security.SecurityRulesAttribute> na poziomie zestawu jawnie wybiera reguły <xref:System.Security.SecurityRuleSet>, których będzie przestrzegać zestaw. Reguły są zorganizowane w systemie, w którym wyższe poziomy oznaczają ściślejsze Wymuszanie reguł zabezpieczeń.
 
 Poziomy są następujące:
 
@@ -66,7 +50,7 @@ Poziomy są następujące:
 Podstawowa różnica między dwoma poziomami przezroczystości polega na tym, że poziom 1 nie wymusza reguł przezroczystości dla wywołań spoza zestawu i jest przeznaczony tylko do zgodności.
 
 > [!IMPORTANT]
-> Należy określić przezroczystość poziomu 1 w celu zapewnienia zgodności. oznacza to, że należy określić poziom 1 tylko dla kodu, który został opracowany z .NET Framework 3,5 lub wcześniejszym <xref:System.Security.AllowPartiallyTrustedCallersAttribute> , który używa atrybutu lub nie używa modelu przezroczystości. Na przykład użyj przejrzystości poziomu 1 dla zestawów .NET Framework 2,0, które zezwalają na wywołania od częściowo zaufanych wywołujących (APTCA). W przypadku kodu opracowanego dla .NET Framework 4 zawsze używaj przejrzystości poziomu 2.
+> Należy określić przezroczystość poziomu 1 w celu zapewnienia zgodności. oznacza to, że należy określić poziom 1 tylko dla kodu, który został opracowany z .NET Framework 3,5 lub wcześniejszym, który używa atrybutu <xref:System.Security.AllowPartiallyTrustedCallersAttribute> lub nie używa modelu przezroczystości. Na przykład użyj przejrzystości poziomu 1 dla zestawów .NET Framework 2,0, które zezwalają na wywołania od częściowo zaufanych wywołujących (APTCA). W przypadku kodu opracowanego dla .NET Framework 4 zawsze używaj przejrzystości poziomu 2.
 
 ### <a name="level-2-transparency"></a>Przezroczystość poziomu 2
 
@@ -74,15 +58,15 @@ Poziom 2 przejrzystości został wprowadzony w .NET Framework 4. Trzy założeni
 
 - Kod przezroczysty, niezależnie od uprawnień, które są przyznawane (w tym pełnego zaufania), może wywoływać tylko inny kod przezroczysty lub kod krytyczny dla bezpieczeństwa. Jeśli kod jest częściowo zaufany, może wykonać tylko akcje, które są dozwolone przez zestaw uprawnień domeny. Kod przezroczysty nie może wykonać następujących czynności:
 
-  - <xref:System.Security.CodeAccessPermission.Assert%2A> Wykonaj operację lub podniesienie uprawnień.
+  - Wykonaj <xref:System.Security.CodeAccessPermission.Assert%2A> operacji lub podniesienia uprawnień.
 
   - Zawiera kod niebezpieczny lub niemożliwy do zweryfikowania.
 
   - Bezpośrednie Wywoływanie kodu krytycznego.
 
-  - Wywoływanie kodu natywnego lub kodu, <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> który ma atrybut.
+  - Wywoływanie kodu natywnego lub kodu, który ma atrybut <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>.
 
-  - Wywoływanie elementu członkowskiego, który jest <xref:System.Security.Permissions.SecurityAction.LinkDemand>chroniony przez.
+  - Wywołaj element członkowski, który jest chroniony przez <xref:System.Security.Permissions.SecurityAction.LinkDemand>.
 
   - Dziedzicz z typów krytycznych.
 
@@ -107,10 +91,6 @@ Model przejrzystości poziomu 1 ma następujące ograniczenia:
 - Reguły dziedziczenia nie są wymuszane.
 
 - Istnieje potencjalny kod, który umożliwia wykonywanie szkodliwych operacji w przypadku uruchamiania w trybie pełnego zaufania.
-
-[Powrót do początku](#top)
-
-<a name="enforcement"></a>
 
 ## <a name="transparency-enforcement"></a>Egzekwowanie przejrzystości
 

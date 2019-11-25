@@ -7,24 +7,23 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a96fd4c45113afd2ab918b714bd6e12a429917c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8f1c92154fe62b1b6ba6981606680daf37d087f4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046185"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974865"
 ---
 # <a name="thread-pool-etw-events"></a>Zdarzenia ETW puli wątków
-<a name="top"></a>Te zdarzenia zbierają informacje o wątkach procesów roboczych i we/wy.  
+Te zdarzenia zbierają informacje o wątkach procesów roboczych i we/wy.  
   
  Istnieją dwie grupy zdarzeń puli wątków:  
   
-- [Zdarzenia puli wątków roboczych](#worker), które zawierają informacje o sposobie używania puli wątków przez aplikację oraz o wpływie obciążeń na kontrolę współbieżności.  
+- [Zdarzenia puli wątków roboczych](#worker-thread-pool-events), które zawierają informacje o sposobie używania puli wątków przez aplikację oraz o wpływie obciążeń na kontrolę współbieżności.  
   
-- [Zdarzenia puli wątków we/wy](#io), które zawierają informacje o wątkach we/wy, które są tworzone, wycofywane lub kończone w puli wątków.  
-  
-<a name="worker"></a>   
-## <a name="worker-thread-pool-events"></a>Zdarzenia puli wątków roboczych  
+- [Zdarzenia puli wątków we/wy](#io-thread-events), które zawierają informacje o wątkach we/wy, które są tworzone, wycofywane lub kończone w puli wątków.  
+
+## <a name="worker-thread-pool-events"></a>Zdarzenia puli wątków roboczych
  Te zdarzenia odnoszą się do puli wątków roboczych środowiska uruchomieniowego i udostępniają powiadomienia dla zdarzeń wątku (na przykład podczas tworzenia lub zatrzymywania wątku). Pula wątków roboczych używa algorytmu adaptacyjnego na potrzeby kontroli współbieżności, gdzie liczba wątków jest obliczana na podstawie zmierzonej przepływności. Zdarzenia puli wątków roboczych mogą służyć do zrozumienia, w jaki sposób aplikacja korzysta z puli wątków, a wpływ niektórych obciążeń na kontrolę współbieżności.  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart i ThreadPoolWorkerThreadStop  
@@ -32,7 +31,7 @@ ms.locfileid: "71046185"
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`0x10000|Informacyjny (4)|  
+|`ThreadingKeyword` (0x10000)|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "71046185"
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`0x10000|Informacyjny (4)|  
+|`ThreadingKeyword` (0x10000)|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "71046185"
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`0x10000|Informacyjny (4)|  
+|`ThreadingKeyword` (0x10000)|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "71046185"
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`0x10000|Informacyjny (4)|  
+|`ThreadingKeyword` (0x10000)|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
@@ -113,21 +112,18 @@ ms.locfileid: "71046185"
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Duration|win: Double|Czas (w sekundach), w którym te statystyki zostały zebrane.|  
+|trwania|win: Double|Czas (w sekundach), w którym te statystyki zostały zebrane.|  
 |Kazany|win: Double|Średnia liczba zaawansowanych na sekundę w tym interwale.|  
 |ThreadWave|win: Double|Zarezerwowane do użytku wewnętrznego.|  
 |ThroughputWave|win: Double|Zarezerwowane do użytku wewnętrznego.|  
 |ThroughputErrorEstimate|win: Double|Zarezerwowane do użytku wewnętrznego.|  
 |AverageThroughputErrorEstimate|win: Double|Zarezerwowane do użytku wewnętrznego.|  
 |ThroughputRatio|win: Double|Względne ulepszenie przepływności spowodowane przez różnice w liczbie wątków roboczych w tym interwale.|  
-|Confidence|win: Double|Miara ważności pola ThroughputRatio.|  
+|zachowanie|win: Double|Miara ważności pola ThroughputRatio.|  
 |NewcontrolSetting|win: Double|Liczba aktywnych wątków roboczych, które będą stanowić podstawę dla przyszłych różnic w aktywnej liczbie wątków.|  
 |NewThreadWaveMagnitude|win: UInt16|Wielkość przyszłych wariantów w aktywnej liczbie wątków.|  
 |ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
-  
- [Powrót do początku](#top)  
-  
-<a name="io"></a>   
+
 ## <a name="io-thread-events"></a>Zdarzenia wątku we/wy  
  Te zdarzenia puli wątków występują dla wątków w puli wątków we/wy (porty zakończenia), która jest asynchroniczna.  
   
@@ -136,7 +132,7 @@ ms.locfileid: "71046185"
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`0x10000|Informacyjny (4)|  
+|`ThreadingKeyword` (0x10000)|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
@@ -148,7 +144,7 @@ ms.locfileid: "71046185"
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Count|win: UInt64|Liczba wątków we/wy, łącznie z nowo utworzonym wątkiem.|  
+|Liczbą|win: UInt64|Liczba wątków we/wy, łącznie z nowo utworzonym wątkiem.|  
 |NumRetired|win: UInt64|Liczba wycofanych wątków roboczych.|  
 |ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
@@ -157,7 +153,7 @@ ms.locfileid: "71046185"
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`0x10000|Informacyjny (4)|  
+|`ThreadingKeyword` (0x10000)|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
@@ -169,7 +165,7 @@ ms.locfileid: "71046185"
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Count|win: UInt64|Liczba wątków we/wy pozostałych w puli wątków.|  
+|Liczbą|win: UInt64|Liczba wątków we/wy pozostałych w puli wątków.|  
 |NumRetired|win: UInt64|Liczba wycofanych wątków we/wy.|  
 |ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
@@ -178,7 +174,7 @@ ms.locfileid: "71046185"
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`0x10000|Informacyjny (4)|  
+|`ThreadingKeyword` (0x10000)|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
@@ -190,7 +186,7 @@ ms.locfileid: "71046185"
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Count|win: UInt64|Liczba wątków we/wy w puli wątków, z uwzględnieniem tego.|  
+|Liczbą|win: UInt64|Liczba wątków we/wy w puli wątków, z uwzględnieniem tego.|  
 |NumRetired|win: UInt64|Liczba wycofanych wątków we/wy.|  
 |ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
@@ -199,7 +195,7 @@ ms.locfileid: "71046185"
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`0x10000|Informacyjny (4)|  
+|`ThreadingKeyword` (0x10000)|Informacyjny (4)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
@@ -211,7 +207,7 @@ ms.locfileid: "71046185"
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Count|win: UInt64|Liczba wątków we/wy pozostałych w puli wątków.|  
+|Liczbą|win: UInt64|Liczba wątków we/wy pozostałych w puli wątków.|  
 |NumRetired|win: UInt64|Liczba wycofanych wątków we/wy.|  
 |ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   

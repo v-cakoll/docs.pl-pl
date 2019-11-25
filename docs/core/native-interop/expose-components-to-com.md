@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8f9624414a2b423bd43e8790d11b70ae1ca6286d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216225"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973313"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Udostępnianie składników .NET Core do modelu COM
 
@@ -43,32 +43,32 @@ Pierwszym krokiem jest utworzenie biblioteki.
 
    [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
 
-5. `[Guid("<IID>")]` Dodaj atrybut do interfejsu przy użyciu identyfikatora GUID interfejsu dla implementowanego interfejsu com. Na przykład `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. Należy zauważyć, że ten identyfikator GUID musi być unikatowy, ponieważ jest jedynym identyfikatorem tego interfejsu dla modelu COM. W programie Visual Studio można wygenerować identyfikator GUID, przechodząc do menu Narzędzia > Utwórz GUID, aby otworzyć narzędzie Tworzenie identyfikatora GUID.
-6. `[InterfaceType]` Dodaj atrybut do interfejsu i określ podstawowe interfejsy com, które ma zaimplementować interfejs.
+5. Dodaj atrybut `[Guid("<IID>")]` do interfejsu przy użyciu identyfikatora GUID interfejsu dla implementowanego interfejsu COM. Na przykład `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. Należy zauważyć, że ten identyfikator GUID musi być unikatowy, ponieważ jest jedynym identyfikatorem tego interfejsu dla modelu COM. W programie Visual Studio można wygenerować identyfikator GUID, przechodząc do menu Narzędzia > Utwórz GUID, aby otworzyć narzędzie Tworzenie identyfikatora GUID.
+6. Dodaj atrybut `[InterfaceType]` do interfejsu i określ podstawowe interfejsy COM, które ma zaimplementować interfejs.
 7. Utwórz klasę o nazwie `Server` implementującej `IServer`.
-8. `[Guid("<CLSID>")]` Dodaj atrybut do klasy przy użyciu identyfikatora klasy GUID dla implementującej klasy com. Na przykład `[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]`. Podobnie jak w przypadku identyfikatora GUID interfejsu, ten identyfikator GUID musi być unikatowy, ponieważ jest jedynym identyfikatorem tego interfejsu w modelu COM.
-9. `[ComVisible(true)]` Dodaj atrybut do interfejsu i klasy.
+8. Dodaj atrybut `[Guid("<CLSID>")]` do klasy z identyfikatorem GUID klasy dla implementującej klasy COM. Na przykład `[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]`. Podobnie jak w przypadku identyfikatora GUID interfejsu, ten identyfikator GUID musi być unikatowy, ponieważ jest jedynym identyfikatorem tego interfejsu w modelu COM.
+9. Dodaj atrybut `[ComVisible(true)]` do interfejsu i klasy.
 
 > [!IMPORTANT]
 > W przeciwieństwie do .NET Framework platforma .NET Core wymaga określenia identyfikatora CLSID każdej klasy, która ma być aktywowalnej za pośrednictwem modelu COM.
 
 ## <a name="generate-the-com-host"></a>Generowanie hosta COM
 
-1. Otwórz plik `<EnableComHosting>true</EnableComHosting>` projektu i Dodaj wewnątrz `<PropertyGroup></PropertyGroup>` znacznika. `.csproj`
+1. Otwórz plik projektu `.csproj` i Dodaj `<EnableComHosting>true</EnableComHosting>` wewnątrz tagu `<PropertyGroup></PropertyGroup>`.
 2. Skompiluj projekt.
 
-Wynikowe dane wyjściowe będą mieć `ProjectName.dll`plik `ProjectName.deps.json` `ProjectName.runtimeconfig.json` , i `ProjectName.comhost.dll` .
+Wynikowe dane wyjściowe będą mieć `ProjectName.dll`, `ProjectName.deps.json`, `ProjectName.runtimeconfig.json` i `ProjectName.comhost.dll`.
 
 ## <a name="register-the-com-host-for-com"></a>Rejestrowanie hosta COM dla modelu COM
 
-Otwórz wiersz polecenia z podwyższonym poziomem `regsvr32 ProjectName.comhost.dll`uprawnień i uruchom polecenie. Spowoduje to zarejestrowanie wszystkich uwidocznionych obiektów .NET w modelu COM.
+Otwórz wiersz polecenia z podwyższonym poziomem uprawnień i uruchom `regsvr32 ProjectName.comhost.dll`. Spowoduje to zarejestrowanie wszystkich uwidocznionych obiektów .NET w modelu COM.
 
 ## <a name="enabling-regfree-com"></a>Włączanie nierejestrowanego COM
 
-1. Otwórz plik `<EnableRegFreeCom>true</EnableRegFreeCom>` projektu i Dodaj wewnątrz `<PropertyGroup></PropertyGroup>` znacznika. `.csproj`
+1. Otwórz plik projektu `.csproj` i Dodaj `<EnableRegFreeCom>true</EnableRegFreeCom>` wewnątrz tagu `<PropertyGroup></PropertyGroup>`.
 2. Skompiluj projekt.
 
-Wynikowe dane wyjściowe będą teraz również mieć `ProjectName.X.manifest` plik. Ten plik jest manifestem równoległym do użycia z modelem COM bez rejestru.
+Wynikowe dane wyjściowe będą teraz również mieć plik `ProjectName.X.manifest`. Ten plik jest manifestem równoległym do użycia z modelem COM bez rejestru.
 
 ## <a name="sample"></a>Przykład
 
@@ -76,6 +76,6 @@ Istnieje w pełni funkcjonalny [przykład serwera com](https://github.com/dotnet
 
 ## <a name="additional-notes"></a>Dodatkowe uwagi
 
-W przeciwieństwie do .NET Framework, nie ma obsługi w programie .NET Core do generowania biblioteki typów modelu COM (TLB) z zestawu .NET Core. Trzeba będzie ręcznie napisać plik IDL lub C++ nagłówek dla natywnych deklaracji interfejsów.
+W przeciwieństwie do .NET Framework, nie ma obsługi w programie .NET Core do generowania biblioteki typów modelu COM (TLB) z zestawu .NET Core. Wskazówki dotyczą ręcznego zapisywania pliku IDL lub C/C++ nagłówka dla natywnych deklaracji interfejsów com.
 
-Ponadto ładowanie zarówno .NET Framework, jak i .NET Core do tego samego procesu nie jest obsługiwane i w wyniku załadowania serwera .NET Core COM do procesu klienta .NET Framework COM lub odwrotnie nie jest obsługiwane.
+Ponadto ładowanie obu .NET Framework i .NET Core do tego samego procesu ma ograniczenia diagnostyczne. Głównym ograniczeniem jest debugowanie składników zarządzanych, ponieważ nie jest możliwe debugowanie jednocześnie .NET Framework i .NET Core. Ponadto dwa wystąpienia środowiska uruchomieniowego nie współdzielą zestawów zarządzanych. Oznacza to, że nie jest możliwe udostępnianie rzeczywistych typów .NET między dwoma środowiskami uruchomieniowymi, a w zamian wszystkie interakcje muszą być ograniczone do umów dotyczących interfejsów COM.

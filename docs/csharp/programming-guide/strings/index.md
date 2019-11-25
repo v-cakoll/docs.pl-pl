@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: ad8d7075e609a1b03ec403b91126bbce7084923f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c6e29781f566fac0fd1219ac842a4838d631afb6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423156"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969714"
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
 Ciąg jest obiektem typu <xref:System.String>, którego wartością jest Text. Wewnętrznie tekst jest przechowywany jako sekwencyjny zbiór danych tylko do odczytu dla <xref:System.Char> obiektów. Na końcu C# ciągu nie ma znaku zamykającego wartości null; w związku C# z tym ciąg może zawierać dowolną liczbę osadzonych znaków null (' \ 0 '). Właściwość <xref:System.String.Length%2A> ciągu reprezentuje liczbę obiektów `Char`, które zawiera, a nie liczbę znaków Unicode. Aby uzyskać dostęp do poszczególnych punktów kodu Unicode w ciągu, użyj obiektu <xref:System.Globalization.StringInfo>.  
@@ -37,7 +37,7 @@ Ciąg jest obiektem typu <xref:System.String>, którego wartością jest Text. W
   
  [!code-csharp[csProgGuideStrings#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#25)]  
   
- Aby uzyskać więcej informacji na temat sposobu tworzenia nowych ciągów opartych na modyfikacjach, takich jak wyszukiwanie i zamiana na oryginalnym ciągu, zobacz [How to: Modify String Contents](../../how-to/modify-string-contents.md).  
+ Aby uzyskać więcej informacji na temat sposobu tworzenia nowych ciągów opartych na modyfikacjach, takich jak wyszukiwanie i zamiana na oryginalnym ciągu, zobacz [Jak zmodyfikować zawartość ciągu](../../how-to/modify-string-contents.md).  
   
 ## <a name="regular-and-verbatim-string-literals"></a>Zwykłe i Verbatim literały ciągu  
  Należy używać zwykłych literałów ciągów, gdy trzeba osadzić znaki ucieczki C#dostarczone przez, jak pokazano w poniższym przykładzie:  
@@ -54,7 +54,7 @@ Ciąg jest obiektem typu <xref:System.String>, którego wartością jest Text. W
 |---------------------|--------------------|----------------------|  
 |\\"|Pojedynczy cytat|0x0027|  
 |\\"|Podwójny cudzysłów|0x0022|  
-|\\\\ |ukośnika odwrotnego|0x005C|  
+|\\\\ |Ukośnika odwrotnego|0x005C|  
 |\ 0|Null|0x0000|  
 |\a|Wiadom|0x0007|  
 |\b|Backspace|0x0008|  
@@ -91,7 +91,7 @@ Używaj interpolacji ciągów, aby zwiększyć czytelność i łatwość utrzyma
 Aby uzyskać więcej informacji na temat formatowania typów .NET, zobacz [Typy formatowania na platformie .NET](../../../standard/base-types/formatting-types.md).
   
 ## <a name="substrings"></a>Podciągów  
- Podciąg to dowolna sekwencja znaków, która jest zawarta w ciągu. Użyj metody <xref:System.String.Substring%2A>, aby utworzyć nowy ciąg z części oryginalnego ciągu. Można wyszukać jedno lub więcej wystąpień podciągu za pomocą metody <xref:System.String.IndexOf%2A>. Użyj metody <xref:System.String.Replace%2A>, aby zastąpić wszystkie wystąpienia określonego podciągu nowym ciągiem. Podobnie jak Metoda <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> faktycznie zwraca nowy ciąg i nie modyfikuje pierwotnego ciągu. Aby uzyskać więcej informacji, zobacz [jak: wyszukiwanie ciągów](../../how-to/search-strings.md) i [instrukcje: modyfikowanie zawartości ciągu](../../how-to/modify-string-contents.md).  
+ Podciąg to dowolna sekwencja znaków, która jest zawarta w ciągu. Użyj metody <xref:System.String.Substring%2A>, aby utworzyć nowy ciąg z części oryginalnego ciągu. Można wyszukać jedno lub więcej wystąpień podciągu za pomocą metody <xref:System.String.IndexOf%2A>. Użyj metody <xref:System.String.Replace%2A>, aby zastąpić wszystkie wystąpienia określonego podciągu nowym ciągiem. Podobnie jak Metoda <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> faktycznie zwraca nowy ciąg i nie modyfikuje pierwotnego ciągu. Aby uzyskać więcej informacji, zobacz [jak wyszukiwać ciągi](../../how-to/search-strings.md) i [jak modyfikować zawartość ciągu](../../how-to/modify-string-contents.md).
   
  [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
   
@@ -131,12 +131,12 @@ string s = String.Empty;
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Instrukcje: modyfikowanie zawartości ciągu](../../how-to/modify-string-contents.md)|Ilustruje techniki przekształcania ciągów i modyfikowania zawartości ciągów.|  
-|[Instrukcje: porównywanie ciągów](../../how-to/compare-strings.md)|Pokazuje, w jaki sposób wykonywać porównania ciągów liczbowych i kulturowych.|  
-|[Instrukcje: łączenie wielu ciągów](../../how-to/concatenate-multiple-strings.md)|Ilustruje różne sposoby sprzęgania wielu ciągów w jeden.|
-|[Instrukcje: analizowanie ciągów za pomocą funkcji String.Split](../../how-to/parse-strings-using-split.md)|Zawiera przykłady kodu, które ilustrują sposób użycia metody `String.Split` do analizowania ciągów.|  
-|[Instrukcje: wyszukiwanie ciągów](../../how-to/search-strings.md)|Wyjaśnia, jak używać wyszukiwania określonego tekstu lub wzorców w ciągach.|  
-|[Instrukcje: określanie, czy ciąg reprezentuje wartość liczbową](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Pokazuje, jak bezpiecznie analizować ciąg, aby sprawdzić, czy ma prawidłową wartość liczbową.|  
+|[Jak modyfikować zawartość ciągu](../../how-to/modify-string-contents.md)|Ilustruje techniki przekształcania ciągów i modyfikowania zawartości ciągów.|  
+|[Jak porównać ciągi](../../how-to/compare-strings.md)|Pokazuje, w jaki sposób wykonywać porównania ciągów liczbowych i kulturowych.|  
+|[Jak połączyć wiele ciągów](../../how-to/concatenate-multiple-strings.md)|Ilustruje różne sposoby sprzęgania wielu ciągów w jeden.|
+|[Jak analizować ciągi przy użyciu ciągu. Split](../../how-to/parse-strings-using-split.md)|Zawiera przykłady kodu, które ilustrują sposób użycia metody `String.Split` do analizowania ciągów.|  
+|[Jak wyszukiwać ciągi](../../how-to/search-strings.md)|Wyjaśnia, jak używać wyszukiwania określonego tekstu lub wzorców w ciągach.|  
+|[Jak ustalić, czy ciąg reprezentuje wartość liczbową](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Pokazuje, jak bezpiecznie analizować ciąg, aby sprawdzić, czy ma prawidłową wartość liczbową.|  
 |[Interpolacja ciągów](../../language-reference/tokens/interpolated.md)|Opisuje funkcję interpolacji ciągów, która zapewnia wygodną składnię do formatowania ciągów.|
 |[Podstawowe operacje na ciągach](../../../standard/base-types/basic-string-operations.md)|Zawiera łącza do tematów, które używają metod <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> do wykonywania podstawowych operacji na ciągach.|  
 |[Analizowanie ciągów](../../../standard/base-types/parsing-strings.md)|W tym artykule opisano sposób konwertowania reprezentacji ciągów typów podstawowych na wystąpienia odpowiednich typów.|  

@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: używanie drzew wyrażeń do kompilowania zapytań dynamicznych (C#)'
+title: Jak używać drzew wyrażeń do kompilowania zapytań dynamicznych (C#)
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 7f18539dba17f9fcb8769ca56d977908c58e6579
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 36a81b145b6a9a25c22243f63cfb71a6a39c5891
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418675"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969873"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Instrukcje: używanie drzew wyrażeń do kompilowania zapytań dynamicznych (C#)
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Jak używać drzew wyrażeń do kompilowania zapytań dynamicznych (C#)
 W LINQ, drzewa wyrażeń służą do reprezentowania zapytań strukturalnych, które są docelowymi źródłami danych, które implementują <xref:System.Linq.IQueryable%601>. Na przykład dostawca LINQ implementuje interfejs <xref:System.Linq.IQueryable%601> do wykonywania zapytań dotyczących relacyjnych magazynów danych. C# Kompilator kompiluje zapytania, które są przeznaczone dla tych źródeł danych w kodzie, który kompiluje drzewo wyrażeń w czasie wykonywania. Dostawca zapytań może następnie przechodzenie przez strukturę danych drzewa wyrażenia i przetłumaczyć je do języka zapytań odpowiedniego dla źródła danych.  
   
  Drzewa wyrażeń są również używane w LINQ do reprezentowania wyrażeń lambda, które są przypisane do zmiennych typu <xref:System.Linq.Expressions.Expression%601>.  
@@ -108,5 +108,5 @@ foreach (string company in results)
 ## <a name="see-also"></a>Zobacz także
 
 - [Drzewa wyrażeń (C#)](./index.md)
-- [Instrukcje: wykonywanie drzew wyrażeń (C#)](./how-to-execute-expression-trees.md)
+- [Jak wykonać drzewa wyrażeń (C#)](./how-to-execute-expression-trees.md)
 - [Instrukcje: dynamiczne określanie filtrów predykatu w czasie wykonywania](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)

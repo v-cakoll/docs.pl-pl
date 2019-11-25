@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: f7f8c25844f41dd8915c0f4404d6714b4c81233c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 039ae0cb314eba2f1bb3e5b39f2127a5e694f334
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458475"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974157"
 ---
 # <a name="collection-type-dependency-properties"></a>Właściwości zależności typu kolekcji
 Ten temat zawiera wskazówki i sugerowane wzorce dotyczące implementowania właściwości zależności, gdzie typ właściwości jest typem kolekcji.  
@@ -28,8 +28,11 @@ Ten temat zawiera wskazówki i sugerowane wzorce dotyczące implementowania wła
 ## <a name="initializing-the-collection-beyond-the-default-value"></a>Inicjowanie kolekcji poza wartością domyślną  
  Podczas tworzenia właściwości zależności nie należy określać wartości domyślnej właściwości jako początkowej wartości pola. Zamiast tego należy określić wartość domyślną za pomocą metadanych właściwości zależności. Jeśli właściwość jest typem referencyjnym, wartość domyślna określona w metadanych właściwości zależności nie jest wartością domyślną dla danego wystąpienia; Zamiast tego jest to wartość domyślna, która ma zastosowanie do wszystkich wystąpień tego typu. W związku z tym należy zachować ostrożność, aby nie używać pojedynczej kolekcji statycznej zdefiniowanej przez metadane właściwości kolekcji jako działającej wartości domyślnej dla nowo utworzonych wystąpień danego typu. Zamiast tego należy upewnić się, że w ramach logiki konstruktora klasy zacelowo ustawisz wartość kolekcji na unikatową kolekcję (wystąpienie). W przeciwnym razie zostanie utworzona niezamierzona Klasa singleton.  
   
- Rozważmy następujący przykład. W poniższej sekcji przykładu przedstawiono definicję klasy `Aquarium`. Klasa definiuje właściwość zależności typu kolekcji `AquariumObjects`, która używa typu generycznego <xref:System.Collections.Generic.List%601> z ograniczeniem typu <xref:System.Windows.FrameworkElement>. W <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> wywołaniu właściwości zależności, metadane są ustalane jako nowe <xref:System.Collections.Generic.List%601>ogólne.  
-  
+ Rozważmy następujący przykład. W poniższej sekcji przykładu przedstawiono definicję klasy `Aquarium`, która zawiera lukę z wartością domyślną. Klasa definiuje właściwość zależności typu kolekcji `AquariumObjects`, która używa typu generycznego <xref:System.Collections.Generic.List%601> z ograniczeniem typu <xref:System.Windows.FrameworkElement>. W <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> wywołaniu właściwości zależności, metadane są ustalane jako nowe <xref:System.Collections.Generic.List%601>ogólne.
+
+> [!WARNING]
+> Poniższy kod nie działa prawidłowo.
+
  [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
  [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   

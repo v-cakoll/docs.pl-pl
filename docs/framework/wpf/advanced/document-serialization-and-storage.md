@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: d56968ad390d4681b3c1bb1580a864f9a9f0e10c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ff0555105f219db5ed891c02400b0587c825718e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424304"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974662"
 ---
 # <a name="document-serialization-and-storage"></a>Serializacja dokumentu i przechowywanie
 
@@ -43,7 +43,7 @@ Aplikacje często udostępniają wiele opcji serializacji, które umożliwiają 
 
 ### <a name="xps-print-path"></a>Ścieżka wydruku XPS
 
-Ścieżka drukowania w formacie XPS programu Microsoft .NET Framework zapewnia także rozszerzalny mechanizm pisania dokumentów przy użyciu drukowania danych wyjściowych.  Plik XPS służy zarówno jako format pliku dokumentu, jak i jest natywnym formatem buforu wydruku dla [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Dokumenty XPS można wysyłać bezpośrednio do drukarek zgodnych z formatem XPS bez konieczności konwersji do formatu pośredniego.  Zobacz [Omówienie drukowania](printing-overview.md) , aby uzyskać dodatkowe informacje na temat opcji i możliwości wyjściowych ścieżki wydruku.
+Ścieżka drukowania w formacie XPS programu Microsoft .NET Framework zapewnia także rozszerzalny mechanizm pisania dokumentów przy użyciu drukowania danych wyjściowych.  Plik XPS służy zarówno jako format pliku dokumentu, jak i jest natywnym formatem buforu wydruku dla systemu Windows Vista.  Dokumenty XPS można wysyłać bezpośrednio do drukarek zgodnych z formatem XPS bez konieczności konwersji do formatu pośredniego.  Zobacz [Omówienie drukowania](printing-overview.md) , aby uzyskać dodatkowe informacje na temat opcji i możliwości wyjściowych ścieżki wydruku.
 
 <a name="PluginSerializers"></a>
 
@@ -55,7 +55,7 @@ Konstruktory wtyczek ułatwiają deweloperom aplikacji zapewnianie rozszerzalno�
 
 ### <a name="using-a-plug-in-serializer"></a>Korzystanie z serializatora wtyczki
 
-Serializatory wtyczek są proste do użycia.  Klasa <xref:System.Windows.Documents.Serialization.SerializerProvider> wylicza obiekt <xref:System.Windows.Documents.Serialization.SerializerDescriptor> dla każdej wtyczki zainstalowanej w systemie.  Właściwość <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> filtruje zainstalowane wtyczki na podstawie bieżącej konfiguracji i weryfikuje, czy serializator może być ładowany i używany przez aplikację.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor> udostępnia również inne właściwości, takie jak <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> i <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, których aplikacja może użyć, aby monitować użytkownika o wybranie serializatora dla dostępnego formatu danych wyjściowych.  Domyślny serializator wtyczki dla XPS jest dostarczany z .NET Framework i jest zawsze wyliczany.  Gdy użytkownik wybierze format danych wyjściowych, Metoda <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> zostanie użyta do utworzenia <xref:System.Windows.Documents.Serialization.SerializerWriter> dla określonego formatu.  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> metodę można następnie wywołać, aby wyprowadzić strumień dokumentu do magazynu danych.
+Serializatory wtyczek są proste do użycia.  Klasa <xref:System.Windows.Documents.Serialization.SerializerProvider> wylicza obiekt <xref:System.Windows.Documents.Serialization.SerializerDescriptor> dla każdej wtyczki zainstalowanej w systemie.  Właściwość <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> filtruje zainstalowane wtyczki na podstawie bieżącej konfiguracji i weryfikuje, czy serializator może być ładowany i używany przez aplikację.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor> udostępnia również inne właściwości, takie jak <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> i <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, których aplikacja może użyć, aby monitować użytkownika o wybranie serializatora dla dostępnego formatu danych wyjściowych.  Domyślny serializator wtyczki dla XPS jest dostarczany z .NET Framework i jest zawsze wyliczany.  Gdy użytkownik wybierze format danych wyjściowych, Metoda <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> zostanie użyta do utworzenia <xref:System.Windows.Documents.Serialization.SerializerWriter> dla określonego formatu.  Metodę <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A?displayProperty=nameWithType> można następnie wywołać, aby wyprowadzić strumień dokumentu do magazynu danych.
 
 Poniższy przykład ilustruje aplikację, która używa metody <xref:System.Windows.Documents.Serialization.SerializerProvider> we właściwości "PlugInFileFilter".  PlugInFileFilter wylicza zainstalowane wtyczki i kompiluje ciąg filtru z dostępnymi opcjami plików dla <xref:Microsoft.Win32.SaveFileDialog>.
 

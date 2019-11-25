@@ -6,48 +6,30 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 833bf46b973988196fea37da18bac9923ecd6dcc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141368"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974761"
 ---
 # <a name="garbage-collection-and-performance"></a>Odzyskiwanie pamięci i wydajność
 
-<a name="top"></a>W tym temacie opisano problemy związane z wyrzucaniem elementów bezużytecznych i użyciem pamięci. Rozwiązuje on problemy związane z zarządzanym stertą i wyjaśnia, jak zminimalizować efekt wyrzucania elementów bezużytecznych w aplikacjach. Każdy problem zawiera linki do procedur, których można użyć do badania problemów.
-
-Ten temat zawiera następujące sekcje:
-
-- [Narzędzia do analizy wydajności](#performance_analysis_tools)
-
-- [Rozwiązywanie problemów z wydajnością](#troubleshooting_performance_issues)
-
-- [Wskazówki dotyczące rozwiązywania problemów](#troubleshooting_guidelines)
-
-- [Procedury sprawdzania wydajności](#performance_check_procedures)
-
-<a name="performance_analysis_tools"></a>
+W tym temacie opisano problemy związane z wyrzucaniem elementów bezużytecznych i użyciem pamięci. Rozwiązuje on problemy związane z zarządzanym stertą i wyjaśnia, jak zminimalizować efekt wyrzucania elementów bezużytecznych w aplikacjach. Każdy problem zawiera linki do procedur, których można użyć do badania problemów.
 
 ## <a name="performance-analysis-tools"></a>Narzędzia do analizy wydajności
 
-W poniższych sekcjach opisano narzędzia, które są dostępne do badania problemów dotyczących użycia pamięci i wyrzucania elementów bezużytecznych. [Procedury](#performance_check_procedures) opisane w dalszej części tego tematu odnoszą się do tych narzędzi.
-
-<a name="perf_counters"></a>
+W poniższych sekcjach opisano narzędzia, które są dostępne do badania problemów dotyczących użycia pamięci i wyrzucania elementów bezużytecznych. [Procedury](#performance-check-procedures) opisane w dalszej części tego tematu odnoszą się do tych narzędzi.
 
 ### <a name="memory-performance-counters"></a>Liczniki wydajności pamięci
 
 Liczników wydajności można używać do zbierania danych wydajności. Aby uzyskać instrukcje, zobacz [profilowanie środowiska uruchomieniowego](../../../docs/framework/debug-trace-profile/runtime-profiling.md). Kategoria pamięci środowiska CLR platformy .NET liczników wydajności, zgodnie z opisem w [licznikach wydajności w .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), zawiera informacje na temat modułu wyrzucania elementów bezużytecznych.
-
-<a name="sos"></a>
 
 ### <a name="debugging-with-sos"></a>Debugowanie za pomocą SOS
 
 Aby sprawdzić obiekty na zarządzanym stosie, można użyć [debugera systemu Windows (WinDbg)](/windows-hardware/drivers/debugger/index) .
 
 Aby zainstalować program WinDbg, zainstaluj narzędzia debugowania dla systemu Windows ze strony [Pobierz narzędzia debugowania dla systemu Windows](/windows-hardware/drivers/debugger/debugger-download-tools) .
-
-<a name="etw"></a>
 
 ### <a name="garbage-collection-etw-events"></a>Zdarzenia ETW odzyskiwania pamięci
 
@@ -61,8 +43,6 @@ Aby zainstalować program WinDbg, zainstaluj narzędzia debugowania dla systemu 
 
 Rejestrowanie zdarzeń ETW jest wydajne i nie będzie maskować żadnych problemów z wydajnością związanych z odzyskiwaniem pamięci. Proces może zapewnić własne zdarzenia w połączeniu ze zdarzeniami ETW. Po zarejestrowaniu zarówno zdarzenia aplikacji, jak i zdarzenia wyrzucania elementów bezużytecznych mogą być skorelowane, aby określić sposób i czas wystąpienia problemów sterty. Na przykład aplikacja serwera może zapewnić zdarzenia na początku i na końcu żądania klienta.
 
-<a name="profiling_api"></a>
-
 ### <a name="the-profiling-api"></a>Profilowanie API
 
 Interfejsy profilowania środowiska uruchomieniowego języka wspólnego (CLR) zawierają szczegółowe informacje o obiektach, których dotyczyły podczas wyrzucania elementów bezużytecznych. Program profilujący może zostać powiadomiony, gdy rozpocznie się i skończy odzyskiwanie pamięci. Może ona dostarczać raporty dotyczące obiektów na zarządzanym stosie, w tym identyfikowanie obiektów w każdej generacji. Aby uzyskać więcej informacji, zobacz [profilowanie — Omówienie](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md).
@@ -72,10 +52,6 @@ Prepliky mogą dostarczać wyczerpujące informacje. Jednak złożone profilowan
 ### <a name="application-domain-resource-monitoring"></a>Monitorowanie zasobów domen aplikacji
 
 Począwszy od .NET Framework 4, monitorowanie zasobów domeny aplikacji (ARM) umożliwia hostom monitorowanie użycia procesora i pamięci przez domenę aplikacji. Aby uzyskać więcej informacji, zobacz [monitorowanie zasobów domeny aplikacji](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).
-
-[Powrót do początku](#top)
-
-<a name="troubleshooting_performance_issues"></a>
 
 ## <a name="troubleshooting-performance-issues"></a>Rozwiązywanie problemów z wydajnością
 
@@ -167,7 +143,7 @@ Jeśli fragmentacja pamięci wirtualnej uniemożliwia dodanie segmentów przez m
 
 - Tworzenie dużych obiektów przejściowych, co sprawia, że sterta dużych obiektów często przydziela i zwalnia segmenty sterty.
 
-  W przypadku hostowania środowiska CLR aplikacja może zażądać, aby moduł zbierający elementy bezużyteczne zachował swoje segmenty. Zmniejsza to częstotliwość alokacji segmentu. Jest to realizowane przy użyciu flagi STARTUP_HOARD_GC_VM w [wyliczeniu STARTUP_FLAGS](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).
+  W przypadku hostowania środowiska CLR aplikacja może zażądać, aby moduł zbierający elementy bezużyteczne zachował swoje segmenty. Zmniejsza to częstotliwość alokacji segmentu. Jest to realizowane przy użyciu flagi STARTUP_HOARD_GC_VM w [Wyliczeniu STARTUP_FLAGS](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).
 
 |Sprawdzanie wydajności|
 |------------------------|
@@ -213,10 +189,6 @@ Czas trwania kolekcji jest przede wszystkim czynnikiem liczby obiektów, które 
 |------------------------|
 |[Ustal, czy wysokie użycie procesora CPU jest spowodowane przez wyrzucanie elementów bezużytecznych.](#HighCPU)<br /><br /> [Ustaw punkt przerwania na końcu odzyskiwania pamięci.](#GenBreak)|
 
-[Powrót do początku](#top)
-
-<a name="troubleshooting_guidelines"></a>
-
 ## <a name="troubleshooting-guidelines"></a>Wskazówki dotyczące rozwiązywania problemów
 
 W tej sekcji opisano wskazówki, które należy wziąć pod uwagę podczas rozpoczynania badań.
@@ -258,10 +230,6 @@ Poniższa procedura opisuje, jak ustawić punkt przerwania, aby można było zmi
   To polecenie wymusza przerwanie, jeśli **RestartEE** jest wykonywane po odbraniu obiektów generacji 2 do wyrzucania elementów bezużytecznych.
 
   W wyrzucaniu elementów bezużytecznych serwera tylko jedno wywołanie wątku **RestartEE**, więc punkt przerwania wystąpi tylko raz podczas wyrzucania elementów bezużytecznych generacji 2.
-
-[Powrót do początku](#top)
-
-<a name="performance_check_procedures"></a>
 
 ## <a name="performance-check-procedures"></a>Procedury sprawdzania wydajności
 
@@ -556,7 +524,7 @@ W tej sekcji opisano następujące procedury umożliwiające odizolowanie przycz
     4    df0    GC SuspendEE
     ```
 
-    Wątek finalizatora wskazuje, który finalizator, jeśli istnieje, jest obecnie uruchamiany. Gdy wątek finalizatora nie działa żadnych finalizatorów, oczekuje na zdarzenie, aby je wypowiedzieć. Większość czasu zobaczysz wątek finalizatora w tym stanie, ponieważ działa on w THREAD_HIGHEST_PRIORITY i ma na celu zakończenie działania finalizatorów, o ile istnieją, bardzo szybko.
+    Wątek finalizatora wskazuje, który finalizator, jeśli istnieje, jest obecnie uruchamiany. Gdy wątek finalizatora nie działa żadnych finalizatorów, oczekuje na zdarzenie, aby je wypowiedzieć. Większość czasu zobaczysz wątek finalizatora w tym stanie, ponieważ działa on w THREAD_HIGHEST_PRIORITY i będzie można zakończyć pracę finalizatorów, jeśli istnieją, bardzo szybko.
 
 <a name="Fragmented"></a>
 

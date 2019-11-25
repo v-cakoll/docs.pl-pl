@@ -3,10 +3,10 @@ title: Rozwiązywanie problemów ze złożonościami biznesowymi w mikrousłudze
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Dowiedz się, jak rozwiązywać złożone scenariusze biznesowe, stosując wzorce DDD i CQRS
 ms.date: 10/08/2018
 ms.openlocfilehash: 88b105b68307c8587f877bb9ddf370e143d8539b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 11/21/2019
 ms.locfileid: "73739830"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Rozwiązywanie złożoności biznesowej w mikrousłudze za pomocą wzorców DDD i CQRS
@@ -73,4 +73,4 @@ DDD to duży temat z bogatym zestawem zasobów do uczenia się. Możesz zacząć
 
 >[!div class="step-by-step"]
 >[Poprzedni](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)
->[dalej](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[Następny](apply-simplified-microservice-cqrs-ddd-patterns.md)

@@ -4,12 +4,12 @@ description: Instalowanie i używanie narzędzia wiersza polecenia dotnet-dump.
 author: sdmaclea
 ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: 7eba0cba28f0575be4b374b26e9aca26a70df603
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321597"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973453"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Narzędzie do zbierania i analizy zrzutów (`dotnet-dump`)
 
@@ -75,7 +75,7 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`--type <Heap|Mini>`**
 
-  Określa typ Dumb, który określa rodzaje informacji zbieranych z procesu. Istnieją dwa typy:
+  Określa typ zrzutu, który określa rodzaje informacji zbieranych z procesu. Istnieją dwa typy:
 
   - `Heap`-duże i stosunkowo kompleksowe zrzuty zawierające listy modułów, listy wątków, wszystkie stosy, informacje o wyjątkach, informacje o obsłudze i wszystkie pamięci z wyjątkiem zamapowanych obrazów.
   - `Mini`-Mały zrzut zawierający listy modułów, listy wątków, informacje o wyjątku i wszystkie stosy.
@@ -88,7 +88,7 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
   Jeśli nie zostanie określony:
 
-  - Wartość domyślna to *.\dump_YYYYMMDD_HHMMSS.dmp* w systemie Windows.
+  - Wartość domyślna to *. \ dump_YYYYMMDD_HHMMSS. dmp* w systemie Windows.
   - Wartość domyślna to *./core_YYYYMMDD_HHMMSS* w systemie Linux.
 
   RRRRMMDD to rok/miesiąc/dzień, a HHMMSS to godzina/minutę/sekundę.
@@ -218,7 +218,7 @@ HResult: 80131604
 
 ## <a name="special-instructions-for-docker"></a>Specjalne instrukcje dotyczące platformy Docker
 
-Jeśli używasz programu Docker, Zbieranie zrzutów wymaga możliwości `SYS_PTRACE` (`--cap-add=SYS_PTRACE` lub `--privileged`).
+Jeśli używasz programu Docker, kolekcja zrzutów wymaga `SYS_PTRACE` możliwości (`--cap-add=SYS_PTRACE` lub `--privileged`).
 
 W przypadku obrazów platformy Docker w systemie Microsoft .NET Core SDK Linux niektóre polecenia `dotnet-dump` mogą zgłosić następujący wyjątek:
 

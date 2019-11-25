@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: eadb456bafb1703c687e73c6aecc81c9dccae72c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: bf0b4e5f85da48ad5d7cb08efd09ff925b6b04d9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739569"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975542"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework wersje i zależności
 
@@ -64,7 +64,7 @@ W tabeli znajdują się wersje .NET Framework zainstalowanych w systemie operacy
   > [!NOTE]
   > .NET Framework 4.5.1 i .NET Framework 4,5 są używane w tym miejscu tylko jako przykłady. Opisana zasada dotyczy każdej aplikacji, która jest przeznaczona dla nowszej wersji .NET Framework niż zainstalowana w systemie, na którym jest uruchomiona.  
   
-Niektóre zmiany w .NET Framework mogą wymagać zmian w kodzie aplikacji. Jeśli używasz istniejącej aplikacji w .NET Framework 4,5 lub nowszej, zobacz [zgodność aplikacji](application-compatibility.md). Aby uzyskać informacje na temat instalowania bieżącej wersji, zobacz [Install the .NET Framework for Developers](../install/guide-for-developers.md). Aby uzyskać informacje o obsłudze .NET Framework, zobacz [Zasady cyklu życia programu Microsoft .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework) w witrynie sieci Web Pomoc techniczna firmy Microsoft.  
+Niektóre zmiany w .NET Framework mogą wymagać zmian w kodzie aplikacji; Sprawdź [zgodność aplikacji](application-compatibility.md) przed uruchomieniem istniejących aplikacji z .NET Framework 4,5 lub nowszymi wersjami. Aby uzyskać więcej informacji na temat instalowania bieżącej wersji, zobacz [Install the .NET Framework for Developers](../install/guide-for-developers.md). Aby uzyskać informacje na temat pomocy technicznej dla .NET Framework, zobacz [.NET Framework oficjalne zasady pomocy technicznej](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) w witrynie sieci Web platformy .NET.
   
 ## <a name="target-and-run-apps-for-older-versions"></a>Kierowanie i uruchamianie aplikacji dla starszych wersji  
 
@@ -85,5 +85,5 @@ Ponadto, jeśli aplikacja jest przeznaczona dla wersji 2,0, 3,0 lub 3,5, użytko
 ## <a name="see-also"></a>Zobacz także
 
 - [Zgodność wersji](version-compatibility.md)
-- [Zasady cyklu życia obsługi Microsoft .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+- [.NET Framework oficjalne zasady pomocy technicznej](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](../install/troubleshoot-blocked-installations-and-uninstallations.md)

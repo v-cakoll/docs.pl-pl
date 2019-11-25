@@ -26,310 +26,252 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c026174e881768af245860d1b719184dc47f1798
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6f0e268995449bc27b93c92ac8654c09fca9cd14
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663988"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975823"
 ---
 # <a name="cryptographic-services"></a>Usługi kryptograficzne
 
-<a name="top"></a> Sieci publicznych, takich jak Internet nie zapewniają środek bezpiecznej komunikacji między jednostkami. Komunikacja za pośrednictwem tych sieci jest podatny na trwa odczytu lub nawet zmodyfikować nieautoryzowanym osobom trzecim. Kryptografia pomaga chronić dane przed wyświetlaniem, udostępnia metody wykrywania, czy dane zostały zmodyfikowane, a także pomaga w zapewnieniu bezpiecznego oznacza, że komunikacji za pośrednictwem kanałów w przeciwnym razie niezabezpieczone. Na przykład danych można być szyfrowane przy użyciu algorytmu kryptograficznego, przekazywane w stanu zaszyfrowanego i później odszyfrować zamierzony innych firm. Jeśli strona trzecia przechwytuje zaszyfrowane dane, będzie trudne do odszyfrowania.
+Sieci publiczne, takie jak Internet, nie zapewniają metody bezpiecznej komunikacji między jednostkami. Komunikacja za pośrednictwem takich sieci jest podatna na odczytywanie, a nawet modyfikowanie przez nieautoryzowane strony trzecie. Kryptografia pomaga chronić dane przed wyświetlaniem, zapewnia sposoby wykrywania, czy dane zostały zmodyfikowane i pomaga zapewnić bezpieczny sposób komunikacji za pośrednictwem niezabezpieczonych kanałów. Na przykład dane mogą być szyfrowane przy użyciu algorytmu kryptograficznego, przesyłane w stanie zaszyfrowanym i później odszyfrowane przez zaznaczoną stronę. Jeśli strona trzecia przechwytuje zaszyfrowane dane, będzie trudne do odszyfrowania.
 
-W .NET Framework klas w <xref:System.Security.Cryptography?displayProperty=nameWithType> przestrzeni nazw Zarządzanie wiele szczegółów kryptografii. Niektóre są otoki dla niezarządzanych API kryptografii firmy Microsoft (CryptoAPI), a inne wyłącznie zarządzanej implementacji. Nie musisz być ekspertem w kryptografii do użycia w ramach tych zajęć. Podczas tworzenia nowego wystąpienia jednego z szyfrowania klasy algorytm klucze są automatycznie generowane w celu ułatwienia i domyślne właściwości są tak bezpieczne i bezpieczne, jak to możliwe.
+W .NET Framework klasy w przestrzeni nazw <xref:System.Security.Cryptography?displayProperty=nameWithType> zarządzają wiele szczegółów kryptografii. Niektóre z nich są otokami dla niezarządzanego interfejsu API kryptografii Microsoft (CryptoAPI), a inne są całkowicie zarządzanymi implementacjami. Nie musisz być ekspertem w kryptografii, aby używać tych klas. Podczas tworzenia nowego wystąpienia jednej z klas algorytmu szyfrowania klucze są generowane automatycznie w celu ułatwienia użycia, a właściwości domyślne są bezpieczne i bezpieczne, jak to możliwe.
 
-W tym omówieniu przedstawiono streszczenie metod szyfrowanie i rozwiązań obsługiwanych przez program .NET Framework, w tym manifesty ClickOnce, Suite B i pomocy technicznej Cryptography Next Generation (CNG) wprowadzone w programie .NET Framework 3.5.
+Ten przegląd zawiera streszczenie metod szyfrowania i praktyki obsługiwane przez .NET Framework, w tym manifesty ClickOnce, Suite B i obsługę kryptografii nowej generacji (CNG) wprowadzone w .NET Framework 3,5.
 
-Ten przegląd zawiera następujące sekcje:
+Aby uzyskać dodatkowe informacje na temat kryptografii oraz usług firmy Microsoft, składników i narzędzi, które umożliwiają dodawanie zabezpieczeń kryptograficznych do aplikacji, zobacz sekcję Programowanie Win32 i COM, zabezpieczenia w tej dokumentacji.
 
-- [Podstawowych usług kryptograficznych](#primitives)
+## <a name="cryptographic-primitives"></a>Kryptograficzne elementy pierwotne
 
-- [Klucz tajny szyfrowania](#secret_key)
+W typowej sytuacji, w której jest używana Kryptografia, dwie strony (Alicja i Robert) komunikują się za pośrednictwem niezabezpieczonego kanału. Alicja i Robert chcą zapewnić, że ich komunikacja jest niezrozumiała dla każdego, kto może nasłuchiwać. Ponadto, ponieważ Alicja i Robert znajdują się w lokalizacjach zdalnych, Alicja musi upewnić się, że informacje otrzymane z Roberta nie zostały zmodyfikowane przez żadną osobę podczas transmisji. Ponadto należy się upewnić, że informacje są naprawdę pochodzące od Roberta, a nie od osoby, która personifikuje Robert.
 
-- [Public-Key Encryption](#public_key)
+Kryptografia służy do osiągnięcia następujących celów:
 
-- [Podpisy cyfrowe](#digital_signatures)
+- Poufność: aby chronić tożsamość lub dane użytkownika przed ich odczytaniem.
 
-- [Wartości skrótów](#hash_values)
+- Integralność danych: pomaga chronić dane przed ich zmianą.
 
-- [Generowanie liczby losowej](#random_numbers)
+- Uwierzytelnianie: aby upewnić się, że dane pochodzą od określonej strony.
 
-- [Manifesty ClickOnce](#clickonce)
+- Brak odrzucania: aby uniemożliwić określonej stronie odmowę wysłania wiadomości.
 
-- [Obsługa pakietu Suite B](#suite_b)
+Aby osiągnąć te cele, można użyć kombinacji algorytmów i praktyk znanych jako kryptograficzne elementy pierwotne w celu utworzenia schematu kryptograficznego. Poniższa tabela zawiera listę podstawowych elementów kryptograficznych i ich użycia.
 
-- [Tematy pokrewne](#related_topics)
-
-Aby uzyskać dodatkowe informacje o kryptografii i usług firmy Microsoft, składniki i narzędzia, które pozwalają zwiększyć bezpieczeństwo kryptograficzne dla poszczególnych aplikacji Zobacz Win32 i COM, rozwoju, sekcji Zabezpieczenia w niniejszej dokumentacji.
-
-<a name="primitives"></a>
-
-## <a name="cryptographic-primitives"></a>Podstawowych usług kryptograficznych
-
-W typowej sytuacji kryptografii jest używane w sytuacji obie strony (Alice i Bob) komunikują się za pośrednictwem niezabezpieczonych kanału. Alice i Bob chcesz zapewnić niezrozumiała każdy, kto może nasłuchiwać komunikacji. Ponadto ponieważ Alice i Bob znajdują się w lokalizacjach zdalnych, Alicja musisz upewnić się, że informacje, które otrzyma ona z Bob nie został zmodyfikowany przez dowolną osobę podczas transmisji. Ponadto ona musisz upewnić się, że informacje naprawdę pochodzą z niego, a nie z osobą, która personifikuje Bob.
-
-Kryptografia jest wykorzystywana do osiągnięcia następujących celów:
-
-- Poufność: Aby pomóc w ochronie tożsamości użytkownika lub danych z odczytu.
-
-- Integralność danych: Aby chronić dane przed zmianami.
-
-- Uwierzytelnianie: Aby upewnić się, że dane pochodzą z określoną stroną.
-
-- Niemożność wyparcia się: Aby zapobiec konkretnej strony odmowy wysłał wiadomość.
-
-Aby osiągnąć te cele, umożliwia kombinacji algorytmów i praktyk, znane jako podstawowych usług kryptograficznych tworzenie schematu kryptograficznego. W poniższej tabeli wymieniono prymitywów kryptograficznych i ich zastosowań.
-
-|Pierwotny kryptograficzne|Zastosowanie|
+|Kryptografia kryptograficzna|Zastosowanie|
 |-----------------------------|---------|
-|Klucz tajny szyfrowania (Kryptografia symetryczna)|Wykonuje przekształcenie danych, aby zapobiec odczytywany przez osoby trzecie. Ten typ szyfrowania używa pojedyncza, współdzielona, klucza tajnego szyfrowania i odszyfrowywania danych.|
-|Szyfrowanie klucza publicznego (kryptografii asymetryczny)|Wykonuje przekształcenie danych, aby zapobiec odczytywany przez osoby trzecie. Ten typ szyfrowania do szyfrowania i odszyfrowywania danych korzysta z pary kluczy publiczny/prywatny.|
-|Podpisywanie kryptograficzne|Pomaga sprawdzić pochodzą dane z określonej innej firmy, tworząc podpis cyfrowy, który jest unikatowy dla tej strony. Ten proces jest również używa funkcji mieszania.|
-|Skróty kryptograficzne|Mapuje dane z dowolnej długości sekwencji bajtów o stałej długości. Skróty są statystycznie unikatowy. inną kombinację dwóch bajtów nie będzie skrótu na tę samą wartość.|
+|Szyfrowanie klucza tajnego (Kryptografia symetryczna)|Wykonuje transformację danych, aby uniemożliwić ich odczytywanie przez inne osoby. Ten typ szyfrowania używa jednego udostępnionego klucza tajnego do szyfrowania i odszyfrowywania danych.|
+|Szyfrowanie klucza publicznego (kryptografia asymetryczna)|Wykonuje transformację danych, aby uniemożliwić ich odczytywanie przez inne osoby. Ten typ szyfrowania używa pary kluczy publiczny/prywatny do szyfrowania i odszyfrowywania danych.|
+|Podpisywanie kryptograficzne|Pomaga sprawdzić, czy dane pochodzą od określonej strony przez utworzenie podpisu cyfrowego, który jest unikatowy dla tej strony. Ten proces używa również funkcji skrótu.|
+|Skróty kryptograficzne|Mapuje dane z dowolnej długości na sekwencję bajtów o stałej długości. Skróty są statystycznie unikatowe; inna sekwencja dwubajtowa nie będzie mieszać wartości z tą samą wartością.|
 
-[Powrót do początku](#top)
+## <a name="secret-key-encryption"></a>Szyfrowanie klucza tajnego
 
-<a name="secret_key"></a>
+Algorytmy szyfrowania klucza tajnego używają jednego klucza tajnego do szyfrowania i odszyfrowywania danych. Należy zabezpieczyć klucz przed dostępem nieautoryzowanych agentów, ponieważ każda Strona, która ma klucz, może użyć jej do odszyfrowania danych lub zaszyfrowania własnych danych, ponieważ pochodzi od użytkownika.
 
-## <a name="secret-key-encryption"></a>Klucz tajny szyfrowania
+Szyfrowanie klucza tajnego jest również określane jako szyfrowanie symetryczne, ponieważ ten sam klucz jest używany do szyfrowania i odszyfrowywania. Algorytmy szyfrowania klucza tajnego są bardzo szybkie (w porównaniu z algorytmami klucza publicznego) i są dobrze dostosowane do wykonywania transformacji kryptograficznych w dużych strumieniach danych. Algorytmy szyfrowania asymetrycznego, takie jak RSA, są ograniczone matematycznie w zakresie ilości danych, które mogą być szyfrowane. Algorytmy szyfrowania symetrycznego zazwyczaj nie mają tych problemów.
 
-Algorytmy szyfrowania klucz tajny użyć pojedynczego klucza tajnego do szyfrowania i odszyfrowywania danych. Należy zabezpieczyć klucza przed dostępem nieautoryzowanych agentów, ponieważ każda strona, która ma klucz służy do odszyfrowywania danych lub szyfrować dane, zgłaszanie się, że pochodzi ze strony użytkownika.
+Typ algorytmu tajnego klucza o nazwie szyfr bloku służy do szyfrowania jednego bloku danych w danym momencie. Zablokuj szyfry, takie jak Data Encryption Standard (DES), TripleDES i Advanced Encryption Standard (AES), Przekształć kryptograficznie Blok wejściowy *n* bajtów do bloku wyjściowego zaszyfrowanych bajtów. Aby zaszyfrować lub odszyfrować sekwencję bajtów, należy ją zablokować za pomocą bloku. Ponieważ *n* jest mały (8 bajtów dla des i TripleDES; 16 bajtów [domyślna], 24 bajty lub 32 bajtów dla AES), wartości danych, które są większe niż *n* , muszą być szyfrowane po jednym bloku naraz. Wartości danych, które są mniejsze niż *n* , muszą być rozwinięte do *n* , aby można było je przetworzyć.
 
-Klucz tajny szyfrowania jest również określany jako szyfrowania symetrycznego, ponieważ ten sam klucz służy do szyfrowania i odszyfrowywania. Algorytmy szyfrowania klucz tajny są bardzo szybko (w porównaniu z algorytmami klucz publiczny) i dobrze nadaje się do wykonywania przekształceniami kryptograficznymi dużych strumieni danych. Szyfrowanie asymetryczne algorytmy, takie jak RSA są ograniczone ze sobą matematycznie w ilości danych można zaszyfrować. Algorytmy szyfrowania symetrycznego nie mają zazwyczaj tych problemów.
+Jedna prosta forma szyfrowania bloku jest nazywana trybem elektronicznym trybu (EBC). Tryb EBC nie jest uważany za Bezpieczny, ponieważ nie używa wektora inicjalizacji do inicjowania pierwszego bloku zwykłego tekstu. W przypadku danego klucza tajnego *k*, prosty szyfr bloku, który nie używa wektora inicjalizacji, będzie szyfrować ten sam blok danych wejściowych w tym samym bloku wyjściowym tekstu szyfrowanego. W związku z tym, jeśli masz zduplikowane bloki w strumieniu danych wejściowych w formacie zwykłego tekstu, będziesz mieć zduplikowane bloki w strumieniu danych wyjściowych. Te zduplikowane bloki wyjściowe wyzwalają alert nieautoryzowanych użytkowników do słabego szyfrowania wykorzystujących algorytmy, które mogły zostać zastosowane, oraz możliwe tryby ataków. W związku z tym jest bardzo narażony na analizę, a ostatecznie odnajdywanie kluczy.
 
-Typ algorytmu klucz tajny o nazwie szyfrowania bloku jest używany do szyfrowania jeden blok danych w danym momencie. Blok szyfrów, takie jak Data Encryption Standard (DES), TripleDES, i Advanced Encryption Standard (AES) kryptograficznie przekształcania danych wejściowych blok *n* bajtów do bloku danych wyjściowych zaszyfrowanych bajtów. Jeśli chcesz zaszyfrować lub odszyfrować sekwencji bajtów, trzeba go blok po bloku. Ponieważ *n* jest mały (8 bajtów DES i TripleDES; 16-bajtowy [domyślnie], w bajtach 24 lub 32 bajty w przypadku standardu AES), wartości danych, które są większe niż *n* muszą być szyfrowane jednego bloku naraz. Wartości danych, które są mniejsze niż *n* trzeba można rozszerzyć, aby *n* w celu przetworzenia.
+Blokowe klasy szyfrowe, które są dostępne w bibliotece klas bazowych, używają domyślnego trybu łańcucha nazywanego łańcuchem blokowym (CBC), chociaż można zmienić to ustawienie domyślne, jeśli chcesz.
 
-Jeden prosty formularz szyfrem nosi nazwę trybu codebook elektronicznej (ECB). Tryb ECB jest uważana za niebezpieczną, ponieważ nie jest używane wektor inicjowania do inicjowania pierwszego bloku w postaci zwykłego tekstu. Dla danego klucza tajnego *k*, cipher Prosty blok, który nie korzysta z wektor inicjowania spowoduje zaszyfrowanie tego samego bloku danych wejściowych zwykłego tekstu do tego samego bloku danych wyjściowych tekstu szyfrowanego. W związku z tym jeśli masz zduplikowanych bloków w strumienia danych wejściowych w postaci zwykłego tekstu, konieczne będzie zduplikowanych bloków w danych wyjściowych strumienia tekstu szyfrowanego. Te bloki zduplikowany wyjściowy alertu nieautoryzowanym użytkownikom słabe szyfrowanie używane algorytmy, które może być zatrudnionych i możliwe tryby ataku. Trybu szyfrowania ECB występuje w związku z tym dość analizy i ostatecznie kluczy odnajdywania.
+Szyfry CBC przezwyciężyją problemy związane z szyframi EBC przy użyciu wektora inicjującego (IV) do szyfrowania pierwszego bloku zwykłego tekstu. Każdy kolejny blok w postaci zwykłego tekstu poddawany jest operacją bitową wykluczającą lub (`XOR`) przy użyciu poprzedniego bloku szyfrowanego przed zaszyfrowaniem. Każdy blok tekstu jest zależny od wszystkich poprzednich bloków. Gdy ten system jest używany, do odtworzenia klucza nie można użyć popularnych nagłówków komunikatów, które mogą być znane nieautoryzowanemu użytkownikowi.
 
-Klasy szyfrowania bloku, które znajdują się w bibliotece klasy bazowej użyć domyślnego łańcucha tryb o nazwie szyfrowania bloku łańcucha (CBC), mimo że można zmienić to ustawienie domyślne, jeśli chcesz.
+Jednym ze sposobów na złamanie danych szyfrowanych za pomocą szyfru CBC jest wykonanie pełnego wyszukiwania każdego możliwego klucza. W zależności od rozmiaru klucza, który jest używany do szyfrowania, ten rodzaj wyszukiwania jest bardzo czasochłonny przy użyciu nawet najszybszych komputerów i dlatego jest nieosiągalny. Większe rozmiary kluczy są trudniejsze do odszyfrowania. Chociaż szyfrowanie nie sprawia, że jest teoretycznie niemożliwe do pobrania zaszyfrowanych danych przez atakującej, zwiększa to koszt. Jeśli przeprowadzenie szczegółowego wyszukiwania w celu pobrania danych, które ma znaczenie tylko przez kilka dni, trwa przez trzy miesiące, pełna Metoda wyszukiwania jest nieprzydatna.
 
-Szyfry CBC rozwiązywania problemów związanych z mechanizmów szyfrowania ECB przy użyciu wektor inicjowania (IV) do zaszyfrowania pierwszego bloku zwykłego tekstu. Każdy blok kolejnych zwykłego tekstu ulega bitowe wykluczające OR (`XOR`) operację, używając poprzedniego bloku szyfrowany przed jest zaszyfrowany. Każdy blok tekstu szyfrowanego w związku z tym jest zależna od wszystkich poprzednich blokach. Gdy ten system jest nagłówków wiadomości używane, wspólnego, które mogą być znane nieautoryzowanym użytkownikom nie może być używany do odtwarzanie klucza.
+Wadą szyfrowania klucza tajnego jest założenie, że dwie strony zgodziły się na klucz i IV i komunikują się ich wartości. IV nie jest traktowany jako wpis tajny i może być przesyłany w postaci zwykłego tekstu z wiadomością. Klucz musi być jednak tajny dla nieautoryzowanych użytkowników. Ze względu na te problemy szyfrowanie klucza tajnego jest często używane razem z szyfrowaniem klucza publicznego do prywatnego przekazywania wartości klucza i IV.
 
-Jednym ze sposobów naruszyć bezpieczeństwo danych, które są szyfrowane za pomocą szyfrowania CBC jest przeprowadzenie kompleksowe przeszukiwanie co możliwe klucza. W zależności od rozmiaru klucza, który jest używany do szyfrowania tego rodzaju wyszukiwania jest bardzo czasochłonne, za pomocą nawet komputerów najszybszy i dlatego niewykonalne. Większe rozmiary kluczy są trudniejsze do odszyfrowania. Mimo że szyfrowania nie uniemożliwiają teoretycznie dla osoby atakującej pobierania zaszyfrowanych danych, jej podnieść koszt w ten sposób. Jeśli zajmuje trzy miesiące, aby wykonać kompleksowe przeszukiwanie do pobierania danych, która ma znaczenie tylko przez kilka dni, metoda kompleksowe przeszukiwanie jest niepraktyczne.
+Przy założeniu, że Alicja i Robert są dwiema stronami, którzy chcą komunikować się za pośrednictwem niezabezpieczonego kanału, mogą używać szyfrowania klucza tajnego w następujący sposób: Alicja i Robert zgadzają się używać jednego określonego algorytmu (na przykład AES) z określonym kluczem i IV. Alicja redaguje komunikat i utworzy strumień sieciowy (być może nazwany potok lub sieć e-mail), na którym ma być wysyłany komunikat. Następnie szyfruje tekst przy użyciu klucza i IV, a następnie przesyła zaszyfrowaną wiadomość i IV do Roberta za pośrednictwem intranetu. Robert odbiera zaszyfrowany tekst i odszyfrowuje go przy użyciu IV i wcześniej uzgodnionych kluczy. Jeśli transmisja zostanie przechwycona, Interceptor nie będzie mógł odzyskać oryginalnego komunikatu, ponieważ nie zna klucza. W tym scenariuszu tylko klucz musi pozostać tajny. W świecie rzeczywistym, Alicja lub Robert generuje klucz tajny i używa szyfrowania klucza publicznego (asymetrycznego) do transferowania klucza tajnego (symetrycznego) do drugiej strony. Aby uzyskać więcej informacji na temat szyfrowania kluczem publicznym, zobacz następną sekcję.
 
-Wadą szyfrowania klucz tajny jest zakłada obie strony mają uzgodniono klucza i IV i przekazywane ich wartości. IV nie jest uważany za wpisu tajnego i mogą być przesyłane w postaci zwykłego tekstu z komunikatem. Jednak klucz muszą być trzymane w tajemnicy przed nieautoryzowanymi użytkownikami. Z powodu problemów z tymi szyfrowania klucz tajny jest często używana razem z szyfrowania klucza publicznego do prywatnie komunikacji wartości klucza i IV.
+.NET Framework udostępnia następujące klasy, które implementują algorytmy szyfrowania klucza tajnego:
 
-Przy założeniu, że Alice i Bob znajdują się dwie strony, które mają do komunikacji za pośrednictwem niezabezpieczonych kanału, mogą użyć szyfrowania klucz tajny w następujący sposób: Alice i Bob zobowiązuje się do jednego określonego algorytmu (na przykład AES) za pomocą określonego klucza i IV. Alicja Redaguj komunikat i tworzy strumień sieci (być może nazwanego potoku lub sieci poczty e-mail), na którym chcesz wysłać wiadomość. Następnie użytkownik szyfruje tekst przy użyciu klucza i IV i wysyła zaszyfrowanego komunikatu i IV do niego za pośrednictwem sieci intranet. Robert otrzymuje zaszyfrowanego tekstu i odszyfrowuje ją przy użyciu IV i wcześniej uzgodnionych klucza. W przypadku przechwycenia transmisji interceptor nie można odzyskać oryginalnej wiadomości, ponieważ nie zna klucza. W tym scenariuszu tylko klucz musi pozostać wpisu tajnego. W rzeczywistym scenariuszu Alice i Bob generuje klucz tajny i przenieść klucz tajny (symetrycznego) do drugiej strony jest używane szyfrowanie (asymetrycznie) klucz publiczny. Aby uzyskać więcej informacji o szyfrowaniu klucza publicznego zobacz następną sekcję.
+- <xref:System.Security.Cryptography.AesManaged> (wprowadzona w .NET Framework 3,5).
 
-Program .NET Framework zawiera następujące klasy, które implementują algorytmy szyfrowania klucz tajny:
+- <xref:System.Security.Cryptography.DESCryptoServiceProvider>.,
 
-- <xref:System.Security.Cryptography.AesManaged> (wprowadzona w programie .NET Framework 3.5).
+- <xref:System.Security.Cryptography.HMACSHA1> (jest to technicznie algorytm klucza tajnego, ponieważ reprezentuje on kod uwierzytelniania wiadomości obliczany przy użyciu funkcji skrótu kryptograficznego połączonej z kluczem tajnym. Zobacz [wartości skrótu](#hash-values)w dalszej części tego tematu.)
 
-- <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.,
 
-- <xref:System.Security.Cryptography.HMACSHA1> (Jest to technicznie algorytm klucz tajny, ponieważ reprezentuje on kod uwierzytelniania wiadomości, która jest obliczana przy użyciu funkcji skrótu kryptograficznego w połączeniu z klucz tajny. Zobacz [wartości skrótu](#hash_values)w dalszej części tego tematu.)
+- <xref:System.Security.Cryptography.RijndaelManaged>.,
 
-- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.
+- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.,
 
-- <xref:System.Security.Cryptography.RijndaelManaged>.
+## <a name="public-key-encryption"></a>Szyfrowanie klucza publicznego
 
-- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.
+Szyfrowanie klucza publicznego używa klucza prywatnego, który musi być tajny przez nieautoryzowanych użytkowników i klucz publiczny, który można udostępnić każdemu użytkownikowi. Klucz publiczny i klucz prywatny są powiązane matematycznie; dane zaszyfrowane za pomocą klucza publicznego mogą zostać odszyfrowane tylko przy użyciu klucza prywatnego, a dane podpisane przy użyciu klucza prywatnego mogą być weryfikowane tylko z kluczem publicznym. Klucz publiczny można udostępnić każdemu użytkownikowi; służy do szyfrowania danych wysyłanych do posiadacza klucza prywatnego. Algorytmy kryptograficzne klucza publicznego są również znane jako algorytmy asymetryczne, ponieważ jeden klucz jest wymagany do szyfrowania danych, a do odszyfrowania danych jest wymagany inny klucz. Podstawowa reguła kryptograficzna uniemożliwia ponowne użycie klucza, a oba klucze powinny być unikatowe dla każdej sesji komunikacji. Jednak w przypadku klucze asymetryczne są zwykle długotrwałe.
 
-[Powrót do początku](#top)
+Dwie strony (Alicja i Robert) mogą używać szyfrowania klucza publicznego w następujący sposób: najpierw Alicja generuje parę kluczy publiczny/prywatny. Jeśli Robert chce wysłać zaszyfrowaną wiadomość, zażąda jej klucza publicznego. Alicja wysyła swój klucz publiczny za pośrednictwem niezabezpieczonej sieci, a Robert używa tego klucza do szyfrowania wiadomości. Robert wysyła zaszyfrowany komunikat do programu Alicja i odszyfrowuje go przy użyciu jego klucza prywatnego. Jeśli Robert otrzyma klucz Alicja za pośrednictwem niezabezpieczonego kanału, takiego jak sieć publiczna, Robert jest otwarty na ataki typu man-in-the-middle. W związku z tym Robert musi zweryfikować za pomocą Alicja, że ma poprawną kopię swojego klucza publicznego.
 
-<a name="public_key"></a>
+Podczas przesyłania klucza publicznego Alicja nieautoryzowany agent może przechwycić klucz. Ponadto ten sam Agent może przechwycić zaszyfrowany komunikat z Roberta. Jednak Agent nie może odszyfrować komunikatu przy użyciu klucza publicznego. Wiadomość można odszyfrować tylko za pomocą klucza prywatnego Alicja, który nie został przesłany. Alicja nie używa swojego klucza prywatnego do szyfrowania komunikatu odpowiedzi do Roberta, ponieważ każda osoba z kluczem publicznym może odszyfrować komunikat. Jeśli Alicja chce wysłać komunikat z powrotem do Roberta, prosi Roberta o jego klucz publiczny i szyfruje jego komunikat przy użyciu tego klucza publicznego. Robert następnie odszyfrowuje komunikat przy użyciu skojarzonego z nim klucza prywatnego.
 
-## <a name="public-key-encryption"></a>Public-Key Encryption
+W tym scenariuszu Alicja i Robert używają szyfrowania klucza publicznego (asymetrycznego) do transferowania klucza tajnego (symetrycznego) i korzystania z szyfrowania klucza tajnego w pozostałej części sesji.
 
-Szyfrowanie klucza publicznego używa klucza prywatnego, które muszą być trzymane w tajemnicy przed nieautoryzowanymi użytkownikami i kluczem publicznym, które mogą być ujawniane nikomu. Klucz publiczny i klucz prywatny są ze sobą matematycznie powiązane; można odszyfrować danych, które są szyfrowane przy użyciu klucza publicznego tylko przy użyciu klucza prywatnego i danych, który jest podpisany przy użyciu klucza prywatnego, można sprawdzić tylko przy użyciu klucza publicznego. Klucz publiczny mogą być udostępniane osobom; Służy do szyfrowania danych do wysłania do hodowca klucza prywatnego. Algorytmy kryptograficzne klucza publicznego są również nazywane asymetryczne algorytmy, ponieważ jeden klucz jest wymagany do szyfrowania danych, a inny klucz jest wymagany do odszyfrowania danych. Podstawową regułę kryptograficznych uniemożliwia ponowne użycie klucza, a oba klucze, powinien być unikatowy dla każdej sesji komunikacji. Jednak w praktyce ogólnie długotrwałe są klucze asymetryczne.
+Poniższa lista zawiera porównania między algorytmami kryptograficznymi klucza publicznego i klucza tajnego:
 
-Obie strony (Alice i Bob) może używać szyfrowania klucza publicznego w następujący sposób: Po pierwsze Alicja generowana jest para kluczy publiczny/prywatny. Jeśli Bob chce, aby wysłać wiadomość zaszyfrowaną Alicja, zwróci się więc do jej dla swojego klucza publicznego. Alicja wysyła Bob jej klucz publiczny za pośrednictwem niezabezpieczonej sieci, a Bob używa tego klucza szyfrowania wiadomości. Robert wysyła zaszyfrowanego komunikatu do Alicji, a ona odszyfrowuje je, używając swojego klucza prywatnego. Jeśli Bob odebrane przez Alice klucz za pośrednictwem niezabezpieczonych kanału, takich jak sieć publiczną Bob jest otwarty na atak typu man-in--middle. W związku z tym Bob należy sprawdzić za pomocą Alicja, że ma on poprawny kopię jej klucz publiczny.
+- Algorytmy kryptograficzne klucza publicznego używają stałego rozmiaru buforu, natomiast algorytmy kryptograficzne klucza tajnego używają bufora o zmiennej długości.
 
-Podczas przekazywania klucza publicznego Alicji nieautoryzowany agent może przechwycić klucza. Ponadto ten sam agent może przechwycić zaszyfrowanego komunikatu z niego. Jednak agent nie może odszyfrować wiadomości przy użyciu klucza publicznego. Komunikat mogły być odszyfrowane tylko przy użyciu klucza prywatnego przez Alice, które nie zostały przekazane. Alicja nie używa swojego klucza prywatnego do zaszyfrowania komunikatu odpowiedzi do Boba, ponieważ każda osoba z kluczem publicznym można odszyfrować wiadomości. Jeśli Alicja chce, aby wysłać wiadomość do Roberta, ona zadaje Bob dla swojego klucza publicznego, a następnie szyfruje jej wiadomości przy użyciu tego klucza publicznego. Bob odszyfrowuje wiadomości za pomocą jego skojarzonego klucza prywatnego.
+- Algorytmy klucza publicznego nie mogą być używane do łączenia danych ze strumieniami, tak jak algorytmy klucza tajnego, ponieważ mogą być szyfrowane tylko małe ilości danych. W związku z tym operacje asymetryczne nie używają tego samego modelu przesyłania strumieniowego jako operacji symetrycznych.
 
-W tym scenariuszu Alice i Bob szyfrowania klucza publicznego (asymetrycznie) do przekazania klucza tajnego klucza (symetrycznego) i klucz tajny szyfrowania w pozostałej części sesji.
+- Szyfrowanie klucza publicznego ma znacznie większe miejsce na klucz (zakres możliwych wartości klucza) niż szyfrowanie klucza tajnego. W związku z tym szyfrowanie klucza publicznego jest mniej podatne na pełne ataki, które Wypróbuj każdy możliwy klucz.
 
-Poniższa lista zawiera porównanie klucz publiczny i klucz tajny algorytmów kryptograficznych:
+- Klucze publiczne są łatwe do dystrybucji, ponieważ nie muszą być zabezpieczone, pod warunkiem, że istnieje możliwość zweryfikowania tożsamości nadawcy.
 
-- Algorytmy kryptograficzne klucza publicznego używany rozmiar ustalony bufor, klucz tajny algorytmy kryptograficzne używane bufor o zmiennej długości.
+- Niektóre algorytmy klucza publicznego (takie jak RSA i DSA, ale nie Diffie-Hellmana) mogą służyć do tworzenia podpisów cyfrowych w celu zweryfikowania tożsamości nadawcy danych.
 
-- Algorytmy kluczy publicznych nie można użyć do łańcucha danych razem do strumieni sposób, w jaki można algorytmy klucz tajny, ponieważ tylko niewielkich ilości danych, które mogą być szyfrowane. W związku z tym asymetryczne operacje nie należy używać tego samego modelu przesyłania strumieniowego jako operacje symetryczne.
+- Algorytmy klucza publicznego są bardzo wolne w porównaniu z algorytmami tajnych kluczy i nie są przeznaczone do szyfrowania dużych ilości danych. Algorytmy klucza publicznego są przydatne tylko do przesyłania bardzo małych ilości danych. Zazwyczaj szyfrowanie klucza publicznego służy do szyfrowania klucza i IV, który ma być używany przez algorytm tajnego klucza. Po przeniesieniu klucza i IV, szyfrowanie klucza tajnego jest używane w pozostałej części sesji.
 
-- Szyfrowanie klucza publicznego ma znacznie większych przestrzeń kluczy (zakres możliwych wartości dla klucza) niż klucz tajny szyfrowania. Dlatego szyfrowanie klucza publicznego jest mniej podatny na ataki wyczerpująca, próbujących za każdy klucz możliwe.
-
-- Klucze publiczne są łatwe do dystrybucji, ponieważ nie mają zostać zabezpieczone, pod warunkiem, że istnieje jakiś sposób, aby zweryfikować tożsamość nadawcy.
-
-- Niektóre algorytmy klucza publicznego (np. RSA i DSA, ale nie Diffie-Hellman) może służyć do tworzenia podpisów cyfrowych, aby sprawdzić tożsamość nadawcy danych.
-
-- Algorytmy klucza publicznego są bardzo wolne w porównaniu z algorytmami klucz tajny, a nie są przeznaczone do zaszyfrowania dużych ilości danych. Algorytmy klucza publicznego są przydatne tylko w przypadku przesyłania bardzo małe ilości danych. Zazwyczaj szyfrowania klucza publicznego jest używany do szyfrowania klucza i IV, który będzie używany przez algorytm klucz tajny. Po przesłaniu klucza i IV szyfrowania klucz tajny jest używana w pozostałej części sesji.
-
-Program .NET Framework zawiera następujące klasy, które implementują algorytmy szyfrowania klucza publicznego:
+.NET Framework udostępnia następujące klasy, które implementują algorytmy szyfrowania klucza publicznego:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
 - <xref:System.Security.Cryptography.RSACryptoServiceProvider>
 
-- <xref:System.Security.Cryptography.ECDiffieHellman> (klasa podstawowa)
+- <xref:System.Security.Cryptography.ECDiffieHellman> (klasa bazowa)
 
 - <xref:System.Security.Cryptography.ECDiffieHellmanCng>
 
-- <xref:System.Security.Cryptography.ECDiffieHellmanCngPublicKey> (klasa podstawowa)
+- <xref:System.Security.Cryptography.ECDiffieHellmanCngPublicKey> (klasa bazowa)
 
-- <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction> (klasa podstawowa)
+- <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction> (klasa bazowa)
 
 - <xref:System.Security.Cryptography.ECDsaCng>
 
-RSA umożliwia szyfrowania i podpisywania, ale DSA może służyć tylko do podpisywania, a Diffie'ego-Hellmana mogą służyć tylko do generowania kluczy. Ogólnie rzecz biorąc algorytmów klucza publicznego są bardziej ograniczone ich zastosowań niż algorytmów klucza prywatnego.
-
-[Powrót do początku](#top)
-
-<a name="digital_signatures"></a>
+Klucz RSA umożliwia szyfrowanie i podpisywanie, ale agenta DSA można używać tylko do podpisywania, a w przypadku generowania kluczy można używać tylko algorytmu diff-Hellmana. Ogólnie rzecz biorąc, algorytmy klucza publicznego są bardziej ograniczone w porównaniu z algorytmami klucza prywatnego.
 
 ## <a name="digital-signatures"></a>Podpisy cyfrowe
 
-Algorytmy kluczy publicznych może służyć również do tworzenia podpisów cyfrowych. Podpisy cyfrowe uwierzytelnianie tożsamości nadawcy (Jeśli ufasz nadawcy klucz publiczny) oraz pomóc je zabezpieczyć integralności danych. Za pomocą klucza publicznego, generowane przez Alice, Odbiorca danych Alicji można sprawdzić, że Alicja wysyłane go przez porównanie podpis cyfrowy do Alicji danych i klucza publicznego Alicji.
+Algorytmy klucza publicznego mogą również służyć do tworzenia podpisów cyfrowych. Podpisy cyfrowe uwierzytelniają tożsamość nadawcy (w przypadku zaufania klucza publicznego nadawcy) i pomagają chronić integralność danych. Przy użyciu klucza publicznego wygenerowanego przez Alicja, odbiorca danych Alicja może sprawdzić, czy Alicja je wysłała, porównując podpis cyfrowy z danymi i kluczem publicznym Alicja.
 
-Aby używać kryptografii klucza publicznego do cyfrowego podpisywania wiadomości, Alicja najpierw dotyczy algorytmu wyznaczania wartości skrótu wiadomości, aby utworzyć skrót wiadomości. Skrót wiadomości jest zwarty i unikatowy reprezentacja danych. Alicja następnie szyfruje skrót wiadomości przy użyciu swojego klucza prywatnego do utworzenia jej podpisu. Po odebraniu wiadomości i podpisie, Robert odszyfrowuje podpisu przy użyciu klucza publicznego Alicji do odzyskania skrót wiadomości i skróty wiadomości za pomocą tego samego algorytmu wyznaczania wartości skrótu, używanym przez Alice. Skrót wiadomości, że Bob oblicza dokładnie odpowiada skrót wiadomości otrzymanych od Alicji, Roberta ma pewność, że wiadomość pochodzi z inicjator klucz prywatny oraz czy dane nie zostały zmodyfikowane. Bob zaufania, że Alicja jest inicjator klucza prywatnego, zna się, że wiadomość pochodzi od Alicji.
+Aby użyć kryptografii klucza publicznego do cyfrowego podpisywania wiadomości, Alicja najpierw stosuje algorytm wyznaczania wartości skrótu do wiadomości, aby utworzyć skrót wiadomości. Skrót wiadomości jest zwartą i unikatową reprezentacją danych. Alicja szyfruje następnie skrót wiadomości przy użyciu klucza prywatnego w celu utworzenia podpisu osobistego. Po odebraniu wiadomości i sygnatury Robert odszyfrowuje podpis przy użyciu klucza publicznego Alicja, aby odzyskać skrót wiadomości i skrócić komunikat przy użyciu tego samego algorytmu wyznaczania wartości skrótu używanego przez Alicja. Jeśli skrót wiadomości, który jest obliczany przez Robert, dokładnie pasuje do skrótu wiadomości otrzymanego od Alicja, Robert ma pewność, że wiadomość pochodzi od posiadacza klucza prywatnego i że dane nie zostały zmodyfikowane. Jeśli Robert ufa, że Alicja jest posiadaczem klucza prywatnego, wie, że wiadomość pochodzi od Alicja.
 
 > [!NOTE]
-> Podpis można sprawdzić przez nikogo, ponieważ klucz publiczny nadawcy jest popularną wiedzę i najczęściej przygotowywanych do uwzględnienia w formacie podpisu cyfrowego. Ta metoda nie zachowuje poufność wiadomości; wiadomości tajne go musi również być szyfrowana.
+> Podpis może być zweryfikowany przez każdego użytkownika, ponieważ klucz publiczny nadawcy jest powszechną wiedzą i zazwyczaj jest uwzględniany w formacie podpisu cyfrowego. Ta metoda nie zachowuje tajemnicy wiadomości; Aby komunikat był tajny, musi również być zaszyfrowany.
 
-Program .NET Framework zawiera następujące klasy, które implementują algorytmy podpis cyfrowy:
+.NET Framework udostępnia następujące klasy, które implementują algorytmy podpisu cyfrowego:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
 - <xref:System.Security.Cryptography.RSACryptoServiceProvider>
 
-- <xref:System.Security.Cryptography.ECDsa> (klasa podstawowa)
+- <xref:System.Security.Cryptography.ECDsa> (klasa bazowa)
 
 - <xref:System.Security.Cryptography.ECDsaCng>
 
- [Powrót do początku](#top)
+## <a name="hash-values"></a>Wartości skrótu
 
-<a name="hash_values"></a>
+Algorytmy skrótu mapują wartości binarne dowolnej długości na mniejsze wartości binarne o stałej długości, znane jako wartości skrótu. Wartość skrótu jest cyfrową reprezentacją fragmentu danych. Jeśli Mieszasz akapit w postaci zwykłego tekstu i zmienisz nawet jedną literę akapitu, kolejny skrót będzie generował inną wartość. Jeśli skrót jest silnie silny, jego wartość zmieni się w istotny sposób. Na przykład jeśli zostanie zmieniony pojedynczy bit komunikatu, funkcja silnego skrótu może generować dane wyjściowe, które różnią się o 50 procent. Wiele wartości wejściowych może być zmieszanych z tą samą wartością wyjściową. Nie jest jednak możliwe obliczenie dwóch odrębnych wejść, które mieszają się z tą samą wartością.
 
-## <a name="hash-values"></a>Wartości skrótów
+Dwie strony (Alicja i Robert) mogą używać funkcji skrótu, aby zapewnić integralność komunikatów. Spowodują wybranie algorytmu wyznaczania wartości skrótu w celu podpisania swoich komunikatów. Alicja zapisze komunikat, a następnie utworzy skrót tego komunikatu przy użyciu wybranego algorytmu. Następnie zastosują jedną z następujących metod:
 
-Algorytmy wyznaczania wartości skrótu wartości binarnych o dowolnej długości są mapowane na mniejsze wartości binarnych o stałej długości, znane jako wartości skrótu. Wartość skrótu jest numeryczna reprezentacja elementu danych. Wyznaczania wartości skrótu akapitu zwykłego tekstu i zmień nawet jednej litery akapitu, kolejne wyznaczania wartości skrótu powoduje wygenerowanie inną wartość. Jeśli wartość skrótu jest kryptograficznie silnej, jego wartość znacznie się zmieni. Na przykład jeśli pojedynczy bit wiadomości zostanie zmieniony, funkcję silne mieszania może powodować danych wyjściowych, który różni się o 50%. Wiele wartości wejściowe mogą skrótu na tę samą wartość w danych wyjściowych. Jednak go jest praktycznie niemożliwe Znajdź skrót do tej samej wartości dwóch różnych danych wejściowych.
+- Alicja wysyła wiadomość w postaci zwykłego tekstu oraz komunikat z mieszaniem (podpis cyfrowy) do Roberta. Robert odbiera i miesza komunikat i porównuje jego wartość skrótu z wartością skrótu uzyskaną od Alicja. Jeśli wartości skrótu są identyczne, komunikat nie został zmieniony. Jeśli wartości nie są identyczne, komunikat został zmieniony po jego zapisaniu przez Alicja.
 
-Obie strony (Alice i Bob) można używać funkcji skrótu do zapewnienia integralności komunikatu. Użytkownik może wybrać algorytm wyznaczania wartości skrótu, aby zarejestrować swoje wiadomości. Alicja będzie zapisać komunikat, a następnie utwórz skrót tego komunikatu przy użyciu wybranego algorytmu. One będą następnie wykonaj jedną z następujących metod:
+  Niestety, ta metoda nie ustala autentyczności nadawcy. Każdy może personifikować Alicja i wysłać wiadomość do Roberta. Mogą używać tego samego algorytmu wyznaczania wartości skrótu do podpisywania wiadomości, a cała Robert może określić, że wiadomość pasuje do podpisu. Jest to jedna z form ataku typu man-in-the-middle. Aby uzyskać więcej informacji, zobacz [przykład bezpiecznej komunikacji Secure Generation (CNG)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
 
-- Alicja wysyła wiadomości w postaci zwykłego tekstu i skrótu wiadomości (podpis cyfrowy) do niego. Robert otrzymuje wyznacza wartość skrótu wiadomości i porównuje jego wartość skrótu, aby wartość skrótu, który on otrzymany od Alice. Jeśli wartości skrótu są identyczne, wiadomość nie została zmieniona. Jeśli wartości nie są identyczne, komunikat zostało zmienione po jego autorem, Alicji.
+- Alicja wysyła wiadomość w postaci zwykłego tekstu do Roberta za pośrednictwem niezabezpieczonego kanału publicznego. Wysyła komunikat z mieszaniem do Roberta za pośrednictwem bezpiecznego kanału prywatnego. Robert odbiera komunikat w postaci zwykłego tekstu, miesza go i porównuje skrót z wymieniem prywatnym. Jeśli skróty są zgodne, Robert wie dwie rzeczy:
 
-  Niestety ta metoda nie można ustalić autentyczności nadawcy. Każdy może spersonifikować Alicja i wysłać wiadomość do niego. Używają tego samego algorytmu wyznaczania wartości skrótu do podpisania wiadomości, a wszystko, co można określić Bob to, czy komunikat odpowiada jego podpisu. Jest to jeden formularz atak typu man-in--middle. Aby uzyskać więcej informacji, zobacz [przykład komunikacji Secure Cryptography Next Generation (CNG)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
+  - Komunikat nie został zmieniony.
 
-- Alicja wysyła wiadomości w postaci zwykłego tekstu do niego za pośrednictwem niezabezpieczonych kanału publicznych. Wysyła skrótu wiadomości do niego za pośrednictwem bezpiecznego kanału prywatnych. Robert otrzymuje komunikat w postaci zwykłego tekstu, skróty go i porównuje skrót do prywatnie wymiana skrótu. Jeśli skróty są zgodne, Robert wie, dwie rzeczy:
+  - Nadawca wiadomości (Alicja) jest autentyczny.
 
-  - Wiadomość nie została zmodyfikowana.
+  Aby ten system działał, Alicja musi ukryć oryginalną wartość skrótu ze wszystkich stron oprócz Roberta.
 
-  - Nadawca wiadomości (Alice) jest autentyczny.
+- Alicja wysyła wiadomość w postaci zwykłego tekstu do Roberta za pośrednictwem niezabezpieczonego kanału publicznego i umieszcza komunikat o skrócie w swojej publicznej witrynie sieci Web.
 
-  Dla tego systemu do pracy Alicja należy ukryć swojej oryginalnej wartości skrótu od wszystkich stron z wyjątkiem sytuacji Bob.
+  Ta metoda zapobiega manipulowaniu komunikatów przez uniemożliwianie innym użytkownikom modyfikowania wartości skrótu. Chociaż komunikat i jego wartość skrótu mogą być odczytywane przez każdego użytkownika, wartość skrótu można zmienić tylko przez Alicja. Osoba atakująca, która chce personifikować Alicja, będzie wymagać dostępu do witryny sieci Web Alicja.
 
-- Alicja wysyła wiadomości w postaci zwykłego tekstu do niego za pośrednictwem niezabezpieczonych kanału publicznych i umieszcza skrótu wiadomości w publicznie dostępnej witrynę sieci Web.
+Żadna z powyższych metod nie uniemożliwi osobie odczytywania wiadomości Alicja, ponieważ są one przesyłane w postaci zwykłego tekstu. Pełne zabezpieczenia zwykle wymagają podpisów cyfrowych (podpisywanie wiadomości) i szyfrowania.
 
-  Ta metoda zapobiega, komunikat o naruszeniu, uniemożliwiając każdy przy użyciu wartości skrótu. Mimo, że komunikat i jego skrót mogą być odczytywane przez nikogo, można zmienić tylko przez Alice wartość skrótu. Osoba atakująca, która chce, aby dokonać personifikacji Alicja będzie wymagać dostępu do witryny sieci Web Alicji.
+.NET Framework udostępnia następujące klasy, które implementują algorytmy wyznaczania wartości skrótu:
 
-Żaden z poprzednich metod uniemożliwi ktoś odczytywania komunikatów przez Alice, ponieważ są one przekazywane w postaci zwykłego tekstu. Pełne zabezpieczenia zwykle wymaga (podpisywanie komunikatów) podpisów cyfrowych i szyfrowania.
+- <xref:System.Security.Cryptography.HMACSHA1>.,
 
-Program .NET Framework zawiera następujące klasy, które implementują algorytmy wyznaczania wartości skrótu:
+- <xref:System.Security.Cryptography.MACTripleDES>.,
 
-- <xref:System.Security.Cryptography.HMACSHA1>.
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.,
 
-- <xref:System.Security.Cryptography.MACTripleDES>.
+- <xref:System.Security.Cryptography.RIPEMD160>.,
 
-- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.
+- <xref:System.Security.Cryptography.SHA1Managed>.,
 
-- <xref:System.Security.Cryptography.RIPEMD160>.
+- <xref:System.Security.Cryptography.SHA256Managed>.,
 
-- <xref:System.Security.Cryptography.SHA1Managed>.
+- <xref:System.Security.Cryptography.SHA384Managed>.,
 
-- <xref:System.Security.Cryptography.SHA256Managed>.
+- <xref:System.Security.Cryptography.SHA512Managed>.,
 
-- <xref:System.Security.Cryptography.SHA384Managed>.
+- Warianty HMAC dla wszystkich algorytmów Secure Hash Algorithm (SHA), Message Digest 5 (MD5) i RIPEMD-160.
 
-- <xref:System.Security.Cryptography.SHA512Managed>.
+- Implementacje CryptoServiceProvider (otoki kodu zarządzanego) wszystkich algorytmów SHA.
 
-- Warianty HMAC wszystkich algorytmów Secure Hash Algorithm (SHA), Message Digest 5 (MD5) i RIPEMD 160.
-
-- Implementacje CryptoServiceProvider (kod zarządzany otok) algorytmów SHA.
-
-- Cryptography Next Generation (CNG) implementacji wszystkich algorytmów MD5 i SHA.
+- Implementacje kryptografii nowej generacji (CNG) wszystkich algorytmów MD5 i SHA.
 
 > [!NOTE]
-> Wady projektowe MD5 zostały odnalezione w 1996 roku i SHA-1 został zalecony, zamiast tego. W 2004 r. dodatkowe wady zostały odnalezione, a algorytm MD5 przestaje być uważany za bezpieczny. Również wykryto algorytm SHA-1 jako niebezpieczne i SHA-2 jest teraz zalecane zamiast tego.
+> Wady projektowania MD5 zostały odnalezione w 1996, a zamiast tego zaleca się stosowanie algorytmu SHA-1. W 2004 wykryto dodatkowe wady, a algorytm MD5 nie jest już traktowany jako bezpieczny. Algorytm SHA-1 został również odnaleziony jako niezabezpieczony, a w zamian zaleca się stosowanie algorytmu SHA-2.
 
-[Powrót do początku](#top)
+## <a name="random-number-generation"></a>Generowanie liczb losowych
 
-<a name="random_numbers"></a>
+Generowanie liczb losowych jest integralną częścią wielu operacji kryptograficznych. Na przykład klucze kryptograficzne muszą być tak losowo, jak to możliwe, aby było niemożliwe do odtworzenia. Kryptograficzne generatory liczb losowych muszą generować dane wyjściowe, które nie są obliczeniowe do przewidywania z prawdopodobieństwem, który jest lepszy niż jedna połowa. W związku z tym jakakolwiek metoda przewidywania następnego bitu wyjściowego nie może być większa niż losowe zgadywanie. Klasy w .NET Framework używają losowych generatorów liczbowych do generowania kluczy kryptograficznych.
 
-## <a name="random-number-generation"></a>Generowanie liczby losowej
-
-Generowanie liczby losowej jest integralną częścią wielu operacji kryptograficznych. Na przykład klucze kryptograficzne muszą być jako losowych, jak to możliwe, aby była możliwość ich odtworzenia. Kryptograficznych generatorów liczb losowych, należy wygenerować dane wyjściowe, który jest praktycznie niemożliwe do prognozowania z prawdopodobieństwem, który jest lepsze niż połowy. W związku z tym każda metoda przewidywania dalej bitu danych wyjściowych nie musi wykonywać lepiej niż zgadywania losowych. Klasy w .NET Framework Użyj generatorów liczb losowych do wygenerowania kluczy kryptograficznych.
-
-<xref:System.Security.Cryptography.RNGCryptoServiceProvider> Klasa jest implementacją algorytm generator liczb losowych.
-
-[Powrót do początku](#top)
-
-<a name="clickonce"></a>
+Klasa <xref:System.Security.Cryptography.RNGCryptoServiceProvider> jest implementacją algorytmu generatora liczb losowych.
 
 ## <a name="clickonce-manifests"></a>Manifesty ClickOnce
 
-W .NET Framework 3.5 następujące klasy kryptografii umożliwiają uzyskanie i sprawdź informacje dotyczące manifestu podpisów dla aplikacji, które są wdrażane przy użyciu [technologii ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment):
+W .NET Framework 3,5 następujące klasy kryptograficzne umożliwiają uzyskanie i zweryfikowanie informacji o sygnaturach manifestu dla aplikacji, które są wdrażane przy użyciu [technologii ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment):
 
-- <xref:System.Security.Cryptography.ManifestSignatureInformation> Klasy uzyskuje informacje o podpisie manifestu, korzystając z jego <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> przeciążenia metody.
+- Klasa <xref:System.Security.Cryptography.ManifestSignatureInformation> uzyskuje informacje o sygnaturze manifestu w przypadku użycia przeciążeń metody <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A>.
 
-- Możesz użyć <xref:System.Security.ManifestKinds> wyliczeniu, aby określić, które manifesty, aby sprawdzić. Wynik weryfikacji jest jednym z <xref:System.Security.Cryptography.SignatureVerificationResult> wartości wyliczenia.
+- Można użyć wyliczenia <xref:System.Security.ManifestKinds>, aby określić manifesty do zweryfikowania. Wynik weryfikacji jest jedną z <xref:System.Security.Cryptography.SignatureVerificationResult> wartości wyliczenia.
 
-- <xref:System.Security.Cryptography.ManifestSignatureInformationCollection> Klasy zawiera tylko do odczytu zbiór <xref:System.Security.Cryptography.ManifestSignatureInformation> obiektów zweryfikowanych podpisów.
+- Klasa <xref:System.Security.Cryptography.ManifestSignatureInformationCollection> zapewnia kolekcję obiektów <xref:System.Security.Cryptography.ManifestSignatureInformation> z zweryfikowanymi sygnaturami tylko do odczytu.
 
- Ponadto następujące klasy zawierają informacje o określonej sygnaturze:
+ Ponadto następujące klasy zawierają określone informacje o podpisie:
 
-- <xref:System.Security.Cryptography.StrongNameSignatureInformation> Przechowuje informacje podpisu silnej nazwy dla manifestu.
+- <xref:System.Security.Cryptography.StrongNameSignatureInformation> przechowuje informacje o sygnaturze silnej nazwy dla manifestu.
 
-- <xref:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation> przedstawia informacje o podpisie Authenticode dla manifestu.
+- <xref:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation> reprezentuje informacje o podpisie Authenticode dla manifestu.
 
-- <xref:System.Security.Cryptography.X509Certificates.TimestampInformation> zawiera informacje o sygnaturę czasową na podpis Authenticode.
+- <xref:System.Security.Cryptography.X509Certificates.TimestampInformation> zawiera informacje o sygnaturze czasowej w podpisie Authenticode.
 
-- <xref:System.Security.Cryptography.X509Certificates.TrustStatus> zapewnia prosty sposób, aby sprawdzić, czy podpis Authenticode jest zaufany.
+- <xref:System.Security.Cryptography.X509Certificates.TrustStatus> zapewnia prosty sposób sprawdzenia, czy podpis Authenticode jest zaufany.
 
-[Powrót do początku](#top)
+## <a name="suite-b-support"></a>Obsługa Suite B
 
-<a name="suite_b"></a>
+.NET Framework 3,5 obsługuje Suite B zestawu algorytmów kryptograficznych opublikowanych przez Agencję Bezpieczeństwa Narodowego. Aby uzyskać więcej informacji na temat Suite B, zobacz [Arkusz faktów kryptografii "dbSuite B](https://www.nsa.gov/what-we-do/information-assurance/)".
 
-## <a name="suite-b-support"></a>Obsługa pakietu Suite B
+Uwzględniono następujące algorytmy:
 
-.NET Framework 3.5 obsługuje zestaw Suite B algorytmów kryptograficznych opublikowane przez National Security Agency (NSA). Aby uzyskać więcej informacji na temat pakietu Suite B, zobacz [NSA pakiet B kryptografii zestawieniem](https://www.nsa.gov/what-we-do/information-assurance/).
+- Algorytm Advanced Encryption Standard (AES) z rozmiarem kluczy wynoszącym 128, 192, i 256 BITS na potrzeby szyfrowania.
 
-Uwzględnione są następujące algorytmy:
+- Bezpieczne algorytmy mieszania SHA-1, SHA-256, SHA-384 i SHA-512 dla tworzenia skrótów. (Ostatnie trzy są zwykle pogrupowane razem i określane jako SHA-2).
 
-- Advanced Encryption Standard (AES) algorytmu klucza rozmiarach 128, 192 i 256 bitów na potrzeby szyfrowania.
+- Algorytm sygnatury cyfrowego (ECDSA) krzywej eliptycznej przy użyciu krzywych 256-bitowych, 384-bitowych i 521-bit moduli do podpisywania. Dokumentacja dotycząca dbdefine definiuje te krzywe i wywołuje je P-256, P-384 i P-521. Ten algorytm jest dostarczany przez klasę <xref:System.Security.Cryptography.ECDsaCng>. Umożliwia podpisywanie przy użyciu klucza prywatnego i Weryfikowanie podpisu przy użyciu klucza publicznego.
 
-- Bezpieczne algorytmy wyznaczania wartości skrótu SHA-1, SHA-256, SHA-384 i SHA-512, tworzenia skrótu (Ostatnie trzy ogólnie zgrupowanych razem i nazywany SHA-2.)
+- Algorytm eliptyczna Diffie-Hellmana (ECDH) z użyciem krzywych 256-bitowych, 384-bitowych i 521-bit moduli na potrzeby wymiany kluczy i tajnych umów. Ten algorytm jest dostarczany przez klasę <xref:System.Security.Cryptography.ECDiffieHellmanCng>.
 
-- Elliptic krzywej cyfrowego Signature Algorithm (ECDSA), za pomocą krzywych 256-bitowego, 384-bitowy i 521-bitowy moduli prime do podpisywania. Dokumentacja NSA specjalnie definiuje te krzywe i je wywołuje p-256, p-384 i p-521. Ten algorytm jest świadczona przez <xref:System.Security.Cryptography.ECDsaCng> klasy. Pozwala ona zalogowania się przy użyciu klucza prywatnego i zweryfikować podpisu przy użyciu klucza publicznego.
+Zarządzane otoki kodu dla implementacji Federal Information Processing Standard (FIPS) z certyfikatami AES, SHA-256, SHA-384 i SHA-512 są dostępne w nowych klasach <xref:System.Security.Cryptography.AesCryptoServiceProvider>, <xref:System.Security.Cryptography.SHA256CryptoServiceProvider>, <xref:System.Security.Cryptography.SHA384CryptoServiceProvider>i <xref:System.Security.Cryptography.SHA512CryptoServiceProvider>.
 
-- Elliptic algorytmu Diffie-Hellman krzywej (ECDH), przy użyciu krzywych 256-bitowego, 384-bitowy i 521-bitowy moduli prime wymiany klucza i wpisu tajnego umowy. Ten algorytm jest świadczona przez <xref:System.Security.Cryptography.ECDiffieHellmanCng> klasy.
+## <a name="cryptography-next-generation-cng-classes"></a>Klasy kryptografii nowej generacji (CNG)
 
-Kod zarządzany otok dla informacji o przetwarzaniu Standard FIPS (Federal) certyfikowane implementacje AES, SHA-256, SHA-384 i SHA-512 implementacje są dostępne w nowym <xref:System.Security.Cryptography.AesCryptoServiceProvider>, <xref:System.Security.Cryptography.SHA256CryptoServiceProvider>, <xref:System.Security.Cryptography.SHA384CryptoServiceProvider>, i <xref:System.Security.Cryptography.SHA512CryptoServiceProvider> klasy.
+Klasy kryptografii nowej generacji (CNG) zapewniają zarządzaną otokę wokół natywnych funkcji CNG. (CNG jest zamiennikiem interfejsu CryptoAPI). Klasy te mają "CNG" jako część swoich nazw. Centralnie do klas otoki CNG jest klasą kontenerów kluczy <xref:System.Security.Cryptography.CngKey>, która stanowi abstrakcyjny magazyn i użycie kluczy CNG. Ta klasa umożliwia bezpieczne przechowywanie pary kluczy lub klucza publicznego i odwoływanie się do niego przy użyciu prostej nazwy ciągu. Klasa podpisu <xref:System.Security.Cryptography.ECDsaCng> opartej na krzywej eliptycznej i klasie szyfrowania <xref:System.Security.Cryptography.ECDiffieHellmanCng> może używać <xref:System.Security.Cryptography.CngKey> obiektów.
 
-[Powrót do początku](#top)
+Klasa <xref:System.Security.Cryptography.CngKey> jest używana dla różnych dodatkowych operacji, w tym otwierania, tworzenia, usuwania i eksportowania kluczy. Zapewnia również dostęp do uchwytu klucza bazowego, który ma być używany podczas bezpośredniego wywoływania funkcji natywnych.
 
-<a name="cng"></a>
+.NET Framework 3,5 zawiera również różne klasy obsługi CNG, takie jak:
 
-## <a name="cryptography-next-generation-cng-classes"></a>Kryptografia następnej generacji (CNG) klasy
+- <xref:System.Security.Cryptography.CngProvider> obsługuje dostawcę magazynu kluczy.
 
-Klasy Cryptography Next Generation (CNG) zapewniają zarządzanych otokę funkcji natywnych CNG. (CNG jest zamiennikiem CryptoAPI). Te klasy mają "Cng" w ramach ich nazw. Centralnej do klas otoki CNG jest <xref:System.Security.Cryptography.CngKey> klucza klasy kontenera, która przenosi magazyn i korzystanie z kluczami CNG. Ta klasa pozwala bezpiecznie przechowywać pary kluczy lub klucz publiczny i odwoływać się do niego za pomocą nazwy ciągu proste. Eliptyczne opartej na krzywej <xref:System.Security.Cryptography.ECDsaCng> Klasa podpisu i <xref:System.Security.Cryptography.ECDiffieHellmanCng> klasy szyfrowania można używać <xref:System.Security.Cryptography.CngKey> obiektów.
+- <xref:System.Security.Cryptography.CngAlgorithm> utrzymuje algorytm CNG.
 
-<xref:System.Security.Cryptography.CngKey> Klasa jest używana dla różnych dodatkowe operacje, w tym otwierania, tworzenie i eksportowanie kluczy. Umożliwia także dostęp do podstawowego dojścia klucza do użycia podczas wywoływania funkcji natywnych bezpośrednio.
-
-.NET Framework 3.5 zawiera także szereg Obsługa klasy CNG, takie jak następujące:
-
-- <xref:System.Security.Cryptography.CngProvider> przechowuje dostawca magazynu kluczy.
-
-- <xref:System.Security.Cryptography.CngAlgorithm> obsługuje algorytm CNG.
-
-- <xref:System.Security.Cryptography.CngProperty> utrzymuje często używanych właściwości klucza.
-
-[Powrót do początku](#top)
-
-<a name="related_topics"></a>
+- <xref:System.Security.Cryptography.CngProperty> zachowuje często używane właściwości klucza.
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Model kryptografii](../../../docs/standard/security/cryptography-model.md)|W tym artykule opisano, jak kryptografii jest zaimplementowane w bibliotece klas podstawowych.|
-|[Przewodnik: Tworzenie aplikacji kryptograficznej](../../../docs/standard/security/walkthrough-creating-a-cryptographic-application.md)|Pokazuje podstawowe zadania szyfrowania i odszyfrowywania.|
-|[Konfigurowanie klas kryptografii](../../../docs/framework/configure-apps/configure-cryptography-classes.md)|W tym artykule opisano sposób mapowania nazwy algorytmu kryptograficznego klasy i mapowanie identyfikatorów obiektów na algorytm kryptograficzny.|
+|[Model kryptografii](../../../docs/standard/security/cryptography-model.md)|Opisuje sposób implementacji kryptografii w bibliotece klas bazowych.|
+|[Przewodnik: tworzenie aplikacji kryptograficznej](../../../docs/standard/security/walkthrough-creating-a-cryptographic-application.md)|Pokazuje podstawowe zadania szyfrowania i odszyfrowywania.|
+|[Konfigurowanie klas kryptografii](../../../docs/framework/configure-apps/configure-cryptography-classes.md)|Opisuje sposób mapowania nazw algorytmów na klasy kryptograficzne i mapowania identyfikatorów obiektów na algorytm kryptograficzny.|

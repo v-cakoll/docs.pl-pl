@@ -7,31 +7,24 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 145a53363c9d7aca622ee0b1ccb2700e5984397d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046426"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975496"
 ---
 # <a name="jit-tracing-etw-events"></a>Zdarzenia ETW śledzenia JIT
-<a name="top"></a>Te zdarzenia zbierają informacje dotyczące sukcesu lub niepowodzenia wywołań wywołania "just-in-Time (JIT) i" JIT ".  
-  
- Zdarzenia śledzenia JIT składają się z następujących dwóch kategorii:  
-  
-- [Zdarzenia związane z derysowaniem JIT](#jit_inlining_events)  
-  
-- [Zdarzenia wywołania tail w trybie JIT](#jit_tail_call_events)  
-  
-<a name="jit_inlining_events"></a>   
-## <a name="jit-inlining-events"></a>Zdarzenia związane z derysowaniem JIT  
-  
-### <a name="methodjitinliningfailed-event"></a>Zdarzenie MethodJitInliningFailed  
+Te zdarzenia zbierają informacje dotyczące sukcesu lub niepowodzenia wywołań wywołania "just-in-Time (JIT) i" JIT ".
+
+## <a name="jit-inlining-events"></a>Zdarzenia związane z derysowaniem JIT
+
+### <a name="methodjitinliningfailed-event"></a>Zdarzenie MethodJitInliningFailed
  W poniższej tabeli przedstawiono słowo kluczowe i poziom. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe i poziomy ETW CLR](clr-etw-keywords-and-levels.md)).  
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword`0x10|Verbose (5)|  
+|`JITTracingKeyword` (0x10)|Verbose (5)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
@@ -47,13 +40,13 @@ ms.locfileid: "71046426"
 |MethodBeingCompiledName|win: UnicodeString|Nazwa metody, która jest kompilowana.|  
 |MethodBeingCompiledNameSignature|win: UnicodeString|Sygnatura metody, która jest kompilowana.|  
 |InlinerNamespace|win: UnicodeString|Przestrzeń nazw metody kompilator JIT próbuje wygenerować kod dla.|  
-|Nieliniowa|win: UnicodeString|Nazwa metody, dla której kompilator próbuje wygenerować kod. Taka sytuacja może nie być taka sama `MethodBeingCompiledName` jak w przypadku, gdy kompilator próbuje wykonać `MethodBeingCompiledName` kod wbudowany zamiast generowania wywołania do `InlinerName`.|  
+|Nieliniowa|win: UnicodeString|Nazwa metody, dla której kompilator próbuje wygenerować kod. Ta wartość może nie być taka sama jak `MethodBeingCompiledName`, jeśli kompilator próbuje wykonać kod wbudowany do `MethodBeingCompiledName` zamiast generowania wywołania do `InlinerName`.|  
 |InlinerNameSignature|win: UnicodeString|Podpis dla elementu inline.|  
 |InlineeNamespace|win: UnicodeString|Przestrzeń nazw międzywierszowego elementu.|  
 |InlineeName|win: UnicodeString|Metoda, którą kompilator próbuje wykonać w wierszu (nie generuje wywołania do).|  
 |InlineeNameSignature|win: UnicodeString|Podpis dla elementu inline.|  
 |FailAlways|win: wartość logiczna|Wskazówka do kompilatora JIT, który będzie zawsze kończyć się niepowodzeniem dla delinii.|  
-|FailReason|win: UnicodeString|INLINE_NEVER oznacza, że poprzednia próba podzielenia zostanie określona, że wykreślenie nigdy nie powiedzie się z innego powodu. w przeciwnym razie tekst w dowolnej postaci.|  
+|FailReason|win: UnicodeString|INLINE_NEVER oznacza, że poprzednia próba podzielenia nie zostanie określona, ponieważ z innego powodu Tworzenie konspektu nigdy nie powiedzie się. w przeciwnym razie tekst w dowolnej postaci.|  
 |ClrInstanceID|win: UnicodeString|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
 ### <a name="methodjitinliningsucceeded-event"></a>Zdarzenie MethodJitInliningSucceeded  
@@ -61,7 +54,7 @@ ms.locfileid: "71046426"
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword`0x10|Verbose (5)|  
+|`JITTracingKeyword` (0x10)|Verbose (5)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
@@ -77,16 +70,13 @@ ms.locfileid: "71046426"
 |MethodBeingCompiledName|win: UnicodeString|Nazwa skompilowanej metody.|  
 |MethodBeingCompiledNameSignature|win: UnicodeString|Sygnatura metody, która jest kompilowana.|  
 |InlinerNamespace|win: UnicodeString|Przestrzeń nazw metody kompilator JIT próbuje wygenerować kod dla.|  
-|Nieliniowa|win: UnicodeString|Nazwa metody, dla której kompilator próbuje wygenerować kod. Taka sytuacja może nie być taka sama `MethodBeingCompiledName` jak w przypadku, gdy kompilator próbuje wykonać `MethodBeingCompiledName` kod wbudowany zamiast generowania wywołania do `InlinerName`.|  
+|Nieliniowa|win: UnicodeString|Nazwa metody, dla której kompilator próbuje wygenerować kod. Ta wartość może nie być taka sama jak `MethodBeingCompiledName`, jeśli kompilator próbuje wykonać kod wbudowany do `MethodBeingCompiledName` zamiast generowania wywołania do `InlinerName`.|  
 |InlinerNameSignature|win: UnicodeString|Podpis dla elementu inline.|  
 |InlineeNamespace|win: UnicodeString|Przestrzeń nazw międzywierszowego elementu.|  
 |InlineeName|win: UnicodeString|Metoda, którą kompilator próbuje wykonać w wierszu (nie generuje wywołania do).|  
 |InlineeNameSignature|win: UnicodeString|Podpis dla elementu inline.|  
 |ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
-  
- [Powrót do początku](#top)  
-  
-<a name="jit_tail_call_events"></a>   
+
 ## <a name="jit-tail-call-events"></a>Zdarzenia wywołania tail w trybie JIT  
   
 ### <a name="methodjittailcallfailed-event"></a>Zdarzenie MethodJITTailCallFailed  
@@ -94,7 +84,7 @@ ms.locfileid: "71046426"
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword`0x10|Verbose (5)|  
+|`JITTracingKeyword` (0x10)|Verbose (5)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
@@ -124,7 +114,7 @@ ms.locfileid: "71046426"
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword`0x10|Verbose (5)|  
+|`JITTracingKeyword` (0x10)|Verbose (5)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   

@@ -1,22 +1,22 @@
 ---
 title: Zwracanie zapytania z metody
-description: Jak zwracanie zapytania.
+description: Jak zwrócić zapytanie.
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
-ms.openlocfilehash: fe2192a3edb683d7284ffae3b66cb9f70e8854b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1df533770f76301432b104d6f8398f1687750cce
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61659829"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972523"
 ---
-# <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Instrukcje: Zwracanie zapytania z metody (C# Programming Guide)
-W tym przykładzie pokazano, jak zwracanie zapytania z metody jako wartość zwracaną i `out` parametru.  
+# <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Jak zwrócić zapytanie z metody (C# Przewodnik programowania)
+Ten przykład przedstawia sposób zwrócenia zapytania z metody jako wartości zwracanej i jako parametru `out`.  
   
- Obiekty zapytania są konfigurowalna, co oznacza, że można zwracanie zapytania z metody. Nie należy przechowywać obiekty reprezentujące zapytań, wynikowy kolekcji, ale raczej kroki w celu uzyskania wyników, w razie. Zaletą zwracać obiekty zapytania z metody jest, można je dodatkowo składa się lub zmodyfikowany. W związku z tym powrotnych wartość lub `out` parametru metody, która zwraca kwerendy musi również mieć tego typu. Jeśli metoda materializuje zapytania na konkretny <xref:System.Collections.Generic.List%601> lub <xref:System.Array> typu, jest on uznawany za zwracać wyniki kwerendy zamiast samo zapytanie. Zmienna zapytania, który jest zwracany z metody można nadal składa się lub zmodyfikowany.  
+ Obiekty zapytań są możliwe do redagowania, co oznacza, że można zwrócić zapytanie z metody. Obiekty reprezentujące zapytania nie przechowują wynikowej kolekcji, ale zamiast kroków w celu wygenerowania wyników w razie potrzeby. Zaletą zwracania obiektów zapytań z metod jest, że mogą one być bardziej złożone lub zmodyfikowane. W związku z tym każda wartość zwracana lub `out` parametr metody, która zwraca zapytanie, musi również mieć ten typ. Jeśli metoda materializuje zapytanie w konkretną <xref:System.Collections.Generic.List%601> lub <xref:System.Array>, jest uznawane za zwracające wyniki zapytania zamiast samego zapytania. Zmienna zapytania, która jest zwracana z metody, może być w dalszym ciągu złożona lub zmodyfikowana.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pierwsza metoda zwraca zapytanie jako wartości zwracanej, a druga metoda zwraca zapytanie jako `out` parametru. Należy pamiętać, że w obu przypadkach zapytanie, które ma zostać zwrócona, nie wyników zapytania.  
+ W poniższym przykładzie pierwsza metoda zwraca zapytanie jako wartość zwracaną, a druga metoda zwraca zapytanie jako parametr `out`. Należy zauważyć, że w obu przypadkach jest to zapytanie, które jest zwracane, a nie wyniki zapytania.  
   
  [!code-csharp[csProgGuideLINQ#80](~/samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
 

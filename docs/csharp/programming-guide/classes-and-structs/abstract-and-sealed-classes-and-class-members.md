@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 1c98e2979ee96d4bcc885b8cc797eaac28c8d2ed
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 97b367b5c3d09087541ee206a2899a7aefd95305
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597293"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971352"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Klasy abstrakcyjne i zapieczętowane oraz członkowie klas (Przewodnik programowania w języku C#)
 [Abstrakcyjne](../../language-reference/keywords/abstract.md) słowo kluczowe umożliwia tworzenie klas i składowych [klas](../../language-reference/keywords/class.md) , które są niekompletne i muszą być zaimplementowane w klasie pochodnej.  
@@ -21,7 +21,7 @@ ms.locfileid: "69597293"
  [Zapieczętowane](../../language-reference/keywords/sealed.md) słowo kluczowe pozwala uniknąć dziedziczenia klasy lub niektórych elementów członkowskich klasy, które zostały wcześniej oznaczone jako [wirtualne](../../language-reference/keywords/virtual.md).  
   
 ## <a name="abstract-classes-and-class-members"></a>Klasy abstrakcyjne i składowe klas  
- Klasy mogą być deklarowane jako abstrakcyjne poprzez umieszczenie `abstract` słowa kluczowego przed definicją klasy. Na przykład:  
+ Klasy mogą być deklarowane jako abstrakcyjne poprzez umieszczenie słowa kluczowego `abstract` przed definicją klasy. Na przykład:  
   
  [!code-csharp[csProgGuideInheritance#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#13)]  
   
@@ -35,16 +35,16 @@ ms.locfileid: "69597293"
   
  [!code-csharp[csProgGuideInheritance#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#15)]  
   
- Jeśli metoda jest zadeklarowana `abstract`, jest nadal wirtualna dla każdej klasy dziedziczące z klasy abstrakcyjnej. `virtual` Klasa dziedziczące metodę abstrakcyjną nie może uzyskać dostępu do oryginalnej implementacji metody — w poprzednim przykładzie `DoWork` w klasie F nie można wywołać `DoWork` klasy D. W ten sposób Klasa abstrakcyjna może wymusić, aby klasy pochodne zapewniały nowe implementacje metod wirtualnych.  
+ Jeśli `virtual` Metoda jest zadeklarowana `abstract`, jest nadal wirtualna dla każdej klasy dziedziczące z klasy abstrakcyjnej. Klasa dziedziczące metodę abstrakcyjną nie może uzyskać dostępu do oryginalnej implementacji metody — w poprzednim przykładzie `DoWork` w klasie F nie można wywołać `DoWork` w klasie D. W ten sposób Klasa abstrakcyjna może wymusić, aby klasy pochodne zapewniały nowe implementacje metod wirtualnych.  
   
 ## <a name="sealed-classes-and-class-members"></a>Klasy zapieczętowane i składowe klas  
- Klasy mogą być deklarowane jako [zapieczętowane](../../language-reference/keywords/sealed.md) poprzez umieszczenie słowa `sealed` kluczowego przed definicją klasy. Na przykład:  
+ Klasy mogą być deklarowane jako [zapieczętowane](../../language-reference/keywords/sealed.md) poprzez umieszczenie słowa kluczowego `sealed` przed definicją klasy. Na przykład:  
   
  [!code-csharp[csProgGuideInheritance#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#16)]  
   
  Klasa zapieczętowana nie może być używana jako klasa bazowa. Z tego powodu nie może być również klasą abstrakcyjną. Zapieczętowane klasy uniemożliwiają wyprowadzanie. Ponieważ nigdy nie mogą być używane jako klasa bazowa, niektóre optymalizacje w czasie wykonywania mogą znacznie przyspieszyć wywoływanie zapieczętowanych elementów członkowskich klas.  
   
- Metoda, indeksator, właściwość lub zdarzenie w klasie pochodnej, która zastępuje wirtualną składową klasy bazowej, może zadeklarować ten element jako zapieczętowany. Spowoduje to negację wirtualnego aspektu elementu członkowskiego dla żadnej dalszej klasy pochodnej. Jest to realizowane przez umieszczenie `sealed` słowa kluczowego przed słowem kluczowym [override](../../language-reference/keywords/override.md) w deklaracji składowej klasy. Na przykład:  
+ Metoda, indeksator, właściwość lub zdarzenie w klasie pochodnej, która zastępuje wirtualną składową klasy bazowej, może zadeklarować ten element jako zapieczętowany. Spowoduje to negację wirtualnego aspektu elementu członkowskiego dla żadnej dalszej klasy pochodnej. Jest to realizowane poprzez umieszczenie słowa kluczowego `sealed` przed słowem kluczowym [override](../../language-reference/keywords/override.md) w deklaracji składowej klasy. Na przykład:  
   
  [!code-csharp[csProgGuideInheritance#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#17)]  
   
@@ -55,4 +55,4 @@ ms.locfileid: "69597293"
 - [Dziedziczenie](./inheritance.md)
 - [Metody](./methods.md)
 - [Pola](./fields.md)
-- [Instrukcje: Definiowanie właściwości abstrakcyjnych](./how-to-define-abstract-properties.md)
+- [Jak definiować właściwości abstrakcyjne](./how-to-define-abstract-properties.md)

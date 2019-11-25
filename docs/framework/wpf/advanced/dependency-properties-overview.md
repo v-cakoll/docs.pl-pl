@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 663dd7a785200ddbc78cc0cd1fb5b43531982f42
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5803d656d765f3f4fe3039e28b9c06202218fcfc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458957"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973988"
 ---
 # <a name="dependency-properties-overview"></a>Przegląd właściwości zależności
 
@@ -139,7 +139,7 @@ Aby uzyskać więcej informacji, zobacz [Style i tworzenia szablonów](../contro
 ### <a name="animations"></a>Animacje
 Właściwości zależności można animować. Gdy animacja jest stosowana i jest uruchomiona, animowana wartość działa z wyższym priorytetem niż jakakolwiek wartość (na przykład wartość lokalna), która w przeciwnym razie ma.
 
-Poniższy przykład Animuj <xref:System.Windows.Controls.Control.Background%2A> na właściwości <xref:System.Windows.Controls.Button> (technicznie <xref:System.Windows.Controls.Control.Background%2A> jest animowany przy użyciu składni elementu właściwości do określenia pustej <xref:System.Windows.Media.SolidColorBrush> jako <xref:System.Windows.Controls.Control.Background%2A>, a następnie właściwość <xref:System.Windows.Media.SolidColorBrush.Color%2A> tego <xref:System.Windows.Media.SolidColorBrush> jest właściwością, która jest bezpośrednio animowane).
+Poniższy przykład Animuj <xref:System.Windows.Controls.Control.Background%2A> na właściwości <xref:System.Windows.Controls.Button> (technicznie <xref:System.Windows.Controls.Control.Background%2A> jest animowany przy użyciu składni elementu właściwości do określenia pustej <xref:System.Windows.Media.SolidColorBrush> jako <xref:System.Windows.Controls.Control.Background%2A>, a następnie właściwość <xref:System.Windows.Media.SolidColorBrush.Color%2A> tego <xref:System.Windows.Media.SolidColorBrush> jest właściwością, która jest bezpośrednio animowana).
 
 [!code-xaml[PropertiesOvwSupport#MiniAnimate](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#minianimate)]
 
@@ -168,7 +168,7 @@ Poniższy przykład przedstawia powiązanie i ustawia właściwość <xref:Syste
 Aby uzyskać więcej informacji, zobacz [dziedziczenie wartości właściwości](property-value-inheritance.md).
 
 ### <a name="wpf-designer-integration"></a>Integracja z projektantem WPF
-Kontrolka niestandardowa z właściwościami, które są implementowane jako właściwości zależności, będzie otrzymywać odpowiednie [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] pomoc techniczną. Przykładem jest możliwość edycji właściwości zależności bezpośrednie i dołączone przy użyciu okna **Właściwości** . Aby uzyskać więcej informacji, zobacz temat [Tworzenie kontroli — przegląd](../controls/control-authoring-overview.md).
+Kontrolka niestandardowa z właściwościami, które są implementowane jako właściwości zależności, będzie otrzymywać odpowiedni Projektant WPF dla pomocy technicznej programu Visual Studio. Przykładem jest możliwość edycji właściwości zależności bezpośrednie i dołączone przy użyciu okna **Właściwości** . Aby uzyskać więcej informacji, zobacz temat [Tworzenie kontroli — przegląd](../controls/control-authoring-overview.md).
 
 ## <a name="dependency-property-value-precedence"></a>Pierwszeństwo wartości właściwości zależności
 Po otrzymaniu wartości właściwości zależności można uzyskać wartość ustawioną dla tej właściwości za pomocą dowolnego z innych danych wejściowych opartych na właściwościach, które uczestniczą w systemie właściwości WPF. Pierwszeństwo wartości właściwości zależności istnieje, dzięki czemu różne scenariusze dotyczące sposobu, w jaki właściwości uzyskują swoje wartości, mogą współdziałać w przewidywalny sposób.

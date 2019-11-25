@@ -4,16 +4,16 @@ description: Ten zaawansowany samouczek zawiera wprowadzenie do typów referency
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 9cb9ac1b292e61d6a8a5f84be29a6a6c323725fc
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039686"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969347"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Samouczek: Migrowanie istniejącego kodu z typami referencyjnymi Nullable
 
-C#8 wprowadza **typy odwołań do wartości null**, które uzupełniają typy odwołań w taki sam sposób, jak typy wartości null uzupełniają typy wartości. Należy zadeklarować zmienną jako **typ referencyjny dopuszczający wartość null** , dołączając `?` do typu. Na przykład `string?` reprezentuje wartość null `string`. Możesz użyć tych nowych typów, aby dokładniej wyznaczać intencje projektowania: niektóre zmienne *muszą zawsze mieć wartość*, inne *mogą nie mieć wartości*. Wszystkie istniejące zmienne typu referencyjnego byłyby interpretowane jako typ referencyjny, który nie dopuszcza wartości null. 
+C#8 wprowadza **typy odwołań do wartości null**, które uzupełniają typy odwołań w taki sam sposób, jak typy wartości null uzupełniają typy wartości. Należy zadeklarować zmienną jako **typ referencyjny dopuszczający wartość null** poprzez dołączenie `?` do typu. Na przykład `string?` reprezentuje `string`dopuszczające wartość null. Możesz użyć tych nowych typów, aby dokładniej wyznaczać intencje projektowania: niektóre zmienne *muszą zawsze mieć wartość*, inne *mogą nie mieć wartości*. Wszystkie istniejące zmienne typu referencyjnego byłyby interpretowane jako typ referencyjny, który nie dopuszcza wartości null. 
 
 W tym samouczku dowiesz się, jak:
 
@@ -32,7 +32,7 @@ W C# tym samouczku założono, że wiesz już, jak i .NET, w tym Visual Studio l
 
 ## <a name="explore-the-sample-application"></a>Eksplorowanie przykładowej aplikacji
 
-Przeprowadzona Przykładowa aplikacja jest aplikacją internetową czytnika kanału informacyjnego RSS. Odczytuje z pojedynczego kanału informacyjnego RSS i wyświetla podsumowania dla najnowszych artykułów. Aby odwiedzić witrynę, możesz kliknąć dowolny z tych artykułów. Aplikacja jest stosunkowo nowa, ale została zapisywana przed udostępnieniem typów referencyjnych dopuszczających wartości null. Decyzje projektowe dotyczące zasad dotyczących dźwięku reprezentowane przez aplikację, ale nie korzystają z tej ważnej funkcji języka.
+Przeprowadzona Przykładowa aplikacja jest aplikacją internetową czytnika kanału informacyjnego RSS. Odczytuje z pojedynczego kanału informacyjnego RSS i wyświetla podsumowania dla najnowszych artykułów. Aby odwiedzić witrynę, możesz wybrać dowolny z tych artykułów. Aplikacja jest stosunkowo nowa, ale została zapisywana przed udostępnieniem typów referencyjnych dopuszczających wartości null. Decyzje projektowe dotyczące zasad dotyczących dźwięku reprezentowane przez aplikację, ale nie korzystają z tej ważnej funkcji języka.
 
 Przykładowa aplikacja zawiera bibliotekę testów jednostkowych, która sprawdza poprawność głównych funkcji aplikacji. Ten projekt ułatwi bezpieczne uaktualnienie, jeśli zmienisz dowolną implementację w oparciu o wygenerowane ostrzeżenia. Możesz pobrać kod początkowy z repozytorium usługi GitHub [/przykłady](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/start) .
 

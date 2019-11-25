@@ -5,17 +5,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: c07f058eb081fa1c9e0a3756959570d1ba9e47f6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3a04d07f90ea9e1e536082f2cf0151555305d9e6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924517"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971040"
 ---
 # <a name="fields-c-programming-guide"></a>Pola (Przewodnik programowania w języku C#)
 *Pole* jest zmienną dowolnego typu, który jest zadeklarowany bezpośrednio w [klasie](../../language-reference/keywords/class.md) lub [strukturze](../../language-reference/keywords/struct.md). Pola są *elementami członkowskimi* typu zawierającego.  
   
- Klasa lub struktura może mieć pola wystąpienia lub pola statyczne lub oba te elementy. Pola wystąpienia są specyficzne dla wystąpienia typu. Jeśli masz klasę T z polem wystąpienia F, możesz utworzyć dwa obiekty typu T i zmodyfikować wartość F w każdym obiekcie bez wpływu na wartość w innym obiekcie. Z kolei pole statyczne należy do samej klasy i jest współużytkowane przez wszystkie wystąpienia tej klasy. Zmiany wprowadzone z wystąpienia A będą widoczne natychmiast w wystąpieniach B i C, jeśli uzyskują dostęp do pola.  
+ Klasa lub struktura może mieć pola wystąpienia lub pola statyczne lub oba te elementy. Pola wystąpienia są specyficzne dla wystąpienia typu. Jeśli masz klasę T z polem wystąpienia F, możesz utworzyć dwa obiekty typu T i zmodyfikować wartość F w każdym obiekcie bez wpływu na wartość w innym obiekcie. Z kolei pole statyczne należy do samej klasy i jest współużytkowane przez wszystkie wystąpienia tej klasy. Zmiany wprowadzone z wystąpienia A będą natychmiast widoczne w wystąpieniach B i C, jeśli uzyskują dostęp do pola.  
   
  Ogólnie rzecz biorąc, należy używać pól tylko dla zmiennych, które mają prywatną lub chronioną dostępność. Dane, które Klasa uwidacznia do kodu klienta, powinny być udostępniane za poorednictwem [metod](./methods.md), [Właściwości](./properties.md) i [indeksatorów](../indexers/index.md). Używając tych konstrukcji do pośredniego dostępu do pól wewnętrznych, można zabezpieczyć się przed nieprawidłowymi wartościami wejściowymi. Prywatne pole, które przechowuje dane uwidaczniane przez właściwość publiczną, nazywa się *magazynem zapasowym* lub *polem zapasowym*.  
   
@@ -25,11 +25,11 @@ ms.locfileid: "69924517"
   
  [!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]  
   
- Aby uzyskać dostęp do pola w obiekcie, Dodaj kropkę po nazwie obiektu, a następnie nazwę pola, jak w `objectname.fieldname`. Przykład:  
+ Aby uzyskać dostęp do pola w obiekcie, Dodaj kropkę po nazwie obiektu, a następnie nazwę pola, jak w `objectname.fieldname`. Na przykład:  
   
  [!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]  
   
- W polu można uzyskać wartość początkową przy użyciu operatora przypisania, gdy pole jest zadeklarowane. Aby automatycznie przypisać to `day` `"Monday"`pole, na przykład, należy zadeklarować `day` jak w poniższym przykładzie:  
+ W polu można uzyskać wartość początkową przy użyciu operatora przypisania, gdy pole jest zadeklarowane. Aby automatycznie przypisać pole `day` do `"Monday"`, na przykład należy zadeklarować `day` jak w poniższym przykładzie:  
   
  [!code-csharp[csProgGuideObjects#63](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#63)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69924517"
   
  Opcjonalnie można zadeklarować pole jako [static](../../language-reference/keywords/static.md). To sprawia, że pole jest dostępne dla wywoływania w dowolnym momencie, nawet jeśli nie istnieje żadne wystąpienie klasy. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statyczne elementy członkowskie klas](./static-classes-and-static-class-members.md).  
   
- Pole można zadeklarować jako [tylko do odczytu](../../language-reference/keywords/readonly.md). W polu tylko do odczytu można przypisać wartość tylko podczas inicjowania lub w konstruktorze. Pole jest bardzo podobne do stałej, z tą różnicą, C# że kompilator nie ma dostępu do wartości statycznego pola tylko do odczytu w czasie kompilacji, tylko w czasie wykonywania. `static readonly` Aby uzyskać więcej informacji, zobacz [stałe](./constants.md).  
+ Pole można zadeklarować jako [tylko do odczytu](../../language-reference/keywords/readonly.md). W polu tylko do odczytu można przypisać wartość tylko podczas inicjowania lub w konstruktorze. Pole `static readonly` jest bardzo podobne do stałej, z tą różnicą, C# że kompilator nie ma dostępu do wartości statycznego pola tylko do odczytu w czasie kompilacji, tylko w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [stałe](./constants.md).  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

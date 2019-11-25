@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: ae4b89eb45a82299b6f35827eb576968f6cc5bae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ae9c406e91bc947ec73bb2393bb05962ca41177
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962585"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974353"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>Identyfikatory GUID znanych folderów dla niestandardowych miejsc okna dialogowego plików
-Za pomocą programu <xref:System.Guid> można [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] określić znany folder podczas dodawania folderów do <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji. W przypadku znanych identyfikatorów GUID folderów nie jest rozróżniana wielkość liter i są one zdefiniowane w pliku KnownFolders. h w Windows SDK.  
+Aby określić folder, który jest znany w systemie Windows Vista podczas dodawania folderów do kolekcji <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>, należy użyć <xref:System.Guid>. W przypadku znanych identyfikatorów GUID folderów nie jest rozróżniana wielkość liter i są one zdefiniowane w pliku KnownFolders. h w Windows SDK.  
   
 > [!NOTE]
-> W niektórych przypadkach znany folder dodany do programu <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> nie będzie wyświetlany w obszarze **Ulubione łącza** . Na przykład jeśli określony znany folder nie istnieje na komputerze, na którym jest uruchomiona aplikacja, znany folder nie jest wyświetlany.  
+> W niektórych przypadkach znany folder dodany do <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> nie będzie wyświetlany w obszarze **Ulubione linki** . Na przykład jeśli określony znany folder nie istnieje na komputerze, na którym jest uruchomiona aplikacja, znany folder nie jest wyświetlany.  
   
 ## <a name="list-of-guids"></a>Lista identyfikatorów GUID  
- Poniższa tabela zawiera [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] listę znanych folderów i ich <xref:System.Guid>skojarzonych z nimi.  
+ Poniższa tabela zawiera listę znanych folderów systemu Windows Vista i skojarzonych z nimi <xref:System.Guid>.  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -58,10 +58,10 @@ Za pomocą programu <xref:System.Guid> można [!INCLUDE[wiprlhext](../../../../i
  CommonTemplates  
  B94237E7-57AC-4347-9151-B08C6C32D1F7  
   
- Computer  
+ Komputerem  
  0AC0837C-BBF8-452A-850D-79D08E667CA7  
   
- Kolizj  
+ kolizj  
  4BFEFB45-347D-4006-A5BE-AC0CB0567192  
   
  Połączenia  
@@ -85,7 +85,7 @@ Za pomocą programu <xref:System.Guid> można [!INCLUDE[wiprlhext](../../../../i
  Pliki do pobrania  
  374DE290-123F-4565-9164-39C4925E467B  
   
- Ulubione  
+ Ulubiony  
  1777F761-68AD-4D8A-87BD-30B759FA33DD  
   
  Czcionki  
@@ -115,10 +115,10 @@ Za pomocą programu <xref:System.Guid> można [!INCLUDE[wiprlhext](../../../../i
  LocalizedResourcesDir  
  2A00375E-224C-49DE-B8D1-440DF7EF3DDC  
   
- Muzyka  
+ Muzyk  
  4BD8D571-6D19-48D3-BE97-422220080E43  
   
- NetHood  
+ Okap  
  C5ABBF53-E17F-4121-8900-86626FC2C973  
   
  Sieć  
@@ -142,7 +142,7 @@ Za pomocą programu <xref:System.Guid> można [!INCLUDE[wiprlhext](../../../../i
  PrintHood  
  9274BD8D-CFD1-41C3-B35E-B13F55A758F4  
   
- Profil  
+ profilu  
  5E6C858F-0E22-4760-9AFE-EA3317B67173  
   
  ProgramData  
@@ -226,7 +226,7 @@ Za pomocą programu <xref:System.Guid> można [!INCLUDE[wiprlhext](../../../../i
  SavedGames  
  4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4  
   
- SavedSearches  
+ savedSearches  
  7D1D3A04-DEBB-4115-95CF-2F29DA2920DA  
   
  SEARCH_CSC  
@@ -289,4 +289,4 @@ Za pomocą programu <xref:System.Guid> można [!INCLUDE[wiprlhext](../../../../i
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [Instrukcje: Dodawanie niestandardowego miejsca do okna dialogowego pliku](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [Instrukcje: dodawanie niestandardowego miejsca do okna dialogowego obsługi plików](how-to-add-a-custom-place-to-a-file-dialog-box.md)

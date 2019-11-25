@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f1d13c4c3e27b5af5b3c3e84995cae3df94a307d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 04cbfb8d41135b57c3e090959e041f95fcda2840
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052078"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975681"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Wdrażanie programu .NET Framework i aplikacji
 
@@ -66,7 +66,7 @@ Skorzystaj z poniższych linków do innych tematów MSDN, aby uzyskać szczegó�
 
 **Obsługa techniczna**
 
-- Aby uzyskać ogólne informacje, zobacz [blog .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=254977)
+- Aby uzyskać ogólne informacje, zobacz [blog .NET Framework](https://devblogs.microsoft.com/dotnet/).
 
 - [Wykrywanie wersji](../migration-guide/how-to-determine-which-versions-are-installed.md)
 
@@ -118,7 +118,7 @@ Skorzystaj z poniższych linków do innych tematów MSDN, aby uzyskać szczegó�
 
 ## <a name="packaging-and-distributing-net-framework-applications"></a>Pakowanie i dystrybucja .NET Framework aplikacji
 
-Niektóre informacje dotyczące pakowania i wdrażania dla .NET Framework są opisane w innych sekcjach dokumentacji. Te sekcje zawierają informacje o samoopisywanych jednostkach nazywanych [zestawami](../../standard/assembly/index.md), które nie wymagają wpisów rejestru, [zestawów o silnych nazwach](../../standard/assembly/strong-named.md), które zapewniają unikatowość nazw i uniemożliwiają fałszowanie nazw oraz [przechowywanie wersji zestawu](../../standard/assembly/versioning.md) , który dotyczy wielu problemów związanych z konfliktami DLL. Poniższe sekcje zawierają informacje o pakowaniu i dystrybucji aplikacji .NET Framework.
+Niektóre informacje dotyczące pakowania i wdrażania dla .NET Framework są opisane w innych sekcjach dokumentacji. Te sekcje zawierają informacje o samoopisywanych jednostkach nazywanych [zestawami](../../standard/assembly/index.md), które nie wymagają żadnych wpisów rejestru, [zestawów o silnych nazwach](../../standard/assembly/strong-named.md), które zapewniają unikatowość nazw i uniemożliwiają fałszowanie nazw oraz [przechowywanie wersji zestawu](../../standard/assembly/versioning.md), który dotyczy wielu problemów związanych z konfliktami dll. Poniższe sekcje zawierają informacje o pakowaniu i dystrybucji aplikacji .NET Framework.
 
 ### <a name="packaging"></a>Pakowanie
 
@@ -136,7 +136,7 @@ Niektóre informacje dotyczące pakowania i wdrażania dla .NET Framework są op
 
      Za pomocą tej opcji można tworzyć pliki MSI do użycia w Instalator Windows lub spakować aplikację do użycia z innym instalatorem.
 
-### <a name="distribution"></a>Dystrybucja
+### <a name="distribution"></a>Mieszczenie
 
 .NET Framework udostępnia następujące opcje dystrybucji aplikacji:
 
@@ -163,7 +163,7 @@ Zagadnienia dotyczące zabezpieczeń mogą również mieć wpływ na sposób wdr
 |Tytuł|Opis|
 |-----------|-----------------|
 |[Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](how-the-runtime-locates-assemblies.md)|Opisuje, jak środowisko uruchomieniowe języka wspólnego określa zestaw, który ma być używany do realizacji żądania powiązania.|
-|[Najlepsze praktyki dotyczące ładowania zestawu](best-practices-for-assembly-loading.md)|Omawia sposoby, <xref:System.MissingMethodException>aby uniknąć problemów z tożsamością typu, które <xref:System.InvalidCastException>mogą prowadzić do innych błędów.|
+|[Najlepsze praktyki dotyczące ładowania zestawu](best-practices-for-assembly-loading.md)|Omawia sposoby, aby uniknąć problemów z tożsamością typu, które mogą prowadzić do <xref:System.InvalidCastException>, <xref:System.MissingMethodException>i innych błędów.|
 |[Zmniejszenie liczby ponownych uruchomień systemu podczas instalowania programu .NET Framework 4.5](reducing-system-restarts.md)|Opisuje Menedżera ponownego uruchamiania, który uniemożliwia ponowne uruchomienie w miarę możliwości, i wyjaśnia, jak aplikacje instalujące .NET Framework mogą korzystać z tej funkcji.|
 |[Przewodnik wdrażania dla administratorów](guide-for-administrators.md)|Wyjaśnia, w jaki sposób administrator systemu może wdrożyć .NET Framework i zależności systemu w sieci przy użyciu System Center Configuration Manager (SCCM).|
 |[Przewodnik wdrażania dla deweloperów](deployment-guide-for-developers.md)|Wyjaśnia, w jaki sposób deweloperzy mogą instalować .NET Framework na komputerach użytkowników przy użyciu ich aplikacji.|
@@ -171,7 +171,7 @@ Zagadnienia dotyczące zabezpieczeń mogą również mieć wpływ na sposób wdr
 |[Publikowanie aplikacji ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Opisuje sposób tworzenia pakietów aplikacji Windows Forms i wdrażania jej przy użyciu technologii ClickOnce na komputerach klienckich w sieci.|
 |[Opakowanie i wdrażanie zasobów](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|Opisuje model gwiazdy, którego .NET Framework używa do pakowania i wdrażania zasobów; obejmuje konwencje nazewnictwa zasobów, proces rezerwowy i alternatywy pakietów.|
 |[Wdrażanie aplikacji międzyoperacyjnych](../interop/deploying-an-interop-application.md)|Wyjaśnia sposób dostarczania i instalowania aplikacji międzyoperacyjnych, które zwykle zawierają zestaw .NET Framework klienta, co najmniej jeden zestaw międzyoperacyjny reprezentujący różne biblioteki typów modelu COM oraz co najmniej jeden zarejestrowany składnik COM.|
-|[Instrukcje: Pobierz postęp z Instalatora .NET Framework 4,5](how-to-get-progress-from-the-dotnet-installer.md)|Opisuje sposób dyskretnego uruchamiania i śledzenia procesu instalacji .NET Framework podczas wyświetlania własnego widoku postępu instalacji.|
+|[Instrukcje: Pobieranie danych o postępie z Instalatora .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)|Opisuje sposób dyskretnego uruchamiania i śledzenia procesu instalacji .NET Framework podczas wyświetlania własnego widoku postępu instalacji.|
 
 ## <a name="see-also"></a>Zobacz także
 

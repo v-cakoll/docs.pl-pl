@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: fb08cef284a016dd65c99a1efb0a661624a731f1
-  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+  ms.openlocfilehash: f7fd68120defbfcda6ac11e14bc749bf4d69c109
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 10/09/2019
-  ms.locfileid: "72179007"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969392"
 items:
 - durationInMinutes: 1
   content: >
@@ -22,7 +22,7 @@ items:
 - title: Tworzenie list
   durationInMinutes: 2
   content: >
-    Uruchom następujący kod w oknie interaktywnym. Aby to zrobić, wpisz poniższy blok kodu w oknie interaktywnym (Zastąp `<name>` nazwą użytkownika), a następnie kliknij przycisk **Uruchom** :
+    Uruchom następujący kod w oknie interaktywnym. Wybierz przycisk **Przejdź do trybu koncentracji uwagi** . Następnie wpisz poniższy blok kodu w oknie interaktywnym (Zastąp `<name>` nazwą) i wybierz pozycję **Uruchom**:
 
 
     ```csharp
@@ -44,7 +44,7 @@ items:
     Utworzono listę ciągów, dodano trzy nazwy do tej listy i wydrukowanych nazw we wszystkich WERSALIKach. Są używane koncepcje, które zostały uzyskane we wcześniejszych samouczkach, aby przepętlać listę.
 
 
-    Kod do wyświetlania nazw korzysta z funkcji [interpolacji ciągów](../../language-reference/tokens/interpolated.md) . Gdy poprzedzasz `string` znakiem `$`, możesz osadzić C# kod w deklaracji ciągu. Rzeczywisty ciąg zastępuje ten C# kod wartością, którą generuje. W tym przykładzie zastępuje `{name.ToUpper()}` z każdą nazwą, konwertowana na wielkie litery, ponieważ wywołana została Metoda <xref:System.String.ToUpper%2A?displayProperty=nameWithType>.
+    Kod do wyświetlania nazw korzysta z funkcji [interpolacji ciągów](../../language-reference/tokens/interpolated.md) . Gdy poprzedzasz `string` ze znakiem `$`, możesz osadzić C# kod w deklaracji ciągu. Rzeczywisty ciąg zastępuje ten C# kod wartością, którą generuje. W tym przykładzie zastępuje `{name.ToUpper()}` z każdą nazwą, konwertowana na wielkie litery, ponieważ wywołano metodę <xref:System.String.ToUpper%2A?displayProperty=nameWithType>.
 
 
     Kontynuujmy Eksplorowanie.
@@ -84,7 +84,7 @@ items:
     Dodano dwie więcej nazw na końcu listy. Również został także usunięty. Dane wyjściowe z tego bloku kodu pokazują zawartość początkową, a następnie drukuje pusty wiersz i nową zawartość.
 
 
-    @No__t-0 umożliwia odwoływanie się do poszczególnych elementów według **indeksu** . Masz dostęp do elementów przy użyciu tokenów `[` i `]`. Dodaj poniższy kod poniżej tego, co zostało już zrobione, i wypróbuj go:
+    <xref:System.Collections.Generic.List%601> pozwala na odwoływanie się do poszczególnych elementów według **indeksu** . Masz dostęp do elementów przy użyciu tokenów `[` i `]`. Dodaj poniższy kod poniżej tego, co zostało już zrobione, i wypróbuj go:
 
 
     ```csharp
@@ -106,7 +106,7 @@ items:
     ```
 
 
-    Kliknij przycisk **Uruchom** ponownie, aby zobaczyć wyniki. W C#programie indeksy zaczynają się od 0, więc największy prawidłowy indeks jest mniejszy od liczby elementów na liście.
+    Wybierz pozycję **Uruchom** ponownie, aby wyświetlić wyniki. W C#programie indeksy zaczynają się od 0, więc największy prawidłowy indeks jest mniejszy od liczby elementów na liście.
 
 
     > [!NOTE]
@@ -155,7 +155,7 @@ items:
 - title: Listy innych typów
   durationInMinutes: 5
   content: >
-    W tej chwili używasz typu `string` na listach. Przyjrzyjmy się <xref:System.Collections.Generic.List%601> przy użyciu innego typu. Utwórzmy zestaw numerów. Usuń kod, który zapisano do tej pory, i zastąp go następującym kodem:
+    Używasz typu `string` na listach do tej pory. Utwórzmy <xref:System.Collections.Generic.List%601> przy użyciu innego typu. Utwórzmy zestaw numerów. Usuń kod, który zapisano do tej pory, i zastąp go następującym kodem:
 
 
     ```csharp

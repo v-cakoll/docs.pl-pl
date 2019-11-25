@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Porównywanie ciągów- C# Przewodnik'
+title: Jak porównać ciągi — C# Przewodnik
 description: Dowiedz się, jak porównywać i zamawiać wartości ciągów, z lub bez wielkości liter, z lub bez określania kolejności specyficznej dla kultury
 ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: a3e5f8dd9cfac809aafc2533463390cd5a64e0d6
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: dda3ec8cb6a0131867e6ea3bb0cf7199d86058ff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395454"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973321"
 ---
-# <a name="how-to-compare-strings-in-c"></a>Jak porównać ciągi w języku C @ no__t-0
+# <a name="how-to-compare-strings-in-c"></a>Jak porównać ciągi w języku C\#
 
 Można porównać ciągi, aby odpowiedzieć na jedno z dwóch pytań: "czy te dwa ciągi są równe?" lub "w jakiej kolejności te ciągi mają być umieszczane podczas sortowania?"
 
@@ -41,7 +41,7 @@ Wykonaj porównanie porządkowe z uwzględnieniem wielkości liter i, jeśli to 
 
 Domyślne porównanie porządkowe nie uwzględnia reguł lingwistycznych podczas porównywania ciągów. Porównuje wartość binarną każdego obiektu <xref:System.Char> w dwóch ciągach. W związku z tym domyślne porównanie porządkowe uwzględnia wielkość liter.
 
-Należy zauważyć, że test dla równości z <xref:System.String.Equals%2A?displayProperty=nameWithType> i operatory `==` i `!=` różnią się od porównania ciągów przy użyciu metod <xref:System.String.CompareTo%2A?displayProperty=nameWithType> i <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)>. Chociaż testy pod kątem równości wykonują porównanie porządkowe z uwzględnieniem wielkości liter, metody porównania wykonują porównanie z uwzględnieniem wielkości liter, z których korzysta bieżąca kultura. Ponieważ domyślne metody porównywania często wykonują różne typy porównań, zalecamy, aby zawsze upewnić się, że zamierzenia kodu jest jasne, wywołując Przeciążenie, które jawnie określa typ porównania do wykonania.
+Należy zauważyć, że test dla równości z <xref:System.String.Equals%2A?displayProperty=nameWithType> i operatory `==` i `!=` różni się od porównania ciągów przy użyciu metod <xref:System.String.CompareTo%2A?displayProperty=nameWithType> i <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)>. Chociaż testy pod kątem równości wykonują porównanie porządkowe z uwzględnieniem wielkości liter, metody porównania wykonują porównanie z uwzględnieniem wielkości liter, z których korzysta bieżąca kultura. Ponieważ domyślne metody porównywania często wykonują różne typy porównań, zalecamy, aby zawsze upewnić się, że zamierzenia kodu jest jasne, wywołując Przeciążenie, które jawnie określa typ porównania do wykonania.
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Porównanie porządkowe bez uwzględniania wielkości liter
 
@@ -108,7 +108,7 @@ Po posortowaniu tablicy można wyszukać wpisy przy użyciu wyszukiwania binarne
 
 ## <a name="ordinal-sorting-and-searching-in-collections"></a>Sortowanie porządkowe i wyszukiwanie w kolekcjach
 
-Poniższy kod używa klasy kolekcji <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> do przechowywania ciągów. Ciągi są sortowane przy użyciu metody <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType>. Ta metoda wymaga delegata, który porównuje i porządkuje dwa ciągi. Metoda <xref:System.String.CompareTo%2A?displayProperty=nameWithType> zapewnia tę funkcję porównania. Uruchom przykład i zaobserwuj zamówienie. Ta operacja sortowania używa sortowania z uwzględnieniem wielkości liter. Aby określić różne reguły porównywania, należy użyć statycznych metod <xref:System.String.Compare%2A?displayProperty=nameWithType>.
+Poniższy kod używa klasy kolekcji <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> do przechowywania ciągów. Ciągi są sortowane przy użyciu metody <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType>. Ta metoda wymaga delegata, który porównuje i porządkuje dwa ciągi. Metoda <xref:System.String.CompareTo%2A?displayProperty=nameWithType> zapewnia tę funkcję porównania. Uruchom przykład i zaobserwuj zamówienie. Ta operacja sortowania używa sortowania z uwzględnieniem wielkości liter. Użyj statycznych metod <xref:System.String.Compare%2A?displayProperty=nameWithType>, aby określić różne reguły porównywania.
 
 [!code-csharp-interactive[Sorting a list of strings](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#7)]
 
@@ -118,7 +118,7 @@ Po posortowaniu lista ciągów może być wyszukiwana przy użyciu wyszukiwania 
 
 Zawsze upewnij się, że używasz tego samego typu porównania do sortowania i wyszukiwania. Użycie różnych typów porównania do sortowania i wyszukiwania powoduje utworzenie nieoczekiwanych wyników.
 
-Klasy kolekcji, takie jak <xref:System.Collections.Hashtable?displayProperty=nameWithType>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> i <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> mają konstruktory przyjmujące <xref:System.StringComparer?displayProperty=nameWithType> parametr, gdy typ elementów lub kluczy jest `string`. Ogólnie rzecz biorąc, należy używać tych konstruktorów, jeśli jest to możliwe, i określić wartość <xref:System.StringComparer.Ordinal?displayProperty=nameWithType> lub <xref:System.StringComparer.OrdinalIgnoreCase?displayProperty=nameWithType>.
+Klasy kolekcji, takie jak <xref:System.Collections.Hashtable?displayProperty=nameWithType>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>i <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, mają konstruktory przyjmujące <xref:System.StringComparer?displayProperty=nameWithType> parametr, gdy typ elementów lub kluczy jest `string`. Ogólnie rzecz biorąc, należy używać tych konstruktorów, jeśli jest to możliwe, i określić wartość <xref:System.StringComparer.Ordinal?displayProperty=nameWithType> lub <xref:System.StringComparer.OrdinalIgnoreCase?displayProperty=nameWithType>.
 
 ## <a name="reference-equality-and-string-interning"></a>Równość odwołania i ciąg InterNIC
 
@@ -127,9 +127,9 @@ Klasy kolekcji, takie jak <xref:System.Collections.Hashtable?displayProperty=nam
 [!code-csharp-interactive[Demonstrating string interning](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#9)]
 
 > [!NOTE]
-> Podczas testowania pod kątem równości ciągów należy użyć metod, które jawnie określają rodzaj porównania, który ma być wykonywany. Kod jest znacznie bardziej czytelny i możliwy do odczytania. Użyj przeciążeń metod <xref:System.String?displayProperty=nameWithType> i <xref:System.Array?displayProperty=nameWithType>, które pobierają parametr wyliczenia <xref:System.StringComparison>. Należy określić typ porównania do wykonania. Unikaj używania operatorów `==` i `!=` podczas testowania pod kątem równości. Metody wystąpienia <xref:System.String.CompareTo%2A?displayProperty=nameWithType> zawsze wykonują porządkową wielkość liter. Są one głównie odpowiednie do porządkowania ciągów alfabetycznie.
+> Podczas testowania pod kątem równości ciągów należy użyć metod, które jawnie określają rodzaj porównania, który ma być wykonywany. Kod jest znacznie bardziej czytelny i możliwy do odczytania. Użyj przeciążeń metod <xref:System.String?displayProperty=nameWithType> i <xref:System.Array?displayProperty=nameWithType>, które pobierają parametr wyliczenia <xref:System.StringComparison>. Należy określić typ porównania do wykonania. Unikaj używania operatorów `==` i `!=` podczas testowania pod kątem równości. Metody instancji <xref:System.String.CompareTo%2A?displayProperty=nameWithType> zawsze wykonują porządkową wielkość liter. Są one głównie odpowiednie do porządkowania ciągów alfabetycznie.
 
-Można skontaktować się z ciągiem lub pobrać odwołanie do istniejącego ciągu InterNIC, wywołując metodę <xref:System.String.Intern%2A?displayProperty=nameWithType>. Aby określić, czy ciąg jest InterNIC, wywołaj metodę <xref:System.String.IsInterned%2A?displayProperty=nameWithType>.
+Możesz InterNIC ciąg lub pobrać odwołanie do istniejącego ciągu z stażystami, wywołując metodę <xref:System.String.Intern%2A?displayProperty=nameWithType>. Aby określić, czy ciąg jest InterNIC, wywołaj metodę <xref:System.String.IsInterned%2A?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Zobacz także
 

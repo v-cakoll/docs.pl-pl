@@ -4,12 +4,12 @@ description: Jak korzystać z konstruktora modelu ML.NET w celu automatycznego u
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 77fe56dba3532617ad9fb0c89bfaac7c8e031ce7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929467"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971525"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Co to jest Konstruktor modelu i jak to działa?
 
@@ -39,12 +39,12 @@ Scenariusz to opis typu przewidywania, które chcesz wprowadzić przy użyciu da
 
 W konstruktorze modelu należy wybrać typ modelu uczenia maszynowego. Typ modelu zależy od tego, jakie jest prognozowanie, którą próbujesz wprowadzić.
 
-W scenariuszach, w których jest przewidywana liczba, jest wywoływany `regression`Typ modelu uczenia maszynowego.
+W scenariuszach, w których jest przewidywana liczba, typ modelu uczenia maszynowego jest nazywany `regression`.
 
-W scenariuszach, w których jest przewidywana Kategoria, typem `classification`modelu jest. Istnieją dwa typy klasyfikacji:
+W scenariuszach, w których jest przewidywana Kategoria, typ modelu jest `classification`. Istnieją dwa typy klasyfikacji:
 
-- gdzie są tylko 2 Kategorie: `binary classification`.
-- gdzie znajdują się trzy lub więcej kategorii `multiclass classification`:.
+- gdzie dostępne są tylko 2 Kategorie: `binary classification`.
+- gdzie znajdują się trzy lub więcej kategorii: `multiclass classification`.
 
 ### <a name="which-model-type-is-right-for-me"></a>Który typ modelu jest dla mnie właściwy?
 
@@ -60,7 +60,7 @@ Jeśli scenariusz wymaga klasyfikacji do dwóch kategorii, można użyć tego sz
 
 #### <a name="predict-a-category-when-there-are-three-or-more-categories"></a>Przewidywanie kategorii (jeśli istnieją trzy lub więcej kategorii)
 
-Klasyfikacji wieloklasowej można użyć do kategoryzowania danych w trzech lub większej liczbie klas. 
+Klasyfikacji wieloklasowej można użyć do kategoryzowania danych w trzech lub większej liczbie klas.
 
 ![Przykłady klasyfikacji wieloklasowej, w tym Klasyfikacja dokumentów i produktów, obsługa routingu biletów i problemów klientów](media/multiclass-classification-examples.png)
 
@@ -111,13 +111,13 @@ Jeśli nie masz jeszcze własnych danych, wypróbuj jeden z tych zestawów danyc
 
 |Scenariusz|Typ modelu|Dane|Etykieta|Funkcje|
 |-|-|-|-|-|
-|Prognoza cen|Ubytk|[dane dotyczące opłat za taksówki](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Bezprzewodow|Czas podróży, odległość|
-|Wykrywanie anomalii|Klasyfikacja binarna|[dane sprzedaży produktu](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Sprzedaż produktu|Bieżącym|
-|Analiza tonacji|Klasyfikacja binarna|[dane komentarzy witryny sieci Web](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etykieta (0 w przypadku wartości ujemnej tonacji, 1, gdy wartość jest dodatnia)|Komentarz, rok|
-|Wykrywanie oszustw|Klasyfikacja binarna|[dane karty kredytowej](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Klasa (1 w przypadku oszustwa, 0 w przeciwnym razie)|Kwota, v1 — v28 (funkcje anonimowe)|
+|Prognoza cen|ubytk|[dane dotyczące opłat za taksówki](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Bezprzewodow|Czas podróży, odległość|
+|Wykrywanie anomalii|klasyfikacja binarna|[dane sprzedaży produktu](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Sprzedaż produktu|Bieżącym|
+|Analiza tonacji|klasyfikacja binarna|[dane komentarzy witryny sieci Web](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etykieta (0 w przypadku wartości ujemnej tonacji, 1, gdy wartość jest dodatnia)|Komentarz, rok|
+|Wykrywanie oszustw|klasyfikacja binarna|[dane karty kredytowej](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Klasa (1 w przypadku oszustwa, 0 w przeciwnym razie)|Kwota, v1 — v28 (funkcje anonimowe)|
 |Klasyfikacja tekstu|Klasyfikacja wieloklasowa|[Dane problemu w usłudze GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Obszar|Tytuł, opis|
 
-## <a name="train"></a>Szkolenie
+## <a name="train"></a>trasy
 
 Po wybraniu scenariusza, danych i etykiety, Konstruktor modelu pociąga za niego model.
 
@@ -127,7 +127,7 @@ Szkolenia są procesem automatycznym, dzięki któremu Konstruktor modelu uczy s
 
 Ponieważ Konstruktor modelu korzysta z funkcji automatycznego uczenia maszynowego (AutoML), nie wymaga żadnych danych wejściowych ani dostrajania podczas szkoleń.
 
-## <a name="evaluate"></a>oceny
+## <a name="evaluate"></a>Oceny
 
 Ocena to proces użycia przeszkolonego modelu, który umożliwia prognozowanie przy użyciu nowych danych testowych, a następnie zmierzenie, jak dobre są przewidywania.
 

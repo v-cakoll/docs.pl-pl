@@ -2,12 +2,12 @@
 title: Specyfikacja manifestu dostawcy
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: bef4868ccc52d287baaceca32c4943723be7531f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a9dca140588be26035b235109c48049ce01e9ce1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040492"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973885"
 ---
 # <a name="provider-manifest-specification"></a>Specyfikacja manifestu dostawcy
 W tej sekcji omówiono, w jaki sposób dostawca magazynu danych może obsługiwać typy i funkcje w magazynie danych.  
@@ -93,7 +93,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 #### <a name="using-a-provider-manifest-token"></a>Korzystanie z tokenu manifestu dostawcy  
  W przypadku scenariusza offline token jest wybierany z reprezentacji SSDL. SSDL pozwala określić ProviderManifestToken (zobacz [element Schema (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) , aby uzyskać więcej informacji. Na przykład jeśli nie można otworzyć połączenia, plik SSDL ma token manifestu dostawcy, który określa informacje o manifeście.  
   
-```csharp  
+```csharp
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   

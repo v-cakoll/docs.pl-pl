@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: Wykonywanie drzew wyrażeń (C#)'
+title: Jak wykonać drzewa wyrażeń (C#)
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: 4a73201d06d21964a40fbbe57fa952da35c5942c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e7d408ea154572dc8b45d2e67bca3f05837868d2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924368"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969881"
 ---
-# <a name="how-to-execute-expression-trees-c"></a>Instrukcje: Wykonywanie drzew wyrażeń (C#)
+# <a name="how-to-execute-expression-trees-c"></a>Jak wykonać drzewa wyrażeń (C#)
 W tym temacie pokazano, jak wykonać drzewo wyrażenia. Wykonanie drzewa wyrażenia może zwrócić wartość lub może po prostu wykonać akcję, taką jak wywołanie metody.  
   
- Można wykonywać tylko drzewa wyrażeń, które reprezentują wyrażenia lambda. Drzewa wyrażeń, które reprezentują wyrażenia lambda, są <xref:System.Linq.Expressions.LambdaExpression> typu <xref:System.Linq.Expressions.Expression%601>lub. Aby wykonać te drzewa wyrażeń, wywołaj <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> metodę, aby utworzyć delegata pliku wykonywalnego, a następnie Wywołaj delegata.  
+ Można wykonywać tylko drzewa wyrażeń, które reprezentują wyrażenia lambda. Drzewa wyrażeń, które reprezentują wyrażenia lambda, są typu <xref:System.Linq.Expressions.LambdaExpression> lub <xref:System.Linq.Expressions.Expression%601>. Aby wykonać te drzewa wyrażeń, wywołaj metodę <xref:System.Linq.Expressions.LambdaExpression.Compile%2A>, aby utworzyć delegata pliku wykonywalnego, a następnie Wywołaj delegata.  
   
 > [!NOTE]
-> Jeśli typ delegata jest nieznany, to oznacza, że wyrażenie lambda jest typu <xref:System.Linq.Expressions.LambdaExpression> , a nie <xref:System.Linq.Expressions.Expression%601> <xref:System.Delegate.DynamicInvoke%2A> , należy wywołać metodę w delegatze zamiast wywoływania jej bezpośrednio.  
+> Jeśli typ delegata nie jest znany, oznacza to, że wyrażenie lambda jest typu <xref:System.Linq.Expressions.LambdaExpression> a nie <xref:System.Linq.Expressions.Expression%601>, należy wywołać metodę <xref:System.Delegate.DynamicInvoke%2A> na delegatze zamiast wywoływania jej bezpośrednio.  
   
- Jeśli drzewo wyrażenia nie reprezentuje wyrażenia lambda, można utworzyć nowe wyrażenie lambda, które ma pierwotne drzewo wyrażenia jako jego treść, wywołując <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> metodę. Następnie można wykonać wyrażenie lambda zgodnie z opisem we wcześniejszej części tej sekcji.  
+ Jeśli drzewo wyrażenia nie reprezentuje wyrażenia lambda, można utworzyć nowe wyrażenie lambda, które ma pierwotne drzewo wyrażeń jako treść, wywołując metodę <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29>. Następnie można wykonać wyrażenie lambda zgodnie z opisem we wcześniejszej części tej sekcji.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu demonstruje, jak wykonać drzewo wyrażenia, które reprezentuje podnoszenie liczby do potęgi przez utworzenie wyrażenia lambda i jego wykonanie. Zostanie wyświetlony wynik, który reprezentuje liczbę podniesioną do potęgi.  
@@ -49,4 +49,4 @@ Console.WriteLine(result);
 ## <a name="see-also"></a>Zobacz także
 
 - [Drzewa wyrażeń (C#)](./index.md)
-- [Instrukcje: Modyfikuj drzewa wyrażeń (C#)](./how-to-modify-expression-trees.md)
+- [Jak zmodyfikować drzewa wyrażeń (C#)](./how-to-modify-expression-trees.md)

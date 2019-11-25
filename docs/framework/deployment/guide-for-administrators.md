@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91099b9b4d230839bc14c5fe4d5eafd05ac95541
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dc842713a16df8e5ada5ad6c71ca19f91ecbc405
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052160"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975565"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework — Przewodnik wdrażania dla administratorów
 
@@ -21,7 +21,7 @@ W tym artykule krok po kroku opisano, jak administrator systemu może wdrożyć 
 > [!NOTE]
 > Oprogramowanie przywoływane w tym dokumencie, w tym, bez ograniczenia, .NET Framework 4,5, System Center Configuration Manager i Active Directory, podlega postanowieniom licencyjnym. W tych instrukcjach przyjęto założenie, że takie postanowienia licencyjne i warunki zostały przejrzane i zaakceptowane przez właściwych licencjobiorców oprogramowania. Te instrukcje nie unieważniają żadnego postanowienia tych umów licencyjnych.
 >
-> Aby uzyskać informacje o obsłudze .NET Framework, zobacz [Zasady cyklu życia programu Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) w witrynie sieci Web Pomoc techniczna firmy Microsoft.
+> Aby uzyskać informacje na temat pomocy technicznej dla .NET Framework, zobacz [.NET Framework oficjalne zasady pomocy technicznej](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) w witrynie sieci Web Pomoc techniczna firmy Microsoft.
 
 Ten temat zawiera następujące sekcje:
 
@@ -83,7 +83,7 @@ Aby utworzyć kolekcję:
 
 5. Wybierz pozycję **Przeglądaj** , aby określić kolekcję ograniczającą.
 
-6. Na stronie **reguły członkostwa** wybierz pozycję **Dodaj regułę**, a następnie wybierz pozycję **reguła bezpośrednia** , aby otworzyć **Kreatora tworzenia reguły członkostwa bezpośredniego**. Wybierz **dalej**.
+6. Na stronie **reguły członkostwa** wybierz pozycję **Dodaj regułę**, a następnie wybierz pozycję **reguła bezpośrednia** , aby otworzyć **Kreatora tworzenia reguły członkostwa bezpośredniego**. Wybierz pozycję **dalej**.
 
 7. Na stronie **Wyszukiwanie zasobów** na liście **Klasa zasobów** wybierz pozycję **zasób systemowy**. Na liście **nazwa atrybutu** wybierz pozycję **Nazwa**. W polu **wartość** wprowadź `%`, a następnie wybierz przycisk **dalej**.
 
@@ -107,9 +107,9 @@ Aby utworzyć pakiet:
 
 4. Na stronie **pakiet** **Kreatora tworzenia pakietu i programu**wprowadź następujące informacje:
 
-    - Nazwij`.NET Framework 4.5`
+    - Nazwa: `.NET Framework 4.5`
 
-    - Instrukcj`Microsoft`
+    - Producent: `Microsoft`
 
     - Język. `English (US)`
 
@@ -123,7 +123,7 @@ Aby utworzyć pakiet:
 
     2. **Wiersz polecenia:** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (Opcje wiersza polecenia są opisane w tabeli po wykonaniu tych kroków)
 
-    3. **Wykonane** Wybierz **Ukryj**.
+    3. **Uruchom:** Wybierz **Ukryj**.
 
     4. **Program może zostać uruchomiony:** Wybierz opcję, która określa, że program może być uruchamiany niezależnie od tego, czy użytkownik jest zalogowany.
 
@@ -133,11 +133,11 @@ W poniższej tabeli opisano opcje wiersza polecenia określone w kroku 7.
 
 |Opcja|Opis|
 |------------|-----------------|
-|**/q**|Ustawia tryb cichy. Nie jest wymagane wprowadzanie danych przez użytkownika i nie są wyświetlane dane wyjściowe.|
-|**/ norestart /**|Uniemożliwia Instalatorowi automatyczne wykonywanie ponownego rozruchu. Użycie tej opcji spowoduje, że program Configuration Manager będzie musiał obsługiwać ponowne uruchamianie komputera.|
-|**/chainingpackage** *PackageName*|Określa nazwę pakietu, który tworzy łańcuch. Te informacje są zgłaszane z innymi informacjami sesji instalacji dla tych, którzy zarejestrowali się w [programie Microsoft Program poprawy jakości obsługi klienta (CEIP)](https://go.microsoft.com/fwlink/p/?LinkId=248244). Jeśli nazwa pakietu zawiera spacje, użyj podwójnych cudzysłowów jako ograniczników; na przykład: **/chainingpackage "iloczyn łańcucha"** .|
+|**parametru**|Ustawia tryb cichy. Nie jest wymagane wprowadzanie danych przez użytkownika i nie są wyświetlane dane wyjściowe.|
+|**/norestart**|Uniemożliwia Instalatorowi automatyczne wykonywanie ponownego rozruchu. Użycie tej opcji spowoduje, że program Configuration Manager będzie musiał obsługiwać ponowne uruchamianie komputera.|
+|**/chainingpackage** *pakietname*|Określa nazwę pakietu, który tworzy łańcuch. Te informacje są zgłaszane z innymi informacjami sesji instalacji dla tych, którzy zarejestrowali się w programie Microsoft Program poprawy jakości obsługi klienta (CEIP). Jeśli nazwa pakietu zawiera spacje, użyj podwójnych cudzysłowów jako ograniczników; na przykład: **/chainingpackage "iloczyn łańcucha"**.|
 
-Wykonanie tych kroków spowoduje utworzenie pakietu o nazwie .NET Framework 4.5. Program wdraża instalację dyskretną programu .NET Framework 4.5. W przypadku instalacji dyskretnej użytkownicy nie pracują z procesem instalacji, a aplikacja łańcucha musi przechwycić kod powrotny i obsłużyć ponowne uruchomienie. Zobacz [Uzyskiwanie informacji o postępie z pakietu instalacyjnego](https://go.microsoft.com/fwlink/?LinkId=179606).
+Wykonanie tych kroków spowoduje utworzenie pakietu o nazwie .NET Framework 4.5. Program wdraża instalację dyskretną programu .NET Framework 4.5. W przypadku instalacji dyskretnej użytkownicy nie pracują z procesem instalacji, a aplikacja łańcucha musi przechwycić kod powrotny i obsłużyć ponowne uruchomienie. Zobacz [Uzyskiwanie informacji o postępie z pakietu instalacyjnego](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).
 
 <a name="select_dist_point"></a>
 
@@ -179,18 +179,18 @@ Aby wdrożyć pakiet i program .NET Framework 4.5:
 
 4. Na karcie **Narzędzia główne** w grupie **wdrożenie** wybierz pozycję **Wdróż**.
 
-5. Na stronie **Ogólne** **Kreatora wdrażania oprogramowania**wybierz pozycję **Przeglądaj**, a następnie wybierz utworzoną wcześniej kolekcję. Wybierz **dalej**.
+5. Na stronie **Ogólne** **Kreatora wdrażania oprogramowania**wybierz pozycję **Przeglądaj**, a następnie wybierz utworzoną wcześniej kolekcję. Wybierz pozycję **dalej**.
 
 6. Na stronie **zawartość** kreatora sprawdź, czy jest wyświetlany punkt, z którego ma zostać rozdystrybuowane oprogramowanie, a następnie wybierz przycisk **dalej**.
 
-7. Na stronie **Ustawienia wdrożenia** w Kreatorze upewnij się, że **Akcja** jest ustawiona na **Zainstaluj**, a **cel** jest ustawiony na wartość **wymagane**. Te wartości ustawień gwarantują, że pakiet oprogramowania będzie obowiązkowo instalowany na komputerach docelowych. Wybierz **dalej**.
+7. Na stronie **Ustawienia wdrożenia** w Kreatorze upewnij się, że **Akcja** jest ustawiona na **Zainstaluj**, a **cel** jest ustawiony na wartość **wymagane**. Te wartości ustawień gwarantują, że pakiet oprogramowania będzie obowiązkowo instalowany na komputerach docelowych. Wybierz pozycję **dalej**.
 
-8. Na stronie **Planowanie** w Kreatorze Określ, kiedy ma być zainstalowana .NET Framework. Możesz wybrać opcję **Nowy** , aby przypisać czas instalacji lub poinstruować oprogramowanie, które ma zostać zainstalowane, gdy użytkownik się zaloguje lub wyłączy lub najszybciej, jak to możliwe. Wybierz **dalej**.
+8. Na stronie **Planowanie** w Kreatorze Określ, kiedy ma być zainstalowana .NET Framework. Możesz wybrać opcję **Nowy** , aby przypisać czas instalacji lub poinstruować oprogramowanie, które ma zostać zainstalowane, gdy użytkownik się zaloguje lub wyłączy lub najszybciej, jak to możliwe. Wybierz pozycję **dalej**.
 
 9. Na stronie **środowisko użytkownika** kreatora Użyj wartości domyślnych i kliknij przycisk **dalej**.
 
     > [!WARNING]
-    > W środowisku produkcyjnym mogą obowiązywać zasady wymagające wybrania innych ustawień harmonogramu wdrażania. Aby uzyskać informacje o tych opcjach [, zobacz Właściwości nazwy anonsu: Karta](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29)harmonogram.
+    > W środowisku produkcyjnym mogą obowiązywać zasady wymagające wybrania innych ustawień harmonogramu wdrażania. Aby uzyskać informacje o tych opcjach, zobacz [Właściwości nazwy reklamy: karta harmonogram](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
 
 10. Na stronie **punkty dystrybucji** kreatora Użyj wartości domyślnych i kliknij przycisk **dalej**.
 
@@ -200,7 +200,7 @@ Teraz pakiet zostanie wdrożony w kolekcji docelowej i rozpocznie się dyskretna
 
 <a name="resources"></a>
 
-## <a name="resources"></a>Zasoby
+## <a name="resources"></a>Resources
 
 Aby uzyskać więcej informacji na temat infrastruktury testowania wdrożenia pakietu redystrybucyjnego .NET Framework 4,5, zobacz następujące zasoby.
 
@@ -241,7 +241,7 @@ Podczas instalacji .NET Framework są generowane następujące pliki dziennika:
 
 *wersja* , w której jest instalowana wersja .NET Framework, na przykład 4,5 lub 4.7.2.
 
-Możesz również określić katalog, w którym zapisywane są pliki dziennika przy użyciu `/log` opcji wiersza polecenia w .NET Framework polecenie instalacji. Aby uzyskać więcej informacji, zobacz [.NET Framework Przewodnik wdrażania dla deweloperów](deployment-guide-for-developers.md#command-line-options).
+Możesz również określić katalog, w którym zapisywane są pliki dziennika, przy użyciu opcji wiersza polecenia `/log` w .NET Framework instalacji. Aby uzyskać więcej informacji, zobacz [.NET Framework Przewodnik wdrażania dla deweloperów](deployment-guide-for-developers.md#command-line-options).
 
 Za pomocą narzędzia do [zbierania dzienników](https://www.microsoft.com/download/details.aspx?id=12493) można zbierać pliki dziennika .NET Framework i utworzyć skompresowany plik Cabinet (CAB), który zmniejsza rozmiar plików.
 

@@ -7,25 +7,19 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 787c6221b651a53dbb932a5a9d0edea123e1d97d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046435"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974929"
 ---
 # <a name="interop-etw-events"></a>Zdarzenia ETW międzyoperacyjności
-<a name="top"></a>Zdarzenia międzyoperacyjności przechwytują informacje o generacji i buforowaniu klasy języka pośredniego firmy Microsoft (MSIL).  
-  
- Ta kategoria obejmuje następujące zdarzenia:  
-  
-- [Zdarzenie ILStubGenerated](#ilstubgenerated_event)  
-  
-- [ILStubCacheHit Event](#ilstubcachehit_event)  
-  
-<a name="ilstubgenerated_event"></a>   
-## <a name="ilstubgenerated-event"></a>Zdarzenie ILStubGenerated  
- W poniższej tabeli przedstawiono słowo kluczowe i poziom. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe i poziomy ETW CLR](clr-etw-keywords-and-levels.md)).  
+Zdarzenia międzyoperacyjności przechwytują informacje o generacji i buforowaniu klasy języka pośredniego firmy Microsoft (MSIL).  
+
+## <a name="ilstubgenerated-event"></a>Zdarzenie ILStubGenerated
+
+W poniższej tabeli przedstawiono słowo kluczowe i poziom. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe i poziomy ETW CLR](clr-etw-keywords-and-levels.md)).  
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
@@ -53,11 +47,9 @@ ms.locfileid: "71046435"
 |StubMethodILCode|win: UnicodeString|Kod MSIL dla metody zastępczej.|  
 |ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
- [Powrót do początku](#top)  
-  
-<a name="ilstubcachehit_event"></a>   
-## <a name="ilstubcachehit-event"></a>ILStubCacheHit Event  
- W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
+## <a name="ilstubcachehit-event"></a>Zdarzenie ILStubCacheHit  
+
+W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
@@ -80,8 +72,6 @@ ms.locfileid: "71046435"
 |ManagedInteropMethodName|win: UnicodeString|Nazwa zarządzanej metody międzyoperacyjnego.|  
 |ManagedInteropMethodSignature|win: UnicodeString|Sygnatura zarządzanej metody międzyoperacyjnego.|  
 |ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
-  
- [Powrót do początku](#top)  
   
 ## <a name="see-also"></a>Zobacz także
 

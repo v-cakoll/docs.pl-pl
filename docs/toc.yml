@@ -9,7 +9,7 @@
 - name: Przewodnik klasyczny .NET — WPF
   href: desktop-wpf/
 - name: 'Przewodnik dla języka C#'
-  href: csharp/
+  href: csharp/index.yml
 - name: 'Podręcznik języka F#'
   href: fsharp/
 - name: Przewodnik po Visual Basic

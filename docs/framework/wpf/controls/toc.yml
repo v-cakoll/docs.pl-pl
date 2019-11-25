@@ -1,4 +1,4 @@
-- name: Kontrolki
+- name: Formanty
   href: index.md
   items:
     - name: Kontrolki według kategorii
@@ -15,7 +15,7 @@
               href: how-to-animate-a-borderthickness-value.md
         - name: BulletDecorator
           href: bulletdecorator.md
-        - name: Button
+        - name: Przycisk
           href: button.md
           items:
             - name: Tworzenie przycisku mającego obraz
@@ -133,7 +133,7 @@
           items:
             - name: Definiowanie szablonu GroupBox
               href: how-to-define-a-groupbox-template.md
-        - name: Image (Obraz)
+        - name: Obraz
           href: image.md
           items:
             - name: — Tematy porad
@@ -147,7 +147,7 @@
                   href: how-to-crop-an-image.md
                 - name: Obracanie obrazu
                   href: how-to-rotate-an-image.md
-        - name: Label
+        - name: Etykieta
           href: label.md
           items:
             - name: Tworzenie kontrolki z kluczem dostępu i zawijaniem tekstu
@@ -394,8 +394,8 @@
       items:
         - name: Tworzenie szablonów i stylów
           href: styling-and-templating.md
-        - name: Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate
-          href: customizing-the-appearance-of-an-existing-control.md
+        - name: Dostosowywanie istniejącej kontrolki za pomocą elementu ControlTemplate
+          href: ../../../desktop-wpf/themes/how-to-create-apply-template.md
         - name: 'Instrukcje: znajdowanie elementów generowanych przez element ControlTemplate'
           href: how-to-find-controltemplate-generated-elements.md
     - name: Niestandardowe dostosowywanie formantu

@@ -1,31 +1,31 @@
 ---
-title: 'Instrukcje: Przekontrolowanie prefiksówC#przestrzeni nazw () (LINQ to XML)'
+title: Jak kontrolować prefiksy przestrzeni nazw (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-ms.openlocfilehash: 5b836be46001b660547532311b1b507ff234975f
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9f43c0804d8c830fa75f1e1390cb578c5f5d5106
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710162"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141380"
 ---
-# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a><span data-ttu-id="59d89-102">Instrukcje: Przekontrolowanie prefiksówC#przestrzeni nazw () (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="59d89-102">How to: Control Namespace Prefixes (C#) (LINQ to XML)</span></span>
-<span data-ttu-id="59d89-103">W tym temacie opisano, jak można kontrolować prefiksy przestrzeni nazw podczas serializacji drzewa XML.</span><span class="sxs-lookup"><span data-stu-id="59d89-103">This topic describes how you can control namespace prefixes when serializing an XML tree.</span></span>  
+# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a><span data-ttu-id="69547-102">Jak kontrolować prefiksy przestrzeni nazw (C#) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="69547-102">How to control namespace prefixes (C#) (LINQ to XML)</span></span>
+<span data-ttu-id="69547-103">W tym temacie opisano, jak można kontrolować prefiksy przestrzeni nazw podczas serializacji drzewa XML.</span><span class="sxs-lookup"><span data-stu-id="69547-103">This topic describes how you can control namespace prefixes when serializing an XML tree.</span></span>  
   
- <span data-ttu-id="59d89-104">W wielu sytuacjach nie trzeba kontrolować prefiksów przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="59d89-104">In many situations, it is not necessary to control namespace prefixes.</span></span>  
+ <span data-ttu-id="69547-104">W wielu sytuacjach nie trzeba kontrolować prefiksów przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="69547-104">In many situations, it is not necessary to control namespace prefixes.</span></span>  
   
- <span data-ttu-id="59d89-105">Jednak niektóre narzędzia programowania XML wymagają określonej kontroli prefiksów przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="59d89-105">However, certain XML programming tools require specific control of namespace prefixes.</span></span> <span data-ttu-id="59d89-106">Na przykład może to być manipulowanie arkuszem stylów XSLT lub dokumentem XAML zawierającym osadzone wyrażenia XPath odwołujące się do określonych prefiksów przestrzeni nazw; w takim przypadku ważne jest, aby dokument był serializowany z tymi określonymi prefiksami.</span><span class="sxs-lookup"><span data-stu-id="59d89-106">For example, you might be manipulating an XSLT style sheet or a XAML document that contains embedded XPath expressions that refer to specific namespace prefixes; in this case, it is important that the document be serialized with those specific prefixes.</span></span>  
+ <span data-ttu-id="69547-105">Jednak niektóre narzędzia programowania XML wymagają określonej kontroli prefiksów przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="69547-105">However, certain XML programming tools require specific control of namespace prefixes.</span></span> <span data-ttu-id="69547-106">Na przykład może to być manipulowanie arkuszem stylów XSLT lub dokumentem XAML zawierającym osadzone wyrażenia XPath odwołujące się do określonych prefiksów przestrzeni nazw; w takim przypadku ważne jest, aby dokument był serializowany z tymi określonymi prefiksami.</span><span class="sxs-lookup"><span data-stu-id="69547-106">For example, you might be manipulating an XSLT style sheet or a XAML document that contains embedded XPath expressions that refer to specific namespace prefixes; in this case, it is important that the document be serialized with those specific prefixes.</span></span>  
   
- <span data-ttu-id="59d89-107">Jest to najbardziej typowy powód kontrolowania prefiksów przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="59d89-107">This is the most common reason for controlling namespace prefixes.</span></span>  
+ <span data-ttu-id="69547-107">Jest to najbardziej typowy powód kontrolowania prefiksów przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="69547-107">This is the most common reason for controlling namespace prefixes.</span></span>  
   
- <span data-ttu-id="59d89-108">Kolejną częstą przyczyną kontrolowania prefiksów przestrzeni nazw jest to, że użytkownicy będą mogli ręcznie edytować dokument XML i utworzyć prefiksy przestrzeni nazw, które są wygodne dla użytkownika.</span><span class="sxs-lookup"><span data-stu-id="59d89-108">Another common reason for controlling namespace prefixes is that you want users to edit the XML document manually, and you want to create namespace prefixes that are convenient for the user to type.</span></span> <span data-ttu-id="59d89-109">Na przykład może być generowany dokument XSD.</span><span class="sxs-lookup"><span data-stu-id="59d89-109">For example, you might be generating an XSD document.</span></span> <span data-ttu-id="59d89-110">Konwencje dla schematów sugerują użycie albo `xs` `xsd` jako prefiksu przestrzeni nazw schematu.</span><span class="sxs-lookup"><span data-stu-id="59d89-110">Conventions for schemas suggest that you use either `xs` or `xsd` as the prefix for the schema namespace.</span></span>  
+ <span data-ttu-id="69547-108">Kolejną częstą przyczyną kontrolowania prefiksów przestrzeni nazw jest to, że użytkownicy będą mogli ręcznie edytować dokument XML i utworzyć prefiksy przestrzeni nazw, które są wygodne dla użytkownika.</span><span class="sxs-lookup"><span data-stu-id="69547-108">Another common reason for controlling namespace prefixes is that you want users to edit the XML document manually, and you want to create namespace prefixes that are convenient for the user to type.</span></span> <span data-ttu-id="69547-109">Na przykład może być generowany dokument XSD.</span><span class="sxs-lookup"><span data-stu-id="69547-109">For example, you might be generating an XSD document.</span></span> <span data-ttu-id="69547-110">Konwencje dla schematów sugerują, że jako prefiks przestrzeni nazw schematu należy używać `xs` lub `xsd`.</span><span class="sxs-lookup"><span data-stu-id="69547-110">Conventions for schemas suggest that you use either `xs` or `xsd` as the prefix for the schema namespace.</span></span>  
   
- <span data-ttu-id="59d89-111">Aby kontrolować prefiksy przestrzeni nazw, należy wstawić atrybuty, które deklarują przestrzenie nazw.</span><span class="sxs-lookup"><span data-stu-id="59d89-111">To control namespace prefixes, you insert attributes that declare namespaces.</span></span> <span data-ttu-id="59d89-112">W przypadku deklarowania przestrzeni nazw z określonymi prefiksami [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] program podejmie próbę zahonorowania prefiksów przestrzeni nazw podczas serializacji.</span><span class="sxs-lookup"><span data-stu-id="59d89-112">If you declare the namespaces with specific prefixes, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] will attempt to honor the namespace prefixes when serializing.</span></span>  
+ <span data-ttu-id="69547-111">Aby kontrolować prefiksy przestrzeni nazw, należy wstawić atrybuty, które deklarują przestrzenie nazw.</span><span class="sxs-lookup"><span data-stu-id="69547-111">To control namespace prefixes, you insert attributes that declare namespaces.</span></span> <span data-ttu-id="69547-112">Jeśli zadeklarujesz przestrzenie nazw z określonymi prefiksami, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] podejmie próbę zahonorowania prefiksów przestrzeni nazw podczas serializacji.</span><span class="sxs-lookup"><span data-stu-id="69547-112">If you declare the namespaces with specific prefixes, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] will attempt to honor the namespace prefixes when serializing.</span></span>  
   
- <span data-ttu-id="59d89-113">Aby utworzyć atrybut, który deklaruje przestrzeń nazw z prefiksem, utworzysz atrybut, w którym przestrzeń nazw atrybutu jest <xref:System.Xml.Linq.XNamespace.Xmlns%2A>, a nazwa atrybutu jest prefiksem przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="59d89-113">To create an attribute that declares a namespace with a prefix, you create an attribute where the namespace of the name of the attribute is <xref:System.Xml.Linq.XNamespace.Xmlns%2A>, and the name of the attribute is the namespace prefix.</span></span> <span data-ttu-id="59d89-114">Wartość atrybutu jest identyfikatorem URI przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="59d89-114">The value of the attribute is the URI of the namespace.</span></span>  
+ <span data-ttu-id="69547-113">Aby utworzyć atrybut, który deklaruje przestrzeń nazw z prefiksem, utworzysz atrybut, w którym przestrzeń nazw nazwy atrybutu jest <xref:System.Xml.Linq.XNamespace.Xmlns%2A>, a nazwa atrybutu jest prefiksem przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="69547-113">To create an attribute that declares a namespace with a prefix, you create an attribute where the namespace of the name of the attribute is <xref:System.Xml.Linq.XNamespace.Xmlns%2A>, and the name of the attribute is the namespace prefix.</span></span> <span data-ttu-id="69547-114">Wartość atrybutu jest identyfikatorem URI przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="69547-114">The value of the attribute is the URI of the namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="59d89-115">Przykład</span><span class="sxs-lookup"><span data-stu-id="59d89-115">Example</span></span>  
- <span data-ttu-id="59d89-116">Ten przykład deklaruje dwie przestrzenie nazw.</span><span class="sxs-lookup"><span data-stu-id="59d89-116">This example declares two namespaces.</span></span> <span data-ttu-id="59d89-117">Określa, że `http://www.adventure-works.com` przestrzeń nazw ma `aw`prefiks i że `www.fourthcoffee.com` przestrzeń nazw ma prefiks `fc`.</span><span class="sxs-lookup"><span data-stu-id="59d89-117">It specifies that the `http://www.adventure-works.com` namespace has the prefix of `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.</span></span>  
+## <a name="example"></a><span data-ttu-id="69547-115">Przykład</span><span class="sxs-lookup"><span data-stu-id="69547-115">Example</span></span>  
+ <span data-ttu-id="69547-116">Ten przykład deklaruje dwie przestrzenie nazw.</span><span class="sxs-lookup"><span data-stu-id="69547-116">This example declares two namespaces.</span></span> <span data-ttu-id="69547-117">Określa, że przestrzeń nazw `http://www.adventure-works.com` ma prefiks `aw`i że przestrzeń nazw `www.fourthcoffee.com` ma prefiks `fc`.</span><span class="sxs-lookup"><span data-stu-id="69547-117">It specifies that the `http://www.adventure-works.com` namespace has the prefix of `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.</span></span>  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -42,7 +42,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- <span data-ttu-id="59d89-118">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="59d89-118">This example produces the following output:</span></span>  
+ <span data-ttu-id="69547-118">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="69547-118">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com" xmlns:fc="www.fourthcoffee.com">  
@@ -54,6 +54,6 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="59d89-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="59d89-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="69547-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="69547-119">See also</span></span>
 
-- [<span data-ttu-id="59d89-120">Przegląd przestrzeni nazw (LINQ to XML)C#()</span><span class="sxs-lookup"><span data-stu-id="59d89-120">Namespaces Overview (LINQ to XML) (C#)</span></span>](namespaces-overview-linq-to-xml.md)
+- [<span data-ttu-id="69547-120">Przegląd przestrzeni nazw (LINQ to XML)C#()</span><span class="sxs-lookup"><span data-stu-id="69547-120">Namespaces Overview (LINQ to XML) (C#)</span></span>](namespaces-overview-linq-to-xml.md)

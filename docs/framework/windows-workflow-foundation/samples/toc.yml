@@ -24,8 +24,6 @@
               href: fault-handling-in-a-flowchart-activity-using-trycatch.md
             - name: Ładowanie z pliku XAML
               href: load-from-xaml.md
-            - name: Używanie działania InvokeMethod
-              href: using-the-invokemethod-activity.md
             - name: Używanie działania Pick
               href: using-the-pick-activity.md
         - name: Działania niestandardowe

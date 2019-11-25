@@ -1,5 +1,5 @@
 ---
-title: Overridable (Visual Basic)
+title: Overridable
 ms.date: 07/20/2015
 f1_keywords:
 - Overridable
@@ -16,49 +16,49 @@ helpviewer_keywords:
 - Overridable keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-ms.openlocfilehash: 91a1cedc66fd66e336b6e7976ad87ad638cb43c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c639665fd92a56de6fb6e5147cda873ef457b45
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053902"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351400"
 ---
-# <a name="overridable-visual-basic"></a><span data-ttu-id="ccc4b-102">Overridable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ccc4b-102">Overridable (Visual Basic)</span></span>
-<span data-ttu-id="ccc4b-103">Określa, że właściwość lub procedura może być zastąpione o identycznej nazwie właściwość lub procedura w klasie pochodnej.</span><span class="sxs-lookup"><span data-stu-id="ccc4b-103">Specifies that a property or procedure can be overridden by an identically named property or procedure in a derived class.</span></span>  
+# <a name="overridable-visual-basic"></a><span data-ttu-id="6ce9f-102">Overridable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6ce9f-102">Overridable (Visual Basic)</span></span>
+<span data-ttu-id="6ce9f-103">Specifies that a property or procedure can be overridden by an identically named property or procedure in a derived class.</span><span class="sxs-lookup"><span data-stu-id="6ce9f-103">Specifies that a property or procedure can be overridden by an identically named property or procedure in a derived class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ccc4b-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="ccc4b-104">Remarks</span></span>  
- <span data-ttu-id="ccc4b-105">`Overridable` Modyfikator umożliwia właściwość lub metoda klasy został nadpisany w klasie pochodnej.</span><span class="sxs-lookup"><span data-stu-id="ccc4b-105">The `Overridable` modifier allows a property or method in a class to be overridden in a derived class.</span></span> <span data-ttu-id="ccc4b-106">[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) modyfikator zapobiega zastępowaniu w klasie pochodnej właściwości lub metody.</span><span class="sxs-lookup"><span data-stu-id="ccc4b-106">The [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) modifier prevents a property or method from being overridden in a derived class.</span></span>  <span data-ttu-id="ccc4b-107">Aby uzyskać więcej informacji, zobacz [podstawowe informacje o dziedziczeniu](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).</span><span class="sxs-lookup"><span data-stu-id="ccc4b-107">For more information, see [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6ce9f-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="6ce9f-104">Remarks</span></span>  
+ <span data-ttu-id="6ce9f-105">The `Overridable` modifier allows a property or method in a class to be overridden in a derived class.</span><span class="sxs-lookup"><span data-stu-id="6ce9f-105">The `Overridable` modifier allows a property or method in a class to be overridden in a derived class.</span></span> <span data-ttu-id="6ce9f-106">The [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) modifier prevents a property or method from being overridden in a derived class.</span><span class="sxs-lookup"><span data-stu-id="6ce9f-106">The [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) modifier prevents a property or method from being overridden in a derived class.</span></span>  <span data-ttu-id="6ce9f-107">For more information, see [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).</span><span class="sxs-lookup"><span data-stu-id="6ce9f-107">For more information, see [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).</span></span>  
   
- <span data-ttu-id="ccc4b-108">Jeśli `Overridable` lub `NotOverridable` modyfikator nie zostanie określony, domyślnie zależy od tego, czy właściwość lub metoda zastępuje właściwości klasy bazowej lub metody.</span><span class="sxs-lookup"><span data-stu-id="ccc4b-108">If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method.</span></span> <span data-ttu-id="ccc4b-109">Jeśli właściwość lub metoda zastępuje właściwości klasy bazowej lub metody, domyślne ustawienie to `Overridable`; w przeciwnym razie jest `NotOverridable`.</span><span class="sxs-lookup"><span data-stu-id="ccc4b-109">If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.</span></span>  
+ <span data-ttu-id="6ce9f-108">If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method.</span><span class="sxs-lookup"><span data-stu-id="6ce9f-108">If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method.</span></span> <span data-ttu-id="6ce9f-109">If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.</span><span class="sxs-lookup"><span data-stu-id="6ce9f-109">If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.</span></span>  
   
- <span data-ttu-id="ccc4b-110">Można w tle lub Przesłoń, aby zdefiniować dziedziczonego elementu, ale istnieją znaczne różnice między dwa podejścia.</span><span class="sxs-lookup"><span data-stu-id="ccc4b-110">You can shadow or override to redefine an inherited element, but there are significant differences between the two approaches.</span></span> <span data-ttu-id="ccc4b-111">Aby uzyskać więcej informacji, zobacz [przesłanianie w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).</span><span class="sxs-lookup"><span data-stu-id="ccc4b-111">For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).</span></span>  
+ <span data-ttu-id="6ce9f-110">You can shadow or override to redefine an inherited element, but there are significant differences between the two approaches.</span><span class="sxs-lookup"><span data-stu-id="6ce9f-110">You can shadow or override to redefine an inherited element, but there are significant differences between the two approaches.</span></span> <span data-ttu-id="6ce9f-111">For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).</span><span class="sxs-lookup"><span data-stu-id="6ce9f-111">For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).</span></span>  
   
- <span data-ttu-id="ccc4b-112">Element, który może zostać przesłonięta jest czasami określane jako *wirtualnego* elementu.</span><span class="sxs-lookup"><span data-stu-id="ccc4b-112">An element that can be overridden is sometimes referred to as a *virtual* element.</span></span> <span data-ttu-id="ccc4b-113">Jeśli może zostać zastąpiona, ale nie musi być, niekiedy nazywanych również *konkretnych* elementu.</span><span class="sxs-lookup"><span data-stu-id="ccc4b-113">If it can be overridden, but does not have to be, it is sometimes also called a *concrete* element.</span></span>  
+ <span data-ttu-id="6ce9f-112">An element that can be overridden is sometimes referred to as a *virtual* element.</span><span class="sxs-lookup"><span data-stu-id="6ce9f-112">An element that can be overridden is sometimes referred to as a *virtual* element.</span></span> <span data-ttu-id="6ce9f-113">If it can be overridden, but does not have to be, it is sometimes also called a *concrete* element.</span><span class="sxs-lookup"><span data-stu-id="6ce9f-113">If it can be overridden, but does not have to be, it is sometimes also called a *concrete* element.</span></span>  
   
- <span data-ttu-id="ccc4b-114">Możesz użyć `Overridable` tylko w instrukcji deklaracji właściwość lub procedura.</span><span class="sxs-lookup"><span data-stu-id="ccc4b-114">You can use `Overridable` only in a property or procedure declaration statement.</span></span>  
+ <span data-ttu-id="6ce9f-114">You can use `Overridable` only in a property or procedure declaration statement.</span><span class="sxs-lookup"><span data-stu-id="6ce9f-114">You can use `Overridable` only in a property or procedure declaration statement.</span></span>  
   
-## <a name="combined-modifiers"></a><span data-ttu-id="ccc4b-115">Modyfikatory połączone</span><span class="sxs-lookup"><span data-stu-id="ccc4b-115">Combined Modifiers</span></span>  
- <span data-ttu-id="ccc4b-116">Nie można określić `Overridable` lub `NotOverridable` dla `Private` metody.</span><span class="sxs-lookup"><span data-stu-id="ccc4b-116">You cannot specify `Overridable` or `NotOverridable` for a `Private` method.</span></span>  
+## <a name="combined-modifiers"></a><span data-ttu-id="6ce9f-115">Combined Modifiers</span><span class="sxs-lookup"><span data-stu-id="6ce9f-115">Combined Modifiers</span></span>  
+ <span data-ttu-id="6ce9f-116">You cannot specify `Overridable` or `NotOverridable` for a `Private` method.</span><span class="sxs-lookup"><span data-stu-id="6ce9f-116">You cannot specify `Overridable` or `NotOverridable` for a `Private` method.</span></span>  
   
- <span data-ttu-id="ccc4b-117">Nie można określić `Overridable` wraz z `MustOverride`, `NotOverridable`, lub `Shared` w tej samej deklaracji.</span><span class="sxs-lookup"><span data-stu-id="ccc4b-117">You cannot specify `Overridable` together with `MustOverride`, `NotOverridable`, or `Shared` in the same declaration.</span></span>  
+ <span data-ttu-id="6ce9f-117">You cannot specify `Overridable` together with `MustOverride`, `NotOverridable`, or `Shared` in the same declaration.</span><span class="sxs-lookup"><span data-stu-id="6ce9f-117">You cannot specify `Overridable` together with `MustOverride`, `NotOverridable`, or `Shared` in the same declaration.</span></span>  
   
- <span data-ttu-id="ccc4b-118">Ponieważ element nadrzędnych jest niejawnie możliwym do zastąpienia, nie można połączyć `Overridable` z `Overrides`.</span><span class="sxs-lookup"><span data-stu-id="ccc4b-118">Because an overriding element is implicitly overridable, you cannot combine `Overridable` with `Overrides`.</span></span>  
+ <span data-ttu-id="6ce9f-118">Because an overriding element is implicitly overridable, you cannot combine `Overridable` with `Overrides`.</span><span class="sxs-lookup"><span data-stu-id="6ce9f-118">Because an overriding element is implicitly overridable, you cannot combine `Overridable` with `Overrides`.</span></span>  
   
-## <a name="usage"></a><span data-ttu-id="ccc4b-119">Użycie</span><span class="sxs-lookup"><span data-stu-id="ccc4b-119">Usage</span></span>  
- <span data-ttu-id="ccc4b-120">`Overridable` Modyfikator mogą być używane w tych kontekstach:</span><span class="sxs-lookup"><span data-stu-id="ccc4b-120">The `Overridable` modifier can be used in these contexts:</span></span>  
+## <a name="usage"></a><span data-ttu-id="6ce9f-119">Użycie</span><span class="sxs-lookup"><span data-stu-id="6ce9f-119">Usage</span></span>  
+ <span data-ttu-id="6ce9f-120">The `Overridable` modifier can be used in these contexts:</span><span class="sxs-lookup"><span data-stu-id="6ce9f-120">The `Overridable` modifier can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="ccc4b-121">Function, instrukcja</span><span class="sxs-lookup"><span data-stu-id="ccc4b-121">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="6ce9f-121">Function, instrukcja</span><span class="sxs-lookup"><span data-stu-id="6ce9f-121">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [<span data-ttu-id="ccc4b-122">Instrukcja Property</span><span class="sxs-lookup"><span data-stu-id="ccc4b-122">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="6ce9f-122">Property, instrukcja</span><span class="sxs-lookup"><span data-stu-id="6ce9f-122">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [<span data-ttu-id="ccc4b-123">Sub, instrukcja</span><span class="sxs-lookup"><span data-stu-id="ccc4b-123">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="6ce9f-123">Sub, instrukcja</span><span class="sxs-lookup"><span data-stu-id="6ce9f-123">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="ccc4b-124">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ccc4b-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6ce9f-124">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6ce9f-124">See also</span></span>
 
-- [<span data-ttu-id="ccc4b-125">Modyfikatory</span><span class="sxs-lookup"><span data-stu-id="ccc4b-125">Modifiers</span></span>](../../../visual-basic/language-reference/modifiers/index.md)
-- [<span data-ttu-id="ccc4b-126">Podstawowe informacje o dziedziczeniu</span><span class="sxs-lookup"><span data-stu-id="ccc4b-126">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [<span data-ttu-id="ccc4b-127">MustOverride</span><span class="sxs-lookup"><span data-stu-id="ccc4b-127">MustOverride</span></span>](../../../visual-basic/language-reference/modifiers/mustoverride.md)
-- [<span data-ttu-id="ccc4b-128">NotOverridable</span><span class="sxs-lookup"><span data-stu-id="ccc4b-128">NotOverridable</span></span>](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [<span data-ttu-id="ccc4b-129">Overrides</span><span class="sxs-lookup"><span data-stu-id="ccc4b-129">Overrides</span></span>](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [<span data-ttu-id="ccc4b-130">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="ccc4b-130">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
-- [<span data-ttu-id="ccc4b-131">Przesłanianie w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ccc4b-131">Shadowing in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [<span data-ttu-id="6ce9f-125">Modyfikatory</span><span class="sxs-lookup"><span data-stu-id="6ce9f-125">Modifiers</span></span>](../../../visual-basic/language-reference/modifiers/index.md)
+- [<span data-ttu-id="6ce9f-126">Podstawowe informacje o dziedziczeniu</span><span class="sxs-lookup"><span data-stu-id="6ce9f-126">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [<span data-ttu-id="6ce9f-127">MustOverride</span><span class="sxs-lookup"><span data-stu-id="6ce9f-127">MustOverride</span></span>](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [<span data-ttu-id="6ce9f-128">NotOverridable</span><span class="sxs-lookup"><span data-stu-id="6ce9f-128">NotOverridable</span></span>](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- [<span data-ttu-id="6ce9f-129">Overrides</span><span class="sxs-lookup"><span data-stu-id="6ce9f-129">Overrides</span></span>](../../../visual-basic/language-reference/modifiers/overrides.md)
+- [<span data-ttu-id="6ce9f-130">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="6ce9f-130">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="6ce9f-131">Shadowing in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6ce9f-131">Shadowing in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

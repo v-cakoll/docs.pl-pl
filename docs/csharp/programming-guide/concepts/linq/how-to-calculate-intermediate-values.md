@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Oblicz wartości pośrednie (C#)'
+title: Jak obliczyć wartości pośrednie (C#)
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-ms.openlocfilehash: fe3f992e85b3fb508fced943e1428a4fb6ae2490
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3ead3bfb02f7c9192db96996c1f1e01a86a4191a
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205383"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141450"
 ---
-# <a name="how-to-calculate-intermediate-values-c"></a><span data-ttu-id="25bdb-102">Instrukcje: Oblicz wartości pośrednie (C#)</span><span class="sxs-lookup"><span data-stu-id="25bdb-102">How to: Calculate Intermediate Values (C#)</span></span>
-<span data-ttu-id="25bdb-103">Ten przykład pokazuje sposób obliczania wartości pośrednich, które mogą być używane do sortowania, filtrowania i wybierania.</span><span class="sxs-lookup"><span data-stu-id="25bdb-103">This example shows how to calculate intermediate values that can be used in sorting, filtering, and selecting.</span></span>  
+# <a name="how-to-calculate-intermediate-values-c"></a><span data-ttu-id="2a87f-102">Jak obliczyć wartości pośrednie (C#)</span><span class="sxs-lookup"><span data-stu-id="2a87f-102">How to calculate intermediate values (C#)</span></span>
+<span data-ttu-id="2a87f-103">Ten przykład pokazuje sposób obliczania wartości pośrednich, które mogą być używane do sortowania, filtrowania i wybierania.</span><span class="sxs-lookup"><span data-stu-id="2a87f-103">This example shows how to calculate intermediate values that can be used in sorting, filtering, and selecting.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="25bdb-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="25bdb-104">Example</span></span>  
- <span data-ttu-id="25bdb-105">W poniższym przykładzie zastosowano `Let` klauzulę.</span><span class="sxs-lookup"><span data-stu-id="25bdb-105">The following example uses the `Let` clause.</span></span>  
+## <a name="example"></a><span data-ttu-id="2a87f-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="2a87f-104">Example</span></span>  
+ <span data-ttu-id="2a87f-105">W poniższym przykładzie zastosowano klauzulę `Let`.</span><span class="sxs-lookup"><span data-stu-id="2a87f-105">The following example uses the `Let` clause.</span></span>  
   
- <span data-ttu-id="25bdb-106">W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="25bdb-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="2a87f-106">Ten przykład używa następującego dokumentu XML: [przykładowy plik XML: dane liczbowe (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="2a87f-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -29,7 +29,7 @@ foreach (decimal ex in extensions)
     Console.WriteLine(ex);  
 ```  
   
- <span data-ttu-id="25bdb-107">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="25bdb-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="2a87f-107">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="2a87f-107">This code produces the following output:</span></span>  
   
 ```output  
 55.92  
@@ -39,10 +39,10 @@ foreach (decimal ex in extensions)
 435.00  
 ```  
   
-## <a name="example"></a><span data-ttu-id="25bdb-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="25bdb-108">Example</span></span>  
- <span data-ttu-id="25bdb-109">W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="25bdb-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="25bdb-110">Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="25bdb-110">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="2a87f-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="2a87f-108">Example</span></span>  
+ <span data-ttu-id="2a87f-109">W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="2a87f-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="2a87f-110">Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="2a87f-110">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="25bdb-111">W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Dane liczbowe w przestrzeni nazw](./sample-xml-file-numerical-data-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="25bdb-111">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](./sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="2a87f-111">Ten przykład używa następującego dokumentu XML: [przykładowy plik XML: dane liczbowe w przestrzeni nazw](./sample-xml-file-numerical-data-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="2a87f-111">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](./sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  
@@ -57,7 +57,7 @@ foreach (decimal ex in extensions)
     Console.WriteLine(ex);  
 ```  
   
- <span data-ttu-id="25bdb-112">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="25bdb-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="2a87f-112">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="2a87f-112">This code produces the following output:</span></span>  
   
 ```output  
 55.92  

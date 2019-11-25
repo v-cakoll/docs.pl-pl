@@ -1,5 +1,5 @@
 ---
-title: Operator \= (Visual Basic)
+title: '\=, operator'
 ms.date: 07/20/2015
 f1_keywords:
 - '\='
@@ -11,50 +11,50 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-ms.openlocfilehash: d7b4a6946cc38984272a6b63e14e8c1db2825a5e
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 600acf9b41b63358da245fe602595fee4093b15b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700678"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330944"
 ---
-# <a name="-operator"></a><span data-ttu-id="9b77b-102">Operator \\ =</span><span class="sxs-lookup"><span data-stu-id="9b77b-102">\\= Operator</span></span>
-<span data-ttu-id="9b77b-103">Dzieli wartość zmiennej lub właściwości przez wartość wyrażenia i przypisuje wynik całkowity do zmiennej lub właściwości.</span><span class="sxs-lookup"><span data-stu-id="9b77b-103">Divides the value of a variable or property by the value of an expression and assigns the integer result to the variable or property.</span></span>  
+# <a name="-operator"></a><span data-ttu-id="8d8ec-102">\\= Operator</span><span class="sxs-lookup"><span data-stu-id="8d8ec-102">\\= Operator</span></span>
+<span data-ttu-id="8d8ec-103">Divides the value of a variable or property by the value of an expression and assigns the integer result to the variable or property.</span><span class="sxs-lookup"><span data-stu-id="8d8ec-103">Divides the value of a variable or property by the value of an expression and assigns the integer result to the variable or property.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9b77b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9b77b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8d8ec-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="8d8ec-104">Syntax</span></span>  
   
 ```vb  
 variableorproperty \= expression  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="9b77b-105">Części</span><span class="sxs-lookup"><span data-stu-id="9b77b-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="8d8ec-105">Części</span><span class="sxs-lookup"><span data-stu-id="8d8ec-105">Parts</span></span>  
  `variableorproperty`  
- <span data-ttu-id="9b77b-106">Wymagany.</span><span class="sxs-lookup"><span data-stu-id="9b77b-106">Required.</span></span> <span data-ttu-id="9b77b-107">Dowolna zmienna lub właściwość numeryczna.</span><span class="sxs-lookup"><span data-stu-id="9b77b-107">Any numeric variable or property.</span></span>  
+ <span data-ttu-id="8d8ec-106">Wymagany.</span><span class="sxs-lookup"><span data-stu-id="8d8ec-106">Required.</span></span> <span data-ttu-id="8d8ec-107">Any numeric variable or property.</span><span class="sxs-lookup"><span data-stu-id="8d8ec-107">Any numeric variable or property.</span></span>  
   
  `expression`  
- <span data-ttu-id="9b77b-108">Wymagany.</span><span class="sxs-lookup"><span data-stu-id="9b77b-108">Required.</span></span> <span data-ttu-id="9b77b-109">Dowolne wyrażenie liczbowe.</span><span class="sxs-lookup"><span data-stu-id="9b77b-109">Any numeric expression.</span></span>  
+ <span data-ttu-id="8d8ec-108">Wymagany.</span><span class="sxs-lookup"><span data-stu-id="8d8ec-108">Required.</span></span> <span data-ttu-id="8d8ec-109">Any numeric expression.</span><span class="sxs-lookup"><span data-stu-id="8d8ec-109">Any numeric expression.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9b77b-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="9b77b-110">Remarks</span></span>  
- <span data-ttu-id="9b77b-111">Element po lewej stronie operatora `\=` może być prostą zmienną skalarną, właściwością lub elementem tablicy.</span><span class="sxs-lookup"><span data-stu-id="9b77b-111">The element on the left side of the `\=` operator can be a simple scalar variable, a property, or an element of an array.</span></span> <span data-ttu-id="9b77b-112">Zmienna lub właściwość nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).</span><span class="sxs-lookup"><span data-stu-id="9b77b-112">The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8d8ec-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="8d8ec-110">Remarks</span></span>  
+ <span data-ttu-id="8d8ec-111">The element on the left side of the `\=` operator can be a simple scalar variable, a property, or an element of an array.</span><span class="sxs-lookup"><span data-stu-id="8d8ec-111">The element on the left side of the `\=` operator can be a simple scalar variable, a property, or an element of an array.</span></span> <span data-ttu-id="8d8ec-112">The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span><span class="sxs-lookup"><span data-stu-id="8d8ec-112">The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span></span>  
   
- <span data-ttu-id="9b77b-113">Operator `\=` dzieli wartość zmiennej lub właściwości po lewej stronie przez wartość po prawej stronie, a następnie przypisuje wynik całkowity do zmiennej lub właściwości po jej lewej stronie.</span><span class="sxs-lookup"><span data-stu-id="9b77b-113">The `\=` operator divides the value of a variable or property on its left by the value on its right, and assigns the integer result to the variable or property on its left</span></span>  
+ <span data-ttu-id="8d8ec-113">The `\=` operator divides the value of a variable or property on its left by the value on its right, and assigns the integer result to the variable or property on its left</span><span class="sxs-lookup"><span data-stu-id="8d8ec-113">The `\=` operator divides the value of a variable or property on its left by the value on its right, and assigns the integer result to the variable or property on its left</span></span>  
   
- <span data-ttu-id="9b77b-114">Aby uzyskać więcej informacji na temat dzielenia liczb całkowitych, zobacz element [\ operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).</span><span class="sxs-lookup"><span data-stu-id="9b77b-114">For further information on integer division, see [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).</span></span>  
+ <span data-ttu-id="8d8ec-114">For further information on integer division, see [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).</span><span class="sxs-lookup"><span data-stu-id="8d8ec-114">For further information on integer division, see [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).</span></span>  
   
-## <a name="overloading"></a><span data-ttu-id="9b77b-115">Przeciążenie</span><span class="sxs-lookup"><span data-stu-id="9b77b-115">Overloading</span></span>  
- <span data-ttu-id="9b77b-116">Operator `\` może być *przeciążony*, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury.</span><span class="sxs-lookup"><span data-stu-id="9b77b-116">The `\` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="9b77b-117">Przeciążanie operatora `\` wpływa na zachowanie operatora `\=`.</span><span class="sxs-lookup"><span data-stu-id="9b77b-117">Overloading the `\` operator affects the behavior of the `\=` operator.</span></span> <span data-ttu-id="9b77b-118">Jeśli kod używa `\=` na klasie lub strukturze, która przeciąża `\`, należy zrozumieć jego ponownie zdefiniowane zachowanie.</span><span class="sxs-lookup"><span data-stu-id="9b77b-118">If your code uses `\=` on a class or structure that overloads `\`, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="9b77b-119">Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="9b77b-119">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
+## <a name="overloading"></a><span data-ttu-id="8d8ec-115">Przeciążenie</span><span class="sxs-lookup"><span data-stu-id="8d8ec-115">Overloading</span></span>  
+ <span data-ttu-id="8d8ec-116">The `\` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span><span class="sxs-lookup"><span data-stu-id="8d8ec-116">The `\` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="8d8ec-117">Overloading the `\` operator affects the behavior of the `\=` operator.</span><span class="sxs-lookup"><span data-stu-id="8d8ec-117">Overloading the `\` operator affects the behavior of the `\=` operator.</span></span> <span data-ttu-id="8d8ec-118">If your code uses `\=` on a class or structure that overloads `\`, be sure you understand its redefined behavior.</span><span class="sxs-lookup"><span data-stu-id="8d8ec-118">If your code uses `\=` on a class or structure that overloads `\`, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="8d8ec-119">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="8d8ec-119">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9b77b-120">Przykład</span><span class="sxs-lookup"><span data-stu-id="9b77b-120">Example</span></span>  
- <span data-ttu-id="9b77b-121">Poniższy przykład używa operatora `\=` w celu podzielenia jednej zmiennej `Integer` przez sekundę i przypisanie wyniku całkowitego do pierwszej zmiennej.</span><span class="sxs-lookup"><span data-stu-id="9b77b-121">The following example uses the `\=` operator to divide one `Integer` variable by a second and assign the integer result to the first variable.</span></span>  
+## <a name="example"></a><span data-ttu-id="8d8ec-120">Przykład</span><span class="sxs-lookup"><span data-stu-id="8d8ec-120">Example</span></span>  
+ <span data-ttu-id="8d8ec-121">The following example uses the `\=` operator to divide one `Integer` variable by a second and assign the integer result to the first variable.</span><span class="sxs-lookup"><span data-stu-id="8d8ec-121">The following example uses the `\=` operator to divide one `Integer` variable by a second and assign the integer result to the first variable.</span></span>  
   
  [!code-vb[VbVbalrOperators#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#19)]  
   
-## <a name="see-also"></a><span data-ttu-id="9b77b-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9b77b-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8d8ec-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8d8ec-122">See also</span></span>
 
-- [<span data-ttu-id="9b77b-123">\ — Operator (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9b77b-123">\ Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/integer-division-operator.md)
-- [<span data-ttu-id="9b77b-124">Operator/= (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9b77b-124">/= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
-- [<span data-ttu-id="9b77b-125">Operatory przypisania</span><span class="sxs-lookup"><span data-stu-id="9b77b-125">Assignment Operators</span></span>](../../../visual-basic/language-reference/operators/assignment-operators.md)
-- [<span data-ttu-id="9b77b-126">Operatory arytmetyczne</span><span class="sxs-lookup"><span data-stu-id="9b77b-126">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [<span data-ttu-id="9b77b-127">Pierwszeństwo operatorów w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9b77b-127">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="9b77b-128">Operatory według funkcji</span><span class="sxs-lookup"><span data-stu-id="9b77b-128">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="9b77b-129">Instrukcje</span><span class="sxs-lookup"><span data-stu-id="9b77b-129">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
+- [<span data-ttu-id="8d8ec-123">\ Operator (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8d8ec-123">\ Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [<span data-ttu-id="8d8ec-124">/= Operator (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8d8ec-124">/= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [<span data-ttu-id="8d8ec-125">Operatory przypisania</span><span class="sxs-lookup"><span data-stu-id="8d8ec-125">Assignment Operators</span></span>](../../../visual-basic/language-reference/operators/assignment-operators.md)
+- [<span data-ttu-id="8d8ec-126">Operatory arytmetyczne</span><span class="sxs-lookup"><span data-stu-id="8d8ec-126">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [<span data-ttu-id="8d8ec-127">Operator Precedence in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8d8ec-127">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="8d8ec-128">Operatory według funkcji</span><span class="sxs-lookup"><span data-stu-id="8d8ec-128">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="8d8ec-129">Instrukcje</span><span class="sxs-lookup"><span data-stu-id="8d8ec-129">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)

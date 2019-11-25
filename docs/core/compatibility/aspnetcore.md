@@ -1,21 +1,21 @@
 ---
 title: ASP.NET Core istotne zmiany — .NET Core
 description: Wyświetla listę istotnych zmian w ASP.NET Core.
-ms.date: 10/17/2019
+ms.date: 11/20/2019
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 4a382fc94eac656605260f628f3eaa5b41bc24da
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 26b1fc2d2abe2dd8421a8c527add6b9fd4f3f847
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579985"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74282510"
 ---
-# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="9355d-103">ASP.NET Core istotne zmiany</span><span class="sxs-lookup"><span data-stu-id="9355d-103">ASP.NET Core breaking changes</span></span>
+# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="cc884-103">ASP.NET Core istotne zmiany</span><span class="sxs-lookup"><span data-stu-id="cc884-103">ASP.NET Core breaking changes</span></span>
 
-<span data-ttu-id="9355d-104">Poniżej znajduje się lista ASP.NET Core istotne zmiany wprowadzone przez ASP.NET Core wersji.</span><span class="sxs-lookup"><span data-stu-id="9355d-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="9355d-105">ASP.NET Core udostępnia funkcje deweloperskie aplikacji sieci Web używane przez platformę .NET Core.</span><span class="sxs-lookup"><span data-stu-id="9355d-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
+<span data-ttu-id="cc884-104">Poniżej znajduje się lista ASP.NET Core istotne zmiany wprowadzone przez ASP.NET Core wersji.</span><span class="sxs-lookup"><span data-stu-id="cc884-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="cc884-105">ASP.NET Core udostępnia funkcje deweloperskie aplikacji sieci Web używane przez platformę .NET Core.</span><span class="sxs-lookup"><span data-stu-id="cc884-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
 
-## <a name="aspnet-core-30"></a><span data-ttu-id="9355d-106">ASP.NET Core 3,0</span><span class="sxs-lookup"><span data-stu-id="9355d-106">ASP.NET Core 3.0</span></span>
+## <a name="aspnet-core-30"></a><span data-ttu-id="cc884-106">ASP.NET Core 3,0</span><span class="sxs-lookup"><span data-stu-id="cc884-106">ASP.NET Core 3.0</span></span>
 
 [!INCLUDE[obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 
@@ -86,6 +86,10 @@ ms.locfileid: "72579985"
 ***
 
 [!INCLUDE[HTTP: Response body infrastructure changes](~/includes/core-changes/aspnetcore/3.0/http-response-body-changes.md)]
+
+***
+
+[!INCLUDE[HTTP: Some cookie SameSite default values changed](~/includes/core-changes/aspnetcore/3.0/http-cookie-samesite-defaults-change.md)]
 
 ***
 

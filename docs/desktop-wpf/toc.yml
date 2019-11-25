@@ -26,6 +26,8 @@
               href: fundamentals/styles-templates-overview.md
             - name: Tworzenie i stosowanie stylu
               href: fundamentals/styles-templates-create-apply-style.md
+            - name: Tworzenie i stosowanie szablonu
+              href: themes/how-to-create-apply-template.md
     - name: Praca z danymi
       items:
         - name: Omówienie powiązań danych

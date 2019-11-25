@@ -1,5 +1,5 @@
 ---
-title: -= — Operator (Visual Basic)
+title: Operator -=
 ms.date: 07/20/2015
 f1_keywords:
 - vb.-=
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - operator -=
 - compound assignment statements [Visual Basic]
 ms.assetid: 5ead0c37-ae50-48f7-8435-8e341d81cae1
-ms.openlocfilehash: f857c8bf2f89120e047c49674ce9e8a3bff22f7d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 44cb226d64e9f0b86c6566eb25fbafd6323a6d4c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701318"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347810"
 ---
 # <a name="--operator-visual-basic"></a>-= — Operator (Visual Basic)
-Odejmuje wartość wyrażenia od wartości zmiennej lub właściwości i przypisuje wynik do zmiennej lub właściwości.  
+Subtracts the value of an expression from the value of a variable or property and assigns the result to the variable or property.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -28,29 +28,29 @@ variableorproperty -= expression
   
 ## <a name="parts"></a>Części  
  `variableorproperty`  
- Wymagany. Dowolna zmienna lub właściwość numeryczna.  
+ Wymagany. Any numeric variable or property.  
   
  `expression`  
- Wymagany. Dowolne wyrażenie liczbowe.  
+ Wymagany. Any numeric expression.  
   
 ## <a name="remarks"></a>Uwagi  
- Element po lewej stronie operatora `-=` może być prostą zmienną skalarną, właściwością lub elementem tablicy. Zmienna lub właściwość nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ The element on the left side of the `-=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- Operator `-=` najpierw odejmuje wartość wyrażenia (po prawej stronie operatora) od wartości zmiennej lub właściwości (po lewej stronie operatora), a następnie. Następnie operator przypisuje wynik tej operacji do zmiennej lub właściwości.  
+ The `-=` operator first subtracts the value of the expression (on the right-hand side of the operator) from the value of the variable or property (on the left-hand side of the operator). The operator then assigns the result of that operation to the variable or property.  
   
 ## <a name="overloading"></a>Przeciążenie  
- [Operator-(Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md) może być *przeciążony*, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury. Przeciążanie operatora `-` wpływa na zachowanie operatora `-=`. Jeśli kod używa `-=` na klasie lub strukturze, która przeciąża `-`, należy zrozumieć jego ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The [- Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `-` operator affects the behavior of the `-=` operator. If your code uses `-=` on a class or structure that overloads `-`, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład używa operatora `-=` do odejmowania jednej zmiennej `Integer` od innej i przypisuje wynik do ostatniej zmiennej.  
+ The following example uses the `-=` operator to subtract one `Integer` variable from another and assign the result to the latter variable.  
   
  [!code-vb[VbVbalrOperators#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [-— Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md)
+- [- Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md)
 - [Operatory przypisania](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)

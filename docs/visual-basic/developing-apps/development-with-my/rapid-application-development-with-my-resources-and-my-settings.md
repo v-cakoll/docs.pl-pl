@@ -1,5 +1,5 @@
 ---
-title: Szybkie opracowywanie aplikacji przy użyciu My.Resources i My.Settings (Visual Basic)
+title: Szybkie opracowywanie aplikacji przy użyciu My.Resources i My.Settings
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], developing applications
@@ -7,24 +7,26 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Settings
 - My.Resources object [Visual Basic], developing applications
 ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
-ms.openlocfilehash: 4a9021af23200323397cc49fa1a44a0cc48b5a1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce9a5bf76ba3132f58aa40227a145d8b5bf1591d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014443"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349268"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>Szybkie opracowywanie aplikacji przy użyciu My.Resources i My.Settings (Visual Basic)
-`My.Resources` Obiekt zapewnia dostęp do zasobów aplikacji i pozwala dynamicznie pobrać zasobów dla aplikacji.  
+
+The `My.Resources` object provides access to the application's resources and allows you to dynamically retrieve resources for your application.  
   
 ## <a name="retrieving-resources"></a>Pobieranie zasobów  
- Liczba zasobów, takich jak pliki audio, ikony, obrazy i ciągi mogą być pobierane za pośrednictwem `My.Resources` obiektu. Na przykład można uzyskać dostęp do plików specyficzne dla kultury zasobów aplikacji. W poniższym przykładzie ustawiono ikony w postaci ikony o nazwie `Form1Icon` przechowywane w pliku zasobów aplikacji.  
+
+ A number of resources such as audio files, icons, images, and strings can be retrieved through the `My.Resources` object. For example, you can access the application's culture-specific resource files. The following example sets the icon of the form to the icon named `Form1Icon` stored in the application's resource file.  
   
  [!code-vb[VbVbcnMy#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#7)]  
   
- `My.Resources` Obiekt udostępnia tylko zasoby globalne. Zapewnia ona dostęp do plików zasobów skojarzonych z formularzami. Należy uzyskać dostęp do zasobów formularza z formularza.  
+ The `My.Resources` object exposes only global resources. It does not provide access to resource files associated with forms. You must access the form resources from the form.  
   
- Podobnie `My.Settings` obiekt umożliwia dostęp do ustawień aplikacji i pozwala na dynamiczne przechowywanie i pobieranie ustawień właściwości i inne informacje dla aplikacji. Aby uzyskać więcej informacji, zobacz [My.resources — obiekt](../../../visual-basic/language-reference/objects/my-resources-object.md) i [My.Settings — obiekt](../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ Similarly, the `My.Settings` object provides access to the application's settings and allows you to dynamically store and retrieve property settings and other information for your application. For more information, see [My.Resources Object](../../../visual-basic/language-reference/objects/my-resources-object.md) and [My.Settings Object](../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,25 +1,25 @@
 ---
-title: Zakres domyślnych przestrzeni nazw w Visual Basic
+title: Zakres domyślnych przestrzeni nazw
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: a08d140cfc68c36c26487ab47fc82dd3bf522fa8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 8ba4d13b6d40180a88651f0503d1323f2b78f36c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581881"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343643"
 ---
-# <a name="scope-of-default-namespaces-in-visual-basic"></a>Zakres domyślnych przestrzeni nazw w Visual Basic
-Domyślne przestrzenie nazw reprezentowane w drzewie XML nie znajdują się w zakresie zapytań. Jeśli masz kod XML, który znajduje się w domyślnym obszarze nazw, nadal musisz zadeklarować zmienną <xref:System.Xml.Linq.XNamespace> i połączyć ją z lokalną nazwą, aby nazwa kwalifikowana była używana w zapytaniu.  
+# <a name="scope-of-default-namespaces-in-visual-basic"></a>Scope of Default Namespaces in Visual Basic
+Default namespaces as represented in the XML tree are not in scope for queries. If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.  
   
- Jednym z najczęstszych problemów związanych z kwerendą drzewa XML jest to, że jeśli drzewo XML ma domyślną przestrzeń nazw, deweloper czasami zapisuje zapytanie tak, jakby kod XML nie był w przestrzeni nazw.  
+ One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.  
   
- Pierwszy zestaw przykładów w tym temacie przedstawia typowy sposób ładowania kodu XML w domyślnej przestrzeni nazw, ale jest ono nieprawidłowo wykonywane.  
+ The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, but is queried improperly.  
   
- Drugi zestaw przykładów pokazuje niezbędne poprawki, aby można było zbadać kod XML w przestrzeni nazw.  
+ The second set of examples show the necessary corrections so that you can query XML in a namespace.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład pokazuje tworzenie XML w przestrzeni nazw i zapytanie zwracające pusty zestaw wyników.  
+ This example shows the creation of XML in a namespace, and a query that returns an empty result set.  
   
 ### <a name="code"></a>Kod  
   
@@ -48,7 +48,7 @@ End Module
 ```  
   
 ### <a name="comments"></a>Komentarze  
- Ten przykład generuje następujący wynik:  
+ This example produces the following result:  
   
 ```console  
 Result set follows:  
@@ -56,9 +56,9 @@ End of result set
 ```  
   
 ## <a name="example"></a>Przykład  
- Ten przykład pokazuje tworzenie kodu XML w przestrzeni nazw oraz zakodowane prawidłowo zapytanie.  
+ This example shows the creation of XML in a namespace, and a query that is coded properly.  
   
- W przeciwieństwie do nieprawidłowo zakodowanego przykładu, poprawna Metoda korzystania z Visual Basic polega na zadeklarowaniu i zainicjowaniu globalnej domyślnej przestrzeni nazw. Spowoduje to umieszczenie wszystkich właściwości XML w domyślnej przestrzeni nazw. Do poprawnego działania tego przykładu nie są wymagane żadne inne modyfikacje.  
+ In contrast to the incorrectly coded example above, the correct approach when using Visual Basic is to declare and initialize a global default namespace. This places all XML properties in the default namespace. No other modifications are required to the example to make it work properly.  
   
 ### <a name="code"></a>Kod  
   
@@ -89,7 +89,7 @@ End Module
 ```  
   
 ### <a name="comments"></a>Komentarze  
- Ten przykład generuje następujący wynik:  
+ This example produces the following result:  
   
 ```console  
 Result set follows:  
@@ -101,4 +101,4 @@ End of result set
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd przestrzeni nazw (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

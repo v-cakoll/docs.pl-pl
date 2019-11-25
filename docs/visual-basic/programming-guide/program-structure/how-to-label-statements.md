@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Instrukcje etykiet (Visual Basic)'
+title: 'Porady: etykietowanie instrukcji'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - colons (:)
@@ -7,31 +7,31 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: 9a5f2039716a18011cac3dfd9b011d5b3868c294
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: be116ac8046c43e89e44c2d9127c6131e4dfaa52
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054051"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347380"
 ---
-# <a name="how-to-label-statements-visual-basic"></a>Instrukcje: Instrukcje etykiet (Visual Basic)
+# <a name="how-to-label-statements-visual-basic"></a>Porady: etykietowanie instrukcji (Visual Basic)
 
-Bloki instrukcji składają się z wierszy kodu rozdzielanych średnikami. Wiersze kodu poprzedzone ciągiem identyfikującym lub liczbą całkowitą są określane jako *etykiety*. Etykiety instrukcji są używane do oznaczania wiersza kodu w celu zidentyfikowania go do użycia z instrukcjami takimi jak `On Error Goto`.
+Statement blocks are made up of lines of code delimited by colons. Lines of code preceded by an identifying string or integer are said to be *labeled*. Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.
 
-Etykiety mogą być prawidłowymi identyfikatorami Visual Basic, takimi jak te, które identyfikują elementy programowania — lub literały całkowite. Etykieta musi znajdować się na początku wiersza kodu źródłowego i musi następować dwukropek, niezależnie od tego, czy występuje instrukcja w tym samym wierszu.
+Labels may be either valid Visual Basic identifiers—such as those that identify programming elements—or integer literals. A label must appear at the beginning of a line of source code and must be followed by a colon, regardless of whether it is followed by a statement on the same line.
 
-Kompilator identyfikuje etykiety, sprawdzając, czy początek wiersza pasuje do żadnego już zdefiniowanego identyfikatora. Jeśli nie, kompilator zakłada, że jest to etykieta.
+The compiler identifies labels by checking whether the beginning of the line matches any already-defined identifier. If it does not, the compiler assumes it is a label.
 
-Etykiety mają własne miejsce deklaracji i nie zakłócają innych identyfikatorów. Zakres etykiety jest treścią metody. Deklaracja etykiety ma pierwszeństwo w każdej niejednoznacznej sytuacji.
+Labels have their own declaration space and do not interfere with other identifiers. A label's scope is the body of the method. Label declaration takes precedence in any ambiguous situation.
 
 > [!NOTE]
-> Etykiet można używać tylko w instrukcjach wykonywalnych wewnątrz metod.
+> Labels can be used only on executable statements inside methods.
 
-## <a name="to-label-a-line-of-code"></a>Aby oznaczyć wiersz kodu
+## <a name="to-label-a-line-of-code"></a>To label a line of code
 
-Umieść identyfikator, po którym następuje dwukropek, na początku wiersza kodu źródłowego.
+Place an identifier, followed by a colon, at the beginning of the line of source code.
 
-Na przykład następujące wiersze kodu mają etykiety `Jump` i `120`, odpowiednio:
+For example, the following lines of code are labeled with `Jump` and `120`, respectively:
 
 [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]
 
@@ -39,4 +39,4 @@ Na przykład następujące wiersze kodu mają etykiety `Jump` i `120`, odpowiedn
 
 - [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)
 - [Nazwy zadeklarowanych elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Konwencje dotyczące struktury programów i kodu](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [Struktura programu i konwencje związane z kodami](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

@@ -1,42 +1,42 @@
 ---
-title: Odstęp w literałach XML (Visual Basic)
+title: Odstęp w literałach XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: f72dcc25b158d793850069e5cc32c3a3c02fad17
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56ededeb12d07e979bc86b03924e1ae0f0432822
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939211"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336008"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>Odstęp w literałach XML (Visual Basic)
-Kompilator Visual Basic obejmuje tylko znaczące białe znaki ze literału XML podczas tworzenia [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obiektu. Nieznaczące białe znaki nie są dołączone.  
+The Visual Basic compiler incorporates only the significant white space characters from an XML literal when it creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object. The insignificant white space characters are not incorporated.  
   
-## <a name="significant-and-insignificant-white-space"></a>Znaczący i nieznaczący biały znak  
- Znaki białych znaków w literałach XML są znaczące tylko w trzech obszarach:  
+## <a name="significant-and-insignificant-white-space"></a>Significant and Insignificant White Space  
+ White space characters in XML literals are significant in only three areas:  
   
-- Gdy znajdują się w wartości atrybutu.  
+- When they are in an attribute value.  
   
-- Gdy są częścią zawartości tekstowej elementu, a tekst zawiera również inne znaki.  
+- When they are part of an element's text content and the text also contains other characters.  
   
-- Gdy znajdują się w osadzonym wyrażeniu dla zawartości tekstowej elementu.  
+- When they are in an embedded expression for an element's text content.  
   
- W przeciwnym razie kompilator traktuje znaki odstępu jako nieważne i nie uwzględnia następnie w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obiekcie dla literału.  
+ Otherwise, the compiler treats white space characters as insignificant and does not include then in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object for the literal.  
   
- Aby uwzględnić nieznaczny biały znak w literale XML, należy użyć osadzonego wyrażenia zawierającego literał ciągu z białym znakiem.  
+ To include insignificant white space in an XML literal, use an embedded expression that contains a string literal with the white space.  
   
 > [!NOTE]
-> Jeśli atrybut pojawia się w literale elementu XML, kompilator Visual Basic zawiera atrybut <xref:System.Xml.Linq.XElement> w obiekcie, ale dodanie tego atrybutu nie zmienia, jak kompilator traktuje biały znak. `xml:space`  
+> If the `xml:space` attribute appears in an XML element literal, the Visual Basic compiler includes the attribute in the <xref:System.Xml.Linq.XElement> object, but adding this attribute does not change how the compiler treats white space.  
   
 ## <a name="examples"></a>Przykłady  
- Poniższy przykład zawiera dwa elementy XML, zewnętrzne i wewnętrzne. Oba elementy zawierają biały znak w zawartości tekstowej. Biały znak w elemencie zewnętrznym jest nieistotny, ponieważ zawiera tylko białe znaki i element XML. Biały znak w elemencie wewnętrznym jest znaczący, ponieważ zawiera biały znak i tekst.  
+ The following example contains two XML elements, outer and inner. Both elements contain white space in their text content. The white space in the outer element is insignificant because it contains only white space and an XML element. The white space in the inner element is significant because it contains white space and text.  
   
  [!code-vb[VbXMLSamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#29)]  
   
- Po uruchomieniu ten kod wyświetla następujący tekst.  
+ When run, this code displays the following text.  
   
 ```xml  
 <outer>  
@@ -48,4 +48,4 @@ Kompilator Visual Basic obejmuje tylko znaczące białe znaki ze literału XML p
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tworzenie kodu XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

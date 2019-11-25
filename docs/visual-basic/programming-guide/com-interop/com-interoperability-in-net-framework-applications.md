@@ -1,32 +1,32 @@
 ---
-title: Współdziałanie COM w aplikacjach .NET Framework (Visual Basic)
+title: Współdziałanie COM w aplikacjach .NET Framework
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interoperability, COM and .NET framework objects
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: 758f065d2e0e7f8200529ef171dc89f94950b46e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1c484ae948c247a97dd57539e3b0be263736aceb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627090"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348744"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>Współdziałanie COM w aplikacjach .NET Framework (Visual Basic)
 
-Jeśli chcesz używać obiektów COM i .NET Framework obiektów w tej samej aplikacji, musisz rozwiązać różnice w sposobie, w jaki obiekty istnieją w pamięci. Obiekt .NET Framework znajduje się w pamięci zarządzanej — pamięci kontrolowanej przez środowisko uruchomieniowe języka wspólnego — i może być przenoszony przez środowisko uruchomieniowe w razie konieczności. Obiekt COM znajduje się w pamięci niezarządzanej i nie powinien być przenoszony do innej lokalizacji pamięci. Program Visual Studio i .NET Framework udostępniają narzędzia do kontrolowania interakcji z tymi zarządzanymi i niezarządzanymi składnikami. Aby uzyskać więcej informacji o kodzie zarządzanym, zobacz [środowisko uruchomieniowe języka wspólnego](../../../standard/clr.md).
+When you want to use COM objects and .NET Framework objects in the same application, you need to address the differences in how the objects exist in memory. A .NET Framework object is located in managed memory—the memory controlled by the common language runtime—and may be moved by the runtime as needed. A COM object is located in unmanaged memory and is not expected to move to another memory location. Visual Studio and the .NET Framework provide tools to control the interaction of these managed and unmanaged components. For more information about managed code, see [Common Language Runtime](../../../standard/clr.md).
 
-Oprócz używania obiektów COM w aplikacjach .NET, warto również użyć Visual Basic do opracowania obiektów dostępnych z kodu niezarządzanego za pośrednictwem modelu COM.
+In addition to using COM objects in .NET applications, you may also want to use Visual Basic to develop objects accessible from unmanaged code through COM.
 
-Linki na tej stronie zawierają szczegóły dotyczące interakcji między obiektami COM i .NET Framework.
+The links on this page provide details on the interactions between COM and .NET Framework objects.
 
-## <a name="related-sections"></a>Sekcje pokrewne
+## <a name="related-sections"></a>Related sections
 
 | | |
 |---------|---------|
-| [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md) | Zawiera łącza do tematów obejmujących współdziałanie COM w Visual Basic, w tym obiekty COM, formanty ActiveX, biblioteki DLL Win32, obiekty zarządzane i dziedziczenie obiektów COM. |
-| [Współdziałanie z kodem niezarządzanym](../../../framework/interop/index.md) | Krótki opis niektórych problemów z interakcją między zarządzanym i niezarządzanym kodem i zawiera linki do dalszych badań. |
-| [Otoki COM](../../../standard/native-interop/com-wrappers.md) | Omawia wywoływane otoki środowiska uruchomieniowego, które umożliwiają kodowi zarządzanemu wywoływanie metod COM, i możliwe do wywołania otok COM, które umożliwiają klientom COM wywoływanie metod obiektu .NET. |
-| [Zaawansowana współdziałanie COM](../../../framework/interop/index.md) | Zawiera łącza do tematów obejmujących współdziałanie modelu COM w odniesieniu do otok, wyjątków, dziedziczenia, wątkowości, zdarzeń, konwersji i organizowania. |
-| [Tlbimp.exe (importer biblioteki typów)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Omawia narzędzie, za pomocą którego można skonwertować definicje typów Znalezione w bibliotece typów modelu COM do równoważnych definicji w zestawie środowiska uruchomieniowego języka wspólnego. |
+| [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md) | Provides links to topics covering COM interoperability in Visual Basic, including COM objects, ActiveX controls, Win32 DLLs, managed objects, and inheritance of COM objects. |
+| [Współdziałanie z kodem niezarządzanym](../../../framework/interop/index.md) | Briefly describes some of the interaction issues between managed and unmanaged code, and provides links for further study. |
+| [Otoki COM](../../../standard/native-interop/com-wrappers.md) | Discusses runtime callable wrappers, which allow managed code to call COM methods, and COM callable wrappers, which allow COM clients to call .NET object methods. |
+| [Advanced COM Interoperability](../../../framework/interop/index.md) | Provides links to topics covering COM interoperability with respect to wrappers, exceptions, inheritance, threading, events, conversions, and marshaling. |
+| [Tlbimp.exe (importer biblioteki typów)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Discusses the tool you can use to convert the type definitions found within a COM type library into equivalent definitions in a common language runtime assembly. |

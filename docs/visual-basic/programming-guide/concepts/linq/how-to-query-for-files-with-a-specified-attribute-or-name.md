@@ -1,16 +1,16 @@
 ---
-title: 'Instrukcje: Zapytanie o pliki o określonym atrybucie lub nazwy (Visual Basic)'
+title: 'Porady: zapytanie o pliki o określonym atrybucie lub nazwie'
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 05dfe3e88274efe8d817defcac2f47efe053b12b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 68b8f02e3c7f53092ef91f2b8b96736a644a7fd1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586485"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347687"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Instrukcje: Zapytanie o pliki o określonym atrybucie lub nazwy (Visual Basic)
-W tym przykładzie pokazano, jak można znaleźć wszystkie pliki, które mają rozszerzenie nazwy pliku (na przykład ".txt") w drzewie określonego katalogu. Prezentuje również sposób zwracania albo plik najnowsze lub najstarsze na drzewa, w oparciu o czas utworzenia.  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>How to: Query for Files with a Specified Attribute or Name (Visual Basic)
+This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree. It also shows how to return either the newest or oldest file in the tree based on the creation time.  
   
 ## <a name="example"></a>Przykład  
   
@@ -61,9 +61,9 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
-Utwórz projekt aplikacji konsoli VB.NET, za pomocą `Imports` instrukcji dla przestrzeni nazw System.Linq.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
   
 ## <a name="see-also"></a>Zobacz także
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

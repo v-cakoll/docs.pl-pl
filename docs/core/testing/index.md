@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 006ccf0370f8014e5021275c4d38cc50bf1c076f
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9fbffea82d75fc06a5aa3b11beffdd2cb540da83
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522912"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74282254"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Testy jednostkowe w .NET Core i .NET Standard
 
@@ -33,13 +33,13 @@ Należy również pamiętać o najlepszych rozwiązaniach dotyczących pisania t
 
 Nie należy wprowadzać zależności od infrastruktury podczas pisania testów jednostkowych. Te testy są powolne i kruchy i powinny być zarezerwowane dla testów integracji. Można uniknąć tych zależności w aplikacji, postępując zgodnie z [zasadami jawnych zależności](https://deviq.com/explicit-dependencies-principle/) i przy użyciu [iniekcji zależności](/aspnet/core/fundamentals/dependency-injection). Możesz również utrzymać testy jednostkowe w osobnym projekcie od testów integracji. Gwarantuje to, że projekt testu jednostkowego nie zawiera odwołań do pakietów infrastruktury ani ich zależności.
 
-## <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Kolejne kroki
 
 Więcej informacji na temat testów jednostkowych w projektach .NET Core:
 
 Projekty testów jednostkowych programu .NET Core są obsługiwane w przypadku:
 
-- [C#](../../csharp/index.md)
+- [C#](../../csharp/index.yml)
 - [F#](../../fsharp/index.md)
 - [Visual Basic](../../visual-basic/index.md) 
 

@@ -1,5 +1,5 @@
 ---
-title: Skuteczna kombinacja operatorów (Visual Basic)
+title: Skuteczna kombinacja operatorów
 ms.date: 07/20/2015
 helpviewer_keywords:
 - expressions [Visual Basic], parentheses
@@ -13,45 +13,45 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: 8f5dd6c56b3e4576b9d798e0e5e10b2996f558dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83ad53e4c75490a75eba0f80a6bf0f078aa4d426
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864656"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348997"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>Skuteczna kombinacja operatorów (Visual Basic)
-Złożonych wyrażeń może zawierać wiele różnych operatorów. Ilustruje to poniższy przykład.  
+Complex expressions can contain many different operators. Ilustruje to poniższy przykład.  
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
   
- Tworzenie złożonych wyrażeń, takiego jak w poprzednim przykładzie wymaga dogłębnej wiedzy w zakresie zasad pierwszeństwo operatorów. Aby uzyskać więcej informacji, zobacz [pierwszeństwo operatorów w języku Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+ Creating complex expressions such as the one in the preceding example requires a thorough understanding of the rules of operator precedence. For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
-## <a name="parenthetical-expressions"></a>Wyrażenia w nawiasach  
- Często ma operacje, aby przejść w innym porządku niż określonej przez priorytet operatorów. Rozważmy następujący przykład.  
+## <a name="parenthetical-expressions"></a>Parenthetical Expressions  
+ Often you want operations to proceed in a different order from that determined by operator precedence. Consider the following example.  
   
  `x = z * y + 4`  
   
- Poprzedni przykład mnoży `z` przez `y`, następnie dodaje wynik do `4`. Ale jeśli chcesz dodać `y` i `4` przed pomnożenia wyniku przez `z`, pierwszeństwo operatorów normalne można zastąpić za pomocą nawiasów. Umieszczając wyrażenia w nawiasach, możesz wymusić to wyrażenie do obliczenia, niezależnie od tego, pierwszeństwo operatorów. Aby wymusić w poprzednim przykładzie w celu dodawania, można przepisać go tak, jak w poniższym przykładzie.  
+ The preceding example multiplies `z` by `y`, then adds the result to `4`. But if you want to add `y` and `4` before multiplying the result by `z`, you can override normal operator precedence by using parentheses. By enclosing an expression in parentheses, you force that expression to be evaluated first, regardless of operator precedence. To force the preceding example to do the addition first, you could rewrite it as in the following example.  
   
  `x = z * (y + 4)`  
   
- W poprzednim przykładzie dodano `y` i `4`, następnie mnoży tej sumy przez `z`.  
+ The preceding example adds `y` and `4`, then multiplies that sum by `z`.  
   
-### <a name="nested-parenthetical-expressions"></a>Zagnieżdżone wyrażenia w nawiasach  
- Można zagnieżdżać wyrażenia w nawiasy, aby zastąpić jeszcze bardziej priorytet na wielu poziomach. Wyrażenia najgłębiej zagnieżdżony w nawiasach są obliczane najpierw następuje dalej, najgłębiej zagnieżdżony i tak dalej do najmniej głęboko zagnieżdżone, a na końcu wyrażeń poza nawiasów. Ilustruje to poniższy przykład.  
+### <a name="nested-parenthetical-expressions"></a>Nested Parenthetical Expressions  
+ You can nest expressions in multiple levels of parentheses to override precedence even further. The expressions most deeply nested in parentheses are evaluated first, followed by the next most deeply nested, and so on to the least deeply nested, and finally the expressions outside parentheses. Ilustruje to poniższy przykład.  
   
  `x = (z * 4) ^ (y * (z + 2))`  
   
- W powyższym przykładzie `z + 2` jest pierwszy ocenione, a następnie inne wyrażenia w nawiasach. Zapis wykładniczy, która zwykle ma wyższy priorytet niż dodawanie i mnożenie, jest oceniany w ostatniej w tym przykładzie, ponieważ inne wyrażenia są ujęte w nawiasy.  
+ In the preceding example, `z + 2` is evaluated first, then the other parenthetical expressions. Exponentiation, which normally has higher precedence than addition or multiplication, is evaluated last in this example because the other expressions are enclosed in parentheses.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Operatory arytmetyczne w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Operatory porównania w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Operatory logiczne i bitowe w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
-- [Operatory logiczne/bitowe (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Logical/Bitwise Operators (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Wyrażenia logiczne](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [Porównania wartości](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
-- [Instrukcje: Obliczanie wartości liczbowych](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)
-- [Pierwszeństwo operatorów w języku Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Instrukcje: obliczanie wartości liczbowych](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)
+- [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)

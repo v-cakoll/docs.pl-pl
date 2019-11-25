@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e0e35562e2351f9b985c74b60d8769577c3e3f56
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421585"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283895"
 ---
 # <a name="tour-of-net"></a>Przewodnik po środowisku .NET
 
@@ -29,7 +29,7 @@ Platforma .NET obsługuje wiele języków programowania. Implementacje platformy
 
 Firma Microsoft aktywnie opracowuje i obsługuje trzy języki .NET C#: F#, i Visual Basic (VB). 
 
-* C#jest proste, zaawansowane, bezpieczne dla typów i zorientowane obiektowo, zachowując wyrazistości i elegancji języka C-style. Każda osoba znająca język C i podobne Języki odnajduje kilka problemów w C#dostosowywaniu do programu. Zapoznaj się z [ C# przewodnikiem](../csharp/index.md) , aby C#dowiedzieć się więcej.
+* C# to prosta, wydajna, bezpieczne i zorientowane obiektowo, przy zachowaniu wyrazistości i elegancji stylów języka c. Każda osoba znająca język C i podobne Języki odnajduje kilka problemów w C#dostosowywaniu do programu. Zapoznaj się z [ C# przewodnikiem](../csharp/index.yml) , aby C#dowiedzieć się więcej.
 
 * F#to międzyplatformowy, funkcjonalny język programowania, który obsługuje także tradycyjne programowanie zorientowane obiektowo i bezwzględne. Zapoznaj się z [ F# przewodnikiem](../fsharp/index.md) , aby F#dowiedzieć się więcej.
 
@@ -47,7 +47,7 @@ Nie istnieje podobne słowo kluczowe do cofnięcia przydzielenia pamięci, ponie
 
 Moduł wyrzucania elementów bezużytecznych jest jedną z usług, które zapewniają *bezpieczeństwo pamięci*. Program jest bezpieczny dla pamięci, jeśli uzyskuje dostęp tylko do przydzieloną pamięci. Na przykład środowisko uruchomieniowe zapewnia, że aplikacja nie uzyskuje dostępu do nieprzypisanej pamięci poza granicami tablicy.
 
-W poniższym przykładzie środowisko uruchomieniowe zgłasza wyjątek `InvalidIndexException` w celu wymuszenia bezpieczeństwa pamięci:
+W poniższym przykładzie środowisko uruchomieniowe zgłasza wyjątek `InvalidIndexException`, aby wymusić bezpieczeństwo pamięci:
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
@@ -55,11 +55,11 @@ W poniższym przykładzie środowisko uruchomieniowe zgłasza wyjątek `InvalidI
 
 Niektóre obiekty odwołują się do *niezarządzanych zasobów*. Zasoby niezarządzane to zasoby, które nie są automatycznie obsługiwane przez środowisko uruchomieniowe platformy .NET. Na przykład dojście do pliku jest zasobem niezarządzanym. Obiekt <xref:System.IO.FileStream> jest obiektem zarządzanym, ale odwołuje się do dojścia do pliku, który jest niezarządzany. Gdy skończysz korzystać z <xref:System.IO.FileStream>, musisz zwolnić dojście do pliku.
 
-W programie .NET obiekty odwołujące się do niezarządzanych zasobów implementują interfejs <xref:System.IDisposable>. Gdy skończysz korzystać z obiektu, wywołamy metodę <xref:System.IDisposable.Dispose> obiektu, która jest odpowiedzialna za zwolnienie niezarządzanych zasobów. Języki .NET oferują wygodną [instrukcję `using`](../csharp/language-reference/keywords/using.md) dla takich obiektów, jak pokazano w następującym przykładzie:
+W programie .NET obiekty odwołujące się do niezarządzanych zasobów implementują interfejs <xref:System.IDisposable>. Gdy skończysz korzystać z obiektu, wywołasz metodę <xref:System.IDisposable.Dispose> obiektu, która jest odpowiedzialna za zwolnienie niezarządzanych zasobów. Języki .NET udostępniają wygodną [instrukcję`using`](../csharp/language-reference/keywords/using.md) dla takich obiektów, jak pokazano w poniższym przykładzie:
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
-Po zakończeniu bloku `using` środowisko uruchomieniowe platformy .NET automatycznie wywoła metodę <xref:System.IDisposable.Dispose> obiektu `stream`, która zwalnia dojście do pliku. Środowisko uruchomieniowe robi to również wtedy, gdy wyjątek powoduje opuszczenie bloku.
+Po zakończeniu `using` bloku środowisko uruchomieniowe platformy .NET automatycznie wywoła metodę <xref:System.IDisposable.Dispose> obiektu `stream`, która zwalnia dojście do pliku. Środowisko uruchomieniowe robi to również wtedy, gdy wyjątek powoduje opuszczenie bloku.
 
 Aby uzyskać więcej informacji, zobacz następujące tematy:
 
@@ -71,7 +71,7 @@ Aby uzyskać więcej informacji, zobacz następujące tematy:
 
 Obiekt jest wystąpieniem określonego typu. Jedyną operacją dozwoloną dla danego obiektu są te typu. Typ `Dog` może mieć metody `Jump` i `WagTail`, ale nie metodę `SumTotal`. Program wywołuje tylko metody należące do danego typu. Wszystkie inne wywołania powodują błąd czasu kompilacji lub wyjątek czasu wykonywania (w przypadku korzystania z funkcji dynamicznych lub `object`).
 
-Języki .NET są zorientowane obiektowo z hierarchiami klas podstawowych i pochodnych. Środowisko uruchomieniowe platformy .NET zezwala tylko na rzutowanie obiektów i wywołania, które są wyrównane z hierarchią obiektów. Należy pamiętać, że każdy typ zdefiniowany w dowolnym języku .NET wynika z podstawowego typu <xref:System.Object>.
+Języki .NET są zorientowane obiektowo z hierarchiami klas podstawowych i pochodnych. Środowisko uruchomieniowe platformy .NET zezwala tylko na rzutowanie obiektów i wywołania, które są wyrównane z hierarchią obiektów. Należy pamiętać, że każdy typ zdefiniowany w dowolnym języku .NET pochodzi od podstawowego typu <xref:System.Object>.
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
@@ -97,7 +97,7 @@ W programie .NET Delegaty są często używane w obsłudze zdarzeń, w definiowa
 
 Typy ogólne umożliwiają programistom wprowadzanie *parametrów typu* podczas projektowania klas, które umożliwiają kod klienta (Użytkownicy typu), aby określić dokładny typ do użycia zamiast parametru typu.
 
-Typy ogólne zostały dodane w celu ułatwienia deweloperom implementowania ogólnych struktur danych. Przed przybyciem w celu zapewnienia, że typ, taki jak `List`, ma być ogólny, będzie musiał działać z elementami typu `object`. Miało to różne problemy z wydajnością i semantyką oraz potencjalne błędy w czasie wykonywania. Najbardziej Notorious tej ostatniej jest, gdy struktura danych zawiera, na przykład, zarówno liczby całkowite, jak i ciągi, i `InvalidCastException` jest generowany podczas pracy z członkami listy.
+Typy ogólne zostały dodane w celu ułatwienia deweloperom implementowania ogólnych struktur danych. Przed przybyciem w celu wybrania typu, takiego jak typ `List`, powinien działać z elementami typu `object`. Miało to różne problemy z wydajnością i semantyką oraz potencjalne błędy w czasie wykonywania. Najbardziej Notorious tej ostatniej jest, gdy struktura danych zawiera, na przykład, zarówno liczby całkowite, jak i ciągi, i `InvalidCastException` jest generowany podczas pracy z członkami listy.
 
 Poniższy przykład pokazuje program podstawowy uruchomiony przy użyciu wystąpienia <xref:System.Collections.Generic.List%601> typów:
 
@@ -107,7 +107,7 @@ Aby uzyskać więcej informacji, zobacz temat [Omówienie typów ogólnych (Gene
 
 ## <a name="async-programming"></a>Programowanie asynchroniczne
 
-Programowanie asynchroniczne to koncepcja pierwszej klasy w ramach platformy .NET z obsługą asynchroniczną w środowisku uruchomieniowym, bibliotekach struktur i konstrukcjach języka .NET. Wewnętrznie są one oparte na obiektach (takich jak `Task`), które wykorzystują system operacyjny do wykonywania zadań związanych z we/wy, jak to możliwe.
+Programowanie asynchroniczne to koncepcja pierwszej klasy w ramach platformy .NET z obsługą asynchroniczną w środowisku uruchomieniowym, bibliotekach struktur i konstrukcjach języka .NET. Wewnętrznie są one oparte na obiektach (takich jak `Task`), które wykorzystują system operacyjny do wykonywania zadań związanych z we/wy odpowiednio efektywnie.
 
 Aby dowiedzieć się więcej o programowaniu asynchronicznym w programie .NET, Rozpocznij pracę z tematem [Przegląd asynchroniczny](async.md) .
 
@@ -135,7 +135,7 @@ Poniższy przykład jest zmodyfikowaną wersją metody `ToString()` z klasy `Str
 
 [!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]
 
-## <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Kolejne kroki
 
 Jeśli interesuje Cię Przewodnik po C# funkcjach, zapoznaj się [z C#przewodnikiem ](../csharp/tour-of-csharp/index.md).
 

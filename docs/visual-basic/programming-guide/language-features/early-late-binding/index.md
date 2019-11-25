@@ -1,5 +1,5 @@
 ---
-title: Wczesne i późne wiązania (Visual Basic)
+title: Wczesne i późne wiązania
 ms.date: 07/20/2015
 helpviewer_keywords:
 - early binding [Visual Basic]
@@ -13,32 +13,32 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
-ms.openlocfilehash: d05322ba831aac6173ac9d7fa7f369a208b676d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bd70d8642c18e9bc2baba8128ec908c88e0477ce
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965377"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345184"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Wczesne i późne wiązania (Visual Basic)
-Kompilator Visual Basic wykonuje proces wywoływany `binding` , gdy obiekt jest przypisany do zmiennej obiektu. Obiekt jest *wczesnie powiązany* , gdy jest przypisany do zmiennej zadeklarowanej jako określonego typu obiektu. Obiekty wczesnych powiązań umożliwiają kompilatorowi przydzielanie pamięci i wykonywanie innych optymalizacji przed wykonaniem aplikacji. Na przykład poniższy fragment kodu deklaruje zmienną do typu <xref:System.IO.FileStream>:  
+The Visual Basic compiler performs a process called `binding` when an object is assigned to an object variable. An object is *early bound* when it is assigned to a variable declared to be of a specific object type. Early bound objects allow the compiler to allocate memory and perform other optimizations before an application executes. For example, the following code fragment declares a variable to be of type <xref:System.IO.FileStream>:  
   
  [!code-vb[VbVbalrOOP#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#90)]  
   
- Ponieważ <xref:System.IO.FileStream> jest określonym typem obiektu, wystąpienie przypisane do `FS` jest wczesnie powiązane.  
+ Because <xref:System.IO.FileStream> is a specific object type, the instance assigned to `FS` is early bound.  
   
- Z kolei obiekt jest późnie *powiązany* , gdy jest przypisany do zmiennej zadeklarowanej jako typu `Object`. Obiekty tego typu mogą zawierać odwołania do dowolnego obiektu, ale nie wiele zalet obiektów wczesnych powiązań. Na przykład poniższy fragment kodu deklaruje zmienną obiektu do przechowywania obiektu zwróconego przez `CreateObject` funkcję:  
+ By contrast, an object is *late bound* when it is assigned to a variable declared to be of type `Object`. Objects of this type can hold references to any object, but lack many of the advantages of early-bound objects. For example, the following code fragment declares an object variable to hold an object returned by the `CreateObject` function:  
   
  [!code-vb[VbVbalrOOP#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/LateBinding.vb#91)]  
   
-## <a name="advantages-of-early-binding"></a>Zalety wczesnego wiązania  
- Jeśli jest to możliwe, należy używać obiektów wczesnych powiązań, ponieważ umożliwiają kompilatorowi wykonywanie ważnych optymalizacji, które dają wydajniejsze aplikacje. Obiekty wczesnie powiązane są znacznie szybsze niż obiekty z późnym wiązaniem i ułatwiają odczytywanie i konserwowanie kodu przez poznanie tego, jakiego rodzaju obiekty są używane. Kolejną zaletą wczesnych powiązań jest umożliwienie korzystania z użytecznych funkcji, takich jak automatyczne uzupełnianie kodu i Pomoc dynamiczna, ponieważ zintegrowane środowisko programistyczne (IDE) programu Visual Studio może dokładnie określić typ obiektu, z którym pracujesz podczas edycji kodu. Wczesne powiązanie zmniejsza liczbę i ważność błędów czasu wykonywania, ponieważ umożliwia kompilatorowi raportowanie błędów podczas kompilowania programu.  
+## <a name="advantages-of-early-binding"></a>Advantages of Early Binding  
+ You should use early-bound objects whenever possible, because they allow the compiler to make important optimizations that yield more efficient applications. Early-bound objects are significantly faster than late-bound objects and make your code easier to read and maintain by stating exactly what kind of objects are being used. Another advantage to early binding is that it enables useful features such as automatic code completion and Dynamic Help because the Visual Studio integrated development environment (IDE) can determine exactly what type of object you are working with as you edit the code. Early binding reduces the number and severity of run-time errors because it allows the compiler to report errors when a program is compiled.  
   
 > [!NOTE]
-> Późne wiązanie może być używane tylko w celu uzyskania dostępu do elementów członkowskich `Public`typu, które są zadeklarowane jako. Uzyskiwanie dostępu do `Friend` składowych zadeklarowanych jako lub `Protected Friend` w wyniku błędu czasu wykonywania.  
+> Late binding can only be used to access type members that are declared as `Public`. Accessing members declared as `Friend` or `Protected Friend` results in a run-time error.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>
-- [Okres istnienia obiektu: Jak obiekty są tworzone i niszczone](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Okres istnienia obiektów: w jaki sposób obiekty są tworzone i niszczone](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)

@@ -1,25 +1,25 @@
 ---
-title: Inne struktury sterujące (Visual Basic)
+title: Inne struktury sterujące
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [Visual Basic], control flow
 - control structures [Visual Basic]
 ms.assetid: 24b811f7-98ba-40ec-8dd3-4d528cfa4574
-ms.openlocfilehash: c42070ce2ea866e59e1b2e190f7c05e1ee7cc922
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 758df361f421684655147ae288af3f350e53c4d7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907845"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348132"
 ---
 # <a name="other-control-structures-visual-basic"></a>Inne struktury sterujące (Visual Basic)
-Visual Basic zapewnia struktury sterujące, które ułatwiają Usuwanie zasobu lub Zmniejsz liczbę razy, należy powtórzyć odwołanie do obiektu.  
+Visual Basic provides control structures that help you dispose of a resource or reduce the number of times you have to repeat an object reference.  
   
-## <a name="usingend-using-construction"></a>Za pomocą... Za pomocą konstrukcji końcowych  
- `Using...End Using` Konstrukcji ustanawia blok instrukcji, w którym możesz wprowadzić korzystanie z zasobów, takich jak połączenia SQL. Opcjonalnie można pobrać zasobu o `Using` instrukcji. Po zakończeniu `Using` bloku, Visual Basic automatycznie usuwa zasobu tak, że jest dostępny dla innego kodu do użycia. Zasób musi być lokalny i możliwe do likwidacji. Aby uzyskać więcej informacji, zobacz [instrukcji Using](../../../../visual-basic/language-reference/statements/using-statement.md).  
+## <a name="usingend-using-construction"></a>Using...End Using Construction  
+ The `Using...End Using` construction establishes a statement block within which you make use of a resource such as a SQL connection. You can optionally acquire the resource with the `Using` statement. When you exit the `Using` block, Visual Basic automatically disposes of the resource so that it is available for other code to use. The resource must be local and disposable. For more information, see [Using Statement](../../../../visual-basic/language-reference/statements/using-statement.md).  
   
-## <a name="withend-with-construction"></a>Za pomocą... Kończy się konstrukcji  
- `With...End With` Konstrukcji pozwala określić odwołanie do obiektu tylko raz, a następnie uruchom serię instrukcji uzyskujących dostęp do jego członków. Może to uprościć kod i zwiększyć wydajność, ponieważ Visual Basic nie trzeba ponownie ustanowić odwołanie dla każdej instrukcji, która uzyskuje do niej dostęp. Aby uzyskać więcej informacji, zobacz [za pomocą... End With — instrukcja](../../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
+## <a name="withend-with-construction"></a>With...End With Construction  
+ The `With...End With` construction lets you specify an object reference once and then run a series of statements that access its members. This can simplify your code and improve performance because Visual Basic does not have to re-establish the reference for each statement that accesses it. For more information, see [With...End With Statement](../../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

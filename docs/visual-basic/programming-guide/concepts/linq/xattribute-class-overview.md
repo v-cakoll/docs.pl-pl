@@ -1,31 +1,31 @@
 ---
-title: XAttribute klasa — Przegląd (Visual Basic)
+title: XAttribute, klasa — przegląd
 ms.date: 07/20/2015
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
-ms.openlocfilehash: 6b24f429a69067f6af1a61efe4102a5638db3031
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00aeeec3f251ecd1d21a313290326b3ba49d63d3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907455"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349323"
 ---
-# <a name="xattribute-class-overview-visual-basic"></a>XAttribute klasa — Przegląd (Visual Basic)
-Atrybuty są pary nazwa/wartość, które są skojarzone z elementem. <xref:System.Xml.Linq.XAttribute> Klasa reprezentuje atrybutów XML.  
+# <a name="xattribute-class-overview-visual-basic"></a>XAttribute Class Overview (Visual Basic)
+Attributes are name/value pairs that are associated with an element. The <xref:System.Xml.Linq.XAttribute> class represents XML attributes.  
   
 ## <a name="overview"></a>Omówienie  
- Praca z atrybutów w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest podobna do pracy z elementami. Ich konstruktory są podobne. Metody używane do pobierania kolekcji z nich są podobne. A [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażenia zapytania dla kolekcji atrybutów wygląda bardzo podobnie do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeniu kolekcji elementy zapytania.  
+ Working with attributes in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is similar to working with elements. Their constructors are similar. The methods that you use to retrieve collections of them are similar. A [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expression for a collection of attributes looks very similar to a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expression for a collection of elements.  
   
- Kolejność, w którym atrybuty zostały dodane do elementu są zachowywane. Oznacza to, że podczas iteracji atrybuty zobaczysz je w tej samej kolejności, czy zostały dodane.  
+ The order in which attributes were added to an element is preserved. That is, when you iterate through the attributes, you see them in the same order that they were added.  
   
-## <a name="the-xattribute-constructor"></a>Konstruktor XAttribute  
- Następujący Konstruktor <xref:System.Xml.Linq.XAttribute> klasy jest tą, która będzie najczęściej używać:  
+## <a name="the-xattribute-constructor"></a>The XAttribute Constructor  
+ The following constructor of the <xref:System.Xml.Linq.XAttribute> class is the one that you will most commonly use:  
   
 |Konstruktor|Opis|  
 |-----------------|-----------------|  
-|`XAttribute(XName name, object content)`|Tworzy <xref:System.Xml.Linq.XAttribute> obiektu. `name` Argument określa nazwę atrybutu; `content` określa wartość tego atrybutu.|  
+|`XAttribute(XName name, object content)`|Tworzy <xref:System.Xml.Linq.XAttribute> obiektu. The `name` argument specifies the name of the attribute; `content` specifies the content of the attribute.|  
   
-### <a name="creating-an-element-with-an-attribute"></a>Tworzenie elementu za pomocą atrybutu  
- Poniższy kod pokazuje element zawierający atrybut przy użyciu literałów XML w Visual Basic:  
+### <a name="creating-an-element-with-an-attribute"></a>Creating an Element with an Attribute  
+ The following code shows an element that contains an attribute using XML literals in Visual Basic:  
   
 ```vb  
 Dim phone As XElement = <Phone Type="Home">555-555-5555</Phone>  
@@ -38,8 +38,8 @@ Console.WriteLine(phone)
 <Phone Type="Home">555-555-5555</Phone>  
 ```  
   
-### <a name="functional-construction-of-attributes"></a>Konstrukcja funkcjonalna atrybutów  
- Można skonstruować <xref:System.Xml.Linq.XAttribute> obiektów w tekście za pomocą konstrukcji <xref:System.Xml.Linq.XElement> obiektów w następujący sposób:  
+### <a name="functional-construction-of-attributes"></a>Functional Construction of Attributes  
+ You can construct <xref:System.Xml.Linq.XAttribute> objects in-line with the construction of <xref:System.Xml.Linq.XElement> objects, as follows:  
   
 ```vb  
 Dim c As XElement = _  
@@ -69,11 +69,11 @@ Console.WriteLine(c)
 </Customers>  
 ```  
   
-### <a name="attributes-are-not-nodes"></a>Atrybuty nie są węzłami  
- Istnieją pewne różnice między atrybuty i elementy. <xref:System.Xml.Linq.XAttribute> obiekty nie są węzłów w drzewie XML. Są one pary nazwa/wartość skojarzona z elementem XML. W przeciwieństwie do modelu DOM (Document Object), to lepiej odzwierciedla struktury XML. Mimo że <xref:System.Xml.Linq.XAttribute> obiekty nie są faktycznie węzłów w drzewie XML, Praca z <xref:System.Xml.Linq.XAttribute> obiektów jest bardzo podobny do pracy z <xref:System.Xml.Linq.XElement> obiektów.  
+### <a name="attributes-are-not-nodes"></a>Attributes Are Not Nodes  
+ There are some differences between attributes and elements. <xref:System.Xml.Linq.XAttribute> objects are not nodes in the XML tree. They are name/value pairs associated with an XML element. In contrast to the Document Object Model (DOM), this more closely reflects the structure of XML. Although <xref:System.Xml.Linq.XAttribute> objects are not actually nodes in the XML tree, working with <xref:System.Xml.Linq.XAttribute> objects is very similar to working with <xref:System.Xml.Linq.XElement> objects.  
   
- Wykonywania tego rozróżnienia jest szczególnie ważne tylko dla deweloperów, którzy są pisanie kodu, który współdziała z drzew XML na poziomie węzła. Nie są związani z wykonywania tego rozróżnienia wielu deweloperów.  
+ This distinction is primarily important only to developers who are writing code that works with XML trees at the node level. Many developers will not be concerned with this distinction.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML — przegląd programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

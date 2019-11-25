@@ -1,5 +1,5 @@
 ---
-title: 'Porady: ukrywanie dziedziczonej zmiennej (Visual Basic)'
+title: 'Porady: ukrywanie dziedziczonej zmiennej'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: f575830df44076f694c1dfb2f68379594240fb80
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: c20c36b26c90c82da4e8836799f499498ccc40e4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004847"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345356"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Porady: ukrywanie dziedziczonej zmiennej (Visual Basic)
 
-Klasa pochodna dziedziczy wszystkie definicje swojej klasy podstawowej. Jeśli chcesz zdefiniować zmienną przy użyciu takiej samej nazwy, jak element klasy bazowej, można ukryć lub *zaobserwować*ten element klasy bazowej podczas definiowania zmiennej w klasie pochodnej. W takim przypadku kod w klasie pochodnej uzyskuje dostęp do zmiennej, chyba że jawnie pomija mechanizm przesłaniania.
+A derived class inherits all the definitions of its base class. If you want to define a variable using the same name as an element of the base class, you can hide, or *shadow*, that base class element when you define your variable in the derived class. If you do this, code in the derived class accesses your variable unless it explicitly bypasses the shadowing mechanism.
 
-Kolejną przyczyną może być ukrycie dziedziczonej zmiennej jest ochrona przed poprawką klasy bazowej. Klasa bazowa może ulec zmianie, która zmienia element, który jest dziedziczony. W takim przypadku modyfikator `Shadows` wymusza odwołania z klasy pochodnej, aby można je było rozpoznać do zmiennej, a nie do elementu klasy bazowej.
+Another reason you might want to hide an inherited variable is to protect against base class revision. The base class might undergo a change that alters the element you are inheriting. If this happens, the `Shadows` modifier forces references from the derived class to be resolved to your variable, instead of to the base class element.
 
-## <a name="to-hide-an-inherited-variable"></a>Aby ukryć dziedziczoną zmienną
+## <a name="to-hide-an-inherited-variable"></a>To hide an inherited variable
 
-1. Upewnij się, że zmienna, która ma być ukryta, jest zadeklarowana na poziomie klasy (poza jakąkolwiek procedurą). W przeciwnym razie nie trzeba go ukrywać.
+1. Be sure the variable you want to hide is declared at class level (outside any procedure). Otherwise, you do not need to hide it.
   
-2. Wewnątrz klasy pochodnej Napisz [instrukcję Dim](../../../language-reference/statements/dim-statement.md) deklarującą zmienną. Użyj takiej samej nazwy, jak w przypadku zmiennej dziedziczonej.
+2. Inside your derived class, write a [Dim Statement](../../../language-reference/statements/dim-statement.md) declaring your variable. Use the same name as that of the inherited variable.
 
-3. Uwzględnij słowo kluczowe [Shadows](../../../language-reference/modifiers/shadows.md) w deklaracji.
+3. Include the [Shadows](../../../language-reference/modifiers/shadows.md) keyword in the declaration.
 
-     Gdy kod w klasie pochodnej odwołuje się do nazwy zmiennej, kompilator rozpoznaje odwołanie do zmiennej.
+     When code in the derived class refers to the variable name, the compiler resolves the reference to your variable.
 
-     Poniższy przykład ilustruje cieniowanie zmiennej dziedziczonej:
+     The following example illustrates shadowing of an inherited variable:
   
     ```vb  
     Public Class ShadowBaseClass  
@@ -50,16 +50,16 @@ Kolejną przyczyną może być ukrycie dziedziczonej zmiennej jest ochrona przed
     End Class  
     ```  
   
-     Powyższy przykład deklaruje zmienną `shadowString` w klasie bazowej i zasłania ją w klasie pochodnej. Procedura `ShowStrings` w klasie pochodnej wyświetla wersję przesłaniania ciągu, gdy nazwa `shadowString` nie jest kwalifikowana. Następnie wyświetla wersję w tle, gdy `shadowString` jest kwalifikowana za pomocą słowa kluczowego `MyBase`.  
+     The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class. The procedure `ShowStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified. It then displays the shadowed version when `shadowString` is qualified with the `MyBase` keyword.  
   
-## <a name="robust-programming"></a>Niezawodne programowanie
+## <a name="robust-programming"></a>Robust programming
 
-Przesłanianie zawiera więcej niż jedną wersję zmiennej o tej samej nazwie. Gdy instrukcja Code odwołuje się do nazwy zmiennej, wersja, do której kompilator rozpoznaje odwołanie, zależy od czynników, takich jak lokalizacja instrukcji Code i obecność ciągu uprawniającego. Może to zwiększyć ryzyko związane z odwołującymi się do niezamierzonej wersji zmiennej cieniowej. To ryzyko można obniżyć, w pełni kwalifikując wszystkie odwołania do zmiennej w tle.
+Shadowing introduces more than one version of a variable with the same name. When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string. This can increase the risk of referring to an unintended version of a shadowed variable. You can lower that risk by fully qualifying all references to a shadowed variable.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Odwołania do elementów zadeklarowanych](references-to-declared-elements.md)
-- [Obserwowanie w Visual Basic](shadowing.md)
+- [Shadowing in Visual Basic](shadowing.md)
 - [Różnice między przesłanianiem i zastępowaniem](differences-between-shadowing-and-overriding.md)
 - [Instrukcje: ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika](how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [Instrukcje: dostęp do zmiennej ukrytej przez klasę pochodną](how-to-access-a-variable-hidden-by-a-derived-class.md)

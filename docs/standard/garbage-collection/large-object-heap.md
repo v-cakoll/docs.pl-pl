@@ -1,17 +1,17 @@
 ---
-title: Sterta dużego obiektu w systemach Windows
+title: LOH w systemie Windows — .NET
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: 618db9faff137e6ff0f878c928e3a889cff37838
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5125b76dd26ffa4fb363ecf8449f65b490f57b93
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120935"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283620"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Sterta dużego obiektu w systemach Windows
 
@@ -22,7 +22,7 @@ Moduł wyrzucania elementów bezużytecznych platformy .NET (GC) dzieli obiekty 
 
 ## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>Jak obiekt zostaje zakończony na stertie dużego obiektu i jak obsługuje je GC
 
-Jeśli obiekt jest większy lub równy 85 000 bajtów, jest traktowany jako duży obiekt. Ta liczba została określona przez dostrajanie wydajności. Gdy żądanie alokacji obiektów jest przez 85 000 lub więcej bajtów, środowisko uruchomieniowe przydziela je na stercie dużego obiektu.
+Jeśli rozmiar obiektu jest większy lub równy 85 000 bajtów, jest on traktowany jako duży obiekt. Ta liczba została określona przez dostrajanie wydajności. Gdy żądanie alokacji obiektów jest przez 85 000 lub więcej bajtów, środowisko uruchomieniowe przydziela je na stercie dużego obiektu.
 
 Aby zrozumieć, co to oznacza, warto zapoznać się z podstawą dla programu .NET GC.
 
@@ -48,7 +48,7 @@ Rysunek 1 ilustruje scenariusz, w którym generacji formularzy GC 1 po pierwszej
 ![Rysunek 1: Gen 0 GC i gen 1 GC](media/loh/loh-figure-1.jpg)\
 Rysunek 1: generacja 0 i generacja 1 GC.
 
-Rysunek 2 pokazuje, że po 2. generacji GC, który zauważał, że `Obj1` i `Obj2` są martwe, system GC tworzy ciągłe wolne miejsce w pamięci, które było używane przez `Obj1` i `Obj2`, a następnie zostało użyte do zaspokojenia żądania alokacji dla `Obj4`. Do zaspokojenia żądań alokacji można także użyć odstępu po ostatnim obiekcie, `Obj3`, do końca segmentu.
+Rysunek 2 pokazuje, że po 2. generacji GC, który zauważał, że `Obj1` i `Obj2` są martwe, system GC tworzy ciągłe wolne miejsce poza pamięcią, która była używana przez `Obj1` i `Obj2`, a następnie była używana do zaspokojenia żądania alokacji dla `Obj4`. Do zaspokojenia żądań alokacji można także użyć odstępu po ostatnim obiekcie, `Obj3`, do końca segmentu.
 
 ![Rysunek 2. po zakończeniu generacji 2 GC](media/loh/loh-figure-2.jpg)\
 Rysunek 2. po zakończeniu generacji 2 GC
@@ -154,7 +154,7 @@ Te liczniki wydajności są zwykle dobrym pierwszym krokiem w badaniu problemów
 
 Typowym sposobem na przyjrzeć się licznikom wydajności jest Monitor wydajności (Perfmon. exe). Użyj "Dodaj liczniki", aby dodać interesujący licznik dla procesów, które Cię interesują. Dane licznika wydajności można zapisać w pliku dziennika, jak pokazano na rysunku 4:
 
-![screenshow, który pokazuje Dodawanie liczników wydajności.](media/large-object-heap/add-performance-counter.png)
+![zrzut ekranu, który pokazuje Dodawanie liczników wydajności.](media/large-object-heap/add-performance-counter.png)
 Rysunek 4. LOH po generacji 2 GC
 
 Liczniki wydajności mogą być również wykonywane programowo. Wiele osób zbiera je w ten sposób w ramach procesu rutynowego testowania. Gdy znajdują się w nich liczniki z wartościami, które są niezwykłe, wykorzystują inne metody, aby uzyskać bardziej szczegółowe dane, które pomagają w badaniu.
@@ -306,7 +306,7 @@ Aby sprawdzić, czy LOH powoduje fragmentację maszyny wirtualnej, można ustawi
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-To polecenie dzieli się na debuger i pokazuje stosu wywołań tylko wtedy, gdy [Funkcja VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) jest wywoływana z rozmiarem alokacji większym niż 8 MB (0x800000).
+To polecenie dzieli się na debuger i pokazuje stos wywołań tylko wtedy, gdy [Funkcja VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) jest wywoływana z rozmiarem alokacji większym niż 8 MB (0x800000).
 
 Środowisko CLR 2,0 dodaliśmy funkcję o nazwie *VM Hoarding* , która może być przydatna w scenariuszach, w których segmenty (w tym duże i małe sterty obiektów) są często uzyskiwane i zwalniane. Aby określić Hoarding maszyny wirtualnej, należy określić flagę uruchamiania o nazwie `STARTUP_HOARD_GC_VM` za pośrednictwem interfejsu API hostingu. Zamiast zwalniać puste segmenty z powrotem do systemu operacyjnego, środowisko CLR zwalnia pamięć w tych segmentach i umieszcza je na liście gotowości. (Należy pamiętać, że środowisko CLR nie wykonuje tego w przypadku segmentów, które są zbyt duże). Środowisko CLR później używa tych segmentów, aby spełnić nowe żądania segmentów. Następnym razem, gdy aplikacja będzie potrzebowała nowego segmentu, środowisko CLR używa jednego z tej listy w stanie wstrzymania, jeśli będzie można je znaleźć wystarczająco duże.
 

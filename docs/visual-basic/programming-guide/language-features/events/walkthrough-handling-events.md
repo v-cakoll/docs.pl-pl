@@ -1,5 +1,5 @@
 ---
-title: Obsługa zdarzeń (Visual Basic)
+title: Obsługa zdarzeń
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handling [Visual Basic], walkthroughs
@@ -9,114 +9,114 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 12267e0a70419298bc581421c4f3a220088d205f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb42f2e41e366cf8765cb9395d1a5641434bab40
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956311"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345083"
 ---
-# <a name="walkthrough-handling-events-visual-basic"></a>Przewodnik: Obsługa zdarzeń (Visual Basic)
-Jest to drugi z dwóch tematów, które pokazują, jak korzystać z zdarzeń. Pierwszy temat, [Przewodnik: Deklarowanie i wywoływanie zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), pokazuje sposób deklarowania i zgłaszania zdarzeń. Ta sekcja używa formularza i klasy z tego przewodnika, aby pokazać, jak obsługiwać zdarzenia po ich przejściu.  
+# <a name="walkthrough-handling-events-visual-basic"></a>Wskazówki: obsługa zdarzeń (Visual Basic)
+This is the second of two topics that demonstrate how to work with events. The first topic, [Walkthrough: Declaring and Raising Events](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), shows how to declare and raise events. This section uses the form and class from that walkthrough to show how to handle events when they take place.  
   
- W `Widget` przykładzie klasy są stosowane tradycyjne instrukcje obsługi zdarzeń. Visual Basic zapewnia inne techniki pracy ze zdarzeniami. W ramach ćwiczenia można zmodyfikować ten przykład, aby użyć `AddHandler` instrukcji i. `Handles`  
+ The `Widget` class example uses traditional event-handling statements. Visual Basic provides other techniques for working with events. As an exercise, you can modify this example to use the `AddHandler` and `Handles` statements.  
   
-### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>Aby obsłużyć zdarzenie PercentDone klasy widget  
+### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>To handle the PercentDone event of the Widget class  
   
-1. Umieść następujący kod w `Form1`:  
+1. Place the following code in `Form1`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
-     Słowo kluczowe Określa, że zmienna `mWidget` jest używana do obsługi zdarzeń obiektu. `WithEvents` Należy określić rodzaj obiektu, dostarczając nazwę klasy, z której zostanie utworzony obiekt.  
+     The `WithEvents` keyword specifies that the variable `mWidget` is used to handle an object's events. You specify the kind of object by supplying the name of the class from which the object will be created.  
   
-     Zmienna `mWidget` jest zadeklarowana w `Form1` , `WithEvents` ponieważ zmienne muszą być na poziomie klasy. Ta wartość jest prawdziwa niezależnie od typu klasy, w której je umieszczasz.  
+     The variable `mWidget` is declared in `Form1` because `WithEvents` variables must be class-level. This is true regardless of the type of class you place them in.  
   
-     Zmienna `mblnCancel` służy do `LongTask` anulowania metody.  
+     The variable `mblnCancel` is used to cancel the `LongTask` method.  
   
-## <a name="writing-code-to-handle-an-event"></a>Pisanie kodu do obsługi zdarzenia  
- Po zadeklarowaniu zmiennej przy użyciu `WithEvents`, nazwa zmiennej jest wyświetlana na liście rozwijanej w **edytorze kodu**klasy. Po wybraniu `mWidget` `Widget` zdarzenia klasy są wyświetlane na liście rozwijanej po prawej stronie. Wybranie zdarzenia powoduje wyświetlenie odpowiedniej procedury zdarzenia z prefiksem `mWidget` i podkreśleniem. Wszystkie procedury zdarzeń skojarzone ze `WithEvents` zmienną otrzymują nazwę zmiennej jako prefiks.  
+## <a name="writing-code-to-handle-an-event"></a>Writing Code to Handle an Event  
+ As soon as you declare a variable using `WithEvents`, the variable name appears in the left drop-down list of the class's **Code Editor**. When you select `mWidget`, the `Widget` class's events appear in the right drop-down list. Selecting an event displays the corresponding event procedure, with the prefix `mWidget` and an underscore. All the event procedures associated with a `WithEvents` variable are given the variable name as a prefix.  
   
-#### <a name="to-handle-an-event"></a>Aby obsłużyć zdarzenie  
+#### <a name="to-handle-an-event"></a>To handle an event  
   
-1. Wybierz `mWidget` z listy rozwijanej po lewej stronie w **edytorze kodu**.  
+1. Select `mWidget` from the left drop-down list in the **Code Editor**.  
   
-2. `PercentDone` Wybierz zdarzenie z listy rozwijanej po prawej stronie. **Edytor kodu** otwiera `mWidget_PercentDone` procedurę zdarzenia.  
+2. Select the `PercentDone` event from the right drop-down list. The **Code Editor** opens the `mWidget_PercentDone` event procedure.  
   
     > [!NOTE]
-    > **Edytor kodu** jest przydatny, ale nie jest wymagany, do wstawiania nowych programów obsługi zdarzeń. W tym instruktażu bardziej bezpośrednim jest tylko kopiowanie programów obsługi zdarzeń bezpośrednio do kodu.  
+    > The **Code Editor** is useful, but not required, for inserting new event handlers. In this walkthrough, it is more direct to just copy the event handlers directly into your code.  
   
-3. Dodaj następujący kod do `mWidget_PercentDone` programu obsługi zdarzeń:  
+3. Add the following code to the `mWidget_PercentDone` event handler:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
-     Za każdym razem, gdy `Label` zdarzeniejestzgłaszane,procedurazdarzeniawyświetlaprocentwykonaniawkontrolce.`PercentDone` Metoda pozwala na odświeżenie etykiety, a także pozwala użytkownikowi kliknąć przycisk **Anuluj.** `DoEvents`  
+     Whenever the `PercentDone` event is raised, the event procedure displays the percent complete in a `Label` control. The `DoEvents` method allows the label to repaint, and also gives the user the opportunity to click the **Cancel** button.  
   
-4. Dodaj następujący kod dla `Button2_Click` programu obsługi zdarzeń:  
+4. Add the following code for the `Button2_Click` event handler:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
- Jeśli użytkownik kliknie przycisk **Anuluj** w trakcie `LongTask` działania, `Button2_Click` zdarzenie jest wykonywane zaraz po tym `DoEvents` , jak instrukcja zezwala na przetwarzanie zdarzeń. Zmienna `mblnCancel` na poziomie klasy jest ustawiana na `True`, a `mWidget_PercentDone` następnie zdarzenie sprawdza i ustawia `ByRef Cancel` argument na `True`.  
+ If the user clicks the **Cancel** button while `LongTask` is running, the `Button2_Click` event is executed as soon as the `DoEvents` statement allows event processing to occur. The class-level variable `mblnCancel` is set to `True`, and the `mWidget_PercentDone` event then tests it and sets the `ByRef Cancel` argument to `True`.  
   
-## <a name="connecting-a-withevents-variable-to-an-object"></a>Łączenie zmiennej WithEvents z obiektem  
- `Form1`jest teraz skonfigurowany do obsługi `Widget` zdarzeń obiektu. To wszystko, co pozostało `Widget` , aby znaleźć gdzieś.  
+## <a name="connecting-a-withevents-variable-to-an-object"></a>Connecting a WithEvents Variable to an Object  
+ `Form1` is now set up to handle a `Widget` object's events. All that remains is to find a `Widget` somewhere.  
   
- Po zadeklarowaniu zmiennej `WithEvents` w czasie projektowania, żaden obiekt nie jest skojarzony z nim. `WithEvents` Zmienna jest tak samo jak jakakolwiek inna zmienna obiektu. Należy utworzyć obiekt i przypisać do niego odwołanie przy użyciu `WithEvents` zmiennej.  
+ When you declare a variable `WithEvents` at design time, no object is associated with it. A `WithEvents` variable is just like any other object variable. You have to create an object and assign a reference to it with the `WithEvents` variable.  
   
-#### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>Aby utworzyć obiekt i przypisać do niego odwołanie  
+#### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>To create an object and assign a reference to it  
   
-1. Wybierz pozycję **(zdarzenia Form1)** z listy rozwijanej po lewej stronie w **edytorze kodu**.  
+1. Select **(Form1 Events)** from the left drop-down list in the **Code Editor**.  
   
-2. `Load` Wybierz zdarzenie z listy rozwijanej po prawej stronie. **Edytor kodu** otwiera `Form1_Load` procedurę zdarzenia.  
+2. Select the `Load` event from the right drop-down list. The **Code Editor** opens the `Form1_Load` event procedure.  
   
-3. Dodaj następujący kod dla `Form1_Load` procedury zdarzenia, aby `Widget`utworzyć:  
+3. Add the following code for the `Form1_Load` event procedure to create the `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
- Gdy ten kod jest wykonywany, Visual Basic tworzy `Widget` obiekt i łączy jego zdarzenia z procedurami zdarzeń skojarzonymi `mWidget`z. Od tego momentu, gdy `Widget` `PercentDone` wywołuje zdarzenie, `mWidget_PercentDone` procedura zdarzenia jest wykonywana.  
+ When this code executes, Visual Basic creates a `Widget` object and connects its events to the event procedures associated with `mWidget`. From that point on, whenever the `Widget` raises its `PercentDone` event, the `mWidget_PercentDone` event procedure is executed.  
   
-#### <a name="to-call-the-longtask-method"></a>Aby wywołać metodę LongTask  
+#### <a name="to-call-the-longtask-method"></a>To call the LongTask method  
   
-- Dodaj następujący kod do `Button1_Click` programu obsługi zdarzeń:  
+- Add the following code to the `Button1_Click` event handler:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#8)]  
   
- Przed wywołaniem `Boolean`metody, etykieta, w której jest wyświetlany procent wykonania, musi zostać zainicjowana, a flaga poziomu klasy dla anulowania metody musi być ustawiona na `False`. `LongTask`  
+ Before the `LongTask` method is called, the label that displays the percent complete must be initialized, and the class-level `Boolean` flag for canceling the method must be set to `False`.  
   
- `LongTask`jest wywoływana z czasem trwania zadania wynoszącym 12,2 sekund. `PercentDone` Zdarzenie jest zgłaszane raz w jednej trzeciej części sekundy. Za `mWidget_PercentDone` każdym razem, gdy zdarzenie jest zgłaszane, wykonywana jest procedura zdarzenia.  
+ `LongTask` is called with a task duration of 12.2 seconds. The `PercentDone` event is raised once every one-third of a second. Each time the event is raised, the `mWidget_PercentDone` event procedure is executed.  
   
- Gdy `LongTask` to zrobisz, `mblnCancel` zostanie przetestowany w `LongTask` celu sprawdzenia, czy zakończono normalne działanie `mblnCancel` , czy został `True`zatrzymany, ponieważ został ustawiony na. Procent ukończenia jest aktualizowany tylko w poprzednim przypadku.  
+ When `LongTask` is done, `mblnCancel` is tested to see if `LongTask` ended normally, or if it stopped because `mblnCancel` was set to `True`. The percent complete is updated only in the former case.  
   
-#### <a name="to-run-the-program"></a>Aby uruchomić program  
+#### <a name="to-run-the-program"></a>To run the program  
   
-1. Naciśnij klawisz F5, aby umieścić projekt w trybie uruchamiania.  
+1. Press F5 to put the project in run mode.  
   
-2. Kliknij przycisk **Rozpocznij zadanie** . Za każdym razem `PercentDone` , gdy zdarzenie jest zgłaszane, etykieta zostaje zaktualizowana o wartość procentową wykonanego zadania.  
+2. Click the **Start Task** button. Each time the `PercentDone` event is raised, the label is updated with the percentage of the task that is complete.  
   
-3. Kliknij przycisk **Anuluj** , aby zatrzymać zadanie. Zauważ, że wygląd przycisku **Anuluj** nie zmienia się natychmiast po jego kliknięciu. Zdarzenie nie może wystąpić, dopóki `My.Application.DoEvents` instrukcja nie zezwala na przetwarzanie zdarzeń. `Click`  
+3. Click the **Cancel** button to stop the task. Notice that the appearance of the **Cancel** button does not change immediately when you click it. The `Click` event cannot happen until the `My.Application.DoEvents` statement allows event processing.  
   
     > [!NOTE]
-    > `My.Application.DoEvents` Metoda nie przetwarza zdarzeń w taki sam sposób jak w przypadku formularza. Na przykład w tym instruktażu należy kliknąć przycisk **Anuluj** dwa razy. Aby umożliwić bezpośrednie obsługiwanie zdarzeń przez formularz, można użyć wielowątkowości. Aby uzyskać więcej informacji, zobacz sekcję [zarządzane wątki](../../../../standard/threading/index.md).
+    > The `My.Application.DoEvents` method does not process events in exactly the same way as the form does. For example, in this walkthrough, you must click the **Cancel** button twice. To allow the form to handle the events directly, you can use multithreading. For more information, see [Managed Threading](../../../../standard/threading/index.md).
   
- Może się pojawić monit o uruchomienie programu z użyciem klawisza F11 i przekroczenie kodu w wierszu. Można jasno zobaczyć, jak działa wprowadzanie `LongTask`, a następnie krótko wprowadzić ponownie `Form1` przy `PercentDone` każdym wywołaniu zdarzenia.  
+ You may find it instructive to run the program with F11 and step through the code a line at a time. You can clearly see how execution enters `LongTask`, and then briefly re-enters `Form1` each time the `PercentDone` event is raised.  
   
- Co się stanie, jeśli podczas wykonywania z powrotem w kodzie `Form1` `LongTask` , metoda została wywołana ponownie? W najgorszym przypadku mogą wystąpić przeciążenia stosu `LongTask` , jeśli zostały wywołane za każdym razem, gdy zdarzenie zostało zgłoszone.  
+ What would happen if, while execution was back in the code of `Form1`, the `LongTask` method were called again? At worst, a stack overflow might occur if `LongTask` were called every time the event was raised.  
   
- Można spowodować, aby zmienna `mWidget` obsługiwała zdarzenia dla innego `Widget` obiektu przez przypisanie odwołania do nowego `Widget` elementu do `mWidget`. W rzeczywistości kod można wykonać za `Button1_Click` każdym razem, gdy klikniesz przycisk.  
+ You can cause the variable `mWidget` to handle events for a different `Widget` object by assigning a reference to the new `Widget` to `mWidget`. In fact, you can make the code in `Button1_Click` do this every time you click the button.  
   
-#### <a name="to-handle-events-for-a-different-widget"></a>Aby obsłużyć zdarzenia dla innego widżetu  
+#### <a name="to-handle-events-for-a-different-widget"></a>To handle events for a different widget  
   
-- Dodaj następujący wiersz kodu do `Button1_Click` procedury bezpośrednio przed wierszem, który odczytuje: `mWidget.LongTask(12.2, 0.33)`  
+- Add the following line of code to the `Button1_Click` procedure, immediately preceding the line that reads `mWidget.LongTask(12.2, 0.33)`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#9)]  
   
- Powyższy kod tworzy nowy `Widget` za każdym razem, gdy przycisk zostanie kliknięty. Gdy tylko `LongTask` Metoda zostanie zakończona, odwołanie `Widget` do `Widget` zostanie wydane i zostanie zniszczone.  
+ The code above creates a new `Widget` each time the button is clicked. As soon as the `LongTask` method completes, the reference to the `Widget` is released, and the `Widget` is destroyed.  
   
- Zmienna może zawierać tylko jedno odwołanie do obiektu, więc Jeśli przypiszesz inny `Widget` obiekt do `mWidget`, zdarzenia poprzedniego `Widget` obiektu nie będą już obsługiwane. `WithEvents` Jeśli `mWidget` jest jedyną zmienną obiektu zawierającą odwołanie do starego `Widget`, obiekt zostanie zniszczony. Jeśli chcesz obsługiwać zdarzenia z kilku `Widget` obiektów, `AddHandler` Użyj instrukcji, aby przetwarzać zdarzenia z poszczególnych obiektów osobno.  
+ A `WithEvents` variable can contain only one object reference at a time, so if you assign a different `Widget` object to `mWidget`, the previous `Widget` object's events will no longer be handled. If `mWidget` is the only object variable containing a reference to the old `Widget`, the object is destroyed. If you want to handle events from several `Widget` objects, use the `AddHandler` statement to process events from each object separately.  
   
 > [!NOTE]
-> W razie potrzeby można zadeklarować dowolną liczbę `WithEvents` zmiennych, ale `WithEvents` tablice zmiennych nie są obsługiwane.  
+> You can declare as many `WithEvents` variables as you need, but arrays of `WithEvents` variables are not supported.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik: Deklarowanie i wywoływanie zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
+- [Przewodnik: deklarowanie i wywoływanie zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
 - [Zdarzenia](../../../../visual-basic/programming-guide/language-features/events/index.md)

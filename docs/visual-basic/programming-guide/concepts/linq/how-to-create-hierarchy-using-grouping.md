@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Tworzenie hierarchii przy użyciu grupowania (Visual Basic)'
+title: 'How to: Create Hierarchy Using Grouping'
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
-ms.openlocfilehash: dea189d9d689cfba661fd84cb52f8e6658935a30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fea3e008e0bb18ae92f8883d08be4f27929b9fd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855416"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341593"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>Instrukcje: Tworzenie hierarchii przy użyciu grupowania (Visual Basic)
-W tym przykładzie przedstawiono sposób grupowania danych, a następnie wygeneruj XML, w oparciu o grupowania.  
+# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>How to: Create Hierarchy Using Grouping (Visual Basic)
+This example shows how to group data, and then generate XML based on the grouping.  
   
 ## <a name="example"></a>Przykład  
- Pierwszy to przykład grupuje dane według kategorii, następnie generuje nowy plik XML, w którym hierarchię XML odzwierciedla grupowania.  
+ This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.  
   
- W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim doc As XElement = XElement.Load("Data.xml")  
@@ -81,4 +81,4 @@ Console.WriteLine(newData)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

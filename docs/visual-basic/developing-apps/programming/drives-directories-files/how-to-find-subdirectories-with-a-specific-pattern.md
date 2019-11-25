@@ -1,26 +1,26 @@
 ---
-title: 'Instrukcje: Znajdź podkatalogi z określonym wzorcem w Visual Basic'
+title: 'Porady: znajdowanie podkatalogów z określonym wzorcem'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
-ms.openlocfilehash: 96ae5c5c44263a47343058012d8b8aa064d9cd92
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c8e13598080139cafabffb2e17d0a3b99c37dc5d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039440"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348774"
 ---
-# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Instrukcje: Znajdź podkatalogi z określonym wzorcem w Visual Basic
+# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Porady: znajdowanie podkatalogów z określonym wzorcem w Visual Basic
 
-<xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> Metoda zwraca kolekcję ciągów, reprezentującą nazwy ścieżek podkatalogów w katalogu. Możesz użyć parametru, `wildCards` aby określić konkretny wzorzec. Jeśli chcesz uwzględnić zawartość podkatalogów w wyszukiwaniu, ustaw `searchType` parametr na. `SearchOption.SearchAllSubDirectories`
+The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> method returns a read-only collection of strings representing the path names for the subdirectories in a directory. You can use the `wildCards` parameter to specify a specific pattern. If you would like to include the contents of subdirectories in the search, set the `searchType` parameter to `SearchOption.SearchAllSubDirectories`.
 
-Po znalezieniu katalogów pasujących do określonego wzorca zwracana jest pusta kolekcja.
+An empty collection is returned if no directories matching the specified pattern are found.
 
-## <a name="to-find-subdirectories-with-a-specific-pattern"></a>Aby znaleźć podkatalogi z określonym wzorcem
+## <a name="to-find-subdirectories-with-a-specific-pattern"></a>To find subdirectories with a specific pattern
 
-`GetDirectories` Użyj metody, podając nazwę i ścieżkę do katalogu, który chcesz przeszukać. Poniższy przykład zwraca wszystkie katalogi w strukturze katalogów, które zawierają wyraz "Logs" w nazwie i dodaje je do `ListBox1`.
+Use the `GetDirectories` method, supplying the name and path of the directory you want to search. The following example returns all the directories in the directory structure that contain the word "Logs" in their name, and adds them to `ListBox1`.
 
 [!code-vb[VbVbcnFileAccess#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnFileAccess/VB/Class1.vb#1)]
 
@@ -28,25 +28,25 @@ Po znalezieniu katalogów pasujących do określonego wzorca zwracana jest pusta
 
 Następujące warunki mogą spowodować wyjątek:
 
-- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (zaczyna się od \\ \\.\\) (<xref:System.ArgumentException>).
+- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).
 
-- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).
+- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).
 
-- Co najmniej jeden z określonych symboli wieloznacznych `Nothing`jest pustym ciągiem lub zawiera tylko spacje (<xref:System.ArgumentNullException>).
+- One or more of the specified wildcard characters is `Nothing`, an empty string, or contains only spaces (<xref:System.ArgumentNullException>).
 
-- `directory`nie istnieje (<xref:System.IO.DirectoryNotFoundException>).
+- `directory` does not exist (<xref:System.IO.DirectoryNotFoundException>).
 
-- `directory`wskazuje istniejący plik (<xref:System.IO.IOException>).
+- `directory` points to an existing file (<xref:System.IO.IOException>).
 
-- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).
+- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).
 
-- Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).
+- A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).
 
-- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).
+- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).
 
-- Użytkownik nie ma wymaganych uprawnień (<xref:System.UnauthorizedAccessException>).
+- The user lacks necessary permissions (<xref:System.UnauthorizedAccessException>).
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>
-- [Instrukcje: Znajdowanie plików z określonym wzorcem](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)
+- [Instrukcje: znajdowanie plików z określonym wzorcem](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)

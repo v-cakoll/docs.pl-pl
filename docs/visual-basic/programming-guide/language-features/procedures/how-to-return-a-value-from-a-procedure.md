@@ -1,48 +1,48 @@
 ---
-title: 'Instrukcje: Zwracanie wartości z procedury (Visual Basic)'
+title: 'Porady: zwracanie wartości z procedury'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: 8b53df1634d2b9971bc44c968a17db81cac3924f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1371e4ed0ff28f9caf56eabf2a1bb9290edbe75c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665757"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346026"
 ---
-# <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Instrukcje: Zwracanie wartości z procedury (Visual Basic)
-A `Function` procedury zwraca wartość do wywołującego kodu albo wykonując `Return` instrukcji lub napotkania `Exit Function` lub `End Function` instrukcji.  
+# <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Porady: zwracanie wartości z procedury (Visual Basic)
+A `Function` procedure returns a value to the calling code either by executing a `Return` statement or by encountering an `Exit Function` or `End Function` statement.  
   
-### <a name="to-return-a-value-using-the-return-statement"></a>Zwraca wartość, przy użyciu instrukcji Return  
+### <a name="to-return-a-value-using-the-return-statement"></a>To return a value using the Return statement  
   
-1. Umieść `Return` instrukcji w punkcie, w której procedury zadanie zostało ukończone.  
+1. Put a `Return` statement at the point where the procedure's task is completed.  
   
-2. Postępuj zgodnie z `Return` — słowo kluczowe z wyrażeniem, które zwracają wartości mają być zwracane do kodu wywołującego.  
+2. Follow the `Return` keyword with an expression that yields the value you want to return to the calling code.  
   
-3. Masz więcej niż jedną `Return` instrukcji w tej samej procedury.  
+3. You can have more than one `Return` statement in the same procedure.  
   
-     Następujące `Function` procedury oblicza najdłuższy bok lub przeciwprostokątnej trójkąta prostokątnego i zwraca go do kodu wywołującego.  
+     The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, and returns it to the calling code.  
   
      [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
-     W poniższym przykładzie przedstawiono typowe wywołanie `hypotenuse`, która przechowuje zwracanej wartości.  
+     The following example shows a typical call to `hypotenuse`, which stores the returned value.  
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
-### <a name="to-return-a-value-using-exit-function-or-end-function"></a>Zwraca wartość, przy użyciu funkcji Exit lub End  
+### <a name="to-return-a-value-using-exit-function-or-end-function"></a>To return a value using Exit Function or End Function  
   
-1. W co najmniej jednym miejscu `Function` procedury, przypisz wartość nazwy procedury.  
+1. In at least one place in the `Function` procedure, assign a value to the procedure's name.  
   
-2. Podczas wykonywania `Exit Function` lub `End Function` instrukcji, Visual Basic zwraca wartość ostatnio przypisana do nazwy procedury.  
+2. When you execute an `Exit Function` or `End Function` statement, Visual Basic returns the value most recently assigned to the procedure's name.  
   
-3. Masz więcej niż jedną `Exit Function` można łączyć instrukcji w tej samej procedury, a `Return` i `Exit Function` instrukcje w tej samej procedury.  
+3. You can have more than one `Exit Function` statement in the same procedure, and you can mix `Return` and `Exit Function` statements in the same procedure.  
   
-4. Może mieć tylko jeden `End Function` instrukcji w `Function` procedury.  
+4. You can have only one `End Function` statement in a `Function` procedure.  
   
-     Aby uzyskać więcej informacji i obejrzeć przykład, zobacz "Zwraca wartość" w [Function — instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md).  
+     For more information and an example, see "Return Value" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -53,5 +53,5 @@ A `Function` procedury zwraca wartość do wywołującego kodu albo wykonując `
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Function, instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Return, instrukcja](../../../../visual-basic/language-reference/statements/return-statement.md)
-- [Instrukcje: Utwórz procedurę, która zwraca wartość](./how-to-create-a-procedure-that-returns-a-value.md)
-- [Instrukcje: Wywoływanie procedury zwracającej wartość](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Instrukcje: tworzenie procedury, która zwraca wartość](./how-to-create-a-procedure-that-returns-a-value.md)
+- [Instrukcje: wywoływanie procedury zwracającej wartość](./how-to-call-a-procedure-that-returns-a-value.md)

@@ -1,50 +1,50 @@
 ---
-title: 'Instrukcje: Określanie, czy dwa obiekty są jednakowe (Visual Basic)'
+title: 'Porady: określanie, czy dwa obiekty są jednakowe'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - testing [Visual Basic], objects
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: aae053ae0473ed6ced0f28da3d5e5afc0be629df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5deebd4ffc5b277c94f5ae36c00fd6e5010a1551
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769086"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348597"
 ---
-# <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Instrukcje: Określanie, czy dwa obiekty są jednakowe (Visual Basic)
-W języku Visual Basic dwóch odwołań do zmiennych są traktowane jako identyczne, jeśli ich wskaźniki są takie same, oznacza to, jeśli obie zmienne wskazywać tego samego wystąpienia klasy w pamięci. Na przykład w aplikacji Windows Forms, warto wykonania porównania, aby określić, czy bieżące wystąpienie (`Me`) jest taka sama jak konkretnego wystąpienia, takie jak `Form2`.  
+# <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Porady: określanie, czy dwa obiekty są jednakowe (Visual Basic)
+In Visual Basic, two variable references are considered identical if their pointers are the same, that is, if both variables point to the same class instance in memory. For example, in a Windows Forms application, you might want to make a comparison to determine whether the current instance (`Me`) is the same as a particular instance, such as `Form2`.  
   
- Visual Basic oferuje dwa operatory porównanie wskaźników. [Operatora Is](../../../../visual-basic/language-reference/operators/is-operator.md) zwraca `True` Jeśli obiekty są identyczne i [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) zwraca `True` Jeśli nie są.  
+ Visual Basic provides two operators to compare pointers. The [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) returns `True` if the objects are identical, and the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) returns `True` if they are not.  
   
-## <a name="determining-if-two-objects-are-identical"></a>Określanie, jeśli dwa obiekty są jednakowe  
+## <a name="determining-if-two-objects-are-identical"></a>Determining if Two Objects Are Identical  
   
-#### <a name="to-determine-if-two-objects-are-identical"></a>Aby określić, jeśli dwa obiekty są jednakowe  
+#### <a name="to-determine-if-two-objects-are-identical"></a>To determine if two objects are identical  
   
-1. Konfigurowanie `Boolean` wyrażenie do przetestowania dwóch obiektów.  
+1. Set up a `Boolean` expression to test the two objects.  
   
-2. W wyrażeniu testowania za pomocą `Is` dwa obiekty jako argumenty operacji operatora.  
+2. In your testing expression, use the `Is` operator with the two objects as operands.  
   
-     `Is` Zwraca `True` Jeśli obiekty wskazywać tego samego wystąpienia klasy.  
+     `Is` returns `True` if the objects point to the same class instance.  
   
-## <a name="determining-if-two-objects-are-not-identical"></a>Określanie, jeśli dwa obiekty nie są identyczne  
- Czasami trzeba wykonać akcję, jeśli dwa obiekty nie są identyczne i mogą być niewygodna połączyć `Not` i `Is`, na przykład `If Not obj1 Is obj2`. W takim przypadku można użyć `IsNot` operatora.  
+## <a name="determining-if-two-objects-are-not-identical"></a>Determining if Two Objects Are Not Identical  
+ Sometimes you want to perform an action if the two objects are not identical, and it can be awkward to combine `Not` and `Is`, for example `If Not obj1 Is obj2`. In such a case you can use the `IsNot` operator.  
   
-#### <a name="to-determine-if-two-objects-are-not-identical"></a>Aby sprawdzić, czy dwa obiekty nie są identyczne  
+#### <a name="to-determine-if-two-objects-are-not-identical"></a>To determine if two objects are not identical  
   
-1. Konfigurowanie `Boolean` wyrażenie do przetestowania dwóch obiektów.  
+1. Set up a `Boolean` expression to test the two objects.  
   
-2. W wyrażeniu testowania za pomocą `IsNot` dwa obiekty jako argumenty operacji operatora.  
+2. In your testing expression, use the `IsNot` operator with the two objects as operands.  
   
-     `IsNot` Zwraca `True` Jeśli obiekty nie mogą wskazywać tego samego wystąpienia klasy.  
+     `IsNot` returns `True` if the objects do not point to the same class instance.  
   
 ## <a name="example"></a>Przykład  
- Następujący przykład sprawdza pary `Object` zmienne, aby zobaczyć, jeśli wskazują na to samo wystąpienie klasy.  
+ The following example tests pairs of `Object` variables to see if they point to the same class instance.  
   
  [!code-vb[VbVbalrKeywords#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#14)]  
   
- Poprzedni przykład wyświetla następujące dane wyjściowe.  
+ The preceding example displays the following output.  
   
  `objA different from objB? True`  
   
@@ -57,5 +57,5 @@ W języku Visual Basic dwóch odwołań do zmiennych są traktowane jako identyc
 - [Wartości zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
 - [Is, operator](../../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot, operator](../../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Instrukcje: Określanie, czy dwa obiekty są powiązane](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Instrukcje: określanie, czy dwa obiekty są powiązane](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
 - [Me, My, MyBase i MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

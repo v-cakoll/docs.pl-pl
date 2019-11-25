@@ -1,32 +1,32 @@
 ---
-title: Za mało miejsca na stosie (Visual Basic)
+title: Za mało miejsca na stosie
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: 29dbdf74808fc98bb856483c3fd8e3a09a72113b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ae604a9727413f2705d42a4b68f5a50b7dd3feb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925583"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349183"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Za mało miejsca na stosie (Visual Basic)
-Stos jest pracy obszaru pamięci, która zwiększania lub zmniejszania dynamicznie z zapotrzebowaniem na zasoby wykonywania programu. Przekroczono limit.  
+The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program. Its limits have been exceeded.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Sprawdź, czy procedury nie są zagnieżdżone zbyt głęboko.  
+1. Check that procedures are not nested too deeply.  
   
-2. Upewnij się, że procedury rekurencyjne kończą się poprawnie.  
+2. Make sure recursive procedures terminate properly.  
   
-3. Jeśli zmienne lokalne wymagają lokalnej zmiennej miejsca niż dostępna, spróbuj deklarowanie niektóre zmienne na poziomie modułu. Można również zadeklarować wszystkie zmienne w procedurze statyczne poprzedzając `Property`, `Sub`, lub `Function` — słowo kluczowe z `Static`. Możesz też `Static` instrukcję, aby zadeklarować poszczególnych zmiennych statycznych w ramach procedur.  
+3. If local variables require more local variable space than is available, try declaring some variables at the module level. You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`. Or you can use the `Static` statement to declare individual static variables within procedures.  
   
-4. Niektóre z Twoimi ciągami o stałej długości, jako ciągi o zmiennej długości przedefiniować jako ciągi o stałej długości Użyj więcej miejsca na stosie niż ciągi o zmiennej długości. Można również zdefiniować ciąg na poziomie modułu wymagającym nie obszar stosu.  
+4. Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings. You can also define the string at module level where it requires no stack space.  
   
-5. Sprawdź liczbę zagnieżdżonych `DoEvents` funkcję wywołania, przy użyciu `Calls` okno dialogowe do widoku, które procedury są aktywne na stosie.  
+5. Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.  
   
-6. Upewnij się, że nie był przyczyną "cascade zdarzeń", wyzwalając zdarzenie, które wywołuje procedury zdarzenia już na stosie. Kaskadowe zdarzeń jest podobny do niezakończony cykliczne wywołanie procedury, ale jest mniej oczywistych, ponieważ jest nawiązywane połączenie, zamiast jawnego wywołania w kodzie języka Visual Basic. Użyj `Calls` okno dialogowe do widoku, które procedury są aktywne na stosie.  
+6. Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack. An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code. Use the `Calls` dialog box to view which procedures are active on the stack.  
   
 ## <a name="see-also"></a>Zobacz także
 

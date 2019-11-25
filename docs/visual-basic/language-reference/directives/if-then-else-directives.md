@@ -1,5 +1,5 @@
 ---
-title: '#If... Then... #Else — dyrektywy (Visual Basic)'
+title: '#f...Then...#Else, dyrektywy'
 ms.date: 04/11/2018
 f1_keywords:
 - vb.#EndIf
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: aaf5e7dd82cebf734da59e9feb89174705468a4b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 40e93b718241c9819e3c0fd84595e76eb0c86472
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580091"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343814"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else — Dyrektywy
 
-Warunkowo kompiluje wybrane bloki kodu Visual Basic.
+Conditionally compiles selected blocks of Visual Basic code.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,26 +47,26 @@ Warunkowo kompiluje wybrane bloki kodu Visual Basic.
 ## <a name="parts"></a>Części
 
 `expression`  
-Wymagane dla `#If` i `#ElseIf` instrukcji opcjonalnych w innym miejscu. Każde wyrażenie składające się wyłącznie z jednej lub więcej warunkowych stałych kompilatora, literałów i operatorów, które są obliczane w `True` lub `False`.
+Required for `#If` and `#ElseIf` statements, optional elsewhere. Any expression, consisting exclusively of one or more conditional compiler constants, literals, and operators, that evaluates to `True` or `False`.
 
 `statements`  
-Wymagane dla bloku instrukcji `#If`, opcjonalnie w innym miejscu. Visual Basic linie programów lub dyrektywy kompilatora, które są kompilowane, jeśli skojarzone wyrażenie szacuje się na `True`.
+Required for `#If` statement block, optional elsewhere. Visual Basic program lines or compiler directives that are compiled if the associated expression evaluates to `True`.
 
 `#End If`  
-Kończy blok instrukcji `#If`.
+Terminates the `#If` statement block.
 
 ## <a name="remarks"></a>Uwagi
 
-Na powierzchni zachowanie dyrektyw `#If...Then...#Else` pojawia się tak samo, jak w przypadku instrukcji `If...Then...Else`. Jednakże `#If...Then...#Else` dyrektywy szacują, co jest kompilowane przez kompilator, podczas gdy instrukcje `If...Then...Else` obliczają warunki w czasie wykonywania.
+On the surface, the behavior of the `#If...Then...#Else` directives appears the same as that of the `If...Then...Else` statements. However, the `#If...Then...#Else` directives evaluate what is compiled by the compiler, whereas the `If...Then...Else` statements evaluate conditions at run time.
 
-Kompilacja warunkowa jest zwykle używana do kompilowania tego samego programu dla różnych platform. Służy również do zapobiegania wyświetlaniu kodu debugowania w pliku wykonywalnym. Kod wykluczony podczas kompilacji warunkowej jest całkowicie pomijany z końcowego pliku wykonywalnego, więc nie ma wpływu na rozmiar ani wydajność.
+Conditional compilation is typically used to compile the same program for different platforms. It is also used to prevent debugging code from appearing in an executable file. Code excluded during conditional compilation is completely omitted from the final executable file, so it has no effect on size or performance.
 
-Bez względu na wynik każdej oceny wszystkie wyrażenia są oceniane przy użyciu `Option Compare Binary`. Instrukcja `Option Compare` nie ma wpływu na wyrażenia w instrukcjach `#If` i `#ElseIf`.
+Regardless of the outcome of any evaluation, all expressions are evaluated using `Option Compare Binary`. The `Option Compare` statement does not affect expressions in `#If` and `#ElseIf` statements.
 
 > [!NOTE]
-> Nie istnieje jednowierszowa forma `#If`, `#Else`, `#ElseIf` i `#End If`. Żaden inny kod nie może pojawiać się w tym samym wierszu co którakolwiek z dyrektyw.
+> No single-line form of the `#If`, `#Else`, `#ElseIf`, and `#End If` directives exists. No other code can appear on the same line as any of the directives.
 
-Instrukcje w bloku kompilacji warunkowej muszą być kompletnymi instrukcjami logicznymi. Na przykład nie można warunkowo kompilować tylko atrybutów funkcji, ale można warunkowo zadeklarować funkcję wraz z jej atrybutami:
+The statements within a conditional compilation block must be complete logical statements. For example, you cannot conditionally compile only the attributes of a function, but you can conditionally declare the function along with its attributes:
 
 ```vb
 #If DEBUG Then
@@ -80,7 +80,7 @@ Public Function SomeFunction() As String
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie używa konstrukcji `#If...Then...#Else`, aby określić, czy kompilować pewne instrukcje.
+This example uses the `#If...Then...#Else` construct to determine whether to compile certain statements.
 
 [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]
 

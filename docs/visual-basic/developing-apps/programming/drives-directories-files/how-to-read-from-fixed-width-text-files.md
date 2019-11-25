@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Odczyt z plików testowych o stałej szerokości w Visual Basic'
+title: 'How to: read from fixed-width text Files'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fixed-width text file
@@ -8,59 +8,62 @@ helpviewer_keywords:
 - text files [Visual Basic], tasks
 - text files [Visual Basic], reading
 ms.assetid: 99be5692-967a-4e85-993e-cd18139a5a69
-ms.openlocfilehash: 1df1c84e6eaf90b737b51e5512638e4a15de6866
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3cea9bfe2388f0ca510b15cb020f899b81c4603c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623449"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334626"
 ---
-# <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>Porady: Odczyt z plików testowych o stałej szerokości w Visual Basic
-`TextFieldParser` Obiekt umożliwia łatwe oraz efektywne analizowanie strukturyzowanych plików tekstowych, takie jak dzienniki.  
+# <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>How to: read from fixed-width text files in Visual Basic
+
+The `TextFieldParser` object provides a way to easily and efficiently parse structured text files, such as logs.  
   
- `TextFieldType` Właściwość definiuje, czy przeanalizowany plik jest rozdzielany plik lub taki, który ma pola o stałej szerokości tekstu. Plik tekstowy stałej szerokości pola na końcu mogą mieć szerokość zmiennej. Aby określić, że pole na końcu ma szerokość zmiennej, zdefiniuj ma szerokość mniejszą lub równą zero.  
+ The `TextFieldType` property defines whether the parsed file is a delimited file or one that has fixed-width fields of text. In a fixed-width text file, the field at the end can have a variable width. To specify that the field at the end has a variable width, define it to have a width less than or equal to zero.  
   
-### <a name="to-parse-a-fixed-width-text-file"></a>Aby przeanalizować plik tekstowy stałej szerokości  
+### <a name="to-parse-a-fixed-width-text-file"></a>To parse a fixed-width text file  
   
-1. Utwórz nową `TextFieldParser`. Poniższy kod tworzy `TextFieldParser` o nazwie `Reader` i otwiera plik `test.log`.  
+1. Create a new `TextFieldParser`. The following code creates the `TextFieldParser` named `Reader` and opens the file `test.log`.  
   
      [!code-vb[VbFileIORead#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#9)]  
   
-2. Zdefiniuj `TextFieldType` właściwość jako `FixedWidth`, definiując szerokość i formatowanie. Poniższy kod definiuje kolumny tekstu. Pierwsza to 5 znaki dwubajtowe, druga 10, 11 trzecia i czwarta to o zmiennej szerokości.  
+2. Define the `TextFieldType` property as `FixedWidth`, defining the width and format. The following code defines the columns of text; the first is 5 characters wide, the second 10, the third 11, and the fourth is of variable width.  
   
      [!code-vb[VbFileIORead#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#10)]  
   
-3. W pętli poprzez pól w pliku. Jeśli wiersze są uszkodzone, należy zgłosić błąd i kontynuować analizowanie.  
+3. Loop through the fields in the file. If any lines are corrupted, report an error and continue parsing.  
   
      [!code-vb[VbFileIORead#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#11)]  
   
-4. Zamknij `While` i `Using` blokuje z `End While` i `End Using`.  
+4. Close the `While` and `Using` blocks with `End While` and `End Using`.  
   
      [!code-vb[VbFileIORead#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#12)]  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie odczytuje z pliku `test.log`.  
+
+ This example reads from the file `test.log`.  
   
  [!code-vb[VbFileIORead#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#13)]  
   
-## <a name="robust-programming"></a>Skuteczne programowanie  
+## <a name="robust-programming"></a>Robust programming  
+
  Następujące warunki mogą spowodować wyjątek:  
   
-- Nie można przeanalizować wiersz w określonym formacie (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). Komunikat o wyjątku Określa wiersz, powoduje wyjątek, podczas gdy <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> właściwość jest przypisany do tekstu w wierszu.  
+- A row cannot be parsed using the specified format (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). The exception message specifies the line causing the exception, while the <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> property is assigned to the text contained in the line.  
   
-- Określony plik nie istnieje (<xref:System.IO.FileNotFoundException>).  
+- The specified file does not exist (<xref:System.IO.FileNotFoundException>).  
   
-- Sytuacja częściowego zaufania, użytkownik nie ma wystarczających uprawnień dostępu do tego pliku. (<xref:System.Security.SecurityException>).  
+- A partial-trust situation in which the user does not have sufficient permissions to access the file. (<xref:System.Security.SecurityException>).  
   
-- Ścieżka jest zbyt długa (<xref:System.IO.PathTooLongException>).  
+- The path is too long (<xref:System.IO.PathTooLongException>).  
   
-- Użytkownik nie ma wystarczających uprawnień dostępu do pliku (<xref:System.UnauthorizedAccessException>).  
+- The user does not have sufficient permissions to access the file (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
-- [Instrukcje: Odczyt z plików tekstowych rozdzielonych przecinkami](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
-- [Instrukcje: Odczyt z plików tekstowych w wielu formatach](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
+- [Instrukcje: odczyt z rozdzielonych przecinkami plików testowych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
+- [Instrukcje: odczyt z plików tekstowych w wielu formatach](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
 - [Analizowanie plików tekstowych za pomocą obiektu TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
-- [Przewodnik: Manipulowanie plikami i katalogami w Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
-- [Rozwiązywanie problemów: Odczytywanie z oraz zapisywanie w plikach tekstowych](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Walkthrough: Manipulating Files and Directories in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
+- [Rozwiązywanie problemów: odczytywanie z plików tekstowych oraz zapisywanie w nich](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

@@ -1,35 +1,35 @@
 ---
-title: Refaktoryzacja do czystych funkcji (Visual Basic)
+title: Refaktoryzacja do czystych funkcji
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: e951b3e9108f26a9c861eb49c44bb0a510131819
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 22b371c6136836d6e0f1281f824b69378c0d3e4a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834915"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346521"
 ---
-# <a name="refactoring-into-pure-functions-visual-basic"></a>Refaktoryzacja do czystych funkcji (Visual Basic)
+# <a name="refactoring-into-pure-functions-visual-basic"></a>Refactoring Into Pure Functions (Visual Basic)
 
-Ważnym aspektem czystych transformacji funkcjonalnych jest uczenie się, jak kod refaktoryzacji przy użyciu czystych funkcji.
+An important aspect of pure functional transformations is learning how to refactor code using pure functions.
 
-Jak wspomniano wcześniej w tej sekcji, czysta funkcja ma dwie przydatne cechy:
+As noted previously in this section, a pure function has two useful characteristics:
 
-- Nie ma żadnych efektów ubocznych. Funkcja nie zmienia żadnych zmiennych ani danych dowolnego typu poza funkcją.
+- It has no side effects. The function does not change any variables or the data of any type outside of the function.
 
-- Jest ona spójna. Mając ten sam zestaw danych wejściowych, zawsze zwróci tę samą wartość wyjściową.
+- It is consistent. Given the same set of input data, it will always return the same output value.
 
- Jednym ze sposobów przejścia do programowania funkcjonalnego jest Refaktoryzacja istniejącego kodu w celu wyeliminowania zbędnych efektów ubocznych i zewnętrznych zależności. W ten sposób można utworzyć czystą wersję funkcji istniejącego kodu.
+ One way of transitioning to functional programming is to refactor existing code to eliminate unnecessary side effects and external dependencies. In this way, you can create pure function versions of existing code.
 
-W tym temacie omówiono czystą funkcję i jej znaczenie. [Samouczek: manipulowanie zawartością w samouczku WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) pokazuje, jak manipulować dokumentem WordprocessingML i zawiera dwa przykłady sposobu refaktoryzacji przy użyciu czystej funkcji.
+This topic discusses what a pure function is and what it is not. The [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial shows how to manipulate a WordprocessingML document, and includes two examples of how to refactor using a pure function.
 
-## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminowanie efektów ubocznych i zależności zewnętrznych
+## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminating Side Effects and External Dependencies
 
-Poniższe przykłady różnią się dwoma nieczystymi funkcjami i czystą funkcją.
+The following examples contrast two non-pure functions and a pure function.
 
-### <a name="non-pure-function-that-changes-a-class-member"></a>Nieczysta funkcja, która zmienia element członkowski klasy
+### <a name="non-pure-function-that-changes-a-class-member"></a>Non-Pure Function that Changes a Class Member
 
-W poniższym kodzie funkcja `HyphenatedConcat` nie jest czystą funkcją, ponieważ modyfikuje element członkowski danych `aMember` w klasie:
+In the following code, the `HyphenatedConcat` function is not a pure function, because it modifies the `aMember` data member in the class:
 
 ```vb
 Module Module1
@@ -52,11 +52,11 @@ Ten kod generuje następujące dane wyjściowe:
 StringOne-StringTwo
 ```
 
-Należy zauważyć, że nie ma znaczenia, czy modyfikowane dane mają dostęp `public` lub `private`, czy jest składową `shared` lub składową wystąpienia. Czysta funkcja nie zmienia żadnych danych poza funkcją.
+Note that it is irrelevant whether the data being modified has `public` or `private` access, or is a  `shared` member or an instance member. A pure function does not change any data outside of the function.
 
-### <a name="non-pure-function-that-changes-an-argument"></a>Nieczysta funkcja, która zmienia argument
+### <a name="non-pure-function-that-changes-an-argument"></a>Non-Pure Function that Changes an Argument
 
-Ponadto następująca wersja tej samej funkcji nie jest czysta, ponieważ modyfikuje zawartość parametru, `sb`.
+Furthermore, the following version of this same function is not pure because it modifies the contents of its parameter, `sb`.
 
 ```vb
 Module Module1
@@ -72,14 +72,14 @@ Module Module1
 End Module
 ```
 
-Ta wersja programu daje te same dane wyjściowe co w pierwszej wersji, ponieważ funkcja `HyphenatedConcat` zmieniła wartość (stan) pierwszego parametru, wywołując funkcję członkowską <xref:System.Text.StringBuilder.Append%2A>. Należy zauważyć, że ta zmiana występuje pomimo tego, że `HyphenatedConcat` używa przekazywania parametrów wywołania przez wartość.
+This version of the program produces the same output as the first version, because the `HyphenatedConcat` function has changed the value (state) of its first parameter by invoking the <xref:System.Text.StringBuilder.Append%2A> member function. Note that this alteration occurs despite that fact that `HyphenatedConcat` uses call-by-value parameter passing.
 
 > [!IMPORTANT]
-> W przypadku typów referencyjnych, Jeśli przekażesz parametr według wartości, wynikiem jest kopia odwołania do obiektu, który jest przekazywany. Ta kopia jest nadal skojarzona z tymi samymi danymi wystąpienia co oryginalne odwołanie (do momentu przypisania zmiennej odniesienia do nowego obiektu). Wywołanie przez odwołanie nie musi być wymagane do zmodyfikowania parametru przez funkcję.
+> For reference types, if you pass a parameter by value, it results in a copy of the reference to an object being passed. This copy is still associated with the same instance data as the original reference (until the reference variable is assigned to a new object). Call-by-reference is not necessarily required for a function to modify a parameter.
 
-### <a name="pure-function"></a>Czysta funkcja
+### <a name="pure-function"></a>Pure Function
 
-Ta Następna wersja programu hows, jak zaimplementować funkcję `HyphenatedConcat` jako czystą funkcję.
+This next version of the program hows how to implement the `HyphenatedConcat` function as a pure function.
 
 ```vb
 Module Module1
@@ -95,17 +95,17 @@ Module Module1
 End Module
 ```
 
-Ta wersja generuje ten sam wiersz danych wyjściowych: `StringOne-StringTwo`. Należy pamiętać, że aby zachować łączną wartość, jest ona przechowywana w zmiennej pośredniej `s2`.
+Again, this version produces the same line of output: `StringOne-StringTwo`. Note that to retain the concatenated value, it is stored in the intermediate variable `s2`.
 
-Jednym z metod, które może być bardzo przydatne, jest zapisanie funkcji, które są w sposób nieczysty (to oznacza, że deklarują i modyfikują zmienne lokalne), ale są globalnie czyste. Takie funkcje mają wiele pożądanych cech tworzenia, ale unikają niektórych bardziej zawiłeych idiomy programowania, takich jak korzystanie z rekursji, gdy pętla prosta osiągnie tę samą wartość.
+One approach that can be very useful is to write functions that are locally impure (that is, they declare and modify local variables) but are globally pure. Such functions have many of the desirable composability characteristics, but avoid some of the more convoluted functional programming idioms, such as having to use recursion when a simple loop would accomplish the same thing.
 
-## <a name="standard-query-operators"></a>Standardowe operatory zapytań
+## <a name="standard-query-operators"></a>Standard Query Operators
 
-Ważną cechą standardowych operatorów zapytań jest zaimplementowanie ich jako czystych funkcji.
+An important characteristic of the standard query operators is that they are implemented as pure functions.
 
-Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — Omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
+For more information, see [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do czystych transformacji funkcjonalnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Programowanie funkcjonalne a programowanie bezwzględne (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Functional Programming vs. Imperative Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

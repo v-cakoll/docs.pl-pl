@@ -1,5 +1,5 @@
 ---
-title: Private (Visual Basic)
+title: Private
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Private
@@ -7,33 +7,33 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: ddb2d165de330758f58fbbcb5872e820e639808f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5600744aeca79a54f51a1f9ecd0ef00fed4b00fd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642781"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351328"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
-Określa, że co najmniej jeden zadeklarowany element programistyczny jest dostępny tylko w obrębie ich kontekst deklaracji, łącznie z w obrębie wszystkich typów zawartych.  
+Specifies that one or more declared programming elements are accessible only from within their declaration context, including from within any contained types.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli elementu programistycznego reprezentuje własnościowych funkcji lub zawiera dane poufne, zazwyczaj chcesz ograniczyć dostęp do niego jako ściśle. Ograniczenie maksymalnej można osiągnąć, zezwalając tylko modułu, klasy lub struktury, który definiuje go do niego dostęp. Aby ograniczyć dostęp do elementu w ten sposób, można zadeklarować za pomocą `Private`.  
+ If a programming element represents proprietary functionality, or contains confidential data, you usually want to limit access to it as strictly as possible. You achieve the maximum limitation by allowing only the module, class, or structure that defines it to access it. To limit access to an element in this way, you can declare it with `Private`.  
 
 > [!NOTE]
-> Można również użyć [Private Protected](private-protected.md) modyfikator dostępu, co sprawia, że członek jest dostępny z tej klasy i znajduje się w jego zawierające zestaw klas pochodnych.
+> You can also use the [Private Protected](private-protected.md) access modifier, which makes a member accessible from within that class and from derived classes located in its containing assembly.
 
-## <a name="rules"></a>reguły  
+## <a name="rules"></a>Rules  
 
-- **Kontekst deklaracji.** Możesz użyć `Private` tylko na poziomie modułu. Oznacza to, że kontekst deklaracji `Private` elementu musi być modułu, klasy lub struktury, a nie może być plikiem źródłowym, przestrzeń nazw, interfejs lub procedury.  
+- **Declaration Context.** You can use `Private` only at module level. This means the declaration context for a `Private` element must be a module, class, or structure, and cannot be a source file, namespace, interface, or procedure.  
   
 ## <a name="behavior"></a>Zachowanie  
   
-- **Poziom dostępu.** Cały kod w kontekście deklaracji mogą uzyskiwać dostęp do jego `Private` elementów. W tym kodu w ramach zamkniętego typu, na przykład klasa zagnieżdżona lub wyrażenia przypisania w wyliczeniu. Żaden kod poza kontekstem deklaracji mogą uzyskiwać dostęp do jego `Private` elementów.  
+- **Access Level.** All code within a declaration context can access its `Private` elements. This includes code within a contained type, such as a nested class or an assignment expression in an enumeration. No code outside of the declaration context can access its `Private` elements.  
   
-- **Modyfikatory dostępu.** Słowa kluczowe, które określają poziom dostępu są nazywane *modyfikatorach dostępu*. Dla porównania modyfikatory dostępu, zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
- `Private` Modyfikator mogą być używane w tych kontekstach:  
+ The `Private` modifier can be used in these contexts:  
   
  [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -51,9 +51,9 @@ Określa, że co najmniej jeden zadeklarowany element programistyczny jest dost�
   
  [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Instrukcja Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Interface, instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
   
  [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
@@ -65,7 +65,7 @@ Określa, że co najmniej jeden zadeklarowany element programistyczny jest dost�
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private Protected](./private-protected.md)
-- [Protected Friend](./protected-friend.md)[dostęp do poziomów w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Protected Friend](./protected-friend.md)    [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Procedury](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Struktury](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

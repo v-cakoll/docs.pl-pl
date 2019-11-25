@@ -12,67 +12,67 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 6a49c070bd7d2e3819044c6bb653671a2fc8199f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: edd398cd3e42e23301dcc992093d14d087754e76
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73106994"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347251"
 ---
 # <a name="resolve-assembly-loads"></a>Rozwiązywanie załadowań zestawów
-Platforma .NET udostępnia zdarzenie <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> dla aplikacji, które wymagają większej kontroli nad ładowaniem zestawu. Dzięki obsłudze tego zdarzenia aplikacja może załadować zestaw do kontekstu obciążenia spoza normalnej ścieżki sondowania, wybrać kilka wersji zestawu do załadowania, emitować zestaw dynamiczny i zwrócić go i tak dalej. Ten temat zawiera wskazówki dotyczące obsługi zdarzenia <xref:System.AppDomain.AssemblyResolve>.  
+.NET provides the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event for applications that require greater control over assembly loading. By handling this event, your application can load an assembly into the load context from outside the normal probing paths, select which of several assembly versions to load, emit a dynamic assembly and return it, and so on. This topic provides guidance for handling the <xref:System.AppDomain.AssemblyResolve> event.  
   
 > [!NOTE]
-> W celu rozpoznawania obciążeń zestawów w kontekście tylko odbicia należy zamiast tego użyć zdarzenia <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType>.  
+> For resolving assembly loads in the reflection-only context, use the <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> event instead.  
   
-## <a name="how-the-assemblyresolve-event-works"></a>Jak działa zdarzenie AssemblyResolve  
- Po zarejestrowaniu procedury obsługi dla zdarzenia <xref:System.AppDomain.AssemblyResolve>, procedura obsługi jest wywoływana za każdym razem, gdy środowisko uruchomieniowe nie uda się powiązać z zestawem według nazwy. Na przykład wywoływanie następujących metod z kodu użytkownika może spowodować podniesienie poziomu zdarzenia <xref:System.AppDomain.AssemblyResolve>:  
+## <a name="how-the-assemblyresolve-event-works"></a>How the AssemblyResolve event works  
+ When you register a handler for the <xref:System.AppDomain.AssemblyResolve> event, the handler is invoked whenever the runtime fails to bind to an assembly by name. For example, calling the following methods from user code can cause the <xref:System.AppDomain.AssemblyResolve> event to be raised:  
   
-- <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> Przeciążenie metody lub <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> Przeciążenie metody, których pierwszy argument jest ciągiem, który reprezentuje nazwę wyświetlaną zestawu do załadowania (czyli ciąg zwracany przez właściwość <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>).  
+- An <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> method overload or <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method overload whose first argument is a string that represents the display name of the assembly to load (that is, the string returned by the <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> property).  
   
-- Przeciążenie metody <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> lub przeciążenia metody <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, których pierwszy argument jest obiektem <xref:System.Reflection.AssemblyName>, który identyfikuje zestaw do załadowania.  
+- An <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> method overload or <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method overload whose first argument is an <xref:System.Reflection.AssemblyName> object that identifies the assembly to load.  
   
-- Przeciążenie metody <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
+- An <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> method overload.  
   
-- Przeciążanie metody <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> lub <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType>, które tworzy wystąpienie obiektu w innej domenie aplikacji.  
+- An <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> or <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> method overload that instantiates an object in another application domain.  
   
-### <a name="what-the-event-handler-does"></a>Działanie programu obsługi zdarzeń  
- Procedura obsługi dla zdarzenia <xref:System.AppDomain.AssemblyResolve> otrzymuje nazwę wyświetlaną zestawu, który ma zostać załadowany, we właściwości <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType>. Jeśli program obsługi nie rozpoznaje nazwy zestawu, zwraca `null` (C#), `Nothing` (Visual Basic) lub `nullptr` (wizualizacja C++).  
+### <a name="what-the-event-handler-does"></a>What the event handler does  
+ The handler for the <xref:System.AppDomain.AssemblyResolve> event receives the display name of the assembly to be loaded, in the <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> property. If the handler does not recognize the assembly name, it returns `null` (C#), `Nothing` (Visual Basic), or `nullptr` (Visual C++).  
   
- Jeśli program obsługi rozpoznaje nazwę zestawu, może ładować i zwracać zestaw, który spełnia żądanie. Na poniższej liście opisano kilka przykładowych scenariuszy.  
+ If the handler recognizes the assembly name, it can load and return an assembly that satisfies the request. The following list describes some sample scenarios.  
   
-- Jeśli program obsługi wie lokalizację wersji zestawu, może załadować zestaw za pomocą metody <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> lub <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> i może zwrócić załadowany zestaw, jeśli zakończono pomyślnie.  
+- If the handler knows the location of a version of the assembly, it can load the assembly by using the <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> or <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> method, and can return the loaded assembly if successful.  
   
-- Jeśli program obsługi ma dostęp do bazy danych zestawów przechowywanych jako tablice bajtowe, może załadować tablicę bajtową przy użyciu jednego z przeciążeń metody <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, które pobierają tablicę bajtów.  
+- If the handler has access to a database of assemblies stored as byte arrays, it can load a byte array by using one of the <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method overloads that take a byte array.  
   
-- Program obsługi może wygenerować zestaw dynamiczny i zwrócić go.  
+- The handler can generate a dynamic assembly and return it.  
   
 > [!NOTE]
-> Program obsługi musi załadować zestaw do kontekstu ładowania z w kontekście ładowania lub bez kontekstu. Jeśli program obsługi ładuje zestaw do kontekstu tylko odbicie przy użyciu <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> lub metody <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType>, próba załadowania, która wywołała zdarzenie <xref:System.AppDomain.AssemblyResolve>, kończy się niepowodzeniem.  
+> The handler must load the assembly into the load-from context, into the load context, or without context.If the handler loads the assembly into the reflection-only context by using the <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> or the <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> method, the load attempt that raised the <xref:System.AppDomain.AssemblyResolve> event fails.  
   
- Do zwrócenia odpowiedniego zestawu jest odpowiedzialna procedura obsługi zdarzeń. Program obsługi może przeanalizować nazwę wyświetlaną żądanego zestawu, przekazując wartość właściwości <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> do konstruktora <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29>. Począwszy od .NET Framework 4, program obsługi może użyć właściwości <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType>, aby określić, czy bieżące żądanie jest zależne od innego zestawu. Te informacje mogą ułatwić zidentyfikowanie zestawu, który będzie spełniał zależność.  
+ It is the responsibility of the event handler to return a suitable assembly. The handler can parse the display name of the requested assembly by passing the <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> property value to the <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> constructor. Beginning with the .NET Framework 4, the handler can use the <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> property to determine whether the current request is a dependency of another assembly. This information can help identify an assembly that will satisfy the dependency.  
   
- Program obsługi zdarzeń może zwrócić inną wersję zestawu niż żądana wersja.  
+ The event handler can return a different version of the assembly than the version that was requested.  
   
- W większości przypadków zestaw, który jest zwracany przez program obsługi, pojawia się w kontekście ładowania, niezależnie od kontekstu, w którym program obsługi ładuje go do. Jeśli na przykład program obsługi używa metody <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> do załadowania zestawu do kontekstu ładowania z, zestaw pojawia się w kontekście ładowania, gdy program obsługi zwróci go. Jednak w poniższym przypadku zestaw pojawia się bez kontekstu, gdy program obsługi zwróci go:  
+ In most cases, the assembly that is returned by the handler appears in the load context, regardless of the context the handler loads it into. For example, if the handler uses the <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> method to load an assembly into the load-from context, the assembly appears in the load context when the handler returns it. However, in the following case the assembly appears without context when the handler returns it:  
   
-- Procedura obsługi ładuje zestaw bez kontekstu.  
+- The handler loads an assembly without context.  
   
-- Właściwość <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> nie ma wartości null.  
+- The <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> property is not null.  
   
-- Zestaw żądający (czyli zestaw, który jest zwracany przez właściwość <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType>) został załadowany bez kontekstu.  
+- The requesting assembly (that is, the assembly that is returned by the <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> property) was loaded without context.  
   
- Aby uzyskać informacje na temat kontekstów, zobacz Przeciążenie metody <xref:System.Reflection.Assembly.LoadFrom%28System.String%29?displayProperty=nameWithType>.  
+ For information about contexts, see the <xref:System.Reflection.Assembly.LoadFrom%28System.String%29?displayProperty=nameWithType> method overload.  
   
- Wiele wersji tego samego zestawu może być załadowanych do tej samej domeny aplikacji. Ta metoda nie jest zalecana, ponieważ może to prowadzić do problemów z przypisaniem. Zapoznaj się z [najlepszymi rozwiązaniami dotyczącymi ładowania zestawu](../../framework/deployment/best-practices-for-assembly-loading.md).  
+ Multiple versions of the same assembly can be loaded into the same application domain. This practice is not recommended, because it can lead to type assignment problems. See [Best practices for assembly loading](../../framework/deployment/best-practices-for-assembly-loading.md).  
   
-### <a name="what-the-event-handler-should-not-do"></a>Czego nie powinien wykonać program obsługi zdarzeń  
-Podstawową regułą obsługi zdarzenia <xref:System.AppDomain.AssemblyResolve> jest to, że nie należy próbować zwrócić zestawu, który nie jest rozpoznawany. Podczas pisania procedury obsługi należy wiedzieć, które zestawy mogą spowodować podniesienie poziomu zdarzenia. Program obsługi powinien zwrócić wartość null dla innych zestawów.  
+### <a name="what-the-event-handler-should-not-do"></a>What the event handler should not do  
+The primary rule for handling the <xref:System.AppDomain.AssemblyResolve> event is that you should not try to return an assembly you do not recognize. When you write the handler, you should know which assemblies might cause the event to be raised. Your handler should return null for other assemblies.  
 
 > [!IMPORTANT]
-> Począwszy od .NET Framework 4, zdarzenie <xref:System.AppDomain.AssemblyResolve> jest zgłaszane dla zestawów satelickich. Ta zmiana ma wpływ na procedurę obsługi zdarzeń, która została zapisywana dla starszej wersji .NET Framework, jeśli program obsługi podejmie próbę rozpoznania wszystkich żądań ładowania zestawu. Procedury obsługi zdarzeń, które ignorują zestawy, które nie są rozpoznawane, nie mają wpływ na tę zmianę: zwracają wartości null i są stosowane normalne mechanizmy powrotu.  
+> Beginning with the .NET Framework 4, the <xref:System.AppDomain.AssemblyResolve> event is raised for satellite assemblies. This change affects an event handler that was written for an earlier version of the .NET Framework, if the handler tries to resolve all assembly load requests. Event handlers that ignore assemblies they do not recognize are not affected by this change: They return null, and normal fallback mechanisms are followed.  
 
-Podczas ładowania zestawu, procedura obsługi zdarzeń nie może używać żadnych przeciążeń metody <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> lub <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, które mogą spowodować rekursywne zdarzenie <xref:System.AppDomain.AssemblyResolve>, ponieważ może to prowadzić do przepełnienia stosu. (Zobacz listę znajdującą się wcześniej w tym temacie). Dzieje się tak nawet wtedy, gdy podajesz obsługę wyjątków dla żądania ładowania, ponieważ żaden wyjątek nie jest zgłaszany do momentu zwrócenia wszystkich programów obsługi zdarzeń. W rezultacie następujący kod powoduje przepełnienie stosu, jeśli nie można odnaleźć `MyAssembly`:  
+When loading an assembly, the event handler must not use any of the <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> or <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method overloads that can cause the <xref:System.AppDomain.AssemblyResolve> event to be raised recursively, because this can lead to a stack overflow. (See the list provided earlier in this topic.) This happens even if you provide exception handling for the load request, because no exception is thrown until all event handlers have returned. Thus, the following code results in a stack overflow if `MyAssembly` is not found:  
 
 ```cpp
 using namespace System;
@@ -160,7 +160,6 @@ Process is terminated due to StackOverflowException.
 ```
 
 ```vb
-Imports System
 Imports System.Reflection
 
 Class BadExample
@@ -199,5 +198,5 @@ End Class
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Najlepsze rozwiązania dotyczące ładowania zestawów](../../framework/deployment/best-practices-for-assembly-loading.md)
-- [Korzystanie z domen aplikacji](../../framework/app-domains/use.md)
+- [Best practices for assembly loading](../../framework/deployment/best-practices-for-assembly-loading.md)
+- [Use application domains](../../framework/app-domains/use.md)

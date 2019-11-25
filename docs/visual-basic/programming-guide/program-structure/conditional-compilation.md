@@ -1,69 +1,69 @@
 ---
-title: Kompilacja warunkowa w Visual Basic
+title: Kompilacja warunkowa
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-ms.openlocfilehash: 0767b2054697735c3f5190b6e30a2c80ea5288bc
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 19a2c70941a9a72574f7e624743def74b80c4e39
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775703"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347458"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Kompilacja warunkowa w Visual Basic
-W *kompilacji warunkowej*poszczególne bloki kodu w programie są kompilowane wybiórczo, podczas gdy inne są ignorowane.  
+In *conditional compilation*, particular blocks of code in a program are compiled selectively while others are ignored.  
   
- Na przykład możesz chcieć napisać instrukcje debugowania, które porównują szybkość różnych podejść do tego samego zadania programistycznego, lub można zlokalizować aplikację dla wielu języków. Instrukcje kompilacji warunkowej są przeznaczone do uruchamiania w czasie kompilacji, a nie w czasie wykonywania.  
+ For example, you may want to write debugging statements that compare the speed of different approaches to the same programming task, or you may want to localize an application for multiple languages. Conditional compilation statements are designed to run during compile time, not at run time.  
   
- Należy zauważyć, że bloki kodu mają być warunkowo kompilowane za pomocą dyrektywy `#If...Then...#Else`. Aby na przykład utworzyć wersje języka francuskiego i niemieckiego tej samej aplikacji z tego samego kodu źródłowego, segmenty kodu specyficzne dla platformy można osadzić w instrukcjach `#If...Then` przy użyciu wstępnie zdefiniowanych stałych `FrenchVersion` i `GermanVersion`. W poniższym przykładzie pokazano, jak:  
+ You denote blocks of code to be conditionally compiled with the `#If...Then...#Else` directive. For example, to create French- and German-language versions of the same application from the same source code, you embed platform-specific code segments in `#If...Then` statements using the predefined constants `FrenchVersion` and `GermanVersion`. The following example demonstrates how:  
   
  [!code-vb[VbVbalrConditionalComp#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#5)]  
   
- Jeśli ustawisz wartość `FrenchVersion` stałej kompilacji warunkowej na `True` w czasie kompilacji, zostanie skompilowany kod warunkowy dla wersji francuskiej. Jeśli ustawisz wartość `GermanVersion` stałej do `True`, kompilator używa wersji niemieckiej. Jeśli żaden z nich nie jest ustawiony na `True`, kod w ostatnim `Else` bloku zostanie uruchomiony.  
+ If you set the value of the `FrenchVersion` conditional compilation constant to `True` at compile time, the conditional code for the French version is compiled. If you set the value of the `GermanVersion` constant to `True`, the compiler uses the German version. If neither is set to `True`, the code in the last `Else` block runs.  
   
 > [!NOTE]
-> Funkcja autouzupełniania nie będzie działać podczas edytowania kodu i stosowania dyrektyw warunkowej kompilacji, jeśli kod nie jest częścią bieżącej gałęzi.  
+> Autocompletion will not function when editing code and using conditional compilation directives if the code is not part of the current branch.  
   
-## <a name="declaring-conditional-compilation-constants"></a>Deklarowanie stałych kompilacji warunkowej  
- Stałe kompilacji warunkowej można ustawić na jeden z trzech sposobów:  
+## <a name="declaring-conditional-compilation-constants"></a>Declaring Conditional Compilation Constants  
+ You can set conditional compilation constants in one of three ways:  
   
-- W **projektancie projektu**  
+- In the **Project Designer**  
   
-- W wierszu polecenia przy użyciu kompilatora wiersza polecenia  
+- At the command line when using the command-line compiler  
   
-- W kodzie  
+- In your code  
   
- Stałe kompilacji warunkowej mają specjalny zakres i nie można uzyskać do niego dostępu z poziomu kodu standardowego. Zakres stałej kompilacji warunkowej zależy od sposobu jej ustawienia. W poniższej tabeli wymieniono zakres stałych zadeklarowanych przy użyciu każdego z trzech sposobów wymienionych powyżej.  
+ Conditional compilation constants have a special scope and cannot be accessed from standard code. The scope of a conditional compilation constant is dependent on the way it is set. The following table lists the scope of constants declared using each of the three ways mentioned above.  
   
-|Jak stała jest ustawiona|Zakres stałej|  
+|How constant is set|Scope of constant|  
 |---|---|  
-|**Projektant projektu**|Publiczny dla wszystkich plików w projekcie|  
-|Wiersz polecenia|Publiczny dla wszystkich plików przesłanych do kompilatora wiersza polecenia|  
-|Instrukcja `#Const` w kodzie|Prywatny do pliku, w którym jest zadeklarowany|  
+|**Project Designer**|Public to all files in the project|  
+|Wiersz polecenia|Public to all files passed to the command-line compiler|  
+|`#Const` statement in code|Private to the file in which it is declared|  
   
-|Aby ustawić stałe w projektancie projektu|  
+|To set constants in the Project Designer|  
 |---|  
-|-Przed utworzeniem pliku wykonywalnego Ustaw stałe w **projektancie projektu** , wykonując kroki opisane w temacie [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties).|  
+|-   Before creating your executable file, set constants in the **Project Designer** by following the steps provided in [Managing Project and Solution Properties](/visualstudio/ide/managing-project-and-solution-properties).|  
   
-|Aby ustawić stałe w wierszu polecenia|  
+|To set constants at the command line|  
 |---|  
-|— Użyj przełącznika **-d** , aby wprowadzić stałe kompilacji warunkowej, jak w poniższym przykładzie:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     Między przełącznikiem **-d** i pierwszą stałą nie jest wymagane miejsce. Aby uzyskać więcej informacji, zobacz [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Deklaracje wiersza polecenia przesłaniają deklaracje wprowadzone w **projektancie projektu**, ale nie są wymazywane. Argumenty ustawione w **projektancie projektu** obowiązują dla kolejnych kompilacji.<br />     Podczas pisania stałych w samym kodzie nie istnieją ścisłe reguły dotyczące ich umieszczania, ponieważ ich zakresem jest cały moduł, w którym są one zadeklarowane.|  
+|-   Use the **-d** switch to enter conditional compilation constants, as in the following example:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     No space is required between the **-d** switch and the first constant. For more information, see [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Command-line declarations override declarations entered in the **Project Designer**, but do not erase them. Arguments set in **Project Designer** remain in effect for subsequent compilations.<br />     When writing constants in the code itself, there are no strict rules as to their placement, since their scope is the entire module in which they are declared.|  
   
-|Aby ustawić stałe w kodzie|  
+|To set constants in your code|  
 |---|  
-|— Umieść stałe w bloku deklaracji modułu, w którym są używane. Dzięki temu kod jest zorganizowany i łatwiejszy do czytania.|  
+|-   Place the constants in the declaration block of the module in which they are used. This helps keep your code organized and easier to read.|  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
 |Tytuł|Opis|  
 |---|---|  
-|[Struktura programu i konwencje związane z kodami](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Zawiera sugestie ułatwiające odczytywanie i konserwowanie kodu.|  
+|[Struktura programu i konwencje związane z kodami](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Provides suggestions for making your code easy to read and maintain.|  
   
 ## <a name="reference"></a>Tematy pomocy  
  [#Const, dyrektywa](../../../visual-basic/language-reference/directives/const-directive.md)  
   
  [#If...Then...#Else, dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
- [-Definiuj (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+ [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)

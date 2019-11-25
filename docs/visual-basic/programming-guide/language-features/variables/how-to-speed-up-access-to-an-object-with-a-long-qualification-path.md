@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Przyspiesz dostęp do obiektu z długą ścieżką kwalifikacyjną (Visual Basic)'
+title: 'Porady: przyspieszanie dostępu do obiektu z długą ścieżką kwantyfikacji'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], accessing
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: a8e50a2ed04037b48091321dc0c9ac2ea1db35f4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 83670ae6af0904156b08398024658cf504b7663f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631099"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346817"
 ---
-# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Instrukcje: Przyspiesz dostęp do obiektu z długą ścieżką kwalifikacyjną (Visual Basic)
+# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Porady: przyspieszanie dostępu do obiektu z długą ścieżką kwantyfikacji (Visual Basic)
 
-Jeśli często uzyskujesz dostęp do obiektu, który wymaga ścieżki kwalifikacji kilku metod i właściwości, możesz przyspieszyć kod, nie powtarzając się ścieżki kwalifikacji.
+If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.
 
-Istnieją dwa sposoby, aby uniknąć powtarzania ścieżki kwalifikacji. Obiekt można przypisać do zmiennej lub użyć go w `With`... `End With` blok.
+There are two ways you can avoid repeating the qualification path. You can assign the object to a variable, or you can use it in a `With`...`End With` block.
 
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>Aby przyspieszyć dostęp do wysoce kwalifikowanego obiektu przez przypisanie go do zmiennej
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>To speed up access to a heavily qualified object by assigning it to a variable
 
-1. Zadeklaruj zmienną typu obiektu, do którego jest często uzyskiwany dostęp. Określ ścieżkę kwalifikacji w części inicjującej deklaracji.
+1. Declare a variable of the type of the object that you are accessing frequently. Specify the qualification path in the initialization part of the declaration.
 
     ```vb
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl
     ```
 
-2. Użyj zmiennej, aby uzyskać dostęp do elementów członkowskich obiektu.
+2. Use the variable to access the object's members.
 
     ```vb
     ctrlActv.Text = "Test"
@@ -37,15 +37,15 @@ Istnieją dwa sposoby, aby uniknąć powtarzania ścieżki kwalifikacji. Obiekt 
     ctrlActv.Show()
     ```
 
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>Aby przyspieszyć dostęp do wysoce kwalifikowanego obiektu za pomocą... Koniec z blokiem
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>To speed up access to a heavily qualified object by using a With...End With block
 
-1. Umieszczenie ścieżki kwalifikacji w `With` instrukcji.
+1. Put the qualification path in a `With` statement.
 
     ```vb
     With someForm.ActiveForm.ActiveControl
     ```
 
-2. Dostęp do elementów członkowskich obiektu wewnątrz `With` bloku `End With` przed instrukcją.
+2. Access the object's members inside the `With` block, before the `End With` statement.
 
     ```vb
         .Text = "Test"

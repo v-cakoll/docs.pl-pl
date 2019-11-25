@@ -1,49 +1,49 @@
 ---
-title: Obiekty (Visual Basic)
+title: Obiekty
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 8852a3daa3cd3891d5053cc1fffe19fa310125de
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 8956d8dd8f46b4235d71802ccc743dfebcb051be
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880723"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344155"
 ---
 # <a name="objects-visual-basic"></a>Obiekty (Visual Basic)
-Ten temat zawiera łącza do innych tematów tego dokumentu, środowiska wykonawczego języka Visual Basic obiektów i znajdują się tabele, ich procedur elementu członkowskiego, właściwości i zdarzenia.  
+This topic provides links to other topics that document the Visual Basic run-time objects and contain tables of their member procedures, properties, and events.  
   
-## <a name="visual-basic-run-time-objects"></a>Obiekty środowiska wykonawczego Visual Basic  
+## <a name="visual-basic-run-time-objects"></a>Visual Basic Run-time Objects  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.Collection>|Zapewnia wygodny sposób, aby wyświetlić powiązane grupy elementów jako pojedynczy obiekt.|  
-|<xref:Microsoft.VisualBasic.Information.Err%2A>|Zawiera informacje na temat błędów czasu wykonywania.|  
-|`My.Application` Obiekt składa się z następujących klas:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> zawiera elementy członkowskie, które są dostępne we wszystkich projektach.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> zawiera elementy członkowskie dostępne w aplikacjach Windows Forms.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> zawiera elementy członkowskie dostępne w aplikacji konsoli.|Zapewnia dane, które są skojarzone tylko z bieżącej aplikacji lub biblioteki DLL. Brak informacji o poziomie systemu, może się zmienić z `My.Application`.<br /><br /> Niektóre składowe są dostępne tylko w przypadku formularzy Windows lub aplikacji konsoli.|  
-|`My.Application.Info` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Info%2A>)|Udostępnia właściwości w celu uzyskania informacji o aplikacji, takich jak numer wersji, opis, załadowanych zestawów i tak dalej.|  
-|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|Udostępnia właściwości i metody w celu zapisywania zdarzeń i wyjątków informacji odbiorniki logu aplikacji.|  
-|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|Udostępnia właściwości do manipulowania komputera składniki, takie jak audio, zegara, klawiatura, system plików i tak dalej.|  
-|`My.Computer.Audio` (<xref:Microsoft.VisualBasic.Devices.Audio>)|Udostępnia metody dla odtwarzanie dźwięków.|  
-|`My.Computer.Clipboard` (<xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>)|Udostępnia metody do manipulowania Schowka.|  
-|`My.Computer.Clock` (<xref:Microsoft.VisualBasic.Devices.Clock>)|Udostępnia właściwości do uzyskiwania dostępu do bieżącym czasem lokalnym i uniwersalny czas koordynowany (odpowiednik czas uniwersalny Greenwich) z zegarem systemowym.|  
-|`My.Computer.FileSystem` (<xref:Microsoft.VisualBasic.FileIO.FileSystem>)|Udostępnia właściwości i metody do pracy z stacje, plików i katalogów.|  
-|`My.Computer.FileSystem.SpecialDirectories` (<xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)|Udostępnia właściwości umożliwiające dostęp do często katalogi, do których odwołuje się.|  
-|`My.Computer.Info` (<xref:Microsoft.VisualBasic.Devices.ComputerInfo>)|Udostępnia właściwości w celu uzyskania informacji na temat pamięci, załadowanych zestawów, nazwa i systemu operacyjnego komputera.|  
-|`My.Computer.Keyboard` (<xref:Microsoft.VisualBasic.Devices.Keyboard>)|Udostępnia właściwości do uzyskiwania dostępu do bieżącego stanu klawiatury, takie jak co klucze są obecnie naciśnięte i udostępnia metodę Wyślij naciśnięcia klawiszy do aktywnego okna.|  
-|`My.Computer.Mouse` (<xref:Microsoft.VisualBasic.Devices.Mouse>)|Udostępnia właściwości w celu uzyskania informacji na temat formatu i konfiguracji myszy, który jest zainstalowany na komputerze lokalnym.|  
-|`My.Computer.Network` (<xref:Microsoft.VisualBasic.Devices.Network>)|Udostępnia właściwości, zdarzeń i metod do interakcji z sieci, do której komputer jest połączony.|  
-|`My.Computer.Ports` (<xref:Microsoft.VisualBasic.Devices.Ports>)|Udostępnia właściwości i metody do uzyskiwania dostępu do portów szeregowych na komputerze.|  
-|`My.Computer.Registry` (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)|Udostępnia właściwości i metody do manipulowania w rejestrze.|  
-|[My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)|Zawiera właściwości do uzyskiwania dostępu do wystąpienia każdego formularza Windows zadeklarowana w bieżącym projekcie.|  
-|`My.Log` (<xref:Microsoft.VisualBasic.Logging.AspLog>)|Udostępnia właściwości i metody do zapisywania informacji zdarzeń i wyjątków aplikacji odbiorniki logu dla aplikacji sieci Web.|  
-|[My.Request, obiekt](../../../visual-basic/language-reference/objects/my-request-object.md)|Pobiera <xref:System.Web.HttpRequest> obiektu dla żądanej strony. `My.Request` Obiekt zawiera informacje o bieżącym żądaniu HTTP.<br /><br /> `My.Request` Obiekt jest dostępny tylko w przypadku aplikacji ASP.NET.|  
-|[My.Resources, obiekt](../../../visual-basic/language-reference/objects/my-resources-object.md)|Udostępnia właściwości i klasy do uzyskiwania dostępu do zasobów aplikacji.|  
-|[My.Response, obiekt](../../../visual-basic/language-reference/objects/my-response-object.md)|Pobiera <xref:System.Web.HttpResponse> obiekt, który jest skojarzony z <xref:System.Web.UI.Page>. Ten obiekt umożliwia wysyłanie danych odpowiedzi HTTP do klienta i zawiera informacje dotyczące tej odpowiedzi.<br /><br /> `My.Response` Obiekt jest dostępny tylko w przypadku aplikacji ASP.NET.|  
-|[My.Settings, obiekt](../../../visual-basic/language-reference/objects/my-settings-object.md)|Udostępnia właściwości i metod dostępu do ustawień aplikacji.|  
-|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|Zapewnia dostęp do informacji o bieżącym użytkowniku.|  
-|[My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)|Udostępnia właściwości do tworzenia i uzyskiwania dostępu do pojedynczego wystąpienia każdą usługę sieci Web, która odwołuje się do bieżącego projektu.|  
-|<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|Udostępnia metody i właściwości do analizowania tekstu ze strukturą plików.|  
+|<xref:Microsoft.VisualBasic.Collection>|Provides a convenient way to see a related group of items as a single object.|  
+|<xref:Microsoft.VisualBasic.Information.Err%2A>|Contains information about run-time errors.|  
+|The `My.Application` object consists of the following classes:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> provides members that are available in all projects.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> provides members available in Windows Forms applications.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> provides members available in console applications.|Provides data that is associated only with the current application or DLL. No system-level information can be altered with `My.Application`.<br /><br /> Some members are available only for Windows Forms or console applications.|  
+|`My.Application.Info` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Info%2A>)|Provides properties for getting the information about an application, such as the version number, description, loaded assemblies, and so on.|  
+|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|Provides a property and methods to write event and exception information to the application's log listeners.|  
+|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|Provides properties for manipulating computer components such as audio, the clock, the keyboard, the file system, and so on.|  
+|`My.Computer.Audio` (<xref:Microsoft.VisualBasic.Devices.Audio>)|Provides methods for playing sounds.|  
+|`My.Computer.Clipboard` (<xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>)|Provides methods for manipulating the Clipboard.|  
+|`My.Computer.Clock` (<xref:Microsoft.VisualBasic.Devices.Clock>)|Provides properties for accessing the current local time and Universal Coordinated Time (equivalent to Greenwich Mean Time) from the system clock.|  
+|`My.Computer.FileSystem` (<xref:Microsoft.VisualBasic.FileIO.FileSystem>)|Provides properties and methods for working with drives, files, and directories.|  
+|`My.Computer.FileSystem.SpecialDirectories` (<xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)|Provides properties for accessing commonly referenced directories.|  
+|`My.Computer.Info` (<xref:Microsoft.VisualBasic.Devices.ComputerInfo>)|Provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.|  
+|`My.Computer.Keyboard` (<xref:Microsoft.VisualBasic.Devices.Keyboard>)|Provides properties for accessing the current state of the keyboard, such as what keys are currently pressed, and provides a method to send keystrokes to the active window.|  
+|`My.Computer.Mouse` (<xref:Microsoft.VisualBasic.Devices.Mouse>)|Provides properties for getting information about the format and configuration of the mouse that is installed on the local computer.|  
+|`My.Computer.Network` (<xref:Microsoft.VisualBasic.Devices.Network>)|Provides a property, an event, and methods for interacting with the network to which the computer is connected.|  
+|`My.Computer.Ports` (<xref:Microsoft.VisualBasic.Devices.Ports>)|Provides a property and a method for accessing the computer's serial ports.|  
+|`My.Computer.Registry` (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)|Provides properties and methods for manipulating the registry.|  
+|[My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)|Provides properties for accessing an instance of each Windows Form declared in the current project.|  
+|`My.Log` (<xref:Microsoft.VisualBasic.Logging.AspLog>)|Provides a property and methods for writing event and exception information to the application's log listeners for Web applications.|  
+|[My.Request, obiekt](../../../visual-basic/language-reference/objects/my-request-object.md)|Gets the <xref:System.Web.HttpRequest> object for the requested page. The `My.Request` object contains information about the current HTTP request.<br /><br /> The `My.Request` object is available only for ASP.NET applications.|  
+|[My.Resources, obiekt](../../../visual-basic/language-reference/objects/my-resources-object.md)|Provides properties and classes for accessing an application's resources.|  
+|[My.Response, obiekt](../../../visual-basic/language-reference/objects/my-response-object.md)|Gets the <xref:System.Web.HttpResponse> object that is associated with the <xref:System.Web.UI.Page>. This object allows you to send HTTP response data to a client and contains information about that response.<br /><br /> The `My.Response` object is available only for ASP.NET applications.|  
+|[My.Settings, obiekt](../../../visual-basic/language-reference/objects/my-settings-object.md)|Provides properties and methods for accessing an application's settings.|  
+|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|Provides access to information about the current user.|  
+|[My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)|Provides properties for creating and accessing a single instance of each Web service that is referenced by the current project.|  
+|<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|Provides methods and properties for parsing structured text files.|  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,42 +1,45 @@
 ---
-title: Bezpieczeństwo i rejestr (Visual Basic)
+title: Bezpieczeństwo i rejestr
 ms.date: 07/20/2015
 helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-ms.openlocfilehash: 2fdb8003365841a4eef298eb853765dd3bc4587d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 454180207d6432e80d87941d1f329f2a4ea7a801
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916531"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345485"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>Bezpieczeństwo i rejestr (Visual Basic)
-Na tej stronie omówiono implikacje zabezpieczeń przechowywania danych w rejestrze.  
+
+This page discusses the security implications of storing data in the registry.  
   
 ## <a name="permissions"></a>Uprawnienia  
- Nie jest bezpieczne przechowywanie wpisów tajnych, takich jak hasła, w rejestrze w postaci zwykłego tekstu, nawet jeśli klucz rejestru jest chroniony przez listy ACL (listy kontroli dostępu).  
+
+ It is not secure to store secrets, such as passwords, in the registry as plain text, even if the registry key is protected by ACLs (access control lists).  
   
- Praca z rejestrem może naruszyć bezpieczeństwo przez umożliwienie nieodpowiedniego dostępu do zasobów systemowych lub chronionych informacji. Aby użyć tych właściwości, musisz mieć uprawnienia do odczytu i zapisu z <xref:System.Security.Permissions.RegistryPermissionAccess> wyliczenia, które kontroluje dostęp do zmiennych rejestru. Każdy kod z pełnym zaufaniem (w ramach domyślnych zasad zabezpieczeń) jest to każdy kod zainstalowany na lokalnym dysku twardym użytkownika, który ma odpowiednie uprawnienia dostępu do rejestru. Aby uzyskać więcej informacji, <xref:System.Security.Permissions.RegistryPermission> zobacz Klasa.  
+ Working with the registry may compromise security by allowing inappropriate access to system resources or protected information. To use these properties, you must have read and write permissions from the <xref:System.Security.Permissions.RegistryPermissionAccess> enumeration, which controls access to registry variables. Any code running with full trust (under the default security policy, this is any code installed on the user's local hard disk) has the necessary permissions to access the registry. For more information, see <xref:System.Security.Permissions.RegistryPermission> class.  
   
- Zmienne rejestru nie powinny być przechowywane w lokalizacjach pamięci, w <xref:System.Security.Permissions.RegistryPermission> których kod nie może uzyskać do nich dostępu. Podobnie, podczas udzielania uprawnień należy przyznać minimalnych uprawnień niezbędnych do wykonania zadania.  
+ Registry variables should not be stored in memory locations where code without <xref:System.Security.Permissions.RegistryPermission> can access them. Similarly, when granting permissions, grant the minimum privileges necessary to get the job done.  
   
- Wartości dostępu do uprawnień rejestru są definiowane przez <xref:System.Security.Permissions.RegistryPermissionAccess> Wyliczenie. Poniższa tabela zawiera szczegółowe informacje o jej elementach członkowskich.  
+ Registry permission access values are defined by the <xref:System.Security.Permissions.RegistryPermissionAccess> enumeration. The following table details its members.  
   
-|Wartość|Dostęp do zmiennych rejestru|  
+|Wartość|Access to Registry Variables|  
 |-----------|----------------------------------|  
-|`AllAccess`|Tworzenie, odczytywanie i zapisywanie|  
+|`AllAccess`|Create, read, and write|  
 |`Create`|Create|  
-|`NoAccess`|Brak dostępu|  
+|`NoAccess`|No access|  
 |`Read`|Odczyt|  
 |`Write`|Write|  
   
-## <a name="checking-values-in-registry-keys"></a>Sprawdzanie wartości w kluczach rejestru  
- Podczas tworzenia wartości rejestru należy zdecydować, co należy zrobić, jeśli ta wartość już istnieje. Inny proces, prawdopodobnie złośliwy, mógł już utworzyć wartość i uzyskać do niej dostęp. Po umieszczeniu danych w wartości rejestru, dane są dostępne dla drugiego procesu. Aby tego uniknąć, należy użyć `GetValue` metody. Zwraca `Nothing` , jeśli klucz jeszcze nie istnieje.  
+## <a name="checking-values-in-registry-keys"></a>Checking Values in Registry Keys  
+
+ When you create a registry value, you need to decide what to do if that value already exists. Another process, perhaps a malicious one, may have already created the value and have access to it. When you put data in the registry value, the data is available to the other process. To prevent this, use the `GetValue` method. It returns `Nothing` if the key does not already exist.  
   
 > [!IMPORTANT]
-> Podczas odczytywania rejestru z aplikacji sieci Web tożsamość bieżącego użytkownika zależy od uwierzytelniania i personifikacji zaimplementowanego w aplikacji sieci Web.  
+> When reading the registry from a Web application, the identity of current user depends on the authentication and impersonation implemented in the Web application.  
   
 ## <a name="see-also"></a>Zobacz także
 

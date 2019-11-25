@@ -1,5 +1,5 @@
 ---
-title: -Reference (Visual Basic)
+title: -reference
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /reference compiler option [Visual Basic]
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 8f144dbd9376f15ac92e283472dac786a6972045
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8b57affa05c77d8ed20bfead7de767a8dd994241
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775601"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348583"
 ---
-# <a name="-reference-visual-basic"></a>-Reference (Visual Basic)
-Powoduje, że kompilator udostępnia informacje o typie w określonych zestawach, które są dostępne dla aktualnie kompilowanego projektu.  
+# <a name="-reference-visual-basic"></a>-reference (Visual Basic)
+Causes the compiler to make type information in the specified assemblies available to the project you are currently compiling.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,27 +35,27 @@ lub
   
 |Termin|Definicja|  
 |---|---|  
-|`fileList`|Wymagany. Rozdzielana przecinkami lista nazw plików zestawu. Jeśli nazwa pliku zawiera spację, należy ująć ją w cudzysłów.|  
+|`fileList`|Wymagany. Comma-delimited list of assembly file names. If the file name contains a space, enclose the name in quotation marks.|  
   
 ## <a name="remarks"></a>Uwagi  
- Importowane pliki muszą zawierać metadane zestawu. Tylko typy publiczne są widoczne poza zestawem. Opcja [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) Importuje metadane z modułu.  
+ The file(s) you import must contain assembly metadata. Only public types are visible outside the assembly. The [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) option imports metadata from a module.  
   
- Jeśli odwołujesz się do zestawu (zestawu A), który sam odwołuje się do innego zestawu (zestawu B), należy odwołać się do zestawu B, jeśli:  
+ If you reference an assembly (Assembly A) which itself references another assembly (Assembly B), you need to reference Assembly B if:  
   
-- Typ z zestawu A dziedziczy po typie lub implementuje interfejs z zestawu B.  
+- A type from Assembly A inherits from a type or implements an interface from Assembly B.  
   
-- Wywołano pole, właściwość, zdarzenie lub metodę z typem zwracanym lub typem parametru z zestawu B.  
+- A field, property, event, or method that has a return type or parameter type from Assembly B is invoked.  
   
- Użyj [-LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) , aby określić katalog, w którym znajduje się co najmniej jedno odwołanie do zestawu.  
+ Use [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) to specify the directory in which one or more of your assembly references is located.  
   
- Aby kompilator rozpoznawał typ w zestawie (nie w module), musi być zmuszony do rozpoznania typu. Przykładem tego, jak można to zrobić, jest zdefiniowanie wystąpienia typu. Inne sposoby rozpoznawania nazw typów w zestawie dla kompilatora. Na przykład, jeśli dziedziczysz z typu w zestawie, nazwa typu jest nazywana kompilatorem.  
+ For the compiler to recognize a type in an assembly (not a module), it must be forced to resolve the type. One example of how you can do this is to define an instance of the type. Other ways are available to resolve type names in an assembly for the compiler. For example, if you inherit from a type in an assembly, the type name then becomes known to the compiler.  
   
- Plik odpowiedzi VBC. rsp, który odwołuje się do najczęściej używanych zestawów .NET Framework, jest używany domyślnie. Użyj `-noconfig`, jeśli nie chcesz, aby kompilator używał VBC. rsp.  
+ The Vbc.rsp response file, which references commonly used .NET Framework assemblies, is used by default. Use `-noconfig` if you do not want the compiler to use Vbc.rsp.  
   
- Krótka forma `-reference` jest `/r`.  
+ The short form of `-reference` is `/r`.  
   
 ## <a name="example"></a>Przykład  
- Następujące polecenie kompiluje plik źródłowy `Input.vb` i zestawy odwołań z `Metad1.dll` i `Metad2.dll` do utworzenia `Out.exe`.  
+ The following command compiles source file `Input.vb` and reference assemblies from `Metad1.dll` and `Metad2.dll` to produce `Out.exe`.  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
@@ -63,8 +63,8 @@ vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -1,5 +1,5 @@
 ---
-title: -nologo (Visual Basic)
+title: -nologo
 ms.date: 03/13/2018
 helpviewer_keywords:
 - -nologo compiler option [Visual Basic]
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-ms.openlocfilehash: bb64a468f67745b80b47b42c4fac18852279035d
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 03dc98c45a894304a67765c3e49cd19bbb089c8c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005426"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335434"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
-Pomija wyświetlanie transparentu praw autorskich i komunikatów informacyjnych podczas kompilacji.  
+Suppresses display of the copyright banner and informational messages during compilation.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,13 +24,13 @@ Pomija wyświetlanie transparentu praw autorskich i komunikatów informacyjnych 
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- W przypadku określenia `-nologo` kompilator nie będzie wyświetlał transparentu praw autorskich. Domyślnie `-nologo` nie jest włączona.  
+ If you specify `-nologo`, the compiler does not display a copyright banner. By default, `-nologo` is not in effect.  
   
 > [!NOTE]
-> Opcja `-nologo` nie jest dostępna w środowisku deweloperskim programu Visual Studio. jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
+> The `-nologo` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `T2.vb` i nie wyświetla transparentu praw autorskich.  
+ The following code compiles `T2.vb` and does not display a copyright banner.  
   
 ```console
 vbc -nologo t2.vb  
@@ -38,5 +38,5 @@ vbc -nologo t2.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zapisywanie tekstu do plików w języku Visual Basic'
+title: 'Porady: zapisywanie tekstu do plików'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], writing to
@@ -7,55 +7,57 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
-ms.openlocfilehash: 7f9702469afbe9fdaa9bf727f5f70459ce884d6e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ce1ee59ba71af6bb13e05a5bce37a2f7eee37712
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623279"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334472"
 ---
-# <a name="how-to-write-text-to-files-in-visual-basic"></a>Instrukcje: Zapisywanie tekstu do plików w języku Visual Basic
-<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> Metoda może służyć do zapisywanie tekstu do plików. Jeśli określony plik nie istnieje, zostanie utworzony.  
+# <a name="how-to-write-text-to-files-in-visual-basic"></a>Porady: zapisywanie tekstu do plików w Visual Basic
+
+The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method can be used to write text to files. If the specified file does not exist, it is created.  
   
 ## <a name="procedure"></a>Procedura  
   
-#### <a name="to-write-text-to-a-file"></a>Aby wpisać tekst w pliku  
+#### <a name="to-write-text-to-a-file"></a>To write text to a file  
   
-- Użyj `WriteAllText` metodę, aby wpisać tekst do pliku, określając pliku i tekst do wyświetlenia. Ten przykład zapisuje linię `"This is new text."` pliku o nazwie `test.txt`, dodając tekst na wszelki istniejący tekst w pliku.  
+- Use the `WriteAllText` method to write text to a file, specifying the file and text to be written. This example writes the line `"This is new text."` to the file named `test.txt`, appending the text to any existing text in the file.  
   
      [!code-vb[VbFileIOWrite#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#3)]  
   
-#### <a name="to-write-a-series-of-strings-to-a-file"></a>Do zapisu serii ciągów w pliku  
+#### <a name="to-write-a-series-of-strings-to-a-file"></a>To write a series of strings to a file  
   
-- W pętli poprzez kolekcji ciągów. Użyj `WriteAllText` metodę, aby wpisać tekst w pliku, określając pliku docelowego i parametry, które mają zostać dodane i ustawienie `append` do `True`.  
+- Loop through the string collection. Use the `WriteAllText` method to write text to a file, specifying the target file and string to be added and setting `append` to `True`.  
   
-     Ten przykład Przepisuje nazwy plików w `Documents and Settings` do katalogu `FileList.txt`, wstawianie karetki zwracają między nimi w celu zwiększenia czytelności.  
+     This example writes the names of the files in the `Documents and Settings` directory to `FileList.txt`, inserting a carriage return between each for better readability.  
   
      [!code-vb[VbFileIOWrite#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#4)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
+
  Następujące warunki mogą spowodować wyjątek:  
   
-- Ścieżka nie jest prawidłowa dla jednego z następujących przyczyn: jest to ciąg o zerowej długości, zawiera tylko znak odstępu, zawiera nieprawidłowe znaki lub jest ścieżką do urządzenia (rozpoczyna się od \\ \\.\\) (<xref:System.ArgumentException>).  
+- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).  
   
-- Ścieżka jest nieprawidłowa, ponieważ jest on `Nothing` (<xref:System.ArgumentNullException>).  
+- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).  
   
-- `File` Wskazuje ścieżkę, która nie istnieje (<xref:System.IO.FileNotFoundException> lub <xref:System.IO.DirectoryNotFoundException>).  
+- `File` points to a path that does not exist (<xref:System.IO.FileNotFoundException> or <xref:System.IO.DirectoryNotFoundException>).  
   
-- Plik jest używany przez inny proces lub wystąpi błąd We/Wy (<xref:System.IO.IOException>).  
+- The file is in use by another process, or an I/O error occurs (<xref:System.IO.IOException>).  
   
-- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
+- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).  
   
-- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).  
+- A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).  
   
-- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
+- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).  
   
-- Dysk jest pełny i wywołanie `WriteAllText` zakończy się niepowodzeniem (<xref:System.IO.IOException>).  
+- The disk is full, and the call to `WriteAllText` fails (<xref:System.IO.IOException>).  
   
- Jeśli używasz w kontekście częściowego zaufania, kod może zgłosić wyjątek ze względu na niewystarczające uprawnienia. Aby uzyskać więcej informacji, zobacz [podstawy zabezpieczeń dostępu kodu](../../../../framework/misc/code-access-security-basics.md).  
+ If you are running in a partial-trust context, the code might throw an exception due to insufficient privileges. For more information, see [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
-- [Instrukcje: Odczyt z plików tekstowych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+- [How to: Read from Text Files](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)

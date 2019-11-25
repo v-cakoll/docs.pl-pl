@@ -1,5 +1,5 @@
 ---
-title: Parametry opcjonalne (Visual Basic)
+title: Parametry opcjonalne
 ms.date: 07/20/2015
 helpviewer_keywords:
 - parameters [Visual Basic], optional
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: 9236080d50638bc38bbdd3ddaf8aabf9e675e43f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d859f7eaaefa051cfdf703d8589bc8c679a3ee85
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639130"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345961"
 ---
 # <a name="optional-parameters-visual-basic"></a>Parametry opcjonalne (Visual Basic)
-Możesz określić, że parametr procedury jest opcjonalny i nie trzeba do niego przekazywać żadnego argumentu w momencie wywołania procedury. *Następujące parametry opcjonalne* są wskazywane przez `Optional` — słowo kluczowe w definicji procedury. Mają zastosowanie następujące zasady:  
+Możesz określić, że parametr procedury jest opcjonalny i nie trzeba do niego przekazywać żadnego argumentu w momencie wywołania procedury. *Optional parameters* are indicated by the `Optional` keyword in the procedure definition. Mają zastosowanie następujące zasady:  
   
 - Każdy parametr opcjonalny w definicji procedury musi określać wartość domyślną.  
   
@@ -43,18 +43,18 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 Sub name(argument 1, , , argument 4)  
 ```  
   
- Poniższy przykład wykonuje kilka wywołań do `MsgBox` funkcji. `MsgBox` ma jeden parametr wymagany i dwa parametry opcjonalne.  
+ The following example makes several calls to the `MsgBox` function. `MsgBox` has one required parameter and two optional parameters.  
   
- Pierwsze wywołanie `MsgBox` dostarcza wszystkie trzy argumenty w kolejności, `MsgBox` definiuje je. Drugie wywołanie dostarcza tylko wymagany argument. Wywołania trzecie i czwarte dostarczają argumenty pierwszy i trzeci. Trzecie wywołanie robi to według pozycji, a czwarte wywołanie — według nazwy.  
+ The first call to `MsgBox` supplies all three arguments in the order that `MsgBox` defines them. Drugie wywołanie dostarcza tylko wymagany argument. Wywołania trzecie i czwarte dostarczają argumenty pierwszy i trzeci. Trzecie wywołanie robi to według pozycji, a czwarte wywołanie — według nazwy.  
   
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>Określenie, czy opcjonalny argument jest obecny  
- Procedura nie może wykryć w czasie wykonywania, czy podany argument został pominięty lub kod wywołujący ma jawnie przekazywaną wartość domyślną. Jeśli potrzebujesz takiego rozróżnienia, możesz ustawić mało prawdopodobną wartość jako domyślną. Poniższa procedura określa opcjonalny parametr `office`i testuje jego wartość domyślną `QJZ`, aby zobaczyć, jeśli została pominięta w wywołaniu:  
+ Procedura nie może wykryć w czasie wykonywania, czy podany argument został pominięty lub kod wywołujący ma jawnie przekazywaną wartość domyślną. Jeśli potrzebujesz takiego rozróżnienia, możesz ustawić mało prawdopodobną wartość jako domyślną. The following procedure defines the optional parameter `office`, and tests for its default value, `QJZ`, to see if it has been omitted in the call:  
   
  [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
   
- Jeśli parametr opcjonalny jest typem referencyjnym `String`, możesz użyć `Nothing` jako wartości domyślnej, pod warunkiem nie jest oczekiwana wartość dla argumentu.  
+ If the optional parameter is a reference type such as a `String`, you can use `Nothing` as the default value, provided this is not an expected value for the argument.  
   
 ## <a name="optional-parameters-and-overloading"></a>Parametry opcjonalne i przeciążenie  
  Innym sposobem zdefiniowania procedury z opcjonalnymi parametrami jest używanie przeciążenia. Jeśli masz jeden parametr opcjonalny, możesz zdefiniować dwie przeciążone wersje procedury, jedną przyjmującą parametr i jedną bez niego. Takie podejście staje się bardziej skomplikowane w miarę wzrostu liczby parametrów opcjonalnych. Jej zaletą jest jednak, że możesz mieć absolutną pewność, czy program wywołujący dostarcza każdy opcjonalny argument.  

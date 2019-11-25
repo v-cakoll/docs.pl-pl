@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Używanie klasy definiującej operatory (Visual Basic)'
+title: 'Porady: używanie klasy definiującej operatory'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -11,40 +11,40 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: bd512adf2f06ed0fbd3d36ed3175a0928bf1c57c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ec4b4c07910100dd02cc86e882b44aa7dbd2ced
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863496"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346034"
 ---
-# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Instrukcje: Używanie klasy definiującej operatory (Visual Basic)
-Jeśli używasz klasy lub struktury, która definiuje swój własny operatory są dostępne te operatory języka Visual Basic.  
+# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Porady: używanie klasy definiującej operatory (Visual Basic)
+If you are using a class or structure that defines its own operators, you can access those operators from Visual Basic.  
   
- Definiowanie operatora dla klasy lub struktury jest również nazywany *przeciążenie* operatora.  
+ Defining an operator on a class or structure is also called *overloading* the operator.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład uzyskuje dostęp do struktury SQL <xref:System.Data.SqlTypes.SqlString>, która definiuje operatory konwersji ([funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md)) w obu kierunkach między ciąg SQL i ciąg języka Visual Basic. Użyj `CType(` *wyrażenia ciągu SQL*, `String)` do przekonwertowania ciągu SQL na ciąg języka Visual Basic i `CType(` *wyrażenia ciągu w języku Visual Basic*, <xref:System.Data.SqlTypes.SqlString> `)` do przekonwertowania w drugą stronę.  
+ The following example accesses the SQL structure <xref:System.Data.SqlTypes.SqlString>, which defines the conversion operators ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in both directions between a SQL string and a Visual Basic string. Use `CType(`*SQL string expression*, `String)` to convert a SQL string to a Visual Basic string, and `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` to convert in the other direction.  
   
  [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
  [!code-vb[VbVbcnProcedures#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#31)]  
   
- <xref:System.Data.SqlTypes.SqlString> Struktury definiuje operator konwersji ([funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md)) z `String` do <xref:System.Data.SqlTypes.SqlString> , a drugi z <xref:System.Data.SqlTypes.SqlString> do `String`. Instrukcja, która przypisuje `title` do `jobTitle` sprawia, że użycie pierwszy operator i <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> wywołanie funkcji używa drugiego.  
+ The <xref:System.Data.SqlTypes.SqlString> structure defines a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) from `String` to <xref:System.Data.SqlTypes.SqlString> and another from <xref:System.Data.SqlTypes.SqlString> to `String`. The statement that assigns `title` to `jobTitle` makes use of the first operator, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function call uses the second.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Upewnij się, że klasy lub struktury, którego używasz, określa operator, który chcesz użyć. Nie należy zakładać, że klasa lub struktura został zdefiniowany co dostępne dla przeciążania operatora. Aby uzyskać listę dostępnych operatorów, zobacz [operator — instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+ Be sure the class or structure you are using defines the operator you want to use. Do not assume that the class or structure has defined every operator available for overloading. For a list of available operators, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
- Dołączyć odpowiednie `Imports` poufności informacji dla ciągu SQL na początku pliku źródłowego (w tym przypadku <xref:System.Data.SqlTypes>).  
+ Include the appropriate `Imports` statement for the SQL string at the beginning of your source file (in this case <xref:System.Data.SqlTypes>).  
   
- Projekt musi mieć odwołania do dane systemowe i System.XML.  
+ Your project must have references to System.Data and System.XML.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Procedury operatorów](./operator-procedures.md)
-- [Instrukcje: Definiowanie operatora](./how-to-define-an-operator.md)
-- [Instrukcje: Definiowanie operatora konwersji](./how-to-define-a-conversion-operator.md)
-- [Instrukcje: Wywoływanie procedury operatora](./how-to-call-an-operator-procedure.md)
+- [Instrukcje: definiowanie operatora](./how-to-define-an-operator.md)
+- [Instrukcje: definiowanie operatora konwersji](./how-to-define-a-conversion-operator.md)
+- [Instrukcje: wywoływanie procedury operatora](./how-to-call-an-operator-procedure.md)
 - [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [Structure, instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md)

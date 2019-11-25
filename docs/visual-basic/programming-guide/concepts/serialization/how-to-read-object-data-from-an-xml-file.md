@@ -1,16 +1,16 @@
 ---
-title: 'Instrukcje: Odczytywanie danych o obiektach z pliku XML (Visual Basic)'
+title: 'Porady: odczytywanie danych o obiektach z pliku XML'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: b1e9033d7aba8b4f423f29cd4fb4f7efbbe17a29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c997af4729a24a6b5bd5b22d0153860cff3282d7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624361"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346435"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Instrukcje: Odczytywanie danych o obiektach z pliku XML (Visual Basic)
-W tym przykładzie odczytuje dane obiektów, które zostały wcześniej zapisane do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.  
+# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>How to: Read Object Data from an XML File (Visual Basic)
+This example reads object data that was previously written to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.  
   
 ## <a name="example"></a>Przykład  
   
@@ -30,27 +30,27 @@ End Sub
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Nazwa pliku "c:\temp\SerializationOverview.xml" należy zastąpić nazwę pliku zawierającego dane serializowane. Aby uzyskać więcej informacji na temat serializowania danych zobacz [jak: Zapisywania obiektów danych do pliku XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
+ Replace the file name "c:\temp\SerializationOverview.xml" with the name of the file containing the serialized data. For more information about serializing data, see [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
   
- Klasa musi mieć publicznego konstruktora bez parametrów.  
+ The class must have a public constructor without parameters.  
   
- Tylko właściwości publiczne i pola są deserializacji.  
+ Only public properties and fields are deserialized.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
-- Klasa jest serializowana, nie ma publiczny konstruktor bez parametrów.  
+- The class being serialized does not have a public, parameterless constructor.  
   
-- Dane w pliku nie reprezentuje dane z klasy, która ma zostać przeprowadzona.  
+- The data in the file does not represent data from the class to be deserialized.  
   
-- Plik nie istnieje (<xref:System.IO.IOException>).  
+- The file does not exist (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Zawsze sprawdzić dane wejściowe i nigdy nie deserializowanie danych z niezaufanego źródła. Ponownie utworzyć obiekt działa na komputerze lokalnym z uprawnieniami kod, który deserializacji go. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  
+ Always verify inputs, and never deserialize data from an untrusted source. The re-created object runs on a local computer with the permissions of the code that deserialized it. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.IO.StreamWriter>
-- [Instrukcje: Zapisywania obiektów danych do pliku XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
-- [Serializacja (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Przewodnik programowania w języku Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+- [Serialization (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+- [Visual Basic Programming Guide](../../../../visual-basic/programming-guide/index.md)

@@ -1,24 +1,24 @@
 ---
-title: 'Instrukcje: Analizuj ciąg (Visual Basic)'
+title: 'How to: Parse a String'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: b97ce93c1018ec48649ab8b259d5f1a07109b9fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 31bae00eb3ebf0d8e64fc657693e8c0767c4f5d4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956382"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344497"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>Instrukcje: Analizuj ciąg (Visual Basic)
-W tym temacie pokazano, jak utworzyć drzewo XML w C#.  
+# <a name="how-to-parse-a-string-visual-basic"></a>How to: Parse a String (Visual Basic)
+This topic shows how to create an XML tree in C#.  
   
 ## <a name="example"></a>Przykład  
- Można przeanalizować ciąg w Visual Basic przy użyciu `XElement.Parse` metody. Jednak bardziej wydajne jest użycie literałów XML, jak pokazano w poniższym kodzie, ponieważ literały XML nie cierpią od tych samych kar za wydajność, co analizowanie XML z ciągu.  
+ You can parse a string in Visual Basic by using the `XElement.Parse` method. However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.  
   
- Za pomocą literałów XML, można po prostu skopiować i wkleić kod XML do programu Visual Basic.  
+ By using XML literals, you can just copy and paste your XML into your Visual Basic program.  
   
 > [!NOTE]
-> Analizowanie tekstu lub ładowanie dokumentu XML z pliku tekstowego jest mniej wydajne niż konstrukcja funkcjonalna. Jeśli inicjujesz drzewo XML od kodu, trwa mniej czasu procesora, aby użyć konstrukcji funkcjonalnej niż w celu przeanalizowania tekstu.  
+> Parsing text or loading an XML document from a text file is less efficient than functional construction. If you are initializing an XML tree from code, it takes less processor time to use functional construction than to parse text.  
   
 ```vb  
 Dim contacts as XElement = _  
@@ -51,4 +51,4 @@ Dim contacts as XElement = _
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Analizowanie kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

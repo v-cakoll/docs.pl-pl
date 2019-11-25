@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: Zmienianie kolejności pól w rozdzielonym pliku (LINQ) (Visual Basic)'
+title: 'Porady: zmienianie kolejności pól w rozdzielonym pliku (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-ms.openlocfilehash: 21c887dbcf008cbdd9a8a4197f4739f9271ba95f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 736f0218f14f0077683456599d3d7ef3ecec7517
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582797"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347602"
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Instrukcje: Zmienianie kolejności pól w rozdzielonym pliku (LINQ) (Visual Basic)
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>How to: Reorder the Fields of a Delimited File (LINQ) (Visual Basic)
 
-Plik wartości rozdzielanych przecinkami (CSV) to plik tekstowy, który jest często używany do przechowywania danych arkusza kalkulacyjnego lub innych danych tabelarycznych, które są reprezentowane przez wiersze i kolumny. Za pomocą metody <xref:System.String.Split%2A>, aby rozdzielić pola, można bardzo łatwo wykonywać zapytania i manipulować plikami CSV przy użyciu LINQ. W rzeczywistości ta sama technika może służyć do zmiany kolejności części dowolnego strukturalnego wiersza tekstu. nie jest to ograniczone do plików CSV.
+A comma-separated value (CSV) file is a text file that is often used to store spreadsheet data or other tabular data that is represented by rows and columns. By using the <xref:System.String.Split%2A> method to separate the fields, it is very easy to query and manipulate CSV files by using LINQ. In fact, the same technique can be used to reorder the parts of any structured line of text; it is not limited to CSV files.
 
-W poniższym przykładzie Załóżmy, że trzy kolumny reprezentują uczniów "" nazwisko, "imię i nazwisko" i "ID". Pola są w kolejności alfabetycznej na podstawie nazwisk uczniów. Zapytanie generuje nową sekwencję, w której zostanie wyświetlona kolumna ID, a po niej druga kolumna łącząca imię i nazwisko studenta. Wiersze są zmieniane proporcjonalnie do pola ID. Wyniki są zapisywane w nowym pliku, a oryginalne dane nie są modyfikowane.
+In the following example, assume that the three columns represent students' "last name," "first name", and "ID." The fields are in alphabetical order based on the students' last names. The query produces a new sequence in which the ID column appears first, followed by a second column that combines the student's first name and last name. The lines are reordered according to the ID field. The results are saved into a new file and the original data is not modified.
 
-### <a name="to-create-the-data-file"></a>Aby utworzyć plik danych
+### <a name="to-create-the-data-file"></a>To create the data file
 
-1. Skopiuj następujące wiersze do zwykłego pliku tekstowego o nazwie spreadsheet1. csv. Zapisz plik w folderze projektu.
+1. Copy the following lines into a plain text file that is named spreadsheet1.csv. Save the file in your project folder.
 
     ```csv
     Adams,Terry,120
@@ -77,6 +77,6 @@ End Class
 
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
 - [Instrukcje: generowanie kodu XML z plików CSV](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)

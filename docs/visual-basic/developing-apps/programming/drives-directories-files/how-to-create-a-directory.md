@@ -1,44 +1,46 @@
 ---
-title: 'Instrukcje: Utwórz katalog w języku Visual Basic'
+title: 'Porady: tworzenie katalogu'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - directories [Visual Basic], creating
 - folders [Visual Basic], creating
 ms.assetid: 0351a2ca-24d8-43b5-bb39-9b99e6401cff
-ms.openlocfilehash: 54696dab41c99774bb3638e0c19837a906144d27
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3d838352a0a3dd69a1555dc34b8acba3afba278b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629075"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348810"
 ---
-# <a name="how-to-create-a-directory-in-visual-basic"></a>Instrukcje: Utwórz katalog w języku Visual Basic
-Użyj `CreateDirectory` metody `My.Computer.FileSystem` obiekt do tworzenia katalogów.  
+# <a name="how-to-create-a-directory-in-visual-basic"></a>Porady: tworzenie katalogu w Visual Basic
+
+Use the `CreateDirectory` method of the `My.Computer.FileSystem` object to create directories.  
   
- Jeśli katalog już istnieje, jest zgłaszany żaden wyjątek.  
+ If the directory already exists, no exception is thrown.  
   
-### <a name="to-create-a-directory"></a>Aby utworzyć katalog  
+### <a name="to-create-a-directory"></a>To create a directory  
   
-- Użyj `CreateDirectory` metody, podając pełną ścieżkę lokalizacji, w którym można utworzyć katalogu. W tym przykładzie tworzy katalog `NewDirectory` w `C:\Documents and Settings\All Users\Documents`.  
+- Use the `CreateDirectory` method by specifying the full path of the location where the directory should be created. This example creates the directory `NewDirectory` in `C:\Documents and Settings\All Users\Documents`.  
   
      [!code-vb[VbVbcnMyFileSystem#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#2)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
+
  Następujące warunki mogą spowodować wyjątek:  
   
-- Nazwa katalogu jest nieprawidłowo sformułowany. Na przykład zawiera niedozwolone znaki lub jest tylko spacją (<xref:System.ArgumentException>).  
+- The directory name is malformed. For example, it contains illegal characters or is only white space (<xref:System.ArgumentException>).  
   
-- Katalog, który ma zostać utworzony w katalogu nadrzędnym jest tylko do odczytu (<xref:System.IO.IOException>).  
+- The parent directory of the directory to be created is read-only (<xref:System.IO.IOException>).  
   
-- Nazwa katalogu jest `Nothing` (<xref:System.ArgumentNullException>).  
+- The directory name is `Nothing` (<xref:System.ArgumentNullException>).  
   
-- Nazwa katalogu jest zbyt długa (<xref:System.IO.PathTooLongException>).  
+- The directory name is too long (<xref:System.IO.PathTooLongException>).  
   
-- Nazwa katalogu jest dwukropek ":" (<xref:System.NotSupportedException>).  
+- The directory name is a colon ":" (<xref:System.NotSupportedException>).  
   
-- Użytkownik nie ma uprawnień do tworzenia katalogu (<xref:System.UnauthorizedAccessException>).  
+- The user does not have permission to create the directory (<xref:System.UnauthorizedAccessException>).  
   
-- Użytkownik nie ma uprawnienia w sytuacjach częściowego zaufania (<xref:System.Security.SecurityException>).  
+- The user lacks permissions in a partial-trust situation (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Zobacz także
 

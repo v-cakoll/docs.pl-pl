@@ -1,6 +1,6 @@
 ---
-title: Składnia wykorzystywana przez program DebugView właściwości (Visual Basic)
-description: W tym artykule opisano specjalnej składni używana przez właściwość programu DebugView do produkcji reprezentację ciągu drzew wyrażeń
+title: Syntax used by DebugView property
+description: Describes the special syntax used by the DebugView property to produce a string representation of expression trees
 author: zspitz
 ms.author: wiwagn
 ms.date: 05/22/2019
@@ -8,24 +8,24 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: ae2c75607f7b9cdc40fc5c163ce533f0472ab454
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 98ceba37aa226fab68ae1c1028e2a1139b3b8e7e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689542"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346867"
 ---
-# <a name="debugview-syntax"></a>`DebugView` Składnia
+# <a name="debugview-syntax"></a>`DebugView` syntax
 
-`DebugView` (Dostępne tylko wtedy, gdy debugowanie) dostarcza renderowania ciągu, drzew wyrażeń. Najczęściej składnia jest dość prosta zrozumieć; szczególne przypadki są opisane w poniższych sekcjach.
+The `DebugView` property (available only when debugging) provides a string rendering of expression trees. Most of the syntax is fairly straightforward to understand; the special cases are described in the following sections.
 
-Każdy przykład następuje blok komentarza zawierający `DebugView`.
+Each example is followed by a comment block containing the `DebugView`.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
-<xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> nazwy zmiennych są wyświetlane z symbolem "$" na początku.
+<xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> variable names are displayed with a "$" symbol at the beginning.
 
-Jeśli parametr nie ma nazwę, przypisano automatycznie wygenerowaną nazwę, taką jak `$var1` lub `$var2`.
+If a parameter does not have a name, it is assigned an automatically generated name, such as `$var1` or `$var2`.
 
 ### <a name="examples"></a>Przykłady
 
@@ -43,11 +43,11 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 ## <a name="constantexpressions"></a>ConstantExpressions
 
-Dla <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> obiekty reprezentujące wartości całkowitych, ciągów i `null`, jest wyświetlana wartość stałą.
+For <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> objects that represent integer values, strings, and `null`, the value of the constant is displayed.
 
-Dla niektórych typów liczbowych sufiks jest dodawany do wartości:
+For some numeric types, a suffix is added to the value:
 
-| Typ | Słowo kluczowe | Suffix |
+| Typ | Keyword | Suffix |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |
@@ -74,7 +74,7 @@ Dim expr As ConstantExpression = Expression.Constant(num)
 
 ## <a name="blockexpression"></a>BlockExpression
 
-Jeśli typ <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> obiekt różni się od typu ostatniego wyrażenia w bloku, typ jest wyświetlany w nawiasach kątowych (`<` i `>`). W przeciwnym razie typ <xref:System.Linq.Expressions.BlockExpression> obiektu nie jest wyświetlana.
+If the type of a <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> object differs from the type of the last expression in the block, the type is displayed within angle brackets (`<` and `>`). Otherwise, the type of the <xref:System.Linq.Expressions.BlockExpression> object is not displayed.
 
 ### <a name="examples"></a>Przykłady
 
@@ -99,9 +99,9 @@ Dim block As BlockExpression = Expression.Block(
 
 ## <a name="lambdaexpression"></a>LambdaExpression
 
-<xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> obiekty są wyświetlane wraz z ich typy delegowane.
+<xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> objects are displayed together with their delegate types.
 
-Jeśli wyrażenie lambda ma nazwę, przypisano automatycznie wygenerowaną nazwę, taką jak `#Lambda1` lub `#Lambda2`.
+If a lambda expression does not have a name, it is assigned an automatically generated name, such as `#Lambda1` or `#Lambda2`.
 
 ### <a name="examples"></a>Przykłady
 
@@ -129,11 +129,11 @@ Dim lambda As LambdaExpression = Expression.Lambda(Of Func(Of Integer))(
 
 ## <a name="labelexpression"></a>LabelExpression
 
-Jeśli określisz wartość domyślną dla <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType> obiektu, ta wartość jest poprzedzana <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType> obiektu.
+If you specify a default value for the <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType> object, this value is displayed before the <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType> object.
 
-`.Label` Token wskazuje początek etykiety. `.LabelTarget` Token wskazuje docelowy obiektu docelowego, aby przejść do.
+The `.Label` token indicates the start of the label. The `.LabelTarget` token indicates the destination of the target to jump to.
 
-Jeśli etykieta nie ma nazwę, przypisano automatycznie wygenerowaną nazwę, taką jak `#Label1` lub `#Label2`.
+If a label does not have a name, it is assigned an automatically generated name, such as `#Label1` or `#Label2`.
 
 ### <a name="examples"></a>Przykłady
 
@@ -166,9 +166,9 @@ Dim block As BlockExpression = Expression.Block(
 '
 ```
 
-## <a name="checked-operators"></a>Operatory zaznaczone
+## <a name="checked-operators"></a>Checked Operators
 
-Operatory sprawdzane są wyświetlane z `#` symbol przed operatora. Na przykład operator dodawania zaznaczone jest wyświetlany jako `#+`.
+Checked operators are displayed with the `#` symbol in front of the operator. For example, the checked addition operator is displayed as `#+`.
 
 ### <a name="examples"></a>Przykłady
 

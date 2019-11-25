@@ -1,132 +1,132 @@
 ---
-title: Opcje kompilatora Visual Basic według kategorii
+title: Opcje kompilatora w rozbiciu na kategorie
 ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 8f09566585c06531a346b0143a6002c2854a0b01
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 8b6c142041024e672fe42c8c6f2d3ebe7b07cd65
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182570"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344806"
 ---
-# <a name="visual-basic-compiler-options-listed-by-category"></a>Opcje kompilatora Visual Basic wymienione według kategorii
-Kompilator wiersza polecenia Visual Basic jest dostarczany jako alternatywa dla kompilowania programów z poziomu zintegrowanego środowiska programistycznego (IDE) programu Visual Studio. Poniżej znajduje się lista opcji kompilatora wiersza polecenia Visual Basic posortowanych według kategorii funkcjonalnej.  
+# <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic compiler options listed by category
+The Visual Basic command-line compiler is provided as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE). The following is a list of the Visual Basic command-line compiler options sorted by functional category.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-## <a name="compiler-output"></a>Dane wyjściowe kompilatora  
+## <a name="compiler-output"></a>Compiler output  
   
 |Opcja|Cel|  
 |---|---|  
-|[-nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|Pomija informacje transparentu kompilatora.|  
-|[-utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|Wyświetla dane wyjściowe kompilatora przy użyciu kodowania UTF-8.|  
-|[-verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|Wyświetla dodatkowe informacje podczas kompilacji.|  
-|`-modulename:<string>`|Określ nazwę modułu źródłowego|  
-|[-preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Określ język dla danych wyjściowych kompilatora.|
+|[-nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|Suppresses compiler banner information.|  
+|[-utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|Displays compiler output using UTF-8 encoding.|  
+|[-verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|Outputs extra information during compilation.|  
+|`-modulename:<string>`|Specify the name of the source module|  
+|[-preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Specify a language for compiler output.|
   
 ## <a name="optimization"></a>optymalizacja  
   
 |Opcja|Cel|  
 |---|---|  
-|[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Określa, gdzie mają być wyrównane sekcje pliku wyjściowego.|  
-|[-optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|Włącza/wyłącza optymalizacje.|  
+|[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Specifies where to align the sections of the output file.|  
+|[-optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|Enables/disables optimizations.|  
   
 ## <a name="output-files"></a>Pliki wyjściowe  
   
 |Opcja|Cel|  
 |---|---|  
-|[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Przetwarzaj komentarze dokumentacji do pliku XML.|  
-|[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Powoduje, że kompilator wyprowadza zestaw, którego zawartość binarna jest taka sama w kompilacjach, jeśli dane wejściowe są identyczne.|
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Ustawia kompilator jako docelowy .NET Compact Framework.|  
-|[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Określa plik wyjściowy.|  
-|[-refonly](refonly-compiler-option.md)|Wyprowadza tylko zestaw referencyjny.|
-|[-refout](refout-compiler-option.md)|Określa ścieżkę wyjściową zestawu odwołania.|
-|[-target](../../../visual-basic/reference/command-line-compiler/target.md)|Określa format danych wyjściowych.|  
+|[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Process documentation comments to an XML file.|  
+|[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Causes the compiler to output an assembly whose binary content is identical across compilations if inputs are identical.|
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Sets the compiler to target the .NET Compact Framework.|  
+|[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Specifies an output file.|  
+|[-refonly](refonly-compiler-option.md)|Outputs only a reference assembly.|
+|[-refout](refout-compiler-option.md)|Specifies the output path of a reference assembly.|
+|[-target](../../../visual-basic/reference/command-line-compiler/target.md)|Specifies the format of the output.|  
   
-## <a name="net-assemblies"></a>Zestawy .NET  
+## <a name="net-assemblies"></a>.NET assemblies  
   
 |Opcja|Cel|  
 |---|---|  
-|[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)|Powoduje, że kompilator udostępnił wszystkie informacje o typie z określonych plików dla aktualnie kompilowanego projektu.|  
+|[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)|Causes the compiler to make all type information from the specified file(s) available to the project you are currently compiling.|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Określa, czy zestaw zostanie podpisany całkowicie czy częściowo.|  
-|[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Importuje przestrzeń nazw z określonego zestawu.|  
-|[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Określa nazwę kontenera kluczy, aby nadać zestawowi silną nazwę.|  
-|[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|Określa plik zawierający parę klucz lub klucz, aby nadać zestawowi silną nazwę.|  
-|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Określa lokalizację zestawów, do których odwołuje się opcja [-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) .|  
-|[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|Importuje metadane z zestawu.|  
-|[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Określa nazwę zestawu, którego częścią ma być moduł.|  
-|`-analyzer`|Uruchom analizatory z tego zestawu (krótka wersja:-a)|  
-|`-additionalfile`|Nazywa dodatkowe pliki, które nie wpływają bezpośrednio na generowanie kodu, ale mogą być używane przez analizatory do tworzenia błędów lub ostrzeżeń.|  
+|[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Imports a namespace from a specified assembly.|  
+|[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Specifies a key container name for a key pair to give an assembly a strong name.|  
+|[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|Specifies a file containing a key or key pair to give an assembly a strong name.|  
+|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Specifies the location of assemblies referenced by the [-reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.|  
+|[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|Imports metadata from an assembly.|  
+|[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Specifies the name of the assembly that a module will be a part of.|  
+|`-analyzer`|Run the analyzers from this assembly (Short form: -a)|  
+|`-additionalfile`|Names additional files that don't directly affect code generation but may be used by analyzers for producing errors or warnings.|  
   
-## <a name="debuggingerror-checking"></a>Debugowanie/sprawdzanie błędów  
+## <a name="debuggingerror-checking"></a>Debugging/error checking  
   
 |Opcja|Cel|  
 |---|---|  
-|[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|Tworzy plik zawierający informacje, które ułatwiają zgłoszenie błędu.|  
-|[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|Generuje informacje o debugowaniu.|  
-|[-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)|Pomija możliwość generowania ostrzeżeń przez kompilator.|  
-|[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|Zapobiega wyświetlaniu przez kompilator kodu dla błędów i ostrzeżeń związanych z składnią.|  
-|[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|Wyłącza sprawdzanie przepełnienia liczby całkowitej.|  
-|[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|Podwyższa poziom ostrzeżeń do błędów.|  
-|`-ruleset:<file>`|Określ plik zestawu reguł, który wyłącza określoną diagnostykę.|  
+|[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|Creates a file that contains information that makes it easy to report a bug.|  
+|[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|Produces debugging information.|  
+|[-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)|Suppresses the compiler's ability to generate warnings.|  
+|[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|Prevents the compiler from displaying code for syntax-related errors and warnings.|  
+|[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|Disables integer overflow checking.|  
+|[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|Promotes warnings to errors.|  
+|`-ruleset:<file>`|Specify a ruleset file that disables specific diagnostics.|  
   
 ## <a name="help"></a>Pomoc  
   
 |Opcja|Cel|  
 |---|---|  
-|[-?](../../../visual-basic/reference/command-line-compiler/help.md)|Wyświetla opcje kompilatora. To polecenie jest takie samo jak określenie `-help` opcji. Nie wystąpi kompilacja.|  
-|[-help](../../../visual-basic/reference/command-line-compiler/help.md)|Wyświetla opcje kompilatora. To polecenie jest takie samo jak określenie `-?` opcji. Nie wystąpi kompilacja.|  
+|[-?](../../../visual-basic/reference/command-line-compiler/help.md)|Displays the compiler options. This command is the same as specifying the `-help` option. No compilation occurs.|  
+|[-help](../../../visual-basic/reference/command-line-compiler/help.md)|Displays the compiler options. This command is the same as specifying the `-?` option. No compilation occurs.|  
   
 ## <a name="language"></a>Język  
   
 |Opcja|Cel|  
 |---|---|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Określ wersję języka: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
-|[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|Wymusza jawną deklarację zmiennych.|  
-|[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Wymusza ścisłą semantykę typu.|  
-|[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|Określa, czy porównania ciągów powinny być binarne, czy używać semantyki tekstu specyficznego dla ustawień regionalnych.|  
-|[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|Umożliwia korzystanie z wnioskowania o typie lokalnym w deklaracjach zmiennych.|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Specify language version: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
+|[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|Enforces explicit declaration of variables.|  
+|[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Enforces strict type semantics.|  
+|[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|Specifies whether string comparisons should be binary or use locale-specific text semantics.|  
+|[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|Enables the use of local type inference in variable declarations.|  
   
 ## <a name="preprocessor"></a>Preprocesor  
   
 |Opcja|Cel|  
 |---|---|  
-|[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Definiuje symbole dla kompilacji warunkowej.|  
+|[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Defines symbols for conditional compilation.|  
   
 ## <a name="resources"></a>Resources  
   
 |Opcja|Cel|  
 |---|---|  
-|[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|Tworzy łącze do zarządzanego zasobu.|  
-|[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|Osadza zasób zarządzany w zestawie.|  
-|[-win32icon](../../../visual-basic/reference/command-line-compiler/win32icon.md)|Wstawia plik. ico do pliku wyjściowego.|  
-|[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Wstawia zasób Win32 do pliku wyjściowego.|  
+|[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|Creates a link to a managed resource.|  
+|[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|Embeds a managed resource in an assembly.|  
+|[-win32icon](../../../visual-basic/reference/command-line-compiler/win32icon.md)|Inserts an .ico file into the output file.|  
+|[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Inserts a Win32 resource into the output file.|  
   
 ## <a name="miscellaneous"></a>Różne  
   
 |Opcja|Cel|  
 |---|---|  
-|[@ (określenie pliku odpowiedzi)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Określa plik odpowiedzi.|  
-|[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Określa adres podstawowy biblioteki DLL.|  
-|[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Określa stronę kodową, która ma być używana dla wszystkich plików kodu źródłowego w kompilacji.|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Określa sposób, w jaki kompilator Visual Basic powinien raportować wewnętrzne błędy kompilatora.|  
-|[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Informuje jądro systemu Windows o tym, czy określony plik wykonywalny obsługuje losowe generowanie układu przestrzeni adresowej (ASLR).|  
-|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Określa klasę, która zawiera `Sub Main` procedurę używaną podczas uruchamiania.|  
-|[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Nie Kompiluj z VBC. rsp|  
-|[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Powoduje, że kompilator nie odwołuje się do bibliotek standardowych.|  
-|[-nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|Instruuje kompilator, aby nie osadzał żadnego manifestu aplikacji w pliku wykonywalnym.|  
-|[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|Określa platformę procesora, która jest elementem docelowym kompilatora dla pliku wyjściowego.|  
-|[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|Wyszukuje w podkatalogach pliki źródłowe do skompilowania.|  
-|[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|Określa przestrzeń nazw dla wszystkich deklaracji typu.|  
-|[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)|Określa lokalizację plików mscorlib. dll i Microsoft. VisualBasic. dll.|  
-|[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|Określa, że kompilator ma kompilować bez odwołania do biblioteki środowiska uruchomieniowego Visual Basic lub z odwołaniem do określonej biblioteki środowiska uruchomieniowego.|  
-|[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|Identyfikuje zdefiniowany przez użytkownika plik manifestu aplikacji Win32, który ma zostać osadzony w przenośnym pliku wykonywalnym (PE) projektu.|  
-|`-parallel[+&#124;-]`|Określa, czy ma być używana współbieżna kompilacja (+).|  
-|`-checksumalgorithm:<alg>`|Określ algorytm obliczania sumy kontrolnej plików źródłowych przechowywanej w pliku PDB.  Obsługiwane są następujące wartości: SHA1 (domyślnie) lub SHA256. <br>Ze względu na kolizje problemów z algorytmem SHA1 firma Microsoft zaleca SHA256ą lub lepszą.|  
+|[@ (określenie pliku odpowiedzi)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Specifies a response file.|  
+|[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Specifies the base address of a DLL.|  
+|[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Specifies the code page to use for all source code files in the compilation.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Specifies how the Visual Basic compiler should report internal compiler errors.|  
+|[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Tells the Windows kernel whether a particular executable supports high entropy Address Space Layout Randomization (ASLR).|  
+|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Specifies the class that contains the `Sub Main` procedure to use at startup.|  
+|[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Do not compile with Vbc.rsp|  
+|[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Causes the compiler not to reference the standard libraries.|  
+|[-nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|Instructs the compiler not to embed any application manifest into the executable file.|  
+|[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|Specifies the processor platform the compiler targets for the output file.|  
+|[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|Searches subdirectories for source files to compile.|  
+|[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|Specifies a namespace for all type declarations.|  
+|[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)|Specifies the location of Mscorlib.dll and Microsoft.VisualBasic.dll.|  
+|[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|Specifies that the compiler should compile without a reference to the Visual Basic Runtime Library, or with a reference to a specific runtime library.|  
+|[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|Identifies a user-defined Win32 application manifest file to be embedded into a project's portable executable (PE) file.|  
+|`-parallel[+&#124;-]`|Specifies whether to use concurrent build (+).|  
+|`-checksumalgorithm:<alg>`|Specify the algorithm for calculating the source file checksum stored in PDB.  Supported values are: SHA1 (default) or SHA256. <br>Due to collision problems with SHA1, Microsoft recommends SHA256 or better.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora Visual Basic w porządku alfabetycznym](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
+- [Visual Basic Compiler Options Listed Alphabetically](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
 - [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)

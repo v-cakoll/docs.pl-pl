@@ -1,39 +1,39 @@
 ---
-title: Zastosowanie przekształcania funkcjonalnego (Visual Basic)
+title: Zastosowanie przekształcania funkcjonalnego
 ms.date: 07/20/2015
 ms.assetid: 3b74e134-e19b-44bc-8d06-e26c48305040
-ms.openlocfilehash: 1903a59ec666c7d0b4c585abe5424cc1a0fd902d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 292201f4964142126d428939807cb20f354a7d2f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642422"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345770"
 ---
-# <a name="applicability-of-functional-transformation-visual-basic"></a>Zastosowanie przekształcania funkcjonalnego (Visual Basic)
-Czyste Przekształcanie funkcjonalne mają zastosowanie w wielu różnych sytuacjach.  
+# <a name="applicability-of-functional-transformation-visual-basic"></a>Applicability of Functional Transformation (Visual Basic)
+Pure functional transformations are applicable in a wide variety of situations.  
   
- Przekształcanie funkcjonalne podejście idealnie nadaje się do wykonywania zapytań i manipulowania ustrukturyzowanych danych; w związku z tym dopasowuje również przy użyciu technologii LINQ. Przekształcanie funkcjonalne ma jednak znacznie szerszy stosowania niż korzystanie z LINQ. Prawdopodobnie należy rozważyć żaden proces, której głównym celem jest przekształcania danych z jednego formularza jako kandydat do Przekształcanie funkcjonalne.  
+ The functional transformation approach is ideally suited for querying and manipulating structured data; therefore it fits well with LINQ technologies. However, functional transformation has a much wider applicability than use with LINQ. Any process where the main focus is on transforming data from one form to another should probably be considered as a candidate for functional transformation.  
   
- Takie podejście stosuje się do wielu problemów, które nie mogą być wyświetlane na pierwszy rzut oka jako kandydata. Używany w połączeniu z LINQ, lub oddzielnie, przekształcanie funkcjonalne mają być uwzględniane w następujących obszarach:  
+ This approach is applicable to many problems that might not appear at first glance to be a candidate. Used in conjunction with or separately from LINQ, functional transformation should be considered for the following areas:  
   
-- Oparte na języku XML dokumenty. Poprawnie sformułowanych danych dowolnego dialekt XML można łatwo modyfikować poprzez przekształcanie funkcjonalne. Aby uzyskać więcej informacji, zobacz [funkcjonalności transformacji XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md).  
+- XML-based documents. Well-formed data of any XML dialect can be easily manipulated through functional transformation. For more information, see [Functional Transformation of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md).  
   
-- Inne formaty plików ze strukturą. Z plików Windows.ini do dokumentów w formacie zwykłego tekstu większość plików mają pewne struktury, która pozwala na analizy i przekształcania.  
+- Other structured file formats. From Windows.ini files to plain text documents, most files have some structure that lends itself to analysis and transformation.  
   
-- Protokołów przesyłania strumieniowego danych. Dane kodowania i dekodowania danych z protokołów komunikacyjnych często może być reprezentowany przez proste przekształcanie funkcjonalne.  
+- Data streaming protocols. Encoding data into and decoding data from communication protocols can often be represented by a simple functional transform.  
   
-- System RDBMS i OODBMS dane. Relacyjne i zorientowane obiektowo baz danych, tak jak XML, są powszechnie używane danych strukturalnych źródeł.  
+- RDBMS and OODBMS data. Relational and object-oriented databases, just like XML, are widely-used structured data sources.  
   
-- Rozwiązania matematycznych, statystyk i analizy. Te pola są zwykle do manipulowania dużych zestawów danych, aby pomóc użytkownikowi w wizualizacji, szacowanie lub faktycznie Rozwiązywanie problemów z nietrywialnymi.  
+- Mathematic, statistic, and science solutions. These fields tend to manipulate large data sets to assist the user in visualizing, estimating, or actually solving non-trivial problems.  
   
- Zgodnie z opisem w [Refaktoryzacja do czystych funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md), przy użyciu czystej funkcji znajduje się przykład programowania funkcjonalnego. W dodatkowej ich natychmiastowe korzyści przy użyciu czystej funkcji udostępnia cenne doświadczenie w myśleć o problemach z punktu widzenia Przekształcanie funkcjonalne. Takie podejście może mieć istotny wpływ na program i klasy projektu. Jest to szczególnie istotne w przypadku, gdy problem jest przydatna w rozwiązaniu przekształcania danych zgodnie z powyższym opisem.  
+ As described in [Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md), using pure functions is an example of functional programming. In additional to their immediate benefits, using pure functions provides valuable experience in thinking about problems from a functional transformation perspective. This approach can also have major impact on program and class design. This is especially true when a problem lends itself to a data transformation solution as described above.  
   
- Mimo że są one poza zakres tego samouczka, projekty, które wpływało perspektywy Przekształcanie funkcjonalne mają tendencję do Centrum na więcej niż na obiekty aktorów procesy, a wynikowy rozwiązania zwykle można zaimplementować jako serię na dużą skalę przekształcenia, a nie pojedynczego obiektu po zmianie stanu.  
+ Although they are beyond the scope of this tutorial, designs that are influenced by the functional transformation perspective tend to center on processes more than on objects as actors, and the resulting solution tends to be implemented as series of large-scale transformations, rather than individual object state changes.  
   
- Ponownie należy pamiętać, że Visual Basic obsługuje podejścia imperatywnego i funkcjonalności, dzięki czemu najlepsze projekt aplikacji może uwzględniać oba elementy.  
+ Again, remember that Visual Basic supports both imperative and functional approaches, so the best design for your application might incorporate elements of both.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do czystych przekształceń funkcjonalnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Przekształcanie funkcjonalne kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)
-- [Refaktoryzacja do czystych funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Functional Transformation of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)
+- [Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

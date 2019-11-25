@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wywoływanie procedury zwracającej wartość (Visual Basic)'
+title: 'Porady: wywoływanie procedury zwracającej wartość'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
@@ -7,40 +7,40 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: 6f45f01489ee84b6addb1f7c7c8dc584332f38dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f5d46babf31ea3c6babb29c0f1c08a23e51d598
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864185"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340740"
 ---
-# <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Instrukcje: Wywoływanie procedury zwracającej wartość (Visual Basic)
-A `Function` procedury zwraca wartość do wywołującego kodu. Zostanie ona wywołana przez dołączenie jego nazwa i argumenty albo po prawej stronie instrukcji przypisania lub w wyrażeniu.  
+# <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Porady: wywoływanie procedury zwracającej wartość (Visual Basic)
+A `Function` procedure returns a value to the calling code. You call it by including its name and arguments either on the right side of an assignment statement or in an expression.  
   
-### <a name="to-call-a-function-procedure-within-an-expression"></a>Aby wywołać procedurę funkcji w wyrażeniu  
+### <a name="to-call-a-function-procedure-within-an-expression"></a>To call a Function procedure within an expression  
   
-1. Użyj `Function` procedury nazwij ten sam sposób, należy użyć zmiennej. Możesz użyć `Function` wywoływania gdziekolwiek w wyrażeniu można użyć zmiennej lub stała.  
+1. Use the `Function` procedure name the same way you would use a variable. You can use a `Function` procedure call anywhere you can use a variable or constant in an expression.  
   
-2. Postępuj zgodnie z nazwą procedury należy umieścić na liście argumentów za pomocą nawiasów. Jeśli nie ma żadnych argumentów, opcjonalnie można pominąć nawiasów. Jednak przy użyciu nawiasów sprawia, że Twój kod łatwiejsza do odczytania.  
+2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
   
-3. Argumenty należy umieścić na liście argumentów w nawiasie rozdzielone przecinkami. Należy podać argumenty w tej samej kolejności, `Function` procedura określa odpowiednich parametrów.  
+3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Function` procedure defines the corresponding parameters.  
   
-     Możesz też przekazać jeden lub więcej argumentów według nazwy. Aby uzyskać więcej informacji, zobacz [przekazywanie argumentów według pozycji i według nazwy](./passing-arguments-by-position-and-by-name.md).  
+     Alternatively, you can pass one or more arguments by name. For more information, see [Passing Arguments by Position and by Name](./passing-arguments-by-position-and-by-name.md).  
   
-4. Wartość zwracana z procedury uczestniczy w wyrażeniu, podobnie jak wartość zmiennej lub będzie stałą.  
+4. The value returned from the procedure participates in the expression just as the value of a variable or constant would.  
   
-### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>Aby wywołać procedurę Function w instrukcji przypisania  
+### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>To call a Function procedure in an assignment statement  
   
-1. Użyj `Function` nazwy procedury po równości (`=`) Zaloguj się w instrukcji przypisania.  
+1. Use the `Function` procedure name following the equal (`=`) sign in the assignment statement.  
   
-2. Postępuj zgodnie z nazwą procedury należy umieścić na liście argumentów za pomocą nawiasów. Jeśli nie ma żadnych argumentów, opcjonalnie można pominąć nawiasów. Jednak przy użyciu nawiasów sprawia, że Twój kod łatwiejsza do odczytania.  
+2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
   
-3. Argumenty należy umieścić na liście argumentów w nawiasie rozdzielone przecinkami. Należy podać argumenty w tej samej kolejności, `Function` procedura określa odpowiednie parametry, chyba że przekazujesz je według nazwy.  
+3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Function` procedure defines the corresponding parameters, unless you are passing them by name.  
   
-4. Wartość zwracana z procedury są przechowywane w zmiennej lub właściwość po lewej stronie w instrukcji przypisania.  
+4. The value returned from the procedure is stored in the variable or property on the left side of the assignment statement.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład wywołuje Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> można pobrać wartości zmiennej środowiskowej systemu operacyjnego. Pierwszy wiersz wywołania `Environ` w wyrażeniach, a drugi wiersz wywołuje on w instrukcji przypisania. `Environ` pobiera nazwę zmiennej, jako jedyny argument. Zwraca wartość zmiennej do wywołującego kodu.  
+ The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> to retrieve the value of an operating system environment variable. The first line calls `Environ` within an expression, and the second line calls it in an assignment statement. `Environ` takes the variable name as its sole argument. It returns the variable's value to the calling code.  
   
  [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
@@ -49,6 +49,6 @@ A `Function` procedury zwraca wartość do wywołującego kodu. Zostanie ona wyw
 - [Procedury funkcji](./function-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Function, instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Instrukcje: Utwórz procedurę, która zwraca wartość](./how-to-create-a-procedure-that-returns-a-value.md)
-- [Instrukcje: Zwracanie wartości z procedury](./how-to-return-a-value-from-a-procedure.md)
-- [Instrukcje: Wywoływanie procedury, która nie zwraca wartości](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+- [Instrukcje: tworzenie procedury, która zwraca wartość](./how-to-create-a-procedure-that-returns-a-value.md)
+- [Instrukcje: zwracanie wartości z procedury](./how-to-return-a-value-from-a-procedure.md)
+- [Instrukcje: wywoływanie procedury, która nie zwraca wartości](./how-to-call-a-procedure-that-does-not-return-a-value.md)

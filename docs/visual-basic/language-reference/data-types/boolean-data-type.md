@@ -1,5 +1,5 @@
 ---
-title: Boolean Data Type (Visual Basic)
+title: Typ logiczny danych (boolowski)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.FALSE
@@ -12,38 +12,42 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: b1e4add39cee6c733a6f4b95aa1668975f2f2d6d
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 5d05514207c5d07e81aab897f40f728570f6bd87
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268256"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347847"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean Data Type (Visual Basic)
-Przechowuje wartości, które mogą być tylko `True` lub `False`. Słowa kluczowe `True` i `False` odpowiadają dwa stany `Boolean` zmiennych.  
+
+Holds values that can be only `True` or `False`. The keywords `True` and `False` correspond to the two states of `Boolean` variables.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj [typ danych Boolean (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) zawiera wartości dwoma stanami, takie jak PRAWDA/FAŁSZ tak/nie lub włączenia/wyłączenia.  
+
+ Use the [Boolean Data Type (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) to contain two-state values such as true/false, yes/no, or on/off.  
   
- Wartość domyślna `Boolean` jest `False`.  
+ The default value of `Boolean` is `False`.  
   
- `Boolean` wartości nie są przechowywane jako liczby i przechowywane wartości nie są przeznaczone do równoważne liczb. Nigdy nie należy wpisać kod, który opiera się na równoważne wartości liczbowe `True` i `False`. Jeśli to możliwe, należy ograniczyć użycie `Boolean` zmienne do wartości logiczne, dla których są one przeznaczone.  
+ `Boolean` values are not stored as numbers, and the stored values are not intended to be equivalent to numbers. You should never write code that relies on equivalent numeric values for `True` and `False`. Whenever possible, you should restrict usage of `Boolean` variables to the logical values for which they are designed.  
   
 ## <a name="type-conversions"></a>Konwersje typu  
- Kiedy Visual Basic konwertuje wartości typu danych liczbowych `Boolean`, staje się 0 `False` i stają się wszystkie inne wartości `True`. Kiedy Visual Basic konwertuje `Boolean` wartości do typów numerycznych, `False` staje się 0 i `True` staje się -1.  
+
+ When Visual Basic converts numeric data type values to `Boolean`, 0 becomes `False` and all other values become `True`. When Visual Basic converts `Boolean` values to numeric types, `False` becomes 0 and `True` becomes -1.  
   
- Podczas konwertowania między `Boolean` wartości i typy danych numerycznych, należy pamiętać o tym, że metody konwersji .NET Framework nie zawsze działają tak samo jak słowa kluczowe konwersji języka Visual Basic. Jest to spowodowane konwersji języka Visual Basic zachowuje zgodność z poprzednimi wersjami zachowanie. Aby uzyskać więcej informacji, zobacz "Logiczna typu jest nie Konwertuj do liczbowego typu dokładnie" w [Rozwiązywanie problemów z typów danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ When you convert between `Boolean` values and numeric data types, keep in mind that the .NET Framework conversion methods do not always produce the same results as the Visual Basic conversion keywords. This is because the Visual Basic conversion retains behavior compatible with previous versions. For more information, see "Boolean Type Does Not Convert to Numeric Type Accurately" in [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
-- **Liczby ujemne.** `Boolean` nie jest typu liczbowego i nie może reprezentować wartość ujemną. W każdym przypadku, nie należy używać `Boolean` do przechowywania wartości liczbowych.  
+- **Negative Numbers.** `Boolean` is not a numeric type and cannot represent a negative value. In any case, you should not use `Boolean` to hold numeric values.  
   
-- **Znaki typu.** `Boolean` nie ma znak literalny typu lub znak typu identyfikator.  
+- **Type Characters.** `Boolean` has no literal type character or identifier type character.  
   
-- **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Boolean?displayProperty=nameWithType> struktury.  
+- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Boolean?displayProperty=nameWithType> structure.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie `runningVB` jest `Boolean` zmienną, która przechowuje prostego ustawienie tak/nie.  
+
+ In the following example, `runningVB` is a `Boolean` variable, which stores a simple yes/no setting.  
   
 ```vb  
 Dim runningVB As Boolean  

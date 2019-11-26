@@ -8,18 +8,20 @@
       href: breaking-changes.md
     - name: Według wersji
       items:
-        - name: Z platformy .NET Framework do platformy .NET Core
-          href: framework-core.md
-        - name: Z wersji 2.2 do wersji 3.0
-          href: 2.2-3.0.md
-        - name: Z wersji 3.0 (wersja zapoznawcza 6) do wersji 3.0 (wersja zapoznawcza 7)
-          href: 3.0.6-3.0.7.md
-        - name: Z wersji 3.0 (wersja zapoznawcza 7) do wersji 3.0 (wersja zapoznawcza 8)
-          href: 3.0.7-3.0.8.md
+        - name: Z wersji 3.0 do 3.1
+          href: 3.0-3.1.md
+        - name: Z wersji 3.0 (wersja zapoznawcza 9) do wersji 3.0
+          href: 3.0.9-3.0rc1.md
         - name: Z wersji 3.0 (wersja zapoznawcza 8) do wersji 3.0 (wersja zapoznawcza 9)
           href: 3.0.8-3.0.9.md
-        - name: Z wersji 3.0 (wersja zapoznawcza 9) do wersji 3.0 RC1
-          href: 3.0.9-3.0rc1.md
+        - name: Z wersji 3.0 (wersja zapoznawcza 7) do wersji 3.0 (wersja zapoznawcza 8)
+          href: 3.0.7-3.0.8.md
+        - name: Z wersji 3.0 (wersja zapoznawcza 6) do wersji 3.0 (wersja zapoznawcza 7)
+          href: 3.0.6-3.0.7.md
+        - name: Z wersji 2.2 do 3.0
+          href: 2.2-3.0.md
+        - name: Z platformy .NET Framework do platformy .NET Core
+          href: framework-core.md
     - name: Według kategorii
       items:
         - name: ASP.NET Core

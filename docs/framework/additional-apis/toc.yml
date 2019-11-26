@@ -11,7 +11,7 @@
       items:
         - name: Klasa wyjątku
           items:
-            - name: Metoda Exception.PrepForRemoting
+            - name: 'Exception.PrepForRemoting, metoda'
               href: system.exception.prepforremoting.md
     - name: System.Data.SqlTypes
       items:
@@ -29,9 +29,9 @@
               href: system.data.sqltypes.sqlstreamchars.isnull.md
             - name: 'Length, właściwość'
               href: system.data.sqltypes.sqlstreamchars.length.md
-            - name: Close — Metoda
+            - name: 'Close, metoda'
               href: system.data.sqltypes.sqlstreamchars.close.md
-            - name: Dispose — Metoda
+            - name: Dispose — metoda
               href: system.data.sqltypes.sqlstreamchars.dispose.md
             - name: 'Flush, metoda'
               href: system.data.sqltypes.sqlstreamchars.flush.md
@@ -43,6 +43,12 @@
               href: system.data.sqltypes.sqlstreamchars.setlength.md
             - name: 'Write, metoda'
               href: system.data.sqltypes.sqlstreamchars.write.md
+    - name: System.IO
+      items:
+        - name: 'MemoryStream, klasa'
+          items:
+            - name: 'InternalGetOriginAndLength, metoda'
+              href: system.io.memorystream.internalgetoriginandlength.md
     - name: System.Net
       items:
         - name: 'Connection, klasa'
@@ -78,6 +84,8 @@
           items:
             - name: 'NetworkStream, właściwość'
               href: system.net.pooledstream.networkstream.md
+        - name: 'RtcState, klasa'
+          href: system.net.rtcstate.md
         - name: 'ServicePoint, klasa'
           items:
             - name: 'm_ConnectionGroupList, pole'
@@ -94,6 +102,14 @@
           items:
             - name: 'SslProtocol, właściwość'
               href: system.net.security.sslstate.sslprotocol.md
+    - name: System.ServiceModel.Channels
+      items:
+        - name: 'Message, klasa'
+          items:
+            - name: 'BodyToString, metoda'
+              href: system.servicemodel.channels.message.bodytostring.md
+            - name: 'WriteStartHeaders, metoda'
+              href: system.servicemodel.channels.message.writestartheaders.md
     - name: System.Windows.Diagnostics
       items:
         - name: 'VisualDiagnostics, klasa'
@@ -110,11 +126,11 @@
       items:
         - name: XpsDocumentWriter
           items:
-            - name: 'raise__WritingCancelled, Metoda'
+            - name: 'raise__WritingCancelled, metoda'
               href: xpsdocumentwriter-raise-writingcancelled-method-system-windows-xps.md
-            - name: 'raise__WritingCompleted, Metoda'
+            - name: 'raise__WritingCompleted, metoda'
               href: xpsdocumentwriter-raise-writingcompleted-method-system-windows-xps.md
-            - name: 'raise__WritingPrintTicketRequired, Metoda'
+            - name: 'raise__WritingPrintTicketRequired, metoda'
               href: xpsdocumentwriter-raise-writingprintticketrequired-method-system-windows-xps.md
             - name: raise__WritingProgressChanged
               href: xpsdocumentwriter-raise-writingprogresschanged-method-system-windows-xps.md

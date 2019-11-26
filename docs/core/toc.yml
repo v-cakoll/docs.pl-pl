@@ -2,6 +2,46 @@
   href: index.md
 - name: Informacje o platformie .NET Core
   href: about.md
+- name: Zainstaluj
+  items:
+    - name: Omówienie
+      href: install/index.md
+    - name: Instalowanie zestawu SDK
+      href: install/sdk.md
+    - name: Instalowanie środowiska uruchomieniowego
+      href: install/runtime.md
+    - name: Obsługiwany system operacyjny i zależności
+      href: install/dependencies.md
+    - name: Jak sprawdzić wersję programu .NET Core
+      href: install/how-to-detect-installed-versions.md
+    - name: Menedżery pakietów systemu Linux
+      items:
+        - name: RHEL 7
+          href: install/linux-package-manager-rhel7.md
+        - name: RHEL 8.1
+          href: install/linux-package-manager-rhel81.md
+        - name: Ubuntu 16.04
+          href: install/linux-package-manager-ubuntu-1604.md
+        - name: Ubuntu 18.04
+          href: install/linux-package-manager-ubuntu-1804.md
+        - name: Ubuntu 19.04
+          href: install/linux-package-manager-ubuntu-1904.md
+        - name: Debian 9
+          href: install/linux-package-manager-debian9.md
+        - name: Debian 10
+          href: install/linux-package-manager-debian10.md
+        - name: Fedora 29
+          href: install/linux-package-manager-fedora29.md
+        - name: Fedora 30
+          href: install/linux-package-manager-fedora30.md
+        - name: CentOS 7
+          href: install/linux-package-manager-centos7.md
+        - name: OpenSUSE 15
+          href: install/linux-package-manager-opensuse15.md
+        - name: SLES 12
+          href: install/linux-package-manager-sles12.md
+        - name: SLES 15
+          href: install/linux-package-manager-sles15.md
 - name: Wprowadzenie
   href: get-started.md
   items:
@@ -23,12 +63,6 @@
       href: tutorials/testing-library-with-visual-studio.md
     - name: Korzystanie z biblioteki .NET Standard w programie Visual Studio 2017
       href: tutorials/consuming-library-with-visual-studio.md
-- name: Wymagania wstępne systemu Windows
-  href: windows-prerequisites.md
-- name: Wymagania wstępne systemu macOS
-  href: macos-prerequisites.md
-- name: Wymagania wstępne systemu Linux
-  href: linux-prerequisites.md
 - name: Co nowego w programie .NET Core
   items:
     - name: Co nowego w programie .NET Core 3.0
@@ -54,25 +88,31 @@
           href: tutorials/cli-templates-create-template-pack.md
     - name: Wprowadzenie do platformy .NET Core w systemie macOS
       href: tutorials/using-on-macos.md
-    - name: Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
+    - name: Rozpoczynanie pracy z platformą .NET Core przy użyciu programu Visual Studio dla komputerów Mac
       href: tutorials/using-on-mac-vs.md
-    - name: Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
+    - name: Tworzenie kompletnego rozwiązania .NET Core w systemie macOS
       href: tutorials/using-on-mac-vs-full-solution.md
     - name: Rozpoczynanie pracy z platformą .NET Core przy użyciu narzędzi interfejsu wiersza polecenia
       href: tutorials/using-with-xplat-cli.md
-    - name: Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core
+    - name: Organizowanie i testowanie projektów przy użyciu interfejsu wiersza polecenia platformy .NET Core
       href: tutorials/testing-with-cli.md
-    - name: Tworzenie bibliotek za pomocą narzędzi międzyplatformowych
+    - name: Tworzenie bibliotek za pomocą narzędzi dla wielu platform
       href: tutorials/libraries.md
-    - name: Tworzenie aplikacji platformy .NET Core za pomocą wtyczek
+    - name: Tworzenie aplikacji .NET Core z wtyczkami
       href: tutorials/creating-app-with-plugin-support.md
-    - name: Tworzenie aplikacji ASP.NET Core
+    - name: Opracowywanie aplikacji ASP.NET Core
       href: tutorials/aspnet-core.md
     - name: Hostowanie platformy .NET Core z kodu natywnego
       href: tutorials/netcore-hosting.md
+- name: Konfiguracja środowiska uruchomieniowego
+  items:
+    - name: Ustawienia
+      href: run-time-config/index.md
+    - name: Ustawienia modułu zbierającego elementy bezużyteczne
+      href: run-time-config/garbage-collector.md
 - name: Współdziałanie natywne
   items:
-    - name: Udostępnianie składników .NET Core modelowi COM
+    - name: Uwidacznianie składników .NET Core dla modelu COM
       href: native-interop/expose-components-to-com.md
 - name: 'Pakiety, metapakiety i struktury'
   href: packages.md

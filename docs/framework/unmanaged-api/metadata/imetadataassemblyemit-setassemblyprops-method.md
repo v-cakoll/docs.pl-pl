@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431952"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyProps — Metoda
-Modifies the specified `Assembly` metadata structure.  
+Modyfikuje określoną strukturę metadanych `Assembly`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,37 +41,37 @@ HRESULT SetAssemblyProps (
   
 ## <a name="parameters"></a>Parametry  
  `pma`  
- [in] The metadata token that specifies the `Assembly` metadata structure to be modified.  
+ podczas Token metadanych określający strukturę metadanych `Assembly`, która ma zostać zmodyfikowana.  
   
  `pbPublicKey`  
- [in] A pointer to the public key of the publisher of the assembly.  
+ podczas Wskaźnik do klucza publicznego wydawcy zestawu.  
   
  `cbPublicKey`  
- [in] The size in bytes of `pbPublicKey`.  
+ podczas Rozmiar w bajtach `pbPublicKey`.  
   
  `ulHashAlgId`  
- [in] The identifier for the hash algorithm used to hash the assembly files.  
+ podczas Identyfikator algorytmu wyznaczania wartości skrótu używany do mieszania plików zestawu.  
   
  `szName`  
- [in] The human-readable text name of the assembly.  
+ podczas Nazwa tekstu do odczytania przez człowieka.  
   
  `pMetaData`  
- [in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.  
+ podczas Wskaźnik do ASSEMBLYMETADATA, który zawiera wersję, platformę i informacje o ustawieniach regionalnych dla zestawu.  
   
  `dwAssemblyFlags`  
- [in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.  
+ podczas Bitowa kombinacja wartości [AssemblyFlags —](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) , które określają różne atrybuty zestawu.  
   
 ## <a name="remarks"></a>Uwagi  
- To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.  
+ Aby utworzyć `Assembly` strukturę metadanych, użyj metody [IMetaDataAssemblyEmit::D efineassembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

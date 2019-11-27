@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448090"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen — Metoda
-Gets the length of the specified section.  
+Pobiera długość określonej sekcji.  
   
- This method is obsolete and should not be used.  
+ Ta metoda jest przestarzała i nie powinna być używana.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,22 +38,22 @@ HRESULT GetSectionDataLen (
   
 ## <a name="parameters"></a>Parametry  
  `section`  
- [in] The data section whose length will be retrieved.  
+ podczas Sekcja danych, której długość zostanie pobrana.  
   
  `dataLen`  
- [out] The returned length of the specified section.  
+ określoną Zwrócona długość określonej sekcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Call `GetSectionDataLen` only if you have special section requirements that are not handled by other methods.  
+ Wywołaj `GetSectionDataLen` tylko wtedy, gdy istnieją specjalne wymagania sekcji, które nie są obsługiwane przez inne metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

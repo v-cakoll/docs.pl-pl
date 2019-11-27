@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450217"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef — Metoda
-Creates a type definition for a common language runtime type, and gets a metadata token for that type definition.  
+Tworzy definicję typu dla typu środowiska uruchomieniowego języka wspólnego i pobiera token metadanych dla tej definicji typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,35 +39,35 @@ HRESULT DefineTypeDef (
   
 ## <a name="parameters"></a>Parametry  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ podczas Nazwa typu w formacie Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CoreTypeAttr` values.  
+ [in] `TypeDef` atrybuty. To jest maska bitów wartości `CoreTypeAttr`.  
   
  `tkExtends`  
- [in] The token of the base class. It must be either an `mdTypeDef` or an `mdTypeRef` token.  
+ podczas Token klasy bazowej. Musi to być `mdTypeDef` lub token `mdTypeRef`.  
   
  `rtkImplements`  
- [in] An array of tokens specifying the interfaces that this class or interface implements.  
+ podczas Tablica tokenów określająca interfejsy, które implementuje Ta klasa lub interfejs.  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ określoną Przypisany token `mdTypeDef`.  
   
 ## <a name="remarks"></a>Uwagi  
- A flag in `dwTypeDefFlags` specifies whether the type being created is a common type system reference type (class or interface) or a common type system value type.  
+ Flaga w `dwTypeDefFlags` określa, czy tworzony typ jest typem referencyjnym systemu typu wspólnego (Class lub Interface) czy typem wartości typu wspólnego systemu.  
   
- Depending on the parameters supplied, this method, as a side effect, may also create an `mdInterfaceImpl` record for each interface that is inherited or implemented by this type. However, this method does not return any of these `mdInterfaceImpl` tokens. If a client wants to later add or modify an `mdInterfaceImpl` token, it must use the `IMetaDataImport` interface to enumerate them. If you want to use COM semantics of the `[default]` interface, you should supply the default interface as the first element in `rtkImplements`; a custom attribute set on the class will indicate that the class has a default interface (which is always assumed to be the first `mdInterfaceImpl` token declared for the class).  
+ W zależności od dostarczonych parametrów, ta metoda jako efekt uboczny może również utworzyć rekord `mdInterfaceImpl` dla każdego interfejsu, który jest dziedziczony lub zaimplementowany przez ten typ. Jednak ta metoda nie zwraca żadnego z tych tokenów `mdInterfaceImpl`. Jeśli klient chce później dodać lub zmodyfikować token `mdInterfaceImpl`, musi użyć interfejsu `IMetaDataImport`, aby je wyliczyć. Jeśli chcesz używać semantyki COM interfejsu `[default]`, należy podać domyślny interfejs jako pierwszy element w `rtkImplements`; niestandardowy atrybut ustawiony dla klasy wskazuje, że Klasa ma interfejs domyślny (który zawsze przyjmuje się, że jest to pierwszy token `mdInterfaceImpl` zadeklarowany dla klasy).  
   
- Each element of the `rtkImplements` array holds an `mdTypeDef` or `mdTypeRef` token. The last element in the array must be `mdTokenNil`.  
+ Każdy element tablicy `rtkImplements` zawiera token `mdTypeDef` lub `mdTypeRef`. Ostatni element w tablicy musi być `mdTokenNil`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

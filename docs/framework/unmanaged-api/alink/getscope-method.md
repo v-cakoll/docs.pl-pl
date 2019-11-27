@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447204"
 ---
 # <a name="getscope-method"></a>GetScope — Metoda
-Gets an import scope.  
+Pobiera zakres importu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,22 +37,22 @@ HRESULT GetScope(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Unique ID of assembly to import to.  
+ Unikatowy identyfikator zestawu do zaimportowania.  
   
  `FileToken`  
- Unique ID of the file to import from.  
+ Unikatowy identyfikator pliku do zaimportowania.  
   
  `dwScope`  
- Zero-based scope to import.  
+ Zakres od zera do zaimportowania.  
   
  `ppImportScope`  
- Receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface for the scope.  
+ Odbiera Interfejs [interfejsu IMetaDataImport](../metadata/imetadataimport-interface.md) dla zakresu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Returns S_OK if the method succeeds.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Requires alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 

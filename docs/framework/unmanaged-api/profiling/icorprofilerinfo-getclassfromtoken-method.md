@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448109"
 ---
 # <a name="icorprofilerinfogetclassfromtoken-method"></a>ICorProfilerInfo::GetClassFromToken — Metoda
-Gets the ID of the class, given the metadata token. This method is obsolete in the .NET Framework version 2.0. Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.  
+Pobiera identyfikator klasy, z uwzględnieniem tokenu metadanych. Ta metoda jest przestarzała w .NET Framework w wersji 2,0. Zamiast tego użyj [ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,25 +36,25 @@ HRESULT GetClassFromToken(
   
 ## <a name="parameters"></a>Parametry  
  `moduleID`  
- [in] The ID of the module that contains the class.  
+ podczas Identyfikator modułu, który zawiera klasę.  
   
  `typeDef`  
- [in] An `mdTypeDef` metadata token that references the class.  
+ podczas `mdTypeDef` token metadanych, który odwołuje się do klasy.  
   
  `cTypeArgs`  
- [out] A pointer to the class ID.  
+ określoną Wskaźnik do identyfikatora klasy.  
   
 ## <a name="remarks"></a>Uwagi  
- This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.  
+ Ta metoda jest przestarzała; Zamiast tego należy używać `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` dla wszystkich typów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** 1.0, 1.1  
+ **.NET Framework wersje:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Zobacz także
 

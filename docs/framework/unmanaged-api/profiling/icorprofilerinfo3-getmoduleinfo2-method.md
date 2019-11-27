@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449670"
 ---
 # <a name="icorprofilerinfo3getmoduleinfo2-method"></a>ICorProfilerInfo3::GetModuleInfo2 — Metoda
-Given a module ID, returns the file name of the module, the ID of the module's parent assembly, and a bitmask that describes the properties of the module.  
+Podano identyfikator modułu, zwraca nazwę pliku modułu, identyfikator zestawu nadrzędnego modułu i maskę bitów opisującą właściwości modułu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,43 +41,43 @@ HRESULT GetModuleInfo2(
   
 ## <a name="parameters"></a>Parametry  
  `moduleId`  
- [in] The ID of the module for which information will be retrieved.  
+ podczas Identyfikator modułu, dla którego będą pobierane informacje.  
   
  `ppBaseLoadAddress`  
- [out] The base address at which the module is loaded.  
+ określoną Adres podstawowy, z którego moduł jest załadowany.  
   
  `cchName`  
- [in] The length, in characters, of the `szName` return buffer.  
+ podczas Długość (w znakach) `szName` buforu powrotu.  
   
  `pcchName`  
- [out] A pointer to the total character length of the module's file name that is returned.  
+ określoną Wskaźnik do łącznej długości znaku nazwy pliku modułu, który jest zwracany.  
   
  `szName`  
- [out] A caller-provided wide character buffer. When the method returns, this buffer contains the file name of the module.  
+ określoną Bufor znaków udostępniany przez obiekt wywołujący. Gdy metoda zwraca, ten bufor zawiera nazwę pliku modułu.  
   
  `pAssemblyId`  
- [out] A pointer to the ID of the module's parent assembly.  
+ określoną Wskaźnik do identyfikatora zestawu nadrzędnego modułu.  
   
  `pdwModuleFlags`  
- [out] A bitmask of values from the [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) enumeration that specify the properties of the module.  
+ określoną Maska bitów wartości z wyliczenia [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) , która określa właściwości modułu.  
   
 ## <a name="remarks"></a>Uwagi  
- For dynamic modules, the `szName` parameter is the metadata name of the module, and the base address is 0 (zero). The metadata name is the value in the Name column from the Module table inside metadata. This is also exposed as the <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> property to managed code, and as the `szName` parameter of the [IMetaDataImport::GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) method to unmanaged metadata client code.  
+ Dla modułów dynamicznych parametr `szName` jest nazwą metadanych modułu, a adres podstawowy to 0 (zero). Nazwa metadanych jest wartością w kolumnie Nazwa z tabeli modułu w metadanych. Jest to również uwidocznione jako właściwość <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> do kodu zarządzanego, a jako parametr `szName` metody [IMetaDataImport:: GetScopeProps —](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) do niezarządzanego kodu klienta metadanych.  
   
- Although the `GetModuleInfo2` method may be called as soon as the module's ID exists, the ID of the parent assembly will not be available until the profiler receives the [ICorProfilerCallback::ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) callback.  
+ Mimo że metoda `GetModuleInfo2` może być wywoływana, gdy tylko identyfikator modułu istnieje, identyfikator zestawu nadrzędnego nie będzie dostępny do momentu otrzymania przez profiler wywołania zwrotnego [ICorProfilerCallback:: ModuleAttachedToAssembly —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) .  
   
- When `GetModuleInfo2` returns, you must verify that the `szName` buffer was large enough to contain the full file name of the module. To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter. If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetModuleInfo2` again.  
+ Gdy `GetModuleInfo2` zwraca, należy sprawdzić, czy bufor `szName` był wystarczająco duży, aby zawierał pełną nazwę pliku modułu. W tym celu należy porównać wartość, która `pcchName` wskazuje na wartość parametru `cchName`. Jeśli `pcchName` wskazuje wartość, która jest większa niż `cchName`, Przydziel większy bufor `szName`, zaktualizuj `cchName` przy użyciu nowego, większego rozmiaru i ponownie wywołaj `GetModuleInfo2`.  
   
- Alternatively, you can first call `GetModuleInfo2` with a zero-length `szName` buffer to obtain the correct buffer size. You can then set the buffer size to the value returned in `pcchName` and call `GetModuleInfo2` again.  
+ Alternatywnie można najpierw wywołać `GetModuleInfo2` z buforem `szName` o zerowej długości, aby uzyskać prawidłowy rozmiar buforu. Następnie można ustawić rozmiar buforu na wartość zwróconą w `pcchName` i ponownie wywołać `GetModuleInfo2`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

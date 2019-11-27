@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448875"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints — Metoda
-Gets all the sequence points within this method.  
+Pobiera wszystkie punkty sekwencji w tej metodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,34 +41,34 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>Parametry  
  `cPoints`  
- [in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.  
+ podczas `ULONG32`, który odbiera rozmiar `offsets`, `documents`, `lines`, `columns`, `endLines`i `endColumns` tablic.  
   
  `pcPoints`  
- [out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.  
+ określoną Wskaźnik do `ULONG32`, który odbiera długość buforu wymaganego do zawierania punktów sekwencji.  
   
  `offsets`  
- [in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.  
+ podczas Tablica, w której mają być przechowywane przesunięcia języka pośredniego firmy Microsoft (MSIL) od początku metody dla punktów sekwencji.  
   
  `documents`  
- [in] An array in which to store the documents in which the sequence points are located.  
+ podczas Tablica, w której mają być przechowywane dokumenty, w których znajdują się punkty sekwencji.  
   
  `lines`  
- [in] An array in which to store the lines in the documents at which the sequence points are located.  
+ podczas Tablica, w której mają być przechowywane wiersze w dokumentach, w których znajdują się punkty sekwencji.  
   
  `columns`  
- [in] An array in which to store the columns in the documents at which the sequence points are located.  
+ podczas Tablica, w której mają być przechowywane kolumny w dokumentach, w których znajdują się punkty sekwencji.  
   
  `endLines`  
- [in] The array of lines in the documents at which the sequence points end.  
+ podczas Tablica wierszy w dokumentach, w których kończy się punkty sekwencji.  
   
  `endColumns`  
- [in] The array of columns in the documents at which the sequence points end.  
+ podczas Tablica kolumn w dokumentach, w których kończy się punkty sekwencji.  
   
-## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+## <a name="return-value"></a>Wartość zwrócona  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449893"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>ICorProfilerInfo::GetThreadInfo — Metoda
-Gets the current Win32 thread identity for the specified thread.  
+Pobiera bieżącą tożsamość wątku Win32 dla określonego wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,19 +35,19 @@ HRESULT GetThreadInfo(
   
 ## <a name="parameters"></a>Parametry  
  `threadId`  
- [in] The ID of the thread for which to get the current Win32 ID.  
+ podczas Identyfikator wątku, dla którego ma zostać pobrany bieżący identyfikator Win32.  
   
  `pdwWin32ThreadId`  
- [out] A pointer to the specified thread's current Win32 thread ID.  
+ określoną Wskaźnik do bieżącego identyfikatora wątku Win32 określonego wątku.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

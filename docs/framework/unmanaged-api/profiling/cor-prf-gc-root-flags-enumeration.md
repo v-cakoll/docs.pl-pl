@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449460"
 ---
 # <a name="cor_prf_gc_root_flags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS — Wyliczenie
-Indicates a property of a garbage collection root.  
+Wskazuje Właściwość katalogu głównego wyrzucania elementów bezużytecznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,26 +35,26 @@ typedef enum {
 } COR_PRF_GC_ROOT_FLAGS;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|The root prevents a garbage collection from moving the object.|  
-|`COR_PRF_GC_ROOT_WEAKREF`|The root does not prevent garbage collection.|  
-|`COR_PRF_GC_ROOT_INTERIOR`|The root refers to a field of the object rather than the object itself.|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|The root prevents garbage collection if the reference count of the object is a certain value.|  
+|`COR_PRF_GC_ROOT_PINNING`|Katalog główny uniemożliwia przechodzenie obiektu przez wyrzucanie elementów bezużytecznych.|  
+|`COR_PRF_GC_ROOT_WEAKREF`|Element główny nie zapobiega wyrzucaniu elementów bezużytecznych.|  
+|`COR_PRF_GC_ROOT_INTERIOR`|Element główny odwołuje się do pola obiektu, a nie samego obiektu.|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|Katalog główny uniemożliwia wyrzucanie elementów bezużytecznych, jeśli liczba odwołań obiektu jest określona.|  
   
 ## <a name="remarks"></a>Uwagi  
- `COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots. However, not all roots are special. For example, some roots are not weak references, interior pointers, pinned, or reference-counted. For such roots, there are no flags to convey. Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.  
+ `COR_PRF_GC_ROOT_FLAGS` jest maską bitów, która zawiera dodatkowe informacje na temat specjalnych katalogów głównych. Nie wszystkie elementy główne są jednak specjalne. Na przykład niektóre elementy główne nie są słabymi odwołaniami, wewnętrznymi wskaźnikami, przypiętymi lub zliczanymi odwołaniami. W przypadku takich elementów głównych nie ma flag do przekazania. W związku z tym metody używające tego wyliczenia, takie jak [ICorProfilerCallback2:: RootReferences2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) , wysyłają 0 dla flag maska bitów, wskazując, że wszystkie flagi są wyłączone.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

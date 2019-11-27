@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449035"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables — Metoda
-Gets the local variables.  
+Pobiera zmienne lokalne.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,22 +38,22 @@ HRESULT GetLocalVariables(
   
 ## <a name="parameters"></a>Parametry  
  `mdMethodToken`  
- [in] The metadata token of the method.  
+ podczas Token metadanych metody.  
   
  `cLocals`  
- [in] A `ULONG` that indicates the size of the `rgLocals` parameter.  
+ podczas `ULONG`, który wskazuje rozmiar parametru `rgLocals`.  
   
  `rgLocals`  
- [out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.  
+ określoną Zwrócona tablica wystąpień [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) .  
   
  `pceltFetched`  
- [out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.  
+ określoną Wskaźnik do `ULONG`, który odbiera rozmiar buforu `rgLocals` wymaganego do przechowywania wartości lokalnych.  
   
-## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+## <a name="return-value"></a>Wartość zwrócona  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

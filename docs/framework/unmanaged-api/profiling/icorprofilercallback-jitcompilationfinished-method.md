@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449918"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>ICorProfilerCallback::JITCompilationFinished — Metoda
-Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.  
+Powiadamia profiler, że kompilator just-in-Time (JIT) zakończył Kompilowanie funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,24 +36,24 @@ HRESULT JITCompilationFinished(
   
 ## <a name="parameters"></a>Parametry  
  `functionId`  
- [in] The ID of the function that was compiled.  
+ podczas Identyfikator funkcji, która została skompilowana.  
   
  `hrStatus`  
- [in] A value indicating whether compilation was successful.  
+ podczas Wartość wskazująca, czy kompilacja zakończyła się pomyślnie.  
   
  `fIsSafeToBlock`  
- [in] A value indicating to the profiler whether blocking will affect the operation of the runtime. The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.  
+ podczas Wartość wskazująca, czy blokowanie będzie miało wpływ na działanie środowiska uruchomieniowego. Wartość jest `true`, jeśli blokowanie może spowodować, że środowisko uruchomieniowe będzie oczekiwać na zwrócenie przez wątek wywołujący z tego wywołania zwrotnego; w przeciwnym razie `false`.  
   
- Although a value of `true` will not harm the runtime, it can skew the profiling results.  
+ Mimo że wartość `true` nie będzie szkodliwe dla środowiska uruchomieniowego, może pochylić wyniki profilowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

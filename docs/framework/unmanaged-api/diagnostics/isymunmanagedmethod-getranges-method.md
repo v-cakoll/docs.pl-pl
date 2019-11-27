@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448929"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges — Metoda
-Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method. The array is an array of integers and has the format [start, end, start, end]. The number of range pairs is the length of the array divided by 2.  
+Nadana pozycja w dokumencie zwraca tablicę par przesunięć początkowych i końcowych odpowiadających zakresom języka pośredniego firmy Microsoft (MSIL), który znajduje się w tej metodzie. Tablica jest tablicą liczb całkowitych i ma format [początkowy, końcowy, początkowy, końcowy]. Liczba par zakresów jest długością tablicy podzieloną przez 2.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,28 +40,28 @@ HRESULT GetRanges(
   
 ## <a name="parameters"></a>Parametry  
  `document`  
- [in] The document for which the offset is requested.  
+ podczas Dokument, dla którego zażądano przesunięcia.  
   
  `line`  
- [in] The document line corresponding to the ranges.  
+ podczas Wiersz dokumentu odpowiadający zakresom.  
   
  `column`  
- [in] The document column corresponding to the ranges.  
+ podczas Kolumna dokumentu odpowiadająca zakresom.  
   
  `cRanges`  
- [in] The size of the `ranges` array.  
+ podczas Rozmiar tablicy `ranges`.  
   
  `pcRanges`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.  
+ określoną Wskaźnik do `ULONG32`, który odbiera rozmiar buforu wymaganego do zawierania zakresów.  
   
  `ranges`  
- [out] A pointer to the buffer that receives the ranges.  
+ określoną Wskaźnik do buforu, który odbiera zakresy.  
   
-## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+## <a name="return-value"></a>Wartość zwrócona  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

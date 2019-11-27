@@ -14,29 +14,29 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447697"
 ---
 # <a name="profiling-structures"></a>Profiling — Struktury
-This section describes the unmanaged structures that the profiling API uses.  
+W tej sekcji opisano niezarządzane struktury używane przez interfejs API profilowania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [COR_PRF_ASSEMBLY_REFERENCE_INFO, struktura](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)  
- Provides the common language runtime with information about a reference assembly that it should consider when performing an assembly reference closure walk.  
+ Zapewnia środowisko uruchomieniowe języka wspólnego z informacjami o zestawie referencyjnym, które należy wziąć pod uwagę podczas przeprowadzania przeszukiwania odwołań do zestawu.  
   
  [COR_PRF_CODE_INFO, struktura](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md)  
- Represents one contiguous block of native code stored in memory.  
+ Reprezentuje jeden ciągły blok kodu natywnego przechowywanego w pamięci.  
   
  [COR_PRF_EX_CLAUSE_INFO, struktura](../../../../docs/framework/unmanaged-api/profiling/cor-prf-ex-clause-info-structure.md)  
- Stores information about a specific exception clause instance and its associated frame.  
+ Przechowuje informacje o konkretnym wystąpieniu klauzuli wyjątku i skojarzonej z nią ramce.  
   
  [COR_PRF_FUNCTION, struktura](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-structure.md)  
- Provides a unique representation of a function by combining its ID with the ID of its recompiled version.  
+ Zapewnia unikatową reprezentację funkcji przez połączenie jej identyfikatora z IDENTYFIKATORem jego ponownie skompilowanej wersji.  
   
  [COR_PRF_FUNCTION_ARGUMENT_INFO, struktura](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md)  
- Represents a function's arguments, in left-to-right order.  
+ Reprezentuje argumenty funkcji w kolejności od lewej do prawej.  
   
  [COR_PRF_FUNCTION_ARGUMENT_RANGE, struktura](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)  
- Represents a block of function arguments stored contiguously in left-to-right order in memory.  
+ Reprezentuje blok argumentów funkcji przechowywanych w sposób ciągły w kolejności od lewej do prawej w pamięci.  
   
  [COR_PRF_GC_GENERATION_RANGE, struktura](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)  
- Describes a range (that is, block) of memory that is undergoing garbage collection.  
+ Opisuje zakres (czyli blok) pamięci, która jest niedo wyrzucania elementów bezużytecznych.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  COR_DEBUG_IL_TO_NATIVE_MAP  

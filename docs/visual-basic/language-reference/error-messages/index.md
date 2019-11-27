@@ -15,24 +15,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353713"
 ---
 # <a name="error-messages-visual-basic"></a>Komunikaty o błędach (Visual Basic)
-When you write, compile, or run a Visual Basic application, the following types of errors can occur:  
+Podczas pisania, kompilowania lub uruchamiania aplikacji Visual Basic mogą wystąpić następujące typy błędów:  
   
-1. Design-time errors, which occur when you write an application in Visual Studio.  
+1. Błędy czasu projektowania, które występują podczas pisania aplikacji w programie Visual Studio.  
   
-2. Compile-time errors, which occur when you compile an application in Visual Studio or at a command prompt.  
+2. Błędy czasu kompilacji, które występują podczas kompilowania aplikacji w programie Visual Studio lub w wierszu polecenia.  
   
-3. Run-time errors, which occur when you run an application in Visual Studio or as a stand-alone executable file.  
+3. Błędy czasu wykonywania, które występują podczas uruchamiania aplikacji w programie Visual Studio lub jako autonomiczny plik wykonywalny.  
   
- For information about how to troubleshoot a specific error, see [Additional Resources for Visual Basic Programmers](../../../visual-basic/getting-started/additional-resources.md).  
+ Informacje o sposobach rozwiązywania określonego błędu znajdują się w temacie [dodatkowe zasoby dla programistów Visual Basic](../../../visual-basic/getting-started/additional-resources.md).  
   
-## <a name="run-time-errors"></a>Run Time Errors  
- If a Visual Basic application tries to perform an action that the system can't execute, a run-time error occurs, and Visual Basic throws an `Exception` object. Visual Basic can generate custom errors of any data type, including `Exception` objects, by using the `Throw` statement. An application can identify the error by displaying the error number and message of a caught exception. If an error isn't caught, the application ends.  
+## <a name="run-time-errors"></a>Błędy czasu wykonywania  
+ Jeśli aplikacja Visual Basic próbuje wykonać akcję, której system nie może wykonać, wystąpi błąd czasu wykonywania, a Visual Basic zgłasza obiekt `Exception`. Visual Basic może generować niestandardowe błędy dowolnego typu danych, łącznie z obiektami `Exception`, przy użyciu instrukcji `Throw`. Aplikacja może zidentyfikować błąd, wyświetlając numer błędu i komunikat przechwyconego wyjątku. Jeśli błąd nie zostanie przechwycony, aplikacja zostanie zakończona.  
   
- The code can trap and examine run-time errors. If you enclose the code that produces the error in a `Try` block, you can catch any thrown error within a matching `Catch` block. For information about how to trap errors at run time and respond to them in your code, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Kod może Zalewka i sprawdzanie błędów czasu wykonywania. Jeśli zamieścisz kod, który generuje błąd w bloku `Try`, możesz przechwytywać wszystkie zgłoszone błędy w obrębie pasującego bloku `Catch`. Aby dowiedzieć się, jak zalewkować błędy w czasie wykonywania i odpowiadać na nie w kodzie, zobacz [try... Catch... Finally — instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
-## <a name="compile-time-errors"></a>Compile Time Errors  
- If the Visual Basic compiler encounters a problem in the code, a compile-time error occurs. In the Code Editor, you can easily identify which line of code caused the error because a wavy line appears under that line of code. The error message appears if you either point to the wavy underline or open the **Error List**, which also shows other messages.  
+## <a name="compile-time-errors"></a>Błędy kompilacji  
+ Jeśli kompilator Visual Basic napotyka problem w kodzie, wystąpi błąd czasu kompilacji. W edytorze kodu można łatwo określić, który wiersz kodu spowodował błąd, ponieważ linia falista pojawia się pod tym wierszem kodu. Komunikat o błędzie jest wyświetlany, gdy użytkownik wskaże podkreślenie faliste lub otworzy **Lista błędów**, w którym znajdują się również inne komunikaty.  
   
- If an identifier has a wavy underline and a short underline appears under the rightmost character, you can generate a stub for the class, constructor, method, property, field or enum. For more information, see [Generate From Usage](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage).
+ Jeśli identyfikator ma podkreśloną falistą, a krótka podkreślenie pojawia się pod znakiem po prawej stronie, można wygenerować element zastępczy dla klasy, konstruktora, metody, właściwości, pola lub wyliczenia. Aby uzyskać więcej informacji, zobacz [generowanie na podstawie użycia](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage).
   
- By resolving warnings from the Visual Basic compiler, you might be able to write code that runs faster and has fewer bugs. These warnings identify code that may cause errors when the application is run. For example, the compiler warns you if you try to invoke a member of an unassigned object variable, return from a function without setting the return value, or execute a `Try` block with errors in the logic to catch exceptions. For more information about warnings, including how to turn them on and off, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).
+ Rozwiązując ostrzeżenia z kompilatora Visual Basic, może być możliwe napisanie kodu, który działa szybciej i ma mniejszą liczbę błędów. Te ostrzeżenia identyfikują kod, który może spowodować błędy podczas uruchamiania aplikacji. Na przykład kompilator ostrzega, jeśli spróbujesz wywołać element członkowski zmiennej nieprzypisanego obiektu, Wróć z funkcji bez ustawienia wartości zwracanej lub wykonaj blok `Try` z błędami w logice, aby przechwytywać wyjątki. Aby uzyskać więcej informacji na temat ostrzeżeń, w tym sposobu ich włączania i wyłączania, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).

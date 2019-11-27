@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445276"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished — Metoda
-Notifies the profiler that an application domain has been created.  
+Powiadamia profiler o utworzeniu domeny aplikacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,24 +35,24 @@ HRESULT AppDomainCreationFinished(
   
 ## <a name="parameters"></a>Parametry  
  `appDomainId`  
- [in] Identifies the domain which has been created.  
+ podczas Identyfikuje domenę, która została utworzona.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether creation of the application domain completed successfully.  
+ podczas WYNIK HRESULT wskazujący, czy Tworzenie domeny aplikacji zakończyło się pomyślnie.  
   
 ## <a name="remarks"></a>Uwagi  
- The application ID is not valid for any information request until the `AppDomainCreationFinished` method is called.  
+ Identyfikator aplikacji nie jest prawidłowy dla żadnego żądania informacji, dopóki nie zostanie wywołana metoda `AppDomainCreationFinished`.  
   
- Some parts of loading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of creating the application domain has succeeded.  
+ Niektóre części ładowania domeny aplikacji mogą być kontynuowane po wywołaniu wywołania zwrotnego `AppDomainCreationFinished`. Błąd HRESULT w `hrStatus` wskazuje na błąd. Jednak wynik HRESULT w `hrStatus` wskazuje tylko, że pierwsza część tworzenia domeny aplikacji zakończyła się powodzeniem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

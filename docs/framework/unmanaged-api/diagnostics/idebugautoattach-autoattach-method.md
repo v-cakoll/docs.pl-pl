@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445524"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach — Metoda
-Performs server-invoked debugger auto attach.  
+Wykonuje automatyczne dołączanie debugera wywoływanego przez serwer.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,25 +40,25 @@ HRESULT AutoAttach
   
 ## <a name="parameters"></a>Parametry  
  `guidPort`  
- [in] Always set to `GUID_NULL`.  
+ podczas Zawsze ustawiaj na `GUID_NULL`.  
   
  `dwPid`  
- [in] Process ID, normally retrieved with the `GetCurrentProcessId` function.  
+ podczas Identyfikator procesu, zwykle pobierany z funkcją `GetCurrentProcessId`.  
   
  `dwProgramType`  
- [in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.  
+ podczas Typ programu: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`lub `AUTOATTACH_PROGRAM_UNKNOWN`.  
   
  `dwProgramId`  
- [in] Program ID.  
+ podczas Identyfikator programu.  
   
  `pszSessionId`  
- [in] String passed by the debug verb.  
+ podczas Ciąg przesłany przez czasownik debugowania.  
   
-## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds.  
+## <a name="return-value"></a>Wartość zwrócona  
+ S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** DbgAutoAttach.h  
+ **Nagłówek:** DbgAutoAttach. h  
   
 ## <a name="see-also"></a>Zobacz także
 

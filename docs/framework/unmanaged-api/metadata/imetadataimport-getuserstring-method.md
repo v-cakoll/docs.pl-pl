@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436689"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString — Metoda
-Gets the literal string represented by the specified metadata token.  
+Pobiera ciąg literału reprezentowanego przez określony token metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,25 +38,25 @@ HRESULT GetUserString (
   
 ## <a name="parameters"></a>Parametry  
  `stk`  
- [in] The String token to return the associated string for.  
+ podczas Token ciągu, dla którego ma zostać zwrócony skojarzony ciąg.  
   
  `szString`  
- [out] A copy of the requested string.  
+ określoną Kopia żądanego ciągu.  
   
  `cchString`  
- [in] The maximum size in wide characters of the requested `szString`.  
+ podczas Maksymalny rozmiar w postaci znaków dwubajtowych żądanego `szString`.  
   
  `pchString`  
- [out] The size in wide characters of the returned `szString`.  
+ określoną Rozmiar znaków dwubajtowych zwracanych `szString`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

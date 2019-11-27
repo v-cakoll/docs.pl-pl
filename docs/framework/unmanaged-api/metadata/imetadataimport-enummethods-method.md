@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450086"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods — Metoda
-Enumerates MethodDef tokens representing methods of the specified type.  
+Wylicza tokeny MethodDef reprezentujące metody określonego typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,35 +39,35 @@ HRESULT EnumMethods (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in. out] Wskaźnik do modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
   
  `cl`  
- [in] A TypeDef token representing the type with the methods to enumerate.  
+ podczas Token TypeDef reprezentujący typ z metodami do wyliczenia.  
   
  `rMethods`  
- [out] The array to store the MethodDef tokens.  
+ określoną Tablica do przechowywania tokenów MethodDef.  
   
  `cMax`  
- [in] The maximum size of the MethodDef `rMethods` array.  
+ podczas Maksymalny rozmiar tablicy `rMethods` MethodDef.  
   
  `pcTokens`  
- [out] The number of MethodDef tokens returned in `rMethods`.  
+ określoną Liczba tokenów MethodDef zwróconych w `rMethods`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods` returned successfully.|  
-|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethods` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak tokenów MethodDef do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

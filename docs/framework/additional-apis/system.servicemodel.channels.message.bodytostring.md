@@ -1,5 +1,5 @@
 ---
-title: Message.BodyToString Method (System.ServiceModel.Channels)
+title: Message. BodyToString — Metoda (System. ServiceModel. Channels)
 author: mairaw
 ms.author: mairaw
 ms.date: 11/01/2019
@@ -18,9 +18,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451207"
 ---
-# <a name="messagebodytostring-method"></a>Message.BodyToString Method
+# <a name="messagebodytostring-method"></a>Message. BodyToString — Metoda
 
-Converts the message body into a string by calling the <xref:System.ServiceModel.Channels.Message.OnBodyToString%2A?displayProperty=nameWithType> method.
+Konwertuje treść komunikatu na ciąg, wywołując metodę <xref:System.ServiceModel.Channels.Message.OnBodyToString%2A?displayProperty=nameWithType>.
 
 ```csharp
 internal void BodyToString(XmlDictionaryWriter writer);
@@ -29,19 +29,19 @@ internal void BodyToString(XmlDictionaryWriter writer);
 ## <a name="parameters"></a>Parametry
 
 - `writer` <xref:System.Xml.XmlDictionaryWriter>\
-  The writer that is used to convert the message body to a string.
+  Składnik zapisywania służący do konwertowania treści komunikatu na ciąg.
 
 ## <a name="remarks"></a>Uwagi
 
 > [!WARNING]
-> The `Message.BodyToString` method is internal and is not meant to be used directly in your code.
+> Metoda `Message.BodyToString` jest wewnętrzna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 >
-> Microsoft does not support the use of this method in a production application under any circumstance.
+> Firma Microsoft nie obsługuje korzystania z tej metody w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.ServiceModel.Channels>
+**Przestrzeń nazw:** <xref:System.ServiceModel.Channels>
 
-**Assembly:** System.ServiceModel.dll
+**Zestaw:** System. ServiceModel. dll
 
-**.NET Framework versions:** Available since 3.0.
+**.NET Framework wersje:** Dostępne od 3,0.

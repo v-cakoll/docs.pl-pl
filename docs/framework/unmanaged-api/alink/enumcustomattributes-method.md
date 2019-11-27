@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446473"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes — Metoda
-Retrieves assembly-level custom attributes.  
+Pobiera niestandardowe atrybuty na poziomie zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,25 +39,25 @@ HRESULT EnumCustomAttributes(
   
 ## <a name="parameters"></a>Parametry  
  `hEnum`  
- Handle of enumerator.  
+ Uchwyt modułu wyliczającego.  
   
  `tkType`  
- Type of attributes to be enumerated. Use `mdTokenNill` for all attributes.  
+ Typ atrybutów do wyliczenia. Użyj `mdTokenNill` dla wszystkich atrybutów.  
   
  `rCustomValues`  
- Receives custom attributes tokens.  
+ Odbiera tokeny atrybutów niestandardowych.  
   
  `cMax`  
- Specifies size of `rCustomValues` array.  
+ Określa rozmiar tablicy `rCustomValues`.  
   
  `pcCustomValues`  
- Optionally receives count of token values.  
+ Opcjonalnie otrzymuje liczbę wartości tokenu.  
   
-## <a name="return-value"></a>Wartość zwracana  
- Returns S_OK if the method succeeds.  
+## <a name="return-value"></a>Wartość zwrócona  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Requires alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 

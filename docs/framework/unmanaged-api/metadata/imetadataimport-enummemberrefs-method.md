@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441718"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs — Metoda
-Enumerates MemberRef tokens representing members of the specified type.  
+Wylicza tokeny elementu MemberRef reprezentujące elementy członkowskie określonego typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,35 +39,35 @@ HRESULT EnumMemberRefs (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in. out] Wskaźnik do modułu wyliczającego.  
   
  `tkParent`  
- [in] A TypeDef, TypeRef, MethodDef, or ModuleRef token for the type whose members are to be enumerated.  
+ podczas Token TypeDef, TypeRef, MethodDef lub ModuleRef dla typu, którego składowe mają zostać wyliczone.  
   
  `rMemberRefs`  
- [out] The array used to store MemberRef tokens.  
+ określoną Tablica służąca do przechowywania tokenów elementu MemberRef.  
   
  `cMax`  
- [in] The maximum size of the `rMemberRefs` array.  
+ podczas Maksymalny rozmiar tablicy `rMemberRefs`.  
   
  `pcTokens`  
- [out] The actual number of MemberRef tokens returned in `rMemberRefs`.  
+ określoną Rzeczywista liczba tokenów elementu MemberRef zwrócona w `rMemberRefs`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs` returned successfully.|  
-|`S_FALSE`|There are no MemberRef tokens to enumerate. In that case, `pcTokens` is to zero.|  
+|`S_OK`|`EnumMemberRefs` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak tokenów elementu MemberRef do wyliczenia. W takim przypadku `pcTokens` ma wartość zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

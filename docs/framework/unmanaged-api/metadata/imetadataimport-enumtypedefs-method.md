@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449992"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs — Metoda
-Enumerates TypeDef tokens representing all types within the current scope.  
+Wylicza tokeny TypeDef reprezentujące wszystkie typy w bieżącym zakresie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,35 +38,35 @@ HRESULT EnumTypeDefs (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [out] A pointer to the new enumerator. This must be NULL for the first call of this method.  
+ określoną Wskaźnik do nowego modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
   
  `rTypeDefs`  
- [in] The array used to store the TypeDef tokens.  
+ podczas Tablica służąca do przechowywania tokenów TypeDef.  
   
  `cMax`  
- [in] The maximum size of the `rTypeDefs` array.  
+ podczas Maksymalny rozmiar tablicy `rTypeDefs`.  
   
  `pcTypeDefs`  
- [out] The number of TypeDef tokens returned in `rTypeDefs`.  
+ określoną Liczba tokenów TypeDef zwróconych w `rTypeDefs`.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeDefs` is zero.|  
+|`S_OK`|`EnumTypeDefs` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak tokenów do wyliczenia. W takim przypadku `pcTypeDefs` wynosi zero.|  
   
 ## <a name="remarks"></a>Uwagi  
- The TypeDef token represents a type such as a class or an interface, as well as any type added via an extensibility mechanism.  
+ Token TypeDef reprezentuje typ, taki jak Klasa lub interfejs, a także dowolny typ dodany za pomocą mechanizmu rozszerzalności.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

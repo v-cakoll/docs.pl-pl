@@ -24,7 +24,7 @@ ms.locfileid: "74447568"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc — Metoda
 
-Attempts to allocate a specified amount of memory for a new Microsoft intermediate language (MSIL) function body.
+Próbuje przydzielić określoną ilość pamięci dla nowej treści funkcji języka pośredniego (MSIL) firmy Microsoft.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,22 +37,22 @@ PVOID Alloc (
 ## <a name="parameters"></a>Parametry
 
 `cb`\
-[in] The number of bytes to allocate for the method body.
+podczas Liczba bajtów do przydzielenia dla treści metody.
 
 ## <a name="remarks"></a>Uwagi
 
- The allocated memory will begin at an address greater than the base address of the module that is associated with this allocator. In other words, each allocator is created for a particular module, and will attempt to allocate memory at a positive offset from its base address. If `Alloc` fails to allocate the requested number of bytes at an address greater than the base address of the module, it returns E_OUTOFMEMORY, regardless of the actual amount of memory space available.
+ Przydzieloną pamięć rozpocznie się pod adresem większym niż adres podstawowy modułu, który jest skojarzony z tym alokatorem. Innymi słowy, każdy Alokator jest tworzony dla danego modułu i podejmie próbę przydzielenia pamięci z przesunięciem pozytywnym od jego adresu podstawowego. Jeśli `Alloc` nie może przydzielić żądanej liczby bajtów pod adresem większym niż adres bazowy modułu, zwraca E_OUTOFMEMORY, niezależnie od rzeczywistej ilości dostępnego miejsca w pamięci.
 
- The `Alloc` method should be used in conjunction with the [ICorProfilerInfo::SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) method.
+ Metoda `Alloc` powinna być używana w połączeniu z metodą [ICorProfilerInfo:: SetILFunctionBody —](icorprofilerinfo-setilfunctionbody-method.md) .
 
 ## <a name="requirements"></a>Wymagania
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
- **Header:** CorProf.idl, CorProf.h
+ **Nagłówek:** CorProf. idl, CorProf. h
 
- **Library:** CorGuids.lib
+ **Biblioteka:** CorGuids. lib
 
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354073"
 ---
 # <a name="delegate-statement"></a>Delegate — Instrukcja
-Used to declare a delegate. A delegate is a reference type that refers to a `Shared` method of a type or to an instance method of an object. Any procedure with matching parameter and return types can be used to create an instance of this delegate class. The procedure can then later be invoked by means of the delegate instance.  
+Używane do deklarowania delegata. Delegat jest typem referencyjnym, który odwołuje się do metody `Shared` typu lub do metody wystąpienia obiektu. Każda procedura ze zgodnymi parametrami i zwracanymi typami może służyć do tworzenia wystąpienia tej klasy delegata. Procedurę można później wywołać za pomocą wystąpienia delegata.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -28,49 +28,49 @@ Used to declare a delegate. A delegate is a reference type that refers to a `Sha
   
 |Termin|Definicja|  
 |---|---|  
-|`attrlist`|Opcjonalny. List of attributes that apply to this delegate. Multiple attributes are separated by commas. You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").|  
-|`accessmodifier`|Opcjonalny. Specifies what code can access the delegate. Can be one of the following:<br /><br /> - [Public](../../../visual-basic/language-reference/modifiers/public.md). Any code that can access the element that declares the delegate can access it.<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md). Only code within the delegate's class or a derived class can access it.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Only code within the same assembly can access the delegate.<br />- [Private](../../../visual-basic/language-reference/modifiers/private.md). Only code within the element that declares the delegate can access it.<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md) Only code within the delegate's class, a derived class, or the same assembly can access the delegate. <br />- [Private Protected](../../language-reference/modifiers/private-protected.md) Only code within the delegate's class or in a derived class in the same assembly can access the delegate. |  
-|`Shadows`|Opcjonalny. Indicates that this delegate redeclares and hides an identically named programming element, or set of overloaded elements, in a base class. You can shadow any kind of declared element with any other kind.<br /><br /> A shadowed element is unavailable from within the derived class that shadows it, except from where the shadowing element is inaccessible. For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.|  
-|`Sub`|Optional, but either `Sub` or `Function` must appear. Declares this procedure as a delegate `Sub` procedure that does not return a value.|  
-|`Function`|Optional, but either `Sub` or `Function` must appear. Declares this procedure as a delegate `Function` procedure that returns a value.|  
-|`name`|Wymagany. Name of the delegate type; follows standard variable naming conventions.|  
-|`typeparamlist`|Opcjonalny. List of type parameters for this delegate. Multiple type parameters are separated by commas. Optionally, each type parameter can be declared variant by using `In` and `Out` generic modifiers. You must enclose the [Type List](../../../visual-basic/language-reference/statements/type-list.md) in parentheses and introduce it with the `Of` keyword.|  
-|`parameterlist`|Opcjonalny. List of parameters that are passed to the procedure when it is called. You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.|  
-|`type`|Required if you specify a `Function` procedure. Data type of the return value.|  
+|`attrlist`|Opcjonalny. Lista atrybutów, które są stosowane do tego delegata. Wiele atrybutów rozdziela się przecinkami. Należy ująć [listę atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md) w nawiasy ostre ("`<`" i "`>`").|  
+|`accessmodifier`|Opcjonalny. Określa kod, który może uzyskać dostęp do obiektu delegowanego. Może to być jeden z następujących modyfikatorów dostępu:<br /><br /> - [publiczne](../../../visual-basic/language-reference/modifiers/public.md). Każdy kod, który może uzyskać dostęp do elementu, który deklaruje delegata, może uzyskać do niego dostęp.<br />-   [chroniony](../../../visual-basic/language-reference/modifiers/protected.md). Tylko kod w klasie delegata lub Klasa pochodna mogą uzyskać do niej dostęp.<br />-   [zaprzyjaźniony](../../../visual-basic/language-reference/modifiers/friend.md). Tylko kod w tym samym zestawie może uzyskać dostęp do obiektu delegowanego.<br />- [prywatny](../../../visual-basic/language-reference/modifiers/private.md). Tylko kod w obrębie elementu, który deklaruje delegata, może uzyskać do niego dostęp.<br /><br /> - [chronionego zaprzyjaźnionego](../../language-reference/modifiers/protected-friend.md) kodu tylko w obrębie klasy delegata, klasy pochodnej lub tego samego zestawu mogą uzyskać dostęp do obiektu delegowanego. <br />- [prywatny tylko chroniony](../../language-reference/modifiers/private-protected.md) kod w klasie delegata lub w klasie pochodnej w tym samym zestawie może uzyskać dostęp do delegata. |  
+|`Shadows`|Opcjonalny. Wskazuje, że ten delegat ponownie deklaruje i ukrywa element programowania o identycznej nazwie lub zestaw przeciążonych elementów w klasie bazowej. Można obsłużyć dowolny rodzaj zadeklarowanego elementu z dowolnego innego rodzaju.<br /><br /> Element w tle jest niedostępny z klasy pochodnej, która go zasłania, z wyjątkiem tego, że element shadowing jest niedostępny. Na przykład, jeśli element `Private` zasłania element klasy bazowej, kod, który nie ma uprawnień dostępu do elementu `Private`, zamiast tego uzyskuje dostęp do elementu klasy bazowej.|  
+|`Sub`|Opcjonalne, ale muszą być wyświetlane `Sub` lub `Function`. Deklaruje tę procedurę jako delegat `Sub` procedury, która nie zwraca wartości.|  
+|`Function`|Opcjonalne, ale muszą być wyświetlane `Sub` lub `Function`. Deklaruje tę procedurę jako delegat `Function` procedury, która zwraca wartość.|  
+|`name`|Wymagany. Nazwa typu delegata; obowiązują standardowe konwencje nazewnictwa zmiennych.|  
+|`typeparamlist`|Opcjonalny. Lista parametrów typu dla tego delegata. Wiele parametrów typu są rozdzielone przecinkami. Opcjonalnie każdy parametr typu może być zadeklarowany jako VARIANT przy użyciu `In` i `Out` Modyfikatory ogólne. Należy ująć [listę typów](../../../visual-basic/language-reference/statements/type-list.md) w nawiasy i wprowadzić ją za pomocą słowa kluczowego `Of`.|  
+|`parameterlist`|Opcjonalny. Lista parametrów, które są przesyłane do procedury po jej wywołaniu. Należy ująć [listę parametrów](../../../visual-basic/language-reference/statements/parameter-list.md) w nawiasach.|  
+|`type`|Wymagane, jeśli określisz procedurę `Function`. Typ danych wartości zwracanej.|  
   
 ## <a name="remarks"></a>Uwagi  
- The `Delegate` statement defines the parameter and return types of a delegate class. Any procedure with matching parameters and return types can be used to create an instance of this delegate class. The procedure can then later be invoked by means of the delegate instance, by calling the delegate's `Invoke` method.  
+ Instrukcja `Delegate` definiuje parametry i zwracane typy klasy delegatów. Każda procedura z pasującymi parametrami i zwracanymi typami może służyć do tworzenia wystąpienia tej klasy delegata. Procedurę można później wywołać za pomocą wystąpienia delegata, wywołując metodę `Invoke` delegata.  
   
- Delegates can be declared at the namespace, module, class, or structure level, but not within a procedure.  
+ Delegaty mogą być zadeklarowane na poziomie przestrzeni nazw, modułu, klasy lub struktury, ale nie w ramach procedury.  
   
- Each delegate class defines a constructor that is passed the specification of an object method. An argument to a delegate constructor must be a reference to a method, or a lambda expression.  
+ Każda Klasa delegatów definiuje konstruktora, który przekazał specyfikację metody obiektu. Argument konstruktora delegata musi być odwołaniem do metody lub wyrażeniem lambda.  
   
- To specify a reference to a method, use the following syntax:  
+ Aby określić odwołanie do metody, należy użyć następującej składni:  
   
  `AddressOf` [`expression`.]`methodname`  
   
- The compile-time type of the `expression` must be the name of a class or an interface that contains a method of the specified name whose signature matches the signature of the delegate class. The `methodname` can be either a shared method or an instance method. The `methodname` is not optional, even if you create a delegate for the default method of the class.  
+ Typ czasu kompilacji `expression` musi być nazwą klasy lub interfejsem, który zawiera metodę o określonej nazwie, której sygnatura pasuje do sygnatury klasy delegata. `methodname` może być metodą udostępnioną lub metodą wystąpienia. `methodname` nie jest opcjonalna, nawet jeśli utworzysz delegata dla metody domyślnej klasy.  
   
- To specify a lambda expression, use the following syntax:  
+ Aby określić wyrażenie lambda, należy użyć następującej składni:  
   
- `Function` ([`parm` As `type`, `parm2` As `type2`, ...]) `expression`  
+ `Function` ([`parm` jako `type``parm2` jako `type2`,...]) `expression`  
   
- The signature of the function must match that of the delegate type. For more information about lambda expressions, see [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Sygnatura funkcji musi być zgodna z typem delegata. Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- For more information about delegates, see [Delegates](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
+ Aby uzyskać więcej informacji na temat delegatów, zobacz [delegats](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
   
 ## <a name="example"></a>Przykład  
- The following example uses the `Delegate` statement to declare a delegate for operating on two numbers and returning a number. The `DelegateTest` method takes an instance of a delegate of this type and uses it to operate on pairs of numbers.  
+ Poniższy przykład używa instrukcji `Delegate`, aby zadeklarować delegata na potrzeby obsługi dwóch liczb i zwracać liczbę. Metoda `DelegateTest` przyjmuje wystąpienie delegata tego typu i używa go do obsługi par liczb.  
   
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [AddressOf, operator](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Of](../../../visual-basic/language-reference/statements/of-clause.md)
+- [Z](../../../visual-basic/language-reference/statements/of-clause.md)
 - [Delegaci](../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [Instrukcje: używanie klasy ogólnej](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Kowariancja i kontrawariancja](../../programming-guide/concepts/covariance-contravariance/index.md)
-- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
-- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+- [Podczas](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Określoną](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

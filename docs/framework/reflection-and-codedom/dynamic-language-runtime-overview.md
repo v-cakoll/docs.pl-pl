@@ -1,5 +1,5 @@
 ---
-title: Dynamic Language Runtime Overview | Microsoft Docs
+title: Omówienie środowiska uruchomieniowego języka dynamicznego | Microsoft Docs
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dynamic language runtime
@@ -16,84 +16,84 @@ ms.locfileid: "74446905"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Przegląd środowiska uruchomieniowego języka dynamicznego
 
-The *dynamic language runtime* (DLR) is a runtime environment that adds a set of services for dynamic languages to the common language runtime (CLR). The DLR makes it easier to develop dynamic languages to run on the .NET Framework and to add dynamic features to statically typed languages.
+*Moduł uruchomieniowy języka dynamicznego* (DLR) to środowisko uruchomieniowe, które dodaje zestaw usług dla języków dynamicznych do środowiska uruchomieniowego języka wspólnego (CLR). DLR ułatwia opracowywanie dynamicznych języków do uruchamiania na .NET Framework i Dodawanie funkcji dynamicznych do statycznie wpisanych języków.
 
-Dynamic languages can identify the type of an object at run time, whereas in statically typed languages such as C# and Visual Basic (when you use `Option Explicit On`) you must specify object types at design time. Examples of dynamic languages are Lisp, Smalltalk, JavaScript, PHP, Ruby, Python, ColdFusion, Lua, Cobra, and Groovy.
+Języki dynamiczne mogą identyfikować typ obiektu w czasie wykonywania, podczas gdy w językach statycznych, takich jak C# i Visual Basic (gdy używasz `Option Explicit On`) należy określić typy obiektów w czasie projektowania. Przykłady języków dynamicznych to Lisp, Smalltalk, JavaScript, PHP, Ruby, Python, ColdFusion, Lua, Cobra i Groovy.
 
-Most dynamic languages provide the following advantages for developers:
+Większość języków dynamicznych zapewnia deweloperom następujące korzyści:
 
-- The ability to use a rapid feedback loop (REPL, or read-evaluate-print loop). This lets you enter several statements and immediately execute them to see the results.
+- Możliwość korzystania z szybkiej pętli do przesyłania opinii (REPL lub pętli odczytu i oceny). Pozwala to wprowadzić kilka instrukcji i od razu wykonać je, aby zobaczyć wyniki.
 
-- Support for both top-down development and more traditional bottom-up development. For example, when you use a top-down approach, you can call functions that are not yet implemented and then add underlying implementations when you need them.
+- Obsługa zarówno rozwoju z góry, jak i bardziej tradycyjnego rozwoju w dół. Na przykład w przypadku użycia podejścia w dół można wywołać funkcje, które nie zostały jeszcze zaimplementowane, a następnie dodać podstawowe implementacje, gdy będą potrzebne.
 
-- Easier refactoring and code modifications, because you do not have to change static type declarations throughout the code.
+- Łatwiejsze Refaktoryzacja i modyfikacje kodu, ponieważ nie trzeba zmieniać deklaracji typu statycznego w całym kodzie.
 
-Dynamic languages make excellent scripting languages. Customers can easily extend applications created by using dynamic languages with new commands and functionality. Dynamic languages are also frequently used for creating Web sites and test harnesses, maintaining server farms, developing various utilities, and performing data transformations.
+Języki dynamiczne sprawiają, że są to doskonałe Języki tworzenia skryptów. Klienci mogą łatwo rozbudować aplikacje utworzone przy użyciu języków dynamicznych z nowymi poleceniami i funkcjami. Języki dynamiczne są również często używane do tworzenia witryn sieci Web i testów, obsługi farm serwerów, tworzenia różnych narzędzi i wykonywania transformacji danych.
 
-The purpose of the DLR is to enable a system of dynamic languages to run on the .NET Framework and give them .NET interoperability. The DLR adds dynamic objects to C# and Visual Basic to support dynamic behavior in these languages and enable their interoperation with dynamic languages.
+Celem DLR jest umożliwienie działania systemu w językach dynamicznych na .NET Framework i umożliwienie im współdziałania z platformą .NET. DLR dodaje dynamiczne obiekty do C# i Visual Basic do obsługi zachowania dynamicznego w tych językach i umożliwia ich współdziałanie z językami dynamicznymi.
 
-The DLR also helps you create libraries that support dynamic operations. For example, if you have a library that uses XML or JavaScript Object Notation (JSON) objects, your objects can appear as dynamic objects to languages that use the DLR. This lets library users write syntactically simpler and more natural code for operating with objects and accessing object members.
+DLR ułatwia również tworzenie bibliotek, które obsługują operacje dynamiczne. Na przykład jeśli masz bibliotekę, która korzysta z obiektów XML lub JavaScript Object Notation (JSON), obiekty mogą być wyświetlane jako obiekty dynamiczne w językach, które używają DLR. Dzięki temu użytkownicy biblioteki zapisują składniowo prostsze i bardziej naturalny kod służący do pracy z obiektami i uzyskiwania dostępu do elementów członkowskich obiektu.
 
-For example, you might use the following code to increment a counter in XML in C#.
+Na przykład można użyć poniższego kodu, aby zwiększyć licznik w XML w C#.
 
 `Scriptobj.SetProperty("Count", ((int)GetProperty("Count")) + 1);`
 
-By using the DLR, you could use the following code instead for the same operation.
+Za pomocą DLR, zamiast tego można użyć poniższego kodu dla tej samej operacji.
 
 `scriptobj.Count += 1;`
 
-Like the CLR, the DLR is a part of the .NET Framework and is provided with the .NET Framework and Visual Studio installation packages. The open-source version of the DLR is also available for download on the [IronLanguages/dlr](https://github.com/IronLanguages/dlr) repo on GitHub.
+Podobnie jak w przypadku środowiska CLR, DLR jest częścią .NET Framework i są dostarczane z pakietami instalacyjnymi .NET Framework i Visual Studio. Wersja DLR typu open source jest również dostępna do pobrania w repozytorium [IronLanguages/DLR](https://github.com/IronLanguages/dlr) w witrynie GitHub.
 
 > [!NOTE]
-> The open-source version of the DLR has all the features of the DLR that is included in Visual Studio and the .NET Framework. It also provides additional support for language implementers. For more information, see the documentation on the [IronLanguages/dlr](https://github.com/IronLanguages/dlr) repo on GitHub.
+> Wersja DLR typu open source zawiera wszystkie funkcje DLR, które są zawarte w programie Visual Studio i .NET Framework. Zapewnia również dodatkowe wsparcie dla implementacji języka. Aby uzyskać więcej informacji, zobacz dokumentację repozytorium [IronLanguages/DLR](https://github.com/IronLanguages/dlr) w witrynie GitHub.
 
-Examples of languages developed by using the DLR include the following:
+Przykłady języków opracowanych przy użyciu DLR obejmują następujące elementy:
 
-- IronPython. Available as open-source software from the [GitHub](https://github.com/IronLanguages/ironpython2) Web site.
+- IronPython. Dostępne jako oprogramowanie Open Source w witrynie [GitHub](https://github.com/IronLanguages/ironpython2) w sieci Web.
 
-- IronRuby. Available as open-source software from the [IronRuby](http://ironruby.net/) website.
+- IronRuby. Dostępne jako oprogramowanie Open Source z witryny sieci Web [IronRuby](http://ironruby.net/) .
 
-## <a name="primary-dlr-advantages"></a>Primary DLR Advantages
- The DLR provides the following advantages.
+## <a name="primary-dlr-advantages"></a>Podstawowe zalety DLR
+ DLR zapewnia następujące korzyści.
 
-### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>Simplifies Porting Dynamic Languages to the .NET Framework
- The DLR allows language implementers to avoid creating lexical analyzers, parsers, semantic analyzers, code generators, and other tools that they traditionally had to create themselves. To use the DLR, a language needs to produce *expression trees*, which represent language-level code in a tree-shaped structure, runtime helper routines, and optional dynamic objects that implement the <xref:System.Dynamic.IDynamicMetaObjectProvider> interface. The DLR and the .NET Framework automate a lot of code analysis and code generation tasks. This enables language implementers to concentrate on unique language features.
+### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>Upraszcza przenoszenie języków dynamicznych do .NET Framework
+ DLR umożliwia implementacje języka, aby uniknąć tworzenia analizatorów leksykalnych, parserów, analiz semantycznych, generatorów kodu i innych narzędzi, które tradycyjnie musiały utworzyć siebie. Aby użyć DLR, język musi generować *drzewa wyrażeń*, które reprezentują kod poziomu języka w strukturze w kształcie drzewa, procedury pomocnika środowiska uruchomieniowego i opcjonalne dynamiczne obiekty, które implementują interfejs <xref:System.Dynamic.IDynamicMetaObjectProvider>. DLR i .NET Framework automatyzują wiele zadań związanych z analizą kodu i generowaniem kodu. Dzięki temu implementacje języka mogą koncentrować się na unikatowych funkcjach językowych.
 
-### <a name="enables-dynamic-features-in-statically-typed-languages"></a>Enables Dynamic Features in Statically Typed Languages
- Existing .NET Framework languages such as C# and Visual Basic can create dynamic objects and use them together with statically typed objects. For example, C# and Visual Basic can use dynamic objects for HTML, Document Object Model (DOM), and .NET reflection.
+### <a name="enables-dynamic-features-in-statically-typed-languages"></a>Włącza funkcje dynamiczne w językach, które są wpisane statycznie
+ Istniejące .NET Framework języki takie jak C# i Visual Basic mogą tworzyć obiekty dynamiczne i używać ich razem z obiektami o statycznym typie. Na przykład, C# a Visual Basic mogą używać obiektów dynamicznych do odbicia w języku HTML, Document Object Model (dom) i .NET.
 
-### <a name="provides-future-benefits-of-the-dlr-and-net-framework"></a>Provides Future Benefits of the DLR and .NET Framework
- Languages implemented by using the DLR can benefit from future DLR and .NET Framework improvements. For example, if the .NET Framework releases a new version that has an improved garbage collector or faster assembly loading time, languages implemented by using the DLR immediately get the same benefit. If the DLR adds optimizations such as better compilation, the performance also improves for all languages implemented by using the DLR.
+### <a name="provides-future-benefits-of-the-dlr-and-net-framework"></a>Oferuje przyszłe korzyści z DLR i .NET Framework
+ Języki zaimplementowane przy użyciu DLR mogą korzystać z przyszłych DLR i .NET Framework ulepszeń. Na przykład jeśli .NET Framework wersja nowej wersji, która ma ulepszony Moduł wyrzucania elementów bezużytecznych lub szybszy czas ładowania zestawu, Języki wdrożone za pomocą DLR natychmiast uzyskają te same korzyści. Jeśli DLR dodaje optymalizacje, takie jak Lepsza kompilacja, wydajność jest również lepsza dla wszystkich języków wdrożonych przy użyciu DLR.
 
-### <a name="enables-sharing-of-libraries-and-objects"></a>Enables Sharing of Libraries and Objects
- The objects and libraries implemented in one language can be used by other languages. The DLR also enables interoperation between statically typed and dynamic languages. For example, C# can declare a dynamic object that uses a library that is written in a dynamic language. At the same time, dynamic languages can use libraries from the .NET Framework.
+### <a name="enables-sharing-of-libraries-and-objects"></a>Umożliwia udostępnianie bibliotek i obiektów
+ Obiekty i biblioteki zaimplementowane w jednym języku mogą być używane przez inne języki. DLR umożliwia również współdziałanie między językami statycznymi i dynamicznymi. Na przykład C# można zadeklarować obiekt dynamiczny, który używa biblioteki, która jest zapisywana w języku dynamicznym. W tym samym czasie Języki dynamiczne mogą korzystać z bibliotek z .NET Framework.
 
-### <a name="provides-fast-dynamic-dispatch-and-invocation"></a>Provides Fast Dynamic Dispatch and Invocation
- The DLR provides fast execution of dynamic operations by supporting advanced polymorphic caching. The DLR creates rules for binding operations that use objects to the necessary runtime implementations and then caches these rules to avoid resource-exhausting binding computations during successive executions of the same code on the same types of objects.
+### <a name="provides-fast-dynamic-dispatch-and-invocation"></a>Zapewnia szybkie dynamiczne wysyłanie i wywoływanie
+ DLR zapewnia szybkie wykonywanie operacji dynamicznych dzięki obsłudze zaawansowanej pamięci podręcznej polimorficznej. DLR tworzy reguły dla operacji wiązania, które używają obiektów do niezbędnych implementacji środowiska uruchomieniowego, a następnie buforuje te reguły, aby uniknąć tworzenia powiązań między zasobami podczas kolejnych wykonywania tego samego kodu w tych samych typach obiektów.
 
-## <a name="dlr-architecture"></a>DLR Architecture
- The following illustration shows the architecture of the dynamic language runtime.
+## <a name="dlr-architecture"></a>Architektura DLR
+ Na poniższej ilustracji przedstawiono architekturę środowiska uruchomieniowego języka dynamicznego.
 
- ![Dynamic Language Runtime Architecture Overview](./media/dlr-archoverview.png "DLR_ArchOverview") DLR architecture
+ ![Omówienie architektury środowiska uruchomieniowego języka dynamicznego](./media/dlr-archoverview.png "DLR_ArchOverview") Architektura DLR
 
- The DLR adds a set of services to the CLR for better supporting dynamic languages. These services include the following:
+ DLR dodaje zestaw usług do środowiska CLR w celu lepszego obsługi języków dynamicznych. Są to następujące usługi:
 
-- Expression trees. The DLR uses expression trees to represent language semantics. For this purpose, the DLR has extended LINQ expression trees to include control flow, assignment, and other language-modeling nodes. For more information, see [Expression Trees (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) or [Expression Trees (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
+- Drzewa wyrażeń. DLR używa drzew wyrażeń do reprezentowania semantyki języka. W tym celu DLR ma rozszerzone drzewa wyrażeń LINQ, aby obejmowały przepływ sterowania, przypisanie i inne węzły modelowania języka. Aby uzyskać więcej informacji, zobacz [drzewa wyrażeńC#()](../../csharp/programming-guide/concepts/expression-trees/index.md) lub [drzewa wyrażeń (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
 
-- Call site caching. A *dynamic call site* is a place in the code where you perform an operation like `a + b` or `a.b()` on dynamic objects. The DLR caches the characteristics of `a` and `b` (usually the types of these objects) and information about the operation. If such an operation has been performed previously, the DLR retrieves all the necessary information from the cache for fast dispatch.
+- Wywołaj buforowanie lokacji. *Lokacja wywołania dynamicznego* to miejsce w kodzie, w którym wykonujesz operację, taką jak `a + b` lub `a.b()` w obiektach dynamicznych. DLR buforuje właściwości `a` i `b` (zazwyczaj typy tych obiektów) i informacje o operacji. Jeśli taka operacja została wykonana wcześniej, DLR pobiera wszystkie niezbędne informacje z pamięci podręcznej do szybkiej wysyłki.
 
-- Dynamic object interoperability. The DLR provides a set of classes and interfaces that represent dynamic objects and operations and can be used by language implementers and authors of dynamic libraries. These classes and interfaces include <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject>, and <xref:System.Dynamic.ExpandoObject>.
+- Współdziałanie obiektów dynamicznych. DLR zawiera zestaw klas i interfejsów, które reprezentują dynamiczne obiekty i operacje, które mogą być używane przez implementacje języka i autorów bibliotek dynamicznych. Te klasy i interfejsy obejmują <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject>i <xref:System.Dynamic.ExpandoObject>.
 
-The DLR uses binders in call sites to communicate not only with the .NET Framework, but with other infrastructures and services, including Silverlight and COM. Binders encapsulate a language's semantics and specify how to perform operations in a call site by using expression trees. This enables dynamic and statically typed languages that use the DLR to share libraries and gain access to all the technologies that the DLR supports.
+DLR używa programu Binders w witrynach wywołań do komunikowania się nie tylko z .NET Framework, ale z innymi infrastrukturami i usługami, w tym Silverlight i COM. Obiekty wiążące hermetyzują semantykę języka i określają sposób wykonywania operacji w witrynie wywołania przy użyciu drzew wyrażeń. Umożliwia to dynamiczne i statycznie wpisane Języki, które używają DLR do udostępniania bibliotek i uzyskiwania dostępu do wszystkich technologii obsługiwanych przez DLR.
 
-## <a name="dlr-documentation"></a>DLR Documentation
- For more information about how to use the open source version of the DLR to add dynamic behavior to a language, or about how to enable the use of a dynamic language with the .NET Framework, see the documentation on the [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) repo on GitHub.
+## <a name="dlr-documentation"></a>Dokumentacja DLR
+ Aby uzyskać więcej informacji na temat korzystania z wersji typu open source DLR w celu dodania dynamicznego zachowania do języka lub dowiedzieć się, jak włączyć używanie języka dynamicznego z .NET Framework, zapoznaj się z dokumentacją repozytorium [IronLanguages/DLR](https://github.com/IronLanguages/dlr/tree/master/Docs) w witrynie GitHub.
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
-- [Common Language Runtime](../../standard/clr.md)
-- [Expression Trees (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
-- [Expression Trees (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Walkthrough: Creating and Using Dynamic Objects](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [Środowisko uruchomieniowe języka wspólnego](../../standard/clr.md)
+- [Drzewa wyrażeń (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Drzewa wyrażeń (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [Przewodnik: Tworzenie obiektów dynamicznych i korzystanie z nich](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

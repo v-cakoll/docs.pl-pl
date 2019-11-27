@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446066"
 ---
 # <a name="isymunmanagedvariablegetendoffset-method"></a>ISymUnmanagedVariable::GetEndOffset — Metoda
-Gets the end offset of this variable within its parent. If this is a local variable within a scope, the end offset will fall within the offsets defined for the scope.  
+Pobiera przesunięcie końca tej zmiennej w elemencie nadrzędnym. Jeśli jest to zmienna lokalna w zakresie, przesunięcie końcowe będzie należeć do przesunięć zdefiniowanych dla zakresu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,13 +34,13 @@ HRESULT GetEndOffset(
   
 ## <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the end offset.  
+ określoną Wskaźnik do `ULONG32`, który odbiera przesunięcie końcowe.  
   
-## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+## <a name="return-value"></a>Wartość zwrócona  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

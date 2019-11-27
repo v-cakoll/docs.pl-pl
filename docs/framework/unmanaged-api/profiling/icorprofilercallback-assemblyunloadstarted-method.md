@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445130"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted — Metoda
-Notifies the profiler that an assembly is being unloaded.  
+Powiadamia program profilujący, że zestaw jest zwolniony.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,19 +34,19 @@ HRESULT AssemblyUnloadStarted(
   
 ## <a name="parameters"></a>Parametry  
  `assemblyId`  
- [in] Identifies the assembly that is being unloaded.  
+ podczas Identyfikuje zestaw, który jest zwalniany.  
   
 ## <a name="remarks"></a>Uwagi  
- The value of `assemblyId` is not valid for an information request after the `AssemblyUnloadStarted` method returns — this is the profiler's last chance to get information about this assembly.  
+ Wartość `assemblyId` nie jest prawidłowa dla żądania informacji po powrocie metody `AssemblyUnloadStarted` — jest to Ostatnia szansa dla profilera, aby uzyskać informacje o tym zestawie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

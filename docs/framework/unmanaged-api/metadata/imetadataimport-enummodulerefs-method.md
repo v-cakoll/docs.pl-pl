@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450035"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>IMetaDataImport::EnumModuleRefs — Metoda
-Enumerates ModuleRef tokens that represent imported modules.  
+Wylicza tokeny ModuleRef reprezentujące importowane moduły.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,32 +38,32 @@ HRESULT EnumModuleRefs (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in. out] Wskaźnik do modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
   
  `rModuleRefs`  
- [out] The array used to store the ModuleRef tokens.  
+ określoną Tablica służąca do przechowywania tokenów ModuleRef.  
   
  `cMax`  
- [in] The maximum size of the `rModuleRefs` array.  
+ podczas Maksymalny rozmiar tablicy `rModuleRefs`.  
   
  `pcModuleRefs`  
- [out] The number of ModuleRef tokens returned in `rModuleRefs`.  
+ określoną Liczba tokenów elementu ModuleRef zwróconych w `rModuleRefs`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumModuleRefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcModuleRefs` is zero.|  
+|`S_OK`|`EnumModuleRefs` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak tokenów do wyliczenia. W takim przypadku `pcModuleRefs` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -22,10 +22,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446054"
 ---
-# <a name="isymunmanagedvariablegetname-method"></a><span data-ttu-id="d2664-102">ISymUnmanagedVariable::GetName — Metoda</span><span class="sxs-lookup"><span data-stu-id="d2664-102">ISymUnmanagedVariable::GetName Method</span></span>
-<span data-ttu-id="d2664-103">Gets the name of this variable.</span><span class="sxs-lookup"><span data-stu-id="d2664-103">Gets the name of this variable.</span></span>  
+# <a name="isymunmanagedvariablegetname-method"></a><span data-ttu-id="11b99-102">ISymUnmanagedVariable::GetName — Metoda</span><span class="sxs-lookup"><span data-stu-id="11b99-102">ISymUnmanagedVariable::GetName Method</span></span>
+<span data-ttu-id="11b99-103">Pobiera nazwę tej zmiennej.</span><span class="sxs-lookup"><span data-stu-id="11b99-103">Gets the name of this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d2664-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d2664-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="11b99-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="11b99-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetName(  
@@ -35,22 +35,22 @@ HRESULT GetName(
         length_is(*pcchName)] WCHAR szName[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d2664-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d2664-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="11b99-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="11b99-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="d2664-106">[in] The length of the buffer that the `pcchName` parameter points to.</span><span class="sxs-lookup"><span data-stu-id="d2664-106">[in] The length of the buffer that the `pcchName` parameter points to.</span></span>  
+ <span data-ttu-id="11b99-106">podczas Długość buforu, na który wskazuje parametr `pcchName`.</span><span class="sxs-lookup"><span data-stu-id="11b99-106">[in] The length of the buffer that the `pcchName` parameter points to.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="d2664-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.</span><span class="sxs-lookup"><span data-stu-id="d2664-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.</span></span>  
+ <span data-ttu-id="11b99-107">określoną Wskaźnik do `ULONG32`, który odbiera rozmiar (w znakach) bufora, który musi zawierać nazwę, łącznie z zakończeniem o wartości null.</span><span class="sxs-lookup"><span data-stu-id="11b99-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.</span></span>  
   
  `szName`  
- <span data-ttu-id="d2664-108">[out] The buffer that stores the name.</span><span class="sxs-lookup"><span data-stu-id="d2664-108">[out] The buffer that stores the name.</span></span>  
+ <span data-ttu-id="11b99-108">określoną Bufor przechowujący nazwę.</span><span class="sxs-lookup"><span data-stu-id="11b99-108">[out] The buffer that stores the name.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d2664-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="d2664-109">Return Value</span></span>  
- <span data-ttu-id="d2664-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="d2664-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="11b99-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="11b99-109">Return Value</span></span>  
+ <span data-ttu-id="11b99-110">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="11b99-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d2664-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d2664-111">Requirements</span></span>  
- <span data-ttu-id="d2664-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d2664-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="11b99-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="11b99-111">Requirements</span></span>  
+ <span data-ttu-id="11b99-112">**Nagłówek:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="11b99-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2664-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d2664-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="11b99-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="11b99-113">See also</span></span>
 
-- [<span data-ttu-id="d2664-114">ISymUnmanagedVariable, interfejs</span><span class="sxs-lookup"><span data-stu-id="d2664-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="11b99-114">ISymUnmanagedVariable, interfejs</span><span class="sxs-lookup"><span data-stu-id="11b99-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

@@ -11,13 +11,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353721"
 ---
-# <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a><span data-ttu-id="799d1-102">Podczas operacji automatyzacji nie odnaleziono nazwy pliku lub nazwy klasy (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="799d1-102">File name or class name not found during Automation operation (Visual Basic)</span></span>
-<span data-ttu-id="799d1-103">The name specified for file name or class in a call to the `GetObject` function could not be found.</span><span class="sxs-lookup"><span data-stu-id="799d1-103">The name specified for file name or class in a call to the `GetObject` function could not be found.</span></span>  
+# <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a><span data-ttu-id="6f0f0-102">Podczas operacji automatyzacji nie odnaleziono nazwy pliku lub nazwy klasy (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6f0f0-102">File name or class name not found during Automation operation (Visual Basic)</span></span>
+<span data-ttu-id="6f0f0-103">Nie można odnaleźć nazwy określonej dla nazwy pliku lub klasy w wywołaniu funkcji `GetObject`.</span><span class="sxs-lookup"><span data-stu-id="6f0f0-103">The name specified for file name or class in a call to the `GetObject` function could not be found.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="799d1-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="799d1-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6f0f0-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="6f0f0-104">To correct this error</span></span>  
   
-- <span data-ttu-id="799d1-105">Check the names and try again.</span><span class="sxs-lookup"><span data-stu-id="799d1-105">Check the names and try again.</span></span> <span data-ttu-id="799d1-106">Make sure the name used for the `class` parameter matches that registered with the system.</span><span class="sxs-lookup"><span data-stu-id="799d1-106">Make sure the name used for the `class` parameter matches that registered with the system.</span></span>  
+- <span data-ttu-id="6f0f0-105">Sprawdź nazwy i spróbuj ponownie.</span><span class="sxs-lookup"><span data-stu-id="6f0f0-105">Check the names and try again.</span></span> <span data-ttu-id="6f0f0-106">Upewnij się, że nazwa użyta dla parametru `class` jest zgodna z zarejestrowanego w systemie.</span><span class="sxs-lookup"><span data-stu-id="6f0f0-106">Make sure the name used for the `class` parameter matches that registered with the system.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="799d1-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="799d1-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6f0f0-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6f0f0-107">See also</span></span>
 
-- [<span data-ttu-id="799d1-108">Typy błędów</span><span class="sxs-lookup"><span data-stu-id="799d1-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="6f0f0-108">Typy błędów</span><span class="sxs-lookup"><span data-stu-id="6f0f0-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)

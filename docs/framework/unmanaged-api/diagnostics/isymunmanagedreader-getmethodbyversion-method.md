@@ -22,10 +22,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426749"
 ---
-# <a name="isymunmanagedreadergetmethodbyversion-method"></a><span data-ttu-id="2fb7f-102">ISymUnmanagedReader::GetMethodByVersion — Metoda</span><span class="sxs-lookup"><span data-stu-id="2fb7f-102">ISymUnmanagedReader::GetMethodByVersion Method</span></span>
-<span data-ttu-id="2fb7f-103">Gets a symbol reader method, given a method token and an edit-and-copy version number.</span><span class="sxs-lookup"><span data-stu-id="2fb7f-103">Gets a symbol reader method, given a method token and an edit-and-copy version number.</span></span> <span data-ttu-id="2fb7f-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-copy operation.</span><span class="sxs-lookup"><span data-stu-id="2fb7f-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-copy operation.</span></span>  
+# <a name="isymunmanagedreadergetmethodbyversion-method"></a><span data-ttu-id="5d354-102">ISymUnmanagedReader::GetMethodByVersion — Metoda</span><span class="sxs-lookup"><span data-stu-id="5d354-102">ISymUnmanagedReader::GetMethodByVersion Method</span></span>
+<span data-ttu-id="5d354-103">Pobiera metodę czytnika symboli, uwzględniając token metody i numer wersji do edycji i kopiowania.</span><span class="sxs-lookup"><span data-stu-id="5d354-103">Gets a symbol reader method, given a method token and an edit-and-copy version number.</span></span> <span data-ttu-id="5d354-104">Numery wersji zaczynają się od 1 i zwiększają się za każdym razem, gdy metoda zostanie zmieniona w wyniku operacji edycji i kopiowania.</span><span class="sxs-lookup"><span data-stu-id="5d354-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-copy operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2fb7f-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="2fb7f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d354-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="5d354-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMethodByVersion (  
@@ -34,22 +34,22 @@ HRESULT GetMethodByVersion (
     [out, retval] ISymUnmanagedMethod** pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2fb7f-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="2fb7f-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5d354-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="5d354-106">Parameters</span></span>  
  `token`  
- <span data-ttu-id="2fb7f-107">[in] The method token.</span><span class="sxs-lookup"><span data-stu-id="2fb7f-107">[in] The method token.</span></span>  
+ <span data-ttu-id="5d354-107">podczas Token metody.</span><span class="sxs-lookup"><span data-stu-id="5d354-107">[in] The method token.</span></span>  
   
  `version`  
- <span data-ttu-id="2fb7f-108">[in] The method version.</span><span class="sxs-lookup"><span data-stu-id="2fb7f-108">[in] The method version.</span></span>  
+ <span data-ttu-id="5d354-108">podczas Wersja metody.</span><span class="sxs-lookup"><span data-stu-id="5d354-108">[in] The method version.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="2fb7f-109">[out] A pointer to the returned interface.</span><span class="sxs-lookup"><span data-stu-id="2fb7f-109">[out] A pointer to the returned interface.</span></span>  
+ <span data-ttu-id="5d354-109">określoną Wskaźnik do zwracanego interfejsu.</span><span class="sxs-lookup"><span data-stu-id="5d354-109">[out] A pointer to the returned interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2fb7f-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="2fb7f-110">Return Value</span></span>  
- <span data-ttu-id="2fb7f-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="2fb7f-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5d354-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="5d354-110">Return Value</span></span>  
+ <span data-ttu-id="5d354-111">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="5d354-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2fb7f-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2fb7f-112">Requirements</span></span>  
- <span data-ttu-id="2fb7f-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2fb7f-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5d354-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5d354-112">Requirements</span></span>  
+ <span data-ttu-id="5d354-113">**Nagłówek:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="5d354-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2fb7f-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2fb7f-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d354-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5d354-114">See also</span></span>
 
-- [<span data-ttu-id="2fb7f-115">ISymUnmanagedReader, interfejs</span><span class="sxs-lookup"><span data-stu-id="2fb7f-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="5d354-115">ISymUnmanagedReader, interfejs</span><span class="sxs-lookup"><span data-stu-id="5d354-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

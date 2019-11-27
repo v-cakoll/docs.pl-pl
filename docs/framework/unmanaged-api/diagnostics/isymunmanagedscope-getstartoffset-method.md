@@ -22,27 +22,27 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446275"
 ---
-# <a name="isymunmanagedscopegetstartoffset-method"></a><span data-ttu-id="a0f9a-102">ISymUnmanagedScope::GetStartOffset — Metoda</span><span class="sxs-lookup"><span data-stu-id="a0f9a-102">ISymUnmanagedScope::GetStartOffset Method</span></span>
-<span data-ttu-id="a0f9a-103">Gets the start offset for this scope.</span><span class="sxs-lookup"><span data-stu-id="a0f9a-103">Gets the start offset for this scope.</span></span>  
+# <a name="isymunmanagedscopegetstartoffset-method"></a><span data-ttu-id="46013-102">ISymUnmanagedScope::GetStartOffset — Metoda</span><span class="sxs-lookup"><span data-stu-id="46013-102">ISymUnmanagedScope::GetStartOffset Method</span></span>
+<span data-ttu-id="46013-103">Pobiera przesunięcie początku dla tego zakresu.</span><span class="sxs-lookup"><span data-stu-id="46013-103">Gets the start offset for this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a0f9a-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="a0f9a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="46013-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="46013-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStartOffset(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a0f9a-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="a0f9a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="46013-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="46013-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="a0f9a-106">[out] A pointer to a `ULONG32` that contains the starting offset.</span><span class="sxs-lookup"><span data-stu-id="a0f9a-106">[out] A pointer to a `ULONG32` that contains the starting offset.</span></span>  
+ <span data-ttu-id="46013-106">określoną Wskaźnik do `ULONG32`, który zawiera przesunięcie początkowe.</span><span class="sxs-lookup"><span data-stu-id="46013-106">[out] A pointer to a `ULONG32` that contains the starting offset.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a0f9a-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="a0f9a-107">Return Value</span></span>  
- <span data-ttu-id="a0f9a-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="a0f9a-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="46013-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="46013-107">Return Value</span></span>  
+ <span data-ttu-id="46013-108">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="46013-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a0f9a-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a0f9a-109">Requirements</span></span>  
- <span data-ttu-id="a0f9a-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a0f9a-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="46013-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="46013-109">Requirements</span></span>  
+ <span data-ttu-id="46013-110">**Nagłówek:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="46013-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0f9a-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a0f9a-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="46013-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="46013-111">See also</span></span>
 
-- [<span data-ttu-id="a0f9a-112">ISymUnmanagedScope, interfejs</span><span class="sxs-lookup"><span data-stu-id="a0f9a-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [<span data-ttu-id="a0f9a-113">GetEndOffset, metoda</span><span class="sxs-lookup"><span data-stu-id="a0f9a-113">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getendoffset-method.md)
+- [<span data-ttu-id="46013-112">ISymUnmanagedScope, interfejs</span><span class="sxs-lookup"><span data-stu-id="46013-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="46013-113">GetEndOffset, metoda</span><span class="sxs-lookup"><span data-stu-id="46013-113">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getendoffset-method.md)

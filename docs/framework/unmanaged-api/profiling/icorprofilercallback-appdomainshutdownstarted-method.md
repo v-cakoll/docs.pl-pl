@@ -22,32 +22,32 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445180"
 ---
-# <a name="icorprofilercallbackappdomainshutdownstarted-method"></a><span data-ttu-id="59067-102">ICorProfilerCallback::AppDomainShutdownStarted — Metoda</span><span class="sxs-lookup"><span data-stu-id="59067-102">ICorProfilerCallback::AppDomainShutdownStarted Method</span></span>
-<span data-ttu-id="59067-103">Notifies the profiler that an application domain is being unloaded from a process.</span><span class="sxs-lookup"><span data-stu-id="59067-103">Notifies the profiler that an application domain is being unloaded from a process.</span></span>  
+# <a name="icorprofilercallbackappdomainshutdownstarted-method"></a><span data-ttu-id="1dbbc-102">ICorProfilerCallback::AppDomainShutdownStarted — Metoda</span><span class="sxs-lookup"><span data-stu-id="1dbbc-102">ICorProfilerCallback::AppDomainShutdownStarted Method</span></span>
+<span data-ttu-id="1dbbc-103">Powiadamia profiler o tym, że domena aplikacji jest zwalniana z procesu.</span><span class="sxs-lookup"><span data-stu-id="1dbbc-103">Notifies the profiler that an application domain is being unloaded from a process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="59067-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="59067-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1dbbc-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="1dbbc-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT AppDomainShutdownStarted(  
     [in] AppDomainID appDomainId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="59067-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="59067-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1dbbc-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="1dbbc-105">Parameters</span></span>  
  `appDomainId`  
- <span data-ttu-id="59067-106">[in] Identifies the domain in which the application's assemblies are stored.</span><span class="sxs-lookup"><span data-stu-id="59067-106">[in] Identifies the domain in which the application's assemblies are stored.</span></span>  
+ <span data-ttu-id="1dbbc-106">podczas Identyfikuje domenę, w której są przechowywane zestawy aplikacji.</span><span class="sxs-lookup"><span data-stu-id="1dbbc-106">[in] Identifies the domain in which the application's assemblies are stored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="59067-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="59067-107">Remarks</span></span>  
- <span data-ttu-id="59067-108">The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.</span><span class="sxs-lookup"><span data-stu-id="59067-108">The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1dbbc-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="1dbbc-107">Remarks</span></span>  
+ <span data-ttu-id="1dbbc-108">Wartość `appDomainId` nie jest prawidłowa dla żadnych żądań informacji po powrocie metody `AppDomainShutdownStarted` — jest to Ostatnia szansa dla profilera, aby uzyskać informacje o tej domenie aplikacji.</span><span class="sxs-lookup"><span data-stu-id="1dbbc-108">The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="59067-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="59067-109">Requirements</span></span>  
- <span data-ttu-id="59067-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="59067-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1dbbc-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1dbbc-109">Requirements</span></span>  
+ <span data-ttu-id="1dbbc-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1dbbc-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="59067-111">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="59067-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="1dbbc-111">**Nagłówek:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="1dbbc-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="59067-112">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="59067-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1dbbc-112">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="1dbbc-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="59067-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="59067-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1dbbc-113">**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1dbbc-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59067-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="59067-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1dbbc-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1dbbc-114">See also</span></span>
 
-- [<span data-ttu-id="59067-115">ICorProfilerCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="59067-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="1dbbc-115">ICorProfilerCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="1dbbc-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

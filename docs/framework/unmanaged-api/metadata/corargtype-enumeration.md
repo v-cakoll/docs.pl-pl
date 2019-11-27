@@ -21,10 +21,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444364"
 ---
-# <a name="corargtype-enumeration"></a><span data-ttu-id="b047f-102">CorArgType — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="b047f-102">CorArgType Enumeration</span></span>
-<span data-ttu-id="b047f-103">Contains values that describe the native type of a runtime handle.</span><span class="sxs-lookup"><span data-stu-id="b047f-103">Contains values that describe the native type of a runtime handle.</span></span>  
+# <a name="corargtype-enumeration"></a><span data-ttu-id="edae5-102">CorArgType — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="edae5-102">CorArgType Enumeration</span></span>
+<span data-ttu-id="edae5-103">Zawiera wartości opisujące typ natywny dojścia środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="edae5-103">Contains values that describe the native type of a runtime handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b047f-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b047f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="edae5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="edae5-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorArgType {  
@@ -44,13 +44,13 @@ typedef enum CorArgType {
 } CorArgType;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="b047f-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b047f-105">Requirements</span></span>  
- <span data-ttu-id="b047f-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b047f-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="edae5-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="edae5-105">Requirements</span></span>  
+ <span data-ttu-id="edae5-106">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="edae5-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b047f-107">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="b047f-107">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="edae5-107">**Nagłówek:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="edae5-107">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="b047f-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b047f-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="edae5-108">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="edae5-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b047f-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b047f-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="edae5-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="edae5-109">See also</span></span>
 
-- [<span data-ttu-id="b047f-110">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="b047f-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="edae5-110">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="edae5-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

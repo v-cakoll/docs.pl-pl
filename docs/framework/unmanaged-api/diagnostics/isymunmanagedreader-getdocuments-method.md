@@ -22,10 +22,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448327"
 ---
-# <a name="isymunmanagedreadergetdocuments-method"></a><span data-ttu-id="54bbb-102">ISymUnmanagedReader::GetDocuments — Metoda</span><span class="sxs-lookup"><span data-stu-id="54bbb-102">ISymUnmanagedReader::GetDocuments Method</span></span>
-<span data-ttu-id="54bbb-103">Returns an array of all the documents defined in the symbol store.</span><span class="sxs-lookup"><span data-stu-id="54bbb-103">Returns an array of all the documents defined in the symbol store.</span></span>  
+# <a name="isymunmanagedreadergetdocuments-method"></a><span data-ttu-id="c455a-102">ISymUnmanagedReader::GetDocuments — Metoda</span><span class="sxs-lookup"><span data-stu-id="c455a-102">ISymUnmanagedReader::GetDocuments Method</span></span>
+<span data-ttu-id="c455a-103">Zwraca tablicę wszystkich dokumentów zdefiniowanych w magazynie symboli.</span><span class="sxs-lookup"><span data-stu-id="c455a-103">Returns an array of all the documents defined in the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54bbb-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="54bbb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c455a-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c455a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDocuments (  
@@ -35,22 +35,22 @@ HRESULT GetDocuments (
         length_is (*pcDocs)] ISymUnmanagedDocument *pDocs[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="54bbb-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="54bbb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c455a-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="c455a-105">Parameters</span></span>  
  `cDocs`  
- <span data-ttu-id="54bbb-106">[in] The size of the `pDocs` array.</span><span class="sxs-lookup"><span data-stu-id="54bbb-106">[in] The size of the `pDocs` array.</span></span>  
+ <span data-ttu-id="c455a-106">podczas Rozmiar tablicy `pDocs`.</span><span class="sxs-lookup"><span data-stu-id="c455a-106">[in] The size of the `pDocs` array.</span></span>  
   
  `pcDocs`  
- <span data-ttu-id="54bbb-107">[out] A pointer to a variable that receives the array length.</span><span class="sxs-lookup"><span data-stu-id="54bbb-107">[out] A pointer to a variable that receives the array length.</span></span>  
+ <span data-ttu-id="c455a-107">określoną Wskaźnik do zmiennej, która otrzymuje długość tablicy.</span><span class="sxs-lookup"><span data-stu-id="c455a-107">[out] A pointer to a variable that receives the array length.</span></span>  
   
  `pDocs`  
- <span data-ttu-id="54bbb-108">[out] A pointer to a variable that receives the document array.</span><span class="sxs-lookup"><span data-stu-id="54bbb-108">[out] A pointer to a variable that receives the document array.</span></span>  
+ <span data-ttu-id="c455a-108">określoną Wskaźnik do zmiennej, która otrzymuje tablicę dokumentu.</span><span class="sxs-lookup"><span data-stu-id="c455a-108">[out] A pointer to a variable that receives the document array.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="54bbb-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="54bbb-109">Return Value</span></span>  
- <span data-ttu-id="54bbb-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="54bbb-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c455a-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="c455a-109">Return Value</span></span>  
+ <span data-ttu-id="c455a-110">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="c455a-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="54bbb-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="54bbb-111">Requirements</span></span>  
- <span data-ttu-id="54bbb-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="54bbb-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c455a-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c455a-111">Requirements</span></span>  
+ <span data-ttu-id="c455a-112">**Nagłówek:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="c455a-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54bbb-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="54bbb-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c455a-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c455a-113">See also</span></span>
 
-- [<span data-ttu-id="54bbb-114">ISymUnmanagedReader, interfejs</span><span class="sxs-lookup"><span data-stu-id="54bbb-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="c455a-114">ISymUnmanagedReader, interfejs</span><span class="sxs-lookup"><span data-stu-id="c455a-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

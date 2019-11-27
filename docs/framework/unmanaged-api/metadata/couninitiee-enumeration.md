@@ -21,10 +21,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436437"
 ---
-# <a name="couninitiee-enumeration"></a><span data-ttu-id="625d0-102">COUNINITIEE — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="625d0-102">COUNINITIEE Enumeration</span></span>
-<span data-ttu-id="625d0-103">Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.</span><span class="sxs-lookup"><span data-stu-id="625d0-103">Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.</span></span>  
+# <a name="couninitiee-enumeration"></a><span data-ttu-id="05ae1-102">COUNINITIEE — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="05ae1-102">COUNINITIEE Enumeration</span></span>
+<span data-ttu-id="05ae1-103">Określa stałe używane przez [CoUninitializeEE —](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) podczas inicjowania środowiska uruchomieniowego języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="05ae1-103">Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="625d0-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="625d0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="05ae1-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="05ae1-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum tagCOUNINITEE  
@@ -34,22 +34,22 @@ typedef enum tagCOUNINITEE
 } COUNINITIEE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="625d0-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="625d0-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="05ae1-105">Members</span><span class="sxs-lookup"><span data-stu-id="05ae1-105">Members</span></span>  
   
-|<span data-ttu-id="625d0-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="625d0-106">Member</span></span>|<span data-ttu-id="625d0-107">Opis</span><span class="sxs-lookup"><span data-stu-id="625d0-107">Description</span></span>|  
+|<span data-ttu-id="05ae1-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="05ae1-106">Member</span></span>|<span data-ttu-id="05ae1-107">Opis</span><span class="sxs-lookup"><span data-stu-id="05ae1-107">Description</span></span>|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|<span data-ttu-id="625d0-108">Indicates default uninitialization mode.</span><span class="sxs-lookup"><span data-stu-id="625d0-108">Indicates default uninitialization mode.</span></span>|  
-|`COUNINITEE_DLL`|<span data-ttu-id="625d0-109">Indicates uninitialization mode for unloading an assembly.</span><span class="sxs-lookup"><span data-stu-id="625d0-109">Indicates uninitialization mode for unloading an assembly.</span></span>|  
+|`COUNINITEE_DEFAULT`|<span data-ttu-id="05ae1-108">Wskazuje domyślny tryb uninicjującym.</span><span class="sxs-lookup"><span data-stu-id="05ae1-108">Indicates default uninitialization mode.</span></span>|  
+|`COUNINITEE_DLL`|<span data-ttu-id="05ae1-109">Wskazuje tryb odinicjowania w przypadku zwalniania zestawu.</span><span class="sxs-lookup"><span data-stu-id="05ae1-109">Indicates uninitialization mode for unloading an assembly.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="625d0-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="625d0-110">Requirements</span></span>  
- <span data-ttu-id="625d0-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="625d0-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="05ae1-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="05ae1-110">Requirements</span></span>  
+ <span data-ttu-id="05ae1-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05ae1-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="625d0-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="625d0-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="05ae1-112">**Nagłówek:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="05ae1-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="625d0-113">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="625d0-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="05ae1-113">**Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="05ae1-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="625d0-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="625d0-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="05ae1-114">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05ae1-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="625d0-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="625d0-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="05ae1-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="05ae1-115">See also</span></span>
 
-- [<span data-ttu-id="625d0-116">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="625d0-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="05ae1-116">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="05ae1-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

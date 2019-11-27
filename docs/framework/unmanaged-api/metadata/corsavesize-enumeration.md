@@ -21,10 +21,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450100"
 ---
-# <a name="corsavesize-enumeration"></a><span data-ttu-id="27e16-102">CorSaveSize — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="27e16-102">CorSaveSize Enumeration</span></span>
-<span data-ttu-id="27e16-103">Contains values indicating the level of precision required when querying for the size of a save operation.</span><span class="sxs-lookup"><span data-stu-id="27e16-103">Contains values indicating the level of precision required when querying for the size of a save operation.</span></span>  
+# <a name="corsavesize-enumeration"></a><span data-ttu-id="d51f9-102">CorSaveSize — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="d51f9-102">CorSaveSize Enumeration</span></span>
+<span data-ttu-id="d51f9-103">Zawiera wartości wskazujące poziom dokładności wymagany podczas wykonywania zapytania o rozmiar operacji zapisywania.</span><span class="sxs-lookup"><span data-stu-id="d51f9-103">Contains values indicating the level of precision required when querying for the size of a save operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="27e16-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="27e16-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d51f9-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d51f9-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorSaveSize {  
@@ -34,23 +34,23 @@ typedef enum CorSaveSize {
 } CorSaveSize;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="27e16-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="27e16-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="d51f9-105">Members</span><span class="sxs-lookup"><span data-stu-id="d51f9-105">Members</span></span>  
   
-|<span data-ttu-id="27e16-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="27e16-106">Member</span></span>|<span data-ttu-id="27e16-107">Opis</span><span class="sxs-lookup"><span data-stu-id="27e16-107">Description</span></span>|  
+|<span data-ttu-id="d51f9-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="d51f9-106">Member</span></span>|<span data-ttu-id="d51f9-107">Opis</span><span class="sxs-lookup"><span data-stu-id="d51f9-107">Description</span></span>|  
 |------------|-----------------|  
-|`cssAccurate`|<span data-ttu-id="27e16-108">Specifies that the return value should be exact.</span><span class="sxs-lookup"><span data-stu-id="27e16-108">Specifies that the return value should be exact.</span></span>|  
-|`cssQuick`|<span data-ttu-id="27e16-109">Specifies that the return value should be estimated.</span><span class="sxs-lookup"><span data-stu-id="27e16-109">Specifies that the return value should be estimated.</span></span>|  
-|`cssDiscardTransientCAs`|<span data-ttu-id="27e16-110">Specifies that discardable types should be removed.</span><span class="sxs-lookup"><span data-stu-id="27e16-110">Specifies that discardable types should be removed.</span></span>|  
+|`cssAccurate`|<span data-ttu-id="d51f9-108">Określa, że wartość zwracana powinna być dokładna.</span><span class="sxs-lookup"><span data-stu-id="d51f9-108">Specifies that the return value should be exact.</span></span>|  
+|`cssQuick`|<span data-ttu-id="d51f9-109">Określa, że należy oszacować wartość zwracaną.</span><span class="sxs-lookup"><span data-stu-id="d51f9-109">Specifies that the return value should be estimated.</span></span>|  
+|`cssDiscardTransientCAs`|<span data-ttu-id="d51f9-110">Określa, że typy, które mają być odrzucane, powinny być usuwane.</span><span class="sxs-lookup"><span data-stu-id="d51f9-110">Specifies that discardable types should be removed.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="27e16-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="27e16-111">Requirements</span></span>  
- <span data-ttu-id="27e16-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="27e16-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d51f9-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d51f9-111">Requirements</span></span>  
+ <span data-ttu-id="d51f9-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d51f9-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="27e16-113">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="27e16-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="d51f9-113">**Nagłówek:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="d51f9-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="27e16-114">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="27e16-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d51f9-114">**Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="d51f9-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="27e16-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="27e16-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d51f9-115">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d51f9-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="27e16-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="27e16-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d51f9-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d51f9-116">See also</span></span>
 
-- [<span data-ttu-id="27e16-117">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="27e16-117">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="d51f9-117">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="d51f9-117">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

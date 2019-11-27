@@ -11,21 +11,21 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347181"
 ---
-# <a name="mycomputermouse-object"></a><span data-ttu-id="7cb70-102">My.Computer.Mouse — Obiekt</span><span class="sxs-lookup"><span data-stu-id="7cb70-102">My.Computer.Mouse Object</span></span>
-<span data-ttu-id="7cb70-103">Provides properties for getting information about the format and configuration of the mouse installed on the local computer.</span><span class="sxs-lookup"><span data-stu-id="7cb70-103">Provides properties for getting information about the format and configuration of the mouse installed on the local computer.</span></span>  
+# <a name="mycomputermouse-object"></a><span data-ttu-id="5fe01-102">My.Computer.Mouse — Obiekt</span><span class="sxs-lookup"><span data-stu-id="5fe01-102">My.Computer.Mouse Object</span></span>
+<span data-ttu-id="5fe01-103">Zawiera właściwości służące do uzyskiwania informacji o formacie i konfiguracji myszy zainstalowanej na komputerze lokalnym.</span><span class="sxs-lookup"><span data-stu-id="5fe01-103">Provides properties for getting information about the format and configuration of the mouse installed on the local computer.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7cb70-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="7cb70-104">Remarks</span></span>  
- <span data-ttu-id="7cb70-105">For information about the methods and properties of the `My.Computer.Mouse` object, see <xref:Microsoft.VisualBasic.Devices.Mouse>.</span><span class="sxs-lookup"><span data-stu-id="7cb70-105">For information about the methods and properties of the `My.Computer.Mouse` object, see <xref:Microsoft.VisualBasic.Devices.Mouse>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5fe01-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="5fe01-104">Remarks</span></span>  
+ <span data-ttu-id="5fe01-105">Aby uzyskać informacje o metodach i właściwościach obiektu `My.Computer.Mouse`, zobacz <xref:Microsoft.VisualBasic.Devices.Mouse>.</span><span class="sxs-lookup"><span data-stu-id="5fe01-105">For information about the methods and properties of the `My.Computer.Mouse` object, see <xref:Microsoft.VisualBasic.Devices.Mouse>.</span></span>  
   
- <span data-ttu-id="7cb70-106">For more information, see [Accessing the Mouse](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).</span><span class="sxs-lookup"><span data-stu-id="7cb70-106">For more information, see [Accessing the Mouse](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).</span></span>  
+ <span data-ttu-id="5fe01-106">Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do myszy](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).</span><span class="sxs-lookup"><span data-stu-id="5fe01-106">For more information, see [Accessing the Mouse](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7cb70-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7cb70-107">Requirements</span></span>  
- <span data-ttu-id="7cb70-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="7cb70-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="5fe01-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5fe01-107">Requirements</span></span>  
+ <span data-ttu-id="5fe01-108">**Przestrzeń nazw:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="5fe01-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- <span data-ttu-id="7cb70-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Mouse></span><span class="sxs-lookup"><span data-stu-id="7cb70-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Mouse></span></span>  
+ <span data-ttu-id="5fe01-109">**Klasa:** <xref:Microsoft.VisualBasic.Devices.Mouse></span><span class="sxs-lookup"><span data-stu-id="5fe01-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Mouse></span></span>  
   
- <span data-ttu-id="7cb70-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="7cb70-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="5fe01-110">**Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)</span><span class="sxs-lookup"><span data-stu-id="5fe01-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7cb70-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7cb70-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5fe01-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5fe01-111">See also</span></span>
 
-- [<span data-ttu-id="7cb70-112">My.Computer, obiekt</span><span class="sxs-lookup"><span data-stu-id="7cb70-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [<span data-ttu-id="5fe01-112">My.Computer, obiekt</span><span class="sxs-lookup"><span data-stu-id="5fe01-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

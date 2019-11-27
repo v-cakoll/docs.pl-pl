@@ -21,10 +21,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442826"
 ---
-# <a name="cormethodsemanticsattr-enumeration"></a><span data-ttu-id="06ae9-102">CorMethodSemanticsAttr — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="06ae9-102">CorMethodSemanticsAttr Enumeration</span></span>
-<span data-ttu-id="06ae9-103">Contains values that describe the relationship between a method and an associated property or event.</span><span class="sxs-lookup"><span data-stu-id="06ae9-103">Contains values that describe the relationship between a method and an associated property or event.</span></span>  
+# <a name="cormethodsemanticsattr-enumeration"></a><span data-ttu-id="0d375-102">CorMethodSemanticsAttr — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="0d375-102">CorMethodSemanticsAttr Enumeration</span></span>
+<span data-ttu-id="0d375-103">Zawiera wartości opisujące relacje między metodą a skojarzoną właściwością lub zdarzeniem.</span><span class="sxs-lookup"><span data-stu-id="0d375-103">Contains values that describe the relationship between a method and an associated property or event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="06ae9-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="06ae9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0d375-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0d375-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorMethodSemanticsAttr {  
@@ -39,24 +39,24 @@ typedef enum CorMethodSemanticsAttr {
 } CorMethodSemanticsAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="06ae9-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="06ae9-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0d375-105">Members</span><span class="sxs-lookup"><span data-stu-id="0d375-105">Members</span></span>  
   
-|<span data-ttu-id="06ae9-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="06ae9-106">Member</span></span>|<span data-ttu-id="06ae9-107">Opis</span><span class="sxs-lookup"><span data-stu-id="06ae9-107">Description</span></span>|  
+|<span data-ttu-id="0d375-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="0d375-106">Member</span></span>|<span data-ttu-id="0d375-107">Opis</span><span class="sxs-lookup"><span data-stu-id="0d375-107">Description</span></span>|  
 |------------|-----------------|  
-|`msSetter`|<span data-ttu-id="06ae9-108">Specifies that the method is a `set` accessor for a property.</span><span class="sxs-lookup"><span data-stu-id="06ae9-108">Specifies that the method is a `set` accessor for a property.</span></span>|  
-|`msGetter`|<span data-ttu-id="06ae9-109">Specifies that the method is a `get` accessor for a property.</span><span class="sxs-lookup"><span data-stu-id="06ae9-109">Specifies that the method is a `get` accessor for a property.</span></span>|  
-|`msOther`|<span data-ttu-id="06ae9-110">Specifies that the method has a relationship to a property or an event other than those defined here.</span><span class="sxs-lookup"><span data-stu-id="06ae9-110">Specifies that the method has a relationship to a property or an event other than those defined here.</span></span>|  
-|`msAddOn`|<span data-ttu-id="06ae9-111">Specifies that the method adds handler methods for an event.</span><span class="sxs-lookup"><span data-stu-id="06ae9-111">Specifies that the method adds handler methods for an event.</span></span>|  
-|`msRemoveOn`|<span data-ttu-id="06ae9-112">Specifies that the method removes handler methods for an event.</span><span class="sxs-lookup"><span data-stu-id="06ae9-112">Specifies that the method removes handler methods for an event.</span></span>|  
-|`msFire`|<span data-ttu-id="06ae9-113">Specifies that the method raises an event.</span><span class="sxs-lookup"><span data-stu-id="06ae9-113">Specifies that the method raises an event.</span></span>|  
+|`msSetter`|<span data-ttu-id="0d375-108">Określa, że metoda jest metodą dostępu `set` dla właściwości.</span><span class="sxs-lookup"><span data-stu-id="0d375-108">Specifies that the method is a `set` accessor for a property.</span></span>|  
+|`msGetter`|<span data-ttu-id="0d375-109">Określa, że metoda jest metodą dostępu `get` dla właściwości.</span><span class="sxs-lookup"><span data-stu-id="0d375-109">Specifies that the method is a `get` accessor for a property.</span></span>|  
+|`msOther`|<span data-ttu-id="0d375-110">Określa, że metoda ma relację z właściwością lub zdarzeniem innym niż zdefiniowane w tym miejscu.</span><span class="sxs-lookup"><span data-stu-id="0d375-110">Specifies that the method has a relationship to a property or an event other than those defined here.</span></span>|  
+|`msAddOn`|<span data-ttu-id="0d375-111">Określa, że Metoda dodaje metody obsługi dla zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="0d375-111">Specifies that the method adds handler methods for an event.</span></span>|  
+|`msRemoveOn`|<span data-ttu-id="0d375-112">Określa, że metoda usuwa metody obsługi dla zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="0d375-112">Specifies that the method removes handler methods for an event.</span></span>|  
+|`msFire`|<span data-ttu-id="0d375-113">Określa, że metoda wywołuje zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="0d375-113">Specifies that the method raises an event.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="06ae9-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="06ae9-114">Requirements</span></span>  
- <span data-ttu-id="06ae9-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="06ae9-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0d375-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0d375-114">Requirements</span></span>  
+ <span data-ttu-id="0d375-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0d375-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="06ae9-116">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="06ae9-116">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="0d375-116">**Nagłówek:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="0d375-116">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="06ae9-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="06ae9-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0d375-117">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0d375-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="06ae9-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="06ae9-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d375-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0d375-118">See also</span></span>
 
-- [<span data-ttu-id="06ae9-119">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="06ae9-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="0d375-119">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="0d375-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

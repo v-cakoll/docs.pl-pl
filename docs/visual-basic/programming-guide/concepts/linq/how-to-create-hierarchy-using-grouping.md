@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create Hierarchy Using Grouping'
+title: 'Instrukcje: Tworzenie hierarchii przy użyciu grupowania'
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
 ms.openlocfilehash: 3fea3e008e0bb18ae92f8883d08be4f27929b9fd
@@ -9,13 +9,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341593"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a><span data-ttu-id="7f214-102">How to: Create Hierarchy Using Grouping (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7f214-102">How to: Create Hierarchy Using Grouping (Visual Basic)</span></span>
-<span data-ttu-id="7f214-103">This example shows how to group data, and then generate XML based on the grouping.</span><span class="sxs-lookup"><span data-stu-id="7f214-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
+# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a><span data-ttu-id="480a6-102">Instrukcje: Tworzenie hierarchii przy użyciu grupowania (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="480a6-102">How to: Create Hierarchy Using Grouping (Visual Basic)</span></span>
+<span data-ttu-id="480a6-103">Ten przykład pokazuje, jak grupować dane, a następnie generować XML na podstawie grupowania.</span><span class="sxs-lookup"><span data-stu-id="480a6-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7f214-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="7f214-104">Example</span></span>  
- <span data-ttu-id="7f214-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span><span class="sxs-lookup"><span data-stu-id="7f214-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
+## <a name="example"></a><span data-ttu-id="480a6-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="480a6-104">Example</span></span>  
+ <span data-ttu-id="480a6-105">Ten przykład najpierw grupuje dane według kategorii, a następnie generuje nowy plik XML, w którym hierarchia XML odzwierciedla grupowanie.</span><span class="sxs-lookup"><span data-stu-id="480a6-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
   
- <span data-ttu-id="7f214-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="7f214-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="480a6-106">Ten przykład używa następującego dokumentu XML: [przykładowy plik XML: dane liczbowe (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="480a6-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim doc As XElement = XElement.Load("Data.xml")  
@@ -40,7 +40,7 @@ Dim newData As XElement = _
 Console.WriteLine(newData)  
 ```  
   
- <span data-ttu-id="7f214-107">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="7f214-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="480a6-107">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="480a6-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -79,6 +79,6 @@ Console.WriteLine(newData)
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7f214-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7f214-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="480a6-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="480a6-108">See also</span></span>
 
-- [<span data-ttu-id="7f214-109">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7f214-109">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [<span data-ttu-id="480a6-109">Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="480a6-109">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

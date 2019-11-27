@@ -1,5 +1,5 @@
 ---
-title: The remote server machine does not exist or is unavailable
+title: Komputer serwera zdalnego nie istnieje lub jest niedostępny
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID462
@@ -11,13 +11,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348183"
 ---
-# <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a><span data-ttu-id="453bb-102">The remote server machine does not exist or is unavailable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="453bb-102">The remote server machine does not exist or is unavailable (Visual Basic)</span></span>
-<span data-ttu-id="453bb-103">You are trying to connect to a remote server that is unavailable or does not exist.</span><span class="sxs-lookup"><span data-stu-id="453bb-103">You are trying to connect to a remote server that is unavailable or does not exist.</span></span> <span data-ttu-id="453bb-104">This error may be caused by your network connection being lost.</span><span class="sxs-lookup"><span data-stu-id="453bb-104">This error may be caused by your network connection being lost.</span></span>  
+# <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a><span data-ttu-id="dc77b-102">Komputer serwera zdalnego nie istnieje lub jest niedostępny (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dc77b-102">The remote server machine does not exist or is unavailable (Visual Basic)</span></span>
+<span data-ttu-id="dc77b-103">Próbujesz nawiązać połączenie z serwerem zdalnym, który jest niedostępny lub nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="dc77b-103">You are trying to connect to a remote server that is unavailable or does not exist.</span></span> <span data-ttu-id="dc77b-104">Przyczyną tego błędu może być utrata połączenia sieciowego.</span><span class="sxs-lookup"><span data-stu-id="dc77b-104">This error may be caused by your network connection being lost.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="453bb-105">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="453bb-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="dc77b-105">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="dc77b-105">To correct this error</span></span>  
   
-- <span data-ttu-id="453bb-106">Reconnect to the network and try again.</span><span class="sxs-lookup"><span data-stu-id="453bb-106">Reconnect to the network and try again.</span></span>  
+- <span data-ttu-id="dc77b-106">Ponownie nawiąż połączenie z siecią i spróbuj ponownie.</span><span class="sxs-lookup"><span data-stu-id="dc77b-106">Reconnect to the network and try again.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="453bb-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="453bb-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dc77b-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="dc77b-107">See also</span></span>
 
-- [<span data-ttu-id="453bb-108">Typy błędów</span><span class="sxs-lookup"><span data-stu-id="453bb-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="dc77b-108">Typy błędów</span><span class="sxs-lookup"><span data-stu-id="dc77b-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

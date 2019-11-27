@@ -22,10 +22,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427858"
 ---
-# <a name="isymunmanagedwritersetscoperange-method"></a><span data-ttu-id="7d4a6-102">ISymUnmanagedWriter::SetScopeRange — Metoda</span><span class="sxs-lookup"><span data-stu-id="7d4a6-102">ISymUnmanagedWriter::SetScopeRange Method</span></span>
-<span data-ttu-id="7d4a6-103">Defines the offset range for the specified lexical scope.</span><span class="sxs-lookup"><span data-stu-id="7d4a6-103">Defines the offset range for the specified lexical scope.</span></span> <span data-ttu-id="7d4a6-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span><span class="sxs-lookup"><span data-stu-id="7d4a6-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="7d4a6-105">Scopes must form a hierarchy.</span><span class="sxs-lookup"><span data-stu-id="7d4a6-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="7d4a6-106">Siblings are not allowed to overlap.</span><span class="sxs-lookup"><span data-stu-id="7d4a6-106">Siblings are not allowed to overlap.</span></span>  
+# <a name="isymunmanagedwritersetscoperange-method"></a><span data-ttu-id="1bcd6-102">ISymUnmanagedWriter::SetScopeRange — Metoda</span><span class="sxs-lookup"><span data-stu-id="1bcd6-102">ISymUnmanagedWriter::SetScopeRange Method</span></span>
+<span data-ttu-id="1bcd6-103">Definiuje zakres przesunięć dla określonego zakresu leksykalnego.</span><span class="sxs-lookup"><span data-stu-id="1bcd6-103">Defines the offset range for the specified lexical scope.</span></span> <span data-ttu-id="1bcd6-104">Zakres będzie nowym bieżącym zakresem i jest wypychany do stosu zakresów.</span><span class="sxs-lookup"><span data-stu-id="1bcd6-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="1bcd6-105">Zakresy muszą tworzyć hierarchię.</span><span class="sxs-lookup"><span data-stu-id="1bcd6-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="1bcd6-106">Elementy równorzędne nie mogą nakładać się na siebie.</span><span class="sxs-lookup"><span data-stu-id="1bcd6-106">Siblings are not allowed to overlap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7d4a6-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="7d4a6-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1bcd6-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="1bcd6-107">Syntax</span></span>  
   
 ```cpp  
 HRESULT OpenScope(  
@@ -34,25 +34,25 @@ HRESULT OpenScope(
     [in] ULONG32  endOffset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7d4a6-108">Parametry</span><span class="sxs-lookup"><span data-stu-id="7d4a6-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1bcd6-108">Parametry</span><span class="sxs-lookup"><span data-stu-id="1bcd6-108">Parameters</span></span>  
  `scopeId`  
- <span data-ttu-id="7d4a6-109">[in] The scope identifier for the scope.</span><span class="sxs-lookup"><span data-stu-id="7d4a6-109">[in] The scope identifier for the scope.</span></span>  
+ <span data-ttu-id="1bcd6-109">podczas Identyfikator zakresu dla zakresu.</span><span class="sxs-lookup"><span data-stu-id="1bcd6-109">[in] The scope identifier for the scope.</span></span>  
   
  `startOffset`  
- <span data-ttu-id="7d4a6-110">[in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.</span><span class="sxs-lookup"><span data-stu-id="7d4a6-110">[in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.</span></span>  
+ <span data-ttu-id="1bcd6-110">podczas Przesunięcie, w bajtach, pierwszej instrukcji w zakresie leksykalnym od początku metody.</span><span class="sxs-lookup"><span data-stu-id="1bcd6-110">[in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.</span></span>  
   
  `endOffset`  
- <span data-ttu-id="7d4a6-111">[in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.</span><span class="sxs-lookup"><span data-stu-id="7d4a6-111">[in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.</span></span>  
+ <span data-ttu-id="1bcd6-111">podczas Przesunięcie, w bajtach, ostatniej instrukcji w zakresie leksykalnym od początku metody.</span><span class="sxs-lookup"><span data-stu-id="1bcd6-111">[in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7d4a6-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="7d4a6-112">Return Value</span></span>  
- <span data-ttu-id="7d4a6-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="7d4a6-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1bcd6-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="1bcd6-112">Return Value</span></span>  
+ <span data-ttu-id="1bcd6-113">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="1bcd6-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7d4a6-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="7d4a6-114">Remarks</span></span>  
- <span data-ttu-id="7d4a6-115">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time.</span><span class="sxs-lookup"><span data-stu-id="7d4a6-115">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time.</span></span> <span data-ttu-id="7d4a6-116">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored.</span><span class="sxs-lookup"><span data-stu-id="7d4a6-116">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored.</span></span> <span data-ttu-id="7d4a6-117">Scope identifiers are only valid in the current method.</span><span class="sxs-lookup"><span data-stu-id="7d4a6-117">Scope identifiers are only valid in the current method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1bcd6-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="1bcd6-114">Remarks</span></span>  
+ <span data-ttu-id="1bcd6-115">[ISymUnmanagedWriter:: OpenScope —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) zwraca nieprzezroczysty identyfikator zakresu, który może być używany z `ISymUnmanagedWriter::SetScopeRange`, aby zdefiniować początkową i końcową przesunięcie zakresu w późniejszym czasie.</span><span class="sxs-lookup"><span data-stu-id="1bcd6-115">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time.</span></span> <span data-ttu-id="1bcd6-116">W takim przypadku przesunięcia przesłane do `ISymUnmanagedWriter::OpenScope` i [ISymUnmanagedWriter:: CloseScope —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) są ignorowane.</span><span class="sxs-lookup"><span data-stu-id="1bcd6-116">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored.</span></span> <span data-ttu-id="1bcd6-117">Identyfikatory zakresów są prawidłowe tylko w bieżącej metodzie.</span><span class="sxs-lookup"><span data-stu-id="1bcd6-117">Scope identifiers are only valid in the current method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7d4a6-118">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7d4a6-118">Requirements</span></span>  
- <span data-ttu-id="7d4a6-119">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="7d4a6-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1bcd6-118">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1bcd6-118">Requirements</span></span>  
+ <span data-ttu-id="1bcd6-119">**Nagłówek:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="1bcd6-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7d4a6-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7d4a6-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1bcd6-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1bcd6-120">See also</span></span>
 
-- [<span data-ttu-id="7d4a6-121">ISymUnmanagedWriter, interfejs</span><span class="sxs-lookup"><span data-stu-id="7d4a6-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="1bcd6-121">ISymUnmanagedWriter, interfejs</span><span class="sxs-lookup"><span data-stu-id="1bcd6-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -22,10 +22,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449899"
 ---
-# <a name="icorprofilercallbackjitinlining-method"></a><span data-ttu-id="16d94-102">ICorProfilerCallback::JITInlining — Metoda</span><span class="sxs-lookup"><span data-stu-id="16d94-102">ICorProfilerCallback::JITInlining Method</span></span>
-<span data-ttu-id="16d94-103">Notifies the profiler that the just-in-time (JIT) compiler is about to insert a function in line with another function.</span><span class="sxs-lookup"><span data-stu-id="16d94-103">Notifies the profiler that the just-in-time (JIT) compiler is about to insert a function in line with another function.</span></span>  
+# <a name="icorprofilercallbackjitinlining-method"></a><span data-ttu-id="e5dcd-102">ICorProfilerCallback::JITInlining — Metoda</span><span class="sxs-lookup"><span data-stu-id="e5dcd-102">ICorProfilerCallback::JITInlining Method</span></span>
+<span data-ttu-id="e5dcd-103">Powiadamia profiler, że kompilator just in Time (JIT) ma wstawić funkcję w wierszu z inną funkcją.</span><span class="sxs-lookup"><span data-stu-id="e5dcd-103">Notifies the profiler that the just-in-time (JIT) compiler is about to insert a function in line with another function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16d94-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="16d94-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e5dcd-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e5dcd-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT JITInlining(  
@@ -34,30 +34,30 @@ HRESULT JITInlining(
     [out] BOOL      *pfShouldInline);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="16d94-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="16d94-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e5dcd-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="e5dcd-105">Parameters</span></span>  
  `callerId`  
- <span data-ttu-id="16d94-106">[in] The ID of the function into which the `calleeId` function will be inserted.</span><span class="sxs-lookup"><span data-stu-id="16d94-106">[in] The ID of the function into which the `calleeId` function will be inserted.</span></span>  
+ <span data-ttu-id="e5dcd-106">podczas Identyfikator funkcji, w której zostanie wstawiona funkcja `calleeId`.</span><span class="sxs-lookup"><span data-stu-id="e5dcd-106">[in] The ID of the function into which the `calleeId` function will be inserted.</span></span>  
   
  `calleeId`  
- <span data-ttu-id="16d94-107">[in] The ID of the function to be inserted.</span><span class="sxs-lookup"><span data-stu-id="16d94-107">[in] The ID of the function to be inserted.</span></span>  
+ <span data-ttu-id="e5dcd-107">podczas Identyfikator funkcji, która ma zostać wstawiona.</span><span class="sxs-lookup"><span data-stu-id="e5dcd-107">[in] The ID of the function to be inserted.</span></span>  
   
  `pfShouldInline`  
- <span data-ttu-id="16d94-108">[out] `true` to allow the insertion to occur; otherwise, `false`.</span><span class="sxs-lookup"><span data-stu-id="16d94-108">[out] `true` to allow the insertion to occur; otherwise, `false`.</span></span>  
+ <span data-ttu-id="e5dcd-108">[out] `true`, aby zezwolić na wstawianie; w przeciwnym razie `false`.</span><span class="sxs-lookup"><span data-stu-id="e5dcd-108">[out] `true` to allow the insertion to occur; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="16d94-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="16d94-109">Remarks</span></span>  
- <span data-ttu-id="16d94-110">The profiler can set `pfShouldInline` to `false` to prevent the `calleeId` function from being inserted into the `callerId` function.</span><span class="sxs-lookup"><span data-stu-id="16d94-110">The profiler can set `pfShouldInline` to `false` to prevent the `calleeId` function from being inserted into the `callerId` function.</span></span> <span data-ttu-id="16d94-111">Also, the profiler can globally disable inline insertion by using the COR_PRF_DISABLE_INLINING value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.</span><span class="sxs-lookup"><span data-stu-id="16d94-111">Also, the profiler can globally disable inline insertion by using the COR_PRF_DISABLE_INLINING value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e5dcd-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e5dcd-109">Remarks</span></span>  
+ <span data-ttu-id="e5dcd-110">Profiler może ustawić `pfShouldInline` na `false`, aby uniemożliwić Wstawianie funkcji `calleeId` do funkcji `callerId`.</span><span class="sxs-lookup"><span data-stu-id="e5dcd-110">The profiler can set `pfShouldInline` to `false` to prevent the `calleeId` function from being inserted into the `callerId` function.</span></span> <span data-ttu-id="e5dcd-111">Dodatkowo profiler może globalnie wyłączyć wstawianie wbudowane przy użyciu wartości COR_PRF_DISABLE_INLINING [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) Enumeration.</span><span class="sxs-lookup"><span data-stu-id="e5dcd-111">Also, the profiler can globally disable inline insertion by using the COR_PRF_DISABLE_INLINING value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.</span></span>  
   
- <span data-ttu-id="16d94-112">Functions inserted inline do not raise events for entering or leaving.</span><span class="sxs-lookup"><span data-stu-id="16d94-112">Functions inserted inline do not raise events for entering or leaving.</span></span> <span data-ttu-id="16d94-113">Therefore, the profiler must set `pfShouldInline` to `false` in order to produce an accurate callgraph.</span><span class="sxs-lookup"><span data-stu-id="16d94-113">Therefore, the profiler must set `pfShouldInline` to `false` in order to produce an accurate callgraph.</span></span> <span data-ttu-id="16d94-114">Setting `pfShouldInline` to `false` will affect performance, because inline insertion typically increases speed and reduces the number of separate JIT compilation events for the inserted method.</span><span class="sxs-lookup"><span data-stu-id="16d94-114">Setting `pfShouldInline` to `false` will affect performance, because inline insertion typically increases speed and reduces the number of separate JIT compilation events for the inserted method.</span></span>  
+ <span data-ttu-id="e5dcd-112">Wbudowane funkcje nie zgłaszają zdarzeń do wprowadzenia lub opuszczenia.</span><span class="sxs-lookup"><span data-stu-id="e5dcd-112">Functions inserted inline do not raise events for entering or leaving.</span></span> <span data-ttu-id="e5dcd-113">W związku z tym profiler musi ustawić `pfShouldInline`, aby `false` w celu wygenerowania dokładnej wykres wywołań.</span><span class="sxs-lookup"><span data-stu-id="e5dcd-113">Therefore, the profiler must set `pfShouldInline` to `false` in order to produce an accurate callgraph.</span></span> <span data-ttu-id="e5dcd-114">Ustawienie `pfShouldInline` na `false` będzie miało wpływ na wydajność, ponieważ Wstawianie wbudowane zwykle zwiększa szybkość i zmniejsza liczbę oddzielnych zdarzeń kompilacji JIT dla włożonej metody.</span><span class="sxs-lookup"><span data-stu-id="e5dcd-114">Setting `pfShouldInline` to `false` will affect performance, because inline insertion typically increases speed and reduces the number of separate JIT compilation events for the inserted method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="16d94-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="16d94-115">Requirements</span></span>  
- <span data-ttu-id="16d94-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="16d94-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e5dcd-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e5dcd-115">Requirements</span></span>  
+ <span data-ttu-id="e5dcd-116">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e5dcd-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="16d94-117">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="16d94-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e5dcd-117">**Nagłówek:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="e5dcd-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="16d94-118">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="16d94-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e5dcd-118">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="e5dcd-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="16d94-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="16d94-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e5dcd-119">**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e5dcd-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16d94-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="16d94-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e5dcd-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e5dcd-120">See also</span></span>
 
-- [<span data-ttu-id="16d94-121">ICorProfilerCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="16d94-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="e5dcd-121">ICorProfilerCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="e5dcd-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

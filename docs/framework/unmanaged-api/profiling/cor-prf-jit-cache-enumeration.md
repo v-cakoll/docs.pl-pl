@@ -21,13 +21,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447343"
 ---
-# <a name="cor_prf_jit_cache-enumeration"></a><span data-ttu-id="515a4-102">COR_PRF_JIT_CACHE — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="515a4-102">COR_PRF_JIT_CACHE Enumeration</span></span>
-<span data-ttu-id="515a4-103">Indicates the result of a cached function search.</span><span class="sxs-lookup"><span data-stu-id="515a4-103">Indicates the result of a cached function search.</span></span>  
+# <a name="cor_prf_jit_cache-enumeration"></a><span data-ttu-id="9a869-102">COR_PRF_JIT_CACHE — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="9a869-102">COR_PRF_JIT_CACHE Enumeration</span></span>
+<span data-ttu-id="9a869-103">Wskazuje wynik funkcji wyszukiwania w pamięci podręcznej.</span><span class="sxs-lookup"><span data-stu-id="9a869-103">Indicates the result of a cached function search.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="515a4-104">`COR_PRF_CACHED_FUNCTION_FOUND` has a value of zero, so `COR_PRF_JIT_CACHE` cannot be used as a Boolean surrogate.</span><span class="sxs-lookup"><span data-stu-id="515a4-104">`COR_PRF_CACHED_FUNCTION_FOUND` has a value of zero, so `COR_PRF_JIT_CACHE` cannot be used as a Boolean surrogate.</span></span>  
+> <span data-ttu-id="9a869-104">`COR_PRF_CACHED_FUNCTION_FOUND` ma wartość zero, dlatego nie można użyć `COR_PRF_JIT_CACHE` jako surogatu wartości logicznej.</span><span class="sxs-lookup"><span data-stu-id="9a869-104">`COR_PRF_CACHED_FUNCTION_FOUND` has a value of zero, so `COR_PRF_JIT_CACHE` cannot be used as a Boolean surrogate.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="515a4-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="515a4-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9a869-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="9a869-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -36,22 +36,22 @@ typedef enum {
 } COR_PRF_JIT_CACHE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="515a4-106">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="515a4-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9a869-106">Members</span><span class="sxs-lookup"><span data-stu-id="9a869-106">Members</span></span>  
   
-|<span data-ttu-id="515a4-107">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="515a4-107">Member</span></span>|<span data-ttu-id="515a4-108">Opis</span><span class="sxs-lookup"><span data-stu-id="515a4-108">Description</span></span>|  
+|<span data-ttu-id="9a869-107">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="9a869-107">Member</span></span>|<span data-ttu-id="9a869-108">Opis</span><span class="sxs-lookup"><span data-stu-id="9a869-108">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|<span data-ttu-id="515a4-109">The search found the function.</span><span class="sxs-lookup"><span data-stu-id="515a4-109">The search found the function.</span></span>|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|<span data-ttu-id="515a4-110">The search did not find the function.</span><span class="sxs-lookup"><span data-stu-id="515a4-110">The search did not find the function.</span></span>|  
+|`COR_PRF_FUNCTION_FOUND`|<span data-ttu-id="9a869-109">Wyszukiwanie odnalazło funkcję.</span><span class="sxs-lookup"><span data-stu-id="9a869-109">The search found the function.</span></span>|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|<span data-ttu-id="9a869-110">Wyszukiwanie nie znalazło funkcji.</span><span class="sxs-lookup"><span data-stu-id="9a869-110">The search did not find the function.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="515a4-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="515a4-111">Requirements</span></span>  
- <span data-ttu-id="515a4-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="515a4-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9a869-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9a869-111">Requirements</span></span>  
+ <span data-ttu-id="9a869-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9a869-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="515a4-113">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="515a4-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="9a869-113">**Nagłówek:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="9a869-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="515a4-114">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="515a4-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9a869-114">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="9a869-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="515a4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="515a4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9a869-115">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a869-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="515a4-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="515a4-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9a869-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9a869-116">See also</span></span>
 
-- [<span data-ttu-id="515a4-117">Profilowanie — wyliczenia</span><span class="sxs-lookup"><span data-stu-id="515a4-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="9a869-117">Profilowanie — wyliczenia</span><span class="sxs-lookup"><span data-stu-id="9a869-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

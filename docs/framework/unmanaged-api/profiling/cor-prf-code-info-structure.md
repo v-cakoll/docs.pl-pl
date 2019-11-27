@@ -21,10 +21,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428390"
 ---
-# <a name="cor_prf_code_info-structure"></a><span data-ttu-id="d1d51-102">COR_PRF_CODE_INFO — Struktura</span><span class="sxs-lookup"><span data-stu-id="d1d51-102">COR_PRF_CODE_INFO Structure</span></span>
-<span data-ttu-id="d1d51-103">Represents one contiguous block of native code stored in memory.</span><span class="sxs-lookup"><span data-stu-id="d1d51-103">Represents one contiguous block of native code stored in memory.</span></span>  
+# <a name="cor_prf_code_info-structure"></a><span data-ttu-id="36b49-102">COR_PRF_CODE_INFO — Struktura</span><span class="sxs-lookup"><span data-stu-id="36b49-102">COR_PRF_CODE_INFO Structure</span></span>
+<span data-ttu-id="36b49-103">Reprezentuje jeden ciągły blok kodu natywnego przechowywanego w pamięci.</span><span class="sxs-lookup"><span data-stu-id="36b49-103">Represents one contiguous block of native code stored in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d1d51-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d1d51-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="36b49-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="36b49-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _COR_PRF_CODE_INFO {  
@@ -33,22 +33,22 @@ typedef struct _COR_PRF_CODE_INFO {
 } COR_PRF_CODE_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d1d51-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="d1d51-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="36b49-105">Members</span><span class="sxs-lookup"><span data-stu-id="36b49-105">Members</span></span>  
   
-|<span data-ttu-id="d1d51-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="d1d51-106">Member</span></span>|<span data-ttu-id="d1d51-107">Opis</span><span class="sxs-lookup"><span data-stu-id="d1d51-107">Description</span></span>|  
+|<span data-ttu-id="36b49-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="36b49-106">Member</span></span>|<span data-ttu-id="36b49-107">Opis</span><span class="sxs-lookup"><span data-stu-id="36b49-107">Description</span></span>|  
 |------------|-----------------|  
-|`startAddress`|<span data-ttu-id="d1d51-108">The starting address of the contiguous block of code.</span><span class="sxs-lookup"><span data-stu-id="d1d51-108">The starting address of the contiguous block of code.</span></span>|  
-|`size`|<span data-ttu-id="d1d51-109">The size of the block.</span><span class="sxs-lookup"><span data-stu-id="d1d51-109">The size of the block.</span></span>|  
+|`startAddress`|<span data-ttu-id="36b49-108">Adres początkowy ciągłego bloku kodu.</span><span class="sxs-lookup"><span data-stu-id="36b49-108">The starting address of the contiguous block of code.</span></span>|  
+|`size`|<span data-ttu-id="36b49-109">Rozmiar bloku.</span><span class="sxs-lookup"><span data-stu-id="36b49-109">The size of the block.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d1d51-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d1d51-110">Requirements</span></span>  
- <span data-ttu-id="d1d51-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d1d51-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="36b49-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="36b49-110">Requirements</span></span>  
+ <span data-ttu-id="36b49-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="36b49-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d1d51-112">**Header:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="d1d51-112">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="36b49-112">**Nagłówek:** CorProf. idl</span><span class="sxs-lookup"><span data-stu-id="36b49-112">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="d1d51-113">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d1d51-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="36b49-113">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="36b49-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d1d51-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d1d51-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="36b49-114">**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="36b49-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d1d51-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d1d51-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="36b49-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="36b49-115">See also</span></span>
 
-- [<span data-ttu-id="d1d51-116">Profiling — struktury</span><span class="sxs-lookup"><span data-stu-id="d1d51-116">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [<span data-ttu-id="36b49-116">Profiling — struktury</span><span class="sxs-lookup"><span data-stu-id="36b49-116">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Convert Strings into an Array of Bytes'
+title: 'Instrukcje: konwertowanie ciągów na tablicę bajtów'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string conversion [Visual Basic], arrays
@@ -15,32 +15,32 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351970"
 ---
-# <a name="how-to-convert-strings-into-an-array-of-bytes-in-visual-basic"></a><span data-ttu-id="18a24-102">Porady: konwertowanie ciągów w tablice bajtów w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="18a24-102">How to: Convert Strings into an Array of Bytes in Visual Basic</span></span>
-<span data-ttu-id="18a24-103">This topic shows how to convert a string into an array of bytes.</span><span class="sxs-lookup"><span data-stu-id="18a24-103">This topic shows how to convert a string into an array of bytes.</span></span>  
+# <a name="how-to-convert-strings-into-an-array-of-bytes-in-visual-basic"></a><span data-ttu-id="c3329-102">Porady: konwertowanie ciągów w tablice bajtów w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c3329-102">How to: Convert Strings into an Array of Bytes in Visual Basic</span></span>
+<span data-ttu-id="c3329-103">W tym temacie pokazano, jak przekonwertować ciąg na tablicę bajtów.</span><span class="sxs-lookup"><span data-stu-id="c3329-103">This topic shows how to convert a string into an array of bytes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="18a24-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="18a24-104">Example</span></span>  
- <span data-ttu-id="18a24-105">This example uses the <xref:System.Text.Encoding.GetBytes%2A> method of the <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> encoding class to convert a string into an array of bytes.</span><span class="sxs-lookup"><span data-stu-id="18a24-105">This example uses the <xref:System.Text.Encoding.GetBytes%2A> method of the <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> encoding class to convert a string into an array of bytes.</span></span>  
+## <a name="example"></a><span data-ttu-id="c3329-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="c3329-104">Example</span></span>  
+ <span data-ttu-id="c3329-105">W tym przykładzie zastosowano metodę <xref:System.Text.Encoding.GetBytes%2A> klasy kodowania <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> do przekonwertowania ciągu na tablicę bajtów.</span><span class="sxs-lookup"><span data-stu-id="c3329-105">This example uses the <xref:System.Text.Encoding.GetBytes%2A> method of the <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> encoding class to convert a string into an array of bytes.</span></span>  
   
  [!code-vb[VbVbalrStrings#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#74)]  
   
- <span data-ttu-id="18a24-106">You can choose from several encoding options to convert a string into a byte array:</span><span class="sxs-lookup"><span data-stu-id="18a24-106">You can choose from several encoding options to convert a string into a byte array:</span></span>  
+ <span data-ttu-id="c3329-106">Można wybrać jedną z kilku opcji kodowania, aby przekonwertować ciąg na tablicę bajtową:</span><span class="sxs-lookup"><span data-stu-id="c3329-106">You can choose from several encoding options to convert a string into a byte array:</span></span>  
   
-- <span data-ttu-id="18a24-107"><xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType>: Gets an encoding for the ASCII (7-bit) character set.</span><span class="sxs-lookup"><span data-stu-id="18a24-107"><xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType>: Gets an encoding for the ASCII (7-bit) character set.</span></span>  
+- <span data-ttu-id="c3329-107"><xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType>: Pobiera kodowanie dla zestawu znaków ASCII (7-bitowy).</span><span class="sxs-lookup"><span data-stu-id="c3329-107"><xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType>: Gets an encoding for the ASCII (7-bit) character set.</span></span>  
   
-- <span data-ttu-id="18a24-108"><xref:System.Text.Encoding.BigEndianUnicode%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-16 format using the big-endian byte order.</span><span class="sxs-lookup"><span data-stu-id="18a24-108"><xref:System.Text.Encoding.BigEndianUnicode%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-16 format using the big-endian byte order.</span></span>  
+- <span data-ttu-id="c3329-108"><xref:System.Text.Encoding.BigEndianUnicode%2A?displayProperty=nameWithType>: Pobiera kodowanie dla formatu UTF-16 przy użyciu kolejności bajtów big-endian.</span><span class="sxs-lookup"><span data-stu-id="c3329-108"><xref:System.Text.Encoding.BigEndianUnicode%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-16 format using the big-endian byte order.</span></span>  
   
-- <span data-ttu-id="18a24-109"><xref:System.Text.Encoding.Default%2A?displayProperty=nameWithType>: Gets an encoding for the system's current ANSI code page.</span><span class="sxs-lookup"><span data-stu-id="18a24-109"><xref:System.Text.Encoding.Default%2A?displayProperty=nameWithType>: Gets an encoding for the system's current ANSI code page.</span></span>  
+- <span data-ttu-id="c3329-109"><xref:System.Text.Encoding.Default%2A?displayProperty=nameWithType>: Pobiera kodowanie dla bieżącej strony kodowej ANSI systemu.</span><span class="sxs-lookup"><span data-stu-id="c3329-109"><xref:System.Text.Encoding.Default%2A?displayProperty=nameWithType>: Gets an encoding for the system's current ANSI code page.</span></span>  
   
-- <span data-ttu-id="18a24-110"><xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-16 format using the little-endian byte order.</span><span class="sxs-lookup"><span data-stu-id="18a24-110"><xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-16 format using the little-endian byte order.</span></span>  
+- <span data-ttu-id="c3329-110"><xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>: Pobiera kodowanie dla formatu UTF-16 przy użyciu kolejności bajtów little-endian.</span><span class="sxs-lookup"><span data-stu-id="c3329-110"><xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-16 format using the little-endian byte order.</span></span>  
   
-- <span data-ttu-id="18a24-111"><xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-32 format using the little-endian byte order.</span><span class="sxs-lookup"><span data-stu-id="18a24-111"><xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-32 format using the little-endian byte order.</span></span>  
+- <span data-ttu-id="c3329-111"><xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType>: Pobiera kodowanie dla formatu UTF-32 przy użyciu kolejności bajtów little-endian.</span><span class="sxs-lookup"><span data-stu-id="c3329-111"><xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-32 format using the little-endian byte order.</span></span>  
   
-- <span data-ttu-id="18a24-112"><xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-7 format.</span><span class="sxs-lookup"><span data-stu-id="18a24-112"><xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-7 format.</span></span>  
+- <span data-ttu-id="c3329-112"><xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType>: Pobiera kodowanie dla formatu UTF-7.</span><span class="sxs-lookup"><span data-stu-id="c3329-112"><xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-7 format.</span></span>  
   
-- <span data-ttu-id="18a24-113"><xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-8 format.</span><span class="sxs-lookup"><span data-stu-id="18a24-113"><xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-8 format.</span></span>  
+- <span data-ttu-id="c3329-113"><xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: Pobiera kodowanie dla formatu UTF-8.</span><span class="sxs-lookup"><span data-stu-id="c3329-113"><xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-8 format.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="18a24-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="18a24-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3329-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c3329-114">See also</span></span>
 
 - <xref:System.Text.Encoding?displayProperty=nameWithType>
 - <xref:System.Text.Encoding.GetBytes%2A>
-- [<span data-ttu-id="18a24-115">How to: Convert an Array of Bytes into a String in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="18a24-115">How to: Convert an Array of Bytes into a String in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-an-array-of-bytes-into-a-string.md)
+- [<span data-ttu-id="c3329-115">Instrukcje: konwertowanie tablicy bajtów na ciąg w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c3329-115">How to: Convert an Array of Bytes into a String in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-an-array-of-bytes-into-a-string.md)

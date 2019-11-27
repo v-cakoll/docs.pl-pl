@@ -22,10 +22,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449680"
 ---
-# <a name="icorprofilerinfo3getruntimeinformation-method"></a><span data-ttu-id="cb21b-102">ICorProfilerInfo3::GetRuntimeInformation — Metoda</span><span class="sxs-lookup"><span data-stu-id="cb21b-102">ICorProfilerInfo3::GetRuntimeInformation Method</span></span>
-<span data-ttu-id="cb21b-103">Provides version information about the common language runtime (CLR) that is being profiled.</span><span class="sxs-lookup"><span data-stu-id="cb21b-103">Provides version information about the common language runtime (CLR) that is being profiled.</span></span>  
+# <a name="icorprofilerinfo3getruntimeinformation-method"></a><span data-ttu-id="c85c6-102">ICorProfilerInfo3::GetRuntimeInformation — Metoda</span><span class="sxs-lookup"><span data-stu-id="c85c6-102">ICorProfilerInfo3::GetRuntimeInformation Method</span></span>
+<span data-ttu-id="c85c6-103">Zawiera informacje o wersji dotyczące PROFILOWANEGO środowiska uruchomieniowego języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="c85c6-103">Provides version information about the common language runtime (CLR) that is being profiled.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb21b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="cb21b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c85c6-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c85c6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetRuntimeInformation(  
@@ -41,48 +41,48 @@ HRESULT GetRuntimeInformation(
                    WCHAR  szVersionString[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cb21b-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="cb21b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c85c6-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="c85c6-105">Parameters</span></span>  
  `pClrInstanceId`  
- <span data-ttu-id="cb21b-106">[out] The representative ID of a running CLR instance in a process.</span><span class="sxs-lookup"><span data-stu-id="cb21b-106">[out] The representative ID of a running CLR instance in a process.</span></span> <span data-ttu-id="cb21b-107">This is the same as the `ClrInstanceID` that the event tracing for Windows (ETW) startup event reports.</span><span class="sxs-lookup"><span data-stu-id="cb21b-107">This is the same as the `ClrInstanceID` that the event tracing for Windows (ETW) startup event reports.</span></span>  
+ <span data-ttu-id="c85c6-106">określoną Identyfikator reprezentatywny uruchomionego wystąpienia środowiska CLR w procesie.</span><span class="sxs-lookup"><span data-stu-id="c85c6-106">[out] The representative ID of a running CLR instance in a process.</span></span> <span data-ttu-id="c85c6-107">Jest to taka sama jak `ClrInstanceID`, w których są zgłaszane zdarzenia uruchamiania śledzenie zdarzeń systemu Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="c85c6-107">This is the same as the `ClrInstanceID` that the event tracing for Windows (ETW) startup event reports.</span></span>  
   
  `pRuntimeType`  
- <span data-ttu-id="cb21b-108">[out] The runtime type.</span><span class="sxs-lookup"><span data-stu-id="cb21b-108">[out] The runtime type.</span></span> <span data-ttu-id="cb21b-109">This parameter returns `COR_PRF_DESKTOP_CLR` for the desktop version of the CLR, or `COR_PRF_CORE_CLR` for the core version of the CLR used in Silverlight.</span><span class="sxs-lookup"><span data-stu-id="cb21b-109">This parameter returns `COR_PRF_DESKTOP_CLR` for the desktop version of the CLR, or `COR_PRF_CORE_CLR` for the core version of the CLR used in Silverlight.</span></span>  
+ <span data-ttu-id="c85c6-108">określoną Typ środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="c85c6-108">[out] The runtime type.</span></span> <span data-ttu-id="c85c6-109">Ten parametr zwraca `COR_PRF_DESKTOP_CLR` dla wersji klasycznej środowiska CLR lub `COR_PRF_CORE_CLR` dla podstawowej wersji środowiska CLR używanej w technologii Silverlight.</span><span class="sxs-lookup"><span data-stu-id="c85c6-109">This parameter returns `COR_PRF_DESKTOP_CLR` for the desktop version of the CLR, or `COR_PRF_CORE_CLR` for the core version of the CLR used in Silverlight.</span></span>  
   
  `pMajorVersion`  
- <span data-ttu-id="cb21b-110">[out] The major version number of the CLR.</span><span class="sxs-lookup"><span data-stu-id="cb21b-110">[out] The major version number of the CLR.</span></span>  
+ <span data-ttu-id="c85c6-110">określoną Numer wersji głównej środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="c85c6-110">[out] The major version number of the CLR.</span></span>  
   
  `pMinorVersion`  
- <span data-ttu-id="cb21b-111">[out] The minor version number of the CLR.</span><span class="sxs-lookup"><span data-stu-id="cb21b-111">[out] The minor version number of the CLR.</span></span>  
+ <span data-ttu-id="c85c6-111">określoną Numer wersji pomocniczej środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="c85c6-111">[out] The minor version number of the CLR.</span></span>  
   
  `pBuildVersion`  
- <span data-ttu-id="cb21b-112">[out] The build version number of the CLR.</span><span class="sxs-lookup"><span data-stu-id="cb21b-112">[out] The build version number of the CLR.</span></span>  
+ <span data-ttu-id="c85c6-112">określoną Numer wersji kompilacji środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="c85c6-112">[out] The build version number of the CLR.</span></span>  
   
  `pQFEVersion`  
- <span data-ttu-id="cb21b-113">[out] The version number of the CLR that is associated with a software update.</span><span class="sxs-lookup"><span data-stu-id="cb21b-113">[out] The version number of the CLR that is associated with a software update.</span></span>  
+ <span data-ttu-id="c85c6-113">określoną Numer wersji środowiska CLR skojarzonego z aktualizacją oprogramowania.</span><span class="sxs-lookup"><span data-stu-id="c85c6-113">[out] The version number of the CLR that is associated with a software update.</span></span>  
   
  `cchVersionString`  
- <span data-ttu-id="cb21b-114">[in] The length, in characters, of the buffer that `szVersionString` points to.</span><span class="sxs-lookup"><span data-stu-id="cb21b-114">[in] The length, in characters, of the buffer that `szVersionString` points to.</span></span>  
+ <span data-ttu-id="c85c6-114">podczas Długość (w znakach) bufora, do którego `szVersionString` wskazuje.</span><span class="sxs-lookup"><span data-stu-id="c85c6-114">[in] The length, in characters, of the buffer that `szVersionString` points to.</span></span>  
   
  `pcchVersionString`  
- <span data-ttu-id="cb21b-115">[out] The length, in characters, of `szVersionString`.</span><span class="sxs-lookup"><span data-stu-id="cb21b-115">[out] The length, in characters, of `szVersionString`.</span></span>  
+ <span data-ttu-id="c85c6-115">określoną Długość (w znakach) `szVersionString`.</span><span class="sxs-lookup"><span data-stu-id="c85c6-115">[out] The length, in characters, of `szVersionString`.</span></span>  
   
  `szVersionString`  
- <span data-ttu-id="cb21b-116">[out] The CLR version string.</span><span class="sxs-lookup"><span data-stu-id="cb21b-116">[out] The CLR version string.</span></span>  
+ <span data-ttu-id="c85c6-116">określoną Ciąg wersji środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="c85c6-116">[out] The CLR version string.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cb21b-117">Uwagi</span><span class="sxs-lookup"><span data-stu-id="cb21b-117">Remarks</span></span>  
- <span data-ttu-id="cb21b-118">You may pass null for any parameter.</span><span class="sxs-lookup"><span data-stu-id="cb21b-118">You may pass null for any parameter.</span></span> <span data-ttu-id="cb21b-119">However, `pcchVersionString` cannot be null unless `szVersionString` is also null.</span><span class="sxs-lookup"><span data-stu-id="cb21b-119">However, `pcchVersionString` cannot be null unless `szVersionString` is also null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c85c6-117">Uwagi</span><span class="sxs-lookup"><span data-stu-id="c85c6-117">Remarks</span></span>  
+ <span data-ttu-id="c85c6-118">Dla dowolnego parametru można przekazać wartość null.</span><span class="sxs-lookup"><span data-stu-id="c85c6-118">You may pass null for any parameter.</span></span> <span data-ttu-id="c85c6-119">Jednak `pcchVersionString` nie może mieć wartości null, chyba że `szVersionString` ma również wartość null.</span><span class="sxs-lookup"><span data-stu-id="c85c6-119">However, `pcchVersionString` cannot be null unless `szVersionString` is also null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cb21b-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="cb21b-120">Requirements</span></span>  
- <span data-ttu-id="cb21b-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cb21b-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c85c6-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c85c6-120">Requirements</span></span>  
+ <span data-ttu-id="c85c6-121">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c85c6-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cb21b-122">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cb21b-122">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c85c6-122">**Nagłówek:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="c85c6-122">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="cb21b-123">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cb21b-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c85c6-123">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="c85c6-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cb21b-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb21b-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="c85c6-124">**Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c85c6-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb21b-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="cb21b-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c85c6-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c85c6-125">See also</span></span>
 
-- [<span data-ttu-id="cb21b-126">ICorProfilerInfo3, interfejs</span><span class="sxs-lookup"><span data-stu-id="cb21b-126">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="cb21b-127">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="cb21b-127">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="cb21b-128">Profilowanie</span><span class="sxs-lookup"><span data-stu-id="cb21b-128">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="c85c6-126">ICorProfilerInfo3, interfejs</span><span class="sxs-lookup"><span data-stu-id="c85c6-126">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="c85c6-127">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="c85c6-127">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="c85c6-128">Profilowanie</span><span class="sxs-lookup"><span data-stu-id="c85c6-128">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

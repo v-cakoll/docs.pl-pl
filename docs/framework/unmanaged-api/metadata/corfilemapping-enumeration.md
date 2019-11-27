@@ -21,10 +21,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450296"
 ---
-# <a name="corfilemapping-enumeration"></a><span data-ttu-id="2b578-102">CorFileMapping — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="2b578-102">CorFileMapping Enumeration</span></span>
-<span data-ttu-id="2b578-103">Contains values that describe the type of file mapping that is returned from a call to the [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="2b578-103">Contains values that describe the type of file mapping that is returned from a call to the [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) method.</span></span>  
+# <a name="corfilemapping-enumeration"></a><span data-ttu-id="10914-102">CorFileMapping — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="10914-102">CorFileMapping Enumeration</span></span>
+<span data-ttu-id="10914-103">Zawiera wartości opisujące typ mapowania plików zwracanego z wywołania metody [IMetaDataInfo:: GetFileMapping —](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) .</span><span class="sxs-lookup"><span data-stu-id="10914-103">Contains values that describe the type of file mapping that is returned from a call to the [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b578-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2b578-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10914-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="10914-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorFileMapping {  
@@ -35,21 +35,21 @@ typedef enum CorFileMapping {
 } CorFileMapping;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="2b578-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="2b578-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="10914-105">Members</span><span class="sxs-lookup"><span data-stu-id="10914-105">Members</span></span>  
   
-|<span data-ttu-id="2b578-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="2b578-106">Member</span></span>|<span data-ttu-id="2b578-107">Opis</span><span class="sxs-lookup"><span data-stu-id="2b578-107">Description</span></span>|  
+|<span data-ttu-id="10914-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="10914-106">Member</span></span>|<span data-ttu-id="10914-107">Opis</span><span class="sxs-lookup"><span data-stu-id="10914-107">Description</span></span>|  
 |------------|-----------------|  
-|`fmFlat`|<span data-ttu-id="2b578-108">The file is mapped as a data file.</span><span class="sxs-lookup"><span data-stu-id="2b578-108">The file is mapped as a data file.</span></span> <span data-ttu-id="2b578-109">That is, the `SEC_IMAGE` flag was not passed to the Microsoft Win32 `CreateFileMapping` function.</span><span class="sxs-lookup"><span data-stu-id="2b578-109">That is, the `SEC_IMAGE` flag was not passed to the Microsoft Win32 `CreateFileMapping` function.</span></span>|  
-|`fmExecutableImage`|<span data-ttu-id="2b578-110">The file is mapped for execution, by using either the `LoadLibrary` function or the `CreateFileMapping` function with the `SEC_IMAGE` flag.</span><span class="sxs-lookup"><span data-stu-id="2b578-110">The file is mapped for execution, by using either the `LoadLibrary` function or the `CreateFileMapping` function with the `SEC_IMAGE` flag.</span></span>|  
+|`fmFlat`|<span data-ttu-id="10914-108">Plik jest mapowany jako plik danych.</span><span class="sxs-lookup"><span data-stu-id="10914-108">The file is mapped as a data file.</span></span> <span data-ttu-id="10914-109">Oznacza to, że flaga `SEC_IMAGE` nie została przeniesiona do funkcji `CreateFileMapping` Microsoft Win32.</span><span class="sxs-lookup"><span data-stu-id="10914-109">That is, the `SEC_IMAGE` flag was not passed to the Microsoft Win32 `CreateFileMapping` function.</span></span>|  
+|`fmExecutableImage`|<span data-ttu-id="10914-110">Plik jest mapowany do wykonania przy użyciu funkcji `LoadLibrary` lub funkcji `CreateFileMapping` z flagą `SEC_IMAGE`.</span><span class="sxs-lookup"><span data-stu-id="10914-110">The file is mapped for execution, by using either the `LoadLibrary` function or the `CreateFileMapping` function with the `SEC_IMAGE` flag.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="2b578-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2b578-111">Requirements</span></span>  
- <span data-ttu-id="2b578-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2b578-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="10914-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="10914-111">Requirements</span></span>  
+ <span data-ttu-id="10914-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="10914-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2b578-113">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="2b578-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="10914-113">**Nagłówek:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="10914-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="2b578-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b578-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="10914-114">**Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10914-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b578-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2b578-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10914-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="10914-115">See also</span></span>
 
-- [<span data-ttu-id="2b578-116">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="2b578-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [<span data-ttu-id="2b578-117">GetFileMapping, metoda</span><span class="sxs-lookup"><span data-stu-id="2b578-117">GetFileMapping Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)
+- [<span data-ttu-id="10914-116">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="10914-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="10914-117">GetFileMapping, metoda</span><span class="sxs-lookup"><span data-stu-id="10914-117">GetFileMapping Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)

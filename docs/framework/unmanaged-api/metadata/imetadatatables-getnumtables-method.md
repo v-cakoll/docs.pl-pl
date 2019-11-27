@@ -22,10 +22,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449497"
 ---
-# <a name="imetadatatablesgetnumtables-method"></a><span data-ttu-id="6a0b2-102">IMetaDataTables::GetNumTables — Metoda</span><span class="sxs-lookup"><span data-stu-id="6a0b2-102">IMetaDataTables::GetNumTables Method</span></span>
-<span data-ttu-id="6a0b2-103">Gets the number of tables in the scope of the current `IMetaDataTables` instance.</span><span class="sxs-lookup"><span data-stu-id="6a0b2-103">Gets the number of tables in the scope of the current `IMetaDataTables` instance.</span></span>  
+# <a name="imetadatatablesgetnumtables-method"></a><span data-ttu-id="ea185-102">IMetaDataTables::GetNumTables — Metoda</span><span class="sxs-lookup"><span data-stu-id="ea185-102">IMetaDataTables::GetNumTables Method</span></span>
+<span data-ttu-id="ea185-103">Pobiera liczbę tabel w zakresie bieżącego wystąpienia `IMetaDataTables`.</span><span class="sxs-lookup"><span data-stu-id="ea185-103">Gets the number of tables in the scope of the current `IMetaDataTables` instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6a0b2-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="6a0b2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ea185-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="ea185-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetNumTables (  
@@ -33,20 +33,20 @@ HRESULT GetNumTables (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6a0b2-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="6a0b2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ea185-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="ea185-105">Parameters</span></span>  
  `pcTables`  
- <span data-ttu-id="6a0b2-106">[out] A pointer to the number of tables in the current instance scope.</span><span class="sxs-lookup"><span data-stu-id="6a0b2-106">[out] A pointer to the number of tables in the current instance scope.</span></span>  
+ <span data-ttu-id="ea185-106">określoną Wskaźnik do liczby tabel w bieżącym zakresie wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="ea185-106">[out] A pointer to the number of tables in the current instance scope.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6a0b2-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="6a0b2-107">Requirements</span></span>  
- <span data-ttu-id="6a0b2-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6a0b2-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ea185-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ea185-107">Requirements</span></span>  
+ <span data-ttu-id="ea185-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ea185-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6a0b2-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6a0b2-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ea185-109">**Nagłówek:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="ea185-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6a0b2-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6a0b2-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ea185-110">**Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="ea185-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6a0b2-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a0b2-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ea185-111">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea185-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6a0b2-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6a0b2-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ea185-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ea185-112">See also</span></span>
 
-- [<span data-ttu-id="6a0b2-113">IMetaDataTables, interfejs</span><span class="sxs-lookup"><span data-stu-id="6a0b2-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="6a0b2-114">IMetaDataTables2, interfejs</span><span class="sxs-lookup"><span data-stu-id="6a0b2-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="ea185-113">IMetaDataTables, interfejs</span><span class="sxs-lookup"><span data-stu-id="ea185-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="ea185-114">IMetaDataTables2, interfejs</span><span class="sxs-lookup"><span data-stu-id="ea185-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

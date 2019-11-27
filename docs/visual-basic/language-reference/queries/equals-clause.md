@@ -1,5 +1,5 @@
 ---
-title: Equals — Klauzula
+title: Equals, klauzula
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Equals
@@ -13,16 +13,16 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335394"
 ---
-# <a name="equals-clause-visual-basic"></a><span data-ttu-id="2ee4c-102">Equals — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ee4c-102">Equals Clause (Visual Basic)</span></span>
-<span data-ttu-id="2ee4c-103">Compares keys from collections being joined.</span><span class="sxs-lookup"><span data-stu-id="2ee4c-103">Compares keys from collections being joined.</span></span>  
+# <a name="equals-clause-visual-basic"></a><span data-ttu-id="84b3d-102">Equals — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="84b3d-102">Equals Clause (Visual Basic)</span></span>
+<span data-ttu-id="84b3d-103">Porównuje klucze z połączonych kolekcji.</span><span class="sxs-lookup"><span data-stu-id="84b3d-103">Compares keys from collections being joined.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2ee4c-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="2ee4c-104">Remarks</span></span>  
- <span data-ttu-id="2ee4c-105">The `Equals` keyword is used in the following contexts:</span><span class="sxs-lookup"><span data-stu-id="2ee4c-105">The `Equals` keyword is used in the following contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="84b3d-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="84b3d-104">Remarks</span></span>  
+ <span data-ttu-id="84b3d-105">Słowo kluczowe `Equals` jest używane w następujących kontekstach:</span><span class="sxs-lookup"><span data-stu-id="84b3d-105">The `Equals` keyword is used in the following contexts:</span></span>  
   
- [<span data-ttu-id="2ee4c-106">Group Join, klauzula</span><span class="sxs-lookup"><span data-stu-id="2ee4c-106">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="84b3d-106">Group Join, klauzula</span><span class="sxs-lookup"><span data-stu-id="84b3d-106">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
- [<span data-ttu-id="2ee4c-107">Join, klauzula</span><span class="sxs-lookup"><span data-stu-id="2ee4c-107">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="84b3d-107">Join, klauzula</span><span class="sxs-lookup"><span data-stu-id="84b3d-107">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
   
-## <a name="see-also"></a><span data-ttu-id="2ee4c-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2ee4c-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84b3d-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="84b3d-108">See also</span></span>
 
-- [<span data-ttu-id="2ee4c-109">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="2ee4c-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="84b3d-109">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="84b3d-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

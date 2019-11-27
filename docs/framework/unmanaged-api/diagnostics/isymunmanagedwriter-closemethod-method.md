@@ -22,22 +22,22 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428103"
 ---
-# <a name="isymunmanagedwriterclosemethod-method"></a><span data-ttu-id="f9b27-102">ISymUnmanagedWriter::CloseMethod — Metoda</span><span class="sxs-lookup"><span data-stu-id="f9b27-102">ISymUnmanagedWriter::CloseMethod Method</span></span>
-<span data-ttu-id="f9b27-103">Closes the current method.</span><span class="sxs-lookup"><span data-stu-id="f9b27-103">Closes the current method.</span></span> <span data-ttu-id="f9b27-104">Once a method is closed, no more symbols can be defined within it.</span><span class="sxs-lookup"><span data-stu-id="f9b27-104">Once a method is closed, no more symbols can be defined within it.</span></span>  
+# <a name="isymunmanagedwriterclosemethod-method"></a><span data-ttu-id="bc24e-102">ISymUnmanagedWriter::CloseMethod — Metoda</span><span class="sxs-lookup"><span data-stu-id="bc24e-102">ISymUnmanagedWriter::CloseMethod Method</span></span>
+<span data-ttu-id="bc24e-103">Zamyka bieżącą metodę.</span><span class="sxs-lookup"><span data-stu-id="bc24e-103">Closes the current method.</span></span> <span data-ttu-id="bc24e-104">Po zamknięciu metody nie można definiować więcej symboli.</span><span class="sxs-lookup"><span data-stu-id="bc24e-104">Once a method is closed, no more symbols can be defined within it.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f9b27-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="f9b27-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bc24e-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="bc24e-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT CloseMethod();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="f9b27-106">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="f9b27-106">Return Value</span></span>  
- <span data-ttu-id="f9b27-107">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="f9b27-107">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bc24e-106">Wartość zwrócona</span><span class="sxs-lookup"><span data-stu-id="bc24e-106">Return Value</span></span>  
+ <span data-ttu-id="bc24e-107">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="bc24e-107">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f9b27-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f9b27-108">Requirements</span></span>  
- <span data-ttu-id="f9b27-109">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f9b27-109">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bc24e-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="bc24e-108">Requirements</span></span>  
+ <span data-ttu-id="bc24e-109">**Nagłówek:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="bc24e-109">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f9b27-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f9b27-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bc24e-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bc24e-110">See also</span></span>
 
-- [<span data-ttu-id="f9b27-111">ISymUnmanagedWriter, interfejs</span><span class="sxs-lookup"><span data-stu-id="f9b27-111">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="f9b27-112">OpenMethod, metoda</span><span class="sxs-lookup"><span data-stu-id="f9b27-112">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+- [<span data-ttu-id="bc24e-111">ISymUnmanagedWriter, interfejs</span><span class="sxs-lookup"><span data-stu-id="bc24e-111">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="bc24e-112">OpenMethod, metoda</span><span class="sxs-lookup"><span data-stu-id="bc24e-112">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

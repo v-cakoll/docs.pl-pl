@@ -9,10 +9,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347687"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="ec18f-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ec18f-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
-<span data-ttu-id="ec18f-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span><span class="sxs-lookup"><span data-stu-id="ec18f-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="ec18f-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span><span class="sxs-lookup"><span data-stu-id="ec18f-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="70175-102">Instrukcje: zapytanie o pliki o określonym atrybucie lub nazwie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="70175-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
+<span data-ttu-id="70175-103">Ten przykład pokazuje, jak znaleźć wszystkie pliki, które mają określone rozszerzenie nazwy pliku (na przykład ". txt") w określonym drzewie katalogów.</span><span class="sxs-lookup"><span data-stu-id="70175-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="70175-104">Przedstawiono w nim również, jak zwrócić najnowszy lub najstarszy plik w drzewie na podstawie czasu utworzenia.</span><span class="sxs-lookup"><span data-stu-id="70175-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ec18f-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="ec18f-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="70175-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="70175-105">Example</span></span>  
   
 ```vb  
 Module FindFileByExtension  
@@ -60,10 +60,10 @@ Module FindFileByExtension
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ec18f-106">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="ec18f-106">Compiling the Code</span></span>  
-<span data-ttu-id="ec18f-107">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span><span class="sxs-lookup"><span data-stu-id="ec18f-107">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="70175-106">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="70175-106">Compiling the Code</span></span>  
+<span data-ttu-id="70175-107">Utwórz projekt aplikacji konsolowej VB.NET z instrukcją `Imports` dla przestrzeni nazw System. LINQ.</span><span class="sxs-lookup"><span data-stu-id="70175-107">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="ec18f-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ec18f-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="70175-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="70175-108">See also</span></span>
 
-- [<span data-ttu-id="ec18f-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ec18f-109">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [<span data-ttu-id="ec18f-110">LINQ and File Directories (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ec18f-110">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="70175-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="70175-109">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="70175-110">LINQ i katalogi plików (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="70175-110">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

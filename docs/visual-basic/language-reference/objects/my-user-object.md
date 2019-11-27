@@ -12,18 +12,18 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350638"
 ---
-# <a name="myuser-object"></a><span data-ttu-id="e0885-102">My.User — Obiekt</span><span class="sxs-lookup"><span data-stu-id="e0885-102">My.User Object</span></span>
-<span data-ttu-id="e0885-103">Provides access to information about the current user.</span><span class="sxs-lookup"><span data-stu-id="e0885-103">Provides access to information about the current user.</span></span>  
+# <a name="myuser-object"></a><span data-ttu-id="9f235-102">My.User — Obiekt</span><span class="sxs-lookup"><span data-stu-id="9f235-102">My.User Object</span></span>
+<span data-ttu-id="9f235-103">Zapewnia dostęp do informacji o bieżącym użytkowniku.</span><span class="sxs-lookup"><span data-stu-id="9f235-103">Provides access to information about the current user.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e0885-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e0885-104">Remarks</span></span>  
- <span data-ttu-id="e0885-105">For information about the methods and properties of the `My.User` object, see <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e0885-105">For information about the methods and properties of the `My.User` object, see <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9f235-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="9f235-104">Remarks</span></span>  
+ <span data-ttu-id="9f235-105">Aby uzyskać informacje o metodach i właściwościach obiektu `My.User`, zobacz <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="9f235-105">For information about the methods and properties of the `My.User` object, see <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.</span></span>  
   
- <span data-ttu-id="e0885-106">For more information, see [Accessing User Data](../../../visual-basic/developing-apps/programming/accessing-user-data.md).</span><span class="sxs-lookup"><span data-stu-id="e0885-106">For more information, see [Accessing User Data](../../../visual-basic/developing-apps/programming/accessing-user-data.md).</span></span>  
+ <span data-ttu-id="9f235-106">Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do danych użytkownika](../../../visual-basic/developing-apps/programming/accessing-user-data.md).</span><span class="sxs-lookup"><span data-stu-id="9f235-106">For more information, see [Accessing User Data](../../../visual-basic/developing-apps/programming/accessing-user-data.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e0885-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e0885-107">Requirements</span></span>  
- <span data-ttu-id="e0885-108">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="e0885-108">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f235-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9f235-107">Requirements</span></span>  
+ <span data-ttu-id="9f235-108">**Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)</span><span class="sxs-lookup"><span data-stu-id="9f235-108">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0885-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e0885-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9f235-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9f235-109">See also</span></span>
 
 - <xref:System.Security.Principal.IPrincipal>
 - <xref:System.Threading.Thread.CurrentPrincipal%2A>

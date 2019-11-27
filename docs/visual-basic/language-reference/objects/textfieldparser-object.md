@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350317"
 ---
 # <a name="textfieldparser-object"></a>TextFieldParser — Obiekt
-Provides methods and properties for parsing structured text files.  
+Zapewnia metody i właściwości do analizowania strukturalnych plików tekstowych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,13 +23,13 @@ Public Class TextFieldParser
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- For information about the methods and properties of the `TextFieldParser` object, see <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.  
+ Aby uzyskać informacje o metodach i właściwościach obiektu `TextFieldParser`, zobacz <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.  
   
- For more information, see [Reading from Files](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).  
+ Aby uzyskać więcej informacji, zobacz [odczytywanie z plików](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** <xref:Microsoft.VisualBasic.FileIO>  
+ **Przestrzeń nazw:** <xref:Microsoft.VisualBasic.FileIO>  
   
- **Class:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
+ **Klasa:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)

@@ -1,6 +1,6 @@
 ---
-title: .NET Core Runtime IDentifier (RID) catalog
-description: Learn about the Runtime IDentifier (RID) and how RIDs are used in .NET Core.
+title: Wykaz identyfikatorów środowiska uruchomieniowego platformy .NET Core (RID)
+description: Dowiedz się więcej o identyfikatorze środowiska uruchomieniowego (RID) i sposobie używania identyfikatorów RID w programie .NET Core.
 ms.date: 02/22/2019
 ms.openlocfilehash: f90aabf0d10ce61dc10fcd952d66ca00e66d282d
 ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
@@ -9,13 +9,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428739"
 ---
-# <a name="net-core-rid-catalog"></a>.NET Core RID Catalog
+# <a name="net-core-rid-catalog"></a>Katalog programu .NET Core RID
 
-RID is short for *Runtime IDentifier*. RID values are used to identify target platforms where the application runs.
-They're used by .NET packages to represent platform-specific assets in NuGet packages. The following values are examples of RIDs: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`, or `osx.10.12-x64`.
-For the packages with native dependencies, the RID designates on which platforms the package can be restored.
+Identyfikator RID jest krótki dla *identyfikatora środowiska uruchomieniowego*. Wartości identyfikatorów RID służą do identyfikowania platform docelowych, w których jest uruchamiana aplikacja.
+Są one używane przez pakiety .NET do reprezentowania zasobów specyficznych dla platformy w pakietach NuGet. Poniżej przedstawiono przykłady identyfikatorów RID: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`lub `osx.10.12-x64`.
+W przypadku pakietów z natywnymi zależnościami identyfikator RID określa platformy, na których można przywrócić pakiet.
 
-A single RID can be set in the `<RuntimeIdentifier>` element of your project file. Multiple RIDs can be defined as a semicolon-delimited list in the project file's `<RuntimeIdentifiers>` element. They're also used via the `--runtime` option with the following [.NET Core CLI commands](./tools/index.md):
+Pojedynczy identyfikator RID można ustawić w elemencie `<RuntimeIdentifier>` w pliku projektu. Wiele identyfikatorów RID można zdefiniować jako listę rozdzielaną średnikami w elemencie `<RuntimeIdentifiers>` pliku projektu. Są one również używane za pośrednictwem opcji `--runtime` z następującymi [poleceniami interfejs wiersza polecenia platformy .NET Core](./tools/index.md):
 
 - [dotnet build](./tools/dotnet-build.md)
 - [dotnet clean](./tools/dotnet-clean.md)
@@ -25,26 +25,26 @@ A single RID can be set in the `<RuntimeIdentifier>` element of your project fil
 - [dotnet run](./tools/dotnet-run.md)
 - [dotnet store](./tools/dotnet-store.md)
 
-RIDs that represent concrete operating systems usually follow this pattern: `[os].[version]-[architecture]-[additional qualifiers]` where:
+Identyfikatory RID reprezentujące konkretne systemy operacyjne zwykle są zgodne z tym wzorcem: `[os].[version]-[architecture]-[additional qualifiers]`, gdzie:
 
-- `[os]` is the operating/platform system moniker. For example, `ubuntu`.
+- `[os]` jest Moniker systemu operacyjnego/platformy. Na przykład `ubuntu`.
 
-- `[version]` is the operating system version in the form of a dot-separated (`.`) version number. For example, `15.10`.
+- `[version]` jest wersją systemu operacyjnego w postaci numeru wersji oddzielonej kropką (`.`). Na przykład `15.10`.
 
-  - The version **shouldn't** be marketing versions, as they often represent multiple discrete versions of the operating system with varying platform API surface area.
+  - Wersja nie **powinna** być wersją marketingową, ponieważ często reprezentuje wiele dyskretnych wersji systemu operacyjnego z różnymi obszarami powierzchni interfejsu API platformy.
 
-- `[architecture]` is the processor architecture. For example: `x86`, `x64`, `arm`, or `arm64`.
+- `[architecture]` jest architekturą procesora. Na przykład: `x86`, `x64`, `arm`lub `arm64`.
 
-- `[additional qualifiers]` further differentiate different platforms. For example: `aot`.
+- `[additional qualifiers]` dalsze odróżnianie różnych platform. Na przykład: `aot`.
 
-## <a name="rid-graph"></a>RID graph
+## <a name="rid-graph"></a>Wykres RID
 
-The RID graph or runtime fallback graph is a list of RIDs that are compatible with each other. The RIDs are defined in the [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) package. You can see the list of supported RIDs and the RID graph in the [*runtime.json*](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) file, which is located at the CoreFX repo. In this file, you can see that all RIDs, except for the base one, contain an `"#import"` statement. These statements indicate compatible RIDs.
+Wykres RID lub wykres rezerwowy środowiska uruchomieniowego to lista identyfikatorów RID, które są zgodne ze sobą. Identyfikatory RID są zdefiniowane w pakiecie [Microsoft. servicecore. platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) . Listę obsługiwanych identyfikatorów RID i Graf RID można znaleźć w pliku [*Runtime. JSON*](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) , który znajduje się w repozytorium CoreFX. W tym pliku można zobaczyć, że wszystkie identyfikatory RID, z wyjątkiem podstawowego, zawierają instrukcję `"#import"`. Te instrukcje wskazują zgodne identyfikatory RID.
 
-When NuGet restores packages, it tries to find an exact match for the specified runtime.
-If an exact match is not found, NuGet walks back the graph until it finds the closest compatible system according to the RID graph.
+Gdy pakiet NuGet przywraca pakiety, próbuje znaleźć dokładne dopasowanie dla określonego środowiska uruchomieniowego.
+Jeśli dokładne dopasowanie nie zostanie znalezione, pakiet NuGet przeprowadzi ponownie wykres do momentu znalezienia najbliższego zgodnego systemu zgodnie z wykresem RID.
 
-The following example is the actual entry for the `osx.10.12-x64` RID:
+Poniższy przykład to rzeczywisty wpis dla `osx.10.12-x64` RID:
 
 ```json
 "osx.10.12-x64": {
@@ -52,9 +52,9 @@ The following example is the actual entry for the `osx.10.12-x64` RID:
 }
 ```
 
-The above RID specifies that `osx.10.12-x64` imports `osx.10.11-x64`. So, when NuGet restores packages, it tries to find an exact match for  `osx.10.12-x64` in the package. If NuGet cannot find the specific runtime, it can restore packages that specify `osx.10.11-x64` runtimes, for example.
+Powyższy identyfikator RID określa, że `osx.10.12-x64` importuje `osx.10.11-x64`. W związku z tym, gdy program NuGet przywraca pakiety, próbuje znaleźć dokładne dopasowanie dla `osx.10.12-x64` w pakiecie. Jeśli NuGet nie może znaleźć określonego środowiska uruchomieniowego, można przywrócić pakiety, które określają `osx.10.11-x64` środowiska uruchomieniowe, na przykład.
 
-The following example shows a slightly bigger RID graph also defined in the *runtime.json*  file:
+Poniższy przykład pokazuje nieco większego wykresu RID, zdefiniowany również w pliku *Runtime. JSON* :
 
 ```
     win7-x64    win7-x86
@@ -68,85 +68,85 @@ The following example shows a slightly bigger RID graph also defined in the *run
             any
 ```
 
-All RIDs eventually map back to the root `any` RID.
+Wszystkie identyfikatory RID ostatecznie zamapują się z powrotem do katalogu głównego `any` RID.
 
-There are some considerations about RIDs that you have to keep in mind when working with them:
+Istnieją pewne kwestie dotyczące identyfikatorów RID, które należy wziąć pod uwagę podczas pracy z nimi:
 
-- RIDs are **opaque strings** and should be treated as black boxes.
-- Don't build RIDs programmatically.
-- Use RIDs that are already defined for the platform.
-- The RIDs need to be specific, so don't assume anything from the actual RID value.
+- Identyfikatory RID są **nieprzezroczystymi ciągami** i powinny być traktowane jak czarne pola.
+- Nie Kompiluj identyfikatorów RID programowo.
+- Użyj identyfikatorów RID, które są już zdefiniowane dla platformy.
+- Identyfikatory RID muszą być specyficzne, więc nie założono niczego z rzeczywistej wartości RID.
 
-## <a name="using-rids"></a>Using RIDs
+## <a name="using-rids"></a>Korzystanie z identyfikatorów RID
 
-To be able to use RIDs, you have to know which RIDs exist. New values are added regularly to the platform.
-For the latest and complete version, see the [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo.
+Aby móc korzystać z identyfikatorów RID, musisz wiedzieć, które istniejące identyfikatory RID istnieją. Nowe wartości są regularnie dodawane do platformy.
+Aby uzyskać najnowszą i pełną wersję, zobacz plik [Runtime. JSON](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) w repozytorium CoreFX.
 
-.NET Core 2.0 SDK introduces the concept of portable RIDs. They are new values added to the RID graph that aren't tied to a specific version or OS distribution and are the preferred choice when using .NET Core 2.0 and higher. They're particularly useful when dealing with multiple Linux distros since most distribution RIDs are mapped to the portable RIDs.
+Zestaw SDK platformy .NET Core 2,0 wprowadza koncepcję przenośnych identyfikatorów RID. Są to nowe wartości dodawane do grafu identyfikatorów RID, które nie są powiązane z określoną wersją lub dystrybucją systemu operacyjnego i są preferowanym wyborem w przypadku korzystania z platformy .NET Core 2,0 i nowszych. Są one szczególnie przydatne w przypadku korzystania z wielu dystrybucje systemu Linux, ponieważ większość identyfikatorów RID dystrybucji jest mapowanych na przenośne identyfikatory RID.
 
-The following list shows a small subset of the most common RIDs used for each OS.
+Na poniższej liście przedstawiono mały podzestaw najbardziej typowych identyfikatorów RID użytych dla każdego systemu operacyjnego.
 
-## <a name="windows-rids"></a>Windows RIDs
+## <a name="windows-rids"></a>Identyfikatory RID systemu Windows
 
-Only common values are listed. For the latest and complete version, see the [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo.
+Wyświetlane są tylko typowe wartości. Aby uzyskać najnowszą i pełną wersję, zobacz plik [Runtime. JSON](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) w repozytorium CoreFX.
 
-- Portable (.NET Core 2.0 or later versions)
+- Przenośne (.NET Core 2,0 lub nowsze wersje)
   - `win-x64`
   - `win-x86`
   - `win-arm`
   - `win-arm64`
-- Windows 7 / Windows Server 2008 R2
+- Windows 7/Windows Server 2008 R2
   - `win7-x64`
   - `win7-x86`
-- Windows 8.1 / Windows Server 2012 R2
+- Windows 8.1/Windows Server 2012 R2
   - `win81-x64`
   - `win81-x86`
   - `win81-arm`
-- Windows 10 / Windows Server 2016
+- Windows 10/Windows Server 2016
   - `win10-x64`
   - `win10-x86`
   - `win10-arm`
   - `win10-arm64`
 
-See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-windows) for more information.
+Aby uzyskać więcej informacji [, zobacz zależności i wymagania dotyczące platformy .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-windows) .
 
-## <a name="linux-rids"></a>Linux RIDs
+## <a name="linux-rids"></a>Identyfikatory RID systemu Linux
 
-Only common values are listed. For the latest and complete version, see the [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo. Devices running a distribution not listed below may work with one of the Portable RIDs. For example, Raspberry Pi devices running a Linux distribution not listed can be targeted with `linux-arm`.
+Wyświetlane są tylko typowe wartości. Aby uzyskać najnowszą i pełną wersję, zobacz plik [Runtime. JSON](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) w repozytorium CoreFX. Urządzenia korzystające z dystrybucji niewymienionej poniżej mogą działać z jednym z przenośnych identyfikatorów RID. Na przykład urządzenia Raspberry Pi z dystrybucją systemu Linux, których nie ma na liście, mogą być przeznaczone dla `linux-arm`.
 
-- Portable (.NET Core 2.0 or later versions)
-  - `linux-x64` (Most desktop distributions like CentOS, Debian, Fedora, Ubuntu and derivatives)
-  - `linux-musl-x64` (Lightweight distributions using [musl](https://wiki.musl-libc.org/projects-using-musl.html) like Alpine Linux)
-  - `linux-arm` (Linux distributions running on ARM like Raspberry Pi)
+- Przenośne (.NET Core 2,0 lub nowsze wersje)
+  - `linux-x64` (większość dystrybucji komputerów, takich jak CentOS, Debian, Fedora, Ubuntu i pochodne)
+  - `linux-musl-x64` (uproszczona dystrybucja przy użyciu [MUSL](https://wiki.musl-libc.org/projects-using-musl.html) , na przykład Alpine Linux)
+  - `linux-arm` (dystrybucje systemu Linux działające na ARM, takie jak Raspberry Pi)
 - Red Hat Enterprise Linux
-  - `rhel-x64` (Superseded by `linux-x64` for RHEL above version 6)
-  - `rhel.6-x64` (.NET Core 2.0 or later versions)
-- Tizen (.NET Core 2.0 or later versions)
+  - `rhel-x64` (zastąpione przez `linux-x64` dla RHEL powyżej wersji 6)
+  - `rhel.6-x64` (.NET Core 2,0 lub nowsze wersje)
+- Tizen (.NET Core 2,0 lub nowszy)
   - `tizen`
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-linux) for more information.
+Aby uzyskać więcej informacji [, zobacz zależności i wymagania dotyczące platformy .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-linux) .
 
-## <a name="macos-rids"></a>macOS RIDs
+## <a name="macos-rids"></a>macOS RID
 
-macOS RIDs use the older "OSX" branding. Only common values are listed. For the latest and complete version, see the [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo.
+macOS RID używają starszej marki "OSX". Wyświetlane są tylko typowe wartości. Aby uzyskać najnowszą i pełną wersję, zobacz plik [Runtime. JSON](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) w repozytorium CoreFX.
 
-- Portable (.NET Core 2.0 or later versions)
-  - `osx-x64` (Minimum OS version is macOS 10.12 Sierra)
-- macOS 10.10  Yosemite
+- Przenośne (.NET Core 2,0 lub nowsze wersje)
+  - `osx-x64` (minimalna wersja systemu operacyjnego to macOS 10,12 Sierra)
+- macOS 10,10, Yosemite
   - `osx.10.10-x64`
-- macOS 10.11 El Capitan
+- macOS 10,11 El Capitan
   - `osx.10.11-x64`
-- macOS 10.12 Sierra (.NET Core 1.1 or later versions)
+- macOS 10,12 Sierra (wersja .NET Core 1,1 lub nowsza)
   - `osx.10.12-x64`
-- macOS 10.13 High Sierra (.NET Core 1.1 or later versions)
+- macOS 10,13 wysoka Sierra (.NET Core 1,1 lub nowsze wersje)
   - `osx.10.13-x64`
-- macOS 10.14 Mojave (.NET Core 1.1 or later versions)
+- macOS 10,14 Mojave (wersja .NET Core 1,1 lub nowsza)
   - `osx.10.14-x64`
 
-See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-macos) for more information.
+Aby uzyskać więcej informacji [, zobacz zależności i wymagania dotyczące platformy .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-macos) .
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Runtime IDs](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/readme.md)
+- [Identyfikatory środowiska uruchomieniowego](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/readme.md)

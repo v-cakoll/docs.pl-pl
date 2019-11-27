@@ -14,23 +14,23 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444616"
 ---
 # <a name="metadata-structures"></a>Metadane — Struktury
-This section describes the unmanaged structures that the metadata API uses.  
+W tej sekcji opisano niezarządzane struktury używane przez interfejs API metadanych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  ASSEMBLYMETADATA  
- Stores assembly metadata for later use.  
+ Przechowuje metadane zestawu do późniejszego użycia.  
   
  [COR_FIELD_OFFSET, struktura](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)  
- Stores the offset, within a class, of the specified field.  
+ Zapisuje przesunięcie w obrębie klasy w określonym polu.  
   
  [COR_NATIVE_LINK, struktura](../../../../docs/framework/unmanaged-api/metadata/cor-native-link-structure.md)  
- Contains information that is used to link native code.  
+ Zawiera informacje, które są używane do łączenia kodu natywnego.  
   
  [CVStruct, struktura](../../../../docs/framework/unmanaged-api/metadata/cvstruct-structure.md)  
- Contains information that is used when installing a module or a composite image.  
+ Zawiera informacje, które są używane podczas instalowania modułu lub obrazu złożonego.  
   
  [OSINFO, struktura](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)  
- Contains information about the operating system.  
+ Zawiera informacje o systemie operacyjnym.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

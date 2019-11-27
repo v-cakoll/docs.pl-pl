@@ -16,36 +16,36 @@ ms.locfileid: "74345573"
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Porady: wyświetlanie dostępnych portów seryjnych w Visual Basic
 
-This topic describes how to use `My.Computer.Ports` to show the available serial ports of the computer in Visual Basic.  
+W tym temacie opisano, jak używać `My.Computer.Ports` do wyświetlania dostępnych portów szeregowych komputera w Visual Basic.  
   
- To allow a user to select which port to use, the names of the serial ports are placed in a <xref:System.Windows.Forms.ListBox> control.  
+ Aby umożliwić użytkownikowi wybranie portu do użycia, nazwy portów szeregowych są umieszczane w kontrolce <xref:System.Windows.Forms.ListBox>.  
   
 ## <a name="example"></a>Przykład  
 
- This example loops over all the strings that the `My.Computer.Ports.SerialPortNames` property returns. These strings are the names of the available serial ports on the computer.  
+ Ten przykład pętli dla wszystkich ciągów zwracanych przez właściwość `My.Computer.Ports.SerialPortNames`. Te ciągi są nazwami dostępnych portów szeregowych na komputerze.  
   
- Typically, a user selects which serial port the application should use from the list of available ports. In this example, the serial port names are stored in a <xref:System.Windows.Forms.ListBox> control. For more information, see [ListBox Control](../../../../framework/winforms/controls/listbox-control-windows-forms.md).  
+ Zazwyczaj użytkownik wybiera port szeregowy, który ma być używany przez aplikację z listy dostępnych portów. W tym przykładzie nazwy portów szeregowych są przechowywane w kontrolce <xref:System.Windows.Forms.ListBox>. Aby uzyskać więcej informacji, zobacz [formant ListBox](../../../../framework/winforms/controls/listbox-control-windows-forms.md).  
   
  [!code-vb[VbVbalrMyComputer#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#45)]  
   
- This code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **Connectivity and Networking**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
+ Ten przykład kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu znajdują się one w obszarze **łączności i sieci**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
 
  Ten przykład wymaga:  
   
-- A project reference to System.Windows.Forms.dll.  
+- Odwołanie do projektu do System. Windows. Forms. dll.  
   
-- Access to the members of the <xref:System.Windows.Forms> namespace. Add an `Imports` statement if you are not fully qualifying member names in your code. For more information, see [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Dostęp do elementów członkowskich <xref:System.Windows.Forms> przestrzeni nazw. Dodaj instrukcję `Imports`, jeśli nie masz w pełni kwalifikowanej nazwy elementu członkowskiego w kodzie. Aby uzyskać więcej informacji, zobacz [Imports — Instrukcja (przestrzeń nazw i typ .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
-- That your form have a <xref:System.Windows.Forms.ListBox> control named `ListBox1`.  
+- Że formularz zawiera kontrolkę <xref:System.Windows.Forms.ListBox> o nazwie `ListBox1`.  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
+## <a name="robust-programming"></a>Skuteczne programowanie  
 
- You do not have to use the <xref:System.Windows.Forms.ListBox> control to display the available serial port names. Instead, you can use a <xref:System.Windows.Forms.ComboBox> or other control. If the application does not need a response from the user, you can use a <xref:System.Windows.Forms.TextBox> control to display the information.  
+ Nie trzeba używać kontrolki <xref:System.Windows.Forms.ListBox> do wyświetlania dostępnych nazw portów szeregowych. Zamiast tego można użyć <xref:System.Windows.Forms.ComboBox> lub innej kontrolki. Jeśli aplikacja nie potrzebuje odpowiedzi od użytkownika, można użyć kontrolki <xref:System.Windows.Forms.TextBox>, aby wyświetlić informacje.  
   
 > [!NOTE]
-> The port names returned by `My.Computer.Ports.SerialPortNames` may be incorrect when run on Windows 98. To prevent application errors, use exception handling, such as the `Try...Catch...Finally` statement or the `Using` statement, when using the port names to open ports.  
+> Nazwy portów zwracane przez `My.Computer.Ports.SerialPortNames` mogą być nieprawidłowe w przypadku uruchomienia w systemie Windows 98. Aby zapobiec błędom aplikacji, należy użyć obsługi wyjątków, na przykład instrukcji `Try...Catch...Finally` lub instrukcji `Using`, w przypadku używania nazw portów do otwierania portów.  
   
 ## <a name="see-also"></a>Zobacz także
 

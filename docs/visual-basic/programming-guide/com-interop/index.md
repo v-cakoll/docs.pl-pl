@@ -13,48 +13,48 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348005"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
-The Component Object Model (COM) allows an object to expose its functionality to other components and to host applications. Most of today's software includes COM objects. Although .NET assemblies are the best choice for new applications, you may at times need to employ COM objects. This section covers some of the issues associated with creating and using COM objects with Visual Basic.  
+Component Object Model (COM) umożliwia obiektowi uwidocznienie jego funkcjonalności innym składnikom i hostowanie aplikacji. Większość współczesnych oprogramowania obejmuje obiekty COM. Chociaż zestawy .NET najlepiej sprawdzają się w przypadku nowych aplikacji, może być konieczne korzystanie z obiektów COM. W tej sekcji omówiono niektóre problemy związane z tworzeniem i korzystaniem z obiektów COM przy użyciu Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wprowadzenie do usługi międzyoperacyjnej modelu COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
- Provides an overview of COM interoperability.  
+ Zawiera omówienie współdziałania z modelem COM.  
   
- [How to: Reference COM Objects from Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
- Covers how to add references to COM objects that have type libraries.  
+ [Instrukcje: odwoływanie się do obiektów COM z Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
+ Opisuje sposób dodawania odwołań do obiektów COM z bibliotekami typów.  
   
  [Instrukcje: praca z kontrolkami ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Demonstrates how to use existing ActiveX controls to add features to the Visual Studio Toolbox.  
+ Pokazuje, jak używać istniejących kontrolek ActiveX do dodawania funkcji do przybornika programu Visual Studio.  
   
  [Przewodnik: wywoływanie interfejsów API systemu Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
- Steps you through the process of calling the APIs that are part of the Windows operating system.  
+ Przeprowadzi Cię przez proces wywoływania interfejsów API, które są częścią systemu operacyjnego Windows.  
   
  [Instrukcje: wywoływanie interfejsów API systemu Windows](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
- Demonstrates how to define and call the `MessageBox` function in User32.dll.  
+ Pokazuje, jak definiować i wywoływać funkcję `MessageBox` w User32. dll.  
   
  [Instrukcje: wywoływanie funkcji Windows wykorzystującej typy bez znaku](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- Demonstrates how to call a Windows function that has a parameter of an unsigned type.  
+ Pokazuje, jak wywołać funkcję systemu Windows, która ma parametr typu bez znaku.  
   
- [Walkthrough: Creating COM Objects with Visual Basic](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- Steps you through the process of creating COM objects with and without the COM class template.  
+ [Przewodnik: Tworzenie obiektów COM za pomocą Visual Basic](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
+ Przeprowadzi Cię przez proces tworzenia obiektów COM z szablonem klasy COM i bez niego.  
   
  [Rozwiązywanie problemów związanych z współdziałaniem](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
- Covers some of the problems you may encounter when using COM.  
+ Obejmuje niektóre problemy, które mogą wystąpić podczas korzystania z modelu COM.  
   
  [Współdziałanie COM w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- Provides an overview of how to use COM objects and .NET Framework objects in the same application.  
+ Zawiera omówienie sposobów korzystania z obiektów COM i .NET Framework obiektów w tej samej aplikacji.  
   
  [Przewodnik: wdrażanie dziedziczenia z obiektami COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- Describes using existing COM objects as the basis for new objects.  
+ Opisuje używanie istniejących obiektów COM jako podstawy dla nowych obiektów.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Współdziałanie z kodem niezarządzanym](../../../framework/interop/index.md)  
- Describes interoperability services provided by the common language runtime.  
+ Opisuje usługi współdziałania udostępniane przez środowisko uruchomieniowe języka wspólnego.  
   
  [Udostępnianie składników COM programowi .NET Framework](../../../framework/interop/exposing-com-components.md)  
- Describes the process of calling COM types through COM interop.  
+ Opisuje proces wywoływania typów COM za pomocą międzyoperacyjności modelu COM.  
   
  [Udostępnianie składników .NET Framework modelowi COM](../../../framework/interop/exposing-dotnet-components-to-com.md)  
- Describes the preparation and use of managed types from COM.  
+ Opisuje przygotowanie i użycie typów zarządzanych z modelu COM.  
   
  [Stosowanie atrybutów międzyoperacyjności](../../../standard/native-interop/apply-interop-attributes.md)  
- Covers attributes you can use when working with unmanaged code.
+ Obejmuje atrybuty, których można używać podczas pracy z niezarządzanym kodem.

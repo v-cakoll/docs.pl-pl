@@ -10,22 +10,22 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204706"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF dla platformy .NET dla aplikacji do Sklepu Windows
-<xref:System.Composition?displayProperty=nameWithType> and its child namespaces contain types for developing extensible Windows 8.x Store apps with Managed Extensibility Framework (MEF). These namespaces are part of the [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] subset for the [!INCLUDE[win8](../../../includes/win8-md.md)] operating system.  
+<xref:System.Composition?displayProperty=nameWithType> i jej podrzędne przestrzenie nazw zawierają typy służące do opracowywania aplikacji ze sklepu Extensible Windows 8. x z Managed Extensibility Framework (MEF). Te przestrzenie nazw są częścią podzestawu [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] dla [!INCLUDE[win8](../../../includes/win8-md.md)] systemu operacyjnego.  
   
- These namespaces are not part of the core class library distributed with the .NET Framework. To install these namespaces, open your project in Visual Studio, choose **Manage NuGet Packages** from the **Project** menu, and search online for the Microsoft.Composition package.  
+ Te przestrzenie nazw nie są częścią podstawowej biblioteki klas dystrybuowanej z .NET Framework. Aby zainstalować te przestrzenie nazw, Otwórz projekt w programie Visual Studio, wybierz polecenie **Zarządzaj pakietami NuGet** z menu **projekt** i Wyszukaj w trybie online pakiet Microsoft. kompozycji.  
   
-- <xref:System.Composition?displayProperty=nameWithType> provides classes that constitute the core MEF for Windows 8.x Store apps.  
+- <xref:System.Composition?displayProperty=nameWithType> zawiera klasy, które stanowią podstawowe MEF dla aplikacji ze sklepu Windows 8. x.  
   
-- <xref:System.Composition.Convention?displayProperty=nameWithType> provides types that support using MEF with a convention-based configuration model.  
+- <xref:System.Composition.Convention?displayProperty=nameWithType> udostępnia typy obsługujące używanie MEF z modelem konfiguracji opartym na Konwencji.  
   
-- <xref:System.Composition.Hosting?displayProperty=nameWithType> provides MEF types that are useful to developers of host applications.  
+- <xref:System.Composition.Hosting?displayProperty=nameWithType> udostępnia typy MEF, które są przydatne dla deweloperów aplikacji hosta.  
   
-- <xref:System.Composition.Hosting.Core?displayProperty=nameWithType> provides MEF types used internally by the composition engine.  
+- <xref:System.Composition.Hosting.Core?displayProperty=nameWithType> zapewnia typy MEF używane wewnętrznie przez aparat kompozycji.  
   
- For more information about [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] and a list of namespaces and types that it contains, see [.NET for Windows Store apps overview](https://docs.microsoft.com/previous-versions/br230302(v=vs.110)).
+ Aby uzyskać więcej informacji na temat [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] i listę przestrzeni nazw i typów, które zawiera, zobacz temat [Omówienie programu .NET dla aplikacji do sklepu Windows](https://docs.microsoft.com/previous-versions/br230302(v=vs.110)).
   
 ## <a name="see-also"></a>Zobacz także
 
-- [.NET for Windows Store apps overview](https://docs.microsoft.com/previous-versions/br230302(v=vs.110))
-- [.NET for Windows Store apps – supported APIs](https://docs.microsoft.com/previous-versions/br230232(v=vs.110))
+- [Omówienie programu .NET dla aplikacji do sklepu Windows](https://docs.microsoft.com/previous-versions/br230302(v=vs.110))
+- [.NET dla aplikacji ze sklepu Windows — obsługiwane interfejsy API](https://docs.microsoft.com/previous-versions/br230232(v=vs.110))
 - [Managed Extensibility Framework (MEF)](index.md)

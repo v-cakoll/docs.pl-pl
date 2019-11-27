@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450188"
 ---
 # <a name="cornativelinkflags-enumeration"></a>CorNativeLinkFlags — Wyliczenie
-Provides flag values used by the linker when linking native code.  
+Dostarcza wartości flag używanych przez konsolidatora podczas łączenia kodu natywnego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,23 +36,23 @@ typedef enum
 } CorNativeLinkFlags;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`nlfNone`|Indicates no flags.|  
-|`nlfLastError`|Indicates a `setLastError` keyword.|  
-|`nlfNoMangle`|Indicates a `nomangle` keyword.|  
-|`nlfMaxValue`|Nie używany.|  
+|`nlfNone`|Oznacza brak flag.|  
+|`nlfLastError`|Wskazuje `setLastError` słowo kluczowe.|  
+|`nlfNoMangle`|Wskazuje `nomangle` słowo kluczowe.|  
+|`nlfMaxValue`|Nie jest używany.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

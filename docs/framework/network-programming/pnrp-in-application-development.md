@@ -10,14 +10,14 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428206"
 ---
 # <a name="pnrp-in-application-development"></a>PNRP w projektowaniu aplikacji
-In Windows Vista, networking applications can access name publication and resolution functions through a simplified PNRP application programming interface (API).  
+W systemie Windows Vista aplikacje sieciowe mogą uzyskać dostęp do funkcji publikowania i rozpoznawania nazw za pomocą uproszczonego interfejsu programowania aplikacji (API) protokołu PNRP.  
   
-## <a name="implementing-the-peer-name-resolution-protocol"></a>Implementing the Peer Name Resolution Protocol  
- With the simplified PNRP API, clouds are not explicitly specified to register the name and addresses; the PNRP component automatically determines the appropriate clouds to join and the addresses to publish within the clouds.  
+## <a name="implementing-the-peer-name-resolution-protocol"></a>Implementowanie protokołu rozpoznawania nazw równorzędnych  
+ W uproszczonym interfejsie API protokołu PNRP chmury nie są jawnie określone w celu zarejestrowania nazwy i adresów; składnik PNRP automatycznie określa odpowiednie chmury do przyłączenia i adresy do opublikowania w chmurach.  
   
- For highly simplified PNRP name resolution in Windows Vista, PNRP names are now integrated into the getaddrinfo() Windows Sockets function. To use PNRP to resolve a name to an IPv6 address, applications can use the getaddrinfo() function to resolve the Fully Qualified Domain Name (FQDN) name.prnp.net, in which name is peer name being resolved. The pnrp.net domain is a reserved domain in Windows Vista for PNRP name resolution.  
+ W przypadku wysoce uproszczonego rozpoznawania nazw PNRP w systemie Windows Vista nazwy PNRP są teraz zintegrowane z funkcją Windows Sockets getaddrinfo (). Aby użyć protokołu PNRP do rozpoznawania nazwy na adres IPv6, aplikacje mogą używać funkcji getaddrinfo () do rozpoznawania w pełni kwalifikowanej nazwy domeny (FQDN) name.prnp.net, w której nazwa jest rozpoznawana jako nazwa elementu równorzędnego. Domena pnrp.net jest domeną zastrzeżoną w systemie Windows Vista do rozpoznawania nazw PNRP.  
   
- Message passing between PeerToPeer applications is still handled by underlying architectures such as PeerChannel and WCF [Large Data and Streaming](../wcf/feature-details/large-data-and-streaming.md).  
+ Przekazywanie komunikatów między aplikacjami PeerToPeer jest nadal obsługiwane przez bazowe architektury, takie jak PeerChannel i [dane dużych danych WCF i przesyłania strumieniowego](../wcf/feature-details/large-data-and-streaming.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

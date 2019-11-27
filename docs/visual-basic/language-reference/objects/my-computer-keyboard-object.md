@@ -12,19 +12,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347199"
 ---
 # <a name="mycomputerkeyboard-object"></a>My.Computer.Keyboard — Obiekt
-Provides properties for accessing the current state of the keyboard, such as what keys are currently pressed, and provides a method to send keystrokes to the active window.  
+Zapewnia właściwości do uzyskiwania dostępu do bieżącego stanu klawiatury, takie jak klucze są aktualnie naciśnięte i zapewnia metodę wysyłania naciśnięć klawiszy do aktywnego okna.  
   
 ## <a name="remarks"></a>Uwagi  
- For information about the methods and properties of the `My.Computer.Keyword` object, see <xref:Microsoft.VisualBasic.Devices.Keyboard>.  
+ Aby uzyskać informacje o metodach i właściwościach obiektu `My.Computer.Keyword`, zobacz <xref:Microsoft.VisualBasic.Devices.Keyboard>.  
   
- For more information, see [Accessing the Keyboard](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
+ Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do klawiatury](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
+ **Przestrzeń nazw:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Keyboard>  
+ **Klasa:** <xref:Microsoft.VisualBasic.Devices.Keyboard>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

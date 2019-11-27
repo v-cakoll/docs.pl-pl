@@ -14,37 +14,37 @@ ms.locfileid: "74348774"
 ---
 # <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Porady: znajdowanie podkatalogów z określonym wzorcem w Visual Basic
 
-The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> method returns a read-only collection of strings representing the path names for the subdirectories in a directory. You can use the `wildCards` parameter to specify a specific pattern. If you would like to include the contents of subdirectories in the search, set the `searchType` parameter to `SearchOption.SearchAllSubDirectories`.
+Metoda <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> zwraca kolekcję ciągów reprezentujących nazwy ścieżek dla podkatalogów w katalogu. Aby określić konkretny wzorzec, można użyć parametru `wildCards`. Jeśli chcesz uwzględnić zawartość podkatalogów w wyszukiwaniu, ustaw parametr `searchType` na `SearchOption.SearchAllSubDirectories`.
 
-An empty collection is returned if no directories matching the specified pattern are found.
+Po znalezieniu katalogów pasujących do określonego wzorca zwracana jest pusta kolekcja.
 
-## <a name="to-find-subdirectories-with-a-specific-pattern"></a>To find subdirectories with a specific pattern
+## <a name="to-find-subdirectories-with-a-specific-pattern"></a>Aby znaleźć podkatalogi z określonym wzorcem
 
-Use the `GetDirectories` method, supplying the name and path of the directory you want to search. The following example returns all the directories in the directory structure that contain the word "Logs" in their name, and adds them to `ListBox1`.
+Użyj metody `GetDirectories`, podając nazwę i ścieżkę do katalogu, który chcesz przeszukać. Poniższy przykład zwraca wszystkie katalogi w strukturze katalogów, które zawierają wyraz "Logs" w nazwie i dodaje je do `ListBox1`.
 
 [!code-vb[VbVbcnFileAccess#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnFileAccess/VB/Class1.vb#1)]
 
-## <a name="robust-programming"></a>Niezawodne programowanie
+## <a name="robust-programming"></a>Skuteczne programowanie
 
 Następujące warunki mogą spowodować wyjątek:
 
-- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).
+- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (rozpoczyna się od \\\\.\\) (<xref:System.ArgumentException>).
 
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).
+- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).
 
-- One or more of the specified wildcard characters is `Nothing`, an empty string, or contains only spaces (<xref:System.ArgumentNullException>).
+- Co najmniej jeden z określonych symboli wieloznacznych jest `Nothing`, pusty ciąg lub zawiera tylko spacje (<xref:System.ArgumentNullException>).
 
-- `directory` does not exist (<xref:System.IO.DirectoryNotFoundException>).
+- `directory` nie istnieje (<xref:System.IO.DirectoryNotFoundException>).
 
-- `directory` points to an existing file (<xref:System.IO.IOException>).
+- `directory` wskazuje istniejący plik (<xref:System.IO.IOException>).
 
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).
 
-- A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).
+- Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).
 
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).
 
-- The user lacks necessary permissions (<xref:System.UnauthorizedAccessException>).
+- Użytkownik nie ma wymaganych uprawnień (<xref:System.UnauthorizedAccessException>).
 
 ## <a name="see-also"></a>Zobacz także
 

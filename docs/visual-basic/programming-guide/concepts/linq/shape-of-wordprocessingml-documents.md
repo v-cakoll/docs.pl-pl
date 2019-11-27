@@ -9,18 +9,18 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350604"
 ---
-# <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Shape of WordprocessingML Documents (Visual Basic)
-This topic introduces the XML shape of a WordprocessingML document.  
+# <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Kształt dokumentów WordprocessingML (Visual Basic)
+Ten temat zawiera wprowadzenie do kształtu XML dokumentu WordprocessingML.  
   
-## <a name="microsoft-office-formats"></a>Microsoft Office Formats  
- The native file format for the 2007 Microsoft Office system is Office Open XML (commonly called Open XML). Open XML is an XML-based format that an Ecma standard and is currently going through the ISO-IEC standards process. The markup language for word processing files within Open XML is called WordprocessingML. This tutorial uses WordprocessingML source files as input for the examples.  
+## <a name="microsoft-office-formats"></a>Formaty Microsoft Office  
+ Format pliku natywnego dla systemu 2007 Microsoft Office to Office Open XML (często nazywanego Open XML). Open XML jest formatem opartym na formacie XML, który Standard ECMA i jest obecnie przechodzący przez proces standardów ISO-IEC. Język znaczników dla plików edytora tekstu w formacie Open XML ma nazwę WordprocessingML. Ten samouczek używa plików źródłowych WordprocessingML jako danych wejściowych dla przykładów.  
   
- If you are using Microsoft Office 2003, you can save documents in the Office Open XML format if you have installed the Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats.  
+ Jeśli używasz Microsoft Office 2003, możesz zapisać dokumenty w formacie Office Open XML, jeśli zainstalowano pakiet zgodności Microsoft Office dla formatów plików programów Word, Excel i PowerPoint 2007.  
   
-## <a name="the-shape-of-wordprocessingml-documents"></a>The Shape of WordprocessingML Documents  
- The first thing to understand is the shape of WordprocessingML documents. A WordprocessingML document contains a body element (named `w:body`) that contains the paragraphs of the document. Each paragraph contains one or more text runs (named `w:r`). Each text run contains one or more text pieces (named `w:t`).  
+## <a name="the-shape-of-wordprocessingml-documents"></a>Kształt dokumentów WordprocessingML  
+ Pierwszą rzeczą, którą należy zrozumieć, jest kształt dokumentów WordprocessingML. Dokument WordprocessingML zawiera element Body (o nazwie `w:body`) zawierający akapity dokumentu. Każdy akapit zawiera jeden lub więcej uruchomień tekstu (o nazwie `w:r`). Każdy przebieg tekstowy zawiera jedną lub więcej fragmentów tekstu (o nazwie `w:t`).  
   
- The following is a very simple WordprocessingML document:  
+ Oto bardzo prosty dokument WordprocessingML:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -51,11 +51,11 @@ xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
 </w:document>  
 ```  
   
- This document contains two paragraphs. They both contain a single text run, and each text run contains a single text piece.  
+ Ten dokument zawiera dwa akapity. Oba te elementy zawierają pojedynczy przebieg tekstowy, a każdy z nich jest pojedynczym fragmentem tekstu.  
   
- The easiest way to see the contents of a WordprocessingML document in XML form is to create one using Microsoft Word, save it, and then run the following program that prints the XML to the console.  
+ Najprostszym sposobem wyświetlenia zawartości dokumentu WordprocessingML w formularzu XML jest utworzenie go przy użyciu programu Microsoft Word, zapisanie go, a następnie uruchomienie następującego programu, który drukuje plik XML do konsoli programu.  
   
- This example uses classes found in the WindowsBase assembly. It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.  
+ Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -88,12 +88,12 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
- [Introducing the Office (2007) Open XML File Formats](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))  
+ [Wprowadzenie do pakietu Office (2007) otwartych formatów plików XML](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))  
   
- [Overview of WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812(v=office.11))  
+ [Przegląd WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812(v=office.11))  
   
- [Office 2003: XML Reference Schemas Download page](https://go.microsoft.com/fwlink/?LinkId=98095)  
+ [Office 2003: Strona pobierania schematów odwołań XML](https://go.microsoft.com/fwlink/?LinkId=98095)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

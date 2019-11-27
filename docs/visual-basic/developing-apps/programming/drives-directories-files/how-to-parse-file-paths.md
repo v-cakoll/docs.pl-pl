@@ -14,25 +14,25 @@ ms.locfileid: "74335352"
 ---
 # <a name="how-to-parse-file-paths-in-visual-basic"></a>Porady: analizowanie ścieżek pliku w Visual Basic
 
-The <xref:Microsoft.VisualBasic.FileIO.FileSystem> object offers a number of useful methods when parsing file paths.  
+Obiekt <xref:Microsoft.VisualBasic.FileIO.FileSystem> oferuje wiele przydatnych metod podczas analizowania ścieżek plików.  
   
-- The <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A> method takes two paths and returns a properly formatted combined path.  
+- Metoda <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A> przyjmuje dwie ścieżki i zwraca prawidłowo sformatowaną ścieżkę połączonej.  
   
-- The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A> method returns the absolute path of the parent of the provided path.  
+- Metoda <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A> zwraca ścieżkę bezwzględną elementu nadrzędnego dla podanej ścieżki.  
   
-- The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> method returns a <xref:System.IO.FileInfo> object that can be queried to determine the file's properties, such as its name and path.  
+- Metoda <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> zwraca obiekt <xref:System.IO.FileInfo>, który można zbadać, aby określić właściwości pliku, takie jak jego nazwa i ścieżka.  
   
- Do not make decisions about the contents of the file based on the file name extension. For example, the file Form1.vb may not be a Visual Basic source file.  
+ Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik Form1. vb nie może być plikiem źródłowym Visual Basic.  
   
-### <a name="to-determine-a-files-name-and-path"></a>To determine a file's name and path  
+### <a name="to-determine-a-files-name-and-path"></a>Aby określić nazwę i ścieżkę pliku  
   
-- Use the <xref:System.IO.FileInfo.DirectoryName%2A> and <xref:System.IO.FileInfo.Name%2A> properties of the <xref:System.IO.FileInfo> object to determine a file's name and path. This example determines the name and path and displays them.  
+- Użyj właściwości <xref:System.IO.FileInfo.DirectoryName%2A> i <xref:System.IO.FileInfo.Name%2A> obiektu <xref:System.IO.FileInfo>, aby określić nazwę i ścieżkę pliku. Ten przykład określa nazwę i ścieżkę oraz wyświetla je.  
   
      [!code-vb[VbVbcnMyFileSystem#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#54)]  
   
-### <a name="to-combine-a-files-name-and-directory-to-create-the-full-path"></a>To combine a file's name and directory to create the full path  
+### <a name="to-combine-a-files-name-and-directory-to-create-the-full-path"></a>Aby połączyć nazwę i katalog pliku w celu utworzenia pełnej ścieżki  
   
-- Use the `CombinePath` method, supplying the directory and name. This example takes the strings `folderPath` and `fileName` created in the previous example, combines them, and displays the result.  
+- Użyj metody `CombinePath`, podając katalog i nazwę. Ten przykład pobiera ciągi `folderPath` i `fileName` utworzone w poprzednim przykładzie, łączy je i wyświetla wynik.  
   
      [!code-vb[VbVbcnMyFileSystem#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#55)]  
   

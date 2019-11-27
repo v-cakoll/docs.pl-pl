@@ -14,19 +14,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351736"
 ---
 # <a name="creating-xml-in-visual-basic"></a>Tworzenie XML w Visual Basic
-Visual Basic enables you to use *XML literals* directly in your code. The XML literal syntax represents [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects, and it is similar to the XML 1.0 syntax. This makes it easier to create XML elements, documents, and fragments programmatically because your code has the same structure as the final XML.  
+Visual Basic umożliwia używanie *literałów XML* bezpośrednio w kodzie. Składnia literału XML reprezentuje [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obiektów i jest podobna do składni XML 1,0. Ułatwia to tworzenie elementów XML, dokumentów i fragmentów programowo, ponieważ kod ma taką samą strukturę jak końcowy kod XML.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Termin|Definicja|  
 |---|---|  
-|[Literały XML — przegląd](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|Introduction to XML literals and how they relate to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Wyrażenia osadzone w XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|Describes how to use embedded expressions in XML literals.|  
-|[Instrukcje: tworzenie literałów XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|Describes how to create an XML element in code by using an XML literal.|  
-|[Biały znak w literałach XML](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|Describes how Visual Basic treats white space in XML literals.|  
-|[Literały XML i specyfikacja XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|Describes how the XML literal syntax in Visual Basic relates to the XML 1.0 specification.|  
-|[Instrukcje: osadzanie wyrażeń w literałach XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|Describes how to use embedded expressions in XML literals to create content at run time.|  
-|[Nazwy deklarowanych elementów i atrybutów XML](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|Describes guidelines for naming XML elements and attributes.|  
+|[Literały XML — przegląd](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|Wprowadzenie do literałów XML i sposobu ich powiązania z [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Wyrażenia osadzone w XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|Opisuje sposób używania osadzonych wyrażeń w literałach XML.|  
+|[Instrukcje: tworzenie literałów XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|Opisuje sposób tworzenia elementu XML w kodzie przy użyciu literału XML.|  
+|[Biały znak w literałach XML](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|Opisuje sposób, w jaki Visual Basic traktuje odstępy w literałach XML.|  
+|[Literały XML i specyfikacja XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|Opisuje, jak składnia literału XML w Visual Basic odnosi się do specyfikacji XML 1,0.|  
+|[Instrukcje: osadzanie wyrażeń w literałach XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|Opisuje sposób używania osadzonych wyrażeń w literałach XML do tworzenia zawartości w czasie wykonywania.|  
+|[Nazwy deklarowanych elementów i atrybutów XML](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|Opisuje wskazówki dotyczące nazewnictwa elementów i atrybutów XML.|  
   
 ## <a name="see-also"></a>Zobacz także
 

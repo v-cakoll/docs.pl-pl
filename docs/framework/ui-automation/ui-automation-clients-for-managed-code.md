@@ -16,9 +16,9 @@ ms.locfileid: "74448805"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>Klienci automatyzacji interfejsu użytkownika do kodu zarządzanego
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
- This section contains overviews and how-to topics to help you develop UI Automation clients.  
+ Ta sekcja zawiera omówienia i Tematy porad ułatwiających tworzenie klientów automatyzacji interfejsu użytkownika.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Automatyzacja interfejsu użytkownika a skalowanie ekranu](ui-automation-and-screen-scaling.md)  

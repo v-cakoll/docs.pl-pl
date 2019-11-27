@@ -26,9 +26,9 @@ Jeśli nie chcesz samodzielnie kompilować aplikacji, możesz pobrać [próbkę 
 
 1. Uruchom program Visual Studio.
 
-2. Na pasku menu wybierz **pliku** > **New** > **projektu**.
+2. Na pasku menu wybierz kolejno pozycje **plik** > **Nowy** > **projekt**.
 
-     **Nowy projekt** zostanie otwarte okno dialogowe.
+     Zostanie otwarte okno dialogowe **Nowy projekt** .
 
 3. W okienku **zainstalowane szablony** wybierz pozycję Wizualizacja C#, a następnie wybierz pozycję **Aplikacja WPF** z listy typów projektów.
 

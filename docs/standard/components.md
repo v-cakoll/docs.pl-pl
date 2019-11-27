@@ -112,4 +112,4 @@ Oficjalne dokumenty ISO/IEC są dostępne na stronie [standardy dostępne public
 - [.NET framework — przewodnik](../framework/index.md)
 - [Przewodnik dla języka C#](../csharp/index.yml)
 - [Podręcznik języka F#](../fsharp/index.md)
-- [VB.NET Guide](../visual-basic/index.md)
+- [Przewodnik VB.NET](../visual-basic/index.md)

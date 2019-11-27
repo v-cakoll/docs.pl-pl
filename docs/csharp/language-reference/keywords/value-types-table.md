@@ -1,5 +1,5 @@
 ---
-title: Value types table - C# reference
+title: Tabela typów wartości — C# odwołanie
 ms.custom: seodec18
 ms.date: 11/06/2019
 helpviewer_keywords:
@@ -13,31 +13,31 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428466"
 ---
-# <a name="value-types-table-c-reference"></a>Value types table (C# reference)
+# <a name="value-types-table-c-reference"></a>Tabela typów wartości (C# odwołanie)
 
-The following table shows the C# value types:
+W poniższej tabeli przedstawiono typy C# wartości:
 
-|Value type|Kategoria|
+|Typ wartości|Kategoria|
 |----------------|--------------|
 |[bool](bool.md)|Boolean|
-|`byte`|Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)|
-|[char](../builtin-types/char.md)|Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)|
-|`decimal`|Numeric, [floating-point](../builtin-types/floating-point-numeric-types.md)|
-|`double`|Numeric, [floating-point](../builtin-types/floating-point-numeric-types.md)|
+|`byte`|Unsigned, [numeric, Integer](../builtin-types/integral-numeric-types.md)|
+|[char](../builtin-types/char.md)|Unsigned, [numeric, Integer](../builtin-types/integral-numeric-types.md)|
+|`decimal`|Liczbowa, [zmiennoprzecinkowa](../builtin-types/floating-point-numeric-types.md)|
+|`double`|Liczbowa, [zmiennoprzecinkowa](../builtin-types/floating-point-numeric-types.md)|
 |[enum](enum.md)|Wyliczenie|
-|`float`|Numeric, [floating-point](../builtin-types/floating-point-numeric-types.md)|
-|`int`|Signed, numeric, [integral](../builtin-types/integral-numeric-types.md)|
-|`long`|Signed, numeric, [integral](../builtin-types/integral-numeric-types.md)|
-|`sbyte`|Signed, numeric, [integral](../builtin-types/integral-numeric-types.md)|
-|`short`|Signed, numeric, [integral](../builtin-types/integral-numeric-types.md)|
-|[struct](struct.md)|User-defined structure|
-|`uint`|Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)|
-|`ulong`|Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)|
-|`ushort`|Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)|
+|`float`|Liczbowa, [zmiennoprzecinkowa](../builtin-types/floating-point-numeric-types.md)|
+|`int`|Podpisane, liczbowe, [całkowite](../builtin-types/integral-numeric-types.md)|
+|`long`|Podpisane, liczbowe, [całkowite](../builtin-types/integral-numeric-types.md)|
+|`sbyte`|Podpisane, liczbowe, [całkowite](../builtin-types/integral-numeric-types.md)|
+|`short`|Podpisane, liczbowe, [całkowite](../builtin-types/integral-numeric-types.md)|
+|[struct](struct.md)|Struktura zdefiniowana przez użytkownika|
+|`uint`|Unsigned, [numeric, Integer](../builtin-types/integral-numeric-types.md)|
+|`ulong`|Unsigned, [numeric, Integer](../builtin-types/integral-numeric-types.md)|
+|`ushort`|Unsigned, [numeric, Integer](../builtin-types/integral-numeric-types.md)|
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C# reference](../index.md)
-- [Default values table](default-values-table.md)
-- [Value types](value-types.md)
-- [Formatting numeric results table](formatting-numeric-results-table.md)
+- [C#odwoła](../index.md)
+- [Tabela wartości domyślnych](default-values-table.md)
+- [Typy wartości](value-types.md)
+- [Formatowanie tabeli wyników liczbowych](formatting-numeric-results-table.md)

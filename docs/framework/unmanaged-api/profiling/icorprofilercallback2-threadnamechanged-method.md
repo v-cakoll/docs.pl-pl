@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439559"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>ICorProfilerCallback2::ThreadNameChanged — Metoda
-Notifies the code profiler that the name of a thread has changed.  
+Powiadamia profiler kodu o zmianie nazwy wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,22 +36,22 @@ HRESULT ThreadNameChanged(
   
 ## <a name="parameters"></a>Parametry  
  `threadId`  
- [in] The ID of the thread.  
+ podczas Identyfikator wątku.  
   
  `cchName`  
- [in] The length of the new name of the thread.  
+ podczas Długość nowej nazwy wątku.  
   
  `name`  
- [in] The new name of the thread. The name is not null-terminated.  
+ podczas Nowa nazwa wątku. Nazwa nie jest zakończona wartością null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -17,17 +17,17 @@ ms.locfileid: "74349244"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Uzyskiwanie dostępu do formularzy aplikacji (Visual Basic)
 
-The `My.Forms` object provides an easy way to access an instance of each Windows Form declared in the application's project. You can also use properties of the `My.Application` object to access the application's splash screen and main form, and get a list of the application's open forms.  
+Obiekt `My.Forms` zapewnia łatwy sposób uzyskiwania dostępu do wystąpienia każdego formularza systemu Windows zadeklarowanego w projekcie aplikacji. Możesz również użyć właściwości obiektu `My.Application`, aby uzyskać dostęp do ekranu powitalnego i formularza głównego aplikacji oraz uzyskać listę otwartych formularzy aplikacji.  
   
 ## <a name="tasks"></a>Zadania  
 
- The following table lists examples showing how to access an application's forms.  
+ W poniższej tabeli przedstawiono przykłady pokazujące, jak uzyskać dostęp do formularzy aplikacji.  
   
 |Do|Zobacz|  
 |---|---|  
-|Access one form from another form in an application.|[My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
-|Display the titles of all the application's open forms.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
-|Update the splash screen with status information as the application starts.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
+|Dostęp do jednego formularza z innego formularza w aplikacji.|[My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
+|Wyświetla tytuły wszystkich otwartych formularzy aplikacji.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
+|Zaktualizuj ekran powitalny informacjami o stanie podczas uruchamiania aplikacji.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
 ## <a name="see-also"></a>Zobacz także
 

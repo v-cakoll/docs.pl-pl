@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440547"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps — Metoda
-Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+Ustawia funkcje przechowywane w metadanych dla właściwości zdefiniowanej przez poprzednie wywołanie [metody DefineProperty —](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,37 +42,37 @@ HRESULT SetPropertyProps (
   
 ## <a name="parameters"></a>Parametry  
  `pr`  
- [in] The token for the property to be changed  
+ podczas Token dla właściwości, która ma zostać zmieniona.  
   
  `dwPropFlags`  
- [in] Property flags.  
+ podczas Flagi właściwości.  
   
  `dwCPlusTypeFlag`  
- [in] The type of the property's default value.  
+ podczas Typ wartości domyślnej właściwości.  
   
  `pValue`  
- [in] The default value for the property.  
+ podczas Wartość domyślna właściwości.  
   
  `cchValue`  
- [in] The count of (Unicode) characters in `pValue`.  
+ podczas Liczba znaków (Unicode) w `pValue`.  
   
  `mdSetter`  
- [in] The method that sets the property value.  
+ podczas Metoda, która ustawia wartość właściwości.  
   
  `mdGetter`  
- [in] The method that gets the property value.  
+ podczas Metoda, która pobiera wartość właściwości.  
   
  `rmdOtherMethods[]`  
- [in] An array of other methods associated with the property. Terminate this array with an `mdTokenNil` token.  
+ podczas Tablica innych metod skojarzonych z właściwością. Przerwij tę tablicę z tokenem `mdTokenNil`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

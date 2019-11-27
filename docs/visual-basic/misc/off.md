@@ -1,5 +1,5 @@
 ---
-title: Off
+title: Wyłączone
 ms.date: 07/20/2015
 f1_keywords:
 - Off
@@ -15,10 +15,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331936"
 ---
 # <a name="off-visual-basic"></a>Off (Visual Basic)
-Turns a compiler option off.  
+Wyłącza opcję kompilatora.  
   
 ## <a name="remarks"></a>Uwagi  
- The `Off` keyword can be used in these contexts:  
+ Słowa kluczowego `Off` można użyć w tych kontekstach:  
   
  [Option Explicit, instrukcja](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   

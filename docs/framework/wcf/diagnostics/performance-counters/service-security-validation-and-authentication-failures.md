@@ -10,21 +10,21 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204582"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a>Usługa: Błędy walidacji i uwierzytelniania
-Counter name: Security Validation and Authentication Failures  
+Nazwa licznika: Błędy walidacji zabezpieczeń i uwierzytelniania  
   
 ## <a name="description"></a>Opis  
- This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter. Such problems include:  
+ Ten licznik jest zwiększany za każdym razem, gdy komunikat zostanie odrzucony z powodu problemu z zabezpieczeniami, którego nie dotyczy licznik "wywołania zabezpieczeń bez autoryzacji". Takie problemy obejmują:  
   
-- Client token cannot be read from the message.  
+- Nie można odczytać z komunikatu tokenu klienta.  
   
-- Client token has failed authentication (for example, bad password).  
+- Uwierzytelnianie tokenu klienta nie powiodło się (na przykład złe hasło).  
   
-- Signature verification has failed (for example, the message has been tampered).  
+- Weryfikacja podpisu nie powiodła się (na przykład komunikat został naruszony).  
   
-- The message is a duplicate from a previous one, which can happen during a replay attack.  
+- Komunikat jest duplikatem z poprzedniego, który może wystąpić podczas ataku metodą powtórzeń.  
   
-- A decryption failure has occurred.  
+- Wystąpił błąd odszyfrowywania.  
   
-- Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.  
+- W komunikacie brakuje niektórych wymaganych elementów (na przykład braku sygnatury czasowej lub zaszyfrowanego bloku danych).  
   
-- Errors have occurred during TLSNEGO/SPNEGO handshake.
+- Wystąpiły błędy podczas uzgadniania TLSNEGO/SPNEGO.

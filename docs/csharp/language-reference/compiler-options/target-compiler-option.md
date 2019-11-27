@@ -1,5 +1,5 @@
 ---
-title: -target (C# Compiler Options)
+title: -Target (C# opcje kompilatora)
 ms.date: 07/20/2015
 f1_keywords:
 - /target
@@ -16,38 +16,38 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204515"
 ---
-# <a name="-target-c-compiler-options"></a>-target (C# Compiler Options)
-The **-target** compiler option can be specified in one of four forms:  
+# <a name="-target-c-compiler-options"></a>-Target (C# opcje kompilatora)
+Opcja kompilatora **-Target** może być określona w jednej z czterech postaci:  
   
  [-target:appcontainerexe](./target-appcontainerexe-compiler-option.md)  
- To create an .exe file for Windows 8.x Store apps.  
+ Aby utworzyć plik exe dla aplikacji ze sklepu Windows 8. x.  
   
  [-target:exe](./target-exe-compiler-option.md)  
- To create an .exe file.  
+ Do utworzenia pliku. exe.  
   
  [-target:library](./target-library-compiler-option.md)  
- To create a code library.  
+ Aby utworzyć bibliotekę kodu.  
   
  [-target:module](./target-module-compiler-option.md)  
- To create a module.  
+ Do utworzenia modułu.  
   
  [-target:winexe](./target-winexe-compiler-option.md)  
- To create a Windows program.  
+ Do utworzenia programu systemu Windows.  
   
  [-target:winmdobj](./target-winmdobj-compiler-option.md)  
- To create an intermediate .winmdobj file.  
+ Aby utworzyć pośredni plik. winmdobj.  
   
- Unless you specify **-target:module**, **-target** causes a .NET Framework assembly manifest to be placed in an output file. For more information, see [Assemblies in .NET](../../../standard/assembly/index.md) and [Common Attributes](../../programming-guide/concepts/attributes/common-attributes.md).  
+ O ile nie określono **elementu-target: module**, **-Target** powoduje, że manifest zestawu .NET Framework zostanie umieszczony w pliku wyjściowym. Aby uzyskać więcej informacji, zobacz [zestawy w programie .NET](../../../standard/assembly/index.md) i [wspólne atrybuty](../../programming-guide/concepts/attributes/common-attributes.md).  
   
- The assembly manifest is placed in the first .exe output file in the compilation or in the first DLL, if there is no .exe output file. For example, in the following command line, the manifest will be placed in `1.exe`:  
+ Manifest zestawu jest umieszczany w pierwszym pliku wyjściowym exe w kompilacji lub w pierwszej bibliotece DLL, jeśli nie ma pliku wyjściowego. exe. Na przykład w poniższym wierszu polecenia manifest zostanie umieszczony w `1.exe`:  
   
 ```console  
 csc -out:1.exe t1.cs -out:2.netmodule t2.cs  
 ```  
   
- The compiler creates only one assembly manifest per compilation. Information about all files in a compilation is placed in the assembly manifest. All output files except those created with **-target:module** can contain an assembly manifest. When producing multiple output files at the command line, only one assembly manifest can be created and it must go into the first output file specified on the command line. No matter what the first output file is ( **-target:exe**, **-target:winexe**, **-target:library** or **-target:module**), any other output files produced in the same compilation must be modules ( **-target:module**).  
+ Kompilator tworzy tylko jeden manifest zestawu na kompilację. Informacje o wszystkich plikach w kompilacji są umieszczane w manifeście zestawu. Wszystkie pliki wyjściowe z wyjątkiem plików utworzonych za pomocą **elementu-target: module** mogą zawierać manifest zestawu. W przypadku tworzenia wielu plików wyjściowych w wierszu polecenia można utworzyć tylko jeden manifest zestawu i musi on przejść do pierwszego pliku wyjściowego określonego w wierszu polecenia. Niezależnie od tego, jaki pierwszy plik wyjściowy jest ( **-target: exe**, **-target: winexe**, **-target: Library** lub **-target: module**), wszystkie inne pliki wyjściowe utworzone w tej samej kompilacji muszą być modułami ( **-target: module**).  
   
- If you create an assembly, you can indicate that all or part of your code is CLS compliant with the <xref:System.CLSCompliantAttribute> attribute.  
+ W przypadku utworzenia zestawu można wskazać, że całość lub część kodu jest zgodna ze specyfikacją CLS z atrybutem <xref:System.CLSCompliantAttribute>.  
   
 ```csharp  
 // target_clscompliant.cs  
@@ -60,10 +60,10 @@ public class TestClass
 }  
 ```  
   
- For more information about setting this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Aby uzyskać więcej informacji o tym, jak można programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Opcje kompilatora C#](./index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
-- [-subsystemversion (C# Compiler Options)](./subsystemversion-compiler-option.md)
+- [-subsystemversion (C# opcje kompilatora)](./subsystemversion-compiler-option.md)

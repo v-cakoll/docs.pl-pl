@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429755"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>ISymUnmanagedReader::GetVariables — Metoda
-Returns a non-local variable, given its parent and name.  
+Zwraca zmienną nielokalną, używając jej elementu nadrzędnego i nazwy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,22 +38,22 @@ HRESULT GetVariables (
   
 ## <a name="parameters"></a>Parametry  
  `parent`  
- [in] The parent of the variable.  
+ podczas Element nadrzędny zmiennej.  
   
  `cVars`  
- [in] The size of the `pVars` array.  
+ podczas Rozmiar tablicy `pVars`.  
   
  `pcVars`  
- [out] A pointer to the variable that receives the number of variables returned in `pVars`.  
+ określoną Wskaźnik do zmiennej, która otrzymuje liczbę zmiennych zwracanych w `pVars`.  
   
  `pVars`  
- [out] A pointer to the variable that receives the variables.  
+ określoną Wskaźnik do zmiennej, która odbiera zmienne.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

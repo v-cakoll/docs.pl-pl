@@ -9,22 +9,22 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353136"
 ---
-# <a name="performance-linq-to-xml-visual-basic"></a>Performance (LINQ to XML) (Visual Basic)
-This section provides information about performance in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], specifically the performance of functional construction and queries.  
+# <a name="performance-linq-to-xml-visual-basic"></a>Wydajność (LINQ to XML) (Visual Basic)
+Ta sekcja zawiera informacje o wydajności w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], a w tym wydajność konstruowania funkcjonalnego i zapytań.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Performance of Chained Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-of-chained-queries-linq-to-xml.md)  
- Provides performance information about chained [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.  
+ [Wydajność zapytań łańcuchowych (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-of-chained-queries-linq-to-xml.md)  
+ Zawiera informacje o wydajności dotyczące łańcuchowych zapytań [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
- [Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)  
- Provides performance information about the atomization of <xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> objects.  
+ [Atomed XName and XNamespace Objects (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)  
+ Zawiera informacje o wydajności rozproszenie obiektów <xref:System.Xml.Linq.XName> i <xref:System.Xml.Linq.XNamespace>.  
   
- [Pre-Atomization of XName Objects (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md)  
- Describes a technique to pre-atomize <xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> objects. This can significantly improve performance in some scenarios.  
+ [Rozproszenie obiektów XName (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md)  
+ Opisuje technikę do przedwyodrębnićych obiektów <xref:System.Xml.Linq.XName> i <xref:System.Xml.Linq.XNamespace>. Może to znacząco poprawić wydajność w niektórych scenariuszach.  
   
- [Statically Compiled Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md)  
- Provides performance information about statically compiled queries, in contrast to the parsing and processing that must be done by an XPath expression evaluator.  
+ [Zapytania skompilowane statycznie (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md)  
+ Zawiera informacje o wydajności dotyczące kwerend skompilowanych statycznie, w przeciwieństwie do analizy i przetwarzania, które muszą zostać wykonane przez ewaluatora wyrażeń XPath.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Przewodnik programowania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

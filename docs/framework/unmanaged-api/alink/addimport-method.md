@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446655"
 ---
 # <a name="addimport-method"></a>AddImport — Metoda
-Adds imports to the assembly.  
+Dodaje Importy do zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,22 +38,22 @@ HRESULT AddImport(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Unique ID of assembly to be augmented.  
+ Unikatowy identyfikator zestawu, który ma zostać rozszerzony.  
   
  `ImportToken`  
- Unique ID, retrieved from [ImportFile Method](importfile-method.md), of file to be imported.  
+ Unikatowy identyfikator, pobrany z [metody ImportFile —](importfile-method.md), pliku do zaimportowania.  
   
  `dwFlags`  
- COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
+ Flagi FileDef modelu COM+, takie jak `ffContainsNoMetaData` i `ffWriteable`. `dwFlags` jest przenoszona do [metody DefineFile —](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pFileToken`  
- Pointer to token that receives the ID for the resulting file.  
+ Wskaźnik do tokenu, który odbiera identyfikator dla tworzonego pliku.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Returns S_OK if the method succeeds.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Requires alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 

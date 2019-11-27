@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432642"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute — Metoda
-Creates a definition for a custom attribute with the specified metadata signature, to be attached to the specified object, and gets a token to that custom attribute definition.  
+Tworzy definicję atrybutu niestandardowego z określonym podpisem metadanych do dołączenia do określonego obiektu i pobiera token do tej definicji atrybutu niestandardowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,28 +39,28 @@ HRESULT DefineCustomAttribute (
   
 ## <a name="parameters"></a>Parametry  
  `tkObj`  
- [in] The token for the owner item.  
+ podczas Token dla elementu będącego właścicielem.  
   
  `tkType`  
- [in] The token that identifies the custom attribute.  
+ podczas Token, który identyfikuje atrybut niestandardowy.  
   
  `pCustomAttribute`  
- [in] A pointer to the custom attribute.  
+ podczas Wskaźnik do atrybutu niestandardowego.  
   
  `cbCustomAttribute`  
- [in] The count of bytes in `pCustomAttribute`.  
+ podczas Liczba bajtów w `pCustomAttribute`.  
   
  `pcv`  
- [out] The `mdCustomAttribute` token assigned.  
+ określoną Przypisany token `mdCustomAttribute`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

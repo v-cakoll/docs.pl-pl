@@ -17,35 +17,35 @@ ms.locfileid: "74345557"
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>Porady: ładowanie pliku w Visual Basic
 
-The <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> method can be used to upload a file and store it to a remote location. If the `ShowUI` parameter is set to `True`, a dialog box is displayed that shows the progress of the upload and allows users to cancel the operation.  
+Metoda <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> umożliwia przekazanie pliku i zapisanie go w lokalizacji zdalnej. Jeśli parametr `ShowUI` jest ustawiony na `True`, zostanie wyświetlone okno dialogowe, które pokazuje postęp przekazywania i umożliwia użytkownikom anulowanie operacji.  
   
-### <a name="to-upload-a-file"></a>To upload a file  
+### <a name="to-upload-a-file"></a>Aby przekazać plik  
   
-- Use the `UploadFile` method to upload a file, specifying the source file's location and the target directory location as a string or URI (Uniform Resource Identifier).This example uploads the file `Order.txt` to `http://www.cohowinery.com/uploads.aspx`.  
+- Użyj metody `UploadFile`, aby przekazać plik, określając lokalizację pliku źródłowego i lokalizację katalogu docelowego jako ciąg lub identyfikator URI (Uniform Resource Identifier). Ten przykład przekazuje plik `Order.txt` do `http://www.cohowinery.com/uploads.aspx`.  
   
      [!code-vb[VbResourceTasks#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#6)]  
   
-### <a name="to-upload-a-file-and-show-the-progress-of-the-operation"></a>To upload a file and show the progress of the operation  
+### <a name="to-upload-a-file-and-show-the-progress-of-the-operation"></a>Aby przekazać plik i wyświetlić postęp operacji  
   
-- Use the `UploadFile` method to upload a file, specifying the source file's location and the target directory location as a string or URI. This example uploads the file `Order.txt` to `http://www.cohowinery.com/uploads.aspx` without supplying a user name or password, shows the progress of the upload, and has a time-out interval of 500 milliseconds.  
+- Użyj metody `UploadFile`, aby przekazać plik, określając lokalizację pliku źródłowego i lokalizację katalogu docelowego jako ciąg lub identyfikator URI. Ten przykład przekazuje plik `Order.txt` do `http://www.cohowinery.com/uploads.aspx` bez podawania nazwy użytkownika lub hasła, pokazuje postęp przekazywania i ma interwał limitu czasu wynoszący 500 milisekund.  
   
      [!code-vb[VbResourceTasks#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#7)]  
   
-### <a name="to-upload-a-file-supplying-a-user-name-and-password"></a>To upload a file, supplying a user name and password  
+### <a name="to-upload-a-file-supplying-a-user-name-and-password"></a>Aby przekazać plik, należy podać nazwę użytkownika i hasło.  
   
-- Use the `UploadFile` method to upload a file, specifying the source file's location and the target directory location as a string or URI, and specifying the user name and the password. This example uploads the file `Order.txt` to `http://www.cohowinery.com/uploads.aspx`, supplying the user name `anonymous` and a blank password.  
+- Użyj metody `UploadFile`, aby przekazać plik, określić lokalizację pliku źródłowego i lokalizację katalogu docelowego jako ciąg lub identyfikator URI oraz określić nazwę użytkownika i hasło. Ten przykład przekazuje plik `Order.txt` do `http://www.cohowinery.com/uploads.aspx`, podając nazwę użytkownika `anonymous` i puste hasło.  
   
      [!code-vb[VbResourceTasks#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#8)]  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
+## <a name="robust-programming"></a>Skuteczne programowanie  
 
- The following conditions may throw an exception:  
+ Następujące warunki mogą zgłosić wyjątek:  
   
-- The local file path is not valid (<xref:System.ArgumentException>).  
+- Lokalna ścieżka pliku jest nieprawidłowa (<xref:System.ArgumentException>).  
   
-- Authentication failed (<xref:System.Security.SecurityException>).  
+- Uwierzytelnianie nie powiodło się (<xref:System.Security.SecurityException>).  
   
-- The connection timed out (<xref:System.TimeoutException>).  
+- Przekroczono limit czasu połączenia (<xref:System.TimeoutException>).  
   
 ## <a name="see-also"></a>Zobacz także
 

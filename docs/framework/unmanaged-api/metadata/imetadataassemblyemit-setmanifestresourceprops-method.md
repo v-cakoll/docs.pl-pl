@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434432"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps — Metoda
-Modifies the specified `ManifestResource` metadata structure.  
+Modyfikuje określoną strukturę metadanych `ManifestResource`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,28 +38,28 @@ HRESULT SetManifestResourceProps (
   
 ## <a name="parameters"></a>Parametry  
  `mr`  
- [in] The token that specifies the `ManifestResource` metadata structure to be modified.  
+ podczas Token określający strukturę metadanych `ManifestResource`, która ma zostać zmodyfikowana.  
   
  `tkImplementation`  
- [in] The token, of type `File` or `AssemblyRef`, that maps to the resource provider.  
+ podczas Token, typu `File` lub `AssemblyRef`, który jest mapowany do dostawcy zasobów.  
   
  `dwOffset`  
- [in] The offset to the beginning of the resource within the file.  
+ podczas Przesunięcie do początku zasobu w pliku.  
   
  `dwResourceFlags`  
- [in] A bitwise combination of flag values that specify the attributes of the resource.  
+ podczas Bitowa kombinacja wartości flag, które określają atrybuty zasobu.  
   
 ## <a name="remarks"></a>Uwagi  
- To create a `ManifestResource` metadata structure, use the [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) method.  
+ Aby utworzyć `ManifestResource` strukturę metadanych, użyj metody [IMetaDataAssemblyEmit::D efinemanifestresource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

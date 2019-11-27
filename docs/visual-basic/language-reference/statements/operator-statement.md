@@ -26,7 +26,7 @@ ms.locfileid: "74353805"
 ---
 # <a name="operator-statement"></a>Operator — Instrukcja
 
-Declares the operator symbol, operands, and code that define an operator procedure on a class or structure.
+Deklaruje symbol operatora, argumenty operacji i kod, który definiuje procedurę operatora w klasie lub strukturze.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,138 +43,138 @@ End Operator
 ## <a name="parts"></a>Części
 
 `attrlist`  
-Opcjonalny. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).
+Opcjonalna. Zobacz [listę atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).
 
 `Public`  
-Wymagany. Indicates that this operator procedure has [Public](../../../visual-basic/language-reference/modifiers/public.md) access.
+Wymagana. Wskazuje, że ta procedura operatora ma dostęp [publiczny](../../../visual-basic/language-reference/modifiers/public.md) .
 
 `Overloads`  
-Opcjonalny. See [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md).
+Opcjonalna. Zobacz [przeciążenia](../../../visual-basic/language-reference/modifiers/overloads.md).
 
 `Shared`  
-Wymagany. Indicates that this operator procedure is a [Shared](../../../visual-basic/language-reference/modifiers/shared.md) procedure.
+Wymagana. Wskazuje, że procedura operatora jest [wspólną](../../../visual-basic/language-reference/modifiers/shared.md) procedurą.
 
 `Shadows`  
-Opcjonalny. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+Opcjonalna. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
 
 `Widening`  
-Required for a conversion operator unless you specify `Narrowing`. Indicates that this operator procedure defines a [Widening](../../../visual-basic/language-reference/modifiers/widening.md) conversion. See "Widening and Narrowing Conversions" on this Help page.
+Wymagane dla operatora konwersji, chyba że zostanie określona `Narrowing`. Wskazuje, że ta procedura operatora definiuje konwersję [rozszerzającą](../../../visual-basic/language-reference/modifiers/widening.md) . Zobacz "rozszerzanie i zwężanie konwersji" na tej stronie pomocy.
 
 `Narrowing`  
-Required for a conversion operator unless you specify `Widening`. Indicates that this operator procedure defines a [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md) conversion. See "Widening and Narrowing Conversions" on this Help page.
+Wymagane dla operatora konwersji, chyba że zostanie określona `Widening`. Wskazuje, że ta procedura operatora definiuje [Zawężanie](../../../visual-basic/language-reference/modifiers/narrowing.md) konwersji. Zobacz "rozszerzanie i zwężanie konwersji" na tej stronie pomocy.
 
 `operatorsymbol`  
-Wymagany. The symbol or identifier of the operator that this operator procedure defines.
+Wymagana. Symbol lub identyfikator operatora, który definiuje procedura operatora.
 
 `operand1`  
-Wymagany. The name and type of the single operand of a unary operator (including a conversion operator) or the left operand of a binary operator.
+Wymagana. Nazwa i typ pojedynczego operandu operatora jednoargumentowego (w tym operatora konwersji) lub lewego operandu operatora binarnego.
 
 `operand2`  
-Required for binary operators. The name and type of the right operand of a binary operator.
+Wymagane dla operatorów binarnych. Nazwa i typ prawnego operandu operatora binarnego.
 
-`operand1` and `operand2` have the following syntax and parts:
+`operand1` i `operand2` mają następującą składnię i części:
 
 `[ ByVal ] operandname [ As operandtype ]`
 
-|Part|Opis|
+|Części|Opis|
 |----------|-----------------|
-|`ByVal`|Optional, but the passing mechanism must be [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).|
-|`operandname`|Wymagany. Name of the variable representing this operand. See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`operandtype`|Optional unless `Option Strict` is `On`. Data type of this operand.|
+|`ByVal`|Opcjonalne, ale mechanizm przekazywania musi być [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).|
+|`operandname`|Wymagana. Nazwa zmiennej reprezentującej ten operand. Zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`operandtype`|Opcjonalne, chyba że `Option Strict` jest `On`. Typ danych tego operandu.|
 
 `type`  
-Optional unless `Option Strict` is `On`. Data type of the value the operator procedure returns.
+Opcjonalne, chyba że `Option Strict` jest `On`. Typ danych wartości zwracanej przez procedurę operatora.
 
 `statements`  
-Opcjonalny. Block of statements that the operator procedure runs.
+Opcjonalna. Blok instrukcji wykonywanych przez procedurę operatora.
 
 `returnvalue`  
-Wymagany. The value that the operator procedure returns to the calling code.
+Wymagana. Wartość, którą procedura operatora zwraca do kodu wywołującego.
 
 `End``Operator`  
-Wymagany. Terminates the definition of this operator procedure.
+Wymagana. Kończy definicję tej procedury operatora.
 
 ## <a name="remarks"></a>Uwagi
 
-You can use `Operator` only in a class or structure. This means the *declaration context* for an operator cannot be a source file, namespace, module, interface, procedure, or block. For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+`Operator` można używać tylko w klasie lub strukturze. Oznacza to, że *kontekst deklaracji* dla operatora nie może być plikiem źródłowym, przestrzenią nazw, modułem, interfejsem, procedurą lub blokiem. Aby uzyskać więcej informacji, zobacz [konteksty deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
 
-All operators must be `Public Shared`. You cannot specify `ByRef`, `Optional`, or `ParamArray` for either operand.
+Wszystkie operatory muszą być `Public Shared`. Dla każdego operandu nie można określić `ByRef`, `Optional`lub `ParamArray`.
 
-You cannot use the operator symbol or identifier to hold a return value. You must use the `Return` statement, and it must specify a value. Any number of `Return` statements can appear anywhere in the procedure.
+Nie można użyć symbolu operatora lub identyfikatora do przechowywania wartości zwracanej. Należy użyć instrukcji `Return` i określić wartość. Dowolna liczba instrukcji `Return` może występować w dowolnym miejscu procedury.
 
-Defining an operator in this way is called *operator overloading*, whether or not you use the `Overloads` keyword. The following table lists the operators you can define.
+Definiowanie operatora w ten sposób jest nazywane *przeciążeniem operatora*, niezależnie od tego, czy jest używane słowo kluczowe `Overloads`. W poniższej tabeli wymieniono operatory, które można zdefiniować.
 
-|Typ|Operatory|
+|Type|Operatory|
 |----------|---------------|
-|Unary|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|
-|plików binarnych|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|
-|Conversion (unary)|`CType`|
+|Jednostk|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|
+|Binarny|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|
+|Konwersja (Jednoargumentowa)|`CType`|
 
-Note that the `=` operator in the binary list is the comparison operator, not the assignment operator.
+Należy zauważyć, że operator `=` na liście elementów binarnych jest operatorem porównania, a nie operatorem przypisania.
 
-When you define `CType`, you must specify either `Widening` or `Narrowing`.
+Podczas definiowania `CType`należy określić `Widening` lub `Narrowing`.
 
-## <a name="matched-pairs"></a>Matched Pairs
+## <a name="matched-pairs"></a>Dopasowane pary
 
-You must define certain operators as matched pairs. If you define either operator of such a pair, you must define the other as well. The matched pairs are the following:
+Należy zdefiniować określone operatory jako dopasowane pary. W przypadku zdefiniowania dowolnego operatora takiej pary należy zdefiniować również pozostałe. Dopasowane pary są następujące:
 
-- `=` and `<>`
+- `=` i `<>`
 
-- `>` and `<`
+- `>` i `<`
 
-- `>=` and `<=`
+- `>=` i `<=`
 
-- `IsTrue` and `IsFalse`
+- `IsTrue` i `IsFalse`
 
-## <a name="data-type-restrictions"></a>Data Type Restrictions
+## <a name="data-type-restrictions"></a>Ograniczenia dotyczące typów danych
 
-Every operator you define must involve the class or structure on which you define it. This means that the class or structure must appear as the data type of the following:
+Każdy zdefiniowany operator musi zawierać klasę lub strukturę, w których ją zdefiniujesz. Oznacza to, że Klasa lub struktura muszą występować jako typ danych następujących elementów:
 
-- The operand of a unary operator.
+- Operand operatora jednoargumentowego.
 
-- At least one of the operands of a binary operator.
+- Co najmniej jeden operand operatora binarnego.
 
-- Either the operand or the return type of a conversion operator.
+- Operand lub zwracany typ operatora konwersji.
 
- Certain operators have additional data type restrictions, as follows:
+ Niektóre operatory mają dodatkowe ograniczenia dotyczące typów danych w następujący sposób:
 
-- If you define the `IsTrue` and `IsFalse` operators, they must both return the `Boolean` type.
+- Jeśli zdefiniujesz operatory `IsTrue` i `IsFalse`, muszą one zwracać typ `Boolean`.
 
-- If you define the `<<` and `>>` operators, they must both specify the `Integer` type for the `operandtype` of `operand2`.
+- Jeśli zdefiniujesz operatory `<<` i `>>`, muszą one określić typ `Integer` dla `operandtype` `operand2`.
 
-The return type does not have to correspond to the type of either operand. For example, a comparison operator such as `=` or `<>` can return `Boolean` even if neither operand is `Boolean`.
+Zwracany typ nie musi odpowiadać typowi żadnego operandu. Na przykład operator porównania, taki jak `=` lub `<>`, może zwrócić `Boolean` nawet wtedy, gdy żaden operand nie jest `Boolean`.
 
 ## <a name="logical-and-bitwise-operators"></a>Operatory logiczne i bitowe
 
-The `And`, `Or`, `Not`, and `Xor` operators can perform either logical or bitwise operations in Visual Basic. However, if you define one of these operators on a class or structure, you can define only its bitwise operation.
+Operatory `And`, `Or`, `Not`i `Xor` mogą wykonywać operacje logiczne lub bitowe w Visual Basic. Jeśli jednak zdefiniujesz jeden z tych operatorów w klasie lub strukturze, możesz zdefiniować tylko jej operację bitową.
 
-You cannot define the `AndAlso` operator directly with an `Operator` statement. However, you can use `AndAlso` if you have fulfilled the following conditions:
+Nie można zdefiniować operatora `AndAlso` bezpośrednio przy użyciu instrukcji `Operator`. Można jednak użyć `AndAlso`, jeśli spełniono następujące warunki:
 
-- You have defined `And` on the same operand types you want to use for `AndAlso`.
+- Zdefiniowano `And` w tych samych typach operandów, które mają być używane dla `AndAlso`.
 
-- Your definition of `And` returns the same type as the class or structure on which you have defined it.
+- Definicja `And` zwraca ten sam typ co Klasa lub struktura, w której została zdefiniowana.
 
-- You have defined the `IsFalse` operator on the class or structure on which you have defined `And`.
+- Zdefiniowano operator `IsFalse` na klasie lub strukturze, na których zdefiniowano `And`.
 
-Similarly, you can use `OrElse` if you have defined `Or` on the same operands, with the return type of the class or structure, and you have defined `IsTrue` on the class or structure.
+Podobnie, można użyć `OrElse`, jeśli zdefiniowano `Or` dla tych samych operandów, z typem zwracanym klasy lub struktury, a zdefiniowano `IsTrue` na klasie lub strukturze.
 
 ## <a name="widening-and-narrowing-conversions"></a>Rozszerzanie i zwężanie konwersji
 
-A *widening conversion* always succeeds at run time, while a *narrowing conversion* can fail at run time. For more information, see [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).
+*Konwersja rozszerzająca* zawsze powiedzie się w czasie wykonywania, podczas gdy *Konwersja wąskiego* może zakończyć się niepowodzeniem w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).
 
-If you declare a conversion procedure to be `Widening`, your procedure code must not generate any failures. This means the following:
+Jeśli deklarujesz procedurę konwersji do `Widening`, kod procedury nie może generować żadnych błędów. Oznacza to następujące kwestie:
 
-- It must always return a valid value of type `type`.
+- Musi zawsze zwracać prawidłową wartość typu `type`.
 
-- It must handle all possible exceptions and other error conditions.
+- Musi obsługiwać wszystkie możliwe wyjątki i inne warunki błędu.
 
-- It must handle any error returns from any procedures it calls.
+- Musi obsłużyć wszelkie błędy zwracane przez wszystkie procedury, które wywołuje.
 
-If there is any possibility that a conversion procedure might not succeed, or that it might cause an unhandled exception, you must declare it to be `Narrowing`.
+Jeśli istnieje jakakolwiek możliwość, że procedura konwersji może się nie powieść lub że może to spowodować nieobsługiwany wyjątek, należy zadeklarować ją jako `Narrowing`.
 
 ## <a name="example"></a>Przykład
 
-The following code example uses the `Operator` statement to define the outline of a structure that includes operator procedures for the `And`, `Or`, `IsFalse`, and `IsTrue` operators. `And` and `Or` each take two operands of type `abc` and return type `abc`. `IsFalse` and `IsTrue` each take a single operand of type `abc` and return `Boolean`. These definitions allow the calling code to use `And`, `AndAlso`, `Or`, and `OrElse` with operands of type `abc`.
+Poniższy przykład kodu używa instrukcji `Operator` do definiowania konspektu struktury, która zawiera procedury operatorów dla operatorów `And`, `Or`, `IsFalse`i `IsTrue`. `And` i `Or` każda z nich przyjmuje dwa operandy typu `abc` i zwracany typ `abc`. `IsFalse` i `IsTrue` każda z nich przyjmuje jeden operand typu `abc` i zwraca `Boolean`. Te definicje umożliwiają wywołującemu kod używanie `And`, `AndAlso`, `Or`i `OrElse` z operandami typu `abc`.
 
 [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]
 

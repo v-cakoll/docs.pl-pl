@@ -13,43 +13,43 @@ ms.locfileid: "74335360"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>Porady: przenoszenie pliku w Visual Basic
 
-The `My.Computer.FileSystem.MoveFile` method can be used to move a file to another folder. If the target structure does not exist, it will be created.  
+Metoda `My.Computer.FileSystem.MoveFile` może służyć do przenoszenia pliku do innego folderu. Jeśli struktura docelowa nie istnieje, zostanie utworzona.  
   
-### <a name="to-move-a-file"></a>To move a file  
+### <a name="to-move-a-file"></a>Aby przenieść plik  
   
-- Use the `MoveFile` method to move the file, specifying the file name and location for both the source file and the target file. This example moves the file named `test.txt` from `TestDir1` to `TestDir2`. Note that the target file name is specified even though it is the same as the source file name.  
+- Użyj metody `MoveFile`, aby przenieść plik, określając nazwę pliku i lokalizację zarówno dla pliku źródłowego, jak i pliku docelowego. Ten przykład przenosi plik o nazwie `test.txt` z `TestDir1` do `TestDir2`. Należy pamiętać, że nazwa pliku docelowego jest określona, mimo że jest taka sama jak nazwa pliku źródłowego.  
   
      [!code-vb[VbVbcnMyFileSystem#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#24)]  
   
-### <a name="to-move-a-file-and-rename-it"></a>To move a file and rename it  
+### <a name="to-move-a-file-and-rename-it"></a>Aby przenieść plik i zmienić jego nazwę  
   
-- Use the `MoveFile` method to move the file, specifying the source file name and location, the target location, and the new name at the target location. This example moves the file named `test.txt` from `TestDir1` to `TestDir2` and renames it `nexttest.txt`.  
+- Użyj metody `MoveFile`, aby przenieść plik, określić nazwę i lokalizację pliku źródłowego, lokalizację docelową oraz nową nazwę w lokalizacji docelowej. Ten przykład przenosi plik o nazwie `test.txt` z `TestDir1` do `TestDir2` i zmienia nazwę `nexttest.txt`.  
   
      [!code-vb[VbVbcnMyFileSystem#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#25)]  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
+## <a name="robust-programming"></a>Skuteczne programowanie  
 
  Następujące warunki mogą spowodować wyjątek:  
   
-- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).  
+- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (rozpoczyna się od \\\\.\\) (<xref:System.ArgumentException>).  
   
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).  
+- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).  
   
-- `destinationFileName` is `Nothing` or an empty string (<xref:System.ArgumentNullException>).  
+- `destinationFileName` jest `Nothing` lub jest pustym ciągiem (<xref:System.ArgumentNullException>).  
   
-- The source file is not valid or does not exist (<xref:System.IO.FileNotFoundException>).  
+- Plik źródłowy jest nieprawidłowy lub nie istnieje (<xref:System.IO.FileNotFoundException>).  
   
-- The combined path points to an existing directory, the destination file exists and `overwrite` is set to `False`, a file in the target directory with the same name is in use, or the user does not have sufficient permissions to access the file (<xref:System.IO.IOException>).  
+- Połączona ścieżka wskazuje istniejący katalog, plik docelowy istnieje, a `overwrite` jest ustawiony na `False`, plik w katalogu docelowym o tej samej nazwie jest używany lub użytkownik nie ma wystarczających uprawnień dostępu do pliku (<xref:System.IO.IOException>).  
   
-- A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).  
+- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).  
   
-- `showUI` is set to `True`, `onUserCancel` is set to `ThrowException`, and either the user has cancelled the operation or an unspecified I/O error occurs (<xref:System.OperationCanceledException>).  
+- `showUI` jest ustawiona na `True`, `onUserCancel` jest ustawiona na `ThrowException`, a użytkownik anulował operację lub Wystąpił nieokreślony błąd we/wy (<xref:System.OperationCanceledException>).  
   
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).  
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
   
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).  
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
   
-- The user does not have required permission (<xref:System.UnauthorizedAccessException>).  
+- Użytkownik nie ma wymaganego uprawnienia (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Zobacz także
 

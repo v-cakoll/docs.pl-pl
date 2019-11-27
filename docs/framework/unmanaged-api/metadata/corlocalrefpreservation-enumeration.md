@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450245"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation — Wyliczenie
-Contains flag values for the treatment of local references.  
+Zawiera wartości flag dla traktowania odwołań lokalnych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,20 +35,20 @@ typedef enum CorLocalRefPreservation
 } CorLocalRefPreservation;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|Preserve no local references.|  
-|`MDPreserveLocalTypeRef`|Preserve local type references.|  
-|`MDPreserveLocalMemberRef`|Preserve local member references.|  
+|`MDPreserveLocalRefsNone`|Nie zachowuj żadnych odwołań lokalnych.|  
+|`MDPreserveLocalTypeRef`|Zachowaj odwołania do typu lokalnego.|  
+|`MDPreserveLocalMemberRef`|Zachowaj odwołania do lokalnych członków.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

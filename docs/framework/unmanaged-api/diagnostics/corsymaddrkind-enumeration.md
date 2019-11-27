@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448579"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind — Wyliczenie
-Indicates the type of memory address.  
+Wskazuje typ adresu pamięci.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,23 +42,23 @@ typedef enum CorSymAddrKind
 } CorSymAddrKind;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|Indicates a Microsoft intermediate language (MSIL) local variable or parameter index.|  
-|`ADDR_NATIVE_RVA`|Indicates a relative virtual address into a module.|  
-|`ADDR_NATIVE_REGISTER`|Indicates a CPU register.|  
-|`ADDR_NATIVE_REGREL`|Indicates that the first address is a register and the second address is an offset.|  
-|`ADDR_NATIVE_OFFSET`|Indicates an offset from a base address.|  
-|`ADDR_NATIVE_REGREG`|Indicates that the first address is the low portion of a register, and the second address is the high portion.|  
-|`ADDR_NATIVE_REGSTK`|Indicates that the first address is the low portion of a register, the second is the high portion, and the third is an offset.|  
-|`ADDR_NATIVE_STKREG`|Indicates that the first address is a register, the second is an offset, and the third is the high portion of the register.|  
-|`ADDR_BITFIELD`|Indicates that the first address is the start of a field and the second address is the field length.|  
-|`ADDR_NATIVE_ISECTOFFSET`|Indicates that the first address is the section and the second address is an offset.|  
+|`ADDR_IL_OFFSET`|Wskazuje zmienną lokalną języka pośredniego (MSIL) firmy Microsoft lub indeks parametru.|  
+|`ADDR_NATIVE_RVA`|Wskazuje względny adres wirtualny do modułu.|  
+|`ADDR_NATIVE_REGISTER`|Wskazuje rejestr procesora CPU.|  
+|`ADDR_NATIVE_REGREL`|Wskazuje, że pierwszy adres jest rejestrem, a drugi adres jest przesunięty.|  
+|`ADDR_NATIVE_OFFSET`|Wskazuje przesunięcie od adresu podstawowego.|  
+|`ADDR_NATIVE_REGREG`|Wskazuje, że pierwszy adres jest małą częścią rejestru, a drugi adres jest dużą częścią.|  
+|`ADDR_NATIVE_REGSTK`|Wskazuje, że pierwszy adres jest małą częścią rejestru, drugi jest dużą częścią, a trzeci jest przesunięciem.|  
+|`ADDR_NATIVE_STKREG`|Wskazuje, że pierwszy adres jest rejestrem, drugi jest przesunięciem, a trzeci to wysoka część rejestru.|  
+|`ADDR_BITFIELD`|Wskazuje, że pierwszy adres jest początkiem pola, a drugi adres jest długością pola.|  
+|`ADDR_NATIVE_ISECTOFFSET`|Wskazuje, że pierwszy adres jest sekcją, a drugi adres jest przesunięciem.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

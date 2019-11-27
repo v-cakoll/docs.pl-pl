@@ -19,23 +19,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353984"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Stałe i wyliczenia w Visual Basic
-Constants are a way to use meaningful names in place of a value that does not change. Constants store values that, as the name implies, remain constant throughout the execution of an application. You can use constants to provide meaningful names, instead of numbers, making your code more readable.  
+Stałe są sposobem używania nazw znaczących zamiast wartości, która nie jest zmieniana. Stałe wartości magazynu, których nazwa to oznacza, pozostają stałe przez cały czas wykonywania aplikacji. Możesz użyć stałych, aby podać znaczące nazwy, a nie liczby, co sprawia, że kod jest bardziej czytelny.  
   
- Enumerations provide a convenient way to work with sets of related constants, and to associate constant values with names. For example, you can declare an enumeration for a set of integer constants associated with the days of the week, and then use the names of the days rather than their integer values in your code.  
+ Wyliczenia zapewniają wygodny sposób pracy z zestawami powiązanych stałych i kojarzenia wartości stałych z nazwami. Na przykład można zadeklarować Wyliczenie dla zestawu stałych całkowitych skojarzonych z dniami tygodnia, a następnie użyć nazw dni, a nie ich wartości całkowitych w kodzie.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Termin|Definicja|  
 |---|---|  
-|[Stałe — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|Topics in this section describe constants and their uses.|  
-|[Wyliczenia — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|Topics in this section describe enumerations and their uses.|  
+|[Stałe — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|W tematach w tej sekcji opisano stałe i ich zastosowania.|  
+|[Wyliczenia — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|Tematy w tej sekcji opisują wyliczenia i ich zastosowania.|  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
   
 |Termin|Definicja|  
 |---|---|  
-|[Const, instrukcja](../../../../visual-basic/language-reference/statements/const-statement.md)|Describes the `Const` statement, which is used to declare constants.|  
-|[Enum, instrukcja](../../../../visual-basic/language-reference/statements/enum-statement.md)|Describes the `Enum` statement, which is used to create enumerations.|  
-|[Option Explicit, instrukcja](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)|Describes the `Option Explicit` statement, which is used at module level to force explicit declaration of all variables in that module.|  
-|[Option Infer, instrukcja](../../../../visual-basic/language-reference/statements/option-infer-statement.md)|Describes the `Option Infer` statement, which enables the use of local type inference in declaring variables.|  
-|[Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Describes the `Option Strict` statement, which restricts implicit data type conversions to only widening conversions, disallows late binding, and disallows implicit typing that results in an `Object` type.|
+|[Const, instrukcja](../../../../visual-basic/language-reference/statements/const-statement.md)|Opisuje instrukcję `Const`, która jest używana do deklarowania stałych.|  
+|[Enum, instrukcja](../../../../visual-basic/language-reference/statements/enum-statement.md)|Opisuje instrukcję `Enum`, która jest używana do tworzenia wyliczeń.|  
+|[Option Explicit, instrukcja](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)|Opisuje instrukcję `Option Explicit`, która jest używana na poziomie modułu, aby wymusić jawną deklarację wszystkich zmiennych w tym module.|  
+|[Option Infer, instrukcja](../../../../visual-basic/language-reference/statements/option-infer-statement.md)|Opisuje instrukcję `Option Infer`, która umożliwia korzystanie z wnioskowania o typie lokalnym podczas deklarowania zmiennych.|  
+|[Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Opisuje instrukcje `Option Strict`, które ograniczają niejawne konwersje typów danych tylko w celu rozszerzania konwersji, uniemożliwiają późne wiązanie i nie dopuszczają niejawnego wpisywania w wyniku typu `Object`.|

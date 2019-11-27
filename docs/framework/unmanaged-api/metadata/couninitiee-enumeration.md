@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436437"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE — Wyliczenie
-Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.  
+Określa stałe używane przez [CoUninitializeEE —](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) podczas inicjowania środowiska uruchomieniowego języka wspólnego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,21 +34,21 @@ typedef enum tagCOUNINITEE
 } COUNINITIEE;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|Indicates default uninitialization mode.|  
-|`COUNINITEE_DLL`|Indicates uninitialization mode for unloading an assembly.|  
+|`COUNINITEE_DEFAULT`|Wskazuje domyślny tryb uninicjującym.|  
+|`COUNINITEE_DLL`|Wskazuje tryb odinicjowania w przypadku zwalniania zestawu.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Find Descendant Elements (XPath-LINQ to XML)'
+title: 'Instrukcje: Znajdowanie elementów potomnych (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
 ms.openlocfilehash: 080afdb782bd6f1acaf2819814bb97a6e5ad0c77
@@ -9,15 +9,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346811"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>How to: Find Descendant Elements (XPath-LINQ to XML) (Visual Basic)
-This topic shows how to get the descendant elements with a particular name.  
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie elementów potomnych (XPath-LINQ to XML) (Visual Basic)
+W tym temacie pokazano, jak uzyskać elementy podrzędne o określonej nazwie.  
   
- The XPath expression is `//Name`.  
+ Wyrażenie XPath jest `//Name`.  
   
 ## <a name="example"></a>Przykład  
- This example finds all descendants named `Name`.  
+ Ten przykład umożliwia znalezienie wszystkich elementów podrzędnych o nazwie `Name`.  
   
- This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
       Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -53,4 +53,4 @@ Results are identical
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

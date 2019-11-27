@@ -24,7 +24,7 @@ ms.locfileid: "74448028"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd — Metoda
 
-Merges into the current scope all the metadata scopes specified by one or more prior calls to [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
+Scala do bieżącego zakresu wszystkich zakresów metadanych określonych przez jedno lub więcej wcześniejszych wywołań do [IMetaDataEmit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,43 +34,43 @@ HRESULT MergeEnd ();
 
 ## <a name="parameters"></a>Parametry
 
-This method takes no parameters.
+Ta metoda nie przyjmuje żadnych parametrów.
 
 ## <a name="remarks"></a>Uwagi
 
-This routine triggers the actual merge of metadata, of all import scopes specified by preceding calls to `IMetaDataEmit::Merge`, into the current output scope.
+Ta procedura wyzwala rzeczywiste scalanie metadanych wszystkich zakresów importu określonych przez poprzednie wywołania do `IMetaDataEmit::Merge`, do bieżącego zakresu wyjściowego.
 
-The following special conditions apply to the merge:
+Następujące specjalne warunki dotyczą scalania:
 
-- A module version identifier (MVID) is never imported, because it is unique to the metadata in the import scope.
+- Identyfikator wersji modułu (MVID) nigdy nie jest importowany, ponieważ jest unikatowy dla metadanych w zakresie importu.
 
-- No existing module-wide properties are overwritten.
+- Żadne istniejące właściwości całego modułu nie są zastępowane.
 
-  If module properties were already set for the current scope, no module properties are imported. However, if module properties have not been set in the current scope, they are imported only once, when they are first encountered. If those module properties are encountered again, they are duplicates. If the values of all module properties (except MVID) are compared and no duplicates are found, an error is raised.
+  Jeśli właściwości modułu zostały już ustawione dla bieżącego zakresu, nie zaimportowano żadnych właściwości modułu. Jeśli jednak właściwości modułu nie zostały ustawione w bieżącym zakresie, są one importowane tylko raz podczas pierwszego napotkania. Jeśli te właściwości modułu zostaną ponownie wykryte, są one duplikatami. Jeśli wartości wszystkich właściwości modułu (z wyjątkiem MVID) są porównywane i nie znaleziono duplikatów, zostanie zgłoszony błąd.
 
-- For type definitions (`TypeDef`), no duplicates are merged into the current scope. `TypeDef` objects are checked for duplicates against each *fully-qualified object name* + *GUID* + *version number*. If there is a match on either name or GUID, and any of the other two elements is different, an error is raised. Otherwise, if all three items match, `MergeEnd` does a cursory check to ensure the entries are indeed duplicates; if not, an error is raised. This cursory check looks for:
+- W przypadku definicji typu (`TypeDef`) żadne duplikaty nie są scalane z bieżącym zakresem. obiekty `TypeDef` są sprawdzane pod kątem duplikatów dla każdej w *pełni kwalifikowanej nazwy obiektu* + *Identyfikator GUID* + *numer wersji*. Jeśli istnieje dopasowanie dla nazwy lub identyfikatora GUID, a którykolwiek z pozostałych dwóch elementów jest inny, zostanie zgłoszony błąd. W przeciwnym razie, jeśli wszystkie trzy elementy są zgodne, `MergeEnd` sprawdza kursor, aby upewnić się, że wpisy są rzeczywiście duplikatami; Jeśli nie, zostanie zgłoszony błąd. Sprawdzanie kursorów szuka:
 
-  - The same member declarations, occurring in the same order. Members that are flagged as `mdPrivateScope` (see the [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeration) are not included in this check; they are merged specially.
+  - Te same deklaracje elementu członkowskiego, występujące w tej samej kolejności. Elementy członkowskie, które są oflagowane jako `mdPrivateScope` (zobacz Wyliczenie [CorMethodAttr —](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) ) nie są uwzględnione w tym sprawdzaniu; są one scalane specjalnie.
 
-  - The same class layout.
+  - Ten sam układ klasy.
 
-  This means that a `TypeDef` object must always be fully and consistently defined in every metadata scope in which it is declared; if its member implementations (for a class) are spread across multiple compilation units, the full definition is assumed to be present in every scope and not incremental to each scope. For example, if parameter names are relevant to the contract, they must be emitted the same way into every scope; if they are not relevant, they should not be emitted into metadata.
+  Oznacza to, że obiekt `TypeDef` musi być zawsze całkowicie i spójnie zdefiniowany w każdym zakresie metadanych, w którym jest zadeklarowany; Jeśli jego implementacje składowe (dla klasy) są rozłożone w wielu jednostkach kompilacji, przyjmuje się, że w każdym zakresie jest obecna pełna definicja, a nie przyrostowa do każdego zakresu. Na przykład jeśli nazwy parametrów są odpowiednie dla kontraktu, muszą one być emitowane w taki sam sposób do każdego zakresu; Jeśli nie są istotne, nie powinny być emitowane do metadanych.
 
-  The exception is that a `TypeDef` object can have incremental members flagged as `mdPrivateScope`. On encountering these, `MergeEnd` incrementally adds them to the current scope without regard for duplicates. Because the compiler understands the private scope, the compiler must be responsible for enforcing rules.
+  Wyjątek polega na tym, że obiekt `TypeDef` może mieć przyrostowe składowe oflagowane jako `mdPrivateScope`. Po napotkaniu tych `MergeEnd` przyrostowo dodaje je do bieżącego zakresu bez względu na duplikaty. Ponieważ kompilator rozumie zakres prywatny, kompilator musi być odpowiedzialny za Wymuszanie reguł.
 
-- Relative virtual addresses (RVAs) are not imported or merged; the compiler is expected to re-emit this information.
+- Względne adresy wirtualne (RVA) nie są importowane ani scalone; Kompilator powinien reemitować te informacje.
 
-- Custom attributes are merged only when the item to which they are attached is merged. For example, custom attributes associated with a class are merged when the class is first encountered. If custom attributes are associated with a `TypeDef` or `MemberDef` that is specific to the compilation unit (such as the time stamp of a member compile), they are not merged and it is up to the compiler to remove or update such metadata.
+- Atrybuty niestandardowe są scalane tylko wtedy, gdy element, do którego są dołączone, zostanie scalony. Na przykład atrybuty niestandardowe skojarzone z klasą są scalane podczas pierwszego napotkania klasy. Jeśli atrybuty niestandardowe są skojarzone z `TypeDef` lub `MemberDef`, które są specyficzne dla jednostki kompilacji (na przykład sygnatury czasowej kompilowania elementu członkowskiego), nie są scalane i są do kompilatora, aby usunąć lub zaktualizować takie metadane.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** Cor.h
+**Nagłówek:** Cor. h
 
-**Library:** Used as a resource in MSCorEE.dll
+**Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll
 
-**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

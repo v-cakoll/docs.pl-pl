@@ -21,7 +21,7 @@ ms.locfileid: "74283233"
 
  Windows Communication Foundation (WCF) to ujednolicony model programowania firmy Microsoft służący do tworzenia aplikacji zorientowanych na usługę. Najpierw została wprowadzona jako część programu .NET 3,0 wraz z WF3 i teraz jest jednym z najważniejszych składników .NET Framework.
 
- Windows Server AppFabric to zestaw zintegrowanych technologii, które ułatwiają tworzenie, skalowanie i zarządzanie aplikacjami sieci Web i złożonymi, które działają w usługach IIS. Zapewnia narzędzia do monitorowania usług i przepływów pracy oraz zarządzania nimi. Aby uzyskać więcej informacji, zobacz [Windows Server AppFabric 1,0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
+ Program Windows Server AppFabric to zestaw zintegrowanych technologii, które ułatwiają tworzenie i skalowanie aplikacji sieci Web i aplikacji złożonych, które są uruchamiane z użyciem usług IIS, oraz zarządzanie nimi. Zapewnia narzędzia do monitorowania usług i przepływów pracy oraz zarządzania nimi. Aby uzyskać więcej informacji, zobacz [Windows Server AppFabric 1,0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
 
 ## <a name="goals"></a>Cele
  Celem tego tematu jest przedstawienie charakterystyki wydajności WF4 z danymi mierzonymi dla różnych scenariuszy. Zawiera również szczegółowe porównania między WF4 i WF3, a tym samym przedstawia doskonałe ulepszenia, które zostały wprowadzone w tej nowej wersji. Scenariusze i dane przedstawione w tym artykule określają bazowy koszt różnych aspektów WF4 i WF3. Te dane są przydatne w zrozumieniu charakterystyki wydajności WF4 i mogą być przydatne w planowaniu migracji z WF3 do WF4 lub przy użyciu WF4 podczas opracowywania aplikacji. Należy jednak zadbać o to, aby pochodziły z danych przedstawionych w tym artykule. Wydajność aplikacji złożonego przepływu pracy jest wysoce zależna od implementacji przepływu pracy i sposobu integrowania różnych składników. Jeden musi mierzyć każdą aplikację, aby określić charakterystykę wydajności tej aplikacji.
@@ -49,7 +49,7 @@ ms.locfileid: "74283233"
 ### <a name="asynchronous-programming"></a>Programowanie asynchroniczne
  Aplikacje mają zwykle lepszą wydajność i skalowalność dzięki programowaniu asynchronicznym na długotrwałe operacje blokowania, takie jak operacje we/wy lub rozproszone procesy obliczeniowe. WF4 zapewnia obsługę asynchroniczną przez podstawowe typy działań <xref:System.Activities.AsyncCodeActivity>, <xref:System.Activities.AsyncCodeActivity%601>. Środowisko uruchomieniowe natywnie rozumie działania asynchroniczne i w związku z tym może automatycznie umieścić wystąpienie w strefie no-utrwalania, gdy Praca asynchroniczna jest zaległa. Działania niestandardowe mogą pochodzić od tych typów w celu wykonywania operacji asynchronicznych bez przytrzymywania wątku harmonogramu przepływu pracy i blokowania działań, które mogą być uruchamiane równolegle.
 
-### <a name="messaging"></a>Obsługa komunikatów
+### <a name="messaging"></a>Obsługa wiadomości
  Początkowo WF3 bardzo ograniczoną obsługę komunikatów przez zewnętrzne zdarzenia lub wywołania usług sieci Web. W programie .NET 3,5 przepływy pracy mogą być implementowane jako klienci WCF lub udostępniane jako usługi WCF za poorednictwem <xref:System.Workflow.Activities.SendActivity> i <xref:System.Workflow.Activities.ReceiveActivity>. W WF4 koncepcji programowania komunikatów opartych na przepływach pracy został jeszcze bardziej wzmocniony przez ścisłą integrację logiki obsługi komunikatów WCF z WF.
 
  Potok przetwarzania ujednoliconych komunikatów zapewniany w programie WCF w programie .NET 4 pomaga WF4 usługom w znacznie lepszą wydajność i skalowalność niż WF3. WF4 zapewnia także bogatszą obsługę programowania komunikatów, która może modelować złożone wzorce wymiany komunikatów (MEPs). Deweloperzy mogą korzystać z umów usług z systemem, aby w łatwy sposób programistyczny lub nieokreślony z nieokreślonymi typami umów uzyskać lepszą wydajność bez płacenia kosztów serializacji. Obsługa buforowania kanału po stronie klienta za pośrednictwem klasy <xref:System.ServiceModel.Activities.SendMessageChannelCache> w WF4 ułatwia deweloperom tworzenie szybkich aplikacji z minimalnym nakładem pracy. Aby uzyskać więcej informacji, zobacz [Zmienianie poziomów udostępniania pamięci podręcznej dla działań wysyłania](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).
@@ -353,7 +353,7 @@ public class Workflow1 : Activity
 
 ## <a name="workflow-runtime-services"></a>Usługi środowiska uruchomieniowego przepływu pracy
 
-### <a name="persistence"></a>Trwałość
+### <a name="persistence"></a>Stan trwały
  WF3 i WF4 są dostarczane z dostawcą trwałości SQL.  Dostawca trwałości SQL WF3 jest prostą implementacją, która serializować wystąpienie przepływu pracy i zapisuje je w obiekcie blob.  Z tego powodu wydajność tego dostawcy zależy w dużym stopniu od rozmiaru wystąpienia przepływu pracy.  W WF3 rozmiar wystąpienia może wzrosnąć z wielu powodów, jak opisano wcześniej w tym dokumencie.  Wielu klientów zdecyduje się nie używać domyślnego dostawcy trwałości SQL, ponieważ przechowywanie serializowanego wystąpienia w bazie danych nie zapewnia wglądu w stan przepływu pracy.  Aby znaleźć konkretny przepływ pracy bez znajomości identyfikatora przepływu pracy, jeden z nich będzie musiał rozszeregować każde trwałe wystąpienie i sprawdzić zawartość.  Wielu deweloperów woli napisać własnych dostawców trwałości do pokonania tej przeszkody.
 
  Dostawca trwałości SQL WF4 próbował rozwiązać niektóre z tych problemów.  Tabele trwałości uwidaczniają pewne informacje, takie jak aktywne zakładki i właściwości promocji.  Nowa funkcja korelacji oparta na zawartości w programie WF4 nie będzie działać prawidłowo przy użyciu metody trwałości SQL WF3, która jest oparta na pewnych zmianach w organizacji wystąpienia utrwalonego przepływu pracy.  Dzięki temu zadanie dostawcy trwałości jest bardziej złożone i ma dodatkowe obciążenie bazy danych.
@@ -443,7 +443,7 @@ public class Workflow1 : Activity
  
 W poniższej tabeli przedstawiono wyniki przebiegu przepływu pracy zawierającego pięć działań w sekwencji w różnych konfiguracjach.
 
-|Test|Przepływność (przepływy pracy/s)|
+|{1&gt;Test&lt;1}|Przepływność (przepływy pracy/s)|
 |----------|-----------------------------------|
 |Sekwencja WF3 w środowisku uruchomieniowym WF3|1,576|
 |Sekwencja WF3 w środowisku uruchomieniowym WF4 przy użyciu międzyoperacyjnego|2,745|

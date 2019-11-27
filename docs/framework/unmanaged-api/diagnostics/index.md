@@ -14,14 +14,14 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445501"
 ---
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a>Magazyn symboli diagnostycznych (Niezarządzany wykaz interfejsów API)
-The diagnostics symbol store API enables a compiler to generate symbol information for use by a debugger.  
+Interfejs API magazynu symboli diagnostyki umożliwia kompilatorowi generowanie informacji o symbolach do użycia przez debuger.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- Describes the unmanaged interfaces that the diagnostics symbol store API uses.  
+ Opisuje interfejsy niezarządzane używane przez interfejs API magazynu symboli diagnostyki.  
   
  [Wyliczenia magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
- Describes the unmanaged enumerations that the diagnostics symbol store API uses.  
+ Opisuje niezarządzane wyliczenia, które są używane przez interfejs API magazynu symboli diagnostyki.  
   
  [Struktury magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
- Describes the unmanaged structures that the diagnostics symbol store API uses.
+ Opisuje struktury niezarządzane używane przez interfejs API magazynu symboli diagnostyki.

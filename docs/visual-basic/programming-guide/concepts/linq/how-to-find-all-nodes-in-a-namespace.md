@@ -1,5 +1,5 @@
 ---
-title: 'How to: Find All Nodes in a Namespace'
+title: 'Instrukcje: Znajdowanie wszystkich węzłów w przestrzeni nazw'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
 ms.openlocfilehash: f6bc38140bc2ea43393133d78c798469d26671c5
@@ -9,11 +9,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352967"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>How to: Find All Nodes in a Namespace (Visual Basic)
-You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.  
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Instrukcje: Znajdowanie wszystkich węzłów w przestrzeni nazw (Visual Basic)
+Można filtrować według przestrzeni nazw każdego elementu lub atrybutu, aby znaleźć wszystkie węzły w danej przestrzeni nazw.  
   
 ## <a name="example"></a>Przykład  
- The following example creates an XML tree with two namespaces. It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.  
+ Poniższy przykład tworzy drzewo XML z dwoma przestrzeniami nazw. Następnie wykonuje iterację w drzewie i drukuje nazwy wszystkich elementów i atrybutów w jednej z tych przestrzeni nazw.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -52,9 +52,9 @@ Nodes in the http://www.adventure-works.com namespace
 ```  
   
 ## <a name="example"></a>Przykład  
- The XML file accessed by the following query contains purchase orders in two different namespaces. The query creates a new tree with just the elements in one of the namespaces.  
+ Plik XML, do którego uzyskuje się następujące zapytanie, zawiera zamówienia zakupu w dwóch różnych przestrzeniach nazw. Zapytanie tworzy nowe drzewo zawierające tylko elementy w jednej z przestrzeni nazw.  
   
- This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: skonsolidowane zamówienia zakupu](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -111,4 +111,4 @@ End Module
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Zapytania podstawowe (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Project a New Type (LINQ to XML)'
+title: 'Instrukcje: Tworzenie projektu nowego typu (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 8cfb24f5-89b2-4cfb-b85d-e7963f8f1845
 ms.openlocfilehash: a2486d88af537fb4aa8f34243a5a739d25ee5be1
@@ -9,13 +9,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353333"
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>How to: Project a New Type (LINQ to XML) (Visual Basic)
-Other examples in this section have shown queries that return results as <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> of `string`, and <xref:System.Collections.Generic.IEnumerable%601> of `int`. These are common result types, but they are not appropriate for every scenario. In many cases you will want your queries to return an <xref:System.Collections.Generic.IEnumerable%601> of some other type.  
+# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>Instrukcje: Tworzenie projektu nowego typu (LINQ to XML) (Visual Basic)
+W innych przykładach w tej sekcji przedstawiono zapytania, które zwracają wyniki jako <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> `string`i <xref:System.Collections.Generic.IEnumerable%601> `int`. Są to typowe typy wyników, ale nie są one odpowiednie dla każdego scenariusza. W wielu przypadkach zapytania będą zwracać <xref:System.Collections.Generic.IEnumerable%601> innego typu.  
   
 ## <a name="example"></a>Przykład  
- This example shows how to instantiate objects in the `Select` clause. The code first defines a new class with a constructor, and then modifies the `Select` statement so that the expression is a new instance of the new class.  
+ Ten przykład pokazuje, jak utworzyć wystąpienie obiektów w klauzuli `Select`. Kod najpierw definiuje nową klasę z konstruktorem, a następnie modyfikuje instrukcję `Select` tak, aby wyrażenie było nowym wystąpieniem nowej klasy.  
   
- This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: typowe zamówienie zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Public Class NameQty  
@@ -43,7 +43,7 @@ Public Class Program
 End Class  
 ```  
   
- This example uses the `M:System.Xml.Linq.XElement.Element` method that was introduced in the topic [How to: Retrieve a Single Child Element (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md). It also uses casts to retrieve the values of the elements that are returned by the `M:System.Xml.Linq.XElement.Element` method.  
+ W tym przykładzie użyto metody `M:System.Xml.Linq.XElement.Element`, która została wprowadzona w temacie [How to: Pobieranie pojedynczego elementu podrzędnego (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md). Używa również rzutowania do pobrania wartości elementów, które są zwracane przez metodę `M:System.Xml.Linq.XElement.Element`.  
   
  Ten przykład generuje następujące wyniki:  
   
@@ -54,4 +54,4 @@ Baby Monitor:2
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Projekcje i przekształcenia (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

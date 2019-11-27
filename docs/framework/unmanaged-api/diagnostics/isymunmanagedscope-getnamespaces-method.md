@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446301"
 ---
 # <a name="isymunmanagedscopegetnamespaces-method"></a>ISymUnmanagedScope::GetNamespaces — Metoda
-Gets the namespaces that are being used within this scope.  
+Pobiera przestrzenie nazw, które są używane w tym zakresie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +38,19 @@ HRESULT GetNamespaces(
   
 ## <a name="parameters"></a>Parametry  
  `cNameSpaces`  
- [in] The size of the `namespaces` array.  
+ podczas Rozmiar tablicy `namespaces`.  
   
  `pcNameSpaces`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.  
+ określoną Wskaźnik do `ULONG32`, który odbiera rozmiar buforu wymaganego do przechowywania przestrzeni nazw.  
   
  `namespaces`  
- [out] The array that receives the namespaces.  
+ określoną Tablica, która odbiera przestrzenie nazw.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -14,39 +14,39 @@ ms.locfileid: "74334552"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Porady: zmienianie nazwy pliku w Visual Basic
 
-Use the `RenameFile` method of the `My.Computer.FileSystem` object to rename a file by supplying the current location, file name, and the new file name. This method cannot be used to move a file; use the `MoveFile` method to move and rename the file.  
+Użyj metody `RenameFile` obiektu `My.Computer.FileSystem`, aby zmienić nazwę pliku, dostarczając bieżącą lokalizację, nazwę pliku i nową nazwę pliku. Nie można użyć tej metody do przeniesienia pliku; Użyj metody `MoveFile`, aby przenieść plik i zmienić jego nazwę.  
   
-### <a name="to-rename-a-file"></a>To rename a file  
+### <a name="to-rename-a-file"></a>Aby zmienić nazwę pliku  
   
-- Use the `My.Computer.FileSystem.RenameFile` method to rename a file. This example renames the file named `Test.txt` to `SecondTest.txt`.  
+- Użyj metody `My.Computer.FileSystem.RenameFile`, aby zmienić nazwę pliku. Ten przykład zmienia nazwę pliku o nazwie `Test.txt` na `SecondTest.txt`.  
   
      [!code-vb[VbVbcnMyFileSystem#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#9)]  
   
- This code example is also available as an IntelliSense code snippet. In the code snippet picker, the snippet is located in **File system - Processing Drives, Folders, and Files**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
+ Ten przykład kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu wstawka znajduje się w **systemie plików — dyski, foldery i pliki**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
+## <a name="robust-programming"></a>Skuteczne programowanie  
 
  Następujące warunki mogą spowodować wyjątek:  
   
-- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).  
+- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (rozpoczyna się od \\\\.\\) (<xref:System.ArgumentException>).  
   
-- `newName` contains path information (<xref:System.ArgumentException>).  
+- `newName` zawiera informacje o ścieżce (<xref:System.ArgumentException>).  
   
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).  
+- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).  
   
-- `newName` is `Nothing` or an empty string (<xref:System.ArgumentNullException>).  
+- `newName` jest `Nothing` lub jest pustym ciągiem (<xref:System.ArgumentNullException>).  
   
-- The source file is not valid or does not exist (<xref:System.IO.FileNotFoundException>).  
+- Plik źródłowy jest nieprawidłowy lub nie istnieje (<xref:System.IO.FileNotFoundException>).  
   
-- There is an existing file or directory with the name specified in `newName` (<xref:System.IO.IOException>).  
+- Istnieje plik lub katalog o nazwie określonej w `newName` (<xref:System.IO.IOException>).  
   
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).  
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
   
-- A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).  
+- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).  
   
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).  
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
   
-- The user does not have the required permission (<xref:System.UnauthorizedAccessException>).  
+- Użytkownik nie ma wymaganego uprawnienia (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Zobacz także
 

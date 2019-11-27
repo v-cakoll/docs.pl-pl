@@ -13,11 +13,11 @@ ms.locfileid: "74334537"
 ---
 # <a name="how-to-retrieve-the-contents-of-the-my-documents-directory-in-visual-basic"></a>Porady: pobieranie zawartości katalogu Moje dokumenty w Visual Basic
 
-The <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> object can be used to read from many of the **All Users** directories, such as **My Documents** or **Desktop**.  
+Obiekt <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> może służyć do odczytu z wielu katalogów **użytkowników** , takich jak **Moje dokumenty** lub **pulpit**.  
   
-### <a name="to-read-from-the-my-documents-folder"></a>To read from the My Documents folder  
+### <a name="to-read-from-the-my-documents-folder"></a>Aby czytać z folderu Moje dokumenty  
   
-- Use the `ReadAllText` method to read the text from each file in a specific directory. The following code specifies a directory and file and then uses `ReadAllText` to read them into the string named `patients`.  
+- Użyj metody `ReadAllText`, aby odczytać tekst z każdego pliku w określonym katalogu. Poniższy kod określa katalog i plik, a następnie używa `ReadAllText` do odczytywania ich do ciągu o nazwie `patients`.  
   
      [!code-vb[VbVbcnMyFileSystem#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#15)]  
   

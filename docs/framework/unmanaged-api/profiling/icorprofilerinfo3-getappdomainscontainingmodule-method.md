@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449735"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>ICorProfilerInfo3::GetAppDomainsContainingModule — Metoda
-Gets the identifiers of the application domains in which the given module has been loaded.  
+Pobiera identyfikatory domen aplikacji, w których dany moduł został załadowany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,28 +38,28 @@ HRESULT GetAppDomainsContainingModule(
   
 ## <a name="parameters"></a>Parametry  
  `moduleId`  
- [in] The ID of the loaded module.  
+ podczas Identyfikator załadowanego modułu.  
   
  `cAppDomainIds`  
- [in] The size of the `appDomainIds` array.  
+ podczas Rozmiar tablicy `appDomainIds`.  
   
  `pcAppDomainIds`  
- [out] A pointer to the total number of returned elements.  
+ określoną Wskaźnik do łącznej liczby zwróconych elementów.  
   
  `appDomainIds`  
- [out] An array of application domain ID values.  
+ określoną Tablica wartości identyfikatora domeny aplikacji.  
   
 ## <a name="remarks"></a>Uwagi  
- The method uses caller allocated buffers.  
+ Metoda używa buforów przyznanych przez wywołującego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332114"
 ---
 # <a name="mycomputer-object"></a>My.Computer — Obiekt
-Provides properties for manipulating computer components such as audio, the clock, the keyboard, the file system, and so on.  
+Zawiera właściwości służące do manipulowania składnikami komputerów, takimi jak dźwięk, zegar, klawiatura, system plików i tak dalej.  
   
 ## <a name="remarks"></a>Uwagi  
- For information about the methods and properties of the `My.Computer` object, see <xref:Microsoft.VisualBasic.Devices.Computer>. The base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects.  
+ Aby uzyskać informacje o metodach i właściwościach obiektu `My.Computer`, zobacz <xref:Microsoft.VisualBasic.Devices.Computer>. Klasa bazowa <xref:Microsoft.VisualBasic.Devices.ServerComputer> udostępnia elementy członkowskie, które są dostępne we wszystkich projektach.  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
+ **Przestrzeń nazw:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Computer> (the base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects).  
+ **Klasa:** <xref:Microsoft.VisualBasic.Devices.Computer> (klasa bazowa <xref:Microsoft.VisualBasic.Devices.ServerComputer> udostępnia elementy członkowskie, które są dostępne we wszystkich projektach).  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

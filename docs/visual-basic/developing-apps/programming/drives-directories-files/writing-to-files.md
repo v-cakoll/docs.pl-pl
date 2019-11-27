@@ -17,49 +17,49 @@ ms.locfileid: "74352138"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Zapisywanie w plikach w Visual Basic
 
-This section explains how to perform tasks that involve writing to files.  
+W tej sekcji wyjaśniono, jak wykonywać zadania, które wymagają zapisu w plikach.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
  [Instrukcje: zapisywanie tekstu w plikach](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
- Demonstrates how to write to text files.  
+ Pokazuje, jak zapisywać w plikach tekstowych.  
   
  [Instrukcje: dołączanie do plików tekstowych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
- Demonstrates how to append text to a text file.  
+ Demonstruje sposób dołączania tekstu do pliku tekstowego.  
   
  [Instrukcje: zapisywanie w plikach binarnych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
- Demonstrates how to write to a binary file.  
+ Pokazuje, jak zapisywać do pliku binarnego.  
   
  [Instrukcje: zapisywanie tekstu w plikach w katalogu Moje dokumenty](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
- Demonstrates how to create and write to a new text file in the **My Documents** directory.  
+ Pokazuje, jak utworzyć nowy plik tekstowy w katalogu **Moje dokumenty** i zapisać w nim.  
   
  [Instrukcje: zapisywanie tekstu w plikach za pomocą StreamWriter](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
- Demonstrates how to write to a file with a <xref:System.IO.StreamWriter?displayProperty=nameWithType> object.  
+ Demonstruje sposób zapisu do pliku z obiektem <xref:System.IO.StreamWriter?displayProperty=nameWithType>.  
   
 ## <a name="reference"></a>Tematy pomocy  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- Describes the `My.Computer.FileSystem` object and its methods and properties.  
+ Opisuje obiekt `My.Computer.FileSystem` i jego metody i właściwości.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>  
- Describes the `OpenTextFileWriter` method.  
+ Opisuje metodę `OpenTextFileWriter`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>  
- Describes the `WriteAllBytes` method.  
+ Opisuje metodę `WriteAllBytes`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
- Describes the `WriteAllText` method.  
+ Opisuje metodę `WriteAllText`.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
  [Odczyt z plików](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- Explains how to perform tasks that involve reading from files.  
+ Wyjaśnia, jak wykonywać zadania, które obejmują odczyt z plików.  
   
  [Tworzenie, usuwanie i przenoszenie plików i katalogów](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
- Explains how to perform tasks that involve creating, deleting, moving, and renaming files and directories.  
+ Wyjaśnia, jak wykonywać zadania, które obejmują tworzenie, usuwanie, przechodzenie i zmienianie nazw plików i katalogów.  
   
  [Zapisywanie danych w schowku i odczytywanie ich z niego](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
- Explains how to perform tasks that are associated with `My.Computer.Clipboard`, such as reading data from or writing data to the Clipboard.  
+ Wyjaśnia, jak wykonywać zadania skojarzone z `My.Computer.Clipboard`, takie jak odczytywanie danych z lub zapisywanie danych w Schowku.  
   
  [Kodowanie pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
- Provides an overview of file encodings.
+ Zawiera omówienie kodowania plików.

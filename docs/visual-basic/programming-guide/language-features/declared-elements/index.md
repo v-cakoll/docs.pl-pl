@@ -10,9 +10,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345337"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Zadeklarowane elementy w Visual Basic
-A *declared element* is a programming element that is defined in a declaration statement. Declared elements include variables, constants, enumerations, classes, structures, modules, interfaces, procedures, procedure parameters, function returns, external procedure references, operators, properties, events, and delegates.  
+*Zadeklarowany element* to element programistyczny, który jest zdefiniowany w instrukcji deklaracji. Zadeklarowane elementy obejmują zmienne, stałe, wyliczenia, klasy, struktury, moduły, interfejsy, procedury, parametry procedury, funkcje zwracane, odwołania do procedur zewnętrznych, operatory, właściwości, zdarzenia i Delegaty.  
   
- Declaration statements include the following:  
+ Deklaracje deklaracji obejmują następujące elementy:  
   
 - [Dim, instrukcja](../../../../visual-basic/language-reference/statements/dim-statement.md)  
   
@@ -44,20 +44,20 @@ A *declared element* is a programming element that is defined in a declaration s
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Nazwy zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- Describes how to name elements and use alphabetic case.  
+ Opisuje sposób nazwy elementów i używania wielkości liter.  
   
  [Charakterystyka zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- Covers characteristics, such as scope, possessed by declared elements.  
+ Obejmuje właściwości, takie jak zakres, posiadane przez zadeklarowane elementy.  
   
  [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- Describes how the compiler matches a reference to a declaration and how to qualify a name.  
+ Opisuje sposób, w jaki kompilator dopasowuje odwołanie do deklaracji i jak zakwalifikować nazwę.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Struktura programu i konwencje związane z kodami](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Presents guidelines for making your code easier to read, understand, and maintain.  
+ Przedstawia wytyczne ułatwiające odczytywanie, poznawanie i konserwowanie kodu.  
   
  [Instrukcje](../../../../visual-basic/language-reference/statements/index.md)  
- Describes statements that name and define procedures, variables, arrays, and constants.  
+ Opisuje instrukcje dotyczące nazw i definiowania procedur, zmiennych, tablic i stałych.  
   
  [Kontekst deklaracji i domyślne poziomy dostępu](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
- Lists the types of declared elements and shows for each one its declaration statement, in what context you can declare it, and its default access level.
+ Wyświetla listę typów deklarowanych elementów i pokazuje dla każdej z nich instrukcję deklaracji, w jakim kontekście można zadeklarować ją i domyślny poziom dostępu.

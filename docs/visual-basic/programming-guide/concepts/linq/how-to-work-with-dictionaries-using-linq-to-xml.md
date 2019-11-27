@@ -1,5 +1,5 @@
 ---
-title: 'How to: Work with Dictionaries Using LINQ to XML'
+title: 'Instrukcje: korzystanie ze słowników przy użyciu LINQ to XML'
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
 ms.openlocfilehash: 12327be3c9d32d34866691b156f58fd1e8e40240
@@ -9,11 +9,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332363"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>How to: Work with Dictionaries Using LINQ to XML (Visual Basic)
-It is often convenient to convert varieties of data structures to XML, and XML back to other data structures. This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.  
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Instrukcje: korzystanie ze słowników przy użyciu LINQ to XML (Visual Basic)
+Często wygodnie jest przekonwertować różne struktury danych na XML, a następnie XML z powrotem do innych struktur danych. W tym temacie przedstawiono konkretną implementację tego ogólnego podejścia poprzez konwersję <xref:System.Collections.Generic.Dictionary%602> do formatu XML i z powrotem.  
   
 ## <a name="example"></a>Przykład  
- This example uses XML literals and a query in an embedded expression. The query projects new <xref:System.Xml.Linq.XElement> objects, which then become the new content for the `Root` <xref:System.Xml.Linq.XElement> object.  
+ Ten przykład używa literałów XML i zapytania w wyrażeniu osadzonym. Kwerenda projektuje nowe <xref:System.Xml.Linq.XElement> obiekty, które następnie stają się nową zawartością dla obiektu `Root` <xref:System.Xml.Linq.XElement>.  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -41,7 +41,7 @@ Console.WriteLine(root)
 ```  
   
 ## <a name="example"></a>Przykład  
- The following code creates a dictionary from XML.  
+ Poniższy kod tworzy słownik z pliku XML.  
   
 ```vb  
 Dim root As XElement = _  
@@ -72,4 +72,4 @@ Child4:Value4
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Projekcje i przekształcenia (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

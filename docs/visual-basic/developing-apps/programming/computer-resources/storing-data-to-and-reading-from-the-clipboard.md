@@ -1,5 +1,5 @@
 ---
-title: Storing data to and reading from the Clipboard
+title: Przechowywanie danych i odczytywanie ich ze schowka
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)
@@ -16,62 +16,62 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349735"
 ---
-# <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Storing data to and reading from the Clipboard (Visual Basic)
+# <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Przechowywanie danych i odczytywanie ich ze schowka (Visual Basic)
 
-The Clipboard can be used to store data, such as text and images. Because the Clipboard is shared by all active processes, it can be used to transfer data between them. The `My.Computer.Clipboard` object allows you to easily access the Clipboard and to read from and write to it.  
+Schowek może służyć do przechowywania danych, takich jak tekst i obrazy. Ze względu na to, że Schowek jest współużytkowany przez wszystkie aktywne procesy, można go użyć do transferowania danych między nimi. Obiekt `My.Computer.Clipboard` umożliwia łatwe uzyskiwanie dostępu do schowka oraz odczytywanie i zapisywanie w nim.  
   
-## <a name="reading-from-the-clipboard"></a>Reading from the Clipboard  
+## <a name="reading-from-the-clipboard"></a>Odczytywanie ze schowka  
 
- Use the <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A> method to read the text in the Clipboard. The following code reads the text and displays it in a message box. There must be text stored on the Clipboard for the example to run correctly.  
+ Użyj metody <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A>, aby odczytać tekst w Schowku. Poniższy kod odczytuje tekst i wyświetla go w oknie komunikatu. Aby przykład mógł działać poprawnie, musi być zapisany tekst w Schowku.  
   
  [!code-vb[VbVbcnMyClipboard#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#4)]  
   
- This code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **Windows Forms Applications > Clipboard**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
+ Ten przykład kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu znajduje się w **Windows Forms aplikacje > schowka**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
   
- Use the <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> method to retrieve an image from the Clipboard. This example checks to see if there is an image on the Clipboard before retrieving it and assigning it to `PictureBox1`.  
+ Użyj metody <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A>, aby pobrać obraz ze schowka. Ten przykład sprawdza, czy na schowku znajduje się obraz przed pobraniem go i przypisanie do `PictureBox1`.  
   
  [!code-vb[VbResourceTasks#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#16)]  
   
- This code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **Windows Forms Applications > Clipboard**.For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
+ Ten przykład kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu znajduje się w **Windows Forms aplikacje > schowka**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
   
- Items placed on the Clipboard will persist even after the application is shut down.  
+ Elementy umieszczone w schowku będą przechowywane nawet po zamknięciu aplikacji.  
   
-## <a name="determining-the-type-of-file-stored-in-the-clipboard"></a>Determining the type of file stored in the Clipboard  
+## <a name="determining-the-type-of-file-stored-in-the-clipboard"></a>Określanie typu pliku przechowywanego w schowku  
 
- Data on the Clipboard may take a number of different forms, such as text, an audio file, or an image. In order to determine what sort of file is on the Clipboard, you can use methods such as <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A>, and <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A>. The <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> method can be used if you have a custom format that you want to check.  
+ Dane w schowku mogą przyjmować różne formy, takie jak tekst, plik dźwiękowy lub obraz. Aby określić, jakie sortowanie plików znajduje się w schowku, możesz użyć metod, takich jak <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A>i <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A>. Metody <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> można użyć, jeśli masz format niestandardowy, który chcesz sprawdzić.  
   
- Use the `ContainsImage` function to determine whether the data contained on the Clipboard is an image. The following code checks to see whether the data is an image and reports accordingly.  
+ Użyj funkcji `ContainsImage`, aby określić, czy dane zawarte w schowku są obrazem. Poniższy kod sprawdza, czy dane są odpowiednio obrazem i raportami.  
   
  [!code-vb[VbResourceTasks#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#13)]  
   
-## <a name="clearing-the-clipboard"></a>Clearing the Clipboard  
+## <a name="clearing-the-clipboard"></a>Czyszczenie schowka  
 
- The <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear%2A> method clears the Clipboard. Because the Clipboard is shared by other processes, clearing it may have an impact on those processes.  
+ Metoda <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear%2A> czyści zawartość schowka. Ze względu na to, że Schowek jest współużytkowany przez inne procesy, jego czyszczenie może mieć wpływ na te procesy.  
   
- The following code shows how to use the `Clear` method.  
+ Poniższy kod pokazuje, jak używać metody `Clear`.  
   
  [!code-vb[VbVbcnMyClipboard#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#3)]  
   
-## <a name="writing-to-the-clipboard"></a>Writing to the Clipboard  
+## <a name="writing-to-the-clipboard"></a>Zapisywanie w schowku  
 
- Use the <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText%2A> method to write text to the Clipboard. The following code writes the string "This is a test string" to the Clipboard.  
+ Użyj metody <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText%2A>, aby zapisać tekst do Schowka. Poniższy kod zapisuje ciąg "to jest ciąg testowy" do Schowka.  
   
  [!code-vb[VbVbcnMyClipboard#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#1)]  
   
- The `SetText` method can accept a format parameter that contains a type of <xref:System.Windows.Forms.TextDataFormat>. The following code writes the string "This is a test string" to the Clipboard as RTF text.  
+ Metoda `SetText` może akceptować parametr formatu, który zawiera typ <xref:System.Windows.Forms.TextDataFormat>. Poniższy kod zapisuje ciąg "to jest ciąg testowy" do Schowka jako tekst RTF.  
   
  [!code-vb[VbVbcnMyClipboard#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#2)]  
   
- Use the <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> method to write data to the Clipboard. This example writes the `DataObject` `dataChunk` to the Clipboard in the custom format `specialFormat`.  
+ Użyj metody <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A>, aby zapisać dane do Schowka. Ten przykład zapisuje `DataObject` `dataChunk` do Schowka w `specialFormat`formacie niestandardowym.  
   
  [!code-vb[VbVbcnMyClipboard#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#7)]  
   
- Use the <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetAudio%2A> method to write audio data to the Clipboard. This example creates the byte array `musicReader`, reads the file `cool.wav` into it, and then writes it to the Clipboard.  
+ Użyj metody <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetAudio%2A>, aby napisać dane audio do Schowka. Ten przykład tworzy tablicę bajtową `musicReader`, odczytuje `cool.wav` do niej plik, a następnie zapisuje ją w Schowku.  
   
  [!code-vb[VbResourceTasks#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#5)]  
   
 > [!IMPORTANT]
-> Because the Clipboard can be accessed by other users, do not use it to store sensitive information, such as passwords or confidential data.  
+> Ze względu na to, że można uzyskać dostęp do schowka przez innych użytkowników, nie należy używać go do przechowywania poufnych informacji, takich jak hasła lub dane poufne.  
   
 ## <a name="see-also"></a>Zobacz także
 

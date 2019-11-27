@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446584"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions — Wyliczenie
-Enumerates the assembly options.  
+Wylicza opcje zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -56,31 +56,31 @@ typedef enum _AssemblyOptions {
   
 |Pole|Opis|  
 |-----------|-----------------|  
-|optAssemTitle|String - Represents the assembly title.|  
-|optAssemDescription|String - Contains the assembly description.|  
-|optAssemConfig|String - Contains the assembly configuration.|  
-|optAssemOS|String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
+|optAssemTitle|String — reprezentuje tytuł zestawu.|  
+|optAssemDescription|Ciąg — zawiera opis zestawu.|  
+|optAssemConfig|String — zawiera konfigurację zestawu.|  
+|optAssemOS|Zakodowany ciąg jako: "dwOSPlatformId. dwOSMajorVersion. dwOSMinorVersion".|  
 |optAssemProcessor|ULONG|  
-|optAssemLocale|String - Contains the assembly locale.|  
-|optAssemVersion|String - Encoded as: "Major.Minor.Build.Revision".|  
-|optAssemCompany|String - Contains the company.|  
-|optAssemProduct|String - Contains the product name.|  
-|optAssemProductVersion|String (also known as InformationalVersion).|  
-|optAssemCopyright|String - Contains the copyright information.|  
-|optAssemTrademark|String - Contains the trademark information.|  
-|optAssemKeyFile|String (file name).|  
-|optAssemKeyName|String (The key name).|  
+|optAssemLocale|Ciąg — zawiera ustawienia regionalne zestawu.|  
+|optAssemVersion|Zakodowany ciąg jako: "główna. pomocnicza. kompilacja. poprawka".|  
+|optAssemCompany|Ciąg — zawiera firmę.|  
+|optAssemProduct|String — zawiera nazwę produktu.|  
+|optAssemProductVersion|Ciąg (znany również jako InformationalVersion).|  
+|optAssemCopyright|Ciąg — zawiera informacje o prawach autorskich.|  
+|optAssemTrademark|Ciąg — zawiera informacje o znakach towarowych.|  
+|optAssemKeyFile|Ciąg (nazwa pliku).|  
+|optAssemKeyName|Ciąg (nazwa klucza).|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
-|optAssemHalfSign|Bool (Also known as DelaySign).|  
-|optAssemFileVersion|String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.|  
-|optAssemSatelliteVer|String - Encoded as "Major.Minor.Build.Revision".|  
-|optLastAssemOption|A counter of the number of elements.|  
+|optAssemHalfSign|Bool (znany również jako DelaySign).|  
+|optAssemFileVersion|Zakodowana ciągowo jako "główna. pomocnicza. kompilacja. poprawka" — taka sama jak ProductVersion.|  
+|optAssemSatelliteVer|Kodowanie ciągu jako "główna. pomocnicza. kompilacja. poprawka".|  
+|optLastAssemOption|Licznik liczby elementów.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** alink.h  
+ **Nagłówek:** Alink. h  
   
- **Library**: alink.dll  
+ **Biblioteka**: Alink. dll  
   
 ## <a name="see-also"></a>Zobacz także
 

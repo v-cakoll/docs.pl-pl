@@ -1,5 +1,5 @@
 ---
-title: Disk full
+title: Dysk zapełniony
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID61
@@ -11,12 +11,12 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351108"
 ---
-# <a name="disk-full-visual-basic"></a>Disk full (Visual Basic)
-There is not enough room on the disk to either complete a `Print`, `Write`, or `FileClose` operation, or to create required files.  
+# <a name="disk-full-visual-basic"></a>Dysk zapełniony (Visual Basic)
+Na dysku nie ma wystarczającej ilości miejsca do ukończenia operacji `Print`, `Write`lub `FileClose` lub tworzenia wymaganych plików.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Create more room on the disk by either moving some files to another disk or deleting some files.  
+- Utwórz więcej miejsca na dysku przez przeniesienie niektórych plików na inny dysk lub usunięcie niektórych plików.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,23 +15,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350743"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
-Specifies that one or more declared member variables refer to an instance of a class that can raise events.
+Określa, że co najmniej jedna zadeklarowana zmienna składowej odnosi się do wystąpienia klasy, która może zgłaszać zdarzenia.
 
 ## <a name="remarks"></a>Uwagi
 
-When a variable is defined using `WithEvents`, you can declaratively specify that a method handles the variable's events using the `Handles` keyword.
+Gdy zmienna jest definiowana przy użyciu `WithEvents`, można deklaratywnie określić, że metoda obsługuje zdarzenia zmiennej przy użyciu słowa kluczowego `Handles`.
 
-You can use `WithEvents` only at class or module level. This means the declaration context for a `WithEvents` variable must be a class or module and cannot be a source file, namespace, structure, or procedure.
+`WithEvents` można używać tylko na poziomie klasy lub modułu. Oznacza to, że kontekst deklaracji dla zmiennej `WithEvents` musi być klasą lub modułem i nie może być plikiem źródłowym, przestrzenią nazw, strukturą ani procedurą.
 
-You cannot use `WithEvents` on a structure member.
+Nie można użyć `WithEvents` w składowej struktury.
 
-You can declare only individual variables—not arrays—with `WithEvents`.
+Można zadeklarować tylko pojedyncze zmienne — nie tablice — z `WithEvents`.
 
-## <a name="rules"></a>Rules
+## <a name="rules"></a>Reguły
 
-**Element Types.** You must declare `WithEvents` variables to be object variables so that they can accept class instances. However, you cannot declare them as `Object`. You must declare them as the specific class that can raise the events.
+**Typy elementów.** Należy zadeklarować zmienne `WithEvents` jako zmienne obiektów, aby mogły akceptować wystąpienia klas. Nie można jednak zadeklarować ich jako `Object`. Należy zadeklarować je jako konkretną klasę, która może zgłaszać zdarzenia.
 
-The `WithEvents` modifier can be used in this context: [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)
+Modyfikator `WithEvents` może być używany w tym kontekście: [Dim — Instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)
 
 ## <a name="example"></a>Przykład
 
@@ -41,6 +41,6 @@ Dim WithEvents app As Application
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Realizuj](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
 - [Zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Filter on an Attribute (XPath-LINQ to XML)'
+title: 'Instrukcje: filtrowanie atrybutu (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
 ms.openlocfilehash: f8a804fa7937d8d27b38bba7a294f1c760101de8
@@ -9,17 +9,17 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353056"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>How to: Filter on an Attribute (XPath-LINQ to XML) (Visual Basic)
-This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Instrukcje: filtrowanie atrybutu (XPath-LINQ to XML) (Visual Basic)
+W tym temacie pokazano, jak uzyskać elementy podrzędne o określonej nazwie i z atrybutem o określonej wartości.  
   
- The XPath expression is:  
+ Wyrażenie XPath:  
   
  `.//Address[@Type='Shipping']`  
   
 ## <a name="example"></a>Przykład  
- This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".  
+ Ten przykład umożliwia znalezienie wszystkich elementów potomnych o nazwie `Address`i z atrybutem `Type` o wartości "wysyłka".  
   
- This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -77,4 +77,4 @@ Results are identical
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

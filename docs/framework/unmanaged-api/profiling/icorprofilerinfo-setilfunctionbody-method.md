@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449881"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>ICorProfilerInfo::SetILFunctionBody — Metoda
-Replaces the body of the specified function in the specified module.  
+Zastępuje treść określonej funkcji w określonym module.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,29 +36,29 @@ HRESULT SetILFunctionBody(
   
 ## <a name="parameters"></a>Parametry  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ podczas Identyfikator modułu, w którym znajduje się funkcja.  
   
  `methodid`  
- [in] The token of the function for which to replace the body.  
+ podczas Token funkcji, dla której ma zostać zamieniony treść.  
   
  `pbNewILMethodHeader`  
- [in] The new header for the function.  
+ podczas Nowy nagłówek dla funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.  
+ Metoda `SetILFunctionBody` zastępuje względny adres wirtualny funkcji w metadanych, tak aby wskazywała nową treść funkcji i dostosowuje wszystkie wewnętrzne struktury danych zgodnie z potrzebami.  
   
- The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.  
+ Metodę `SetILFunctionBody` można wywołać tylko w funkcjach, które nigdy nie zostały skompilowane przez kompilator just-in-Time (JIT).  
   
- Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.  
+ Użyj metody [ICorProfilerInfo:: GetILFunctionBodyAllocator —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) , aby przydzielić miejsce dla nowej metody w celu zapewnienia, że bufor jest zgodny.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

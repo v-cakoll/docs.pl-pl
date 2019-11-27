@@ -22,7 +22,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 ## <a name="slider-parts"></a>Części suwaka  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.Slider>.  
   
-|Części|Typ|Opis|  
+|Części|Type|Opis|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Kontener dla elementu, który wskazuje pozycję <xref:System.Windows.Controls.Slider>.|  
 |PART_SelectionRange|<xref:System.Windows.FrameworkElement>|Element, który wyświetla zakres zaznaczania wzdłuż <xref:System.Windows.Controls.Slider>.  Zakres wyboru jest widoczny tylko wtedy, gdy właściwość <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> jest `true`.|  
@@ -34,10 +34,10 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 |----------------------|---------------------------|-----------------|  
 |Normalne|CommonStates|Stan domyślny.|  
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad kontrolką.|  
-|Wyłączone|CommonStates|Kontrolka jest wyłączona.|  
+|Wyłączono|CommonStates|Kontrolka jest wyłączona.|  
 |Fokus|FocusStates|Kontrolka ma fokus.|  
 |Bez fokusu|FocusStates|Kontrolka nie ma fokusu.|  
-|Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
+|Prawidłowy|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
 |InvalidFocused|ValidationStates|Właściwość dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` ma fokus.|  
 |InvalidUnfocused|ValidationStates|Dołączona właściwość <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true`, która nie ma fokusu.|  
   

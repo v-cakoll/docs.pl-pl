@@ -16,45 +16,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351748"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Uzyskiwanie dostępu do XML w Visual Basic
-Visual Basic provides XML axis properties for accessing and navigating [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] structures. These properties use a special syntax to enable you to access elements and attributes by specifying the XML names.  
+Visual Basic udostępnia właściwości osi XML na potrzeby uzyskiwania dostępu do struktur [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] i nawigowania w nich. Te właściwości używają specjalnej składni, aby umożliwić dostęp do elementów i atrybutów przez określenie nazw XML.  
   
- The following table lists the language features that enable you to access XML elements and attributes in Visual Basic.  
+ Poniższa tabela zawiera listę funkcji języka, które umożliwiają dostęp do elementów i atrybutów XML w Visual Basic.  
   
 ### <a name="xml-axis-properties"></a>Właściwości osi XML  
   
-|Property description|Przykład|Opis|  
+|Opis właściwości|Przykład|Opis|  
 |--------------------------|-------------|-----------------|  
-|*child axis*|`contact.<phone>`|Gets all `phone` elements that are child elements of the `contact` element.|  
-|*attribute axis*|`phone.@type`|Gets all `type` attributes of the `phone` element.|  
-|*descendant axis*|`contacts...<name>`|Gets all `name` elements of the `contacts` element, regardless of how deep in the hierarchy they occur.|  
-|*extension indexer*|`contacts...<name>(0)`|Gets the first `name` element from the sequence.|  
-|*value*|`contacts...<name>.Value`|Gets the string representation of the first object in the sequence, or `Nothing` if the sequence is empty.|  
+|*oś podrzędna*|`contact.<phone>`|Pobiera wszystkie elementy `phone`, które są elementami podrzędnymi elementu `contact`.|  
+|*oś atrybutów*|`phone.@type`|Pobiera wszystkie `type` atrybuty elementu `phone`.|  
+|*oś elementu podrzędnego*|`contacts...<name>`|Pobiera wszystkie elementy `name` elementu `contacts`, niezależnie od ich występowania w hierarchii.|  
+|*Indeksator rozszerzeń*|`contacts...<name>(0)`|Pobiera pierwszy `name` elementu z sekwencji.|  
+|*value*|`contacts...<name>.Value`|Pobiera ciąg reprezentujący pierwszy obiekt w sekwencji lub `Nothing`, jeśli sekwencja jest pusta.|  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje: dostęp do elementów potomnych XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
- Shows how to use a descendant axis property to access all XML elements that have a specified name and that are contained under a specified XML element.  
+ Pokazuje, jak używać właściwości osi elementu podrzędnego w celu uzyskania dostępu do wszystkich elementów XML, które mają określoną nazwę i które są zawarte w określonym elemencie XML.  
   
  [Instrukcje: dostęp do elementów podrzędnych XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-child-elements.md)  
- Shows how to use a child axis property to access all XML child elements that have a specified name in an XML element.  
+ Pokazuje, jak używać właściwości osi podrzędnej w celu uzyskania dostępu do wszystkich elementów podrzędnych XML, które mają określoną nazwę w elemencie XML.  
   
  [Instrukcje: dostęp do atrybutów XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-attributes.md)  
- Shows how to use an attribute axis property to access all XML attributes that have a specified name in an XML element.  
+ Pokazuje, jak używać właściwości osi atrybutu w celu uzyskania dostępu do wszystkich atrybutów XML o określonej nazwie w elemencie XML.  
   
  [Instrukcje: deklarowanie prefiksów przestrzeni nazw XML i korzystanie z nich](../../../../visual-basic/programming-guide/language-features/xml/how-to-declare-and-use-xml-namespace-prefixes.md)  
- Shows how to declare an XML namespace prefix and use it to create and access XML elements.  
+ Pokazuje, jak zadeklarować prefiks przestrzeni nazw XML i używać go do tworzenia elementów XML i uzyskiwania do nich dostępu.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Właściwości osi XML](../../../../visual-basic/language-reference/xml-axis/index.md)  
- Provides links to sections describing the various XML access properties.  
+ Zawiera łącza do sekcji opisujących różne właściwości dostępu XML.  
   
- [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Provides an introduction to using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ [Omówienie LINQ to XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
+ Zawiera wprowadzenie do korzystania z [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] w Visual Basic.  
   
- [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- Provides an introduction to using XML literals in Visual Basic.  
+ [Tworzenie kodu XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ Zawiera wprowadzenie do korzystania z literałów XML w Visual Basic.  
   
- [Manipulating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
- Provides links to sections about loading and modifying XML in Visual Basic.  
+ [Manipulowanie XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
+ Zawiera łącza do sekcji dotyczące ładowania i modyfikowania kodu XML w Visual Basic.  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Provides links to sections describing how to use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.
+ Zawiera łącza do sekcji opisujących sposób używania [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] w Visual Basic.

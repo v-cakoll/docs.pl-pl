@@ -15,33 +15,33 @@ ms.locfileid: "74448768"
 # <a name="ui-automation-security-overview"></a>Przegląd zabezpieczeń automatyzacji interfejsu użytkownika
 
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).
 
-This overview describes the security model for [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in Windows Vista.
+W tym omówieniu opisano model zabezpieczeń [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] w systemie Windows Vista.
 
 <a name="User_Account_Control"></a>
 
 ## <a name="user-account-control"></a>Kontrola konta użytkownika
 
-Security is a major focus of Windows Vista and among the innovations is the ability for users to run as standard (non-administrator) users without necessarily being blocked from running applications and services that require higher privileges.
+Bezpieczeństwo jest głównym fokusem systemu Windows Vista i wśród innowacji jest możliwość, aby użytkownicy mogli uruchamiać jako użytkownicy ze standardem (nie będącymi administratorami) bez konieczności blokowania uruchamiania aplikacji i usług, które wymagają wyższego poziomu uprawnień.
 
-In Windows Vista, most applications are supplied with either a standard or an administrative token. If an application cannot be identified as an administrative application, it is launched as a standard application by default. Before an application identified as administrative can be launched, Windows Vista prompts the user for consent to run the application as elevated. The consent prompt is displayed by default, even if the user is a member of the local Administrators group, because administrators run as standard users until an application or system component that requires administrative credentials requests permission to run.
+W systemie Windows Vista większość aplikacji jest dostarczana z tokenem standardowym lub administracyjnym. Jeśli aplikacja nie może być zidentyfikowana jako aplikacja administracyjna, domyślnie jest uruchamiana jako aplikacja standardowa. Aby można było uruchomić aplikację zidentyfikowaną jako administracyjna, system Windows Vista monituje użytkownika o zgodę na uruchomienie aplikacji jako podniesienia uprawnień. Monit o zgodę jest domyślnie wyświetlany, nawet jeśli użytkownik jest członkiem lokalnej grupy administratorów, ponieważ Administratorzy są uruchamiani jako użytkownicy standardowi do momentu, gdy aplikacja lub składnik systemowy, który wymaga poświadczeń administracyjnych, żąda uprawnień do uruchomienia.
 
 <a name="Tasks_Requiring_Higher_Privileges"></a>
 
-## <a name="tasks-requiring-higher-privileges"></a>Tasks Requiring Higher Privileges
+## <a name="tasks-requiring-higher-privileges"></a>Zadania wymagające wyższych uprawnień
 
-When a user attempts to perform a task that requires administrative privileges, Windows Vista presents a dialog box asking the user for consent to continue. This dialog box is protected from cross-process communication, so that malicious software cannot simulate user input. Similarly, the desktop logon screen cannot normally be accessed by other processes.
+Gdy użytkownik próbuje wykonać zadanie, które wymaga uprawnień administracyjnych, w systemie Windows Vista zostanie wyświetlone okno dialogowe z prośbą o zgodę na kontynuowanie przez użytkownika. To okno dialogowe jest chronione przed procesami komunikacji, dzięki czemu złośliwe oprogramowanie nie może symulować danych wejściowych użytkownika. Podobnie nie można uzyskać dostępu do ekranu logowania pulpitu przez inne procesy.
 
-UI Automation clients must communicate with other processes, some of them perhaps running at a higher privilege level. Clients also might need access to the system dialog boxes that are not normally visible to other processes. Therefore, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] clients must be trusted by the system, and must run with special privileges.
+Klienci automatyzacji interfejsu użytkownika muszą komunikować się z innymi procesami, ale niektóre z nich są prawdopodobnie uruchomione na wyższym poziomie uprawnień. Klienci mogą również potrzebować dostępu do okien dialogowych systemu, które nie są zwykle widoczne dla innych procesów. W związku z tym klienci [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] muszą być Zaufani przez system i muszą mieć specjalne uprawnienia.
 
-To be trusted to communicate with applications running at a higher privilege level, applications must be signed.
+Aby mieć zaufanie do komunikacji z aplikacjami działającymi na wyższym poziomie uprawnień, aplikacje muszą być podpisane.
 
 <a name="Manifest_Files"></a>
 
-## <a name="manifest-files"></a>Manifest Files
+## <a name="manifest-files"></a>Pliki manifestu
 
-To gain access to the protected system UI, applications must be built with a manifest file that includes the `uiAccess` attribute in the `requestedExecutionLevel` tag, as follows:
+Aby uzyskać dostęp do interfejsu użytkownika chronionego systemu, aplikacje muszą być skompilowane przy użyciu pliku manifestu, który zawiera atrybut `uiAccess` w tagu `requestedExecutionLevel`, w następujący sposób:
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -55,6 +55,6 @@ To gain access to the protected system UI, applications must be built with a man
 </trustInfo>
 ```
 
-The value of the `level` attribute in this code is an example only.
+Wartość atrybutu `level` w tym kodzie jest tylko przykładem.
 
-`uiAccess` is "false" by default; that is, if the attribute is omitted, or if there is no manifest for the assembly, the application will not be able to gain access to protected UI.
+`uiAccess` domyślnie ma wartość "false"; oznacza to, że jeśli atrybut zostanie pominięty lub nie ma manifestu dla zestawu, aplikacja nie będzie w stanie uzyskać dostępu do chronionego interfejsu użytkownika.

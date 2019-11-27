@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436467"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType — Wyliczenie
-Indicates the type of a metadata token.  
+Wskazuje typ tokenu metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -59,46 +59,46 @@ typedef enum CorTokenType {
 } CorTokenType;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`mdtModule`|An `mdModule` token.|  
-|`mdtTypeRef`|An `mdTypeRef` token.|  
-|`mdtTypeDef`|An `mdTypeDef` token.|  
-|`mdtFieldDef`|An `mdFieldDef` token.|  
-|`mdtMethodDef`|An `mdMethodDef` token.|  
-|`mdtParamDef`|An `mdParamDef` token.|  
-|`mdtInterfaceImpl`|An `mdInterfaceImpl` token.|  
-|`mdtMemberRef`|An `mdMemberRef` token.|  
-|`mdtCustomAttribute`|An `mdCustomAttribute` token.|  
-|`mdtPermission`|An `mdPermission` token.|  
-|`mdtSignature`|An `mdSignature` token.|  
-|`mdtEvent`|An `mdEvent` token.|  
-|`mdtProperty`|An `mdProperty` token.|  
-|`mdtModuleRef`|An `mdModuleRef` token.|  
-|`mdtTypeSpec`|An `mdTypeSpec` token.|  
-|`mdtAssembly`|An `mdAssembly` token.|  
-|`mdtAssemblyRef`|An `mdAssemblyRef` token.|  
-|`mdtFile`|An `mdFile` token.|  
-|`mdtExportedType`|An `mdExportedType` token.|  
-|`mdtManifestResource`|An `mdManifestResource` token.|  
-|`mdtGenericParam`|An `mdGenericParam` token.|  
-|`mdtMethodSpec`|An `mdMethodSpec` token.|  
-|`mdtGenericParamConstraint`|An `mdGenericParamConstraint` token.|  
-|`mdtString`|An `mdString` token.|  
-|`mdtName`|An `mdName` token.|  
-|`mdtBaseType`|Nie używany.|  
+|`mdtModule`|Token `mdModule`.|  
+|`mdtTypeRef`|Token `mdTypeRef`.|  
+|`mdtTypeDef`|Token `mdTypeDef`.|  
+|`mdtFieldDef`|Token `mdFieldDef`.|  
+|`mdtMethodDef`|Token `mdMethodDef`.|  
+|`mdtParamDef`|Token `mdParamDef`.|  
+|`mdtInterfaceImpl`|Token `mdInterfaceImpl`.|  
+|`mdtMemberRef`|Token `mdMemberRef`.|  
+|`mdtCustomAttribute`|Token `mdCustomAttribute`.|  
+|`mdtPermission`|Token `mdPermission`.|  
+|`mdtSignature`|Token `mdSignature`.|  
+|`mdtEvent`|Token `mdEvent`.|  
+|`mdtProperty`|Token `mdProperty`.|  
+|`mdtModuleRef`|Token `mdModuleRef`.|  
+|`mdtTypeSpec`|Token `mdTypeSpec`.|  
+|`mdtAssembly`|Token `mdAssembly`.|  
+|`mdtAssemblyRef`|Token `mdAssemblyRef`.|  
+|`mdtFile`|Token `mdFile`.|  
+|`mdtExportedType`|Token `mdExportedType`.|  
+|`mdtManifestResource`|Token `mdManifestResource`.|  
+|`mdtGenericParam`|Token `mdGenericParam`.|  
+|`mdtMethodSpec`|Token `mdMethodSpec`.|  
+|`mdtGenericParamConstraint`|Token `mdGenericParamConstraint`.|  
+|`mdtString`|Token `mdString`.|  
+|`mdtName`|Token `mdName`.|  
+|`mdtBaseType`|Nie jest używany.|  
   
 ## <a name="remarks"></a>Uwagi  
- Each value is equal to the value of the top byte in the corresponding metadata token.  
+ Każda wartość jest równa wartości górnego bajtu w odpowiednim tokenie metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -14,32 +14,32 @@ ms.locfileid: "74345544"
 ---
 # <a name="performing-network-operations-visual-basic"></a>Przeprowadzanie operacji sieciowych (Visual Basic)
 
-The following tables list tasks associated with the `My.Computer.Network` object.  
+W poniższej tabeli wymieniono zadania skojarzone z obiektem `My.Computer.Network`.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
  [Instrukcje: przekazywanie pliku](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
- Demonstrates how to upload a file and store it to a remote location using `My.Computer.Network`.  
+ Pokazuje, jak przekazać plik i zapisać go w lokalizacji zdalnej przy użyciu `My.Computer.Network`.  
   
  [Instrukcje: pobieranie pliku](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
- Demonstrates how to download a file from a remote location using `My.Computer.Network`.  
+ Pokazuje, jak pobrać plik z lokalizacji zdalnej przy użyciu `My.Computer.Network`.  
   
  [Instrukcje: sprawdzanie stanu połączenia](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
- Shows how to determine whether the computer has a working network connection.  
+ Pokazuje, jak ustalić, czy komputer ma działające połączenie sieciowe.  
   
 ## <a name="reference"></a>Tematy pomocy  
 
  <xref:Microsoft.VisualBasic.Devices.Network>  
- Lists methods, properties, and events for working with the network.  
+ Wyświetla listę metod, właściwości i zdarzeń związanych z pracą z siecią.  
   
  <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>  
- Describes the `DownloadFile` method.  
+ Opisuje metodę `DownloadFile`.  
   
  <xref:Microsoft.VisualBasic.Devices.Network.Ping%2A>  
- Describes the `Ping` method.  
+ Opisuje metodę `Ping`.  
   
  <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>  
- Describes the `UploadFile` method.  
+ Opisuje metodę `UploadFile`.  
   
  <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>  
- Describes the `IsAvailable` property.
+ Opisuje właściwość `IsAvailable`.

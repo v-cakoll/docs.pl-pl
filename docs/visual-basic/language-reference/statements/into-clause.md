@@ -12,10 +12,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348041"
 ---
 # <a name="into-clause-visual-basic"></a>Into — Klauzula (Visual Basic)
-Identifies aggregate functions or groupings to apply to a collection.  
+Identyfikuje funkcje agregujące lub grupowania, które mają zostać zastosowane do kolekcji.  
   
 ## <a name="remarks"></a>Uwagi  
- The `Each` keyword is used in the following contexts:  
+ Słowo kluczowe `Each` jest używane w następujących kontekstach:  
   
  [Aggregate, klauzula](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   

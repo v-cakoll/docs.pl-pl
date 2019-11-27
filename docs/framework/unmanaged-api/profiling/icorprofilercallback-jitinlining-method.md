@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449899"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>ICorProfilerCallback::JITInlining — Metoda
-Notifies the profiler that the just-in-time (JIT) compiler is about to insert a function in line with another function.  
+Powiadamia profiler, że kompilator just in Time (JIT) ma wstawić funkcję w wierszu z inną funkcją.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,27 +36,27 @@ HRESULT JITInlining(
   
 ## <a name="parameters"></a>Parametry  
  `callerId`  
- [in] The ID of the function into which the `calleeId` function will be inserted.  
+ podczas Identyfikator funkcji, w której zostanie wstawiona funkcja `calleeId`.  
   
  `calleeId`  
- [in] The ID of the function to be inserted.  
+ podczas Identyfikator funkcji, która ma zostać wstawiona.  
   
  `pfShouldInline`  
- [out] `true` to allow the insertion to occur; otherwise, `false`.  
+ [out] `true`, aby zezwolić na wstawianie; w przeciwnym razie `false`.  
   
 ## <a name="remarks"></a>Uwagi  
- The profiler can set `pfShouldInline` to `false` to prevent the `calleeId` function from being inserted into the `callerId` function. Also, the profiler can globally disable inline insertion by using the COR_PRF_DISABLE_INLINING value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.  
+ Profiler może ustawić `pfShouldInline` na `false`, aby uniemożliwić Wstawianie funkcji `calleeId` do funkcji `callerId`. Dodatkowo profiler może globalnie wyłączyć wstawianie wbudowane przy użyciu wartości COR_PRF_DISABLE_INLINING [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) Enumeration.  
   
- Functions inserted inline do not raise events for entering or leaving. Therefore, the profiler must set `pfShouldInline` to `false` in order to produce an accurate callgraph. Setting `pfShouldInline` to `false` will affect performance, because inline insertion typically increases speed and reduces the number of separate JIT compilation events for the inserted method.  
+ Wbudowane funkcje nie zgłaszają zdarzeń do wprowadzenia lub opuszczenia. W związku z tym profiler musi ustawić `pfShouldInline`, aby `false` w celu wygenerowania dokładnej wykres wywołań. Ustawienie `pfShouldInline` na `false` będzie miało wpływ na wydajność, ponieważ Wstawianie wbudowane zwykle zwiększa szybkość i zmniejsza liczbę oddzielnych zdarzeń kompilacji JIT dla włożonej metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

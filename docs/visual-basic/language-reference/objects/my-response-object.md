@@ -15,15 +15,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350659"
 ---
 # <a name="myresponse-object"></a>My.Response — Obiekt
-Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>. This object allows you to send HTTP response data to a client and contains information about that response.  
+Pobiera obiekt <xref:System.Web.HttpResponse> skojarzony z <xref:System.Web.UI.Page>. Ten obiekt umożliwia wysyłanie danych odpowiedzi HTTP do klienta programu i zawiera informacje o tej odpowiedzi.  
   
 ## <a name="remarks"></a>Uwagi  
- The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.  
+ Obiekt `My.Response` zawiera bieżący obiekt <xref:System.Web.HttpResponse> skojarzony ze stroną.  
   
- The `My.Response` object is only available for ASP.NET applications.  
+ Obiekt `My.Response` jest dostępny tylko dla aplikacji ASP.NET.  
   
 ## <a name="example"></a>Przykład  
- The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.  
+ Poniższy przykład pobiera kolekcję nagłówka z obiektu `My.Request` i używa obiektu `My.Response`, aby zapisać go na stronie ASP.NET.  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   

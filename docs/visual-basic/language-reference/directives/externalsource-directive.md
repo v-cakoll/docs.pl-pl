@@ -21,7 +21,7 @@ ms.locfileid: "74343833"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource — dyrektywa
 
-Indicates a mapping between specific lines of source code and text external to the source.  
+Wskazuje mapowanie między określonymi wierszami kodu źródłowego a tekstem zewnętrznym do źródła.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,24 +34,24 @@ Indicates a mapping between specific lines of source code and text external to t
 ## <a name="parts"></a>Części  
 
  `StringLiteral`  
- The path to the external source.  
+ Ścieżka do zewnętrznego źródła.  
   
  `IntLiteral`  
- The line number of the first line of the external source.  
+ Numer wiersza pierwszego wiersza zewnętrznego źródła.  
   
  `LogicalLine`  
- The line where the error occurs in the external source.  
+ Wiersz, w którym wystąpił błąd w zewnętrznym źródle.  
   
  `#End ExternalSource`  
- Terminates the `#ExternalSource` block.  
+ Kończy blok `#ExternalSource`.  
   
 ## <a name="remarks"></a>Uwagi  
 
- This directive is used only by the compiler and the debugger.  
+ Ta dyrektywa jest używana tylko przez kompilator i debuger.  
   
- A source file may include external source directives, which indicate a mapping between specific lines of code in the source file and text external to the source, such as an .aspx file. If errors are encountered in the designated source code during compilation, they are identified as coming from the external source.  
+ Plik źródłowy może zawierać dyrektywy zewnętrznego źródła, które wskazują mapowanie między określonymi wierszami kodu w pliku źródłowym a tekstem zewnętrznym ze źródłem, takim jak plik. aspx. Jeśli w wyznaczonym kodzie źródłowym wystąpią błędy podczas kompilacji, są one identyfikowane jako pochodzące ze źródła zewnętrznego.  
   
- External source directives have no effect on compilation and cannot be nested. They are intended for internal use by the application only.  
+ Dyrektywy źródła zewnętrznego nie mają wpływu na kompilację i nie mogą być zagnieżdżone. Są one przeznaczone do użytku wewnętrznego tylko przez aplikację.  
   
 ## <a name="see-also"></a>Zobacz także
 

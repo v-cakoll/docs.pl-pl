@@ -10,12 +10,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351542"
 ---
 # <a name="modifiers-visual-basic"></a>Modyfikatory (Visual Basic)
-The topics in this section document Visual Basic run-time modifiers.  
+Tematy w tej sekcji dokumentu Visual Basic Modyfikatory czasu wykonywania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
   
- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
+ [Zestaw](../../../visual-basic/language-reference/modifiers/assembly.md)  
   
  [Async](../../../visual-basic/language-reference/modifiers/async.md)  
   
@@ -29,13 +29,13 @@ The topics in this section document Visual Basic run-time modifiers.
   
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
+ [Podczas](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
   
  [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)  
   
  [Key](../../../visual-basic/language-reference/modifiers/key.md)  
   
- [Module \<keyword>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
+ [> \<modułu](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
   
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
   
@@ -49,7 +49,7 @@ The topics in this section document Visual Basic run-time modifiers.
   
  [Optional](../../../visual-basic/language-reference/modifiers/optional.md)  
   
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
+ [Określoną](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   
  [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   

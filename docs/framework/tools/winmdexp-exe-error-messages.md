@@ -165,13 +165,13 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447301"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe — komunikaty o błędach
-The build process calls [Winmdexp.exe (Windows Runtime Metadata Export Tool)](winmdexp-exe-windows-runtime-metadata-export-tool.md) when you use the **Windows Runtime Component** template in Visual Studio 2012, so Winmdexp.exe error messages appear in the **Error List**. Winmdexp.exe operates on a module that is compiled with the `/target:winmdobj` option. Because it requires a compiled module as input, its error messages don't appear unless compilation succeeds.  
+Proces kompilacji wywołuje [Winmdexp. exe (narzędzie eksportu metadanych środowisko wykonawcze systemu Windows)](winmdexp-exe-windows-runtime-metadata-export-tool.md) w przypadku używania szablonu **składnika Środowisko wykonawcze systemu Windows** w programie Visual Studio 2012, dlatego w **Lista błędów**są wyświetlane komunikaty o błędach Winmdexp. exe. Winmdexp. exe działa na module, który jest kompilowany przy użyciu opcji `/target:winmdobj`. Ponieważ wymaga skompilowanego modułu jako dane wejściowe, jego komunikaty o błędach nie są wyświetlane, chyba że kompilacja zakończy się pomyślnie.  
   
- The error messages are designed to contain all the information you need to address the error conditions they report. However, some problems require more information than will fit in the message. You can find additional information in [Diagnosing Windows Runtime component error conditions](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110)).  
+ Komunikaty o błędach zostały zaprojektowane tak, aby zawierały wszystkie informacje potrzebne do rozwiązania warunków błędów zgłaszanych przez użytkownika. Jednak niektóre problemy wymagają więcej informacji niż mieści się w komunikacie. Dodatkowe informacje można znaleźć w temacie [diagnozowanie warunków błędów składników Środowisko wykonawcze systemu Windows](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110)).  
   
- If your error is not discussed in that article, and you feel that the message doesn't contain sufficient information to address the issue, please use the feedback link in that article and include the error message. Alternatively, you can file a bug at the [Developer Community website](https://developercommunity.visualstudio.com/). You can also look for more information on the [Microsoft Forums](https://social.msdn.microsoft.com/Forums/).  
+ Jeśli błąd nie został omówiony w tym artykule i uważasz, że komunikat nie zawiera wystarczających informacji, aby rozwiązać ten problem, Użyj linku opinii znajdującego się w tym artykule i Dołącz komunikat o błędzie. Alternatywnie możesz zgłosić błąd w [witrynie internetowej społeczności deweloperów](https://developercommunity.visualstudio.com/). Możesz również wyszukać więcej informacji na [forach firmy Microsoft](https://social.msdn.microsoft.com/Forums/).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Winmdexp.exe (narzędzie eksportowania metadanych środowiska uruchomieniowego systemu Windows)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
-- [Diagnosing Windows Runtime component error conditions](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))
+- [Diagnozowanie warunków błędów składników środowisko wykonawcze systemu Windows](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))

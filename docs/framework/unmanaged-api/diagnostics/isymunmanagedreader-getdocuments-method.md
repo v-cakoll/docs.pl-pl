@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448327"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>ISymUnmanagedReader::GetDocuments — Metoda
-Returns an array of all the documents defined in the symbol store.  
+Zwraca tablicę wszystkich dokumentów zdefiniowanych w magazynie symboli.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,19 +37,19 @@ HRESULT GetDocuments (
   
 ## <a name="parameters"></a>Parametry  
  `cDocs`  
- [in] The size of the `pDocs` array.  
+ podczas Rozmiar tablicy `pDocs`.  
   
  `pcDocs`  
- [out] A pointer to a variable that receives the array length.  
+ określoną Wskaźnik do zmiennej, która otrzymuje długość tablicy.  
   
  `pDocs`  
- [out] A pointer to a variable that receives the document array.  
+ określoną Wskaźnik do zmiennej, która otrzymuje tablicę dokumentu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

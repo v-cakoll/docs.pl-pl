@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344295"
 ---
 # <a name="nothing-and-strings-in-visual-basic"></a>Nothing i ciągi w Visual Basic
-The Visual Basic runtime and the .NET Framework evaluate `Nothing` differently when it comes to strings.  
+Środowisko uruchomieniowe Visual Basic i .NET Framework oceniane `Nothing` w różny sposób, gdy przejdzie do ciągów.  
   
-## <a name="visual-basic-runtime-and-the-net-framework"></a>Visual Basic Runtime and the .NET Framework  
- Consider the following example:  
+## <a name="visual-basic-runtime-and-the-net-framework"></a>Visual Basic środowisko uruchomieniowe i .NET Framework  
+ Rozważmy następujący przykład:  
   
  [!code-vb[VbVbalrStrings#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#47)]  
   
- The Visual Basic runtime usually evaluates `Nothing` as an empty string (""). The .NET Framework does not, however, and throws an exception whenever an attempt is made to perform a string operation on `Nothing`.  
+ Środowisko uruchomieniowe Visual Basic zwykle szacuje `Nothing` jako ciąg pusty (""). .NET Framework nie jest jednak ani zgłasza wyjątek, gdy podejmowana jest próba wykonania operacji na ciągach na `Nothing`.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Introduction to Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Wprowadzenie do ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

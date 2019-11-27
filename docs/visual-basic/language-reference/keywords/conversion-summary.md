@@ -15,21 +15,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349905"
 ---
 # <a name="conversion-summary-visual-basic"></a>Konwersja — Podsumowanie (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Słowa kluczowe języka Visual Basic i elementy członkowskie biblioteki wykonawczej są zorganizowane według przeznaczenia i użycia.  
   
 |Akcja|Element języka|  
 |------------|----------------------|  
-|Convert ANSI value to string.|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|  
-|Convert string to lowercase or uppercase.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>,<xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
-|Convert date to serial number.|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A>|  
-|Convert decimal number to other bases.|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>|  
-|Convert number to string.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Str%2A>|  
-|Convert one data type to another.|[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CType](../../../visual-basic/language-reference/functions/ctype-function.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
-|Convert date to day, month, weekday, or year.|<xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A>|  
-|Convert time to hour, minute, or second.|<xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A>|  
-|Convert string to ASCII value.|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|  
-|Convert string to number.|<xref:Microsoft.VisualBasic.Conversion.Val%2A>|  
-|Convert time to serial number.|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
+|Konwertuj wartość ANSI na ciąg.|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|  
+|Konwertuje ciąg na małe litery lub wielkie litery.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>,<xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
+|Przekonwertuj datę na numer seryjny.|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A>|  
+|Konwertuj liczbę dziesiętną na inne bazy.|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>|  
+|Konwertuj liczbę na ciąg.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Str%2A>|  
+|Konwertuj jeden typ danych na inny.|[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CType](../../../visual-basic/language-reference/functions/ctype-function.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
+|Konwertuj datę na dzień, miesiąc, dzień tygodnia lub rok.|<xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A><xref:Microsoft.VisualBasic.DateAndTime.Year%2A>|  
+|Konwertuj czas na godzinę, minutę lub sekundę.|<xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A>|  
+|Konwertuj ciąg na wartość ASCII.|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|  
+|Konwertuje ciąg na liczbę.|<xref:Microsoft.VisualBasic.Conversion.Val%2A>|  
+|Konwertuj czas na numer seryjny.|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
   
 ## <a name="see-also"></a>Zobacz także
 

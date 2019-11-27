@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445902"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>ICorProfilerCallback::ModuleUnloadStarted — Metoda
-Notifies the profiler that a module is being unloaded.  
+Powiadamia program profilujący, że moduł jest zwolniony.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,19 +34,19 @@ HRESULT ModuleUnloadStarted(
   
 ## <a name="parameters"></a>Parametry  
  `moduleId`  
- [in] The ID of the module that is being unloaded.  
+ podczas Identyfikator modułu, który jest zwalniany.  
   
 ## <a name="remarks"></a>Uwagi  
- The value of `moduleId` is not valid for an information request after the `ModuleUnloadStarted` method returns — this is the profiler's last chance to get information about this module.  
+ Wartość `moduleId` nie jest prawidłowa dla żądania informacji po powrocie metody `ModuleUnloadStarted` — jest to Ostatnia szansa dla profilera, aby uzyskać informacje na temat tego modułu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

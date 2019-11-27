@@ -15,29 +15,29 @@ ms.locfileid: "74334497"
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>Porady: zapisywanie tekstu do plików za pomocą StreamWriter w Visual Basic
 
-This example opens a <xref:System.IO.StreamWriter> object with the `My.Computer.FileSystem.OpenTextFileWriter` method and uses it to write a string to a text file with the <xref:System.IO.TextWriter.WriteLine%2A> method of the <xref:System.IO.StreamWriter> class.  
+Ten przykład otwiera obiekt <xref:System.IO.StreamWriter> przy użyciu metody `My.Computer.FileSystem.OpenTextFileWriter` i używa jej do pisania ciągu do pliku tekstowego z metodą <xref:System.IO.TextWriter.WriteLine%2A> klasy <xref:System.IO.StreamWriter>.  
   
 ## <a name="example"></a>Przykład  
 
  [!code-vb[VbFileIOWrite#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#5)]  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
+## <a name="robust-programming"></a>Skuteczne programowanie  
 
  Następujące warunki mogą spowodować wyjątek:  
   
-- The file exists and is read-only (<xref:System.IO.IOException>).  
+- Plik istnieje i jest tylko do odczytu (<xref:System.IO.IOException>).  
   
-- The disk is full (<xref:System.IO.IOException>).  
+- Dysk jest pełny (<xref:System.IO.IOException>).  
   
-- The pathname is too long (<xref:System.IO.PathTooLongException>).  
+- Nazwa ścieżki jest za długa (<xref:System.IO.PathTooLongException>).  
   
-## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
+## <a name="net-framework-security"></a>Zabezpieczenia programu .NET Framework  
 
- This example creates a new file, if the file does not already exist. If an application needs to create a file, that application needs `Create` access for the folder. If the file already exists, the application needs only `Write` access, a lesser privilege. Where possible, it is more secure to create the file during deployment, and only grant `Read` access to a single file, rather than `Create` access for a folder.  
+ Ten przykład tworzy nowy plik, jeśli plik jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, ta aplikacja wymaga `Create` dostępu do folderu. Jeśli plik już istnieje, aplikacja wymaga tylko `Write` dostępu, ale ma mniejsze uprawnienia. Jeśli to możliwe, bezpieczniejsze jest tworzenie plików podczas wdrażania i udzielanie `Read` dostęp do pojedynczego pliku, a nie `Create` dostępu do folderu.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.IO.StreamWriter>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>
-- [How to: Read from Text Files](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+- [Instrukcje: odczyt z plików tekstowych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
 - [Zapisywanie w plikach](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

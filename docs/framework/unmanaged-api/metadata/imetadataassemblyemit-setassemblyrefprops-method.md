@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440562"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps — Metoda
-Modifies the specified `AssemblyRef` metadata structure.  
+Modyfikuje określoną strukturę metadanych `AssemblyRef`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,40 +42,40 @@ HRESULT SetAssemblyRefProps (
   
 ## <a name="parameters"></a>Parametry  
  `ar`  
- [in] The metadata token that specifies the `AssemblyRef` metadata structure to be modified.  
+ podczas Token metadanych określający strukturę metadanych `AssemblyRef`, która ma zostać zmodyfikowana.  
   
  `pbPublicKeyOrToken`  
- [in] The public key of the publisher of the referenced assembly.  
+ podczas Klucz publiczny wydawcy przywoływanego zestawu.  
   
  `cbPublicKeyOrToken`  
- [in] The size in bytes of `pbPublicKeyOrToken`.  
+ podczas Rozmiar w bajtach `pbPublicKeyOrToken`.  
   
  `szName`  
- [in] The human-readable text name of the assembly.  
+ podczas Nazwa tekstu do odczytania przez człowieka.  
   
  `pMetaData`  
- [in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.  
+ podczas Wskaźnik do wystąpienia ASSEMBLYMETADATA, który zawiera wersję, platformę i informacje o ustawieniach regionalnych dla zestawu.  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the assembly.  
+ podczas Wskaźnik do danych skrótu skojarzonych z zestawem.  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ podczas Rozmiar w bajtach `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- [in] A bitwise combination of [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) values that specify attributes of the referenced assembly.  
+ podczas Bitowa kombinacja wartości [AssemblyRefFlags —](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) , które określają atrybuty przywoływanego zestawu.  
   
 ## <a name="remarks"></a>Uwagi  
- To create an `AssemblyRef` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) method.  
+ Aby utworzyć `AssemblyRef` strukturę metadanych, użyj metody [IMetaDataAssemblyEmit::D efineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

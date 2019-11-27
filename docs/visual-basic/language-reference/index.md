@@ -17,76 +17,76 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349954"
 ---
-# <a name="visual-basic-language-reference"></a>Odwołanie językowe Visual Basic
+# <a name="visual-basic-language-reference"></a>Visual Basic Language Reference
 
-This section provides reference information for various aspects of the Visual Basic language.  
+Ta sekcja zawiera informacje dotyczące różnych aspektów Visual Basic języka.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
  [Konwencje związane z typografią i kodami](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- Summarizes the way that keywords, placeholders, and other elements of the language are formatted in the Visual Basic documentation.  
+ Podsumowuje sposób, w jaki słowa kluczowe, symbole zastępcze i inne elementy języka są sformatowane w dokumentacji Visual Basic.  
   
  [Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic](../../visual-basic/language-reference/runtime-library-members.md)  
- Lists the classes and modules of the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace, with links to their member functions, methods, properties, constants, and enumerations.  
+ Wyświetla listę klas i modułów przestrzeni nazw <xref:Microsoft.VisualBasic?displayProperty=nameWithType>, z łączami do ich funkcji, metod, właściwości, stałych i wyliczeń.  
   
  [Słowa kluczowe](../../visual-basic/language-reference/keywords/index.md)  
- Lists all Visual Basic keywords and provides links to more information.  
+ Wyświetla wszystkie Visual Basic słowa kluczowe i zawiera linki do dodatkowych informacji.  
   
- [Attributes (Visual Basic)](../../visual-basic/language-reference/attributes.md)  
- Documents the attributes available in Visual Basic.  
+ [Atrybuty (Visual Basic)](../../visual-basic/language-reference/attributes.md)  
+ Dokumenty dostępne w Visual Basic.  
   
  [Stałe i wyliczenia](../../visual-basic/language-reference/constants-and-enumerations.md)  
- Documents the constants and enumerations available in Visual Basic.  
+ Dokumentuje stałe i wyliczenia dostępne w Visual Basic.  
   
  [Typy danych](../../visual-basic/language-reference/data-types/index.md)  
- Documents the data types available in Visual Basic.  
+ Dokumentuje typy danych dostępne w Visual Basic.  
   
  [Dyrektywy](../../visual-basic/language-reference/directives/index.md)  
- Documents the compiler directives available in Visual Basic.  
+ Dokumentuje dyrektywy kompilatora dostępne w Visual Basic.  
   
  [Funkcje](../../visual-basic/language-reference/functions/index.md)  
- Documents the run-time functions available in Visual Basic.  
+ Dokumentuje funkcje w czasie wykonywania dostępne w Visual Basic.  
   
  [Modyfikatory](../../visual-basic/language-reference/modifiers/index.md)  
- Lists the Visual Basic run-time modifiers and provides links to more information.  
+ Wyświetla listę modyfikatorów czasu wykonywania Visual Basic i zawiera linki do dodatkowych informacji.  
   
  [Moduły](../../visual-basic/language-reference/modules.md)  
- Documents the modules available in Visual Basic and their members.  
+ Dokumenty dostępne w Visual Basic i ich członków.  
   
  [Nothing](../../visual-basic/language-reference/nothing.md)  
- Describes the default value of any data type.  
+ Opisuje wartość domyślną dowolnego typu danych.  
   
  [Obiekty](../../visual-basic/language-reference/objects/index.md)  
- Documents the objects available in Visual Basic and their members.  
+ Dokumenty dostępne w Visual Basic i ich członków.  
   
  [Operatory](../../visual-basic/language-reference/operators/index.md)  
- Documents the operators available in Visual Basic.  
+ Dokumenty dostępne w Visual Basic.  
   
  [Właściwości](../../visual-basic/language-reference/properties.md)  
- Documents the properties available in Visual Basic.  
+ Dokumentuje właściwości dostępne w Visual Basic.  
   
  [Zapytania](../../visual-basic/language-reference/queries/index.md)  
- Provides reference information about using [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.  
+ Zawiera informacje referencyjne na temat używania wyrażeń [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] w kodzie.  
   
  [Instrukcje](../../visual-basic/language-reference/statements/index.md)  
- Documents the declaration and executable statements available in Visual Basic.  
+ Dokumentuje instrukcje deklaracji i pliku wykonywalnego dostępne w Visual Basic.  
   
  [Tagi komentarza XML](../../visual-basic/language-reference/xmldoc/index.md)  
- Describes the documentation comments for which IntelliSense is provided in the Visual Basic Code Editor.  
+ W tym artykule opisano Komentarze do dokumentacji, dla których funkcja IntelliSense jest dostępna w edytorze kodu Visual Basic.  
   
  [Właściwości osi XML](../../visual-basic/language-reference/xml-axis/index.md)  
- Provides links to information about using XML axis properties to access XML directly in your code.  
+ Zawiera łącza do informacji na temat używania właściwości osi XML do uzyskiwania dostępu do pliku XML bezpośrednio w kodzie.  
   
  [Literały XML](../../visual-basic/language-reference/xml-literals/index.md)  
- Provides links to information about using XML literals to incorporate XML directly in your code.  
+ Zawiera łącza do informacji na temat używania literałów XML do uwzględnienia XML bezpośrednio w kodzie.  
   
  [Komunikaty o błędach](../../visual-basic/language-reference/error-messages/index.md)  
- Provides a listing of Visual Basic compiler and run-time error messages and help on how to handle them.  
+ Zawiera listę Visual Basic kompilatora i komunikatów o błędach czasu wykonywania oraz ułatwiają ich obsługę.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
  [Visual Basic](../../visual-basic/index.md)  
- Provides comprehensive help on all areas of the Visual Basic language.  
+ Zapewnia kompleksową pomoc dotyczącą wszystkich obszarów języka Visual Basic.  
   
- [Visual Basic Command-Line Compiler](../../visual-basic/reference/command-line-compiler/index.md)  
- Describes how to use the command-line compiler as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).
+ [Kompilator wiersza polecenia Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
+ Opisuje sposób używania kompilatora wiersza polecenia jako alternatywy do kompilowania programów z poziomu zintegrowanego środowiska programistycznego (IDE) programu Visual Studio.

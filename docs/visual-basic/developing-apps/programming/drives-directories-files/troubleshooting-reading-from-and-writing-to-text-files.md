@@ -1,5 +1,5 @@
 ---
-title: 'Troubleshooting: reading from and writing to text files'
+title: 'Rozwiązywanie problemów: odczytywanie z plików tekstowych i zapisywanie do nich'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting file I/O
@@ -16,25 +16,25 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333797"
 ---
-# <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>Troubleshooting: reading from and writing to text files (Visual Basic)
+# <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>Rozwiązywanie problemów: odczytywanie z plików tekstowych i zapisywanie do nich (Visual Basic)
 
-This topic discusses common problems encountered when working with text files and suggests an approach to each.  
+W tym temacie omówiono typowe problemy występujące podczas pracy z plikami tekstowymi i sugerujemy podejście do każdego z nich.  
   
-## <a name="common-problems"></a>Common problems  
+## <a name="common-problems"></a>Typowe problemy  
 
- The most common issues encountered when working with text files include security exceptions, file encodings, or invalid paths.  
+ Najczęstsze problemy występujące podczas pracy z plikami tekstowymi obejmują wyjątki zabezpieczeń, kodowanie plików lub nieprawidłowe ścieżki.  
   
-### <a name="security-exceptions"></a>Security exceptions  
+### <a name="security-exceptions"></a>Wyjątki zabezpieczeń  
 
- A <xref:System.Security.SecurityException> is thrown when a security error occurs. This is often a result of the user lacking necessary permissions, which may be solved by adding permissions or working with files in isolated storage.  
+ <xref:System.Security.SecurityException> jest generowany w przypadku wystąpienia błędu zabezpieczeń. Jest to często wynikiem braku potrzebnych uprawnień przez użytkownika, które mogą zostać rozwiązane przez dodanie uprawnień lub praca z plikami w izolowanym magazynie.  
   
-### <a name="file-encodings"></a>File encodings  
+### <a name="file-encodings"></a>Kodowanie plików  
 
- File encodings, also known as character encodings, specify how to represent characters when text processing. Unexpected characters in a text file may result from incorrect encoding. For most files, one encoding may be preferable over another in terms of which language characters it can or cannot handle, although Unicode is usually preferred. For more information, see [File Encodings](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md) and <xref:System.Text.Encoding>.  
+ Kodowanie plików, znane także jako kodowania znaków, określają sposób reprezentowania znaków podczas przetwarzania tekstu. Nieoczekiwane znaki w pliku tekstowym mogą wynikać z nieprawidłowego kodowania. W przypadku większości plików jedno kodowanie może być preferowane przez inne warunki języka, które może lub nie może obsłużyć, chociaż standard Unicode jest zazwyczaj preferowany. Aby uzyskać więcej informacji, zobacz [kodowanie plików](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md) i <xref:System.Text.Encoding>.  
   
-### <a name="incorrect-paths"></a>Incorrect paths  
+### <a name="incorrect-paths"></a>Nieprawidłowe ścieżki  
 
- When parsing file paths, particularly relative paths, it is easy to supply the wrong data. Many problems can be corrected by making sure you are supplying the correct path. For more information, see [How to: Parse File Paths](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md).  
+ Podczas analizowania ścieżek plików, szczególnie ścieżek względnych, można łatwo dostarczać błędne dane. Wiele problemów można poprawić, upewniając się, że jest dostarczana poprawna ścieżka. Aby uzyskać więcej informacji, zobacz [How to: Parse File Paths](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

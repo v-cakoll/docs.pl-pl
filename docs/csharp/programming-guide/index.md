@@ -22,7 +22,7 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
   
  W większej części tej sekcji przyjęto założenie, że masz już pewną wiedzę na temat języka C# i ogólnie na temat programowania. Jeśli jesteś kompletnym początkującym z programowaniem lub C#programem, możesz chcieć odwiedzić [wprowadzenie do C# samouczków](../tutorials/intro-to-csharp/index.md) lub [samouczka platformy .NET w przeglądarce](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), gdzie nie jest wymagana wcześniejsza wiedza o programowaniu.  
   
- Aby uzyskać informacje dotyczące określonych słów kluczowych, operatorów i dyrektyw preprocesora, zobacz sekcję [Dokumentacja języka C#](../language-reference/index.md). Informacje o specyfikacji języka C# można znaleźć w temacie [Specyfikacja języka C#](/dotnet/csharp/language-reference/language-specification/introduction).  
+ Aby uzyskać informacje na temat określonych słów kluczowych, operatorów i dyrektyw preprocesora, zobacz [ C# Reference](../language-reference/index.md). Informacje o specyfikacji C# języka można znaleźć w temacie [ C# Language Specification (Specyfikacja języka](/dotnet/csharp/language-reference/language-specification/introduction)).  
   
 ## <a name="program-sections"></a>Sekcje programu
 
@@ -42,7 +42,7 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
 
  [Typy wyliczeniowe](./enumeration-types.md)  
   
- [Delegaty](./delegates/index.md)  
+ [Delegaci](./delegates/index.md)  
 
  [Tablice](./arrays/index.md)  
   
@@ -88,4 +88,4 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../language-reference/index.md)
+- [C#Odwoła](../language-reference/index.md)

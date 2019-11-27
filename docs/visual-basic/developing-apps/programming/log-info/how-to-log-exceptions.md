@@ -14,55 +14,55 @@ ms.locfileid: "74352084"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>Porady: wyjątki rejestru w Visual Basic
 
-You can use the `My.Application.Log` and `My.Log` objects to log information about exceptions that occur in your application. These examples show how to use the `My.Application.Log.WriteException` method to log exceptions that you catch explicitly and exceptions that are unhandled.  
+Za pomocą obiektów `My.Application.Log` i `My.Log` można rejestrować informacje o wyjątkach występujących w aplikacji. W poniższych przykładach pokazano, jak za pomocą metody `My.Application.Log.WriteException` rejestrować wyjątki, które zostały wyszukane jawnie i wyjątki, które nie są obsługiwane.  
   
- For logging tracing information, use the `My.Application.Log.WriteEntry` method. For more information, see <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
+ Aby uzyskać informacje o śledzeniu rejestrowania, użyj metody `My.Application.Log.WriteEntry`. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
   
-### <a name="to-log-a-handled-exception"></a>To log a handled exception  
+### <a name="to-log-a-handled-exception"></a>Aby zarejestrować obsłużony wyjątek  
   
-1. Create the method that will generate the exception information.  
+1. Utwórz metodę, która będzie generować informacje o wyjątku.  
   
      [!code-vb[VbVbalrMyApplicationLog#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#9)]  
   
-2. Use a `Try...Catch` block to catch the exception.  
+2. Użyj bloku `Try...Catch`, aby przechwycić wyjątek.  
   
      [!code-vb[VbVbalrMyApplicationLog#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#6)]  
   
-3. Put the code that could generate an exception in the `Try` block.  
+3. Umieść kod, który może generować wyjątek w bloku `Try`.  
   
-     Uncomment the `Dim` and `MsgBox` lines to cause a <xref:System.NullReferenceException> exception.  
+     Usuń komentarz z `Dim` i `MsgBox` wierszy, aby spowodować <xref:System.NullReferenceException> wyjątek.  
   
      [!code-vb[VbVbalrMyApplicationLog#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#7)]  
   
-4. In the `Catch` block, use the `My.Application.Log.WriteException` method to write the exception information.  
+4. W bloku `Catch` Użyj metody `My.Application.Log.WriteException`, aby zapisać informacje o wyjątku.  
   
      [!code-vb[VbVbalrMyApplicationLog#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#8)]  
   
-     The following example shows the complete code for logging a handled exception.  
+     Poniższy przykład pokazuje kompletny kod rejestrowania obsługiwanego wyjątku.  
   
      [!code-vb[VbVbalrMyApplicationLog#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#10)]  
   
-### <a name="to-log-an-unhandled-exception"></a>To log an unhandled exception  
+### <a name="to-log-an-unhandled-exception"></a>Aby zarejestrować nieobsłużony wyjątek  
   
-1. Have a project selected in **Solution Explorer**. On the **Project** menu, choose **Properties**.  
+1. Zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** wybierz polecenie **Właściwości**.  
   
-2. Click the **Application** tab.  
+2. Kliknij kartę **aplikacja** .  
   
-3. Click the **View Application Events** button to open the Code Editor.  
+3. Kliknij przycisk **Wyświetl zdarzenia aplikacji** , aby otworzyć Edytor kodu.  
   
-     This opens the ApplicationEvents.vb file.  
+     Spowoduje to otwarcie pliku ApplicationEvents. vb.  
   
-4. Have the ApplicationEvents.vb file open in the Code Editor. On the **General** menu, choose **MyApplication Events**.  
+4. Plik ApplicationEvents. vb jest otwarty w edytorze kodu. W menu **Ogólne** wybierz pozycję **zdarzenia aplikacji**.  
   
-5. On the **Declarations** menu, choose **UnhandledException**.  
+5. W menu **deklaracje** wybierz pozycję **UnhandledException**.  
   
-     The application raises the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> event before the main application runs.  
+     Aplikacja zgłasza zdarzenie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> przed uruchomieniem aplikacji głównej.  
   
-6. Add the `My.Application.Log.WriteException` method to the `UnhandledException` event handler.  
+6. Dodaj metodę `My.Application.Log.WriteException` do procedury obsługi zdarzeń `UnhandledException`.  
   
      [!code-vb[VbVbalrMyApplicationLog#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#4)]  
   
-     The following example shows the complete code for logging an unhandled exception.  
+     Poniższy przykład pokazuje kompletny kod rejestrowania nieobsłużonego wyjątku.  
   
      [!code-vb[VbVbalrMyApplicationLog#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#5)]  
   

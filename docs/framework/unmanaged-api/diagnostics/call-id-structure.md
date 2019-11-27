@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448595"
 ---
 # <a name="call_id-structure"></a>CALL_ID — Struktura
-Provides information to a debugger about a function that is being called. See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.  
+Dostarcza informacje do debugera dotyczące funkcji, która jest wywoływana. Aby uzyskać więcej informacji, zobacz Interfejs [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +38,19 @@ typedef struct tagCALL_ID
 } CALL_ID;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`szMachine`|Identifies the machine that is making the call.|  
-|`dwPid`|Identifies the machine processor.|  
-|`pUserThread`|Identifies the thread that is executing the call.|  
-|`addrStackPointer`|Specifies the address of the call stack.|  
-|`szEntryPoint`|Specifies the address of the call.|  
-|`szDestinationMachine`|Identifies the machine that will execute the call.|  
+|`szMachine`|Identyfikuje maszynę, która wywołuje wywołanie.|  
+|`dwPid`|Identyfikuje procesor maszyny.|  
+|`pUserThread`|Identyfikuje wątek wykonujący wywołanie.|  
+|`addrStackPointer`|Określa adres stosu wywołań.|  
+|`szEntryPoint`|Określa adres wywołania.|  
+|`szDestinationMachine`|Identyfikuje maszynę, która będzie wykonywać wywołanie.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** ProtocolNotify2.idl  
+ **Nagłówek:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Zobacz także
 

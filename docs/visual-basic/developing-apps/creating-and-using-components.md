@@ -13,59 +13,59 @@ ms.locfileid: "74330297"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Tworzenie składników i korzystanie z nich w Visual Basic
 
-A *component* is a class that implements the <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> interface or that derives directly or indirectly from a class that implements <xref:System.ComponentModel.IComponent>. A .NET Framework component is an object that is reusable, can interact with other objects, and provides control over external resources and design-time support.  
+*Składnik* jest klasą, która implementuje interfejs <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> lub który dziedziczy bezpośrednio lub pośrednio z klasy implementującej <xref:System.ComponentModel.IComponent>. Składnik .NET Framework jest obiektem, który jest wielokrotnego użytku, może współdziałać z innymi obiektami i zapewnia kontrolę nad zasobami zewnętrznymi i obsługą czasu projektowania.  
   
- An important feature of components is that they are designable, which means that a class that is a component can be used in the Visual Studio Integrated Development Environment. A component can be added to the Toolbox, dragged and dropped onto a form, and manipulated on a design surface. Notice that base design-time support for components is built into the .NET Framework; a component developer does not have to do any additional work to take advantage of the base design-time functionality.  
+ Ważną cechą składników jest możliwość projektowania, co oznacza, że Klasa, która jest składnikiem, może być używana w zintegrowanym środowisku programistycznym programu Visual Studio. Składnik może być dodany do przybornika, przeciągany i upuszczany na formularz oraz do manipulowania na powierzchni projektowej. Należy zauważyć, że podstawowa obsługa w czasie projektowania składników jest wbudowana w .NET Framework; deweloper składnika nie musi wykonywać żadnych dodatkowych czynności, aby korzystać z podstawowych funkcji czasu projektowania.  
   
- A *control* is similar to a component, as both are designable. However, a control provides a user interface, while a component does not. A control must derive from one of the base control classes: <xref:System.Windows.Forms.Control> or <xref:System.Web.UI.Control>.  
+ *Kontrolka* jest podobna do składnika, zarówno do projektowania. Jednak formant udostępnia interfejs użytkownika, natomiast składnik nie jest. Kontrolka musi pochodzić od jednej z klas podstawowego formantu: <xref:System.Windows.Forms.Control> lub <xref:System.Web.UI.Control>.  
   
-## <a name="when-to-create-a-component"></a>When to Create a Component  
+## <a name="when-to-create-a-component"></a>Kiedy należy utworzyć składnik  
 
- If your class will be used on a design surface (such as the Windows Forms or Web Forms Designer) but has no user interface, it should be a component and implement <xref:System.ComponentModel.IComponent>, or derive from a class that directly or indirectly implements <xref:System.ComponentModel.IComponent>.  
+ Jeśli Klasa zostanie użyta na powierzchni projektowej (takiej jak Windows Forms lub Projektant formularzy Web Forms), ale nie ma interfejsu użytkownika, powinien być składnikiem i implementować <xref:System.ComponentModel.IComponent>lub dziedziczyć z klasy, która bezpośrednio lub pośrednio implementuje <xref:System.ComponentModel.IComponent>.  
   
- The <xref:System.ComponentModel.Component> and <xref:System.ComponentModel.MarshalByValueComponent> classes are base implementations of the <xref:System.ComponentModel.IComponent> interface. The main difference between these classes is that the <xref:System.ComponentModel.Component> class is marshaled by reference, while <xref:System.ComponentModel.IComponent> is marshaled by value. The following list provides broad guidelines for implementers.  
+ Klasy <xref:System.ComponentModel.Component> i <xref:System.ComponentModel.MarshalByValueComponent> są podstawowymi implementacjami interfejsu <xref:System.ComponentModel.IComponent>. Główna różnica między tymi klasami polega na tym, że Klasa <xref:System.ComponentModel.Component> jest organizowana przez odwołanie, podczas gdy <xref:System.ComponentModel.IComponent> jest organizowane przez wartość. Poniższa lista zawiera szczegółowe wskazówki dotyczące implementacji.  
   
-- If your component needs to be marshaled by reference, derive from <xref:System.ComponentModel.Component>.  
+- Jeśli składnik musi być zorganizowany przez odwołanie, pochodzi od <xref:System.ComponentModel.Component>.  
   
-- If your component needs to be marshaled by value, derive from <xref:System.ComponentModel.MarshalByValueComponent>.  
+- Jeśli składnik musi być zorganizowany przez wartość, pochodny od <xref:System.ComponentModel.MarshalByValueComponent>.  
   
-- If your component cannot derive from one of the base implementations due to single inheritance, implement <xref:System.ComponentModel.IComponent>.  
+- Jeśli składnik nie może pochodzić z jednej z implementacji podstawowych z powodu pojedynczego dziedziczenia, zaimplementuj <xref:System.ComponentModel.IComponent>.  
   
 ## <a name="component-classes"></a>Klasy składników  
 
- The <xref:System.ComponentModel> namespace provides classes that are used to implement the run-time and design-time behavior of components and controls. This namespace includes the base classes and interfaces for implementing attributes and type converters, binding to data sources, and licensing components.  
+ Przestrzeń nazw <xref:System.ComponentModel> zawiera klasy, które są używane do implementowania działania składników i formantów w czasie wykonywania oraz w czasie projektowania. Ta przestrzeń nazw zawiera klasy bazowe i interfejsy służące do implementowania atrybutów i konwerterów typów, powiązania ze źródłami danych i składnikami licencjonowania.  
   
- The core component classes are:  
+ Podstawowe klasy składników to:  
   
-- <xref:System.ComponentModel.Component>., A base implementation for the <xref:System.ComponentModel.IComponent> interface. This class enables object sharing between applications.  
+- <xref:System.ComponentModel.Component>., Podstawowa implementacja interfejsu <xref:System.ComponentModel.IComponent>. Ta klasa umożliwia udostępnianie obiektów między aplikacjami.  
   
-- <xref:System.ComponentModel.MarshalByValueComponent>., A base implementation for the <xref:System.ComponentModel.IComponent> interface.  
+- <xref:System.ComponentModel.MarshalByValueComponent>., Podstawowa implementacja interfejsu <xref:System.ComponentModel.IComponent>.  
   
-- <xref:System.ComponentModel.Container>., The base implementation for the <xref:System.ComponentModel.IContainer> interface. This class encapsulates zero or more components.  
+- <xref:System.ComponentModel.Container>., Podstawowa implementacja interfejsu <xref:System.ComponentModel.IContainer>. Ta klasa hermetyzuje zero lub więcej składników.  
   
- Some of the classes used for component licensing are:  
+ Niektóre klasy używane do licencjonowania składników są następujące:  
   
-- <xref:System.ComponentModel.License>., The abstract base class for all licenses. A license is granted to a specific instance of a component.  
+- <xref:System.ComponentModel.License>., Abstrakcyjna klasa bazowa dla wszystkich licencji. Licencja jest udzielana do określonego wystąpienia składnika.  
   
-- <xref:System.ComponentModel.LicenseManager>., Provides properties and methods to add a license to a component and to manage a <xref:System.ComponentModel.LicenseProvider>.  
+- <xref:System.ComponentModel.LicenseManager>., Zawiera właściwości i metody umożliwiające dodanie licencji do składnika oraz zarządzanie <xref:System.ComponentModel.LicenseProvider>.  
   
-- <xref:System.ComponentModel.LicenseProvider>., The abstract base class for implementing a license provider.  
+- <xref:System.ComponentModel.LicenseProvider>., Abstrakcyjna klasa bazowa służąca do implementowania dostawcy licencji.  
   
-- <xref:System.ComponentModel.LicenseProviderAttribute>., Specifies the <xref:System.ComponentModel.LicenseProvider> class to use with a class.  
+- <xref:System.ComponentModel.LicenseProviderAttribute>., Określa klasę <xref:System.ComponentModel.LicenseProvider>, która ma być używana z klasą.  
   
- Classes commonly used for describing and persisting components.  
+ Klasy często używane do opisywania i utrwalania składników.  
   
-- <xref:System.ComponentModel.TypeDescriptor>., Provides information about the characteristics for a component, such as its attributes, properties, and events.  
+- <xref:System.ComponentModel.TypeDescriptor>., Zawiera informacje o charakterystyce składnika, takie jak jego atrybuty, właściwości i zdarzenia.  
   
-- <xref:System.ComponentModel.EventDescriptor>., Provides information about an event.  
+- <xref:System.ComponentModel.EventDescriptor>., Zawiera informacje o zdarzeniu.  
   
-- <xref:System.ComponentModel.PropertyDescriptor>., Provides information about a property.  
+- <xref:System.ComponentModel.PropertyDescriptor>., Zawiera informacje o właściwości.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
  [Rozwiązywanie problemów związanych z kontrolkami oraz tworzeniem składników](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
- Explains how to fix common problems.  
+ Wyjaśnia, jak rozwiązać typowe problemy.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [How to: Access Design-Time Support in Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [Instrukcje: uzyskiwanie dostępu do obsługi czasu projektowania w programie Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

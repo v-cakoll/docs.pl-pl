@@ -17,43 +17,43 @@ ms.locfileid: "74345615"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Porady: odczytywanie wartości z klucza rejestru w Visual Basic
 
-The `GetValue` method of the `My.Computer.Registry` object can be used to read values in the Windows registry.  
+Metoda `GetValue` obiektu `My.Computer.Registry` może służyć do odczytu wartości w rejestrze systemu Windows.  
   
- If the key, "Software\MyApp" in the following example, does not exist, an exception is thrown. If the `ValueName`,  "Name" in the following example, does not exist, `Nothing` is returned.  
+ Jeśli klucz "Software\MyApp" w poniższym przykładzie nie istnieje, zgłaszany jest wyjątek. Jeśli `ValueName`, "name" w poniższym przykładzie nie istnieje, zwracany jest `Nothing`.  
   
- The `GetValue` method can also be used to determine whether a given value exists in a specific registry key.  
+ Metody `GetValue` można także użyć do określenia, czy dana wartość istnieje w określonym kluczu rejestru.  
   
- When code reads the registry from a Web application, the current user is determined by the authentication and impersonation that is implemented in the Web application.  
+ Gdy kod odczytuje rejestr z aplikacji sieci Web, bieżący użytkownik jest określany przez uwierzytelnianie i personifikację, która jest zaimplementowana w aplikacji sieci Web.  
   
-### <a name="to-read-a-value-from-a-registry-key"></a>To read a value from a registry key  
+### <a name="to-read-a-value-from-a-registry-key"></a>Odczytywanie wartości z klucza rejestru  
   
-- Use the `GetValue` method, specifying the path and name) to read a value from registry key. The following example reads the value `Name` from `HKEY_CURRENT_USER\Software\MyApp` and displays it in a message box.  
+- Użyj metody `GetValue`, określając ścieżkę i nazwę), aby odczytać wartość z klucza rejestru. Poniższy przykład odczytuje wartość `Name` z `HKEY_CURRENT_USER\Software\MyApp` i wyświetla ją w oknie komunikatu.  
   
      [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   
- This code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **Windows Operating System > Registry**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
+ Ten przykład kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu znajduje się on w **systemie operacyjnym Windows > Registry**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
   
-### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>To determine whether a value exists in a registry key  
+### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>Aby określić, czy wartość istnieje w kluczu rejestru  
   
-- Use the `GetValue` method to retrieve the value. The following code checks whether the value exists and returns a message if it does not.  
+- Użyj metody `GetValue`, aby pobrać wartość. Poniższy kod sprawdza, czy wartość istnieje i zwraca komunikat, jeśli nie.  
   
      [!code-vb[VbResourceTasks#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#12)]  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
+## <a name="robust-programming"></a>Skuteczne programowanie  
 
- The registry holds top-level, or root, keys that are used to store data. For instance, the HKEY_LOCAL_MACHINE root key is used for storing machine-level settings used by all users, while HKEY_CURRENT_USER is used for storing data specific to an individual user.  
+ Rejestr zawiera klucze najwyższego poziomu (lub główne), które są używane do przechowywania danych. Na przykład klucz główny HKEY_LOCAL_MACHINE jest używany do przechowywania ustawień na poziomie komputera używanych przez wszystkich użytkowników, podczas gdy HKEY_CURRENT_USER jest używany do przechowywania danych specyficznych dla pojedynczego użytkownika.  
   
  Następujące warunki mogą spowodować wyjątek:  
   
-- The name of the key is `Nothing` (<xref:System.ArgumentNullException>).  
+- Nazwa klucza jest `Nothing` (<xref:System.ArgumentNullException>).  
   
-- The user does not have permissions to read from registry keys (<xref:System.Security.SecurityException>).  
+- Użytkownik nie ma uprawnień do odczytu z kluczy rejestru (<xref:System.Security.SecurityException>).  
   
-- The key name exceeds the 255-character limit (<xref:System.ArgumentException>).  
+- Nazwa klucza przekracza limit 255 znaków (<xref:System.ArgumentException>).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
 
- To run this process, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.RegistryPermission> class. If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges. Similarly, the user must have the correct ACLs for creating or writing to settings. For example, a local application that has the code access security permission might not have operating system permission. For more information, see [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md).  
+ Aby uruchomić ten proces, zestaw wymaga poziomu uprawnień przyznany przez klasę <xref:System.Security.Permissions.RegistryPermission>. Jeśli używasz w kontekście częściowego zaufania, proces może zgłosić wyjątek z powodu niewystarczających uprawnień. Analogicznie, użytkownik musi mieć poprawne listy ACL do tworzenia lub zapisywania w ustawieniach. Na przykład aplikacja lokalna, która ma uprawnienie zabezpieczeń dostępu kodu, może nie mieć uprawnień systemu operacyjnego. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../../../framework/misc/code-access-security-basics.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

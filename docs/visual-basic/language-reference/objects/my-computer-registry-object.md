@@ -13,22 +13,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350699"
 ---
 # <a name="mycomputerregistry-object"></a>My.Computer.Registry — Obiekt
-Provides properties and methods for manipulating the registry.  
+Zawiera właściwości i metody manipulowania rejestrem.  
   
 ## <a name="remarks"></a>Uwagi  
- For information about the methods and properties of the `My.Computer.Registry` object, see <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
+ Aby uzyskać informacje o metodach i właściwościach obiektu `My.Computer.Registry`, zobacz <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   
- For more information, see [Reading from and Writing to the Registry](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).  
+ Aby uzyskać więcej informacji, zobacz [odczytywanie z rejestru i zapisywanie w nim](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).  
   
 > [!NOTE]
-> You can also manipulate the registry by using methods of the <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> class.  
+> Można również manipulować rejestrem przy użyciu metod klasy <xref:Microsoft.Win32.Registry?displayProperty=nameWithType>.  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
+ **Przestrzeń nazw:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (provides access to <xref:Microsoft.Win32.Registry>)  
+ **Klasa:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (zapewnia dostęp do <xref:Microsoft.Win32.Registry>)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

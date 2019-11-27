@@ -1,5 +1,5 @@
 ---
-title: 'How to: Read From Text Files'
+title: 'Instrukcje: odczyt z plików tekstowych'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extended characters [Visual Basic], reading
@@ -17,46 +17,46 @@ ms.locfileid: "74334589"
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>Porady: odczyt z plików testowych w Visual Basic
 
-The <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> method of the `My.Computer.FileSystem` object allows you to read from a text file. Kodowanie pliku może być określone, jeśli zawartość pliku używa kodowania, takiego jak ASCII lub UTF-8.
+Metoda <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> obiektu `My.Computer.FileSystem` umożliwia odczytywanie z pliku tekstowego. Kodowanie pliku może być określone, jeśli zawartość pliku używa kodowania, takiego jak ASCII lub UTF-8.
 
 Podczas odczytu z pliku używającego znaków rozszerzonych, trzeba będzie określić kodowanie pliku.
 
 > [!NOTE]
-> To read a file a single line of text at a time, use the <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> method of the `My.Computer.FileSystem` object. The `OpenTextFileReader` method returns a <xref:System.IO.StreamReader> object. You can use the <xref:System.IO.StreamReader.ReadLine%2A> method of the `StreamReader` object to read a file one line at a time. You can test for the end of the file using the <xref:System.IO.StreamReader.EndOfStream%2A> method of the `StreamReader` object.
+> Aby odczytywać pojedynczy wiersz tekstu w danym momencie, użyj metody <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> obiektu `My.Computer.FileSystem`. Metoda `OpenTextFileReader` zwraca obiekt <xref:System.IO.StreamReader>. Można użyć metody <xref:System.IO.StreamReader.ReadLine%2A> obiektu `StreamReader`, aby odczytywać plik jeden wiersz jednocześnie. Można testować pod kątem końca pliku przy użyciu metody <xref:System.IO.StreamReader.EndOfStream%2A> obiektu `StreamReader`.
 
 ## <a name="to-read-from-a-text-file"></a>Aby odczytać z pliku tekstowego
 
-Use the `ReadAllText` method of the `My.Computer.FileSystem` object to read the contents of a text file into a string, supplying the path. Poniższy przykład odczytuje zawartość test.txt jako ciąg i wyświetla go w oknie komunikatu.
+Użyj metody `ReadAllText` obiektu `My.Computer.FileSystem`, aby odczytać zawartość pliku tekstowego w ciągu, dostarczając ścieżkę. Poniższy przykład odczytuje zawartość test.txt jako ciąg i wyświetla go w oknie komunikatu.
 
 [!code-vb[VbFileIORead#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#2)]
 
 ### <a name="to-read-from-a-text-file-that-is-encoded"></a>Aby odczytać z pliku tekstowego, który jest kodowany
 
-Use the `ReadAllText` method of the `My.Computer.FileSystem` object to read the contents of a text file into a string, supplying the path and file encoding type. Poniższy przykład odczytuje zawartość pliku z kodowaniem UTF32 test.txt jako ciąg i wyświetla go w oknie komunikatu.
+Użyj metody `ReadAllText` obiektu `My.Computer.FileSystem`, aby odczytać zawartość pliku tekstowego w ciągu, podając ścieżkę i typ kodowania pliku. Poniższy przykład odczytuje zawartość pliku z kodowaniem UTF32 test.txt jako ciąg i wyświetla go w oknie komunikatu.
 
 [!code-vb[VbFileIORead#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#3)]
 
-## <a name="robust-programming"></a>Niezawodne programowanie
+## <a name="robust-programming"></a>Skuteczne programowanie
 
 Następujące warunki mogą spowodować wyjątek:
 
-- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (<xref:System.ArgumentException>).
+- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (<xref:System.ArgumentException>).
 
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).
+- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).
 
-- The file does not exist (<xref:System.IO.FileNotFoundException>).
+- Plik nie istnieje (<xref:System.IO.FileNotFoundException>).
 
-- The file is in use by another process or an I/O error occurs (<xref:System.IO.IOException>).
+- Plik jest używany przez inny proces lub wystąpił błąd we/wy (<xref:System.IO.IOException>).
 
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).
 
-- A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).
+- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).
 
-- There is not enough memory to write the string to buffer (<xref:System.OutOfMemoryException>).
+- Za mało pamięci, aby zapisać ciąg do bufora (<xref:System.OutOfMemoryException>).
 
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).
 
-Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. For example, the file Form1.vb may not be a Visual Basic source file.
+Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik Form1. vb nie może być plikiem źródłowym Visual Basic.
 
 Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji. Zawartość pliku może się różnić od oczekiwanej i metody odczytu z pliku nie zadziałają.
 
@@ -69,5 +69,5 @@ Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji. Zawartoś
 - [Instrukcje: odczyt z plików testowych o stałej szerokości](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
 - [Instrukcje: odczyt z plików tekstowych w wielu formatach](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
 - [Rozwiązywanie problemów: odczytywanie z plików tekstowych oraz zapisywanie w nich](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [Walkthrough: Manipulating Files and Directories in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
+- [Przewodnik: manipulowanie plikami i katalogami w Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
 - [Kodowanie pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)

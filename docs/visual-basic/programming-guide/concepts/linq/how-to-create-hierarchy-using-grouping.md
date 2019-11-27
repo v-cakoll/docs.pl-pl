@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create Hierarchy Using Grouping'
+title: 'Instrukcje: Tworzenie hierarchii przy użyciu grupowania'
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
 ms.openlocfilehash: 3fea3e008e0bb18ae92f8883d08be4f27929b9fd
@@ -9,13 +9,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341593"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>How to: Create Hierarchy Using Grouping (Visual Basic)
-This example shows how to group data, and then generate XML based on the grouping.  
+# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>Instrukcje: Tworzenie hierarchii przy użyciu grupowania (Visual Basic)
+Ten przykład pokazuje, jak grupować dane, a następnie generować XML na podstawie grupowania.  
   
 ## <a name="example"></a>Przykład  
- This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.  
+ Ten przykład najpierw grupuje dane według kategorii, a następnie generuje nowy plik XML, w którym hierarchia XML odzwierciedla grupowanie.  
   
- This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Ten przykład używa następującego dokumentu XML: [przykładowy plik XML: dane liczbowe (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim doc As XElement = XElement.Load("Data.xml")  
@@ -81,4 +81,4 @@ Console.WriteLine(newData)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

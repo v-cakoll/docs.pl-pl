@@ -16,39 +16,39 @@ ms.locfileid: "74335296"
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>Porady: odczyt z plików binarnych w Visual Basic
 
-The `My.Computer.FileSystem` object provides the `ReadAllBytes` method for reading from binary files.  
+Obiekt `My.Computer.FileSystem` zapewnia metodę `ReadAllBytes` do odczytu z plików binarnych.  
   
-### <a name="to-read-from-a-binary-file"></a>To read from a binary file  
+### <a name="to-read-from-a-binary-file"></a>Aby odczytywać dane z pliku binarnego  
   
-- Use the `ReadAllBytes` method, which returns the contents of a file as a byte array. This example reads from the file `C:/Documents and Settings/selfportrait.jpg`.  
+- Użyj metody `ReadAllBytes`, która zwraca zawartość pliku jako tablicę bajtów. Ten przykład odczytuje z pliku `C:/Documents and Settings/selfportrait.jpg`.  
   
      [!code-vb[VbVbcnMyFileSystem#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#78)]  
   
-- For large binary files, you can use the <xref:System.IO.FileStream.Read%2A> method of the <xref:System.IO.FileStream> object to read from the file only a specified amount at a time. You can then limit how much of the file is loaded into memory for each read operation. The following code example copies a file and allows the caller to specify how much of the file is read into memory per read operation.  
+- W przypadku dużych plików binarnych można użyć metody <xref:System.IO.FileStream.Read%2A> obiektu <xref:System.IO.FileStream> do odczytu z pliku tylko określonej ilości naraz. Następnie można ograniczyć ilość pliku do załadowania do pamięci dla każdej operacji odczytu. Poniższy przykład kodu kopiuje plik i umożliwia obiektowi wywołującemu określenie, jaka część pliku jest odczytywana do pamięci na potrzeby operacji odczytu.  
   
      [!code-vb[VbVbcnMyFileSystem#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#91)]  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
+## <a name="robust-programming"></a>Skuteczne programowanie  
 
- The following conditions may cause an exception to be thrown:  
+ Następujące warunki mogą spowodować zgłoszenie wyjątku:  
   
-- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (<xref:System.ArgumentException>).  
+- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (<xref:System.ArgumentException>).  
   
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).  
+- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).  
   
-- The file does not exist (<xref:System.IO.FileNotFoundException>).  
+- Plik nie istnieje (<xref:System.IO.FileNotFoundException>).  
   
-- The file is in use by another process, or an I/O error occurs (<xref:System.IO.IOException>).  
+- Plik jest używany przez inny proces lub wystąpił błąd we/wy (<xref:System.IO.IOException>).  
   
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).  
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
   
-- A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).  
+- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).  
   
-- There is not enough memory to write the string to buffer (<xref:System.OutOfMemoryException>).  
+- Za mało pamięci, aby zapisać ciąg do bufora (<xref:System.OutOfMemoryException>).  
   
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).  
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
   
- Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. For example, the file Form1.vb may not be a Visual Basic source file.  
+ Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik Form1. vb nie może być plikiem źródłowym Visual Basic.  
   
  Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji. Zawartość pliku może się różnić od oczekiwanej i metody odczytu z pliku nie zadziałają.  
   

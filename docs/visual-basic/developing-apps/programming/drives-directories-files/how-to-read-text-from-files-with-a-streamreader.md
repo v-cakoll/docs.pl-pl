@@ -16,25 +16,25 @@ ms.locfileid: "74334562"
 ---
 # <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>Porady: odczyt tekstu z plików za pomocą StreamReader (Visual Basic)
 
-The `My.Computer.FileSystem` object provides methods to open a <xref:System.IO.TextReader> and a <xref:System.IO.TextWriter>. These methods, `OpenTextFileWriter` and `OpenTextFileReader`, are advanced methods that do not appear in IntelliSense unless you select the **All** tab.  
+Obiekt `My.Computer.FileSystem` zawiera metody umożliwiające otwarcie <xref:System.IO.TextReader> i <xref:System.IO.TextWriter>. Te metody, `OpenTextFileWriter` i `OpenTextFileReader`, to metody zaawansowane, które nie są wyświetlane w technologii IntelliSense, chyba że wybierzesz kartę **wszystkie** .  
   
-### <a name="to-read-a-line-from-a-file-with-a-text-reader"></a>To read a line from a file with a text reader  
+### <a name="to-read-a-line-from-a-file-with-a-text-reader"></a>Aby odczytać wiersz z pliku za pomocą czytnika tekstu  
   
-- Use the `OpenTextFileReader` method to open the <xref:System.IO.TextReader>, specifying the file. This example opens the file named `testfile.txt`, reads a line from it, and displays the line in a message box.  
+- Użyj metody `OpenTextFileReader`, aby otworzyć <xref:System.IO.TextReader>, określając plik. Ten przykład otwiera plik o nazwie `testfile.txt`, odczytuje z niego wiersz i wyświetla wiersz w oknie komunikatu.  
   
      [!code-vb[VbFileIORead#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#1)]  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
+## <a name="robust-programming"></a>Skuteczne programowanie  
 
- The file that is read must be a text file.  
+ Odczytywany plik musi być plikiem tekstowym.  
   
- Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. For example, the file Form1.vb may not be a Visual Basic source file.  
+ Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik Form1. vb nie może być plikiem źródłowym Visual Basic.  
   
  Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji. Zawartość pliku może się różnić od oczekiwanej i metody odczytu z pliku nie zadziałają.  
   
-## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
+## <a name="net-framework-security"></a>Zabezpieczenia programu .NET Framework  
 
- To read from a file, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.FileIOPermission> class. If you are running in a partial-trust context, the code might throw an exception due to insufficient privileges. For more information, see [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md). The user also needs access to the file. For more information, see [ACL Technology Overview](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100)).  
+ Aby odczytywać dane z pliku, zestaw wymaga poziomu uprawnień przyznanych przez klasę <xref:System.Security.Permissions.FileIOPermission>. Jeśli używasz w kontekście częściowego zaufania, kod może zgłosić wyjątek z powodu niewystarczających uprawnień. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../../../framework/misc/code-access-security-basics.md). Użytkownik musi również mieć dostęp do pliku. Aby uzyskać więcej informacji, zobacz [Omówienie technologii list ACL](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100)).  
   
 ## <a name="see-also"></a>Zobacz także
 

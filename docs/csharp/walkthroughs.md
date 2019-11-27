@@ -14,60 +14,60 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204592"
 ---
 # <a name="c-walkthroughs"></a>C# — wskazówki
-Walkthroughs give step-by-step instructions for common scenarios, which makes them a good place to start learning about the product or a particular feature area.  
+Instruktaże zawierają instrukcje krok po kroku dla typowych scenariuszy, co sprawia, że jest dobrym miejscem do rozpoczęcia uczenia się dotyczącej produktu lub określonego obszaru funkcji.  
   
- This section contains links to C# programming walkthroughs.  
+ Ta sekcja zawiera linki do C# przewodników programowania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
- [Accessing the Web by Using Async and Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- Shows how to create an asynchronous solution by using [async](./language-reference/keywords/async.md) and [await](./language-reference/operators/await.md).  
+ [Uzyskiwanie dostępu do sieci Web za pomocą Async i await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ Pokazuje, jak utworzyć rozwiązanie asynchroniczne przy użyciu [Async](./language-reference/keywords/async.md) i [await](./language-reference/operators/await.md).  
   
- [Creating a Windows Runtime Component in C# or Visual Basic and Calling it from JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Shows how to create a Windows Runtime type, package it in a Windows Runtime component, and then call the component from a Windows 8.x Store app that's built for Windows by using JavaScript.  
+ [Tworzenie składnika środowisko wykonawcze systemu Windows w programie C# lub Visual Basic i wywoływanie go przy użyciu języka JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
+ Pokazuje, jak utworzyć typ środowisko wykonawcze systemu Windows, spakować go w składniku środowisko wykonawcze systemu Windows, a następnie wywołać składnik z aplikacji ze sklepu Windows 8. x skompilowanej dla systemu Windows przy użyciu języka JavaScript.  
   
- [Office Programming (C# and Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
- Shows how to create an Excel workbook and a Word document by using C# and Visual Basic.  
+ [Programowanie Office (C# i Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
+ Pokazuje, jak utworzyć skoroszyt programu Excel i dokument programu Word przy użyciu C# i Visual Basic.  
   
- [Creating and Using Dynamic Objects (C# and Visual Basic)](./programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
- Shows how to create a custom object that dynamically exposes the contents of a text file, and how to create a project that uses the `IronPython` library.  
+ [Tworzenie i używanie obiektów dynamicznych (C# i Visual Basic)](./programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
+ Pokazuje, jak utworzyć niestandardowy obiekt, który dynamicznie uwidacznia zawartość pliku tekstowego i jak utworzyć projekt, który używa biblioteki `IronPython`.  
    
- [Authoring a Composite Control with Visual C#](../framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- Demonstrates creating a simple composite control and extending its functionality through inheritance.  
+ [Tworzenie formantu złożonego za pomocą wizualizacjiC#](../framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ Demonstruje Tworzenie prostego formantu złożonego i rozszerzanie jego funkcjonalności przez dziedziczenie.  
   
- [Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features](../framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
- Illustrates how to create a custom designer for a custom control.  
+ [Tworzenie kontrolki Windows Forms, która wykorzystuje funkcje czasu projektowania programu Visual Studio](../framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+ Ilustruje sposób tworzenia niestandardowego projektanta dla kontrolki niestandardowej.  
   
- [Inheriting from a Windows Forms Control with Visual C#](../framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
- Demonstrates creating a simple inherited button control. This button inherits functionality from the standard Windows Forms button and exposes a custom member.  
+ [Dziedziczenie z kontrolki Windows Forms za pomocą wizualizacjiC#](../framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+ Demonstruje tworzenie prostej dziedziczonej kontrolki Button. Ten przycisk dziedziczy funkcje ze standardowego przycisku Windows Forms i uwidacznia niestandardowy element członkowski.  
   
- [Debugging Custom Windows Forms Controls at Design Time](../framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
- Describes how to debug the design-time behavior of your custom control.
+ [Debugowanie niestandardowych kontrolek Windows Forms w czasie projektowania](../framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+ Opisuje sposób debugowania zachowania niestandardowej kontrolki czasu projektowania.
 
- [Performing Common Tasks Using Smart Tags on Windows Forms Controls](../framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
- Demonstrates some of the commonly performed tasks such as adding or removing a tab on a `TabControl`, docking a control to its parent, and changing the orientation of a `SplitContainer` control.  
+ [Wykonywanie typowych zadań przy użyciu tagów inteligentnych w kontrolkach Windows Forms](../framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+ Pokazuje niektóre z często wykonywanych zadań, takich jak dodawanie lub usuwanie karty na `TabControl`, dokowanie kontrolki do jej elementu nadrzędnego i zmiana orientacji kontrolki `SplitContainer`.  
   
- [Writing Queries in C# (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Demonstrates the C# language features that are used to write [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expressions.  
+ [Pisanie zapytań w C# (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ Demonstruje funkcje C# języka, które są używane do pisania wyrażeń zapytania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
- [Manipulating Data (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
- Describes a [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] scenario for adding, modifying, and deleting data in a database.  
+ [Manipulowanie danymi (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
+ Opisuje scenariusz [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] na potrzeby dodawania, modyfikowania i usuwania danych w bazie danych.  
   
- [Simple Object Model and Query (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)  
- Demonstrates how to create an entity class and a simple query to filter the entity class.  
+ [Prosty model obiektu i zapytanie (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)  
+ Demonstruje sposób tworzenia klasy jednostki i prostego zapytania do filtrowania klasy jednostki.  
   
- [Using Only Stored Procedures (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
- Demonstrates how to use LINQ to SQL to access data by executing only stored procedures.  
+ [Używanie tylko procedur składowanychC#() (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
+ Pokazuje, jak używać LINQ to SQL do uzyskiwania dostępu do danych przez wykonywanie tylko procedur składowanych.  
   
- [Querying Across Relationships (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)  
- Demonstrates the use of [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] associations to represent foreign-key relationships in a database.  
+ [Wykonywanie zapytań w relacjachC#() (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)  
+ Demonstruje użycie skojarzeń [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] do reprezentowania relacji klucza obcego w bazie danych.  
 
- [Writing a Visualizer in C#](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
- Shows how to write a simple visualizer by using C#.  
+ [Pisanie wizualizatora wC#](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
+ Pokazuje, jak napisać prosty wizualizator przy użyciu C#.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Deployment Samples and Walkthroughs](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
- Provides step-by-step examples of common deployment scenarios.  
+ [Przykłady i wskazówki dotyczące wdrażania](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
+ Zawiera przykładowe instrukcje krok po kroku dotyczące typowych scenariuszy wdrażania.  
   
 ## <a name="see-also"></a>Zobacz także
 

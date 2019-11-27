@@ -12,19 +12,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347181"
 ---
 # <a name="mycomputermouse-object"></a>My.Computer.Mouse — Obiekt
-Provides properties for getting information about the format and configuration of the mouse installed on the local computer.  
+Zawiera właściwości służące do uzyskiwania informacji o formacie i konfiguracji myszy zainstalowanej na komputerze lokalnym.  
   
 ## <a name="remarks"></a>Uwagi  
- For information about the methods and properties of the `My.Computer.Mouse` object, see <xref:Microsoft.VisualBasic.Devices.Mouse>.  
+ Aby uzyskać informacje o metodach i właściwościach obiektu `My.Computer.Mouse`, zobacz <xref:Microsoft.VisualBasic.Devices.Mouse>.  
   
- For more information, see [Accessing the Mouse](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).  
+ Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do myszy](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
+ **Przestrzeń nazw:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Mouse>  
+ **Klasa:** <xref:Microsoft.VisualBasic.Devices.Mouse>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

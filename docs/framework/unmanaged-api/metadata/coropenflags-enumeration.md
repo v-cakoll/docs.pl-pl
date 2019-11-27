@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436506"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags — Wyliczenie
-Contains flag values that control metadata behavior upon opening manifest files.  
+Zawiera wartości flag kontrolujące zachowanie metadanych podczas otwierania plików manifestu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,30 +46,30 @@ typedef enum CorOpenFlags
 } CorOpenFlags;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`ofRead`|Indicates that the file should be opened for reading only.|  
-|`ofWrite`|Indicates that the file should be opened for writing.<br /><br /> If you are using the `ofWrite` flag when opening a .winmd file, you should also pass the `ofNoTransform` flag.|  
-|`ofReadWriteMask`|A mask for reading and writing.|  
-|`ofCopyMemory`|Indicates that the file should be read into memory. Metadata should maintain its own copy.|  
-|`ofCacheImage`|Nieaktualne. This flag is ignored.|  
-|`ofManifestMetadata`|Nieaktualne. This flag is ignored.|  
-|`ofReadOnly`|Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.|  
-|`ofTakeOwnership`|Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.|  
-|`ofNoTypeLib`|Nieaktualne. This flag is ignored.|  
-|`ofNoTransform`|Indicates that automatic transforms of .winmd files should be disabled. In other words, the projection of a Windows Runtime type to a .NET Framework type should be disabled. For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
-|`ofReserved1`|Reserved for internal use.|  
-|`ofReserved2`|Reserved for internal use.|  
-|`ofReserved`|Reserved for internal use.|  
+|`ofRead`|Wskazuje, że plik powinien być otwarty tylko do odczytu.|  
+|`ofWrite`|Wskazuje, że plik powinien być otwarty do zapisu.<br /><br /> Jeśli używasz flagi `ofWrite` podczas otwierania pliku winmd, należy również przekazać flagę `ofNoTransform`.|  
+|`ofReadWriteMask`|Maska do odczytu i zapisu.|  
+|`ofCopyMemory`|Wskazuje, że plik powinien być odczytywany do pamięci. Metadane powinny zachować własną kopię.|  
+|`ofCacheImage`|Nieaktualne. Ta flaga jest ignorowana.|  
+|`ofManifestMetadata`|Nieaktualne. Ta flaga jest ignorowana.|  
+|`ofReadOnly`|Wskazuje, że plik powinien być otwarty do odczytu i że nie można wykonać wywołania `QueryInterface` dla [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) .|  
+|`ofTakeOwnership`|Wskazuje, że pamięć została przypisana przy użyciu wywołania do [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) i zostanie zwolniona z metadanych.|  
+|`ofNoTypeLib`|Nieaktualne. Ta flaga jest ignorowana.|  
+|`ofNoTransform`|Wskazuje, że należy wyłączyć automatyczne transformacje plików WinMD. Innymi słowy, projekcja typu środowisko wykonawcze systemu Windows do typu .NET Framework powinna być wyłączona. Aby uzyskać więcej informacji, zobacz [środowisko wykonawcze systemu Windows i środowisko CLR poniżej wystawcy z platformą .NET i środowisko wykonawcze systemu Windows](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
+|`ofReserved1`|Przeznaczone do użytku wewnętrznego.|  
+|`ofReserved2`|Przeznaczone do użytku wewnętrznego.|  
+|`ofReserved`|Przeznaczone do użytku wewnętrznego.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

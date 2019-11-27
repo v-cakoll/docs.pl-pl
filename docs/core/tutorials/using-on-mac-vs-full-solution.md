@@ -1,6 +1,6 @@
 ---
 title: Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
-description: This topic walks you through building a .NET Core solution that includes a reusable library and unit testing.
+description: W tym temacie omówiono tworzenie rozwiązania .NET Core, które obejmuje biblioteki wielokrotnego użytku i testy jednostkowe.
 author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
@@ -13,75 +13,75 @@ ms.locfileid: "74428629"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
 
-Visual Studio for Mac provides a full-featured Integrated Development Environment (IDE) for developing .NET Core applications. This topic walks you through building a .NET Core solution that includes a reusable library and unit testing.
+Visual Studio dla komputerów Mac udostępnia w pełni funkcjonalne zintegrowane środowisko programistyczne (IDE) do tworzenia aplikacji platformy .NET Core. W tym temacie omówiono tworzenie rozwiązania .NET Core, które obejmuje biblioteki wielokrotnego użytku i testy jednostkowe.
 
-This tutorial shows you how to create an application that accepts a search word and a string of text from the user, counts the number of times the search word appears in the string using a method in a class library, and returns the result to the user. The solution also includes unit testing for the class library as an introduction to unit testing concepts. If you prefer to proceed through the tutorial with a complete sample, download the [sample solution](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter). For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+W tym samouczku pokazano, jak utworzyć aplikację, która akceptuje słowo wyszukiwania i ciąg tekstu od użytkownika, zlicza, ile razy słowo wyszukiwania pojawia się w ciągu przy użyciu metody w bibliotece klas i zwraca wynik do użytkownika. Rozwiązanie obejmuje również testy jednostkowe dla biblioteki klas jako wprowadzenie do koncepcji testowania jednostkowego. Jeśli wolisz przejść przez samouczek z kompletnym przykładem, Pobierz [przykładowe rozwiązanie](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter). Aby uzyskać instrukcje dotyczące pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 > [!NOTE]
-> Your feedback is highly valued. There are two ways you can provide feedback to the development team on Visual Studio for Mac:
+> Opinie są wysoce wyceniane. Istnieją dwa sposoby przekazywania opinii zespołowi programistycznemu na Visual Studio dla komputerów Mac:
 >
-> - In Visual Studio for Mac, select **Help** > **Report a Problem** from the menu or **Report a Problem** from the Welcome screen, which opens a window for filing a bug report. Swoje opinie możesz śledzić w portalu [Społeczność deweloperów](https://developercommunity.visualstudio.com/spaces/41/index.html).
-> - To make a suggestion, select **Help** > **Provide a Suggestion** from the menu or **Provide a Suggestion** from the Welcome screen, which takes you to the [Visual Studio for Mac Developer Community webpage](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
+> - W Visual Studio dla komputerów Mac wybierz pozycję **Pomoc** , > **zgłosić problem** z menu lub **Zgłoś problem** na ekranie powitalnym, co spowoduje otwarcie okna umożliwiającego zgłoszenie usterki. Swoje opinie możesz śledzić w portalu [Społeczność deweloperów](https://developercommunity.visualstudio.com/spaces/41/index.html).
+> - Aby utworzyć sugestię, wybierz pozycję **pomoc** > **Podaj sugestię** z menu lub **Podaj sugestię** z ekranu powitalnego, który przeprowadzi cię do [witryny internetowej społeczności deweloperów Visual Studio dla komputerów Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- OpenSSL (if running .NET Core 1.1): See the [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-macos) topic.
-- [.NET Core SDK 1.1 or later](https://dotnet.microsoft.com/download)
-- [Visual Studio 2017 for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
+- OpenSSL (w przypadku uruchamiania programu .NET Core 1,1): zobacz temat [zależności i wymagania dotyczące platformy .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-macos) .
+- [Zestaw .NET Core SDK 1,1 lub nowszy](https://dotnet.microsoft.com/download)
+- [Program Visual Studio 2017 dla komputerów Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
-For more information on prerequisites, see the [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-macos). For the full system requirements of Visual Studio 2017 for Mac, see [Visual Studio 2017 for Mac Product Family System Requirements](/visualstudio/productinfo/vs2017-system-requirements-mac).
+Aby uzyskać więcej informacji na temat wymagań wstępnych, zobacz [zależności i wymagania dotyczące platformy .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-macos). Aby uzyskać pełne wymagania systemowe programu Visual Studio 2017 dla komputerów Mac, zobacz [wymagania systemowe rodziny produktów Visual studio 2017 for Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
-## <a name="building-a-library"></a>Building a library
+## <a name="building-a-library"></a>Kompilowanie biblioteki
 
-1. On the Welcome screen, select **New Project**. In the **New Project** dialog under the **.NET Core** node, select the **.NET Standard Library** template. This creates a .NET Standard library that targets .NET Core as well as any other .NET implementation that supports version 2.0 of the [.NET Standard](../../standard/net-standard.md). Select **Next**.
+1. Na ekranie powitalnym wybierz pozycję **Nowy projekt**. W oknie dialogowym **Nowy projekt** w węźle **.NET Core** wybierz szablon **Biblioteka .NET Standard** . Spowoduje to utworzenie biblioteki .NET Standard, która jest przeznaczona dla platformy .NET Core, a także innych implementacji platformy .NET, które obsługują wersję 2,0 [.NET Standard](../../standard/net-standard.md). Wybierz pozycję **dalej**.
 
-   ![Visual Studio for Mac New project dialog](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project.png)
+   ![Okno dialogowe Visual Studio dla komputerów Mac nowego projektu](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project.png)
 
-1. Name the project "TextUtils" (a short name for "Text Utilities") and the solution "WordCounter". Leave **Create a project directory within the solution directory** checked. Select **Create**.
+1. Nadaj projektowi nazwę "textnarzędzis" (krótka nazwa "programów tekstowych") i rozwiązanie "WordCounter". Pozostaw pole wyboru **Utwórz katalog projektu w katalogu rozwiązania** . Wybierz pozycję **Utwórz**.
 
-   ![Visual Studio for Mac New project dialog options](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-options.png)
+   ![Opcje okna dialogowego Visual Studio dla komputerów Mac nowego projektu](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-options.png)
 
-1. In the **Solution** sidebar, expand the `TextUtils` node to reveal the class file provided by the template, *Class1.cs*. Right-click the file, select **Rename** from the context menu, and rename the file to *WordCount.cs*. Open the file and replace the contents with the following code:
+1. Na pasku bocznym **rozwiązania** rozwiń węzeł `TextUtils`, aby odsłonić plik klasy dostarczony przez szablon, *Class1.cs*. Kliknij plik prawym przyciskiem myszy, wybierz polecenie **Zmień nazwę** z menu kontekstowego, a następnie zmień nazwę pliku na *WORDCOUNT.cs*. Otwórz plik i Zastąp jego zawartość następującym kodem:
 
    [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils/WordCount.cs)]
 
-1. Save the file by using any of three different methods: use the keyboard shortcut <kbd>&#8984;</kbd>+<kbd>s</kbd>, select **File** > **Save** from the menu, or right-click on the file's tab and select **Save** from the contextual menu. The following image shows the IDE window:
+1. Zapisz plik przy użyciu jednej z trzech różnych metod <kbd>&#8984;</kbd> : Użyj skrótu klawiaturowego+<kbd>s</kbd>, zaznacz opcję **plik** > **Zapisz** z menu lub kliknij prawym przyciskiem myszy na karcie pliku i wybierz polecenie **Zapisz** z menu kontekstowego. Na poniższej ilustracji przedstawiono okno środowiska IDE:
 
-   ![Visual Studio for Mac IDE window with class library file and method](./media/using-on-mac-vs-full-solution/visual-studio-mac-editor.png)
+   ![Visual Studio dla komputerów Mac okno środowiska IDE z plikiem biblioteki klas i metodą](./media/using-on-mac-vs-full-solution/visual-studio-mac-editor.png)
 
-1. Select **Errors** in the margin at the bottom of the IDE window to open the **Errors** panel. Select the **Build Output** button.
+1. Wybierz pozycję **Błędy** na marginesie u dołu okna IDE, aby otworzyć panel **Błędy** . Wybierz przycisk **kompilacja danych wyjściowych** .
 
-   ![Bottom margin of the Visual Studio Mac IDE showing the Errors button](./media/using-on-mac-vs-full-solution/visual-studio-mac-error-button.png)
+   ![Dolny margines środowiska IDE programu Visual Studio Mac przedstawiającego przycisk błędy](./media/using-on-mac-vs-full-solution/visual-studio-mac-error-button.png)
 
-1. Select **Build** > **Build All** from the menu.
+1. Wybierz kolejno opcje **kompiluj** > **Kompiluj wszystko** z menu.
 
-   The solution builds. The build output panel shows that the build is successful.
+   Rozwiązanie kompiluje. Panel dane wyjściowe kompilacji pokazuje, że kompilacja zakończyła się pomyślnie.
 
-   ![Visual Studio Mac Build output pane of the Errors panel with Build successful message](./media/using-on-mac-vs-full-solution/visual-studio-mac-build-panel.png)
+   ![Okienko danych wyjściowych kompilacji programu Visual Studio dla komputerów Mac w panelu Błędy z komunikatem Kompilacja zakończona pomyślnie](./media/using-on-mac-vs-full-solution/visual-studio-mac-build-panel.png)
 
-## <a name="creating-a-test-project"></a>Creating a test project
+## <a name="creating-a-test-project"></a>Tworzenie projektu testowego
 
-Unit tests provide automated software testing during your development and publishing. The testing framework that you use in this tutorial is [xUnit (version 2.2.0 or later)](https://xunit.github.io/), which is installed automatically when the xUnit test project is added to the solution in the following steps:
+Testy jednostkowe zapewniają zautomatyzowane testowanie oprogramowania podczas opracowywania i publikowania. Platforma testowa używana w tym samouczku to [xUnit (wersja 2.2.0 lub nowsza)](https://xunit.github.io/), która jest instalowana automatycznie po dodaniu projektu testowego xUnit do rozwiązania w następujących krokach:
 
-1. In the **Solution** sidebar, right-click the `WordCounter` solution and select **Add** > **Add New Project**.
+1. Na pasku bocznym **rozwiązania** kliknij prawym przyciskiem myszy rozwiązanie `WordCounter` i wybierz polecenie **Dodaj** > **Dodaj nowy projekt**.
 
-1. In the **New Project** dialog, select **Tests** from the **.NET Core** node. Select the **xUnit Test Project** followed by **Next**.
+1. W oknie dialogowym **Nowy projekt** wybierz pozycję **testy** z węzła **.NET Core** . Wybierz **projekt testu xUnit** , a następnie kliknij przycisk **dalej**.
 
-   ![Visual Studio Mac New Project dialog creating xUnit test project](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-project.png)
+   ![Tworzenie projektu testu xUnit w oknie dialogowym programu Visual Studio Mac New Project](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-project.png)
 
-1. Name the new project "TestLibrary" and select **Create**.
+1. Nadaj nowemu projektowi nazwę "TestLibrary" i wybierz pozycję **Utwórz**.
 
-   ![Visual Studio Mac New Project dialog providing project name](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-name.png)
+   ![Okno dialogowe nowego projektu programu Visual Studio dla komputerów Mac z nazwą projektu](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-name.png)
 
-1. In order for the test library to work with the `WordCount` class, add a reference to the `TextUtils` project. In the **Solution** sidebar, right-click **Dependencies** under **TestLibrary**. Select **Edit References** from the context menu.
+1. Aby biblioteka testowa działała z klasą `WordCount`, Dodaj odwołanie do projektu `TextUtils`. Na pasku bocznym **rozwiązania** kliknij prawym przyciskiem myszy pozycję **zależności** w obszarze **TestLibrary**. Wybierz pozycję **Edytuj odwołania** z menu kontekstowego.
 
-1. In the **Edit References** dialog, select the **TextUtils** project on the **Projects** tab. Select **OK**.
+1. W oknie dialogowym **Edytowanie odwołań** **Wybierz projekt na karcie** **projekty** . Wybierz **przycisk OK**.
 
-   ![Visual Studio Mac Edit References dialog](./media/using-on-mac-vs-full-solution/visual-studio-mac-edit-references.png)
+   ![Okno dialogowe edycji odwołań dla programu Visual Studio Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-edit-references.png)
 
-1. In the **TestLibrary** project, rename the *UnitTest1.cs* file to *TextUtilsTests.cs*.
+1. W projekcie **TestLibrary** Zmień nazwę pliku *UnitTest1.cs* na *TextUtilsTests.cs*.
 
-1. Open the file and replace the code with the following:
+1. Otwórz plik i zastąp go następującym kodem:
 
    ```csharp
    using Xunit;
@@ -103,33 +103,33 @@ Unit tests provide automated software testing during your development and publis
    }
    ```
 
-   The following image shows the IDE with the unit test code in place. Pay attention to the `Assert.NotEqual` statement.
+   Na poniższej ilustracji przedstawiono środowisko IDE z kodem testu jednostkowego. Zwróć uwagę na `Assert.NotEqual` instrukcji.
 
-   ![Visual Studio for Mac Initial unit test in the IDE main window](./media/using-on-mac-vs-full-solution/visual-studio-mac-assert-test.png)
+   ![Visual Studio dla komputerów Mac początkowy test jednostkowy w oknie głównym IDE](./media/using-on-mac-vs-full-solution/visual-studio-mac-assert-test.png)
 
-   It's important to make a new test fail once to confirm its testing logic is correct. The method passes in the name "Jack" (uppercase) and a string with "Jack" and "jack" (uppercase and lowercase). If the `GetWordCount` method is working properly, it returns a count of two instances of the search word. In order to fail this test on purpose, you first implement the test asserting that two instances of the search word "Jack" aren't returned by the `GetWordCount` method. Continue to the next step to fail the test on purpose.
+   Ważne jest, aby nowy test był zakończony niepowodzeniem, aby potwierdzić, że logika testowania jest poprawna. Metoda przekazuje nazwę "Jack" (wielkie litery) i ciąg z "Jack" i "Jack" (wielkie i małe litery). Jeśli metoda `GetWordCount` działa prawidłowo, zwraca liczbę dwóch wystąpień szukanego wyrazu. Aby ten test mógł zakończyć się niepowodzeniem, należy najpierw zaimplementować test potwierdzający, że dwa wystąpienia wyrazu wyszukiwania "Jack" nie są zwracane przez metodę `GetWordCount`. Przejdź do następnego kroku, aby zakończyć test w celu przeprowadzenia testu.
 
-1. Open the **Unit Tests** panel on the right side of the screen.
+1. Otwórz panel **testy jednostkowe** po prawej stronie ekranu.
 
-   ![Visual Studio for Mac Unit Tests panel](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-panel.png)
+   ![Panel testów jednostkowych Visual Studio dla komputerów Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-panel.png)
 
-1. Click the **Dock** icon to keep the panel open.
+1. Kliknij ikonę **dokowania** , aby pozostawić otwarty panel.
 
-   ![Visual Studio for Mac Unit Tests panel dock icon](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-dock-icon.png)
+   ![Ikona dokowania panelu testy jednostkowe Visual Studio dla komputerów Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-dock-icon.png)
 
-1. Click the **Run All** button.
+1. Kliknij przycisk **Uruchom wszystko** .
 
-   The test fails, which is the correct result. The test method asserts that two instances of the `inputString`, "Jack," aren't returned from the string "Jack jack" provided to the `GetWordCount` method. Since word casing was factored out in the `GetWordCount` method, two instances are returned. The assertion that 2 *is not equal to* 2 fails. This is the correct outcome, and the logic of our test is good.
+   Test zakończy się niepowodzeniem, co jest prawidłowym wynikiem. Metoda testowa potwierdza, że dwa wystąpienia `inputString`"wtyczka" nie są zwracane z ciągu "gniazdko gniazdko" dostarczonego do metody `GetWordCount`. Ponieważ wielkość liter wyrazów została zainicjowana w metodzie `GetWordCount`, zwracane są dwa wystąpienia. Potwierdzenie, że 2 *nie jest równe* 2, kończy się niepowodzeniem. Jest to prawidłowy wynik, a logika naszego testu jest dobra.
 
-   ![Visual Studio for Mac test failure display](./media/using-on-mac-vs-full-solution/visual-studio-for-mac-unit-test-failure.png)
+   ![Visual Studio dla komputerów Mac wyświetlania niepowodzeń testów](./media/using-on-mac-vs-full-solution/visual-studio-for-mac-unit-test-failure.png)
 
-1. Modify the `IgnoreCasing` test method by changing `Assert.NotEqual` to `Assert.Equal`. Save the file by using the keyboard shortcut <kbd>&#8984;</kbd>+<kbd>s</kbd>, **File** > **Save** from the menu, or right-clicking on the file's tab and selecting **Save** from the context menu.
+1. Zmodyfikuj metodę testową `IgnoreCasing`, zmieniając `Assert.NotEqual` do `Assert.Equal`. Zapisz plik przy <kbd>&#8984;</kbd> użyciu skrótu klawiaturowego+<kbd>s</kbd>, **plik** > **Zapisz** z menu lub kliknij prawym przyciskiem myszy kartę pliku i wybierz polecenie **Zapisz** z menu kontekstowego.
 
-   You expect that the `searchWord` "Jack" returns two instances with `inputString` "Jack jack" passed into `GetWordCount`. Run the test again by clicking the **Run Tests** button in the **Unit Tests** panel or the **Rerun Tests** button in the **Test Results** panel at the bottom of the screen. The test passes. There are two instances of "Jack" in the string "Jack jack" (ignoring casing), and the test assertion is `true`.
+   Oczekuje się, że `searchWord` "wtyczka" zwróci dwa wystąpienia z `inputString` "gniazdko gniazdko" przesłane do `GetWordCount`. Uruchom test ponownie, klikając przycisk **Uruchom testy** w panelu **testy jednostkowe** lub przycisk **uruchom testy ponownie** w panelu **wyniki testów** w dolnej części ekranu. Test zakończy się pomyślnie. Istnieją dwa wystąpienia "Jack" w ciągu "wtyczka gniazda" (ignorowanie wielkości liter), a potwierdzenie testu jest `true`.
 
-   ![Visual Studio for Mac test pass display](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-pass.png)
+   ![Visual Studio dla komputerów Mac wyświetlania przebiegu testu](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-pass.png)
 
-1. Testing individual return values with a `Fact` is only the beginning of what you can do with unit testing. Another powerful technique allows you to test several values at once using a `Theory`. Add the following method to your `TextUtils_GetWordCountShould` class. You have two methods in the class after you add this method:
+1. Testowanie pojedynczych wartości zwracanych za pomocą `Fact` jest tylko początkiem czynności, które można wykonać za pomocą testów jednostkowych. Inna zaawansowana technika umożliwia przetestowanie kilku wartości jednocześnie przy użyciu `Theory`. Dodaj następującą metodę do klasy `TextUtils_GetWordCountShould`. Po dodaniu tej metody masz dwie metody klasy:
 
    ```csharp
    [Theory]
@@ -145,52 +145,52 @@ Unit tests provide automated software testing during your development and publis
    }
    ```
 
-   The `CountInstancesCorrectly` checks that the `GetWordCount` method counts correctly. The `InlineData` provides a count, a search word, and an input string to check. The test method runs once for each line of data. Note once again that you're asserting a failure first by using `Assert.NotEqual`, even when you know that the counts in the data are correct and that the values match the counts returned by the `GetWordCount` method. Performing the step of failing the test on purpose might seem like a waste of time at first, but checking the logic of the test by failing it first is an important check on the logic of your tests. When you come across a test method that passes when you expect it to fail, you've found a bug in the logic of the test. It's worth the effort to take this step every time you create a test method.
+   `CountInstancesCorrectly` sprawdza, czy metoda `GetWordCount` liczy się poprawnie. `InlineData` zawiera liczbę, szukany wyraz i ciąg wejściowy do sprawdzenia. Metoda testowa jest uruchamiana jednokrotnie dla każdego wiersza danych. Należy pamiętać, że po raz pierwszy zakończyło się niepowodzeniem przy użyciu `Assert.NotEqual`, nawet jeśli wiesz, że liczby w danych są poprawne i że wartości są zgodne z liczbą zwracaną przez metodę `GetWordCount`. Wykonanie kroku niepowodzenia testu w celu może pozornie wyglądać jak marnowanie czasu, ale sprawdzenie logiki testów przez jego niepowodzenie najpierw jest ważnym sprawdzaniem logiki testów. Gdy powrócisz przez metodę testową, która kończy się niepowodzeniem, w logice testu znaleziono usterkę. Warto wykonać ten krok przy każdym tworzeniu metody testowej.
 
-1. Save the file and run the tests again. The casing test passes but the three count tests fail. This is exactly what you expect to happen.
+1. Zapisz plik i ponownie uruchom testy. Test wielkości liter kończy się, ale trzy testy Count kończą się niepowodzeniem. Jest to dokładnie to, czego oczekujesz.
 
-   ![Visual Studio for Mac expected test failure](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-failure.png)
+   ![Visual Studio dla komputerów Mac oczekiwany błąd testu](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-failure.png)
 
-1. Modify the `CountInstancesCorrectly` test method by changing `Assert.NotEqual` to `Assert.Equal`. Zapisz plik. Run the tests again. All tests pass.
+1. Zmodyfikuj metodę testową `CountInstancesCorrectly`, zmieniając `Assert.NotEqual` do `Assert.Equal`. Zapisz plik. Uruchom testy ponownie. Wszystkie testy zostały zakończone pomyślnie.
 
-   ![Visual Studio for Mac expected test pass](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-pass.png)
+   ![Visual Studio dla komputerów Mac oczekiwanego przebiegu testu](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-pass.png)
 
-## <a name="adding-a-console-app"></a>Adding a console app
+## <a name="adding-a-console-app"></a>Dodawanie aplikacji konsolowej
 
-1. In the **Solution** sidebar, right-click the `WordCounter` solution. Add a new **Console Application** project by selecting the template from the **.NET Core** > **App** templates. Select **Next**. Name the project **WordCounterApp**. Select **Create** to create the project in the solution.
+1. Na pasku bocznym **rozwiązania** kliknij prawym przyciskiem myszy rozwiązanie `WordCounter`. Dodaj nowy projekt **aplikacji konsolowej** , wybierając szablon z szablonów aplikacji **.NET Core** >  . Wybierz pozycję **dalej**. Nazwij projekt **WordCounterApp**. Wybierz pozycję **Utwórz** , aby utworzyć projekt w rozwiązaniu.
 
-1. In the **Solutions** sidebar, right-click the **Dependencies** node of the new **WordCounterApp** project. In the **Edit References** dialog, check **TextUtils** and select **OK**.
+1. Na pasku bocznym **rozwiązania** kliknij prawym przyciskiem myszy węzeł **zależności** nowego projektu **WordCounterApp** . W oknie dialogowym **Edytowanie odwołań** **zaznacz pole wyboru,** a następnie wybierz pozycję **OK**.
 
-1. Open the *Program.cs* file. Replace the code with the following:
+1. Otwórz plik *program.cs* . Zastąp kod następującym:
 
    [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
 
-1. To run the app in a console window instead of the IDE, right-click the `WordCounterApp` project, select **Options**, and open the **Default** node under **Configurations**. Check the box for **Run on external console**. Leave the **Pause console output** option checked. This setting causes the app to spawn in a console window so that you can type input for the `Console.ReadLine` statements. If you leave the app to run in the IDE, you can only see the output of `Console.WriteLine` statements. `Console.ReadLine` statements do not work in the IDE's **Application Output** panel.
+1. Aby uruchomić aplikację w oknie konsoli zamiast IDE, kliknij prawym przyciskiem myszy projekt `WordCounterApp`, wybierz pozycję **Opcje**, a następnie otwórz węzeł **domyślny** w obszarze **konfiguracje**. Zaznacz pole wyboru **Uruchom w konsoli zewnętrznej**. Pozostaw zaznaczoną opcję **Wstrzymaj wyjście konsoli** . To ustawienie powoduje, że aplikacja będzie duplikowana w oknie konsoli, aby można było wpisać dane wejściowe dla instrukcji `Console.ReadLine`. Jeśli opuścisz aplikację do uruchamiania w środowisku IDE, możesz zobaczyć tylko dane wyjściowe instrukcji `Console.WriteLine`. instrukcje `Console.ReadLine` nie działają w panelu **wyjście aplikacji** IDE.
 
-   ![Visual Studio for Mac project options window](./media/using-on-mac-vs-full-solution/visual-studio-mac-project-options.png)
+   ![Okno opcji projektu Visual Studio dla komputerów Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-project-options.png)
 
-1. Because the current version of Visual Studio for Mac cannot run the tests when the solution is run, you run the console app directly. Right-click on the `WordCounterApp` project and select **Run item** from the context menu. If you attempt to run the app with the Play button, the test runner and app fail to run. For more information on the status of the work on this issue, see [xunit/xamarinstudio.xunit (#60)](https://github.com/xunit/xamarinstudio.xunit/issues/60). When you run the app, provide values for the search word and input string at the prompts in the console window. The app indicates the number of times the search word appears in the string.
+1. Ponieważ bieżąca wersja Visual Studio dla komputerów Mac nie może uruchomić testów po uruchomieniu rozwiązania, należy uruchomić aplikację konsolową bezpośrednio. Kliknij prawym przyciskiem myszy projekt `WordCounterApp` i wybierz polecenie **Uruchom element** z menu kontekstowego. Jeśli spróbujesz uruchomić aplikację przy użyciu przycisku Odtwórz, moduł uruchamiający testy i aplikacja nie powiodą się. Aby uzyskać więcej informacji na temat stanu pracy dotyczącej tego problemu, zobacz [xUnit/xamarinstudio. xUnit (#60)](https://github.com/xunit/xamarinstudio.xunit/issues/60). Po uruchomieniu aplikacji podaj wartości dla wyrazu wyszukiwania i ciąg wejściowy na monitach w oknie konsoli. Aplikacja wskazuje, ile razy słowo wyszukiwania ma być wyświetlane w ciągu.
 
-   ![Visual Studio for Mac console window showing your app running](./media/using-on-mac-vs-full-solution/visual-studio-mac-console-window.png)
+   ![Visual Studio dla komputerów Mac okno konsoli z uruchomioną aplikacją](./media/using-on-mac-vs-full-solution/visual-studio-mac-console-window.png)
 
-1. The last feature to explore is debugging with Visual Studio for Mac. Set a breakpoint on the `Console.WriteLine` statement: Select in the left margin of line 23, and you see a red circle appear next to the line of code. Alternatively, select anywhere on the line of code and select **Run** > **Toggle Breakpoint** from the menu.
+1. Ostatnią funkcją eksplorowania jest debugowanie za pomocą Visual Studio dla komputerów Mac. Ustaw punkt przerwania w instrukcji `Console.WriteLine`: wybierz pozycję na lewym marginesie linii 23. zobaczysz czerwony okrąg obok wiersza kodu. Alternatywnie możesz wybrać dowolne miejsce w wierszu kodu i wybrać polecenie **uruchom** > **Przełącz punkt przerwania** z menu.
 
-   ![Visual Studio for Mac breakpoint set](./media/using-on-mac-vs-full-solution/visual-studio-mac-breakpoint.png)
+   ![Visual Studio dla komputerów Mac ustawiony punkt przerwania](./media/using-on-mac-vs-full-solution/visual-studio-mac-breakpoint.png)
 
-1. Right-click the `WordCounterApp` project. Select **Start Debugging item** from the context menu. When the app runs, enter the search word "cat" and "The dog chased the cat, but the cat escaped." for the string to search. When the `Console.WriteLine` statement is reached, program execution halts before the statement is executed. In the **Locals** tab, you can see the `searchWord`, `inputString`, `wordCount`, and `pluralChar` values.
+1. Kliknij prawym przyciskiem myszy projekt `WordCounterApp`. Wybierz pozycję **Rozpocznij debugowanie elementu** z menu kontekstowego. Po uruchomieniu aplikacji wprowadź wyraz wyszukiwania "Cat" i "piesed kot, ale kot". ciąg do wyszukania. Po osiągnięciu instrukcji `Console.WriteLine` wykonywanie programu zostaje zatrzymane przed wykonaniem instrukcji. Na karcie zmienne **lokalne** można zobaczyć wartości `searchWord`, `inputString`, `wordCount`i `pluralChar`.
 
-   ![Visual Studio for Mac debugger program execution stopped](./media/using-on-mac-vs-full-solution/visual-studio-mac-debugger.png)
+   ![Wykonywanie programu debugera Visual Studio dla komputerów Mac zostało zatrzymane](./media/using-on-mac-vs-full-solution/visual-studio-mac-debugger.png)
 
-1. In the **Immediate** pane, type "wordCount = 999;" and press Enter. This assigns a nonsense value of 999 to the `wordCount` variable showing that you can replace variable values while debugging.
+1. W okienku **bezpośrednim** wpisz "wordCount = 999;" i naciśnij klawisz ENTER. Spowoduje to przypisanie wartości niewykrywanej 999 do zmiennej `wordCount`, co oznacza, że można zamienić wartości zmiennych podczas debugowania.
 
-   ![Visual Studio for Mac changing values in the immediate window](./media/using-on-mac-vs-full-solution/visual-studio-mac-immediate-window.png)
+   ![Visual Studio dla komputerów Mac zmienić wartości w oknie bezpośrednim](./media/using-on-mac-vs-full-solution/visual-studio-mac-immediate-window.png)
 
-1. In the toolbar, click the *continue* arrow. Look at the output in the console window. It reports the incorrect value of 999 that you set when you were debugging the app.
+1. Na pasku narzędzi kliknij strzałkę *Kontynuuj* . Spójrz na dane wyjściowe w oknie konsoli. Raportuje niepoprawną wartość 999 ustawioną podczas debugowania aplikacji.
 
-   ![Visual Studio for Mac continue button in the toolbar](./media/using-on-mac-vs-full-solution/visual-studio-mac-toolbar.png)
+   ![Przycisk Visual Studio dla komputerów Mac Kontynuuj na pasku narzędzi](./media/using-on-mac-vs-full-solution/visual-studio-mac-toolbar.png)
 
-   ![Visual Studio for Mac console window output](./media/using-on-mac-vs-full-solution/visual-studio-mac-output.png)
+   ![Dane wyjściowe okna konsoli Visual Studio dla komputerów Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-output.png)
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Visual Studio 2017 for Mac Release Notes](/visualstudio/releasenotes/vs2017-mac-relnotes)
+- [Informacje o wersji programu Visual Studio 2017 dla komputerów Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)

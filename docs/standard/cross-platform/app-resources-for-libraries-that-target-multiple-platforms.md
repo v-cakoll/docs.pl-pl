@@ -22,38 +22,38 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204737"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Zasoby aplikacji dla bibliotek przeznaczonych do wielu platform
-You can use the .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) project type to ensure that resources in your class libraries can be accessed from multiple platforms. This project type is available in Visual Studio 2012 and targets the portable subset of the .NET Framework class library. Using  a Portable Class Library ensures that your library can be accessed from desktop apps, Silverlight apps, Windows Phone apps, and Windows 8.x Store apps.
+Można użyć typu projektu [Biblioteka klas przenośnych](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) .NET Framework, aby upewnić się, że zasoby w bibliotekach klas są dostępne z wielu platform. Ten typ projektu jest dostępny w programie Visual Studio 2012 i jest przeznaczony dla przenośnego podzestawu biblioteki klas .NET Framework. Za pomocą przenośnej biblioteki klas zapewnia dostęp do biblioteki z aplikacji klasycznych, aplikacji Silverlight, aplikacji Windows Phone i aplikacji ze sklepu Windows 8. x.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
- The Portable Class Library project makes only a very limited subset of the types in the <xref:System.Resources> namespace available to your application, but it does allow you to use the <xref:System.Resources.ResourceManager> class to retrieve resources. However, if you are creating an app by using Visual Studio, you should use the strongly typed wrapper created by Visual Studio instead of using the <xref:System.Resources.ResourceManager> class directly.
+ Projekt biblioteki klas przenośnych sprawia, że tylko bardzo ograniczony podzbiór typów w przestrzeni nazw <xref:System.Resources> dostępne dla aplikacji, ale umożliwia korzystanie z klasy <xref:System.Resources.ResourceManager> do pobierania zasobów. Jeśli jednak tworzysz aplikację przy użyciu programu Visual Studio, należy użyć otoki silnie wpisanej utworzonej przez program Visual Studio, a nie bezpośrednio używać klasy <xref:System.Resources.ResourceManager>.
 
- To create a strongly typed wrapper in Visual Studio, set the main resource file's **Access Modifier** in the Visual Studio Resource Designer to **Public**. Spowoduje to utworzenie pliku [NazwaPlikuZasobów].designer.cs lub [NazwaPlikuZasobów].designer.vb zawierającego silnie typizowaną otokę ResourceManager. For more information about using a strongly typed resource wrapper, see the "Generating a Strongly Typed Resource Class" section in the [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) topic.
+ Aby utworzyć silnie wpisaną otokę w programie Visual Studio, ustaw **modyfikator dostępu** głównego pliku zasobów w projektancie zasobów programu Visual Studio na **publiczny**. Spowoduje to utworzenie pliku [NazwaPlikuZasobów].designer.cs lub [NazwaPlikuZasobów].designer.vb zawierającego silnie typizowaną otokę ResourceManager. Aby uzyskać więcej informacji o używaniu otoki zasobów o jednoznacznie określonym typie, zobacz sekcję "Generowanie klasy zasobów o jednoznacznie określonym typie" w temacie [Resgen. exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) .
 
-## <a name="resource-manager-in-the-portable-class-library"></a>Resource Manager in the Portable Class Library
- In a Portable Class Library project, all access to resources is handled by the <xref:System.Resources.ResourceManager> class. Because types in the <xref:System.Resources> namespace, such as <xref:System.Resources.ResourceReader> and <xref:System.Resources.ResourceSet>, are not accessible from a Portable Class Library project, they cannot be used to access resources.
+## <a name="resource-manager-in-the-portable-class-library"></a>Menedżer zasobów w bibliotece klas przenośnych
+ W projekcie biblioteki klas przenośnych cały dostęp do zasobów jest obsługiwany przez klasę <xref:System.Resources.ResourceManager>. Ponieważ typy w przestrzeni nazw <xref:System.Resources>, takie jak <xref:System.Resources.ResourceReader> i <xref:System.Resources.ResourceSet>, nie są dostępne z poziomu projektu biblioteki klas przenośnych, nie mogą być używane do uzyskiwania dostępu do zasobów.
 
- The Portable Class Library project includes the four <xref:System.Resources.ResourceManager> members listed in the following table. These constructors and methods enable you to instantiate a <xref:System.Resources.ResourceManager> object and retrieve string resources.
+ Projekt biblioteki klas przenośnych zawiera cztery składowe <xref:System.Resources.ResourceManager> wymienione w poniższej tabeli. Te konstruktory i metody umożliwiają utworzenie wystąpienia obiektu <xref:System.Resources.ResourceManager> i pobranie zasobów ciągu.
 
-|`ResourceManager` member|Opis|
+|`ResourceManager` składową|Opis|
 |------------------------------|-----------------|
-|<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Creates a <xref:System.Resources.ResourceManager> instance to access the named resource file found in the specified assembly.|
-|<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Creates a <xref:System.Resources.ResourceManager> instance that corresponds to the specified type.|
+|<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Tworzy wystąpienie <xref:System.Resources.ResourceManager>, aby uzyskać dostęp do nazwanego pliku zasobów znalezionego w określonym zestawie.|
+|<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Tworzy wystąpienie <xref:System.Resources.ResourceManager> odpowiadające określonemu typowi.|
 |<xref:System.Resources.ResourceManager.GetString%28System.String%29>|Pobiera nazwany zasób dla bieżącej kultury.|
 |<xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>|Pobiera nazwany zasób należący do określonej kultury.|
 
- The exclusion of other <xref:System.Resources.ResourceManager> members from the Portable Class Library means that serialized objects, non-string data, and images cannot be retrieved from a resource file. To use resources from a Portable Class Library, you should store all  object data in string form. For example, you can store numeric values in a resource file by converting them to strings, and you can retrieve them and then convert them back to numbers by using the numeric data type's `Parse` or `TryParse` method. You can convert images or other binary data to a string representation by calling the <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> method, and restore them to a byte array by calling the <xref:System.Convert.FromBase64String%2A?displayProperty=nameWithType> method.
+ Wykluczenie innych elementów członkowskich <xref:System.Resources.ResourceManager> z przenośnej biblioteki klas oznacza, że nie można pobrać z pliku zasobów obiektów serializowanych, danych niebędących ciągami ani obrazów. Aby używać zasobów z przenośnej biblioteki klas, należy przechowywać wszystkie dane obiektów w postaci ciągów. Na przykład można przechowywać wartości numeryczne w pliku zasobów, konwertując je na ciągi i można je pobrać, a następnie przekonwertować z powrotem na liczby przy użyciu metody `Parse` lub `TryParse` typu danych liczbowych. Możesz konwertować obrazy lub inne dane binarne na reprezentację ciągu, wywołując metodę <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> i przywracając je do tablicy bajtów, wywołując metodę <xref:System.Convert.FromBase64String%2A?displayProperty=nameWithType>.
 
-## <a name="the-portable-class-library-and-windows-store-apps"></a>The Portable Class Library and Windows Store Apps
- Portable Class Library projects store resources in .resx files, which are then compiled into .resources files and embedded in the main assembly or in satellite assemblies at compile time. Windows 8.x Store apps, on the other hand, require resources to be stored in .resw files, which are then compiled into a single package resource index (PRI) file. However, despite the incompatible file formats, your Portable Class Library will work in a Windows 8.x Store app.
+## <a name="the-portable-class-library-and-windows-store-apps"></a>Przenośna biblioteka klas i aplikacje ze sklepu Windows
+ Przenośne biblioteki klas są przechowywane w plikach resx, które następnie są kompilowane do plików. resources i osadzone w zestawie głównym lub w zestawach satelickich w czasie kompilacji. Z drugiej strony aplikacje ze sklepu Windows 8. x wymagają, aby zasoby były przechowywane w plikach. resw, które następnie są kompilowane w jednym pliku indeksu zasobów pakietu (PRI). Jednak pomimo niezgodnych formatów plików Biblioteka klas przenośnych będzie działała w aplikacji ze sklepu Windows 8. x.
 
- To consume your class library from a Windows 8.x Store app, add a reference to it in your Windows Store app project. Visual Studio will transparently extract the resources from your assembly into a .resw file and use it to generate a PRI file from which the Windows Runtime can extract resources. At run time, the Windows Runtime executes the code in your Portable Class Library, but it retrieves your Portable Class Library's resources from the PRI file.
+ Aby korzystać z biblioteki klas z aplikacji ze sklepu Windows 8. x, Dodaj odwołanie do niej w projekcie aplikacji ze sklepu Windows. Program Visual Studio będzie w sposób przezroczysty wyodrębniał zasoby z zestawu do pliku. resw i użyje go do wygenerowania pliku PRI, z którego środowisko wykonawcze systemu Windows mogą wyodrębnić zasoby. W czasie wykonywania środowisko wykonawcze systemu Windows wykonuje kod w przenośnej bibliotece klas, ale pobiera zasoby biblioteki klas przenośnych z pliku PRI.
 
- If your Portable Class Library project includes localized resources, you use the hub-and-spoke model to deploy them just as you would for a library in a desktop app. To consume your main resource file and any localized resource files in your Windows 8.x Store app, you add a reference to the main assembly. W czasie kompilacji program Visual Studio wyodrębnia zasoby z głównego pliku zasobów i plików zasobów zlokalizowanych do oddzielnych plików resw. It then compiles the .resw files into a single PRI file that the Windows Runtime accesses at run time.
+ Jeśli projekt biblioteki klas przenośnych zawiera zlokalizowane zasoby, należy użyć modelu Hub i szprych do wdrożenia ich w taki sam sposób jak w przypadku biblioteki w aplikacji klasycznej. Aby użyć głównego pliku zasobów i wszystkich zlokalizowanych plików zasobów w aplikacji ze sklepu Windows 8. x, Dodaj odwołanie do głównego zestawu. W czasie kompilacji program Visual Studio wyodrębnia zasoby z głównego pliku zasobów i plików zasobów zlokalizowanych do oddzielnych plików resw. Następnie kompiluje pliki. resw do pojedynczego pliku PRI, do którego środowisko wykonawcze systemu Windows uzyskuje dostęp w czasie wykonywania.
 
 <a name="NonLoc"></a>
-## <a name="example-non-localized-portable-class-library"></a>Example: Non-Localized Portable Class Library
- The following simple, non-localized Portable Class Library example uses resources to store the names of columns and to determine the number of characters to reserve for tabular data. W przykładzie do przechowywania zasobów ciągów wymienionych w poniższej tabeli użyto pliku o nazwie LibResources.resx.
+## <a name="example-non-localized-portable-class-library"></a>Przykład: Przenośna biblioteka klas niezlokalizowanych
+ Poniższy prosty, Niezlokalizowany, przenośny Biblioteka klas używa zasobów do przechowywania nazw kolumn i określania liczby znaków do zarezerwowania dla danych tabelarycznych. W przykładzie do przechowywania zasobów ciągów wymienionych w poniższej tabeli użyto pliku o nazwie LibResources.resx.
 
 |Nazwa zasobu|Wartość zasobu|
 |-------------------|--------------------|
@@ -67,22 +67,22 @@ You can use the .NET Framework [Portable Class Library](../../../docs/standard/c
 |NameLength|25|
 |Tytuł|Baza danych pracowników|
 
- The following code defines a `UILibrary` class that uses the Resource Manager wrapper named `resources` generated by Visual Studio when the **Access Modifier** for the file is changed to **Public**. Klasa UILibrary analizuje dane ciągu w razie potrzeby. . Note that the class is in the `MyCompany.Employees` namespace.
+ Poniższy kod definiuje klasę `UILibrary`, która używa otoki Menedżer zasobów o nazwie `resources` wygenerowanej przez program Visual Studio, gdy **modyfikator dostępu** dla pliku zostanie zmieniony na **Public**. Klasa UILibrary analizuje dane ciągu w razie potrzeby. . Należy zauważyć, że Klasa znajduje się w przestrzeni nazw `MyCompany.Employees`.
 
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
 
- The following code illustrates how the `UILibrary` class and its resources can be accessed from a console-mode app. It requires a reference to UILibrary.dll to be added to the console app project.
+ Poniższy kod ilustruje sposób, w jaki Klasa `UILibrary` i jej zasoby są dostępne z poziomu aplikacji w trybie konsoli. Wymaga odwołania do UILibrary. dll, które ma zostać dodane do projektu aplikacji konsoli.
 
  [!code-csharp[Conceptual.Resources.Portable#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program.cs#2)]
  [!code-vb[Conceptual.Resources.Portable#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module1.vb#2)]
 
- The following code illustrates how the `UILibrary` class and its resources can be accessed from a Windows 8.x Store app. It requires a reference to UILibrary.dll to be added to the Windows Store app project.
+ Poniższy kod ilustruje sposób, w jaki Klasa `UILibrary` i jej zasoby są dostępne z poziomu aplikacji ze sklepu Windows 8. x. Wymaga odwołania do UILibrary. dll, które ma zostać dodane do projektu aplikacji ze sklepu Windows.
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
-## <a name="example-localized-portable-class-library"></a>Example: Localized Portable Class Library
- The following localized Portable Class Library example includes resources for the French (France) and English (United States) cultures. The English (United States) culture is the app's default culture; its resources are shown in the table in the [previous section](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). Plik zasobów dla kultury Francuski (Francja) o nazwie LibResources.fr-FR.resx składa się z zasobów ciągu wymienionych w poniższej tabeli. The source code for the `UILibrary` class is the same as that shown in the previous section.
+## <a name="example-localized-portable-class-library"></a>Przykład: zlokalizowana Biblioteka klas przenośnych
+ Następujący zlokalizowany przykład biblioteki klas przenośnych zawiera zasoby dla kultur francuski (Francja) i angielskiego (Stany Zjednoczone). Kultura angielska (Stany Zjednoczone) jest kulturą domyślną aplikacji; jego zasoby są wyświetlane w tabeli w [poprzedniej sekcji](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). Plik zasobów dla kultury Francuski (Francja) o nazwie LibResources.fr-FR.resx składa się z zasobów ciągu wymienionych w poniższej tabeli. Kod źródłowy klasy `UILibrary` jest taki sam, jak pokazano w poprzedniej sekcji.
 
 |Nazwa zasobu|Wartość zasobu|
 |-------------------|--------------------|
@@ -94,12 +94,12 @@ You can use the .NET Framework [Portable Class Library](../../../docs/standard/c
 |Nazwa|Nom|
 |Tytuł|Base de données des employés|
 
- The following code illustrates how the `UILibrary` class and its resources can be accessed from a console-mode app. It requires a reference to UILibrary.dll to be added to the console app project.
+ Poniższy kod ilustruje sposób, w jaki Klasa `UILibrary` i jej zasoby są dostępne z poziomu aplikacji w trybie konsoli. Wymaga odwołania do UILibrary. dll, które ma zostać dodane do projektu aplikacji konsoli.
 
  [!code-csharp[Conceptual.Resources.Portable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program2.cs#3)]
  [!code-vb[Conceptual.Resources.Portable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module2.vb#3)]
 
- The following code illustrates how the `UILibrary` class and its resources can be accessed from a Windows 8.x Store app. It requires a reference to UILibrary.dll to be added to the Windows Store app project. It uses the static `ApplicationLanguages.PrimaryLanguageOverride` property to set the app's preferred language to French.
+ Poniższy kod ilustruje sposób, w jaki Klasa `UILibrary` i jej zasoby są dostępne z poziomu aplikacji ze sklepu Windows 8. x. Wymaga odwołania do UILibrary. dll, które ma zostać dodane do projektu aplikacji ze sklepu Windows. Używa właściwości `ApplicationLanguages.PrimaryLanguageOverride` statycznej, aby ustawić preferowany język aplikacji w języku francuskim.
 
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  

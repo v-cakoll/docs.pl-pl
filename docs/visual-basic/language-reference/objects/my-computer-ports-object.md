@@ -13,22 +13,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332012"
 ---
 # <a name="mycomputerports-object"></a>My.Computer.Ports — Obiekt
-Provides a property and a method for accessing the computer's serial ports.  
+Zawiera właściwość i metodę uzyskiwania dostępu do portów szeregowych komputera.  
   
 ## <a name="remarks"></a>Uwagi  
- For information about the methods and properties of the `My.Computer.Ports` object, see <xref:Microsoft.VisualBasic.Devices.Ports>.  
+ Aby uzyskać informacje o metodach i właściwościach obiektu `My.Computer.Ports`, zobacz <xref:Microsoft.VisualBasic.Devices.Ports>.  
   
- For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
+ Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do portów komputera](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
   
 > [!NOTE]
-> You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.  
+> Można również użyć właściwości i metod klasy <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>, aby uzyskać dostęp do portów szeregowych komputera.  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
+ **Przestrzeń nazw:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Ports>  
+ **Klasa:** <xref:Microsoft.VisualBasic.Devices.Ports>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

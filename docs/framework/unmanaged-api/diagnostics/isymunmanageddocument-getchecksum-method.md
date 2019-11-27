@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449202"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum — Metoda
-Gets the checksum.  
+Pobiera sumę kontrolną.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,16 +36,16 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>Parametry  
  `cData`  
- [in] The length of the buffer provided by the `data` parameter  
+ podczas Długość buforu dostarczonego przez parametr `data`  
   
  `pcData`  
- [out] The size and length of the checksum, in bytes.  
+ określoną Rozmiar i długość sumy kontrolnej w bajtach.  
   
  `data`  
- [out] The buffer that receives the checksum.  
+ określoną Bufor, który odbiera sumę kontrolną.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, an error code.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie kod błędu.  
   
 ## <a name="see-also"></a>Zobacz także
 

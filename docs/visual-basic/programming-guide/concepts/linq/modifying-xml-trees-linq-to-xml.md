@@ -9,24 +9,24 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353171"
 ---
-# <a name="modifying-xml-trees-linq-to-xml-visual-basic"></a>Modifying XML Trees (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is an in-memory store for an XML tree. After you load or parse an XML tree from a source, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] lets you modify that tree in place, and then serialize the tree, perhaps saving it to a file or sending it to a remote server.  
+# <a name="modifying-xml-trees-linq-to-xml-visual-basic"></a>Modyfikowanie drzew XML (LINQ to XML) (Visual Basic)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to magazyn w pamięci dla drzewa XML. Po załadowaniu lub przeanalizowaniu drzewa XML ze źródła, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pozwala modyfikować to drzewo w miejscu, a następnie serializować drzewo, być może zapisać je do pliku lub wysłać do zdalnego serwera.  
   
- When you modify a tree in place, you use certain methods, such as <xref:System.Xml.Linq.XContainer.Add%2A>.  
+ W przypadku zmodyfikowania drzewa w miejscu należy użyć niektórych metod, takich jak <xref:System.Xml.Linq.XContainer.Add%2A>.  
   
- However, there is another approach, which is to use functional construction to generate a new tree with a different shape. Depending on the types of changes that you need to make to your XML tree, and depending on the size of the tree, this approach can be more robust and easier to develop. The first topic in this section compares these two approaches.  
+ Istnieje jednak inne podejście, które służy do generowania nowych drzew z innym kształtem. W zależności od typów zmian, które należy wprowadzić w drzewie XML, i w zależności od rozmiaru drzewa takie podejście może być bardziej niezawodne i prostsze. W pierwszym temacie w tej sekcji porównano te dwa podejścia.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[In-Memory XML Tree Modification vs. Functional Construction (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md)|Compares modifying an XML tree in memory to functional construction.|  
-|[Adding Elements, Attributes, and Nodes to an XML Tree (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/adding-elements-attributes-and-nodes-to-an-xml-tree.md)|Provides information about adding elements, attributes, or nodes to an XML tree.|  
-|[Modyfikowanie elementów, atrybutów i węzłów w drzewie XML](../../../../visual-basic/programming-guide/concepts/linq/modifying-elements-attributes-and-nodes-in-an-xml-tree.md)|Provides information about modifying existing elements, attributes, or nodes.|  
-|[Removing Elements, Attributes, and Nodes from an XML Tree (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/removing-elements-attributes-and-nodes-from-an-xml-tree.md)|Provides information about removing elements, attributes, or nodes from the XML tree.|  
-|[Maintaining Name/Value Pairs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/maintaining-name-value-pairs.md)|Describes how to maintain application information that is best kept as name/value pairs, such as configuration information or global settings.|  
-|[How to: Change the Namespace for an Entire XML Tree (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md)|Shows how to move an XML tree from one namespace into another.|  
+|[Modyfikowanie drzewa XML w pamięci a konstrukcja funkcjonalna (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md)|Porównuje modyfikowanie drzewa XML w pamięci z konstrukcją funkcjonalną.|  
+|[Dodawanie elementów, atrybutów i węzłów do drzewa XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/adding-elements-attributes-and-nodes-to-an-xml-tree.md)|Zawiera informacje na temat dodawania elementów, atrybutów lub węzłów do drzewa XML.|  
+|[Modyfikowanie elementów, atrybutów i węzłów w drzewie XML](../../../../visual-basic/programming-guide/concepts/linq/modifying-elements-attributes-and-nodes-in-an-xml-tree.md)|Zawiera informacje o modyfikowaniu istniejących elementów, atrybutów lub węzłów.|  
+|[Usuwanie elementów, atrybutów i węzłów z drzewa XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/removing-elements-attributes-and-nodes-from-an-xml-tree.md)|Zawiera informacje dotyczące usuwania elementów, atrybutów lub węzłów z drzewa XML.|  
+|[Obsługa par nazwa/wartość (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/maintaining-name-value-pairs.md)|Opisuje, jak utrzymywać informacje o aplikacji najlepiej przechowywane jako pary nazwa/wartość, takie jak informacje o konfiguracji lub ustawienia globalne.|  
+|[Instrukcje: zmienianie przestrzeni nazw dla całego drzewa XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md)|Pokazuje, jak przenieść drzewo XML z jednej przestrzeni nazw do innej.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Przewodnik programowania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

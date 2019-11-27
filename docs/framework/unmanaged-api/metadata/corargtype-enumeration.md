@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444364"
 ---
 # <a name="corargtype-enumeration"></a>CorArgType — Wyliczenie
-Contains values that describe the native type of a runtime handle.  
+Zawiera wartości opisujące typ natywny dojścia środowiska uruchomieniowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,11 +45,11 @@ typedef enum CorArgType {
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

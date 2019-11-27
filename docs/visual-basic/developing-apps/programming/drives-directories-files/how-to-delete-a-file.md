@@ -16,49 +16,49 @@ ms.locfileid: "74348777"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>Porady: usuwanie pliku w Visual Basic
 
-The `DeleteFile` method of the `My.Computer.FileSystem` object allows you to delete a file. Among the options it offers are: whether to send the deleted file to the **Recycle Bin**, whether to ask the user to confirm that the file should be deleted, and what to do when the user cancels the operation.  
+Metoda `DeleteFile` obiektu `My.Computer.FileSystem` umożliwia usunięcie pliku. Wśród opcji, które oferuje: czy wysłać usunięty plik do **kosza**, czy należy polecić użytkownikowi potwierdzenie, że plik powinien zostać usunięty, i co należy zrobić, gdy użytkownik anuluje operację.  
   
-### <a name="to-delete-a-text-file"></a>To delete a text file  
+### <a name="to-delete-a-text-file"></a>Aby usunąć plik tekstowy  
   
-- Use the `DeleteFile` method to delete the file. The following code demonstrates how to delete the file named `test.txt`.  
+- Użyj metody `DeleteFile`, aby usunąć plik. Poniższy kod ilustruje sposób usuwania pliku o nazwie `test.txt`.  
   
      [!code-vb[VbVbcnMyFileSystem#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#22)]  
   
-### <a name="to-delete-a-text-file-and-ask-the-user-to-confirm-that-the-file-should-be-deleted"></a>To delete a text file and ask the user to confirm that the file should be deleted  
+### <a name="to-delete-a-text-file-and-ask-the-user-to-confirm-that-the-file-should-be-deleted"></a>Aby usunąć plik tekstowy i polecić użytkownikowi potwierdzenie, że plik powinien zostać usunięty  
   
-- Use the `DeleteFile` method to delete the file, setting `showUI` to `AllDialogs`. The following code demonstrates how to delete the file named `test.txt` and allow the user to confirm that the file should be deleted.  
+- Użyj metody `DeleteFile`, aby usunąć plik, lub ustaw `showUI` do `AllDialogs`. Poniższy kod ilustruje sposób usuwania pliku o nazwie `test.txt` i zezwala użytkownikowi na potwierdzenie, że plik powinien zostać usunięty.  
   
      [!code-vb[VbFileIOMisc#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#9)]  
   
-### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a>To delete a text file and send it to the Recycle Bin  
+### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a>Aby usunąć plik tekstowy i wysłać go do kosza  
   
-- Use the `DeleteFile` method to delete the file, specifying `SendToRecycleBin` for the `recycle` parameter. The following code demonstrates how to delete the file named `test.txt` and send it to the **Recycle Bin**.  
+- Użyj metody `DeleteFile`, aby usunąć plik, określając `SendToRecycleBin` parametru `recycle`. Poniższy kod ilustruje sposób usuwania pliku o nazwie `test.txt` i wysyłania go do **kosza**.  
   
      [!code-vb[VbFileIOMisc#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#10)]  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
+## <a name="robust-programming"></a>Skuteczne programowanie  
 
  Następujące warunki mogą spowodować wyjątek:  
   
-- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).  
+- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (rozpoczyna się od \\\\.\\) (<xref:System.ArgumentException>).  
   
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).  
+- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).  
   
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).  
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
   
-- A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).  
+- Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).  
   
-- The file is in use (<xref:System.IO.IOException>).  
+- Plik jest używany (<xref:System.IO.IOException>).  
   
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).  
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
   
-- The file does not exist (<xref:System.IO.FileNotFoundException>).  
+- Plik nie istnieje (<xref:System.IO.FileNotFoundException>).  
   
-- The user does not have permission to delete the file, or the file is read-only (<xref:System.UnauthorizedAccessException>).  
+- Użytkownik nie ma uprawnień do usunięcia pliku lub plik jest tylko do odczytu (<xref:System.UnauthorizedAccessException>).  
   
-- A partial-trust situation exists in which the user does not have sufficient permissions (<xref:System.Security.SecurityException>).  
+- Istnieje sytuacja częściowej relacji zaufania, w której użytkownik nie ma wystarczających uprawnień (<xref:System.Security.SecurityException>).  
   
-- The user cancelled the operation and `onUserCancel` is set to `ThrowException` (<xref:System.OperationCanceledException>).  
+- Użytkownik anulował operację, a `onUserCancel` jest ustawiona na `ThrowException` (<xref:System.OperationCanceledException>).  
   
 ## <a name="see-also"></a>Zobacz także
 

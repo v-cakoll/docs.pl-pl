@@ -15,70 +15,70 @@ ms.locfileid: "74346783"
 ---
 # <a name="collection-initializers-visual-basic"></a>Inicjatory kolekcji (Visual Basic)
 
-*Collection initializers* provide a shortened syntax that enables you to create a collection and populate it with an initial set of values. Collection initializers are useful when you are creating a collection from a set of known values, for example, a list of menu options or categories, an initial set of numeric values, a static list of strings such as day or month names, or geographic locations such as a list of states that is used for validation.
+*Inicjatory kolekcji* zapewniają skróconą składnię, która umożliwia utworzenie kolekcji i wypełnienie jej początkowym zestawem wartości. Inicjatory kolekcji są przydatne podczas tworzenia kolekcji z zestawu znanych wartości, na przykład listy opcji menu lub kategorii, początkowego zestawu wartości liczbowych, statycznej listy ciągów, takich jak nazwy dni lub miesięcy, lub lokalizacji geograficznych, takich jak Lista Stanów, które są używane na potrzeby walidacji.
 
-For more information about collections, see [Collections](../../../../visual-basic/programming-guide/concepts/collections.md).
+Aby uzyskać więcej informacji na temat kolekcji, zobacz [kolekcje](../../../../visual-basic/programming-guide/concepts/collections.md).
 
-You identify a collection initializer by using the `From` keyword followed by braces (`{}`). This is similar to the array literal syntax that is described in [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md). The following examples show various ways to use collection initializers to create collections.
+Inicjator kolekcji jest identyfikowany za pomocą słowa kluczowego `From`, po którym następuje nawiasy klamrowe (`{}`). Jest to podobne do składni literału tablicowego, która jest opisana w [tablicach](../../../../visual-basic/programming-guide/language-features/arrays/index.md). W poniższych przykładach przedstawiono różne sposoby używania inicjatorów kolekcji do tworzenia kolekcji.
 
 [!code-vb[VbVbalrCollectionInitializers#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#1)]
 
 > [!NOTE]
-> C# also provides collection initializers. C# collection initializers provide the same functionality as Visual Basic collection initializers. For more information about C# collection initializers, see [Object and Collection Initializers](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).
+> C#Program udostępnia także inicjatory kolekcji. C#Inicjatory kolekcji oferują te same funkcje co Visual Basic inicjatorów kolekcji. Aby uzyskać więcej informacji C# na temat inicjatorów kolekcji, zobacz [Inicjatory obiektów i kolekcji](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).
 
 ## <a name="syntax"></a>Składnia
 
-A collection initializer consists of a list of comma-separated values that are enclosed in braces (`{}`), preceded by the `From` keyword, as shown in the following code.
+Inicjator kolekcji składa się z listy wartości rozdzielonych przecinkami, które są ujęte w nawiasy klamrowe (`{}`) poprzedzone słowem kluczowym `From`, jak pokazano w poniższym kodzie.
 
 [!code-vb[VbVbalrCollectionInitializers#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#2)]
 
-When you create a collection, such as a <xref:System.Collections.Generic.List%601> or a <xref:System.Collections.Generic.Dictionary%602>, you must supply the collection type before the collection initializer, as shown in the following code.
+Podczas tworzenia kolekcji, takiej jak <xref:System.Collections.Generic.List%601> lub <xref:System.Collections.Generic.Dictionary%602>, należy podać typ kolekcji przed inicjatorem kolekcji, jak pokazano w poniższym kodzie.
 
 [!code-vb[VbVbalrCollectionInitializers#13](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#13)]
 
 > [!NOTE]
-> You cannot combine both a collection initializer and an object initializer to initialize the same collection object. You can use object initializers to initialize objects in a collection initializer.
+> Nie można połączyć inicjatora kolekcji i inicjatora obiektów w celu zainicjowania tego samego obiektu kolekcji. Inicjatorów obiektów można użyć do zainicjowania obiektów w inicjatorze kolekcji.
 
-## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Creating a Collection by Using a Collection Initializer
+## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Tworzenie kolekcji przy użyciu inicjatora kolekcji
 
-When you create a collection by using a collection initializer, each value that is supplied in the collection initializer is passed to the appropriate `Add` method of the collection. For example, if you create a <xref:System.Collections.Generic.List%601> by using a collection initializer, each string value in the collection initializer is passed to the <xref:System.Collections.Generic.List%601.Add%2A> method. If you want to create a collection by using a collection initializer, the specified type must be valid collection type. Examples of valid collection types include classes that implement the <xref:System.Collections.Generic.IEnumerable%601> interface or inherit the <xref:System.Collections.CollectionBase> class. The specified type must also expose an `Add` method that meets the following criteria.
+Podczas tworzenia kolekcji przy użyciu inicjatora kolekcji każda wartość podana w inicjatorze kolekcji jest przekazywana do odpowiedniej metody `Add` kolekcji. Na przykład jeśli utworzysz <xref:System.Collections.Generic.List%601> przy użyciu inicjatora kolekcji, każda wartość ciągu w inicjatorze kolekcji zostanie przeniesiona do metody <xref:System.Collections.Generic.List%601.Add%2A>. Jeśli chcesz utworzyć kolekcję przy użyciu inicjatora kolekcji, określony typ musi być prawidłowym typem kolekcji. Przykłady prawidłowych typów kolekcji obejmują klasy implementujące interfejs <xref:System.Collections.Generic.IEnumerable%601> lub dziedziczenia klasy <xref:System.Collections.CollectionBase>. Określony typ musi również uwidaczniać metodę `Add`, która spełnia następujące kryteria.
 
-- The `Add` method must be available from the scope in which the collection initializer is being called. The `Add` method does not have to be public if you are using the collection initializer in a scenario where non-public methods of the collection can be accessed.
+- Metoda `Add` musi być dostępna z zakresu, w którym jest wywoływany inicjator kolekcji. Metoda `Add` nie musi być publiczna, jeśli używasz inicjatora kolekcji w scenariuszu, w którym można uzyskać dostęp do niepublicznych metod kolekcji.
 
-- The `Add` method must be an instance member or `Shared` member of the collection class, or an extension method.
+- Metoda `Add` musi być elementem członkowskim wystąpienia lub `Shared` składową klasy kolekcji lub metodą rozszerzenia.
 
-- An `Add` method must exist that can be matched, based on overload resolution rules, to the types that are supplied in the collection initializer.
+- Metoda `Add` musi istnieć, którą można dopasować, na podstawie reguł rozdzielczości przeciążenia, do typów, które są podane w inicjatorze kolekcji.
 
- For example, the following code example shows how to create a `List(Of Customer)` collection by using a collection initializer. When the code is run, each `Customer` object is passed to the `Add(Customer)` method of the generic list.
+ Na przykład poniższy kod ilustruje sposób tworzenia kolekcji `List(Of Customer)` przy użyciu inicjatora kolekcji. Po uruchomieniu kodu każdy obiekt `Customer` jest przenoszona do metody `Add(Customer)` listy ogólnej.
 
 [!code-vb[VbVbalrCollectionInitializers#9](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#9)]
 
-The following code example shows equivalent code that does not use a collection initializer.
+Poniższy przykład kodu pokazuje równoważny kod, który nie używa inicjatora kolekcji.
 
 [!code-vb[VbVbalrCollectionInitializers#10](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#10)]
 
-If the collection has an `Add` method that has parameters that match the constructor for the `Customer` object, you could nest parameter values for the `Add` method within collection initializers, as discussed in the next section. If the collection does not have such an `Add` method, you can create one as an extension method. For an example of how to create an `Add` method as an extension method for a collection, see [How to: Create an Add Extension Method Used by a Collection Initializer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). For an example of how to create a custom collection that can be used with a collection initializer, see [How to: Create a Collection Used by a Collection Initializer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).
+Jeśli kolekcja ma metodę `Add`, która ma parametry, które pasują do konstruktora obiektu `Customer`, można zagnieżdżać wartości parametrów dla metody `Add` w inicjatorach kolekcji, jak opisano w następnej sekcji. Jeśli kolekcja nie ma takiej metody `Add`, można ją utworzyć jako metodę rozszerzenia. Aby zapoznać się z przykładem sposobu tworzenia metody `Add` jako metody rozszerzenia dla kolekcji, zobacz [How to: Create a Add Extension Metoda używana przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Aby zapoznać się z przykładem tworzenia kolekcji niestandardowej, która może być używana z inicjatorem kolekcji, zobacz [How to: Create a Collection używany przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).
 
-## <a name="nesting-collection-initializers"></a>Nesting Collection Initializers
+## <a name="nesting-collection-initializers"></a>Zagnieżdżanie inicjatorów kolekcji
 
-You can nest values within a collection initializer to identify a specific overload of an `Add` method for the collection that is being created. The values passed to the `Add` method must be separated by commas and enclosed in braces (`{}`), like you would do in an array literal or collection initializer.
+Można zagnieżdżać wartości w inicjatorze kolekcji, aby identyfikować określone Przeciążenie metody `Add` dla tworzonej kolekcji. Wartości przesyłane do metody `Add` muszą być oddzielone przecinkami i ujęte w nawiasy klamrowe (`{}`), tak jak w przypadku literału tablicy lub inicjatora kolekcji.
 
-When you create a collection by using nested values, each element of the nested value list is passed as an argument to the `Add` method that matches the element types. For example, the following code example creates a <xref:System.Collections.Generic.Dictionary%602> in which the keys are of type `Integer` and the values are of type `String`. Each of the nested value lists is matched to the <xref:System.Collections.Generic.Dictionary%602.Add%2A> method for the `Dictionary`.
+Podczas tworzenia kolekcji przy użyciu wartości zagnieżdżonych każdy element zagnieżdżonej listy wartości jest przenoszona jako argument do metody `Add`, która pasuje do typów elementów. Poniższy przykład kodu tworzy <xref:System.Collections.Generic.Dictionary%602>, w którym klucze są typu `Integer`, a wartości są typu `String`. Każda z zagnieżdżonych list wartości jest dopasowywana do metody <xref:System.Collections.Generic.Dictionary%602.Add%2A> `Dictionary`.
 
 [!code-vb[VbVbalrCollectionInitializers#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#5)]
 
-The previous code example is equivalent to the following code.
+Poprzedni przykład kodu jest równoważny do poniższego kodu.
 
 [!code-vb[VbVbalrCollectionInitializers#6](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#6)]
 
-Only nested value lists from the first level of nesting are sent to the `Add` method for the collection type. Deeper levels of nesting are treated as array literals and the nested value lists are not matched to the `Add` method of any collection.
+Tylko zagnieżdżone listy wartości z pierwszego poziomu zagnieżdżania są wysyłane do metody `Add` dla typu kolekcji. Dokładniejsze poziomy zagnieżdżania są traktowane jako literały tablicowe, a zagnieżdżone listy wartości nie są dopasowywane do metody `Add` dowolnej kolekcji.
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
 |Tytuł|Opis|
 |---|---|
-|[Instrukcje: tworzenie i dodawanie metody rozszerzenia używanej przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Shows how to create an extension method called `Add` that can be used to populate a collection with values from a collection initializer.|
-|[Instrukcje: tworzenie kolekcji używanej przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Shows how to enable use of a collection initializer by including an `Add` method in a collection class that implements `IEnumerable`.|
+|[Instrukcje: tworzenie i dodawanie metody rozszerzenia używanej przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Pokazuje, jak utworzyć metodę rozszerzenia o nazwie `Add`, która może być używana do wypełniania kolekcji wartościami z inicjatora kolekcji.|
+|[Instrukcje: tworzenie kolekcji używanej przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Pokazuje, jak włączyć użycie inicjatora kolekcji, dołączając metodę `Add` w klasie kolekcji implementującej `IEnumerable`.|
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -87,8 +87,8 @@ Only nested value lists from the first level of nesting are sent to the `Add` me
 - [Inicjatory obiektów: typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Operator New](../../../../visual-basic/language-reference/operators/new-operator.md)
 - [Właściwości zaimplementowane automatycznie](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
-- [How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [Instrukcje: Inicjowanie zmiennej tablicowej w Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
 - [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Instrukcje: tworzenie listy elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)

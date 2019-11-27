@@ -34,7 +34,7 @@ Dla wygody w temacie są stosowane następujące role:
 |netrmp|http://schemas.microsoft.com/ws-rx/wsrmp/200702|
 |wsp|(WS-Policy 1,2 lub WS-Policy 1,5)|
 
-## <a name="messaging"></a>Obsługa komunikatów
+## <a name="messaging"></a>Obsługa wiadomości
 
 ### <a name="sequence-creation"></a>Tworzenie sekwencji
 
@@ -452,7 +452,7 @@ W tej sekcji opisano zachowanie WCF, gdy funkcja WS-ReliableMessaging jest używ
 
 ### <a name="one-way-non-addressable-initiator"></a>Jednokierunkowy inicjator bez adresu
 
-#### <a name="binding"></a>Wiązanie
+#### <a name="binding"></a>Powiązanie
 
 Usługa WCF zapewnia jednokierunkowy wzorzec wymiany komunikatów przy użyciu jednej sekwencji na jeden kanał HTTP. Funkcja WCF używa żądań HTTP do przesyłania wszystkich komunikatów z inicjatora do obiektu odpowiadającego i odpowiedzi HTTP w celu przesłania wszystkich komunikatów z obiektu odpowiadającego do inicjatora.
 
@@ -474,7 +474,7 @@ Inicjator WCF przesyła komunikat `TerminateSequence` w żądaniu HTTP i oczekuj
 
 ### <a name="one-way-addressable-initiator"></a>Jeden ze sposobów, inicjator adresowany
 
-#### <a name="binding"></a>Wiązanie
+#### <a name="binding"></a>Powiązanie
 
 Usługa WCF zapewnia jednokierunkowy wzorzec wymiany komunikatów przy użyciu jednej sekwencji przez jeden kanał ruchu przychodzącego i jednego ruchu wychodzącego HTTP. Usługa WCF używa żądań HTTP do przesyłania wszystkich komunikatów. Wszystkie odpowiedzi HTTP mają pustą treść i kod stanu HTTP 202.
 
@@ -484,7 +484,7 @@ Inicjator WCF przesyła komunikat `CreateSequence` bez elementu `Offer` w żąda
 
 ### <a name="duplex-addressable-initiator"></a>Dupleks, inicjator z adresami
 
-#### <a name="binding"></a>Wiązanie
+#### <a name="binding"></a>Powiązanie
 
 Funkcja WCF udostępnia w pełni asynchroniczny, dwukierunkowy wzorzec wymiany komunikatów przy użyciu dwóch sekwencji w ramach jednego ruchu przychodzącego i jednego wychodzącego kanału HTTP. Ten wzorzec wymiany komunikatów może być mieszany z `Request/Reply`, `Addressable` wzorzec wymiany komunikatów inicjatora w ograniczony sposób. Funkcja WCF używa żądań HTTP do przesyłania wszystkich komunikatów. Wszystkie odpowiedzi HTTP mają pustą treść i kod stanu HTTP 202.
 
@@ -502,7 +502,7 @@ Funkcja WCF może zamknąć swoją sekwencję wychodzącą i kontynuować przetw
 
 ### <a name="request-reply-and-one-way-non-addressable-initiator"></a>"Żądanie-odpowiedź" i "jednokierunkowy" inicjator bez adresu
 
-#### <a name="binding"></a>Wiązanie
+#### <a name="binding"></a>Powiązanie
 
 Usługa WCF udostępnia wzorzec wymiany komunikatów jednokierunkowych i z żądaniami odpowiedzi przy użyciu dwóch sekwencji w ramach jednego kanału HTTP. Funkcja WCF używa żądań HTTP do przesyłania wszystkich komunikatów z inicjatora do obiektu odpowiadającego i odpowiedzi HTTP w celu przesłania wszystkich komunikatów z obiektu odpowiadającego do inicjatora.
 
@@ -546,7 +546,7 @@ Obiekt odpowiadający WCF przesyła komunikat `TerminateSequenceResponse` w odpo
 
 ### <a name="requestreply-addressable-initiator"></a>Żądanie/odpowiedź, inicjator z adresami
 
-#### <a name="binding"></a>Wiązanie
+#### <a name="binding"></a>Powiązanie
 
 Funkcja WCF udostępnia wzorzec wymiany komunikatów typu żądanie-odpowiedź przy użyciu dwóch sekwencji w ramach jednego ruchu przychodzącego i jednego wychodzącego kanału HTTP. Ten wzorzec wymiany komunikatów może być mieszany z `Duplex, Addressable` wzorzec wymiany komunikatów inicjatora w ograniczony sposób. Usługa WCF używa żądań HTTP do przesyłania wszystkich komunikatów. Wszystkie odpowiedzi HTTP mają pustą treść i kod stanu HTTP 202.
 

@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434882"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock — Metoda
-Gets a section block of the code base.  
+Pobiera blok sekcji bazy kodu.  
   
- This method is obsolete and should not be used.  
+ Ta metoda jest przestarzała i nie powinna być używana.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,28 +40,28 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>Parametry  
  `section`  
- [in] The section from which to retrieve a block of the code base.  
+ podczas Sekcja, z której ma zostać pobrany blok bazy kodu.  
   
  `len`  
- [in] The length of the block to be retrieved.  
+ podczas Długość bloku do pobrania.  
   
  `align`  
- [in] The byte, relative to the beginning of the section, with which to align the first byte of the block. This is the position of the block within the section.  
+ podczas Bajt względem początku sekcji, za pomocą którego ma zostać wyrównany pierwszy bajt bloku. To jest pozycja bloku w sekcji.  
   
  `ppBytes`  
- [out] A pointer to a location that receives the address of the retrieved block.  
+ określoną Wskaźnik do lokalizacji, która otrzymuje adres pobranego bloku.  
   
 ## <a name="remarks"></a>Uwagi  
- Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.  
+ Wywołaj `GetSectionBlock` tylko wtedy, gdy istnieją specjalne wymagania sekcji, które nie są obsługiwane przez inne metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

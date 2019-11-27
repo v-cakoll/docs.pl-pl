@@ -9,23 +9,23 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349323"
 ---
-# <a name="xattribute-class-overview-visual-basic"></a>XAttribute Class Overview (Visual Basic)
-Attributes are name/value pairs that are associated with an element. The <xref:System.Xml.Linq.XAttribute> class represents XML attributes.  
+# <a name="xattribute-class-overview-visual-basic"></a>Przegląd klasy XAttribute (Visual Basic)
+Atrybuty są parami nazw/wartości, które są skojarzone z elementem. Klasa <xref:System.Xml.Linq.XAttribute> reprezentuje atrybuty XML.  
   
-## <a name="overview"></a>Omówienie  
- Working with attributes in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is similar to working with elements. Their constructors are similar. The methods that you use to retrieve collections of them are similar. A [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expression for a collection of attributes looks very similar to a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expression for a collection of elements.  
+## <a name="overview"></a>Przegląd  
+ Praca z atrybutami w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest podobna do pracy z elementami. Ich konstruktory są podobne. Metody używane do pobierania kolekcji są podobne. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażenie zapytania dla kolekcji atrybutów wygląda bardzo podobnie do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażenie zapytania dla kolekcji elementów.  
   
- The order in which attributes were added to an element is preserved. That is, when you iterate through the attributes, you see them in the same order that they were added.  
+ Kolejność, w jakiej atrybuty zostały dodane do elementu, jest zachowywana. Oznacza to, że podczas iteracji przez atrybuty są one widoczne w takiej samej kolejności, w jakiej zostały dodane.  
   
-## <a name="the-xattribute-constructor"></a>The XAttribute Constructor  
- The following constructor of the <xref:System.Xml.Linq.XAttribute> class is the one that you will most commonly use:  
+## <a name="the-xattribute-constructor"></a>Konstruktor XAttribute  
+ Następujący Konstruktor klasy <xref:System.Xml.Linq.XAttribute> jest najczęściej używanym:  
   
 |Konstruktor|Opis|  
 |-----------------|-----------------|  
-|`XAttribute(XName name, object content)`|Tworzy <xref:System.Xml.Linq.XAttribute> obiektu. The `name` argument specifies the name of the attribute; `content` specifies the content of the attribute.|  
+|`XAttribute(XName name, object content)`|Tworzy <xref:System.Xml.Linq.XAttribute> obiektu. `name` argument określa nazwę atrybutu; `content` określa zawartość atrybutu.|  
   
-### <a name="creating-an-element-with-an-attribute"></a>Creating an Element with an Attribute  
- The following code shows an element that contains an attribute using XML literals in Visual Basic:  
+### <a name="creating-an-element-with-an-attribute"></a>Tworzenie elementu z atrybutem  
+ Poniższy kod przedstawia element, który zawiera atrybut używając literałów XML w Visual Basic:  
   
 ```vb  
 Dim phone As XElement = <Phone Type="Home">555-555-5555</Phone>  
@@ -38,8 +38,8 @@ Console.WriteLine(phone)
 <Phone Type="Home">555-555-5555</Phone>  
 ```  
   
-### <a name="functional-construction-of-attributes"></a>Functional Construction of Attributes  
- You can construct <xref:System.Xml.Linq.XAttribute> objects in-line with the construction of <xref:System.Xml.Linq.XElement> objects, as follows:  
+### <a name="functional-construction-of-attributes"></a>Funkcjonalne konstruowanie atrybutów  
+ Można konstruować <xref:System.Xml.Linq.XAttribute> obiektów w wierszu z konstrukcją obiektów <xref:System.Xml.Linq.XElement> w następujący sposób:  
   
 ```vb  
 Dim c As XElement = _  
@@ -69,11 +69,11 @@ Console.WriteLine(c)
 </Customers>  
 ```  
   
-### <a name="attributes-are-not-nodes"></a>Attributes Are Not Nodes  
- There are some differences between attributes and elements. <xref:System.Xml.Linq.XAttribute> objects are not nodes in the XML tree. They are name/value pairs associated with an XML element. In contrast to the Document Object Model (DOM), this more closely reflects the structure of XML. Although <xref:System.Xml.Linq.XAttribute> objects are not actually nodes in the XML tree, working with <xref:System.Xml.Linq.XAttribute> objects is very similar to working with <xref:System.Xml.Linq.XElement> objects.  
+### <a name="attributes-are-not-nodes"></a>Atrybuty nie są węzłami  
+ Istnieją pewne różnice między atrybutami i elementami. obiekty <xref:System.Xml.Linq.XAttribute> nie są węzłami w drzewie XML. Są to pary nazw/wartości skojarzone z elementem XML. W przeciwieństwie do Document Object Model (DOM), to dokładniej odzwierciedla strukturę XML. Chociaż obiekty <xref:System.Xml.Linq.XAttribute> nie są w rzeczywistości węzłami w drzewie XML, praca z obiektami <xref:System.Xml.Linq.XAttribute> jest bardzo podobna do pracy z obiektami <xref:System.Xml.Linq.XElement>.  
   
- This distinction is primarily important only to developers who are writing code that works with XML trees at the node level. Many developers will not be concerned with this distinction.  
+ Ta różnica jest głównie ważna tylko dla deweloperów, którzy piszą kod, który współpracuje z drzewami XML na poziomie węzła. Wielu deweloperów nie będą zainteresowani tym rozróżnieniem.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [Omówienie programowania LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

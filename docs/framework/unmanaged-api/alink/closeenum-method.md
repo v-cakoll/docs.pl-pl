@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446564"
 ---
 # <a name="closeenum-method"></a>CloseEnum — Metoda
-Closes the indicated enumeration and frees associated resources.  
+Zamyka wskazane Wyliczenie i zwalnia skojarzone zasoby.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,13 +35,13 @@ HRESULT CloseEnum(
   
 ## <a name="parameters"></a>Parametry  
  `hEnum`  
- Handle of enumeration to be closed.  
+ Dojście wyliczenia do zamknięcia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Returns S_OK if the method succeeds.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Requires alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 

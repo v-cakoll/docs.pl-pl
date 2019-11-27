@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449441"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps — Metoda
-Gets the set of properties for the assembly with the specified metadata signature.  
+Pobiera zestaw właściwości dla zestawu z określonym podpisem metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,40 +43,40 @@ HRESULT GetAssemblyProps (
   
 ## <a name="parameters"></a>Parametry  
  `mda`  
- [in]. The `mdAssembly` metadata token that represents the assembly for which to get the properties.  
+ [in]. `mdAssembly` token metadanych reprezentujący zestaw, dla którego mają zostać pobrane właściwości.  
   
  `ppbPublicKey`  
- [out] A pointer to the public key or the metadata token.  
+ określoną Wskaźnik do klucza publicznego lub tokenu metadanych.  
   
  `pcbPublicKey`  
- [out] The number of bytes in the returned public key.  
+ określoną Liczba bajtów w zwróconym kluczu publicznym.  
   
  `pulHashAlgId`  
- [out] A pointer to the algorithm used to hash the files in the assembly.  
+ określoną Wskaźnik do algorytmu używany do mieszania plików w zestawie.  
   
  `szName`  
- [out] The simple name of the assembly.  
+ określoną Prosta nazwa zestawu.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ podczas Rozmiar, w postaci szerokich znaków, `szName`.  
   
  `pchName`  
- [out] The number of wide chars actually returned in `szName`.  
+ określoną Liczba znaków dwubajtowych faktycznie zwracanych w `szName`.  
   
  `pMetaData`  
- [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
+ określoną Wskaźnik do struktury ASSEMBLYMETADATA, która zawiera metadane zestawu.  
   
  `pdwAssemblyFlags`  
- [out] Flags that describe the metadata applied to an assembly. This value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
+ określoną Flagi opisujące metadane zastosowane do zestawu. Ta wartość jest kombinacją co najmniej jednej wartości [CorAssemblyFlags —](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

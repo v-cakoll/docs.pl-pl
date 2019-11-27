@@ -12,8 +12,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348479"
 ---
-# <a name="example-visual-basic"></a>\<example> (Visual Basic)
-Specifies an example for the member.  
+# <a name="example-visual-basic"></a>> \<przykład (Visual Basic)
+Określa przykład dla elementu członkowskiego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,15 +23,15 @@ Specifies an example for the member.
   
 ## <a name="parameters"></a>Parametry  
  `description`  
- A description of the code sample.  
+ Opis przykładu kodu.  
   
 ## <a name="remarks"></a>Uwagi  
- The `<example>` tag lets you specify an example of how to use a method or other library member. This commonly involves using the [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) tag.  
+ Tag `<example>` pozwala określić przykład użycia metody lub innego elementu członkowskiego biblioteki. Ten proces często obejmuje użycie tagu [> code\<](../../../visual-basic/language-reference/xmldoc/code.md) .  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- This example uses the `<example>` tag to include an example for using the `ID` field.  
+ W tym przykładzie użyto znacznika `<example>`, aby uwzględnić przykład użycia pola `ID`.  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   

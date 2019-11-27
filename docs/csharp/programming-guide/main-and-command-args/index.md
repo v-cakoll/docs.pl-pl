@@ -28,7 +28,7 @@ Metoda `Main` jest punktem wejścia C# aplikacji. (Biblioteki i usługi nie wyma
 
 [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
 
-## <a name="overview"></a>Omówienie
+## <a name="overview"></a>Przegląd
 
 - Metoda `Main` jest punktem wejścia programu wykonywalnego; jest to miejsce, w którym kontrola programu zaczyna się i skończy.
 - `Main` jest zadeklarowana wewnątrz klasy lub struktury. `Main` musi być [statyczna](../../language-reference/keywords/static.md) i nie musi być [publiczny](../../language-reference/keywords/public.md). (W poprzednim przykładzie otrzymuje on domyślny dostęp do [prywatnego](../../language-reference/keywords/private.md)). Otaczająca Klasa lub struktura nie musi być statyczna.

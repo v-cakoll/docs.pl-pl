@@ -1,5 +1,5 @@
 ---
-title: 'How to: Stream XML Fragments with Access to Header Information'
+title: 'Instrukcje: strumieniowe fragmenty XML z dostępem do informacji nagłówka'
 ms.date: 07/20/2015
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
 ms.openlocfilehash: 489e128e86a47e0e7f76c14a6cf1baf80fb0c406
@@ -9,17 +9,17 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332451"
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>How to: Stream XML Fragments with Access to Header Information (Visual Basic)
-Sometimes you have to read arbitrarily large XML files, and write your application so that the memory footprint of the application is predictable. If you attempt to populate an XML tree with a large XML file, your memory usage will be proportional to the size of the file—that is, excessive. Therefore, you should use a streaming technique instead.  
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Instrukcje: strumieniowe fragmenty XML z dostępem do informacji nagłówka (Visual Basic)
+Czasami konieczne jest odczytanie arbitralnie dużych plików XML i zapisanie aplikacji w celu przewidzenia rozmiaru pamięci aplikacji. W przypadku próby wypełnienia drzewa XML przy użyciu dużego pliku XML użycie pamięci będzie proporcjonalne do rozmiaru pliku, czyli nadmierne. W związku z tym należy zamiast tego użyć techniki przesyłania strumieniowego.  
   
- One option is to write your application using <xref:System.Xml.XmlReader>. However, you might want to use [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to query the XML tree. If this is the case, you can write your own custom axis method. For more information, see [How to: Write a LINQ to XML Axis Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Jedną z opcji jest zapisanie aplikacji przy użyciu <xref:System.Xml.XmlReader>. Można jednak użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], aby zbadać drzewo XML. W takim przypadku można napisać własną metodę osi niestandardowej. Aby uzyskać więcej informacji, zobacz [How to: Write a LINQ to XML osi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
- To write your own axis method, you write a small method that uses the <xref:System.Xml.XmlReader> to read nodes until it reaches one of the nodes in which you are interested. The method then calls <xref:System.Xml.Linq.XNode.ReadFrom%2A>, which reads from the <xref:System.Xml.XmlReader> and instantiates an XML fragment. You can then write LINQ queries on your custom axis method.  
+ Aby napisać własną metodę osi, napisz małą metodę, która używa <xref:System.Xml.XmlReader> do odczytywania węzłów do momentu osiągnięcia jednego z węzłów, w których interesują Cię zainteresowania. Metoda następnie wywołuje <xref:System.Xml.Linq.XNode.ReadFrom%2A>, który odczytuje z <xref:System.Xml.XmlReader> i tworzy wystąpienie fragmentu XML. Następnie można napisać zapytania LINQ na niestandardowej metodzie osi.  
   
- Streaming techniques are best applied in situations where you need to process the source document only once, and you can process the elements in document order. Certain standard query operators, such as <xref:System.Linq.Enumerable.OrderBy%2A>, iterate their source, collect all of the data, sort it, and then finally yield the first item in the sequence. Note that if you use a query operator that materializes its source before yielding the first item, you will not retain a small memory footprint.  
+ Techniki przesyłania strumieniowego najlepiej zastosować w sytuacjach, gdy trzeba przetwarzać dokument źródłowy tylko raz i można przetwarzać elementy w kolejności dokumentu. Niektóre standardowe operatory zapytań, takie jak <xref:System.Linq.Enumerable.OrderBy%2A>, iteracji ich źródła, zbierają wszystkie dane, sortują je, a następnie zwracają pierwszy element w sekwencji. Należy pamiętać, że jeśli używasz operatora zapytania, który materializuje jego źródło przed uzyskaniem pierwszego elementu, nie będzie zachowana mała ilość pamięci.  
   
 ## <a name="example"></a>Przykład  
- Sometimes the problem gets just a little more interesting. In the following XML document, the consumer of your custom axis method also has to know the name of the customer that each item belongs to.  
+ Czasami problem jest znacznie bardziej interesujący. W poniższym dokumencie XML konsument niestandardowej metody osi musi znać nazwę klienta, do którego należy każdy element.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -66,11 +66,11 @@ Sometimes you have to read arbitrarily large XML files, and write your applicati
 </Root>  
 ```  
   
- The approach that this example takes is to also watch for this header information, save the header information, and then build a small XML tree that contains both the header information and the detail that you are enumerating. The axis method then yields this new, small XML tree. The query then has access to the header information as well as the detail information.  
+ Podejście, które ten przykład przyjmuje, ma również na celu śledzenie informacji o tym nagłówku, zapisanie informacji nagłówka, a następnie utworzenie małego drzewa XML zawierającego zarówno informacje nagłówka, jak i szczegóły wyliczane. Następnie metoda osi daje nowe, małe drzewo XML. Następnie zapytanie ma dostęp do informacji nagłówka oraz informacji szczegółowych.  
   
- This approach has a small memory footprint. As each detail XML fragment is yielded, no references are kept to the previous fragment, and it is available for garbage collection. Note that this technique creates many short lived objects on the heap.  
+ Takie podejście ma niewielkie rozmiary pamięci. Ze względu na to, że każdy szczegółowy fragment kodu XML jest przewidziany, żadne odwołania nie są przechowywane w poprzednim fragmencie i jest dostępny do wyrzucania elementów bezużytecznych. Należy zauważyć, że ta technika tworzy wiele obiektów krótkotrwałych na stercie.  
   
- The following example shows how to implement and use a custom axis method that streams XML fragments from the file specified by the URI. This custom axis is specifically written such that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the above `Source.xml` document. It is a simplistic implementation. A more robust implementation would be prepared to parse an invalid document.  
+ Poniższy przykład przedstawia sposób implementacji i używania niestandardowej metody osi, która strumieniuje fragmenty XML z pliku określonego przez identyfikator URI. Ta oś niestandardowa jest zapisywana w taki sposób, że oczekuje dokumentu, który ma `Customer`, `Name`i `Item` elementów oraz że te elementy zostaną ułożone tak jak w powyższym `Source.xml` dokumencie. Jest to implementacja uproszczony. Bardziej niezawodna implementacja zostanie przygotowana do analizy nieprawidłowego dokumentu.  
   
 ```vb  
 Module Module1  
@@ -232,4 +232,4 @@ End Class
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Zaawansowane programowanie LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

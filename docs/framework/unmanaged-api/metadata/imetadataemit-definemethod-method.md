@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431804"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod — Metoda
-Creates a definition for a method or global function with the specified signature, and returns a token to that method definition.  
+Tworzy definicję metody lub funkcji globalnej z określoną sygnaturą i zwraca token do tej definicji metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,73 +42,73 @@ HRESULT DefineMethod (
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- [in] The `mdTypedef` token of the parent class or parent interface of the method. Set `td` to `mdTokenNil`, if you are defining a global function.  
+ podczas Token `mdTypedef` klasy nadrzędnej lub interfejsu nadrzędnego metody. Ustaw `td` na `mdTokenNil`, jeśli definiujesz funkcję globalną.  
   
  `szName`  
- [in] The member name in Unicode.  
+ podczas Nazwa elementu członkowskiego w formacie Unicode.  
   
  `dwMethodFlags`  
- [in] A value of the [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeration that specifies the attributes of the method or global function.  
+ podczas Wartość wyliczenia [CorMethodAttr —](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) , która określa atrybuty metody lub funkcji globalnej.  
   
  `pvSigBlob`  
- [in] The method signature. The signature is persisted as supplied. If you need to specify additional information for any parameters, use the [IMetaDataEmit::SetParamProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparamprops-method.md) method.  
+ podczas Podpis metody. Sygnatura jest utrwalana zgodnie z podanym opisem. Jeśli konieczne jest określenie dodatkowych informacji dla dowolnych parametrów, użyj metody [IMetaDataEmit:: SetParamProps —](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparamprops-method.md) .  
   
  `cbSigBlob`  
- [in] The count of bytes in `pvSigBlob`.  
+ podczas Liczba bajtów w `pvSigBlob`.  
   
  `ulCodeRVA`  
- [in] The address of the code.  
+ podczas Adres kodu.  
   
  `dwImplFlags`  
- [in] A value of the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration that specifies the implementation features of the method.  
+ podczas Wartość wyliczenia [CorMethodImpl —](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) , która określa funkcje implementacji metody.  
   
  `pmd`  
- [out] The member token.  
+ określoną Token elementu członkowskiego.  
   
 ## <a name="remarks"></a>Uwagi  
- The metadata API guarantees to persist methods in the same order as the caller emits them for a given enclosing class or interface, which is specified in the `td` parameter.  
+ Interfejs API metadanych gwarantuje zachowanie metod w takiej samej kolejności, w jakiej obiekt wywołujący emituje je dla danej klasy lub interfejsu, który jest określony w parametrze `td`.  
   
- Additional information regarding the use of `DefineMethod` and particular parameter settings is given below.  
+ Poniżej przedstawiono dodatkowe informacje dotyczące używania `DefineMethod` i określonych ustawień parametrów.  
   
-## <a name="slots-in-the-v-table"></a>Slots in the V-table  
- The runtime uses method definitions to set up v-table slots. In the case where one or more slots need to be skipped, such as to preserve parity with a COM interface layout, a dummy method is defined to take up the slot or slots in the v-table; set the `dwMethodFlags` to the `mdRTSpecialName` value of the [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeration and specify the name as:  
+## <a name="slots-in-the-v-table"></a>Gniazda w tabeli V  
+ Środowisko uruchomieniowe używa definicji metod do konfigurowania miejsc z tabelą v. W przypadku, gdy co najmniej jeden z gniazd musi być pominięty, na przykład w celu zachowania parzystości przy użyciu układu interfejsu COM, Metoda fikcyjna jest definiowana w celu założenia gniazda lub gniazd w tabeli v. Ustaw `dwMethodFlags` na wartość `mdRTSpecialName` wyliczenia [CorMethodAttr —](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) i określ nazwę jako:  
   
  _VtblGap\<*SequenceNumber*>\<\_*CountOfSlots*>
   
- where *SequenceNumber* is the sequence number of the method and *CountOfSlots* is the number of slots to skip in the v-table. If *CountOfSlots* is omitted, 1 is assumed. These dummy methods are not callable from either managed or unmanaged code and any attempt to call them, from either managed or unmanaged code, generates an exception. Their only purpose is to take up space in the v-table that the runtime generates for COM integration.  
+ gdzie *SequenceNumber* jest numerem sekwencji metody, a *CountOfSlots* to liczba gniazd do pominięcia w tabeli v. W przypadku pominięcia *CountOfSlots* przyjmuje się wartość 1. Te metody fikcyjne nie są wywoływane z kodu zarządzanego lub niezarządzanego, a wszystkie próby wywołania ich, z kodu zarządzanego lub niezarządzanego, generują wyjątek. Jedynym celem jest zajęcie miejsca w tabeli v, która jest generowana przez środowisko uruchomieniowe na potrzeby integracji z modelem COM.  
   
-## <a name="duplicate-methods"></a>Duplicate Methods  
- You should not define duplicate methods. That is, you should not call `DefineMethod` with a duplicate set of values in the `td`, `wzName`, and `pvSig` parameters. (These three parameters together uniquely define the method.). However, you can use a duplicate triple provided that, for one of the method definitions, you set the `mdPrivateScope` bit in the `dwMethodFlags` parameter. (The `mdPrivateScope` bit means that the compiler will not emit a reference to this method definition.)  
+## <a name="duplicate-methods"></a>Metody duplikowania  
+ Nie należy definiować zduplikowanych metod. Oznacza to, że nie należy wywoływać `DefineMethod` ze zduplikowanym zestawem wartości w parametrach `td`, `wzName`i `pvSig`. (Te trzy parametry jednoznacznie definiują metodę). Można jednak użyć duplikatu trzykrotnie, pod warunkiem, że dla jednej z definicji metody ustawiasz bit `mdPrivateScope` w parametrze `dwMethodFlags`. (`mdPrivateScope` bit oznacza, że kompilator nie emituje odwołania do tej definicji metody).  
   
-## <a name="method-implementation-information"></a>Method Implementation Information  
- Information about the method implementation is often not known at the time the method is declared. Therefore, you do not need to pass values in the `ulCodeRVA` and `dwImplFlags` parameters when calling `DefineMethod`. The values can be supplied later through [IMetaDataEmit::SetMethodImplFlags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md) or [IMetaDataEmit::SetRVA](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setrva-method.md), as appropriate.  
+## <a name="method-implementation-information"></a>Informacje o implementacji metody  
+ Informacje o implementacji metody często nie są znane w momencie zadeklarowania metody. W związku z tym nie trzeba przekazywać wartości w `ulCodeRVA` i `dwImplFlags` parametrów podczas wywoływania `DefineMethod`. Wartości można dostarczyć później za pomocą [IMetaDataEmit:: SetMethodImplFlags —](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md) lub [IMetaDataEmit:: SetRVA —](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setrva-method.md), zgodnie z potrzebami.  
   
- In some situations, such as platform invocation (PInvoke) or COM interop scenarios, the method body will not be supplied, and `ulCodeRVA` should be set to zero. In these situations, the method should not be tagged as abstract, because the runtime will locate the implementation.  
+ W niektórych sytuacjach, takich jak scenariusze wywołania platformy (PInvoke) lub współdziałanie z modelem COM, treść metody nie zostanie podana, a `ulCodeRVA` powinna być ustawiona na zero. W takich sytuacjach metoda nie powinna być oznaczona jako abstrakcyjna, ponieważ środowisko uruchomieniowe odnajdzie implementację.  
   
-## <a name="defining-a-method-for-pinvoke"></a>Defining a Method for PInvoke  
- For each unmanaged function to be called through PInvoke, you must define a managed method that represents the target unmanaged function. To define the managed method, use `DefineMethod` with some of the parameters set to certain values, depending on the way in which PInvoke is used:  
+## <a name="defining-a-method-for-pinvoke"></a>Definiowanie metody dla funkcji PInvoke  
+ Dla każdej funkcji niezarządzanej, która ma być wywoływana za pomocą funkcji PInvoke, należy zdefiniować metodę zarządzaną, która reprezentuje docelową funkcję niezarządzaną. Aby zdefiniować metodę zarządzaną, należy użyć `DefineMethod` z pewnymi parametrami ustawionymi na określone wartości, w zależności od sposobu użycia funkcji PInvoke:  
   
-- True PInvoke - involves invocation of an external unmanaged method that resides in an unmanaged DLL.  
+- True PInvoke-obejmuje wywołanie zewnętrznej metody niezarządzanej, która znajduje się w niezarządzanej bibliotece DLL.  
   
-- Local PInvoke - involves invocation of a native unmanaged method that is embedded in the current managed module.  
+- Lokalny element PInvoke-obejmuje wywołanie natywnej metody niezarządzanej osadzonej w bieżącym module zarządzanym.  
   
- The parameter settings are given in the following table.  
+ Ustawienia parametrów są podano w poniższej tabeli.  
   
-|Parametr|Values for true PInvoke|Values for local PInvoke|  
+|Parametr|Wartości dla prawdy|Wartości dla lokalnego elementu PInvoke|  
 |---------------|-----------------------------|------------------------------|  
-|`dwMethodFlags`||Set `mdStatic`; clear `mdSynchronized` and `mdAbstract`.|  
-|`pvSigBlob`|A valid common language runtime (CLR) method signature with parameters that are valid managed types.|A valid CLR method signature with parameters that are valid managed types.|  
+|`dwMethodFlags`||Ustaw `mdStatic`; Wyczyść `mdSynchronized` i `mdAbstract`.|  
+|`pvSigBlob`|Prawidłowy podpis metody środowiska uruchomieniowego języka wspólnego (CLR) z parametrami, które są prawidłowymi typami zarządzanymi.|Prawidłowy podpis metody CLR z parametrami, które są prawidłowymi typami zarządzanymi.|  
 |`ulCodeRVA`||0|  
-|`dwImplFlags`|Set `miCil` and `miManaged`.|Set `miNative` and `miUnmanaged`.|  
+|`dwImplFlags`|Ustaw `miCil` i `miManaged`.|Ustaw `miNative` i `miUnmanaged`.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

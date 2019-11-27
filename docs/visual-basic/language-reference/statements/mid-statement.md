@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348023"
 ---
 # <a name="mid-statement"></a>Mid — Instrukcja
-Replaces a specified number of characters in a `String` variable with characters from another string.  
+Zastępuje określoną liczbę znaków w zmiennej `String` znakami z innego ciągu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,45 +32,45 @@ Mid( _
   
 ## <a name="parts"></a>Części  
  `Target`  
- Wymagany. Name of the `String` variable to modify.  
+ Wymagana. Nazwa zmiennej `String` do zmodyfikowania.  
   
  `Start`  
- Wymagany. `Integer` expression. Character position in `Target` where the replacement of text begins. `Start` uses a one-based index.  
+ Wymagana. wyrażenie `Integer`. Pozycja znaku w `Target`, w którym rozpoczyna się zastępowanie tekstu. `Start` używa indeksu jednego z nich.  
   
  `Length`  
- Opcjonalny. `Integer` expression. Number of characters to replace. If omitted, all of `String` is used.  
+ Opcjonalna. wyrażenie `Integer`. Liczba znaków do zastąpienia. W przypadku pominięcia zostanie użyta cała `String`.  
   
  `StringExpression`  
- Wymagany. `String` expression that replaces part of `Target`.  
+ Wymagana. wyrażenie `String`, które zastępuje część `Target`.  
   
 ## <a name="exceptions"></a>Wyjątki  
   
 |Typ wyjątku|Warunek|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start` <= 0 or `Length` < 0.|  
+|<xref:System.ArgumentException>|`Start` < = 0 lub `Length` < 0.|  
   
 ## <a name="remarks"></a>Uwagi  
- The number of characters replaced is always less than or equal to the number of characters in `Target`.  
+ Liczba zastąpionych znaków jest zawsze mniejsza lub równa liczbie znaków w `Target`.  
   
- Visual Basic has a <xref:Microsoft.VisualBasic.Strings.Mid%2A> function and a `Mid` statement. These elements both operate on a specified number of characters in a string, but the `Mid` function returns the characters while the `Mid` statement replaces the characters. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
+ Visual Basic zawiera funkcję <xref:Microsoft.VisualBasic.Strings.Mid%2A> i instrukcję `Mid`. Te elementy działają na określonej liczbie znaków w ciągu, ale funkcja `Mid` zwraca znaki, podczas gdy instrukcja `Mid` zastępuje znaki. Aby uzyskać więcej informacji, zobacz temat <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
   
 > [!NOTE]
-> The `MidB` statement of earlier versions of Visual Basic replaces a substring in bytes, rather than characters. Służy przede wszystkim do konwersji ciągów w aplikacjach z zestawami dwubajtowych znaków (znaków DBCS). All Visual Basic strings are in Unicode, and `MidB` is no longer supported.  
+> Instrukcja `MidB` wcześniejszych wersji Visual Basic zastępuje podciąg w bajtach, a nie znaki. Służy przede wszystkim do konwersji ciągów w aplikacjach z zestawami dwubajtowych znaków (znaków DBCS). Wszystkie ciągi Visual Basic są w formacie Unicode, a `MidB` nie jest już obsługiwane.  
   
 ## <a name="example"></a>Przykład  
- This example uses the `Mid` statement to replace a specified number of characters in a string variable with characters from another string.  
+ W tym przykładzie używamy instrukcji `Mid`, aby zastąpić określoną liczbę znaków w zmiennej ciągu znakami z innego ciągu.  
   
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Przestrzeń nazw:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Module:** `Strings`  
+ **Moduł:** `Strings`  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:Microsoft.VisualBasic.Strings.Mid%2A>
 - [Ciągi](../../../visual-basic/programming-guide/language-features/strings/index.md)
-- [Introduction to Strings in Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Wprowadzenie do ciągów w Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

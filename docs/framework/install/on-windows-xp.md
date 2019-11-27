@@ -1,6 +1,6 @@
 ---
-title: Install the .NET Framework on Windows XP
-description: Learn how to install the .NET Framework on Windows XP.
+title: Instalowanie .NET Framework w systemie Windows XP
+description: Dowiedz się, jak zainstalować .NET Framework w systemie Windows XP.
 ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
@@ -15,30 +15,30 @@ ms.locfileid: "74204714"
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Instalowanie programu .NET Framework w systemach Windows XP i Windows Server 2003
 
 > [!NOTE]
-> Windows XP is no longer supported by Microsoft. We recommend you upgrade to Windows 10, which is supported and includes the latest version of the .NET Framework. This document is provided solely as a helpful troubleshooting guide.
+> System Windows XP nie jest już obsługiwany przez firmę Microsoft. Zalecamy przeprowadzenie uaktualnienia do systemu Windows 10, który jest obsługiwany i zawiera najnowszą wersję .NET Framework. Ten dokument jest dostarczany wyłącznie jako przydatny Przewodnik rozwiązywania problemów.
 
-The .NET Framework is required to run many applications on Windows. You can use the following instructions to install it. You may have arrived on this page after trying to run an application and seeing the following dialog on your machine.
+.NET Framework jest wymagane do uruchamiania wielu aplikacji w systemie Windows. Aby go zainstalować, można użyć poniższych instrukcji. Na tej stronie może nastąpić próba uruchomienia aplikacji i wyświetlenia poniższego okna dialogowego na komputerze.
 
-![This application could not be started](./media/this-application-could-not-be-started.png)
+![Nie można uruchomić tej aplikacji](./media/this-application-could-not-be-started.png)
 
-These instructions will help you install the .NET Framework versions you need. The [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) is the latest version. It is not supported on Windows XP and Windows Server 2003. It is included with [Windows 10 May 2019 Update](https://support.microsoft.com/help/4028685/windows-10-get-the-update).
+Te instrukcje ułatwią zainstalowanie potrzebnych wersji .NET Framework. [.NET Framework 4,8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) to Najnowsza wersja. Nie jest on obsługiwany w systemach Windows XP i Windows Server 2003. Jest on dostępny w [systemie Windows 10 maja 2019 Update](https://support.microsoft.com/help/4028685/windows-10-get-the-update).
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 
-The [.NET Framework 4.0.3](https://www.microsoft.com/download/details.aspx?id=29053) is the latest supported .NET Framework version on Windows XP and Windows Server 2003. The .NET Framework 4.0.3 requires that the [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40) is installed first. Both of these .NET Framework versions are no longer supported by Microsoft.
+[.NET Framework 4.0.3](https://www.microsoft.com/download/details.aspx?id=29053) to najnowsza obsługiwana wersja .NET Framework w systemach Windows XP i windows Server 2003. 4\.0.3 .NET Framework wymaga najpierw zainstalowania [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40) . Obie te wersje .NET Framework nie są już obsługiwane przez firmę Microsoft.
 
 ## <a name="net-framework-4"></a>Program .NET Framework 4
 
-You can install the [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40) on Windows XP. It's no longer supported by Microsoft.
+Możesz zainstalować [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40) w systemie Windows XP. Nie jest już obsługiwane przez firmę Microsoft.
 
 ## <a name="net-framework-35"></a>Program .NET Framework 3,5
 
-You can install the [.NET Framework 3.5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) on Windows XP.
+[.NET Framework 3,5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) można zainstalować w systemie Windows XP.
 
-The .NET Framework 3.5 can be used to run applications built for .NET Framework 1.0 through 3.5.
+.NET Framework 3,5 może służyć do uruchamiania aplikacji skompilowanych dla .NET Framework 1,0 do 3,5.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Download the .NET Framework](https://dotnet.microsoft.com/download)
+- [Pobierz .NET Framework](https://dotnet.microsoft.com/download)
 - [Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
-- [Install the .NET Framework for developers](guide-for-developers.md)
+- [Zainstaluj .NET Framework dla deweloperów](guide-for-developers.md)

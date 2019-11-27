@@ -1,5 +1,5 @@
 ---
-title: The remote server machine does not exist or is unavailable
+title: Komputer serwera zdalnego nie istnieje lub jest niedostępny
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID462
@@ -11,12 +11,12 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348183"
 ---
-# <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a>The remote server machine does not exist or is unavailable (Visual Basic)
-You are trying to connect to a remote server that is unavailable or does not exist. This error may be caused by your network connection being lost.  
+# <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a>Komputer serwera zdalnego nie istnieje lub jest niedostępny (Visual Basic)
+Próbujesz nawiązać połączenie z serwerem zdalnym, który jest niedostępny lub nie istnieje. Przyczyną tego błędu może być utrata połączenia sieciowego.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Reconnect to the network and try again.  
+- Ponownie nawiąż połączenie z siecią i spróbuj ponownie.  
   
 ## <a name="see-also"></a>Zobacz także
 

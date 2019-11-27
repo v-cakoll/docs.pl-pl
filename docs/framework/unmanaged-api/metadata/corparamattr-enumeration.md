@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436486"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr — Wyliczenie
-Contains values that describe the metadata of a method parameter.  
+Zawiera wartości opisujące metadane parametru metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,24 +42,24 @@ typedef enum CorParamAttr {
 } CorParamAttr;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`pdIn`|Specifies that the parameter is passed into the method call.|  
-|`pdOut`|Specifies that the parameter is passed from the method return.|  
-|`pdOptional`|Specifies that the parameter is optional.|  
-|`pdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`pdHasDefault`|Specifies that the parameter has a default value.|  
-|`pdHasFieldMarshal`|Specifies that the parameter has marshaling information.|  
-|`pdUnused`|Unused.|  
+|`pdIn`|Określa, że parametr jest przesyłany do wywołania metody.|  
+|`pdOut`|Określa, że parametr jest przesyłany z zwracanej metody.|  
+|`pdOptional`|Określa, że parametr jest opcjonalny.|  
+|`pdReservedMask`|Zarezerwowane do użytku wewnętrznego przez środowisko uruchomieniowe języka wspólnego.|  
+|`pdHasDefault`|Określa, że parametr ma wartość domyślną.|  
+|`pdHasFieldMarshal`|Określa, że parametr ma informacje o kierowaniu.|  
+|`pdUnused`|Przestrzeń.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

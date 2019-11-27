@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449192"
 ---
 # <a name="isymunmanageddocumentgetdocumenttype-method"></a>ISymUnmanagedDocument::GetDocumentType — Metoda
-Gets the document type of this document.  
+Pobiera typ dokumentu tego dokumentu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,10 +34,10 @@ HRESULT GetDocumentType(
   
 ## <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Pointer to a variable that receives the document type.  
+ określoną Wskaźnik do zmiennej, która otrzymuje typ dokumentu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds.  
+ S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="see-also"></a>Zobacz także
 

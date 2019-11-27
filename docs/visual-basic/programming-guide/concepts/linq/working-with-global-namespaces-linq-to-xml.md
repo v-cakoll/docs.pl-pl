@@ -9,19 +9,19 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350997"
 ---
-# <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Working with Global Namespaces (Visual Basic) (LINQ to XML)
-One of the key features of XML literals in Visual Basic is the capability to declare XML namespaces by using the `Imports` statement. Using this feature, you can declare an XML namespace that uses a prefix, or you can declare a default XML namespace.  
+# <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Praca z globalnymi przestrzeniami nazw (Visual Basic) (LINQ to XML)
+Jedną z najważniejszych funkcji literałów XML w Visual Basic jest możliwość deklarowania przestrzeni nazw XML przy użyciu instrukcji `Imports`. Korzystając z tej funkcji, można zadeklarować przestrzeń nazw XML, która używa prefiksu lub można zadeklarować domyślną przestrzeń nazw XML.  
   
- This capability is useful in two situations. First, namespaces declared in XML literals do not carry over into embedded expressions. Declaring global namespaces reduces the amount of work that you have to do to use embedded expressions with namespaces. Second, you must declare global namespaces in order to use namespaces with XML properties.  
+ Ta funkcja jest przydatna w dwóch sytuacjach. Po pierwsze obszary nazw zadeklarowane w literałach XML nie są przenoszone do wyrażeń osadzonych. Deklarowanie globalnych przestrzeni nazw zmniejsza ilość pracy, którą trzeba wykonać, aby korzystać z osadzonych wyrażeń z przestrzeniami nazw. Po drugie należy zadeklarować globalne przestrzenie nazw w celu używania przestrzeni nazw z właściwościami XML.  
   
- You can declare global namespaces at the project level. You can also declare global namespaces at the module level, which overrides the project-level global namespaces. Finally, you can override global namespaces in an XML literal.  
+ Można zadeklarować globalne przestrzenie nazw na poziomie projektu. Można również zadeklarować globalne przestrzenie nazw na poziomie modułu, który zastępuje globalne przestrzenie nazw na poziomie projektu. Na koniec można przesłonić globalne przestrzenie nazw w literale XML.  
   
- When using XML literals or XML properties that are in globally-declared namespaces, you can see the expanded name of XML literals or properties by hovering over them in Visual Studio. You will see the expanded name in a tooltip.  
+ W przypadku używania literałów XML lub właściwości XML, które znajdują się w globalnie zadeklarowanych przestrzeniach nazw, można zobaczyć rozwinięte nazwy literałów XML lub właściwości przez umieszczenie ich w programie Visual Studio. Rozwinięta nazwa zostanie wyświetlona w etykietce narzędzia.  
   
- You can get an <xref:System.Xml.Linq.XNamespace> object that corresponds to a global namespace using the `GetXmlNamespace` method.  
+ Można uzyskać <xref:System.Xml.Linq.XNamespace> obiektu, który odpowiada globalnej przestrzeni nazw, przy użyciu metody `GetXmlNamespace`.  
   
-## <a name="examples-of-global-namespaces"></a>Examples of Global Namespaces  
- The following example declares a default global namespace by using the `Imports` statement, and then uses an XML literal to initialize an <xref:System.Xml.Linq.XElement> object in that namespace:  
+## <a name="examples-of-global-namespaces"></a>Przykłady globalnych przestrzeni nazw  
+ Poniższy przykład deklaruje domyślną globalną przestrzeń nazw przy użyciu instrukcji `Imports`, a następnie używa literału XML do zainicjowania obiektu <xref:System.Xml.Linq.XElement> w tej przestrzeni nazw:  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -40,7 +40,7 @@ End Module
 <Root xmlns="http://www.adventure-works.com" />  
 ```  
   
- The following example declares a global namespace with a prefix, and then uses an XML literal to initialize an element:  
+ Poniższy przykład deklaruje globalną przestrzeń nazw z prefiksem, a następnie używa literału XML do zainicjowania elementu:  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -59,8 +59,8 @@ End Module
 <aw:Root xmlns:aw="http://www.adventure-works.com" />  
 ```  
   
-## <a name="global-namespaces-and-embedded-expressions"></a>Global Namespaces and Embedded Expressions  
- Namespaces that are declared in XML literals do not carry over into embedded expressions. The following example declares a default namespace. It then uses an embedded expression for the `Child` element.  
+## <a name="global-namespaces-and-embedded-expressions"></a>Globalne przestrzenie nazw i wyrażenia osadzone  
+ Przestrzenie nazw, które są zadeklarowane w literałach XML, nie są przenoszone do wyrażeń osadzonych. Poniższy przykład deklaruje domyślną przestrzeń nazw. Następnie używa osadzonego wyrażenia dla elementu `Child`.  
   
 ```vb  
 Dim root As XElement = _  
@@ -78,9 +78,9 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- As you can see, the resulting XML includes a declaration of a default namespace so that the `Child` element is in no namespace.  
+ Jak widać, otrzymany kod XML zawiera deklarację domyślnej przestrzeni nazw, dzięki czemu element `Child` nie jest w żadnej przestrzeni nazw.  
   
- You could re-declare the namespace in the embedded expression, as follows:  
+ Można ponownie zadeklarować przestrzeń nazw w wyrażeniu osadzonym w następujący sposób:  
   
 ```vb  
 Dim root As XElement = _  
@@ -98,7 +98,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- However, this is more cumbersome to use than the global default namespace, which is a better approach. With the global default namespace, you can use XML literals without declaring namespaces. The resulting XML will be in the globally-declared default namespace.  
+ Jednak jest to bardziej skomplikowany sposób użycia niż Globalna domyślna przestrzeń nazw, która jest lepszym rozwiązaniem. Przy użyciu globalnej domyślnej przestrzeni nazw można używać literałów XML bez deklarowania przestrzeni nazw. Otrzymany kod XML będzie w globalnie zadeklarowanej przestrzeni nazw default.  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -121,8 +121,8 @@ End Module
 </Root>  
 ```  
   
-## <a name="using-namespaces-with-xml-properties"></a>Using Namespaces with XML Properties  
- If you are working with an XML tree that is in a namespace, and you use XML properties, then you must use a global namespace so that the XML properties will also be in the correct namespace. The following example declares an XML tree in a namespace. It then prints the count of `Child` elements.  
+## <a name="using-namespaces-with-xml-properties"></a>Używanie przestrzeni nazw z właściwościami XML  
+ Jeśli pracujesz z drzewem XML, który znajduje się w przestrzeni nazw, i używasz właściwości XML, należy użyć globalnej przestrzeni nazw, aby właściwości XML również znajdować się w poprawnej przestrzeni nazw. Poniższy przykład deklaruje drzewo XML w przestrzeni nazw. Następnie drukuje liczbę elementów `Child`.  
   
 ```vb  
 Dim root As XElement = _  
@@ -132,13 +132,13 @@ Dim root As XElement = _
 Console.WriteLine(root.<Child>.Count())  
 ```  
   
- This example indicates that there are no `Child` elements. It produces the following output:  
+ Ten przykład wskazuje, że nie ma żadnych `Child` elementów. Generuje następujące dane wyjściowe:  
   
 ```console  
 0  
 ```  
   
- If, however, you declare a default global namespace, then both the XML literal and the XML property are in the default global namespace:  
+ Jeśli jednak zostanie zadeklarowana Domyślna globalna przestrzeń nazw, wówczas zarówno literał XML, jak i Właściwość XML znajdują się w domyślnej globalnej przestrzeni nazw:  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -154,13 +154,13 @@ Module Module1
 End Module  
 ```  
   
- This example indicates that there is one `Child` element. It produces the following output:  
+ Ten przykład wskazuje, że istnieje jeden `Child` elementu. Generuje następujące dane wyjściowe:  
   
 ```console  
 1  
 ```  
   
- If you declare a global namespace that has a prefix, you can use the prefix for both XML literals and XML properties:  
+ Jeśli zadeklarujesz globalną przestrzeń nazw, która ma prefiks, można użyć prefiksu dla obu literałów XML i właściwości XML:  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -176,8 +176,8 @@ Module Module1
 End Module  
 ```  
   
-## <a name="xnamespace-and-global-namespaces"></a>XNamespace and Global Namespaces  
- You can get an <xref:System.Xml.Linq.XNamespace> object by using the `GetXmlNamespace` method:  
+## <a name="xnamespace-and-global-namespaces"></a>XNamespace i globalne przestrzenie nazw  
+ Obiekt <xref:System.Xml.Linq.XNamespace> można uzyskać za pomocą metody `GetXmlNamespace`:  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -199,4 +199,4 @@ http://www.adventure-works.com
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Przegląd przestrzeni nazw (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

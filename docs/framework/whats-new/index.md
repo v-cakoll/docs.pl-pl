@@ -19,10 +19,10 @@ ms.locfileid: "74281653"
 
 Ten artykuł podsumowuje najważniejsze nowe funkcje i ulepszenia w następujących wersjach .NET Framework:
 
-- [.NET Framework 4.8](#v48)
+- [.NET Framework 4,8](#v48)
 - [.NET Framework 4.7.2](#v472)
 - [.NET Framework 4.7.1](#v471)
-- [.NET Framework 4.7](#v47)
+- [.NET Framework 4,7](#v47)
 - [.NET Framework 4.6.2](#v462)
 - [.NET Framework 4.6.1](#v461)
 - [.NET 2015 i .NET Framework 4,6](#v46)
@@ -201,7 +201,7 @@ Aby włączyć obsługę skalowania wysokiej rozdzielczości DPI w trybie miesza
 
 - [Klasy bazowe](#core-472)
 - [ASP.NET](#asp-net472)
-- [Sieć](#net472)
+- [Sieci](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -434,7 +434,7 @@ Można dodać SameSite dla plików cookie <xref:System.Web.Security.FormsAuthent
 
 <a name="net472" />
 
-#### <a name="networking"></a>Obsługa sieci
+#### <a name="networking"></a>Networking
 
 **Implementacja właściwości HttpClientHandler**
 
@@ -589,7 +589,7 @@ W przypadku aplikacji Windows Forms poprzednie obejście ustawienia rozpoznawani
 
 - [Klasy bazowe](#core471)
 - [Środowisko uruchomieniowe języka wspólnego (CLR)](#clr)
-- [Sieć](#net471)
+- [Sieci](#net471)
 - [ASP.NET](#asp-net471)
 
 Ponadto najważniejszym fokusem w .NET Framework 4.7.1 jest ulepszony ułatwienia dostępu, dzięki czemu aplikacja może zapewnić odpowiednie środowisko dla użytkowników technologii pomocniczej. Informacje o ulepszeniach ułatwień dostępu w programie .NET Framework 4.7.1 można znaleźć w temacie [co nowego w ułatwieniach dostępu w .NET Framework](whats-new-in-accessibility.md).
@@ -630,7 +630,7 @@ Zmiany w wyrzucaniu elementów bezużytecznych (GC) w .NET Framework 4.7.1 popra
 
 <a name="net471"/>
 
-#### <a name="networking"></a>Obsługa sieci
+#### <a name="networking"></a>Networking
 
 **Obsługa algorytmu SHA-2 dla komunikatu. algorytm**
 
@@ -671,7 +671,7 @@ W .NET Framework 4,7 i wcześniejszych wersjach ASP.NET zezwolenie deweloperom n
 .NET Framework 4,7 zawiera nowe funkcje w następujących obszarach:
 
 - [Klasy bazowe](#Core47)
-- [Sieć](#net47)
+- [Sieci](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
@@ -699,7 +699,7 @@ W .NET Framework 4,7 <xref:System.Runtime.Serialization.Json.DataContractJsonSer
 
 <a name="net47" />
 
-#### <a name="networking"></a>Obsługa sieci
+#### <a name="networking"></a>Networking
 
 .NET Framework 4,7 dodaje następującą funkcję powiązaną z siecią:
 
@@ -792,7 +792,7 @@ Interfejsy API drukowania WPF w klasie <xref:System.Printing.PrintQueue?displayP
 
 - [Windows Presentation Foundation (WPF)](#WPF462)
 
-- {1&gt;Program Windows Workflow Foundation (WF)&lt;1}
+- [Windows Workflow Foundation (WF)](#WF462)
 
 - [ClickOnce](#clickonce-1)
 
@@ -901,7 +901,7 @@ Zmiany w kategoriach znakowych z Unicode 6,0 na Unicode 7,0 można znaleźć [w 
 
 <a name="Crypto462" />
 
-### <a name="cryptography"></a>Cryptography
+### <a name="cryptography"></a>Kryptografia
 
 **Obsługa certyfikatów x509 zawierających FIPS 186-3 DSA**
 
@@ -1190,7 +1190,7 @@ W przypadku aplikacji uruchamianych w ramach .NET Framework 4.6.2 można wyłąc
 
 <a name="WF462" />
 
-### <a name="windows-workflow-foundation-wf"></a>Program Windows Workflow Foundation (WF)
+### <a name="windows-workflow-foundation-wf"></a>{1&gt;Program Windows Workflow Foundation (WF)&lt;1}
 
 W .NET Framework 4.6.2 Windows Workflow Foundation został ulepszony w następującym obszarze:
 
@@ -1405,7 +1405,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   Aby uzyskać więcej informacji, zobacz [ASP.NET Core](/aspnet/core/).
 
-- **ASP.NET Updates**
+- **Aktualizacje ASP.NET**
 
   - **Interfejs API oparty na zadaniach dla opróżniania odpowiedzi asynchronicznej**
 
@@ -1709,7 +1709,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   Wartość domyślna to `false`.
 
-- **Sieć**
+- **Sieci**
 
   - **Ponowne użycie gniazda**
 
@@ -1743,7 +1743,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
 - **Obsługa kodowania stron kodowych**
 
-  Program .NET Core obsługuje przede wszystkim kodowania Unicode i domyślnie udostępnia ograniczoną obsługę kodowania stron kodowych. Można dodać obsługę kodowania stron kodowych dostępnych w .NET Framework ale nieobsługiwane w programie .NET Core przez zarejestrowanie kodowania stron kodowych za pomocą metody <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+  Program .NET Core obsługuje przede wszystkim kodowania Unicode i domyślnie udostępnia ograniczoną obsługę kodowania stron kodowych. Można dodać obsługę kodowania stron kodowych dostępnych w .NET Framework ale nieobsługiwane w programie .NET Core przez zarejestrowanie kodowania stron kodowych za pomocą metody <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz temat <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Native**
 
@@ -2062,7 +2062,7 @@ Aby uzyskać więcej informacji, zobacz [co nowego w Windows Communication Found
 
 <a name="windows_workflow_foundation" />
 
-### <a name="windows-workflow-foundation-wf"></a>Program Windows Workflow Foundation (WF)
+### <a name="windows-workflow-foundation-wf"></a>{1&gt;Program Windows Workflow Foundation (WF)&lt;1}
 
 W .NET Framework 4,5 dodano kilka nowych funkcji do Windows Workflow Foundation (WF), w tym:
 

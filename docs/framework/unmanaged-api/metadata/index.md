@@ -14,20 +14,20 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443287"
 ---
 # <a name="metadata-unmanaged-api-reference"></a>Metadane (niezarządzany wykaz interfejsów API)
-The metadata API enables a client, such as a compiler, to generate or access a component's metadata without the types being loaded by the common language runtime (CLR).  
+Interfejs API metadanych umożliwia klientowi, takie jak kompilator, generowanie metadanych składnika lub uzyskiwanie do nich dostępu bez typów ładowanych przez środowisko uruchomieniowe języka wspólnego (CLR).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
- Describes the unmanaged interfaces that provide access to the metadata exposed by the .NET Framework types, methods, fields, and so on.  
+ Opisuje interfejsy niezarządzane, które zapewniają dostęp do metadanych uwidocznionych przez typy .NET Framework, metody, pola i tak dalej.  
   
  [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
- Describes the unmanaged global static functions that the metadata API uses.  
+ Opisuje niezarządzane globalne funkcje statyczne używane przez interfejs API metadanych.  
   
  [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
- Describes the unmanaged enumerations that the metadata API uses.  
+ Opisuje niezarządzane wyliczenia używane przez interfejs API metadanych.  
   
  [Struktury metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
- Describes the unmanaged structures that the metadata API uses.  
+ Opisuje strukturę niezarządzaną używaną przez interfejs API metadanych.  
   
  [Unie metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)  
- Describes the unmanaged unions that the metadata API uses.
+ Opisuje związki niezarządzane używane przez interfejs API metadanych.

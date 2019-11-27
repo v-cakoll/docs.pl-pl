@@ -28,46 +28,46 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74205021"
 ---
 # <a name="types-of-isolation"></a>Typy izolacji
-Access to isolated storage is always restricted to the user who created it. To implement this type of isolation, the common language runtime uses the same notion of user identity that the operating system recognizes, which is the identity associated with the process in which the code is running when the store is opened. This identity is an authenticated user identity, but impersonation can cause the identity of the current user to change dynamically.  
+Dostęp do wydzielonej pamięci masowej jest zawsze ograniczony do użytkownika, który go utworzył. W celu zaimplementowania tego typu izolacji środowisko uruchomieniowe języka wspólnego używa tego samego pojęcia tożsamości użytkownika, która jest rozpoznawana przez system operacyjny, co jest tożsamością skojarzoną z procesem, w którym uruchomiono kod w momencie otwarcia magazynu. Ta tożsamość jest uwierzytelnianą tożsamością użytkownika, ale personifikacja może spowodować dynamiczną zmianę tożsamości bieżącego użytkownika.  
   
- Access to isolated storage is also restricted according to the identity associated with the application's domain and assembly, or with the assembly alone. The runtime obtains these identities in the following ways:  
+ Dostęp do izolowanego magazynu jest również ograniczany zgodnie z tożsamością skojarzoną z domeną i zestawem aplikacji albo z samym zestawem. Środowisko uruchomieniowe uzyskuje te tożsamości w następujący sposób:  
   
-- Domain identity represents the evidence of the application, which in the case of a web application might be the full URL. For shell-hosted code, the domain identity might be based on the application directory path. For example, if the executable runs from the path C:\Office\MyApp.exe, the domain identity would be C:\Office\MyApp.exe.  
+- Tożsamość domeny reprezentuje dowód aplikacji, co w przypadku, gdy aplikacja sieci Web może być pełnym adresem URL. W przypadku kodu hostowanego przez powłokę tożsamość domeny może opierać się na ścieżce katalogu aplikacji. Na przykład jeśli plik wykonywalny jest uruchamiany ze ścieżki C:\Office\MyApp.exe, tożsamość domeny byłaby C:\Office\MyApp.exe.  
   
-- Assembly identity is the evidence of the assembly. This might come from a cryptographic digital signature, which can be the assembly's [strong name](../assembly/strong-named.md), the software publisher of the assembly, or its URL identity. If an assembly has both a strong name and a software publisher identity, then the software publisher identity is used. If the assembly comes from the Internet and is unsigned, the URL identity is used. For more information about assemblies and strong names, see [Programming with Assemblies](../assembly/program.md).  
+- Tożsamość zestawu jest dowodem zestawu. Może to wynikać z kryptograficznego podpisu cyfrowego, który może być [silną nazwą](../assembly/strong-named.md)zestawu, wydawcą oprogramowania zestawu lub TOŻSAMOŚCIĄ adresu URL. Jeśli zestaw ma silną nazwę i tożsamość wydawcy oprogramowania, używana jest tożsamość wydawcy oprogramowania. Jeśli zestaw pochodzi z Internetu i jest niepodpisany, zostanie użyta tożsamość adresu URL. Aby uzyskać więcej informacji o zestawach i silnych nazwach, zobacz [programowanie z zestawami](../assembly/program.md).  
   
-- Roaming stores move with a user that has a roaming user profile. Files are written to a network directory and are downloaded to any computer the user logs into. For more information about roaming user profiles, see <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
+- Magazyny mobilne są przenoszone przy użyciu użytkownika, który ma profil użytkownika mobilnego. Pliki są zapisywane w katalogu sieciowym i pobierane na każdy komputer, na którym loguje się użytkownik. Aby uzyskać więcej informacji o profilach użytkowników mobilnych, zobacz <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   
- By combining the concepts of user, domain, and assembly identity, isolated storage can isolate data in the following ways, each of which has its own usage scenarios:  
+ Łącząc koncepcje użytkownika, domeny i zestawu, izolowany magazyn może izolować dane w następujący sposób, z których każdy ma własne scenariusze użycia:  
   
-- [Isolation by user and assembly](#UserAssembly)  
+- [Izolacja według użytkownika i zestawu](#UserAssembly)  
   
-- [Isolation by user, domain, and assembly](#UserDomainAssembly)  
+- [Izolacja według użytkownika, domeny i zestawu](#UserDomainAssembly)  
   
- Either of these isolations can be combined with a roaming user profile. For more information, see the section [Isolated Storage and Roaming](#Roaming).  
+ Każdą z tych izolacji można połączyć z profilem użytkownika mobilnego. Aby uzyskać więcej informacji, zapoznaj się z sekcją [izolowanego magazynu i roamingu](#Roaming).  
   
- The following illustration demonstrates how stores are isolated in different scopes:  
+ Na poniższej ilustracji przedstawiono sposób odizolowania magazynów w różnych zakresach:  
   
- ![Diagram that shows isolation by user and assembly.](./media/types-of-isolation/isolated-storage-types.gif)  
+ ![Diagram, który pokazuje izolację według użytkownika i zestawu.](./media/types-of-isolation/isolated-storage-types.gif)  
   
- Note that except for roaming stores, isolated storage is always implicitly isolated by computer because it uses the storage facilities that are local to a given computer.  
+ Należy pamiętać, że z wyjątkiem magazynów mobilnych magazyn izolowany jest zawsze niejawnie izolowany przez komputer, ponieważ używa miejsc magazynu lokalnych dla danego komputera.  
   
 > [!IMPORTANT]
-> Isolated storage is not available for Windows 8.x Store apps. Instead, use the application data classes in the `Windows.Storage` namespaces included in the Windows Runtime API to store local data and files. For more information, see [Application data](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) in the Windows Dev Center.  
+> Izolowany magazyn nie jest dostępny dla aplikacji ze sklepu Windows 8. x. Zamiast tego należy użyć klas danych aplikacji znajdujących się w `Windows.Storage` przestrzenie nazw, które znajdują się w interfejsie API środowisko wykonawcze systemu Windows do przechowywania lokalnych danych i plików. Aby uzyskać więcej informacji, zobacz [dane aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) w centrum deweloperów systemu Windows.  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>Izolacja według użytkownika i zestawu  
- When the assembly that uses the data store needs to be accessible from any application's domain, isolation by user and assembly is appropriate. Typically, in this situation, isolated storage is used to store data that applies across multiple applications and is not tied to any particular application, such as the user's name or license information. To access storage isolated by user and assembly, code must be trusted to transfer information between applications. Typically, isolation by user and assembly is allowed on intranets but not on the Internet. Calling the static <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> method and passing in a user and an assembly <xref:System.IO.IsolatedStorage.IsolatedStorageScope> returns storage with this kind of isolation.  
+ Gdy zestaw, który korzysta z magazynu danych, musi być dostępny z poziomu domeny dowolnej aplikacji, należy poizolować Izolacja według użytkownika i zestawu. Zwykle w takiej sytuacji magazyn izolowany jest używany do przechowywania danych, które są stosowane w wielu aplikacjach i nie jest powiązany z żadną określoną aplikacją, taką jak nazwa użytkownika lub informacje o licencji. Aby uzyskać dostęp do magazynu izolowanego przez użytkownika i zestaw, kod musi być zaufany, aby można było przesyłać informacje między aplikacjami. Zwykle Izolacja według użytkownika i zestawu jest dozwolona w intranecie, ale nie w Internecie. Wywołanie statycznej metody <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> i przekazanie do użytkownika i zestawu <xref:System.IO.IsolatedStorage.IsolatedStorageScope> zwraca magazyn z tym rodzajem izolacji.  
   
- The following code example retrieves a store that is isolated by user and assembly. The store can be accessed through the `isoFile` object.  
+ Poniższy przykład kodu pobiera magazyn izolowany przez użytkownika i zestaw. Dostęp do magazynu można uzyskać za pomocą obiektu `isoFile`.  
   
  [!code-cpp[Conceptual.IsolatedStorage#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source11.cpp#17)]
  [!code-csharp[Conceptual.IsolatedStorage#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#17)]
  [!code-vb[Conceptual.IsolatedStorage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source11.vb#17)]  
   
- For an example that uses the evidence parameters, see <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%28System.IO.IsolatedStorage.IsolatedStorageScope%2CSystem.Security.Policy.Evidence%2CSystem.Type%2CSystem.Security.Policy.Evidence%2CSystem.Type%29>.  
+ Aby zapoznać się z przykładem, który korzysta z parametrów dowodowych, zobacz <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%28System.IO.IsolatedStorage.IsolatedStorageScope%2CSystem.Security.Policy.Evidence%2CSystem.Type%2CSystem.Security.Policy.Evidence%2CSystem.Type%29>.  
   
- The <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> method is available as a shortcut, as shown in the following code example. This shortcut cannot be used to open stores that are capable of roaming; use <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> in such cases.  
+ Metoda <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> jest dostępna jako skrót, jak pokazano w poniższym przykładzie kodu. Ten skrót nie może być używany do otwierania magazynów, które mogą być mobilne; w takich przypadkach należy używać <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>.  
   
  [!code-cpp[Conceptual.IsolatedStorage#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source11.cpp#18)]
  [!code-csharp[Conceptual.IsolatedStorage#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#18)]
@@ -75,15 +75,15 @@ Access to isolated storage is always restricted to the user who created it. To i
   
 <a name="UserDomainAssembly"></a>   
 ## <a name="isolation-by-user-domain-and-assembly"></a>Izolacja według użytkownika, domeny i zestawu  
- If your application uses a third-party assembly that requires a private data store, you can use isolated storage to store the private data. Isolation by user, domain, and assembly ensures that only code in a given assembly can access the data, and only when the assembly is used by the application that was running when the assembly created the store, and only when the user for whom the store was created runs the application. Isolation by user, domain, and assembly keeps the third-party assembly from leaking data to other applications. This isolation type should be your default choice if you know that you want to use isolated storage but are not sure which type of isolation to use. Calling the static <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> method of <xref:System.IO.IsolatedStorage.IsolatedStorageFile> and passing in a user, domain, and assembly <xref:System.IO.IsolatedStorage.IsolatedStorageScope> returns storage with this kind of isolation.  
+ Jeśli aplikacja używa zestawu innej firmy, który wymaga prywatnego magazynu danych, można używać wydzielonej pamięci masowej do przechowywania danych prywatnych. Izolacja według użytkownika, domeny i zestawu zapewnia, że tylko kod w danym zestawie może uzyskać dostęp do danych i tylko wtedy, gdy zestaw jest używany przez aplikację, która była uruchomiona, gdy zestaw utworzył magazyn, i tylko wtedy, gdy użytkownik, dla którego utworzono ten magazyn, uruchamia  Aplikacja. Izolacja według użytkownika, domeny i zestawu utrzymuje zestaw innej firmy z powodu przecieku danych do innych aplikacji. Ten typ izolacji powinien być wyborem domyślnym, Jeśli wiesz, że chcesz użyć izolowanego magazynu, ale nie masz pewności, jakiego typu izolacji użyć. Wywołanie statycznej <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> metody <xref:System.IO.IsolatedStorage.IsolatedStorageFile> i przekazanie do użytkownika, domeny i zestawu <xref:System.IO.IsolatedStorage.IsolatedStorageScope> zwraca magazyn z tym rodzajem izolacji.  
   
- The following code example retrieves a store isolated by user, domain, and assembly. The store can be accessed through the `isoFile` object.  
+ Poniższy przykład kodu pobiera magazyn izolowany według użytkownika, domeny i zestawu. Dostęp do magazynu można uzyskać za pomocą obiektu `isoFile`.  
   
  [!code-cpp[Conceptual.IsolatedStorage#14](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source10.cpp#14)]
  [!code-csharp[Conceptual.IsolatedStorage#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#14)]
  [!code-vb[Conceptual.IsolatedStorage#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#14)]  
   
- Another method is available as a shortcut, as shown in the following code example. This shortcut cannot be used to open stores that are capable of roaming; use <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> in such cases.  
+ Inna metoda jest dostępna jako skrót, jak pokazano w poniższym przykładzie kodu. Ten skrót nie może być używany do otwierania magazynów, które mogą być mobilne; w takich przypadkach należy używać <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>.  
   
  [!code-cpp[Conceptual.IsolatedStorage#15](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source10.cpp#15)]
  [!code-csharp[Conceptual.IsolatedStorage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#15)]
@@ -91,15 +91,15 @@ Access to isolated storage is always restricted to the user who created it. To i
   
 <a name="Roaming"></a>   
 ## <a name="isolated-storage-and-roaming"></a>Izolowany magazyn i roaming  
- Roaming user profiles are a Windows feature that enables a user to set up an identity on a network and use that identity to log into any network computer, carrying over all personalized settings. An assembly that uses isolated storage can specify that the user's isolated storage should move with the roaming user profile. Roaming can be used in conjunction with isolation by user and assembly or with isolation by user, domain, and assembly. If a roaming scope is not used, stores will not roam even if a roaming user profile is used.  
+ Profile użytkowników mobilnych to funkcja systemu Windows, która umożliwia użytkownikowi skonfigurowanie tożsamości w sieci i użycie tej tożsamości do logowania się do dowolnego komputera sieciowego i przechodzenia do wszystkich spersonalizowanych ustawień. Zestaw, który używa wydzielonej pamięci masowej, może określić, że magazyn izolowany użytkownika powinien być przenoszony przy użyciu profilu użytkownika mobilnego. Roaming może być używany w połączeniu z izolacją użytkownika i zestawu lub z izolacją według użytkownika, domeny i zestawu. Jeśli zakres roamingu nie jest używany, sklepy nie przechodzą nawet wtedy, gdy zostanie użyty profil użytkownika mobilnego.  
   
- The following code example retrieves a roaming store isolated by user and assembly. The store can be accessed through the `isoFile` object.  
+ Poniższy przykład kodu pobiera magazyn mobilny izolowany przez użytkownika i zestaw. Dostęp do magazynu można uzyskać za pomocą obiektu `isoFile`.  
   
  [!code-cpp[Conceptual.IsolatedStorage#11](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source9.cpp#11)]
  [!code-csharp[Conceptual.IsolatedStorage#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#11)]
  [!code-vb[Conceptual.IsolatedStorage#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#11)]  
   
- A domain scope can be added to create a roaming store isolated by user, domain, and application. The following code example demonstrates this.  
+ Zakres domeny można dodać, aby utworzyć magazyn roamingu izolowany przez użytkownika, domenę i aplikację. Poniższy przykład kodu demonstruje ten sposób.  
   
  [!code-cpp[Conceptual.IsolatedStorage#12](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source9.cpp#12)]
  [!code-csharp[Conceptual.IsolatedStorage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#12)]

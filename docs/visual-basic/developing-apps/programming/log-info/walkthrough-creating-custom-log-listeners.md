@@ -14,98 +14,98 @@ ms.locfileid: "74353624"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Wskazówki: tworzenie odbiorników logu niestandardowego (C# i Visual Basic)
 
-This walkthrough demonstrates how to create a custom log listener and configure it to listen to the output of the `My.Application.Log` object.
+W tym instruktażu pokazano, jak utworzyć odbiornik dziennika niestandardowego i skonfigurować go do nasłuchiwania danych wyjściowych obiektu `My.Application.Log`.
 
 ## <a name="getting-started"></a>Wprowadzenie
 
-Log listeners must inherit from the <xref:System.Diagnostics.TraceListener> class.
+Odbiorniki dzienników muszą dziedziczyć z klasy <xref:System.Diagnostics.TraceListener>.
 
-#### <a name="to-create-the-listener"></a>To create the listener
+#### <a name="to-create-the-listener"></a>Aby utworzyć odbiornik
 
-- In your application, create a class named `SimpleListener` that inherits from <xref:System.Diagnostics.TraceListener>.
+- W aplikacji Utwórz klasę o nazwie `SimpleListener`, która dziedziczy po <xref:System.Diagnostics.TraceListener>.
 
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]
 
-     The <xref:System.Diagnostics.TraceListener.Write%2A> and <xref:System.Diagnostics.TraceListener.WriteLine%2A> methods, required by the base class, call `MsgBox` to display their input.
+     Metody <xref:System.Diagnostics.TraceListener.Write%2A> i <xref:System.Diagnostics.TraceListener.WriteLine%2A>, wymagane przez klasę bazową, wywołują `MsgBox`, aby wyświetlić ich dane wejściowe.
 
-     The <xref:System.Security.Permissions.HostProtectionAttribute> attribute is applied to the <xref:System.Diagnostics.TraceListener.Write%2A> and <xref:System.Diagnostics.TraceListener.WriteLine%2A> methods so that their attributes match the base class methods. The <xref:System.Security.Permissions.HostProtectionAttribute> attribute allows the host that runs the code to determine that the code exposes host-protection synchronization.
+     Atrybut <xref:System.Security.Permissions.HostProtectionAttribute> jest stosowany do metod <xref:System.Diagnostics.TraceListener.Write%2A> i <xref:System.Diagnostics.TraceListener.WriteLine%2A>, tak aby ich atrybuty pasowały do metod klasy bazowej. Atrybut <xref:System.Security.Permissions.HostProtectionAttribute> zezwala na hosta, na którym jest uruchamiany kod, aby określić, że kod uwidacznia synchronizację z ochroną hosta.
 
     > [!NOTE]
-    > The <xref:System.Security.Permissions.HostProtectionAttribute> attribute is effective only on unmanaged applications that host the common language runtime and that implement host protection, such as SQL Server.
+    > Atrybut <xref:System.Security.Permissions.HostProtectionAttribute> ma zastosowanie tylko do niezarządzanych aplikacji, które obsługują środowisko uruchomieniowe języka wspólnego i implementują ochronę hosta, taką jak SQL Server.
 
-To ensure that `My.Application.Log` uses your log listener, you should strongly name the assembly that contains your log listener.
+Aby upewnić się, że `My.Application.Log` używa odbiornika dzienników, należy silnie nawiązać nazwę zestawu, który zawiera odbiornik dzienników.
 
-The next procedure provides some simple steps for creating a strongly named log-listener assembly. For more information, see [Creating and Using Strong-Named Assemblies](../../../../standard/assembly/create-use-strong-named.md).
+Kolejna procedura zawiera kilka prostych kroków służących do tworzenia silnie nazwanego zestawu detektora dzienników. Aby uzyskać więcej informacji, zobacz [Tworzenie i używanie zestawów o silnej nazwie](../../../../standard/assembly/create-use-strong-named.md).
 
-#### <a name="to-strongly-name-the-log-listener-assembly"></a>To strongly name the log-listener assembly
+#### <a name="to-strongly-name-the-log-listener-assembly"></a>Aby silnie nawiązać nazwę zestawu odbiornika dzienników
 
-1. Have a project selected in **Solution Explorer**. On the **Project** menu, choose **Properties**.
+1. Zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** wybierz polecenie **Właściwości**.
 
-2. Click the **Signing** tab.
+2. Kliknij kartę **podpisywanie** .
 
-3. Select the **Sign the assembly** box.
+3. Zaznacz pole **podpisz zestaw** .
 
-4. Select **\<New>** from the **Choose a strong name key file** drop-down list.
+4. Wybierz pozycję **\<nowe >** z listy rozwijanej **Wybierz plik klucza o silnej nazwie** .
 
-     The **Create Strong Name Key** dialog box opens.
+     Zostanie otwarte okno dialogowe **Tworzenie klucza silnej nazwy** .
 
-5. Provide a name for the key file in the **Key file name** box.
+5. Podaj nazwę pliku klucza w polu **Nazwa pliku klucza** .
 
-6. Enter a password in the **Enter password** and **Confirm password** boxes.
+6. Wprowadź hasło w polach **Wprowadź hasło** i **Potwierdź hasło** .
 
 7. Kliknij przycisk **OK**.
 
-8. Rebuild the application.
+8. Skompiluj ponownie aplikację.
 
-## <a name="adding-the-listener"></a>Adding the Listener
+## <a name="adding-the-listener"></a>Dodawanie odbiornika
 
-Now that the assembly has a strong name, you need to determine the strong name of the listener so that `My.Application.Log` uses your log listener.
+Teraz, gdy zestaw ma silną nazwę, należy określić silną nazwę odbiornika, tak aby `My.Application.Log` używała Twojego odbiornika dzienników.
 
-The format of a strongly named type is as follows.
+Format silnie nazwanego typu jest następujący.
 
-\<type name>, \<assembly name>, \<version number>, \<culture>, \<strong name>
+Nazwa typu \<>, \<nazwa zestawu >, \<numer wersji >, \<kultur >, \<silnej nazwy >
 
-#### <a name="to-determine-the-strong-name-of-the-listener"></a>To determine the strong name of the listener
+#### <a name="to-determine-the-strong-name-of-the-listener"></a>Aby określić silną nazwę odbiornika
 
-- The following code shows how to determine the strongly named type name for `SimpleListener`.
+- Poniższy kod pokazuje, jak określić silnie nazwanego typu dla `SimpleListener`.
 
      [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]
 
-     The strong name of the type depends on your project.
+     Silna nazwa typu zależy od projektu.
 
-With the strong name, you can add the listener to the `My.Application.Log` log-listener collection.
+Za pomocą silnej nazwy można dodać odbiornik do kolekcji `My.Application.Log` dziennika.
 
-#### <a name="to-add-the-listener-to-myapplicationlog"></a>To add the listener to My.Application.Log
+#### <a name="to-add-the-listener-to-myapplicationlog"></a>Aby dodać odbiornik do My. Application. log
 
-1. Right-click on app.config in the **Solution Explorer** and choose **Open**.
+1. Kliknij prawym przyciskiem myszy plik App. config w **Eksplorator rozwiązań** i wybierz polecenie **Otwórz**.
 
      —lub—
 
-     If there is an app.config file:
+     Jeśli istnieje plik App. config:
 
-    1. On the **Project** menu, choose **Add New Item**.
+    1. W menu **projekt** wybierz polecenie **Dodaj nowy element**.
 
-    2. From the **Add New Item** dialog box, choose **Application Configuration File**.
+    2. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **plik konfiguracji aplikacji**.
 
     3. Kliknij przycisk **Dodaj**.
 
-2. Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", located in the `<sources>` section. The `<sources>` section is located in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
+2. Znajdź sekcję `<listeners>` w sekcji `<source>` z atrybutem `name` "DefaultSource" znajdującym się w sekcji `<sources>`. Sekcja `<sources>` znajduje się w sekcji `<system.diagnostics>` w sekcji `<configuration>` najwyższego poziomu.
 
-3. Add this element to the `<listeners>` section:
+3. Dodaj ten element do sekcji `<listeners>`:
 
     ```xml
     <add name="SimpleLog" />
     ```
 
-4. Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
+4. Znajdź sekcję `<sharedListeners>` w sekcji `<system.diagnostics>` w sekcji `<configuration>` najwyższego poziomu.
 
-5. Add this element to that `<sharedListeners>` section:
+5. Dodaj ten element do `<sharedListeners>` sekcji:
 
     ```xml
     <add name="SimpleLog" type="SimpleLogStrongName" />
     ```
 
-     Change the value of `SimpleLogStrongName` to be the strong name of the listener.
+     Zmień wartość `SimpleLogStrongName` na silną nazwę odbiornika.
 
 ## <a name="see-also"></a>Zobacz także
 

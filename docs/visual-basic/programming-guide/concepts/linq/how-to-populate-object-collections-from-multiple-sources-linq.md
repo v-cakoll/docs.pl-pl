@@ -9,20 +9,20 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346981"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Instrukcje: wypełnianie kolekcji obiektów z wielu źródeł (LINQ) (Visual Basic)
 
-This example shows how to merge data from different sources into a sequence of new types.
+Ten przykład pokazuje, jak scalać dane z różnych źródeł w sekwencję nowych typów.
 
 > [!NOTE]
-> Don't try to join in-memory data or data in the file system with data that is still in a database. Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources. Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough. To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.
+> Nie należy próbować przyłączyć danych w pamięci lub danych w systemie plików o dane, które są nadal w bazie danych. Takie sprzężenia między domenami mogą dać niezdefiniowane wyniki, ponieważ różne sposoby, w których operacje Join mogą być zdefiniowane dla zapytań bazy danych i innych typów źródeł. Ponadto istnieje ryzyko, że takie działanie może spowodować wyjątek braku pamięci, jeśli ilość danych w bazie danych jest wystarczająco duża. Aby dołączyć dane z bazy danych do danych znajdujących się w pamięci, najpierw Wywołaj `ToList` lub `ToArray` w zapytaniu bazy danych, a następnie wykonaj sprzężenie w zwróconej kolekcji.
 
-## <a name="to-create-the-data-file"></a>To create the data file
+## <a name="to-create-the-data-file"></a>Aby utworzyć plik danych
 
-- Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+- Skopiuj pliki Names. csv i Scores. CSV do folderu projektu, zgodnie z opisem w artykule [jak: dołączanie zawartości z niepodobnych plików (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Przykład
 
-The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format. The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores. The ID is used as the foreign key.
+Poniższy przykład pokazuje, jak używać nazwanego typu `Student` do przechowywania scalonych danych z dwóch kolekcji w pamięci ciągów, które symulują dane arkusza kalkulacyjnego w formacie CSV. Pierwszy zbiór ciągów reprezentuje nazwy uczniów i identyfikatory, a druga Kolekcja reprezentuje identyfikator ucznia (w pierwszej kolumnie) i cztery wyniki egzaminu. Identyfikator jest używany jako klucz obcy.
 
 ```vb
 Imports System.Collections.Generic
@@ -100,9 +100,9 @@ End Class
 ' The average score of Michael Tucker is 92
 ```
 
-In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.
+W klauzuli [SELECT klauzula](../../../../visual-basic/language-reference/queries/select-clause.md) Inicjator obiektu jest używany do tworzenia wystąpienia każdego nowego obiektu `Student` przy użyciu danych z dwóch źródeł.
 
-If you don't have to store the results of a query, anonymous types can be more convenient than named types. Named types are required if you pass the query results outside the method in which the query is executed. The following example performs the same task as the previous example, but uses anonymous types instead of named types:
+Jeśli nie musisz przechowywać wyników zapytania, typy anonimowe mogą być wygodniejsze niż nazwane typy. Nazwane typy są wymagane, Jeśli przekażesz wyniki zapytania poza metodę, w której jest wykonywane zapytanie. Poniższy przykład wykonuje to samo zadanie co w poprzednim przykładzie, ale używa typów anonimowych zamiast nazwanych:
 
 ```vb
 ' Merge the data by using an anonymous type.
@@ -130,4 +130,4 @@ Next
 
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

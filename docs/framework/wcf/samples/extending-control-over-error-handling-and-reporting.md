@@ -17,7 +17,7 @@ Ten przykład pokazuje, jak zwiększyć kontrolę nad obsługą błędów i rapo
   
  Usługi mogą przechwycić błędy, przetwarzać i wpływać na błędy raportowane przy użyciu interfejsu <xref:System.ServiceModel.Dispatcher.IErrorHandler>. Interfejs ma dwie metody, które mogą być zaimplementowane: <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> i <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>. Metoda <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> pozwala dodawać, modyfikować lub pomijać komunikat o błędzie generowany w odpowiedzi na wyjątek. Metoda <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> umożliwia przetwarzanie błędów w przypadku błędu i kontroluje, czy można uruchomić dodatkową obsługę błędów.  
   
- W tym przykładzie typ `CalculatorErrorHandler` implementuje interfejs <xref:System.ServiceModel.Dispatcher.IErrorHandler>. W  
+ W tym przykładzie typ `CalculatorErrorHandler` implementuje interfejs <xref:System.ServiceModel.Dispatcher.IErrorHandler>. Z  
   
  <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> Metoda `CalculatorErrorHandler` zapisuje dziennik błędu w pliku tekstowym Error. txt w c:\LOGS. Należy zauważyć, że przykład rejestruje błąd i nie pomija go, co umożliwia jego raportowanie z powrotem do klienta programu.  
   

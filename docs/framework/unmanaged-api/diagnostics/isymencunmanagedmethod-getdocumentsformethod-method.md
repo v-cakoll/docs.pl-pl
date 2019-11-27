@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448383"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod — Metoda
-Gets the documents that this method has lines in.  
+Pobiera dokumenty, w których ta metoda zawiera wiersze.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,19 +36,19 @@ HRESULT GetDocumentsForMethod(
   
 ## <a name="parameters"></a>Parametry  
  `cDocs`  
- [in] The length of the buffer pointed to by `pcDocs`.  
+ podczas Długość buforu wskazywanego przez `pcDocs`.  
   
  `pcDocs`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.  
+ określoną Wskaźnik do `ULONG32`, który odbiera rozmiar (w znakach) bufora wymaganego do przechowywania dokumentów.  
   
  `documents`  
- [in] The buffer that contains the documents.  
+ podczas Bufor, który zawiera dokumenty.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, an error code.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427966"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo — Metoda
-Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header. The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`. (The compiler is responsible for setting these two fields appropriately.)  
+Zwraca informacje niezbędne do zapisania przez kompilator wpisu katalogu debugowania w nagłówku przenośnego pliku wykonywalnego (PE). Moduł zapisywania symboli wypełnia wszystkie pola z wyjątkiem `TimeDateStamp` i `PointerToRawData`. (Kompilator jest odpowiedzialny za odpowiednie ustawienie tych dwóch pól).  
   
- A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file. The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.  
+ Kompilator powinien wywołać tę metodę, emitować obiekt BLOB danych do pliku PE, ustawić pole `PointerToRawData` w IMAGE_DEBUG_DIRECTORY, aby wskazywało emitowane dane, i napisać IMAGE_DEBUG_DIRECTORY do pliku PE. Kompilator powinien również ustawić pole `TimeDateStamp` tak, aby było równe `TimeDateStamp` generowanego pliku PE.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,22 +40,22 @@ HRESULT GetDebugInfo(
   
 ## <a name="parameters"></a>Parametry  
  `pIDD`  
- [in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.  
+ [in. out] Wskaźnik do IMAGE_DEBUG_DIRECTORY wypełniania przez moduł zapisujący symboli.  
   
  `cData`  
- [in] A `DWORD` that contains the size of the debug data.  
+ podczas `DWORD`, który zawiera rozmiar danych debugowania.  
   
  `pcData`  
- [out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.  
+ określoną Wskaźnik do `DWORD`, który odbiera rozmiar buforu wymaganego do przechowywania danych debugowania.  
   
  `data`  
- [out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.  
+ określoną Wskaźnik do buforu, który jest wystarczająco duży, aby pomieścić dane debugowania dla magazynu symboli.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

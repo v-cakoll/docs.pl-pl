@@ -14,13 +14,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352866"
 ---
 # <a name="visual-basic-language-specification"></a>Specyfikacja języka Visual Basic
-The Visual Basic Language Specification is the authoritative source for answers to all questions about Visual Basic grammar and syntax. It contains detailed information about the language, including many points not covered in the Visual Basic reference documentation.  
+Specyfikacja języka Visual Basic jest autorytatywnym źródłem odpowiedzi na wszystkie pytania dotyczące Visual Basic gramatyki i składni. Zawiera szczegółowe informacje o języku, w tym wiele punktów, które nie zostały omówione w dokumentacji referencyjnej Visual Basic.  
   
- The specification is available on the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=188623).  
+ Specyfikacja jest dostępna w [Centrum pobierania Microsoft](https://go.microsoft.com/fwlink/?LinkId=188623).  
   
-This site contains the [VB 11 specification](../../../../_vblang/spec/introduction.md). It's built from the Markdown files contained in [the dotnet/vblang GitHub repository](https://github.com/dotnet/vblang/blob/master/spec/README.md).
+Ta lokacja zawiera [specyfikację VB 11](../../../../_vblang/spec/introduction.md). Jest on skompilowany na podstawie plików promocji zawartych w [repozytorium dotnet/vblang](https://github.com/dotnet/vblang/blob/master/spec/README.md)w witrynie GitHub.
 
-Issues on the specification should be created in the [dotnet/vblang](https://github.com/dotnet/vblang/issues) repository. Or, if you're interested in fixing any errors you find, you may submit a [Pull Request](https://github.com/dotnet/vblang/pulls) to the same repository.
+W repozytorium [dotnet/vblang](https://github.com/dotnet/vblang/issues) należy utworzyć problemy dotyczące specyfikacji. Lub, Jeśli interesuje Cię naprawianie wszelkich znalezionych błędów, możesz przesłać [żądanie ściągnięcia](https://github.com/dotnet/vblang/pulls) do tego samego repozytorium.
 
 ## <a name="see-also"></a>Zobacz także
 

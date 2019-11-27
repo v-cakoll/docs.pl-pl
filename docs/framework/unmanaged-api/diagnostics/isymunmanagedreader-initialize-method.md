@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429738"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize — Metoda
-Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.  
+Inicjuje czytnik symboli z interfejsem importera metadanych, z którym zostanie skojarzony ten czytnik, wraz z nazwą pliku modułu.  
   
 > [!NOTE]
-> This method can be called only once, and must be called before any other reader methods.  
+> Tę metodę można wywołać tylko raz i muszą one zostać wywołane przed innymi metodami czytnika.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,25 +40,25 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>Parametry  
  `importer`  
- [in] The metadata importer interface with which this reader will be associated.  
+ podczas Interfejs programu do importowania metadanych, z którym ten czytnik zostanie skojarzony.  
   
  `filename`  
- [in] The file name of the module. You can use the `pIStream` parameter instead.  
+ podczas Nazwa pliku modułu. Zamiast tego można użyć parametru `pIStream`.  
   
  `searchPath`  
- [in] The path to search. This parameter is optional.  
+ podczas Ścieżka do wyszukania. Ten parametr jest opcjonalny.  
   
  `pIStream`  
- [in] The file stream, used as an alternative to the filename parameter.  
+ podczas Strumień pliku używany jako alternatywa dla parametru filename.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="remarks"></a>Uwagi  
- You need to specify only one of the `filename` or the `pIStream` parameters, not both. The `searchPath` parameter is optional.  
+ Należy określić tylko jeden z `filename` lub `pIStream` parametrów, nie obu. Parametr `searchPath` jest opcjonalny.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

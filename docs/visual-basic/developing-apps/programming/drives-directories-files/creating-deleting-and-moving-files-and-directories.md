@@ -31,97 +31,97 @@ ms.locfileid: "74348909"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Tworzenie, usuwanie i przenoszenie plików i katalogów w Visual Basic
 
-This section lists tasks associated with creating, deleting, moving, and renaming files and directories in Visual Basic.  
+Ta sekcja zawiera listę zadań związanych z tworzeniem, usuwaniem, przeniesieniem i zmianami nazw plików i katalogów w Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
  [Instrukcje: kopiowanie plików z określonym wzorcem do katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
- Demonstrates how to copy files with a specific file name pattern, such as only .txt files, to a directory.  
+ Pokazuje, jak kopiować pliki z określonym wzorcem nazw plików, takim jak tylko pliki txt, do katalogu.  
   
  [Instrukcje: tworzenie kopii pliku w tym samym katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
- Demonstrates how to create a copy of a file in the same directory.  
+ Pokazuje, jak utworzyć kopię pliku w tym samym katalogu.  
   
  [Instrukcje: tworzenie kopii pliku w innym katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
- Demonstrates how to copy a file to another directory.  
+ Demonstruje sposób kopiowania pliku do innego katalogu.  
   
  [Instrukcje: tworzenie pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
- Demonstrates how to create a file.  
+ Pokazuje, jak utworzyć plik.  
   
  [Instrukcje: usuwanie pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
- Demonstrates how to delete a file.  
+ Pokazuje, jak usunąć plik.  
   
  [Instrukcje: znajdowanie plików z określonym wzorcem](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
- Demonstrates how to list only files with a specific file name pattern in a directory.  
+ Pokazuje, w jaki sposób wyświetlać listę tylko plików z określonym wzorcem nazw plików w katalogu.  
   
  [Instrukcje: przenoszenie pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
- Demonstrates how to move a file to a different directory.  
+ Pokazuje, jak przenieść plik do innego katalogu.  
   
  [Instrukcje: zmienianie nazwy pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
- Demonstrates how to rename a file.  
+ Pokazuje, jak zmienić nazwę pliku.  
   
  [Instrukcje: kopiowanie katalogu do innego katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
- Demonstrates how to copy a directory to another location.  
+ Pokazuje, jak skopiować katalog do innej lokalizacji.  
   
  [Instrukcje: tworzenie katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
- Demonstrates how to create a directory.  
+ Pokazuje, jak utworzyć katalog.  
   
  [Instrukcje: znajdowanie podkatalogów z określonym wzorcem](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
- Demonstrates how to list directories with a specific pattern in their name.  
+ Demonstruje sposób wyświetlania listy katalogów z określonym wzorcem w nazwie.  
   
  [Instrukcje: pobieranie kolekcji plików z katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
- Demonstrates how to list the files in a directory.  
+ Pokazuje, jak wyświetlić listę plików w katalogu.  
   
  [Instrukcje: pobieranie zawartości katalogu Moje dokumenty](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
- Demonstrates how to read from special directories.  
+ Pokazuje, jak czytać z katalogów specjalnych.  
   
  [Instrukcje: analizowanie ścieżek plików](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
- Demonstrates how to use `My` methods to combine file paths.  
+ Demonstruje sposób używania metod `My` do łączenia ścieżek plików.  
   
 ## <a name="reference"></a>Tematy pomocy  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- Describes the `My.Computer.FileSystem` object and its members.  
+ Opisuje obiekt `My.Computer.FileSystem` i jego elementy członkowskie.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>  
- Describes the `CombinePath` method.  
+ Opisuje metodę `CombinePath`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>  
- Describes the `CopyDirectory` method.  
+ Opisuje metodę `CopyDirectory`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>  
- Describes the `CopyFile` method.  
+ Opisuje metodę `CopyFile`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>  
- Describes the `CreateDirectory` method.  
+ Opisuje metodę `CreateDirectory`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteDirectory%2A>  
- Describes the `DeleteDirectory` method.  
+ Opisuje metodę `DeleteDirectory`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile%2A>  
- Describes the `DeleteFile` method.  
+ Opisuje metodę `DeleteFile`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A>  
- Describes the `GetParentPath` method.  
+ Opisuje metodę `GetParentPath`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveDirectory%2A>  
- Describes the `MoveDirectory` method.  
+ Opisuje metodę `MoveDirectory`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>  
- Describes the `MoveFile` method.  
+ Opisuje metodę `MoveFile`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameDirectory%2A>  
- Describes the `RenameDirectory` method.  
+ Opisuje metodę `RenameDirectory`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>  
- Describes the `RenameFile` method.  
+ Opisuje metodę `RenameFile`.  
   
  <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>  
- Describes the `SpecialDirectories` object.  
+ Opisuje obiekt `SpecialDirectories`.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
  [Odczyt z plików](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- Lists tasks associated with reading from files.  
+ Wyświetla listę zadań skojarzonych z odczytem z plików.  
   
  [Zapisywanie w plikach](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
- Lists tasks involving writing to files.
+ Wyświetla listę zadań związanych z zapisywaniem do plików.

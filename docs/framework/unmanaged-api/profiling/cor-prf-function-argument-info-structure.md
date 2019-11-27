@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447386"
 ---
 # <a name="cor_prf_function_argument_info-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO — Struktura
-Represents a function's arguments, in left-to-right order.  
+Reprezentuje argumenty funkcji w kolejności od lewej do prawej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,29 +34,29 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
 } COR_PRF_FUNCTION_ARGUMENT_INFO;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`numRanges`|The number of blocks of arguments. That is, this value is the number of [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures in the `ranges` array.|  
-|`totalArgumentSize`|The total size of all arguments. In other words, this value is the sum of the argument lengths.|  
-|`ranges`|An array of `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which represents one block of function arguments.|  
+|`numRanges`|Liczba bloków argumentów. Oznacza to, że ta wartość jest liczbą struktur [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) w tablicy `ranges`.|  
+|`totalArgumentSize`|Łączny rozmiar wszystkich argumentów. Innymi słowy, ta wartość jest sumą argumentów długości.|  
+|`ranges`|Tablica struktur `COR_PRF_FUNCTION_ARGUMENT_RANGE`, z których każdy reprezentuje jeden blok argumentów funkcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- A function may have many arguments. Those arguments might not be stored contiguously in memory. You might have a block of three arguments in one place, a block of two arguments in another place, and a final block of one argument in a different place. These arguments are all for the same function; they're just stored in different places.  
+ Funkcja może mieć wiele argumentów. Te argumenty mogą nie być przechowywane w sposób ciągły w pamięci. Może istnieć blok trzech argumentów w jednym miejscu, blok dwóch argumentów w innym miejscu i końcowy blok jednego argumentu w innym miejscu. Te argumenty są wszystkie dla tej samej funkcji; są one po prostu przechowywane w różnych miejscach.  
   
- The `COR_PRF_FUNCTION_ARGUMENT_INFO` structure represents all the arguments of a single function. It uses an array to reference all the blocks of function arguments. So, for a single function, you have a single `COR_PRF_FUNCTION_ARGUMENT_INFO` structure, which references multiple `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which points to one or more function arguments.  
+ Struktura `COR_PRF_FUNCTION_ARGUMENT_INFO` reprezentuje wszystkie argumenty pojedynczej funkcji. Używa tablicy do odwoływania się do wszystkich bloków argumentów funkcji. Dlatego w przypadku pojedynczej funkcji istnieje jedna struktura `COR_PRF_FUNCTION_ARGUMENT_INFO`, która odwołuje się do wielu struktur `COR_PRF_FUNCTION_ARGUMENT_RANGE`, z których każdy wskazuje jeden lub więcej argumentów funkcji.  
   
- Arguments that are stored in registers are spilled into memory to build the structures.  
+ Argumenty, które są przechowywane w rejestrach, są rozlane do pamięci, aby kompilować struktury.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Nagłówek:** CorProf. idl  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

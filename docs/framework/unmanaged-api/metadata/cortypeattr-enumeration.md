@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436444"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr — Wyliczenie
-Contains values that indicate type metadata.  
+Zawiera wartości wskazujące metadane typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -73,50 +73,50 @@ typedef enum CorTypeAttr {
 } CorTypeAttr;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`tdVisibilityMask`|Used for type visibility information.|  
-|`tdNotPublic`|Specifies that the type is not in public scope.|  
-|`tdPublic`|Specifies that the type is in public scope.|  
-|`tdNestedPublic`|Specifies that the type is nested with public visibility.|  
-|`tdNestedPrivate`|Specifies that the type is nested with private visibility.|  
-|`tdNestedFamily`|Specifies that the type is nested with family visibility.|  
-|`tdNestedAssembly`|Specifies that the type is nested with assembly visibility.|  
-|`tdNestedFamANDAssem`|Specifies that the type is nested with family and assembly visibility.|  
-|`tdNestedFamORAssem`|Specifies that the type is nested with family or assembly visibility.|  
-|`tdLayoutMask`|Gets layout information for the type.|  
-|`tdAutoLayout`|Specifies that the fields of this type are laid out automatically.|  
-|`tdSequentialLayout`|Specifies that the fields of this type are laid out sequentially.|  
-|`tdExplicitLayout`|Specifies that field layout is supplied explicitly.|  
-|`tdClassSemanticsMask`|Gets semantic information about the type.|  
-|`tdClass`|Specifies that the type is a class.|  
-|`tdInterface`|Specifies that the type is an interface.|  
-|`tdAbstract`|Specifies that the type is abstract.|  
-|`tdSealed`|Specifies that the type cannot be extended.|  
-|`tdSpecialName`|Specifies that the class name is special. Its name describes how.|  
-|`tdImport`|Specifies that the type is imported.|  
-|`tdSerializable`|Specifies that the type is serializable.|  
-|`tdWindowsRuntime`|Specifies that this type is a Windows Runtime type.|  
-|`tdStringFormatMask`|Gets information about how strings are encoded and formatted.|  
-|`tdAnsiClass`|Specifies that this type interprets an LPTSTR as ANSI.|  
-|`tdUnicodeClass`|Specifies that this type interprets an LPTSTR as Unicode.|  
-|`tdAutoClass`|Specifies that this type interprets an LPTSTR automatically.|  
-|`tdCustomFormatClass`|Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.|  
-|`tdCustomFormatMask`|Use this mask to get non-standard encoding information for native interop. The meaning of the values of these two bits is unspecified.|  
-|`tdBeforeFieldInit`|Specifies that the type must be initialized before the first attempt to access a static field.|  
-|`tdForwarder`|Specifies that the type is exported, and a type forwarder.|  
-|`tdReservedMask`|This flag and the flags below are used internally by the common language runtime.|  
-|`tdRTSpecialName`|Specifies that the common language runtime should check the name encoding.|  
-|`tdHasSecurity`|Specifies that the type has security associated with it.|  
+|`tdVisibilityMask`|Służy do wyświetlania informacji o widoczności.|  
+|`tdNotPublic`|Określa, że typ nie należy do zakresu publicznego.|  
+|`tdPublic`|Określa, że typ znajduje się w zakresie publicznym.|  
+|`tdNestedPublic`|Określa, że typ jest zagnieżdżony dla widoczności publicznej.|  
+|`tdNestedPrivate`|Określa, że typ jest zagnieżdżony z widocznością prywatną.|  
+|`tdNestedFamily`|Określa, że typ jest zagnieżdżony dla widoczności rodziny.|  
+|`tdNestedAssembly`|Określa, że typ jest zagnieżdżony z widocznością zestawu.|  
+|`tdNestedFamANDAssem`|Określa, że typ jest zagnieżdżony z rodziną i widocznością zestawu.|  
+|`tdNestedFamORAssem`|Określa, że typ jest zagnieżdżony dla rodziny lub widoczności zestawu.|  
+|`tdLayoutMask`|Pobiera informacje o układzie dla tego typu.|  
+|`tdAutoLayout`|Określa, że pola tego typu są ustanawiane automatycznie.|  
+|`tdSequentialLayout`|Określa, że pola tego typu są określane sekwencyjnie.|  
+|`tdExplicitLayout`|Określa, że układ pola jest dostarczany jawnie.|  
+|`tdClassSemanticsMask`|Pobiera informacje semantyczne o typie.|  
+|`tdClass`|Określa, że typ jest klasą.|  
+|`tdInterface`|Określa, że typ jest interfejsem.|  
+|`tdAbstract`|Określa, że typ jest abstrakcyjny.|  
+|`tdSealed`|Określa, że typ nie może zostać rozszerzony.|  
+|`tdSpecialName`|Określa, że nazwa klasy jest specjalna. Jego nazwa opisuje sposób.|  
+|`tdImport`|Określa, że typ jest importowany.|  
+|`tdSerializable`|Określa, że typ jest możliwy do serializacji.|  
+|`tdWindowsRuntime`|Określa, że ten typ jest typem środowisko wykonawcze systemu Windows.|  
+|`tdStringFormatMask`|Pobiera informacje o sposobie kodowania i formatowania ciągów.|  
+|`tdAnsiClass`|Określa, że ten typ interpretuje LPTSTR jako ANSI.|  
+|`tdUnicodeClass`|Określa, że ten typ interpretuje LPTSTR jako Unicode.|  
+|`tdAutoClass`|Określa, że ten typ interpretuje LPTSTR automatycznie.|  
+|`tdCustomFormatClass`|Określa, że typ ma niestandardową metodę kodowania określoną przez `CustomFormatMask`.|  
+|`tdCustomFormatMask`|Użyj tej maski, aby uzyskać informacje o niestandardowym kodowaniu dla natywnej międzyoperacyjności. Znaczenie wartości tych dwóch bitów nie jest określone.|  
+|`tdBeforeFieldInit`|Określa, że typ musi być zainicjowany przed pierwszą próbą uzyskania dostępu do pola statycznego.|  
+|`tdForwarder`|Określa, że typ jest eksportowany i usługa przesyłania dalej typu.|  
+|`tdReservedMask`|Ta flaga i poniższe flagi są używane wewnętrznie przez środowisko uruchomieniowe języka wspólnego.|  
+|`tdRTSpecialName`|Określa, że środowisko uruchomieniowe języka wspólnego powinno sprawdzać kodowanie nazw.|  
+|`tdHasSecurity`|Określa, że typ ma skojarzone zabezpieczenia.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

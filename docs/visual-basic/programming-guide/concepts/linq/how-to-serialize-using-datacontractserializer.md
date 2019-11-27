@@ -1,5 +1,5 @@
 ---
-title: 'How to: Serialize Using DataContractSerializer'
+title: 'Instrukcje: serializacja przy użyciu klasy DataContractSerializer'
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
 ms.openlocfilehash: 6c4142673cc374fbc6202e5806d1e9016cc81893
@@ -9,11 +9,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352373"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>How to: Serialize Using DataContractSerializer (Visual Basic)
-This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.  
+# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>Instrukcje: Serializowanie przy użyciu obiektu DataContractSerializer (Visual Basic)
+W tym temacie przedstawiono przykład serializacji i deserializacji przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="example"></a>Przykład  
- The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects. It then serializes them to text files, and then deserializes them from the text files.  
+ Poniższy przykład tworzy wiele obiektów, które zawierają obiekty <xref:System.Xml.Linq.XElement>. Następnie serializować je do plików tekstowych, a następnie deserializacji ich z plików tekstowych.  
   
 ```vb  
 Imports System  
@@ -85,4 +85,4 @@ Testing for type: XElementNullContainer
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Serializing Object Graphs that Contain XElement Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [Serializacja grafów obiektów, które zawierają obiekty XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

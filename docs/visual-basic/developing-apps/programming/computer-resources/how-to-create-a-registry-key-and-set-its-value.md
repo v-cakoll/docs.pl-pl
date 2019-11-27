@@ -20,59 +20,59 @@ ms.locfileid: "74349200"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Porady: tworzenie klucza rejestru i określanie jego wartości w Visual Basic
 
-The `CreateSubKey` method of the `My.Computer.Registry` object can be used to create a registry key.
+Metoda `CreateSubKey` obiektu `My.Computer.Registry` może służyć do tworzenia klucza rejestru.
 
 ## <a name="procedure"></a>Procedura
 
-### <a name="to-create-a-registry-key"></a>To create a registry key
+### <a name="to-create-a-registry-key"></a>Aby utworzyć klucz rejestru
 
-- Use the `CreateSubKey` method, specifying which hive to place the key under as well as the name of the key. The parameter `Subkey` is not case-sensitive. This example creates the registry key `MyTestKey` under HKEY_CURRENT_USER.
-
-    [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]
-
-### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>To create a registry key and set a value in it
-
-1. Use the `CreateSubkey` method, specifying which hive to place the key under as well as the name of the key. This example creates the registry key `MyTestKey` under HKEY_CURRENT_USER.
+- Użyj metody `CreateSubKey`, określając gałąź, w której ma zostać umieszczony klucz, a także nazwę klucza. W `Subkey` parametru nie jest rozróżniana wielkość liter. Ten przykład tworzy klucz rejestru `MyTestKey` w obszarze HKEY_CURRENT_USER.
 
     [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]
 
-2. Set the value with the `SetValue` method. This example sets the string value. "MyTestKeyValue" to "This is a test value".
+### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>Aby utworzyć klucz rejestru i ustawić w nim wartość
+
+1. Użyj metody `CreateSubkey`, określając gałąź, w której ma zostać umieszczony klucz, a także nazwę klucza. Ten przykład tworzy klucz rejestru `MyTestKey` w obszarze HKEY_CURRENT_USER.
+
+    [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]
+
+2. Ustaw wartość za pomocą metody `SetValue`. Ten przykład ustawia wartość ciągu. "MyTestKeyValue" do "jest to wartość testowa".
 
     [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]
 
 ## <a name="example"></a>Przykład
 
-This example creates the registry key `MyTestKey` under HKEY_CURRENT_USER and then sets the string value `MyTestKeyValue` to `This is a test value`.
+Ten przykład tworzy klucz rejestru `MyTestKey` w obszarze HKEY_CURRENT_USER, a następnie ustawia wartość ciągu `MyTestKeyValue` na `This is a test value`.
 
 [!code-vb[VbResourceTasks#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#15)]
 
-## <a name="robust-programming"></a>Niezawodne programowanie
+## <a name="robust-programming"></a>Skuteczne programowanie
 
-Examine the registry structure to find a suitable location for your key. For example, you may want to open the HKEY_CURRENT_USER\Software key of the current user, and create a key with your company's name. Then add the registry values to your company's key.
+Sprawdź strukturę rejestru, aby znaleźć odpowiednią lokalizację klucza. Na przykład możesz chcieć otworzyć HKEY_CURRENT_USER klucz \Software bieżącego użytkownika i utworzyć klucz z nazwą swojej firmy. Następnie Dodaj wartości rejestru do klucza firmy.
 
-When reading the registry from a Web application, the current user depends on the authentication and impersonation implemented in the Web application.
+Podczas odczytywania rejestru z aplikacji sieci Web bieżący użytkownik zależy od uwierzytelniania i personifikacji zaimplementowanego w aplikacji sieci Web.
 
-It is more secure to write data to the user folder (<xref:Microsoft.Win32.Registry.CurrentUser>) rather than to the local computer (<xref:Microsoft.Win32.Registry.LocalMachine>).
+Bardziej bezpieczne jest zapisanie danych do folderu użytkownika (<xref:Microsoft.Win32.Registry.CurrentUser>), a nie na komputerze lokalnym (<xref:Microsoft.Win32.Registry.LocalMachine>).
 
-When you create a registry value, you need to decide what to do if that value already exists. Another process, perhaps a malicious one, may have already created the value and have access to it. When you put data in the registry value, the data is available to the other process. To prevent this, use the <xref:Microsoft.Win32.RegistryKey.GetValue%2A> method. It returns `Nothing` if the key does not already exist.
+Podczas tworzenia wartości rejestru należy zdecydować, co należy zrobić, jeśli ta wartość już istnieje. Inny proces, prawdopodobnie złośliwy, mógł już utworzyć wartość i uzyskać do niej dostęp. Po umieszczeniu danych w wartości rejestru, dane są dostępne dla drugiego procesu. Aby temu zapobiec, użyj metody <xref:Microsoft.Win32.RegistryKey.GetValue%2A>. Zwraca `Nothing`, jeśli klucz jeszcze nie istnieje.
 
-It is not secure to store secrets, such as passwords, in the registry as plain text, even if the registry key is protected by ACLs (Access Control Lists).
+Nie jest bezpieczne przechowywanie wpisów tajnych, takich jak hasła, w rejestrze w postaci zwykłego tekstu, nawet jeśli klucz rejestru jest chroniony przez listy ACL (Access Control List).
 
 Następujące warunki mogą spowodować wyjątek:
 
-- The name of the key is `Nothing` (<xref:System.ArgumentNullException>).
+- Nazwa klucza jest `Nothing` (<xref:System.ArgumentNullException>).
 
-- The user does not have permissions to create registry keys (<xref:System.Security.SecurityException>).
+- Użytkownik nie ma uprawnień do tworzenia kluczy rejestru (<xref:System.Security.SecurityException>).
 
-- The key name exceeds the 255-character limit (<xref:System.ArgumentException>).
+- Nazwa klucza przekracza limit 255 znaków (<xref:System.ArgumentException>).
 
-- The key is closed (<xref:System.IO.IOException>).
+- Klucz jest zamknięty (<xref:System.IO.IOException>).
 
-- The registry key is read-only (<xref:System.UnauthorizedAccessException>).
+- Klucz rejestru jest tylko do odczytu (<xref:System.UnauthorizedAccessException>).
 
-## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework
+## <a name="net-framework-security"></a>Zabezpieczenia programu .NET Framework
 
-To run this process, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.RegistryPermission> class. If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges. Similarly, the user must have the correct ACLs for creating or writing to settings. For example, a local application that has the code access security permission might not have operating system permission. For more information, see [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md).
+Aby uruchomić ten proces, zestaw wymaga poziomu uprawnień przyznany przez klasę <xref:System.Security.Permissions.RegistryPermission>. Jeśli używasz w kontekście częściowego zaufania, proces może zgłosić wyjątek z powodu niewystarczających uprawnień. Analogicznie, użytkownik musi mieć poprawne listy ACL do tworzenia lub zapisywania w ustawieniach. Na przykład aplikacja lokalna, która ma uprawnienie zabezpieczeń dostępu kodu, może nie mieć uprawnień systemu operacyjnego. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../../../framework/misc/code-access-security-basics.md).
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -80,4 +80,4 @@ To run this process, your assembly requires a privilege level granted by the <xr
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>
 - <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>
 - [Odczytywanie z rejestru i zapisywanie w nim](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-- [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md)
+- [Podstawowe informacje o zabezpieczeniach dostępu kodu](../../../../framework/misc/code-access-security-basics.md)

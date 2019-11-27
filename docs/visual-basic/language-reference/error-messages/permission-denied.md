@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347000"
 ---
 # <a name="permission-denied-visual-basic"></a>Odmowa uprawnień (Visual Basic)
-An attempt was made to write to a write-protected disk or to access a locked file.  
+Podjęto próbę zapisu na dysku chronionym przed zapisem lub w celu uzyskania dostępu do zablokowanego pliku.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. To open a write-protected file, change the write-protection attribute of the file.  
+1. Aby otworzyć plik chroniony przed zapisem, Zmień atrybut ochrona zapisu w pliku.  
   
-2. Make sure that another process has not locked the file, and wait to open the file until the other process releases it.  
+2. Upewnij się, że inny proces nie zablokował pliku i poczekaj na otwarcie pliku do momentu, aż inny proces zwolni go.  
   
-3. To access the registry, check that your user permissions include this type of registry access.  
+3. Aby uzyskać dostęp do rejestru, sprawdź, czy uprawnienia użytkownika obejmują ten typ dostępu do rejestru.  
   
 ## <a name="see-also"></a>Zobacz także
 

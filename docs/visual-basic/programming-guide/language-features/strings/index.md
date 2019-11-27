@@ -13,27 +13,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344334"
 ---
 # <a name="strings-in-visual-basic"></a>Ciągi w Visual Basic
-This section describes the basic concepts behind using strings in Visual Basic.  
+W tej sekcji opisano podstawowe pojęcia związane z używaniem ciągów w Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Introduction to Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- Lists topics that describe the basic concepts behind using strings in Visual Basic.  
+ [Wprowadzenie do ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
+ Zawiera listę tematów opisujących podstawowe pojęcia związane z używaniem ciągów w Visual Basic.  
   
- [How to: Create Strings Using a StringBuilder in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
- Demonstrates how to efficiently create a long string from many smaller strings.  
+ [Instrukcje: Tworzenie ciągów przy użyciu elementu StringBuilder w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
+ Pokazuje, jak efektywnie utworzyć długi ciąg z wielu mniejszych ciągów.  
   
  [Instrukcje: Wyszukiwanie wewnątrz ciągu](../../../../visual-basic/programming-guide/language-features/strings/how-to-search-within-a-string.md)  
- Demonstrates how to determine the index of the first occurrence of a substring.  
+ Pokazuje, jak określić indeks pierwszego wystąpienia podciągu.  
   
- [Converting Between Strings and Other Data Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
- Lists topics that describe how to convert strings into other data types.  
+ [Konwertowanie między ciągami a innymi typami danych w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
+ Wyświetla listę tematów, które opisują sposób konwersji ciągów na inne typy danych.  
   
- [Validating Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
- Lists topics that discuss how to validate strings.  
+ [Sprawdzanie poprawności ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
+ Wyświetla listę tematów, które omawiają sposób sprawdzania poprawności ciągów.  
   
- [Walkthrough: Encrypting and Decrypting Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
- Demonstrates how to encrypt and decrypt strings by using the cryptographic service provider version of the Triple Data Encryption Standard algorithm.  
+ [Przewodnik: szyfrowanie i odszyfrowywanie ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
+ Pokazuje, jak szyfrować i odszyfrowywać ciągi przy użyciu wersji dostawcy usług kryptograficznych algorytmu standardowego szyfrowania danych.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Visual Basic Language Features](../../../../visual-basic/programming-guide/language-features/index.md)
+- [Funkcje języka Visual Basic](../../../../visual-basic/programming-guide/language-features/index.md)

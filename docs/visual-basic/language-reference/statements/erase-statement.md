@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343699"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase — Instrukcja (Visual Basic)
-Used to release array variables and deallocate the memory used for their elements.  
+Służy do zwalniania zmiennych tablicy i cofania przydziału pamięci używanej dla ich elementów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -25,15 +25,15 @@ Erase arraylist
   
 ## <a name="parts"></a>Części  
  `arraylist`  
- Wymagany. List of array variables to be erased. Multiple variables are separated by commas.  
+ Wymagana. Lista zmiennych tablicy do usunięcia. Wiele zmiennych rozdziela się przecinkami.  
   
 ## <a name="remarks"></a>Uwagi  
- The `Erase` statement can appear only at procedure level. This means you can release arrays inside a procedure but not at class or module level.  
+ Instrukcja `Erase` może występować tylko na poziomie procedury. Oznacza to, że można zwolnić tablice wewnątrz procedury, ale nie na poziomie klasy ani modułu.  
   
- The `Erase` statement is equivalent to assigning `Nothing` to each array variable.  
+ Instrukcja `Erase` jest równoważna przypisaniu `Nothing` do każdej zmiennej tablicowej.  
   
 ## <a name="example"></a>Przykład  
- The following example uses the `Erase` statement to clear two arrays and free their memory (1000 and 100 storage elements, respectively). The `ReDim` statement then assigns a new array instance to the three-dimensional array.  
+ Poniższy przykład używa instrukcji `Erase`, aby wyczyścić dwie tablice i zwolnić pamięć (odpowiednio 1000 i 100 elementów magazynu). Następnie instrukcja `ReDim` przypisuje nowe wystąpienie tablicy do trójwymiarowej tablicy.  
   
  [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   

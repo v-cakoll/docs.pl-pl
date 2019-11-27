@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445763"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage — Metoda
-Notifies the profiler that the process has received a remote method invocation or activation request.  
+Powiadamia program profilujący, że proces otrzymał zdalne wywołanie metody lub żądanie aktywacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,30 +35,30 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>Parametry  
  `pCookie`  
- [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) under these conditions:  
+ podczas Wartość, która będzie odpowiadała wartości podanej w [ICorProfilerCallback:: RemotingClientSendingMessage —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) w następujących warunkach:  
   
-- Remoting GUID cookies are active.  
+- Pliki cookie identyfikatorów GUID usług zdalnych są aktywne.  
   
-- The channel succeeds in transmitting the message.  
+- Kanał pomyślnie przesyła komunikat.  
   
-- GUID cookies are active on the client-side process.  
+- Pliki cookie identyfikatorów GUID są aktywne w procesie po stronie klienta.  
   
- This allows easy pairing of remoting calls and the creation of a logical call stack.  
+ Pozwala to na łatwe parowanie wywołań zdalnych i Tworzenie stosu wywołań logicznych.  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ podczas Wartość, która jest `true`, jeśli wywołanie jest asynchroniczne; w przeciwnym razie `false`.  
   
 ## <a name="remarks"></a>Uwagi  
- If the message request is asynchronous, the request can be serviced by any arbitrary thread.  
+ Jeśli żądanie komunikatu jest asynchroniczne, żądanie może być serwisowane przez dowolny wątek.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

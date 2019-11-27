@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446552"
 ---
 # <a name="createalink-function"></a>CreateALink — Funkcja
-Creates an instance of the Assembly Linker and sets a pointer to the specified interface.  
+Tworzy wystąpienie konsolidatora zestawu i ustawia wskaźnik do określonego interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,11 +38,11 @@ HRESULT CreateALink (
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|`riid`|The physical name of one of the Assembly Linker interfaces.|  
-|`ppInterface`|The location that on successful completion contains a pointer to the `riid` interface.|  
+|`riid`|Nazwa fizyczna jednego z interfejsów konsolidatora zestawu.|  
+|`ppInterface`|Lokalizacja po pomyślnym zakończeniu zawiera wskaźnik do interfejsu `riid`.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Library**: alink.dll  
+ **Biblioteka**: Alink. dll  
   
 ## <a name="see-also"></a>Zobacz także
 

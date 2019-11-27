@@ -18,36 +18,36 @@ ms.locfileid: "74348944"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Podstawowe informacje o .NET Framework File I/O i systemie plików (Visual Basic)
 
-Classes in the <xref:System.IO> namespace are used to work with drives, files, and directories.
+Klasy w przestrzeni nazw <xref:System.IO> są używane do pracy z dyskami, plikami i katalogami.
 
-The <xref:System.IO> namespace contains the <xref:System.IO.File> and <xref:System.IO.Directory> classes, which provide the .NET Framework functionality that manipulates files and directories. Because the methods of these objects are static or shared members, you can use them directly without creating an instance of the class first. Associated with these classes are the <xref:System.IO.FileInfo> and <xref:System.IO.DirectoryInfo> classes, which will be familiar to users of the `My` feature. To use these classes, you must fully qualify the names or import the appropriate namespaces by including the `Imports` statement(s) at the beginning of the affected code. For more information, see [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).
+Przestrzeń nazw <xref:System.IO> zawiera klasy <xref:System.IO.File> i <xref:System.IO.Directory>, które zapewniają funkcję .NET Framework, która operuje na plikach i katalogach. Ponieważ metody tych obiektów są statycznymi lub udostępnionymi składowymi, można ich używać bezpośrednio bez tworzenia wystąpienia klasy. Skojarzone z tymi klasami są klasy <xref:System.IO.FileInfo> i <xref:System.IO.DirectoryInfo>, które będą znane użytkownikom funkcji `My`. Aby użyć tych klas, należy w pełni zakwalifikować się do nazw lub zaimportować odpowiednie przestrzenie nazw, dołączając instrukcje `Imports` na początku kodu, którego to dotyczy. Aby uzyskać więcej informacji, zobacz [Imports — Instrukcja (przestrzeń nazw i typ .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).
 
 > [!NOTE]
-> Other topics in this section use the `My.Computer.FileSystem` object instead of `System.IO` classes to work with drives, files, and directories. The `My.Computer.FileSystem` object is intended primarily for use in Visual Basic programs. `System.IO` classes are intended for use by any language that supports the .NET Framework, including Visual Basic.
+> W innych tematach w tej sekcji Użyj obiektu `My.Computer.FileSystem` zamiast klas `System.IO` do pracy z dyskami, plikami i katalogami. Obiekt `My.Computer.FileSystem` jest przeznaczony głównie do użytku w Visual Basic programów. klasy `System.IO` są przeznaczone do użycia w dowolnym języku, który obsługuje .NET Framework, w tym Visual Basic.
 
-## <a name="definition-of-a-stream"></a>Definition of a Stream
+## <a name="definition-of-a-stream"></a>Definicja strumienia
 
-The .NET Framework uses streams to support reading from and writing to files. You can think of a stream as a one-dimensional set of contiguous data, which has a beginning and an end, and where the cursor indicates the current position in the stream.
+.NET Framework używa strumieni do obsługi odczytu i zapisu do plików. Strumień można traktować jako jednowymiarowy zestaw danych ciągłych, który ma początek i koniec oraz miejsce, gdzie kursor wskazuje bieżącą pozycję w strumieniu.
 
-![Cursor shows current position in the filestream.](./media/basics-of-net-framework-file-io-and-the-file-system/filestream-cursor-position.gif)
+![Kursor wyświetla bieżącą pozycję w strumieniu FILESTREAM.](./media/basics-of-net-framework-file-io-and-the-file-system/filestream-cursor-position.gif)
 
-## <a name="stream-operations"></a>Stream Operations
+## <a name="stream-operations"></a>Operacje przesyłania strumieniowego
 
-The data contained in the stream may come from memory, a file, or a TCP/IP socket. Streams have fundamental operations that can be applied to them:
+Dane zawarte w strumieniu mogą pochodzić z pamięci, pliku lub gniazda TCP/IP. Strumienie mają podstawowe operacje, które można zastosować do nich:
 
-- **Reading**. You can read from a stream, transferring data from the stream into a data structure, such as a string or an array of bytes.
+- **Odczytywanie**. Można odczytywać ze strumienia, transferować dane ze strumienia do struktury danych, takie jak ciąg lub tablica bajtów.
 
-- **Writing**. You can write to a stream, transferring data from a data source into the stream.
+- **Zapisywanie**. Do strumienia można zapisywać dane ze źródła danych.
 
-- **Seeking**. You can query and modify your position in the stream.
+- **Wyszukiwanie**. Możesz wysyłać zapytania i modyfikować swoją pozycję w strumieniu.
 
-For more information, see [Composing Streams](../../../../standard/io/composing-streams.md).
+Aby uzyskać więcej informacji, zobacz [Tworzenie strumieni](../../../../standard/io/composing-streams.md).
 
-## <a name="types-of-streams"></a>Types of Streams
+## <a name="types-of-streams"></a>Typy strumieni
 
-In the .NET Framework, a stream is represented by the <xref:System.IO.Stream> class, which forms the abstract class for all other streams. You cannot directly create an instance of the <xref:System.IO.Stream> class, but must use one of the classes it implements.
+W .NET Framework strumień jest reprezentowany przez klasę <xref:System.IO.Stream>, która tworzy klasę abstrakcyjną dla wszystkich innych strumieni. Nie można bezpośrednio utworzyć wystąpienia klasy <xref:System.IO.Stream>, ale należy użyć jednej z implementowanych klas.
 
-There are many types of streams, but for the purposes of working with file input/output (I/O), the most important types are the <xref:System.IO.FileStream> class, which provides a way to read from and write to files, and the <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> class, which provides a way to create files and directories in isolated storage. Other streams that can be used when working with file I/O include:
+Istnieje wiele typów strumieni, ale na potrzeby pracy z danymi wejściowymi/wyjściowymi (we/wy), najważniejsze typy to Klasa <xref:System.IO.FileStream>, która zapewnia sposób odczytu i zapisu do plików oraz klasy <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>, która zapewnia sposób tworzenia plików i katalogów w izolowanym magazynie. Inne strumienie, których można używać podczas pracy z plikami we/wy plików:
 
 - <xref:System.IO.BufferedStream>
 
@@ -57,58 +57,58 @@ There are many types of streams, but for the purposes of working with file input
 
 - <xref:System.Net.Sockets.NetworkStream>.,
 
-The following table lists tasks commonly accomplished with a stream:
+W poniższej tabeli wymieniono zadania często wykonywane przy użyciu strumienia:
 
 |Do|Zobacz|
 |---|---|
-|Read and write to a data file|[Instrukcje: odczyt i zapis we właśnie utworzonym pliku danych](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
-|Read text from a file|[Instrukcje: odczytywanie tekstu z pliku](../../../../standard/io/how-to-read-text-from-a-file.md)|
-|Write text to a file|[Instrukcje: zapisywanie tekstu w pliku](../../../../standard/io/how-to-write-text-to-a-file.md)|
-|Read characters from a string|[Instrukcje: odczytywanie znaków z ciągu](../../../../standard/io/how-to-read-characters-from-a-string.md)|
-|Write characters to a string|[Instrukcje: zapisywanie znaków w ciągu](../../../../standard/io/how-to-write-characters-to-a-string.md)|
-|Encrypt data|[Szyfrowanie danych](../../../../standard/security/encrypting-data.md)|
-|Decrypt data|[Odszyfrowywanie danych](../../../../standard/security/decrypting-data.md)|
+|Odczyt i zapis w pliku danych|[Instrukcje: odczyt i zapis we właśnie utworzonym pliku danych](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
+|Odczytaj tekst z pliku|[Instrukcje: odczytywanie tekstu z pliku](../../../../standard/io/how-to-read-text-from-a-file.md)|
+|Zapisz tekst w pliku|[Instrukcje: zapisywanie tekstu w pliku](../../../../standard/io/how-to-write-text-to-a-file.md)|
+|Odczytywanie znaków z ciągu|[Instrukcje: odczytywanie znaków z ciągu](../../../../standard/io/how-to-read-characters-from-a-string.md)|
+|Zapisz znaki w ciągu|[Instrukcje: zapisywanie znaków w ciągu](../../../../standard/io/how-to-write-characters-to-a-string.md)|
+|Szyfruj dane|[Szyfrowanie danych](../../../../standard/security/encrypting-data.md)|
+|Odszyfruj dane|[Odszyfrowywanie danych](../../../../standard/security/decrypting-data.md)|
 
-## <a name="file-access-and-attributes"></a>File Access and Attributes
+## <a name="file-access-and-attributes"></a>Dostęp do plików i atrybuty
 
-You can control how files are created, opened, and shared with the <xref:System.IO.FileAccess>, <xref:System.IO.FileMode>, and <xref:System.IO.FileShare> enumerations, which contain the flags used by the constructors of the <xref:System.IO.FileStream> class. For example, when you open or create a new <xref:System.IO.FileStream>, the <xref:System.IO.FileMode> enumeration allows you to specify whether the file is opened for appending, whether a new file is created if the specified file does not exist, whether the file is overwritten, and so forth.
+Można kontrolować sposób, w jaki pliki są tworzone, otwierane i udostępniane przy użyciu <xref:System.IO.FileAccess>, <xref:System.IO.FileMode>i <xref:System.IO.FileShare> wyliczenia, które zawierają flagi używane przez konstruktory klasy <xref:System.IO.FileStream>. Na przykład po otwarciu lub utworzeniu nowego <xref:System.IO.FileStream>Wyliczenie <xref:System.IO.FileMode> pozwala określić, czy plik jest otwierany do dołączenia, czy nowy plik zostanie utworzony, jeśli określony plik nie istnieje, niezależnie od tego, czy plik jest zastępowany i tak dalej.
 
-The <xref:System.IO.FileAttributes> enumeration enables the gathering of file-specific information. The <xref:System.IO.FileAttributes> enumeration returns the file's stored attributes, such as whether it is compressed, encrypted, hidden, read-only, an archive, a directory, a system file, or a temporary file.
+Wyliczenie <xref:System.IO.FileAttributes> umożliwia gromadzenie informacji specyficznych dla pliku. Wyliczenie <xref:System.IO.FileAttributes> zwraca przechowywane atrybuty pliku, takie jak to, czy jest skompresowany, zaszyfrowany, ukryty, tylko do odczytu, archiwum, katalog, plik systemowy lub plik tymczasowy.
 
-The following table lists tasks involving file access and file attributes:
-
-|Do|Zobacz|
-|---|---|
-|Open and append text to a log file|[Instrukcje: otwieranie pliku dziennika i dołączanie do niego](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
-|Determine the attributes of a file|<xref:System.IO.FileAttributes>|
-
-## <a name="file-permissions"></a>File Permissions
-
-Controlling access to files and directories can be done with the <xref:System.Security.Permissions.FileIOPermission> class. This may be particularly important for developers working with Web Forms, which by default run within the context of a special local user account named ASPNET, which is created as part of the ASP.NET and .NET Framework installations. When such an application requests access to a resource, the ASPNET user account has limited permissions, which may prevent the user from performing actions such as writing to a file from a Web application. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Permissions.FileIOPermission>.
-
-## <a name="isolated-file-storage"></a>Isolated File Storage
-
-Isolated storage is an attempt to solve problems created when working with files where the user or code may lack necessary permissions. Isolated storage assigns each user a data compartment, which can hold one or more stores. Stores can be isolated from each other by user and by assembly. Only the user and assembly that created a store have access to it. A store acts as a complete virtual file system—within one store you can create and manipulate directories and files.
-
-The following table lists tasks commonly associated with isolated file storage.
+Poniższa tabela zawiera listę zadań związanych z dostępem do plików i atrybutami plików:
 
 |Do|Zobacz|
 |---|---|
-|Create an isolated store|[Instrukcje: uzyskiwanie magazynów dla wydzielonej pamięci masowej](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
-|Enumerate isolated stores|[Instrukcje: wyliczanie magazynów dla wydzielonej pamięci masowej](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|
-|Delete an isolated store|[Instrukcje: usuwanie danych z wydzielonej pamięci masowej](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|
-|Create a file or directory in isolated storage|[Instrukcje: tworzenie plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|
-|Find a file in isolated storage|[Instrukcje: znajdowanie istniejących plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|
-|Read from or write to a file in isolated storage|[Instrukcje: odczyt i zapis w plikach w wydzielonej pamięci masowej](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|
-|Delete a file or directory in isolated storage|[Instrukcje: usuwanie plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|
+|Otwieranie i dołączanie tekstu do pliku dziennika|[Instrukcje: otwieranie pliku dziennika i dołączanie do niego](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
+|Określanie atrybutów pliku|<xref:System.IO.FileAttributes>|
 
-## <a name="file-events"></a>File Events
+## <a name="file-permissions"></a>Uprawnienia do pliku
 
-The <xref:System.IO.FileSystemWatcher> component allows you to watch for changes in files and directories on your system or on any computer to which you have network access. For example, if a file is modified, you might want to send a user an alert that the change has taken place. When changes occur, one or more events are raised, stored in a buffer, and handed to the <xref:System.IO.FileSystemWatcher> component for processing.
+Kontrolowanie dostępu do plików i katalogów można wykonać przy użyciu klasy <xref:System.Security.Permissions.FileIOPermission>. Może to być szczególnie ważne w przypadku deweloperów pracujących z formularzami sieci Web, które domyślnie są uruchamiane w kontekście specjalnego konta użytkownika lokalnego o nazwie ASPNET, który jest tworzony w ramach instalacji ASP.NET i .NET Framework. Gdy taka aplikacja żąda dostępu do zasobu, konto użytkownika ASPNET ma ograniczone uprawnienia, co może uniemożliwić użytkownikowi wykonywanie akcji, takich jak zapisywanie do pliku z aplikacji sieci Web. Aby uzyskać więcej informacji, zobacz temat <xref:System.Security.Permissions.FileIOPermission>.
+
+## <a name="isolated-file-storage"></a>File Storage izolowane
+
+Magazyn izolowany to próba rozwiązania problemów utworzonych podczas pracy z plikami, w których użytkownik lub kod może nie mieć wystarczających uprawnień. Izolowany magazyn przypisuje każdemu użytkownikowi przedział danych, który może zawierać co najmniej jeden magazyn. Magazyny mogą być odizolowane od siebie przez użytkownika i przez zestaw. Tylko użytkownik i zestaw, które utworzyły magazyn, mają do niego dostęp. Magazyn działa jako kompletny wirtualny system plików — w ramach jednego magazynu można tworzyć katalogi i pliki oraz manipulować nimi.
+
+W poniższej tabeli wymieniono zadania często związane z izolowanym magazynem plików.
+
+|Do|Zobacz|
+|---|---|
+|Tworzenie magazynu izolowanego|[Instrukcje: uzyskiwanie magazynów dla wydzielonej pamięci masowej](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
+|Wyliczanie magazynów izolowanych|[Instrukcje: wyliczanie magazynów dla wydzielonej pamięci masowej](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|
+|Usuwanie magazynu izolowanego|[Instrukcje: usuwanie danych z wydzielonej pamięci masowej](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|
+|Tworzenie pliku lub katalogu w izolowanym magazynie|[Instrukcje: tworzenie plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|
+|Znajdowanie pliku w izolowanym magazynie|[Instrukcje: znajdowanie istniejących plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|
+|Odczyt lub zapis do pliku w izolowanym magazynie|[Instrukcje: odczyt i zapis w plikach w wydzielonej pamięci masowej](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|
+|Usuwanie pliku lub katalogu w izolowanym magazynie|[Instrukcje: usuwanie plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|
+
+## <a name="file-events"></a>Zdarzenia plików
+
+Składnik <xref:System.IO.FileSystemWatcher> umożliwia śledzenie zmian w plikach i katalogach w systemie lub na dowolnym komputerze, na którym masz dostęp do sieci. Na przykład, jeśli plik zostanie zmodyfikowany, można wysłać użytkownikowi alert informujący o tym, że została wprowadzona zmiana. Gdy wystąpią zmiany, zgłaszane jest jedno lub więcej zdarzeń, przechowywane w buforze i przekazywane do składnika <xref:System.IO.FileSystemWatcher> w celu przetworzenia.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie strumieni](../../../../standard/io/composing-streams.md)
 - [We/Wy plików i strumieni](../../../../standard/io/index.md)
 - [Asynchroniczne operacje We/Wy pliku](../../../../standard/io/asynchronous-file-i-o.md)
-- [Classes Used in .NET Framework File I/O and the File System (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
+- [Klasy używane w .NET Framework we/wy plików i systemie plików (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

@@ -16,21 +16,21 @@ ms.locfileid: "74329539"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>Uzyskiwanie dostępu do klawiatury (Visual Basic)
 
-The `My.Computer.Keyboard` object provides properties for accessing the current state of the keyboard, such as what keys are currently pressed, and provides a method to send keystrokes to the active window.  
+Obiekt `My.Computer.Keyboard` zawiera właściwości umożliwiające dostęp do bieżącego stanu klawiatury, takie jak to, które klucze są aktualnie naciśnięte, i zapewnia metodę wysyłania naciśnięć klawiszy do aktywnego okna.  
   
 ## <a name="tasks"></a>Zadania  
 
- This table lists tasks associated with the `My.Computer.Keyboard` object and points to topics demonstrating how to perform each task.  
+ Ta tabela zawiera listę zadań skojarzonych z obiektem `My.Computer.Keyboard` i wskazuje tematy przedstawiające sposób wykonywania poszczególnych zadań.  
   
 |Do|Zobacz|  
 |--------|---------|  
-|Determine whether CAPS LOCK is on|<xref:Microsoft.VisualBasic.Devices.Keyboard.CapsLock%2A>|  
-|Determine whether the SHIFT key is down|<xref:Microsoft.VisualBasic.Devices.Keyboard.ShiftKeyDown%2A>|  
-|Determine whether the ALT key is down|<xref:Microsoft.VisualBasic.Devices.Keyboard.AltKeyDown%2A>|  
-|Determine whether the CTRL key is down|<xref:Microsoft.VisualBasic.Devices.Keyboard.CtrlKeyDown%2A>|  
-|Determine whether NUM LOCK is on|<xref:Microsoft.VisualBasic.Devices.Keyboard.NumLock%2A>|  
-|Determine whether SCROLL LOCK is on|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
-|Start an application and send it keystrokes|[How to: Start an Application and Send it Keystrokes (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
+|Określ, czy Caps Lock jest włączona|<xref:Microsoft.VisualBasic.Devices.Keyboard.CapsLock%2A>|  
+|Ustalanie, czy klawisz SHIFT jest wyłączony|<xref:Microsoft.VisualBasic.Devices.Keyboard.ShiftKeyDown%2A>|  
+|Określanie, czy klawisz ALT nie działa|<xref:Microsoft.VisualBasic.Devices.Keyboard.AltKeyDown%2A>|  
+|Określanie, czy klawisz CTRL nie działa|<xref:Microsoft.VisualBasic.Devices.Keyboard.CtrlKeyDown%2A>|  
+|Ustal, czy blokada NUM jest włączona|<xref:Microsoft.VisualBasic.Devices.Keyboard.NumLock%2A>|  
+|Określ, czy jest włączona blokada przewijania|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
+|Uruchamianie aplikacji i wysyłanie naciśnięć klawiszy IT|[Instrukcje: uruchamianie aplikacji i wysyłanie naciśnięć klawiszy (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
   
 ## <a name="see-also"></a>Zobacz także
 

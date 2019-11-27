@@ -1,5 +1,5 @@
 ---
-title: C# switch statement
+title: C#Switch, instrukcja
 ms.date: 04/09/2019
 f1_keywords:
 - switch_CSharpKeyword
@@ -19,47 +19,47 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428487"
 ---
-# <a name="switch-c-reference"></a>switch (C# reference)
+# <a name="switch-c-reference"></a>przełącznik (C# odwołanie)
 
-`switch` is a selection statement that chooses a single *switch section* to execute from a list of candidates based on a pattern match with the *match expression*.
+`switch` jest instrukcją wyboru, która wybiera pojedynczy *przełącznik* , który ma zostać wykonany z listy kandydatów na podstawie dopasowania wzorca z *wyrażeniem Match*.
 
 [!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
-The `switch` statement is often used as an alternative to an [if-else](if-else.md) construct if a single expression is tested against three or more conditions. For example, the following `switch` statement determines whether a variable of type `Color` has one of three values:
+Instrukcja `switch` jest często używana jako alternatywa dla konstrukcji [if-else](if-else.md) , jeśli pojedyncze wyrażenie jest testowane w oparciu o trzy lub więcej warunków. Na przykład następująca instrukcja `switch` określa, czy zmienna typu `Color` ma jedną z trzech wartości:
 
 [!code-csharp[switch#3](~/samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
 
-It's equivalent to the following example that uses an `if`-`else` construct.
+Jest to odpowiednik poniższego przykładu korzystającego z `if`-`else` konstrukcja.
 
 [!code-csharp[switch#3a](~/samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
 
-## <a name="the-match-expression"></a>The match expression
+## <a name="the-match-expression"></a>Wyrażenie dopasowania
 
-The match expression provides the value to match against the patterns in `case` labels. Its syntax is:
+Wyrażenie Match zawiera wartość do dopasowania względem wzorców w etykietach `case`. Jego składnia to:
 
 ```csharp
    switch (expr)
 ```
 
-In C# 6 and earlier, the match expression must be an expression that returns a value of the following types:
+W C# 6 i wcześniejszych wyrażenia dopasowania musi być wyrażeniem zwracającym wartość następujących typów:
 
-- a [char](../builtin-types/char.md).
-- a [string](../builtin-types/reference-types.md).
-- a [bool](bool.md).
-- an [integral](../builtin-types/integral-numeric-types.md) value, such as an `int` or a `long`.
-- an [enum](enum.md) value.
+- [znak](../builtin-types/char.md).
+- [ciąg](../builtin-types/reference-types.md).
+- wartość [logiczna](bool.md).
+- wartość [całkowita](../builtin-types/integral-numeric-types.md) , taka jak `int` lub `long`.
+- wartość [wyliczenia](enum.md) .
 
-Starting with C# 7.0, the match expression can be any non-null expression.
+Począwszy od C# 7,0, wyrażenie dopasowania może być dowolnym wyrażeniem o wartości innej niż null.
 
-## <a name="the-switch-section"></a>The switch section
+## <a name="the-switch-section"></a>Sekcja Switch
 
-A `switch` statement includes one or more switch sections. Each switch section contains one or more *case labels* (either a case or default label) followed by one or more statements. The `switch` statement may include at most one default label placed in any switch section. The following example shows a simple `switch` statement that has three switch sections, each containing two statements. The second switch section contains the `case 2:` and `case 3:` labels.
+Instrukcja `switch` zawiera jedną lub więcej sekcji przełączników. Każda sekcja przełącznika zawiera jedną lub więcej *etykiet przypadków* (literę lub etykietę domyślną), po której następuje jedna lub więcej instrukcji. Instrukcja `switch` może zawierać co najwyżej jedną etykietę domyślną umieszczoną w dowolnej sekcji Switch. Poniższy przykład pokazuje prostą instrukcję `switch`, która ma trzy sekcje przełączników, z których każda zawiera dwie instrukcje. Druga sekcja Switch zawiera etykiety `case 2:` i `case 3:`.
 
-A `switch` statement can include any number of switch sections, and each section can have one or more case labels, as shown in the following example. However, no two case labels may contain the same expression.
+Instrukcja `switch` może zawierać dowolną liczbę sekcji przełączników, a Każda sekcja może mieć jedną lub więcej etykiet wielkości liter, jak pokazano w poniższym przykładzie. Jednak żadne dwie etykiety wielkości liter nie mogą zawierać tego samego wyrażenia.
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Only one switch section in a switch statement executes. C# doesn't allow execution to continue from one switch section to the next. Because of this, the following code generates a compiler error, CS0163: "Control cannot fall through from one case label (\<case label>) to another."
+W instrukcji switch jest wykonywana tylko jedna sekcja Switch. C#nie zezwala na kontynuowanie wykonywania z jednej sekcji przełącznika do następnej. W związku z tym Poniższy kod generuje błąd kompilatora, CS0163: "kontrolka nie może przechodzić z jednej etykiety case (\<etykieta przypadku >) do innej".
 
 ```csharp
 switch (caseSwitch)
@@ -74,132 +74,132 @@ switch (caseSwitch)
 }
 ```
 
-This requirement is usually met by explicitly exiting the switch section by using a [break](break.md), [goto](goto.md), or [return](return.md) statement. However, the following code is also valid, because it ensures that program control can't fall through to the `default` switch section.
+To wymaganie jest zwykle spełnione przez jawne opuszczenie sekcji Switch za pomocą instrukcji [Break](break.md), [goto](goto.md)lub [Return](return.md) . Jednak następujący kod jest również prawidłowy, ponieważ gwarantuje, że formant programu nie przechodzi do sekcji przełącznika `default`.
 
 [!code-csharp[switch#4](~/samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
 
-Execution of the statement list in the switch section with a case label that matches the match expression begins with the first statement and proceeds through the statement list, typically until a jump statement, such as a `break`, `goto case`, `goto label`, `return`, or `throw`, is reached. At that point, control is transferred outside the `switch` statement or to another case label. A `goto` statement, if it's used, must transfer control to a constant label. This restriction is necessary, since attempting to transfer control to a non-constant label can have undesirable side-effects, such transferring control to an unintended location in code or creating an endless loop.
+Wykonanie listy instrukcji w sekcji Switch z etykietą Case, która pasuje do wyrażenia Match rozpoczyna się od pierwszej instrukcji i przechodzi przez listę instrukcji, zwykle do momentu osiągnięcia instrukcji skoku, takiej jak `break`, `goto case`, `goto label`, `return`lub `throw`. W tym momencie kontrola jest przekazywana poza instrukcją `switch` lub do innej etykiety case. Instrukcja `goto`, jeśli jest używana, musi przekazywać kontrolę do stałej etykiety. To ograniczenie jest konieczne, ponieważ próba przetransferowania kontroli do etykiety niestałej może mieć niepożądane efekty uboczne, takie przeniesienie kontroli do niezamierzonej lokalizacji w kodzie lub utworzenie pętli nieskończonej.
 
-## <a name="case-labels"></a>Case labels
+## <a name="case-labels"></a>Etykiety przypadku
 
-Each case label specifies a pattern to compare to the match expression (the `caseSwitch` variable in the previous examples). If they match, control is transferred to the switch section that contains the **first** matching case label. If no case label pattern matches the match expression, control is transferred to the section with the `default` case label, if there's one. If there's no `default` case, no statements in any switch section are executed, and control is transferred outside the `switch` statement.
+Każda etykieta przypadku określa wzorzec do porównania z wyrażeniem dopasowania (zmienna `caseSwitch` w poprzednich przykładach). Jeśli są one zgodne, sterowanie jest przekazywane do sekcji Switch, która zawiera **pierwszą** pasującą etykietę case. Jeśli żaden wzorzec etykiety case nie jest zgodny z wyrażeniem Match, formant jest przenoszony do sekcji z etykietą przypadku `default`, jeśli istnieje. Jeśli nie ma `default`j wielkości liter, nie są wykonywane żadne instrukcje w żadnej sekcji Switch, a kontrolka jest transferowana poza instrukcją `switch`.
 
-For information on the `switch` statement and pattern matching, see the [Pattern matching with the `switch` statement](#pattern) section.
+Aby uzyskać informacje na temat instrukcji `switch` i dopasowania do wzorca, zobacz Zgodność [wzorców z sekcją `switch` instrukcji](#pattern) .
 
-Because C# 6 supports only the constant pattern and doesn't allow the repetition of constant values, case labels define mutually exclusive values, and only one pattern can match the match expression. As a result, the order in which `case` statements appear is unimportant.
+Ponieważ C# 6 obsługuje tylko wzorce stałe i nie zezwala na powtarzanie wartości stałych, etykiety przypadków definiują wzajemnie wykluczające się wartości, a tylko jeden wzorzec może być zgodny z wyrażeniem Match. W związku z tym kolejność, w której pojawiają się instrukcje `case`, jest nieważna.
 
-In C# 7.0, however, because other patterns are supported, case labels need not define mutually exclusive values, and multiple patterns can match the match expression. Because only the statements in the first switch section that contains the matching pattern are executed, the order in which `case` statements appear is now important. If C# detects a switch section whose case statement or statements are equivalent to or are subsets of previous statements, it generates a compiler error, CS8120, "The switch case has already been handled by a previous case."
+W C# 7,0, jednak ponieważ inne wzorce są obsługiwane, etykiety przypadków nie muszą definiować wzajemnie wykluczających się wartości, a wiele wzorców może pasować do wyrażenia Match. Ponieważ są wykonywane tylko instrukcje w pierwszej sekcji przełącznika, które zawiera pasujący wzorzec, kolejność, w której pojawiają się instrukcje `case`, jest teraz ważna. Jeśli C# program wykryje sekcję Switch, której instrukcją Case lub instrukcje są równoważne lub są podzbiorami poprzednich instrukcji, generuje błąd kompilatora, CS8120, "przypadek przełączania został już obsłużony przez poprzednią literę".
 
-The following example illustrates a `switch` statement that uses a variety of non-mutually exclusive patterns. If you move the `case 0:` switch section so that it's no longer the first section in the `switch` statement, C# generates a compiler error because an integer whose value is zero is a subset of all integers, which is the pattern defined by the `case int val` statement.
+Poniższy przykład ilustruje instrukcję `switch`, która używa różnych niewzajemnie wykluczających się wzorców. Jeśli przeniesiesz sekcję Switch `case 0:` tak, aby nie była już pierwszą sekcją w instrukcji `switch`, program C# generuje błąd kompilatora, ponieważ liczba całkowita, której wartością jest zero, jest podzbiorem wszystkich liczb całkowitych, które jest wzorcem zdefiniowanym przez instrukcję `case int val`.
 
 [!code-csharp[switch#5](~/samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
 
-You can correct this issue and eliminate the compiler warning in one of two ways:
+Możesz rozwiązać ten problem i wyeliminować Ostrzeżenie kompilatora na jeden z dwóch sposobów:
 
-- By changing the order of the switch sections.
+- Zmieniając kolejność sekcji Switch.
 
-- By using a [when clause](#when) in the `case` label.
+- Za pomocą [klauzuli when](#when) w etykiecie `case`.
 
-## <a name="the-default-case"></a>The `default` case
+## <a name="the-default-case"></a>`default` przypadku
 
-The `default` case specifies the switch section to execute if the match expression doesn't match any other `case` label. If a `default` case is not present and the match expression doesn't match any other `case` label, program flow falls through the `switch` statement.
+`default` Case określa sekcję Switch, która ma zostać wykonana, jeśli wyrażenie Match nie pasuje do żadnej innej etykiety `case`. Jeśli `default` przypadku nie istnieje i wyrażenie Match nie jest zgodne z żadną inną etykietą `case`, przepływ programu odbywa się za pomocą instrukcji `switch`.
 
-The `default` case can appear in any order in the `switch` statement. Regardless of its order in the source code, it's always evaluated last, after all `case` labels have been evaluated.
+Przypadek `default` może występować w dowolnej kolejności w instrukcji `switch`. Bez względu na jego kolejność w kodzie źródłowym jest zawsze Szacowana jako Ostatnia, po ocenie wszystkich etykiet `case`.
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Pattern matching with the `switch` statement
+## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" /> dopasowywania do wzorca przy użyciu instrukcji `switch`
 
-Each `case` statement defines a pattern that, if it matches the match expression, causes its  containing switch section to be executed. All versions of C# support the constant pattern. The remaining patterns are supported beginning with C# 7.0.
+Każda instrukcja `case` definiuje wzorzec, który jest zgodny z wyrażeniem Match, powoduje, że jego sekcja Switch zostanie wykonana. Wszystkie wersje programu C# obsługują stałe wzorce. Pozostałe wzorce są obsługiwane począwszy od C# 7,0.
 
-### <a name="constant-pattern"></a>Constant pattern
+### <a name="constant-pattern"></a>Wzorzec stałej
 
-The constant pattern tests whether the match expression equals a specified constant. Its syntax is:
+Wzorzec stałej testuje, czy wyrażenie dopasowania jest równe określonej stałej. Jego składnia to:
 
 ```csharp
    case constant:
 ```
 
-where *constant* is the value to test for. *constant* can be any of the following constant expressions:
+gdzie *stała* jest wartością do przetestowania. *stała* może być dowolnym z następujących wyrażeń stałych:
 
-- A [bool](bool.md) literal, either `true` or `false`.
-- Any [integral](../builtin-types/integral-numeric-types.md) constant, such as an `int`, a `long`, or a `byte`.
-- The name of a declared `const` variable.
-- An enumeration constant.
-- A [char](../builtin-types/char.md) literal.
-- A [string](../builtin-types/reference-types.md) literal.
+- Literał [bool](bool.md) , `true` lub `false`.
+- Dowolna stała [całkowita](../builtin-types/integral-numeric-types.md) , taka jak `int`, `long`lub `byte`.
+- Nazwa zadeklarowanej zmiennej `const`.
+- Stała wyliczenia.
+- Literał [znakowy](../builtin-types/char.md) .
+- Literał [ciągu](../builtin-types/reference-types.md) .
 
-The constant expression is evaluated as follows:
+Wyrażenie stałe jest oceniane w następujący sposób:
 
-- If *expr* and *constant* are integral types, the C# equality operator determines whether the expression returns `true` (that is, whether `expr == constant`).
+- Jeśli *wyrażenie* i *stała* są typami całkowitymi, C# operator równości określa, czy wyrażenie zwróci `true` (to znaczy czy `expr == constant`).
 
-- Otherwise, the value of the expression is determined by a call to the static [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) method.
+- W przeciwnym razie wartość wyrażenia jest określana przez wywołanie metody static [obiektu. Equals (wyrażenie, stała)](xref:System.Object.Equals(System.Object,System.Object)) .
 
-The following example uses the constant pattern to determine whether a particular date is a weekend, the first day of the work week, the last day of the work week, or the middle of the work week. It evaluates the <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> property of the current day against the members of the <xref:System.DayOfWeek> enumeration.
+W poniższym przykładzie za pomocą wzorca stałego można określić, czy konkretna data to weekend, pierwszy dzień tygodnia pracy, ostatni dzień tygodnia pracy lub środek tygodnia pracy. Oblicza Właściwość <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> bieżącego dnia względem elementów członkowskich wyliczenia <xref:System.DayOfWeek>.
 
 [!code-csharp[switch#7](~/samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
-The following example uses the constant pattern to handle user input in a console application that simulates an automatic coffee machine.
+Poniższy przykład używa wzorca stałego do obsługi danych wejściowych użytkownika w aplikacji konsolowej, która symuluje automatyczną maszynę Kawową.
 
 [!code-csharp[switch#6](~/samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]
 
-### <a name="type-pattern"></a>Type pattern
+### <a name="type-pattern"></a>Wzorzec typu
 
-The type pattern enables concise type evaluation and conversion. When used with the `switch` statement to perform pattern matching, it tests whether an expression can be converted to a specified type and, if it can be, casts it to a variable of that type. Its syntax is:
+Wzorzec typu umożliwia obliczanie i konwersję zwięzłego typu. Gdy jest używany z instrukcją `switch`, aby wykonać dopasowanie do wzorca, sprawdza, czy wyrażenie można przekonwertować na określony typ, i, jeśli to możliwe, rzutuje go na zmienną tego typu. Jego składnia to:
 
 ```csharp
    case type varname
 ```
 
-where *type* is the name of the type to which the result of *expr* is to be converted, and *varname* is the object to which the result of *expr* is converted if the match succeeds. The compile-time type of *expr* may be a generic type parameter, starting with C# 7.1.
+Where *Type* jest nazwą typu, do którego zostanie przekonwertowany wynik *wyrażenia* , a *nazwa_zmiennej* jest obiektem, do którego zostanie przekonwertowany wynik *wyrażenia* , jeśli dopasowanie się powiedzie. Typ "czas kompilacji" *wyrażenia* może być parametrem typu ogólnego, rozpoczynając od C# 7,1.
 
-The `case` expression is `true` if any of the following is true:
+Wyrażenie `case` jest `true`, jeśli którykolwiek z następujących warunków jest spełniony:
 
-- *expr* is an instance of the same type as *type*.
+- *wyrażenie* jest wystąpieniem tego samego typu co *Typ*.
 
-- *expr* is an instance of a type that derives from *type*. In other words, the result of *expr* can be upcast to an instance of *type*.
+- *wyrażenie* jest wystąpieniem typu, który pochodzi od *typu*. Innymi słowy, wynik *wyrażenia* może być rzutowany na wystąpienie *typu*.
 
-- *expr* has a compile-time type that is a base class of *type*, and *expr* has a runtime type that is *type* or is derived from *type*. The *compile-time type* of a variable is the variable's type as defined in its type declaration. The *runtime type* of a variable is the type of the instance that is assigned to that variable.
+- *wyrażenie* ma typ czasu kompilacji, który jest klasą bazową *typu*, a *wyrażenie* ma typ środowiska uruchomieniowego, który jest *typem* lub pochodzi od *typu*. *Typ czasu kompilacji* zmiennej to typ zmiennej, zgodnie z definicją w deklaracji typu. *Typ środowiska uruchomieniowego* zmiennej to typ wystąpienia, które jest przypisane do tej zmiennej.
 
-- *expr* is an instance of a type that implements the *type* interface.
+- *wyrażenie* jest wystąpieniem typu, który implementuje interfejs *typu* .
 
-If the case expression is true, *varname* is definitely assigned and has local scope within the switch section only.
+Jeśli wyrażenie CASE ma wartość true, właściwość *nazwa_zmiennej* jest ostatecznie przypisana i ma zakres lokalny tylko w sekcji Switch.
 
-Note that `null` doesn't match a type. To match a `null`, you use the following `case` label:
+Należy zauważyć, że `null` nie pasuje do typu. Aby dopasować `null`, należy użyć następującej etykiety `case`:
 
 ```csharp
 case null:
 ```
 
-The following example uses the type pattern to provide information about various kinds of collection types.
+Poniższy przykład używa wzorca typu, aby podać informacje dotyczące różnych rodzajów typów kolekcji.
 
 [!code-csharp[type-pattern#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
-Instead of `object`, you could make a generic method, using the type of the collection as the type parameter, as shown in the following code:
+Zamiast `object`można utworzyć metodę rodzajową przy użyciu typu kolekcji jako parametru typu, jak pokazano w poniższym kodzie:
 
 [!code-csharp[type-pattern#3](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern3.cs#1)]
 
-The generic version is different than the first sample in two ways. First, you can't use the `null` case. You can't use any constant case because the compiler can't convert any arbitrary type `T` to any type other than `object`. What had been the `default` case now tests for a non-null `object`. That means the `default` case tests only for `null`.
+Wersja ogólna różni się od pierwszej próbki na dwa sposoby. Najpierw nie można użyć przypadku `null`. Nie można użyć żadnego ze stałych przypadków, ponieważ kompilator nie może konwertować dowolnego dowolnego typu `T` na dowolny typ inny niż `object`. Co było `default` przypadku teraz testuje `object`o wartości innej niż null. Oznacza to, że `default` testy przypadku `null`.
 
-Without pattern matching, this code might be written as follows. The use of type pattern matching produces more compact, readable code by eliminating the need to test whether the result of a conversion is a `null` or to perform repeated casts.
+Bez dopasowania do wzorca ten kod może być zapisany w następujący sposób. Użycie dopasowania wzorca typu daje bardziej zwarty, czytelny kod, eliminując konieczność sprawdzenia, czy wynik konwersji jest `null`, czy też do wykonywania powtarzających się rzutowania.
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> The `case` statement and the `when` clause
+## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> instrukcji `case` i klauzuli `when`
 
-Starting with C# 7.0, because case statements need not be mutually exclusive, you can add a `when` clause to specify an additional condition that must be satisfied for the case statement to evaluate to true. The `when` clause can be any expression that returns a Boolean value.
+Począwszy od C# 7,0, ponieważ instrukcje Case nie muszą się wzajemnie wykluczać, można dodać klauzulę `when`, aby określić dodatkowy warunek, który musi być spełniony dla instrukcji case, aby obliczyć wartość true. Klauzula `when` może być dowolnym wyrażeniem zwracającym wartość logiczną.
 
-The following example defines a base `Shape` class, a `Rectangle` class that derives from `Shape`, and a `Square` class that derives from `Rectangle`. It uses the `when` clause to ensure that the `ShowShapeInfo` treats a `Rectangle` object that has been assigned equal lengths and widths as a `Square` even if it hasn't been instantiated as a `Square` object. The method doesn't attempt to display information either about an object that is `null` or a shape whose area is zero.
+W poniższym przykładzie zdefiniowano klasę podstawową `Shape`, klasy `Rectangle`, która pochodzi od `Shape`i klasy `Square`, która pochodzi od `Rectangle`. Używa klauzuli `when`, aby upewnić się, że `ShowShapeInfo` traktuje `Rectangle` obiekt, do którego przypisano równe długości i szerokości jako `Square` nawet wtedy, gdy nie został skonkretyzowany jako obiekt `Square`. Metoda nie próbuje wyświetlić informacji o obiekcie `null` lub kształcie, którego obszar ma wartość zero.
 
 [!code-csharp[when-clause#1](~/samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
 
-Note that the `when` clause in the example that attempts to test whether a `Shape` object is `null` doesn't execute. The correct type pattern to test for a `null` is `case null:`.
+Należy zauważyć, że klauzula `when` w przykładzie, która próbuje sprawdzić, czy obiekt `Shape` jest `null` nie jest wykonywany. Poprawna wzorzec typu do testowania dla `null` jest `case null:`.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-For more information, see [The switch statement](~/_csharplang/spec/statements.md#the-switch-statement) in the [C# Language Specification](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [instrukcję Switch](~/_csharplang/spec/statements.md#the-switch-statement) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C# Reference](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [if-else](if-else.md)

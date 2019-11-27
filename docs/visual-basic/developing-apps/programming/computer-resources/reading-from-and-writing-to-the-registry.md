@@ -15,31 +15,31 @@ ms.locfileid: "74349762"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>Odczytywanie z oraz zapisywanie do rejestru (Visual Basic)
 
-This topic describes task and conceptual topics that are associated with the registry.  
+W tym temacie opisano tematy dotyczące zadań i pojęć, które są skojarzone z rejestrem.  
   
- When programming in Visual Basic, you can choose to access the registry by means of either the functions provided by Visual Basic or the registry classes of the .NET Framework. The registry hosts information from the operating system as well as information from applications hosted on the machine. Working with the registry may compromise security by allowing inappropriate access to system resources or protected information.  
+ Podczas programowania w Visual Basic można wybrać dostęp do rejestru za pomocą funkcji udostępnianych przez Visual Basic lub klasy rejestru .NET Framework. Rejestr zawiera informacje z systemu operacyjnego oraz informacje z aplikacji hostowanych na komputerze. Praca z rejestrem może naruszyć bezpieczeństwo przez umożliwienie nieodpowiedniego dostępu do zasobów systemowych lub chronionych informacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
  [Instrukcje: tworzenie klucza rejestru i określanie jego wartości](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
- Describes how to use the `CreateSubKey` and `SetValue` methods of the `My.Computer.Registry` object to create a registry key and set its value.  
+ Opisuje sposób używania metod `CreateSubKey` i `SetValue` obiektu `My.Computer.Registry` do tworzenia klucza rejestru i ustawiania jego wartości.  
   
  [Instrukcje: odczytywanie wartości z klucza rejestru](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)  
- Describes how to use the `GetValue` method of the `My.Computer.Registry` object to read a value from a registry key.  
+ Opisuje sposób użycia metody `GetValue` obiektu `My.Computer.Registry` do odczytywania wartości z klucza rejestru.  
   
  [Instrukcje: usuwanie klucza rejestru](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
- Describes how to use the `DeleteSubKey` method of the `My.Computer.Registry.CurrentUser` property to delete a registry key.  
+ Opisuje sposób używania metody `DeleteSubKey` właściwości `My.Computer.Registry.CurrentUser` do usuwania klucza rejestru.  
   
  [Odczytywanie z rejestru i zapisywanie w nim za pomocą przestrzeni nazw Microsoft.Win32](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
- Describes how to use the `Registry` and `RegistryKey` classes of the .NET Framework to access the registry.  
+ Opisuje sposób używania klas `Registry` i `RegistryKey` .NET Framework w celu uzyskania dostępu do rejestru.  
   
  [Bezpieczeństwo i rejestr](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
- Discusses security issues involving the registry.  
+ Omawia problemy z zabezpieczeniami związane z rejestrem.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- Lists and explains members of the `My.Computer.Registry` object.  
+ Wyświetla listę i objaśnia elementy członkowskie obiektu `My.Computer.Registry`.  
   
  <xref:Microsoft.Win32.Registry>  
- Presents an overview of the `Registry` class, along with links to individual keys and members.
+ Przedstawia przegląd klasy `Registry` wraz z łączami do poszczególnych kluczy i członków.

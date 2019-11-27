@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445642"
 ---
 # <a name="init-method"></a>Init — Metoda
-Prepares objects implementing the [IALink Interface](ialink-interface.md) for use.  
+Przygotowuje obiekty implementujące [interfejs IALink —](ialink-interface.md) do użytku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,16 +35,16 @@ HRESULT Init(
   
 ## <a name="parameters"></a>Parametry  
  `pDispenser`  
- [IMetaDataDispenserEx Interface](../metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.  
+ Wskaźnik [interfejsu IMetaDataDispenserEx](../metadata/imetadatadispenserex-interface.md) do rozdzielacza metadanych.  
   
  `pErrorHandler`  
- [IMetaDataError Interface](../metadata/imetadataerror-interface.md) pointer to an optional error handling interface.  
+ Wskaźnik [interfejsu IMetaDataError](../metadata/imetadataerror-interface.md) do opcjonalnego interfejsu obsługi błędów.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Returns S_OK if the method succeeds.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Requires alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 

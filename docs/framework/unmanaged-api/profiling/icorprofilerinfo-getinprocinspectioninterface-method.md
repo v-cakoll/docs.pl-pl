@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438992"
 ---
 # <a name="icorprofilerinfogetinprocinspectioninterface-method"></a>ICorProfilerInfo::GetInprocInspectionInterface — Metoda
-Gets an object that can be queried for an "ICorDebugProcess" interface. This method is obsolete in the .NET Framework version 2.0.  
+Pobiera obiekt, który może być badany dla interfejsu "ICorDebugProcess". Ta metoda jest przestarzała w .NET Framework w wersji 2,0.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,19 +34,19 @@ HRESULT GetInprocInspectionInterface(
   
 ## <a name="parameters"></a>Parametry  
  `ppicd`  
- [out](/cpp/atl/iunknown) object that can be queried for an `ICorDebugProcess` interface.  
+ Obiekt [out](/cpp/atl/iunknown) , który może być badany dla interfejsu `ICorDebugProcess`.  
   
 ## <a name="remarks"></a>Uwagi  
- The common language runtime (CLR) debugging API supported limited in-process debugging in the .NET Framework version 1.0. In-process debugging enabled a profiler to use the inspection portions of the debugging API. As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.  
+ Interfejs API debugowania środowiska uruchomieniowego języka wspólnego (CLR) obsługuje ograniczone debugowanie w procesie w .NET Framework w wersji 1,0. Debugowanie w procesie umożliwia profilerowi użycie części inspekcji interfejsu API debugowania. W wyniku opinii klientów, debugowanie w procesie zostało usunięte z .NET Framework w wersji 2,0 i zastąpione zestawem funkcji, który jest bardziej aktualny z profilem API profilowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Version:** 1.0  
+ **Wersja .NET Framework:** 1,0  
   
 ## <a name="see-also"></a>Zobacz także
 

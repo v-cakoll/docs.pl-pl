@@ -21,21 +21,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345184"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Wczesne i późne wiązania (Visual Basic)
-The Visual Basic compiler performs a process called `binding` when an object is assigned to an object variable. An object is *early bound* when it is assigned to a variable declared to be of a specific object type. Early bound objects allow the compiler to allocate memory and perform other optimizations before an application executes. For example, the following code fragment declares a variable to be of type <xref:System.IO.FileStream>:  
+Kompilator Visual Basic wykonuje proces o nazwie `binding`, gdy obiekt jest przypisany do zmiennej obiektu. Obiekt jest *wczesnie powiązany* , gdy jest przypisany do zmiennej zadeklarowanej jako określonego typu obiektu. Obiekty wczesnych powiązań umożliwiają kompilatorowi przydzielanie pamięci i wykonywanie innych optymalizacji przed wykonaniem aplikacji. Na przykład poniższy fragment kodu deklaruje zmienną do typu <xref:System.IO.FileStream>:  
   
  [!code-vb[VbVbalrOOP#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#90)]  
   
- Because <xref:System.IO.FileStream> is a specific object type, the instance assigned to `FS` is early bound.  
+ Ponieważ <xref:System.IO.FileStream> jest określonym typem obiektu, wystąpienie przypisane do `FS` jest wczesnie powiązane.  
   
- By contrast, an object is *late bound* when it is assigned to a variable declared to be of type `Object`. Objects of this type can hold references to any object, but lack many of the advantages of early-bound objects. For example, the following code fragment declares an object variable to hold an object returned by the `CreateObject` function:  
+ Z kolei obiekt jest *późnie powiązany* , gdy jest przypisany do zmiennej zadeklarowanej jako typu `Object`. Obiekty tego typu mogą zawierać odwołania do dowolnego obiektu, ale nie wiele zalet obiektów wczesnych powiązań. Na przykład poniższy fragment kodu deklaruje zmienną obiektu do przechowywania obiektu zwróconego przez funkcję `CreateObject`:  
   
  [!code-vb[VbVbalrOOP#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/LateBinding.vb#91)]  
   
-## <a name="advantages-of-early-binding"></a>Advantages of Early Binding  
- You should use early-bound objects whenever possible, because they allow the compiler to make important optimizations that yield more efficient applications. Early-bound objects are significantly faster than late-bound objects and make your code easier to read and maintain by stating exactly what kind of objects are being used. Another advantage to early binding is that it enables useful features such as automatic code completion and Dynamic Help because the Visual Studio integrated development environment (IDE) can determine exactly what type of object you are working with as you edit the code. Early binding reduces the number and severity of run-time errors because it allows the compiler to report errors when a program is compiled.  
+## <a name="advantages-of-early-binding"></a>Zalety wczesnego wiązania  
+ Jeśli jest to możliwe, należy używać obiektów wczesnych powiązań, ponieważ umożliwiają kompilatorowi wykonywanie ważnych optymalizacji, które dają wydajniejsze aplikacje. Obiekty wczesnie powiązane są znacznie szybsze niż obiekty z późnym wiązaniem i ułatwiają odczytywanie i konserwowanie kodu przez poznanie tego, jakiego rodzaju obiekty są używane. Kolejną zaletą wczesnych powiązań jest umożliwienie korzystania z użytecznych funkcji, takich jak automatyczne uzupełnianie kodu i Pomoc dynamiczna, ponieważ zintegrowane środowisko programistyczne (IDE) programu Visual Studio może dokładnie określić typ obiektu, z którym pracujesz podczas edycji kodu. Wczesne powiązanie zmniejsza liczbę i ważność błędów czasu wykonywania, ponieważ umożliwia kompilatorowi raportowanie błędów podczas kompilowania programu.  
   
 > [!NOTE]
-> Late binding can only be used to access type members that are declared as `Public`. Accessing members declared as `Friend` or `Protected Friend` results in a run-time error.  
+> Późne wiązanie może być używane tylko w celu uzyskania dostępu do elementów członkowskich typu, które są zadeklarowane jako `Public`. Uzyskiwanie dostępu do elementów członkowskich zadeklarowanych jako `Friend` lub `Protected Friend` powoduje błąd w czasie wykonywania.  
   
 ## <a name="see-also"></a>Zobacz także
 

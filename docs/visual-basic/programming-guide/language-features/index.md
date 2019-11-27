@@ -13,74 +13,74 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345066"
 ---
 # <a name="visual-basic-language-features"></a>Funkcje języka Visual Basic
-The following topics introduce and discuss the essential components of Visual Basic, an object-oriented programming language. After creating the user interface for your application using forms and controls, you need to write the code that defines the application's behavior. As with any modern programming language, Visual Basic supports a number of common programming constructs and language elements.  
+W poniższych tematach przedstawiono i omówiono podstawowe składniki Visual Basic, zorientowany obiektowo język programowania. Po utworzeniu interfejsu użytkownika dla aplikacji przy użyciu formularzy i kontrolek należy napisać kod, który definiuje zachowanie aplikacji. Podobnie jak w przypadku dowolnego nowoczesnego języka programowania, Visual Basic obsługuje wiele wspólnych konstrukcji programistycznych i elementów języka.  
   
- If you have programmed in other languages, much of the material covered in this section might seem familiar. While most of the constructs are similar to those in other languages, the event-driven nature of Visual Basic introduces some subtle differences.  
+ Jeśli masz zaprogramowany w innych językach, większość materiału omówionego w tej sekcji może wydawać się znana. Chociaż większość konstrukcji jest podobna do tych w innych językach, specyficzny dla zdarzeń charakter Visual Basic wprowadza niedelikatne różnice.  
   
- If you are new to programming, the material in this section serves as an introduction to the basic building blocks for writing code. Once you understand the basics, you can create powerful applications using Visual Basic.  
+ Jeśli jesteś nowym sposobem programowania, materiał w tej sekcji służy jako wprowadzenie do podstawowych bloków konstrukcyjnych do pisania kodu. Po zrozumieniu podstaw możesz tworzyć zaawansowane aplikacje przy użyciu Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- Discusses making your code more compact and powerful by declaring and using arrays, which hold multiple related values.  
+ W tym artykule omówiono sposób, w jaki kod jest bardziej zwarty i wydajny, deklarując i używając tablic, które przechowują wiele powiązanych wartości.  
   
  [Inicjatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- Describes collection initializers, which enable you to create a collection and populate it with an initial set of values.  
+ Opisuje Inicjatory kolekcji, które umożliwiają utworzenie kolekcji i wypełnienie jej początkowym zestawem wartości.  
   
  [Stałe i wyliczenia](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)  
- Discusses storing unchanging values for repeated use, including sets of related constant values.  
+ W tym artykule omówiono przechowywanie niezmienionych wartości do wielokrotnego użycia, w tym zestawów powiązanych wartości stałych.  
   
  [Przepływ sterowania](../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- Shows how to regulate the flow of your program's execution.  
+ Pokazuje, jak regulować przepływ wykonywania programu.  
   
  [Typy danych](../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Describes what kinds of data a programming element can hold and how that data is stored.  
+ Opisuje rodzaje danych, które mogą być przechowywane przez element programowania, oraz sposób ich przechowywania.  
   
  [Zadeklarowane elementy](../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
- Covers programming elements you can declare, their names and characteristics, and how the compiler resolves references to them.  
+ Obejmuje elementy programistyczne, które można zadeklarować, ich nazwy i cechy oraz sposób, w jaki kompilator rozpoznaje odwołania do nich.  
   
  [Delegaci](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- Provides an introduction to delegates and how they are used in Visual Basic.  
+ Zawiera wprowadzenie do delegatów i sposobu ich używania w Visual Basic.  
   
  [Wczesne i późne powiązania](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- Describes binding, which is performed by the compiler when an object is assigned to an object variable, and the differences between early-bound and late-bound objects.  
+ Opisuje powiązanie, które jest wykonywane przez kompilator, gdy obiekt jest przypisany do zmiennej obiektu, oraz różnice między obiektami z wczesnym wiązaniem i późnymi powiązaniami.  
   
  [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)  
- Provides an overview of syntax errors, run-time errors, and logic errors.  
+ Zawiera omówienie błędów składni, błędów czasu wykonywania i błędów logicznych.  
   
  [Zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md)  
- Shows how to declare and use events.  
+ Pokazuje sposób deklarowania i używania zdarzeń.  
   
  [Interfejsy](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
- Describes what interfaces are and how you can use them in your applications.  
+ Opisuje interfejsy i sposoby ich używania w aplikacjach.  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Provides links to topics that introduce [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] features and programming.  
+ Zawiera łącza do tematów, które wprowadzają [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] funkcje i programowanie.  
   
  [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- Provides an overview of objects and classes, how they are used, their relationships to each other, and the properties, methods, and events they expose.  
+ Zawiera omówienie obiektów i klas, sposobu ich używania, ich relacji ze sobą oraz właściwości, metod i udostępnianych przez nie zdarzeń.  
   
  [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- Describes the code elements that manipulate value-holding elements, how to use them efficiently, and how to combine them to yield new values.  
+ Opisuje elementy kodu, które manipulują elementami zawierającymi wartość, jak używać ich efektywnie oraz jak połączyć je w celu uzyskania nowych wartości.  
   
  [Procedury](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- Describes `Sub`, `Function`, `Property`, and `Operator` procedures, as well as advanced topics such as recursive and overloaded procedures.  
+ Opisuje procedury `Sub`, `Function`, `Property`i `Operator`, a także zaawansowane tematy, takie jak cykliczne i przeciążone procedury.  
   
  [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)  
- Describes declaration and executable statements.  
+ Opisuje deklaracje i instrukcje wykonywalne.  
   
  [Ciągi](../../../visual-basic/programming-guide/language-features/strings/index.md)  
- Provides links to topics that describe the basic concepts about using strings in Visual Basic.  
+ Zawiera łącza do tematów opisujących podstawowe koncepcje dotyczące korzystania z ciągów w Visual Basic.  
   
  [Zmienne](../../../visual-basic/programming-guide/language-features/variables/index.md)  
- Introduces variables and describes how to use them in Visual Basic.  
+ Wprowadza zmienne i opisuje sposób ich używania w Visual Basic.  
   
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Provides links to topics that describe how to use XML in Visual Basic.  
+ Zawiera łącza do tematów opisujących sposób używania kodu XML w Visual Basic.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne
 
  [Kolekcje](../../../visual-basic/programming-guide/concepts/collections.md)  
- Describes some of the types of collections that are provided by the .NET Framework. Demonstrates how to use simple collections and collections of key/value pairs.  
+ Opisuje niektóre typy kolekcji, które są dostarczane przez .NET Framework. Pokazuje, jak używać prostych kolekcji i kolekcji par klucz/wartość.  
   
  [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)  
- Provides reference information on various aspects of Visual Basic programming.
+ Zawiera informacje referencyjne dotyczące różnych aspektów programowania Visual Basic.

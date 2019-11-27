@@ -12,11 +12,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353721"
 ---
 # <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a>Podczas operacji automatyzacji nie odnaleziono nazwy pliku lub nazwy klasy (Visual Basic)
-The name specified for file name or class in a call to the `GetObject` function could not be found.  
+Nie można odnaleźć nazwy określonej dla nazwy pliku lub klasy w wywołaniu funkcji `GetObject`.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Check the names and try again. Make sure the name used for the `class` parameter matches that registered with the system.  
+- Sprawdź nazwy i spróbuj ponownie. Upewnij się, że nazwa użyta dla parametru `class` jest zgodna z zarejestrowanego w systemie.  
   
 ## <a name="see-also"></a>Zobacz także
 

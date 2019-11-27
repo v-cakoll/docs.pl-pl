@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431939"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps — Metoda
-Modifies the specified `ExportedType` metadata structure.  
+Modyfikuje określoną strukturę metadanych `ExportedType`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,28 +38,28 @@ HRESULT SetExportedTypeProps (
   
 ## <a name="parameters"></a>Parametry  
  `ct`  
- [in] The metadata token that specifies the `ExportedType` metadata structure to be modified.  
+ podczas Token metadanych określający strukturę metadanych `ExportedType`, która ma zostać zmodyfikowana.  
   
  `tkImplementation`  
- [in] The token, of type `File`, `AssemblyRef`, or `ExportedType`, that specifies how this type is implemented.  
+ podczas Token, typu `File`, `AssemblyRef`lub `ExportedType`, który określa sposób implementowania tego typu.  
   
  `tkTypeDef`  
- [in] The `TypeDef` token referenced in the code file.  
+ podczas Token `TypeDef`, do którego odwołuje się plik kodu.  
   
  `dwExportedTypeFlags`  
- [in] A bitwise combination of values that specify attributes of the type.  
+ podczas Bitowa kombinacja wartości, które określają atrybuty typu.  
   
 ## <a name="remarks"></a>Uwagi  
- To create an `ExportedType` metadata structure, use the [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) method.  
+ Aby utworzyć `ExportedType` strukturę metadanych, użyj metody [IMetaDataAssemblyEmit::D efineexportedtype](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

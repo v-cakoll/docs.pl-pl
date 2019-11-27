@@ -15,25 +15,25 @@ ms.locfileid: "74345638"
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Porady: modemy dostępowe powiązane z portami seryjnymi w Visual Basic
 
-This topic describes how to use `My.Computer.Ports` to dial a modem in Visual Basic.  
+W tym temacie opisano sposób użycia `My.Computer.Ports` do nawiązywania połączenia z modemem w programie Visual Basic.  
   
- Typically, the modem is connected to one of the serial ports on the computer. For your application to communicate with the modem, it must send commands to the appropriate serial port.  
+ Zwykle modem jest podłączony do jednego z portów szeregowych na komputerze. Aby aplikacja mogła komunikować się z modemem, musi wysłać polecenia do odpowiedniego portu szeregowego.  
   
-### <a name="to-dial-a-modem"></a>To dial a modem  
+### <a name="to-dial-a-modem"></a>Aby nawiązać połączenie z modemem  
   
-1. Determine which serial port the modem is connected to. This example assumes the modem is on COM1.  
+1. Określ port szeregowy, z którym jest połączony modem. W tym przykładzie przyjęto założenie, że modem jest na COM1.  
   
-2. Use the `My.Computer.Ports.OpenSerialPort` method to obtain a reference to the port. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+2. Użyj metody `My.Computer.Ports.OpenSerialPort`, aby uzyskać odwołanie do portu. Aby uzyskać więcej informacji, zobacz temat <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
-     The `Using` block allows the application to close the serial port even if it generates an exception. All code that manipulates the serial port should appear within this block, or within a `Try...Catch...Finally` block.  
+     Blok `Using` umożliwia aplikacji zamknięcie portu szeregowego, nawet jeśli generuje wyjątek. Cały kod, który operuje na porcie seryjnym, powinien pojawić się w tym bloku lub w bloku `Try...Catch...Finally`.  
   
      [!code-vb[VbVbalrMyComputer#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#28)]  
   
-3. Set the `DtrEnable` property to indicate that the computer is ready to accept an incoming transmission from the modem.  
+3. Ustaw właściwość `DtrEnable` tak, aby wskazywała, że komputer jest gotowy do akceptowania przychodzącej transmisji z modemu.  
   
      [!code-vb[VbVbalrMyComputer#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#29)]  
   
-4. Send the dial command and the phone number to the modem through the serial port by means of the <xref:System.IO.Ports.SerialPort.Write%2A> method.  
+4. Wyślij polecenie wybierania numeru i numer telefonu do modemu przez port szeregowy za pomocą metody <xref:System.IO.Ports.SerialPort.Write%2A>.  
   
      [!code-vb[VbVbalrMyComputer#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#30)]  
   
@@ -41,19 +41,19 @@ This topic describes how to use `My.Computer.Ports` to dial a modem in Visual Ba
 
  [!code-vb[VbVbalrMyComputer#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#27)]  
   
- This code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **Connectivity and Networking**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
+ Ten przykład kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu znajdują się one w obszarze **łączności i sieci**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
 
- This example requires a reference to the <xref:System?displayProperty=nameWithType> namespace.  
+ Ten przykład wymaga odwołania do przestrzeni nazw <xref:System?displayProperty=nameWithType>.  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
+## <a name="robust-programming"></a>Skuteczne programowanie  
 
- This example assumes the modem is connected to COM1. We recommend that your code allow the user to select the desired serial port from a list of available ports. For more information, see [How to: Show Available Serial Ports](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
+ W tym przykładzie przyjęto założenie, że modem jest połączony z COM1. Zalecamy, aby Twój kod umożliwiał użytkownikowi wybranie żądanego portu szeregowego z listy dostępnych portów. Aby uzyskać więcej informacji, zobacz [jak: pokazać dostępne porty szeregowe](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
   
- This example uses a `Using` block to make sure that the application closes the port even if it throws an exception. For more information, see [Using Statement](../../../../visual-basic/language-reference/statements/using-statement.md).  
+ W tym przykładzie używa bloku `Using`, aby upewnić się, że aplikacja zamknie port nawet wtedy, gdy zgłasza wyjątek. Aby uzyskać więcej informacji, zobacz [using instrukcji](../../../../visual-basic/language-reference/statements/using-statement.md).  
   
- In this example, the application disconnects the serial port after it dials the modem. Realistically, you will want to transfer data to and from the modem. For more information, see [How to: Receive Strings From Serial Ports](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md).  
+ W tym przykładzie aplikacja rozłącza port szeregowy po nawiązaniu połączenia z modemem. Realistycznie można przesłać dane do i z modemu. Aby uzyskać więcej informacji, zobacz [jak to zrobić: otrzymywanie ciągów z portów seryjnych](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

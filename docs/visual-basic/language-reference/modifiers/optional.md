@@ -17,15 +17,15 @@ ms.locfileid: "74351436"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 
-Specifies that a procedure argument can be omitted when the procedure is called.
+Określa, że argument procedury może zostać pominięty, gdy procedura jest wywoływana.
 
 ## <a name="remarks"></a>Uwagi
 
-For each optional parameter, you must specify a constant expression as the default value of that parameter. If the expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the default value of the value data type is used as the default value of the parameter.
+Dla każdego opcjonalnego parametru należy określić wyrażenie stałe jako wartość domyślną tego parametru. Jeśli wyrażenie zwróci wartość [Nothing](../../../visual-basic/language-reference/nothing.md), wartością domyślną parametru typ danych jest jako wartość domyślna.
 
-If the parameter list contains an optional parameter, every parameter that follows it must also be optional.
+Jeśli lista parametrów zawiera opcjonalny parametr, każdy parametr, który następuje po nim musi być również opcjonalny.
 
-The `Optional` modifier can be used in these contexts:
+Modyfikator `Optional` może być używany w tych kontekstach:
 
 - [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)
 
@@ -36,14 +36,14 @@ The `Optional` modifier can be used in these contexts:
 - [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)
 
 > [!NOTE]
-> When calling a procedure with or without optional parameters, you can pass arguments by position or by name. For more information, see [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).
+> Podczas wywoływania procedury z parametrami opcjonalnymi lub bez nich można przekazać argumenty według pozycji lub według nazwy. Aby uzyskać więcej informacji, zobacz [przekazywanie argumentów według pozycji i według nazwy](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).
 
 > [!NOTE]
-> You can also define a procedure with optional parameters by using overloading. If you have one optional parameter, you can define two overloaded versions of the procedure, one that accepts the parameter and one that doesn’t. For more information, see [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).
+> Można także zdefiniować procedurę z opcjonalnymi parametrami przy użyciu przeciążenia. Jeśli masz jeden opcjonalny parametr, możesz zdefiniować dwie przeciążone wersje procedury, jedną, która akceptuje parametr i jeden, który nie jest. Aby uzyskać więcej informacji, zobacz [przeciążanie procedur](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).
 
 ## <a name="example"></a>Przykład
 
-The following example defines a procedure that has an optional parameter.
+W poniższym przykładzie zdefiniowano procedurę, która ma opcjonalny parametr.
 
 ```vb
 Public Function FindMatches(ByRef values As List(Of String),
@@ -66,7 +66,7 @@ End Function
 
 ## <a name="example"></a>Przykład
 
-The following example demonstrates how to call a procedure with arguments passed by position and with arguments passed by name. The procedure has two optional parameters.
+W poniższym przykładzie pokazano, jak wywołać procedurę z argumentami przekazaną przez pozycję i z argumentami przekazaną przez nazwę. Procedura ma dwa parametry opcjonalne.
 
 [!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]
 

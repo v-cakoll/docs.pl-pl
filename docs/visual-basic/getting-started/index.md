@@ -1,5 +1,5 @@
 ---
-title: Wprowadzenie
+title: Rozpoczęcie pracy
 ms.date: 09/10/2018
 helpviewer_keywords:
 - get started, Visual Basic
@@ -12,52 +12,52 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344815"
 ---
-# <a name="get-started-with-visual-basic"></a>Get started with Visual Basic
+# <a name="get-started-with-visual-basic"></a>Wprowadzenie do języka Visual Basic
 
-This section of the documentation helps you get started with Visual Basic application development.
+Ta sekcja dokumentacji ułatwia rozpoczęcie pracy z Visual Basic opracowywaniem aplikacji.
 
-## <a name="get-started-with-visual-basic-and-net-core"></a>Get started with Visual Basic and .NET Core
+## <a name="get-started-with-visual-basic-and-net-core"></a>Wprowadzenie do Visual Basic i .NET Core
 
-[Build a Visual Basic Hello World application with .NET Core in Visual Studio 2017](../../core/tutorials/vb-with-visual-studio.md)
+[Tworzenie aplikacji Hello world Visual Basic przy użyciu platformy .NET Core w programie Visual Studio 2017](../../core/tutorials/vb-with-visual-studio.md)
 
 [Tworzenie biblioteki klas w języku Visual Basic i na platformie .NET Core w programie Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md)
 
 ## <a name="additional-information"></a>Dodatkowe informacje
 
-- [What's new for Visual Basic](whats-new.md)\
-Lists new features in each of the versions of Visual Basic .NET.
+- [Co nowego w Visual Basic](whats-new.md)\
+Wyświetla listę nowych funkcji w każdej wersji programu Visual Basic .NET.
 
-- [Visual Basic Breaking Changes in Visual Studio](breaking-changes-in-visual-studio.md)\
-Lists changes in this release that might prevent an application from compiling or change its run-time behavior.
+- [Visual Basic istotne zmiany w programie Visual Studio](breaking-changes-in-visual-studio.md)\
+Informuje o zmianach wprowadzonych w tej wersji, które mogą uniemożliwić kompilowanie aplikacji lub zmienić jej działanie.
 
-- [Additional Resources for Visual Basic Programmers](additional-resources.md)\
+- [Dodatkowe zasoby dla Visual Basic programistów](additional-resources.md)\
 Oferuje listę witryn sieci Web i grup dyskusyjnych, które mogą pomóc w znalezieniu odpowiedzi na typowe problemy.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Get Visual Basic](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)  
-Provides download links for Visual Studio versions that include Visual Basic support, including free versions.
+- [Pobierz Visual Basic](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)  
+Oferuje linki do pobrania dla wersji programu Visual Studio, które obejmują obsługę Visual Basic, w tym bezpłatne wersje.
 
-- [Object-Oriented Programming](../programming-guide/concepts/object-oriented-programming.md)\
+- [Programowanie zorientowane obiektowo](../programming-guide/concepts/object-oriented-programming.md)\
 Oferuje łącza do stron, które wprowadzają programowanie zorientowane obiektowo i opisują sposób tworzenia własnych obiektów, a także sposób wykorzystania obiektów w celu uproszczenia kodowania.
 
-- [Samples](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)\
-Provides links to sample code in Visual Basic.
+- [Przykłady](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)\
+Zawiera łącza do przykładowego kodu w Visual Basic.
 
-- [Walkthroughs](../../visual-basic/walkthroughs.md)\
-Provides a list of Help pages that demonstrate aspects of the Visual Basic language.
+- [Instruktaże](../../visual-basic/walkthroughs.md)\
+Zawiera listę stron pomocy, które przedstawiają aspekty języka Visual Basic.
 
-- [Feedback options for Visual Studio](/visualstudio/ide/feedback-options)\
+- [Opcje opinii dla programu Visual Studio](/visualstudio/ide/feedback-options)\
 Opisuje sposoby uzyskania pomocy technicznej i przekazywania opinii zwrotnej.
 
-- [Visual Studio](/visualstudio/)\
-Provides links into the Visual Studio documentation.
+- \ [programu Visual Studio](/visualstudio/)
+Oferuje linki do dokumentacji programu Visual Studio.
 
 - [C#](../../csharp/index.yml)\
-Provides links into the documentation on application development with Visual C#.
+Oferuje linki do dokumentacji dotyczącej tworzenia aplikacji przy użyciu C#wizualizacji.
 
-- [Visual C++](/cpp/)\
+- [\ C++ wizualizacji](/cpp/)
 Oferuje łącza do dokumentacji języka Visual C++.
 
-- [Office and SharePoint Development](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio)\
-Provides information about using Microsoft Office and Visual Studio as part of a business application.
+- [Programowanie dla pakietu Office i programu SharePoint](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio)\
+Zawiera informacje na temat używania Microsoft Office i programu Visual Studio w ramach aplikacji biznesowej.

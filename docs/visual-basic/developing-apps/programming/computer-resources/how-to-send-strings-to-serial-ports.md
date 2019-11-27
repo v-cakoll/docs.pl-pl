@@ -16,29 +16,29 @@ ms.locfileid: "74345585"
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Porady: wysyłanie ciągów do portów seryjnych w Visual Basic
 
-This topic describes how to use `My.Computer.Ports` to send strings to the computer's serial ports in Visual Basic.  
+W tym temacie opisano, jak za pomocą `My.Computer.Ports` wysyłać ciągi do portów szeregowych komputera w Visual Basic.  
   
 ## <a name="example"></a>Przykład  
 
- This example sends a string to the COM1 serial port. You may need to use a different serial port on your computer.  
+ Ten przykład wysyła ciąg do portu szeregowego COM1. Może być konieczne użycie innego portu szeregowego na komputerze.  
   
- Use the `My.Computer.Ports.OpenSerialPort` method to obtain a reference to the port. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+ Użyj metody `My.Computer.Ports.OpenSerialPort`, aby uzyskać odwołanie do portu. Aby uzyskać więcej informacji, zobacz temat <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
- The `Using` block allows the application to close the serial port even if it generates an exception. All code that manipulates the serial port should appear within this block or within a `Try...Catch...Finally` block.  
+ Blok `Using` umożliwia aplikacji zamknięcie portu szeregowego, nawet jeśli generuje wyjątek. Cały kod, który operuje na porcie seryjnym, powinien pojawić się w tym bloku lub w bloku `Try...Catch...Finally`.  
   
- The <xref:System.IO.Ports.SerialPort.WriteLine%2A> method sends the data to the serial port.  
+ Metoda <xref:System.IO.Ports.SerialPort.WriteLine%2A> wysyła dane do portu szeregowego.  
   
  [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
-- This example assumes the computer is using `COM1`.  
+- W tym przykładzie przyjęto założenie, że komputer używa `COM1`.  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
+## <a name="robust-programming"></a>Skuteczne programowanie  
 
- This example assumes the computer is using `COM1`; for more flexibility, the code should allow the user to select the desired serial port from a list of available ports. For more information, see [How to: Show Available Serial Ports](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
+ W tym przykładzie przyjęto założenie, że komputer używa `COM1`; Aby zapewnić większą elastyczność, kod powinien zezwalać użytkownikowi na wybranie żądanego portu szeregowego z listy dostępnych portów. Aby uzyskać więcej informacji, zobacz [jak: pokazać dostępne porty szeregowe](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
   
- This example uses a `Using` block to make sure that the application closes the port even if it throws an exception. For more information, see [Using Statement](../../../../visual-basic/language-reference/statements/using-statement.md).  
+ W tym przykładzie używa bloku `Using`, aby upewnić się, że aplikacja zamknie port nawet wtedy, gdy zgłasza wyjątek. Aby uzyskać więcej informacji, zobacz [using instrukcji](../../../../visual-basic/language-reference/statements/using-statement.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

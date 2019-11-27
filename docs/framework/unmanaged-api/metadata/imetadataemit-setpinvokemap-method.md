@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440571"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>IMetaDataEmit::SetPinvokeMap — Metoda
-Sets or changes features of a method's PInvoke signature, as defined by a prior call to [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).  
+Ustawia lub zmienia funkcje podpisu PInvoke metody, zgodnie z definicją w poprzednim wywołaniu [IMetaDataEmit::D efinepinvokemap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,25 +38,25 @@ HRESULT SetPinvokeMap (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- [in] The `mdToken` to which mapping information applies.  
+ podczas `mdToken`, do którego mają zastosowanie informacje dotyczące mapowania.  
   
  `dwMappingFlags`  
- [in] Flags used by PInvoke to do the mapping. This is a bitmask of `CorPinvokeMap` values.  
+ podczas Flagi używane przez funkcję PInvoke do wykonania mapowania. To jest maska bitów wartości `CorPinvokeMap`.  
   
  `szImportName`  
- [in] The name of the target export in the native DLL.  
+ podczas Nazwa docelowego eksportu w natywnej bibliotece DLL.  
   
  `mrImportDLL`  
- [in] The `mdModuleRef` token for the target unmanaged DLL.  
+ podczas Token `mdModuleRef` dla docelowej niezarządzanej biblioteki DLL.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

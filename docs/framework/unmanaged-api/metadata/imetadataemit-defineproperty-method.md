@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431517"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty — Metoda
-Creates a property definition for the specified type, with the specified `get` and `set` method accessors, and gets a token to that property definition.  
+Tworzy definicję właściwości określonego typu z określonym `get` i metodami dostępu do metody `set` i pobiera token do tej definicji właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,49 +46,49 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- [in] The token for class or interface on which the property is being defined.  
+ podczas Token klasy lub interfejsu, w którym właściwość jest zdefiniowana.  
   
  `szProperty`  
- [in] The name of the property.  
+ podczas Nazwa właściwości.  
   
  `dwPropFlags`  
- [in] The property flags.  
+ podczas Flagi właściwości.  
   
  `pvSig`  
- [in] The property signature.  
+ podczas Podpis właściwości.  
   
  `cbSig`  
- [in] The count of bytes in `pvSig`.  
+ podczas Liczba bajtów w `pvSig`.  
   
  `dwCPlusTypeFlag`  
- [in] The type of the property's default value.  
+ podczas Typ wartości domyślnej właściwości.  
   
  `pValue`  
- [in] The default value for the property.  
+ podczas Wartość domyślna właściwości.  
   
  `cchValue`  
- [in] The count of (Unicode) characters in `pValue`.  
+ podczas Liczba znaków (Unicode) w `pValue`.  
   
  `mdSetter`  
- [in] The method that sets the property value.  
+ podczas Metoda, która ustawia wartość właściwości.  
   
  `mdGetter`  
- [in] The method that gets the property value.  
+ podczas Metoda, która pobiera wartość właściwości.  
   
  `rmdOtherMethods[]`  
- [in] An array of other methods associated with the property. Terminate the array with an `mdTokenNil`.  
+ podczas Tablica innych metod skojarzonych z właściwością. Przerwij tablicę przy użyciu `mdTokenNil`.  
   
  `pmdProp`  
- [out] The `mdProperty` token assigned.  
+ określoną Przypisany token `mdProperty`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448150"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject — Metoda
-Gets the `ClassID` of an object, given its `ObjectID`.  
+Pobiera `ClassID` obiektu, uwzględniając jego `ObjectID`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,22 +35,22 @@ HRESULT GetClassFromObject(
   
 ## <a name="parameters"></a>Parametry  
  `objectId`  
- [in] The ID of the object for which to get the `ClassID`.  
+ podczas Identyfikator obiektu, dla którego ma zostać pobrany `ClassID`.  
   
  `pClassId`  
- [out] A pointer to the returned `ClassID`.  
+ określoną Wskaźnik do zwracanej `ClassID`.  
   
 ## <a name="remarks"></a>Uwagi  
- A null `pClassId` indicates that `objectId` has a type that is unloading.  
+ `pClassId` o wartości null wskazuje, że `objectId` ma typ, który jest wyładowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

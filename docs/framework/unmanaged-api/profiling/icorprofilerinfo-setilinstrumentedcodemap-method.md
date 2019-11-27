@@ -24,10 +24,10 @@ ms.locfileid: "74449866"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap — Metoda
 
-Sets a code map for the specified function using the specified Microsoft intermediate language (MSIL) map entries.
+Ustawia mapę kodu dla określonej funkcji przy użyciu określonych wpisów mapy języka pośredniego (MSIL) firmy Microsoft.
 
 > [!NOTE]
-> In the .NET Framework version 2.0, calling `SetILInstrumentedCodeMap` on a `FunctionID` that represents a generic function in a particular application domain will affect all instances of that function in the application domain.
+> W .NET Framework w wersji 2,0 wywoływanie `SetILInstrumentedCodeMap` na `FunctionID`, który reprezentuje funkcję generyczną w określonej domenie aplikacji, wpłynie na wszystkie wystąpienia tej funkcji w domenie aplikacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,58 +42,58 @@ HRESULT SetILInstrumentedCodeMap(
 ## <a name="parameters"></a>Parametry
 
 `functionId`\
-[in] The ID of the function for which to set the code map.
+podczas Identyfikator funkcji, dla której ma zostać ustawiona Mapa kodu.
 
 `fStartJit`\
-[in] A Boolean value that indicates whether the call to the `SetILInstrumentedCodeMap` method is the first for a particular `FunctionID`. Set `fStartJit` to `true` in the first call to `SetILInstrumentedCodeMap` for a given `FunctionID`, and to `false` thereafter.
+podczas Wartość logiczna wskazująca, czy wywołanie metody `SetILInstrumentedCodeMap` jest pierwszym elementem dla konkretnego `FunctionID`. Ustaw `fStartJit` na `true` w pierwszym wywołaniu `SetILInstrumentedCodeMap` dla danego `FunctionID`i `false`.
 
 `cILMapEntries`\
-[in] The number of elements in the `cILMapEntries` array.
+podczas Liczba elementów w tablicy `cILMapEntries`.
 
 `rgILMapEntries`\
-[in] An array of COR_IL_MAP structures, each of which specifies an MSIL offset.
+podczas Tablica struktur COR_IL_MAP, z których każdy Określa przesunięcie MSIL.
 
 ## <a name="remarks"></a>Uwagi
 
-A profiler often inserts statements within the source code of a method in order to instrument that method (for example, to notify when a given source line is reached). `SetILInstrumentedCodeMap` enables a profiler to map the original MSIL instructions to their new locations. A profiler can use the [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) method to get the original MSIL offset for a given native offset.
+Profiler często wstawia instrukcje w kodzie źródłowym metody w celu instrumentowania tej metody (na przykład w celu powiadomienia po osiągnięciu podanych linii źródłowej). `SetILInstrumentedCodeMap` umożliwia programowi Profiler zamapowanie oryginalnych instrukcji MSIL na nowe lokalizacje. Profiler może użyć metody [ICorProfilerInfo:: GetILToNativeMapping —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) , aby uzyskać początkowe przesunięcie MSIL dla danego przesunięcia natywnego.
 
-The debugger will assume that each old offset refers to an MSIL offset within the original, unmodified MSIL code, and that each new offset refers to the MSIL offset within the new, instrumented code. The map should be sorted in increasing order. For stepping to work properly, follow these guidelines:
+Debuger przyjmie, że każde Stare przesunięcie odwołuje się do przesunięcia MSIL w oryginalnym, niezmodyfikowanym kodzie MSIL i że każde nowe przesunięcie odwołuje się do przesunięcia MSIL w nowym, przyrządowym kodzie. Mapa powinna być posortowana w kolejności rosnącej. Aby krok po kroku działał prawidłowo, postępuj zgodnie z następującymi wskazówkami:
 
-- Do not reorder instrumented MSIL code.
+- Nie zmieniaj kolejności kodu MSIL z instrumentacją.
 
-- Do not remove the original MSIL code.
+- Nie usuwaj oryginalnego kodu MSIL.
 
-- Include entries for all the sequence points from the program database (PDB) file in the map. The map does not interpolate missing entries. So, given the following map:
+- Dołącz wpisy dla wszystkich punktów sekwencji z pliku bazy danych programu (PDB) na mapie. Mapa nie wykonuje interpolacji brakujących wpisów. Dlatego, uwzględniając następujące mapowanie:
 
-  (0 old, 0 new)
+  (0 stara, 0 New)
 
-  (5 old, 10 new)
+  (5 starych, 10 nowych)
 
-  (9 old, 20 new)
+  (9 starych, 20 nowych)
 
-  - An old offset of 0, 1, 2, 3, or 4 will be mapped to new offset 0.
+  - Stare przesunięcie 0, 1, 2, 3 lub 4 zostanie zmapowane na nowe przesunięcie 0.
 
-  - An old offset of 5, 6, 7, or 8 will be mapped to new offset 10.
+  - Stare przesunięcie o wartości 5, 6, 7 lub 8 zostanie zmapowane na nowe przesunięcie 10.
 
-  - An old offset of 9 or higher will be mapped to new offset 20.
+  - Stare przesunięcie w wysokości 9 lub wyższej zostanie zmapowane do nowego przesunięcia 20.
 
-  - A new offset of 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9 will be mapped to old offset 0.
+  - Nowe przesunięcie 0, 1, 2, 3, 4, 5, 6, 7, 8 lub 9 zostanie zmapowane do starego przesunięcia 0.
 
-  - A new offset of 10, 11, 12, 13, 14, 15, 16, 17, 18, or 19 will be mapped to old offset 5.
+  - Nowe przesunięcie 10, 11, 12, 13, 14, 15, 16, 17, 18 lub 19 zostanie zmapowane do starego przesunięcia 5.
 
-  - A new offset of 20 or higher will be mapped to old offset 9.
+  - Nowe przesunięcie o wartości 20 lub wyższej zostanie zmapowane do starego przesunięcia 9.
 
-In the .NET Framework 3.5 and previous versions, you allocate the `rgILMapEntries` array by calling the [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) method. Because the runtime takes ownership of this memory, the profiler should not attempt to free it.
+W .NET Framework 3,5 i poprzednich wersjach przypisujesz tablicę `rgILMapEntries`, wywołując metodę [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) . Ponieważ środowisko uruchomieniowe przejmuje własność tej pamięci, profiler nie powinien próbować go zwolnić.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** CorProf.idl, CorProf.h
+**Nagłówek:** CorProf. idl, CorProf. h
 
-**Library:** CorGuids.lib
+**Biblioteka:** CorGuids. lib
 
-**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

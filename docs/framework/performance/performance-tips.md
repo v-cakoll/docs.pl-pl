@@ -17,33 +17,33 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444536"
 ---
 # <a name="net-performance-tips"></a>Wskazówki dotyczące wydajności .NET
-The term *performance* generally refers to the execution speed of a program. You can sometimes increase execution speed by following certain basic rules in your source code. In some programs, it is important to examine code closely and use profilers to make sure that it is running as fast as possible. In other programs, you do not have to perform such optimization because the code is running acceptably fast as it is written. This article lists some common areas where performance can suffer and tips for improving it as well as links to additional performance topics. For more information about planning and measuring for performance, see [Performance](index.md)  
+Termin *wydajność* zwykle odnosi się do szybkości wykonywania programu. Czasami można zwiększyć szybkość wykonywania, wykonując pewne podstawowe reguły w kodzie źródłowym. W niektórych programach ważne jest dokładne badanie kodu i używanie narzędzi do uruchamiania, aby upewnić się, że działa tak szybko, jak to możliwe. W innych programach nie trzeba wykonywać takich optymalizacji, ponieważ kod jest uruchamiany zadowalająco szybko, gdy zostanie zapisany. W tym artykule wymieniono niektóre typowe obszary, w których wydajność może pogorszyć się, a także linki do dodatkowych tematów dotyczących wydajności. Aby uzyskać więcej informacji na temat planowania i mierzenia wydajności, zobacz [wydajność](index.md)  
   
 ## <a name="boxing-and-unboxing"></a>Opakowywanie i rozpakowywanie  
- It is best to avoid using value types in situations where they must be boxed a high number of times, for example in non-generic collections classes such as <xref:System.Collections.ArrayList?displayProperty=nameWithType>. You can avoid boxing of value types by using generic collections such as <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Boxing and unboxing are computationally expensive processes. When a value type is boxed, an entirely new object must be created. This can take up to 20 times longer than a simple reference assignment. When unboxing, the casting process can take four times as long as an assignment. For more information, see [Boxing and Unboxing](../../csharp/programming-guide/types/boxing-and-unboxing.md).  
+ Najlepszym rozwiązaniem jest unikanie używania typów wartości w sytuacjach, gdy muszą one być opakowane dużą liczbę razy, na przykład w klasach kolekcji innych niż ogólne, takich jak <xref:System.Collections.ArrayList?displayProperty=nameWithType>. Można uniknąć pakowania typów wartości przy użyciu kolekcji ogólnych, takich jak <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Opakowanie i rozpakowywanie są w sposób obliczeniowy kosztowny. Gdy typ wartości jest opakowany, należy utworzyć zupełnie nowy obiekt. Może to potrwać do 20 razy więcej niż proste przypisanie odwołania. Podczas rozpakowywania proces rzutowania może trwać czterokrotnie tak długo, jak przypisanie. Aby uzyskać więcej informacji, zobacz [opakowanie i rozpakowywanie](../../csharp/programming-guide/types/boxing-and-unboxing.md).  
   
 ## <a name="strings"></a>Ciągi  
- When you concatenate a large number of string variables, for example in a tight loop, use <xref:System.Text.StringBuilder?displayProperty=nameWithType> instead of the C# [+ operator](../../csharp/language-reference/operators/addition-operator.md) or the Visual Basic [Concatenation Operators](../../visual-basic/language-reference/operators/concatenation-operators.md). For more information, see [How to concatenate multiple strings](../../csharp/how-to/concatenate-multiple-strings.md) and [Concatenation Operators in Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
+ W przypadku łączenia dużej liczby zmiennych ciągów, na przykład w ścisłej pętli, użyj <xref:System.Text.StringBuilder?displayProperty=nameWithType> zamiast C# [operatora +](../../csharp/language-reference/operators/addition-operator.md) lub Visual Basic [operatorów łączenia](../../visual-basic/language-reference/operators/concatenation-operators.md). Aby uzyskać więcej informacji, zobacz [jak połączyć wiele ciągów](../../csharp/how-to/concatenate-multiple-strings.md) i [operatorów łączenia w Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
   
 ## <a name="destructors"></a>Destruktory  
- Empty destructors should not be used. When a class contains a destructor, an entry is created in the Finalize queue. When the destructor is called, the garbage collector is invoked to process the queue. If the destructor is empty, this simply results in a loss of performance. For more information, see [Destructors](../../csharp/programming-guide/classes-and-structs/destructors.md) and [Object Lifetime: How Objects Are Created and Destroyed](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+ Puste destruktory nie powinny być używane. Gdy Klasa zawiera destruktor, w kolejce Finalize zostanie utworzony wpis. Gdy destruktor jest wywoływany, Moduł wyrzucania elementów bezużytecznych jest wywoływany w celu przetworzenia kolejki. Jeśli destruktor jest pusty, to po prostu powoduje utratę wydajności. Aby uzyskać więcej informacji, zobacz [destruktory](../../csharp/programming-guide/classes-and-structs/destructors.md) i [czas istnienia obiektu: jak obiekty są tworzone i niszczone](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
 ## <a name="other-resources"></a>Inne zasoby  
   
-- [Writing Faster Managed Code: Know What Things Cost](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973852(v=msdn.10))  
+- [Szybsze pisanie kodu zarządzanego: informacje o kosztach](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973852(v=msdn.10))  
   
-- [Writing High-Performance Managed Applications: A Primer](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973858(v=msdn.10))  
+- [Pisanie aplikacji zarządzanych o wysokiej wydajności: podstawowy](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973858(v=msdn.10))  
   
-- [Garbage Collector Basics and Performance Hints](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973837(v=msdn.10))  
+- [Podstawy modułu wyrzucania elementów bezużytecznych i wskazówki dotyczące wydajności](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973837(v=msdn.10))  
   
-- [Performance Tips and Tricks in .NET Applications](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
+- [Porady i wskazówki dotyczące wydajności w aplikacjach .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
 
-- [Rico Mariani's Performance Tidbits](https://blogs.msdn.microsoft.com/ricom/)  
+- [Mariani wydajność smakowite kąski](https://blogs.msdn.microsoft.com/ricom/)  
 
-- [Vance Morrison's Blog](https://blogs.msdn.microsoft.com/vancem/)
+- [Blog Vance Morrison](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Wydajność](index.md)
-- [Visual Basic Programming Guide](../../visual-basic/programming-guide/index.md)
+- [Przewodnik programowania Visual Basic](../../visual-basic/programming-guide/index.md)
 - [Przewodnik programowania w języku C#](../../csharp/programming-guide/index.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449555"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources — Metoda
-Gets a pointer to an enumerator for the resources referenced in the current assembly manifest.  
+Pobiera wskaźnik do modułu wyliczającego dla zasobów, do których odwołuje się bieżący manifest zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,32 +38,32 @@ HRESULT EnumManifestResources (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value when the `EnumManifestResources` method is called for the first time.  
+ [in. out] Wskaźnik do modułu wyliczającego. Ta wartość musi być wartością null, gdy metoda `EnumManifestResources` jest wywoływana po raz pierwszy.  
   
  `rManifestResources`  
- [out] The array used to store the `mdManifestResource` metadata tokens.  
+ określoną Tablica służąca do przechowywania tokenów metadanych `mdManifestResource`.  
   
  `cMax`  
- [in] The maximum number of `mdManifestResource` tokens that can be placed in `rManifestResources`.  
+ podczas Maksymalna liczba tokenów `mdManifestResource`, które można umieścić w `rManifestResources`.  
   
  `pcTokens`  
- [out] The number of `mdManifestResource` tokens actually placed in `rManifestResources`.  
+ określoną Liczba tokenów `mdManifestResource` faktycznie umieszczonych w `rManifestResources`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumManifestResources` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumManifestResources` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak tokenów do wyliczenia. W tym przypadku `pcTokens` jest ustawiona na zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

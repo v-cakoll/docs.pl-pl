@@ -12,8 +12,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352217"
 ---
-# <a name="seealso-visual-basic"></a>\<seealso> (Visual Basic)
-Specifies a link that appears in the See Also section.  
+# <a name="seealso-visual-basic"></a>\<seealso — > (Visual Basic)
+Określa łącze, które pojawia się w sekcji Zobacz też.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,15 +23,15 @@ Specifies a link that appears in the See Also section.
   
 ## <a name="parameters"></a>Parametry  
  `member`  
- A reference to a member or field that is available to be called from the current compilation environment. The compiler checks that the given code element exists and passes `member` to the element name in the output XML. `member` must appear within double quotation marks (" ").  
+ Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i przekazuje `member` do nazwy elementu w wyjściowym kodzie XML. `member` musi znajdować się w podwójnym cudzysłowie ("").  
   
 ## <a name="remarks"></a>Uwagi  
- Use the `<seealso>` tag to specify the text that you want to appear in a See Also section. Use [\<see>](../../../visual-basic/language-reference/xmldoc/see.md) to specify a link from within text.  
+ Użyj znacznika `<seealso>`, aby określić tekst, który ma być wyświetlany w sekcji Zobacz też. Użyj [\<zobacz >](../../../visual-basic/language-reference/xmldoc/see.md) , aby określić łącze z tekstu.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- This example uses the `<seealso>` tag in the `DoesRecordExist` remarks section to refer to the `UpdateRecord` method.  
+ W tym przykładzie zastosowano tag `<seealso>` w sekcji `DoesRecordExist` uwagi, aby odwołać się do metody `UpdateRecord`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

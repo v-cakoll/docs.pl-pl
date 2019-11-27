@@ -12,8 +12,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352261"
 ---
-# <a name="permission-visual-basic"></a>\<permission> (Visual Basic)
-Specifies a required permission for the member.  
+# <a name="permission-visual-basic"></a>> uprawnień \<(Visual Basic)
+Określa wymagane uprawnienie dla elementu członkowskiego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,18 +23,18 @@ Specifies a required permission for the member.
   
 ## <a name="parameters"></a>Parametry  
  `member`  
- A reference to a member or field that is available to be called from the current compilation environment. The compiler checks that the given code element exists and translates `member` to the canonical element name in the output XML. Enclose `member` in quotation marks (" ").  
+ Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i tłumaczy `member` na nazwę elementu kanonicznego w wyjściowym kodzie XML. Ujmij `member` w cudzysłów ("").  
   
  `description`  
- A description of the access to the member.  
+ Opis dostępu do elementu członkowskiego.  
   
 ## <a name="remarks"></a>Uwagi  
- Use the `<permission>` tag to document the access of a member. Use the <xref:System.Security.PermissionSet> class to specify access to a member.  
+ Użyj znacznika `<permission>`, aby udokumentować dostęp do elementu członkowskiego. Użyj klasy <xref:System.Security.PermissionSet>, aby określić dostęp do elementu członkowskiego.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.  
+ W tym przykładzie używa znacznika `<permission>`, aby opisać, że <xref:System.Security.Permissions.FileIOPermission> jest wymagany przez metodę `ReadFile`.  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   

@@ -13,17 +13,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332940"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Porady: osadzanie wyrażeń w literałach XML (Visual Basic)
-You can combine XML literals with embedded expressions to create an XML document, fragment, or element that contains content created at run time. The following examples demonstrate how to use embedded expressions to populate element content, attributes, and element names at run time.  
+Literały XML można łączyć z osadzonymi wyrażeniami w celu utworzenia dokumentu XML, fragmentu lub elementu zawierającego zawartość utworzoną w czasie wykonywania. W poniższych przykładach pokazano, jak używać osadzonych wyrażeń do wypełniania zawartości elementu, atrybutów i nazw elementów w czasie wykonywania.  
   
- The syntax for an embedded expression is `<%=` `exp` `%>`, which is the same syntax that ASP.NET uses. For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ Składnia wyrażenia osadzonego jest `<%=` `exp` `%>`, która jest tą samą składnią, która ASP.NET używa. Aby uzyskać więcej informacji, zobacz [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.Linq.XElement>.  
+ Można również użyć [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] interfejsów API do tworzenia obiektów [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="procedures"></a>Procedury  
   
-#### <a name="to-insert-text-as-element-content"></a>To insert text as element content  
+#### <a name="to-insert-text-as-element-content"></a>Aby wstawić tekst jako zawartość elementu  
   
-- The following example shows how to insert the text that is contained in the `contactName` variable between the opening and closing name elements.  
+- Poniższy przykład pokazuje, jak wstawić tekst, który jest zawarty w zmiennej `contactName` między otwierającymi i zamykającymi elementami nazw.  
   
      [!code-vb[VbXMLSamples#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#39)]  
   
@@ -35,9 +35,9 @@ You can combine XML literals with embedded expressions to create an XML document
     </contact>  
     ```  
   
-#### <a name="to-insert-text-as-an-attribute-value"></a>To insert text as an attribute value  
+#### <a name="to-insert-text-as-an-attribute-value"></a>Aby wstawić tekst jako wartość atrybutu  
   
-- The following example shows how to insert the text that is contained in the `phoneType` variable as the value of the `type` attribute.  
+- Poniższy przykład pokazuje, jak wstawić tekst, który jest zawarty w zmiennej `phoneType` jako wartość atrybutu `type`.  
   
      [!code-vb[VbXMLSamples#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#40)]  
   
@@ -49,11 +49,11 @@ You can combine XML literals with embedded expressions to create an XML document
     </contact>  
     ```  
   
-#### <a name="to-insert-text-for-an-element-name"></a>To insert text for an element name  
+#### <a name="to-insert-text-for-an-element-name"></a>Aby wstawić tekst dla nazwy elementu  
   
-- The following example shows how to insert the text that is contained in the `elementName` variable as the name of an element.  
+- Poniższy przykład pokazuje, jak wstawić tekst, który jest zawarty w zmiennej `elementName` jako nazwę elementu.  
   
-     When creating elements by using this technique, you must close them with the \</> tag.  
+     Podczas tworzenia elementów za pomocą tej techniki należy zamknąć je za pomocą tagu \</>.  
   
      [!code-vb[VbXMLSamples#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#41)]  
   
@@ -69,5 +69,5 @@ You can combine XML literals with embedded expressions to create an XML document
 
 - [Instrukcje: tworzenie literałów XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
 - [Wyrażenia osadzone w XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
-- [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Tworzenie kodu XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

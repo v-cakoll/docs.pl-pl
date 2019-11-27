@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432775"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC — Wyliczenie
-Contains values used to influence behavior during the generation of metadata.  
+Zawiera wartości używane do wpływania na zachowanie podczas generowania metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,25 +42,25 @@ typedef enum CorSetENC {
 } CorSetENC;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`MDSetENCOn`|Nieaktualne.|  
 |`MDSetENCOff`|Nieaktualne.|  
-|`MDUpdateENC`|Indicates that whereas metadata can be updated, tokens cannot be moved.|  
-|`MDUpdateFull`|Indicates that tokens can be moved during updates.|  
-|`MDUpdateExtension`|Indicates that updates can consist only of additions. Tokens cannot be moved.|  
-|`MDUpdateIncremental`|Indicates that compilation is incremental.|  
-|`MDUpdateDelta`|Indicates that only changed metadata should be saved.|  
-|`MDUpdateMask`|Includes `MDUpdateENC`, `MDUpdateFull` and `MDUpdateIncremental`.|  
+|`MDUpdateENC`|Wskazuje, że metadane można zaktualizować, nie można przenieść tokenów.|  
+|`MDUpdateFull`|Wskazuje, że tokeny mogą być przenoszone podczas aktualizacji.|  
+|`MDUpdateExtension`|Wskazuje, że aktualizacje mogą obejmować tylko dodatki. Nie można przenieść tokenów.|  
+|`MDUpdateIncremental`|Wskazuje, że kompilacja jest przyrostowa.|  
+|`MDUpdateDelta`|Wskazuje, że powinny być zapisane tylko zmienione metadane.|  
+|`MDUpdateMask`|Zawiera `MDUpdateENC`, `MDUpdateFull` i `MDUpdateIncremental`.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

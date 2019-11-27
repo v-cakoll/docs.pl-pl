@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350789"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>Ta tablica ma ustalony rozmiar lub jest tymczasowo zablokowana (Visual Basic)
-This error has the following possible causes:  
+Ten błąd ma następujące możliwe przyczyny:  
   
-- Using `ReDim` to change the number of elements of a fixed-size array.  
+- Przy użyciu `ReDim` zmienić liczbę elementów tablicy o stałym rozmiarze.  
   
-- Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure. If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.  
+- Przewymiarowanie dynamicznej tablicy na poziomie modułu, w którym jeden element został przekazano jako argument do procedury. Jeśli element jest zakończony, tablica jest zablokowana, aby zapobiec cofnięciu przydziału pamięci dla parametru Reference w ramach procedury.  
   
-- Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.  
+- Podjęto próbę przypisania wartości do zmiennej `Variant` zawierającej tablicę, ale `Variant` jest obecnie zablokowana.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.  
+1. Zamiast naprawiać oryginalną tablicę, należy ją zadeklarować przy użyciu `ReDim` (jeśli tablica jest zadeklarowana w ramach procedury) lub przez zadeklarowanie jej bez określenia liczby elementów (jeśli tablica jest zadeklarowana na poziomie modułu.  
   
-2. Determine whether you really need to pass the element, since it is visible within all procedures in the module.  
+2. Ustal, czy naprawdę potrzebujesz przekazać element, ponieważ jest on widoczny we wszystkich procedurach w module.  
   
-3. Determine what is locking the `Variant` and remedy it.  
+3. Określ, co blokuje `Variant` i je naprawić.  
   
 ## <a name="see-also"></a>Zobacz także
 

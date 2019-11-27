@@ -18,24 +18,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351581"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
-Identifies a property as the default property of its class, structure, or interface.  
+Identyfikuje właściwość jako domyślną właściwość klasy, struktury lub interfejsu.  
   
 ## <a name="remarks"></a>Uwagi  
- A class, structure, or interface can designate at most one of its properties as the *default property*, provided that property takes at least one parameter. If code makes a reference to a class or structure without specifying a member, Visual Basic resolves that reference to the default property.  
+ Klasa, struktura lub interfejs może wyznaczyć najwyżej jedną z właściwości jako *Właściwość domyślną*, pod warunkiem, że właściwość przyjmuje co najmniej jeden parametr. Jeśli kod tworzy odwołanie do klasy lub struktury bez określania elementu członkowskiego, Visual Basic rozpoznaje to odwołanie do właściwości domyślnej.  
   
- Default properties can result in a small reduction in source code-characters, but they can make your code more difficult to read. If the calling code is not familiar with your class or structure, when it makes a reference to the class or structure name it cannot be certain whether that reference accesses the class or structure itself, or a default property. This can lead to compiler errors or subtle run-time logic errors.  
+ Właściwości domyślne mogą spowodować niewielkie zmniejszenie kodu źródłowego, ale może to utrudnić odczytywanie kodu. Jeśli kod wywołujący nie jest zaznajomiony z klasą lub strukturą, gdy tworzy odwołanie do nazwy klasy lub struktury, nie można określić, czy odwołanie uzyskuje dostęp do samej klasy lub struktury, czy też do właściwości domyślnej. Może to prowadzić do błędów kompilatora lub niewielkich błędów logiki czasu wykonywania.  
   
- You can somewhat reduce the chance of default property errors by always using the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md) to set compiler type checking to `On`.  
+ Możesz nieco skrócić ryzyko błędów właściwości domyślnych, zawsze używając [instrukcji Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) , aby ustawić sprawdzanie typu kompilatora do `On`.  
   
- If you are planning to use a predefined class or structure in your code, you must determine whether it has a default property, and if so, what its name is.  
+ Jeśli planujesz użycie wstępnie zdefiniowanej klasy lub struktury w kodzie, musisz określić, czy ma ona właściwość domyślną, a jeśli tak, to jaki jest jej nazwa.  
   
- Because of these disadvantages, you should consider not defining default properties. For code readability, you should also consider always referring to all properties explicitly, even default properties.  
+ Ze względu na te wady należy rozważyć niedefiniowanie właściwości domyślnych. Aby uzyskać czytelność kodu, należy również rozważyć zawsze odwołanie do wszystkich właściwości jawnie, nawet właściwości domyślnych.  
   
- The `Default` modifier can be used in this context:  
+ Modyfikator `Default` może być używany w tym kontekście:  
   
  [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [How to: Declare and Call a Default Property in Visual Basic](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
+- [Instrukcje: deklarowanie i wywoływanie właściwości domyślnej w Visual Basic](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
 - [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

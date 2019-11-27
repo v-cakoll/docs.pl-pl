@@ -9,17 +9,17 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354221"
 ---
-# <a name="details-of-office-open-xml-wordprocessingml-documents-visual-basic"></a>Details of Office Open XML WordprocessingML Documents (Visual Basic)
-This section provides information about the details of Office Open XML WordprocessingML documents. It shows examples of the document and style parts of an Open XML document.  
+# <a name="details-of-office-open-xml-wordprocessingml-documents-visual-basic"></a>Szczegóły dotyczące dokumentów Office Open XML WordprocessingML (Visual Basic)
+Ta sekcja zawiera informacje o szczegółach dotyczących dokumentów programu Office Open XML WordprocessingML. Pokazuje przykłady elementów dokumentu i stylu otwartego dokumentu XML.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Dokument WordprocessingML ze stylami](../../../../visual-basic/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md)|Shows the document part of an Office Open XML WordprocessingML document.|  
-|[Część stylu dokumentu WordprocessingML](../../../../visual-basic/programming-guide/concepts/linq/style-part-of-a-wordprocessingml-document.md)|Shows the style part of an Office Open XML WordprocessingML document.|  
-|[Example that Outputs Office Open XML Document Parts (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)|Provides an example that opens an Office Open XML WordprocessingML document, and outputs the parts to the console.|  
+|[Dokument WordprocessingML ze stylami](../../../../visual-basic/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md)|Pokazuje część dokumentu dokumentu Office Open XML WordprocessingML.|  
+|[Część stylu dokumentu WordprocessingML](../../../../visual-basic/programming-guide/concepts/linq/style-part-of-a-wordprocessingml-document.md)|Pokazuje część stylu dokumentu Office Open XML WordprocessingML.|  
+|[Przykład, w którym są wyprowadzane części dokumentu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)|Zawiera przykład, który otwiera dokument pakietu Office Open XML WordprocessingML i wyprowadza te części do konsoli programu.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

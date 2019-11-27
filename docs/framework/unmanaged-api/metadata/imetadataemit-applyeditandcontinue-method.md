@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432699"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue — Metoda
-Updates the current assembly scope with the changes made in the specified metadata.  
+Aktualizuje bieżący zakres zestawu zmianami wprowadzonymi w określonych metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,18 +35,18 @@ HRESULT ApplyEditAndContinue (
   
 ## <a name="parameters"></a>Parametry  
  `pImport`  
- \[in\] Pointer to an [IUnknown](/cpp/atl/iunknown) object that represents the delta metadata from the portable executable (PE) file.
+ \[w\] wskaźnik do obiektu [IUnknown](/cpp/atl/iunknown) , który reprezentuje metadane różnicowe z przenośnego pliku wykonywalnego (PE).
   
- The delta metadata is the block of metadata that includes the changes that were made to the copy of the module's actual metadata.  
+ Metadane różnicowe to blok metadanych, który zawiera zmiany wprowadzone w kopii rzeczywistych metadanych modułu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

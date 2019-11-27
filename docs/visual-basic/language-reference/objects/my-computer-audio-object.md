@@ -13,19 +13,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344119"
 ---
 # <a name="mycomputeraudio-object"></a>My.Computer.Audio — Obiekt
-Provides methods for playing sounds.  
+Zapewnia metody odtwarzania dźwięków.  
   
 ## <a name="remarks"></a>Uwagi  
- For information about the methods and properties of the `My.Computer.Audio` object, see <xref:Microsoft.VisualBasic.Devices.Audio>.  
+ Aby uzyskać informacje o metodach i właściwościach obiektu `My.Computer.Audio`, zobacz <xref:Microsoft.VisualBasic.Devices.Audio>.  
   
- For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
+ Aby uzyskać więcej informacji, zobacz [odtwarzanie dźwięków](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
+ **Przestrzeń nazw:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Audio>  
+ **Klasa:** <xref:Microsoft.VisualBasic.Devices.Audio>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

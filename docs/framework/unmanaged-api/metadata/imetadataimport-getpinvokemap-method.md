@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437100"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>IMetaDataImport::GetPinvokeMap — Metoda
-Gets a ModuleRef token to represent the target assembly of a PInvoke call.  
+Pobiera token typu ModuleRef reprezentujący zestaw docelowy wywołania PInvoke.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,31 +40,31 @@ HRESULT GetPinvokeMap (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- [in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.  
+ podczas Token FieldDef lub MethodDef, aby uzyskać metadane mapowania funkcji PInvoke dla.  
   
  `pdwMappingFlags`  
- [out] A pointer to flags used for mapping. This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.  
+ określoną Wskaźnik do flag użytych do mapowania. Ta wartość jest maska bitowa z wyliczenia [CorPinvokeMap —](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) .  
   
  `szImportName`  
- [out] The name of the unmanaged target DLL.  
+ określoną Nazwa niezarządzanej docelowej biblioteki DLL.  
   
  `cchImportName`  
- [in] The size in wide characters of `szImportName`.  
+ podczas Rozmiar w szerokich znakach `szImportName`.  
   
  `pchImportName`  
- [out] The number of wide characters returned in `szImportName`.  
+ określoną Liczba znaków dwubajtowych zwracanych w `szImportName`.  
   
  `pmrImportDLL`  
- [out] A pointer to a ModuleRef token that represents the unmanaged target object library.  
+ określoną Wskaźnik do tokenu elementu ModuleRef, który reprezentuje niezarządzaną bibliotekę obiektów docelowych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

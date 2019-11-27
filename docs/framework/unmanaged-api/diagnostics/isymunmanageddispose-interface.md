@@ -22,16 +22,16 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449230"
 ---
 # <a name="isymunmanageddispose-interface"></a>ISymUnmanagedDispose — Interfejs
-Disposes of unmanaged resources.  
+Usuwa niezarządzane zasoby.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[destroy, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|Causes the underlying object to release all internal references and return failure on any subsequent method calls.|  
+|[destroy, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|Powoduje, że obiekt źródłowy zwolni wszystkie odwołania wewnętrzne i zwróci niepowodzenie dla każdego kolejnego wywołania metody.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

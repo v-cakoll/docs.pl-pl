@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449954"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods — Metoda
-Enumerates MemberDef tokens representing the unresolved methods in the current metadata scope.  
+Wylicza tokeny MemberDef reprezentujące nierozpoznane metody w bieżącym zakresie metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,37 +38,37 @@ HRESULT EnumUnresolvedMethods (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in. out] Wskaźnik do modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
   
  `rMethods`  
- [out] The array used to store the MemberDef tokens.  
+ określoną Tablica służąca do przechowywania tokenów MemberDef.  
   
  `cMax`  
- [in] The maximum size of the `rMethods` array.  
+ podczas Maksymalny rozmiar tablicy `rMethods`.  
   
  `pcTokens`  
- [out] The number of MemberDef tokens returned in `rMethods`.  
+ określoną Liczba tokenów MemberDef zwróconych w `rMethods`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumUnresolvedMethods` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak tokenów do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
   
 ## <a name="remarks"></a>Uwagi  
- An unresolved method is one that has been declared but not implemented. A method is included in the enumeration if the method is marked `miForwardRef` and either `mdPinvokeImpl` or `miRuntime` is set to zero. In other words, an unresolved method is a class method that is marked `miForwardRef` but which is not implemented in unmanaged code (reached via PInvoke) nor implemented internally by the runtime itself  
+ Nierozpoznana Metoda jest taka, która została zadeklarowana, ale nie została zaimplementowana. Metoda jest uwzględniona w wyliczeniu, jeśli metoda jest oznaczona `miForwardRef` i `mdPinvokeImpl` albo `miRuntime` jest ustawiona na zero. Innymi słowy, Nierozpoznana Metoda jest metodą klasy, która jest oznaczona `miForwardRef`, ale która nie jest zaimplementowana w kodzie niezarządzanym (osiągane za pośrednictwem PInvoke) ani nie została zaimplementowana wewnętrznie przez samo środowisko uruchomieniowe  
   
- The enumeration excludes all methods that are defined either at module scope (globals) or in interfaces or abstract classes.  
+ Wyliczenie wyklucza wszystkie metody, które są zdefiniowane w zakresie modułu (Globals) lub w klasach interfejsów lub klas abstrakcyjnych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

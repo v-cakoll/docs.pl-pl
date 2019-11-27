@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437780"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>IMetaDataImport::GetClassLayout — Metoda
-Gets layout information for the class referenced by the specified TypeDef token.  
+Pobiera informacje o układzie dla klasy, do której odwołuje się określony token TypeDef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,31 +40,31 @@ HRESULT GetClassLayout  (
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- [in] The TypeDef token for the class with the layout to return.  
+ podczas Token TypeDef dla klasy z układem, który ma zostać zwrócony.  
   
  `pdwPackSize`  
- [out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.  
+ określoną Jedna z wartości 1, 2, 4, 8 lub 16 reprezentuje rozmiar pakietu klasy.  
   
  `rFieldOffset`  
- [out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.  
+ określoną Tablica wartości [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) .  
   
  `cMax`  
- [in] The maximum size of the `rFieldOffset` array.  
+ podczas Maksymalny rozmiar tablicy `rFieldOffset`.  
   
  `pcFieldOffset`  
- [out] The number of elements returned in `rFieldOffset`.  
+ określoną Liczba elementów zwróconych w `rFieldOffset`.  
   
  `pulClassSize`  
- [out] The size in bytes of the class represented by `td`.  
+ określoną Rozmiar w bajtach klasy reprezentowanej przez `td`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

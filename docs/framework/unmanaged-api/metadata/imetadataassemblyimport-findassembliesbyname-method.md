@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448288"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName — Metoda
-Gets an array of assemblies with the specified `szAssemblyName` parameter, using the standard rules employed by the common language runtime (CLR) for resolving references.  
+Pobiera tablicę zestawów z określonym parametrem `szAssemblyName` przy użyciu standardowych reguł używanych przez środowisko uruchomieniowe języka wspólnego (CLR) do rozpoznawania odwołań.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,47 +40,47 @@ HRESULT FindAssembliesByName (
   
 ## <a name="parameters"></a>Parametry  
  `szAppBase`  
- [in] The root directory in which to search for the given assembly. If this value is set to `null`, `FindAssembliesByName` will look only in the global assembly cache for the assembly.  
+ podczas Katalog główny, w którym ma zostać wyszukany dany zestaw. Jeśli ta wartość jest ustawiona na `null`, `FindAssembliesByName` będzie wyglądać tylko w globalnej pamięci podręcznej zestawów zestawu.  
   
  `szPrivateBin`  
- [in] A list of semicolon-delimited subdirectories (for example, "bin;bin2"), under the root directory, in which to search for the assembly. These directories are probed in addition to those specified in the default probing rules.  
+ podczas Rozdzielana średnikami lista podkatalogów (na przykład "bin; BIN2"), w katalogu głównym, w którym ma zostać wyszukany zestaw. Te katalogi są badane dodatkowo do tych, które są określone w domyślnych regułach sondowania.  
   
  `szAssemblyName`  
- [in] The name of the assembly to find. The format of this string is defined in the class reference page for <xref:System.Reflection.AssemblyName>.  
+ podczas Nazwa zestawu do znalezienia. Format tego ciągu jest definiowany na stronie odniesienia klasy dla <xref:System.Reflection.AssemblyName>.  
   
  `ppIUnk`  
- [in] An array of type [IUnknown](/cpp/atl/iunknown) in which to put the `IMetadataAssemblyImport` interface pointers.  
+ podczas Tablica typu [IUnknown](/cpp/atl/iunknown) , w której mają zostać umieszczone `IMetadataAssemblyImport` wskaźniki interfejsu.  
   
  `cMax`  
- [out] The maximum number of interface pointers that can be placed in `ppIUnk`.  
+ określoną Maksymalna liczba wskaźników interfejsu, które można umieścić w `ppIUnk`.  
   
  `pcAssemblies`  
- [out] The number of interface pointers returned. That is, the number of interface pointers actually placed in `ppIUnk`.  
+ określoną Liczba zwróconych wskaźników interfejsu. Oznacza to, że liczba wskaźników interfejsu faktycznie umieszczonych w `ppIUnk`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`FindAssembliesByName` returned successfully.|  
-|`S_FALSE`|There are no assemblies.|  
+|`S_OK`|`FindAssembliesByName` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak zestawów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Given an assembly name, the `FindAssembliesByName` method finds the assembly by following the standard rules for resolving assembly references. (For more information, see [How the Runtime Locates Assemblies](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` allows the caller to configure various aspects of the assembly resolver context, such as application base and private search path.  
+ Podaną nazwę zestawu, Metoda `FindAssembliesByName` odnajduje zestaw według standardowych reguł rozpoznawania odwołań do zestawów. (Aby uzyskać więcej informacji, zobacz [jak środowisko uruchomieniowe lokalizuje zestawy](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` pozwala wywołującemu konfigurować różne aspekty kontekstu programu rozpoznawania nazw, takie jak ścieżka do bazy aplikacji i wyszukiwania prywatnego.  
   
- The `FindAssembliesByName` method requires the CLR to be initialized in the process in order to invoke the assembly resolution logic. Therefore, you must call [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (passing COINITEE_DEFAULT) before calling `FindAssembliesByName`, and then follow with a call to [CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
+ Metoda `FindAssembliesByName` wymaga zainicjowania środowiska CLR w procesie w celu wywołania logiki rozpoznawania zestawu. W związku z tym przed wywołaniem `FindAssembliesByName`należy wywołać [CoInitializeEE —](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (przekazując COINITEE_DEFAULT), a następnie wykonać wywołanie [CoUninitializeCor —](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
   
- `FindAssembliesByName` returns an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) pointer to the file containing the assembly manifest for the assembly name that is passed in. If the given assembly name is not fully specified (for example, if it does not include a version), multiple assemblies might be returned.  
+ `FindAssembliesByName` zwraca wskaźnik [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) do pliku zawierającego manifest zestawu dla nazwy zestawu, która została przeniesiona. Jeśli podana nazwa zestawu nie jest w pełni określona (na przykład jeśli nie zawiera wersji), można zwrócić wiele zestawów.  
   
- `FindAssembliesByName` is commonly used by a compiler that attempts to find a referenced assembly at compile time.  
+ `FindAssembliesByName` jest często używany przez kompilator, który próbuje znaleźć przywoływany zestaw w czasie kompilacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

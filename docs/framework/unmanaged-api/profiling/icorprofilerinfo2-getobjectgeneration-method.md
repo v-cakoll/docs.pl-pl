@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433080"
 ---
 # <a name="icorprofilerinfo2getobjectgeneration-method"></a>ICorProfilerInfo2::GetObjectGeneration — Metoda
-Gets the segment of the heap that contains the specified object.  
+Pobiera segment sterty, która zawiera określony obiekt.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,22 +35,22 @@ HRESULT GetObjectGeneration(
   
 ## <a name="parameters"></a>Parametry  
  `objectId`  
- [in] The ID of the object.  
+ podczas Identyfikator obiektu.  
   
  `range`  
- [out] A pointer to a [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure, which describes a range (that is, a block) of memory within the generation that is undergoing garbage collection. This range contains the specified object.  
+ określoną Wskaźnik do struktury [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) , który opisuje zakres (czyli blok) pamięci w ramach generacji, która nie powoduje wyrzucania elementów bezużytecznych. Ten zakres zawiera określony obiekt.  
   
 ## <a name="remarks"></a>Uwagi  
- The `GetObjectGeneration` method may be called from any profiler callback, provided that garbage collection is not in progress. That is, it may be called from any callback except those that occur between [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) and [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md).  
+ Metoda `GetObjectGeneration` może być wywoływana z dowolnego wywołania zwrotnego profilera, pod warunkiem, że odzyskiwanie pamięci nie jest w toku. Oznacza to, że może być wywoływana z dowolnego wywołania zwrotnego, z wyjątkiem tych, które występują między [ICorProfilerCallback2:: GarbageCollectionStarted —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) i [ICorProfilerCallback2:: GarbageCollectionFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

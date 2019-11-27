@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448173"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>ICorProfilerInfo::GetAppDomainInfo — Metoda
-Accepts an application domain ID. Returns an application domain name and the ID of the process that contains it.  
+Akceptuje identyfikator domeny aplikacji. Zwraca nazwę domeny aplikacji i identyfikator procesu, który go zawiera.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,33 +39,33 @@ HRESULT GetAppDomainInfo(
   
 ## <a name="parameters"></a>Parametry  
  `appDomainId`  
- [in] The ID of the application domain.  
+ podczas Identyfikator domeny aplikacji.  
   
  `cchName`  
- [in] The length, in characters, of the `szName` return buffer.  
+ podczas Długość (w znakach) `szName` buforu powrotu.  
   
  `pcchName`  
- [out] A pointer to the total character length of the application domain name.  
+ określoną Wskaźnik do łącznej długości znaku nazwy domeny aplikacji.  
   
  `szName`  
- [out] A caller-provided wide character buffer. When the method returns, `szName` will contain the full or partial application domain name.  
+ określoną Bufor znaków udostępniany przez obiekt wywołujący. Gdy metoda zwraca, `szName` będzie zawierać pełną lub częściową nazwę domeny aplikacji.  
   
  `pProcessId`  
- [out] A pointer to the ID of the process that contains the application domain.  
+ określoną Wskaźnik do identyfikatora procesu, który zawiera domenę aplikacji.  
   
 ## <a name="remarks"></a>Uwagi  
- After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the application domain. To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter. If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAppDomainInfo` again.  
+ Po powrocie tej metody należy sprawdzić, czy bufor `szName` był wystarczająco duży, aby zawierał pełną nazwę domeny aplikacji. W tym celu należy porównać wartość, która `pcchName` wskazuje na wartość parametru `cchName`. Jeśli `pcchName` wskazuje wartość, która jest większa niż `cchName`, Przydziel większy bufor `szName`, zaktualizuj `cchName` przy użyciu nowego, większego rozmiaru i ponownie wywołaj `GetAppDomainInfo`.  
   
- Alternatively, you can first call `GetAppDomainInfo` with a zero-length `szName` buffer to obtain the correct buffer size. You can then set the buffer size to the value returned in `pcchName` and call `GetAppDomainInfo` again.  
+ Alternatywnie można najpierw wywołać `GetAppDomainInfo` z buforem `szName` o zerowej długości, aby uzyskać prawidłowy rozmiar buforu. Następnie można ustawić rozmiar buforu na wartość zwróconą w `pcchName` i ponownie wywołać `GetAppDomainInfo`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

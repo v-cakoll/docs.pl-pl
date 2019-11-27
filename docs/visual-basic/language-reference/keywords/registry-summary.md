@@ -1,5 +1,5 @@
 ---
-title: Rejestr — Podsumowanie
+title: Rejestr — podsumowanie
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351682"
 ---
 # <a name="registry-summary-visual-basic"></a>Rejestr — Podsumowanie (Visual Basic)
-Visual Studio language keywords and run-time library members are organized by purpose and use.  
+Słowa kluczowe języka programu Visual Studio i elementy członkowskie biblioteki wykonawczej są zorganizowane według przeznaczenia i użycia.  
   
- Using the `My` feature provides you with greater productivity and performance in registry operations than these elements. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
+ Korzystanie z funkcji `My` zapewnia większą produktywność i wydajność w operacjach rejestru niż te elementy. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   
-|**Action**|**Language element**|  
+|**Transakcji**|**Element języka**|  
 |----------------|--------------------------|  
-|Delete program settings.|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
-|Read program settings.|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
-|Save program settings.|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
+|Usuń ustawienia programu.|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
+|Odczytywanie ustawień programu.|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
+|Zapisz ustawienia programu.|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
   
 ## <a name="see-also"></a>Zobacz także
 

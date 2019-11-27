@@ -12,8 +12,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352298"
 ---
-# <a name="param-visual-basic"></a>\<param> (Visual Basic)
-Defines a parameter name and description.  
+# <a name="param-visual-basic"></a>\<param > (Visual Basic)
+Definiuje nazwę i opis parametru.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,24 +23,24 @@ Defines a parameter name and description.
   
 ## <a name="parameters"></a>Parametry  
  `name`  
- The name of a method parameter. Enclose the name in double quotation marks (" ").  
+ Nazwa parametru metody. Ujmij nazwę w znaki podwójnego cudzysłowu ("").  
   
  `description`  
- A description for the parameter.  
+ Opis parametru.  
   
 ## <a name="remarks"></a>Uwagi  
- The `<param>` tag should be used in the comment for a method declaration to describe one of the parameters for the method.  
+ Tag `<param>` powinien być używany w komentarzu dla deklaracji metody, aby opisać jeden z parametrów dla metody.  
   
- The text for the `<param>` tag will appear in the following locations:  
+ Tekst dla tagu `<param>` pojawi się w następujących lokalizacjach:  
   
-- Parameter Info of IntelliSense. For more information, see [Using IntelliSense](/visualstudio/ide/using-intellisense).  
+- Informacje o parametrach funkcji IntelliSense. Aby uzyskać więcej informacji, zobacz [Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense).  
   
-- Object Browser. For more information, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).  
+- Przeglądarka obiektów. Aby uzyskać więcej informacji, zobacz [Wyświetlanie struktury kodu](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- This example uses the `<param>` tag to describe the `id` parameter.  
+ W tym przykładzie za pomocą tagu `<param>` można opisać parametr `id`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447414"
 ---
 # <a name="imetadatatablesgetrow-method"></a>IMetaDataTables::GetRow — Metoda
-Gets the row at the specified row index, in the table at the specified table index.  
+Pobiera wiersz o określonym indeksie wiersza w tabeli w określonym indeksie tabeli.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,25 +37,25 @@ HRESULT GetRow (
   
 ## <a name="parameters"></a>Parametry  
  `ixTbl`  
- [in] The index of the table from which the row will be retrieved.  
+ podczas Indeks tabeli, z której zostanie pobrany wiersz.  
   
  `rid`  
- [in] The index of the row to get.  
+ podczas Indeks wiersza do pobrania.  
   
  `ppRow`  
- [out] A pointer to a pointer to the row.  
+ określoną Wskaźnik do wskaźnika do wiersza.  
   
 ## <a name="remarks"></a>Uwagi  
- We do not recommend the use of this method, because it does not return consistent results. For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics". The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.  
+ Nie zalecamy użycia tej metody, ponieważ nie zwracają one spójnych wyników. Aby uzyskać informacje na temat tabeli GUID, zobacz dokumentację Common Language Infrastructure (CLI), szczególnie "partycja II: definicja metadanych i semantyka". Dokumentacja jest dostępna w trybie online; Zobacz [standardy C# ECMA i Common Language Infrastructure](https://go.microsoft.com/fwlink/?LinkID=99212) w MSDN i [Standard ECMA-335-Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) w międzynarodowej witrynie sieci Web ECMA.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework wersje**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

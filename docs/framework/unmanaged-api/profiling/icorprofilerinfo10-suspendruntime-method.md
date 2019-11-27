@@ -18,9 +18,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426958"
 ---
-# <a name="icorprofilerinfo10suspendruntime-method"></a>ICorProfilerInfo10::SuspendRuntime Method
+# <a name="icorprofilerinfo10suspendruntime-method"></a>ICorProfilerInfo10:: SuspendRuntime, Metoda
 
-Suspends the runtime without performing a GC.
+Wstrzymuje środowisko uruchomieniowe bez wykonywania operacji GC.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,14 +30,14 @@ HRESULT SuspendRuntime();
 
 ## <a name="requirements"></a>Wymagania
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Platformy:** Zobacz [obsługiwane systemy operacyjne .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Header:** CorProf.idl, CorProf.h
+**Nagłówek:** CorProf. idl, CorProf. h
 
-**Library:** CorGuids.lib
+**Biblioteka:** CorGuids. lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**Wersje .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

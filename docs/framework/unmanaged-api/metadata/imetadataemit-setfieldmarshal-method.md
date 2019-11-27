@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442271"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>IMetaDataEmit::SetFieldMarshal — Metoda
-Sets the PInvoke marshaling information for the field, method return, or method parameter referenced by the specified token.  
+Ustawia informacje o kierowaniu PInvoke dla parametru, zwraca metodę lub parametr metody, do którego odwołuje się określony token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,22 +37,22 @@ HRESULT SetFieldMarshal (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- [in] The token for target data item. This is either a `mdFieldDef` or a `mdParamDef` token.  
+ podczas Token dla docelowego elementu danych. Jest to `mdFieldDef` lub token `mdParamDef`.  
   
  `pvNativeType`  
- [in] The signature for unmanaged type.  
+ podczas Sygnatura dla typu niezarządzanego.  
   
  `cbNativeType`  
- [in] The count of bytes in `pvNativeType`.  
+ podczas Liczba bajtów w `pvNativeType`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

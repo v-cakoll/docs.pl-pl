@@ -1,5 +1,5 @@
 ---
-title: 'How to: Find a Child Element (XPath-LINQ to XML)'
+title: 'Instrukcje: Znajdowanie elementu podrzędnego (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: adb46c98-a650-42e2-b62d-835920fe8421
 ms.openlocfilehash: 3697dabb1b277ceab7b7bb9be54b72ef8be6974d
@@ -9,15 +9,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353028"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>How to: Find a Child Element (XPath-LINQ to XML) (Visual Basic)
-This topic compares the XPath child element axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> method.  
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie elementu podrzędnego (XPath-LINQ to XML) (Visual Basic)
+W tym temacie porównano oś elementu podrzędnego XPath z [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> metodzie.  
   
- The XPath expression is `DeliveryNotes`.  
+ Wyrażenie XPath jest `DeliveryNotes`.  
   
 ## <a name="example"></a>Przykład  
- This example finds the child element `DeliveryNotes`.  
+ Ten przykład umożliwia znalezienie elementu podrzędnego `DeliveryNotes`.  
   
- This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -48,4 +48,4 @@ Results are identical
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

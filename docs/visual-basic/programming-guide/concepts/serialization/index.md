@@ -9,61 +9,61 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351919"
 ---
-# <a name="serialization-visual-basic"></a>Serialization (Visual Basic)
-Serialization is the process of converting an object into a stream of bytes in order to store the object or transmit it to memory, a database, or a file. Its main purpose is to save the state of an object in order to be able to recreate it when needed. The reverse process is called deserialization.  
+# <a name="serialization-visual-basic"></a>Serializacja (Visual Basic)
+Serializacja to proces konwersji obiektu do strumienia bajtów w celu przechowywania obiektu lub przesyłania go do pamięci, bazy danych lub pliku. Jego głównym celem jest zapisanie stanu obiektu, aby można było go odtworzyć w razie potrzeby. Proces odwrotny nazywa się deserializacji.  
   
-## <a name="how-serialization-works"></a>How Serialization Works  
- This illustration shows the overall process of serialization.  
+## <a name="how-serialization-works"></a>Jak działa Serializacja  
+ Na tej ilustracji przedstawiono ogólny proces serializacji.  
   
-![Serialization graphic](./media/index/serialization-process.gif)
+![Grafika serializacji](./media/index/serialization-process.gif)
   
- The object is serialized to a stream, which carries not just the data, but information about the object's type, such as its version, culture, and assembly name. From that stream, it can be stored in a database, a file, or memory.  
+ Obiekt jest serializowany do strumienia, który przeprowadzi nie tylko dane, ale informacje o typie obiektu, takie jak jego wersja, kultura i nazwa zestawu. Ze strumienia można go przechowywać w bazie danych, pliku lub pamięci.  
   
-### <a name="uses-for-serialization"></a>Uses for Serialization  
- Serialization allows the developer to save the state of an object and recreate it as needed, providing storage of objects as well as data exchange. Through serialization, a developer can perform actions like sending the object to a remote application by means of a Web Service, passing an object from one domain to another, passing an object through a firewall as an XML string, or maintaining security or user-specific information across applications.  
+### <a name="uses-for-serialization"></a>Używa do serializacji  
+ Serializacja umożliwia deweloperowi zapisanie stanu obiektu i ponowne utworzenie go w razie potrzeby, zapewniając przechowywanie obiektów oraz wymianę danych. Dzięki serializacji programista może wykonywać takie działania, jak wysyłanie obiektu do aplikacji zdalnej za pomocą usługi sieci Web, przekazywanie obiektu z jednej domeny do drugiego, przekazywanie obiektu przez zaporę jako ciąg XML lub utrzymywanie zabezpieczeń lub informacje specyficzne dla użytkownika w aplikacjach.  
   
-### <a name="making-an-object-serializable"></a>Making an Object Serializable  
- To serialize an object, you need the object to be serialized, a stream to contain the serialized object, and a <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization> contains the classes necessary for serializing and deserializing objects.  
+### <a name="making-an-object-serializable"></a>Tworzenie obiektu jako możliwego do serializacji  
+ Aby serializować obiekt, wymagany jest obiekt, który ma być serializowany, strumień zawierający serializowany obiekt i <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization> zawiera klasy niezbędne do serializacji i deserializacji obiektów.  
   
- Apply the <xref:System.SerializableAttribute> attribute to a type to indicate that instances of this type can be serialized. A <xref:System.Runtime.Serialization.SerializationException> exception is thrown if you attempt to serialize but the type does not have the <xref:System.SerializableAttribute> attribute.  
+ Zastosuj atrybut <xref:System.SerializableAttribute> do typu, aby wskazać, że wystąpienia tego typu mogą być serializowane. Wyjątek <xref:System.Runtime.Serialization.SerializationException> jest generowany w przypadku próby serializacji, ale typ nie ma atrybutu <xref:System.SerializableAttribute>.  
   
- If you do not want a field within your class to be serializable, apply the <xref:System.NonSerializedAttribute> attribute. If a field of a serializable type contains a pointer, a handle, or some other data structure that is specific to a particular environment, and the field cannot be meaningfully reconstituted in a different environment, then you may want to make it nonserializable.  
+ Jeśli nie chcesz, aby w klasie nie można serializować pola, zastosuj atrybut <xref:System.NonSerializedAttribute>. Jeśli pole o typie możliwym do serializacji zawiera wskaźnik, uchwyt lub inną strukturę danych, która jest specyficzna dla określonego środowiska, a pole nie może być w znaczący sposób odtworzone w innym środowisku, można sprawić, aby nie można było jej serializować.  
   
- If a serialized class contains references to objects of other classes that are marked <xref:System.SerializableAttribute>, those objects will also be serialized.  
+ Jeśli serializowana Klasa zawiera odwołania do obiektów innych klas, które są oznaczone <xref:System.SerializableAttribute>, te obiekty również będą serializowane.  
   
-## <a name="binary-and-xml-serialization"></a>Binary and XML Serialization  
- Either binary or XML serialization can be used. In binary serialization, all members, even those that are read-only, are serialized, and performance is enhanced. XML serialization provides more readable code, as well as greater flexibility of object sharing and usage for interoperability purposes.  
+## <a name="binary-and-xml-serialization"></a>Serializacja binarna i XML  
+ Można użyć serializacji binarnej lub XML. W serializacji binarnej wszystkie elementy członkowskie, nawet te, które są tylko do odczytu, są serializowane i zwiększają wydajność. Serializacja XML zapewnia bardziej czytelny kod, a także większą elastyczność udostępniania obiektów i użycia na potrzeby współdziałania.  
   
 ### <a name="binary-serialization"></a>Serializacja binarna  
- Binary serialization uses binary encoding to produce compact serialization for uses such as storage or socket-based network streams.  
+ Serializacja binarna korzysta z kodowania binarnego w celu utworzenia kompaktowej serializacji do użycia, takich jak magazyn lub strumienie sieciowe oparte na gnieździe.  
   
 ### <a name="xml-serialization"></a>Serializacji XML  
- XML serialization serializes the public fields and properties of an object, or the parameters and return values of methods, into an XML stream that conforms to a specific XML Schema definition language (XSD) document. XML serialization results in strongly typed classes with public properties and fields that are converted to XML. <xref:System.Xml.Serialization> contains the classes necessary for serializing and deserializing XML.  
+ Serializacji XML serializować pola publiczne i właściwości obiektu, lub parametry i wartości zwracane metod do strumienia XML, który jest zgodny z konkretnym dokumentem języka definicji schematu XML (XSD). Serializacja XML skutkuje silnie określonymi klasami z właściwościami publicznymi i polami, które są konwertowane na format XML. <xref:System.Xml.Serialization> zawiera klasy niezbędne do serializacji i deserializacji XML.  
   
- You can apply attributes to classes and class members in order to control the way the <xref:System.Xml.Serialization.XmlSerializer> serializes or deserializes an instance of the class.  
+ Można zastosować atrybuty do klas i elementów członkowskich klasy w celu kontrolowania sposobu, w jaki <xref:System.Xml.Serialization.XmlSerializer> serializować lub deserializacji wystąpienia klasy.  
   
-## <a name="basic-and-custom-serialization"></a>Basic and Custom Serialization  
- Serialization can be performed in two ways, basic and custom. Basic serialization uses the .NET Framework to automatically serialize the object.  
+## <a name="basic-and-custom-serialization"></a>Serializacja podstawowa i niestandardowa  
+ Serializacja można wykonać na dwa sposoby — podstawowa i niestandardowa. Serializacja podstawowa używa .NET Framework do automatycznego serializacji obiektu.  
   
 ### <a name="basic-serialization"></a>Serializacja podstawowa  
- The only requirement in basic serialization is that the object has the <xref:System.SerializableAttribute> attribute applied. The <xref:System.NonSerializedAttribute> can be used to keep specific fields from being serialized.  
+ Jedynym wymaganiem w serializacji podstawowej jest to, że obiekt ma zastosowany atrybut <xref:System.SerializableAttribute>. <xref:System.NonSerializedAttribute> może służyć do zachowywania serializacji określonych pól.  
   
- When you use basic serialization, the versioning of objects may create problems, in which case custom serialization may be preferable. Basic serialization is the easiest way to perform serialization, but it does not provide much control over the process.  
+ W przypadku korzystania z serializacji podstawowej wersja obiektów może tworzyć problemy, w których może być preferowana Serializacja niestandardowa. Serializacja podstawowa jest najprostszym sposobem na wykonywanie serializacji, ale nie zapewnia większej kontroli nad procesem.  
   
 ### <a name="custom-serialization"></a>Serializacja niestandardowa  
- In custom serialization, you can specify exactly which objects will be serialized and how it will be done. The class must be marked <xref:System.SerializableAttribute> and implement the <xref:System.Runtime.Serialization.ISerializable> interface.  
+ W przypadku serializacji niestandardowej można określić, które obiekty będą serializowane i jak będą wykonywane. Klasa musi być oznaczona <xref:System.SerializableAttribute> i implementować interfejs <xref:System.Runtime.Serialization.ISerializable>.  
   
- If you want your object to be deserialized in a custom manner as well, you must use a custom constructor.  
+ Jeśli chcesz, aby obiekt był deserializowany w sposób niestandardowy, musisz użyć konstruktora niestandardowego.  
   
-## <a name="designer-serialization"></a>Designer Serialization  
- Designer serialization is a special form of serialization that involves the kind of object persistence usually associated with development tools. Designer serialization is the process of converting an object graph into a source file that can later be used to recover the object graph. A source file can contain code, markup, or even SQL table information.  
+## <a name="designer-serialization"></a>Serializacja projektanta  
+ Serializacja projektanta jest specjalną formą serializacji, która obejmuje rodzaj trwałości obiektu zazwyczaj skojarzony z narzędziami programistycznymi. Serializacja projektanta to proces przekonwertowania grafu obiektów na plik źródłowy, który można później użyć do odzyskania grafu obiektów. Plik źródłowy może zawierać kod, znacznik, a nawet informacje tabeli SQL.  
   
-## <a name="BKMK_RelatedTopics"></a> Related Topics and Examples  
- [Walkthrough: Persisting an Object in Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
- Demonstrates how serialization can be used to persist an object's data between instances, allowing you to store values and retrieve them the next time the object is instantiated.  
+## <a name="BKMK_RelatedTopics"></a>Tematy pokrewne i przykłady  
+ [Przewodnik: utrwalanie obiektu w programie Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
+ Pokazuje, jak Serializacja może być używana do utrwalania danych obiektu między wystąpieniami, umożliwiając przechowywanie wartości i pobieranie ich przy następnym tworzeniu wystąpienia obiektu.  
   
- [How to: Read Object Data from an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- Shows how to read object data that was previously written to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.  
+ [Instrukcje: odczytywanie danych obiektu z pliku XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+ Pokazuje, jak odczytywać dane obiektów, które zostały wcześniej zapisaną w pliku XML przy użyciu klasy <xref:System.Xml.Serialization.XmlSerializer>.  
   
- [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
- Shows how to write the object from a class to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.
+ [Instrukcje: zapisywanie danych obiektu w pliku XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
+ Pokazuje, jak napisać obiekt z klasy do pliku XML przy użyciu klasy <xref:System.Xml.Serialization.XmlSerializer>.

@@ -14,10 +14,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353577"
 ---
 # <a name="in-clause-visual-basic"></a>In — Klauzula (Visual Basic)
-Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.  
+Określa grupę, do której ma należeć zmienna pętla w pętli `For Each` lub Określa kolekcję do zapytania w klauzuli `From`, `Join`lub `Group Join`.  
   
 ## <a name="remarks"></a>Uwagi  
- The `In` keyword can be used in the following contexts:  
+ Słowo kluczowe `In` może być używane w następujących kontekstach:  
   
  [For Each...Next, instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   

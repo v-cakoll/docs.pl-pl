@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442508"
 ---
 # <a name="inotifysink2onsynccallout-method"></a>INotifySink2::OnSyncCallOut — Metoda
-Gets invoked when a call is out.  
+Wywoływana, gdy wywołanie jest wychodzące.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +38,19 @@ HRESULT OnSyncCallOut
   
 ## <a name="parameters"></a>Parametry  
  `in_CallID`  
- [in] ID of the call that is out. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ podczas Identyfikator wywołania, które jest wychodzące. Zobacz [strukturę CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `out_ppBuffer`  
- [out] Call buffer.  
+ określoną Bufor wywołań.  
   
  `out_pBufferSize`  
- [out] Size of the call buffer, in bytes.  
+ określoną Rozmiar buforu wywołań w bajtach.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds.  
+ S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** ProtocolNotify2.idl  
+ **Nagłówek:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Zobacz także
 

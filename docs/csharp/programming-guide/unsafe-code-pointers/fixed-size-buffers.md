@@ -1,5 +1,5 @@
 ---
-title: Fixed Size Buffers - C# Programming Guide
+title: Bufory o ustalonym rozmiarze — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
@@ -15,7 +15,7 @@ ms.locfileid: "74429398"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Bufory o ustalonym rozmiarze (Przewodnik programowania w języku C#)
 
-In C#, you can use the [fixed](../../language-reference/keywords/fixed-statement.md) statement to create a buffer with a fixed size array in a data structure. Fixed size buffers are useful when you write methods that interop with data sources from other languages or platforms. The fixed array can take any attributes or modifiers that are allowed for regular struct members. The only restriction is that the array type must be `bool`, `byte`, `char`, `short`, `int`, `long`, `sbyte`, `ushort`, `uint`, `ulong`, `float`, or `double`.
+W C#programie można użyć instrukcji [FIXED](../../language-reference/keywords/fixed-statement.md) do utworzenia buforu z tablicą o stałym rozmiarze w strukturze danych. Bufory o ustalonym rozmiarze są przydatne podczas pisania metod, które współdziałają ze źródłami danych z innych języków lub platform. Stała tablica może przyjmować wszelkie atrybuty lub modyfikatory, które są dozwolone dla zwykłych elementów członkowskich struktury. Jedynym ograniczeniem jest to, że typ tablicy musi być `bool`, `byte`, `char`, `short`, `int`, `long`, `sbyte`, `ushort`, `uint`, `ulong`, `float`lub `double`.
 
 ```csharp
 private fixed char name[30];
@@ -23,31 +23,31 @@ private fixed char name[30];
 
 ## <a name="remarks"></a>Uwagi
 
-In safe code, a C# struct that contains an array does not contain the array elements. Instead, the struct contains a reference to the elements. You can embed an array of fixed size in a [struct](../../language-reference/keywords/struct.md) when it is used in an [unsafe](../../language-reference/keywords/unsafe.md) code block.
+W bezpiecznym kodzie C# struktura, która zawiera tablicę, nie zawiera elementów tablicy. Zamiast tego, struktura zawiera odwołanie do elementów. Można osadzić tablicę o stałym rozmiarze w [strukturze](../../language-reference/keywords/struct.md) , gdy jest ona używana w [niebezpiecznym](../../language-reference/keywords/unsafe.md) bloku kodu.
 
-The following `struct` is 8 bytes in size. The `pathName` array is a reference:
+Następująca `struct` ma rozmiar 8 bajtów. Tablica `pathName` jest odwołaniem:
 
 [!code-csharp[Struct with embedded array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#6)]
 
-A `struct` can contain an embedded array in unsafe code. In the following example, the `fixedBuffer` array has a fixed size. You use a `fixed` statement to establish a pointer to the first element. You access the elements of the array through this pointer. The `fixed` statement pins the `fixedBuffer` instance field to a specific location in memory.
+`struct` może zawierać osadzoną tablicę w niebezpiecznym kodzie. W poniższym przykładzie tablica `fixedBuffer` ma stały rozmiar. Użyj instrukcji `fixed`, aby określić wskaźnik do pierwszego elementu. Dostęp do elementów tablicy można uzyskać za pomocą tego wskaźnika. Instrukcja `fixed` przypina pole wystąpienia `fixedBuffer` do określonej lokalizacji w pamięci.
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
 
-The size of the 128 element `char` array is 256 bytes. Fixed size [char](../../language-reference/builtin-types/char.md) buffers always take two bytes per character, regardless of the encoding. This is true even when char buffers are marshaled to API methods or structs with `CharSet = CharSet.Auto` or `CharSet = CharSet.Ansi`. Aby uzyskać więcej informacji, zobacz <xref:System.Runtime.InteropServices.CharSet>.
+Rozmiar elementu 128 `char` Array to 256 bajtów. Bufory [znaków](../../language-reference/builtin-types/char.md) o stałym rozmiarze zawsze pobierają dwa bajty na znak, niezależnie od kodowania. Jest to prawdziwe nawet wtedy, gdy bufory znaków są organizowane w metodach lub strukturach interfejsu API za pomocą `CharSet = CharSet.Auto` lub `CharSet = CharSet.Ansi`. Aby uzyskać więcej informacji, zobacz temat <xref:System.Runtime.InteropServices.CharSet>.
 
-The  preceding example demonstrates accessing `fixed` fields without pinning, which is available starting with C# 7.3.
+W poprzednim przykładzie pokazano dostęp do pól `fixed` bez przypinania, które są dostępne C# od 7,3.
 
-Another common fixed-size array is the [bool](../../language-reference/keywords/bool.md) array. The elements in a `bool` array are always one byte in size. `bool` arrays are not appropriate for creating bit arrays or buffers.
+Inna wspólna tablica o stałym rozmiarze jest tablicą [logiczną](../../language-reference/keywords/bool.md) . Elementy w tablicy `bool` są zawsze w rozmiarze jednego bajtu. Tablice `bool` nie są odpowiednie do tworzenia tablic bitowych lub buforów.
 
 > [!NOTE]
-> Except for memory created by using [stackalloc](../../language-reference/operators/stackalloc.md), the C# compiler and the common language runtime (CLR) do not perform any security buffer overrun checks. As with all unsafe code, use caution.
+> Z wyjątkiem pamięci utworzonej przy użyciu [stackalloc](../../language-reference/operators/stackalloc.md), C# kompilator i środowisko uruchomieniowe języka wspólnego (CLR) nie wykonują żadnych kontroli przepełnienia buforu zabezpieczeń. Podobnie jak w przypadku całego niebezpiecznego kodu, należy zachować ostrożność.
 
-Unsafe buffers differ from regular arrays in the following ways:
+Niebezpieczne bufory różnią się od zwykłych tablic w następujący sposób:
 
-- You can only use unsafe buffers in an unsafe context.
-- Unsafe buffers are always vectors, or one-dimensional arrays.
-- The declaration of the array should include a count, such as `char id[8]`. You cannot use `char id[]`.
-- Unsafe buffers can only be instance fields of structs in an unsafe context.
+- W niebezpiecznym kontekście można używać tylko niebezpiecznych buforów.
+- Niebezpieczne bufory są zawsze wektorami lub tablicami jednowymiarowymi.
+- Deklaracja tablicy powinna zawierać liczbę, taką jak `char id[8]`. Nie można użyć `char id[]`.
+- Niebezpieczne bufory mogą być wystąpieniami tylko pól struktur w niebezpiecznym kontekście.
 
 ## <a name="see-also"></a>Zobacz także
 

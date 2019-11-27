@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436847"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>IMetaDataImport::GetSigFromToken — Metoda
-Gets the binary metadata signature associated with the specified token.  
+Pobiera binarny podpis metadanych skojarzony z określonym tokenem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,22 +37,22 @@ HRESULT GetSigFromToken (
   
 ## <a name="parameters"></a>Parametry  
  `mdSig`  
- [in] The token to return the binary metadata signature for.  
+ podczas Token, dla którego ma zostać zwrócona sygnatura metadanych binarnych.  
   
  `ppvSig`  
- [out] A pointer to the returned metadata signature.  
+ określoną Wskaźnik do zwróconego podpisu metadanych.  
   
  `pcbSig`  
- [out] The size in bytes of the binary metadata signature.  
+ określoną Rozmiar w bajtach binarnego podpisu metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

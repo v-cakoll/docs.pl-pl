@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436750"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps — Metoda
-Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.  
+Zwraca informacje o metadanych dla <xref:System.Type> reprezentowane przez określony token TypeDef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,31 +40,31 @@ HRESULT GetTypeDefProps (
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- [in] The TypeDef token that represents the type to return metadata for.  
+ podczas Token TypeDef, który reprezentuje typ do zwrócenia metadanych.  
   
  `szTypeDef`  
- [out] A buffer containing the type name.  
+ określoną Bufor zawierający nazwę typu.  
   
  `cchTypeDef`  
- [in] The size in wide characters of `szTypeDef`.  
+ podczas Rozmiar w szerokich znakach `szTypeDef`.  
   
  `pchTypeDef`  
- [out] The number of wide characters returned in `szTypeDef`.  
+ określoną Liczba znaków dwubajtowych zwracanych w `szTypeDef`.  
   
  `pdwTypeDefFlags`  
- [out] A pointer to any flags that modify the type definition. This value is a bitmask from the [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration.  
+ określoną Wskaźnik do każdej flagi modyfikującej definicję typu. Ta wartość jest maska bitowa z wyliczenia [CorTypeAttr —](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) .  
   
  `ptkExtends`  
- [out] A TypeDef or TypeRef metadata token that represents the base type of the requested type.  
+ określoną Token metadanych TypeDef lub TypeRef reprezentujący typ podstawowy żądanego typu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

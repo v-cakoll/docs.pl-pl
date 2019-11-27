@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445395"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>ICorProfilerCallback::ExceptionSearchCatcherFound — Metoda
-Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.  
+Powiadamia profiler, że faza wyszukiwania obsługi wyjątków znalazła procedurę obsługi dla zgłoszonego wyjątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,16 +34,16 @@ RESULT ExceptionSearchCatcherFound(
   
 ## <a name="parameters"></a>Parametry  
  `functionId`  
- [in] The ID of the function that contains the exception handler.  
+ podczas Identyfikator funkcji, która zawiera procedurę obsługi wyjątków.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447787"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>ICorProfilerFunctionEnum::Next — Metoda
-Gets the specified number of contiguous functions from a sequential collection of functions, starting at the enumerator's current position in the sequence.  
+Pobiera określoną liczbę funkcji ciągłych z sekwencyjnego zbioru funkcji, rozpoczynając od bieżącej pozycji modułu wyliczającego w sekwencji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,30 +36,30 @@ HRESULT Next([in]  ULONG      celt,
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- [in] The number of functions to retrieve.  
+ podczas Liczba funkcji do pobrania.  
   
  `ids`  
- [out] An array of `COR_PRF_FUNCTION` values, each of which represents a retrieved function.  
+ określoną Tablica wartości `COR_PRF_FUNCTION`, z których każdy reprezentuje pobraną funkcję.  
   
  `pceltFetched`  
- [out] A pointer to the number of functions actually returned in the `ids` array.  
+ określoną Wskaźnik do liczby funkcji faktycznie zwracanych w tablicy `ids`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
+ Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`celt` elements were returned.|  
-|S_FALSE|Fewer than `celt` elements were returned, which indicates that the enumeration is complete.|  
+|S_OK|zwrócono `celt` elementów.|  
+|S_FALSE|Zwrócono mniej niż `celt` elementów, co oznacza, że Wyliczenie zostało zakończone.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

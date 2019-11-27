@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445120"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished — Metoda
-Notifies the profiler that a class has finished loading.  
+Powiadamia profiler o zakończeniu ładowania klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,24 +35,24 @@ HRESULT ClassLoadFinished(
   
 ## <a name="parameters"></a>Parametry  
  `classId`  
- [in] Identifies the class that was loaded.  
+ podczas Identyfikuje klasę, która została załadowana.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the class loaded successfully.  
+ podczas WYNIK HRESULT wskazujący, czy klasa została pomyślnie załadowana.  
   
 ## <a name="remarks"></a>Uwagi  
- The value of `classId` is not valid for an information request until the `ClassLoadFinished` method is called.  
+ Wartość `classId` nie jest prawidłowa dla żądania informacji, dopóki nie zostanie wywołana metoda `ClassLoadFinished`.  
   
- Some parts of loading the class might continue after the `ClassLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the class has succeeded.  
+ Niektóre części ładowania klasy mogą być kontynuowane po wywołaniu wywołania zwrotnego `ClassLoadFinished`. Błąd HRESULT w `hrStatus` wskazuje na błąd. Jednak wynik HRESULT w `hrStatus` wskazuje tylko, że pierwsza część ładowania klasy zakończyła się powodzeniem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

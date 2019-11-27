@@ -15,22 +15,22 @@ ms.locfileid: "74447536"
 ---
 # <a name="profiling-unmanaged-api-reference"></a>Profilowanie (Niezarządzany wykaz interfejsów API)
 
-The profiling API enables a profiler to monitor a program's execution by the common language runtime (CLR).
+Profilowanie interfejsu API umożliwia profilerowi monitorowanie wykonywania programu przez środowisko uruchomieniowe języka wspólnego (CLR).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
- [Profiling Overview](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md) Describes the services and interfaces that the CLR provides to support profiling in the .NET Framework environment.
+ [Omówienie profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md) Opisuje usługi i interfejsy zapewniane przez środowisko CLR do obsługi profilowania w środowisku .NET Framework.
 
- [Profiling Interfaces](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md) Describes the unmanaged interfaces that the profiling API uses.
+ [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md) Opisuje interfejsy niezarządzane używane przez interfejs API profilowania.
 
- [Setting Up a Profiling Environment](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md) Describes the steps you must take to profile a .NET Framework application.
+ [Konfigurowanie środowiska profilowania](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md) Zawiera opis czynności, które należy wykonać, aby utworzyć profil aplikacji .NET Framework.
 
- [CLR Profilers and Windows Store Apps](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md) Discusses how to port diagnostic tools that consume the CLR Profiling API to work successfully with Windows Store apps.
+ [Preplikcy CLR i aplikacje ze sklepu Windows](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md) W tym artykule omówiono sposób przenoszenia narzędzi diagnostycznych korzystających z interfejsu API profilowania środowiska CLR w celu pomyślnego działania z aplikacjami ze sklepu Windows.
 
- [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md) Documents the conditions under which a method call returns the `CORPROF_E_UNSUPPORTED_CALL_SEQUENCE` HRESULT.
+ [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md) Dokumentuje warunki, w których wywołanie metody zwraca `CORPROF_E_UNSUPPORTED_CALL_SEQUENCE` HRESULT.
 
- [Profiling Global Static Functions](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md) Describes the unmanaged global static functions that the profiling API uses.
+ [Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md) Opisuje niezarządzane globalne funkcje statyczne, które są używane przez interfejs API profilowania.
 
- [Profiling Enumerations](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md) Describes the unmanaged enumerations that the profiling API uses.
+ [Profilowania — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md) Opisuje niezarządzane wyliczenia, które są używane przez interfejs API profilowania.
 
- [Profiling Structures](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md) Describes the unmanaged structures that the profiling API uses.
+ [Profilowanie struktur](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md) Opisuje struktury niezarządzane używane przez interfejs API profilowania.

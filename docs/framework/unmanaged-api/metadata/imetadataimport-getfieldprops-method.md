@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437996"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps — Metoda
-Gets metadata associated with the field referenced by the specified FieldDef token.  
+Pobiera metadane skojarzone z polem, do którego odwołuje się określony token FieldDef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,46 +45,46 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Parametry  
  `mb`  
- [in] A FieldDef token that represents the field to get associated metadata for.  
+ podczas Token FieldDef reprezentujący pole, dla którego mają zostać pobrane powiązane metadane.  
   
  `pClass`  
- [out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.  
+ określoną Wskaźnik do tokenu TypeDef, który reprezentuje typ klasy, do której należy pole.  
   
  `szField`  
- [out] The name of the field.  
+ określoną Nazwa pola.  
   
  `cchField`  
- [in] The size in wide characters of the buffer for *szField*.  
+ podczas Rozmiar w postaci znaków dwubajtowych buforu dla *szField*.  
   
  `pchField`  
- [out] The actual size of the returned buffer.  
+ określoną Rzeczywisty rozmiar zwróconego buforu.  
   
  `pdwAttr`  
- [out] Flags associated with the field's metadata.  
+ określoną Flagi skojarzone z metadanymi pola.  
   
  `ppvSigBlob`  
- [in] A pointer to the binary metadata value that describes the field.  
+ podczas Wskaźnik do wartości metadanych Binary opisującej pole.  
   
  `pcbSigBlob`  
- [out] The size in bytes of `ppvSigBlob`.  
+ określoną Rozmiar w bajtach `ppvSigBlob`.  
   
  `pdwCPlusTypeFlag`  
- [out] A flag that specifies the value type of the field.  
+ określoną Flaga określająca typ wartości pola.  
   
  `ppValue`  
- [out] A constant value for the field.  
+ określoną Stała wartość pola.  
   
  `pcchValue`  
- [out] The size in chars of `ppValue`, or zero if no string exists.  
+ określoną Rozmiar w znakach `ppValue`lub zero, jeśli nie istnieje żaden ciąg.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

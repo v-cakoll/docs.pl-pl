@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428307"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams — Metoda
-Gets an enumerator for an array of generic parameter tokens associated with the specified TypeDef or MethodDef token.  
+Pobiera moduł wyliczający dla tablicy tokenów parametrów ogólnych skojarzonych z określonym tokenem TypeDef lub MethodDef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,35 +39,35 @@ HRESULT EnumGenericParams (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in. out] Wskaźnik do modułu wyliczającego.  
   
  `tk`  
- [in] The TypeDef or MethodDef token whose generic parameters are to be enumerated.  
+ podczas Token TypeDef lub MethodDef, którego parametry ogólne mają zostać wyliczone.  
   
  `rGenericParams`  
- [out] The array of generic parameters to enumerate.  
+ określoną Tablica parametrów ogólnych do wyliczenia.  
   
  `cMax`  
- [in] The requested maximum number of tokens to place in `rGenericParams`.  
+ podczas Żądana Maksymalna liczba tokenów do umieszczenia w `rGenericParams`.  
   
  `pcGenericParams`  
- [out] The returned number of tokens placed in `rGenericParams`.  
+ określoną Zwrócona liczba tokenów umieszczonych w `rGenericParams`.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParams` is set to 0 (zero).|  
+|`S_OK`|`EnumGenericParams` pomyślnie zwrócone.|  
+|`S_FALSE`|`phEnum` nie ma elementów członkowskich. W tym przypadku `pcGenericParams` jest ustawiona na 0 (zero).|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

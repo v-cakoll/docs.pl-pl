@@ -13,19 +13,19 @@ ms.locfileid: "74352056"
 ---
 # <a name="how-to-write-log-messages-visual-basic"></a>Porady: zapisywanie wiadomości rejestru (Visual Basic)
 
-You can use the `My.Application.Log` and `My.Log` objects to log information about your application. This example shows how to use the `My.Application.Log.WriteEntry` method to log tracing information.
+Za pomocą obiektów `My.Application.Log` i `My.Log` można rejestrować informacje o aplikacji. W tym przykładzie pokazano, jak za pomocą metody `My.Application.Log.WriteEntry` rejestrować informacje o śledzeniu.
 
-For logging exception information, use the `My.Application.Log.WriteException` method; see [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
+Aby rejestrować informacje o wyjątkach, użyj metody `My.Application.Log.WriteException`. Zobacz [jak: wyjątki dzienników](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
 
 ## <a name="example"></a>Przykład
 
-This example uses the `My.Application.Log.WriteEntry` method to write out the trace information.
+W tym przykładzie zastosowano metodę `My.Application.Log.WriteEntry`, aby napisać informacje o śledzeniu.
 
 [!code-vb[VbVbalrMyApplicationLog#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#11)]
 
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework
 
-Make sure the data you write to the log does not include sensitive information such as user passwords. For more information, see [Working with Application Logs](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
+Upewnij się, że dane zapisane w dzienniku nie zawierają poufnych informacji, takich jak hasła użytkowników. Aby uzyskać więcej informacji, zobacz [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -14,9 +14,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348654"
 ---
-# <a name="-refout-visual-basic"></a>-refout (Visual Basic)
+# <a name="-refout-visual-basic"></a>-opcji refout (Visual Basic)
 
-The **-refout** option specifies a file path where the reference assembly should be output.
+Opcja **-opcji refout** określa ścieżkę pliku, w którym zestaw odniesienia powinien być wyjściowy.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -29,18 +29,18 @@ The **-refout** option specifies a file path where the reference assembly should
 ## <a name="arguments"></a>Argumenty
 
 `filepath`  
-The path and filename of the reference assembly. It should generally be in a sub-folder of the primary assembly. The recommended convention (used by MSBuild) is to place the reference assembly in a "ref/" sub-folder relative to the primary assembly. All folders in `filepath` must exist; the compiler does not create them.
+Ścieżka i nazwa pliku zestawu odwołania. Zwykle powinien znajdować się w podfolderze podstawowego zestawu. Zalecaną konwencją (używaną przez program MSBuild) jest umieszczenie zestawu odwołania w podfolderze "ref/" względem podstawowego zestawu. Wszystkie foldery w `filepath` muszą istnieć; Kompilator nie tworzy ich.
 
 ## <a name="remarks"></a>Uwagi
 
-Visual Basic supports the `-refout` switch starting with version 15.3.
+Visual Basic obsługuje przełącznik `-refout`, zaczynając od wersji 15,3.
 
-Reference assemblies are a special type of assembly that contain only the minimum amount of metadata required to represent the library's public API surface. They include declarations for all members that are significant when referencing an assembly in build tools, but exclude all member implementations and declarations of private members that have no observable impact on their API contract. For more information, see [Reference assemblies](../../../standard/assembly/reference-assemblies.md) in .NET Guide.
+Zestawy referencyjne są specjalnym typem zestawu, który zawiera tylko minimalną ilość metadanych wymaganą do reprezentowania publicznej powierzchni interfejsu API biblioteki. Obejmują one deklaracje dla wszystkich elementów członkowskich, które są istotne w przypadku odwoływania się do zestawu w narzędziach kompilacji, ale wyklucza wszystkie implementacje składowych i deklaracje prywatnych członków, którzy nie mają zauważalnego wpływu na ich kontrakt interfejsu API. Aby uzyskać więcej informacji, zobacz [zestawy referencyjne](../../../standard/assembly/reference-assemblies.md) w przewodniku .NET.
 
-The `-refout` and [`-refonly`](refonly-compiler-option.md) options are mutually exclusive.
+Opcje `-refout` i [`-refonly`](refonly-compiler-option.md) wykluczają się wzajemnie.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [-refonly](refonly-compiler-option.md)
-- [Visual Basic Command-Line Compiler](index.md)
+- [Kompilator wiersza polecenia Visual Basic](index.md)
 - [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)

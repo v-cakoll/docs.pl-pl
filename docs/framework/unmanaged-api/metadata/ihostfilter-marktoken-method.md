@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432240"
 ---
 # <a name="ihostfiltermarktoken-method"></a>IHostFilter::MarkToken — Metoda
-Indicates that the specified metadata token will be processed.  
+Wskazuje, że określony token metadanych zostanie przetworzony.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,19 +35,19 @@ HRESULT MarkToken (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- [in] The metadata token to be processed.  
+ podczas Token metadanych do przetworzenia.  
   
 ## <a name="remarks"></a>Uwagi  
- Typically, you want a token to be processed if it is in the metadata scope. The `MarkToken` method is passed to the metadata engine via the [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) method.  
+ Zazwyczaj token ma być przetwarzany, jeśli znajduje się w zakresie metadanych. Metoda `MarkToken` jest przenoszona do aparatu metadanych za pośrednictwem metody [IMetaDataEmit:: Sethandlee](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

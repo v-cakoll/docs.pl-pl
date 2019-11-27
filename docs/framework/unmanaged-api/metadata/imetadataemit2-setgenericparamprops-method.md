@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440435"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps — Metoda
-Sets property values for the generic parameter definition referenced by the specified token.  
+Ustawia wartości właściwości dla definicji parametru generycznego, do której odwołuje się określony token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,28 +39,28 @@ HRESULT SetGenericParamProps (
   
 ## <a name="parameters"></a>Parametry  
  `gp`  
- [in] The token for the generic parameter definition for which to set values.  
+ podczas Token dla definicji parametru generycznego, dla którego mają zostać ustawione wartości.  
   
  `dwParamFlags`  
- [in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.  
+ podczas Wartość wyliczenia [CorGenericParamAttr —](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) opisująca typ parametru generycznego.  
   
  `szName`  
- [in] Optional. The name of the parameter for which to set values.  
+ podczas Obowiązkowe. Nazwa parametru, dla którego mają zostać ustawione wartości.  
   
  `reserved`  
- [in] Reserved for future extensibility.  
+ podczas Zarezerwowane do użytku w przyszłości.  
   
  `rtkConstraints`  
- [in] Optional. A zero-terminated array of type constraints. Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.  
+ podczas Obowiązkowe. Tablica zakończona zerem z ograniczeniami typu. Elementy członkowskie tablicy muszą być tokenem metadanych `mdTypeDef`, `mdTypeRef`lub `mdTypeSpec`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

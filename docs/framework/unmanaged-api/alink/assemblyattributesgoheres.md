@@ -24,7 +24,7 @@ ms.locfileid: "74446621"
 ---
 # <a name="assemblyattributesgoheres"></a>AssemblyAttributesGoHereS
 
-Used by ALink as a placeholder to store information about custom attributes.
+Używane przez ALink jako symbol zastępczy do przechowywania informacji o atrybutach niestandardowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,11 +34,11 @@ internal sealed class AssemblyAttributesGoHereS
 
 ## <a name="remarks"></a>Uwagi
 
-References to this type might be embedded inside netmodules whose sources contain assembly custom attributes. When building an assembly manifest from one or more netmodules that contain references to these types, ALink uses information attached to these references to emit real custom attributes. As such, this type is never instantiated, and references to it are used only as part of the build process and serve no purpose in the final assembly.
+Odwołania do tego typu mogą być osadzone w modułach, których źródła zawierają atrybuty niestandardowe zestawu. Podczas kompilowania manifestu zestawu z co najmniej jednego modułu, który zawiera odwołania do tych typów, ALink używa informacji dołączonych do tych odwołań do emisji prawdziwych atrybutów niestandardowych. W związku z tym ten typ nigdy nie jest tworzony i odwołania do niego są używane tylko jako część procesu kompilacji i nie mają zastosowania w końcowym zestawie.
 
-References to this type indicate custom attributes that are security related and are not multiple-use.
+Odwołania do tego typu wskazują atrybuty niestandardowe, które są powiązane z zabezpieczeniami i nie są wielokrotnością użycia.
 
-These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
+Te typy są oznaczone jako "wewnętrzne" w .NET Framework i znajdują się w przestrzeni nazw <xref:System.Runtime.CompilerServices>.
 
 ## <a name="requirements"></a>Wymagania
 

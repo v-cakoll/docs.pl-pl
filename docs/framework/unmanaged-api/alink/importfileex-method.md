@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446952"
 ---
 # <a name="importfileex-method"></a>ImportFileEx — Metoda
-Imports indicated assembly or unbound module.  
+Importuje wskazany zestaw lub niezwiązany moduł.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,31 +40,31 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>Parametry  
  `pszFilename`  
- Fully qualified name of file from which to import.  
+ W pełni kwalifikowana nazwa pliku, z którego ma zostać zaimportowana.  
   
  `pszTargetName`  
- Optional name of target file.  
+ Opcjonalna nazwa pliku docelowego.  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ Jeśli wartość jest równa TRUE, używane są wartości, w przeciwnym razie importowanie należy wykonać ręcznie.  
   
  `dwOpenFlags`  
- Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
+ Flagi do przesłania do [metody OpenScope —](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- Receives ID of the file being imported.  
+ Odbiera identyfikator importowanego pliku.  
   
  `ppAssemblyScope`  
- Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
+ Odbiera Interfejs [IMetaDataAssemblyImporty](../metadata/imetadataassemblyimport-interface.md) zakresu importu zestawu. Jest ustawiona na wartość NULL, jeśli plik nie jest zestawem.  
   
  `pdwCountOfScopes`  
- Receives count of imported files and/or scopes.  
+ Odbiera liczbę zaimportowanych plików i/lub zakresów.  
   
-## <a name="return-value"></a>Wartość zwracana  
- Returns S_OK if the method succeeds.  
+## <a name="return-value"></a>Wartość zwrócona  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Requires alink.h.  
+ Wymaga Alink. h.  
   
 ## <a name="see-also"></a>Zobacz także
 

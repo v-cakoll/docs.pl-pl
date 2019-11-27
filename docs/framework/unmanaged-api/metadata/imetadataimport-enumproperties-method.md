@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450022"
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties — Metoda
-Enumerates PropertyDef tokens representing the properties of the type referenced by the specified TypeDef token.  
+Wylicza tokeny PropertyDef reprezentujące właściwości typu, do którego odwołuje się określony token TypeDef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,35 +39,35 @@ HRESULT EnumProperties (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in. out] Wskaźnik do modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
   
  `td`  
- [in] A TypeDef token representing the type with properties to enumerate.  
+ podczas Token TypeDef reprezentujący typ z właściwościami do wyliczenia.  
   
  `rProperties`  
- [out] The array used to store the PropertyDef tokens.  
+ określoną Tablica służąca do przechowywania tokenów PropertyDef.  
   
  `cMax`  
- [in] The maximum size of the `rProperties` array.  
+ podczas Maksymalny rozmiar tablicy `rProperties`.  
   
  `pcProperties`  
- [out] The number of PropertyDef tokens returned in `rProperties`.  
+ określoną Liczba tokenów PropertyDef zwróconych w `rProperties`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumProperties` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcProperties` is zero.|  
+|`S_OK`|`EnumProperties` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak tokenów do wyliczenia. W takim przypadku `pcProperties` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

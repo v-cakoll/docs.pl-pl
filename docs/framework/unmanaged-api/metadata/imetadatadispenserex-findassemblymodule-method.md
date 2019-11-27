@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442181"
 ---
 # <a name="imetadatadispenserexfindassemblymodule-method"></a>IMetaDataDispenserEx::FindAssemblyModule — Metoda
-Ta metoda nie jest zaimplementowana. If called, it returns E_NOTIMPL.  
+Ta metoda nie jest zaimplementowana. Jeśli zostanie wywołana, zwraca E_NOTIMPL.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,37 +42,37 @@ HRESULT FindAssemblyModule(
   
 ## <a name="parameters"></a>Parametry  
  `szAppBase`  
- [in] Not used.  
+ podczas Nieużywane.  
   
  `szPrivateBin`  
- [in] Not used.  
+ podczas Nieużywane.  
   
  `szGlobalBin`  
- [in] Not used.  
+ podczas Nieużywane.  
   
  `szAssemblyName`  
- [in] The name of the module.  
+ podczas Nazwa modułu.  
   
  `szModuleName`  
- [in] The assembly to be found.  
+ podczas Zestaw, który ma zostać znaleziony.  
   
  `szName`  
- [out] The simple name of the assembly.  
+ określoną Prosta nazwa zestawu.  
   
  `cchName`  
- [in] The size, in bytes, of `szName`.  
+ podczas Rozmiar w bajtach `szName`.  
   
  `pcName`  
- [out] The number of characters actually returned in `szName`.  
+ określoną Liczba znaków faktycznie zwróconych w `szName`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

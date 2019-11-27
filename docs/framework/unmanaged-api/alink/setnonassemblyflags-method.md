@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445551"
 ---
 # <a name="setnonassemblyflags-method"></a>SetNonAssemblyFlags — Metoda
-Sets flags that are not assembly-specific.  
+Ustawia flagi, które nie są specyficzne dla zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,13 +34,13 @@ HRESULT SetNonAssemblyFlags(
   
 ## <a name="parameters"></a>Parametry  
  `afFlags`  
- ALink flags.  
+ Flagi ALink.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Returns S_OK if the method succeeds.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Requires alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 

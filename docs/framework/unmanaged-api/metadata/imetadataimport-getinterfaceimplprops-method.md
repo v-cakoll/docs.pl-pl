@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437541"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps — Metoda
-Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.
+Pobiera wskaźnik do tokenów metadanych dla <xref:System.Type> implementujących określoną metodę i dla interfejsu, który deklaruje tę metodę.
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,27 +37,27 @@ HRESULT GetInterfaceImplProps (
   
 ## <a name="parameters"></a>Parametry  
  `iiImpl`  
- [in] The metadata token representing the method to return the class and interface tokens for.  
+ podczas Token metadanych reprezentujący metodę zwracającą tokeny klasy i interfejsu dla.  
   
  `pClass`  
- [out] The metadata token representing the class that implements the method.  
+ określoną Token metadanych reprezentujący klasę implementującą metodę.  
   
  `ptkIface`  
- [out] The metadata token representing the interface that defines the implemented method.  
+ określoną Token metadanych reprezentujący interfejs, który definiuje zaimplementowaną metodę.  
 
 ## <a name="remarks"></a>Uwagi
 
- You obtain the value for `iImpl` by calling the [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) method.
+ Wartość dla `iImpl` można uzyskać, wywołując metodę [EnumInterfaceImpls —](imetadataimport-enuminterfaceimpls-method.md) .
  
- For example, suppose that a class has an `mdTypeDef` token value of 0x02000007 and that it implements three interfaces whose types have tokens: 
+ Załóżmy na przykład, że Klasa ma `mdTypeDef` wartość tokenu 0x02000007 i że implementuje trzy interfejsy, których typy mają tokeny: 
 
 - 0x02000003 (TypeDef)
 - 0x0100000A (TypeRef)
 - 0x0200001C (TypeDef)
 
-Conceptually, this information is stored into an interface implementation table as:
+Koncepcyjnie te informacje są przechowywane w tabeli implementacji interfejsu jako:
 
-| Row number | Class token | Interface token |
+| Numer wiersza | Token klasy | Token interfejsu |
 |------------|-------------|-----------------|
 | 4          |             |                 |
 | 5          | 02000007    | 02000003        |
@@ -65,21 +65,21 @@ Conceptually, this information is stored into an interface implementation table 
 | 7          |             |                 |
 | 8          | 02000007    | 0200001C        |
 
-Recall, the token is a 4-byte value:
+Odwołaj, token jest wartością 4-bajtową:
 
-- The lower 3 bytes hold the row number, or RID.
-- The upper byte holds the token type – 0x09 for `mdtInterfaceImpl`.
+- Dolne 3 bajty mają numer wiersza lub identyfikator RID.
+- Górny bajt zawiera typ tokenu — 0x09 dla `mdtInterfaceImpl`.
 
-`GetInterfaceImplProps` returns the information held in the row whose token you provide in the `iImpl` argument. 
+`GetInterfaceImplProps` zwraca informacje przechowywane w wierszu, którego token podano w argumencie `iImpl`. 
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

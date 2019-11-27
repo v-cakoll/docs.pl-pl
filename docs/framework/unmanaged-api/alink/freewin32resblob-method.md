@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449401"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob — Metoda
-Releases the Win32 resource blob and associated resources.  
+Zwalnia obiekt BLOB zasobów Win32 i skojarzone zasoby.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,13 +34,13 @@ HRESULT FreeWin32ResBlob(
   
 ## <a name="parameters"></a>Parametry  
  `ppResBlob`  
- The resource blob to be released. This method assigns the blob pointer to NULL.  
+ Obiekt BLOB zasobu do zwolnienia. Ta metoda przypisuje wskaźnik obiektu BLOB do wartości NULL.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Returns S_OK if the method succeeds.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Requires alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 

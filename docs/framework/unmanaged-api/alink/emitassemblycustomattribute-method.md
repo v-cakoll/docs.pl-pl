@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446508"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute — Metoda
-Call to set assembly-level custom attributes.  
+Wywołanie ustawiania atrybutów niestandardowych na poziomie zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,31 +41,31 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- ID of the assembly.  
+ Identyfikator zestawu.  
   
  `FileToken`  
- File that defiles the attribute. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
+ Plik, który deplikuje atrybut. Może mieć wartość NULL, jeśli `AssemblyID` nie wskazuje niepowiązanego modułu.  
   
  `tkType`  
- Type of the custom attribute.  
+ Typ atrybutu niestandardowego.  
   
  `pCustomValue`  
- Custom value data.  
+ Dane wartości niestandardowej.  
   
  `cbCustomValue`  
- Length of custom value data.  
+ Długość danych wartości niestandardowych.  
   
  `bSecurity`  
- TRUE if the custom attribute is related to assembly signing.  
+ Ma wartość TRUE, jeśli atrybut niestandardowy jest powiązany z podpisywaniem zestawu.  
   
  `bAllowMulti`  
- TRUE if multiple attributes are to be emitted.  
+ Ma wartość TRUE, jeśli wiele atrybutów ma być emitowanych.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Returns S_OK if the method succeeds.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Requires alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 

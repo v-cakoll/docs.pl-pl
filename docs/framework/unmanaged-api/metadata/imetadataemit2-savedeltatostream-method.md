@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447873"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>IMetaDataEmit2::SaveDeltaToStream — Metoda
-Saves changes from the current edit-and-continue session to the specified stream.  
+Zapisuje zmiany z bieżącej sesji Edit-and-Continue do określonego strumienia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,19 +36,19 @@ HRESULT SaveDeltaToStream (
   
 ## <a name="parameters"></a>Parametry  
  `pIStream`  
- [in] An interface pointer to the writable stream to which to save changes.  
+ podczas Wskaźnik interfejsu do zapisywalnego strumienia, do którego mają zostać zapisane zmiany.  
   
  `dwSaveFlags`  
- [in] Reserved. This value must be zero.  
+ podczas Rezerwacj. Ta wartość musi być równa zero.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

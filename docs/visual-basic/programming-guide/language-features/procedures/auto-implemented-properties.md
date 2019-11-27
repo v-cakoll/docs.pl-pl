@@ -16,21 +16,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350383"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Właściwości zaimplementowane automatycznie (Visual Basic)
-*Auto-implemented properties* enable you to quickly specify a property of a class without having to write code to `Get` and `Set` the property. When you write code for an auto-implemented property, the Visual Basic compiler automatically creates a private field to store the property variable in addition to creating the associated `Get` and `Set` procedures.  
+*Zaimplementowane właściwości* umożliwiają szybkie określenie właściwości klasy bez konieczności pisania kodu do `Get` i `Set` właściwości. Podczas pisania kodu dla właściwości automatycznej implementacji kompilator Visual Basic automatycznie tworzy pole prywatne do przechowywania zmiennej właściwości oprócz tworzenia skojarzonych `Get` i `Set` procedur.  
   
- With auto-implemented properties, a property, including a default value, can be declared in a single line. The following example shows three property declarations.  
+ Przy użyciu właściwości, które są implementowane przez program, właściwość, w tym wartość domyślną, może być zadeklarowana w jednym wierszu. Poniższy przykład przedstawia trzy deklaracje właściwości.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#1)]  
   
- An auto-implemented property is equivalent to a property for which the property value is stored in a private field. The following code example shows an auto-implemented property.  
+ Właściwość zaimplementowana przez funkcję jest równoważna właściwości, dla której wartość właściwości jest przechowywana w polu prywatnym. Poniższy przykład kodu pokazuje właściwość, która jest implementowana.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#5)]  
   
- The following code example shows the equivalent code for the previous auto-implemented property example.  
+ Poniższy przykład kodu pokazuje odpowiedni kod dla poprzedniego przykładu zaimplementowanej właściwości.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#2)]  
   
- The following code show implementing readonly properties:  
+ Poniższy kod przedstawia implementowanie właściwości ReadOnly:  
   
 ```vb  
 Class Customer  
@@ -44,57 +44,57 @@ Class Customer
 End Class  
 ```  
   
- You can assign to the property with initialization expressions as shown in the example, or you can assign to the properties in the containing type’s constructor.  You can assign to the backing fields of readonly properties at any time.  
+ Można przypisać do właściwości z wyrażeniami inicjalizacji, jak pokazano w przykładzie, lub można przypisać do właściwości w konstruktorze typu zawierającego.  Można przypisać do pól zapasowych właściwości tylko do odczytu w dowolnym momencie.  
   
-## <a name="backing-field"></a>Backing Field  
- When you declare an auto-implemented property, Visual Basic automatically creates a hidden private field called the *backing field* to contain the property value. The backing field name is the auto-implemented property name preceded by an underscore (_). For example, if you declare an auto-implemented property named `ID`, the backing field is named `_ID`. If you include a member of your class that is also named `_ID`, you produce a naming conflict and Visual Basic reports a compiler error.  
+## <a name="backing-field"></a>Pole zapasowe  
+ W przypadku deklarowania automatycznie zaimplementowanej właściwości Visual Basic automatycznie tworzy ukryte pole prywatne o nazwie *pole zapasowe* , aby zawierało wartość właściwości. Nazwa pola zapasowego jest zaimplementowaną nazwą właściwości, poprzedzoną znakiem podkreślenia (_). Na przykład jeśli zadeklarujesz Właściwość zaimplementowaną przez funkcję `ID`, pole zapasowe ma nazwę `_ID`. Jeśli dołączysz element członkowski klasy o nazwie `_ID`, zostanie wygenerowane konflikt nazw i Visual Basic raporty błąd kompilatora.  
   
- The backing field also has the following characteristics:  
+ Pole zapasowe ma również następujące cechy:  
   
-- The access modifier for the backing field is always `Private`, even when the property itself has a different access level, such as `Public`.  
+- Modyfikator dostępu dla pola zapasowego jest zawsze `Private`, nawet jeśli sama właściwość ma inny poziom dostępu, na przykład `Public`.  
   
-- If the property is marked as `Shared`, the backing field also is shared.  
+- Jeśli właściwość jest oznaczona jako `Shared`, pole zapasowe jest również udostępniane.  
   
-- Attributes specified for the property do not apply to the backing field.  
+- Atrybuty określone dla właściwości nie mają zastosowania do pola zapasowego.  
   
-- The backing field can be accessed from code within the class and from debugging tools such as the Watch window. However, the backing field does not show in an IntelliSense word completion list.  
+- Do pola zapasowego można uzyskać dostęp z kodu w klasie oraz z narzędzi debugowania, takich jak okno wyrażeń kontrolnych. Jednak pole zapasowe nie jest wyświetlane na liście uzupełniania słów IntelliSense.  
   
-## <a name="initializing-an-auto-implemented-property"></a>Initializing an Auto-Implemented Property  
- Any expression that can be used to initialize a field is valid for initializing an auto-implemented property. When you initialize an auto-implemented property, the expression is evaluated and passed to the `Set` procedure for the property. The following code examples show some auto-implemented properties that include initial values.  
+## <a name="initializing-an-auto-implemented-property"></a>Inicjowanie właściwości, która została zaimplementowana  
+ Dowolne wyrażenie, które może zostać użyte do zainicjowania pola jest prawidłowe dla inicjowania właściwości, która jest implementowana. Po zainicjowaniu właściwości, wyrażenie jest oceniane i przesyłane do `Set` procedury dla właściwości. W poniższych przykładach kodu przedstawiono niektóre zaimplementowane właściwości, które zawierają wartości początkowe.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#3)]  
   
- You cannot initialize an auto-implemented property that is a member of an `Interface`, or one that is marked `MustOverride`.  
+ Nie można zainicjować właściwości, która jest zaimplementowana, która jest elementem członkowskim `Interface`lub którą oznaczono `MustOverride`.  
   
- When you declare an auto-implemented property as a member of a `Structure`, you can only initialize the auto-implemented property if it is marked as `Shared`.  
+ W przypadku deklarowania właściwości, która jest implementowana jako element członkowski `Structure`, można zainicjować tylko Właściwość zaimplementowaną, jeśli jest ona oznaczona jako `Shared`.  
   
- When you declare an auto-implemented property as an array, you cannot specify explicit array bounds. However, you can supply a value by using an array initializer, as shown in the following examples.  
+ W przypadku deklarowania właściwości, która jest zaimplementowana jako tablica, nie można określić jawnych granic tablicy. Można jednak podać wartość przy użyciu inicjatora tablicy, jak pokazano w poniższych przykładach.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#4)]  
   
-## <a name="property-definitions-that-require-standard-syntax"></a>Property Definitions That Require Standard Syntax  
- Auto-implemented properties are convenient and support many programming scenarios. However, there are situations in which you cannot use an auto-implemented property and must instead use standard, or *expanded*, property syntax.  
+## <a name="property-definitions-that-require-standard-syntax"></a>Definicje właściwości, które wymagają standardowej składni  
+ Właściwości zaimplementowane przez funkcję są wygodne i obsługują wiele scenariuszy programowania. Istnieją jednak sytuacje, w których nie można użyć właściwości, która jest zaimplementowana, a zamiast tego należy użyć standardowej lub *rozwiniętej*składni właściwości.  
   
- You have to use expanded property-definition syntax if you want to do any one of the following:  
+ Musisz użyć rozwiniętej składni definicji właściwości, jeśli chcesz wykonać jedną z następujących czynności:  
   
-- Add code to the `Get` or `Set` procedure of a property, such as code to validate incoming values in the `Set` procedure. For example, you might want to verify that a string that represents a telephone number contains the required number of numerals before setting the property value.  
+- Dodaj kod do procedury `Get` lub `Set` właściwości, takiej jak kod, aby zweryfikować wartości przychodzące w procedurze `Set`. Na przykład możesz chcieć sprawdzić, czy ciąg reprezentujący numer telefonu zawiera wymaganą liczbę cyfr przed ustawieniem wartości właściwości.  
   
-- Specify different accessibility for the `Get` and `Set` procedure. For example, you might want to make the `Set` procedure `Private` and the `Get` procedure `Public`.  
+- Określ różne ułatwienia dostępu dla procedury `Get` i `Set`. Na przykład możesz chcieć wykonać `Set` procedury `Private` i `Get` procedurę `Public`.  
   
-- Create properties that are `WriteOnly`.  
+- Utwórz właściwości, które są `WriteOnly`.  
   
-- Use parameterized properties (including `Default` properties). You must declare an expanded property in order to specify a parameter for the property, or to specify additional parameters for the `Set` procedure.  
+- Użyj właściwości sparametryzowanych (w tym `Default` właściwości). Należy zadeklarować rozwiniętą właściwość w celu określenia parametru właściwości lub określić dodatkowe parametry procedury `Set`.  
   
-- Place an attribute on the backing field, or change the access level of the backing field.  
+- Umieść atrybut w polu zapasowym lub zmień poziom dostępu pola zapasowego.  
   
-- Provide XML comments for the backing field.  
+- Podaj Komentarze XML dla pola zapasowego.  
   
-## <a name="expanding-an-auto-implemented-property"></a>Expanding an Auto-Implemented Property  
- If you have to convert an auto-implemented property to an expanded property that contains a `Get` or `Set` procedure, the Visual Basic Code Editor can automatically generate the `Get` and `Set` procedures and `End Property` statement for the property. The code is generated if you put the cursor on a blank line following the `Property` statement, type a `G` (for `Get`) or an `S` (for `Set`) and press ENTER. The Visual Basic Code Editor automatically generates the `Get` or `Set` procedure for read-only and write-only properties when you press ENTER at the end of a `Property` statement.  
+## <a name="expanding-an-auto-implemented-property"></a>Rozwijanie właściwości, która jest implementowana  
+ Jeśli konieczne jest przekonwertowanie automatycznie zaimplementowanej właściwości na rozwiniętą właściwość, która zawiera procedurę `Get` lub `Set`, Edytor kodu Visual Basic może automatycznie generować procedury `Get` i `Set` oraz `End Property` instrukcję dla właściwości. Kod jest generowany, gdy umieścisz kursor w pustym wierszu po instrukcji `Property`, wpisz `G` (dla `Get`) lub `S` (dla `Set`) i naciśnij klawisz ENTER. Visual Basic Edytor kodu automatycznie generuje procedurę `Get` lub `Set` dla właściwości tylko do odczytu i tylko do zapisu po naciśnięciu klawisza ENTER na końcu instrukcji `Property`.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Instrukcje: deklarowanie i wywoływanie właściwości domyślnej w Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Instrukcje: deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Property, instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)

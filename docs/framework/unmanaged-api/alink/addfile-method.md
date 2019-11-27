@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446686"
 ---
 # <a name="addfile-method"></a>AddFile — Metoda
-Adds files to the assembly. Can also be used to create unbound modules.  
+Dodaje pliki do zestawu. Może również służyć do tworzenia niezwiązanych modułów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,25 +39,25 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Unique ID of the assembly to be augmented.  
+ Unikatowy identyfikator zestawu, który ma zostać rozszerzony.  
   
  `pszFilename`  
- Fully qualified name of file to be added.  
+ W pełni kwalifikowana nazwa pliku, który ma zostać dodany.  
   
  `dwFlags`  
- COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
+ Flagi FileDef modelu COM+, takie jak `ffContainsNoMetaData` i `ffWriteable`. `dwFlags` jest przenoszona do [metody DefineFile —](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.  
+ Interfejs [interfejsu IMetaDataEmit](../metadata/imetadataemit-interface.md) , który ma być używany do emitowania metadanych, w razie potrzeby.  
   
  `pFileToken`  
- Pointer to where the unique ID of the added file will be stored.  
+ Wskaźnik do lokalizacji, w której będzie przechowywany unikatowy identyfikator dodanego pliku.  
   
-## <a name="return-value"></a>Wartość zwracana  
- Returns S_OK if the method succeeds.  
+## <a name="return-value"></a>Wartość zwrócona  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Requires alink.h.  
+ Wymaga Alink. h.  
   
 ## <a name="see-also"></a>Zobacz także
 

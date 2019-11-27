@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448756"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType — Wyliczenie
-Specifies the type of a module.  
+Określa typ modułu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,26 +39,26 @@ typedef enum
 } CorValidatorModuleType;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|The module is an invalid type.|  
-|`ValidatorModuleTypeMin`|The minimum value of the `CorValidatorModuleType` enum.|  
-|`ValidatorModuleTypePE`|The module is a portable executable (PE) file.|  
-|`ValidatorModuleTypeObj`|The module is a .obj file.|  
-|`ValidatorModuleTypeEnc`|The module is an edit-and-continue debugger session.|  
-|`ValidatorModuleTypeIncr`|The module is one that has been incrementally built.|  
-|`ValidatorModuleTypeMax`|The maximum value of the `CorValidatorModuleType` enum.|  
+|`ValidatorModuleTypeInvalid`|Moduł jest nieprawidłowym typem.|  
+|`ValidatorModuleTypeMin`|Minimalna wartość wyliczenia `CorValidatorModuleType`.|  
+|`ValidatorModuleTypePE`|Moduł jest przenośnym plikiem wykonywalnym (PE).|  
+|`ValidatorModuleTypeObj`|Moduł jest plikiem. obj.|  
+|`ValidatorModuleTypeEnc`|Moduł to sesja debugera Edit-and-Continue.|  
+|`ValidatorModuleTypeIncr`|Moduł jest tym, który został utworzony przyrostowo.|  
+|`ValidatorModuleTypeMax`|Maksymalna wartość wyliczenia `CorValidatorModuleType`.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

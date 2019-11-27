@@ -13,22 +13,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344107"
 ---
 # <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard — Obiekt
-Provides methods for manipulating the Clipboard.  
+Zapewnia metody manipulowania schowkiem.  
   
 ## <a name="remarks"></a>Uwagi  
- For information about the methods and properties of the `My.Computer.Clipboard` object, see <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.  
+ Aby uzyskać informacje o metodach i właściwościach obiektu `My.Computer.Clipboard`, zobacz <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.  
   
- For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
+ Aby uzyskać więcej informacji, zobacz [Zapisywanie danych do i odczytywanie ze schowka](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
   
 > [!NOTE]
-> You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.  
+> Można również użyć metod klasy <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType>, aby manipulować w Schowku.  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
+ **Przestrzeń nazw:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)  
+ **Klasa:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (zapewnia dostęp do <xref:System.Windows.Forms.Clipboard>)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

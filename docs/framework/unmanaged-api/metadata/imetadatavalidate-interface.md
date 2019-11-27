@@ -22,23 +22,23 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426117"
 ---
 # <a name="imetadatavalidate-interface"></a>IMetaDataValidate — Interfejs
-Provides methods to validate metadata signatures.  
+Zapewnia metody weryfikacji podpisów metadanych.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[ValidateMetaData, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatemetadata-method.md)|Validates the metadata signatures of the objects in the current metadata scope.|  
-|[ValidatorInit, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatorinit-method.md)|Sets a flag that specifies the type of the module in the current metadata scope, and registers the specified callback method for validation errors.|  
+|[ValidateMetaData, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatemetadata-method.md)|Sprawdza poprawność podpisów metadanych obiektów w bieżącym zakresie metadanych.|  
+|[ValidatorInit, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatorinit-method.md)|Ustawia flagę określającą typ modułu w bieżącym zakresie metadanych i rejestruje określoną metodę wywołania zwrotnego dla błędów walidacji.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Write Queries on XML in Namespaces'
+title: 'Instrukcje: Pisanie zapytań dotyczących kodu XML w przestrzeniach nazw'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
 ms.openlocfilehash: 496cf8daf5136e8aafff000312bbd730a5152e9f
@@ -9,15 +9,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344469"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>How to: Write Queries on XML in Namespaces (Visual Basic)
-To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.  
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Instrukcje: Pisanie zapytań dotyczących kodu XML w przestrzeniach nazw (Visual Basic)
+Aby napisać zapytanie dotyczące kodu XML, który znajduje się w przestrzeni nazw, należy użyć <xref:System.Xml.Linq.XName> obiektów, które mają prawidłową przestrzeń nazw.  
   
- In Visual Basic, the most common approach is to define a global namespace, and then use XML literals and XML properties that use the global namespace. You can define a global default namespace, in which case elements in the XML literals will be in the namespace by default. Alternatively, you can define a global namespace with a prefix, and then use the prefix as required in the XML literals, and in XML properties. As with other forms of XML, attributes are always in no namespace by default.  
+ W Visual Basic, najbardziej typowym podejściem jest zdefiniowanie globalnej przestrzeni nazw, a następnie użycie literałów XML i właściwości XML, które używają globalnej przestrzeni nazw. Można zdefiniować globalną domyślną przestrzeń nazw, w której elementy case w literałach XML będą domyślnie w przestrzeni nazw. Alternatywnie można zdefiniować globalną przestrzeń nazw z prefiksem, a następnie użyć prefiksu zgodnie z wymaganiami w literałach XML i we właściwościach XML. Podobnie jak w przypadku innych form XML, atrybuty są zawsze domyślnie w żadnej przestrzeni nazw.  
   
- The first set of examples in this topic shows how to create an XML tree in a default namespace. The second set shows how to create an XML tree in a namespace with a prefix.  
+ Pierwszy zestaw przykładów w tym temacie przedstawia sposób tworzenia drzewa XML w domyślnej przestrzeni nazw. Drugi zestaw pokazuje, jak utworzyć drzewo XML w przestrzeni nazw z prefiksem.  
   
 ## <a name="example"></a>Przykład  
- The following example creates an XML tree that is in a default namespace. It then retrieves a collection of elements.  
+ Poniższy przykład tworzy drzewo XML, który znajduje się w domyślnym obszarze nazw. Następnie pobiera kolekcję elementów.  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -52,9 +52,9 @@ End Module
 ```  
   
 ## <a name="example"></a>Przykład  
- In Visual Basic, however, writing queries on an XML tree that uses a namespace with a prefix is quite different from querying an XML tree in a default namespace. Typically you use the `Imports` statement to import the namespace with a prefix. You then use the prefix in the element and attribute names when you construct the XML tree. You also use the prefix when querying an XML tree using XML properties.  
+ W Visual Basic jednak zapisywanie zapytań w drzewie XML, który używa przestrzeni nazw z prefiksem, jest zupełnie inne niż wykonywanie zapytań względem drzewa XML w domyślnej przestrzeni nazw. Zwykle używasz instrukcji `Imports`, aby zaimportować przestrzeń nazw z prefiksem. Następnie użyj prefiksu w nazwach elementów i atrybutów podczas konstruowania drzewa XML. Należy również użyć prefiksu podczas wykonywania zapytania w drzewie XML przy użyciu właściwości XML.  
   
- The following example creates an XML tree that is in a namespace with a prefix. It then retrieves a collection of elements.  
+ Poniższy przykład tworzy drzewo XML, który znajduje się w przestrzeni nazw z prefiksem. Następnie pobiera kolekcję elementów.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -90,4 +90,4 @@ End Module
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Przegląd przestrzeni nazw (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

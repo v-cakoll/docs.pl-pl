@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440006"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents — Metoda
-Enumerates event definition tokens for the specified TypeDef token.  
+Wylicza tokeny definicji zdarzeń dla określonego tokenu TypeDef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,35 +39,35 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in. out] Wskaźnik do modułu wyliczającego.  
   
  `td`  
- [in] The TypeDef token whose event definitions are to be enumerated.  
+ podczas Token TypeDef, którego definicje zdarzeń mają zostać wyliczone.  
   
  `rEvents`  
- [out] The array of returned events.  
+ określoną Tablica zwracanych zdarzeń.  
   
  `cMax`  
- [in] The maximum size of the `rEvents` array.  
+ podczas Maksymalny rozmiar tablicy `rEvents`.  
   
  `pcEvents`  
- [out] The actual number of events returned in `rEvents`.  
+ określoną Rzeczywista liczba zdarzeń zwróconych w `rEvents`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` returned successfully.|  
-|`S_FALSE`|There are no events to enumerate. In that case, `pcEvents` is zero.|  
+|`S_OK`|`EnumEvents` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak zdarzeń do wyliczenia. W takim przypadku `pcEvents` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

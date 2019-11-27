@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432497"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>IMetaDataEmit::SetParamProps — Metoda
-Sets or changes features of a method parameter that was defined by a prior call to [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
+Ustawia lub zmienia funkcje parametru metody, który został zdefiniowany przez poprzednie wywołanie do [IMetaDataEmit::D efineparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,31 +40,31 @@ HRESULT SetParamProps (
   
 ## <a name="parameters"></a>Parametry  
  `pd`  
- [in] The token for the target parameter.  
+ podczas Token dla parametru Target.  
   
  `szName`  
- [in] The name of the parameter in Unicode.  
+ podczas Nazwa parametru w formacie Unicode.  
   
  `dwParamFlags`  
- [in] The flags for the parameter.  
+ podczas Flagi parametru.  
   
  `dwCPlusTypeFlag`  
- [in] The ELEMENT_TYPE_* for the constant value.  
+ podczas ELEMENT_TYPE_ * dla wartości stałej.  
   
  `pValue`  
- [in] The constant value for the parameter.  
+ podczas Stała wartość parametru.  
   
  `cchValue`  
- [in] The size in (Unicode) characters of `pValue`.  
+ podczas Znaki w formacie (Unicode) `pValue`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

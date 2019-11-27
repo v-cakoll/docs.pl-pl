@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450355"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>ICorProfilerInfo::GetILFunctionBody — Metoda
-Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.  
+Pobiera wskaźnik do treści metody w kodzie języka pośredniego firmy Microsoft (MSIL), rozpoczynając od jego nagłówka.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,30 +37,30 @@ HRESULT GetILFunctionBody(
   
 ## <a name="parameters"></a>Parametry  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ podczas Identyfikator modułu, w którym znajduje się funkcja.  
   
  `methodId`  
- [in] The metadata token for the method.  
+ podczas Token metadanych dla metody.  
   
  `ppMethodHeader`  
- [out] A pointer to the method's header.  
+ określoną Wskaźnik do nagłówka metody.  
   
  `pcbMethodSize`  
- [out] An integer that specifies the size of the method.  
+ określoną Liczba całkowita określająca rozmiar metody.  
   
 ## <a name="remarks"></a>Uwagi  
- A method is scoped by the module in which it lives. Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.  
+ Metoda jest objęta zakresem przez moduł, w którym przebywa. Ponieważ metoda `GetILFunctionBody` została zaprojektowana w celu zapewnienia narzędziu dostępu do kodu MSIL przed jego załadowaniem przez środowisko uruchomieniowe języka wspólnego (CLR), używa tokenu metadanych metody w celu znalezienia żądanego wystąpienia.  
   
- `GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).  
+ `GetILFunctionBody` może zwrócić CORPROF_E_FUNCTION_NOT_IL HRESULT, jeśli `methodId` wskazuje metodę bez kodu MSIL (takie jak metoda abstrakcyjna lub metoda wywołania platformy (PInvoke).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

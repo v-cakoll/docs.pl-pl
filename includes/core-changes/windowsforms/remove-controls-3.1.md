@@ -6,15 +6,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429238"
 ---
-### <a name="removed-controls"></a>Removed controls
+### <a name="removed-controls"></a>Usunięte kontrolki
 
-Starting in .NET Core 3.1, some Windows Forms controls are no longer available.
+Począwszy od platformy .NET Core 3,1, niektóre kontrolki Windows Forms nie są już dostępne.
 
-#### <a name="change-description"></a>Change description
+#### <a name="change-description"></a>Zmień opis
 
-Starting with .NET Core 3.1, various Windows Forms controls are no longer available. Replacement controls that have better design and support were introduced in .NET Framework 2.0. The deprecated controls were previously removed from designer toolboxes but were still available to be used.
+Począwszy od platformy .NET Core 3,1, różne kontrolki Windows Forms nie są już dostępne. Kontrolki zamiany, które mają lepszy projekt i pomoc techniczną, zostały wprowadzone w .NET Framework 2,0. Przestarzałe formanty zostały wcześniej usunięte z przyborników projektanta, ale były nadal dostępne do użycia.
 
-The following types are no longer available:
+Następujące typy nie są już dostępne:
 
 - <xref:System.Windows.Forms.Menu>
 - <xref:System.Windows.Forms.Menu.MenuItemCollection>
@@ -45,19 +45,19 @@ The following types are no longer available:
 - <xref:System.Windows.Forms.DataGrid.HitTestType>
 - <xref:System.Windows.Forms.Design.IMenuEditorService>
 
-#### <a name="version-introduced"></a>Version introduced
+#### <a name="version-introduced"></a>Wprowadzona wersja
 
 3.1
 
-#### <a name="recommended-action"></a>Recommended action
+#### <a name="recommended-action"></a>Zalecane działanie
 
-Each removed control has a recommended replacement control. Refer to the following table:
+Każda z usuniętych kontrolek ma zalecaną kontrolę zamiany. Zapoznaj się z poniższą tabelą:
 
-| Removed control (API) | Recommended replacement | Associated APIs that are removed |
+| Usunięty formant (API) | Zalecane zastąpienie | Skojarzone interfejsy API, które zostały usunięte |
 |-|-|-|
-| DataGrid | DataGridView | DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType |
+| DataGrid | DataGridView | DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, Element DataGridTableStyle, DataGridColumnStyle, datalinii siatki, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType |
 | ToolBar | ToolStrip | ToolBarAppearance |
-| ToolBarButton | ToolStripButton | ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign|
+| ToolBarButton | Element ToolStripButton | ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButton, ToolBarTextAlign|
 | ContextMenu | ContextMenuStrip | |
 | Menu | ToolStripDropDown, ToolstripDropDownMenu | MenuItemCollection |
 | MainMenu | MenuStrip | |

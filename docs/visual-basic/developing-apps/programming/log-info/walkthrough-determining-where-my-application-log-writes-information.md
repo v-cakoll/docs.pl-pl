@@ -18,50 +18,50 @@ ms.locfileid: "74353607"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Wskazówki: ustalanie, gdzie My.Application.Log zapisuje informacje (Visual Basic)
 
-The `My.Application.Log` object can write information to several log listeners. The log listeners are configured by the computer's configuration file and can be overridden by an application's configuration file. This topic describes the default settings and how to determine the settings for your application.
+Obiekt `My.Application.Log` może zapisywać informacje do kilku odbiorników dzienników. Odbiorniki dzienników są konfigurowane przez plik konfiguracji komputera i mogą zostać zastąpione przez plik konfiguracyjny aplikacji. W tym temacie opisano ustawienia domyślne i sposób określania ustawień aplikacji.
 
-For more information about the default output locations, see [Working with Application Logs](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
+Aby uzyskać więcej informacji na temat domyślnych lokalizacji wyjściowych, zobacz [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
 
-### <a name="to-determine-the-listeners-for-myapplicationlog"></a>To determine the listeners for My.Application.Log
+### <a name="to-determine-the-listeners-for-myapplicationlog"></a>Aby określić odbiorniki my. Application. log
 
-1. Locate the assembly's configuration file. If you are developing the assembly, you can access the app.config in Visual Studio from the **Solution Explorer**. Otherwise, the configuration file name is the assembly's name appended with ".config", and it is located in the same directory as the assembly.
+1. Zlokalizuj plik konfiguracji zestawu. Jeśli tworzysz zestaw, możesz uzyskać dostęp do pliku App. config w programie Visual Studio z **Eksplorator rozwiązań**. W przeciwnym razie nazwa pliku konfiguracji jest dołączona do zestawu ". config" i znajduje się w tym samym katalogu, w którym znajduje się zestaw.
 
     > [!NOTE]
-    > Not every assembly has a configuration file.
+    > Nie każdy zestaw ma plik konfiguracji.
 
-    The configuration file is an XML file.
+    Plik konfiguracji jest plikiem XML.
 
-2. Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", located in the `<sources>` section. The `<sources>` section is located in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
+2. Znajdź sekcję `<listeners>` w sekcji `<source>` z atrybutem `name` "DefaultSource" znajdującym się w sekcji `<sources>`. Sekcja `<sources>` znajduje się w sekcji `<system.diagnostics>` w sekcji `<configuration>` najwyższego poziomu.
 
-    If these sections do not exist, then the computer's configuration file may configure the `My.Application.Log` log listeners. The following steps describe how to determine what the computer configuration file defines:
+    Jeśli te sekcje nie istnieją, plik konfiguracji komputera może skonfigurować odbiorniki dziennika `My.Application.Log`. W poniższych krokach opisano sposób określania konfiguracji komputera:
 
-    1. Locate the computer's machine.config file. Typically, it is located in the *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* directory, where `SystemRoot` is the operating system directory, and `frameworkVersion` is the version of the .NET Framework.
+    1. Zlokalizuj plik Machine. config komputera. Zazwyczaj znajduje się on w katalogu *systemroot\Microsoft.NET\Framework\frameworkVersion\CONFIG* , gdzie `SystemRoot` jest katalogiem systemu operacyjnego, a `frameworkVersion` to wersja .NET Framework.
 
-        The settings in machine.config can be overridden by an application's configuration file.
+        Ustawienia w pliku Machine. config mogą zostać zastąpione przez plik konfiguracyjny aplikacji.
 
-        If the optional elements listed below do not exist, you can create them.
+        Jeśli opcjonalne elementy wymienione poniżej nie istnieją, można je utworzyć.
 
-    2. Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", in the `<sources>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
+    2. Znajdź sekcję `<listeners>` w sekcji `<source>` z atrybutem `name` "DefaultSource" w sekcji `<sources>`, w sekcji `<system.diagnostics>`, na liście `<configuration>` najwyższego poziomu.
 
-        If these sections do not exist, then the `My.Application.Log` has only the default log listeners.
+        Jeśli te sekcje nie istnieją, `My.Application.Log` ma tylko domyślne odbiorniki dzienników.
 
-3. Locate the <`add>` elements in the <`listeners>` section.
+3. Znajdź <`add>` elementy w sekcji <`listeners>`.
 
-     These elements add the named log listeners to `My.Application.Log` source.
+     Te elementy Dodaj nazwane odbiorniki dzienników do `My.Application.Log` źródło.
 
-4. Locate the `<add>` elements with the names of the log listeners in the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
+4. Znajdź `<add>` elementy z nazwami odbiorników dziennika w sekcji `<sharedListeners>`, w sekcji `<system.diagnostics>`, w sekcji `<configuration>` najwyższego poziomu.
 
-5. For many types of shared listeners, the listener's initialization data includes a description of where the listener directs the data:
+5. W przypadku wielu typów udostępnionych odbiorników dane inicjujące odbiornika zawierają opis, gdzie odbiornik kieruje dane:
 
-    - A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> listener writes to a file log, as described in the introduction.
+    - Odbiornik <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> zapisuje dane w dzienniku plików zgodnie z opisem we wprowadzeniu.
 
-    - A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> listener writes information to the computer event log specified by the `initializeData` parameter. To view an event log, you can use **Server Explorer** or **Windows Event Viewer**. For more information, see [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).
+    - Odbiornik <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> zapisuje informacje w dzienniku zdarzeń komputera określonym przez parametr `initializeData`. Aby wyświetlić dziennik zdarzeń, można użyć **Eksplorator serwera** lub **Podgląd zdarzeń systemu Windows**. Aby uzyskać więcej informacji, zobacz [zdarzenia ETW w .NET Framework](../../../../framework/performance/etw-events.md).
 
-    - The <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> and <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> listeners write to the file specified in the `initializeData` parameter.
+    - Odbiorniki <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> i <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> zapisują do pliku określonego w parametrze `initializeData`.
 
-    - A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> listener writes to the command-line console.
+    - Odbiornik <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> zapisuje dane w konsoli wiersza polecenia.
 
-    - For information about where other types of log listeners write information, consult that type's documentation.
+    - Aby uzyskać informacje o tym, gdzie inne typy odbiorników dzienników zapisują informacje, zapoznaj się z dokumentacją tego typu.
 
 ## <a name="see-also"></a>Zobacz także
 

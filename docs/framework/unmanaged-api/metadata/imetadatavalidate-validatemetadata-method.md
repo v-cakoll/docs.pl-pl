@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443404"
 ---
 # <a name="imetadatavalidatevalidatemetadata-method"></a>IMetaDataValidate::ValidateMetaData — Metoda
-Validates the metadata signatures of the objects in the current metadata scope.  
+Sprawdza poprawność podpisów metadanych obiektów w bieżącym zakresie metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,13 +32,13 @@ HRESULT ValidateMetaData ();
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

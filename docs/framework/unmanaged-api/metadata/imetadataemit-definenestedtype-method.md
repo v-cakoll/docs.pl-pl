@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431706"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType — Metoda
-Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.  
+Tworzy sygnaturę metadanych definicji typu, zwraca token `mdTypeDef` dla tego typu i określa, że zdefiniowany typ jest członkiem typu, do którego odwołuje się parametr `tdEncloser`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,31 +40,31 @@ HRESULT DefineNestedType (
   
 ## <a name="parameters"></a>Parametry  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ podczas Nazwa typu w formacie Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CorTypeAttr` values.  
+ [in] `TypeDef` atrybuty. To jest maska bitów wartości `CorTypeAttr`.  
   
  `tkExtends`  
- [in] The token of the base class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
+ podczas Token klasy bazowej. Jest to `mdTypeDef` lub token `mdTypeRef`.  
   
  `rtkImplements`[]  
- [in] An array of tokens that specify the interfaces that this class or interface implements.  
+ podczas Tablica tokenów, które określają interfejsy, które implementuje Ta klasa lub interfejs.  
   
  `tdEncloser`  
- [in] The token of the enclosing type. The last element of the array must be `mdTokenNil`.  
+ podczas Token typu otaczającego. Ostatni element tablicy musi być `mdTokenNil`.  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ określoną Przypisany token `mdTypeDef`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

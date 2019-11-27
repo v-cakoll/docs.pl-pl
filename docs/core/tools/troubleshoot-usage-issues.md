@@ -44,7 +44,7 @@ Nazwa pliku wykonywalnego określa sposób wywołania narzędzia. W poniższej t
 
     Narzędzia globalne można zainstalować w katalogu domyślnym lub w określonej lokalizacji. Domyślne katalogi są następujące:
 
-    | System operacyjny          | Ścieżka                          |
+    | OS          | Ścieżka                          |
     |-------------|-------------------------------|
     | Linux/macOS | `$HOME/.dotnet/tools`         |
     | Windows     | `%USERPROFILE%\.dotnet\tools` |

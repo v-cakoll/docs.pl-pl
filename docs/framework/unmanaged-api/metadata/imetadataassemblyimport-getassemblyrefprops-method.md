@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448228"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps — Metoda
-Gets the set of properties for the assembly reference with the specified metadata signature.  
+Pobiera zestaw właściwości dla odwołania do zestawu z określonym podpisem metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,46 +44,46 @@ HRESULT GetAssemblyRefProps (
   
 ## <a name="parameters"></a>Parametry  
  `mdar`  
- [in] The `mdAssemblyRef` metadata token that represents the assembly reference for which to get the properties.  
+ podczas Token metadanych `mdAssemblyRef`, który reprezentuje odwołanie do zestawu, dla którego mają zostać pobrane właściwości.  
   
  `ppbPublicKeyOrToken`  
- [out] A pointer to the public key or the metadata token.  
+ określoną Wskaźnik do klucza publicznego lub tokenu metadanych.  
   
  `pcbPublicKeyOrToken`  
- [out] The number of bytes in the returned public key or token.  
+ określoną Liczba bajtów w zwracanym kluczu publicznym lub tokenie.  
   
  `szName`  
- [out] The simple name of the assembly.  
+ określoną Prosta nazwa zestawu.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ podczas Rozmiar, w postaci szerokich znaków, `szName`.  
   
  `pchName`  
- [out] A pointer to the number of wide chars actually returned in `szName`.  
+ określoną Wskaźnik do liczby znaków dwubajtowych faktycznie zwróconych w `szName`.  
   
  `pMetaData`  
- [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
+ określoną Wskaźnik do struktury ASSEMBLYMETADATA, która zawiera metadane zestawu.  
   
  `ppbHashValue`  
- [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the `PublicKey` property of the assembly being referenced, unless the arfFullOriginator flag of the [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeration is set.  
+ określoną Wskaźnik do wartości skrótu. Jest to skrót, przy użyciu algorytmu SHA-1 właściwości `PublicKey` zestawu, którego dotyczy odwołanie, chyba że ustawiona jest flaga arfFullOriginator wyliczenia [AssemblyRefFlags —](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) .  
   
  `pcbHashValue`  
- [out] The number of wide chars in the returned hash value.  
+ określoną Liczba znaków dwubajtowych w zwracanej wartości skrótu.  
   
  `pdwAssemblyRefFlags`  
- [out] A pointer to flags that describe the metadata applied to an assembly. The flags value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
+ określoną Wskaźnik do flag, które opisują metadane zastosowane do zestawu. Wartość flags jest kombinacją co najmniej jednej wartości [CorAssemblyFlags —](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) .  
   
-## <a name="return-value"></a>Wartość zwracana  
- This method returns S_OK if it succeeds; otherwise, it returns one of the error codes defined in the Winerror.h header file.  
+## <a name="return-value"></a>Wartość zwrócona  
+ Ta metoda zwraca S_OK, jeśli zakończy się pomyślnie; w przeciwnym razie zwraca jeden z kodów błędów zdefiniowanych w pliku nagłówkowym Winerror. h.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

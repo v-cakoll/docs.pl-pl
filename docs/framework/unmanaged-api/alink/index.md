@@ -14,7 +14,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445653"
 ---
 # <a name="alink-api-unmanaged-api-reference"></a>ALink — Interfejs (Niezarządzany wykaz interfejsów API)
-Supports creating .NET Framework assemblies and unbound modules.  
+Obsługuje tworzenie zestawów .NET Framework i niezwiązanych modułów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [AssemblyAttributesGoHere](assemblyattributesgohere.md)  

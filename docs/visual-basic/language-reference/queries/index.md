@@ -13,52 +13,52 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350442"
 ---
 # <a name="queries-visual-basic"></a>Zapytania (Visual Basic)
-Visual Basic enables you to create [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.  
+Visual Basic umożliwia tworzenie wyrażeń [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] w kodzie.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Aggregate, klauzula](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- Describes the `Aggregate` clause, which applies one or more aggregate functions to a collection.  
+ Opisuje klauzulę `Aggregate`, która stosuje co najmniej jedną funkcję agregującą do kolekcji.  
   
  [Distinct, klauzula](../../../visual-basic/language-reference/queries/distinct-clause.md)  
- Describes the `Distinct` clause, which restricts the values of the current range variable to eliminate duplicate values in query results.  
+ Opisuje klauzulę `Distinct`, która ogranicza wartości bieżącej zmiennej zakresu w celu wyeliminowania zduplikowanych wartości w wynikach zapytania.  
   
  [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
- Describes the `From` clause, which specifies a collection and a range variable for a query.  
+ Opisuje klauzulę `From`, która określa kolekcję i zmienną zakresu dla zapytania.  
   
  [Group By, klauzula](../../../visual-basic/language-reference/queries/group-by-clause.md)  
- Describes the `Group By` clause, which groups the elements of a query result and can be used to apply aggregate functions to each group.  
+ Opisuje klauzulę `Group By`, która grupuje elementy wyniku zapytania i może służyć do stosowania funkcji agregujących do każdej grupy.  
   
  [Group Join, klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- Describes the `Group Join` clause, which combines two collections into a single hierarchical collection.  
+ Opisuje klauzulę `Group Join`, która łączy dwie kolekcje w jedną hierarchiczną kolekcję.  
   
  [Join, klauzula](../../../visual-basic/language-reference/queries/join-clause.md)  
- Describes the `Join` clause, which combines two collections into a single collection.  
+ Opisuje klauzulę `Join`, która łączy dwie kolekcje w jedną kolekcję.  
   
  [Let, klauzula](../../../visual-basic/language-reference/queries/let-clause.md)  
- Describes the `Let` clause, which computes a value and assigns it to a new variable in the query.  
+ Opisuje klauzulę `Let`, która oblicza wartość i przypisuje ją do nowej zmiennej w zapytaniu.  
   
  [Order By, klauzula](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- Describes the `Order By` clause, which specifies the sort order for columns in a query.  
+ Opisuje klauzulę `Order By`, która określa kolejność sortowania kolumn w zapytaniu.  
   
  [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
- Describes the `Select` clause, which declares a set of range variables for a query.  
+ Opisuje klauzulę `Select`, która deklaruje zestaw zmiennych zakresu dla zapytania.  
   
  [Skip, klauzula](../../../visual-basic/language-reference/queries/skip-clause.md)  
- Describes the `Skip` clause, which bypasses a specified number of elements in a collection and then returns the remaining elements.  
+ Opisuje klauzulę `Skip`, która pomija określoną liczbę elementów w kolekcji, a następnie zwraca pozostałe elementy.  
   
  [Skip While, klauzula](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- Describes the `Skip While` clause, which bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements.  
+ Opisuje klauzulę `Skip While`, która pomija elementy w kolekcji, tak długo, jak określony warunek jest `true` a następnie zwraca pozostałe elementy.  
   
  [Take, klauzula](../../../visual-basic/language-reference/queries/take-clause.md)  
- Describes the `Take` clause, which returns a specified number of contiguous elements from the start of a collection.  
+ Opisuje klauzulę `Take`, która zwraca określoną liczbę elementów sąsiadujących od początku kolekcji.  
   
  [Take While, klauzula](../../../visual-basic/language-reference/queries/take-while-clause.md)  
- Describes the `Take While` clause, which includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.  
+ Opisuje klauzulę `Take While`, która obejmuje elementy w kolekcji, o ile określony warunek jest `true` i pomija pozostałe elementy.  
   
  [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)  
- Describes the `Where` clause, which specifies a filtering condition for a query.  
+ Opisuje klauzulę `Where`, która określa warunek filtrowania dla zapytania.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

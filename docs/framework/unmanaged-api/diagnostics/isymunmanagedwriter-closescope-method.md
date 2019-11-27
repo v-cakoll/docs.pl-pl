@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428074"
 ---
 # <a name="isymunmanagedwriterclosescope-method"></a>ISymUnmanagedWriter::CloseScope — Metoda
-Closes the current lexical scope.  
+Zamyka bieżący zakres leksykalny.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,18 +34,18 @@ HRESULT CloseScope(
   
 ## <a name="parameters"></a>Parametry  
  `endOffset`  
- [in] The offset from the beginning of the method of the point at the end of the last instruction in the lexical scope, in bytes.  
+ podczas Przesunięcie od początku metody punktu na końcu ostatniej instrukcji w zakresie leksykalnym w bajtach.  
   
-## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+## <a name="return-value"></a>Wartość zwrócona  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="remarks"></a>Uwagi  
- Once a scope is closed, no more variables can be defined within it.  
+ Po zamknięciu zakresu nie można w nim definiować więcej zmiennych.  
   
- [ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with [ISymUnmanagedWriter::SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) to later define a scope's starting and ending offset. In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and `ISymUnmanagedWriter::CloseScope` are ignored. Scope identifiers are valid only in the current method.  
+ [ISymUnmanagedWriter:: OpenScope —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) zwraca nieprzezroczysty identyfikator zakresu, który może być używany z [ISymUnmanagedWriter:: SetScopeRange —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) w celu późniejszego zdefiniowania początkowego i końcowego przesunięcia zakresu. W takim przypadku przesunięcia przesłane do `ISymUnmanagedWriter::OpenScope` i `ISymUnmanagedWriter::CloseScope` są ignorowane. Identyfikatory zakresów są prawidłowe tylko w bieżącej metodzie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

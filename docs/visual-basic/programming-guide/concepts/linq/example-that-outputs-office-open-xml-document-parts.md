@@ -9,13 +9,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353496"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Example that Outputs Office Open XML Document Parts (Visual Basic)
-This topic shows how to open an Office Open XML document and access parts within it.  
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Przykład, w którym są wyprowadzane części dokumentu Office Open XML (Visual Basic)
+W tym temacie przedstawiono sposób otwierania dokumentu Office Open XML i części dostępu w nim.  
   
 ## <a name="example"></a>Przykład  
- The following example opens an Office Open XML document, and prints the document part and the style part to the console.  
+ Poniższy przykład otwiera dokument Office Open XML i drukuje część dokumentu oraz część stylu do konsoli programu.  
   
- This example uses classes from the WindowsBase assembly. It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.  
+ W tym przykładzie zastosowano klasy z zestawu 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Const fileName As String = "SampleDoc.docx"  
@@ -66,4 +66,4 @@ End Using
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Details of Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Szczegóły dotyczące dokumentów Office Open XML WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

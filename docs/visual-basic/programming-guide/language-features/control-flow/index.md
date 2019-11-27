@@ -17,25 +17,25 @@ ms.locfileid: "74353931"
 ---
 # <a name="control-flow-in-visual-basic"></a>Przepływ sterowania w Visual Basic
 
-Left unregulated, a program proceeds through its statements from beginning to end. Some very simple programs can be written with only this unidirectional flow. However, much of the power and utility of any programming language comes from the ability to change execution order with control statements and loops.
+Pozostawiony nieuregulowany, program przechodzi przez instrukcje od początku do końca. Niektóre bardzo proste programy mogą być zapisywane tylko przy użyciu tego jednokierunkowego przepływu. Jednak większość możliwości i narzędzi dowolnego języka programowania pochodzi z możliwości zmiany kolejności wykonywania za pomocą instrukcji sterowania i pętli.
 
- Control structures allow you to regulate the flow of your program's execution. Using control structures, you can write Visual Basic code that makes decisions or that repeats actions. Other control structures let you guarantee disposal of a resource or run a series of statements on the same object reference.
+ Struktury formantów umożliwiają regulowanie przepływu wykonywania programu. Przy użyciu struktur kontroli można napisać kod Visual Basic, który podejmuje decyzje lub powtarza akcje. Inne struktury sterujące umożliwiają zagwarantowanie usunięcia zasobu lub uruchomienie serii instrukcji na tym samym odwołaniu do obiektu.
   
 ## <a name="in-this-section"></a>W tej sekcji
 
  [Struktury decyzji](decision-structures.md)  
- Describes control structures used for branching.
+ Opisuje struktury kontroli używane do rozgałęziania.
 
  [Struktury pętli](loop-structures.md)  
- Discusses control structures used to repeat processes.
+ Omawia struktury kontroli używane do powtarzania procesów.
 
  [Inne struktury sterujące](other-control-structures.md)  
- Describes control structures used for resource disposal and object access.
+ Opisuje struktury kontroli używane do usuwania zasobów i dostępu do obiektów.
 
  [Zagnieżdżone struktury sterujące](nested-control-structures.md)  
- Covers control structures inside other control structures.
+ Obejmuje struktury kontroli wewnątrz innych struktur kontroli.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
  [Przepływ sterowania — podsumowanie](../../../language-reference/keywords/control-flow-summary.md)  
- Provides links to language reference pages on this subject.
+ Zawiera łącza do stron odwołań do języka w tym temacie.

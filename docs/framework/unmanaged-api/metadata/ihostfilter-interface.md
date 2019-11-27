@@ -22,25 +22,25 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426134"
 ---
 # <a name="ihostfilter-interface"></a>IHostFilter — Interfejs
-Provides a method to indicate that a specified token will be processed.  
+Zapewnia metodę wskazującą, że określony token zostanie przetworzony.  
   
 > [!NOTE]
-> The `IHostFilter` interface must be implemented by the client.  
+> Interfejs `IHostFilter` musi być zaimplementowany przez klienta.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[MarkToken, metoda](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Indicates that the specified metadata token will be processed.|  
+|[MarkToken, metoda](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Wskazuje, że określony token metadanych zostanie przetworzony.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

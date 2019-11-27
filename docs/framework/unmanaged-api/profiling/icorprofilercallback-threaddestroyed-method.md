@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439932"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>ICorProfilerCallback::ThreadDestroyed — Metoda
-Notifies the profiler that a thread has been destroyed.  
+Powiadamia profiler o zniszczeniu wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,19 +34,19 @@ HRESULT ThreadDestroyed(
   
 ## <a name="parameters"></a>Parametry  
  `threadId`  
- [in] The ID of the thread that has been destroyed.  
+ podczas Identyfikator wątku, który został zniszczony.  
   
 ## <a name="remarks"></a>Uwagi  
- The `threadId` value is no longer valid at the time of this call.  
+ Wartość `threadId` nie jest już prawidłowa w czasie tego wywołania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344092"
 ---
 # <a name="mycomputerclock-object"></a>My.Computer.Clock — Obiekt
-Provides properties for accessing the current local time and Universal Coordinated Time (equivalent to Greenwich Mean Time) from the system clock.  
+Zapewnia właściwości do uzyskiwania dostępu do bieżącego czasu lokalnego i uniwersalnego czasu koordynowanego (równoważnego czasowi Greenwich) z zegara systemowego.  
   
 ## <a name="remarks"></a>Uwagi  
- For information about the methods and properties of the `My.Computer.Clock` object, see <xref:Microsoft.VisualBasic.Devices.Clock>.  
+ Aby uzyskać informacje o metodach i właściwościach obiektu `My.Computer.Clock`, zobacz <xref:Microsoft.VisualBasic.Devices.Clock>.  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
+ **Przestrzeń nazw:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Clock>  
+ **Klasa:** <xref:Microsoft.VisualBasic.Devices.Clock>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

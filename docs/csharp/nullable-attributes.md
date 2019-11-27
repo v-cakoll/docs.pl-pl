@@ -1,6 +1,6 @@
 ---
-title: Upgrade APIs for nullable reference types with attributes that define expectations for null values
-description: Learn to use the descriptive attributes AllowNull, DisallowNull, MaybeNull, NotNull and more to fully describe the null state of your APIs.
+title: Uaktualnij interfejsy API dla typów odwołań dopuszczających wartości null z atrybutami, które definiują oczekiwania dla wartości zerowych
+description: Dowiedz się, jak używać opisowych atrybutów AllowNull, DisallowNull, MaybeNull, NotNull i innych, aby w pełni opisać stan null interfejsów API.
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
 ms.openlocfilehash: 7142fe0566b1cc7373f5dc777c36443041114c4f
@@ -10,94 +10,94 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204632"
 ---
-# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Update libraries to use nullable reference types and communicate nullable rules to callers
+# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Aktualizowanie bibliotek do używania typów referencyjnych dopuszczających wartości null i przekazywanie reguł dopuszczających wartość null do wywoływania
 
-The addition of [nullable reference types](nullable-references.md) means you can declare whether or not a `null` value is allowed or expected for every variable. In addition, you can apply a number of attributes: `AllowNull`, `DisallowNull`, `MaybeNull`, `NotNull`, `NotNullWhen`, `MaybeNullWhen`, and `NotNullWhenNotNull` to completely describe the null states of argument and return values. That provides a great experience as you write code. You get warnings if a non-nullable variable might be set to `null`. You get warnings if a nullable variable isn't null-checked before you dereference it. Updating your libraries can take time, but the payoffs are worth it. The more information you provide to the compiler about *when* a `null` value is allowed or prohibited, the better warnings users of your API will get. Let's start with a familiar example. Imagine your library has the following API to retrieve a resource string:
+Dodanie [typów referencyjnych dopuszczających wartość null](nullable-references.md) oznacza, czy można zadeklarować, czy wartość `null` jest dozwolona, czy nieoczekiwana dla każdej zmiennej. Ponadto można zastosować wiele atrybutów: `AllowNull`, `DisallowNull`, `MaybeNull`, `NotNull`, `NotNullWhen`, `MaybeNullWhen`i `NotNullWhenNotNull`, aby całkowicie opisać Stany null argumentu i wartości zwracane. Zapewnia to doskonałe środowisko podczas pisania kodu. Otrzymasz ostrzeżenia, jeśli zmienna niedopuszczające wartości null może być ustawiona na `null`. Są wyświetlane ostrzeżenia, jeśli zmienna dopuszczająca wartość null nie jest sprawdzana przed usunięciem odwołania do niej. Aktualizowanie bibliotek może zająć trochę czasu, ale Payoffs. Więcej informacji udostępnianych kompilatorowi o tym, *kiedy* `null` wartość jest dozwolona lub zabroniona, będzie można uzyskać lepszych ostrzeżeń użytkowników interfejsu API. Zacznijmy od znanego przykładu. Wyobraź sobie, że biblioteka zawiera następujący interfejs API do pobrania ciągu zasobu:
 
 ```csharp
 bool TryGetMessage(string key, out string message)
 ```
 
-The preceding example follows the familiar `Try*` pattern in .NET. There are two reference arguments for this API: the `key` and the `message` parameter. This API has the following rules relating to the nullness of these arguments:
+Poprzedni przykład jest zgodny ze znanym wzorcem `Try*` w programie .NET. Dla tego interfejsu API istnieją dwa argumenty odwołania: `key` i `message`. Ten interfejs API ma następujące reguły dotyczące wartości null tych argumentów:
 
-- Callers shouldn't pass `null` as the argument for `key`.
-- Callers can pass a variable whose value is `null` as the argument for `message`.
-- If the `TryGetMessage` method returns `true`, the value of `message` isn't null. If the return value is `false,` the value of `message` (and its null state) is null.
+- Obiekty wywołujące nie powinny przekazywać `null` jako argumentu dla `key`.
+- Obiekty wywołujące mogą przekazać zmienną, której wartość jest `null` jako argument dla `message`.
+- Jeśli metoda `TryGetMessage` zwraca `true`, wartość `message` nie jest równa null. Jeśli wartość zwracana jest `false,` wartość `message` (a jej stan null) ma wartość null.
 
-The rule for `key` can be completely expressed by the variable type: `key` should be a non-nullable reference type. The `message` parameter is more complex. It allows `null` as the argument, but guarantees that, on success, that `out` argument isn't null. For these scenarios, you need a richer vocabulary to describe the expectations.
+Reguła dla `key` może być całkowicie wyrażona przez typ zmiennej: `key` powinna być typem referencyjnym, który nie dopuszcza wartości null. `message` parametr jest bardziej skomplikowany. Umożliwia `null` jako argument, ale gwarantuje, że po powodzeniu `out` argument nie ma wartości null. W tych scenariuszach potrzebujesz bogatszego słownictwa do opisywania oczekiwań.
 
-Updating your library for nullable references requires more than sprinkling `?` on some of the variables and type names. The preceding example shows that you need to examine your APIs and consider your expectations for each input argument. Consider the guarantees for the return value, and any `out` or `ref` arguments upon the method's return. Then communicate those rules to the compiler, and the compiler will provide warnings when callers don't abide by those rules.
+Aktualizacja biblioteki na potrzeby odwołań do wartości null wymaga więcej niż `?` na niektórych zmiennych i nazwach typów. Powyższy przykład pokazuje, że należy przejrzeć interfejsy API i uwzględnić oczekiwania dla każdego argumentu wejściowego. Należy wziąć pod uwagę gwarancje wartości zwracanej oraz wszystkie `out` lub `ref` argumenty przy zwracaniu metody. Następnie Przekaż te reguły do kompilatora, a kompilator dostarczy ostrzeżenia, gdy wywołujący nie przestrzegają tych reguł.
 
-This work takes time. Let's start with strategies to make your library or application nullable-aware, while balancing other requirements and deliverables. You'll see how to balance ongoing development enabling nullable reference types. You'll learn challenges for generic type definitions. You'll learn to apply attributes to describe pre- and post-conditions on individual APIs.
+To działanie jest czasochłonne. Zacznijmy od strategii, aby dowiedzieć się, jak Twoja biblioteka lub aplikacja doznała wartości null, a także zrównoważyć inne wymagania i elementy dostarczane. Zobaczysz, jak zrównoważyć bieżące programowanie, włączając typy referencyjne dopuszczające wartość null. Nauczysz się wyzwań dla definicji typów ogólnych. Dowiesz się, jak zastosować atrybuty do opisywania warunków wstępnych i postanowień dotyczących poszczególnych interfejsów API.
 
-## <a name="choose-a-nullable-strategy"></a>Choose a nullable strategy
+## <a name="choose-a-nullable-strategy"></a>Wybierz strategię dopuszczającą wartość null
 
-The first choice is whether nullable reference types should be on or off by default. You have two strategies:
+Pierwszy wybór polega na tym, czy typy odwołań dopuszczające wartość null mają być domyślnie włączone czy wyłączone. Istnieją dwie strategie:
 
-- Enable nullable reference types for the entire project, and disable it in code that's not ready.
-- Only enable nullable reference types for code that's been annotated for nullable reference types.
+- Włącz typy referencyjne dopuszczające wartość null dla całego projektu i wyłącz je w kodzie, który nie jest gotowy.
+- Włącz tylko typy referencyjne dopuszczające wartość null dla kodu, który jest oznaczony adnotacją dla typów referencyjnych dopuszczających wartość null.
 
-The first strategy works best when you're adding other features to the library as you update it for nullable reference types. All new development is nullable aware. As you update existing code, you enable nullable reference types in those classes.
+Pierwsza strategia działa najlepiej, gdy dodajesz inne funkcje do biblioteki, gdy zaktualizujesz ją do typów referencyjnych dopuszczających wartość null. Cały nowy projekt ma świadomość dopuszczający wartość null. Gdy aktualizujesz istniejący kod, włączasz typy odwołań do wartości null w tych klasach.
 
-Following this first strategy, you do the following:
+Postępując zgodnie z pierwszą strategią, wykonaj następujące czynności:
 
-1. Enable nullable types for the entire project by adding the `<Nullable>enable</Nullable>` element to your *csproj* files. 
-1. Add the `#nullable disable` pragma to every source file in your project. 
-1. As you work on each file, remove the pragma and address any warnings.
+1. Włącz Typy dopuszczające wartość null dla całego projektu, dodając `<Nullable>enable</Nullable>` element do plików *csproj* . 
+1. Dodaj `#nullable disable` pragma do każdego pliku źródłowego w projekcie. 
+1. Podczas pracy nad każdym plikiem Usuń pragmę i rozwiąż wszelkie ostrzeżenia.
 
-This first strategy has more up-front work to add the pragma to every file. The advantage is that every new code file added to the project will be nullable enabled. Any new work will be nullable aware; only existing code must be updated.
+Ta pierwsza strategia ma więcej zadań z góry, aby dodać pragmę do każdego pliku. Korzyść polega na tym, że każdy nowy plik kodu dodany do projektu będzie miał włączoną wartość null. Każda nowa służbowa będzie mieć świadomość wartości null; należy zaktualizować tylko istniejący kod.
 
-The second strategy works better if the library is generally stable, and the main focus of the development is to adopt nullable reference types. You turn on nullable reference types as you annotate APIs. When you've finished, you enable nullable reference types for the entire project.
+Druga strategia działa lepiej, jeśli biblioteka jest ogólnie stabilna, a głównym celem rozwoju jest przyjęcie typów referencyjnych dopuszczających wartość null. W przypadku dodawania adnotacji do interfejsów API należy włączyć typy odwołań do wartości null. Po zakończeniu włączać dla całego projektu typy referencyjne dopuszczające wartość null.
 
-Following this second strategy you do the following:
+Postępując zgodnie z tą drugą strategią, należy wykonać następujące czynności:
 
-1. Add the `#nullable enable` pragma to the file you want to make nullable aware.
-1. Address any warnings.
-1. Continue these first two steps until you've made the entire library nullable aware.
-1. Enable nullable types for the entire project by adding the `<Nullable>enable</Nullable>` element to your *csproj* files. 
-1. Remove the `#nullable enable` pragmas, as they're no longer needed.
+1. Dodaj `#nullable enable` pragma do pliku, który ma być dopuszczający wartość null.
+1. Rozwiązywanie wszelkich ostrzeżeń.
+1. Wykonaj te dwa pierwsze kroki, dopóki cała biblioteka nie doznała wartości null.
+1. Włącz Typy dopuszczające wartość null dla całego projektu, dodając `<Nullable>enable</Nullable>` element do plików *csproj* . 
+1. Usuń `#nullable enable` pragmy, ponieważ nie są już potrzebne.
 
-This second strategy has less work up-front. The tradeoff is that the first task when you create a new file is to add the pragma and make it nullable aware. If any developers on your team forget, that new code is now in the backlog of work to make all code nullable aware.
+Ta druga strategia ma mniej pracy z góry. Wadą jest to, że pierwsze zadanie podczas tworzenia nowego pliku to dodanie dyrektywy pragma i przekazanie jej do wartości null. Jeśli wszyscy deweloperzy w zespole zapomnili, nowy kod jest teraz w zaległości prac, aby umożliwić sobie dopełnienie kodu do wartości null.
 
-Which of these strategies you pick depends on how much active development is taking place in your project. The more mature and stable your project, the better the second strategy. The more features being developed, the better the first strategy.
+Które z tych strategii są wybierane, zależy od tego, jak dużo aktywnego programowania odbywa się w projekcie. Im bardziej dojrzały i stabilny projekt, tym lepiej druga strategia. Im więcej funkcji jest opracowywanych, tym lepsza jest pierwsza strategia.
 
-## <a name="should-nullable-warnings-introduce-breaking-changes"></a>Should nullable warnings introduce breaking changes?
+## <a name="should-nullable-warnings-introduce-breaking-changes"></a>Czy ostrzeżenia o wartościach null wprowadzają istotne zmiany?
 
-Before you enable nullable reference types, variables are considered *nullable oblivious*. Once you enable nullable reference types, all those variables are *non-nullable*. The compiler will issue warnings if those variables aren't initialized to non-null values.
+Przed włączeniem typów referencyjnych dopuszczających wartości null, zmienne są uznawane za *Oblivious dopuszczające wartość null*. Po włączeniu typów referencyjnych dopuszczających wartości null wszystkie te zmienne *nie dopuszczają wartości null*. Kompilator będzie wystawiał ostrzeżenia, jeśli te zmienne nie są zainicjowane do wartości innych niż null.
 
-Another likely source of warnings is return values when the value hasn't been initialized.
+Inne prawdopodobnie Źródło ostrzeżeń ma zwracane wartości, gdy wartość nie została zainicjowana.
 
-The first step in addressing the compiler warnings is to use `?` annotations on parameter and return types to indicate when arguments or return values may be null. When reference variables must not be null, the original declaration is correct. As you do this, your goal isn't just to fix warnings. The more important goal is to make the compiler understand your intent for potential null values. As you examine the warnings, you reach your next major decision for your library. Do you want to consider modifying API signatures to more clearly communicate your design intent? A better API signature for the `TryGetMessage` method examined earlier could be:
+Pierwszym krokiem w przypadku rozwiązywania ostrzeżeń kompilatora jest użycie adnotacji `?` dla parametrów i zwracanych typów, aby wskazać, kiedy argumenty lub wartości zwracane mogą mieć wartość null. Gdy zmienne odwołania nie mogą mieć wartości null, oryginalna deklaracja jest poprawna. W takim przypadku cel nie tylko naprawi ostrzeżenia. Im bardziej istotny jest sposób, aby kompilator mógł zrozumieć zamiar dla potencjalnych wartości null. Podczas badania ostrzeżeń możesz przejść do następnej głównej decyzji dotyczącej biblioteki. Czy chcesz rozważyć modyfikowanie sygnatur interfejsów API, aby dokładniej komunikować swój projekt? Lepszym podpisem interfejsu API dla metody `TryGetMessage` przeanalizowanej wcześniej może być:
 
 ```csharp
 string? TryGetMessage(string key);
 ```
 
-The return value indicates success or failure, and carries the value if the value was found. In many cases, changing API signatures can improve how they communicate null values.
+Wartość zwracana wskazuje powodzenie lub niepowodzenie i przenosi wartość w przypadku znalezienia wartości. W wielu przypadkach zmiana sygnatur interfejsów API może poprawić sposób, w jaki komunikują się wartości null.
 
-However, for public libraries, or libraries with large user bases, you may prefer not introducing any API signature changes. For those cases, and other common patterns, you can apply attributes to more clearly define when an argument or return value may be `null`. Whether or not you consider changing the surface of your API, you'll likely find that type annotations alone aren't sufficient for describing `null` values for arguments or return values. In those instances, you can apply attributes to more clearly describe an API. 
+Jednak w przypadku bibliotek publicznych lub bibliotek z dużymi bazami użytkowników można preferować nie wprowadzać żadnych zmian sygnatury interfejsu API. W tych przypadkach i innych wspólnych wzorców można zastosować atrybuty, aby dokładniej zdefiniować, kiedy może być `null`argumentu lub wartości zwracanej. Bez względu na to, czy należy rozważyć zmianę powierzchni interfejsu API, prawdopodobnie okaże się, że tylko adnotacje typu nie są wystarczające do opisywania wartości `null` argumentów lub zwracanych wartości. W tych przypadkach można zastosować atrybuty, aby dokładniej opisać interfejs API. 
 
-## <a name="attributes-extend-type-annotations"></a>Attributes extend type annotations
+## <a name="attributes-extend-type-annotations"></a>Atrybuty rozszerzonego typu
 
-Several attributes have been added to express additional information about the null state of variables. All code you wrote before C# 8 introduced nullable reference types was *null oblivious*. That means any reference type variable may be null, but null checks aren't required. Once your code is *nullable aware*, those rules change. Reference types should never be the `null` value, and nullable reference types must be checked against `null` before being dereferenced.
+Dodano kilka atrybutów w celu wyrażenia dodatkowych informacji o stanie null zmiennych. Wszystkie kod, który zapisano C# przed 8 wprowadzonymi typami odwołań dopuszczających wartości null, miał *wartość null Oblivious*. Oznacza to, że jakakolwiek zmienna typu referencyjnego może mieć wartość null, ale sprawdzanie wartości null nie jest wymagane. Gdy kod *dopuszcza wartość null*, te reguły zostaną zmienione. Typ referencyjny nigdy nie powinien być wartością `null`, a typy referencyjne dopuszczające wartość null muszą zostać sprawdzone względem `null` przed usunięciem odwołania.
 
-The rules for your APIs are likely more complicated, as you saw with the `TryGetValue` API scenario. Many of your APIs have more complex rules for when variables can or can't be `null`. In these cases, you'll use one of the following attributes to express those rules:
+Reguły interfejsów API mogą być bardziej skomplikowane, jak pokazano w scenariuszu interfejsu API `TryGetValue`. Wiele interfejsów API ma bardziej złożone reguły dla sytuacji, gdy zmienne mogą lub nie mogą być `null`. W takich przypadkach użyjesz jednego z następujących atrybutów, aby przedstawić te reguły:
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): A non-nullable input argument may be null.
-- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): A nullable input argument should never be null.
-- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): A non-nullable return value may be null.
-- [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): A nullable return value will never be null.
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): A non-nullable input argument may be null when the method returns the specified `bool` value.
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): A nullable input argument will not be null when the method returns the specified `bool` value.
-- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): A return value isn't null if the argument for the specified parameter isn't null.
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): Argument wejściowy niedopuszczający wartości null może mieć wartość null.
+- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): Argument wejściowy dopuszczający wartość null nigdy nie powinien mieć wartości null.
+- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): wartość zwracana niedopuszczający wartości null może być równa null.
+- [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): wartość zwracana do wartości null nigdy nie będzie równa null.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): Argument wejściowy, który nie dopuszcza wartości null, może mieć wartość null, gdy metoda zwraca określoną wartość `bool`.
+- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): Argument wejściowy do wartości null nie będzie miał wartości null, gdy metoda zwróci określoną wartość `bool`.
+- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): wartość zwracana nie ma wartości null, jeśli argument dla określonego parametru nie ma wartości null.
 
-The preceding descriptions are a quick reference to what each attribute does. Each following section describes the behavior and meaning more thoroughly.
+Powyższe opisy stanowią krótkie informacje o tym, co robi każdy atrybut. W poniższych sekcjach opisano zachowanie i ich znaczenie.
 
-Adding these attributes gives the compiler more information about the rules for your API. When calling code is compiled in a nullable enabled context, the compiler will warn callers when they violate those rules. These attributes don't enable additional checks on your implementation.
+Dodanie tych atrybutów zapewnia kompilatorowi więcej informacji na temat reguł dla interfejsu API. Gdy Wywoływanie kodu jest kompilowane w kontekście włączonego wartości null, kompilator ostrzega wywoływania, gdy narusza te reguły. Te atrybuty nie umożliwiają wykonywania dodatkowych operacji sprawdzania w implementacji.
 
-## <a name="specify-preconditions-allownull-and-disallownull"></a>Specify preconditions: `AllowNull` and `DisallowNull`
+## <a name="specify-preconditions-allownull-and-disallownull"></a>Określ warunki wstępne: `AllowNull` i `DisallowNull`
 
-Consider a read/write property that never returns `null` because it has a reasonable default value. Callers pass `null` to the set accessor when setting it to that default value. For example, consider a messaging system that asks for a screen name in a chat room. If none is provided, the system generates a random name:
+Należy rozważyć właściwość odczytu/zapisu, która nigdy nie zwraca `null`, ponieważ ma ona rozsądną wartość domyślną. Obiekty wywołujące przechodzą `null` do zestawu metod dostępu podczas ustawiania tej wartości domyślnej. Rozważmy na przykład system obsługi komunikatów, który prosi o podanie nazwy ekranu w pokoju rozmowy. Jeśli żaden nie jest podany, system generuje nazwę losową:
 
 ```csharp
 public string ScreenName
@@ -108,7 +108,7 @@ public string ScreenName
 private string screenName;
 ```
 
-When you compile the preceding code in a nullable oblivious context, everything is fine. Once you enable nullable reference types, the `ScreenName` property becomes a non-nullable reference. That's correct for the `get` accessor: it never returns `null`. Callers don't need to check the returned property for `null`. But now setting the property to `null` generates a warning. In order to continue to support this type of code, you add the <xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute?displayProperty=nameWithType> attribute to the property, as shown in the following code: 
+Gdy kompilujesz poprzedni kod w kontekście dopuszczającym wartość null, wszystko jest bardzo precyzyjne. Po włączeniu typów referencyjnych dopuszczających wartości null Właściwość `ScreenName` będzie niedostępna do wartości null. Jest to poprawne dla metody dostępu `get`: nigdy nie zwraca `null`. Obiekty wywołujące nie muszą sprawdzać zwracanej właściwości dla `null`. Ale teraz ustawienie właściwości na `null` generuje ostrzeżenie. Aby kontynuować obsługę tego typu kodu, Dodaj atrybut <xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute?displayProperty=nameWithType> do właściwości, jak pokazano w poniższym kodzie: 
 
 ```csharp
 [AllowNull]
@@ -120,16 +120,16 @@ public string ScreenName
 private string screenName = GenerateRandomScreenName();
 ```
 
-You may need to add a `using` directive for <xref:System.Diagnostics.CodeAnalysis> to use this and other attributes discussed in this article. The attribute is applied to the property, not the `set` accessor. The `AllowNull` attribute specifies *pre-conditions*, and only applies to inputs. The `get` accessor has a return value, but no input arguments. Therefore, the `AllowNull` attribute only applies to the `set` accessor.
+Może być konieczne dodanie dyrektywy `using` dla <xref:System.Diagnostics.CodeAnalysis>, aby użyć tego i innych atrybutów omówionych w tym artykule. Ten atrybut jest stosowany do właściwości, a nie metody dostępu `set`. Atrybut `AllowNull` określa *warunki wstępne*i ma zastosowanie tylko do danych wejściowych. Metoda dostępu `get` ma wartość zwracaną, ale nie ma argumentów wejściowych. W związku z tym, atrybut `AllowNull` ma zastosowanie tylko do `set` metody dostępu.
 
-The preceding example demonstrates what to look for when adding the `AllowNull` attribute on an argument:
+W poprzednim przykładzie pokazano, co należy szukać podczas dodawania atrybutu `AllowNull` w argumencie:
 
-1. The general contract for that variable is that it shouldn't be `null`, so you want a non-nullable reference type.
-1. There are scenarios for the input variable to be `null`, though they aren't the most common usage.
+1. Ogólnym kontraktem tej zmiennej jest, że nie należy `null`, więc potrzebujesz typu referencyjnego, który nie dopuszcza wartości null.
+1. Istnieją scenariusze dla zmiennej wejściowej, która ma być `null`, ale nie są one najczęstszym użyciem.
 
-Most often you'll need this attribute for properties, or `in`, `out`, and `ref` arguments. The `AllowNull` attribute is the best choice when a variable is typically non-null, but you need to allow `null` as a precondition.
+Najczęściej ten atrybut jest wymagany dla właściwości, `in`, `out`i `ref` argumentów. Atrybut `AllowNull` jest najlepszym wyborem, gdy zmienna jest zwykle inna niż null, ale musisz zezwolić na `null` jako warunek wstępny.
 
-Contrast that with scenarios for using `DisallowNull`: You use this attribute to specify that an input variable of a nullable type shouldn't be `null`. Consider a property where `null` is the default value, but clients can only set it to a non-null value. Consider the following code:
+Kontrast zawierający scenariusze używania `DisallowNull`: ten atrybut służy do określenia, że zmienna wejściowa typu dopuszczającego wartość null nie powinna być `null`. Rozważmy właściwość, w której `null` jest wartością domyślną, ale klienci mogą ustawić tylko wartość różną od null. Rozważmy następujący kod:
 
 ```csharp
 public string ReviewComment
@@ -140,7 +140,7 @@ public string ReviewComment
 string _comment;
 ```
 
-The preceding code is the best way to express your design that the `ReviewComment` could be `null`, but can't be set to `null`. Once this code is nullable aware, you can express this concept more clearly to callers using the <xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute?displayProperty=nameWithType>:
+Poprzedni kod jest najlepszym sposobem wyrażania projektu, że `ReviewComment` może być `null`, ale nie można go ustawić jako `null`. Gdy ten kod dopuszcza wartość null, można jawnie wyrazić ten pomysł do wywoływania przy użyciu <xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute?displayProperty=nameWithType>:
 
 ```csharp
 [DisallowNull] 
@@ -152,50 +152,50 @@ public string? ReviewComment
 string? _comment;
 ```
 
-In a nullable context, the `ReviewComment` `get` accessor could return the default value of `null`. The compiler warns that it must be checked before access. Furthermore, it warns callers that, even though it could be `null`, callers shouldn't explicitly set it to `null`. The `DisallowNull` attribute also specifies a *pre-condition*, it does not affect the `get` accessor. You should choose to use the `DisallowNull` attribute when you observe these characteristics about:
+W kontekście dopuszczającym wartość null metoda dostępu `ReviewComment` `get` może zwracać wartość domyślną `null`. Kompilator ostrzega o tym, że musi zostać sprawdzony przed dostępem. Ponadto ostrzega wywołujących, że mimo że może być `null`, obiekty wywołujące nie powinny jawnie ustawiać go do `null`. Atrybut `DisallowNull` określa również *warunek wstępny*, nie ma wpływu na `get` metodę dostępu. Należy wybrać użycie atrybutu `DisallowNull`, gdy zobaczysz następujące cechy:
 
-1. The variable could be `null` in core scenarios, often when first instantiated.
-1. The variable shouldn't be explicitly set to `null`.
+1. Zmienna może być `null` w scenariuszach podstawowych, często podczas pierwszego wystąpienia.
+1. Zmienna nie powinna być jawnie ustawiona na `null`.
 
-These situations are common in code that was originally *null oblivious*. It may be that object properties are set in two distinct initialization operations. It may be that some properties are set only after some asynchronous work has completed.
+Te sytuacje często występują w kodzie, który pierwotnie miał *wartość null Oblivious*. Może być to, że właściwości obiektu są ustawiane w dwóch odrębnych operacjach inicjalizacji. Niektóre właściwości mogą być ustawione tylko po zakończeniu pewnej asynchronicznej pracy.
 
-The `AllowNull` and `DisallowNull` attributes enable you to specify that preconditions on variables may not match the nullable annotations on those variables. These provide more detail about the characteristics of your API. This additional information helps callers use your API correctly. Remember you specify preconditions using the following attributes:
+Atrybuty `AllowNull` i `DisallowNull` umożliwiają określenie, że warunki wstępne dotyczące zmiennych mogą nie pasować do adnotacji dopuszczających wartości null w tych zmiennych. Zapewniają one więcej szczegółowych informacji o cechach interfejsu API. Te dodatkowe informacje ułatwiają wywoływanie interfejsu API. Należy pamiętać o określeniu warunków wstępnych przy użyciu następujących atrybutów:
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): A non-nullable input argument may be null.
-- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): A nullable input argument should never be null.
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): Argument wejściowy niedopuszczający wartości null może mieć wartość null.
+- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): Argument wejściowy dopuszczający wartość null nigdy nie powinien mieć wartości null.
 
-## <a name="specify-post-conditions-maybenull-and-notnull"></a>Specify post-conditions: `MaybeNull` and `NotNull`
+## <a name="specify-post-conditions-maybenull-and-notnull"></a>Określ warunki końcowe: `MaybeNull` i `NotNull`
 
-Suppose you have a method with the following signature:
+Załóżmy, że masz metodę o następującej sygnaturze:
 
 ```csharp
 public Customer FindCustomer(string lastName, string firstName)
 ```
 
-You've likely written a method like this to return `null` when the name sought wasn't found. The `null` clearly indicates that the record wasn't found. In this example, you'd likely change the return type from `Customer` to `Customer?`. Declaring the return value as a nullable reference type specifies the intent of this API clearly. 
+Prawdopodobnie Zapisano metodę podobną do tej, aby zwrócić `null`, gdy nie znaleziono poszukiwanej nazwy. `null` jasno wskazuje, że nie znaleziono rekordu. W tym przykładzie istnieje możliwość zmiany typu zwracanego z `Customer` na `Customer?`. Deklarowanie wartości zwracanej jako typ referencyjny dopuszczający wartość null Określa zamiar tego interfejsu API jasno. 
 
-For reasons covered under [Generic definitions and nullability](#generic-definitions-and-nullability) that technique does not work with generic methods. You may have a generic method that follows a similar pattern:
+Z przyczyn objętych [definicjami ogólnymi i wartością null](#generic-definitions-and-nullability) ta technika nie działa z metodami ogólnymi. Może istnieć Metoda ogólna, która następuje po podobnym wzorcu:
 
 ```csharp
 public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
 ```
 
-You can't specify that the return value is `T?`. The method returns `null` when the sought item isn't found. Since you can't declare a `T?` return type, you add the `MaybeNull` annotation to the method return:
+Nie można określić, że wartość zwracana jest `T?`. Metoda zwraca `null`, gdy nie znaleziono poszukiwanego elementu. Ponieważ nie można zadeklarować typu zwracanego `T?`, należy dodać adnotację `MaybeNull` do zwracanej metody:
 
 ```csharp
 [return: MaybeNull]
 public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
 ```
 
-The preceding code informs callers that the contract implies a non-nullable type, but the return value *may* actually be null.  Use the `MaybeNull` attribute when your API should be a non-nullable type, typically a generic type parameter, but there may be instances where `null` would be returned.
+Poprzedni kod informuje wywołujących, że kontrakt implikuje typ niedopuszczający wartości null, ale zwracana wartość *może* być równa null.  Użyj atrybutu `MaybeNull`, gdy interfejs API powinien być typu niedopuszczający wartości null, zazwyczaj jest parametrem typu ogólnego, ale mogą występować wystąpienia, w których `null` zostałyby zwrócone.
 
-You can also specify that a return value or an `out` or `ref` argument isn't null even though the type is a nullable type. Consider a method that ensures an array is large enough to hold a number of elements. If the input argument doesn't have capacity, the routine would allocate a new array and copy all the existing elements into it. If the input argument is `null`, the routine would allocate new storage. If there's sufficient capacity, the routine does nothing:
+Można również określić, że wartość zwracana lub `out` lub argument `ref` nie ma wartości null, mimo że typ jest typem dopuszczającym wartość null. Rozważmy metodę, która zapewnia, że tablica jest wystarczająco duża, aby pomieścić liczbę elementów. Jeśli argument wejściowy nie ma pojemności, procedura przydzieli nową tablicę i skopiuje do niej wszystkie istniejące elementy. Jeśli argument wejściowy jest `null`, procedura przydzieli nowy magazyn. W przypadku wystarczającej pojemności procedura nie wykonuje żadnych czynności:
 
 ```csharp
 public void EnsureCapacity<T>(ref T[] storage, int size)
 ```
 
-You could call this routine as follows:
+Tę procedurę można wywołać w następujący sposób:
 
 ```csharp
 // messages has the default value (null) when EnsureCapacity is called:
@@ -204,28 +204,28 @@ EnsureCapacity<string>(ref messages, 10);
 EnsureCapacity<string>(messages, 50);
 ```
 
-After enabling null reference types, you want to ensure that the preceding code compiles without warnings. When the method returns, the `storage` argument is guaranteed to be not null. However, it's acceptable to call `EnsureCapacity` with a null reference. You can make `storage` a nullable reference type, and add the `NotNull` post-condition to the parameter declaration:
+Po włączeniu typów odwołań o wartości null, należy upewnić się, że poprzedni kod kompiluje bez ostrzeżeń. Gdy metoda zwraca, gwarantowany argument `storage` nie ma wartości null. Możliwe jest jednak, aby wywoływać `EnsureCapacity` z odwołaniem null. Można wprowadzić `storage` typu referencyjnego dopuszczającego wartość null i dodać `NotNull` po warunku do deklaracji parametru:
 
 ```csharp
 public void EnsureCapacity<T>([NotNull]ref T[]? storage, int size)
 ```
 
-The preceding code expresses the existing contract very clearly: Callers can pass a variable with the `null` value, but the return value is guaranteed to never be null. The `NotNull` attribute is most useful for `ref` and `out` arguments where `null` may be passed as an argument, but that argument is guaranteed to be not null when the method returns.
+Poprzedni kod wyraża istniejący kontrakt bardzo jasno: obiekty wywołujące mogą przekazać zmienną z wartością `null`, ale wartość zwracana jest gwarantowana, aby nigdy nie była równa null. Atrybut `NotNull` jest najbardziej przydatny dla argumentów `ref` i `out`, w których `null` może być przekazane jako argument, ale ten argument ma gwarancję not null, gdy metoda zwraca.
 
-You specify unconditional postconditions using the following attributes:
+Należy określić warunki końcowe bezwarunkowe, korzystając z następujących atrybutów:
 
-- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): A non-nullable return value may be null.
-- [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): A nullable return value will never be null.
+- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): wartość zwracana niedopuszczający wartości null może być równa null.
+- [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): wartość zwracana do wartości null nigdy nie będzie równa null.
 
-## <a name="specify-conditional-post-conditions-notnullwhen-maybenullwhen-and-notnullifnotnull"></a>Specify conditional post-conditions: `NotNullWhen`, `MaybeNullWhen`, and `NotNullIfNotNull`
+## <a name="specify-conditional-post-conditions-notnullwhen-maybenullwhen-and-notnullifnotnull"></a>Określ warunkowe warunki końcowe: `NotNullWhen`, `MaybeNullWhen`i `NotNullIfNotNull`
 
-You're likely familiar with the `string` method <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType>. This method returns `true` when the argument is null or an empty string. It's a form of null-check: Callers don't need to null-check the argument if the method returns `false`. To make a method like this nullable aware, you'd set the argument to a nullable type, and add the `NotNullWhen` attribute:
+Najkorzystniej znasz metodę `string` <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType>. Ta metoda zwraca `true`, gdy argument ma wartość null lub jest pustym ciągiem. Jest to forma sprawdzania wartości null: obiekty wywołujące nie muszą mieć wartości null — Sprawdź, czy metoda zwraca `false`. Aby określić metodę, taką jak ta, która dopuszcza wartość null, należy ustawić argument na typ dopuszczający wartość null i dodać atrybut `NotNullWhen`:
 
 ```csharp
 bool IsNullOrEmpty([NotNullWhen(false)]string? value);
 ```
 
-That informs the compiler that any code where the return value is `false` need not be null-checked. The addition of the attribute informs the compiler's static analysis that `IsNullOrEmpty` performs the necessary null check: when it returns `false`, the input argument is not `null`.
+Informuje kompilator, że żaden kod, w którym wartość zwracana jest `false` nie musi być sprawdzona null. Dodanie atrybutu informuje o analizie statycznej kompilatora, który `IsNullOrEmpty` wykonuje wymagane sprawdzanie wartości null: gdy zwraca `false`, argument wejściowy nie jest `null`.
 
 ```csharp
 string? userInput = GetUserInput();
@@ -236,71 +236,71 @@ if (!string.IsNullOrEmpty(userInput))
 // null check needed on userInput here.
 ```
 
-The <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType> method will be annotated as shown above for .NET Core 3.0. You may have similar methods in your codebase that check the state of objects for null values. The compiler won't recognize custom null check methods, and you'll need to add the annotations yourself. When you add the attribute, the compiler's static analysis knows when the tested variable has been null checked.
+Metoda <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType> zostanie umieszczona w adnotacji, jak pokazano powyżej dla programu .NET Core 3,0. W bazie kodu mogą znajdować się podobne metody, które sprawdzają stan obiektów dla wartości null. Kompilator nie rozpoznaje niestandardowych metod sprawdzania wartości null i należy samodzielnie dodać adnotacje. Po dodaniu atrybutu analiza statyczna kompilatora wie, kiedy sprawdzona zmienna ma wartość null.
 
-Another use for these attributes is the `Try*` pattern. The postconditions for `ref` and `out` variables are communicated through the return value. Consider this method shown earlier:
+Innym zastosowaniem tych atrybutów jest wzorzec `Try*`. Warunki końcowe dla zmiennych `ref` i `out` są przekazywane przez wartość zwracaną. Rozważmy tę metodę pokazaną wcześniej:
 
 ```csharp
 bool TryGetMessage(string key, out string message)
 ```
 
-The preceding method follows a typical .NET idiom: the return value indicates if `message` was set to the found value or, if no message is found, to the default value. If the method returns `true`, the value of `message` isn't null; otherwise, the method sets `message` to null.
+Poprzednia metoda jest zgodna z typowym środowiskiem .NET idiom: wartość zwracana wskazuje, czy `message` została ustawiona na znalezioną wartość, lub jeśli nie zostanie znaleziony żaden komunikat do wartości domyślnej. Jeśli metoda zwraca `true`, wartość `message` nie jest równa null; w przeciwnym razie metoda ustawia `message` na null.
 
-You can communicate that idiom using the `NotNullWhen` attribute. When you update the signature for nullable reference types, make `message` a `string?` and add an attribute:
+Można komunikować się z idiom przy użyciu atrybutu `NotNullWhen`. Podczas aktualizowania podpisu dla typów referencyjnych dopuszczających wartości null, należy `message` `string?` i dodać atrybut:
 
 ```csharp
 bool TryGetMessage(string key, [NotNullWhen(true)] out string? message)
 ```
 
-In the preceding example, the value of `message` is known to be not null when `TryGetMessage` returns `true`. You should annotate similar methods in your codebase in the same way: the arguments could be `null`, and are known to be not null when the method returns `true`.
+W powyższym przykładzie wartość `message` jest znana od null, gdy `TryGetMessage` zwraca `true`. Należy dodać adnotacje do podobnych metod w bazie kodu w taki sam sposób: argumenty mogą być `null`i nie mieć wartości null, gdy metoda zwraca `true`.
 
-There's one final attribute you may also need. Sometimes the null state of a return value depends on the null state of one or more input arguments. These methods will return a non-null value whenever certain input arguments aren't `null`. To correctly annotate these methods, you use the `NotNullIfNotNull` attribute. Consider the following method:
+Istnieje również jeden atrybut końcowy. Czasami stan null wartości zwracanej zależy od stanu zerowego co najmniej jednego argumentu wejściowego. Metody te zwracają wartość różną od null, gdy pewne argumenty wejściowe nie będą `null`. Aby poprawnie dodać adnotację do tych metod, Użyj atrybutu `NotNullIfNotNull`. Weź pod uwagę następującą metodę:
 
 ```csharp
 string GetTopLevelDomainFromFullUrl(string url);
 ```
 
-If the `url` argument isn't null, the output isn't `null`. Once nullable references are enabled, that signature works correctly, provided your API never accepts a null input. However, if the input could be null, then return value could also be null. Therefore, you could change the signature to the following code:
+Jeśli argument `url` nie ma wartości null, dane wyjściowe nie `null`. Po włączeniu odwołań do wartości null ten podpis działa prawidłowo, pod warunkiem, że interfejs API nigdy nie akceptuje danych wejściowych o wartości null. Jeśli jednak dane wejściowe mogą mieć wartość null, wówczas wartość zwracana może być również wartością null. W związku z tym można zmienić sygnaturę na następujący kod:
 
 ```csharp
 string? GetTopLevelDomainFromFullUrl(string? url);
 ```
 
-That also works, but will often force callers to implement extra `null` checks. The contract is that the return value would be `null` only when the input argument `url` is `null`. To express that contract, you would annotate this method as shown in the following code:
+To również działa, ale często wymuszają wywoływania dodatkowych `null`. Kontrakt polega na tym, że wartość zwracana byłaby `null` tylko wtedy, gdy argument wejściowy `url` jest `null`. Aby można było wyrazić ten kontrakt, należy dodać adnotację do tej metody, jak pokazano w poniższym kodzie:
 
 ```csharp
 [return: NotNullIfNotNull("url")]
 string? GetTopLevelDomainFromFullUrl(string? url);
 ```
 
-The return value and the argument have both been annotated with the `?` indicating that either could be `null`. The attribute further clarifies that the return value won't be null when the `url` argument isn't `null`.
+Wartość zwracana i argument mają adnotację z `?` wskazującą, że można `null`. Ten atrybut dokładniej objaśnia, że wartość zwracana nie będzie równa null, jeśli argument `url` nie jest `null`.
 
-You specify conditional postconditions using these attributes:
+Należy określić warunkowe warunki końcowe przy użyciu następujących atrybutów:
 
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): A non-nullable input argument may be null when the method returns the specified `bool` value.
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): A nullable input argument will not be null when the method returns the specified `bool` value.
-- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): A return value isn't null if the input argument for the specified parameter isn't null.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): Argument wejściowy, który nie dopuszcza wartości null, może mieć wartość null, gdy metoda zwraca określoną wartość `bool`.
+- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): Argument wejściowy do wartości null nie będzie miał wartości null, gdy metoda zwróci określoną wartość `bool`.
+- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): wartość zwracana nie ma wartości null, jeśli argument wejściowy dla określonego parametru nie ma wartości null.
 
-## <a name="generic-definitions-and-nullability"></a>Generic definitions and nullability
+## <a name="generic-definitions-and-nullability"></a>Definicje generyczne i wartości null
 
-Correctly communicating the null state of generic types and generic methods requires special care. This stems from the fact that a nullable value type and a nullable reference type are fundamentally different. An `int?` is a synonym for `Nullable<int>`, whereas `string?` is `string` with an attribute added by the compiler. The result is that the compiler can't generate correct code for `T?` without knowing if `T` is a `class` or a `struct`. 
+Poprawne powiadamianie o stanie null typów ogólnych i metod ogólnych wymaga szczególnej uwagi. Wynika to z faktu, że typ wartości null i typ referencyjny dopuszczający wartość null są zasadniczo różne. `int?` jest synonimem dla `Nullable<int>`, a `string?` jest `string` z atrybutem dodanym przez kompilator. W efekcie kompilator nie może wygenerować poprawnego kodu dla `T?` bez znajomości, czy `T` jest `class` lub `struct`. 
 
-This doesn't mean you can't use a nullable type (either value type or reference type) as the type argument for a closed generic type. Both `List<string?>` and `List<int?>` are valid instantiations of `List<T>`. 
+Nie oznacza to, że nie można użyć typu dopuszczającego wartości null (typu wartości lub typu referencyjnego) jako argumentu typu dla zamkniętego typu ogólnego. Zarówno `List<string?>`, jak i `List<int?>` są prawidłowymi wystąpieniami `List<T>`. 
 
-What it does mean is that you can't use `T?` in a generic class or method declaration without constraints. For example, <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D)?displayProperty=nameWithType> won't be changed to return `T?`. You can overcome this limitation by adding either the `struct` or `class` constraint. With either of those constraints, the compiler knows how to generate code for both `T` and `T?`.
+Oznacza to, że nie można użyć `T?` w ogólnej klasie lub deklaracji metody bez ograniczeń. Na przykład <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D)?displayProperty=nameWithType> nie zostanie zmieniony na zwraca `T?`. Ograniczenie to można przezwyciężyć, dodając ograniczenie `struct` lub `class`. Z dowolnego z tych ograniczeń kompilator wie, jak generować kod dla `T` i `T?`.
 
-You may want to restrict the types used for a generic type argument to be non-nullable types. You can do that by adding the `notnull` constraint on that type argument. When that constraint is applied, the type argument must not be a nullable type.
+Możesz chcieć ograniczyć typy używane dla argumentu typu ogólnego jako niedopuszczające wartości null. Można to zrobić przez dodanie ograniczenia `notnull` tego argumentu typu. Po zastosowaniu tego ograniczenia argument typu nie może być typem dopuszczającym wartość null.
 
 ## <a name="conclusions"></a>Wnioski
 
-Adding nullable reference types provides an initial vocabulary to describe your APIs expectations for variables that could be `null`. The additional attributes provide a richer vocabulary to describe the null state of variables as preconditions and postconditions. These attributes more clearly describe your expectations and provide a better experience for the developers using your APIs.
+Dodanie typów referencyjnych dopuszczających wartość null zapewnia wstępne słownictwo do opisywania oczekiwań interfejsów API dla zmiennych, które mogą być `null`. Dodatkowe atrybuty zapewniają bogatszy słownictwo do opisania stanu wartości null zmiennych jako warunków wstępnych i warunki końcowe. Te atrybuty bardziej wyraźnie opisują oczekiwania i zapewniają lepszy komfort używania interfejsów API przez deweloperów.
 
-As you update libraries for a nullable context, add these attributes to guide users of your APIs to the correct usage. These attributes help you fully describe the null-state of input arguments and return values:
+Podczas aktualizowania bibliotek dla kontekstu dopuszczającego wartość null należy dodać te atrybuty, aby ułatwić użytkownikom interfejsów API poprawne użycie. Te atrybuty pomagają w pełni opisać stan null argumentów wejściowych i zwracanych wartości:
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): A non-nullable input argument may be null.
-- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): A nullable input argument should never be null.
-- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): A non-nullable return value may be null.
-- [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): A nullable return value will never be null.
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): A non-nullable input argument may be null when the method returns the specified `bool` value.
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): A nullable input argument will not be null when the method returns the specified `bool` value.
-- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): A return value isn't null if the input argument for the specified parameter isn't null.
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): Argument wejściowy niedopuszczający wartości null może mieć wartość null.
+- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): Argument wejściowy dopuszczający wartość null nigdy nie powinien mieć wartości null.
+- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): wartość zwracana niedopuszczający wartości null może być równa null.
+- [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): wartość zwracana do wartości null nigdy nie będzie równa null.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): Argument wejściowy, który nie dopuszcza wartości null, może mieć wartość null, gdy metoda zwraca określoną wartość `bool`.
+- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): Argument wejściowy do wartości null nie będzie miał wartości null, gdy metoda zwróci określoną wartość `bool`.
+- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): wartość zwracana nie ma wartości null, jeśli argument wejściowy dla określonego parametru nie ma wartości null.

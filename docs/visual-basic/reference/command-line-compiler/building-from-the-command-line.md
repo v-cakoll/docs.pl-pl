@@ -22,32 +22,32 @@ ms.locfileid: "74344791"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Tworzenie z wiersza polecenia (Visual Basic)
 
-A Visual Basic project is made up of one or more separate source files. During the process known as compilation, these files are brought together into one package—a single executable file that can be run as an application.
+Projekt Visual Basic składa się z co najmniej jednego oddzielnego pliku źródłowego. Podczas procesu znanego jako kompilacja te pliki są łączone w jeden pakiet — pojedynczy plik wykonywalny, który może być uruchamiany jako aplikacja.
 
-Visual Basic provides a command-line compiler as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE). The command-line compiler is designed for situations in which you do not require the full set of features in the IDE—for example, when you are using or writing for computers with limited system memory or storage space.
+Visual Basic udostępnia kompilator wiersza polecenia jako alternatywę do kompilowania programów z poziomu zintegrowanego środowiska programistycznego (IDE) programu Visual Studio. Kompilator wiersza polecenia jest przeznaczony do sytuacji, w których nie jest wymagany pełny zestaw funkcji w środowisku IDE — na przykład podczas korzystania z programu lub zapisywania na komputerach z ograniczoną ilością pamięci systemowej lub miejscem do magazynowania.
 
-To compile source files from within the Visual Studio IDE, choose the **Build** command from the **Build** menu.
+Aby kompilować pliki źródłowe z poziomu środowiska IDE programu Visual Studio, wybierz polecenie **Kompiluj** z menu **kompilacja** .
 
 > [!TIP]
-> When you build project files by using the Visual Studio IDE, you can display information about the associated **vbc** command and its switches in the output window. To display this information, open the [Options Dialog Box,  Projects and Solutions, Build and Run](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), and then set the **MSBuild project build output verbosity** to **Normal** or a higher level of verbosity. For more information, see [How to: View, Save, and Configure Build Log Files](/visualstudio/ide/how-to-view-save-and-configure-build-log-files).
+> Podczas kompilowania plików projektu przy użyciu programu Visual Studio IDE można wyświetlić informacje o skojarzonym poleceniu **VBC** i jego przełącznikach w oknie danych wyjściowych. Aby wyświetlić te informacje, Otwórz okno [dialogowe Opcje, projekty i rozwiązania, skompiluj i uruchom](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), a następnie ustaw poziom szczegółowości **danych wyjściowych kompilacji projektu programu MSBuild** na **normalny** lub wyższy. Aby uzyskać więcej informacji, zobacz [jak: wyświetlanie, zapisywanie i konfigurowanie plików dziennika kompilacji](/visualstudio/ide/how-to-view-save-and-configure-build-log-files).
 
-You can compile project (.vbproj) files at a command prompt by using MSBuild. For more information, see [Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference) and [Walkthrough: Using MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild).
+Pliki projektu (. vbproj) można kompilować w wierszu polecenia przy użyciu programu MSBuild. Aby uzyskać więcej informacji, zobacz informacje [dotyczące wiersza polecenia](/visualstudio/msbuild/msbuild-command-line-reference) i [Przewodnik: korzystanie z programu MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[How to: Invoke the Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
-Describes how to invoke the command-line compiler at the MS-DOS prompt or from a specific subdirectory.
+[Instrukcje: wywoływanie kompilatora wiersza polecenia](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
+Opisuje sposób wywoływania kompilatora wiersza polecenia w wierszu systemu MS-DOS lub z określonego podkatalogu.
 
-[Sample Compilation Command Lines](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
-Provides a list of sample command lines that you can modify for your own use.
+[Przykładowe wiersze poleceń kompilacji](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
+Zawiera listę przykładowych wierszy poleceń, które można modyfikować do własnych potrzeb.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md) \
-Provides lists of compiler options, organized alphabetically or by purpose.
+ \ [kompilator Visual Basic wiersza polecenia](../../../visual-basic/reference/command-line-compiler/index.md)
+Zawiera listy opcji kompilatora, zorganizowane w porządku alfabetycznym lub według przeznaczenie.
 
-[Conditional Compilation](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
-Describes how to compile particular sections of code.
+ \ [kompilacji warunkowej](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+Opisuje sposób kompilowania określonych sekcji kodu.
 
-[Building and Cleaning Projects and Solutions in Visual Studio](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \
-Describes how to organize what will be included in different builds, choose project properties, and ensure that projects build in the correct order.
+[Kompilowanie i czyszczenie projektów i rozwiązań w programie Visual Studio](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \
+W tym artykule opisano sposób organizowania, co zostanie uwzględnione w różnych kompilacjach, wybrać właściwości projektu i upewnić się, że projekty kompilują się w poprawnej kolejności.

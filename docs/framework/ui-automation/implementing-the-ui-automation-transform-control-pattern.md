@@ -15,29 +15,29 @@ ms.locfileid: "74447059"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>Implementacja wzorca formantu przekształcania automatyzacji interfejsu użytkownika
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.ITransformProvider>, including information about properties, methods, and events. Links to additional references are listed at the end of the topic.  
+ W tym temacie przedstawiono wytyczne i konwencje dotyczące implementowania <xref:System.Windows.Automation.Provider.ITransformProvider>, w tym informacje o właściwościach, metodach i zdarzeniach. Linki do dodatkowych odwołań znajdują się na końcu tematu.  
   
- The <xref:System.Windows.Automation.TransformPattern> control pattern is used to support controls that can be moved, resized, or rotated within a two-dimensional space. For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
+ <xref:System.Windows.Automation.TransformPattern> wzorzec kontroli służy do obsługi kontrolek, które można przenosić, zmieniać rozmiar lub obracać w obrębie przestrzeni dwuwymiarowej. Aby zapoznać się z przykładami formantów implementujących ten wzorzec kontrolek, zobacz [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Implementation Guidelines and Conventions  
- When implementing the Transform control pattern, note the following guidelines and conventions:  
+## <a name="implementation-guidelines-and-conventions"></a>Wytyczne i konwencje dotyczące implementacji  
+ Podczas implementowania wzorca kontroli transformacji należy zwrócić uwagę na następujące wytyczne i konwencje:  
   
-- Support for this control pattern is not limited to objects on the desktop. This control pattern must also be supported by the children of a container object if the children can be moved, resized, or rotated freely within the boundaries of the container.  
+- Obsługa tego wzorca kontroli nie jest ograniczona do obiektów na pulpicie. Ten wzorzec kontrolki musi być również obsługiwany przez elementy podrzędne obiektu kontenera, jeśli elementy podrzędne można przenosić, zmieniać rozmiar lub swobodnie obracać w granicach kontenera.  
   
-- An object cannot be moved, resized, or rotated such that its resulting screen location would be completely outside the coordinates of its container and therefore inaccessible to the keyboard or mouse (for example, when a top-level window is moved off-screen or a child object is moved outside the boundaries of the container's viewport). In these cases, the object is placed as close to the requested screen coordinates as possible with the top or left coordinates overridden to be within the container boundaries.  
+- Nie można przenieść, zmienić rozmiaru ani obrócić obiektu, tak aby jego lokalizacja ekranu była całkowicie poza współrzędnymi kontenera i w związku z tym nie jest dostępna dla klawiatury lub myszy (na przykład gdy okno najwyższego poziomu jest przenoszone poza ekranem lub obiekt podrzędny jest przenoszony poza granice okienka ekranu kontenera. W takich przypadkach obiekt jest umieszczany w pobliżu żądanych współrzędnych ekranu, a współrzędne górne lub lewe są zastępowane w granicach kontenera.  
   
-- For multi-monitor systems, if an object is moved, resized, or rotated completely outside the combined desktop screen coordinates, the object is placed on the primary monitor as close to the requested coordinates as possible.  
+- W przypadku systemów z obsługą kilku monitorów, jeśli obiekt jest przenoszony, zmieniany jest rozmiar lub obracany całkowicie poza połączone Współrzędne ekranu pulpitu, obiekt zostanie umieszczony na monitorze podstawowym jako blisko żądanych współrzędnych.  
   
-- All parameters and property values are absolute and independent of locale.  
+- Wszystkie parametry i wartości właściwości są bezwzględne i niezależne od ustawień regionalnych.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
-## <a name="required-members-for-itransformprovider"></a>Required Members for ITransformProvider  
- The following properties and methods are required for implementing <xref:System.Windows.Automation.Provider.ITransformProvider>.  
+## <a name="required-members-for-itransformprovider"></a>Wymagane elementy członkowskie dla ITransformProvider  
+ Do zaimplementowania <xref:System.Windows.Automation.Provider.ITransformProvider>są wymagane następujące właściwości i metody.  
   
-|Required members|Member type|Uwagi|  
+|Wymagane elementy członkowskie|Typ elementu członkowskiego|Uwagi|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Właściwość|Brak|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Właściwość|Brak|  
@@ -46,17 +46,17 @@ ms.locfileid: "74447059"
 |<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Metoda|Brak|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Metoda|Brak|  
   
- This control pattern has no associated events.  
+ Ten wzorzec kontrolki nie ma skojarzonych zdarzeń.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Wyjątki  
- Providers must throw the following exceptions.  
+ Dostawcy muszą zgłosić następujące wyjątki.  
   
-|Exception Type|Warunek|  
+|Typ wyjątku|Warunek|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> is false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> is false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> is false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> — Jeśli <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> ma wartość false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> — Jeśli <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> ma wartość false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> — Jeśli <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> ma wartość false.|  
   
 ## <a name="see-also"></a>Zobacz także
 

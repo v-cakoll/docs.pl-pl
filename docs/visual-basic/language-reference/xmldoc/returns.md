@@ -12,8 +12,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352243"
 ---
-# <a name="returns-visual-basic"></a>\<returns> (Visual Basic)
-Specifies the return value of the property or function.  
+# <a name="returns-visual-basic"></a>\<zwraca > (Visual Basic)
+Określa wartość zwracaną przez właściwość lub funkcję.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,15 +23,15 @@ Specifies the return value of the property or function.
   
 ## <a name="parameters"></a>Parametry  
  `description`  
- A description of the return value.  
+ Opis wartości zwracanej.  
   
 ## <a name="remarks"></a>Uwagi  
- Use the `<returns>` tag in the comment for a method declaration to describe the return value.  
+ Użyj znacznika `<returns>` w komentarzu dla deklaracji metody, aby opisać wartość zwracaną.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- This example uses the `<returns>` tag to explain what the `DoesRecordExist` function returns.  
+ W tym przykładzie używa znacznika `<returns>`, aby wyjaśnić, co zwraca funkcja `DoesRecordExist`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

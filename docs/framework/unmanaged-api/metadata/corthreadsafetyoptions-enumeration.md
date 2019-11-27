@@ -23,7 +23,7 @@ ms.locfileid: "74442471"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions — Wyliczenie
 
-Specifies flags to select options for thread safety.
+Określa flagi, aby wybrać opcje bezpieczeństwa wątku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,17 +39,17 @@ typedef enum CorThreadSafetyOptions {
 
 |Element członkowski|Opis|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|Default value. Same as `MDThreadSafetyOff`.|
-|`MDThreadSafetyOff`|Indicates that a reader/writer lock cannot be set.|
-|`MDThreadSafetyOn`|Indicates that a reader/writer lock can be set.|
+|`MDThreadSafetyDefault`|Wartość domyślna. Taki sam jak `MDThreadSafetyOff`.|
+|`MDThreadSafetyOff`|Wskazuje, że nie można ustawić blokady czytnika/składnika zapisywania.|
+|`MDThreadSafetyOn`|Wskazuje, że można ustawić blokadę czytnika/składnika zapisywania.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** CorHdr.h
+**Nagłówek:** CorHdr. h
 
-**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

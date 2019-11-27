@@ -14,87 +14,87 @@ ms.locfileid: "74446885"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Uzyskiwanie elementów automatyzacji interfejsu użytkownika
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic describes the various ways of obtaining <xref:System.Windows.Automation.AutomationElement> objects for [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.  
+ W tym temacie opisano różne sposoby uzyskiwania <xref:System.Windows.Automation.AutomationElement> obiektów dla [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elementów.  
   
 > [!CAUTION]
-> If your client application might attempt to find elements in its own user interface, you must make all [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] calls on a separate thread. For more information, see [UI Automation Threading Issues](ui-automation-threading-issues.md).  
+> Jeśli aplikacja kliencka może próbować znaleźć elementy w osobnym interfejsie użytkownika, należy wykonać wszystkie wywołania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] w osobnym wątku. Aby uzyskać więcej informacji, zobacz temat [problemy z wątkem automatyzacji interfejsu użytkownika](ui-automation-threading-issues.md).  
   
 <a name="The_Root_Element"></a>   
-## <a name="root-element"></a>Root Element  
- All searches for <xref:System.Windows.Automation.AutomationElement> objects must have a starting-place. This can be any element, including the desktop, an application window, or a control.  
+## <a name="root-element"></a>Element główny  
+ Wszystkie wyszukiwania <xref:System.Windows.Automation.AutomationElement> obiektów muszą mieć miejsce początkowe. Może to być dowolny element, łącznie z pulpitem, oknem aplikacji lub kontrolką.  
   
- The root element for the desktop, from which all elements are descended, is obtained from the static <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> property.  
+ Element główny pulpitu, z którego są umieszczane wszystkie elementy, jest uzyskiwany ze statycznej właściwości <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType>.  
   
 > [!CAUTION]
-> In general, you should try to obtain only direct children of the <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. A search for descendants may iterate through hundreds or even thousands of elements, possibly resulting in a stack overflow. If you are attempting to obtain a specific element at a lower level, you should start your search from the application window or from a container at a lower level.  
+> Ogólnie rzecz biorąc, należy podjąć próbę uzyskania tylko bezpośrednich elementów podrzędnych <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Wyszukiwanie elementów podrzędnych może przechodzić przez setki lub nawet tysiące elementów, co może spowodować przepełnienie stosu. Jeśli próbujesz uzyskać określony element na niższym poziomie, należy rozpocząć wyszukiwanie od okna aplikacji lub kontenera na niższym poziomie.  
   
 <a name="Using_Conditions"></a>   
 ## <a name="conditions"></a>Warunki  
- For most techniques you can use to retrieve [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements, you must specify a <xref:System.Windows.Automation.Condition>, which is a set of criteria defining what elements you want to retrieve.  
+ W przypadku większości technik, których można użyć do pobierania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elementów, należy określić <xref:System.Windows.Automation.Condition>, który jest zestawem kryteriów definiujących elementy, które mają zostać pobrane.  
   
- The simplest condition is <xref:System.Windows.Automation.Condition.TrueCondition>, a predefined object specifying that all elements within the search scope are to be returned. <xref:System.Windows.Automation.Condition.FalseCondition>, the converse of <xref:System.Windows.Automation.Condition.TrueCondition>, is less useful, as it would prevent any elements from being found.  
+ Najprostszym warunkiem jest <xref:System.Windows.Automation.Condition.TrueCondition>, wstępnie zdefiniowany obiekt określający, że wszystkie elementy w zakresie wyszukiwania mają być zwracane. <xref:System.Windows.Automation.Condition.FalseCondition>, odwrotność <xref:System.Windows.Automation.Condition.TrueCondition>, jest mniej przydatna, ponieważ uniemożliwia znalezienie jakichkolwiek elementów.  
   
- Three other predefined conditions can be used alone or in combination with other conditions: <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>, and <xref:System.Windows.Automation.Automation.RawViewCondition>. <xref:System.Windows.Automation.Automation.RawViewCondition>, used by itself, is equivalent to <xref:System.Windows.Automation.Condition.TrueCondition>, because it does not filter elements by their <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> or <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> properties.  
+ Trzy inne wstępnie zdefiniowane warunki mogą być używane autonomicznie lub w połączeniu z innymi warunkami: <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>i <xref:System.Windows.Automation.Automation.RawViewCondition>. <xref:System.Windows.Automation.Automation.RawViewCondition>, używane przez siebie, jest odpowiednikiem <xref:System.Windows.Automation.Condition.TrueCondition>, ponieważ nie filtruje elementów według ich <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> lub <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> właściwości.  
   
- Other conditions are built up from one or more <xref:System.Windows.Automation.PropertyCondition> objects, each of which specifies a property value. For example, a <xref:System.Windows.Automation.PropertyCondition> might specify that the element is enabled, or that it supports a certain control pattern.  
+ Inne warunki są kompilowane z co najmniej jednego <xref:System.Windows.Automation.PropertyCondition> obiektów, z których każdy określa wartość właściwości. Na przykład <xref:System.Windows.Automation.PropertyCondition> może określić, że element jest włączony lub że obsługuje określony wzorzec formantu.  
   
- Conditions can be combined using Boolean logic by constructing objects of types <xref:System.Windows.Automation.AndCondition>, <xref:System.Windows.Automation.OrCondition>, and <xref:System.Windows.Automation.NotCondition>.  
+ Warunki można łączyć za pomocą logiki logicznej przez Konstruowanie obiektów typów <xref:System.Windows.Automation.AndCondition>, <xref:System.Windows.Automation.OrCondition>i <xref:System.Windows.Automation.NotCondition>.  
   
 <a name="Search_Scope"></a>   
-## <a name="search-scope"></a>Search Scope  
- Searches done by using <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> or <xref:System.Windows.Automation.AutomationElement.FindAll%2A> must have a scope as well as a starting-place.  
+## <a name="search-scope"></a>Zakres wyszukiwania  
+ Wyszukiwania wykonywane przy użyciu <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> lub <xref:System.Windows.Automation.AutomationElement.FindAll%2A> muszą mieć zakres oraz miejsce początkowe.  
   
- The scope defines the space around the starting-place that is to be searched. This might include the element itself, its siblings, its parent, its ancestors, its immediate children, and its descendants.  
+ Zakres określa miejsce w miejscu, w którym ma być przeszukiwany. Może to dotyczyć samego elementu, jego elementów równorzędnych, jego elementu nadrzędnego, jego obiektów nadrzędnych, bezpośrednich elementów podrzędnych i jego elementów podrzędnych.  
   
- The scope of a search is defined by a bitwise combination of values from the <xref:System.Windows.Automation.TreeScope> enumeration.  
+ Zakres wyszukiwania jest definiowany przez bitową kombinację wartości z wyliczenia <xref:System.Windows.Automation.TreeScope>.  
   
 <a name="Finding_a_Known_Element"></a>   
-## <a name="finding-a-known-element"></a>Finding a Known Element  
- To find a known element, identified by its <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>, or some other property or combination of properties, it is easiest to use the <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> method. If the element sought is an application window, the starting-point of the search can be the <xref:System.Windows.Automation.AutomationElement.RootElement%2A>.  
+## <a name="finding-a-known-element"></a>Znajdowanie znanego elementu  
+ Aby znaleźć znany element, identyfikowany przez jego <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>lub inną właściwość lub kombinację właściwości, najłatwiej jest użyć metody <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>. Jeśli element szukiwany jest oknem aplikacji, punktem początkowym wyszukiwania może być <xref:System.Windows.Automation.AutomationElement.RootElement%2A>.  
   
- This way of finding [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements is most useful in automated testing scenarios.  
+ W ten sposób Znajdowanie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elementów jest najbardziej przydatne w scenariuszach zautomatyzowanych testów.  
   
 <a name="Finding_Elements_in_a_Subtree"></a>   
-## <a name="finding-elements-in-a-subtree"></a>Finding Elements in a Subtree  
- To find all elements meeting specific criteria that are related to a known element, you can use <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. For example, you could use this method to retrieve list items or menu items from a list or menu, or to identify all controls in a dialog box.  
+## <a name="finding-elements-in-a-subtree"></a>Znajdowanie elementów w poddrzewie  
+ Aby znaleźć wszystkie elementy spełniające określone kryteria dotyczące znanego elementu, można użyć <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Na przykład można użyć tej metody do pobierania elementów listy lub elementów menu z listy lub menu lub do identyfikowania wszystkich kontrolek w oknie dialogowym.  
   
 <a name="Walking_a_Subtree"></a>   
-## <a name="walking-a-subtree"></a>Walking a Subtree  
- If you have no prior knowledge of the applications that your client may be used with, you can construct a subtree of all elements of interest by using the <xref:System.Windows.Automation.TreeWalker> class. Your application might do this in response to a focus-changed event; that is, when an application or control receives input focus, the UI Automation client examines children and perhaps all descendants of the focused element.  
+## <a name="walking-a-subtree"></a>Przechodzenie do poddrzewa  
+ Jeśli nie masz wcześniejszej znajomości aplikacji, z którymi może korzystać klient, możesz skonstruować poddrzewo wszystkich interesujących Cię elementów przy użyciu klasy <xref:System.Windows.Automation.TreeWalker>. Aplikacja może to zrobić w odpowiedzi na zdarzenie zmienione fokusem. oznacza to, że gdy aplikacja lub formant otrzymuje fokus wprowadzania, klient automatyzacji interfejsu użytkownika sprawdzi elementy podrzędne i ewentualnie wszystkie elementy podrzędne elementu Focus.  
   
- Another way in which <xref:System.Windows.Automation.TreeWalker> can be used is to identify the ancestors of an element. For example, by walking up the tree you can identify the parent window of a control.  
+ Innym sposobem, w którym <xref:System.Windows.Automation.TreeWalker> można użyć, jest zidentyfikowanie elementów nadrzędnych elementu. Na przykład poprzez poznanie drzewa można zidentyfikować okno nadrzędne kontrolki.  
   
- You can use <xref:System.Windows.Automation.TreeWalker> either by creating an object of the class (defining the elements of interest by passing a <xref:System.Windows.Automation.Condition>), or by using one of the following predefined objects that are defined as fields of <xref:System.Windows.Automation.TreeWalker>.  
+ <xref:System.Windows.Automation.TreeWalker> można użyć przez utworzenie obiektu klasy (Definiowanie elementów interesujących przez przekazanie <xref:System.Windows.Automation.Condition>) lub użycie jednego z następujących wstępnie zdefiniowanych obiektów, które są zdefiniowane jako pola <xref:System.Windows.Automation.TreeWalker>.  
   
 |||  
 |-|-|  
-|<xref:System.Windows.Automation.TreeWalker.ContentViewWalker>|Finds only elements whose <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> property is `true`.|  
-|<xref:System.Windows.Automation.TreeWalker.ControlViewWalker>|Finds only elements whose <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> property is `true`.|  
-|<xref:System.Windows.Automation.TreeWalker.RawViewWalker>|Finds all elements.|  
+|<xref:System.Windows.Automation.TreeWalker.ContentViewWalker>|Znajduje tylko elementy, których właściwość <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> jest `true`.|  
+|<xref:System.Windows.Automation.TreeWalker.ControlViewWalker>|Znajduje tylko elementy, których właściwość <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> jest `true`.|  
+|<xref:System.Windows.Automation.TreeWalker.RawViewWalker>|Znajduje wszystkie elementy.|  
   
- After you have obtained a <xref:System.Windows.Automation.TreeWalker>, using it is straightforward. Simply call the `Get` methods to navigate among elements of the subtree.  
+ Po uzyskaniu <xref:System.Windows.Automation.TreeWalker>, korzystanie z niego jest proste. Po prostu wywołaj metody `Get`, aby nawigować między elementami poddrzewa.  
   
- The <xref:System.Windows.Automation.TreeWalker.Normalize%2A> method can be used for navigating to an element in the subtree from another element that is not part of the view. For example, suppose you have created a view of a subtree by using <xref:System.Windows.Automation.TreeWalker.ContentViewWalker>. Your application then receives notification that a scroll bar has received the input focus. Because a scroll bar is not a content element, it is not present in your view of the subtree. However, you can pass the <xref:System.Windows.Automation.AutomationElement> representing the scroll bar to <xref:System.Windows.Automation.TreeWalker.Normalize%2A> and retrieve the nearest ancestor that is in the content view.  
+ Metoda <xref:System.Windows.Automation.TreeWalker.Normalize%2A> może służyć do przechodzenia do elementu w poddrzewie z innego elementu, który nie jest częścią widoku. Załóżmy na przykład, że utworzono widok poddrzewa przy użyciu <xref:System.Windows.Automation.TreeWalker.ContentViewWalker>. Aplikacja otrzyma powiadomienie o tym, że pasek przewijania otrzymał fokus wprowadzania. Ponieważ pasek przewijania nie jest elementem zawartości, nie jest obecny w widoku poddrzewa. Można jednak przekazać <xref:System.Windows.Automation.AutomationElement> reprezentujące pasek przewijania, aby <xref:System.Windows.Automation.TreeWalker.Normalize%2A> i pobrać najbliższy element nadrzędny, który znajduje się w widoku zawartości.  
   
 <a name="Other_Ways_to_Retrieve_an_Element"></a>   
-## <a name="other-ways-to-retrieve-an-element"></a>Other Ways to Retrieve an Element  
- In addition to searches and navigation, you can retrieve an <xref:System.Windows.Automation.AutomationElement> in the following ways.  
+## <a name="other-ways-to-retrieve-an-element"></a>Inne sposoby pobierania elementu  
+ Oprócz wyszukiwania i nawigacji można pobrać <xref:System.Windows.Automation.AutomationElement> w następujący sposób.  
   
-### <a name="from-an-event"></a>From an Event  
- When your application receives a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event, the source object passed to your event handler is an <xref:System.Windows.Automation.AutomationElement>. For example, if you have subscribed to focus-changed events, the source passed to your <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> is the element that received the focus.  
+### <a name="from-an-event"></a>Ze zdarzenia  
+ Gdy aplikacja otrzymuje zdarzenie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], obiekt źródłowy przesłany do programu obsługi zdarzeń jest <xref:System.Windows.Automation.AutomationElement>. Na przykład Jeśli subskrybujesz zdarzenia ze zmienionym fokusem, źródłem przekazanym do <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> jest element, który otrzymał fokus.  
   
- For more information, see [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md).  
+ Aby uzyskać więcej informacji, zobacz [subskrybowanie zdarzeń automatyzacji interfejsu użytkownika](subscribe-to-ui-automation-events.md).  
   
-### <a name="from-a-point"></a>From a Point  
- If you have screen coordinates (for example, a cursor position), you can retrieve an <xref:System.Windows.Automation.AutomationElement> by using the static <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> method.  
+### <a name="from-a-point"></a>Z punktu  
+ Jeśli masz Współrzędne ekranu (na przykład położenie kursora), możesz pobrać <xref:System.Windows.Automation.AutomationElement> przy użyciu statycznej metody <xref:System.Windows.Automation.AutomationElement.FromPoint%2A>.  
   
-### <a name="from-a-window-handle"></a>From a Window Handle  
- To retrieve an <xref:System.Windows.Automation.AutomationElement> from an HWND, use the static <xref:System.Windows.Automation.AutomationElement.FromHandle%2A> method.  
+### <a name="from-a-window-handle"></a>Z uchwytu okna  
+ Aby pobrać <xref:System.Windows.Automation.AutomationElement> z elementu HWND, użyj metody statycznej <xref:System.Windows.Automation.AutomationElement.FromHandle%2A>.  
   
-### <a name="from-the-focused-control"></a>From the Focused Control  
- You can retrieve an <xref:System.Windows.Automation.AutomationElement> that represents the focused control from the static <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> property.  
+### <a name="from-the-focused-control"></a>Z poziomu formantu ukierunkowanego  
+ Można pobrać <xref:System.Windows.Automation.AutomationElement>, która reprezentuje formant ukierunkowany ze statycznej właściwości <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A>.  
   
 ## <a name="see-also"></a>Zobacz także
 

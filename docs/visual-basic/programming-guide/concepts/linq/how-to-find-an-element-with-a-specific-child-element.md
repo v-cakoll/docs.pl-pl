@@ -1,5 +1,5 @@
 ---
-title: 'How to: Find an Element with a Specific Child Element'
+title: 'Instrukcje: Znajdowanie elementu z określonym elementem podrzędnym'
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
 ms.openlocfilehash: a00ca238c67e2edf4e2e68a46fbd7e2cb480ba15
@@ -9,13 +9,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352919"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>How to: Find an Element with a Specific Child Element (Visual Basic)
-This topic shows how to find a particular element that has a child element with a specific value.  
+# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>Instrukcje: Znajdowanie elementu z określonym elementem podrzędnym (Visual Basic)
+W tym temacie pokazano, jak znaleźć konkretny element, który ma element podrzędny o określonej wartości.  
   
 ## <a name="example"></a>Przykład  
- The example finds the `Test` element that has a `CommandLine` child element with the value of "Examp2.EXE".  
+ Przykład umożliwia znalezienie elementu `Test`, który ma `CommandLine` element podrzędny o wartości "Examp2. EXE".  
   
- This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Konfiguracja testu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("TestConfig.xml")  
@@ -35,12 +35,12 @@ Next
 0006  
 ```  
   
- Note that this example uses the [XML Child axis property](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), the [XML Attribute axis property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md), and the [XML Value property](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ Należy zauważyć, że w tym przykładzie jest stosowana [Właściwość osi elementu podrzędnego XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), [Właściwość osi atrybutu XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)i [właściwość wartość XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
 ## <a name="example"></a>Przykład  
- The following example shows the same query for XML that is in a namespace. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw — omówienie (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- This example uses the following XML document: [Sample XML File: Test Configuration in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Konfiguracja testowa w przestrzeni nazw](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -70,6 +70,6 @@ End Module
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Projection Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Zapytania podstawowe (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Standardowe operatory zapytań — Omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Operacje projekcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

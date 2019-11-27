@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432325"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>IMetaDataEmit::SetPermissionSetProps — Metoda
-Sets or updates features of the metadata signature of a permission set defined by a prior call to [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
+Ustawia lub aktualizuje funkcje sygnatury metadanych zestawu uprawnień zdefiniowanego przez poprzednie wywołanie do [IMetaDataEmit::D efinepermissionset](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,28 +39,28 @@ HRESULT SetPermissionSetProps (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- [in] A metadata token that represents the object to be decorated.  
+ podczas Token metadanych, który reprezentuje obiekt, który ma być dekoracyjny.  
   
  `dwAction`  
- [in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.  
+ podczas Wartość [CorDeclSecurity —](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) , która określa typ zabezpieczenia deklaracyjnego do użycia.  
   
  `pvPermission`  
- [in] The permission BLOB.  
+ podczas Obiekt BLOB uprawnień.  
   
  `cbPermission`  
- [in] The size, in bytes, of `pvPermission`.  
+ podczas Rozmiar w bajtach `pvPermission`.  
   
  `ppm`  
- [out] An `mdPermission` metadata token that represents the updated permissions.  
+ określoną `mdPermission` token metadanych, który reprezentuje zaktualizowane uprawnienia.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

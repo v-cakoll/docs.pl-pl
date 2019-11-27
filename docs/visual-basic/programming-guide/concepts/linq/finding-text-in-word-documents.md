@@ -9,17 +9,17 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353474"
 ---
-# <a name="finding-text-in-word-documents-visual-basic"></a>Finding Text in Word Documents (Visual Basic)
+# <a name="finding-text-in-word-documents-visual-basic"></a>Znajdowanie tekstu w dokumentach programu Word (Visual Basic)
 
-This topic extends the previous queries to do something useful: find all occurrences of a string in the document.
+Ten temat rozszerza poprzednie zapytania, aby wykonać coś użytecznego: Znajdź wszystkie wystąpienia ciągu w dokumencie.
 
 ## <a name="example"></a>Przykład
 
-This example processes a WordprocessingML document, to find all the occurrences of a specific piece of text in the document. To do this, we use a query that finds the string "Hello". This example builds on the previous examples in this tutorial. The new query is called out in comments in the code below.
+Ten przykład przetwarza dokument WordprocessingML, aby znaleźć wszystkie wystąpienia określonego fragmentu tekstu w dokumencie. W tym celu użyjemy zapytania, które odnajdzie ciąg "Hello". Ten przykład kompiluje się zgodnie z poprzednimi przykładami w tym samouczku. Nowe zapytanie jest wywoływane w komentarzach w poniższym kodzie.
 
-For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).
+Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu, zobacz [Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).
 
-This example uses classes found in the WindowsBase assembly. It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.
+Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.
 
 ```vb
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
@@ -160,7 +160,7 @@ StyleName:Code >        Console.WriteLine("Hello World")<
 StyleName:Code >Hello World<
 ```
 
-You can, of course, modify the search so that it searches for lines with a specific style. The following query finds all blank lines that have the Code style:
+Można oczywiście zmodyfikować wyszukiwanie, tak aby wyszukiwać wiersze o określonym stylu. Poniższe zapytanie znajduje wszystkie puste wiersze, które mają styl kodu:
 
 ```vb
 Imports System.IO.Packaging
@@ -300,18 +300,18 @@ Ten przykład generuje następujące wyniki:
 StyleName:Code ><
 ```
 
-Of course, this example could be enhanced in a number of ways. For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.
+Oczywiście ten przykład można rozszerzyć na wiele sposobów. Na przykład możemy używać wyrażeń regularnych do wyszukiwania tekstu, możemy przejść przez wszystkie pliki programu Word w określonym katalogu i tak dalej.
 
-Note that this example performs approximately as well as if it were written as a single query. Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated. For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Należy zauważyć, że ten przykład wykonuje około, a także, jeśli został zapisany jako pojedyncze zapytanie. Ponieważ każde zapytanie jest zaimplementowane w opóźniony, odroczony sposób, każde zapytanie nie zwraca wyników, dopóki zapytanie nie zostanie powtórzone. Aby uzyskać więcej informacji na temat wykonywania i oceny z opóźnieniem, zobacz [odroczone wykonywanie i Ocena z opóźnieniem w LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
 
 ## <a name="next-steps"></a>Następne kroki
 
-The next section provides more information about WordprocessingML documents:
+Następna sekcja zawiera więcej informacji na temat dokumentów WordprocessingML:
 
-- [Details of Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Szczegóły dotyczące dokumentów Office Open XML WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Refactoring Using a Pure Function (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
-- [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refaktoryzacja przy użyciu czystej funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
+- [Wykonywanie odroczone i Ocena z opóźnieniem w LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432070"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType — Metoda
-Creates an `ExportedType` structure containing metadata for the specified exported type, and returns the associated metadata token.  
+Tworzy strukturę `ExportedType` zawierającą metadane dla określonego typu wyeksportowanego i zwraca skojarzony token metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,39 +39,39 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>Parametry  
  `szName`  
- [in] The name of type to be exported. For version 1.1 of the common language runtime, the name of the exported type must exactly match the name given in the `TypeDef` for the type.  
+ podczas Nazwa typu do wyeksportowania. W przypadku wersji 1,1 środowiska uruchomieniowego języka wspólnego nazwa wyeksportowanego typu musi być dokładnie zgodna z nazwą podaną w `TypeDef` dla tego typu.  
   
  `tkImplementation`  
- [in] A token specifying where the exported type is implemented. The valid values and their associated meanings are:  
+ podczas Token określający, gdzie jest zaimplementowany wyeksportowany typ. Prawidłowe wartości i ich powiązane znaczenie są następujące:  
   
-- `mdFile` The type is implemented in a different file within this assembly.  
+- `mdFile` typ jest zaimplementowany w innym pliku w tym zestawie.  
   
-- `mdAssemblyRef` The type is implemented in a different assembly.  
+- `mdAssemblyRef` typ jest zaimplementowany w innym zestawie.  
   
-- `mdExportedTYpe` The type is nested within some other type.  
+- `mdExportedTYpe` typ jest zagnieżdżony w innym typie.  
   
-- `mdFileNil` The type is in the same file as the manifest and is not a nested type.  
+- `mdFileNil` typ znajduje się w tym samym pliku co manifest i nie jest typem zagnieżdżonym.  
   
  `tkTypeDef`  
- [in] A token to the metadata that specifies the type to be exported. This value is entered in the `TypeDef` table in the file that implements the type and is relevant only if that file is in this assembly.  
+ podczas Token do metadanych, który określa typ do wyeksportowania. Ta wartość jest wprowadzana w tabeli `TypeDef` w pliku, który implementuje typ i ma zastosowanie tylko wtedy, gdy ten plik znajduje się w tym zestawie.  
   
  `dwExportedTypeFlags`  
- [in] A bitwise combination of [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration values that define the property settings for the exported type.  
+ podczas Bitowa kombinacja wartości wyliczenia [CorTypeAttr —](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) , które definiują ustawienia właściwości dla wyeksportowanego typu.  
   
  `pmdct`  
- [out] A pointer to the returned metadata token that indicates the exported type.  
+ określoną Wskaźnik do zwracanego tokenu metadanych, który wskazuje wyeksportowany typ.  
   
 ## <a name="remarks"></a>Uwagi  
- An `ExportedType` metadata structure must be defined for each type that is exposed by this assembly and that is implemented in a module other than the one containing the manifest.  
+ Dla każdego typu, który jest udostępniany przez ten zestaw, należy zdefiniować strukturę metadanych `ExportedType`, która jest zaimplementowana w module innym niż ten, który zawiera manifest.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

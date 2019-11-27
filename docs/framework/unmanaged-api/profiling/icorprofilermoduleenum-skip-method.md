@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435980"
 ---
 # <a name="icorprofilermoduleenumskip-method"></a>ICorProfilerModuleEnum::Skip — Metoda
-Advances the enumerator's cursor from its current position so that the specified number of elements are skipped.  
+Przesuwa kursor modułu wyliczającego z jego bieżącej pozycji, tak aby określona liczba elementów została pominięta.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,27 +33,27 @@ HRESULT Skip([in] ULONG celt);
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- [in] The number of elements to be skipped.  
+ podczas Liczba elementów, które mają zostać pominięte.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
+ Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`celt` elements were skipped.|  
-|S_FALSE|Fewer than `celt` elements were skipped, which indicates that there are no more elements.|  
+|S_OK|elementy `celt` zostały pominięte.|  
+|S_FALSE|Pominięto mniej niż `celt` elementów, co oznacza, że nie ma więcej elementów.|  
   
 ## <a name="remarks"></a>Uwagi  
- The new position of this enumerator's cursor is (current position) + `celt`.  
+ Nowa pozycja kursora tego modułu wyliczającego to (bieżące położenie) + `celt`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445563"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile — Metoda
-Enables you to specify or reset the manifest file that the linker uses when it creates the assembly.  
+Umożliwia określenie lub zresetowanie pliku manifestu używanego przez konsolidatora podczas tworzenia zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,16 +35,16 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>Parametry  
  `pszFile`  
   
- The name of the manifest file whose contents are put into the Win32 resources blob.  
+ Nazwa pliku manifestu, którego zawartość jest umieszczana w obiekcie blob zasobów Win32.  
   
-## <a name="return-value"></a>Wartość zwracana  
- Returns S_OK if the method succeeds.  
+## <a name="return-value"></a>Wartość zwrócona  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="remarks"></a>Uwagi  
- Call this before asking for the Win32ResBlob. The value of the `pszFile` parameter is the name of the manifest file whose contents are read and put in the Win32 resources with ID of RT_MANIFEST. When called by using a parameter of NULL, any previously read manifest is cleared. This enables one to reset the state of the linker to that of initialization time.  
+ Wywołaj to przed pytaniem o Win32ResBlob. Wartość parametru `pszFile` jest nazwą pliku manifestu, którego zawartość jest odczytywana i umieszczana w zasobach Win32 z IDENTYFIKATORem RT_MANIFEST. Gdy wywoływana przy użyciu parametru o wartości NULL, każdy poprzednio odczytany manifest jest czyszczony. Umożliwia to jednemu resetowaniu stanu konsolidatora do czasu inicjacji.  
   
 ## <a name="requirements"></a>Wymagania  
- Requires aLink.h  
+ Wymaga aLink. h  
   
 ## <a name="see-also"></a>Zobacz także
 

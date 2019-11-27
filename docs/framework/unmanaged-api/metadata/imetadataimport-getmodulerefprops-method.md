@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437318"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps — Metoda
-Gets the name of the module referenced by the specified metadata token.  
+Pobiera nazwę modułu, do którego odwołuje się określony token metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,25 +38,25 @@ HRESULT GetModuleRefProps (
   
 ## <a name="parameters"></a>Parametry  
  `mur`  
- [in] The ModuleRef metadata token that references the module to get metadata information for.  
+ podczas Token metadanych elementu ModuleRef odwołujący się do modułu, w którym są uzyskiwane informacje o metadanych.  
   
  `szName`  
- [out] A buffer to hold the module name.  
+ określoną Bufor przechowujący nazwę modułu.  
   
  `cchName`  
- [in] The requested size of `szName` in wide characters.  
+ podczas Żądany rozmiar `szName` w znaki dwubajtowe.  
   
  `pchName`  
- [out] The returned size of `szName` in wide characters.  
+ określoną Zwrócony rozmiar `szName` znaków dwubajtowych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

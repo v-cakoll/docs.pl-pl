@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445888"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences — Metoda
-Notifies the profiler about objects in memory that are being referenced by the specified object.  
+Powiadamia profiler o obiektach w pamięci, do których odwołuje się określony obiekt.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,34 +37,34 @@ HRESULT ObjectReferences(
   
 ## <a name="parameters"></a>Parametry  
  `objectId`  
- [in] The ID of the object that is referencing objects.  
+ podczas Identyfikator obiektu, który odwołuje się do obiektów.  
   
  `classId`  
- [in] The ID of the class that the specified object is an instance of.  
+ podczas Identyfikator klasy, do której należy wystąpienie określonego obiektu.  
   
  `cObjectRefs`  
- [in] The number of objects referenced by the specified object (that is, the number of elements in the `objectRefIds` array).  
+ podczas Liczba obiektów przywoływanych przez określony obiekt (czyli liczba elementów w tablicy `objectRefIds`).  
   
  `objectRefIds`  
- [in] An array of IDs of objects that are being referenced by `objectId`.  
+ podczas Tablica identyfikatorów obiektów, do których odwołują się `objectId`.  
   
 ## <a name="remarks"></a>Uwagi  
- The `ObjectReferences` method is called for each object remaining in the heap after a garbage collection has completed. If the profiler returns an error from this callback, the profiling services will discontinue invoking this callback until the next garbage collection.  
+ Metoda `ObjectReferences` jest wywoływana dla każdego obiektu pozostałego w stercie po zakończeniu odzyskiwania pamięci. Jeśli profiler zwróci błąd z tego wywołania zwrotnego, usługi profilowania będą kontynuowały wywoływanie tego wywołania zwrotnego do momentu kolejnego wyrzucania elementów bezużytecznych.  
   
- The `ObjectReferences` callback can be used in conjunction with the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) callback to create a complete object reference graph for the runtime. The common language runtime (CLR) ensures that each object reference is reported only once by the `ObjectReferences` method.  
+ Wywołania zwrotnego `ObjectReferences` można użyć w połączeniu z wywołaniem zwrotnym [ICorProfilerCallback:: RootReferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) w celu utworzenia kompletnego grafu odwołań do obiektów dla środowiska uruchomieniowego. Środowisko uruchomieniowe języka wspólnego (CLR) gwarantuje, że każde odwołanie do obiektu jest raportowane tylko raz przez metodę `ObjectReferences`.  
   
- The object IDs returned by `ObjectReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects. Therefore, profilers must not attempt to inspect objects during an `ObjectReferences` call. When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, the garbage collection is complete and inspection can be safely done.  
+ Identyfikatory obiektów zwrócone przez `ObjectReferences` nie są prawidłowe podczas wywołania zwrotnego, ponieważ wyrzucanie elementów bezużytecznych może znajdować się w trakcie przesuwania obiektów. W związku z tym, nie mogą próbować zbadać obiektów podczas wywołania `ObjectReferences`. Gdy wywoływana jest [ICorProfilerCallback2:: GarbageCollectionFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) , odzyskiwanie pamięci jest kompletne i można bezpiecznie wykonać inspekcję.  
   
- A null `ClassId` indicates that `objectId` has a type that is unloading.  
+ `ClassId` o wartości null wskazuje, że `objectId` ma typ, który jest wyładowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

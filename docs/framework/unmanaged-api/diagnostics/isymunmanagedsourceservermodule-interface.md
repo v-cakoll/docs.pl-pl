@@ -22,16 +22,16 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446198"
 ---
 # <a name="isymunmanagedsourceservermodule-interface"></a>ISymUnmanagedSourceServerModule — Interfejs
-Provides source server data for a module. Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.  
+Zapewnia dane serwera źródłowego dla modułu. Uzyskaj ten interfejs, wywołując `QueryInterface` na obiekcie, który implementuje interfejs [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) .  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetSourceServerData, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-getsourceserverdata-method.md)|Returns the source server data for the module.|  
+|[GetSourceServerData, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-getsourceserverdata-method.md)|Zwraca dane serwera źródłowego dla modułu.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

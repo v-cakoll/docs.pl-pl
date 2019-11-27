@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436694"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken — Metoda
-Gets the binary metadata signature of the type specification represented by the specified token.  
+Pobiera binarny podpis metadanych specyfikacji typu reprezentowanej przez określony token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,25 +37,25 @@ HRESULT GetTypeSpecFromToken (
   
 ## <a name="parameters"></a>Parametry  
  `typespec`  
- [in] The TypeSpec token associated with the requested metadata signature.  
+ podczas Token elementu TypeSpec skojarzony z żądanym podpisem metadanych.  
   
  `ppvSig`  
- [out] A pointer to the binary metadata signature.  
+ określoną Wskaźnik do podpisu metadanych binarnych.  
   
  `pcbSig`  
- [out] The size, in bytes, of the metadata signature.  
+ określoną Rozmiar sygnatury metadanych w bajtach.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- An HRESULT that indicates success or failure. Failures can be tested with the FAILED macro.  
+ WYNIK HRESULT wskazujący powodzenie lub niepowodzenie. Błędy można testować za pomocą makra zakończonego niepowodzeniem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

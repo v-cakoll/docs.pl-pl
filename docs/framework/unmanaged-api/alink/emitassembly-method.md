@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446524"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly — Metoda
-Creates the assembly. Call this method after all other files are closed except for the assembly file. Do not call this method when producing unbound modules.  
+Tworzy zestaw. Wywołaj tę metodę po zamknięciu wszystkich innych plików z wyjątkiem pliku zestawu. Nie wywołuj tej metody podczas tworzenia niezwiązanych modułów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,13 +35,13 @@ HRESULT EmitAssembly(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- ID of the assembly.  
+ Identyfikator zestawu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Returns S_OK if the method succeeds.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Requires alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 

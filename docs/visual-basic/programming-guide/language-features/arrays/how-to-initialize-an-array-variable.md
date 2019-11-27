@@ -1,5 +1,5 @@
 ---
-title: 'How to: Initialize an Array Variable'
+title: 'Instrukcje: Inicjowanie zmiennej tablicowej'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], initializing
@@ -15,41 +15,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351882"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Porady: inicjowanie zmiennej tablicy w języku Visual Basic
-You initialize an array variable by including an array literal in a `New` clause and specifying the initial values of the array. You can either specify the type or allow it to be inferred from the values in the array literal. For more information about how the type is inferred, see "Populating an Array with Initial Values" in [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+Można zainicjować zmienną tablicową przez uwzględnienie literału tablicy w klauzuli `New` i określenie wartości początkowych tablicy. Można określić typ lub zezwolić na wywnioskowanie go na podstawie wartości w literale tablicy. Aby uzyskać więcej informacji na temat sposobu wywnioskowania typu, zobacz "zapełnianie tablicy wartościami początkowymi" w [tablicach](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>To initialize an array variable by using an array literal  
+### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>Aby zainicjować zmienną tablicową przy użyciu literału tablicowego  
   
-- Either in the `New` clause, or when you assign the array value, supply the element values inside braces (`{}`). The following example shows several ways to declare, create, and initialize a variable to contain an array that has elements of type `Char`.  
+- W klauzuli `New` lub po przypisaniu wartości tablicy podaj wartości elementów w nawiasach klamrowych (`{}`). W poniższym przykładzie przedstawiono kilka sposobów deklarowania, tworzenia i inicjowania zmiennej, która zawiera tablicę z elementami typu `Char`.  
   
      [!code-vb[VbVbalrArrays#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#16)]  
   
-     After each statement executes, the array that's created has a length of 3, with elements at index 0 through index 2 containing the initial values. If you supply both the upper bound and the values, you must include a value for every element from index 0 through the upper bound.  
+     Po wykonaniu każdej instrukcji Utworzona tablica ma długość 3, z elementami w indeksie od 0 do indeksu 2 zawierającego wartości początkowe. Jeśli podasz górną granicę i wartości, musisz dołączyć wartość dla każdego elementu z indeksu od 0 do górnej granicy.  
   
-     Notice that you do not have to specify the index upper bound if you supply element values in an array literal. If no upper bound is specified, the size of the array is inferred based on the number of values in the array literal.  
+     Należy zauważyć, że nie ma potrzeby określania górnej granicy indeksu, jeśli podasz wartości elementów w literale tablicowym. Jeśli nie określono górnej granicy, rozmiar tablicy jest wywnioskowany na podstawie liczby wartości w literale tablicy.  
   
-### <a name="to-initialize-a-multidimensional-array-variable-by-using-array-literals"></a>To initialize a multidimensional array variable by using array literals  
+### <a name="to-initialize-a-multidimensional-array-variable-by-using-array-literals"></a>Aby zainicjować wielowymiarową zmienną tablicową przy użyciu literałów tablicy  
   
-- Nest values inside braces (`{}`) within braces. Ensure that the nested array literals all infer as arrays of the same type and length. The following code example shows several examples of multidimensional array initialization.  
+- Zagnieżdżaj wartości w nawiasach klamrowych (`{}`) w nawiasach klamrowych. Upewnij się, że zagnieżdżona tablica literałów wszystkie wnioskowanie jako tablice tego samego typu i długości. Poniższy przykład kodu pokazuje kilka przykładów inicjalizacji tablicy wielowymiarowej.  
   
      [!code-vb[VbVbalrArrays#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#17)]  
   
-- You can explicitly specify the array bounds, or leave them out and have the compiler infer the array bounds based on the values in the array literal. If you supply both the upper bounds and the values, you must include a value for every element from index 0 through the upper bound in every dimension. The following example shows several ways to declare, create, and initialize a variable to contain a two-dimensional array that has elements of type `Short`  
+- Można jawnie określić granice tablicy lub pozostawić je, a kompilator wywnioskuje granice tablicy na podstawie wartości w literale tablicy. Jeśli podasz górną granicę i wartości, musisz dołączyć wartość dla każdego elementu z indeksu od 0 do górnej granicy w każdym wymiarze. W poniższym przykładzie przedstawiono kilka sposobów deklarowania, tworzenia i inicjowania zmiennej, która zawiera dwuwymiarową tablicę, która zawiera elementy typu `Short`  
   
      [!code-vb[VbVbalrArrays#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#18)]  
   
-     After each statement executes, the created array contains six initialized elements that have indexes `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)`, and `(1,2)`. Each array location contains the value `10`.  
+     Po wykonaniu każdej instrukcji Utworzona tablica zawiera sześć zainicjowanych elementów, które mają indeksy `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)`i `(1,2)`. Każda lokalizacja tablicy zawiera wartość `10`.  
   
-- The following example iterates through a multidimensional array. In a Windows console application that is written in Visual Basic, paste the code inside the `Sub Main()` method. The last comments show the output.  
+- Poniższy przykład wykonuje iterację przez tablicę wielowymiarową. W aplikacji konsolowej systemu Windows, która jest zapisywana w Visual Basic, wklej kod wewnątrz metody `Sub Main()`. Ostatnie komentarze zawierają dane wyjściowe.  
   
      [!code-vb[VbVbalrArrays#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#31)]  
   
-### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>To initialize a jagged array variable by using array literals  
+### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>Aby zainicjować nieregularną zmienną tablicową przy użyciu literałów tablicy  
   
-- Nest object values inside braces (`{}`). Although you can also nest array literals that specify arrays of different lengths, in the case of a jagged array, make sure that the nested array literals are enclosed in parentheses (`()`). The parentheses force the evaluation of the nested array literals, and the resulting arrays are used as the initial values of the jagged array. The following code example shows two examples of jagged array initialization.  
+- Zagnieżdżaj wartości obiektów w nawiasach klamrowych (`{}`). Chociaż można także zagnieżdżać literały tablicowe, które określają tablice o różnych długościach, w przypadku tablicy nieregularnej, należy się upewnić, że zagnieżdżone literały tablicowe są ujęte w nawiasy (`()`). Nawiasy wymuszają Obliczanie zagnieżdżonych literałów tablicowych, a wyniki tablic są używane jako początkowe wartości tablicy nieregularnej. Poniższy przykład kodu przedstawia dwa przykłady inicjalizacji tablicy nieregularnej.  
   
      [!code-vb[VbVbalrArrays#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#19)]  
   
-- The following example iterates through a jagged array. In a Windows console application that is written in Visual Basic, paste the code inside the `Sub Main()` method.  The last comments in the code show the output.  
+- Poniższy przykład wykonuje iterację przez tablicę nieregularną. W aplikacji konsolowej systemu Windows, która jest zapisywana w Visual Basic, wklej kod wewnątrz metody `Sub Main()`.  Ostatnie komentarze w kodzie przedstawiają dane wyjściowe.  
   
      [!code-vb[VbVbalrArrays#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#32)]  
   

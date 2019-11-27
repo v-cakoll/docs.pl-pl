@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439142"
 ---
 # <a name="icorprofilerinfogetfunctionfromtoken-method"></a>ICorProfilerInfo::GetFunctionFromToken — Metoda
-Gets the ID of a function. This method is obsolete in the .NET Framework version 2.0. Use the [ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) method instead.  
+Pobiera identyfikator funkcji. Ta metoda jest przestarzała w .NET Framework w wersji 2,0. Zamiast tego użyj metody [ICorProfilerInfo2:: GetFunctionFromTokenAndTypeArgs —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,16 +35,16 @@ HRESULT GetFunctionFromToken(
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- The `GetFunctionFromToken` method will not work for generic functions or functions in generic types; it is now obsolete. Use `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` for all functions.  
+ Metoda `GetFunctionFromToken` nie będzie działać dla funkcji ogólnych ani funkcji w typach ogólnych; jest ona już przestarzała. Użyj `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` dla wszystkich funkcji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework wersje:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Zobacz także
 

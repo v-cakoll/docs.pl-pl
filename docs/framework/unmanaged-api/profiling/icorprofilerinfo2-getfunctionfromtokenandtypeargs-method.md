@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433207"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs — Metoda
-Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.  
+Pobiera `FunctionID` funkcji przy użyciu określonego tokenu metadanych, zawierającego klasę i `ClassID` wartości dowolnego argumentu typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,38 +39,38 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>Parametry  
  `moduleID`  
- [in] The ID of the module in which the function resides.  
+ podczas Identyfikator modułu, w którym znajduje się funkcja.  
   
  `funcDef`  
- [in] An `mdMethodDef` metadata token that references the function.  
+ podczas `mdMethodDef` token metadanych, który odwołuje się do funkcji.  
   
  `classId`  
- [in] The ID of the function's containing class.  
+ podczas Identyfikator klasy zawierającej funkcję.  
   
  `cTypeArgs`  
- [in] The number of type parameters for the given function. This value must be zero for non-generic functions.  
+ podczas Liczba parametrów typu dla danej funkcji. Ta wartość musi być równa zero w przypadku funkcji innych niż ogólne.  
   
  `typeArgs`  
- [in] An array of `ClassID` values, each of which is an argument of the function. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
+ podczas Tablica wartości `ClassID`, z których każdy jest argumentem funkcji. Wartość `typeArgs` może mieć wartość NULL, jeśli `cTypeArgs` jest ustawiona na zero.  
   
  `pFunctionID`  
- [out] A pointer to the `FunctionID` of the specified function.  
+ określoną Wskaźnik do `FunctionID` określonej funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results. Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.  
+ Wywołanie metody `GetFunctionFromTokenAndTypeArgs` z metadanymi `mdMethodRef` zamiast `mdMethodDef`ego tokenu metadanych może mieć nieprzewidywalne wyniki. Obiekty wywołujące powinny rozpoznać `mdMethodRef` do `mdMethodDef` podczas ich przekazywania.  
   
- If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.  
+ Jeśli funkcja nie jest już załadowana, wywołanie `GetFunctionFromTokenAndTypeArgs` spowoduje wystąpienie załadowania, które jest niebezpieczną operacją w wielu kontekstach. Na przykład wywołanie tej metody podczas ładowania modułów lub typów może prowadzić do nieskończonej pętli, ponieważ środowisko uruchomieniowe próbuje cyklicznie ładować elementy.  
   
- In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.  
+ Ogólnie rzecz biorąc użycie `GetFunctionFromTokenAndTypeArgs` nie jest zalecane. Jeśli zainteresują Cię zdarzenia dotyczące konkretnej funkcji, powinny one przechowywać `ModuleID` i `mdMethodDef` tej funkcji, a także używać [ICorProfilerInfo2:: GetFunctionInfo2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) , aby sprawdzić, czy dana `FunctionID` jest pożądaną funkcją.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

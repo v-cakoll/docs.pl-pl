@@ -18,9 +18,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444737"
 ---
-# <a name="icorprofilerinfo9getiltonativemapping3-method"></a>ICorProfilerInfo9::GetILToNativeMapping3 Method
+# <a name="icorprofilerinfo9getiltonativemapping3-method"></a>ICorProfilerInfo9:: GetILToNativeMapping3, Metoda
 
-Given the native code start address, returns the native to IL mapping information for this jitted version of the code.
+Przy podanym adresie początkowym kodu natywnego program zwraca informacje mapowania natywnego do IL dla tej trybie JIT wersji kodu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,31 +34,31 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
 #### <a name="parameters"></a>Parametry
 
 `pNativeCodeStartAddress` \
-[in] A pointer to the start of a native function.
+podczas Wskaźnik do początku funkcji natywnej.
 
 `cMap` \
-[in] The maximum size of the `map` array.
+podczas Maksymalny rozmiar tablicy `map`.
 
 `pcMap` \
-[out] The total number of available COR_DEBUG_IL_TO_NATIVE_MAP structures.
+określoną Łączna liczba dostępnych struktur COR_DEBUG_IL_TO_NATIVE_MAP.
 
 `map` \
-[out] An array of [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) structures, each of which specifies the offsets. After the `GetILToNativeMapping3` method returns, `map` will contain some or all of the `COR_DEBUG_IL_TO_NATIVE_MAP` structures.
+określoną Tablica struktur [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) , z których każdy określa przesunięcia. Po powrocie metody `GetILToNativeMapping3`, `map` będzie zawierać niektóre lub wszystkie struktury `COR_DEBUG_IL_TO_NATIVE_MAP`.
 
 ## <a name="remarks"></a>Uwagi
 
-When tiered compilation is enabled, a method may have more than one native code body. [ICorProfilerInfo9::GetNativeCodeStartAddresses](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-getnativecodestartaddresses-method.md) will return the start addresses for all of the native code bodies.
+Gdy kompilacja warstwowa jest włączona, Metoda może mieć więcej niż jedną treść kodu natywnego. [ICorProfilerInfo9:: GetNativeCodeStartAddresses](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-getnativecodestartaddresses-method.md) zwróci adresy startowe dla wszystkich natywnych treści kodu.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Platformy:** Zobacz [obsługiwane systemy operacyjne .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Header:** CorProf.idl, CorProf.h
+**Nagłówek:** CorProf. idl, CorProf. h
 
-**Library:** CorGuids.lib
+**Biblioteka:** CorGuids. lib
 
-**.NET Framework Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

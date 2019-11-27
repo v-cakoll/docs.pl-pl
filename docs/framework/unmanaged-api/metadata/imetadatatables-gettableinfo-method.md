@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426659"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo — Metoda
-Gets the name, row size, number of rows, number of columns, and key column index of the specified table.  
+Pobiera nazwę, rozmiar wiersza, liczbę wierszy, liczbę kolumn i indeks kolumny klucza w określonej tabeli.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,31 +40,31 @@ HRESULT GetTableInfo (
   
 ## <a name="parameters"></a>Parametry  
  `ixTbl`  
- [in] The identifier of the table whose properties to return.  
+ podczas Identyfikator tabeli, której właściwości mają zostać zwrócone.  
   
  `pcbRow`  
- [out] A pointer to the size, in bytes, of a table row.  
+ określoną Wskaźnik do rozmiaru, w bajtach, wiersza tabeli.  
   
  `pcRows`  
- [out] A pointer to the number of rows in the table.  
+ określoną Wskaźnik do liczby wierszy w tabeli.  
   
  `pcCols`  
- [out] A pointer to the number of columns in the table.  
+ określoną Wskaźnik do liczby kolumn w tabeli.  
   
  `piKey`  
- [out] A pointer to the index of the key column, or -1 if the table has no key column.  
+ określoną Wskaźnik do indeksu kolumny klucza lub-1, jeśli tabela nie ma kolumny klucza.  
   
  `ppName`  
- [out] A pointer to a pointer to the table name.  
+ określoną Wskaźnik do wskaźnika do nazwy tabeli.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

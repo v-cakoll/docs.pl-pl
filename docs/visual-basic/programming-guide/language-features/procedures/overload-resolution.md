@@ -18,45 +18,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352645"
 ---
 # <a name="overload-resolution-visual-basic"></a>Rozpoznanie przeciążenia (Visual Basic)
-When the Visual Basic compiler encounters a call to a procedure that is defined in several overloaded versions, the compiler must decide which of the overloads to call. It does this by performing the following steps:  
+Gdy kompilator Visual Basic napotyka wywołanie procedury, która jest zdefiniowana w kilku przeciążonych wersjach, kompilator musi zdecydować, które z przeciążeń mają być wywoływane. Robi to, wykonując następujące czynności:  
   
-1. **Ułatwienia dostępu.** It eliminates any overload with an access level that prevents the calling code from calling it.  
+1. **Ułatwienia dostępu.** Eliminuje wszelkie przeciążenia z poziomem dostępu, który uniemożliwia Wywoływanie kodu wywołującego.  
   
-2. **Number of Parameters.** It eliminates any overload that defines a different number of parameters than are supplied in the call.  
+2. **Liczba parametrów.** Eliminuje wszelkie przeciążenia, które definiują inną liczbę parametrów niż podano w wywołaniu.  
   
-3. **Parameter Data Types.** The compiler gives instance methods preference over extension methods. If any instance method is found that requires only widening conversions to match the procedure call, all extension methods are dropped and the compiler continues with only the instance method candidates. If no such instance method is found, it continues with both instance and extension methods.  
+3. **Typ danych parametru.** Kompilator zapewnia preferencje metod wystąpień względem metod rozszerzających. Jeśli zostanie znaleziona jakakolwiek metoda wystąpienia, która wymaga tylko konwersji rozszerzających, aby pasowała do wywołania procedury, wszystkie metody rozszerzające są porzucane, a kompilator kontynuuje tylko z użyciem metody wystąpienia. Jeśli nie zostanie znaleziona taka metoda wystąpienia, kontynuuje z obu tych metod.  
   
-     In this step, it eliminates any overload for which the data types of the calling arguments cannot be converted to the parameter types defined in the overload.  
+     W tym kroku eliminuje wszelkie przeciążenia, dla których typy danych argumentów wywołujących nie mogą być konwertowane na typy parametrów zdefiniowane w przeciążenia.  
   
-4. **Narrowing Conversions.** It eliminates any overload that requires a narrowing conversion from the calling argument types to the defined parameter types. This is true whether the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On` or `Off`.  
+4. **Zawężanie konwersji.** Eliminuje wszelkie przeciążenia, które wymagają konwersji zawężania z typów argumentów wywołujących na zdefiniowane typy parametrów. Jest to prawdą, czy przełącznik sprawdzania typu ([instrukcja Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) jest `On` lub `Off`.  
   
-5. **Least Widening.** The compiler considers the remaining overloads in pairs. For each pair, it compares the data types of the defined parameters. If the types in one of the overloads all widen to the corresponding types in the other, the compiler eliminates the latter. That is, it retains the overload that requires the least amount of widening.  
+5. **Najmniej rozszerzanie.** Kompilator traktuje pozostałe przeciążenia w parach. Dla każdej pary porównuje typy danych zdefiniowanych parametrów. Jeśli typy w jednym z przeciążeń wszystkie rozszerzają się do odpowiednich typów w drugim, kompilator eliminuje ten ostatni. Oznacza to, że zachowuje Przeciążenie, które wymaga najmniejszej ilości rozszerzania.  
   
-6. **Single Candidate.** It continues considering overloads in pairs until only one overload remains, and it resolves the call to that overload. If the compiler cannot reduce the overloads to a single candidate, it generates an error.  
+6. **Pojedynczy kandydat.** Kontynuuje rozważanie przeciążenia par do momentu pozostawania tylko jednego przeciążenia i rozwiązuje wywołanie do tego przeciążenia. Jeśli kompilator nie może zmniejszyć przeciążenia do pojedynczego kandydata, generuje błąd.  
   
- The following illustration shows the process that determines which of a set of overloaded versions to call.  
+ Na poniższej ilustracji przedstawiono proces określający, który z zestawów przeciążonych wersji ma być wywoływana.  
   
- ![Flow diagram of overload resolution process](./media/overload-resolution/determine-overloaded-version.gif "Resolving among overloaded versions")    
+ ![Diagram przepływu procesu rozpoznawania przeciążenia](./media/overload-resolution/determine-overloaded-version.gif "Rozwiązywanie między przeciążonymi wersjami")    
   
- The following example illustrates this overload resolution process.  
+ Poniższy przykład ilustruje ten proces rozwiązywania przeciążenia.  
   
  [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
  [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
- In the first call, the compiler eliminates the first overload because the type of the first argument (`Short`) narrows to the type of the corresponding parameter (`Byte`). It then eliminates the third overload because each argument type in the second overload (`Short` and `Single`) widens to the corresponding type in the third overload (`Integer` and `Single`). The second overload requires less widening, so the compiler uses it for the call.  
+ W pierwszym wywołaniu kompilator eliminuje pierwsze Przeciążenie, ponieważ typ pierwszego argumentu (`Short`) jest wąski do typu odpowiadającego mu parametru (`Byte`). Następnie eliminuje trzecie Przeciążenie, ponieważ każdy typ argumentu w drugim przeciążeniu (`Short` i `Single`) poszerza do odpowiedniego typu w trzecim przeciążenia (`Integer` i `Single`). Drugie Przeciążenie wymaga mniej poszerzania, więc kompilator używa go do wywołania.  
   
- In the second call, the compiler cannot eliminate any of the overloads on the basis of narrowing. It eliminates the third overload for the same reason as in the first call, because it can call the second overload with less widening of the argument types. However, the compiler cannot resolve between the first and second overloads. Each has one defined parameter type that widens to the corresponding type in the other (`Byte` to `Short`, but `Single` to `Double`). The compiler therefore generates an overload resolution error.  
+ W drugim wywołaniu kompilator nie może wyeliminować żadnych przeciążeń na podstawie zawężania. Eliminuje trzecie Przeciążenie z tego samego powodu, co w pierwszym wywołaniu, ponieważ może wywoływać drugie Przeciążenie przy mniejszej poszerzeniu typów argumentów. Jednak kompilator nie może rozpoznać pierwszego i drugiego przeciążenia. Każdy z nich ma jeden zdefiniowany typ parametru, który jest poszerzany do odpowiedniego typu w drugim (`Byte` do `Short`, ale `Single` do `Double`). W związku z tym kompilator generuje błąd rozpoznawania przeciążenia.  
   
-## <a name="overloaded-optional-and-paramarray-arguments"></a>Overloaded Optional and ParamArray Arguments  
- If two overloads of a procedure have identical signatures except that the last parameter is declared [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in one and [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in the other, the compiler resolves a call to that procedure as follows:  
+## <a name="overloaded-optional-and-paramarray-arguments"></a>Przeciążone argumenty opcjonalne i ParamArray  
+ Jeśli dwa przeciążenia procedury mają identyczne podpisy, z wyjątkiem tego, że ostatni parametr jest zadeklarowany jako [opcjonalny](../../../../visual-basic/language-reference/modifiers/optional.md) w jednym i [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) w drugim, kompilator rozpoznaje wywołanie tej procedury w następujący sposób:  
   
-|If the call supplies the last argument as|The compiler resolves the call to the overload declaring the last argument as|  
+|Jeśli wywołanie dostarcza ostatni argument jako|Kompilator rozpoznaje wywołanie do przeciążenia deklarującego ostatni argument jako|  
 |---|---|  
-|No value (argument omitted)|`Optional`|  
-|A single value|`Optional`|  
-|Two or more values in a comma-separated list|`ParamArray`|  
-|An array of any length (including an empty array)|`ParamArray`|  
+|Brak wartości (pominięto argument)|`Optional`|  
+|Pojedyncza wartość|`Optional`|  
+|Co najmniej dwie wartości na liście rozdzielanej przecinkami|`ParamArray`|  
+|Tablica dowolnej długości (łącznie z pustą tablicą)|`ParamArray`|  
   
 ## <a name="see-also"></a>Zobacz także
 

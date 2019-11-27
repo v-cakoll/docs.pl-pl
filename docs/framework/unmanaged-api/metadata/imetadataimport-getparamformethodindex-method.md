@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437163"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>IMetaDataImport::GetParamForMethodIndex — Metoda
-Gets the token that represents a specified parameter of the method represented by the specified MethodDef token.  
+Pobiera token reprezentujący określony parametr metody reprezentowanej przez określony token MethodDef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,22 +37,22 @@ HRESULT GetParamForMethodIndex (
   
 ## <a name="parameters"></a>Parametry  
  `md`  
- [in] A token that represents the method to return the parameter token for.  
+ podczas Token reprezentujący metodę zwracającą token parametru dla.  
   
  `ulParamSeq`  
- [in] The ordinal position in the parameter list where the requested parameter occurs. Parameters are numbered starting from one, with the method's return value in position zero.  
+ podczas Pozycja porządkowa na liście parametrów, w której występuje żądany parametr. Parametry są numerowane Zaczynając od jednej, z wartością zwracaną metody w pozycji zero.  
   
  `ppd`  
- [out] A pointer to a ParamDef token that represents the requested parameter.  
+ określoną Wskaźnik do tokenu ParamDef, który reprezentuje żądany parametr.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

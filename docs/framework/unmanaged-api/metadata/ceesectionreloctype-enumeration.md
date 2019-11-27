@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444157"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType — Wyliczenie
-Provides values to influence the type of `reloc` instruction emitted in a call to [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
+Dostarcza wartości mające wpływ na typ instrukcji `reloc` emitowany w wywołaniu [ICeeGen:: AddSectionReloc —](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,30 +52,30 @@ typedef enum  {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`srRelocAbsolute`|Generates only a section-relative `reloc`, sending nothing into a .reloc section.|  
-|`srRelocHighLow`|Generates a `reloc` for a pointer-sized location. This is transformed into BASED_HIGHLOW or BASED_DIR64 depending on the platform.|  
-|`srRelocHighAdj`|Generates a `reloc` for the top 16 bits of a 32-bit number, where the bottom 16 bits are included in the next word in the .reloc table.|  
-|`srRelocMapToken`|Generates a token map relocation, sending nothing into a .reloc section.|  
-|`srRelocRelative`|Indicates that the value is a relative address fixup.|  
-|`srRelocFilePos`|Generates only a section-relative `reloc`, sending nothing into a .reloc section. This `reloc` is relative to the file position of the section, not the section's virtual address.|  
-|`srRelocCodeRelative`|Specifies a code-relative address fixup.|  
-|`srRelocIA64Imm64`|Generates a `reloc` for a 64 bit address in an ia64 `movl` instruction.|  
-|`srRelocDir64`|Generates a `reloc` for a 64-bit address.|  
-|`srRelocIA64PcRel25`|Generate a `reloc` for a 25-bit PC-relative address in an ia64 `br.call` instruction.|  
-|`srRelocIA64PcRel64`|Generates a `reloc` for a 64-bit PC-relative address in an ia64 `brl.call` instruction.|  
-|`srRelocAbsoluteTagged`|Generates a 30-bit section-relative `reloc`, used for tagged pointer values.|  
-|`srRelocSentinel`|A sentinel value to help ensure any additions to this enum are reflected to the internal `reloc` name array.|  
-|`srNoBaseReloc`|Specifies not to emit a base `reloc`.|  
-|`srRelocPtr`|A value indicating that the pre-fixup contents of memory are a pointer rather than a section offset.|  
+|`srRelocAbsolute`|Generuje tylko `reloc`względną dla sekcji, co spowoduje wysłanie niczego do sekcji. reloc.|  
+|`srRelocHighLow`|Generuje `reloc` dla lokalizacji wskaźnika. Jest on przekształcany w BASED_HIGHLOW lub BASED_DIR64 w zależności od platformy.|  
+|`srRelocHighAdj`|Generuje `reloc` dla pierwszych 16 bitów liczby 32-bitowej, gdzie ostatnie 16 bitów znajduje się w następnym wyrazie w tabeli. reloc.|  
+|`srRelocMapToken`|Generuje relokację mapy tokenów, wysyłając nic do sekcji. reloc.|  
+|`srRelocRelative`|Wskazuje, że wartość jest korektą adresu względnego.|  
+|`srRelocFilePos`|Generuje tylko `reloc`względną dla sekcji, co spowoduje wysłanie niczego do sekcji. reloc. Ta `reloc` jest określana względem pozycji pliku sekcji, a nie adresu wirtualnego sekcji.|  
+|`srRelocCodeRelative`|Określa naprawianie adresów względnych w kodzie.|  
+|`srRelocIA64Imm64`|Generuje `reloc` dla adresu bitowej 64 w instrukcji `movl` ia64.|  
+|`srRelocDir64`|Generuje `reloc` dla adresu 64-bitowego.|  
+|`srRelocIA64PcRel25`|Wygeneruj `reloc` w przypadku 25-bitowego adresu komputera w instrukcji `br.call` ia64.|  
+|`srRelocIA64PcRel64`|Generuje `reloc` w przypadku 64-bitowego adresu z komputera w instrukcji `brl.call` ia64.|  
+|`srRelocAbsoluteTagged`|Generuje 30-bitową `reloc`względną dla sekcji służącą do oznakowania wartości wskaźnika.|  
+|`srRelocSentinel`|Wartość wskaźnikowa, która pomaga zapewnić, że wszelkie dodatki do tego wyliczenia są odzwierciedlone w wewnętrznej tablicy nazw `reloc`.|  
+|`srNoBaseReloc`|Określa, że nie należy emitować `reloc`podstawowej.|  
+|`srRelocPtr`|Wartość wskazująca, że przed przemieszczeniem sekcji jest wskaźnik, a nie przesunięty sekcję.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

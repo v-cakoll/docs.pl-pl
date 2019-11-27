@@ -1,5 +1,5 @@
 ---
-title: Converting between strings and other data types
+title: Konwertowanie pomiędzy ciągami a innymi typami danych
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, strings
@@ -14,26 +14,26 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352487"
 ---
-# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Converting between strings and other data types in Visual Basic
+# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Konwertowanie między ciągami a innymi typami danych w Visual Basic
 
-This section describes how to convert strings into other data types.
+W tej sekcji opisano sposób konwersji ciągów na inne typy danych.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[How to: Convert an Array of Bytes into a String in Visual Basic](how-to-convert-an-array-of-bytes-into-a-string.md)  
-How to convert the bytes from a byte array into a string.
+[Instrukcje: konwertowanie tablicy bajtów na ciąg w Visual Basic](how-to-convert-an-array-of-bytes-into-a-string.md)  
+Jak przekonwertować bajty z tablicy bajtowej na ciąg.
 
-[How to: Convert Strings into an Array of Bytes in Visual Basic](how-to-convert-strings-into-an-array-of-bytes.md)  
-How to convert a string into an array of bytes.
+[Instrukcje: konwertowanie ciągów na tablicę bajtów w Visual Basic](how-to-convert-strings-into-an-array-of-bytes.md)  
+Jak przekonwertować ciąg na tablicę bajtów.
 
 [Instrukcje: Tworzenie ciągu z tablicy wartości znaków](how-to-create-a-string-from-an-array-of-char-values.md)  
-How to create the string "abcd" from individual characters.
+Jak utworzyć ciąg "abcd" z pojedynczych znaków.
 
 [Instrukcje: Konwertowanie ciągów szesnastkowych na liczby](how-to-convert-hexadecimal-strings-to-numbers.md)  
-How to convert a hexadecimal string into an integer.
+Jak przekonwertować ciąg szesnastkowy na liczbę całkowitą.
 
-[How to: Convert a String to an Array of Characters in Visual Basic](how-to-convert-a-string-to-an-array-of-characters.md)  
-How to convert a string into an array of characters.
+[Instrukcje: konwertowanie ciągu na tablicę znaków w Visual Basic](how-to-convert-a-string-to-an-array-of-characters.md)  
+Konwertowanie ciągu na tablicę znaków.
 
-[How to: Access Characters in Strings in Visual Basic](how-to-access-characters-in-strings.md)  
-How to access a character in a string by its index.
+[Instrukcje: dostęp do znaków w ciągach w Visual Basic](how-to-access-characters-in-strings.md)  
+Jak uzyskać dostęp do znaku w ciągu przez jego indeks.

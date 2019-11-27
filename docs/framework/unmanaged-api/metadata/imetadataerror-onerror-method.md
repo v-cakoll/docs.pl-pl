@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431221"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError — Metoda
-Provides notification of errors that occur during the metadata merge.  
+Zawiera powiadomienie o błędach występujących podczas scalania metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,19 +36,19 @@ HRESULT OnError (
   
 ## <a name="parameters"></a>Parametry  
  `hrError`  
- [in] The HRESULT error value returned to the calling method.  
+ podczas Wartość błędu HRESULT zwracana do metody wywołującej.  
   
  `token`  
- [in] The metadata token of the code object that was being merged when the error occurred.  
+ podczas Token metadanych obiektu kodu, który został scalony po wystąpieniu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

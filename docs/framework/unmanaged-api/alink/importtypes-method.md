@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445678"
 ---
 # <a name="importtypes-method"></a>ImportTypes — Metoda
-Initiates the importing of types from each scope imported via [ImportFile Method](importfile-method.md).  
+Inicjuje importowanie typów z każdego zakresu zaimportowanego za pomocą [metody ImportFile —](importfile-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,28 +39,28 @@ HRESULT ImportTypes(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- ID of the assembly to import to.  
+ Identyfikator zestawu do zaimportowania.  
   
  `FileToken`  
- ID of the file to import from.  
+ Identyfikator pliku do zaimportowania.  
   
  `dwScope`  
- Zero-based scope to import.  
+ Zakres od zera do zaimportowania.  
   
  `phEnum`  
- Receives enumerator handle for the types in this scope.  
+ Odbiera dojście modułu wyliczającego dla typów w tym zakresie.  
   
  `ppImportScope`  
- Optionally receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface.  
+ Opcjonalnie odbiera Interfejs [interfejsu IMetaDataImport](../metadata/imetadataimport-interface.md) .  
   
  `pdwCountOfTypes`  
- Optionally receives count of types in the indicated scope.  
+ Opcjonalnie otrzymuje liczbę typów we wskazanym zakresie.  
   
-## <a name="return-value"></a>Wartość zwracana  
- Returns S_OK if the method succeeds.  
+## <a name="return-value"></a>Wartość zwrócona  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Requires alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 

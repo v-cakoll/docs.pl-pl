@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450322"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps — Metoda
-Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+Ustawia lub aktualizuje określoną funkcję zdarzenia zdefiniowaną przez poprzednie wywołanie do [IMetaDataEmit::D efineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,34 +41,34 @@ HRESULT SetEventProps (
   
 ## <a name="parameters"></a>Parametry  
  `ev`  
- [in] The event token.  
+ podczas Token zdarzenia.  
   
  `dwEventFlags`  
- [in] Event flags. This is a bitmask of `CorEventAttr` values.  
+ podczas Flagi zdarzeń. To jest maska bitów wartości `CorEventAttr`.  
   
  `tkEventType`  
- [in] The token for the event class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
+ podczas Token dla klasy Event. Jest to `mdTypeDef` lub token `mdTypeRef`.  
   
  `mdAddOn`  
- [in] The method used to subscribe to the event, or null.  
+ podczas Metoda używana do subskrybowania zdarzenia lub wartość null.  
   
  `mdRemoveOn`  
- [in] The method used to unsubscribe to the event, or null.  
+ podczas Metoda używana do anulowania subskrypcji zdarzenia lub wartość null.  
   
  `mdFire`  
- [in] The method used (by a derived class) to raise the event.  
+ podczas Metoda używana (przez klasę pochodną) do podniesienia zdarzenia.  
   
  `rmdOtherMethods[]`  
- [in] An array of tokens for other methods associated with the event. The last element of the array must be `mdMethodDefNil`.  
+ podczas Tablica tokenów dla innych metod skojarzonych ze zdarzeniem. Ostatni element tablicy musi być `mdMethodDefNil`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Iterate Through An Enumeration'
+title: 'Instrukcje: Iterowanie przez Wyliczenie'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [Visual Basic], iterating
@@ -14,18 +14,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354022"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>Porady: iterowanie za pomocą wyliczania w Visual Basic
-Enumerations provide a convenient way to work with sets of related constants, and to associate constant values with names. To iterate through an enumeration, you can move it into an array using the <xref:System.Enum.GetValues%2A> method. You could also iterate through an enumeration using a `For...Each` statement, using the <xref:System.Enum.GetNames%2A> or <xref:System.Enum.GetValues%2A> method to extract the string or numeric value.  
+Wyliczenia zapewniają wygodny sposób pracy z zestawami powiązanych stałych i kojarzenia wartości stałych z nazwami. Aby wykonać iterację wyliczenia, można przenieść go do tablicy przy użyciu metody <xref:System.Enum.GetValues%2A>. Można również wykonać iterację w wyliczeniu przy użyciu instrukcji `For...Each`, używając metody <xref:System.Enum.GetNames%2A> lub <xref:System.Enum.GetValues%2A> do wyodrębnienia ciągu lub wartości liczbowej.  
   
-### <a name="to-iterate-through-an-enumeration"></a>To iterate through an enumeration  
+### <a name="to-iterate-through-an-enumeration"></a>Aby wykonać iterację wyliczenia  
   
-- Declare an array and convert the enumeration to it with the <xref:System.Enum.GetValues%2A> method before passing the array as you would any other variable. The following example displays each member of the enumeration <xref:Microsoft.VisualBasic.FirstDayOfWeek> as it iterates through the enumeration.  
+- Zadeklaruj tablicę i przekonwertuj Wyliczenie na nią przy użyciu metody <xref:System.Enum.GetValues%2A> przed przekazaniem tablicy tak jak każda inna zmienna. Poniższy przykład wyświetla każdy element członkowski wyliczenia <xref:Microsoft.VisualBasic.FirstDayOfWeek> podczas iteracji przez wyliczenie.  
   
      [!code-vb[VbEnumsTask#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#7)]  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Wyliczenia — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Instrukcje: deklarowanie wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Kiedy stosować wyliczanie](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [Instrukcje: określanie ciągu skojarzonego z wartością wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Instrukcje: odwoływanie się do elementu członkowskiego wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)

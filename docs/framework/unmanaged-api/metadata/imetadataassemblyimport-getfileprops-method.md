@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447210"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps — Metoda
-Gets the properties of the file with the specified metadata signature.  
+Pobiera właściwości pliku z określonym podpisem metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,34 +41,34 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>Parametry  
  `mdf`  
- [in] The `mdFile` metadata token that represents the file for which to get the properties.  
+ podczas `mdFile` token metadanych reprezentujący plik, dla którego mają zostać pobrane właściwości.  
   
  `szName`  
- [out] The simple name of the file.  
+ określoną Prosta nazwa pliku.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ podczas Rozmiar, w postaci szerokich znaków, `szName`.  
   
  `pchName`  
- [out] The number of wide chars actually returned in `szName`.  
+ określoną Liczba znaków dwubajtowych faktycznie zwracanych w `szName`.  
   
  `ppbHashValue`  
- [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the file.  
+ określoną Wskaźnik do wartości skrótu. Jest to skrót, przy użyciu algorytmu SHA-1 pliku.  
   
  `pcbHashValue`  
- [out] The number of wide chars in the returned hash value.  
+ określoną Liczba znaków dwubajtowych w zwracanej wartości skrótu.  
   
  `pdwFileFlags`  
- [out] A pointer to the flags that describe the metadata applied to a file. The flags value is a combination of one or more [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values.  
+ określoną Wskaźnik do flag, które opisują metadane zastosowane do pliku. Wartość flags jest kombinacją co najmniej jednej wartości [CorFileFlags —](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

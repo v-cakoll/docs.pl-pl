@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435946"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save — Metoda
-Saves all metadata in the current scope to the file at the specified address.  
+Zapisuje wszystkie metadane w bieżącym zakresie do pliku pod określonym adresem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,19 +36,19 @@ HRESULT Save (
   
 ## <a name="parameters"></a>Parametry  
  `wzFile`  
- [in] The name of the file to save to. If this value is null, the in-memory copy will be saved to the last location that was used.  
+ podczas Nazwa pliku, w którym ma zostać zapisana. Jeśli ta wartość jest równa null, kopia znajdująca się w pamięci zostanie zapisana w ostatnio używanej lokalizacji.  
   
  `dwSaveFlags`  
- [in] Reserved. Must be zero.  
+ podczas Rezerwacj. Musi być równa zero.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

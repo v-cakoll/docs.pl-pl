@@ -18,9 +18,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449801"
 ---
-# <a name="icorprofilerinfo10resumeruntime-method"></a>ICorProfilerInfo10::ResumeRuntime Method
+# <a name="icorprofilerinfo10resumeruntime-method"></a>ICorProfilerInfo10:: ResumeRuntime, Metoda
 
-Resumes the runtime without performing a GC.
+Wznawia środowisko uruchomieniowe bez wykonywania operacji GC.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,14 +30,14 @@ HRESULT ResumeRuntime();
 
 ## <a name="requirements"></a>Wymagania
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Platformy:** Zobacz [obsługiwane systemy operacyjne .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Header:** CorProf.idl, CorProf.h
+**Nagłówek:** CorProf. idl, CorProf. h
 
-**Library:** CorGuids.lib
+**Biblioteka:** CorGuids. lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**Wersje .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

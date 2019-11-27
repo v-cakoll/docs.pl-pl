@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431239"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>ISymUnmanagedReader::GetSymbolStoreFileName — Metoda
-Provides the on-disk file name of the symbol store.  
+Udostępnia nazwę pliku na dysku magazynu symboli.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,19 +37,19 @@ HRESULT GetSymbolStoreFileName (
   
 ## <a name="parameters"></a>Parametry  
  `cchName`  
- [in] The size of the `szName` buffer.  
+ podczas Rozmiar buforu `szName`.  
   
  `pcchName`  
- [out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.  
+ określoną Wskaźnik do zmiennej, która otrzymuje długość nazwy zwróconej w `szName`, łącznie z zakończeniem o wartości null.  
   
  `szName`  
- [out] A pointer to the variable that receives the file name of the symbol store.  
+ określoną Wskaźnik do zmiennej, która otrzymuje nazwę pliku magazynu symboli.  
   
-## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+## <a name="return-value"></a>Wartość zwrócona  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

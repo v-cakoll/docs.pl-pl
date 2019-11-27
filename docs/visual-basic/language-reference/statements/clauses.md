@@ -12,22 +12,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354141"
 ---
 # <a name="clauses-visual-basic"></a>Klauzule (Visual Basic)
-The topics in this section document Visual Basic run-time clauses.  
+Tematy w tej sekcji dotyczą klauzul wykonawczych języka Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
+ [Użyj](../../../visual-basic/language-reference/statements/alias-clause.md)  
   
- [As](../../../visual-basic/language-reference/statements/as-clause.md)  
+ [Definicj](../../../visual-basic/language-reference/statements/as-clause.md)  
   
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
+ [Realizuj](../../../visual-basic/language-reference/statements/handles-clause.md)  
   
- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)  
+ [Wprowadza](../../../visual-basic/language-reference/statements/implements-clause.md)  
   
- [In](../../../visual-basic/language-reference/statements/in-clause.md)  
+ [Podczas](../../../visual-basic/language-reference/statements/in-clause.md)  
   
- [Into](../../../visual-basic/language-reference/statements/into-clause.md)  
+ [Przekształca](../../../visual-basic/language-reference/statements/into-clause.md)  
   
- [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
+ [Z](../../../visual-basic/language-reference/statements/of-clause.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)  

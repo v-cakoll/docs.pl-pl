@@ -21,7 +21,7 @@ ms.locfileid: "74346456"
 ---
 # <a name="structure-statement"></a>Structure — Instrukcja
 
-Declares the name of a structure and introduces the definition of the variables, properties, events, and procedures that the structure comprises.
+Deklaruje nazwę struktury i wprowadza definicje zmiennych, właściwości, zdarzeń i procedur, które obejmuje struktura.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,76 +38,76 @@ End Structure
 
 |Termin|Definicja|
 |---|---|
-|`attributelist`|Opcjonalny. See [Attribute List](attribute-list.md).|
-|`accessmodifier`|Opcjonalny. Can be one of the following:<br /><br /> -   [Public](../modifiers/public.md)<br />-   [Protected](../modifiers/protected.md)<br />-   [Friend](../modifiers/friend.md)<br />-   [Private](../modifiers/private.md)<br />- [Protected Friend](../modifiers/protected-friend.md)<br/>- [Private Protected](../modifiers/private-protected.md) <br /><br /> See [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|
-|`Shadows`|Opcjonalny. See [Shadows](../modifiers/shadows.md).|
-|`Partial`|Opcjonalny. Indicates a partial definition of the structure. See [Partial](../modifiers/partial.md).|
-|`name`|Wymagany. Name of this structure. See [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`Of`|Opcjonalny. Specifies that this is a generic structure.|
-|`typelist`|Required if you use the [Of](of-clause.md) keyword. List of type parameters for this structure. See [Type List](type-list.md).|
-|`Implements`|Opcjonalny. Indicates that this structure implements the members of one or more interfaces. See [Implements Statement](implements-statement.md).|
-|`interfacenames`|Required if you use the `Implements` statement. The names of the interfaces this structure implements.|
-|`datamemberdeclarations`|Wymagany. Zero or more `Const`, `Dim`, `Enum`, or `Event` statements declaring *data members* of the structure.|
-|`methodmemberdeclarations`|Opcjonalny. Zero or more declarations of `Function`, `Operator`, `Property`, or `Sub` procedures, which serve as *method members* of the structure.|
-|`End Structure`|Wymagany. Terminates the `Structure` definition.|
+|`attributelist`|Opcjonalny. Zobacz [listę atrybutów](attribute-list.md).|
+|`accessmodifier`|Opcjonalny. Może to być jeden z następujących modyfikatorów dostępu:<br /><br /> -   [publiczny](../modifiers/public.md)<br />-   [chronione](../modifiers/protected.md)<br />-   [znajomy](../modifiers/friend.md)<br />-   [prywatny](../modifiers/private.md)<br />- [chronionego przyjaciela](../modifiers/protected-friend.md)<br/>- [prywatnej ochrony](../modifiers/private-protected.md) <br /><br /> Zobacz [poziomy dostępu w Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|
+|`Shadows`|Opcjonalny. Zobacz [Shadows](../modifiers/shadows.md).|
+|`Partial`|Opcjonalny. Wskazuje częściową definicję struktury. Zobacz [częściowy](../modifiers/partial.md).|
+|`name`|Wymagany. Nazwa tej struktury. Zobacz [zadeklarowane nazwy elementów](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`Of`|Opcjonalny. Określa, że jest to struktura generyczna.|
+|`typelist`|Wymagane [w przypadku użycia słowa](of-clause.md) kluczowego. Lista parametrów typu dla tej struktury. Zobacz [Lista typów](type-list.md).|
+|`Implements`|Opcjonalny. Wskazuje, że ta struktura implementuje składowe jednego lub więcej interfejsów. Zobacz [instrukcja Implements](implements-statement.md).|
+|`interfacenames`|Wymagane, jeśli używasz instrukcji `Implements`. Nazwy interfejsów, które implementuje ta struktura.|
+|`datamemberdeclarations`|Wymagany. Zero lub więcej instrukcji `Const`, `Dim`, `Enum`lub `Event` deklarujących *składowe danych* struktury.|
+|`methodmemberdeclarations`|Opcjonalny. Zero lub więcej deklaracji procedur `Function`, `Operator`, `Property`lub `Sub`, które służą jako *elementy składowe metody* struktury.|
+|`End Structure`|Wymagany. Kończy definicję `Structure`.|
 
 ## <a name="remarks"></a>Uwagi
 
-The `Structure` statement defines a composite value type that you can customize. A *structure* is a generalization of the user-defined type (UDT) of previous versions of Visual Basic. For more information, see [Structures](../../programming-guide/language-features/data-types/structures.md).
+Instrukcja `Structure` definiuje złożony typ wartości, który można dostosować. *Struktura* jest generalizacją typu zdefiniowanego przez użytkownika (UDT) poprzednich wersji Visual Basic. Aby uzyskać więcej informacji, zobacz [struktury](../../programming-guide/language-features/data-types/structures.md).
 
-Structures support many of the same features as classes. For example, structures can have properties and procedures, they can implement interfaces, and they can have parameterized constructors. However, there are significant differences between structures and classes in areas such as inheritance, declarations, and usage. Also, classes are reference types and structures are value types. For more information, see [Structures and Classes](../../programming-guide/language-features/data-types/structures-and-classes.md).
+Struktury obsługują wiele tych samych funkcji co klasy. Na przykład struktury mogą mieć właściwości i procedury, mogą implementować interfejsy i mogą mieć sparametryzowane konstruktory. Istnieją jednak istotne różnice między strukturami i klasami w obszarach takich jak: dziedziczenia, deklaracje i użycie. Ponadto klasy to typy referencyjne, a struktury to typy wartościowe. Aby uzyskać więcej informacji, zobacz [struktury i klasy](../../programming-guide/language-features/data-types/structures-and-classes.md).
 
-You can use `Structure` only at namespace or module level. This means the *declaration context* for a structure must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block. For more information, see [Declaration Contexts and Default Access Levels](declaration-contexts-and-default-access-levels.md).
+`Structure` można używać tylko na poziomie przestrzeni nazw lub modułu. Oznacza to, że *kontekst deklaracji* dla struktury musi być plikiem źródłowym, przestrzenią nazw, klasą, strukturą, modułem lub interfejsem i nie może być procedurą ani blokiem. Aby uzyskać więcej informacji, zobacz [konteksty deklaracji i domyślne poziomy dostępu](declaration-contexts-and-default-access-levels.md).
 
-Structures default to [Friend](../modifiers/friend.md) access. You can adjust their access levels with the access modifiers. For more information, see [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
+Struktury są domyślne dla [zaprzyjaźnionego](../modifiers/friend.md) dostępu. Poziomy dostępu modułów można dostosować za pomocą modyfikatorów dostępu. Aby uzyskać więcej informacji, zobacz [poziomy dostępu w Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
-## <a name="rules"></a>Rules
+## <a name="rules"></a>Reguły
 
-- **Nesting.** You can define one structure within another. The outer structure is called the *containing structure*, and the inner structure is called a *nested structure*. However, you cannot access a nested structure's members through the containing structure. Instead, you must declare a variable of the nested structure's data type.
+- **Zagnieżdżania.** Można zdefiniować jedną strukturę wewnątrz innej. Struktura zewnętrzna jest nazywana *strukturą zawierającą*, a wewnętrzną strukturę nazywa się *zagnieżdżoną strukturą*. Jednak nie można uzyskać dostępu do składowych struktury zagnieżdżonej za pośrednictwem struktury zawierającej. Zamiast tego należy zadeklarować zmienną typu danych struktury zagnieżdżonej.
 
-- **Member Declaration.** You must declare every member of a structure. A structure member cannot be [Protected](../modifiers/protected.md) or `Protected Friend` because nothing can inherit from a structure. The structure itself, however, can be `Protected` or `Protected Friend`.
+- **Deklaracja elementu członkowskiego.** Musisz zadeklarować każdą składową struktury. Składowa struktury nie może być [chroniona](../modifiers/protected.md) ani `Protected Friend`, ponieważ żadne elementy nie mogą dziedziczyć ze struktury. Sama struktura może być jednak `Protected` lub `Protected Friend`.
   
-     You can declare zero or more nonshared variables or nonshared, noncustom events in a structure. You cannot have only constants, properties, and procedures, even if some of them are nonshared.
+     Można zadeklarować nieudostępnione zmienne lub nieudostępnione niestandardowe zdarzenia w strukturze lub nie deklarować ich wcale. Nie mogą istnieć tylko stałe, właściwości i procedury, nawet jeśli niektóre z nich są nieudostępnione.
 
-- **Initialization.** You cannot initialize the value of any nonshared data member of a structure as part of its declaration. You must either initialize such a data member by means of a parameterized constructor on the structure, or assign a value to the member after you have created an instance of the structure.
+- **Zainicjować.** Nie można zainicjować wartości żadnej składowej danych nieudostępnionych struktury w części jej deklaracji. Musisz zainicjować składową danych za pomocą konstruktora sparametryzowanego struktury lub przypisać wartość do składowej po utworzeniu wystąpienia struktury.
 
-- **Inheritance.** A structure cannot inherit from any type other than <xref:System.ValueType>, from which all structures inherit. In particular, one structure cannot inherit from another.
+- **Strukturze.** Struktura nie może dziedziczyć z żadnego typu innego niż <xref:System.ValueType>, z którego dziedziczą wszystkie struktury. W szczególności jedna struktura nie może dziedziczyć z innej.
 
-     You cannot use the [Inherits Statement](inherits-statement.md) in a structure definition, even to specify <xref:System.ValueType>.
+     Nie można użyć [instrukcji Inherits](inherits-statement.md) w definicji struktury, nawet w celu określenia <xref:System.ValueType>.
 
-- **Implementation.** If the structure uses the [Implements Statement](implements-statement.md), you must implement every member defined by every interface you specify in `interfacenames`.
+- **Realizacji.** Jeśli struktura używa [instrukcji Implements](implements-statement.md), należy zaimplementować każdy element członkowski zdefiniowany przez każdy interfejs określony w `interfacenames`.
 
-- **Default Property.** A structure can specify at most one property as its *default property*, using the [Default](../modifiers/default.md) modifier. For more information, see [Default](../modifiers/default.md).
+- **Właściwość domyślna.** Struktura może określać najwyżej jedną właściwość jako *Właściwość domyślną*, używając modyfikatora [domyślnego](../modifiers/default.md) . Aby uzyskać więcej informacji, zobacz [domyślne](../modifiers/default.md).
 
 ## <a name="behavior"></a>Zachowanie
 
-- **Access Level.** Within a structure, you can declare each member with its own access level. All structure members default to [Public](../modifiers/public.md) access. Note that if the structure itself has a more restricted access level, this automatically restricts access to its members, even if you adjust their access levels with the access modifiers.
+- **Poziom dostępu.** W ramach struktury można zadeklarować każdą składową z własnym poziomem dostępu. Wszyscy członkowie struktury domyślnie mają dostęp [publiczny](../modifiers/public.md) . Należy pamiętać, że jeśli struktura ma bardziej ograniczony poziom dostępu, automatycznie ogranicza to dostęp do jej składowych, nawet jeśli dostosujesz ich poziomy dostępu za pomocą modyfikatorów dostępu.
 
-- **Scope.** A structure is in scope throughout its containing namespace, class, structure, or module.
+- **Scope.** Struktura jest w zakresie zawierającej ją przestrzeni nazw, klasy, struktury lub modułu.
 
-     The scope of every structure member is the entire structure.
+     Zakresem każdej składowej struktury jest cała struktura.
 
-- **Lifetime.** A structure does not itself have a lifetime. Rather, each instance of that structure has a lifetime independent of all other instances.
+- **Okres istnienia.** Sama struktura nie ma okresu istnienia. Ale każde wystąpienie struktury ma okres istnienia niezależny od innych wystąpień.
 
-     The lifetime of an instance begins when it is created by a [New Operator](../operators/new-operator.md) clause. It ends when the lifetime of the variable that holds it ends.
+     Okres istnienia wystąpienia rozpoczyna się, gdy jest on tworzony przez [nową](../operators/new-operator.md) klauzulę operatora. Kończy się po zakończeniu okresu istnienia zmiennej, która odpowiada za zakończenie.
 
-     You cannot extend the lifetime of a structure instance. An approximation to static structure functionality is provided by a module. For more information, see [Module Statement](module-statement.md).
+     Nie można wydłużyć okresu istnienia instancji struktury. Funkcjonalność zbliżona do struktury statycznej jest udostępniania przez moduł. Aby uzyskać więcej informacji, zobacz [moduł instrukcja](module-statement.md).
 
-     Structure members have lifetimes depending on how and where they are declared. For more information, see "Lifetime" in [Class Statement](class-statement.md).
+     Składowe struktury mają okresy istnienia zależne od tego, jak i gdzie są zadeklarowane. Aby uzyskać więcej informacji, zobacz "okres istnienia" w [instrukcji klasy](class-statement.md).
 
-- **Qualification.** Code outside a structure must qualify a member's name with the name of that structure.
+- **Branego.** Kod spoza struktury musi kwalifikować nazwę składowej z nazwą tej struktury.
 
-     If code inside a nested structure makes an unqualified reference to a programming element, Visual Basic searches for the element first in the nested structure, then in its containing structure, and so on out to the outermost containing element. For more information, see [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+     Jeśli kod wewnątrz struktury zagnieżdżonej wykonuje niekwalifikowane odwołanie do elementu programistycznego, program Visual Basic wyszukuje element najpierw w strukturze zagnieżdżonej, następnie w strukturze zawierającej i tak dalej do najbardziej zewnętrznego elementu zawierającego. Aby uzyskać więcej informacji, zobacz [odwołania do zadeklarowanych elementów](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
 
-- **Memory Consumption.** As with all composite data types, you cannot safely calculate the total memory consumption of a structure by adding together the nominal storage allocations of its members. Furthermore, you cannot safely assume that the order of storage in memory is the same as your order of declaration. If you need to control the storage layout of a structure, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the `Structure` statement.
+- **Użycie pamięci.** Podobnie jak w przypadku wszystkich złożonych typów danych, nie można bezpiecznie obliczyć łącznego zużycia pamięci przez strukturę, dodając do siebie nominalne alokacje magazynu jej składowych. Ponadto nie można bezpiecznie założyć, że kolejność magazynowania w pamięci jest taka sama jak kolejność deklaracji. Jeśli konieczne jest kontrolowanie układu pamięci masowej struktury, można zastosować atrybut <xref:System.Runtime.InteropServices.StructLayoutAttribute> do instrukcji `Structure`.
 
 ## <a name="example"></a>Przykład
 
-The following example uses the `Structure` statement to define a set of related data for an employee. It shows the use of `Public`, `Friend`, and `Private` members to reflect the sensitivity of the data items. It also shows procedure, property, and event members.
+Poniższy przykład używa instrukcji `Structure`, aby zdefiniować zestaw powiązanych danych dla pracownika. Przedstawia on użycie `Public`, `Friend`i `Private` elementów członkowskich, aby odzwierciedlić czułość elementów danych. Przedstawione są także składowe procedury, właściwości i zdarzenia.
 
 [!code-vb[VbVbalrStatements#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#57)]
 
-For more information on how to use `Structure`s, see [Structure Variable](../../programming-guide/language-features/data-types/structure-variables.md).
+Aby uzyskać więcej informacji na temat używania `Structure`s, zobacz [Zmienna struktury](../../programming-guide/language-features/data-types/structure-variables.md).
 
 ## <a name="see-also"></a>Zobacz także
 

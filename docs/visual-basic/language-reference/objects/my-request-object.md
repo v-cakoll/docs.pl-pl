@@ -15,15 +15,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350677"
 ---
 # <a name="myrequest-object"></a>My.Request — Obiekt
-Gets the <xref:System.Web.HttpRequest> object for the requested page.  
+Pobiera obiekt <xref:System.Web.HttpRequest> dla żądanej strony.  
   
 ## <a name="remarks"></a>Uwagi  
- The `My.Request` object contains information about the current HTTP request.  
+ Obiekt `My.Request` zawiera informacje o bieżącym żądaniu HTTP.  
   
- The `My.Request` object is available only for ASP.NET applications.  
+ Obiekt `My.Request` jest dostępny tylko dla aplikacji ASP.NET.  
   
 ## <a name="example"></a>Przykład  
- The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.  
+ Poniższy przykład pobiera kolekcję nagłówka z obiektu `My.Request` i używa obiektu `My.Response`, aby zapisać go na stronie ASP.NET.  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   

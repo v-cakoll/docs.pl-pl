@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442156"
 ---
 # <a name="imetadataemitsethandler-method"></a>IMetaDataEmit::SetHandler — Metoda
-Sets the method referenced by the specified `IUnknown` pointer as a notification callback for token remaps.  
+Ustawia metodę przywoływaną przez określony `IUnknown` wskaźnik jako wywołanie zwrotne powiadomienia o ponownym mapowaniu tokenu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,21 +35,21 @@ HRESULT SetHandler (
   
 ## <a name="parameters"></a>Parametry  
  `pUnk`  
- [in] The handler to register.  
+ podczas Procedura obsługi do rejestracji.  
   
 ## <a name="remarks"></a>Uwagi  
- The metadata engine sends notification by using the method that is provided by `SetHandler`, to compilers that do not generate records in an optimized way and that would like to optimize saved records.  
+ Aparat metadanych wysyła powiadomienie przy użyciu metody dostarczonej przez `SetHandler`, do kompilatorów, które nie generują rekordów w sposób zoptymalizowany i który chce zoptymalizować zapisane rekordy.  
   
- If the callback method is not provided through `SetHandler`, no optimization will be performed on save except where several import scopes have been merged using `IMapToken` on merge for each scope.  
+ Jeśli metoda wywołania zwrotnego nie zostanie podana za pośrednictwem `SetHandler`, nie będzie przeprowadzana żadna Optymalizacja przy zapisywaniu, z wyjątkiem sytuacji, gdy kilka zakresów importu zostało scalonych przy użyciu `IMapToken` scalania dla każdego zakresu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436427"
 ---
 # <a name="cvstruct-structure"></a>Struktura CVStruct
-Contains information that is used when installing a module or a composite image.  
+Zawiera informacje, które są używane podczas instalowania modułu lub obrazu złożonego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,19 +39,19 @@ typedef struct {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|Duży|Major version build number.|  
-|Mały|Minor version build number.|  
-|Sub|Sub-build number.|  
-|Kompilacja|Build number.|  
+|Duży|Numer kompilacji wersji głównej.|  
+|Mały|Numer kompilacji wersji pomocniczej.|  
+|Sub|Numer kompilacji podrzędnej.|  
+|Kompilacja|Numer kompilacji.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

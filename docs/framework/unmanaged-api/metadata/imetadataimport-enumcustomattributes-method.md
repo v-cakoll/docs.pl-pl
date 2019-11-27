@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440239"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes — Metoda
-Enumerates custom attribute-definition tokens associated with the specified type or member.  
+Wylicza niestandardowe tokeny definicji atrybutów skojarzone z określonym typem lub członkiem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,38 +40,38 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the returned enumerator.  
+ [in. out] Wskaźnik do zwróconego modułu wyliczającego.  
   
  `tk`  
- [in] A token for the scope of the enumeration, or zero for all custom attributes.  
+ podczas Token dla zakresu wyliczenia lub zero dla wszystkich atrybutów niestandardowych.  
   
  `tkType`  
- [in] A token for the constructor of the type of the attributes to be enumerated, or `null` for all types.  
+ podczas Token dla konstruktora typu atrybutów do wyliczenia lub `null` dla wszystkich typów.  
   
  `rCustomAttributes`  
- [out] An array of custom attribute tokens.  
+ określoną Tablica tokenów atrybutów niestandardowych.  
   
  `cMax`  
- [in] The maximum size of the `rCustomAttributes` array.  
+ podczas Maksymalny rozmiar tablicy `rCustomAttributes`.  
   
  `pcCustomAttributes`  
- [out, optional] The actual number of token values returned in `rCustomAttributes`.  
+ [out, opcjonalne] Rzeczywista liczba wartości tokenów zwróconych w `rCustomAttributes`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` returned successfully.|  
-|`S_FALSE`|There are no custom attributes to enumerate. In that case, `pcCustomAttributes` is zero.|  
+|`S_OK`|`EnumCustomAttributes` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak atrybutów niestandardowych do wyliczenia. W takim przypadku `pcCustomAttributes` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

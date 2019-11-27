@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444247"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr — Wyliczenie
-Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
+Zawiera wartości określające atrybuty sekcji, która ma być używana przez interfejs [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,23 +37,23 @@ typedef enum  {
 } CeeSectionAttr;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`sdNone`|Section has no attributes.|  
-|`sdReadOnly`|Section contains initialized data that can be only read, not updated.|  
-|`sdReadWrite`|Section contains initialized data that can be read or updated.|  
-|`sdExecute`|Section contains executable code that is allowed to be read and executed.|  
+|`sdNone`|Sekcja nie ma żadnych atrybutów.|  
+|`sdReadOnly`|Sekcja zawiera zainicjowane dane, które mogą być tylko do odczytu, a nie zaktualizowane.|  
+|`sdReadWrite`|Sekcja zawiera zainicjowane dane, które można odczytać lub zaktualizować.|  
+|`sdExecute`|Sekcja zawiera kod wykonywalny, który może być odczytywany i wykonywany.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

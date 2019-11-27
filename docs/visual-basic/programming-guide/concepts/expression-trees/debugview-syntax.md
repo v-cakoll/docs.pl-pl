@@ -1,6 +1,6 @@
 ---
-title: Syntax used by DebugView property
-description: Describes the special syntax used by the DebugView property to produce a string representation of expression trees
+title: Składnia używana przez właściwość DebugView
+description: Opisuje specjalną składnię używaną przez właściwość DebugView, aby utworzyć ciąg reprezentujący drzewa wyrażeń
 author: zspitz
 ms.author: wiwagn
 ms.date: 05/22/2019
@@ -15,17 +15,17 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346867"
 ---
-# <a name="debugview-syntax"></a>`DebugView` syntax
+# <a name="debugview-syntax"></a>Składnia `DebugView`
 
-The `DebugView` property (available only when debugging) provides a string rendering of expression trees. Most of the syntax is fairly straightforward to understand; the special cases are described in the following sections.
+Właściwość `DebugView` (dostępna tylko w przypadku debugowania) zapewnia renderowanie ciągów drzew wyrażeń. Większość składni jest dość prosta do zrozumienia; specjalne przypadki opisano w poniższych sekcjach.
 
-Each example is followed by a comment block containing the `DebugView`.
+W każdym przykładzie następuje blok komentarza zawierający `DebugView`.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
-<xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> variable names are displayed with a "$" symbol at the beginning.
+nazwy zmiennych <xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> są wyświetlane z symbolem "$" na początku.
 
-If a parameter does not have a name, it is assigned an automatically generated name, such as `$var1` or `$var2`.
+Jeśli parametr nie ma nazwy, zostanie przypisana automatycznie wygenerowana nazwa, taka jak `$var1` lub `$var2`.
 
 ### <a name="examples"></a>Przykłady
 
@@ -43,18 +43,18 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 ## <a name="constantexpressions"></a>ConstantExpressions
 
-For <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> objects that represent integer values, strings, and `null`, the value of the constant is displayed.
+Dla <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> obiektów, które reprezentują wartości całkowite, ciągi i `null`, zostanie wyświetlona wartość stałej.
 
-For some numeric types, a suffix is added to the value:
+W przypadku niektórych typów liczbowych sufiks jest dodawany do wartości:
 
-| Typ | Keyword | Suffix |
+| Typ | Słowo kluczowe | Suffix |
 |--|--|--|
-| <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
-| <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |
+| <xref:System.UInt32> | [UInteger —](../../../language-reference/data-types/uinteger-data-type.md) | U |
+| <xref:System.Int64> | [Długo](../../../language-reference/data-types/long-data-type.md) | L |
 | <xref:System.UInt64> | [ULong](../../../language-reference/data-types/ulong-data-type.md) | UL |
 | <xref:System.Double> | [Double](../../../language-reference/data-types/double-data-type.md) | D |
-| <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | F |
-| <xref:System.Decimal> | [Decimal](../../../language-reference/data-types/decimal-data-type.md) | M |
+| <xref:System.Single> | [Wiersz](../../../language-reference/data-types/single-data-type.md) | F |
+| <xref:System.Decimal> | [Dokładności](../../../language-reference/data-types/decimal-data-type.md) | M |
 
 ### <a name="examples"></a>Przykłady
 
@@ -74,7 +74,7 @@ Dim expr As ConstantExpression = Expression.Constant(num)
 
 ## <a name="blockexpression"></a>BlockExpression
 
-If the type of a <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> object differs from the type of the last expression in the block, the type is displayed within angle brackets (`<` and `>`). Otherwise, the type of the <xref:System.Linq.Expressions.BlockExpression> object is not displayed.
+Jeśli typ obiektu <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> różni się od typu ostatniego wyrażenia w bloku, typ jest wyświetlany w nawiasach kątowych (`<` i `>`). W przeciwnym razie typ obiektu <xref:System.Linq.Expressions.BlockExpression> nie jest wyświetlany.
 
 ### <a name="examples"></a>Przykłady
 
@@ -99,9 +99,9 @@ Dim block As BlockExpression = Expression.Block(
 
 ## <a name="lambdaexpression"></a>LambdaExpression
 
-<xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> objects are displayed together with their delegate types.
+obiekty <xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> są wyświetlane razem z ich typami delegatów.
 
-If a lambda expression does not have a name, it is assigned an automatically generated name, such as `#Lambda1` or `#Lambda2`.
+Jeśli wyrażenie lambda nie ma nazwy, zostanie przypisana automatycznie wygenerowana nazwa, taka jak `#Lambda1` lub `#Lambda2`.
 
 ### <a name="examples"></a>Przykłady
 
@@ -129,11 +129,11 @@ Dim lambda As LambdaExpression = Expression.Lambda(Of Func(Of Integer))(
 
 ## <a name="labelexpression"></a>LabelExpression
 
-If you specify a default value for the <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType> object, this value is displayed before the <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType> object.
+Jeśli określisz wartość domyślną dla obiektu <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType>, ta wartość będzie wyświetlana przed obiektem <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType>.
 
-The `.Label` token indicates the start of the label. The `.LabelTarget` token indicates the destination of the target to jump to.
+Token `.Label` wskazuje początek etykiety. Token `.LabelTarget` wskazuje miejsce docelowe miejsca docelowego, do którego chcesz przejść.
 
-If a label does not have a name, it is assigned an automatically generated name, such as `#Label1` or `#Label2`.
+Jeśli etykieta nie ma nazwy, zostanie przypisana automatycznie wygenerowana nazwa, taka jak `#Label1` lub `#Label2`.
 
 ### <a name="examples"></a>Przykłady
 
@@ -166,9 +166,9 @@ Dim block As BlockExpression = Expression.Block(
 '
 ```
 
-## <a name="checked-operators"></a>Checked Operators
+## <a name="checked-operators"></a>Sprawdzone operatory
 
-Checked operators are displayed with the `#` symbol in front of the operator. For example, the checked addition operator is displayed as `#+`.
+Zaznaczone operatory są wyświetlane z symbolem `#` przed operatorem. Na przykład, zaznaczony operator dodawania jest wyświetlany jako `#+`.
 
 ### <a name="examples"></a>Przykłady
 

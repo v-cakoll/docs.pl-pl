@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439114"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo — Metoda
-Gets the parent class and metadata token for the specified function.  
+Pobiera klasę nadrzędną i token metadanych dla określonej funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,30 +37,30 @@ HRESULT GetFunctionInfo(
   
 ## <a name="parameters"></a>Parametry  
  `functionId`  
- [in] The ID of the function for which to get the parent class and metadata token.  
+ podczas Identyfikator funkcji, dla której ma zostać uzyskana Klasa nadrzędna i token metadanych.  
   
  `pClassId`  
- [out] A pointer to the parent class of the function.  
+ określoną Wskaźnik do klasy nadrzędnej funkcji.  
   
  `pModuleId`  
- [out] A pointer to the module in which the function's parent class is defined.  
+ określoną Wskaźnik do modułu, w którym zdefiniowana jest Klasa nadrzędna funkcji.  
   
  `pToken`  
- [out] A pointer to the metadata token for the function.  
+ określoną Wskaźnik do tokenu metadanych dla funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a metadata interface for a given module. The metadata token that is returned to the location referenced by `pToken` can then be used to access the metadata for the function.  
+ Kod profilera może wywołać [ICorProfilerInfo:: GetModuleMetaData —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) w celu uzyskania interfejsu metadanych dla danego modułu. Token metadanych, który jest zwracany do lokalizacji, do której odwołuje się `pToken`, może następnie zostać użyty w celu uzyskania dostępu do metadanych dla funkcji.  
   
- The `ClassID` of a function on a generic class might not be obtainable without more contextual information about the use of the function. In this case, `pClassId` will be 0. Profiler code should use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) with a COR_PRF_FRAME_INFO value to provide more context.  
+ `ClassID` funkcji na klasie generycznej może nie być możliwe do uzyskania bez dodatkowych informacji kontekstowych dotyczących używania funkcji. W takim przypadku `pClassId` będzie równa 0. Kod profilera powinien używać [ICorProfilerInfo2:: GetFunctionInfo2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) z wartością COR_PRF_FRAME_INFO, aby zapewnić więcej kontekstu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

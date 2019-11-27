@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447172"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs — Metoda
-Gets the `ClassID` of a type by using the specified metadata token and the `ClassID` values of any type arguments.  
+Pobiera `ClassID` typu przy użyciu określonego tokenu metadanych i wartości `ClassID` dowolnego argumentu typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,35 +38,35 @@ HRESULT GetClassFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>Parametry  
  `moduleID`  
- [in] The ID of the module in which the type resides.  
+ podczas Identyfikator modułu, w którym znajduje się typ.  
   
  `typeDef`  
- [in] An `mdTypeDef` metadata token that references the type.  
+ podczas `mdTypeDef` token metadanych, który odwołuje się do typu.  
   
  `cTypeArgs`  
- [in] The number of type parameters for the given type. This value must be zero for non-generic types.  
+ podczas Liczba parametrów typu dla danego typu. Ta wartość musi być równa zero dla typów innych niż ogólne.  
   
  `typeArgs`  
- [in] An array of `ClassID` values, each of which is an argument of the type. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
+ podczas Tablica wartości `ClassID`, z których każdy jest argumentem typu. Wartość `typeArgs` może mieć wartość NULL, jeśli `cTypeArgs` jest ustawiona na zero.  
   
  `pClassID`  
- [out] A pointer to the `ClassID` of the specified type.  
+ określoną Wskaźnik do `ClassID` określonego typu.  
   
 ## <a name="remarks"></a>Uwagi  
- Calling the `GetClassFromTokenAndTypeArgs` method with an `mdTypeRef` instead of an `mdTypeDef` metadata token can have unpredictable results; callers should resolve the `mdTypeRef` to an `mdTypeDef` when passing it.  
+ Wywołanie metody `GetClassFromTokenAndTypeArgs` z `mdTypeRef` zamiast tokenu metadanych `mdTypeDef` może mieć nieprzewidywalne wyniki; obiekty wywołujące powinny rozpoznać `mdTypeRef` do `mdTypeDef` podczas ich przekazywania.  
   
- If the type is not already loaded, calling `GetClassFromTokenAndTypeArgs` will trigger loading, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or other types could lead to an infinite loop as the runtime attempts to circularly load things.  
+ Jeśli typ nie jest już załadowany, wywołanie `GetClassFromTokenAndTypeArgs` wywoła ładowanie, które jest niebezpieczną operacją w wielu kontekstach. Na przykład wywołanie tej metody podczas ładowania modułów lub innych typów może prowadzić do nieskończonej pętli, ponieważ środowisko uruchomieniowe próbuje cyklicznie ładować elementy.  
   
- In general, use of `GetClassFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular type, they should store the `ModuleID` and `mdTypeDef` of that type, and use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) to check whether a given `ClassID` is that of the desired type.  
+ Ogólnie rzecz biorąc użycie `GetClassFromTokenAndTypeArgs` nie jest zalecane. Jeśli zainteresują Cię zdarzenia dotyczące określonego typu, powinny one przechowywać `ModuleID` i `mdTypeDef` tego typu, a następnie użyć [ICorProfilerInfo2:: GetClassIDInfo2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) , aby sprawdzić, czy dany `ClassID` jest tym żądanym typem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

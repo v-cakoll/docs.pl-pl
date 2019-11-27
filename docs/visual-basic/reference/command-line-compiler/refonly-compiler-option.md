@@ -16,7 +16,7 @@ ms.locfileid: "74348575"
 ---
 # <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 
-The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly. The `-refonly` parameter silently disables outputting PDBs, as reference assemblies cannot be executed.
+Opcja **-refonly** wskazuje, że podstawowe dane wyjściowe kompilacji powinny być zestawem referencyjnym, a nie zestawem implementacji. Parametr `-refonly` dyskretnie wyłącza umieszczanie plików PDB, ponieważ nie można wykonać zestawów referencyjnych.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -28,14 +28,14 @@ The **-refonly** option indicates that the primary output of the compilation sho
 
 ## <a name="remarks"></a>Uwagi
 
-Visual Basic supports the `-refonly` switch starting with version 15.3.
+Visual Basic obsługuje przełącznik `-refonly`, zaczynając od wersji 15,3.
 
-Reference assemblies are a special type of assembly that contain only the minimum amount of metadata required to represent the library's public API surface. They include declarations for all members that are significant when referencing an assembly in build tools, but exclude all member implementations and declarations of private members that have no observable impact on their API contract. For more information, see [Reference assemblies](../../../standard/assembly/reference-assemblies.md) in .NET Guide.
+Zestawy referencyjne są specjalnym typem zestawu, który zawiera tylko minimalną ilość metadanych wymaganą do reprezentowania publicznej powierzchni interfejsu API biblioteki. Obejmują one deklaracje dla wszystkich elementów członkowskich, które są istotne w przypadku odwoływania się do zestawu w narzędziach kompilacji, ale wyklucza wszystkie implementacje składowych i deklaracje prywatnych członków, którzy nie mają zauważalnego wpływu na ich kontrakt interfejsu API. Aby uzyskać więcej informacji, zobacz [zestawy referencyjne](../../../standard/assembly/reference-assemblies.md) w przewodniku .NET.
 
-The `-refonly` and [`-refout`](refout-compiler-option.md) options are mutually exclusive.
+Opcje `-refonly` i [`-refout`](refout-compiler-option.md) wykluczają się wzajemnie.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [-refout](refout-compiler-option.md)
-- [Visual Basic Command-Line Compiler](index.md)
+- [Kompilator wiersza polecenia Visual Basic](index.md)
 - [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)

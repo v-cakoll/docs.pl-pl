@@ -9,33 +9,33 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350396"
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Walkthrough: Persisting an Object in Visual Studio (Visual Basic)
-Although you can set an object's properties to default values at design time, any values entered at run time are lost when the object is destroyed. You can use serialization to persist an object's data between instances, which enables you to store values and retrieve them the next time that the object is instantiated.  
+# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Przewodnik: utrwalanie obiektu w programie Visual Studio (Visual Basic)
+Chociaż właściwości obiektu można ustawić na wartości domyślne w czasie projektowania, wszelkie wartości wprowadzone w czasie wykonywania są tracone, gdy obiekt zostanie zniszczony. Możesz użyć serializacji, aby zachować dane obiektu między wystąpieniami, co umożliwia przechowywanie wartości i pobieranie ich przy następnym utworzeniu wystąpienia obiektu.  
   
 > [!NOTE]
-> In Visual Basic, to store simple data, such as a name or number, you can use the `My.Settings` object. For more information, see [My.Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+> W Visual Basic, aby przechowywać proste dane, takie jak nazwa lub liczba, można użyć obiektu `My.Settings`. Aby uzyskać więcej informacji, zobacz [My. Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
- In this walkthrough, you will create a simple `Loan` object and persist its data to a file. You will then retrieve the data from the file when you re-create the object.  
-  
-> [!IMPORTANT]
-> This example creates a new file, if the file does not already exist. If an application must create a file, that application must `Create` permission for the folder. Permissions are set by using access control lists. If the file already exists, the application needs only `Write` permission, a lesser permission. Where possible, it is more secure to create the file during deployment, and only grant `Read` permissions to a single file (instead of Create permissions for a folder). Also, it is more secure to write data to user folders than to the root folder or the Program Files folder.  
+ W tym instruktażu utworzysz prosty obiekt `Loan` i zachowasz jego dane do pliku. Następnie dane zostaną pobrane z pliku po ponownym utworzeniu obiektu.  
   
 > [!IMPORTANT]
-> This example stores data in a binary. These formats should not be used for sensitive data, such as passwords or credit-card information.  
+> Ten przykład tworzy nowy plik, jeśli plik jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, aplikacja musi `Create` uprawnienie dla tego folderu. Uprawnienia są ustawiane przy użyciu list kontroli dostępu. Jeśli plik już istnieje, aplikacja wymaga tylko `Write` uprawnienia, ale jest to małe uprawnienie. Jeśli to możliwe, bezpieczniejsze jest tworzenie pliku podczas wdrażania i udzielanie uprawnień `Read` tylko do jednego pliku (zamiast tworzenia uprawnień dla folderu). Ponadto bardziej bezpieczne jest zapisanie danych do folderów użytkowników niż folder główny lub folder Program Files.  
+  
+> [!IMPORTANT]
+> Ten przykład zapisuje dane w postaci binarnej. Tych formatów nie należy używać w przypadku poufnych danych, takich jak hasła lub informacje o kartach kredytowych.  
   
 > [!NOTE]
-> Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. To change your settings, click **Import and Export Settings** on the **Tools** menu. For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+> Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, kliknij przycisk **Importuj i Eksportuj ustawienia** w menu **Narzędzia** . Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-## <a name="creating-the-loan-object"></a>Creating the Loan Object  
- The first step is to create a `Loan` class and a test application that uses the class.  
+## <a name="creating-the-loan-object"></a>Tworzenie obiektu pożyczek  
+ Pierwszym krokiem jest utworzenie klasy `Loan` i aplikacji testowej, która używa klasy.  
   
-### <a name="to-create-the-loan-class"></a>To create the Loan class  
+### <a name="to-create-the-loan-class"></a>Aby utworzyć klasę pożyczek  
   
-1. Create a new Class Library project and name it "LoanClass". For more information, see [Creating Solutions and Projects](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
+1. Utwórz nowy projekt biblioteki klas i nadaj mu nazwę "LoanClass". Aby uzyskać więcej informacji, zobacz [Tworzenie rozwiązań i projektów](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
   
-2. In **Solution Explorer**, open the shortcut menu for the Class1 file and choose **Rename**. Rename the file to `Loan` and press ENTER. Renaming the file will also rename the class to `Loan`.  
+2. W **Eksplorator rozwiązań**Otwórz menu skrótów dla pliku Class1 i wybierz polecenie **Zmień nazwę**. Zmień nazwę pliku na `Loan` i naciśnij klawisz ENTER. Zmiana nazwy pliku spowoduje również zmianę nazwy klasy na `Loan`.  
   
-3. Add the following public members to the class:  
+3. Dodaj następujące publiczne elementy członkowskie do klasy:  
   
     ```vb  
     Public Class Loan  
@@ -73,25 +73,25 @@ Although you can set an object's properties to default values at design time, an
     End Class  
     ```  
   
- You will also have to create a simple application that uses the `Loan` class.  
+ Należy również utworzyć prostą aplikację, która używa klasy `Loan`.  
   
-### <a name="to-create-a-test-application"></a>To create a test application  
+### <a name="to-create-a-test-application"></a>Aby utworzyć aplikację testową  
   
-1. To add a Windows Forms Application project to your solution, on the **File** menu, choose **Add**,**New Project**.  
+1. Aby dodać projekt aplikacji Windows Forms do rozwiązania, w menu **plik** wybierz polecenie **Dodaj**,**Nowy projekt**.  
   
-2. In the **Add New Project** dialog box, choose **Windows Forms Application**, and enter `LoanApp` as the name of the project, and then click **OK** to close the dialog box.  
+2. W oknie dialogowym **Dodaj nowy projekt** wybierz pozycję **Windows Forms aplikacja**, a następnie wprowadź `LoanApp` jako nazwę projektu, a następnie kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
   
-3. In **Solution Explorer**, choose the LoanApp project.  
+3. W **Eksplorator rozwiązań**wybierz projekt LoanApp.  
   
-4. On the **Project** menu, choose **Set as StartUp Project**.  
+4. W menu **projekt** wybierz pozycję **Ustaw jako projekt startowy**.  
   
-5. On the **Project** menu, choose **Add Reference**.  
+5. W menu **projekt** wybierz polecenie **Dodaj odwołanie**.  
   
-6. In the **Add Reference** dialog box, choose the **Projects** tab and then choose the LoanClass project.  
+6. W oknie dialogowym **Dodaj odwołanie** wybierz kartę **projekty** , a następnie wybierz projekt LoanClass.  
   
 7. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
   
-8. In the designer, add four <xref:System.Windows.Forms.TextBox> controls to the form.  
+8. W projektancie Dodaj cztery <xref:System.Windows.Forms.TextBox> kontrolki do formularza.  
   
 9. W Edytorze kodu dodaj następujący kod:  
   
@@ -106,7 +106,7 @@ Although you can set an object's properties to default values at design time, an
     End Sub  
     ```  
   
-10. Add an event handler for the `PropertyChanged` event to the form by using the following code:  
+10. Dodaj procedurę obsługi zdarzeń dla zdarzenia `PropertyChanged` do formularza przy użyciu następującego kodu:  
   
     ```vb  
     Public Sub CustomerPropertyChanged(  
@@ -118,27 +118,27 @@ Although you can set an object's properties to default values at design time, an
     End Sub  
     ```  
   
- At this point, you can build and run the application. Note that the default values from the `Loan` class appear in the text boxes. Try to change the interest-rate value from 7.5 to 7.1, and then close the application and run it again—the value reverts to the default of 7.5.  
+ W tym momencie można skompilować i uruchomić aplikację. Należy zauważyć, że wartości domyślne z klasy `Loan` pojawiają się w polach tekstowych. Spróbuj zmienić wartość stopy oprocentowania z 7,5 na 7,1, a następnie zamknij aplikację i uruchom ją ponownie — wartość zostanie przywrócona do wartości domyślnej 7,5.  
   
- In the real world, interest rates change periodically, but not necessarily every time that the application is run. Rather than making the user update the interest rate every time that the application runs, it is better to preserve the most recent interest rate between instances of the application. In the next step, you will do just that by adding serialization to the Loan class.  
+ W świecie rzeczywistym stawki odsetek zmieniają się okresowo, ale nie zawsze, gdy aplikacja jest uruchomiona. Zamiast sprawiać, że użytkownik nie aktualizuje stopy oprocentowania za każdym razem, gdy aplikacja jest uruchomiona, lepiej jest zachować najnowszą stawkę odsetek między wystąpieniami aplikacji. W następnym kroku wystarczy dodać serializację do klasy pożyczek.  
   
-## <a name="using-serialization-to-persist-the-object"></a>Using Serialization to Persist the Object  
- In order to persist the values for the Loan class, you must first mark the class with the `Serializable` attribute.  
+## <a name="using-serialization-to-persist-the-object"></a>Utrwalanie obiektu przy użyciu serializacji  
+ Aby zachować wartości dla klasy pożyczek, należy najpierw oznaczyć klasę atrybutem `Serializable`.  
   
-### <a name="to-mark-a-class-as-serializable"></a>To mark a class as serializable  
+### <a name="to-mark-a-class-as-serializable"></a>Aby oznaczyć klasę jako możliwy do serializacji  
   
-- Change the class declaration for the Loan class as follows:  
+- Zmień deklarację klasy dla klasy pożyczek w następujący sposób:  
   
     ```vb  
     <Serializable()>  
     Public Class Loan  
     ```  
   
- The `Serializable` attribute tells the compiler that everything in the class can be persisted to a file. Because the `PropertyChanged` event is handled by a Windows Form object, it cannot be serialized. The `NonSerialized` attribute can be used to mark class members that should not be persisted.  
+ Atrybut `Serializable` informuje kompilator, że wszystkie elementy w klasie mogą być utrwalane w pliku. Ponieważ zdarzenie `PropertyChanged` jest obsługiwane przez obiekt formularza systemu Windows, nie może być serializowane. Atrybut `NonSerialized` może służyć do oznaczania elementów członkowskich klasy, które nie powinny być utrwalane.  
   
-### <a name="to-prevent-a-member-from-being-serialized"></a>To prevent a member from being serialized  
+### <a name="to-prevent-a-member-from-being-serialized"></a>Aby zapobiec serializacji elementu członkowskiego  
   
-- Change the declaration for the `PropertyChanged` event as follows:  
+- Zmień deklarację dla zdarzenia `PropertyChanged` w następujący sposób:  
   
     ```vb  
     <NonSerialized()>  
@@ -146,30 +146,30 @@ Although you can set an object's properties to default values at design time, an
       Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged  
     ```  
   
- The next step is to add the serialization code to the LoanApp application. In order to serialize the class and write it to a file, you will use the <xref:System.IO> and <xref:System.Xml.Serialization> namespaces. To avoid typing the fully qualified names, you can add references to the necessary class libraries.  
+ Następnym krokiem jest dodanie kodu serializacji do aplikacji LoanApp. Aby serializować klasę i zapisać ją do pliku, należy użyć przestrzeni nazw <xref:System.IO> i <xref:System.Xml.Serialization>. Aby uniknąć wpisywania w pełni kwalifikowanych nazw, można dodać odwołania do niezbędnych bibliotek klas.  
   
-### <a name="to-add-references-to-namespaces"></a>To add references to namespaces  
+### <a name="to-add-references-to-namespaces"></a>Aby dodać odwołania do przestrzeni nazw  
   
-- Add the following statements to the top of the `Form1` class:  
+- Dodaj następujące instrukcje na początku klasy `Form1`:  
   
     ```vb  
     Imports System.IO  
     Imports System.Runtime.Serialization.Formatters.Binary  
     ```  
   
-     In this case, you are using a binary formatter to save the object in a binary format.  
+     W takim przypadku używasz pliku binarnego programu formatującego do zapisania obiektu w formacie binarnym.  
   
- The next step is to add code to deserialize the object from the file when the object is created.  
+ Następnym krokiem jest dodanie kodu w celu deserializacji obiektu z pliku po utworzeniu obiektu.  
   
 ### <a name="to-deserialize-an-object"></a>Do deserializacji obiektu  
   
-1. Add a constant to the class for the serialized data's file name.  
+1. Dodaj stałą do klasy dla nazwy pliku serializowanej danych.  
   
     ```vb  
     Const FileName As String = "..\..\SavedLoan.bin"  
     ```  
   
-2. Modify the code in the `Form1_Load` event procedure as follows:  
+2. Zmodyfikuj kod w procedurze zdarzenia `Form1_Load` w następujący sposób:  
   
     ```vb  
     Private WithEvents TestLoan As New LoanClass.Loan(10000.0, 0.075, 36, "Neil Black")  
@@ -191,13 +191,13 @@ Although you can set an object's properties to default values at design time, an
     End Sub  
     ```  
   
-     Note that you first must check that the file exists. If it exists, create a <xref:System.IO.Stream> class to read the binary file and a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> class to translate the file. You also need to convert from the stream type to the Loan object type.  
+     Należy pamiętać, że najpierw należy sprawdzić, czy plik istnieje. Jeśli istnieje, Utwórz klasę <xref:System.IO.Stream>, aby odczytać plik binarny i klasę <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>, aby przetłumaczyć plik. Należy również przekonwertować typ strumienia na typ obiektu pożyczki.  
   
- Next you must add code to save the data entered in the text boxes to the `Loan` class, and then you must serialize the class to a file.  
+ Następnie musisz dodać kod, aby zapisać dane wprowadzone w polach tekstowych do klasy `Loan`, a następnie trzeba serializować klasy do pliku.  
   
-### <a name="to-save-the-data-and-serialize-the-class"></a>To save the data and serialize the class  
+### <a name="to-save-the-data-and-serialize-the-class"></a>Aby zapisać dane i serializować klasę  
   
-- Add the following code to the `Form1_FormClosing` event procedure:  
+- Dodaj następujący kod do procedury zdarzenia `Form1_FormClosing`:  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  
@@ -213,9 +213,9 @@ Although you can set an object's properties to default values at design time, an
     End Sub  
     ```  
   
- At this point, you can again build and run the application. Initially, the default values appear in the text boxes. Try to change the values and enter a name in the fourth text box. Close the application and then run it again. Note that the new values now appear in the text boxes.  
+ W tym momencie możesz ponownie skompilować i uruchomić aplikację. Początkowo wartości domyślne pojawiają się w polach tekstowych. Spróbuj zmienić wartości i wprowadź nazwę w czwartym polu tekstowym. Zamknij aplikację, a następnie uruchom ją ponownie. Należy pamiętać, że nowe wartości są teraz wyświetlane w polach tekstowych.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Serialization (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Visual Basic Programming Guide](../../../../visual-basic/programming-guide/index.md)
+- [Serializacja (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+- [Przewodnik programowania Visual Basic](../../../../visual-basic/programming-guide/index.md)

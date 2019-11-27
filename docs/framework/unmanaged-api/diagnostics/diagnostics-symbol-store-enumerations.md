@@ -15,20 +15,20 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448543"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>Wyliczenia magazynu symboli diagnostycznych
-This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.  
+W tym temacie opisano niezarządzane wyliczenia, które są używane przez interfejs API magazynu symboli diagnostyki.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [CorSymAddrKind, wyliczenie](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
- Indicates the type of memory address.  
+ Wskazuje typ adresu pamięci.  
   
  [CorSymSearchPolicyAttributes, wyliczenie](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- Specifies the policy to be used when doing a search for a symbol reader.  
+ Określa zasady, które mają być używane podczas wyszukiwania czytnika symboli.  
   
  [CorSymVarFlag, wyliczenie](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
- Indicates whether a variable is compiler-generated.  
+ Wskazuje, czy zmienna jest generowana przez kompilator.  
   
  [NOTIFY_FILTER, wyliczenie](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
- Identifies callbacks for debugger functions.  
+ Identyfikuje wywołania zwrotne dla funkcji debugera.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

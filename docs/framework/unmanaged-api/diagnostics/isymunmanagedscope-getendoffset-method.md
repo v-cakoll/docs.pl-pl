@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446351"
 ---
 # <a name="isymunmanagedscopegetendoffset-method"></a>ISymUnmanagedScope::GetEndOffset — Metoda
-Gets the end offset for this scope.  
+Pobiera przesunięcie końca dla tego zakresu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,13 +34,13 @@ HRESULT GetEndOffset(
   
 ## <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the end offset.  
+ określoną Wskaźnik do `ULONG32`, który odbiera przesunięcie końcowe.  
   
-## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+## <a name="return-value"></a>Wartość zwrócona  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

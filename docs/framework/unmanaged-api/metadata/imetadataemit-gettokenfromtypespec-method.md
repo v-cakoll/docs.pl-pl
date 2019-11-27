@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434292"
 ---
 # <a name="imetadataemitgettokenfromtypespec-method"></a>IMetaDataEmit::GetTokenFromTypeSpec — Metoda
-Gets a metadata token for the type with the specified metadata signature.  
+Pobiera token metadanych dla typu z określonym podpisem metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,22 +37,22 @@ HRESULT GetTokenFromTypeSpec (
   
 ## <a name="parameters"></a>Parametry  
  `pvSig`  
- [in] The signature being defined.  
+ podczas Zdefiniowany podpis.  
   
  `cbSig`  
- [in] The count of bytes in `pvSig`.  
+ podczas Liczba bajtów w `pvSig`.  
   
  `ptypespec`  
- [out] The `mdTypeSpec` token assigned.  
+ określoną Przypisany token `mdTypeSpec`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443836"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention — Wyliczenie
-Contains values that describe the types of calling conventions that are made in managed code.  
+Zawiera wartości opisujące typy konwencji wywoływania, które są wykonywane w kodzie zarządzanym.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,26 +52,26 @@ typedef enum CorCallingConvention
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Indicates a default calling convention.|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|Indicates that the method takes a variable number of parameters.|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|Indicates that the call is to a field.|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indicates that the call is to a local method.|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indicates that the call is to a property.|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indicates that the call is unmanaged.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indicates a generic method instantiation.|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|Describes an invalid 4-bit value.|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|Indicates that the calling convention is described by the bottom four bits.|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indicates that the top bit describes a `this` parameter.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indicates that a `this` parameter is explicitly described in the signature.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indicates a generic method signature with an explicit number of type arguments. This precedes an ordinary parameter count.|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Wskazuje domyślną konwencję wywoływania.|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|Wskazuje, że metoda przyjmuje zmienną liczbę parametrów.|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|Wskazuje, że wywołanie należy do pola.|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Wskazuje, że wywołanie jest metodą lokalną.|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Wskazuje, że wywołanie jest właściwością.|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Wskazuje, że wywołanie jest niezarządzane.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Wskazuje na tworzenie wystąpienia metody ogólnej.|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Wskazuje 64-bitowego wywołania PInvoke do metody, która przyjmuje zmienną liczbę parametrów.|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|Opisuje nieprawidłową wartość 4-bitową.|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|Wskazuje, że Konwencja wywoływania jest opisana przez cztery ostatnie bity.|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Wskazuje, że górny bit opisuje parametr `this`.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Wskazuje, że parametr `this` jest jawnie opisany w podpisie.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Wskazuje sygnaturę metody ogólnej z jawną liczbą argumentów typu. Poprzedza to zwykłą liczbę parametrów.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

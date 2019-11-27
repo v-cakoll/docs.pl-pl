@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440866"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>INotifySink2::OnSyncCallEnter — Metoda
-Gets invoked when entering a call.  
+Wywoływana podczas wprowadzania wywołania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +38,19 @@ HRESULT OnSyncCallEnter
   
 ## <a name="parameters"></a>Parametry  
  `in_CallID`  
- [in] ID of the call being entered. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ podczas Identyfikator wprowadzonego wywołania. Zobacz [strukturę CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `in_pBuffer`  
- [in] Call buffer.  
+ podczas Bufor wywołań.  
   
  `in_BufferSize`  
- [in] Size of the call buffer, in bytes.  
+ podczas Rozmiar buforu wywołań w bajtach.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds.  
+ S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** ProtocolNotify2.idl  
+ **Nagłówek:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Zobacz także
 

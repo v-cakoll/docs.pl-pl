@@ -1,5 +1,5 @@
 ---
-title: GCLOHThreshold element
+title: GCLOHThreshold, element
 ms.date: 11/20/2019
 helpviewer_keywords:
 - GCLOHThreshold element
@@ -11,13 +11,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451221"
 ---
-# <a name="gclohthreshold-element"></a>GCLOHThreshold element
+# <a name="gclohthreshold-element"></a>GCLOHThreshold, element
 
-Specifies the threshold size, in bytes, that causes the garbage collector to put objects on the large object heap (LOH).
+Określa rozmiar progu (w bajtach), który powoduje, że moduł wyrzucania elementów bezużytecznych umieszcza obiekty na stercie dużego obiektu (LOH).
 
-[\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold>
+[\<> konfiguracji](../configuration-element.md)\
+&nbsp;&nbsp;[\<środowiska uruchomieniowego >](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold >
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,13 +30,13 @@ Specifies the threshold size, in bytes, that causes the garbage collector to put
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|`enabled`|Atrybut wymagany.<br /><br />Specifies the threshold size that causes objects to go on the large object heap.|
+|`enabled`|Atrybut wymagany.<br /><br />Określa rozmiar progu, który powoduje, że obiekty przechodzą na stertę dużego obiektu.|
 
-### <a name="enabled-attribute"></a>enabled attribute
+### <a name="enabled-attribute"></a>włączony atrybut
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`nnnn`|The threshold size, in bytes, that causes objects to go on the large object heap.|
+|`nnnn`|Rozmiar progu, w bajtach, który powoduje, że obiekty przechodzą na stertę dużego obiektu.|
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
@@ -51,11 +51,11 @@ Brak.
 
 ## <a name="remarks"></a>Uwagi
 
-This setting was introduced in .NET Framework 4.8.
+To ustawienie zostało wprowadzone w .NET Framework 4,8.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Run-time settings schema](index.md)
+- [Schemat ustawień czasu wykonywania](index.md)
 - [Schemat pliku konfiguracji](../index.md)
-- [Fundamentals of garbage collection](../../../../standard/garbage-collection/fundamentals.md)
-- [NET Core run-time config options for GC](../../../../core/run-time-config/garbage-collector.md)
+- [Podstawowe informacje dotyczące wyrzucania elementów bezużytecznych](../../../../standard/garbage-collection/fundamentals.md)
+- [Podstawowe opcje konfiguracji sieci w czasie wykonywania dla usługi GC](../../../../core/run-time-config/garbage-collector.md)

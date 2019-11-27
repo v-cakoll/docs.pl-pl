@@ -1,5 +1,5 @@
 ---
-title: Cloning vs. Attaching
+title: Klonowanie a dołączanie
 ms.date: 07/20/2015
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
 ms.openlocfilehash: 22e86ee78d5c3fa0a7b80ae559c39f424fc9d61a
@@ -9,11 +9,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345689"
 ---
-# <a name="cloning-vs-attaching-visual-basic"></a>Cloning vs. Attaching (Visual Basic)
-When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects to a new tree, if the new content has no parent, the objects are simply attached to the XML tree. If the new content already is parented, and is part of another XML tree, the new content is cloned. The newly cloned content is then attached to the XML tree.  
+# <a name="cloning-vs-attaching-visual-basic"></a>Klonowanie a dołączanie (Visual Basic)
+Po dodaniu <xref:System.Xml.Linq.XNode> (w tym <xref:System.Xml.Linq.XElement>) lub obiektów <xref:System.Xml.Linq.XAttribute> do nowego drzewa, jeśli nowa zawartość nie ma elementu nadrzędnego, obiekty są po prostu dołączone do drzewa XML. Jeśli nowa zawartość jest już nadrzędna i jest częścią innego drzewa XML, Nowa zawartość jest klonowana. Nowo sklonowana zawartość jest następnie dołączona do drzewa XML.  
   
 ## <a name="example"></a>Przykład  
- The following code demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.  
+ Poniższy kod ilustruje zachowanie po dodaniu elementu nadrzędnego do drzewa i po dodaniu elementu z elementem nadrzędnym do drzewa.  
   
 ```vb  
 ' Create a tree with a child element.  
@@ -52,4 +52,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Tworzenie drzew XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

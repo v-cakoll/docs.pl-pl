@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427995"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter — Metoda
-Defines a single parameter in the current method. The parameter type is taken from the parameter's position (sequence) within the method's signature.  
+Definiuje pojedynczy parametr w bieżącej metodzie. Typ parametru jest pobierany z pozycji parametru (Sequence) w podpisie metody.  
   
- If parameters are defined in the metadata for a given method, you do not have to define them again by using this method. The symbol readers must check the normal metadata for the parameters before checking the symbol store.  
+ Jeśli parametry są zdefiniowane w metadanych dla danej metody, nie trzeba ich definiować ponownie przy użyciu tej metody. Czytelnicy symboli muszą sprawdzić normalne metadane parametrów przed sprawdzeniem magazynu symboli.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,31 +42,31 @@ HRESULT DefineParameter(
   
 ## <a name="parameters"></a>Parametry  
  `name`  
- [in] The parameter name.  
+ podczas Nazwa parametru.  
   
  `attributes`  
- [in] The parameter attributes.  
+ podczas Atrybuty parametru.  
   
  `sequence`  
- [in] The parameter signature.  
+ podczas Sygnatura parametru.  
   
  `addrKind`  
- [in] The address type.  
+ podczas Typ adresu.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ podczas Pierwszy adres dla specyfikacji parametru.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ podczas Drugi adres dla specyfikacji parametru.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ podczas Trzeci adres dla specyfikacji parametru.  
   
-## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+## <a name="return-value"></a>Wartość zwrócona  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

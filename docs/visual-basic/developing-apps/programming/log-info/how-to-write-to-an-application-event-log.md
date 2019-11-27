@@ -16,39 +16,39 @@ ms.locfileid: "74352047"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Porady: zapisywanie w rejestrze zdarzeń aplikacji (Visual Basic)
 
-You can use the `My.Application.Log` and `My.Log` objects to write information about events that occur in your application. This example shows how to configure an event log listener so `My.Application.Log` writes tracing information to the Application event log.
+Za pomocą obiektów `My.Application.Log` i `My.Log` można zapisywać informacje o zdarzeniach występujących w aplikacji. Ten przykład pokazuje, jak skonfigurować odbiornik dziennika zdarzeń, aby `My.Application.Log` zapisywał informacje o śledzeniu w dzienniku zdarzeń aplikacji.
 
-You cannot write to the Security log. In order to write to the System log, you must be a member of the LocalSystem or Administrator account.
+Nie można zapisać w dzienniku zabezpieczeń. Aby można było zapisywać dane w dzienniku systemu, musisz być członkiem konta LocalSystem lub administratora.
 
-To view an event log, you can use **Server Explorer** or **Windows Event Viewer**. For more information, see [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).
+Aby wyświetlić dziennik zdarzeń, można użyć **Eksplorator serwera** lub **Podgląd zdarzeń systemu Windows**. Aby uzyskać więcej informacji, zobacz [zdarzenia ETW w .NET Framework](../../../../framework/performance/etw-events.md).
 
-## <a name="to-add-and-configure-the-event-log-listener"></a>To add and configure the event log listener
+## <a name="to-add-and-configure-the-event-log-listener"></a>Aby dodać i skonfigurować odbiornik dziennika zdarzeń
 
-1. Right-click app.config in **Solution Explorer** and choose **Open**.
+1. Kliknij prawym przyciskiem myszy plik App. config w **Eksplorator rozwiązań** i wybierz polecenie **Otwórz**.
 
-    \- or -
+    \- lub-
 
-    If there is no app.config file,
+    Jeśli nie ma pliku App. config,
 
-    1. On the **Project** menu, choose **Add New Item**.
+    1. W menu **projekt** wybierz polecenie **Dodaj nowy element**.
 
-    2. From the **Add New Item** dialog box, choose **Application Configuration File**.
+    2. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **plik konfiguracji aplikacji**.
 
     3. Kliknij przycisk **Dodaj**.
 
-2. Locate the `<listeners>` section in the application configuration file.
+2. Znajdź sekcję `<listeners>` w pliku konfiguracyjnym aplikacji.
 
-    You will find the `<listeners>` section in the `<source>` section with the name attribute "DefaultSource", which is nested under the `<system.diagnostics>` section, which is nested under the top-level `<configuration>` section.
+    Sekcja `<listeners>` znajduje się w sekcji `<source>` z atrybutem Name "DefaultSource", który jest zagnieżdżony w sekcji `<system.diagnostics>`, która jest zagnieżdżona w sekcji `<configuration>` najwyższego poziomu.
 
-3. Add this element to that `<listeners>` section:
+3. Dodaj ten element do `<listeners>` sekcji:
 
     ```xml
     <add name="EventLog"/>
     ```
 
-4. Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
+4. Znajdź sekcję `<sharedListeners>` w sekcji `<system.diagnostics>` w sekcji `<configuration>` najwyższego poziomu.
 
-5. Add this element to that `<sharedListeners>` section:
+5. Dodaj ten element do `<sharedListeners>` sekcji:
 
     ```xml
     <add name="EventLog"
@@ -56,16 +56,16 @@ To view an event log, you can use **Server Explorer** or **Windows Event Viewer*
          initializeData="APPLICATION_NAME"/>
     ```
 
-    Replace `APPLICATION_NAME` with the name of your application.
+    Zastąp `APPLICATION_NAME` nazwą aplikacji.
 
     > [!NOTE]
-    > Typically, an application writes only errors to the event log. For information on filtering log output, see [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
+    > Zazwyczaj aplikacja zapisuje tylko błędy w dzienniku zdarzeń. Aby uzyskać informacje o filtrowaniu danych wyjściowych dziennika, zobacz [Przewodnik: filtrowanie danych wyjściowych my. Application. log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
 
-## <a name="to-write-event-information-to-the-event-log"></a>To write event information to the event log
+## <a name="to-write-event-information-to-the-event-log"></a>Aby zapisać informacje o zdarzeniach w dzienniku zdarzeń
 
-Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the event log. For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
+Użyj metody `My.Application.Log.WriteEntry` lub `My.Application.Log.WriteException` w celu zapisania informacji w dzienniku zdarzeń. Aby uzyskać więcej informacji, zobacz [How to: Write log messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
 
-After you configure the event log listener for an assembly, it receives all messages that `My.Application.Log` writes from that assembly.
+Po skonfigurowaniu odbiornika dziennika zdarzeń dla zestawu otrzymuje on wszystkie komunikaty, które `My.Application.Log` zapisu z tego zestawu.
 
 ## <a name="see-also"></a>Zobacz także
 

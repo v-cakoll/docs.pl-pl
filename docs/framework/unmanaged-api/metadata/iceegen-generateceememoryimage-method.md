@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436360"
 ---
 # <a name="iceegengenerateceememoryimage-method"></a>ICeeGen::GenerateCeeMemoryImage — Metoda
-Generates an image in memory for the code base.  
+Generuje obraz w pamięci dla bazy kodu.  
   
- This method is obsolete and should not be used.  
+ Ta metoda jest przestarzała i nie powinna być używana.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,16 +37,16 @@ HRESULT GenerateCeeMemoryImage (
   
 ## <a name="parameters"></a>Parametry  
  `ppImage`  
- [out] A pointer to the generated image.  
+ określoną Wskaźnik do wygenerowanego obrazu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

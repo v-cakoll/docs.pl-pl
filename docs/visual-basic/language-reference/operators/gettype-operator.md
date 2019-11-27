@@ -1,5 +1,5 @@
 ---
-title: Operator GetType
+title: GetType, operator
 ms.date: 07/20/2015
 f1_keywords:
 - vb.GetType
@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349551"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType — Operator (Visual Basic)
-Returns a <xref:System.Type> object for the specified type. The <xref:System.Type> object provides information about the type such as its properties, methods, and events.  
+Zwraca obiekt <xref:System.Type> dla określonego typu. Obiekt <xref:System.Type> zawiera informacje o typie, takim jak jego właściwości, metody i zdarzenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -27,38 +27,38 @@ GetType(typename)
   
 |Parametr|Opis|  
 |---|---|  
-|`typename`|The name of the type for which you desire information.|  
+|`typename`|Nazwa typu, dla którego chcesz uzyskać informacje.|  
   
 ## <a name="remarks"></a>Uwagi  
- The `GetType` operator returns the <xref:System.Type> object for the specified `typename`. You can pass the name of any defined type in `typename`. Uwzględnione są następujące elementy:  
+ Operator `GetType` zwraca obiekt <xref:System.Type> dla określonego `typename`. Można przekazać nazwę dowolnego zdefiniowanego typu w `typename`. Uwzględnione są następujące elementy:  
   
-- Any Visual Basic data type, such as `Boolean` or `Date`.  
+- Dowolny Visual Basic typ danych, taki jak `Boolean` lub `Date`.  
   
-- Any .NET Framework class, structure, module, or interface, such as <xref:System.ArgumentException?displayProperty=nameWithType> or <xref:System.Double?displayProperty=nameWithType>.  
+- Wszelkie .NET Framework klasy, struktury, modułu lub interfejsu, takie jak <xref:System.ArgumentException?displayProperty=nameWithType> lub <xref:System.Double?displayProperty=nameWithType>.  
   
-- Any class, structure, module, or interface defined by your application.  
+- Wszystkie klasy, struktury, moduły lub interfejsy zdefiniowane przez aplikację.  
   
-- Any array defined by your application.  
+- Dowolna tablica zdefiniowana przez aplikację.  
   
-- Any delegate defined by your application.  
+- Każdy delegat zdefiniowany przez aplikację.  
   
-- Any enumeration defined by Visual Basic, the .NET Framework, or your application.  
+- Każde Wyliczenie zdefiniowane przez Visual Basic, .NET Framework lub aplikację.  
   
- If you want to get the type object of an object variable, use the <xref:System.Type.GetType%2A?displayProperty=nameWithType> method.  
+ Jeśli chcesz uzyskać obiekt typu zmiennej obiektu, użyj metody <xref:System.Type.GetType%2A?displayProperty=nameWithType>.  
   
- The `GetType` operator can be useful in the following circumstances:  
+ Operator `GetType` może być przydatny w następujących sytuacjach:  
   
-- You must access the metadata for a type at run time. The <xref:System.Type> object supplies metadata such as type members and deployment information. You need this, for example, to reflect over an assembly. Aby uzyskać więcej informacji, zobacz <xref:System.Reflection?displayProperty=nameWithType>.  
+- Należy uzyskać dostęp do metadanych dla typu w czasie wykonywania. Obiekt <xref:System.Type> dostarcza metadane, takie jak elementy członkowskie typu i informacje o wdrożeniu. Jest to konieczne, na przykład w celu odzwierciedlenia zestawu. Aby uzyskać więcej informacji, zobacz <xref:System.Reflection?displayProperty=nameWithType>.  
   
-- You want to compare two object references to see if they refer to instances of the same type. If they do, `GetType` returns references to the same <xref:System.Type> object.  
+- Chcesz porównać dwa odwołania do obiektów, aby sprawdzić, czy odwołują się do wystąpień tego samego typu. Jeśli tak, `GetType` zwraca odwołania do tego samego obiektu <xref:System.Type>.  
   
 ## <a name="example"></a>Przykład  
- The following examples show the `GetType` operator in use.  
+ W poniższych przykładach pokazano operator `GetType` w użyciu.  
   
  [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449620"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach — Metoda
-Instructs the runtime to detach the profiler.  
+Nakazuje programowi uruchomieniowemu odłączenie profilera.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,35 +34,35 @@ HRESULT RequestProfilerDetach(
   
 ## <a name="parameters"></a>Parametry  
  `dwExpectedCompletionMilliseconds`  
- [in] The length of time, in milliseconds, the common language runtime (CLR) should wait before checking to see whether it is safe to unload the profiler.  
+ podczas Czas (w milisekundach), przez który środowisko uruchomieniowe języka wspólnego (CLR) powinien czekać przed sprawdzeniem, czy można bezpiecznie zwolnić Profiler.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
+ Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|The detach request is valid, and the detach procedure is now continuing on another thread. When the detach is fully complete, a `ProfilerDetachSucceeded` event is issued.|  
-|E_ CORPROF_E_CALLBACK3_REQUIRED|The profiler failed an [IUnknown::QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) attempt for the [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) interface, which it must implement to support the detach operation. Detach was not attempted.|  
-|CORPROF_E_IMMUTABLE_FLAGS_SET|Detachment is impossible because the profiler set immutable flags at startup. Detachment was not attempted; the profiler is still fully attached.|  
-|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Detachment is impossible because the profiler used instrumented Microsoft intermediate language (MSIL) code, or inserted `enter`/`leave` hooks. Detachment was not attempted; the profiler is still fully attached.<br /><br /> **Note** Instrumented MSIL is code is code that is provided by the profiler using the [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method.|  
-|CORPROF_E_RUNTIME_UNINITIALIZED|The runtime has not been initialized yet in the managed application. (That is, the runtime has not been fully loaded.) This error code may be returned when detachment is requested inside the profiler callback's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) method.|  
-|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` was called at an unsupported time. This occurs if the method is called on a managed thread but not from within an [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) method or from within an [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) method that cannot tolerate a garbage collection. For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
+|S_OK|Żądanie odłączenia jest prawidłowe i Procedura odłączania jest teraz kontynuowana w innym wątku. Gdy odłączenie jest w pełni kompletne, zostanie wygenerowane zdarzenie `ProfilerDetachSucceeded`.|  
+|E_ CORPROF_E_CALLBACK3_REQUIRED|Profiler nie może wykonać operacji [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) dla interfejsu [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) , który musi zostać zaimplementowany, aby obsługiwał operację odłączania. Nie podjęto próby odłączenia.|  
+|CORPROF_E_IMMUTABLE_FLAGS_SET|Odłączenie jest niemożliwe, ponieważ Profiler ustawił niezmienne flagi podczas uruchamiania. Nie podjęto próby odłączenia; Profiler jest nadal w pełni dołączony.|  
+|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Odłączenie jest niemożliwe, ponieważ Profiler użył kodu pośredniego języka Microsoft (MSIL) lub wstawiono `enter`/`leave` Hook. Nie podjęto próby odłączenia; Profiler jest nadal w pełni dołączony.<br /><br /> **Uwaga** Instrumentacja MSIL to kod, który jest dostarczany przez profiler przy użyciu metody [SetILFunctionBody —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) .|  
+|CORPROF_E_RUNTIME_UNINITIALIZED|Środowisko uruchomieniowe nie zostało jeszcze zainicjowane w aplikacji zarządzanej. (Oznacza to, że środowisko uruchomieniowe nie zostało w pełni załadowane). Ten kod błędu może zostać zwrócony w przypadku zażądania odłączenia wewnątrz metody [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) wywołania zwrotnego profilera.|  
+|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` został wywołany w nieobsługiwanym czasie. Dzieje się tak, jeśli metoda jest wywoływana w wątku zarządzanym, ale nie z metody [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) lub z metody [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) , która nie może tolerować wyrzucania elementów bezużytecznych. Aby uzyskać więcej informacji, zobacz [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
   
 ## <a name="remarks"></a>Uwagi  
- During the detach procedure, the detach thread (the thread created specifically for detaching the profiler) occasionally checks whether all threads have exited the profiler’s code. The profiler should provide an estimate of how long this should take through the `dwExpectedCompletionMilliseconds` parameter. A good value to use is the typical amount of time the profiler spends inside any given `ICorProfilerCallback*` method; this value should not be less than half of the maximum amount of time the profiler expects to spend.  
+ Podczas procedury odłączania wątek odłączania (wątek utworzony w celu odłączenia profilera) sporadycznie sprawdza, czy wszystkie wątki zakończyły kod profilera. Profiler powinien przedstawiać, jak długo powinien upłynąć przez parametr `dwExpectedCompletionMilliseconds`. Dobrą wartością do użycia jest typowa ilość czasu, przez który Profiler spędza w ramach danej metody `ICorProfilerCallback*`; Ta wartość nie może być mniejsza niż połowa maksymalnego czasu oczekiwania przez profiler.  
   
- The detach thread uses `dwExpectedCompletionMilliseconds` to decide how long to sleep before checking whether profiler callback code has been popped off all stacks. Although the details of the following algorithm may change in future releases of the CLR, it illustrates one way `dwExpectedCompletionMilliseconds` can be used when determining when it is safe to unload the profiler. The detach thread first sleeps for `dwExpectedCompletionMilliseconds` milliseconds. If, after awakening from the sleep, the CLR finds that profiler callback code is still present, the detach thread sleeps again, this time for two times `dwExpectedCompletionMilliseconds` milliseconds. If, after awakening from this second sleep, the detach thread finds that profiler callback code is still present, it sleeps for 10 minutes before checking again. The detach thread continues to recheck every 10 minutes.  
+ Wątek odłączania używa `dwExpectedCompletionMilliseconds`, aby określić czas uśpienia przed sprawdzeniem, czy kod wywołania zwrotnego profilera został zdjęte poza wszystkie stosy. Chociaż szczegółowe informacje o następującym algorytmie mogą ulec zmianie w przyszłych wydaniach środowiska CLR, ilustruje jeden ze sposobów, `dwExpectedCompletionMilliseconds` mogą być używane podczas określania, kiedy jest bezpiecznie do zwolnienia profilera. Wątek odłączania najpierw odstana się w ciągu `dwExpectedCompletionMilliseconds` milisekund. Jeśli po przejściu z trybu uśpienia środowisko CLR znajdzie kod wywołania zwrotnego profilera nadal jest obecny, ten wątek odłączania zostanie ponownie przełączony przez dwa razy `dwExpectedCompletionMilliseconds` milisekund. Jeśli po przejściu z tego drugiego stanu uśpienia wątek odłączania odnajdzie kod wywołania zwrotnego profilera, który jest nadal obecny, zostanie on oduśpiony przez 10 minut przed ponownym sprawdzeniem. Wątek odłączania kontynuuje sprawdzanie ponownie co 10 minut.  
   
- If the profiler specifies `dwExpectedCompletionMilliseconds` as 0 (zero), the CLR uses a default value of 5000, which means that it will perform a check after 5 seconds, again after 10 seconds, and then every 10 minutes thereafter.  
+ Jeśli profiler określa `dwExpectedCompletionMilliseconds` jako 0 (zero), środowisko CLR używa domyślnej wartości 5000, co oznacza, że przeprowadzi sprawdzanie po 5 sekundach, ponownie po upływie 10 sekund, a następnie co 10 minut później.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

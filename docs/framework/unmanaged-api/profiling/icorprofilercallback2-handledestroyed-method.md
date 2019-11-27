@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439756"
 ---
 # <a name="icorprofilercallback2handledestroyed-method"></a>ICorProfilerCallback2::HandleDestroyed — Metoda
-Notifies the code profiler that a garbage collection handle has been destroyed.  
+Powiadamia profiler kodu, że dojście do wyrzucania elementów bezużytecznych zostało zniszczone.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,16 +34,16 @@ HRESULT HandleDestroyed(
   
 ## <a name="parameters"></a>Parametry  
  `handleId`  
- [in] The ID of the handle for the garbage collection.  
+ podczas Identyfikator dojścia do wyrzucania elementów bezużytecznych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

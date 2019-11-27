@@ -9,22 +9,22 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345796"
 ---
-# <a name="advanced-query-techniques-linq-to-xml-visual-basic"></a>Advanced Query Techniques (LINQ to XML) (Visual Basic)
-This section provides examples of more advanced [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query techniques.  
+# <a name="advanced-query-techniques-linq-to-xml-visual-basic"></a>Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)
+Ta sekcja zawiera przykłady bardziej zaawansowanych technik zapytań [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[How to: Join Two Collections (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)|Shows how to use the `Join` clause to take advantage of relationships in XML data.|  
-|[How to: Create Hierarchy Using Grouping (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md)|Shows how to group data, and then generate XML based on the grouping.|  
-|[How to: Query LINQ to XML Using XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md)|Shows how to retrieve collections based on XPath queries.|  
-|[How to: Write a LINQ to XML Axis Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)|Shows how to write a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axis method.|  
-|[How to: List All Nodes in a Tree (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-list-all-nodes-in-a-tree.md)|Presents a utility method that lists all nodes in an XML tree. This is useful for debugging code that modifies an XML tree.|  
-|[How to: Retrieve Paragraphs from an Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-paragraphs-from-an-office-open-xml-document.md)|Presents code that opens an Office Open XML Document, retrieves the paragraphs in a collection of XElement objects, the text of the paragraphs, and the style of the paragraphs.|  
-|[How to: Modify an Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md)|Presents code that opens, modifies, and saves an Office Open XML Document.|  
-|[How to: Populate an XML Tree from the File System (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|Presents code that creates an XML tree from the file system.|  
+|[Instrukcje: sprzęganie dwóch kolekcji (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)|Pokazuje, jak używać klauzuli `Join`, aby wykorzystać relacje w danych XML.|  
+|[Instrukcje: Tworzenie hierarchii przy użyciu grupowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md)|Pokazuje, jak grupować dane, a następnie generować XML na podstawie grupowania.|  
+|[Instrukcje: zapytanie LINQ to XML przy użyciu XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md)|Pokazuje, jak pobierać kolekcje na podstawie zapytań XPath.|  
+|[Instrukcje: pisanie metody osi LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)|Pokazuje, jak napisać metodę osi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Instrukcje: Wyświetlanie listy wszystkich węzłów w drzewie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-list-all-nodes-in-a-tree.md)|Przedstawia metodę narzędzia, która wyświetla listę wszystkich węzłów w drzewie XML. Jest to przydatne w przypadku debugowania kodu, który modyfikuje drzewo XML.|  
+|[Instrukcje: pobieranie akapitów z dokumentu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-paragraphs-from-an-office-open-xml-document.md)|Przedstawia kod, który otwiera dokument Office Open XML, pobiera akapity w kolekcji XElement obiektów, tekst akapitów i styl akapitów.|  
+|[Instrukcje: modyfikowanie dokumentu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md)|Przedstawia kod, który otwiera, modyfikuje i zapisuje dokument Office Open XML.|  
+|[Instrukcje: wypełnianie drzewa XML z systemu plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|Przedstawia kod, który tworzy drzewo XML z systemu plików.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Querying XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
+- [Wykonywanie zapytania dotyczącego drzew XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

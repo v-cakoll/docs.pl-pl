@@ -9,27 +9,27 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346521"
 ---
-# <a name="refactoring-into-pure-functions-visual-basic"></a>Refactoring Into Pure Functions (Visual Basic)
+# <a name="refactoring-into-pure-functions-visual-basic"></a>Refaktoryzacja do czystych funkcji (Visual Basic)
 
-An important aspect of pure functional transformations is learning how to refactor code using pure functions.
+Ważnym aspektem czystych transformacji funkcjonalnych jest uczenie się, jak kod refaktoryzacji przy użyciu czystych funkcji.
 
-As noted previously in this section, a pure function has two useful characteristics:
+Jak wspomniano wcześniej w tej sekcji, czysta funkcja ma dwie przydatne cechy:
 
-- It has no side effects. The function does not change any variables or the data of any type outside of the function.
+- Nie ma żadnych efektów ubocznych. Funkcja nie zmienia żadnych zmiennych ani danych dowolnego typu poza funkcją.
 
-- It is consistent. Given the same set of input data, it will always return the same output value.
+- Jest ona spójna. Mając ten sam zestaw danych wejściowych, zawsze zwróci tę samą wartość wyjściową.
 
- One way of transitioning to functional programming is to refactor existing code to eliminate unnecessary side effects and external dependencies. In this way, you can create pure function versions of existing code.
+ Jednym ze sposobów przejścia do programowania funkcjonalnego jest Refaktoryzacja istniejącego kodu w celu wyeliminowania zbędnych efektów ubocznych i zewnętrznych zależności. W ten sposób można utworzyć czystą wersję funkcji istniejącego kodu.
 
-This topic discusses what a pure function is and what it is not. The [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial shows how to manipulate a WordprocessingML document, and includes two examples of how to refactor using a pure function.
+W tym temacie omówiono czystą funkcję i jej znaczenie. [Samouczek: manipulowanie zawartością w samouczku WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) pokazuje, jak manipulować dokumentem WordprocessingML i zawiera dwa przykłady sposobu refaktoryzacji przy użyciu czystej funkcji.
 
-## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminating Side Effects and External Dependencies
+## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminowanie efektów ubocznych i zależności zewnętrznych
 
-The following examples contrast two non-pure functions and a pure function.
+Poniższe przykłady różnią się dwoma nieczystymi funkcjami i czystą funkcją.
 
-### <a name="non-pure-function-that-changes-a-class-member"></a>Non-Pure Function that Changes a Class Member
+### <a name="non-pure-function-that-changes-a-class-member"></a>Nieczysta funkcja, która zmienia element członkowski klasy
 
-In the following code, the `HyphenatedConcat` function is not a pure function, because it modifies the `aMember` data member in the class:
+W poniższym kodzie funkcja `HyphenatedConcat` nie jest czystą funkcją, ponieważ modyfikuje element członkowski danych `aMember` w klasie:
 
 ```vb
 Module Module1
@@ -52,11 +52,11 @@ Ten kod generuje następujące dane wyjściowe:
 StringOne-StringTwo
 ```
 
-Note that it is irrelevant whether the data being modified has `public` or `private` access, or is a  `shared` member or an instance member. A pure function does not change any data outside of the function.
+Należy zauważyć, że nie ma znaczenia, czy modyfikowane dane mają `public` czy `private` dostępu, czy też jest członkiem `shared` lub członkiem wystąpienia. Czysta funkcja nie zmienia żadnych danych poza funkcją.
 
-### <a name="non-pure-function-that-changes-an-argument"></a>Non-Pure Function that Changes an Argument
+### <a name="non-pure-function-that-changes-an-argument"></a>Nieczysta funkcja, która zmienia argument
 
-Furthermore, the following version of this same function is not pure because it modifies the contents of its parameter, `sb`.
+Ponadto następująca wersja tej samej funkcji nie jest czysta, ponieważ modyfikuje zawartość jej parametru, `sb`.
 
 ```vb
 Module Module1
@@ -72,14 +72,14 @@ Module Module1
 End Module
 ```
 
-This version of the program produces the same output as the first version, because the `HyphenatedConcat` function has changed the value (state) of its first parameter by invoking the <xref:System.Text.StringBuilder.Append%2A> member function. Note that this alteration occurs despite that fact that `HyphenatedConcat` uses call-by-value parameter passing.
+Ta wersja programu daje te same dane wyjściowe co w pierwszej wersji, ponieważ funkcja `HyphenatedConcat` zmieniła wartość (stan) pierwszego parametru przez wywołanie funkcji członkowskiej <xref:System.Text.StringBuilder.Append%2A>. Należy zauważyć, że ta zmiana występuje pomimo tego, że `HyphenatedConcat` używa parametrów wywołania-do-wartości.
 
 > [!IMPORTANT]
-> For reference types, if you pass a parameter by value, it results in a copy of the reference to an object being passed. This copy is still associated with the same instance data as the original reference (until the reference variable is assigned to a new object). Call-by-reference is not necessarily required for a function to modify a parameter.
+> W przypadku typów referencyjnych, Jeśli przekażesz parametr według wartości, wynikiem jest kopia odwołania do obiektu, który jest przekazywany. Ta kopia jest nadal skojarzona z tymi samymi danymi wystąpienia co oryginalne odwołanie (do momentu przypisania zmiennej odniesienia do nowego obiektu). Wywołanie przez odwołanie nie musi być wymagane do zmodyfikowania parametru przez funkcję.
 
-### <a name="pure-function"></a>Pure Function
+### <a name="pure-function"></a>Czysta funkcja
 
-This next version of the program hows how to implement the `HyphenatedConcat` function as a pure function.
+Ta Następna wersja programu hows sposób implementacji funkcji `HyphenatedConcat` jako czystej funkcji.
 
 ```vb
 Module Module1
@@ -95,17 +95,17 @@ Module Module1
 End Module
 ```
 
-Again, this version produces the same line of output: `StringOne-StringTwo`. Note that to retain the concatenated value, it is stored in the intermediate variable `s2`.
+Ta wersja generuje ten sam wiersz danych wyjściowych: `StringOne-StringTwo`. Należy pamiętać, że aby zachować łączną wartość, jest ona przechowywana w zmiennej pośredniej `s2`.
 
-One approach that can be very useful is to write functions that are locally impure (that is, they declare and modify local variables) but are globally pure. Such functions have many of the desirable composability characteristics, but avoid some of the more convoluted functional programming idioms, such as having to use recursion when a simple loop would accomplish the same thing.
+Jednym z metod, które może być bardzo przydatne, jest zapisanie funkcji, które są w sposób nieczysty (to oznacza, że deklarują i modyfikują zmienne lokalne), ale są globalnie czyste. Takie funkcje mają wiele pożądanych cech tworzenia, ale unikają niektórych bardziej zawiłeych idiomy programowania, takich jak korzystanie z rekursji, gdy pętla prosta osiągnie tę samą wartość.
 
-## <a name="standard-query-operators"></a>Standard Query Operators
+## <a name="standard-query-operators"></a>Standardowe operatory zapytań
 
-An important characteristic of the standard query operators is that they are implemented as pure functions.
+Ważną cechą standardowych operatorów zapytań jest zaimplementowanie ich jako czystych funkcji.
 
-For more information, see [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
+Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — Omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Functional Programming vs. Imperative Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Wprowadzenie do czystych transformacji funkcjonalnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Programowanie funkcjonalne a programowanie bezwzględne (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

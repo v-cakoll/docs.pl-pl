@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431403"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout — Metoda
-Gets information about the layout of a string object. This method is deprecated in the .NET Framework 4, and is superseded by the [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) method.  
+Pobiera informacje o układzie obiektu ciągu. Ta metoda jest przestarzała w .NET Framework 4 i jest zastępowana przez metodę [ICorProfilerInfo3:: GetStringLayout2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,36 +36,36 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>Parametry  
  `pBufferLengthOffset`  
- [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string. The length is stored as a `DWORD`.  
+ określoną Wskaźnik do przesunięcia lokalizacji względem wskaźnika `ObjectID`, w którym jest przechowywana długość ciągu. Długość jest przechowywana jako `DWORD`.  
   
 > [!NOTE]
-> This parameter returns the length of the string itself, not the length of the buffer. The length of the buffer is no longer available.  
+> Ten parametr zwraca długość samego ciągu, a nie długość buforu. Długość buforu nie jest już dostępna.  
   
  `PStringLengthOffset`  
- [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself. The length is stored as a `DWORD`.  
+ określoną Wskaźnik do przesunięcia lokalizacji względem wskaźnika `ObjectID`, w którym jest przechowywana długość ciągu. Długość jest przechowywana jako `DWORD`.  
   
  `pBufferOffset`  
- [out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, that stores the string of wide characters.  
+ określoną Wskaźnik do przesunięcia buforu względem wskaźnika `ObjectID`, który przechowuje ciąg znaków dwubajtowych.  
   
 ## <a name="remarks"></a>Uwagi  
- The `GetStringLayout` method gets the offsets, relative to the `ObjectID` pointer, of the locations in which the following are stored:  
+ Metoda `GetStringLayout` pobiera przesunięcia, względem wskaźnika `ObjectID`, lokalizacji, w których są przechowywane następujące elementy:  
   
-- The length of the string's buffer.  
+- Długość buforu ciągu.  
   
-- The length of the string itself.  
+- Długość samego ciągu.  
   
-- The buffer that contains the actual string of wide characters.  
+- Bufor, który zawiera rzeczywisty ciąg znaków dwubajtowych.  
   
- Strings may be null-terminated.  
+ Ciągi mogą być zakończone wartością null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

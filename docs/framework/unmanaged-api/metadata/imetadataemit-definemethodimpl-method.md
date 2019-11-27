@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445262"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl — Metoda
-Creates a definition for implementation of a method inherited from an interface, and returns a token to that method-implementation definition.  
+Tworzy definicję dla implementacji metody dziedziczonej z interfejsu i zwraca token do tej definicji implementacji metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,22 +37,22 @@ HRESULT DefineMethodImpl (
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- [in] The `mdTypedef` token of the implementing class.  
+ podczas Token `mdTypedef` implementującej klasy.  
   
  `tkBody`  
- [in] The `mdMethodDef` or `mdMemberRef` token of the code body.  
+ podczas Token `mdMethodDef` lub `mdMemberRef` treści kodu.  
   
  `tkDecl`  
- [in] The `mdMethodDef` or `mdMemberRef` token of the interface method being implemented.  
+ podczas Token `mdMethodDef` lub `mdMemberRef` zaimplementowanej metody interfejsu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

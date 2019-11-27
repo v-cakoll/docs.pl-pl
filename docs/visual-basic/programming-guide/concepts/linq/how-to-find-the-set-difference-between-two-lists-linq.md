@@ -9,12 +9,12 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344582"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)
-This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Instrukcje: Wyszukiwanie zestawu różnic między dwoma listami (LINQ) (Visual Basic)
+Ten przykład pokazuje, jak używać LINQ do porównywania dwóch list ciągów i wyprowadzania tych wierszy w names1. txt, ale nie w names2. txt.  
   
-### <a name="to-create-the-data-files"></a>To create the data files  
+### <a name="to-create-the-data-files"></a>Aby utworzyć pliki danych  
   
-1. Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
+1. Skopiuj names1. txt i names2. txt do folderu rozwiązania, jak pokazano poniżej [: łączenie i porównywanie kolekcji ciągów (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
   
 ## <a name="example"></a>Przykład  
   
@@ -51,11 +51,11 @@ End Class
 ' Garcia, Debra  
 ```  
   
- Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.  
+ Niektóre typy operacji zapytania w Visual Basic, takie jak <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>i <xref:System.Linq.Enumerable.Concat%2A>, mogą być wyrażone wyłącznie w składni opartej na metodzie.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Utwórz projekt aplikacji konsolowej VB.NET z instrukcją `Imports` dla przestrzeni nazw System. LINQ.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

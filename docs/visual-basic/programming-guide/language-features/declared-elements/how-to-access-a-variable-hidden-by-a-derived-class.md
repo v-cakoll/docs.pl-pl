@@ -18,17 +18,17 @@ ms.locfileid: "74345405"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Porady: dostęp do zmiennej ukrytej przez klasę pochodną (Visual Basic)
 
-When code in a derived class accesses a variable, the compiler normally resolves the reference to the closest accessible version, that is, the accessible version the fewest derivational steps backward from the accessing class. If the variable is defined in the derived class, the code normally accesses that definition.
+Gdy kod w klasie pochodnej uzyskuje dostęp do zmiennej, kompilator zwykle rozwiązuje odwołanie do najbliższej dostępnej wersji, czyli dostępnej wersji, którą można wykonać z tyłu od klasy dostępu. Jeśli zmienna jest zdefiniowana w klasie pochodnej, kod zwykle uzyskuje dostęp do tej definicji.
 
-If the derived class variable shadows a variable in the base class, it hides the base class version. However, you can access the base class variable by qualifying it with the `MyBase` keyword.
+Jeśli zmienna klasy pochodnej zasłania zmienną w klasie bazowej, ukrywa wersję klasy bazowej. Można jednak uzyskać dostęp do zmiennej klasy bazowej, kwalifikując ją za pomocą słowa kluczowego `MyBase`.
 
-### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>To access a base class variable hidden by a derived class
+### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>Aby uzyskać dostęp do zmiennej klasy bazowej ukrytej przez klasę pochodną
 
-- In an expression or assignment statement, precede the variable name with the `MyBase` keyword and a period (`.`).
+- W instrukcji wyrażenia lub przypisania poprzedź nazwę zmiennej za pomocą słowa kluczowego `MyBase` i kropką (`.`).
 
-    The compiler resolves the reference to the base class version of the variable.
+    Kompilator rozpoznaje odwołanie do wersji klasy bazowej zmiennej.
 
-    The following example illustrates shadowing through inheritance. It makes two references, one that accesses the shadowing variable and one that bypasses the shadowing.
+    Poniższy przykład ilustruje przesłanianie przez dziedziczenie. Tworzy dwa odwołania, które uzyskują dostęp do zmiennej przesłaniania i jeden, który pomija przesłanianie.
 
     ```vb
     Public Class shadowBaseClass
@@ -45,16 +45,16 @@ If the derived class variable shadows a variable in the base class, it hides the
     End Class
     ```
 
-    The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class. The procedure `showStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified. It then displays the shadowed version when `shadowString` is qualified with the `MyBase`  keyword.
+    Poprzedni przykład deklaruje zmienną `shadowString` w klasie bazowej i zasłania ją w klasie pochodnej. Procedura `showStrings` w klasie pochodnej wyświetla wersję przesłaniania ciągu, gdy nazwa `shadowString` nie jest kwalifikowana. Następnie wyświetla wersję w tle, gdy `shadowString` jest kwalifikowana za pomocą słowa kluczowego `MyBase`.
 
 ## <a name="robust-programming"></a>Niezawodne programowanie
 
-To lower the risk of referring to an unintended version of a shadowed variable, you can fully qualify all references to a shadowed variable. Shadowing introduces more than one version of a variable with the same name. When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string. This can increase the risk of referring to the wrong version of the variable.
+Aby zmniejszyć ryzyko związane z odwołującymi się do niezamierzonej wersji zmiennej w tle, można w pełni zakwalifikować wszystkie odwołania do zmiennej cieniowej. Przesłanianie zawiera więcej niż jedną wersję zmiennej o tej samej nazwie. Gdy instrukcja Code odwołuje się do nazwy zmiennej, wersja, do której kompilator rozpoznaje odwołanie, zależy od czynników, takich jak lokalizacja instrukcji Code i obecność ciągu uprawniającego. Może to zwiększyć ryzyko odwołania się do niewłaściwej wersji zmiennej.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Obserwowanie w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Różnice między przesłanianiem i zastępowaniem](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
 - [Instrukcje: ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [Instrukcje: ukrywanie dziedziczonej zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Parse a String'
+title: 'Instrukcje: analizowanie ciągu'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
 ms.openlocfilehash: 31bae00eb3ebf0d8e64fc657693e8c0767c4f5d4
@@ -9,16 +9,16 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344497"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>How to: Parse a String (Visual Basic)
-This topic shows how to create an XML tree in C#.  
+# <a name="how-to-parse-a-string-visual-basic"></a>Instrukcje: analizowanie ciągu (Visual Basic)
+W tym temacie pokazano, jak utworzyć drzewo XML w C#.  
   
 ## <a name="example"></a>Przykład  
- You can parse a string in Visual Basic by using the `XElement.Parse` method. However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.  
+ Można przeanalizować ciąg w Visual Basic przy użyciu metody `XElement.Parse`. Jednak bardziej wydajne jest użycie literałów XML, jak pokazano w poniższym kodzie, ponieważ literały XML nie cierpią od tych samych kar za wydajność, co analizowanie XML z ciągu.  
   
- By using XML literals, you can just copy and paste your XML into your Visual Basic program.  
+ Za pomocą literałów XML, można po prostu skopiować i wkleić kod XML do programu Visual Basic.  
   
 > [!NOTE]
-> Parsing text or loading an XML document from a text file is less efficient than functional construction. If you are initializing an XML tree from code, it takes less processor time to use functional construction than to parse text.  
+> Analizowanie tekstu lub ładowanie dokumentu XML z pliku tekstowego jest mniej wydajne niż konstrukcja funkcjonalna. Jeśli inicjujesz drzewo XML od kodu, trwa mniej czasu procesora, aby użyć konstrukcji funkcjonalnej niż w celu przeanalizowania tekstu.  
   
 ```vb  
 Dim contacts as XElement = _  
@@ -51,4 +51,4 @@ Dim contacts as XElement = _
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Analizowanie kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

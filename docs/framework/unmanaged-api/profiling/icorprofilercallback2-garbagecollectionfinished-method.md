@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439845"
 ---
 # <a name="icorprofilercallback2garbagecollectionfinished-method"></a>ICorProfilerCallback2::GarbageCollectionFinished — Metoda
-Notifies the profiler that garbage collection has completed and all garbage collection callbacks have been issued for it.  
+Powiadamia profiler, że wyrzucanie elementów bezużytecznych zostało ukończone i wydano wszystkie wywołania zwrotne elementów bezużytecznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,16 +32,16 @@ HRESULT GarbageCollectionFinished();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- It is safe for the profiler to inspect objects in their final locations when the `GarbageCollectionFinished` method is called.  
+ Program profilujący może bezpiecznie zbadać obiekty w ich końcowych lokalizacjach, gdy wywoływana jest metoda `GarbageCollectionFinished`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

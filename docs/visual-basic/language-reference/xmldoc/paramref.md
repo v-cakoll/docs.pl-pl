@@ -12,8 +12,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352279"
 ---
-# <a name="paramref-visual-basic"></a>\<paramref> (Visual Basic)
-Formats a word as a parameter.  
+# <a name="paramref-visual-basic"></a>\<paramref > (Visual Basic)
+Formatuje słowo jako parametr.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,15 +23,15 @@ Formats a word as a parameter.
   
 ## <a name="parameters"></a>Parametry  
  `name`  
- The name of the parameter to refer to. Enclose the name in double quotation marks (" ").  
+ Nazwa parametru, do którego się odwołuje. Ujmij nazwę w znaki podwójnego cudzysłowu ("").  
   
 ## <a name="remarks"></a>Uwagi  
- The `<paramref>` tag gives you a way to indicate that a word is a parameter. The XML file can be processed to format this parameter in some distinct way.  
+ Tag `<paramref>` umożliwia wskazanie, że słowo jest parametrem. Plik XML można przetworzyć, aby sformatować ten parametr w dowolny sposób.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- This example uses the `<paramref>` tag to refer to the `id` parameter.  
+ W tym przykładzie używa znacznika `<paramref>`, aby odwołać się do parametru `id`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

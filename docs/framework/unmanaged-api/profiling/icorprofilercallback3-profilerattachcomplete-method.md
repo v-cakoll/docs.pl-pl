@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439466"
 ---
 # <a name="icorprofilercallback3profilerattachcomplete-method"></a>ICorProfilerCallback3::ProfilerAttachComplete — Metoda
-Called by the common language runtime (CLR) to indicate that the profiler can now call the [ICorProfilerInfo3::EnumJITedFunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md) and [ICorProfilerInfo3::EnumModules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md) catch-up methods.  
+Wywoływane przez środowisko uruchomieniowe języka wspólnego (CLR), aby wskazać, że profiler może teraz wywołać metody przechwytywania [ICorProfilerInfo3:: EnumJITedFunctions —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md) i [ICorProfilerInfo3:: EnumModules —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,22 +32,22 @@ HRESULT ProfilerAttachComplete ();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- The `ProfilerAttachComplete` callback is issued after the [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method is called. It indicates the following:  
+ Wywołanie zwrotne `ProfilerAttachComplete` jest wydawane po wywołaniu metody [ICorProfilerCallback3:: InitializeForAttach —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) . Wskazuje następujące elementy:  
   
-- The callbacks that were requested by the profiler in `InitializeForAttach` have been activated.  
+- Wywołania zwrotne, które zażądały Profiler w `InitializeForAttach`, zostały aktywowane.  
   
-- The profiler can now perform catch-up on the associated IDs without being concerned about missing notifications.  
+- Profiler może teraz przechwycić odpowiednie identyfikatory bez konieczności powiadamiania o brakujących powiadomieniach.  
   
- The CLR ignores the return value from this callback.  
+ Środowisko CLR ignoruje wartość zwracaną z tego wywołania zwrotnego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -9,11 +9,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353121"
 ---
-# <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>Performance of Chained Queries (LINQ to XML) (Visual Basic)
+# <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>Wydajność zapytań łańcuchowych (LINQ to XML) (Visual Basic)
 
-One of the most important benefits of LINQ (and LINQ to XML) is that chained queries can perform as well as a single larger, more complicated query.
+Jedną z najważniejszych zalet LINQ (i LINQ to XML) jest to, że kwerendy łańcuchowe mogą wykonywać, a także pojedyncze, bardziej skomplikowane zapytania.
 
-A chained query is a query that uses another query as its source. For example, in the following simple code, `query2` has `query1` as its source:
+Zapytanie łańcuchowe jest kwerendą, która używa innego zapytania jako źródła. Na przykład w poniższym prostym kodzie `query2` ma `query1` jako Źródło:
 
 ```vb
 Dim root As New XElement("Root", New XElement("Child", 1), New XElement("Child", 2), New XElement("Child", 3), New XElement("Child", 4))
@@ -33,18 +33,18 @@ Ten przykład generuje następujące wyniki:
 4
 ```
 
-This chained query provides the same performance profile as iterating through a linked list.
+To zapytanie łańcuchowe zapewnia ten sam profil wydajności co iteracja w połączonej liście.
 
-- The <xref:System.Xml.Linq.XContainer.Elements%2A> axis has essentially the same performance as iterating through a linked list. <xref:System.Xml.Linq.XContainer.Elements%2A> is implemented as an iterator with deferred execution. This means that it does some work in addition to iterating through the linked list, such as allocating the iterator object and keeping track of execution state. This work can be divided into two categories: the work that is done at the time the iterator is set up, and the work that is done during each iteration. The setup work is a small, fixed amount of work and the work done during each iteration is proportional to the number of items in the source collection.
+- Oś <xref:System.Xml.Linq.XContainer.Elements%2A> ma zasadniczo taką samą wydajność jak iteracja w połączonej liście. <xref:System.Xml.Linq.XContainer.Elements%2A> jest zaimplementowany jako iterator z odroczonym wykonywaniem. Oznacza to, że wykonuje kilka zadań oprócz iteracji przez połączoną listę, na przykład przydzielanie obiektu iteratora i śledzenie stanu wykonywania. Ta czynność może zostać podzielona na dwie kategorie: pracy, która jest wykonywana w chwili, gdy iterator jest skonfigurowany, i pracy, która jest wykonywana podczas każdej iteracji. Konfiguracja pracy jest małą, stałą ilością pracy i pracy wykonywanej podczas każdej iteracji jest proporcjonalna do liczby elementów w kolekcji źródłowej.
 
-- In `query1`, the `Where` clause causes the query to call the <xref:System.Linq.Enumerable.Where%2A> method. This method is also implemented as an iterator. The setup work consists of instantiating the delegate that will reference the lambda expression, plus the normal setup for an iterator. With each iteration, the delegate is called to execute the predicate. The setup work and the work done during each iteration is the similar to the work done while iterating through the axis.
+- W `query1`, klauzula `Where` powoduje wywołanie metody <xref:System.Linq.Enumerable.Where%2A> przez zapytanie. Ta metoda jest również zaimplementowana jako iterator. Konfiguracja zadań składa się z tworzenia wystąpienia delegata, który będzie odwoływać się do wyrażenia lambda oraz normalnej konfiguracji iteratora. Dla każdej iteracji delegat jest wywoływany, aby wykonać predykat. Konfiguracja pracy i pracy wykonanej podczas każdej iteracji jest podobna do wykonanej pracy podczas iteracji na osi.
 
-- In `query1`, the select clause causes the query to call the <xref:System.Linq.Enumerable.Select%2A> method. This method has the same performance profile as the <xref:System.Linq.Enumerable.Where%2A> method.
+- W `query1`, klauzula SELECT powoduje wywołanie metody <xref:System.Linq.Enumerable.Select%2A> przez zapytanie. Ta metoda ma ten sam profil wydajności co Metoda <xref:System.Linq.Enumerable.Where%2A>.
 
-- In `query2`, both the `Where` clause and the `Select` clause have the same performance profile as in `query1`.
+- W `query2`zarówno klauzula `Where`, jak i klauzula `Select` mają taki sam profil wydajności jak w `query1`.
 
- The iteration through `query2` is therefore directly proportional to the number of items in the source of the first query, in other words, linear time.
+ Iteracja przez `query2` jest więc bezpośrednio proporcjonalna do liczby elementów w źródle pierwszego zapytania, czyli czasu liniowego.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Performance (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [Wydajność (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

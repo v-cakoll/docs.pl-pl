@@ -1,5 +1,5 @@
 ---
-title: Null-conditional Operators
+title: Operatory warunkowe o wartości null
 ms.date: 10/19/2018
 helpviewer_keywords:
 - null-conditional operators [Visual Basic]
@@ -13,11 +13,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348288"
 ---
-# <a name="-and--null-conditional-operators-visual-basic"></a>?. and ?() null-conditional operators (Visual Basic)
+# <a name="-and--null-conditional-operators-visual-basic"></a>?. lub? () operatory warunkowe o wartości null (Visual Basic)
 
-Tests the value of the left-hand operand for null (`Nothing`) before performing a member access (`?.`) or index (`?()`) operation; returns `Nothing` if the left-hand operand evaluates to `Nothing`. Note that in expressions that ordinarily return value types, the null-conditional operator returns a <xref:System.Nullable%601>.
+Testuje wartość operandu po lewej stronie dla wartości null (`Nothing`) przed wykonaniem operacji dostępu do elementu członkowskiego (`?.`) lub indeksu (`?()`). zwraca `Nothing`, jeśli argument operacji po lewej stronie szacuje się na `Nothing`. Należy zauważyć, że w wyrażeniach, które zwykle zwracają typy wartości, operator warunkowy NULL zwraca <xref:System.Nullable%601>.
 
-These operators help you write less code to handle null checks, especially when descending into data structures. Na przykład:
+Te operatory ułatwiają pisanie mniejszego kodu do obsługi kontroli wartości null, szczególnie w przypadku malejących struktur danych. Na przykład:
 
 ```vb
 ' Nothing if customers is Nothing
@@ -30,7 +30,7 @@ Dim first As Customer = customers?(0)
 Dim count As Integer? = customers?(0)?.Orders?.Count()
 ```
 
-For comparison, the alternative code for the first of these expressions without a null-conditional operator is:
+W celu porównania kod alternatywny dla pierwszego z tych wyrażeń bez operatora warunkowego null jest następujący:
 
 ```vb
 Dim length As Integer
@@ -39,7 +39,7 @@ If customers IsNot Nothing Then
 End If
 ```
 
-Sometimes you need to take an action on an object that may be null, based on the value of a Boolean member on that object (like the Boolean property `IsAllowedFreeShipping` in the following example):
+Czasami trzeba wykonać akcję na obiekcie, który może mieć wartość null, na podstawie wartości logicznej składowej tego obiektu (podobnie jak właściwość logiczna `IsAllowedFreeShipping` w poniższym przykładzie):
 
 ```vb
 Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
@@ -49,7 +49,7 @@ If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
 End If
 ```
 
-You can shorten your code and avoid manually checking for null by using the null-conditional operator as follows:
+Możesz skrócić swój kod i unikać ręcznego sprawdzania wartości null przy użyciu operatora warunkowego null w następujący sposób:
 
 ```vb
 Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
@@ -57,13 +57,13 @@ Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
 If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
-The null-conditional operators are short-circuiting.  If one operation in a chain of conditional member access and index operations returns `Nothing`, the rest of the chain’s execution stops.  In the following example, `C(E)` isn't evaluated if `A`, `B`, or `C` evaluates to `Nothing`.
+Operatory warunkowe `null` skracają łańcuch wykonywania operacji.  Jeśli jedna operacja w łańcuchu warunkowych operacji dostępu i indeksowania zwraca `Nothing`, pozostała część wykonania łańcucha zostanie zatrzymana.  W poniższym przykładzie `C(E)` nie jest oceniane, jeśli `A`, `B`lub `C` szacuje się na `Nothing`.
 
 ```vb
 A?.B?.C?(E)
 ```
 
-Another use for null-conditional member access is to invoke delegates in a thread-safe way with much less code.  The following example defines two types, a `NewsBroadcaster` and a `NewsReceiver`. News items are sent to the receiver by the `NewsBroadcaster.SendNews` delegate.
+Innym zastosowaniem dostępu do składowych o wartości null jest wywoływanie delegatów w sposób bezpieczny dla wątków z znacznie mniejszym kodem.  W poniższym przykładzie zdefiniowano dwa typy, `NewsBroadcaster` i `NewsReceiver`. Elementy wiadomości są wysyłane do odbiorcy przez delegata `NewsBroadcaster.SendNews`.
 
 ```vb
 Public Module NewsBroadcaster
@@ -91,7 +91,7 @@ Public Class NewsReceiver
 End Class
 ```
 
-If there are no elements in the `SendNews` invocation list, the `SendNews` delegate throws a <xref:System.NullReferenceException>. Before null conditional operators, code like the following ensured that the delegate invocation list was not `Nothing`:
+Jeśli na liście wywołań `SendNews` nie ma elementów, delegat `SendNews` zgłosi <xref:System.NullReferenceException>. Przed operatorami warunkowymi null, kod podobny do poniższego upewnił się, że lista wywołań delegata nie została `Nothing`:
 
 ```vb
 SendNews = SendNews.Combine({SendNews, client})
@@ -100,17 +100,17 @@ If SendNews IsNot Nothing Then
 End If
 ```
 
-The new way is much simpler:
+Nowy sposób jest znacznie prostszy:
 
 ```vb
 SendNews = SendNews.Combine({SendNews, client})
 SendNews?.Invoke("Just in...")
 ```
 
-The new way is thread-safe because the compiler generates code to evaluate `SendNews` one time only, keeping the result in a temporary variable. You need to explicitly call the `Invoke` method because there is no null-conditional delegate invocation syntax `SendNews?(String)`.
+Nowy sposób jest bezpieczny wątkowo, ponieważ kompilator generuje kod służący do oszacowania `SendNews` tylko jeden raz, utrzymując wynik w zmiennej tymczasowej. Należy jawnie wywołać metodę `Invoke`, ponieważ nie istnieje składnia wywołania delegata warunkowego o wartości null `SendNews?(String)`.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Operators (Visual Basic)](index.md)
-- [Visual Basic Programming Guide](../../../visual-basic/programming-guide/index.md)
+- [Operatory (Visual Basic)](index.md)
+- [Przewodnik programowania Visual Basic](../../../visual-basic/programming-guide/index.md)
 - [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)

@@ -9,17 +9,17 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349021"
 ---
-# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>Using Variance in Interfaces for Generic Collections (Visual Basic)
+# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>Korzystanie z wariancji w interfejsach dla kolekcji ogólnych (Visual Basic)
 
-A covariant interface allows its methods to return more derived types than those specified in the interface. A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.
+Interfejs współdzielny umożliwia metodom Zwracanie większej liczby typów pochodnych niż określone w interfejsie. Interfejs kontrawariantne umożliwia jej metodom akceptowanie parametrów o mniejszych typach pochodnych niż określone w interfejsie.
 
-In .NET Framework 4, several existing interfaces became covariant and contravariant. These include <xref:System.Collections.Generic.IEnumerable%601> and <xref:System.IComparable%601>. This enables you to reuse methods that operate with generic collections of base types for collections of derived types.
+W .NET Framework 4, kilka istniejących interfejsów stał się współwariantem i kontrawariantne. Należą do nich <xref:System.Collections.Generic.IEnumerable%601> i <xref:System.IComparable%601>. Dzięki temu można ponownie użyć metod, które działają z ogólnymi kolekcjami typów podstawowych dla kolekcji typów pochodnych.
 
-For a list of variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
+Aby uzyskać listę interfejsów wariantów w .NET Framework, zobacz [Wariancja w interfejsach ogólnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
 
-## <a name="converting-generic-collections"></a>Converting Generic Collections
+## <a name="converting-generic-collections"></a>Konwertowanie kolekcji ogólnych
 
-The following example illustrates the benefits of covariance support in the <xref:System.Collections.Generic.IEnumerable%601> interface. The `PrintFullName` method accepts a collection of the `IEnumerable(Of Person)` type as a parameter. However, you can reuse it for a collection of the `IEnumerable(Of Person)` type because `Employee` inherits `Person`.
+Poniższy przykład ilustruje zalety obsługi kowariancji w interfejsie <xref:System.Collections.Generic.IEnumerable%601>. Metoda `PrintFullName` akceptuje kolekcję typu `IEnumerable(Of Person)` jako parametr. Można jednak ponownie użyć go dla kolekcji typu `IEnumerable(Of Person)`, ponieważ `Employee` dziedziczy `Person`.
 
 ```vb
 ' Simple hierarchy of classes.
@@ -51,9 +51,9 @@ Sub Main()
 End Sub
 ```
 
-## <a name="comparing-generic-collections"></a>Comparing Generic Collections
+## <a name="comparing-generic-collections"></a>Porównywanie kolekcji ogólnych
 
-The following example illustrates the benefits of contravariance support in the <xref:System.Collections.Generic.IComparer%601> interface. The `PersonComparer` class implements the `IComparer(Of Person)` interface. However, you can reuse this class to compare a sequence of objects of the `Employee` type because `Employee` inherits `Person`.
+Poniższy przykład ilustruje zalety obsługi kontrawariancja w interfejsie <xref:System.Collections.Generic.IComparer%601>. Klasa `PersonComparer` implementuje interfejs `IComparer(Of Person)`. Można jednak ponownie użyć tej klasy do porównania sekwencji obiektów typu `Employee`, ponieważ `Employee` dziedziczy `Person`.
 
 ```vb
 ' Simple hierarchy of classes.
@@ -114,4 +114,4 @@ End Sub
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Wariancja w interfejsach ogólnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

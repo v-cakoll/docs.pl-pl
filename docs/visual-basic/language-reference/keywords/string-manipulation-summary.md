@@ -14,23 +14,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351661"
 ---
 # <a name="string-manipulation-summary-visual-basic"></a>Manipulowanie ciągami — Podsumowanie (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Słowa kluczowe języka Visual Basic i elementy członkowskie biblioteki wykonawczej są zorganizowane według przeznaczenia i użycia.  
   
 |Akcja|Element języka|  
 |------------|----------------------|  
-|Compare two strings.|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|  
-|Convert strings.|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
-|Reverse a string.|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>, <xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|  
-|Convert to lowercase or uppercase.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>, <xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
-|Create a string of repeating characters.|<xref:Microsoft.VisualBasic.Strings.Space%2A>, <xref:Microsoft.VisualBasic.Strings.StrDup%2A>|  
-|Find the length of a string.|<xref:Microsoft.VisualBasic.Strings.Len%2A>|  
-|Format a string.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>, <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>, <xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>, <xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|  
-|Manipulate strings.|<xref:Microsoft.VisualBasic.Strings.InStr%2A>, <xref:Microsoft.VisualBasic.Strings.Left%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, <xref:Microsoft.VisualBasic.Strings.Mid%2A>, <xref:Microsoft.VisualBasic.Strings.Right%2A>, <xref:Microsoft.VisualBasic.Strings.RTrim%2A>, <xref:Microsoft.VisualBasic.Strings.Trim%2A>|  
-|Set string comparison rules.|[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)|  
-|Work with ASCII and ANSI values.|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|  
-|Replace a specified substring.|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|  
-|Return a filter-based string array.|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|  
-|Return a specified number of substrings.|<xref:Microsoft.VisualBasic.Strings.Split%2A>, <xref:Microsoft.VisualBasic.Strings.Join%2A>|  
+|Porównaj dwa ciągi.|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|  
+|Konwertuj ciągi.|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
+|Odwróć ciąg.|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>, <xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|  
+|Konwertuj na małe lub wielkie litery.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>, <xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
+|Utwórz ciąg powtarzających się znaków.|<xref:Microsoft.VisualBasic.Strings.Space%2A>, <xref:Microsoft.VisualBasic.Strings.StrDup%2A>|  
+|Znajdź długość ciągu.|<xref:Microsoft.VisualBasic.Strings.Len%2A>|  
+|Sformatuj ciąg.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>, <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>, <xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>, <xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|  
+|Manipulowanie ciągami.|<xref:Microsoft.VisualBasic.Strings.InStr%2A>, <xref:Microsoft.VisualBasic.Strings.Left%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, <xref:Microsoft.VisualBasic.Strings.Mid%2A>, <xref:Microsoft.VisualBasic.Strings.Right%2A>, <xref:Microsoft.VisualBasic.Strings.RTrim%2A>, <xref:Microsoft.VisualBasic.Strings.Trim%2A>|  
+|Ustaw reguły porównywania ciągów.|[Opcja Porównaj](../../../visual-basic/language-reference/statements/option-compare-statement.md)|  
+|Pracuj z wartościami ASCII i ANSI.|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A><xref:Microsoft.VisualBasic.Strings.ChrW%2A>|  
+|Zastąp określony podciąg.|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|  
+|Zwraca tablicę ciągów opartą na filtrach.|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|  
+|Zwróć określoną liczbę podciągów.|<xref:Microsoft.VisualBasic.Strings.Split%2A>, <xref:Microsoft.VisualBasic.Strings.Join%2A>|  
   
 ## <a name="see-also"></a>Zobacz także
 

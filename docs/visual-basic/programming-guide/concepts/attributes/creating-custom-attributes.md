@@ -9,9 +9,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350143"
 ---
-# <a name="creating-custom-attributes-visual-basic"></a>Creating Custom Attributes (Visual Basic)
+# <a name="creating-custom-attributes-visual-basic"></a>Tworzenie atrybutów niestandardowych (Visual Basic)
 
-You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy. Suppose you want to tag types with the name of the programmer who wrote the type. You might define a custom `Author` attribute class:
+Można utworzyć własne atrybuty niestandardowe przez zdefiniowanie klasy atrybutów, klasy, która dziedziczy bezpośrednio lub pośrednio z <xref:System.Attribute>, co umożliwia szybkie i łatwe identyfikowanie definicji atrybutów w metadanych. Załóżmy, że chcesz oznakować typy nazwą programisty, który zapisał typ. Można zdefiniować niestandardową klasę atrybutów `Author`:
 
 ```vb
 <System.AttributeUsage(System.AttributeTargets.Class Or
@@ -27,9 +27,9 @@ Public Class Author
 End Class
 ```
 
-The class name is the attribute's name, `Author`. It is derived from `System.Attribute`, so it is a custom attribute class. The constructor's parameters are the custom attribute's positional parameters. In this example, `name` is a positional parameter. Any public read-write fields or properties are named parameters. In this case, `version` is the only named parameter. Note the use of the `AttributeUsage` attribute to make the `Author` attribute valid only on class and `Structure` declarations.
+Nazwa klasy jest nazwą atrybutu, `Author`. Jest ona pochodną `System.Attribute`, więc jest klasą atrybutów niestandardowych. Parametry konstruktora są parametrami pozycyjnymi atrybutu niestandardowego. W tym przykładzie `name` jest parametrem pozycyjnym. Wszystkie publiczne pola do odczytu i zapisu są nazwanymi parametrami. W tym przypadku `version` jest jedynym parametrem nazwanym. Zwróć uwagę na użycie atrybutu `AttributeUsage`, aby atrybut `Author` był prawidłowy tylko w deklaracjach klasy i `Structure`.
 
-You could use this new attribute as follows:
+Tego nowego atrybutu można użyć w następujący sposób:
 
 ```vb
 <Author("P. Ackerman", Version:=1.1)>
@@ -38,7 +38,7 @@ Class SampleClass
 End Class
 ```
 
-`AttributeUsage` has a named parameter, `AllowMultiple`, with which you can make a custom attribute single-use or multiuse. In the following code example, a multiuse attribute is created.
+`AttributeUsage` ma nazwany parametr `AllowMultiple`, za pomocą którego można utworzyć atrybut niestandardowy pojedynczy lub Multiuse. W poniższym przykładzie kodu tworzony jest atrybut Multiuse.
 
 ```vb
 ' multiuse attribute
@@ -49,7 +49,7 @@ Public Class Author
     Inherits System.Attribute
 ```
 
-In the following code example, multiple attributes of the same type are applied to a class.
+W poniższym przykładzie kodu do klasy są stosowane wiele atrybutów tego samego typu.
 
 ```vb
 <Author("P. Ackerman", Version:=1.1),
@@ -61,14 +61,14 @@ End Class
 ```
 
 > [!NOTE]
-> If your attribute class contains a property, that property must be read-write.
+> Jeśli Klasa atrybutu zawiera właściwość, ta właściwość musi mieć wartość Read-Write.
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Reflection>
-- [Visual Basic Programming Guide](../../../../visual-basic/programming-guide/index.md)
+- [Przewodnik programowania Visual Basic](../../../../visual-basic/programming-guide/index.md)
 - [Wpisywanie atrybutów niestandardowych](../../../../standard/attributes/writing-custom-attributes.md)
-- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Attributes (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Odbicie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Atrybuty (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
+- [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
 - [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

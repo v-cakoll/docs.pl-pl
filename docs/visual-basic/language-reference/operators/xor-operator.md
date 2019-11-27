@@ -1,5 +1,5 @@
 ---
-title: Xor — Operator
+title: Xor, operator
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Xor
@@ -22,7 +22,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335406"
 ---
 # <a name="xor-operator-visual-basic"></a>Xor — Operator (Visual Basic)
-Performs a logical exclusion on two `Boolean` expressions, or a bitwise exclusion on two numeric expressions.  
+Wykonuje logiczne wykluczenie dwóch wyrażeń `Boolean` lub bitowego wykluczenia dwóch wyrażeń liczbowych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,18 +32,18 @@ result = expression1 Xor expression2
   
 ## <a name="parts"></a>Części  
  `result`  
- Wymagany. Any `Boolean` or numeric variable. For Boolean comparison, `result` is the logical exclusion (exclusive logical disjunction) of two `Boolean` values. For bitwise operations, `result` is a numeric value that represents the bitwise exclusion (exclusive bitwise disjunction) of two numeric bit patterns.  
+ Wymagana. Dowolna `Boolean` lub zmienna numeryczna. W przypadku porównania logicznego `result` jest wykluczeniem logicznym (wyłączne odłączenie logiczne) dwóch `Boolean` wartości. W przypadku operacji bitowych `result` jest wartością liczbową reprezentującą wykluczenie bitowe (wyłączne rozłączenie bitowe) dwóch liczbowych wzorców bitowych.  
   
  `expression1`  
- Wymagany. Any `Boolean` or numeric expression.  
+ Wymagana. Dowolne `Boolean` lub wyrażenie liczbowe.  
   
  `expression2`  
- Wymagany. Any `Boolean` or numeric expression.  
+ Wymagana. Dowolne `Boolean` lub wyrażenie liczbowe.  
   
 ## <a name="remarks"></a>Uwagi  
- For Boolean comparison, `result` is `True` if and only if exactly one of `expression1` and `expression2` evaluates to `True`. That is, if and only if `expression1` and `expression2` evaluate to opposite `Boolean` values. The following table illustrates how `result` is determined.  
+ W przypadku porównania logicznego `result` jest `True`, jeśli dokładnie jeden z `expression1` i `expression2` jest obliczany jako `True`. To znaczy, jeśli i tylko wtedy, gdy `expression1` i `expression2` są oceniane jako przeciwległe wartości `Boolean`. W poniższej tabeli przedstawiono sposób określania `result`.  
   
-|If `expression1` is|And `expression2` is|The value of `result` is|  
+|Jeśli `expression1` jest|I `expression2` jest|Wartość `result` jest|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`False`|  
 |`True`|`False`|`True`|  
@@ -51,11 +51,11 @@ result = expression1 Xor expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
-> In a Boolean comparison, the `Xor` operator always evaluates both expressions, which could include making procedure calls. There is no short-circuiting counterpart to `Xor`, because the result always depends on both operands. For *short-circuiting* logical operators, see [AndAlso Operator](../../../visual-basic/language-reference/operators/andalso-operator.md) and [OrElse Operator](../../../visual-basic/language-reference/operators/orelse-operator.md).  
+> W porównaniu wartości logicznej operator `Xor` zawsze oblicza oba wyrażenia, które mogą obejmować wykonywanie wywołań procedur. Nie ma żadnych krótkich obwodów do `Xor`, ponieważ wynik zawsze zależy od obu operandów. Aby uzyskać *krótkie* operatory logiczne, zobacz [operator AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md) i [operator OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md).  
   
- For bitwise operations, the `Xor` operator performs a bitwise comparison of identically positioned bits in two numeric expressions and sets the corresponding bit in `result` according to the following table.  
+ W przypadku operacji bitowych operator `Xor` wykonuje bitowe porównanie identycznie rozłożonych bitów w dwóch wyrażeniach liczbowych i ustawia odpowiedni bit w `result` zgodnie z poniższą tabelą.  
   
-|If bit in `expression1` is|And bit in `expression2` is|The bit in `result` is|  
+|Jeśli bit w `expression1` jest|I bit w `expression2` jest|Bit w `result` jest|  
 |--------------------------------|---------------------------------|----------------------------|  
 |1|1|0|  
 |1|0|1|  
@@ -63,35 +63,35 @@ result = expression1 Xor expression2
 |0|0|0|  
   
 > [!NOTE]
-> Since the logical and bitwise operators have a lower precedence than other arithmetic and relational operators, any bitwise operations should be enclosed in parentheses to ensure accurate execution.  
+> Ponieważ operatory logiczne i bitowe mają niższy priorytet niż inne operatory arytmetyczne i relacyjne, każda operacja bitowa powinna być ujęta w nawiasy, aby zapewnić dokładne wykonanie.  
   
- For example, 5 `Xor` 3 is 6. To see why this is so, convert 5 and 3 to their binary representations, 101 and 011. Then use the previous table to determine that 101 Xor 011 is 110, which is the binary representation of the decimal number 6.  
+ Na przykład 5 `Xor` 3 to 6. Aby sprawdzić, dlaczego jest to zrobione, przekonwertuj 5 i 3 na ich reprezentacje binarne, 101 i 011. Następnie użyj poprzedniej tabeli, aby określić, że 101 XOR 011 wynosi 110, czyli reprezentację binarną liczby dziesiętnej 6.  
   
 ## <a name="data-types"></a>Typy danych  
- If the operands consist of one `Boolean` expression and one numeric expression, Visual Basic converts the `Boolean` expression to a numeric value (–1 for `True` and 0 for `False`) and performs a bitwise operation.  
+ Jeśli operandy składają się z jednego wyrażenia `Boolean` i jednego wyrażenia liczbowego, Visual Basic konwertuje wyrażenie `Boolean` na wartość liczbową (– 1 dla `True` i 0 dla `False`) i wykonuje operację bitową.  
   
- For a `Boolean` comparison, the data type of the result is `Boolean`. For a bitwise comparison, the result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Relational and Bitwise Comparisons" table in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ W przypadku porównania `Boolean` typ danych wyniku jest `Boolean`. W przypadku porównania bitowego typem danych wynik jest typ liczbowy odpowiedni dla typów danych `expression1` i `expression2`. Zobacz tabelę "porównania relacyjne i bitowe" w [typach danych wyników operatora](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
 ## <a name="overloading"></a>Przeciążenie  
- The `Xor` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, make sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Operator `Xor` może być *przeciążony*, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury. Jeśli kod używa tego operatora dla takiej klasy lub struktury, upewnij się, że rozumiesz jego ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Przykład  
- The following example uses the `Xor` operator to perform logical exclusion (exclusive logical disjunction) on two expressions. The result is a `Boolean` value that represents whether exactly one of the expressions is `True`.  
+ Poniższy przykład używa operatora `Xor` do wykonywania logicznego wykluczenia (wyłączne logiczne rozłączenie) w dwóch wyrażeniach. Wynikiem jest wartość `Boolean`, która reprezentuje, czy dokładnie jedno z wyrażeń jest `True`.  
   
  [!code-vb[VbVbalrOperators#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#40)]  
   
- The previous example produces results of `False`, `True`, and `False`, respectively.  
+ Poprzedni przykład generuje odpowiednio wyniki `False`, `True`i `False`.  
   
 ## <a name="example"></a>Przykład  
- The following example uses the `Xor` operator to perform logical exclusion (exclusive logical disjunction) on the individual bits of two numeric expressions. The bit in the result pattern is set if exactly one of the corresponding bits in the operands is set to 1.  
+ Poniższy przykład używa operatora `Xor`, aby przeprowadzić wykluczenie logiczne (wyłączne odłączenie logiczne) na poszczególnych bitach dwóch wyrażeń liczbowych. Bit w wzorcu wyniku jest ustawiony, jeśli dokładnie jeden z odpowiednich bitów w operandach jest ustawiony na 1.  
   
  [!code-vb[VbVbalrOperators#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#41)]  
   
- The previous example produces results of 2, 12, and 14, respectively.  
+ W poprzednim przykładzie wyniki są odpowiednio 2, 12 i 14.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operatory logiczne/bitowe (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Operatory logiczne i bitowe w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

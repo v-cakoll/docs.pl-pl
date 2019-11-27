@@ -13,19 +13,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347226"
 ---
 # <a name="mycomputerfilesystemspecialdirectories-object"></a>My.Computer.FileSystem.SpecialDirectories — Obiekt
-Provides properties for accessing commonly referenced directories.  
+Udostępnia właściwości do uzyskiwania dostępu do najczęściej występujących katalogów.  
   
 ## <a name="remarks"></a>Uwagi  
- For information about the methods and properties of the `My.Computer.FileSystem.SpecialDirectories` object, see <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>.  
+ Aby uzyskać informacje o metodach i właściwościach obiektu `My.Computer.FileSystem.SpecialDirectories`, zobacz <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>.  
   
- For more information, see [How to: Retrieve the Contents of the My Documents Directory](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md).  
+ Aby uzyskać więcej informacji, zobacz [How to: pobieranie zawartości katalogu Moje dokumenty](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
+ **Przestrzeń nazw:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)  
+ **Klasa:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (zapewnia dostęp do <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

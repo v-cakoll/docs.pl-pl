@@ -16,52 +16,52 @@ ms.locfileid: "74351424"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (modyfikator ogólny) (Visual Basic)
 
-For generic type parameters, the `Out` keyword specifies that the type is covariant.
+W przypadku parametrów typu ogólnego `Out` słowo kluczowe Określa, że typ jest współvariant.
 
 ## <a name="remarks"></a>Uwagi
 
-Covariance enables you to use a more derived type than that specified by the generic parameter. This allows for implicit conversion of classes that implement variant interfaces and implicit conversion of delegate types.
+Kowariancja umożliwia użycie bardziej pochodnego typu niż określony przez parametr generyczny. Pozwala to na niejawną konwersję klas, które implementują interfejsy wariantów i niejawną konwersję typów delegatów.
 
-For more information, see [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md).
+Aby uzyskać więcej informacji, zobacz [Kowariancja i kontrawariancja](../../programming-guide/concepts/covariance-contravariance/index.md).
 
-## <a name="rules"></a>Rules
+## <a name="rules"></a>Reguły
 
-You can use the `Out` keyword in generic interfaces and delegates.
+Możesz użyć słowa kluczowego `Out` w interfejsach ogólnych i delegatach.
 
-In a generic interface, a type parameter can be declared covariant if it satisfies the following conditions:
+W interfejsie ogólnym parametr typu może być zadeklarowany jako współwariant, jeśli spełnia następujące warunki:
 
-- The type parameter is used only as a return type of interface methods and not used as a type of method arguments.
+- Parametr typu jest używany tylko jako typ zwracany metod interfejsu i nie jest używany jako typ argumentów metody.
 
     > [!NOTE]
-    > There is one exception to this rule. If in a covariant interface you have a contravariant generic delegate as a method parameter, you can use the covariant type as a generic type parameter for this delegate. For more information about covariant and contravariant generic delegates, see [Variance in Delegates](../../programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates](../../programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+    > Istnieje jeden wyjątek dla tej reguły. Jeśli w interfejsie o niezmiennym jest kontrawariantne delegat generyczny jako parametr metody, można użyć typu współwariantu jako parametru typu ogólnego dla tego delegata. Aby uzyskać więcej informacji na temat elementów delegowanych i kontrawariantne ogólnych, zobacz [Wariancja w delegatach](../../programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) i [Używanie wariancji dla delegatów typu Func i akcja](../../programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
 
-- The type parameter is not used as a generic constraint for the interface methods.
+- Parametr typu nie jest używany jako ograniczenie ogólne metod interfejsu.
 
-In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
+W delegatze ogólnym parametr typu może być zadeklarowany jako współvariant, jeśli jest używany tylko jako zwracany typ metody i nie jest używany dla argumentów metody.
 
-Covariance and contravariance are supported for reference types, but they are not supported for value types.
+Dla typów referencyjnych są obsługiwane Kowariancja i kontrawariancja, ale nie są one obsługiwane w przypadku typów wartości.
 
-In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
+W Visual Basic nie można zadeklarować zdarzeń w interfejsach współvariant bez określania typu delegata. Ponadto interfejsy współwariantowe nie mogą mieć klas zagnieżdżonych, wyliczeniowych ani struktur, ale mogą mieć zagnieżdżone interfejsy.
 
 ## <a name="behavior"></a>Zachowanie
 
-An interface that has a covariant type parameter enables its methods to return more derived types than those specified by the type parameter. For example, because in .NET Framework 4, in <xref:System.Collections.Generic.IEnumerable%601>, type T is covariant, you can assign an object of the `IEnumerable(Of String)` type to an object of the `IEnumerable(Of Object)` type without using any special conversion methods.
+Interfejs, który ma parametr typu klasy współdzielonej, umożliwia jej metodom zwrócenie większej liczby typów pochodnych niż te określone przez parametr typu. Na przykład, ponieważ w .NET Framework 4, w <xref:System.Collections.Generic.IEnumerable%601>, typu T jest współwariantem, można przypisać obiekt typu `IEnumerable(Of String)` do obiektu typu `IEnumerable(Of Object)` bez użycia żadnych specjalnych metod konwersji.
 
-A covariant delegate can be assigned another delegate of the same type, but with a more derived generic type parameter.
+Delegata, do którego można przypisać inny delegat tego samego typu, ale z bardziej pochodnym parametrem typu ogólnego.
 
 ## <a name="example"></a>Przykład
 
-The following example shows how to declare, extend, and implement a covariant generic interface. It also shows how to use implicit conversion for classes that implement a covariant interface.
+Poniższy przykład pokazuje, jak zadeklarować, zwiększyć i zaimplementować interfejs ogólny typu "współvariant". Przedstawiono w nim również sposób użycia niejawnej konwersji dla klas, które implementują interfejs współvariant.
 
 [!code-vb[vbVarianceKeywords#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#3)]
 
 ## <a name="example"></a>Przykład
 
-The following example shows how to declare, instantiate, and invoke a covariant generic delegate. It also shows how you can use implicit conversion for delegate types.
+Poniższy przykład pokazuje, jak zadeklarować, utworzyć wystąpienie i wywołać delegata ogólnego typu. Pokazano również, jak można użyć niejawnej konwersji typów delegatów.
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Wariancje w interfejsach ogólnych](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Podczas](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349929"
 ---
 # <a name="collection-object-summary-visual-basic"></a>Obiekt stanowiący część kolekcji — Podsumowanie (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Słowa kluczowe języka Visual Basic i elementy członkowskie biblioteki wykonawczej są zorganizowane według przeznaczenia i użycia.  
   
 |Akcja|Element języka|  
 |------------|----------------------|  
-|Create a `Collection` object.|<xref:Microsoft.VisualBasic.Collection>|  
-|Add an item to a collection.|<xref:Microsoft.VisualBasic.Collection.Add*>|  
-|Remove an object from a collection.|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
-|Reference an item in a collection.|<xref:Microsoft.VisualBasic.Collection.Item*>|  
-|Return a reference to an <xref:System.Collections.IEnumerator> interface.|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
+|Utwórz obiekt `Collection`.|<xref:Microsoft.VisualBasic.Collection>|  
+|Dodaje element do kolekcji.|<xref:Microsoft.VisualBasic.Collection.Add*>|  
+|Usuwa obiekt z kolekcji.|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
+|Odwołuje się do elementu w kolekcji.|<xref:Microsoft.VisualBasic.Collection.Item*>|  
+|Zwraca odwołanie do interfejsu <xref:System.Collections.IEnumerator>.|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
   
 ## <a name="see-also"></a>Zobacz także
 

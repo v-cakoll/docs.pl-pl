@@ -14,17 +14,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340958"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Porady: wywoływanie procedury, która nie zwraca wartości (Visual Basic)
-A `Sub` procedure does not return a value to the calling code. You call it explicitly with a stand-alone calling statement. You cannot call it by simply using its name within an expression.  
+Procedura `Sub` nie zwraca wartości do kodu wywołującego. Należy wywołać ją jawnie z autonomiczną instrukcją wywołującą. Nie można go wywołać za pomocą jego nazwy w wyrażeniu.  
   
-### <a name="to-call-a-sub-procedure"></a>To call a Sub procedure  
+### <a name="to-call-a-sub-procedure"></a>Aby wywołać procedurę sub  
   
-1. Specify the name of the `Sub` procedure.  
+1. Określ nazwę procedury `Sub`.  
   
-2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
+2. Postępuj zgodnie z nazwą procedury z nawiasami, aby ująć listę argumentów. Jeśli nie ma żadnych argumentów, możesz opcjonalnie pominąć nawiasy. Jednak użycie nawiasów sprawia, że kod można ułatwić odczytywanie.  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Sub` procedure defines the corresponding parameters.  
+3. Umieść argumenty na liście argumentów w nawiasach rozdzielonych przecinkami. Upewnij się, że podasz argumenty w tej samej kolejności, w której procedura `Sub` definiuje odpowiednie parametry.  
   
-     The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> function to activate an application window. <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> takes the window title as its sole argument. It does not return a value to the calling code. If a Notepad process is not running, the example throws an <xref:System.ArgumentException>. The `Shell` procedure assumes the applications are in the paths specified.  
+     Poniższy przykład wywołuje funkcję Visual Basic <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> w celu aktywowania okna aplikacji. <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> przyjmuje jako jedyny argument tytułu okna. Nie zwraca wartości do kodu wywołującego. Jeśli proces Notatnika nie jest uruchomiony, przykład zgłosi <xref:System.ArgumentException>. W procedurze `Shell` przyjęto założenie, że aplikacje znajdują się w określonych ścieżkach.  
   
      [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
   
@@ -38,4 +38,4 @@ A `Sub` procedure does not return a value to the calling code. You call it expli
 - [Sub, instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Instrukcje: tworzenie procedury](./how-to-create-a-procedure.md)
 - [Instrukcje: wywoływanie procedury zwracającej wartość](./how-to-call-a-procedure-that-returns-a-value.md)
-- [How to: Call an Event Handler in Visual Basic](./how-to-call-an-event-handler.md)
+- [Instrukcje: wywoływanie procedury obsługi zdarzeń w Visual Basic](./how-to-call-an-event-handler.md)

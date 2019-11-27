@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439305"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished — Metoda
-Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.  
+Powiadamia profiler, że kompilator just-in-Time (JIT) zakończył ponowną kompilację funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,27 +36,27 @@ HRESULT ReJITCompilationFinished(
   
 ## <a name="parameters"></a>Parametry  
  `functionId`  
- [in] The ID of the function that was recompiled.  
+ podczas Identyfikator funkcji, która została ponownie skompilowana.  
   
  `rejitId`  
- [in] The identity of the JIT-recompiled function.  
+ podczas Tożsamość funkcji ponownie skompilowanej JIT.  
   
  `hrStatus`  
- [in] A value that indicates whether the JIT recompilation was successful.  
+ podczas Wartość wskazująca, czy ponowna kompilacja JIT zakończyła się pomyślnie.  
   
  `fIsSafeToBlock`  
- [in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.  
+ [in] `true` wskazujący, że blokowanie może spowodować, że środowisko uruchomieniowe poczeka na zwrócenie przez wątek wywołujący z tego wywołania zwrotnego; `false` wskazujący, że blokowanie nie ma wpływu na działanie środowiska uruchomieniowego.  
   
- A value of `true` does not harm the runtime, but can affect the profiling results.  
+ Wartość `true` nie jest szkodliwe dla środowiska uruchomieniowego, ale może mieć wpływ na wyniki profilowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

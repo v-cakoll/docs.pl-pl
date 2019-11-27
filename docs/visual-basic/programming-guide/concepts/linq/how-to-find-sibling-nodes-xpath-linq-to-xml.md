@@ -1,5 +1,5 @@
 ---
-title: 'How to: Find Sibling Nodes (XPath-LINQ to XML)'
+title: 'Instrukcje: Znajdowanie węzłów elementów równorzędnych (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
 ms.openlocfilehash: 52151c939bbf67df37a9535b1081ff902d357123
@@ -9,19 +9,19 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344642"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie węzłów elementów równorzędnych (XPath-LINQ to XML) (Visual Basic)
 
-You might want to find all siblings of a node that have a specific name. The resulting collection might include the context node if the context node also has the specific name.
+Możesz chcieć znaleźć wszystkie elementy równorzędne węzła o określonej nazwie. Utworzona kolekcja może zawierać węzeł kontekstu, jeśli węzeł kontekstu ma również określoną nazwę.
 
-The XPath expression is:
+Wyrażenie XPath:
 
 `../Book`
 
 ## <a name="example"></a>Przykład
 
-This example first finds a `Book` element, and then finds all sibling elements named `Book`. The resulting collection includes the context node.
+Ten przykład najpierw odnajduje `Book` element, a następnie znajduje wszystkie elementy równorzędne o nazwie `Book`. Kolekcja wyników zawiera węzeł kontekstu.
 
-This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
+Ten przykład używa następującego dokumentu XML: [przykładowy plik XML: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
 
 ```vb
 Dim books As XDocument = XDocument.Load("Books.xml")
@@ -71,4 +71,4 @@ Results are identical
 
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

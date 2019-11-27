@@ -1,5 +1,5 @@
 ---
-title: 'How to: Qualify XML Element and XML Attribute Names'
+title: 'Instrukcje: kwalifikowanie elementu XML i nazw atrybutów XML'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,11 +16,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353103"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>How to: Qualify XML Element and XML Attribute Names
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Instrukcje: kwalifikowanie elementu XML i nazw atrybutów XML
 
-XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).
+Przestrzenie nazw XML zawarte w wystąpieniach klasy <xref:System.Xml.Serialization.XmlSerializerNamespaces> muszą być zgodne ze specyfikacją organizacja World Wide Web Consortium (W3C) o nazwie [przestrzenie nazw w kodzie XML](https://www.w3.org/TR/REC-xml-names/).
 
-Obszary nazw XML umożliwiają uprawniających nazwy elementów XML i atrybutów XML w dokumentach XML. Kwalifikowana nazwa składa się z prefiksu i lokalna nazwa, rozdzielone średnikiem. The prefix functions only as a placeholder; it is mapped to a URI that specifies a namespace. Kombinacja powszechnie zarządzanych nazw identyfikatora URI i lokalna nazwa tworzy nazwę, która może być unikatowym.
+Obszary nazw XML umożliwiają uprawniających nazwy elementów XML i atrybutów XML w dokumentach XML. Kwalifikowana nazwa składa się z prefiksu i lokalna nazwa, rozdzielone średnikiem. Prefiks działa tylko jako symbol zastępczy; jest on mapowany na identyfikator URI, który określa przestrzeń nazw. Kombinacja powszechnie zarządzanych nazw identyfikatora URI i lokalna nazwa tworzy nazwę, która może być unikatowym.
 
 Utworzenie wystąpienia `XmlSerializerNamespaces` i Dodawanie obiektu pary nazw, można określić prefiksy używane w dokumencie XML.
 
@@ -30,7 +30,7 @@ Utworzenie wystąpienia `XmlSerializerNamespaces` i Dodawanie obiektu pary nazw,
 
 2. Dodaj wszystkie prefiksy i pary nazw do `XmlSerializerNamespaces`.
 
-3. Apply the appropriate `System.Xml.Serialization` attribute to each member or class that the <xref:System.Xml.Serialization.XmlSerializer> is to serialize into an XML document.
+3. Zastosuj odpowiedni atrybut `System.Xml.Serialization` do każdego elementu członkowskiego lub klasy, które <xref:System.Xml.Serialization.XmlSerializer> ma do serializacji w dokumencie XML.
 
     Dostępne są następujące atrybuty: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, i <xref:System.Xml.Serialization.XmlTypeAttribute>.
 
@@ -40,7 +40,7 @@ Utworzenie wystąpienia `XmlSerializerNamespaces` i Dodawanie obiektu pary nazw,
 
 ## <a name="example"></a>Przykład
 
-The following example creates an `XmlSerializerNamespaces`, and adds two prefix and namespace pairs to the object. Tworzy kod `XmlSerializer` używany do serializacji wystąpienia `Books` klasy. Wywołania kodu `Serialize` metody z `XmlSerializerNamespaces`, umożliwiając XML zawiera prefiksem obszary nazw.
+Poniższy przykład tworzy `XmlSerializerNamespaces`i dodaje dwa pary prefiksów i przestrzeni nazw do obiektu. Tworzy kod `XmlSerializer` używany do serializacji wystąpienia `Books` klasy. Wywołania kodu `Serialize` metody z `XmlSerializerNamespaces`, umożliwiając XML zawiera prefiksem obszary nazw.
 
 <!-- TODO: THE FOLLOWING VB SNIPPET ISN'T CORRECT!! -->
 ```vb
@@ -175,7 +175,7 @@ public class Book
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Narzędzie definicji schematu XML i serializacja XML](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [Wprowadzenie do serializacji XML](introducing-xml-serialization.md)
-- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
+- [Klasa XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
 - [Atrybuty kontrolujące serializację XML](attributes-that-control-xml-serialization.md)
 - [Instrukcje: Określanie alternatywnej nazwy elementu dla strumienia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [Instrukcje: Serializacja obiektu](how-to-serialize-an-object.md)

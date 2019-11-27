@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448703"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder — Metoda
-Adds a type forwarder to the type table of the given assembly.  
+Dodaje usługę przesyłania dalej typu do tabeli typów danego zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,22 +37,22 @@ HRESULT ExportTypeForwarder(
   
 ## <a name="parameters"></a>Parametry  
  `tkAssemblyRef`  
- Reference to the assembly to which the type forwarder refers.  
+ Odwołanie do zestawu, do którego odwołuje się usługa przesyłania dalej typu.  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ W pełni kwalifikowana nazwa typu do eksportowania.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` flagi, takie jak `tdPublic` lub `tdNested`. Ta wartość może zostać przeniesiona do [metody DefineExportedType —](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Receives the token of the exported type. This is necessary only for emitting nested types.  
+ Odbiera token wyeksportowanego typu. Jest to konieczne tylko w przypadku emitowania typów zagnieżdżonych.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Returns S_OK if the method succeeds.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Requires alink.h  
+ Wymaga Alink. h  
   
 ## <a name="see-also"></a>Zobacz także
 

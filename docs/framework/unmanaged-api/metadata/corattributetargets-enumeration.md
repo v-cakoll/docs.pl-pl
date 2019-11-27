@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443867"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets — Wyliczenie
-Specifies the application elements on which it is valid to apply an attribute.  
+Określa elementy aplikacji, na których jest prawidłowy, aby zastosować atrybut.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -58,38 +58,38 @@ typedef enum CorAttributeTargets
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`catAssembly`|Attribute can be applied to an assembly.|  
-|`catModule`|Attribute can be applied to a portable executable (.dll or .exe) module.|  
-|`catClass`|Attribute can be applied to a class.|  
-|`catStruct`|Attribute can be applied to a structure; that is, a value type.|  
-|`catEnum`|Attribute can be applied to an enumeration.|  
-|`catConstructor`|Attribute can be applied to a constructor.|  
-|`catMethod`|Attribute can be applied to a method.|  
-|`catProperty`|Attribute can be applied to a property.|  
-|`catField`|Attribute can be applied to a field.|  
-|`catEvent`|Attribute can be applied to an event.|  
-|`catInterface`|Attribute can be applied to an interface.|  
-|`catParameter`|Attribute can be applied to a parameter.|  
-|`catDelegate`|Attribute can be applied to a delegate.|  
-|`catGenericParameter`|Attribute can be applied to a generic parameter.|  
-|`catAll`|Attribute can be applied to any application element.|  
-|`catClassMembers`|Attribute can be applied to a member of a class.|  
+|`catAssembly`|Atrybut może zostać zastosowany do zestawu.|  
+|`catModule`|Atrybut można zastosować do przenośnego modułu pliku wykonywalnego (. dll lub. exe).|  
+|`catClass`|Atrybut może być stosowany do klasy.|  
+|`catStruct`|Atrybut może być stosowany do struktury; oznacza to, że typ wartości.|  
+|`catEnum`|Atrybut może być stosowany do wyliczenia.|  
+|`catConstructor`|Atrybut może być stosowany do konstruktora.|  
+|`catMethod`|Atrybut można zastosować do metody.|  
+|`catProperty`|Atrybut może być stosowany do właściwości.|  
+|`catField`|Atrybut może być stosowany do pola.|  
+|`catEvent`|Atrybut może być stosowany do zdarzenia.|  
+|`catInterface`|Atrybut może być stosowany do interfejsu.|  
+|`catParameter`|Atrybut może być stosowany do parametru.|  
+|`catDelegate`|Atrybut można zastosować do obiektu delegowanego.|  
+|`catGenericParameter`|Atrybut może być stosowany do parametru generycznego.|  
+|`catAll`|Atrybut można zastosować do dowolnego elementu aplikacji.|  
+|`catClassMembers`|Atrybut można zastosować do składowej klasy.|  
   
 ## <a name="remarks"></a>Uwagi  
- The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.  
+ Wartości wyliczeniowe `CorAttributeTargets` można łączyć z wartością bitową lub operacją w celu uzyskania preferowanej kombinacji.  
   
- The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.  
+ `CorAttributeTargets` równoległe Wyliczenie <xref:System.AttributeTargets?displayProperty=nameWithType> zarządzanej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -21,7 +21,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346726"
 ---
 # <a name="rem-statement-visual-basic"></a>REM — Instrukcja (Visual Basic)
-Used to include explanatory remarks in the source code of a program.  
+Służy do uwzględnienia uwag objaśniających kod źródłowy programu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,18 +32,18 @@ REM comment
   
 ## <a name="parts"></a>Części  
  `comment`  
- Opcjonalny. The text of any comment you want to include. A space is required between the `REM` keyword and `comment`.  
+ Opcjonalna. Tekst komentarza, który ma zostać uwzględniony. Między słowem kluczowym `REM` i `comment`jest wymagana spacja.  
   
 ## <a name="remarks"></a>Uwagi  
- You can put a `REM` statement alone on a line, or you can put it on a line following another statement. The `REM` statement must be the last statement on the line. If it follows another statement, the `REM` must be separated from that statement by a space.  
+ Można umieścić instrukcję `REM` w wierszu lub można ją umieścić w wierszu po innej instrukcji. Instrukcja `REM` musi być ostatnią instrukcją w wierszu. Jeśli jest ona zgodna z inną instrukcją, `REM` musi być oddzielona od tej instrukcji przez spację.  
   
- You can use a single quotation mark (`'`) instead of `REM`. This is true whether your comment follows another statement on the same line or sits alone on a line.  
+ Możesz użyć pojedynczego cudzysłowu (`'`), a nie `REM`. Dzieje się tak, gdy komentarz jest podążany za inną instrukcją w tym samym wierszu lub w wierszu.  
   
 > [!NOTE]
-> You cannot continue a `REM` statement by using a line-continuation sequence (`_`). Once a comment begins, the compiler does not examine the characters for special meaning. For a multiple-line comment, use another `REM` statement or a comment symbol (`'`) on each line.  
+> Nie można kontynuować instrukcji `REM` przy użyciu sekwencji kontynuacji wiersza (`_`). Po rozpoczęciu komentarza kompilator nie bada znaków pod kątem specjalnego znaczenia. W przypadku komentarza z wieloma wierszami Użyj innej instrukcji `REM` lub symbolu komentarza (`'`) w każdym wierszu.  
   
 ## <a name="example"></a>Przykład  
- The following example illustrates the `REM` statement, which is used to include explanatory remarks in a program. It also shows the alternative of using the single quotation-mark character (`'`) instead of `REM`.  
+ Poniższy przykład ilustruje instrukcję `REM`, która jest używana do dołączania uwag objaśniających do programu. Pokazuje również alternatywę użycia znaku pojedynczego cudzysłowu (`'`), a nie `REM`.  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   

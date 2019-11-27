@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349435"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>Literał CDATA XML (Visual Basic)
-A literal representing an <xref:System.Xml.Linq.XCData> object.  
+Literał reprezentujący obiekt <xref:System.Xml.Linq.XCData>.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,33 +26,33 @@ A literal representing an <xref:System.Xml.Linq.XCData> object.
   
 ## <a name="parts"></a>Części  
  `<![CDATA[`  
- Wymagany. Denotes the start of the XML CDATA section.  
+ Wymagana. Wskazuje początek sekcji CDATA XML.  
   
  `content`  
- Wymagany. Text content to appear in the XML CDATA section.  
+ Wymagana. Zawartość tekstowa do wyświetlenia w sekcji CDATA XML.  
   
  `]]>`  
- Wymagany. Denotes the end of the section.  
+ Wymagana. Oznacza koniec sekcji.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- An <xref:System.Xml.Linq.XCData> object.  
+ Obiekt <xref:System.Xml.Linq.XCData>.  
   
 ## <a name="remarks"></a>Uwagi  
- XML CDATA sections contain raw text that should be included, but not parsed, with the XML that contains it. A XML CDATA section can contain any text. This includes reserved XML characters. The XML CDATA section ends with the sequence "]]>". This implies the following points:  
+ Sekcje CDATA XML zawierają nieprzetworzony tekst, który powinien być uwzględniony, ale nie jest analizowany, z XML, który zawiera. Sekcja CDATA XML może zawierać dowolny tekst. Obejmuje to zastrzeżone znaki XML. Sekcja CDATA XML zostanie zakończona z sekwencją "]] >". Oznacza to następujące kwestie:  
   
-- You cannot use an embedded expression in an XML CDATA literal because the embedded expression delimiters are valid XML CDATA content.  
+- Nie można użyć wyrażenia osadzonego w literale CDATA XML, ponieważ ogranicznik wyrażenia osadzonego są prawidłową zawartością elementu XML CDATA.  
   
-- XML CDATA sections cannot be nested, because `content` cannot contain the value "]]>".  
+- Sekcje CDATA XML nie mogą być zagnieżdżane, ponieważ `content` nie może zawierać wartości "]] >".  
   
- You can assign an XML CDATA literal to a variable, or include it in an XML element literal.  
+ Do zmiennej można przypisać literał XML CDATA lub dodać go do literału elementu XML.  
   
 > [!NOTE]
-> An XML literal can span multiple lines but does not use line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+> Literał XML może obejmować wiele wierszy, ale nie używa znaków kontynuacji wiersza. Dzięki temu można skopiować zawartość z dokumentu XML i wkleić ją bezpośrednio do programu Visual Basic.  
   
- The Visual Basic compiler converts the XML CDATA literal to a call to the <xref:System.Xml.Linq.XCData.%23ctor%2A> constructor.  
+ Kompilator Visual Basic konwertuje literał XML CDATA na wywołanie konstruktora <xref:System.Xml.Linq.XCData.%23ctor%2A>.  
   
 ## <a name="example"></a>Przykład  
- The following example creates a CDATA section that contains the text "Can contain literal \<XML> tags".  
+ Poniższy przykład tworzy sekcję CDATA, która zawiera tekst "może zawierać literał \<tagi XML >".  
   
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  
   
@@ -61,4 +61,4 @@ A literal representing an <xref:System.Xml.Linq.XCData> object.
 - <xref:System.Xml.Linq.XCData>
 - [Literał elementu XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
 - [Literały XML](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Creating XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Tworzenie kodu XML w Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

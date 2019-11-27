@@ -17,16 +17,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341088"
 ---
 # <a name="function-procedures-visual-basic"></a>Procedury funkcji (Visual Basic)
-A `Function` procedure is a series of Visual Basic statements enclosed by the `Function` and `End Function` statements. The `Function` procedure performs a task and then returns control to the calling code. When it returns control, it also returns a value to the calling code.  
+Procedura `Function` jest serią Visual Basic instrukcji ujętych w instrukcji `Function` i `End Function`. Procedura `Function` wykonuje zadanie, a następnie zwraca sterowanie do kodu wywołującego. Gdy zwraca formant, zwraca również wartość do kodu wywołującego.  
   
- Each time the procedure is called, its statements run, starting with the first executable statement after the `Function` statement and ending with the first `End Function`, `Exit Function`, or `Return` statement encountered.  
+ Za każdym razem, gdy procedura jest wywoływana, jej instrukcje są uruchamiane, rozpoczynając od pierwszej instrukcji wykonywalnej po instrukcji `Function` i kończąc na pierwszej instrukcji `End Function`, `Exit Function`lub `Return`.  
   
- You can define a `Function` procedure in a module, class, or structure. It is `Public` by default, which means you can call it from anywhere in your application that has access to the module, class, or structure in which you defined it.  
+ Można zdefiniować `Function` procedury w module, klasie lub strukturze. Domyślnie jest `Public`, co oznacza, że można wywołać ją z dowolnego miejsca w aplikacji, która ma dostęp do modułu, klasy lub struktury, w której został zdefiniowany.  
   
- A `Function` procedure can take arguments, such as constants, variables, or expressions, which are passed to it by the calling code.  
+ Procedura `Function` może przyjmować argumenty, takie jak stałe, zmienne lub wyrażenia, które są przekazane do niego przez wywołujący kod.  
   
 ## <a name="declaration-syntax"></a>Składnia deklaracji  
- The syntax for declaring a `Function` procedure is as follows:  
+ Składnia do deklarowania procedury `Function` jest następująca:  
   
 ```vb  
 [Modifiers] Function FunctionName [(ParameterList)] As ReturnType  
@@ -34,12 +34,12 @@ A `Function` procedure is a series of Visual Basic statements enclosed by the `F
 End Function  
 ```  
   
- The *modifiers* can specify access level and information regarding overloading, overriding, sharing, and shadowing. For more information, see [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
+ *Modyfikatory* mogą określać poziom dostępu i informacje dotyczące przeciążania, przesłaniania, udostępniania i przesłaniania. Aby uzyskać więcej informacji, zobacz [Instrukcja function](../../../../visual-basic/language-reference/statements/function-statement.md).  
   
- You declare each parameter the same way you do for [Sub Procedures](./sub-procedures.md).  
+ Każdy parametr należy zadeklarować w taki sam sposób jak [procedury Sub](./sub-procedures.md).  
   
 ### <a name="data-type"></a>Typ danych  
- Every `Function` procedure has a data type, just as every variable does. This data type is specified by the `As` clause in the `Function` statement, and it determines the data type of the value the function returns to the calling code. The following sample declarations illustrate this.  
+ Każda procedura `Function` ma typ danych, tak jak każda zmienna. Ten typ danych jest określany przez klauzulę `As` w instrukcji `Function` i określa typ danych wartości zwracanej przez funkcję do kodu wywołującego. Przedstawiono następujące przykładowe deklaracje.  
   
 ```vb  
 Function yesterday() As Date  
@@ -49,12 +49,12 @@ Function findSqrt(ByVal radicand As Single) As Single
 End Function  
 ```  
   
- For more information, see "Parts" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
+ Aby uzyskać więcej informacji, zobacz sekcję "części" w [instrukcji funkcji](../../../../visual-basic/language-reference/statements/function-statement.md).  
   
-## <a name="returning-values"></a>Returning Values  
- The value a `Function` procedure sends back to the calling code is called its return value. The procedure returns this value in one of two ways:  
+## <a name="returning-values"></a>Zwracanie wartości  
+ Wartość `Function` procedura jest wysyłana z powrotem do wywołującego kodu jest nazywana jego wartością zwracaną. Ta procedura zwraca tę wartość na jeden z dwóch sposobów:  
   
-- It uses the `Return` statement to specify the return value, and returns control immediately to the calling program. Ilustruje to poniższy przykład.  
+- Używa instrukcji `Return`, aby określić wartość zwracaną, i natychmiast zwraca kontrolę do wywołującego programu. Ilustruje to poniższy przykład.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -64,7 +64,7 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
-- It assigns a value to its own function name in one or more statements of the procedure. Control does not return to the calling program until an `Exit Function` or `End Function` statement is executed. Ilustruje to poniższy przykład.  
+- Przypisuje wartość do własnej nazwy funkcji w jednej lub kilku instrukcjach procedury. Formant nie wraca do wywołującego programu do momentu wykonania instrukcji `Exit Function` lub `End Function`. Ilustruje to poniższy przykład.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -74,27 +74,27 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
- The advantage of assigning the return value to the function name is that control does not return from the procedure until it encounters an `Exit Function` or `End Function` statement. This allows you to assign a preliminary value and adjust it later if necessary.  
+ Zaletą przypisania wartości zwracanej do nazwy funkcji jest to, że formant nie zwraca z procedury do momentu napotkania instrukcji `Exit Function` lub `End Function`. Pozwala to na przypisanie wartości wstępnej i dostosowanie jej później w razie potrzeby.  
   
- For more information about returning values, see [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md). For information about returning arrays, see [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Aby uzyskać więcej informacji na temat zwracanych wartości, zobacz [Instrukcja function](../../../../visual-basic/language-reference/statements/function-statement.md). Aby uzyskać informacje na temat zwracania tablic, zobacz [tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-## <a name="calling-syntax"></a>Calling Syntax  
- You invoke a `Function` procedure by including its name and arguments either on the right side of an assignment statement or in an expression. You must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses.  
+## <a name="calling-syntax"></a>Składnia wywołania  
+ Procedurę `Function` można wywołać, dołączając jej nazwę i argumenty po prawej stronie instrukcji przypisania lub w wyrażeniu. Musisz podać wartości dla wszystkich argumentów, które nie są opcjonalne, i należy ująć listę argumentów w nawiasach. Jeśli nie podano argumentów, można opcjonalnie pominąć nawiasy.  
   
- The syntax for a call to a `Function` procedure is as follows:  
+ Składnia wywołania procedury `Function` jest następująca:  
   
- *lvalue*  `=`  *functionname* `[(` *argumentlist* `)]`  
+ *lvalue*`=`*FunctionName* `[(` *listaargumentów* `)]`  
   
- `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=`  *expression* `) Then`  
+ `If ((` *functionname* `[(` *listaargumentów* `)] / 3) <=`*Expression* `) Then`  
   
- When you call a `Function` procedure, you do not have to use its return value. If you do not, all the actions of the function are performed, but the return value is ignored. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> is often called in this manner.  
+ Po wywołaniu procedury `Function` nie trzeba używać jej wartości zwracanej. W przeciwnym razie wszystkie akcje funkcji są wykonywane, ale zwracana wartość jest ignorowana. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> jest często wywoływana w ten sposób.  
   
-### <a name="illustration-of-declaration-and-call"></a>Illustration of Declaration and Call  
- The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides.  
+### <a name="illustration-of-declaration-and-call"></a>Ilustracja deklaracji i wywołania  
+ Poniższa procedura `Function` oblicza najdłuższy bok lub przeciwprostokątnej w prawym trójkątze, uwzględniając wartości pozostałych dwóch stron.  
   
  [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
- The following example shows a typical call to `hypotenuse`.  
+ Poniższy przykład przedstawia typowe wywołanie do `hypotenuse`.  
   
  [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   

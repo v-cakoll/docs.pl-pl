@@ -30,32 +30,32 @@ ms.locfileid: "74347427"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Porady: przerywanie i łączenie instrukcji w Code (Visual Basic)
 
-When writing your code, you might at times create lengthy statements that necessitate horizontal scrolling in the Code Editor. Although this doesn't affect the way your code runs, it makes it difficult for you or anyone else to read the code as it appears on the monitor. In such cases, you should consider breaking the single long statement into several lines.
+Podczas pisania kodu można czasami tworzyć długie instrukcje, które wymagają przewijania w poziomie w edytorze kodu. Chociaż nie ma to wpływu na sposób działania kodu, utrudnia użytkownikowi lub innym osobom odczytywanie kodu w postaci, w jakiej jest wyświetlany na monitorze. W takich przypadkach należy rozważyć rozdzielenie pojedynczej długiej instrukcji na kilka wierszy.
 
-## <a name="to-break-a-single-statement-into-multiple-lines"></a>To break a single statement into multiple lines
+## <a name="to-break-a-single-statement-into-multiple-lines"></a>Aby przerwać pojedynczą instrukcję do wielu wierszy
 
-Use the line-continuation character, which is an underscore (`_`), at the point at which you want the line to break. The underscore must be immediately preceded by a space and immediately followed by a line terminator (carriage return) or (starting with version 16.0) a comment followed by a carriage return.
+Użyj znaku kontynuacji wiersza, który jest podkreśleniem (`_`), w punkcie, w którym ma zostać przerwana linia. Znak podkreślenia musi być bezpośrednio poprzedzony spacją, po którym następuje terminator wiersza (znak powrotu karetki) lub (począwszy od wersji 16,0) komentarz, po którym następuje znak powrotu karetki.
 
   > [!NOTE]
-  > In some cases, if you omit the line-continuation character, the Visual Basic compiler will implicitly continue the statement on the next line of code. For a list of syntax elements for which you can omit the line-continuation character, see "Implicit Line Continuation" in [Statements](../../../visual-basic/programming-guide/language-features/statements.md).
+  > W niektórych przypadkach, jeśli pominięto znak kontynuacji wiersza, kompilator Visual Basic niejawnie kontynuuje instrukcję w następnym wierszu kodu. Aby uzyskać listę elementów składni, dla których można pominąć znak kontynuacji wiersza, zobacz "niejawne kontynuacja wiersza" w [instrukcjach](../../../visual-basic/programming-guide/language-features/statements.md).
 
-  In the following example, the statement is broken into four lines with line-continuation characters terminating all but the last line.
+  W poniższym przykładzie instrukcja jest dzielona na cztery wiersze z znakami kontynuacji wiersza kończącymi wszystkie oprócz ostatniego wiersza.
 
   [!code-vb[VbVbcnConventions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#20)]
 
-  Using this sequence makes your code easier to read, both online and when printed.
+  Użycie tej sekwencji sprawia, że kod będzie łatwiejszy do odczytania, zarówno w trybie online, jak i podczas drukowania.
 
-  The line-continuation character must be the last character on a line. You can't follow it with anything else on the same line.
+  Znak kontynuacji wiersza musi być ostatnim znakiem w wierszu. Nie można wykonać kolejnej czynności w tym samym wierszu.
 
-  Some limitations exist as to where you can use the line-continuation character; for example, you can't use it in the middle of an argument name. You can break an argument list with the line-continuation character, but the individual names of the arguments must remain intact.
+  Istnieją pewne ograniczenia, w których można użyć znaku kontynuacji wiersza; na przykład nie można użyć go w środku nazwy argumentu. Możesz przerwać listę argumentów za pomocą znaku kontynuacji wiersza, ale poszczególne nazwy argumentów muszą pozostać nienaruszone.
 
-  You can't continue a comment by using a line-continuation character. The compiler doesn't examine the characters in a comment for special meaning. For a multiple-line comment, repeat the comment symbol (`'`) on each line.
+  Nie można kontynuować komentarza przy użyciu znaku kontynuacji wiersza. Kompilator nie bada znaków w komentarzu pod kątem specjalnego znaczenia. W przypadku komentarza z wieloma wierszami należy powtórzyć symbol komentarza (`'`) w każdym wierszu.
 
- Although placing each statement on a separate line is the recommended method, Visual Basic also allows you to place multiple statements on the same line.
+ Chociaż umieszczenie każdej instrukcji w osobnym wierszu jest zalecaną metodą, Visual Basic umożliwia również umieszczenie wielu instrukcji w tym samym wierszu.
 
-## <a name="to-place-multiple-statements-on-the-same-line"></a>To place multiple statements on the same line
+## <a name="to-place-multiple-statements-on-the-same-line"></a>Aby umieścić wiele instrukcji w tym samym wierszu
 
-Separate the statements with a colon (`:`), as in the following example:
+Oddziel instrukcje od dwukropka (`:`), jak w poniższym przykładzie:
 
   [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]
 

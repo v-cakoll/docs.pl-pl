@@ -13,15 +13,15 @@ ms.locfileid: "74344917"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Definicja typu anonimowego (Visual Basic)
 
-In response to the declaration of an instance of an anonymous type, the compiler creates a new class definition that contains the specified properties for the type.
+W odpowiedzi na deklarację wystąpienia typu anonimowego kompilator tworzy nową definicję klasy, która zawiera określone właściwości dla tego typu.
 
-## <a name="compiler-generated-code"></a>Compiler-Generated Code
+## <a name="compiler-generated-code"></a>Kod wygenerowany przez kompilator
 
-For the following definition of `product`, the compiler creates a new class definition that contains properties `Name`, `Price`, and `OnHand`.
+Dla następującej definicji `product`kompilator tworzy nową definicję klasy, która zawiera właściwości `Name`, `Price`i `OnHand`.
 
 [!code-vb[VbVbalrAnonymousTypes#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#25)]
 
-The class definition contains property definitions similar to the following. Notice that there is no `Set` method for the key properties. The values of key properties are read-only.
+Definicja klasy zawiera definicje właściwości podobne do następujących. Należy zauważyć, że nie ma `Set` metody dla właściwości klucza. Wartości właściwości klucza są tylko do odczytu.
 
 ```vb
 Public Class $Anonymous1
@@ -52,36 +52,36 @@ Public Class $Anonymous1
 End Class
 ```
 
-In addition, anonymous type definitions contain a parameterless constructor. Constructors that require parameters are not permitted.
+Ponadto definicja typu anonimowego zawiera konstruktora bez parametrów. Konstruktory wymagające parametrów są niedozwolone.
 
-If an anonymous type declaration contains at least one key property, the type definition overrides three members inherited from <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. If no key properties are declared, only <xref:System.Object.ToString%2A> is overridden. The overrides provide the following functionality:
+Jeśli deklaracja typu anonimowego zawiera co najmniej jedną właściwość klucza, definicja typu przesłania trzy składowe dziedziczone z <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>i <xref:System.Object.ToString%2A>. Jeśli nie zadeklarowano żadnych właściwości klucza, tylko <xref:System.Object.ToString%2A> jest zastępowany. Przesłonięcia zapewniają następujące funkcje:
 
-- `Equals` returns `True` if two anonymous type instances are the same instance, or if they meet the following conditions:
+- `Equals` zwraca `True`, jeśli dwa wystąpienia typu anonimowego są tego samego wystąpienia lub spełniają następujące warunki:
 
-  - They have the same number of properties.
+  - Mają tę samą liczbę właściwości.
 
-  - The properties are declared in the same order, with the same names and the same inferred types. Name comparisons are not case-sensitive.
+  - Właściwości są deklarowane w tej samej kolejności, z tymi samymi nazwami i tymi samymi typem wywnioskowanym. W porównaniach nazw nie jest rozróżniana wielkość liter.
 
-  - At least one of the properties is a key property, and the `Key` keyword is applied to the same properties.
+  - Co najmniej jedna z właściwości jest właściwością klucza, a słowo kluczowe `Key` jest stosowane do tych samych właściwości.
 
-  - Comparison of each corresponding pair of key properties returns `True`.
+  - Porównanie każdej odpowiadającej pary właściwości klucza zwraca `True`.
 
-    For example, in the following examples, `Equals` returns `True` only for `employee01` and `employee08`. The comment before each line specifies the reason why the new instance does not match `employee01`.
+    Na przykład w poniższych przykładach `Equals` zwraca `True` tylko dla `employee01` i `employee08`. Komentarz przed każdym wierszem określa powód, dla którego nowe wystąpienie nie jest zgodne `employee01`.
 
     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]
 
-- `GetHashcode` provides an appropriately unique GetHashCode algorithm. The algorithm uses only the key properties to compute the hash code.
+- `GetHashcode` zapewnia odpowiedni unikatowy algorytm GetHashCode. Algorytm używa tylko właściwości klucza do obliczenia kodu skrótu.
 
-- `ToString` returns a string of concatenated property values, as shown in the following example. Both key and non-key properties are included.
+- `ToString` zwraca ciąg połączonych wartości właściwości, jak pokazano w poniższym przykładzie. Uwzględniane są zarówno właściwości klucza, jak i niebędących kluczami.
 
   [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]
 
-Explicitly named properties of an anonymous type cannot conflict with these generated methods. That is, you cannot use `.Equals`, `.GetHashCode`, or `.ToString` to name a property.
+Właściwości jawnie nazwane typu anonimowego nie mogą powodować konfliktu z tymi wygenerowanymi metodami. Oznacza to, że nie można użyć `.Equals`, `.GetHashCode`lub `.ToString` do nazwy właściwości.
 
-Anonymous type definitions that include at least one key property also implement the <xref:System.IEquatable%601?displayProperty=nameWithType> interface, where `T` is the type of the anonymous type.
+Definicje typu anonimowego, które obejmują co najmniej jedną właściwość klucza, również implementują interfejs <xref:System.IEquatable%601?displayProperty=nameWithType>, gdzie `T` jest typem typu anonimowego.
 
 > [!NOTE]
-> Anonymous type declarations create the same anonymous type only if they occur in the same assembly, their properties have the same names and the same inferred types, the properties are declared in the same order, and the same properties are marked as key properties.
+> Deklaracje typu anonimowego tworzą ten sam typ anonimowy tylko wtedy, gdy występują w tym samym zestawie, ich właściwości mają takie same nazwy, jak te same wywnioskowane typy, właściwości są deklarowane w tej samej kolejności, a te same właściwości są oznaczane jako właściwości klucza.
 
 ## <a name="see-also"></a>Zobacz także
 

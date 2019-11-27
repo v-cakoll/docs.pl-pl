@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347210"
 ---
 # <a name="mycomputerinfo-object"></a>My.Computer.Info — Obiekt
-Provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.  
+Zawiera właściwości służące do uzyskiwania informacji o pamięci komputera, załadowanych zestawach, nazwie i systemie operacyjnym.  
   
 ## <a name="remarks"></a>Uwagi  
- For information about the properties of the `My.Computer.Info` object, see <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
+ Aby uzyskać informacje o właściwościach obiektu `My.Computer.Info`, zobacz <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
+ **Przestrzeń nazw:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
+ **Klasa:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

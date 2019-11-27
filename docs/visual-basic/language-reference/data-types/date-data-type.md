@@ -1,5 +1,5 @@
 ---
-title: Date — Typ danych
+title: Date, typ danych
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Date
@@ -24,59 +24,59 @@ ms.locfileid: "74344028"
 ---
 # <a name="date-data-type-visual-basic"></a>Date — Typ danych (Visual Basic)
 
-Holds IEEE 64-bit (8-byte) values that represent dates ranging from January 1 of the year 0001 through December 31 of the year 9999, and times from 12:00:00 AM (midnight) through 11:59:59.9999999 PM. Each increment represents 100 nanoseconds of elapsed time since the beginning of January 1 of the year 1 in the Gregorian calendar. The maximum value represents 100 nanoseconds before the beginning of January 1 of the year 10000.
+Zawiera wartości IEEE 64-bit (8-bajtowe), które reprezentują daty od 1 stycznia roku 0,001 do 31 grudnia roku 9999 i godziny od 12:00:00 AM (północy) do 11:59:59.9999999 PM. Każdy przyrost reprezentuje 100 nanosekund czasu, który upłynął od początku 1 stycznia roku 1 w kalendarzu gregoriańskim. Wartość maksymalna reprezentuje 100 nanosekund przed początkiem 1 stycznia roku 10000.
 
 ## <a name="remarks"></a>Uwagi
 
-Use the `Date` data type to contain date values, time values, or date and time values.
+Użyj `Date` typ danych, aby zawierać wartości daty, wartości godzinowe lub wartości daty i godziny.
 
-The default value of `Date` is 0:00:00 (midnight) on January 1, 0001.
+Wartość domyślna `Date` to 0:00:00 (północ) 1 stycznia 0001.
 
-You can get the current date and time from the <xref:Microsoft.VisualBasic.DateAndTime> class.
+Bieżącą datę i godzinę można uzyskać z klasy <xref:Microsoft.VisualBasic.DateAndTime>.
 
-## <a name="format-requirements"></a>Format Requirements
+## <a name="format-requirements"></a>Wymagania dotyczące formatu
 
-You must enclose a `Date` literal within number signs (`# #`). You must specify the date value in the format M/d/yyyy, for example `#5/31/1993#`, or yyyy-MM-dd, for example `#1993-5-31#`. You can use slashes when specifying the year first.  This requirement is independent of your locale and your computer's date and time format settings.
+W znakach liczbowych (`# #`) należy ująć literał `Date`. Należy określić wartość daty w formacie M/d/rrrr, na przykład `#5/31/1993#`lub RRRR-MM-DD, na przykład `#1993-5-31#`. Możesz użyć ukośników, aby określić rok jako pierwszy.  Ten wymóg jest niezależny od ustawień regionalnych i formatu daty i godziny na komputerze.
 
-The reason for this restriction is that the meaning of your code should never change depending on the locale in which your application is running. Suppose you hard-code a `Date` literal of `#3/4/1998#` and intend it to mean March 4, 1998. In a locale that uses mm/dd/yyyy, 3/4/1998 compiles as you intend. But suppose you deploy your application in many countries/regions. In a locale that uses dd/mm/yyyy, your hard-coded literal would compile to April 3, 1998. In a locale that uses yyyy/mm/dd, the literal would be invalid (April 1998, 0003) and cause a compiler error.
+Przyczyną tego ograniczenia jest fakt, że znaczenie kodu nigdy nie zmienia się w zależności od ustawień regionalnych, w których działa aplikacja. Załóżmy, że twardy kod `Date` literał `#3/4/1998#` i jego znaczenie będzie miało wartość 4 marca 1998. W ustawieniach regionalnych, które wykorzystują mm/dd/rrrr, 3/4/1998 kompiluje się zgodnie z oczekiwaniami. Należy jednak wdrożyć aplikację w wielu krajach/regionach. W ustawieniach regionalnych, które używają dd/mm/rrrr, zakodowany literał zostałby skompilowany do 3 kwietnia 1998. W ustawieniach regionalnych, które używają rrrr/mm/dd, literał byłby nieprawidłowy (kwiecień 1998, 0003) i powoduje błąd kompilatora.
 
-## <a name="workarounds"></a>Workarounds
+## <a name="workarounds"></a>Rozwiązania
 
-To convert a `Date` literal to the format of your locale, or to a custom format, supply the literal to the <xref:Microsoft.VisualBasic.Strings.Format%2A> function, specifying either a predefined or user-defined date format. The following example demonstrates this.
+Aby skonwertować `Date` literał do formatu ustawień regionalnych lub do formatu niestandardowego, podaj literał do funkcji <xref:Microsoft.VisualBasic.Strings.Format%2A>, określając wstępnie zdefiniowany lub zdefiniowany przez użytkownika format daty. Poniższy przykład ilustruje to.
 
 ```vb
 MsgBox("The formatted date is " & Format(#5/31/1993#, "dddd, d MMM yyyy"))
 ```
 
-Alternatively, you can use one of the overloaded constructors of the <xref:System.DateTime> structure to assemble a date and time value. The following example creates a value to represent May 31, 1993 at 12:14 in the afternoon.
+Alternatywnie można użyć jednego z przeciążonych konstruktorów struktury <xref:System.DateTime> do złożenia wartości daty i godziny. Poniższy przykład tworzy wartość reprezentującą 31 maja 1993 w dniu 12:14.
 
 ```vb
 Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
 ```
 
-## <a name="hour-format"></a>Hour Format
+## <a name="hour-format"></a>Format godziny
 
-You can specify the time value in either 12-hour or 24-hour format, for example `#1:15:30 PM#` or `#13:15:30#`. However, if you do not specify either the minutes or the seconds, you must specify AM or PM.
+Możesz określić wartość czasu w formacie 12-godzinnym lub 24-godzinnym, na przykład `#1:15:30 PM#` lub `#13:15:30#`. Jeśli jednak nie określisz minut lub sekund, musisz określić wartość AM lub PM.
 
-## <a name="date-and-time-defaults"></a>Date and Time Defaults
+## <a name="date-and-time-defaults"></a>Wartości domyślne daty i godziny
 
-If you do not include a date in a date/time literal, Visual Basic sets the date part of the value to January 1, 0001. If you do not include a time in a date/time literal, Visual Basic sets the time part of the value to the start of the day, that is, midnight (0:00:00).
+Jeśli nie dołączysz daty w literale Data/godzina, Visual Basic ustawia część daty z wartości na 1 stycznia 0,001. Jeśli nie dołączysz czasu do literału daty/godziny, Visual Basic ustawia część czasu wartości na początku dnia, czyli północy (0:00:00).
 
 ## <a name="type-conversions"></a>Konwersje typu
 
-If you convert a `Date` value to the `String` type, Visual Basic renders the date according to the short date format specified by the run-time locale, and it renders the time according to the time format (either 12-hour or 24-hour) specified by the run-time locale.
+Jeśli przekonwertujesz wartość `Date` na typ `String`, Visual Basic renderuje datę zgodnie z formatem daty krótkiej określonym przez ustawienia regionalne czasu wykonywania i renderuje godzinę zgodnie z formatem czasu (12-godzinnym lub 24-godzinnym) określonym przez ustawienia regionalne czasu wykonywania.
 
 ## <a name="programming-tips"></a>Porady dla programistów
 
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that date/time types in other environments are not compatible with the Visual Basic `Date` type. If you are passing a date/time argument to such a component, declare it as `Double` instead of `Date` in your new Visual Basic code, and use the conversion methods <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> and <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.
+- **Zagadnienia dotyczące międzyoperacyjnych.** Jeśli masz połączenie ze składnikami niezapisanymi dla .NET Framework, na przykład obiekty automatyzacji lub COM, pamiętaj, że typy daty i godziny w innych środowiskach nie są zgodne z typem `Date` Visual Basic. Jeśli przekazujesz argument daty/godziny do takiego składnika, zadeklaruj go jako `Double` zamiast `Date` w nowym kodzie Visual Basic i użyj metod konwersji <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> i <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.
 
-- **Type Characters.** `Date` has no literal type character or identifier type character. However, the compiler treats literals enclosed within number signs (`# #`) as `Date`.
+- **Znaki typu.** `Date` nie ma znaku typu literału lub typu identyfikatora. Jednak kompilator traktuje literały ujęte w znaki liczbowe (`# #`) jako `Date`.
 
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.DateTime?displayProperty=nameWithType> structure.
+- **Typ struktury.** Odpowiedni typ w .NET Framework jest strukturą <xref:System.DateTime?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Przykład
 
-A variable or constant of the `Date` data type holds both the date and the time. Ilustruje to poniższy przykład.
+Zmienna lub stała typu danych `Date` przechowuje zarówno datę, jak i godzinę. Ilustruje to poniższy przykład.
 
 ```vb
 Dim someDateAndTime As Date = #8/13/2002 12:14 PM#

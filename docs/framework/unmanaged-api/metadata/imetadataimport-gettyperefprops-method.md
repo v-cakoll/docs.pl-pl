@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436708"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps — Metoda
-Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.  
+Pobiera metadane skojarzone z <xref:System.Type>, do którego odwołuje się określony token elementu TypeRef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,28 +39,28 @@ HRESULT GetTypeRefProps (
   
 ## <a name="parameters"></a>Parametry  
  `tr`  
- [in] The TypeRef token that represents the type to return metadata for.  
+ podczas Token elementu TypeRef, który reprezentuje typ do zwrócenia metadanych.  
   
  `ptkResolutionScope`  
- [out] A pointer to the scope in which the reference is made. This value is an AssemblyRef or ModuleRef token.  
+ określoną Wskaźnik do zakresu, w którym następuje odwołanie. Ta wartość jest tokenem AssemblyRef lub ModuleRef.  
   
  `szName`  
- [out] A buffer containing the type name.  
+ określoną Bufor zawierający nazwę typu.  
   
  `cchName`  
- [in] The requested size in wide characters of `szName`.  
+ podczas Żądany rozmiar w szerokich znakach `szName`.  
   
  `pchName`  
- [out] The returned size in wide characters of `szName`.  
+ określoną Zwrócony rozmiar w szerokich znakach `szName`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

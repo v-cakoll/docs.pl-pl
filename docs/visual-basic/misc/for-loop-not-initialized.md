@@ -1,5 +1,5 @@
 ---
-title: For loop not initialized
+title: Nie zainicjowano pętli for
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID92
@@ -11,12 +11,12 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348441"
 ---
-# <a name="for-loop-not-initialized-visual-basic"></a>For loop not initialized (Visual Basic)
-You jumped into the middle of a `For...Next` loop.  
+# <a name="for-loop-not-initialized-visual-basic"></a>Nie zainicjowano pętli for (Visual Basic)
+Przeskoczy do środka pętli `For...Next`.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Remove the jump into the loop.  
+1. Usuń skok do pętli.  
   
 ## <a name="see-also"></a>Zobacz także
 

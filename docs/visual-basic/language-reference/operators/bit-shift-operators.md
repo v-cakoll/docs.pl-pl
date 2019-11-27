@@ -14,9 +14,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336122"
 ---
 # <a name="bit-shift-operators-visual-basic"></a>Bit Shift — Operatory (Visual Basic)
-The following are the bit shift operators defined in Visual Basic.  
+Poniżej przedstawiono operatory przesunięcia bitowego zdefiniowane w Visual Basic.  
   
- [<\< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
+ [Operator \< <](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
   
  [>>, operator](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
   

@@ -16,17 +16,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340209"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Porady: wywoływanie procedury przeciążenia (Visual Basic)
-The advantage of overloading a procedure is in the flexibility of the call. The calling code can obtain the information it needs to pass to the procedure and then call a single procedure name, no matter what arguments it is passing.  
+Zaletą przeładowania procedury jest elastyczność wywołania. Kod wywołujący może uzyskać informacje potrzebne do przekazania do procedury, a następnie wywołać pojedynczą nazwę procedury, niezależnie od tego, jakie argumenty są przekazywane.  
   
-### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>To call a procedure that has more than one version defined  
+### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>Aby wywołać procedurę, która ma zdefiniowaną więcej niż jedną wersję  
   
-1. In the calling code, determine which data to pass to the procedure.  
+1. W kodzie wywołującym Określ, które dane mają zostać przekazane do procedury.  
   
-2. Write the procedure call in the normal way, presenting the data in the argument list. Be sure the arguments match the parameter list in one of the versions defined for the procedure.  
+2. Napisz wywołanie procedury w zwykły sposób, prezentując dane na liście argumentów. Upewnij się, że argumenty pasują do listy parametrów w jednej z wersji zdefiniowanych dla procedury.  
   
-3. You do not have to determine which version of the procedure to call. Visual Basic passes control to the version matching your argument list.  
+3. Nie ma potrzeby określania, która wersja procedury ma być wywoływana. Visual Basic przekazuje kontrolę do wersji zgodnej z listą argumentów.  
   
-     The following example calls the `post` procedure declared in [How to: Define Multiple Versions of a Procedure](./how-to-define-multiple-versions-of-a-procedure.md). It obtains the customer identification, determines whether it is a `String` or an `Integer`, and then in either case calls the same procedure.  
+     Poniższy przykład wywołuje procedurę `post` zadeklarowaną w [instrukcje: definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md). Uzyskuje identyfikację klienta, określa, czy jest to `String` czy `Integer`, a następnie w obu przypadkach wywołuje tę samą procedurę.  
   
      [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   

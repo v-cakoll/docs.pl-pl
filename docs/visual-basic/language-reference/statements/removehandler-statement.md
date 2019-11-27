@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333038"
 ---
 # <a name="removehandler-statement"></a>RemoveHandler — Instrukcja
-Removes the association between an event and an event handler.  
+Usuwa skojarzenie między zdarzeniem a programem obsługi zdarzeń.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,14 +29,14 @@ RemoveHandler event, AddressOf eventhandler
   
 |Termin|Definicja|  
 |---|---|  
-|`event`|The name of the event being handled.|  
-|`eventhandler`|The name of the procedure currently handling the event.|  
+|`event`|Nazwa obsługiwanego zdarzenia.|  
+|`eventhandler`|Nazwa procedury, która obecnie obsługuje zdarzenie.|  
   
 ## <a name="remarks"></a>Uwagi  
- The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling for a specific event at any time during program execution.  
+ Instrukcje `AddHandler` i `RemoveHandler` umożliwiają uruchamianie i zatrzymywanie obsługi zdarzeń dla określonego zdarzenia w dowolnym momencie podczas wykonywania programu.  
   
 > [!NOTE]
-> For custom events, the `RemoveHandler` statement invokes the event's `RemoveHandler` accessor. For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
+> W przypadku zdarzeń niestandardowych instrukcja `RemoveHandler` wywołuje metodę dostępu `RemoveHandler` zdarzenia. Aby uzyskać więcej informacji na temat zdarzeń niestandardowych, zobacz [instrukcja zdarzenia](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
@@ -44,6 +44,6 @@ RemoveHandler event, AddressOf eventhandler
 ## <a name="see-also"></a>Zobacz także
 
 - [AddHandler, instrukcja](../../../visual-basic/language-reference/statements/addhandler-statement.md)
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Realizuj](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md)

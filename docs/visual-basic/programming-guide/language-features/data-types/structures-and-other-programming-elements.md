@@ -16,13 +16,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346117"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Struktury oraz inne elementy programowania (Visual Basic)
-You can use structures in conjunction with arrays, objects, and procedures, as well as with each other. The interactions use the same syntax as these elements use individually.  
+Można używać struktur w połączeniu z tablicami, obiektami i procedurami, a także ze sobą. Interakcje używają tej samej składni, w której te elementy używają pojedynczo.  
   
 > [!NOTE]
-> You cannot initialize any of the structure elements in the structure declaration. You can assign values only to elements of a variable that has been declared to be of a structure type.  
+> Nie można zainicjować któregokolwiek z elementów struktury w deklaracji struktury. Wartości można przypisywać tylko do elementów zmiennej, która została zadeklarowana jako typu struktury.  
   
-## <a name="structures-and-arrays"></a>Structures and Arrays  
- A structure can contain an array as one or more of its elements. Ilustruje to poniższy przykład.  
+## <a name="structures-and-arrays"></a>Struktury i tablice  
+ Struktura może zawierać tablicę jako jeden lub kilka jej elementów. Ilustruje to poniższy przykład.  
   
 ```vb  
 Public Structure systemInfo  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- You access the values of an array within a structure the same way you access a property on an object. Ilustruje to poniższy przykład.  
+ Dostęp do wartości tablicy w strukturze jest taki sam jak w przypadku dostępu do właściwości obiektu. Ilustruje to poniższy przykład.  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -41,13 +41,13 @@ ReDim mySystem.diskDrives(3)
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- You can also declare an array of structures. Ilustruje to poniższy przykład.  
+ Można również zadeklarować tablicę struktur. Ilustruje to poniższy przykład.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- You follow the same rules to access the components of this data architecture. Ilustruje to poniższy przykład.  
+ Aby uzyskać dostęp do składników tej architektury danych, należy przestrzegać tych samych reguł. Ilustruje to poniższy przykład.  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -55,8 +55,8 @@ allSystems(5).CPU = "386SX"
 allSystems(5).diskDrives(2) = "100M SCSI"  
 ```  
   
-## <a name="structures-and-objects"></a>Structures and Objects  
- A structure can contain an object as one or more of its elements. Ilustruje to poniższy przykład.  
+## <a name="structures-and-objects"></a>Struktury i obiekty  
+ Struktura może zawierać obiekt jako jeden lub więcej elementów. Ilustruje to poniższy przykład.  
   
 ```vb  
 Protected Structure userInput  
@@ -66,10 +66,10 @@ Protected Structure userInput
 End Structure  
 ```  
   
- You should use a specific object class in such a declaration, rather than `Object`.  
+ Należy użyć określonej klasy obiektów w takiej deklaracji, a nie `Object`.  
   
-## <a name="structures-and-procedures"></a>Structures and Procedures  
- You can pass a structure as a procedure argument. Ilustruje to poniższy przykład.  
+## <a name="structures-and-procedures"></a>Struktury i procedury  
+ Strukturę można przekazać jako argument procedury. Ilustruje to poniższy przykład.  
   
 ```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- The preceding example passes the structure *by reference*, which allows the procedure to modify its elements so that the changes take effect in the calling code. If you want to protect a structure against such modification, pass it by value.  
+ Powyższy przykład przekazuje strukturę *przez odwołanie*, co umożliwia wykonanie procedury modyfikacji jej elementów w celu wprowadzenia zmian w kodzie wywołującym. Jeśli chcesz chronić strukturę przed taką modyfikacją, przekaż ją przez wartość.  
   
- You can also return a structure from a `Function` procedure. Ilustruje to poniższy przykład.  
+ Możesz również zwrócić strukturę z `Function` procedury. Ilustruje to poniższy przykład.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -96,8 +96,8 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## <a name="structures-within-structures"></a>Structures Within Structures  
- Structures can contain other structures. Ilustruje to poniższy przykład.  
+## <a name="structures-within-structures"></a>Struktury w strukturach  
+ Struktury mogą zawierać inne struktury. Ilustruje to poniższy przykład.  
   
 ```vb  
 Public Structure driveInfo  
@@ -118,9 +118,9 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- You can also use this technique to encapsulate a structure defined in one module within a structure defined in a different module.  
+ Tej techniki można również użyć do hermetyzacji struktury zdefiniowanej w jednym module w strukturze zdefiniowanej w innym module.  
   
- Structures can contain other structures to an arbitrary depth.  
+ Struktury mogą zawierać inne struktury do arbitralnej głębokości.  
   
 ## <a name="see-also"></a>Zobacz także
 

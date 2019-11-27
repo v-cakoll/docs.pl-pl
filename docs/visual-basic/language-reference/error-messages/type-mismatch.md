@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346670"
 ---
 # <a name="type-mismatch-visual-basic"></a>Niezgodność typów (Visual Basic)
-You attempted to convert a value to another type in a way that is not valid.  
+Podjęto próbę przekonwertowania wartości na inny typ w sposób, który jest nieprawidłowy.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Check the assignment to make sure it is valid.  
+1. Sprawdź przypisanie, aby upewnić się, że jest prawidłowe.  
   
-2. Make sure you did not pass an object to a procedure that expects a single property or value.  
+2. Upewnij się, że obiekt nie został przekazany do procedury, która oczekuje pojedynczej właściwości lub wartości.  
   
-3. Make sure you did not use a module or project name where an expression was expected.  
+3. Upewnij się, że nie użyto modułu lub nazwy projektu, w której oczekiwano wyrażenia.  
   
 ## <a name="see-also"></a>Zobacz także
 

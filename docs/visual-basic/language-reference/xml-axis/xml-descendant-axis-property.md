@@ -19,7 +19,7 @@ ms.locfileid: "74349447"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>Właściwości osi elementu podrzędnego XML (Visual Basic)
 
-Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.
+Zapewnia dostęp do elementów podrzędnych następujących: obiektu <xref:System.Xml.Linq.XElement>, obiektu <xref:System.Xml.Linq.XDocument>, kolekcji obiektów <xref:System.Xml.Linq.XElement> lub kolekcji obiektów <xref:System.Xml.Linq.XDocument>.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,40 +29,40 @@ object...<descendant>
 
 ## <a name="parts"></a>Części
 
-`object` Required. An <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.
+Wymagane `object`. Obiekt <xref:System.Xml.Linq.XElement>, obiekt <xref:System.Xml.Linq.XDocument>, kolekcja obiektów <xref:System.Xml.Linq.XElement> lub kolekcja obiektów <xref:System.Xml.Linq.XDocument>.
 
-`...<` Required. Denotes the start of a descendant axis property.
+Wymagane `...<`. Wskazuje początek właściwości osi elementu podrzędnego.
 
-`descendant` Required. Name of the descendant nodes to access, of the form [`prefix:]name`.
+Wymagane `descendant`. Nazwa węzłów podrzędnych, do których można uzyskać dostęp, w postaci [`prefix:]name`.
 
-|Part|Opis|
+|Części|Opis|
 |----------|-----------------|
-|`prefix`|Opcjonalny. XML namespace prefix for the descendant node. Must be a global XML namespace that is defined by using an `Imports` statement.|
-|`name`|Wymagany. Local name of the descendant node. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
+|`prefix`|Opcjonalna. Prefiks przestrzeni nazw XML dla węzła podrzędnego. Musi to być globalna przestrzeń nazw XML, która jest definiowana przy użyciu instrukcji `Imports`.|
+|`name`|Wymagana. Nazwa lokalna węzła podrzędnego. Zobacz [nazwy zadeklarowanych elementów i atrybutów XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
 
-`>` Required. Denotes the end of a descendant axis property.
+Wymagane `>`. Oznacza koniec właściwości osi elementu podrzędnego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-A collection of <xref:System.Xml.Linq.XElement> objects.
+Kolekcja obiektów <xref:System.Xml.Linq.XElement>.
 
 ## <a name="remarks"></a>Uwagi
 
-You can use an XML descendant axis property to access descendant nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects. Use the XML `Value` property to access the value of the first descendant node in the returned collection. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
+Aby uzyskać dostęp do węzłów podrzędnych według nazwy z obiektu <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument> lub z kolekcji obiektów <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument>, można użyć właściwości osi elementu podrzędnego XML. Użyj właściwości `Value` XML, aby uzyskać dostęp do wartości pierwszego węzła podrzędnego w zwróconej kolekcji. Aby uzyskać więcej informacji, zobacz [Właściwość wartości XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
 
-The Visual Basic compiler converts descendant axis properties into calls to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method.
+Kompilator Visual Basic konwertuje właściwości osi elementu podrzędnego na wywołania metody <xref:System.Xml.Linq.XContainer.Descendants%2A>.
 
-## <a name="xml-namespaces"></a>XML Namespaces
+## <a name="xml-namespaces"></a>Przestrzenie nazw XML
 
-The name in a descendant axis property can use only XML namespaces declared globally with the `Imports` statement. It cannot use XML namespaces declared locally within XML element literals. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
+Nazwa we właściwości osi zależnej może używać tylko przestrzeni nazw XML zadeklarowanych globalnie za pomocą instrukcji `Imports`. Nie można używać przestrzeni nazw XML zadeklarowanych lokalnie w literałach elementu XML. Aby uzyskać więcej informacji, zobacz [Imports — Instrukcja (przestrzeń nazw XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
 
 ## <a name="example"></a>Przykład
 
-The following example shows how to access the value of the first descendant node named `name` and the values of all descendant nodes named `phone` from the `contacts` object.
+Poniższy przykład pokazuje, jak uzyskać dostęp do wartości pierwszego węzła podrzędnego o nazwie `name` i wartości wszystkich węzłów podrzędnych o nazwie `phone` z obiektu `contacts`.
 
 [!code-vb[VbXMLSamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#25)]
 
-This code displays the following text:
+Ten kod wyświetla następujący tekst:
 
 `Name: Patrick Hines`
 
@@ -70,11 +70,11 @@ This code displays the following text:
 
 ## <a name="example"></a>Przykład
 
-The following example declares `ns` as an XML namespace prefix. It then uses the prefix of the namespace to create an XML literal and access the value of the first child node with the qualified name `ns:name`.
+Poniższy przykład deklaruje `ns` jako prefiks przestrzeni nazw XML. Następnie używa prefiksu przestrzeni nazw w celu utworzenia literału XML i uzyskania dostępu do wartości pierwszego węzła podrzędnego przy użyciu kwalifikowanej nazwy `ns:name`.
 
 [!code-vb[VbXMLSamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples12.vb#26)]
 
-This code displays the following text:
+Ten kod wyświetla następujący tekst:
 
 `Name: Patrick Hines`
 
@@ -83,5 +83,5 @@ This code displays the following text:
 - <xref:System.Xml.Linq.XElement>
 - [Właściwości osi XML](../../../visual-basic/language-reference/xml-axis/index.md)
 - [Literały XML](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Creating XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Tworzenie kodu XML w Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Nazwy deklarowanych elementów i atrybutów XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

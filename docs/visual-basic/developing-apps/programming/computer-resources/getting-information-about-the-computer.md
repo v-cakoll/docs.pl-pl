@@ -13,19 +13,19 @@ ms.locfileid: "74348122"
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a>Pobieranie informacji na temat komputera (Visual Basic)
 
-The `My.Computer.Info` object provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.
+Obiekt `My.Computer.Info` zawiera właściwości służące do uzyskiwania informacji o pamięci komputera, załadowanych zestawach, nazwie i systemie operacyjnym.
 
 ## <a name="remarks"></a>Uwagi
 
-This table lists tasks commonly accomplished through the `My.Computer.Info` object and points to topics demonstrating how to perform each.
+Ta tabela zawiera listę zadań najczęściej wykonywanych za pomocą obiektu `My.Computer.Info` i wskazuje tematy przedstawiające sposób wykonywania każdej z nich.
 
 |Do|Zobacz|
 |---|---|
-|Determine how much virtual address space is available for the computer on which the application is installed|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|
-|Determine the platform type of the computer on which the application is running|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|
-|Determine the operating system of the computer on which the application is running|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName%2A>|
-|Determine what service packs have been installed on the computer on which the application is running|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|
-|Determine the installed `UICulture` on the computer on which the application is running.|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|
+|Określ, ile wirtualnej przestrzeni adresowej jest dostępne na komputerze, na którym zainstalowano aplikację|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|
+|Określ typ platformy komputera, na którym działa aplikacja|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|
+|Określanie systemu operacyjnego komputera, na którym jest uruchomiona aplikacja|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName%2A>|
+|Określanie, jakie dodatki Service Pack zostały zainstalowane na komputerze, na którym jest uruchomiona aplikacja|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|
+|Określ zainstalowaną `UICulture` na komputerze, na którym jest uruchomiona aplikacja.|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|
 
 ## <a name="see-also"></a>Zobacz także
 

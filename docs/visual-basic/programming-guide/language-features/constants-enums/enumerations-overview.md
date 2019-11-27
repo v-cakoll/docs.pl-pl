@@ -13,20 +13,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347487"
 ---
 # <a name="enumerations-overview-visual-basic"></a>Enumerations — Przegląd (Visual Basic)
-Enumerations provide a convenient way to work with sets of related constants and to associate constant values with names. For example, you can declare an enumeration for a set of integer constants associated with the days of the week, and then use the names of the days rather than their integer values in your code.  
+Wyliczenia zapewniają wygodny sposób pracy z zestawami powiązanych stałych i kojarzenia wartości stałych z nazwami. Na przykład można zadeklarować Wyliczenie dla zestawu stałych całkowitych skojarzonych z dniami tygodnia, a następnie użyć nazw dni, a nie ich wartości całkowitych w kodzie.  
   
-## <a name="tasks-involving-enumerations"></a>Tasks involving Enumerations  
- The following table lists common tasks involving enumerations.  
+## <a name="tasks-involving-enumerations"></a>Zadania związane z wyliczeniami  
+ W poniższej tabeli wymieniono typowe zadania związane z wyliczeniami.  
   
 |Wymagana czynność|Zobacz|  
 |----------------|---------|  
-|Find a pre-defined enumeration|[Stałe i wyliczenia](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
-|Declare an enumeration|[How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  
-|Fully qualify an enumeration's name|[Wyliczenia i kwalifikacja nazw](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)|  
-|Refer to an enumeration member|[Instrukcje: odwoływanie się do elementu członkowskiego wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)|  
-|Iterate through an enumeration|[How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)|  
-|Determine the string associated with an enumeration|[Instrukcje: określanie ciągu skojarzonego z wartością wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)|  
-|Decide when to use an enumeration|[Kiedy stosować wyliczanie](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
+|Znajdź wstępnie zdefiniowane Wyliczenie|[Stałe i wyliczenia](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
+|Zadeklaruj Wyliczenie|[Instrukcje: deklarowanie wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  
+|W pełni Zakwalifikuj nazwę wyliczenia|[Wyliczenia i kwalifikacja nazw](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)|  
+|Odwoływanie się do elementu członkowskiego wyliczenia|[Instrukcje: odwoływanie się do elementu członkowskiego wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)|  
+|Wykonaj iterację w wyliczeniu|[Instrukcje: Iterowanie przez Wyliczenie w Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)|  
+|Określanie ciągu skojarzonego z wyliczeniem|[Instrukcje: określanie ciągu skojarzonego z wartością wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)|  
+|Zdecyduj, kiedy należy używać wyliczenia|[Kiedy stosować wyliczanie](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
   
 ## <a name="see-also"></a>Zobacz także
 

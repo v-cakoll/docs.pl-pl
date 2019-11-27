@@ -1,5 +1,5 @@
 ---
-title: 'How to: Sort An Array'
+title: 'Instrukcje: sortowanie tablicy'
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -14,13 +14,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351853"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>How to: sort an array in Visual Basic
+# <a name="how-to-sort-an-array-in-visual-basic"></a>Instrukcje: sortowanie tablicy w Visual Basic
 
-This article shows an example of how to sort an array of strings in Visual Basic.
+W tym artykule przedstawiono przykład sortowania tablicy ciągów w Visual Basic.
 
 ## <a name="example"></a>Przykład
 
-This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:
+Ten przykład deklaruje tablicę `String` obiektów o nazwie `zooAnimals`, wypełnia ją, a następnie sortuje ją alfabetycznie:
   
 ```vb
 Private Sub SortAnimals()
@@ -32,13 +32,13 @@ Private Sub SortAnimals()
 End Sub
 ```
 
-## <a name="robust-programming"></a>Robust programming
+## <a name="robust-programming"></a>Niezawodne programowanie
 
 Następujące warunki mogą spowodować wyjątek:
 
-- Array is empty (<xref:System.ArgumentNullException> class).
-- Array is multidimensional (<xref:System.RankException> class).
-- One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).
+- Tablica jest pusta (Klasa<xref:System.ArgumentNullException>).
+- Tablica jest wielowymiarowa (Klasa<xref:System.RankException>).
+- Co najmniej jeden element tablicy nie implementuje interfejsu <xref:System.IComparable> (Klasa<xref:System.InvalidOperationException>).
 
 ## <a name="see-also"></a>Zobacz także
 

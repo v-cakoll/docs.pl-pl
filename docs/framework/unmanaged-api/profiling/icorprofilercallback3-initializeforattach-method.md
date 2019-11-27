@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439515"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach — Metoda
-Called by the common language runtime (CLR) to give the profiler an opportunity to initialize its state after an attach operation.  
+Wywoływane przez środowisko uruchomieniowe języka wspólnego (CLR), aby Profiler mógł zainicjować swój stan po operacji dołączania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,25 +36,25 @@ HRESULT InitializeForAttach(
   
 ## <a name="parameters"></a>Parametry  
  `pCorProfilerInfoUnk`  
- [in] An interface pointer for the `ICorProfilerInfo*` interface.  
+ podczas Wskaźnik interfejsu dla interfejsu `ICorProfilerInfo*`.  
   
  `pvClientData`  
- [in] A pointer to the data passed to the [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in its `pvClientData` parameter. If this parameter is null, `cbClientData` will be 0 (zero). The CLR frees this memory when it returns from `InitializeForAttach`.  
+ podczas Wskaźnik do danych przesłany do metody [IClrProfiling:: AttachProfiler —](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) w parametrze `pvClientData`. Jeśli ten parametr ma wartość null, `cbClientData` będzie równa 0 (zero). Środowisko CLR zwalnia tę pamięć po powrocie z `InitializeForAttach`.  
   
  `cbClientData`  
- [in] The size, in bytes, of the data that `pvClientData` points to.  
+ podczas Rozmiar, w bajtach, danych, do których wskazuje `pvClientData`.  
   
 ## <a name="remarks"></a>Uwagi  
- The CLR calls `InitializeForAttach` to give the profiler an opportunity to request callbacks.  
+ Wywołania CLR `InitializeForAttach`, aby dać profilerowi możliwość żądania wywołań zwrotnych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

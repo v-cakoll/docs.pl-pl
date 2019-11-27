@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348702"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Porady: wywoływanie Windows API (Visual Basic)
-This example defines and calls the `MessageBox` function in user32.dll and then passes a string to it.  
+Ten przykład definiuje i wywołuje funkcję `MessageBox` w User32. dll, a następnie przekazuje do niej ciąg.  
   
 ## <a name="example"></a>Przykład  
  [!code-vb[VbVbalrInterop#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#1)]  
@@ -23,22 +23,22 @@ This example defines and calls the `MessageBox` function in user32.dll and then 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- A reference to the <xref:System> namespace.  
+- Odwołanie do przestrzeni nazw <xref:System>.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
-- The method is not static, is abstract, or has been previously defined. The parent type is an interface, or the length of *name* or *dllName* is zero. (<xref:System.ArgumentException>)  
+- Metoda nie jest statyczna, jest abstrakcyjna lub została wcześniej zdefiniowana. Typ nadrzędny jest interfejsem lub długość *nazwy* lub *nazwa_pliku_dll* ma wartość zero. (<xref:System.ArgumentException>)  
   
-- The *name* or *dllName* is `Nothing`. (<xref:System.ArgumentNullException>)  
+- *Nazwa* lub *nazwa_pliku_dll* jest `Nothing`. (<xref:System.ArgumentNullException>)  
   
-- The containing type has been previously created using `CreateType`. (<xref:System.InvalidOperationException>)  
+- Typ zawierający został wcześniej utworzony przy użyciu `CreateType`. (<xref:System.InvalidOperationException>)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [A Closer Look at Platform Invoke](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
+- [Bliższe spojrzenie na wywołanie platformy](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [Przykłady wywołań platformy](../../../framework/interop/platform-invoke-examples.md)
 - [Wykorzystywanie niezarządzanych funkcji DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md)
-- [Defining a Method with Reflection Emit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
+- [Definiowanie metody przy użyciu emisji odbicia](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
 - [Przewodnik: wywoływanie interfejsów API systemu Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
 - [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)

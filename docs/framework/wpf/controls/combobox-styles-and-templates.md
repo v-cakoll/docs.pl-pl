@@ -22,7 +22,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 ## <a name="combobox-parts"></a>Elementy ComboBox  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.ComboBox>.  
   
-|Części|Typ|Opis|  
+|Części|Type|Opis|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Zawiera tekst <xref:System.Windows.Controls.ComboBox>.|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Lista rozwijana zawierająca elementy w polu kombi.|  

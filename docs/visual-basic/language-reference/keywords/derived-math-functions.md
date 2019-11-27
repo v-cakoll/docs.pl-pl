@@ -29,30 +29,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349853"
 ---
 # <a name="derived-math-functions-visual-basic"></a>Pochodne funkcje matematyczne (Visual Basic)
-The following table shows non-intrinsic math functions that can be derived from the intrinsic math functions of the <xref:System.Math?displayProperty=nameWithType> object. You can access the intrinsic math functions by adding `Imports System.Math` to your file or project.  
+W poniższej tabeli przedstawiono funkcje matematyczne inne niż wewnętrzne, które mogą pochodzić z wewnętrznych funkcji matematycznych obiektu <xref:System.Math?displayProperty=nameWithType>. Możesz uzyskać dostęp do wewnętrznych funkcji matematycznych przez dodanie `Imports System.Math` do pliku lub projektu.  
   
-|Funkcja|Derived equivalents|  
+|Funkcja|Pochodne równoważne|  
 |--------------|-------------------------|  
-|Secant (Sec(x))|1 / Cos(x)|  
-|Cosecant (Csc(x))|1 / Sin(x)|  
-|Cotangent (Ctan(x))|1 / Tan(x)|  
-|Inverse sine (Asin(x))|Atan(x / Sqrt(-x * x + 1))|  
-|Inverse cosine (Acos(x))|Atan(-x / Sqrt(-x * x + 1)) + 2 \* Atan(1)|  
-|Inverse secant (Asec(x))|2 * Atan(1) – Atan(Sign(x) / Sqrt(x \* x – 1))|  
-|Inverse cosecant (Acsc(x))|Atan(Sign(x) / Sqrt(x * x – 1))|  
-|Inverse cotangent (Acot(x))|2 * Atan(1) - Atan(x)|  
-|Hyperbolic sine (Sinh(x))|(Exp(x) – Exp(-x)) / 2|  
-|Hyperbolic cosine (Cosh(x))|(Exp(x) + Exp(-x)) / 2|  
-|Hyperbolic tangent (Tanh(x))|(Exp(x) – Exp(-x)) / (Exp(x) + Exp(-x))|  
-|Hyperbolic secant (Sech(x))|2 / (Exp(x) + Exp(-x))|  
-|Hyperbolic cosecant (Csch(x))|2 / (Exp(x) – Exp(-x))|  
-|Hyperbolic cotangent (Coth(x))|(Exp(x) + Exp(-x)) / (Exp(x) – Exp(-x))|  
-|Inverse hyperbolic sine (Asinh(x))|Log(x + Sqrt(x * x + 1))|  
-|Inverse hyperbolic cosine (Acosh(x))|Log(x + Sqrt(x * x – 1))|  
-|Inverse hyperbolic tangent (Atanh(x))|Log((1 + x) / (1 – x)) / 2|  
-|Inverse hyperbolic secant (AsecH(x))|Log((Sqrt(-x * x + 1) + 1) / x)|  
-|Inverse hyperbolic cosecant (Acsch(x))|Log((Sign(x) * Sqrt(x \* x + 1) + 1) / x)|  
-|Inverse hyperbolic cotangent (Acoth(x))|Log((x + 1) / (x – 1)) / 2|  
+|Secans (sek. x))|1/cos (x)|  
+|Cosecans (CSC (x))|1 / Sin(x)|  
+|Cotangens (CTAN (x))|1 / Tan(x)|  
+|Arcus sinus (ASIN (x))|Atan(x / Sqrt(-x * x + 1))|  
+|Arcus cosinus (Acos (x))|ATAN (-x/sqrt (-x * x + 1)) + 2 \* ATAN (1)|  
+|Odwrotny secans (ASEC (x))|2 * ATAN (1) — ATAN (Sign (x)/SQRT (x \* x – 1))|  
+|Odwrotny cosecans (ACSC (x))|ATAN (Sign (x)/SQRT (x * x – 1))|  
+|Cotangens odwrotny (ACOT (x))|2 * ATAN (1) — ATAN (x)|  
+|Sinus hiperboliczny (sinh (x))|(EXP (x) – EXP (-x))/2|  
+|Cosinus hiperboliczny (COSH — (x))|(EXP (x) + EXP (-x))/2|  
+|Tangens hiperboliczny (tanh (x))|(EXP (x) – EXP (-x))/(EXP (x) + EXP (-x))|  
+|Secans hiperboliczny (sech (x))|2/(EXP (x) + EXP (-x))|  
+|Cosecans hiperboliczny (csch (x))|2/(EXP (x) — EXP (-x))|  
+|Cotangens hiperboliczny (coth (x))|(EXP (x) + EXP (-x))/(EXP (x) – EXP (-x))|  
+|Arcus sinus hiperboliczny (ASINH — (x))|Dziennik (x + sqrt (x * x + 1))|  
+|Arcus cosinus hiperboliczny (ACOSH — (x))|Dziennik (x + sqrt (x * x – 1))|  
+|Odwrotny tangens hiperboliczny (ATANH — (x))|Dziennik ((1 + x)/(1 – x))/2|  
+|Odwrotny secans hiperboliczny (AsecH (x))|Dziennik ((sqrt (-x * x + 1) + 1)/x)|  
+|Odwrotny cosecans hiperboliczny (acsch (x))|Dziennik ((Sign (x) * SQRT (x \* x + 1) + 1)/x)|  
+|Odwrotny cotangens hiperboliczny (ACOTH (x))|Dziennik ((x + 1)/(x – 1))/2|  
   
 ## <a name="see-also"></a>Zobacz także
 

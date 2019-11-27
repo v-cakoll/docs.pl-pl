@@ -19,39 +19,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340245"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Porady: wywoływanie procedury operatora (Visual Basic)
-You call an operator procedure by using the operator symbol in an expression. In the case of a conversion operator, you call the [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) to convert a value from one data type to another.  
+Wywoływanie procedury operatora przy użyciu symbolu operatora w wyrażeniu. W przypadku operatora konwersji należy wywołać [funkcję CType](../../../../visual-basic/language-reference/functions/ctype-function.md) , aby przekonwertować wartość z jednego typu danych na inny.  
   
- You do not call operator procedures explicitly. You just use the operator, or the `CType` function, in an assignment statement or an expression, the same way you ordinarily use an operator. Visual Basic makes the call to the operator procedure.  
+ Procedury operatorów nie są jawnie wywoływane. Wystarczy użyć operatora lub funkcji `CType` w instrukcji przypisania lub wyrażeniu, tak samo jak zwykle korzystasz z operatora. Visual Basic wykonuje wywołanie procedury operatora.  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ Definiowanie operatora w klasie lub strukturze jest również nazywane *przeciążeniem* operatora.  
   
-### <a name="to-call-an-operator-procedure"></a>To call an operator procedure  
+### <a name="to-call-an-operator-procedure"></a>Aby wywołać procedurę operatora  
   
-1. Use the operator symbol in an expression in the ordinary way.  
+1. Użyj symbolu operatora w wyrażeniu w zwykły sposób.  
   
-2. Be sure the data types of the operands are appropriate for the operator, and in the correct order.  
+2. Upewnij się, że typy danych argumentów operacji są odpowiednie dla operatora i w prawidłowej kolejności.  
   
-3. The operator contributes to the value of the expression as expected.  
+3. Operator uczestniczy w wartości wyrażenia zgodnie z oczekiwaniami.  
   
-### <a name="to-call-a-conversion-operator-procedure"></a>To call a conversion operator procedure  
+### <a name="to-call-a-conversion-operator-procedure"></a>Aby wywołać procedurę operatora konwersji  
   
-1. Use `CType` inside an expression.  
+1. Użyj `CType` wewnątrz wyrażenia.  
   
-2. Be sure the data types of the operands are appropriate for the conversion, and in the correct order.  
+2. Upewnij się, że typy danych argumentów operacji są odpowiednie dla konwersji, i w odpowiedniej kolejności.  
   
-3. `CType` calls the conversion operator procedure and returns the converted value.  
+3. `CType` wywołuje procedurę operatora konwersji i zwraca przekonwertowaną wartość.  
   
 ## <a name="example"></a>Przykład  
- The following example creates two <xref:System.TimeSpan> structures, adds them together, and stores the result in a third <xref:System.TimeSpan> structure. The <xref:System.TimeSpan> structure defines operator procedures to overload several standard operators.  
+ Poniższy przykład tworzy dwie <xref:System.TimeSpan> struktur, dodaje je razem i zapisuje wynik w trzeciej strukturze <xref:System.TimeSpan>. Struktura <xref:System.TimeSpan> definiuje procedury operatora, aby przeciążać kilka standardowych operatorów.  
   
  [!code-vb[VbVbcnProcedures#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#29)]  
   
- Because <xref:System.TimeSpan> overloads the standard `+` operator, the previous example calls an operator procedure when it calculates the value of `combinedSpan`.  
+ Ponieważ <xref:System.TimeSpan> przeciążać standardowego operatora `+`, poprzedni przykład wywołuje procedurę operatora podczas obliczania wartości `combinedSpan`.  
   
- For an example of calling a conversation operator procedure, see [How to: Use a Class that Defines Operators](./how-to-use-a-class-that-defines-operators.md).  
+ Aby zapoznać się z przykładem wywoływania procedury operatora konwersacji, zobacz [How to: use a Class, który definiuje operatory](./how-to-use-a-class-that-defines-operators.md).  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Be sure the class or structure you are using defines the operator you want to use.  
+ Upewnij się, że używana Klasa lub struktura definiuje operatora, którego chcesz użyć.  
   
 ## <a name="see-also"></a>Zobacz także
 

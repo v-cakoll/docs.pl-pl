@@ -14,42 +14,42 @@ ms.locfileid: "74346902"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Porady: przenoszenie danych do zmiennej i z niej (Visual Basic)
 
-You store a value in a variable by putting the variable name on the left side of an assignment statement.
+Wartość jest przechowywana w zmiennej przez umieszczenie nazwy zmiennej po lewej stronie instrukcji przypisania.
 
-## <a name="putting-data-in-a-variable"></a>Putting Data in a Variable
+## <a name="putting-data-in-a-variable"></a>Umieszczanie danych w zmiennej
 
-#### <a name="to-store-a-value-in-a-variable"></a>To store a value in a variable
+#### <a name="to-store-a-value-in-a-variable"></a>Aby zapisać wartość w zmiennej
 
-- Use the variable name on the left side of an assignment statement.
+- Użyj nazwy zmiennej po lewej stronie instrukcji przypisania.
 
-    The following example sets the value of the variable `alpha`.
+    Poniższy przykład ustawia wartość zmiennej `alpha`.
 
     ```vb
     alpha = (beta * 6.27) / (gamma + 2.1)
     ```
 
-    The value generated on the right side of the assignment statement is stored in the variable.
+    Wartość wygenerowana po prawej stronie instrukcji przypisania jest przechowywana w zmiennej.
 
-## <a name="getting-data-from-a-variable"></a>Getting Data from a Variable
+## <a name="getting-data-from-a-variable"></a>Pobieranie danych ze zmiennej
 
-You retrieve a variable's value by including the variable name in an expression.
+Wartość zmiennej jest pobierana przez dołączenie nazwy zmiennej w wyrażeniu.
 
-#### <a name="to-retrieve-a-value-from-a-variable"></a>To retrieve a value from a variable
+#### <a name="to-retrieve-a-value-from-a-variable"></a>Aby pobrać wartość ze zmiennej
 
-- Use the variable name in an expression. You can use a variable anywhere you can use a constant or a literal, except in an expression that defines the value of a constant.
+- Użyj nazwy zmiennej w wyrażeniu. Możesz użyć zmiennej wszędzie tam, gdzie można użyć stałej lub literału, z wyjątkiem wyrażenia, które definiuje wartość stałej.
 
-  \-or-
+  \-lub-
 
-- Use the variable name following the equal (`=`) sign in an assignment statement.
+- Użyj nazwy zmiennej po znaku równości (`=`) w instrukcji przypisania.
 
-  The following example reads the value of the variable `startValue` and then uses the value of the variable `counter` in an expression.
+  Poniższy przykład odczytuje wartość zmiennej `startValue` a następnie używa wartości zmiennej `counter` w wyrażeniu.
 
   ```vb
   counter = startValue
   cellValue = (counter + 5) ^ 2
   ```
 
-  The value of the variable participates in the expression just as a constant would, and then it is stored in the variable or property on the left side of the assignment statement.
+  Wartość zmiennej uczestniczy w wyrażeniu tak samo jak stała, a następnie jest przechowywana w zmiennej lub właściwości po lewej stronie instrukcji przypisania.
 
 ## <a name="see-also"></a>Zobacz także
 

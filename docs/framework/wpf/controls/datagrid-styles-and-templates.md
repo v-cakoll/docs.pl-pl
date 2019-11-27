@@ -22,7 +22,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 ## <a name="datagrid-parts"></a>DataGrid — części  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.DataGrid>.  
   
-|Części|Typ|Opis|  
+|Części|Type|Opis|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|Wiersz zawierający nagłówki kolumn.|  
   
@@ -89,7 +89,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 ## <a name="datagridrowheader-parts"></a>DataGridRowHeader części  
  Poniższa tabela zawiera listę nazwanych elementów dla elementu <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
   
-|Części|Typ|Opis|  
+|Części|Type|Opis|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Element, który jest używany do zmiany rozmiaru nagłówka wiersza od góry.|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Element, który jest używany do zmiany rozmiaru nagłówka wiersza od dołu.|  
@@ -122,7 +122,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 ## <a name="datagridcolumnheaderspresenter-parts"></a>DataGridColumnHeadersPresenter części  
  Poniższa tabela zawiera listę nazwanych elementów dla elementu <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
   
-|Części|Typ|Opis|  
+|Części|Type|Opis|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Symbol zastępczy nagłówków kolumn.|  
   
@@ -138,7 +138,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 ## <a name="datagridcolumnheader-parts"></a>DataGridColumnHeader części  
  Poniższa tabela zawiera listę nazwanych elementów dla elementu <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
   
-|Części|Typ|Opis|  
+|Części|Type|Opis|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Element, który jest używany do zmiany rozmiaru nagłówka kolumny z lewej strony.|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Element, który jest używany do zmiany rozmiaru nagłówka kolumny z prawej strony.|  

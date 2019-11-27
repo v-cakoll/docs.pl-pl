@@ -20,31 +20,31 @@ ms.locfileid: "74348318"
 ---
 # <a name="new-operator-visual-basic"></a>New — Operator (Visual Basic)
 
-Introduces a `New` clause to create a new object instance, specifies a constructor constraint on a type parameter, or identifies a `Sub` procedure as a class constructor.
+Wprowadza klauzulę `New`, aby utworzyć nowe wystąpienie obiektu, określa ograniczenie konstruktora dla parametru typu lub identyfikuje procedurę `Sub` jako konstruktora klasy.
 
 ## <a name="remarks"></a>Uwagi
 
-In a declaration or assignment statement, a `New` clause must specify a defined class from which the instance can be created. This means that the class must expose one or more constructors that the calling code can access.
+W deklaracji lub przypisaniu klauzula `New` musi określać zdefiniowaną klasę, z której można utworzyć wystąpienie. Oznacza to, że klasa musi uwidaczniać jeden lub więcej konstruktorów, do których kod wywołujący może uzyskać dostęp.
 
-You can use a `New` clause in a declaration statement or an assignment statement. When the statement runs, it calls the appropriate constructor of the specified class, passing any arguments you have supplied. The following example demonstrates this by creating instances of a `Customer` class that has two constructors, one that takes no parameters and one that takes a string parameter:
+Można użyć klauzuli `New` w instrukcji deklaracji lub instrukcji przypisania. Po uruchomieniu instrukcji wywołuje odpowiedni Konstruktor określonej klasy, przekazując wszystkie podane argumenty. Poniższy przykład ilustruje to przez utworzenie wystąpień klasy `Customer`, która ma dwa konstruktory, jeden, który nie przyjmuje parametrów i jeden z nich przyjmuje parametr String:
 
 [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]
 
-Since arrays are classes, `New` can create a new array instance, as shown in the following example:
+Ponieważ tablice są klasami, `New` może utworzyć nowe wystąpienie tablicy, jak pokazano w następującym przykładzie:
 
 [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]
 
-The common language runtime (CLR) throws an <xref:System.OutOfMemoryException> error if there is insufficient memory to create the new instance.
+Środowisko uruchomieniowe języka wspólnego (CLR) zgłasza błąd <xref:System.OutOfMemoryException>, jeśli nie ma wystarczającej ilości pamięci do utworzenia nowego wystąpienia.
 
 > [!NOTE]
-> The `New` keyword is also used in type parameter lists to specify that the supplied type must expose an accessible parameterless constructor. For more information about type parameters and constraints, see [Type List](../statements/type-list.md).
+> Słowo kluczowe `New` jest również używane na listach parametrów typu, aby określić, że dostarczony typ musi uwidaczniać dostępny Konstruktor bez parametrów. Aby uzyskać więcej informacji o parametrach typu i ograniczeniach, zobacz [list typów](../statements/type-list.md).
 
-To create a constructor procedure for a class, set the name of a `Sub` procedure to the `New` keyword. For more information, see [Object Lifetime: How Objects Are Created and Destroyed](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+Aby utworzyć procedurę konstruktora dla klasy, należy ustawić nazwę procedury `Sub` na słowo kluczowe `New`. Aby uzyskać więcej informacji, zobacz [okres istnienia obiektu: sposób tworzenia i zniszczenia obiektów](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
-The `New` keyword can be used in these contexts:
+Słowa kluczowego `New` można użyć w tych kontekstach:
 
 - [Dim, instrukcja](../statements/dim-statement.md)
-- [Of](../statements/of-clause.md)
+- [Z](../statements/of-clause.md)
 - [Sub, instrukcja](../statements/sub-statement.md)
 
 ## <a name="see-also"></a>Zobacz także
@@ -52,5 +52,5 @@ The `New` keyword can be used in these contexts:
 - <xref:System.OutOfMemoryException>
 - [Słowa kluczowe](../keywords/index.md)
 - [Lista typów](../statements/type-list.md)
-- [Generic Types in Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
+- [Typy ogólne w Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
 - [Okres istnienia obiektów: w jaki sposób obiekty są tworzone i niszczone](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

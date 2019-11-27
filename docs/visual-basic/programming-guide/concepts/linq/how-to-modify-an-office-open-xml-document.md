@@ -1,5 +1,5 @@
 ---
-title: 'How to: Modify an Office Open XML Document'
+title: 'Instrukcje: modyfikowanie dokumentu Office Open XML'
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
 ms.openlocfilehash: 623376a68ee2f032fb53d51b61c4c5881b0b9e18
@@ -9,15 +9,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336013"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>How to: Modify an Office Open XML Document (Visual Basic)
-This topic presents an example that opens an Office Open XML document, modifies it, and saves it.  
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Instrukcje: modyfikowanie dokumentu Office Open XML (Visual Basic)
+W tym temacie przedstawiono przykład, który powoduje otwarcie dokumentu Office Open XML, zmodyfikowanie go i zapisanie.  
   
- For more information on Office Open XML, see [Eric White's Blog](http://www.ericwhite.com).  
+ Aby uzyskać więcej informacji na temat pakietu Office Open XML, zobacz [blog Eric biały](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Przykład  
- This example finds the first paragraph element in the document. It retrieves the text from the paragraph, and then deletes all text runs in the paragraph. It creates a new text run that consists of the first paragraph text that has been converted to upper case. It then serializes the changed XML into the Open XML package and closes it.  
+ Ten przykład umożliwia znalezienie pierwszego elementu akapitu w dokumencie. Pobiera tekst z akapitu, a następnie usuwa wszystkie uruchomienia tekstu w akapicie. Tworzy nowe uruchomienie tekstu, które składa się z pierwszego tekstu akapitu, który został przekonwertowany na wielkie litery. Następnie program serializacji zmieniony kod XML do otwartego pakietu XML i zamyka go.  
   
- This example uses classes found in the WindowsBase assembly. It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.  
+ Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -135,9 +135,9 @@ Module Module1
 End Module  
 ```  
   
- If you open `SampleDoc.docx` after running this program, you can see that this program converted the first paragraph in the document to upper case.  
+ Jeśli otworzysz `SampleDoc.docx` po uruchomieniu tego programu, możesz zobaczyć, że ten program przekonwertował pierwszy akapit w dokumencie na wielkie litery.  
   
- When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:  
+ W przypadku uruchomienia z przykładowym otwartym dokumentem XML opisanym w temacie [Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)ten przykład generuje następujące dane wyjściowe:  
   
 ```console  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
@@ -145,4 +145,4 @@ New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

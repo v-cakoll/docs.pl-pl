@@ -9,24 +9,24 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346578"
 ---
-# <a name="querying-xml-trees-visual-basic"></a>Querying XML Trees (Visual Basic)
-This section provides examples of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.  
+# <a name="querying-xml-trees-visual-basic"></a>Wykonywanie zapytania dotyczącego drzew XML (Visual Basic)
+Ta sekcja zawiera przykłady zapytań [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
- For more information about writing [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries, see [Getting Started with LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
+ Aby uzyskać więcej informacji na temat pisania zapytań [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], zobacz [wprowadzenie z LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
   
- After you have instantiated an XML tree, writing queries is the most effective way to extract data from the tree. Also, querying combined with functional construction enables you to generate a new XML document that has a different shape from the original document.  
+ Po utworzeniu wystąpienia drzewa XML, Pisanie zapytań jest najbardziej skutecznym sposobem wyodrębnienia danych z drzewa. Ponadto zapytanie połączone z konstrukcją funkcjonalną umożliwia wygenerowanie nowego dokumentu XML, który ma inny kształt od oryginalnego dokumentu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)|Provides common examples of querying XML trees.|  
-|[Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)|Provides common examples of projecting from and transforming XML trees.|  
-|[Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)|Provides query techniques that are useful in more advanced scenarios.|  
-|[LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)|Presents a number of XPath expressions and their [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] equivalents.|  
-|[Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)|Presents a small tutorial on writing queries in the style of functional programming.|  
+|[Zapytania podstawowe (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)|Zawiera typowe przykłady tworzenia zapytań dotyczących drzew XML.|  
+|[Projekcje i przekształcenia (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)|Zawiera typowe przykłady projekcji i transformacji drzew XML.|  
+|[Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)|Zapewnia techniki zapytań, które są przydatne w bardziej zaawansowanych scenariuszach.|  
+|[LINQ to XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)|Przedstawia liczbę wyrażeń XPath i ich [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] odpowiedniki.|  
+|[Czystej funkcjonalne przekształcenia XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)|Prezentuje niewielki samouczek dotyczący pisania zapytań w stylu programowania funkcjonalnego.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
-- [Getting Started with LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Przewodnik programowania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Wprowadzenie ze składnikami LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

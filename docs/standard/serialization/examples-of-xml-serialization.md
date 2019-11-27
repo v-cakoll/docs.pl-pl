@@ -22,11 +22,11 @@ ms.locfileid: "74349773"
 ---
 # <a name="examples-of-xml-serialization"></a>Przykłady serializacji XML
 
-XML serialization can take more than one form, from simple to complex. For example, you can serialize a class that simply consists of public fields and properties, as shown in [Introducing XML Serialization](../../../docs/standard/serialization/introducing-xml-serialization.md). The following code examples address various advanced scenarios, including how to use XML serialization to generate an XML stream that conforms to a specific XML Schema (XSD) document.
+Serializacja XML może przyjmować więcej niż jeden formularz, od prostego do złożonej. Na przykład można serializować klasy, która po prostu zawiera pola publiczne i właściwości, jak pokazano na [wprowadzeniu serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md). Poniższy przykład kodu dotyczy różnych zaawansowanych scenariuszy, w tym sposobu używania serializacji XML do generowania strumienia XML, który jest zgodny z określonym dokumentem schematu XML (XSD).
 
 ## <a name="serializing-a-dataset"></a>Serializacji zestawu danych
 
-Besides serializing an instance of a public class, an instance of a <xref:System.Data.DataSet> can also be serialized, as shown in the following code example.
+Oprócz serializowania wystąpienia klasy publicznej wystąpienie <xref:System.Data.DataSet> może być również serializowane, jak pokazano w poniższym przykładzie kodu.
 
 ```vb
 Private Sub SerializeDataSet(filename As String)
@@ -74,7 +74,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>Serializacji elementu XmlElement i XmlNode
 
-You can also serialize instances of an <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.
+Można również serializować wystąpienia klasy <xref:System.Xml.XmlElement> lub <xref:System.Xml.XmlNode>, jak pokazano w poniższym przykładzie kodu.
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -121,9 +121,9 @@ private void SerializeNode(string filename){
 }
 ```
 
-## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a>Serializing a Class that Contains a Field Returning a Complex Object
+## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a>Serializacja klasy, która zawiera pole zwracające obiekt złożony
 
-If a property or field returns a complex object (such as an array or a class instance), the <xref:System.Xml.Serialization.XmlSerializer> converts it to an element nested within the main XML document. For example, the first class in the following code example returns an instance of the second class.
+Jeśli właściwość lub pole zwraca obiekt złożony (na przykład tablicę lub wystąpienie klasy), <xref:System.Xml.Serialization.XmlSerializer> konwertuje go na element zagnieżdżony w głównym dokumencie XML. Na przykład pierwsza klasa w poniższym przykładzie kodu zwraca wystąpienie drugiej klasy.
 
 ```vb
 Public Class PurchaseOrder
@@ -158,7 +158,7 @@ Zserializowany danych wyjściowych XML może wyglądać w następujący sposób.
 
 ## <a name="serializing-an-array-of-objects"></a>Tablica obiektów serializacji
 
-You can also serialize a field that returns an array of objects, as shown in the following code example.
+Można również serializować pola, które zwraca tablicę obiektów, jak pokazano w poniższym przykładzie kodu.
 
 ```vb
 Public Class PurchaseOrder
@@ -201,9 +201,9 @@ Wystąpienie klasy Zserializowany może wyglądać następujące polecenie, jeś
 </PurchaseOrder>
 ```
 
-## <a name="serializing-a-class-that-implements-the-icollection-interface"></a>Serializing a Class that Implements the ICollection Interface
+## <a name="serializing-a-class-that-implements-the-icollection-interface"></a>Serializowanie klasy implementującej interfejs ICollection
 
-You can create your own collection classes by implementing the <xref:System.Collections.ICollection> interface, and use the <xref:System.Xml.Serialization.XmlSerializer> to serialize instances of these classes. Note that when a class implements the <xref:System.Collections.ICollection> interface, only the collection contained by the class is serialized. Wszystkie właściwości publiczne lub pola dodane do tej klasy nie można serializować. The class must include an **Add** method and an **Item** property (C# indexer) to be serialized.
+Możesz utworzyć własne klasy kolekcji, implementując interfejs <xref:System.Collections.ICollection> i używając <xref:System.Xml.Serialization.XmlSerializer> do serializacji wystąpień tych klas. Należy pamiętać, że gdy klasa implementuje interfejs <xref:System.Collections.ICollection>, tylko kolekcja znajdująca się w klasie jest serializowana. Wszystkie właściwości publiczne lub pola dodane do tej klasy nie można serializować. Klasa musi zawierać metodę **Add** i Właściwość **Item** (C# indeksator) do serializacji.
 
 ```vb
 Imports System.Collections
@@ -359,17 +359,17 @@ public class Employee {
 }
 ```
 
-## <a name="purchase-order-example"></a>Purchase Order Example
+## <a name="purchase-order-example"></a>Przykład zamówienia zakupu
 
-You can cut and paste the following example code into a text file renamed with a .cs or .vb file name extension. Kompilowanie PLiku za pomocą kompilatora C# lub Visual Basic. Następnie uruchom go przy użyciu nazwy PLiku wykonywalnego.
+Następujący przykładowy kod można wyciąć i wkleić do pliku tekstowego z rozszerzeniem nazwy pliku. cs lub. vb. Kompilowanie PLiku za pomocą kompilatora C# lub Visual Basic. Następnie uruchom go przy użyciu nazwy PLiku wykonywalnego.
 
-This example uses a simple scenario to demonstrate how an instance of an object is created and serialized into a file stream using the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method. Strumień XML jest zapisywana do PLiku, a następnie odczytywania i odtworzone na kopię oryginalnego obiektu przy użyciu tego samego PLiku <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metody.
+W tym przykładzie użyto prostego scenariusza, aby zademonstrować, jak wystąpienie obiektu jest tworzone i serializowane do strumienia plików przy użyciu metody <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A>. Strumień XML jest zapisywana do PLiku, a następnie odczytywania i odtworzone na kopię oryginalnego obiektu przy użyciu tego samego PLiku <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metody.
 
-In this example, a class named `PurchaseOrder` is serialized and then deserialized. Klasa sekundę o nazwie `Address` jest również uwzględniony, ponieważ publiczne pole o nazwie `ShipTo` musi być ustawiona wartość `Address`. Podobnie `OrderedItem` klasy jest uwzględniony, ponieważ tablica `OrderedItem` obiektów musi być ustawiona wartość `OrderedItems` pola. Na koniec klasę o nazwie `Test` zawiera kod, który serializuje i deserializuje klasy.
+W tym przykładzie Klasa o nazwie `PurchaseOrder` jest serializowana, a następnie deserializowana. Klasa sekundę o nazwie `Address` jest również uwzględniony, ponieważ publiczne pole o nazwie `ShipTo` musi być ustawiona wartość `Address`. Podobnie `OrderedItem` klasy jest uwzględniony, ponieważ tablica `OrderedItem` obiektów musi być ustawiona wartość `OrderedItems` pola. Na koniec klasę o nazwie `Test` zawiera kod, który serializuje i deserializuje klasy.
 
-`CreatePO` Metoda tworzy `PurchaseOrder`, `Address`, i `OrderedItem` obiektów klasy i ustawia wartości pól publiczne. Metoda również tworzy wystąpienie klasy <xref:System.Xml.Serialization.XmlSerializer> klasa, która służy do serializacji i deserializacji `PurchaseOrder`. Należy zauważyć, że kod przekazuje typ klasy, który będzie serializowany do konstruktora. The code also creates a `FileStream` that is used to write the XML stream to an XML document.
+`CreatePO` Metoda tworzy `PurchaseOrder`, `Address`, i `OrderedItem` obiektów klasy i ustawia wartości pól publiczne. Metoda również tworzy wystąpienie klasy <xref:System.Xml.Serialization.XmlSerializer> klasa, która służy do serializacji i deserializacji `PurchaseOrder`. Należy zauważyć, że kod przekazuje typ klasy, który będzie serializowany do konstruktora. Kod tworzy również `FileStream`, który jest używany do zapisywania strumienia XML w dokumencie XML.
 
-The `ReadPo` method is a little simpler. Po prostu tworzy obiekty do deserializacji i odczytuje się ich wartości. As with the `CreatePo` method, you must first construct an <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor. Ponadto <xref:System.IO.FileStream> jest wymagany do odczytu dokumentu XML. Do deserializacji obiekty, należy wywołać <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metody z <xref:System.IO.FileStream> jako argumentu. Zdeserializowany obiekt musi być rzutowany zmienną obiektu typu `PurchaseOrder`. Kod następnie odczytuje wartości zdeserializowany `PurchaseOrder`. Należy zauważyć, że można również przeczytać PLik PO.xml, który jest tworzony wyświetlić rzeczywiste XML danych wyjściowych.
+Metoda `ReadPo` jest nieco prostsze. Po prostu tworzy obiekty do deserializacji i odczytuje się ich wartości. Podobnie jak w przypadku metody `CreatePo` należy najpierw skonstruować <xref:System.Xml.Serialization.XmlSerializer>, przekazując typ klasy do deserializacji do konstruktora. Ponadto <xref:System.IO.FileStream> jest wymagany do odczytu dokumentu XML. Do deserializacji obiekty, należy wywołać <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metody z <xref:System.IO.FileStream> jako argumentu. Zdeserializowany obiekt musi być rzutowany zmienną obiektu typu `PurchaseOrder`. Kod następnie odczytuje wartości zdeserializowany `PurchaseOrder`. Należy zauważyć, że można również przeczytać PLik PO.xml, który jest tworzony wyświetlić rzeczywiste XML danych wyjściowych.
 
 ```vb
 Imports System.IO
@@ -772,6 +772,6 @@ Dane wyjściowe XML może wyglądać w następujący sposób.
 - [Wprowadzenie do serializacji XML](introducing-xml-serialization.md)
 - [Kontrolowanie serializacji XML przy użyciu atrybutów](controlling-xml-serialization-using-attributes.md)
 - [Atrybuty kontrolujące serializację XML](attributes-that-control-xml-serialization.md)
-- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
+- [Klasa XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
 - [Instrukcje: Serializacja obiektu](how-to-serialize-an-object.md)
 - [Instrukcje: Deserializacja obiektu](how-to-deserialize-an-object.md)

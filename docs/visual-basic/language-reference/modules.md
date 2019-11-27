@@ -13,22 +13,22 @@ ms.locfileid: "74344185"
 ---
 # <a name="modules-visual-basic"></a>Moduły (Visual Basic)
 
-Visual Basic provides several modules that enable you to simplify common tasks in your code, including manipulating strings, performing mathematical calculations, getting system information, performing file and directory operations, and so on. The following table lists the modules provided by Visual Basic.  
+Visual Basic udostępnia kilka modułów, które umożliwiają uproszczenie typowych zadań w kodzie, w tym manipulowanie ciągami, wykonywanie obliczeń matematycznych, uzyskiwanie informacji o systemie, wykonywanie operacji na plikach i katalogach itd. Poniższa tabela zawiera listę modułów dostarczonych przez Visual Basic.  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.Constants>|Contains miscellaneous constants. These constants can be used anywhere in your code.|  
-|<xref:Microsoft.VisualBasic.ControlChars>|Contains constant control characters for printing and displaying text.|  
-|<xref:Microsoft.VisualBasic.Conversion>|Contains members that convert decimal numbers to other bases, numbers to strings, strings to numbers, and one data type to another.|  
-|<xref:Microsoft.VisualBasic.DateAndTime>|Contains members that get the current date or time, perform date calculations, return a date or time, set the date or time, or time the duration of a process.|  
-|<xref:Microsoft.VisualBasic.ErrObject>|Contains information about run-time errors and methods to raise or clear an error.|  
-|<xref:Microsoft.VisualBasic.FileSystem>|Contains members that perform file, directory or folder, and system operations.|  
-|<xref:Microsoft.VisualBasic.Financial>|Contains procedures that are used to perform financial calculations.|  
-|<xref:Microsoft.VisualBasic.Globals>|Contains information about the current scripting engine version.|  
-|<xref:Microsoft.VisualBasic.Information>|Contains the members that return, test for, or verify information such as array size, type names, and so on.|  
-|<xref:Microsoft.VisualBasic.Interaction>|Contains members interact with objects, applications, and systems.|  
-|<xref:Microsoft.VisualBasic.Strings>|Contains members that perform string operations such as reformatting strings, searching a string, getting the length of a string, and so on.|  
-|<xref:Microsoft.VisualBasic.VBMath>|Contains members perform mathematical operations.|  
+|<xref:Microsoft.VisualBasic.Constants>|Zawiera różne stałe. Te stałe mogą być używane w dowolnym miejscu w kodzie.|  
+|<xref:Microsoft.VisualBasic.ControlChars>|Zawiera znaki kontrolne stałej do drukowania i wyświetlania tekstu.|  
+|<xref:Microsoft.VisualBasic.Conversion>|Zawiera elementy członkowskie, które konwertują liczby dziesiętne na inne bazy, liczby do ciągów, ciągi do liczb i jeden typ danych na inny.|  
+|<xref:Microsoft.VisualBasic.DateAndTime>|Zawiera elementy członkowskie, które pobierają bieżącą datę lub godzinę, wykonują obliczenia dat, zwracają datę lub godzinę, ustawiają datę lub godzinę lub czas trwania procesu.|  
+|<xref:Microsoft.VisualBasic.ErrObject>|Zawiera informacje o błędach i metodach czasu wykonywania w celu podniesienia lub wyczyszczenia błędu.|  
+|<xref:Microsoft.VisualBasic.FileSystem>|Zawiera elementy członkowskie, które wykonują operacje na plikach, katalogach lub folderach i system.|  
+|<xref:Microsoft.VisualBasic.Financial>|Zawiera procedury, które są używane do wykonywania obliczeń finansowych.|  
+|<xref:Microsoft.VisualBasic.Globals>|Zawiera informacje o bieżącej wersji aparatu skryptów.|  
+|<xref:Microsoft.VisualBasic.Information>|Zawiera elementy członkowskie, które zwracają, testują lub weryfikują informacje, takie jak rozmiar tablicy, nazwy typów i tak dalej.|  
+|<xref:Microsoft.VisualBasic.Interaction>|Zawiera elementy członkowskie współpracują z obiektami, aplikacjami i systemami.|  
+|<xref:Microsoft.VisualBasic.Strings>|Zawiera elementy członkowskie, które wykonują operacje na ciągach, takie jak ponowne formatowanie ciągów, wyszukiwanie ciągu, pobieranie długości ciągu i tak dalej.|  
+|<xref:Microsoft.VisualBasic.VBMath>|Zawiera składowe wykonują operacje matematyczne.|  
   
 ## <a name="see-also"></a>Zobacz także
 

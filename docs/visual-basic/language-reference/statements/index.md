@@ -12,7 +12,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353573"
 ---
 # <a name="statements-visual-basic"></a>Instrukcje (Visual Basic)
-The topics in this section contain tables of the Visual Basic declaration and executable statements, and of important lists that apply to many statements.  
+Tematy w tej sekcji zawierają tabele deklaracji i instrukcji wykonywalnych języka Visual Basic oraz ważne listy, które dotyczą wielu instrukcji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje A-E](../../../visual-basic/language-reference/statements/a-e-statements.md)  

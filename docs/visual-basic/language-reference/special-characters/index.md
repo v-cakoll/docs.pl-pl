@@ -8,12 +8,12 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349608"
 ---
-# <a name="special-characters-visual-basic-reference"></a>Special Characters (Visual Basic Reference)
+# <a name="special-characters-visual-basic-reference"></a>Znaki specjalne (odwołanie Visual Basic)
 
-Special characters are predefined, contextual characters that modifies the program element to which they are prepended. Visual Basic supports the following special character:
+Znaki specjalne są wstępnie zdefiniowane, kontekstowe znaki, które modyfikują element programu, do którego są dołączane. Visual Basic obsługuje następujący znak specjalny:
 
-- [$](interpolated.md), the interpolated string character.
+- [$](interpolated.md), interpolowany znak ciągu.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Visual Basic Reference](../../../visual-basic/language-reference/index.md)
+- [Informacje Visual Basic](../../../visual-basic/language-reference/index.md)

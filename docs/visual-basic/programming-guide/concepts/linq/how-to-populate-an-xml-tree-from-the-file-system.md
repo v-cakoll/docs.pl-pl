@@ -1,5 +1,5 @@
 ---
-title: 'How to: Populate an XML Tree from the File System'
+title: 'Instrukcje: wypełnianie drzewa XML z systemu plików'
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
 ms.openlocfilehash: 5a4c7eaea91db54afcd91d85745dfec27cbabb8c
@@ -9,11 +9,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344476"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>How to: Populate an XML Tree from the File System (Visual Basic)
-A common and useful application of XML trees is as a hierarchical name/value data store. You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it. In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important. Instead, you are using the XML tree as a small, in memory, single user hierarchical database.  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Instrukcje: wypełnianie drzewa XML z systemu plików (Visual Basic)
+Typową i użyteczną aplikacją drzew XML jest hierarchiczny magazyn danych nazw/wartości. Można wypełnić drzewo XML danymi hierarchicznymi, a następnie wykonać do nich zapytania, przekształcić je i w razie potrzeby serializować. W tym scenariuszu użycia wiele semantyki specyficznych dla XML, takich jak przestrzeń nazw i zachowanie białych znaków, nie są ważne. Zamiast tego używasz drzewa XML jako małej, w pamięci, hierarchicznej bazy danych pojedynczego użytkownika.  
   
 ## <a name="example"></a>Przykład  
- The following example populates an XML tree from the local file system using recursion. It then queries the tree, calculating the total of the sizes of all files in the tree.  
+ Poniższy przykład wypełnia drzewo XML z lokalnego systemu plików przy użyciu rekursji. Następnie wykonuje zapytanie do drzewa, obliczając łączny rozmiar wszystkich plików w drzewie.  
   
 ```vb  
 Module Module1  
@@ -44,7 +44,7 @@ Module Module1
 End Module  
 ```  
   
- This example produces output similar to the following:  
+ Ten przykład generuje dane wyjściowe podobne do następujących:  
   
 ```xml  
 <Dir Name="Tmp">  
@@ -116,4 +116,4 @@ Total File Size:59089
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

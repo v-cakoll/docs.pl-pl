@@ -25,20 +25,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345872"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements — Klauzula (Visual Basic)
-Indicates that a class or structure member is providing the implementation for a member defined in an interface.  
+Wskazuje, że składowa klasy lub struktury dostarcza implementację dla składowej zdefiniowanej w interfejsie.  
   
 ## <a name="remarks"></a>Uwagi  
-The `Implements` keyword is not the same as the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md). You use the `Implements` statement to specify that a class or structure implements one or more interfaces, and then for each member you use the `Implements` keyword to specify which interface and which member it implements.
+Słowo kluczowe `Implements` nie jest takie samo jak [instrukcja Implements](../../../visual-basic/language-reference/statements/implements-statement.md). Użyj instrukcji `Implements`, aby określić, że Klasa lub struktura implementuje jeden lub więcej interfejsów, a następnie dla każdego elementu członkowskiego Użyj słowa kluczowego `Implements`, aby określić, który interfejs i który element członkowski implementuje.
 
-If a class or structure implements an interface, it must include the `Implements` statement immediately after the [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) or [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md), and it must implement all the members defined by the interface.
+Jeśli klasa lub struktura implementuje interfejs, musi on zawierać instrukcję `Implements` bezpośrednio po [instrukcji Class](../../../visual-basic/language-reference/statements/class-statement.md) lub [instrukcji Structure](../../../visual-basic/language-reference/statements/structure-statement.md)i musi implementować wszystkie elementy członkowskie zdefiniowane przez interfejs.
 
-## <a name="reimplementation"></a>Reimplementation  
-In a derived class, you can reimplement an interface member that the base class has already implemented. This is different from overriding the base class member in the following respects:
+## <a name="reimplementation"></a>Reimplementacja  
+W klasie pochodnej można wykonać ponowną implementację elementu członkowskiego interfejsu, który został już zaimplementowany przez klasę bazową. Różni się to od przesłaniania składowej klasy bazowej w następujących aspektach:
 
-- The base class member does not need to be [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) to be reimplemented.
-- You can reimplement the member with a different name.
+- Składowa klasy bazowej nie musi być zaimplementowana [, aby](../../../visual-basic/language-reference/modifiers/overridable.md) można ją było ponownie zaimplementować.
+- Można wykonać ponowną implementację elementu członkowskiego z inną nazwą.
 
-The `Implements` keyword can be used in the following contexts:
+Słowo kluczowe `Implements` może być używane w następujących kontekstach:
 
 - [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)

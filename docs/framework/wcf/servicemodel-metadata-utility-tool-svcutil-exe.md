@@ -62,7 +62,7 @@ W poniższej tabeli przedstawiono niektóre często używane opcje tego narzędz
 |Pliki/katalog: > Katalog\<|Katalog, w którym mają zostać utworzone pliki.<br /><br /> Domyślnie: bieżący katalog.<br /><br /> Krótka forma: `/d`|
 |/help|Wyświetla składnię polecenia i opcje narzędzia.<br /><br /> Krótka forma: `/?`|
 |/noLogo|Pomijaj prawa autorskie i transparent.|
-|/svcutilConfig:\<configFile>|Określa niestandardowy plik konfiguracji, który będzie używany zamiast pliku App. config. Ta wartość może służyć do rejestrowania rozszerzeń system. serviceModel bez modyfikowania pliku konfiguracji narzędzia.|
+|/svcutilConfig:\<configFile >|Określa niestandardowy plik konfiguracji, który będzie używany zamiast pliku App. config. Ta wartość może służyć do rejestrowania rozszerzeń system. serviceModel bez modyfikowania pliku konfiguracji narzędzia.|
 |/target:\<typ danych wyjściowych >|Określa dane wyjściowe, które mają zostać wygenerowane przez narzędzie.<br /><br /> Prawidłowe wartości to kod, Metadata lub XmlSerializer.<br /><br /> Krótka forma: `/t`|
 
 ### <a name="code-generation"></a>Generowanie kodu
@@ -87,8 +87,8 @@ W przypadku usługi z punktem końcowym BasicHttpContextBinding *Svcutil. exe* g
 |Opcja|Opis|
 |------------|-----------------|
 |/async|Generuje sygnatury metod synchronicznych i asynchronicznych.<br /><br /> Domyślnie: Generuj tylko sygnatury metody synchronicznej.<br /><br /> Krótka forma: `/a`|
-|/collectionType:\<type>|Określa typ kolekcji listy dla klienta WCF.<br/><br /> Wartość domyślna: typ kolekcji to system. Array. <br /><br /> Krótka forma: `/ct`|
-|/config:\<configFile>|Określa nazwę pliku dla wygenerowanego pliku konfiguracji.<br /><br /> Domyślnie: output. config|
+|/collectionType: > typ\<|Określa typ kolekcji listy dla klienta WCF.<br/><br /> Wartość domyślna: typ kolekcji to system. Array. <br /><br /> Krótka forma: `/ct`|
+|/config:\<configFile >|Określa nazwę pliku dla wygenerowanego pliku konfiguracji.<br /><br /> Domyślnie: output. config|
 |/dataContractOnly|Generuje kod tylko dla typów kontraktu danych. Typy kontraktów usług nie są generowane.<br /><br /> Należy określić tylko lokalne pliki metadanych dla tej opcji.<br /><br /> Krótka forma: `/dconly`|
 |/enableDataBinding|Implementuje interfejs <xref:System.ComponentModel.INotifyPropertyChanged> we wszystkich typach kontraktu danych, aby włączyć powiązanie danych.<br /><br /> Krótka forma: `/edb`|
 |/excludeType: > typ\<|Określa w pełni kwalifikowaną lub kwalifikowaną dla zestawu nazwę typu, który ma zostać wykluczony z przywoływanych typów kontraktu.<br /><br /> W przypadku korzystania z tego przełącznika razem z `/r` z oddzielnych bibliotek DLL jest przywoływana pełna nazwa klasy XSD.<br /><br /> Krótka forma: `/et`|
@@ -125,7 +125,7 @@ Svcutil. exe może eksportować metadane dla usług, kontraktów i typów danych
 
 |Opcja|Opis|
 |------------|-----------------|
-|/serviceName:\<serviceConfigName>|Określa nazwę konfiguracji usługi do wyeksportowania. Jeśli ta opcja jest używana, zestaw wykonywalny ze skojarzonym plikiem konfiguracji musi zostać przesłany jako dane wejściowe. Svcutil. exe przeszukuje wszystkie skojarzone pliki konfiguracji dla konfiguracji usługi. Jeśli pliki konfiguracji zawierają jakiekolwiek typy rozszerzeń, zestawy, które zawierają te typy, muszą znajdować się w pamięci podręcznej GAC lub być jawnie udostępniane przy użyciu opcji `/reference`.|
+|/serviceName:\<serviceconfigname >|Określa nazwę konfiguracji usługi do wyeksportowania. Jeśli ta opcja jest używana, zestaw wykonywalny ze skojarzonym plikiem konfiguracji musi zostać przesłany jako dane wejściowe. Svcutil. exe przeszukuje wszystkie skojarzone pliki konfiguracji dla konfiguracji usługi. Jeśli pliki konfiguracji zawierają jakiekolwiek typy rozszerzeń, zestawy, które zawierają te typy, muszą znajdować się w pamięci podręcznej GAC lub być jawnie udostępniane przy użyciu opcji `/reference`.|
 |/Reference:\<ścieżka pliku >|Dodaje określony zestaw do zestawu zestawów używanych do rozpoznawania odwołań do typu. W przypadku eksportowania lub weryfikowania usługi używającej rozszerzeń innych firm (zachowań, powiązań i BindingElements) zarejestrowanego w konfiguracji należy użyć tej opcji, aby zlokalizować zestawy rozszerzeń, które nie znajdują się w pamięci podręcznej GAC.<br /><br /> Krótka forma: `/r`|
 |/dataContractOnly|Działa tylko w przypadku typów kontraktu danych. Kontrakty usług nie są przetwarzane.<br /><br /> Należy określić tylko lokalne pliki metadanych dla tej opcji.<br /><br /> Krótka forma: `/dconly`|
 |/excludeType: > typ\<|Określa w pełni kwalifikowaną lub kwalifikowaną dla zestawu nazwę typu, który ma zostać wykluczony z eksportu. Tej opcji można użyć podczas eksportowania metadanych dla usługi lub zestawu kontraktów usługi w celu wykluczenia typów z eksportu. Tej opcji nie można używać razem z opcją `/dconly`.<br /><br /> W przypadku jednego zestawu zawierającego wiele usług, a każda z nich używa oddzielnych klas o tej samej nazwie XSD, należy określić nazwę usługi zamiast nazwy klasy XSD dla tego przełącznika.<br /><br /> Typy kontraktów XSD lub danych nie są obsługiwane.<br /><br /> Krótka forma: `/et`|
@@ -143,7 +143,7 @@ Walidacja może służyć do wykrywania błędów w implementacjach usług bez o
 |Opcja|Opis|
 |------------|-----------------|
 |/Validate|Sprawdza poprawność implementacji usługi określonej przez opcję `/serviceName`. Jeśli ta opcja jest używana, zestaw wykonywalny ze skojarzonym plikiem konfiguracji musi zostać przesłany jako dane wejściowe.<br /><br /> Krótka forma: `/v`|
-|/serviceName:\<serviceConfigName>|Określa nazwę konfiguracji usługi do zweryfikowania. Svcutil. exe przeszukuje wszystkie skojarzone pliki konfiguracyjne wszystkich zestawów wejściowych dla konfiguracji usługi. Jeśli pliki konfiguracji zawierają jakiekolwiek typy rozszerzeń, zestawy, które zawierają te typy, muszą znajdować się w pamięci podręcznej GAC lub być jawnie udostępniane przy użyciu opcji `/reference`.|
+|/serviceName:\<serviceconfigname >|Określa nazwę konfiguracji usługi do zweryfikowania. Svcutil. exe przeszukuje wszystkie skojarzone pliki konfiguracyjne wszystkich zestawów wejściowych dla konfiguracji usługi. Jeśli pliki konfiguracji zawierają jakiekolwiek typy rozszerzeń, zestawy, które zawierają te typy, muszą znajdować się w pamięci podręcznej GAC lub być jawnie udostępniane przy użyciu opcji `/reference`.|
 |/Reference:\<ścieżka pliku >|Dodaje określony zestaw do zestawu zestawów używanych do rozpoznawania odwołań do typu. W przypadku eksportowania lub weryfikowania usługi używającej rozszerzeń innych firm (zachowań, powiązań i BindingElements) zarejestrowanego w konfiguracji należy użyć tej opcji, aby zlokalizować zestawy rozszerzeń, które nie znajdują się w pamięci podręcznej GAC.<br /><br /> Krótka forma: `/r`|
 |/dataContractOnly|Działa tylko w przypadku typów kontraktu danych. Kontrakty usług nie są przetwarzane.<br /><br /> Należy określić tylko lokalne pliki metadanych dla tej opcji.<br /><br /> Krótka forma: `/dconly`|
 |/excludeType: > typ\<|Określa w pełni kwalifikowaną lub kwalifikowaną dla zestawu nazwę typu, który ma zostać wykluczony z walidacji.<br /><br /> Krótka forma: `/et`|

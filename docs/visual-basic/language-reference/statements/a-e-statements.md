@@ -10,14 +10,14 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350223"
 ---
 # <a name="a-e-statements"></a>A-E — Instrukcje
-The following table contains a listing of Visual Basic language statements.  
+Poniższa tabela zawiera listę instrukcji języka Visual Basic.  
   
 |||||  
 |---|---|---|---|  
-|[AddHandler](addhandler-statement.md)|[Call](call-statement.md)|[Class](class-statement.md)|[Const](const-statement.md)|  
-|[Continue](continue-statement.md)|[Declare](declare-statement.md)|[Delegate](delegate-statement.md)|[Dim](dim-statement.md)|  
-|[Do...Loop](do-loop-statement.md)|[Else](else-statement.md)|[End](end-statement.md)|[End \<keyword>](end-keyword-statement.md)|  
-|[Enum](enum-statement.md)|[Erase](erase-statement.md)|[Błąd](error-statement.md)|[Event](event-statement.md)|  
+|[AddHandler](addhandler-statement.md)|[Połączeń](call-statement.md)|[Określonej](class-statement.md)|[Stała](const-statement.md)|  
+|[Continue](continue-statement.md)|[Zadeklarować](declare-statement.md)|[Wierz](delegate-statement.md)|[Wymiar](dim-statement.md)|  
+|[Do... For](do-loop-statement.md)|[Przejmi](else-statement.md)|[Punktów](end-statement.md)|[Zakończ \<słowo kluczowe >](end-keyword-statement.md)|  
+|[Podstawowe](enum-statement.md)|[Wyłączanie](erase-statement.md)|[Błąd](error-statement.md)|[Event](event-statement.md)|  
 |[Zakończ](exit-statement.md)||||  
   
 ## <a name="see-also"></a>Zobacz także

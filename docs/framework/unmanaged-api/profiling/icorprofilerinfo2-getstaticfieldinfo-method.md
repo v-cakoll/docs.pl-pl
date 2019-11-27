@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432975"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo — Metoda
-Gets a value that indicates the kind of static that applies to the specified field.  
+Pobiera wartość wskazującą rodzaj static, który ma zastosowanie do określonego pola.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,27 +36,27 @@ HRESULT GetStaticFieldInfo (
   
 ## <a name="parameters"></a>Parametry  
  `classId`  
- [in] The ID of the class in which the static field is defined.  
+ podczas Identyfikator klasy, w której zdefiniowane jest pole statyczne.  
   
  `fieldToken`  
- [in] The metadata token for the static field.  
+ podczas Token metadanych dla pola statycznego.  
   
  `pFieldInfo`  
- [out] A pointer to a value of the [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeration that indicates whether the specified field is static, and if so, the kind of static that applies to the field.  
+ określoną Wskaźnik do wartości wyliczenia [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) , który wskazuje, czy określone pole jest statyczne, i jeśli tak, rodzaj static, który ma zastosowanie do pola.  
   
 ## <a name="remarks"></a>Uwagi  
- This information can be used to determine which function to call to get the address of the static field.  
+ Te informacje mogą służyć do określenia, która funkcja ma zostać wywołana w celu pobrania adresu pola statycznego.  
   
- The profiler code should still check the metadata for a static field to ensure that it actually has an address. Static literals (that is, constants) exist only in the metadata and do not have an address.  
+ Kod profilera powinien nadal sprawdzać metadane pola statycznego, aby upewnić się, że faktycznie ma adres. Literały statyczne (czyli stałe) istnieją tylko w metadanych i nie mają adresu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

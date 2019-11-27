@@ -15,28 +15,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350011"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Porady: deklarowanie struktury (Visual Basic)
-You begin a structure declaration with the [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md), and you end it with the `End Structure` statement. Between these two statements you must declare at least one *element*. The elements can be of any data type, but at least one must be either a nonshared variable or a nonshared, noncustom event.  
+Należy rozpocząć deklarację struktury za pomocą [instrukcji Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)i zakończyć ją za pomocą instrukcji `End Structure`. Między tymi dwiema instrukcjami należy zadeklarować co najmniej jeden *element*. Elementy mogą być dowolnego typu danych, ale co najmniej jeden musi być zmienną nieudostępnioną lub niestandardowym zdarzeniem.  
   
- You cannot initialize any of the structure elements in the structure declaration. When you declare a variable to be of a structure type, you assign values to the elements by accessing them through the variable.  
+ Nie można zainicjować któregokolwiek z elementów struktury w deklaracji struktury. Podczas deklarowania zmiennej jako typu struktury, należy przypisać wartości do elementów, uzyskując dostęp do nich za pomocą zmiennej.  
   
- For a discussion of the differences between structures and classes, see [Structures and Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
+ Aby zapoznać się z omówieniem różnic między strukturami i klasami, zobacz [struktury i klasy](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
   
- For demonstration purposes, consider a situation where you want to keep track of an employee's name, telephone extension, and salary. A structure allows you to do this in a single variable.  
+ W celach demonstracyjnych Rozważmy sytuację, w której chcesz śledzić nazwisko pracownika, numer telefonu i wynagrodzenie. Struktura pozwala wykonać tę czynność w jednej zmiennej.  
   
-### <a name="to-declare-a-structure"></a>To declare a structure  
+### <a name="to-declare-a-structure"></a>Aby zadeklarować strukturę  
   
-1. Create the beginning and ending statements for the structure.  
+1. Utwórz instrukcje początkowe i końcowe dla struktury.  
   
-     You can specify the access level of a structure using the [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword, or you can let it default to `Public`.  
+     Możesz określić poziom dostępu struktury za pomocą [publicznego](../../../../visual-basic/language-reference/modifiers/public.md), [chronionego](../../../../visual-basic/language-reference/modifiers/protected.md), [przyjaznego](../../../../visual-basic/language-reference/modifiers/friend.md)lub [prywatnego](../../../../visual-basic/language-reference/modifiers/private.md) słowa kluczowego lub można zezwolić na `Public`.  
   
     ```vb  
     Private Structure employee  
     End Structure  
     ```  
   
-2. Add elements to the body of the structure.  
+2. Dodaj elementy do treści struktury.  
   
-     A structure must have at least one element. You must declare every element and specify an access level for it. If you use the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) without any keywords, the accessibility defaults to `Public`.  
+     Struktura musi mieć co najmniej jeden element. Należy zadeklarować każdy element i określić dla niego poziom dostępu. Jeśli używasz [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) bez żadnych słów kluczowych, dostępność jest domyślnie `Public`.  
   
     ```vb  
     Private Structure employee  
@@ -51,9 +51,9 @@ You begin a structure declaration with the [Structure Statement](../../../../vis
     End Structure  
     ```  
   
-     The `salary` field in the preceding example is `Private`, which means it is inaccessible outside the structure, even from the containing class. However, the `giveRaise` procedure is `Public`, so it can be called from outside the structure. Similarly, you can raise the `salaryReviewTime` event from outside the structure.  
+     Pole `salary` w poprzednim przykładzie jest `Private`, co oznacza, że jest niedostępne poza strukturą, nawet z klasy zawierającej. Jednakże procedura `giveRaise` jest `Public`, dlatego można ją wywołać spoza struktury. Podobnie można wywołać zdarzenie `salaryReviewTime` spoza struktury.  
   
-     In addition to variables, `Sub` procedures, and events, you can also define constants, `Function` procedures, and properties in a structure. You can designate at most one property as the *default property*, provided it takes at least one argument. You can handle an event with a [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub` procedure. For more information, see [How to: Declare and Call a Default Property in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
+     Oprócz zmiennych, procedur `Sub` i zdarzeń, można także definiować stałe, procedury `Function` i właściwości w strukturze. Można wyznaczyć najwyżej jedną właściwość jako *Właściwość domyślną*, pod warunkiem, że przyjmuje co najmniej jeden argument. Można obsłużyć zdarzenie z użyciem procedury`Sub` [udostępnionej](../../../../visual-basic/language-reference/modifiers/shared.md) . Aby uzyskać więcej informacji, zobacz [jak: deklarowanie i wywoływanie właściwości domyślnej w Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

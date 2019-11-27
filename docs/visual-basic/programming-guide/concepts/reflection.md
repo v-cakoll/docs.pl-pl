@@ -9,10 +9,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349279"
 ---
-# <a name="reflection-visual-basic"></a>Reflection (Visual Basic)
-Reflection provides objects (of type <xref:System.Type>) that describe assemblies, modules and types. You can use reflection to dynamically create an instance of a type, bind the type to an existing object, or get the type from an existing object and invoke its methods or access its fields and properties. If you are using attributes in your code, reflection enables you to access them. For more information, see [Attributes](../../../standard/attributes/index.md).  
+# <a name="reflection-visual-basic"></a>Odbicie (Visual Basic)
+Odbicie udostępnia obiekty (typu <xref:System.Type>) opisujące zestawy, moduły i typy. Możesz użyć odbicia, aby dynamicznie utworzyć wystąpienie typu, powiązać typ z istniejącym obiektem lub uzyskać typ z istniejącego obiektu i wywołać jego metody lub uzyskać dostęp do jego pól i właściwości. Jeśli używasz atrybutów w kodzie, odbicie umożliwia uzyskanie dostępu do nich. Aby uzyskać więcej informacji, zobacz [atrybuty](../../../standard/attributes/index.md).  
   
- Here's a simple example of reflection using the static method `GetType` - inherited by all types from the `Object` base class - to obtain the type of a variable:  
+ Oto prosty przykład odbicia przy użyciu metody statycznej `GetType`-dziedziczona przez wszystkie typy z klasy podstawowej `Object` — Aby uzyskać typ zmiennej:  
   
 ```vb  
 ' Using GetType to obtain type information:  
@@ -21,11 +21,11 @@ Dim type As System.Type = i.GetType()
 System.Console.WriteLine(type)  
 ```  
   
- The output is:  
+ Dane wyjściowe:  
   
  `System.Int32`  
   
- The following example uses reflection to obtain the full name of the loaded assembly.  
+ Poniższy przykład używa odbicia w celu uzyskania pełnej nazwy załadowanego zestawu.  
   
 ```vb  
 ' Using Reflection to get information from an Assembly:  
@@ -33,20 +33,20 @@ Dim info As System.Reflection.Assembly = GetType(System.Int32).Assembly
 System.Console.WriteLine(info)  
 ```  
   
- The output is:  
+ Dane wyjściowe:  
   
  `mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089`  
   
-## <a name="reflection-overview"></a>Reflection Overview  
- Reflection is useful in the following situations:  
+## <a name="reflection-overview"></a>Przegląd odbicia  
+ Odbicie jest przydatne w następujących sytuacjach:  
   
-- When you have to access attributes in your program's metadata. For more information, see [Retrieving Information Stored in Attributes](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
+- Gdy musisz uzyskać dostęp do atrybutów w metadanych programu. Aby uzyskać więcej informacji, zobacz artykuł [pobieranie informacji przechowywanych w atrybutach](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
   
-- For examining and instantiating types in an assembly.  
+- Do badania i tworzenia wystąpień typów w zestawie.  
   
-- For building new types at runtime. Use classes in <xref:System.Reflection.Emit>.  
+- Do kompilowania nowych typów w czasie wykonywania. Użyj klas w <xref:System.Reflection.Emit>.  
   
-- For performing late binding, accessing methods on types created at run time. See the topic [Dynamically Loading and Using Types](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
+- Do wykonywania późnego wiązania, uzyskiwanie dostępu do metod w typach utworzonych w czasie wykonywania. Zobacz temat [dynamiczne ładowanie i używanie typów](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  Informacje dodatkowe:  
@@ -63,5 +63,5 @@ System.Console.WriteLine(info)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Visual Basic Programming Guide](../../../visual-basic/programming-guide/index.md)
+- [Przewodnik programowania Visual Basic](../../../visual-basic/programming-guide/index.md)
 - [Zestawy w środowisku .NET](../../../standard/assembly/index.md)

@@ -12,8 +12,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348509"
 ---
-# <a name="c-visual-basic"></a>\<c> (Visual Basic)
-Indicates that text within a description is code.  
+# <a name="c-visual-basic"></a>> \<c (Visual Basic)
+Wskazuje, że tekst w opisie ma kod.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -25,15 +25,15 @@ Indicates that text within a description is code.
   
 |Parametr|Opis|  
 |---|---|  
-|`text`|The text you would like to indicate as code.|  
+|`text`|Tekst, który ma być wskazywany jako kod.|  
   
 ## <a name="remarks"></a>Uwagi  
- The `<c>` tag gives you a way to indicate that text within a description should be marked as code. Use [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) to indicate multiple lines as code.  
+ Tag `<c>` umożliwia wskazanie, że tekst w opisie powinien być oznaczony jako kod. Użyj [\<kodu >](../../../visual-basic/language-reference/xmldoc/code.md) , aby wskazać wiele wierszy jako kod.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- This example uses the `<c>` tag in the summary section to indicate that `Counter` is code.  
+ W poniższym przykładzie zastosowano tag `<c>` w sekcji Podsumowanie, aby wskazać, że `Counter` jest kodem.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

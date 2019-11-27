@@ -13,8 +13,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350835"
 ---
-# <a name="-utf8output-visual-basic"></a>-utf8output (Visual Basic)
-Displays compiler output using UTF-8 encoding.  
+# <a name="-utf8output-visual-basic"></a>-utf8output — (Visual Basic)
+Wyświetla dane wyjściowe kompilatora przy użyciu kodowania UTF-8.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,16 +24,16 @@ Displays compiler output using UTF-8 encoding.
   
 ## <a name="arguments"></a>Argumenty  
  `+` &#124; `-`  
- Opcjonalny. The default for this option is `-utf8output-`, which means compiler output does not use UTF-8 encoding. Specifying `-utf8output` is the same as specifying `-utf8output+`.  
+ Opcjonalna. Wartość domyślna dla tej opcji to `-utf8output-`, co oznacza, że wyjście kompilatora nie używa kodowania UTF-8. Określanie `-utf8output` jest taka sama jak określanie `-utf8output+`.  
   
 ## <a name="remarks"></a>Uwagi  
- In some international configurations, compiler output cannot be displayed correctly in the console. In such situations, use `-utf8output` and redirect compiler output to a file.  
+ W niektórych konfiguracjach międzynarodowych dane wyjściowe kompilatora nie mogą być prawidłowo wyświetlane w konsoli programu. W takich sytuacjach należy używać `-utf8output` i przekierować dane wyjściowe kompilatora do pliku.  
   
 > [!NOTE]
-> The `-utf8output` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> Opcja `-utf8output` nie jest dostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
   
 ## <a name="example"></a>Przykład  
- The following code compiles `In.vb` and directs the compiler to display output using UTF-8 encoding.  
+ Poniższy kod kompiluje `In.vb` i kieruje kompilator do wyświetlania danych wyjściowych przy użyciu kodowania UTF-8.  
   
 ```console  
 vbc -utf8output in.vb  
@@ -41,5 +41,5 @@ vbc -utf8output in.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

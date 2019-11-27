@@ -9,20 +9,20 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348411"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Instrukcje: porównywanie zawartości dwóch folderów (LINQ) (Visual Basic)
 
-This example demonstrates three ways to compare two file listings:
+Ten przykład ilustruje trzy sposoby porównywania dwóch list plików:
 
-- By querying for a Boolean value that specifies whether the two file lists are identical.
+- Za pomocą zapytania o wartość logiczną określającą, czy dwie listy plików są identyczne.
 
-- By querying for the intersection to retrieve the files that are in both folders.
+- Wykonując zapytania dotyczące przecięcia do pobrania plików, które znajdują się w obu folderach.
 
-- By querying for the set difference to retrieve the files that are in one folder but not the other.
+- Wykonując zapytania o różnicę zestawu, aby pobrać pliki znajdujące się w jednym folderze, ale nie w drugim.
 
     > [!NOTE]
-    > The techniques shown here can be adapted to compare sequences of objects of any type.
+    > Techniki przedstawione w tym miejscu można dostosować do porównania sekwencji obiektów dowolnego typu.
 
-The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators. The class is not intended for use in real-world scenarios. It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not. In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.
+Pokazana tutaj Klasa `FileComparer` ilustruje sposób używania niestandardowej klasy porównującej ze standardowymi operatorami zapytań. Klasa nie jest przeznaczona do użycia w rzeczywistych scenariuszach. Po prostu używa nazwy i długości w bajtach każdego pliku, aby określić, czy zawartość każdego folderu jest identyczna, czy nie. W rzeczywistym scenariuszu należy zmodyfikować tę funkcję porównującą w celu przeprowadzenia bardziej rygorystycznej kontroli równości.
 
 ## <a name="example"></a>Przykład
 
@@ -116,9 +116,9 @@ End Module
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Utwórz projekt aplikacji konsolowej VB.NET z instrukcją `Imports` dla przestrzeni nazw System. LINQ.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

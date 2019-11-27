@@ -14,59 +14,59 @@ ms.locfileid: "74345236"
 ---
 # <a name="delegates-visual-basic"></a>Delegaty (Visual Basic)
 
-Delegates are objects that refer to methods. They are sometimes described as *type-safe function pointers* because they are similar to function pointers used in other programming languages. But unlike function pointers, Visual Basic delegates are a reference type based on the class <xref:System.Delegate?displayProperty=nameWithType>. Delegates can reference both shared methods — methods that can be called without a specific instance of a class — and instance methods.
+Delegaty są obiektami odwołującymi się do metod. Są czasami opisywane jako *wskaźniki funkcji bezpiecznych dla typu* , ponieważ są podobne do wskaźników funkcji używanych w innych językach programowania. Ale w przeciwieństwie do wskaźników funkcji, Visual Basic delegatów jest typem referencyjnym opartym na klasie <xref:System.Delegate?displayProperty=nameWithType>. Delegaty mogą odwoływać się do obu metod wspólnych — metod, które mogą być wywoływane bez określonego wystąpienia klasy — oraz metod wystąpień.
 
 ## <a name="delegates-and-events"></a>Delegaci i zdarzenia
 
-Delegates are useful in situations where you need an intermediary between a calling procedure and the procedure being called. For example, you might want an object that raises events to be able to call different event handlers under different circumstances. Unfortunately, the object raising the events cannot know ahead of time which event handler is handling a specific event. Visual Basic lets you dynamically associate event handlers with events by creating a delegate for you when you use the `AddHandler` statement. At run time, the delegate forwards calls to the appropriate event handler.
+Delegaty są przydatne w sytuacjach, gdy potrzebujesz pośrednika między procedurą wywołującą a wywoływaną procedurą. Na przykład możesz chcieć, aby obiekt, który zgłasza zdarzenia, aby mógł wywołać inne procedury obsługi zdarzeń w różnych warunkach. Niestety, obiekt wywołujący zdarzenia nie może wiedzieć przed czasem, w którym program obsługi zdarzeń obsługuje określone zdarzenie. Visual Basic umożliwia dynamiczne kojarzenie programów obsługi zdarzeń ze zdarzeniami przez utworzenie delegata przy użyciu instrukcji `AddHandler`. W czasie wykonywania delegat przekazuje wywołania do odpowiedniego programu obsługi zdarzeń.
 
-Although you can create your own delegates, in most cases Visual Basic creates the delegate and takes care of the details for you. For example, an `Event` statement implicitly defines a delegate class named `<EventName>EventHandler` as a nested class of the class containing the `Event` statement, and with the same signature as the event. The `AddressOf` statement implicitly creates an instance of a delegate that refers to a specific procedure. The following two lines of code are equivalent. In the first line, you see the explicit creation of an instance of `EventHandler`, with a reference to method `Button1_Click` sent as the argument. The second line is a more convenient way to do the same thing.
+Chociaż można tworzyć własnych delegatów, w większości przypadków Visual Basic tworzy delegata i bierze pod uwagę szczegółowe informacje. Na przykład, instrukcja `Event` niejawnie definiuje klasę delegata o nazwie `<EventName>EventHandler` jako klasę zagnieżdżoną klasy zawierającej instrukcję `Event` i z tym samym podpisem co zdarzenie. Instrukcja `AddressOf` niejawnie tworzy wystąpienie delegata, który odwołuje się do określonej procedury. Poniższe dwa wiersze kodu są równoważne. W pierwszym wierszu zobaczysz jawne utworzenie wystąpienia `EventHandler`, z odwołaniem do metody `Button1_Click` wysyłane jako argument. Drugi wiersz jest bardziej wygodnym sposobem wykonania tego samego zadania.
 
 [!code-vb[VbVbalrDelegates#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#6)]
 
-You can use the shorthand way of creating delegates anywhere the compiler can determine the delegate's type by the context.
+Można użyć skróconej metody tworzenia delegatów gdziekolwiek kompilator może określić typ delegata według kontekstu.
 
-## <a name="declaring-events-that-use-an-existing-delegate-type"></a>Declaring Events that Use an Existing Delegate Type
+## <a name="declaring-events-that-use-an-existing-delegate-type"></a>Deklarowanie zdarzeń wykorzystujących istniejący typ delegata
 
-In some situations, you may want to declare an event to use an existing delegate type as its underlying delegate. The following syntax demonstrates how:
+W niektórych sytuacjach może zaistnieć potrzeba zadeklarować zdarzenie, aby użyć istniejącego typu delegata jako jego podstawowego delegata. Poniższa składnia ilustruje, jak:
 
 [!code-vb[VbVbalrDelegates#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#7)]
 
-This is useful when you want to route multiple events to the same handler.
+Jest to przydatne, gdy chcesz skierować wiele zdarzeń do tej samej procedury obsługi.
 
-## <a name="delegate-variables-and-parameters"></a>Delegate Variables and Parameters
+## <a name="delegate-variables-and-parameters"></a>Delegowanie zmiennych i parametrów
 
-You can use delegates for other, non-event related tasks, such as free threading or with procedures that need to call different versions of functions at run time.
+Delegatów można używać do innych zadań niezwiązanych z zdarzeniami, takich jak bezpłatne wątki lub procedury, które muszą wywołać różne wersje funkcji w czasie wykonywania.
 
-For example, suppose you have a classified-ad application that includes a list box with the names of cars. The ads are sorted by title, which is normally the make of the car. A problem you may face occurs when some cars include the year of the car before the make. The problem is that the built-in sort functionality of the list box sorts only by character codes; it places all the ads starting with dates first, followed by the ads starting with the make.
+Załóżmy na przykład, że masz aplikację z klasyfikacją AD, która zawiera pole listy z nazwami samochodów. Reklamy są sortowane według tytułu, co jest zwykle markami samochodu. Problem, który może wystąpić, gdy niektóre samochody obejmują rok samochodu przed markami. Problem polega na tym, że Wbudowana funkcja sortowania pola listy sortuje tylko według kodów znaków; najpierw umieszcza wszystkie reklamy zaczynające się od dat, a następnie reklamy, rozpoczynając od marki.
 
-To fix this, you can create a sort procedure in a class that uses the standard alphabetic sort on most list boxes, but is able to switch at run time to the custom sort procedure for car ads. To do this, you pass the custom sort procedure to the sort class at run time, using delegates.
+Aby rozwiązać ten problem, można utworzyć procedurę sortowania w klasie, która korzysta z standardowego sortowania alfabetycznego w większości pól listy, ale jest możliwe przełączenie w czasie wykonywania do niestandardowej procedury sortowania dla reklam samochodowych. W tym celu należy przekazać niestandardową procedurę sortowania do klasy sortowania w czasie wykonywania za pomocą delegatów.
 
-## <a name="addressof-and-lambda-expressions"></a>AddressOf and Lambda Expressions
+## <a name="addressof-and-lambda-expressions"></a>Wyrażenia AddressOf i lambda
 
-Each delegate class defines a constructor that is passed the specification of an object method. An argument to a delegate constructor must be a reference to a method, or a lambda expression.
+Każda Klasa delegatów definiuje konstruktora, który przekazał specyfikację metody obiektu. Argument konstruktora delegata musi być odwołaniem do metody lub wyrażeniem lambda.
 
-To specify a reference to a method, use the following syntax:
+Aby określić odwołanie do metody, należy użyć następującej składni:
 
 `AddressOf` [`expression`.]`methodName`
 
-The compile-time type of the `expression` must be the name of a class or an interface that contains a method of the specified name whose signature matches the signature of the delegate class. The `methodName` can be either a shared method or an instance method. The `methodName` is not optional, even if you create a delegate for the default method of the class.
+Typ czasu kompilacji `expression` musi być nazwą klasy lub interfejsem, który zawiera metodę o określonej nazwie, której sygnatura pasuje do sygnatury klasy delegata. `methodName` może być metodą udostępnioną lub metodą wystąpienia. `methodName` nie jest opcjonalna, nawet jeśli utworzysz delegata dla metody domyślnej klasy.
 
-To specify a lambda expression, use the following syntax:
+Aby określić wyrażenie lambda, należy użyć następującej składni:
 
-`Function` ([`parm` As `type`, `parm2` As `type2`, ...]) `expression`
+`Function` ([`parm` jako `type``parm2` jako `type2`,...]) `expression`
 
-The following example shows both `AddressOf` and lambda expressions used to specify the reference for a delegate.
+Poniższy przykład pokazuje wyrażenia `AddressOf` i lambda używane do określenia odwołania dla delegata.
 
 [!code-vb[VbVbalrDelegates#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class2.vb#15)]
 
-The signature of the function must match that of the delegate type. For more information about lambda expressions, see [Lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md). For more examples of lambda expression and `AddressOf` assignments to delegates, see [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).
+Sygnatura funkcji musi być zgodna z typem delegata. Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md). Aby uzyskać więcej przykładów wyrażenia lambda i `AddressOf` przypisań do delegatów, zobacz [Swobodna konwersja delegata](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
-|Tytuł|Opis|
+|Stanowisko|Opis|
 |-----------|-----------------|
-|[Instrukcje: wywoływanie metody delegata](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|Provides an example that shows how to associate a method with a delegate and then invoke that method through the delegate.|
-|[How to: Pass Procedures to Another Procedure in Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|Demonstrates how to use delegates to pass one procedure to another procedure.|
-|[Swobodna konwersja delegatów](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|Describes how you can assign subs and functions to delegates or handlers even when their signatures are not identical|
-|[Zdarzenia](../../../../visual-basic/programming-guide/language-features/events/index.md)|Provides an overview of events in Visual Basic.|
+|[Instrukcje: wywoływanie metody delegata](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|Zawiera przykład, który pokazuje, jak skojarzyć metodę z delegatem, a następnie wywołać tę metodę za pomocą delegata.|
+|[Instrukcje: przekazywanie procedur do innej procedury w Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|Pokazuje, jak używać delegatów do przekazywania jednej procedury do innej procedury.|
+|[Swobodna konwersja delegatów](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|Opisuje, w jaki sposób można przypisać funkcje sub i Functions do delegatów lub programów obsługi nawet wtedy, gdy ich podpisy nie są identyczne.|
+|[Zdarzenia](../../../../visual-basic/programming-guide/language-features/events/index.md)|Zawiera omówienie zdarzeń w Visual Basic.|

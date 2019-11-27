@@ -20,33 +20,33 @@ ms.locfileid: "74345656"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Porady: usuwanie klucza rejestru w Visual Basic
 
-The <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> and <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> methods can be used to delete registry keys.  
+Metody <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> i <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> mogą służyć do usuwania kluczy rejestru.  
   
 ## <a name="procedure"></a>Procedura  
   
-#### <a name="to-delete-a-registry-key"></a>To delete a registry key  
+#### <a name="to-delete-a-registry-key"></a>Aby usunąć klucz rejestru  
   
-- Use the `DeleteSubKey` method to delete a registry key. This example deletes the key Software/TestApp in the CurrentUser hive. You can change this in the code to the appropriate string, or have it rely on user-supplied information.  
+- Użyj metody `DeleteSubKey`, aby usunąć klucz rejestru. Ten przykład usuwa klucz oprogramowanie/TestApp w gałęzi CurrentUser. Można zmienić tę wartość w kodzie na odpowiedni ciąg lub na podstawie informacji podawanych przez użytkownika.  
   
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
 
- The `DeleteSubKey` method returns an empty string if the key/value pair does not exist.  
+ Metoda `DeleteSubKey` zwraca pusty ciąg, jeśli para klucz/wartość nie istnieje.  
   
  Następujące warunki mogą spowodować wyjątek:  
   
-- The name of the key is `Nothing` (<xref:System.ArgumentNullException>).  
+- Nazwa klucza jest `Nothing` (<xref:System.ArgumentNullException>).  
   
-- The user does not have permissions to delete registry keys (<xref:System.Security.SecurityException>).  
+- Użytkownik nie ma uprawnień do usuwania kluczy rejestru (<xref:System.Security.SecurityException>).  
   
-- The key name exceeds the 255-character limit (<xref:System.ArgumentException>).  
+- Nazwa klucza przekracza limit 255 znaków (<xref:System.ArgumentException>).  
   
-- The registry key is read-only (<xref:System.UnauthorizedAccessException>).  
+- Klucz rejestru jest tylko do odczytu (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
 
- Registry calls fail if either sufficient run-time permissions are not granted (<xref:System.Security.Permissions.RegistryPermission>) or if the user does not have the correct access (as determined by the ACLs) for creating or writing to settings. For example, a local application that has the code access security permission might not have operating system permission.  
+ Wywołania rejestru kończą się niepowodzeniem, jeśli nie przyznano wystarczających uprawnień w czasie wykonywania (<xref:System.Security.Permissions.RegistryPermission>) lub jeśli użytkownik nie ma poprawnego dostępu (zgodnie z listą ACL) w celu utworzenia lub zapisania ustawień. Na przykład aplikacja lokalna, która ma uprawnienie zabezpieczeń dostępu kodu, może nie mieć uprawnień systemu operacyjnego.  
   
 ## <a name="see-also"></a>Zobacz także
 

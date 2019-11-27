@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436319"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps — Metoda
-Gets the set of properties of the manifest resource with the specified metadata signature.  
+Pobiera zestaw właściwości zasobu manifestu z określonym podpisem metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,34 +41,34 @@ HRESULT GetManifestResourceProps (
   
 ## <a name="parameters"></a>Parametry  
  `mdmr`  
- [in] An `mdManifestResource` token that represents the resource for which to get the properties.  
+ podczas Token `mdManifestResource` reprezentujący zasób, dla którego mają zostać pobrane właściwości.  
   
  `szName`  
- [out] The name of the resource.  
+ określoną Nazwa zasobu.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ podczas Rozmiar, w postaci szerokich znaków, `szName`.  
   
  `pchName`  
- [out] A pointer to the number of wide chars actually returned in `szName`.  
+ określoną Wskaźnik do liczby znaków dwubajtowych faktycznie zwróconych w `szName`.  
   
  `ptkImplementation`  
- [out] A pointer to an `mdFile` token or an `mdAssemblyRef` token that represents the file or assembly, respectively, that contains the resource.  
+ określoną Wskaźnik do tokenu `mdFile` lub token `mdAssemblyRef`, który reprezentuje odpowiednio plik lub zestaw, który zawiera zasób.  
   
  `pdwOffset`  
- [out] A pointer to a value that specifies the offset to the beginning of the resource within the file.  
+ określoną Wskaźnik do wartości, która określa przesunięcie do początku zasobu w pliku.  
   
  `pdwResourceFlags`  
- [out] A pointer to flags that describe the metadata applied to a resource. The flags value is a combination of one or more [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) values.  
+ określoną Wskaźnik do flag, które opisują metadane zastosowane do zasobu. Wartość flags jest kombinacją co najmniej jednej wartości [CorManifestResourceFlags —](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

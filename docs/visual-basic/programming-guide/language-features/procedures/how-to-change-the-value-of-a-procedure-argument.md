@@ -21,41 +21,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74339960"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Porady: zmienianie wartości argumentu procedury (Visual Basic)
-When you call a procedure, each argument you supply corresponds to one of the parameters defined in the procedure. In some cases, the procedure code can change the value underlying an argument in the calling code. In other cases, the procedure can change only its local copy of an argument.  
+Po wywołaniu procedury każdy pożądany argument odpowiada jednemu z parametrów zdefiniowanych w procedurze. W niektórych przypadkach kod procedury może zmienić wartość odpowiadającą argumentowi w kodzie wywołującym. W innych przypadkach procedura może zmienić tylko jego lokalną kopię argumentu.  
   
- When you call the procedure, Visual Basic makes a local copy of every argument that is passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). For each argument passed [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic gives the procedure code a direct reference to the programming element underlying the argument in the calling code.  
+ Po wywołaniu procedury Visual Basic wykonuje kopię lokalną każdego argumentu, który został przekazaną przez [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Dla każdego argumentu, który przeszedł metodę [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic daje kod procedury bezpośrednio odwołanie do elementu programowania, który jest powiązany z argumentem w kodzie wywołującym.  
   
- If the underlying element in the calling code is a modifiable element and the argument is passed `ByRef`, the procedure code can use the direct reference to change the element's value in the calling code.  
+ Jeśli element źródłowy w kodzie wywołującym jest elementem modyfikowalnym, a argument jest przenoszona `ByRef`, kod procedury może użyć odwołania bezpośredniego do zmiany wartości elementu w kodzie wywołującym.  
   
-## <a name="changing-the-underlying-value"></a>Changing the Underlying Value  
+## <a name="changing-the-underlying-value"></a>Zmiana podstawowej wartości  
   
-#### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>To change the underlying value of a procedure argument in the calling code  
+#### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>Aby zmienić podstawową wartość argumentu procedury w kodzie wywołującym  
   
-1. In the procedure declaration, specify [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) for the parameter corresponding to the argument.  
+1. W deklaracji procedury Określ wartość [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) dla parametru odpowiadającego argumentowi.  
   
-2. In the calling code, pass a modifiable programming element as the argument.  
+2. W kodzie wywołującym Przekaż modyfikowalny element programistyczny jako argument.  
   
-3. In the calling code, do not enclose the argument in parentheses in the argument list.  
+3. W kodzie wywołującym nie należy ujmować argumentu w nawiasach na liście argumentów.  
   
-4. In the procedure code, use the parameter name to assign a value to the underlying element in the calling code.  
+4. W kodzie procedury Użyj nazwy parametru, aby przypisać wartość do podstawowego elementu w kodzie wywołującym.  
   
- See the example further down for a demonstration.  
+ Zapoznaj się z przykładem.  
   
-## <a name="changing-local-copies"></a>Changing Local Copies  
- If the underlying element in the calling code is a nonmodifiable element, or if the argument is passed `ByVal`, the procedure cannot change its value in the calling code. However, the procedure can change its local copy of such an argument.  
+## <a name="changing-local-copies"></a>Zmienianie kopii lokalnych  
+ Jeśli element źródłowy w kodzie wywołującym jest niemodyfikowalnym elementem lub jeśli argument jest przenoszona `ByVal`, procedura nie może zmienić jego wartości w kodzie wywołującym. Jednakże procedura może zmienić swoją lokalną kopię takiego argumentu.  
   
-#### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>To change the copy of a procedure argument in the procedure code  
+#### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>Aby zmienić kopię argumentu procedury w kodzie procedury  
   
-1. In the procedure declaration, specify [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) for the parameter corresponding to the argument.  
+1. W deklaracji procedury Określ [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) dla parametru odpowiadającego argumentowi.  
   
      —lub—  
   
-     In the calling code, enclose the argument in parentheses in the argument list. This forces Visual Basic to pass the argument by value, even if the corresponding parameter specifies `ByRef`.  
+     W kodzie wywołującym Umieść argument w nawiasach na liście argumentów. Wymusza to Visual Basic przekazanie argumentu według wartości, nawet jeśli odpowiedni parametr określa `ByRef`.  
   
-2. In the procedure code, use the parameter name to assign a value to the local copy of the argument. The underlying value in the calling code is not changed.  
+2. W kodzie procedury Użyj nazwy parametru, aby przypisać wartość do lokalnej kopii argumentu. Wartość bazowa w wywołaniu kodu nie jest zmieniana.  
   
 ## <a name="example"></a>Przykład  
- The following example shows two procedures that take an array variable and operate on its elements. The `increase` procedure simply adds one to each element. The `replace` procedure assigns a new array to the parameter `a()` and then adds one to each element.  
+ Poniższy przykład przedstawia dwie procedury, które pobierają zmienną tablicową i działają na jej elementach. Procedura `increase` po prostu dodaje jeden do każdego elementu. Procedura `replace` przypisuje nową tablicę do parametru `a()` a następnie dodaje ją do każdego elementu.  
   
  [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
@@ -63,19 +63,19 @@ When you call a procedure, each argument you supply corresponds to one of the pa
   
  [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
- The first `MsgBox` call displays "After increase(n): 11, 21, 31, 41". Because the array `n` is a reference type, `replace` can change its members, even though the passing mechanism is `ByVal`.  
+ Pierwsze wywołanie `MsgBox` wyświetla "po zwiększeniu (n): 11, 21, 31, 41". Ponieważ tablica `n` jest typem referencyjnym, `replace` może zmienić jego składowe, nawet gdy mechanizm przekazywania jest `ByVal`.  
   
- The second `MsgBox` call displays "After replace(n): 101, 201, 301". Because `n` is passed `ByRef`, `replace` can modify the variable `n` in the calling code and assign a new array to it. Because `n` is a reference type, `replace` can also change its members.  
+ Drugie wywołanie `MsgBox` wyświetla "po zastąpieniu (n): 101, 201, 301". Ponieważ `n` jest przenoszona `ByRef`, `replace` może zmodyfikować zmienną `n` w kodzie wywołującym i przypisać do niej nową tablicę. Ponieważ `n` jest typem referencyjnym, `replace` może również zmienić jego składowe.  
   
- You can prevent the procedure from modifying the variable itself in the calling code. See [How to: Protect a Procedure Argument Against Value Changes](./how-to-protect-a-procedure-argument-against-value-changes.md).  
+ Można zapobiec modyfikowaniu przez procedurę samej zmiennej w kodzie wywołującym. Zobacz [jak: Ochrona argumentu procedury przed zmianami wartości](./how-to-protect-a-procedure-argument-against-value-changes.md).  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- When you pass a variable by reference, you must use the `ByRef` keyword to specify this mechanism.  
+ Gdy przekazujesz zmienną według odwołania, musisz użyć słowa kluczowego `ByRef`, aby określić ten mechanizm.  
   
- The default in Visual Basic is to pass arguments by value. However, it is good programming practice to include either the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword with every declared parameter. This makes your code easier to read.  
+ Wartością domyślną w Visual Basic jest przekazanie argumentów według wartości. Jednak dobrym sposobem programowania jest dołączenie albo słowa kluczowego [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) z każdym zadeklarowanym parametrem. Ułatwia to odczytywanie kodu.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- There is always a potential risk in allowing a procedure to change the value underlying an argument in the calling code. Make sure you expect this value to be changed, and be prepared to check it for validity before using it.  
+ Zawsze istnieje potencjalne ryzyko w umożliwieniu procedury zmiany wartości bazowej argumentu w wywoływanym kodzie. Upewnij się, że ta wartość jest zmieniana, i przygotuj się do sprawdzenia jej pod kątem poprawności przed jej użyciem.  
   
 ## <a name="see-also"></a>Zobacz także
 

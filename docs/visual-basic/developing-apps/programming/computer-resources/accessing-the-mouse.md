@@ -14,17 +14,17 @@ ms.locfileid: "74347016"
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>Uzyskiwanie dostępu do myszy (Visual Basic)
 
-The `My.Computer.Mouse` object provides a way to find information about the computer's mouse, such as if a mouse exists, the number of mouse buttons, and details about the mouse wheel.  
+Obiekt `My.Computer.Mouse` umożliwia znalezienie informacji o myszy komputera, takich jak jeśli istnieje mysz, liczba przycisków myszy i szczegółowe informacje o kółku myszy.  
   
 ## <a name="remarks"></a>Uwagi  
 
- This table lists tasks associated with the `My.Computer.Mouse` object and points to topics demonstrating how to accomplish each.  
+ Ta tabela zawiera listę zadań skojarzonych z obiektem `My.Computer.Mouse` i wskazuje tematy przedstawiające wykonywanie każdego z nich.  
   
 |Do|Zobacz|  
 |--------|---------|  
-|Determine whether the mouse has a scroll wheel.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists>|  
-|Determine whether the left and right mouse buttons have been swapped|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped>|  
-|Set how much to scroll when the mouse wheel is rotated one notch.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines>|  
+|Określ, czy mysz ma kółko przewijania.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists>|  
+|Określanie, czy lewy i prawy przycisk myszy zostały zamienione|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped>|  
+|Ustaw stopień przewijania, gdy kółko myszy zostanie obrócone o jedno nacięcie.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines>|  
   
 ## <a name="see-also"></a>Zobacz także
 

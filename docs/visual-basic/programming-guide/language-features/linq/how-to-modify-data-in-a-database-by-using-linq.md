@@ -1,5 +1,5 @@
 ---
-title: 'How to: Modify Data in a Database by Using LINQ'
+title: 'Instrukcje: modyfikowanie danych w bazie danych za pomocą LINQ'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
@@ -21,51 +21,51 @@ ms.locfileid: "74344944"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Porady: modyfikowanie danych w bazie danych za pomocą LINQ (Visual Basic)
 
-Language-Integrated Query (LINQ) queries make it easy to access database information and modify values in the database.
+Zapytania dotyczące języka (LINQ) w języku zintegrowanym z językiem umożliwiają łatwe uzyskiwanie dostępu do informacji o bazie danych i modyfikowanie wartości w bazie danych.
 
-The following example shows how to create a new application that retrieves and updates information in a SQL Server database.
+Poniższy przykład pokazuje, jak utworzyć nową aplikację, która pobiera i aktualizuje informacje w bazie danych SQL Server.
 
-The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).
+Przykłady w tym temacie korzystają z przykładowej bazy danych Northwind. Jeśli nie masz tej bazy danych na komputerze deweloperskim, możesz ją pobrać z centrum pobierania Microsoft. Aby uzyskać instrukcje, zobacz [Pobieranie przykładowych baz danych](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).
 
-### <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database
+### <a name="to-create-a-connection-to-a-database"></a>Aby utworzyć połączenie z bazą danych
 
-1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking the **View** menu, and then select **Server Explorer**/**Database Explorer**.
+1. W programie Visual Studio Otwórz **Eksplorator serwera**/**Eksplorator bazy danych** , klikając menu **Widok** , a następnie wybierając pozycję **Eksplorator serwera**/**Eksplorator bazy danych**.
 
-2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer**, and click **Add Connection**.
+2. Kliknij prawym przyciskiem myszy pozycję **połączenia danych** w **Eksplorator serwera**/**Eksplorator bazy danych**, a następnie kliknij pozycję **Dodaj połączenie**.
 
-3. Specify a valid connection to the Northwind sample database.
+3. Określ prawidłowe połączenie z przykładową bazą danych Northwind.
 
-### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>To add a Project with a LINQ to SQL file
+### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>Aby dodać projekt z plikiem LINQ to SQL
 
-1. In Visual Studio, on the **File** menu, point to **New** and then click **Project**. Select Visual Basic **Windows Forms Application** as the project type.
+1. W programie Visual Studio w menu **plik** wskaż polecenie **Nowy** , a następnie kliknij pozycję **projekt**. Wybierz Visual Basic **Windows Forms aplikacji** jako typ projektu.
 
-2. On the **Project** menu, click **Add New Item**. Select the **LINQ to SQL Classes** item template.
+2. W menu **projekt** kliknij polecenie **Dodaj nowy element**. Wybierz szablon elementu **LINQ to SQL klas** .
 
-3. Name the file `northwind.dbml`. Kliknij przycisk **Dodaj**. The Object Relational Designer (O/R Designer) is opened for the `northwind.dbml` file.
+3. Nadaj plikowi nazwę `northwind.dbml`. Kliknij przycisk **Dodaj**. Dla pliku `northwind.dbml` zostanie otwarty Object Relational Designer (Projektant O/R).
 
-### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>To add tables to query and modify to the designer
+### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>Aby dodać tabele do zapytania i modyfikować do projektanta
 
-1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Tables** folder.
+1. W **Eksplorator serwera**/**Eksplorator bazy danych**rozwiń połączenie z bazą danych Northwind. Rozwiń folder **tabele** .
 
-     If you have closed the O/R Designer, you can reopen it by double-clicking the `northwind.dbml` file that you added earlier.
+     Jeśli zamknąłeś projektanta O/R, możesz otworzyć go ponownie przez dwukrotne kliknięcie dodanego wcześniej pliku `northwind.dbml`.
 
-2. Click the Customers table and drag it to the left pane of the designer.
+2. Kliknij tabelę Customers i przeciągnij ją do lewego okienka projektanta.
 
-     The designer creates a new Customer object for your project.
+     Projektant tworzy nowy obiekt klienta dla projektu.
 
-3. Save your changes and close the designer.
+3. Zapisz zmiany i zamknij projektanta.
 
-4. Save your project.
+4. Zapisz projekt.
 
-### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>To add code to modify the database and display the results
+### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>Aby dodać kod w celu zmodyfikowania bazy danych i wyświetlenia wyników
 
-1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.
+1. Z **przybornika**przeciągnij kontrolkę <xref:System.Windows.Forms.DataGridView> do domyślnego formularza systemu Windows dla projektu, Form1.
 
-2. When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object to your project. This object contains code that you can use to access the Customers table. It also contains code that defines  a local Customer object and a Customers collection for the table. The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.
+2. Po dodaniu tabel do projektanta O/R Projektant dodał obiekt <xref:System.Data.Linq.DataContext> do projektu. Ten obiekt zawiera kod, którego można użyć w celu uzyskania dostępu do tabeli Customers. Zawiera również kod definiujący lokalny obiekt klienta i kolekcję Customers dla tabeli. Obiekt <xref:System.Data.Linq.DataContext> dla projektu jest nazwany na podstawie nazwy pliku. dbml. Dla tego projektu obiekt <xref:System.Data.Linq.DataContext> ma nazwę `northwindDataContext`.
 
-     You can create an instance of the <xref:System.Data.Linq.DataContext> object in your code and query and modify the Customers collection specified by the O/R Designer. Changes that you make to the Customers collection are not reflected in the database until you submit them by calling the <xref:System.Data.Linq.DataContext.SubmitChanges%2A> method of the <xref:System.Data.Linq.DataContext> object.
+     Można utworzyć wystąpienie obiektu <xref:System.Data.Linq.DataContext> w kodzie oraz zapytania i zmodyfikować kolekcję klientów określoną przez projektanta O/R. Zmiany wprowadzane w kolekcji Customers nie są odzwierciedlane w bazie danych, dopóki nie zostaną przesłane przez wywołanie metody <xref:System.Data.Linq.DataContext.SubmitChanges%2A> obiektu <xref:System.Data.Linq.DataContext>.
 
-     Double-click the Windows Form, Form1, to add code to the <xref:System.Windows.Forms.Form.Load> event to query the Customers table that is exposed as a property of your <xref:System.Data.Linq.DataContext>. Add the following code:
+     Kliknij dwukrotnie formularz systemu Windows, Form1, aby dodać kod do zdarzenia <xref:System.Windows.Forms.Form.Load>, aby wykonać zapytanie do tabeli Customers, która jest udostępniona jako właściwość <xref:System.Data.Linq.DataContext>. Dodaj następujący kod:
 
     ```vb
     Private db As northwindDataContext
@@ -87,9 +87,9 @@ The examples in this topic use the Northwind sample database. If you do not have
     End Sub
     ```
 
-3. From the **Toolbox**, drag three <xref:System.Windows.Forms.Button> controls onto the form. Select the first `Button` control. In the **Properties** window, set the `Name` of the `Button` control to `AddButton` and the `Text` to `Add`. Select the second button and set the `Name` property to `UpdateButton` and the `Text` property to `Update`. Select the third button and set the `Name` property to `DeleteButton` and the `Text` property to `Delete`.
+3. Z **przybornika**przeciągnij trzy <xref:System.Windows.Forms.Button> kontrolki na formularz. Wybierz pierwszą kontrolkę `Button`. W oknie **Właściwości** Ustaw `Name` kontrolki `Button` na `AddButton` i `Text` do `Add`. Wybierz drugi przycisk i ustaw właściwość `Name` na `UpdateButton` i Właściwość `Text` na `Update`. Wybierz trzeci przycisk i ustaw właściwość `Name` na `DeleteButton` i Właściwość `Text` na `Delete`.
 
-4. Double-click the **Add** button to add code to its `Click` event. Add the following code:
+4. Kliknij dwukrotnie przycisk **Dodaj** , aby dodać kod do jego zdarzenia `Click`. Dodaj następujący kod:
 
     ```vb
     Private Sub AddButton_Click(ByVal sender As System.Object,
@@ -114,7 +114,7 @@ The examples in this topic use the Northwind sample database. If you do not have
     End Sub
     ```
 
-5. Double-click the **Update** button to add code to its `Click` event. Add the following code:
+5. Kliknij dwukrotnie przycisk **Aktualizuj** , aby dodać kod do jego zdarzenia `Click`. Dodaj następujący kod:
 
     ```vb
     Private Sub UpdateButton_Click(ByVal sender As System.Object, _
@@ -138,7 +138,7 @@ The examples in this topic use the Northwind sample database. If you do not have
     End Sub
     ```
 
-6. Double-click the **Delete** button to add code to its `Click` event. Add the following code:
+6. Kliknij dwukrotnie przycisk **Usuń** , aby dodać kod do jego zdarzenia `Click`. Dodaj następujący kod:
 
     ```vb
     Private Sub DeleteButton_Click(ByVal sender As System.Object, _
@@ -159,7 +159,7 @@ The examples in this topic use the Northwind sample database. If you do not have
     End Sub
     ```
 
-7. Press F5 to run your project. Click **Add** to add a new record. Click **Update** to modify the new record. Click **Delete** to delete the new record.
+7. Naciśnij klawisz F5, aby uruchomić projekt. Kliknij przycisk **Dodaj** , aby dodać nowy rekord. Kliknij przycisk **Aktualizuj** , aby zmodyfikować nowy rekord. Kliknij przycisk **Usuń** , aby usunąć nowy rekord.
 
 ## <a name="see-also"></a>Zobacz także
 

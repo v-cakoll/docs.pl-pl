@@ -22,7 +22,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 ## <a name="documentviewer-parts"></a>DocumentViewer części  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.DocumentViewer>.  
   
-|Części|Typ|Opis|  
+|Części|Type|Opis|  
 |-|-|-|  
 |PART_ContentHost|<xref:System.Windows.Controls.ScrollViewer>|Obszar zawartość i przewijanie.|  
 |PART_FindToolBarHost|<xref:System.Windows.Controls.ContentControl>|Pole wyszukiwania na dole domyślnie.|  

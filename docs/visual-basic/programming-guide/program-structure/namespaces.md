@@ -1,5 +1,5 @@
 ---
-title: Namespaces
+title: '{1&gt;Przestrzenie nazw&lt;1}'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.global
@@ -24,49 +24,49 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347332"
 ---
 # <a name="namespaces-in-visual-basic"></a>Przestrzenie nazw w Visual Basic
-Namespaces organize the objects defined in an assembly. Assemblies can contain multiple namespaces, which can in turn contain other namespaces. Namespaces prevent ambiguity and simplify references when using large groups of objects such as class libraries.  
+Przestrzenie nazw organizują obiekty zdefiniowane w zestawie. Zestawy mogą zawierać wiele przestrzeni nazw, które mogą z kolei zawierać inne przestrzenie nazw. Przestrzenie nazw uniemożliwiają niejednoznaczność i upraszczają odwołania w przypadku używania dużych grup obiektów, takich jak biblioteki klas.  
   
- For example, the .NET Framework defines the <xref:System.Windows.Forms.ListBox> class in the <xref:System.Windows.Forms?displayProperty=nameWithType> namespace. The following code fragment shows how to declare a variable using the fully qualified name for this class:  
+ Na przykład .NET Framework definiuje klasę <xref:System.Windows.Forms.ListBox> w przestrzeni nazw <xref:System.Windows.Forms?displayProperty=nameWithType>. Poniższy fragment kodu przedstawia sposób deklarowania zmiennej przy użyciu w pełni kwalifikowanej nazwy dla tej klasy:  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
-## <a name="avoiding-name-collisions"></a>Avoiding Name Collisions  
- .NET Framework namespaces address a problem sometimes called *namespace pollution*, in which the developer of a class library is hampered by the use of similar names in another library. These conflicts with existing components are sometimes called *name collisions*.  
+## <a name="avoiding-name-collisions"></a>Unikanie kolizji nazw  
+ Przestrzenie nazw .NET Framework rozwiązaniu problemu czasami nazywanego *zanieczyszczeniem przestrzeni nazw*, w którym deweloper biblioteki klas jest niehamowany przez użycie podobnych nazw w innej bibliotece. Te konflikty z istniejącymi składnikami są czasami nazywane *kolizjami nazw*.  
   
- For example, if you create a new class named `ListBox`, you can use it inside your project without qualification. However, if you want to use the .NET Framework <xref:System.Windows.Forms.ListBox> class in the same project, you must use a fully qualified reference to make the reference unique. If the reference is not unique, Visual Basic produces an error stating that the name is ambiguous. The following code example demonstrates how to declare these objects:  
+ Na przykład jeśli utworzysz nową klasę o nazwie `ListBox`, możesz jej użyć w projekcie bez kwalifikacji. Jeśli jednak chcesz użyć klasy <xref:System.Windows.Forms.ListBox> .NET Framework w tym samym projekcie, musisz użyć w pełni kwalifikowanego odwołania, aby odwołać odwołanie. Jeśli odwołanie nie jest unikatowe, Visual Basic generuje błąd informujący o tym, że nazwa jest niejednoznaczna. Poniższy przykład kodu demonstruje, jak zadeklarować te obiekty:  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
- The following illustration shows two namespace hierarchies, both containing an object named `ListBox`:  
+ Na poniższej ilustracji przedstawiono dwie hierarchie przestrzeni nazw, które zawierają obiekt o nazwie `ListBox`:  
   
- ![Screenshot that shows two namespace hierarchies.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
+ ![Zrzut ekranu pokazujący dwie hierarchie przestrzeni nazw.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
   
- By default, every executable file you create with Visual Basic contains a namespace with the same name as your project. For example, if you define an object within a project named `ListBoxProject`, the executable file ListBoxProject.exe contains a namespace called `ListBoxProject`.  
+ Domyślnie każdy plik wykonywalny tworzony za pomocą Visual Basic zawiera przestrzeń nazw o tej samej nazwie co projekt. Na przykład jeśli zdefiniujesz obiekt w projekcie o nazwie `ListBoxProject`, plik wykonywalny ListBoxProject. exe zawiera przestrzeń nazw o nazwie `ListBoxProject`.  
   
- Multiple assemblies can use the same namespace. Visual Basic treats them as a single set of names. For example, you can define classes for a namespace called `SomeNameSpace` in an assembly named `Assemb1`, and define additional classes for the same namespace from an assembly named `Assemb2`.  
+ Wiele zestawów może używać tej samej przestrzeni nazw. Visual Basic traktuje je jako pojedynczy zestaw nazw. Na przykład można zdefiniować klasy dla przestrzeni nazw o nazwie `SomeNameSpace` w zestawie o nazwie `Assemb1`i zdefiniować dodatkowe klasy dla tej samej przestrzeni nazw z zestawu o nazwie `Assemb2`.  
   
-## <a name="fully-qualified-names"></a>Fully Qualified Names  
- Fully qualified names are object references that are prefixed with the name of the namespace in which the object is defined. You can use objects defined in other projects if you create a reference to the class (by choosing **Add Reference** from the **Project** menu) and then use the fully qualified name for the object in your code. The following code fragment shows how to use the fully qualified name for an object from another project's namespace:  
+## <a name="fully-qualified-names"></a>W pełni kwalifikowane nazwy  
+ W pełni kwalifikowane nazwy są odwołaniami do obiektów, które są poprzedzone nazwą przestrzeni nazw, w której jest zdefiniowany obiekt. Możesz użyć obiektów zdefiniowanych w innych projektach, jeśli utworzysz odwołanie do klasy (wybierając **Dodaj odwołanie** z menu **projekt** ), a następnie użyj w pełni kwalifikowanej nazwy dla obiektu w kodzie. Poniższy fragment kodu pokazuje, jak używać w pełni kwalifikowanej nazwy dla obiektu z przestrzeni nazw innego projektu:  
   
  [!code-vb[VbVbalrApplication#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#8)]  
   
- Fully qualified names prevent naming conflicts because they make it possible for the compiler to determine which object is being used. However, the names themselves can get long and cumbersome. To get around this, you can use the `Imports` statement to define an *alias*—an abbreviated name you can use in place of a fully qualified name. For example, the following code example creates aliases for two fully qualified names, and uses these aliases to define two objects.  
+ W pełni kwalifikowane nazwy uniemożliwiają konflikty nazw, ponieważ umożliwiają kompilatorowi określenie, który obiekt jest używany. Nazwy same mogą jednak być długie i nieskomplikowane. Aby to zrobić, możesz użyć instrukcji `Imports`, aby zdefiniować *alias*— skróconą nazwę, której można użyć zamiast w pełni kwalifikowanej nazwy. Poniższy przykład kodu tworzy aliasy dla dwóch w pełni kwalifikowanych nazw i używa tych aliasów do definiowania dwóch obiektów.  
   
  [!code-vb[VbVbalrApplication#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#9)]  
   
  [!code-vb[VbVbalrApplication#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#10)]  
   
- If you use the `Imports` statement without an alias, you can use all the names in that namespace without qualification, provided they are unique to the project. If your project contains `Imports` statements for namespaces that contain items with the same name, you must fully qualify that name when you use it. Suppose, for example, your project contained the following two `Imports` statements:  
+ Jeśli używasz instrukcji `Imports` bez aliasu, możesz użyć wszystkich nazw w tej przestrzeni nazw bez kwalifikacji, pod warunkiem, że są one unikatowe dla projektu. Jeśli projekt zawiera instrukcje `Imports` dla przestrzeni nazw, które zawierają elementy o tej samej nazwie, należy w pełni zakwalifikować tę nazwę podczas jej używania. Załóżmy na przykład, że projekt zawiera następujące dwie instrukcje `Imports`:  
   
  [!code-vb[VbVbalrApplication#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#11)]  
   
- If you attempt to use `Class1` without fully qualifying it, Visual Basic produces an error stating that the name `Class1` is ambiguous.  
+ Jeśli spróbujesz użyć `Class1` bez w pełni kwalifikujących się, Visual Basic generuje błąd informujący o tym, że nazwa `Class1` jest niejednoznaczna.  
   
-## <a name="namespace-level-statements"></a>Namespace Level Statements  
- Within a namespace, you can define items such as modules, interfaces, classes, delegates, enumerations, structures, and other namespaces. You cannot define items such as properties, procedures, variables and events at the namespace level. These items must be declared within containers such as modules, structures, or classes.  
+## <a name="namespace-level-statements"></a>Instrukcje na poziomie przestrzeni nazw  
+ W przestrzeni nazw można definiować elementy, takie jak moduły, interfejsy, klasy, Delegaty, wyliczenia, struktury i inne przestrzenie nazw. Nie można definiować elementów, takich jak właściwości, procedury, zmienne i zdarzenia, na poziomie przestrzeni nazw. Te elementy muszą być zadeklarowane w kontenerach, takich jak moduły, struktury lub klasy.  
   
-## <a name="global-keyword-in-fully-qualified-names"></a>Global Keyword in Fully Qualified Names  
- If you have defined a nested hierarchy of namespaces, code inside that hierarchy might be blocked from accessing the <xref:System?displayProperty=nameWithType> namespace of the .NET Framework. The following example illustrates a hierarchy in which the `SpecialSpace.System` namespace blocks access to <xref:System?displayProperty=nameWithType>.  
+## <a name="global-keyword-in-fully-qualified-names"></a>Globalne słowo kluczowe w w pełni kwalifikowanych nazwach  
+ Jeśli zdefiniowano hierarchię zagnieżdżoną przestrzeni nazw, kod wewnątrz tej hierarchii może mieć zablokowany dostęp do przestrzeni nazw <xref:System?displayProperty=nameWithType> .NET Framework. Poniższy przykład ilustruje hierarchię, w której przestrzeń nazw `SpecialSpace.System` blokuje dostęp do <xref:System?displayProperty=nameWithType>.  
   
 ```vb  
 Namespace SpecialSpace  
@@ -81,7 +81,7 @@ Namespace SpecialSpace
 End Namespace  
 ```  
   
- As a result, the Visual Basic compiler cannot successfully resolve the reference to <xref:System.Int32?displayProperty=nameWithType>, because `SpecialSpace.System` does not define `Int32`. You can use the `Global` keyword to start the qualification chain at the outermost level of the .NET Framework class library. This allows you to specify the <xref:System?displayProperty=nameWithType> namespace or any other namespace in the class library. Ilustruje to poniższy przykład.  
+ W związku z tym kompilator Visual Basic nie może pomyślnie rozpoznać odwołania do <xref:System.Int32?displayProperty=nameWithType>, ponieważ `SpecialSpace.System` nie definiuje `Int32`. Możesz użyć słowa kluczowego `Global`, aby uruchomić łańcuch kwalifikacji na najbardziej zewnętrznym poziomie biblioteki klas .NET Framework. Pozwala to określić przestrzeń nazw <xref:System?displayProperty=nameWithType> lub inną przestrzeń nazw w bibliotece klas. Ilustruje to poniższy przykład.  
   
 ```vb  
 Namespace SpecialSpace  
@@ -96,26 +96,26 @@ Namespace SpecialSpace
 End Namespace  
 ```  
   
- You can use `Global` to access other root-level namespaces, such as <xref:Microsoft.VisualBasic?displayProperty=nameWithType>, and any namespace associated with your project.  
+ Za pomocą `Global` można uzyskać dostęp do innych obszarów nazw na poziomie głównym, takich jak <xref:Microsoft.VisualBasic?displayProperty=nameWithType>i wszystkie przestrzenie nazw skojarzone z projektem.  
   
-## <a name="global-keyword-in-namespace-statements"></a>Global Keyword in Namespace Statements  
- You can also use the `Global` keyword in a [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md). This lets you define a namespace out of the root namespace of your project.  
+## <a name="global-keyword-in-namespace-statements"></a>Globalne słowo kluczowe w instrukcjach Namespace  
+ Można również użyć słowa kluczowego `Global` w [instrukcji Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md). Pozwala to definiować przestrzeń nazw poza główną przestrzenią nazw projektu.  
   
- All namespaces in your project are based on the root namespace for the project.  Visual Studio assigns your project name as the default root namespace for all code in your project. For example, if your project is named `ConsoleApplication1`, its programming elements belong to namespace `ConsoleApplication1`. If you declare `Namespace Magnetosphere`, references to `Magnetosphere` in the project will access `ConsoleApplication1.Magnetosphere`.  
+ Wszystkie przestrzenie nazw w projekcie są oparte na głównej przestrzeni nazw dla projektu.  Program Visual Studio przypisuje nazwę projektu jako domyślną główną przestrzeń nazw dla całego kodu w projekcie. Na przykład jeśli projekt ma nazwę `ConsoleApplication1`, jego elementy programistyczne należą do `ConsoleApplication1`przestrzeni nazw. Jeśli zadeklarujesz `Namespace Magnetosphere`, odwołania do `Magnetosphere` w projekcie będą miały dostęp do `ConsoleApplication1.Magnetosphere`.  
   
- The following examples use the `Global` keyword to declare a namespace out of the root namespace for the project.  
+ W poniższych przykładach użyto słowa kluczowego `Global`, aby zadeklarować przestrzeń nazw poza główną przestrzeń nazw dla projektu.  
   
  [!code-vb[VbVbalrApplication#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/module1.vb#22)]  
   
- In a namespace declaration, `Global` cannot be nested in another namespace.  
+ W deklaracji przestrzeni nazw `Global` nie może być zagnieżdżona w innej przestrzeni nazw.  
   
- You can use the [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic) to view and modify the **Root Namespace** of the project.  For new projects, the **Root Namespace** defaults to the project name. To cause `Global` to be the top-level namespace, you can clear the **Root Namespace** entry so that the box is empty. Clearing **Root Namespace** removes the need for the `Global` keyword in namespace declarations.  
+ Za pomocą [strony aplikacji, projektanta projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic) można wyświetlać i modyfikować **główną przestrzeń nazw** projektu.  W przypadku nowych projektów, **główna przestrzeń nazw** domyślnie jest nazwą projektu. Aby spowodować, że `Global` być przestrzenią nazw najwyższego poziomu, możesz wyczyścić wpis **głównej przestrzeni nazw** , aby pole było puste. Czyszczenie **głównej przestrzeni nazw** eliminuje potrzebę słowa kluczowego `Global` w deklaracjach przestrzeni nazw.  
   
- If a `Namespace` statement declares a name that is also a namespace in the .NET Framework, the .NET Framework namespace becomes unavailable if the `Global` keyword is not used in a fully qualified name. To enable access to that .NET Framework namespace without using the `Global` keyword, you can include the `Global` keyword in the `Namespace` statement.  
+ Jeśli instrukcja `Namespace` deklaruje nazwę, która jest również przestrzenią nazw w .NET Framework, przestrzeń nazw .NET Framework będzie niedostępna, jeśli słowo kluczowe `Global` nie zostanie użyte w w pełni kwalifikowana nazwa. Aby umożliwić dostęp do tego .NET Framework przestrzeni nazw bez użycia słowa kluczowego `Global`, można uwzględnić słowo kluczowe `Global` w instrukcji `Namespace`.  
   
- The following example has the `Global` keyword in the `System.Text` namespace declaration.  
+ Poniższy przykład zawiera słowo kluczowe `Global` w deklaracji przestrzeni nazw `System.Text`.  
   
- If the `Global` keyword was not present in the namespace declaration, <xref:System.Text.StringBuilder> could not be accessed without specifying `Global.System.Text.StringBuilder`. For a project named `ConsoleApplication1`, references to `System.Text` would access `ConsoleApplication1.System.Text` if the `Global` keyword was not used.  
+ Jeśli słowo kluczowe `Global` nie było obecne w deklaracji przestrzeni nazw, nie można uzyskać dostępu <xref:System.Text.StringBuilder> bez określania `Global.System.Text.StringBuilder`. W przypadku projektu o nazwie `ConsoleApplication1`odwołania do `System.Text` będą miały dostęp `ConsoleApplication1.System.Text`, jeśli słowo kluczowe `Global` nie zostało użyte.  
   
  [!code-vb[VbVbalrApplication#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/module1.vb#21)]  
   

@@ -15,71 +15,71 @@ ms.locfileid: "74347868"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Stałe i wyliczenia (Visual Basic)
 
-Visual Basic supplies a number of predefined constants and enumerations for developers. Constants store values that remain constant throughout the execution of an application. Enumerations provide a convenient way to work with sets of related constants, and to associate constant values with names.  
+Visual Basic dostarcza wiele wstępnie zdefiniowanych stałych i wyliczeń dla deweloperów. Stałe wartości magazynu, które pozostają stałe przez cały czas wykonywania aplikacji. Wyliczenia zapewniają wygodny sposób pracy z zestawami powiązanych stałych i kojarzenia wartości stałych z nazwami.  
   
 ## <a name="constants"></a>Stałe  
   
-### <a name="conditional-compilation-constants"></a>Conditional Compilation Constants  
+### <a name="conditional-compilation-constants"></a>Stałe kompilacji warunkowej  
 
- The following table lists the predefined constants available for conditional compilation.  
+ W poniższej tabeli wymieniono wstępnie zdefiniowane stałe dostępne dla kompilacji warunkowej.  
   
-|**Constant**|**Opis**|  
+|**Stałego**|**Opis**|  
 |---|---|  
-|`CONFIG`|A string that corresponds to the current setting of the **Active Solution Configuration** box in the **Configuration Manager**.|  
-|`DEBUG`|A `Boolean` value that can be set in the **Project Properties** dialog box. By default, the Debug configuration for a project defines `DEBUG`. When `DEBUG` is defined, <xref:System.Diagnostics.Debug> class methods generate output to the **Output** window. When it is not defined, <xref:System.Diagnostics.Debug> class methods are not compiled and no Debug output is generated.|  
-|`TARGET`|A string representing the output type for the project or the setting of the command-line **/target** option. The possible values of `TARGET` are:<br /><br /> -   "winexe" for a Windows application.<br />-   "exe" for a console application.<br />-   "library" for a class library.<br />-   "module" for a module.<br />-   The **/target** option may be set in the Visual Studio integrated development environment. For more information, see [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
-|`TRACE`|A `Boolean` value that can be set in the **Project Properties** dialog box. By default, all configurations for a project define `TRACE`. When `TRACE` is defined, <xref:System.Diagnostics.Trace> class methods generate output to the **Output** window. When it is not defined, <xref:System.Diagnostics.Trace> class methods are not compiled and no `Trace` output is generated.|  
-|`VBC_VER`|A number representing the Visual Basic version, in *major*.*minor* format.|  
+|`CONFIG`|Ciąg, który odpowiada bieżącemu ustawieniu **aktywnej konfiguracji rozwiązania** w **Configuration Manager**.|  
+|`DEBUG`|Wartość `Boolean`, którą można ustawić w oknie dialogowym **właściwości projektu** . Domyślnie Konfiguracja debugowania dla projektu definiuje `DEBUG`. Gdy `DEBUG` jest zdefiniowany, <xref:System.Diagnostics.Debug> metody klasy generują dane wyjściowe do okna **danych wyjściowych** . Gdy nie jest zdefiniowany, metody klasy <xref:System.Diagnostics.Debug> nie są kompilowane i nie są generowane żadne dane wyjściowe debugowania.|  
+|`TARGET`|Ciąg reprezentujący typ danych wyjściowych dla projektu lub ustawienia opcji **/Target** w wierszu polecenia. Możliwe wartości `TARGET` są następujące:<br /><br /> -"winexe" dla aplikacji systemu Windows.<br />-"exe" dla aplikacji konsolowej.<br />-"Biblioteka" dla biblioteki klas.<br />-"module" dla modułu.<br />-Opcja **/Target** można ustawić w zintegrowanym środowisku programistycznym programu Visual Studio. Aby uzyskać więcej informacji, zobacz [-Target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
+|`TRACE`|Wartość `Boolean`, którą można ustawić w oknie dialogowym **właściwości projektu** . Domyślnie wszystkie konfiguracje dla projektu definiują `TRACE`. Gdy `TRACE` jest zdefiniowany, <xref:System.Diagnostics.Trace> metody klasy generują dane wyjściowe do okna **danych wyjściowych** . Gdy nie jest on zdefiniowany, metody klasy <xref:System.Diagnostics.Trace> nie są kompilowane i nie są generowane żadne `Trace` dane wyjściowe.|  
+|`VBC_VER`|Liczba reprezentująca wersję Visual Basic w języku *głównym*. Format *pomocniczy* .|  
   
-### <a name="print-and-display-constants"></a>Print and Display Constants  
+### <a name="print-and-display-constants"></a>Drukowanie i wyświetlanie stałych  
 
- When you call print and display functions, you can use the following constants in your code in place of the actual values.  
+ Po wywołaniu funkcji drukowania i wyświetlania, można użyć następujących stałych w kodzie zamiast rzeczywistych wartości.  
   
-|**Constant**|**Opis**|  
+|**Stałego**|**Opis**|  
 |---|---|  
-|`vbCrLf`|Carriage return/linefeed character combination.|  
-|`vbCr`|Carriage return character.|  
-|`vbLf`|Linefeed character.|  
-|`vbNewLine`|Newline character.|  
-|`vbNullChar`|Null character.|  
-|`vbNullString`|Not the same as a zero-length string (""); used for calling external procedures.|  
-|`vbObjectError`|Error number. User-defined error numbers should be greater than this value. Na przykład:<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
-|`vbTab`|Tab character.|  
-|`vbBack`|Backspace character.|  
-|`vbFormFeed`|Not used in Microsoft Windows.|  
-|`vbVerticalTab`|Not useful in Microsoft Windows.|  
+|`vbCrLf`|Kombinacja znaków powrotu karetki/wysuwu wiersza.|  
+|`vbCr`|Znak powrotu karetki.|  
+|`vbLf`|Znak wysuwu wiersza.|  
+|`vbNewLine`|Znak nowego wiersza.|  
+|`vbNullChar`|Znak null.|  
+|`vbNullString`|Nie taka sama jak ciąg o zerowej długości (""); używane do wywoływania procedur zewnętrznych.|  
+|`vbObjectError`|Numer błędu. Liczba błędów zdefiniowana przez użytkownika powinna być większa niż ta wartość. Na przykład:<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
+|`vbTab`|Znak tabulacji.|  
+|`vbBack`|Znak Backspace.|  
+|`vbFormFeed`|Nieużywane w systemie Microsoft Windows.|  
+|`vbVerticalTab`|Nieprzydatne w systemie Microsoft Windows.|  
   
 ## <a name="enumerations"></a>Wyliczenia  
 
- The following table lists and describes the enumerations provided by Visual Basic.  
+ W poniższej tabeli wymieniono i opisano wyliczenia dostarczone przez Visual Basic.  
   
 |Wyliczenie|Opis|  
 |---|---|  
-|<xref:Microsoft.VisualBasic.AppWinStyle>|Indicates the window style to use for the invoked program when calling the <xref:Microsoft.VisualBasic.Interaction.Shell%2A> function.|  
-|<xref:Microsoft.VisualBasic.AudioPlayMode>|Indicates how to play sounds when calling audio methods.|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole>|Indicates the type of role to check when calling the <xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A> method.|  
-|<xref:Microsoft.VisualBasic.CallType>|Indicates the type of procedure being invoked when calling the <xref:Microsoft.VisualBasic.Interaction.CallByName%2A> function.|  
-|<xref:Microsoft.VisualBasic.CompareMethod>|Indicates how to compare strings when calling comparison functions.|  
-|<xref:Microsoft.VisualBasic.DateFormat>|Indicates how to display dates when calling the <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A> function.|  
-|<xref:Microsoft.VisualBasic.DateInterval>|Indicates how to determine and format date intervals when calling date-related functions.|  
-|<xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption>|Specifies what should be done when a directory that is to be deleted contains files or directories.|  
-|<xref:Microsoft.VisualBasic.DueDate>|Indicates when payments are due when calling financial methods.|  
-|<xref:Microsoft.VisualBasic.FileIO.FieldType>|Indicates whether text fields are delimited or fixed-width.|  
-|<xref:Microsoft.VisualBasic.FileAttribute>|Indicates the file attributes to use when calling file-access functions.|  
-|<xref:Microsoft.VisualBasic.FirstDayOfWeek>|Indicates the first day of the week to use when calling date-related functions.|  
-|<xref:Microsoft.VisualBasic.FirstWeekOfYear>|Indicates the first week of the year to use when calling date-related functions.|  
-|<xref:Microsoft.VisualBasic.MsgBoxResult>|Indicates which button was pressed on a message box, returned by the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function.|  
-|<xref:Microsoft.VisualBasic.MsgBoxStyle>|Indicates which buttons to display when calling the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function.|  
-|<xref:Microsoft.VisualBasic.OpenAccess>|Indicates how to open a file when calling file-access functions.|  
-|<xref:Microsoft.VisualBasic.OpenMode>|Indicates how to open a file when calling file-access functions.|  
-|<xref:Microsoft.VisualBasic.OpenShare>|Indicates how to open a file when calling file-access functions.|  
-|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|Specifies whether a file should be deleted permanently or placed in the Recycle Bin.|  
-|<xref:Microsoft.VisualBasic.FileIO.SearchOption>|Specifies whether to search all or only top-level directories.|  
-|<xref:Microsoft.VisualBasic.TriState>|Indicates a `Boolean` value or whether the default should be used when calling number-formatting functions.|  
-|<xref:Microsoft.VisualBasic.FileIO.UICancelOption>|Specifies what should be done if the user clicks **Cancel** during an operation.|  
-|<xref:Microsoft.VisualBasic.FileIO.UIOption>|Specifies whether or not to show a progress dialog when copying, deleting, or moving files or directories.|  
-|<xref:Microsoft.VisualBasic.VariantType>|Indicates the type of a variant object, returned by the <xref:Microsoft.VisualBasic.Information.VarType%2A> function.|  
-|<xref:Microsoft.VisualBasic.VbStrConv>|Indicates which type of conversion to perform when calling the <xref:Microsoft.VisualBasic.Strings.StrConv%2A> function.|  
+|<xref:Microsoft.VisualBasic.AppWinStyle>|Określa styl okna, który ma być używany dla wywoływanego programu podczas wywoływania funkcji <xref:Microsoft.VisualBasic.Interaction.Shell%2A>.|  
+|<xref:Microsoft.VisualBasic.AudioPlayMode>|Wskazuje sposób odtwarzania dźwięków podczas wywoływania metod audio.|  
+|<xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole>|Wskazuje typ roli do sprawdzenia podczas wywoływania metody <xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>.|  
+|<xref:Microsoft.VisualBasic.CallType>|Wskazuje typ procedury wywoływanej podczas wywoływania funkcji <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>.|  
+|<xref:Microsoft.VisualBasic.CompareMethod>|Wskazuje sposób porównywania ciągów podczas wywoływania funkcji porównywania.|  
+|<xref:Microsoft.VisualBasic.DateFormat>|Wskazuje sposób wyświetlania dat podczas wywoływania funkcji <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>.|  
+|<xref:Microsoft.VisualBasic.DateInterval>|Wskazuje, jak określić i sformatować interwały dat podczas wywoływania funkcji związanych z datą.|  
+|<xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption>|Określa, co należy zrobić, gdy katalog, który ma zostać usunięty, zawiera pliki lub katalogi.|  
+|<xref:Microsoft.VisualBasic.DueDate>|Wskazuje, kiedy płatności są należne przy wywoływaniu metod finansowych.|  
+|<xref:Microsoft.VisualBasic.FileIO.FieldType>|Wskazuje, czy pola tekstowe są rozdzielane, czy o stałej szerokości.|  
+|<xref:Microsoft.VisualBasic.FileAttribute>|Wskazuje atrybuty pliku do użycia podczas wywoływania funkcji dostępu do plików.|  
+|<xref:Microsoft.VisualBasic.FirstDayOfWeek>|Wskazuje pierwszy dzień tygodnia, który ma być używany podczas wywoływania funkcji związanych z datą.|  
+|<xref:Microsoft.VisualBasic.FirstWeekOfYear>|Wskazuje pierwszy tydzień roku, który ma być używany podczas wywoływania funkcji związanych z datą.|  
+|<xref:Microsoft.VisualBasic.MsgBoxResult>|Wskazuje, który przycisk został naciśnięty w oknie komunikatu zwracanym przez funkcję <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>.|  
+|<xref:Microsoft.VisualBasic.MsgBoxStyle>|Wskazuje, które przyciski mają być wyświetlane podczas wywoływania funkcji <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>.|  
+|<xref:Microsoft.VisualBasic.OpenAccess>|Wskazuje, jak otworzyć plik podczas wywoływania funkcji dostępu do plików.|  
+|<xref:Microsoft.VisualBasic.OpenMode>|Wskazuje, jak otworzyć plik podczas wywoływania funkcji dostępu do plików.|  
+|<xref:Microsoft.VisualBasic.OpenShare>|Wskazuje, jak otworzyć plik podczas wywoływania funkcji dostępu do plików.|  
+|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|Określa, czy plik powinien być trwale usunięty lub umieszczony w koszu.|  
+|<xref:Microsoft.VisualBasic.FileIO.SearchOption>|Określa, czy mają być przeszukiwane wszystkie, czy tylko katalogi najwyższego poziomu.|  
+|<xref:Microsoft.VisualBasic.TriState>|Wskazuje wartość `Boolean` lub, czy należy użyć wartości domyślnej podczas wywoływania funkcji formatowania liczb.|  
+|<xref:Microsoft.VisualBasic.FileIO.UICancelOption>|Określa, co należy zrobić, jeśli użytkownik kliknie **przycisk Anuluj** podczas operacji.|  
+|<xref:Microsoft.VisualBasic.FileIO.UIOption>|Określa, czy wyświetlać okno dialogowe postępu podczas kopiowania, usuwania lub przeniesienia plików lub katalogów.|  
+|<xref:Microsoft.VisualBasic.VariantType>|Wskazuje typ obiektu Variant zwracanego przez funkcję <xref:Microsoft.VisualBasic.Information.VarType%2A>.|  
+|<xref:Microsoft.VisualBasic.VbStrConv>|Wskazuje typ konwersji do wykonania podczas wywoływania funkcji <xref:Microsoft.VisualBasic.Strings.StrConv%2A>.|  
   
 ## <a name="see-also"></a>Zobacz także
 

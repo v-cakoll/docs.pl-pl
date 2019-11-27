@@ -18,30 +18,30 @@ ms.locfileid: "74330284"
 ---
 # <a name="development-with-my-visual-basic"></a>Rozwój za pomocą My (Visual Basic)
 
-Visual Basic provides new features for rapid application development that improve productivity and ease of use while delivering power. One of these features, called `My`, provides access to information and default object instances that are related to the application and its run-time environment. This information is organized in a format that is discoverable through IntelliSense and logically delineated according to use.  
+Usługa Visual Basic udostępnia nowe funkcje szybkiego tworzenia aplikacji, które zwiększają produktywność i łatwość używania przy dostarczaniu mocy. Jedna z tych funkcji, nazywana `My`, zapewnia dostęp do informacji i domyślnych wystąpień obiektów, które są powiązane z aplikacją i jej środowiskiem wykonawczym. Te informacje są zorganizowane w formacie, który jest wykrywalny za pomocą technologii IntelliSense i logicznie podzielony zgodnie z użyciem.  
   
- Top-level members of `My` are exposed as objects. Each object behaves similarly to a namespace or a class with `Shared` members, and it exposes a set of related members.  
+ Elementy członkowskie najwyższego poziomu `My` są ujawniane jako obiekty. Każdy obiekt zachowuje się podobnie do przestrzeni nazw lub klasy z `Shared` członkami i uwidacznia zestaw powiązanych członków.  
   
- This table shows the top-level `My` objects and their relationship to each other.  
+ W tej tabeli przedstawiono obiekty `My` najwyższego poziomu i ich relacje ze sobą.  
   
- ![Diagram shows the object model for My.](./media/index/my-object-model-relationships.gif)  
+ ![Diagram przedstawia model obiektów my.](./media/index/my-object-model-relationships.gif)  
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
  [Wykonywanie zadań z My.Application, My.Computer oraz My.User](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
- Describes the three central `My` objects, `My.Application`, `My.Computer`, and `My.User`, which provide access to information and functionality  
+ Opisuje trzy centralne `My` obiekty, `My.Application`, `My.Computer`i `My.User`, które zapewniają dostęp do informacji i funkcji  
   
  [Domyślne wystąpienia obiektu zapewniane przez My.Forms i My.WebServices](../../../visual-basic/developing-apps/development-with-my/default-object-instances-provided-by-my-forms-and-my-webservices.md)  
- Describes the `My.Forms` and `My.WebServices` objects, which provide access to forms, data sources, and XML Web services used by your application.  
+ Opisuje obiekty `My.Forms` i `My.WebServices`, które zapewniają dostęp do formularzy, źródeł danych i usług sieci Web XML używanych przez aplikację.  
   
  [Szybkie opracowywanie aplikacji przy użyciu My.Resources i My.Settings](../../../visual-basic/developing-apps/development-with-my/rapid-application-development-with-my-resources-and-my-settings.md)  
- Describes the `My.Resources` and `My.Settings` objects, which provide access to an application's resources and settings.  
+ Opisuje `My.Resources` i `My.Settings` obiektów, które zapewniają dostęp do zasobów i ustawień aplikacji.  
   
  [Omówienie modelu aplikacji Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Describes the Visual Basic Application Startup/Shutdown model.  
+ Opisuje model uruchamiania/zamykania aplikacji Visual Basic.  
   
  [Jak My zależy od typu projektu](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
- Gives details on which `My` features are available in different project types.  
+ Zawiera szczegółowe informacje o tym, które funkcje `My` są dostępne w różnych typach projektów.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,16 +15,16 @@ ms.locfileid: "74348756"
 ---
 # <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Porady: znajdowanie plików z określonym wzorcem w Visual Basic
 
-The <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> method returns a read-only collection of strings representing the path names for the files. You can use the `wildCards` parameter to specify a specific pattern. If you would like to include subdirectories in the search, set the `searchType` parameter to `SearchOption.SearchAllSubDirectories`.  
+Metoda <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> zwraca kolekcję ciągów, reprezentującą nazwy ścieżek dla plików. Aby określić konkretny wzorzec, można użyć parametru `wildCards`. Jeśli chcesz uwzględnić podkatalogi w wyszukiwaniu, ustaw parametr `searchType` na `SearchOption.SearchAllSubDirectories`.  
   
- An empty collection is returned if no files matching the specified pattern are found.  
+ Pusta kolekcja jest zwracana, jeśli nie znaleziono plików zgodnych z określonym wzorcem.  
   
 > [!NOTE]
-> For information about returning a file list by using the `DirectoryInfo` class of the `System.IO` namespace, see <xref:System.IO.DirectoryInfo.GetFiles%2A>.  
+> Aby uzyskać informacje o zwracaniu listy plików przy użyciu klasy `DirectoryInfo` przestrzeni nazw `System.IO`, zobacz <xref:System.IO.DirectoryInfo.GetFiles%2A>.  
   
-### <a name="to-find-files-with-a-specified-pattern"></a>To find files with a specified pattern  
+### <a name="to-find-files-with-a-specified-pattern"></a>Aby znaleźć pliki o określonym wzorcu  
   
-- Use the `GetFiles` method, supplying the name and path of the directory you want to search and specifying the pattern. The following example returns all files with the extension `.dll` in the directory and adds them to `ListBox1`.  
+- Użyj metody `GetFiles`, podając nazwę i ścieżkę katalogu, który chcesz przeszukać i określić wzorzec. Poniższy przykład zwraca wszystkie pliki z rozszerzeniem `.dll` w katalogu i dodaje je do `ListBox1`.  
   
      [!code-vb[VbFileIOMisc#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#4)]  
   
@@ -32,21 +32,21 @@ The <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> method r
 
  Następujące warunki mogą spowodować wyjątek:  
   
-- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).  
+- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (rozpoczyna się od \\\\.\\) (<xref:System.ArgumentException>).  
   
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).  
+- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).  
   
-- `directory` does not exist (<xref:System.IO.DirectoryNotFoundException>).  
+- `directory` nie istnieje (<xref:System.IO.DirectoryNotFoundException>).  
   
-- `directory` points to an existing file (<xref:System.IO.IOException>).  
+- `directory` wskazuje istniejący plik (<xref:System.IO.IOException>).  
   
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).  
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
   
-- A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).  
+- Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).  
   
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).  
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
   
-- The user lacks necessary permissions (<xref:System.UnauthorizedAccessException>).  
+- Użytkownik nie ma wymaganych uprawnień (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Zobacz także
 

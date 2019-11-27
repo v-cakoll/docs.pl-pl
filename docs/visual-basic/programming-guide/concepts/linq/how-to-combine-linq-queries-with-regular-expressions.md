@@ -1,5 +1,5 @@
 ---
-title: How to combine LINQ queries with regular expressions
+title: Sposób łączenia zapytań LINQ z wyrażeniami regularnymi
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
 ms.openlocfilehash: 27fc46056ad78567339ca0c5818aef38d0fbb9a6
@@ -9,9 +9,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348418"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>How to combine LINQ queries with regular expressions (Visual Basic)
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Jak połączyć zapytania LINQ z wyrażeniami regularnymi (Visual Basic)
 
-This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings. The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.
+Ten przykład pokazuje, jak używać klasy <xref:System.Text.RegularExpressions.Regex> do tworzenia wyrażenia regularnego w celu uzyskania bardziej złożonych odpowiedników w ciągach tekstowych. Zapytanie LINQ ułatwia filtrowanie według dokładnie plików, które mają być przeszukiwane przy użyciu wyrażenia regularnego, oraz do kształtowania wyników.
 
 ## <a name="example"></a>Przykład
 
@@ -82,13 +82,13 @@ Class LinqRegExVB
 End Class
 ```
 
-Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search. In this example only the value of each match is produced in the results. However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection. Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.
+Należy zauważyć, że można także zbadać obiekt <xref:System.Text.RegularExpressions.MatchCollection>, który jest zwracany przez wyszukiwanie `RegEx`. W tym przykładzie tylko wartość każdego dopasowania jest generowana w wynikach. Można jednak używać LINQ do wykonywania wszelkiego rodzaju filtrowania, sortowania i grupowania w tej kolekcji. Ponieważ <xref:System.Text.RegularExpressions.MatchCollection> jest nieogólną kolekcją <xref:System.Collections.IEnumerable>, należy jawnie podać typ zmiennej zakresu w zapytaniu.
 
-## <a name="compiling-the-code"></a>Compiling the code
+## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Create a VB.NET console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.
+Utwórz projekt aplikacji konsolowej VB.NET, skopiuj i wklej przykładowy kod, a następnie Dostosuj wartość obiektu uruchomieniowego we właściwościach projektu.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ and Strings (Visual Basic)](linq-and-strings.md)
-- [LINQ and File Directories (Visual Basic)](linq-and-file-directories.md)
+- [LINQ i ciągi (Visual Basic)](linq-and-strings.md)
+- [LINQ i katalogi plików (Visual Basic)](linq-and-file-directories.md)

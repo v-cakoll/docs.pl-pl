@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332331"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>Porady: dostęp do atrybutów XML (Visual Basic)
-This example shows how to use an attribute axis property to access XML attributes in an XML element by name. In particular, it uses the `type` attribute axis property to access the attribute named `type` in the `phone` object.  
+Ten przykład pokazuje, jak używać właściwości osi atrybutu w celu uzyskania dostępu do atrybutów XML w elemencie XML według nazwy. W szczególności używa właściwości `type` osi atrybutu w celu uzyskania dostępu do atrybutu o nazwie `type` w obiekcie `phone`.  
   
 ## <a name="example"></a>Przykład  
  [!code-vb[VbXMLSamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#11)]  
@@ -24,5 +24,5 @@ This example shows how to use an attribute axis property to access XML attribute
 
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
 - [Właściwości osi atrybutu XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [Accessing XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+- [Uzyskiwanie dostępu do pliku XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

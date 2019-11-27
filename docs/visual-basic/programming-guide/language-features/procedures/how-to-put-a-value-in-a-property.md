@@ -16,23 +16,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346053"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>Porady: umieszczanie wartości we właściwości (Visual Basic)
-You store a value in a property by putting the property name on the left side of an assignment statement.  
+Wartość właściwości jest przechowywana przez umieszczenie nazwy właściwości po lewej stronie instrukcji przypisania.  
   
- The property's `Set` procedure stores a value, but you do not explicitly call it by name. You use the property just as you would use a variable. Visual Basic makes the calls to the property's procedures.  
+ Procedura `Set` właściwości przechowuje wartość, ale nie można jawnie wywołać jej według nazwy. Właściwość jest używana tak samo jak w przypadku użycia zmiennej. Visual Basic wykonuje wywołania procedur właściwości.  
   
-### <a name="to-store-a-value-in-a-property"></a>To store a value in a property  
+### <a name="to-store-a-value-in-a-property"></a>Aby zapisać wartość w właściwości  
   
-1. Use the property name on the left side of an assignment statement.  
+1. Użyj nazwy właściwości po lewej stronie instrukcji przypisania.  
   
-     The following example sets the value of the Visual Basic `TimeOfDay` property to noon, implicitly calling its `Set` procedure.  
+     Poniższy przykład ustawia wartość właściwości Visual Basic `TimeOfDay` na południe, niejawnie wywołując procedurę `Set`.  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
-2. If the property takes arguments, follow the property name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses.  
+2. Jeśli właściwość przyjmuje argumenty, postępuj zgodnie z nazwą właściwości z nawiasami, aby umieścić listę argumentów. Jeśli nie ma żadnych argumentów, możesz opcjonalnie pominąć nawiasy.  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the property defines the corresponding parameters.  
+3. Umieść argumenty na liście argumentów w nawiasach rozdzielonych przecinkami. Upewnij się, że argumenty są podawane w tej samej kolejności, w której Właściwość definiuje odpowiednie parametry.  
   
-4. The value generated on the right side of the assignment statement is stored in the property.  
+4. Wartość wygenerowana po prawej stronie instrukcji przypisania jest przechowywana we właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -40,9 +40,9 @@ You store a value in a property by putting the property name on the left side of
 - [Procedury właściwości](./property-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Property, instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Różnice między właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md)
 - [Instrukcje: tworzenie właściwości](./how-to-create-a-property.md)
 - [Instrukcje: deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Instrukcje: wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Instrukcje: deklarowanie i wywoływanie właściwości domyślnej w Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Instrukcje: pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)

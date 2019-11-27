@@ -1,5 +1,5 @@
 ---
-title: 'How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style'
+title: 'Instrukcje: używanie adnotacji do przekształcania drzew LINQ to XML w stylu XSLT'
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
 ms.openlocfilehash: d9cb32462535f099107343bd9069b4da3508c5b0
@@ -9,41 +9,41 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348354"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Instrukcje: używanie adnotacji do przekształcania drzew LINQ to XML w stylu XSLT (Visual Basic)
 
-Annotations can be used to facilitate transforms of an XML tree.
+Adnotacje mogą służyć do ułatwienia transformacji drzewa XML.
 
-Some XML documents are "document centric with mixed content." With such documents, you don't necessarily know the shape of child nodes of an element. For instance, a node that contains text may look like this:
+Niektóre dokumenty XML to "dokument zorientowany na zawartość mieszaną". W takich dokumentach nie trzeba znać kształtu węzłów podrzędnych elementu. Na przykład węzeł zawierający tekst może wyglądać następująco:
 
 ```xml
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>
 ```
 
-For any given text node, there may be any number of child `<b>` and `<i>` elements. This approach extends to a number of other situations: such as, pages that can contain a variety of child elements, such as regular paragraphs, bulleted paragraphs, and bitmaps. Cells in a table may contain text, drop down lists, or bitmaps. One of the primary characteristics of document centric XML is that you do not know which child element any particular element will have.
+Dla dowolnego węzła tekstowego może istnieć wiele elementów podrzędnych `<b>` i `<i>`. Takie podejście rozciąga się do wielu innych sytuacji: takich jak strony, które mogą zawierać różne elementy podrzędne, takie jak regularne akapity, punktowane akapity i mapy bitowe. Komórki w tabeli mogą zawierać tekst, listy rozwijane lub mapy bitowe. Jedną z podstawowych cech języka XML zorientowanego na dokument jest to, że nie wiesz, który element podrzędny ma określony element.
 
-If you want to transform elements in a tree where you don't necessarily know much about the children of the elements that you want to transform, then this approach that uses annotations is an effective approach.
+Jeśli chcesz przekształcić elementy w drzewie, w której nie ma potrzeby bardzo często wiedzieć o elementach podrzędnych elementów, które chcesz przekształcić, to podejście wykorzystujące adnotacje jest skutecznym podejściem.
 
-The summary of the approach is:
+Podsumowanie podejścia to:
 
-- First, annotate elements in the tree with a replacement element.
+- Najpierw Dodaj adnotację do elementów w drzewie z elementem zastępującym.
 
-- Second, iterate through the entire tree, creating a new tree where you replace each element with its annotation. This example implements the iteration and creation of the new tree in a function named `XForm`.
+- Następnie wykonaj iterację w całym drzewie, tworząc nowe drzewo, w którym każdy element jest zastępowany adnotacją. Ten przykład implementuje iterację i tworzenie nowego drzewa w funkcji o nazwie `XForm`.
 
-In detail, the approach consists of:
+Szczegółowo podejście obejmuje:
 
-- Execute one or more LINQ to XML queries that return the set of elements that you want to transform from one shape to another. For each element in the query, add a new <xref:System.Xml.Linq.XElement> object as an annotation to the element. This new element will replace the annotated element in the new, transformed tree. This is simple code to write, as demonstrated by the example.
+- Wykonaj co najmniej jedno LINQ to XML zapytania, które zwracają zestaw elementów, które chcesz przekształcić z jednego kształtu do drugiego. Dla każdego elementu w zapytaniu Dodaj nowy obiekt <xref:System.Xml.Linq.XElement> jako adnotację do elementu. Ten nowy element spowoduje zamianę elementu z adnotacją w nowym, przekształconym drzewie. Jest to prosty kod do zapisu, jak pokazano na przykładzie.
 
-- The new element that is added as an annotation can contain new child nodes; it can form a sub-tree with any desired shape.
+- Nowy element, który jest dodawany jako Adnotacja może zawierać nowe węzły podrzędne; można utworzyć poddrzewo z dowolnym żądanym kształtem.
 
-- There is a special rule: If a child node of the new element is in a different namespace, a namespace that is made up for this purpose (in this example, the namespace is `http://www.microsoft.com/LinqToXmlTransform/2007`), then that child element is not copied to the new tree. Instead, if the namespace is the above mentioned special namespace, and the local name of the element is `ApplyTransforms`, then the child nodes of the element in the source tree are iterated, and copied to the new tree (with the exception that annotated child elements are themselves transformed according to these rules).
+- Istnieje specjalna reguła: Jeśli węzeł podrzędny nowego elementu znajduje się w innej przestrzeni nazw, przestrzeń nazw, która została przeprowadzona do tego celu (w tym przykładzie przestrzeń nazw jest `http://www.microsoft.com/LinqToXmlTransform/2007`), a następnie ten element podrzędny nie jest kopiowany do nowego drzewa. Zamiast tego, jeśli obszar nazw znajduje się powyżej wymienionej specjalnej przestrzeni nazw, a nazwa lokalna elementu jest `ApplyTransforms`, węzły podrzędne elementu w drzewie źródłowym zostaną powtórzone i skopiowane do nowego drzewa (z wyjątkiem tego, że elementy podrzędne z adnotacjami są same przekształcone zgodnie z tymi regułami).
 
-- This is somewhat analogous to the specification of transforms in XSL. The query that selects a set of nodes is analogous to the XPath expression for a template. The code to create the new <xref:System.Xml.Linq.XElement> that is saved as an annotation is analogous to the sequence constructor in XSL, and the `ApplyTransforms` element is analogous in function to the `xsl:apply-templates` element in XSL.
+- Jest to nieco analogiczne do specyfikacji transformacji w kodzie XSL. Zapytanie wybierające zestaw węzłów jest analogiczne do wyrażenia XPath dla szablonu. Kod służący do tworzenia nowego <xref:System.Xml.Linq.XElement>, który jest zapisywany jako Adnotacja, jest analogiczny do konstruktora sekwencji w XSL, a element `ApplyTransforms` jest analogiczny w funkcji do elementu `xsl:apply-templates` w XSL.
 
-- One advantage to taking this approach - as you formulate queries, you are always writing queries on the unmodified source tree. You need not worry about how modifications to the tree affect the queries that you are writing.
+- Jedną z zalet tego podejścia — podczas redagowania zapytań są zawsze zapisywane zapytania w niezmodyfikowanym drzewie źródła. Nie musisz martwić się o to, jak zmiany w drzewie mają wpływ na zapisywanych zapytań.
 
-## <a name="transforming-a-tree"></a>Transforming a Tree
+## <a name="transforming-a-tree"></a>Przekształcanie drzewa
 
-This first example renames all `Paragraph` nodes to `para`:
+W pierwszym przykładzie są zmieniane nazwy wszystkich węzłów `Paragraph` do `para`:
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -83,9 +83,9 @@ End Module
 </Root>
 ```
 
-## <a name="a-more-complicated-transform"></a>A more complicated transform
+## <a name="a-more-complicated-transform"></a>Bardziej skomplikowana transformacja
 
-The following example queries the tree and calculates the average and sum of the `Data` elements, and adds them as new elements to the tree.
+Poniższy przykład wykonuje zapytanie do drzewa i oblicza średnią i sumę elementów `Data` i dodaje je jako nowe elementy do drzewa.
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -158,29 +158,29 @@ After Transform
 </Root>
 ```
 
-## <a name="effecting-the-transform"></a>Effecting the transform
+## <a name="effecting-the-transform"></a>Efekt przekształcenia
 
-A small function, `XForm`, creates a new transformed tree from the original, annotated tree.
+Mała funkcja, `XForm`, tworzy nowe przekształcone drzewo z oryginalnego drzewa z adnotacjami.
 
-The pseudo code for the function is quite simple:
+Pseudo kod dla funkcji jest bardzo prosty:
 
-> The function takes an XElement as an argument and returns an XElement.
+> Funkcja przyjmuje XElement jako argument i zwraca XElement.
 >
-> If an element has an XElement annotation, then return a new XElement:
+> Jeśli element ma adnotację XElement, zwróć nową XElement:
 >
-> - The name of the new XElement is the annotation element's name.
-> - All attributes are copied from the annotation to the new node.
-> - All child nodes are copied from the annotation, with the exception that the special node xf:ApplyTransforms is recognized, and the source element's child nodes are iterated. If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
+> - Nazwa nowego XElement jest nazwą elementu adnotacji.
+> - Wszystkie atrybuty są kopiowane z adnotacji do nowego węzła.
+> - Wszystkie węzły podrzędne są kopiowane z adnotacji, z wyjątkiem tego, że jest rozpoznawany węzeł specjalny XF: ApplyTransforms, a węzły podrzędne elementu źródłowego są powtarzane. Jeśli źródłowy węzeł podrzędny nie jest XElement, jest kopiowany do nowego drzewa. Jeśli źródło jest XElement, jest przekształcane przez wywołanie tej funkcji cyklicznie.
 >
-> If an element is not annotated:
+> Jeśli element nie ma adnotacji:
 >
-> - Return a new XElement
->   - The name of the new XElement is the source element's name.
->   - All attributes are copied from the source element to the destination's element.
->   - All child nodes are copied from the source element.
->   - If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
+> - Zwróć nowy XElement
+>   - Nazwą nowego XElement jest nazwa elementu źródłowego.
+>   - Wszystkie atrybuty są kopiowane z elementu źródłowego do elementu docelowego.
+>   - Wszystkie węzły podrzędne są kopiowane z elementu źródłowego.
+>   - Jeśli źródłowy węzeł podrzędny nie jest XElement, jest kopiowany do nowego drzewa. Jeśli źródło jest XElement, jest przekształcane przez wywołanie tej funkcji cyklicznie.
 
-The following code is the implementation of this function:
+Następujący kod jest implementacją tej funkcji:
 
 ```vb
 ' Build a transformed XML tree per the annotations.
@@ -222,9 +222,9 @@ Private Function GetExpandedNodes(ByVal n2 As XNode) As XNode
 End Function
 ```
 
-## <a name="complete-example"></a>Complete example
+## <a name="complete-example"></a>Pełny przykład
 
-The following code is a complete example that includes the `XForm` function. It includes a few of the typical uses of this type of transform:
+Poniższy kod jest kompletnym przykładem zawierającym funkcję `XForm`. Zawiera kilka typowych zastosowania tego typu transformacji:
 
 ```vb
 Imports System.Collections.Generic
@@ -376,4 +376,4 @@ After Transform
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Zaawansowane programowanie LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

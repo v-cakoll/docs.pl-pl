@@ -1,5 +1,5 @@
 ---
-title: 'How to: Load XML from a File'
+title: 'Instrukcje: ładowanie kodu XML z pliku'
 ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
 ms.openlocfilehash: 72a5adb8c7165f8113584f27bea64efde4ec58fb
@@ -9,15 +9,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336113"
 ---
-# <a name="how-to-load-xml-from-a-file-visual-basic"></a>How to: Load XML from a File (Visual Basic)
+# <a name="how-to-load-xml-from-a-file-visual-basic"></a>Instrukcje: ładowanie kodu XML z pliku (Visual Basic)
 
-This topic shows how to load XML from a URI by using the <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> method.
+W tym temacie przedstawiono sposób ładowania kodu XML z identyfikatora URI przy użyciu metody <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Przykład
 
-The following example shows how to load an XML document from a file. The following example loads books.xml and outputs the XML tree to the console.
+Poniższy przykład pokazuje, jak załadować dokument XML z pliku. Poniższy przykład ładuje Books. XML i wyprowadza drzewo XML do konsoli.
 
-This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
+Ten przykład używa następującego dokumentu XML: [przykładowy plik XML: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
 
 ```vb
 Dim booksFromFile As XElement = XElement.Load("books.xml")
@@ -52,4 +52,4 @@ Ten kod generuje następujące dane wyjściowe:
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Analizowanie kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

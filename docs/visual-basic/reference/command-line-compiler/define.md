@@ -16,8 +16,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344763"
 ---
-# <a name="-define-visual-basic"></a>-define (Visual Basic)
-Defines conditional compiler constants.  
+# <a name="-define-visual-basic"></a>-Definiuj (Visual Basic)
+Definiuje warunkowe stałe kompilatora.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,30 +35,30 @@ lub
   
 |Termin|Definicja|  
 |---|---|  
-|`symbol`|Wymagany. The symbol to define.|  
-|`value`|Opcjonalny. The value to assign `symbol`. If `value` is a string, it must be surrounded by backslash/quotation-mark sequences (\\") instead of quotation marks. If no value is specified, then it is taken to be True.|  
+|`symbol`|Wymagana. Symbol do zdefiniowania.|  
+|`value`|Opcjonalna. Wartość, która ma zostać przypisana `symbol`. Jeśli `value` jest ciągiem, musi być ujęta w nawiasy odwrotne lub sekwencje znaku cudzysłowu (\\") zamiast znaków cudzysłowu. Jeśli żadna wartość nie zostanie określona, jest ona prawdziwa.|  
   
 ## <a name="remarks"></a>Uwagi  
- The `-define` option has an effect similar to using a `#Const` preprocessor directive in your source file, except that constants defined with `-define` are public and apply to all files in the project.  
+ Opcja `-define` ma podobny efekt jak użycie dyrektywy preprocesora `#Const` w pliku źródłowym, z tą różnicą, że stałe zdefiniowane za pomocą `-define` są publiczne i są stosowane do wszystkich plików w projekcie.  
   
- You can use symbols created by this option with the `#If`...`Then`...`#Else` directive to compile source files conditionally.  
+ Możesz użyć symboli utworzonych przez tę opcję z dyrektywą `#If`...`Then`...`#Else`, aby warunkowo kompilować pliki źródłowe.  
   
- `-d` is the short form of `-define`.  
+ `-d` jest krótką formą `-define`.  
   
- You can define multiple symbols with `-define` by using a comma to separate symbol definitions.  
+ Można zdefiniować wiele symboli za pomocą `-define`, używając przecinka do oddzielania definicji symboli.  
   
-|To set /define in the Visual Studio integrated development environment|  
+|Aby ustawić/define w zintegrowanym środowisku programistycznym programu Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. On the **Project** menu, click **Properties**. <br />2.  Click the **Compile** tab.<br />3.  Click **Advanced**.<br />4.  Modify the value in the **Custom Constants** box.|  
+|1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **kompilacja** .<br />3. kliknij pozycję **Zaawansowane**.<br />4. Zmodyfikuj wartość w polu **stałe niestandardowe** .|  
   
 ## <a name="example"></a>Przykład  
- The following code defines and then uses two conditional compiler constants.  
+ Poniższy kod definiuje, a następnie używa dwóch warunkowych stałych kompilatora.  
   
  [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [#If...Then...#Else, dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [#Const, dyrektywa](../../../visual-basic/language-reference/directives/const-directive.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

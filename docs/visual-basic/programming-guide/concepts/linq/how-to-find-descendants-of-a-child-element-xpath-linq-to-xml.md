@@ -1,5 +1,5 @@
 ---
-title: 'How to: Find Descendants of a Child Element (XPath-LINQ to XML)'
+title: 'Instrukcje: Znajdowanie elementów potomnych elementu podrzędnego (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
 ms.openlocfilehash: beb949be521bfde70fbcdbcf18cebf49d7cc5a58
@@ -9,15 +9,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344672"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)
-This topic shows how to get the descendant elements of a child element with a particular name.  
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie elementów potomnych elementu podrzędnego (XPath-LINQ to XML) (Visual Basic)
+W tym temacie pokazano, jak uzyskać elementy podrzędne elementu podrzędnego o określonej nazwie.  
   
- The XPath expression is:  
+ Wyrażenie XPath:  
   
  `./Paragraph//Text/text()`  
   
 ## <a name="example"></a>Przykład  
- This example simulates the problems of extracting text from an XML representation of a word processing document. It first selects all `Paragraph` elements, and then it selects all `Text` descendant elements of each `Paragraph` element. This doesn't select the descendant `Text` elements of the `Comment` element.  
+ Ten przykład symuluje problemy związane z wyodrębnianiem tekstu z reprezentacji XML dokumentu przetwarzania tekstów. Najpierw zaznacza wszystkie elementy `Paragraph`, a następnie wybiera wszystkie elementy podrzędne `Text` każdego elementu `Paragraph`. Nie spowoduje to zaznaczenia elementów podrzędnych `Text` elementu `Comment`.  
   
 ```vb  
 Dim root As XElement = _  
@@ -71,4 +71,4 @@ This is the start of a sentence.  This is a second sentence.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

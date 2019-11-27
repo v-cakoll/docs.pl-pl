@@ -1,5 +1,5 @@
 ---
-title: 'How to: Declare Enumerations'
+title: 'Instrukcje: deklarowanie wyliczeń'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], enumerations
@@ -14,31 +14,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354044"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Porady: deklarowanie wyliczeń (Visual Basic)
-You create an enumeration with the `Enum` statement in the declarations section of a class or module. You cannot declare an enumeration within a method. To specify the appropriate level of access, use `Private`, `Protected`, `Friend`, or `Public`.  
+Wyliczenie można utworzyć za pomocą instrukcji `Enum` w sekcji deklaracji klasy lub modułu. Nie można zadeklarować wyliczenia w ramach metody. Aby określić odpowiedni poziom dostępu, użyj `Private`, `Protected`, `Friend`lub `Public`.  
   
- An `Enum` type has a name, an underlying type, and a set of fields, each representing a constant. The name must be a valid Visual Basic .NET qualifier. The underlying type must be one of the integer types—`Byte`, `Short`, `Long` or `Integer`. `Integer` is the default. Enumerations are always strongly typed and are not interchangeable with integer number types.  
+ Typ `Enum` ma nazwę, typ podstawowy i zestaw pól, z których każdy reprezentuje stałą. Nazwa musi być prawidłowym kwalifikatorem Visual Basic platformy .NET. Typ podstawowy musi być jednym z typów całkowitych —`Byte`, `Short`, `Long` lub `Integer`. `Integer` jest wartością domyślną. Wyliczenia są zawsze silnie wpisane i nie mogą być zamienne z typami liczb całkowitych.  
   
- Enumerations cannot have floating-point values. If an enumeration is assigned a floating-point value with `Option Strict On`, a compiler error results. If `Option Strict` is `Off`, the value is automatically converted to the `Enum` type.  
+ Wyliczenia nie mogą mieć wartości zmiennoprzecinkowych. Jeśli Wyliczenie ma przypisaną wartość zmiennoprzecinkową z `Option Strict On`, zostanie zwrócony błąd kompilatora. Jeśli `Option Strict` jest `Off`, wartość zostanie automatycznie przekonwertowana na typ `Enum`.  
   
- For information on names, and how to use the `Imports` statement to make name qualification unnecessary, see [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
+ Aby uzyskać informacje o nazwach i sposobach używania instrukcji `Imports` w celu niepotrzebnej kwalifikacji nazw, zobacz [wyliczenia i kwalifikowanie nazw](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
   
-### <a name="to-declare-an-enumeration"></a>To declare an enumeration  
+### <a name="to-declare-an-enumeration"></a>Aby zadeklarować Wyliczenie  
   
-1. Write a declaration that includes a code access level, the `Enum` keyword, and a valid name, as in the following examples, each of which declares a different `Enum`.  
+1. Napisz deklarację zawierającą poziom dostępu do kodu, słowo kluczowe `Enum` i prawidłową nazwę, jak w poniższych przykładach, z których każdy deklaruje inny `Enum`.  
   
      [!code-vb[VbEnumsTask#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#3)]  
   
-2. Define the constants in the enumeration. By default, the first constant in an enumeration is initialized to `0`, and subsequent constants are initialized to a value of one more than the previous constant. For example, the following enumeration, `Days`, contains a constant named `Sunday` with the value `0`, a constant named `Monday` with the value `1`, a constant named `Tuesday` with the value of `2`, and so on.  
+2. Zdefiniuj stałe w wyliczeniu. Domyślnie pierwsza stała w wyliczeniu jest inicjowana do `0`, a kolejne stałe są inicjowane do wartości jednej z więcej niż poprzednia stała. Na przykład następujące Wyliczenie `Days`, zawiera stałą o nazwie `Sunday` z wartością `0`, stała o nazwie `Monday` z wartością `1`, stała o nazwie `Tuesday` z wartością `2`i tak dalej.  
   
      [!code-vb[VbEnumsTask#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#4)]  
   
-3. You can explicitly assign values to constants in an enumeration by using an assignment statement. You can assign any integer value, including negative numbers. For example, you may want constants with values less than zero to represent error conditions. In the following enumeration, the constant `Invalid` is explicitly assigned the value `–1`, and the constant `Sunday` is assigned the value `0`. Because it is the first constant in the enumeration, `Saturday` is also initialized to the value `0`. The value of `Monday` is `1` (one more than the value of `Sunday`); the value of `Tuesday` is `2`, and so on.  
+3. Można jawnie przypisać wartości do stałych w wyliczeniu przy użyciu instrukcji przypisania. Można przypisać dowolną liczbę całkowitą, łącznie z liczbami ujemnymi. Na przykład, możesz chcieć mieć stałe z wartościami mniejszymi od zera, aby reprezentować warunki błędu. W poniższym wyliczeniu, stała `Invalid` jest jawnie przypisana do `–1`wartości, a stała `Sunday` jest przypisana do `0`wartości. Ponieważ jest to pierwsza stała w wyliczeniu, `Saturday` jest również inicjowana do `0`wartości. Wartość `Monday` jest `1` (jedna większa niż wartość `Sunday`); wartość `Tuesday` jest `2`i tak dalej.  
   
      [!code-vb[VbEnumsTask#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#5)]  
   
-### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>To declare an enumeration as an explicit type  
+### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>Aby zadeklarować Wyliczenie jako typ jawny  
   
-- Specify the type of the enum by using the `As` clause, as shown in the following example.  
+- Określ typ wyliczenia przy użyciu klauzuli `As`, jak pokazano w poniższym przykładzie.  
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
@@ -46,7 +46,7 @@ You create an enumeration with the `Enum` statement in the declarations section 
 
 - [Wyliczenia i kwalifikacja nazw](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Instrukcje: odwoływanie się do elementu członkowskiego wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
+- [Instrukcje: Iterowanie przez Wyliczenie w Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [Instrukcje: określanie ciągu skojarzonego z wartością wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Kiedy stosować wyliczanie](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [Stałe — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)

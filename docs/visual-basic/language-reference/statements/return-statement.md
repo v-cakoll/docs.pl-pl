@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333012"
 ---
 # <a name="return-statement-visual-basic"></a>Return — Instrukcja (Visual Basic)
-Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.  
+Zwraca kontrolę do kodu, który wywołał procedurę `Function`, `Sub`, `Get`, `Set`lub `Operator`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -27,22 +27,22 @@ Return
 Return expression  
 ```  
   
-## <a name="part"></a>Part  
+## <a name="part"></a>Części  
  `expression`  
- Required in a `Function`, `Get`, or `Operator` procedure. Expression that represents the value to be returned to the calling code.  
+ Wymagane w procedurze `Function`, `Get`lub `Operator`. Wyrażenie, które reprezentuje wartość, która ma zostać zwrócona do kodu wywołującego.  
   
 ## <a name="remarks"></a>Uwagi  
- In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.  
+ W procedurze `Sub` lub `Set`, instrukcja `Return` jest równoważna z `Exit Sub` lub `Exit Property` instrukcją i nie można podać `expression`.  
   
- In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure. In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement. In an `Operator` procedure, you must use `Return expression`.  
+ W procedurze `Function`, `Get`lub `Operator` instrukcja `Return` musi zawierać `expression`, a `expression` musi oszacować do typu danych, który jest konwertowany na zwracany typ procedury. W procedurze `Function` lub `Get` można także przypisać wyrażenie do nazwy procedury, która ma stanowić wartość zwracaną, a następnie wykonać `Exit Function` lub `Exit Property` instrukcję. W procedurze `Operator` należy użyć `Return expression`.  
   
- You can include as many `Return` statements as appropriate in the same procedure.  
+ Można dołączyć dowolną liczbę instrukcji `Return`, zgodnie z potrzebami w tej samej procedurze.  
   
 > [!NOTE]
-> The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes. A `Return` statement cannot be included in a `Finally` block.  
+> Kod w bloku `Finally` jest uruchamiany po napotkaniu instrukcji `Return` w bloku `Try` lub `Catch`, ale przed wykonaniem tej instrukcji `Return`. Instrukcji `Return` nie można uwzględnić w bloku `Finally`.  
   
 ## <a name="example"></a>Przykład  
- The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.  
+ Poniższy przykład używa instrukcji `Return` kilka razy, aby powrócić do kodu wywołującego, gdy procedura nie musi wykonywać żadnych innych czynności.  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   

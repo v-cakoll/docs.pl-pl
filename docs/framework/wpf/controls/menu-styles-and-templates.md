@@ -36,7 +36,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 ## <a name="menuitem-parts"></a>Elementy MenuItem  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.Menu>.  
   
-|Części|Typ|Opis|  
+|Części|Type|Opis|  
 |-|-|-|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Obszar podmenu.|  
   

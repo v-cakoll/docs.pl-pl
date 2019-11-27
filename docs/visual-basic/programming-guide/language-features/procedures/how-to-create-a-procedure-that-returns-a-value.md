@@ -14,25 +14,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349723"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Porady: tworzenie procedury, która zwraca wartość (Visual Basic)
-You use a `Function` procedure to return a value to the calling code.  
+Użyj procedury `Function`, aby zwrócić wartość do kodu wywołującego.  
   
-### <a name="to-create-a-procedure-that-returns-a-value"></a>To create a procedure that returns a value  
+### <a name="to-create-a-procedure-that-returns-a-value"></a>Aby utworzyć procedurę zwracającą wartość  
   
-1. Outside any other procedure, use a `Function` statement, followed by an `End Function` statement.  
+1. Poza każdą inną procedurę Użyj instrukcji `Function`, a po niej instrukcji `End Function`.  
   
-2. In the `Function` statement, follow the `Function` keyword with the name of the procedure, and then the parameter list in parentheses.  
+2. W instrukcji `Function` postępuj według słowa kluczowego `Function` z nazwą procedury, a następnie listę parametrów w nawiasach.  
   
-3. Follow the parentheses with an `As` clause to specify the data type of the returned value.  
+3. Użyj nawiasów z klauzulą `As`, aby określić typ danych zwracanej wartości.  
   
-4. Place the procedure's code statements between the `Function` and `End Function` statements.  
+4. Umieść instrukcje kodu procedury między instrukcjami `Function` i `End Function`.  
   
-5. Use a `Return` statement to return the value to the calling code.  
+5. Użyj instrukcji `Return`, aby zwrócić wartość do kodu wywołującego.  
   
-     The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides.  
+     Poniższa procedura `Function` oblicza najdłuższy bok lub przeciwprostokątnej w prawym trójkątze, uwzględniając wartości pozostałych dwóch stron.  
   
      [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
-     The following example shows a typical call to `hypotenuse`.  
+     Poniższy przykład przedstawia typowe wywołanie do `hypotenuse`.  
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   

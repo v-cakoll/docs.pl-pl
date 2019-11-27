@@ -12,12 +12,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346713"
 ---
 # <a name="how-to-create-an-add-extension-method-used-by-a-collection-initializer-visual-basic"></a>Porady: tworzenie i dodawanie metody rozszerzania wykorzystywanej przez inicjator kolekcji (Visual Basic)
-When you use a collection initializer to create a collection, the Visual Basic compiler searches for an `Add` method of the collection type for which the parameters for the `Add` method match the types of the values in the collection initializer. This `Add` method is used to populate the collection with the values from the collection initializer.  
+W przypadku tworzenia kolekcji za pomocą inicjatora kolekcji, kompilator Visual Basic wyszukuje `Add` metody typu kolekcji, dla którego parametry metody `Add` pasują do typów wartości w inicjatorze kolekcji. Ta metoda `Add` służy do wypełniania kolekcji wartościami z inicjatora kolekcji.  
   
- If no matching `Add` method exists and you cannot modify the code for the collection, you can add an extension method called `Add` that takes the parameters that are required by the collection initializer. This is typically what you need to do when you use collection initializers for generic collections.  
+ Jeśli nie istnieje zgodna Metoda `Add` i nie można zmodyfikować kodu dla kolekcji, można dodać metodę rozszerzenia o nazwie `Add`, która pobiera parametry wymagane przez inicjator kolekcji. Zazwyczaj jest to konieczne, gdy do kolekcji ogólnych są używane Inicjatory kolekcji.  
   
 ## <a name="example"></a>Przykład  
- The following example shows how to add an extension method to the generic <xref:System.Collections.Generic.List%601> type so that a collection initializer can be used to add objects of type `Employee`. The extension method enables you to use the shortened collection initializer syntax.  
+ Poniższy przykład pokazuje, jak dodać metodę rozszerzenia do ogólnego typu <xref:System.Collections.Generic.List%601>, aby inicjator kolekcji mógł służyć do dodawania obiektów typu `Employee`. Metoda rozszerzenia umożliwia użycie skróconej składni inicjatora kolekcji.  
   
  [!code-vb[VbVbalrCollectionInitializersHowTo1#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializersHowTo1/VB/Module1.vb#1)]  
   

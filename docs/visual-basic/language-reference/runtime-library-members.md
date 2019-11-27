@@ -1,5 +1,5 @@
 ---
-title: Runtime Library Members
+title: Elementy członkowskie biblioteki środowiska uruchomieniowego
 ms.date: 07/20/2015
 f1_keywords:
 - VisualBasic
@@ -18,22 +18,22 @@ ms.locfileid: "74349617"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Elementy członkowskie biblioteki wykonawczej programu Visual Basic
 
-The `Microsoft.VisualBasic` namespace contains the classes, modules, constants, and enumerations that constitute the Visual Basic runtime library. These library members provide procedures, properties, and constant values you can use in your code. Each module and class represents a particular category of functionality.  
+Przestrzeń nazw `Microsoft.VisualBasic` zawiera klasy, moduły, stałe i wyliczenia stanowiące bibliotekę środowiska uruchomieniowego Visual Basic. Te elementy członkowskie biblioteki udostępniają procedury, właściwości i wartości stałe, których można użyć w kodzie. Każdy moduł i Klasa przedstawiają określoną kategorię funkcji.  
   
-## <a name="microsoftvisualbasiccollection-class"></a>Microsoft.VisualBasic.Collection Class  
+## <a name="microsoftvisualbasiccollection-class"></a>Microsoft. VisualBasic. Collection — Klasa  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.Collection.Add%2A>|<xref:Microsoft.VisualBasic.Collection.Clear%2A>|<xref:Microsoft.VisualBasic.Collection.Contains%2A>|<xref:Microsoft.VisualBasic.Collection.Count%2A>|  
 |<xref:Microsoft.VisualBasic.Collection.GetEnumerator%2A>|<xref:Microsoft.VisualBasic.Collection.Item%2A>|<xref:Microsoft.VisualBasic.Collection.Remove%2A>||  
   
-## <a name="microsoftvisualbasiccomclassattribute-class"></a>Microsoft.VisualBasic.ComClassAttribute Class  
+## <a name="microsoftvisualbasiccomclassattribute-class"></a>Microsoft. VisualBasic. ComClassAttribute — Klasa  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.ComClassAttribute.ClassID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.EventID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.InterfaceID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.InterfaceShadows%2A>|  
   
-## <a name="microsoftvisualbasiccontrolchars-class"></a>Microsoft.VisualBasic.ControlChars Class  
+## <a name="microsoftvisualbasiccontrolchars-class"></a>Microsoft. VisualBasic. ControlChars, Klasa  
   
 |||||  
 |---|---|---|---|  
@@ -41,7 +41,7 @@ The `Microsoft.VisualBasic` namespace contains the classes, modules, constants, 
 |<xref:Microsoft.VisualBasic.ControlChars.Lf>|<xref:Microsoft.VisualBasic.ControlChars.NewLine>|<xref:Microsoft.VisualBasic.ControlChars.NullChar>|<xref:Microsoft.VisualBasic.ControlChars.Quote>|  
 |<xref:Microsoft.VisualBasic.ControlChars.Tab>|<xref:Microsoft.VisualBasic.ControlChars.VerticalTab>|||  
   
-## <a name="microsoftvisualbasicconstants-class"></a>Microsoft.VisualBasic.Constants Class  
+## <a name="microsoftvisualbasicconstants-class"></a>Microsoft. VisualBasic. stałe — Klasa  
   
 |||||  
 |---|---|---|---|  
@@ -72,14 +72,14 @@ The `Microsoft.VisualBasic` namespace contains the classes, modules, constants, 
 |<xref:Microsoft.VisualBasic.Constants.vbVolume>|<xref:Microsoft.VisualBasic.Constants.vbWednesday>|<xref:Microsoft.VisualBasic.Constants.vbWide>|<xref:Microsoft.VisualBasic.Constants.vbYes>|  
 |<xref:Microsoft.VisualBasic.Constants.vbYesNo>|<xref:Microsoft.VisualBasic.Constants.vbYesNoCancel>|||  
   
-## <a name="microsoftvisualbasicconversion-module"></a>Microsoft.VisualBasic.Conversion Module  
+## <a name="microsoftvisualbasicconversion-module"></a>Moduł Microsoft. VisualBasic. Conversion  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.Conversion.ErrorToString%2A>|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>|<xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
 |<xref:Microsoft.VisualBasic.Conversion.Oct%2A>|<xref:Microsoft.VisualBasic.Conversion.Str%2A>|<xref:Microsoft.VisualBasic.Conversion.Val%2A>||  
   
-## <a name="microsoftvisualbasicdateandtime-module"></a>Microsoft.VisualBasic.DateAndTime Module  
+## <a name="microsoftvisualbasicdateandtime-module"></a>Microsoft. VisualBasic. DateAndTime — moduł  
   
 |||||  
 |---|---|---|---|  
@@ -113,7 +113,7 @@ The `Microsoft.VisualBasic` namespace contains the classes, modules, constants, 
 |<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|<xref:Microsoft.VisualBasic.FileSystem.SPC%2A>|<xref:Microsoft.VisualBasic.FileSystem.TAB%2A>|<xref:Microsoft.VisualBasic.FileSystem.Unlock%2A>|  
 |<xref:Microsoft.VisualBasic.FileSystem.Write%2A>|<xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A>|||  
   
-## <a name="microsoftvisualbasicfinancial-module"></a>Microsoft.VisualBasic.Financial Module  
+## <a name="microsoftvisualbasicfinancial-module"></a>Microsoft. VisualBasic. Financial — moduł  
   
 |||||  
 |---|---|---|---|  
@@ -122,19 +122,19 @@ The `Microsoft.VisualBasic` namespace contains the classes, modules, constants, 
 |<xref:Microsoft.VisualBasic.Financial.PPmt%2A>|<xref:Microsoft.VisualBasic.Financial.PV%2A>|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|<xref:Microsoft.VisualBasic.Financial.SLN%2A>|  
 |<xref:Microsoft.VisualBasic.Financial.SYD%2A>||||  
   
-## <a name="microsoftvisualbasicglobals-module"></a>Microsoft.VisualBasic.Globals Module  
+## <a name="microsoftvisualbasicglobals-module"></a>Microsoft. VisualBasic. Globals — moduł  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|  
   
-## <a name="microsoftvisualbasichidemodulenameattribute-class"></a>Microsoft.VisualBasic.HideModuleNameAttribute Class  
+## <a name="microsoftvisualbasichidemodulenameattribute-class"></a>Microsoft. VisualBasic. HideModuleNameAttribute, Klasa  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.HideModuleNameAttribute>||||  
   
-## <a name="microsoftvisualbasicinformation-module"></a>Microsoft.VisualBasic.Information Module  
+## <a name="microsoftvisualbasicinformation-module"></a>Microsoft. VisualBasic. Information — moduł  
   
 |||||  
 |---|---|---|---|  
@@ -144,7 +144,7 @@ The `Microsoft.VisualBasic` namespace contains the classes, modules, constants, 
 |<xref:Microsoft.VisualBasic.Information.SystemTypeName%2A>|<xref:Microsoft.VisualBasic.Information.TypeName%2A>|<xref:Microsoft.VisualBasic.Information.UBound%2A>|<xref:Microsoft.VisualBasic.Information.VarType%2A>|  
 |<xref:Microsoft.VisualBasic.Information.VbTypeName%2A>||||  
   
-## <a name="microsoftvisualbasicinteraction-module"></a>Microsoft.VisualBasic.Interaction Module  
+## <a name="microsoftvisualbasicinteraction-module"></a>Moduł Microsoft. VisualBasic. Interaction  
   
 |||||  
 |---|---|---|---|  
@@ -173,27 +173,27 @@ The `Microsoft.VisualBasic` namespace contains the classes, modules, constants, 
 |<xref:Microsoft.VisualBasic.Strings.Space%2A>|<xref:Microsoft.VisualBasic.Strings.Split%2A>|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
 |<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
   
-## <a name="microsoftvisualbasicvbfixedarrayattribute-class"></a>Microsoft.VisualBasic.VBFixedArrayAttribute Class  
+## <a name="microsoftvisualbasicvbfixedarrayattribute-class"></a>Microsoft. VisualBasic. VBFixedArrayAttribute, Klasa  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBFixedArrayAttribute.Bounds%2A>|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute.Length%2A>|||  
   
-## <a name="microsoftvisualbasicvbfixedstringattribute-class"></a>Microsoft.VisualBasic.VBFixedStringAttribute Class  
+## <a name="microsoftvisualbasicvbfixedstringattribute-class"></a>Microsoft. VisualBasic. VBFixedStringAttribute, Klasa  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBFixedStringAttribute.Length%2A>||||  
   
-## <a name="microsoftvisualbasicvbmath-module"></a>Microsoft.VisualBasic.VbMath Module  
+## <a name="microsoftvisualbasicvbmath-module"></a>Microsoft. VisualBasic. VbMath — moduł  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
-## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic Constants and Enumerations  
+## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Stałe i wyliczenia Microsoft. VisualBasic  
 
- The `Microsoft.VisualBasic` namespace provides constants and enumerations as part of the Visual Basic run-time library. You can use these constant values in your code. Each enumeration represents a particular category of functionality. For more information, see [Constants and Enumerations](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ Przestrzeń nazw `Microsoft.VisualBasic` zawiera stałe i wyliczenia w ramach Visual Basic biblioteki wykonawczej. Możesz użyć tych stałych wartości w kodzie. Każde Wyliczenie reprezentuje konkretną kategorię funkcji. Aby uzyskać więcej informacji, zobacz [stałe i wyliczenia](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

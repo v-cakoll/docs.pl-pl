@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439067"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread — Metoda
-Maps the ID of a thread to a Win32 thread handle.  
+Mapuje identyfikator wątku na dojście wątku Win32.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,22 +35,22 @@ HRESULT GetHandleFromThread(
   
 ## <a name="parameters"></a>Parametry  
  `threadId`  
- [in] The thread ID to be mapped.  
+ podczas Identyfikator wątku, który ma zostać zamapowany.  
   
  `phThread`  
- [out] A pointer to a Win32 thread handle.  
+ określoną Wskaźnik do dojścia do wątku Win32.  
   
 ## <a name="remarks"></a>Uwagi  
- The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.  
+ Profiler musi wywołać funkcję `DuplicateHandle` Win32 na dojściem przed jego użyciem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

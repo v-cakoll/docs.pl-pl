@@ -16,41 +16,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344884"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Porady: definiowanie parametru dla procedury (Visual Basic)
-A *parameter* allows the calling code to pass a value to the procedure when it calls it. You declare each parameter for a procedure the same way you declare a variable, specifying its name and data type. You also specify the passing mechanism, and whether the parameter is optional.  
+*Parametr* pozwala wywołującemu kod przekazać wartość do procedury, gdy wywołuje ją. Należy zadeklarować każdy parametr dla procedury w taki sam sposób, w jaki deklarujesz zmienną, określając jej nazwę i typ danych. Określany jest również mechanizm przekazywania oraz określa, czy parametr jest opcjonalny.  
   
- For more information, see [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md).  
+ Aby uzyskać więcej informacji, zobacz [parametry procedury i argumenty](./procedure-parameters-and-arguments.md).  
   
-### <a name="to-define-a-procedure-parameter"></a>To define a procedure parameter  
+### <a name="to-define-a-procedure-parameter"></a>Aby zdefiniować parametr procedury  
   
-1. In the procedure declaration, add the parameter name to the procedure's parameter list, separating it from other parameters by commas.  
+1. W deklaracji procedury Dodaj nazwę parametru do listy parametrów procedury, oddzielając ją od innych parametrów przecinkami.  
   
-2. Decide the data type of the parameter.  
+2. Wybierz typ danych parametru.  
   
-3. Follow the parameter name with an `As` clause to specify the data type.  
+3. Aby określić typ danych, postępuj zgodnie z nazwą parametru z klauzulą `As`.  
   
-4. Decide the passing mechanism you want for the parameter. Normally you pass a parameter by value, unless you want the procedure to be able to change its value in the calling code.  
+4. Zdecyduj, który mechanizm przekazywania ma być dla parametru. Zwykle przekazujesz parametr według wartości, chyba że chcesz, aby procedura mogła zmienić jej wartość w kodzie wywołującym.  
   
-5. Precede the parameter name with [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) to specify the passing mechanism. For more information, see [Differences Between Passing an Argument By Value and By Reference](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+5. Poprzedź nazwę parametru poleceniem [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) , aby określić mechanizm przekazywania. Aby uzyskać więcej informacji, zobacz [różnice między przekazywaniem argumentu według wartości i przez odwołanie](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-6. If the parameter is optional, precede the passing mechanism with [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) and follow the parameter data type with an equal sign (`=`) and a default value.  
+6. Jeśli parametr jest opcjonalny, należy poprzedzić mechanizm przekazywania [opcjonalnym](../../../../visual-basic/language-reference/modifiers/optional.md) i postępować według typu danych parametru z znakiem równości (`=`) i wartością domyślną.  
   
-     The following example defines the outline of a `Sub` procedure with three parameters. The first two are required and the third is optional. The parameter declarations are separated in the parameter list by commas.  
+     W poniższym przykładzie zdefiniowano kontur procedury `Sub` z trzema parametrami. Pierwsze dwa są wymagane, a trzeci jest opcjonalny. Deklaracje parametrów są oddzielane do listy parametrów przecinkami.  
   
      [!code-vb[VbVbcnProcedures#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#33)]  
   
-     The first parameter accepts a `customer` object, and `updateCustomer` can directly update the variable passed to `c` because the argument is passed [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). The procedure cannot change the values of the last two arguments because they are passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
+     Pierwszy parametr akceptuje obiekt `customer`, a `updateCustomer` może bezpośrednio zaktualizować zmienną przekazaną do `c`, ponieważ argument jest przenoszona jako [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Procedura nie może zmienić wartości dwóch ostatnich argumentów, ponieważ są one przenoszone przez [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   
-     If the calling code does not supply a value for the `level` parameter, Visual Basic sets it to the default value of 0.  
+     Jeśli wywołujący kod nie poda wartości dla parametru `level`, Visual Basic ustawi ją na wartość domyślną 0.  
   
-     If the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `Off`, the `As` clause is optional when you define a parameter. However, if any one parameter uses an `As` clause, all of them must use it. If the type checking switch is `On`, the `As` clause is required for every parameter definition.  
+     Jeśli przełącznik sprawdzania typu ([instrukcja Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) jest `Off`, klauzula `As` jest opcjonalna przy definiowaniu parametru. Jeśli jednak którykolwiek z parametrów używa klauzuli `As`, wszystkie muszą z nich korzystać. Jeśli przełącznik sprawdzania typu jest `On`, klauzula `As` jest wymagana dla każdej definicji parametru.  
   
-     Specifying data types for all your programming elements is known as *strong typing*. When you set `Option Strict On`, Visual Basic enforces strong typing. This is strongly recommended, for the following reasons:  
+     Określanie typów danych dla wszystkich elementów programistycznych jest znane jako *silne wpisywanie*. Po ustawieniu `Option Strict On`, Visual Basic wymusza silne wpisywanie. Jest to zdecydowanie zalecane z następujących powodów:  
   
-    - It enables IntelliSense support for your variables and parameters. This allows you to see their properties and other members as you type in your code.  
+    - Umożliwia obsługę technologii IntelliSense dla zmiennych i parametrów. Dzięki temu można zobaczyć swoje właściwości i innych członków podczas wpisywania kodu w kodzie.  
   
-    - It allows the compiler to perform type checking. This helps catch statements that can fail at run time due to errors such as overflow. It also catches calls to methods on objects that do not support them.  
+    - Umożliwia kompilatorowi wykonywanie kontroli typu. Ułatwia to wychwycenie instrukcji, które mogą zakończyć się niepowodzeniem w czasie wykonywania z powodu błędów, takich jak przepełnienie. Przechwytuje również wywołania metod na obiektach, które ich nie obsługują.  
   
-    - It results in faster execution of your code. One reason for this is that if you do not specify a data type for a programming element, the Visual Basic compiler assigns it the `Object` type. Your compiled code might have to convert back and forth between `Object` and other data types, which reduces performance.  
+    - Skutkuje to przyspieszeniem wykonywania kodu. Jedną z przyczyn tego problemu jest to, że jeśli nie określisz typu danych dla elementu programistycznego, kompilator Visual Basic przypisze `Object` typ. Skompilowany kod może wymagać konwersji z powrotem między `Object` i innymi typami danych, co zmniejsza wydajność.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -62,4 +62,4 @@ A *parameter* allows the calling code to pass a value to the procedure when it c
 - [Procedury rekursywne](./recursive-procedures.md)
 - [Przeciążanie procedury](./procedure-overloading.md)
 - [Obiekty i klasy](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Object-Oriented Programming (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [Programowanie zorientowane obiektowo (Visual Basic)](../../concepts/object-oriented-programming.md)

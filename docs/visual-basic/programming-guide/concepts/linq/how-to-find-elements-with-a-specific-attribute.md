@@ -1,5 +1,5 @@
 ---
-title: 'How to: Find Elements with a Specific Attribute (XPath-LINQ to XML)'
+title: 'Instrukcje: Znajdowanie elementów z określonym atrybutem (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
 ms.openlocfilehash: ef8dd26d40f15d3d5a27f0ca5d62f7337f2054ca
@@ -9,15 +9,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343686"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (Visual Basic)
-Sometimes you want to find all elements that have a specific attribute. You are not concerned about the contents of the attribute. Instead, you want to select based on the existence of the attribute.  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie elementów z określonym atrybutem (XPath-LINQ to XML) (Visual Basic)
+Czasami chcesz znaleźć wszystkie elementy, które mają określony atrybut. Nie dotyczy zawartości atrybutu. Zamiast tego należy wybrać opcję na podstawie istnienia atrybutu.  
   
- The XPath expression is:  
+ Wyrażenie XPath:  
   
  `./*[@Select]`  
   
 ## <a name="example"></a>Przykład  
- The following code selects just the elements that have the `Select` attribute.  
+ Poniższy kod wybiera tylko elementy, które mają atrybut `Select`.  
   
 ```vb  
 Dim doc As XElement = _   
@@ -61,4 +61,4 @@ Results are identical
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

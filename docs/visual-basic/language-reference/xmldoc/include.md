@@ -12,8 +12,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348463"
 ---
-# <a name="include-visual-basic"></a>\<include> (Visual Basic)
-Refers to another file that describes the types and members in your source code.  
+# <a name="include-visual-basic"></a>\<Uwzględnij > (Visual Basic)
+Odwołuje się do innego pliku opisującego typy i elementy członkowskie w kodzie źródłowym.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,28 +23,28 @@ Refers to another file that describes the types and members in your source code.
   
 ## <a name="parameters"></a>Parametry  
  `filename`  
- Wymagany. The name of the file containing the documentation. The file name can be qualified with a path. Enclose `filename` in double quotation marks (" ").  
+ Wymagana. Nazwa pliku zawierającego dokumentację. Nazwa pliku może być kwalifikowana za pomocą ścieżki. Ujmij `filename` w znaki podwójnego cudzysłowu ("").  
   
  `tagpath`  
- Wymagany. The path of the tags in `filename` that leads to the tag `name`. Enclose the path in double quotation marks (" ").  
+ Wymagana. Ścieżka tagów w `filename`, które prowadzą do `name`znacznika. Ujmij ścieżkę w znaki podwójnego cudzysłowu ("").  
   
  `name`  
- Wymagany. The name specifier in the tag that precedes the comments. `Name` will have an `id`.  
+ Wymagana. Specyfikator Name w tagu, który poprzedza Komentarze. `Name` będzie `id`.  
   
  `id`  
- Wymagany. The ID for the tag that precedes the comments. Enclose the ID in single quotation marks (' ').  
+ Wymagana. Identyfikator tagu, który poprzedza Komentarze. Ujmij identyfikator w znaki pojedynczego cudzysłowu (' ').  
   
 ## <a name="remarks"></a>Uwagi  
- Use the `<include>` tag to refer to comments in another file that describe the types and members in your source code. This is an alternative to placing documentation comments directly in your source code file.  
+ Użyj znacznika `<include>`, aby odwołać się do komentarzy w innym pliku, które opisują typy i elementy członkowskie w kodzie źródłowym. Jest to alternatywa dla umieszczania komentarzy do dokumentacji bezpośrednio w pliku kodu źródłowego.  
   
- The `<include>` tag uses the W3C XML Path Language (XPath) Version 1.0 Recommendation. For more information about ways to customize your `<include>` use, see <https://www.w3.org/TR/xpath>.  
+ Tag `<include>` używa zalecenia XML (W3C) Path Language (XPath) w wersji 1,0. Aby uzyskać więcej informacji o sposobach dostosowywania użycia `<include>`, zobacz <https://www.w3.org/TR/xpath>.  
   
 ## <a name="example"></a>Przykład  
- This example uses the `<include>` tag to import member documentation comments from a file called `commentFile.xml`.  
+ W tym przykładzie używa znacznika `<include>` do importowania komentarzy do dokumentacji członków z pliku o nazwie `commentFile.xml`.  
   
  [!code-vb[VbVbcnXmlDocComments#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#4)]  
   
- The format of the `commentFile.xml` is as follows.  
+ Format `commentFile.xml` jest następujący.  
   
 ```xml  
 <Docs>  

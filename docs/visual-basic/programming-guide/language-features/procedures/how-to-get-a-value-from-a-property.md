@@ -16,27 +16,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74339831"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Porady: pobieranie wartości z właściwości (Visual Basic)
-You retrieve a property's value by including the property name in an expression.  
+Wartość właściwości jest pobierana przez dołączenie nazwy właściwości w wyrażeniu.  
   
- The property's `Get` procedure retrieves the value, but you do not explicitly call it by name. You use the property just as you would use a variable. Visual Basic makes the calls to the property's procedures.  
+ Procedura `Get` właściwości Pobiera wartość, ale nie można jawnie wywołać jej według nazwy. Właściwość jest używana tak samo jak w przypadku użycia zmiennej. Visual Basic wykonuje wywołania procedur właściwości.  
   
-### <a name="to-retrieve-a-value-from-a-property"></a>To retrieve a value from a property  
+### <a name="to-retrieve-a-value-from-a-property"></a>Aby pobrać wartość z właściwości  
   
-1. Use the property name in an expression the same way you would use a variable name. You can use a property anywhere you can use a variable or a constant.  
+1. Użyj nazwy właściwości w wyrażeniu tak samo jak w przypadku użycia nazwy zmiennej. Możesz użyć właściwości wszędzie tam, gdzie można użyć zmiennej lub stałej.  
   
      —lub—  
   
-     Use the property name following the equal (`=`) sign in an assignment statement.  
+     Użyj nazwy właściwości następującego po znaku równości (`=`) w instrukcji przypisania.  
   
-     The following example reads the value of the Visual Basic `Now` property, implicitly calling its `Get` procedure.  
+     Poniższy przykład odczytuje wartość właściwości `Now` Visual Basic, niejawnie wywołując `Get`ą procedurę.  
   
      [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
-2. If the property takes arguments, follow the property name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses.  
+2. Jeśli właściwość przyjmuje argumenty, postępuj zgodnie z nazwą właściwości z nawiasami, aby umieścić listę argumentów. Jeśli nie ma żadnych argumentów, możesz opcjonalnie pominąć nawiasy.  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the property defines the corresponding parameters.  
+3. Umieść argumenty na liście argumentów w nawiasach rozdzielonych przecinkami. Upewnij się, że argumenty są podawane w tej samej kolejności, w której Właściwość definiuje odpowiednie parametry.  
   
- The value of the property participates in the expression just as a variable or constant would, or it is stored in the variable or property on the left side of the assignment statement.  
+ Wartość właściwości uczestniczy w wyrażeniu tak samo jak zmienna lub stała lub jest przechowywana we właściwości lub właściwość po lewej stronie instrukcji przypisania.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -44,9 +44,9 @@ You retrieve a property's value by including the property name in an expression.
 - [Procedury właściwości](./property-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Property, instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Różnice między właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md)
 - [Instrukcje: tworzenie właściwości](./how-to-create-a-property.md)
 - [Instrukcje: deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Instrukcje: wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Instrukcje: deklarowanie i wywoływanie właściwości domyślnej w Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Instrukcje: umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)

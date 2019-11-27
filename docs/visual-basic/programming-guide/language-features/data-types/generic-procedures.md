@@ -20,18 +20,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350083"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Procedury ogólne w Visual Basic
-A *generic procedure*, also called a *generic method*, is a procedure defined with at least one type parameter. This allows the calling code to tailor the data types to its requirements each time it calls the procedure.  
+*Procedura ogólna*, nazywana również *metodą rodzajową*, jest procedurą zdefiniowaną z co najmniej jednym parametrem typu. Dzięki temu kod wywołujący dostosowuje typy danych do swoich wymagań przy każdym wywołaniu procedury.  
   
- A procedure is not generic simply by virtue of being defined inside a generic class or a generic structure. To be generic, the procedure must take at least one type parameter, in addition to any normal parameters it might take. A generic class or structure can contain nongeneric procedures, and a nongeneric class, structure, or module can contain generic procedures.  
+ Procedura nie jest ogólna po prostu na mocy zdefiniowanej wewnątrz klasy generycznej lub struktury ogólnej. Aby być ogólny, procedura musi pobrać co najmniej jeden parametr typu, oprócz wszystkich normalnych parametrów, które może podjąć. Ogólna Klasa lub struktura może zawierać procedury nieogólne, a niegeneryczna Klasa, struktura lub moduł mogą zawierać procedury ogólne.  
   
- A generic procedure can use its type parameters in its normal parameter list, in its return type if it has one, and in its procedure code.  
+ Procedura ogólna może używać jej parametrów typu na swojej normalnej liście parametrów, w jej typie zwracanym, jeśli ma jeden, i w jego kodzie procedury.  
   
 ## <a name="type-inference"></a>Wnioskowanie o typie  
- You can call a generic procedure without supplying any type arguments at all. If you call it this way, the compiler attempts to determine the appropriate data types to pass to the procedure's type arguments. This is called *type inference*. The following code shows a call in which the compiler infers that it should pass type `String` to the type parameter `t`.  
+ Można wywołać procedurę ogólną bez podawania żadnych argumentów typu. Jeśli wywołasz ten sposób, kompilator próbuje określić odpowiednie typy danych do przekazania do argumentów typu procedury. Jest to nazywane *wnioskami o typie*. Poniższy kod pokazuje wywołanie, w którym kompilator uważa, że powinien przekazać typ `String` do `t`parametru typu.  
   
  [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
   
- If the compiler cannot infer the type arguments from the context of your call, it reports an error. One possible cause of such an error is an array rank mismatch. For example, suppose you define a normal parameter as an array of a type parameter. If you call the generic procedure supplying an array of a different rank (number of dimensions), the mismatch causes type inference to fail. The following code shows a call in which a two-dimensional array is passed to a procedure that expects a one-dimensional array.  
+ Jeśli kompilator nie może wywnioskować argumentów typu z kontekstu wywołania, zgłosi błąd. Jedną z możliwych przyczyn tego błędu jest niezgodność rangi tablicy. Załóżmy na przykład, że definiujesz normalny parametr jako tablicę parametru typu. W przypadku wywołania procedury ogólnej dostarczającej tablicę o innej rangi (liczbie wymiarów) niezgodność powoduje niepowodzenie wnioskowania o typie. Poniższy kod pokazuje wywołanie, w którym tablica dwuwymiarowa jest przekazana do procedury, która oczekuje tablicy jednowymiarowej.  
   
 ```vb  
 Public Sub demoSub(Of t)(ByVal arg() As t)
@@ -43,30 +43,30 @@ Public Sub callDemoSub()
 End Sub
 ```
   
- You can invoke type inference only by omitting all the type arguments. If you supply one type argument, you must supply them all.  
+ Wnioskowanie o typie można wywołać tylko poprzez pominięcie wszystkich argumentów typu. W przypadku podania jednego typu argumentu należy podać wszystkie.  
   
- Type inference is supported only for generic procedures. You cannot invoke type inference on generic classes, structures, interfaces, or delegates.  
+ Wnioskowanie o typie jest obsługiwane tylko dla procedur ogólnych. Nie można wywołać wnioskowania o typie dla klas ogólnych, struktur, interfejsów ani delegatów.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- The following example defines a generic `Function` procedure to find a particular element in an array. It defines one type parameter and uses it to construct the two parameters in the parameter list.  
+ Poniższy przykład definiuje ogólną procedurę `Function`, aby znaleźć konkretny element w tablicy. Definiuje jeden parametr typu i używa go do konstruowania dwóch parametrów na liście parametrów.  
   
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbalrDataTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#14)]  
   
 ### <a name="comments"></a>Komentarze  
- The preceding example requires the ability to compare `searchValue` against each element of `searchArray`. To guarantee this ability, it constrains the type parameter `T` to implement the <xref:System.IComparable%601> interface. The code uses the <xref:System.IComparable%601.CompareTo%2A> method instead of the `=` operator, because there is no guarantee that a type argument supplied for `T` supports the `=` operator.  
+ Poprzedni przykład wymaga możliwości porównania `searchValue` z każdym elementem `searchArray`. Aby zagwarantować tę możliwość, ogranicza parametr typu `T` w celu zaimplementowania interfejsu <xref:System.IComparable%601>. Kod używa metody <xref:System.IComparable%601.CompareTo%2A> zamiast operatora `=`, ponieważ nie ma gwarancji, że argument typu dostarczony dla `T` obsługuje operatora `=`.  
   
- You can test the `findElement` procedure with the following code.  
+ Procedurę `findElement` można przetestować przy użyciu następującego kodu.  
   
  [!code-vb[VbVbalrDataTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#13)]  
   
- The preceding calls to `MsgBox` display "0", "1", and "-1" respectively.  
+ Poprzednie wywołania `MsgBox` wyświetlają odpowiednio wartości "0", "1" i "-1".  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Instrukcje: definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
 - [Instrukcje: używanie klasy ogólnej](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Procedury](../../../../visual-basic/programming-guide/language-features/procedures/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Stop — Instrukcja
+title: Stop, instrukcja
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Stop
@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346463"
 ---
 # <a name="stop-statement-visual-basic"></a>Stop — Instrukcja (Visual Basic)
-Suspends execution.  
+Wstrzymuje wykonywanie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,15 +29,15 @@ Stop
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- You can place `Stop` statements anywhere in procedures to suspend execution. Using the `Stop` statement is similar to setting a breakpoint in the code.  
+ Instrukcje `Stop` można umieścić w dowolnym miejscu w procedurach, aby wstrzymać wykonywanie. Użycie instrukcji `Stop` jest podobne do ustawiania punktu przerwania w kodzie.  
   
- The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.  
+ Instrukcja `Stop` wstrzymuje wykonywanie, ale w przeciwieństwie do `End`, nie zamyka żadnych plików ani nie czyści żadnych zmiennych, chyba że zostanie napotkana w skompilowanym pliku wykonywalnym (. exe).  
   
 > [!NOTE]
-> If the `Stop` statement is encountered in code that is running outside of the integrated development environment (IDE), the debugger is invoked. This is true regardless of whether the code was compiled in debug or retail mode.  
+> Jeśli instrukcja `Stop` występuje w kodzie, który działa poza zintegrowanym środowiskiem programistycznym (IDE), debuger jest wywoływany. Stanie się tak niezależnie od tego, czy kod został skompilowany w trybie debugowania, czy wersji wdrożeniowej.  
   
 ## <a name="example"></a>Przykład  
- This example uses the `Stop` statement to suspend execution for each iteration through the `For...Next` loop.  
+ Ten przykład używa instrukcji `Stop`, aby zawiesić wykonywanie dla każdej iteracji za pośrednictwem pętli `For...Next`.  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   

@@ -1,5 +1,5 @@
 ---
-title: Implementing IEnumerable
+title: Implementowanie interfejsu IEnumerable
 ms.date: 07/31/2018
 helpviewer_keywords:
 - control flow [Visual Basic]
@@ -15,87 +15,87 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333686"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Wskazówki: wdrażanie IEnumerable(Of T) w Visual Basic
-The <xref:System.Collections.Generic.IEnumerable%601> interface is implemented by classes that can return a sequence of values one item at a time. The advantage of returning data one item at a time is that you do not have to load the complete set of data into memory to work with it. You only have to use sufficient memory to load a single item from the data. Classes that implement the `IEnumerable(T)` interface can be used with `For Each` loops or LINQ queries.  
+Interfejs <xref:System.Collections.Generic.IEnumerable%601> jest implementowany przez klasy, które mogą zwracać sekwencję wartości po jednym elemencie naraz. Zaletą zwracania danych z jednego elementu jednocześnie jest to, że nie trzeba ładować kompletnego zestawu danych do pamięci, aby z niego korzystać. Wystarczy użyć wystarczającej ilości pamięci do załadowania pojedynczego elementu z danych. Klasy implementujące interfejs `IEnumerable(T)` mogą być używane z pętlą `For Each` lub kwerend LINQ.  
   
- For example, consider an application that must read a large text file and return each line from the file that matches particular search criteria. The application uses a LINQ query to return lines from the file that match the specified criteria. To query the contents of the file by using a LINQ query, the application could load the contents of the file into an array or a collection. However, loading the whole file into an array or collection would consume far more memory than is required. The LINQ query could instead query the file contents by using an enumerable class, returning only values that match the search criteria. Queries that return only a few matching values would consume far less memory.  
+ Rozważmy na przykład aplikację, która musi odczytać duży plik tekstowy i zwrócić każdy wiersz z pliku zgodnego z określonymi kryteriami wyszukiwania. Aplikacja używa zapytania LINQ do zwracania wierszy z pliku, które pasują do określonych kryteriów. Aby zbadać zawartość pliku przy użyciu zapytania LINQ, aplikacja może załadować zawartość pliku do tablicy lub kolekcji. Jednak załadowanie całego pliku do tablicy lub kolekcji spowodowałoby dużo więcej pamięci niż jest to wymagane. Zapytanie LINQ mogło zamiast tego zbadać zawartość pliku przy użyciu klasy wyliczalnej, zwracając tylko wartości pasujące do kryteriów wyszukiwania. Zapytania, które zwracają tylko kilka pasujących wartości, zużywają znacznie mniej pamięci.  
   
- You can create a class that implements the <xref:System.Collections.Generic.IEnumerable%601> interface to expose source data as enumerable data. Your class that implements the `IEnumerable(T)` interface will require another class that implements the <xref:System.Collections.Generic.IEnumerator%601> interface to iterate through the source data. These two classes enable you to return items of data sequentially as a specific type.  
+ Można utworzyć klasę, która implementuje interfejs <xref:System.Collections.Generic.IEnumerable%601>, aby uwidocznić dane źródłowe jako wyliczalne dane. Klasa implementująca interfejs `IEnumerable(T)` będzie wymagała innej klasy implementującej interfejs <xref:System.Collections.Generic.IEnumerator%601> do iteracji przez dane źródłowe. Te dwie klasy umożliwiają zwracanie elementów danych sekwencyjnie jako określonego typu.  
   
- In this walkthrough, you will create a class that implements the `IEnumerable(Of String)` interface and a class that implements the `IEnumerator(Of String)` interface to read a text file one line at a time.  
+ W tym instruktażu utworzysz klasę, która implementuje interfejs `IEnumerable(Of String)` i klasę implementującą interfejs `IEnumerator(Of String)` do odczytywania pliku tekstowego po jednym wierszu.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="creating-the-enumerable-class"></a>Creating the Enumerable Class  
+## <a name="creating-the-enumerable-class"></a>Tworzenie klasy wyliczalnej  
   
-**Create the enumerable class project**
+**Utwórz wyliczalny projekt klasy**
 
-1. In Visual Basic, on the **File** menu, point to **New** and then click **Project**.
+1. W Visual Basic w menu **plik** wskaż polecenie **Nowy** , a następnie kliknij pozycję **projekt**.
 
-1. In the **New Project** dialog box, in the **Project Types** pane, make sure that **Windows** is selected. Select **Class Library** in the **Templates** pane. In the **Name** box, type `StreamReaderEnumerable`, and then click **OK**. The new project is displayed.
+1. W oknie dialogowym **Nowy projekt** w okienku **typy projektów** upewnij się, że wybrano opcję **Windows** . W okienku **Szablony** wybierz pozycję **Biblioteka klas** . W polu **Nazwa** wpisz `StreamReaderEnumerable`, a następnie kliknij przycisk **OK**. Zostanie wyświetlony nowy projekt.
 
-1. In **Solution Explorer**, right-click the Class1.vb file and click **Rename**. Rename the file to `StreamReaderEnumerable.vb` and press ENTER. Renaming the file will also rename the class to `StreamReaderEnumerable`. This class will implement the `IEnumerable(Of String)` interface.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy plik Class1. vb i kliknij polecenie **Zmień nazwę**. Zmień nazwę pliku na `StreamReaderEnumerable.vb` i naciśnij klawisz ENTER. Zmiana nazwy pliku spowoduje również zmianę nazwy klasy na `StreamReaderEnumerable`. Ta klasa spowoduje zaimplementowanie interfejsu `IEnumerable(Of String)`.
 
-1. Right-click the StreamReaderEnumerable project, point to **Add**, and then click **New Item**. Select the **Class** template. In the **Name** box, type `StreamReaderEnumerator.vb` and click **OK**.
+1. Kliknij prawym przyciskiem myszy projekt StreamReaderEnumerable, wskaż polecenie **Dodaj**, a następnie kliknij pozycję **nowy element**. Wybierz szablon **klasy** . W polu **Nazwa** wpisz `StreamReaderEnumerator.vb` i kliknij przycisk **OK**.
 
- The first class in this project is the enumerable class and will implement the `IEnumerable(Of String)` interface. This generic interface implements the <xref:System.Collections.IEnumerable> interface and guarantees that consumers of this class can access values typed as `String`.  
+ Pierwsza klasa w tym projekcie jest klasą wyliczalną i implementuje interfejs `IEnumerable(Of String)`. Ten interfejs generyczny implementuje interfejs <xref:System.Collections.IEnumerable> i gwarantuje, że konsumenci tej klasy mogą uzyskać dostęp do wartości wpisanych jako `String`.  
   
-**Add the code to implement IEnumerable**
+**Dodaj kod w celu zaimplementowania interfejsu IEnumerable**
 
-1. Open the StreamReaderEnumerable.vb file.
+1. Otwórz plik StreamReaderEnumerable. vb.
 
-2. On the line after `Public Class StreamReaderEnumerable`, type the following and press ENTER.
+2. W wierszu po `Public Class StreamReaderEnumerable`wpisz następujące polecenie i naciśnij klawisz ENTER.
 
      [!code-vb[VbVbalrIteratorWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#1)]
 
-   Visual Basic automatically populates the class with the members that are required by the `IEnumerable(Of String)` interface.
+   Visual Basic automatycznie wypełnia klasę elementami członkowskimi, które są wymagane przez interfejs `IEnumerable(Of String)`.
   
-3. This enumerable class will read lines from a text file one line at a time. Add the following code to the class to expose a public constructor that takes a file path as an input parameter.
+3. Ta klasa wyliczalna odczytaje wiersze z pliku tekstowego po jednym wierszu. Dodaj następujący kod do klasy, aby uwidocznić konstruktora publicznego, który Pobiera ścieżkę pliku jako parametr wejściowy.
 
      [!code-vb[VbVbalrIteratorWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#2)]
 
-4. Your implementation of the <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method of the `IEnumerable(Of String)` interface will return a new instance of the `StreamReaderEnumerator` class. The implementation of the `GetEnumerator` method of the `IEnumerable` interface can be made `Private`, because you have to expose only members of the `IEnumerable(Of String)` interface. Replace the code that Visual Basic generated for the `GetEnumerator` methods with the following code.
+4. Implementacja metody <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> interfejsu `IEnumerable(Of String)` zwróci nowe wystąpienie klasy `StreamReaderEnumerator`. Implementację metody `GetEnumerator` interfejsu `IEnumerable` można wykonać `Private`, ponieważ należy uwidocznić tylko elementy członkowskie interfejsu `IEnumerable(Of String)`. Zastąp kod, który Visual Basic wygenerowany dla metod `GetEnumerator`, przy użyciu następującego kodu.
 
      [!code-vb[VbVbalrIteratorWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#3)]  
   
-**Add the code to implement IEnumerator**
+**Dodawanie kodu w celu zaimplementowania IEnumerator**
 
-1. Open the StreamReaderEnumerator.vb file.
+1. Otwórz plik StreamReaderEnumerator. vb.
 
-2. On the line after `Public Class StreamReaderEnumerator`, type the following and press ENTER.
+2. W wierszu po `Public Class StreamReaderEnumerator`wpisz następujące polecenie i naciśnij klawisz ENTER.
 
      [!code-vb[VbVbalrIteratorWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#4)]
 
-   Visual Basic automatically populates the class with the members that are required by the `IEnumerator(Of String)` interface.
+   Visual Basic automatycznie wypełnia klasę elementami członkowskimi, które są wymagane przez interfejs `IEnumerator(Of String)`.
 
-3. The enumerator class opens the text file and performs the file I/O to read the lines from the file. Add the following code to the class to expose a public constructor that takes a file path as an input parameter and open the text file for reading.
+3. Klasa Enumerator otwiera plik tekstowy i wykonuje operacje we/wy pliku w celu odczytania wierszy z pliku. Dodaj następujący kod do klasy, aby uwidocznić konstruktora publicznego, który Pobiera ścieżkę pliku jako parametr wejściowy, i Otwórz plik tekstowy do odczytu.
 
      [!code-vb[VbVbalrIteratorWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#5)]
 
-4. The `Current` properties for both the `IEnumerator(Of String)` and `IEnumerator` interfaces return the current item from the text file as a `String`. The implementation of the `Current` property of the `IEnumerator` interface can be made `Private`, because you have to expose only members of the `IEnumerator(Of String)` interface. Replace the code that Visual Basic generated for the `Current` properties with the following code.
+4. Właściwości `Current` dla interfejsów `IEnumerator(Of String)` i `IEnumerator` zwracają bieżący element z pliku tekstowego jako `String`. Implementacja właściwości `Current` interfejsu `IEnumerator` można wykonać `Private`, ponieważ należy uwidocznić tylko elementy członkowskie interfejsu `IEnumerator(Of String)`. Zastąp kod, który Visual Basic wygenerowany dla właściwości `Current` przy użyciu następującego kodu.
 
      [!code-vb[VbVbalrIteratorWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#6)]
 
-5. The `MoveNext` method of the `IEnumerator` interface navigates to the next item in the text file and updates the value that is returned by the `Current` property. If there are no more items to read, the `MoveNext` method returns `False`; otherwise the `MoveNext` method returns `True`. Add the following code to the `MoveNext` method.
+5. Metoda `MoveNext` interfejsu `IEnumerator` przechodzi do następnego elementu w pliku tekstowym i aktualizuje wartość zwracaną przez właściwość `Current`. Jeśli nie ma więcej elementów do odczytania, Metoda `MoveNext` zwraca `False`; w przeciwnym razie metoda `MoveNext` zwraca `True`. Dodaj następujący kod do metody `MoveNext`.
 
      [!code-vb[VbVbalrIteratorWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#7)]
 
-6. The `Reset` method of the `IEnumerator` interface directs the iterator to point to the start of the text file and clears the current item value. Add the following code to the `Reset` method.
+6. Metoda `Reset` interfejsu `IEnumerator` kieruje iterator, aby wskazywał na początek pliku tekstowego i czyści bieżącą wartość elementu. Dodaj następujący kod do metody `Reset`.
 
      [!code-vb[VbVbalrIteratorWalkthrough#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#8)]
 
-7. The `Dispose` method of the `IEnumerator` interface guarantees that all unmanaged resources are released before the iterator is destroyed. The file handle that is used by the `StreamReader` object is an unmanaged resource and must be closed before the iterator instance is destroyed. Replace the code that Visual Basic generated for the `Dispose` method with the following code.
+7. Metoda `Dispose` interfejsu `IEnumerator` gwarantuje, że wszystkie niezarządzane zasoby są wydawane przed zniszczeniem iteratora. Dojście do pliku, które jest używane przez obiekt `StreamReader`, jest zasobem niezarządzanym i musi zostać zamknięte przed zniszczeniem wystąpienia iteratora. Zastąp kod, który Visual Basic wygenerowany dla metody `Dispose`, przy użyciu następującego kodu.
 
      [!code-vb[VbVbalrIteratorWalkthrough#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#9)] 
   
-## <a name="using-the-sample-iterator"></a>Using the Sample Iterator
+## <a name="using-the-sample-iterator"></a>Użycie iteratora przykładowego
 
- You can use an enumerable class in your code together with control structures that require an object that implements `IEnumerable`, such as a `For Next` loop or a LINQ query. The following example shows the `StreamReaderEnumerable` in a LINQ query.  
+ Można użyć klasy wyliczalnej w kodzie wraz ze strukturami formantów wymagającymi obiektu, który implementuje `IEnumerable`, takich jak pętla `For Next` lub zapytanie LINQ. Poniższy przykład pokazuje `StreamReaderEnumerable` w kwerendzie LINQ.  
   
  [!code-vb[VbVbalrIteratorWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/Module1.vb#10)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Przepływ sterowania](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [For Each...Next, instrukcja](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

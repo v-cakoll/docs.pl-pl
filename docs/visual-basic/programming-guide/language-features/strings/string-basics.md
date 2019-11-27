@@ -14,66 +14,66 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344280"
 ---
 # <a name="string-basics-in-visual-basic"></a>Podstawowe informacje o ciągach w Visual Basic
-The `String` data type represents a series of characters (each representing in turn an instance of the `Char` data type). This topic introduces the basic concepts of strings in Visual Basic.  
+Typ danych `String` reprezentuje serię znaków (z których każde reprezentuje wystąpienie typu `Char` danych). W tym temacie przedstawiono podstawowe pojęcia dotyczące ciągów w Visual Basic.  
   
-## <a name="string-variables"></a>String Variables  
- An instance of a string can be assigned a literal value that represents a series of characters. Na przykład:  
+## <a name="string-variables"></a>Zmienne ciągu  
+ Do wystąpienia ciągu można przypisać wartość literału, która reprezentuje serię znaków. Na przykład:  
   
  [!code-vb[VbVbalrStrings#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#63)]  
   
- A `String` variable can also accept any expression that evaluates to a string. Odpowiednie przykłady przedstawiono poniżej:  
+ Zmienna `String` może również przyjmować dowolne wyrażenie, które daje w wyniku ciąg. Odpowiednie przykłady przedstawiono poniżej:  
   
  [!code-vb[VbVbalrStrings#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#64)]  
   
- Any literal that is assigned to a `String` variable must be enclosed in quotation marks (""). This means that a quotation mark within a string cannot be represented by a quotation mark. For example, the following code causes a compiler error:  
+ Wszystkie literały przypisane do zmiennej `String` muszą być ujęte w cudzysłów (""). Oznacza to, że znak cudzysłowu w ciągu nie może być reprezentowany przez cudzysłów. Na przykład następujący kod powoduje błąd kompilatora:  
   
  [!code-vb[VbVbalrStrings#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#65)]  
   
- This code causes an error because the compiler terminates the string after the second quotation mark, and the remainder of the string is interpreted as code. To solve this problem, Visual Basic interprets two quotation marks in a string literal as one quotation mark in the string. The following example demonstrates the correct way to include a quotation mark in a string:  
+ Ten kod powoduje błąd, ponieważ kompilator kończy ciąg po drugim znaku cudzysłowu, a pozostała część tego ciągu jest interpretowana jako kod. Aby rozwiązać ten problem, Visual Basic interpretuje dwa znaki cudzysłowu w literale ciągu jako jeden znak cudzysłowu w ciągu. Poniższy przykład ilustruje poprawny sposób dołączania cudzysłowu do ciągu:  
   
  [!code-vb[VbVbalrStrings#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#66)]  
   
- In the preceding example, the two quotation marks preceding the word `Look` become one quotation mark in the string. The three quotation marks at the end of the line represent one quotation mark in the string and the string termination character.  
+ W poprzednim przykładzie dwa cudzysłowy poprzedzające wyraz `Look` stają się pojedynczym znakiem cudzysłowu w ciągu. Trzy cudzysłowy znajdujące się na końcu wiersza reprezentują jeden znak cudzysłowu w ciągu i znak zakończenia ciągu.  
   
- String literals can contain multiple lines:  
+ Literały ciągu mogą zawierać wiele wierszy:  
   
 ```vb  
 Dim x = "hello  
 world"  
 ```  
   
- The resulting string contains newline sequences that you used in your string literal (vbcr, vbcrlf, etc.).  You no longer need to use the old workaround:  
+ Ciąg otrzymany zawiera sekwencje nowego wiersza, które były używane w literale ciągu (vbCr, vbCrLf itp.).  Nie trzeba już używać starego obejścia:  
   
 ```vb  
 Dim x = <xml><![CDATA[Hello  
 World]]></xml>.Value  
 ```  
   
-## <a name="characters-in-strings"></a>Characters in Strings  
- A string can be thought of as a series of `Char` values, and the `String` type has built-in functions that allow you to perform many manipulations on a string that resemble the manipulations allowed by arrays. Like all array in .NET Framework, these are zero-based arrays. You may refer to a specific character in a string through the `Chars` property, which provides a way to access a character by the position in which it appears in the string. Na przykład:  
+## <a name="characters-in-strings"></a>Znaki w ciągach  
+ Ciąg może być uważany za serię wartości `Char`, a typ `String` ma wbudowane funkcje, które umożliwiają wykonywanie wielu operacji w ciągu, który przypomina manipulowanie dozwolone przez tablice. Podobnie jak w przypadku wszystkich tablic w .NET Framework, są to tablice oparte na zero. Można odwołać się do określonego znaku w ciągu za pomocą właściwości `Chars`, która zapewnia sposób dostępu do znaku przez położenie, w którym występuje w ciągu. Na przykład:  
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   
- In the above example, the `Chars` property of the string returns the fourth character in the string, which is `D`, and assigns it to `myChar`. You can also get the length of a particular string through the `Length` property. If you need to perform multiple array-type manipulations on a string, you can convert it to an array of `Char` instances using the `ToCharArray` function of the string. Na przykład:  
+ W powyższym przykładzie właściwość `Chars` ciągu zwraca czwarty znak w ciągu, który jest `D`i przypisuje go do `myChar`. Możesz również uzyskać długość określonego ciągu za pomocą właściwości `Length`. Jeśli trzeba wykonać wiele operacji manipulowania typem tablicowym w ciągu, można przekonwertować ją na tablicę wystąpień `Char` przy użyciu funkcji `ToCharArray` ciągu. Na przykład:  
   
  [!code-vb[VbVbalrStrings#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#68)]  
   
- The variable `myArray` now contains an array of `Char` values, each representing a character from `myString`.  
+ Zmienna `myArray` teraz zawiera tablicę wartości `Char`, z których każdy reprezentuje znak z `myString`.  
   
-## <a name="the-immutability-of-strings"></a>The Immutability of Strings  
- A string is *immutable*, which means its value cannot be changed once it has been created. However, this does not prevent you from assigning more than one value to a string variable. Consider the following example:  
+## <a name="the-immutability-of-strings"></a>Niezmienności ciągów  
+ Ciąg jest *niezmienny*, co oznacza, że jego wartość nie może zostać zmieniona po utworzeniu. Nie uniemożliwia to jednak przypisywania więcej niż jednej wartości do zmiennej ciągu. Rozważmy następujący przykład:  
   
  [!code-vb[VbVbalrStrings#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#69)]  
   
- Here, a string variable is created, given a value, and then its value is changed.  
+ W tym miejscu zostanie utworzona zmienna ciągu, z uwzględnieniem wartości, a następnie jej wartość zostanie zmieniona.  
   
- More specifically, in the first line, an instance of type `String` is created and given the value `This string is immutable`. In the second line of the example, a new instance is created and given the value `Or is it?`, and the string variable discards its reference to the first instance and stores a reference to the new instance.  
+ Dokładniej, w pierwszym wierszu zostanie utworzone wystąpienie typu `String` i nadano `This string is immutable`wartość. W drugim wierszu przykładu zostanie utworzone nowe wystąpienie, pod którym `Or is it?`wartość, a zmienna String odrzuca odwołanie do pierwszego wystąpienia i zapisuje odwołanie do nowego wystąpienia.  
   
- Unlike other intrinsic data types, `String` is a reference type. When a variable of reference type is passed as an argument to a function or subroutine, a reference to the memory address where the data is stored is passed instead of the actual value of the string. So in the previous example, the name of the variable remains the same, but it points to a new and different instance of the `String` class, which holds the new value.  
+ W przeciwieństwie do innych typów danych wewnętrznych, `String` jest typem referencyjnym. Gdy zmienna typu referencyjnego jest przenoszona jako argument do funkcji lub podprocedury, odwołanie do adresu pamięci, w którym są przechowywane dane jest przekazywane zamiast rzeczywistej wartości ciągu. Dlatego w poprzednim przykładzie nazwa zmiennej pozostaje taka sama, ale wskazuje na nowe i inne wystąpienie klasy `String`, która zawiera nową wartość.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Introduction to Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Wprowadzenie do ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
 - [String, typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md)
 - [Char, typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md)
 - [Podstawowe operacje na ciągach](../../../../standard/base-types/basic-string-operations.md)

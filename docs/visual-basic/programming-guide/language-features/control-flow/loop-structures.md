@@ -18,23 +18,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353912"
 ---
 # <a name="loop-structures-visual-basic"></a>Struktury pętli (Visual Basic)
-Visual Basic loop structures allow you to run one or more lines of code repetitively. You can repeat the statements in a loop structure until a condition is `True`, until a condition is `False`, a specified number of times, or once for each element in a collection.  
+Struktury pętli Visual Basic umożliwiają powtarzanie jednego lub kilku wierszy kodu. Można powtórzyć instrukcje w strukturze pętli do momentu, aż warunek zostanie `True`, do momentu, aż warunek zostanie `False`, określoną liczbę razy lub jeden raz dla każdego elementu w kolekcji.  
   
- The following illustration shows a loop structure that runs a set of statements until a condition becomes true:  
+ Poniższa ilustracja przedstawia strukturę pętli, która uruchamia zestaw instrukcji do momentu, gdy zostanie spełniony warunek:  
   
- ![Flow chart that shows a Do...Until loop.](./media/loop-structures/do-until-loop-true-condition.gif)  
+ ![Wykres przepływu, który zawiera element do... Do pętli.](./media/loop-structures/do-until-loop-true-condition.gif)  
   
-## <a name="while-loops"></a>While Loops  
- The `While`...`End While` construction runs a set of statements as long as the condition specified in the `While` statement is `True`. For more information, see [While...End While Statement](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).  
+## <a name="while-loops"></a>While — pętle  
+ Konstrukcja `While`...`End While` uruchamia zestaw instrukcji, o ile warunek określony w instrukcji `While` jest `True`. Aby uzyskać więcej informacji, zobacz [while... Instrukcja End while](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).  
   
-## <a name="do-loops"></a>Do Loops  
- The `Do`...`Loop` construction allows you to test a condition at either the beginning or the end of a loop structure. You can also specify whether to repeat the loop while the condition remains `True` or until it becomes `True`. For more information, see [Do...Loop Statement](../../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+## <a name="do-loops"></a>Pętle do  
+ Konstrukcja `Do`...`Loop` umożliwia przetestowanie warunku na początku lub na końcu struktury pętli. Można również określić, czy powtarzać pętlę, gdy warunek pozostaje `True` lub dopóki nie zostanie `True`. Aby uzyskać więcej informacji, zobacz [... Loop — instrukcja](../../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
-## <a name="for-loops"></a>For Loops  
- The `For`...`Next` construction performs the loop a set number of times. It uses a loop control variable, also called a *counter*, to keep track of the repetitions. You specify the starting and ending values for this counter, and you can optionally specify the amount by which it increases from one repetition to the next. For more information, see [For...Next Statement](../../../../visual-basic/language-reference/statements/for-next-statement.md).  
+## <a name="for-loops"></a>Pętle for  
+ Konstrukcja `For`...`Next` wykonuje pętlę określoną liczbę razy. Używa zmiennej sterującej pętli, zwanej również *licznikiem*, do śledzenia powtórzeń. Należy określić wartości początkową i końcową dla tego licznika. Opcjonalnie możesz określić ilość, o którą wzrośnie od jednego powtórzenia do następnego. Aby uzyskać więcej informacji, zobacz [dla... Next — instrukcja](../../../../visual-basic/language-reference/statements/for-next-statement.md).  
   
-## <a name="for-each-loops"></a>For Each Loops  
- The `For Each`...`Next` construction runs a set of statements once for each element in a collection. You specify the loop control variable, but you do not have to determine starting or ending values for it. For more information, see [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+## <a name="for-each-loops"></a>Dla każdej pętli  
+ Konstrukcja `For Each`...`Next` uruchamia zestaw instrukcji jeden raz dla każdego elementu w kolekcji. Należy określić zmienną sterującą pętli, ale nie trzeba określać jej wartości początkowej ani końcowej. Aby uzyskać więcej informacji, zobacz [dla każdej z nich... Next — instrukcja](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

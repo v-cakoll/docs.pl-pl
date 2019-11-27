@@ -1,5 +1,5 @@
 ---
-title: Command-line compiler
+title: Kompilator wiersza polecenia
 ms.date: 02/20/2018
 helpviewer_keywords:
 - compilers [Visual Basic], Visual Basic options
@@ -15,24 +15,24 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344231"
 ---
-# <a name="visual-basic-command-line-compiler"></a>Visual Basic command-line compiler
+# <a name="visual-basic-command-line-compiler"></a>Kompilator wiersza polecenia Visual Basic
 
-The Visual Basic command-line compiler provides an alternative to compiling programs from within the Visual Studio integrated development environment (IDE). This section contains descriptions for the Visual Basic compiler options.
+Kompilator wiersza polecenia Visual Basic zapewnia alternatywę dla kompilowania programów z poziomu zintegrowanego środowiska programistycznego (IDE) programu Visual Studio. Ta sekcja zawiera opisy opcji kompilatora Visual Basic.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
-Describes the Visual Basic command-line compiler, which is provided as an alternative to compiling programs from within the Visual Studio IDE.
+Opisuje Visual Basic kompilator wiersza polecenia, który jest dostarczany jako alternatywa dla kompilowania programów z poziomu środowiska IDE programu Visual Studio.
 
-[Visual Basic Compiler Options Listed Alphabetically](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
-Lists compiler options in an alphabetical table
+[Opcje kompilatora Visual Basic w porządku alfabetycznym](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
+Wyświetla listę opcji kompilatora w tabeli alfabetycznej
 
-[Visual Basic Compiler Options Listed by Category](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
-Presents compiler options in functional groups.
+[Opcje kompilatora Visual Basic wymienione według kategorii](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
+Przedstawia opcje kompilatora w grupach funkcjonalnych.
   
-## <a name="related-sections"></a>Related sections
+## <a name="related-sections"></a>Sekcje pokrewne
 
 [Przewodnik po Visual Basic](../../index.md)  
-The starting point for the Visual Basic documentation.
+Punkt początkowy dokumentacji Visual Basic.

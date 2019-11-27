@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347112"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While — Klauzula (Visual Basic)
-Includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.  
+Zawiera elementy w kolekcji, tak długo, jak określony warunek jest `true` i pomija pozostałe elementy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -28,21 +28,21 @@ Take While expression
   
 |Termin|Definicja|  
 |---|---|  
-|`expression`|Wymagany. An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
+|`expression`|Wymagana. Wyrażenie reprezentujące warunek, dla którego mają zostać przetestowane elementy. Wyrażenie musi zwracać wartość `Boolean` lub odpowiedni odpowiednik funkcjonalny, na przykład `Integer` do oceny jako `Boolean`.|  
   
 ## <a name="remarks"></a>Uwagi  
- The `Take While` clause includes elements from the start of a query result until the supplied `expression` returns `false`. After the `expression` returns `false`, the query will bypass all remaining elements. The `expression` is ignored for the remaining results.  
+ Klauzula `Take While` zawiera elementy od początku wyniku zapytania do momentu, gdy podano `expression` zwraca `false`. Gdy `expression` zwraca `false`, zapytanie spowoduje obejście wszystkich pozostałych elementów. `expression` jest ignorowana dla pozostałych wyników.  
   
- The `Take While` clause differs from the `Where` clause in that the `Where` clause can be used to include all elements from a query that meet a particular condition. The `Take While` clause includes elements only until the first time that the condition is not satisfied. The `Take While` clause is most useful when you are working with an ordered query result.  
+ Klauzula `Take While` różni się od klauzuli `Where`, w której klauzula `Where` może być używana do dołączania wszystkich elementów z zapytania, które spełniają określony warunek. Klauzula `Take While` zawiera elementy tylko do pierwszego niespełnienia warunku. Klauzula `Take While` jest najbardziej przydatna podczas pracy z wynikiem kwerendy uporządkowanej.  
   
 ## <a name="example"></a>Przykład  
- The following code example uses the `Take While` clause to retrieve results until the first customer without any orders is found.  
+ Poniższy przykład kodu używa klauzuli `Take While`, aby pobrać wyniki do momentu, w którym nie zostanie znaleziony pierwszy klient bez żadnych zamówień.  
   
  [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Zapytania](../../../visual-basic/language-reference/queries/index.md)
 - [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)

@@ -18,16 +18,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351473"
 ---
 # <a name="narrowing-visual-basic"></a>Narrowing (Visual Basic)
-Indicates that a conversion operator (`CType`) converts a class or structure to a type that might not be able to hold some of the possible values of the original class or structure.  
+Wskazuje, że Operator konwersji (`CType`) konwertuje klasę lub strukturę do typu, który może nie być w stanie przechowywać niektórych możliwych wartości oryginalnej klasy lub struktury.  
   
-## <a name="converting-with-the-narrowing-keyword"></a>Converting with the Narrowing Keyword  
- The conversion procedure must specify `Public Shared` in addition to `Narrowing`.  
+## <a name="converting-with-the-narrowing-keyword"></a>Konwertowanie za pomocą słowa kluczowego Narrowing  
+ Procedura konwersji musi określać `Public Shared` oprócz `Narrowing`.  
   
- Narrowing conversions do not always succeed at run time, and can fail or incur data loss. Examples are `Long` to `Integer`, `String` to `Date`, and a base type to a derived type. This last conversion is narrowing because the base type might not contain all the members of the derived type and thus is not an instance of the derived type.  
+ Konwersje wąskie nie zawsze kończą się powodzeniem w czasie wykonywania i mogą kończyć się niepowodzeniem lub spowodować utratę danych. Przykłady `Long` do `Integer`, `String` do `Date`i typ podstawowy dla typu pochodnego. Ta ostatnia konwersja jest zawężana, ponieważ typ podstawowy może nie zawierać wszystkich elementów członkowskich typu pochodnego, w związku z czym nie jest wystąpieniem typu pochodnego.  
   
- If `Option Strict` is `On`, the consuming code must use `CType` for all narrowing conversions.  
+ Jeśli `Option Strict` jest `On`, kod zużywający musi używać `CType` dla wszystkich konwersji zawężających.  
   
- The `Narrowing` keyword can be used in this context:  
+ W tym kontekście można użyć słowa kluczowego `Narrowing`:  
   
  [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)  
   

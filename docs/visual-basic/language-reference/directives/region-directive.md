@@ -1,5 +1,5 @@
 ---
-title: '##Region, dyrektywa'
+title: '#Dyrektywa #Region'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Region
@@ -19,7 +19,7 @@ ms.locfileid: "74343793"
 ---
 # <a name="region-directive"></a>#Region — dyrektywa
 
-Collapses and hides sections of code in Visual Basic files.  
+Zwija i ukrywa sekcje kodu w plikach Visual Basic.  
   
 ## <a name="syntax"></a>Składnia  
 
@@ -32,16 +32,16 @@ Collapses and hides sections of code in Visual Basic files.
   
 |Termin|Definicja|  
 |---|---|  
-|`identifier_string`|Wymagany. String that acts as the title of a region when it is collapsed. Regions are collapsed by default.|  
-|`#End Region`|Terminates the `#Region` block.|  
+|`identifier_string`|Wymagana. Ciąg, który funkcjonuje jako tytuł regionu, gdy jest zwinięty. Regiony są domyślnie zwinięte.|  
+|`#End Region`|Kończy blok `#Region`.|  
   
 ## <a name="remarks"></a>Uwagi  
 
- Use the `#Region` directive to specify a block of code to expand or collapse when using the outlining feature of the Visual Studio Code Editor. You can place, or *nest*, regions within other regions to group similar regions together.  
+ Użyj dyrektywy `#Region`, aby określić blok kodu do rozwinięcia lub zwinięcia przy użyciu funkcji tworzenia konspektu edytora Visual Studio Code. Możesz umieszczać lub *zagnieżdżać*regiony w innych regionach, aby grupować podobne regiony jednocześnie.  
   
 ## <a name="example"></a>Przykład  
 
- This example uses the `#Region` directive.  
+ Ten przykład używa dyrektywy `#Region`.  
   
  [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
   

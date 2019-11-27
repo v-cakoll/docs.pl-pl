@@ -8,17 +8,17 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349585"
 ---
-# <a name="-visual-basic-reference"></a>$ (Visual Basic Reference)
+# <a name="-visual-basic-reference"></a>$ (Odwołanie Visual Basic)
 
-Identifies a string literal as an [interpolated string](../../programming-guide/language-features/strings/interpolated-strings.md). An interpolated string is a template-like string that contains literal text along with *interpolated expressions*. When the interpolated string is resolved, for example in an assignment statement or a method call, its interpolated expressions are replaced by their string representations in the result string. Interpolated strings are replacements for the [composite format strings](../../../standard/base-types/composite-formatting.md) supported by the .NET Framework.
+Identyfikuje literał ciągu jako [ciąg interpolowany](../../programming-guide/language-features/strings/interpolated-strings.md). Ciąg interpolowany jest ciągiem podobnym do szablonu, który zawiera tekst literału oraz *wyrażenie interpolowane*. Gdy ciąg interpolowany zostanie rozwiązany, na przykład w instrukcji przypisania lub wywołaniu metody, jego wyrażenia interpolowane są zamieniane na ciąg w ciągu wynikowym. Ciągi interpolowane są zamiennikami [ciągów formatu złożonego](../../../standard/base-types/composite-formatting.md) obsługiwanych przez .NET Framework.
 
-The following example uses the `$` character to define an interpolated string.
+Poniższy przykład używa znaku `$`, aby zdefiniować ciąg interpolowany.
 
 [!CODE-vb[interpolated-string-symbol](../../../../samples/snippets/visualbasic/language-reference/special-characters/dollar-sign1.vb)]
 
-For more information on interpolated strings, see the [Interpolated Strings](../../programming-guide/language-features/strings/interpolated-strings.md) topic.
+Aby uzyskać więcej informacji na temat ciągów interpolowanych, zobacz temat [Parametry interpolowane](../../programming-guide/language-features/strings/interpolated-strings.md) .
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Visual Basic Reference](../index.md)
-- [Visual Basic Special Characters](index.md)
+- [Informacje Visual Basic](../index.md)
+- [Visual Basic znaki specjalne](index.md)

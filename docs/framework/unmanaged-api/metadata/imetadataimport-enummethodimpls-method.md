@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427491"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls — Metoda
-Enumerates MethodBody and MethodDeclaration tokens representing methods of the specified type.  
+Wylicza tokeny MethodBody i MethodDeclaration reprezentujące metody określonego typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,38 +40,38 @@ HRESULT EnumMethodImpls (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in. out] Wskaźnik do modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
   
  `td`  
- [in] A TypeDef token for the type whose method implementations to enumerate.  
+ podczas Token TypeDef dla typu, którego implementacje metod mają zostać wyliczone.  
   
  `rMethodBody`  
- [out] The array to store the MethodBody tokens.  
+ określoną Tablica do przechowywania tokenów MethodBody.  
   
  `rMethodDecl`  
- [out] The array to store the MethodDeclaration tokens.  
+ określoną Tablica do przechowywania tokenów MethodDeclaration.  
   
  `cMax`  
- [in] The maximum size of the `rMethodBody` and `rMethodDecl` arrays.  
+ podczas Maksymalny rozmiar tablic `rMethodBody` i `rMethodDecl`.  
   
  `pcTokens`  
- [in] The actual number of methods returned in `rMethodBody` and `rMethodDecl`.  
+ podczas Rzeczywista liczba metod zwróconych w `rMethodBody` i `rMethodDecl`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` returned successfully.|  
-|`S_FALSE`|There are no method tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethodImpls` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak tokenów metody do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

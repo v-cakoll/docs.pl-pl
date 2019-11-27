@@ -22,7 +22,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 ## <a name="toolbar-parts"></a>Części paska narzędzi  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.ToolBar>.  
   
-|Części|Typ|Opis|  
+|Części|Type|Opis|  
 |-|-|-|  
 |PART_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|Obiekt, który zawiera kontrolki na <xref:System.Windows.Controls.ToolBar>.|  
 |PART_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Obiekt, który zawiera kontrolki, które znajdują się w obszarze przepełnienia <xref:System.Windows.Controls.ToolBar>.|  

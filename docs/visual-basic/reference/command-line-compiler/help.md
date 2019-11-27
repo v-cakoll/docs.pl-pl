@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344267"
 ---
 # <a name="-help---visual-basic"></a>-help, -? (Visual Basic)
-Displays the compiler options.  
+Wyświetla opcje kompilatora.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,13 +32,13 @@ lub
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- If you include this option in a compilation, no output file is created and no compilation takes place.  
+ Jeśli ta opcja zostanie uwzględniona w kompilacji, żaden plik wyjściowy nie zostanie utworzony i nie będzie wykonywana żadna kompilacja.  
   
 > [!NOTE]
-> The `-help` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> Opcja `-help` nie jest dostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
   
 ## <a name="example"></a>Przykład  
- The following code displays help from the command line.  
+ Poniższy kod wyświetla pomoc w wierszu polecenia.  
   
 ```console  
 vbc -help  
@@ -46,5 +46,5 @@ vbc -help
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

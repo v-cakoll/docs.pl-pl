@@ -16,10 +16,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350177"
 ---
 # <a name="as-clause-visual-basic"></a>As — Klauzula (Visual Basic)
-Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.  
+Wprowadza klauzulę `As`, która identyfikuje typ danych w instrukcji deklaracji lub listę ograniczeń dla parametru typu ogólnego.  
   
 ## <a name="remarks"></a>Uwagi  
- The `As` keyword can be used in these contexts:  
+ Słowa kluczowego `As` można użyć w tych kontekstach:  
   
  [Aggregate, klauzula](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
@@ -37,9 +37,9 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [For...Next Statements](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Dla... Następne instrukcje](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [For Each...Next Statements](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For each... Następne instrukcje](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -57,7 +57,7 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Try...Catch...Finally Statements](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Spróbuj... Catch... Finally — instrukcje](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -65,5 +65,5 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
 - [Typy danych](../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Deklaracja zmiennej](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Lista typów](../../../visual-basic/language-reference/statements/type-list.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

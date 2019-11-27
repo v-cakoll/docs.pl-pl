@@ -1,5 +1,5 @@
 ---
-title: Validating Passwords Complexity
+title: Walidacja złożoności haseł
 ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
@@ -12,11 +12,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348329"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Wskazówki: sprawdzanie poprawności złożoności haseł (Visual Basic)
-This method checks for some strong-password characteristics and updates a string parameter with information about which checks the password fails.  
+Ta metoda sprawdza pewne cechy silnego hasła i aktualizuje parametr ciągu z informacjami o tym, które sprawdzenia nie powiodło się.  
   
- Passwords can be used in a secure system to authorize a user. However, the passwords must be difficult for unauthorized users to guess. Attackers can use a *dictionary attack* program, which iterates through all of the words in a dictionary (or multiple dictionaries in different languages) and tests whether any of the words work as a user's password. Weak passwords such as "Yankees" or "Mustang" can be guessed quickly. Stronger passwords, such as "?You'L1N3vaFiNdMeyeP@sSWerd!", are much less likely to be guessed. A password-protected system should ensure that users choose strong passwords.  
+ Hasła mogą być używane w zabezpieczonym systemie w celu autoryzowania użytkownika. Jednak hasła muszą być trudne dla nieautoryzowanych użytkowników. Osoby atakujące mogą korzystać z programu *ataku słownikowego* , który wykonuje iterację we wszystkich słowach w słowniku (lub wielu słownikach w różnych językach) i sprawdza, czy którykolwiek z tych słów działa jako hasło użytkownika. Słabe hasła, takie jak "Yankees" lub "Mustang", można szybko wypróbować. Silniejsze hasła, na przykład "? "L1N3vaFiNdMeyeP@sSWerd!", są znacznie mniej znaczące do odgadnięcia. System chroniony hasłem powinien mieć pewność, że użytkownicy wybierają silne hasła.  
   
- A strong password is complex (containing a mixture of uppercase, lowercase, numeric, and special characters) and is not a word. This example demonstrates how to verify complexity.  
+ Silne hasło jest złożone (zawierające kombinację wielkich, małych liter, cyfr i znaków specjalnych) i nie jest słowem. W tym przykładzie pokazano, jak sprawdzić złożoność.  
   
 ## <a name="example"></a>Przykład  
   
@@ -24,26 +24,26 @@ This method checks for some strong-password characteristics and updates a string
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Call this method by passing the string that contains that password.  
+ Wywołaj tę metodę, przekazując ciąg, który zawiera to hasło.  
   
  Ten przykład wymaga:  
   
-- Access to the members of the <xref:System.Text.RegularExpressions> namespace. Add an `Imports` statement if you are not fully qualifying member names in your code. For more information, see [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Dostęp do elementów członkowskich <xref:System.Text.RegularExpressions> przestrzeni nazw. Dodaj instrukcję `Imports`, jeśli nie masz w pełni kwalifikowanej nazwy elementu członkowskiego w kodzie. Aby uzyskać więcej informacji, zobacz [Imports — Instrukcja (przestrzeń nazw i typ .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
-## <a name="security"></a>Zabezpieczenia  
- If you're moving the password across a network, you need to use a secure method for transferring data. For more information, see [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
+## <a name="security"></a>Bezpieczeństwo  
+ Jeśli przenosisz hasło za pośrednictwem sieci, musisz użyć bezpiecznej metody przesyłania danych. Aby uzyskać więcej informacji, zobacz [ASP.NET zabezpieczenia aplikacji sieci Web](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
- You can improve the accuracy of the `ValidatePassword` function by adding additional complexity checks:  
+ Dokładność funkcji `ValidatePassword` można poprawić, dodając dodatkowe sprawdzenia złożoności:  
   
-- Compare the password and its substrings against the user's name, user identifier, and an application-defined dictionary. In addition, treat visually similar characters as equivalent when performing the comparisons. For example, treat the letters "l" and "e" as equivalent to the numerals "1" and "3".  
+- Porównaj hasło i jego podciągi w odniesieniu do nazwy użytkownika, identyfikatora użytkownika i słownika zdefiniowanego przez aplikację. Ponadto Traktuj podobne wizualnie znaki jako równoważne podczas przeprowadzania porównania. Na przykład Traktuj litery "l" i "e" jako równoważne cyfrom "1" i "3".  
   
-- If there is only one uppercase character, make sure it is not the password's first character.  
+- Jeśli istnieje tylko jeden znak pisany wielkimi literami, upewnij się, że nie jest on pierwszym znakiem hasła.  
   
-- Make sure that the last two characters of the password are letter characters.  
+- Upewnij się, że ostatnie dwa znaki hasła są literami znaków.  
   
-- Do not allow passwords in which all the symbols are entered from the keyboard's top row.  
+- Nie Zezwalaj na hasła, w których wszystkie symbole są wprowadzane z górnego wiersza klawiatury.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Text.RegularExpressions.Regex>
-- [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))
+- [Zabezpieczenia aplikacji sieci Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))

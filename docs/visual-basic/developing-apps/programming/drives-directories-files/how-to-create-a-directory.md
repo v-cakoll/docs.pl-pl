@@ -14,13 +14,13 @@ ms.locfileid: "74348810"
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a>Porady: tworzenie katalogu w Visual Basic
 
-Use the `CreateDirectory` method of the `My.Computer.FileSystem` object to create directories.  
+Użyj metody `CreateDirectory` obiektu `My.Computer.FileSystem` do tworzenia katalogów.  
   
- If the directory already exists, no exception is thrown.  
+ Jeśli katalog już istnieje, nie jest zgłaszany żaden wyjątek.  
   
-### <a name="to-create-a-directory"></a>To create a directory  
+### <a name="to-create-a-directory"></a>Aby utworzyć katalog  
   
-- Use the `CreateDirectory` method by specifying the full path of the location where the directory should be created. This example creates the directory `NewDirectory` in `C:\Documents and Settings\All Users\Documents`.  
+- Użyj metody `CreateDirectory`, określając pełną ścieżkę lokalizacji, w której ma zostać utworzony katalog. Ten przykład tworzy katalog `NewDirectory` w `C:\Documents and Settings\All Users\Documents`.  
   
      [!code-vb[VbVbcnMyFileSystem#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#2)]  
   
@@ -28,19 +28,19 @@ Use the `CreateDirectory` method of the `My.Computer.FileSystem` object to creat
 
  Następujące warunki mogą spowodować wyjątek:  
   
-- The directory name is malformed. For example, it contains illegal characters or is only white space (<xref:System.ArgumentException>).  
+- Nazwa katalogu jest nieprawidłowo sformułowana. Na przykład zawiera niedozwolone znaki lub jest tylko białym znakiem (<xref:System.ArgumentException>).  
   
-- The parent directory of the directory to be created is read-only (<xref:System.IO.IOException>).  
+- Katalog nadrzędny katalogu, który ma zostać utworzony, jest tylko do odczytu (<xref:System.IO.IOException>).  
   
-- The directory name is `Nothing` (<xref:System.ArgumentNullException>).  
+- Nazwa katalogu jest `Nothing` (<xref:System.ArgumentNullException>).  
   
-- The directory name is too long (<xref:System.IO.PathTooLongException>).  
+- Nazwa katalogu jest za długa (<xref:System.IO.PathTooLongException>).  
   
-- The directory name is a colon ":" (<xref:System.NotSupportedException>).  
+- Nazwa katalogu jest dwukropek ":" (<xref:System.NotSupportedException>).  
   
-- The user does not have permission to create the directory (<xref:System.UnauthorizedAccessException>).  
+- Użytkownik nie ma uprawnienia do tworzenia katalogu (<xref:System.UnauthorizedAccessException>).  
   
-- The user lacks permissions in a partial-trust situation (<xref:System.Security.SecurityException>).  
+- Użytkownik nie ma uprawnień w sytuacji częściowej zaufania (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Zobacz także
 

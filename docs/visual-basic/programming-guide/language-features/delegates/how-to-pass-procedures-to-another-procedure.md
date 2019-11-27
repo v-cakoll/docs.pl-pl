@@ -1,5 +1,5 @@
 ---
-title: 'How to: Pass Procedures to Another Procedure'
+title: 'Instrukcje: przekazywanie procedur do innej procedury'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
@@ -13,37 +13,37 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345244"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Porady: przekazywanie procedur do innej procedury w Visual Basic
-This example shows how to use delegates to pass a procedure to another procedure.  
+Ten przykład pokazuje, jak za pomocą delegatów przekazać procedurę do innej procedury.  
   
- A delegate is a type that you can use like any other type in Visual Basic. The `AddressOf` operator returns a delegate object when applied to a procedure name.  
+ Delegat jest typem, który można użyć jak dowolnego innego typu w Visual Basic. Operator `AddressOf` zwraca obiekt delegata w przypadku zastosowania do nazwy procedury.  
   
- This example has a procedure with a delegate parameter that can take a reference to another procedure, obtained with the `AddressOf` operator.  
+ Ten przykład zawiera procedurę z parametrem delegata, który może przyjąć odwołanie do innej procedury uzyskanej przy użyciu operatora `AddressOf`.  
   
-### <a name="create-the-delegate-and-matching-procedures"></a>Create the delegate and matching procedures  
+### <a name="create-the-delegate-and-matching-procedures"></a>Tworzenie procedur delegat i Matching  
   
-1. Create a delegate named `MathOperator`.  
+1. Utwórz delegat o nazwie `MathOperator`.  
   
      [!code-vb[VbVbalrDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#1)]  
   
-2. Create a procedure named `AddNumbers` with parameters and return value that match those of `MathOperator`, so that the signatures match.  
+2. Utwórz procedurę o nazwie `AddNumbers` z parametrami i zwracaną wartością zgodną `MathOperator`z tymi, aby podpisy były zgodne.  
   
      [!code-vb[VbVbalrDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#2)]  
   
-3. Create a procedure named `SubtractNumbers` with a signature that matches `MathOperator`.  
+3. Utwórz procedurę o nazwie `SubtractNumbers` z podpisem pasującym do `MathOperator`.  
   
      [!code-vb[VbVbalrDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#3)]  
   
-4. Create a procedure named `DelegateTest` that takes a delegate as a parameter.  
+4. Utwórz procedurę o nazwie `DelegateTest`, która przyjmuje delegat jako parametr.  
   
-     This procedure can accept a reference to `AddNumbers` or `SubtractNumbers`, because their signatures match the `MathOperator` signature.  
+     Ta procedura może akceptować odwołanie do `AddNumbers` lub `SubtractNumbers`, ponieważ ich sygnatury pasują do sygnatury `MathOperator`.  
   
      [!code-vb[VbVbalrDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#4)]  
   
-5. Create a procedure named `Test` that calls `DelegateTest` once with the delegate for `AddNumbers` as a parameter, and again with the delegate for `SubtractNumbers` as a parameter.  
+5. Utwórz procedurę o nazwie `Test`, która wywołuje `DelegateTest` raz z delegatem `AddNumbers` jako parametr i ponownie z delegatem dla `SubtractNumbers` jako parametr.  
   
      [!code-vb[VbVbalrDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#5)]  
   
-     When `Test` is called, it first displays the result of `AddNumbers` acting on `5` and `3`, which is 8. Then the result of `SubtractNumbers` acting on `9` and `3` is displayed, which is 6.  
+     Gdy `Test` jest wywoływana, najpierw wyświetla wynik `AddNumbers` działającego na `5` i `3`, czyli 8. Następnie zostanie wyświetlony wynik `SubtractNumbers` działającego na `9` i `3`, czyli 6.  
   
 ## <a name="see-also"></a>Zobacz także
 

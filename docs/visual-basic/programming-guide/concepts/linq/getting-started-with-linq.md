@@ -16,48 +16,48 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346950"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Wprowadzenie do programu LINQ w Visual Basic
-This section contains overviews, examples, and background information that will help you understand and use Visual Basic and Language-Integrated Query (LINQ).  
+Ta sekcja zawiera przeglądy, przykłady i informacje w tle, które ułatwią zrozumienie i używanie Visual Basic i programu Query-Integrated Language (LINQ).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Pisanie pierwszego zapytania LINQ](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)  
- Describes the three stages in writing a basic LINQ query: obtaining the data source, writing the query, and executing the query.  
+ Opisuje trzy etapy pisania podstawowej kwerendy LINQ: uzyskanie źródła danych, zapisanie zapytania i wykonanie zapytania.  
   
- [Basic Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)  
- Describes the most common types of query operations and how they are expressed in Visual Basic.  
+ [Podstawowe operacje zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)  
+ Opisuje najpopularniejsze typy operacji zapytań oraz sposób ich wyrażania w Visual Basic.  
   
  [Funkcje Visual Basic obsługujące LINQ](../../../../visual-basic/programming-guide/concepts/linq/features-that-support-linq.md)  
- Describes the Visual Basic language features that support LINQ, such as anonymous types and type inference.  
+ Opisuje funkcje języka Visual Basic, które obsługują LINQ, takie jak typy anonimowe i wnioskowanie o typie.  
   
- [Type Relationships in Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)  
- Describes how data types are preserved or transformed when queries are written and executed.  
+ [Relacje typu w operacjach zapytania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)  
+ Opisuje, jak typy danych są zachowywane lub przekształcane podczas pisania i wykonywania zapytań.  
   
- [Walkthrough: Writing Queries in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- Step-by-step instructions for creating a Visual Basic LINQ project, adding a simple data source, and performing some basic query operations.  
+ [Przewodnik: Pisanie zapytań w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
+ Instrukcje krok po kroku dotyczące tworzenia projektu Visual Basic LINQ, dodawania prostego źródła danych i wykonywania niektórych podstawowych operacji zapytania.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- Includes an overview of queries in LINQ and provides links to additional resources.  
+ [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ Zawiera omówienie zapytań w LINQ i zawiera linki do dodatkowych zasobów.  
   
- [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Describes how Visual Basic supports LINQ to XML.  
+ [Omówienie LINQ to XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
+ Opisuje sposób, w jaki Visual Basic obsługuje LINQ to XML.  
   
  [Omówienie LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
- Provides a conceptual overview of LINQ to DataSet.  
+ Zawiera omówienie koncepcji LINQ to DataSet.  
   
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- Explains the LINQ to SQL technology and provides links to topics that help you use LINQ to SQL.  
+ W tym artykule opisano technologię LINQ to SQL i przedstawiono linki do tematów, które ułatwiają korzystanie z LINQ to SQL.  
   
- [Visual Studio IDE and Tools Support for LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  
- Describes tools that are available in the Visual Studio environment for designing, coding, and debugging LINQ-enabled applications.  
+ [Środowisko IDE i narzędzia programu Visual Studio obsługujące składnik LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  
+ Opisuje narzędzia, które są dostępne w środowisku programu Visual Studio do projektowania, kodowania i debugowania aplikacji obsługujących LINQ.  
   
  [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- Includes a selection of How-to topics for using LINQ with in-memory collections.  
+ Zawiera wybór tematów porad dotyczących używania LINQ z kolekcjami znajdującymi się w pamięci.  
   
  [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
- Includes links to topics that explain how to use LINQ to XML, which provides the in-memory document modification capabilities of the Document Object Model (DOM), and supports LINQ query expressions.  
+ Zawiera linki do tematów, które wyjaśniają, jak używać LINQ to XML, które udostępniają możliwości modyfikacji dokumentów w pamięci Document Object Model (DOM) i obsługują wyrażenia zapytań LINQ.  
   
- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- Provides links to topics that explain the LINQ technologies.  
+ [Zapytanie zintegrowane z językiem (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ Zawiera łącza do tematów, które opisują technologie LINQ.  
   
  [Wprowadzenie do korzystania z LINQ w C#](/dotnet/csharp/programming-guide/concepts/linq/)  
- Provides links to topics about using LINQ in C#.
+ Zawiera łącza do tematów dotyczących używania programu LINQ C#in.

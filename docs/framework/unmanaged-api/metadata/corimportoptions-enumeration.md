@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442845"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions — Wyliczenie
-Contains flag values that control the behavior during importation of an assembly outside the current scope.  
+Zawiera wartości flag kontrolujące zachowanie podczas importu zestawu poza bieżącym zakresem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,26 +42,26 @@ typedef enum CorImportOptions {
 } CorImportOptions;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`MDImportOptionDefault`|Indicates the default behavior, which is to skip deleted records.|  
-|`MDImportOptionAll`|Indicates that all metadata should be enumerated.|  
-|`MDImportOptionAllTypeDefs`|Indicates that all TypeDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllMethodDefs`|Indicates that all MethodDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllFieldDefs`|Indicates that all FieldDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllProperties`|Indicates that all PropertyDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllEvents`|Indicates that all EventDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllCustomAttributes`|Indicates that all custom attributes, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllExportedTypes`|Indicates that all exported types, including deleted ones, should be enumerated.|  
+|`MDImportOptionDefault`|Wskazuje zachowanie domyślne, co oznacza pominięcie usuniętych rekordów.|  
+|`MDImportOptionAll`|Wskazuje, że wszystkie metadane powinny być wyliczane.|  
+|`MDImportOptionAllTypeDefs`|Wskazuje, że wszystkie definicje typów, włącznie z usuniętymi, powinny być wyliczane.|  
+|`MDImportOptionAllMethodDefs`|Wskazuje, że wszystkie MethodDefs, włącznie z usuniętymi, powinny być wyliczane.|  
+|`MDImportOptionAllFieldDefs`|Wskazuje, że wszystkie FieldDefs, włącznie z usuniętymi, powinny być wyliczane.|  
+|`MDImportOptionAllProperties`|Wskazuje, że wszystkie PropertyDefs, włącznie z usuniętymi, powinny być wyliczane.|  
+|`MDImportOptionAllEvents`|Wskazuje, że wszystkie EventDefs, włącznie z usuniętymi, powinny być wyliczane.|  
+|`MDImportOptionAllCustomAttributes`|Wskazuje, że wszystkie atrybuty niestandardowe, w tym usunięte, powinny być wyliczane.|  
+|`MDImportOptionAllExportedTypes`|Wskazuje, że wszystkie wyeksportowane typy, łącznie z usuniętymi, powinny być wyliczane.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

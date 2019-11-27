@@ -13,8 +13,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332966"
 ---
-# <a name="-imports-visual-basic"></a>-imports (Visual Basic)
-Imports namespaces from a specified assembly.  
+# <a name="-imports-visual-basic"></a>-Imports (Visual Basic)
+Importuje przestrzenie nazw z określonego zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,19 +26,19 @@ Imports namespaces from a specified assembly.
   
 |Termin|Definicja|  
 |---|---|  
-|`namespaceList`|Wymagany. Comma-delimited list of namespaces to be imported.|  
+|`namespaceList`|Wymagana. Rozdzielana przecinkami lista przestrzeni nazw do zaimportowania.|  
   
 ## <a name="remarks"></a>Uwagi  
- The `-imports` option imports any namespace defined within the current set of source files or from any referenced assembly.  
+ Opcja `-imports` importuje wszystkie przestrzenie nazw zdefiniowane w bieżącym zestawie plików źródłowych lub z dowolnego przywoływanego zestawu.  
   
- The members in a namespace specified with `-imports` are available to all source-code files in the compilation. Use the [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to use a namespace in a single source-code file.  
+ Elementy członkowskie w przestrzeni nazw określonej za pomocą `-imports` są dostępne dla wszystkich plików kodu źródłowego w kompilacji. Użyj [instrukcji Imports (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) , aby użyć przestrzeni nazw w jednym pliku kodu źródłowego.  
   
-|To set /imports in the Visual Studio integrated development environment|  
+|Aby ustawić/Imports — w zintegrowanym środowisku programistycznym programu Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. On the **Project** menu, click **Properties**. <br />2.  Click the **References** tab.<br />3.  Enter the namespace name in the box beside the **Add User Import** button.<br />4.  Click the **Add User Import** button.|  
+|1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **odwołania** .<br />3. Wprowadź nazwę przestrzeni nazw w polu obok przycisku **Dodaj użytkownika importowania** .<br />4. kliknij przycisk **Dodaj Import użytkownika** .|  
   
 ## <a name="example"></a>Przykład  
- The following code compiles when `/imports:system.globalization` is specified. Without it, successful compilation requires either that an `Imports System.Globalization` statement be included at the beginning of the source code file, or that the property be fully qualified as `System.Globalization.CultureInfo.CurrentCulture.Name`.
+ Poniższy kod kompiluje, gdy `/imports:system.globalization` jest określony. Bez tej opcji kompilacja powiodła się wymaga, aby instrukcja `Imports System.Globalization` była uwzględniona na początku pliku kodu źródłowego lub że właściwość jest w pełni kwalifikowana jako `System.Globalization.CultureInfo.CurrentCulture.Name`.
 
 ```vb
 Module Example
@@ -50,6 +50,6 @@ End Module
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Referencje i instrukcja Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

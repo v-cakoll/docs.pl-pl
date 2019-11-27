@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445852"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated — Metoda
-Notifies the profiler that memory within the heap has been allocated for an object.  
+Powiadamia program profilujący, że pamięć w stercie została przypisana dla obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,22 +35,22 @@ HRESULT ObjectAllocated(
   
 ## <a name="parameters"></a>Parametry  
  `objectId`  
- [in] The ID of the object for which memory was allocated.  
+ podczas Identyfikator obiektu, dla którego przydzielono pamięć.  
   
  `classId`  
- [in] The ID of the class of which the object is an instance.  
+ podczas Identyfikator klasy, której obiekt jest wystąpieniem.  
   
 ## <a name="remarks"></a>Uwagi  
- The `ObjectedAllocated` method is not called for allocations from either the stack or unmanaged memory. The `classId` parameter can refer to a class in managed code that has not been loaded yet. The profiler will receive a class load callback for that class immediately after the `ObjectAllocated` callback.  
+ Metoda `ObjectedAllocated` nie jest wywoływana dla alokacji z pamięci stosu lub niezarządzanej. Parametr `classId` może odwoływać się do klasy w zarządzanym kodzie, który nie został jeszcze załadowany. Profiler otrzyma wywołanie zwrotne ładowania klasy dla tej klasy natychmiast po wywołaniu wywołania zwrotnego `ObjectAllocated`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

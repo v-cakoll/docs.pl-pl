@@ -16,7 +16,7 @@ ms.locfileid: "74346306"
 ---
 # <a name="structure-variables-visual-basic"></a>Zmienne struktur (Visual Basic)
 
-Once you have created a structure, you can declare procedure-level and module-level variables as that type. For example, you can create a structure that records information about a computer system. The following example demonstrates this.
+Po utworzeniu struktury można zadeklarować zmienne poziomu procedury i na poziomie modułu jako ten typ. Można na przykład utworzyć strukturę, która rejestruje informacje o systemie komputerowym. Poniższy przykład ilustruje to.
 
 ```vb
 Public Structure systemInfo
@@ -26,18 +26,18 @@ Public Structure systemInfo
 End Structure
 ```
 
-You can now declare variables of that type. The following declaration illustrates this.
+Można teraz zadeklarować zmienne tego typu. Ilustruje to poniższą deklarację.
 
 ```vb
 Dim mySystem, yourSystem As systemInfo
 ```
 
 > [!NOTE]
-> In classes and modules, structures declared using the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) default to public access. If you intend a structure to be private, make sure you declare it using the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword.
+> W klasach i modułach struktury zadeklarowane przy użyciu [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) są domyślne dla dostępu publicznego. Jeśli zamierzasz mieć prywatną strukturę, upewnij się, że deklarujesz ją przy użyciu [prywatnego](../../../../visual-basic/language-reference/modifiers/private.md) słowa kluczowego.
 
-## <a name="access-to-structure-values"></a>Access to Structure Values
+## <a name="access-to-structure-values"></a>Dostęp do wartości struktury
 
-To assign and retrieve values from the elements of a structure variable, you use the same syntax as you use to set and get properties on an object. You place the member access operator (`.`) between the structure variable name and the element name. The following example accesses elements of the variables previously declared as type `systemInfo`.
+Aby przypisać i pobrać wartości z elementów zmiennej struktury, należy użyć tej samej składni, która jest używana do ustawiania i pobierania właściwości obiektu. Operator dostępu do elementów członkowskich (`.`) należy umieścić między nazwą zmiennej struktury a nazwą elementu. Poniższy przykład uzyskuje dostęp do elementów zmiennych zadeklarowanych wcześniej jako typ `systemInfo`.
 
 ```vb
 mySystem.cPU = "486"
@@ -45,15 +45,15 @@ Dim tooOld As Boolean
 If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True
 ```
 
-## <a name="assigning-structure-variables"></a>Assigning Structure Variables
+## <a name="assigning-structure-variables"></a>Przypisywanie zmiennych struktury
 
-You can also assign one variable to another if both are of the same structure type. This copies all the elements of one structure to the corresponding elements in the other. The following declaration illustrates this.
+Można również przypisać jedną zmienną do innej, jeśli oba są tego samego typu struktury. Spowoduje to skopiowanie wszystkich elementów jednej struktury do odpowiednich elementów w drugim. Ilustruje to poniższą deklarację.
 
 ```vb
 yourSystem = mySystem
 ```
 
-If a structure element is a reference type, such as a `String`, `Object`, or array, the pointer to the data is copied. In the previous example, if `systemInfo` had included an object variable, then the preceding example would have copied the pointer from `mySystem` to `yourSystem`, and a change to the object's data through one structure would be in effect when accessed through the other structure.
+Jeśli element struktury jest typem referencyjnym, takim jak `String`, `Object`lub Array, wskaźnik do danych jest kopiowany. W poprzednim przykładzie, jeśli `systemInfo` zawierała zmienną obiektu, poprzedni przykład skopiował wskaźnik z `mySystem` do `yourSystem`, a zmiana danych obiektu za pomocą jednej struktury będzie miała wpływ na dostęp za pośrednictwem innej struktury.
 
 ## <a name="see-also"></a>Zobacz także
 

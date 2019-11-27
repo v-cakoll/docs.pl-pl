@@ -1,5 +1,5 @@
 ---
-title: Overloaded properties and methods
+title: Przeciążone właściwości i metody
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [Visual Basic], overloading
@@ -19,70 +19,70 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346086"
 ---
-# <a name="overloaded-properties-and-methods-visual-basic"></a>Overloaded properties and methods (Visual Basic)
+# <a name="overloaded-properties-and-methods-visual-basic"></a>Przeciążone właściwości i metody (Visual Basic)
 
-Overloading is the creation of more than one procedure, instance constructor, or property in a class with the same name but different argument types.
+Przeciążenie jest tworzeniem więcej niż jednej procedury, konstruktora wystąpienia lub właściwości w klasie o tej samej nazwie, ale różnych typach argumentów.
 
-## <a name="overloading-usage"></a>Overloading usage
+## <a name="overloading-usage"></a>Przeciążenie użycia
 
-Overloading is especially useful when your object model dictates that you employ identical names for procedures that operate on different data types. For example, a class that can display several different data types could have `Display` procedures that look like this:
+Przeciążenie jest szczególnie przydatne, gdy model obiektów wskazuje, że są stosowane identyczne nazwy dla procedur, które działają na różnych typach danych. Na przykład Klasa, która może wyświetlać kilka różnych typów danych, może mieć `Display` procedury, które wyglądają następująco:
 
 [!code-vb[VbVbalrOOP#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#64)]
 
-Without overloading, you would need to create distinct names for each procedure, even though they do the same thing, as shown next:
+Bez przeciążania należy utworzyć odrębne nazwy dla każdej procedury, nawet jeśli są one takie same, jak pokazano poniżej:
 
 [!code-vb[VbVbalrOOP#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#65)]
 
-Overloading makes it easier to use properties or methods because it provides a choice of data types that can be used. For example, the overloaded `Display` method discussed previously can be called with any of the following lines of code:
+Przeciążanie ułatwia korzystanie z właściwości lub metod, ponieważ umożliwia wybór typów danych, które mogą być używane. Na przykład przeciążona metoda `Display` opisana wcześniej może być wywoływana z dowolnym z następujących wierszy kodu:
 
 [!code-vb[VbVbalrOOP#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#66)]
 
-At run time, Visual Basic calls the correct procedure based on the data types of the parameters you specify.
+W czasie wykonywania Visual Basic wywołuje poprawną procedurę na podstawie typów danych parametrów, które określisz.
 
-## <a name="overloading-rules"></a>Overloading rules
+## <a name="overloading-rules"></a>Reguły przeciążania
 
- You create an overloaded member for a class by adding two or more properties or methods with the same name. Except for overloaded derived members, each overloaded member must have different parameter lists, and the following items cannot be used as a differentiating feature when overloading a property or procedure:
+ Tworzysz przeciążoną składową klasy przez dodanie dwóch lub więcej właściwości lub metod o tej samej nazwie. Z wyjątkiem przeciążonych członków pochodnych każdy przeciążony element członkowski musi mieć różne listy parametrów, a następujące elementy nie mogą być używane jako funkcja odróżniająca podczas przeciążania właściwości lub procedury:
 
-- Modifiers, such as `ByVal` or `ByRef`, that apply to a member, or parameters of the member.
+- Modyfikatory, takie jak `ByVal` lub `ByRef`, które mają zastosowanie do elementu członkowskiego lub parametrów elementu członkowskiego.
 
-- Names of parameters
+- Nazwy parametrów
 
-- Return types of procedures
+- Zwracane typy procedur
 
-The `Overloads` keyword is optional when overloading, but if any overloaded member uses the `Overloads` keyword, then all other overloaded members with the same name must also specify this keyword.
+Słowo kluczowe `Overloads` jest opcjonalne podczas przeciążania, ale jeśli jakikolwiek przeciążony element członkowski używa słowa kluczowego `Overloads`, wówczas wszystkie inne przeciążone elementy członkowskie o tej samej nazwie muszą również określać to słowo kluczowe.
 
-Derived classes can overload inherited members with members that have identical parameters and parameter types, a process known as *shadowing by name and signature*. If the `Overloads` keyword is used when shadowing by name and signature, the derived class's implementation of the member will be used instead of the implementation in the base class, and all other overloads for that member will be available to instances of the derived class.
+Klasy pochodne mogą przeciążać dziedziczone elementy członkowskie z elementami członkowskimi, które mają identyczne parametry i typy parametrów, proces znany jako *przesłanianie przez nazwę i podpis*. Jeśli `Overloads` słowo kluczowe jest używane podczas przesłaniania według nazwy i podpisu, implementacja klasy pochodnej elementu członkowskiego zostanie użyta zamiast implementacji w klasie bazowej, a wszystkie pozostałe przeciążenia dla tego elementu członkowskiego będą dostępne dla wystąpień klasy pochodnej.
 
-If the `Overloads` keyword is omitted when overloading an inherited member with a member that has identical parameters and parameter types, then the overloading is called *shadowing by name*. Shadowing by name replaces the inherited implementation of a member, and it makes all other overloads unavailable to instances of the derived class and its decedents.
+Jeśli słowo kluczowe `Overloads` zostanie pominięte podczas przeciążenia dziedziczonego elementu członkowskiego, który ma identyczne parametry i typy parametrów, Przeciążenie jest nazywane *przesłanianiem o nazwie*. Przesłanianie według nazwy zastępuje dziedziczone implementacje elementu członkowskiego i powoduje, że wszystkie pozostałe przeciążenia są niedostępne dla wystąpień klasy pochodnej i jej decedents.
 
-The `Overloads` and `Shadows` modifiers cannot both be used with the same property or method.
+Modyfikatory `Overloads` i `Shadows` nie mogą być używane z tą samą właściwością lub metodą.
 
 ### <a name="example"></a>Przykład
 
-The following example creates overloaded methods that accept either a `String` or `Decimal` representation of a dollar amount and return a string containing the sales tax.
+Poniższy przykład tworzy przeciążone metody, które akceptują `String` lub `Decimal` reprezentację kwoty dolara i zwracają ciąg zawierający podatek sprzedaży.
 
-#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>To use this example to create an overloaded method
+#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>Aby użyć tego przykładu do utworzenia przeciążonej metody
 
-1. Open a new project and add a class named `TaxClass`.
+1. Otwórz nowy projekt i Dodaj klasę o nazwie `TaxClass`.
 
-2. Add the following code to the `TaxClass` class.
+2. Dodaj następujący kod do klasy `TaxClass`.
 
     [!code-vb[VbVbalrOOP#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#67)]
 
-3. Add the following procedure to your form.
+3. Dodaj następującą procedurę do formularza.
 
     [!code-vb[VbVbalrOOP#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#68)]
 
-4. Add a button to your form and call the `ShowTax` procedure from the `Button1_Click` event of the button.
+4. Dodaj przycisk do formularza i Wywołaj procedurę `ShowTax` ze zdarzenia `Button1_Click` przycisku.
 
-5. Run the project and click the button on the form to test the overloaded `ShowTax` procedure.
+5. Uruchom projekt i kliknij przycisk w formularzu, aby przetestować przeciążoną procedurę `ShowTax`.
 
-At run time, the compiler chooses the appropriate overloaded function that matches the parameters being used. When you click the button, the overloaded method is called first with a `Price` parameter that is a string and the message, "Price is a String. Tax is $5.12" is displayed. `TaxAmount` is called with a `Decimal` value the second time and the message, "Price is a Decimal. Tax is $5.12" is displayed.
+W czasie wykonywania kompilator wybiera odpowiednią przeciążoną funkcję zgodną z używanymi parametrami. Po kliknięciu przycisku przeciążona metoda jest wywoływana jako pierwsza z parametrem `Price`, który jest ciągiem i komunikatem "Price jest ciągiem. Zostanie wyświetlony podatek $5,12. `TaxAmount` jest wywoływana z wartością `Decimal` po raz drugi i komunikatem "cena jest liczbą dziesiętną. Zostanie wyświetlony podatek $5,12.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Obiekty i klasy](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Obserwowanie w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Sub, instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Podstawowe informacje o dziedziczeniu](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)

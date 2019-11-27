@@ -1,5 +1,5 @@
 ---
-title: Parsing text files with the TextFieldParser object
+title: Analizowanie plików tekstowych za pomocą obiektu TextFieldParser
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, using
@@ -13,27 +13,27 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333845"
 ---
-# <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>Parsing text files with the TextFieldParser object (Visual Basic)
+# <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>Analizowanie plików tekstowych za pomocą obiektu TextFieldParser (Visual Basic)
 
-The `TextFieldParser` object allows you to parse and process very large file that are structured as delimited-width columns of text, such as log files or legacy database information. Parsing a text file with `TextFieldParser` is similar to iterating over a text file, while the parse method to extract fields of text is similar to string manipulation methods used to tokenize delimited strings.  
+Obiekt `TextFieldParser` pozwala analizować i przetwarzać bardzo duży plik, który jest uporządkowany jako kolumny z rozdzielonymi szerokościami tekstu, takie jak pliki dziennika lub informacje o starszej bazie danych. Analizowanie pliku tekstowego za pomocą `TextFieldParser` jest podobne do iterowania w pliku tekstowym, podczas gdy metoda Parse do wyodrębniania pól tekstowych jest podobna do metod manipulowania ciągami służącymi do tokenize ciągów znaków.  
   
-## <a name="parsing-different-types-of-text-files"></a>Parsing different types of text files  
+## <a name="parsing-different-types-of-text-files"></a>Analizowanie różnych typów plików tekstowych  
 
- Text files may have fields of various width, delimited by a character such as a comma or a tab space. Define `TextFieldType` and the delimiter, as in the following example, which uses the `SetDelimiters` method to define a tab-delimited text file:  
+ Pliki tekstowe mogą mieć pola o różnej szerokości, rozdzielane znakami, takimi jak przecinki lub spacja tabulacji. Zdefiniuj `TextFieldType` i ogranicznik, jak w poniższym przykładzie, który używa metody `SetDelimiters` do definiowania pliku tekstowego rozdzielanego tabulatorami:  
   
  [!code-vb[VbVbalrTextFieldParser#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#21)]  
   
- Other text files may have field widths that are fixed. In such cases, you need to define the `TextFieldType` as `FixedWidth` and define the widths of each field, as in the following example. This example uses the `SetFieldWidths` method to define the columns of text: the first column is 5 characters wide, the second is 10, the third is 11, and the fourth is of variable width.  
+ Inne pliki tekstowe mogą mieć stałe szerokości pól. W takich przypadkach należy zdefiniować `TextFieldType` jako `FixedWidth` i zdefiniować szerokości poszczególnych pól, jak w poniższym przykładzie. W poniższym przykładzie zastosowano metodę `SetFieldWidths`, aby zdefiniować kolumny tekstu: pierwsza kolumna ma szerokość 5 znaków, a druga — 10, trzeci to 11, a czwarta jest szerokość zmiennej.  
   
  [!code-vb[VbVbalrTextFieldParser#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#22)]  
   
- Once the format is defined, you can loop through the file, using the `ReadFields` method to process each line in turn.  
+ Po zdefiniowaniu formatu można wykonać pętlę w pliku przy użyciu metody `ReadFields`, aby przetwarzać każdy wiersz z kolei.  
   
- If a field does not match the specified format, a <xref:Microsoft.VisualBasic.FileIO.MalformedLineException> exception is thrown. When such exceptions are thrown, the `ErrorLine` and `ErrorLineNumber` properties hold the text causing the exception and the line number of that text.  
+ Jeśli pole nie jest zgodne z określonym formatem, zostanie zgłoszony wyjątek <xref:Microsoft.VisualBasic.FileIO.MalformedLineException>. Gdy takie wyjątki są zgłaszane, właściwości `ErrorLine` i `ErrorLineNumber` przechowują tekst powodujący wyjątek i numer wiersza tego tekstu.  
   
-## <a name="parsing-files-with-multiple-formats"></a>Parsing files with multiple formats  
+## <a name="parsing-files-with-multiple-formats"></a>Analizowanie plików z wieloma formatami  
 
- The `PeekChars` method of the `TextFieldParser` object can be used to check each field before reading it, allowing you to define multiple formats for the fields and react accordingly. For more information, see [How to: Read From Text Files with Multiple Formats](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md).  
+ Metoda `PeekChars` obiektu `TextFieldParser` może być użyta do sprawdzenia każdego pola przed jego odczytaniem, co pozwala na zdefiniowanie wielu formatów dla pól i odpowiednie reagowanie. Aby uzyskać więcej informacji, zobacz [jak: odczyt z plików tekstowych w wielu formatach](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

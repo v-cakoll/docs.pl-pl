@@ -20,45 +20,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345376"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Porady: kontrolowanie zakresu zmiennej (Visual Basic)
-Normally, a variable is in *scope*, or visible for reference, throughout the region in which you declare it. In some cases, the variable's *access level* can influence its scope.  
+Zwykle zmienna znajduje się w *zakresie*lub jest widoczna dla odwołania w całym regionie, w którym jest zadeklarowana. W niektórych przypadkach *poziom dostępu* zmiennej może mieć wpływ na jego zakres.  
   
- For more information, see [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
+ Aby uzyskać więcej informacji, zobacz [zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
   
-## <a name="scope-at-block-or-procedure-level"></a>Scope at Block or Procedure Level  
+## <a name="scope-at-block-or-procedure-level"></a>Zakres na poziomie bloku lub procedury  
   
-#### <a name="to-make-a-variable-visible-only-within-a-block"></a>To make a variable visible only within a block  
+#### <a name="to-make-a-variable-visible-only-within-a-block"></a>Aby zmienna była widoczna tylko w bloku  
   
-- Place the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) for the variable between the initiating and terminating declaration statements of that block, for example between the `For` and `Next` statements of a `For` loop.  
+- Umieść [instrukcję Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) dla zmiennej między instrukcjami inicjującymi i kończącymi deklaracji tego bloku, na przykład między instrukcjami `For` i `Next` pętli `For`.  
   
-     You can refer to the variable only from within the block.  
+     Można odwołać się do zmiennej tylko z poziomu bloku.  
   
-#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>To make a variable visible only within a procedure  
+#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>Aby zmienna była widoczna tylko w ramach procedury  
   
-- Place the `Dim` statement for the variable inside the procedure but outside any block (such as a `With`...`End With` block).  
+- Umieść instrukcję `Dim` dla zmiennej wewnątrz procedury, ale poza blokami (takimi jak `With`...`End With` bloku).  
   
-     You can refer to the variable only from within the procedure, including inside any block contained in the procedure.  
+     Można odwołać się do zmiennej tylko z wewnątrz procedury, w tym w dowolnym bloku zawartym w procedurze.  
   
-## <a name="scope-at-module-or-namespace-level"></a>Scope at Module or Namespace Level  
- For convenience, the single term *module level* applies equally to modules, classes, and structures. The access level of a module level variable determines its scope. The namespace that contains the module, class, or structure also influences the scope.  
+## <a name="scope-at-module-or-namespace-level"></a>Zakres na poziomie modułu lub przestrzeni nazw  
+ Dla wygody poziom jednoterminowego *modułu* jest stosowany równomiernie dla modułów, klas i struktur. Poziom dostępu zmiennej poziomu modułu określa jej zakres. Przestrzeń nazw, która zawiera moduł, klasę lub strukturę, ma także wpływ na zakres.  
   
-#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>To make a variable visible throughout a module, class, or structure  
+#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>Aby uczynić zmienną widoczną w całym module, klasie lub strukturze  
   
-1. Place the `Dim` statement for the variable inside the module, class, or structure, but outside any procedure.  
+1. Umieść instrukcję `Dim` dla zmiennej wewnątrz modułu, klasy lub struktury, ale poza jakąkolwiek procedurą.  
   
-2. Include the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the `Dim` statement.  
+2. Dołącz [prywatne](../../../../visual-basic/language-reference/modifiers/private.md) słowo kluczowe do instrukcji `Dim`.  
   
-3. You can refer to the variable from anywhere within the module, class, or structure, but not from outside it.  
+3. Możesz odwołać się do zmiennej z dowolnego miejsca w module, klasie lub strukturze, ale nie spoza niej.  
   
-#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>To make a variable visible throughout a namespace  
+#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>Aby uczynić zmienną widoczną w całym obszarze nazw  
   
-1. Place the `Dim` statement for the variable inside the module, class, or structure, but outside any procedure.  
+1. Umieść instrukcję `Dim` dla zmiennej wewnątrz modułu, klasy lub struktury, ale poza jakąkolwiek procedurą.  
   
-2. Include the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) or [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the `Dim` statement.  
+2. Dołącz słowo kluczowe [zaprzyjaźnione](../../../../visual-basic/language-reference/modifiers/friend.md) lub [publiczne](../../../../visual-basic/language-reference/modifiers/public.md) w instrukcji `Dim`.  
   
-3. You can refer to the variable from anywhere within the namespace containing the module, class, or structure.  
+3. Możesz odwołać się do zmiennej z dowolnego miejsca w przestrzeni nazw zawierającej moduł, klasę lub strukturę.  
   
 ## <a name="example"></a>Przykład  
- The following example declares a variable at module level and limits its visibility to code within the module.  
+ Poniższy przykład deklaruje zmienną na poziomie modułu i ogranicza jej widoczność do kodu w module.  
   
 ```vb  
 Module demonstrateScope  
@@ -72,25 +72,25 @@ Module demonstrateScope
 End Module  
 ```  
   
- In the preceding example, all the procedures defined in module `demonstrateScope` can refer to the `String` variable `strMsg`. When the `usePrivateVariable` procedure is called, it displays the contents of the string variable `strMsg` in a dialog box.  
+ W poprzednim przykładzie wszystkie procedury zdefiniowane w module `demonstrateScope` mogą odwoływać się do zmiennej `String` `strMsg`. Po wywołaniu procedury `usePrivateVariable` zostanie wyświetlona zawartość zmiennej ciągu `strMsg` w oknie dialogowym.  
   
- With the following alteration to the preceding example, the string variable `strMsg` can be referred to by code anywhere in the namespace of its declaration.  
+ Przy następujących zmianach do poprzedniego przykładu zmienna ciągu `strMsg` może być określana przez kod w dowolnym miejscu w przestrzeni nazw swojej deklaracji.  
   
 ```vb  
 Public strMsg As String  
 ```  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- The narrower the scope of a variable, the fewer opportunities you have for accidentally referring to it in place of another variable with the same name. You can also minimize problems of reference matching.  
+ Im węższy zakres zmiennej, tym mniej możliwości odwołujące się do nich zamiast innej zmiennej o tej samej nazwie. Możesz również zminimalizować problemy pasujące do odwołania.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- The narrower the scope of a variable, the smaller the chances that malicious code can make improper use of it.  
+ Im węższy zakres zmiennej, tym mniejsze prawdopodobieństwo, że złośliwy kod może być niewłaściwym użyciem.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Okres istnienia w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Poziomy dostępu w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Zmienne](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Dim, instrukcja](../../../../visual-basic/language-reference/statements/dim-statement.md)

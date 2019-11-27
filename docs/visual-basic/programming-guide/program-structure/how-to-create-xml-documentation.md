@@ -14,28 +14,28 @@ ms.locfileid: "74347423"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>Porady: tworzenie dokumentacji XML w Visual Basic
 
-This example shows how to add XML documentation comments to your code.
+Ten przykład pokazuje, jak dodać komentarze dokumentacji XML do kodu.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-create-xml-documentation-for-a-type-or-member"></a>To create XML documentation for a type or member
+## <a name="to-create-xml-documentation-for-a-type-or-member"></a>Aby utworzyć dokumentację XML dla typu lub elementu członkowskiego
 
-1. In the **Code Editor**, position your cursor on the line above the type or member for which you want to create documentation.
+1. W **edytorze kodu**Umieść kursor w wierszu powyżej typu lub elementu członkowskiego, dla którego chcesz utworzyć dokumentację.
 
-2. Type `'''` (three single-quotation marks).
+2. Wpisz `'''` (trzy znaki pojedynczego cudzysłowu).
 
-    An XML skeleton for the type or member is added in the **Code Editor**.
+    Szkielet XML dla typu lub elementu członkowskiego jest dodawany w **edytorze kodu**.
 
-3. Add descriptive information between the appropriate tags.
+3. Dodaj opisowe informacje między odpowiednimi tagami.
 
     > [!NOTE]
-    > If you add additional lines within the XML documentation block, each line must begin with `'''`.
+    > Jeśli dodasz dodatkowe linie w bloku dokumentacji XML, każdy wiersz musi rozpoczynać się od `'''`.
 
-4. Add additional code that uses the type or member with the new XML documentation comments.
+4. Dodaj dodatkowy kod, który używa typu lub elementu członkowskiego z nowymi komentarzami dokumentacji XML.
 
-    IntelliSense displays the text from the \<summary> tag for the type or member.
+    Funkcja IntelliSense wyświetla tekst w tagu \<Summary > dla typu lub elementu członkowskiego.
 
-5. Compile the code to generate an XML file containing the documentation comments. For more information, see [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
+5. Skompiluj kod w celu wygenerowania pliku XML zawierającego Komentarze do dokumentacji. Aby uzyskać więcej informacji, zobacz [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
 
 ## <a name="see-also"></a>Zobacz także
 

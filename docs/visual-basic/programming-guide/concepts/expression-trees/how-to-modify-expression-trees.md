@@ -9,17 +9,17 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353744"
 ---
-# <a name="how-to-modify-expression-trees-visual-basic"></a>How to: Modify Expression Trees (Visual Basic)
+# <a name="how-to-modify-expression-trees-visual-basic"></a>Instrukcje: modyfikowanie drzew wyrażeń (Visual Basic)
 
-This topic shows you how to modify an expression tree. Expression trees are immutable, which means that they cannot be modified directly. To change an expression tree, you must create a copy of an existing expression tree and when you create the copy, make the required changes. You can use the <xref:System.Linq.Expressions.ExpressionVisitor> class to traverse an existing expression tree and to copy each node that it visits.
+W tym temacie przedstawiono sposób modyfikowania drzewa wyrażenia. Drzewa wyrażeń są niezmienne, co oznacza, że nie można ich modyfikować bezpośrednio. Aby zmienić drzewo wyrażenia, należy utworzyć kopię istniejącego drzewa wyrażeń i utworzyć kopię, wprowadzić wymagane zmiany. Klasy <xref:System.Linq.Expressions.ExpressionVisitor> można użyć do przechodzenia istniejącego drzewa wyrażeń i kopiowania każdego z nich.
 
-## <a name="to-modify-an-expression-tree"></a>To modify an expression tree
+## <a name="to-modify-an-expression-tree"></a>Aby zmodyfikować drzewo wyrażenia
 
-1. Create a new **Console Application** project.
+1. Utwórz nowy projekt **aplikacji konsolowej** .
 
-2. Add an `Imports` statement to the file for the `System.Linq.Expressions` namespace.
+2. Dodaj instrukcję `Imports` do pliku dla `System.Linq.Expressions` przestrzeni nazw.
 
-3. Add the `AndAlsoModifier` class to your project.
+3. Dodaj klasę `AndAlsoModifier` do projektu.
 
     ```vb
     Public Class AndAlsoModifier
@@ -45,11 +45,11 @@ This topic shows you how to modify an expression tree. Expression trees are immu
     End Class
     ```
 
-    This class inherits the <xref:System.Linq.Expressions.ExpressionVisitor> class and is specialized to modify expressions that represent conditional `AND` operations. It changes these operations from a conditional `AND` to a conditional `OR`. To do this, the class overrides the <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> method of the base type, because conditional `AND` expressions are represented as binary expressions. In the `VisitBinary` method, if the expression that is passed to it represents a conditional `AND` operation, the code constructs a new expression that contains the conditional `OR` operator instead of the conditional `AND` operator. If the expression that is passed to `VisitBinary` does not represent a conditional `AND` operation, the method defers to the base class implementation. The base class methods construct nodes that are like the expression trees that are passed in, but the nodes have their sub trees replaced with the expression trees that are produced recursively by the visitor.
+    Ta klasa dziedziczy klasę <xref:System.Linq.Expressions.ExpressionVisitor> i jest wyspecjalizowany do modyfikowania wyrażeń, które reprezentują operacje `AND` warunkowych. Zmienia te operacje z `AND` warunkowego na `OR`warunkowe. W tym celu Klasa zastępuje metodę <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> typu podstawowego, ponieważ wyrażenia warunkowe `AND` są reprezentowane jako wyrażenia binarne. W metodzie `VisitBinary`, jeśli wyrażenie, które jest przesyłane do niego reprezentuje operację warunkową `AND`, kod konstruuje nowe wyrażenie zawierające operator `OR` warunkowego zamiast operatora warunkowego `AND`. Jeśli wyrażenie, które jest przesyłane do `VisitBinary` nie reprezentuje operacji warunkowej `AND`, metoda jest uwzględniana w implementacji klasy podstawowej. Metody klasy bazowej konstruują węzły, które są podobne do drzew wyrażeń, które są przenoszone, ale węzły mają swoje poddrzewa zamienione na drzewa wyrażeń, które są tworzone cyklicznie przez odwiedzających.
 
-4. Add an `Imports` statement to the file for the `System.Linq.Expressions` namespace.
+4. Dodaj instrukcję `Imports` do pliku dla `System.Linq.Expressions` przestrzeni nazw.
 
-5. Add code to the `Main` method in the Module1.vb file to create an expression tree and pass it to the method that will modify it.
+5. Dodaj kod do metody `Main` w pliku Module1. vb, aby utworzyć drzewo wyrażenia i przekazać go do metody, która zmodyfikuje ją.
 
     ```vb
     Dim expr As Expression(Of Func(Of String, Boolean)) = _
@@ -67,11 +67,11 @@ This topic shows you how to modify an expression tree. Expression trees are immu
     ' name => ((name.Length > 10) || name.StartsWith("G"))
     ```
 
-    The code creates an expression that contains a conditional `AND` operation. It then creates an instance of the `AndAlsoModifier` class and passes the expression to the `Modify` method of this class. Both the original and the modified expression trees are outputted to show the change.
+    Kod tworzy wyrażenie zawierające `AND` warunkowej. Następnie tworzy wystąpienie klasy `AndAlsoModifier` i przekazuje wyrażenie do metody `Modify` tej klasy. Wszystkie oryginalne i zmodyfikowane drzewa wyrażeń są zwracane w celu wyświetlenia zmiany.
 
-6. Compile and run the application.
+6. Skompiluj i uruchom aplikację.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [Instrukcje: wykonywanie drzew wyrażeń (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Drzewa wyrażeń (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)

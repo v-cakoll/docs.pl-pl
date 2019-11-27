@@ -22,12 +22,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344859"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Porady: chronienie argumentu procedury przed zmianami wartości (Visual Basic)
-If a procedure declares a parameter as [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic gives the procedure code a direct reference to the programming element underlying the argument in the calling code. This permits the procedure to change the value underlying the argument in the calling code. In some cases the calling code might want to protect against such a change.  
+Jeśli procedura deklaruje parametr jako [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic daje kod procedury bezpośrednio odwołanie do elementu programowania, który jest powiązany z argumentem w kodzie wywołującym. Pozwala to na procedurę zmiany wartości bazowej argumentu w wywoływanym kodzie. W niektórych przypadkach kod wywołujący może chcieć chronić przed takimi zmianami.  
   
- You can always protect an argument from change by declaring the corresponding parameter [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) in the procedure. If you want to be able to change a given argument in some cases but not others, you can declare it `ByRef` and let the calling code determine the passing mechanism in each call. It does this by enclosing the corresponding argument in parentheses to pass it by value, or not enclosing it in parentheses to pass it by reference. For more information, see [How to: Force an Argument to Be Passed by Value](./how-to-force-an-argument-to-be-passed-by-value.md).  
+ Można zawsze chronić argument przed zmianami, deklarując odpowiedni parametr [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) w procedurze. Jeśli chcesz mieć możliwość zmiany danego argumentu w niektórych przypadkach, ale nie do innych, można zadeklarować go `ByRef` i pozwolić, aby kod wywołujący określał mechanizm przekazywania w każdym wywołaniu. W tym celu należy ująć w nawiasy odpowiedni argument, aby przekazać go przez wartość, lub nie umieścić go w nawiasie, aby przekazać go przez odwołanie. Aby uzyskać więcej informacji, zobacz [jak: Wymuś przekazywanie argumentu przez wartość](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
 ## <a name="example"></a>Przykład  
- The following example shows two procedures that take an array variable and operate on its elements. The `increase` procedure simply adds one to each element. The `replace` procedure assigns a new array to the parameter `a()` and then adds one to each element. However, the reassignment does not affect the underlying array variable in the calling code.  
+ Poniższy przykład przedstawia dwie procedury, które pobierają zmienną tablicową i działają na jej elementach. Procedura `increase` po prostu dodaje jeden do każdego elementu. Procedura `replace` przypisuje nową tablicę do parametru `a()` a następnie dodaje ją do każdego elementu. Jednak ponowne przypisanie nie ma wpływu na podstawową zmienną tablicową w kodzie wywołującym.  
   
  [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
@@ -35,12 +35,12 @@ If a procedure declares a parameter as [ByRef](../../../../visual-basic/language
   
  [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
- The first `MsgBox` call displays "After increase(n): 11, 21, 31, 41". Because the array `n` is a reference type, `increase` can change its members, even though the passing mechanism is `ByVal`.  
+ Pierwsze wywołanie `MsgBox` wyświetla "po zwiększeniu (n): 11, 21, 31, 41". Ponieważ tablica `n` jest typem referencyjnym, `increase` może zmienić jego składowe, nawet gdy mechanizm przekazywania jest `ByVal`.  
   
- The second `MsgBox` call displays "After replace(n): 11, 21, 31, 41". Because `n` is passed `ByVal`, `replace` cannot modify the variable `n` in the calling code by assigning a new array to it. When `replace` creates the new array instance `k` and assigns it to the local variable `a`, it loses the reference to `n` passed in by the calling code. When it changes the members of `a`, only the local array `k` is affected. Therefore, `replace` does not increment the values of array `n` in the calling code.  
+ Drugie wywołanie `MsgBox` wyświetla "po zastąpieniu (n): 11, 21, 31, 41". Ponieważ `n` jest przenoszona `ByVal`, `replace` nie może zmodyfikować zmiennej `n` w wywoływanym kodzie, przypisując do niej nową tablicę. Gdy `replace` tworzy nowe wystąpienie tablicy `k` i przypisze je do zmiennej lokalnej `a`, utraci odwołanie do `n` przekazaną przez kod wywołujący. W przypadku zmiany elementów członkowskich `a`dotyczy tylko `k` tablicy lokalnej. W związku z tym `replace` nie zwiększa wartości tablicy `n` w kodzie wywołującym.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- The default in Visual Basic is to pass arguments by value. However, it is good programming practice to include either the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword with every declared parameter. This makes your code easier to read.  
+ Wartością domyślną w Visual Basic jest przekazanie argumentów według wartości. Jednak dobrym sposobem programowania jest dołączenie albo słowa kluczowego [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) z każdym zadeklarowanym parametrem. Ułatwia to odczytywanie kodu.  
   
 ## <a name="see-also"></a>Zobacz także
 

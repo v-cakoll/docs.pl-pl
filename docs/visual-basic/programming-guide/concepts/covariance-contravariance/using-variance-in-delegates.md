@@ -9,15 +9,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349029"
 ---
-# <a name="using-variance-in-delegates-visual-basic"></a>Using Variance in Delegates (Visual Basic)
+# <a name="using-variance-in-delegates-visual-basic"></a>Korzystanie z wariancji w delegatach (Visual Basic)
 
-When you assign a method to a delegate, *covariance* and *contravariance* provide flexibility for matching a delegate type with a method signature. Covariance permits a method to have return type that is more derived than that defined in the delegate. Contravariance permits a method that has parameter types that are less derived than those in the delegate type.
+Podczas przypisywania metody do delegata, *Kowariancja* i *kontrawariancja* zapewniają elastyczność dla dopasowania typu delegata z sygnaturą metody. Kowariancja zezwala metodzie na typ zwracany, który jest bardziej pochodny niż zdefiniowany w delegatze. Kontrawariancja zezwala na metodę, która ma typy parametrów, które są mniej pochodne niż te w typie delegata.
 
-## <a name="example-1-covariance"></a>Example 1: Covariance
+## <a name="example-1-covariance"></a>Przykład 1: Kowariancja
 
 ### <a name="description"></a>Opis
 
-This example demonstrates how delegates can be used with methods that have return types that are derived from the return type in the delegate signature. The data type returned by `DogsHandler` is of type `Dogs`, which derives from the `Mammals` type that is defined in the delegate.
+Ten przykład pokazuje, jak obiekty delegowane mogą być używane z metodami, które mają typy zwracane, które pochodzą z typu zwracanego w sygnaturze delegata. Typ danych zwracanych przez `DogsHandler` jest typu `Dogs`, który pochodzi od typu `Mammals`, który jest zdefiniowany w delegacie.
 
 ### <a name="code"></a>Kod
 
@@ -44,25 +44,25 @@ Class Test
 End Class
 ```
 
-## <a name="example-2-contravariance"></a>Example 2: Contravariance
+## <a name="example-2-contravariance"></a>Przykład 2: kontrawariancja
 
 ### <a name="description"></a>Opis
 
-This example demonstrates how delegates can be used with methods that have parameters whose types are base types of the delegate signature parameter type. With contravariance, you can use one event handler instead of separate handlers. The following example makes use of two delegates:
+W tym przykładzie pokazano, jak obiekty delegowane mogą być używane z metodami, które mają parametry, których typy są typami podstawowymi typu parametru podpisu delegata. Za pomocą kontrawariancja można użyć jednego programu obsługi zdarzeń zamiast oddzielnych programów obsługi. W poniższym przykładzie użyto dwóch delegatów:
 
-- A <xref:System.Windows.Forms.KeyEventHandler> delegate that defines the signature of the [Button.KeyDown](xref:System.Windows.Forms.Control.KeyDown) event. Its signature is:
+- Delegat <xref:System.Windows.Forms.KeyEventHandler>, który definiuje podpis zdarzenia [Button. KeyDown](xref:System.Windows.Forms.Control.KeyDown) . Podpis jest:
 
    ```vb
    Public Delegate Sub KeyEventHandler(sender As Object, e As KeyEventArgs)
    ```
 
-- A <xref:System.Windows.Forms.MouseEventHandler> delegate that defines the signature of the [Button.MouseClick](xref:System.Windows.Forms.Control.MouseDown) event. Its signature is:
+- Delegat <xref:System.Windows.Forms.MouseEventHandler>, który definiuje sygnaturę zdarzenia [Button. MouseClick](xref:System.Windows.Forms.Control.MouseDown) . Podpis jest:
 
    ```vb
    Public Delegate Sub MouseEventHandler(sender As Object, e As MouseEventArgs)
    ```
 
-The example defines an event handler with an <xref:System.EventArgs> parameter and uses it to handle both the `Button.KeyDown` and `Button.MouseClick` events. It can do this because <xref:System.EventArgs> is a base type of both <xref:System.Windows.Forms.KeyEventArgs>  and <xref:System.Windows.Forms.MouseEventArgs>.
+W przykładzie zdefiniowano procedurę obsługi zdarzeń z parametrem <xref:System.EventArgs> i używa jej do obsługi zdarzeń `Button.KeyDown` i `Button.MouseClick`. Można to zrobić, ponieważ <xref:System.EventArgs> jest typem podstawowym obu <xref:System.Windows.Forms.KeyEventArgs> i <xref:System.Windows.Forms.MouseEventArgs>.
 
 ### <a name="code"></a>Kod
 
@@ -88,5 +88,5 @@ End Sub
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Wariancja w delegatach (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [Korzystanie z wariancji dla delegatów "Func" i "Action Generic" (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

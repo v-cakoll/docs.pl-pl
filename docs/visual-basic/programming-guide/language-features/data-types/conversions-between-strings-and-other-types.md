@@ -17,36 +17,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350137"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Konwertowanie pomiędzy ciągami a innymi typami danych (Visual Basic)
-You can convert a numeric, `Boolean`, or date/time value to a `String`. You can also convert in the reverse direction — from a string value to numeric, `Boolean`, or `Date` — provided the contents of the string can be interpreted as a valid value of the destination data type. If they cannot, a run-time error occurs.  
+Można przekonwertować wartość liczbową, `Boolean`lub daty/godziny na `String`. Możesz również skonwertować w odwrotnym kierunku — od wartości ciągu na liczbowy, `Boolean`lub `Date` — pod warunkiem, że zawartość ciągu może być interpretowana jako prawidłowa wartość docelowego typu danych. Jeśli nie, wystąpi błąd w czasie wykonywania.  
   
- The conversions for all these assignments, in either direction, are narrowing conversions. You should use the type conversion keywords (`CBool`, `CByte`, `CDate`, `CDbl`, `CDec`, `CInt`, `CLng`, `CSByte`, `CShort`, `CSng`, `CStr`, `CUInt`, `CULng`, `CUShort`, and `CType`). The <xref:Microsoft.VisualBasic.Strings.Format%2A> and <xref:Microsoft.VisualBasic.Conversion.Val%2A> functions give you additional control over conversions between strings and numbers.  
+ Konwersje dla wszystkich tych przypisań, w obu kierunkach, zawężają konwersje. Należy używać słów kluczowych konwersji typu (`CBool`, `CByte`, `CDate`, `CDbl`, `CDec`, `CInt`, `CLng`, `CSByte`, `CShort`, `CSng`, `CStr`, `CUInt`, `CULng`, `CUShort`i `CType`). Funkcje <xref:Microsoft.VisualBasic.Strings.Format%2A> i <xref:Microsoft.VisualBasic.Conversion.Val%2A> zapewniają dodatkową kontrolę nad konwersjami między ciągami i liczbami.  
   
- If you have defined a class or structure, you can define type conversion operators between `String` and the type of your class or structure. For more information, see [How to: Define a Conversion Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Jeśli zdefiniowano klasę lub strukturę, można zdefiniować operatory konwersji typu między `String` i typ klasy lub struktury. Aby uzyskać więcej informacji, zobacz [jak: definiowanie operatora konwersji](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
-## <a name="conversion-of-numbers-to-strings"></a>Conversion of Numbers to Strings  
- You can use the `Format` function to convert a number to a formatted string, which can include not only the appropriate digits but also formatting symbols such as a currency sign (such as `$`), thousands separators or *digit grouping symbols* (such as `,`), and a decimal separator (such as `.`). `Format` automatically uses the appropriate symbols according to the **Regional Options** settings specified in the Windows **Control Panel**.  
+## <a name="conversion-of-numbers-to-strings"></a>Konwersja liczb na ciągi  
+ Można użyć funkcji `Format`, aby skonwertować liczbę do sformatowanego ciągu, który może zawierać nie tylko odpowiednie cyfry, ale także formatowanie symboli, takich jak znak waluty (na przykład `$`), separatory tysięcy lub *symbole grupowania cyfr* (takie jak `,`) i separator dziesiętny (na przykład `.`). `Format` automatycznie używa odpowiednich symboli zgodnie z ustawieniami **opcji regionalnych** określonymi w **Panelu sterowania**systemu Windows.  
   
- Note that the concatenation (`&`) operator can convert a number to a string implicitly, as the following example shows.  
+ Należy zauważyć, że operator łączenia (`&`) może przekonwertować liczbę na ciąg niejawnie, jak pokazano w poniższym przykładzie.  
   
 ```vb  
 ' The following statement converts count to a String value.  
 Str = "The total count is " & count  
 ```  
   
-## <a name="conversion-of-strings-to-numbers"></a>Conversion of Strings to Numbers  
- You can use the `Val` function to explicitly convert the digits in a string to a number. `Val` reads the string until it encounters a character other than a digit, space, tab, line feed, or period. The sequences "&O" and "&H" alter the base of the number system and terminate the scanning. Until it stops reading, `Val` converts all appropriate characters to a numeric value. For example, the following statement returns the value `141.825`.  
+## <a name="conversion-of-strings-to-numbers"></a>Konwersja ciągów na liczby  
+ Za pomocą funkcji `Val` można jawnie skonwertować cyfry w ciągu na liczbę. `Val` odczytuje ciąg, dopóki nie napotka znaku innego niż cyfra, spacja, tabulator, wysuw wiersza lub kropki. Sekwencje "& O" i "& H" zmieniają podstawę systemu liczb i przerywają skanowanie. Dopóki nie przestanie się odczytywania, `Val` konwertuje wszystkie odpowiednie znaki na wartość liczbową. Na przykład poniższa instrukcja zwraca wartość `141.825`.  
   
  `Val("   14   1.825 miles")`  
   
- When Visual Basic converts a string to a numeric value, it uses the **Regional Options** settings specified in the Windows **Control Panel** to interpret the thousands separator, decimal separator, and currency symbol. This means that a conversion might succeed under one setting but not another. For example, `"$14.20"` is acceptable in the English (United States) locale but not in any French locale.  
+ Gdy Visual Basic konwertuje ciąg na wartość liczbową, używa ustawień **opcji regionalnych** określonych w **Panelu sterowania** systemu Windows, aby interpretować separator tysięcy, separator dziesiętny i symbol waluty. Oznacza to, że konwersja może się powieść w ramach jednego ustawienia, ale nie do innego. Na przykład `"$14.20"` jest akceptowalny dla ustawień regionalnych (Stany Zjednoczone) w języku angielskim, ale nie w ustawieniach regionalnych.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Konwersje typów w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Konwersje jawne i niejawne](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [Instrukcje: konwertowanie obiektu na inny typ w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 - [Konwersje tablic](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 - [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)
 - [Funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Develop globalized and localized apps](/visualstudio/ide/globalizing-and-localizing-applications)
+- [Opracowywanie aplikacji globalnych i zlokalizowanych](/visualstudio/ide/globalizing-and-localizing-applications)

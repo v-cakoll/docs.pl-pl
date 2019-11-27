@@ -12,24 +12,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346183"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>Literały XML i specyfikacja XML 1.0 (Visual Basic)
-The XML literal syntax in Visual Basic supports most of the Extensible Markup Language (XML) 1.0 specification. For details about the XML 1.0 specification, see [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml) on the W3C Web site.  
+Składnia literału XML w Visual Basic obsługuje większość specyfikacji XML (XML) 1,0. Aby uzyskać szczegółowe informacje na temat specyfikacji XML 1,0, zobacz [XML (XML) 1,0](https://www.w3.org/TR/xml) w witrynie internetowej W3C.  
   
-## <a name="what-visual-basic-does-not-support"></a>What Visual Basic Does Not Support  
+## <a name="what-visual-basic-does-not-support"></a>Co Visual Basic nie obsługuje  
   
-- An XML literal cannot contain a document type definition (DTD).  
+- Literał XML nie może zawierać definicji typu dokumentu (DTD).  
   
-- An XML document literal must start with an XML document declaration.  
+- Literał dokumentu XML musi rozpoczynać się od deklaracji dokumentu XML.  
   
-- An XML literal cannot contain more than 65,535 characters on one line.  
+- Literał XML nie może zawierać więcej niż 65 535 znaków w jednym wierszu.  
   
-- XML namespace prefixes, element names, and attribute names cannot contain more than 1,024 characters.  
+- Prefiksy przestrzeni nazw XML, nazwy elementów i nazwy atrybutów nie mogą zawierać więcej niż 1 024 znaków.  
   
-## <a name="extra-features-that-visual-basic-supports"></a>Extra Features That Visual Basic Supports  
+## <a name="extra-features-that-visual-basic-supports"></a>Dodatkowe funkcje obsługiwane przez Visual Basic  
   
-- The embedded expression syntax allowed in document and element literals is not valid XML.  
+- Składnia wyrażenia osadzonego dozwolona w literałach dokumentu i elementu nie jest prawidłowym kodem XML.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Tworzenie kodu XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Literał dokumentu XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [Literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

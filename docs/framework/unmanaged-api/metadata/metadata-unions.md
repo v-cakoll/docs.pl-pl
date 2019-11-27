@@ -14,11 +14,11 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430675"
 ---
 # <a name="metadata-unions"></a>Unie metadanych
-This section describes the unmanaged unions that the metadata API uses.  
+W tej sekcji opisano niezarządzane związki, których używa interfejs API metadanych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [CeeSectionRelocExtra, unia](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
- Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section  
+ Reprezentuje przesunięcie adresu, które jest używane przez interfejs [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) do przeniesienia sekcji  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

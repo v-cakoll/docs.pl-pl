@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336549"
 ---
 # <a name="assignment-operators-visual-basic"></a>Operatory przypisania (Visual Basic)
-The following are the assignment operators defined in Visual Basic.  
+Poniżej przedstawiono operatory przypisania zdefiniowane w Visual Basic.  
   
  [=, operator](../../../visual-basic/language-reference/operators/assignment-operator.md)  
   
@@ -25,13 +25,13 @@ The following are the assignment operators defined in Visual Basic.
   
  [/=, operator](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
- [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
+ [\\= — operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
   
  [+=, operator](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
  [-=, operator](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)  
   
- [<\<= Operator](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
+ [<\<= — operator](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
   
  [>>=, operator](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
   
@@ -39,6 +39,6 @@ The following are the assignment operators defined in Visual Basic.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Instrukcje](../../../visual-basic/language-reference/statements/index.md)

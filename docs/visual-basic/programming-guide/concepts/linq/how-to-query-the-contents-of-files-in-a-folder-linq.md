@@ -1,5 +1,5 @@
 ---
-title: How to query the contents of files in a folder (LINQ)
+title: Jak zbadać zawartość plików w folderze (LINQ)
 ms.date: 07/20/2015
 ms.assetid: edacbcd3-f3e4-4429-a8be-28a58dc0dd70
 ms.openlocfilehash: 02ffa398c495ca5af77685d62299c59cfc3b9d9c
@@ -9,9 +9,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347610"
 ---
-# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>How to query the contents of files in a folder (LINQ) (Visual Basic)
+# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>Jak zbadać zawartość plików w folderze (LINQ) (Visual Basic)
 
-This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents. This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree. A simple string search is performed in this example. However, more complex types of pattern matching can be performed with a regular expression. For more information, see [How to: Combine LINQ Queries with Regular Expressions (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md).  
+Ten przykład pokazuje, jak badać wszystkie pliki w określonym drzewie katalogów, otwierać każdy plik i sprawdzać jego zawartość. Ten typ technika może służyć do tworzenia indeksów lub odwracania indeksów zawartości drzewa katalogów. W tym przykładzie jest wykonywane proste wyszukiwanie ciągu. Jednak bardziej złożone typy dopasowywania do wzorców można wykonać przy użyciu wyrażenia regularnego. Aby uzyskać więcej informacji, zobacz [How to: łączenie LINQ zapytań z wyrażeniami regularnymi (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md).  
   
 ## <a name="example"></a>Przykład  
   
@@ -73,11 +73,11 @@ Module Module1
 End Module
 ```
 
-## <a name="compiling-the-code"></a>Compiling the code
+## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Create a VB.NET console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.
+Utwórz projekt aplikacji konsolowej VB.NET, skopiuj i wklej przykładowy kod, a następnie Dostosuj wartość obiektu uruchomieniowego we właściwościach projektu.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [LINQ to Objects (Visual Basic)](linq-to-objects.md)
-- [LINQ and File Directories (Visual Basic)](linq-and-file-directories.md)
+- [LINQ i katalogi plików (Visual Basic)](linq-and-file-directories.md)

@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349183"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Za mało miejsca na stosie (Visual Basic)
-The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program. Its limits have been exceeded.  
+Stos jest obszarem roboczym pamięci, który powiększa się i zmniejsza dynamicznie z wymaganiami wykonywanymi przez program. Przekroczono limity.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Check that procedures are not nested too deeply.  
+1. Sprawdź, czy procedury nie są zbyt głęboko zagnieżdżone.  
   
-2. Make sure recursive procedures terminate properly.  
+2. Upewnij się, że procedury cykliczne kończą się prawidłowo.  
   
-3. If local variables require more local variable space than is available, try declaring some variables at the module level. You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`. Or you can use the `Static` statement to declare individual static variables within procedures.  
+3. Jeśli zmienne lokalne wymagają więcej przestrzeni zmiennych lokalnych niż jest dostępna, spróbuj Zadeklaruj pewne zmienne na poziomie modułu. Można również zadeklarować wszystkie zmienne w procedurze statycznej, poprzedzając słowo kluczowe `Property`, `Sub`lub `Function` z `Static`. Można też użyć instrukcji `Static`, aby zadeklarować poszczególne zmienne statyczne w ramach procedur.  
   
-4. Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings. You can also define the string at module level where it requires no stack space.  
+4. Przedefiniuj niektóre ciągi o stałej długości jako ciągi o zmiennej długości, ponieważ ciągi o stałej długości używają większej ilości miejsca na stosie niż ciągi o zmiennej długości. Możesz również zdefiniować ciąg na poziomie modułu, gdzie nie wymaga miejsca na stosie.  
   
-5. Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.  
+5. Sprawdź liczbę zagnieżdżonych wywołań funkcji `DoEvents` przy użyciu okna dialogowego `Calls`, aby zobaczyć, które procedury są aktywne na stosie.  
   
-6. Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack. An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code. Use the `Calls` dialog box to view which procedures are active on the stack.  
+6. Upewnij się, że "zdarzenie kaskadowe" nie zostało wywołane przez wyzwolenie zdarzenia, które wywołuje procedurę zdarzenia już na stosie. Zdarzenie kaskadowe jest podobne do niekończącego wywołania procedury cyklicznej, ale jest mniej oczywiste, ponieważ wywołanie jest wykonywane przez Visual Basic, a nie jawne wywołanie w kodzie. Za pomocą okna dialogowego `Calls` można zobaczyć, które procedury są aktywne na stosie.  
   
 ## <a name="see-also"></a>Zobacz także
 

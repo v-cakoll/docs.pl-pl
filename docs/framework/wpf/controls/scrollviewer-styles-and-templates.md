@@ -22,7 +22,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 ## <a name="scrollviewer-parts"></a>ScrollViewer części  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.ScrollViewer>.  
   
-|Części|Typ|Opis|  
+|Części|Type|Opis|  
 |-|-|-|  
 |PART_ScrollContentPresenter|<xref:System.Windows.Controls.ScrollContentPresenter>|Symbol zastępczy zawartości w <xref:System.Windows.Controls.ScrollViewer>.|  
 |PART_HorizontalScrollBar|<xref:System.Windows.Controls.Primitives.ScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar> używany do przewijania zawartości w poziomie.|  

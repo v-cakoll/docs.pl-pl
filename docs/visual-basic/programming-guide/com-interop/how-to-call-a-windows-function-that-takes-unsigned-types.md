@@ -23,19 +23,19 @@ ms.locfileid: "74348733"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Porady: wywoływanie funkcji Windows wykorzystującej typy bez znaku (Visual Basic)
 
-If you are consuming a class, module, or structure that has members of unsigned integer types, you can access these members with Visual Basic.
+Jeśli korzystasz z klasy, modułu lub struktury, która ma elementy członkowskie z niepodpisanymi typami całkowitymi, możesz uzyskać dostęp do tych elementów członkowskich za pomocą Visual Basic.
 
-## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>To call a Windows function that takes an unsigned type
+## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Aby wywołać funkcję systemu Windows, która ma typ bez znaku
 
-1. Use a [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) to tell Visual Basic which library holds the function, what its name is in that library, what its calling sequence is, and how to convert strings when calling it.
+1. Użyj [instrukcji DECLARE](../../../visual-basic/language-reference/statements/declare-statement.md) , aby poinformować Visual Basic bibliotekę, w której znajduje się ta funkcja, jak jej nazwa znajduje się w tej bibliotece, co to jest sekwencja wywoływania i jak konwertować ciągi podczas wywoływania.
 
-2. In the `Declare` statement, use `UInteger`, `ULong`, `UShort`, or `Byte` as appropriate for each parameter with an unsigned type.
+2. W instrukcji `Declare` Użyj `UInteger`, `ULong`, `UShort`lub `Byte` odpowiednio dla każdego parametru z typem bez znaku.
 
-3. Consult the documentation for the Windows function you are calling to find the names and values of the constants it uses. Many of these are defined in the WinUser.h file.
+3. Zapoznaj się z dokumentacją funkcji systemu Windows, która jest wywoływana, aby znaleźć nazwy i wartości stałych, z których korzysta. Wiele z nich jest zdefiniowanych w pliku WinUser. h.
 
-4. Declare the necessary constants in your code. Many Windows constants are 32-bit unsigned values, and you should declare these `As UInteger`.
+4. Zadeklaruj niezbędne stałe w kodzie. Wiele stałych systemu Windows to 32-bitowe wartości bez znaku i należy zadeklarować te `As UInteger`.
 
-5. Call the function in the normal way. The following example calls the Windows function `MessageBox`, which takes an unsigned integer argument.
+5. Wywołaj funkcję w zwykły sposób. Poniższy przykład wywołuje funkcję systemu Windows `MessageBox`, która przyjmuje argument liczby całkowitej bez znaku.
 
     ```vb
     Public Class windowsMessage
@@ -60,7 +60,7 @@ If you are consuming a class, module, or structure that has members of unsigned 
     End Class
     ```
 
-     You can test the function `messageThroughWindows` with the following code.
+     Możesz przetestować funkcję `messageThroughWindows` przy użyciu następującego kodu.
 
     ```vb
     Public Sub consumeWindowsMessage()
@@ -70,13 +70,13 @@ If you are consuming a class, module, or structure that has members of unsigned 
     ```
 
     > [!CAUTION]
-    > The `UInteger`, `ULong`, `UShort`, and `SByte` data types are not part of the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot consume a component that uses them.
+    > `UInteger`, `ULong`, `UShort`i `SByte` typy danych nie są częścią [niezależności języka ani składników niezależnych od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS), więc kod zgodny ze specyfikacją CLS nie może zużywać składnika, który z nich korzysta.
 
     > [!IMPORTANT]
-    > Making a call to unmanaged code, such as the Windows application programming interface (API), exposes your code to potential security risks.
+    > Wywoływanie kodu niezarządzanego, takiego jak interfejs programowania aplikacji (API) systemu Windows, uwidacznia swój kod na potencjalne zagrożenia bezpieczeństwa.
 
     > [!IMPORTANT]
-    > Calling the Windows API requires unmanaged code permission, which might affect its execution in partial-trust situations. For more information, see <xref:System.Security.Permissions.SecurityPermission> and [Code Access Permissions](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
+    > Wywołanie interfejsu API systemu Windows wymaga uprawnień do kodu niezarządzanego, co może mieć wpływ na wykonywanie w sytuacjach częściowej relacji zaufania. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Permissions.SecurityPermission> i [uprawnienia dostępu do kodu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
 
 ## <a name="see-also"></a>Zobacz także
 

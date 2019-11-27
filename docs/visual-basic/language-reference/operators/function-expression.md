@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331080"
 ---
 # <a name="function-expression-visual-basic"></a>Function — Wyrażenie (Visual Basic)
-Declares the parameters and code that define a function lambda expression.  
+Deklaruje parametry i kod, który definiuje funkcję wyrażenia lambda.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -30,49 +30,49 @@ End Function
   
 |Termin|Definicja|  
 |---|---|  
-|`parameterlist`|Opcjonalny. A list of local variable names that represent the parameters of this procedure. The parentheses must be present even when the list is empty. See [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`expression`|Wymagany. A single expression. The type of the expression is the return type of the function.|  
-|`statements`|Wymagany. A list of statements that returns a value by using the `Return` statement. (See [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md).) The type of the value returned is the return type of the function.|  
+|`parameterlist`|Opcjonalna. Lista nazw zmiennych lokalnych, które reprezentują parametry tej procedury. Nawiasy muszą być obecne nawet wtedy, gdy lista jest pusta. Zobacz [listę parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`expression`|Wymagana. Pojedyncze wyrażenie. Typ wyrażenia jest zwracanym typem funkcji.|  
+|`statements`|Wymagana. Lista instrukcji zwracających wartość przy użyciu instrukcji `Return`. (Patrz [instrukcja return](../../../visual-basic/language-reference/statements/return-statement.md)). Typ zwracanej wartości jest zwracanym typem funkcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- A *lambda expression* is a function without a name that calculates and returns a value. You can use a lambda expression anywhere you can use a delegate type, except as an argument to `RemoveHandler`. For more information about delegates, and the use of lambda expressions with delegates, see [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) and [Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ *Wyrażenie lambda* jest funkcją bez nazwy, która oblicza i zwraca wartość. Możesz użyć wyrażenia lambda wszędzie tam, gdzie można użyć typu delegata, z wyjątkiem jako argumentu `RemoveHandler`. Aby uzyskać więcej informacji na temat delegatów i użycie wyrażeń lambda z delegatami, zobacz [instrukcja Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) i [Swobodna konwersja delegata](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Składnia wyrażenia lambda  
- The syntax of a lambda expression resembles that of a standard function. The differences are as follows:  
+ Składnia wyrażenia lambda jest podobna do funkcji standardowej. Różnice są następujące:  
   
-- A lambda expression does not have a name.  
+- Wyrażenie lambda nie ma nazwy.  
   
-- Lambda expressions cannot have modifiers, such as `Overloads` or `Overrides`.  
+- Wyrażenia lambda nie mogą mieć modyfikatorów, takich jak `Overloads` lub `Overrides`.  
   
-- Lambda expressions do not use an `As` clause to designate the return type of the function. Instead, the type is inferred from the value that the body of a single-line lambda expression evaluates to, or the return value of a multiline lambda expression. For example, if the body of a single-line lambda expression is `Where cust.City = "London"`, its return type is `Boolean`.  
+- Wyrażenia lambda nie używają klauzuli `As` do wyznaczania zwracanego typu funkcji. Zamiast tego, typ jest wywnioskowany na podstawie wartości, do której szacuje się treść wyrażenia lambda pojedynczego wiersza, lub wartości zwracanej wielowierszowego wyrażenia lambda. Na przykład jeśli treść wyrażenia lambda pojedynczego wiersza jest `Where cust.City = "London"`, jego typ zwracany jest `Boolean`.  
   
-- The body of a single-line lambda expression must be an expression, not a statement. The body can consist of a call to a function procedure, but not a call to a sub procedure.  
+- Treść wyrażenia lambda pojedynczego wiersza musi być wyrażeniem, a nie instrukcją. Treść może składać się z wywołania procedury funkcji, ale nie wywołania procedury Sub.  
   
-- Either all parameters must have specified data types or all must be inferred.  
+- Wszystkie parametry muszą mieć określone typy danych lub muszą zostać wywnioskowane.  
   
-- Optional and Paramarray parameters are not permitted.  
+- Parametry opcjonalne i ParamArray są niedozwolone.  
   
-- Generic parameters are not permitted.  
+- Parametry ogólne są niedozwolone.  
   
 ## <a name="example"></a>Przykład  
- The following examples show two ways to create simple lambda expressions. The first uses a `Dim` to provide a name for the function. To call the function, you send in a value for the parameter.  
+ W poniższych przykładach pokazano dwa sposoby tworzenia prostych wyrażeń lambda. Pierwszy używa `Dim`, aby podać nazwę funkcji. Aby wywołać funkcję, należy wysłać w wartości parametru.  
   
  [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
  [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
 ## <a name="example"></a>Przykład  
- Alternatively, you can declare and run the function at the same time.  
+ Alternatywnie można zadeklarować i uruchomić funkcję w tym samym czasie.  
   
  [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Przykład  
- Following is an example of a lambda expression that increments its argument and returns the value. The example shows both the single-line and multiline lambda expression syntax for a function. For more examples, see [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Poniżej znajduje się przykład wyrażenia lambda, które zwiększa jego argument i zwraca wartość. Przykład pokazuje składnię jednowierszową i wieloliniową wyrażenia lambda dla funkcji. Aby uzyskać więcej przykładów, zobacz [lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Przykład  
- Lambda expressions underlie many of the query operators in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)], and can be used explicitly in method-based queries. The following example shows a typical [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query, followed by the translation of the query into method format.  
+ Wyrażenia lambda podstawą wiele operatorów zapytań w [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]i mogą być używane jawnie w zapytaniach opartych na metodzie. W poniższym przykładzie przedstawiono typowe zapytanie [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], po którym następuje tłumaczenie zapytania do formatu metody.  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  
@@ -85,7 +85,7 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- For more information about query methods, see [Queries](../../../visual-basic/language-reference/queries/index.md). For more information about standard query operators, see [Standard Query Operators Overview](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Aby uzyskać więcej informacji na temat metod zapytań, zobacz [zapytania](../../../visual-basic/language-reference/queries/index.md). Aby uzyskać więcej informacji na temat standardowych operatorów zapytań, zobacz [standardowe operatory zapytań — Omówienie](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

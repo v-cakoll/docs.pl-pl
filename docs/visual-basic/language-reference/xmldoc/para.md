@@ -12,8 +12,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352302"
 ---
-# <a name="para-visual-basic"></a>\<para> (Visual Basic)
-Specifies that the content is formatted as a paragraph.  
+# <a name="para-visual-basic"></a>\<para > (Visual Basic)
+Określa, że zawartość jest sformatowana w akapicie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,15 +23,15 @@ Specifies that the content is formatted as a paragraph.
   
 ## <a name="parameters"></a>Parametry  
  `content`  
- The text of the paragraph.  
+ Tekst akapitu.  
   
 ## <a name="remarks"></a>Uwagi  
- The `<para>` tag is for use inside a tag, such as [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), or [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md), and lets you add structure to the text.  
+ Tag `<para>` jest używany wewnątrz tagu, takiego jak [\<podsumowanie >](../../../visual-basic/language-reference/xmldoc/summary.md), [\<uwagi >](../../../visual-basic/language-reference/xmldoc/remarks.md), lub [\<zwraca >](../../../visual-basic/language-reference/xmldoc/returns.md), i umożliwia dodanie struktury do tekstu.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- This example uses the `<para>` tag to split the remarks section for the `UpdateRecord` method into two paragraphs.  
+ W tym przykładzie używa znacznika `<para>`, aby podzielić sekcję Uwagi dla metody `UpdateRecord` na dwa akapity.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

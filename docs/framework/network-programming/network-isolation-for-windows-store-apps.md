@@ -10,26 +10,26 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447422"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Izolacja sieci dla aplikacji ze sklepu Windows Store
-Classes in the <xref:System.Net>,  <xref:System.Net.Http>, and <xref:System.Net.Http.Headers> namespaces can be used to develop Windows Store  apps  or desktop apps. When used in a Windows Store app, classes in these namespaces are affected by network isolation, part of the application security model used by the [!INCLUDE[win8](../../../includes/win8-md.md)]. The appropriate network capabilities must be enabled in the app manifest for a Windows Store app for the system to allow network access.  
+Klasy w przestrzeniach nazw <xref:System.Net>, <xref:System.Net.Http>i <xref:System.Net.Http.Headers> mogą służyć do tworzenia aplikacji do sklepu Windows lub aplikacji klasycznych. W przypadku użycia w aplikacji ze sklepu Windows na klasy w tych obszarach nazw ma wpływ izolacja sieci, która jest częścią modelu zabezpieczeń aplikacji używanego przez [!INCLUDE[win8](../../../includes/win8-md.md)]. Odpowiednie możliwości sieci muszą być włączone w manifeście aplikacji dla aplikacji ze sklepu Windows dla systemu, aby umożliwić dostęp do sieci.  
   
-## <a name="checklist-for-network-isolation"></a>Checklist for Network Isolation  
- Use this checklist to be sure that network isolation is configured for your Windows Store app.  
+## <a name="checklist-for-network-isolation"></a>Lista kontrolna dotycząca izolacji sieci  
+ Użyj tej listy kontrolnej, aby upewnić się, że izolacja sieciowa jest skonfigurowana dla aplikacji ze sklepu Windows.  
   
-1. Determine the direction of network access requests needed by the app. This can be either outbound client-initiated requests or inbound unsolicited requests or it could be a combination of both of these network request types.  
+1. Określ kierunek żądań dostępu do sieci wymaganych przez aplikację. Może to być wychodzące żądania inicjowane przez klienta lub przychodzące żądania, które może być połączeniem obu tych typów żądań sieciowych.  
   
-2. Determine the type of network resources that the app will communicate with. An app may need to communicate with trusted resources on a Home or Work network. An app might need to communicate with resources on the Internet. An app might need access to both types of network resources.  
+2. Określ typ zasobów sieciowych, z którymi będzie komunikować się aplikacja. Aplikacja może wymagać komunikacji z zaufanymi zasobami w sieci domowej lub służbowej. Aplikacja może wymagać komunikacji z zasobami w Internecie. Aplikacja może potrzebować dostępu do obu typów zasobów sieciowych.  
   
-3. Configure the minimum-required networking isolation capabilities in the app manifest.  
+3. Skonfiguruj minimalną wymaganą izolację sieciową w manifeście aplikacji.  
   
-4. Deploy and run your app to test it using the network isolation tools provided for troubleshooting.  
+4. Wdróż i uruchom aplikację w celu przetestowania jej przy użyciu narzędzi do izolacji sieciowej dostępnych do rozwiązywania problemów.  
   
- For more detailed information on how to configure network capabilities and isolation tools used for troubleshooting network isolation, see [How to configure network isolation capabilities](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) in the Windows 8.x Store developer documentation.
+ Aby uzyskać bardziej szczegółowe informacje na temat konfigurowania możliwości sieci i narzędzi do izolacji w celu rozwiązywania problemów z izolacją sieci, zobacz [jak skonfigurować możliwości izolacji sieci](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) w dokumentacji dla deweloperów Sklepu Windows 8. x.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Connecting to a web service](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
-- [Guidelines and checklist for network isolation](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
-- [Quickstart: Connecting using HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781239(v=win.10))
-- [How to use HttpClient handlers](https://docs.microsoft.com/previous-versions/windows/apps/hh781241(v=win.10))
-- [How to secure HttpClient connections](https://docs.microsoft.com/previous-versions/windows/apps/hh781240(v=win.10))
-- [HttpClient Sample](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)
+- [Łączenie z usługą sieci Web](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
+- [Wskazówki i Lista kontrolna izolacji sieci](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
+- [Szybki Start: Łączenie przy użyciu HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781239(v=win.10))
+- [Jak używać programów obsługi HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781241(v=win.10))
+- [Jak zabezpieczyć połączenia HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781240(v=win.10))
+- [Przykład HttpClient](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

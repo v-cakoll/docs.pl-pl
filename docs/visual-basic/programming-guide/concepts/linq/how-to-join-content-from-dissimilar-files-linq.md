@@ -9,13 +9,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344553"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Instrukcje: dołączanie zawartości z niepodobnych plików (LINQ) (Visual Basic)
 
-This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key. This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file. You can modify the example to work with any kind of structured text.
+Ten przykład pokazuje, jak połączyć dane z dwóch rozdzielanych przecinkami plików, które mają wspólną wartość używaną jako pasujący klucz. Ta technika może być przydatna, jeśli trzeba połączyć dane z dwóch arkuszy kalkulacyjnych lub z arkusza kalkulacyjnego oraz z pliku, który ma inny format, do nowego pliku. Możesz zmodyfikować przykład, aby współpracować z dowolnym rodzajem tekstu strukturalnego.
 
-## <a name="to-create-the-data-files"></a>To create the data files
+## <a name="to-create-the-data-files"></a>Aby utworzyć pliki danych
 
-1. Copy the following lines into a file that is named scores.csv and save it to your project folder. The file represents spreadsheet data. Column 1 is the student's ID, and columns 2 through 5 are test scores.
+1. Skopiuj następujące wiersze do pliku o nazwie Scores. csv i Zapisz go w folderze projektu. Plik reprezentuje dane arkusza kalkulacyjnego. Kolumna 1 jest IDENTYFIKATORem studenta, a kolumny od 2 do 5 są wynikami testów.
 
     ```csv
     111, 97, 92, 81, 60
@@ -32,7 +32,7 @@ This example shows how to join data from two comma-delimited files that share a 
     122, 94, 92, 91, 91
     ```
 
-2. Copy the following lines into a file that is named names.csv and save it to your project folder. The file represents a spreadsheet that contains the student's last name, first name, and student ID.
+2. Skopiuj następujące wiersze do pliku o nazwie Names. csv i Zapisz go w folderze projektu. Ten plik reprezentuje arkusz kalkulacyjny zawierający nazwisko, imię i nazwisko ucznia.
 
     ```csv
     Omelchenko,Svetlana,111
@@ -122,5 +122,5 @@ End Class
 
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

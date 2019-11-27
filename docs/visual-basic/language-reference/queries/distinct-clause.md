@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335379"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct — Klauzula (Visual Basic)
-Restricts the values of the current range variable to eliminate duplicate values in subsequent query clauses.  
+Ogranicza wartości bieżącej zmiennej zakresu w celu wyeliminowania zduplikowanych wartości w kolejnych klauzulach zapytania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -25,16 +25,16 @@ Distinct
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- You can use the `Distinct` clause to return a list of unique items. The `Distinct` clause causes the query to ignore duplicate query results. The `Distinct` clause applies to duplicate values for all return fields specified by the `Select` clause. If no `Select` clause is specified, the `Distinct` clause is applied to the range variable for the query identified in the `From` clause. If the range variable is not an immutable type, the query will only ignore a query result if all members of the type match an existing query result.  
+ Za pomocą klauzuli `Distinct` można zwrócić listę unikatowych elementów. Klauzula `Distinct` powoduje, że zapytanie ignoruje zduplikowane wyniki zapytania. Klauzula `Distinct` ma zastosowanie do zduplikowanych wartości dla wszystkich zwracanych pól określonych przez klauzulę `Select`. Jeśli klauzula `Select` nie zostanie określona, klauzula `Distinct` zostanie zastosowana do zmiennej zakresu dla zapytania identyfikowanego w klauzuli `From`. Jeśli zmienna zakresu nie jest niezmiennym typem, zapytanie zignoruje tylko wynik zapytania, jeśli wszystkie elementy członkowskie tego typu pasują do istniejącego wyniku zapytania.  
   
 ## <a name="example"></a>Przykład  
- The following query expression joins a list of customers and a list of customer orders. The `Distinct` clause is included to return a list of unique customer names and order dates.  
+ Poniższe wyrażenie zapytania dołącza listę klientów i listę zamówień klientów. Klauzula `Distinct` jest uwzględniona w celu zwrócenia listy unikatowych nazw klientów i dat kolejności.  
   
  [!code-vb[VbSimpleQuerySamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#20)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Zapytania](../../../visual-basic/language-reference/queries/index.md)
 - [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)
 - [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)

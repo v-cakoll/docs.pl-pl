@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449540"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields — Metoda
-Enumerates FieldDef tokens for the type referenced by the specified TypeDef token.  
+Wylicza tokeny FieldDef dla typu, do którego odwołuje się określony token TypeDef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,35 +39,35 @@ HRESULT EnumFields (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in. out] Wskaźnik do modułu wyliczającego.  
   
  `cl`  
- [in] The TypeDef token of the class whose fields are to be enumerated.  
+ podczas Token TypeDef klasy, której pola mają zostać wyliczone.  
   
  `rFields`  
- [out] The list of FieldDef tokens.  
+ określoną Lista tokenów FieldDef.  
   
  `cMax`  
- [in] The maximum size of the `rFields` array.  
+ podczas Maksymalny rozmiar tablicy `rFields`.  
   
  `pcTokens`  
- [out] The actual number of FieldDef tokens returned in `rFields`.  
+ określoną Rzeczywista liczba tokenów FieldDef zwróconych w `rFields`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields` returned successfully.|  
-|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumFields` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak pól do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

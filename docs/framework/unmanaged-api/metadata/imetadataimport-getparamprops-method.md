@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437126"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps — Metoda
-Gets metadata values for the parameter referenced by the specified ParamDef token.  
+Pobiera wartości metadanych dla parametru, do którego odwołuje się określony token ParamDef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,47 +44,47 @@ HRESULT GetParamProps (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- [in] A ParamDef token that represents the parameter to return metadata for.  
+ podczas Token ParamDef reprezentujący parametr, dla którego mają zostać zwrócone metadane.  
   
  `pmd`  
- [out] A pointer to a MethodDef token representing the method that takes the parameter.  
+ określoną Wskaźnik do tokenu MethodDef reprezentujący metodę, która pobiera parametr.  
   
  `pulSequence`  
- [out] The ordinal position of the parameter in the method argument list.  
+ określoną Pozycja porządkowa parametru na liście argumentów metody.  
   
  `szName`  
- [out] A buffer to hold the name of the parameter.  
+ określoną Bufor służący do przechowywania nazwy parametru.  
   
  `cchName`  
- [in] The requested size in wide characters of `szName`.  
+ podczas Żądany rozmiar w szerokich znakach `szName`.  
   
  `pchName`  
- [out] The returned size in wide characters of `szName`.  
+ określoną Zwrócony rozmiar w szerokich znakach `szName`.  
   
  `pdwAttr`  
- [out] A pointer to any attribute flags associated with the parameter. This is a bitmask of `CorParamAttr` values.  
+ określoną Wskaźnik do dowolnych flag atrybutów skojarzonych z parametrem. To jest maska bitów wartości `CorParamAttr`.  
   
  `pdwCPlusTypeFlag`  
- [out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.  
+ określoną Wskaźnik do flagi określającej, że parametr jest <xref:System.ValueType>.  
   
  `ppValue`  
- [out] A pointer to a constant string returned by the parameter.  
+ określoną Wskaźnik do stałego ciągu zwracanego przez parametr.  
   
  `pcchValue`  
- [out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.  
+ określoną Rozmiar `ppValue` w postaci dwubajtowej lub zero, jeśli `ppValue` nie zawiera ciągu.  
   
 ## <a name="remarks"></a>Uwagi
 
-The sequence values in `pulSequence` begin with 1 for parameters. A return value has a sequence number of 0.
+Wartości sekwencji w `pulSequence` zaczynają się od 1 dla parametrów. Wartość zwracana ma numer sekwencyjny równy 0.
 
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

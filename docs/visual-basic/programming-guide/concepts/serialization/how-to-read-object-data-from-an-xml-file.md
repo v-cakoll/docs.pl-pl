@@ -9,8 +9,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346435"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>How to: Read Object Data from an XML File (Visual Basic)
-This example reads object data that was previously written to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.  
+# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Instrukcje: odczytywanie danych obiektu z pliku XML (Visual Basic)
+Ten przykład odczytuje dane obiektu, które wcześniej Zapisano do pliku XML przy użyciu klasy <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Przykład  
   
@@ -30,27 +30,27 @@ End Sub
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Replace the file name "c:\temp\SerializationOverview.xml" with the name of the file containing the serialized data. For more information about serializing data, see [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
+ Zastąp nazwę pliku "c:\temp\SerializationOverview.xml" nazwą pliku zawierającego serializowane dane. Aby uzyskać więcej informacji na temat serializowania danych, zobacz [How to: Write dane obiektu do pliku XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
   
- The class must have a public constructor without parameters.  
+ Klasa musi mieć Konstruktor publiczny bez parametrów.  
   
- Only public properties and fields are deserialized.  
+ Tylko publiczne właściwości i pola są deserializowane.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
-- The class being serialized does not have a public, parameterless constructor.  
+- Serializowana Klasa nie ma publicznego konstruktora bez parametrów.  
   
-- The data in the file does not represent data from the class to be deserialized.  
+- Dane w pliku nie reprezentują danych z klasy, która ma zostać poddana deserializacji.  
   
-- The file does not exist (<xref:System.IO.IOException>).  
+- Plik nie istnieje (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Always verify inputs, and never deserialize data from an untrusted source. The re-created object runs on a local computer with the permissions of the code that deserialized it. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  
+ Zawsze Weryfikuj dane wejściowe i nigdy nie wykonuj deserializacji danych z niezaufanego źródła. Nowo utworzony obiekt jest uruchamiany na komputerze lokalnym z uprawnieniami kodu, który został deserializowany. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.IO.StreamWriter>
-- [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
-- [Serialization (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Visual Basic Programming Guide](../../../../visual-basic/programming-guide/index.md)
+- [Instrukcje: zapisywanie danych obiektu w pliku XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+- [Serializacja (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+- [Przewodnik programowania Visual Basic](../../../../visual-basic/programming-guide/index.md)

@@ -18,20 +18,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347832"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
-Indicates that a conversion operator (`CType`) converts a class or structure to a type that can hold all possible values of the original class or structure.  
+Wskazuje, że Operator konwersji (`CType`) konwertuje klasę lub strukturę do typu, który może zawierać wszystkie możliwe wartości oryginalnej klasy lub struktury.  
   
-## <a name="converting-with-the-widening-keyword"></a>Converting with the Widening Keyword  
- The conversion procedure must specify `Public Shared` in addition to `Widening`.  
+## <a name="converting-with-the-widening-keyword"></a>Konwertowanie za pomocą słowa kluczowego rozszerzającego  
+ Procedura konwersji musi określać `Public Shared` oprócz `Widening`.  
   
- Widening conversions always succeed at run time and never incur data loss. Examples are `Single` to `Double`, `Char` to `String`, and a derived type to its base type. This last conversion is widening because the derived type contains all the members of the base type and thus is an instance of the base type.  
+ Rozszerzanie konwersji zawsze powiedzie się w czasie wykonywania i nigdy nie powiąże się z utratą danych. Przykłady `Single` do `Double`, `Char` do `String`i typ pochodny do jego typu podstawowego. Ta ostatnia konwersja jest rozszerzana, ponieważ typ pochodny zawiera wszystkie elementy członkowskie typu podstawowego i w związku z tym jest wystąpieniem typu podstawowego.  
   
- The consuming code does not have to use `CType` for widening conversions, even if `Option Strict` is `On`.  
+ Kod zużywający nie musi używać `CType` do rozszerzania konwersji nawet wtedy, gdy `Option Strict` jest `On`.  
   
- The `Widening` keyword can be used in this context:  
+ W tym kontekście można użyć słowa kluczowego `Widening`:  
   
  [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- For example definitions of widening and narrowing conversion operators, see [How to: Define a Conversion Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Aby zapoznać się z przykładami definicji rozszerzania i zawężania operatorów konwersji, zobacz [How to: define Operator konwersji](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

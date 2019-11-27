@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432276"
 ---
 # <a name="cor_prf_misc-enumeration"></a>COR_PRF_MISC — Wyliczenie
-Contains constant values that specify special identifiers.  
+Zawiera wartości stałe, które określają identyfikatory specjalne.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,22 +34,22 @@ typedef enum {
 } COR_PRF_MISC;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|The default identifier used by [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) for a module that has not yet been attached to an assembly.|  
-|`PROFILER_GLOBAL_CLASS`|The default class identifier for global constants that do not belong to a class.|  
-|`PROFILER_GLOBAL_MODULE`|The default module identifier for global objects that do not belong to a module.|  
+|`PROFILER_PARENT_UNKNOWN`|Domyślny identyfikator używany przez [ICorProfilerInfo:: GetModuleInfo —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) dla modułu, który nie został jeszcze dołączony do zestawu.|  
+|`PROFILER_GLOBAL_CLASS`|Domyślny identyfikator klasy dla stałych globalnych, które nie należą do klasy.|  
+|`PROFILER_GLOBAL_MODULE`|Domyślny identyfikator modułu dla obiektów globalnych, które nie należą do modułu.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

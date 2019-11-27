@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437650"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>IMetaDataImport::GetCustomAttributeProps — Metoda
-Gets the value of the custom attribute, given its metadata token.  
+Pobiera wartość atrybutu niestandardowego z uwzględnieniem jego tokenu metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,31 +39,31 @@ HRESULT GetCustomAttributeProps (
   
 ## <a name="parameters"></a>Parametry  
  `cv`  
- [in] A metadata token that represents the custom attribute to be retrieved.  
+ podczas Token metadanych, który reprezentuje atrybut niestandardowy do pobrania.  
   
  `ptkObj`  
- [out, optional] A metadata token representing the object that the custom attribute modifies. This value can be any type of metadata token except `mdCustomAttribute`.  
+ [out, opcjonalne] Token metadanych reprezentujący obiekt, który modyfikuje atrybut niestandardowy. Ta wartość może być dowolnego typu tokenu metadanych, z wyjątkiem `mdCustomAttribute`.  
   
  `ptkType`  
- [out, optional] An `mdMethodDef` or `mdMemberRef` metadata token representing the <xref:System.Type> of the returned custom attribute.  
+ [out, opcjonalne] `mdMethodDef` lub `mdMemberRef` token metadanych reprezentujący <xref:System.Type> zwróconego atrybutu niestandardowego.  
   
  `ppBlob`  
- [out, optional] A pointer to an array of data that is the value of the custom attribute.  
+ [out, opcjonalne] Wskaźnik do tablicy danych, która jest wartością atrybutu niestandardowego.  
   
  `pcbSize`  
- [out, optional] The size in bytes of the data returned in *`ppBlob`.  
+ [out, opcjonalne] Rozmiar w bajtach danych zwróconych w *`ppBlob`.  
   
 ## <a name="remarks"></a>Uwagi  
- A custom attribute is stored as an array of data, the format which is understood by the metadata engine.  
+ Atrybut niestandardowy jest przechowywany jako tablica danych, format zrozumiały dla aparatu metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438014"
 ---
 # <a name="symlinedelta-structure"></a>SYMLINEDELTA — Struktura
-Provides information to the symbol handler about methods that were moved as a result of edits.  
+Zawiera informacje do obsługi symboli dotyczące metod, które zostały przeniesione w wyniku edycji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,15 +34,15 @@ typedef struct _SYMLINEDELTA
     } SYMLINEDELTA;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`mdMethod`|The method's metadata token.|  
-|`delta`|The number of lines the method was moved.|  
+|`mdMethod`|Token metadanych metody.|  
+|`delta`|Liczba wierszy, które zostały przeniesione przez metodę.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl  
+ **Nagłówek:** CorSym. idl  
   
 ## <a name="see-also"></a>Zobacz także
 

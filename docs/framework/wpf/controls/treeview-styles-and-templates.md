@@ -36,7 +36,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 ## <a name="treeviewitem-parts"></a>TreeViewItem części  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.TreeViewItem>.  
   
-|Części|Typ|Opis|  
+|Części|Type|Opis|  
 |----------|----------|-----------------|  
 |PART_Header|<xref:System.Windows.FrameworkElement>|Element wizualizacji, który zawiera tę zawartość nagłówka kontrolki <xref:System.Windows.Controls.TreeView>.|  
   

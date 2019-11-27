@@ -20,20 +20,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345859"
 ---
 # <a name="array-conversions-visual-basic"></a>Konwersje tablic (Visual Basic)
-You can convert an array type to a different array type provided you meet the following conditions:  
+Typ tablicy można skonwertować na inny typ tablicy, pod warunkiem, że są spełnione następujące warunki:  
   
-- **Equal Rank.** The ranks of the two arrays must be the same, that is, they must have the same number of dimensions. However, the lengths of the respective dimensions do not need to be the same.  
+- **Równa ranga.** Range dwóch tablic muszą być takie same, co oznacza, że muszą mieć taką samą liczbę wymiarów. Jednak długości odpowiednich wymiarów nie muszą być takie same.  
   
-- **Element Data Type.** The data types of the elements of both arrays must be reference types. You cannot convert an `Integer` array to a `Long` array, or even to an `Object` array, because at least one value type is involved. For more information, see [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+- **Typ danych elementu.** Typy danych elementów obu tablic muszą być typami referencyjnymi. Nie można przekonwertować tablicy `Integer` na tablicę `Long` lub nawet do tablicy `Object`, ponieważ jest uwzględniany co najmniej jeden typ wartości. Aby uzyskać więcej informacji, zobacz [typy wartości i typy odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
-- **Convertibility.** A conversion, either widening or narrowing, must be possible between the element types of the two arrays. An example that fails this requirement is an attempted conversion between a `String` array and an array of a class derived from <xref:System.Attribute?displayProperty=nameWithType>. These two types have nothing in common, and no conversion of any kind exists between them.  
+- **Convertibility.** Konwersja, rozszerzająca lub zawężania, musi być możliwa między typami elementów dwóch tablic. Przykładem niepowodzenia tego wymagania jest próba konwersji między tablicą `String` i tablicą klasy pochodnej <xref:System.Attribute?displayProperty=nameWithType>. Te dwa typy nie mają wspólnych wartości i nie istnieje konwersja żadnego rodzaju między nimi.  
   
- A conversion of one array type to another is widening or narrowing depending on whether the conversion of the respective elements is widening or narrowing. For more information, see [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Konwersja jednego typu tablicy na inny jest poszerzana lub zawężana w zależności od tego, czy konwersja odpowiednich elementów jest poszerzana czy zawężana. Aby uzyskać więcej informacji, zobacz [rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
-## <a name="conversion-to-an-object-array"></a>Conversion to an Object Array  
- When you declare an `Object` array without initializing it, its element type is `Object` as long as it remains uninitialized. When you set it to an array of a specific class, it takes on the type of that class. However, its underlying type is still `Object`, and you can subsequently set it to another array of an unrelated class. Since all classes derive from `Object`, you can change the array's element type from any class to any other class.  
+## <a name="conversion-to-an-object-array"></a>Konwersja na tablicę obiektów  
+ Gdy deklarujesz tablicę `Object` bez jej inicjalizacji, jej typ elementu jest `Object`, dopóki nie zostanie zainicjowany. Gdy ustawiasz ją na tablicę określonej klasy, przyjmuje ona typ tej klasy. Jednak jego typ podstawowy jest nadal `Object`i można następnie ustawić go na inną tablicę niepowiązanej klasy. Ponieważ wszystkie klasy pochodzą z `Object`, można zmienić typ elementu tablicy z dowolnej klasy na dowolną inną klasę.  
   
- In the following example, no conversion exists between types `student` and `String`, but both derive from `Object`, so all assignments are valid.  
+ W poniższym przykładzie nie istnieje konwersja między typami `student` i `String`, ale oba pochodzą z `Object`, więc wszystkie przypisania są prawidłowe.  
   
 ```vb  
 ' Assume student has already been defined as a class.  
@@ -46,10 +46,10 @@ testArray = names
 ' testArray is now a String array.  
 ```  
   
-### <a name="underlying-type-of-an-array"></a>Underlying Type of an Array  
- If you originally declare an array with a specific class, its underlying element type is that class. If you subsequently set it to an array of another class, there must be a conversion between the two classes.  
+### <a name="underlying-type-of-an-array"></a>Typ podstawowy tablicy  
+ Jeśli pierwotnie deklarujesz tablicę z określoną klasą, jej typem elementu podstawowego jest Klasa. Jeśli następnie ustawisz ją na tablicę innej klasy, musi istnieć konwersja między tymi dwiema klasami.  
   
- In the following example, `students` is a `student` array. Since no conversion exists between `String` and `student`, the last statement fails.  
+ W poniższym przykładzie `students` jest tablicą `student`. Ponieważ nie istnieje żadna konwersja między `String` i `student`, Ostatnia instrukcja kończy się niepowodzeniem.  
   
 ```vb  
 Dim students() As student  
@@ -62,10 +62,10 @@ students = names
 ## <a name="see-also"></a>Zobacz także
 
 - [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Konwersje typów w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Konwersje jawne i niejawne](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Konwertowanie między ciągami a innymi typami danych](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [Instrukcje: konwertowanie obiektu na inny typ w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 - [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)
 - [Funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

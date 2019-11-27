@@ -22,7 +22,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Naviga
 ## <a name="navigationwindow-parts"></a>NavigationWindow części  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Navigation.NavigationWindow>.  
   
-|Części|Typ|Opis|  
+|Części|Type|Opis|  
 |-|-|-|  
 |PART_NavWinCP|<xref:System.Windows.Controls.ContentPresenter>|Obszar zawartości.|  
   

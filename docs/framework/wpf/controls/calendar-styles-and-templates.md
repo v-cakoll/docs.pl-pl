@@ -22,7 +22,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 ## <a name="calendar-parts"></a>Części kalendarza  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.Calendar>.  
   
-|Części|Typ|Opis|  
+|Części|Type|Opis|  
 |-|-|-|  
 |PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|Aktualnie wyświetlany miesiąc lub rok w <xref:System.Windows.Controls.Calendar>.|  
 |PART_Root|<xref:System.Windows.Controls.Panel>|Panel, który zawiera <xref:System.Windows.Controls.Primitives.CalendarItem>.|  
@@ -39,7 +39,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 ## <a name="calendaritem-parts"></a>CalendarItem części  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.Primitives.CalendarItem>.  
   
-|Części|Typ|Opis|  
+|Części|Type|Opis|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.FrameworkElement>|Katalog główny formantu.|  
 |PART_PreviousButton|<xref:System.Windows.Controls.Button>|Przycisk wyświetlający poprzednią stronę kalendarza, gdy zostanie kliknięty.|  
@@ -85,7 +85,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 |Aktywne|ActiveStates|Przycisk jest aktywny.|  
 |Nieaktywne|ActiveStates|Przycisk jest nieaktywny.|  
 |RegularDay|DayStates|Przycisk nie reprezentuje <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
-|Obecnych|DayStates|Przycisk reprezentuje <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
+|Dzisiaj|DayStates|Przycisk reprezentuje <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |NormalDay|BlackoutDayStates|Przycisk reprezentuje dzień, który można wybrać.|  
 |BlackoutDay|BlackoutDayStates|Przycisk reprezentuje dzień, którego nie można wybrać.|  
 |Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  

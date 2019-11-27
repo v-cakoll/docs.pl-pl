@@ -22,7 +22,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 ## <a name="textbox-parts"></a>Elementy TextBox  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.TextBox>.  
   
-|Części|Typ|Opis|  
+|Części|Type|Opis|  
 |-|-|-|  
 |PART_ContentHost|<xref:System.Windows.FrameworkElement>|Element wizualizacji, który może zawierać <xref:System.Windows.FrameworkElement>. Tekst <xref:System.Windows.Controls.TextBox> zostanie wyświetlony w tym elemencie.|  
   

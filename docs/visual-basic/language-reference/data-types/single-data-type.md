@@ -1,5 +1,5 @@
 ---
-title: Single — Typ danych
+title: Single, typ danych
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Single
@@ -29,25 +29,25 @@ ms.locfileid: "74343916"
 ---
 # <a name="single-data-type-visual-basic"></a>Single — Typ danych (Visual Basic)
 
-Holds signed IEEE 32-bit (4-byte) single-precision floating-point numbers ranging in value from -3.4028235E+38 through -1.401298E-45 for negative values and from 1.401298E-45 through 3.4028235E+38 for positive values. Single-precision numbers store an approximation of a real number.  
+Przechowuje podpisane cyfry IEEE 32-bit (4-bajtowe) liczby zmiennoprzecinkowe o pojedynczej precyzji w zakresie wartości od-3.4028235 E + 38 do-1.401298 E-45 dla wartości ujemnych i od 1.401298 E-45 przez 3.4028235 E + 38 dla wartości dodatnich. Liczby o pojedynczej precyzji przechowują przybliżoną liczbę rzeczywistą.  
   
 ## <a name="remarks"></a>Uwagi  
 
- Use the `Single` data type to contain floating-point values that do not require the full data width of `Double`. In some cases the common language runtime might be able to pack your `Single` variables closely together and save memory consumption.  
+ Użyj `Single` typ danych, aby zawierać wartości zmiennoprzecinkowe, które nie wymagają pełnej szerokości danych `Double`. W niektórych przypadkach środowisko uruchomieniowe języka wspólnego może być w stanie spakować zmienne `Single` blisko siebie i zaoszczędzić użycie pamięci.  
   
- The default value of `Single` is 0.  
+ Wartość domyślna `Single` wynosi 0.  
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
-- **Precision.** When you work with floating-point numbers, keep in mind that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Dokładne.** Podczas pracy z liczbami zmiennoprzecinkowymi należy pamiętać, że nie zawsze mają dokładną reprezentację w pamięci. Może to prowadzić do nieoczekiwanych wyników niektórych operacji, takich jak porównanie wartości i operator `Mod`. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z typami danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
-- **Widening.** The `Single` data type widens to `Double`. This means you can convert `Single` to `Double` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.  
+- **Rozszerzającą.** Typ danych `Single` poszerza do `Double`. Oznacza to, że można skonwertować `Single` na `Double` bez napotkania <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
-- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing 0 characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing 0 characters do not appear when you display or print floating-point values.  
+- **Końcowe zera.** Zmiennoprzecinkowe typy danych nie mają żadnej wewnętrznej reprezentacji znaków kończących 0. Na przykład nie różnią się od 4,2000 do 4,2. W związku z tym po wyświetleniu lub wydrukowaniu wartości zmiennoprzecinkowych nie są wyświetlane znaki końcowe 0.  
   
-- **Type Characters.** Appending the literal type character `F` to a literal forces it to the `Single` data type. Appending the identifier type character `!` to any identifier forces it to `Single`.  
+- **Znaki typu.** Dołączanie znaku typu literału `F` do literału wymusza go do `Single` typu danych. Dołączanie znaku typu identyfikatora `!` do dowolnego identyfikatora wymusza `Single`.  
   
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Single?displayProperty=nameWithType> structure.  
+- **Typ struktury.** Odpowiedni typ w .NET Framework jest strukturą <xref:System.Single?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
 

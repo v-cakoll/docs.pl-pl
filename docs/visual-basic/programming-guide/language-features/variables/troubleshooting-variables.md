@@ -13,39 +13,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351775"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Rozwiązywanie problemów związanych ze zmiennymi w Visual Basic
-This page lists some common problems that can occur when working with variables in Visual Basic.  
+Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas pracy ze zmiennymi w Visual Basic.  
   
-## <a name="unable-to-access-members-of-an-object"></a>Unable to Access Members of an Object  
- If your code attempts to access a property or method on an object, there are two possible error outcomes:  
+## <a name="unable-to-access-members-of-an-object"></a>Nie można uzyskać dostępu do elementów członkowskich obiektu  
+ Jeśli kod próbuje uzyskać dostęp do właściwości lub metody obiektu, istnieją dwa możliwe przyczyny błędu:  
   
-- The compiler can generate an error message if you declare the object variable to be of a specific type and then refer to a member not defined by that type.  
+- Kompilator może generować komunikat o błędzie, Jeśli deklarujesz zmienną obiektu jako określony typ, a następnie odwołujesz się do elementu członkowskiego, który nie jest zdefiniowany przez ten typ.  
   
-- A run-time <xref:System.MemberAccessException> occurs when the object assigned to an object variable does not expose the member your code is trying to access. In the case of a variable of [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md), you can also get this exception if the member is not `Public`. This is because late binding allows access only to `Public` members.  
+- <xref:System.MemberAccessException> w czasie wykonywania występuje, gdy obiekt przypisany do zmiennej obiektu nie ujawnia elementu członkowskiego, do którego kod próbuje uzyskać dostęp. W przypadku zmiennej [typu danych obiektu](../../../../visual-basic/language-reference/data-types/object-data-type.md)można także uzyskać ten wyjątek, jeśli element członkowski nie jest `Public`. Jest to spowodowane tym, że późne wiązanie zezwala na dostęp tylko do `Public` elementów członkowskich.  
   
- When the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) sets type checking `On`, an object variable can access only the methods and properties of the class with which you declare it. Ilustruje to poniższy przykład.  
+ Gdy [instrukcja Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) ustawia typ `On`, zmienna obiektu może uzyskać dostęp tylko do metod i właściwości klasy, z którą ją deklarujesz. Ilustruje to poniższy przykład.  
 
  [!code-vb[VbVbalrVariables#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#2)]  
   
- In this example, `p` can use only the members of the <xref:System.Object> class itself, which do not include the `Left` property. On the other hand, `q` was declared to be of type <xref:System.Windows.Forms.Label>, so it can use all the methods and properties of the <xref:System.Windows.Forms.Label> class in the <xref:System.Windows.Forms> namespace.  
+ W tym przykładzie `p` mogą korzystać tylko z elementów członkowskich klasy <xref:System.Object>, które nie zawierają właściwości `Left`. Z drugiej strony, `q` został zadeklarowany jako typu <xref:System.Windows.Forms.Label>, dlatego można użyć wszystkich metod i właściwości klasy <xref:System.Windows.Forms.Label> w przestrzeni nazw <xref:System.Windows.Forms>.  
   
-### <a name="correct-approach"></a>Correct Approach  
- To be able to access all the members of an object of a particular class, declare the object variable to be of the type of that class when possible. If you cannot do this, for example if you do not know the object type at compile time, you must set `Option Strict` to `Off` and declare the variable to be of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). This allows objects of any type to be assigned to the variable, and you should take steps to ensure that the currently assigned object is of an acceptable type. You can use the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to make this determination.  
+### <a name="correct-approach"></a>Poprawne podejście  
+ Aby można było uzyskać dostęp do wszystkich elementów członkowskich obiektu określonej klasy, należy zadeklarować zmienną obiektu jako typ tej klasy, gdy jest to możliwe. Jeśli nie możesz tego zrobić, na przykład jeśli nie znasz typu obiektu w czasie kompilacji, musisz ustawić `Option Strict` na `Off` i zadeklarować zmienną jako [Typ danych obiektu](../../../../visual-basic/language-reference/data-types/object-data-type.md). Pozwala to na przypisanie obiektów dowolnego typu do zmiennej i należy wykonać kroki, aby upewnić się, że aktualnie przypisany obiekt ma akceptowalny typ. Można użyć [operatora typeof](../../../../visual-basic/language-reference/operators/typeof-operator.md) , aby dokonać tego ustalenia.  
   
-## <a name="other-components-cannot-access-your-variable"></a>Other Components Cannot Access Your Variable  
- Visual Basic names are *case-insensitive*. If two names differ in alphabetic case only, the compiler interprets them as the same name. For example, it considers `ABC` and `abc` to refer to the same declared element.  
+## <a name="other-components-cannot-access-your-variable"></a>Inne składniki nie mogą uzyskać dostępu do zmiennej  
+ Nazwy Visual Basic nie uwzględniają *wielkości liter*. Jeśli dwie nazwy różnią się tylko wielkością liter, kompilator interpretuje je jako tę samą nazwę. Na przykład uważa, że `ABC` i `abc` do odwoływania się do tego samego zadeklarowanego elementu.  
   
- However, the common language runtime (CLR) uses *case-sensitive* binding. Therefore, when you produce an assembly or a DLL and make it available to other assemblies, your names are no longer case-insensitive. For example, if you define a class with an element called `ABC`, and other assemblies make use of your class through the common language runtime, they must refer to the element as `ABC`. If you subsequently recompile your class and change the element's name to `abc`, the other assemblies using your class can no longer access that element. Therefore, when you release an updated version of an assembly, you should not change the alphabetic case of any public elements.  
+ Jednak środowisko uruchomieniowe języka wspólnego (CLR) używa powiązania *z rozróżnianiem wielkości liter* . W związku z tym, podczas tworzenia zestawu lub biblioteki DLL i udostępnienia go innym zestawom nazwy nie są dłuższe. Na przykład, jeśli zdefiniujesz klasę z elementem o nazwie `ABC`, a inne zestawy używają klasy przez środowisko uruchomieniowe języka wspólnego, muszą odwoływać się do elementu jako `ABC`. Jeśli następnie ponownie skompilujesz klasę i zmienisz nazwę elementu na `abc`, inne zestawy korzystające z klasy nie będą miały już dostępu do tego elementu. W związku z tym po wydaniu zaktualizowanej wersji zestawu nie należy zmieniać wielkości liter każdego z elementów publicznych.  
   
- For more information, see [Common Language Runtime](../../../../standard/clr.md).  
+ Aby uzyskać więcej informacji, zobacz [środowisko uruchomieniowe języka wspólnego](../../../../standard/clr.md).  
   
-### <a name="correct-approach"></a>Correct Approach  
- To allow other components to access your variables, treat their names as if they were case-sensitive. When you are testing your class or module, make sure other assemblies are binding to the variables you expect them to. Once you have published a component, do not make any modifications to existing variable names, including changing their cases.  
+### <a name="correct-approach"></a>Poprawne podejście  
+ Aby zezwolić innym składnikom na dostęp do zmiennych, Traktuj ich nazwy tak, jakby były rozróżniane wielkości liter. Podczas testowania klasy lub modułu upewnij się, że inne zestawy są powiązane ze zmiennymi, których oczekujesz. Po opublikowaniu składnika nie należy wprowadzać żadnych modyfikacji istniejących nazw zmiennych, w tym zmiany ich przypadków.  
   
-## <a name="wrong-variable-being-used"></a>Wrong Variable Being Used  
- When you have more than one variable with the same name, the Visual Basic compiler attempts to resolve each reference to that name. If the variables have different scope, the compiler resolves a reference to the declaration with the narrowest scope. If they have the same scope, the resolution fails and the compiler signals an error. For more information, see [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+## <a name="wrong-variable-being-used"></a>Nieprawidłowa zmienna jest używana  
+ Jeśli masz więcej niż jedną zmienną o tej samej nazwie, kompilator Visual Basic próbuje rozpoznać każde odwołanie do tej nazwy. Jeśli zmienne mają różne zakresy, kompilator rozpoznaje odwołanie do deklaracji z najwęższym zakresem. Jeśli mają ten sam zakres, rozpoznawanie kończy się niepowodzeniem, a kompilator sygnalizuje błąd. Aby uzyskać więcej informacji, zobacz [odwołania do zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
-### <a name="correct-approach"></a>Correct Approach  
- Avoid using variables with the same name but different scope. If you are using other assemblies or projects, avoid using any names defined in those external components as much as possible. If you have more than one variable with the same name, be sure you qualify every reference to it. For more information, see [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+### <a name="correct-approach"></a>Poprawne podejście  
+ Należy unikać używania zmiennych o takiej samej nazwie, ale innym zakresie. Jeśli używasz innych zestawów lub projektów, Unikaj używania nazw zdefiniowanych w tych składnikach zewnętrznych tak długo, jak to możliwe. Jeśli masz więcej niż jedną zmienną o tej samej nazwie, pamiętaj, aby zakwalifikować się do niej każde odwołanie. Aby uzyskać więcej informacji, zobacz [odwołania do zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

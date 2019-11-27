@@ -17,18 +17,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344902"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>Porady: definiowanie operatora konwersji (Visual Basic)
-If you have defined a class or structure, you can define a type conversion operator between the type of your class or structure and another data type (such as `Integer`, `Double`, or `String`).  
+Jeśli zdefiniowano klasę lub strukturę, można zdefiniować Operator konwersji typu między typem klasy lub struktury a innym typem danych (takim jak `Integer`, `Double`lub `String`).  
   
- Define the type conversion as a [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) procedure within the class or structure. All conversion procedures must be `Public Shared`, and each one must specify either [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) or [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).  
+ Zdefiniuj konwersję typu jako procedurę [funkcji CType](../../../../visual-basic/language-reference/functions/ctype-function.md) w klasie lub strukturze. Wszystkie procedury konwersji muszą być `Public Shared`, a każdy z nich musi określać [rozszerzanie](../../../../visual-basic/language-reference/modifiers/widening.md) lub [zwężanie](../../../../visual-basic/language-reference/modifiers/narrowing.md).  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ Definiowanie operatora w klasie lub strukturze jest również nazywane *przeciążeniem* operatora.  
   
 ## <a name="example"></a>Przykład  
- The following example defines conversion operators between a structure called `digit` and a `Byte`.  
+ Poniższy przykład definiuje operatory konwersji między strukturą o nazwie `digit` i `Byte`.  
   
  [!code-vb[VbVbcnProcedures#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#27)]  
   
- You can test the structure `digit` with the following code.  
+ Możesz przetestować strukturę `digit` przy użyciu następującego kodu.  
   
  [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   

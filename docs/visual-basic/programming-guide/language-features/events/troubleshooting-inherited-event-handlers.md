@@ -16,17 +16,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345106"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Rozwiązywanie problemów związanych z odziedziczonymi programami obsługi zdarzeń w Visual Basic
-This topic lists common issues that arise with event handlers in inherited components.  
+W tym temacie wymieniono typowe problemy związane z obsługą zdarzeń w składnikach dziedziczonych.  
   
 ## <a name="procedures"></a>Procedury  
   
-#### <a name="code-in-event-handler-executes-twice-for-every-call"></a>Code in Event Handler Executes Twice for Every Call  
+#### <a name="code-in-event-handler-executes-twice-for-every-call"></a>Kod w obsłudze zdarzeń jest wykonywany dwukrotnie dla każdego wywołania  
   
-- An inherited event handler must not include a [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) clause. The method in the base class is already associated with the event and will fire accordingly. Remove the `Handles` clause from the inherited method.  
+- Dziedziczona procedura obsługi zdarzeń nie może zawierać klauzuli [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) . Metoda w klasie bazowej jest już skojarzona ze zdarzeniem i zostanie odpowiednio wyzwolona. Usuń klauzulę `Handles` z dziedziczonej metody.  
   
      [!code-vb[VbVbalrEvents#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#32)]  
   
-- If the inherited method does not have a `Handles` keyword, verify that your code does not contain an extra [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) or any additional methods that handle the same event.  
+- Jeśli dziedziczona Metoda nie ma słowa kluczowego `Handles`, należy sprawdzić, czy kod nie zawiera dodatkowej [instrukcji AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) ani żadnych dodatkowych metod, które obsługują to samo zdarzenie.  
   
 ## <a name="see-also"></a>Zobacz także
 

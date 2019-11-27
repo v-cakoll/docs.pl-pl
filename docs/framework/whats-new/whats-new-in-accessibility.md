@@ -1,5 +1,5 @@
 ---
-title: What's new in accessibility in the .NET Framework
+title: Co nowego w ułatwieniach dostępu w .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
@@ -14,23 +14,23 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427575"
 ---
-# <a name="whats-new-in-accessibility-in-the-net-framework"></a>What's new in accessibility in the .NET Framework
+# <a name="whats-new-in-accessibility-in-the-net-framework"></a>Co nowego w ułatwieniach dostępu w .NET Framework
 
-The .NET Framework aims at making applications more accessible for your users. Accessibility features allow an application to provide an appropriate experience for users of Assistive Technology. Starting with .NET Framework 4.7.1, the .NET Framework includes a large number of accessibility improvements that allow developers to create accessible applications.
+.NET Framework ma na celu zwiększenie dostępności aplikacji dla użytkowników. Funkcje ułatwień dostępu umożliwiają aplikacji zapewnienie odpowiedniego środowiska dla użytkowników technologii pomocniczej. Począwszy od .NET Framework 4.7.1, .NET Framework obejmuje dużą liczbę ulepszeń ułatwień dostępu, które umożliwiają deweloperom tworzenie dostępnych aplikacji.
 
-## <a name="accessibility-switches"></a>Accessibility switches
+## <a name="accessibility-switches"></a>Przełączniki ułatwień dostępu
 
-You can configure your app to opt into accessibility features if it targets .NET Framework 4.7 or an earlier version but is running on .NET Framework 4.7.1 or later. You can also configure your app to use legacy features (and not take advantage of accessibility features) if it targets .NET Framework 4.7.1 or later. Each version of the .NET Framework that includes accessibility features has a version-specific accessibility switch, which you add to the [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element in the [`<runtime>`](../configure-apps/file-schema/runtime/index.md) section of the application's configuration file. The following are the supported switches:
+Można skonfigurować aplikację do korzystania z funkcji ułatwień dostępu, jeśli jest ona przeznaczona dla .NET Framework 4,7 lub wcześniejszej wersji, ale działa w systemie .NET Framework 4.7.1 lub nowszym. Możesz również skonfigurować aplikację tak, aby korzystała ze starszych funkcji (i nie korzystać z funkcji ułatwień dostępu), jeśli jest ona przeznaczona dla .NET Framework 4.7.1 lub nowszych. Każda wersja .NET Framework, która obejmuje funkcje ułatwień dostępu, ma przełącznik dostępności specyficzny dla wersji, który można dodać do elementu [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) w sekcji [`<runtime>`](../configure-apps/file-schema/runtime/index.md) pliku konfiguracyjnego aplikacji. Obsługiwane są następujące przełączniki:
 
 |Wersja|Przełącznik|
 |---|---|
-|.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
-|.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
-|.NET Framework 4.8|"Switch.UseLegacyAccessibilityFeatures.3"|
+|.NET Framework 4.7.1|"Switch. UseLegacyAccessibilityFeatures"|
+|.NET Framework 4.7.2|"Switch. UseLegacyAccessibilityFeatures. 2"|
+|.NET Framework 4,8|"Switch. UseLegacyAccessibilityFeatures. 3"|
 
-### <a name="taking-advantage-of-accessibility-enhancements"></a>Taking advantage of accessibility enhancements
+### <a name="taking-advantage-of-accessibility-enhancements"></a>Korzystanie z ulepszeń ułatwień dostępu
 
-The new accessibility features are enabled by default for applications that target .NET Framework 4.7.1 or later. In addition, applications that target an earlier version of the .NET Framework but are running on .NET Framework 4.7.1 or later can opt out of legacy accessibility behaviors (and thereby take advantage of accessibility improvements) by adding switches to the [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element in the [`<runtime>`](../configure-apps/file-schema/runtime/index.md) section of the application's configuration file and setting their value to `false`. The following shows how to opt in to accessibility enhancements introduced in .NET Framework 4.7.1:
+Nowe funkcje ułatwień dostępu są domyślnie włączone dla aplikacji przeznaczonych .NET Framework 4.7.1 lub nowszych. Ponadto aplikacje przeznaczone dla starszej wersji .NET Framework ale działają na .NET Framework 4.7.1 lub nowszych mogą zrezygnować ze starszych zachowań dostępności (a tym samym korzystać z ulepszeń ułatwień dostępu) przez dodanie przełączników do elementu [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) w sekcji [`<runtime>`](../configure-apps/file-schema/runtime/index.md) pliku konfiguracji aplikacji i ustawienie ich wartości na `false`. Poniżej pokazano, jak wybrać ulepszenia ułatwień dostępu wprowadzone w .NET Framework 4.7.1:
 
 ```xml
 <runtime>
@@ -39,7 +39,7 @@ The new accessibility features are enabled by default for applications that targ
 </runtime>
 ```
 
-If you choose to opt in to accessibility features in a later version of the .NET Framework, you must also explicitly opt in to the features from earlier versions of the .NET Framework. Configuring your app to take advantage of accessibility improvements in both .NET Framework 4.7.1 and 4.7.2 requires the following [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element:
+W przypadku wybrania opcji ułatwienia dostępu w nowszej wersji .NET Framework należy również jawnie zadecydować o funkcjach wcześniejszych wersji .NET Framework. Konfigurowanie aplikacji w celu wykorzystania ulepszeń ułatwień dostępu w systemach .NET Framework 4.7.1 i 4.7.2 wymaga następującego elementu [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) :
 
 ```xml
 <runtime>
@@ -48,7 +48,7 @@ If you choose to opt in to accessibility features in a later version of the .NET
 </runtime>
 ```
 
-Configuring your app to take advantage of accessibility improvements in .NET Framework 4.7.1, 4.7.2, and 4.8 requires the following [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element:
+Konfigurowanie aplikacji w celu skorzystania z ulepszeń ułatwień dostępu w .NET Framework 4.7.1, 4.7.2 i 4,8 wymaga następującego elementu [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) :
 
 ```xml
 <runtime>
@@ -57,9 +57,9 @@ Configuring your app to take advantage of accessibility improvements in .NET Fra
 </runtime>
 ```
 
-### <a name="restoring-legacy-behavior"></a>Restoring legacy behavior
+### <a name="restoring-legacy-behavior"></a>Przywracanie starszego zachowania
 
-Applications that target versions of the .NET Framework starting with 4.7.1 can disable accessibility features by adding switches to the [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element in the [`<runtime>`](../configure-apps/file-schema/runtime/index.md) section of the application's configuration file and setting their value to `true`. For example, the following configuration opts out of accessibility features introduced in .NET Framework 4.7.2:
+Aplikacje, które są przeznaczone dla wersji .NET Framework zaczynających się od 4.7.1, mogą wyłączyć funkcje ułatwień dostępu, dodając przełączniki do elementu [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) w sekcji [`<runtime>`](../configure-apps/file-schema/runtime/index.md) pliku konfiguracyjnego aplikacji i ustawiając ich wartość na `true`. Na przykład następujące czynności konfiguracyjne nie są związane z funkcjami ułatwień dostępu wprowadzonymi w .NET Framework 4.7.2:
 
 ```xml
 <runtime>
@@ -68,27 +68,27 @@ Applications that target versions of the .NET Framework starting with 4.7.1 can 
 </runtime>
 ```
 
-## <a name="whats-new-in-accessibility-in-net-framework-48"></a>What's new in accessibility in .NET Framework 4.8
+## <a name="whats-new-in-accessibility-in-net-framework-48"></a>Nowości w ułatwieniach dostępu w .NET Framework 4,8
 
-.NET Framework 4.8 includes new accessibility features in the following areas:
+.NET Framework 4,8 zawiera nowe funkcje ułatwień dostępu w następujących obszarach:
 
 - [Windows Forms](#winforms48)
 
 - [Windows Presentation Foundation (WPF)](#wpf48)
 
-- [Windows Workflow Foundation (WF) workflow designer](#wf48)
+- [Projektant przepływu pracy Windows Workflow Foundation (WF)](#wf48)
 
 <a name="winforms48" />
 
 ### <a name="windows-forms"></a>Windows Forms
 
-In .NET Framework 4.8, Windows Forms adds support for LiveRegions and Notification Events to many commonly used controls. It also adds support for ToolTips when a user navigates to a control by using the keyboard.
+W .NET Framework 4,8 Windows Forms dodaje obsługę LiveRegions i zdarzeń powiadomień do wielu często używanych kontrolek. Dodaje również obsługę etykietek narzędzi, gdy użytkownik przechodzi do formantu przy użyciu klawiatury.
 
-**UIA LiveRegions Support in Labels and StatusStrips**
+**UIA LiveRegions support w etykietach i StatusStrip**
 
-UIA LiveRegions allow application developers to notify screen readers of a text change in a control that is located apart from the location where the user is working. This is useful, for example, for a <xref:System.Windows.Forms.StatusStrip> control that shows a connection status. If the connection is dropped and the status changes, the developer might want to notify the screen reader.
+UIA LiveRegions umożliwiają deweloperom aplikacji powiadamianie czytników ekranu o zmianie tekstu w kontrolce, która znajduje się poza lokalizacją, w której pracuje użytkownik. Jest to przydatne na przykład w przypadku kontrolki <xref:System.Windows.Forms.StatusStrip>, która wyświetla stan połączenia. Jeśli połączenie zostanie przerwane i stan zmieni się, deweloper może chcieć powiadomić czytnik ekranu.
 
-Starting with .NET Framework 4.8, Windows Forms implements UIA LiveRegions for both the <xref:System.Windows.Forms.Label> and <xref:System.Windows.Forms.StatusStrip> controls. For example, the following code uses the LiveRegion in a <xref:System.Windows.Forms.Label> control named `label1`:
+Począwszy od .NET Framework 4,8, Windows Forms implementuje UIA LiveRegions dla formantów <xref:System.Windows.Forms.Label> i <xref:System.Windows.Forms.StatusStrip>. Na przykład poniższy kod używa LiveRegion w kontrolce <xref:System.Windows.Forms.Label> o nazwie `label1`:
 
 ```csharp
 public Form1()
@@ -101,9 +101,9 @@ public Form1()
 Label1.Text = “Ready!”;
 ```
 
-Narrator announces “Ready” regardless of where the user is interacting with the application.
+Narrator ogłasza "gotowe" niezależnie od tego, gdzie użytkownik jest w stanie korzystać z aplikacji.
 
-You can also implement your <xref:System.Windows.Forms.UserControl> as a LiveRegion:
+Możesz również zaimplementować <xref:System.Windows.Forms.UserControl> jako LiveRegion:
 
 ```csharp
 using System;
@@ -134,11 +134,11 @@ namespace WindowsFormsApplication
 }
 ```
 
-**UIA notification events**
+**UIA zdarzenia powiadomień**
 
-The UIA Notification event, introduced in Windows 10 Fall Creators Update, allows your app to raise a UIA event, which leads to Narrator simply making an announcement based on text you supply with the event, without the need to have a corresponding control in the UI. In some scenarios, this is a straightforward way to dramatically improve the accessibility of your app. In can also be useful to notify of the progress of some process that may take a long time. For more information about UIA Notification Events, see [Can your desktop app leverage the new UI Notification event?](https://blogs.msdn.microsoft.com/winuiautomation/2017/11/08/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need/).
+Zdarzenie powiadamiania UIA wprowadzone w ramach aktualizacji systemu Windows 10 z aktualizacją dla twórców pozwala aplikacji na zgłaszanie zdarzenia UIA, które prowadzi do Narratora w oparciu o tekst dostarczany wraz ze zdarzeniem, bez konieczności posiadania odpowiedniej kontrolki w interfejsie użytkownika. W niektórych scenariuszach jest to prosty sposób znacznie zwiększyć dostępność aplikacji. W programie może być również przydatne powiadamianie o postępie niektórych procesów, które mogą zająć dużo czasu. Aby uzyskać więcej informacji na temat zdarzeń powiadomień UIA, zobacz [czy aplikacja klasyczna korzysta z nowego zdarzenia powiadamiania o interfejsie użytkownika?](https://blogs.msdn.microsoft.com/winuiautomation/2017/11/08/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need/).
 
-The following example raises the [Notification event](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A):
+Poniższy przykład podnosi [zdarzenie powiadomienia](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A):
 
 ```csharp
 MethodInfo raiseMethod = typeof(AccessibleObject).GetMethod("RaiseAutomationNotification");
@@ -147,9 +147,9 @@ if (raiseMethod != null) {
 }
 ```
 
-**ToolTips on keyboard access**
+**Etykietki narzędzi na dostępie z klawiatury**
 
-In applications that target .NET Framework 4.7.2 and earlier versions, a control [tooltip](xref:System.Windows.Forms.ToolTip) can only be triggered to pop up by moving a mouse pointer into the control. Starting with .NET Framework 4.8, a keyboard user can trigger a control’s tooltip by focusing the control using a Tab key or arrow keys with or without modifier keys. This particular accessibility enhancement requires an additional [AppContext switch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
+W aplikacjach, które są przeznaczone .NET Framework 4.7.2 i starszych wersji, [etykietka narzędzia](xref:System.Windows.Forms.ToolTip) kontrolki może być wyzwalana tylko w celu przechodzenia do kontrolki. Począwszy od .NET Framework 4,8, użytkownik klawiatury może wyzwolić etykietkę narzędzia kontrolki za pomocą klawisza TAB lub klawiszy strzałek z klawiszami modyfikującymi lub bez. To konkretne ulepszenie ułatwień dostępu wymaga dodatkowego [przełącznika AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -165,37 +165,37 @@ In applications that target .NET Framework 4.7.2 and earlier versions, a control
 </configuration>
 ```
 
-The following figure shows the tooltip when the user has selected a button with the keyboard.
+Na poniższej ilustracji przedstawiono etykietkę narzędzia, gdy użytkownik wybierze przycisk z klawiaturą.
 
-![Screenshot of tooltip when user navigates to button with the keyboard.](./media/whats-new-in-accessibility/select-tooltip-with-keyboard.png)
+![Zrzut ekranu przedstawiający etykietkę narzędzia, gdy użytkownik nawiguje do przycisku przy użyciu klawiatury.](./media/whats-new-in-accessibility/select-tooltip-with-keyboard.png)
 
 <a name="wpf48" />
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-Starting with .NET Framework 4.8, WPF includes a number of accessibility improvements.
+Począwszy od .NET Framework 4,8, WPF obejmuje wiele ulepszeń ułatwień dostępu.
 
-**Screen narrators no longer announce elements with Collapsed or Hidden visibility**
+**Narratory ekranu nie ogłaszają już elementów z zwiniętym lub ukrytym widocznością**
 
-Elements with collapsed or hidden visibility are no longer announced by screen reader. User interfaces that contain elements with a Visibility of <xref:System.Windows.Visibility.Collapsed?displayProperty=nameWithType> or <xref:System.Windows.Visibility.Hidden?displayProperty=nameWithType> can be misrepresented by screen readers if they are announced to the user. Starting with .NET Framework 4.8, WPF no longer includes collapsed or hidden elements in the Control View of the UIAutomation tree, so the screen readers can no longer announce these elements.
+Elementy z zwiniętym lub ukrytym widocznością nie są już anonsowane przez czytnik ekranu. Interfejsy użytkownika, które zawierają elementy z widocznością <xref:System.Windows.Visibility.Collapsed?displayProperty=nameWithType> lub <xref:System.Windows.Visibility.Hidden?displayProperty=nameWithType> mogą być reprezentowane przez czytniki ekranu, jeśli są ogłoszone dla użytkownika. Począwszy od .NET Framework 4,8, WPF nie obejmuje już elementów zwiniętych lub ukrytych w widoku sterowania drzewa UIAutomation, dzięki czemu czytniki zawartości ekranu nie będą już ogłaszać tych elementów.
 
-**SelectionTextBrush property for use with non-Adorner based text selection**
+**Właściwość SelectionTextBrush do użycia z zaznaczonym tekstem innym niż moduł definiowania układu**
 
-In the .NET Framework 4.7.2, WPF added the ability to draw <xref:System.Windows.Controls.TextBox> and <xref:System.Windows.Controls.PasswordBox> text selection without using the Adorner layer. The foreground color of the selected text in this scenario was dictated by <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType>.
+W .NET Framework 4.7.2, WPF dodaliśmy możliwość rysowania <xref:System.Windows.Controls.TextBox> i <xref:System.Windows.Controls.PasswordBox> zaznaczania tekstu bez użycia warstwy modułu definiowania układu. Kolor pierwszego planu zaznaczonego tekstu w tym scenariuszu został podyktowany przez <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType>.
 
-.NET Framework 4.8 adds a new property, `SelectionTextBrush`, that allows developers to select the specific brush for the selected text when using non-Adorner based text selection. This property works only on <xref:System.Windows.Controls.Primitives.TextBoxBase>-derived controls and the <xref:System.Windows.Controls.PasswordBox> control in WPF applications with non-Adorner-based text selection enabled. It does not work on the <xref:System.Windows.Controls.RichTextBox> control. If non-Adorner-based text selection is not enabled, this property is ignored.
+.NET Framework 4,8 dodaje nową właściwość `SelectionTextBrush`, która umożliwia deweloperom wybranie określonego pędzla dla zaznaczonego tekstu przy użyciu zaznaczonego tekstu. Ta właściwość działa tylko na kontrolkach pochodnych <xref:System.Windows.Controls.Primitives.TextBoxBase>i kontrolce <xref:System.Windows.Controls.PasswordBox> w aplikacjach WPF z włączonym zaznaczeniem tekstu innym niż moduł definiowania układu. Nie działa on w kontrolce <xref:System.Windows.Controls.RichTextBox>. Jeśli wybór tekstu nie jest włączony, ta właściwość jest ignorowana.
 
-To use this property, simply add it to your XAML code and use the appropriate brush or binding. The resulting text selection looks like this:
+Aby użyć tej właściwości, wystarczy dodać ją do kodu XAML i użyć odpowiedniego pędzla lub powiązania. Wynikowy wybór tekstu wygląda następująco:
 
-![Screenshot of the app running with the words Hello World selected.](./media/whats-new-in-accessibility/selectiontextbrush-property.png)
+![Zrzut ekranu aplikacji uruchomionej z wyrazami, Hello world zaznaczone.](./media/whats-new-in-accessibility/selectiontextbrush-property.png)
 
-You can combine the use of the `SelectionBrush` and `SelectionTextBrush` properties to generate any background and foreground color combination that you deem appropriate.
+Można połączyć użycie właściwości `SelectionBrush` i `SelectionTextBrush`, aby wygenerować wszelkie kombinacje kolorów tła i pierwszego planu, które są uważane za odpowiednie.
 
-**Support for the UIAutomation ControllerFor property**
+**Obsługa właściwości UIAutomation ControllerFor**
 
-UIAutomation’s `ControllerFor` property returns an array of automation elements that are manipulated by the automation element that supports this property. This property is commonly used for Auto-suggest accessibility. `ControllerFor` is used when an automation element affects one or more segments of the application UI or the desktop. Otherwise, it is hard to associate the impact of the control operation with UI elements. This feature adds the ability for controls to provide a value for the `ControllerFor` property.
+Właściwość `ControllerFor` UIAutomation zwraca tablicę elementów automatyzacji, które są manipulowane przez element automatyzacji, który obsługuje tę właściwość. Ta właściwość jest często używana do automatycznego sugerowania ułatwień dostępu. `ControllerFor` jest używany, gdy element automatyzacji ma wpływ na jeden lub więcej segmentów interfejsu użytkownika aplikacji lub pulpitu. W przeciwnym razie trudno jest powiązać wpływ operacji sterowania z elementami interfejsu użytkownika. Ta funkcja dodaje możliwość kontroli w celu udostępnienia wartości właściwości `ControllerFor`.
 
-.NET Framework 4.8 adds a new virtual method, <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType>. To provide a value for the `ControllerFor` property, simply override this method and return a `List<AutomationPeer>` for the controls being manipulated by this <xref:System.Windows.Automation.Peers.AutomationPeer>:
+.NET Framework 4,8 dodaje nową metodę wirtualną, <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType>. Aby podać wartość właściwości `ControllerFor`, wystarczy przesłonić tę metodę i zwrócić `List<AutomationPeer>` dla kontrolek manipulowanych przez tę <xref:System.Windows.Automation.Peers.AutomationPeer>:
 
 ```csharp
 public class AutoSuggestTextBox: TextBox
@@ -224,11 +224,11 @@ internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
 }
 ```
 
-**Tooltips on keyboard access**
+**Etykietki narzędzi na dostępie z klawiatury**
 
-In .NET Framework 4.7.2 and earlier versions, tooltips display only when the user hovers the mouse cursor over a control. In .NET Framework 4.8, tooltips also display on keyboard focus, as well as via a keyboard shortcut.
+W .NET Framework 4.7.2 i starszych wersjach etykietki narzędzi są wyświetlane tylko wtedy, gdy użytkownik umieści kursor myszy nad kontrolką. W .NET Framework 4,8 etykietki narzędzi są również wyświetlane na nacisk klawiatury, a także za pomocą skrótu klawiaturowego.
 
-To enable this feature, an application needs to target .NET Framework 4.8 or opt-in by using the `Switch.UseLegacyAccessibilityFeatures.3` and `Switch.UseLegacyToolTipDisplay` [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) switches. The following is a sample application configuration file:
+Aby włączyć tę funkcję, aplikacja musi być ukierunkowana na .NET Framework 4,8 lub zadecydować przy użyciu `Switch.UseLegacyAccessibilityFeatures.3` i `Switch.UseLegacyToolTipDisplay` przełączników [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) . Poniżej znajduje się przykładowy plik konfiguracji aplikacji:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -242,20 +242,20 @@ To enable this feature, an application needs to target .NET Framework 4.8 or opt
 </configuration>
 ```
 
-Once enabled, all controls that contain a tooltip display it once the control receives keyboard focus. The tooltip can be dismissed over time or when the keyboard focus changes. Users can also dismiss the tooltip manually by using a new keyboard shortcut, Ctrl + Shift + F10. Once the tooltip has been dismissed it can be displayed again by using the same keyboard shortcut.
+Po włączeniu wszystkie kontrolki zawierające etykietkę narzędzia wyświetlają ją, gdy kontrolka odbierze fokus klawiatury. Etykietka narzędzia może zostać odrzucona z upływem czasu lub po zmianie fokusu klawiatury. Użytkownicy mogą również odrzucić etykietkę narzędzia ręcznie przy użyciu nowego skrótu klawiaturowego, Ctrl + Shift + F10. Gdy etykietka narzędzia zostanie odrzucona, może być ponownie wyświetlana przy użyciu tego samego skrótu klawiaturowego.
 
 > [!NOTE]
-> [Ribbon tooltips](xref:System.Windows.Controls.Ribbon.RibbonToolTip) on <xref:System.Windows.Controls.Ribbon.Ribbon> controls won’t show on keyboard focus; they only show via the keyboard shortcut.
+> [Etykietki narzędzi wstążki](xref:System.Windows.Controls.Ribbon.RibbonToolTip) w kontrolkach <xref:System.Windows.Controls.Ribbon.Ribbon> nie będą wyświetlane na fokus klawiatury; są one wyświetlane tylko za pomocą skrótu klawiaturowego.
 
-**Added Support for SizeOfSet and PositionInSet UIAutomation properties**
+**Dodano obsługę właściwości SizeOfSet i PositionInSet UIAutomation**
 
-Windows 10 introduced two new UIAutomation properties, `SizeOfSet` and `PositionInSet`, which are used by applications to describe the count of items in a set. UIAutomation client applications such as screen readers can then query an application for these properties and announce an accurate representation of the application’s UI.
+System Windows 10 wprowadził dwie nowe właściwości UIAutomation, `SizeOfSet` i `PositionInSet`, które są używane przez aplikacje do opisywania liczby elementów w zestawie. UIAutomation aplikacje klienckie, takie jak czytniki zawartości ekranu, mogą następnie wysyłać zapytania do aplikacji, aby ogłosić dokładną reprezentację interfejsu użytkownika aplikacji.
 
-Starting with .NET Framework 4.8, WPF  exposes these two properties to UIAutomation in WPF applications. This can be accomplished in two ways:
+Począwszy od .NET Framework 4,8, WPF uwidacznia te dwie właściwości UIAutomation w aplikacjach WPF. Można to zrobić na dwa sposoby:
 
-- By using dependency properties.
+- Przy użyciu właściwości zależności.
 
-  WPF adds two new dependency properties, <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> and <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>. A developer can use XAML to set their values:
+  WPF dodaje dwie nowe właściwości zależności, <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> i <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>. Deweloper może użyć języka XAML, aby ustawić ich wartości:
 
   ```xaml
   <Button AutomationProperties.SizeOfSet="3"
@@ -268,9 +268,9 @@ Starting with .NET Framework 4.8, WPF  exposes these two properties to UIAutomat
     AutomationProperties.PositionInSet="3">Button 3</Button>
   ```
 
-- By overriding AutomationPeer virtual methods.
+- Przez zastępowanie metod wirtualnych AutomationPeer.
 
-  The <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> and <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> virtual methods been added to the AutomationPeer class. A developer can provide values for `SizeOfSet` and `PositionInSet` by overriding these methods, as shown in the following example:
+  Metody wirtualne <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> i <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> zostały dodane do klasy AutomationPeer. Deweloper może podać wartości `SizeOfSet` i `PositionInSet`, zastępując te metody, jak pokazano w następującym przykładzie:
 
   ```csharp
   public class MyButtonAutomationPeer : ButtonAutomationPeer
@@ -289,9 +289,9 @@ Starting with .NET Framework 4.8, WPF  exposes these two properties to UIAutomat
   }
   ```
 
-In addition, items in <xref:System.Windows.Controls.ItemsControl> instances provide a value for these properties automatically without additional action from the developer. If an <xref:System.Windows.Controls.ItemsControl> is grouped, the collection of groups is represented as a set, and each group is counted as a separate set, with each item inside that group providing its position inside that group as well as the size of the group. Automatic values are not affected by virtualization. Even if an item is not realized, it is still counted toward the total size of the set and affects the position in the set of its sibling items.
+Ponadto elementy w <xref:System.Windows.Controls.ItemsControl> wystąpieniach udostępniają wartość tych właściwości automatycznie bez dodatkowej akcji od dewelopera. Jeśli <xref:System.Windows.Controls.ItemsControl> jest zgrupowane, Kolekcja grup jest reprezentowana jako zestaw, a każda grupa jest traktowana jako oddzielny zestaw, przy czym każdy element wewnątrz tej grupy udostępnia swoją pozycję wewnątrz tej grupy, a także rozmiar grupy. Wirtualizacja nie ma wpływ na wartości automatyczne. Nawet jeśli element nie jest zrealizowany, nadal jest liczony do całkowitego rozmiaru zestawu i ma wpływ na pozycję w zestawie elementów równorzędnych.
 
-Automatic values are only provided if the application targets .NET Framework 4.8. For applications that target an earlier version of the .NET Framework, you can set the `Switch.UseLegacyAccessibilityFeatures.3` [AppContext switch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), as shown in the following App.config file:
+Wartości automatyczne są dostępne tylko wtedy, gdy aplikacja jest docelowa .NET Framework 4,8. W przypadku aplikacji przeznaczonych dla starszej wersji .NET Framework można ustawić [przełącznik `Switch.UseLegacyAccessibilityFeatures.3` AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), jak pokazano w następującym pliku App. config:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -307,21 +307,21 @@ Automatic values are only provided if the application targets .NET Framework 4.8
 
 <a name="wf48" />
 
-### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) workflow designer
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Projektant przepływu pracy Windows Workflow Foundation (WF)
 
-The workflow designer includes the following changes in .NET Framework 4.8:
+Projektant przepływu pracy obejmuje następujące zmiany w .NET Framework 4,8:
 
-- Users using Narrator will see improvements in FlowSwitch case labels.
+- Użytkownicy korzystający z programu Narrator zobaczą ulepszenia w etykietach przypadków FlowSwitch.
 
-- Users using Narrator will see improvements in button descriptions.
+- Użytkownicy korzystający z programu Narrator zobaczą ulepszenia w opisach przycisków.
 
-- Users who choose High Contrast themes will see improvements in the visibility of the Workflow Designer and its controls, like better contrast ratios between elements and more noticeable selection boxes used for focus elements.
+- Użytkownicy, którzy wybierają duży kontrast motywy zobaczą ulepszenia widoczności Projektant przepływu pracy i jej kontrolek, takich jak lepsze współczynniki kontrastu między elementami i bardziej zauważalne pola wyboru używane na potrzeby elementów fokusu.
 
-If your application targets .NET Framework 4.7.2 or an earlier version, you can opt into these changes by setting the `Switch.UseLegacyAccessibilityFeatures.3` [AppContext switch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) to `false` in your application configuration file. For more information, see the [Taking advantage of accessibility enhancements](#taking-advantage-of-accessibility-enhancements) section in this article.
+Jeśli aplikacja jest przeznaczona .NET Framework 4.7.2 lub starsza wersja, możesz zmienić te zmiany, ustawiając [przełącznik `Switch.UseLegacyAccessibilityFeatures.3` AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) , aby `false` w pliku konfiguracyjnym aplikacji. Aby uzyskać więcej informacji, zobacz sekcję [Korzystanie z ulepszeń ułatwień dostępu](#taking-advantage-of-accessibility-enhancements) w tym artykule.
 
-## <a name="whats-new-in-accessibility-in-net-framework-472"></a>What's new in accessibility in .NET Framework 4.7.2
+## <a name="whats-new-in-accessibility-in-net-framework-472"></a>Nowości w ułatwieniach dostępu w programie .NET Framework 4.7.2
 
-.NET Framework 4.7.2 includes new accessibility features in the following areas:
+Program .NET Framework 4.7.2 zawiera nowe funkcje ułatwień dostępu w następujących obszarach:
 
 - [Windows Forms](#winforms472)
 
@@ -331,132 +331,132 @@ If your application targets .NET Framework 4.7.2 or an earlier version, you can 
 
 ### <a name="windows-forms"></a>Windows Forms
 
-**OS-defined colors in High Contrast themes**
+**Kolory zdefiniowane przez system operacyjny w duży kontrast motywy**
 
-Starting with .NET Framework 4.7.2, Windows Forms uses colors defined by the operating system in High Contrast themes. This affects the following controls:
+Począwszy od .NET Framework 4.7.2, Windows Forms używa kolorów zdefiniowanych przez system operacyjny w duży kontrast motywach. Ma to wpływ na następujące kontrolki:
 
-- The drop-down arrow of the <xref:System.Windows.Forms.ToolStripDropDownButton> control.
+- Strzałka listy rozwijanej kontrolki <xref:System.Windows.Forms.ToolStripDropDownButton>.
 
-- The <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.RadioButton> and <xref:System.Windows.Forms.CheckBox> controls with <xref:System.Windows.Forms.ButtonBase.FlatStyle> set to <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> or <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType>. Previously, selected text and background colors were not contrasting and were hard to read.
+- Kontrolki <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.RadioButton> i <xref:System.Windows.Forms.CheckBox> z <xref:System.Windows.Forms.ButtonBase.FlatStyle> ustawionym na <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> lub <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType>. Wcześniej wybrane kolory tekstu i tła nie były kontrastowe i były trudne do odczytania.
 
-- Controls contained within a <xref:System.Windows.Forms.GroupBox> that has its <xref:System.Windows.Forms.Control.Enabled> property set to `false`.
+- Kontrolki zawarte w <xref:System.Windows.Forms.GroupBox>, które mają właściwość <xref:System.Windows.Forms.Control.Enabled> ustawioną na `false`.
 
-- The <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripComboBox>, and <xref:System.Windows.Forms.ToolStripDropDownButton> controls, which have an increased luminosity contrast ratio in High Contrast Mode.
+- Kontrolki <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripComboBox>i <xref:System.Windows.Forms.ToolStripDropDownButton> o zwiększonej proporcji kontrastu w trybie duży kontrast.
 
-- The <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> property of the <xref:System.Windows.Forms.DataGridViewLinkCell>.
+- Właściwość <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> <xref:System.Windows.Forms.DataGridViewLinkCell>.
 
-**Narrator improvements**
+**Ulepszenia Narratora**
 
-Starting with .NET Framework 4.7.2, Narrator support is enhanced as follows:
+Począwszy od .NET Framework 4.7.2, obsługa Narratora została ulepszona w następujący sposób:
 
-- It announces the value of the <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> property when announcing the text of a <xref:System.Windows.Forms.ToolStripMenuItem>.
+- Anonsuje wartość właściwości <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> podczas ogłaszania tekstu <xref:System.Windows.Forms.ToolStripMenuItem>.
 
-- It indicates when a <xref:System.Windows.Forms.ToolStripMenuItem> has its <xref:System.Windows.Forms.Control.Enabled> property set to `false`.
+- Wskazuje, kiedy <xref:System.Windows.Forms.ToolStripMenuItem> ma właściwość <xref:System.Windows.Forms.Control.Enabled> ustawioną na `false`.
 
-- It gives feedback on the state of a check box when the <xref:System.Windows.Forms.ListView.CheckBoxes?displayProperty=nameWithType> property is set to `true`.
+- Przekazuje ona informacje zwrotne o stanie pola wyboru, gdy właściwość <xref:System.Windows.Forms.ListView.CheckBoxes?displayProperty=nameWithType> jest ustawiona na `true`.
 
-- Narrator's Scan Mode focus order is consistent with the visual order of the controls on the ClickOnce download dialog window.
+- Kolejność fokusu trybu skanowania programu Narrator jest zgodna z kolejnością wizualizacji kontrolek w oknie dialogowym pobierania ClickOnce.
 
-**DataGridView improvements**
+**Usprawnienia formantu DataGridView**
 
-Starting with .NET Framework 4.7.2, the <xref:System.Windows.Forms.DataGridView> control has introduced the following accessibility improvements:
+Począwszy od .NET Framework 4.7.2, kontrolka <xref:System.Windows.Forms.DataGridView> wprowadziła następujące usprawnienia ułatwień dostępu:
 
-- Rows can be sorted using the keyboard. A user can use the F3 key in order to sort by the current column.
+- Wiersze można sortować przy użyciu klawiatury. Użytkownik może użyć klawisza F3, aby posortować według bieżącej kolumny.
 
-- When the <xref:System.Windows.Forms.DataGridView.SelectionMode?displayProperty=nameWithType> is set to <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType>, the column header changes color to indicate the current column as the user tabs through the cells in the current row.
+- Gdy <xref:System.Windows.Forms.DataGridView.SelectionMode?displayProperty=nameWithType> jest ustawiona na <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType>, nagłówek kolumny zmieni kolor, aby wskazać bieżącą kolumnę jako karty użytkownika przez komórki w bieżącym wierszu.
 
-- The <xref:System.Windows.Forms.AccessibleObject.Parent?displayProperty=nameWithType> property of a  <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject?displayProperty=nameWithType> returns the correct parent control.
+- Właściwość <xref:System.Windows.Forms.AccessibleObject.Parent?displayProperty=nameWithType> <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject?displayProperty=nameWithType> zwraca poprawną kontrolkę nadrzędną.
 
-**Improved visual cues**
+**Ulepszone podpowiedzi wizualne**
 
-- The <xref:System.Windows.Forms.RadioButton> and <xref:System.Windows.Forms.CheckBox> controls with an empty <xref:System.Windows.Forms.ButtonBase.Text> property  display a focus indicator when they receive the focus.
+- Kontrolki <xref:System.Windows.Forms.RadioButton> i <xref:System.Windows.Forms.CheckBox> z pustą właściwością <xref:System.Windows.Forms.ButtonBase.Text> wyświetlają wskaźnik ostrości po otrzymaniu fokusu.
 
-**Improved Property Grid Support**
+**Ulepszona obsługa siatki właściwości**
 
-- The <xref:System.Windows.Forms.PropertyGrid> control child elements now return a `true` for the  <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> property only when a PropertyGrid element is enabled.
+- Elementy podrzędne formantu <xref:System.Windows.Forms.PropertyGrid> teraz zwracają `true` właściwości <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> tylko wtedy, gdy element PropertyGrid jest włączony.
 
-- The <xref:System.Windows.Forms.PropertyGrid> control child elements return a `false` for the <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> property only when a PropertyGrid element can be changed by the user.
+- Elementy podrzędne formantu <xref:System.Windows.Forms.PropertyGrid> zwracają `false` właściwości <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> tylko wtedy, gdy użytkownik może zmienić element PropertyGrid.
 
-**Improved keyboard navigation**
+**Ulepszone nawigowanie po klawiaturze**
 
-- The <xref:System.Windows.Forms.ToolStripButton> control allows focus when contained within a <xref:System.Windows.Forms.ToolStripPanel> that has the <xref:System.Windows.Forms.ToolStripPanel.TabStop> property set to `true`
+- Formant <xref:System.Windows.Forms.ToolStripButton> umożliwia fokus, gdy jest zawarty w <xref:System.Windows.Forms.ToolStripPanel>, który ma właściwość <xref:System.Windows.Forms.ToolStripPanel.TabStop> ustawioną na `true`
 
 <a name="wpf472"></a>
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-**Changes to the CheckBox and RadioButton controls**
+**Zmiany w kontrolkach CheckBox i RadioButton**
 
-In .NET Framework 4.7.1 and earlier versions, the WPF <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> and <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> controls have inconsistent and, in Classic and High Contrast themes, incorrect focus visuals.  These issues occur in cases where the controls do not have any content set.  This can make the transition between themes confusing and the focus visual hard to see.
+W .NET Framework 4.7.1 i starszych wersjach, formanty WPF <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> i <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> są niespójne, a w kompozycjach klasycznych i duży kontrast, nieprawidłowe wizualizacje fokusu.  Te problemy występują w przypadkach, gdy kontrolki nie mają żadnego zestawu zawartości.  Może to spowodować, że przejście między motywami jest mylące i wizualizacja fokusu będzie widoczna.
 
-In .NET Framework 4.7.2, these visuals are now more consistent across themes and more easily visible in Classic and High Contrast themes.
+W .NET Framework 4.7.2 te wizualizacje są teraz bardziej spójne w różnych motywach i łatwiej widoczne w klasycznych i duży kontrast motywach.
 
-**WinForms controls hosted in a WPF application**
+**Kontrolki WinForms hostowane w aplikacji WPF**
 
-For WinForms control hosted in a WPF application in .NET Framework 4.7.1 and earlier versions, users couldn't tab out of the WinForms layer if the first or last control in that layer is the WPF <xref:System.Windows.Forms.Integration.ElementHost> control. In .NET Framework 4.7.2, users are now able to tab out of the WinForms layer.
+W przypadku kontrolki WinForms hostowanej w aplikacji WPF w .NET Framework 4.7.1 i starszych wersjach użytkownicy nie mogli wystawić z warstwy WinForms, jeśli pierwszy lub ostatni formant w tej warstwie jest formantem <xref:System.Windows.Forms.Integration.ElementHost> WPF. W .NET Framework 4.7.2 Użytkownicy mogą teraz wystawić kartę z warstwy WinForms.
 
-However, automated applications that rely on focus never escaping the WinForms layer may no longer work as expected.
+Jednak zautomatyzowane aplikacje, które opierają się na koncentracji, nigdy nie ucieczką warstwy WinForms, mogą przestać działać zgodnie z oczekiwaniami.
 
-## <a name="whats-new-in-accessibility-in-net-framework-471"></a>What's new in accessibility in .NET Framework 4.7.1
+## <a name="whats-new-in-accessibility-in-net-framework-471"></a>Nowości w ułatwieniach dostępu w programie .NET Framework 4.7.1
 
-.NET Framework 4.7.1 includes new accessibility features in the following areas:
+Program .NET Framework 4.7.1 zawiera nowe funkcje ułatwień dostępu w następujących obszarach:
 
 - [Windows Presentation Foundation (WPF)](#wpf471)
 
 - [Windows Forms](#winforms471)
 
-- [ASP.NET web controls](#aspnet471)
+- [Kontrolki sieci Web ASP.NET](#aspnet471)
 
-- [.NET SDK Tools](#tools471)
+- [SDK Tools .NET](#tools471)
 
-- [Windows Workflow Foundation (WF) Workflow Designer](#wf471)
+- [Projektant przepływu pracy Windows Workflow Foundation (WF)](#wf471)
 
 <a name="wpf471"></a>
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-**Screen reader improvements**
+**Ulepszenia czytnika ekranu**
 
-If accessibility improvements are enabled, .NET Framework 4.7.1 includes the following enhancements that affect screen readers:
+W przypadku włączenia ulepszeń ułatwień dostępu .NET Framework 4.7.1 obejmuje następujące udoskonalenia, które mają wpływ na czytniki zawartości ekranu:
 
-- In .NET Framework 4.7 and earlier versions, <xref:System.Windows.Controls.Expander> controls were announced by screen readers as buttons. Starting with .NET Framework 4.7.1, they are correctly announced as expandable/collapsible groups.
+- W .NET Framework 4,7 i wcześniejszych wersjach kontrolki <xref:System.Windows.Controls.Expander> zostały ogłoszone przez czytniki ekranu jako przyciski. Począwszy od .NET Framework 4.7.1, są one prawidłowo anonsowane jako rozwijane/zwijane grupy.
 
-- In .NET Framework 4.7 and earlier versions, <xref:System.Windows.Controls.DataGridCell> controls were announced by screen readers as “custom.” Starting with .NET Framework 4.7.1, they are now correctly announced as data grid cell (localized).
+- W .NET Framework 4,7 i wcześniejszych wersjach kontrolki <xref:System.Windows.Controls.DataGridCell> zostały ogłoszone przez czytniki ekranu jako "niestandardowe". Począwszy od .NET Framework 4.7.1, są one teraz prawidłowo anonsowane jako komórka siatki danych (zlokalizowany).
 
-- Starting with .NET Framework 4.7.1, screen readers announce the name of an editable <xref:System.Windows.Controls.ComboBox>.
+- Począwszy od .NET Framework 4.7.1, czytniki ekranu anonsują nazwę <xref:System.Windows.Controls.ComboBox>edytowalnego.
 
-- In .NET Framework 4.7 and earlier versions, <xref:System.Windows.Controls.PasswordBox> controls were announced as “no item in view” or had otherwise incorrect behavior. This issue is fixed starting with .NET Framework 4.7.1.
+- W .NET Framework 4,7 i starszych wersjach, formanty <xref:System.Windows.Controls.PasswordBox> zostały ogłoszone jako "Brak elementów w widoku" lub w inny sposób nie były prawidłowe. Ten problem został rozwiązany, rozpoczynając od .NET Framework 4.7.1.
 
-**UIAutomation LiveRegion support**
+**Obsługa LiveRegion UIAutomation**
 
-Screen readers such as Narrator help people read the UI contents of an application, usually by text-to-speech output of the UI content that has the focus. However, if a UI element changes and does not have the focus, the user may not be notified and may miss important information. Live regions aim at solving this problem. A developer can use them to inform the screen reader or any other UIAutomation client that an important change has been made to a UI element. The screen reader can then decide how and when to inform the user of this change.
+Czytniki ekranu, takie jak Narrator, ułatwiają osobom odczytywanie zawartości interfejsu użytkownika aplikacji, zazwyczaj przez zamianę tekstu na mowę dla zawartości interfejsu użytkownika, która ma fokus. Jeśli jednak element interfejsu użytkownika zmieni się i nie ma fokusu, użytkownik może nie zostać powiadomiony i może pominąć ważne informacje. Regiony na żywo mają na celu rozwiązanie tego problemu. Programista może użyć ich do informowania czytnika ekranu lub innego klienta UIAutomation o tym, że wprowadzono ważną zmianę w elemencie interfejsu użytkownika. Czytnik ekranu może następnie zdecydować, jak i kiedy należy poinformować użytkownika o tej zmianie.
 
-To support live regions, the following APIs have been added to WPF:
+Do obsługi regionów na żywo dodano następujące interfejsy API do platformy WPF:
 
-- The <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveSettingProperty?displayProperty=nameWithType> and <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveRegionChangedEvent?displayProperty=nameWithType> fields, which identify the **LiveSetting** property and the **LiveRegionChanged** event. They can be set by using XAML.
+- Pola <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveSettingProperty?displayProperty=nameWithType> i <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveRegionChangedEvent?displayProperty=nameWithType>, które identyfikują Właściwość **LiveSetting** i zdarzenie **LiveRegionChanged** . Można je ustawić przy użyciu języka XAML.
 
-- The **AutomationProperties.LiveSetting** attached property, which informs the screen reader of the importance of the UI change to the user.
+- Dołączona właściwość **AutomationProperties. LiveSetting** , która informuje czytnik ekranu o ważności zmiany interfejsu użytkownika.
 
-- The <xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType> property, which identifies the **AutomationProperties.LiveSetting** attached property.
+- Właściwość <xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType>, która identyfikuje załączoną Właściwość **AutomationProperties. LiveSetting** .
 
-- The <xref:System.Windows.Automation.Peers.AutomationPeer.GetLiveSettingCore%2A?displayProperty=nameWithType> method, which can be overridden to provide a **LiveSetting** value.
+- Metoda <xref:System.Windows.Automation.Peers.AutomationPeer.GetLiveSettingCore%2A?displayProperty=nameWithType>, którą można zastąpić, aby zapewnić wartość **LiveSetting** .
 
-- The <xref:System.Windows.Automation.AutomationProperties.GetLiveSetting%2A?displayProperty=nameWithType> and <xref:System.Windows.Automation.AutomationProperties.SetLiveSetting%2A?displayProperty=nameWithType> methods, which get and set a **LiveSetting** value.
+- Metody <xref:System.Windows.Automation.AutomationProperties.GetLiveSetting%2A?displayProperty=nameWithType> i <xref:System.Windows.Automation.AutomationProperties.SetLiveSetting%2A?displayProperty=nameWithType>, które uzyskują i ustawiają wartość **LiveSetting** .
 
-- The <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> enumeration, which defines the following possible **LiveSetting** values:
+- Wyliczenie <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType>, które definiuje następujące możliwe wartości **LiveSetting** :
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>., The element does not send notifications if the content of the live region has changed.
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>., The element sends non-interruptive notifications if the content of the live region has changed.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>., Element nie wysyła powiadomień, jeśli zawartość regionu aktywnego zmieniła się.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>., Element wysyła powiadomienia nieprzerwane, jeśli zawartość regionu aktywnego uległa zmianie.
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>., The element sends interruptive notifications if the content of the live region has changed.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>., Element wysyła powiadomienia o przerwie, jeśli zawartość regionu aktywnego uległa zmianie.
 
-You can create a LiveRegion by setting the **AutomationProperties.LiveSetting** property on the element of interest, as shown in the following example:
+Można utworzyć LiveRegion przez ustawienie właściwości **AutomationProperties. LiveSetting** dla elementu zainteresowania, jak pokazano w następującym przykładzie:
 
 ```xaml
 <TextBlock Name="myTextBlock" AutomationProperties.LiveSetting="Assertive">announcement</TextBlock>
 ```
 
-When the data in the live region changes and you need to inform a screen reader, you explicitly raise an event, as shown in the following sample.
+Gdy dane w regionie aktywnym zmieniają się i musisz poinformować czytnik ekranu, można jawnie zgłosić zdarzenie, jak pokazano w poniższym przykładzie.
 
 ```csharp
 var peer = FrameworkElementAutomationPeer.FromElement(myTextBlock);
@@ -470,243 +470,243 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ```
 
-**High contrast**
+**Duży kontrast**
 
-Starting with .NET Framework 4.7.1, improvements in high contrast have been made to various WPF controls. They are now visible when the <xref:System.Windows.SystemParameters.HighContrast%2A> theme is set. Należą do nich następujące elementy:
+Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolkach WPF. Są one teraz widoczne po ustawieniu motywu <xref:System.Windows.SystemParameters.HighContrast%2A>. Należą do nich:
 
-- <xref:System.Windows.Controls.Expander> control
+- Kontrolka <xref:System.Windows.Controls.Expander>
 
-  The focus visual for the  <xref:System.Windows.Controls.Expander> control is now visible. The keyboard visuals for <xref:System.Windows.Controls.ComboBox>,<xref:System.Windows.Controls.ListBox>, and <xref:System.Windows.Controls.RadioButton> controls are visible as well. Na przykład:
-
-  Przed: 
-
-  ![Screenshot of the expander control with focus and no focus visual.](./media/whats-new-in-accessibility/expander-control-before.png)
-
-  After: 
-
-  ![Screenshot of the expander control with focus showing a dotted line around the control's text.](./media/whats-new-in-accessibility/expander-control-after.png)
-
-- <xref:System.Windows.Controls.CheckBox> and <xref:System.Windows.Controls.RadioButton> controls
-
-  The text in the <xref:System.Windows.Controls.CheckBox> and <xref:System.Windows.Controls.RadioButton> controls is now easier to see when selected in high contrast themes. Na przykład:
+  Wizualizacja fokusu dla kontrolki <xref:System.Windows.Controls.Expander> jest teraz widoczna. Wizualizacje klawiatury dla formantów <xref:System.Windows.Controls.ComboBox>,<xref:System.Windows.Controls.ListBox>i <xref:System.Windows.Controls.RadioButton> są również widoczne. Na przykład:
 
   Przed: 
 
-  ![Screenshot of radio and check buttons with poor text visibility on high contrast themes.](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
+  ![Zrzut ekranu kontrolki ekspandera z fokusem i wizualizacja fokusu.](./media/whats-new-in-accessibility/expander-control-before.png)
 
-  After: 
+  Otrzyma 
 
-  ![Screenshot of radio and check buttons with better text visibility on high contrast themes.](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
+  ![Zrzut ekranu kontrolki ekspandera z fokusem pokazującą kropkowaną linię wokół tekstu kontrolki.](./media/whats-new-in-accessibility/expander-control-after.png)
 
-- <xref:System.Windows.Controls.ComboBox> control
+- kontrolki <xref:System.Windows.Controls.CheckBox> i <xref:System.Windows.Controls.RadioButton>
 
-  Starting with .NET Framework 4.7.1, the border of a disabled <xref:System.Windows.Controls.ComboBox> control is the same color as disabled text. Na przykład:
+  Tekst w kontrolkach <xref:System.Windows.Controls.CheckBox> i <xref:System.Windows.Controls.RadioButton> jest teraz łatwiejszy do sprawdzenia, gdy wybrane są motywy o dużym kontraście. Na przykład:
 
   Przed: 
 
-  ![Screenshot of a disabled ComboBox with border and control text in different colors.](./media/whats-new-in-accessibility/combo-disabled-before.png)
+  ![Zrzut ekranu przycisków radiowych i kontrolek z niską widocznością tekstu w motywach o wysokim kontraście.](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
 
-  After:   
+  Otrzyma 
 
-  ![Screenshot of a disabled ComboBox with border the same color as the control text.](./media/whats-new-in-accessibility/combo-disabled-after.png)
+  ![Zrzut ekranu przycisków radiowych i kontrolek z lepszą widocznością tekstu w motywach o wysokim kontraście.](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
 
-  In addition, disabled and focused buttons use the correct theme color.
+- Kontrolka <xref:System.Windows.Controls.ComboBox>
+
+  Począwszy od .NET Framework 4.7.1, obramowanie wyłączonej kontrolki <xref:System.Windows.Controls.ComboBox> ma taki sam kolor jak wyłączony tekst. Na przykład:
+
+  Przed: 
+
+  ![Zrzut ekranu wyłączonego ComboBox z obramowaniem i tekstem kontrolki w różnych kolorach.](./media/whats-new-in-accessibility/combo-disabled-before.png)
+
+  Otrzyma   
+
+  ![Zrzut ekranu wyłączonego ComboBox z obramowaniem o taki sam kolor jak tekst kontrolki.](./media/whats-new-in-accessibility/combo-disabled-after.png)
+
+  Ponadto przyciski wyłączone i priorytetowe używają poprawnego koloru motywu.
 
   Przed:
 
-  ![Screenshot of a black button with gray text saying Focus Me.](./media/whats-new-in-accessibility/button-theme-colors-before.png) 
+  ![Zrzut ekranu czarnego przycisku z szarym tekstem mówiący, aby skoncentrować się.](./media/whats-new-in-accessibility/button-theme-colors-before.png) 
 
-  After: 
+  Otrzyma 
 
-  ![Screenshot of a blue button with black text saying Focus Me.](./media/whats-new-in-accessibility/button-theme-colors-after.png) 
+  ![Zrzut ekranu przedstawiający niebieski przycisk z czarnym tekstem, który mówi mnie.](./media/whats-new-in-accessibility/button-theme-colors-after.png) 
 
-  Finally, in .NET Framework 4.7 and earlier versions, setting a <xref:System.Windows.Controls.ComboBox> control’s style to `Toolbar.ComboBoxStyleKey` caused the drop-down arrow to be invisible. This issue is fixed starting with .NET Framework 4.7.1. Na przykład:
-
-  Przed: 
-
-  ![Screenshot of a ComboBox control with an invisible drop-down arrow.](./media/whats-new-in-accessibility/combo-box-style-key-before.png) 
-
-  After: 
-
-  ![Screenshot of a ComBoxBox control displaying the drop-down arrow.](./media/whats-new-in-accessibility/combo-box-style-key-after.png) 
-
-- <xref:System.Windows.Controls.DataGrid> control
-
-  Starting with .NET Framework 4.7.1, the sort indicator arrow in <xref:System.Windows.Controls.DataGrid> controls now uses correct theme colors. Na przykład:
+  Na koniec, w .NET Framework 4,7 i wcześniejszych wersjach, ustawienie stylu kontrolki <xref:System.Windows.Controls.ComboBox> na `Toolbar.ComboBoxStyleKey` spowodowało niewidzialność strzałki listy rozwijanej. Ten problem został rozwiązany, rozpoczynając od .NET Framework 4.7.1. Na przykład:
 
   Przed: 
 
-  ![Screenshot of sort indicator arrow before improvements.](./media/whats-new-in-accessibility/sort-indicator-before.png) 
+  ![Zrzut ekranu kontrolki ComboBox z niewidoczną strzałką listy rozwijanej.](./media/whats-new-in-accessibility/combo-box-style-key-before.png) 
 
-  After:   
+  Otrzyma 
 
-  ![Screenshot of sort indicator arrow after improvements.](./media/whats-new-in-accessibility/sort-indicator-after.png) 
+  ![Zrzut ekranu przedstawiający formant ComboBox wyświetlający strzałkę listy rozwijanej.](./media/whats-new-in-accessibility/combo-box-style-key-after.png) 
 
-  In addition, in .NET Framework 4.7 and earlier versions, the default link style changed to an incorrect color on mouse over in high contrast modes. This is resolved starting with .NET Framework 4.7.1. Similarly, <xref:System.Windows.Controls.DataGrid> checkbox columns uses the expected colors for keyboard focus feedback starting with .NET Framework 4.7.1.
+- Kontrolka <xref:System.Windows.Controls.DataGrid>
+
+  Począwszy od .NET Framework 4.7.1, strzałka sortowania w <xref:System.Windows.Controls.DataGrid> kontrolki używa teraz poprawnych kolorów motywu. Na przykład:
 
   Przed: 
 
-  ![Screenshot of a link saying Click Me! in red.](./media/whats-new-in-accessibility/default-link-style-before.png) 
+  ![Zrzut ekranu przedstawiający strzałkę wskaźnika sortowania przed ulepszeniami.](./media/whats-new-in-accessibility/sort-indicator-before.png) 
 
-  After:    
+  Otrzyma   
 
-  ![Screenshot of a link saying Click Me! in yellow.](./media/whats-new-in-accessibility/default-link-style-after.png) 
+  ![Zrzut ekranu przedstawiający strzałkę wskaźnika sortowania po ulepszeniach.](./media/whats-new-in-accessibility/sort-indicator-after.png) 
 
-For more information on WPF accessibility improvements in .NET Framework 4.7.1, see [Accessibility improvements in WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
+  Ponadto w .NET Framework 4,7 i wcześniejszych wersjach domyślny styl łącza został zmieniony na nieprawidłowy kolor na przycisku myszy nad trybem dużego kontrastu. Jest to rozwiązane, rozpoczynając od .NET Framework 4.7.1. Analogicznie, <xref:System.Windows.Controls.DataGrid> kolumny CheckBox używa oczekiwanych kolorów dla opinii o fokusie klawiatury, zaczynając od .NET Framework 4.7.1.
+
+  Przed: 
+
+  ![Zrzut ekranu przedstawiający link mówiący o kliknięciu mnie! na czerwono.](./media/whats-new-in-accessibility/default-link-style-before.png) 
+
+  Otrzyma    
+
+  ![Zrzut ekranu przedstawiający link mówiący o kliknięciu mnie! na żółto.](./media/whats-new-in-accessibility/default-link-style-after.png) 
+
+Aby uzyskać więcej informacji na temat ulepszeń ułatwień dostępu WPF w .NET Framework 4.7.1, zobacz [ulepszenia ułatwień dostępu w programie WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
 <a name="winforms471"></a>
 
-### <a name="windows-forms-accessibility-improvements"></a>Windows Forms accessibility improvements
+### <a name="windows-forms-accessibility-improvements"></a>Ulepszenia ułatwień dostępu Windows Forms
 
-In .NET Framework 4.7.1, Windows Forms (WinForms) includes accessibility changes in the following areas.
+W .NET Framework 4.7.1 Windows Forms (WinForms) obejmuje zmiany ułatwień dostępu w następujących obszarach.
 
-**Improved display in High Contrast mode**
+**Udoskonalone wyświetlanie w trybie duży kontrast**
 
-Starting with .NET Framework 4.7.1, various WinForms controls offer improved rendering in the HighContrast modes available in the operating system. Windows 10 has changed the values for some high contrast system colors, and Windows Forms is based on the Windows 10 Win32 framework. For the best experience, run on the latest version of Windows and opt in to the latest OS changes by adding an app.manifest file in a test application and un-comment the Windows 10 supported OS  line so that it looks the following:
+Począwszy od .NET Framework 4.7.1, różne kontrolki WinForm oferują ulepszone renderowanie w trybach HighContrast dostępnych w systemie operacyjnym. System Windows 10 zmienił wartości niektórych kolorów systemu o dużym kontraście, a Windows Forms jest oparty na strukturze Win32 systemu Windows 10. Aby uzyskać najlepsze środowisko, uruchom polecenie w najnowszej wersji systemu Windows i zapoznaj się z najnowszymi zmianami systemu operacyjnego przez dodanie pliku App. manifest do aplikacji testowej i odskomentuj wiersz systemu operacyjnego Windows 10, aby wyglądał następująco:
 
 ```xml
 <!-- Windows 10 -->
 <supportedOS Id=”{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}” />
 ```
 
-Some examples of high contrast changes include:
+Niektóre przykłady zmian wysokiego kontrastu obejmują:
 
-- Checkmarks in <xref:System.Windows.Forms.MenuStrip> items are easier to view.
+- Zaznaczone elementy <xref:System.Windows.Forms.MenuStrip> są łatwiejsze do wyświetlenia.
 
-- When selected, disabled <xref:System.Windows.Forms.MenuStrip> items are easier to view.
+- Po wybraniu elementy <xref:System.Windows.Forms.MenuStrip> są łatwiejsze do wyświetlenia.
 
-- Text in a selected <xref:System.Windows.Forms.Button> control contrasts with the selection color.
+- Tekst w wybranym formancie <xref:System.Windows.Forms.Button> kontrastu z kolorem zaznaczenia.
 
-- Disabled text is easier to read. Na przykład:
+- Wyłączony tekst jest łatwiejszy do odczytania. Na przykład:
 
   Przed:
 
-  ![Screenshot of an app that uses different controls running in high contrast mode before accessibility improvements.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png) 
+  ![Zrzut ekranu aplikacji korzystającej z różnych kontrolek działających w trybie dużego kontrastu przed udoskonaleniami ułatwień dostępu.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png) 
 
-  After:
+  Otrzyma
 
-  ![Screenshot of an app that uses different controls running in high contrast mode after accessibility improvements.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png) 
+  ![Zrzut ekranu aplikacji korzystającej z różnych kontrolek uruchomionych w trybie dużego kontrastu po udoskonaleniu ułatwień dostępu.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png) 
 
-- High contrast improvements in the Thread Exception Dialog.
+- Ulepszenia dużego kontrastu w oknie dialogowym wyjątku wątku.
 
-**Improved Narrator support**
+**Ulepszona obsługa Narratora**
 
-Windows Forms in .NET Framework 4.7.1 includes the following accessibility improvements for the Narrator:
+Windows Forms w programie .NET Framework 4.7.1 zawierają następujące ulepszenia ułatwień dostępu dla programu Narrator:
 
-- The <xref:System.Windows.Forms.MonthCalendar> control can be accessed by the Narrator, as well as by other UI automation tools.
+- Dostęp do formantu <xref:System.Windows.Forms.MonthCalendar> można uzyskać za pomocą programu Narrator, a także innych narzędzi automatyzacji interfejsu użytkownika.
 
-- The <xref:System.Windows.Forms.CheckedListBox> control notifies Narrator when an item's check state has changed so the user is notified that they’ve changed the value of a list item.
+- Formant <xref:System.Windows.Forms.CheckedListBox> powiadamia program Narrator, gdy stan zaznaczenia elementu zmienił się, aby użytkownik był powiadomiony o zmianie wartości elementu listy.
 
-- The <xref:System.Windows.Forms.DataGridViewCell> control reports the correct read-only status to Narrator.
+- Formant <xref:System.Windows.Forms.DataGridViewCell> raportuje prawidłowy stan tylko do odczytu w programie narrator.
 
-- Narrator can now read disabled <xref:System.Windows.Forms.ToolStripMenuItem> text, whereas previously it would skip over disabled menu items.
+- Narrator może teraz odczytywać wyłączone <xref:System.Windows.Forms.ToolStripMenuItem> tekst, podczas gdy wcześniej mógłby pominąć wyłączone elementy menu.
 
-**Enhanced support for UIAutomation accessibility patterns**
+**Ulepszona obsługa wzorców dostępności UIAutomation**
 
-Starting with .NET Framework 4.7.1, developers of accessibility technology tools can leverage common API accessibility patterns and properties for several WinForms controls. These accessibility improvements include:
+Począwszy od .NET Framework 4.7.1, deweloperzy narzędzi technologii ułatwień dostępu mogą korzystać ze wspólnych wzorców dostępności interfejsu API i właściwości dla kilku kontrolek WinForms. Ulepszenia ułatwień dostępu obejmują:
 
-- The <xref:System.Windows.Forms.ComboBox> and <xref:System.Windows.Forms.ToolStripSplitButton> now support the [expand/collapse pattern](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md).
+- <xref:System.Windows.Forms.ComboBox> i <xref:System.Windows.Forms.ToolStripSplitButton> obsługują teraz [wzorzec rozwijania/zwijania](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md).
 
-- The <xref:System.Windows.Forms.DataGridViewCheckBoxCell> now supports the [toggle pattern](../ui-automation/implementing-the-ui-automation-toggle-control-pattern.md).
+- <xref:System.Windows.Forms.DataGridViewCheckBoxCell> obsługuje teraz [wzorzec przełączania](../ui-automation/implementing-the-ui-automation-toggle-control-pattern.md).
 
-- The <xref:System.Windows.Forms.ToolStripItem> control supports the <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> property and the [expand/collapse pattern](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md).
+- Formant <xref:System.Windows.Forms.ToolStripItem> obsługuje Właściwość <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> i [wzorzec Rozwiń/Zwiń](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md).
 
-- The <xref:System.Windows.Forms.NumericUpDown> and <xref:System.Windows.Forms.DomainUpDown> controls support the <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> property.
+- Kontrolki <xref:System.Windows.Forms.NumericUpDown> i <xref:System.Windows.Forms.DomainUpDown> obsługują Właściwość <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name>.
 
-**Improved property browser experience**
+**Ulepszone środowisko przeglądarki właściwości**
 
-Starting with .NET Framework 4.7.1, Windows Forms includes:
+Począwszy od .NET Framework 4.7.1, Windows Forms obejmuje:
 
-- Better keyboard navigation through the various drop-down selection windows.
-- A reduction of unnecessary tab stops.
-- Better reporting of control types.
-- Improved narrator behavior.
+- Lepsza Nawigacja przy użyciu klawiatury w różnych oknach menu rozwijanego.
+- Zmniejszenie niepotrzebnych tabulatorów.
+- Lepsze raportowanie typów kontroli.
+- Ulepszone zachowanie narratora.
 
 <a name="aspnet471"></a>
 
-### <a name="aspnet-web-controls"></a>ASP.NET web controls
+### <a name="aspnet-web-controls"></a>Kontrolki sieci Web ASP.NET
 
-Starting with .NET Framework 4.7.1 and Visual Studio 2017 version 15.3, ASP.NET improves how ASP.NET web controls work with accessibility technology in Visual Studio. Changes include the following:
+Począwszy od .NET Framework 4.7.1 i programu Visual Studio 2017 w wersji 15,3, ASP.NET ulepsza, jak formanty sieci Web ASP.NET działają z technologią ułatwień dostępu w programie Visual Studio. Zmiany obejmują następujące elementy:
 
-- Changes to implement missing UI accessibility patterns in controls, like the **Add Field** dialog in the **Details View** wizard, or the **Configure ListView** dialog of the **ListView** wizard.
+- Zmiany w celu zaimplementowania brakujących wzorców dostępności interfejsu użytkownika w kontrolkach, takich jak okno dialogowe **Dodawanie pola** w kreatorze **widoku szczegółów** lub okno dialogowe **Konfiguruj widok ListView** kreatora **ListView** .
 
-- Changes to improve the display in High Contrast mode, like the **Data Pager Fields Editor**.
+- Zmiany w celu usprawnienia wyświetlania w trybie duży kontrast, takie jak **Edytor pól modułu stronicowania danych**.
 
-- Changes to improve the keyboard navigation experiences for controls, like the **Fields** dialog in the **Edit Pager Fields** wizard of the DataPager control, the **Configure ObjectContext** dialog, or the **Configure Data Selection** dialog of the **Configure Data Source** wizard.
+- Zmiany w celu ulepszenia środowiska nawigacji klawiatury dla kontrolek, takich jak okno dialogowe **pola** w kreatorze **Edytuj pola modułu stronicowania** kontrolki formantu DataPager, okno dialogowe **Konfigurowanie obiektu ObjectContext** lub okno dialogowe **Konfigurowanie wyboru danych** kreatora **konfiguracji źródła danych** .
 
 <a name="tools471"></a>
 
-### <a name="net-sdk-tools"></a>.NET SDK Tools
+### <a name="net-sdk-tools"></a>SDK Tools .NET
 
-The [Configuration Editor Tool (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) and [Service Trace Viewer Tool (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) have been improved by fixing varied accessibility issues. Most of these were small issues, like a name not being defined or certain UI automation patterns not being implemented correctly. While many users won’t be aware of these incorrect values, customers who use assistive technologies like screen readers will find these SDK tools more accessible.
+[Narzędzie edytora konfiguracji (SvcConfigEditor. exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) i [narzędzie Podgląd śledzenia usługi (SvcTraceViewer. exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) zostały ulepszone, rozwiązując różne problemy z ułatwieniami dostępu. Większość z nich dotyczyła małych problemów, takich jak nazwa, która nie jest zdefiniowana lub niektóre wzorce automatyzacji interfejsu użytkownika nie są poprawnie zaimplementowane. Chociaż wielu użytkowników nie ma informacji o tych nieprawidłowych wartościach, klienci korzystający z technologii pomocniczych, takich jak czytniki zawartości ekranu, zobaczą więcej dostępnych narzędzi zestawu SDK.
 
-These enhancements change some previous behaviors, such as keyboard focus order.
+Te udoskonalenia zmieniają niektóre poprzednie zachowania, na przykład kolejność fokusu klawiatury.
 
 <a name="wf471"></a>
 
-### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) Workflow Designer
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Projektant przepływu pracy Windows Workflow Foundation (WF)
 
-Accessibility changes in the Workflow Designer include the following:
+Zmiany ułatwień dostępu w Projektant przepływu pracy obejmują następujące elementy:
 
-- The tab order changes to left to right and top to bottom in some controls:
+- Kolejność tabulacji zmieni się na od lewej do prawej i od góry do dołu w niektórych kontrolkach:
 
-  - The initialize correlation window for setting correlation data for the <xref:System.ServiceModel.Activities.InitializeCorrelation> activity.
+  - Okno inicjowania korelacji do ustawiania danych korelacji dla działania <xref:System.ServiceModel.Activities.InitializeCorrelation>.
 
-  - The content definition window for the <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.SendReply>, and <xref:System.ServiceModel.Activities.ReceiveReply> activities.
+  - Okno definicji zawartości dla działań <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.SendReply>i <xref:System.ServiceModel.Activities.ReceiveReply>.
 
-- More functions are available via the keyboard:
+- Więcej funkcji jest dostępnych za pośrednictwem klawiatury:
 
-  - When editing the properties of an activity, property groups can be collapsed by keyboard the first time they are focused.
+  - Podczas edytowania właściwości działania grupy właściwości mogą być zwijane przez klawiaturę po raz pierwszy.
 
-  - Warning icons are accessible by keyboard.
+  - Ikony ostrzeżeń są dostępne na klawiaturze.
 
-  - The **More Properties** button in the **Properties** window is accessible by keyboard.
+  - Przycisk **więcej właściwości** w oknie **Właściwości** jest dostępny na klawiaturze.
 
-  - Keyboard users can access the header items in the **Arguments** and **Variables** panes of the Workflow Designer.
+  - Użytkownicy klawiatury mogą uzyskać dostęp do elementów nagłówka w okienkach **argumenty** i **zmienne** Projektant przepływu pracy.
 
-- Improved visibility of items with focus, such as when:
+- Ulepszona widoczność elementów z fokusem, takich jak:
 
-  - Adding rows to data grids used by the Workflow Designer and activity designers.
+  - Dodawanie wierszy do siatek danych używanych przez Projektant przepływu pracy i projektantów działań.
 
-  - Tabbing through fields in the <xref:System.ServiceModel.Activities.ReceiveReply> and <xref:System.ServiceModel.Activities.SendReply> activities.
+  - Używanie tabulacji w polach <xref:System.ServiceModel.Activities.ReceiveReply> i <xref:System.ServiceModel.Activities.SendReply> działania.
 
-  - Setting default values for variables or arguments
+  - Ustawianie wartości domyślnych dla zmiennych lub argumentów
 
-- Screen readers can now correctly recognize:
+- Czytniki zawartości ekranu mogą teraz prawidłowo rozpoznać:
 
-  - Breakpoints set in the workflow designer.
+  - Punkty przerwania ustawione w Projektancie przepływu pracy.
 
-  - The <xref:System.Activities.Statements.FlowSwitch%601>, <xref:System.Activities.Statements.FlowDecision>, and <xref:System.ServiceModel.Activities.CorrelationScope> activities.
-  - The contents of the <xref:System.ServiceModel.Activities.Receive> activity.
+  - Działania <xref:System.Activities.Statements.FlowSwitch%601>, <xref:System.Activities.Statements.FlowDecision>i <xref:System.ServiceModel.Activities.CorrelationScope>.
+  - Zawartość działania <xref:System.ServiceModel.Activities.Receive>.
 
-  - The Target Type for the <xref:System.Activities.Statements.InvokeMethod> activity.
+  - Typ docelowy działania <xref:System.Activities.Statements.InvokeMethod>.
 
-  - The Exception combo box and the Finally section in the <xref:System.Activities.Statements.TryCatch> activity.
+  - Pole kombi wyjątku oraz sekcja finally w działaniu <xref:System.Activities.Statements.TryCatch>.
 
-  - The Message Type combo box, the splitter in the Add Correlation Initializers window, the Content Definition window, and the CorrelatesOn Definition window in the messaging activities (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.SendReply>, and <xref:System.ServiceModel.Activities.ReceiveReply>).
+  - Pole kombi typ komunikatu, rozdzielacz w oknie Dodaj inicjatory korelacji, okno definicji zawartości i okno definicji CorrelatesOn w działaniach obsługi komunikatów (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.SendReply>i <xref:System.ServiceModel.Activities.ReceiveReply>).
 
-  - State machine transitions and transitions destinations.
+  - Przejścia komputera stanu i miejsca docelowe przejść.
 
-  - Annotations and connectors on <xref:System.Activities.Statements.FlowDecision> activities.
+  - Adnotacje i łączniki na <xref:System.Activities.Statements.FlowDecision> działaniach.
 
-  - The context (right-click) menus for activities.
+  - Menu kontekstowe (kliknij prawym przyciskiem myszy) dla działań.
 
-  - The property value editors, the Clear Search button, the By Category and Alphabetical sort buttons, and the Expression Editor dialog in the properties grid.
+  - Edytor wartości właściwości, przycisk Wyczyść wyszukiwanie, Kategoria według oraz alfabetyczne przyciski sortowania i okno dialogowe Edytor wyrażeń w siatce właściwości.
 
-  - The zoom percentage in the Workflow Designer.
+  - Procent powiększenia w Projektant przepływu pracy.
 
-  - The separator in <xref:System.Activities.Statements.Parallel> and <xref:System.Activities.Statements.Pick> activities.
+  - Separator w <xref:System.Activities.Statements.Parallel> i <xref:System.Activities.Statements.Pick> działania.
 
-  - The <xref:System.Activities.Statements.InvokeDelegate> activity.
+  - Działanie <xref:System.Activities.Statements.InvokeDelegate>.
 
-  - The Select Types window for dictionary activities (`Microsoft.Activities.AddToDictionary<TKey,TValue>`, `Microsoft.Activities.RemoveFromDictionary<TKey,TValue>`, etc.).
+  - Okno wybór typów dla działań słownika (`Microsoft.Activities.AddToDictionary<TKey,TValue>`, `Microsoft.Activities.RemoveFromDictionary<TKey,TValue>`itp.).
 
-  - The Browse and Select .NET Type window.
+  - Okno Przeglądaj i wybierz typ platformy .NET.
 
-  - Breadcrumbs in the Workflow Designer.
+  - Struktura nawigacyjna w Projektant przepływu pracy.
 
-- Users who choose High Contrast themes will see many improvements in the visibility of the Workflow Designer and its controls, like better contrast ratios between elements and more noticeable selection boxes used for focus elements.
+- Użytkownicy, którzy wybierają duży kontrast motywy zobaczą wiele ulepszeń w zakresie widoczności Projektant przepływu pracy i jej kontrolek, takich jak lepsze współczynniki kontrastu między elementami i bardziej zauważalne pola wyboru używane do elementów fokusu.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [What's new in the .NET Framework](index.md)
+- [Co nowego w .NET Framework](index.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440986"
 ---
 # <a name="inotifyconnection2unregisternotifysource-method"></a>INotifyConnection2::UnregisterNotifySource — Metoda
-Removes a specified notification source object from the connection.  
+Usuwa określony obiekt źródłowy powiadomienia z połączenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,13 +36,13 @@ HRESULT UnregisterNotifySource
   
 ## <a name="parameters"></a>Parametry  
  `in_pNotifySource`  
- [in] Notification object to be unregistered.  
+ podczas Obiekt powiadomienia do wyrejestrowania.  
   
-## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds.  
+## <a name="return-value"></a>Wartość zwrócona  
+ S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** ProtocolNotify2.idl  
+ **Nagłówek:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Zobacz także
 

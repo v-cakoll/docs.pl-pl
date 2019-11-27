@@ -1,7 +1,7 @@
 ---
-title: Built-in types table - C# Reference
+title: Tabela typów wbudowanych — C# odwołanie
 ms.custom: seodec18
-description: Keywords for built-in C# types
+description: Słowa kluczowe dla C# typów wbudowanych
 ms.date: 08/17/2018
 helpviewer_keywords:
 - types [C#], built-in
@@ -14,11 +14,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428544"
 ---
-# <a name="built-in-types-table-c-reference"></a>Built-in types table (C# Reference)
+# <a name="built-in-types-table-c-reference"></a>Tabela typów wbudowanych (C# odwołanie)
 
-The following table shows the keywords for built-in C# types, which are aliases of predefined types in the <xref:System> namespace:
+W poniższej tabeli przedstawiono słowa kluczowe dla C# typów wbudowanych, które są aliasami wstępnie zdefiniowanych typów w przestrzeni nazw <xref:System>:
 
-|C# type|.NET type|  
+|C#Wprowadź|Typ .NET|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
 |[byte](../builtin-types/integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|  
@@ -38,16 +38,16 @@ The following table shows the keywords for built-in C# types, which are aliases 
   
 ## <a name="remarks"></a>Uwagi
 
-All of the types in the table, except `object` and `string`, are referred to as simple types.
+Wszystkie typy w tabeli, z wyjątkiem `object` i `string`, są określane jako typy proste.
 
-The .NET types and their C# type keyword aliases are interchangeable. For example, you can declare an integer variable by using either of the following declarations:
+Typy .NET i ich C# aliasy słów kluczowych są zamienne. Na przykład można zadeklarować zmienną całkowitą przy użyciu jednej z następujących deklaracji:
 
 ```csharp
 int x = 123;
 System.Int32 y = 123;
 ```
 
-Use the [typeof](../operators/type-testing-and-cast.md#typeof-operator) operator to get the <xref:System.Type?displayProperty=nameWithType> instance that represents the specified type:
+Użyj operatora [typeof](../operators/type-testing-and-cast.md#typeof-operator) , aby pobrać wystąpienie <xref:System.Type?displayProperty=nameWithType> reprezentujące określony typ:
 
 ```csharp
 Type stringType = typeof(string);
@@ -63,10 +63,10 @@ Console.WriteLine(doubleType.FullName);
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C# Reference](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
-- [Value types](value-types.md)
-- [Reference types](reference-types.md)
-- [Default values table](default-values-table.md)
+- [Typy wartości](value-types.md)
+- [Typy odwołań](reference-types.md)
+- [Tabela wartości domyślnych](default-values-table.md)
 - [dynamic](../builtin-types/reference-types.md)

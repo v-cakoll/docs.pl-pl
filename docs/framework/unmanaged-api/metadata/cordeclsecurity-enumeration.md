@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443741"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity — Wyliczenie
-Specifies the security actions that can be performed using declarative security.  
+Określa akcje zabezpieczeń, które mogą być wykonywane przy użyciu zabezpieczeń deklaratywnych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -54,38 +54,38 @@ typedef enum CorDeclSecurity {
 } CorDeclSecurity;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`dclActionMask`|Reserved.|  
-|`dclActionNil`|Reserved.|  
-|`dclRequest`|Reserved.|  
-|`dclDemand`|All callers higher in the call stack are required to have been granted the permission specified by the current permission object.|  
-|`dclAssert`|The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource|  
-|`dclDeny`|The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.|  
-|`dclPermitOnly`|Only the resources specified by this permission object can be accessed, even if the code has been granted permission to access other resources.|  
-|`dclLinktimeCheck`|The immediate caller is required to have been granted the specified permission for a given period of time.|  
-|`dclInheritanceCheck`|The derived class inheriting another class or overriding a method is required to have been granted the specified permission.|  
-|`dclRequestMinimum`|The caller can request for the minimum permissions required for code to run. This action can only be used within the scope of the assembly.|  
-|`dclRequestOptional`|The caller can request for additional permissions that are optional (not required to run). This request implicitly refuses all other permissions not specifically requested. This action can only be used within the scope of the assembly.|  
-|`dclRequestRefuse`|The caller's request for permissions that might be misused will not be granted. This action can only be used within the scope of the assembly.|  
-|`dclPrejitGrant`|Reserved.|  
-|`dclPrejitDenied`|Reserved.|  
-|`dclNonCasDemand`|Reserved.|  
-|`dclNonCasLinkDemand`|The immediate caller is required to have been granted the specified permission.|  
-|`dclNonCasInheritance`|Reserved.|  
-|`dclLinkDemandChoice`|Reserved.|  
-|`dclInheritanceDemandChoice`|Reserved.|  
-|`dclDemandChoice`|Reserved.|  
-|`dclMaximumValue`|Reserved.|  
+|`dclActionMask`|Rezerwacj.|  
+|`dclActionNil`|Rezerwacj.|  
+|`dclRequest`|Rezerwacj.|  
+|`dclDemand`|Wszystkie obiekty wywołujące wyższe w stosie wywołań muszą mieć przyznane uprawnienia określone przez bieżący obiekt uprawnień.|  
+|`dclAssert`|Kod wywołujący może uzyskać dostęp do zasobu identyfikowanego przez bieżący obiekt uprawnień, nawet jeśli obiekty wywołujące wyższe w stosie nie uzyskały uprawnień dostępu do zasobu|  
+|`dclDeny`|Możliwość dostępu do zasobu określonego przez bieżący obiekt uprawnień jest odrzucana dla wywołujących, nawet jeśli udzielono uprawnień dostępu do niej.|  
+|`dclPermitOnly`|Dostęp do zasobów określonych przez ten obiekt uprawnień można uzyskać nawet wtedy, gdy do kodu udzielono uprawnień dostępu do innych zasobów.|  
+|`dclLinktimeCheck`|Bezpośredni obiekt wywołujący musi mieć przyznane określone uprawnienie w danym okresie czasu.|  
+|`dclInheritanceCheck`|Klasa pochodna dziedziczenia innej klasy lub przesłaniania metody jest wymagana do przyznania określonego uprawnienia.|  
+|`dclRequestMinimum`|Obiekt wywołujący może żądać minimalnych uprawnień wymaganych do uruchomienia kodu. Tej akcji można używać tylko w zakresie zestawu.|  
+|`dclRequestOptional`|Obiekt wywołujący może żądać dodatkowych uprawnień, które są opcjonalne (niewymagane do uruchomienia). To żądanie niejawnie odrzuca wszystkie inne uprawnienia, które nie zostały zażądane. Tej akcji można używać tylko w zakresie zestawu.|  
+|`dclRequestRefuse`|Żądanie obiektu wywołującego dla uprawnień, które mogą być nieużywane, nie zostanie przyznane. Tej akcji można używać tylko w zakresie zestawu.|  
+|`dclPrejitGrant`|Rezerwacj.|  
+|`dclPrejitDenied`|Rezerwacj.|  
+|`dclNonCasDemand`|Rezerwacj.|  
+|`dclNonCasLinkDemand`|Bezpośredni obiekt wywołujący musi mieć przyznane określone uprawnienie.|  
+|`dclNonCasInheritance`|Rezerwacj.|  
+|`dclLinkDemandChoice`|Rezerwacj.|  
+|`dclInheritanceDemandChoice`|Rezerwacj.|  
+|`dclDemandChoice`|Rezerwacj.|  
+|`dclMaximumValue`|Rezerwacj.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

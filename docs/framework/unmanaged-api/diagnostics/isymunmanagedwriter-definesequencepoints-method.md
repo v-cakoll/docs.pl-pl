@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427985"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints — Metoda
-Defines a group of sequence points within the current method. Each starting line and starting column define the start of a statement within a method. Each ending line and ending column define the end of a statement within a method. The arrays should be sorted in increasing order of offsets. The offset is always measured from the start of the method, in bytes.  
+Definiuje grupę punktów sekwencji w bieżącej metodzie. Każda linia początkowa i początkowa kolumna definiują początek instrukcji w ramach metody. Każdy wiersz końcowy i kolumna końcowa definiują koniec instrukcji w ramach metody. Tablice powinny być sortowane w kolejności rosnącej. Przesunięcie jest zawsze mierzone od początku metody, w bajtach.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,31 +40,31 @@ HRESULT DefineSequencePoints(
   
 ## <a name="parameters"></a>Parametry  
  `document`  
- [in] The document object for which the sequence points are being defined.  
+ podczas Obiekt dokumentu, dla którego są definiowane punkty sekwencji.  
   
  `spCount`  
- [in] A `ULONG32` that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.  
+ podczas `ULONG32`, który wskazuje rozmiar każdego z `offsets`, `lines`, `columns`, `endLines`i `endColumns` buforów.  
   
  `offsets`  
- [in] The offset of the sequence points measured from the beginning of the method.  
+ podczas Przesunięcie punktów sekwencji mierzone od początku metody.  
   
  `lines`  
- [in] The starting line numbers of the sequence points.  
+ podczas Numery wierszy początkowych punktów sekwencji.  
   
  `columns`  
- [in] The starting column numbers of the sequence points.  
+ podczas Numery kolumn początkowych punktów sekwencji.  
   
  `endLines`  
- [in] The ending line numbers of the sequence points. This parameter is optional.  
+ podczas Numery wierszy zakończenia punktów sekwencji. Ten parametr jest opcjonalny.  
   
  `endColumns`  
- [in] The ending column numbers of the sequence points. This parameter is optional.  
+ podczas Numery kolumn końcowych punktów sekwencji. Ten parametr jest opcjonalny.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426799"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString — Metoda
-Gets the string at the specified index from the table column in the current reference scope.  
+Pobiera ciąg o określonym indeksie z kolumny tabeli w bieżącym zakresie odwołania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,19 +36,19 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>Parametry  
  `ixString`  
- [in] The index at which to start to search for the next value.  
+ podczas Indeks, od którego należy zacząć wyszukiwanie następnej wartości.  
   
  `ppString`  
- [out] A pointer to a pointer to the returned string value.  
+ określoną Wskaźnik do wskaźnika do zwracanej wartości ciągu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

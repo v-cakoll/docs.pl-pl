@@ -9,20 +9,20 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353165"
 ---
-# <a name="parsing-xml-visual-basic"></a>Parsing XML (Visual Basic)
-The topics in this section describe how to parse XML documents.  
+# <a name="parsing-xml-visual-basic"></a>Analizowanie kodu XML (Visual Basic)
+W tematach w tej sekcji opisano, jak analizować dokumenty XML.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[How to: Parse a String (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-parse-a-string.md)|Shows how to parse a string to create an XML tree.|  
-|[How to: Load XML from a File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)|Shows how to load XML from a URI using the <xref:System.Xml.Linq.XElement.Load%2A> method.|  
-|[Zachowywanie białych znaków podczas ładowania lub analizowania kodu XML](../../../../visual-basic/programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml.md)|Describes how to control the white space behavior of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] while loading XML trees.|  
-|[How to: Catch Parsing Errors (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-catch-parsing-errors.md)|Shows how to detect badly formed or invalid XML.|  
-|[How to: Create a Tree from an XmlReader (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md)|Shows how to create an XML tree directly from an <xref:System.Xml.XmlReader>.|  
-|[How to: Stream XML Fragments from an XmlReader (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|Shows how to stream XML fragments by using an <xref:System.Xml.XmlReader>.<br /><br /> When you have to process arbitrarily large XML files, it might not be feasible to load the whole XML tree into memory. Instead, you can stream XML fragments.|  
+|[Instrukcje: analizowanie ciągu (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-parse-a-string.md)|Pokazuje, jak przeanalizować ciąg w celu utworzenia drzewa XML.|  
+|[Instrukcje: ładowanie kodu XML z pliku (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)|Pokazuje, jak załadować XML z identyfikatora URI przy użyciu metody <xref:System.Xml.Linq.XElement.Load%2A>.|  
+|[Zachowywanie białych znaków podczas ładowania lub analizowania kodu XML](../../../../visual-basic/programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml.md)|Opisuje, jak kontrolować zachowanie białych znaków [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] podczas ładowania drzew XML.|  
+|[Instrukcje: Przechwytywanie błędów analizy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-catch-parsing-errors.md)|Pokazuje, jak wykryć źle sformułowany lub nieprawidłowy kod XML.|  
+|[Instrukcje: Tworzenie drzewa na podstawie elementu XmlReader (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md)|Pokazuje, jak utworzyć drzewo XML bezpośrednio z <xref:System.Xml.XmlReader>.|  
+|[Instrukcje: strumieniowe fragmenty XML z elementu XmlReader (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|Pokazuje, jak przesyłać fragmenty XML za pomocą <xref:System.Xml.XmlReader>.<br /><br /> W przypadku konieczności przetworzenia arbitralnie dużych plików XML może nie być możliwe załadowanie całego drzewa XML do pamięci. Zamiast tego można przesyłać strumieniowo fragmenty XML.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Tworzenie drzew XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Build a multifile assembly'
+title: 'Instrukcje: kompilowanie zestawu wieloplikowego'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -24,18 +24,18 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429568"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>How to: Build a multifile assembly
+# <a name="how-to-build-a-multifile-assembly"></a>Instrukcje: kompilowanie zestawu wieloplikowego
 
-This article explains how to create a multifile assembly and provides code that illustrates each step in the procedure.
+W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, który ilustruje każdy krok w procedurze.
 
 > [!NOTE]
-> The Visual Studio IDE for C# and Visual Basic can only be used to create single-file assemblies. If you want to create multifile assemblies, you must use the command-line compilers or Visual Studio with Visual C++. Multifile assemblies are supported by .NET Framework only.
+> Środowisko IDE programu Visual Studio C# dla i Visual Basic może być używane tylko do tworzenia zestawów jednoplikowych. Jeśli chcesz utworzyć zestawy wieloplikowe, musisz użyć kompilatorów wiersza polecenia lub programu Visual Studio z wizualizacją C++. Zestawy wieloplikowe są obsługiwane tylko przez .NET Framework.
 
-## <a name="create-a-multifile-assembly"></a>Create a multifile assembly
+## <a name="create-a-multifile-assembly"></a>Tworzenie zestawu wieloplikowego
 
-1. Compile all files that contain namespaces referenced by other modules in the assembly into code modules. The default extension for code modules is *.netmodule*.
+1. Kompiluj wszystkie pliki, które zawierają przestrzenie nazw, do których odwołują się inne moduły w zestawie, do modułów kodu. Domyślnym rozszerzeniem modułów kodu jest *. module*.
 
-   For example, let's say the `Stringer` file has a namespace called `myStringer`, which includes a class called `Stringer`. The `Stringer` class contains a method called `StringerMethod` that writes a single line to the console.
+   Załóżmy na przykład, że plik `Stringer` ma przestrzeń nazw o nazwie `myStringer`, która zawiera klasę o nazwie `Stringer`. Klasa `Stringer` zawiera metodę o nazwie `StringerMethod`, która zapisuje jeden wiersz w konsoli.
 
    ```cpp
    // Assembly building example in the .NET Framework.
@@ -81,7 +81,7 @@ This article explains how to create a multifile assembly and provides code that 
    End Namespace
    ```
 
-2. Use the following command to compile this code:
+2. Użyj następującego polecenia, aby skompilować ten kod:
 
    ```cpp
    cl /clr:pure /LN Stringer.cpp
@@ -95,11 +95,11 @@ This article explains how to create a multifile assembly and provides code that 
    vbc /t:module Stringer.vb
    ```
 
-   Specifying the *module* parameter with the **/t:** compiler option indicates that the file should be compiled as a module rather than as an assembly. The compiler produces a module called *Stringer.netmodule*, which can be added to an assembly.
+   Określenie parametru *modułu* z opcją **/t:** kompilator wskazuje, że plik powinien zostać skompilowany jako moduł, a nie jako zestaw. Kompilator tworzy moduł o nazwie *Stringer. webmodule*, który można dodać do zestawu.
 
-3. Compile all other modules, using the necessary compiler options to indicate the other modules that are referenced in the code. This step uses the **/addmodule** compiler option.
+3. Kompiluj wszystkie inne moduły przy użyciu niezbędnych opcji kompilatora, aby wskazać inne moduły, do których istnieją odwołania w kodzie. W tym kroku jest stosowana opcja kompilatora **/addmodule** .
 
-   In the following example, a code module called *Client* has an entry point `Main` method that references a method in the *Stringer.dll* module created in step 1.
+   W poniższym przykładzie moduł kodu o nazwie *Client* ma punkt wejścia `Main` metodę, która odwołuje się do metody w module *Stringer. dll* utworzonym w kroku 1.
 
    ```cpp
    #using "Stringer.netmodule"
@@ -154,7 +154,7 @@ This article explains how to create a multifile assembly and provides code that 
    End Class
    ```
 
-4. Use the following command to compile this code:
+4. Użyj następującego polecenia, aby skompilować ten kod:
 
    ```cpp
    cl /clr:pure /FUStringer.netmodule /LN Client.cpp
@@ -168,12 +168,12 @@ This article explains how to create a multifile assembly and provides code that 
    vbc /addmodule:Stringer.netmodule /t:module Client.vb
    ```
 
-   Specify the **/t:module** option because this module will be added to an assembly in a future step. Specify the **/addmodule** option because the code in *Client* references a namespace created by the code in *Stringer.netmodule*. The compiler produces a module called *Client.netmodule* that contains a reference to another module, *Stringer.netmodule*.
+   Określ opcję **/t: module** , ponieważ ten moduł zostanie dodany do zestawu w przyszłym kroku. Określ opcję **/addmodule** , ponieważ kod w *kliencie* odwołuje się do przestrzeni nazw utworzonej przez kod w *Stringer. module*. Kompilator generuje moduł o nazwie *Client. webmodule* , który zawiera odwołanie do innego modułu, *Stringer. webmodule*.
 
    > [!NOTE]
-   > The C# and Visual Basic compilers support directly creating multifile assemblies using the following two different syntaxes.
+   > Kompilatory C# i Visual Basic obsługują bezpośrednie tworzenie zestawów wieloplikowych przy użyciu następujących dwóch różnych składni.
    >
-   > Two compilations create a two-file assembly:
+   > Dwie kompilacje tworzą zestaw dwóch plików:
    >
    >   ```cpp
    >   cl /clr:pure /LN Stringer.cpp
@@ -190,7 +190,7 @@ This article explains how to create a multifile assembly and provides code that 
    >   vbc Client.vb /addmodule:Stringer.netmodule
    >   ```
    >
-   > One compilation creates a two-file assembly:
+   > Jedna kompilacja tworzy zestaw dwóch plików:
    >
    >   ```cpp
    >   cl /clr:pure /LN Stringer.cpp
@@ -205,25 +205,25 @@ This article explains how to create a multifile assembly and provides code that 
    >   vbc /out:Client.exe Client.vb /out:Stringer.netmodule Stringer.vb
    >   ```
 
-5. Use the [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) to create the output file that contains the assembly manifest. This file contains reference information for all modules or resources that are part of the assembly.
+5. Użyj [konsolidatora zestawu (Al. exe)](../tools/al-exe-assembly-linker.md) , aby utworzyć plik wyjściowy, który zawiera manifest zestawu. Ten plik zawiera informacje referencyjne dotyczące wszystkich modułów lub zasobów, które są częścią zestawu.
 
     W wierszu polecenia wpisz następujące polecenie:
 
-    **al** \<*module name*> \<*module name*> … **/main:** \<*method name*>  **/out:** \<*file name*>  **/target:** \<*assembly file type*>
+    *Nazwa modułu* **Al** \<> *Nazwa modułu*\<>... **/Main:** \<*Nazwa metody*>  **/out:** \<*Nazwa pliku*>  **/target:** \<*Typ pliku zestawu*>
 
-    In this command, the *module name* arguments specify the name of each module to include in the assembly. The **/main:** option specifies the method name that is the assembly's entry point. The **/out:** option specifies the name of the output file, which contains assembly metadata. The **/target:** option specifies that the assembly is a console application executable ( *.exe*) file, a Windows executable ( *.win*) file, or a library ( *.lib*) file.
+    W tym poleceniu argumenty *nazwy modułu* określają nazwę każdego modułu, który ma zostać uwzględniony w zestawie. **/Main:** opcja określa nazwę metody, która jest punktem wejścia zestawu. **/Out:** opcja określa nazwę pliku wyjściowego, który zawiera metadane zestawu. **/Target:** opcja określa, że zestaw to plik wykonywalny aplikacji konsoli (*exe*), plik wykonywalny systemu Windows ( *. win*) lub plik biblioteki ( *. lib*).
 
-    In the following example, *Al.exe* creates an assembly that is a console application executable called *myAssembly.exe*. The application consists of two modules called *Client.netmodule* and *Stringer.netmodule*, and the executable file called *myAssembly.exe*, which contains only assembly metadata. The entry point of the assembly is the `Main` method in the class `MainClientApp`, which is located in *Client.dll*.
+    W poniższym przykładzie *Al. exe* tworzy zestaw, który jest plikiem wykonywalnym aplikacji konsoli o nazwie mój *Assembly. exe*. Aplikacja składa się z dwóch modułów o nazwie *Client. webmodule* i *Stringer. webmodule*, a plik wykonywalny o nazwie *. exe*, który zawiera tylko metadane zestawu. Punkt wejścia zestawu jest metodą `Main` w klasie `MainClientApp`, która znajduje się w *pliku Client. dll*.
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe
     ```
 
-    You can use the [MSIL Disassembler (Ildasm.exe)](../tools/ildasm-exe-il-disassembler.md) to examine the contents of an assembly, or determine whether a file is an assembly or a module.
+    Aby sprawdzić zawartość zestawu lub określić, czy plik jest zestawem lub modułem, można użyć [Dezasembler MSIL (Ildasm. exe)](../tools/ildasm-exe-il-disassembler.md) .
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Create assemblies](../../standard/assembly/create.md)
-- [How to: View assembly contents](../../standard/assembly/view-contents.md)
-- [How the runtime locates assemblies](../deployment/how-the-runtime-locates-assemblies.md)
-- [Multifile assemblies](multifile-assemblies.md)
+- [Tworzenie zestawów](../../standard/assembly/create.md)
+- [Instrukcje: wyświetlanie zawartości zestawu](../../standard/assembly/view-contents.md)
+- [Jak środowisko uruchomieniowe lokalizuje zestawy](../deployment/how-the-runtime-locates-assemblies.md)
+- [Zestawy wieloplikowe](multifile-assemblies.md)

@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426133"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection — Metoda
-Truncates the specified code section by the specified length.  
+Obcina określoną sekcję kodu o określoną długość.  
   
- This method is obsolete and should not be used.  
+ Ta metoda jest przestarzała i nie powinna być używana.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,22 +38,22 @@ HRESULT TruncateSection (
   
 ## <a name="parameters"></a>Parametry  
  `section`  
- [in] The section to truncate.  
+ podczas Sekcja do obcięcia.  
   
  `len`  
- [in] The length, in bytes, by which to truncate the section.  
+ podczas Długość w bajtach, przez którą ma zostać obcięta sekcja.  
   
 ## <a name="remarks"></a>Uwagi  
- Call `TruncateSection` only if you have special section requirements that are not handled by other methods.  
+ Wywołaj `TruncateSection` tylko wtedy, gdy istnieją specjalne wymagania sekcji, które nie są obsługiwane przez inne metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

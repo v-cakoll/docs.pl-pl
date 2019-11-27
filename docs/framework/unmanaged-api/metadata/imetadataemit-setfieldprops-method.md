@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445460"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps — Metoda
-Sets or updates the default value for the field referenced by the specified field token.  
+Ustawia lub aktualizuje wartość domyślną dla pola, do którego odwołuje się określony token pola.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,28 +39,28 @@ HRESULT SetFieldProps (
   
 ## <a name="parameters"></a>Parametry  
  `fd`  
- [in] The token for the target field.  
+ podczas Token dla pola docelowego.  
   
  `dwFieldFlags`  
- [in] Field attributes. This is a bitmask of `CorFieldAttr` values.  
+ podczas Atrybuty pola. To jest maska bitów wartości `CorFieldAttr`.  
   
  `dwCPlusTypeFlag`  
- [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.  
+ podczas `ELEMENT_TYPE_` *\** wartości stałej. To jest wartość `CorElementType`. Jeśli stała nie jest zdefiniowana, ustaw tę wartość na `ELEMENT_TYPE_END`.  
   
  `pValue`  
- [in] The constant value for the field.  
+ podczas Stała wartość pola.  
   
  `cchValue`  
- [in] The size, in Unicode characters, of `pValue`.  
+ podczas Rozmiar w znakach Unicode `pValue`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

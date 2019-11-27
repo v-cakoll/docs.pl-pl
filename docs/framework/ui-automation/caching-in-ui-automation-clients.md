@@ -14,95 +14,95 @@ ms.locfileid: "74433941"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Buforowanie w klientach automatyzacji interfejsu użytkownika
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic introduces caching of [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties and control patterns.  
+ W tym temacie przedstawiono buforowanie właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] i wzorców kontrolek.  
   
- In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], caching means pre-fetching of data. The data can then be accessed without further cross-process communication. Caching is typically used by UI Automation client applications to retrieve properties and control patterns in bulk. Information is then retrieved from the cache as needed. The application updates the cache periodically, usually in response to events signifying that something in the [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] has changed.  
+ W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]buforowanie oznacza wstępne pobranie danych. Następnie można uzyskać dostęp do danych bez dalszej komunikacji między procesami. Buforowanie jest zwykle używane przez aplikacje klienckie automatyzacji interfejsu użytkownika do pobierania zbiorczych właściwości i wzorców kontrolek. Informacje są następnie pobierane z pamięci podręcznej w razie konieczności. Aplikacja okresowo aktualizuje pamięć podręczną, zazwyczaj w odpowiedzi na zdarzenia, co oznacza, że coś w [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] uległo zmianie.  
   
- The benefits of caching are most noticeable with Windows Presentation Foundation (WPF) controls and custom controls that have server-side UI Automation providers. There is less benefit when accessing client-side providers such as the default providers for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controls.  
+ Zalety buforowania są najbardziej zauważalne w przypadku formantów Windows Presentation Foundation (WPF) i kontrolek niestandardowych z dostawcami automatyzacji interfejsu użytkownika po stronie serwera. W przypadku uzyskiwania dostępu do dostawców po stronie klienta, takich jak domyślny dostawcy dla formantów [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], jest mniej korzyści.  
   
- Caching occurs when the application activates a <xref:System.Windows.Automation.CacheRequest> and then uses any method or property that returns an <xref:System.Windows.Automation.AutomationElement>; for example, <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. The methods of the <xref:System.Windows.Automation.TreeWalker> class are an exception; caching is only done if a <xref:System.Windows.Automation.CacheRequest> is specified as a parameter (for example, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
+ Buforowanie występuje, gdy aplikacja aktywuje <xref:System.Windows.Automation.CacheRequest> a następnie używa dowolnej metody lub właściwości, która zwraca <xref:System.Windows.Automation.AutomationElement>; na przykład <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Metody klasy <xref:System.Windows.Automation.TreeWalker> są wyjątkiem; buforowanie jest wykonywane tylko wtedy, gdy <xref:System.Windows.Automation.CacheRequest> jest określony jako parametr (na przykład <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
   
- Caching also occurs when you subscribe to an event while a <xref:System.Windows.Automation.CacheRequest> is active. The <xref:System.Windows.Automation.AutomationElement> passed to your event handler as the source of an event contains the cached properties and patterns specified by the original <xref:System.Windows.Automation.CacheRequest>. Any changes made to the <xref:System.Windows.Automation.CacheRequest> after you subscribe to the event have no effect.  
+ Buforowanie występuje również w przypadku zasubskrybowania zdarzenia, gdy <xref:System.Windows.Automation.CacheRequest> jest aktywny. <xref:System.Windows.Automation.AutomationElement> przeszedł do programu obsługi zdarzeń, ponieważ Źródło zdarzenia zawiera buforowane właściwości i wzorce określone przez oryginalny <xref:System.Windows.Automation.CacheRequest>. Wszelkie zmiany wprowadzone w <xref:System.Windows.Automation.CacheRequest> po zasubskrybowaniu zdarzenia nie mają żadnego skutku.  
   
- The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties and control patterns of an element can be cached.  
+ Właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] i wzorce kontrolek elementu mogą być buforowane.  
   
 <a name="Options_for_Caching"></a>   
-## <a name="options-for-caching"></a>Options for Caching  
- The <xref:System.Windows.Automation.CacheRequest> specifies the following options for caching.  
+## <a name="options-for-caching"></a>Opcje buforowania  
+ <xref:System.Windows.Automation.CacheRequest> określa następujące opcje buforowania.  
   
 <a name="Properties_to_Cache"></a>   
-### <a name="properties-to-cache"></a>Properties to Cache  
- You can specify properties to cache by calling <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationProperty%29> for each property before activating the request.  
+### <a name="properties-to-cache"></a>Właściwości do buforowania  
+ Możesz określić właściwości do buforowania, wywołując <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationProperty%29> dla każdej właściwości przed aktywowaniem żądania.  
   
 <a name="Control_Patterns_to_Cache"></a>   
-### <a name="control-patterns-to-cache"></a>Control Patterns to Cache  
- You can specify control patterns to cache by calling <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationPattern%29> for each pattern before activating the request. When a pattern is cached, its properties are not automatically cached; you must specify the properties you want cached by using <xref:System.Windows.Automation.CacheRequest.Add%2A?displayProperty=nameWithType>.  
+### <a name="control-patterns-to-cache"></a>Wzorce kontroli do pamięci podręcznej  
+ Możesz określić wzorce kontroli do buforowania, wywołując <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationPattern%29> dla każdego wzorca przed aktywowaniem żądania. Gdy wzorzec jest buforowany, jego właściwości nie są automatycznie buforowane; należy określić właściwości, które mają być buforowane przy użyciu <xref:System.Windows.Automation.CacheRequest.Add%2A?displayProperty=nameWithType>.  
   
 <a name="Scope_of_the_Caching"></a>   
-### <a name="scope-and-filtering-of-caching"></a>Scope and Filtering of Caching  
- You can specify the elements whose properties and patterns you want to cache by setting the <xref:System.Windows.Automation.CacheRequest.TreeScope%2A?displayProperty=nameWithType> property before activating the request. The scope is relative to the elements that are retrieved while the request is active. For example, if you set only <xref:System.Windows.Automation.TreeScope.Children>, and then retrieve an <xref:System.Windows.Automation.AutomationElement>, the properties and patterns of children of that element are cached, but not those of the element itself. To ensure that caching is done for the retrieved element itself, you must include <xref:System.Windows.Automation.TreeScope.Element> in the <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> property. It is not possible to set the scope to <xref:System.Windows.Automation.TreeScope.Parent> or <xref:System.Windows.Automation.TreeScope.Ancestors>. However, a parent element can be cached when a child element is cached; see Retrieving Cached Children and Parents in this topic.  
+### <a name="scope-and-filtering-of-caching"></a>Zakres i filtrowanie pamięci podręcznej  
+ Można określić elementy, których właściwości i wzorce mają być buforowane przez ustawienie właściwości <xref:System.Windows.Automation.CacheRequest.TreeScope%2A?displayProperty=nameWithType> przed aktywowaniem żądania. Zakres jest względny dla elementów, które są pobierane, gdy żądanie jest aktywne. Na przykład jeśli ustawisz tylko <xref:System.Windows.Automation.TreeScope.Children>, a następnie pobierzesz <xref:System.Windows.Automation.AutomationElement>, właściwości i wzorce elementów podrzędnych tego elementu są buforowane, ale nie są to elementy samego elementu. Aby upewnić się, że buforowanie jest wykonywane dla pobranego elementu, należy uwzględnić <xref:System.Windows.Automation.TreeScope.Element> we właściwości <xref:System.Windows.Automation.CacheRequest.TreeScope%2A>. Nie można ustawić zakresu <xref:System.Windows.Automation.TreeScope.Parent> ani <xref:System.Windows.Automation.TreeScope.Ancestors>. Jednak element nadrzędny może być buforowany, gdy element podrzędny jest buforowany; Zobacz Pobieranie buforowanych elementów podrzędnych i elementów nadrzędnych w tym temacie.  
   
- The extent of caching is also affected by the <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType> property. By default, caching is performed only for elements that appear in the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree. However, you can change this property to apply caching to all elements, or only to elements that appear in the content view.  
+ Właściwość <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType> ma także wpływ na zakres buforowania. Domyślnie buforowanie jest wykonywane tylko dla elementów, które są wyświetlane w widoku kontrolki drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Można jednak zmienić tę właściwość, aby zastosować buforowanie do wszystkich elementów lub tylko do elementów, które są wyświetlane w widoku zawartości.  
   
 <a name="Strength_of_the_Element_References"></a>   
-### <a name="strength-of-the-element-references"></a>Strength of the Element References  
- When you retrieve an <xref:System.Windows.Automation.AutomationElement>, by default you have access to all properties and patterns of that element, including those that were not cached. However, for greater efficiency you can specify that the reference to the element refers to cached data only, by setting the <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> property of the <xref:System.Windows.Automation.CacheRequest> to <xref:System.Windows.Automation.AutomationElementMode.None>. In this case, you do not have access to any non-cached properties and patterns of retrieved elements. This means that you cannot access any properties through <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> or the `Current` property of <xref:System.Windows.Automation.AutomationElement> or any control pattern; nor can you retrieve a pattern by using <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> or <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>. On cached patterns, you can call methods that retrieve array properties, such as <xref:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.GetSelection%2A?displayProperty=nameWithType>, but not any that perform actions on the control, such as <xref:System.Windows.Automation.InvokePattern.Invoke%2A?displayProperty=nameWithType>.  
+### <a name="strength-of-the-element-references"></a>Siła odwołań do elementów  
+ Gdy pobierasz <xref:System.Windows.Automation.AutomationElement>, domyślnie masz dostęp do wszystkich właściwości i wzorców tego elementu, w tym tych, które nie zostały w pamięci podręcznej. Jednak w celu zapewnienia większej wydajności można określić, że odwołanie do elementu odnosi się tylko do danych w pamięci podręcznej, ustawiając właściwość <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> <xref:System.Windows.Automation.CacheRequest> do <xref:System.Windows.Automation.AutomationElementMode.None>. W takim przypadku nie masz dostępu do żadnych niebuforowanych właściwości i wzorców pobranych elementów. Oznacza to, że nie można uzyskać dostępu do żadnych właściwości za pośrednictwem <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> lub właściwości `Current` <xref:System.Windows.Automation.AutomationElement> lub żadnego wzorca kontrolki; nie można też pobrać wzorca przy użyciu <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> lub <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>. W przypadku wzorców w pamięci podręcznej można wywoływać metody, które pobierają właściwości tablicy, takie jak <xref:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.GetSelection%2A?displayProperty=nameWithType>, ale nie wszystkie te, które wykonują działania w formancie, takie jak <xref:System.Windows.Automation.InvokePattern.Invoke%2A?displayProperty=nameWithType>.  
   
- An example of an application that might not need full references to objects is a screen reader, which would prefetch the <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> and <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> properties of elements in a window but would not need the <xref:System.Windows.Automation.AutomationElement> objects themselves.  
+ Przykładem aplikacji, która może nie wymagać pełnych odwołań do obiektów, jest czytnik ekranu, który pobiera <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> i <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> właściwości elementów w oknie, ale nie potrzebuje <xref:System.Windows.Automation.AutomationElement> obiektów.  
   
 <a name="Activating_the_CacheRequest"></a>   
-## <a name="activating-the-cacherequest"></a>Activating the CacheRequest  
- Caching is performed only when <xref:System.Windows.Automation.AutomationElement> objects are retrieved while a <xref:System.Windows.Automation.CacheRequest> is active for the current thread. There are two ways to activate a <xref:System.Windows.Automation.CacheRequest>.  
+## <a name="activating-the-cacherequest"></a>Aktywowanie CacheRequest  
+ Buforowanie jest wykonywane tylko wtedy, gdy <xref:System.Windows.Automation.AutomationElement> obiekty są pobierane, gdy <xref:System.Windows.Automation.CacheRequest> jest aktywny dla bieżącego wątku. Istnieją dwa sposoby aktywowania <xref:System.Windows.Automation.CacheRequest>.  
   
- The usual way is to call <xref:System.Windows.Automation.CacheRequest.Activate%2A>. This method returns an object that implements <xref:System.IDisposable>. The request remains active as long as the <xref:System.IDisposable> object exists. The easiest way to control the lifetime of the object is to enclose the call within a `using` (C#) or `Using` (Visual Basic) block. This ensures that the request will be popped from the stack even if an exception is raised.  
+ Typowym sposobem jest wywołanie <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Ta metoda zwraca obiekt, który implementuje <xref:System.IDisposable>. Żądanie pozostaje aktywne, o ile istnieje obiekt <xref:System.IDisposable>. Najprostszym sposobem na sterowanie okresem istnienia obiektu jest ujęcie wywołania w bloku `using` (C#) lub `Using` (Visual Basic). Dzięki temu żądanie zostanie zdjęte ze stosu, nawet jeśli zostanie zgłoszony wyjątek.  
   
- Another way, which is useful when you wish to nest cache requests, is to call <xref:System.Windows.Automation.CacheRequest.Push%2A>. This puts the request on a stack and activates it. The request remains active until it is removed from the stack by <xref:System.Windows.Automation.CacheRequest.Pop%2A>. The request becomes temporarily inactive if another request is pushed onto the stack; only the top request on the stack is active.  
+ Inny sposób, który jest przydatny w przypadku zagnieżdżania żądań pamięci podręcznej, to wywołanie <xref:System.Windows.Automation.CacheRequest.Push%2A>. Spowoduje to umieszczenie żądania na stosie i jego aktywowanie. Żądanie pozostanie aktywne, dopóki nie zostanie usunięte ze stosu przez <xref:System.Windows.Automation.CacheRequest.Pop%2A>. Żądanie stanie się tymczasowo nieaktywne, jeśli na stosie zostanie wypchnięte inne żądanie. aktywne jest tylko żądanie najwyższego poziomu na stosie.  
   
 <a name="Retrieving_Cached_Properties"></a>   
-## <a name="retrieving-cached-properties"></a>Retrieving Cached Properties  
- You can retrieve the cached properties of an element through the following methods and properties.  
+## <a name="retrieving-cached-properties"></a>Pobieranie właściwości pamięci podręcznej  
+ Można pobrać zbuforowane właściwości elementu za pomocą następujących metod i właściwości.  
   
 - <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
 - <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
- An exception is raised if the requested property is not in the cache.  
+ Wyjątek jest zgłaszany, jeśli żądana właściwość nie znajduje się w pamięci podręcznej.  
   
- <xref:System.Windows.Automation.AutomationElement.Cached%2A>, like <xref:System.Windows.Automation.AutomationElement.Current%2A>, exposes individual properties as members of a structure. However, you do not need to retrieve this structure; you can access the individual properties directly. For example, the <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> property can be obtained from `element.Cached.Name`, where `element` is an <xref:System.Windows.Automation.AutomationElement>.  
+ <xref:System.Windows.Automation.AutomationElement.Cached%2A>, jak <xref:System.Windows.Automation.AutomationElement.Current%2A>, uwidacznia poszczególne właściwości jako elementy członkowskie struktury. Nie trzeba jednak pobierać tej struktury; dostęp do poszczególnych właściwości można uzyskać bezpośrednio. Na przykład właściwość <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> można uzyskać z `element.Cached.Name`, gdzie `element` jest <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="Retrieving_Cached_Control_Patterns"></a>   
-## <a name="retrieving-cached-control-patterns"></a>Retrieving Cached Control Patterns  
- You can retrieve the cached control patterns of an element through the following methods.  
+## <a name="retrieving-cached-control-patterns"></a>Pobieranie wzorców formantów w pamięci podręcznej  
+ Można pobrać zbuforowane Wzorce formantów elementu przy użyciu poniższych metod.  
   
 - <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
 - <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
- If the pattern is not in the cache, <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> raises an exception, and <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> returns `false`.  
+ Jeśli wzorzec nie znajduje się w pamięci podręcznej, <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> zgłasza wyjątek, a <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> zwraca `false`.  
   
- You can retrieve the cached properties of a control pattern by using the `Cached` property of the pattern object. You can also retrieve the current values through the `Current` property, but only if <xref:System.Windows.Automation.AutomationElementMode.None> was not specified when the <xref:System.Windows.Automation.AutomationElement> was retrieved. (<xref:System.Windows.Automation.AutomationElementMode.Full> is the default value, and this permits access to the current values.)  
+ Można pobrać zbuforowane właściwości wzorca kontrolki za pomocą właściwości `Cached` obiektu wzorca. Możesz również pobrać bieżące wartości za pomocą właściwości `Current`, ale tylko wtedy, gdy <xref:System.Windows.Automation.AutomationElementMode.None> nie została określona podczas pobierania <xref:System.Windows.Automation.AutomationElement>. (<xref:System.Windows.Automation.AutomationElementMode.Full> jest wartością domyślną i umożliwia dostęp do bieżących wartości).  
   
 <a name="Retrieving_Cached_Children_and_Parents"></a>   
-## <a name="retrieving-cached-children-and-parents"></a>Retrieving Cached Children and Parents  
- When you retrieve an <xref:System.Windows.Automation.AutomationElement> and request caching for children of that element through the <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> property of the request, it is subsequently possible to get the child elements from the <xref:System.Windows.Automation.AutomationElement.CachedChildren%2A> property of the element you retrieved.  
+## <a name="retrieving-cached-children-and-parents"></a>Pobieranie buforowanych elementów podrzędnych i elementów nadrzędnych  
+ Po pobraniu <xref:System.Windows.Automation.AutomationElement> i buforowania żądań dla elementów podrzędnych tego elementu za pośrednictwem właściwości <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> żądania można pobrać elementy podrzędne z właściwości <xref:System.Windows.Automation.AutomationElement.CachedChildren%2A> elementu, który został pobrany.  
   
- If <xref:System.Windows.Automation.TreeScope.Element> was included in the scope of the cache request, the root element of the request is subsequently available from the <xref:System.Windows.Automation.AutomationElement.CachedParent%2A> property of any of the child elements.  
+ Jeśli <xref:System.Windows.Automation.TreeScope.Element> został uwzględniony w zakresie żądania pamięci podręcznej, element główny żądania jest następnie dostępny z właściwości <xref:System.Windows.Automation.AutomationElement.CachedParent%2A> dowolnego elementu podrzędnego.  
   
 > [!NOTE]
-> You cannot cache parents or ancestors of the root element of the request.  
+> Nie można buforować obiektów nadrzędnych ani elementów nadrzędnych elementu głównego żądania.  
   
 <a name="Updating_the_Cache"></a>   
-## <a name="updating-the-cache"></a>Updating the Cache  
- The cache is valid only as long as nothing changes in the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Your application is responsible for updating the cache, typically in response to events.  
+## <a name="updating-the-cache"></a>Aktualizowanie pamięci podręcznej  
+ Pamięć podręczna jest prawidłowa tylko pod warunkiem, że nie ma żadnych zmian w [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Aplikacja jest odpowiedzialna za aktualizowanie pamięci podręcznej, zazwyczaj w odpowiedzi na zdarzenia.  
   
- If you subscribe to an event while a <xref:System.Windows.Automation.CacheRequest> is active, you obtain an <xref:System.Windows.Automation.AutomationElement> with an updated cache as the source of the event whenever your event-handler delegate is called. You can also update cached information for an element by calling <xref:System.Windows.Automation.AutomationElement.GetUpdatedCache%2A>. You can pass in the original <xref:System.Windows.Automation.CacheRequest> to update all information that was previously cached.  
+ Jeśli subskrybujesz zdarzenie, gdy <xref:System.Windows.Automation.CacheRequest> jest aktywny, uzyskujesz <xref:System.Windows.Automation.AutomationElement> ze zaktualizowaną pamięcią podręczną jako źródłem zdarzenia za każdym razem, gdy obiekt delegowany obsługi zdarzeń zostanie wywołany. Możesz również zaktualizować informacje w pamięci podręcznej dla elementu, wywołując <xref:System.Windows.Automation.AutomationElement.GetUpdatedCache%2A>. Możesz przekazać oryginalny <xref:System.Windows.Automation.CacheRequest>, aby zaktualizować wszystkie informacje, które były wcześniej buforowane.  
   
- Updating the cache does not alter the properties of any existing <xref:System.Windows.Automation.AutomationElement> references.  
+ Aktualizacja pamięci podręcznej nie powoduje zmiany właściwości istniejących odwołań <xref:System.Windows.Automation.AutomationElement>.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Właściwości zdarzeń automatyzacji interfejsu użytkownika dla klientów](ui-automation-events-for-clients.md)
 - [Używanie buforowania w automatyzacji interfejsu użytkownika](use-caching-in-ui-automation.md)
-- [FetchTimer Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))
+- [Przykład FetchTimer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

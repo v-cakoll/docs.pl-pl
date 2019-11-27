@@ -22,10 +22,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448994"
 ---
-# <a name="isymunmanagedencupdateupdatemethodlines-method"></a><span data-ttu-id="4d819-102">ISymUnmanagedENCUpdate::UpdateMethodLines — Metoda</span><span class="sxs-lookup"><span data-stu-id="4d819-102">ISymUnmanagedENCUpdate::UpdateMethodLines Method</span></span>
-<span data-ttu-id="4d819-103">Allows updating the line information for a method that has not been recompiled, but whose lines have moved independently.</span><span class="sxs-lookup"><span data-stu-id="4d819-103">Allows updating the line information for a method that has not been recompiled, but whose lines have moved independently.</span></span> <span data-ttu-id="4d819-104">A delta for each statement is allowed.</span><span class="sxs-lookup"><span data-stu-id="4d819-104">A delta for each statement is allowed.</span></span>  
+# <a name="isymunmanagedencupdateupdatemethodlines-method"></a><span data-ttu-id="6da89-102">ISymUnmanagedENCUpdate::UpdateMethodLines — Metoda</span><span class="sxs-lookup"><span data-stu-id="6da89-102">ISymUnmanagedENCUpdate::UpdateMethodLines Method</span></span>
+<span data-ttu-id="6da89-103">Umożliwia aktualizowanie informacji o wierszu dla metody, która nie została ponownie skompilowana, ale których linie nie zostały przesunięte niezależnie.</span><span class="sxs-lookup"><span data-stu-id="6da89-103">Allows updating the line information for a method that has not been recompiled, but whose lines have moved independently.</span></span> <span data-ttu-id="6da89-104">Różnicowa dla każdej instrukcji jest dozwolony.</span><span class="sxs-lookup"><span data-stu-id="6da89-104">A delta for each statement is allowed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4d819-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="4d819-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6da89-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="6da89-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT UpdateMethodLines(  
@@ -34,22 +34,22 @@ HRESULT UpdateMethodLines(
     [in]  ULONG        cDeltas);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4d819-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="4d819-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6da89-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="6da89-106">Parameters</span></span>  
  `mdMethodToken`  
- <span data-ttu-id="4d819-107">[in] The metadata of the method token.</span><span class="sxs-lookup"><span data-stu-id="4d819-107">[in] The metadata of the method token.</span></span>  
+ <span data-ttu-id="6da89-107">podczas Metadane tokenu metody.</span><span class="sxs-lookup"><span data-stu-id="6da89-107">[in] The metadata of the method token.</span></span>  
   
  `pDeltas`  
- <span data-ttu-id="4d819-108">[in] An array of `INT32` values that indicates deltas for each sequence point in the method.</span><span class="sxs-lookup"><span data-stu-id="4d819-108">[in] An array of `INT32` values that indicates deltas for each sequence point in the method.</span></span>  
+ <span data-ttu-id="6da89-108">podczas Tablica wartości `INT32`, która wskazuje różnice dla każdego punktu sekwencji w metodzie.</span><span class="sxs-lookup"><span data-stu-id="6da89-108">[in] An array of `INT32` values that indicates deltas for each sequence point in the method.</span></span>  
   
  `cDeltas`  
- <span data-ttu-id="4d819-109">[in] A `ULONG` containing the size of the `pDeltas` parameter.</span><span class="sxs-lookup"><span data-stu-id="4d819-109">[in] A `ULONG` containing the size of the `pDeltas` parameter.</span></span>  
+ <span data-ttu-id="6da89-109">podczas `ULONG` zawierający rozmiar parametru `pDeltas`.</span><span class="sxs-lookup"><span data-stu-id="6da89-109">[in] A `ULONG` containing the size of the `pDeltas` parameter.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4d819-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="4d819-110">Return Value</span></span>  
- <span data-ttu-id="4d819-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="4d819-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6da89-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="6da89-110">Return Value</span></span>  
+ <span data-ttu-id="6da89-111">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="6da89-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4d819-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4d819-112">Requirements</span></span>  
- <span data-ttu-id="4d819-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4d819-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6da89-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="6da89-112">Requirements</span></span>  
+ <span data-ttu-id="6da89-113">**Nagłówek:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="6da89-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d819-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4d819-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6da89-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6da89-114">See also</span></span>
 
-- [<span data-ttu-id="4d819-115">ISymUnmanagedENCUpdate, interfejs</span><span class="sxs-lookup"><span data-stu-id="4d819-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="6da89-115">ISymUnmanagedENCUpdate, interfejs</span><span class="sxs-lookup"><span data-stu-id="6da89-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

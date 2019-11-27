@@ -66,7 +66,7 @@ Możesz rozpocząć kodowanie aplikacji w zwykłym środowisku .NET (zwykle w pr
 - **Wprowadzenie do Docker CE for Windows** \
   <https://docs.docker.com/docker-for-windows/>
 
-- **Visual Studio 2017** \
+-  \ **programu Visual Studio 2017**
   [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 
 ![Obraz dla kroku 2.](./media/docker-app-development-workflow/step-2-write-dockerfile.png)
@@ -574,9 +574,9 @@ RUN powershell add-windowsfeature web-asp-net45
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **aspnet-docker/Dockerfile.** Przykładowe polecenia programu PowerShell do uruchomienia z wieloetapowe dockerfile w celu uwzględnienia funkcji systemu Windows. \
+- **ASPNET-Docker/pliku dockerfile.** Przykładowe polecenia programu PowerShell do uruchomienia z wieloetapowe dockerfile w celu uwzględnienia funkcji systemu Windows. \
   <https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile>
 
 >[!div class="step-by-step"]
->[Poprzedni](index.md)
->[Następny](../multi-container-microservice-net-applications/index.md)
+>[Poprzednie](index.md)
+>[dalej](../multi-container-microservice-net-applications/index.md)

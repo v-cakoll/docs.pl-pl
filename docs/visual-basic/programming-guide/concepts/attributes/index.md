@@ -1,5 +1,5 @@
 ---
-title: Attributes overview
+title: Przegląd atrybutów
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 ms.openlocfilehash: 97a2a13102718b6ee8829fca678b2b49df21e5d1
@@ -9,25 +9,25 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349483"
 ---
-# <a name="attributes-overview-visual-basic"></a>Attributes overview (Visual Basic)
+# <a name="attributes-overview-visual-basic"></a>Omówienie atrybutów (Visual Basic)
 
-Attributes provide a powerful method of associating metadata, or declarative information, with code (assemblies, types, methods, properties, and so forth). After an attribute is associated with a program entity, the attribute can be queried at run time by using a technique called *reflection*. For more information, see [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).
+Atrybuty zapewniają zaawansowaną metodę kojarzenia metadanych lub deklaracyjne informacje z kodem (zestawy, typy, metody, właściwości i tak dalej). Gdy atrybut jest skojarzony z jednostką programu, atrybut może być badany w czasie wykonywania przy użyciu techniki o nazwie *odbicie*. Aby uzyskać więcej informacji, zobacz [odbicie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).
 
-Attributes have the following properties:
+Atrybuty mają następujące właściwości:
 
-- Attributes add metadata to your program. *Metadata* is information about the types defined in a program. All .NET assemblies contain a specified set of metadata that describes the types and type members defined in the assembly. You can add custom attributes to specify any additional information that is required. For more information, see, [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).
+- Atrybuty dodają metadane do programu. *Metadane* są informacjami o typach zdefiniowanych w programie. Wszystkie zestawy .NET zawierają określony zestaw metadanych opisujący typy i elementy członkowskie typu zdefiniowane w zestawie. Można dodać atrybuty niestandardowe, aby określić wszelkie dodatkowe informacje, które są wymagane. Aby uzyskać więcej informacji, zobacz temat [Tworzenie atrybutów niestandardowych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).
 
-- You can apply one or more attributes to entire assemblies, modules, or smaller program elements such as classes and properties.
+- Można zastosować jeden lub więcej atrybutów do całych zestawów, modułów lub mniejszych elementów programu, takich jak klasy i właściwości.
 
-- Attributes can accept arguments in the same way as methods and properties.
+- Atrybuty mogą akceptować argumenty w taki sam sposób jak metody i właściwości.
 
-- Your program can examine its own metadata or the metadata in other programs by using reflection. For more information, see [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).
+- Program może przeanalizować własne metadane lub metadane w innych programach przy użyciu odbicia. Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).
 
 ## <a name="using-attributes"></a>Korzystanie z atrybutów
 
-Attributes can be placed on most any declaration, though a specific attribute might restrict the types of declarations on which it is valid. In Visual Basic, an attribute is enclosed in angle brackets (\< >). It must appear immediately before the element to which it is applied, on the same line.
+Atrybuty mogą być umieszczane w większości każdej deklaracji, chociaż określony atrybut może ograniczyć typy deklaracji, na których jest on prawidłowy. W Visual Basic atrybut jest ujęty w nawiasy kątowe (\< >). Musi znajdować się bezpośrednio przed elementem, do którego jest stosowany, w tym samym wierszu.
 
-In this example, the <xref:System.SerializableAttribute> attribute is used to apply a specific characteristic to a class:
+W tym przykładzie atrybut <xref:System.SerializableAttribute> jest używany do zastosowania konkretnej cechy klasy:
 
 ```vb
 <System.Serializable()> Public Class SampleClass
@@ -35,7 +35,7 @@ In this example, the <xref:System.SerializableAttribute> attribute is used to ap
 End Class
 ```
 
- A method with the attribute <xref:System.Runtime.InteropServices.DllImportAttribute> is declared like this:
+ Metoda z atrybutem <xref:System.Runtime.InteropServices.DllImportAttribute> jest zadeklarowana w następujący sposób:
 
 ```vb
 Imports System.Runtime.InteropServices
@@ -47,7 +47,7 @@ Sub SampleMethod()
 End Sub
 ```
 
-More than one attribute can be placed on a declaration:
+W deklaracji można umieścić więcej niż jeden atrybut:
 
 ```vb
 Imports System.Runtime.InteropServices
@@ -60,7 +60,7 @@ Sub MethodB(<Out(), [In]()> ByVal x As Double)
 End Sub
 ```
 
-Some attributes can be specified more than once for a given entity. An example of such a multiuse attribute is <xref:System.Diagnostics.ConditionalAttribute>:
+Niektóre atrybuty można określić więcej niż raz dla danej jednostki. Przykładem takiego atrybutu Multiuse jest <xref:System.Diagnostics.ConditionalAttribute>:
 
 ```vb
 <Conditional("DEBUG"), Conditional("TEST1")>
@@ -69,11 +69,11 @@ End Sub
 ```
 
 > [!NOTE]
-> By convention, all attribute names end with the word "Attribute" to distinguish them from other items in the .NET Framework. However, you do not need to specify the attribute suffix when using attributes in code. For example, `[DllImport]` is equivalent to `[DllImportAttribute]`, but `DllImportAttribute` is the attribute's actual name in the .NET Framework.
+> Według Konwencji wszystkie nazwy atrybutów kończą się słowem "Attribute", aby odróżnić je od innych elementów w .NET Framework. Nie trzeba jednak określać sufiksu atrybutu podczas używania atrybutów w kodzie. Na przykład `[DllImport]` jest równoznaczne z `[DllImportAttribute]`, ale `DllImportAttribute` to rzeczywista nazwa atrybutu w .NET Framework.
 
-### <a name="attribute-parameters"></a>Attribute Parameters
+### <a name="attribute-parameters"></a>Parametry atrybutu
 
-Many attributes have parameters, which can be positional, unnamed, or named. Any positional parameters must be specified in a certain order and cannot be omitted; named parameters are optional and can be specified in any order. Positional parameters are specified first. For example, these three attributes are equivalent:
+Wiele atrybutów ma parametry, które mogą mieć położenie, nienazwane lub nazwane. Wszystkie parametry pozycyjne muszą być określone w określonej kolejności i nie mogą być pomijane; parametry nazwane są opcjonalne i można je określić w dowolnej kolejności. Parametry pozycyjne są określone jako pierwsze. Na przykład te trzy atrybuty są równoważne:
 
 ```vb
 <DllImport("user32.dll")>
@@ -81,26 +81,26 @@ Many attributes have parameters, which can be positional, unnamed, or named. Any
 <DllImport("user32.dll", ExactSpelling:=False, SetLastError:=False)>
 ```
 
-The first parameter, the DLL name, is positional and always comes first; the others are named. In this case, both named parameters default to false, so they can be omitted. Refer to the individual attribute's documentation for information on default parameter values.
+Pierwszy parametr, nazwa biblioteki DLL, jest położeniem i zawsze jest pierwszy. inne osoby mają nazwę. W tym przypadku oba nazwane parametry domyślnie mają wartość false, więc można je pominąć. Informacje dotyczące domyślnych wartości parametrów można znaleźć w dokumentacji poszczególnych atrybutów.
 
 ### <a name="attribute-targets"></a>Docelowe atrybuty
 
-The *target* of an attribute is the entity to which the attribute applies. For example, an attribute may apply to a class, a particular method, or an entire assembly. By default, an attribute applies to the element that it precedes. But you can also explicitly identify, for example, whether an attribute is applied to a method, or to its parameter, or to its return value.
+*Obiektem docelowym* atrybutu jest jednostka, do której odnosi się ten atrybut. Na przykład, atrybut może dotyczyć klasy, konkretnej metody lub całego zestawu. Domyślnie atrybut ma zastosowanie do elementu, który poprzedza. Ale można również jawnie określić, na przykład, czy atrybut jest stosowany do metody lub do jego parametru lub do jego wartości zwracanej.
 
-To explicitly identify an attribute target, use the following syntax:
+Aby jawnie zidentyfikować obiekt docelowy atrybutu, należy użyć następującej składni:
 
 ```vb
 <target : attribute-list>
 ```
 
-The list of possible `target` values is shown in the following table.
+Lista możliwych wartości `target` przedstawiono w poniższej tabeli.
 
-|Target value|Informacje zawarte w tym artykule dotyczą|
+|Wartość docelowa|Informacje zawarte w tym artykule dotyczą|
 |------------------|----------------|
-|`assembly`|Entire assembly|
-|`module`|Current assembly module (which is different from a Visual Basic Module)|
+|`assembly`|Cały zestaw|
+|`module`|Bieżący moduł zestawu (który różni się od modułu Visual Basic)|
 
- The following example shows how to apply attributes to assemblies and modules. For more information, see [Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md).
+ Poniższy przykład pokazuje, jak zastosować atrybuty do zestawów i modułów. Aby uzyskać więcej informacji, zobacz [Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md).
 
 ```vb
 Imports System.Reflection
@@ -108,48 +108,48 @@ Imports System.Reflection
 Module: CLSCompliant(True)>
 ```
 
-## <a name="common-uses-for-attributes"></a>Common Uses for Attributes
+## <a name="common-uses-for-attributes"></a>Typowe zastosowania atrybutów
 
-The following list includes a few of the common uses of attributes in code:
+Poniższa lista zawiera kilka typowych zastosowania atrybutów w kodzie:
 
-- Marking methods using the `WebMethod` attribute in Web services to indicate that the method should be callable over the SOAP protocol. Aby uzyskać więcej informacji, zobacz <xref:System.Web.Services.WebMethodAttribute>.
+- Oznaczanie metod przy użyciu atrybutu `WebMethod` w usługach sieci Web, aby wskazać, że metoda powinna być wywoływana za pośrednictwem protokołu SOAP. Aby uzyskać więcej informacji, zobacz <xref:System.Web.Services.WebMethodAttribute>.
 
-- Describing how to marshal method parameters when interoperating with native code. Aby uzyskać więcej informacji, zobacz <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
+- Opis sposobu organizowania parametrów metody podczas współdziałania z kodem natywnym. Aby uzyskać więcej informacji, zobacz <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
 
-- Describing the COM properties for classes, methods, and interfaces.
+- Opisywanie właściwości modelu COM dla klas, metod i interfejsów.
 
-- Calling unmanaged code using the <xref:System.Runtime.InteropServices.DllImportAttribute> class.
+- Wywoływanie kodu niezarządzanego za pomocą klasy <xref:System.Runtime.InteropServices.DllImportAttribute>.
 
-- Describing your assembly in terms of title, version, description, or trademark.
+- Opisywanie zestawu pod względem tytułu, wersji, opisu lub znaku towarowego.
 
-- Describing which members of a class to serialize for persistence.
+- Opisywanie elementów członkowskich klasy do serializacji dla trwałości.
 
-- Describing how to map between class members and XML nodes for XML serialization.
+- Opis sposobu mapowania między elementami członkowskimi klasy i węzłami XML na potrzeby serializacji XML.
 
-- Describing the security requirements for methods.
+- Opisywanie wymagań dotyczących zabezpieczeń dla metod.
 
-- Specifying characteristics used to enforce security.
+- Określanie charakterystyki służącej do wymuszania zabezpieczeń.
 
-- Controlling optimizations by the just-in-time (JIT) compiler so the code remains easy to debug.
+- Kontrolowanie optymalizacji przez kompilator just-in-Time (JIT), dzięki czemu kod pozostaje łatwy do debugowania.
 
-- Obtaining information about the caller to a method.
+- Uzyskiwanie informacji o wywołującym do metody.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [Tworzenie atrybutów niestandardowych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
 
-- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
 
-- [How to: Create a C/C++ Union by Using Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)
+- [Instrukcje: Tworzenie elementu C/C++ Union przy użyciu atrybutów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)
 
-- [Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
+- [Atrybuty wspólne (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
 
-- [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)
+- [Informacje o wywołującym (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Visual Basic Programming Guide](../../../../visual-basic/programming-guide/index.md)
-- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Przewodnik programowania Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Odbicie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [Atrybuty](../../../../standard/attributes/index.md)

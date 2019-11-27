@@ -13,15 +13,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350638"
 ---
 # <a name="myuser-object"></a>My.User — Obiekt
-Provides access to information about the current user.  
+Zapewnia dostęp do informacji o bieżącym użytkowniku.  
   
 ## <a name="remarks"></a>Uwagi  
- For information about the methods and properties of the `My.User` object, see <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.  
+ Aby uzyskać informacje o metodach i właściwościach obiektu `My.User`, zobacz <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.  
   
- For more information, see [Accessing User Data](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
+ Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do danych użytkownika](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

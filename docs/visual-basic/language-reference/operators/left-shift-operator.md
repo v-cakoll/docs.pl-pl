@@ -15,8 +15,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350980"
 ---
-# <a name="-operator-visual-basic"></a>\<\< Operator (Visual Basic)
-Performs an arithmetic left shift on a bit pattern.  
+# <a name="-operator-visual-basic"></a>Operator \< \<(Visual Basic)
+Wykonuje arytmetyczne przesunięcie w lewo na wzorcu bitowym.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,57 +26,57 @@ result = pattern << amount
   
 ## <a name="parts"></a>Części  
  `result`  
- Wymagany. Integral numeric value. The result of shifting the bit pattern. The data type is the same as that of `pattern`.  
+ Wymagany. Całkowita wartość liczbowa. Wynik przesunięcia wzorca bitowego. Typ danych jest taki sam jak w przypadku `pattern`.  
   
  `pattern`  
- Wymagany. Integral numeric expression. The bit pattern to be shifted. The data type must be an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).  
+ Wymagany. Całkowite wyrażenie liczbowe. Wzorzec bitowy, który ma zostać przesunięty. Typ danych musi być typem całkowitym (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`lub `ULong`).  
   
  `amount`  
- Wymagany. Numeric expression. The number of bits to shift the bit pattern. The data type must be `Integer` or widen to `Integer`.  
+ Wymagany. Wyrażenie liczbowe. Liczba bitów do przesunięcia wzorca bitowego. Typ danych musi być `Integer` lub rozszerzony do `Integer`.  
   
 ## <a name="remarks"></a>Uwagi  
- Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. In an arithmetic left shift, the bits shifted beyond the range of the result data type are discarded, and the bit positions vacated on the right are set to zero.  
+ Przesunięcia arytmetyczne nie są cykliczne, co oznacza, że bity przesunięte poza jeden koniec wyniku nie są ponownie wprowadzane na drugim końcu. W przypadku przesunięcia w lewo po lewej stronie bity przesunięte poza zakres typu danych wynik są odrzucane, a pozycje bitowe opuszczone po prawej stronie są ustawione na wartość zero.  
   
- To prevent a shift by more bits than the result can hold, Visual Basic masks the value of `amount` with a size mask that corresponds to the data type of `pattern`. The binary AND of these values is used for the shift amount. The size masks are as follows:  
+ Aby zapobiec przesunięciu przez więcej bitów, niż można obtrzymać, Visual Basic maskować wartość `amount` z maską rozmiaru odpowiadającą typowi danych `pattern`. Wartość binarna i z tych wartości są używane na potrzeby przesunięcia. Maski rozmiaru są następujące:  
   
-|Data type of `pattern`|Size mask (decimal)|Size mask (hexadecimal)|  
+|Typ danych `pattern`|Maska rozmiaru (dziesiętna)|Maska rozmiaru (szesnastkowo)|  
 |----------------------------|---------------------------|-------------------------------|  
 |`SByte`, `Byte`|7|&H00000007|  
-|`Short`, `UShort`|15|&H0000000F|  
+|`Short`, `UShort`|15|& H0000000F|  
 |`Integer`, `UInteger`|31|&H0000001F|  
 |`Long`, `ULong`|63|&H0000003F|  
   
- If `amount` is zero, the value of `result` is identical to the value of `pattern`. If `amount` is negative, it is taken as an unsigned value and masked with the appropriate size mask.  
+ Jeśli `amount` wynosi zero, wartość `result` jest taka sama jak wartość `pattern`. Jeśli `amount` jest ujemna, jest traktowany jako wartość bez znaku i maskowany z odpowiednią maską rozmiaru.  
   
- Arithmetic shifts never generate overflow exceptions.  
+ Przesunięcia arytmetyczne nigdy nie generują wyjątków przepełnienia.  
   
 > [!NOTE]
-> The `<<` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure that you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> Operator `<<` może być *przeciążony*, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury. Jeśli kod używa tego operatora dla takiej klasy lub struktury, upewnij się, że rozumiesz jego ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Przykład  
- The following example uses the `<<` operator to perform arithmetic left shifts on integral values. The result always has the same data type as that of the expression being shifted.  
+ Poniższy przykład używa operatora `<<`, aby przeprowadzić arytmetyczne przesunięcie w lewo na wartościach całkowitych. Wynik zawsze ma ten sam typ danych co w przypadku przesunięcia wyrażenia.  
   
  [!code-vb[VbVbalrOperators#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#12)]  
   
- The results of the previous example are as follows:  
+ Wyniki poprzedniego przykładu są następujące:  
   
-- `result1` is 192 (0000 0000 1100 0000).  
+- `result1` to 192 (0000 0000 1100 0000).  
   
-- `result2` is 3072 (0000 1100 0000 0000).  
+- `result2` to 3072 (0000 1100 0000 0000).  
   
-- `result3` is -32768 (1000 0000 0000 0000).  
+- `result3` to-32768 (1000 0000 0000 0000).  
   
-- `result4` is 384 (0000 0001 1000 0000).  
+- `result4` to 384 (0000 0001 1000 0000).  
   
-- `result5` is 0 (shifted 15 places to the left).  
+- `result5` to 0 (przesunięte 15 miejsc w lewo).  
   
- The shift amount for `result4` is calculated as 17 AND 15, which equals 1.  
+ Kwota przesunięcia dla `result4` jest obliczana jako 17 i 15, która jest równa 1.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Operatory Bit Shift](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [Operatory przypisania](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [<<=, operator](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Operatory arytmetyczne w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

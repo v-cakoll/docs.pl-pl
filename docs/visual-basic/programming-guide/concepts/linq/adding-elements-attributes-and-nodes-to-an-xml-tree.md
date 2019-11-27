@@ -9,28 +9,28 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345824"
 ---
-# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>Adding Elements, Attributes, and Nodes to an XML Tree (Visual Basic)
-You can add content (elements, attributes, comments, processing instructions, text, and CDATA) to an existing XML tree.  
+# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>Dodawanie elementów, atrybutów i węzłów do drzewa XML (Visual Basic)
+Możesz dodać zawartość (elementy, atrybuty, komentarze, instrukcje przetwarzania, tekst i CDATA) do istniejącego drzewa XML.  
   
-## <a name="methods-for-adding-content"></a>Methods for Adding Content  
- The following methods add child content to an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XDocument>:  
-  
-|Metoda|Opis|  
-|------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Add%2A>|Adds content at the end of the child content of the <xref:System.Xml.Linq.XContainer>.|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Adds content at the beginning of the child content of the <xref:System.Xml.Linq.XContainer>.|  
-  
- The following methods add content as sibling nodes of an <xref:System.Xml.Linq.XNode>. The most common node to which you add sibling content is <xref:System.Xml.Linq.XElement>, although you can add valid sibling content to other types of nodes such as <xref:System.Xml.Linq.XText> or <xref:System.Xml.Linq.XComment>.  
+## <a name="methods-for-adding-content"></a>Metody dodawania zawartości  
+ Następujące metody dodają zawartość podrzędną do <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument>:  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Adds content after the <xref:System.Xml.Linq.XNode>.|  
-|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Adds content before the <xref:System.Xml.Linq.XNode>.|  
+|<xref:System.Xml.Linq.XContainer.Add%2A>|Dodaje zawartość na końcu zawartości podrzędnej <xref:System.Xml.Linq.XContainer>.|  
+|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Dodaje zawartość na początku zawartości podrzędnej <xref:System.Xml.Linq.XContainer>.|  
+  
+ Poniższe metody dodają zawartość jako węzły równorzędne <xref:System.Xml.Linq.XNode>. Najbardziej typowym węzłem, do którego dodawana jest zawartość, jest <xref:System.Xml.Linq.XElement>, chociaż można dodać prawidłową zawartość równorzędną do innych typów węzłów, takich jak <xref:System.Xml.Linq.XText> lub <xref:System.Xml.Linq.XComment>.  
+  
+|Metoda|Opis|  
+|------------|-----------------|  
+|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Dodaje zawartość po <xref:System.Xml.Linq.XNode>.|  
+|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Dodaje zawartość przed <xref:System.Xml.Linq.XNode>.|  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- The following example creates two XML trees, and then modifies one of the trees.  
+ Poniższy przykład tworzy dwa drzewa XML, a następnie modyfikuje jedno z drzew.  
   
 ### <a name="code"></a>Kod  
   
@@ -82,4 +82,4 @@ Console.WriteLine(xmlTree)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modyfikowanie drzew XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

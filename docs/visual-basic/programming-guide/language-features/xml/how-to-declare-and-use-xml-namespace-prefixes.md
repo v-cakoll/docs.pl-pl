@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332948"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>Porady: deklarowanie prefiksów przestrzeni nazw XML i korzystanie z nich (Visual Basic)
-This example shows how to import the XML namespace prefix `ns` and use it in an XML literal and XML axis properties.  
+Ten przykład pokazuje, jak zaimportować prefiks przestrzeni nazw XML `ns` i użyć go w postaci literału XML i właściwości osi XML.  
   
 ## <a name="example"></a>Przykład  
  [!code-vb[VbXMLSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
@@ -21,7 +21,7 @@ This example shows how to import the XML namespace prefix `ns` and use it in an 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- A reference to the <xref:System.Xml.Linq> namespace.  
+- Odwołanie do przestrzeni nazw <xref:System.Xml.Linq>.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -29,5 +29,5 @@ This example shows how to import the XML namespace prefix `ns` and use it in an 
 - [Imports, instrukcja (przestrzeń nazw XML)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
 - [Właściwości osi atrybutu XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
 - [Właściwość wartości XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
-- [Accessing XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+- [Uzyskiwanie dostępu do pliku XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

@@ -26,7 +26,7 @@ Wszystkie narażone interfejsy API domyślnie `SameSiteMode.None`.
 
 Wartość domyślna została zmieniona, aby `SameSite` funkcję wyboru.
 
-#### <a name="recommended-action"></a>Zalecana akcja
+#### <a name="recommended-action"></a>Zalecane działanie
 
 Każdy składnik, który emituje pliki cookie, musi zdecydować, czy `SameSite` jest odpowiedni dla swoich scenariuszy. Zapoznaj się z użyciem odpowiednich interfejsów API i ponownie skonfiguruj `SameSite` w razie konieczności.
 

@@ -20,22 +20,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347238"
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem — Obiekt
-Provides properties and methods for working with drives, files, and directories.  
+Zawiera właściwości i metody pracy z dyskami, plikami i katalogami.  
   
 ## <a name="remarks"></a>Uwagi  
- For information about the methods and properties of the `My.Computer.FileSystem` object, see <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+ Aby uzyskać informacje o metodach i właściwościach obiektu `My.Computer.FileSystem`, zobacz <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
- For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
+ Aby uzyskać więcej informacji, zobacz [dostęp do plików przy użyciu Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
   
 > [!NOTE]
-> You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.  
+> Klasy w przestrzeni nazw <xref:System.IO?displayProperty=nameWithType> mogą być również używane do pracy z dyskami, plikami i katalogami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
+ **Przestrzeń nazw:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
+ **Klasa:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (zapewnia dostęp do <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

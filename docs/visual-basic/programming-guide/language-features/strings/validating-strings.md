@@ -15,20 +15,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346246"
 ---
 # <a name="validating-strings-in-visual-basic"></a>Sprawdzanie poprawności ciągów w Visual Basic
-This section discusses how to validate strings in Visual Basic.  
+W tej sekcji omówiono sposób sprawdzania poprawności ciągów w Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [How to: Validate File Names and Paths in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
- How to determine whether a string represents a file name or path.  
+ [Instrukcje: sprawdzanie poprawności nazw plików i ścieżek w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
+ Jak ustalić, czy ciąg reprezentuje nazwę pliku lub ścieżkę.  
   
  [Instrukcje: Sprawdzanie poprawności ciągów reprezentujących daty lub godziny](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-strings-that-represent-dates-or-times.md)  
- How to determine whether a string represents a valid date.  
+ Jak ustalić, czy ciąg reprezentuje prawidłową datę.  
   
- [Using Regular Expressions with the MaskedTextBox Control in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
- Demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.  
+ [Używanie wyrażeń regularnych z kontrolką formantem MaskedTextBox w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
+ Pokazuje, jak konwertować proste wyrażenia regularne do pracy z kontrolką <xref:System.Windows.Forms.MaskedTextBox>.  
   
  [Przewodnik: Walidacja złożoności haseł](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
- How to determine whether a string has the characteristics of a strong password.  
+ Jak ustalić, czy ciąg ma cechy silnego hasła.  
   
 ## <a name="see-also"></a>Zobacz także
 

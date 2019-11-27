@@ -18,29 +18,29 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346287"
 ---
 # <a name="value-comparisons-visual-basic"></a>Porównania wartości (Visual Basic)
-Comparison operators can be used to construct expressions that compare the values of numeric variables. These expressions return a `Boolean` value based on whether the comparison is true or false. Examples of such an expression are as follows.  
+Operatory porównania mogą służyć do konstruowania wyrażeń, które porównują wartości zmiennych liczbowych. Te wyrażenia zwracają wartość `Boolean` na podstawie tego, czy porównanie ma wartość PRAWDA, czy fałsz. Przykłady takiego wyrażenia są następujące.  
   
  `45 > 26`  
   
  `26 > 45`  
   
- The first expression evaluates to `True`, because 45 is greater than 26. The second example evaluates to `False`, because 26 is not greater than 45.  
+ Pierwsze wyrażenie szacuje `True`, ponieważ 45 jest większe niż 26. Drugi przykład jest obliczany `False`, ponieważ 26 nie jest większy niż 45.  
   
- You can also compare numeric expressions in this fashion. The expressions you compare can themselves be complex expressions, as in the following example.  
+ Możesz również porównać wyrażenia liczbowe w ten sposób. Porównywane wyrażenia mogą same być wyrażeniami złożonymi, jak w poniższym przykładzie.  
   
  `x / 45 * (y +17) >= System.Math.Sqrt(z) / (p - (x * 16))`  
   
- The preceding complex expression includes literals, variables, and function calls. The expressions on both sides of the comparison operator are evaluated, and the resulting values are then compared using the `>=` comparison operator. If the value of the expression on the left side is greater than or equal to the value of the expression on the right, the entire expression evaluates to `True`; otherwise, it evaluates to `False`.  
+ Poprzednie wyrażenie złożone zawiera literały, zmienne i wywołania funkcji. Wyrażenia po obu stronach operatora porównania są oceniane, a wynikowe wartości są porównywane przy użyciu operatora porównania `>=`. Jeśli wartość wyrażenia po lewej stronie jest większa lub równa wartości wyrażenia z prawej strony, całe wyrażenie szacuje się `True`; w przeciwnym razie szacuje się `False`.  
   
- Expressions that compare values are most commonly used in `If...Then` constructions, as in the following example.  
+ Wyrażenia, które porównują wartości są najczęściej używane w konstrukcjach `If...Then`, jak w poniższym przykładzie.  
   
  [!code-vb[VbVbalrOperators#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#84)]  
   
- The `=` sign is a comparison operator as well as an assignment operator. When used as a comparison operator, it evaluates whether the value on the left is equal to the value on the right, as shown in the following example.  
+ Znak `=` jest operatorem porównania, a także operatorem przypisania. Gdy jest używany jako operator porównania, sprawdza, czy wartość po lewej stronie jest równa wartości po prawej stronie, jak pokazano w poniższym przykładzie.  
   
  [!code-vb[VbVbalrOperators#85](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#85)]  
   
- You can also use a comparison expression anywhere a `Boolean` value is needed, such as in an `If`, `While`, `Loop`, or `ElseIf` statement, or when assigning to or passing a value to a `Boolean` variable. In the following example, the value returned by the comparison expression is assigned to a `Boolean` variable.  
+ Można również użyć wyrażenia porównania w dowolnym miejscu, `Boolean` jest wymagana wartość, na przykład w `If`, `While`, `Loop`lub instrukcji `ElseIf` lub po przypisaniu lub przekazaniu wartości do zmiennej `Boolean`. W poniższym przykładzie wartość zwracana przez wyrażenie porównania jest przypisana do zmiennej `Boolean`.  
   
  [!code-vb[VbVbalrOperators#86](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#86)]  
   
@@ -48,6 +48,6 @@ Comparison operators can be used to construct expressions that compare the value
 
 - [Wyrażenia logiczne](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [Operatory i wyrażenia](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Operatory porównania w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Instrukcje: obliczanie wartości liczbowych](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)
-- [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Pierwszeństwo operatorów w Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)

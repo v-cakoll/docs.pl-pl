@@ -1,5 +1,5 @@
 ---
-title: Let — Klauzula
+title: Let, klauzula
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryLet
@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350433"
 ---
 # <a name="let-clause-visual-basic"></a>Let — Klauzula (Visual Basic)
-Computes a value and assigns it to a new variable within the query.  
+Oblicza wartość i przypisuje ją do nowej zmiennej w zapytaniu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -28,22 +28,22 @@ Let variable = expression [, ...]
   
 |Termin|Definicja|  
 |---|---|  
-|`variable`|Wymagany. An alias that can be used to reference the results of the supplied expression.|  
-|`expression`|Wymagany. An expression that will be evaluated and assigned to the specified variable.|  
+|`variable`|Wymagany. Alias, który może służyć do odwoływania się do wyników podanego wyrażenia.|  
+|`expression`|Wymagany. Wyrażenie, które zostanie obliczone i przypisane do określonej zmiennej.|  
   
 ## <a name="remarks"></a>Uwagi  
- The `Let` clause enables you to compute values for each query result and reference them by using an alias. The alias can be used in other clauses, such as the `Where` clause. The `Let` clause enables you to create a query statement that is easier to read because you can specify an alias for an expression clause included in the query and substitute the alias each time the expression clause is used.  
+ Klauzula `Let` umożliwia obliczanie wartości dla każdego wyniku zapytania i odwoływanie się do nich za pomocą aliasu. Alias może być używany w innych klauzulach, takich jak klauzula `Where`. Klauzula `Let` umożliwia utworzenie instrukcji zapytania, która jest łatwiejsza do odczytania, ponieważ można określić alias dla klauzuli Expression zawartej w zapytaniu i zastąpić alias za każdym razem, gdy zostanie użyta klauzula wyrażenia.  
   
- You can include any number of `variable` and `expression` assignments in the `Let` clause. Separate each assignment with a comma (,).  
+ W klauzuli `Let` można uwzględnić dowolną liczbę `variable` i `expression` przypisania. Każde przypisanie należy oddzielić przecinkami (,).  
   
 ## <a name="example"></a>Przykład  
- The following code example uses the `Let` clause to compute a 10 percent discount on products.  
+ Poniższy przykład kodu używa klauzuli `Let`, aby obliczyć rabat 10% na produkty.  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Zapytania](../../../visual-basic/language-reference/queries/index.md)
 - [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)

@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344310"
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>Wprowadzenie do ciągów w Visual Basic
-This section describes the basic concepts behind using strings in Visual Basic.  
+W tej sekcji opisano podstawowe pojęcia związane z używaniem ciągów w Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Podstawowe informacje o ciągach](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Introduces the basic concepts behind using strings and string variables.  
+ Wprowadza podstawowe pojęcia związane z używaniem ciągów i zmiennych ciągów.  
   
- [Types of String Manipulation Methods in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- Introduces several different ways to analyze and manipulate strings.  
+ [Typy metod manipulowania ciągami w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ Wprowadza kilka różnych sposobów analizowania ciągów i manipulowania nimi.  
   
- [How Culture Affects Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- Discusses how Visual Basic uses culture information to perform string conversions and comparisons.  
+ [Wpływ kultury na ciągi w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
+ Omawia, w jaki sposób Visual Basic używa informacji o kulturze do wykonywania konwersji ciągów i porównań.  
   
 ## <a name="see-also"></a>Zobacz także
 

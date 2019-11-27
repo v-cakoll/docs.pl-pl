@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435971"
 ---
 # <a name="inotifysink2onsynccallreturn-method"></a>INotifySink2::OnSyncCallReturn — Metoda
-Gets invoked when a call returns.  
+Wywoływany, gdy wywołanie zwraca wartość.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +38,19 @@ HRESULT OnSyncCallReturn
   
 ## <a name="parameters"></a>Parametry  
  `in_CallID`  
- [in] ID of the call being returned from. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ podczas Identyfikator wywołania, z którego są zwracane. Zobacz [strukturę CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `in_pBuffer`  
- [in] Call buffer.  
+ podczas Bufor wywołań.  
   
  `in_BufferSize`  
- [in] Size of the call buffer, in bytes.  
+ podczas Rozmiar buforu wywołań w bajtach.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds.  
+ S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** ProtocolNotify2.idl  
+ **Nagłówek:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Zobacz także
 

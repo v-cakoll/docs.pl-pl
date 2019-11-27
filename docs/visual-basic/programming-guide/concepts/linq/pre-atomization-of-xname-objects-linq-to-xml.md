@@ -9,15 +9,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353116"
 ---
-# <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a>Pre-Atomization of XName Objects (LINQ to XML) (Visual Basic)
-One way to improve performance in LINQ to XML is to pre-atomize <xref:System.Xml.Linq.XName> objects. Pre-atomization means that you assign a string to an <xref:System.Xml.Linq.XName> object before you create the XML tree by using the constructors of the <xref:System.Xml.Linq.XElement> and  <xref:System.Xml.Linq.XAttribute> classes. Then, instead of passing a string to the constructor, which would use the implicit conversion from string to <xref:System.Xml.Linq.XName>, you pass the initialized <xref:System.Xml.Linq.XName> object.  
+# <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a>Rozproszenie obiektów XName (LINQ to XML) (Visual Basic)
+Jednym ze sposobów poprawy wydajności LINQ to XML jest wyodrębnić <xref:System.Xml.Linq.XName> obiektów. Rozproszenie oznacza przypisanie ciągu do obiektu <xref:System.Xml.Linq.XName> przed utworzeniem drzewa XML przy użyciu konstruktorów klas <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XAttribute>. Następnie zamiast przekazywania ciągu do konstruktora, który mógłby użyć niejawnej konwersji z ciągu na <xref:System.Xml.Linq.XName>, zostanie przekazany zainicjowany <xref:System.Xml.Linq.XName> obiekt.  
   
- This improves performance when you create a large XML tree in which specific names are repeated. To do this, you declare and initialize <xref:System.Xml.Linq.XName> objects before you construct the XML tree, and then use the <xref:System.Xml.Linq.XName> objects instead of specifying strings for the element and attribute names. This technique can yield significant performance gains if you are creating a large number of elements (or attributes) with the same name.  
+ Zwiększa to wydajność podczas tworzenia dużego drzewa XML, w którym określone nazwy są powtarzane. W tym celu należy zadeklarować i zainicjować <xref:System.Xml.Linq.XName> obiektów przed rozpoczęciem tworzenia drzewa XML, a następnie użyć obiektów <xref:System.Xml.Linq.XName> zamiast określania ciągów nazw elementów i atrybutów. Ta technika może przynieść znaczący wzrost wydajności w przypadku tworzenia dużej liczby elementów (lub atrybutów) o tej samej nazwie.  
   
- You should test pre-atomization with your scenario to decide if you should use it.  
+ Należy przetestować rozproszenie z Twoim scenariuszem, aby zdecydować, czy należy z niego korzystać.  
   
 ## <a name="example"></a>Przykład  
- The following example demonstrates this.  
+ Poniższy przykład ilustruje to.  
   
 ```vb  
 Dim Root__1 As XName = "Root"  
@@ -39,7 +39,7 @@ Console.WriteLine(root__2)
 </Root>  
 ```  
   
- The following example shows the same technique where the XML document is in a namespace:  
+ Poniższy przykład pokazuje tę samą technikę, w której dokument XML znajduje się w przestrzeni nazw:  
   
 ```vb  
 Dim aw As XNamespace = "http://www.adventure-works.com"  
@@ -62,7 +62,7 @@ Console.WriteLine(root__2)
 </aw:Root>  
 ```  
   
- The following example is more similar to what you will likely encounter in the real world. In this example, the content of the element is supplied by a query:  
+ Poniższy przykład jest bardziej podobny do tego, co prawdopodobnie napotkasz w świecie rzeczywistym. W tym przykładzie zawartość elementu jest dostarczana przez zapytanie:  
   
 ```vb  
 Dim Root__1 As XName = "Root"  
@@ -76,7 +76,7 @@ Dim t2 As DateTime = DateTime.Now
 Console.WriteLine("Time to construct:{0}", t2 - t1)  
 ```  
   
- The previous example performs better than the following example, in which names are not pre-atomized:  
+ Poprzedni przykład wykonuje lepsze niż Poniższy przykład, w którym nazwy nie są wstępnie atomne:  
   
 ```vb  
 Dim t1 As DateTime = DateTime.Now  
@@ -88,5 +88,5 @@ Console.WriteLine("Time to construct:{0}", t2 - t1)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Performance (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
-- [Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)
+- [Wydajność (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [Atomed XName and XNamespace Objects (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)

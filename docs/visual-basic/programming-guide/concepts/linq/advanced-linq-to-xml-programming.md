@@ -9,25 +9,25 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345807"
 ---
-# <a name="advanced-linq-to-xml-programming-visual-basic"></a>Advanced LINQ to XML Programming (Visual Basic)
-This section provides information that will only be applicable to advanced developers in certain [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] scenarios.  
+# <a name="advanced-linq-to-xml-programming-visual-basic"></a>Zaawansowane programowanie LINQ to XML (Visual Basic)
+Ta sekcja zawiera informacje, które będą miały zastosowanie tylko do zaawansowanych deweloperów w niektórych [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] scenariuszach.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Adnotacje LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md)|Describes how to add annotations to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nodes and attributes.|  
-|[LINQ to XML Events (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-events.md)|Describes how to write event handlers for events that occur when you alter an XML tree.|  
-|[Programming with Nodes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-with-nodes.md)|Describes how to query and manipulate nodes at a finer level of granularity than elements and attributes.|  
-|[Mixed Declarative Code/Imperative Code Bugs (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)|Describes the problems that appear when you mix declarative code (queries) with imperative code (code that modifies the XML tree).|  
-|[How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)|Describes how to stream XML fragments from an <xref:System.Xml.XmlReader>. You can use this technique to control the memory footprint of your application.|  
-|[How to: Perform Streaming Transform of Large XML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md)|Describes how to stream XML from an <xref:System.Xml.XmlReader>, transform the XML fragment, and stream the output using <xref:System.Xml.Linq.XStreamingElement>.|  
-|[How to: Read and Write an Encoded Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-read-and-write-an-encoded-document.md)|Describes how to read and write XML documents that are encoded.|  
-|[Using XSLT to Transform an XML Tree (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md)|Describes how to transform an XML tree using XSLT.|  
-|[How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-use-annotation-trees-to-transform-linq-to-xml-trees-in-an-xslt-style.md)|Describes how annotations can be used to facilitate transforms of an XML tree.|  
-|[Serializing Object Graphs that Contain XElement Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|Describes how to serialize object graphs that contain <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XDocument> objects.|  
-|[Powiązanie danych WPF za pomocą LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)|Describes how to use LINQ to XML as the data source for data binding in Windows Presentation Foundation applications.|  
+|[Adnotacje LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md)|Opisuje sposób dodawania adnotacji do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] węzłów i atrybutów.|  
+|[Zdarzenia LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-events.md)|Opisuje sposób pisania programów obsługi zdarzeń dla zdarzeń występujących podczas zmieniania drzewa XML.|  
+|[Programowanie z węzłami (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-with-nodes.md)|Opisuje sposób wykonywania zapytań i manipulowania węzłami przy bardziej szczegółowym poziomie szczegółowości niż elementy i atrybuty.|  
+|[Mieszany kod deklaratywny/niezbędny kod (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)|Opisuje problemy, które pojawiają się podczas mieszania kodu deklaracyjnego (zapytania) z własnym kodem (kod, który modyfikuje drzewo XML).|  
+|[Instrukcje: strumieniowe fragmenty XML z dostępem do informacji nagłówka (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)|Opisuje sposób przesyłania fragmentów XML z <xref:System.Xml.XmlReader>. Ta technika służy do kontrolowania rozmiaru pamięci aplikacji.|  
+|[Instrukcje: wykonywanie transformacji strumieniowej dużych dokumentów XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md)|Opisuje sposób przesyłania strumieniowego XML z <xref:System.Xml.XmlReader>, przekształcania fragmentu kodu XML i przesyłania strumieniowego danych wyjściowych przy użyciu <xref:System.Xml.Linq.XStreamingElement>.|  
+|[Instrukcje: odczytywanie i pisanie zakodowanego dokumentu (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-read-and-write-an-encoded-document.md)|Opisuje sposób odczytywania i pisania zakodowanych dokumentów XML.|  
+|[Przekształcanie drzewa XML (Visual Basic) przy użyciu XSLT](../../../../visual-basic/programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md)|Opisuje sposób przekształcania drzewa XML przy użyciu XSLT.|  
+|[Instrukcje: używanie adnotacji do przekształcania drzew LINQ to XML w stylu XSLT (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-use-annotation-trees-to-transform-linq-to-xml-trees-in-an-xslt-style.md)|Opisuje, jak adnotacje mogą służyć do ułatwienia transformacji drzewa XML.|  
+|[Serializacja grafów obiektów, które zawierają obiekty XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|Opisuje sposób serializacji grafów obiektów, które zawierają <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XDocument> obiektów.|  
+|[Powiązanie danych WPF za pomocą LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)|Opisuje sposób użycia LINQ to XML jako źródła danych dla powiązania danych w aplikacjach Windows Presentation Foundation.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Przewodnik programowania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

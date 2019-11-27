@@ -1,5 +1,5 @@
 ---
-title: Unmanaged types - C# reference
+title: Typy niezarządzane — C# odwołanie
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
@@ -10,33 +10,33 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204472"
 ---
-# <a name="unmanaged-types-c-reference"></a>Unmanaged types (C# reference)
+# <a name="unmanaged-types-c-reference"></a>Typy niezarządzane (C# odwołanie)
 
-A type is an **unmanaged type** if it's any of the following types:
+Typ jest **typem niezarządzanym** , jeśli jest dowolnego z następujących typów:
 
-- `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal`, or `bool`
-- Any [enum](../keywords/enum.md) type
-- Any [pointer](../../programming-guide/unsafe-code-pointers/pointer-types.md) type
-- Any user-defined [struct](../keywords/struct.md) type that contains fields of unmanaged types only and, in C# 7.3 and earlier, is not a constructed type (a type that includes at least one type argument)
+- `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal`lub `bool`
+- Dowolny typ [wyliczeniowy](../keywords/enum.md)
+- Dowolny typ [wskaźnika](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- Dowolny zdefiniowany przez użytkownika typ [struktury](../keywords/struct.md) , który zawiera pola tylko typy niezarządzane i, w C# 7,3 i wcześniejszych, nie jest typem skonstruowanym (typ, który zawiera co najmniej jeden argument typu)
 
-Beginning with C# 7.3, you can use the [`unmanaged` constraint](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) to specify that a type parameter is a non-pointer, non-nullable unmanaged type.
+Począwszy od C# 7,3, można użyć [ograniczenia`unmanaged`](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) , aby określić, że parametr typu jest niewskaźnikiem niebędącym typem niepuszczającym wartości null.
 
-Beginning with C# 8.0, a *constructed* struct type that contains fields of unmanaged types only is also unmanaged, as the following example shows:
+Począwszy od C# 8,0, *skonstruowany* typ struktury, który zawiera pola typów niezarządzanych, również jest niezarządzany, jak pokazano w poniższym przykładzie:
 
 [!code-csharp[unmanaged constructed types](~/samples/csharp/language-reference/builtin-types/UnmanagedTypes.cs#ProgramExample)]
 
-A generic struct may be the source of both unmanaged and not unmanaged constructed types. The preceding example defines a generic struct `Coords<T>` and presents the examples of unmanaged constructed types. The example of not an unmanaged type is `Coords<object>`. It's not unmanaged because it has the fields of the `object` type, which is not unmanaged. If you want *all* constructed types to be unmanaged types, use the `unmanaged` constraint in the definition of a generic struct:
+Struktura generyczna może być źródłem zarówno typów niezarządzanych, jak i niezarządzanych. W poprzednim przykładzie zdefiniowano strukturę generyczną `Coords<T>` i przedstawiono przykłady niezarządzanych typów skonstruowanych. Przykładem niezarządzanego typu jest `Coords<object>`. Nie jest ona zarządzana, ponieważ zawiera pola typu `object`, które nie są zarządzane. Jeśli chcesz, aby *wszystkie* skonstruowane typy były typami niezarządzanymi, użyj ograniczenia `unmanaged` w definicji generycznej struktury:
 
 [!code-csharp[unmanaged constraint in type definition](~/samples/csharp/language-reference/builtin-types/UnmanagedTypes.cs#AlwaysUnmanaged)]
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-For more information, see the [Pointer types](~/_csharplang/spec/unsafe-code.md#pointer-types) section of the [C# language specification](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz sekcję [typy wskaźników](~/_csharplang/spec/unsafe-code.md#pointer-types) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C# reference](../index.md)
+- [C#odwoła](../index.md)
 - [Typy wskaźników](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Pamięć i typy związane z zakresem](../../../standard/memory-and-spans/index.md)
-- [sizeof operator](../operators/sizeof.md)
-- [stackalloc operator](../operators/stackalloc.md)
+- [sizeof — Operator](../operators/sizeof.md)
+- [operator stackalloc](../operators/stackalloc.md)

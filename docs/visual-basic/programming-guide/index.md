@@ -14,21 +14,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345447"
 ---
 # <a name="visual-basic-programming-guide"></a>Przewodnik programowania w Visual Basic
-As with any modern programming language, Visual Basic supports many common programming constructs and language elements. This guide describes all the major elements of programming with Visual Basic.  
+Podobnie jak w przypadku dowolnego nowoczesnego języka programowania, Visual Basic obsługuje wiele popularnych konstrukcji programowania i elementów języka. Ten przewodnik zawiera opis wszystkich głównych elementów programowania za pomocą Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Struktura programu i konwencje związane z kodami](../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Contains documentation on the basic structure and code conventions of Visual Basic, such as naming conventions, comments in code, and limitations within Visual Basic.  
+ Zawiera dokumentację na temat podstawowej struktury i Konwencji kodów Visual Basic, takich jak konwencje nazewnictwa, komentarze w kodzie i ograniczenia w ramach Visual Basic.  
   
- [Visual Basic Language Features](../../visual-basic/programming-guide/language-features/index.md)  
- Provides links to topics that introduce and discuss important features of Visual Basic, including LINQ and XML literals.  
+ [Funkcje języka Visual Basic](../../visual-basic/programming-guide/language-features/index.md)  
+ Zawiera linki do tematów, w których przedstawiono i omówiono ważne funkcje języka Visual Basic, w tym literały LINQ i XML.  
   
  [Usługa międzyoperacyjna modelu COM](../../visual-basic/programming-guide/com-interop/index.md)  
- Explains the interoperability issues associated with creating and using component object model (COM) objects with Visual Basic.  
+ Wyjaśnia problemy ze współdziałaniem związane z tworzeniem i używaniem obiektów COM (Component Object Model) z Visual Basic.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Dokumentacja języka Visual Basic](../../visual-basic/language-reference/index.md)  
- Provides reference information about various aspects of Visual Basic programming.  
+ Zawiera informacje referencyjne na temat różnych aspektów programowania Visual Basic.  
   
- [Visual Basic Command-Line Compiler](../../visual-basic/reference/command-line-compiler/index.md)  
- Offers information on using the Visual Basic command-line compiler, the compiler options, and the Keyword Upgrade tool.
+ [Kompilator wiersza polecenia Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
+ Oferuje informacje dotyczące używania kompilatora wiersza polecenia Visual Basic, opcji kompilatora i narzędzia uaktualniania słów kluczowych.

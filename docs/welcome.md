@@ -22,7 +22,7 @@ Twórz wiele typów aplikacji za pomocą platformy .NET, takich jak chmura, IoT 
 
 Aby uzyskać informacje na temat platformy .NET, zapoznaj się z następującymi blogami:
 
-- [.NET Blog](https://devblogs.microsoft.com/dotnet/)
+- [Blog platformy .NET](https://devblogs.microsoft.com/dotnet/)
 - [Blog ASP.NET](https://devblogs.microsoft.com/aspnet/)
 - [Blog programu Visual Studio](https://devblogs.microsoft.com/visualstudio/)
 - [Zespół Visual Basic](https://devblogs.microsoft.com/vbteam/)
@@ -31,7 +31,7 @@ Należy również przestrzegać najnowszych zdarzeń platformy .NET:
 
 - [Kompilacja firmy Microsoft](https://www.microsoft.com/build)
 - [.NET conf](https://www.dotnetconf.net/)
-- [Microsoft Connect()](https://www.microsoft.com/connectevent)
+- [Microsoft Connect ()](https://www.microsoft.com/connectevent)
 
 Informacje o najnowszych funkcjach dodanych do implementacji platformy .NET i obsługiwanych języków można znaleźć w następujących artykułach:
 

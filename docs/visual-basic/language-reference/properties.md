@@ -13,22 +13,22 @@ ms.locfileid: "74335401"
 ---
 # <a name="properties-visual-basic"></a>Właściwości (Visual Basic)
 
-This page lists the properties that are members of Visual Basic modules. Other properties that are members of specific Visual Basic objects are listed in [Objects](../../visual-basic/language-reference/objects/index.md).  
+Ta strona zawiera listę właściwości, które są członkami modułów Visual Basic. Inne właściwości, które są członkami określonych obiektów Visual Basic, są wymienione w [obiekcie](../../visual-basic/language-reference/objects/index.md).  
   
-## <a name="visual-basic-properties"></a>Visual Basic Properties  
+## <a name="visual-basic-properties"></a>Właściwości Visual Basic  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>|Returns or sets a `String` value representing the current date according to your system.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>|Returns a `Date` value containing the current date and time according to your system.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|Returns a `String` representing the runtime currently in use.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|Returns an `Integer` containing the build version number of the runtime currently in use.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|Returns an `Integer` containing the major version number of the runtime currently in use.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|Returns an `Integer` containing the minor version number of the runtime currently in use.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|Returns or sets a `Date` value containing the current time of day according to your system.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|Returns a `Double` value representing the number of seconds elapsed since midnight.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|Returns or sets a `String` value representing the current time of day according to your system.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|Returns or sets a `Date` value containing the current date according to your system.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>|Zwraca lub ustawia wartość `String` reprezentującą bieżącą datę ustawioną w systemie.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>|Zwraca `Date` wartość zawierającą bieżącą datę i godzinę zgodnie z systemem.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|Zwraca `String` reprezentującą aktualnie używany środowisko uruchomieniowe.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|Zwraca `Integer` zawierający numer wersji kompilacji aktualnie używanego środowiska uruchomieniowego.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|Zwraca `Integer` zawierający numer wersji głównej obecnie używanego środowiska uruchomieniowego.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|Zwraca `Integer` zawierający numer pomocniczej wersji środowiska uruchomieniowego, która jest aktualnie w użyciu.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|Zwraca lub ustawia wartość `Date` zawierającą bieżącą godzinę ustawioną w systemie.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|Zwraca `Double` wartość reprezentującą liczbę sekund, jaka upłynęła od północy.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|Zwraca lub ustawia wartość `String` reprezentującą bieżącą godzinę ustawioną w systemie.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|Zwraca lub ustawia wartość `Date` zawierającą bieżącą datę ustawioną w systemie.|  
   
 ## <a name="see-also"></a>Zobacz także
 

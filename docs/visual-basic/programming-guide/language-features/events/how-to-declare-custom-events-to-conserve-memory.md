@@ -14,16 +14,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345130"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>Porady: deklarowanie zdarzeń niestandardowych w celu zachowywania pamięci (Visual Basic)
-There are several circumstances when it is important that an application keep its memory usage low. Custom events allow the application to use memory only for the events that it handles.  
+Istnieje kilka okoliczności, w których ważna jest niska użycie pamięci przez aplikację. Zdarzenia niestandardowe umożliwiają aplikacji używanie pamięci tylko dla zdarzeń, które obsługuje.  
   
- By default, when a class declares an event, the compiler allocates memory for a field to store the event information. If a class has many unused events, they needlessly take up memory.  
+ Domyślnie, gdy Klasa deklaruje zdarzenie, kompilator przydziela pamięć dla pola do przechowywania informacji o zdarzeniu. Jeśli klasa ma wiele nieużywanych zdarzeń, niepotrzebnie zajmują pamięć.  
   
- Instead of using the default implementation of events that Visual Basic provides, you can use custom events to manage the memory usage more carefully.  
+ Zamiast korzystać z domyślnej implementacji zdarzeń, które Visual Basic zapewnia, można użyć niestandardowych zdarzeń do szczegółowego zarządzania użyciem pamięci.  
   
 ## <a name="example"></a>Przykład  
- In this example, the class uses one instance of the <xref:System.ComponentModel.EventHandlerList> class, stored in the `Events` field, to store information about the events in use. The <xref:System.ComponentModel.EventHandlerList> class is an optimized list class designed to hold delegates.  
+ W tym przykładzie Klasa używa jednego wystąpienia klasy <xref:System.ComponentModel.EventHandlerList>, która jest przechowywana w polu `Events`, do przechowywania informacji o zdarzeniach w użyciu. Klasa <xref:System.ComponentModel.EventHandlerList> jest zoptymalizowaną klasą listy zaprojektowaną do przechowywania delegatów.  
   
- All events in the class use the `Events` field to keep track of what methods are handling each event.  
+ Wszystkie zdarzenia w klasie używają pola `Events`, aby śledzić, które metody obsługują każde zdarzenie.  
   
  [!code-vb[VbVbalrEvents#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#22)]  
   

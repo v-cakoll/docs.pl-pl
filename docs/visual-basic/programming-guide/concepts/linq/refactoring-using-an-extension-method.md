@@ -9,19 +9,19 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346505"
 ---
-# <a name="refactoring-using-an-extension-method-visual-basic"></a>Refactoring Using an Extension Method (Visual Basic)
-This example builds on the previous example, [Retrieving the Text of the Paragraphs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.  
+# <a name="refactoring-using-an-extension-method-visual-basic"></a>Refaktoryzacja przy użyciu metody rozszerzającej (Visual Basic)
+Ten przykład kompiluje się w poprzednim przykładzie, [pobierając tekst akapitów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)przez refaktoryzację łączenia ciągów przy użyciu czystej funkcji, która jest zaimplementowana jako Metoda rozszerzenia.  
   
- The previous example used the <xref:System.Linq.Enumerable.Aggregate%2A> standard query operator to concatenate multiple strings into one string. However, it is more convenient to write an extension method to do this, because the resulting query smaller and more simple.  
+ W poprzednim przykładzie użyto standardowego operatora zapytania <xref:System.Linq.Enumerable.Aggregate%2A>, aby połączyć wiele ciągów w jeden ciąg. Jednak bardziej wygodne jest zapisanie metody rozszerzającej, ponieważ wyniki zapytania są mniejsze i prostsze.  
   
 ## <a name="example"></a>Przykład  
- This example processes a WordprocessingML document, retrieving the paragraphs, the style of each paragraph, and the text of each paragraph. This example builds on the previous examples in this tutorial.  
+ Ten przykład przetwarza dokument WordprocessingML, pobierając akapity, styl każdego akapitu i tekst każdego akapitu. Ten przykład kompiluje się zgodnie z poprzednimi przykładami w tym samouczku.  
   
- The example contains multiple overloads of the `StringConcatenate` method.  
+ Przykład zawiera wiele przeciążeń metody `StringConcatenate`.  
   
- You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu można znaleźć w temacie [Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- This example uses classes from the WindowsBase assembly. It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.  
+ W tym przykładzie zastosowano klasy z zestawu 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 <System.Runtime.CompilerServices.Extension()> _  
@@ -65,9 +65,9 @@ End Function
 ```  
   
 ## <a name="example"></a>Przykład  
- There are four overloads of the `StringConcatenate` method. One overload simply takes a collection of strings and returns a single string. Another overload can take a collection of any type, and a delegate that projects from a singleton of the collection to a string. There are two more overloads that allow you to specify a separator string.  
+ Istnieją cztery przeciążenia metody `StringConcatenate`. Jedno Przeciążenie po prostu Pobiera kolekcję ciągów i zwraca jeden ciąg. Inne Przeciążenie może pobrać kolekcję dowolnego typu i delegata, który projektuje z pojedynczej kolekcji do ciągu. Istnieją dwa więcej przeciążenia, które umożliwiają określenie ciągu separatora.  
   
- The following code uses all four overloads.  
+ Poniższy kod używa wszystkich czterech przeciążeń.  
   
 ```vb  
 Dim numbers As String() = {"one", "two", "three"}  
@@ -90,7 +90,7 @@ one:two:three:
 ```  
   
 ## <a name="example"></a>Przykład  
- Now, the example can be modified to take advantage of the new extension method:  
+ Teraz można zmodyfikować przykład, aby skorzystać z nowej metody rozszerzenia:  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -216,7 +216,7 @@ Module Module1
 End Module  
 ```  
   
- This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (Visual Basic)](creating-the-source-office-open-xml-document.md).
+ Ten przykład generuje następujące dane wyjściowe w przypadku zastosowania do dokumentu opisanego w temacie [Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)](creating-the-source-office-open-xml-document.md).
   
 ```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -236,14 +236,14 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
- Note that this refactoring is a variant of refactoring into a pure function. The next topic will introduce the idea of factoring into pure functions in more detail.  
+ Należy zauważyć, że Refaktoryzacja jest odmianą refaktoryzacji w czystej funkcji. W następnym temacie zawarto informacje na temat sposobu refaktoryzacji do czystych funkcji.  
   
 ## <a name="next-steps"></a>Następne kroki  
- The next example shows how to refactor this code in another way, by using pure functions:  
+ W następnym przykładzie pokazano, jak refaktoryzacji ten kod w inny sposób przy użyciu czystych funkcji:  
   
-- [Refactoring Using a Pure Function (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [Refaktoryzacja przy użyciu czystej funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refaktoryzacja do czystych funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

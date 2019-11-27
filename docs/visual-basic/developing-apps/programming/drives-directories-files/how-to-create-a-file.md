@@ -14,7 +14,7 @@ ms.locfileid: "74348797"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>Porady: tworzenie pliku w Visual Basic
 
-This example creates an empty text file at the specified path using the <xref:System.IO.File.Create%2A> method in the <xref:System.IO.File> class.  
+Ten przykład umożliwia utworzenie pustego pliku tekstowego w określonej ścieżce przy użyciu metody <xref:System.IO.File.Create%2A> w klasie <xref:System.IO.File>.  
   
 ## <a name="example"></a>Przykład  
 
@@ -22,37 +22,37 @@ This example creates an empty text file at the specified path using the <xref:Sy
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
 
- Use the `file` variable to write to the file.  
+ Użyj zmiennej `file` do zapisu w pliku.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
 
- If the file already exists, it is replaced.  
+ Jeśli plik już istnieje, zostanie zastąpiony.  
   
  Następujące warunki mogą spowodować wyjątek:  
   
-- The path name is malformed. For example, it contains illegal characters or is only white space (<xref:System.ArgumentException>).  
+- Nazwa ścieżki jest źle sformułowana. Na przykład zawiera niedozwolone znaki lub jest tylko białym znakiem (<xref:System.ArgumentException>).  
   
-- The path is read-only (<xref:System.IO.IOException>).  
+- Ścieżka jest tylko do odczytu (<xref:System.IO.IOException>).  
   
-- The path name is `Nothing` (<xref:System.ArgumentNullException>).  
+- Nazwa ścieżki to `Nothing` (<xref:System.ArgumentNullException>).  
   
-- The path name is too long (<xref:System.IO.PathTooLongException>).  
+- Nazwa ścieżki jest za długa (<xref:System.IO.PathTooLongException>).  
   
-- The path is invalid (<xref:System.IO.DirectoryNotFoundException>).  
+- Ścieżka jest nieprawidłowa (<xref:System.IO.DirectoryNotFoundException>).  
   
-- The path is only a colon ":" (<xref:System.NotSupportedException>).  
+- Ścieżka ma tylko dwukropek ":" (<xref:System.NotSupportedException>).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
 
- A <xref:System.Security.SecurityException> may be thrown in partial-trust environments.  
+ <xref:System.Security.SecurityException> może być zgłaszane w środowiskach częściowego zaufania.  
   
- The call to the <xref:System.IO.File.Create%2A> method requires <xref:System.Security.Permissions.FileIOPermission>.  
+ Wywołanie metody <xref:System.IO.File.Create%2A> wymaga <xref:System.Security.Permissions.FileIOPermission>.  
   
- An <xref:System.UnauthorizedAccessException> is thrown if the user does not have permission to create the file.  
+ Zostanie wygenerowany <xref:System.UnauthorizedAccessException>, jeśli użytkownik nie ma uprawnienia do tworzenia pliku.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.IO>
 - <xref:System.IO.File.Create%2A>
-- [Using Libraries from Partially Trusted Code](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)
-- [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md)
+- [Korzystanie z bibliotek z częściowo zaufanego kodu](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)
+- [Podstawowe informacje o zabezpieczeniach dostępu kodu](../../../../framework/misc/code-access-security-basics.md)

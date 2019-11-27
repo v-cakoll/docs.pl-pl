@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create a Document with Namespaces (LINQ to XML)'
+title: 'Instrukcje: Tworzenie dokumentu z przestrzeniami nazw (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
 ms.openlocfilehash: bbd23840b0356cf14d2c7d6cb71591fe6461a8bd
@@ -9,21 +9,21 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332587"
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>How to: Create a Document with Namespaces (LINQ to XML) (Visual Basic)
-This topic shows how to create a document with namespaces in Visual Basic.  
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Instrukcje: Tworzenie dokumentu z przestrzeniami nazw (LINQ to XML) (Visual Basic)
+W tym temacie przedstawiono sposób tworzenia dokumentu z przestrzeniami nazw w Visual Basic.  
   
- When using XML literals in Visual Basic, users can define one global default XML namespace. This namespace is the default namespace for both XML literals and XML properties. The default XML namespace can be defined at either the project level or the file level. If it is defined at the file level, it overrides the default namespace at the project level.  
+ W przypadku używania literałów XML w Visual Basic użytkownicy mogą definiować jedną globalną domyślną przestrzeń nazw XML. Ta przestrzeń nazw jest domyślną przestrzenią nazw dla literałów XML i właściwości XML. Domyślną przestrzeń nazw XML można zdefiniować na poziomie projektu lub na poziomie pliku. Jeśli jest zdefiniowany na poziomie pliku, zastępuje domyślny obszar nazw na poziomie projektu.  
   
- You can also define other namespaces, and specify the namespace prefixes for those namespaces.  
+ Można również zdefiniować inne przestrzenie nazw i określić prefiksy przestrzeni nazw dla tych przestrzeni nazw.  
   
- You define both default namespaces and namespaces with a prefix by using the `Imports` keyword.  
+ Można zdefiniować zarówno domyślne przestrzenie nazw, jak i przestrzenie nazw z prefiksem za pomocą słowa kluczowego `Imports`.  
   
- For more information, see [Introduction to XML Literals in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
+ Aby uzyskać więcej informacji, zobacz [wprowadzenie do literałów XML w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
   
- Note that the default XML namespace only applies to elements and not to attributes. Attributes are by default always in no namespace. However, you can use a namespace prefix to put an attribute in a namespace.  
+ Należy zauważyć, że domyślna przestrzeń nazw XML dotyczy tylko elementów i nie do atrybutów. Atrybuty są domyślnie zawsze w obszarze brak przestrzeni nazw. Można jednak użyć prefiksu przestrzeni nazw, aby umieścić atrybut w przestrzeni nazw.  
   
 ## <a name="example"></a>Przykład  
- This example creates a document that contains a namespace.  
+ Ten przykład tworzy dokument zawierający przestrzeń nazw.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -47,7 +47,7 @@ End Module
 ```  
   
 ## <a name="example"></a>Przykład  
- This example creates a document that contains two namespaces, one of which is the default namespace.  
+ W tym przykładzie tworzony jest dokument zawierający dwie przestrzenie nazw, z których jedna jest domyślną przestrzenią nazw.  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -77,9 +77,9 @@ End Module
 ```  
   
 ## <a name="example"></a>Przykład  
- The following example creates a document that contains multiple namespaces, both with namespace prefixes.  
+ Poniższy przykład tworzy dokument zawierający wiele przestrzeni nazw, zarówno z prefiksami przestrzeni nazw.  
   
- When serializing an XML tree, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] emits namespace declarations as required so that each element is in its designated namespace.  
+ Podczas serializowania drzewa XML [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] emituje deklaracje przestrzeni nazw zgodnie z wymaganiami, aby każdy element był w wyznaczeniu przestrzeni nazw.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -116,4 +116,4 @@ End Module
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Przegląd przestrzeni nazw (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

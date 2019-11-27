@@ -19,17 +19,17 @@ ms.locfileid: "74343964"
 ---
 # <a name="object-data-type"></a>Object — typ danych
 
-Holds addresses that refer to objects. You can assign any reference type (string, array, class, or interface) to an `Object` variable. An `Object` variable can also refer to data of any value type (numeric, `Boolean`, `Char`, `Date`, structure, or enumeration).
+Przechowuje adresy odwołujące się do obiektów. Do zmiennej `Object` można przypisać dowolny typ referencyjny (ciąg, tablicę, klasę lub interfejs). Zmienna `Object` może odwoływać się również do danych dowolnego typu wartości (numeryczne, `Boolean`, `Char`, `Date`, struktura lub Wyliczenie).
 
 ## <a name="remarks"></a>Uwagi
 
-The `Object` data type can point to data of any data type, including any object instance your application recognizes. Use `Object` when you do not know at compile time what data type the variable might point to.
+Typ danych `Object` może wskazywać na dane dowolnego typu danych, łącznie z każdym wystąpieniem obiektu rozpoznawanym przez aplikację. Użyj `Object`, gdy nie wiesz w czasie kompilacji, jakie dane może wskazywać zmienna.
 
-The default value of `Object` is `Nothing` (a null reference).
+Wartość domyślna `Object` jest `Nothing` (odwołanie o wartości null).
 
 ## <a name="data-types"></a>Typy danych
 
-You can assign a variable, constant, or expression of any data type to an `Object` variable. To determine the data type an `Object` variable currently refers to, you can use the <xref:System.Type.GetTypeCode%2A> method of the <xref:System.Type?displayProperty=nameWithType> class. Ilustruje to poniższy przykład.
+Do zmiennej `Object` można przypisać zmienną, stałą lub wyrażenie dowolnego typu danych. Aby określić typ danych, do których odwołuje się `Object` zmienna, można użyć metody <xref:System.Type.GetTypeCode%2A> klasy <xref:System.Type?displayProperty=nameWithType>. Ilustruje to poniższy przykład.
 
 ```vb
 Dim myObject As Object
@@ -38,31 +38,31 @@ Dim datTyp As Integer
 datTyp = Type.GetTypeCode(myObject.GetType())
 ```
 
-The `Object` data type is a reference type. However, Visual Basic treats an `Object` variable as a value type when it refers to data of a value type.
+Typ danych `Object` jest typem referencyjnym. Jednak Visual Basic traktuje zmienną `Object` jako typ wartości, gdy odwołuje się ona do danych typu wartości.
 
 ## <a name="storage"></a>Magazyn
 
-Whatever data type it refers to, an `Object` variable does not contain the data value itself, but rather a pointer to the value. It always uses four bytes in computer memory, but this does not include the storage for the data representing the value of the variable. Because of the code that uses the pointer to locate the data, `Object` variables holding value types are slightly slower to access than explicitly typed variables.
+Niezależnie od tego, jaki typ danych odwołuje się do, zmienna `Object` nie zawiera samej wartości danych, ale raczej wskaźnikiem do wartości. Zawsze używa czterech bajtów w pamięci komputera, ale nie obejmuje to magazynu dla danych reprezentujących wartość zmiennej. Ze względu na kod, który używa wskaźnika do lokalizowania danych, zmienne `Object` przechowujące typy wartości są nieco wolniejsze w celu uzyskania dostępu niż jawnie wpisane zmienne.
 
 ## <a name="programming-tips"></a>Porady dla programistów
 
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that pointer types in other environments are not compatible with the Visual Basic `Object` type.
+- **Zagadnienia dotyczące międzyoperacyjnych.** Jeśli masz połączenie ze składnikami niezapisanymi dla .NET Framework, na przykład obiekty automatyzacji lub COM, pamiętaj, że typy wskaźnika w innych środowiskach nie są zgodne z typem `Object` Visual Basic.
 
-- **Performance.** A variable you declare with the `Object` type is flexible enough to contain a reference to any object. However, when you invoke a method or property on such a variable, you always incur *late binding* (at run time). To force *early binding* (at compile time) and better performance, declare the variable with a specific class name, or cast it to the specific data type.
+- **Skuteczności.** Zmienna zadeklarowana z typem `Object` jest wystarczająco elastyczna, aby zawierała odwołanie do dowolnego obiektu. Jednak po wywołaniu metody lub właściwości w takiej zmiennej zawsze naliczane są *późne powiązania* (w czasie wykonywania). Aby wymusić *wczesne wiązanie* (w czasie kompilacji) i lepszą wydajność, należy zadeklarować zmienną z określoną nazwą klasy lub rzutować ją na określony typ danych.
 
-  When you declare an object variable, try to use a specific class type, for example <xref:System.OperatingSystem>, instead of the generalized `Object` type. You should also use the most specific class available, such as <xref:System.Windows.Forms.TextBox> instead of <xref:System.Windows.Forms.Control>, so that you can access its properties and methods. You can usually use the **Classes** list in the **Object Browser** to find available class names.
+  Podczas deklarowania zmiennej obiektu spróbuj użyć konkretnego typu klasy, na przykład <xref:System.OperatingSystem>, zamiast uogólnionego typu `Object`. Należy również użyć najbardziej konkretnej dostępnej klasy, takiej jak <xref:System.Windows.Forms.TextBox>, a nie <xref:System.Windows.Forms.Control>, aby można było uzyskać dostęp do jej właściwości i metod. Zazwyczaj można użyć listy **klas** w **Przeglądarka obiektów** , aby znaleźć dostępne nazwy klas.
 
-- **Widening.** All data types and all reference types widen to the `Object` data type. This means you can convert any type to `Object` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
+- **Rozszerzającą.** Wszystkie typy danych i wszystkie typy odwołań rozszerzają się do typu danych `Object`. Oznacza to, że można skonwertować dowolny typ do `Object` bez napotkania <xref:System.OverflowException?displayProperty=nameWithType> błędu.
 
-  However, if you convert between value types and `Object`, Visual Basic performs operations called *boxing* and *unboxing*, which make execution slower.
+  Jednak w przypadku konwersji między typami wartości i `Object`, Visual Basic wykonuje operacje nazywane *opakowaniem* i *rozpakowywaniem*, co powoduje wolniejsze wykonywanie.
 
-- **Type Characters.** `Object` has no literal type character or identifier type character.
+- **Znaki typu.** `Object` nie ma znaku typu literału lub typu identyfikatora.
 
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Object?displayProperty=nameWithType> class.
+- **Typ struktury.** Odpowiedni typ w .NET Framework jest klasą <xref:System.Object?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Przykład
 
-The following example illustrates an `Object` variable pointing to an object instance.
+Poniższy przykład ilustruje zmienną `Object` wskazującą na wystąpienie obiektu.
 
 ```vb
 Dim objDb As Object

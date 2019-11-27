@@ -9,30 +9,30 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344421"
 ---
-# <a name="language-integrated-query-linq-visual-basic"></a>Language-Integrated Query (LINQ) (Visual Basic)
-LINQ is a set of features that extends powerful query capabilities to the language syntax of Visual Basic. LINQ introduces standard, easily-learned patterns for querying and updating data, and the technology can be extended to support potentially any kind of data store.  The .NET Framework includes LINQ provider assemblies that enable the use of LINQ with .NET Framework collections, SQL Server databases, ADO.NET Datasets, and XML documents.  
+# <a name="language-integrated-query-linq-visual-basic"></a>Zapytanie zintegrowane z językiem (LINQ) (Visual Basic)
+LINQ to zestaw funkcji, które rozszerzają zaawansowane możliwości zapytań do składni języka Visual Basic. LINQ wprowadza standardowe, łatwo wyznanie wzorce do wykonywania zapytań i aktualizowania danych, a technologia może zostać rozszerzona w celu obsługi potencjalnie dowolnego rodzaju magazynu danych.  .NET Framework obejmuje zestawy dostawcy LINQ, które umożliwiają korzystanie z LINQ z kolekcjami .NET Framework, bazami danych SQL Server, ADO.NETmi zbiorami i dokumentami XML.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Introduction to LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
- Provides a general introduction to the kinds of applications that you can write and the kinds of problems that you can solve with LINQ queries.  
+ [Wprowadzenie do LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
+ Zawiera ogólne wprowadzenie do rodzajów aplikacji, które można napisać, oraz rodzajów problemów, które można rozwiązać za pomocą zapytań LINQ.  
   
- [Getting Started with LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- Describes the basic facts you should know in order to understand the Visual Basic documentation and samples.  
+ [Wprowadzenie ze składnikami LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ W tym artykule opisano podstawowe fakty, które należy znać, aby zrozumieć Visual Basic dokumentację i przykłady.  
   
- [Visual Studio IDE and Tools Support for LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  
- Describes Visual Studio's Object Relational Designer, debugger support for queries, and other IDE features related to LINQ.  
+ [Środowisko IDE i narzędzia programu Visual Studio obsługujące składnik LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  
+ Opisuje Object Relational Designer programu Visual Studio, obsługę debugera dla zapytań i inne funkcje środowiska IDE związane z LINQ.  
   
- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [Standardowe operatory zapytań — Omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  Zawiera wprowadzenie do standardowe operatorów zapytań. Zawiera również łącza do tematów, w których jest więcej informacji na temat każdego rodzaju operacji wykonywanych za pomocą kwerend.  
   
  [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- Includes links to topics that explain how to use LINQ to Objects to access in-memory data structures,  
+ Zawiera linki do tematów, które wyjaśniają, jak używać LINQ to Objects do uzyskiwania dostępu do struktur danych w pamięci.  
   
  [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
- Includes links to topics that explain how to use LINQ to XML, which provides the in-memory document modification capabilities of the Document Object Model (DOM), and supports LINQ query expressions.  
+ Zawiera linki do tematów, które wyjaśniają, jak używać LINQ to XML, które udostępniają możliwości modyfikacji dokumentów w pamięci Document Object Model (DOM) i obsługują wyrażenia zapytań LINQ.  
   
  [LINQ to ADO.NET (strona portalu)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-adonet-portal-page.md)  
- Provides an entry point for documentation about LINQ to DataSet, LINQ to SQL, and LINQ to Entities. LINQ to DataSet enables you to build richer query capabilities into <xref:System.Data.DataSet> by using the same query functionality that is available for other data sources. LINQ to SQL provides a run-time infrastructure for managing relational data as objects. LINQ to Entities enables developers to write queries against the Entity Framework conceptual model by using C#.  
+ Udostępnia punkt wejścia dokumentacji dotyczącej LINQ to DataSet, LINQ to SQL i LINQ to Entities. LINQ to DataSet umożliwia tworzenie bogatszych możliwości zapytań do <xref:System.Data.DataSet> za pomocą tej samej funkcji zapytania, która jest dostępna dla innych źródeł danych. LINQ to SQL udostępnia infrastrukturę czasu wykonywania do zarządzania danymi relacyjnymi jako obiekty. LINQ to Entities pozwala deweloperom pisać zapytania względem modelu koncepcyjnego Entity Framework przy użyciu C#.  
   
  [Włączanie źródła danych dla zapytań LINQ](../../../../visual-basic/programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying.md)  
- Provides an introduction to custom LINQ providers, LINQ expression trees, and other ways to extend LINQ.
+ Zawiera wprowadzenie do niestandardowych dostawców LINQ, drzew wyrażeń LINQ i inne sposoby rozszerzając LINQ.

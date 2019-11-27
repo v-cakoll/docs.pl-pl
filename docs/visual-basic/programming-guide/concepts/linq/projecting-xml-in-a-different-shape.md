@@ -9,17 +9,17 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347145"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projecting XML in a Different Shape (Visual Basic)
-This topic shows an example of projecting XML that is in a different shape than the source XML.  
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projekcja XML w innym kształcie (Visual Basic)
+W tym temacie przedstawiono przykład projektu XML, który znajduje się w innym kształcie niż źródłowy kod XML.  
   
- Many typical XML transformations consist of chained queries, as in this example. It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.  
+ Wiele typowych transformacji XML składają się z kwerend łańcucha, jak w tym przykładzie. Często zaczynają się od pewnego formatu XML, wyniki pośredniego projektu jako kolekcje typów anonimowych lub nazwanych typów, a następnie na końcu projektuje wyniki z powrotem do pliku XML, który znajduje się w całkowicie innym kształcie niż źródłowy kod XML.  
   
 ## <a name="example"></a>Przykład  
- This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document. It also identifies the style and text of each paragraph. Finally, the example projects XML with a different shape. This example builds on the previous examples in this tutorial. The new statement that does the projection is called out in comments in the code below.  
+ Ten przykład przetwarza dokument WordprocessingML, pobierając węzły akapitu z dokumentu WordprocessingML. Identyfikuje także styl i tekst każdego akapitu. Na koniec przykładowe projekty XML z innym kształtem. Ten przykład kompiluje się zgodnie z poprzednimi przykładami w tym samouczku. Nowa instrukcja, która wykonuje projekcję, jest wywoływana w komentarzach w kodzie poniżej.  
   
- For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu, zobacz [Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- This example uses classes from the WindowsBase assembly. It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.  
+ W tym przykładzie zastosowano klasy z zestawu 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -228,10 +228,10 @@ End Module
 ```  
   
 ## <a name="next-steps"></a>Następne kroki  
- In the next example, you'll query to find all the text in a Word document:  
+ W następnym przykładzie utworzysz zapytanie, aby znaleźć cały tekst w dokumencie programu Word:  
   
-- [Finding Text in Word Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Znajdowanie tekstu w dokumentach programu Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

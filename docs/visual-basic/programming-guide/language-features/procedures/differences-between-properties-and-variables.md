@@ -22,27 +22,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341221"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Różnice pomiędzy właściwościami i zmiennymi w Visual Basic
-Variables and properties both represent values that you can access. However, there are differences in storage and implementation.  
+Zmienne i właściwości reprezentują wartości, do których można uzyskać dostęp. Istnieją jednak różnice dotyczące magazynu i implementacji.  
   
 ## <a name="variables"></a>Zmienne  
- A *variable* corresponds directly to a memory location. You define a variable with a single declaration statement. A variable can be a *local variable*, defined inside a procedure and available only within that procedure, or it can be a *member variable*, defined in a module, class, or structure but not inside any procedure. A member variable is also called a *field*.  
+ *Zmienna* odnosi się bezpośrednio do lokalizacji w pamięci. Należy zdefiniować zmienną z pojedynczą instrukcją deklaracji. Zmienna może być *zmienną lokalną*, zdefiniowaną wewnątrz procedury i dostępną tylko w ramach tej procedury lub może być *zmienną członkowską*, zdefiniowaną w module, klasie lub strukturze, ale nie wewnątrz żadnej procedury. Zmienna członkowska jest również wywoływana jako *pole*.  
   
 ## <a name="properties"></a>Właściwości  
- A *property* is a data element defined on a module, class, or structure. You define a property with a code block between the `Property` and `End Property` statements. The code block contains a `Get` procedure, a `Set` procedure, or both. These procedures are called *property procedures* or *property accessors*. In addition to retrieving or storing the property's value, they can also perform custom actions, such as updating an access counter.  
+ *Właściwość* jest elementem danych zdefiniowanym dla modułu, klasy lub struktury. Należy zdefiniować właściwość z blokiem kodu między instrukcjami `Property` i `End Property`. Blok kodu zawiera procedurę `Get`, procedurę `Set` lub obie te metody. Te procedury są nazywane *procedurami właściwości* lub metodami *dostępu do właściwości*. Oprócz pobierania lub przechowywania wartości właściwości, mogą również wykonywać akcje niestandardowe, takie jak aktualizowanie licznika dostępu.  
   
-## <a name="differences"></a>Differences  
- The following table shows some important differences between variables and properties.  
+## <a name="differences"></a>Wynikających  
+ W poniższej tabeli przedstawiono kilka ważnych różnic między zmiennymi i właściwościami.  
   
-|Point of difference|Zmienna|Właściwość|  
+|Punkt różnicy|Zmienna|Właściwość|  
 |-------------------------|--------------|--------------|  
-|Declaration|Single declaration statement|Series of statements in a code block|  
-|Implementacja|Single storage location|Executable code (property procedures)|  
-|Magazyn|Directly associated with variable's value|Typically has internal storage not available outside the property's containing class or module<br /><br /> Property's value might or might not exist as a stored element <sup>1</sup>|  
-|Executable code|Brak|Must have at least one procedure|  
-|Read and write access|Read/write or read-only|Read/write, read-only, or write-only|  
-|Custom actions (in addition to accepting or returning value)|Not possible|Can be performed as part of setting or retrieving property value|  
+|Oświadczeń|Single deklaracji — instrukcja|Seria instrukcji w bloku kodu|  
+|Implementacja|Lokalizacja jednego magazynu|Kod wykonywalny (procedury właściwości)|  
+|Magazyn|Bezpośrednio skojarzone z wartością zmiennej|Zwykle magazyn wewnętrzny nie jest dostępny poza klasą lub modułem zawierającym Właściwość<br /><br /> Wartość właściwości może być lub nie istnieć jako składowa elementu <sup>1</sup>|  
+|Kod wykonywalny|Brak|Musi zawierać co najmniej jedną procedurę|  
+|Dostęp do odczytu i zapisu|Odczyt/zapis lub tylko do odczytu|Odczyt/zapis, tylko do odczytu lub tylko do zapisu|  
+|Akcje niestandardowe (oprócz akceptowania lub zwracania wartości)|Niemożliwa|Można wykonać jako część ustawienia lub pobrać wartość właściwości|  
   
- <sup>1</sup> Unlike a variable, the value of a property might not correspond directly to a single item of storage. The storage might be split into pieces for convenience or security, or the value might be stored in an encrypted form. In these cases the `Get` procedure would assemble the pieces or decrypt the stored value, and the `Set` procedure would encrypt the new value or split it into the constituent storage. A property value might be ephemeral, like time of day, in which case the `Get` procedure would calculate it on the fly each time you access the property.  
+ <sup>1</sup> w przeciwieństwie do zmiennej, wartość właściwości może nie odpowiadać bezpośrednio na pojedynczy element magazynu. Magazyn może być podzielony na fragmenty dla wygody lub bezpieczeństwa lub wartość może być przechowywana w postaci zaszyfrowanej. W takich przypadkach procedura `Get` może złożyć fragmenty lub odszyfrować przechowywaną wartość, a procedura `Set` zaszyfruje nową wartość lub wyodrębni ją do magazynu elementów. Wartość właściwości może być wyliczeniem nieulotnym, takim jak czas dnia, a w takim przypadku procedura `Get` będzie obliczać ją na bieżąco przy każdej próbie uzyskania dostępu do właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -53,6 +53,6 @@ Variables and properties both represent values that you can access. However, the
 - [Instrukcje: tworzenie właściwości](./how-to-create-a-property.md)
 - [Instrukcje: deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Instrukcje: wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Instrukcje: deklarowanie i wywoływanie właściwości domyślnej w Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Instrukcje: umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)
 - [Instrukcje: pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)

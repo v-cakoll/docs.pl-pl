@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431376"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>IMetaDataImport2::GetGenericParamConstraintProps — Metoda
-Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.  
+Pobiera metadane skojarzone z ograniczeniem parametru generycznego reprezentowane przez określony token ograniczenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,22 +37,22 @@ HRESULT GetGenericParamConstraintProps (
   
 ## <a name="parameters"></a>Parametry  
  `gpc`  
- [in] The token to the generic parameter constraint for which to return the metadata.  
+ podczas Token do ograniczenia parametru ogólnego, dla którego mają zostać zwrócone metadane.  
   
  `ptGenericParam`  
- [out] A pointer to the token that represents the generic parameter that is constrained.  
+ określoną Wskaźnik do tokenu, który reprezentuje parametr ogólny, który jest ograniczony.  
   
  `ptkConstraintType`  
- [out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.  
+ określoną Wskaźnik do tokenu TypeDef, TypeRef lub TypeSpec, który reprezentuje ograniczenie dla `ptGenericParam`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

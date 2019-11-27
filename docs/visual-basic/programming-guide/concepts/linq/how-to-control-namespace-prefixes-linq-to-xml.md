@@ -1,5 +1,5 @@
 ---
-title: 'How to: Control Namespace Prefixes (LINQ to XML)'
+title: 'Instrukcje: kontrolowanie prefiksów przestrzeni nazw (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
 ms.openlocfilehash: 5ba415452a8671466c3a4c71a88731e5bd3cda60
@@ -9,13 +9,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348377"
 ---
-# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>How to: Control Namespace Prefixes (Visual Basic) (LINQ to XML)
-This topic describes how you can control namespace prefixes.  
+# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Instrukcje: kontrolowanie prefiksów przestrzeni nazw (Visual Basic) (LINQ to XML)
+W tym temacie opisano sposób kontrolowania prefiksów przestrzeni nazw.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- This example declares two namespaces. It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.  
+ Ten przykład deklaruje dwie przestrzenie nazw. Określa, że przestrzeń nazw `http://www.adventure-works.com` ma prefiks `aw`i że przestrzeń nazw `www.fourthcoffee.com` ma prefiks `fc`.  
   
 ### <a name="code"></a>Kod  
   
@@ -55,4 +55,4 @@ End Module
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Przegląd przestrzeni nazw (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

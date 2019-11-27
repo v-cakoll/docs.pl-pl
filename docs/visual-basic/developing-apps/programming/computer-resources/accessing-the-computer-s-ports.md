@@ -14,37 +14,37 @@ ms.locfileid: "74329600"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>Uzyskiwanie dostępu do portów komputera (Visual Basic)
 
-The `My.Computer.Ports` object provides a property and a method for accessing the computer's serial ports.  
+Obiekt `My.Computer.Ports` zawiera właściwość i metodę uzyskiwania dostępu do portów szeregowych komputera.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
  [Instrukcje: wyświetlanie dostępnych portów seryjnych](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
- Demonstrates how to show available serial ports.  
+ Demonstruje sposób wyświetlania dostępnych portów szeregowych.  
   
  [Instrukcje: modemy dostępowe powiązane z portami seryjnymi](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
- Demonstrates how to dial a modem attached to the serial port of a computer.  
+ Pokazuje, jak wybrać modem podłączony do portu szeregowego komputera.  
   
  [Instrukcje: wysyłanie ciągów do portów seryjnych](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
- Demonstrates how to send a string to a computer's serial port.  
+ Pokazuje, jak wysłać ciąg do portu szeregowego komputera.  
   
  [Instrukcje: odbieranie ciągów z portów seryjnych](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
- Demonstrates how to receive a string from a computer's serial port.  
+ Pokazuje, jak odebrać ciąg z portu szeregowego komputera.  
   
  [Operacje związane z portem w oprogramowaniu .NET Framework](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
- Describes how to use the .NET Framework when performing port operations.  
+ Opisuje sposób używania .NET Framework podczas wykonywania operacji na portach.  
   
 ## <a name="reference"></a>Tematy pomocy  
 
  <xref:Microsoft.VisualBasic.Devices.Ports>  
- Describes the `My.Computer.Ports` object and its members.  
+ Opisuje obiekt `My.Computer.Ports` i jego elementy członkowskie.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames>  
- Describes the `SerialPortNames` property, which gets a collection of the names of the serial ports on the computer.  
+ Opisuje właściwość `SerialPortNames`, która pobiera kolekcję nazw portów szeregowych na komputerze.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  
- Describes the `OpenSerialPort` method, which creates and opens a <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> object.  
+ Opisuje metodę `OpenSerialPort`, która tworzy i otwiera obiekt <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
  <xref:System.IO.Ports.SerialPort>  
- Describes the .NET Framework <xref:System.IO.Ports.SerialPort> class.
+ Opisuje klasę <xref:System.IO.Ports.SerialPort> .NET Framework.

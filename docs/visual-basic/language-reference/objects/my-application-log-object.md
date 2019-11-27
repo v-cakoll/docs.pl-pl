@@ -12,22 +12,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344134"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log — Obiekt
-Provides a property and methods to write event and exception information to the application's log listeners.  
+Zawiera właściwości i metody zapisu informacji o zdarzeniu i wyjątku w detektorach dzienników aplikacji.  
   
 ## <a name="remarks"></a>Uwagi  
- For information about the methods and properties of the `My.Application.Log` object, see <xref:Microsoft.VisualBasic.Logging.Log>.  
+ Aby uzyskać informacje o metodach i właściwościach obiektu `My.Application.Log`, zobacz <xref:Microsoft.VisualBasic.Logging.Log>.  
   
- For more information, see [Logging Information from the Application](../../../visual-basic/developing-apps/programming/log-info/index.md).  
+ Aby uzyskać więcej informacji, zobacz [Rejestrowanie informacji z aplikacji](../../../visual-basic/developing-apps/programming/log-info/index.md).  
   
 > [!NOTE]
-> You can also use classes in the .NET Framework to log information from your application. For more information, see [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).  
+> W .NET Framework można także użyć klas do rejestrowania informacji z aplikacji. Aby uzyskać więcej informacji, zobacz [śledzenie i Instrumentacja aplikacji](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** <xref:Microsoft.VisualBasic.Logging>  
+ **Przestrzeń nazw:** <xref:Microsoft.VisualBasic.Logging>  
   
- **Class:** <xref:Microsoft.VisualBasic.Logging.Log>  
+ **Klasa:** <xref:Microsoft.VisualBasic.Logging.Log>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

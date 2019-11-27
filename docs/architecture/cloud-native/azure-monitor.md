@@ -76,5 +76,5 @@ W miarę identyfikowania typowych przyczyn alertów można rozszerzyć alerty z 
 Azure Monitor automatycznie wykorzystuje Uczenie maszynowe do zrozumienia normalnych parametrów operacyjnych wdrożonych aplikacji. Dzięki temu można wykryć usługi, które działają poza ich normalnymi parametrami. Na przykład typowy ruch w dniu tygodnia w witrynie może wynosić 10 000 żądań na minutę. A następnie w danym tygodniu nagle liczba żądań trafi o wysoce nietypowe żądania 20 000 na minutę. [Inteligentne wykrywanie](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) będzie zauważyć takie odróżnienie od normy i wyzwolenie alertu. W tym samym czasie analiza trendu jest na tyle inteligentna, aby uniknąć zapłonu fałszywych wartości dodatnich, gdy oczekiwane jest obciążenie ruchem.
 
 >[!div class="step-by-step"]
->[Poprzedni](monitoring-azure-kubernetes.md)
->[Następny](identity.md)
+>[Poprzednie](monitoring-azure-kubernetes.md)
+>[dalej](identity.md)

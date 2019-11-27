@@ -1,5 +1,5 @@
 ---
-title: Equals — Klauzula
+title: Equals, klauzula
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Equals
@@ -14,10 +14,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335394"
 ---
 # <a name="equals-clause-visual-basic"></a>Equals — Klauzula (Visual Basic)
-Compares keys from collections being joined.  
+Porównuje klucze z połączonych kolekcji.  
   
 ## <a name="remarks"></a>Uwagi  
- The `Equals` keyword is used in the following contexts:  
+ Słowo kluczowe `Equals` jest używane w następujących kontekstach:  
   
  [Group Join, klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   

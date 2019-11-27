@@ -28,30 +28,30 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204778"
 ---
 # <a name="isolated-storage"></a>Izolowany magazyn
-<a name="top"></a> For desktop apps, isolated storage is a data storage mechanism that provides isolation and safety by defining standardized ways of associating code with saved data. Standaryzacja oferuje także inne korzyści. Administratorzy mogą używać narzędzi przeznaczonych do wykonywania operacji na wydzielonej pamięci masowej w celu konfigurowania ilości miejsca przeznaczonego na pliki, ustawiania zasad zabezpieczeń i usuwania nieużywanych danych. Dzięki wydzielonej pamięci masowej kod nie wymaga unikatowych ścieżek określających bezpieczne lokalizacje w systemie plików, a dane są chronione przed innymi aplikacjami, które mają dostęp tylko do wydzielonej pamięci masowej. Ustalona informacja, która wskazuje, gdzie jest zlokalizowany obszar pamięci aplikacji nie jest potrzebna.
+<a name="top"></a>W przypadku aplikacji klasycznych magazyn izolowany jest mechanizmem magazynu danych, który zapewnia izolację i bezpieczeństwo przez definiowanie ustandaryzowanych metod kojarzenia kodu z zapisanymi danymi. Standaryzacja oferuje także inne korzyści. Administratorzy mogą używać narzędzi przeznaczonych do wykonywania operacji na wydzielonej pamięci masowej w celu konfigurowania ilości miejsca przeznaczonego na pliki, ustawiania zasad zabezpieczeń i usuwania nieużywanych danych. Dzięki wydzielonej pamięci masowej kod nie wymaga unikatowych ścieżek określających bezpieczne lokalizacje w systemie plików, a dane są chronione przed innymi aplikacjami, które mają dostęp tylko do wydzielonej pamięci masowej. Ustalona informacja, która wskazuje, gdzie jest zlokalizowany obszar pamięci aplikacji nie jest potrzebna.
 
 > [!IMPORTANT]
-> Isolated storage is not available for Windows 8.x Store apps. Instead, use the application data classes in the `Windows.Storage` namespaces included in the Windows Runtime API to store local data and files. For more information, see [Application data](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) in the Windows Dev Center.
+> Izolowany magazyn nie jest dostępny dla aplikacji ze sklepu Windows 8. x. Zamiast tego należy użyć klas danych aplikacji znajdujących się w `Windows.Storage` przestrzenie nazw, które znajdują się w interfejsie API środowisko wykonawcze systemu Windows do przechowywania lokalnych danych i plików. Aby uzyskać więcej informacji, zobacz [dane aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) w centrum deweloperów systemu Windows.
 
 Ten temat zawiera następujące sekcje:
 
-- [Data Compartments and Stores](#data_compartments_and_stores)
+- [Przedziały i magazyny danych](#data_compartments_and_stores)
 
-- [Quotas for Isolated Storage](#quotas)
+- [Przydziały dla izolowanego magazynu](#quotas)
 
-- [Secure Access](#secure_access)
+- [Bezpieczny dostęp](#secure_access)
 
-- [Allowed Usage and Security Risks](#allowed_usage)
+- [Dozwolone użycie i zagrożenia bezpieczeństwa](#allowed_usage)
 
-- [Isolated Storage Locations](#isolated_storage_locations)
+- [Lokalizacje izolowanych magazynów](#isolated_storage_locations)
 
-- [Creating, Enumerating, and Deleting Isolated Storage](#isolated_storage_tasks)
+- [Tworzenie, Wyliczanie i usuwanie izolowanego magazynu](#isolated_storage_tasks)
 
-- [Scenarios for Isolated Storage](#scenarios_for_isolated_storage)
+- [Scenariusze dotyczące magazynu izolowanego](#scenarios_for_isolated_storage)
 
-- [Related Topics](#related_topics)
+- [Tematy pokrewne](#related_topics)
 
-- [Tematy pomocy](#reference)
+- [Dokumentacja](#reference)
 
 <a name="data_compartments_and_stores"></a>
 
@@ -67,9 +67,9 @@ Gdy jest używana wydzielona pamięć masowa, aplikacja zapisuje dane w unikatow
 
 ## <a name="quotas-for-isolated-storage"></a>Limity izolowanych magazynów
 
-Przydział to limit ilości wydzielonej pamięci masowej, której można używać. Przydział zawiera bajty w przestrzeni plików, a także zapas skojarzony z katalogiem i innymi informacjami w magazynie. Isolated storage uses permission quotas, which are storage limits that are set by using <xref:System.Security.Permissions.IsolatedStoragePermission> objects. If you try to write data that exceeds the quota, an <xref:System.IO.IsolatedStorage.IsolatedStorageException> exception is thrown.  Zasady zabezpieczeń, które można modyfikować za pomocą narzędzia .NET Framework Configuration Tool (Mscorcfg.msc), określają uprawnienia udzielane kodowi. Code that has been granted <xref:System.Security.Permissions.IsolatedStoragePermission> is restricted to using no more storage than the <xref:System.Security.Permissions.IsolatedStoragePermission.UserQuota%2A> property allows. Jednak kod może obejść przedziały uprawnień, prezentując różne tożsamości użytkownika, więc przydziały uprawnień pełnią rolę wytycznych dotyczących zachowania kodu, a nie stałych limitów zachowania kodu.
+Przydział to limit ilości wydzielonej pamięci masowej, której można używać. Przydział zawiera bajty w przestrzeni plików, a także zapas skojarzony z katalogiem i innymi informacjami w magazynie. Magazyn izolowany korzysta z przydziałów uprawnień, które są limitami magazynu ustawionymi przy użyciu obiektów <xref:System.Security.Permissions.IsolatedStoragePermission>. Jeśli spróbujesz zapisać dane, które przekraczają limit przydziału, zostanie zgłoszony wyjątek <xref:System.IO.IsolatedStorage.IsolatedStorageException>.  Zasady zabezpieczeń, które można modyfikować za pomocą narzędzia .NET Framework Configuration Tool (Mscorcfg.msc), określają uprawnienia udzielane kodowi. Kod, który został udzielony <xref:System.Security.Permissions.IsolatedStoragePermission>, jest ograniczony do używania nie więcej magazynu niż zezwala na Właściwość <xref:System.Security.Permissions.IsolatedStoragePermission.UserQuota%2A>. Jednak kod może obejść przedziały uprawnień, prezentując różne tożsamości użytkownika, więc przydziały uprawnień pełnią rolę wytycznych dotyczących zachowania kodu, a nie stałych limitów zachowania kodu.
 
-Przydziały nie są wymuszane w magazynach mobilnych. Z tego powodu kod musi mieć nieco wyższy poziom uprawnień, aby mógł ich używać. The enumeration values <xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser> and <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByRoamingUser> specify a permission to use isolated storage for a roaming user.
+Przydziały nie są wymuszane w magazynach mobilnych. Z tego powodu kod musi mieć nieco wyższy poziom uprawnień, aby mógł ich używać. Wartości wyliczeniowe <xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser> i <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByRoamingUser> określają uprawnienia do używania wydzielonej pamięci masowej dla użytkownika mobilnego.
 
 <a name="secure_access"></a>
 
@@ -77,33 +77,33 @@ Przydziały nie są wymuszane w magazynach mobilnych. Z tego powodu kod musi mie
 
 Wydzielona pamięć masowa umożliwia częściowo zaufanym aplikacjom przechowywanie danych w sposób kontrolowany przez zasady zabezpieczeń komputera. Jest to szczególnie przydatne w przypadku pobranych składników, które użytkownik może chcieć uruchomić z zachowaniem ostrożności. Zasady zabezpieczeń rzadko udzielają uprawnień kodu tego rodzaju podczas uzyskiwania dostępu do systemu plików przy użyciu standardowych mechanizmów We/Wy. Jednak kod uruchomiony na komputerze lokalnym, w sieci lokalnej lub w Internecie ma domyślnie udzielone prawo do używania wydzielonej pamięci masowej.
 
-Na podstawie odpowiedniego poziomu zaufania administratorzy mogą określić, ile wydzielonej pamięci masowej jest dostępnej dla aplikacji lub użytkownika. Ponadto administratorzy mogą całkowicie usuwać utrwalone dane użytkownika. To create or access isolated storage, code must be granted the appropriate <xref:System.Security.Permissions.IsolatedStorageFilePermission> permission.
+Na podstawie odpowiedniego poziomu zaufania administratorzy mogą określić, ile wydzielonej pamięci masowej jest dostępnej dla aplikacji lub użytkownika. Ponadto administratorzy mogą całkowicie usuwać utrwalone dane użytkownika. Aby utworzyć magazyn izolowany lub uzyskać do niego dostęp, należy przyznać mu odpowiednie uprawnienia <xref:System.Security.Permissions.IsolatedStorageFilePermission>.
 
 Aby uzyskać dostęp do wydzielonej pamięci masowej, kod musi mieć wszystkie niezbędne natywne prawa platformy systemu operacyjnego. Wymagana jest zgodność z listami kontroli dostępu (ACL) określającymi, którzy użytkownicy mają prawa do używania systemu plików. Aplikacje programu .NET Framework mają już prawa systemu operacyjnego dotyczące dostępu do wydzielonej pamięci masowej, chyba że wykonują personifikację (specyficzna dla platformy). W tym przypadku aplikacja jest odpowiedzialna za sprawdzanie, czy tożsamość personifikowanego użytkownika ma prawidłowe prawa systemu operacyjnego do uzyskiwania dostępu do wydzielonej pamięci masowej. Ten dostęp oferuje uruchomionemu lub pobranemu z sieci web kodowi wygodny sposób odczytu lub zapisu w obszarze pamięci masowej związanym z konkretnym użytkownikiem.
 
-To control access to isolated storage, the common language runtime uses <xref:System.Security.Permissions.IsolatedStorageFilePermission> objects. Każdy obiekt ma właściwości, które określają następujące wartości:
+Aby kontrolować dostęp do magazynu izolowanego, środowisko uruchomieniowe języka wspólnego używa <xref:System.Security.Permissions.IsolatedStorageFilePermission> obiektów. Każdy obiekt ma właściwości, które określają następujące wartości:
 
-- Dozwolone użycie, które wskazuje typ dozwolonego dostępu. The values are members of the <xref:System.Security.Permissions.IsolatedStorageContainment> enumeration. Aby uzyskać więcej informacji na temat tych wartości, zobacz tabelę w następnej sekcji.
+- Dozwolone użycie, które wskazuje typ dozwolonego dostępu. Wartości są elementami członkowskimi wyliczenia <xref:System.Security.Permissions.IsolatedStorageContainment>. Aby uzyskać więcej informacji na temat tych wartości, zobacz tabelę w następnej sekcji.
 
 - Przydział pamięci, tak jak omówiono w poprzedniej sekcji.
 
-The runtime demands <xref:System.Security.Permissions.IsolatedStorageFilePermission> permission when code first attempts to open a store. It decides whether to grant this permission, based on how much the code is trusted. If the permission is granted, the allowed usage and storage quota values are determined by security policy and by the code's request for <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Zasady zabezpieczeń są ustawiane przy użyciu narzędzia .NET Framework Configuration Tool (Mscorcfg.msc). Wszystkie obiekty wywołujące w stosie wywołań są sprawdzane w celu zagwarantowania, że każdy obiekt wywołujący ma co najmniej jedno odpowiednie dozwolone użycie. Środowisko uruchomieniowe sprawdza też przydział określony przez kod, który otworzył lub utworzył magazyn, w którym mają być zapisywane pliki. Jeśli warunki są spełnione, jest udzielane uprawnienie. Przydział jest sprawdzany ponownie za każdym razem, gdy plik jest zapisywany w magazynie.
+Środowisko uruchomieniowe wymaga uprawnień <xref:System.Security.Permissions.IsolatedStorageFilePermission>, gdy kod próbuje otworzyć magazyn. Decyduje o tym, czy udzielić tego uprawnienia, w zależności od tego, jaki kod jest zaufany. Jeśli przyznano uprawnienia, dozwolone wartości przydziału użycia i magazynu są określane przez zasady zabezpieczeń i przez żądanie kodu dla <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Zasady zabezpieczeń są ustawiane przy użyciu narzędzia .NET Framework Configuration Tool (Mscorcfg.msc). Wszystkie obiekty wywołujące w stosie wywołań są sprawdzane w celu zagwarantowania, że każdy obiekt wywołujący ma co najmniej jedno odpowiednie dozwolone użycie. Środowisko uruchomieniowe sprawdza też przydział określony przez kod, który otworzył lub utworzył magazyn, w którym mają być zapisywane pliki. Jeśli warunki są spełnione, jest udzielane uprawnienie. Przydział jest sprawdzany ponownie za każdym razem, gdy plik jest zapisywany w magazynie.
 
-Application code is not required to request permission because the common language runtime will grant whatever <xref:System.Security.Permissions.IsolatedStorageFilePermission> is appropriate based on security policy. However, there are good reasons to request specific permissions that your application needs, including <xref:System.Security.Permissions.IsolatedStorageFilePermission>.
+Kod aplikacji nie jest wymagany do zażądania uprawnień, ponieważ środowisko uruchomieniowe języka wspólnego przyznaje wszelkie <xref:System.Security.Permissions.IsolatedStorageFilePermission> odpowiednie w oparciu o zasady zabezpieczeń. Istnieją jednak dobre powody, aby zażądać określonych uprawnień wymaganych przez aplikację, w tym <xref:System.Security.Permissions.IsolatedStorageFilePermission>.
 
 <a name="allowed_usage"></a>
 
 ## <a name="allowed-usage-and-security-risks"></a>Dopuszczalne użycie i zagrożenia zabezpieczeń
 
-The allowed usage specified by <xref:System.Security.Permissions.IsolatedStorageFilePermission> determines the degree to which code will be allowed to create and use isolated storage. W poniższej tabeli pokazano, jak dozwolone użycie określone w uprawnieniu odpowiada typom izolacji, i podsumowano zagrożenia bezpieczeństwa skojarzone z każdym dozwolonym użyciem.
+Dozwolone użycie określone przez <xref:System.Security.Permissions.IsolatedStorageFilePermission> określa stopień, w jakim kod będzie mógł utworzyć i używać izolowanego magazynu. W poniższej tabeli pokazano, jak dozwolone użycie określone w uprawnieniu odpowiada typom izolacji, i podsumowano zagrożenia bezpieczeństwa skojarzone z każdym dozwolonym użyciem.
 
 |Dozwolone użycie|Typy izolacji|Wpływ na zabezpieczenia|
 |-------------------|---------------------|---------------------|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.None>|Użycie wydzielonej pamięci masowej nie jest dozwolone.|Brak wpływu na zabezpieczenia.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>|Izolacja według użytkownika, domeny i zestawu. Każdy zestaw ma oddzielny podmagazyn w domenie. Magazyny używające tego uprawnienia są także niejawnie izolowane przez komputer.|Ten poziom uprawnień zostawia zasoby otwarte do nieautoryzowanego użycia, mimo że wymuszone przydziały utrudniają takie użycie. Takie działanie jest znanej pod nazwą „ataku typu odmowa usługi”.|
-|<xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByRoamingUser>|Same as `DomainIsolationByUser`, but store is saved to a location that will roam if roaming user profiles are enabled and quotas are not enforced.|Przydziały muszą być wyłączone, więc zasoby pamięci masowej są bardziej podatne na atak typu „odmowa usługi”.|
+|<xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByRoamingUser>|Analogicznie jak `DomainIsolationByUser`, ale magazyn jest zapisywany w lokalizacji, która będzie przenoszona w przypadku włączenia profilów użytkowników mobilnych, a limity przydziału nie są wymuszane.|Przydziały muszą być wyłączone, więc zasoby pamięci masowej są bardziej podatne na atak typu „odmowa usługi”.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByUser>|Izolacja według użytkownika i zestawu. Magazyny używające tego uprawnienia są także niejawnie izolowane przez komputer.|Na tym poziomie są wymuszane przydziały, aby zapobiegać atakom typu „odmowa usługi”. Taki sam zestaw w innej domenie może mieć dostęp do magazynu, przez co możliwe jest przeciekanie informacji między aplikacjami.|
-|<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser>|Same as `AssemblyIsolationByUser`, but store is saved to a location that will roam if roaming user profiles are enabled and quotas are not enforced.|Same as in `AssemblyIsolationByUser`, but without quotas, the risk of a denial of service attack increases.|
+|<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser>|Analogicznie jak `AssemblyIsolationByUser`, ale magazyn jest zapisywany w lokalizacji, która będzie przenoszona w przypadku włączenia profilów użytkowników mobilnych, a limity przydziału nie są wymuszane.|Analogicznie jak w `AssemblyIsolationByUser`, ale bez przydziałów, ryzyko ataku typu "odmowa usługi" zwiększa się.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser>|Izolacja według użytkownika. Zazwyczaj tylko narzędzia administracyjne lub narzędzia do debugowania używają tego poziomu uprawnień.|Dostęp z użyciem tego uprawnienia umożliwia kodowi wyświetlanie i usuwanie dowolnych plików lub katalogów użytkownika przechowywanych w wydzielonej pamięci masowej (niezależnie do izolacji zestawu). Zagrożenia to m.in. wycieki informacji i utrata danych.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.UnrestrictedIsolatedStorage>|Izolacja według wszystkich użytkowników, domen i zestawów. Zazwyczaj tylko narzędzia administracyjne lub narzędzia do debugowania używają tego poziomu uprawnień.|To uprawnienie tworzy potencjalną możliwość naruszenia zabezpieczeń wszystkich izolowanych magazynów wszystkich użytkowników.|
 
@@ -115,26 +115,26 @@ Czasami jest ono pomocne podczas weryfikowania zmiany w wydzielonej pamięci mas
 
 |System operacyjny|Lokalizacja w systemie plików|
 |----------------------|-----------------------------|
-|Windows 2000, Windows XP, Windows Server 2003 (uaktualnienie z systemu Windows NT 4.0)|Magazyny z obsługą roamingu =<br /><br /> \<SYSTEMROOT>\Profiles\\<user\>\Application Data<br /><br /> Magazyny bez obsługi roamingu =<br /><br /> \<SYSTEMROOT>\Profiles\\<user\>\Local Settings\Application Data|
-|Windows 2000 — czysta instalacja (oraz uaktualnienia z systemu Windows 98 i Windows NT 3.51)|Magazyny z obsługą roamingu =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Application Data<br /><br /> Magazyny bez obsługi roamingu =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Local Settings\Application Data|
-|Windows XP, Windows Server 2003 — czysta instalacja (i uaktualnienia z systemu Windows 2000 i Windows 98)|Magazyny z obsługą roamingu =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Application Data<br /><br /> Magazyny bez obsługi roamingu =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Local Settings\Application Data|
-|[!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7, Windows Server 2008, Windows Vista|Magazyny z obsługą roamingu =<br /><br /> \<SYSTEMDRIVE>\Users\\<user\>\AppData\Roaming<br /><br /> Magazyny bez obsługi roamingu =<br /><br /> \<SYSTEMDRIVE>\Users\\<user\>\AppData\Local|
+|Windows 2000, Windows XP, Windows Server 2003 (uaktualnienie z systemu Windows NT 4.0)|Magazyny z obsługą roamingu =<br /><br /> \<GŁÓWNY_KATALOG_SYSTEMOWY > \Profiles\\< użytkownik\>\Dane danych<br /><br /> Magazyny bez obsługi roamingu =<br /><br /> \<GŁÓWNY_KATALOG_SYSTEMOWY > \Profiles\\< użytkownik\>\Ustawienia Lokalne\dane dane|
+|Windows 2000 — czysta instalacja (oraz uaktualnienia z systemu Windows 98 i Windows NT 3.51)|Magazyny z obsługą roamingu =<br /><br /> \<DYSKSYSTEMOWY > \Dokumenty i ustawienia\\< użytkownik\>\Dane danych<br /><br /> Magazyny bez obsługi roamingu =<br /><br /> \<DYSKSYSTEMOWY > \Dokumenty i ustawienia\\< użytkownik\>\Ustawienia Lokalne\dane dane|
+|Windows XP, Windows Server 2003 — czysta instalacja (i uaktualnienia z systemu Windows 2000 i Windows 98)|Magazyny z obsługą roamingu =<br /><br /> \<DYSKSYSTEMOWY > \Dokumenty i ustawienia\\< użytkownik\>\Dane danych<br /><br /> Magazyny bez obsługi roamingu =<br /><br /> \<DYSKSYSTEMOWY > \Dokumenty i ustawienia\\< użytkownik\>\Ustawienia Lokalne\dane dane|
+|[!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7, Windows Server 2008, Windows Vista|Magazyny z obsługą roamingu =<br /><br /> \<dysk_systemowy > \Users\\< użytkownika\>\AppData\Roaming<br /><br /> Magazyny bez obsługi roamingu =<br /><br /> \<dysk_systemowy > \Users\\< użytkownika\>\AppData\Local|
 
 <a name="isolated_storage_tasks"></a>
 
 ## <a name="creating-enumerating-and-deleting-isolated-storage"></a>Tworzenia, wyliczania i usuwania izolowanych magazynów
 
-The .NET Framework provides three classes in the <xref:System.IO.IsolatedStorage> namespace to help you perform tasks that involve isolated storage:
+.NET Framework zawiera trzy klasy w przestrzeni nazw <xref:System.IO.IsolatedStorage>, które ułatwiają wykonywanie zadań obejmujących izolowany magazyn:
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, derives from <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> and provides basic management of stored assembly and application files. An instance of the <xref:System.IO.IsolatedStorage.IsolatedStorageFile> class represents a single store located in the file system.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, pochodzi od <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> i zapewnia podstawowe zarządzanie przechowywanymi plikami zestawu i aplikacji. Wystąpienie klasy <xref:System.IO.IsolatedStorage.IsolatedStorageFile> reprezentuje pojedynczy magazyn znajdujący się w systemie plików.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> derives from <xref:System.IO.FileStream?displayProperty=nameWithType> and provides access to the files in a store.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> pochodzi od <xref:System.IO.FileStream?displayProperty=nameWithType> i zapewnia dostęp do plików w sklepie.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageScope> is an enumeration that enables you to create and select a store with the appropriate isolation type.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageScope> to wyliczenie, które umożliwia tworzenie i wybieranie magazynu z odpowiednim typem izolacji.
 
-Klasy wydzielonej pamięci masowej umożliwiają tworzenie, wyliczanie oraz usuwanie wydzielonej pamięci masowej. The methods for performing these tasks are available through the <xref:System.IO.IsolatedStorage.IsolatedStorageFile> object. Some operations require you to have the <xref:System.Security.Permissions.IsolatedStorageFilePermission> permission that represents the right to administer isolated storage; you might also need to have operating system rights to access the file or directory.
+Klasy wydzielonej pamięci masowej umożliwiają tworzenie, wyliczanie oraz usuwanie wydzielonej pamięci masowej. Metody wykonywania tych zadań są dostępne za pomocą obiektu <xref:System.IO.IsolatedStorage.IsolatedStorageFile>. Niektóre operacje wymagają posiadania uprawnienia <xref:System.Security.Permissions.IsolatedStorageFilePermission>, które reprezentuje prawo do administrowania izolowanym magazynem. może być również konieczne posiadanie praw systemu operacyjnego w celu uzyskania dostępu do pliku lub katalogu.
 
-For a series of examples that demonstrate common isolated storage tasks, see the how-to topics listed in [Related Topics](#related_topics).
+Aby uzyskać szereg przykładów demonstrujących typowe zadania magazynu izolowanego, zapoznaj się z tematami podanymi w [tematach pokrewnych](#related_topics).
 
 <a name="scenarios_for_isolated_storage"></a>
 
@@ -146,7 +146,7 @@ Wydzielona pamięć masowa jest przydatna w wielu sytuacjach, włączając w to 
 
 - Magazyn składników współużytkowanych. Składniki współużytkowane przez różne aplikacje mogą używać wydzielonej pamięci masowej, aby umożliwiać kontrolowany dostęp do danych.
 
-- Magazyn na serwerze. Aplikacje serwerowe mogą używać wydzielonej pamięci masowej, aby dostarczać indywidualne magazyny wielu użytkownikom wysyłającym żądania do aplikacji. Ponieważ wydzielona pamięć masowa zawsze jest segregowana według użytkowników, serwer musi dokonać personifikacji użytkownika zgłaszającego żądanie. In this case, data is isolated based on the identity of the principal, which is the same identity the application uses to distinguish between its users.
+- Magazyn na serwerze. Aplikacje serwerowe mogą używać wydzielonej pamięci masowej, aby dostarczać indywidualne magazyny wielu użytkownikom wysyłającym żądania do aplikacji. Ponieważ wydzielona pamięć masowa zawsze jest segregowana według użytkowników, serwer musi dokonać personifikacji użytkownika zgłaszającego żądanie. W takim przypadku dane są izolowane na podstawie tożsamości podmiotu zabezpieczeń, która jest tą samą tożsamością, której aplikacja używa do rozróżniania między użytkownikami.
 
 - Roaming. Aplikacje mogą również używać wydzielonej pamięci masowej z mobilnymi profilami użytkownika. Dzięki temu użytkownik może uzyskiwać mobilny dostęp do swoich izolowanych magazynów, używając profilu.
 
@@ -167,9 +167,9 @@ Wiele aplikacji używa bazy danych do przechowywania i izolowania danych; w taki
 |Tytuł|Opis|
 |-----------|-----------------|
 |[Typy izolacji](../../../docs/standard/io/types-of-isolation.md)|Opis różnych typów izolacji.|
-|[Instrukcje: uzyskiwanie magazynów dla wydzielonej pamięci masowej](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Provides an example of using the <xref:System.IO.IsolatedStorage.IsolatedStorageFile> class to obtain a store isolated by user and assembly.|
-|[Instrukcje: wyliczanie magazynów dla wydzielonej pamięci masowej](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|Shows how to use the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> method to calculate the size of all isolated storage for the user.|
-|[Instrukcje: usuwanie danych z wydzielonej pamięci masowej](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|Shows how to use the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> method in two different ways to delete isolated stores.|
+|[Instrukcje: uzyskiwanie magazynów dla wydzielonej pamięci masowej](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Stanowi przykład użycia klasy <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, aby uzyskać magazyn izolowany przez użytkownika i zestaw.|
+|[Instrukcje: wyliczanie magazynów dla wydzielonej pamięci masowej](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|Pokazuje, w jaki sposób używać metody <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType>, aby obliczyć rozmiar całego izolowanego magazynu dla użytkownika.|
+|[Instrukcje: usuwanie danych z wydzielonej pamięci masowej](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|Pokazuje, jak używać metody <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> na dwa różne sposoby usuwania izolowanych magazynów.|
 |[Instrukcje: przewidywanie warunków braku miejsca w wydzielonej pamięci masowej](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Opis sposobu mierzenia ilości pozostałego miejsca w izolowanym magazynie.|
 |[Instrukcje: tworzenie plików i katalogów w wydzielonej pamięci masowej](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|Przykłady tworzenia plików i katalogów w izolowanym magazynie.|
 |[Instrukcje: znajdowanie istniejących plików i katalogów w wydzielonej pamięci masowej](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|Opis sposobu odczytywania struktury katalogów i plików w wydzielonej pamięci masowej.|

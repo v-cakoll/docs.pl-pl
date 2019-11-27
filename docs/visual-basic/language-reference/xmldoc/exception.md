@@ -12,8 +12,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346959"
 ---
-# <a name="exception-visual-basic"></a>\<exception> (Visual Basic)
-Specifies which exceptions can be thrown.  
+# <a name="exception-visual-basic"></a>> \<wyjątków (Visual Basic)
+Określa, które wyjątki mogą być zgłaszane.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,18 +23,18 @@ Specifies which exceptions can be thrown.
   
 ## <a name="parameters"></a>Parametry  
  `member`  
- A reference to an exception that is available from the current compilation environment. The compiler checks that the given exception exists and translates `member` to the canonical element name in the output XML. `member` must appear within double quotation marks (" ").  
+ Odwołanie do wyjątku, które jest dostępne w bieżącym środowisku kompilacji. Kompilator sprawdza, czy dany wyjątek istnieje i tłumaczy `member` na nazwę elementu kanonicznego w wyjściowym kodzie XML. `member` musi znajdować się w podwójnym cudzysłowie ("").  
   
  `description`  
- A description.  
+ Opis.  
   
 ## <a name="remarks"></a>Uwagi  
- Use the `<exception>` tag to specify which exceptions can be thrown. This tag is applied to a method definition.  
+ Użyj znacznika `<exception>`, aby określić, które wyjątki mogą być zgłaszane. Ten tag jest stosowany do definicji metody.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- This example uses the `<exception>` tag to describe an exception that the `IntDivide` function can throw.  
+ W tym przykładzie używa znacznika `<exception>`, aby opisać wyjątek, który może zgłosić funkcja `IntDivide`.  
   
  [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   

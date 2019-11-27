@@ -15,19 +15,19 @@ ms.locfileid: "74343803"
 ---
 # <a name="directives-visual-basic"></a>Directives (Visual Basic)
 
-The topics in this section document the Visual Basic source code compiler directives.  
+W tematach w tej sekcji udokumentowano dyrektywy kompilatora Visual Basic kodu źródłowego.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
- [#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md) -- Define a compiler constant  
+ [#Const — dyrektywa](../../../visual-basic/language-reference/directives/const-directive.md) — Definiowanie stałej kompilatora  
   
- [#ExternalSource Directive](../../../visual-basic/language-reference/directives/externalsource-directive.md) -- Indicate a mapping between source lines and text external to the source  
+ [#ExternalSource dyrektywie](../../../visual-basic/language-reference/directives/externalsource-directive.md) --wskazać mapowanie między liniami źródłowymi a tekstem zewnętrznym względem źródła  
   
- [#If...Then...#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md) -- Compile selected blocks of code  
+ [#If... Then... #Else — dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md) — Kompilowanie wybranych bloków kodu  
   
- [#Region Directive](../../../visual-basic/language-reference/directives/region-directive.md) -- Collapse and hide sections of code in the Visual Studio editor  
+ [#Region dyrektywie](../../../visual-basic/language-reference/directives/region-directive.md) — zwijanie i ukrywanie fragmentów kodu w edytorze programu Visual Studio  
   
- **#Disable, #Enable** -- Disable and enable specific warnings for regions of code.  
+ **#Disable, #Enable** --wyłączyć i włączyć określone ostrzeżenia dla regionów kodu.  
   
 ```vb  
 #Disable Warning BC42356 ' suppress warning about no awaits in this method  
@@ -37,7 +37,7 @@ The topics in this section document the Visual Basic source code compiler direct
 #Enable Warning BC42356  
 ```  
   
- You can disable and enable a comma-separated list of warning codes too.  
+ Można również wyłączyć i włączyć listę kodów ostrzeżeń rozdzielonych przecinkami.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 

@@ -15,13 +15,13 @@ ms.locfileid: "74351889"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Porady: przypisywanie tablicy do innej tablicy (Visual Basic)
 
-Because arrays are objects, you can use them in assignment statements like other object types. An array variable holds a pointer to the data constituting the array elements and the rank and length information, and an assignment copies only this pointer.
+Ponieważ tablice są obiektami, można ich używać w instrukcjach przypisania, takich jak inne typy obiektów. Zmienna tablicowa zawiera wskaźnik do danych tworzących elementy tablicy oraz informacje o rangi i długości, a przypisanie kopiuje tylko ten wskaźnik.
 
-### <a name="to-assign-one-array-to-another-array"></a>To assign one array to another array
+### <a name="to-assign-one-array-to-another-array"></a>Aby przypisać jedną tablicę do innej tablicy
 
-1. Ensure that the two arrays have the same rank (number of dimensions) and compatible element data types.
+1. Upewnij się, że dwie tablice mają taką samą rangę (liczbę wymiarów), jak i zgodne typy danych elementów.
 
-2. Use a standard assignment statement to assign the source array to the destination array. Do not follow either array name with parentheses.
+2. Użyj standardowej instrukcji przypisania, aby przypisać tablicę źródłową do tablicy docelowej. Nie Obserwuj żadnej nazwy tablicy z nawiasami.
 
     ```vb
     Dim formArray() As System.Windows.Forms.Form
@@ -29,19 +29,19 @@ Because arrays are objects, you can use them in assignment statements like other
     controlArray = formArray
     ```
 
-When you assign one array to another, the following rules apply:
+Po przypisaniu jednej tablicy do innej obowiązują następujące reguły:
 
-- **Equal Ranks.** The rank (number of dimensions) of the destination array must be the same as that of the source array.
+- **Równe Range.** Ranga (liczba wymiarów) tablicy docelowej musi być taka sama jak w przypadku tablicy źródłowej.
 
-  Provided the ranks of the two arrays are equal, the dimensions do not need to be equal. The number of elements in a given dimension can change during assignment.
+  Jeśli Range dwóch tablic są równe, wymiary nie muszą być równe. Liczba elementów w danym wymiarze może ulec zmianie podczas przypisywania.
 
-- **Element Types.** Either both arrays must have *reference type* elements or both arrays must have *value type* elements. For more information, see [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
+- **Typy elementów.** Obie tablice muszą mieć elementy *typu referencyjnego* lub obie tablice muszą mieć elementy *typu wartości* . Aby uzyskać więcej informacji, zobacz [typy wartości i typy odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
 
-  - If both arrays have value type elements, the element data types must be exactly the same. The only exception to this is that you can assign an array of `Enum` elements to an array of the base type of that `Enum`.
+  - Jeśli obie tablice mają elementy typu wartości, typy danych elementu muszą być dokładnie takie same. Jedynym wyjątkiem jest to, że można przypisać tablicę elementów `Enum` do tablicy typu podstawowego tego `Enum`.
 
-  - If both arrays have reference type elements, the source element type must derive from the destination element type. When this is the case, the two arrays have the same inheritance relationship as their elements. This is called *array covariance*.
+  - Jeśli obie tablice mają elementy typu referencyjnego, typ elementu źródłowego musi pochodzić od typu elementu docelowego. W takim przypadku dwie tablice mają taką samą relację dziedziczenia jak ich elementy. Jest to nazywane *kowariancją tablicową*.
 
-The compiler reports an error if the above rules are violated, for example if the data types are not compatible or the ranks are unequal. You can add error handling to your code to make sure that the arrays are compatible before attempting an assignment. You can also use the [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) keyword if you want to avoid throwing an exception.
+Kompilator zgłasza błąd, jeśli powyższe reguły zostały naruszone, na przykład jeśli typy danych nie są zgodne lub Range nie są równe. Można dodać obsługę błędów do kodu, aby upewnić się, że tablice są zgodne przed próbą przypisania. Możesz również użyć słowa kluczowego [operatora TryCast](../../../../visual-basic/language-reference/operators/trycast-operator.md) , jeśli chcesz uniknąć zgłaszania wyjątku.
 
 ## <a name="see-also"></a>Zobacz także
 

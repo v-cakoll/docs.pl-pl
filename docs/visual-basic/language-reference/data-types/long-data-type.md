@@ -1,5 +1,5 @@
 ---
-title: Long — Typ danych
+title: Long, typ danych
 ms.date: 01/31/2018
 f1_keywords:
 - vb.Long
@@ -27,32 +27,32 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343974"
 ---
-# <a name="long-data-type-visual-basic"></a>Long data type (Visual Basic)
+# <a name="long-data-type-visual-basic"></a>Long — typ danych (Visual Basic)
 
-Holds signed 64-bit (8-byte) integers ranging in value from -9,223,372,036,854,775,808 through 9,223,372,036,854,775,807 (9.2...E+18).
+Przechowuje podpisaną 64-bitową (8-bajtową) liczbę całkowitą z zakresu od-zakresu od do 9 223 372 036 854 775 807 (9.2... E + 18).
 
 ## <a name="remarks"></a>Uwagi
 
-Use the `Long` data type to contain integer numbers that are too large to fit in the `Integer` data type.
+Użyj `Long` typ danych, aby zawierać liczby całkowite, które są zbyt duże, aby mieściły się w `Integer` typie danych.
 
-The default value of `Long` is 0.
+Wartość domyślna `Long` wynosi 0.
 
-## <a name="literal-assignments"></a>Literal assignments
+## <a name="literal-assignments"></a>Przypisania literałów
 
-You can declare and initialize a `Long` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. If the integer literal is outside the range of `Long` (that is, if it is less than <xref:System.Int64.MinValue?displayProperty=nameWithType> or greater than <xref:System.Int64.MaxValue?displayProperty=nameWithType>, a compilation error occurs.
+Można zadeklarować i zainicjować zmienną `Long`, przypisując jej literał dziesiętny, literał szesnastkowy, literał ósemkowy lub (Zaczynając od Visual Basic 2017) literał binarny. Jeśli literał liczby całkowitej znajduje się poza zakresem `Long` (czyli jeśli jest mniejszy niż <xref:System.Int64.MinValue?displayProperty=nameWithType> lub większa niż <xref:System.Int64.MaxValue?displayProperty=nameWithType>, wystąpi błąd kompilacji.
 
-In the following example, integers equal to 4,294,967,296 that are represented as decimal, hexadecimal, and binary literals are assigned to `Long` values.
+W poniższym przykładzie liczby całkowite równe 4 294 967 296 są reprezentowane jako literały dziesiętne, szesnastkowe i binarne są przypisywane do wartości `Long`.
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Long)]
 
 > [!NOTE]
-> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. Decimal literals have no prefix.
+> Możesz użyć prefiksu `&h` lub `&H` do określenia literału szesnastkowego, prefiksu `&b` lub `&B`, aby zauważyć literał binarny, a prefiks `&o` lub `&O`, aby zauważyć literał ósemkowy. Literały dziesiętne nie mają prefiksu.
 
-Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
+Począwszy od Visual Basic 2017, można również użyć znaku podkreślenia, `_`, jako separatora cyfr, aby zwiększyć czytelność, jak pokazano w poniższym przykładzie.
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. Na przykład:
+Począwszy od Visual Basic 15,5, można również użyć znaku podkreślenia (`_`) jako wiodącego separatora między cyframi prefiksu i szesnastkową, binarną lub ósemkową. Na przykład:
 
 ```vb
 Dim number As Long = &H_0FAC_0326_1489_D68C
@@ -60,7 +60,7 @@ Dim number As Long = &H_0FAC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Numeric literals can also include the `L` [type character](../../programming-guide/language-features/data-types/type-characters.md) to denote the `Long` data type, as the following example shows.
+Literały numeryczne mogą również zawierać `L` [znak typu](../../programming-guide/language-features/data-types/type-characters.md) , aby zauważyć `Long` typ danych, jak pokazano w poniższym przykładzie.
 
 ```vb
 Dim number = &H_0FAC_0326_1489_D68CL
@@ -68,13 +68,13 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="programming-tips"></a>Porady dotyczące programowania
 
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, remember that `Long` has a different data width (32 bits) in other environments. If you are passing a 32-bit argument to such a component, declare it as `Integer` instead of `Long` in your new Visual Basic code.
+- **Zagadnienia dotyczące międzyoperacyjnych.** Jeśli masz połączenie ze składnikami niezapisanymi dla .NET Framework, na przykład obiekty automatyzacji lub COM, pamiętaj, że `Long` ma inną szerokość danych (32 bitów) w innych środowiskach. Jeśli przekazujesz argument 32-bitowy do takiego składnika, zadeklaruj go jako `Integer` zamiast `Long` w nowym kodzie Visual Basic.
 
-- **Widening.** The `Long` data type widens to `Decimal`, `Single`, or `Double`. This means you can convert `Long` to any one of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
+- **Rozszerzającą.** Typ danych `Long` poszerza do `Decimal`, `Single`lub `Double`. Oznacza to, że można skonwertować `Long` do dowolnego jednego z tych typów bez napotkania <xref:System.OverflowException?displayProperty=nameWithType> błędu.
 
-- **Type Characters.** Appending the literal type character `L` to a literal forces it to the `Long` data type. Appending the identifier type character `&` to any identifier forces it to `Long`.
+- **Znaki typu.** Dołączanie znaku typu literału `L` do literału wymusza go do `Long` typu danych. Dołączanie znaku typu identyfikatora `&` do dowolnego identyfikatora wymusza `Long`.
 
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Int64?displayProperty=nameWithType> structure.
+- **Typ struktury.** Odpowiedni typ w .NET Framework jest strukturą <xref:System.Int64?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Zobacz także
 

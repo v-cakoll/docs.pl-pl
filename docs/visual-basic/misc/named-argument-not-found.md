@@ -1,5 +1,5 @@
 ---
-title: Named argument not found
+title: Nie znaleziono nazwanego argumentu
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID448
@@ -11,12 +11,12 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348472"
 ---
-# <a name="named-argument-not-found-visual-basic"></a>Named argument not found (Visual Basic)
-A named argument can not be used in a procedure invocation unless it appears in the procedure definition. You specified a named argument, but the procedure was not defined to accept an argument by that name.  
+# <a name="named-argument-not-found-visual-basic"></a>Nie znaleziono nazwanego argumentu (Visual Basic)
+Nazwanego argumentu nie można użyć w wywołaniu procedury, chyba że pojawia się w definicji procedury. Określono nazwany argument, ale nie zdefiniowano procedury w celu zaakceptowania argumentu o tej nazwie.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Check the spelling of the argument name.  
+- Sprawdź pisownię nazwy argumentu.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -25,7 +25,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348225"
 ---
 # <a name="--operator-visual-basic"></a>- — Operator (Visual Basic)
-Returns the difference between two numeric expressions or the negative value of a numeric expression.  
+Zwraca różnicę między dwoma wyrażeniami liczbowymi lub wartością ujemną wyrażenia liczbowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,40 +41,40 @@ lub
   
 ## <a name="parts"></a>Części  
  `expression1`  
- Wymagany. Any numeric expression.  
+ Wymagany. Dowolne wyrażenie liczbowe.  
   
  `expression2`  
- Required unless the `–` operator is calculating a negative value. Any numeric expression.  
+ Wymagany, chyba że operator `–` oblicza wartość ujemną. Dowolne wyrażenie liczbowe.  
   
 ## <a name="result"></a>Wynik  
- The result is the difference between `expression1` and `expression2`, or the negated value of `expression1`.  
+ Wynikiem jest różnica między `expression1` i `expression2`lub Negacja wartości `expression1`.  
   
- The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ Typ danych wyniku jest typem liczbowym odpowiednim dla typów danych `expression1` i `expression2`. Zobacz tabele "arytmetyczne liczby całkowite" w [typach danych wyników operatora](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
-## <a name="supported-types"></a>Supported Types  
- All numeric types. This includes the unsigned and floating-point types and `Decimal`.  
+## <a name="supported-types"></a>Obsługiwane typy  
+ Wszystkie typy liczbowe. Obejmuje to typy niepodpisane i zmiennoprzecinkowe oraz `Decimal`.  
   
 ## <a name="remarks"></a>Uwagi  
- In the first usage shown in the syntax shown previously, the `–` operator is the *binary* arithmetic subtraction operator for the difference between two numeric expressions.  
+ W pierwszym użyciu pokazanym w pokazanej wcześniej składni operator `–` to *binarny* operator odejmowania arytmetycznego dla różnicy między dwoma wyrażeniami liczbowymi.  
   
- In the second usage shown in the syntax shown previously, the `–` operator is the *unary* negation operator for the negative value of an expression. In this sense, the negation consists of reversing the sign of `expression1` so that the result is positive if `expression1` is negative.  
+ W drugim wykorzystaniu pokazanym wcześniej składni operator `–` jest operatorem *jednoargumentowym* operatora negacji dla wartości ujemnej wyrażenia. W tym sensie Negacja składa się z odwrócenia znaku `expression1`, aby wynik był dodatni, jeśli `expression1` jest ujemna.  
   
- If either expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the `–` operator treats it as zero.  
+ Jeśli wyrażenie zwróci wartość [Nothing](../../../visual-basic/language-reference/nothing.md), operator `–` traktuje ją jako zero.  
   
 > [!NOTE]
-> The `–` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, make sure that you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> Operator `–` może być *przeciążony*, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury. Jeśli kod używa tego operatora dla takiej klasy lub struktury, upewnij się, że rozumiesz jego ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Przykład  
- The following example uses the `–` operator to calculate and return the difference between two numbers, and then to negate a number.  
+ Poniższy przykład używa operatora `–`, aby obliczyć i zwrócić różnicę między dwiema liczbami, a następnie Negate liczbę.  
   
  [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
- Following the execution of these statements, `binaryResult` contains 124.45 and `unaryResult` contains –334.90.  
+ Po wykonaniu tych instrukcji `binaryResult` zawiera 124,45 i `unaryResult` Contains – 334,90.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [-= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [-= — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
 - [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Operatory arytmetyczne w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

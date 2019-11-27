@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428103"
 ---
 # <a name="isymunmanagedwriterclosemethod-method"></a>ISymUnmanagedWriter::CloseMethod — Metoda
-Closes the current method. Once a method is closed, no more symbols can be defined within it.  
+Zamyka bieżącą metodę. Po zamknięciu metody nie można definiować więcej symboli.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,11 +31,11 @@ Closes the current method. Once a method is closed, no more symbols can be defin
 HRESULT CloseMethod();  
 ```  
   
-## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+## <a name="return-value"></a>Wartość zwrócona  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

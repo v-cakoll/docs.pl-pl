@@ -17,28 +17,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350773"
 ---
 # <a name="structures-visual-basic"></a>Struktury (Visual Basic)
-A *structure* is a generalization of the user-defined type (UDT) supported by previous versions of Visual Basic. In addition to fields, structures can expose properties, methods, and events. A structure can implement one or more interfaces, and you can declare individual access levels for each field.  
+*Struktura* jest generalizacją typu zdefiniowanego przez użytkownika (UDT) obsługiwaną przez poprzednie wersje Visual Basic. Oprócz pól struktury mogą uwidaczniać właściwości, metody i zdarzenia. Struktura może zaimplementować jeden lub więcej interfejsów i można zadeklarować poszczególne poziomy dostępu dla każdego pola.  
   
- You can combine data items of different types to create a structure. A structure associates one or more *elements* with each other and with the structure itself. When you declare a structure, it becomes a *composite data type*, and you can declare variables of that type.  
+ Można połączyć elementy danych różnych typów, aby utworzyć strukturę. Struktura kojarzy jeden lub więcej *elementów* ze sobą i ze strukturą. Gdy deklarujesz strukturę, stanie się ona *złożonym typem danych*i można zadeklarować zmienne tego typu.  
   
- Structures are useful when you want a single variable to hold several related pieces of information. For example, you might want to keep an employee's name, telephone extension, and salary together. You could use several variables for this information, or you could define a structure and use it for a single employee variable. The advantage of the structure becomes apparent when you have many employees and therefore many instances of the variable.  
+ Struktury są przydatne, gdy chcesz, aby jedna zmienna zawierała kilka powiązanych informacji. Na przykład możesz chcieć zadbać o podanie nazwiska pracownika, numeru telefonu i wynagrodzenia. Można użyć kilku zmiennych dla tych informacji lub zdefiniować strukturę i użyć jej dla jednej zmiennej pracownika. Zalety struktury staną się widoczne, gdy istnieje wielu pracowników i wiele wystąpień zmiennej.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje: deklarowanie struktury](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- Shows how to declare a structure and its elements.  
+ Pokazuje, jak zadeklarować strukturę i jej elementy.  
   
  [Zmienne struktur](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- Covers assigning a structure to a variable and accessing its elements.  
+ Obejmuje przypisanie struktury do zmiennej i dostęp do jej elementów.  
   
  [Struktury oraz inne elementy programowania](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
- Summarizes how structures interact with arrays, objects, procedures, and each other.  
+ Podsumowuje sposób, w jaki struktury współdziałają z tablicami, obiektami, procedurami i nawzajem.  
   
  [Struktury i klasy](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- Describes the similarities and differences between structures and classes.  
+ Opisuje podobieństwa i różnice między strukturami i klasami.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Introduces the Visual Basic data types and describes how to use them.  
+ Wprowadza Visual Basic typy danych i opisuje sposób ich używania.  
   
  [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)  
- Lists the elementary data types supplied by Visual Basic.
+ Wyświetla listę typów danych podstawowych dostarczonych przez Visual Basic.

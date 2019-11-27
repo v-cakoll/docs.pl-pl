@@ -1,5 +1,5 @@
 ---
-title: Uzyskiwanie dostępu do usług sieci Web aplikacji
+title: Uzyskiwanie dostępu do usług internetowych aplikacji
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Web services [Visual Basic], My.WebServices object
@@ -15,16 +15,16 @@ ms.locfileid: "74349226"
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>Uzyskiwanie dostępu do usług sieci Web aplikacji (Visual Basic)
 
-The `My.WebServices` object provides an instance of each Web service referenced by the current project. Each instance is instantiated on demand. You can access these Web services through the properties of the `My.WebServices` object. The name of the property is the same as the name of the Web service that the property accesses. Any class that inherits from <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> is a Web service.
+Obiekt `My.WebServices` zapewnia wystąpienie każdej usługi sieci Web, do której odwołuje się bieżący projekt. Każde wystąpienie jest tworzone na żądanie. Dostęp do tych usług sieci Web można uzyskać za pomocą właściwości obiektu `My.WebServices`. Nazwa właściwości jest taka sama jak nazwa usługi sieci Web, do której uzyskuje dostęp właściwość. Każda klasa, która dziedziczy po <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>, jest usługą sieci Web.
 
 ## <a name="tasks"></a>Zadania
 
-The following table lists possible ways to access Web services referenced by an application.
+W poniższej tabeli przedstawiono możliwe sposoby uzyskiwania dostępu do usług sieci Web, do których odwołuje się aplikacja.
 
 |Do|Zobacz|
 |---|---|
-|Call a Web service|[My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
-|Call a Web service asynchronously and handle an event when it completes|[Instrukcje: asynchroniczne wywoływanie usługi sieci Web](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
+|Wywoływanie usługi sieci Web|[My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
+|Wywołaj usługę sieci Web asynchronicznie i obsłuż zdarzenie po jego zakończeniu|[Instrukcje: asynchroniczne wywoływanie usługi sieci Web](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: Double — typ danych
+title: Double, typ danych
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Double
@@ -28,34 +28,34 @@ ms.locfileid: "74344018"
 ---
 # <a name="double-data-type-visual-basic"></a>Double — Typ danych (Visual Basic)
 
-Holds signed IEEE 64-bit (8-byte) double-precision floating-point numbers that range in value from -1.79769313486231570E+308 through -4.94065645841246544E-324 for negative values and from 4.94065645841246544E-324 through 1.79769313486231570E+308 for positive values. Double-precision numbers store an approximation of a real number.
+Przechowuje podpisane cyfry IEEE 64-bitowe (8-bajtowe) liczby zmiennoprzecinkowe o podwójnej precyzji, które obejmują wartość z-1.79769313486231570 E + 308 do-4.94065645841246544 E-324 dla wartości ujemnych i z 4.94065645841246544 E-324 przez 1.79769313486231570 E + 308 dla wartości dodatnie. Numery podwójnej precyzji przechowują przybliżoną liczbę rzeczywistą.
 
 ## <a name="remarks"></a>Uwagi
 
-The `Double` data type provides the largest and smallest possible magnitudes for a number.
+Typ danych `Double` zapewnia największą i najmniejszą liczbę możliwych wielkości dla liczby.
 
-The default value of `Double` is 0.
+Wartość domyślna `Double` wynosi 0.
 
 ## <a name="programming-tips"></a>Porady dla programistów
 
-- **Precision.** When you work with floating-point numbers, remember that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+- **Dokładne.** Podczas pracy z liczbami zmiennoprzecinkowymi należy pamiętać, że nie zawsze mają dokładną reprezentację w pamięci. Może to prowadzić do nieoczekiwanych wyników niektórych operacji, takich jak porównanie wartości i operator `Mod`. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z typami danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
 
-- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing zero characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing zero characters do not appear when you display or print floating-point values.
+- **Końcowe zera.** Zmiennoprzecinkowe typy danych nie mają żadnej wewnętrznej reprezentacji końcowych znaków. Na przykład nie różnią się od 4,2000 do 4,2. W związku z tym końcowe znaki nie są wyświetlane podczas wyświetlania lub drukowania wartości zmiennoprzecinkowych.
 
-- **Type Characters.** Appending the literal type character `R` to a literal forces it to the `Double` data type. For example, if an integer value is followed by `R`, the value is changed to a `Double`.
+- **Znaki typu.** Dołączanie znaku typu literału `R` do literału wymusza go do `Double` typu danych. Na przykład, jeśli po wartości całkowitej następuje `R`, wartość zostanie zmieniona na `Double`.
 
   ```vb
   ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:
   Dim dub As Double = 4.0R
   ```
 
-  Appending the identifier type character `#` to any identifier forces it to `Double`. In the following example, the variable `num` is typed as a `Double`:
+  Dołączanie znaku typu identyfikatora `#` do dowolnego identyfikatora wymusza `Double`. W poniższym przykładzie zmienna `num` jest wpisana jako `Double`:
 
   ```vb
   Dim num# = 3
   ```
 
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Double?displayProperty=nameWithType> structure.
+- **Typ struktury.** Odpowiedni typ w .NET Framework jest strukturą <xref:System.Double?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Zobacz także
 

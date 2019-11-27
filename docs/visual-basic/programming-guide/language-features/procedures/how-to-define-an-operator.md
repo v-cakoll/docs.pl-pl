@@ -21,18 +21,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344874"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Porady: definiowanie operatora (Visual Basic)
-If you have defined a class or structure, you can define the behavior of a standard operator (such as `*`, `<>`, or `And`) when one or both of the operands is of the type of your class or structure.  
+Jeśli zdefiniowano klasę lub strukturę, można zdefiniować zachowanie standardowego operatora (takiego jak `*`, `<>`lub `And`), gdy jeden lub oba operandy są typu klasy lub struktury.  
   
- Define the standard operator as an operator procedure within the class or structure. All operator procedures must be `Public` `Shared`.  
+ Zdefiniuj operatora standardowego jako procedurę operatora w klasie lub strukturze. Wszystkie procedury operatora muszą być `Public` `Shared`.  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ Definiowanie operatora w klasie lub strukturze jest również nazywane *przeciążeniem* operatora.  
   
 ## <a name="example"></a>Przykład  
- The following example defines the `+` operator for a structure called `height`. The structure uses heights measured in feet and inches. One *inch* is 2.54 centimeters, and one *foot* is 12 inches. To ensure normalized values (inches < 12.0), the constructor performs *modulo* 12 arithmetic. The `+` operator uses the constructor to generate normalized values.  
+ W poniższym przykładzie zdefiniowano operator `+` dla struktury o nazwie `height`. Struktura używa wysokości mierzona w metrach i calach. 1 *cal* wynosi 2,54 centymetrów, *a jedna z* nich jest 12 cali. Aby zapewnić znormalizowaną wartość (w calach < 12,0), Konstruktor wykonuje *modulo* 12. Operator `+` używa konstruktora do generowania znormalizowanych wartości.  
   
  [!code-vb[VbVbcnProcedures#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#25)]  
   
- You can test the structure `height` with the following code.  
+ Możesz przetestować strukturę `height` przy użyciu następującego kodu.  
   
  [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
 

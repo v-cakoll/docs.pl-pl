@@ -1,5 +1,5 @@
 ---
-title: Znaki specjalne w Code
+title: Znaki specjalne w kodzie
 ms.date: 07/20/2015
 f1_keywords:
 - vb.)
@@ -38,54 +38,54 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347266"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Znaki specjalne w Code (Visual Basic)
-Sometimes you have to use special characters in your code, that is, characters that are not alphabetical or numeric. The punctuation and special characters in the Visual Basic character set have various uses, from organizing program text to defining the tasks that the compiler or the compiled program performs. They do not specify an operation to be performed.  
+Czasami musisz używać znaków specjalnych w kodzie, czyli znaków, które nie są alfabetyczne ani liczbowe. Znaki interpunkcyjne i specjalne w zestawie znaków Visual Basic mają różne zastosowania, od porządkowania tekstu programu do definiowania zadań wykonywanych przez kompilator lub skompilowany program. Nie określają operacji do wykonania.  
   
-## <a name="parentheses"></a>Parentheses  
- Use parentheses when you define a procedure, such as a `Sub` or `Function`. You must enclose all procedure argument lists in parentheses. You also use parentheses for putting variables or arguments into logical groups, especially to override the default order of operator precedence in a complex expression. Ilustruje to poniższy przykład.  
+## <a name="parentheses"></a>nawiasów  
+ Użyj nawiasów podczas definiowania procedury, takiej jak `Sub` lub `Function`. Wszystkie listy argumentów procedury należy ująć w nawiasy. Należy również użyć nawiasów do umieszczania zmiennych lub argumentów w grupach logicznych, szczególnie w celu zastąpienia domyślnej kolejności operatorów w wyrażeniu złożonym. Ilustruje to poniższy przykład.  
   
  [!code-vb[VbVbcnConventions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#11)]  
   
- Following execution of the previous code, the value of `d` is 8.225 and the value of `e` is 3. The calculation for `d` uses the default precedence of `/` over `+` and is equivalent to `d = b + (c / a)`. The parentheses in the calculation for `e` override the default precedence.  
+ Po wykonaniu poprzedniego kodu wartość `d` to 8,225, a wartość `e` to 3. Obliczenie dla `d` używa domyślnego pierwszeństwa `/` przez `+` i jest równoważne z `d = b + (c / a)`. Nawiasy w obliczaniu `e` przesłaniają domyślne pierwszeństwo.  
   
 ## <a name="separators"></a>Separatorach  
- Separators do what their name suggests: they separate sections of code. In Visual Basic, the separator character is the colon (`:`). Use separators when you want to include multiple statements on a single line instead of separate lines. This saves space and improves the readability of your code. The following example shows three statements separated by colons.  
+ Separatory służą do jej sugerowania: oddzielą sekcje kodu. W Visual Basic znak separatora jest dwukropek (`:`). Użyj separatorów, gdy chcesz uwzględnić wiele instrukcji w pojedynczym wierszu, a nie w osobnych wierszach. Pozwala to zaoszczędzić miejsce i zwiększa czytelność kodu. Poniższy przykład przedstawia trzy instrukcje oddzielone średnikami.  
   
  [!code-vb[VbVbcnConventions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#12)]  
   
- For more information, see [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: przerywanie i łączenie instrukcji w kodzie](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
- The colon (`:`) character is also used to identify a statement label. For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ Znak dwukropka (`:`) jest również używany do identyfikowania etykiety instrukcji. Aby uzyskać więcej informacji, zobacz [instrukcje: etykietowanie instrukcji](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 ## <a name="concatenation"></a>Połączenie (konkatenacja)  
- Use the `&` operator for *concatenation*, or linking strings together. Do not confuse it with the `+` operator, which adds together numeric values. If you use the `+` operator to concatenate when you operate on numeric values, you can obtain incorrect results. The following example demonstrates this.  
+ Użyj operatora `&` do *łączenia*lub łączenia ciągów razem. Nie należy mylić z operatorem `+`, który dodaje razem wartości liczbowe. Jeśli używasz operatora `+`, aby łączyć się podczas wykonywania operacji na wartościach liczbowych, możesz uzyskać nieprawidłowe wyniki. Poniższy przykład ilustruje to.  
   
  [!code-vb[VbVbcnConventions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#13)]  
   
- Following execution of the previous code, the value of `resultA` is 21.01 and the value of `resultB` is "10.0111".  
+ Po wykonaniu poprzedniego kodu wartością `resultA` jest 21,01, a wartością `resultB` jest "10,0111".  
   
-## <a name="member-access-operators"></a>Member Access Operators  
- To access a member of a type, you use the dot (`.`) or exclamation point (`!`) operator between the type name and the member name.  
+## <a name="member-access-operators"></a>Operatory dostępu do elementów członkowskich  
+ Aby uzyskać dostęp do elementu członkowskiego typu, należy użyć operatora kropki (`.`) lub wykrzyknika (`!`) między nazwą typu a nazwą elementu członkowskiego.  
   
-### <a name="dot--operator"></a>Dot (.) Operator  
- Use the `.` operator on a class, structure, interface, or enumeration as a member access operator. The member can be a field, property, event, or method. Ilustruje to poniższy przykład.  
+### <a name="dot--operator"></a>Kropka (.) Zakład  
+ Użyj operatora `.` w klasie, strukturze, interfejsie lub wyliczenia jako operator dostępu do składowych. Składową może być pole, właściwość, zdarzenie lub metoda. Ilustruje to poniższy przykład.  
   
  [!code-vb[VbVbcnConventions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#14)]  
   
-### <a name="exclamation-point--operator"></a>Exclamation Point (!) Operator  
- Use the `!` operator only on a class or interface as a dictionary access operator. The class or interface must have a default property that accepts a single `String` argument. The identifier immediately following the `!` operator becomes the argument value passed to the default property as a string. The following example demonstrates this.  
+### <a name="exclamation-point--operator"></a>Wykrzyknik (!) Zakład  
+ Operatora `!` należy używać tylko w klasie lub interfejsie jako operator dostępu do słownika. Klasa lub interfejs musi mieć właściwość domyślną, która akceptuje pojedynczy argument `String`. Identyfikator bezpośrednio po operatorze `!` będzie wartością argumentu przekazaną do domyślnej właściwości jako ciąg. Poniższy przykład ilustruje to.  
   
  [!code-vb[VbVbcnConventions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#15)]  
   
- The three output lines of `MsgBox` all display the value `32856`. The first line uses the traditional access to property `index`, the second makes use of the fact that `index` is the default property of class `hasDefault`, and the third uses dictionary access to the class.  
+ Trzy wiersze wyjściowe `MsgBox` wszystkie wyświetlają `32856`wartości. Pierwszy wiersz używa tradycyjnego dostępu do właściwości `index`, drugi korzysta z faktu, że `index` jest właściwością domyślną klasy `hasDefault`, a trzeci używa dostępu do słownika do klasy.  
   
- Note that the second operand of the `!` operator must be a valid Visual Basic identifier not enclosed in double quotation marks (`" "`). In other words, you cannot use a string literal or string variable. The following change to the last line of the `MsgBox` call generates an error because `"X"` is an enclosed string literal.  
+ Należy zauważyć, że drugi operand operatora `!` musi być prawidłowym identyfikatorem Visual Basic, który nie jest ujęty w znaki podwójnego cudzysłowu (`" "`). Innymi słowy, nie można użyć literału ciągu ani zmiennej ciągu. Następująca zmiana w ostatnim wierszu wywołania `MsgBox` generuje błąd, ponieważ `"X"` jest ujętą w nawias literał ciągu.  
   
  `"Dictionary access returns " & hD!"X")`  
   
 > [!NOTE]
-> References to default collections must be explicit. In particular, you cannot use the `!` operator on a late-bound variable.  
+> Odwołania do kolekcji domyślnych muszą być jawne. W szczególności nie można użyć operatora `!` na zmiennej z późnym wiązaniem.  
   
- The `!` character is also used as the `Single` type character.  
+ Znak `!` jest również używany jako znak typu `Single`.  
   
 ## <a name="see-also"></a>Zobacz także
 

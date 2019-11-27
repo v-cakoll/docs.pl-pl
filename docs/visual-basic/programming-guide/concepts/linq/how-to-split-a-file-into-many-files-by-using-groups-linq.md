@@ -9,13 +9,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341361"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Instrukcje: dzielenie pliku na wiele plików przy użyciu grup (LINQ) (Visual Basic)
 
-This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.
+Ten przykład pokazuje jeden ze sposobów, aby scalić zawartość dwóch plików, a następnie utworzyć zestaw nowych plików, które organizują dane w nowy sposób.
 
-### <a name="to-create-the-data-files"></a>To create the data files
+### <a name="to-create-the-data-files"></a>Aby utworzyć pliki danych
 
-1. Copy these names into a text file that is named names1.txt and save it in your project folder:
+1. Skopiuj te nazwy do pliku tekstowego o nazwie names1. txt i Zapisz go w folderze projektu:
 
     ```text
     Bankov, Peter
@@ -30,7 +30,7 @@ This example shows one way to merge the contents of two files and then create a 
     Garcia, Debra
     ```
 
-2. Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.
+2. Skopiuj te nazwy do pliku tekstowego o nazwie names2. txt i Zapisz go w folderze projektu: należy pamiętać, że te dwa pliki mają nazwy wspólne.
 
     ```text
     Liu, Jinghao
@@ -114,13 +114,13 @@ End Class
 '    Toyoshima, Tim
 ```
 
-The program writes a separate file for each group in the same folder as the data files.
+Program zapisuje oddzielny plik dla każdej grupy w tym samym folderze co pliki danych.
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Utwórz projekt aplikacji konsolowej VB.NET z instrukcją `Imports` dla przestrzeni nazw System. LINQ.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

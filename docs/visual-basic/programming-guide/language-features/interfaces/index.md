@@ -15,73 +15,73 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345053"
 ---
 # <a name="interfaces-visual-basic"></a>Interfejsy (Visual Basic)
-*Interfaces* define the properties, methods, and events that classes can implement. Interfaces allow you to define features as small groups of closely related properties, methods, and events; this reduces compatibility problems because you can develop enhanced implementations for your interfaces without jeopardizing existing code. You can add new features at any time by developing additional interfaces and implementations.  
+*Interfejsy* definiują właściwości, metody i zdarzenia, które mogą implementować klasy. Interfejsy umożliwiają definiowanie funkcji jako małych grup ściśle powiązanych właściwości, metod i zdarzeń; zmniejsza to problemy ze zgodnością, ponieważ można opracowywać ulepszone implementacje dla interfejsów bez narażania istniejącego kodu. W dowolnym momencie możesz dodać nowe funkcje, opracowując dodatkowe interfejsy i implementacje.  
   
- There are several other reasons why you might want to use interfaces instead of class inheritance:  
+ Istnieje kilka innych powodów, dla których warto chcieć używać interfejsów zamiast dziedziczenia klasy:  
   
-- Interfaces are better suited to situations in which your applications require many possibly unrelated object types to provide certain functionality.  
+- Interfejsy są lepiej dopasowane do sytuacji, w których aplikacje wymagają wielu niepowiązanych typów obiektów, aby zapewnić pewne funkcje.  
   
-- Interfaces are more flexible than base classes because you can define a single implementation that can implement multiple interfaces.  
+- Interfejsy są bardziej elastyczne niż klasy bazowe, ponieważ istnieje możliwość zdefiniowania jednej implementacji, która może zaimplementować wiele interfejsów.  
   
-- Interfaces are better in situations in which you do not have to inherit implementation from a base class.  
+- Interfejsy są lepsze w sytuacjach, w których nie trzeba dziedziczyć implementacji z klasy bazowej.  
   
-- Interfaces are useful when you cannot use class inheritance. For example, structures cannot inherit from classes, but they can implement interfaces.  
+- Interfejsy są przydatne, gdy nie można użyć dziedziczenia klas. Na przykład struktury nie mogą dziedziczyć z klas, ale mogą implementować interfejsy.  
   
-## <a name="declaring-interfaces"></a>Declaring Interfaces  
- Interface definitions are enclosed within the `Interface` and `End Interface` statements. Following the `Interface` statement, you can add an optional `Inherits` statement that lists one or more inherited interfaces. The `Inherits` statements must precede all other statements in the declaration except comments. The remaining statements in the interface definition should be `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure`, and `Enum` statements. Interfaces cannot contain any implementation code or statements associated with implementation code, such as `End Sub` or `End Property`.  
+## <a name="declaring-interfaces"></a>Deklarowanie interfejsów  
+ Definicje interfejsu są ujęte w instrukcji `Interface` i `End Interface`. Postępując zgodnie z instrukcją `Interface`, można dodać opcjonalną instrukcję `Inherits`, która zawiera jeden lub więcej dziedziczonych interfejsów. Instrukcje `Inherits` muszą poprzedzać wszystkie inne instrukcje w deklaracji poza komentarzem. Pozostałe instrukcje w definicji interfejsu powinny mieć `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure`i `Enum` instrukcji. Interfejsy nie mogą zawierać żadnych kodów implementacji ani instrukcji skojarzonych z kodem implementacji, takich jak `End Sub` lub `End Property`.  
   
- In a namespace, interface statements are `Friend` by default, but they can also be explicitly declared as `Public` or `Friend`. Interfaces defined within classes, modules, interfaces, and structures are `Public` by default, but they can also be explicitly declared as `Public`, `Friend`, `Protected`, or `Private`.  
+ W przestrzeni nazw instrukcje interfejsu są domyślnie `Friend`, ale mogą być również jawnie zadeklarowane jako `Public` lub `Friend`. Interfejsy zdefiniowane w ramach klas, modułów, interfejsów i struktur są domyślnie `Public`, ale mogą być również jawnie zadeklarowane jako `Public`, `Friend`, `Protected`lub `Private`.  
   
 > [!NOTE]
-> The `Shadows` keyword can be applied to all interface members. The `Overloads` keyword can be applied to `Sub`, `Function`, and `Property` statements declared in an interface definition. In addition, `Property` statements can have the `Default`, `ReadOnly`, or `WriteOnly` modifiers. None of the other modifiers—`Public`, `Private`, `Friend`, `Protected`, `Shared`, `Overrides`, `MustOverride`, or `Overridable`—are allowed. For more information, see [Declaration Contexts and Default Access Levels](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+> Słowo kluczowe `Shadows` można zastosować do wszystkich elementów członkowskich interfejsu. Słowo kluczowe `Overloads` można zastosować do instrukcji `Sub`, `Function`i `Property` zadeklarowanych w definicji interfejsu. Ponadto instrukcje `Property` mogą mieć Modyfikatory `Default`, `ReadOnly`lub `WriteOnly`. Żaden z innych modyfikatorów —`Public`, `Private`, `Friend`, `Protected`, `Shared`, `Overrides`, `MustOverride`lub `Overridable`— są dozwolone. Aby uzyskać więcej informacji, zobacz [konteksty deklaracji i domyślne poziomy dostępu](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- For example, the following code defines an interface with one function, one property, and one event.  
+ Na przykład poniższy kod definiuje interfejs z jedną funkcją, jedną właściwością i jednym zdarzeniem.  
   
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
-## <a name="implementing-interfaces"></a>Implementing Interfaces  
- The Visual Basic reserved word `Implements` is used in two ways. The `Implements` statement signifies that a class or structure implements an interface. The `Implements` keyword signifies that a class member or structure member implements a specific interface member.  
+## <a name="implementing-interfaces"></a>Implementowanie interfejsów  
+ `Implements` słowa zastrzeżonego Visual Basic są używane na dwa sposoby. Instrukcja `Implements` oznacza, że Klasa lub struktura implementuje interfejs. Słowo kluczowe `Implements` oznacza, że składowa klasy lub składowej struktury implementuje określonego elementu członkowskiego interfejsu.  
   
 ### <a name="implements-statement"></a>Implements — Instrukcja  
- If a class or structure implements one or more interfaces, it must include the `Implements` statement immediately after the `Class` or `Structure` statement. The `Implements` statement requires a comma-separated list of interfaces to be implemented by a class. The class or structure must implement all interface members using the `Implements` keyword.  
+ Jeśli klasa lub struktura implementuje jeden lub więcej interfejsów, musi zawierać instrukcję `Implements` bezpośrednio po instrukcji `Class` lub `Structure`. Instrukcja `Implements` wymaga rozdzielonej przecinkami listy interfejsów, które mają być implementowane przez klasę. Klasa lub struktura muszą implementować wszystkie elementy członkowskie interfejsu za pomocą słowa kluczowego `Implements`.  
   
-### <a name="implements-keyword"></a>Implements Keyword  
- The `Implements` keyword requires a comma-separated list of interface members to be implemented. Generally, only a single interface member is specified, but you can specify multiple members. The specification of an interface member consists of the interface name, which must be specified in an implements statement within the class; a period; and the name of the member function, property, or event to be implemented. The name of a member that implements an interface member can use any legal identifier, and it is not limited to the `InterfaceName_MethodName` convention used in earlier versions of Visual Basic.  
+### <a name="implements-keyword"></a>Implements — słowo kluczowe  
+ Słowo kluczowe `Implements` wymaga zaimplementowania listy składowych interfejsu rozdzielanych przecinkami. Ogólnie tylko jeden element członkowski interfejsu jest określony, ale można określić wielu członków. Specyfikacja elementu członkowskiego interfejsu składa się z nazwy interfejsu, która musi być określona w instrukcji Implements w klasie; okres; i nazwa funkcji składowej, właściwości lub zdarzenia, które mają zostać zaimplementowane. Nazwa elementu członkowskiego implementującego element członkowski interfejsu może korzystać z dowolnego identyfikatora prawnego i nie jest ograniczona do Konwencji `InterfaceName_MethodName` używanej we wcześniejszych wersjach Visual Basic.  
   
- For example, the following code shows how to declare a subroutine named `Sub1` that implements a method of an interface:  
+ Na przykład poniższy kod ilustruje sposób deklarowania podprocedury o nazwie `Sub1` implementującej metodę interfejsu:  
   
  [!code-vb[VbVbalrOOP#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#69)]  
   
- The parameter types and return types of the implementing member must match the interface property or member declaration in the interface. The most common way to implement an element of an interface is with a member that has the same name as the interface, as shown in the previous example.  
+ Typy parametrów i zwracane typy składowej implementującej muszą być zgodne z właściwością interfejsu lub deklaracją elementu członkowskiego w interfejsie. Najbardziej typowym sposobem implementacji elementu interfejsu jest element członkowski, który ma taką samą nazwę jak interfejs, jak pokazano w poprzednim przykładzie.  
   
- To declare the implementation of an interface method, you can use any attributes that are legal on instance method declarations, including `Overloads`, `Overrides`, `Overridable`, `Public`, `Private`, `Protected`, `Friend`, `Protected Friend`, `MustOverride`, `Default`, and `Static`. The `Shared` attribute is not legal since it defines a class rather than an instance method.  
+ Aby zadeklarować implementację metody interfejsu, można użyć dowolnych atrybutów, które są prawne dla deklaracji metody wystąpienia, w tym `Overloads`, `Overrides`, `Overridable`, `Public`, `Private`, `Protected`, `Friend`, `Protected Friend`, `MustOverride`, `Default`i `Static`. Atrybut `Shared` nie jest dozwolony, ponieważ definiuje klasę, a nie metodę wystąpienia.  
   
- Using `Implements`, you can also write a single method that implements multiple methods defined in an interface, as in the following example:  
+ Za pomocą `Implements`można również napisać pojedynczą metodę, która implementuje wiele metod zdefiniowanych w interfejsie, tak jak w poniższym przykładzie:  
   
  [!code-vb[VbVbalrOOP#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#70)]  
   
- You can use a private member to implement an interface member. When a private member implements a member of an interface, that member becomes available by way of the interface even though it is not available directly on object variables for the class.  
+ Do zaimplementowania elementu członkowskiego interfejsu można użyć prywatnego elementu członkowskiego. Gdy prywatny element członkowski implementuje element członkowski interfejsu, ten element członkowski jest dostępny w interfejsie, mimo że nie jest dostępny bezpośrednio dla zmiennych obiektów klasy.  
   
-### <a name="interface-implementation-examples"></a>Interface Implementation Examples  
- Classes that implement an interface must implement all its properties, methods, and events.  
+### <a name="interface-implementation-examples"></a>Przykłady implementacji interfejsu  
+ Klasy implementujące interfejs muszą implementować wszystkie jego właściwości, metody i zdarzenia.  
   
- The following example defines two interfaces. The second interface, `Interface2`, inherits `Interface1` and defines an additional property and method.  
+ W poniższym przykładzie zdefiniowano dwa interfejsy. Drugi interfejs, `Interface2`, dziedziczy `Interface1` i definiuje dodatkową właściwość i metodę.  
   
  [!code-vb[VbVbalrOOP#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#39)]  
   
- The next example implements `Interface1`, the interface defined in the previous example:  
+ Następny przykład implementuje `Interface1`, interfejs zdefiniowany w poprzednim przykładzie:  
   
  [!code-vb[VbVbalrOOP#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#40)]  
   
- The final example implements `Interface2`, including a method inherited from `Interface1`:  
+ Ostatni przykład implementuje `Interface2`, w tym metodę dziedziczoną z `Interface1`:  
   
  [!code-vb[VbVbalrOOP#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#41)]  
   
- You can implement a readonly property with a readwrite property (that is, you do not have to declare it readonly in the implementing class).  Implementing an interface promises to implement at least the members that the interface declares, but you can offer more functionality, such as allowing your property to be writable.  
+ Można zaimplementować właściwość ReadOnly z właściwością ReadWrite (oznacza to, że nie trzeba deklarować jej jako tylko do odczytu w klasie implementującej).  Implementacja interfejsu niesie obietnice zwiększenia do wdrożenia co najmniej elementów członkowskich, które deklaruje interfejs, ale można zaoferować więcej funkcji, takich jak umożliwienie zapisu właściwości.  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Przewodnik: tworzenie i wdrażanie interfejsów](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Provides a detailed procedure that takes you through the process of defining and implementing your own interface.|  
-|[Wariancje w interfejsach ogólnych](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Discusses covariance and contravariance in generic interfaces and provides a list of variant generic interfaces in the .NET Framework.|
+|[Przewodnik: tworzenie i wdrażanie interfejsów](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Zawiera szczegółową procedurę, która przeprowadzi Cię przez proces definiowania i implementowania własnego interfejsu.|  
+|[Wariancje w interfejsach ogólnych](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Omawia kowariancję i kontrawariancja w interfejsach ogólnych i zawiera listę podstawowych interfejsów w .NET Framework.|

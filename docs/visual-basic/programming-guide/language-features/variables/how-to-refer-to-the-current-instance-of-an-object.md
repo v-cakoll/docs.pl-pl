@@ -16,20 +16,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346881"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Porady: odwoływanie się do bieżącego wystąpienia obiektu (Visual Basic)
-The *current instance* of an object is the instance in which the code is currently executing.  
+*Bieżące wystąpienie* obiektu to wystąpienie, w którym kod jest aktualnie wykonywany.  
   
- You use the `Me` keyword to refer to the current instance.  
+ Użyj słowa kluczowego `Me`, aby odwołać się do bieżącego wystąpienia.  
   
-### <a name="to-refer-to-the-current-instance"></a>To refer to the current instance  
+### <a name="to-refer-to-the-current-instance"></a>Aby odwołać się do bieżącego wystąpienia  
   
-- Use the `Me` keyword where you would normally use the name of an object variable.  
+- Użyj słowa kluczowego `Me`, gdzie zwykle używasz nazwy zmiennej obiektu.  
   
     ```vb  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     Although `Me` behaves like an object variable, you cannot declare it or assign anything to it. `Me` always refers to the current instance.  
+     Chociaż `Me` zachowuje się jak zmienna obiektu, nie można jej zadeklarować ani przypisać do niej niczego. `Me` zawsze odwołuje się do bieżącego wystąpienia.  
   
 ## <a name="see-also"></a>Zobacz także
 

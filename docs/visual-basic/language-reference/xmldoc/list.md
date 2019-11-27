@@ -20,8 +20,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352321"
 ---
-# <a name="list-visual-basic"></a>\<list> (Visual Basic)
-Defines a list or table.  
+# <a name="list-visual-basic"></a>> listy \<(Visual Basic)
+Definiuje listę lub tabelę.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,25 +40,25 @@ Defines a list or table.
   
 ## <a name="parameters"></a>Parametry  
  `type`  
- The type of the list. Must be a "bullet" for a bulleted list, "number" for a numbered list, or "table" for a two-column table.  
+ Typ listy. Musi być "punktorem" dla listy punktowanej, "number" dla listy numerowanej lub "Table" dla jednokolumnowej tabeli.  
   
  `term`  
- Only used when `type` is "table." A term to define, which is defined in the description tag.  
+ Używane tylko wtedy, gdy `type` jest "Table". Termin do zdefiniowania, który jest zdefiniowany w tagu Description.  
   
  `description`  
- When `type` is "bullet" or "number," `description` is an item in the list When `type` is "table," `description` is the definition of `term`.  
+ Gdy `type` jest "punktor" lub "number", `description` jest pozycją na liście, gdy `type` jest "Tabela", `description` jest definicją `term`.  
   
 ## <a name="remarks"></a>Uwagi  
- The `<listheader>` block defines the heading of either a table or definition list. When defining a table, you only have to supply an entry for `term` in the heading.  
+ Blok `<listheader>` definiuje nagłówek tabeli lub listy definicji. Podczas definiowania tabeli należy tylko podać wpis dla `term` w nagłówku.  
   
- Each item in the list is specified with an `<item>` block. When creating a definition list, you must specify both `term` and `description`. However, for a table, bulleted list, or numbered list, you only have to supply an entry for `description`.  
+ Każdy element na liście jest określany za pomocą bloku `<item>`. Podczas tworzenia listy definicji należy określić zarówno `term`, jak i `description`. Jednak w przypadku tabeli, listy punktowanej lub listy numerowanej trzeba podać tylko wpis dla `description`.  
   
- A list or table can have as many `<item>` blocks as needed.  
+ Lista lub tabela może zawierać dowolną liczbę bloków `<item>` w zależności od potrzeb.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- This example uses the `<list>` tag to define a bulleted list in the remarks section.  
+ W tym przykładzie używa znacznika `<list>`, aby zdefiniować listę punktowaną w sekcji uwagi.  
   
  [!code-vb[VbVbcnXmlDocComments#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#5)]  
   

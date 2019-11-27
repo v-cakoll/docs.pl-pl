@@ -1,5 +1,5 @@
 ---
-title: Integer — Typ danych
+title: Integer, typ danych
 ms.date: 01/31/2018
 f1_keywords:
 - vb.Integer
@@ -28,32 +28,32 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343982"
 ---
-# <a name="integer-data-type-visual-basic"></a>Integer data type (Visual Basic)
+# <a name="integer-data-type-visual-basic"></a>Integer — typ danych (Visual Basic)
 
 Przechowuje 32-bitowe (4-bajtowe) liczby całkowite ze znakiem z zakresu wartości od -2 147 483,648 do 2 147 483 647.  
   
 ## <a name="remarks"></a>Uwagi
 
- The `Integer` data type provides optimal performance on a 32-bit processor. Inne typy całkowitoliczbowe wolniej wczytują się z pamięci i są w niej zapisywane.  
+ Typ danych `Integer` zapewnia optymalną wydajność procesora 32-bitowego. Inne typy całkowitoliczbowe wolniej wczytują się z pamięci i są w niej zapisywane.  
   
- The default value of `Integer` is 0.  
+ Wartość domyślna `Integer` wynosi 0.  
 
-## <a name="literal-assignments"></a>Literal assignments
+## <a name="literal-assignments"></a>Przypisania literałów
 
-You can declare and initialize an `Integer` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. If the integer literal is outside the range of `Integer` (that is, if it is less than <xref:System.Int32.MinValue?displayProperty=nameWithType> or greater than <xref:System.Int32.MaxValue?displayProperty=nameWithType>, a compilation error occurs.
+Można zadeklarować i zainicjować zmienną `Integer`, przypisując jej literał dziesiętny, literał szesnastkowy, literał ósemkowy lub (Zaczynając od Visual Basic 2017) literał binarny. Jeśli literał liczby całkowitej znajduje się poza zakresem `Integer` (czyli jeśli jest mniejszy niż <xref:System.Int32.MinValue?displayProperty=nameWithType> lub większa niż <xref:System.Int32.MaxValue?displayProperty=nameWithType>, wystąpi błąd kompilacji.
 
-In the following example, integers equal to 90,946 that are represented as decimal, hexadecimal, and binary literals are assigned to `Integer` values.
+W poniższym przykładzie liczby całkowite równe 90 946 są reprezentowane jako literały dziesiętne, szesnastkowe i binarne są przypisywane do wartości `Integer`.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Int)]  
 
 > [!NOTE]
-> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. Decimal literals have no prefix.
+> Możesz użyć prefiksu `&h` lub `&H` do określenia literału szesnastkowego, prefiksu `&b` lub `&B`, aby zauważyć literał binarny, a prefiks `&o` lub `&O`, aby zauważyć literał ósemkowy. Literały dziesiętne nie mają prefiksu.
 
-Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
+Począwszy od Visual Basic 2017, można również użyć znaku podkreślenia, `_`, jako separatora cyfr, aby zwiększyć czytelność, jak pokazano w poniższym przykładzie.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
 
-Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. Na przykład:
+Począwszy od Visual Basic 15,5, można również użyć znaku podkreślenia (`_`) jako wiodącego separatora między cyframi prefiksu i szesnastkową, binarną lub ósemkową. Na przykład:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -61,7 +61,7 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Numeric literals can also include the `I` [type character](../../programming-guide/language-features/data-types/type-characters.md) to denote the `Integer` data type, as the following example shows.
+Literały numeryczne mogą również zawierać `I` [znak typu](../../programming-guide/language-features/data-types/type-characters.md) , aby zauważyć `Integer` typ danych, jak pokazano w poniższym przykładzie.
 
 ```vb
 Dim number = &H_035826I
@@ -69,13 +69,13 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>Porady dotyczące programowania
 
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, such as Automation or COM objects, remember that `Integer` has a different data width (16 bits) in other environments. If you are passing a 16-bit argument to such a component, declare it as `Short` instead of `Integer` in your new Visual Basic code.  
+- **Zagadnienia dotyczące międzyoperacyjnych.** Jeśli korzystasz z składników niepisanych dla .NET Framework, takich jak Automatyzacja lub obiekty COM, pamiętaj, że `Integer` ma inną szerokość danych (16 bitów) w innych środowiskach. Jeśli przekazujesz argument 16-bitowy do takiego składnika, zadeklaruj go jako `Short` zamiast `Integer` w nowym kodzie Visual Basic.  
   
-- **Widening.** The `Integer` data type widens to `Long`, `Decimal`, `Single`, or `Double`. This means you can convert `Integer` to any one of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.  
+- **Rozszerzającą.** Typ danych `Integer` poszerza do `Long`, `Decimal`, `Single`lub `Double`. Oznacza to, że można skonwertować `Integer` do dowolnego jednego z tych typów bez napotkania <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
-- **Type Characters.** Appending the literal type character `I` to a literal forces it to the `Integer` data type. Appending the identifier type character `%` to any identifier forces it to `Integer`.  
+- **Znaki typu.** Dołączanie znaku typu literału `I` do literału wymusza go do `Integer` typu danych. Dołączanie znaku typu identyfikatora `%` do dowolnego identyfikatora wymusza `Integer`.  
   
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Int32?displayProperty=nameWithType> structure.  
+- **Typ struktury.** Odpowiedni typ w .NET Framework jest strukturą <xref:System.Int32?displayProperty=nameWithType>.  
   
 ## <a name="range"></a>Zakres
 

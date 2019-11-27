@@ -24,7 +24,7 @@ ms.locfileid: "74431436"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>IMetaDataTables::GetUserString — Metoda
 
-Gets the hard-coded string at the specified index in the string column in the current scope.
+Pobiera zakodowany ciąg o określonym indeksie w kolumnie ciąg w bieżącym zakresie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,23 +39,23 @@ HRESULT GetUserString (
 ## <a name="parameters"></a>Parametry
 
 `ixUserString`\
-[in] The index value from which the hard-coded string will be retrieved.
+podczas Wartość indeksu, z której zostanie pobrany zakodowany ciąg.
 
 `pcbData`\
-[out] A pointer to the size of `ppData`.
+określoną Wskaźnik do rozmiaru `ppData`.
 
 `ppData`\
-[out] A pointer to a pointer to the returned string.
+określoną Wskaźnik do wskaźnika do zwracanego ciągu.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** Cor.h
+**Nagłówek:** Cor. h
 
-**Library:** Used as a resource in MsCorEE.dll
+**Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll
 
-**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

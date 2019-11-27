@@ -1,6 +1,6 @@
 ---
-title: .NET Framework Analyzers - .NET
-description: Learn how to use the .NET Framework Analyzers in the .NET Framework Analyzers package to find and address security risks
+title: .NET Framework analizatory — .NET
+description: Dowiedz się, jak używać analizatorów .NET Framework w pakiecie analizatorów .NET Framework do znajdowania i rozwiązywania zagrożeń bezpieczeństwa
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
@@ -12,61 +12,61 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345951"
 ---
-# <a name="the-net-framework-analyzer"></a>The .NET Framework Analyzer
+# <a name="the-net-framework-analyzer"></a>Analizator .NET Framework
 
-You can use the .NET Framework Analyzer to find potential issues in your .NET Framework-based application code. This analyzer finds potential issues and suggests fixes to them.
+Możesz użyć analizatora .NET Framework, aby znaleźć potencjalne problemy w kodzie aplikacji opartym na .NET Framework. Ten Analizator odnajdzie potencjalne problemy i sugeruje do nich poprawki.
 
-The analyzer runs interactively in Visual Studio as you write your code or as part of a CI build. You should add the analyzer to your project as early as possible in your development. The sooner you find any potential issues in your code, the easier they are to fix. However, you can add it at any time in the development cycle. It finds any issues with the existing code and warns about new issues as you keep developing.
+Analizator działa interaktywnie w programie Visual Studio podczas pisania kodu lub jako część kompilacji elementu konfiguracji. Należy dodać Analizator do projektu tak szybko, jak to możliwe w rozwoju. Wkrótce znajdziesz ewentualne potencjalne problemy w kodzie, tym łatwiejsze jest ich naprawa. Można jednak dodać go w dowolnym momencie w cyklu projektowania. Znajduje wszelkie problemy związane z istniejącym kodem i ostrzega o nowych problemach związanych z programowaniem.
 
-## <a name="installing-and-configuring-the-net-framework-analyzer"></a>Installing and configuring the .NET Framework Analyzer
+## <a name="installing-and-configuring-the-net-framework-analyzer"></a>Instalowanie i Konfigurowanie analizatora .NET Framework
 
-The .NET Framework Analyzers must be installed as a NuGet package on every project where you want them to run. Only one developer needs to add them to the project. The analyzer package is a project dependency and will run on every developer's machine once it has the updated solution.
+Analizatory .NET Framework muszą być zainstalowane jako pakiet NuGet w każdym projekcie, w którym mają być uruchamiane. Tylko jeden Deweloper musi dodać je do projektu. Pakiet analizatora jest zależnością projektu i będzie działać na każdym komputerze dewelopera, gdy ma zaktualizowane rozwiązanie.
 
-The .NET Framework Analyzer is delivered in the [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) NuGet package. This package provides only the analyzers specific to the .NET Framework, which includes security analyzers. In most cases, you'll want the [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet package. The FxCopAnalyzers aggregate package contains all the framework analyzers included in the Framework.Analyzers package as well as the following analyzers:
+Analizator .NET Framework jest dostarczany w pakiecie NuGet [Microsoft. NETFramework. analizators](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) . Ten pakiet zawiera tylko analizatory charakterystyczne dla .NET Framework, które obejmują analizatory zabezpieczeń. W większości przypadków należy użyć pakietu NuGet [Microsoft. CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) . Pakiet zagregowany FxCopAnalyzers zawiera wszystkie analizatory struktury zawarte w pakiecie Framework. analizatory, a także następujące analizatory:
 
-- [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): Provides general guidance and guidance for .NET Standard APIs
-- [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): Provides analyzers specific to .NET Core APIs.
-- [Text.Analyzers](https://www.nuget.org/packages/Text.Analyzers): Provides guidance for text included as code, including comments.
+- [Microsoft. CodeQuality. analizatory](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): zawiera ogólne wskazówki i wskazówki dotyczące .NET Standard interfejsów API
+- [Microsoft. rdzeń. analizatory](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): udostępnia analizatory charakterystyczne dla interfejsów API platformy .NET Core.
+- [Text. analizatory](https://www.nuget.org/packages/Text.Analyzers): zawiera wskazówki dotyczące tekstu zawartego w kodzie, w tym komentarzy.
 
-To install it, right-click on the project, and select "Manage Dependencies".
-From the NuGet explorer, search for "NetFramework Analyzer", or if you prefer, "Fx Cop Analyzer". Install the latest stable version in all projects in your solution.
+Aby go zainstalować, kliknij prawym przyciskiem myszy projekt i wybierz polecenie "Zarządzaj zależnościami".
+W Eksploratorze NuGet Wyszukaj ciąg "NetFramework Analyzer" lub, jeśli wolisz, "FX COP Analyzer". Zainstaluj najnowszą stabilną wersję we wszystkich projektach w rozwiązaniu.
 
-## <a name="using-the-net-framework-analyzer"></a>Using the .NET Framework Analyzer
+## <a name="using-the-net-framework-analyzer"></a>Korzystanie z analizatora .NET Framework
 
-Once the NuGet package is installed, build your solution. The analyzer will report any issues it locates in your codebase. The issues are reported as warnings in the Visual Studio Error List window, as shown in the following image:
+Po zainstalowaniu pakietu NuGet Skompiluj rozwiązanie. Analizator zgłosi wszelkie problemy, które znajdują się w bazie kodu. Problemy są raportowane jako ostrzeżenia w oknie Lista błędów programu Visual Studio, jak pokazano na poniższej ilustracji:
 
-![issues reported by the framework analyzer](./media/framework-analyzers-2.png)
+![problemy zgłoszone przez analizator Framework](./media/framework-analyzers-2.png)
 
-As you write code, you see squiggles underneath any potential issue in your code.
-Hover over any issue and you see details about the issue, and suggestions for any possible fix, as shown in the following image:
+Podczas pisania kodu zobaczysz zygzaki poniżej dowolnego potencjalnego problemu w kodzie.
+Umieść wskaźnik myszy nad dowolnym problemem i Wyświetl szczegóły dotyczące problemu oraz sugestie dotyczące ewentualnych poprawek, jak pokazano na poniższej ilustracji:
 
-![interactive report of issues found by the framework analyzer](./media/framework-analyzers-1.png)
+![interaktywny raport o problemach znalezionych przez analizator Framework](./media/framework-analyzers-1.png)
 
-The analyzers examine the code in your solution and provide you with a list of warnings for any of these issues:
+Analizatory sprawdzają kod w rozwiązaniu i zapewniają listę ostrzeżeń dla dowolnego z następujących problemów:
 
 ### <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Typy nie powinny rozszerzać pewnych typów bazowych
 
-There are a small number of types in the .NET Framework that you should not derived from directly. 
+Istnieje niewielka liczba typów w .NET Framework, które nie powinny być bezpośrednio wyprowadzane. 
 
-**Category:** Design
-
-**Ważność:** ostrzeżenie
-
-Additional information: [CA:1058: Types should not extend certain base types](/visualstudio/code-quality/ca1058-types-should-not-extend-certain-base-types)
-
-### <a name="ca2153-do-not-catch-corrupted-state-exceptions"></a>CA2153: Do not catch corrupted state exceptions
-
-Catching corrupted state exceptions could mask errors (such as access violations), resulting in an inconsistent state of execution or making it easier for attackers to compromise a system. Instead, catch and handle a more specific set of exception type(s) or re-throw the exception
-
-**Category:** Security
+**Kategoria:** Zdefiniowanych
 
 **Ważność:** ostrzeżenie
 
-Additional information: [## CA2153: Do not catch corrupted state exceptions](/visualstudio/code-quality/ca2153-avoid-handling-corrupted-state-exceptions)
+Informacje dodatkowe: [CA: 1058: typy nie powinny poszerzać niektórych typów podstawowych](/visualstudio/code-quality/ca1058-types-should-not-extend-certain-base-types)
+
+### <a name="ca2153-do-not-catch-corrupted-state-exceptions"></a>CA2153: nie Przechwytuj wyjątków uszkodzonych Stanów
+
+Przechwycenie wyjątków uszkodzonego stanu może maskować błędy (takie jak naruszenia zasad dostępu), co spowodowało niespójny stan wykonywania lub ułatwianie atakującemu naruszenia bezpieczeństwa systemu. Zamiast tego należy przechwycić i obsłużyć bardziej szczegółowy zestaw typów wyjątków lub ponownie zgłosić wyjątek
+
+**Kategoria:** Bezpieczeństw
+
+**Ważność:** ostrzeżenie
+
+Informacje dodatkowe: [# # CA2153: nie należy przechwytywać uszkodzonych wyjątków stanu](/visualstudio/code-quality/ca2153-avoid-handling-corrupted-state-exceptions)
 
 ### <a name="ca2229-implement-serialization-constructors"></a>CA2229: Należy zaimplementować konstruktory serializacji
 
-The analyzer generates this warning when you create a type that implements the <xref:System.Runtime.Serialization.ISerializable> interface but does not define the required serialization constructor. Aby naprawić naruszenie tej zasady, należy zaimplementować konstruktora serializacji. Dla zamkniętej klasy należy ustawić konstruktor prywatny; w przeciwnym razie powinien być chroniony. The serialization constructor has the following signature:
+Analizator generuje to ostrzeżenie podczas tworzenia typu, który implementuje interfejs <xref:System.Runtime.Serialization.ISerializable>, ale nie definiuje wymaganego konstruktora serializacji. Aby naprawić naruszenie tej zasady, należy zaimplementować konstruktora serializacji. Dla zamkniętej klasy należy ustawić konstruktor prywatny; w przeciwnym razie powinien być chroniony. Konstruktor serializacji ma następujący podpis:
 
 ```csharp
 public class MyItemType
@@ -79,58 +79,58 @@ public class MyItemType
 }
 ```
 
-**Category:** Usage
+**Kategoria:** Wykorzystywani
 
 **Ważność:** ostrzeżenie
 
-Additional information: [CA2229: Implement serialization constructors](/visualstudio/code-quality/ca2229-implement-serialization-constructors)
+Informacje dodatkowe: [CA2229: Implementuj konstruktory serializacji](/visualstudio/code-quality/ca2229-implement-serialization-constructors)
 
 ### <a name="ca2235-mark-all-non-serializable-fields"></a>CA2235: Należy oznaczyć wszystkie nieserializowane pola
 
-Pola wystąpienia typu, który nie może być serializowany, jest zadeklarowany w typie, który jest możliwy do serializacji. You must explicitly mark that field with the <xref:System.NonSerializedAttribute> to fix this warning.
+Pola wystąpienia typu, który nie może być serializowany, jest zadeklarowany w typie, który jest możliwy do serializacji. Należy jawnie oznaczyć to pole z <xref:System.NonSerializedAttribute>, aby usunąć to ostrzeżenie.
 
-**Category:** Usage
-
-**Ważność:** ostrzeżenie
-
-Additional information: [CA2235: Mark all non-serializable fields](/visualstudio/code-quality/ca2235-mark-all-non-serializable-fields)
-
-### <a name="ca2237-mark-iserializable-types-with-serializable"></a>CA2237: Mark ISerializable types with serializable
-
-To be recognized by the common language runtime as serializable, types must be marked by using the <xref:System.SerializableAttribute> attribute even when the type uses a custom serialization routine by implementing the <xref:System.Runtime.Serialization.ISerializable> interface.
-
-**Category:** Usage
+**Kategoria:** Wykorzystywani
 
 **Ważność:** ostrzeżenie
 
-Additional information: [CA2237: Mark ISerializable types with serializable](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
+Informacje dodatkowe: [CA2235: Oznacz wszystkie pola, które nie są możliwe do serializacji](/visualstudio/code-quality/ca2235-mark-all-non-serializable-fields)
 
-### <a name="ca3075-insecure-dtd-processing-in-xml"></a>CA3075: Insecure DTD processing in XML
+### <a name="ca2237-mark-iserializable-types-with-serializable"></a>CA2237: Oznacz typy ISerializable z możliwością serializacji
 
-If you use insecure <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> instances or reference external entity sources, the parser may accept untrusted input and disclose sensitive information to attackers.  
+Aby można było rozpoznać przez środowisko uruchomieniowe języka wspólnego jako możliwy do serializacji, typy muszą być oznaczone przy użyciu atrybutu <xref:System.SerializableAttribute>, nawet gdy typ używa niestandardowej procedury serializacji przez implementację interfejsu <xref:System.Runtime.Serialization.ISerializable>.
 
-**Category:** Security
-
-**Ważność:** ostrzeżenie
-
-Additional information: [A3075: Insecure DTD processing in XML](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
-
-### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: Do not use weak cryptographic algorithms
-
-Cryptographic algorithms degrade over time as attacks become more advanced. Depending on the type and application of this cryptographic algorithm, further degradation of its cryptographic strength may allow attackers to read enciphered messages, tamper with enciphered messages, forge digital signatures, tamper with hashed content, or otherwise compromise any cryptosystem based on this algorithm. For encryption, use an AES algorithm (AES-256, AES-192 and AES-128 are acceptable) with a key length greater than or equal to 128 bits. For hashing, use a hashing function in the SHA-2 family, such as SHA-2 512, SHA-2 384, or SHA-2 256.
-
-**Category:** Security
+**Kategoria:** Wykorzystywani
 
 **Ważność:** ostrzeżenie
 
-Additional information: [CA5350: Do not use weak cryptographic algorithms](/visualstudio/code-quality/ca5350-do-not-use-weak-cryptographic-algorithms)
+Informacje dodatkowe: [CA2237: Oznacz typy ISerializable z](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute) możliwością serializacji
 
-### <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351: Do not use broken cryptographic algorithms
+### <a name="ca3075-insecure-dtd-processing-in-xml"></a>CA3075: niezabezpieczone przetwarzanie DTD w kodzie XML
 
-An attack making it computationally feasible to break this algorithm exists. This allows attackers to break the cryptographic guarantees it is designed to provide. Depending on the type and application of this cryptographic algorithm, this may allow attackers to read enciphered messages, tamper with enciphered messages, forge digital signatures, tamper with hashed content, or otherwise compromise any cryptosystem based on this algorithm. For encryption, use an AES algorithm (AES-256, AES-192 and AES-128 are acceptable) with a key length greater than or equal to 128 bits. For hashing, use a hashing function in the SHA-2 family, such as SHA512, SHA384, or SHA256. For digital signatures, use RSA with a key length greater than or equal to 2048-bits, or ECDSA with a key length greater than or equal to 256 bits.
+W przypadku używania niezabezpieczonych wystąpień <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> lub odwołań do zewnętrznych źródeł jednostek Analizator może akceptować niezaufane dane wejściowe i ujawniać poufne informacje osobom atakującym.  
 
-**Category:** Security
+**Kategoria:** Bezpieczeństw
 
 **Ważność:** ostrzeżenie
 
-Additional Information: [CA5351: Do not use broken cryptographic algorithms](/visualstudio/code-quality/ca5351)
+Informacje dodatkowe: [A3075: niezabezpieczone przetwarzanie DTD w XML](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
+
+### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: nie używaj słabych algorytmów kryptograficznych
+
+Algorytmy kryptograficzne obniżają wydajność w miarę upływu czasu, ponieważ ataki stają się bardziej zaawansowane. W zależności od typu i zastosowania tego algorytmu kryptograficznego, dalsze obniżenie jego siły kryptograficznej może pozwolić atakującemu na odczytywanie komunikatów ENCIPHERED, manipulowanie komunikatami ENCIPHERED, fałszowanie podpisów cyfrowych, manipulowanie skrótem zawartości lub w przeciwnym razie naruszyć wszelkie cryptosystem na podstawie tego algorytmu. W przypadku szyfrowania należy użyć algorytmu AES (AES-256, AES-192 i AES-128) o długości klucza większej lub równej 128 bitów. W celu utworzenia skrótu należy użyć funkcji mieszania w rodzinie SHA-2, takiej jak SHA-2 512, SHA-2 384 lub SHA-2 256.
+
+**Kategoria:** Bezpieczeństw
+
+**Ważność:** ostrzeżenie
+
+Informacje dodatkowe: [CA5350: nie używaj słabych algorytmów kryptograficznych](/visualstudio/code-quality/ca5350-do-not-use-weak-cryptographic-algorithms)
+
+### <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351: nie używaj uszkodzonych algorytmów kryptograficznych
+
+Atak polegający na tym, że istnieje możliwość obliczeniowa tego algorytmu. Dzięki temu osoby atakujące mogą zerwać gwarancje kryptograficzne, które są przeznaczone do zapewnienia. W zależności od typu i zastosowania tego algorytmu kryptograficznego może to umożliwić osobom atakującym odczytywanie komunikatów ENCIPHERED, manipulowanie komunikatami ENCIPHERED, fałszowanie podpisów cyfrowych, manipulowanie skrótem zawartości lub w inny sposób naruszenie jakichkolwiek cryptosystem na podstawie dla tego algorytmu. W przypadku szyfrowania należy użyć algorytmu AES (AES-256, AES-192 i AES-128) o długości klucza większej lub równej 128 bitów. W celu utworzenia skrótów Użyj funkcji tworzenia skrótów w rodzinie SHA-2, takiej jak SHA512, SHA384 lub SHA256. W przypadku podpisów cyfrowych należy użyć klucza RSA o długości większej lub równej 2048-bitowej lub ECDSA z długością klucza większą lub równą 256 bitów.
+
+**Kategoria:** Bezpieczeństw
+
+**Ważność:** ostrzeżenie
+
+Informacje dodatkowe: [CA5351: nie używaj uszkodzonych algorytmów kryptograficznych](/visualstudio/code-quality/ca5351)

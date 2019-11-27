@@ -1,5 +1,5 @@
 ---
-title: 'How to: Change the Namespace for an Entire XML Tree'
+title: 'Instrukcje: zmienianie przestrzeni nazw dla całego drzewa XML'
 ms.date: 07/20/2015
 ms.assetid: 1837324b-5cb5-4fa8-95b9-3071efa0f913
 ms.openlocfilehash: 37edb426b106d3fbf90ea06118526abab0a78bf8
@@ -9,13 +9,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346925"
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>How to: Change the Namespace for an Entire XML Tree (Visual Basic)
-You sometimes have to programmatically change the namespace for an element or an attribute. LINQ to XML makes this easy. The <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> property can be set. The <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> property cannot be set, but you can easily copy the attributes into a <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, remove the existing attributes, and then add new attributes that are in the new desired namespace.  
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>Instrukcje: zmienianie przestrzeni nazw dla całego drzewa XML (Visual Basic)
+Czasami trzeba programistycznie zmienić przestrzeń nazw dla elementu lub atrybutu. Ułatwia to LINQ to XML. Właściwość <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> można ustawić. Nie można ustawić właściwości <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType>, ale można łatwo skopiować atrybuty do <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, usunąć istniejące atrybuty, a następnie dodać nowe atrybuty, które znajdują się w nowym żądanym obszarze nazw.  
   
- For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw — omówienie (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ## <a name="example"></a>Przykład  
- The following code creates two XML trees in no namespace. It then changes the namespace of each of the trees, and combines them into a single tree.  
+ Poniższy kod tworzy dwa drzewa XML w obszarze brak przestrzeni nazw. Następnie zmienia przestrzeń nazw każdego drzewa i łączy je w jedno drzewo.  
   
 ```vb  
 Dim tree1 As XElement = _  
@@ -78,4 +78,4 @@ Console.WriteLine(root)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modyfikowanie drzew XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

@@ -12,42 +12,42 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354177"
 ---
 # <a name="linq-in-visual-basic"></a>LINQ w Visual Basic
-This section contains overviews, examples, and background information that will help you understand and use Visual Basic and [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
+Ta sekcja zawiera przeglądy, przykłady i informacje w tle, które ułatwią zrozumienie i używanie Visual Basic i [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- Provides an introduction to [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] providers, operators, query structure, and language features.  
+ [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ Zawiera wprowadzenie do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawców, operatorów, struktury zapytań i funkcji językowych.  
   
- [How to: Query a Database](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md)  
- Provides an example of how to connect to a SQL Server database and execute a query by using LINQ.  
+ [Instrukcje: zapytanie do bazy danych](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md)  
+ Zawiera przykład sposobu łączenia się z bazą danych SQL Server i wykonywania zapytania przy użyciu LINQ.  
   
- [How to: Call a Stored Procedure](../../../../visual-basic/programming-guide/language-features/linq/how-to-call-a-stored-procedure-by-using-linq.md)  
- Provides an example of how to connect to a SQL Server database and call a stored procedure by using LINQ.  
+ [Instrukcje: wywoływanie procedury składowanej](../../../../visual-basic/programming-guide/language-features/linq/how-to-call-a-stored-procedure-by-using-linq.md)  
+ Zawiera przykład sposobu łączenia się z bazą danych SQL Server i wywoływania procedury składowanej przy użyciu LINQ.  
   
- [How to: Modify Data in a Database](../../../../visual-basic/programming-guide/language-features/linq/how-to-modify-data-in-a-database-by-using-linq.md)  
- Provides an example of how to connect to a SQL Server database and retrieve and modify data by using LINQ.  
+ [Instrukcje: modyfikowanie danych w bazie danych](../../../../visual-basic/programming-guide/language-features/linq/how-to-modify-data-in-a-database-by-using-linq.md)  
+ Zawiera przykład sposobu łączenia się z bazą danych SQL Server i pobierania i modyfikowania danych przy użyciu LINQ.  
   
- [How to: Combine Data with Joins](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)  
- Provides examples of how to join data in a manner similar to database joins by using LINQ.  
+ [Instrukcje: łączenie danych z sprzężeniami](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)  
+ Zawiera przykłady sposobu sprzęgania danych w sposób podobny do sprzężenia bazy danych przy użyciu LINQ.  
   
- [How to: Sort Query Results](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)  
- Provides an example of how to order the results of a query by using LINQ.  
+ [Instrukcje: sortowanie wyników zapytania](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)  
+ Przedstawia przykład sposobu porządkowania wyników zapytania przy użyciu LINQ.  
   
- [How to: Filter Query Results](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)  
- Provides an example of how to include search criteria in a query by using LINQ.  
+ [Instrukcje: filtrowanie wyników zapytania](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)  
+ Zawiera przykład sposobu uwzględniania kryteriów wyszukiwania w zapytaniu przy użyciu LINQ.  
   
- [How to: Count, Sum, or Average Data](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)  
- Provides examples of how to include aggregate functions to Count, Sum, or Average data returned from a query by using LINQ.  
+ [Instrukcje: zliczanie, sumowanie lub średnie dane](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)  
+ Zawiera przykłady sposobu dołączania funkcji agregujących do zliczania, sumowania lub średniej danych zwracanych z zapytania przy użyciu LINQ.  
   
- [How to: Find the Minimum or Maximum Value in a Query Result](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
- Provides examples of how to include aggregate functions to determine the minimum and maximum values of data returned from a query by using LINQ.  
+ [Instrukcje: Znajdowanie wartości minimalnej lub maksymalnej w wyniku zapytania](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
+ Zawiera przykłady sposobu uwzględniania funkcji agregujących w celu określenia minimalnej i maksymalnej wartości danych zwracanych z zapytania przy użyciu LINQ.  
   
  [Instrukcje: zwracanie wyniku zapytania LINQ jako określonego typu](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
- Provides an example of how to return the results of a LINQ query as a specific type instead of as an anonymous type.  
+ Przedstawia przykład sposobu zwracania wyników zapytania LINQ jako określonego typu, a nie jako typu anonimowego.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
-- [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
+- [LINQ (zapytanie zintegrowane z językiem)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Omówienie LINQ to XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
 - [Omówienie LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

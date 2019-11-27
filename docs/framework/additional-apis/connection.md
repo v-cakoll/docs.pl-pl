@@ -1,5 +1,5 @@
 ---
-title: Connection Class (System.Net)
+title: Klasa połączenia (System.Net)
 ms.date: 05/01/2017
 ms.technology: dotnet-networking
 topic_type:
@@ -22,7 +22,7 @@ ms.locfileid: "74429350"
 ---
 # <a name="connection-class"></a>Connection, klasa
 
-The `Connection` class parses server responses, queue requests, and pipeline requests.
+Klasa `Connection` analizuje odpowiedzi serwera, żądania kolejki i żądania potoku.
 
 ## <a name="syntax"></a>Składnia
   
@@ -31,14 +31,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> The `Connection` class is internal and is not meant to be used directly in your code.
+> Klasa `Connection` jest wewnętrzna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 > 
-> Microsoft does not support the use of this class in a production application under any circumstance.
+> Firma Microsoft nie obsługuje korzystania z tej klasy w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.Net>
+**Przestrzeń nazw:** <xref:System.Net>
 
-**Assembly:** System (in System.dll)
+**Zestaw:** System (w pliku System. dll)
 
-**.NET Framework versions:** Available since 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

@@ -16,21 +16,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344740"
 ---
 # <a name="ansi-visual-basic"></a>Ansi (Visual Basic)
-Specifies that Visual Basic should marshal all strings to American National Standards Institute (ANSI) values regardless of the name of the external procedure being declared.  
+Określa, że Visual Basic powinny kierować wszystkie ciągi do wartości American National Standards Institute (ANSI), niezależnie od nazwy zadeklarowanej procedury zewnętrznej.  
   
- When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it needs to call the procedure correctly. This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.  
+ Po wywołaniu procedury zdefiniowanej poza projektem kompilator Visual Basic nie ma dostępu do informacji potrzebnych do poprawnego wywołania procedury. Informacje te obejmują miejsce, w którym znajduje się procedura, sposób jego identyfikacji, jego sekwencję wywoływania i zwracany typ oraz zestaw znaków użytych w ciągu. [Instrukcja DECLARE](../../../visual-basic/language-reference/statements/declare-statement.md) tworzy odwołanie do zewnętrznej procedury i dostarcza te niezbędne informacje.  
   
- The `charsetmodifier` part in the `Declare` statement supplies the character set information for marshaling strings during a call to the external procedure. It also affects how Visual Basic searches the external file for the external procedure name. The `Ansi` modifier specifies that Visual Basic should marshal all strings to ANSI values and should look up the procedure without modifying its name during the search.  
+ Część `charsetmodifier` w instrukcji `Declare` dostarcza informacje o zestawie znaków do organizowania ciągów podczas wywołania procedury zewnętrznej. Ma także wpływ na to, w jaki sposób Visual Basic przeszukuje zewnętrzny plik dla nazwy procedury zewnętrznej. Modyfikator `Ansi` określa, że Visual Basic powinien kierować wszystkie ciągi do wartości ANSI i należy odszukać procedurę bez modyfikowania jej nazwy podczas wyszukiwania.  
   
- If no character set modifier is specified, `Ansi` is the default.  
+ Jeśli nie określono modyfikatora zestawu znaków, `Ansi` jest wartością domyślną.  
   
 ## <a name="remarks"></a>Uwagi  
- The `Ansi` modifier can be used in this context:  
+ Modyfikator `Ansi` może być używany w tym kontekście:  
   
  [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
 ## <a name="smart-device-developer-notes"></a>Uwagi dla deweloperów inteligentnych urządzeń  
- This keyword is not supported.  
+ To słowo kluczowe nie jest obsługiwane.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -27,7 +27,7 @@ ms.locfileid: "74343814"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else — Dyrektywy
 
-Conditionally compiles selected blocks of Visual Basic code.
+Warunkowo kompiluje wybrane bloki kodu Visual Basic.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,26 +47,26 @@ Conditionally compiles selected blocks of Visual Basic code.
 ## <a name="parts"></a>Części
 
 `expression`  
-Required for `#If` and `#ElseIf` statements, optional elsewhere. Any expression, consisting exclusively of one or more conditional compiler constants, literals, and operators, that evaluates to `True` or `False`.
+Wymagane dla `#If` i `#ElseIf` instrukcji opcjonalnych w innym miejscu. Każde wyrażenie składające się wyłącznie z jednej lub więcej warunkowych stałych kompilatora, literałów i operatorów, które są obliczane w `True` lub `False`.
 
 `statements`  
-Required for `#If` statement block, optional elsewhere. Visual Basic program lines or compiler directives that are compiled if the associated expression evaluates to `True`.
+Wymagane dla bloku instrukcji `#If`, opcjonalnie w innym miejscu. Visual Basic linie programów lub dyrektywy kompilatora, które są kompilowane, jeśli skojarzone wyrażenie szacuje się na `True`.
 
 `#End If`  
-Terminates the `#If` statement block.
+Kończy blok instrukcji `#If`.
 
 ## <a name="remarks"></a>Uwagi
 
-On the surface, the behavior of the `#If...Then...#Else` directives appears the same as that of the `If...Then...Else` statements. However, the `#If...Then...#Else` directives evaluate what is compiled by the compiler, whereas the `If...Then...Else` statements evaluate conditions at run time.
+Na powierzchni zachowanie dyrektyw `#If...Then...#Else` pojawia się tak samo, jak w przypadku instrukcji `If...Then...Else`. Jednakże `#If...Then...#Else` dyrektywy szacują, co jest kompilowane przez kompilator, podczas gdy instrukcje `If...Then...Else` obliczają warunki w czasie wykonywania.
 
-Conditional compilation is typically used to compile the same program for different platforms. It is also used to prevent debugging code from appearing in an executable file. Code excluded during conditional compilation is completely omitted from the final executable file, so it has no effect on size or performance.
+Kompilacja warunkowa jest zwykle używana do kompilowania tego samego programu dla różnych platform. Służy również do zapobiegania wyświetlaniu kodu debugowania w pliku wykonywalnym. Kod wykluczony podczas kompilacji warunkowej jest całkowicie pomijany z końcowego pliku wykonywalnego, więc nie ma wpływu na rozmiar ani wydajność.
 
-Regardless of the outcome of any evaluation, all expressions are evaluated using `Option Compare Binary`. The `Option Compare` statement does not affect expressions in `#If` and `#ElseIf` statements.
+Bez względu na wynik każdej oceny wszystkie wyrażenia są oceniane przy użyciu `Option Compare Binary`. Instrukcja `Option Compare` nie ma wpływu na wyrażenia w instrukcjach `#If` i `#ElseIf`.
 
 > [!NOTE]
-> No single-line form of the `#If`, `#Else`, `#ElseIf`, and `#End If` directives exists. No other code can appear on the same line as any of the directives.
+> Nie istnieje jednowierszowa forma `#If`, `#Else`, `#ElseIf`i `#End If`. Żaden inny kod nie może pojawiać się w tym samym wierszu co którakolwiek z dyrektyw.
 
-The statements within a conditional compilation block must be complete logical statements. For example, you cannot conditionally compile only the attributes of a function, but you can conditionally declare the function along with its attributes:
+Instrukcje w bloku kompilacji warunkowej muszą być kompletnymi instrukcjami logicznymi. Na przykład nie można warunkowo kompilować tylko atrybutów funkcji, ale można warunkowo zadeklarować funkcję wraz z jej atrybutami:
 
 ```vb
 #If DEBUG Then
@@ -80,7 +80,7 @@ Public Function SomeFunction() As String
 
 ## <a name="example"></a>Przykład
 
-This example uses the `#If...Then...#Else` construct to determine whether to compile certain statements.
+W tym przykładzie używa konstrukcji `#If...Then...#Else`, aby określić, czy kompilować pewne instrukcje.
 
 [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]
 

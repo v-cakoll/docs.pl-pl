@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448684"
 ---
 # <a name="inotifysink2onsynccallexit-method"></a>INotifySink2::OnSyncCallExit — Metoda
-Gets invoked when exiting a call.  
+Wywoływany podczas kończenia wywołania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +38,19 @@ HRESULT OnSyncCallExit
   
 ## <a name="parameters"></a>Parametry  
  `in_CallID`  
- [in] ID of the call being exited. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ podczas Identyfikator zakończonego wywołania. Zobacz [strukturę CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `out_ppBuffer`  
- [out] Call buffer.  
+ określoną Bufor wywołań.  
   
  `out_pBufferSize`  
- [out] Size of the call buffer, in bytes.  
+ określoną Rozmiar buforu wywołań w bajtach.  
   
-## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds.  
+## <a name="return-value"></a>Wartość zwrócona  
+ S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** ProtocolNotify2.idl  
+ **Nagłówek:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Zobacz także
 

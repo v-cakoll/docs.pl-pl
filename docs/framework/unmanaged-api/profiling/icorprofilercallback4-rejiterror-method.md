@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430107"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError — Metoda
-Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
+Powiadamia profiler, że kompilator just in Time (JIT) napotkał błąd w procesie ponownej kompilacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,39 +37,39 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>Parametry  
  `moduleID`  
- [in] The `ModuleID` in which the failed recompilation attempt was made.  
+ podczas `ModuleID`, w którym podjęto próbę ponownej kompilacji.  
   
  `methodId`  
- [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
+ podczas `MethodDef` metody, w której podjęto próbę ponownej kompilacji.  
   
  `functionId`  
- [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
+ podczas Wystąpienie funkcji, które jest ponownie kompilowane lub oznaczone do ponownej kompilacji. Ta wartość może być `NULL`, jeśli wystąpił błąd w poszczególnych metodach, a nie na podstawie poszczególnych wystąpień (na przykład jeśli Profiler określił nieprawidłowy token metadanych dla metody do ponownego skompilowania).  
   
  `hrStatus`  
- [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
+ podczas WYNIK HRESULT wskazujący charakter błędu. Zapoznaj się z sekcją stan HRESULTs, aby zapoznać się z listą wartości.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Return values from this callback are ignored.  
+ Zwracane wartości z tego wywołania zwrotnego są ignorowane.  
   
-## <a name="status-hresults"></a>Status HRESULTS  
+## <a name="status-hresults"></a>Stan HRESULT  
   
-|Status array HRESULT|Opis|  
+|Wartość HRESULT tablicy stanu|Opis|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
-|CORPROF_E_DATAINCOMPLETE|The module is not fully loaded yet, or it is in the process of being unloaded.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
-|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
-|Inne|The operating system returned a failure outside the control of the CLR. For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
+|E_INVALIDARG|`moduleID` lub token `methodDef` jest `NULL`.|  
+|CORPROF_E_DATAINCOMPLETE|Moduł nie jest jeszcze w pełni załadowany lub jest w trakcie jego zwalniania.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|Określony moduł został dynamicznie wygenerowany (na przykład przez `Reflection.Emit`) i nie jest obsługiwany przez tę metodę.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Metoda jest tworzona w zestawie kolekcjonowanym i dlatego nie można jej ponownie skompilować. Należy zauważyć, że typy i funkcje zdefiniowane w kontekście bez odbicia (na przykład `List<MyCollectibleStruct>`) mogą być tworzone w zestawie kolekcjonowanym.|  
+|E_OUTOFMEMORY|Za mało pamięci środowiska CLR podczas próby oznaczenia określonej metody ponownej kompilacji JIT.|  
+|Inne|System operacyjny zwrócił błąd poza kontrolą środowiska CLR. Na przykład, jeśli wywołanie systemowe w celu zmiany ochrony dostępu strony pamięci nie powiedzie się, zostanie wyświetlony komunikat o błędzie systemu operacyjnego.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

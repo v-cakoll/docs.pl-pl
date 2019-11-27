@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442439"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention — Wyliczenie
-Specifies the calling conventions for unmanaged code.  
+Określa konwencje wywoływania dla niezarządzanego kodu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,28 +42,28 @@ typedef enum CorUnmanagedCallingConvention {
 } CorUnmanagedCallingConvention;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|The C language calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|The standard calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|The "this" calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|The "fast" calling convention.|  
-|`IMAGE_CEE_CS_CALLCONV_C`|Nie używany.|  
-|`IMAGE_CEE_CS_CALLCONV_STDCALL`|Nie używany.|  
-|`IMAGE_CEE_CS_CALLCONV_THISCALL`|Nie używany.|  
-|`IMAGE_CEE_CS_CALLCONV_FASTCALL`|Nie używany.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|Konwencja wywoływania języka C.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|Standardowa Konwencja wywoływania.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|Konwencja wywoływania "This".|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|Konwencja wywoływania "Fast".|  
+|`IMAGE_CEE_CS_CALLCONV_C`|Nie jest używany.|  
+|`IMAGE_CEE_CS_CALLCONV_STDCALL`|Nie jest używany.|  
+|`IMAGE_CEE_CS_CALLCONV_THISCALL`|Nie jest używany.|  
+|`IMAGE_CEE_CS_CALLCONV_FASTCALL`|Nie jest używany.|  
   
 ## <a name="remarks"></a>Uwagi  
- The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.  
+ Środowisko CLR nie obsługuje konwencji wywoływania "Fast" w .NET Framework w wersji 1,0.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

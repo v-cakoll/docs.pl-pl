@@ -1,6 +1,6 @@
 ---
-title: Install .NET Core on Fedora 29 - package manager - .NET Core
-description: Use a package manager to install .NET Core SDK and runtime on Fedora 29.
+title: Instalowanie programu .NET Core w programie Fedora 29-Package Manager — .NET Core
+description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe w programie Fedora 29 przy użyciu Menedżera pakietów.
 author: thraka
 ms.author: adegeo
 ms.date: 11/06/2019
@@ -11,53 +11,53 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451004"
 ---
-# <a name="fedora-29-package-manager---install-net-core"></a>Fedora 29 Package Manager - Install .NET Core
+# <a name="fedora-29-package-manager---install-net-core"></a>Fedora 29 Package Manager — Instalowanie programu .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-This article describes how to use a package manager to install .NET Core on Fedora 29. If you're installing the runtime, we suggest you install the [ASP.NET Core runtime](#install-the-aspnet-core-runtime), as it includes both .NET Core and ASP.NET Core runtimes.
+W tym artykule opisano, jak za pomocą Menedżera pakietów zainstalować platformę .NET Core w systemie Fedora 29. Jeśli instalujesz środowisko uruchomieniowe, zalecamy zainstalowanie [ASP.NET Core środowiska uruchomieniowego](#install-the-aspnet-core-runtime), ponieważ zawiera on zarówno środowisko uruchomieniowe programu .NET Core, jak i ASP.NET Core.
 
-## <a name="register-microsoft-key-and-feed"></a>Register Microsoft key and feed
+## <a name="register-microsoft-key-and-feed"></a>Zarejestruj klucz i źródło danych firmy Microsoft
 
-Before installing .NET, you'll need to:
+Przed zainstalowaniem programu .NET należy:
 
-- Register the Microsoft key
-- register the product repository
-- Install required dependencies
+- Rejestrowanie klucza firmy Microsoft
+- Rejestrowanie repozytorium produktu
+- Instalowanie wymaganych zależności
 
-This only needs to be done once per machine.
+Należy to zrobić tylko raz dla każdego komputera.
 
-Open a terminal and run the following commands.
+Otwórz Terminal i uruchom następujące polecenia.
 
 ```bash
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo wget -q -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/29/prod.repo
 ```
 
-## <a name="install-the-net-core-sdk"></a>Install the .NET Core SDK
+## <a name="install-the-net-core-sdk"></a>Zainstaluj zestaw .NET Core SDK
 
-Update the products available for installation, then install the .NET Core SDK. In your terminal, run the following command.
+Zaktualizuj produkty dostępne do zainstalowania, a następnie Zainstaluj zestaw .NET Core SDK. W terminalu uruchom następujące polecenie.
 
 ```bash
 sudo dnf install dotnet-sdk-3.0
 ```
 
-## <a name="install-the-aspnet-core-runtime"></a>Install the ASP.NET Core runtime
+## <a name="install-the-aspnet-core-runtime"></a>Zainstaluj środowisko uruchomieniowe ASP.NET Core
 
-Update the products available for installation, then install the ASP.NET runtime. In your terminal, run the following command.
+Zaktualizuj produkty dostępne do zainstalowania, a następnie zainstaluj środowisko uruchomieniowe ASP.NET. W terminalu uruchom następujące polecenie.
 
 ```bash
 sudo dnf install aspnetcore-runtime-3.0
 ```
 
-## <a name="install-the-net-core-runtime"></a>Install the .NET Core runtime
+## <a name="install-the-net-core-runtime"></a>Instalowanie środowiska uruchomieniowego platformy .NET Core
 
-Update the products available for installation, then install the .NET Core runtime. In your terminal, run the following command.
+Zaktualizuj produkty dostępne do zainstalowania, a następnie zainstaluj środowisko uruchomieniowe programu .NET Core. W terminalu uruchom następujące polecenie.
 
 ```bash
 sudo dnf install dotnet-runtime-3.0
 ```
 
-## <a name="how-to-install-other-versions"></a>How to install other versions
+## <a name="how-to-install-other-versions"></a>Jak zainstalować inne wersje
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]

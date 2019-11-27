@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446431"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument — Metoda
-Gets every method that has line information in the provided document.  
+Pobiera każdą metodę, która zawiera informacje o wierszu w podanym dokumencie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,22 +38,22 @@ HRESULT GetMethodsInDocument(
   
 ## <a name="parameters"></a>Parametry  
  `document`  
- [in] A pointer to the document.  
+ podczas Wskaźnik do dokumentu.  
   
  `cMethod`  
- [in] A `ULONG32` that indicates the size of the  `pRetVal` array.  
+ podczas `ULONG32`, który wskazuje rozmiar tablicy `pRetVal`.  
   
  `pcMethod`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the methods.  
+ określoną Wskaźnik do `ULONG32`, który odbiera rozmiar buforu wymaganego do zawierania metod.  
   
  `pRetVal`  
- [out] A pointer to the buffer that receives the methods.  
+ określoną Wskaźnik do buforu, który odbiera metody.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444223"
 ---
 # <a name="assemblyrefflags-enumeration"></a>AssemblyRefFlags — Wyliczenie
-Contains values that describe features of an assembly reference.  
+Zawiera wartości opisujące funkcje odwołania do zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,14 +36,14 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`arfFullOriginator`|Specifies that the assembly reference contains full, unhashed information about the publisher of the assembly.|  
+|`arfFullOriginator`|Określa, że odwołanie do zestawu zawiera pełne, niezmieszane informacje o wydawcy zestawu.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

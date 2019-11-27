@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441811"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition — Metoda
-Returns an array of methods, each of which contains the breakpoint at the given position in a document.  
+Zwraca tablicę metod, z których każdy zawiera punkt przerwania w podanym miejscu w dokumencie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,28 +40,28 @@ HRESULT GetMethodsFromDocumentPosition (
   
 ## <a name="parameters"></a>Parametry  
  `document`  
- [in] The specified document.  
+ podczas Określony dokument.  
   
  `line`  
- [in] The line of the specified document.  
+ podczas Wiersz określonego dokumentu.  
   
  `column`  
- [in] The column of the specified document.  
+ podczas Kolumna określonego dokumentu.  
   
  `cMethod`  
- [in] The size of the `pRetVal` array.  
+ podczas Rozmiar tablicy `pRetVal`.  
   
  `pcMethod`  
- [out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.  
+ określoną Wskaźnik do zmiennej, która otrzymuje liczbę elementów zwracanych w tablicy `pRetVal`.  
   
  `pRetVal`  
- [out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.  
+ określoną Tablica wskaźników, z których każdy wskazuje obiekt [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) , który reprezentuje metodę zawierającą punkt przerwania.  
   
-## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+## <a name="return-value"></a>Wartość zwrócona  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

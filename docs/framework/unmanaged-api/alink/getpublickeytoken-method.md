@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447244"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken — Metoda
-Retrieves the public key token for a given keyfile or key container.  
+Pobiera token klucza publicznego dla danego keyfile lub kontenera kluczy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,22 +37,22 @@ HRESULT GetPublicKeyToken(
   
 ## <a name="parameters"></a>Parametry  
  `pszKeyFile`  
- Filename of the key.  
+ Nazwa pliku klucza.  
   
  `pszKeyContainer`  
- Name of the key container.  
+ Nazwa kontenera kluczy.  
   
  `pvPublicKeyToken`  
- Address where key token is to be stored.  
+ Adres, pod którym ma być przechowywany token klucza.  
   
  `pcbPublicKeyToken`  
- Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`. Upon return, contains actual number of bytes used.  
+ Określa rozmiar buforu wskazywanego przez `pvPublicKeyToken`w bajtach. Po powrocie, zawiera rzeczywistą liczbę użytych bajtów.  
   
-## <a name="return-value"></a>Wartość zwracana  
- Returns S_OK if the method succeeds.  
+## <a name="return-value"></a>Wartość zwrócona  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Requires alink.h.  
+ Wymaga Alink. h.  
   
 ## <a name="see-also"></a>Zobacz także
 

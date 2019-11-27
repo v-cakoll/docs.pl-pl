@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439227"
 ---
 # <a name="icorprofilerinfogetcodeinfo-method"></a>ICorProfilerInfo::GetCodeInfo — Metoda
-Gets the extent of native code associated with the specified function ID.  
+Pobiera zakres kodu natywnego skojarzonego z określonym IDENTYFIKATORem funkcji.  
   
- This method is obsolete. Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.  
+ Ta metoda jest przestarzała. Zamiast tego użyj metody [ICorProfilerInfo2:: GetCodeInfo2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,27 +38,27 @@ HRESULT GetCodeInfo(
   
 ## <a name="parameters"></a>Parametry  
  `functionId`  
- [in] The ID of the function with which the native code is associated.  
+ podczas Identyfikator funkcji, z którą jest skojarzony kod natywny.  
   
  `pStart`  
- [out] A pointer to an array of bytes that compose the native code of the function.  
+ określoną Wskaźnik do tablicy bajtów składających się na kod natywny funkcji.  
   
  `pcSize`  
- [out] A pointer to an integer that specifies the size, in bytes, of the native code.  
+ określoną Wskaźnik do liczby całkowitej, która określa rozmiar (w bajtach) kodu natywnego.  
   
 ## <a name="remarks"></a>Uwagi  
- To optimize performance, the runtime in the .NET Framework version 2.0 splits the precompiled, native code of a function into multiple regions. Consequently, the `GetCodeInfo` method is obsolete in the .NET Framework 2.0 because it is unable to handle the extent of a function's native code. Profilers should switch to using the more general `ICorProfilerInfo2::GetCodeInfo2` method instead.  
+ Aby zoptymalizować wydajność, środowisko uruchomieniowe w .NET Framework w wersji 2,0 dzieli wstępnie skompilowany kod natywny funkcji na wiele regionów. W związku z tym Metoda `GetCodeInfo` jest przestarzała w .NET Framework 2,0, ponieważ nie jest w stanie obsłużyć zakresu kodu natywnego funkcji. Program do zaprogramowania powinien zamiast tego używać bardziej ogólnej metody `ICorProfilerInfo2::GetCodeInfo2`.  
   
- This function uses caller-allocated buffers.  
+ Ta funkcja używa buforów przyznanych przez obiekt wywołujący.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** 1.0  
+ **.NET Framework wersje:** 1,0  
   
 ## <a name="see-also"></a>Zobacz także
 

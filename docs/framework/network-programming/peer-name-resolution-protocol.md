@@ -10,41 +10,41 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428223"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protokół PNRP
-In peer-to-peer environments, peers use specific name resolution systems to resolve each other's network locations (addresses, protocols, and ports) from names or other types of identifiers. In the past, peer name resolution has been complicated by the inherently transient connectivity as well as other shortcomings within the Domain Name System (DNS).  
+W środowiskach komunikacji równorzędnej elementy równorzędne używają określonych systemów rozpoznawania nazw do rozwiązywania wszystkich lokalizacji sieciowych (adresów, protokołów i portów) z nazw lub innych typów identyfikatorów. W przeszłości rozpoznawanie nazw elementów równorzędnych zostało skomplikowane przez niezależną łączność przejściową, a także inne braki w ramach systemu nazw domen (DNS).  
   
- The Microsoft® Windows® Peer-to-Peer Networking platform solves this problem with the Peer Name Resolution Protocol (PNRP), a secure, scalable, and dynamic name registration and name resolution protocol first developed for Windows XP and then upgraded in Windows Vista™. PNRP works very differently from traditional name resolution systems, opening up exciting new possibilities for application developers.  
+ Platforma sieci równorzędnej Microsoft® Windows® rozwiązuje ten problem z protokołem rozpoznawania nazw równorzędnych (PNRP), bezpieczną, skalowalną i dynamiczną rejestracją nazw oraz protokołem rozpoznawania nazw, które zostały wcześniej opracowane dla systemu Windows XP, a następnie uaktualnione w programie ™ Systemu Windows Vista. Protokół PNRP działa bardzo inaczej niż tradycyjne systemy rozpoznawania nazw, otwierając nowe możliwości dla deweloperów aplikacji.  
   
- With PNRP, peer names can be applied to the machine, or individual applications or services on the machine. A peer name resolution includes an address, port, and possibly an extended payload. Benefits of this system include fault tolerance, no bottlenecks, and name resolutions that will never return stale addresses; making the protocol an excellent solution for locating mobile users.  
+ W przypadku protokołu PNRP nazwy elementów równorzędnych mogą być stosowane do komputera lub do poszczególnych aplikacji lub usług na komputerze. Rozpoznawanie nazw elementów równorzędnych obejmuje adres, port i prawdopodobnie rozszerzony ładunek. Zalety tego systemu obejmują odporność na uszkodzenia, brak wąskich gardeł i rozdzielczości nazw, które nigdy nie zwracają starych adresów; uczynienie protokołu doskonałym rozwiązaniem do lokalizowania użytkowników mobilnych.  
   
- In terms of security, peer names can be published as secured (protected) or unsecured (unprotected). PNRP uses public key cryptography to protect secure peer names against spoofing; both computers and services can be named with PNRP.  
+ Pod względem zabezpieczeń nazwy elementów równorzędnych mogą być publikowane jako zabezpieczone (chronione) lub niezabezpieczone (niechronione). Protokół PNRP używa kryptografii klucza publicznego do ochrony bezpiecznych nazw elementów równorzędnych przed fałszowaniem. zarówno komputery, jak i usługi mogą być nazwane przy użyciu protokołu PNRP.  
   
-The Peer Name Resolution Protocol demonstrates the following properties:  
+Protokół rozpoznawania nazw równorzędnych demonstruje następujące właściwości:  
   
-- Distributed and almost entirely serverless. Servers are only required for the bootstrapping process.  
+- Rozpowszechniane i niemal całkowicie bezserwerowe. Serwery są wymagane tylko dla procesu uruchamiania.  
   
-- Secure name publication without the involvement of third parties. Unlike DNS name publication, PNRP name publication is instantaneous and without financial cost.  
+- Publikacja z bezpieczną nazwą bez zaangażowania stron trzecich. W przeciwieństwie do publikacji nazw DNS publikacja nazw PNRP jest natychmiastowa i bez kosztu finansowego.  
   
-- PNRP updates in real-time, which prevents the resolution of stale addresses.  
+- Aktualizacje protokołu PNRP w czasie rzeczywistym, które uniemożliwiają rozpoznawanie starych adresów.  
   
-- The resolution of names via PNRP extends beyond computers by also allowing name resolution for services.  
+- Rozpoznawanie nazw za pośrednictwem protokołu PNRP wykracza poza komputery, umożliwiając także rozpoznawanie nazw usług.  
   
-## <a name="the-systemnetpeertopeer-namespace"></a>The System.Net.PeerToPeer namespace  
+## <a name="the-systemnetpeertopeer-namespace"></a>Przestrzeń nazw System .NET. PeerToPeer  
   
-- PNRP functionality is defined by the <xref:System.Net.PeerToPeer> namespace within the .NET Framework version 3.5. It provides a set of types that can be used to register and resolve peer names with an available PNRP service.  
+- Funkcja PNRP jest definiowana przez przestrzeń nazw <xref:System.Net.PeerToPeer> w .NET Framework wersji 3,5. Zawiera zestaw typów, których można użyć do rejestrowania i rozpoznawania nazw elementów równorzędnych z dostępną usługą PNRP.  
   
-- (PNRP and custom peer resolvers can be created and instantiated using the types provided in the <xref:System.ServiceModel.PeerResolvers> namespace.)  
+- (Protokół PNRP i niestandardowe rozpoznawania elementów równorzędnych można utworzyć i utworzyć przy użyciu typów podanych w przestrzeni nazw <xref:System.ServiceModel.PeerResolvers>).  
   
-- The basic types used to register and resolve names with an available PNRP service are as follows:  
+- Podstawowe typy używane do rejestrowania i rozpoznawania nazw z dostępną usługą PNRP są następujące:  
   
-- <xref:System.Net.PeerToPeer.Cloud>: Defines the information describing an available PNRP cloud, including its scope.  
+- <xref:System.Net.PeerToPeer.Cloud>: definiuje informacje opisujące dostępną chmurę PNRP, w tym jej zakres.  
   
-- <xref:System.Net.PeerToPeer.PeerName>: Defines a peer name that can be used to register and subsequently resolve a peer within a cloud.  
+- <xref:System.Net.PeerToPeer.PeerName>: Określa nazwę elementu równorzędnego, który może służyć do rejestrowania i rozpoznawania elementów równorzędnych w chmurze.  
   
-- <xref:System.Net.PeerToPeer.PeerNameRecord>: Defines the record in PNRP cloud that contains the registration information for a peer, which includes the network endpoints at which the peer can be contacted.  
+- <xref:System.Net.PeerToPeer.PeerNameRecord>: określa rekord w chmurze PNRP zawierający informacje o rejestracji elementu równorzędnego, który obejmuje punkty końcowe sieci, w których można skontaktować się z elementem równorzędnym.  
   
-- <xref:System.Net.PeerToPeer.PeerNameRegistration>: Defines the registration process for a peer name, including methods to start and stop peer name registration.  
+- <xref:System.Net.PeerToPeer.PeerNameRegistration>: definiuje proces rejestracji dla nazwy elementu równorzędnego, w tym metody uruchamiania i zatrzymywania rejestracji nazw elementów równorzędnych.  
   
-- <xref:System.Net.PeerToPeer.PeerNameResolver>: Defines the process for resolving a peer name to its network endpoint(s), including both synchronous and asynchronous methods for resolution.  
+- <xref:System.Net.PeerToPeer.PeerNameResolver>: definiuje proces rozpoznawania nazwy elementu równorzędnego do jego punktów końcowych sieci, w tym metod synchronicznych i asynchronicznych do rozwiązania.  
   
 ## <a name="see-also"></a>Zobacz także
 

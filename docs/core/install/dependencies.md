@@ -1,6 +1,6 @@
 ---
-title: .NET Core SDK and runtime dependencies - .NET Core
-description: Details the operating system and CPU architecture prerequisites to install the .NET Core SDK and runtime on Windows, Linux, and macOS.
+title: Zależności zestaw .NET Core SDK i środowiska uruchomieniowego — .NET Core
+description: Szczegółowe informacje na temat wymagań wstępnych dotyczących architektury procesora i systemu operacyjnego w celu zainstalowania zestaw .NET Core SDK i środowiska uruchomieniowego w systemach Windows, Linux i macOS.
 author: leecow
 ms.author: leecow
 ms.date: 11/06/2019
@@ -12,9 +12,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451102"
 ---
-# <a name="net-core-dependencies-and-requirements"></a>.NET Core dependencies and requirements
+# <a name="net-core-dependencies-and-requirements"></a>Zależności i wymagania dotyczące platformy .NET Core
 
-This article details which operating systems and CPU architecture are supported by .NET Core.
+W tym artykule szczegółowo przedstawiono systemy operacyjne i architekturę procesora CPU obsługiwane przez platformę .NET Core.
 
 ## <a name="supported-operating-systems"></a>Supported operating systems
 
@@ -25,78 +25,78 @@ This article details which operating systems and CPU architecture are supported 
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-The following Windows versions are supported with .NET Core 3.0:
+W przypadku programu .NET Core 3,0 obsługiwane są następujące wersje systemu Windows:
 
 > [!NOTE]
-> A `+` symbol represents the minimum version.
+> Symbol `+` reprezentuje wersję minimalną.
 
-| OS                            | Wersja                        | Architectures   |
+| OS                            | Wersja                        | Architektury   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Windows Client                | 7 SP1+, 8.1                    | x64, x86        |
-| Windows 10 Client             | Version 1607+                  | x64, x86        |
-| Windows Server                | 2012 R2+                       | x64, x86        |
-| Nano Server                   | Version 1803+                  | x64, ARM32      |
+| Klient z systemem Windows                | 7 Z DODATKIEM SP1 +, 8,1                    | x64, x86        |
+| Klient systemu Windows 10             | Wersja 1607 +                  | x64, x86        |
+| Windows Server                | 2012 R2 +                       | x64, x86        |
+| Serwer nano                   | Wersja 1803 +                  | x64, ARM32      |
 
-For more information about .NET Core 3.0 supported operating systems, distributions, and lifecycle policy, see [.NET Core 3.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
+Aby uzyskać więcej informacji na temat obsługiwanych systemów operacyjnych, dystrybucji i zasad cyklu życia programu .NET Core 3,0, zobacz [.net core 3,0 obsługiwane wersje systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2,2](#tab/netcore22)
 
-The following Windows versions are supported with .NET Core 2.2:
+W przypadku programu .NET Core 2,2 obsługiwane są następujące wersje systemu Windows:
 
 > [!NOTE]
-> A `+` symbol represents the minimum version.
+> Symbol `+` reprezentuje wersję minimalną.
 
-| OS                            | Wersja                        | Architectures   |
+| OS                            | Wersja                        | Architektury   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Windows Client                | 7 SP1+, 8.1                    | x64, x86        |
-| Windows 10 Client             | Version 1607+                  | x64, x86        |
-| Windows Server                | 2008 R2 SP1+                   | x64, x86        |
-| Nano Server                   | Version 1803+                   | x64, ARM32      |
+| Klient z systemem Windows                | 7 Z DODATKIEM SP1 +, 8,1                    | x64, x86        |
+| Klient systemu Windows 10             | Wersja 1607 +                  | x64, x86        |
+| Windows Server                | 2008 R2 Z DODATKIEM SP1 +                   | x64, x86        |
+| Serwer nano                   | Wersja 1803 +                   | x64, ARM32      |
 
-For more information about .NET Core 2.2 supported operating systems, distributions, and lifecycle policy, see [.NET Core 2.2 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
+Aby uzyskać więcej informacji na temat obsługiwanych systemów operacyjnych, dystrybucji i zasad cyklu życia programu .NET Core 2,2, zobacz [.net core 2,2 obsługiwane wersje systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
 
-The following Windows versions are supported with .NET Core 2.1:
+W przypadku programu .NET Core 2,1 obsługiwane są następujące wersje systemu Windows:
 
 > [!NOTE]
-> A `+` symbol represents the minimum version.
+> Symbol `+` reprezentuje wersję minimalną.
 
-| OS                            | Wersja                        | Architectures   |
+| OS                            | Wersja                        | Architektury   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Windows Client                | 7 SP1+, 8.1                    | x64, x86        |
-| Windows 10 Client             | Version 1607+                  | x64, x86        |
-| Windows Server                | 2008 R2 SP1+                   | x64, x86        |
-| Nano Server                   | Version 1803+                  | x64,            |
+| Klient z systemem Windows                | 7 Z DODATKIEM SP1 +, 8,1                    | x64, x86        |
+| Klient systemu Windows 10             | Wersja 1607 +                  | x64, x86        |
+| Windows Server                | 2008 R2 Z DODATKIEM SP1 +                   | x64, x86        |
+| Serwer nano                   | Wersja 1803 +                  | procesorów            |
 
-For more information about .NET Core 2.1 supported operating systems, distributions, and lifecycle policy, see [.NET Core 2.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md).
+Aby uzyskać więcej informacji na temat obsługiwanych systemów operacyjnych, dystrybucji i zasad cyklu życia programu .NET Core 2,1, zobacz [.net core 2,1 obsługiwane wersje systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md).
 
 ---
 
 <!-- markdownlint-disable MD001 -->
 
-### <a name="windows-7--vista--81--server-2008-r2"></a>Windows 7 / Vista / 8.1 / Server 2008 R2
+### <a name="windows-7--vista--81--server-2008-r2"></a>Windows 7/Vista/8,1/Server 2008 R2
 
-Additional dependencies are required if you're installing the .NET SDK or runtime on the following Windows versions:
+Jeśli instalujesz zestaw .NET SDK lub środowisko uruchomieniowe w następujących wersjach systemu Windows, wymagane są dodatkowe zależności:
 
-- Windows 7 SP1
-- Windows Vista SP 2
+- Windows 7 z dodatkiem SP1
+- Windows Vista z dodatkiem SP 2
 - Windows 8.1
-- Windows Server 2008 z dodatkiem R2
-- Windows Server 2012 z dodatkiem R2
+- Windows Server 2008 R2
+- Windows Server 2012 R2
 
-Install the following:
+Zainstaluj następujące czynności:
 
-- [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=52685).
-- [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)
+- Pakiet [redystrybucyjny Microsoft Visual C++ 2015 z aktualizacją Update 3](https://www.microsoft.com/download/details.aspx?id=52685).
+- [POPRAWKI KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)
 
-The requirements above are also required if you come across one of the following errors:
+Powyższe wymagania są również wymagane w przypadku wystąpienia jednego z następujących błędów:
 
-> The program can't start because *api-ms-win-crt-runtime-l1-1-0.dll* is missing from your computer. Try reinstalling the program to fix this problem.
+> Nie można uruchomić programu, ponieważ na komputerze brakuje *interfejsu API-ms-win-CRT-Runtime-L1-1 -0. dll* . Spróbuj zainstalować ponownie program, aby rozwiązać ten problem.
 >
-> \- or -
+> \- lub-
 >
-> The library *hostfxr.dll* was found, but loading it from *C:\\\<path_to_app>\\hostfxr.dll* failed.
+> Znaleziono bibliotekę *hostfxr. dll* , ale ładowanie jej z *dysku C:\\\<path_to_app >\\hostfxr. dll* nie powiodło się.
 
 ::: zone-end
 
@@ -104,112 +104,112 @@ The requirements above are also required if you come across one of the following
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-.NET Core 3.0 treats Linux as a single operating system. There's a single Linux build (per chip architecture) for supported Linux distributions.
+Program .NET Core 3,0 traktuje system Linux jako pojedynczy systemu operacyjnego. Istnieje jedna kompilacja systemu Linux (dla architektury mikroukład) dla obsługiwanych dystrybucji systemu Linux.
 
-.NET Core 3.0 is supported on the following Linux distributions/versions:
+Platforma .NET Core 3,0 jest obsługiwana w następujących dystrybucjach/wersjach systemu Linux:
 
 > [!NOTE]
-> A `+` symbol represents the minimum version.
+> Symbol `+` reprezentuje wersję minimalną.
 
-| OS                             | Wersja               | Architectures    |
+| OS                             | Wersja               | Architektury    |
 | ------------------------------ | --------------------- | ---------------- |
-| Red Hat Enterprise Linux       | 6, 7, 8               | X64 |
-| CentOS                         | 7+                    | X64 |
-| Oracle Linux                   | 7+                    | X64 |
-| Fedora                         | 29+                   | X64 |
+| Red Hat Enterprise Linux       | 6, 7, 8               | x64 |
+| CentOS                         | 7+                    | x64 |
+| Oracle Linux                   | 7+                    | x64 |
+| Fedora                         | 29 +                   | x64 |
 | Debian                         | 9+                    | x64, ARM32, ARM64 |
-| Ubuntu                         | 16.04+                | x64, ARM32, ARM64 |
-| Linux Mint                     | 18+                   | X64 |
-| openSUSE                       | 15+                   | X64 |
-| SUSE Enterprise Linux (SLES)   | 12 SP2+               | X64 |
-| Alpine Linux                   | 3.8+                  | x64, ARM64 |
+| Ubuntu                         | 16.04 +                | x64, ARM32, ARM64 |
+| Mennic systemu Linux                     | 18 +                   | x64 |
+| openSUSE                       | 15 +                   | x64 |
+| SUSE Enterprise Linux (SLES)   | 12 SP2+               | x64 |
+| Alpine Linux                   | 3.8 +                  | x64, ARM64 |
 
-For more information about .NET Core 3.0 supported operating systems, distributions, and lifecycle policy, see [.NET Core 3.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
+Aby uzyskać więcej informacji na temat obsługiwanych systemów operacyjnych, dystrybucji i zasad cyklu życia programu .NET Core 3,0, zobacz [.net core 3,0 obsługiwane wersje systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
 
-For more information about how to install .NET Core 3.0 on ARM64, see [Installing .NET Core 3.0 on Linux ARM64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213).
+Aby uzyskać więcej informacji na temat instalowania programu .NET Core 3,0 w systemie ARM64, zobacz [Instalowanie programu .net core 3,0 w systemie Linux arm64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213).
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2,2](#tab/netcore22)
 
-.NET Core 2.2 treats Linux as a single operating system. There's a single Linux build (per chip architecture) for supported Linux distributions.
+Program .NET Core 2,2 traktuje system Linux jako pojedynczy systemu operacyjnego. Istnieje jedna kompilacja systemu Linux (dla architektury mikroukład) dla obsługiwanych dystrybucji systemu Linux.
 
-.NET Core 2.2 is supported on the following Linux distributions/versions:
-
-> [!NOTE]
-> A `+` symbol represents the minimum version.
-
-| OS                             |  Wersja                |  Architectures   |
-| ------------------------------ | ----------------------- | ---------------- |
-| Red Hat Enterprise Linux       |  6, 7                   | X64 |
-| CentOS                         |  7                      | X64 |
-| Oracle Linux                   |  7                      | X64 |
-| Fedora                         |  29, 30                 | X64 |
-| Debian                         |  9                      | x64, ARM32 |
-| Ubuntu                         |  16.04, 18.04, 18.10, 19.04    | x64, ARM32 |
-| Linux Mint                     |  17, 18                 | X64 |
-| openSUSE                       |  15+                    | X64 |
-| SUSE Enterprise Linux (SLES)   |  12 SP2+                | X64 |
-| Alpine Linux                   |  3.8+                   | X64 |
-
-For more information about .NET Core 2.2 supported operating systems, distributions, and lifecycle policy, see [.NET Core 2.2 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
-
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-
-.NET Core 2.1 treats Linux as a single operating system. There's a single Linux build (per chip architecture) for supported Linux distributions.
-
-.NET Core 2.1 is supported on the following Linux distributions/versions:
+Platforma .NET Core 2,2 jest obsługiwana w następujących dystrybucjach/wersjach systemu Linux:
 
 > [!NOTE]
-> A `+` symbol represents the minimum version.
+> Symbol `+` reprezentuje wersję minimalną.
 
-| OS                             |  Wersja                |  Architectures   |
+| OS                             |  Wersja                |  Architektury   |
 | ------------------------------ | ----------------------- | ---------------- |
-| Red Hat Enterprise Linux       |  6, 7, 8                | X64 |
-| CentOS                         |  7+                     | X64 |
-| Oracle Linux                   |  7+                     | X64 |
-| Fedora                         |  29+                    | X64 |
+| Red Hat Enterprise Linux       |  6, 7                   | x64 |
+| CentOS                         |  7                      | x64 |
+| Oracle Linux                   |  7                      | x64 |
+| Fedora                         |  29, 30                 | x64 |
 | Debian                         |  9                      | x64, ARM32 |
-| Ubuntu                         |  16.04, 18.04, 19.04, 19.10    | x64, ARM32 |
-| Linux Mint                     |  17+                    | X64 |
-| openSUSE                       |  15+                    | X64 |
-| SUSE Enterprise Linux (SLES)   |  12 SP2+                | X64 |
-| Alpine Linux                   |  3.8+                   | X64 |
+| Ubuntu                         |  16,04, 18,04, 18,10, 19,04    | x64, ARM32 |
+| Mennic systemu Linux                     |  17, 18                 | x64 |
+| openSUSE                       |  15 +                    | x64 |
+| SUSE Enterprise Linux (SLES)   |  12 SP2+                | x64 |
+| Alpine Linux                   |  3.8 +                   | x64 |
 
-For more information about .NET Core 2.1 supported operating systems, distributions, and lifecycle policy, see [.NET Core 2.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md).
+Aby uzyskać więcej informacji na temat obsługiwanych systemów operacyjnych, dystrybucji i zasad cyklu życia programu .NET Core 2,2, zobacz [.net core 2,2 obsługiwane wersje systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
+
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
+
+Program .NET Core 2,1 traktuje system Linux jako pojedynczy systemu operacyjnego. Istnieje jedna kompilacja systemu Linux (dla architektury mikroukład) dla obsługiwanych dystrybucji systemu Linux.
+
+Platforma .NET Core 2,1 jest obsługiwana w następujących dystrybucjach/wersjach systemu Linux:
+
+> [!NOTE]
+> Symbol `+` reprezentuje wersję minimalną.
+
+| OS                             |  Wersja                |  Architektury   |
+| ------------------------------ | ----------------------- | ---------------- |
+| Red Hat Enterprise Linux       |  6, 7, 8                | x64 |
+| CentOS                         |  7+                     | x64 |
+| Oracle Linux                   |  7+                     | x64 |
+| Fedora                         |  29 +                    | x64 |
+| Debian                         |  9                      | x64, ARM32 |
+| Ubuntu                         |  16,04, 18,04, 19,04, 19,10    | x64, ARM32 |
+| Mennic systemu Linux                     |  17 +                    | x64 |
+| openSUSE                       |  15 +                    | x64 |
+| SUSE Enterprise Linux (SLES)   |  12 SP2+                | x64 |
+| Alpine Linux                   |  3.8 +                   | x64 |
+
+Aby uzyskać więcej informacji na temat obsługiwanych systemów operacyjnych, dystrybucji i zasad cyklu życia programu .NET Core 2,1, zobacz [.net core 2,1 obsługiwane wersje systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md).
 
 ---
 
-## <a name="linux-distribution-dependencies"></a>Linux distribution dependencies
+## <a name="linux-distribution-dependencies"></a>Zależności dystrybucji systemu Linux
 
-Based on your linux distribution, you may need to install additional dependencies.
+W zależności od dystrybucji systemu Linux może być konieczne zainstalowanie dodatkowych zależności.
 
 > [!IMPORTANT]
-> The exact versions and names may vary slightly on your Linux distribution of choice.
+> Dokładne wersje i nazwy mogą się nieco różnić w zależności od wybranej dystrybucji systemu Linux.
 
 ### <a name="ubuntu"></a>Ubuntu
 
-Ubuntu distributions require the following libraries to be installed:
+W przypadku dystrybucji Ubuntu wymagane jest zainstalowanie następujących bibliotek:
 
 - liblttng-ust0
-- libcurl3 (for 14.x and 16.x)
-- libcurl4 (for 18.x)
+- libcurl3 (dla 14. x i 16. x)
+- libcurl4 (dla 18. x)
 - libssl1.0.0
 - libkrb5-3
 - zlib1g
-- libicu52 (for 14.x)
-- libicu55 (for 16.x)
-- libicu57 (for 17.x)
-- libicu60 (for 18.x)
+- libicu52 (dla 14. x)
+- libicu55 (dla 16. x)
+- libicu57 (dla 17. x)
+- libicu60 (dla 18. x)
 
-For .NET Core apps that use the *System.Drawing.Common* assembly, you also need the following dependency:
+W przypadku aplikacji .NET Core, które używają zestawu *System. Drawing. Common* , wymagana jest również następująca zależność:
 
-- libgdiplus (version 6.0.1 or later)
+- libgdiplus (wersja 6.0.1 lub nowsza)
 
 > [!WARNING]
-> Most versions of Ubuntu include an earlier version of libgdiplus. You can install a recent version of libgdiplus by adding the Mono repository to your system. Aby uzyskać więcej informacji, zobacz <https://www.mono-project.com/download/stable/>.
+> Większość wersji programu Ubuntu obejmuje wcześniejszą wersję libgdiplus. Aby zainstalować najnowszą wersję programu libgdiplus, można dodać do systemu repozytorium mono. Aby uzyskać więcej informacji, zobacz <https://www.mono-project.com/download/stable/>.
 
-### <a name="centos-and-fedora"></a>CentOS and Fedora
+### <a name="centos-and-fedora"></a>CentOS i Fedora
 
-CentOS distributions require the following libraries installed:
+Dystrybucje CentOS wymagają zainstalowanych następujących bibliotek:
 
 - lttng-ust
 - libcurl
@@ -218,42 +218,42 @@ CentOS distributions require the following libraries installed:
 - libicu
 - zlib
 
-Fedora users: If your OpenSSL's version >= 1.1, you'll need to install **compat-openssl10**.
+Fedora użytkownicy: Jeśli OpenSSL wersja > = 1,1, należy zainstalować polecenie **COMPAT-openssl10**.
 
-For .NET Core 2.0, the following dependencies are also required:
+W przypadku platformy .NET Core 2,0 wymagane są również następujące zależności:
 
 - libunwind
 - libuuid
 
-For more information about the dependencies, see [Self-contained Linux apps](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
+Aby uzyskać więcej informacji o zależnościach, zobacz [samodzielne aplikacje systemu Linux](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
 
-For .NET Core apps that use the *System.Drawing.Common* assembly, you'll also need the following dependency:
+W przypadku aplikacji .NET Core, które używają zestawu *System. Drawing. Common* , konieczne będzie również użycie następujących zależności:
 
-- libgdiplus (version 6.0.1 or later)
+- libgdiplus (wersja 6.0.1 lub nowsza)
 
 > [!WARNING]
-> Most versions of CentOS and Fedora include an earlier version of libgdiplus. You can install a recent version of libgdiplus by adding the Mono repository to your system. Aby uzyskać więcej informacji, zobacz <https://www.mono-project.com/download/stable/>.
+> Większość wersji CentOS i Fedora obejmuje wcześniejszą wersję libgdiplus. Aby zainstalować najnowszą wersję programu libgdiplus, można dodać do systemu repozytorium mono. Aby uzyskać więcej informacji, zobacz <https://www.mono-project.com/download/stable/>.
 
 ::: zone-end
 
 ::: zone pivot="os-macos"
 
-.NET Core is supported on the following macOS releases:
+Platforma .NET Core jest obsługiwana w następujących wersjach macOS:
 
 > [!NOTE]
-> A `+` symbol represents the minimum version.
+> Symbol `+` reprezentuje wersję minimalną.
 
-| .NET Core Version | macOS                 | Architectures |     |
+| Wersja platformy .NET Core | macOS                 | Architektury |     |
 | ----------------- | --------------------- | --------------| --- |
-| 3.0               | High Sierra (10.13+)  | X64 | [More information](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
-| 2.2               | Sierra (10.12+)       | X64 | [More information](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
-| 2.1               | Sierra (10.12+)       | X64 | [More information](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+| 3.0               | Wysoka firma Sierra (10.13 +)  | x64 | [Więcej informacji](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
+| 2.2               | Sierra (10.12 +)       | x64 | [Więcej informacji](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
+| 2.1               | Sierra (10.12 +)       | x64 | [Więcej informacji](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
 
 ## <a name="libgdiplus"></a>libgdiplus
 
-.NET Core applications that use the *System.Drawing.Common* assembly require libgdiplus to be installed.
+Aplikacje .NET Core używające zestawu *System. Drawing. Common* wymagają zainstalowania libgdiplus.
 
-An easy way to obtain libgdiplus is by using the [Homebrew ("brew")](https://brew.sh/) package manager for macOS. After installing *brew*, install libgdiplus by executing the following commands at a Terminal (command) prompt:
+Łatwym sposobem uzyskania libgdiplus jest użycie Menedżera pakietów [oprogramowania homebrew ("rozwiązania brew")](https://brew.sh/) dla macOS. Po zainstalowaniu *rozwiązania brew*Zainstaluj libgdiplus, wykonując następujące polecenia w wierszu terminalu (polecenie):
 
 ```console
 brew update
@@ -264,5 +264,5 @@ brew install mono-libgdiplus
 
 ## <a name="next-steps"></a>Następne kroki
 
-- To develop and run apps, install the [.NET Core SDK](sdk.md) (includes the runtime).
-- To run apps others have created, install the [.NET Core runtime](runtime.md).
+- Aby opracowywać i uruchamiać aplikacje, zainstaluj [zestaw .NET Core SDK](sdk.md) (w tym środowisko uruchomieniowe).
+- Aby uruchamiać aplikacje utworzone przez inne osoby, zainstaluj [środowisko uruchomieniowe programu .NET Core](runtime.md).

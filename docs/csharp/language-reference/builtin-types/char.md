@@ -1,5 +1,5 @@
 ---
-title: char type - C# reference
+title: typ znaku — C# odwołanie
 ms.date: 11/22/2019
 f1_keywords:
 - char
@@ -14,45 +14,45 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451165"
 ---
-# <a name="char-c-reference"></a>char (C# reference)
+# <a name="char-c-reference"></a>char (C# odwołanie)
 
-The `char` type keyword is an alias for the .NET <xref:System.Char?displayProperty=nameWithType> structure type that represents a Unicode UTF-16 character.
+Słowo kluczowe typu `char` jest aliasem dla typu struktury <xref:System.Char?displayProperty=nameWithType> .NET, który reprezentuje znak Unicode UTF-16.
 
-|Typ|Zakres|Rozmiar|.NET type|
+|Typ|Zakres|Rozmiar|Typ .NET|
 |----------|-----------|----------|-------------------------|
-|`char`|U+0000 to U+FFFF|16 bit|<xref:System.Char?displayProperty=nameWithType>|
+|`char`|U + 0000 do U + FFFF|16 bitów|<xref:System.Char?displayProperty=nameWithType>|
 
-The [string](reference-types.md#the-string-type) type represents text as a sequence of `char` values.
+Typ [String](reference-types.md#the-string-type) reprezentuje tekst jako sekwencję wartości `char`.
 
 ## <a name="literals"></a>Literały
 
-You can specify a `char` value with:
+Możesz określić wartość `char` przy użyciu:
 
-- a character literal.
-- a Unicode escape sequence, which is `\u` followed by the four-symbol hexadecimal representation of a character code.
-- a hexadecimal escape sequence, which is `\x` followed by the hexadecimal representation of a character code.
+- literał znakowy.
+- sekwencja unikowa Unicode, która jest `\u` po którym następuje dwusymbolowa reprezentacja kodu znaku w postaci szesnastkowej.
+- szesnastkowa sekwencja ucieczki, która jest `\x` po której następuje reprezentacja szesnastkowa kodu znaku.
 
 [!code-csharp-interactive[char literals](~/samples/csharp/language-reference/builtin-types/CharType.cs#Literals)]
 
-As the preceding example shows, you also can cast the value of a character code into the corresponding `char` value.
+Jak pokazano w powyższym przykładzie, można także rzutować wartość kodu znaku na odpowiadającą wartość `char`.
 
 > [!NOTE]
-> In the case of a Unicode escape sequence, you must specify all four hexadecimal digits. That is, `\u006A` is a valid escape sequence, while `\u06A` and `\u6A` are not valid.
+> W przypadku sekwencji unikowej Unicode należy określić wszystkie cztery cyfry szesnastkowe. Oznacza to, że `\u006A` jest prawidłową sekwencją ucieczki, podczas gdy `\u06A` i `\u6A` są nieprawidłowe.
 >
-> In the case of a hexadecimal escape sequence, you can omit the leading zeros. That is, the `\x006A`, `\x06A`, and `\x6A` escape sequences are valid and correspond to the same character.
+> W przypadku szesnastkowej sekwencji ucieczki można pominąć zera wiodące. Oznacza to, że `\x006A`, `\x06A`i `\x6A` sekwencje ucieczki są prawidłowe i odpowiadają temu samemu znakowi.
 
 ## <a name="conversions"></a>Konwersje
 
-The `char` type is implicitly convertible to the following [integral](integral-numeric-types.md) types: `ushort`, `int`, `uint`, `long`, and `ulong`. It's also implicitly convertible to the built-in [floating-point](floating-point-numeric-types.md) numeric types: `float`, `double`, and `decimal`. It's explicitly convertible to `sbyte`, `byte`, and `short` integral types.
+Typ `char` jest niejawnie konwertowany na następujące typy [całkowite](integral-numeric-types.md) : `ushort`, `int`, `uint`, `long`i `ulong`. Jest on również niejawnie konwertowany na wbudowane typy liczbowe [zmiennoprzecinkowe](floating-point-numeric-types.md) : `float`, `double`i `decimal`. Jest on jawnie konwertowany na `sbyte`, `byte`i `short` typów całkowitych.
 
-There are no implicit conversions from other types to the `char` type. However, any [integral](integral-numeric-types.md) or [floating-point](floating-point-numeric-types.md) numeric type is explicitly convertible to `char`.
+Brak niejawnych konwersji z innych typów na typ `char`. Jednak każdy typ liczbowy [całkowitego](integral-numeric-types.md) lub [zmiennoprzecinkowego](floating-point-numeric-types.md) jest jawnie konwertowany do `char`.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-For more information, see the [Integral types](~/_csharplang/spec/types.md#integral-types) section of the [C# language specification](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz sekcję [Typy całkowite](~/_csharplang/spec/types.md#integral-types) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C# reference](../index.md)
-- [Built-in types table](../keywords/built-in-types-table.md)
+- [C#odwoła](../index.md)
+- [Tabela typów wbudowanych](../keywords/built-in-types-table.md)
 - [Ciągi](../../programming-guide/strings/index.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437240"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>IMetaDataImport::GetNativeCallConvFromSig — Metoda
-Gets the native calling convention for the method that is represented by the specified signature pointer.  
+Pobiera natywną konwencję wywoływania dla metody reprezentowanej przez określony wskaźnik podpisu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,22 +37,22 @@ HRESULT GetNativeCallConvFromSig (
   
 ## <a name="parameters"></a>Parametry  
  `pvSig`  
- [in] A pointer to the metadata signature of the method to return the calling convention for.  
+ podczas Wskaźnik do sygnatury metadanych metody zwracającej konwencję wywoływania.  
   
  `cbSig`  
- [in] The size in bytes of `pvSig`.  
+ podczas Rozmiar w bajtach `pvSig`.  
   
  `pCallConv`  
- [out] A pointer to the native calling convention.  
+ określoną Wskaźnik do natywnej konwencji wywoływania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

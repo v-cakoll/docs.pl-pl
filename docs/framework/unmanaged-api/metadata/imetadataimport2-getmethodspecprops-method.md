@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445255"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps — Metoda
-Gets the metadata signature of the method referenced by the specified MethodSpec token.  
+Pobiera sygnaturę metadanych metody przywoływanej przez określony token elementu MethodSpec.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,25 +38,25 @@ HRESULT GetMethodSpecProps (
   
 ## <a name="parameters"></a>Parametry  
  `mi`  
- [in] A MethodSpec token that represents the instantiation of the method.  
+ podczas Token elementu MethodSpec, który reprezentuje Tworzenie wystąpienia metody.  
   
  `tkParent`  
- [out] A pointer to the MethodDef or MethodRef token that represents the method definition.  
+ określoną Wskaźnik do tokenu MethodDef lub MethodRef, który reprezentuje definicję metody.  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the method.  
+ określoną Wskaźnik do binarnego podpisu metadanych metody.  
   
  `pcbSigBlob`  
- [out] The size, in bytes, of `ppvSigBlob`.  
+ określoną Rozmiar w bajtach `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

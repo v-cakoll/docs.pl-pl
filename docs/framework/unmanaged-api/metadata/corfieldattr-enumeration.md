@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450305"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr — Wyliczenie
-Contains values that describe metadata about a field.  
+Zawiera wartości opisujące metadane dotyczące pola.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -60,32 +60,32 @@ typedef enum CorFieldAttr {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|Specifies accessibility information.|  
-|`fdPrivateScope`|Specifies that the field cannot be referenced.|  
-|`fdPrivate`|Specifies that the field is accessible only by its parent type.|  
-|`fdFamANDAssem`|Specifies that the field is accessible by derived classes in its assembly.|  
-|`fdAssembly`|Specifies that the field is accessible by all types in its assembly.|  
-|`fdFamily`|Specifies that the field is accessible only by its type and derived classes.|  
-|`fdFamORAssem`|Specifies that the field is accessible by derived classes and by all types in its assembly.|  
-|`fdPublic`|Specifies that the field is accessible by all types with visibility of this scope.|  
-|`fdStatic`|Specifies that the field is a member of its type rather than an instance member.|  
-|`fdInitOnly`|Specifies that the field cannot be changed after it is initialized.|  
-|`fdLiteral`|Specifies that the field value is a compile-time constant.|  
-|`fdNotSerialized`|Specifies that the field is not serialized when its type is remoted.|  
-|`fdSpecialName`|Specifies that the field is special, and that its name describes how.|  
-|`fdPinvokeImpl`|Specifies that the field implementation is forwarded through PInvoke.|  
-|`fdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`fdRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the name.|  
-|`fdHasFieldMarshal`|Specifies that the field contains marshaling information.|  
-|`fdHasDefault`|Specifies that the field has a default value.|  
-|`fdHasFieldRVA`|Specifies that the field has a relative virtual address.|  
+|`fdFieldAccessMask`|Określa informacje o ułatwieniach dostępu.|  
+|`fdPrivateScope`|Określa, że nie można odwołać się do pola.|  
+|`fdPrivate`|Określa, że pole jest dostępne tylko dla jego typu nadrzędnego.|  
+|`fdFamANDAssem`|Określa, że pole jest dostępne dla klas pochodnych w zestawie.|  
+|`fdAssembly`|Określa, że pole jest dostępne dla wszystkich typów w zestawie.|  
+|`fdFamily`|Określa, że pole jest dostępne tylko na podstawie jego typu i klas pochodnych.|  
+|`fdFamORAssem`|Określa, że pole jest dostępne dla klas pochodnych i wszystkich typów w zestawie.|  
+|`fdPublic`|Określa, że pole jest dostępne dla wszystkich typów z widocznością tego zakresu.|  
+|`fdStatic`|Określa, że pole jest elementem członkowskim typu, a nie elementem członkowskim wystąpienia.|  
+|`fdInitOnly`|Określa, że nie można zmienić pola po jego zainicjowaniu.|  
+|`fdLiteral`|Określa, że wartość pola jest stałą czasu kompilacji.|  
+|`fdNotSerialized`|Określa, że pole nie jest serializowane, gdy jego typ jest zdalny.|  
+|`fdSpecialName`|Określa, że pole jest specjalne i że jego nazwa opisuje sposób.|  
+|`fdPinvokeImpl`|Określa, że implementacja pola jest przekazywana za pomocą funkcji PInvoke.|  
+|`fdReservedMask`|Zarezerwowane do użytku wewnętrznego przez środowisko uruchomieniowe języka wspólnego.|  
+|`fdRTSpecialName`|Określa, że wewnętrzne interfejsy API środowiska uruchomieniowego języka wspólnego powinny sprawdzać kodowanie nazwy.|  
+|`fdHasFieldMarshal`|Określa, że pole zawiera informacje o kierowaniu.|  
+|`fdHasDefault`|Określa, że pole ma wartość domyślną.|  
+|`fdHasFieldRVA`|Określa, że pole ma względny adres wirtualny.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: Stop — Instrukcja
+title: Stop, instrukcja
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Stop
@@ -19,28 +19,28 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346463"
 ---
-# <a name="stop-statement-visual-basic"></a><span data-ttu-id="03e4e-102">Stop — Instrukcja (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="03e4e-102">Stop Statement (Visual Basic)</span></span>
-<span data-ttu-id="03e4e-103">Suspends execution.</span><span class="sxs-lookup"><span data-stu-id="03e4e-103">Suspends execution.</span></span>  
+# <a name="stop-statement-visual-basic"></a><span data-ttu-id="c654f-102">Stop — Instrukcja (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c654f-102">Stop Statement (Visual Basic)</span></span>
+<span data-ttu-id="c654f-103">Wstrzymuje wykonywanie.</span><span class="sxs-lookup"><span data-stu-id="c654f-103">Suspends execution.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03e4e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="03e4e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c654f-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c654f-104">Syntax</span></span>  
   
 ```vb  
 Stop  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="03e4e-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="03e4e-105">Remarks</span></span>  
- <span data-ttu-id="03e4e-106">You can place `Stop` statements anywhere in procedures to suspend execution.</span><span class="sxs-lookup"><span data-stu-id="03e4e-106">You can place `Stop` statements anywhere in procedures to suspend execution.</span></span> <span data-ttu-id="03e4e-107">Using the `Stop` statement is similar to setting a breakpoint in the code.</span><span class="sxs-lookup"><span data-stu-id="03e4e-107">Using the `Stop` statement is similar to setting a breakpoint in the code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c654f-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="c654f-105">Remarks</span></span>  
+ <span data-ttu-id="c654f-106">Instrukcje `Stop` można umieścić w dowolnym miejscu w procedurach, aby wstrzymać wykonywanie.</span><span class="sxs-lookup"><span data-stu-id="c654f-106">You can place `Stop` statements anywhere in procedures to suspend execution.</span></span> <span data-ttu-id="c654f-107">Użycie instrukcji `Stop` jest podobne do ustawiania punktu przerwania w kodzie.</span><span class="sxs-lookup"><span data-stu-id="c654f-107">Using the `Stop` statement is similar to setting a breakpoint in the code.</span></span>  
   
- <span data-ttu-id="03e4e-108">The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.</span><span class="sxs-lookup"><span data-stu-id="03e4e-108">The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.</span></span>  
+ <span data-ttu-id="c654f-108">Instrukcja `Stop` wstrzymuje wykonywanie, ale w przeciwieństwie do `End`, nie zamyka żadnych plików ani nie czyści żadnych zmiennych, chyba że zostanie napotkana w skompilowanym pliku wykonywalnym (. exe).</span><span class="sxs-lookup"><span data-stu-id="c654f-108">The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="03e4e-109">If the `Stop` statement is encountered in code that is running outside of the integrated development environment (IDE), the debugger is invoked.</span><span class="sxs-lookup"><span data-stu-id="03e4e-109">If the `Stop` statement is encountered in code that is running outside of the integrated development environment (IDE), the debugger is invoked.</span></span> <span data-ttu-id="03e4e-110">This is true regardless of whether the code was compiled in debug or retail mode.</span><span class="sxs-lookup"><span data-stu-id="03e4e-110">This is true regardless of whether the code was compiled in debug or retail mode.</span></span>  
+> <span data-ttu-id="c654f-109">Jeśli instrukcja `Stop` występuje w kodzie, który działa poza zintegrowanym środowiskiem programistycznym (IDE), debuger jest wywoływany.</span><span class="sxs-lookup"><span data-stu-id="c654f-109">If the `Stop` statement is encountered in code that is running outside of the integrated development environment (IDE), the debugger is invoked.</span></span> <span data-ttu-id="c654f-110">Stanie się tak niezależnie od tego, czy kod został skompilowany w trybie debugowania, czy wersji wdrożeniowej.</span><span class="sxs-lookup"><span data-stu-id="c654f-110">This is true regardless of whether the code was compiled in debug or retail mode.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="03e4e-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="03e4e-111">Example</span></span>  
- <span data-ttu-id="03e4e-112">This example uses the `Stop` statement to suspend execution for each iteration through the `For...Next` loop.</span><span class="sxs-lookup"><span data-stu-id="03e4e-112">This example uses the `Stop` statement to suspend execution for each iteration through the `For...Next` loop.</span></span>  
+## <a name="example"></a><span data-ttu-id="c654f-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="c654f-111">Example</span></span>  
+ <span data-ttu-id="c654f-112">Ten przykład używa instrukcji `Stop`, aby zawiesić wykonywanie dla każdej iteracji za pośrednictwem pętli `For...Next`.</span><span class="sxs-lookup"><span data-stu-id="c654f-112">This example uses the `Stop` statement to suspend execution for each iteration through the `For...Next` loop.</span></span>  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   
-## <a name="see-also"></a><span data-ttu-id="03e4e-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="03e4e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c654f-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c654f-113">See also</span></span>
 
-- [<span data-ttu-id="03e4e-114">End, instrukcja</span><span class="sxs-lookup"><span data-stu-id="03e4e-114">End Statement</span></span>](../../../visual-basic/language-reference/statements/end-statement.md)
+- [<span data-ttu-id="c654f-114">End, instrukcja</span><span class="sxs-lookup"><span data-stu-id="c654f-114">End Statement</span></span>](../../../visual-basic/language-reference/statements/end-statement.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Sort An Array'
+title: 'Instrukcje: sortowanie tablicy'
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -14,13 +14,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351853"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a><span data-ttu-id="a0e91-102">How to: sort an array in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a0e91-102">How to: sort an array in Visual Basic</span></span>
+# <a name="how-to-sort-an-array-in-visual-basic"></a><span data-ttu-id="07519-102">Instrukcje: sortowanie tablicy w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="07519-102">How to: sort an array in Visual Basic</span></span>
 
-<span data-ttu-id="a0e91-103">This article shows an example of how to sort an array of strings in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="a0e91-103">This article shows an example of how to sort an array of strings in Visual Basic.</span></span>
+<span data-ttu-id="07519-103">W tym artykule przedstawiono przykład sortowania tablicy ciągów w Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="07519-103">This article shows an example of how to sort an array of strings in Visual Basic.</span></span>
 
-## <a name="example"></a><span data-ttu-id="a0e91-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="a0e91-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="07519-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="07519-104">Example</span></span>
 
-<span data-ttu-id="a0e91-105">This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:</span><span class="sxs-lookup"><span data-stu-id="a0e91-105">This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:</span></span>
+<span data-ttu-id="07519-105">Ten przykład deklaruje tablicę `String` obiektów o nazwie `zooAnimals`, wypełnia ją, a następnie sortuje ją alfabetycznie:</span><span class="sxs-lookup"><span data-stu-id="07519-105">This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:</span></span>
   
 ```vb
 Private Sub SortAnimals()
@@ -32,18 +32,18 @@ Private Sub SortAnimals()
 End Sub
 ```
 
-## <a name="robust-programming"></a><span data-ttu-id="a0e91-106">Robust programming</span><span class="sxs-lookup"><span data-stu-id="a0e91-106">Robust programming</span></span>
+## <a name="robust-programming"></a><span data-ttu-id="07519-106">Niezawodne programowanie</span><span class="sxs-lookup"><span data-stu-id="07519-106">Robust programming</span></span>
 
-<span data-ttu-id="a0e91-107">Następujące warunki mogą spowodować wyjątek:</span><span class="sxs-lookup"><span data-stu-id="a0e91-107">The following conditions may cause an exception:</span></span>
+<span data-ttu-id="07519-107">Następujące warunki mogą spowodować wyjątek:</span><span class="sxs-lookup"><span data-stu-id="07519-107">The following conditions may cause an exception:</span></span>
 
-- <span data-ttu-id="a0e91-108">Array is empty (<xref:System.ArgumentNullException> class).</span><span class="sxs-lookup"><span data-stu-id="a0e91-108">Array is empty (<xref:System.ArgumentNullException> class).</span></span>
-- <span data-ttu-id="a0e91-109">Array is multidimensional (<xref:System.RankException> class).</span><span class="sxs-lookup"><span data-stu-id="a0e91-109">Array is multidimensional (<xref:System.RankException> class).</span></span>
-- <span data-ttu-id="a0e91-110">One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).</span><span class="sxs-lookup"><span data-stu-id="a0e91-110">One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).</span></span>
+- <span data-ttu-id="07519-108">Tablica jest pusta (Klasa<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="07519-108">Array is empty (<xref:System.ArgumentNullException> class).</span></span>
+- <span data-ttu-id="07519-109">Tablica jest wielowymiarowa (Klasa<xref:System.RankException>).</span><span class="sxs-lookup"><span data-stu-id="07519-109">Array is multidimensional (<xref:System.RankException> class).</span></span>
+- <span data-ttu-id="07519-110">Co najmniej jeden element tablicy nie implementuje interfejsu <xref:System.IComparable> (Klasa<xref:System.InvalidOperationException>).</span><span class="sxs-lookup"><span data-stu-id="07519-110">One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a0e91-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a0e91-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07519-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="07519-111">See also</span></span>
 
 - <xref:System.Array.Sort%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="a0e91-112">Tablice</span><span class="sxs-lookup"><span data-stu-id="a0e91-112">Arrays</span></span>](index.md)
-- [<span data-ttu-id="a0e91-113">Rozwiązywanie problemów związanych z tablicami</span><span class="sxs-lookup"><span data-stu-id="a0e91-113">Troubleshooting Arrays</span></span>](troubleshooting-arrays.md)
-- [<span data-ttu-id="a0e91-114">Kolekcje</span><span class="sxs-lookup"><span data-stu-id="a0e91-114">Collections</span></span>](../../concepts/collections.md)
-- [<span data-ttu-id="a0e91-115">For Each...Next, instrukcja</span><span class="sxs-lookup"><span data-stu-id="a0e91-115">For Each...Next Statement</span></span>](../../../language-reference/statements/for-each-next-statement.md)
+- [<span data-ttu-id="07519-112">Tablice</span><span class="sxs-lookup"><span data-stu-id="07519-112">Arrays</span></span>](index.md)
+- [<span data-ttu-id="07519-113">Rozwiązywanie problemów związanych z tablicami</span><span class="sxs-lookup"><span data-stu-id="07519-113">Troubleshooting Arrays</span></span>](troubleshooting-arrays.md)
+- [<span data-ttu-id="07519-114">Kolekcje</span><span class="sxs-lookup"><span data-stu-id="07519-114">Collections</span></span>](../../concepts/collections.md)
+- [<span data-ttu-id="07519-115">For Each...Next, instrukcja</span><span class="sxs-lookup"><span data-stu-id="07519-115">For Each...Next Statement</span></span>](../../../language-reference/statements/for-each-next-statement.md)

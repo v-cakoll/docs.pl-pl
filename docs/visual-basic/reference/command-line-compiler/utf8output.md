@@ -13,33 +13,33 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350835"
 ---
-# <a name="-utf8output-visual-basic"></a><span data-ttu-id="6bb25-102">-utf8output (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6bb25-102">-utf8output (Visual Basic)</span></span>
-<span data-ttu-id="6bb25-103">Displays compiler output using UTF-8 encoding.</span><span class="sxs-lookup"><span data-stu-id="6bb25-103">Displays compiler output using UTF-8 encoding.</span></span>  
+# <a name="-utf8output-visual-basic"></a><span data-ttu-id="189ea-102">-utf8output — (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="189ea-102">-utf8output (Visual Basic)</span></span>
+<span data-ttu-id="189ea-103">Wyświetla dane wyjściowe kompilatora przy użyciu kodowania UTF-8.</span><span class="sxs-lookup"><span data-stu-id="189ea-103">Displays compiler output using UTF-8 encoding.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6bb25-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="6bb25-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="189ea-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="189ea-104">Syntax</span></span>  
   
 ```console  
 -utf8output[+ | -]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="6bb25-105">Argumenty</span><span class="sxs-lookup"><span data-stu-id="6bb25-105">Arguments</span></span>  
- <span data-ttu-id="6bb25-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="6bb25-106">`+` &#124; `-`</span></span>  
- <span data-ttu-id="6bb25-107">Opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="6bb25-107">Optional.</span></span> <span data-ttu-id="6bb25-108">The default for this option is `-utf8output-`, which means compiler output does not use UTF-8 encoding.</span><span class="sxs-lookup"><span data-stu-id="6bb25-108">The default for this option is `-utf8output-`, which means compiler output does not use UTF-8 encoding.</span></span> <span data-ttu-id="6bb25-109">Specifying `-utf8output` is the same as specifying `-utf8output+`.</span><span class="sxs-lookup"><span data-stu-id="6bb25-109">Specifying `-utf8output` is the same as specifying `-utf8output+`.</span></span>  
+## <a name="arguments"></a><span data-ttu-id="189ea-105">Argumenty</span><span class="sxs-lookup"><span data-stu-id="189ea-105">Arguments</span></span>  
+ <span data-ttu-id="189ea-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="189ea-106">`+` &#124; `-`</span></span>  
+ <span data-ttu-id="189ea-107">Opcjonalna.</span><span class="sxs-lookup"><span data-stu-id="189ea-107">Optional.</span></span> <span data-ttu-id="189ea-108">Wartość domyślna dla tej opcji to `-utf8output-`, co oznacza, że wyjście kompilatora nie używa kodowania UTF-8.</span><span class="sxs-lookup"><span data-stu-id="189ea-108">The default for this option is `-utf8output-`, which means compiler output does not use UTF-8 encoding.</span></span> <span data-ttu-id="189ea-109">Określanie `-utf8output` jest taka sama jak określanie `-utf8output+`.</span><span class="sxs-lookup"><span data-stu-id="189ea-109">Specifying `-utf8output` is the same as specifying `-utf8output+`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6bb25-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="6bb25-110">Remarks</span></span>  
- <span data-ttu-id="6bb25-111">In some international configurations, compiler output cannot be displayed correctly in the console.</span><span class="sxs-lookup"><span data-stu-id="6bb25-111">In some international configurations, compiler output cannot be displayed correctly in the console.</span></span> <span data-ttu-id="6bb25-112">In such situations, use `-utf8output` and redirect compiler output to a file.</span><span class="sxs-lookup"><span data-stu-id="6bb25-112">In such situations, use `-utf8output` and redirect compiler output to a file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="189ea-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="189ea-110">Remarks</span></span>  
+ <span data-ttu-id="189ea-111">W niektórych konfiguracjach międzynarodowych dane wyjściowe kompilatora nie mogą być prawidłowo wyświetlane w konsoli programu.</span><span class="sxs-lookup"><span data-stu-id="189ea-111">In some international configurations, compiler output cannot be displayed correctly in the console.</span></span> <span data-ttu-id="189ea-112">W takich sytuacjach należy używać `-utf8output` i przekierować dane wyjściowe kompilatora do pliku.</span><span class="sxs-lookup"><span data-stu-id="189ea-112">In such situations, use `-utf8output` and redirect compiler output to a file.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="6bb25-113">The `-utf8output` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span><span class="sxs-lookup"><span data-stu-id="6bb25-113">The `-utf8output` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
+> <span data-ttu-id="189ea-113">Opcja `-utf8output` nie jest dostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.</span><span class="sxs-lookup"><span data-stu-id="189ea-113">The `-utf8output` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6bb25-114">Przykład</span><span class="sxs-lookup"><span data-stu-id="6bb25-114">Example</span></span>  
- <span data-ttu-id="6bb25-115">The following code compiles `In.vb` and directs the compiler to display output using UTF-8 encoding.</span><span class="sxs-lookup"><span data-stu-id="6bb25-115">The following code compiles `In.vb` and directs the compiler to display output using UTF-8 encoding.</span></span>  
+## <a name="example"></a><span data-ttu-id="189ea-114">Przykład</span><span class="sxs-lookup"><span data-stu-id="189ea-114">Example</span></span>  
+ <span data-ttu-id="189ea-115">Poniższy kod kompiluje `In.vb` i kieruje kompilator do wyświetlania danych wyjściowych przy użyciu kodowania UTF-8.</span><span class="sxs-lookup"><span data-stu-id="189ea-115">The following code compiles `In.vb` and directs the compiler to display output using UTF-8 encoding.</span></span>  
   
 ```console  
 vbc -utf8output in.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6bb25-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6bb25-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="189ea-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="189ea-116">See also</span></span>
 
-- [<span data-ttu-id="6bb25-117">Visual Basic Command-Line Compiler</span><span class="sxs-lookup"><span data-stu-id="6bb25-117">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="6bb25-118">Przykłady kompilacji — wiersze poleceń</span><span class="sxs-lookup"><span data-stu-id="6bb25-118">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="189ea-117">Kompilator wiersza polecenia Visual Basic</span><span class="sxs-lookup"><span data-stu-id="189ea-117">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="189ea-118">Przykłady kompilacji — wiersze poleceń</span><span class="sxs-lookup"><span data-stu-id="189ea-118">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

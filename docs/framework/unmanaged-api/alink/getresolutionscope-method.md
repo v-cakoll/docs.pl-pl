@@ -21,10 +21,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447223"
 ---
-# <a name="getresolutionscope-method"></a><span data-ttu-id="29345-102">GetResolutionScope — Metoda</span><span class="sxs-lookup"><span data-stu-id="29345-102">GetResolutionScope Method</span></span>
-<span data-ttu-id="29345-103">Retrieves the scope of a given type.</span><span class="sxs-lookup"><span data-stu-id="29345-103">Retrieves the scope of a given type.</span></span>  
+# <a name="getresolutionscope-method"></a><span data-ttu-id="0d852-102">GetResolutionScope — Metoda</span><span class="sxs-lookup"><span data-stu-id="0d852-102">GetResolutionScope Method</span></span>
+<span data-ttu-id="0d852-103">Pobiera zakres danego typu.</span><span class="sxs-lookup"><span data-stu-id="0d852-103">Retrieves the scope of a given type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="29345-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="29345-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0d852-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0d852-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetResolutionScope(  
@@ -35,27 +35,27 @@ HRESULT GetResolutionScope(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="29345-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="29345-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0d852-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="0d852-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="29345-106">ID of the assembly.</span><span class="sxs-lookup"><span data-stu-id="29345-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="0d852-106">Identyfikator zestawu.</span><span class="sxs-lookup"><span data-stu-id="0d852-106">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="29345-107">File that is in need of a reference.</span><span class="sxs-lookup"><span data-stu-id="29345-107">File that is in need of a reference.</span></span>  
+ <span data-ttu-id="0d852-107">Plik, który jest wymagany do odwołania.</span><span class="sxs-lookup"><span data-stu-id="0d852-107">File that is in need of a reference.</span></span>  
   
  `TargetFile`  
- <span data-ttu-id="29345-108">Token of file that type is defined in, usually retrieved with [ImportFile Method](importfile-method.md).</span><span class="sxs-lookup"><span data-stu-id="29345-108">Token of file that type is defined in, usually retrieved with [ImportFile Method](importfile-method.md).</span></span>  
+ <span data-ttu-id="0d852-108">Token pliku, który jest zdefiniowany w, zazwyczaj pobierany przy użyciu [metody ImportFile —](importfile-method.md).</span><span class="sxs-lookup"><span data-stu-id="0d852-108">Token of file that type is defined in, usually retrieved with [ImportFile Method](importfile-method.md).</span></span>  
   
  `pScope`  
- <span data-ttu-id="29345-109">Receives the assembly or module reference.</span><span class="sxs-lookup"><span data-stu-id="29345-109">Receives the assembly or module reference.</span></span>  
+ <span data-ttu-id="0d852-109">Odbiera odwołanie zestawu lub modułu.</span><span class="sxs-lookup"><span data-stu-id="0d852-109">Receives the assembly or module reference.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="29345-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="29345-110">Return Value</span></span>  
- <span data-ttu-id="29345-111">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="29345-111">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0d852-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="0d852-110">Return Value</span></span>  
+ <span data-ttu-id="0d852-111">Zwraca S_OK, jeśli metoda zakończy się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="0d852-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="29345-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="29345-112">Requirements</span></span>  
- <span data-ttu-id="29345-113">Requires alink.h.</span><span class="sxs-lookup"><span data-stu-id="29345-113">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0d852-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0d852-112">Requirements</span></span>  
+ <span data-ttu-id="0d852-113">Wymaga Alink. h.</span><span class="sxs-lookup"><span data-stu-id="0d852-113">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="29345-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="29345-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d852-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0d852-114">See also</span></span>
 
-- [<span data-ttu-id="29345-115">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="29345-115">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="29345-116">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="29345-116">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="29345-117">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="29345-117">ALink API</span></span>](index.md)
+- [<span data-ttu-id="0d852-115">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="0d852-115">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="0d852-116">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="0d852-116">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="0d852-117">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="0d852-117">ALink API</span></span>](index.md)

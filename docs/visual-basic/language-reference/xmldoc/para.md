@@ -12,29 +12,29 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352302"
 ---
-# <a name="para-visual-basic"></a><span data-ttu-id="f1181-101">\<para> (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f1181-101">\<para> (Visual Basic)</span></span>
-<span data-ttu-id="f1181-102">Specifies that the content is formatted as a paragraph.</span><span class="sxs-lookup"><span data-stu-id="f1181-102">Specifies that the content is formatted as a paragraph.</span></span>  
+# <a name="para-visual-basic"></a><span data-ttu-id="1980c-101">\<para > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1980c-101">\<para> (Visual Basic)</span></span>
+<span data-ttu-id="1980c-102">Określa, że zawartość jest sformatowana w akapicie.</span><span class="sxs-lookup"><span data-stu-id="1980c-102">Specifies that the content is formatted as a paragraph.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f1181-103">Składnia</span><span class="sxs-lookup"><span data-stu-id="f1181-103">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1980c-103">Składnia</span><span class="sxs-lookup"><span data-stu-id="1980c-103">Syntax</span></span>  
   
 ```xml  
 <para>content</para>  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f1181-104">Parametry</span><span class="sxs-lookup"><span data-stu-id="f1181-104">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1980c-104">Parametry</span><span class="sxs-lookup"><span data-stu-id="1980c-104">Parameters</span></span>  
  `content`  
- <span data-ttu-id="f1181-105">The text of the paragraph.</span><span class="sxs-lookup"><span data-stu-id="f1181-105">The text of the paragraph.</span></span>  
+ <span data-ttu-id="1980c-105">Tekst akapitu.</span><span class="sxs-lookup"><span data-stu-id="1980c-105">The text of the paragraph.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f1181-106">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f1181-106">Remarks</span></span>  
- <span data-ttu-id="f1181-107">The `<para>` tag is for use inside a tag, such as [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), or [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md), and lets you add structure to the text.</span><span class="sxs-lookup"><span data-stu-id="f1181-107">The `<para>` tag is for use inside a tag, such as [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), or [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md), and lets you add structure to the text.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1980c-106">Uwagi</span><span class="sxs-lookup"><span data-stu-id="1980c-106">Remarks</span></span>  
+ <span data-ttu-id="1980c-107">Tag `<para>` jest używany wewnątrz tagu, takiego jak [\<podsumowanie >](../../../visual-basic/language-reference/xmldoc/summary.md), [\<uwagi >](../../../visual-basic/language-reference/xmldoc/remarks.md), lub [\<zwraca >](../../../visual-basic/language-reference/xmldoc/returns.md), i umożliwia dodanie struktury do tekstu.</span><span class="sxs-lookup"><span data-stu-id="1980c-107">The `<para>` tag is for use inside a tag, such as [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), or [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md), and lets you add structure to the text.</span></span>  
   
- <span data-ttu-id="f1181-108">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span><span class="sxs-lookup"><span data-stu-id="f1181-108">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="1980c-108">Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.</span><span class="sxs-lookup"><span data-stu-id="1980c-108">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f1181-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="f1181-109">Example</span></span>  
- <span data-ttu-id="f1181-110">This example uses the `<para>` tag to split the remarks section for the `UpdateRecord` method into two paragraphs.</span><span class="sxs-lookup"><span data-stu-id="f1181-110">This example uses the `<para>` tag to split the remarks section for the `UpdateRecord` method into two paragraphs.</span></span>  
+## <a name="example"></a><span data-ttu-id="1980c-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="1980c-109">Example</span></span>  
+ <span data-ttu-id="1980c-110">W tym przykładzie używa znacznika `<para>`, aby podzielić sekcję Uwagi dla metody `UpdateRecord` na dwa akapity.</span><span class="sxs-lookup"><span data-stu-id="1980c-110">This example uses the `<para>` tag to split the remarks section for the `UpdateRecord` method into two paragraphs.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a><span data-ttu-id="f1181-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f1181-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1980c-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1980c-111">See also</span></span>
 
-- [<span data-ttu-id="f1181-112">Tagi komentarza XML</span><span class="sxs-lookup"><span data-stu-id="f1181-112">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+- [<span data-ttu-id="1980c-112">Tagi komentarza XML</span><span class="sxs-lookup"><span data-stu-id="1980c-112">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

@@ -22,10 +22,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446581"
 ---
-# <a name="closeassembly-method"></a><span data-ttu-id="c1354-102">CloseAssembly — Metoda</span><span class="sxs-lookup"><span data-stu-id="c1354-102">CloseAssembly Method</span></span>
-<span data-ttu-id="c1354-103">Finalizes assembly operations.</span><span class="sxs-lookup"><span data-stu-id="c1354-103">Finalizes assembly operations.</span></span> <span data-ttu-id="c1354-104">Call this method before beginning a new assembly or unbound module.</span><span class="sxs-lookup"><span data-stu-id="c1354-104">Call this method before beginning a new assembly or unbound module.</span></span>  
+# <a name="closeassembly-method"></a><span data-ttu-id="1441d-102">CloseAssembly — Metoda</span><span class="sxs-lookup"><span data-stu-id="1441d-102">CloseAssembly Method</span></span>
+<span data-ttu-id="1441d-103">Kończy operacje zestawu.</span><span class="sxs-lookup"><span data-stu-id="1441d-103">Finalizes assembly operations.</span></span> <span data-ttu-id="1441d-104">Wywołaj tę metodę przed rozpoczęciem nowego zestawu lub niepowiązanego modułu.</span><span class="sxs-lookup"><span data-stu-id="1441d-104">Call this method before beginning a new assembly or unbound module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c1354-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="c1354-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1441d-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="1441d-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT CloseAssembly(  
@@ -33,18 +33,18 @@ HRESULT CloseAssembly(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c1354-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="c1354-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1441d-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="1441d-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="c1354-107">ID of the assembly.</span><span class="sxs-lookup"><span data-stu-id="c1354-107">ID of the assembly.</span></span>  
+ <span data-ttu-id="1441d-107">Identyfikator zestawu.</span><span class="sxs-lookup"><span data-stu-id="1441d-107">ID of the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c1354-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="c1354-108">Return Value</span></span>  
- <span data-ttu-id="c1354-109">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="c1354-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1441d-108">Wartość zwrócona</span><span class="sxs-lookup"><span data-stu-id="1441d-108">Return Value</span></span>  
+ <span data-ttu-id="1441d-109">Zwraca S_OK, jeśli metoda zakończy się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="1441d-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c1354-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c1354-110">Requirements</span></span>  
- <span data-ttu-id="c1354-111">Requires alink.h.</span><span class="sxs-lookup"><span data-stu-id="c1354-111">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1441d-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1441d-110">Requirements</span></span>  
+ <span data-ttu-id="1441d-111">Wymaga Alink. h.</span><span class="sxs-lookup"><span data-stu-id="1441d-111">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c1354-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c1354-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1441d-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1441d-112">See also</span></span>
 
-- [<span data-ttu-id="c1354-113">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="c1354-113">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="c1354-114">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="c1354-114">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="c1354-115">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="c1354-115">ALink API</span></span>](index.md)
+- [<span data-ttu-id="1441d-113">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="1441d-113">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="1441d-114">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="1441d-114">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="1441d-115">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="1441d-115">ALink API</span></span>](index.md)

@@ -22,10 +22,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436293"
 ---
-# <a name="imetadataconvertergetmetadatafromtypeinfo-method"></a><span data-ttu-id="44d98-102">IMetaDataConverter::GetMetaDataFromTypeInfo — Metoda</span><span class="sxs-lookup"><span data-stu-id="44d98-102">IMetaDataConverter::GetMetaDataFromTypeInfo Method</span></span>
-<span data-ttu-id="44d98-103">Gets a pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library referenced by the specified `ITypeInfo` instance.</span><span class="sxs-lookup"><span data-stu-id="44d98-103">Gets a pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library referenced by the specified `ITypeInfo` instance.</span></span>  
+# <a name="imetadataconvertergetmetadatafromtypeinfo-method"></a><span data-ttu-id="97f21-102">IMetaDataConverter::GetMetaDataFromTypeInfo — Metoda</span><span class="sxs-lookup"><span data-stu-id="97f21-102">IMetaDataConverter::GetMetaDataFromTypeInfo Method</span></span>
+<span data-ttu-id="97f21-103">Pobiera wskaźnik do wystąpienia [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) , które reprezentuje sygnaturę metadanych biblioteki typów, do której odwołuje się określone wystąpienie `ITypeInfo`.</span><span class="sxs-lookup"><span data-stu-id="97f21-103">Gets a pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library referenced by the specified `ITypeInfo` instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="44d98-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="44d98-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="97f21-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="97f21-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMetaDataFromTypeInfo (  
@@ -34,23 +34,23 @@ HRESULT GetMetaDataFromTypeInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="44d98-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="44d98-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="97f21-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="97f21-105">Parameters</span></span>  
  `pITI`  
- <span data-ttu-id="44d98-106">[in] A pointer to an `ITypeInfo` object that refers to the type library.</span><span class="sxs-lookup"><span data-stu-id="44d98-106">[in] A pointer to an `ITypeInfo` object that refers to the type library.</span></span>  
+ <span data-ttu-id="97f21-106">podczas Wskaźnik do obiektu `ITypeInfo`, który odwołuje się do biblioteki typów.</span><span class="sxs-lookup"><span data-stu-id="97f21-106">[in] A pointer to an `ITypeInfo` object that refers to the type library.</span></span>  
   
  `ppMDI`  
- <span data-ttu-id="44d98-107">[out] A pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.</span><span class="sxs-lookup"><span data-stu-id="44d98-107">[out] A pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.</span></span>  
+ <span data-ttu-id="97f21-107">określoną Wskaźnik do lokalizacji, która otrzymuje adres `IMetaDataImport` wystąpienia, które reprezentuje sygnaturę metadanych.</span><span class="sxs-lookup"><span data-stu-id="97f21-107">[out] A pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="44d98-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="44d98-108">Requirements</span></span>  
- <span data-ttu-id="44d98-109">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="44d98-109">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="97f21-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="97f21-108">Requirements</span></span>  
+ <span data-ttu-id="97f21-109">**Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="97f21-109">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="44d98-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="44d98-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="97f21-110">**Nagłówek:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="97f21-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="44d98-111">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="44d98-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="97f21-111">**Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="97f21-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="44d98-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="44d98-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="97f21-112">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="97f21-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44d98-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="44d98-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97f21-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="97f21-113">See also</span></span>
 
-- [<span data-ttu-id="44d98-114">IMetaDataEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="44d98-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="44d98-115">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="44d98-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="97f21-114">IMetaDataEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="97f21-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="97f21-115">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="97f21-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

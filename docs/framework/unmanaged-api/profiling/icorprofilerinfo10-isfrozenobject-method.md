@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo10::IsFrozenObject
+title: 'ICorProfilerInfo10:: iszamarzniętobject'
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -18,35 +18,35 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449825"
 ---
-# <a name="icorprofilerinfo10isfrozenobject-method"></a><span data-ttu-id="1c4e6-102">ICorProfilerInfo10::IsFrozenObject Method</span><span class="sxs-lookup"><span data-stu-id="1c4e6-102">ICorProfilerInfo10::IsFrozenObject Method</span></span>
+# <a name="icorprofilerinfo10isfrozenobject-method"></a><span data-ttu-id="61614-102">ICorProfilerInfo10:: iszamarzniętobject — Metoda</span><span class="sxs-lookup"><span data-stu-id="61614-102">ICorProfilerInfo10::IsFrozenObject Method</span></span>
 
-<span data-ttu-id="1c4e6-103">Given an ObjectID, determines whether the object is in a read-only segment.</span><span class="sxs-lookup"><span data-stu-id="1c4e6-103">Given an ObjectID, determines whether the object is in a read-only segment.</span></span>
+<span data-ttu-id="61614-103">Przy użyciu identyfikatora ObjectID określa, czy obiekt znajduje się w segmencie tylko do odczytu.</span><span class="sxs-lookup"><span data-stu-id="61614-103">Given an ObjectID, determines whether the object is in a read-only segment.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="1c4e6-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="1c4e6-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="61614-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="61614-104">Syntax</span></span>
 
 ```cpp
 HRESULT IsFrozenObject( [in]  ObjectID objectId,
                         [out] BOOL *pbFrozen);
 ```
 
-#### <a name="parameters"></a><span data-ttu-id="1c4e6-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="1c4e6-105">Parameters</span></span>
+#### <a name="parameters"></a><span data-ttu-id="61614-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="61614-105">Parameters</span></span>
 
 `objectId` \
-<span data-ttu-id="1c4e6-106">[in] The object to examine.</span><span class="sxs-lookup"><span data-stu-id="1c4e6-106">[in] The object to examine.</span></span>
+<span data-ttu-id="61614-106">podczas Obiekt do sprawdzenia.</span><span class="sxs-lookup"><span data-stu-id="61614-106">[in] The object to examine.</span></span>
 
 `pbFrozen` \
-<span data-ttu-id="1c4e6-107">[out] A `BOOL` indicating if the object is in a read-only segment.</span><span class="sxs-lookup"><span data-stu-id="1c4e6-107">[out] A `BOOL` indicating if the object is in a read-only segment.</span></span>
+<span data-ttu-id="61614-107">określoną `BOOL` wskazujący, czy obiekt znajduje się w segmencie tylko do odczytu.</span><span class="sxs-lookup"><span data-stu-id="61614-107">[out] A `BOOL` indicating if the object is in a read-only segment.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="1c4e6-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1c4e6-108">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="61614-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="61614-108">Requirements</span></span>
 
-<span data-ttu-id="1c4e6-109">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="1c4e6-109">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>
+<span data-ttu-id="61614-109">**Platformy:** Zobacz [obsługiwane systemy operacyjne .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="61614-109">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>
 
-<span data-ttu-id="1c4e6-110">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1c4e6-110">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="61614-110">**Nagłówek:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="61614-110">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="1c4e6-111">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1c4e6-111">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="61614-111">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="61614-111">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="1c4e6-112">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c4e6-112">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
+<span data-ttu-id="61614-112">**Wersje .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="61614-112">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="1c4e6-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1c4e6-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61614-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="61614-113">See also</span></span>
 
-- [<span data-ttu-id="1c4e6-114">ICorProfilerInfo10 Interface</span><span class="sxs-lookup"><span data-stu-id="1c4e6-114">ICorProfilerInfo10 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [<span data-ttu-id="61614-114">ICorProfilerInfo10, interfejs</span><span class="sxs-lookup"><span data-stu-id="61614-114">ICorProfilerInfo10 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

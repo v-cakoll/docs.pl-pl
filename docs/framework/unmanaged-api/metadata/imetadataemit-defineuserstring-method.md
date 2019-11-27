@@ -22,10 +22,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450174"
 ---
-# <a name="imetadataemitdefineuserstring-method"></a><span data-ttu-id="fd36b-102">IMetaDataEmit::DefineUserString — Metoda</span><span class="sxs-lookup"><span data-stu-id="fd36b-102">IMetaDataEmit::DefineUserString Method</span></span>
-<span data-ttu-id="fd36b-103">Gets a metadata token for the specified literal string.</span><span class="sxs-lookup"><span data-stu-id="fd36b-103">Gets a metadata token for the specified literal string.</span></span>  
+# <a name="imetadataemitdefineuserstring-method"></a><span data-ttu-id="f9e03-102">IMetaDataEmit::DefineUserString — Metoda</span><span class="sxs-lookup"><span data-stu-id="f9e03-102">IMetaDataEmit::DefineUserString Method</span></span>
+<span data-ttu-id="f9e03-103">Pobiera token metadanych dla określonego ciągu literału.</span><span class="sxs-lookup"><span data-stu-id="f9e03-103">Gets a metadata token for the specified literal string.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fd36b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="fd36b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f9e03-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f9e03-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineUserString (   
@@ -35,26 +35,26 @@ HRESULT DefineUserString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fd36b-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="fd36b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f9e03-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="f9e03-105">Parameters</span></span>  
  `szString`  
- <span data-ttu-id="fd36b-106">[in] The user string to store.</span><span class="sxs-lookup"><span data-stu-id="fd36b-106">[in] The user string to store.</span></span>  
+ <span data-ttu-id="f9e03-106">podczas Ciąg użytkownika do zapisania.</span><span class="sxs-lookup"><span data-stu-id="f9e03-106">[in] The user string to store.</span></span>  
   
  `cchString`  
- <span data-ttu-id="fd36b-107">[in] The count of wide characters in `szString`.</span><span class="sxs-lookup"><span data-stu-id="fd36b-107">[in] The count of wide characters in `szString`.</span></span>  
+ <span data-ttu-id="f9e03-107">podczas Liczba znaków dwubajtowych w `szString`.</span><span class="sxs-lookup"><span data-stu-id="f9e03-107">[in] The count of wide characters in `szString`.</span></span>  
   
  `pstk`  
- <span data-ttu-id="fd36b-108">[out] The string token assigned.</span><span class="sxs-lookup"><span data-stu-id="fd36b-108">[out] The string token assigned.</span></span>  
+ <span data-ttu-id="f9e03-108">określoną Przypisany token ciągu.</span><span class="sxs-lookup"><span data-stu-id="f9e03-108">[out] The string token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fd36b-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="fd36b-109">Requirements</span></span>  
- <span data-ttu-id="fd36b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fd36b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f9e03-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f9e03-109">Requirements</span></span>  
+ <span data-ttu-id="f9e03-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f9e03-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fd36b-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fd36b-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f9e03-111">**Nagłówek:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="f9e03-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="fd36b-112">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fd36b-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f9e03-112">**Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="f9e03-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="fd36b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fd36b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f9e03-113">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9e03-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fd36b-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fd36b-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f9e03-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f9e03-114">See also</span></span>
 
-- [<span data-ttu-id="fd36b-115">IMetaDataEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="fd36b-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="fd36b-116">IMetaDataEmit2, interfejs</span><span class="sxs-lookup"><span data-stu-id="fd36b-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="f9e03-115">IMetaDataEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="f9e03-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="f9e03-116">IMetaDataEmit2, interfejs</span><span class="sxs-lookup"><span data-stu-id="f9e03-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

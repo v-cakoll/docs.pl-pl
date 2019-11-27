@@ -21,10 +21,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449401"
 ---
-# <a name="freewin32resblob-method"></a><span data-ttu-id="fbf40-102">FreeWin32ResBlob — Metoda</span><span class="sxs-lookup"><span data-stu-id="fbf40-102">FreeWin32ResBlob Method</span></span>
-<span data-ttu-id="fbf40-103">Releases the Win32 resource blob and associated resources.</span><span class="sxs-lookup"><span data-stu-id="fbf40-103">Releases the Win32 resource blob and associated resources.</span></span>  
+# <a name="freewin32resblob-method"></a><span data-ttu-id="84584-102">FreeWin32ResBlob — Metoda</span><span class="sxs-lookup"><span data-stu-id="84584-102">FreeWin32ResBlob Method</span></span>
+<span data-ttu-id="84584-103">Zwalnia obiekt BLOB zasobów Win32 i skojarzone zasoby.</span><span class="sxs-lookup"><span data-stu-id="84584-103">Releases the Win32 resource blob and associated resources.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fbf40-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="fbf40-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84584-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="84584-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FreeWin32ResBlob(  
@@ -32,18 +32,18 @@ HRESULT FreeWin32ResBlob(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fbf40-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="fbf40-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="84584-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="84584-105">Parameters</span></span>  
  `ppResBlob`  
- <span data-ttu-id="fbf40-106">The resource blob to be released.</span><span class="sxs-lookup"><span data-stu-id="fbf40-106">The resource blob to be released.</span></span> <span data-ttu-id="fbf40-107">This method assigns the blob pointer to NULL.</span><span class="sxs-lookup"><span data-stu-id="fbf40-107">This method assigns the blob pointer to NULL.</span></span>  
+ <span data-ttu-id="84584-106">Obiekt BLOB zasobu do zwolnienia.</span><span class="sxs-lookup"><span data-stu-id="84584-106">The resource blob to be released.</span></span> <span data-ttu-id="84584-107">Ta metoda przypisuje wskaźnik obiektu BLOB do wartości NULL.</span><span class="sxs-lookup"><span data-stu-id="84584-107">This method assigns the blob pointer to NULL.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fbf40-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="fbf40-108">Return Value</span></span>  
- <span data-ttu-id="fbf40-109">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="fbf40-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="84584-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="84584-108">Return Value</span></span>  
+ <span data-ttu-id="84584-109">Zwraca S_OK, jeśli metoda zakończy się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="84584-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fbf40-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="fbf40-110">Requirements</span></span>  
- <span data-ttu-id="fbf40-111">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="fbf40-111">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84584-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="84584-110">Requirements</span></span>  
+ <span data-ttu-id="84584-111">Wymaga Alink. h</span><span class="sxs-lookup"><span data-stu-id="84584-111">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fbf40-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fbf40-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84584-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="84584-112">See also</span></span>
 
-- [<span data-ttu-id="fbf40-113">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="fbf40-113">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="fbf40-114">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="fbf40-114">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="fbf40-115">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="fbf40-115">ALink API</span></span>](index.md)
+- [<span data-ttu-id="84584-113">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="84584-113">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="84584-114">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="84584-114">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="84584-115">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="84584-115">ALink API</span></span>](index.md)

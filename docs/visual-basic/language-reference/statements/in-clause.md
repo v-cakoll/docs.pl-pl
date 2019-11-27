@@ -13,20 +13,20 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353577"
 ---
-# <a name="in-clause-visual-basic"></a><span data-ttu-id="db29f-102">In — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="db29f-102">In Clause (Visual Basic)</span></span>
-<span data-ttu-id="db29f-103">Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.</span><span class="sxs-lookup"><span data-stu-id="db29f-103">Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.</span></span>  
+# <a name="in-clause-visual-basic"></a><span data-ttu-id="2e2e8-102">In — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2e2e8-102">In Clause (Visual Basic)</span></span>
+<span data-ttu-id="2e2e8-103">Określa grupę, do której ma należeć zmienna pętla w pętli `For Each` lub Określa kolekcję do zapytania w klauzuli `From`, `Join`lub `Group Join`.</span><span class="sxs-lookup"><span data-stu-id="2e2e8-103">Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="db29f-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="db29f-104">Remarks</span></span>  
- <span data-ttu-id="db29f-105">The `In` keyword can be used in the following contexts:</span><span class="sxs-lookup"><span data-stu-id="db29f-105">The `In` keyword can be used in the following contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2e2e8-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="2e2e8-104">Remarks</span></span>  
+ <span data-ttu-id="2e2e8-105">Słowo kluczowe `In` może być używane w następujących kontekstach:</span><span class="sxs-lookup"><span data-stu-id="2e2e8-105">The `In` keyword can be used in the following contexts:</span></span>  
   
- [<span data-ttu-id="db29f-106">For Each...Next, instrukcja</span><span class="sxs-lookup"><span data-stu-id="db29f-106">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [<span data-ttu-id="2e2e8-106">For Each...Next, instrukcja</span><span class="sxs-lookup"><span data-stu-id="2e2e8-106">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
- [<span data-ttu-id="db29f-107">From, klauzula</span><span class="sxs-lookup"><span data-stu-id="db29f-107">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="2e2e8-107">From, klauzula</span><span class="sxs-lookup"><span data-stu-id="2e2e8-107">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
   
- [<span data-ttu-id="db29f-108">Join, klauzula</span><span class="sxs-lookup"><span data-stu-id="db29f-108">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="2e2e8-108">Join, klauzula</span><span class="sxs-lookup"><span data-stu-id="2e2e8-108">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
   
- [<span data-ttu-id="db29f-109">Group Join, klauzula</span><span class="sxs-lookup"><span data-stu-id="db29f-109">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="2e2e8-109">Group Join, klauzula</span><span class="sxs-lookup"><span data-stu-id="2e2e8-109">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a><span data-ttu-id="db29f-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="db29f-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2e2e8-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2e2e8-110">See also</span></span>
 
-- [<span data-ttu-id="db29f-111">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="db29f-111">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="2e2e8-111">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="2e2e8-111">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

@@ -21,25 +21,25 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426117"
 ---
-# <a name="imetadatavalidate-interface"></a><span data-ttu-id="54547-102">IMetaDataValidate — Interfejs</span><span class="sxs-lookup"><span data-stu-id="54547-102">IMetaDataValidate Interface</span></span>
-<span data-ttu-id="54547-103">Provides methods to validate metadata signatures.</span><span class="sxs-lookup"><span data-stu-id="54547-103">Provides methods to validate metadata signatures.</span></span>  
+# <a name="imetadatavalidate-interface"></a><span data-ttu-id="6330d-102">IMetaDataValidate — Interfejs</span><span class="sxs-lookup"><span data-stu-id="6330d-102">IMetaDataValidate Interface</span></span>
+<span data-ttu-id="6330d-103">Zapewnia metody weryfikacji podpisów metadanych.</span><span class="sxs-lookup"><span data-stu-id="6330d-103">Provides methods to validate metadata signatures.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="54547-104">Metody</span><span class="sxs-lookup"><span data-stu-id="54547-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="6330d-104">Metody</span><span class="sxs-lookup"><span data-stu-id="6330d-104">Methods</span></span>  
   
-|<span data-ttu-id="54547-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="54547-105">Method</span></span>|<span data-ttu-id="54547-106">Opis</span><span class="sxs-lookup"><span data-stu-id="54547-106">Description</span></span>|  
+|<span data-ttu-id="6330d-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="6330d-105">Method</span></span>|<span data-ttu-id="6330d-106">Opis</span><span class="sxs-lookup"><span data-stu-id="6330d-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="54547-107">ValidateMetaData, metoda</span><span class="sxs-lookup"><span data-stu-id="54547-107">ValidateMetaData Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatemetadata-method.md)|<span data-ttu-id="54547-108">Validates the metadata signatures of the objects in the current metadata scope.</span><span class="sxs-lookup"><span data-stu-id="54547-108">Validates the metadata signatures of the objects in the current metadata scope.</span></span>|  
-|[<span data-ttu-id="54547-109">ValidatorInit, metoda</span><span class="sxs-lookup"><span data-stu-id="54547-109">ValidatorInit Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatorinit-method.md)|<span data-ttu-id="54547-110">Sets a flag that specifies the type of the module in the current metadata scope, and registers the specified callback method for validation errors.</span><span class="sxs-lookup"><span data-stu-id="54547-110">Sets a flag that specifies the type of the module in the current metadata scope, and registers the specified callback method for validation errors.</span></span>|  
+|[<span data-ttu-id="6330d-107">ValidateMetaData, metoda</span><span class="sxs-lookup"><span data-stu-id="6330d-107">ValidateMetaData Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatemetadata-method.md)|<span data-ttu-id="6330d-108">Sprawdza poprawność podpisów metadanych obiektów w bieżącym zakresie metadanych.</span><span class="sxs-lookup"><span data-stu-id="6330d-108">Validates the metadata signatures of the objects in the current metadata scope.</span></span>|  
+|[<span data-ttu-id="6330d-109">ValidatorInit, metoda</span><span class="sxs-lookup"><span data-stu-id="6330d-109">ValidatorInit Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatorinit-method.md)|<span data-ttu-id="6330d-110">Ustawia flagę określającą typ modułu w bieżącym zakresie metadanych i rejestruje określoną metodę wywołania zwrotnego dla błędów walidacji.</span><span class="sxs-lookup"><span data-stu-id="6330d-110">Sets a flag that specifies the type of the module in the current metadata scope, and registers the specified callback method for validation errors.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="54547-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="54547-111">Requirements</span></span>  
- <span data-ttu-id="54547-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="54547-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6330d-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="6330d-111">Requirements</span></span>  
+ <span data-ttu-id="6330d-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6330d-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54547-113">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="54547-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6330d-113">**Nagłówek:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="6330d-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="54547-114">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="54547-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6330d-114">**Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="6330d-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="54547-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54547-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6330d-115">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6330d-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54547-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="54547-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6330d-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6330d-116">See also</span></span>
 
-- [<span data-ttu-id="54547-117">Interfejsy metadanych</span><span class="sxs-lookup"><span data-stu-id="54547-117">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="6330d-117">Interfejsy metadanych</span><span class="sxs-lookup"><span data-stu-id="6330d-117">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

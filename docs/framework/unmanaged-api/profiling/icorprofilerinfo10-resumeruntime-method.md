@@ -18,26 +18,26 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449801"
 ---
-# <a name="icorprofilerinfo10resumeruntime-method"></a><span data-ttu-id="d6343-102">ICorProfilerInfo10::ResumeRuntime Method</span><span class="sxs-lookup"><span data-stu-id="d6343-102">ICorProfilerInfo10::ResumeRuntime Method</span></span>
+# <a name="icorprofilerinfo10resumeruntime-method"></a><span data-ttu-id="4abb0-102">ICorProfilerInfo10:: ResumeRuntime, Metoda</span><span class="sxs-lookup"><span data-stu-id="4abb0-102">ICorProfilerInfo10::ResumeRuntime Method</span></span>
 
-<span data-ttu-id="d6343-103">Resumes the runtime without performing a GC.</span><span class="sxs-lookup"><span data-stu-id="d6343-103">Resumes the runtime without performing a GC.</span></span>
+<span data-ttu-id="4abb0-103">Wznawia środowisko uruchomieniowe bez wykonywania operacji GC.</span><span class="sxs-lookup"><span data-stu-id="4abb0-103">Resumes the runtime without performing a GC.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="d6343-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d6343-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="4abb0-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="4abb0-104">Syntax</span></span>
 
 ```cpp
 HRESULT ResumeRuntime();
 ```
 
-## <a name="requirements"></a><span data-ttu-id="d6343-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d6343-105">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="4abb0-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4abb0-105">Requirements</span></span>
 
-<span data-ttu-id="d6343-106">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="d6343-106">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>
+<span data-ttu-id="4abb0-106">**Platformy:** Zobacz [obsługiwane systemy operacyjne .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="4abb0-106">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>
 
-<span data-ttu-id="d6343-107">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d6343-107">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="4abb0-107">**Nagłówek:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="4abb0-107">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="d6343-108">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d6343-108">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="4abb0-108">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="4abb0-108">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="d6343-109">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d6343-109">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
+<span data-ttu-id="4abb0-109">**Wersje .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4abb0-109">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d6343-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d6343-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4abb0-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4abb0-110">See also</span></span>
 
-- [<span data-ttu-id="d6343-111">ICorProfilerInfo10 Interface</span><span class="sxs-lookup"><span data-stu-id="d6343-111">ICorProfilerInfo10 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [<span data-ttu-id="4abb0-111">ICorProfilerInfo10, interfejs</span><span class="sxs-lookup"><span data-stu-id="4abb0-111">ICorProfilerInfo10 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

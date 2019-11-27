@@ -22,10 +22,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426215"
 ---
-# <a name="imetadatatables2getmetadatastreaminfo-method"></a><span data-ttu-id="ea307-102">IMetaDataTables2::GetMetaDataStreamInfo — Metoda</span><span class="sxs-lookup"><span data-stu-id="ea307-102">IMetaDataTables2::GetMetaDataStreamInfo Method</span></span>
-<span data-ttu-id="ea307-103">Gets the name, size, and contents of the metadata stream at the specified index.</span><span class="sxs-lookup"><span data-stu-id="ea307-103">Gets the name, size, and contents of the metadata stream at the specified index.</span></span>  
+# <a name="imetadatatables2getmetadatastreaminfo-method"></a><span data-ttu-id="fec83-102">IMetaDataTables2::GetMetaDataStreamInfo — Metoda</span><span class="sxs-lookup"><span data-stu-id="fec83-102">IMetaDataTables2::GetMetaDataStreamInfo Method</span></span>
+<span data-ttu-id="fec83-103">Pobiera nazwę, rozmiar i zawartość strumienia metadanych o określonym indeksie.</span><span class="sxs-lookup"><span data-stu-id="fec83-103">Gets the name, size, and contents of the metadata stream at the specified index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ea307-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="ea307-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fec83-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="fec83-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMetaDataStreamInfo (  
@@ -36,29 +36,29 @@ HRESULT GetMetaDataStreamInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ea307-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="ea307-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fec83-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="fec83-105">Parameters</span></span>  
  `ix`  
- <span data-ttu-id="ea307-106">[in] The index of the requested metadata stream.</span><span class="sxs-lookup"><span data-stu-id="ea307-106">[in] The index of the requested metadata stream.</span></span>  
+ <span data-ttu-id="fec83-106">podczas Indeks żądanego strumienia metadanych.</span><span class="sxs-lookup"><span data-stu-id="fec83-106">[in] The index of the requested metadata stream.</span></span>  
   
  `ppchName`  
- <span data-ttu-id="ea307-107">[out] A pointer to the name of the stream.</span><span class="sxs-lookup"><span data-stu-id="ea307-107">[out] A pointer to the name of the stream.</span></span>  
+ <span data-ttu-id="fec83-107">określoną Wskaźnik do nazwy strumienia.</span><span class="sxs-lookup"><span data-stu-id="fec83-107">[out] A pointer to the name of the stream.</span></span>  
   
  `ppv`  
- <span data-ttu-id="ea307-108">[out] A pointer to the metadata stream.</span><span class="sxs-lookup"><span data-stu-id="ea307-108">[out] A pointer to the metadata stream.</span></span>  
+ <span data-ttu-id="fec83-108">określoną Wskaźnik do strumienia metadanych.</span><span class="sxs-lookup"><span data-stu-id="fec83-108">[out] A pointer to the metadata stream.</span></span>  
   
  `pcb`  
- <span data-ttu-id="ea307-109">[out] The size, in bytes, of `ppv`.</span><span class="sxs-lookup"><span data-stu-id="ea307-109">[out] The size, in bytes, of `ppv`.</span></span>  
+ <span data-ttu-id="fec83-109">określoną Rozmiar w bajtach `ppv`.</span><span class="sxs-lookup"><span data-stu-id="fec83-109">[out] The size, in bytes, of `ppv`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ea307-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ea307-110">Requirements</span></span>  
- <span data-ttu-id="ea307-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ea307-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fec83-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="fec83-110">Requirements</span></span>  
+ <span data-ttu-id="fec83-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fec83-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ea307-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ea307-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fec83-112">**Nagłówek:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="fec83-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ea307-113">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ea307-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="fec83-113">**Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="fec83-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="ea307-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea307-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="fec83-114">**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fec83-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea307-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ea307-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fec83-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fec83-115">See also</span></span>
 
-- [<span data-ttu-id="ea307-116">IMetaDataTables2, interfejs</span><span class="sxs-lookup"><span data-stu-id="ea307-116">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
-- [<span data-ttu-id="ea307-117">IMetaDataTables, interfejs</span><span class="sxs-lookup"><span data-stu-id="ea307-117">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="fec83-116">IMetaDataTables2, interfejs</span><span class="sxs-lookup"><span data-stu-id="fec83-116">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="fec83-117">IMetaDataTables, interfejs</span><span class="sxs-lookup"><span data-stu-id="fec83-117">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)

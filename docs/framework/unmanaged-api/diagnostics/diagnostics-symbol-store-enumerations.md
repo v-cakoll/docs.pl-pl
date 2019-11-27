@@ -14,25 +14,25 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448543"
 ---
-# <a name="diagnostics-symbol-store-enumerations"></a><span data-ttu-id="d72f4-102">Wyliczenia magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="d72f4-102">Diagnostics Symbol Store Enumerations</span></span>
-<span data-ttu-id="d72f4-103">This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.</span><span class="sxs-lookup"><span data-stu-id="d72f4-103">This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.</span></span>  
+# <a name="diagnostics-symbol-store-enumerations"></a><span data-ttu-id="be996-102">Wyliczenia magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="be996-102">Diagnostics Symbol Store Enumerations</span></span>
+<span data-ttu-id="be996-103">W tym temacie opisano niezarządzane wyliczenia, które są używane przez interfejs API magazynu symboli diagnostyki.</span><span class="sxs-lookup"><span data-stu-id="be996-103">This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d72f4-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="d72f4-104">In This Section</span></span>  
- [<span data-ttu-id="d72f4-105">CorSymAddrKind, wyliczenie</span><span class="sxs-lookup"><span data-stu-id="d72f4-105">CorSymAddrKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
- <span data-ttu-id="d72f4-106">Indicates the type of memory address.</span><span class="sxs-lookup"><span data-stu-id="d72f4-106">Indicates the type of memory address.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="be996-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="be996-104">In This Section</span></span>  
+ [<span data-ttu-id="be996-105">CorSymAddrKind, wyliczenie</span><span class="sxs-lookup"><span data-stu-id="be996-105">CorSymAddrKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
+ <span data-ttu-id="be996-106">Wskazuje typ adresu pamięci.</span><span class="sxs-lookup"><span data-stu-id="be996-106">Indicates the type of memory address.</span></span>  
   
- [<span data-ttu-id="d72f4-107">CorSymSearchPolicyAttributes, wyliczenie</span><span class="sxs-lookup"><span data-stu-id="d72f4-107">CorSymSearchPolicyAttributes Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- <span data-ttu-id="d72f4-108">Specifies the policy to be used when doing a search for a symbol reader.</span><span class="sxs-lookup"><span data-stu-id="d72f4-108">Specifies the policy to be used when doing a search for a symbol reader.</span></span>  
+ [<span data-ttu-id="be996-107">CorSymSearchPolicyAttributes, wyliczenie</span><span class="sxs-lookup"><span data-stu-id="be996-107">CorSymSearchPolicyAttributes Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
+ <span data-ttu-id="be996-108">Określa zasady, które mają być używane podczas wyszukiwania czytnika symboli.</span><span class="sxs-lookup"><span data-stu-id="be996-108">Specifies the policy to be used when doing a search for a symbol reader.</span></span>  
   
- [<span data-ttu-id="d72f4-109">CorSymVarFlag, wyliczenie</span><span class="sxs-lookup"><span data-stu-id="d72f4-109">CorSymVarFlag Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
- <span data-ttu-id="d72f4-110">Indicates whether a variable is compiler-generated.</span><span class="sxs-lookup"><span data-stu-id="d72f4-110">Indicates whether a variable is compiler-generated.</span></span>  
+ [<span data-ttu-id="be996-109">CorSymVarFlag, wyliczenie</span><span class="sxs-lookup"><span data-stu-id="be996-109">CorSymVarFlag Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
+ <span data-ttu-id="be996-110">Wskazuje, czy zmienna jest generowana przez kompilator.</span><span class="sxs-lookup"><span data-stu-id="be996-110">Indicates whether a variable is compiler-generated.</span></span>  
   
- [<span data-ttu-id="d72f4-111">NOTIFY_FILTER, wyliczenie</span><span class="sxs-lookup"><span data-stu-id="d72f4-111">NOTIFY_FILTER Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
- <span data-ttu-id="d72f4-112">Identifies callbacks for debugger functions.</span><span class="sxs-lookup"><span data-stu-id="d72f4-112">Identifies callbacks for debugger functions.</span></span>  
+ [<span data-ttu-id="be996-111">NOTIFY_FILTER, wyliczenie</span><span class="sxs-lookup"><span data-stu-id="be996-111">NOTIFY_FILTER Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
+ <span data-ttu-id="be996-112">Identyfikuje wywołania zwrotne dla funkcji debugera.</span><span class="sxs-lookup"><span data-stu-id="be996-112">Identifies callbacks for debugger functions.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="d72f4-113">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="d72f4-113">Related Sections</span></span>  
- [<span data-ttu-id="d72f4-114">Interfejsy magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="d72f4-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+## <a name="related-sections"></a><span data-ttu-id="be996-113">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="be996-113">Related Sections</span></span>  
+ [<span data-ttu-id="be996-114">Interfejsy magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="be996-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
   
- [<span data-ttu-id="d72f4-115">Struktury magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="d72f4-115">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
+ [<span data-ttu-id="be996-115">Struktury magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="be996-115">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
   
- [<span data-ttu-id="d72f4-116">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="d72f4-116">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [<span data-ttu-id="be996-116">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="be996-116">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

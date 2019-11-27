@@ -21,10 +21,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426047"
 ---
-# <a name="getfiledef-method"></a><span data-ttu-id="7e798-102">GetFileDef — Metoda</span><span class="sxs-lookup"><span data-stu-id="7e798-102">GetFileDef Method</span></span>
-<span data-ttu-id="7e798-103">Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).</span><span class="sxs-lookup"><span data-stu-id="7e798-103">Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).</span></span>  
+# <a name="getfiledef-method"></a><span data-ttu-id="32dc2-102">GetFileDef — Metoda</span><span class="sxs-lookup"><span data-stu-id="32dc2-102">GetFileDef Method</span></span>
+<span data-ttu-id="32dc2-103">Pobiera rzeczywisty token FileDef używany w metadanych (w przeciwieństwie do tokenu przypisanego przez ALink).</span><span class="sxs-lookup"><span data-stu-id="32dc2-103">Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e798-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="7e798-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="32dc2-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="32dc2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFileDef(  
@@ -34,24 +34,24 @@ HRESULT GetFileDef(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7e798-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="7e798-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="32dc2-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="32dc2-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="7e798-106">ID of the assembly.</span><span class="sxs-lookup"><span data-stu-id="7e798-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="32dc2-106">Identyfikator zestawu.</span><span class="sxs-lookup"><span data-stu-id="32dc2-106">ID of the assembly.</span></span>  
   
  `TargetFile`  
- <span data-ttu-id="7e798-107">Token of the added file as retrieved from AddFile Method or AddImport Method.</span><span class="sxs-lookup"><span data-stu-id="7e798-107">Token of the added file as retrieved from AddFile Method or AddImport Method.</span></span>  
+ <span data-ttu-id="32dc2-107">Token dodanego pliku, który został pobrany z metody AddFile lub addimport.</span><span class="sxs-lookup"><span data-stu-id="32dc2-107">Token of the added file as retrieved from AddFile Method or AddImport Method.</span></span>  
   
  `pScope`  
- <span data-ttu-id="7e798-108">Receives the FileDef token.</span><span class="sxs-lookup"><span data-stu-id="7e798-108">Receives the FileDef token.</span></span>  
+ <span data-ttu-id="32dc2-108">Odbiera token FileDef.</span><span class="sxs-lookup"><span data-stu-id="32dc2-108">Receives the FileDef token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7e798-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="7e798-109">Return Value</span></span>  
- <span data-ttu-id="7e798-110">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="7e798-110">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="32dc2-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="32dc2-109">Return Value</span></span>  
+ <span data-ttu-id="32dc2-110">Zwraca S_OK, jeśli metoda zakończy się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="32dc2-110">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7e798-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7e798-111">Requirements</span></span>  
- <span data-ttu-id="7e798-112">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="7e798-112">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="32dc2-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="32dc2-111">Requirements</span></span>  
+ <span data-ttu-id="32dc2-112">Wymaga Alink. h</span><span class="sxs-lookup"><span data-stu-id="32dc2-112">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7e798-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7e798-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32dc2-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="32dc2-113">See also</span></span>
 
-- [<span data-ttu-id="7e798-114">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="7e798-114">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="7e798-115">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="7e798-115">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="7e798-116">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="7e798-116">ALink API</span></span>](index.md)
+- [<span data-ttu-id="32dc2-114">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="32dc2-114">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="32dc2-115">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="32dc2-115">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="32dc2-116">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="32dc2-116">ALink API</span></span>](index.md)

@@ -21,10 +21,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430686"
 ---
-# <a name="getwin32resblob-method"></a><span data-ttu-id="a256c-102">GetWin32ResBlob — Metoda</span><span class="sxs-lookup"><span data-stu-id="a256c-102">GetWin32ResBlob Method</span></span>
-<span data-ttu-id="a256c-103">Retrieves Win32 resource blob.</span><span class="sxs-lookup"><span data-stu-id="a256c-103">Retrieves Win32 resource blob.</span></span> <span data-ttu-id="a256c-104">Call this method after setting assembly options.</span><span class="sxs-lookup"><span data-stu-id="a256c-104">Call this method after setting assembly options.</span></span>  
+# <a name="getwin32resblob-method"></a><span data-ttu-id="60146-102">GetWin32ResBlob — Metoda</span><span class="sxs-lookup"><span data-stu-id="60146-102">GetWin32ResBlob Method</span></span>
+<span data-ttu-id="60146-103">Pobiera obiekt BLOB zasobów Win32.</span><span class="sxs-lookup"><span data-stu-id="60146-103">Retrieves Win32 resource blob.</span></span> <span data-ttu-id="60146-104">Wywołaj tę metodę po ustawieniu opcji zestawu.</span><span class="sxs-lookup"><span data-stu-id="60146-104">Call this method after setting assembly options.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a256c-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="a256c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="60146-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="60146-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetWin32ResBlob(  
@@ -37,33 +37,33 @@ HRESULT GetWin32ResBlob(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a256c-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="a256c-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="60146-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="60146-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="a256c-107">ID of the assembly.</span><span class="sxs-lookup"><span data-stu-id="a256c-107">ID of the assembly.</span></span>  
+ <span data-ttu-id="60146-107">Identyfikator zestawu.</span><span class="sxs-lookup"><span data-stu-id="60146-107">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="a256c-108">File token used to retrieve the filename to be used when constructing the Win32 Version resource</span><span class="sxs-lookup"><span data-stu-id="a256c-108">File token used to retrieve the filename to be used when constructing the Win32 Version resource</span></span>  
+ <span data-ttu-id="60146-108">Token pliku używany do pobierania nazwy pliku do użycia podczas konstruowania zasobu wersji Win32</span><span class="sxs-lookup"><span data-stu-id="60146-108">File token used to retrieve the filename to be used when constructing the Win32 Version resource</span></span>  
   
  `fDll`  
- <span data-ttu-id="a256c-109">TRUE if file is a DLL, false for an EXE.</span><span class="sxs-lookup"><span data-stu-id="a256c-109">TRUE if file is a DLL, false for an EXE.</span></span>  
+ <span data-ttu-id="60146-109">PRAWDA, jeśli plik jest biblioteką DLL, wartość false dla pliku EXE.</span><span class="sxs-lookup"><span data-stu-id="60146-109">TRUE if file is a DLL, false for an EXE.</span></span>  
   
  `pszIconFile`  
- <span data-ttu-id="a256c-110">Optional icon to insert into the resource blob.</span><span class="sxs-lookup"><span data-stu-id="a256c-110">Optional icon to insert into the resource blob.</span></span>  
+ <span data-ttu-id="60146-110">Opcjonalna ikona do wstawienia do obiektu BLOB zasobu.</span><span class="sxs-lookup"><span data-stu-id="60146-110">Optional icon to insert into the resource blob.</span></span>  
   
  `ppResBlob`  
- <span data-ttu-id="a256c-111">Receives the resource blob.</span><span class="sxs-lookup"><span data-stu-id="a256c-111">Receives the resource blob.</span></span>  
+ <span data-ttu-id="60146-111">Odbiera obiekt BLOB zasobu.</span><span class="sxs-lookup"><span data-stu-id="60146-111">Receives the resource blob.</span></span>  
   
  `pcbResBlob`  
- <span data-ttu-id="a256c-112">Receives the size of the blob.</span><span class="sxs-lookup"><span data-stu-id="a256c-112">Receives the size of the blob.</span></span>  
+ <span data-ttu-id="60146-112">Odbiera rozmiar obiektu BLOB.</span><span class="sxs-lookup"><span data-stu-id="60146-112">Receives the size of the blob.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a256c-113">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="a256c-113">Return Value</span></span>  
- <span data-ttu-id="a256c-114">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="a256c-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="60146-113">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="60146-113">Return Value</span></span>  
+ <span data-ttu-id="60146-114">Zwraca S_OK, jeśli metoda zakończy się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="60146-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a256c-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a256c-115">Requirements</span></span>  
- <span data-ttu-id="a256c-116">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="a256c-116">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="60146-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="60146-115">Requirements</span></span>  
+ <span data-ttu-id="60146-116">Wymaga Alink. h</span><span class="sxs-lookup"><span data-stu-id="60146-116">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a256c-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a256c-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="60146-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="60146-117">See also</span></span>
 
-- [<span data-ttu-id="a256c-118">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="a256c-118">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="a256c-119">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="a256c-119">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="a256c-120">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="a256c-120">ALink API</span></span>](index.md)
+- [<span data-ttu-id="60146-118">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="60146-118">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="60146-119">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="60146-119">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="60146-120">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="60146-120">ALink API</span></span>](index.md)

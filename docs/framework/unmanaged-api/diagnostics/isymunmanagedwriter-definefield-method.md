@@ -22,10 +22,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428033"
 ---
-# <a name="isymunmanagedwriterdefinefield-method"></a><span data-ttu-id="db9b6-102">ISymUnmanagedWriter::DefineField — Metoda</span><span class="sxs-lookup"><span data-stu-id="db9b6-102">ISymUnmanagedWriter::DefineField Method</span></span>
-<span data-ttu-id="db9b6-103">Defines a single variable that is not within a method.</span><span class="sxs-lookup"><span data-stu-id="db9b6-103">Defines a single variable that is not within a method.</span></span> <span data-ttu-id="db9b6-104">This method is used for certain fields in classes, bit fields, and so on.</span><span class="sxs-lookup"><span data-stu-id="db9b6-104">This method is used for certain fields in classes, bit fields, and so on.</span></span>  
+# <a name="isymunmanagedwriterdefinefield-method"></a><span data-ttu-id="df557-102">ISymUnmanagedWriter::DefineField — Metoda</span><span class="sxs-lookup"><span data-stu-id="df557-102">ISymUnmanagedWriter::DefineField Method</span></span>
+<span data-ttu-id="df557-103">Definiuje pojedynczą zmienną, która nie znajduje się w metodzie.</span><span class="sxs-lookup"><span data-stu-id="df557-103">Defines a single variable that is not within a method.</span></span> <span data-ttu-id="df557-104">Ta metoda jest używana w przypadku niektórych pól klas, pól bitowych i tak dalej.</span><span class="sxs-lookup"><span data-stu-id="df557-104">This method is used for certain fields in classes, bit fields, and so on.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db9b6-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="db9b6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="df557-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="df557-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineField(  
@@ -40,40 +40,40 @@ HRESULT DefineField(
     [in] ULONG32      addr3);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="db9b6-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="db9b6-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="df557-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="df557-106">Parameters</span></span>  
  `parent`  
- <span data-ttu-id="db9b6-107">[in] The metadata type or method token.</span><span class="sxs-lookup"><span data-stu-id="db9b6-107">[in] The metadata type or method token.</span></span>  
+ <span data-ttu-id="df557-107">podczas Typ metadanych lub token metody.</span><span class="sxs-lookup"><span data-stu-id="df557-107">[in] The metadata type or method token.</span></span>  
   
  `name`  
- <span data-ttu-id="db9b6-108">[in] The field name.</span><span class="sxs-lookup"><span data-stu-id="db9b6-108">[in] The field name.</span></span>  
+ <span data-ttu-id="df557-108">podczas Nazwa pola.</span><span class="sxs-lookup"><span data-stu-id="df557-108">[in] The field name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="db9b6-109">[in] The field attributes.</span><span class="sxs-lookup"><span data-stu-id="db9b6-109">[in] The field attributes.</span></span>  
+ <span data-ttu-id="df557-109">podczas Atrybuty pola.</span><span class="sxs-lookup"><span data-stu-id="df557-109">[in] The field attributes.</span></span>  
   
  `cSig`  
- <span data-ttu-id="db9b6-110">[in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.</span><span class="sxs-lookup"><span data-stu-id="db9b6-110">[in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.</span></span>  
+ <span data-ttu-id="df557-110">podczas `ULONG32`, który jest rozmiarem (w znakach) bufora wymaganego do zawierania podpisu pola.</span><span class="sxs-lookup"><span data-stu-id="df557-110">[in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.</span></span>  
   
  `signature`  
- <span data-ttu-id="db9b6-111">[in] The array of field signatures.</span><span class="sxs-lookup"><span data-stu-id="db9b6-111">[in] The array of field signatures.</span></span>  
+ <span data-ttu-id="df557-111">podczas Tablica sygnatur pól.</span><span class="sxs-lookup"><span data-stu-id="df557-111">[in] The array of field signatures.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="db9b6-112">[in] The address type.</span><span class="sxs-lookup"><span data-stu-id="db9b6-112">[in] The address type.</span></span>  
+ <span data-ttu-id="df557-112">podczas Typ adresu.</span><span class="sxs-lookup"><span data-stu-id="df557-112">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="db9b6-113">[in] The first address for the field specification.</span><span class="sxs-lookup"><span data-stu-id="db9b6-113">[in] The first address for the field specification.</span></span>  
+ <span data-ttu-id="df557-113">podczas Pierwszy adres dla specyfikacji pola.</span><span class="sxs-lookup"><span data-stu-id="df557-113">[in] The first address for the field specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="db9b6-114">[in] The second address for the field specification.</span><span class="sxs-lookup"><span data-stu-id="db9b6-114">[in] The second address for the field specification.</span></span>  
+ <span data-ttu-id="df557-114">podczas Drugi adres dla specyfikacji pola.</span><span class="sxs-lookup"><span data-stu-id="df557-114">[in] The second address for the field specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="db9b6-115">[in] The third address for the field specification.</span><span class="sxs-lookup"><span data-stu-id="db9b6-115">[in] The third address for the field specification.</span></span>  
+ <span data-ttu-id="df557-115">podczas Trzeci adres dla specyfikacji pola.</span><span class="sxs-lookup"><span data-stu-id="df557-115">[in] The third address for the field specification.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="db9b6-116">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="db9b6-116">Return Value</span></span>  
- <span data-ttu-id="db9b6-117">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="db9b6-117">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="df557-116">Wartość zwrócona</span><span class="sxs-lookup"><span data-stu-id="df557-116">Return Value</span></span>  
+ <span data-ttu-id="df557-117">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="df557-117">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="db9b6-118">Wymagania</span><span class="sxs-lookup"><span data-stu-id="db9b6-118">Requirements</span></span>  
- <span data-ttu-id="db9b6-119">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="db9b6-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="df557-118">Wymagania</span><span class="sxs-lookup"><span data-stu-id="df557-118">Requirements</span></span>  
+ <span data-ttu-id="df557-119">**Nagłówek:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="df557-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db9b6-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="db9b6-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="df557-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="df557-120">See also</span></span>
 
-- [<span data-ttu-id="db9b6-121">ISymUnmanagedWriter, interfejs</span><span class="sxs-lookup"><span data-stu-id="db9b6-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="df557-121">ISymUnmanagedWriter, interfejs</span><span class="sxs-lookup"><span data-stu-id="df557-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

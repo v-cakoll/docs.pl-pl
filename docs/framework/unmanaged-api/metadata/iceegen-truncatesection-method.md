@@ -22,12 +22,12 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426133"
 ---
-# <a name="iceegentruncatesection-method"></a><span data-ttu-id="21d42-102">ICeeGen::TruncateSection — Metoda</span><span class="sxs-lookup"><span data-stu-id="21d42-102">ICeeGen::TruncateSection Method</span></span>
-<span data-ttu-id="21d42-103">Truncates the specified code section by the specified length.</span><span class="sxs-lookup"><span data-stu-id="21d42-103">Truncates the specified code section by the specified length.</span></span>  
+# <a name="iceegentruncatesection-method"></a><span data-ttu-id="f0fd9-102">ICeeGen::TruncateSection — Metoda</span><span class="sxs-lookup"><span data-stu-id="f0fd9-102">ICeeGen::TruncateSection Method</span></span>
+<span data-ttu-id="f0fd9-103">Obcina określoną sekcję kodu o określoną długość.</span><span class="sxs-lookup"><span data-stu-id="f0fd9-103">Truncates the specified code section by the specified length.</span></span>  
   
- <span data-ttu-id="21d42-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="21d42-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="f0fd9-104">Ta metoda jest przestarzała i nie powinna być używana.</span><span class="sxs-lookup"><span data-stu-id="f0fd9-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="21d42-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="21d42-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f0fd9-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="f0fd9-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT TruncateSection (  
@@ -36,25 +36,25 @@ HRESULT TruncateSection (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="21d42-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="21d42-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f0fd9-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="f0fd9-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="21d42-107">[in] The section to truncate.</span><span class="sxs-lookup"><span data-stu-id="21d42-107">[in] The section to truncate.</span></span>  
+ <span data-ttu-id="f0fd9-107">podczas Sekcja do obcięcia.</span><span class="sxs-lookup"><span data-stu-id="f0fd9-107">[in] The section to truncate.</span></span>  
   
  `len`  
- <span data-ttu-id="21d42-108">[in] The length, in bytes, by which to truncate the section.</span><span class="sxs-lookup"><span data-stu-id="21d42-108">[in] The length, in bytes, by which to truncate the section.</span></span>  
+ <span data-ttu-id="f0fd9-108">podczas Długość w bajtach, przez którą ma zostać obcięta sekcja.</span><span class="sxs-lookup"><span data-stu-id="f0fd9-108">[in] The length, in bytes, by which to truncate the section.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="21d42-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="21d42-109">Remarks</span></span>  
- <span data-ttu-id="21d42-110">Call `TruncateSection` only if you have special section requirements that are not handled by other methods.</span><span class="sxs-lookup"><span data-stu-id="21d42-110">Call `TruncateSection` only if you have special section requirements that are not handled by other methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f0fd9-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f0fd9-109">Remarks</span></span>  
+ <span data-ttu-id="f0fd9-110">Wywołaj `TruncateSection` tylko wtedy, gdy istnieją specjalne wymagania sekcji, które nie są obsługiwane przez inne metody.</span><span class="sxs-lookup"><span data-stu-id="f0fd9-110">Call `TruncateSection` only if you have special section requirements that are not handled by other methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="21d42-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="21d42-111">Requirements</span></span>  
- <span data-ttu-id="21d42-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="21d42-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f0fd9-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f0fd9-111">Requirements</span></span>  
+ <span data-ttu-id="f0fd9-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f0fd9-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="21d42-113">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="21d42-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f0fd9-113">**Nagłówek:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="f0fd9-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="21d42-114">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="21d42-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f0fd9-114">**Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="f0fd9-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="21d42-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="21d42-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f0fd9-115">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f0fd9-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="21d42-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="21d42-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0fd9-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f0fd9-116">See also</span></span>
 
-- [<span data-ttu-id="21d42-117">ICeeGen, interfejs</span><span class="sxs-lookup"><span data-stu-id="21d42-117">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="f0fd9-117">ICeeGen, interfejs</span><span class="sxs-lookup"><span data-stu-id="f0fd9-117">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

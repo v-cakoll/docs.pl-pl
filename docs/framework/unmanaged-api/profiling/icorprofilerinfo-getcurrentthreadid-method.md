@@ -22,32 +22,32 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450383"
 ---
-# <a name="icorprofilerinfogetcurrentthreadid-method"></a><span data-ttu-id="fd9d1-102">ICorProfilerInfo::GetCurrentThreadID — Metoda</span><span class="sxs-lookup"><span data-stu-id="fd9d1-102">ICorProfilerInfo::GetCurrentThreadID Method</span></span>
-<span data-ttu-id="fd9d1-103">Gets the ID of the current thread, if it is a managed thread.</span><span class="sxs-lookup"><span data-stu-id="fd9d1-103">Gets the ID of the current thread, if it is a managed thread.</span></span>  
+# <a name="icorprofilerinfogetcurrentthreadid-method"></a><span data-ttu-id="229ae-102">ICorProfilerInfo::GetCurrentThreadID — Metoda</span><span class="sxs-lookup"><span data-stu-id="229ae-102">ICorProfilerInfo::GetCurrentThreadID Method</span></span>
+<span data-ttu-id="229ae-103">Pobiera identyfikator bieżącego wątku, jeśli jest to wątek zarządzany.</span><span class="sxs-lookup"><span data-stu-id="229ae-103">Gets the ID of the current thread, if it is a managed thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fd9d1-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="fd9d1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="229ae-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="229ae-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCurrentThreadID(  
     [out] ThreadID *pThreadId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fd9d1-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="fd9d1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="229ae-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="229ae-105">Parameters</span></span>  
  `pThreadId`  
- <span data-ttu-id="fd9d1-106">[out] A pointer to the returned ID of the managed thread.</span><span class="sxs-lookup"><span data-stu-id="fd9d1-106">[out] A pointer to the returned ID of the managed thread.</span></span>  
+ <span data-ttu-id="229ae-106">określoną Wskaźnik do zwróconego identyfikatora wątku zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="229ae-106">[out] A pointer to the returned ID of the managed thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fd9d1-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="fd9d1-107">Remarks</span></span>  
- <span data-ttu-id="fd9d1-108">If the current thread is an internal runtime thread or other unmanaged thread, `GetCurrentThreadID` returns CORPROF_E_NOT_MANAGED_THREAD as the HRESULT, and the returned value of the `pThreadId` parameter will be null.</span><span class="sxs-lookup"><span data-stu-id="fd9d1-108">If the current thread is an internal runtime thread or other unmanaged thread, `GetCurrentThreadID` returns CORPROF_E_NOT_MANAGED_THREAD as the HRESULT, and the returned value of the `pThreadId` parameter will be null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="229ae-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="229ae-107">Remarks</span></span>  
+ <span data-ttu-id="229ae-108">Jeśli bieżący wątek jest wewnętrznym wątkiem środowiska uruchomieniowego lub innego niezarządzanego wątku, `GetCurrentThreadID` zwraca CORPROF_E_NOT_MANAGED_THREAD jako wynik HRESULT, a zwrócona wartość parametru `pThreadId` będzie równa null.</span><span class="sxs-lookup"><span data-stu-id="229ae-108">If the current thread is an internal runtime thread or other unmanaged thread, `GetCurrentThreadID` returns CORPROF_E_NOT_MANAGED_THREAD as the HRESULT, and the returned value of the `pThreadId` parameter will be null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fd9d1-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="fd9d1-109">Requirements</span></span>  
- <span data-ttu-id="fd9d1-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fd9d1-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="229ae-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="229ae-109">Requirements</span></span>  
+ <span data-ttu-id="229ae-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="229ae-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fd9d1-111">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="fd9d1-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="229ae-111">**Nagłówek:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="229ae-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="fd9d1-112">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fd9d1-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="229ae-112">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="229ae-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fd9d1-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fd9d1-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="229ae-113">**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="229ae-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fd9d1-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fd9d1-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="229ae-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="229ae-114">See also</span></span>
 
-- [<span data-ttu-id="fd9d1-115">ICorProfilerInfo, interfejs</span><span class="sxs-lookup"><span data-stu-id="fd9d1-115">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="229ae-115">ICorProfilerInfo, interfejs</span><span class="sxs-lookup"><span data-stu-id="229ae-115">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

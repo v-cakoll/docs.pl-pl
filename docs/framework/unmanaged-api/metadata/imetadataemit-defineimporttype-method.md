@@ -22,10 +22,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431853"
 ---
-# <a name="imetadataemitdefineimporttype-method"></a><span data-ttu-id="77a0e-102">IMetaDataEmit::DefineImportType — Metoda</span><span class="sxs-lookup"><span data-stu-id="77a0e-102">IMetaDataEmit::DefineImportType Method</span></span>
-<span data-ttu-id="77a0e-103">Creates a reference to the specified type that is defined outside the current scope, and defines a token for that reference.</span><span class="sxs-lookup"><span data-stu-id="77a0e-103">Creates a reference to the specified type that is defined outside the current scope, and defines a token for that reference.</span></span>  
+# <a name="imetadataemitdefineimporttype-method"></a><span data-ttu-id="05389-102">IMetaDataEmit::DefineImportType — Metoda</span><span class="sxs-lookup"><span data-stu-id="05389-102">IMetaDataEmit::DefineImportType Method</span></span>
+<span data-ttu-id="05389-103">Tworzy odwołanie do określonego typu, który jest zdefiniowany poza bieżącym zakresem, i definiuje token dla tego odwołania.</span><span class="sxs-lookup"><span data-stu-id="05389-103">Creates a reference to the specified type that is defined outside the current scope, and defines a token for that reference.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="77a0e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="77a0e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="05389-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="05389-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineImportType (   
@@ -39,41 +39,41 @@ HRESULT DefineImportType (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="77a0e-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="77a0e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="05389-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="05389-105">Parameters</span></span>  
  `pAssemImport`  
- <span data-ttu-id="77a0e-106">[in] An [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface that represents the assembly from which the target type is imported.</span><span class="sxs-lookup"><span data-stu-id="77a0e-106">[in] An [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface that represents the assembly from which the target type is imported.</span></span>  
+ <span data-ttu-id="05389-106">podczas Interfejs [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) , który reprezentuje zestaw, z którego zaimportowano typ docelowy.</span><span class="sxs-lookup"><span data-stu-id="05389-106">[in] An [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface that represents the assembly from which the target type is imported.</span></span>  
   
  `pbHashValue`  
- <span data-ttu-id="77a0e-107">[in] An array that contains the hash for the assembly specified by `pAssemImport`.</span><span class="sxs-lookup"><span data-stu-id="77a0e-107">[in] An array that contains the hash for the assembly specified by `pAssemImport`.</span></span>  
+ <span data-ttu-id="05389-107">podczas Tablica, która zawiera skrót dla zestawu określonego przez `pAssemImport`.</span><span class="sxs-lookup"><span data-stu-id="05389-107">[in] An array that contains the hash for the assembly specified by `pAssemImport`.</span></span>  
   
  `cbHashValue`  
- <span data-ttu-id="77a0e-108">[in] The number of bytes in the `pbHashValue` array.</span><span class="sxs-lookup"><span data-stu-id="77a0e-108">[in] The number of bytes in the `pbHashValue` array.</span></span>  
+ <span data-ttu-id="05389-108">podczas Liczba bajtów w tablicy `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="05389-108">[in] The number of bytes in the `pbHashValue` array.</span></span>  
   
  `pImport`  
- <span data-ttu-id="77a0e-109">[in] An [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface that represents the metadata scope from which the target type is imported.</span><span class="sxs-lookup"><span data-stu-id="77a0e-109">[in] An [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface that represents the metadata scope from which the target type is imported.</span></span>  
+ <span data-ttu-id="05389-109">podczas Interfejs [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) reprezentujący zakres metadanych, z którego jest importowany typ docelowy.</span><span class="sxs-lookup"><span data-stu-id="05389-109">[in] An [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface that represents the metadata scope from which the target type is imported.</span></span>  
   
  `tdImport`  
- <span data-ttu-id="77a0e-110">[in] An `mdTypeDef` token that specifies the target type.</span><span class="sxs-lookup"><span data-stu-id="77a0e-110">[in] An `mdTypeDef` token that specifies the target type.</span></span>  
+ <span data-ttu-id="05389-110">podczas Token `mdTypeDef`, który określa typ docelowy.</span><span class="sxs-lookup"><span data-stu-id="05389-110">[in] An `mdTypeDef` token that specifies the target type.</span></span>  
   
  `pAssemEmit`  
- <span data-ttu-id="77a0e-111">[in] An [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) interface that represents the assembly into which the target type is imported.</span><span class="sxs-lookup"><span data-stu-id="77a0e-111">[in] An [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) interface that represents the assembly into which the target type is imported.</span></span>  
+ <span data-ttu-id="05389-111">podczas Interfejs [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) , który reprezentuje zestaw, do którego zaimportowany jest typ docelowy.</span><span class="sxs-lookup"><span data-stu-id="05389-111">[in] An [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) interface that represents the assembly into which the target type is imported.</span></span>  
   
  `ptr`  
- <span data-ttu-id="77a0e-112">[out] The `mdTypeRef` token that is defined in the current scope for the type reference.</span><span class="sxs-lookup"><span data-stu-id="77a0e-112">[out] The `mdTypeRef` token that is defined in the current scope for the type reference.</span></span>  
+ <span data-ttu-id="05389-112">określoną Token `mdTypeRef`, który jest zdefiniowany w bieżącym zakresie dla odwołania do typu.</span><span class="sxs-lookup"><span data-stu-id="05389-112">[out] The `mdTypeRef` token that is defined in the current scope for the type reference.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="77a0e-113">Uwagi</span><span class="sxs-lookup"><span data-stu-id="77a0e-113">Remarks</span></span>  
- <span data-ttu-id="77a0e-114">Prior to calling the [IMetaDataEmit::DefineImportMember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) method, you can use the `DefineImportType` method to create a type reference, in the current scope, for the member's parent class or parent interface.</span><span class="sxs-lookup"><span data-stu-id="77a0e-114">Prior to calling the [IMetaDataEmit::DefineImportMember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) method, you can use the `DefineImportType` method to create a type reference, in the current scope, for the member's parent class or parent interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="05389-113">Uwagi</span><span class="sxs-lookup"><span data-stu-id="05389-113">Remarks</span></span>  
+ <span data-ttu-id="05389-114">Przed wywołaniem metody [IMetaDataEmit::D efineimportmember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) , można użyć metody `DefineImportType`, aby utworzyć odwołanie do typu w bieżącym zakresie dla klasy nadrzędnej lub interfejsu nadrzędnego elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="05389-114">Prior to calling the [IMetaDataEmit::DefineImportMember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) method, you can use the `DefineImportType` method to create a type reference, in the current scope, for the member's parent class or parent interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="77a0e-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="77a0e-115">Requirements</span></span>  
- <span data-ttu-id="77a0e-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="77a0e-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="05389-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="05389-115">Requirements</span></span>  
+ <span data-ttu-id="05389-116">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05389-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="77a0e-117">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="77a0e-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="05389-117">**Nagłówek:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="05389-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="77a0e-118">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="77a0e-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="05389-118">**Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="05389-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="77a0e-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="77a0e-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="05389-119">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05389-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="77a0e-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="77a0e-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="05389-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="05389-120">See also</span></span>
 
-- [<span data-ttu-id="77a0e-121">IMetaDataEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="77a0e-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="77a0e-122">IMetaDataEmit2, interfejs</span><span class="sxs-lookup"><span data-stu-id="77a0e-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="05389-121">IMetaDataEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="05389-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="05389-122">IMetaDataEmit2, interfejs</span><span class="sxs-lookup"><span data-stu-id="05389-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

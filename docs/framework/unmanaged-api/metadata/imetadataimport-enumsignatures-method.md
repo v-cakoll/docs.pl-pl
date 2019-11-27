@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450008"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>IMetaDataImport::EnumSignatures — Metoda
-Enumerates Signature tokens representing stand-alone signatures in the current scope.  
+Wylicza tokeny podpisu reprezentujące podpisy autonomiczne w bieżącym zakresie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,35 +38,35 @@ HRESULT EnumSignatures (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in. out] Wskaźnik do modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
   
  `rSignatures`  
- [out] The array used to store the Signature tokens.  
+ określoną Tablica służąca do przechowywania tokenów sygnatur.  
   
  `cMax`  
- [in] The maximum size of the `rSignatures` array.  
+ podczas Maksymalny rozmiar tablicy `rSignatures`.  
   
  `pcSignatures`  
- [out] The number of Signature tokens returned in `rSignatures`.  
+ określoną Liczba tokenów sygnatury zwróconych w `rSignatures`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcSignatures` is zero.|  
+|`S_OK`|`EnumSignatures` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak tokenów do wyliczenia. W takim przypadku `pcSignatures` wynosi zero.|  
   
 ## <a name="remarks"></a>Uwagi  
- The Signature tokens are created by the [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) method.  
+ Tokeny podpisu są tworzone przez metodę [IMetaDataEmit:: GetTokenFromSig —](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

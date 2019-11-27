@@ -12,23 +12,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350736"
 ---
 # <a name="myapplication-object"></a>My.Application — Obiekt
-Provides properties, methods, and events related to the current application.  
+Zawiera właściwości, metody i zdarzenia związane z bieżącą aplikacją.  
   
 ## <a name="remarks"></a>Uwagi  
- For information about the methods and properties of the `My.Application` object, see the following resources:  
+ Informacje o metodach i właściwościach obiektu `My.Application` można znaleźć w następujących zasobach:  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> for members that are available in all projects.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> dla elementów członkowskich, które są dostępne we wszystkich projektach.  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> for members that are available in Windows Forms applications.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> dla elementów członkowskich, które są dostępne w aplikacjach Windows Forms.  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> for members that are available in console applications.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> dla elementów członkowskich, które są dostępne w aplikacjach konsolowych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** <xref:Microsoft.VisualBasic.ApplicationServices>  
+ **Przestrzeń nazw:** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (the base class <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> provides members available in console applications, and its base class <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> provides the members that are available in all projects)  
+ **Klasa:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (klasa bazowa <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> udostępnia składowe dostępne w aplikacjach konsolowych, a jej klasy bazowej <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> udostępniają elementy członkowskie, które są dostępne we wszystkich projektach)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -9,21 +9,21 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353394"
 ---
-# <a name="generation-operations-visual-basic"></a>Generation Operations (Visual Basic)
-Generation refers to creating a new sequence of values.  
+# <a name="generation-operations-visual-basic"></a>Operacje generacji (Visual Basic)
+Generacja odwołuje się do tworzenia nowej sekwencji wartości.  
   
- The standard query operator methods that perform generation are listed in the following section.  
+ W poniższej sekcji przedstawiono standardowe metody operatorów zapytań, które wykonują generowanie.  
   
 ## <a name="methods"></a>Metody  
   
-|Method Name|Opis|Visual Basic Query Expression Syntax|Więcej informacji|  
+|Nazwa metody|Opis|Składnia wyrażenia zapytania Visual Basic|Więcej informacji|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|DefaultIfEmpty|Replaces an empty collection with a default valued singleton collection.|Nie dotyczy.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
-|Pusty|Returns an empty collection.|Nie dotyczy.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  
-|Zakres|Generates a collection that contains a sequence of numbers.|Nie dotyczy.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>|  
-|Repeat|Generates a collection that contains one repeated value.|Nie dotyczy.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=nameWithType>|  
+|DefaultIfEmpty|Zamienia pustą kolekcję z domyślną kolekcją pojedynczą.|Nie dotyczy.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
+|Puste|Zwraca pustą kolekcję.|Nie dotyczy.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  
+|Zakres|Generuje kolekcję zawierającą sekwencję liczb.|Nie dotyczy.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>|  
+|Powtarzanie|Generuje kolekcję, która zawiera jedną powtórzoną wartość.|Nie dotyczy.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Standardowe operatory zapytań — Omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

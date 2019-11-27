@@ -9,27 +9,27 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352021"
 ---
-# <a name="linq-to-xml-axes-visual-basic"></a>LINQ to XML Axes (Visual Basic)
-After you have created an XML tree or loaded an XML document into an XML tree, you can query it to find elements and attributes and retrieve their values.  
+# <a name="linq-to-xml-axes-visual-basic"></a>Osie LINQ to XML (Visual Basic)
+Po utworzeniu drzewa XML lub załadowaniu dokumentu XML do drzewa XML można wykonać zapytania do niego, aby znaleźć elementy i atrybuty i pobrać ich wartości.  
   
- Before you can write any queries, you must understand the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axes. There are two kinds of axis methods: First, there are the methods that you call on a single <xref:System.Xml.Linq.XElement> object, <xref:System.Xml.Linq.XDocument> object, or <xref:System.Xml.Linq.XNode> object. These methods operate on a single object and return a collection of <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute>, or <xref:System.Xml.Linq.XNode> objects. Second, there are extension methods that operate on collections and return collections. The extension methods enumerate the source collection, call the appropriate axis method on each item in the collection, and concatenate the results.  
+ Przed zapisaniem jakichkolwiek zapytań należy zrozumieć [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] osi. Istnieją dwa rodzaje metod osi: najpierw istnieją metody, które są wywoływane na pojedynczym obiekcie <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument> obiektu lub <xref:System.Xml.Linq.XNode> obiektu. Metody te działają na pojedynczym obiekcie i zwracają kolekcję obiektów <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute>lub <xref:System.Xml.Linq.XNode>. Następnie istnieją metody rozszerzające, które działają na kolekcjach i kolekcjach zwracanych. Metody rozszerzające wyliczają kolekcję źródłową, wywołują odpowiednią metodę osi dla każdego elementu w kolekcji i łączą wyniki.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[LINQ to XML Axes Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)|Defines axes, and explains how they are used in the context of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.|  
-|[How to: Retrieve a Collection of Elements (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md)|Introduces the <xref:System.Xml.Linq.XContainer.Elements%2A> method. This method retrieves a collection of the child elements of an element.|  
-|[How to: Retrieve the Value of an Element (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md)|Shows how to get the values of elements.|  
-|[How to: Filter on Element Names (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md)|Shows how to filter on element names when using axes.|  
-|[How to: Chain Axis Method Calls (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md)|Shows how to chain calls to axes methods.|  
-|[How to: Retrieve a Single Child Element (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)|Shows how to retrieve a single child element of an element, given the tag name of the child element.|  
-|[How to: Retrieve a Collection of Attributes (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-attributes-linq-to-xml.md)|Introduces the <xref:System.Xml.Linq.XElement.Attributes%2A> method. This method retrieves the attributes of an element.|  
-|[How to: Retrieve a Single Attribute (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-attribute-linq-to-xml.md)|Shows how to retrieve a single attribute of an element, given the attribute name.|  
-|[How to: Retrieve the Value of an Attribute (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md)|Shows how to get the values of attributes.|  
-|[How to: Retrieve the Shallow Value of an Element (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|Shows how to retrieve the shallow value of an element.|  
-|[Language-Integrated Axes in Visual Basic (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/language-integrated-axes.md)|Summarizes the Visual Basic integrated axes.|  
+|[Przegląd osi LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)|Definiuje osie i wyjaśnia, jak są używane w kontekście zapytań [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Instrukcje: pobieranie kolekcji elementów (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md)|Wprowadza metodę <xref:System.Xml.Linq.XContainer.Elements%2A>. Ta metoda pobiera kolekcję elementów podrzędnych elementu.|  
+|[Instrukcje: pobieranie wartości elementu (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md)|Pokazuje, jak pobrać wartości elementów.|  
+|[Instrukcje: filtrowanie nazw elementów (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md)|Pokazuje, jak filtrować nazwy elementów przy użyciu osi.|  
+|[Instrukcje: wywołania metody osi łańcuchowej (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md)|Pokazuje sposób łańcucha wywołań metod osi.|  
+|[Instrukcje: Pobieranie pojedynczego elementu podrzędnego (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)|Pokazuje, jak pobrać pojedynczy element podrzędny elementu, pod nazwą tagu elementu podrzędnego.|  
+|[Instrukcje: pobieranie kolekcji atrybutów (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-attributes-linq-to-xml.md)|Wprowadza metodę <xref:System.Xml.Linq.XElement.Attributes%2A>. Ta metoda pobiera atrybuty elementu.|  
+|[Instrukcje: Pobieranie pojedynczego atrybutu (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-attribute-linq-to-xml.md)|Pokazuje, jak pobrać pojedynczy atrybut elementu, pod nazwą atrybutu.|  
+|[Instrukcje: pobieranie wartości atrybutu (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md)|Pokazuje, jak pobrać wartości atrybutów.|  
+|[Instrukcje: pobieranie płytki wartości elementu (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|Pokazuje, jak pobrać skróconą wartość elementu.|  
+|[Osie zintegrowane z językiem w Visual Basic (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/language-integrated-axes.md)|Podsumowuje Visual Basic osi zintegrowanych.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Przewodnik programowania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

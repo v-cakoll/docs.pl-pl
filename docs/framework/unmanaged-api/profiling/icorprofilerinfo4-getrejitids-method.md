@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442854"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs — Metoda
-Returns an array of IDs that identify all JIT-recompiled versions of the specified function that are still allocated. This includes JIT-recompiled versions of functions that have been subsequently reverted but not yet freed (for example, when the application domain that contains the reverted function is still in use).  
+Zwraca tablicę identyfikatorów, które identyfikują wszystkie wersje JIT-ponownie skompilowane określonej funkcji, które są nadal przydzieleni. Obejmuje to ponowne skompilowane przez JIT wersje funkcji, które zostały później przywrócone, ale nie zostały jeszcze zwolnione (na przykład wtedy, gdy domena aplikacji zawierająca przywróconą funkcję jest nadal w użyciu).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,28 +37,28 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>Parametry  
  `functionId`  
- [in] The `FunctionID` of the function instance for which to enumerate versions.  
+ podczas `FunctionID` wystąpienia funkcji, dla którego mają zostać wyliczone wersje.  
   
  `cReJitIds`  
- [in] The number of JIT-recompiled IDs allocated in the `reJitIds` array.  
+ podczas Liczba identyfikatorów ponownych kompilacji JIT przypisywanych w tablicy `reJitIds`.  
   
  `pcReJitIds`  
- [out] The actual number of JIT-recompiled IDs.  
+ określoną Rzeczywista liczba identyfikatorów ponownych kompilacji JIT.  
   
  `reJitIds`  
- [out] A caller-allocated array that will contain the JIT-recompiled IDs for the specified function.  
+ określoną Tablica przypisana przez obiekt wywołujący, która będzie zawierać identyfikatory ponownie skompilowane JIT dla określonej funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetReJITIDs` enumerates the active JIT-recompiled IDs for a given function instance. It follows the same usage pattern as other `ICorProfilerInfo` functions that accept caller-allocated buffers.  
+ `GetReJITIDs` wylicza aktywne ponownie skompilowane identyfikatory JIT dla danego wystąpienia funkcji. Jest on zgodny z tym samym wzorcem użycia co inne funkcje `ICorProfilerInfo`, które akceptują bufory przydzieloną przez obiekt wywołujący.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

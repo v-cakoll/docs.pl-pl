@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430733"
 ---
 # <a name="osinfo-structure"></a>OSINFO — Struktura
-Contains details about the operating system for an assembly or module.  
+Zawiera szczegółowe informacje o systemie operacyjnym dla zestawu lub modułu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,25 +34,25 @@ typedef struct {
 } OSINFO;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`dwOSPlatformId`|One of the identifier values defined by the Microsoft Windows platform function `GetVersionEx`. The following values are supported:<br /><br /> -   VER_PLATFORM_WIN32s, or 0x0000, to specify Microsoft Windows 3.1.<br />-   VER_PLATFORM_WIN32_WINDOWS, or 0x0001, to specify Windows 95, Windows 98, or operating systems descended from them.<br />-   VER_PLATFORM_WIN32_NT, or 0x0010, to specify Windows NT or operating systems descended from it.|  
-|`dwOSMajorVersion`|The operating system major version, or a NULL value to indicate any version.|  
-|`dwOSMinorVersion`|The operating system minor version, or a NULL value to indicate any version.|  
+|`dwOSPlatformId`|Jedna z wartości identyfikatora zdefiniowanych przez funkcję platformy Microsoft Windows `GetVersionEx`. Obsługiwane są następujące wartości:<br /><br /> -VER_PLATFORM_WIN32s lub 0x0000, aby określić system Microsoft Windows 3,1.<br />-VER_PLATFORM_WIN32_WINDOWS lub 0x0001, aby określić z nich systemy Windows 95, Windows 98 lub systemu operacyjnego.<br />-VER_PLATFORM_WIN32_NT lub 0x0010, aby określić system Windows NT lub systemy operacyjne, które są od niego podrzędne.|  
+|`dwOSMajorVersion`|Wersja główna systemu operacyjnego lub wartość zerowa wskazująca dowolną wersję.|  
+|`dwOSMinorVersion`|Wersja pomocnicza systemu operacyjnego lub wartość zerowa wskazująca dowolną wersję.|  
   
 ## <a name="remarks"></a>Uwagi  
- `OSINFO` is based on the `OSVERSIONINFOEX` structure that is used in calls to the Microsoft Windows platform function `GetVersionEx`. This structure is used by the ASSEMBLYMETADATA structure to indicate its operating system support.  
+ `OSINFO` jest oparty na strukturze `OSVERSIONINFOEX`, która jest używana w wywołaniach funkcji platformy Microsoft Windows `GetVersionEx`. Ta struktura jest używana przez strukturę ASSEMBLYMETADATA, aby wskazać jej obsługę systemu operacyjnego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

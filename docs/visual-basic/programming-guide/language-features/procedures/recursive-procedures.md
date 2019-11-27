@@ -19,25 +19,25 @@ ms.locfileid: "74352555"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Procedury rekurencyjne (Visual Basic)
 
-A *recursive* procedure is one that calls itself. In general, this is not the most effective way to write Visual Basic code.  
+Procedura *cykliczna* to taka, która wywołuje sam siebie. Ogólnie rzecz biorąc, nie jest to najbardziej skuteczny sposób pisania kodu Visual Basic.  
   
- The following procedure uses recursion to calculate the factorial of its original argument.  
+ Poniższa procedura używa rekursji do obliczenia silni pierwotnego argumentu.  
   
  [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
-## <a name="considerations-with-recursive-procedures"></a>Considerations with Recursive Procedures
+## <a name="considerations-with-recursive-procedures"></a>Zagadnienia dotyczące procedur cyklicznych
 
- **Limiting Conditions**. You must design a recursive procedure to test for at least one condition that can terminate the recursion, and you must also handle the case where no such condition is satisfied within a reasonable number of recursive calls. Without at least one condition that can be met without fail, your procedure runs a high risk of executing in an infinite loop.
+ **Warunki ograniczające**. Należy zaprojektować procedurę cykliczną w celu przetestowania dla co najmniej jednego warunku, który może zakończyć rekursję, a także obsłużyć przypadek, w którym taki warunek nie jest spełniony w ramach rozsądnej liczby wywołań cyklicznych. Bez co najmniej jednego warunku, który może zostać spełniony bez niepowodzenia, procedura wykonuje wysokie ryzyko wykonania w pętli nieskończonej.
 
- **Memory Usage**. Your application has a limited amount of space for local variables. Each time a procedure calls itself, it uses more of that space for additional copies of its local variables. If this process continues indefinitely, it eventually causes a <xref:System.StackOverflowException> error.
+ **Użycie pamięci**. Twoja aplikacja ma ograniczoną ilość miejsca dla zmiennych lokalnych. Za każdym razem, gdy procedura wywołuje samą siebie, używa większej ilości miejsca, aby uzyskać dodatkowe kopie swoich zmiennych lokalnych. Jeśli ten proces będzie kontynuowany w nieskończoność, spowoduje to, że wystąpił błąd <xref:System.StackOverflowException>.
 
- **Efficiency**. You can almost always substitute a loop for recursion. A loop does not have the overhead of passing arguments, initializing additional storage, and returning values. Your performance can be much better without recursive calls.
+ **Wydajność**. Prawie zawsze można zastąpić pętlę do rekursji. Pętla nie ma nakładu na przekazywanie argumentów, inicjowanie dodatkowego magazynu i zwracanie wartości. Wydajność może być znacznie lepsza bez wywołań cyklicznych.
 
- **Mutual Recursion**. You might observe very poor performance, or even an infinite loop, if two procedures call each other. Such a design presents the same problems as a single recursive procedure, but can be harder to detect and debug.
+ **Wzajemna rekursja**. Można zaobserwować bardzo niską wydajność lub nawet nieskończoną pętlę, jeśli dwie procedury wywołują siebie nawzajem. Taki projekt przedstawia te same problemy co pojedyncza procedura cykliczna, ale może być trudniejszy do wykrycia i debugowania.
 
- **Calling with Parentheses**. When a `Function` procedure calls itself recursively, you must follow the procedure name with parentheses, even if there is no argument list. Otherwise, the function name is taken as representing the return value of the function.
+ **Wywoływanie za pomocą nawiasów**. Gdy procedura `Function` wywołuje się w sposób cykliczny, należy postępować zgodnie z nazwą procedury z nawiasami, nawet jeśli nie ma listy argumentów. W przeciwnym razie nazwa funkcji jest traktowana jak reprezentująca wartość zwracaną funkcji.
 
- **Testing**. If you write a recursive procedure, you should test it very carefully to make sure it always meets some limiting condition. You should also ensure that you cannot run out of memory due to having too many recursive calls.
+ **Testowanie**. Jeśli napiszesz procedurę cykliczną, należy dokładnie ją przetestować, aby upewnić się, że zawsze spełnia pewne warunki ograniczające. Należy również upewnić się, że nie można zalogować się za mało pamięci z powodu zbyt wielu wywołań cyklicznych.
 
 ## <a name="see-also"></a>Zobacz także
 

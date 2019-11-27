@@ -22,16 +22,16 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448700"
 ---
 # <a name="inotifysource2-interface"></a>INotifySource2 — Interfejs
-Declares a method for setting notification filters.  
+Deklaruje metodę ustawiania filtrów powiadomień.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[SetNotifyFilter, metoda](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)|Assigns a notification filter for use with this source.|  
+|[SetNotifyFilter, metoda](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)|Przypisuje filtr powiadomień do użycia z tym źródłem.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** ProtocolNotify2.idl  
+ **Nagłówek:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Zobacz także
 

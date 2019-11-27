@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448453"
 ---
 # <a name="cor_prf_static_type-enumeration"></a>COR_PRF_STATIC_TYPE — Wyliczenie
-Indicates whether a field is static and, if so, the static quality that applies to the field. These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.  
+Wskazuje, czy pole jest statyczne i, jeśli tak, statyczna jakość stosowana do pola. Te wartości można łączyć za pomocą bitowego lub operacji, aby wskazać, że pole ma wiele różnych klas statycznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,24 +36,24 @@ typedef enum {
 } COR_PRF_STATIC_TYPE;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_NOT_A_STATIC`|The field is not static.|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|The field is application domain-static.|  
-|`COR_PRF_FIELD_THREAD_STATIC`|The field is thread-static.|  
-|`COR_PRF_FIELD_CONTEXT_STATIC`|The field is context-static.|  
-|`COR_PRF_FIELD_RVA_STATIC`|The field is relative virtual address (RVA)-static.|  
+|`COR_PRF_FIELD_NOT_A_STATIC`|Pole nie jest statyczne.|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|Pole jest domeną aplikacji — static.|  
+|`COR_PRF_FIELD_THREAD_STATIC`|Pole jest statyczne wątku.|  
+|`COR_PRF_FIELD_CONTEXT_STATIC`|Pole jest kontekst-static.|  
+|`COR_PRF_FIELD_RVA_STATIC`|Pole jest względnym adresem wirtualnym (RVA) — static.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -9,13 +9,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348437"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>How to: Combine and Compare String Collections (LINQ) (Visual Basic)
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Instrukcje: łączenie i porównywanie kolekcji ciągów (LINQ) (Visual Basic)
 
-This example shows how to merge files that contain lines of text and then sort the results. Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.
+Ten przykład pokazuje, jak scalać pliki zawierające wiersze tekstu, a następnie sortować wyniki. W związku z tym pokazuje, jak wykonać prostą metodę łączenia, Unii i przecięcia na dwóch zestawach wierszy tekstu.
 
-### <a name="to-set-up-the-project-and-the-text-files"></a>To set up the project and the text files
+### <a name="to-set-up-the-project-and-the-text-files"></a>Aby skonfigurować projekt i pliki tekstowe
 
-1. Copy these names into a text file that is named names1.txt and save it in your project folder:
+1. Skopiuj te nazwy do pliku tekstowego o nazwie names1. txt i Zapisz go w folderze projektu:
 
     ```text
     Bankov, Peter
@@ -30,7 +30,7 @@ This example shows how to merge files that contain lines of text and then sort t
     Garcia, Debra
     ```
 
-2. Copy these names into a text file that is named names2.txt and save it in your project folder. Note that the two files have some names in common.
+2. Skopiuj te nazwy do pliku tekstowego o nazwie names2. txt i Zapisz go w folderze projektu. Należy pamiętać, że dwa pliki mają nazwy wspólne.
 
     ```text
     Liu, Jinghao
@@ -165,9 +165,9 @@ End Class
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Utwórz projekt aplikacji konsolowej VB.NET z instrukcją `Imports` dla przestrzeni nazw System. LINQ.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

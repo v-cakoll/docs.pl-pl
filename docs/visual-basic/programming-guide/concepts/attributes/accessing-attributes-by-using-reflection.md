@@ -9,11 +9,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353557"
 ---
-# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Accessing Attributes by Using Reflection (Visual Basic)
+# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (Visual Basic)
 
-The fact that you can define custom attributes and place them in your source code would be of little value without some way of retrieving that information and acting on it. By using reflection, you can retrieve the information that was defined with custom attributes. The key method is `GetCustomAttributes`, which returns an array of objects that are the run-time equivalents of the source code attributes. This method has several overloaded versions. Aby uzyskać więcej informacji, zobacz <xref:System.Attribute>.
+Fakt, że można zdefiniować atrybuty niestandardowe i umieścić je w kodzie źródłowym, będzie miał małą wartość bez konieczności pobierania tych informacji i działania na nich. Za pomocą odbicia można pobrać informacje, które zostały zdefiniowane przy użyciu atrybutów niestandardowych. Kluczowa Metoda to `GetCustomAttributes`, która zwraca tablicę obiektów, które są odpowiednikami w czasie wykonywania dla atrybutów kodu źródłowego. Ta metoda ma kilka przeciążonych wersji. Aby uzyskać więcej informacji, zobacz temat <xref:System.Attribute>.
 
-An attribute specification such as:
+Specyfikacja atrybutu, taka jak:
 
 ```vb
 <Author("P. Ackerman", Version:=1.1)>
@@ -22,18 +22,18 @@ Class SampleClass
 End Class
 ```
 
- is conceptually equivalent to this:
+ jest koncepcyjnie równoważne:
 
 ```vb
 Dim anonymousAuthorObject As Author = New Author("P. Ackerman")
 anonymousAuthorObject.version = 1.1
 ```
 
-However, the code is not executed until `SampleClass` is queried for attributes. Calling `GetCustomAttributes` on `SampleClass` causes an `Author` object to be constructed and initialized as above. If the class has other attributes, other attribute objects are constructed similarly. `GetCustomAttributes` then returns the `Author` object and any other attribute objects in an array. You can then iterate over this array, determine what attributes were applied based on the type of each array element, and extract information from the attribute objects.
+Jednak kod nie jest wykonywany, dopóki `SampleClass` nie zostanie poszukiwany dla atrybutów. Wywołanie `GetCustomAttributes` na `SampleClass` powoduje, że obiekt `Author` zostanie skonstruowany i zainicjowany jak powyżej. Jeśli klasa ma inne atrybuty, inne obiekty atrybutów są konstruowane podobnie. `GetCustomAttributes` następnie zwraca obiekt `Author` i wszelkie inne obiekty atrybutu w tablicy. Następnie można wykonać iterację tej tablicy, określić, jakie atrybuty zostały zastosowane na podstawie typu każdego elementu tablicy, i wyodrębnić informacje z obiektów atrybutów.
 
 ## <a name="example"></a>Przykład
 
-Here is a complete example. A custom attribute is defined, applied to several entities, and retrieved via reflection.
+Oto kompletny przykład. Atrybut niestandardowy jest zdefiniowany, stosowany do kilku jednostek i pobierany za pośrednictwem odbicia.
 
 ```vb
 ' Multiuse attribute
@@ -105,8 +105,8 @@ End Class
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Visual Basic Programming Guide](../../../../visual-basic/programming-guide/index.md)
+- [Przewodnik programowania Visual Basic](../../../../visual-basic/programming-guide/index.md)
 - [Pobieranie informacji przechowywanych w atrybutach](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
-- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Attributes (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [Odbicie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Atrybuty (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
+- [Tworzenie atrybutów niestandardowych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)

@@ -9,23 +9,23 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347071"
 ---
-# <a name="creating-variant-generic-interfaces-visual-basic"></a>Creating Variant Generic Interfaces (Visual Basic)
+# <a name="creating-variant-generic-interfaces-visual-basic"></a>Tworzenie interfejsów ogólnych typu Variant (Visual Basic)
 
-You can declare generic type parameters in interfaces as covariant or contravariant. *Covariance* allows interface methods to have more derived return types than that defined by the generic type parameters. *Contravariance* allows interface methods to have argument types that are less derived than that specified by the generic parameters. A generic interface that has covariant or contravariant generic type parameters is called *variant*.
+Parametry typu ogólnego można zadeklarować w interfejsach jako współvariant lub kontrawariantne. *Kowariancja* umożliwia metodom interfejsu posiadanie bardziej pochodnych typów zwracanych niż te zdefiniowane przez parametry typu ogólnego. *Kontrawariancja* umożliwia metodom interfejsu posiadanie typów argumentów, które są mniej pochodne niż określone przez parametry ogólne. Ogólny interfejs, który ma parametry typu generycznego lub kontrawariantne, nazywa się *wariantem*.
 
 > [!NOTE]
-> .NET Framework 4 introduced variance support for several existing generic interfaces. For the list of the variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
+> .NET Framework 4 wprowadziła obsługę wariancji dla kilku istniejących interfejsów ogólnych. Aby uzyskać listę interfejsów wariantów w .NET Framework, zobacz [Wariancja w interfejsach ogólnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
 
-## <a name="declaring-variant-generic-interfaces"></a>Declaring Variant Generic Interfaces
+## <a name="declaring-variant-generic-interfaces"></a>Deklarowanie interfejsów ogólnych typu Variant
 
-You can declare variant generic interfaces by using the `in` and `out` keywords for generic type parameters.
+Można zadeklarować interfejsy ogólne dla wariantów przy użyciu słów kluczowych `in` i `out` dla parametrów typu ogólnego.
 
 > [!IMPORTANT]
-> `ByRef` parameters in Visual Basic cannot be variant. Value types also do not support variance.
+> parametry `ByRef` w Visual Basic nie mogą być wariantem. Typy wartości nie obsługują również wariancji.
 
-You can declare a generic type parameter covariant by using the `out` keyword. The covariant type must satisfy the following conditions:
+Za pomocą słowa kluczowego `out` można zadeklarować element współvariant parametru typu ogólnego. Typ współwariantu musi spełniać następujące warunki:
 
-- The type is used only as a return type of interface methods and not used as a type of method arguments. This is illustrated in the following example, in which the type `R` is declared covariant.
+- Typ jest używany tylko jako typ zwracany metod interfejsu i nie jest używany jako typ argumentów metody. Jest to zilustrowane w poniższym przykładzie, w którym typ `R` jest zadeklarowany jako współvariant.
 
     ```vb
     Interface ICovariant(Of Out R)
@@ -35,7 +35,7 @@ You can declare a generic type parameter covariant by using the `out` keyword. T
     End Interface
     ```
 
-    There is one exception to this rule. If you have a contravariant generic delegate as a method parameter, you can use the type as a generic type parameter for the delegate. This is illustrated by the type `R` in the following example. For more information, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+    Istnieje jeden wyjątek dla tej reguły. Jeśli masz delegata generycznego kontrawariantne jako parametr metody, możesz użyć typu jako parametru typu ogólnego dla delegata. Jest to zilustrowane przez typ `R` w poniższym przykładzie. Aby uzyskać więcej informacji, zobacz [Wariancja w delegatach (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) i [Korzystanie z wariancji dla delegatów "Func" i "Action Generic" (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
 
     ```vb
     Interface ICovariant(Of Out R)
@@ -43,7 +43,7 @@ You can declare a generic type parameter covariant by using the `out` keyword. T
     End Interface
     ```
 
-- The type is not used as a generic constraint for the interface methods. This is illustrated in the following code.
+- Typ nie jest używany jako ograniczenie ogólne metod interfejsu. Jest to zilustrowane w poniższym kodzie.
 
     ```vb
     Interface ICovariant(Of Out R)
@@ -54,7 +54,7 @@ You can declare a generic type parameter covariant by using the `out` keyword. T
     End Interface
     ```
 
-You can declare a generic type parameter contravariant by using the `in` keyword. The contravariant type can be used only as a type of method arguments and not as a return type of interface methods. The contravariant type can also be used for generic constraints. The following code shows how to declare a contravariant interface and use a generic constraint for one of its methods.
+Parametry typu ogólnego kontrawariantne można zadeklarować za pomocą słowa kluczowego `in`. Typ kontrawariantne może być używany tylko jako typ argumentów metody, a nie jako zwracany typ metod interfejsu. Typ kontrawariantne może być również używany dla ograniczeń ogólnych. Poniższy kod przedstawia sposób deklarowania interfejsu kontrawariantne i używania ograniczenia ogólnego dla jednej z jej metod.
 
 ```vb
 Interface IContravariant(Of In A)
@@ -65,7 +65,7 @@ Interface IContravariant(Of In A)
 End Interface
 ```
 
-It is also possible to support both covariance and contravariance in the same interface, but for different type parameters, as shown in the following code example.
+Istnieje również możliwość obsługi zarówno kowariancji, jak i kontrawariancja w tym samym interfejsie, ale dla różnych parametrów typu, jak pokazano w poniższym przykładzie kodu.
 
 ```vb
 Interface IVariant(Of Out R, In A)
@@ -75,7 +75,7 @@ Interface IVariant(Of Out R, In A)
 End Interface
 ```
 
-In Visual Basic, you can't declare events in variant interfaces without specifying the delegate type. Also, a variant interface can't have nested classes, enums, or structures, but it can have nested interfaces. This is illustrated in the following code.
+W Visual Basic nie można zadeklarować zdarzeń w interfejsach Variant bez określania typu delegata. Ponadto interfejs wariantu nie może mieć klas zagnieżdżonych, wyliczeniowych ani struktur, ale może mieć zagnieżdżone interfejsy. Jest to zilustrowane w poniższym kodzie.
 
 ```vb
 Interface ICovariant(Of Out R)
@@ -98,9 +98,9 @@ Interface ICovariant(Of Out R)
 End Interface
 ```
 
-## <a name="implementing-variant-generic-interfaces"></a>Implementing Variant Generic Interfaces
+## <a name="implementing-variant-generic-interfaces"></a>Implementowanie interfejsów ogólnych typu Variant
 
-You implement variant generic interfaces in classes by using the same syntax that is used for invariant interfaces. The following code example shows how to implement a covariant interface in a generic class.
+W klasach można zaimplementować interfejsy ogólne o zmiennej, korzystając z tej samej składni, która jest używana dla interfejsów niezmienna. Poniższy przykład kodu pokazuje, jak zaimplementować interfejs współvariant w klasie generycznej.
 
 ```vb
 Interface ICovariant(Of Out R)
@@ -116,7 +116,7 @@ Class SampleImplementation(Of R)
 End Class
 ```
 
-Classes that implement variant interfaces are invariant. For example, consider the following code.
+Klasy implementujące interfejsy Variant są niezmienne. Rozważmy na przykład poniższy kod.
 
 ```vb
  The interface is covariant.
@@ -132,9 +132,9 @@ Dim button As SampleImplementation(Of Button) =
 ' Dim obj As SampleImplementation(Of Object) = button
 ```
 
-## <a name="extending-variant-generic-interfaces"></a>Extending Variant Generic Interfaces
+## <a name="extending-variant-generic-interfaces"></a>Rozszerzanie interfejsów ogólnych typu Variant
 
-When you extend a variant generic interface, you have to use the `in` and `out` keywords to explicitly specify whether the derived interface supports variance. The compiler does not infer the variance from the interface that is being extended. For example, consider the following interfaces.
+Podczas rozszerzającej uniwersalnego interfejsu wariantu należy użyć słów kluczowych `in` i `out`, aby jawnie określić, czy interfejs pochodny obsługuje wariancję. Kompilator nie wywnioskuje wariancji z rozszerzanego interfejsu. Rozważmy na przykład następujące interfejsy.
 
 ```vb
 Interface ICovariant(Of Out T)
@@ -149,9 +149,9 @@ Interface IExtCovariant(Of Out T)
 End Interface
 ```
 
-In the `Invariant(Of T)` interface, the generic type parameter `T` is invariant, whereas in `IExtCovariant (Of Out T)`the type parameter is covariant, although both interfaces extend the same interface. The same rule is applied to contravariant generic type parameters.
+W interfejsie `Invariant(Of T)` parametr typu generycznego `T` jest niezmienny, podczas gdy w `IExtCovariant (Of Out T)`parametr typu jest współvariant, chociaż oba interfejsy rozszerzającą ten sam interfejs. Ta sama reguła jest stosowana do parametrów typu ogólnego kontrawariantne.
 
-You can create an interface that extends both the interface where the generic type parameter `T` is covariant and the interface where it is contravariant if in the extending interface the generic type parameter `T` is invariant. This is illustrated in the following code example.
+Można utworzyć interfejs, który rozszerza interfejs, w którym parametr typu generycznego `T` jest współvariant i interfejsem, gdzie jest kontrawariantne, jeśli w rozszerzanym interfejsie parametr typu generycznego `T` jest niezmienny. Jest to zilustrowane w poniższym przykładzie kodu.
 
 ```vb
 Interface ICovariant(Of Out T)
@@ -165,7 +165,7 @@ Interface IInvariant(Of T)
 End Interface
 ```
 
-However, if a generic type parameter `T` is declared covariant in one interface, you cannot declare it contravariant in the extending interface, or vice versa. This is illustrated in the following code example.
+Jeśli jednak parametr typu generycznego `T` jest zadeklarowany jako współwariant w jednym interfejsie, nie można zadeklarować go kontrawariantne w interfejsie rozszerzającym lub na odwrót. Jest to zilustrowane w poniższym przykładzie kodu.
 
 ```vb
 Interface ICovariant(Of Out T)
@@ -177,14 +177,14 @@ End Interface
 ' End Interface
 ```
 
-### <a name="avoiding-ambiguity"></a>Avoiding Ambiguity
+### <a name="avoiding-ambiguity"></a>Unikanie niejednoznaczności
 
-When you implement variant generic interfaces, variance can sometimes lead to ambiguity. This should be avoided.
+Podczas implementowania interfejsów ogólnych typu Variant WARIANCJA może czasami prowadzić do niejednoznaczności. Należy to uniknąć.
 
-For example, if you explicitly implement the same variant generic interface with different generic type parameters in one class, it can create ambiguity. The compiler does not produce an error in this case, but it is not specified which interface implementation will be chosen at runtime. This could lead to subtle bugs in your code. Consider the following code example.
+Na przykład w przypadku jawnego zaimplementowania tego samego uniwersalnego interfejsu wariantu z różnymi parametrami typu ogólnego w jednej klasie można utworzyć niejednoznaczność. Kompilator nie generuje błędu w tym przypadku, ale nie jest określony, która implementacja interfejsu zostanie wybrana w czasie wykonywania. Może to prowadzić do delikatnych usterek w kodzie. Rozważmy następujący przykład kodu.
 
 > [!NOTE]
-> With `Option Strict Off`, Visual Basic generates a compiler warning when there is an ambiguous interface implementation. With `Option Strict On`, Visual Basic generates a compiler error.
+> W przypadku `Option Strict Off`Visual Basic generuje ostrzeżenie kompilatora, gdy istnieje niejednoznaczna implementacja interfejsu. W przypadku `Option Strict On`Visual Basic generuje błąd kompilatora.
 
 ```vb
 ' Simple class hierarchy.
@@ -228,9 +228,9 @@ Sub Main()
 End Sub
 ```
 
-In this example, it is unspecified how the `pets.GetEnumerator` method chooses between `Cat` and `Dog`. This could cause problems in your code.
+W tym przykładzie nie określono, jak Metoda `pets.GetEnumerator` wybiera między `Cat` i `Dog`. Może to spowodować problemy w kodzie.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Wariancja w interfejsach ogólnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Korzystanie z wariancji dla delegatów "Func" i "Action Generic" (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

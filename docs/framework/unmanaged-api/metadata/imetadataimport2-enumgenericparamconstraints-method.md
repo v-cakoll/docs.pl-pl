@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426723"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints — Metoda
-Gets an enumerator for an array of generic parameter constraints associated with the generic parameter represented by the specified token.  
+Pobiera moduł wyliczający dla tablicy ograniczeń parametrów ogólnych skojarzonych z parametrem ogólnym reprezentowanym przez określony token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,35 +39,35 @@ HRESULT EnumGenericParamConstraints (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in. out] Wskaźnik do modułu wyliczającego.  
   
  `tk`  
- [in]   A token that represents the generic parameter whose constraints are to be enumerated.  
+ podczas   Token reprezentujący parametr generyczny, którego ograniczenia mają zostać wyliczone.  
   
  `rGenericParamConstraints`  
- [out] The array of generic parameter constraints to enumerate.  
+ określoną Tablica ograniczeń parametrów ogólnych do wyliczenia.  
   
  `cMax`  
- [in]   The requested maximum number of tokens to place in `rGenericParamConstraints`.  
+ podczas   Żądana Maksymalna liczba tokenów do umieszczenia w `rGenericParamConstraints`.  
   
  `pcGenericParamConstraints`  
- [out] A pointer to the number of tokens placed in `rGenericParamConstraints`.  
+ określoną Wskaźnik do liczby tokenów umieszczonych w `rGenericParamConstraints`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParameterConstraints` is set to 0 (zero).|  
+|`S_OK`|`EnumGenericParameterConstraints` pomyślnie zwrócone.|  
+|`S_FALSE`|`phEnum` nie ma elementów członkowskich. W tym przypadku `pcGenericParameterConstraints` jest ustawiona na 0 (zero).|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

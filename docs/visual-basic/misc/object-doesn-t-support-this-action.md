@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support this action
+title: Obiekt nie obsługuje tej akcji
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID445
@@ -11,14 +11,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353877"
 ---
-# <a name="object-doesnt-support-this-action-visual-basic"></a>Object doesn't support this action (Visual Basic)
-You referenced a method or property that is not supported by this object.  
+# <a name="object-doesnt-support-this-action-visual-basic"></a>Obiekt nie obsługuje tej akcji (Visual Basic)
+Odwołujesz się do metody lub właściwości, która nie jest obsługiwana przez ten obiekt.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Read the object's documentation for more information on the object.  
+1. Przeczytaj dokumentację obiektu, aby uzyskać więcej informacji na jego temat.  
   
-2. Ensure that the names of properties and methods are spelled correctly.  
+2. Upewnij się, że nazwy właściwości i metod są poprawne.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -9,24 +9,24 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353384"
 ---
-# <a name="grouping-data-visual-basic"></a>Grouping Data (Visual Basic)
-Grouping refers to the operation of putting data into groups so that the elements in each group share a common attribute.  
+# <a name="grouping-data-visual-basic"></a>Grupowanie danych (Visual Basic)
+Grupowanie odwołuje się do operacji umieszczania danych w grupach, tak aby elementy w każdej grupie miały wspólny atrybut.  
   
- The following illustration shows the results of grouping a sequence of characters. The key for each group is the character.  
+ Na poniższej ilustracji przedstawiono wyniki grupowania sekwencji znaków. Klucz dla każdej grupy jest znakiem.  
   
- ![Diagram that shows a LINQ Grouping operation.](./media/grouping-data/linq-group-operation.png)  
+ ![Diagram przedstawiający operację grupowania LINQ.](./media/grouping-data/linq-group-operation.png)  
   
- The standard query operator methods that group data elements are listed in the following section.  
+ Standardowe metody operatorów zapytań, które grupują elementy danych, są wymienione w poniższej sekcji.  
   
 ## <a name="methods"></a>Metody  
   
-|Method Name|Opis|Visual Basic Query Expression Syntax|Więcej informacji|  
+|Nazwa metody|Opis|Składnia wyrażenia zapytania Visual Basic|Więcej informacji|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|GroupBy|Groups elements that share a common attribute. Each group is represented by an <xref:System.Linq.IGrouping%602> object.|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
-|ToLookup|Inserts elements into a <xref:System.Linq.Lookup%602> (a one-to-many dictionary) based on a key selector function.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|GroupBy|Grupuje elementy, które mają wspólny atrybut. Każda grupa jest reprezentowana przez obiekt <xref:System.Linq.IGrouping%602>.|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|ToLookup|Wstawia elementy do <xref:System.Linq.Lookup%602> (słownik "jeden do wielu") na podstawie funkcji selektora kluczy.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-example"></a>Query Expression Syntax Example  
- The following code example uses the `Group By` clause to group integers in a list according to whether they are even or odd.  
+## <a name="query-expression-syntax-example"></a>Przykład składni wyrażenia zapytania  
+ Poniższy przykład kodu używa klauzuli `Group By` do grupowania liczb całkowitych na liście zgodnie z tym, czy są one parzyste czy nieparzyste.  
   
 ```vb  
 Dim numbers As New System.Collections.Generic.List(Of Integer)(  
@@ -66,7 +66,7 @@ MsgBox(sb.ToString())
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Standardowe operatory zapytań — Omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Group By, klauzula](../../../../visual-basic/language-reference/queries/group-by-clause.md)
-- [How to: Group Files by Extension (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Instrukcje: grupowanie plików według rozszerzenia (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [Instrukcje: dzielenie pliku na wiele plików przy użyciu grup (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

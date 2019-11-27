@@ -9,9 +9,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353698"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Instrukcje: Liczenie wystąpień wyrazu w ciągu (LINQ) (Visual Basic)
 
-This example shows how to use a LINQ query to count the occurrences of a specified word in a string. Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words. There is a performance cost to the <xref:System.String.Split%2A> method. If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead. However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.
+Ten przykład pokazuje, jak używać zapytania LINQ do zliczania wystąpień określonego wyrazu w ciągu. Należy pamiętać, że aby wykonać licznik, najpierw wywoływana jest metoda <xref:System.String.Split%2A>, aby utworzyć tablicę wyrazów. Metoda <xref:System.String.Split%2A> ma koszt wydajności. Jeśli jedyną operacją na ciągu jest Liczenie wyrazów, należy rozważyć użycie metod <xref:System.Text.RegularExpressions.Regex.Matches%2A> lub <xref:System.String.IndexOf%2A>. Jeśli jednak wydajność nie jest problemem krytycznym lub zostało już podzielone zdanie w celu wykonywania innych typów zapytań na nim, warto użyć LINQ do zliczania wyrazów lub fraz.
 
 ## <a name="example"></a>Przykład
 
@@ -60,8 +60,8 @@ End Class
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Utwórz projekt aplikacji konsolowej VB.NET z instrukcją `Imports` dla przestrzeni nazw System. LINQ.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

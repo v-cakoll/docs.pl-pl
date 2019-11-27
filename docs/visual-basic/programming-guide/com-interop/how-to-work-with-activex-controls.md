@@ -1,5 +1,5 @@
 ---
-title: 'Porady: praca ze sterownikami ActiveX'
+title: 'Porady: praca z kontrolkami ActiveX'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Toolbox, adding controls
@@ -13,22 +13,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353216"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>Porady: praca ze sterownikami ActiveX (Visual Basic)
-ActiveX controls are COM components or objects you can insert into a Web page or other application to reuse packaged functionality someone else has programmed. You can use ActiveX controls developed for Visual Basic 6.0 and earlier versions to add features to the **Toolbox** of Visual Studio.  
+Formanty ActiveX to składniki COM lub obiekty, które można wstawić do strony sieci Web lub innej aplikacji, aby ponownie wykorzystać spakowane funkcje, które zostały zaprogramowane przez kogoś innego. Aby dodać funkcje do **przybornika** programu Visual Studio, można użyć formantów ActiveX opracowanych dla Visual Basic 6,0 i wcześniejszych wersji.  
   
-### <a name="to-add-activex-controls-to-the-toolbox"></a>To add ActiveX controls to the toolbox  
+### <a name="to-add-activex-controls-to-the-toolbox"></a>Aby dodać kontrolki ActiveX do przybornika  
   
-1. On the **Tools** menu, click **Choose Toolbox Items**.  
+1. W menu **Narzędzia** kliknij polecenie **Wybierz elementy przybornika**.  
   
-     The **Choose Toolbox** dialog box appears.  
+     Zostanie wyświetlone okno dialogowe **Wybierz Przybornik** .  
   
-2. Click the **COM Components** tab.  
+2. Kliknij kartę **składniki com** .  
   
-3. Select the check box next to the ActiveX control you want to use, and then click **OK**.  
+3. Zaznacz pole wyboru obok kontrolki ActiveX, której chcesz użyć, a następnie kliknij przycisk **OK**.  
   
-     The new control appears with the other tools in the **Toolbox**.  
+     Nowa kontrolka pojawia się z innymi narzędziami w **przyborniku**.  
   
     > [!NOTE]
-    > You can use the Aximp utility to manually create an interop assembly for ActiveX controls. For more information, see [Aximp.exe (Windows Forms ActiveX Control Importer)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
+    > Można użyć narzędzia Aximp do ręcznego utworzenia zestawu międzyoperacyjnego dla formantów ActiveX. Aby uzyskać więcej informacji, zobacz [Aximp. exe (Windows Forms importer formantów ActiveX)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

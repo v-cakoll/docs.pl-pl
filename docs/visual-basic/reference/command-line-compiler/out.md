@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352389"
 ---
 # <a name="-out-visual-basic"></a>-out (Visual Basic)
-Specifies the name of the output file.  
+Określa nazwę pliku wyjściowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,19 +26,19 @@ Specifies the name of the output file.
   
 |Termin|Definicja|  
 |---|---|  
-|`filename`|Wymagany. The name of the output file the compiler creates. If the file name contains a space, enclose the name in quotation marks (" ").|  
+|`filename`|Wymagana. Nazwa pliku wyjściowego tworzonego przez kompilator. Jeśli nazwa pliku zawiera spację, należy ująć ją w cudzysłów ("").|  
   
 ## <a name="remarks"></a>Uwagi  
- Specify the full name and extension of the file to create. If you do not, the .exe file takes its name from the source-code file containing the `Sub Main` procedure, and the .dll file takes its name from the first source-code file.  
+ Określ pełną nazwę i rozszerzenie pliku do utworzenia. W przeciwnym razie plik. exe przyjmuje swoją nazwę z pliku kodu źródłowego zawierającego procedurę `Sub Main`, a plik. dll przyjmuje swoją nazwę z pierwszego pliku kodu źródłowego.  
   
- If you specify a file name without an .exe or .dll extension, the compiler automatically adds the extension for you, depending on the value specified for the `-target` compiler option.  
+ Jeśli określisz nazwę pliku bez rozszerzenia exe lub dll, kompilator automatycznie doda rozszerzenie dla Ciebie, w zależności od wartości określonej dla opcji kompilatora `-target`.  
   
-|To set -out in the Visual Studio integrated development environment|  
+|Aby skonfigurować w zintegrowanym środowisku programistycznym programu Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. On the **Project** menu, click **Properties**. <br />2.  Click the **Application** tab.<br />3.  Modify the value in the **Assembly Name** box.|  
+|1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **aplikacja** .<br />3. Zmodyfikuj wartość w polu **Nazwa zestawu** .|  
   
 ## <a name="example"></a>Przykład  
- The following code compiles `T2.vb` and creates output file `T2.exe`.  
+ Poniższy kod kompiluje `T2.vb` i tworzy `T2.exe`pliku wyjściowego.  
   
 ```console
 vbc t2.vb -out:t3.exe  
@@ -46,6 +46,6 @@ vbc t2.vb -out:t3.exe
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

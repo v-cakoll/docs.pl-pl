@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443103"
 ---
 # <a name="icorprofilerinfo2getthreadappdomain-method"></a>ICorProfilerInfo2::GetThreadAppDomain — Metoda
-Gets the ID of the application domain in which the specified thread is currently executing code.  
+Pobiera identyfikator domeny aplikacji, w której określony wątek aktualnie wykonuje kod.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,19 +35,19 @@ HRESULT GetThreadAppDomain(
   
 ## <a name="parameters"></a>Parametry  
  `threadId`  
- [in] The ID specifying the thread.  
+ podczas Identyfikator określający wątek.  
   
  `pAppDomainId`  
- [out] A pointer to the ID of the application domain.  
+ określoną Wskaźnik do identyfikatora domeny aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

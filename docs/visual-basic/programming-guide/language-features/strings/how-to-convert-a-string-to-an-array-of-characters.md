@@ -16,15 +16,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352444"
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Porady: konwertowanie ciągu do tablicy znaków w Visual Basic
-Sometimes it is useful to have data about the characters in your string and the positions of those characters within your string, such as when you are parsing a string. This example shows how you can get an array of the characters in a string by calling the string's <xref:System.String.ToCharArray%2A> method.  
+Czasami warto mieć dane dotyczące znaków w ciągu i położenia tych znaków w ciągu, np. podczas analizowania ciągu. Ten przykład pokazuje, jak można uzyskać tablicę znaków w ciągu, wywołując metodę <xref:System.String.ToCharArray%2A> ciągu.  
   
 ## <a name="example"></a>Przykład  
- This example demonstrates how to split a string into a `Char` array, and how to split a string into a `String` array of its Unicode text characters. The reason for this distinction is that Unicode text characters can be composed of two or more `Char` characters (such as a surrogate pair or a combining character sequence). For more information, see <xref:System.Globalization.TextElementEnumerator> and [The Unicode Standard](https://www.unicode.org/standard/standard.html).  
+ W tym przykładzie pokazano, jak podzielić ciąg na tablicę `Char` i jak podzielić ciąg na `String`ą tablicę znaków tekstu Unicode. Przyczyną tego rozróżnienia jest to, że znaki tekstowe Unicode mogą składać się z co najmniej dwóch znaków `Char` (takich jak para zastępcza lub łącząca sekwencję znaków). Aby uzyskać więcej informacji, zobacz <xref:System.Globalization.TextElementEnumerator> i [standard Unicode](https://www.unicode.org/standard/standard.html).  
   
  [!code-vb[VbVbalrStrings#75](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class4.vb#75)]  
   
 ## <a name="example"></a>Przykład  
- It is more difficult to split a string into its Unicode text characters, but this is necessary if you need information about the visual representation of a string. This example uses the <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> method to get information about the Unicode text characters that make up a string.  
+ Trudno jest podzielić ciąg na znaki tekstowe Unicode, ale jest to konieczne, jeśli potrzebujesz informacji na temat wizualnej reprezentacji ciągu. W tym przykładzie zastosowano metodę <xref:System.Globalization.StringInfo.SubstringByTextElements%2A>, aby uzyskać informacje o znakach tekstowych Unicode, które tworzą ciąg.  
   
  [!code-vb[VbVbalrStrings#76](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class4.vb#76)]  
   
@@ -33,5 +33,5 @@ Sometimes it is useful to have data about the characters in your string and the 
 - <xref:System.String.Chars%2A>
 - <xref:System.Globalization.StringInfo?displayProperty=nameWithType>
 - [Instrukcje: Dostęp do znaków w ciągach](../../../../visual-basic/programming-guide/language-features/strings/how-to-access-characters-in-strings.md)
-- [Converting Between Strings and Other Data Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
+- [Konwertowanie między ciągami a innymi typami danych w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
 - [Ciągi](../../../../visual-basic/programming-guide/language-features/strings/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Write a LINQ to XML Axis Method'
+title: 'Instrukcje: zapisywanie metody osi LINQ to XML'
 ms.date: 07/20/2015
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
 ms.openlocfilehash: 88a9df9a2750736cfd34b655cf3ea0f57b2bff39
@@ -9,13 +9,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348343"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>How to: Write a LINQ to XML Axis Method (Visual Basic)
-You can write your own axis methods to retrieve collections from an XML tree. One of the best ways to do this is to write an extension method that returns a collection of elements or attributes. You can write your extension method to return specific subsets of elements or attributes, based on the requirements of your application.  
+# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Instrukcje: pisanie metody osi LINQ to XML (Visual Basic)
+Można napisać własne metody osi, aby pobierać kolekcje z drzewa XML. Najlepszym sposobem, aby to zrobić, jest zapisanie metody rozszerzającej zwracającej kolekcję elementów lub atrybutów. Można napisać metodę rozszerzenia w celu zwrócenia określonych podzbiorów elementów lub atrybutów na podstawie wymagań aplikacji.  
   
 ## <a name="example"></a>Przykład  
- The following example uses two extension methods. The first extension method, `GetXPath`, operates on <xref:System.Xml.Linq.XObject>, and returns an XPath expression that when evaluated will return the node or attribute. The second extension method, `Find`, operates on <xref:System.Xml.Linq.XElement>. It returns a collection of <xref:System.Xml.Linq.XAttribute> objects and <xref:System.Xml.Linq.XElement> objects that contain some specified text.  
+ W poniższym przykładzie zastosowano dwie metody rozszerzenia. Pierwsza metoda rozszerzająca, `GetXPath`, działa na <xref:System.Xml.Linq.XObject>i zwraca wyrażenie XPath, które po obliczeniu zwróci węzeł lub atrybut. Druga metoda rozszerzająca `Find`, działa na <xref:System.Xml.Linq.XElement>. Zwraca kolekcję obiektów <xref:System.Xml.Linq.XAttribute> i <xref:System.Xml.Linq.XElement> obiektów, które zawierają określony tekst.  
   
- This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -217,4 +217,4 @@ End Module
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

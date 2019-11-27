@@ -19,7 +19,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353785"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit — Instrukcja (Visual Basic)
-Forces explicit declaration of all variables in a file, or allows implicit declarations of variables.  
+Wymusza jawną deklarację wszystkich zmiennych w pliku lub zezwala na niejawne deklaracje zmiennych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,38 +29,38 @@ Option Explicit { On | Off }
   
 ## <a name="parts"></a>Części  
  `On`  
- Opcjonalny. Enables `Option Explicit` checking. If `On` or `Off` is not specified, the default is `On`.  
+ Opcjonalna. Włącza sprawdzanie `Option Explicit`. Jeśli nie określono `On` lub `Off`, wartość domyślna to `On`.  
   
  `Off`  
- Opcjonalny. Disables `Option Explicit` checking.  
+ Opcjonalna. Wyłącza sprawdzanie `Option Explicit`.  
   
 ## <a name="remarks"></a>Uwagi  
- When `Option Explicit On` or `Option Explicit` appears in a file, you must explicitly declare all variables by using the `Dim` or `ReDim` statements. If you try to use an undeclared variable name, an error occurs at compile time. The `Option Explicit Off` statement allows implicit declaration of variables.  
+ Gdy `Option Explicit On` lub `Option Explicit` pojawia się w pliku, należy jawnie zadeklarować wszystkie zmienne przy użyciu instrukcji `Dim` lub `ReDim`. Jeśli spróbujesz użyć niezadeklarowanej nazwy zmiennej, wystąpi błąd w czasie kompilacji. Instrukcja `Option Explicit Off` umożliwia niejawną deklarację zmiennych.  
   
- If used, the `Option Explicit` statement must appear in a file before any other source code statements.  
+ Jeśli jest używana, instrukcja `Option Explicit` musi znajdować się w pliku przed wszelkimi innymi instrukcjami kodu źródłowego.  
   
 > [!NOTE]
-> Setting `Option Explicit` to `Off` is generally not a good practice. You could misspell a variable name in one or more locations, which would cause unexpected results when the program is run.  
+> Ustawienie `Option Explicit` na `Off` nie jest ogólnie dobrym sposobem. W co najmniej jednej lokalizacji można wypróbować nazwę zmiennej, co spowodowałoby nieoczekiwane wyniki, gdy program zostanie uruchomiony.  
   
-## <a name="when-an-option-explicit-statement-is-not-present"></a>When an Option Explicit Statement Is Not Present  
- If the source code does not contain an `Option Explicit` statement, the **Option Explicit** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used. If the command-line compiler is used, the [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) compiler option is used.  
+## <a name="when-an-option-explicit-statement-is-not-present"></a>Gdy nie ma instrukcji Option Explicit  
+ Jeśli kod źródłowy nie zawiera instrukcji `Option Explicit`, zostanie użyta **opcja jawne** ustawienia na [stronie kompilowania, projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . Jeśli jest używany kompilator wiersza polecenia, opcja kompilatora [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) jest używana.  
   
-#### <a name="to-set-option-explicit-in-the-ide"></a>To set Option Explicit in the IDE  
+#### <a name="to-set-option-explicit-in-the-ide"></a>Aby ustawić opcję jawną w środowisku IDE  
   
-1. In **Solution Explorer**, select a project. On the **Project** menu, click **Properties**.  
+1. W **Eksplorator rozwiązań**wybierz projekt. W menu **projekt** kliknij polecenie **Właściwości**.  
   
-2. Click the **Compile** tab.  
+2. Kliknij kartę **kompilacja** .  
   
-3. Set the value in the **Option Explicit** box.  
+3. Ustaw wartość w polu **opcja jawna** .  
   
- When you create a new project, the **Option Explicit** setting on the **Compile** tab is set to the **Option Explicit** setting in the **VB Defaults** dialog box. To access the **VB Defaults** dialog box, on the **Tools** menu, click **Options**. In the **Options** dialog box, expand **Projects and Solutions**, and then click **VB Defaults**. The initial default setting in **VB Defaults** is `On`.  
+ Podczas tworzenia nowego projektu **opcja ustawienie jawne** na karcie **kompilowania** jest ustawiona na wartość ustawienie **jawne** w oknie dialogowym **Ustawienia domyślne języka vb** . Aby uzyskać dostęp do okna dialogowego **Ustawienia domyślne VB** , w menu **Narzędzia** kliknij polecenie **Opcje**. W oknie dialogowym **Opcje** rozwiń węzeł **projekty i rozwiązania**, a następnie kliknij pozycję **Ustawienia domyślne w języku VB**. Początkowe domyślne ustawienie w **języku VB** domyślnie jest `On`.  
   
-#### <a name="to-set-option-explicit-on-the-command-line"></a>To set Option Explicit on the command line  
+#### <a name="to-set-option-explicit-on-the-command-line"></a>Aby ustawić opcję jawną w wierszu polecenia  
   
-- Include the [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) compiler option in the **vbc** command.  
+- Dołącz opcję kompilatora [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) w poleceniu **VBC** .  
   
 ## <a name="example"></a>Przykład  
- The following example uses the `Option Explicit` statement to force explicit declaration of all variables. Attempting to use an undeclared variable causes an error at compile time.  
+ Poniższy przykład używa instrukcji `Option Explicit`, aby wymusić jawną deklarację wszystkich zmiennych. Próba użycia niezadeklarowanej zmiennej powoduje błąd w czasie kompilacji.  
   
  [!code-vb[VbVbalrStatements#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#47)]  
   

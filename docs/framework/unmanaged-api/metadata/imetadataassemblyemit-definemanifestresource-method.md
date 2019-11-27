@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432050"
 ---
 # <a name="imetadataassemblyemitdefinemanifestresource-method"></a>IMetaDataAssemblyEmit::DefineManifestResource — Metoda
-Creates a `ManifestResource` structure containing metadata for the specified manifest resource, and returns the associated metadata token.  
+Tworzy strukturę `ManifestResource` zawierającą metadane dla określonego zasobu manifestu i zwraca skojarzony token metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,31 +39,31 @@ HRESULT DefineManifestResource (
   
 ## <a name="parameters"></a>Parametry  
  `szName`  
- [in] The name of the resource.  
+ podczas Nazwa zasobu.  
   
  `tkImplementation`  
- [in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider. A NULL value indicates that the file in which the metadata is embedded is the resource provider.  
+ podczas Token metadanych typu `mdtFile` lub `mdtAssemblyRef`, który jest mapowany do dostawcy zasobów. Wartość NULL wskazuje, że plik, w którym są osadzone metadane, jest dostawcą zasobów.  
   
  `dwOffset`  
- [in] The offset to the beginning of the resource within the file. For resources in standalone files, this will always be zero. If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.  
+ podczas Przesunięcie do początku zasobu w pliku. W przypadku zasobów w plikach autonomicznych zawsze będzie to zero. Jeśli zasób jest osadzony w pliku PE (przenośny plik wykonywalny), jest to przesunięcie obiektu BLOB zasobu, który jest uruchamiany w lokalizacji określonej w pliku nagłówkowym cor. h.  
   
  `dwResourceFlags`  
- [in] A bitwise combination of flag values that specify property settings for the resource definition.  
+ podczas Bitowa kombinacja wartości flag, które określają ustawienia właściwości dla definicji zasobu.  
   
  `pmdmr`  
- [out] A pointer to the returned metadata token.  
+ określoną Wskaźnik do zwracanego tokenu metadanych.  
   
 ## <a name="remarks"></a>Uwagi  
- One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.  
+ Dla każdego zasobu, który jest zaimplementowany w każdym z plików zestawu, musi być zdefiniowana jedna `ManifestResource` Struktura metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

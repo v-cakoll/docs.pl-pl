@@ -23,7 +23,7 @@ ms.locfileid: "74352785"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw — Instrukcja (Visual Basic)
 
-Throws an exception within a procedure.
+Zgłasza wyjątek w ramach procedury.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,22 +31,22 @@ Throws an exception within a procedure.
 Throw [ expression ]
 ```
 
-## <a name="part"></a>Part
+## <a name="part"></a>Części
 
 `expression`\
-Provides information about the exception to be thrown. Optional when residing in a `Catch` statement, otherwise required.
+Zawiera informacje o wyjątku, który ma zostać zgłoszony. Opcjonalne, gdy znajdują się w instrukcji `Catch`, w przeciwnym razie jest to wymagane.
 
 ## <a name="remarks"></a>Uwagi
 
-The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`). You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.
+Instrukcja `Throw` zgłasza wyjątek, który można obsłużyć za pomocą kodu obsługi wyjątków strukturalnych (`Try`...`Catch`...`Finally`) lub kodu obsługi wyjątków bez struktury (`On Error GoTo`). Można użyć instrukcji `Throw`, aby zalewki błędów w kodzie, ponieważ Visual Basic przenosi stos wywołań do momentu znalezienia odpowiedniego kodu obsługi wyjątków.
 
-A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.
+Instrukcji `Throw` bez wyrażenia można używać tylko w instrukcji `Catch`, w takim przypadku instrukcja ponownie zgłasza wyjątek, który jest obecnie obsługiwany przez instrukcję `Catch`.
 
-The `Throw` statement resets the call stack for the `expression` exception. If `expression` is not provided, the call stack is left unchanged. You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.
+Instrukcja `Throw` resetuje stos wywołań dla wyjątku `expression`. Jeśli nie podano `expression`, stos wywołań zostanie pozostawiony bez zmian. Możesz uzyskać dostęp do stosu wywołań dla wyjątku za pomocą właściwości <xref:System.Exception.StackTrace%2A>.
 
 ## <a name="example"></a>Przykład
 
-The following code uses the `Throw` statement to throw an exception:
+Poniższy kod używa instrukcji `Throw`, aby zgłosić wyjątek:
 
 [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
 

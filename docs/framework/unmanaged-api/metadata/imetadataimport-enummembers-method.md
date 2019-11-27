@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447654"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers — Metoda
-Enumerates MemberDef tokens representing members of the specified type.  
+Wylicza tokeny MemberDef reprezentujące składowe określonego typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,40 +39,40 @@ HRESULT EnumMembers (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in. out] Wskaźnik do modułu wyliczającego.  
   
  `cl`  
- [in] A TypeDef token representing the type whose members are to be enumerated.  
+ podczas Token TypeDef reprezentujący typ, którego składowe mają zostać wyliczone.  
   
  `rMembers`  
- [out] The array used to hold the MemberDef tokens.  
+ określoną Tablica użyta do przechowywania tokenów MemberDef.  
   
  `cMax`  
- [in] The maximum size of the `rMembers` array.  
+ podczas Maksymalny rozmiar tablicy `rMembers`.  
   
  `pcTokens`  
- [out] The actual number of MemberDef tokens returned in `rMembers`.  
+ określoną Rzeczywista liczba tokenów MemberDef zwróconych w `rMembers`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers` returned successfully.|  
-|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMembers` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak tokenów MemberDef do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
   
 ## <a name="remarks"></a>Uwagi  
- When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class. It does not return any members that the class inherits, even if the class provides an implementation for those inherited members. To enumerate inherited members, the caller must explicitly walk the inheritance chain. Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.
+ Podczas wyliczania kolekcji elementów członkowskich klasy `EnumMembers` zwraca tylko elementy członkowskie (pola i metody, ale **nie** właściwości ani zdarzenia) zdefiniowane bezpośrednio w klasie. Nie zwraca żadnych elementów członkowskich, które dziedziczy Klasa, nawet jeśli Klasa dostarcza implementację dla tych dziedziczonych elementów członkowskich. Aby wyliczyć dziedziczone elementy członkowskie, obiekt wywołujący musi jawnie przeprowadzić łańcuch dziedziczenia. Należy zauważyć, że reguły dla łańcucha dziedziczenia mogą się różnić w zależności od języka lub kompilatora, który emituje oryginalne metadane.
  
- Properties and events are not enumerated by `EnumMembers`. To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).
+ Właściwości i zdarzenia nie są wyliczane przez `EnumMembers`. Aby wyliczyć te, użyj [EnumProperties —](imetadataimport-enumproperties-method.md) lub [EnumEvents —](imetadataimport-enumevents-method.md).
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

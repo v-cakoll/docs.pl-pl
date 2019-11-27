@@ -17,22 +17,22 @@ ms.locfileid: "74347173"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Porady: konwertowanie ciągów szestnastkowych na numery (Visual Basic)
 
-This example converts a hexadecimal string to an integer using the <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> method.
+Ten przykład konwertuje ciąg szesnastkowy na liczbę całkowitą przy użyciu metody <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>.
 
-## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>To convert a hexadecimal string to a number
+## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Aby skonwertować ciąg szesnastkowy na liczbę
 
-- Use the <xref:System.Convert.ToInt32(System.String,System.Int32)> method to convert the number expressed in base-16 to an integer.
+- Użyj metody <xref:System.Convert.ToInt32(System.String,System.Int32)>, aby skonwertować liczbę wyrażoną w podstawie od 16 do liczbę całkowitą.
 
-  The first argument of the <xref:System.Convert.ToInt32(System.String,System.Int32)> method is the string to convert. The second argument describes what base the number is expressed in; hexadecimal is base 16.
+  Pierwszym argumentem metody <xref:System.Convert.ToInt32(System.String,System.Int32)> jest ciąg do przekonwertowania. Drugi argument określa podstawę, w której jest wyrażona liczba; szesnastkowa to 16.
 
   [!code-vb[VbVbalrStrings#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#62)]
 
-- Note that the hexadecimal string has the following restrictions:
+- Należy pamiętać, że ciąg szesnastkowy ma następujące ograniczenia:
 
-  - It cannot include the `&h` prefix.
-  - It cannot include the `_` digit separator.
+  - Nie może zawierać prefiksu `&h`.
+  - Nie może zawierać separatora cyfr `_`.
 
-  If the prefix or a digit separator is present, the call to the <xref:System.Convert.ToInt32(System.String,System.Int32)> method throws a <xref:System.FormatException>.
+  Jeśli jest obecny prefiks lub separator cyfr, wywołanie metody <xref:System.Convert.ToInt32(System.String,System.Int32)> zgłasza <xref:System.FormatException>.
 
 ## <a name="see-also"></a>Zobacz także
 

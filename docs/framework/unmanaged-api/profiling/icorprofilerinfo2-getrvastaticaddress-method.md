@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433022"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress — Metoda
-Gets the address of the specified relative virtual address (RVA) static field.  
+Pobiera adres określonego pola statycznego adresu wirtualnego (RVA).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,31 +36,31 @@ HRESULT GetRVAStaticAddress(
   
 ## <a name="parameters"></a>Parametry  
  `classId`  
- [in] The ID of the class that contains the requested RVA-static field.  
+ podczas Identyfikator klasy zawierającej żądany adres RVA-static.  
   
  `fieldToken`  
- [in] Metadata token for the requested RVA-static field.  
+ podczas Token metadanych dla żądanego pola RVA-static.  
   
  `ppAddress`  
- [out] A pointer to the address of the RVA-static field.  
+ określoną Wskaźnik do adresu pola statycznego RVA.  
   
 ## <a name="remarks"></a>Uwagi  
- The `GetRVAStaticAddress` method may return one of the following:  
+ Metoda `GetRVAStaticAddress` może zwracać jedną z następujących wartości:  
   
-- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
+- CORPROF_E_DATAINCOMPLETE HRESULT, jeśli podane pole statyczne nie ma przypisanego adresu w określonym kontekście.  
   
-- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
+- Adresy obiektów, które mogą znajdować się w stercie wyrzucania elementów bezużytecznych. Te adresy mogą stać się nieprawidłowe po wyrzucaniu elementów bezużytecznych, więc po wybraniu elementów bezużytecznych nie należy zakładać, że są one poprawne.  
   
- Before a class’s class constructor is completed, `GetRVAStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and may be rooting garbage collection objects.  
+ Przed ukończeniem konstruktora klasy klasy `GetRVAStaticAddress` zwróci CORPROF_E_DATAINCOMPLETE dla wszystkich pól statycznych, chociaż niektóre pola statyczne mogą już być zainicjowane i mogą być obiektami głównymi wyrzucania elementów bezużytecznych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

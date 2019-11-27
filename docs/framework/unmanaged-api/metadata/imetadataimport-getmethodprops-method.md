@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437465"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>IMetaDataImport::GetMethodProps — Metoda
-Gets the metadata associated with the method referenced by the specified MethodDef token.  
+Pobiera metadane skojarzone z metodą przywoływaną przez określony token MethodDef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,43 +44,43 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>Parametry  
  `mb`  
- [in] The MethodDef token that represents the method to return metadata for.  
+ podczas Token MethodDef reprezentujący metodę zwrócenia metadanych dla.  
   
  `pClass`  
- [out] A Pointer to a TypeDef token that represents the type that implements the method.  
+ określoną Wskaźnik do tokenu TypeDef, który reprezentuje typ implementujący metodę.  
   
  `szMethod`  
- [out] A Pointer to a buffer that has the method's name.  
+ określoną Wskaźnik do buforu, który ma nazwę metody.  
   
  `cchMethod`  
- [in] The requested size of `szMethod`.  
+ podczas Żądany rozmiar `szMethod`.  
   
  `pchMethod`  
- [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
+ określoną Wskaźnik do rozmiaru w szerokich znakach `szMethod`lub w przypadku obcinania, rzeczywista liczba znaków dwubajtowych w nazwie metody.  
   
  `pdwAttr`  
- [out] A pointer to any flags associated with the method.  
+ określoną Wskaźnik do wszystkich flag skojarzonych z metodą.  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the method.  
+ określoną Wskaźnik do binarnego podpisu metadanych metody.  
   
  `pcbSigBlob`  
- [out] A Pointer to the size in bytes of `ppvSigBlob`.  
+ określoną Wskaźnik do rozmiaru w bajtach `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the method.  
+ określoną Wskaźnik do względnego adresu wirtualnego metody.  
   
  `pdwImplFlags`  
- [out] A pointer to any implementation flags for the method.  
+ określoną Wskaźnik do dowolnych flag implementacji dla metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

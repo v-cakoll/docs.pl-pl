@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448308"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>ISymUnmanagedReader::GetDocumentVersion — Metoda
-Gets the specified version of the specified document. The document version starts at 1 and is incremented each time the document is updated using the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method. If the `pbCurrent` parameter is `true`, this is the latest version of the document.  
+Pobiera określoną wersję określonego dokumentu. Wersja dokumentu zaczyna się od 1 i jest zwiększana za każdym razem, gdy dokument zostanie zaktualizowany przy użyciu metody [UpdateSymbolStore —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) . Jeśli parametr `pbCurrent` jest `true`, jest to Najnowsza wersja dokumentu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,19 +36,19 @@ HRESULT GetDocumentVersion (
   
 ## <a name="parameters"></a>Parametry  
  `pDoc`  
- [in] The specified document.  
+ podczas Określony dokument.  
   
  `version`  
- [out] A pointer to a variable that receives the version of the specified document.  
+ określoną Wskaźnik do zmiennej, która otrzymuje wersję określonego dokumentu.  
   
  `pbCurrent`  
- [out] A pointer to a variable that receives `true` if this is the latest version of the document, or `false` if it isn't the latest version.  
+ określoną Wskaźnik do zmiennej, która otrzymuje `true`, jeśli jest to Najnowsza wersja dokumentu lub `false`, jeśli nie jest to Najnowsza wersja.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

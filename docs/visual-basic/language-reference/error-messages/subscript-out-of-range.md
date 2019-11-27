@@ -12,11 +12,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350796"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a>Indeks dolny spoza zakresu (Visual Basic)
-An array subscript is not valid because it falls outside the allowable range. The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.  
+Indeks dolny tablicy jest nieprawidłowy, ponieważ znajduje się poza dozwolonym zakresem. Najniższa wartość indeksu dolnego dla wymiaru jest zawsze równa 0, a najwyższa wartość dolnego indeksu jest zwracana przez metodę `GetUpperBound` dla tego wymiaru.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Change the subscript so it falls within the valid range.  
+- Zmień indeks dolny tak, aby mieścił się w prawidłowym zakresie.  
   
 ## <a name="see-also"></a>Zobacz także
 

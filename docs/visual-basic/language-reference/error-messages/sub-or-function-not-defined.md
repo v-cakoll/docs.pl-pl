@@ -12,23 +12,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349576"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Procedura lub funkcja nie jest zdefiniowana
-A `Sub` or `Function` must be defined in order to be called. Possible causes of this error include:  
+Aby można było wywołać `Sub` lub `Function`. Możliwe przyczyny tego błędu to:  
   
-- Misspelling the procedure name.  
+- Błędna pisownia nazwy procedury.  
   
-- Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.  
+- Próba wywołania procedury z innego projektu bez jawnego dodania odwołania do tego projektu w oknie dialogowym **odwołania** .  
   
-- Specifying a procedure that is not visible to the calling procedure.  
+- Określanie procedury, która nie jest widoczna dla procedury wywołującej.  
   
-- Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.  
+- Deklarowanie procedury biblioteki dołączanej dynamicznie (DLL) systemu Windows lub procedury kodu dla systemu Macintosh, która nie znajduje się w określonej bibliotece lub zasobie kodu.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Make sure that the procedure name is spelled correctly.  
+1. Upewnij się, że nazwa procedury jest wpisana poprawnie.  
   
-2. Find the name of the project containing the procedure you want to call in the **References** dialog box. If it does not appear, click the **Browse** button to search for it. Select the check box to the left of the project name, and then click **OK**.  
+2. Znajdź nazwę projektu zawierającego procedurę, która ma zostać wywołana, w oknie dialogowym **odwołania** . Jeśli nie jest wyświetlany, kliknij przycisk **Przeglądaj** , aby go wyszukać. Zaznacz pole wyboru po lewej stronie nazwy projektu, a następnie kliknij przycisk **OK**.  
   
-3. Check the name of the routine.  
+3. Sprawdź nazwę procedury.  
   
 ## <a name="see-also"></a>Zobacz także
 

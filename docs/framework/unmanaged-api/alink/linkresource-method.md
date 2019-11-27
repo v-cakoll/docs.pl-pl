@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445628"
 ---
 # <a name="linkresource-method"></a>LinkResource — Metoda
-Links in a resource.  
+Linki w zasobie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,25 +38,25 @@ HRESULT LinkResource(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- ID of the assembly.  
+ Identyfikator zestawu.  
   
  `pszFileName`  
- Name of the file.  
+ Nazwa pliku.  
   
  `pszNewLocation`  
- Optional new file name. If non-NULL, `pszFileName` will be copied to pszNewLocation.  
+ Opcjonalna nazwa nowego pliku. Jeśli wartość nie jest równa NULL, `pszFileName` zostanie skopiowana do pszNewLocation.  
   
  `pszResourceName`  
- Name of the resource.  
+ Nazwa zasobu.  
   
  `dwFlags`  
- Accessibility flags such as `mrPublic` and `mrPrivate`. This parameter may be passed to [DefineManifestResource Method](../metadata/imetadataassemblyemit-definemanifestresource-method.md).  
+ Flagi ułatwień dostępu, takie jak `mrPublic` i `mrPrivate`. Ten parametr może być przesłany do [metody DefineManifestResource —](../metadata/imetadataassemblyemit-definemanifestresource-method.md).  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Returns S_OK if the method succeeds.  
+ Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- Requires alink.h.  
+ Wymaga Alink. h.  
   
 ## <a name="see-also"></a>Zobacz także
 

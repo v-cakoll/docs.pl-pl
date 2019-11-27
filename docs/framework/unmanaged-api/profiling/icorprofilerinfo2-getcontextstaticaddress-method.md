@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433203"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>ICorProfilerInfo2::GetContextStaticAddress — Metoda
-Gets the address for the specified context-static field that is in the scope of the specified context.  
+Pobiera adres dla określonego kontekstu-static pola, które znajduje się w zakresie określonego kontekstu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,34 +37,34 @@ HRESULT GetContextStaticAddress(
   
 ## <a name="parameters"></a>Parametry  
  `classId`  
- [in] The ID of the class that contains the requested context-static field.  
+ podczas Identyfikator klasy, która zawiera wymagane pole kontekstu-static.  
   
  `fieldToken`  
- [in] The metadata token for the requested context-static field.  
+ podczas Token metadanych dla żądanego pola kontekstu-static.  
   
  `contextId`  
- [in] The ID of the context that is the scope for the requested context-static field.  
+ podczas Identyfikator kontekstu, który jest zakresem dla żądanego pola kontekstowego.  
   
  `ppAddress`  
- [out] A pointer to the address of the static field that is within the specified context.  
+ określoną Wskaźnik do adresu pola statycznego znajdującego się w określonym kontekście.  
   
 ## <a name="remarks"></a>Uwagi  
- The `GetContextStaticAddress` method may return one of the following:  
+ Metoda `GetContextStaticAddress` może zwracać jedną z następujących wartości:  
   
-- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
+- CORPROF_E_DATAINCOMPLETE HRESULT, jeśli podane pole statyczne nie ma przypisanego adresu w określonym kontekście.  
   
-- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
+- Adresy obiektów, które mogą znajdować się w stercie wyrzucania elementów bezużytecznych. Te adresy mogą stać się nieprawidłowe po wyrzucaniu elementów bezużytecznych, więc po wybraniu elementów bezużytecznych nie należy zakładać, że są one poprawne.  
   
- Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
+ Przed ukończeniem konstruktora klasy klasy, `GetContextStaticAddress` zwróci CORPROF_E_DATAINCOMPLETE dla wszystkich jego pól statycznych, chociaż niektóre pola statyczne mogą już być zainicjowane i główne obiekty wyrzucania elementów bezużytecznych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -34,52 +34,52 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350042"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Porady: definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych (Visual Basic)
-You can define a class from which you can create objects that provide identical functionality on different data types. To do this, you specify one or more *type parameters* in the definition. The class can then serve as a template for objects that use various data types. A class defined in this way is called a *generic class*.  
+Można zdefiniować klasę, z której można tworzyć obiekty, które zapewniają identyczną funkcjonalność dla różnych typów danych. W tym celu należy określić co najmniej jeden *parametr typu* w definicji. Klasa może następnie służyć jako szablon dla obiektów, które używają różnych typów danych. Klasa zdefiniowana w ten sposób jest nazywana *klasą generyczną*.  
   
- The advantage of defining a generic class is that you define it just once, and your code can use it to create many objects that use a wide variety of data types. This results in better performance than defining the class with the `Object` type.  
+ Zaletą zdefiniowania klasy generycznej jest to, że definiujesz ją tylko raz, a Twój kod może używać go do tworzenia wielu obiektów, które używają szerokiej gamy typów danych. Skutkuje to lepszą wydajnością niż Definiowanie klasy przy użyciu typu `Object`.  
   
- In addition to classes, you can also define and use generic structures, interfaces, procedures, and delegates.  
+ Oprócz klas można także definiować struktury ogólne, interfejsy, procedury i Delegaty oraz korzystać z nich.  
   
-### <a name="to-define-a-class-with-a-type-parameter"></a>To define a class with a type parameter  
+### <a name="to-define-a-class-with-a-type-parameter"></a>Aby zdefiniować klasę z parametrem typu  
   
-1. Define the class in the normal way.  
+1. Zdefiniuj klasę w normalny sposób.  
   
-2. Add `(Of` *typeparameter*`)` immediately after the class name to specify a type parameter.  
+2. Dodaj `(Of` *typeparameter*`)` natychmiast po nazwie klasy, aby określić parametr typu.  
   
-3. If you have more than one type parameter, make a comma-separated list inside the parentheses. Do not repeat the `Of` keyword.  
+3. Jeśli masz więcej niż jeden parametr typu, Utwórz listę rozdzieloną przecinkami wewnątrz nawiasów. Nie powtarzaj słowa kluczowego `Of`.  
   
-4. If your code performs operations on a type parameter other than simple assignment, follow that type parameter with an `As` clause to add one or more *constraints*. A constraint guarantees that the type supplied for that type parameter satisfies a requirement such as the following:  
+4. Jeśli kod wykonuje operacje na parametrze typu innym niż proste przypisanie, należy użyć tego parametru typu z klauzulą `As`, aby dodać jedno lub więcej *ograniczeń*. Ograniczenie gwarantuje, że typ dostarczony dla tego parametru typu spełnia wymagania, takie jak następujące:  
   
-    - Supports an operation, such as `>`, that your code performs  
+    - Obsługuje operacje, takie jak `>`, wykonywane przez kod  
   
-    - Supports a member, such as a method, that your code accesses  
+    - Obsługuje składową, taką jak metoda, do której uzyskuje dostęp kod  
   
-    - Exposes a parameterless constructor  
+    - Uwidacznia Konstruktor bez parametrów  
   
-     If you do not specify any constraints, the only operations and members your code can use are those supported by the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). For more information, see [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
+     Jeśli nie określisz żadnych ograniczeń, jedyną operacją i elementami członkowskimi, które mogą być używane przez dany kod, są te obsługiwane przez [Typ danych Object](../../../../visual-basic/language-reference/data-types/object-data-type.md). Aby uzyskać więcej informacji, zobacz [Typ listy](../../../../visual-basic/language-reference/statements/type-list.md).  
   
-5. Identify every class member that is to be declared with a supplied type, and declare it `As` `typeparameter`. This applies to internal storage, procedure parameters, and return values.  
+5. Zidentyfikuj każdy element członkowski klasy, który ma zostać zadeklarowany przy użyciu dostarczonego typu, i Zadeklaruj go `As` `typeparameter`. Dotyczy to magazynu wewnętrznego, parametrów procedury i zwracanych wartości.  
   
-6. Be sure your code uses only operations and methods that are supported by any data type it can supply to `itemType`.  
+6. Upewnij się, że kod używa tylko operacji i metod, które są obsługiwane przez dowolny typ danych, który może dostarczyć `itemType`.  
   
-     The following example defines a class that manages a very simple list. It holds the list in the internal array `items`, and the using code can declare the data type of the list elements. A parameterized constructor allows the using code to set the upper bound of `items`, and the parameterless constructor sets this to 9 (for a total of 10 items).  
+     W poniższym przykładzie zdefiniowano klasę, która zarządza prostą listą. Zawiera listę w tablicy wewnętrznej `items`, a kod przy użyciu może deklarować typ danych elementów listy. Konstruktor sparametryzowany umożliwia użycie kodu w celu ustawienia górnej granicy `items`, a Konstruktor bez parametrów ustawia tę wartość na 9 (łącznie 10 elementów).  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
-     You can declare a class from `simpleList` to hold a list of `Integer` values, another class to hold a list of `String` values, and another to hold `Date` values. Except for the data type of the list members, objects created from all these classes behave identically.  
+     Można zadeklarować klasę z `simpleList` do przechowywania listy wartości `Integer`, innej klasy do przechowywania listy wartości `String` i innego do przechowywania wartości `Date`. Z wyjątkiem typu danych członków listy obiekty utworzone na podstawie wszystkich tych klas zachowują się identycznie.  
   
-     The type argument that the using code supplies to `itemType` can be an intrinsic type such as `Boolean` or `Double`, a structure, an enumeration, or any type of class, including one that your application defines.  
+     Argument typu, który jest używany przez kod, do `itemType` może być typem wewnętrznym, takim jak `Boolean` lub `Double`, strukturą, wyliczeniem lub dowolnym typem klasy, włącznie z tym, że aplikacja definiuje.  
   
-     You can test the class `simpleList` with the following code.  
+     Możesz przetestować klasę `simpleList` przy użyciu następującego kodu.  
   
      [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Niezależność od języka i składniki niezależne od języka](../../../../standard/language-independence-and-language-independent-components.md)
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [Z](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [Lista typów](../../../../visual-basic/language-reference/statements/type-list.md)
 - [Instrukcje: używanie klasy ogólnej](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)

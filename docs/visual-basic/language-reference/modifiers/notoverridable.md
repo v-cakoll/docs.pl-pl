@@ -24,24 +24,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351443"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
-Specifies that a property or procedure cannot be overridden in a derived class.  
+Określa, że właściwość lub procedura nie może zostać zastąpiona w klasie pochodnej.  
   
 ## <a name="remarks"></a>Uwagi  
- The `NotOverridable` modifier prevents a property or method from being overridden in a derived class.  The [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) modifier allows a property or method in a class to be overridden in a derived class. For more information, see [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+ Modyfikator `NotOverridable` uniemożliwia przesłanianie właściwości lub metody w klasie pochodnej.  Modyfikator [, który umożliwia](../../../visual-basic/language-reference/modifiers/overridable.md) zastąpienie właściwości lub metody w klasie klasy pochodnej. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [dziedziczeniu](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method. If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.  
+ Jeśli nie określono modyfikatora `Overridable` lub `NotOverridable`, domyślne ustawienie zależy od tego, czy właściwość lub metoda przesłania właściwość lub metodę klasy bazowej. Jeśli właściwość lub metoda przesłania właściwość lub metodę klasy bazowej, ustawienie domyślne to `Overridable`; w przeciwnym razie jest `NotOverridable`.  
   
- An element that cannot be overridden is sometimes called a *sealed* element.  
+ Element, który nie może zostać zastąpiony, jest czasami nazywany *zapieczętowanym* elementem.  
   
- You can use `NotOverridable` only in a property or procedure declaration statement. You can specify `NotOverridable` only on a property or procedure that overrides another property or procedure, that is, only in combination with `Overrides`.  
+ `NotOverridable` można użyć tylko w instrukcji deklaracji właściwości lub procedury. `NotOverridable` można określić tylko w przypadku właściwości lub procedury, która zastępuje inną właściwość lub procedurę, czyli tylko w połączeniu z `Overrides`.  
   
-## <a name="combined-modifiers"></a>Combined Modifiers  
- You cannot specify `Overridable` or `NotOverridable` for a `Private` method.  
+## <a name="combined-modifiers"></a>Połączone Modyfikatory  
+ Nie można określić `Overridable` lub `NotOverridable` dla metody `Private`.  
   
- You cannot specify `NotOverridable` together with `MustOverride`, `Overridable`, or `Shared` in the same declaration.  
+ Nie można określić `NotOverridable` razem z `MustOverride`, `Overridable`lub `Shared` w tej samej deklaracji.  
   
-## <a name="usage"></a>Użycie  
- The `NotOverridable` modifier can be used in these contexts:  
+## <a name="usage"></a>Sposób użycia  
+ Modyfikator `NotOverridable` może być używany w tych kontekstach:  
   
  [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
   
@@ -57,4 +57,4 @@ Specifies that a property or procedure cannot be overridden in a derived class.
 - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Obserwowanie w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

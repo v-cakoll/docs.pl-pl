@@ -10,143 +10,143 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444233"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Zintegrowane uwierzytelnianie systemu Windows z ochroną rozszerzoną
-Enhancements were made that affect how integrated Windows authentication is handled by the <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, and related classes in the <xref:System.Net> and related namespaces. Support was added for extended protection to enhance security.  
+Wprowadzono ulepszenia, które mają wpływ na sposób obsługi zintegrowanego uwierzytelniania systemu Windows przez <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>i powiązane klasy w <xref:System.Net> i powiązanych przestrzeniach nazw. Dodano obsługę rozszerzonej ochrony w celu zwiększenia bezpieczeństwa.  
   
- These changes can affect applications that use these classes to make web requests and receive responses where integrated Windows authentication is used. This change can also impact web servers and client applications that are configured to use integrated Windows authentication.  
+ Te zmiany mogą mieć wpływ na aplikacje, które używają tych klas do żądania sieci Web i uzyskiwania odpowiedzi w przypadku używania zintegrowanego uwierzytelniania systemu Windows. Ta zmiana może również mieć wpływ na serwery sieci Web i aplikacje klienckie, które są skonfigurowane do korzystania ze zintegrowanego uwierzytelniania systemu Windows.  
   
- These changes can also affect applications that use these classes to make other types of requests and receive responses where integrated Windows authentication is used.  
+ Te zmiany mogą również wpływać na aplikacje, które używają tych klas do podejmowania innych typów żądań i odbierać odpowiedzi, w przypadku których używane jest zintegrowane uwierzytelnianie systemu Windows.  
   
- The changes to support extended protection are available only for applications on Windows 7 and Windows Server 2008 R2. The extended protection features are not available on earlier versions of Windows.  
+ Zmiany w celu obsługi ochrony rozszerzonej są dostępne tylko dla aplikacji w systemach Windows 7 i Windows Server 2008 R2. Funkcje ochrony rozszerzonej nie są dostępne we wcześniejszych wersjach systemu Windows.  
   
-## <a name="overview"></a>Omówienie  
- The design of integrated Windows authentication allows for some credential challenge responses to be universal, meaning they can be re-used or forwarded. The challenge responses should be constructed at a minimum with target specific information and preferably also with some channel specific information. Services can then provide extended protection to ensure that credential challenge responses contain service specific information such as a Service Principal Name (SPN). With this information in the credential exchanges, services are able to better protect against malicious use of credential challenge responses that might have been improperly used.  
+## <a name="overview"></a>Przegląd  
+ Projektowanie zintegrowanego uwierzytelniania systemu Windows pozwala na uniwersalne odpowiedzi na żądania poświadczeń, co oznacza, że mogą być ponownie używane lub przekazywane. Odpowiedzi na wezwanie powinny być zbudowane co najmniej z konkretnymi informacjami docelowymi, a najlepiej z pewnymi informacjami specyficznymi dla kanału. Następnie usługi mogą zapewnić ochronę rozszerzoną w celu zapewnienia, że odpowiedzi na wezwania na żądania zawierają informacje specyficzne dla usługi, takie jak główna nazwa usługi (SPN). Dzięki tym informacjom w wymianie poświadczeń usługi są w stanie lepiej chronić przed złośliwym użyciem odpowiedzi na wyzwania, które mogły zostać nieprawidłowo użyte.  
   
- The extended protection design is an enhancement to authentication protocols designed to mitigate authentication relay attacks. It revolves around the concept of channel and service binding information.  
+ Zaprojektowana Ochrona rozszerzona to rozszerzenie protokołów uwierzytelniania zaprojektowanych w celu ograniczenia ataków przekazujących uwierzytelnienie. Koncentruje się na koncepcji informacji o powiązaniach kanału i usługi.  
   
- The overall objectives are the following:  
+ Ogólne cele są następujące:  
   
-1. If the client is updated to support the extended protection, applications should supply a channel binding and service binding information to all supported authentication protocols. Channel binding information can only be supplied when there is a channel (TLS) to bind to. Service binding information should always be supplied.  
+1. Jeśli klient został zaktualizowany do obsługi rozszerzonej ochrony, aplikacje powinny dostarczyć powiązanie kanału i informacje o powiązaniu usługi do wszystkich obsługiwanych protokołów uwierzytelniania. Informacje o powiązaniu kanału można podać tylko wtedy, gdy istnieje kanał (TLS), z którym ma zostać utworzone powiązanie. Należy zawsze podać informacje o powiązaniu usługi.  
   
-2. Updated servers which are properly configured may verify the channel and service binding information when it is present in the client authentication token and reject the authentication attempt if the channel bindings do not match. Depending on the deployment scenario, servers may verify channel binding, service binding or both.  
+2. Zaktualizowane serwery, które są prawidłowo skonfigurowane, mogą weryfikować informacje o powiązaniach kanału i usługi, gdy są obecne w tokenie uwierzytelniania klienta i odrzucać próbę uwierzytelnienia, jeśli powiązania kanałów nie są zgodne. W zależności od scenariusza wdrażania serwery mogą weryfikować powiązanie kanałów, powiązanie usługi lub oba te elementy.  
   
-3. Updated servers have the ability to accept or reject down-level client requests that do not contain the channel binding information based on policy.  
+3. Zaktualizowane serwery mogą akceptować lub odrzucać żądania klientów niższego poziomu, które nie zawierają informacji o powiązaniach kanałów opartych na zasadach.  
   
- Information used by extended protection consists of one or both of the following two parts:  
+ Informacje używane przez ochronę rozszerzoną składają się z jednej lub obu następujących dwóch części:  
   
-1. A Channel Binding Token or CBT.  
+1. Token powiązania kanału lub CBT.  
   
-2. Service Binding information in the form of a Service Principal Name or SPN.  
+2. Informacje o powiązaniu usługi w postaci nazwy głównej usługi lub SPN.  
   
- Service Binding information is an indication of a client’s intent to authenticate to a particular service endpoint. It is communicated from client to server with the following properties:  
+ Informacje o powiązaniu usługi to wskaźnik zamiaru klienta do uwierzytelnienia w określonym punkcie końcowym usługi. Jest on przekazywany z klienta do serwera z następującymi właściwościami:  
   
-- The SPN value must be available to the server performing client authentication in clear text form.  
+- Wartość SPN musi być dostępna dla serwera wykonującego uwierzytelnianie klienta w postaci zwykłego tekstu.  
   
-- The value of the SPN is public.  
+- Wartość SPN jest publiczna.  
   
-- The SPN must be cryptographically protected in transit such that a man-in-the-middle attack cannot insert, remove or modify its value.  
+- Nazwa SPN musi być chroniona kryptograficznie w tranzycie, tak że atak typu man-in-the-Middle nie może wstawiać, usuwać ani modyfikować jego wartości.  
   
- A CBT is a property of the outer secure channel (such as TLS) used to tie (bind) it to a conversation over an inner, client-authenticated channel. The CBT must have the following properties (also defined by IETF RFC 5056):  
+ CBT to właściwość zewnętrznego bezpiecznego kanału (na przykład protokołu TLS) służąca do wiązania powiązania z konwersacją w ramach wewnętrznego, uwierzytelnionego przez klienta kanału. CBT musi mieć następujące właściwości (również zdefiniowane przez grupę IETF RFC 5056):  
   
-- When an outer channel exists, the value of the CBT must be a property identifying either the outer channel or the server endpoint, independently arrived at by both client and server sides of a conversation.  
+- Gdy istnieje kanał zewnętrzny, wartość CBT musi być właściwością identyfikującą kanał zewnętrzny lub punkt końcowy serwera, niezależnie od tego, że nastąpi zarówno po stronie klienta, jak i serwera.  
   
-- Value of the CBT sent by the client must not be something an attacker can influence.  
+- Wartość CBT wysyłanej przez klienta nie może być elementem, którego może mieć osoba atakująca.  
   
-- No guarantees are made about secrecy of the CBT value. This does not however mean that the value of the service binding as well as channel binding information can always be examined by any other but the server performing authentication, as the protocol carrying the CBT may be encrypting it.  
+- Nie są wykonywane żadne gwarancje dotyczące tajemnicy wartości CBT. Nie oznacza to jednak, że wartość powiązania usługi oraz informacje o powiązaniu kanału mogą być zawsze badane przez inne, ale serwer wykonujący uwierzytelnianie, ponieważ protokół z CBT może być szyfrowany.  
   
-- The CBT must be cryptographically integrity protected in transit such that an attacker cannot insert, remove or modify its value.  
+- CBT musi być chroniona kryptograficznie integralności w tranzycie, co oznacza, że osoba atakująca nie może wstawić, usunąć ani zmodyfikować jej wartości.  
   
- Channel binding is accomplished by the client transferring the SPN and the CBT to the server in a tamperproof fashion. The server validates the channel binding information in accordance with its policy and rejects authentication attempts for which it does not believe itself to have been the intended target. This way, the two channels become cryptographically bound together.  
+ Powiązanie kanału jest realizowane przez klienta przekazującego nazwę SPN i CBT do serwera w Tamperproof sposób. Serwer sprawdza poprawność informacji o powiązaniach kanału zgodnie z zasadami i odrzuca próby uwierzytelniania, dla których nie jest to zamierzony cel. Dzięki temu dwa kanały stają się kryptograficznie powiązane ze sobą.  
   
- To preserve compatibility with existing clients and applications, a server may be configured to allow authentication attempts by clients that do not yet support extended protection. This is referred to as a "partially hardened" configuration, in contrast to a "fully hardened" configuration.  
+ Aby zachować zgodność z istniejącymi klientami i aplikacjami, serwer można skonfigurować tak, aby zezwalał na próby uwierzytelniania klientów, którzy jeszcze nie obsługują ochrony rozszerzonej. Jest to nazywane "częściowo zaostrzoną" konfiguracją w przeciwieństwie do konfiguracji "w pełni wzmocnionej".  
   
- Multiple components in the <xref:System.Net> and <xref:System.Net.Security> namespaces perform integrated Windows authentication on behalf of a calling application. This section describes changes to System.Net components to add extended protection in their use of integrated Windows authentication.  
+ Wiele składników w <xref:System.Net> i <xref:System.Net.Security> przestrzenie nazw wykonuje zintegrowane uwierzytelnianie systemu Windows w imieniu aplikacji wywołującej. W tej sekcji opisano zmiany w składnikach System.Net w celu dodania ochrony rozszerzonej przy użyciu zintegrowanego uwierzytelniania systemu Windows.  
   
- Extended protection is currently supported on Windows 7. A mechanism is provided so an application can determine if the operating system supports extended protection.  
+ Ochrona rozszerzona jest obecnie obsługiwana w systemie Windows 7. Zapewnia mechanizm, aby aplikacja mogła określić, czy system operacyjny obsługuje ochronę rozszerzoną.  
   
-## <a name="changes-to-support-extended-protection"></a>Changes to Support Extended Protection  
- The authentication process used with integrated Windows authentication, depending on the authentication protocol used, often includes a challenge issued by the destination computer and sent back to the client computer. Extended protection adds new features to this authentication process  
+## <a name="changes-to-support-extended-protection"></a>Zmiany w celu obsługi ochrony rozszerzonej  
+ Proces uwierzytelniania używany z zintegrowanym uwierzytelnianiem systemu Windows, w zależności od używanego protokołu uwierzytelniania, często zawiera wyzwanie wystawione przez komputer docelowy i wysłane z powrotem do komputera klienckiego. Ochrona rozszerzona dodaje nowe funkcje do tego procesu uwierzytelniania  
   
- The <xref:System.Security.Authentication.ExtendedProtection> namespace provides support for authentication using extended protection for applications. The <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> class in this namespace represents a channel binding. The <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> class in this namespace represents the extended protection policy used by the server to validate incoming client connections. Other class members are used with extended protection.  
+ Przestrzeń nazw <xref:System.Security.Authentication.ExtendedProtection> zapewnia obsługę uwierzytelniania przy użyciu rozszerzonej ochrony aplikacji. Klasa <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> w tej przestrzeni nazw reprezentuje powiązanie kanału. Klasa <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> w tej przestrzeni nazw reprezentuje zasady ochrony rozszerzonej używane przez serwer do weryfikacji przychodzących połączeń klienta. Inne elementy członkowskie klasy są używane z rozszerzoną ochroną.  
   
- For server applications, these classes include the following:  
+ W przypadku aplikacji serwerowych następujące klasy obejmują:  
   
- A <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> that has the following elements:  
+ <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>, który ma następujące elementy:  
   
-- An <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> property that indicates whether the operating system supports integrated windows authentication with extended protection.  
+- Właściwość <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A>, która wskazuje, czy system operacyjny obsługuje zintegrowane uwierzytelnianie systemu Windows z rozszerzoną ochroną.  
   
-- A <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> value that indicates when the extended protection policy should be enforced.  
+- Wartość <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement>, która wskazuje, kiedy należy wymusić zasady ochrony rozszerzonej.  
   
-- A <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> value that indicates the deployment scenario. This influences how extended protection is checked.  
+- Wartość <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario>, która wskazuje na scenariusz wdrażania. Ma to wpływ na sposób sprawdzania ochrony rozszerzonej.  
   
-- An optional <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection> that contains the custom SPN list that is used to match against the SPN provided by the client as the intended target of the authentication.  
+- Opcjonalna <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection>, która zawiera listę niestandardowych nazw SPN, która jest używana do dopasowania do nazwy SPN dostarczonej przez klienta jako zamierzonego celu uwierzytelniania.  
   
-- An optional <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> that contains a custom channel binding to use for validation. This scenario is not a common case  
+- Opcjonalna <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding>, która zawiera niestandardowe powiązanie kanałów do użycia na potrzeby walidacji. Ten scenariusz nie jest powszechnym przypadkiem  
   
- The <xref:System.Security.Authentication.ExtendedProtection.Configuration> namespace provides support for configuration of authentication using extended protection for applications.  
+ Przestrzeń nazw <xref:System.Security.Authentication.ExtendedProtection.Configuration> zapewnia obsługę konfiguracji uwierzytelniania przy użyciu rozszerzonej ochrony aplikacji.  
   
- A number of feature changes were made to support extended protection in the existing <xref:System.Net> namespace. These changes include the following:  
+ Wprowadzono wiele zmian funkcji do obsługi rozszerzonej ochrony w istniejącej przestrzeni nazw <xref:System.Net>. Są to następujące zmiany:  
   
-- A new <xref:System.Net.TransportContext> class added to the <xref:System.Net> namespace that represents a transport context.  
+- Nowa Klasa <xref:System.Net.TransportContext> dodana do przestrzeni nazw <xref:System.Net>, która reprezentuje kontekst transportu.  
   
-- New <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> and <xref:System.Net.HttpWebRequest.GetRequestStream%2A> overload methods in the <xref:System.Net.HttpWebRequest> class that allow retrieving the <xref:System.Net.TransportContext> to support extended protection for client applications.  
+- Nowe <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> i <xref:System.Net.HttpWebRequest.GetRequestStream%2A> metody przeciążenia klasy <xref:System.Net.HttpWebRequest>, które umożliwiają pobieranie <xref:System.Net.TransportContext> do obsługi rozszerzonej ochrony aplikacji klienckich.  
   
-- Additions to the <xref:System.Net.HttpListener> and <xref:System.Net.HttpListenerRequest> classes to support server applications.  
+- Dodatkowe klasy <xref:System.Net.HttpListener> i <xref:System.Net.HttpListenerRequest> do obsługi aplikacji serwera.  
   
- A feature change was made to support extended protection for SMTP client applications in the existing <xref:System.Net.Mail> namespace:  
+ Wprowadzono zmianę funkcji w celu obsługi rozszerzonej ochrony aplikacji klienckich SMTP w istniejącej przestrzeni nazw <xref:System.Net.Mail>:  
   
-- A <xref:System.Net.Mail.SmtpClient.TargetName%2A> property in the <xref:System.Net.Mail.SmtpClient> class that represents the SPN to use for authentication when using extended protection for SMTP client applications.  
+- Właściwość <xref:System.Net.Mail.SmtpClient.TargetName%2A> w klasie <xref:System.Net.Mail.SmtpClient>, która reprezentuje nazwę SPN służącą do uwierzytelniania w przypadku korzystania z rozszerzonej ochrony aplikacji klienckich SMTP.  
   
- A number of feature changes were made to support extended protection in the existing <xref:System.Net.Security> namespace. These changes include the following:  
+ Wprowadzono wiele zmian funkcji do obsługi rozszerzonej ochrony w istniejącej przestrzeni nazw <xref:System.Net.Security>. Są to następujące zmiany:  
   
-- New <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> and <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> overload methods in the <xref:System.Net.Security.NegotiateStream> class that allow passing a CBT to support extended protection for client applications.  
+- Nowe <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> i <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> metody przeciążenia w klasie <xref:System.Net.Security.NegotiateStream>, które umożliwiają przekazywanie CBT do obsługi rozszerzonej ochrony aplikacji klienckich.  
   
-- New <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> and <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> overload methods in the <xref:System.Net.Security.NegotiateStream> class that allow passing an <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> to support extended protection for server applications.  
+- Nowe <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> i <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> metody przeciążenia w klasie <xref:System.Net.Security.NegotiateStream>, które zezwalają na przekazywanie <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> w celu zapewnienia obsługi rozszerzonej ochrony dla aplikacji serwera.  
   
-- A new <xref:System.Net.Security.SslStream.TransportContext%2A> property in the <xref:System.Net.Security.SslStream> class to support extended protection for client and server applications.  
+- Nowa właściwość <xref:System.Net.Security.SslStream.TransportContext%2A> w klasie <xref:System.Net.Security.SslStream> do obsługi rozszerzonej ochrony aplikacji klienta i serwera.  
   
- A <xref:System.Net.Configuration.SmtpNetworkElement> property was added to support configuration of extended protection for SMTP clients in the <xref:System.Net.Security> namespace.  
+ Dodano Właściwość <xref:System.Net.Configuration.SmtpNetworkElement> do obsługi konfiguracji rozszerzonej ochrony dla klientów SMTP w przestrzeni nazw <xref:System.Net.Security>.  
   
-## <a name="extended-protection-for-client-applications"></a>Extended Protection for Client Applications  
- Extended protection support for most client applications happens automatically. The <xref:System.Net.HttpWebRequest> and <xref:System.Net.Mail.SmtpClient> classes support extended protection whenever the underlying version of Windows supports extended protection. An <xref:System.Net.HttpWebRequest> instance sends an SPN constructed from the <xref:System.Uri>. By default, an <xref:System.Net.Mail.SmtpClient> instance sends an SPN constructed from the host name of the SMTP mail server.  
+## <a name="extended-protection-for-client-applications"></a>Rozszerzona ochrona aplikacji klienckich  
+ Rozszerzona obsługa ochrony większości aplikacji klienckich odbywa się automatycznie. Klasy <xref:System.Net.HttpWebRequest> i <xref:System.Net.Mail.SmtpClient> obsługują ochronę rozszerzoną zawsze, gdy podstawowa wersja systemu Windows obsługuje ochronę rozszerzoną. Wystąpienie <xref:System.Net.HttpWebRequest> wysyła nazwę SPN skonstruowaną z <xref:System.Uri>. Domyślnie wystąpienie <xref:System.Net.Mail.SmtpClient> wysyła nazwę SPN skonstruowaną z nazwy hosta serwera poczty SMTP.  
   
- For custom authentication, client applications can use the <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=nameWithType> or <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=nameWithType> methods in the <xref:System.Net.HttpWebRequest> class that allow retrieving the <xref:System.Net.TransportContext> and the CBT using the <xref:System.Net.TransportContext.GetChannelBinding%2A> method.  
+ W przypadku uwierzytelniania niestandardowego aplikacje klienckie mogą używać metod <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=nameWithType> lub <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=nameWithType> w klasie <xref:System.Net.HttpWebRequest>, która umożliwia pobieranie <xref:System.Net.TransportContext> i CBT przy użyciu metody <xref:System.Net.TransportContext.GetChannelBinding%2A>.  
   
- The SPN to use for integrated Windows authentication sent by an <xref:System.Net.HttpWebRequest> instance to a given service can be overridden by setting the <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> property.  
+ Nazwa SPN do użycia na potrzeby zintegrowanego uwierzytelniania systemu Windows wysyłanego przez wystąpienie <xref:System.Net.HttpWebRequest> do danej usługi może zostać przesłonięta przez ustawienie właściwości <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A>.  
   
- The <xref:System.Net.Mail.SmtpClient.TargetName%2A> property can be used to set a custom SPN to use for integrated Windows authentication for the SMTP connection.  
+ Właściwość <xref:System.Net.Mail.SmtpClient.TargetName%2A> może służyć do ustawiania niestandardowej nazwy SPN do użycia na potrzeby zintegrowanego uwierzytelniania systemu Windows na potrzeby połączenia SMTP.  
   
-## <a name="extended-protection-for-server-applications"></a>Extended Protection for Server Applications  
- <xref:System.Net.HttpListener> automatically provides mechanisms for validating service bindings when performing HTTP authentication.  
+## <a name="extended-protection-for-server-applications"></a>Ochrona rozszerzona dla aplikacji serwerowych  
+ <xref:System.Net.HttpListener> automatycznie udostępnia mechanizmy sprawdzania powiązań usługi podczas przeprowadzania uwierzytelniania za pośrednictwem protokołu HTTP.  
   
- The most secure scenario is to enable extended protection for HTTPS:// prefixes. In this case, set <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> to an <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> with <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> set to <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> or <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>, and <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> set to <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected> A value of  <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> puts <xref:System.Net.HttpListener> in partially hardened mode, while <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> corresponds to fully hardened mode.  
+ Najbardziej bezpiecznym scenariuszem jest włączenie rozszerzonej ochrony dla prefiksów HTTPS://. W takim przypadku należy ustawić <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> na <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> z <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> ustawionym na <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> lub <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>, a <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> ustawić <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected> wartość <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> powoduje umieszczenie <xref:System.Net.HttpListener> w trybie częściowo zaostrzonym, podczas gdy <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> odpowiada w trybie w pełni zaostrzonym.  
   
- In this configuration when a request is made to the server through an outer secure channel, the outer channel is queried for a channel binding. This channel binding is passed to the authentication SSPI calls, which validate that the channel binding in the authentication blob matches. There are three possible outcomes:  
+ W tej konfiguracji, gdy żądanie jest wysyłane do serwera za pośrednictwem zewnętrznego bezpiecznego kanału, do kanału zewnętrznego jest wysyłane zapytanie dla powiązania kanału. To powiązanie kanału jest przesyłane do wywołań SSPI uwierzytelniania, które sprawdzają, czy powiązanie kanału w obiekcie blob uwierzytelniania jest zgodne. Istnieją trzy możliwe wyniki:  
   
-1. The server’s underlying operating system does not support extended protection. The request will not be exposed to the application, and an unauthorized (401) response will be returned to the client. A message will be logged to the <xref:System.Net.HttpListener> trace source specifying the reason for the failure.  
+1. Podstawowy system operacyjny serwera nie obsługuje ochrony rozszerzonej. Żądanie nie zostanie ujawnione w aplikacji, a do klienta zostanie zwrócona nieautoryzowana odpowiedź (401). Wiadomość zostanie zarejestrowana w źródle śledzenia <xref:System.Net.HttpListener>, określając przyczynę niepowodzenia.  
   
-2. The SSPI call fails indicating that either the client specified a channel binding that did not match the expected value retrieved from the outer channel or the client failed to supply a channel binding when the extended protection policy on the server was configured for <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>. In both cases, the request will not be exposed to the application, and an unauthorized (401) response will be returned to the client. A message will be logged to the <xref:System.Net.HttpListener> trace source specifying the reason for the failure.  
+2. Wywołanie interfejsu SSPI kończy się niepowodzeniem, wskazując, że klient określił powiązanie kanału, które nie pasuje do oczekiwanej wartości pobranej z kanału zewnętrznego lub klient nie może dostarczyć powiązania kanału, gdy zasady ochrony rozszerzonej na serwerze zostały skonfigurowane do <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>. W obu przypadkach żądanie nie zostanie uwidocznione w aplikacji, a do klienta zostanie zwrócona nieautoryzowana odpowiedź (401). Wiadomość zostanie zarejestrowana w źródle śledzenia <xref:System.Net.HttpListener>, określając przyczynę niepowodzenia.  
   
-3. The client specifies the correct channel binding or is allowed to connect without specifying a channel binding since the extended protection policy on the server is configured with <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> The request is returned to the application for processing. No service name check is performed automatically. An application may choose to perform its own service name validation using the <xref:System.Net.HttpListenerRequest.ServiceName%2A> property, but under these circumstances it is redundant.  
+3. Klient określa poprawne powiązanie kanałów lub może nawiązać połączenie bez określania powiązania kanału, ponieważ zasady ochrony rozszerzonej na serwerze są skonfigurowane z <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> żądanie jest zwracane do aplikacji w celu przetworzenia. Sprawdzanie nazw usług nie jest wykonywane automatycznie. Aplikacja może zdecydować się na wykonanie własnej weryfikacji nazw usług przy użyciu właściwości <xref:System.Net.HttpListenerRequest.ServiceName%2A>, ale w tych okolicznościach jest to nadmiarowe.  
   
- If an application makes its own SSPI calls to perform authentication based on blobs passed back and forth within the body of an HTTP request and wishes to support channel binding, it needs to retrieve the expected channel binding from the outer secure channel using <xref:System.Net.HttpListener> in order to pass it to native Win32 [AcceptSecurityContext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) function. To do this, use the <xref:System.Net.HttpListenerRequest.TransportContext%2A> property and call <xref:System.Net.TransportContext.GetChannelBinding%2A> method to retrieve the CBT. Only endpoint bindings are supported. If anything other <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> is specified, a <xref:System.NotSupportedException> will be thrown. If the underlying operating system supports channel binding, the <xref:System.Net.TransportContext.GetChannelBinding%2A> method will return a <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> wrapping a pointer to a channel binding suitable for passing to [AcceptSecurityContext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) function as the pvBuffer member of a SecBuffer structure passed in the `pInput` parameter. The <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> property contains the length, in bytes, of the channel binding. If the underlying operating system does not support channel bindings, the function will return `null`.  
+ Jeśli aplikacja wykonuje własne wywołania interfejsu SSPI do uwierzytelniania na podstawie obiektów BLOB przekazanych z powrotem i do wewnątrz treści żądania HTTP i chce obsługiwać powiązanie kanałów, musi pobrać oczekiwane powiązanie kanału z zewnętrznego bezpiecznego kanału przy użyciu <xref:System.Net.HttpListener>, aby przekazać go do natywnej funkcji Win32 [działanie funkcji AcceptSecurityContext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) . Aby to zrobić, użyj właściwości <xref:System.Net.HttpListenerRequest.TransportContext%2A> i Wywołaj metodę <xref:System.Net.TransportContext.GetChannelBinding%2A>, aby pobrać CBT. Obsługiwane są tylko powiązania punktów końcowych. Jeśli jest określony jakikolwiek inny <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint>, zostanie wygenerowany <xref:System.NotSupportedException>. Jeśli podstawowy system operacyjny obsługuje powiązanie kanałów, Metoda <xref:System.Net.TransportContext.GetChannelBinding%2A> zwróci <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> zawijania wskaźnika do powiązania kanału odpowiednie do przekazywania funkcji [działanie funkcji AcceptSecurityContext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) jako element członkowski PvBuffer struktury SecBuffer przekazaną w parametrze `pInput`. Właściwość <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> zawiera długość powiązania kanału wyrażoną w bajtach. Jeśli podstawowy system operacyjny nie obsługuje powiązań kanałów, funkcja zwróci `null`.  
   
- Another possible scenario is to enable extended protection for HTTP:// prefixes when proxies are not used. In this case, set <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> to an <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> with <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> set to <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> or <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>, and <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> set to <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected> A value of  <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> puts <xref:System.Net.HttpListener> in partially hardened mode, while <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> corresponds to fully hardened mode.  
+ Innym możliwym scenariuszem jest włączenie rozszerzonej ochrony dla prefiksów HTTP://, gdy serwery proxy nie są używane. W takim przypadku należy ustawić <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> na <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> z <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> ustawionym na <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> lub <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>, a <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> ustawić <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected> wartość <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> powoduje umieszczenie <xref:System.Net.HttpListener> w trybie częściowo zaostrzonym, podczas gdy <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> odpowiada w trybie w pełni zaostrzonym.  
   
- A default list of allowed service names is created based on the prefixes which have been registered with the <xref:System.Net.HttpListener>. This default list can be examined through the <xref:System.Net.HttpListener.DefaultServiceNames%2A> property. If this list is not comprehensive, an application can specify a custom service name collection in the constructor for the <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> class which will be used instead of the default service name list.  
+ Domyślna lista dozwolonych nazw usług jest tworzona na podstawie prefiksów, które zostały zarejestrowane w <xref:System.Net.HttpListener>. Tę listę domyślną można sprawdzić za pomocą właściwości <xref:System.Net.HttpListener.DefaultServiceNames%2A>. Jeśli ta lista nie jest kompletna, aplikacja może określić niestandardową kolekcję nazw usług w konstruktorze dla klasy <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>, która będzie używana zamiast domyślnej listy nazw usług.  
   
- In this configuration, when a request is made to the server without an outer secure channel authentication proceeds normally without a channel binding check. If the authentication succeeds, the context is queried for the service name that the client provided and validated against the list of acceptable service names. There are four possible outcomes:  
+ W tej konfiguracji, gdy żądanie jest nawiązywane na serwerze bez uwierzytelniania przy użyciu zewnętrznego bezpiecznego kanału, zazwyczaj bez sprawdzania powiązania kanałów. Jeśli uwierzytelnianie powiedzie się, kontekst jest pytany dla nazwy usługi dostarczonej przez klienta i zweryfikowanej na liście akceptowalnych nazw usług. Istnieją cztery możliwe wyniki:  
   
-1. The server’s underlying operating system does not support extended protection. The request will not be exposed to the application, and an unauthorized (401) response will be returned to the client. A message will be logged to the <xref:System.Net.HttpListener> trace source specifying the reason for the failure.  
+1. Podstawowy system operacyjny serwera nie obsługuje ochrony rozszerzonej. Żądanie nie zostanie ujawnione w aplikacji, a do klienta zostanie zwrócona nieautoryzowana odpowiedź (401). Wiadomość zostanie zarejestrowana w źródle śledzenia <xref:System.Net.HttpListener>, określając przyczynę niepowodzenia.  
   
-2. The client’s underlying operating system does not support extended protection. In the <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> configuration, the authentication attempt will succeed and the request will be returned to the application. In the <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> configuration, the authentication attempt will fail. The request will not be exposed to the application, and an unauthorized (401) response will be returned to the client. A message will be logged to the <xref:System.Net.HttpListener> trace source specifying the reason for the failure.  
+2. Podstawowy system operacyjny klienta nie obsługuje ochrony rozszerzonej. W konfiguracji <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> próba uwierzytelnienia powiedzie się, a żądanie zostanie zwrócone do aplikacji. W konfiguracji <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> próba uwierzytelnienia nie powiedzie się. Żądanie nie zostanie ujawnione w aplikacji, a do klienta zostanie zwrócona nieautoryzowana odpowiedź (401). Wiadomość zostanie zarejestrowana w źródle śledzenia <xref:System.Net.HttpListener>, określając przyczynę niepowodzenia.  
   
-3. The client’s underlying operating system supports extended protection, but the application did not specify a service binding. The request will not be exposed to the application, and an unauthorized (401) response will be returned to the client. A message will be logged to the <xref:System.Net.HttpListener> trace source specifying the reason for the failure.  
+3. Podstawowy system operacyjny klienta obsługuje ochronę rozszerzoną, ale aplikacja nie określiła powiązania usługi. Żądanie nie zostanie ujawnione w aplikacji, a do klienta zostanie zwrócona nieautoryzowana odpowiedź (401). Wiadomość zostanie zarejestrowana w źródle śledzenia <xref:System.Net.HttpListener>, określając przyczynę niepowodzenia.  
   
-4. The client specified a service binding. The service binding is compared to the list of allowed service bindings. If it matches, the request is returned to the application. Otherwise, the request will not be exposed to the application, and an unauthorized (401) response will be automatically returned to the client. A message will be logged to the <xref:System.Net.HttpListener> trace source specifying the reason for the failure.  
+4. Klient określił powiązanie usługi. Powiązanie usługi jest porównywane z listą dozwolonych powiązań usług. Jeśli jest to zgodne, żądanie jest zwracane do aplikacji. W przeciwnym razie żądanie nie zostanie uwidocznione w aplikacji, a odpowiedź (401) nie zostanie automatycznie zwrócona do klienta. Wiadomość zostanie zarejestrowana w źródle śledzenia <xref:System.Net.HttpListener>, określając przyczynę niepowodzenia.  
   
- If this simple approach using an allowed list of acceptable service names is insufficient, an application may provide its own service name validation by querying the <xref:System.Net.HttpListenerRequest.ServiceName%2A> property. In cases 1 and 2 above, the property will return `null`. In case 3, it will return an empty string. In case 4, the service name specified by the client will be returned.  
+ Jeśli proste podejście wykorzystujące dozwoloną listę dozwolonych nazw usług jest niewystarczające, aplikacja może zapewnić własną weryfikację nazw usług, wykonując zapytania dotyczące właściwości <xref:System.Net.HttpListenerRequest.ServiceName%2A>. W przypadkach 1 i 2 powyżej właściwość zwróci `null`. W przypadku 3 zostanie zwrócony pusty ciąg. W przypadku 4 zostanie zwrócona nazwa usługi określona przez klienta.  
   
- These extended protection features can also be used by server applications for authentication with other types of requests and when trusted proxies are used.  
+ Te funkcje rozszerzonej ochrony mogą być również używane przez aplikacje serwera do uwierzytelniania z innymi typami żądań i w przypadku używania zaufanych serwerów proxy.  
   
 ## <a name="see-also"></a>Zobacz także
 

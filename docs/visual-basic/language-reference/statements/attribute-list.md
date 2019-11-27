@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354062"
 ---
 # <a name="attribute-list-visual-basic"></a>Lista atrybutów (Visual Basic)
-Specifies the attributes to be applied to a declared programming element. Multiple attributes are separated by commas. Following is the syntax for one attribute.  
+Określa atrybuty, które mają zostać zastosowane do zadeklarowanego elementu programowania. Wiele atrybutów rozdziela się przecinkami. Poniżej przedstawiono składnię z jednym atrybutem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,38 +24,38 @@ Specifies the attributes to be applied to a declared programming element. Multip
 ## <a name="parts"></a>Części  
 |||
 |---|---|
-|`attributemodifier`|Required for attributes applied at the beginning of a source file. Can be [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) or [Module](../../../visual-basic/language-reference/modifiers/module-keyword.md).|
-|`attributename`| Wymagany. Name of the attribute.|
-|`attributearguments`|Opcjonalny. List of positional arguments for this attribute. Multiple arguments are separated by commas.|
-|`attributeinitializer`|Opcjonalny. List of variable or property initializers for this attribute. Multiple initializers are separated by commas.|
+|`attributemodifier`|Wymagane dla atrybutów zastosowanych na początku pliku źródłowego. Może to być [zestaw](../../../visual-basic/language-reference/modifiers/assembly.md) lub [moduł](../../../visual-basic/language-reference/modifiers/module-keyword.md).|
+|`attributename`| Wymagana. Nazwa atrybutu.|
+|`attributearguments`|Opcjonalna. Lista argumentów pozycyjnych dla tego atrybutu. Wiele argumentów jest oddzielonych przecinkami.|
+|`attributeinitializer`|Opcjonalna. Lista inicjatorów zmiennych lub właściwości dla tego atrybutu. Wiele inicjatorów jest oddzielonych przecinkami.|
   
 ## <a name="remarks"></a>Uwagi  
- You can apply one or more attributes to nearly any programming element (types, procedures, properties, and so forth). Attributes appear in your assembly's metadata, and they can help you annotate your code or specify how to use a particular programming element. You can apply attributes defined by Visual Basic and the .NET Framework, and you can define your own attributes.  
+ Atrybuty (jeden lub więcej) można zastosować do niemal dowolnego elementu programistycznego (typu, procedury, właściwości itd.). Atrybuty są wyświetlane w metadanych zestawu i mogą pomóc w opisaniu kodu lub określeniu sposobu użycia konkretnego elementu programistycznego. Zastosować można atrybuty zdefiniowane przez Visual Basic i .NET Framework. Zdefiniować można także własne atrybuty.  
 
- For more information on when to use attributes, see [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md). For information on attribute names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Aby uzyskać więcej informacji na temat sytuacji, w których należy używać atrybutów, zobacz [Omówienie atrybutów](../../../visual-basic/programming-guide/concepts/attributes/index.md). Aby uzyskać informacje na temat nazw atrybutów, zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
-## <a name="rules"></a>Rules  
+## <a name="rules"></a>Reguły  
   
-- **Placement.** You can apply attributes to most declared programming elements. To apply one or more attributes, you place an *attribute block* at the beginning of the element declaration. Each entry in the attribute list specifies an attribute you wish to apply, and the modifier and arguments you are using for this invocation of the attribute.  
+- **Jęcia.** Atrybuty można zastosować do większości zadeklarowanych elementów programistycznych. Aby zastosować jeden lub więcej atrybutów, należy umieścić *blok atrybutu* na początku deklaracji elementu. Każdy wpis na liście atrybutów określa atrybut, który chcesz zastosować, oraz modyfikator i argumenty używane dla tego wywołania atrybutu.  
   
-- **Angle Brackets.** If you supply an attribute list, you must enclose it in angle brackets ("`<`" and "`>`").  
+- **Nawiasy ostre.** W przypadku podania listy atrybutów należy ująć ją w nawiasy ostre ("`<`" i "`>`").  
   
-- **Part of the Declaration.** The attribute must be part of the element declaration, not a separate statement. You can use the line-continuation sequence (" `_`") to extend the declaration statement onto multiple source-code lines.  
+- **Część deklaracji.** Atrybut musi być częścią deklaracji elementu, a nie oddzielną instrukcją. Można użyć sekwencji kontynuacji wiersza ("`_`") w celu przedłużenia instrukcji deklaracji na wiele wierszy kodu źródłowego.  
   
-- **Modifiers.** An attribute modifier (`Assembly` or `Module`) is required on every attribute applied to a programming element at the beginning of a source file. Attribute modifiers are not allowed on attributes applied to elements that are not at the beginning of a source file.  
+- **Modyfikatory.** Modyfikator atrybutu (`Assembly` lub `Module`) jest wymagany dla każdego atrybutu zastosowanego do elementu programowania na początku pliku źródłowego. Modyfikatory atrybutu nie są dozwolone w przypadku atrybutów stosowanych do elementów, które nie znajdują się na początku pliku źródłowego.  
   
-- **Arguments.** All positional arguments for an attribute must precede any variable or property initializers.  
+- **Argumentu.** Wszystkie argumenty pozycyjne atrybutu muszą poprzedzać wszystkie inicjatory zmiennej lub właściwości.  
   
 ## <a name="example"></a>Przykład  
- The following example applies the <xref:System.Runtime.InteropServices.DllImportAttribute> attribute to a skeleton definition of a `Function` procedure.  
+ Poniższy przykład stosuje atrybut <xref:System.Runtime.InteropServices.DllImportAttribute> do definicji szkieletowej procedury `Function`.  
   
  [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute> indicates that the attributed procedure represents an entry point in an unmanaged dynamic-link library (DLL). The attribute supplies the DLL name as a positional argument and the other information as variable initializers.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> wskazuje, że procedura Attribute reprezentuje punkt wejścia w niezarządzanej bibliotece dołączanej dynamicznie (DLL). Atrybut zawiera nazwę biblioteki DLL jako argument pozycyjny oraz inne informacje jako inicjatory zmiennych.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
-- [Module \<keyword>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
-- [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Zestaw](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [> \<modułu](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+- [Przegląd atrybutów](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [Instrukcje: przerywanie i łączenie instrukcji w kodzie](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

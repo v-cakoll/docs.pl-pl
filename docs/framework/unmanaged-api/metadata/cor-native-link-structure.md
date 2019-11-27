@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443946"
 ---
 # <a name="cor_native_link-structure"></a>COR_NATIVE_LINK — Struktura
-Contains information that is used to link native code.  
+Zawiera informacje, które są używane do łączenia kodu natywnego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,22 +35,22 @@ typedef struct
 } COR_NATIVE_LINK;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`m_linkType`|The type to be linked in native code. This value is one of the [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) values.|  
-|`m_flags`|Flags used by the linker when linking native code. This value is one of the [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) values.|  
-|`m_entryPoint`|The MemberRef metadata token that represents the entry point. The format is `lib:entrypoint`.|  
+|`m_linkType`|Typ, który ma być połączony w kodzie natywnym. Ta wartość jest jedną z wartości [CorNativeLinkType —](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) .|  
+|`m_flags`|Flagi używane przez konsolidator podczas łączenia kodu natywnego. Ta wartość jest jedną z wartości [CorNativeLinkFlags —](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) .|  
+|`m_entryPoint`|Token metadanych elementu MemberRef reprezentujący punkt wejścia. Format jest `lib:entrypoint`.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

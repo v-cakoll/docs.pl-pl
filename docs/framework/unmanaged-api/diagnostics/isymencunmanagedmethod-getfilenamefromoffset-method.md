@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448657"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset — Metoda
-Gets the file name for the line associated with an offset.  
+Pobiera nazwę pliku dla wiersza skojarzonego z przesunięcia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,22 +38,22 @@ HRESULT GetFileNameFromOffset(
   
 ## <a name="parameters"></a>Parametry  
  `dwOffset`  
- [in] A `ULONG32` that contains the offset.  
+ podczas `ULONG32`, który zawiera przesunięcie.  
   
  `cchName`  
- [in] A `ULONG32` that indicates the size of the `szName` buffer.  
+ podczas `ULONG32`, który wskazuje rozmiar buforu `szName`.  
   
  `pcchName`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.  
+ określoną Wskaźnik do `ULONG32`, który odbiera rozmiar (w znakach) bufora wymaganego do przechowywania nazw plików.  
   
  `szName`  
- [out] The buffer that contains the file names.  
+ określoną Bufor zawierający nazwy plików.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

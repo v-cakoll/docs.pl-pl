@@ -1,5 +1,5 @@
 ---
-title: Tablice — Podsumowanie
+title: Tablice — podsumowanie
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [Visual Basic]
@@ -12,14 +12,14 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349944"
 ---
 # <a name="arrays-summary-visual-basic"></a>Tablice — Podsumowanie (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Słowa kluczowe języka Visual Basic i elementy członkowskie biblioteki wykonawczej są zorganizowane według przeznaczenia i użycia.  
   
 |Akcja|Element języka|  
 |------------|----------------------|  
-|Verify an array.|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|  
-|Declare and initialize an array.|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md), [Private](../../../visual-basic/language-reference/modifiers/private.md), [Public](../../../visual-basic/language-reference/modifiers/public.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
-|Find the limits of an array.|<xref:Microsoft.VisualBasic.Information.LBound%2A>, <xref:Microsoft.VisualBasic.Information.UBound%2A>|  
-|Reinitialize an array|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
+|Sprawdź tablicę.|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|  
+|Zadeklaruj i zainicjuj tablicę.|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md), [Private](../../../visual-basic/language-reference/modifiers/private.md), [Public](../../../visual-basic/language-reference/modifiers/public.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
+|Znajdź limity tablicy.|<xref:Microsoft.VisualBasic.Information.LBound%2A>, <xref:Microsoft.VisualBasic.Information.UBound%2A>|  
+|Zainicjuj ponownie tablicę|[Wymazywanie](../../../visual-basic/language-reference/statements/erase-statement.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
   
 ## <a name="see-also"></a>Zobacz także
 

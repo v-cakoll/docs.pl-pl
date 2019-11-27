@@ -1,5 +1,5 @@
 ---
-title: Functional Programming vs. Imperative Programming
+title: Programowanie funkcjonalne a programowanie bezwzględne
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
 ms.openlocfilehash: 704beadc29af0de606b8f246360dc6fffca8cfcc
@@ -9,49 +9,49 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353441"
 ---
-# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Functional Programming vs. Imperative Programming (Visual Basic)
-This topic compares and contrasts functional programming with more traditional imperative (procedural) programming.  
+# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Programowanie funkcjonalne a programowanie bezwzględne (Visual Basic)
+W tym temacie porównano i kontrastuje programowanie funkcjonalne z bardziej tradycyjnym, niewzględnym (proceduralnym) programowaniem.  
   
-## <a name="functional-programming-vs-imperative-programming"></a>Functional Programming vs. Imperative Programming  
- The *functional programming* paradigm was explicitly created to support a pure functional approach to problem solving. Functional programming is a form of *declarative programming*. In contrast, most mainstream languages, including object-oriented programming (OOP) languages such as C#, Visual Basic, C++, and Java, were designed to primarily support *imperative* (procedural) programming.  
+## <a name="functional-programming-vs-imperative-programming"></a>Programowanie funkcjonalne a programowanie bezwzględne  
+ Model *programowania funkcjonalnego* został jawnie utworzony w celu obsługi czystego podejścia funkcjonalnego do rozwiązywania problemów. Programowanie funkcjonalne jest formą *programowania deklaratywnego*. W przeciwieństwie do tego większość najpopularniejszych języków, w tym języków programowania zorientowanego obiektowo ( C#OOP), C++takich jak, Visual Basic, i Java, została zaprojektowana tak, aby przede *wszystkim wspierać* bezwzględne (proceduralne) programowanie.  
   
- With an imperative approach, a developer writes code that describes in exacting detail the steps that the computer must take to accomplish the goal. This is sometimes referred to as *algorithmic* programming. In contrast, a functional approach involves composing the problem as a set of functions to be executed. You define carefully the input to each function, and what each function returns. The following table describes some of the general differences between these two approaches.  
+ W przypadku, gdy jest to bezwzględne podejście, deweloper zapisuje kod opisujący szczegółowo szczegółowe czynności, które musi wykonać komputer, aby osiągnąć cel. Jest to czasami określane jako programowanie *algorytmów* . Z kolei podejście funkcjonalne obejmuje tworzenie problemów jako zestaw funkcji do wykonania. Należy dokładnie zdefiniować dane wejściowe dla każdej funkcji i co zwraca każda funkcja. W poniższej tabeli opisano niektóre ogólne różnice między tymi dwoma podejściami.  
   
-|Characteristic|Imperative approach|Functional approach|  
+|Charakterystyk|Bezwzględne podejście|Podejście funkcjonalne|  
 |--------------------|-------------------------|-------------------------|  
-|Programmer focus|How to perform tasks (algorithms) and how to track changes in state.|What information is desired and what transformations are required.|  
-|State changes|Important.|Non-existent.|  
-|Order of execution|Important.|Low importance.|  
-|Primary flow control|Loops, conditionals, and function (method) calls.|Function calls, including recursion.|  
-|Primary manipulation unit|Instances of structures or classes.|Functions as first-class objects and data collections.|  
+|Fokus programisty|Jak wykonywać zadania (algorytmy) i jak śledzić zmiany w stanie.|Jakie informacje są potrzebne i jakie przekształcenia są wymagane.|  
+|Zmiany stanu|Ważne.|Nie istnieje.|  
+|Kolejność wykonywania|Ważne.|Niska ważność.|  
+|Podstawowe sterowanie przepływem|Pętle, warunkowe i wywołania funkcji (Metoda).|Wywołania funkcji, w tym rekursja.|  
+|Podstawowa jednostka manipulowania|Wystąpienia struktur lub klas.|Działa jako obiekty pierwszej klasy i kolekcje danych.|  
   
- Although most languages were designed to support a specific programming paradigm, many general languages are flexible enough to support multiple paradigms. For example, most languages that contain function pointers can be used to credibly support functional programming. Furthermore, Visual Basic includes explicit language extensions to support functional programming, including lambda expressions and type inference. LINQ technology is a form of declarative, functional programming.  
+ Chociaż większość języków została zaprojektowana do obsługi określonego modelu programowania, wiele języków ogólnych jest wystarczająco elastycznych, aby obsługiwało wiele odmian. Na przykład większość języków zawierających wskaźniki funkcji może służyć do credibly programowania funkcjonalnego. Ponadto Visual Basic zawiera jawne rozszerzenia językowe do obsługi programowania funkcjonalnego, w tym wyrażenia lambda i wnioskowania o typie. Technologia LINQ jest formą deklaracyjnego programowania funkcjonalnego.  
   
-## <a name="functional-programming-using-xslt"></a>Functional Programming Using XSLT  
- Many XSLT developers are familiar with the pure functional approach. The most effective way to develop an XSLT style sheet is to treat each template as an isolated, composable transformation. The order of execution is completely de-emphasized. XSLT does not allow side effects (with the exception that escaping mechanisms for executing procedural code can introduce side effects that result in functional impurity). However, although XSLT is an effective tool, some of its characteristics are not optimal. For example, expressing programming constructs in XML makes code relatively verbose, and therefore difficult to maintain. Also, the heavy reliance on recursion for flow control can result in code that is hard to read. For more information about XSLT, see [XSLT Transformations](../../../../standard/data/xml/xslt-transformations.md).  
+## <a name="functional-programming-using-xslt"></a>Programowanie funkcjonalne przy użyciu XSLT  
+ Wielu deweloperów XSLT potrafi poznać czyste podejście funkcjonalne. Najbardziej efektywnym sposobem na Tworzenie arkusza stylów XSLT jest traktowanie każdego szablonu jako odizolowanego, możliwego do redagowania transformacji. Kolejność wykonywania jest całkowicie niewyróżniona. XSLT nie zezwala na efekty uboczne (z wyjątkiem tego, że mechanizmy ucieczki do wykonywania kodu proceduralnego mogą wprowadzać efekty uboczne, które powodują, że nie jest to wynikiem funkcjonalności). Chociaż XSLT jest skutecznym narzędziem, niektóre jego cechy nie są optymalne. Na przykład, konstrukcje programistyczne w języku XML czynią kod stosunkowo pełny i dlatego trudno jest zachować. Ponadto duże zależności dotyczące rekursji dla sterowania przepływem mogą spowodować, że kod jest trudny do odczytania. Aby uzyskać więcej informacji na temat XSLT, zobacz [XSLT Transformations](../../../../standard/data/xml/xslt-transformations.md).  
   
- However, XSLT has proved the value of using a pure functional approach for transforming XML from one shape to another. Pure functional programming with LINQ to XML is similar in many ways to XSLT. However, the programming constructs introduced by LINQ to XML and Visual Basic allow you to write pure functional transformations that are more readable and maintainable than XSLT.  
+ Jednak język XSLT udowadniał wartość użycia czystego podejścia funkcjonalnego do przekształcenia XML z jednego kształtu do drugiego. Czyste programowanie funkcjonalne przy użyciu LINQ to XML jest podobne do języka XSLT na wiele sposobów. Jednak konstrukcje programistyczne wprowadzone przez LINQ to XML i Visual Basic umożliwiają pisanie czystych transformacji funkcjonalnych, które są bardziej czytelne i konserwowane niż XSLT.  
   
-## <a name="advantages-of-pure-functions"></a>Advantages of Pure Functions  
- The primary reason to implement functional transformations as pure functions is that pure functions are composable: that is, self-contained and stateless. These characteristics bring a number of benefits, including the following:  
+## <a name="advantages-of-pure-functions"></a>Zalety czystych funkcji  
+ Podstawową przyczyną wdrożenia przekształceń funkcjonalnych jako czystych funkcji jest możliwość tworzenia czystych funkcji: to jest, samodzielne i bezstanowe. Te cechy obejmują szereg korzyści, w tym następujące:  
   
-- Increased readability and maintainability. This is because each function is designed to accomplish a specific task given its arguments. The function does not rely on any external state.  
+- Zwiększ czytelność i łatwość utrzymania. Jest to spowodowane tym, że każda funkcja została zaprojektowana w celu wykonania określonego zadania z uwzględnieniem argumentów. Funkcja nie polega na żadnym stanie zewnętrznym.  
   
-- Easier reiterative development. Because the code is easier to refactor, changes to design are often easier to implement. For example, suppose you write a complicated transformation, and then realize that some code is repeated several times in the transformation. If you refactor through a pure method, you can call your pure method at will without worrying about side effects.  
+- Łatwiejsza zmiana na rozwój. Ponieważ kod jest łatwiejszy do refaktoryzacji, zmiany w projekcie są często łatwiejsze do wdrożenia. Załóżmy na przykład, że napiszesz skomplikowaną transformację, a następnie dowiesz się, że jakiś kod jest powtórzony kilka razy w transformacji. Jeśli refaktoryzacja jest przeprowadzana za pomocą czystej metody, można wywołać czystą metodę w stanie bez obaw o skutki uboczne.  
   
-- Easier testing and debugging. Because pure functions can more easily be tested in isolation, you can write test code that calls the pure function with typical values, valid edge cases, and invalid edge cases.  
+- Łatwiejsze testowanie i debugowanie. Ze względu na to, że czyste funkcje mogą być łatwiejsze do przetestowania w izolacji, można napisać kod testu, który wywołuje czystą funkcję z typowymi wartościami, prawidłowymi przypadkami krawędzi i nieprawidłowymi przypadkami krawędzi.  
   
-## <a name="transitioning-for-oop-developers"></a>Transitioning for OOP Developers  
- In traditional object-oriented programming (OOP), most developers are accustomed to programming in the imperative/procedural style. To switch to developing in a pure functional style, they have to make a transition in their thinking and their approach to development.  
+## <a name="transitioning-for-oop-developers"></a>Przechodzenie dla deweloperów OOP  
+ W tradycyjnych programowaniu zorientowanym obiektom (OOP) większość deweloperów jest przyzwyczajona do programowania w stylu bezwzględnym/proceduralnym. Aby przełączać się do programowania w czystym stylu funkcjonalnym, muszą one wprowadzać przejście w myśli i ich podejście do rozwoju.  
   
- To solve problems, OOP developers design class hierarchies, focus on proper encapsulation, and think in terms of class contracts. The behavior and state of object types are paramount, and language features, such as classes, interfaces, inheritance, and polymorphism, are provided to address these concerns.  
+ Aby rozwiązać problemy, OOP programiści mogą projektować hierarchie klas, skupić się na poprawnym hermetyzacji i myśleć o kategoriach umów. Zachowanie i stan typów obiektów to najważniejsze, a funkcje językowe, takie jak klasy, interfejsy, dziedziczenie i polimorfizm, są dostarczane w celu rozwiązania tych problemów.  
   
- In contrast, functional programming approaches computational problems as an exercise in the evaluation of pure functional transformations of data collections. Functional programming avoids state and mutable data, and instead emphasizes the application of functions.  
+ W przeciwieństwie do programowania funkcjonalnego podejścia do problemów obliczeniowych jako ćwiczenia w ocenie czystych, funkcjonalnych transformacji kolekcji danych. Programowanie funkcjonalne pozwala uniknąć stanu i modyfikowalnych danych, a zamiast tego kładzie nacisk na aplikacje funkcji.  
   
- Fortunately, Visual Basic doesn't require the full leap to functional programming, because it supports both imperative and functional programming approaches. A developer can choose which approach is most appropriate for a particular scenario. In fact, programs often combine both approaches.  
+ Na szczęście Visual Basic nie wymaga pełnego przestępności do programowania funkcjonalnego, ponieważ obsługuje zarówno metody programowania zasadniczego, jak i funkcjonalnego. Deweloper może wybrać, które podejście jest najbardziej odpowiednie dla konkretnego scenariusza. W rzeczywistości programy często łączą oba podejścia.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Wprowadzenie do czystych transformacji funkcjonalnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Przekształcenia XSLT](../../../../standard/data/xml/xslt-transformations.md)
-- [Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Refaktoryzacja do czystych funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

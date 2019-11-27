@@ -13,18 +13,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344386"
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>Porady: tworzenie ciągu z tablicy wartości znaków (Visual Basic)
-This example creates the string "abcd" from individual characters.  
+Ten przykład tworzy ciąg "abcd" z pojedynczych znaków.  
   
 ## <a name="example"></a>Przykład  
  [!code-vb[VbVbalrStrings#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- This method has no special requirements.  
+ Ta metoda nie ma specjalnych wymagań.  
   
- The syntax `"a"c`, where a single `c` follows a single character in quotation marks, is used to create a character literal.  
+ Składnia `"a"c`, w której jeden `c` następuje po pojedynczym znaku w cudzysłowie, jest używany do tworzenia literału znakowego.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Null characters (equivalent to `Chr(0)`) in the string lead to unexpected results when using the string. The null character will be included with the string, but characters following the null character will not be displayed in some situations.  
+ Znaki null (równoważne `Chr(0)`) w ciągu powodują nieoczekiwane wyniki przy użyciu ciągu. Znak null zostanie dołączony do ciągu, ale znaki po znaku null nie będą wyświetlane w niektórych sytuacjach.  
   
 ## <a name="see-also"></a>Zobacz także
 

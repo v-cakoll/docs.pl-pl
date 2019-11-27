@@ -19,53 +19,53 @@ ms.locfileid: "74351412"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 
-Specifies that a property or procedure redeclares one or more existing properties or procedures with the same name.
+Określa, że właściwość lub procedura ponownie deklaruje jedną lub więcej istniejących właściwości lub procedur o tej samej nazwie.
 
 ## <a name="remarks"></a>Uwagi
 
-*Overloading* is the practice of supplying more than one definition for a given property or procedure name in the same scope. Redeclaring a property or procedure with a different signature is sometimes called *hiding by signature*.
+*Przeciążanie* jest sposobem dostarczenia więcej niż jednej definicji dla danej właściwości lub nazwy procedury w tym samym zakresie. Redeklaruj właściwość lub procedurę z innym podpisem jest czasami nazywana *ukrywaniem przez podpis*.
 
-## <a name="rules"></a>Rules
+## <a name="rules"></a>Reguły
 
-- **Declaration Context.** You can use `Overloads` only in a property or procedure declaration statement.
+- **Kontekst deklaracji.** `Overloads` można użyć tylko w instrukcji deklaracji właściwości lub procedury.
 
-- **Combined Modifiers.** You cannot specify `Overloads` together with [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) in the same procedure declaration.
+- **Połączone modyfikatory.** Nie można określić `Overloads` razem z [cieniami](../../../visual-basic/language-reference/modifiers/shadows.md) w tej samej deklaracji procedury.
 
-- **Required Differences.** The *signature* in this declaration must be different from the signature of every property or procedure that it overloads. The signature comprises the property or procedure name together with the following:
+- **Wymagane różnice.** *Sygnatura* w tej deklaracji musi być różna od sygnatury każdej właściwości lub procedury, która została przeciążać. Podpis składa się z nazwy właściwości lub procedury wraz z następującymi:
 
-  - the number of parameters
+  - liczba parametrów
 
-  - the order of the parameters
+  - kolejność parametrów
 
-  - the data types of the parameters
+  - typy danych parametrów
 
-  - the number of type parameters (for a generic procedure)
+  - liczba parametrów typu (dla procedury ogólnej)
 
-  - the return type (only for a conversion operator procedure)
+  - zwracany typ (tylko dla procedury operatora konwersji)
 
-  All overloads must have the same name, but each must differ from all the others in one or more of the preceding respects. This allows the compiler to distinguish which version to use when code calls the property or procedure.
+  Wszystkie przeciążenia muszą mieć taką samą nazwę, ale każdy z nich musi się różnić od wszystkich innych w jednym lub więcej z powyższych kwestii. Dzięki temu kompilator może odróżnić, która wersja, która ma zostać użyta, gdy kod wywołuje właściwość lub procedurę.
 
-- **Disallowed Differences.** Changing one or more of the following is not valid for overloading a property or procedure, because they are not part of the signature:
+- **Niedozwolone różnice.** Zmiana co najmniej jednego z następujących elementów nie jest prawidłowa w celu przeładowania właściwości lub procedury, ponieważ nie są one częścią podpisu:
 
-  - whether or not it returns a value (for a procedure)
+  - Czy zwraca wartość (dla procedury)
 
-  - the data type of the return value (except for a conversion operator)
+  - Typ danych wartości zwracanej (z wyjątkiem operatora konwersji)
 
-  - the names of the parameters or type parameters
+  - nazwy parametrów lub parametrów typu
 
-  - the constraints on the type parameters (for a generic procedure)
+  - ograniczenia dotyczące parametrów typu (dla procedury ogólnej)
 
-  - parameter modifier keywords (such as `ByRef` or `Optional`)
+  - Słowa kluczowe modyfikatora parametru (takie jak `ByRef` lub `Optional`)
 
-  - property or procedure modifier keywords (such as `Public` or `Shared`)
+  - Słowa kluczowe modyfikatora właściwości lub procedury (takie jak `Public` lub `Shared`)
 
-- **Optional Modifier.** You do not have to use the `Overloads` modifier when you are defining multiple overloaded properties or procedures in the same class. However, if you use `Overloads` in one of the declarations, you must use it in all of them.
+- **Modyfikator opcjonalny.** Nie trzeba używać modyfikatora `Overloads` podczas definiowania wielu przeciążonych właściwości lub procedur w tej samej klasie. Jeśli jednak używasz `Overloads` w jednej z deklaracji, musisz użyć go we wszystkich z nich.
 
-- **Shadowing and Overloading.** `Overloads` can also be used to shadow an existing member, or set of overloaded members, in a base class. When you use `Overloads` in this way, you declare the property or method with the same name and the same parameter list as the base class member, and you do not supply the `Shadows` keyword.
+- **Obserwowanie i Przeciążenie.** `Overloads` można również użyć do obserwowania istniejącego elementu członkowskiego lub zestawu przeciążonych elementów członkowskich w klasie bazowej. Gdy używasz `Overloads` w ten sposób, deklarujesz właściwość lub metodę o tej samej nazwie i tej samej liście parametrów co element członkowski klasy bazowej i nie podasz słowa kluczowego `Shadows`.
 
-If you use `Overrides`, the compiler implicitly adds `Overloads` so that your library APIs work with C# more easily.
+Jeśli używasz `Overrides`, kompilator niejawnie dodaje `Overloads` tak, aby interfejsy API biblioteki działały C# łatwiej.
 
-The `Overloads` modifier can be used in these contexts:
+Modyfikator `Overloads` może być używany w tych kontekstach:
 
 - [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
 
@@ -79,6 +79,6 @@ The `Overloads` modifier can be used in these contexts:
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Przeciążanie procedury](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
 - [Instrukcje: definiowanie operatora konwersji](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

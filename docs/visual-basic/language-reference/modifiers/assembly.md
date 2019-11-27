@@ -18,16 +18,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351647"
 ---
 # <a name="assembly-visual-basic"></a>Assembly (Visual Basic)
-Specifies that an attribute at the beginning of a source file applies to the entire assembly.  
+Określa, że atrybut na początku pliku źródłowego dotyczy całego zestawu.  
   
 ## <a name="remarks"></a>Uwagi  
- Many attributes pertain to an individual programming element, such as a class or property. You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.  
+ Wiele atrybutów odnosi się do pojedynczego elementu programistycznego, takiego jak Klasa lub właściwość. Ten atrybut jest stosowany przez dołączenie bloku atrybutu w nawiasach kątowych (`< >`) bezpośrednio do instrukcji deklaracji.  
   
- If an attribute pertains not only to the following element but to the entire assembly, you place the attribute block at the beginning of the source file and identify the attribute with the `Assembly` keyword. If it applies to the current assembly module, you use the [Module](../../../visual-basic/language-reference/modifiers/module-keyword.md) keyword.  
+ Jeśli atrybut dotyczy nie tylko następującego elementu, ale do całego zestawu, umieścisz blok atrybutu na początku pliku źródłowego i zidentyfikujesz atrybut za pomocą słowa kluczowego `Assembly`. Jeśli dotyczy bieżącego modułu zestawu, należy użyć słowa kluczowego [modułu](../../../visual-basic/language-reference/modifiers/module-keyword.md) .  
   
- You can also apply an attribute to an assembly in the AssemblyInfo.vb file, in which case you do not have to use an attribute block in your main source-code file.  
+ Można również zastosować atrybut do zestawu w pliku AssemblyInfo. vb, w tym przypadku nie trzeba używać bloku atrybutu w głównym pliku kodu źródłowego.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Module \<keyword>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
-- [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [> \<modułu](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+- [Przegląd atrybutów](../../../visual-basic/programming-guide/concepts/attributes/index.md)

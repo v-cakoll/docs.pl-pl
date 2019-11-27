@@ -16,23 +16,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347369"
 ---
 # <a name="visual-basic-limitations"></a>Ograniczenia Visual Basic
-Earlier versions of Visual Basic enforced boundaries in code, such as the length of variable names, the number of variables allowed in modules, and module size. In Visual Basic .NET, these restrictions have been relaxed, giving you greater freedom in writing and arranging your code.  
+Wcześniejsze wersje Visual Basic wymuszają granice w kodzie, takie jak długość nazw zmiennych, liczba zmiennych dozwolona w modułach i rozmiar modułu. W Visual Basic .NET te ograniczenia były swobodne, co zapewnia większą swobodę pisania i rozmieszczania kodu.  
   
- Physical limits are dependent more on run-time memory than on compile-time considerations. If you use prudent programming practices, and divide large applications into multiple classes and modules, then there is very little chance of encountering an internal Visual Basic limitation.  
+ Limity fizyczne są zależne od większej ilości pamięci w czasie wykonywania niż kwestie dotyczące czasu kompilacji. W przypadku korzystania z rozsądnych praktyk programistycznych i dzielenia dużych aplikacji na wiele klas i modułów, istnieje bardzo mało znaczące prawdopodobieństwo napotkania wewnętrznego ograniczenia Visual Basic.  
   
- The following are some limitations that you might encounter in extreme cases:  
+ Poniżej przedstawiono niektóre ograniczenia, które mogą wystąpić w skrajnych przypadkach:  
   
-- **Name Length.** There is a maximum number of characters for the name of every declared programming element. This maximum applies to an entire qualification string if the element name is qualified. See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+- **Długość nazwy.** Nazwa każdego zadeklarowanego elementu programowania zawiera maksymalną liczbę znaków. Ta wartość maksymalna ma zastosowanie do całego ciągu kwalifikacji, jeśli nazwa elementu jest kwalifikowana. Zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
-- **Line Length.** There is a maximum of 65535 characters in a physical line of source code. The logical source code line can be longer if you use line continuation characters. See [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
+- **Długość wiersza.** W fizycznym wierszu kodu źródłowego istnieje maksymalnie 65535 znaków. Logiczny wiersz kodu źródłowego może być dłuższy w przypadku używania znaków kontynuacji wiersza. Zobacz [jak: przerywanie i łączenie instrukcji w kodzie](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
-- **Array Dimensions.** There is a maximum number of dimensions you can declare for an array. This limits how many indexes you can use to specify an array element. See [Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
+- **Wymiary tablicy.** Istnieje maksymalna liczba wymiarów, które można zadeklarować dla tablicy. Ogranicza to liczbę indeksów, których można użyć do określenia elementu tablicy. Zobacz [Wymiary tablicy w Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
   
-- **String Length.** There is a maximum number of Unicode characters you can store in a single string. See [String Data Type](../../../visual-basic/language-reference/data-types/string-data-type.md).  
+- **Długość ciągu.** Istnieje maksymalna liczba znaków Unicode, które można przechowywać w jednym ciągu. Zobacz [Typ danych ciągu](../../../visual-basic/language-reference/data-types/string-data-type.md).  
   
-- **Environment String Length.** There is a maximum of 32768 characters for any environment string used as a command-line argument. This is a limitation on all platforms.  
+- **Długość ciągu środowiska.** Dla każdego ciągu środowiska, który jest używany jako argument wiersza polecenia, istnieje maksymalnie 32768 znaków. Jest to ograniczenie na wszystkich platformach.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Struktura programu i konwencje związane z kodami](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Konwencje nazewnictwa Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

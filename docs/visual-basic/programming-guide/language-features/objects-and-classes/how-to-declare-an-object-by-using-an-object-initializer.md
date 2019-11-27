@@ -15,49 +15,49 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347136"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Porady: deklarowanie obiektu za pomocą inicjatora obiektów (Visual Basic)
-Object initializers enable you to declare and instantiate an instance of a class in a single statement. In addition, you can initialize one or more members of the instance at the same time, without invoking a parameterized constructor.  
+Inicjatory obiektów umożliwiają zadeklarować wystąpienie klasy w pojedynczej instrukcji i utworzenie ich wystąpienia. Ponadto można zainicjować co najmniej jeden element członkowski wystąpienia w tym samym czasie, bez wywoływania sparametryzowanego konstruktora.  
   
- When you use an object initializer to create an instance of a named type, the parameterless constructor for the class is called, followed by initialization of designated members in the order you specify.  
+ Gdy używasz inicjatora obiektów do utworzenia wystąpienia nazwanego typu, Konstruktor bez parametrów dla klasy jest wywoływany, a po nim inicjacja wyznaczono członków w określonej kolejności.  
   
- The following procedure shows how to create an instance of a `Student` class in three different ways. The class has first name, last name, and class year properties, among others. Each of the three declarations creates a new instance of `Student`, with property `First` set to "Michael", property `Last` set to "Tucker", and all other members set to their default values. The result of each declaration in the procedure is equivalent to the following example, which does not use an object initializer.  
+ Poniższa procedura pokazuje, jak utworzyć wystąpienie klasy `Student` na trzy różne sposoby. Klasa ma imię, nazwisko i właściwości roku klasy, między innymi. Każda z trzech deklaracji tworzy nowe wystąpienie `Student`, z właściwością `First` ustawioną na "Michael", właściwość `Last` ustawiona na wartość "Tucker", a wszystkie inne elementy członkowskie mają ustawioną wartość domyślną. Wynik każdej deklaracji w procedurze jest równoważny do poniższego przykładu, który nie używa inicjatora obiektów.  
   
  [!code-vb[VbVbalrObjectInit#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#20)]  
   
- For an implementation of the `Student` class, see [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). You can copy the code from that topic to set up the class and create a list of `Student` objects to work with.  
+ Aby uzyskać implementację klasy `Student`, zobacz [How to: Create a list of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Możesz skopiować kod z tego tematu, aby skonfigurować klasę i utworzyć listę obiektów `Student` do pracy.  
   
-### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>To create an object of a named class by using an object initializer  
+### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>Aby utworzyć obiekt nazwanej klasy przy użyciu inicjatora obiektów  
   
-1. Begin the declaration as if you planned to use a constructor.  
+1. Rozpocznij deklarację tak, jakby była planowana użycie konstruktora.  
   
      `Dim student1 As New Student`  
   
-2. Type the keyword `With`, followed by an initialization list in braces.  
+2. Wpisz `With`słowa kluczowego, a następnie listę inicjalizacji w nawiasach klamrowych.  
   
      `Dim student1 As New Student With { <initialization list> }`  
   
-3. In the initialization list, include each property that you want to initialize and assign an initial value to it. The name of the property is preceded by a period.  
+3. Na liście inicjalizacji Uwzględnij każdą właściwość, która ma zostać zainicjowana, i przypisz do niej początkową wartość. Nazwa właściwości jest poprzedzona kropką.  
   
      [!code-vb[VbVbalrObjectInit#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#21)]  
   
-     You can initialize one or more members of the class.  
+     Można zainicjować co najmniej jeden element członkowski klasy.  
   
-4. Alternatively, you can declare a new instance of the class and then assign a value to it. First, declare an instance of `Student`:  
+4. Alternatywnie można zadeklarować nowe wystąpienie klasy, a następnie przypisać do niej wartość. Najpierw Zadeklaruj wystąpienie `Student`:  
   
      `Dim student2 As Student`  
   
-5. Begin the creation of an instance of `Student` in the normal way.  
+5. Rozpocznij tworzenie wystąpienia `Student` w normalny sposób.  
   
      `Dim student2 As Student = New Student`  
   
-6. Type `With` and then an object initializer to initialize one or more members of the new instance.  
+6. Wpisz `With` a następnie Inicjator obiektu, aby zainicjować co najmniej jednego członka nowego wystąpienia.  
   
      [!code-vb[VbVbalrObjectInit#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#22)]  
   
-7. You can simplify the definition in the previous step by omitting `As Student`. If you do this, the compiler determines that `student3` is an instance of `Student` by using local type inference.  
+7. Można uprościć definicję w poprzednim kroku, pomijając `As Student`. W takim przypadku kompilator określi, że `student3` jest wystąpieniem `Student` za pomocą wnioskowania typu lokalnego.  
   
      [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
-     For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+     Aby uzyskać więcej informacji, zobacz temat [wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349644"
 ---
 # <a name="take-clause-visual-basic"></a>Take — Klauzula (Visual Basic)
-Returns a specified number of contiguous elements from the start of a collection.  
+Zwraca określoną liczbę elementów sąsiadujących od początku kolekcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,25 +26,25 @@ Take count
   
 ## <a name="parts"></a>Części  
  `count`  
- Wymagany. A value or an expression that evaluates to the number of elements of the sequence to return.  
+ Wymagana. Wartość lub wyrażenie, które oblicza liczbę elementów sekwencji do zwrócenia.  
   
 ## <a name="remarks"></a>Uwagi  
- The `Take` clause causes a query to include a specified number of contiguous elements from the start of a results list. The number of elements to include is specified by the `count` parameter.  
+ Klauzula `Take` powoduje, że zapytanie zawiera określoną liczbę elementów sąsiadujących od początku listy wyników. Liczba elementów do dołączenia jest określana przez parametr `count`.  
   
- You can use the `Take` clause with the `Skip` clause to return a range of data from any segment of a query. To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause. In this case, the `Take` clause must be specified after the `Skip` clause.  
+ Można użyć klauzuli `Take` z klauzulą `Skip`, aby zwrócić zakres danych z dowolnego segmentu zapytania. W tym celu Przekaż indeks pierwszego elementu zakresu do klauzuli `Skip` i rozmiar zakresu do klauzuli `Take`. W takim przypadku klauzulę `Take` należy określić po klauzuli `Skip`.  
   
- When you use the `Take` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Take` clause to include the intended results. For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ Jeśli używasz klauzuli `Take` w zapytaniu, możesz również upewnić się, że wyniki są zwracane w kolejności, w której zostanie włączona klauzula `Take` w celu uwzględnienia zamierzonych wyników. Aby uzyskać więcej informacji na temat porządkowania wyników zapytania, zobacz [klauzula Order by](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- You can use the `TakeWhile` clause to specify that only certain elements be returned, depending on a supplied condition.  
+ Można użyć klauzuli `TakeWhile`, aby określić, że tylko niektóre elementy mają być zwracane, w zależności od podanego warunku.  
   
 ## <a name="example"></a>Przykład  
- The following code example uses the `Take` clause together with the `Skip` clause to return data from a query in pages. The GetCustomers function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.  
+ Poniższy przykład kodu używa klauzuli `Take` razem z klauzulą `Skip`, aby zwracać dane ze zapytania na stronach. Funkcja getcustomerss używa klauzuli `Skip`, aby pominąć klientów na liście do momentu podanej wartości indeksu początkowego, i używa klauzuli `Take`, aby zwrócić stronę klientów rozpoczynającą się od tej wartości indeksu.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Zapytania](../../../visual-basic/language-reference/queries/index.md)
 - [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)

@@ -13,20 +13,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351697"
 ---
 # <a name="my-reference-visual-basic"></a>Moje odwołanie (Visual Basic)
-The `My` feature makes programming faster and easier by giving you intuitive access to commonly used methods, properties, and events. This table lists the objects contained in `My`, and the actions that can be performed with each.  
+Funkcja `My` przyspiesza i ułatwia programowanie, zapewniając intuicyjny dostęp do często używanych metod, właściwości i zdarzeń. W tej tabeli wymieniono obiekty zawarte w `My`oraz akcje, które można wykonać przy użyciu każdego z nich.  
   
-|**Action**|**Object**|  
+|**Transakcji**|**Stream**|  
 |----------------|----------------|  
-|Accessing application information and services.|The `My.Application` object consists of the following classes:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> provides members that are available in all projects.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> provides members available in Windows Forms applications.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> provides members available in console applications.|  
-|Accessing the host computer and its resources, services, and data.|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|  
-|Accessing the forms in the current project.|[My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
-|Accessing the application log.|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|  
-|Accessing the current web request.|[My.Request, obiekt](../../../visual-basic/language-reference/objects/my-request-object.md)|  
-|Accessing resource elements.|[My.Resources, obiekt](../../../visual-basic/language-reference/objects/my-resources-object.md)|  
-|Accessing the current web response.|[My.Response, obiekt](../../../visual-basic/language-reference/objects/my-response-object.md)|  
-|Accessing user and application level settings.|[My.Settings, obiekt](../../../visual-basic/language-reference/objects/my-settings-object.md)|  
-|Accessing the current user's security context.|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|  
-|Accessing XML Web services referenced by the current project.|[My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
+|Uzyskiwanie dostępu do informacji i usług aplikacji.|Obiekt `My.Application` składa się z następujących klas:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> udostępnia elementy członkowskie, które są dostępne we wszystkich projektach.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> zapewnia członków dostępnych w aplikacjach Windows Forms.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> udostępnia elementy członkowskie dostępne w aplikacjach konsolowych.|  
+|Uzyskiwanie dostępu do komputera hosta oraz jego zasobów, usług i danych.|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|  
+|Uzyskiwanie dostępu do formularzy w bieżącym projekcie.|[My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
+|Uzyskiwanie dostępu do dziennika aplikacji.|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|  
+|Uzyskiwanie dostępu do bieżącego żądania sieci Web.|[My.Request, obiekt](../../../visual-basic/language-reference/objects/my-request-object.md)|  
+|Uzyskiwanie dostępu do elementów zasobów.|[My.Resources, obiekt](../../../visual-basic/language-reference/objects/my-resources-object.md)|  
+|Uzyskiwanie dostępu do bieżącej odpowiedzi sieci Web.|[My.Response, obiekt](../../../visual-basic/language-reference/objects/my-response-object.md)|  
+|Uzyskiwanie dostępu do ustawień na poziomie użytkownika i aplikacji.|[My.Settings, obiekt](../../../visual-basic/language-reference/objects/my-settings-object.md)|  
+|Uzyskiwanie dostępu do kontekstu zabezpieczeń bieżącego użytkownika.|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|  
+|Uzyskiwanie dostępu do usług sieci Web XML, do których odwołuje się bieżący projekt.|[My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
   
 ## <a name="see-also"></a>Zobacz także
 

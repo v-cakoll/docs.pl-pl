@@ -12,8 +12,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352189"
 ---
-# <a name="typeparam-visual-basic"></a>\<typeparam> (Visual Basic)
-Defines a type parameter name and description.  
+# <a name="typeparam-visual-basic"></a>\<typeparam > (Visual Basic)
+Definiuje nazwę i opis parametru typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,18 +23,18 @@ Defines a type parameter name and description.
   
 ## <a name="parameters"></a>Parametry  
  `name`  
- The name of the type parameter. Enclose the name in double quotation marks (" ").  
+ Nazwa parametru typu. Ujmij nazwę w znaki podwójnego cudzysłowu ("").  
   
  `description`  
- A description of the type parameter.  
+ Opis parametru typu.  
   
 ## <a name="remarks"></a>Uwagi  
- Use the `<typeparam>` tag in the comment for a generic type or generic member declaration to describe one of the type parameters.  
+ Użyj znacznika `<typeparam>` w komentarzu dla typu ogólnego lub ogólnej deklaracji elementu członkowskiego, aby opisać jeden z parametrów typu.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- This example uses the `<typeparam>` tag to describe the `id` parameter.  
+ W tym przykładzie za pomocą tagu `<typeparam>` można opisać parametr `id`.  
   
  [!code-vb[VbVbcnXmlDocComments#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#8)]  
   

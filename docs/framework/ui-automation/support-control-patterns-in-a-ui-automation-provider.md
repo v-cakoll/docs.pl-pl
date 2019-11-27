@@ -18,26 +18,26 @@ ms.locfileid: "74446818"
 # <a name="support-control-patterns-in-a-ui-automation-provider"></a>Obsługa wzorców formantów dostawcy automatyzacji interfejsu użytkownika
 
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).
 
-This topic shows how to implement one or more control patterns on a UI Automation provider so that client applications can manipulate controls and get data from them.
+W tym temacie przedstawiono sposób implementacji co najmniej jednego wzorca kontroli dla dostawcy automatyzacji interfejsu użytkownika, dzięki czemu aplikacje klienckie mogą manipulować kontrolkami i pobierać z nich dane.
 
-## <a name="support-control-patterns"></a>Support Control Patterns
+## <a name="support-control-patterns"></a>Obsługa wzorców kontrolek
 
-1. Implement the appropriate interfaces for the control patterns that the element should support, such as <xref:System.Windows.Automation.Provider.IInvokeProvider> for <xref:System.Windows.Automation.InvokePattern>.
+1. Zaimplementuj odpowiednie interfejsy dla wzorców kontrolek, które element powinien obsługiwać, takich jak <xref:System.Windows.Automation.Provider.IInvokeProvider> <xref:System.Windows.Automation.InvokePattern>.
 
-2. Return the object containing your implementation of each control interface in your implementation of <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>
+2. Zwróć obiekt zawierający implementację każdego interfejsu sterowania w implementacji <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>
 
 ## <a name="example"></a>Przykład
 
-The following example shows an implementation of <xref:System.Windows.Automation.Provider.ISelectionProvider> for a single-selection custom list box. It returns three properties and gets the currently selected item.
+W poniższym przykładzie przedstawiono implementację <xref:System.Windows.Automation.Provider.ISelectionProvider> dla niestandardowego pola listy o pojedynczym zaznaczeniu. Zwraca trzy właściwości i pobiera aktualnie wybrany element.
 
 [!code-csharp[UIAFragmentProvider_snip#119](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListPattern.cs#119)]
 [!code-vb[UIAFragmentProvider_snip#119](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListPattern.vb#119)]
 
 ## <a name="example"></a>Przykład
 
-The following example shows an implementation of <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> that returns the class implementing <xref:System.Windows.Automation.Provider.ISelectionProvider>. Most list box controls would support other patterns as well, but in this example a null reference (`Nothing` in Microsoft Visual Basic .NET) is returned for all other pattern identifiers.
+W poniższym przykładzie przedstawiono implementację <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A>, która zwraca klasę implementującą <xref:System.Windows.Automation.Provider.ISelectionProvider>. Większość formantów pola listy obsługuje inne wzorce, ale w tym przykładzie odwołanie o wartości null (`Nothing` w programie Microsoft Visual Basic .NET) jest zwracane dla wszystkich innych identyfikatorów wzorców.
 
 [!code-csharp[UIAFragmentProvider_snip#120](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#120)]
 [!code-vb[UIAFragmentProvider_snip#120](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#120)]

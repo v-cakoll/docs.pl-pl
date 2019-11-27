@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450078"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>IMetaDataImport::EnumMethodSemantics — Metoda
-Enumerates the properties and the property-change events to which the specified method is related.  
+Wylicza właściwości i zdarzenia zmiany właściwości, z którymi powiązana jest określona metoda.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,38 +39,38 @@ HRESULT EnumMethodSemantics (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in. out] Wskaźnik do modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
   
  `mb`  
- [in] A MethodDef token that limits the scope of the enumeration.  
+ podczas Token MethodDef, który ogranicza zakres wyliczania.  
   
  `rEventProp`  
- [out] The array used to store the events or properties.  
+ określoną Tablica służąca do przechowywania zdarzeń lub właściwości.  
   
  `cMax`  
- [in] The maximum size of the `rEventProp` array.  
+ podczas Maksymalny rozmiar tablicy `rEventProp`.  
   
  `pcEventProp`  
- [out] The number of events or properties returned in `rEventProp`.  
+ określoną Liczba zdarzeń lub właściwości zwróconych w `rEventProp`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSemantics` returned successfully.|  
-|`S_FALSE`|There are no events or properties to enumerate. In that case, `pcEventProp` is zero.|  
+|`S_OK`|`EnumMethodSemantics` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak zdarzeń lub właściwości do wyliczenia. W takim przypadku `pcEventProp` wynosi zero.|  
   
 ## <a name="remarks"></a>Uwagi  
- Many common language runtime types define *Property*`Changed` events and `On`*Property*`Changed` methods related to their properties. For example, the <xref:System.Windows.Forms.Control?displayProperty=nameWithType> type defines a <xref:System.Windows.Forms.Control.Font%2A> property, a <xref:System.Windows.Forms.Control.FontChanged> event, and an <xref:System.Windows.Forms.Control.OnFontChanged%2A> method. The set accessor method of the <xref:System.Windows.Forms.Control.Font%2A> property calls <xref:System.Windows.Forms.Control.OnFontChanged%2A> method, which in turn raises the <xref:System.Windows.Forms.Control.FontChanged> event. You would call `EnumMethodSemantics` using the MethodDef for <xref:System.Windows.Forms.Control.OnFontChanged%2A> to get references to the <xref:System.Windows.Forms.Control.Font%2A> property and the <xref:System.Windows.Forms.Control.FontChanged> event.  
+ Wiele typów środowiska uruchomieniowego języka *wspólnego definiuje`Changed`* zdarzeń i *Właściwości* `On``Changed` metod związanych z ich właściwościami. Na przykład typ <xref:System.Windows.Forms.Control?displayProperty=nameWithType> definiuje Właściwość <xref:System.Windows.Forms.Control.Font%2A>, zdarzenie <xref:System.Windows.Forms.Control.FontChanged> i metodę <xref:System.Windows.Forms.Control.OnFontChanged%2A>. Metoda metody dostępu set właściwości <xref:System.Windows.Forms.Control.Font%2A> wywołuje metodę <xref:System.Windows.Forms.Control.OnFontChanged%2A>, która z kolei podnosi zdarzenie <xref:System.Windows.Forms.Control.FontChanged>. Należy wywołać `EnumMethodSemantics` przy użyciu elementu MethodDef dla <xref:System.Windows.Forms.Control.OnFontChanged%2A>, aby uzyskać odwołania do właściwości <xref:System.Windows.Forms.Control.Font%2A> i zdarzenia <xref:System.Windows.Forms.Control.FontChanged>.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

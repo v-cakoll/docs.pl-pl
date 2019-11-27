@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438707"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass — Metoda
-Determines whether the specified class is an array class.  
+Określa, czy określona Klasa jest klasą Array.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,28 +37,28 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>Parametry  
  `classId`  
- [in] The ID of the class to be examined.  
+ podczas Identyfikator klasy, która ma zostać zbadana.  
   
  `pBaseElemType`  
- [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
+ określoną Wskaźnik do wartości wyliczenia CorElementType —, który wskazuje typ elementów tablicy.  
   
  `pBaseClassId`  
- [out] A pointer to the class ID of the array elements, when available.  
+ określoną Wskaźnik do identyfikatora klasy elementów tablicy, jeśli jest dostępny.  
   
  `pcRank`  
- [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
+ określoną Wskaźnik do liczby całkowitej, która wskazuje rangę (czyli liczbę wymiarów) tablicy.  
   
 ## <a name="remarks"></a>Uwagi  
- If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
+ Jeśli określona Klasa jest klasą Array, Metoda `IsArrayClass` zwraca S_OK HRESULT i wartości dla wszystkich parametrów wyjściowych o wartości innej niż null. W przeciwnym razie zwraca S_FALSE.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

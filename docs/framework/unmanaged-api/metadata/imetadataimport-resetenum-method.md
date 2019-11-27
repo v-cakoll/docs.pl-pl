@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426779"
 ---
 # <a name="imetadataimportresetenum-method"></a>IMetaDataImport::ResetEnum — Metoda
-Resets the specified enumerator to the specified position.  
+Resetuje określony moduł wyliczający do określonego położenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,19 +36,19 @@ HRESULT ResetEnum (
   
 ## <a name="parameters"></a>Parametry  
  `hEnum`  
- [in] The enumerator to reset.  
+ podczas Moduł wyliczający do zresetowania.  
   
  `ulPos`  
- [in] The new position at which to place the enumerator.  
+ podczas Nowa pozycja, w której ma zostać umieszczony moduł wyliczający.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

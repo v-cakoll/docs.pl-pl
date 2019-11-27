@@ -14,67 +14,67 @@ ms.locfileid: "74447975"
 ---
 # <a name="ui-automation-providers-overview"></a>Przegląd dostawców automatyzacji interfejsu użytkownika
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
- UI Automation providers enable controls to communicate with UI Automation client applications. In general, each control or other distinct element in a [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] is represented by a provider. The provider exposes information about the element and optionally implements control patterns that enable the client application to interact with the control.  
+ Dostawcy automatyzacji interfejsu użytkownika umożliwiają kontrolowanie komunikacji z aplikacjami klienckimi automatyzacji interfejsu użytkownika. Ogólnie rzecz biorąc każda kontrolka lub inny odrębny element w [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] jest reprezentowany przez dostawcę. Dostawca ujawnia informacje o elemencie i opcjonalnie implementuje wzorce kontroli, które umożliwiają aplikacji klienckiej współpracującie z kontrolką.  
   
- Client applications do not usually have to work directly with providers. Most of the standard controls in applications that use the [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], or [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] frameworks are automatically exposed to the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] system. Applications that implement custom controls may also implement [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] providers for those controls, and client applications do not have to take any special steps to gain access to them.  
+ Aplikacje klienckie zazwyczaj nie muszą bezpośrednio współpracować z dostawcami. Większość standardowych kontrolek w aplikacjach korzystających z [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]lub [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] platformy są automatycznie uwidaczniane w systemie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Aplikacje implementujące niestandardowe kontrolki mogą również implementować [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawców dla tych kontrolek, a aplikacje klienckie nie muszą podejmować żadnych specjalnych kroków w celu uzyskania dostępu do nich.  
   
- This topic provides an overview of how control developers implement [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] providers, particularly for controls in [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] and [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] windows.  
+ Ten temat zawiera omówienie sposobu, w jaki deweloperzy kontroli implementują [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawców, szczególnie w przypadku formantów w [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] i [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] Windows.  
   
 <a name="Types_of_Providers"></a>   
-## <a name="types-of-providers"></a>Types of Providers  
- UI Automation providers fall into two categories: client-side providers and server-side providers.  
+## <a name="types-of-providers"></a>Typy dostawców  
+ Dostawcy automatyzacji interfejsu użytkownika dzielą się na dwie kategorie: dostawcy po stronie klienta i dostawcy po stronie serwera.  
   
-### <a name="client-side-providers"></a>Client-side providers  
- Client-side providers are implemented by UI Automation clients to communicate with an application that does not support, or does not fully support, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Client-side providers usually communicate with the server across the process boundary by sending and receiving Windows messages.  
+### <a name="client-side-providers"></a>Dostawcy po stronie klienta  
+ Dostawcy po stronie klienta są implementowani przez klientów automatyzacji interfejsu użytkownika do komunikowania się z aplikacją, która nie obsługuje lub nie obsługuje w pełni [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Dostawcy po stronie klienta zazwyczaj komunikują się z serwerem przez granicę procesu przez wysyłanie i otrzymywanie komunikatów systemu Windows.  
   
- Because UI Automation providers for controls in [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, or [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] applications are supplied as part of the operating system, client applications seldom have to implement their own providers, and this overview does not cover them further.  
+ Ponieważ dostawcy automatyzacji interfejsu użytkownika dla kontrolek w aplikacjach [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms lub [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] są dostarczane jako część systemu operacyjnego, aplikacje klienckie rzadko muszą implementować swoich własnych dostawców, a tym samym przeglądem nie są one jeszcze bardziej omówione.  
   
-### <a name="server-side-providers"></a>Server-side providers  
- Server-side providers are implemented by custom controls or by applications that are based on a UI framework other than [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, or [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+### <a name="server-side-providers"></a>Dostawcy po stronie serwera  
+ Dostawcy po stronie serwera są implementowani przez niestandardowe kontrolki lub aplikacje oparte na środowisku interfejsu użytkownika innym niż [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms lub [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
- Server-side providers communicate with client applications across the process boundary by exposing interfaces to the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core system, which in turn serves requests from clients.  
+ Dostawcy po stronie serwera komunikują się z aplikacjami klienckimi na granicy procesu przez udostępnienie interfejsów do systemu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Core, który z kolei obsługuje żądania od klientów.  
   
 <a name="AutomationProviderConcepts"></a>   
-## <a name="ui-automation-provider-concepts"></a>UI Automation Provider Concepts  
- This section provides brief explanations of some of the key concepts you need to understand in order to implement UI Automation providers.  
+## <a name="ui-automation-provider-concepts"></a>Pojęcia dotyczące dostawcy automatyzacji interfejsu użytkownika  
+ Ta sekcja zawiera krótkie objaśnienia niektórych kluczowych pojęć, które należy zrozumieć w celu wdrożenia dostawców automatyzacji interfejsu użytkownika.  
   
 ### <a name="elements"></a>Elementy  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements are pieces of [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] that are visible to UI Automation clients. Examples include application windows, panes, buttons, tooltips, list boxes, and list items.  
+ elementy [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] są częścią [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], które są widoczne dla klientów automatyzacji interfejsu użytkownika. Przykłady obejmują okna aplikacji, okienka, przyciski, etykietki narzędzi, pola listy i elementy listy.  
   
 ### <a name="navigation"></a>Nawigacja  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements are exposed to clients as a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] constructs the tree by navigating from one element to another. Navigation is enabled by the providers for each element, each of which may point to a parent, siblings, and children.  
+ elementy [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] są dostępne dla klientów jako drzewo [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] konstruuje drzewo, przechodząc od jednego elementu do drugiego. Nawigacja jest włączana przez dostawców dla każdego elementu, z których każdy może wskazywać element nadrzędny, elementy równorzędne i elementy podrzędne.  
   
- For more information on the client view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](ui-automation-tree-overview.md).  
+ Aby uzyskać więcej informacji na temat widoku klienta drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Omówienie drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md).  
   
 ### <a name="views"></a>Widoki  
- A client can see the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree in three principal views, as shown in the following table.  
+ Klient może zobaczyć drzewo [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] w trzech głównych widokach, jak pokazano w poniższej tabeli.  
   
 |||  
 |-|-|  
-|Raw view|Contains all elements.|  
-|Control view|Contains elements that are controls.|  
-|Content view|Contains elements that have content.|  
+|Widok nieprzetworzony|Zawiera wszystkie elementy.|  
+|Widok kontrolki|Zawiera elementy, które są kontrolkami.|  
+|Widok Zawartość|Zawiera elementy, które mają zawartość.|  
   
- For more information on client views of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](ui-automation-tree-overview.md).  
+ Aby uzyskać więcej informacji o widokach klienta drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Omówienie drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md).  
   
- It is the responsibility of the provider implementation to define an element as a content element or a control element. Control elements may or may not also be content elements, but all content elements are control elements.  
+ Jest odpowiedzialna za implementację dostawcy, aby zdefiniować element jako element zawartości lub element kontrolny. Elementy kontrolne mogą być również elementami zawartości, ale wszystkie elementy zawartości są elementami kontrolnymi.  
   
 ### <a name="frameworks"></a>Struktury  
- A framework is a component that manages child controls, hit-testing, and rendering in an area of the screen. For example, a [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] window, often referred to as an HWND, can serve as a framework that contains multiple [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements such as a menu bar, a status bar, and buttons.  
+ Platforma jest składnikiem, który zarządza kontrolkami podrzędnymi, testowaniem trafień i renderowaniem w obszarze ekranu. Na przykład okno [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], często określane jako właściwość HWND, może stanowić strukturę, która zawiera wiele elementów [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], takich jak pasek menu, pasek stanu i przyciski.  
   
- [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] container controls such as list boxes and tree views are considered to be frameworks, because they contain their own code for rendering child items and performing hit-testing on them. By contrast, a [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] list box is not a framework, because the rendering and hit-testing is being handled by the containing [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] window.  
+ [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] kontrolki kontenera, takie jak pola listy i widoki drzewa, są uznawane za struktury, ponieważ zawierają własny kod do renderowania elementów podrzędnych i wykonujących na nich Testy trafień. Z kolei pole listy [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] nie jest strukturą, ponieważ renderowanie i testowanie trafień jest obsługiwane przez okno zawierające [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
- The [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] in an application can be made up of different frameworks. For example, an HWND application window might contain Dynamic HTML (DHTML) which in turn contains a component such as a combo box in an HWND.  
+ [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] w aplikacji może składać się z różnych platform. Na przykład okno aplikacji HWND może zawierać dynamiczny kod HTML (DHTML), który z kolei zawiera składnik, taki jak pole kombi w elemencie HWND.  
   
 ### <a name="fragments"></a>Fragmenty  
- A fragment is a complete subtree of elements from a particular framework. The element at the root node of the subtree is called a fragment root. A fragment root does not have a parent, but is hosted within some other framework, usually a [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] window (HWND).  
+ Fragment to kompletny poddrzewo elementów z określonej struktury. Element w węźle głównym poddrzewa jest nazywany korzeniem fragmentu. Katalog główny fragmentu nie ma elementu nadrzędnego, ale jest hostowany w obrębie innej struktury, zazwyczaj okna [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] (HWND).  
   
-### <a name="hosts"></a>Hosts  
- The root node of every fragment must be hosted in an element, usually a [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] window (HWND). The exception is the desktop, which is not hosted in any other element. The host of a custom control is the HWND of the control itself, not the application window or any other window that might contain groups of top-level controls.  
+### <a name="hosts"></a>Hosty  
+ Węzeł główny każdego fragmentu musi być hostowany w elemencie, zazwyczaj w [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] oknie (HWND). Wyjątkiem są komputery stacjonarne, które nie są hostowane w żadnym innym elemencie. Host kontrolki niestandardowej jest elementem HWND samego formantu, a nie oknem aplikacji ani innym oknem, które może zawierać grupy formantów najwyższego poziomu.  
   
- The host of a fragment plays an important role in providing [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] services. It enables navigation to the fragment root, and supplies some default properties so that the custom provider does not have to implement them.  
+ Host fragmentu odgrywa ważną rolę w dostarczaniu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] usług. Umożliwia nawigowanie do głównego fragmentu i udostępnia niektóre właściwości domyślne, aby nie zaimplementował dostawcy niestandardowego.  
   
 ## <a name="see-also"></a>Zobacz także
 

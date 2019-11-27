@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439761"
 ---
 # <a name="icorprofilercallback2handlecreated-method"></a>ICorProfilerCallback2::HandleCreated — Metoda
-Notifies the code profiler that a garbage collection handle has been created.  
+Powiadamia profiler kodu o utworzeniu dojścia do wyrzucania elementów bezużytecznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,19 +35,19 @@ HRESULT HandleCreated(
   
 ## <a name="parameters"></a>Parametry  
  `handleId`  
- [in] The ID of the handle for the garbage collection.  
+ podczas Identyfikator dojścia do wyrzucania elementów bezużytecznych.  
   
  `initialObjectId`  
- [in] The ID of the object for which the garbage collection handle was created.  
+ podczas Identyfikator obiektu, dla którego utworzono dojście do wyrzucania elementów bezużytecznych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

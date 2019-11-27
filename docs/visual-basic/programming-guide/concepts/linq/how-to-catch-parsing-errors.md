@@ -1,5 +1,5 @@
 ---
-title: 'How to: Catch Parsing Errors'
+title: 'Instrukcje: Przechwytywanie błędów analizy'
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
 ms.openlocfilehash: 14c4f76c5f10616f9346084cda276e2862b2b41d
@@ -9,15 +9,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353343"
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a>How to: Catch Parsing Errors (Visual Basic)
-This topic shows how to detect badly formed or invalid XML.  
+# <a name="how-to-catch-parsing-errors-visual-basic"></a>Instrukcje: Przechwytywanie błędów analizy (Visual Basic)
+W tym temacie pokazano, jak wykryć źle sformułowany lub nieprawidłowy kod XML.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is implemented using <xref:System.Xml.XmlReader>. If badly formed or invalid XML is passed to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], the underlying <xref:System.Xml.XmlReader> class will throw an exception. The various methods that parse XML, such as <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, do not catch the exception; the exception can then be caught by your application.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest implementowana przy użyciu <xref:System.Xml.XmlReader>. Jeśli nieprawidłowo sformułowany lub nieprawidłowy kod XML jest przenoszona do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], bazowa Klasa <xref:System.Xml.XmlReader> zgłosi wyjątek. Różne metody, które analizują XML, takie jak <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, nie przechwytują wyjątku; wyjątek może następnie być przechwytywany przez aplikację.  
   
- Note that you cannot get parse errors if you use XML literals. The Visual Basic compiler will catch errors of badly formed or invalid XML.  
+ Należy zauważyć, że nie można uzyskać błędów analizy, jeśli używasz literałów XML. Kompilator Visual Basic przechwytuje błędy źle uformowanego lub nieprawidłowego kodu XML.  
   
 ## <a name="example"></a>Przykład  
- The following code tries to parse invalid XML:  
+ Następujący kod próbuje przeanalizować nieprawidłowego kodu XML:  
   
 ```vb  
 Try  
@@ -33,14 +33,14 @@ Catch e As System.Xml.XmlException
 End Try  
 ```  
   
- When you run this code, it throws the following exception:  
+ Po uruchomieniu tego kodu zgłasza następujący wyjątek:  
   
 ```console  
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   
- For information about the exceptions that you can expect the <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, and <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> methods to throw, see the <xref:System.Xml.XmlReader> documentation.  
+ Informacje o wyjątkach, w których można oczekiwać, że <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>i <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> metod zgłaszania, zapoznaj się z dokumentacją <xref:System.Xml.XmlReader>.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Analizowanie kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

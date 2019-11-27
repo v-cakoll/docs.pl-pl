@@ -12,25 +12,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74329559"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>Błąd ładowania biblioteki DLL (Visual Basic)
-A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement. Possible causes for this error include:  
+Biblioteka dołączana dynamicznie (DLL) to biblioteka określona w klauzuli `Lib` instrukcji `Declare`. Możliwe przyczyny tego błędu to:  
   
-- The file is not DLL executable.  
+- Plik nie jest plikiem wykonywalnym DLL.  
   
-- The file is not a Microsoft Windows DLL.  
+- Ten plik nie jest plikiem DLL systemu Microsoft Windows.  
   
-- The DLL references another DLL that is not present.  
+- Biblioteka DLL odwołuje się do innej nieobecnej biblioteki DLL.  
   
-- The DLL or referenced DLL is not in a directory specified in the path.  
+- Biblioteka DLL lub przywoływana Biblioteka DLL nie znajduje się w katalogu określonym w ścieżce.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- If the file is a source-text file and therefore not DLL executable, it must be compiled and linked to a DLL-executable form.  
+- Jeśli plik jest plikiem źródłowym i w związku z tym nie jest plikiem wykonywalnym DLL, musi być skompilowany i połączony z formularzem wykonywalnym biblioteki DLL.  
   
-- If the file is not a Microsoft Windows DLL, obtain the Microsoft Windows equivalent.  
+- Jeśli plik nie jest plikiem DLL systemu Microsoft Windows, uzyskaj odpowiedniki systemu Microsoft Windows.  
   
-- If the DLL references another DLL that is not present, obtain the referenced DLL and make it available.  
+- Jeśli biblioteka DLL odwołuje się do innej nieobecnej biblioteki DLL, uzyskaj przywoływaną bibliotekę DLL i Udostępnij ją.  
   
-- If the DLL or referenced DLL is not in a directory specified by the path, move the DLL to a referenced directory.  
+- Jeśli biblioteka DLL lub przywoływana Biblioteka DLL nie znajduje się w katalogu określonym przez ścieżkę, Przenieś bibliotekę DLL do katalogu, do którego się odwołuje.  
   
 ## <a name="see-also"></a>Zobacz także
 

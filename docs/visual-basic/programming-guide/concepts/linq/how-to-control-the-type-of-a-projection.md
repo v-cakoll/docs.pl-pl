@@ -1,5 +1,5 @@
 ---
-title: 'How to: Control the Type of a Projection'
+title: Jak kontrolować typ projekcji
 ms.date: 07/20/2015
 ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
 ms.openlocfilehash: b9620e7dab7abecce5161c5e7f50b187dbb3a71e
@@ -9,13 +9,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351100"
 ---
-# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>How to: Control the Type of a Projection (Visual Basic)
-Projection is the process of taking one set of data, filtering it, changing its shape, and even changing its type. Most query expressions perform projections. Most of the query expressions shown in this section evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, but you can control the type of the projection to create collections of other types. This topic shows how to do this.  
+# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>Instrukcje: kontrolowanie typu projekcji (Visual Basic)
+Projekcja to proces przejmowania jednego zestawu danych, filtrowanie go, zmiana jego kształtu, a nawet zmiana jego typu. Większość wyrażeń zapytania wykonuje projekcje. Większość wyrażeń zapytania przedstawionych w tej sekcji szacuje się <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement>, ale można kontrolować typ projekcji, aby tworzyć Kolekcje innych typów. W tym temacie pokazano, jak to zrobić.  
   
 ## <a name="example"></a>Przykład  
- The following example defines a new type, `Customer`. The query expression then instantiates new `Customer` objects in the `Select` clause. This causes the type of the query expression to be <xref:System.Collections.Generic.IEnumerable%601> of `Customer`.  
+ W poniższym przykładzie zdefiniowano nowy typ `Customer`. Wyrażenie zapytania następnie tworzy wystąpienie nowych obiektów `Customer` w klauzuli `Select`. Powoduje to, że typ wyrażenia zapytania ma być <xref:System.Collections.Generic.IEnumerable%601> `Customer`.  
   
- This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Public Class Customer  
@@ -89,4 +89,4 @@ LETSS:Let's Stop N Shop:Jaime Yorres
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Linq.Enumerable.Select%2A>
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Projekcje i przekształcenia (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

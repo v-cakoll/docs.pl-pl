@@ -9,73 +9,73 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345706"
 ---
-# <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Concepts and Terminology (Functional Transformation) (Visual Basic)
-This topic introduces the concepts and terminology of pure functional transformations. The functional transformation approach to transforming data yields code that is often quicker to program, more expressive, and easier to debug and maintain than more traditional, imperative programming.
+# <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Pojęcia i terminologia (przekształcenie funkcjonalne) (Visual Basic)
+W tym temacie przedstawiono koncepcje i terminologię czystych transformacji funkcjonalnych. Podejście do transformacji funkcjonalnej do przekształcania danych generuje kod, który jest często szybszy w programie, bardziej wyraźny i łatwiejszy do debugowania i konserwowania niż bardziej tradycyjne, bezużyteczne programowanie.
 
-Note that the topics in this section are not intended to fully explain functional programming. Instead, these topics identify some of the functional programming capabilities that make it easier to transform XML from one shape to another.
+Należy zauważyć, że tematy w tej sekcji nie są przeznaczone do pełnego wyjaśnienia programowania funkcjonalnego. W tym temacie opisano niektóre funkcje programowania funkcjonalnego, które ułatwiają Przekształcanie kodu XML z jednego kształtu do drugiego.
 
-## <a name="what-is-pure-functional-transformation"></a>What Is Pure Functional Transformation?
+## <a name="what-is-pure-functional-transformation"></a>Co to jest czysta funkcjonalne przekształcenie?
 
-In *pure functional transformation*, a set of functions, called *pure functions*, define how to transform a set of structured data from its original form into another form. The word "pure" indicates that the functions are *composable*, which requires that they are:
+W *czystej transformacji funkcjonalnej*zestaw funkcji, zwany *czystymi funkcjami*, definiuje sposób przekształcania zestawu danych strukturalnych z jego oryginalnego formularza na inny formularz. Słowo "czysty" wskazuje, że funkcje są przeznaczone do *składania*, które wymagają:
 
-- *Self-contained*, so that they can be freely ordered and rearranged without entanglement or interdependencies with the rest of the program. Pure transformations have no knowledge of or effect upon their environment. That is, the functions used in the transformation have no *side effects*.
+- Samodzielne, dzięki czemu mogą być swobodnie uporządkowane i *rozmieszczone*bez Entanglement lub współzależności z resztą programu. Czyste przekształcenia nie mają żadnej znajomości środowiska ani nie mają na nie wpływu. Oznacza to, że funkcje używane w transformację nie mają żadnych *efektów ubocznych*.
 
-- *Stateless*, so that executing the same function or specific set of functions on the same input will always result in the same output. Pure transformations have no memory of their prior use.
+- *Bezstanowa*, dzięki czemu wykonywanie tej samej funkcji lub określonego zestawu funkcji na tym samym wejściu będzie zawsze powodowało te same dane wyjściowe. Czyste przekształcenia nie mają wolnej pamięci.
 
 > [!IMPORTANT]
-> In the rest of this tutorial, the term "pure function" is used in a general sense to indicate a programming approach, and not a specific language feature.
+> W pozostałej części tego samouczka termin "czysta funkcja" jest używany w ogólnym sensie, aby wskazać podejście programistyczne i nie konkretną funkcję języka.
 >
-> Note that pure functions must be implemented as functions in Visual Basic.
+> Należy zauważyć, że funkcje czyste muszą być zaimplementowane jako funkcje w Visual Basic.
 >
-> Also, you should not confuse pure functions with pure virtual methods in C++. The latter indicates that the containing class is abstract and that no method body is supplied.
+> Ponadto nie należy mylić czystych funkcji z czystymi metodami wirtualnymi w programie C++. Ten drugi wskazuje, że Klasa zawierająca jest abstrakcyjna i nie dostarczono treści metody.
 
-### <a name="functional-programming"></a>Functional Programming
+### <a name="functional-programming"></a>Programowanie funkcjonalne
 
-*Functional programming* is a programming approach that directly supports pure functional transformation.
+*Programowanie funkcjonalne* jest podejściem programistycznym, które bezpośrednio obsługuje funkcję czystego przekształcania funkcjonalności.
 
-Historically, general-purpose functional programming languages, such as ML, Scheme, Haskell, and F#, have been primarily of interest to the academic community. Although it has always been possible to write pure functional transformations in Visual Basic, the difficulty of doing so has not made it an attractive option to most programmers. With later versions of Visual Basic, however, new language constructs such as lambda expressions and type inference make it functional programming much easier and more productive.
+W historycznych językach programowania, takich jak ML, schematy, Haskell i F#, mają głównie znaczenie dla społeczności akademickiej. Mimo że zawsze było możliwe zapisanie czystych transformacji funkcjonalnych w Visual Basic, trudności z tym nie spowodowały, że nie zostały one atrakcyjną opcją dla większości programistów. W nowszych wersjach Visual Basic, jednak nowe konstrukcje języka, takie jak wyrażenia lambda i wnioskowanie o typie, sprawiają, że programowanie funkcjonalnie znacznie prostsze i wydajniejsze.
 
-For more information about functional programming, see [Functional Programming vs. Imperative Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md).
+Aby uzyskać więcej informacji na temat programowania funkcjonalnego, zobacz Programowanie funkcjonalne i bezwzględne [programowanie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md).
 
-#### <a name="domain-specific-fp-languages"></a>Domain-Specific FP Languages
+#### <a name="domain-specific-fp-languages"></a>Specyficzne dla domeny Języki FP
 
-Although general functional programming languages have not been widely adopted, specific domain-specific functional programming languages have had better success. For example, Cascading Style Sheets (CSS) are used to determine the look and feel of many Web pages, and Extensible Stylesheet Language Transformations (XSLT) style sheets are used extensively in XML data manipulation. For more information about XSLT, see [XSLT Transformations](../../../../standard/data/xml/xslt-transformations.md).
+Mimo że ogólne, funkcjonalne Języki programowania nie zostały szeroko przyjęte, specyficzne dla konkretnych domen Języki programowania funkcjonalnego były lepszym sukcesem. Na przykład kaskadowe arkusze stylów (CSS) służy do określania wyglądu i sposobu działania wielu stron sieci Web, a arkusze stylów Extensible Stylesheet Language Transformations (XSLT) są szeroko używane w manipulowaniu danymi XML. Aby uzyskać więcej informacji na temat XSLT, zobacz [XSLT Transformations](../../../../standard/data/xml/xslt-transformations.md).
 
 ## <a name="terminology"></a>Terminologia
 
-The following table defines some terms related to functional transformations.
+W poniższej tabeli zdefiniowano niektóre terminy związane z transformacjami funkcjonalnymi.
 
-higher-order (first-class) function \
-A function that can be treated as a programmatic object. For example, a higher-order function can be passed to or returned from other functions. In Visual Basic, delegates and lambda expressions are language features that support higher-order functions. To write a higher-order function, you declare one or more arguments to take delegates, and you often use lambda expressions when calling it. Many of the standard query operators are higher-order functions.
+Funkcja wyższej kolejności (pierwszej klasy) \
+Funkcja, która może być traktowana jako obiekt programistyczny. Na przykład funkcja wyższego rzędu może być przekazana do lub zwrócona z innych funkcji. W Visual Basic, Delegaty i wyrażenia lambda są funkcjami językowymi, które obsługują funkcje wyższego rzędu. Aby napisać funkcję wyższego rzędu, należy zadeklarować jeden lub więcej argumentów do przejęcia delegatów i często używać wyrażeń lambda podczas wywoływania. Wiele standardowych operatorów zapytań to funkcje wyższego rzędu.
 
-For more information, see [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
+Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — Omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
 
-lambda expression \
-Essentially, an inline anonymous function that can be used wherever a delegate type is expected. This is a simplified definition of lambda expressions, but it is adequate for the purposes of this tutorial.
+wyrażenie lambda \
+Zasadniczo Wbudowana funkcja anonimowa, która może być używana wszędzie tam, gdzie jest oczekiwany typ delegata. Jest to uproszczona definicja wyrażeń lambda, ale jest ona odpowiednia do celów tego samouczka.
 
-For more information about, see [Lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+Aby uzyskać więcej informacji na temat, zobacz [lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
 
-collection \
-A structured set of data, usually of a uniform type. To be compatible with LINQ, a collection must implement the <xref:System.Collections.IEnumerable> interface or the <xref:System.Linq.IQueryable> interface (or one of their generic counterparts, <xref:System.Collections.Generic.IEnumerator%601> or <xref:System.Linq.IQueryable%601>).
+zbiera
+Strukturalny zestaw danych, zazwyczaj o jednolitym typie. Aby była zgodna z LINQ, kolekcja musi implementować interfejs <xref:System.Collections.IEnumerable> lub interfejs <xref:System.Linq.IQueryable> (lub jeden z ich rodzajowych odpowiedników, <xref:System.Collections.Generic.IEnumerator%601> lub <xref:System.Linq.IQueryable%601>).
 
-tuple (anonymous types) \
-A mathematical concept, a tuple is a finite sequence of objects, each of a specific type. A tuple is also known as an ordered list. Anonymous types are a language implementation of this concept, which enable an unnamed class type to be declared and an object of that type to be instantiated at the same time.
+Krotka (typy anonimowe) \
+Koncepcja matematyczna, krotka jest skończoną sekwencją obiektów, każdego określonego typu. Spójna kolekcja jest również nazywana listą uporządkowaną. Typy anonimowe to implementacje języka tego koncepcji, które umożliwiają zadeklarowanie nienazwanego typu klasy i obiekt tego typu do wystąpienia w tym samym czasie.
 
-For more information, see  [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+Aby uzyskać więcej informacji, zobacz [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
-type inference (implicit typing) \
-The ability of a compiler to determine the type of a variable in the absence of an explicit type declaration.
+Wnioskowanie o typie (niejawne wpisywanie) \
+Możliwość kompilatora, aby określić typ zmiennej w nieobecności jawnej deklaracji typu.
 
-For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
+Aby uzyskać więcej informacji, zobacz temat [wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
 
-deferred execution and lazy evaluation \
-The delaying of evaluation of an expression until its resolved value is actually required. Deferred execution is supported in collections.
+wykonywanie odroczone i Ocena z opóźnieniem \
+Opóźnienie obliczania wyrażenia do momentu, gdy jego rozpoznana wartość nie jest wymagana. Wykonywanie odroczone jest obsługiwane w kolekcjach.
 
-For more information, see [Basic Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) and [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Aby uzyskać więcej informacji, zobacz [podstawowe operacje zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) i [wykonywanie odroczone oraz obliczanie z opóźnieniem w LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
 
-These language features will be used in code samples throughout this section.
+Te funkcje języka będą używane w przykładach kodu w tej sekcji.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Functional Programming vs. Imperative Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Wprowadzenie do czystych transformacji funkcjonalnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Programowanie funkcjonalne a programowanie bezwzględne (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

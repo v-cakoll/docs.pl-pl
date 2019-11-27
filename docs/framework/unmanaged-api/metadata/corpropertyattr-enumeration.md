@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450142"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr — Wyliczenie
-Contains values that describe the metadata of a property.  
+Zawiera wartości opisujące metadane właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,22 +38,22 @@ typedef enum CorPropertyAttr {
 } CorPropertyAttr;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`prSpecialName`|Specifies that the property is special, and that its name describes how.|  
-|`prReservedMask`|Reserved for internal use by the common language runtime.|  
-|`prRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the property name.|  
-|`prHasDefault`|Specifies that the property has a default value.|  
-|`prUnused`|Unused.|  
+|`prSpecialName`|Określa, że właściwość jest specjalna i że jej nazwa opisuje sposób.|  
+|`prReservedMask`|Zarezerwowane do użytku wewnętrznego przez środowisko uruchomieniowe języka wspólnego.|  
+|`prRTSpecialName`|Określa, że wewnętrzne interfejsy API środowiska uruchomieniowego języka wspólnego powinny sprawdzać kodowanie nazwy właściwości.|  
+|`prHasDefault`|Określa, że właściwość ma wartość domyślną.|  
+|`prUnused`|Przestrzeń.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450120"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck — Wyliczenie
-Specifies flags to control which referenced items are converted to their definitions in order to optimize the code.  
+Określa flagi do kontrolowania, które elementy, do których istnieją odwołania, są konwertowane na ich definicje, aby zoptymalizować kod.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,22 +36,22 @@ typedef enum CorRefToDefCheck {
 } CorRefToDefCheck;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Specifies that type references and member references should be converted to definitions. This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
-|`MDRefToDefAll`|Specifies that all referenced items should be converted to definitions.|  
-|`MDRefToDefNone`|Specifies that no referenced items should be converted to definitions.|  
-|`MDTypeRefToDef`|Specifies that only type references should be converted to type definitions.|  
-|`MDMemberRefToDef`|Specifies that only member references should be converted to definitions. That is, member references should be converted to either method definitions or field definitions.|  
+|`MDRefToDefDefault`|Określa, że odwołania do typu i odwołania do elementów członkowskich powinny być konwertowane na definicje. Jest to wartość domyślna (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
+|`MDRefToDefAll`|Określa, że wszystkie elementy, do których istnieją odwołania, powinny być konwertowane na definicje.|  
+|`MDRefToDefNone`|Określa, że żadne elementy, do których istnieją odwołania, nie powinny być konwertowane na definicje.|  
+|`MDTypeRefToDef`|Określa, że odwołania do typu mają być konwertowane do definicji typu.|  
+|`MDMemberRefToDef`|Określa, że tylko odwołania składowe powinny być konwertowane na definicje. Oznacza to, że odwołania do elementów członkowskich powinny być konwertowane na definicje metod lub definicje pól.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Nagłówek:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

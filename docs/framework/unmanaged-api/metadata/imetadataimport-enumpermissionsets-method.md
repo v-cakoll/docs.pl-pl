@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450046"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>IMetaDataImport::EnumPermissionSets — Metoda
-Enumerates permissions for the objects in a specified metadata scope.  
+Wylicza uprawnienia dla obiektów w określonym zakresie metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,38 +40,38 @@ HRESULT EnumPermissionSets
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in. out] Wskaźnik do modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
   
  `tk`  
- [in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.  
+ podczas Token metadanych, który ogranicza zakres wyszukiwania lub wartość NULL, aby przeszukać możliwie najszerszego zakresu.  
   
  `dwActions`  
- [in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.  
+ podczas Flagi reprezentujące <xref:System.Security.Permissions.SecurityAction> wartości do uwzględnienia w `rPermission`, lub zero, aby zwrócić wszystkie akcje.  
   
  `rPermission`  
- [out] The array used to store the Permission tokens.  
+ określoną Tablica służąca do przechowywania tokenów uprawnień.  
   
  `cMax`  
- [in] The maximum size of the `rPermission` array.  
+ podczas Maksymalny rozmiar tablicy `rPermission`.  
   
  `pcTokens`  
- [out] The number of Permission tokens returned in `rPermission`.  
+ określoną Liczba tokenów uprawnień zwróconych w `rPermission`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumPermissionSets` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak tokenów do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -25,35 +25,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347495"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>Wyliczenie i kwantyfikacja nazwy (Visual Basic)
-Normally, when referring to a member of an enumeration, you must qualify the member name with the enumeration name. For example, to refer to the `Sunday` member of your `Days` enumeration, you would use the following syntax:  
+Zwykle w przypadku odwoływania się do elementu członkowskiego wyliczenia należy zakwalifikować nazwę elementu członkowskiego o nazwie wyliczenia. Na przykład, aby odwołać się do `Sunday` elementu członkowskiego wyliczenia `Days`, należy użyć następującej składni:  
   
  [!code-vb[VbEnumsTask#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#18)]  
   
-## <a name="using-the-imports-statement"></a>Using the Imports Statement  
- You can avoid using fully qualified names by adding an `Imports` statement to the namespace declarations section of your code, as in the following example:  
+## <a name="using-the-imports-statement"></a>Korzystanie z instrukcji Imports  
+ Można uniknąć używania w pełni kwalifikowanych nazw przez dodanie instrukcji `Imports` do sekcji deklaracji przestrzeni nazw kodu, jak w poniższym przykładzie:  
   
  [!code-vb[VbEnumsTask#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#22)]  
   
- An `Imports` statement imports namespace names from referenced projects and assemblies and from within the same project as the module in which the statement appears. Once this statement is added, you can refer to your enumeration members without qualification, as in the following example:  
+ Instrukcja `Imports` importuje nazwy przestrzeni nazw z przywoływanych projektów i zestawów oraz z tego samego projektu, co moduł, w którym znajduje się instrukcja. Po dodaniu tej instrukcji można odwołać się do członków wyliczenia bez kwalifikacji, jak w poniższym przykładzie:  
   
  [!code-vb[VbEnumsTask#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#24)]  
   
- By organizing sets of related constants in enumerations, you can use the same constant names in different contexts. For example, you can use the same names for the weekday constants in the `Days` and `WorkDays` enumerations. If you use the `Imports` statement with your enumerations, you must be careful to avoid ambiguous references. Consider the following example:  
+ Organizując zestawy powiązanych stałych w wyliczeniach, można użyć tych samych stałych nazw w różnych kontekstach. Na przykład można użyć tych samych nazw dla stałych dni tygodnia w `Days` i `WorkDays` wyliczeń. Jeśli używasz instrukcji `Imports` z wyliczeniami, musisz zachować ostrożność, aby uniknąć niejednoznacznych odwołań. Rozważmy następujący przykład:  
   
  [!code-vb[VbEnumsTask#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#22)]  
   
  [!code-vb[VbEnumsTask#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#25)]  
   
- Assuming that `Monday` is a member of both the `Days` enumeration and the `Workdays` enumeration, this code generates a compiler error. To avoid ambiguous references when referring to an individual constant, qualify the constant name with its enumeration. The following code refers to the `Saturday` constants in the `Days` and `WorkDays` enumerations.  
+ Przy założeniu, że `Monday` jest członkiem zarówno wyliczenia `Days`, jak i wyliczenia `Workdays`, ten kod generuje błąd kompilatora. Aby uniknąć niejednoznacznych odwołań podczas odwoływania się do pojedynczej stałej, należy zakwalifikować stałą nazwę z wyliczeniem. Poniższy kod odnosi się do `Saturday` stałych w wyliczeniach `Days` i `WorkDays`.  
   
  [!code-vb[VbEnumsTask#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#32)]  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Stałe i wyliczenia](../../../../visual-basic/language-reference/constants-and-enumerations.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Instrukcje: deklarowanie wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Instrukcje: odwoływanie się do elementu członkowskiego wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
+- [Instrukcje: Iterowanie przez Wyliczenie w Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [Instrukcje: określanie ciągu skojarzonego z wartością wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Kiedy stosować wyliczanie](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [Typy danych Stała i Literał](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)

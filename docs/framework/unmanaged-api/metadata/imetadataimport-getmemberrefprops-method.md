@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437492"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps — Metoda
-Gets metadata associated with the member referenced by the specified token.  
+Pobiera metadane skojarzone z elementem członkowskim, do którego odwołuje się określony token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,34 +41,34 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>Parametry  
  `mr`  
- [in] The MemberRef token to return associated metadata for.  
+ podczas Token elementu MemberRef do zwrócenia skojarzonych metadanych.  
   
  `ptk`  
- [out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.  
+ określoną Element TypeDef lub TypeRef albo token elementu TypeSpec reprezentujący klasę, która deklaruje element członkowski lub token elementu ModuleRef reprezentujący klasę modułu, która deklaruje element członkowski, lub element MethodDef reprezentujący element członkowski.  
   
  `szMember`  
- [out] A string buffer for the member's name.  
+ określoną Bufor ciągu dla nazwy elementu członkowskiego.  
   
  `cchMember`  
- [in] The requested size in wide characters of `szMember`.  
+ podczas Żądany rozmiar w szerokich znakach `szMember`.  
   
  `pchMember`  
- [out] The returned size in wide characters of `szMember`.  
+ określoną Zwrócony rozmiar w szerokich znakach `szMember`.  
   
  `ppvSibBlob`  
- [out] A pointer to the binary metadata signature for the member.  
+ określoną Wskaźnik do binarnego podpisu metadanych dla elementu członkowskiego.  
   
  `pbSig`  
- [out] The size in bytes of `ppvSigBlob`.  
+ określoną Rozmiar w bajtach `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

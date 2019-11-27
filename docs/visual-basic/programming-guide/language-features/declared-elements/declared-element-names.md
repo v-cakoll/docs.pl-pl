@@ -31,28 +31,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345431"
 ---
 # <a name="declared-element-names-visual-basic"></a>Zadeklarowane nazwy elementów (Visual Basic)
-Every declared element has a name, also called an *identifier*, which is what the code uses to refer to it.  
+Każdy zadeklarowany element ma nazwę, nazywaną również *identyfikatorem*, który jest używany przez kod do odwoływania się do niego.  
   
-## <a name="rules"></a>Rules  
- An element name in Visual Basic must observe the following rules:  
+## <a name="rules"></a>Reguły  
+ Nazwa elementu w Visual Basic musi być zgodna z następującymi regułami:  
   
-- It must begin with an alphabetic character or an underscore (`_`).  
+- Musi zaczynać się od litery lub znaku podkreślenia (`_`).  
   
-- It must only contain alphabetic characters, decimal digits, and underscores.  
+- Musi zawierać tylko znaki alfanumeryczne, cyfry dziesiętne i podkreślenia.  
   
-- It must contain at least one alphabetic character or decimal digit if it begins with an underscore.  
+- Musi zawierać co najmniej jedną literę lub cyfrę dziesiętną, jeśli zaczyna się od znaku podkreślenia.  
   
-- It must not be more than 1023 characters long.  
+- Nie może być dłuższa niż 1023 znaków.  
   
- The length limit of 1023 characters also applies to the entire string of a fully qualified name, such as `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
+ Limit długości 1023 znaków ma zastosowanie również do całego ciągu w pełni kwalifikowanej nazwy, takiej jak `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
   
- The following example shows some valid element names.  
+ Poniższy przykład pokazuje nieprawidłowe nazwy elementów.  
   
  `aB123__45`  
   
  `_567`  
   
- The following example shows some invalid element names. The first contains only an underscore, the second begins with a decimal digit, and the third contains an invalid character ($).  
+ W poniższym przykładzie przedstawiono niektóre nieprawidłowe nazwy elementów. Pierwszy zawiera tylko podkreślenie, drugi zaczyna się cyfrą dziesiętną, a trzecia zawiera nieprawidłowy znak ($).  
   
  `' Three INVALID element names`  
   
@@ -63,31 +63,31 @@ Every declared element has a name, also called an *identifier*, which is what th
  `xyz$wv`  
   
 > [!CAUTION]
-> Element names starting with an underscore (`_`) are not part of the [Language Independence and Language-Independent Components](../../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot use a component that defines such names. However, an underscore in any other position in an element name is CLS-compliant.  
+> Nazwy elementów zaczynające się od znaku podkreślenia (`_`) nie są częścią [niezależną od języka i składników niezależnych od języka](../../../../standard/language-independence-and-language-independent-components.md) (CLS), więc kod zgodny ze specyfikacją CLS nie może używać składnika, który definiuje takie nazwy. Jednakże podkreślenie w każdym innym miejscu w nazwie elementu jest zgodne ze specyfikacją CLS.  
   
-### <a name="name-length-guidelines"></a>Name Length Guidelines  
- As a practical matter, your name should be as short as possible while still clearly identifying the nature of the element. This improves the readability of your code and reduces line length and source-file size.  
+### <a name="name-length-guidelines"></a>Wskazówki dotyczące długości nazwy  
+ Ze względu na to, że Twoja nazwa powinna być tak krótka, jak to możliwe, podczas gdy nadal jasno identyfikuje charakter elementu. Poprawia to czytelność kodu i zmniejsza długość wiersza i rozmiar pliku źródłowego.  
   
- On the other hand, your name should not be so short that it does not adequately describe what the element represents and how your code uses it. This is important for the readability of your code. If somebody else is trying to understand it, or if you yourself are looking at it a long time after you wrote it, suitable element names can save a considerable amount of time.  
+ Z drugiej strony, Twoja nazwa nie powinna być tak krótka, aby nie opisująca znaczenia elementu i sposobu jego użycia przez kod. Jest to ważne dla czytelności kodu. Jeśli ktoś inny próbuje zrozumieć ten element, lub jeśli ty przeglądasz ją przez długi czas po jego zapisaniu, odpowiednie nazwy elementów mogą zaoszczędzić znaczną ilość czasu.  
   
-## <a name="escaped-names"></a>Escaped Names  
- Generally, an element name must not match any of the keywords reserved by Visual Basic, such as `Case` or `Friend`. However, you can define an *escaped name*, which is enclosed by brackets (`[ ]`). An escaped name can match any Visual Basic keyword, since the brackets remove any ambiguity. You also use the brackets when you refer to the name later in your code.  
+## <a name="escaped-names"></a>Nazwy o zmienionym znaczeniu  
+ Ogólnie rzecz biorąc, nazwa elementu nie może być zgodna z żadnym ze słów kluczowych zarezerwowanych przez Visual Basic, takich jak `Case` lub `Friend`. Można jednak zdefiniować *nazwę o zmienionym znaczeniu*, która jest ujęta w nawiasy kwadratowe (`[ ]`). Nazwa o zmienionym znaczeniu może być zgodna ze słowem kluczowym Visual Basic, ponieważ nawiasy usuwają dowolną niejednoznaczność. Możesz również użyć nawiasów, gdy odwołujesz się do nazwy w dalszej części kodu.  
   
- In general, you should use escaped names only when:  
+ Ogólnie rzecz biorąc należy używać nazw unikowych tylko wtedy, gdy:  
   
-- Your code has migrated from a previous version of Visual Basic that did not reserve the keyword being used as a name; or  
+- Twój kod został zmigrowany z poprzedniej wersji Visual Basic, która nie zarezerwował słowa kluczowego używanego jako nazwa; oraz  
   
-- You are working with code written in another language in which the given keyword is not reserved.  
+- Pracujesz z kodem zapisanym w innym języku, w którym określone słowo kluczowe nie jest zarezerwowane.  
   
- Otherwise, you should consider renaming the element if its name conflicts with a keyword. The integrated development environment (IDE) provides an easy way to do this. For more information, see [Refactoring](/visualstudio/ide/refactoring-in-visual-studio).  
+ W przeciwnym razie należy rozważyć zmianę nazwy elementu, jeśli jego nazwa powoduje konflikt ze słowem kluczowym. Zintegrowane środowisko programistyczne (IDE) zapewnia łatwy sposób wykonania tej czynności. Aby uzyskać więcej informacji, zobacz [Refaktoryzacja](/visualstudio/ide/refactoring-in-visual-studio).  
   
-## <a name="case-sensitivity-in-names"></a>Case Sensitivity in Names  
- Element names in Visual Basic are case-insensitive. This means that when the compiler compares two names that differ in alphabetic case only, it interprets them as the same name. For example, it considers `ABC` and `abc` to refer to the same declared element.  
+## <a name="case-sensitivity-in-names"></a>Rozróżnianie wielkości liter w nazwach  
+ W nazwach elementów w Visual Basic nie jest rozróżniana wielkość liter. Oznacza to, że gdy kompilator porównuje dwie nazwy, które różnią się tylko wielkością liter, interpretuje je jako tę samą nazwę. Na przykład uważa, że `ABC` i `abc` do odwoływania się do tego samego zadeklarowanego elementu.  
   
- However, the common language runtime (CLR) uses case-sensitive binding. Therefore, when you produce an assembly or a DLL and make it available to other assemblies, your names are no longer case-insensitive. For example, if you define a class with an element called `ABC`, and other assemblies make use of your class through the common language runtime, they must refer to the element as `ABC`. If you subsequently recompile your class and change the element's name to `abc`, the other assemblies using your class could no longer access that element. Therefore, when you release an updated version of an assembly, you should not change the alphabetic case of any public elements.  
+ Jednak środowisko uruchomieniowe języka wspólnego (CLR) używa powiązania z rozróżnianiem wielkości liter. W związku z tym, podczas tworzenia zestawu lub biblioteki DLL i udostępnienia go innym zestawom nazwy nie są dłuższe. Na przykład, jeśli zdefiniujesz klasę z elementem o nazwie `ABC`, a inne zestawy używają klasy przez środowisko uruchomieniowe języka wspólnego, muszą odwoływać się do elementu jako `ABC`. Jeśli następnie ponownie skompilujesz klasę i zmienisz nazwę elementu na `abc`, inne zestawy korzystające z klasy nie będą miały już dostępu do tego elementu. W związku z tym po wydaniu zaktualizowanej wersji zestawu nie należy zmieniać wielkości liter każdego z elementów publicznych.  
   
-## <a name="names-and-locales"></a>Names and Locales  
- Comparison of names is independent of locale. If two names match in one locale, they are guaranteed to match in all locales.  
+## <a name="names-and-locales"></a>Nazwy i ustawienia regionalne  
+ Porównanie nazw jest niezależne od ustawień regionalnych. Jeśli dwie nazwy są zgodne z jednym ustawieniem regionalnym, są one gwarantowane do dopasowania we wszystkich ustawieniach regionalnych.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353227"
 ---
 # <a name="inherits-statement"></a>Inherits — Instrukcja
-Causes the current class or interface to inherit the attributes, variables, properties, procedures, and events from another class or set of interfaces.  
+Powoduje, że bieżąca Klasa lub interfejs dziedziczy atrybuty, zmienne, właściwości, procedury i zdarzenia z innej klasy lub zestawu interfejsów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -28,40 +28,40 @@ Inherits basetypenames
   
 |Termin|Definicja|  
 |---|---|  
-|`basetypenames`|Wymagany. The name of the class from which this class derives.<br /><br /> —lub—<br /><br /> The names of the interfaces from which this interface derives. Use commas to separate multiple names.|  
+|`basetypenames`|Wymagana. Nazwa klasy, z której pochodzi ta klasa.<br /><br /> —lub—<br /><br /> Nazwy interfejsów, z których pochodzi ten interfejs. Użyj przecinków, aby rozdzielić wiele nazw.|  
   
 ## <a name="remarks"></a>Uwagi  
- If used, the `Inherits` statement must be the first non-blank, non-comment line in a class or interface definition. It should immediately follow the `Class` or `Interface` statement.  
+ Jeśli jest używana, instrukcja `Inherits` musi być pierwszym niepustym wierszem bez komentarza w definicji klasy lub interfejsu. Należy od razu przestrzegać instrukcji `Class` lub `Interface`.  
   
- You can use `Inherits` only in a class or interface. This means the declaration context for an inheritance cannot be a source file, namespace, structure, module, procedure, or block.  
+ `Inherits` można użyć tylko w klasie lub interfejsie. Oznacza to, że kontekst deklaracji dziedziczenia nie może być plikiem źródłowym, przestrzenią nazw, strukturą, modułem, procedurą lub blokiem.  
   
-## <a name="rules"></a>Rules  
+## <a name="rules"></a>Reguły  
   
-- **Class Inheritance.** If a class uses the `Inherits` statement, you can specify only one base class.  
+- **Dziedziczenie klas.** Jeśli Klasa używa instrukcji `Inherits`, można określić tylko jedną klasę bazową.  
   
-     A class cannot inherit from a class nested within it.  
+     Klasa nie może też dziedziczyć z klasy w niej zagnieżdżonej.  
   
-- **Interface Inheritance.** If an interface uses the `Inherits` statement, you can specify one or more base interfaces. You can inherit from two interfaces even if they each define a member with the same name. If you do so, the implementing code must use name qualification to specify which member it is implementing.  
+- **Dziedziczenie interfejsu.** Jeśli interfejs używa instrukcji `Inherits`, można określić jeden lub więcej interfejsów podstawowych. Można dziedziczyć z dwóch interfejsów, nawet jeśli każda z nich definiuje element członkowski o tej samej nazwie. W takim przypadku kod implementujący musi używać kwalifikacji nazw, aby określić, który element członkowski jest wdrażany.  
   
-     An interface cannot inherit from another interface with a more restrictive access level. For example, a `Public` interface cannot inherit from a `Friend` interface.  
+     Interfejs nie może dziedziczyć z innego interfejsu z bardziej restrykcyjnym poziomem dostępu. Na przykład interfejs `Public` nie może dziedziczyć po interfejsie `Friend`.  
   
-     An interface cannot inherit from an interface nested within it.  
+     Interfejs nie może dziedziczyć z interfejsu zagnieżdżonego w nim.  
   
- An example of class inheritance in the .NET Framework is the <xref:System.ArgumentException> class, which inherits from the <xref:System.SystemException> class. This provides to <xref:System.ArgumentException> all the predefined properties and procedures required by system exceptions, such as the <xref:System.Exception.Message%2A> property and the <xref:System.Exception.ToString%2A> method.  
+ Przykładem dziedziczenia klasy w .NET Framework jest Klasa <xref:System.ArgumentException>, która dziedziczy z klasy <xref:System.SystemException>. Dzięki temu <xref:System.ArgumentException> wszystkie wstępnie zdefiniowane właściwości i procedury wymagane przez wyjątki systemowe, takie jak Właściwość <xref:System.Exception.Message%2A> i Metoda <xref:System.Exception.ToString%2A>.  
   
- An example of interface inheritance in the .NET Framework is the <xref:System.Collections.ICollection> interface, which inherits from the <xref:System.Collections.IEnumerable> interface. This causes <xref:System.Collections.ICollection> to inherit the definition of the enumerator required to traverse a collection.  
+ Przykładem dziedziczenia interfejsów w .NET Framework jest interfejs <xref:System.Collections.ICollection>, który dziedziczy po interfejsie <xref:System.Collections.IEnumerable>. Powoduje to, że <xref:System.Collections.ICollection> dziedziczyć definicję modułu wyliczającego wymaganego do przechodzenia do kolekcji.  
   
 ## <a name="example"></a>Przykład  
- The following example uses the `Inherits` statement to show how a class named `thisClass` can inherit all the members of a base class named `anotherClass`.  
+ Poniższy przykład używa instrukcji `Inherits`, aby pokazać, jak Klasa o nazwie `thisClass` może odziedziczyć wszystkie elementy członkowskie klasy bazowej o nazwie `anotherClass`.  
   
  [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
 ## <a name="example"></a>Przykład  
- The following example shows inheritance of multiple interfaces.  
+ Poniższy przykład pokazuje dziedziczenie wielu interfejsów.  
   
  [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  
   
- The interface named `thisInterface` now includes all the definitions in the <xref:System.IComparable>, <xref:System.IDisposable>, and <xref:System.IFormattable> interfaces The inherited members provide respectively for type-specific comparison of two objects, releasing allocated resources, and expressing the value of an object as a `String`. A class that implements `thisInterface` must implement every member of every base interface.  
+ Interfejs o nazwie `thisInterface` obejmuje teraz wszystkie definicje w interfejsach <xref:System.IComparable>, <xref:System.IDisposable>i <xref:System.IFormattable> dziedziczone elementy członkowskie są odpowiednio przeznaczone do porównywania typów dwóch obiektów, zwalniania przydziałów zasobów i wyrażania wartości obiektu jako `String`. Klasa implementująca `thisInterface` musi implementować każdy element członkowski każdego z interfejsów podstawowych.  
   
 ## <a name="see-also"></a>Zobacz także
 

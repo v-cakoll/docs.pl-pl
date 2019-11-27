@@ -18,7 +18,7 @@ ms.locfileid: "74349419"
 ---
 # <a name="xml-value-property-visual-basic"></a>Właściwość wartości XML (Visual Basic)
 
-Provides access to the value of the first element of a collection of <xref:System.Xml.Linq.XElement> objects.
+Zapewnia dostęp do wartości pierwszego elementu kolekcji obiektów <xref:System.Xml.Linq.XElement>.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,44 +30,44 @@ object.Value
 
 |Termin|Definicja|  
 |---|---|  
-|`object`|Wymagany. Collection of <xref:System.Xml.Linq.XElement> objects.|  
+|`object`|Wymagana. Kolekcja obiektów <xref:System.Xml.Linq.XElement>.|  
 
 ## <a name="return-value"></a>Wartość zwracana
 
- A `String` that contains the value of the first element of the collection, or `Nothing` if the collection is empty.
+ `String`, który zawiera wartość pierwszego elementu kolekcji lub `Nothing`, jeśli kolekcja jest pusta.
 
 ## <a name="remarks"></a>Uwagi
 
- The <xref:System.Xml.Linq.XElement.Value%2A> property makes it easy to access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> objects. This property first checks whether the collection contains at least one object. If the collection is empty, this property returns `Nothing`. Otherwise, this property returns the value of the <xref:System.Xml.Linq.XElement.Value%2A> property of the first element in the collection.
+ Właściwość <xref:System.Xml.Linq.XElement.Value%2A> ułatwia dostęp do wartości pierwszego elementu w kolekcji obiektów <xref:System.Xml.Linq.XElement>. Ta właściwość najpierw sprawdza, czy kolekcja zawiera co najmniej jeden obiekt. Jeśli kolekcja jest pusta, ta właściwość zwraca `Nothing`. W przeciwnym razie ta właściwość zwraca wartość właściwości <xref:System.Xml.Linq.XElement.Value%2A> pierwszego elementu w kolekcji.
 
 > [!NOTE]
-> When you access the value of an XML attribute using the '\@' identifier, the attribute value is returned as a `String` and you do not need to explicitly specify the <xref:System.Xml.Linq.XAttribute.Value%2A> property.
+> Po uzyskaniu dostępu do wartości atrybutu XML przy użyciu identyfikatora "\@" wartość atrybutu jest zwracana jako `String` i nie trzeba jawnie określać właściwości <xref:System.Xml.Linq.XAttribute.Value%2A>.
 
- To access other elements in a collection, you can use the XML extension indexer property. For more information, see [Extension Indexer Property](extension-indexer-property.md).
+ Aby uzyskać dostęp do innych elementów w kolekcji, można użyć właściwości indeksatora rozszerzenia XML. Aby uzyskać więcej informacji, zobacz [Extension Indexer właściwości](extension-indexer-property.md).
 
 ## <a name="inheritance"></a>Dziedziczenie
 
- Most users will not have to implement <xref:System.Collections.Generic.IEnumerable%601>, and can therefore ignore this section.
+ Większość użytkowników nie będzie musiała implementować <xref:System.Collections.Generic.IEnumerable%601>i w związku z tym można zignorować tę sekcję.
 
- The <xref:System.Xml.Linq.XElement.Value%2A> property is an extension property for types that implement `IEnumerable(Of XElement)`. The binding of this extension property is like the binding of extension methods: if a type implements one of the interfaces and defines a property that has the name "Value", that property has precedence over the extension property. In other words, this <xref:System.Xml.Linq.XElement.Value%2A> property can be overridden by defining a new property in a class that implements `IEnumerable(Of XElement)`.
+ Właściwość <xref:System.Xml.Linq.XElement.Value%2A> jest właściwością rozszerzenia dla typów, które implementują `IEnumerable(Of XElement)`. Powiązanie tej właściwości rozszerzenia jest podobne do powiązania metod rozszerzających: Jeśli typ implementuje jeden z interfejsów i definiuje właściwość o nazwie "value", ta właściwość ma pierwszeństwo przed właściwością rozszerzenia. Innymi słowy, ta właściwość <xref:System.Xml.Linq.XElement.Value%2A> może być zastąpiona przez zdefiniowanie nowej właściwości w klasie implementującej `IEnumerable(Of XElement)`.
 
 ## <a name="example"></a>Przykład
 
- The following example shows how to use the <xref:System.Xml.Linq.XElement.Value%2A> property to access the first node in a collection of <xref:System.Xml.Linq.XElement> objects. The example uses the child axis property to get the collection of all child nodes named `phone` that are in the `contact` object.
+ Poniższy przykład pokazuje, jak używać właściwości <xref:System.Xml.Linq.XElement.Value%2A>, aby uzyskać dostęp do pierwszego węzła w kolekcji obiektów <xref:System.Xml.Linq.XElement>. W przykładzie użyta jest właściwość oś podrzędna do pobrania kolekcji wszystkich węzłów podrzędnych o nazwie `phone`, które znajdują się w obiekcie `contact`.
 
  [!code-vb[VbXMLSamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#15)]
 
- This code displays the following text:
+ Ten kod wyświetla następujący tekst:
 
  `Phone number: 206-555-0144`
 
 ## <a name="example"></a>Przykład
 
- The following example shows how to get the value of an XML attribute from a collection of <xref:System.Xml.Linq.XAttribute> objects. The example uses the attribute axis property to display the value of the `type` attribute for all of the `phone` elements.
+ Poniższy przykład pokazuje, jak pobrać wartość atrybutu XML z kolekcji obiektów <xref:System.Xml.Linq.XAttribute>. W przykładzie jest stosowana Właściwość osi atrybutu do wyświetlania wartości atrybutu `type` dla wszystkich elementów `phone`.
 
  [!code-vb[VbXMLSamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#16)]
 
- This code displays the following text:
+ Ten kod wyświetla następujący tekst:
 
  ```console
  home
@@ -80,7 +80,7 @@ object.Value
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Właściwości osi XML](index.md)
 - [Literały XML](../xml-literals/index.md)
-- [Creating XML in Visual Basic](../../programming-guide/language-features/xml/creating-xml.md)
+- [Tworzenie kodu XML w Visual Basic](../../programming-guide/language-features/xml/creating-xml.md)
 - [Metody rozszerzeń](../../programming-guide/language-features/procedures/extension-methods.md)
 - [Właściwość indeksatora rozszerzenia](extension-indexer-property.md)
 - [Właściwości osi elementu podrzędnego XML](xml-child-axis-property.md)

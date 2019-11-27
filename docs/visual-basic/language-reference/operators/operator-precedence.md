@@ -22,63 +22,63 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348277"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Kolejność wykonywania działań (Visual Basic)
-When several operations occur in an expression, each part is evaluated and resolved in a predetermined order called *operator precedence*.
+Gdy w wyrażeniu wystąpią kilka operacji, każda część jest oceniana i rozwiązywana w wstępnie określonej kolejności o nazwie *pierwszeństwo operatorów*.
 
-## <a name="precedence-rules"></a>Precedence Rules
- When expressions contain operators from more than one category, they are evaluated according to the following rules:
+## <a name="precedence-rules"></a>Reguły pierwszeństwa
+ Gdy wyrażenia zawierają operatory z więcej niż jednej kategorii, są oceniane zgodnie z następującymi regułami:
 
-- The arithmetic and concatenation operators have the order of precedence described in the following section, and all have greater precedence than the comparison, logical, and bitwise operators.
+- Operatory arytmetyczne i złączne mają kolejność pierwszeństwa opisaną w poniższej sekcji, a wszystkie mają wyższy priorytet niż operatory porównania, logicznego i bitowego.
 
-- All comparison operators have equal precedence, and all have greater precedence than the logical and bitwise operators, but lower precedence than the arithmetic and concatenation operators.
+- Wszystkie operatory porównania mają równy priorytet, a wszystkie mają wyższy priorytet niż operatory logiczne i bitowe, ale mają niższy priorytet niż operatory arytmetyczne i łączenia.
 
-- The logical and bitwise operators have the order of precedence described in the following section, and all have lower precedence than the arithmetic, concatenation, and comparison operators.
+- Operatory logiczne i bitowe mają kolejność pierwszeństwa opisaną w poniższej sekcji, a wszystkie mają niższy priorytet niż operatory arytmetyczne, łączenia i porównywania.
 
-- Operators with equal precedence are evaluated left to right in the order in which they appear in the expression.
+- Operatory o równym priorytecie są oceniane od lewej do prawej w kolejności, w jakiej występują w wyrażeniu.
 
-## <a name="precedence-order"></a>Precedence Order
- Operators are evaluated in the following order of precedence:
+## <a name="precedence-order"></a>Kolejność pierwszeństwa
+ Operatory są oceniane w następującej kolejności:
 
 ### <a name="await-operator"></a>Await — Operator
- Await
+ Kart
 
-### <a name="arithmetic-and-concatenation-operators"></a>Arithmetic and Concatenation Operators
- Exponentiation (`^`)
+### <a name="arithmetic-and-concatenation-operators"></a>Operatory arytmetyczne i łączenia
+ Potęgowanie (`^`)
 
- Unary identity and negation (`+`, `–`)
+ Jednoargumentowa tożsamość i negacja (`+`, `–`)
 
- Multiplication and floating-point division (`*`, `/`)
+ Mnożenie i dzielenie zmiennoprzecinkowe (`*`, `/`)
 
- Integer division (`\`)
+ Dzielenie liczb całkowitych (`\`)
 
- Modular arithmetic (`Mod`)
+ Moduły arytmetyczne (`Mod`)
 
- Addition and subtraction (`+`, `–`)
+ Dodawanie i odejmowanie (`+`, `–`)
 
- String concatenation (`&`)
+ Łączenie ciągów (`&`)
 
- Arithmetic bit shift (`<<`, `>>`)
+ Przesunięcia bitów arytmetycznych (`<<`, `>>`)
 
 ### <a name="comparison-operators"></a>Operatory porównania
- All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)
+ Wszystkie operatory porównania (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)
 
 ### <a name="logical-and-bitwise-operators"></a>Operatory logiczne i bitowe
- Negation (`Not`)
+ Negacja (`Not`)
 
- Conjunction (`And`, `AndAlso`)
+ Połączenia (`And`, `AndAlso`)
 
- Inclusive disjunction (`Or`, `OrElse`)
+ Rozłączenie włączne (`Or`, `OrElse`)
 
- Exclusive disjunction (`Xor`)
+ Odłączanie wyłączne (`Xor`)
 
 ### <a name="comments"></a>Komentarze
- The `=` operator is only the equality comparison operator, not the assignment operator.
+ Operator `=` jest tylko operatorem porównania równości, a nie operatorem przypisania.
 
- The string concatenation operator (`&`) is not an arithmetic operator, but in precedence it is grouped with the arithmetic operators.
+ Operator łączenia ciągów (`&`) nie jest operatorem arytmetycznym, ale w priorytecie jest zgrupowany z operatorami arytmetycznymi.
 
- The `Is` and `IsNot` operators are object reference comparison operators. They do not compare the values of two objects; they check only to determine whether two object variables refer to the same object instance.
+ Operatory `Is` i `IsNot` są operatorami porównania odwołań do obiektów. Nie porównują wartości dwóch obiektów; sprawdzają tylko, czy dwie zmienne obiektu odwołują się do tego samego wystąpienia obiektu.
 
 ## <a name="associativity"></a>Łączność
- When operators of equal precedence appear together in an expression, for example multiplication and division, the compiler evaluates each operation as it encounters it from left to right. Ilustruje to poniższy przykład.
+ Gdy operatory równego pierwszeństwa pojawiają się razem w wyrażeniu, na przykład mnożenia i dzielenia, kompilator oblicza każdą operację, gdy napotka ją od lewej do prawej. Ilustruje to poniższy przykład.
 
 ```vb
 Dim n1 As Integer = 96 / 8 / 4
@@ -86,12 +86,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)
 ```
 
- The first expression evaluates the division 96 / 8 (which results in 12) and then the division 12 / 4, which results in three. Because the compiler evaluates the operations for `n1` from left to right, the evaluation is the same when that order is explicitly indicated for `n2`. Both `n1` and `n2` have a result of three. By contrast, `n3` has a result of 48, because the parentheses force the compiler to evaluate 8 / 4 first.
+ Pierwsze wyrażenie szacuje podział 96/8 (wyniki w 12), a następnie dział 12/4, który powoduje trzy. Ponieważ kompilator ocenia operacje `n1` od lewej do prawej, ocena jest taka sama, gdy ta kolejność jest jawnie wskazywana dla `n2`. Oba `n1` i `n2` mają wynik trzech. Z kolei `n3` ma wynik 48, ponieważ nawiasy wymuszają kompilator, aby najpierw oszacować 8/4.
 
- Because of this behavior, operators are said to be *left associative* in Visual Basic.
+ Ze względu na to zachowanie operatory są określane jako *pozostawiły skojarzenie* w Visual Basic.
 
-## <a name="overriding-precedence-and-associativity"></a>Overriding Precedence and Associativity
- You can use parentheses to force some parts of an expression to be evaluated before others. This can override both the order of precedence and the left associativity. Visual Basic always performs operations that are enclosed in parentheses before those outside. However, within parentheses, it maintains ordinary precedence and associativity, unless you use parentheses within the parentheses. Ilustruje to poniższy przykład.
+## <a name="overriding-precedence-and-associativity"></a>Zastępowanie pierwszeństwa i łączność
+ Można użyć nawiasów, aby wymusić ocenę niektórych części wyrażenia przed innymi. Może to przesłaniać kolejność pierwszeństwa i lewo łączność. Visual Basic zawsze wykonuje operacje, które są ujęte w nawiasy przed tymi zewnętrznymi. Jednakże w obrębie nawiasów zachowuje zwykłe pierwszeństwo i łączność, chyba że w nawiasach są używane nawiasy. Ilustruje to poniższy przykład.
 
 ```vb
 Dim a, b, c, d, e, f, g As Double

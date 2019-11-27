@@ -1,5 +1,5 @@
 ---
-title: Opcja <keyword> — Instrukcja
+title: Option <keyword>, instrukcja
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
@@ -13,13 +13,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353776"
 ---
-# <a name="option-keyword-statement"></a>Option \<keyword> Statement
-Introduces a statement that specifies a compiler option that applies to the entire source file.  
+# <a name="option-keyword-statement"></a>Option \<słowo kluczowe > instrukcji
+Wprowadza instrukcję określającą opcję kompilatora, która jest stosowana do całego pliku źródłowego.  
   
 ## <a name="remarks"></a>Uwagi  
- The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.  
+ Opcje kompilatora mogą określać, czy wszystkie zmienne muszą być jawnie zadeklarowane, czy konwersje typu zawężanego muszą być jawne lub czy ciągi mają być porównywane jako tekst, czy jako liczby binarne.  
   
- The `Option` keyword can be used in these contexts:  
+ Słowa kluczowego `Option` można użyć w tych kontekstach:  
   
  [Option Compare, instrukcja](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
   

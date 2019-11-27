@@ -15,48 +15,48 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348062"
 ---
 # <a name="math-functions-visual-basic"></a>Funkcje matematyczne (Visual Basic)
-The methods of the <xref:System.Math?displayProperty=nameWithType> class provide trigonometric, logarithmic, and other common mathematical functions.  
+Metody klasy <xref:System.Math?displayProperty=nameWithType> zapewniają trygonometryczne, logarytmiczne i inne typowe funkcje matematyczne.  
   
 ## <a name="remarks"></a>Uwagi  
- The following table lists methods of the <xref:System.Math?displayProperty=nameWithType> class. You can use these in a Visual Basic program.  
+ W poniższej tabeli wymieniono metody klasy <xref:System.Math?displayProperty=nameWithType>. Można ich używać w programie Visual Basic.  
   
-|.NET method|Opis|  
+|Metoda .NET|Opis|  
 |---------------------------|-----------------|  
-|<xref:System.Math.Abs%2A>|Returns the absolute value of a number.|  
-|<xref:System.Math.Acos%2A>|Returns the angle whose cosine is the specified number.|  
-|<xref:System.Math.Asin%2A>|Returns the angle whose sine is the specified number.|  
-|<xref:System.Math.Atan%2A>|Returns the angle whose tangent is the specified number.|  
-|<xref:System.Math.Atan2%2A>|Returns the angle whose tangent is the quotient of two specified numbers.|  
-|<xref:System.Math.BigMul%2A>|Returns the full product of two 32-bit numbers.|  
-|<xref:System.Math.Ceiling%2A>|Returns the smallest integral value that's greater than or equal to the specified `Decimal` or `Double`.|  
-|<xref:System.Math.Cos%2A>|Returns the cosine of the specified angle.|  
-|<xref:System.Math.Cosh%2A>|Returns the hyperbolic cosine of the specified angle.|  
-|<xref:System.Math.DivRem%2A>|Returns the quotient of two 32-bit or 64-bit signed integers, and also returns the remainder in an output parameter.|  
-|<xref:System.Math.Exp%2A>|Returns e (the base of natural logarithms) raised to the specified power.|  
-|<xref:System.Math.Floor%2A>|Returns the largest integer that's less than or equal to the specified `Decimal` or `Double` number.|  
-|<xref:System.Math.IEEERemainder%2A>|Returns the remainder that results from the division of a specified number by another specified number.|  
-|<xref:System.Math.Log%2A>|Returns the natural (base e) logarithm of a specified number or the logarithm of a specified number in a specified base.|  
-|<xref:System.Math.Log10%2A>|Returns the base 10 logarithm of a specified number.|  
-|<xref:System.Math.Max%2A>|Returns the larger of two numbers.|  
-|<xref:System.Math.Min%2A>|Returns the smaller of two numbers.|  
-|<xref:System.Math.Pow%2A>|Returns a specified number raised to the specified power.|  
-|<xref:System.Math.Round%2A>|Returns a `Decimal` or `Double` value rounded to the nearest integral value or to a specified number of fractional digits.|  
-|<xref:System.Math.Sign%2A>|Returns an `Integer` value indicating the sign of a number.|  
-|<xref:System.Math.Sin%2A>|Returns the sine of the specified angle.|  
-|<xref:System.Math.Sinh%2A>|Returns the hyperbolic sine of the specified angle.|  
-|<xref:System.Math.Sqrt%2A>|Returns the square root of a specified number.|  
-|<xref:System.Math.Tan%2A>|Returns the tangent of the specified angle.|  
-|<xref:System.Math.Tanh%2A>|Returns the hyperbolic tangent of the specified angle.|  
-|<xref:System.Math.Truncate%2A>|Calculates the integral part of a specified `Decimal` or `Double` number.|  
+|<xref:System.Math.Abs%2A>|Zwraca wartość bezwzględną liczby.|  
+|<xref:System.Math.Acos%2A>|Zwraca kąt, którego cosinus jest równy podanej liczbie.|  
+|<xref:System.Math.Asin%2A>|Zwraca kąt, którego sinus jest równy podanej liczbie.|  
+|<xref:System.Math.Atan%2A>|Zwraca kąt, którego tangens jest równy podanej liczbie.|  
+|<xref:System.Math.Atan2%2A>|Zwraca kąt, którego tangens jest ilorazem dwóch określonych liczb.|  
+|<xref:System.Math.BigMul%2A>|Zwraca pełny iloczyn liczby 2 32-bitowych.|  
+|<xref:System.Math.Ceiling%2A>|Zwraca najmniejszą wartość całkowitą, która jest większa lub równa określonej `Decimal` lub `Double`.|  
+|<xref:System.Math.Cos%2A>|Zwraca cosinus określonego kąta.|  
+|<xref:System.Math.Cosh%2A>|Zwraca cosinus hiperboliczny odpowiadający podanemu kątowi.|  
+|<xref:System.Math.DivRem%2A>|Zwraca iloraz 2 32-bitowych lub 64-bitowych liczb całkowitych ze znakiem, a także Zwraca resztę z parametru wyjściowego.|  
+|<xref:System.Math.Exp%2A>|Zwraca wartość e (podstawę logarytmów naturalnych) podniesioną do określonej potęgi.|  
+|<xref:System.Math.Floor%2A>|Zwraca największą liczbę całkowitą, która jest mniejsza lub równa podanemu `Decimal` lub `Double`.|  
+|<xref:System.Math.IEEERemainder%2A>|Zwraca resztę z dzielenia przez określony numer przez inny określony numer.|  
+|<xref:System.Math.Log%2A>|Zwraca logarytm naturalny (o podstawie e) podanej liczby lub logarytm o określonym numerze w określonej bazie.|  
+|<xref:System.Math.Log10%2A>|Zwraca logarytm dziesiętny z podanej liczby.|  
+|<xref:System.Math.Max%2A>|Zwraca większą liczbę dwóch liczb.|  
+|<xref:System.Math.Min%2A>|Zwraca mniejsze z dwóch liczb.|  
+|<xref:System.Math.Pow%2A>|Zwraca określoną liczbę podniesioną do określonej potęgi.|  
+|<xref:System.Math.Round%2A>|Zwraca wartość `Decimal` lub `Double` zaokrągloną do najbliższej wartości całkowitej lub do określonej liczby cyfr ułamkowych.|  
+|<xref:System.Math.Sign%2A>|Zwraca wartość `Integer` wskazującą znak liczby.|  
+|<xref:System.Math.Sin%2A>|Zwraca sinus określonego kąta.|  
+|<xref:System.Math.Sinh%2A>|Zwraca sinus hiperboliczny odpowiadający podanemu kątowi.|  
+|<xref:System.Math.Sqrt%2A>|Zwraca pierwiastek kwadratowy z podanej liczby.|  
+|<xref:System.Math.Tan%2A>|Zwraca tangens podanego kąta.|  
+|<xref:System.Math.Tanh%2A>|Zwraca tangens hiperboliczny odpowiadający podanemu kątowi.|  
+|<xref:System.Math.Truncate%2A>|Oblicza integralną część określonego `Decimal` lub `Double` numer.|  
   
- To use these functions without qualification, import the <xref:System.Math?displayProperty=nameWithType> namespace into your project by adding the following code to the top of your source file:  
+ Aby korzystać z tych funkcji bez kwalifikacji, zaimportuj <xref:System.Math?displayProperty=nameWithType> przestrzeni nazw do projektu, dodając następujący kod na początku pliku źródłowego:  
   
 ```vb
 Imports System.Math  
 ```  
   
 ## <a name="example"></a>Przykład  
- This example uses the <xref:System.Math.Abs%2A> method of the <xref:System.Math> class to compute the absolute value of a number.  
+ W tym przykładzie zastosowano metodę <xref:System.Math.Abs%2A> klasy <xref:System.Math>, aby obliczyć wartość bezwzględną liczby.  
   
 ```vb
 ' Returns 50.3.  
@@ -66,7 +66,7 @@ Dim MyNumber2 As Double = Math.Abs(-50.3)
 ```  
   
 ## <a name="example"></a>Przykład  
- This example uses the <xref:System.Math.Atan%2A> method of the <xref:System.Math> class to calculate the value of pi.  
+ W tym przykładzie zastosowano metodę <xref:System.Math.Atan%2A> klasy <xref:System.Math>, aby obliczyć wartość pi.  
   
 ```vb
 Public Function GetPi() As Double  
@@ -76,7 +76,7 @@ End Function
 ```  
   
 ## <a name="example"></a>Przykład  
- This example uses the <xref:System.Math.Cos%2A> method of the <xref:System.Math> class to return the cosine of an angle.  
+ W tym przykładzie zastosowano metodę <xref:System.Math.Cos%2A> klasy <xref:System.Math>, aby zwrócić cosinus kąta.  
   
 ```vb
 Public Function Sec(ByVal angle As Double) As Double  
@@ -86,7 +86,7 @@ End Function
 ```  
   
 ## <a name="example"></a>Przykład  
- This example uses the <xref:System.Math.Exp%2A> method of the <xref:System.Math> class to return e raised to a power.  
+ W tym przykładzie zastosowano metodę <xref:System.Math.Exp%2A> klasy <xref:System.Math>, aby zwrócić wartość e podniesioną do potęgi.  
   
 ```vb
 Public Function Sinh(ByVal angle As Double) As Double  
@@ -96,7 +96,7 @@ End Function
 ```  
   
 ## <a name="example"></a>Przykład  
- This example uses the <xref:System.Math.Log%2A> method of the <xref:System.Math> class to return the natural logarithm of a number.  
+ W tym przykładzie zastosowano metodę <xref:System.Math.Log%2A> klasy <xref:System.Math> do zwrócenia logarytmu naturalnego liczby.  
   
 ```vb
 Public Function Asinh(ByVal value As Double) As Double  
@@ -106,7 +106,7 @@ End Function
 ```  
   
 ## <a name="example"></a>Przykład  
- This example uses the <xref:System.Math.Round%2A> method of the <xref:System.Math> class to round a number to the nearest integer.  
+ W tym przykładzie zastosowano metodę <xref:System.Math.Round%2A> klasy <xref:System.Math>, aby zaokrąglić liczbę do najbliższej liczby całkowitej.  
   
 ```vb
 ' Returns 3.  
@@ -114,7 +114,7 @@ Dim MyVar2 As Double = Math.Round(2.8)
 ```  
   
 ## <a name="example"></a>Przykład  
- This example uses the <xref:System.Math.Sign%2A> method of the <xref:System.Math> class to determine the sign of a number.  
+ W tym przykładzie zastosowano metodę <xref:System.Math.Sign%2A> klasy <xref:System.Math>, aby określić znak liczby.  
   
 ```vb
 ' Returns 1.  
@@ -126,7 +126,7 @@ Dim MySign3 As Integer = Math.Sign(0)
 ```  
   
 ## <a name="example"></a>Przykład  
- This example uses the <xref:System.Math.Sin%2A> method of the <xref:System.Math> class to return the sine of an angle.  
+ W tym przykładzie zastosowano metodę <xref:System.Math.Sin%2A> klasy <xref:System.Math>, aby zwrócić sinus kąta.  
   
 ```vb
 Public Function Csc(ByVal angle As Double) As Double  
@@ -136,7 +136,7 @@ End Function
 ```  
   
 ## <a name="example"></a>Przykład  
- This example uses the <xref:System.Math.Sqrt%2A> method of the <xref:System.Math> class to calculate the square root of a number.  
+ W tym przykładzie zastosowano metodę <xref:System.Math.Sqrt%2A> klasy <xref:System.Math>, aby obliczyć pierwiastek kwadratowy liczby.  
   
 ```vb
 ' Returns 2.  
@@ -150,7 +150,7 @@ Dim MySqr4 As Double = Math.Sqrt(-4)
 ```  
   
 ## <a name="example"></a>Przykład  
- This example uses the <xref:System.Math.Tan%2A> method of the <xref:System.Math> class to return the tangent of an angle.  
+ W tym przykładzie zastosowano metodę <xref:System.Math.Tan%2A> klasy <xref:System.Math>, aby zwrócić tangens kąta.  
   
 ```vb
 Public Function Ctan(ByVal angle As Double) As Double  
@@ -160,11 +160,11 @@ End Function
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Class:** <xref:System.Math>  
+ **Klasa:** <xref:System.Math>  
   
- **Namespace:** <xref:System>  
+ **Przestrzeń nazw:** <xref:System>  
   
- **Assembly:** mscorlib (in mscorlib.dll)  
+ **Zestaw:** mscorlib (w bibliotece Mscorlib. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445172"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished — Metoda
-Notifies the profiler that an assembly has finished loading.  
+Powiadamia profiler o zakończeniu ładowania zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,24 +35,24 @@ HRESULT AssemblyLoadFinished(
   
 ## <a name="parameters"></a>Parametry  
  `assemblyId`  
- [in] Identifies the assembly that was loaded.  
+ podczas Identyfikuje zestaw, który został załadowany.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the assembly finished loading successfully.  
+ podczas WYNIK HRESULT wskazujący, czy zestaw zakończył się pomyślnie.  
   
 ## <a name="remarks"></a>Uwagi  
- The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.  
+ Wartość `assemblyId` nie jest prawidłowa dla żądania informacji, dopóki nie zostanie wywołana metoda `AssemblyLoadFinished`.  
   
- Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.  
+ Niektóre części ładowania zestawu mogą być kontynuowane po wywołaniu wywołania zwrotnego `AssemblyLoadFinished`. Błąd HRESULT w `hrStatus` wskazuje na błąd. Jednak wynik HRESULT w `hrStatus` wskazuje tylko, że pierwsza część ładowania zestawu zakończyła się powodzeniem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

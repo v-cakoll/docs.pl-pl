@@ -1,5 +1,5 @@
 ---
-title: Zero-based vs. One-based String Access
+title: Dostęp do ciągów opartych na protokole zero zamiast jednego
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
@@ -12,13 +12,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354297"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Dostęp do ciągów opartych na zerze i na jedynce w Visual Basic
-This topic compares how Visual Basic and the .NET Framework provide access to the characters in a string. The .NET Framework always provides zero-based access to the characters in a string, whereas Visual Basic provides zero-based and one-based access, depending on the function.  
+W tym temacie porównano, jak Visual Basic i .NET Framework zapewniają dostęp do znaków w ciągu. .NET Framework zawsze zapewnia od zera dostęp do znaków w ciągu, podczas gdy Visual Basic zapewnia dostęp oparty na zerowym i jednokrotnym, w zależności od funkcji.  
   
-## <a name="one-based"></a>One-Based  
- For an example of a one-based Visual Basic function, consider the `Mid` function. It takes an argument that indicates the character position at which the substring will start, starting with position 1. The .NET Framework <xref:System.String.Substring%2A?displayProperty=nameWithType> method takes an index of the character in the string at which the substring is to start, starting with position 0. Thus, if you have a string "ABCDE", the individual characters are numbered 1,2,3,4,5 for use with the `Mid` function, but 0,1,2,3,4 for use with the <xref:System.String.Substring%2A?displayProperty=nameWithType> method.  
+## <a name="one-based"></a>Oparte na jednym  
+ Aby zapoznać się z przykładem funkcji Visual Basic opartej na jednym z nich, należy wziąć pod uwagę funkcję `Mid`. Przyjmuje argument, który wskazuje położenie znaku, w którym rozpocznie się podciąg, zaczynając od pozycji 1. Metoda .NET Framework <xref:System.String.Substring%2A?displayProperty=nameWithType> przyjmuje indeks znaku w ciągu, w którym ma zostać uruchomiony podciąg, zaczynając od pozycji 0. W takim przypadku, jeśli masz ciąg "ABCDe", poszczególne znaki są numerowane 1, 2, 3, 4, 5, do użytku z funkcją `Mid`, ale 0, 1, 2, 3, 4 do użycia z metodą <xref:System.String.Substring%2A?displayProperty=nameWithType>.  
   
-## <a name="zero-based"></a>Zero-Based  
- For an example of a zero-based Visual Basic function, consider the `Split` function. It splits a string and returns an array containing the substrings. The .NET Framework <xref:System.String.Split%2A?displayProperty=nameWithType> method also splits a string and returns an array containing the substrings. Because the `Split` function and <xref:System.String.Split%2A> method return .NET Framework arrays, they must be zero-based.  
+## <a name="zero-based"></a>W oparciu o zero  
+ Przykład funkcji Visual Basic opartej na zero, należy wziąć pod uwagę funkcję `Split`. Dzieli ciąg i zwraca tablicę zawierającą podciągi. Metoda <xref:System.String.Split%2A?displayProperty=nameWithType> .NET Framework dzieli również ciąg i zwraca tablicę zawierającą podciągi. Ponieważ funkcja `Split` i Metoda <xref:System.String.Split%2A> zwracają .NET Framework tablice, muszą one być oparte na zero.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -26,4 +26,4 @@ This topic compares how Visual Basic and the .NET Framework provide access to th
 - <xref:Microsoft.VisualBasic.Strings.Split%2A>
 - <xref:System.String.Substring%2A>
 - <xref:System.String.Split%2A>
-- [Introduction to Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Wprowadzenie do ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449680"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation — Metoda
-Provides version information about the common language runtime (CLR) that is being profiled.  
+Zawiera informacje o wersji dotyczące PROFILOWANEGO środowiska uruchomieniowego języka wspólnego (CLR).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,43 +43,43 @@ HRESULT GetRuntimeInformation(
   
 ## <a name="parameters"></a>Parametry  
  `pClrInstanceId`  
- [out] The representative ID of a running CLR instance in a process. This is the same as the `ClrInstanceID` that the event tracing for Windows (ETW) startup event reports.  
+ określoną Identyfikator reprezentatywny uruchomionego wystąpienia środowiska CLR w procesie. Jest to taka sama jak `ClrInstanceID`, w których są zgłaszane zdarzenia uruchamiania śledzenie zdarzeń systemu Windows (ETW).  
   
  `pRuntimeType`  
- [out] The runtime type. This parameter returns `COR_PRF_DESKTOP_CLR` for the desktop version of the CLR, or `COR_PRF_CORE_CLR` for the core version of the CLR used in Silverlight.  
+ określoną Typ środowiska uruchomieniowego. Ten parametr zwraca `COR_PRF_DESKTOP_CLR` dla wersji klasycznej środowiska CLR lub `COR_PRF_CORE_CLR` dla podstawowej wersji środowiska CLR używanej w technologii Silverlight.  
   
  `pMajorVersion`  
- [out] The major version number of the CLR.  
+ określoną Numer wersji głównej środowiska CLR.  
   
  `pMinorVersion`  
- [out] The minor version number of the CLR.  
+ określoną Numer wersji pomocniczej środowiska CLR.  
   
  `pBuildVersion`  
- [out] The build version number of the CLR.  
+ określoną Numer wersji kompilacji środowiska CLR.  
   
  `pQFEVersion`  
- [out] The version number of the CLR that is associated with a software update.  
+ określoną Numer wersji środowiska CLR skojarzonego z aktualizacją oprogramowania.  
   
  `cchVersionString`  
- [in] The length, in characters, of the buffer that `szVersionString` points to.  
+ podczas Długość (w znakach) bufora, do którego `szVersionString` wskazuje.  
   
  `pcchVersionString`  
- [out] The length, in characters, of `szVersionString`.  
+ określoną Długość (w znakach) `szVersionString`.  
   
  `szVersionString`  
- [out] The CLR version string.  
+ określoną Ciąg wersji środowiska CLR.  
   
 ## <a name="remarks"></a>Uwagi  
- You may pass null for any parameter. However, `pcchVersionString` cannot be null unless `szVersionString` is also null.  
+ Dla dowolnego parametru można przekazać wartość null. Jednak `pcchVersionString` nie może mieć wartości null, chyba że `szVersionString` ma również wartość null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

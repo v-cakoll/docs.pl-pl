@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440208"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile — Metoda
-Creates a `File` metadata structure containing metadata for assembly referenced by this assembly, and returns the associated metadata token.  
+Tworzy `File` strukturę metadanych zawierającą metadane zestawu, do którego odwołuje się ten zestaw, i zwraca skojarzony token metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,31 +39,31 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>Parametry  
  `szName`  
- [in] The name of the file to be consumed.  
+ podczas Nazwa pliku, który ma być użyty.  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the assembly.  
+ podczas Wskaźnik do danych skrótu skojarzonych z zestawem.  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ podczas Rozmiar w bajtach `pbHashValue`.  
   
  `dwFileFlags`  
- [in] A bitwise combination of `FileFlags` values that specify property settings.  
+ podczas Bitowa kombinacja wartości `FileFlags`, które określają ustawienia właściwości.  
   
  `pmdf`  
- [out] A pointer to the returned `File` token.  
+ określoną Wskaźnik do zwróconego tokenu `File`.  
   
 ## <a name="remarks"></a>Uwagi  
- One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.  
+ Dla każdego pliku, który był częścią tego zestawu, należy zdefiniować jedną `File` strukturę metadanych, wykluczając plik zawierający metadane.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -9,16 +9,16 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350634"
 ---
-# <a name="serializing-with-an-xml-declaration-visual-basic"></a>Serializing with an XML Declaration (Visual Basic)
-This topic describes how to control whether serialization generates an XML declaration.  
+# <a name="serializing-with-an-xml-declaration-visual-basic"></a>Serializacja przy użyciu deklaracji XML (Visual Basic)
+W tym temacie opisano sposób kontrolowania, czy Serializacja generuje deklarację XML.  
   
-## <a name="xml-declaration-generation"></a>XML Declaration Generation  
- Serializing to a <xref:System.IO.File> or a <xref:System.IO.TextWriter> using the <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> method or the <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> method generates an XML declaration. When you serialize to an <xref:System.Xml.XmlWriter>, the writer settings (specified in an <xref:System.Xml.XmlWriterSettings> object) determine whether an XML declaration is generated or not.  
+## <a name="xml-declaration-generation"></a>Generowanie deklaracji XML  
+ Serializacja do <xref:System.IO.File> lub <xref:System.IO.TextWriter> przy użyciu metody <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> lub metody <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> generuje deklarację XML. Podczas serializacji do <xref:System.Xml.XmlWriter>ustawienia składnika zapisywania (określone w obiekcie <xref:System.Xml.XmlWriterSettings>) określają, czy deklaracja XML jest generowana, czy nie.  
   
- If you are serializing to a string using the `ToString` method, the resulting XML will not include an XML declaration.  
+ W przypadku serializacji do ciągu przy użyciu metody `ToString`, otrzymany kod XML nie będzie zawierał deklaracji XML.  
   
 ### <a name="serializing-with-an-xml-declaration"></a>Serializowanie przy użyciu deklaracji XML  
- The following example creates an <xref:System.Xml.Linq.XElement>, saves the document to a file, and then prints the file to the console:  
+ Poniższy przykład tworzy <xref:System.Xml.Linq.XElement>, zapisuje dokument do pliku, a następnie drukuje plik do konsoli programu:  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -38,8 +38,8 @@ Console.WriteLine(str)
 </Root>  
 ```  
   
-### <a name="serializing-without-an-xml-declaration"></a>Serializing without an XML Declaration  
- The following example shows how to save an <xref:System.Xml.Linq.XElement> to an <xref:System.Xml.XmlWriter>.  
+### <a name="serializing-without-an-xml-declaration"></a>Serializacja bez deklaracji XML  
+ Poniższy przykład pokazuje, jak zapisać <xref:System.Xml.Linq.XElement> w <xref:System.Xml.XmlWriter>.  
   
 ```vb  
 Dim sb As StringBuilder = New StringBuilder()  
@@ -63,4 +63,4 @@ Console.WriteLine(sb.ToString())
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Serializing XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [Serializowanie drzew XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

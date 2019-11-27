@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351153"
 ---
 # <a name="implements-statement"></a>Implements — Instrukcja
-Specifies one or more interfaces, or interface members, that must be implemented in the class or structure definition in which it appears.  
+Określa jeden lub więcej interfejsów lub składowych interfejsu, które muszą zostać zaimplementowane w definicji klasy lub struktury, w której występuje.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,34 +29,34 @@ Implements interfacename.interfacemember [, ...]
   
 ## <a name="parts"></a>Części  
  `interfacename`  
- Wymagany. An interface whose properties, procedures, and events are to be implemented by corresponding members in the class or structure.  
+ Wymagana. Interfejs, którego właściwości, procedury i zdarzenia mają być implementowane przez odpowiadające im elementy członkowskie klasy lub struktury.  
   
  `interfacemember`  
- Wymagany. The member of an interface that is being implemented.  
+ Wymagana. Element członkowski interfejsu, który jest implementowany.  
   
 ## <a name="remarks"></a>Uwagi  
- An interface is a collection of prototypes representing the members (properties, procedures, and events) the interface encapsulates. Interfaces contain only the declarations for members; classes and structures implement these members. For more information, see [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ Interfejs jest kolekcją prototypów reprezentujących elementy członkowskie (właściwości, procedury i zdarzenia), które są hermetyzowane w interfejsie. Interfejsy zawierają tylko deklaracje elementów członkowskich; klasy i struktury implementują te składowe. Aby uzyskać więcej informacji, zobacz [interfejsy](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- The `Implements` statement must immediately follow the `Class` or `Structure` statement.  
+ Instrukcja `Implements` musi być od razu zgodna z instrukcją `Class` lub `Structure`.  
   
- When you implement an interface, you must implement all the members declared in the interface. Omitting any member is considered to be a syntax error. To implement an individual member, you specify the [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) keyword (which is separate from the `Implements` statement) when you declare the member in the class or structure. For more information, see [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ Podczas implementowania interfejsu, należy zaimplementować wszystkie elementy członkowskie zadeklarowane w interfejsie. Pominięcie żadnego elementu członkowskiego jest uznawane za błąd składniowy. Aby zaimplementować pojedynczy element członkowski, należy określić słowo kluczowe [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) (które jest oddzielone od instrukcji `Implements`) podczas deklarowania elementu członkowskiego w klasie lub strukturze. Aby uzyskać więcej informacji, zobacz [interfejsy](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- Classes can use [Private](../../../visual-basic/language-reference/modifiers/private.md) implementations of properties and procedures, but these members are accessible only by casting an instance of the implementing class into a variable declared to be of the type of the interface.  
+ Klasy mogą używać [prywatnych](../../../visual-basic/language-reference/modifiers/private.md) implementacji właściwości i procedur, ale te elementy członkowskie są dostępne tylko przez rzutowanie wystąpienia klasy implementującej na zmienną zadeklarowaną jako typ interfejsu.  
   
 ## <a name="example"></a>Przykład  
- The following example shows how to use the `Implements` statement to implement members of an interface. It defines an interface named `ICustomerInfo` with an event, a property, and a procedure. The class `customerInfo` implements all the members defined in the interface.  
+ Poniższy przykład pokazuje, jak używać instrukcji `Implements` do implementowania elementów członkowskich interfejsu. Definiuje interfejs o nazwie `ICustomerInfo` ze zdarzeniem, właściwością i procedurą. Klasa `customerInfo` implementuje wszystkie elementy członkowskie zdefiniowane w interfejsie.  
   
  [!code-vb[VbVbalrStatements#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#33)]  
   
- Note that the class `customerInfo` uses the `Implements` statement on a separate source code line to indicate that the class implements all the members of the `ICustomerInfo` interface. Then each member in the class uses the `Implements` keyword as part of its member declaration to indicate that it implements that interface member.  
+ Należy zauważyć, że Klasa `customerInfo` używa instrukcji `Implements` w oddzielnym wierszu kodu źródłowego, aby wskazać, że klasa implementuje wszystkie elementy członkowskie interfejsu `ICustomerInfo`. Następnie każdy element członkowski w klasie używa słowa kluczowego `Implements` jako części deklaracji elementu członkowskiego, aby wskazać, że implementuje ten element członkowski interfejsu.  
   
 ## <a name="example"></a>Przykład  
- The following two procedures show how you could use the interface implemented in the preceding example. To test the implementation, add these procedures to your project and call the `testImplements` procedure.  
+ W poniższych dwóch procedurach pokazano, jak można użyć interfejsu zaimplementowanego w poprzednim przykładzie. Aby przetestować implementację, należy dodać te procedury do projektu i wywołać procedurę `testImplements`.  
   
  [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)
+- [Wprowadza](../../../visual-basic/language-reference/statements/implements-clause.md)
 - [Interface, instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [Interfejsy](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

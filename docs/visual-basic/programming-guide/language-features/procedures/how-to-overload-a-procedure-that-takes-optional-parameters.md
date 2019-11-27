@@ -18,25 +18,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350863"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Porady: przeciążanie procedury wykorzystującej parametry opcjonalne (Visual Basic)
-If a procedure has one or more [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) parameters, you cannot define an overloaded version matching any of its implicit overloads. For more information, see "Implicit Overloads for Optional Parameters" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
+Jeśli procedura zawiera co najmniej jeden parametr [opcjonalny](../../../../visual-basic/language-reference/modifiers/optional.md) , nie można zdefiniować przeciążonej wersji zgodnej z żadnym z jego niejawnego przeciążenia. Aby uzyskać więcej informacji, zobacz "niejawne przeciążenia dla parametrów opcjonalnych" w [kwestiach dotyczących przeciążania procedur](./considerations-in-overloading-procedures.md).  
   
-## <a name="one-optional-parameter"></a>One Optional Parameter  
+## <a name="one-optional-parameter"></a>Jeden opcjonalny parametr  
   
-#### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>To overload a procedure that takes one optional parameter  
+#### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>Aby przeciążyć procedurę, która przyjmuje jeden parametr opcjonalny  
   
-1. Write a `Sub` or `Function` declaration statement that includes the optional parameter in the parameter list. Do not use the `Optional` keyword in this overloaded version.  
+1. Napisz instrukcję `Sub` lub `Function` deklaracji, która zawiera opcjonalny parametr na liście parametrów. Nie należy używać słowa kluczowego `Optional` w tej przeciążonej wersji.  
   
-2. Precede the `Sub` or `Function` keyword with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword.  
+2. Poprzedź słowo kluczowe `Sub` lub `Function` za pomocą słowa kluczowego [overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) .  
   
-3. Write the procedure code that should execute when the calling code supplies the optional argument.  
+3. Napisz kod procedury, który powinien zostać wykonany, gdy wywoływany kod dostarcza opcjonalnego argumentu.  
   
-4. Terminate the procedure with the `End Sub` or `End Function` statement as appropriate.  
+4. W razie potrzeby Zakończ procedurę z użyciem instrukcji `End Sub` lub `End Function`.  
   
-5. Write a second declaration statement that is identical to the first declaration except that it does not include the optional parameter in the parameter list.  
+5. Napisz drugą instrukcję deklaracji, która jest identyczna z pierwszą deklaracją, z tą różnicą, że nie zawiera parametru opcjonalnego na liście parametrów.  
   
-6. Write the procedure code that should execute when the calling code does not supply the optional argument. Terminate the procedure with the `End Sub` or `End Function` statement as appropriate.  
+6. Napisz kod procedury, który powinien zostać wykonany, gdy wywołujący kod nie poda opcjonalnego argumentu. W razie potrzeby Zakończ procedurę z użyciem instrukcji `End Sub` lub `End Function`.  
   
-     The following example shows a procedure defined with an optional parameter,  an equivalent set of two overloaded procedures, and finally examples of both invalid and valid overloaded versions.  
+     Poniższy przykład pokazuje procedurę zdefiniowaną za pomocą opcjonalnego parametru, równoważnego zestawu dwóch przeciążonych procedur, a wreszcie przykłady zarówno dla nieprawidłowych, jak i prawidłowych wersji przeciążonych.  
   
      [!code-vb[VbVbcnProcedures#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#59)]  
   
@@ -44,22 +44,22 @@ If a procedure has one or more [Optional](../../../../visual-basic/language-refe
   
      [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
-## <a name="multiple-optional-parameters"></a>Multiple Optional Parameters  
- For a procedure with more than one optional parameter, you normally need more than two overloaded versions. For example, if there are two optional parameters, and the calling code can supply or omit each one independently of the other, you need four overloaded versions, one for each possible combination of supplied arguments.  
+## <a name="multiple-optional-parameters"></a>Wiele parametrów opcjonalnych  
+ W przypadku procedury z więcej niż jednym opcjonalnym parametrem zwykle wymagane są więcej niż dwie przeciążone wersje. Na przykład jeśli istnieją dwa parametry opcjonalne, a kod wywołujący może dostarczyć lub pominąć każdy z nich niezależnie, potrzebne są cztery przeciążone wersje, jeden dla każdej możliwej kombinacji dostarczonych argumentów.  
   
- As the number of optional parameters increases, the complexity of the overloading increases. Unless some combinations of supplied arguments are not acceptable, for N optional parameters you need 2 ^ N overloaded versions. Depending on the nature of the procedure, you might find that the clarity of logic justifies the extra effort of defining all the overloaded versions.  
+ Wraz ze wzrostem liczby parametrów opcjonalnych zwiększa się złożoność przeciążenia. Jeśli niektóre kombinacje podanych argumentów nie są akceptowalne, dla N opcjonalnych parametrów wymagane są 2 ^ N przeciążone wersje. W zależności od charakteru procedury, może się okazać, że przejrzystość logiki usprawiedliwia dodatkowy nakład pracy w celu zdefiniowania wszystkich przeciążonych wersji.  
   
-#### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>To overload a procedure that takes more than one optional parameter  
+#### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>Aby przeciążyć procedurę, która przyjmuje więcej niż jeden parametr opcjonalny  
   
-1. Determine which combinations of supplied optional arguments are acceptable to the logic of the procedure. An unacceptable combination might arise if one optional parameter depends on another. For example, if one parameter accepts a person's name and another accepts the person's age, a combination of arguments supplying the age but omitting the name is unacceptable.  
+1. Ustal, które kombinacje podanych argumentów opcjonalnych są akceptowalne dla logiki procedury. Nieakceptowalna kombinacja może wystąpić, jeśli jeden opcjonalny parametr zależy od innego. Na przykład jeśli jeden parametr akceptuje nazwisko osoby i inny akceptuje wiek osoby, kombinację argumentów dostarczających wiek, ale pomijając nazwę, nie można jej zaakceptować.  
   
-2. For each acceptable combination of supplied optional arguments, write a `Sub` or `Function` declaration statement that defines the corresponding parameter list. Do not use the `Optional` keyword.  
+2. Dla każdej akceptowalnej kombinacji podanych argumentów opcjonalnych Napisz instrukcję `Sub` lub `Function` deklaracji, która definiuje odpowiednią listę parametrów. Nie należy używać słowa kluczowego `Optional`.  
   
-3. In each declaration, precede the `Sub` or `Function` keyword with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword.  
+3. W każdej deklaracji poprzedź słowo kluczowe `Sub` lub `Function` za pomocą słowa kluczowego [overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) .  
   
-4. Following each declaration, write the procedure code that should execute when the calling code supplies an argument list corresponding to that declaration's parameter list.  
+4. Po każdej deklaracji Napisz kod procedury, który powinien zostać wykonany, gdy wywołujący kod dostarcza listę argumentów odpowiadającą tej deklaracji listy parametrów.  
   
-5. Terminate each procedure with the `End Sub` or `End Function` statement as appropriate.  
+5. W razie potrzeby Zakończ każdą procedurę z instrukcją `End Sub` lub `End Function`.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447707"
 ---
 # <a name="cor_prf_suspend_reason-enumeration"></a>COR_PRF_SUSPEND_REASON — Wyliczenie
-Indicates the reason that the runtime is suspended.  
+Wskazuje przyczynę zawieszenia środowiska uruchomieniowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,30 +38,30 @@ typedef enum {
 } COR_PRF_SUSPEND_REASON;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_SUSPEND_OTHER`|The runtime is suspended for an unspecified reason.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|The runtime is suspended to service a garbage collection request.<br /><br /> The garbage collection-related callbacks occur between the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) and [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callbacks.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|The runtime is suspended so that an `AppDomain` can be shut down.<br /><br /> While the runtime is suspended, the runtime will determine which threads are in the `AppDomain` that is being shut down and set them to abort when they resume. There are no `AppDomain`-specific callbacks during this suspension.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|The runtime is suspended so that code pitching can occur.<br /><br /> Code pitching ensues only when the just-in-time (JIT) compiler is active with code pitching enabled. Code pitching callbacks occur between the `ICorProfilerCallback::RuntimeSuspendFinished` and `ICorProfilerCallback::RuntimeResumeStarted` callbacks. **Note:**  The CLR JIT does not pitch functions in the .NET Framework version 2.0, so this value is not used in 2.0.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|The runtime is suspended so that it can shut down. It must suspend all threads to complete the operation.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|The runtime is suspended for in-process debugging.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|The runtime is suspended to prepare for a garbage collection.|  
-|`COR_PRF_SUSPEND_FOR_REJIT`|The runtime is suspended for JIT recompilation.|  
+|`COR_PRF_FIELD_SUSPEND_OTHER`|Środowisko uruchomieniowe jest zawieszone z nieokreślonego powodu.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Środowisko uruchomieniowe jest zawieszone w celu obsługi żądania wyrzucania elementów bezużytecznych.<br /><br /> Wywołania zwrotne dotyczące wyrzucania elementów bezużytecznych są wykonywane między elementami wywołania zwrotne [ICorProfilerCallback:: RuntimeSuspendFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) i [ICorProfilerCallback:: RuntimeResumeStarted —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) .|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|Środowisko uruchomieniowe jest zawieszone, aby można było wyłączyć `AppDomain`.<br /><br /> Gdy środowisko uruchomieniowe jest wstrzymane, środowisko uruchomieniowe określi, które wątki znajdują się w `AppDomain`, które są zamykane, i ustawia je do przerwania po wznowieniu. W tym zawieszeniu nie ma żadnych wywołań zwrotnych specyficznych dla `AppDomain`.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Środowisko uruchomieniowe jest zawieszone, aby można było następować w kodzie.<br /><br /> Pochylenia kodu nastąpią, gdy kompilator just in Time (JIT) jest aktywny z włączonym postawem kodu. Wywołania zwrotne dotyczące pochylenia kodu są wykonywane między `ICorProfilerCallback::RuntimeSuspendFinished` i `ICorProfilerCallback::RuntimeResumeStarted` wywołania zwrotne. **Uwaga:**  Środowisko CLR JIT nie ma skoku funkcji w .NET Framework w wersji 2,0, więc ta wartość nie jest używana w 2,0.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Środowisko uruchomieniowe jest zawieszone, aby można je było wyłączyć. Musi zawiesić wszystkie wątki, aby ukończyć operację.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|Środowisko uruchomieniowe jest zawieszone na potrzeby debugowania w procesie.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|Środowisko uruchomieniowe jest zawieszone, aby przygotować się do wyrzucania elementów bezużytecznych.|  
+|`COR_PRF_SUSPEND_FOR_REJIT`|Środowisko uruchomieniowe jest zawieszone na potrzeby ponownej kompilacji JIT.|  
   
 ## <a name="remarks"></a>Uwagi  
- All runtime threads that are in unmanaged code are permitted to continue running until they try to re-enter the runtime, at which point they will also be suspended until the runtime resumes. This also applies to new threads that enter the runtime. All threads within the runtime are either suspended immediately if they are in interruptible code, or asked to suspend when they do reach interruptible code.  
+ Wszystkie wątki środowiska uruchomieniowego, które znajdują się w kodzie niezarządzanym, mogą kontynuować działanie, dopóki nie spróbują ponownie wprowadzić środowiska uruchomieniowego. w tym momencie zostaną one zawieszone do momentu wznowienia działania środowiska uruchomieniowego. Dotyczy to również nowych wątków, które wprowadzają środowisko uruchomieniowe. Wszystkie wątki w środowisku uruchomieniowym są zawieszane natychmiast, jeśli znajdują się w kodzie przerywania lub zażądają zawieszenia, gdy docierają do kodu przerywania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

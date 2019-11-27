@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433958"
 ---
 # <a name="imetadataimportenumparams-method"></a>IMetaDataImport::EnumParams — Metoda
-Enumerates ParamDef tokens representing the parameters of the method referenced by the specified MethodDef token.  
+Wylicza tokeny ParamDef reprezentujące parametry metody przywoływanej przez określony token MethodDef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,35 +39,35 @@ HRESULT EnumParams (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in. out] Wskaźnik do modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
   
  `mb`  
- [in] A MethodDef token representing the method with the parameters to enumerate.  
+ podczas Token MethodDef reprezentujący metodę z parametrami do wyliczenia.  
   
  `rParams`  
- [out] The array used to store the ParamDef tokens.  
+ określoną Tablica służąca do przechowywania tokenów ParamDef.  
   
  `cMax`  
- [in] The maximum size of the `rParams` array.  
+ podczas Maksymalny rozmiar tablicy `rParams`.  
   
  `pcTokens`  
- [out] The number of ParamDef tokens returned in `rParams`.  
+ określoną Liczba tokenów ParamDef zwróconych w `rParams`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumParams` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumParams` pomyślnie zwrócone.|  
+|`S_FALSE`|Brak tokenów do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Nagłówek:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

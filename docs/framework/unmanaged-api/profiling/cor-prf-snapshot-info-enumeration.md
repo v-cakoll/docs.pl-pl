@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427271"
 ---
 # <a name="cor_prf_snapshot_info-enumeration"></a>COR_PRF_SNAPSHOT_INFO — Wyliczenie
-Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.  
+Określa ilość danych, które mają zostać przekazane z migawki stosu w każdym wywołaniu funkcji [StackSnapshotCallback —](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) profilera.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,25 +34,25 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
 } COR_PRF_SNAPSHOT_INFO;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
-|Elementy członkowskie|Opis|  
+|Members|Opis|  
 |-------------|-----------------|  
-|`COR_PRF_SNAPSHOT_DEFAULT`|Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.|  
-|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.|  
-|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|Indicates that a simpler, alternative stack-walking algorithm will be used.|  
+|`COR_PRF_SNAPSHOT_DEFAULT`|Wskazuje, że należy przesłać wartości dla wszystkich parametrów `StackSnapshotCallback`, z wyjątkiem parametru `context`.|  
+|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|Wskazuje, że należy przesłać wartości dla wszystkich parametrów `StackSnapshotCallback`, łącznie z parametrem `context`.|  
+|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|Wskazuje, że zostanie użyty prostszy, alternatywny algorytm przechodzenia stosu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.  
+ Wartości, które są dostarczane przez Wyliczenie `COR_PRF_SNAPSHOT_INFO` są przekazywane jako parametry do metody [DoStackSnapshot —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

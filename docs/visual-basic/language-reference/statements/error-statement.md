@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351234"
 ---
 # <a name="error-statement"></a>Error — Instrukcja
-Simulates the occurrence of an error.  
+Symuluje wystąpienie błędu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -28,29 +28,29 @@ Error errornumber
   
 ## <a name="parts"></a>Części  
  `errornumber`  
- Wymagany. Can be any valid error number.  
+ Wymagana. Może być dowolnym prawidłowym numerem błędu.  
   
 ## <a name="remarks"></a>Uwagi  
- The `Error` statement is supported for backward compatibility. In new code, especially when creating objects, use the `Err` object's `Raise` method to generate run-time errors.  
+ Instrukcja `Error` jest obsługiwana w celu zapewnienia zgodności z poprzednimi wersjami. W nowym kodzie, szczególnie podczas tworzenia obiektów, użyj metody `Raise` `Err` obiektu do wygenerowania błędów w czasie wykonywania.  
   
- If `errornumber` is defined, the `Error` statement calls the error handler after the properties of the `Err` object are assigned the following default values:  
+ Jeśli `errornumber` jest zdefiniowany, instrukcja `Error` wywołuje procedurę obsługi błędów po przypisaniu właściwości obiektu `Err` do następujących wartości domyślnych:  
   
 |Właściwość|Wartość|  
 |--------------|-----------|  
-|`Number`|Value specified as argument to `Error` statement. Can be any valid error number.|  
-|`Source`|Name of the current Visual Basic project.|  
-|`Description`|String expression corresponding to the return value of the `Error` function for the specified `Number`, if this string exists. If the string does not exist, `Description` contains a zero-length string ("").|  
-|`HelpFile`|The fully qualified drive, path, and file name of the appropriate Visual Basic Help file.|  
-|`HelpContext`|The appropriate Visual Basic Help file context ID for the error corresponding to the `Number` property.|  
+|`Number`|Wartość określona jako argument instrukcji `Error`. Może być dowolnym prawidłowym numerem błędu.|  
+|`Source`|Nazwa bieżącego projektu Visual Basic.|  
+|`Description`|Wyrażenie ciągu odpowiadające wartości zwracanej funkcji `Error` dla określonego `Number`, jeśli ten ciąg istnieje. Jeśli ciąg nie istnieje, `Description` zawiera ciąg o zerowej długości ("").|  
+|`HelpFile`|W pełni kwalifikowany dysk, ścieżka i nazwa pliku odpowiedniego pliku Pomocy języka Visual Basic.|  
+|`HelpContext`|Odpowiedni Visual Basic identyfikator kontekstu pliku pomocy dla błędu odpowiadającego właściwości `Number`.|  
 |`LastDLLError`|Zero.|  
   
- If no error handler exists, or if none is enabled, an error message is created and displayed from the `Err` object properties.  
+ Jeśli nie istnieje procedura obsługi błędów lub jeśli żadna nie jest włączona, zostanie utworzony komunikat o błędzie z właściwościami obiektu `Err`.  
   
 > [!NOTE]
-> Some Visual Basic host applications cannot create objects. See your host application's documentation to determine whether it can create classes and objects.  
+> Niektóre aplikacje hosta Visual Basic nie mogą tworzyć obiektów. Informacje o tym, czy aplikacja hosta może tworzyć klasy i obiekty, znajdziesz w jej dokumentacji.  
   
 ## <a name="example"></a>Przykład  
- This example uses the `Error` statement to generate error number 11.  
+ Ten przykład używa instrukcji `Error` w celu wygenerowania błędu o numerze 11.  
   
 ```vb  
 On Error Resume Next   ' Defer error handling.  
@@ -58,9 +58,9 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Przestrzeń nazw:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443965"
 ---
 # <a name="cor_field_offset-structure"></a>COR_FIELD_OFFSET — Struktura
-Stores the offset, within a class, of the specified field.  
+Zapisuje przesunięcie w obrębie klasy w określonym polu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,22 +33,22 @@ typedef struct COR_FIELD_OFFSET {
 } COR_FIELD_OFFSET;  
 ```  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="members"></a>Members  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`ridOfField`|An `mdFieldDef` metadata token that represents the field.|  
-|`ulOffset`|The field's offset within its class.|  
+|`ridOfField`|`mdFieldDef` token metadanych reprezentujący pole.|  
+|`ulOffset`|Przesunięcie pola w swojej klasie.|  
   
 ## <a name="remarks"></a>Uwagi  
- [IMetaDataImport::GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) and [IMetaDataEmit::SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) methods take a parameter of type `COR_FIELD_OFFSET`.  
+ [IMetaDataImport:: GetClassLayout —](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) i [IMetaDataEmit:: SetClassLayout —](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) metoda przyjmuje parametr typu `COR_FIELD_OFFSET`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h, CorProf.idl  
+ **Nagłówek:** CorHdr. h, CorProf. idl  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

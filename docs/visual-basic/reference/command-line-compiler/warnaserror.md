@@ -13,8 +13,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351706"
 ---
-# <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
-Causes the compiler to treat the first occurrence of a warning as an error.  
+# <a name="-warnaserror-visual-basic"></a>-warnaserror — (Visual Basic)
+Powoduje, że kompilator traktuje pierwsze wystąpienie ostrzeżenia jako błąd.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,36 +26,36 @@ Causes the compiler to treat the first occurrence of a warning as an error.
   
 |Termin|Definicja|  
 |---|---|  
-|+ &#124; -|Opcjonalny. By default, `-warnaserror-` is in effect; warnings do not prevent the compiler from producing an output file. The `-warnaserror` option, which is the same as `-warnaserror+`, causes warnings to be treated as errors.|  
-|`numberList`|Opcjonalny. Comma-delimited list of the warning ID numbers to which the `-warnaserror` option applies. If no warning ID is specified, the `-warnaserror` option applies to all warnings.|  
+|+ &#124; -|Opcjonalna. Domyślnie `-warnaserror-` jest w efekcie; ostrzeżenia nie uniemożliwiają kompilatorowi tworzenia pliku wyjściowego. Opcja `-warnaserror`, która jest taka sama jak `-warnaserror+`, powoduje, że ostrzeżenia są traktowane jako błędy.|  
+|`numberList`|Opcjonalna. Rozdzielana przecinkami lista numerów IDENTYFIKACYJNych ostrzeżeń, których dotyczy opcja `-warnaserror`. Jeśli nie określono identyfikatora ostrzeżenia, opcja `-warnaserror` dotyczy wszystkich ostrzeżeń.|  
   
 ## <a name="remarks"></a>Uwagi  
- The `-warnaserror` option treats all warnings as errors. Any messages that would ordinarily be reported as warnings are instead reported as errors. The compiler reports subsequent occurrences of the same warning as warnings.  
+ Opcja `-warnaserror` traktuje wszystkie ostrzeżenia jako błędy. Wszystkie komunikaty, które zwykle są raportowane jako ostrzeżenia, są raportowane jako błędy. Kompilator raportuje kolejne wystąpienia tego samego ostrzeżenia co ostrzeżenia.  
   
- By default, `-warnaserror-` is in effect, which causes the warnings to be informational only. The `-warnaserror` option, which is the same as `-warnaserror+`, causes warnings to be treated as errors.  
+ Domyślnie `-warnaserror-` jest włączona, co powoduje, że ostrzeżenia są tylko informacyjne. Opcja `-warnaserror`, która jest taka sama jak `-warnaserror+`, powoduje, że ostrzeżenia są traktowane jako błędy.  
   
- If you want only a few specific warnings to be treated as errors, you may specify a comma-separated list of warning numbers to treat as errors.  
+ Jeśli chcesz, aby tylko kilka określonych ostrzeżeń była traktowana jak błędy, możesz określić rozdzieloną przecinkami listę numerów ostrzeżeń, które mają być traktowane jako błędy.  
   
 > [!NOTE]
-> The `-warnaserror` option does not control how warnings are displayed. Use the [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) option to disable warnings.  
+> Opcja `-warnaserror` nie kontroluje sposobu wyświetlania ostrzeżeń. Użyj opcji [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) , aby wyłączyć ostrzeżenia.  
   
-|To set -warnaserror to treat all warnings as errors in the Visual Studio IDE|  
+|Aby ustawić-warnaserror — wszystkie ostrzeżenia jako błędy w środowisku IDE programu Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. On the **Project** menu, click **Properties**. <br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Check the **Treat all warnings as errors** check box.|  
+|1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **kompilacja** .<br />3. Upewnij się, że pole wyboru **Wyłącz wszystkie ostrzeżenia** nie jest zaznaczone.<br />4. Zaznacz pole wyboru **Traktuj wszystkie ostrzeżenia jako błędy** .|  
   
-|To set -warnaserror to treat specific warnings as errors in the Visual Studio IDE|  
+|Aby ustawić-warnaserror — do traktowania określonych ostrzeżeń jako błędów w środowisku IDE programu Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. On the **Project** menu, click **Properties**.<br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Make sure the **Treat all warnings as errors** check box is unchecked.<br />5.  Select **Error** from the **Notification** column adjacent to the warning that should be treated as an error.|  
+|1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**.<br />2. Kliknij kartę **kompilacja** .<br />3. Upewnij się, że pole wyboru **Wyłącz wszystkie ostrzeżenia** nie jest zaznaczone.<br />4. Upewnij się, że pole wyboru **Traktuj wszystkie ostrzeżenia jako błędy** nie jest zaznaczone.<br />5. Wybierz **błąd** z kolumny **powiadomień** sąsiadującej z ostrzeżeniem, które ma być traktowane jako błąd.|  
   
 ## <a name="example"></a>Przykład  
- The following code compiles `In.vb` and directs the compiler to display an error for the first occurrence of every warning it finds.  
+ Poniższy kod kompiluje `In.vb` i nakazuje kompilatorowi wyświetlenie błędu pierwszego wystąpienia każdego ostrzeżenia, które znajdzie.  
   
 ```console
 vbc -warnaserror in.vb  
 ```  
   
 ## <a name="example"></a>Przykład  
- The following code compiles `T2.vb` and treats only the warning for unused local variables (42024) as an error.  
+ Poniższy kod kompiluje `T2.vb` i traktuje tylko ostrzeżenia dla nieużywanych zmiennych lokalnych (42024) jako błąd.  
   
 ```console
 vbc -warnaserror:42024 t2.vb  
@@ -63,6 +63,6 @@ vbc -warnaserror:42024 t2.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Konfigurowanie ostrzeżeń w kodzie Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)

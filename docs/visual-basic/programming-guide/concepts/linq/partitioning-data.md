@@ -9,50 +9,50 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353150"
 ---
-# <a name="partitioning-data-visual-basic"></a>Partitioning Data (Visual Basic)
-Partitioning in LINQ refers to the operation of dividing an input sequence into two sections, without rearranging the elements, and then returning one of the sections.  
+# <a name="partitioning-data-visual-basic"></a>Partycjonowanie danych (Visual Basic)
+Partycjonowanie w LINQ odwołuje się do operacji dzielenia sekwencji wejściowej na dwie sekcje, bez konieczności ponownej rozmieszczania elementów, a następnie zwrócenia jednej z sekcji.  
   
- The following illustration shows the results of three different partitioning operations on a sequence of characters. The first operation returns the first three elements in the sequence. The second operation skips the first three elements and returns the remaining elements. The third operation skips the first two elements in the sequence and returns the next three elements.  
+ Na poniższej ilustracji przedstawiono wyniki trzech różnych operacji partycjonowania na sekwencji znaków. Pierwsza operacja zwraca trzy pierwsze elementy w sekwencji. Druga operacja pomija pierwsze trzy elementy i zwraca pozostałe elementy. Trzecia operacja pomija pierwsze dwa elementy w sekwencji i zwraca następne trzy elementy.  
   
- ![Illustration that shows three LINQ partitioning operations.](./media/partitioning-data/linq-partitioning-operations.png)  
+ ![Ilustracja przedstawiająca trzy operacje partycjonowania LINQ.](./media/partitioning-data/linq-partitioning-operations.png)  
   
- The standard query operator methods that partition sequences are listed in the following section.  
+ Standardowe metody operatorów zapytań, które są sekwencje partycji, są wymienione w poniższej sekcji.  
   
 ## <a name="operators"></a>Operatory  
   
-|Nazwa operatora|Opis|Visual Basic Query Expression Syntax|Więcej informacji|  
+|Nazwa operatora|Opis|Składnia wyrażenia zapytania Visual Basic|Więcej informacji|  
 |-------------------|-----------------|------------------------------------------|----------------------|  
-|Skip|Skips elements up to a specified position in a sequence.|`Skip`|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
-|SkipWhile|Skips elements based on a predicate function until an element does not satisfy the condition.|`Skip While`|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
-|Take|Takes elements up to a specified position in a sequence.|`Take`|<xref:System.Linq.Enumerable.Take%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=nameWithType>|  
-|TakeWhile|Takes elements based on a predicate function until an element does not satisfy the condition.|`Take While`|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=nameWithType>|  
+|Pomiń|Pomija elementy do określonej pozycji w sekwencji.|`Skip`|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
+|SkipWhile|Pomija elementy na podstawie funkcji predykatu, dopóki element nie spełnia warunku.|`Skip While`|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
+|Take|Pobiera elementy do określonej pozycji w sekwencji.|`Take`|<xref:System.Linq.Enumerable.Take%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=nameWithType>|  
+|TakeWhile —|Pobiera elementy na podstawie funkcji predykatu, dopóki element nie spełnia warunku.|`Take While`|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-examples"></a>Query Expression Syntax Examples  
+## <a name="query-expression-syntax-examples"></a>Przykłady składni wyrażeń zapytania  
   
-### <a name="skip"></a>Skip  
- The following code example uses the `Skip` clause in Visual Basic to skip over the first four strings in an array of strings before returning the remaining strings in the array.  
+### <a name="skip"></a>Pomiń  
+ Poniższy przykład kodu używa klauzuli `Skip` w Visual Basic, aby pominąć pierwsze cztery ciągi w tablicy ciągów przed zwróceniem pozostałych ciągów w tablicy.  
   
  [!code-vb[CsLINQPartitioning#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#1)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- The following code example uses the `Skip While` clause in Visual Basic to skip over the strings in an array while the first letter of the string is "a". The remaining strings in the array are returned.  
+ Poniższy przykład kodu używa klauzuli `Skip While` w Visual Basic do pomijania ciągów w tablicy, podczas gdy pierwsza litera ciągu ma wartość "a". Zwracane są pozostałe ciągi w tablicy.  
   
  [!code-vb[CsLINQPartitioning#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#2)]  
   
 ### <a name="take"></a>Take  
- The following code example uses the `Take` clause in Visual Basic to return the first two strings in an array of strings.  
+ Poniższy przykład kodu używa klauzuli `Take` w Visual Basic, aby zwrócić pierwsze dwa ciągi w tablicy ciągów.  
   
  [!code-vb[CsLINQPartitioning#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#3)]  
   
-### <a name="takewhile"></a>TakeWhile  
- The following code example uses the `Take While` clause in Visual Basic to return strings from an array while the length of the string is five or less.  
+### <a name="takewhile"></a>TakeWhile —  
+ Poniższy przykład kodu używa klauzuli `Take While` w Visual Basic do zwracania ciągów z tablicy, podczas gdy długość ciągu jest pięć lub mniej.  
   
  [!code-vb[CsLINQPartitioning#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#4)]  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Standardowe operatory zapytań — Omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Skip, klauzula](../../../../visual-basic/language-reference/queries/skip-clause.md)
 - [Skip While, klauzula](../../../../visual-basic/language-reference/queries/skip-while-clause.md)
 - [Take, klauzula](../../../../visual-basic/language-reference/queries/take-clause.md)

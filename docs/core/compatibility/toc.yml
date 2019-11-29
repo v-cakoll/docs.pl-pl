@@ -1,42 +1,32 @@
-- name: Zgodność aplikacji
+- name: Co to są zmiany powodujące niezgodność?
+  href: index.md
+- name: Kategorie zmian powodujących niezgodność
+  href: categories.md
+- name: Selektory stron
+  href: breaking-changes.md
+- name: Według wersji
   items:
-    - name: Ocenianie zmian powodujących niezgodność
-      href: index.md
-    - name: Kategorie zmian powodujących niezgodność
-      href: categories.md
-    - name: Selektor zmian powodujących niezgodność
-      href: breaking-changes.md
-    - name: Według wersji
-      items:
-        - name: Z wersji 3.0 do 3.1
-          href: 3.0-3.1.md
-        - name: Z wersji 3.0 (wersja zapoznawcza 9) do wersji 3.0
-          href: 3.0.9-3.0rc1.md
-        - name: Z wersji 3.0 (wersja zapoznawcza 8) do wersji 3.0 (wersja zapoznawcza 9)
-          href: 3.0.8-3.0.9.md
-        - name: Z wersji 3.0 (wersja zapoznawcza 7) do wersji 3.0 (wersja zapoznawcza 8)
-          href: 3.0.7-3.0.8.md
-        - name: Z wersji 3.0 (wersja zapoznawcza 6) do wersji 3.0 (wersja zapoznawcza 7)
-          href: 3.0.6-3.0.7.md
-        - name: Z wersji 2.2 do 3.0
-          href: 2.2-3.0.md
-        - name: Z platformy .NET Framework do platformy .NET Core
-          href: framework-core.md
-    - name: Według kategorii
-      items:
-        - name: ASP.NET Core
-          href: aspnetcore.md
-        - name: CoreFx
-          href: corefx.md
-        - name: Kryptografia
-          href: cryptography.md
-        - name: Entity Framework Core
-          href: /ef/core/what-is-new/ef-core-3.0/breaking-changes
-        - name: Globalizacja
-          href: globalization.md
-        - name: Obsługa sieci
-          href: networking.md
-        - name: Visual Basic
-          href: visualbasic.md
-        - name: Windows Forms
-          href: winforms.md
+    - name: Z wersji 3.0 do 3.1
+      href: 3.0-3.1.md
+    - name: Z wersji 2.2 do 3.1
+      href: 2.2-3.1.md
+    - name: Z wersji 2.2 do 3.0
+      href: 2.2-3.0.md
+- name: Według obszaru
+  items:
+    - name: ASP.NET Core
+      href: aspnetcore.md
+    - name: CoreFx
+      href: corefx.md
+    - name: Kryptografia
+      href: cryptography.md
+    - name: Entity Framework Core
+      href: /ef/core/what-is-new/ef-core-3.0/breaking-changes
+    - name: Globalizacja
+      href: globalization.md
+    - name: Networking
+      href: networking.md
+    - name: Visual Basic
+      href: visualbasic.md
+    - name: Windows Forms
+      href: winforms.md

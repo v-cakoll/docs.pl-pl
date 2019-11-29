@@ -2,7 +2,7 @@
   href: index.md
 - name: Informacje o platformie .NET Core
   href: about.md
-- name: Zainstaluj
+- name: Instalowanie
   items:
     - name: Omówienie
       href: install/index.md
@@ -42,7 +42,7 @@
           href: install/linux-package-manager-sles12.md
         - name: SLES 15
           href: install/linux-package-manager-sles15.md
-- name: Wprowadzenie
+- name: Rozpoczęcie pracy
   href: get-started.md
   items:
     - name: 'Wprowadzenie do języka C# i programu Visual Studio Code'
@@ -73,7 +73,8 @@
       href: whats-new/dotnet-core-2-1.md
     - name: Co nowego w programie .NET Core 2.0
       href: whats-new/dotnet-core-2-0.md
-- name: Zgodność aplikacji
+- name: Zmiany powodujące niezgodność
+  displayName: app compatibility
   href: compatibility/
 - name: Samouczki
   href: tutorials/index.md
@@ -201,7 +202,7 @@
       href: /visualstudio/test/live-unit-testing-start
 - name: Ciągła integracja
   href: tools/using-ci-with-cli.md
-- name: Przechowywanie wersji
+- name: Obsługa wersji
   href: versions/index.md
   items:
     - name: Wybieranie wersji platformy .NET Core
@@ -321,7 +322,7 @@
       href: additional-tools/dotnet-svcutil.xmlserializer-guide.md
     - name: Generator serializatora XML
       href: additional-tools/xml-serializer-generator.md
-- name: Przenoszenie z platformy .NET Framework
+- name: Przenoszenie z programu .NET Framework
   href: porting/index.md
   items:
     - name: Technologie .NET Framework niedostępne na platformie .NET Core
@@ -332,12 +333,16 @@
       href: porting/libraries.md
     - name: Organizowanie projektów dla platformy .NET Core
       href: porting/project-structure.md
-    - name: Narzędzia pomagające przenosić kod na platformę .NET Core
+    - name: Narzędzia
       href: porting/tools.md
     - name: Korzystanie z pakietu zgodności systemu Windows
       href: porting/windows-compat-pack.md
     - name: Przenoszenie projektów aplikacji Windows Forms
-      href: porting/winforms.md
+      items:
+        - name: Jak przenieść projekt
+          href: porting/winforms.md
+        - name: Zmiany powodujące niezgodność
+          href: porting/winforms-breaking-changes.md
     - name: Przenoszenie projektów WPF
       href: porting/wpf.md
 - name: Ładowanie zależności

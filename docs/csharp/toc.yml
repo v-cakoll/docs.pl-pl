@@ -1,6 +1,6 @@
 - name: 'Dokumentacja języka C#'
   href: index.yml
-- name: Rozpocznij
+- name: Rozpoczęcie pracy
   items:
     - name: Omówienie
       href: getting-started/index.md
@@ -14,7 +14,7 @@
       items:
         - name: Wybieranie pierwszej lekcji
           href: tutorials/intro-to-csharp/index.md
-        - name: Hello world
+        - name: Witaj świecie
           href: tutorials/intro-to-csharp/hello-world.yml
         - name: 'Liczby w języku C#'
           href: tutorials/intro-to-csharp/numbers-in-csharp.yml
@@ -56,7 +56,7 @@
       href: tutorials/generate-consume-asynchronous-stream.md
     - name: Zwiększanie możliwości danych za pomocą dopasowania wzorca
       href: tutorials/pattern-matching.md
-    - name: Aplikacja konsoli
+    - name: Aplikacja konsolowa
       href: tutorials/console-teleprompter.md
     - name: Klient REST
       href: tutorials/console-webapiclient.md
@@ -120,7 +120,7 @@
       href: nullable-references.md
     - name: Opisywanie interfejsów API dopuszczających wartość null przy użyciu atrybutów i ograniczeń
       href: nullable-attributes.md
-    - name: Namespaces
+    - name: Przestrzenie nazw
       href: programming-guide/namespaces/index.md
     - name: Typy podstawowe
       href: basic-types.md
@@ -140,7 +140,7 @@
       href: programming-guide/statements-expressions-operators/lambda-expressions.md
     - name: Właściwości
       href: properties.md
-    - name: Indeksatory
+    - name: Indexers (Indeksatory)
       href: indexers.md
     - name: Odrzucenia
       href: discards.md
@@ -236,7 +236,7 @@
       href: programming-guide/interop/index.md
     - name: Dokumentowanie kodu
       href: codedoc.md
-    - name: Przechowywanie wersji
+    - name: Obsługa wersji
       href: versioning.md
 - name: 'Tematy z instrukcjami dotyczącymi języka C#'
   items:
@@ -906,7 +906,7 @@
               href: programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md
             - name: 'Instrukcje: testowanie równości odwołań (tożsamości)'
               href: programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md
-    - name: Types
+    - name: Typy
       items:
         - name: Użycie i definiowanie typów
           href: programming-guide/types/index.md
@@ -1094,7 +1094,7 @@
           href: programming-guide/strings/index.md
         - name: 'Instrukcje: Określanie, czy ciąg reprezentuje wartość liczbową'
           href: programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md
-    - name: Indeksatory
+    - name: Indexers (Indeksatory)
       items:
         - name: Omówienie
           href: programming-guide/indexers/index.md
@@ -1144,7 +1144,7 @@
           href: programming-guide/generics/generics-and-reflection.md
         - name: Typy ogólne i atrybuty
           href: programming-guide/generics/generics-and-attributes.md
-    - name: Namespaces
+    - name: Przestrzenie nazw
       items:
         - name: Omówienie
           href: programming-guide/namespaces/index.md
@@ -1299,9 +1299,11 @@
                 - name: Wbudowane konwersje liczbowe
                   href: language-reference/builtin-types/numeric-conversions.md
                 - name: bool
-                  href: language-reference/keywords/bool.md
+                  href: language-reference/builtin-types/bool.md
+                  displayName: 'Boolean, true, false'
                 - name: char
                   href: language-reference/builtin-types/char.md
+                  displayName: 'Unicode, character, UTF-16'
                 - name: enum
                   href: language-reference/keywords/enum.md
                 - name: struktura
@@ -1485,16 +1487,14 @@
           items:
             - name: base
               href: language-reference/keywords/base.md
-            - name: this
+            - name: względem tego ruchu
               href: language-reference/keywords/this.md
         - name: Słowa kluczowe literału
           items:
             - name: wartość null
               href: language-reference/keywords/null.md
-            - name: 'true'
-              href: language-reference/keywords/true-literal.md
-            - name: 'false'
-              href: language-reference/keywords/false-literal.md
+            - name: true i false
+              href: language-reference/builtin-types/bool.md
             - name: default
               href: language-reference/keywords/default.md
         - name: Kontekstowe słowa kluczowe
@@ -1515,7 +1515,7 @@
               href: language-reference/keywords/set.md
             - name: when (warunek filtru)
               href: language-reference/keywords/when.md
-            - name: value
+            - name: wartość
               href: language-reference/keywords/value.md
             - name: yield
               href: language-reference/keywords/yield.md
@@ -1803,5 +1803,5 @@
       href: language-reference/specification/
     - name: 'Propozycje dotyczące języka C# 7.0–8.0'
       href: language-reference/proposals/
-- name: Wskazówki
+- name: Przewodniki
   href: walkthroughs.md

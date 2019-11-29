@@ -9,7 +9,7 @@
       href: what-is-apache-spark-dotnet.md
 - name: Samouczki
   items:
-    - name: Wprowadzenie
+    - name: Rozpoczęcie pracy
       href: tutorials/get-started.md
     - name: Wdrażanie w usłudze Azure HDInsight
       href: tutorials/hdinsight-deployment.md
@@ -21,11 +21,13 @@
   items:
     - name: Debugowanie aplikacji
       href: how-to-guides/debug.md
+    - name: Przesyłanie zadań do usługi HDInsight
+      href: how-to-guides/hdinsight-deploy-methods.md
 - name: Tematy pomocy
   items:
-    - name: Odwołanie do biblioteki API
+    - name: Dokumentacja interfejsu API
       href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
-- name: Resources
+- name: Zasoby
   items:
     - name: Omówienie zasobów
       href: resources/index.md

@@ -61,7 +61,7 @@
                   items:
                     - name: 'Instrukcje: Wdrażanie asynchronicznej operacji usługi'
                       href: how-to-implement-an-asynchronous-service-operation.md
-                - name: Niezawodne usługi
+                - name: Reliable Services
                   href: reliable-services.md
                 - name: Usługi i transakcje
                   href: services-and-transactions.md
@@ -241,7 +241,5 @@
       href: glossary.md
     - name: Informacje ogólne
       href: general-reference.md
-    - name: Opinie i społeczność
-      href: feedback-and-community.md
-    - name: informacje o prywatności
+    - name: Informacje o prywatności
       href: privacy-information.md

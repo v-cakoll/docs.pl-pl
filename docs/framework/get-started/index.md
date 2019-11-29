@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: ca2a4e6c44a26889a2fffa5cc5fa2cbba3eab782
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 563416f1ca9ddb9cb9bb7e78b9e13406983bdf9f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281830"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552799"
 ---
 # <a name="get-started-with-the-net-framework"></a>Wprowadzenie do .NET Framework
 
@@ -65,15 +65,15 @@ Aby opracowywać .NET Framework aplikacje lub składniki, wykonaj następujące 
 
 1. Jeśli nie jest wstępnie zainstalowany w systemie operacyjnym, Zainstaluj wersję .NET Framework, do której aplikacja będzie docelowa. Najnowsza wersja produkcyjna to .NET Framework 4,8. Jest ona wstępnie zainstalowana w systemie Windows 10 maja 2019 Update i jest dostępna do pobrania we wcześniejszych wersjach systemu operacyjnego Windows. Aby uzyskać wymagania systemowe .NET Framework, zobacz [wymagania systemowe](system-requirements.md). Aby uzyskać informacje na temat instalowania innych wersji .NET Framework, zobacz [Przewodnik instalacji](../install/guide-for-developers.md). Dodatkowe pakiety .NET Framework są wyłączane poza pasmem, co oznacza, że są one zwalniane na podstawie cyklu regularnego lub zaplanowanych wersji. Aby uzyskać informacje o tych pakietach, zobacz [.NET Framework i wersje poza pasmem](the-net-framework-and-out-of-band-releases.md).
 
-2. Wybierz język lub języki obsługiwane przez .NET Framework, których zamierzasz używać do opracowywania aplikacji. Dostępne są różne języki, w tym [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.yml), [F#](../../fsharp/index.md)i [ C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) od firmy Microsoft. (Język programowania, który umożliwia tworzenie aplikacji dla .NET Framework, jest zgodny ze [specyfikacją Common Language Infrastructure (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).
+2. Wybierz język lub języki obsługiwane przez .NET Framework, których zamierzasz używać do opracowywania aplikacji. Dostępne są różne języki, w tym [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.yml), [F#](../../fsharp/index.yml)i [ C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) od firmy Microsoft. (Język programowania, który umożliwia tworzenie aplikacji dla .NET Framework, jest zgodny ze [specyfikacją Common Language Infrastructure (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).
 
 3. Wybierz i zainstaluj środowisko programistyczne, które ma być używane do tworzenia aplikacji, które obsługuje wybrany język programowania lub języki. Zintegrowane środowisko programistyczne firmy Microsoft (IDE) dla aplikacji .NET Framework jest [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Jest on dostępny w wielu wersjach.
 
 Aby uzyskać więcej informacji na temat tworzenia aplikacji przeznaczonych dla .NET Framework, zobacz [Przewodnik programowania](../development-guide.md).
 
-## <a name="related-articles"></a>Pokrewne artykuły:
+## <a name="related-articles"></a>Powiązane artykuły
 
-| Stanowisko | Opis |
+| Tytuł | Opis |
 | ----- |------------ |
 | [Omówienie](overview.md) | Zawiera szczegółowe informacje dla deweloperów, którzy tworzą aplikacje przeznaczone dla .NET Framework. |
 | [Przewodnik instalacji](../install/index.md) | Zawiera informacje o instalowaniu .NET Framework. |  

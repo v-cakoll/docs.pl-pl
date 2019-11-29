@@ -1,17 +1,17 @@
 ---
 title: 'Samouczek: analizowanie klasyfikacji tonacji-Binary'
 description: W tym samouczku przedstawiono sposób tworzenia aplikacji Razor Pages, która klasyfikuje tonacji z komentarzy w witrynie sieci Web i podejmuje odpowiednie działania. Tonacji klasyfikator binarny używa konstruktora modelu w programie Visual Studio.
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e919341130c6778207f324dd9eb3b3f54c8a9c68
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974798"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551845"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Samouczek: analizowanie tonacji komentarzy witryny internetowej w aplikacji sieci Web przy użyciu konstruktora modelu ML.NET
 
@@ -48,7 +48,7 @@ Listę wymagań wstępnych i instrukcji instalacji można znaleźć w [podręczn
     1. W oknie dialogowym Nowy projekt wybierz węzeł **wizualizacji C#**  , a następnie węzeł **sieci Web** .
     1. Następnie wybierz szablon projektu **aplikacji sieci Web ASP.NET Core** .
     1. W polu tekstowym **Nazwa** wpisz "SentimentRazor".
-    1. Pole wyboru **Utwórz katalog dla rozwiązania** powinno być domyślnie zaznaczone. Jeśli tak nie jest, należy go sprawdzić.
+    1. Upewnij się, że w tym samym katalogu nie jest **zaznaczone pole wyboru** **Umieść rozwiązanie i projekt** (vs 2019) lub pozycję **Utwórz katalog dla rozwiązania** jest **zaznaczone** (vs 2017).
     1. Wybierz przycisk **OK** .
     1. W oknie Wybierz **aplikację sieci Web** , która wyświetla różne typy projektów ASP.NET Core, a następnie wybierz przycisk **OK** .
 
@@ -58,7 +58,7 @@ Pobierz [zestaw danych detox Wikipedia](https://raw.githubusercontent.com/dotnet
 
 Każdy wiersz w zestawie danych *Wikipedia-detox-250-line-Data. tsv* reprezentuje inny przegląd, który został pozostawiony przez użytkownika w witrynie Wikipedia. Pierwsza kolumna reprezentuje tonacji tekstu (0 to nietoksyczne, 1 jest toksyczny), a druga kolumna reprezentuje komentarz, który został pozostawiony przez użytkownika. Kolumny są oddzielane znakami tabulacji. Dane wyglądają następująco:
 
-| Tonacji | SentimentText |
+| tonacji | SentimentText |
 | :---: | :---: |
 1 | = = Prosta = = informatyku, prosta to Carl Picture lub else.
 1 | = = OK! = = BŁYSKAWICZNE PRZECHODZENIE DO VANDALIZE DZIKICH WITRYN TYPU WIKI, A NASTĘPNIE!!!
@@ -298,7 +298,7 @@ W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
 > - Oceń model
 > - Używanie modelu dla prognoz
 
-### <a name="additional-resources"></a>Dodatkowe zasoby
+### <a name="additional-resources"></a>Dodatkowe materiały
 
 Aby dowiedzieć się więcej na temat tematów wymienionych w tym samouczku, odwiedź następujące zasoby:
 

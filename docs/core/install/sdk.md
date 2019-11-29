@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 11/06/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 2f65e9dc39a4cd1076af1a70dfedfa671f20b42d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 6e9af6c84c81b1244e10fa7d5955ab67d34b1f0a
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450878"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552205"
 ---
 # <a name="install-the-net-core-sdk"></a>Zainstaluj zestaw .NET Core SDK
 
@@ -26,12 +26,16 @@ Program .NET Core można pobrać i zainstalować bezpośrednio przy użyciu jedn
 
 Program .NET Core można również zainstalować w ramach zintegrowanego środowiska programistycznego (IDE), szczegółowo w poniższych sekcjach.
 
+::: zone pivot="os-windows,os-macos"
+
 ## <a name="install-with-an-installer"></a>Instalowanie za pomocą Instalatora
 
 Zarówno system Windows, jak i macOS mają autonomiczne Instalatory, których można użyć do zainstalowania zestawu SDK platformy .NET Core 3,0.
 
 - [Procesory CPU Windows x64](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x64-installer) | [x32 CPU](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x86-installer)
 - [procesory macOS x64](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-macos-x64-installer)
+
+::: zone-end
 
 ::: zone pivot="os-linux"
 
@@ -50,8 +54,8 @@ Jeśli używasz programu Visual Studio do tworzenia aplikacji platformy .NET Cor
 | Wersja zestaw .NET Core SDK | Wersja programu Visual Studio                      |
 | --------------------- | ------------------------------------------ |
 | 3.0                   | Program Visual Studio 2019 w wersji 16,3 lub nowszej. |
-| 2.2                   | Program Visual Studio 2017 w wersji 15,9 lub nowszej. |
-| 2.1                   | Program Visual Studio 2017 w wersji 15,7 lub nowszej. |
+| 2,2                   | Program Visual Studio 2017 w wersji 15,9 lub nowszej. |
+| 2,1                   | Program Visual Studio 2017 w wersji 15,7 lub nowszej. |
 
 Jeśli masz już zainstalowany program Visual Studio, możesz sprawdzić swoją wersję, wykonując poniższe kroki.
 

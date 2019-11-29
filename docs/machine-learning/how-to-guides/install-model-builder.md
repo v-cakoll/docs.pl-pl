@@ -3,14 +3,14 @@ title: Jak zainstalować program model Builder
 description: Dowiedz się, jak zainstalować narzędzie ML.NET model Builder
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/21/2019
+ms.date: 11/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: a1034d294012b8df5ec778fc40602fe52223961d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b87f712ad7a8b2229c1d42db4bad1fe511475ac7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774570"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552943"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>Jak zainstalować program ML.NET model Builder
 
@@ -19,10 +19,13 @@ Dowiedz się, jak zainstalować program ML.NET model Builder, aby dodać Uczenie
 > [!NOTE]
 > Konstruktor modeli jest obecnie w wersji zapoznawczej.
 
-## <a name="pre-requisites"></a>Wymagania wstępne
+## <a name="prerequisites"></a>Wymagania wstępne
 
 - Visual Studio 2017 w wersji 15.9.12 lub nowszej/Visual Studio 2019
-- Zestaw SDK platformy .NET Core 2,1 lub nowszej
+- .NET Core 2,1 SDK lub nowszy.
+
+> [!NOTE]
+> Zestaw SDK platformy .NET Core 3,0 nie jest obecnie obsługiwany.
 
 ## <a name="limitations"></a>Ograniczenia
 
@@ -31,7 +34,7 @@ Dowiedz się, jak zainstalować program ML.NET model Builder, aby dodać Uczenie
 - SQL Server ma limit 100 000 wierszy na potrzeby szkolenia
 - Narzędzia Microsoft SQL Server Data Tools for Visual Studio 2017 nie są obsługiwane
 
-## <a name="install"></a>Zainstaluj
+## <a name="install"></a>Instalacja programu
 
 Konstruktora modelu ML.NET można zainstalować za pośrednictwem Visual Studio Marketplace lub z poziomu programu Visual Studio.
 
@@ -42,7 +45,7 @@ Konstruktora modelu ML.NET można zainstalować za pośrednictwem Visual Studio 
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. Na pasku menu wybierz kolejno opcje **narzędzia**  > **rozszerzenia i aktualizacje** .
+1. Na pasku menu wybierz kolejno opcje **narzędzia** > **rozszerzenia i aktualizacje** .
 
     ![Okno dialogowe Otwieranie Menedżera rozszerzeń program VS2017](./media/install-model-builder/vs2017-open-extensions-manager.png)
 
@@ -55,7 +58,7 @@ Konstruktora modelu ML.NET można zainstalować za pośrednictwem Visual Studio 
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-1. Na pasku menu wybierz pozycję **rozszerzenia**  > **Zarządzanie rozszerzeniami**
+1. Na pasku menu wybierz pozycję **rozszerzenia** > **Zarządzanie rozszerzeniami**
 
     ![Okno dialogowe Otwieranie Menedżera rozszerzeń VS2019](./media/install-model-builder/vs2019-open-extensions-manager.png)
 
@@ -70,7 +73,7 @@ Konstruktora modelu ML.NET można zainstalować za pośrednictwem Visual Studio 
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. Na pasku menu wybierz kolejno opcje **narzędzia**  > **rozszerzenia i aktualizacje** .
+1. Na pasku menu wybierz kolejno opcje **narzędzia** > **rozszerzenia i aktualizacje** .
 
     ![Program VS2017 Otwórz okno dialogowe zarządzania rozszerzeniami](./media/install-model-builder/vs2017-open-extensions-manager.png)
 
@@ -83,7 +86,7 @@ Konstruktora modelu ML.NET można zainstalować za pośrednictwem Visual Studio 
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-1. Na pasku menu wybierz pozycję **rozszerzenia**  > **Zarządzanie rozszerzeniami**
+1. Na pasku menu wybierz pozycję **rozszerzenia** > **Zarządzanie rozszerzeniami**
 
     ![VS2019 Otwórz okno dialogowe zarządzania rozszerzeniami](./media/install-model-builder/vs2019-open-extensions-manager.png)
 

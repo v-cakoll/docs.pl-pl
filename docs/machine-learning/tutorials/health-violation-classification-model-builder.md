@@ -3,15 +3,15 @@ title: 'Samouczek: klasyfikowanie naruszeń kondycji przy użyciu konstruktora m
 description: W tym samouczku przedstawiono sposób tworzenia wieloklasowego modelu klasyfikacji przy użyciu konstruktora modelu ML.NET do klasyfikowania ważności naruszenia kondycji restauracji w sieci San Francisco.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/30/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: cbe20183d317ac6fe39a937e1cfa8a5e3df81b74
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 07729e1667f8aa3aba74576943d79eaa3bcd14d8
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977208"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552887"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Samouczek: klasyfikowanie ważności naruszeń kondycji restauracji przy użyciu konstruktora modelu
 
@@ -41,7 +41,7 @@ Ten przykład służy do C# tworzenia aplikacji konsolowej .NET Core, która kla
 
 ## <a name="create-a-console-application"></a>Tworzenie aplikacji konsolowej
 
-1. Utwórz  **C# aplikację konsolową .NET Core** o nazwie "RestaurantViolations".
+1. Utwórz  **C# aplikację konsolową .NET Core** o nazwie "RestaurantViolations". Upewnij się, że w tym samym katalogu nie jest **zaznaczone pole wyboru** **Umieść rozwiązanie i projekt** (vs 2019) lub pozycję **Utwórz katalog dla rozwiązania** jest **zaznaczone** (vs 2017).
 
 ## <a name="prepare-and-understand-the-data"></a>Przygotuj i poznanie danych
 
@@ -81,7 +81,7 @@ Konstruktor modelu akceptuje dane z bazy danych SQL Server lub pliku lokalnego w
     1. W oknie dialogowym **Wybierz dane** wybierz pozycję **plik bazy danych Microsoft SQL Server**.
     1. Usuń zaznaczenie pola wyboru **zawsze używaj tego zaznaczenia** i wybierz pozycję **Kontynuuj**.
     1. W oknie dialogowym **Właściwości połączenia** wybierz pozycję **Przeglądaj** i wybierz pobrany plik *RestaurantScores. mdf* .
-    1. Wybierz **OK**.
+    1. Wybierz **przycisk OK**.
 1. Wybierz pozycję **naruszenia** z listy rozwijanej **Nazwa tabeli** .
 1. Wybierz pozycję **RiskCategory** w **kolumnie do przewidywania (etykieta)** listy rozwijanej.
 1. Pozostaw domyślne zaznaczenia kolumn, **Inspekcja** i **ViolationDescription**, zaznaczone na liście rozwijanej **kolumny wejściowe (funkcje)** .
@@ -144,7 +144,7 @@ W wyniku procesu szkolenia tworzone są dwa projekty.
 
 Jeśli musisz odwoływać się do wygenerowanych projektów w późniejszym czasie w innym rozwiązaniu, możesz je znaleźć w katalogu `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`.
 
-Gratulacje! Pomyślnie skompilowano model uczenia maszynowego w celu kategoryzacji ryzyka naruszeń kondycji przy użyciu konstruktora modeli. Kod źródłowy dla tego samouczka można znaleźć w repozytorium usługi GitHub [/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) .
+Nabycia! Pomyślnie skompilowano model uczenia maszynowego w celu kategoryzacji ryzyka naruszeń kondycji przy użyciu konstruktora modeli. Kod źródłowy dla tego samouczka można znaleźć w repozytorium usługi GitHub [/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) .
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 

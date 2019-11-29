@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 561a628c60888a8d4f3c50c8413784e1ed210599
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e467a890e971e6c6f2c681ee503d7c7ead19a1e4
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035992"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552444"
 ---
 # <a name="if-c-reference"></a>#if (odwołanie w C#)
 
@@ -24,7 +24,7 @@ Gdy C# kompilator napotyka dyrektywę`#if`, po której nastąpi w końcu dyrekty
 #endif
 ```
 
-Operatorów [==](../operators/equality-operators.md#equality-operator-) (równość) i [! =](../operators/equality-operators.md#inequality-operator-) (nierówność) można użyć tylko do testowania [wartości true](../keywords/true-literal.md) lub [false](../keywords/false-literal.md). Prawda oznacza, że symbol jest zdefiniowany. Instrukcja `#if DEBUG` ma takie samo znaczenie jak `#if (DEBUG == true)`. Można użyć operatorów [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (i), [ &#124; ](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (lub), i [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (nie), aby sprawdzić, czy zdefiniowano wiele symboli. Można również grupować symbole i operatory za pomocą nawiasów.
+Operatorów [==](../operators/equality-operators.md#equality-operator-) (równość) i [! =](../operators/equality-operators.md#inequality-operator-) (nierówność) można użyć tylko do testowania wartości [bool](../builtin-types/bool.md) `true` lub `false`. Prawda oznacza, że symbol jest zdefiniowany. Instrukcja `#if DEBUG` ma takie samo znaczenie jak `#if (DEBUG == true)`. Można użyć operatorów [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (i), [ &#124; ](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (lub), i [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (nie), aby sprawdzić, czy zdefiniowano wiele symboli. Można również grupować symbole i operatory za pomocą nawiasów.
 
 ## <a name="remarks"></a>Uwagi
 

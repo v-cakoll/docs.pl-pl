@@ -8,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: c39602afbece4faaf6599a5c76f5746defffe03a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8cd5a54bead2790d8e6e4c8e4a5649352f12869d
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417644"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552411"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Porady: konwertowanie ciągu na liczbę (Przewodnik programowania w języku C#)
 
@@ -21,7 +21,7 @@ Można przekonwertować [ciąg](../../language-reference/builtin-types/reference
   
  Jeśli masz ciąg, jest nieco bardziej wydajny i nieskomplikowany, aby wywołać metodę `TryParse` (na przykład [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) lub metodę `Parse` (na przykład [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)).  Użycie metody <xref:System.Convert> jest bardziej przydatne w przypadku ogólnych obiektów, które implementują <xref:System.IConvertible>.  
   
- Możesz użyć metod `Parse` lub `TryParse` w typie liczbowym, który powinien być ciągiem zawierającym, na przykład typem <xref:System.Int32?displayProperty=nameWithType>.  Metoda <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> używa <xref:System.Int32.Parse%2A> wewnętrznie.  Metoda `Parse` zwraca przekonwertowaną liczbę; Metoda `TryParse` zwraca wartość <xref:System.Boolean>, która wskazuje, czy konwersja powiodła się, i zwraca przekonwertowaną liczbę w [parametrze`out`](../../language-reference/keywords/out.md). Jeśli ciąg jest w nieprawidłowym formacie, `Parse` zgłasza wyjątek, a `TryParse` zwraca [wartość false](../../language-reference/keywords/false-literal.md). Podczas wywoływania metody `Parse` należy zawsze używać obsługi wyjątków, aby przechwytywać <xref:System.FormatException> w przypadku niepowodzenia operacji analizy.  
+ Możesz użyć metod `Parse` lub `TryParse` w typie liczbowym, który powinien być ciągiem zawierającym, na przykład typem <xref:System.Int32?displayProperty=nameWithType>.  Metoda <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> używa <xref:System.Int32.Parse%2A> wewnętrznie.  Metoda `Parse` zwraca przekonwertowaną liczbę; Metoda `TryParse` zwraca wartość <xref:System.Boolean>, która wskazuje, czy konwersja powiodła się, i zwraca przekonwertowaną liczbę w [parametrze`out`](../../language-reference/keywords/out.md). Jeśli ciąg jest w nieprawidłowym formacie, `Parse` zgłasza wyjątek, a `TryParse` zwraca `false`. Podczas wywoływania metody `Parse` należy zawsze używać obsługi wyjątków, aby przechwytywać <xref:System.FormatException> w przypadku niepowodzenia operacji analizy.  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Wywoływanie metod Parse i TryParse
 

@@ -2,12 +2,12 @@
 title: Informacje o platformie .NET Core
 description: Dowiedz się więcej o programie .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4fe16475e18eb88e88fb33d30508f9ef5c9f2cd5
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416746"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552238"
 ---
 # <a name="about-net-core"></a>Informacje o platformie .NET Core
 
@@ -29,18 +29,18 @@ C#, Visual Basic i F# języki mogą służyć do pisania aplikacji i bibliotek d
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 - Tekst podwapna
 - Standard
- 
+
 Ta integracja jest dostępna w części przez współautorów projektów [OmniSharp](https://www.omnisharp.net/) i [Ionide](http://ionide.io) .
 
 ## <a name="apis"></a>interfejsy API
 
 Platforma .NET Core udostępnia interfejsy API dla wielu scenariuszy, a kilka z nich jest następujących:
 
-- Typy pierwotne, takie jak [bool](../csharp/language-reference/keywords/bool.md) i [int](../csharp/language-reference/builtin-types/integral-numeric-types.md).
+- Typy pierwotne, takie jak <xref:System.Boolean?displayProperty=nameWithType> i <xref:System.Int32?displayProperty=nameWithType>.
 - Kolekcje, takie jak <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> i <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
-- Typy narzędzi, takie jak <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> i <xref:System.IO.FileStream?displayProperty=nameWithType>.
-- Typy danych, takie jak <xref:System.Data.DataSet?displayProperty=nameWithType> i [nieogólnymi](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
-- Typy wysokiej wydajności, takie jak <xref:System.Numerics.Vector?displayProperty=nameWithType> i [potoków](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/).
+- Typy narzędzi, takie jak <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>i <xref:System.IO.FileStream?displayProperty=nameWithType>.
+- Typy danych, takie jak <xref:System.Data.DataSet?displayProperty=nameWithType>i [nieogólnymi](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
+- Typy wysokiej wydajności, takie jak <xref:System.Numerics.Vector?displayProperty=nameWithType> i [potoki](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/).
 
 Platforma .NET Core zapewnia zgodność z interfejsami API .NET Framework i mono, implementując specyfikację [.NET Standard](../standard/net-standard.md) .
 

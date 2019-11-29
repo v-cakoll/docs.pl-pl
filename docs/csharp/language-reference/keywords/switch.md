@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 012fa5b4d5f39b4dfa4d1c77bc3d6fbe181e78a6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6f0a2cfd5a6de9c8c05bc3daea1e242183ebf03e
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428487"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552337"
 ---
 # <a name="switch-c-reference"></a>przełącznik (C# odwołanie)
 
@@ -45,7 +45,7 @@ W C# 6 i wcześniejszych wyrażenia dopasowania musi być wyrażeniem zwracając
 
 - [znak](../builtin-types/char.md).
 - [ciąg](../builtin-types/reference-types.md).
-- wartość [logiczna](bool.md).
+- wartość [logiczna](../builtin-types/bool.md).
 - wartość [całkowita](../builtin-types/integral-numeric-types.md) , taka jak `int` lub `long`.
 - wartość [wyliczenia](enum.md) .
 
@@ -78,7 +78,7 @@ To wymaganie jest zwykle spełnione przez jawne opuszczenie sekcji Switch za pom
 
 [!code-csharp[switch#4](~/samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
 
-Wykonanie listy instrukcji w sekcji Switch z etykietą Case, która pasuje do wyrażenia Match rozpoczyna się od pierwszej instrukcji i przechodzi przez listę instrukcji, zwykle do momentu osiągnięcia instrukcji skoku, takiej jak `break`, `goto case`, `goto label`, `return`lub `throw`. W tym momencie kontrola jest przekazywana poza instrukcją `switch` lub do innej etykiety case. Instrukcja `goto`, jeśli jest używana, musi przekazywać kontrolę do stałej etykiety. To ograniczenie jest konieczne, ponieważ próba przetransferowania kontroli do etykiety niestałej może mieć niepożądane efekty uboczne, takie przeniesienie kontroli do niezamierzonej lokalizacji w kodzie lub utworzenie pętli nieskończonej.
+Wykonanie listy instrukcji w sekcji Switch z etykietą Case, która pasuje do wyrażenia Match rozpoczyna się od pierwszej instrukcji i przechodzi przez listę instrukcji, zwykle do momentu, aż do instrukcji skoku, takiej jak `break`, `goto case``goto label`, `return`lub `throw`, zostanie osiągnięty. W tym momencie kontrola jest przekazywana poza instrukcją `switch` lub do innej etykiety case. Instrukcja `goto`, jeśli jest używana, musi przekazywać kontrolę do stałej etykiety. To ograniczenie jest konieczne, ponieważ próba przetransferowania kontroli do etykiety niestałej może mieć niepożądane efekty uboczne, takie przeniesienie kontroli do niezamierzonej lokalizacji w kodzie lub utworzenie pętli nieskończonej.
 
 ## <a name="case-labels"></a>Etykiety przypadku
 
@@ -90,7 +90,7 @@ Ponieważ C# 6 obsługuje tylko wzorce stałe i nie zezwala na powtarzanie warto
 
 W C# 7,0, jednak ponieważ inne wzorce są obsługiwane, etykiety przypadków nie muszą definiować wzajemnie wykluczających się wartości, a wiele wzorców może pasować do wyrażenia Match. Ponieważ są wykonywane tylko instrukcje w pierwszej sekcji przełącznika, które zawiera pasujący wzorzec, kolejność, w której pojawiają się instrukcje `case`, jest teraz ważna. Jeśli C# program wykryje sekcję Switch, której instrukcją Case lub instrukcje są równoważne lub są podzbiorami poprzednich instrukcji, generuje błąd kompilatora, CS8120, "przypadek przełączania został już obsłużony przez poprzednią literę".
 
-Poniższy przykład ilustruje instrukcję `switch`, która używa różnych niewzajemnie wykluczających się wzorców. Jeśli przeniesiesz sekcję Switch `case 0:` tak, aby nie była już pierwszą sekcją w instrukcji `switch`, program C# generuje błąd kompilatora, ponieważ liczba całkowita, której wartością jest zero, jest podzbiorem wszystkich liczb całkowitych, które jest wzorcem zdefiniowanym przez instrukcję `case int val`.
+Poniższy przykład ilustruje instrukcję `switch`, która używa różnych niewzajemnie wykluczających się wzorców. Jeśli przeniesiesz sekcję Switch `case 0:` tak, aby nie była już pierwszą sekcją w instrukcji `switch`, program C# generuje błąd kompilatora, ponieważ liczba całkowita, której wartością jest zero, jest podzbiorem wszystkich liczb całkowitych, które jest wzorcem zdefiniowanym przez instrukcję `case int val` .
 
 [!code-csharp[switch#5](~/samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
 
@@ -120,7 +120,7 @@ Wzorzec stałej testuje, czy wyrażenie dopasowania jest równe określonej sta�
 
 gdzie *stała* jest wartością do przetestowania. *stała* może być dowolnym z następujących wyrażeń stałych:
 
-- Literał [bool](bool.md) , `true` lub `false`.
+- Literał [bool](../builtin-types/bool.md) : `true` lub `false`.
 - Dowolna stała [całkowita](../builtin-types/integral-numeric-types.md) , taka jak `int`, `long`lub `byte`.
 - Nazwa zadeklarowanej zmiennej `const`.
 - Stała wyliczenia.

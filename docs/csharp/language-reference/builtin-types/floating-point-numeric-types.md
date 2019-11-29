@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771903"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552278"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Zmiennoprzecinkowe typy liczbowe (C# odwołanie)
 
@@ -46,14 +46,14 @@ double a = 12.3;
 System.Double b = 12.3;
 ```
 
-Wartość domyślna każdego typu zmiennoprzecinkowego wynosi zero, `0`. Każdy z typów zmiennoprzecinkowych ma stałe `MinValue` i `MaxValue`, które zapewniają minimalną i maksymalną skończoną wartość tego typu. Typy `float` i `double` zawierają również stałe, które reprezentują wartości nieliczbowe i nieskończone. Na przykład typ `double` zawiera następujące stałe: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> i <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.
+Wartość domyślna każdego typu zmiennoprzecinkowego wynosi zero, `0`. Każdy z typów zmiennoprzecinkowych ma stałe `MinValue` i `MaxValue`, które zapewniają minimalną i maksymalną skończoną wartość tego typu. Typy `float` i `double` zawierają również stałe, które reprezentują wartości nieliczbowe i nieskończone. Na przykład typ `double` zapewnia następujące stałe: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>i <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.
 
-Ponieważ typ `decimal` ma większą precyzję i mniejszy zakres niż `float` i `double`, jest to odpowiednie dla obliczeń finansowych i pieniężnych.
+Ponieważ typ `decimal` ma większą precyzję i mniejszy zakres niż `float` i `double`, jest on odpowiedni dla obliczeń finansowych i pieniężnych.
 
 W wyrażeniu można mieszać typy [całkowite](integral-numeric-types.md) i typy zmiennoprzecinkowe. W takim przypadku typy całkowite są konwertowane na typy zmiennoprzecinkowe. Obliczanie wyrażenia jest wykonywane zgodnie z następującymi regułami:
 
-- Jeśli jeden z typów zmiennoprzecinkowych jest `double`, wyrażenie oblicza do `double` lub do wartości [logicznej](../keywords/bool.md) w porównaniach relacyjnych i równości.
-- Jeśli w wyrażeniu nie ma `double` typu, wyrażenie zwróci `float` lub do wartości [logicznej](../keywords/bool.md) w porównaniach relacyjnych i równości.
+- Jeśli jeden z typów zmiennoprzecinkowych jest `double`, wyrażenie oblicza do `double`lub do wartości [logicznej](bool.md) w porównaniach relacyjnych i równości.
+- Jeśli w wyrażeniu nie ma `double` typu, wyrażenie zwróci `float`lub do wartości [logicznej](bool.md) w porównaniach relacyjnych i równości.
 
 Wyrażenie zmiennoprzecinkowe może zawierać następujące zestawy wartości:
 

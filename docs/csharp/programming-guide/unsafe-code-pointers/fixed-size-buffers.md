@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 33af43a69587ffaadd7fcb42fa1d30ee9fc41989
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: deb057929871ffb50da466e3628c34f336ffd5ee
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429398"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552398"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Bufory o ustalonym rozmiarze (Przewodnik programowania w języku C#)
 
@@ -37,7 +37,7 @@ Rozmiar elementu 128 `char` Array to 256 bajtów. Bufory [znaków](../../languag
 
 W poprzednim przykładzie pokazano dostęp do pól `fixed` bez przypinania, które są dostępne C# od 7,3.
 
-Inna wspólna tablica o stałym rozmiarze jest tablicą [logiczną](../../language-reference/keywords/bool.md) . Elementy w tablicy `bool` są zawsze w rozmiarze jednego bajtu. Tablice `bool` nie są odpowiednie do tworzenia tablic bitowych lub buforów.
+Inna wspólna tablica o stałym rozmiarze jest tablicą [logiczną](../../language-reference/builtin-types/bool.md) . Elementy w tablicy `bool` są zawsze w rozmiarze jednego bajtu. Tablice `bool` nie są odpowiednie do tworzenia tablic bitowych lub buforów.
 
 > [!NOTE]
 > Z wyjątkiem pamięci utworzonej przy użyciu [stackalloc](../../language-reference/operators/stackalloc.md), C# kompilator i środowisko uruchomieniowe języka wspólnego (CLR) nie wykonują żadnych kontroli przepełnienia buforu zabezpieczeń. Podobnie jak w przypadku całego niebezpiecznego kodu, należy zachować ostrożność.

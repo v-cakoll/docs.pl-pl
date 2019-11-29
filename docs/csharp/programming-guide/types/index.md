@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 7d101e72a94ec1fecf44d4c883efb4f74e6d1d88
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 27560449daa18741a53e3affa33e08afa40d006a
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739200"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552495"
 ---
 # <a name="types-c-programming-guide"></a>Typy (Przewodnik programowania w języku C#)
 
@@ -39,12 +39,12 @@ Informacje przechowywane w typie mogą obejmować następujące elementy:
 
 - Rodzaje operacji, które są dozwolone.
 
-Kompilator używa informacji o typie, aby upewnić się, że wszystkie operacje wykonywane w kodzie są *bezpieczne*. Na przykład jeśli deklarujesz zmienną typu [int](../../language-reference/builtin-types/integral-numeric-types.md), kompilator pozwala używać zmiennej w operacjach dodawania i odejmowania. Jeśli spróbujesz wykonać te same operacje na zmiennej typu [bool](../../language-reference/keywords/bool.md), kompilator generuje błąd, jak pokazano w następującym przykładzie:
+Kompilator używa informacji o typie, aby upewnić się, że wszystkie operacje wykonywane w kodzie są *bezpieczne*. Na przykład jeśli deklarujesz zmienną typu [int](../../language-reference/builtin-types/integral-numeric-types.md), kompilator pozwala używać zmiennej w operacjach dodawania i odejmowania. Jeśli spróbujesz wykonać te same operacje na zmiennej typu [bool](../../language-reference/builtin-types/bool.md), kompilator generuje błąd, jak pokazano w następującym przykładzie:
 
 [!code-csharp[csProgGuideTypes#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#42)]
 
 > [!NOTE]
-> C i C++ deweloperzy, Zauważ, że C#w, [bool](../../language-reference/keywords/bool.md) nie jest konwertowany na [int](../../language-reference/builtin-types/integral-numeric-types.md).
+> C i C++ deweloperzy, Zauważ, że C#w, [bool](../../language-reference/builtin-types/bool.md) nie jest konwertowany na [int](../../language-reference/builtin-types/integral-numeric-types.md).
 
 Kompilator osadza informacje o typie pliku wykonywalnego jako metadane. Środowisko uruchomieniowe języka wspólnego (CLR) używa tych metadanych w czasie wykonywania, aby zapewnić bezpieczeństwo typów podczas przydzielania i odzyskania pamięci.
 
@@ -58,7 +58,7 @@ Typy parametrów metod i zwracanych wartości są określone w podpisie metody. 
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 
-Po zadeklarowaniu zmiennej nie można jej ponownie zadeklarować przy użyciu nowego typu i nie można przypisać do niej wartości, która nie jest zgodna z zadeklarowanym typem. Na przykład nie można zadeklarować elementu [int](../../language-reference/builtin-types/integral-numeric-types.md) , a następnie przypisać go do wartości logicznej [true](../../language-reference/keywords/true-literal.md). Jednak wartości mogą być konwertowane na inne typy, na przykład wtedy, gdy są przypisane do nowych zmiennych lub przekazane jako argumenty metody. *Konwersja typu* , która nie powoduje utraty danych, jest wykonywana automatycznie przez kompilator. Konwersja, która może spowodować utratę danych, wymaga *rzutowania* w kodzie źródłowym.
+Po zadeklarowaniu zmiennej nie można jej ponownie zadeklarować przy użyciu nowego typu i nie można przypisać do niej wartości, która nie jest zgodna z zadeklarowanym typem. Na przykład nie można zadeklarować [int](../../language-reference/builtin-types/integral-numeric-types.md) , a następnie przypisać mu wartości logicznej `true`. Jednak wartości mogą być konwertowane na inne typy, na przykład wtedy, gdy są przypisane do nowych zmiennych lub przekazane jako argumenty metody. *Konwersja typu* , która nie powoduje utraty danych, jest wykonywana automatycznie przez kompilator. Konwersja, która może spowodować utratę danych, wymaga *rzutowania* w kodzie źródłowym.
 
 Aby uzyskać więcej informacji, zobacz [rzutowanie i konwersje typów](./casting-and-type-conversions.md).
 
@@ -120,7 +120,7 @@ Druga kategoria typów wartości to [enum](../../language-reference/keywords/enu
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
-Stała `System.IO.FileMode.Create` ma wartość 2. Jednak nazwa jest znacznie bardziej zrozumiała dla ludzi odczytujących kod źródłowy. z tego powodu lepiej jest używać wyliczeń zamiast stałych liczb literałów. Aby uzyskać więcej informacji, zobacz <xref:System.IO.FileMode?displayProperty=nameWithType>.
+Stała `System.IO.FileMode.Create` ma wartość 2. Jednak nazwa jest znacznie bardziej zrozumiała dla ludzi odczytujących kod źródłowy. z tego powodu lepiej jest używać wyliczeń zamiast stałych liczb literałów. Aby uzyskać więcej informacji, zobacz temat <xref:System.IO.FileMode?displayProperty=nameWithType>.
 
 Wszystkie wyliczenia dziedziczą z <xref:System.Enum?displayProperty=nameWithType>, który dziedziczy z <xref:System.ValueType?displayProperty=nameWithType>. Wszystkie reguły, które mają zastosowanie do struktur, mają zastosowanie również do typów wyliczeniowych. Aby uzyskać więcej informacji na temat typów wyliczeniowych, zobacz [typy](../enumeration-types.md)wyliczeniowe.
 

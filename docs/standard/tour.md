@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: e0e35562e2351f9b985c74b60d8769577c3e3f56
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 274fea83c474d4b67aab919b604eda893d8204d7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283895"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552862"
 ---
 # <a name="tour-of-net"></a>Przewodnik po środowisku .NET
 
@@ -29,9 +29,9 @@ Platforma .NET obsługuje wiele języków programowania. Implementacje platformy
 
 Firma Microsoft aktywnie opracowuje i obsługuje trzy języki .NET C#: F#, i Visual Basic (VB). 
 
-* C# to prosta, wydajna, bezpieczne i zorientowane obiektowo, przy zachowaniu wyrazistości i elegancji stylów języka c. Każda osoba znająca język C i podobne Języki odnajduje kilka problemów w C#dostosowywaniu do programu. Zapoznaj się z [ C# przewodnikiem](../csharp/index.yml) , aby C#dowiedzieć się więcej.
+* C#jest proste, zaawansowane, bezpieczne dla typów i zorientowane obiektowo, zachowując wyrazistości i elegancji języka C-style. Każda osoba znająca język C i podobne Języki odnajduje kilka problemów w C#dostosowywaniu do programu. Zapoznaj się z [ C# przewodnikiem](../csharp/index.yml) , aby C#dowiedzieć się więcej.
 
-* F#to międzyplatformowy, funkcjonalny język programowania, który obsługuje także tradycyjne programowanie zorientowane obiektowo i bezwzględne. Zapoznaj się z [ F# przewodnikiem](../fsharp/index.md) , aby F#dowiedzieć się więcej.
+* F#to międzyplatformowy, funkcjonalny język programowania, który obsługuje także tradycyjne programowanie zorientowane obiektowo i bezwzględne. Zapoznaj się z [ F# przewodnikiem](../fsharp/index.yml) , aby F#dowiedzieć się więcej.
 
 * Visual Basic to prosty język, dzięki któremu można dowiedzieć się, jak tworzyć różne aplikacje działające na platformie .NET. W językach .NET składnia VB jest najbardziej zbliżona do zwykłego języka ludzkiego, często ułatwiająca tworzenie nowych oprogramowania przez inne osoby.
 
@@ -135,7 +135,7 @@ Poniższy przykład jest zmodyfikowaną wersją metody `ToString()` z klasy `Str
 
 [!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]
 
-## <a name="next-steps"></a>Kolejne kroki
+## <a name="next-steps"></a>Następne kroki
 
 Jeśli interesuje Cię Przewodnik po C# funkcjach, zapoznaj się [z C#przewodnikiem ](../csharp/tour-of-csharp/index.md).
 

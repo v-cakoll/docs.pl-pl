@@ -3,15 +3,15 @@ title: 'Samouczek: prognozowanie cen przy użyciu regresji z konstruktorem model
 description: W tym samouczku przedstawiono sposób tworzenia modelu regresji przy użyciu konstruktora modelu ML.NET do przewidywania cen, w oddziałach, w oddziałach, w oddziałach
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ed2afe307492b6d38e7e2f9d8ae02dafbb5ae1f4
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977358"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552928"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Samouczek: prognozowanie cen przy użyciu regresji z konstruktorem modelu
 
@@ -38,7 +38,7 @@ Listę wymagań wstępnych i instrukcji instalacji można znaleźć w [podręczn
 
 ## <a name="create-a-console-application"></a>Tworzenie aplikacji konsolowej
 
-1. Utwórz **aplikację konsolową .NET Core** o nazwie "TaxiFarePrediction".
+1. Utwórz  **C# aplikację konsolową .NET Core** o nazwie "TaxiFarePrediction". Upewnij się, że w tym samym katalogu nie jest **zaznaczone pole wyboru** **Umieść rozwiązanie i projekt** (vs 2019) lub pozycję **Utwórz katalog dla rozwiązania** jest **zaznaczone** (vs 2017).
 
 ## <a name="prepare-and-understand-the-data"></a>Przygotuj i poznanie danych
 
@@ -173,7 +173,7 @@ W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
 > - Oceń model
 > - Używanie modelu dla prognoz
 
-### <a name="additional-resources"></a>Dodatkowe zasoby
+### <a name="additional-resources"></a>Dodatkowe materiały
 
 Aby dowiedzieć się więcej na temat tematów wymienionych w tym samouczku, odwiedź następujące zasoby:
 

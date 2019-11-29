@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: ba3d5209571019f8ac38702939332fd953307202
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bfa9c24ef4cd2c418c91e00318aa47b889078d40
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447998"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552654"
 ---
 # <a name="framework-libraries"></a>Biblioteki platformy
 
@@ -32,7 +32,7 @@ Platforma .NET zawiera zestaw typów pierwotnych, które są używane (w różny
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md))-A 32-bitowy typ zmiennoprzecinkowy.
 * <xref:System.Decimal?displayProperty=nameWithType> ([Decimal](../csharp/language-reference/builtin-types/floating-point-numeric-types.md))-A 128-bitowy typ dziesiętny.
 * <xref:System.Byte?displayProperty=nameWithType> ([bajt](../csharp/language-reference/builtin-types/integral-numeric-types.md)) — 8-bitowa liczba całkowita bez znaku reprezentująca bajt pamięci.
-* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)) — typ Boolean reprezentujący `true` lub `false`.
+* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/builtin-types/bool.md)) — typ Boolean reprezentujący `true` lub `false`.
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/builtin-types/char.md)) — 16-bitowy typ liczbowy reprezentujący znak Unicode.
 * <xref:System.String?displayProperty=nameWithType> ([String](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) — reprezentuje serię znaków. Inna niż `char[]`, ale umożliwia indeksowanie poszczególnych `char` w `string`.
 

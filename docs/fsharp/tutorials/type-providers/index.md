@@ -1,44 +1,43 @@
 ---
 title: Dostawcy typów
-description: Dowiedz się, jak F# dostawcy typów jest składnikiem, który zawiera typy, właściwości i metody używane w programach.
+description: Dowiedz się F# , w jaki sposób dostawca typów jest składnikiem, który dostarcza typy, właściwości i metody do użycia w programach.
 ms.date: 04/02/2018
-ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7fa0ff6b5f2b0bc978df2988f22b2042acc22320
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645162"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552917"
 ---
 # <a name="type-providers"></a>Dostawcy typów
 
-Dostawca typów języka F# to składnik, który dostarcza typy, właściwości i metody używane w programie. Generowanie dostawców typów, co to są znane jako **podane typy**, generowane przez F# kompilatora i są oparte na zewnętrznego źródła danych.
+Dostawca typów języka F# to składnik, który dostarcza typy, właściwości i metody używane w programie. Dostawcy typów generują elementy znane jako **dostarczone typy**, które są generowane przez F# kompilator i są oparte na zewnętrznym źródle danych.
 
-Na przykład F# dostawcy typów dla programu SQL, można wygenerować typy reprezentujące tabele i kolumny w relacyjnej bazie danych. W rzeczywistości, co jest [SQLProvider](https://fsprojects.github.io/SQLProvider/) jest dostawcy typów.
+Na przykład dostawca F# typów dla SQL może generować typy reprezentujące tabele i kolumny w relacyjnej bazie danych. W rzeczywistości jest to typ dostawcy typu [SqlProvider](https://fsprojects.github.io/SQLProvider/) .
 
-Pod warunkiem, że typy są zależne od parametrów wejściowych do dostawcy typu. Takie dane wejściowe mogą być przykładowe źródło danych (na przykład plik schematu JSON) adres URL wskazujący bezpośrednio do usługi zewnętrznej lub parametry połączenia ze źródłem danych. Dostawca typów może również zagwarantować, że grupy typów są tylko rozszerzone na żądanie; oznacza to, że one rozszerzane, jeśli typy odwołuje się program. Umożliwia to bezpośrednią integrację na żądanie przestrzeni informacji o wielkiej skali, takich jak sieciowe rynki danych, w sposób silnie typizowany.
+Dostarczone typy są zależne od parametrów wejściowych dostawcy typów. Takie dane wejściowe mogą być przykładowym źródłem danych (takim jak plik schematu JSON), adres URL wskazujący bezpośrednio na usługę zewnętrzną lub parametry połączenia ze źródłem danych. Dostawca typów może również upewnić się, że grupy typów są rozwinięte na żądanie. oznacza to, że są one rozwinięte, jeśli do tych typów rzeczywiście odwołuje się program. Umożliwia to bezpośrednią integrację na żądanie przestrzeni informacji o wielkiej skali, takich jak sieciowe rynki danych, w sposób silnie typizowany.
 
-## <a name="generative-and-erased-type-providers"></a>Dostawcy typów generatywną i wymazane
+## <a name="generative-and-erased-type-providers"></a>Dostawcy typów odzyskania i wymazanych
 
-Dostawcy typów są dostępne w dwóch formach: Generatywną i wymazane.
+Dostawcy typów mają dwie formy: dostępne do odzyskania i wymazywania.
 
-Generatywną dostawców typów generuje typy, które mogą być zapisywane jako typów .NET do zestawu, w którym są tworzone. Uprawnienie pozwoli im do użycia z kodu w innych zestawach. Oznacza to, że wpisane reprezentujący źródło danych zazwyczaj musi być taki, który jest możliwe do reprezentowania z typami .NET.
+Dostawcy typów pozyskania tworzą typy, które mogą być zapisywane jako typy .NET w zestawie, w którym są produkowane. Dzięki temu mogą one być używane z kodu w innych zestawach. Oznacza to, że reprezentacja źródła danych musi być na ogół taka, która jest możliwe do reprezentowania z typami .NET.
 
-Wymazywanie dostawców typów generuje typy, które mogą być używane tylko w zestawie lub projektu, które są generowane na podstawie. Typy są efemeryczne; oznacza to nie są zapisywane do zestawu i nie mogą być używane przez kod w innych zestawach. Mogą one zawierać *opóźnione* członków, co umożliwia typy użycia dostarczane z obszaru potencjalnie nieskończonej informacji. Są one przydatne przy użyciu małego podzbioru źródła danych dużych i połączonych ze sobą.
+Wymazywanie dostawców typów produkuje typy, które mogą być używane tylko w zestawie lub projekcie, z których są generowane. Typy są tymczasowe; oznacza to, że nie są one zapisywane w zestawie i nie mogą być używane przez kod w innych zestawach. Mogą zawierać *opóźnione* składowe, co pozwala na korzystanie z dostarczonych typów z potencjalnie nieskończonej przestrzeni informacji. Są one przydatne do korzystania z małego podzestawu dużych i połączonych źródeł danych.
 
-## <a name="commonly-used-type-providers"></a>Najczęściej używane dostawców typów
+## <a name="commonly-used-type-providers"></a>Najczęściej używane dostawcy typów
 
-Następujące biblioteki powszechnie używane zawierają dostawców typów do różnych celów:
+Następujące powszechnie używane biblioteki zawierają dostawców typów do różnych celów:
 
-- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) obejmuje dostawców typów dla formatu JSON, XML, CSV i HTML dokumentu formatów i zasobów.
-- [SQLProvider](https://fsprojects.github.io/SQLProvider/) udostępnia silnie typizowane relacji baz danych, za pośrednictwem mapowanie obiektów i F# zapytania LINQ w odniesieniu do tych źródeł danych.
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) zestaw dostawców typów dla kompilacji zaewidencjonowanego osadzania T-SQL w F#.
-- [Dostawca usługi Azure Storage typu](https://fsprojects.github.io/AzureStorageTypeProvider/) zawiera typy używane w obiektach blob platformy Azure, tabele i kolejki, dzięki czemu możesz uzyskać dostęp do tych zasobów bez konieczności określania nazwy zasobów jako ciągi w całym programie.
-- [FSharp.Data.GraphQL](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html) zawiera **GraphQLProvider**, który zawiera typy, oparte na serwerze GraphQL określony przez adres URL.
+- [FSharp. Data](https://fsharp.github.io/FSharp.Data/) zawiera dostawców typów dla formatów dokumentów JSON, XML, CSV i HTML oraz zasobów.
+- [Sqldostarczający](https://fsprojects.github.io/SQLProvider/) zapewnia dostęp z jednoznacznie określonymi typami do baz danych z wykorzystaniem mapowania F# obiektów i zapytań LINQ względem tych źródeł danych.
+- [FSharp. Data. SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) ma zestaw dostawców typów dla zakontrolowanego osadzania kodu T-SQL w F#.
+- [Dostawca typów usługi Azure Storage](https://fsprojects.github.io/AzureStorageTypeProvider/) udostępnia typy dla obiektów blob, tabel i kolejek platformy Azure, dzięki czemu można uzyskiwać dostęp do tych zasobów bez konieczności określania nazw zasobów jako ciągów w całym programie.
+- [FSharp. Data. GraphQL](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html) zawiera **GraphQLProvider**, który dostarcza typy oparte na serwerze GraphQL określonym za pomocą adresu URL.
 
-W przypadku, gdy to konieczne, możesz [tworzenie własnych niestandardowych dostawców typów](creating-a-type-provider.md), lub odwołaj się do dostawców typów, które zostały utworzone przez innych użytkowników. Na przykład organizacja ma usługę danych dostarczającą dużą i rosnącą liczbę nazwanych zestawów danych, z których każdy ma własny stabilny schemat danych. Można utworzyć dostawcę typów, który odczytuje te schematy i przedstawia programiście najnowsze dostępne zestawy danych w sposób mocno typizowany.
+W razie potrzeby można [utworzyć własnych niestandardowych dostawców typów](creating-a-type-provider.md)lub dostawców typów referencyjnych, które zostały utworzone przez inne osoby. Na przykład organizacja ma usługę danych dostarczającą dużą i rosnącą liczbę nazwanych zestawów danych, z których każdy ma własny stabilny schemat danych. Można utworzyć dostawcę typów, który odczytuje te schematy i przedstawia programiście najnowsze dostępne zestawy danych w sposób mocno typizowany.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Samouczek: Tworzenie dostawcy typów](creating-a-type-provider.md)
 - [Dokumentacja języka F#](../../language-reference/index.md)
-- [Visual F#](../../index.md)

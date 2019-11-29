@@ -4,12 +4,12 @@ description: Informacje o typach podstawowych (liczbowych, ciągach i obiektach)
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 7a75ad5080cd2646070447cbc3dcc46b8c73dd65
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e1cb5b103459ff691bf6ed8f8ebc1fa3fd8487c3
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420712"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552316"
 ---
 # <a name="types-variables-and-values"></a>Typy, zmienne i wartości
 
@@ -29,12 +29,12 @@ Informacje przechowywane w typie mogą obejmować następujące elementy:
   
 - Rodzaje operacji, które są dozwolone.  
   
-Kompilator używa informacji o typie, aby upewnić się, że wszystkie operacje wykonywane w kodzie są *bezpieczne*. Na przykład jeśli deklarujesz zmienną typu [int](language-reference/builtin-types/integral-numeric-types.md), kompilator pozwala używać zmiennej w operacjach dodawania i odejmowania. Jeśli spróbujesz wykonać te same operacje na zmiennej typu [bool](language-reference/keywords/bool.md), kompilator generuje błąd, jak pokazano w następującym przykładzie:  
+Kompilator używa informacji o typie, aby upewnić się, że wszystkie operacje wykonywane w kodzie są *bezpieczne*. Na przykład jeśli deklarujesz zmienną typu [int](language-reference/builtin-types/integral-numeric-types.md), kompilator pozwala używać zmiennej w operacjach dodawania i odejmowania. Jeśli spróbujesz wykonać te same operacje na zmiennej typu [bool](language-reference/builtin-types/bool.md), kompilator generuje błąd, jak pokazano w następującym przykładzie:  
   
 [!code-csharp[Type Safety](../../samples/snippets/csharp/concepts/basic-types/type-safety.cs)]  
   
 > [!NOTE]  
-> C i C++ deweloperzy, Zauważ, że C#w, [bool](language-reference/keywords/bool.md) nie jest konwertowany na [int](language-reference/builtin-types/integral-numeric-types.md).  
+> C i C++ deweloperzy, Zauważ, że C#w, [bool](language-reference/builtin-types/bool.md) nie jest konwertowany na [int](language-reference/builtin-types/integral-numeric-types.md).  
   
 Kompilator osadza informacje o typie pliku wykonywalnego jako metadane. Środowisko uruchomieniowe języka wspólnego (CLR) używa tych metadanych w czasie wykonywania, aby zapewnić bezpieczeństwo typów podczas przydzielania i odzyskania pamięci.  
 
@@ -48,7 +48,7 @@ Typy parametrów metod i zwracanych wartości są określone w podpisie metody. 
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-Po zadeklarowaniu zmiennej nie można jej ponownie zadeklarować przy użyciu nowego typu i nie można przypisać do niej wartości, która nie jest zgodna z zadeklarowanym typem. Na przykład nie można zadeklarować elementu [int](language-reference/builtin-types/integral-numeric-types.md) , a następnie przypisać go do wartości logicznej [true](language-reference/keywords/true-literal.md). Jednak wartości mogą być konwertowane na inne typy, na przykład wtedy, gdy są przypisane do nowych zmiennych lub przekazane jako argumenty metody. *Konwersja typu* , która nie powoduje utraty danych, jest wykonywana automatycznie przez kompilator. Konwersja, która może spowodować utratę danych, wymaga *rzutowania* w kodzie źródłowym.
+Po zadeklarowaniu zmiennej nie można jej ponownie zadeklarować przy użyciu nowego typu i nie można przypisać do niej wartości, która nie jest zgodna z zadeklarowanym typem. Na przykład nie można zadeklarować [int](language-reference/builtin-types/integral-numeric-types.md) , a następnie przypisać mu wartości logicznej `true`. Jednak wartości mogą być konwertowane na inne typy, na przykład wtedy, gdy są przypisane do nowych zmiennych lub przekazane jako argumenty metody. *Konwersja typu* , która nie powoduje utraty danych, jest wykonywana automatycznie przez kompilator. Konwersja, która może spowodować utratę danych, wymaga *rzutowania* w kodzie źródłowym.
 
 Aby uzyskać więcej informacji, zobacz [rzutowanie i konwersje typów](programming-guide/types/casting-and-type-conversions.md).
 

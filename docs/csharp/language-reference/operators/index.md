@@ -9,16 +9,16 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039016"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552477"
 ---
 # <a name="c-operators-c-reference"></a>C#Operatory (C# odwołanie)
 
-C#udostępnia wiele operatorów obsługiwanych przez typy wbudowane. Na przykład [Operatory arytmetyczne](arithmetic-operators.md) wykonują operacje arytmetyczne przy użyciu liczbowych argumentów operacji, a [Operatory logiczne Boolean](boolean-logical-operators.md) wykonują operacje logiczne przy użyciu operandów [bool](../keywords/bool.md) . Niektóre operatory mogą być [przeciążone](operator-overloading.md). Dzięki przeciążeniu operatora można określić zachowanie operatora dla argumentów operacji typu zdefiniowanego przez użytkownika.
+C#udostępnia wiele operatorów obsługiwanych przez typy wbudowane. Na przykład [Operatory arytmetyczne](arithmetic-operators.md) wykonują operacje arytmetyczne przy użyciu liczbowych argumentów operacji, a [Operatory logiczne Boolean](boolean-logical-operators.md) wykonują operacje logiczne przy użyciu operandów [bool](../builtin-types/bool.md) . Niektóre operatory mogą być [przeciążone](operator-overloading.md). Dzięki przeciążeniu operatora można określić zachowanie operatora dla argumentów operacji typu zdefiniowanego przez użytkownika.
 
 W [wyrażeniu](../../programming-guide/statements-expressions-operators/expressions.md)pierwszeństwo operatorów i łączność określają kolejność wykonywania operacji. Możesz użyć nawiasów, aby zmienić kolejność oceny nałożona przez pierwszeństwo operatorów i łączność.
 
@@ -42,13 +42,13 @@ Poniższa tabela zawiera listę C# operatorów zaczynających się od najwyższe
 
 | Operatory | Kategoria lub nazwa |
 | --------- | ---------------- |
-| [x. y](member-access-operators.md#member-access-operator-), [x?. y](member-access-operators.md#null-conditional-operators--and-), [x? [ y]](member-access-operators.md#null-conditional-operators--and-), [f (x)](member-access-operators.md#invocation-operator-), [a&#91;&#93;](member-access-operators.md#indexer-operator-), [x + +](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [New](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [Checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [Delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x-> y](pointer-related-operators.md#pointer-member-access-operator--) | Głównym |
+| [x. y](member-access-operators.md#member-access-operator-), [x?. y](member-access-operators.md#null-conditional-operators--and-), [x? [ y]](member-access-operators.md#null-conditional-operators--and-), [f (x)](member-access-operators.md#invocation-operator-), [a&#91;&#93;](member-access-operators.md#indexer-operator-), [x + +](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [New](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [Checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [Delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x-> y](pointer-related-operators.md#pointer-member-access-operator--) | Podstawowa |
 | [+ x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [\!x](boolean-logical-operators.md#logical-negation-operator-), [~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [+ + x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [^ x](member-access-operators.md#index-from-end-operator-), [(t) x](type-testing-and-cast.md#cast-operator-), [await](await.md), [& x](pointer-related-operators.md#address-of-operator-), [* x](pointer-related-operators.md#pointer-indirection-operator-), [true i false](true-false-operators.md) | Jednostk |
 | [x.. t](member-access-operators.md#range-operator-) | Zakres |
 | [x * y](arithmetic-operators.md#multiplication-operator-), [x/y](arithmetic-operators.md#division-operator-), [x% y](arithmetic-operators.md#remainder-operator-) | Mnożenia|
 | [x + y](arithmetic-operators.md#addition-operator-), [x – y](arithmetic-operators.md#subtraction-operator--) | Dana |
-| [x \< \< y](bitwise-and-shift-operators.md#left-shift-operator-), [> x > y](bitwise-and-shift-operators.md#right-shift-operator-) | Nocn |
-| [x \< y](comparison-operators.md#less-than-operator-), [x > y](comparison-operators.md#greater-than-operator-), [x \< = y](comparison-operators.md#less-than-or-equal-operator-), [x > = y](comparison-operators.md#greater-than-or-equal-operator-), [is](type-testing-and-cast.md#is-operator), [as](type-testing-and-cast.md#as-operator) | Relacyjne i testy typu |
+| [x \<\< y](bitwise-and-shift-operators.md#left-shift-operator-), [> x > y](bitwise-and-shift-operators.md#right-shift-operator-) | Nocn |
+| [x \< y](comparison-operators.md#less-than-operator-), [x > y](comparison-operators.md#greater-than-operator-), [x \<= y](comparison-operators.md#less-than-or-equal-operator-), [x > = y](comparison-operators.md#greater-than-or-equal-operator-), [is](type-testing-and-cast.md#is-operator), [as](type-testing-and-cast.md#as-operator) | Relacyjne i testy typu |
 | [x = = y](equality-operators.md#equality-operator-), [x! = y](equality-operators.md#inequality-operator-) | Równość |
 | `x & y` | Koniunkcja logiczna logicznej [i](boolean-logical-operators.md#logical-and-operator-) [koniunkcji logicznej](bitwise-and-shift-operators.md#logical-and-operator-) |
 | `x ^ y` | Logiczna logiczna [XOR](boolean-logical-operators.md#logical-exclusive-or-operator-) lub [KONIUNKCJa logiczna XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) |
@@ -85,7 +85,7 @@ Niepowiązane z pierwszeństwem operatora i łączność, operandy w wyrażeniu 
 |`a / b + c * d`|a, b,/, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +,/, d, *|
 
-Zazwyczaj są oceniane wszystkie operandy operatora. Jednak niektóre operatory jednocześnie obliczają operandy. Oznacza to, że wartość operandu z lewej strony takiego operatora definiuje, czy należy ocenić inne operandy. Operatory te są operatorami logicznymi [i (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) i [(`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) , [Operatory łączenia wartości null `??` i `??=`](null-coalescing-operator.md), [Operatory warunkowe o wartości null `?.` i `?[]`](member-access-operators.md#null-conditional-operators--and-) [i operator warunkowy `?:`](conditional-operator.md). Aby uzyskać więcej informacji, zobacz opis każdego operatora.
+Zazwyczaj są oceniane wszystkie operandy operatora. Jednak niektóre operatory jednocześnie obliczają operandy. Oznacza to, że wartość operandu z lewej strony takiego operatora definiuje, czy należy ocenić inne operandy. Operatory te są operatorami logicznymi [i (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) i [(`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) , [Operatory łączenia wartości null `??` i `??=`](null-coalescing-operator.md), [Operatory warunkowe o wartości null `?.` i `?[]`](member-access-operators.md#null-conditional-operators--and-)oraz [operator warunkowy `?:`](conditional-operator.md). Aby uzyskać więcej informacji, zobacz opis każdego operatora.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 

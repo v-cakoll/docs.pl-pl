@@ -2,12 +2,12 @@
 title: Wprowadzenie F# do programu Visual Studio
 description: Dowiedz się, F# jak korzystać z programu Visual Studio.
 ms.date: 07/03/2018
-ms.openlocfilehash: e573af67a1fc00b0a340f8c73ab1ee0ed2b97810
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 80b4fc5b7631eace719832fe32003cad578ead27
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082697"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552820"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Wprowadzenie F# do programu Visual Studio
 
@@ -29,21 +29,21 @@ Jednym z najpopularniejszych projektów w programie Visual Studio jest Aplikacja
 
 ## <a name="writing-your-code"></a>Pisanie kodu
 
-Zacznijmy od zapisania najpierw kodu.  Upewnij się, że `Program.fs` plik jest otwarty, a następnie zastąp jego zawartość następującym:
+Zacznijmy od zapisania najpierw kodu.  Upewnij się, że plik `Program.fs` jest otwarty, a następnie zastąp jego zawartość następującym:
 
 [!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-W poprzednim przykładzie kodu zdefiniowano funkcję `square` , która przyjmuje `x` dane wejściowe i mnoży ją przez siebie.  Ponieważ F# używa [wnioskowania o typie](../language-reference/type-inference.md), `x` nie trzeba określać typu.  F# Kompilator rozumie typy, w których mnożenie jest prawidłowe i przypisuje typ `x` na podstawie sposobu wywoływania metody `square` .  Po umieszczeniu wskaźnika myszy `square`na stronie powinny zostać wyświetlone następujące elementy:
+W poprzednim przykładzie kodu funkcja `square` została zdefiniowana, która pobiera dane wejściowe o nazwie `x` i mnoży ją przez siebie.  Ponieważ F# używa [wnioskowania o typie](../language-reference/type-inference.md), nie trzeba określać typu `x`.  F# Kompilator rozumie typy, w których mnożenie jest prawidłowe, i przypisuje typ do `x` w zależności od tego, jak `square` jest wywoływana.  Po umieszczeniu wskaźnika myszy na `square`należy zobaczyć następujące elementy:
 
 ```fsharp
 val square: x:int -> int
 ```
 
-Jest to element znany jako podpis typu funkcji.  Można go odczytać w następujący sposób: "Square to funkcja, która przyjmuje liczbę całkowitą o nazwie x i tworzy liczbę całkowitą".  Należy zauważyć, że kompilator `square` nadał `int` teraz typ. jest to spowodowane tym, że mnożenie nie jest ogólne dla *wszystkich* typów, ale raczej jest ogólny w przypadku zamkniętego zestawu typów.  F# Kompilator jest wybierany `int` w tym momencie, ale dopasowuje podpis typu w przypadku wywołania `square` z `float`innym typem danych wejściowych, na przykład.
+Jest to element znany jako podpis typu funkcji.  Można go odczytać w następujący sposób: "kwadrat jest funkcją, która przyjmuje liczbę całkowitą o nazwie x i tworzy liczbę całkowitą".  Należy zauważyć, że kompilator udzielił `square` typu `int`. jest to spowodowane tym, że mnożenie nie jest ogólne dla *wszystkich* typów, ale raczej jest ogólny w przypadku zamkniętego zestawu typów.  F# Kompilator `int` wybrany w tym momencie, ale zmieni sygnaturę typu w przypadku wywołania `square` z innym typem danych wejściowych, takim jak `float`.
 
-Inna funkcja `main`,,, jest zdefiniowana `EntryPoint` z atrybutem, aby poinformować F# kompilator, że wykonanie programu powinno się uruchomić w tym miejscu.  Ta sama Konwencja jest zgodna z innymi [językami programowania w stylu C](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), gdzie argumenty wiersza polecenia mogą być przekazane do tej funkcji i zwracany jest kod liczby całkowitej (zazwyczaj `0`).
+Inna funkcja, `main`, jest zdefiniowana z atrybutem `EntryPoint`, aby poinformować F# kompilator, że wykonanie programu powinno się uruchomić w tym miejscu.  Ta sama Konwencja jest zgodna z innymi [językami programowania w stylu C](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), gdzie argumenty wiersza polecenia mogą być przekazane do tej funkcji i zwracany jest kod liczby całkowitej (zwykle `0`).
 
-Jest to funkcja, która wywołuje `square` funkcję z `12`argumentem.  Następnie F# `square` kompilator przypisuje typ do `int -> int` (czyli `int`funkcję, która przyjmuje `int` i tworzy).  Wywołanie `printfn` jest sformatowaną funkcją drukowania, która używa ciągu formatu, podobnego do języków programowania w stylu C, parametrów, które odpowiadają określonym w ciągu formatu, a następnie drukuje wynik i nowy wiersz.
+Jest to funkcja, która wywołuje funkcję `square` z argumentem `12`.  Następnie F# kompilator przypisuje typ `square`, które mają być `int -> int` (czyli funkcję, która pobiera `int` i tworzy `int`).  Wywołanie `printfn` jest sformatowaną funkcją drukowania, która używa ciągu formatu, podobnego do języków programowania w stylu C, parametrów, które odpowiadają określonym w ciągu formatu, a następnie drukuje wynik i nowy wiersz.
 
 ## <a name="running-your-code"></a>Uruchamianie kodu
 
@@ -55,11 +55,11 @@ W oknie konsoli programu Visual Studio należy teraz zobaczyć następujące ele
 12 squared is 144!
 ```
 
-Gratulacje!  Został utworzony pierwszy F# projekt w programie Visual Studio, a F# funkcja zapisała wyniki wywołania tej funkcji i uruchomi projekt, aby zobaczyć niektóre wyniki.
+Nabycia!  Został utworzony pierwszy F# projekt w programie Visual Studio, a F# funkcja zapisała wyniki wywołania tej funkcji i uruchomi projekt, aby zobaczyć niektóre wyniki.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Jeśli jeszcze tego nie zrobiono, zapoznaj się [ F#z przewodnikiem ](../tour.md), który obejmuje niektóre podstawowe funkcje F# języka.  Udostępnimy przegląd niektórych możliwości programu F#i udostępniamy dużo przykładów kodu, które można skopiować do programu Visual Studio i uruchomić.  Istnieją również pewne doskonałe zasoby zewnętrzne, których można użyć w [ F# przewodniku](../index.md).
+Jeśli jeszcze tego nie zrobiono, zapoznaj się [ F#z przewodnikiem ](../tour.md), który obejmuje niektóre podstawowe funkcje F# języka.  Udostępnimy przegląd niektórych możliwości programu F#i udostępniamy dużo przykładów kodu, które można skopiować do programu Visual Studio i uruchomić.  Więcej informacji na temat F# dokumentacji można znaleźć na [ F# stronie głównej witryny docs](../index.yml).
 
 ## <a name="see-also"></a>Zobacz także
 

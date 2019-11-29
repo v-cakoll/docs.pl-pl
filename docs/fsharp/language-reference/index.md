@@ -2,12 +2,12 @@
 title: Materiały referencyjne dotyczące języka F#
 description: Znajdź F# informacje o funkcjach języka z tego odwołania do tokenów języka, pojęć, typów, wyrażeń i tematów konstrukcyjnych obsługiwanych przez kompilator.
 ms.date: 05/16/2016
-ms.openlocfilehash: ac7e268b28d6bb654e4443d04695cb15fe756e9f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bd9894176fa736b9eed939d72972e676e2bd2671
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424989"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552905"
 ---
 # <a name="f-language-reference"></a>Materiały referencyjne dotyczące języka F#
 
@@ -110,7 +110,3 @@ W poniższej tabeli przedstawiono tematy opisujące specjalne konstrukcje obsłu
 |[Opcje kompilatora](compiler-options.md)|Opisuje opcje wiersza polecenia dla F# kompilatora.|
 |[Dyrektywy kompilatora](compiler-directives.md)|Opisuje dyrektywy procesora i dyrektywy kompilatora.|
 |[Identyfikatory wiersza źródłowego, pliku i ścieżki](source-line-file-path-identifiers.md)|Opisuje identyfikatory `__LINE__`, `__SOURCE_DIRECTORY__` i `__SOURCE_FILE__`, które są wbudowanymi wartościami, które umożliwiają dostęp do numeru wiersza źródłowego, katalogu i nazwy pliku w kodzie.|
-
-## <a name="see-also"></a>Zobacz także
-
-- [Visual F#](../index.md)

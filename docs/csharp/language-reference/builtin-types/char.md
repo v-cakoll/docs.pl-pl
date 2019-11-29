@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 3b2eec4f0e17aa329fe3865fb3ef453ee030c6a7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ab49b8cbddac2569d6063a5f312105bef3033e84
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74451165"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552302"
 ---
 # <a name="char-c-reference"></a>char (C# odwołanie)
 
@@ -21,6 +21,8 @@ Słowo kluczowe typu `char` jest aliasem dla typu struktury <xref:System.Char?di
 |Typ|Zakres|Rozmiar|Typ .NET|
 |----------|-----------|----------|-------------------------|
 |`char`|U + 0000 do U + FFFF|16 bitów|<xref:System.Char?displayProperty=nameWithType>|
+
+Wartość domyślna typu `char` to `\0`, to oznacza, U + 0000.
 
 Typ [String](reference-types.md#the-string-type) reprezentuje tekst jako sekwencję wartości `char`.
 

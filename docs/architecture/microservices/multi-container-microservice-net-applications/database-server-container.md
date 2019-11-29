@@ -2,12 +2,12 @@
 title: Korzystanie z serwera bazy danych uruchomionego jako kontener
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Korzystasz z serwera bazy danych działającego jako kontener? tylko na potrzeby programowania! Dowiedz się, dlaczego.
 ms.date: 10/02/2018
-ms.openlocfilehash: a508ba734525b24e2f3f00408e2c59c8c00f1898
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 371d622dc39681edb0b52e723faccbf611b7797c
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291306"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568429"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Korzystanie z serwera bazy danych uruchomionego jako kontener
 
@@ -162,7 +162,7 @@ Jednak po uruchomieniu Redis w środowisku produkcyjnym lepiej jest wyszukać ro
 
 Redis udostępnia obraz platformy Docker z Redis. Ten obraz jest dostępny z poziomu usługi Docker Hub pod tym adresem URL:
 
-<https://hub.docker.com/\_/redis/>
+<https://hub.docker.com/_/redis/>
 
 Można bezpośrednio uruchomić kontener Docker Redis, wykonując następujące polecenie Docker CLI w wierszu polecenia:
 
@@ -198,5 +198,5 @@ Na koniec w pliku Docker-Compose. override. yml, The koszyk. API mikrousługi dl
 Jak wspomniano wcześniej, nazwa "koszyka mikrousług" jest rozpoznawana przez system DNS w sieci wewnętrznej platformy Docker.
 
 >[!div class="step-by-step"]
->[Poprzedni](multi-container-applications-docker-compose.md)
->[Następny](integration-event-based-microservice-communications.md)
+>[Poprzednie](multi-container-applications-docker-compose.md)
+>[dalej](integration-event-based-microservice-communications.md)

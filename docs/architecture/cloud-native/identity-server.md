@@ -2,12 +2,12 @@
 title: IdentityServer dla natywnych aplikacji w chmurze
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: 3797214685d20109b2c5dc4440ae5fc64dfddce6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e96395766d1a4b63815c10c2c90e35a8f7f9159d
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087256"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568470"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>IdentityServer dla aplikacji natywnych w chmurze
 
@@ -65,7 +65,7 @@ public class Startup
                 options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
 
                 options.ClientId = "<insert here>";
-                options.ClientSecret = "<inser here>";
+                options.ClientSecret = "<insert here>";
             })
             .AddOpenIdConnect("demoidsrv", "IdentityServer", options =>
             {
@@ -105,5 +105,5 @@ Wiele aplikacji natywnych w chmurze korzysta z interfejsów API po stronie serwe
 - [Klient JavaScript OIDC](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html)
 
 >[!div class="step-by-step"]
->[Poprzedni](azure-active-directory.md)
->[Następny](security.md)
+>[Poprzednie](azure-active-directory.md)
+>[dalej](security.md)

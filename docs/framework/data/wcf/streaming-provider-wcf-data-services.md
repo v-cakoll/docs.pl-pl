@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: da575c65902ec8751c12482d0c8d0abd523623e4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975119"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568804"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Dostawca przesyłania strumieniowego (Usługi danych programu WCF)
 
@@ -25,7 +25,7 @@ Usługa danych może uwidaczniać dane binarne dużych obiektów. Te dane binarn
 
 - Wpis multimediów — jednostka, która ma odwołanie do powiązanego strumienia zasobów multimediów.
 
-Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]definiujesz strumień zasobów binarnych przez implementację dostawcy danych przesyłania strumieniowego. Implementacja dostawcy przesyłania strumieniowego dostarcza usługę danych za pomocą strumienia zasobów multimediów skojarzonego z konkretną jednostką jako obiektem <xref:System.IO.Stream>. Ta implementacja umożliwia usłudze danych akceptowanie i zwracanie zasobów multimedialnych za pośrednictwem protokołu HTTP jako strumieni danych binarnych określonego typu MIME.
+Za pomocą Usługi danych programu WCF definiujesz strumień zasobów binarnych przez implementację dostawcy danych przesyłania strumieniowego. Implementacja dostawcy przesyłania strumieniowego dostarcza usługę danych za pomocą strumienia zasobów multimediów skojarzonego z konkretną jednostką jako obiektem <xref:System.IO.Stream>. Ta implementacja umożliwia usłudze danych akceptowanie i zwracanie zasobów multimedialnych za pośrednictwem protokołu HTTP jako strumieni danych binarnych określonego typu MIME.
 
 Skonfigurowanie usługi danych do obsługi przesyłania strumieniowego danych binarnych wymaga wykonania następujących czynności:
 
@@ -79,7 +79,7 @@ Aby utworzyć usługę danych obsługującą strumienie danych binarnych, należ
 
 ## <a name="creating-the-streaming-data-service"></a>Tworzenie usługi danych przesyłanych strumieniowo
 
-Aby zapewnić środowisko uruchomieniowe [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] z dostępem do implementacji <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, tworzona usługa danych musi również implementować interfejs <xref:System.IServiceProvider>. Poniższy przykład pokazuje, jak zaimplementować metodę <xref:System.IServiceProvider.GetService%2A>, aby zwrócić wystąpienie klasy `PhotoServiceStreamProvider` implementującej <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
+Aby zapewnić środowisko uruchomieniowe Usługi danych programu WCF z dostępem do implementacji <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, tworzona usługa danych musi również implementować interfejs <xref:System.IServiceProvider>. Poniższy przykład pokazuje, jak zaimplementować metodę <xref:System.IServiceProvider.GetService%2A>, aby zwrócić wystąpienie klasy `PhotoServiceStreamProvider` implementującej <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
 
 [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
 [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]
@@ -99,7 +99,7 @@ Domyślnie program Internet Information Services (IIS) ogranicza także rozmiar 
 
 ## <a name="using-data-streams-in-a-client-application"></a>Używanie strumieni danych w aplikacji klienckiej
 
-Biblioteka klienta [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] umożliwia zarówno pobieranie, jak i aktualizowanie tych narażonych zasobów jako strumieni binarnych na kliencie. Aby uzyskać więcej informacji, zobacz [Praca z danymi binarnymi](working-with-binary-data-wcf-data-services.md).
+Biblioteka klienta Usługi danych programu WCF umożliwia zarówno pobieranie, jak i aktualizowanie tych narażonych zasobów jako strumieni binarnych na kliencie. Aby uzyskać więcej informacji, zobacz [Praca z danymi binarnymi](working-with-binary-data-wcf-data-services.md).
 
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>Zagadnienia dotyczące pracy z dostawcą przesyłania strumieniowego
 

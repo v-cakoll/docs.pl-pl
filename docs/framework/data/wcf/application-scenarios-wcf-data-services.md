@@ -5,16 +5,16 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 50e481dd67a56233fcbb3714c86d71dd7e5307e8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 38bba2e9f63ab6cce0ede1a82658b6a21f5d4a4b
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975420"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569395"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Scenariusze aplikacji (Usługi danych programu WCF)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje podstawowy zestaw scenariuszy na potrzeby ujawniania i wykorzystywania danych jako źródła protokołu Open Data Protocol (OData). Ten temat prowadzi do tematów związanych z tymi scenariuszami.
+Usługi danych programu WCF obsługuje podstawowy zestaw scenariuszy na potrzeby ujawniania i wykorzystywania danych jako źródła protokołu Open Data Protocol (OData). Ten temat prowadzi do tematów związanych z tymi scenariuszami.
 
 Uwidaczniaj dane relacyjne z bazy danych jako źródło danych OData.
 

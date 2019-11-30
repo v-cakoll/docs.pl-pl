@@ -9,15 +9,15 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 4792850221da69be79b064313792dcd7ad226788
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 41f1d1f0ca04dff0faa9eb070882f845ef4827d2
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975216"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568960"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Uwagi dotyczące LINQ (Usługi danych programu WCF)
-Ten temat zawiera informacje na temat sposobu tworzenia i wykonywania zapytań LINQ, gdy używasz klienta [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] i ograniczenia przy użyciu LINQ do wysyłania zapytań do usługi danych implementującej protokół Open Data Protocol (OData). Aby uzyskać więcej informacji o tworzeniu i wykonywaniu zapytań dotyczących usługi danych opartych na protokole OData, zobacz [wykonywanie zapytań do usługi danych](querying-the-data-service-wcf-data-services.md).  
+Ten temat zawiera informacje na temat sposobu tworzenia i wykonywania zapytań LINQ, gdy używasz klienta Usługi danych programu WCF i ograniczenia przy użyciu LINQ do wysyłania zapytań do usługi danych implementującej protokół Open Data Protocol (OData). Aby uzyskać więcej informacji o tworzeniu i wykonywaniu zapytań dotyczących usługi danych opartych na protokole OData, zobacz [wykonywanie zapytań do usługi danych](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Redagowanie zapytań LINQ  
  LINQ umożliwia tworzenie zapytań względem kolekcji obiektów, które implementują <xref:System.Collections.Generic.IEnumerable%601>. Zarówno okno dialogowe **Dodaj odwołanie do usługi** w programie Visual Studio, jak i Narzędzie DataSvcUtil. exe są używane do generowania reprezentacji usługi OData jako klasy kontenera jednostek, która dziedziczy po <xref:System.Data.Services.Client.DataServiceContext>, jak również obiektów, które reprezentują jednostki zwracane w źródłach danych. Narzędzia te generują również właściwości klasy kontenera jednostek dla kolekcji, które są udostępniane jako źródła danych przez usługę. Każda z tych właściwości klasy, która hermetyzuje usługę danych, zwraca <xref:System.Data.Services.Client.DataServiceQuery%601>. Ponieważ Klasa <xref:System.Data.Services.Client.DataServiceQuery%601> implementuje interfejs <xref:System.Linq.IQueryable%601> zdefiniowany przez LINQ, można utworzyć zapytanie LINQ względem kanałów ujawnianych przez usługę danych, które są tłumaczone przez bibliotekę kliencką na identyfikator URI żądania zapytania, który jest wysyłany do usługi danych podczas wykonywania.  
@@ -43,7 +43,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqexpressionspecific)]      
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqexpressionspecific)]    
   
- Klient [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] może przetłumaczyć oba rodzaje złożonych zapytań na identyfikator URI zapytania i można ją rozłożyć, dołączając metody zapytania do wyrażenia zapytania. Podczas redagowania zapytań LINQ przez dołączenie składni metody do wyrażenia zapytania lub <xref:System.Data.Services.Client.DataServiceQuery%601>, operacje są dodawane do identyfikatora URI zapytania w kolejności, w której metody są wywoływane. Jest to równoznaczne z wywołaniem metody <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> w celu dodania każdej opcji zapytania do identyfikatora URI zapytania.  
+ Klient Usługi danych programu WCF może przetłumaczyć oba rodzaje złożonych zapytań na identyfikator URI zapytania i można ją rozłożyć, dołączając metody zapytania do wyrażenia zapytania. Podczas redagowania zapytań LINQ przez dołączenie składni metody do wyrażenia zapytania lub <xref:System.Data.Services.Client.DataServiceQuery%601>, operacje są dodawane do identyfikatora URI zapytania w kolejności, w której metody są wywoływane. Jest to równoznaczne z wywołaniem metody <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> w celu dodania każdej opcji zapytania do identyfikatora URI zapytania.  
   
 ## <a name="executing-linq-queries"></a>Wykonywanie zapytań LINQ  
  Niektóre metody zapytania LINQ, takie jak <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> lub <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>, po dołączeniu do zapytania, powodują wykonanie zapytania. Zapytanie jest również wykonywane, gdy wyniki są wyliczane niejawnie, na przykład w pętli `foreach` lub po przypisaniu zapytania do kolekcji `List`. Aby uzyskać więcej informacji, zobacz [wykonywanie zapytań dotyczących usługi danych](querying-the-data-service-wcf-data-services.md).  
@@ -135,7 +135,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  Oba poprzednie przykłady są tłumaczone na identyfikator URI zapytania: `http://localhost:12345/northwind.svc/Orders()?$orderby=OrderDate desc&$skip=50&$top=25`.  
   
 <a name="expand"></a>   
-### <a name="expand"></a>Rozszerzone  
+### <a name="expand"></a>Rozwiń  
  Podczas wykonywania zapytania dotyczącego usługi danych OData można zażądać, aby jednostki powiązane z jednostką dodaną przez zapytanie były dołączone do zwróconego źródła danych. Metoda <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> jest wywoływana na <xref:System.Data.Services.Client.DataServiceQuery%601> dla zestawu jednostek przeznaczonego dla zapytania LINQ, z pokrewną nazwą zestawu jednostek podaną jako parametr `path`. Aby uzyskać więcej informacji, zobacz [ładowanie odroczonej zawartości](loading-deferred-content-wcf-data-services.md).  
   
  W poniższych przykładach pokazano równoważne sposoby używania metody <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> w kwerendzie:  

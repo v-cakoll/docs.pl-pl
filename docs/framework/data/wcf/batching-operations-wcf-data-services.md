@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
-ms.openlocfilehash: 573a5fc43022e95bea81f299f461e91396f0d464
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 48c0a5f1573f64396971e1265dbf467300a98406
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974855"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569356"
 ---
 # <a name="batching-operations-wcf-data-services"></a>Operacje wsadowe (Usługi danych programu WCF)
-Protokół Open Data Protocol (OData) obsługuje przetwarzanie wsadowe żądań do usługi opartej na protokole OData. Aby uzyskać więcej informacji, zobacz Usługa [OData: przetwarzanie wsadowe](https://go.microsoft.com/fwlink/?LinkId=186075). W [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]każda operacja używająca <xref:System.Data.Services.Client.DataServiceContext>, taka jak wykonywanie zapytania lub zapisanie zmian, powoduje wysłanie osobnego żądania do usługi danych. Aby zachować zakres logiczny dla zestawów operacji, można jawnie zdefiniować partie operacyjne. Dzięki temu wszystkie operacje w partii są wysyłane do usługi danych w ramach pojedynczego żądania HTTP, dzięki czemu serwer może przetwarzać operacje w sposób niepodzielny i zmniejsza liczbę rund do usługi danych.  
+Protokół Open Data Protocol (OData) obsługuje przetwarzanie wsadowe żądań do usługi opartej na protokole OData. Aby uzyskać więcej informacji, zobacz Usługa [OData: przetwarzanie wsadowe](https://go.microsoft.com/fwlink/?LinkId=186075). W Usługi danych programu WCF każda operacja używająca <xref:System.Data.Services.Client.DataServiceContext>, taka jak wykonywanie zapytania lub zapisanie zmian, powoduje wysłanie osobnego żądania do usługi danych. Aby zachować zakres logiczny dla zestawów operacji, można jawnie zdefiniować partie operacyjne. Dzięki temu wszystkie operacje w partii są wysyłane do usługi danych w ramach pojedynczego żądania HTTP, dzięki czemu serwer może przetwarzać operacje w sposób niepodzielny i zmniejsza liczbę rund do usługi danych.  
   
 ## <a name="batching-query-operations"></a>Wsadowe operacje zapytań  
  Aby wykonać wiele zapytań w pojedynczej partii, należy utworzyć każde zapytanie w partii jako oddzielne wystąpienie klasy <xref:System.Data.Services.Client.DataServiceRequest%601>. Po utworzeniu żądania zapytania w ten sposób, samo zapytanie jest zdefiniowane jako identyfikator URI i następuje po zasadach adresowania zasobów. Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do zasobów usługi danych](accessing-data-service-resources-wcf-data-services.md). Żądania zapytań wsadowych są wysyłane do usługi danych, gdy wywoływana jest metoda <xref:System.Data.Services.Client.DataServiceContext.ExecuteBatch%2A>, która zawiera obiekty żądania zapytania. Ta metoda zwraca obiekt <xref:System.Data.Services.Client.DataServiceResponse>, który jest kolekcją obiektów <xref:System.Data.Services.Client.QueryOperationResponse%601>, które reprezentują odpowiedzi na poszczególne zapytania w partii, z których każdy zawiera kolekcję obiektów zwracanych przez zapytanie lub informacje o błędzie. W przypadku niepowodzenia operacji pojedynczego zapytania w partii w obiekcie <xref:System.Data.Services.Client.QueryOperationResponse%601> są zwracane informacje o błędzie dla operacji, która się nie powiodła, a pozostałe operacje są nadal wykonywane. Aby uzyskać więcej informacji, zobacz [jak: wykonywanie zapytań w partii](how-to-execute-queries-in-a-batch-wcf-data-services.md).  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 17475cccf461371a909660bfe3f8db29bf1fa2fe
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 03fa40a895d322a8b5ad543f75424ef5b379672b
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975171"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568901"
 ---
 # <a name="query-projections-wcf-data-services"></a>Projekcje zapytań (Usługi danych programu WCF)
 
@@ -112,7 +112,7 @@ Podczas definiowania projekcji zapytania należy stosować następujące zagadni
 
 - Gdy projekcja zawiera właściwość nawigacji, powiązane obiekty są ładowane niejawnie bez konieczności wywoływania metody <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>. Metoda <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> nie jest obsługiwana w zapytaniach rzutowanych.
 
-- Zapytania dotyczące projekcji zapytań na kliencie są tłumaczone na użycie opcji zapytania `$select` w identyfikatorze URI żądania. Gdy zapytanie z projekcją jest wykonywane względem poprzedniej wersji [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], która nie obsługuje opcji zapytania `$select`, zwracany jest błąd. Może się to zdarzyć, gdy <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> <xref:System.Data.Services.DataServiceBehavior> dla usługi danych ma ustawioną wartość <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](data-service-versioning-wcf-data-services.md).
+- Zapytania dotyczące projekcji zapytań na kliencie są tłumaczone na użycie opcji zapytania `$select` w identyfikatorze URI żądania. Gdy zapytanie z projekcją jest wykonywane względem poprzedniej wersji Usługi danych programu WCF, która nie obsługuje opcji zapytania `$select`, zwracany jest błąd. Może się to zdarzyć, gdy <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> <xref:System.Data.Services.DataServiceBehavior> dla usługi danych ma ustawioną wartość <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](data-service-versioning-wcf-data-services.md).
 
 Aby uzyskać więcej informacji, zobacz [How to: Project Results Query](how-to-project-query-results-wcf-data-services.md).
 

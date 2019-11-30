@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: a64a09195101cd4b1ec3c6f990dd09d54466aea0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bc2338191bbf6922f56c833ebf115c5b21d92b00
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975413"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569314"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Operacje usługi wywołującej (Usługi danych programu WCF)
-Protokół Open Data Protocol (OData) definiuje operacje usługi dla usługi danych. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] umożliwia definiowanie takich operacji jako metod usługi danych. Podobnie jak w przypadku innych zasobów usługi danych, te operacje usług są rozwiązywane przy użyciu identyfikatorów URI. Operacja usługi może zwracać kolekcje typów jednostek, pojedyncze wystąpienia typu jednostki i typy pierwotne, takie jak liczba całkowita i ciąg. Operacja usługi może również zwracać `null` (`Nothing` w Visual Basic). Biblioteka klienta [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] może służyć do uzyskiwania dostępu do operacji usługi, które obsługują żądania HTTP GET. Te rodzaje operacji usługi są definiowane jako metody, do których zastosowano <xref:System.ServiceModel.Web.WebGetAttribute>. Aby uzyskać więcej informacji, zobacz [operacje usługi](service-operations-wcf-data-services.md).  
+Protokół Open Data Protocol (OData) definiuje operacje usługi dla usługi danych. Usługi danych programu WCF umożliwia definiowanie takich operacji jako metod usługi danych. Podobnie jak w przypadku innych zasobów usługi danych, te operacje usług są rozwiązywane przy użyciu identyfikatorów URI. Operacja usługi może zwracać kolekcje typów jednostek, pojedyncze wystąpienia typu jednostki i typy pierwotne, takie jak liczba całkowita i ciąg. Operacja usługi może również zwracać `null` (`Nothing` w Visual Basic). Biblioteka klienta Usługi danych programu WCF może służyć do uzyskiwania dostępu do operacji usługi, które obsługują żądania HTTP GET. Te rodzaje operacji usługi są definiowane jako metody, do których zastosowano <xref:System.ServiceModel.Web.WebGetAttribute>. Aby uzyskać więcej informacji, zobacz [operacje usługi](service-operations-wcf-data-services.md).  
   
- Operacje usługi są ujawniane w metadanych zwracanych przez usługę danych implementującą Protokół OData. W metadanych operacje usługi są reprezentowane jako elementy `FunctionImport`. Podczas generowania silnie wpisanej <xref:System.Data.Services.Client.DataServiceContext>narzędzia Dodaj odwołanie do usługi i DataSvcUtil. exe ignorują ten element. W związku z tym nie znajdziesz metody w kontekście, która może być używana do bezpośredniego wywoływania operacji usługi. Można jednak nadal używać klienta [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] do wywoływania operacji usługi na jeden z następujących sposobów:  
+ Operacje usługi są ujawniane w metadanych zwracanych przez usługę danych implementującą Protokół OData. W metadanych operacje usługi są reprezentowane jako elementy `FunctionImport`. Podczas generowania silnie wpisanej <xref:System.Data.Services.Client.DataServiceContext>narzędzia Dodaj odwołanie do usługi i DataSvcUtil. exe ignorują ten element. W związku z tym nie znajdziesz metody w kontekście, która może być używana do bezpośredniego wywoływania operacji usługi. Można jednak nadal używać klienta Usługi danych programu WCF do wywoływania operacji usługi na jeden z następujących sposobów:  
   
 - Wywołując metodę <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> na <xref:System.Data.Services.Client.DataServiceContext>, dostarczając identyfikator URI operacji usługi wraz z dowolnymi parametrami. Ta metoda służy do wywoływania dowolnej operacji pobierania usługi.  
   
 - Za pomocą metody <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> na <xref:System.Data.Services.Client.DataServiceContext>, aby utworzyć obiekt <xref:System.Data.Services.Client.DataServiceQuery%601>. Podczas wywoływania <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>nazwa operacji usługi jest przekazywana do parametru `entitySetName`. Ta metoda zwraca obiekt <xref:System.Data.Services.Client.DataServiceQuery%601>, który wywołuje operację usługi po wyliczeniu lub kiedy wywoływana jest metoda <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A>. Ta metoda służy do wywoływania operacji pobierania usługi, które zwracają kolekcję. Pojedynczy parametr można dostarczyć przy użyciu metody <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>. Obiekt <xref:System.Data.Services.Client.DataServiceQuery%601> zwracany przez tę metodę może być bardziej złożony względem dowolnego obiektu zapytania. Aby uzyskać więcej informacji, zobacz [wykonywanie zapytań dotyczących usługi danych](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="considerations-for-calling-service-operations"></a>Zagadnienia dotyczące operacji usługi wywołującej  
- W przypadku używania [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] klienta do wywoływania operacji usługi należy wziąć pod uwagę następujące kwestie.  
+ W przypadku używania Usługi danych programu WCF klienta do wywoływania operacji usługi należy wziąć pod uwagę następujące kwestie.  
   
 - W przypadku asynchronicznego uzyskiwania dostępu do usługi danych należy użyć odpowiednich <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A>asynchroniczne /<xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> metod <xref:System.Data.Services.Client.DataServiceContext> lub <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A>/<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>.  
   
-- Biblioteka klienta [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] nie może zmaterializowania wyników operacji usługi, która zwraca kolekcję typów pierwotnych.  
+- Biblioteka klienta Usługi danych programu WCF nie może zmaterializowania wyników operacji usługi, która zwraca kolekcję typów pierwotnych.  
   
-- Biblioteka klienta [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] nie obsługuje wywoływania operacji POST Service. Operacje usługi, które są wywoływane przez wpis HTTP, są definiowane przy użyciu <xref:System.ServiceModel.Web.WebInvokeAttribute> z parametrem `Method="POST"`. Aby wywołać operację usługi przy użyciu żądania HTTP POST, należy zamiast tego użyć <xref:System.Net.HttpWebRequest>.  
+- Biblioteka klienta Usługi danych programu WCF nie obsługuje wywoływania operacji POST Service. Operacje usługi, które są wywoływane przez wpis HTTP, są definiowane przy użyciu <xref:System.ServiceModel.Web.WebInvokeAttribute> z parametrem `Method="POST"`. Aby wywołać operację usługi przy użyciu żądania HTTP POST, należy zamiast tego użyć <xref:System.Net.HttpWebRequest>.  
   
 - Nie można użyć <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> do wywołania operacji pobierania usługi zwracającej pojedynczy wynik, dla jednostki lub typu pierwotnego lub wymagającej więcej niż jednego parametru wejściowego. Zamiast tego należy wywołać metodę <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>.  
   
@@ -37,7 +37,7 @@ Protokół Open Data Protocol (OData) definiuje operacje usługi dla usługi dan
 - W przypadku użycia <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> w celu wywołania operacji usługi Biblioteka klienta automatycznie wyprowadza znaki dostarczone do <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> przez wykonanie kodowania procentowo znaków zarezerwowanych, takich jak znak handlowego "i" (&) i ucieczki pojedynczych cudzysłowów w ciągach. Jednak w przypadku wywołania jednej z metod *wykonywania* w celu wywołania operacji usługi należy pamiętać, aby wykonać to anulowanie wartości ciągów dostarczonych przez użytkownika. Pojedyncze cudzysłowy w identyfikatorach URI są wyprowadzane jako pary pojedynczego cudzysłowu.  
   
 ## <a name="examples-of-calling-service-operations"></a>Przykłady operacji usługi wywołującej  
- Ta sekcja zawiera następujące przykłady sposobu wywoływania operacji usługi przy użyciu biblioteki klienta [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]:  
+ Ta sekcja zawiera następujące przykłady sposobu wywoływania operacji usługi przy użyciu biblioteki klienta Usługi danych programu WCF:  
   
 - [Wywoływanie metody Execute&lt;T&gt; w celu zwrócenia kolekcji jednostek](calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
   

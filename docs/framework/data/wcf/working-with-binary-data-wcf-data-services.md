@@ -8,22 +8,22 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: e088383adf2345f9a2698d0f8794765461cdbaad
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 9a09908a2a998d5da739b28aefda3d5aecdc08e0
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975022"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568737"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Praca z danymi binarnymi (Usługi danych programu WCF)
 
-Biblioteka klienta [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] umożliwia pobieranie i aktualizowanie danych binarnych za pomocą źródła danych Open Data Protocol (OData) w jeden z następujących sposobów:
+Biblioteka klienta Usługi danych programu WCF umożliwia pobieranie i aktualizowanie danych binarnych za pomocą źródła danych Open Data Protocol (OData) w jeden z następujących sposobów:
 
 - Jako właściwość typu pierwotnego jednostki. Jest to zalecana metoda pracy z małymi obiektami danych binarnych, które można łatwo załadować do pamięci. W tym przypadku Właściwość Binary jest właściwością jednostki uwidocznioną przez model danych, a usługa danych serializować dane binarne jako plik binarny z kodowaniem Base-64 w komunikacie odpowiedzi.
 
 - Jako oddzielny strumień zasobów binarnych. Jest to zalecana metoda do uzyskiwania dostępu do danych binarnych dużych obiektów (BLOB), które mogą reprezentować zdjęcia, wideo lub dowolnego innego typu binarne dane zakodowane.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implementuje przesyłanie strumieniowe danych binarnych przy użyciu protokołu HTTP zgodnie z definicją w protokole OData. W tym mechanizmie dane binarne są traktowane jako zasób multimedialny, który jest oddzielony od, ale związany z jednostką, która jest nazywana wpisem multimediów. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](streaming-provider-wcf-data-services.md).
+Usługi danych programu WCF implementuje przesyłanie strumieniowe danych binarnych przy użyciu protokołu HTTP zgodnie z definicją w protokole OData. W tym mechanizmie dane binarne są traktowane jako zasób multimedialny, który jest oddzielony od, ale związany z jednostką, która jest nazywana wpisem multimediów. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](streaming-provider-wcf-data-services.md).
 
 > [!TIP]
 > Aby zapoznać się z przykładem krok po kroku, jak utworzyć aplikację kliencką Windows Presentation Foundation (WPF), która pobiera pliki obrazów binarnych z usługi OData, która przechowuje zdjęcia, zobacz wpis [Data Services dostawcy przesyłania strumieniowego — część 2: uzyskiwanie dostępu do strumienia zasobów multimediów z klienta](https://go.microsoft.com/fwlink/?LinkId=201637)programu. Aby pobrać przykładowy kod dla oferty usługi przesyłania strumieniowego strumienia w blogu, zobacz [przykład przesyłania strumieniowego usługi danych zdjęć](https://go.microsoft.com/fwlink/?LinkId=198988) w witrynie MSDN Gallery.
@@ -34,11 +34,11 @@ Jednostka, która ma powiązany strumień zasobów multimediów, jest wskazywany
 
 [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]
 
-Pozostałe przykłady w tym temacie pokazują, jak uzyskać dostęp do strumienia zasobów multimediów i zmienić go. Aby zapoznać się z kompletnym przykładem użycia strumienia zasobów multimediów w .NET Framework aplikacji klienckiej przy użyciu biblioteki klienta [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], zobacz temat Wysyłanie [dostępu do strumienia zasobów multimediów z klienta](https://go.microsoft.com/fwlink/?LinkID=201637).
+Pozostałe przykłady w tym temacie pokazują, jak uzyskać dostęp do strumienia zasobów multimediów i zmienić go. Aby zapoznać się z kompletnym przykładem użycia strumienia zasobów multimediów w .NET Framework aplikacji klienckiej przy użyciu biblioteki klienta Usługi danych programu WCF, zobacz temat Wysyłanie [dostępu do strumienia zasobów multimediów z klienta](https://go.microsoft.com/fwlink/?LinkID=201637).
 
 ## <a name="accessing-the-binary-resource-stream"></a>Uzyskiwanie dostępu do strumienia zasobów binarnych
 
-Biblioteka klienta [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zapewnia metody uzyskiwania dostępu do strumieni zasobów binarnych z usługi danych opartych na protokole OData. Podczas pobierania zasobu multimedialnego można użyć identyfikatora URI zasobu multimedialnego lub uzyskać strumień binarny, który zawiera same dane zasobów multimedialnych. Możesz również przekazać dane zasobów multimedialnych jako strumień binarny.
+Biblioteka klienta Usługi danych programu WCF zapewnia metody uzyskiwania dostępu do strumieni zasobów binarnych z usługi danych opartych na protokole OData. Podczas pobierania zasobu multimedialnego można użyć identyfikatora URI zasobu multimedialnego lub uzyskać strumień binarny, który zawiera same dane zasobów multimedialnych. Możesz również przekazać dane zasobów multimedialnych jako strumień binarny.
 
 > [!TIP]
 > Aby zapoznać się z przykładem krok po kroku, jak utworzyć aplikację kliencką Windows Presentation Foundation (WPF), która pobiera pliki obrazów binarnych z usługi OData, która przechowuje zdjęcia, zobacz wpis [Data Services dostawcy przesyłania strumieniowego — część 2: uzyskiwanie dostępu do strumienia zasobów multimediów z klienta](https://go.microsoft.com/fwlink/?LinkId=201637)programu. Aby pobrać przykładowy kod dla oferty usługi przesyłania strumieniowego strumienia w blogu, zobacz [przykład przesyłania strumieniowego usługi danych zdjęć](https://go.microsoft.com/fwlink/?LinkId=198988) w witrynie MSDN Gallery.

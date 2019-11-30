@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 68b04ac59d1b73d6e66a5a7836ce1bfe30d9c681
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7a2b201e5690c4304e663e9429c54f377e05f556
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975192"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568909"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Obiekt materializację (Usługi danych programu WCF)
 
 W przypadku korzystania z okna dialogowego **Dodaj odwołanie do usługi** do korzystania z kanału informacyjnego protokołu OData (Open Data Protocol) w aplikacji klienckiej opartej na .NET Framework są generowane równoważne klasy danych dla każdego typu jednostki w modelu danych udostępnionym przez kanał informacyjny. Aby uzyskać więcej informacji, zobacz [generowanie biblioteki klienta usługi danych](generating-the-data-service-client-library-wcf-data-services.md). Dane jednostki, które są zwracane przez zapytanie, są uwzględniane w wystąpieniu jednej z wygenerowanych klas usługi danych klienta. Aby uzyskać informacje na temat opcji scalania i rozpoznawania tożsamości dla śledzonych obiektów, zobacz [zarządzanie kontekstem usługi danych](managing-the-data-service-context-wcf-data-services.md).
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] pozwala także definiować własne klasy usługi danych klienta zamiast używać klas danych generowanych przez narzędzie. Umożliwia to korzystanie z własnych klas danych, nazywanych również "zwykłymi klasami danych CLR" (POCO). W przypadku korzystania z tych typów niestandardowych klas danych należy odwzorować klasę danych na <xref:System.Data.Services.Common.DataServiceKeyAttribute> lub <xref:System.Data.Services.Common.DataServiceEntityAttribute> i upewnić się, że nazwy typów na klientach są zgodne z nazwami typów w modelu danych usługi danych.
+Usługi danych programu WCF pozwala także definiować własne klasy usługi danych klienta zamiast używać klas danych generowanych przez narzędzie. Umożliwia to korzystanie z własnych klas danych, nazywanych również "zwykłymi klasami danych CLR" (POCO). W przypadku korzystania z tych typów niestandardowych klas danych należy odwzorować klasę danych na <xref:System.Data.Services.Common.DataServiceKeyAttribute> lub <xref:System.Data.Services.Common.DataServiceEntityAttribute> i upewnić się, że nazwy typów na klientach są zgodne z nazwami typów w modelu danych usługi danych.
 
 Gdy biblioteka otrzyma komunikat odpowiedzi na zapytanie, materializuje zwrócone dane ze strumieniowego źródła danych OData do wystąpień klas usługi danych klienta, które są typu zapytania. Ogólny proces materializacji tych obiektów jest następujący:
 

@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 ms.assetid: 834614df-1427-4839-b0be-90f68e5afffd
-ms.openlocfilehash: 820cb4aa39b49d63cf1acc31e6eb5aa56fd1ba03
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9bc1cef1f76e6e55e9cd5ed318741f8913abbaab
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790993"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569277"
 ---
 # <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a>Instrukcje: Tworzenie asynchronicznej aplikacji struktury prezentacji systemu Windows (Usługi danych programu WCF)
-Za [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]pomocą programu można powiązać dane uzyskane z usługi danych z elementem interfejsu użytkownika aplikacji Windows Presentation Framework (WPF). Aby uzyskać więcej informacji, zobacz [Powiązywanie danych z kontrolkami](binding-data-to-controls-wcf-data-services.md). Można również wykonywać operacje na usłudze danych w sposób asynchroniczny, co umożliwia aplikacji dalsze reagowanie podczas oczekiwania na odpowiedź na żądanie usługi danych. Aplikacje dla programu Silverlight są wymagane do asynchronicznego uzyskiwania dostępu do usługi danych. Aby uzyskać więcej informacji, zobacz [operacje asynchroniczne](asynchronous-operations-wcf-data-services.md).  
+Za pomocą Usługi danych programu WCF można powiązać dane uzyskane z usługi danych z elementem interfejsu użytkownika aplikacji Windows Presentation Framework (WPF). Aby uzyskać więcej informacji, zobacz [Powiązywanie danych z kontrolkami](binding-data-to-controls-wcf-data-services.md). Można również wykonywać operacje na usłudze danych w sposób asynchroniczny, co umożliwia aplikacji dalsze reagowanie podczas oczekiwania na odpowiedź na żądanie usługi danych. Aplikacje dla programu Silverlight są wymagane do asynchronicznego uzyskiwania dostępu do usługi danych. Aby uzyskać więcej informacji, zobacz [operacje asynchroniczne](asynchronous-operations-wcf-data-services.md).  
   
  W tym temacie pokazano, jak w sposób asynchroniczny uzyskać dostęp do usługi danych i powiązać wyniki z elementami aplikacji WPF. Przykłady w tym temacie wykorzystują przykładową usługę danych Northwind i automatycznie wygenerowaną klasę usługi danych klienta. Ta usługa i klasy danych klienta są tworzone po zakończeniu [usługi danych programu WCF szybkiego startu](quickstart-wcf-data-services.md).  
   

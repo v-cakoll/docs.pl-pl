@@ -2,16 +2,24 @@
 title: Istotne zmiany kategorii — .NET Core
 description: Dowiedz się więcej na temat sposobu kategoryzowania istotnych zmian w programie .NET Core.
 ms.date: 06/10/2019
-ms.openlocfilehash: 68bc51b6662de070ef901b73fb75ff3aced95726
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739364"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567927"
 ---
 # <a name="breaking-change-categories"></a>Kategorie zmian powodujących niezgodność
 
-*Zgodność* odnosi się do możliwości kompilowania lub wykonywania kodu w wersji implementacji platformy .NET innej niż ta, z którą pierwotnie opracowano kod. Konkretna zmiana może mieć wpływ na zgodność na sześć różnych sposobów. [Poszczególne rodzaje zmian, które są brane pod uwagę podczas oceny zgodności](index.md) , znajdują się w pierwszych pięciu kategoriach.
+*Zgodność* odnosi się do możliwości kompilowania lub wykonywania kodu w wersji implementacji platformy .NET innej niż ta, z którą pierwotnie opracowano kod. Konkretna zmiana może mieć wpływ na zgodność na sześć różnych sposobów. [Poszczególne rodzaje zmian](index.md) , które są brane pod uwagę podczas oceny zgodności, znajdują się w następujących kategoriach:
+
+- [zmiana zachowania](#behavioral-change)
+- [zgodność binarna](#binary-compatibility)
+- [zgodność ze źródłem](#source-compatibility)
+- [zgodność czasu projektowania](#design-time-compatibility)
+- [zgodność z poprzednimi wersjami](#backwards-compatibility)
+
+[Zgodność do przodu](#forward-compatibility) nie jest celem platformy .NET Core.
 
 ## <a name="behavioral-change"></a>Zmiana zachowania
 

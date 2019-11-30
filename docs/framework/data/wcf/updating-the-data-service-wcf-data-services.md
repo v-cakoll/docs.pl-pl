@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 02bcb8f12cd7f230d60c3b3c58174a54405ff955
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 060cdab4f486782e6ad60511fadad95a41255dec
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975110"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568825"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Aktualizowanie usługi danych (Usługi danych programu WCF)
-W przypadku korzystania z biblioteki klienta [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] do korzystania z kanału informacyjnego protokołu OData (Open Data Protocol), biblioteka tłumaczy wpisy w strumieniu na wystąpienia klas usługi danych klienta. Te klasy usługi danych są śledzone przy użyciu <xref:System.Data.Services.Client.DataServiceContext>, do którego należy <xref:System.Data.Services.Client.DataServiceQuery%601>. Klient śledzi zmiany w jednostkach, które są zgłaszane przy użyciu metod w <xref:System.Data.Services.Client.DataServiceContext>. Te metody umożliwiają klientowi śledzenie dodanych i usuniętych jednostek, a także zmiany wartości właściwości lub relacje między wystąpieniami jednostek. Te śledzone zmiany są wysyłane z powrotem do usługi danych jako operacje oparte na interfejsie REST po wywołaniu metody <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
+W przypadku korzystania z biblioteki klienta Usługi danych programu WCF do korzystania z kanału informacyjnego protokołu OData (Open Data Protocol), biblioteka tłumaczy wpisy w strumieniu na wystąpienia klas usługi danych klienta. Te klasy usługi danych są śledzone przy użyciu <xref:System.Data.Services.Client.DataServiceContext>, do którego należy <xref:System.Data.Services.Client.DataServiceQuery%601>. Klient śledzi zmiany w jednostkach, które są zgłaszane przy użyciu metod w <xref:System.Data.Services.Client.DataServiceContext>. Te metody umożliwiają klientowi śledzenie dodanych i usuniętych jednostek, a także zmiany wartości właściwości lub relacje między wystąpieniami jednostek. Te śledzone zmiany są wysyłane z powrotem do usługi danych jako operacje oparte na interfejsie REST po wywołaniu metody <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
   
 > [!NOTE]
 > W przypadku używania wystąpienia <xref:System.Data.Services.Client.DataServiceCollection%601> w celu powiązania danych z kontrolkami, zmiany wprowadzone do danych w formancie powiązanym są automatycznie zgłaszane do <xref:System.Data.Services.Client.DataServiceContext>. Aby uzyskać więcej informacji, zobacz [Powiązywanie danych z kontrolkami](binding-data-to-controls-wcf-data-services.md).  
@@ -67,7 +67,7 @@ W przypadku korzystania z biblioteki klienta [!INCLUDE[ssAstoria](../../../../in
 ## <a name="creating-and-modifying-relationship-links"></a>Tworzenie i modyfikowanie linków relacji  
  Po dodaniu nowej jednostki przy użyciu metody <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> lub odpowiedniej metody *AddTo* klasy <xref:System.Data.Services.Client.DataServiceContext>, która generuje okno dialogowe **Dodaj odwołanie do usługi** , wszelkie relacje między nową jednostką i powiązanymi jednostkami nie są definiowane automatycznie.  
   
- Można tworzyć i zmieniać relacje między wystąpieniami jednostek, a ich Biblioteka kliencka odzwierciedla te zmiany w usłudze danych. Relacje między jednostkami są zdefiniowane jako skojarzenia w modelu, a <xref:System.Data.Services.Client.DataServiceContext> śledzi każdą relację jako obiekt łącza w kontekście. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] udostępnia następujące metody klasy <xref:System.Data.Services.Client.DataServiceContext> do tworzenia, modyfikowania i usuwania tych linków:  
+ Można tworzyć i zmieniać relacje między wystąpieniami jednostek, a ich Biblioteka kliencka odzwierciedla te zmiany w usłudze danych. Relacje między jednostkami są zdefiniowane jako skojarzenia w modelu, a <xref:System.Data.Services.Client.DataServiceContext> śledzi każdą relację jako obiekt łącza w kontekście. Usługi danych programu WCF udostępnia następujące metody klasy <xref:System.Data.Services.Client.DataServiceContext> do tworzenia, modyfikowania i usuwania tych linków:  
   
 |Metoda|Opis|  
 |------------|-----------------|  

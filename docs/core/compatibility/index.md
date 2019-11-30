@@ -1,15 +1,15 @@
 ---
-title: Oszacowanie istotnych zmian — .NET Core
-description: Dowiedz się więcej na temat sposobu, w jaki platforma .NET Core próbuje zachować zgodność dla deweloperów w różnych wersjach programu .NET.
+title: Typy istotnych zmian — .NET Core
+description: Dowiedz się, jak platforma .NET Core próbuje zachować zgodność dla deweloperów w różnych wersjach programu .NET i jakiego rodzaju zmiana jest traktowana jako istotna zmiana.
 ms.date: 06/10/2019
-ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5624a35a0d71224faf9adc5df2b02a529e650314
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973647"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567719"
 ---
-# <a name="evaluate-breaking-changes-in-net-core"></a>Oszacowanie istotnych zmian w programie .NET Core
+# <a name="changes-that-affect-compatibility"></a>Zmiany wpływające na zgodność
 
 W całej historii środowisko .NET podjęło próbę utrzymania wysokiego poziomu zgodności z wersji do wersji i w różnych wersjach platformy .NET. Jest to nadal prawdziwe dla platformy .NET Core. Mimo że platforma .NET Core może być traktowana jako nowa technologia, która jest niezależna od .NET Framework, dwa główne czynniki ograniczają możliwość rozbieżności programu .NET Core od .NET Framework:
 
@@ -19,7 +19,7 @@ W całej historii środowisko .NET podjęło próbę utrzymania wysokiego poziom
 
 Wraz ze zgodnością w ramach implementacji platformy .NET deweloperzy oczekują wysokiego poziomu zgodności między wersjami programu .NET Core. W szczególności kod zapisany dla starszej wersji programu .NET Core powinien działać bezproblemowo na nowszej wersji platformy .NET Core. W rzeczywistości wielu deweloperów oczekuje, że nowe interfejsy API znajdujące się w nowo wydanej wersji platformy .NET Core powinny również być zgodne z wersjami wstępnymi, w których zostały wprowadzone te interfejsy API.
 
-W tym artykule przedstawiono kategorie zmian zgodności (lub istotne zmiany) oraz sposób, w jaki zespół .NET oceni zmiany w każdej z tych kategorii. Zrozumienie, w jaki sposób zespół .NET poddaje potencjalne istotne zmiany, jest szczególnie przydatny dla deweloperów, którzy otwierają żądania ściągnięcia w repozytorium GitHub [/corefx](https://github.com/dotnet/corefx) , które modyfikują zachowanie istniejących interfejsów API.
+W tym artykule przedstawiono kategorie zmian zgodności (lub istotne zmiany) oraz sposób, w jaki zespół .NET oceni zmiany w każdej z tych kategorii. Zrozumienie, w jaki sposób zespół .NET zbliża się do możliwych zmian powodujących istotne zmiany, jest szczególnie przydatny dla deweloperów, którzy otwierają żądania ściągnięcia w repozytorium GitHub [/corefx](https://github.com/dotnet/corefx) , które modyfikują zachowanie istniejących interfejsów API.
 
 > [!NOTE]
 > Aby zapoznać się z definicją kategorii zgodności, takich jak zgodność binarna i zgodność z poprzednimi wersjami, zobacz artykuł dotyczący [zmiany kategorii](categories.md).
@@ -31,7 +31,7 @@ W poniższych sekcjach opisano kategorie zmian wprowadzonych w interfejsach API 
 
 ## <a name="modifications-to-the-public-contract"></a>Modyfikacje kontraktu publicznego
 
-Zmiany w tej kategorii *modyfikują* publiczną powierzchnię typu. Większość zmian w tej kategorii jest niedozwolona, ponieważ naruszają *zgodność z poprzednimi* wersjami (zdolność aplikacji, która została opracowana przy użyciu poprzedniej wersji interfejsu API do wykonania bez ponownej kompilacji w nowszej wersji).
+Zmiany w tej kategorii modyfikują publiczną powierzchnię typu. Większość zmian w tej kategorii jest niedozwolona, ponieważ naruszają *zgodność z poprzednimi* wersjami (zdolność aplikacji, która została opracowana przy użyciu poprzedniej wersji interfejsu API do wykonania bez ponownej kompilacji w nowszej wersji).
 
 ### <a name="types"></a>Types
 
@@ -260,7 +260,7 @@ Zmiany w tej kategorii *modyfikują* publiczną powierzchnię typu. Większość
 
 - **❌ usunąć wyjątek w każdym innym przypadku niewymienionym powyżej**
 
-### <a name="attributes"></a>Atrybuty
+### <a name="attributes"></a>{1&gt;{2&gt;Atrybuty&lt;2}&lt;1}
 
 - **✔️ zmienić wartości atrybutu, który *nie* jest zauważalny**
 

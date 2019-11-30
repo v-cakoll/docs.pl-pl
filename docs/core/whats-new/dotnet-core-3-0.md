@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 9cb2568aa36af9ced0525660962966375d69e35b
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 8c2d586a444412abd67198ad7f295e81cb3101fb
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140679"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567333"
 ---
 # <a name="whats-new-in-net-core-30"></a>Co nowego w programie .NET Core 3.0
 
@@ -74,7 +74,7 @@ Aby opublikować plik wykonywalny pojedynczego pliku, ustaw `PublishSingleFile` 
 </PropertyGroup>
 ```
 
-—lub—
+lub
 
 ```dotnetcli
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
@@ -520,4 +520,4 @@ W wielu przypadkach podczas tworzenia aplikacji chcesz użyć nieszyfrowanego po
 ## <a name="next-steps"></a>Następne kroki
 
 - [Zapoznaj się z istotnymi zmianami między programem .NET Core 2,2 i 3,0.](../compatibility/2.2-3.0.md)
-- [Zapoznaj się z istotnymi zmianami między .NET Framework i .NET Core 3,0.](../compatibility/framework-core.md)
+- [Zapoznaj się z istotnymi zmianami między .NET Framework i .NET Core 3,0 dla aplikacji Windows Forms.](../porting/winforms-breaking-changes.md)

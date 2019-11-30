@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: cf6877dd67ad9e17a43be5eafb84a2ecf21d7190
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7eea23ba3dc5e9cc327d9cdfba10c72af7525c30
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975430"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569402"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Uzyskiwanie dostępu do zasobów usługi danych (Usługi danych programu WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje protokół Open Data Protocol (OData), aby udostępnić dane jako źródło danych z zasobami, które są adresowane przez identyfikatory URI. Te zasoby są reprezentowane zgodnie z konwencjami relacji jednostek [Entity Data Model](../adonet/entity-data-model.md). W tym modelu jednostki reprezentują jednostki operacyjne danych, które są typami danych w domenie aplikacji, takie jak klienci, zamówienia, elementy i produkty. Dostęp do danych jednostki jest uzyskiwany i zmieniany przy użyciu semantyki przenoszonego transferu Stanów (REST), w tym standardowych czasowników HTTP GET, PUT, POST i DELETE.  
+Usługi danych programu WCF obsługuje protokół Open Data Protocol (OData), aby udostępnić dane jako źródło danych z zasobami, które są adresowane przez identyfikatory URI. Te zasoby są reprezentowane zgodnie z konwencjami relacji jednostek [Entity Data Model](../adonet/entity-data-model.md). W tym modelu jednostki reprezentują jednostki operacyjne danych, które są typami danych w domenie aplikacji, takie jak klienci, zamówienia, elementy i produkty. Dostęp do danych jednostki jest uzyskiwany i zmieniany przy użyciu semantyki przenoszonego transferu Stanów (REST), w tym standardowych czasowników HTTP GET, PUT, POST i DELETE.  
   
 ## <a name="addressing-resources"></a>Adresowanie zasobów  
  W protokole OData wszystkie dane udostępniane przez model danych są rozwiązywane przy użyciu identyfikatora URI. Na przykład następujący identyfikator URI zwraca źródło, które jest zestawem jednostek Customers, który zawiera wpisy dla wszystkich wystąpień typu jednostki klienta:  
@@ -56,7 +56,7 @@ ms.locfileid: "73975430"
   
  Wpisy w zwracanym kanale informacyjnym są również uporządkowane według wartości właściwości ShipCity zamówień.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje następujące opcje zapytania systemu OData:  
+ Usługi danych programu WCF obsługuje następujące opcje zapytania systemu OData:  
   
 |Opcja zapytania|Opis|  
 |------------------|-----------------|  

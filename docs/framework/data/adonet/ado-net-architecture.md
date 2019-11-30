@@ -2,12 +2,12 @@
 title: Architektura ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 50b8aaf6b07494c44423cf454f667f3bcdce32c6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2692959d5a3e12d503d91b55e19f744bb9abd112
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787009"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568457"
 ---
 # <a name="adonet-architecture"></a>Architektura ADO.NET
 Przetwarzanie danych tradycyjnie opiera się głównie na modelu dwuwarstwowym opartym na połączeniu. Ponieważ przetwarzanie danych w coraz większym stopniu używa architektur wielowarstwowych, programiści przełączają się do rozłączonej metody w celu zapewnienia lepszej skalowalności aplikacji.  
@@ -16,20 +16,20 @@ Przetwarzanie danych tradycyjnie opiera się głównie na modelu dwuwarstwowym o
  Dwa główne składniki ADO.NET do uzyskiwania dostępu do danych i manipulowania nimi są dostawcami danych .NET Framework i <xref:System.Data.DataSet>.  
   
 ### <a name="net-framework-data-providers"></a>Dostawcy danych .NET Framework  
- Dostawcy danych .NET Framework są składnikami, które zostały jawnie zaprojektowane w celu manipulowania danymi i szybkiego, tylko do odczytu do danych. `Connection` Obiekt zapewnia łączność ze źródłem danych. `Command` Obiekt umożliwia dostęp do poleceń bazy danych, aby zwracać dane, modyfikować dane, uruchamiać procedury składowane i wysyłać lub pobierać informacje o parametrach. `DataReader` Zapewnia wysoką wydajność strumienia danych ze źródła danych. Na `DataAdapter` koniec udostępnia mostek `DataSet` między obiektem a źródłem danych. Używa obiektów do wykonywania poleceń SQL w `DataSet` źródle danych w celu załadowania danych z danymi i uzgodnienia zmian wprowadzonych w `DataSet` danych z powrotem ze źródłem danych. `Command` `DataAdapter` Aby uzyskać więcej informacji, zobacz [.NET Framework dostawców danych](data-providers.md) oraz [pobieranie i modyfikowanie danych w programie ADO.NET](retrieving-and-modifying-data.md).  
+ Dostawcy danych .NET Framework są składnikami, które zostały jawnie zaprojektowane w celu manipulowania danymi i szybkiego, tylko do odczytu do danych. Obiekt `Connection` zapewnia łączność ze źródłem danych. Obiekt `Command` umożliwia dostęp do poleceń bazy danych, aby zwracać dane, modyfikować dane, uruchamiać procedury składowane i wysyłać lub pobierać informacje o parametrach. `DataReader` zapewnia wysoką wydajność strumienia danych ze źródła danych. Na koniec `DataAdapter` udostępnia mostek między obiektem `DataSet` i źródłem danych. `DataAdapter` używa obiektów `Command` do wykonywania poleceń SQL w źródle danych w celu załadowania `DataSet` z danymi i uzgodnienia zmian wprowadzonych w danych w `DataSet` z powrotem do źródła danych. Aby uzyskać więcej informacji, zobacz [.NET Framework dostawców danych](data-providers.md) oraz [pobieranie i modyfikowanie danych w programie ADO.NET](retrieving-and-modifying-data.md).  
   
 ### <a name="the-dataset"></a>Zestaw danych  
- ADO.NET `DataSet` został jawnie zaprojektowany na potrzeby dostępu do danych niezależnie od źródła danych. W związku z tym może być używany z wieloma i różnymi źródłami danych, używanymi z danymi XML lub używanymi do zarządzania danymi lokalnymi w aplikacji. Zawiera kolekcję co najmniej jednego <xref:System.Data.DataTable> obiektu składającego się z wierszy i kolumn danych, a także klucz podstawowy, klucz obcy, ograniczenie i informacje `DataTable` o relacji dotyczące danych w obiektach. `DataSet` Aby uzyskać więcej informacji, zobacz [zestawy danych, DataTables i DataViews](./dataset-datatable-dataview/index.md).  
+ `DataSet` ADO.NET jest jawnie zaprojektowana na potrzeby dostępu do danych niezależnie od źródła danych. W związku z tym może być używany z wieloma i różnymi źródłami danych, używanymi z danymi XML lub używanymi do zarządzania danymi lokalnymi w aplikacji. `DataSet` zawiera kolekcję co najmniej jednego obiektu <xref:System.Data.DataTable> zawierającego wiersze i kolumny danych, a także klucz podstawowy, klucz obcy, ograniczenie i informacje o relacji dotyczące danych w obiektach `DataTable`. Aby uzyskać więcej informacji, zobacz [zestawy danych, DataTables i DataViews](./dataset-datatable-dataview/index.md).  
   
- Na poniższym diagramie przedstawiono relację między dostawcą danych .NET Framework a `DataSet`.  
+ Na poniższym diagramie przedstawiono relację między dostawcą danych .NET Framework i `DataSet`.  
   
- ![Grafika ADO.NET](./media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
+ ![Grafika ADO.Net](./media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 Architektura ADO.NET  
   
 ### <a name="choosing-a-datareader-or-a-dataset"></a>Wybieranie elementu DataReader lub zestawu danych  
- W przypadku podjęcia decyzji o tym, czy aplikacja `DataReader` powinna korzystać z (zobacz [pobieranie danych przy użyciu elementu DataReader](retrieving-data-using-a-datareader.md)), czy `DataSet` (zobacz [zestawy DataSet, DataTables i DataViews](./dataset-datatable-dataview/index.md)), należy wziąć pod uwagę typ funkcjonalności wymaganej przez aplikację. Użyj, `DataSet` aby wykonać następujące czynności:  
+ W przypadku podjęcia decyzji o tym, czy aplikacja powinna używać `DataReader` (zobacz [pobieranie danych przy użyciu elementu DataReader](retrieving-data-using-a-datareader.md)) lub `DataSet` (zobacz [zestawy danych, DataTables i DataViews](./dataset-datatable-dataview/index.md)), należy wziąć pod uwagę typ funkcjonalności wymaganej przez aplikację. Użyj `DataSet`, aby wykonać następujące czynności:  
   
-- Buforuj dane lokalnie w aplikacji, aby umożliwić manipulowanie nimi. Jeśli musisz tylko odczytać wyniki zapytania, `DataReader` jest to lepszy wybór.  
+- Buforuj dane lokalnie w aplikacji, aby umożliwić manipulowanie nimi. Jeśli musisz tylko odczytać wyniki zapytania, `DataReader` to lepszy wybór.  
   
 - Zdalne dane między warstwami lub z usługi sieci Web XML.  
   
@@ -37,9 +37,9 @@ Architektura ADO.NET
   
 - Wykonaj rozległe przetwarzanie danych bez konieczności otwierania połączenia ze źródłem danych, które zwalnia połączenie, które będzie używane przez innych klientów.  
   
- Jeśli nie są wymagane funkcje zapewniane `DataSet`przez program, można zwiększyć wydajność aplikacji przy `DataReader` użyciu funkcji, aby zwrócić dane tylko do odczytu. `DataReader`Chociaż program `DataAdapter` `DataReader` używa do`DataSet` wypełniania zawartości (zobacz [wypełnianie zestawu danych z elementu DataAdapter](populating-a-dataset-from-a-dataadapter.md)) przy użyciu, można zwiększyć wydajność, ponieważ spowoduje to oszczędność pamięci, która będzie używana przez i należy unikać przetwarzania wymaganego do utworzenia i wypełnienia zawartości `DataSet`. `DataSet`  
+ Jeśli nie są wymagane funkcje zapewniane przez `DataSet`, można zwiększyć wydajność aplikacji przy użyciu `DataReader` do zwrócenia danych w sposób tylko do odczytu, w sposób umożliwiający tylko odczyt. Mimo że `DataAdapter` używa `DataReader` do wypełnienia zawartości `DataSet` (zobacz [wypełnianie zestawu danych z elementu DataAdapter](populating-a-dataset-from-a-dataadapter.md)) przy użyciu `DataReader`, można zwiększyć wydajność, ponieważ spowoduje to zapisanie pamięci, która będzie używana przez `DataSet`, i uniknięcie przetwarzania wymaganego do utworzenia i wypełnienia zawartości `DataSet`.  
   
-## <a name="linq-to-dataset"></a>LINQ do DataSet  
+## <a name="linq-to-dataset"></a>LINQ to DataSet  
  LINQ to DataSet zapewnia możliwości zapytań i sprawdzanie typów w czasie kompilacji dla danych w pamięci podręcznej w obiekcie DataSet. Umożliwia pisanie zapytań w jednym z .NET Framework języku deweloperskim, takich jak C# lub Visual Basic. Aby uzyskać więcej informacji, zobacz [LINQ to DataSet](linq-to-dataset.md).  
   
 ## <a name="linq-to-sql"></a>LINQ do SQL  
@@ -49,12 +49,12 @@ Architektura ADO.NET
  ADO.NET Entity Framework jest zaprojektowana tak, aby umożliwić deweloperom tworzenie aplikacji do uzyskiwania dostępu do danych przez programowanie względem koncepcyjnego modelu aplikacji zamiast programowania bezpośrednio względem relacyjnego schematu magazynu. Celem jest zmniejszenie ilości kodu i konserwacji wymaganych przez aplikacje zorientowane na dane. Aby uzyskać więcej informacji, zobacz [ADO.NET Entity Framework](./ef/index.md).  
   
 ## <a name="wcf-data-services"></a>Usługi danych WCF  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]służy do wdrażania usług danych w sieci Web lub intranecie. Dane są uporządkowane jako jednostki i relacje zgodnie ze specyfikacjami Entity Data Model. Dane wdrożone w tym modelu są adresowane przy użyciu standardowego protokołu HTTP. Aby uzyskać więcej informacji, zobacz [4.5 usług danych WCF](../wcf/index.md).  
+ Usługi danych programu WCF służy do wdrażania usług danych w sieci Web lub intranecie. Dane są uporządkowane jako jednostki i relacje zgodnie ze specyfikacjami Entity Data Model. Dane wdrożone w tym modelu są adresowane przy użyciu standardowego protokołu HTTP. Aby uzyskać więcej informacji, zobacz [Usługi danych programu WCF 4,5](../wcf/index.md).  
   
 ## <a name="xml-and-adonet"></a>XML i ADO.NET  
  ADO.NET wykorzystuje moc XML w celu zapewnienia nieprzerwanego dostępu do danych. ADO.NET została zaprojektowana z użyciem klas XML w .NET Framework; Oba są składnikami pojedynczej architektury.  
   
- ADO.NET i klasy XML w .NET Framework są zbieżne w `DataSet` obiekcie. `DataSet` Można wypełnić danymi ze źródła XML, niezależnie od tego, czy jest to plik, czy strumień XML. Może być zapisany jako plik XML zgodny ze standardem World Wide Web Consortium (W3C), który obejmuje schemat jako schemat języka definicji schematu XML (XSD), niezależnie od źródła danych `DataSet`w. `DataSet` Ze względu na natywny format `DataSet` serializacji pliku XML, jest to doskonałe rozwiązanie do przemieszczania danych między warstwami, `DataSet` co zapewnia optymalny wybór dla danych zdalnych i kontekstu schematu do i z usługi sieci Web XML. Aby uzyskać więcej informacji, zobacz [dokumenty XML i dane](../../../standard/data/xml/index.md).  
+ ADO.NET i klasy XML w .NET Framework są zbieżne w obiekcie `DataSet`. `DataSet` można wypełnić danymi ze źródła XML, niezależnie od tego, czy jest to plik, czy strumień XML. `DataSet` można zapisać jako plik XML zgodny ze standardem World Wide Web Consortium (W3C), który obejmuje schemat jako schemat języka definicji schematu XML (XSD), niezależnie od źródła danych w `DataSet`. Ze względu na natywny format serializacji `DataSet` jest XML, jest to doskonałe rozwiązanie do przemieszczania danych między warstwami, dzięki czemu `DataSet` optymalny wybór dla danych zdalnych i kontekstu schematu do i z usługi XML sieci Web. Aby uzyskać więcej informacji, zobacz [dokumenty XML i dane](../../../standard/data/xml/index.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

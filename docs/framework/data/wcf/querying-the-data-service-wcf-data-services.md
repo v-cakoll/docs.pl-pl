@@ -9,16 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: e37a1654bdc62937bbb27c293a110293c9928645
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 99fe377e8fff193c4f8bb566946b95c61c1b3693
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975167"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568882"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Wykonywanie zapytania dotyczącego usługi danych (Usługi danych programu WCF)
 
-Biblioteka klienta [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] umożliwia wykonywanie zapytań dotyczących usługi danych przy użyciu znanych .NET Framework wzorców programistycznych, w tym przy użyciu języka Integrated Language Query (LINQ). Biblioteka klienta tłumaczy zapytanie, które jest zdefiniowane na kliencie jako wystąpienie klasy <xref:System.Data.Services.Client.DataServiceQuery%601>, do komunikatu żądania HTTP GET. Biblioteka otrzymuje komunikat odpowiedzi i tłumaczy ją na wystąpienia klas usługi danych klienta. Te klasy są śledzone przez <xref:System.Data.Services.Client.DataServiceContext>, do których należy <xref:System.Data.Services.Client.DataServiceQuery%601>.
+Biblioteka klienta Usługi danych programu WCF umożliwia wykonywanie zapytań dotyczących usługi danych przy użyciu znanych .NET Framework wzorców programistycznych, w tym przy użyciu języka Integrated Language Query (LINQ). Biblioteka klienta tłumaczy zapytanie, które jest zdefiniowane na kliencie jako wystąpienie klasy <xref:System.Data.Services.Client.DataServiceQuery%601>, do komunikatu żądania HTTP GET. Biblioteka otrzymuje komunikat odpowiedzi i tłumaczy ją na wystąpienia klas usługi danych klienta. Te klasy są śledzone przez <xref:System.Data.Services.Client.DataServiceContext>, do których należy <xref:System.Data.Services.Client.DataServiceQuery%601>.
 
 ## <a name="data-service-queries"></a>Zapytania dotyczące usługi danych
 
@@ -45,11 +45,11 @@ Następujące zapytanie, gdy jest wykonywane, zwraca wszystkie jednostki `Custom
 
 Aby uzyskać więcej informacji, zobacz [jak: wykonywać zapytania dotyczące usługi danych](how-to-execute-data-service-queries-wcf-data-services.md).
 
-Klient [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje zapytania dotyczące obiektów z późnym wiązaniem, takich jak użycie typu *dynamicznego* w C#. Jednak ze względu na wydajność należy zawsze tworzyć zapytania o jednoznacznie określonym typie względem usługi danych. Typ <xref:System.Tuple> i obiekty dynamiczne nie są obsługiwane przez klienta.
+Klient Usługi danych programu WCF obsługuje zapytania dotyczące obiektów z późnym wiązaniem, takich jak użycie typu *dynamicznego* w C#. Jednak ze względu na wydajność należy zawsze tworzyć zapytania o jednoznacznie określonym typie względem usługi danych. Typ <xref:System.Tuple> i obiekty dynamiczne nie są obsługiwane przez klienta.
 
 ## <a name="linq-queries"></a>Zapytania LINQ
 
-Ponieważ Klasa <xref:System.Data.Services.Client.DataServiceQuery%601> implementuje interfejs <xref:System.Linq.IQueryable%601> zdefiniowany przez LINQ, Biblioteka klienta [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] może przetwarzać zapytania LINQ względem danych zestawu jednostek w identyfikatorze URI, który reprezentuje wyrażenie zapytania, które jest oceniane względem zasobu usługi danych. Poniższy przykład to zapytanie LINQ, które jest równoważne poprzedniej <xref:System.Data.Services.Client.DataServiceQuery%601>, która zwraca `Orders`, które mają koszt frachtu większy niż $30, i porządkuje wyniki według kosztu frachtu:
+Ponieważ Klasa <xref:System.Data.Services.Client.DataServiceQuery%601> implementuje interfejs <xref:System.Linq.IQueryable%601> zdefiniowany przez LINQ, Biblioteka klienta Usługi danych programu WCF może przetwarzać zapytania LINQ względem danych zestawu jednostek w identyfikatorze URI, który reprezentuje wyrażenie zapytania, które jest oceniane względem zasobu usługi danych. Poniższy przykład to zapytanie LINQ, które jest równoważne poprzedniej <xref:System.Data.Services.Client.DataServiceQuery%601>, która zwraca `Orders`, które mają koszt frachtu większy niż $30, i porządkuje wyniki według kosztu frachtu:
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
@@ -67,7 +67,7 @@ Aby uzyskać więcej informacji, zobacz temat [zagadnienia dotyczące LINQ](linq
 
 ## <a name="adding-query-options"></a>Dodawanie opcji zapytania
 
-Zapytania dotyczące usługi danych obsługują wszystkie opcje zapytania, które zapewnia [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]s. Należy wywołać metodę <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>, aby dołączyć opcje zapytania do wystąpienia <xref:System.Data.Services.Client.DataServiceQuery%601>. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> zwraca nowe wystąpienie <xref:System.Data.Services.Client.DataServiceQuery%601>, które jest równoważne z oryginalnym zapytaniem, ale z ustawioną nową opcją zapytania. Następujące zapytanie, gdy wykonywane, zwraca `Orders`, które są filtrowane przez `Freight` wartość i uporządkowane według `OrderID`, malejąco:
+Zapytania dotyczące usługi danych obsługują wszystkie opcje zapytania udostępniane przez usługi danych WCF. Należy wywołać metodę <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>, aby dołączyć opcje zapytania do wystąpienia <xref:System.Data.Services.Client.DataServiceQuery%601>. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> zwraca nowe wystąpienie <xref:System.Data.Services.Client.DataServiceQuery%601>, które jest równoważne z oryginalnym zapytaniem, ale z ustawioną nową opcją zapytania. Następujące zapytanie, gdy wykonywane, zwraca `Orders`, które są filtrowane przez `Freight` wartość i uporządkowane według `OrderID`, malejąco:
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionsspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionsspecific)]
@@ -118,7 +118,7 @@ Wystąpienia typu jednostki reprezentujące jednostki w usłudze danych są twor
 
 - <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> — zwraca obiekt <xref:System.Data.Services.Client.DataServiceQueryContinuation>, który zawiera identyfikator URI następnej strony wyników.
 
-Domyślnie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zwraca tylko dane, które są jawnie wybierane przez identyfikator URI zapytania. Dzięki temu można jawnie ładować dodatkowe dane z usługi danych, gdy jest to konieczne. Żądanie jest wysyłane do usługi danych przy każdym jawnie załadowaniu danych z usługi danych. Dane, które mogą zostać załadowane jawnie obejmują powiązane jednostki, stronicowane dane odpowiedzi i strumienie danych binarnych.
+Domyślnie Usługi danych programu WCF zwraca tylko dane, które są jawnie wybierane przez identyfikator URI zapytania. Dzięki temu można jawnie ładować dodatkowe dane z usługi danych, gdy jest to konieczne. Żądanie jest wysyłane do usługi danych przy każdym jawnie załadowaniu danych z usługi danych. Dane, które mogą zostać załadowane jawnie obejmują powiązane jednostki, stronicowane dane odpowiedzi i strumienie danych binarnych.
 
 > [!NOTE]
 > Ponieważ usługa danych może zwrócić stronicowaną odpowiedź, zalecamy, aby aplikacja korzystała ze wzorca programowania do obsługi odpowiedzi na stronicowaną usługę danych. Aby uzyskać więcej informacji, zobacz [ładowanie odroczonej zawartości](loading-deferred-content-wcf-data-services.md).

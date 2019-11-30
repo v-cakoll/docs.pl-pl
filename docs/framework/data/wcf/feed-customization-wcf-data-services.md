@@ -10,22 +10,22 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 56c91fd1e9ea4a2e35bacbebab0f489e337cfec5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 08df16be9df6d55ab9f1426e205e56d9609ce72e
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975289"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569220"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Dostosowywanie kanału informacyjnego (Usługi danych programu WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa protokołu Open Data Protocol (OData) do udostępniania danych jako źródła strumieniowego. Usługa OData obsługuje formaty Atom i JavaScript Object Notation (JSON) dla strumieniowych źródeł danych. Korzystając z kanału informacyjnego Atom, usługa OData zapewnia standardową metodę serializowania danych, takich jak jednostki i relacje, do formatu XML, który może zostać uwzględniony w treści wiadomości HTTP. Usługa OData definiuje domyślne mapowanie właściwości jednostki między danymi zawartymi w jednostkach i elementach Atom. Aby uzyskać więcej informacji, zobacz [Format OData: Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  
+Usługi danych programu WCF używa protokołu Open Data Protocol (OData) do udostępniania danych jako źródła strumieniowego. Usługa OData obsługuje formaty Atom i JavaScript Object Notation (JSON) dla strumieniowych źródeł danych. Korzystając z kanału informacyjnego Atom, usługa OData zapewnia standardową metodę serializowania danych, takich jak jednostki i relacje, do formatu XML, który może zostać uwzględniony w treści wiadomości HTTP. Usługa OData definiuje domyślne mapowanie właściwości jednostki między danymi zawartymi w jednostkach i elementach Atom. Aby uzyskać więcej informacji, zobacz [Format OData: Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  
   
  Może istnieć scenariusz aplikacji, który wymaga, aby dane właściwości zwrócone przez usługę danych były serializowane w sposób dostosowany, a nie w standardowym formacie kanału informacyjnego. Za pomocą protokołu OData można dostosować serializację w strumieniowym źródle danych, tak aby właściwości jednostki mogły być mapowane do nieużywanych elementów i atrybutów wpisu lub do niestandardowych elementów wpisu w strumieniu.  
   
 > [!NOTE]
 > Dostosowanie kanału informacyjnego jest obsługiwane tylko dla kanałów informacyjnych Atom. Niestandardowe źródła danych nie są zwracane, gdy wymagany jest format JSON dla zwracanego źródła danych.  
   
- Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]można zdefiniować alternatywne mapowanie właściwości jednostki dla ładunku Atom, ręcznie stosując atrybuty do typów jednostek w modelu danych. Dostawca źródła danych usługi danych określa, jak należy zastosować te atrybuty.  
+ Za pomocą Usługi danych programu WCF można zdefiniować alternatywne mapowanie właściwości jednostki dla ładunku Atom, ręcznie stosując atrybuty do typów jednostek w modelu danych. Dostawca źródła danych usługi danych określa, jak należy zastosować te atrybuty.  
   
 > [!IMPORTANT]
 > Podczas definiowania niestandardowych kanałów informacyjnych należy zagwarantować, że wszystkie właściwości jednostki, które mają zdefiniowane mapowania niestandardowe, są uwzględniane w projekcji. Gdy właściwość mapowanego obiektu nie jest uwzględniona w projekcji, może dojść do utraty danych. Aby uzyskać więcej informacji, zobacz [projekcje zapytań](query-projections-wcf-data-services.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "73975289"
 |Nazwa atrybutu|Opis|  
 |--------------------|-----------------|  
 |`FC_ContentKind`|Wskazuje typ zawartości. Poniższe słowa kluczowe definiują typy zawartości zespolonej.<br /><br /> `text:` wartość właściwości jest wyświetlana w kanale informacyjnym jako tekst.<br /><br /> `html:` wartość właściwości jest wyświetlana w kanale informacyjnym jako HTML.<br /><br /> `xhtml:` wartość właściwości jest wyświetlana w kanale informacyjnym HTML.<br /><br /> Te słowa kluczowe są równoważne z wartościami wyliczenia <xref:System.Data.Services.Common.SyndicationTextContentKind> używanymi z dostawcą odbicia.<br /><br /> Ten atrybut nie jest obsługiwany, gdy są używane atrybuty `FC_NsPrefix` i `FC_NsUri`.<br /><br /> Po określeniu wartości `xhtml` atrybutu `FC_ContentKind`, należy się upewnić, że wartość właściwości zawiera poprawnie sformatowany kod XML. Usługa danych zwraca wartość bez wykonywania żadnych transformacji. Należy również upewnić się, że wszystkie prefiksy elementów XML w zwracanym kodzie XML mają identyfikator URI przestrzeni nazw oraz prefiks zdefiniowany w mapowanym źródle danych.|  
-|`FC_KeepInContent`|Wskazuje, że wartość właściwości, której dotyczy odwołanie, powinna być uwzględniona w sekcji zawartość kanału informacyjnego i w mapowanej lokalizacji. Prawidłowe wartości to `true` i `false`. Aby uzyskać strumieniowe źródło danych wstecz zgodne ze starszymi wersjami [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], określ wartość `true`, aby upewnić się, że wartość jest uwzględniona w sekcji zawartość kanału informacyjnego.|  
+|`FC_KeepInContent`|Wskazuje, że wartość właściwości, której dotyczy odwołanie, powinna być uwzględniona w sekcji zawartość kanału informacyjnego i w mapowanej lokalizacji. Prawidłowe wartości to `true` i `false`. Aby uzyskać strumieniowe źródło danych wstecz zgodne ze starszymi wersjami Usługi danych programu WCF, określ wartość `true`, aby upewnić się, że wartość jest uwzględniona w sekcji zawartość kanału informacyjnego.|  
 |`FC_NsPrefix`|Prefiks przestrzeni nazw elementu XML w mapowaniu innym niż zespolone. Ten atrybut musi być używany z atrybutem `FC_NsUri` i nie może być używany z atrybutem `FC_ContentKind`.|  
 |`FC_NsUri`|Identyfikator URI przestrzeni nazw elementu XML w mapowaniu niezespolonym. Ten atrybut musi być używany z atrybutem `FC_NsPrefix` i nie może być używany z atrybutem `FC_ContentKind`.|  
 |`FC_SourcePath`|Ścieżka właściwości jednostki, do której zostanie zastosowana ta reguła mapowania kanału informacyjnego. Ten atrybut jest obsługiwany tylko w przypadku, gdy jest używany w elemencie `EntityType`.<br /><br /> Właściwość <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> nie może bezpośrednio odwoływać się do typu złożonego. W przypadku typów złożonych należy użyć wyrażenia ścieżki, gdzie nazwy właściwości są oddzielane znakiem ukośnika odwrotnego (`/`). Na przykład następujące wartości są dozwolone dla typu jednostki `Person` za pomocą właściwości Integer `Age` i złożonej właściwości<br /><br /> `Address`:<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> Dla właściwości <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> nie można ustawić wartości zawierającej spację ani innego znaku, który jest nieprawidłowy w nazwie właściwości.|  
@@ -83,7 +83,7 @@ ms.locfileid: "73975289"
 ## <a name="feed-customization-considerations"></a>Zagadnienia dotyczące dostosowywania kanału informacyjnego  
  Podczas definiowania mapowań niestandardowych kanałów informacyjnych należy wziąć pod uwagę następujące kwestie.  
   
-- Klient [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] traktuje zmapowane elementy w źródle danych jako puste, gdy zawierają tylko biały znak. W związku z tym mapowane elementy, które zawierają tylko biały znak, nie są w tym samym odstępie dostępne na kliencie. Aby zachować ten biały znak na kliencie, należy ustawić wartość `KeepInContext` na `true` w atrybucie mapowania źródła strumieniowego.  
+- Klient Usługi danych programu WCF traktuje zmapowane elementy w źródle danych jako puste, gdy zawierają tylko biały znak. W związku z tym mapowane elementy, które zawierają tylko biały znak, nie są w tym samym odstępie dostępne na kliencie. Aby zachować ten biały znak na kliencie, należy ustawić wartość `KeepInContext` na `true` w atrybucie mapowania źródła strumieniowego.  
   
 ## <a name="versioning-requirements"></a>Wymagania dotyczące wersji  
  Dostosowanie kanału informacyjnego ma następujące wymagania dotyczące wersji protokołu OData:  

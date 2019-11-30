@@ -2,12 +2,12 @@
 title: Wyrażenia obliczeń
 description: Dowiedz się, jak utworzyć wygodną składnię do F# pisania obliczeń w programie, które mogą być sekwencjonowane i łączone przy użyciu konstrukcji przepływu sterowania i powiązań.
 ms.date: 11/04/2019
-ms.openlocfilehash: c9ac0454221782a7ccb3d41850ca6aba4e20a72a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4ff7def0ed3a46acd1b0b83b111f26f5d556071f
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976788"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569457"
 ---
 # <a name="computation-expressions"></a>Wyrażenia obliczeń
 
@@ -209,7 +209,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-Począwszy od F# 4,5, słowo kluczowe`match!`umożliwia wbudowanie wywołanie innego wyrażenia obliczenia i dopasowanie do wzorca w wyniku:
+Słowo kluczowe `match!` umożliwia wbudowanie wywołanie innego wyrażenia obliczenia i dopasowania do wzorca w wyniku:
 
 ```fsharp
 let doThingsAsync url =
@@ -250,7 +250,7 @@ W poniższej tabeli opisano metody, których można użyć w klasie Konstruktor 
 |`Zero`|`unit -> M<'T>`|Wywoływana dla pustych `else` rozgałęzień wyrażeń `if...then` w wyrażeniach obliczeń.|
 |`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Wskazuje, że wyrażenie obliczenia jest przesyłane do składowej `Run` jako cytat. Tłumaczy wszystkie wystąpienia obliczeń na cytat.|
 
-Wiele metod w klasie konstruktora używa i zwraca konstrukcję `M<'T>`, która jest zazwyczaj odrębnie zdefiniowany typ, który charakteryzuje rodzaj obliczeń, na przykład, `Async<'T>` dla asynchronicznych przepływów pracy i `Seq<'T>` dla sekwencji przebieg. Sygnatury tych metod umożliwiają ich łączenie i zagnieżdżanie ze sobą, aby obiekt przepływu pracy zwrócony z jednej konstrukcji mógł zostać przekazana do następnego. Kompilator, gdy analizuje wyrażenie obliczeń, konwertuje wyrażenie na serię wywołań funkcji zagnieżdżonych przy użyciu metod w powyższej tabeli i kodu w wyrażeniu obliczeniowym.
+Wiele metod w klasie konstruktora używa i zwraca konstrukcję `M<'T>`, która jest zazwyczaj odrębnie zdefiniowany typ, który charakteryzuje rodzaj obliczeń, na przykład, `Async<'T>` dla asynchronicznych przepływów pracy i `Seq<'T>` dla przepływów pracy sekwencji. Sygnatury tych metod umożliwiają ich łączenie i zagnieżdżanie ze sobą, aby obiekt przepływu pracy zwrócony z jednej konstrukcji mógł zostać przekazana do następnego. Kompilator, gdy analizuje wyrażenie obliczeń, konwertuje wyrażenie na serię wywołań funkcji zagnieżdżonych przy użyciu metod w powyższej tabeli i kodu w wyrażeniu obliczeniowym.
 
 Wyrażenie zagnieżdżone ma następującą postać:
 
@@ -258,9 +258,9 @@ Wyrażenie zagnieżdżone ma następującą postać:
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-W powyższym kodzie wywołania `Run` i `Delay` są pomijane, jeśli nie są zdefiniowane w klasie konstruktora wyrażeń obliczeniowych. Treść wyrażenia obliczeń, która jest oznaczona jako `{| cexpr |}`, jest tłumaczona na wywołania obejmujące metody klasy konstruktora przez tłumaczenia opisane w poniższej tabeli. Wyrażenie obliczenia `{| cexpr |}` jest zdefiniowane cyklicznie zgodnie z tymi tłumaczeniami, w których `expr` jest F# wyrażeniem, a`cexpr`jest wyrażeniem obliczeniowym.
+W powyższym kodzie wywołania `Run` i `Delay` są pomijane, jeśli nie są zdefiniowane w klasie konstruktora wyrażeń obliczeniowych. Treść wyrażenia obliczeń, która jest oznaczona jako `{| cexpr |}`, jest tłumaczona na wywołania obejmujące metody klasy konstruktora przez tłumaczenia opisane w poniższej tabeli. Wyrażenie obliczenia `{| cexpr |}` jest zdefiniowane cyklicznie zgodnie z tymi tłumaczeniami, w których `expr` jest F# wyrażeniem, a `cexpr` jest wyrażeniem obliczeniowym.
 
-|Wyrażenie|Licz|
+|Wyrażenie|{1&gt;Translacja&lt;1}|
 |----------|-----------|
 |<code>{ let binding in cexpr }</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
 |<code>{ let! pattern = expr in cexpr }</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|

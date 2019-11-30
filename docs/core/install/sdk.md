@@ -6,25 +6,16 @@ ms.author: adegeo
 ms.date: 11/06/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 6e9af6c84c81b1244e10fa7d5955ab67d34b1f0a
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
-ms.translationtype: HT
+ms.openlocfilehash: 54819b409422e8bda9efe25478aa3424683a380b
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552205"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567470"
 ---
 # <a name="install-the-net-core-sdk"></a>Zainstaluj zestaw .NET Core SDK
 
 W tym artykule dowiesz się, jak zainstalować zestaw .NET Core SDK. Zestaw .NET Core SDK jest używany do tworzenia aplikacji i bibliotek platformy .NET Core. Środowisko uruchomieniowe platformy .NET Core jest zawsze instalowane z zestawem SDK.
-
-Program .NET Core można pobrać i zainstalować bezpośrednio przy użyciu jednego z następujących linków:
-
-- [Pliki do pobrania dla programu .NET Core 3,1 Preview 3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [Pliki do pobrania w programie .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- [Pliki do pobrania w programie .NET Core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
-- [Pliki do pobrania w programie .NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1)
-
-Program .NET Core można również zainstalować w ramach zintegrowanego środowiska programistycznego (IDE), szczegółowo w poniższych sekcjach.
 
 ::: zone pivot="os-windows,os-macos"
 
@@ -32,8 +23,8 @@ Program .NET Core można również zainstalować w ramach zintegrowanego środow
 
 Zarówno system Windows, jak i macOS mają autonomiczne Instalatory, których można użyć do zainstalowania zestawu SDK platformy .NET Core 3,0.
 
-- [Procesory CPU Windows x64](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x64-installer) | [x32 CPU](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x86-installer)
-- [procesory macOS x64](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-macos-x64-installer)
+- Procesory Windows [x64 (64-bitowe)](https://dotnet.microsoft.com/download/dotnet-core/3.0) | [procesora x86 (32-bitowe)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [procesory macOS x64 (64-bitowe)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 
 ::: zone-end
 
@@ -41,7 +32,30 @@ Zarówno system Windows, jak i macOS mają autonomiczne Instalatory, których mo
 
 ## <a name="install-with-a-package-manager"></a>Instalowanie przy użyciu Menedżera pakietów
 
-Zestaw .NET Core SDK można zainstalować przy użyciu wielu popularnych menedżerów pakietów systemu Linux. Aby uzyskać więcej informacji, zobacz [Menedżer pakietów systemu Linux — Instalowanie programu .NET Core](linux-package-manager-rhel7.md).
+Zestaw .NET Core SDK można zainstalować przy użyciu wielu popularnych menedżerów pakietów systemu Linux. Aby uzyskać więcej informacji, zobacz [Menedżer pakietów systemu Linux — Instalowanie programu .NET Core](linux-package-managers.md).
+
+## <a name="download-and-manually-install"></a>Pobierz i ręcznie zainstaluj
+
+Aby wyodrębnić zestaw SDK i udostępnić polecenia w terminalu, należy najpierw [pobrać](#all-net-core-downloads) wydanie binarne platformy .NET Core. Następnie otwórz Terminal i uruchom następujące polecenia.
+
+```bash
+mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.0.101-linux-musl-x64.tar.gz -C $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
+
+> [!TIP]
+> Powyższe polecenia spowodują udostępnienie poleceń zestawu .NET SDK dla sesji terminalu, w której został uruchomiony.
+>
+> Możesz edytować profil powłoki, aby trwale dodać polecenia. Istnieje wiele różnych powłok dostępnych dla systemu Linux, a każdy z nich ma inny profil. Na przykład:
+>
+> - **Bash Shell**: *~/. bash_profile*, *~/.bashrc.*
+> - **Powłoka Korn**: *~/.KSHRC* lub *. profile*
+> - **Powłoka Z**: *~/.zshrc* lub *. zprofile*
+> 
+> Edytuj odpowiedni plik źródłowy dla powłoki i Dodaj `:$HOME/dotnet` na końcu istniejącej instrukcji `PATH`. Jeśli nie dołączono żadnej instrukcji `PATH`, Dodaj nowy wiersz z `export PATH=$PATH:$HOME/dotnet`.
+>
+> Ponadto Dodaj `export DOTNET_ROOT=$HOME/dotnet` na końcu pliku.
 
 ::: zone-end
 
@@ -53,6 +67,7 @@ Jeśli używasz programu Visual Studio do tworzenia aplikacji platformy .NET Cor
 
 | Wersja zestaw .NET Core SDK | Wersja programu Visual Studio                      |
 | --------------------- | ------------------------------------------ |
+| wersja zapoznawcza 3,1           | Visual Studio 2019 w wersji 16,4 Preview lub nowszej. |
 | 3.0                   | Program Visual Studio 2019 w wersji 16,3 lub nowszej. |
 | 2,2                   | Program Visual Studio 2017 w wersji 15,9 lub nowszej. |
 | 2,1                   | Program Visual Studio 2017 w wersji 15,7 lub nowszej. |
@@ -90,14 +105,14 @@ Visual Studio dla komputerów Mac instaluje zestaw .NET Core SDK w przypadku wyb
 
 ::: zone-end
 
-## <a name="install-from-visual-studio-code"></a>Zainstaluj z Visual Studio Code
+## <a name="install-alongside-visual-studio-code"></a>Zainstaluj obok Visual Studio Code
 
 Visual Studio Code to zaawansowany i lekki Edytor kodu źródłowego, który jest uruchamiany na pulpicie. Visual Studio Code jest dostępny dla systemów Windows, macOS i Linux.
 
-Mimo że Visual Studio Code nie jest obsługiwana przez platformę .NET Core, Dodawanie obsługi .NET Core jest proste.
+Mimo że Visual Studio Code nie jest dołączony do zautomatyzowanego Instalatora .NET Core, takiego jak Visual Studio, Dodawanie obsługi .NET Core jest proste.
 
 01. [Pobierz i zainstaluj Visual Studio Code](https://code.visualstudio.com/Download).
-01. [Pobierz i zainstaluj zestaw .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+01. [Pobierz i zainstaluj zestaw .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core).
 01. [Zainstaluj C# rozszerzenie z witryny Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).
 
 ::: zone pivot="os-windows"
@@ -127,6 +142,15 @@ Skrypt domyślnie instaluje najnowszą [LTS](https://dotnet.microsoft.com/platfo
 ```
 
 ::: zone-end
+
+## <a name="all-net-core-downloads"></a>Wszystkie pliki do pobrania z platformy .NET Core
+
+Program .NET Core można pobrać i zainstalować bezpośrednio przy użyciu jednego z następujących linków:
+
+- [Pobieranie z wersji zapoznawczej programu .NET Core 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [Pliki do pobrania w programie .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [Pliki do pobrania w programie .NET Core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [Pliki do pobrania w programie .NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 
 ## <a name="docker"></a>Docker
 

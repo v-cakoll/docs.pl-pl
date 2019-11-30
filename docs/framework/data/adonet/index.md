@@ -2,12 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 24b7a11d031502b9a6b825f49d97214f68f92176
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 130265070e82245de4bdd49599df9fa9f435f5ed
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783809"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569423"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET to zestaw klas, które uwidaczniają usługi dostępu do danych dla programistów .NET Framework. Usługa ADO.NET oferuje bogaty zestaw składników służących do tworzenia dystrybuowanych aplikacji do udostępniania danych. Jest to integralna część .NET Framework, zapewniająca dostęp do danych relacyjnych, XML i aplikacji. Program ADO.NET obsługuje różne potrzeby programistyczne, w tym tworzenie klientów baz danych frontonu oraz obiektów branżowych warstwy środkowej używanych przez aplikacje, narzędzia, Języki lub przeglądarki internetowe.  
@@ -29,13 +29,13 @@ ADO.NET to zestaw klas, które uwidaczniają usługi dostępu do danych dla prog
  Opisuje mapowania typu danych między .NET Framework typami danych i .NET Framework dostawcami danych.  
   
  [Elementy DataSet, DataTable i DataView](./dataset-datatable-dataview/index.md)  
- Opisuje sposób tworzenia `DataSets`i używania, `DataTables`wpisywania `DataSets`, i `DataViews`.  
+ Opisuje sposób tworzenia i używania `DataSets`, wpisanych `DataSets`, `DataTables`i `DataViews`.  
   
  [LINQ to DataSet](linq-to-dataset.md)  
  Zawiera informacje dotyczące LINQ to DataSet, w tym przykładów programistycznych.  
   
  [Pobieranie i modyfikowanie danych ADO.NET](retrieving-and-modifying-data.md)  
- Opisuje sposób nawiązywania połączenia ze źródłem danych oraz sposobu pobierania i modyfikowania danych przy użyciu `Commands` `DataReaders` i `DataAdapters`.  
+ Opisuje sposób nawiązywania połączenia ze źródłem danych oraz sposobu pobierania i modyfikowania danych przy użyciu `Commands`, `DataReaders` i `DataAdapters`.  
   
  [SQL Server i ADO.NET](./sql/index.md)  
  Opisuje sposób pracy z funkcjami i funkcjami, które są specyficzne dla SQL Server.  
@@ -51,7 +51,7 @@ ADO.NET to zestaw klas, które uwidaczniają usługi dostępu do danych dla prog
  Oferuje linki do tematów i przykładów LINQ przy użyciu Visual Basic.  
   
  [Usługi danych WCF 4.5](../wcf/index.md)  
- Opisuje, jak używać [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] programu do wdrażania usług danych w sieci Web lub intranecie implementujących protokół Open Data Protocol (OData).  
+ Opisuje, jak używać Usługi danych programu WCF do wdrażania usług danych w sieci Web lub intranet, które implementują protokół Open Data Protocol (OData).  
   
  [Przewodnik programowania .NET Framework](../../development-guide.md)  
  Zawiera łącza do informacji o standardowych zadaniach programistycznych w .NET Framework.  

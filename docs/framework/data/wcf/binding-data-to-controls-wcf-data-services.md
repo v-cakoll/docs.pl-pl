@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 605ff7a9acaaa217f0e482579968757dd451aed9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ab75380738064a001b12e79d1481d053622077ef
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974833"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569324"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Powiązywanie danych z kontrolkami (Usługi danych programu WCF)
-Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]można powiązać kontrolki, takie jak `ComboBox` i `ListView` formantów z wystąpieniem klasy <xref:System.Data.Services.Client.DataServiceCollection%601>. Ta kolekcja, która dziedziczy z klasy <xref:System.Collections.ObjectModel.ObservableCollection%601>, zawiera dane ze źródła danych Open Data Protocol (OData). Ta klasa reprezentuje dynamiczną zbieranie danych, która dostarcza powiadomienia, gdy elementy zostaną dodane lub usunięte. W przypadku używania wystąpienia <xref:System.Data.Services.Client.DataServiceCollection%601> na potrzeby powiązania danych, biblioteki klienta [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługują te zdarzenia, aby upewnić się, że obiekty śledzone przez <xref:System.Data.Services.Client.DataServiceContext> pozostają zsynchronizowane z danymi w związanym elemencie interfejsu użytkownika.  
+Za pomocą Usługi danych programu WCF można powiązać kontrolki, takie jak `ComboBox` i `ListView` formantów z wystąpieniem klasy <xref:System.Data.Services.Client.DataServiceCollection%601>. Ta kolekcja, która dziedziczy z klasy <xref:System.Collections.ObjectModel.ObservableCollection%601>, zawiera dane ze źródła danych Open Data Protocol (OData). Ta klasa reprezentuje dynamiczną zbieranie danych, która dostarcza powiadomienia, gdy elementy zostaną dodane lub usunięte. W przypadku używania wystąpienia <xref:System.Data.Services.Client.DataServiceCollection%601> na potrzeby powiązania danych, biblioteki klienta Usługi danych programu WCF obsługują te zdarzenia, aby upewnić się, że obiekty śledzone przez <xref:System.Data.Services.Client.DataServiceContext> pozostają zsynchronizowane z danymi w związanym elemencie interfejsu użytkownika.  
   
  Klasa <xref:System.Data.Services.Client.DataServiceCollection%601> (pośrednio) implementuje interfejs <xref:System.Collections.Specialized.INotifyCollectionChanged>, aby otrzymywać alerty dotyczące kontekstu po dodaniu lub usunięciu obiektów do kolekcji. Obiekty typu usługi danych używane z <xref:System.Data.Services.Client.DataServiceCollection%601> muszą również zaimplementować interfejs <xref:System.ComponentModel.INotifyPropertyChanged>, aby ostrzec <xref:System.Data.Services.Client.DataServiceCollection%601>, gdy właściwości obiektów w kolekcji powiązań zostały zmienione.  
   
@@ -86,7 +86,7 @@ Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]można pow
 - `entityCollectionChanged`-Metoda, która jest wywoływana, gdy obiekt zostanie dodany lub usunięty z kolekcji powiązań. Ten <xref:System.Func%602> delegat akceptuje obiekt <xref:System.Data.Services.Client.EntityCollectionChangedParams> i zwraca wartość logiczną wskazującą, czy domyślne zachowanie, aby wywołać <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> dla akcji <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> lub <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> dla akcji <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> w <xref:System.Data.Services.Client.DataServiceContext>, powinno być nadal wykonywane.  
   
 > [!NOTE]
-> [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] nie sprawdza poprawności zachowań niestandardowych zaimplementowanych w tych delegatach.  
+> Usługi danych programu WCF nie sprawdza poprawności zachowań niestandardowych zaimplementowanych w tych delegatach.  
   
  W poniższym przykładzie akcja <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> jest dostosowywana do wywoływania metody <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> i <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>, aby usunąć jednostki `Orders_Details` należące do usuniętej jednostki `Orders`. Ta akcja niestandardowa jest wykonywana, ponieważ jednostki zależne nie są automatycznie usuwane po usunięciu jednostki nadrzędnej.  
   

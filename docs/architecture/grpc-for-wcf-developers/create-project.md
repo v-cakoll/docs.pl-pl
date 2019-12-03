@@ -1,62 +1,62 @@
 ---
 title: Tworzenie nowego ASP.NET Core gRPC Project — gRPC dla deweloperów WCF
-description: Dowiedz się, jak utworzyć projekt gRPC za pomocą programu Visual Studio lub z wiersza polecenia.
+description: Dowiedz się, jak utworzyć projekt gRPC za pomocą programu Visual Studio lub wiersza polecenia.
 ms.date: 09/02/2019
-ms.openlocfilehash: 992c3f57be25ae2517d41437170dc287f58934b6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ea6d7658404f61fedb25d7de7ddedb7c51437383
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967891"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711447"
 ---
 # <a name="create-a-new-aspnet-core-grpc-project"></a>Tworzenie nowego projektu usługi gRPC ASP.NET Core
 
-Platforma .NET Core udostępnia zaawansowane narzędzie interfejsu wiersza polecenia, `dotnet`, co umożliwia tworzenie projektów i rozwiązań oraz zarządzanie nimi z poziomu wiersza poleceń. Narzędzie jest ściśle zintegrowane z programem Visual Studio, więc wszystko jest również dostępne za pomocą interfejsu znanego graficznego użytkownika. W tym rozdziale przedstawiono dwa sposoby tworzenia nowego projektu ASP.NET Core gRPC: najpierw z programem Visual Studio, a następnie z interfejs wiersza polecenia platformy .NET Core.
+Zestaw .NET Core SDK udostępnia zaawansowane narzędzie interfejsu wiersza polecenia, `dotnet`, które umożliwia tworzenie projektów i rozwiązań oraz zarządzanie nimi z poziomu wiersza poleceń. Zestaw SDK jest ściśle zintegrowany z programem Visual Studio, więc wszystko jest również dostępne za pomocą znanego graficznego interfejsu użytkownika. W tym rozdziale przedstawiono obie metody tworzenia nowego projektu ASP.NET Core gRPC.
 
-## <a name="create-the-project-using-visual-studio"></a>Tworzenie projektu przy użyciu programu Visual Studio
+## <a name="create-the-project-by-using-visual-studio"></a>Tworzenie projektu przy użyciu programu Visual Studio
 
 > [!IMPORTANT]
-> Do opracowania dowolnej aplikacji ASP.NET Core 3,0 wymagany jest program Visual Studio 2019,3 lub nowszy z zainstalowanym obciążeniem programu **ASP.NET i sieci Web** .
+> Do opracowania dowolnej aplikacji ASP.NET Core 3,0 wymagany jest program Visual Studio 2019 16,3 lub nowszy z zainstalowanym obciążeniem **programowanie ASP.NET i sieci Web** .
 
-Utwórz puste rozwiązanie o nazwie **TraderSys** z *pustego szablonu rozwiązania* . Dodaj folder rozwiązania o nazwie `src`, a następnie kliknij prawym przyciskiem myszy folder i wybierz polecenie **dodaj** > **Nowy projekt** z menu kontekstowego. Wprowadź `grpc` w polu wyszukiwania szablonu i powinien zostać wyświetlony szablon projektu o nazwie `gRPC Service`.
+Utwórz puste rozwiązanie o nazwie **TraderSys** z *pustego szablonu rozwiązania* . Dodaj folder rozwiązania o nazwie `src`. Następnie kliknij prawym przyciskiem myszy folder, a następnie wybierz polecenie **dodaj** > **Nowy projekt**. Wprowadź `grpc` w polu wyszukiwania szablonu i powinien zostać wyświetlony szablon projektu o nazwie `gRPC Service`.
 
-![Okno dialogowe Dodawanie nowego projektu przedstawiające szablon projektu usługi gRPC Service](media/create-project/new-grpc-project.png)
+![Zrzut ekranu przedstawiający okno dialogowe Dodawanie nowego projektu](media/create-project/new-grpc-project.png)
 
-Kliknij przycisk **dalej** , aby przejść do okna dialogowego **Konfigurowanie projektu** i nazwij projekt `TraderSys.Portfolios`, a następnie Dodaj `src` podkatalog do **lokalizacji**.
+Wybierz pozycję **dalej** , aby przejść do okna dialogowego **Konfigurowanie nowego projektu** . Nadaj projektowi nazwę `TraderSys.Portfolios`i Dodaj `src` podkatalogu do **lokalizacji**.
 
-![Okno dialogowe Konfigurowanie projektu](media/create-project/configure-project.png)
+![Zrzut ekranu przedstawiający okno dialogowe Konfigurowanie nowego projektu](media/create-project/configure-project.png)
 
-Kliknij przycisk **dalej** , aby przejść do okna dialogowego **Nowy projekt gRPC** .
+Wybierz pozycję **dalej** , aby przejść do okna dialogowego **Tworzenie nowej usługi gRPC** .
 
-![Nowe okno dialogowe projektu gRPC](media/create-project/create-new-grpc-service.png)
+![Zrzut ekranu przedstawiający okno dialogowe Tworzenie nowej usługi gRPC](media/create-project/create-new-grpc-service.png)
 
-Obecnie dostępne są ograniczone opcje tworzenia usługi. Platforma Docker zostanie wprowadzona w dalszej części książki, więc pozostaw pole wyboru niezaznaczone teraz, a po prostu kliknij pozycję **Utwórz**. Pierwszy ASP.NET Core 3,0 gRPC projektu jest generowany i dodawany do rozwiązania. Jeśli nie chcesz wiedzieć o pracy z `dotnet CLI`, przejdź do sekcji [czyszczenie przykładowego kodu](#clean-up-the-example-code) .
+W tej chwili masz ograniczoną liczbę opcji tworzenia usługi. Platforma Docker zostanie wprowadzona później, dlatego nie należy zaznaczać tej opcji. Po prostu wybierz pozycję **Utwórz**. Pierwszy ASP.NET Core 3,0 gRPC projektu jest generowany i dodawany do rozwiązania. Jeśli nie chcesz wiedzieć o pracy z `dotnet CLI`, przejdź do sekcji [czyszczenie przykładowego kodu](#clean-up-the-example-code) .
 
-## <a name="create-the-project-using-the-net-core-cli"></a>Tworzenie projektu przy użyciu interfejs wiersza polecenia platformy .NET Core
+## <a name="create-the-project-by-using-the-net-core-cli"></a>Tworzenie projektu przy użyciu interfejs wiersza polecenia platformy .NET Core
 
 Ta sekcja obejmuje tworzenie rozwiązań i projektów z poziomu wiersza polecenia.
 
-Utwórz rozwiązanie, jak pokazano poniżej. Flaga `-o` (lub `--output`) określa katalog wyjściowy, który zostanie utworzony w bieżącym katalogu, jeśli nie istnieje. Rozwiązanie będzie miało taką samą nazwę jak katalog, czyli `TraderSys.sln`. Możesz podać inną nazwę przy użyciu flagi `-n` (lub `--name`).
+Utwórz rozwiązanie, jak pokazano w poniższym poleceniu. Flaga `-o` (lub `--output`) określa katalog wyjściowy, który jest tworzony w bieżącym katalogu, jeśli jeszcze nie istnieje. Rozwiązanie ma taką samą nazwę jak katalog: `TraderSys.sln`. Można podać inną nazwę przy użyciu flagi `-n` (lub `--name`).
 
 ```dotnetcli
 dotnet new sln -o TraderSys
 cd TraderSys
 ```
 
-ASP.NET Core 3,0 jest dostarczany z szablonem interfejsu wiersza polecenia dla usług gRPC Services. Utwórz nowy projekt przy użyciu tego szablonu, umieszczając go w podkatalogu `src` zgodnie z Konwencją dla ASP.NET Core projektów. Projekt zostanie nazwany po katalogu (tj. `TraderSys.Portfolios.csproj`), chyba że zostanie określona inna nazwa z flagą `-n`.
+ASP.NET Core 3,0 jest dostarczany z szablonem interfejsu wiersza polecenia dla usług gRPC Services. Utwórz nowy projekt przy użyciu tego szablonu, umieszczając go w podkatalogu `src`, co jest konwencjonalne dla ASP.NET Core projektów. Projekt nosi nazwę po katalogu (`TraderSys.Portfolios.csproj`), chyba że zostanie określona inna nazwa z flagą `-n`.
 
 ```dotnetcli
 dotnet new grpc -o src/TraderSys.Portfolios
 ```
 
-Na koniec Dodaj projekt do rozwiązania przy użyciu polecenia `dotnet sln`.
+Na koniec Dodaj projekt do rozwiązania przy użyciu polecenia `dotnet sln`:
 
 ```dotnetcli
 dotnet sln add src/TraderSys.Portfolios
 ```
 
 > [!TIP]
-> Ponieważ dany katalog zawiera tylko jeden plik `.csproj`, można w dalszym ciągu określić katalog, który ma zostać zapisany.
+> Ponieważ konkretny katalog zawiera tylko jeden plik `.csproj`, można określić tylko katalog, aby zapisać tekst.
 
 Teraz możesz otworzyć to rozwiązanie w programie Visual Studio 2019, Visual Studio Code lub dowolnym wybranym przez Ciebie edytorze.
 
@@ -66,7 +66,7 @@ Przykładowa usługa została utworzona przy użyciu szablonu gRPC, który zosta
 
 ### <a name="rename-and-edit-the-proto-file"></a>Zmiana nazwy i edytowanie pliku proto
 
-Przejdź dalej i Zmień nazwę pliku `Protos/greet.proto` na `Protos/portfolios.proto` i otwórz go w edytorze. Usuń wszystko po wierszu `package`, a następnie zmień nazwy `option csharp_namespace`, `package` i `service`, a następnie usuń domyślną usługę `SayHello`, aby kod wyglądał następująco.
+Przejdź dalej i Zmień nazwę pliku `Protos/greet.proto` na `Protos/portfolios.proto`i otwórz go w edytorze. Usuń wszystko po wierszu `package`. Następnie zmień nazwy `option csharp_namespace`, `package` i `service` i usuń domyślną usługę `SayHello`. Kod wygląda teraz następująco:
 
 ```protobuf
 syntax = "proto3";
@@ -85,7 +85,7 @@ service Portfolios {
 
 Jeśli zmienisz nazwę pliku `greet.proto` w zintegrowanym środowisku programistycznym (IDE), takim jak Visual Studio, odwołanie do tego pliku jest automatycznie aktualizowane w pliku `.csproj`. Jednak w innym edytorze, takim jak Visual Studio Code, odwołanie nie jest aktualizowane automatycznie, dlatego należy ręcznie edytować plik projektu.
 
-W obiektach docelowych kompilacji gRPC istnieje element `Protobuf` elementu, który pozwala określić, które pliki `.proto` mają być kompilowane, i które formy generowania kodu są wymagane (czyli "serwer" lub "klient").
+W obiektach docelowych kompilacji gRPC istnieje element elementu `Protobuf`, który pozwala określić, które pliki `.proto` mają być kompilowane, i które formy generowania kodu są wymagane (czyli "serwer" lub "klient").
 
 ```xml
 <ItemGroup>
@@ -93,9 +93,9 @@ W obiektach docelowych kompilacji gRPC istnieje element `Protobuf` elementu, kt�
 </ItemGroup>
 ```
 
-### <a name="rename-the-greeterservice-class"></a>Zmień nazwę klasy GreeterService
+### <a name="rename-the-greeterservice-class"></a>Zmień nazwę klasy `GreeterService`
 
-Klasa `GreeterService` znajduje się w folderze `Services` i dziedziczy po `Greeter.GreeterBase`. Zmień jej nazwę na `PortfolioService` i Zmień klasę bazową, aby `Portfolios.PortfoliosBase`. Usuń metody `override`.
+Klasa `GreeterService` znajduje się w folderze `Services` i dziedziczy po `Greeter.GreeterBase`. Zmień nazwę na `PortfolioService`i Zmień klasę bazową, aby `Portfolios.PortfoliosBase`. Usuń metody `override`.
 
 ```csharp
 public class PortfolioService : Portfolios.PortfoliosBase
@@ -125,5 +125,5 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 W następnej sekcji dodamy funkcjonalność do tej nowej usługi.
 
 >[!div class="step-by-step"]
->[Poprzedni](migrate-wcf-to-grpc.md)
->[Następny](migrate-request-reply.md)
+>[Poprzednie](migrate-wcf-to-grpc.md)
+>[dalej](migrate-request-reply.md)

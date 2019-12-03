@@ -2,20 +2,23 @@
 title: Docker-gRPC dla deweloperów WCF
 description: Tworzenie obrazów platformy Docker dla ASP.NET Core aplikacji gRPC
 ms.date: 09/02/2019
-ms.openlocfilehash: a5aceb4b5270cb828965e990a62db4147012adff
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d23dc46526183b459c36f11bae4def8b1c9b9410
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967839"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711303"
 ---
-# <a name="docker"></a>Docker
+# <a name="create-docker-images"></a>Tworzenie obrazów platformy Docker
 
-Ta sekcja będzie obejmować tworzenie obrazów platformy Docker dla ASP.NET Core aplikacji gRPC, gotowych do uruchamiania w środowiskach Docker, Kubernetes i innych kontenerach. Przykładowa aplikacja używana z aplikacją sieci Web ASP.NET Core MVC i usługą gRPC jest dostępna w repozytorium [dotnet-Architecture/gRPC-for-WCF-Developers](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/KubernetesSample) w witrynie GitHub.
+W tej sekcji opisano tworzenie obrazów platformy Docker dla ASP.NET Core aplikacji gRPC, gotowych do uruchamiania w środowiskach Docker, Kubernetes i innych kontenerach. Przykładowa aplikacja używana z aplikacją sieci Web ASP.NET Core MVC i usługą gRPC jest dostępna w repozytorium [dotnet-Architecture/gRPC-for-WCF-Developers](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/KubernetesSample) w witrynie GitHub.
 
 ## <a name="microsoft-base-images-for-aspnet-core-applications"></a>Obrazy podstawowe firmy Microsoft dla aplikacji ASP.NET Core
 
-Firma Microsoft udostępnia wiele podstawowych obrazów do kompilowania i uruchamiania aplikacji platformy .NET Core. Do utworzenia obrazu ASP.NET Core 3,0 są używane dwa obrazy podstawowe: obraz zestawu SDK do kompilowania i publikowania aplikacji oraz obraz środowiska uruchomieniowego na potrzeby wdrożenia.
+Firma Microsoft udostępnia wiele podstawowych obrazów do kompilowania i uruchamiania aplikacji platformy .NET Core. Aby utworzyć obraz ASP.NET Core 3,0, należy użyć dwóch obrazów podstawowych: 
+
+- Obraz zestawu SDK do kompilowania i publikowania aplikacji.
+- Obraz środowiska uruchomieniowego na potrzeby wdrożenia.
 
 | Obraz | Opis |
 | ----- | ----------- |
@@ -28,17 +31,17 @@ Dla każdego obrazu istnieją cztery warianty oparte na różnych dystrybucjach 
 | --------- | ----- | ----- |
 | 3,0 – Buster, 3,0 | Debian 10 | Obraz domyślny, jeśli nie określono żadnego wariantu systemu operacyjnego. |
 | 3,0 — Alpine | Alpine 3,9 | Obrazy Alpine Base są znacznie mniejsze niż Debian lub Ubuntu. |
-| 3,0 – Disco | Ubuntu 19,04 | |
-| 3,0 – Bionic | Ubuntu 18.04 | |
+| 3,0 – Disco | Ubuntu 19.04 | |
+| 3,0 – Bionic | Ubuntu 18,04 | |
 
-Obraz Alpine Base ma około 100 MB, w porównaniu do 200 MB dla obrazów Debian i Ubuntu, ale niektóre pakiety oprogramowania lub biblioteki mogą nie być dostępne w usłudze Alpine Package Management. Jeśli nie masz pewności, którego obrazu użyć, najlepiej naDebian się na domyślne, chyba że masz atrakcyjną potrzebę używania innego dystrybucjiu.
+Obraz Alpine Base ma około 100 MB, w porównaniu do 200 MB dla obrazów Debian i Ubuntu. Niektóre pakiety lub biblioteki oprogramowania mogą nie być dostępne w zarządzaniu pakietami Alpine. Jeśli nie masz pewności, którego obrazu użyć, prawdopodobnie wybierz domyślną debian.
 
 > [!IMPORTANT]
 > Upewnij się, że używasz tego samego wariantu systemu Linux do kompilowania i środowiska uruchomieniowego. Aplikacje skompilowane i opublikowane na jednym z wariantów mogą nie zadziałały na innym.
 
 ## <a name="create-a-docker-image"></a>Tworzenie obrazu platformy Docker
 
-Obraz platformy Docker jest definiowany przez *pliku dockerfile*, plik tekstowy, który zawiera wszystkie polecenia, które są potrzebne do skompilowania aplikacji i zainstalowania wszelkich zależności, które są wymagane do tworzenia lub uruchamiania aplikacji. Poniższy przykład pokazuje najprostszą pliku dockerfile dla aplikacji ASP.NET Core 3,0:
+Obraz platformy Docker jest definiowany przez *pliku dockerfile*. Jest to plik tekstowy, który zawiera wszystkie polecenia potrzebne do skompilowania aplikacji i zainstalowania wszelkich zależności, które są wymagane do kompilowania lub uruchamiania aplikacji. Poniższy przykład pokazuje najprostszą pliku dockerfile dla aplikacji ASP.NET Core 3,0:
 
 ```dockerfile
 # Application build steps
@@ -65,13 +68,13 @@ COPY --from=builder /published .
 ENTRYPOINT [ "dotnet", "StockData.dll" ]
 ```
 
-Pliku dockerfile ma dwie części: pierwszy używa `sdk` podstawowego obrazu do kompilowania i publikowania aplikacji. Drugi tworzy obraz środowiska uruchomieniowego z bazy `aspnet`. Jest to spowodowane tym, że obraz `sdk` jest około 900 MB w porównaniu do około 200 MB dla obrazu środowiska uruchomieniowego, a większość jego zawartości jest niepotrzebna w czasie wykonywania.
+Pliku dockerfile ma dwie części: pierwszy używa `sdk` podstawowego obrazu do kompilowania i publikowania aplikacji. Drugi tworzy obraz środowiska uruchomieniowego z bazy `aspnet`. Jest to spowodowane tym, że obraz `sdk` ma około 900 MB, w porównaniu do około 200 MB dla obrazu środowiska uruchomieniowego, a większość jego zawartości jest niepotrzebna w czasie wykonywania.
 
 ### <a name="the-build-steps"></a>Kroki kompilacji
 
 | Krok | Opis |
 | ---- | ----------- |
-| `FROM ...` | Deklaruje podstawowy obraz i przypisuje alias `builder` (zobacz następną sekcję dla wyjaśnienia). |
+| `FROM ...` | Deklaruje podstawowy obraz i przypisuje alias `builder`. |
 | `WORKDIR /src` | Tworzy katalog `/src` i ustawia go jako bieżący katalog roboczy. |
 | `COPY . .` | Kopiuje wszystkie elementy znajdujące się poniżej bieżącego katalogu na hoście do bieżącego katalogu na obrazie. |
 | `RUN dotnet restore` | Przywraca wszystkie pakiety zewnętrzne (ASP.NET Core 3,0 Framework jest wstępnie zainstalowany wraz z zestawem SDK). |
@@ -88,7 +91,7 @@ Pliku dockerfile ma dwie części: pierwszy używa `sdk` podstawowego obrazu do 
 
 ### <a name="https-in-docker"></a>HTTPS w Docker
 
-Podstawowe obrazy firmy Microsoft dla platformy Docker Ustaw zmienną środowiskową `ASPNETCORE_URLS` na `http://+:80`, co oznacza, że Kestrel będzie działać bez protokołu HTTPS na tym porcie. Jeśli używasz protokołu HTTPS z certyfikatem niestandardowym (zgodnie z opisem w [poprzedniej sekcji](self-hosted.md)), należy to zastąpić przez ustawienie zmiennej środowiskowej **w części Tworzenie obrazu czasu wykonywania w** pliku dockerfile.
+Obrazy podstawowe firmy Microsoft dla platformy Docker Ustaw zmienną środowiskową `ASPNETCORE_URLS` na `http://+:80`, co oznacza, że Kestrel działa bez protokołu HTTPS na tym porcie. Jeśli używasz protokołu HTTPS z certyfikatem niestandardowym (zgodnie z opisem w temacie [samodzielnych aplikacji gRPC](self-hosted.md)), należy to zmienić. Ustaw zmienną środowiskową w części Tworzenie obrazu środowiska uruchomieniowego pliku dockerfile.
 
 ```dockerfile
 # Runtime image creation
@@ -99,7 +102,7 @@ ENV ASPNETCORE_URLS=https://+:443
 
 ### <a name="the-dockerignore-file"></a>Plik. dockerignore
 
-Podobnie jak `.gitignore` plików, które wykluczają pewne pliki i katalogi z kontroli źródła, plik `.dockerignore` może służyć do wykluczania plików i katalogów z kopiowania do obrazu podczas kompilacji. Pozwala to nie tylko na kopiowanie czasu, ale może również uniknąć błędów powodujących pomyłkę, które powstały w wyniku (zwłaszcza) `obj` katalogu z komputera skopiowanego do obrazu. Należy dodać co najmniej wpisy dla `bin` i `obj` do pliku `.dockerignore`.
+Podobnie jak `.gitignore` plików, które wykluczają pewne pliki i katalogi z kontroli źródła, plik `.dockerignore` może służyć do wykluczania plików i katalogów z kopiowania do obrazu podczas kompilacji. To nie tylko zapisuje kopiowanie czasu, ale można również uniknąć niektórych błędów, które wynikają z tego, że katalog `obj` pochodzący z komputera został skopiowany do obrazu. Należy dodać do pliku `.dockerignore` wpisy dla `bin` i `obj`.
 
 ```console
 bin/
@@ -108,15 +111,15 @@ obj/
 
 ## <a name="build-the-image"></a>Kompilowanie obrazu
 
-W przypadku rozwiązania z pojedynczą aplikacją, a tym samym pliku dockerfile, najprostszą jest umieszczenie pliku dockerfile w katalogu podstawowym; to jest ten sam katalog, który jest plikiem `.sln`. W takim przypadku, aby skompilować obraz, użyj następującego polecenia `docker build` z katalogu zawierającego pliku dockerfile.
+W przypadku rozwiązania z jedną aplikacją, a tym samym pliku dockerfile, najprostszą jest umieszczenie pliku dockerfile w katalogu podstawowym. Innymi słowy należy umieścić je w tym samym katalogu, co plik `.sln`. W takim przypadku, aby skompilować obraz, użyj następującego polecenia `docker build` z katalogu zawierającego pliku dockerfile.
 
 ```console
 docker build --tag stockdata .
 ```
 
-Flaga `--tag` o niewłaściwej nazwie (którą można skrócić do `-t`) określa pełną nazwę obrazu, w *tym* rzeczywisty tag, jeśli został określony. `.` na końcu określa *kontekst* , w którym kompilacja będzie uruchamiana; bieżący katalog roboczy dla poleceń `COPY` w pliku dockerfile.
+Flaga `--tag` o niewłaściwej nazwie (którą można skrócić do `-t`) określa pełną nazwę obrazu, w tym rzeczywisty tag, jeśli został określony. `.` na końcu określa kontekst, w którym kompilacja będzie uruchamiana; bieżący katalog roboczy dla poleceń `COPY` w pliku dockerfile.
 
-Jeśli masz wiele aplikacji w ramach jednego rozwiązania, możesz zachować pliku dockerfile dla każdej aplikacji w swoim folderze, obok pliku `.csproj`, ale nadal należy uruchomić polecenie `docker build` z katalogu podstawowego, aby upewnić się, że rozwiązanie i wszystkie projekty są kopiowane do obrazu. Można określić pliku dockerfile pod bieżącym katalogiem przy użyciu flagi `--file` (lub `-f`).
+Jeśli masz wiele aplikacji w ramach jednego rozwiązania, możesz zachować pliku dockerfile dla każdej aplikacji w swoim folderze, obok pliku `.csproj`. Nadal powinno być uruchamiane `docker build` polecenie z katalogu podstawowego, aby upewnić się, że rozwiązanie i wszystkie projekty są kopiowane do obrazu. Można określić pliku dockerfile pod bieżącym katalogiem przy użyciu flagi `--file` (lub `-f`).
 
 ```console
 docker build --tag stockdata --file src/StockData/Dockerfile .
@@ -134,9 +137,9 @@ Flaga `-ti` łączy bieżący terminal z terminalem kontenera i działa w trybie
 
 ## <a name="push-the-image-to-a-registry"></a>Wypchnij obraz do rejestru
 
-Po zweryfikowaniu, że obraz działa, należy wypchnąć go do rejestru platformy Docker, aby udostępnić go w innych systemach. Sieci wewnętrzne muszą obsługiwać rejestr platformy Docker. Może to być tak proste, jak uruchamianie [własnego obrazu `registry` Docker](https://docs.docker.com/registry/deploying/) (to prawo, rejestr platformy Docker działa w kontenerze platformy Docker), ale dostępne są różne bardziej kompleksowe rozwiązania. W przypadku udostępniania zewnętrznego i używania w chmurze dostępne są różne rejestry zarządzane, takie jak [Azure Container Registry](https://docs.microsoft.com/azure/container-registry/) lub usługa [Docker Hub](https://docs.docker.com/docker-hub/repos/).
+Po zweryfikowaniu, że obraz działa, wypchnij go do rejestru platformy Docker, aby udostępnić go w innych systemach. Sieci wewnętrzne muszą obsługiwać rejestr platformy Docker. Może to być tak proste, jak uruchamianie [własnego obrazu `registry` Docker](https://docs.docker.com/registry/deploying/) (rejestr platformy Docker jest uruchamiany w kontenerze platformy Docker), ale dostępne są różne bardziej kompleksowe rozwiązania. W przypadku udostępniania zewnętrznego i używania w chmurze dostępne są różne rejestry zarządzane, takie jak [Azure Container Registry](https://docs.microsoft.com/azure/container-registry/) lub usługa [Docker Hub](https://docs.docker.com/docker-hub/repos/).
 
-Aby wypchnąć do centrum Docker, poprzedź nazwę obrazu nazwą użytkownika lub organizacji.
+Aby przeprowadzić wypychanie do centrum platformy Docker, poprzedź nazwę obrazu nazwą użytkownika lub organizacji.
 
 ```console
 docker tag stockdata myorg/stockdata
@@ -153,5 +156,5 @@ docker push internal-registry:5000/myorg/stockdata
 Gdy obraz znajduje się w rejestrze, można wdrożyć go na poszczególnych hostach platformy Docker lub w aparacie aranżacji kontenera, takim jak Kubernetes.
 
 >[!div class="step-by-step"]
->[Poprzedni](self-hosted.md)
->[Następny](kubernetes.md)
+>[Poprzednie](self-hosted.md)
+>[dalej](kubernetes.md)

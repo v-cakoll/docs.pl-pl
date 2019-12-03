@@ -2,12 +2,12 @@
 title: Siatki usług — gRPC dla deweloperów WCF
 description: Kierowanie i równoważenie żądań do usług gRPC w klastrze Kubernetes przy użyciu sieci siatkowej usługi.
 ms.date: 09/02/2019
-ms.openlocfilehash: d20275082973f30bddbb342da90454401d4f019b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: cc4855b1ed27e29076e4f13f5c5d3dffa63a6554
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966967"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711280"
 ---
 # <a name="service-meshes"></a>Siatki usług
 
@@ -21,7 +21,7 @@ Siatka usług to składnik infrastruktury, który kontroluje żądania usługi r
 
 Oczka usługi Kubernetes działają przez dodanie dodatkowego kontenera zwanego *serwerem proxy przyczepki*do każdego z nich znajdującego się w sieci. Serwer proxy przejmuje obsługę wszystkich żądań sieci przychodzących i wychodzących, umożliwiając Konfigurowanie i zarządzanie kwestiami sieci, które mają być oddzielone od kontenerów aplikacji, a także w wielu przypadkach, bez konieczności wprowadzania jakichkolwiek zmian w kodzie aplikacji.
 
-Zapoznaj się z [poprzednim przykładem rozdziału](kubernetes.md#testing-the-application), w którym wszystkie żądania gRPC z aplikacji sieci Web były kierowane do pojedynczego wystąpienia usługi gRPC. Dzieje się tak, ponieważ nazwa hosta usługi jest rozpoznawana jako adres IP, a adres IP jest buforowany przez okres istnienia wystąpienia `HttpClientHandler`. Możliwe jest obejście tego problemu przez obsługę wyszukiwań DNS ręcznie lub tworzenie wielu klientów, ale może to znacząco poskomplikowanić kod aplikacji bez konieczności dodawania żadnej wartości biznesowej lub klientów.
+Zapoznaj się z [poprzednim przykładem rozdziału](kubernetes.md#test-the-application), w którym wszystkie żądania gRPC z aplikacji sieci Web były kierowane do pojedynczego wystąpienia usługi gRPC. Dzieje się tak, ponieważ nazwa hosta usługi jest rozpoznawana jako adres IP, a adres IP jest buforowany przez okres istnienia wystąpienia `HttpClientHandler`. Możliwe jest obejście tego problemu przez obsługę wyszukiwań DNS ręcznie lub tworzenie wielu klientów, ale może to znacząco poskomplikowanić kod aplikacji bez konieczności dodawania żadnej wartości biznesowej lub klientów.
 
 Za pomocą sieci usługi, żądania z kontenera aplikacji są wysyłane do serwera proxy przyczepki, który może być wzajemnie dystrybuowany we wszystkich wystąpieniach innej usługi. Siatka może również:
 
@@ -124,5 +124,5 @@ spec:
 ```
 
 >[!div class="step-by-step"]
->[Poprzedni](kubernetes.md)
->[Następny](load-balancing.md)
+>[Poprzednie](kubernetes.md)
+>[dalej](load-balancing.md)

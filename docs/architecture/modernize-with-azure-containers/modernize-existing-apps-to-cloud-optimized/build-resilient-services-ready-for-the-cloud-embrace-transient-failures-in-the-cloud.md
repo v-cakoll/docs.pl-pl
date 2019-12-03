@@ -2,12 +2,12 @@
 title: Twórz odporne na błędy usługi w chmurze. Obsługa przejściowych błędów w chmurze
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Twórz odporne na błędy usługi w chmurze. Obsługa przejściowych błędów w chmurze
 ms.date: 04/30/2018
-ms.openlocfilehash: e6fae8140b55cb0308dca9f4b77e961501b41f8f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e516dc675ceb8def25c6d676bced0ea7f253b2d5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73739397"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711245"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Twórz odporne usługi dla chmury: Zastąp błędy przejściowe w chmurze
 
@@ -27,7 +27,7 @@ Podobny scenariusz może wystąpić w aplikacji, która korzysta z usług HTTP. 
 
 Odporna na błędy aplikacja, taka jak pokazana na rysunku 4-9, powinna implementować techniki takie jak "ponawianie prób z wykładniczą wycofywania", aby umożliwić aplikacji obsługę błędów przejściowych w zasobach. W aplikacjach należy również używać "wyłączników". Wyłącznik przerywa aplikacji próbuje uzyskać dostęp do zasobu, gdy jest to długotrwałe niepowodzenie. Korzystając z wyłącznika, aplikacja unika wywoływania odmowy usługi do siebie samej.
 
-![Diagram częściowych błędów obsłużonych przez ponowną próbę przy użyciu wykładniczej wycofywania.](./media/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud/retry-partial-failures.png)
+![Diagram częściowych błędów obsłużonych przez ponowną próbę przy użyciu wykładniczej wycofywania.](./media/retry-partial-failures.png)
 
 **Rysunek 4-9.** Częściowe błędy obsłużone przez ponowną próbę przy użyciu wykładniczej wycofywania
 
@@ -58,5 +58,5 @@ Aby dowiedzieć się, jak zaimplementować strategie obsługi częściowych awar
     https://github.com/App-vNext/Polly
 
 >[!div class="step-by-step"]
->[Poprzedni](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
->[Następny](modernize-your-apps-with-monitoring-and-telemetry.md)
+>[Poprzednie](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+>[dalej](modernize-your-apps-with-monitoring-and-telemetry.md)

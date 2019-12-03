@@ -2,16 +2,16 @@
 title: Kubernetes — gRPC dla deweloperów WCF
 description: Uruchamianie ASP.NET Core gRPC Services w klastrze Kubernetes.
 ms.date: 09/02/2019
-ms.openlocfilehash: 503b582ae9fdcf8c72c87558de3a8ddd898489aa
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 22271343f8f0d0454469b2f35e717f5b7e939294
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967567"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711287"
 ---
 # <a name="kubernetes"></a>Kubernetes
 
-Chociaż istnieje możliwość ręcznego uruchamiania kontenerów na hostach platformy Docker, w przypadku niezawodnych systemów produkcyjnych zaleca się używanie aparatu aranżacji kontenera do zarządzania wieloma wystąpieniami uruchomionymi na kilku serwerach w klastrze. Dostępne są różne aparaty aranżacji kontenerów, w tym Kubernetes, Docker Swarm i Apache Mesos. Jednak te aparaty Kubernetes są daleko i daleko najczęściej używane, więc będą skoncentrowane na tym rozdziale.
+Chociaż istnieje możliwość ręcznego uruchamiania kontenerów na hostach platformy Docker, w przypadku niezawodnych systemów produkcyjnych lepiej jest używać aparatu aranżacji kontenera do zarządzania wieloma wystąpieniami uruchomionymi na kilku serwerach w klastrze. Dostępne są różne aparaty aranżacji kontenerów, w tym Kubernetes, Docker Swarm i Apache Mesos. Jednak te aparaty Kubernetes są daleko i daleko najczęściej używane, więc będą skoncentrowane na tym rozdziale.
 
 Kubernetes obejmuje następujące funkcje:
 
@@ -19,17 +19,17 @@ Kubernetes obejmuje następujące funkcje:
 - **Testy kondycji** monitorują kontenery, aby zapewnić ciągłość usługi.
 - **Funkcja odnajdywania usługi & DNS** obsługuje routing między usługami w ramach klastra.
 - Ruch przychodzący udostępnia wybrane usługi zewnętrznie i **ogólnie udostępnia równoważenie** obciążenia między wystąpieniami tych usług.
-- **Zarządzanie zasobami** dołącza zasoby zewnętrzne, takie jak magazynowanie do kontenerów.
+- **Zarządzanie zasobami** dołącza zasoby zewnętrzne, takie jak magazyn, do kontenerów.
 
-W tym rozdziale szczegółowo opisano sposób wdrażania usługi ASP.NET Core gRPC i witryny sieci Web, która korzysta z usługi w klastrze Kubernetes. Używana przykładowa aplikacja jest dostępna w repozytorium [dotnet-Architecture/GRPC-for-WCF-Developers](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/KubernetesSample) w witrynie GitHub.
+W tym rozdziale szczegółowo opisano sposób wdrażania usługi ASP.NET Core gRPC i witryny sieci Web, która korzysta z usługi w klastrze Kubernetes. Używana przykładowa aplikacja jest dostępna w repozytorium [dotnet-architectur/GRPC-for-WCF-Developers](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/KubernetesSample) w witrynie GitHub.
 
 ## <a name="kubernetes-terminology"></a>Terminologia Kubernetes
 
-Kubernetes korzysta z *konfiguracji żądanego stanu*: interfejs API jest używany do opisywania *obiektów, takich jak*zbiory, *wdrożenia* i *usługi*, a *płaszczyzna kontroli* wymaga wdrożenia żądanego stanu dla wszystkich *węzłów* w *klastrze*. Klaster Kubernetes ma węzeł *główny* z uruchomionym *interfejsem API Kubernetes*, który może być przekazywany programowo lub za pomocą narzędzia wiersza polecenia `kubectl`. `kubectl` może tworzyć obiekty i zarządzać nimi za pomocą argumentów wiersza polecenia, ale najlepiej sprawdza się w przypadku plików YAML zawierających dane deklaracji dla obiektów Kubernetes.
+Kubernetes korzysta z *konfiguracji żądanego stanu*: interfejs API służy do opisywania *obiektów, takich jak*zbiory, *wdrożenia*i *usługi*, a *płaszczyzna kontroli* wymaga wdrożenia żądanego stanu we wszystkich *węzłach* w *klastrze*. Klaster Kubernetes ma węzeł *główny* z uruchomionym *interfejsem API Kubernetes*, do którego można się komunikować programowo lub za pomocą narzędzia wiersza polecenia `kubectl`. `kubectl` może tworzyć obiekty i zarządzać nimi za pomocą argumentów wiersza polecenia, ale najlepiej sprawdza się w przypadku plików YAML zawierających dane deklaracji dla obiektów Kubernetes.
 
 ### <a name="kubernetes-yaml-files"></a>Pliki YAML Kubernetes
 
-Każdy plik Kubernetes YAML będzie miał co najmniej trzy właściwości najwyższego poziomu.
+Każdy plik Kubernetes YAML będzie miał co najmniej trzy właściwości najwyższego poziomu:
 
 ```yaml
 apiVersion: v1
@@ -38,7 +38,7 @@ metadata:
   # Object properties
 ```
 
-Właściwość `apiVersion` służy do określenia wersji (i interfejsu API), do której jest przeznaczony plik. Właściwość `kind` określa rodzaj obiektu reprezentowanego przez YAML. Właściwość `metadata` zawiera właściwości obiektu, takie jak `name`, `namespace`lub `labels`.
+Właściwość `apiVersion` służy do określenia wersji (i interfejsu API), do której jest przeznaczony plik. Właściwość `kind` określa rodzaj obiektu reprezentowanego przez YAML. Właściwość `metadata` zawiera właściwości obiektu, takie jak `name`, `namespace`i `labels`.
 
 Większość plików YAML Kubernetes zawiera również sekcję `spec` opisującą zasoby i konfigurację niezbędne do utworzenia obiektu.
 
@@ -52,25 +52,25 @@ Usługi są meta obiektów, które opisują (lub zbiory) i umożliwiają dostęp
 
 ### <a name="deployments"></a>Wdrożenia
 
-Wdrożenia są *opisanymi obiektami stanu* dla zasobników. Jeśli utworzysz element pod ręcznie, po jego zakończeniu nie zostanie on ponownie uruchomiony. Wdrożenia są używane do poinformowania klastra, którego zasobniki i ile replik tych zasobników powinna działać w obecnym czasie.
+Wdrożenia są obiektami *żądanych stanów* dla zasobników. Jeśli utworzysz element pod ręcznie, nie zostanie on ponownie uruchomiony po zakończeniu. Wdrożenia są używane do poinformowania klastra, którego zasobniki i ile replik tych zasobników powinna działać w obecnym czasie.
 
 ### <a name="other-objects"></a>Inne obiekty
 
-Klasy, usługi i wdrożenia to trzy najbardziej podstawowe typy obiektów. Istnieją dziesiątki innych typów obiektów, które są zarządzane przez klaster Kubernetes. Aby uzyskać więcej informacji, zapoznaj się z dokumentacją dotyczącą [pojęć Kubernetes](https://kubernetes.io/docs/concepts/) .
+Klasy, usługi i wdrożenia to trzy najbardziej podstawowe typy obiektów. Istnieją dziesiątki innych typów obiektów, które są zarządzane przez klastry Kubernetes. Aby uzyskać więcej informacji, zapoznaj się z dokumentacją dotyczącą [pojęć Kubernetes](https://kubernetes.io/docs/concepts/) .
 
 ### <a name="namespaces"></a>{1&gt;Przestrzenie nazw&lt;1}
 
-Klastry Kubernetes są przeznaczone do skalowania do setek lub tysięcy węzłów i uruchamiania podobnej liczby usług. Aby uniknąć konfliktów między nazwami obiektów, przestrzenie nazw są używane do grupowania obiektów razem w ramach większych aplikacji. Kubernetes własne usługi działają w przestrzeni nazw `default`. Wszystkie obiekty użytkownika należy utworzyć we własnych przestrzeniach nazw, aby uniknąć potencjalnych konfliktów z obiektami domyślnymi lub innymi dzierżawcami w klastrze.
+Klastry Kubernetes są przeznaczone do skalowania do setek lub tysięcy węzłów oraz do uruchamiania podobnych liczb usług. Aby uniknąć konfliktów między nazwami obiektów, przestrzenie nazw są używane do grupowania obiektów razem w ramach większych aplikacji. Usługi Kubernetes działają w przestrzeni nazw `default`. Wszystkie obiekty użytkownika należy utworzyć we własnych przestrzeniach nazw, aby uniknąć potencjalnych konfliktów z obiektami domyślnymi lub innymi dzierżawcami w klastrze.
 
 ## <a name="get-started-with-kubernetes"></a>Wprowadzenie do Kubernetes
 
-Jeśli używasz programu Docker Desktop dla systemu Windows lub macOS, Kubernetes jest już dostępny. Po prostu włącz go w sekcji Kubernetes w oknie Ustawienia.
+Jeśli używasz programu Docker Desktop dla systemu Windows lub pulpitu Docker dla komputerów Mac, Kubernetes jest już dostępny. Po prostu włącz je w sekcji **Kubernetes** w oknie **Ustawienia** :
 
 ![Włączanie Kubernetes w programie Docker Desktop](media/kubernetes/enable-kubernetes-docker-desktop.png)
 
-Aby uruchomić lokalny klaster Kubernetes w systemie Linux, zapoznaj się z [minikube](https://github.com/kubernetes/minikube)lub [MicroK8s](https://microk8s.io/) , jeśli dystrybucja systemu Linux obsługuje funkcję [przyciągania](https://snapcraft.io/).
+Aby uruchomić lokalny klaster Kubernetes w systemie Linux, należy wziąć pod uwagę [minikube](https://github.com/kubernetes/minikube)lub [MicroK8s](https://microk8s.io/) , jeśli dystrybucja systemu Linux obsługuje funkcję [przyciągania](https://snapcraft.io/).
 
-Aby sprawdzić, czy klaster działa i jest dostępny, uruchom polecenie `kubectl version`.
+Aby upewnić się, że klaster działa i jest dostępny, uruchom polecenie `kubectl version`:
 
 ```console
 kubectl version
@@ -82,19 +82,19 @@ W tym przykładzie zarówno interfejs wiersza polecenia `kubectl`, jak i serwer 
 
 ## <a name="run-services-on-kubernetes"></a>Uruchamianie usług w usłudze Kubernetes
 
-Przykładowa aplikacja ma katalog `kube` zawierający trzy pliki YAML. Plik `namespace.yml` deklaruje niestandardową przestrzeń nazw, `stocks`. Plik `stockdata.yml` deklaruje wdrożenie i usługę dla aplikacji gRPC, a plik `stockweb.yml` deklaruje wdrożenie i usługę dla aplikacji internetowej ASP.NET Core 3,0 MVC korzystającej z usługi gRPC.
+Przykładowa aplikacja ma katalog `kube`, który zawiera trzy pliki YAML. Plik `namespace.yml` deklaruje niestandardową przestrzeń nazw: `stocks`. Plik `stockdata.yml` deklaruje wdrożenie i usługę dla aplikacji gRPC, a plik `stockweb.yml` deklaruje wdrożenie i usługę dla aplikacji internetowej ASP.NET Core 3,0 MVC korzystającej z usługi gRPC.
 
-Aby użyć pliku `YAML` z `kubectl`, użyj polecenia `apply -f`.
+Aby użyć pliku `YAML` z `kubectl`, uruchom polecenie `apply -f`:
 
 ```console
 kubectl apply -f object.yml
 ```
 
-Polecenie `apply` sprawdza poprawność pliku YAML i wyświetla wszystkie błędy otrzymane z interfejsu API, ale nie czeka na utworzenie wszystkich obiektów zadeklarowanych w pliku, ponieważ może to potrwać trochę czasu. Użyj `kubectl get` polecenia z odpowiednimi typami obiektów, aby sprawdzić Tworzenie obiektów w klastrze.
+Polecenie `apply` sprawdza poprawność pliku YAML i wyświetla wszystkie błędy otrzymane z interfejsu API, ale nie czeka na utworzenie wszystkich obiektów zadeklarowanych w pliku, ponieważ może to potrwać pewien czas. Użyj `kubectl get` polecenia z odpowiednimi typami obiektów, aby sprawdzić Tworzenie obiektów w klastrze.
 
 ### <a name="the-namespace-declaration"></a>Deklaracja przestrzeni nazw
 
-Deklaracja przestrzeni nazw jest prosta i wymaga przypisania `name`.
+Deklaracja przestrzeni nazw jest prosta i wymaga przypisania tylko `name`:
 
 ```yaml
 apiVersion: v1
@@ -103,7 +103,7 @@ metadata:
   name: stocks
 ```
 
-Użyj `kubectl`, aby zastosować plik `namespace.yml` i sprawdź, czy przestrzeń nazw została utworzona pomyślnie.
+Użyj `kubectl`, aby zastosować plik `namespace.yml` i potwierdzić, że przestrzeń nazw została utworzona pomyślnie:
 
 ```console
 > kubectl apply -f namespace.yml
@@ -120,7 +120,7 @@ Plik `stockdata.yml` deklaruje dwa obiekty: wdrożenie i usługa.
 
 #### <a name="the-stockdata-deployment"></a>Wdrożenie StockData
 
-Część wdrożenia zawiera `spec` dla samego wdrożenia, w tym liczbę wymaganych replik i `template` dla obiektów pod, które mają być utworzone i zarządzane przez wdrożenie. Należy pamiętać, że obiekty wdrożenia są zarządzane za pomocą interfejsu API `apps`, jak określono w `apiVersion`, a nie głównego interfejsu API Kubernetes.
+Część wdrożenia pliku YAML zawiera `spec` dla samego wdrożenia, w tym liczbę wymaganych replik i `template` dla obiektów pod, które mają być utworzone i zarządzane przez wdrożenie. Należy pamiętać, że obiekty wdrożenia są zarządzane przez interfejs API `apps`, jak określono w `apiVersion`, a nie na głównym interfejsie API Kubernetes.
 
 ```yaml
 apiVersion: apps/v1
@@ -157,12 +157,12 @@ Sekcja `template.spec` deklaruje kontener, który ma zostać uruchomiony. Podcza
 > [!IMPORTANT]
 > Domyślnie Kubernetes będzie zawsze sprawdzać i próbować ściągnąć nowy obraz. Jeśli nie można znaleźć obrazu w żadnym ze znanych repozytoriów, tworzenie pod zakończy się niepowodzeniem. Aby można było korzystać z obrazów lokalnych, należy ustawić `imagePullPolicy` na `Never`.
 
-Właściwość `ports` określa, które porty kontenerów powinny być publikowane w obszarze.  Obraz `stockservice` uruchamia usługę na standardowym porcie HTTP, więc jest publikowany port 80.
+Właściwość `ports` określa, które porty kontenerów powinny być publikowane w obszarze. Obraz `stockservice` uruchamia usługę na standardowym porcie HTTP, więc jest publikowany port 80.
 
-Sekcja `resources` stosuje limity zasobów do kontenera działającego w ramach. Jest to dobre rozwiązanie, ponieważ uniemożliwia to osobie korzystającej z używania całego dostępnego procesora lub pamięci w węźle.
+Sekcja `resources` stosuje limity zasobów do kontenera działającego w ramach. Jest to dobre rozwiązanie, ponieważ uniemożliwia osobie korzystającej z używania całego dostępnego procesora lub pamięci w węźle.
 
 > [!NOTE]
-> ASP.NET Core 3,0 został zoptymalizowany i dostrojony do uruchamiania w kontenerach z ograniczeniami zasobów, a `dotnet/core/aspnet` obrazu platformy Docker ustawia zmienną środowiskową, aby poinformować środowisko uruchomieniowe `dotnet`, że znajduje się w kontenerze.
+> ASP.NET Core 3,0 został zoptymalizowany i dostrojony do uruchamiania w kontenerach z ograniczoną ilością zasobów. Obraz `dotnet/core/aspnet` Docker ustawia zmienną środowiskową, aby poinformować środowisko uruchomieniowe `dotnet`, że znajduje się w kontenerze.
 
 #### <a name="the-stockdata-service"></a>Usługa StockData
 
@@ -181,11 +181,11 @@ spec:
     run: stockdata
 ```
 
-Specyfikacja usługi używa właściwości `selector` do dopasowania uruchomionego `Pods`, w tym przypadku wyszukiwanie zasobników z etykietą `run: stockdata`. Określone `port` na zgodnych Podstych są publikowane przez nazwaną usługę. Inne zasobniki działające w przestrzeni nazw `stocks` mogą uzyskać dostęp do protokołu HTTP w tej usłudze przy użyciu `http://stockdata` jako adresu. Na podst. w innych przestrzeniach nazw można używać nazwy hosta `http://stockdata.stocks`. Dostęp do usługi wzajemnej przestrzeni nazw można kontrolować przy użyciu [zasad sieciowych](https://kubernetes.io/docs/concepts/services-networking/network-policies/).
+`spec` usługi używa właściwości `selector` w celu dopasowania `Pods`, w tym przypadku jest to wyszukiwanie w przypadku, gdy są używane etykiety `run: stockdata`. Określony `port` na zgodnych podst. jest publikowany przez nazwę usługi. Inne zasobniki działające w przestrzeni nazw `stocks` mogą uzyskać dostęp do protokołu HTTP w tej usłudze, używając `http://stockdata` jako adresu. Na podst. w innych przestrzeniach nazw można używać nazwy hosta `http://stockdata.stocks`. Dostęp do usługi wzajemnej przestrzeni nazw można kontrolować przy użyciu [zasad sieciowych](https://kubernetes.io/docs/concepts/services-networking/network-policies/).
 
 #### <a name="deploy-the-stockdata-application"></a>Wdrażanie aplikacji StockData
 
-Użyj `kubectl`, aby zastosować plik `stockdata.yml` i sprawdź, czy zostało utworzone wdrożenie i usługa.
+Użyj `kubectl`, aby zastosować plik `stockdata.yml` i potwierdzić, że wdrożenie i usługa zostały utworzone:
 
 ```console
 > kubectl apply -f .\stockdata.yml
@@ -254,31 +254,31 @@ spec:
 
 #### <a name="environment-variables"></a>Zmienne środowiskowe
 
-Sekcja `env` obiektu wdrożenia określa zmienne środowiskowe, które mają być ustawiane w kontenerze, w którym są uruchomione `stockweb:1.0.0` obrazy.
+Sekcja `env` obiektu wdrożenia określa zmienne środowiskowe, które mają być ustawiane w kontenerze, w którym są uruchomione obrazy `stockweb:1.0.0`.
 
 Zmienna środowiskowa **`StockData__Address`** zostanie zamapowana na ustawienie konfiguracji `StockData:Address` z dostawcą konfiguracji EnvironmentVariables. To ustawienie powoduje użycie podwójnego podkreślenia między nazwami w oddzielnymi sekcjach. Adres używa nazwy usługi `stockdata`, która działa w tej samej przestrzeni nazw Kubernetes.
 
-Zmienna środowiskowa **`DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT`** ustawia przełącznik <xref:System.AppContext>, który włącza nieszyfrowane połączenia HTTP/2 dla <xref:System.Net.Http.HttpClient>. Ta zmienna środowiskowa jest odpowiednikiem ustawienia przełącznika w kodzie, jak pokazano tutaj.
+Zmienna środowiskowa **`DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT`** ustawia przełącznik <xref:System.AppContext>, który włącza nieszyfrowane połączenia HTTP/2 dla <xref:System.Net.Http.HttpClient>. Ta zmienna środowiskowa wykonuje te same czynności co w przypadku ustawienia przełącznika w kodzie, jak pokazano poniżej:
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 ```
 
-Użycie zmiennej środowiskowej dla przełącznika oznacza, że ustawienie można łatwo zmienić w zależności od kontekstu, w którym działa aplikacja.
+Jeśli użyjesz zmiennej środowiskowej dla przełącznika, możesz łatwo zmienić kontekst w zależności od kontekstu, w którym działa aplikacja.
 
 #### <a name="service-types"></a>Typy usług
 
-Aby aplikacja sieci Web była dostępna spoza klastra, zostanie użyta Właściwość `type: NodePort`. Ten typ właściwości powoduje, że Kubernetes publikuje port 80 w usłudze do dowolnego portu w zewnętrznych gniazdach sieciowych klastra. Przypisany port można znaleźć za pomocą polecenia `kubectl get service`.
+Właściwość `type: NodePort` służy do udostępniania aplikacji sieci Web spoza klastra. Ten typ właściwości powoduje, że Kubernetes publikuje port 80 w usłudze do dowolnego portu w zewnętrznych gniazdach sieciowych klastra. Przypisany port można znaleźć za pomocą polecenia `kubectl get service`.
 
-Usługa `stockdata` nie powinna być dostępna spoza klastra, dlatego użyto typu domyślnego, `ClusterIP`.
+Usługa `stockdata` nie powinna być dostępna spoza klastra, dlatego używa typu domyślnego, `ClusterIP`.
 
 Systemy produkcyjne najprawdopodobniej będą korzystać z zintegrowanego modułu równoważenia obciążenia w celu udostępnienia aplikacji publicznych klientom zewnętrznym. Usługi uwidocznione w ten sposób powinny używać typu `LoadBalancer`.
 
-Aby uzyskać więcej informacji na temat typów usług, zobacz dokumentację [Kubernetes "Publishing Services"](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types) .
+Aby uzyskać więcej informacji na temat typów usług, zobacz dokumentację [Kubernetes Publishing Services](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types) .
 
 #### <a name="deploy-the-stockweb-application"></a>Wdrażanie aplikacji StockWeb
 
-Użyj `kubectl`, aby zastosować plik `stockweb.yml` i sprawdź, czy zostało utworzone wdrożenie i usługa.
+Użyj `kubectl`, aby zastosować plik `stockweb.yml` i potwierdzić, że wdrożenie i usługa zostały utworzone:
 
 ```console
 > kubectl apply -f .\stockweb.yml
@@ -294,24 +294,24 @@ NAME       TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
 stockweb   NodePort   10.106.141.5   <none>        80:32564/TCP   13s
 ```
 
-Dane wyjściowe polecenia `get service` pokazują, że port HTTP został opublikowany do `32564` portów w sieci zewnętrznej. w przypadku programu Docker Desktop będzie to localhost. Dostęp do aplikacji można uzyskać, przechodząc do `http://localhost:32564`.
+Dane wyjściowe polecenia `get service` pokazują, że port HTTP został opublikowany na porcie 32564 w sieci zewnętrznej. W przypadku programu Docker Desktop będzie to localhost. Możesz uzyskać dostęp do aplikacji, przechodząc do `http://localhost:32564`.
 
-### <a name="testing-the-application"></a>Testowanie aplikacji
+### <a name="test-the-application"></a>Testowanie aplikacji
 
-Aplikacja StockWeb wyświetla listę zasobów NASDAQ, które są pobierane z prostej usługi żądanie-odpowiedź. W celach demonstracyjnych każdy wiersz zawiera również unikatowy identyfikator wystąpienia usługi, która go zwróciła.
+Aplikacja StockWeb wyświetla listę zasobów NASDAQ, które są pobierane z prostej usługi żądanie-odpowiedź. W tej demonstracji każdy wiersz zawiera również unikatowy identyfikator wystąpienia usługi, która go zwróciła.
 
 ![Zrzut ekranu StockWeb](media/kubernetes/stockweb-screenshot.png)
 
 Jeśli liczba replik usługi `stockdata` została zwiększona, może wystąpić konieczność zmiany wartości **serwera** z wiersza na wiersz, ale w rzeczywistości wszystkie rekordy 100 są zawsze zwracane z tego samego wystąpienia. Po odświeżeniu strony co kilka sekund identyfikator serwera pozostaje taki sam. Dlaczego tak się dzieje? W tym miejscu znajdują się dwa czynniki.
 
-Najpierw system odnajdowania usług Kubernetes domyślnie używa funkcji równoważenia obciążenia "Round-Robin". Podczas pierwszej kwerendy serwera DNS zostanie zwrócony pierwszy pasujący adres IP dla usługi. Następnym razem, następnym adresem IP na liście itd. aż do końca, w którym momencie zostanie on ponownie uruchomiony.
+Najpierw system odnajdowania usług Kubernetes domyślnie używa równoważenia obciążenia z działaniem okrężnym. Podczas pierwszej kwerendy serwera DNS zostanie zwrócony pierwszy pasujący adres IP dla usługi. Następnym razem zwróci Następny adres IP z listy i tak dalej, aż do końca. W tym momencie pętla wraca do początku.
 
-Następnie `HttpClient` używany dla klienta gRPC aplikacji StockWeb jest tworzony i zarządzany przez [ASP.NET Core HttpClientFactory](../microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md), a jedno wystąpienie tego klienta jest używane dla każdego wywołania strony. Klient wykonuje tylko jedno wyszukiwanie DNS, więc wszystkie żądania są kierowane na ten sam adres IP. Ponadto, ponieważ `HttpClientHandler` jest buforowany ze względu na wydajność, wiele żądań w szybkim pomyślnym będzie używać tego samego adresu IP, do momentu wygaśnięcia zbuforowanego wpisu DNS lub wystąpienia programu *obsługi zostanie usunięte* z jakiegoś powodu.
+Następnie `HttpClient` używany dla klienta gRPC aplikacji StockWeb jest tworzony i zarządzany przez [ASP.NET Core HttpClientFactory](../microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md), a jedno wystąpienie tego klienta jest używane dla każdego wywołania strony. Klient wykonuje tylko jedno wyszukiwanie DNS, więc wszystkie żądania są kierowane na ten sam adres IP. I ponieważ `HttpClientHandler` jest buforowana ze względu na wydajność, wiele żądań w szybkim pomyślnym będzie używać tego samego adresu IP, do momentu wygaśnięcia zbuforowanego wpisu DNS lub wystąpienia programu *obsługi zostanie usunięte* z jakiegoś powodu.
 
-Oznacza to, że domyślnie żądania kierowane do usługi gRPC nie są zrównoważone dla wszystkich wystąpień tej usługi w klastrze. Różni klienci będą korzystać z różnych wystąpień, ale nie zagwarantuje dobrego rozkładu żądań i zrównoważonego użycia zasobów.
+Wynika to z tego, że domyślne żądania do usługi gRPC nie są zrównoważone dla wszystkich wystąpień tej usługi w klastrze. Różni klienci będą korzystać z różnych wystąpień, ale nie zagwarantuje dobrego rozkładu żądań lub zrównoważonego użycia zasobów.
 
-Następny rozdział, [siatki usługi](service-mesh.md), zobacz, jak rozwiązać ten problem.
+Następny rozdział, [siatki usług](service-mesh.md), spowoduje rozwiązanie tego problemu.
 
 >[!div class="step-by-step"]
->[Poprzedni](docker.md)
->[Następny](service-mesh.md)
+>[Poprzednie](docker.md)
+>[dalej](service-mesh.md)

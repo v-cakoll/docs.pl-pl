@@ -2,12 +2,12 @@
 title: Zabezpieczenia odnajdywania — przykład
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: dfc0dfcd3b4d814a158b328ef202d5438e583a8c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8469b69baabcd2ba9185956c276554b4bb929d85
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039814"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712054"
 ---
 # <a name="discovery-security-sample"></a>Zabezpieczenia odnajdywania — przykład
 Specyfikacja odnajdywania nie wymaga, aby punkty końcowe, które uczestniczą w procesie odnajdywania, były bezpieczne. Udoskonalenie komunikatów odnajdowania z zabezpieczeniami zmniejszają różne rodzaje ataków (zmiana komunikatów, odmowa usługi, powtarzanie, fałszowanie). Ten przykład implementuje niestandardowe kanały, które obliczają i weryfikują sygnatury komunikatów przy użyciu formatu podpisu kompaktowego (opisanego w sekcji 8,2 specyfikacji WS-Discovery). Przykład obsługuje [specyfikację odnajdywania 2005](https://go.microsoft.com/fwlink/?LinkId=177912) i [wersję 1,1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -35,25 +35,25 @@ Specyfikacja odnajdywania nie wymaga, aby punkty końcowe, które uczestniczą w
 ```  
   
 > [!NOTE]
-> `PrefixList` Dodano do protokołu 2008 odnajdywania wersji.  
+> `PrefixList` został dodany w protokole odnajdywania wersji 2008.  
   
- Aby obliczyć sygnaturę, przykład określa rozwinięte elementy podpisu. Zostanie utworzony podpis XML`SignedInfo`() `ds` przy użyciu prefiksu przestrzeni nazw, zgodnie z wymaganiami specyfikacji WS-Discovery. Treść i wszystkie nagłówki w przestrzeni nazw odnajdowania i adresowania są przywoływane w podpisie, więc nie mogą zostać naruszone. Każdy element, do którego istnieje odwołanie, jest przekształcany przy http://www.w3.org/2001/10/xml-exc-c14n# użyciu nieprawidłowej postaci kanonicznej (), a następnie obliczana http://www.w3.org/2000/09/xmldsig#sha1 jest wartość skrótu SHA-1 (). W oparciu o wszystkie elementy, do których istnieją odwołania i ich wartości skrótu, wartość podpisu jest obliczana przy http://www.w3.org/2000/09/xmldsig#rsa-sha1 użyciu algorytmu RSA ().  
+ Aby obliczyć sygnaturę, przykład określa rozwinięte elementy podpisu. Podpis XML (`SignedInfo`) jest tworzony przy użyciu prefiksu przestrzeni nazw `ds`, zgodnie z wymaganiami specyfikacji WS-Discovery. Treść i wszystkie nagłówki w przestrzeni nazw odnajdowania i adresowania są przywoływane w podpisie, więc nie mogą zostać naruszone. Każdy element, do którego się odwoływano, jest przekształcany przy użyciu klucza kanonicznego (http://www.w3.org/2001/10/xml-exc-c14n# ), a następnie obliczana jest wartość skrótu SHA-1 (http://www.w3.org/2000/09/xmldsig#sha1 ). W oparciu o wszystkie elementy, do których istnieją odwołania i ich wartości skrótu, wartość podpisu jest obliczana przy użyciu algorytmu RSA (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ).  
   
- Komunikaty są podpisane przy użyciu certyfikatu określonego przez klienta. Podczas tworzenia elementu powiązania należy określić lokalizację magazynu, nazwę i nazwę podmiotu certyfikatu. `KeyId` W podpisie kompaktowym reprezentuje identyfikator klucza tokenu podpisywania i jest identyfikatorem klucza podmiotu (Ski) tokenu podpisującego lub (Jeśli ta nazwa nie istnieje) skrót SHA-1 klucza publicznego tokenu podpisywania.  
+ Komunikaty są podpisane przy użyciu certyfikatu określonego przez klienta. Podczas tworzenia elementu powiązania należy określić lokalizację magazynu, nazwę i nazwę podmiotu certyfikatu. `KeyId` w podpisie kompaktowym reprezentuje identyfikator klucza tokenu podpisywania i jest identyfikatorem klucza podmiotu (SKI) tokenu podpisywania lub (Jeśli ta nazwa nie istnieje) skrót SHA-1 klucza publicznego tokenu podpisywania.  
   
 ## <a name="secure-channel-listener"></a>Odbiornik bezpiecznego kanału  
- Odbiornik bezpiecznego kanału tworzy kanały wejściowe lub dupleksowe, które weryfikują skrócony podpis w odebranych komunikatach. Aby sprawdzić podpis, `KeyId` określony w podpisie kompaktowym dołączonym do wiadomości jest używany do wybierania certyfikatu z określonego magazynu. Jeśli wiadomość nie ma podpisu lub sprawdzanie podpisu nie powiedzie się, komunikaty są usuwane. Aby użyć bezpiecznego powiązania, przykład definiuje fabrykę, która tworzy niestandardowe <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> i <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> z dodaniem bezpiecznego powiązania odnajdywania. Te bezpieczne punkty końcowe mogą być używane w detektorach anonsów odnajdowania i odnajdywanych usługach.  
+ Odbiornik bezpiecznego kanału tworzy kanały wejściowe lub dupleksowe, które weryfikują skrócony podpis w odebranych komunikatach. Aby sprawdzić podpis, `KeyId` określony w podpisie kompaktowym dołączonym do wiadomości jest używany do wybierania certyfikatu z określonego magazynu. Jeśli wiadomość nie ma podpisu lub sprawdzanie podpisu nie powiedzie się, komunikaty są usuwane. Aby użyć bezpiecznego powiązania, przykład definiuje fabrykę tworzącą <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> niestandardowe i <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> z dodaniem elementu bezpieczne odnajdywania. Te bezpieczne punkty końcowe mogą być używane w detektorach anonsów odnajdowania i odnajdywanych usługach.  
   
 ## <a name="sample-details"></a>Przykładowe szczegóły  
  Przykład obejmuje bibliotekę i 4 aplikacje konsolowe:  
   
 - **DiscoverySecurityChannels**: Biblioteka, która uwidacznia bezpieczne powiązanie. Biblioteka oblicza i weryfikuje skrócony podpis dla komunikatów wychodzących/przychodzących.  
   
-- **Usługa**: Usługa, która uwidacznia ICalculatorService kontraktu, jest obsługiwana przez siebie. Usługa jest oznaczona jako wykrywalna. Użytkownik określa szczegóły certyfikatu służącego do podpisywania wiadomości przez określenie lokalizacji i nazwy magazynu oraz nazwy podmiotu lub innego unikatowego identyfikatora certyfikatu oraz magazynu, w którym znajdują się certyfikaty klienta (certyfikaty używane do Sprawdź podpis dla wiadomości przychodzących). W oparciu o te szczegóły UdpDiscoveryEndpoint z dodatkowymi zabezpieczeniami jest zbudowany i używany.  
+- **Usługa**: usługa ujawniania kontraktu ICalculatorService, który jest obsługiwany przez siebie. Usługa jest oznaczona jako wykrywalna. Użytkownik określa szczegóły certyfikatu służącego do podpisywania wiadomości przez określenie lokalizacji i nazwy magazynu oraz nazwy podmiotu lub innego unikatowego identyfikatora certyfikatu oraz magazynu, w którym znajdują się certyfikaty klienta (certyfikaty używane do Sprawdź podpis dla wiadomości przychodzących). W oparciu o te szczegóły UdpDiscoveryEndpoint z dodatkowymi zabezpieczeniami jest zbudowany i używany.  
   
-- **Klient**: Ta klasa próbuje odnaleźć ICalculatorService i wywołać metody w usłudze. <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> Ponownie z dodatkiem do zabezpieczeń jest tworzony i używany do podpisywania i weryfikowania komunikatów.  
+- **Klient**: Ta klasa próbuje odnaleźć ICalculatorService i wywołać metody w usłudze. Ponownie <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> z dodatkowymi zabezpieczeniami jest zbudowany i używany do podpisywania i weryfikowania komunikatów.  
   
-- **AnnouncementListener**: Usługa samoobsługowa, która nasłuchuje w trybie online i powiadomienia w trybie offline i używa punktu końcowego bezpiecznego anonsu.  
+- **AnnouncementListener**: usługa samoobsługowa, która nasłuchuje w trybie online i powiadomienia w trybie offline i korzysta z punktu końcowego bezpiecznego anonsu.  
   
 > [!NOTE]
 > Jeśli Setup. bat jest uruchamiany wiele razy, Menedżer certyfikatów monituje o wybranie certyfikatu do dodania, ponieważ istnieją zduplikowane certyfikaty. W takim przypadku należy przerwać działanie Setup. bat i oczyścić. bat, ponieważ duplikaty zostały już utworzone. Oczyść. bat jest również monitowany o wybranie certyfikatu do usunięcia. Wybierz certyfikat z listy i kontynuuj wykonywanie czyszczenia. bat do momentu pozostawania certyfikatów.  
@@ -71,6 +71,6 @@ Specyfikacja odnajdywania nie wymaga, aby punkty końcowe, które uczestniczą w
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  

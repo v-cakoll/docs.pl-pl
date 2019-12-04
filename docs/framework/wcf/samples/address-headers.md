@@ -2,29 +2,29 @@
 title: Nagłówki adresów
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: 4ccb309178251b32068d6cdbb81874322f991bb9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3bc8512fb2492a7249c81fc33a3c7b83904f1ccd
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002953"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715230"
 ---
 # <a name="address-headers"></a>Nagłówki adresów
 
-W przykładzie nagłówki adresów pokazano, jak klienci parametry można przekazać odwołanie do usługi przy użyciu usługi Windows Communication Foundation (WCF).
+W przykładach nagłówków adresów pokazano, jak klienci mogą przekazywać parametry odwołania do usługi przy użyciu Windows Communication Foundation (WCF).
 
 > [!NOTE]
-> Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
 
-Specyfikacja WS-Addressing definiuje pojęcie odwołania do punktu końcowego jako sposób adresu określonego punktu końcowego usługi sieci Web. W programie WCF, odwołania do punktu końcowego są modelowane przy użyciu `EndpointAddress` , klasa — `EndpointAddress` jest typem pola adres `ServiceEndpoint` klasy.
+Specyfikacja WS-Addressing definiuje pojęcie odwołania do punktu końcowego jako sposób adresowania określonego punktu końcowego usługi sieci Web. W programie WCF odwołania do punktów końcowych są modelowane przy użyciu klasy `EndpointAddress`-`EndpointAddress` jest typem pola Address klasy `ServiceEndpoint`.
 
-Część model referencyjny punkt końcowy jest, że każde odwołanie może wykonywać niektóre parametry odwołań, dodających informacje identyfikacyjne dodatkowych. W programie WCF, parametry te odwołania są modelowane jako wystąpień obiektu `AddressHeader` klasy.
+Część modelu referencyjnego punktu końcowego polega na tym, że każde odwołanie może zawierać kilka parametrów referencyjnych, które dodają dodatkowe informacje identyfikacyjne. W programie WCF te parametry odwołania są modelowane jako wystąpienia klasy `AddressHeader`.
 
-W tym przykładzie klient dodaje parametr przekazany przez odwołanie do `EndpointAddress` punktu końcowego klienta. Usługa szuka tego parametru odwołania i używa jej wartości w logice jego działania usługi "Hello".
+W tym przykładzie klient dodaje parametr Reference do `EndpointAddress` punktu końcowego klienta. Usługa szuka tego parametru odwołania i używa jego wartości w logice operacji usługi "Hello".
 
 ## <a name="client"></a>Klient
 
-Dla klienta, aby wysyłać parametr przekazany przez odwołanie, należy dodać `AddressHeader` do `EndpointAddress` z `ServiceEndpoint`. Ponieważ `EndpointAddress` klasy jest niezmienny, musi odbywać się modyfikacja adresu punktu końcowego przy użyciu `EndpointAddressBuilder` klasy. Poniższy kod inicjuje to klientowi wysłanie parametr przekazany przez odwołanie jako część komunikatu.
+Aby klient mógł wysłać parametr referencyjny, musi dodać `AddressHeader` do `EndpointAddress` `ServiceEndpoint`. Ponieważ Klasa `EndpointAddress` jest niezmienna, modyfikacja adresu punktu końcowego musi odbywać się przy użyciu klasy `EndpointAddressBuilder`. Poniższy kod inicjuje klienta do wysłania parametru odwołania w ramach jego komunikatu.
 
 ```csharp
 HelloClient client = new HelloClient();
@@ -36,15 +36,15 @@ builder.Headers.Add(header);
 client.Endpoint.Address = builder.ToEndpointAddress();
 ```
 
-Ten kod tworzy `EndpointAddressBuilder` przy użyciu oryginalnego `EndpointAddress` jako początkowej wartości. Następnie dodaje adres nowoutworzonego nagłówka. wywołanie `CreateAddressHeader` tworzy nagłówek o określonej nazwie, przestrzeni nazw i wartości. W tym miejscu wartość "John". Po dodaniu do konstruktora, nagłówek `ToEndpointAddress()` metoda konwertuje konstruktora (mutable) do adresu punktu końcowego (niezmiennego), która jest przypisana do pola Adres punktu końcowego klienta.
+Kod tworzy `EndpointAddressBuilder` przy użyciu oryginalnego `EndpointAddress` jako wartość początkową. Następnie dodaje nowo utworzony nagłówek adresu; Wywołanie `CreateAddressHeader` tworzy nagłówek z określoną nazwą, przestrzenią nazw i wartością. Oto wartość "Jan". Po dodaniu nagłówka do konstruktora Metoda `ToEndpointAddress()` konwertuje (modyfikowalny) Konstruktor z powrotem na (niezmienny) adres punktu końcowego, który jest przypisywany z powrotem do pola adresu punktu końcowego klienta.
 
-Teraz, kiedy klient wywołuje `Console.WriteLine(client.Hello());`, usługa jest w stanie uzyskać wartość tego parametru adresu jak widać na dane wyjściowe z klienta.
+Teraz, gdy klient wywołuje `Console.WriteLine(client.Hello());`, usługa będzie mogła uzyskać wartość tego parametru adresu, jak pokazano w wynikowym wyjściu klienta.
 
 `Hello, John`
 
-## <a name="server"></a>Serwer
+## <a name="server"></a>Serwer programu
 
-Wykonanie operacji usługi `Hello()` używa bieżącej `OperationContext` sprawdzić wartości nagłówków w wiadomości przychodzącej.
+Implementacja operacji usługi `Hello()` używa bieżącego `OperationContext` do sprawdzenia wartości nagłówków w komunikacie przychodzącym.
 
 ```csharp
 string id = null;
@@ -67,21 +67,21 @@ for (int i = 0;
 return "Hello, " + id;
 ```
 
-Kod wykonuje iterację na wszystkie nagłówki dla wiadomości przychodzących, szukasz nagłówki, które są parametrami odwołanie o określonej nazwie i. W przypadku odnalezienia parametru odczytuje wartość parametru i zapisuje ją w zmiennej "id".
+Kod wykonuje iterację wszystkich nagłówków komunikatu przychodzącego, szukając nagłówków, które są parametrami odwołań o określonej nazwie i. Po znalezieniu parametru odczytuje wartość parametru i zapisuje je w zmiennej "ID".
 
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 > [!IMPORTANT]
-> Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\AddressHeaders`

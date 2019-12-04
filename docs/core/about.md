@@ -2,12 +2,12 @@
 title: Informacje o platformie .NET Core
 description: Dowiedz się więcej o programie .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 4fe16475e18eb88e88fb33d30508f9ef5c9f2cd5
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: b3cdc8d4aeaf85765b51543069a5f279e84f8623
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552238"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711204"
 ---
 # <a name="about-net-core"></a>Informacje o platformie .NET Core
 
@@ -40,7 +40,7 @@ Platforma .NET Core udostępnia interfejsy API dla wielu scenariuszy, a kilka z 
 - Kolekcje, takie jak <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> i <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Typy narzędzi, takie jak <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>i <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Typy danych, takie jak <xref:System.Data.DataSet?displayProperty=nameWithType>i [nieogólnymi](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
-- Typy wysokiej wydajności, takie jak <xref:System.Numerics.Vector?displayProperty=nameWithType> i [potoki](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/).
+- Typy wysokiej wydajności, takie jak <xref:System.Numerics.Vector?displayProperty=nameWithType> i [potoki](../standard/io/pipelines.md).
 
 Platforma .NET Core zapewnia zgodność z interfejsami API .NET Framework i mono, implementując specyfikację [.NET Standard](../standard/net-standard.md) .
 

@@ -2,12 +2,12 @@
 title: Niezawodny bezpieczny profil
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: d7cfc028c5cf1ba5cfba009cd29c89f07c64fd9c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044803"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716500"
 ---
 # <a name="reliable-secure-profile"></a>Niezawodny bezpieczny profil
 Ten przykład pokazuje, jak utworzyć funkcję WCF i [niezawodny profil bezpieczny](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). W tym przykładzie przedstawiono implementację kanału [nawiązywania połączenia](https://go.microsoft.com/fwlink/?LinkId=178141) , który może składać się ze niezawodnej obsługi komunikatów i opcjonalnie bezpieczny kanał, aby utworzyć niezawodne bezpieczne powiązanie na podstawie specyfikacji RSP.  
@@ -17,7 +17,7 @@ Ten przykład pokazuje, jak utworzyć funkcję WCF i [niezawodny profil bezpiecz
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   

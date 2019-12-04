@@ -2,20 +2,20 @@
 title: Anonse — przykład
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 1acf51ebe36872424be1e0fdda65a7d18aa737f2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 57b61dbd82338aafd248285c9cb11ecdf58d25bb
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045795"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716151"
 ---
 # <a name="announcements-sample"></a>Anonse — przykład
 
 Ten przykład pokazuje, jak używać funkcji anonsu funkcji odnajdywania. Anonsy umożliwiają usługom wysyłanie komunikatów anonsu zawierających metadane dotyczące usługi. Domyślnie anons powitalny jest wysyłany podczas uruchamiania usługi i wysyłany jest anons bye po zamknięciu usługi. Anonse mogą być multiemisje lub mogą być wysyłane jako punkt-punkt. Ten przykład składa się z dwóch projektów usługi i klienta.
 
-## <a name="service"></a>Usługa
+## <a name="service"></a>NDES
 
-Ten projekt zawiera samohostowaną usługę kalkulatora. `Main` W metodzie zostanie utworzony host usługi i do niego zostanie dodany punkt końcowy usługi. <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> Następnie jest tworzony. Aby włączyć Anonsy, należy dodać punkt końcowy anonsu do <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. W tym przypadku standardowym punktem końcowym przy użyciu multiemisji UDP jest dodawany jako punkt końcowy anonsu. Emituje anonse za pośrednictwem dobrze znanego adresu UDP.
+Ten projekt zawiera samohostowaną usługę kalkulatora. W metodzie `Main` jest tworzony Host usługi i zostaje do niego dodany punkt końcowy usługi. Następnie zostanie utworzony <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. Aby włączyć Anonsy, należy dodać punkt końcowy anonsu do <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. W tym przypadku standardowym punktem końcowym przy użyciu multiemisji UDP jest dodawany jako punkt końcowy anonsu. Emituje anonse za pośrednictwem dobrze znanego adresu UDP.
 
 ```csharp
 Uri baseAddress = new Uri("http://localhost:8000/" + Guid.NewGuid().ToString());
@@ -51,7 +51,7 @@ announcementService.OnlineAnnouncementReceived += OnOnlineEvent;
 announcementService.OfflineAnnouncementReceived += OnOfflineEvent;
 ```
 
-Metody `OnOnlineEvent` i`OnOfflineEvent` obsługują odpowiednio Komunikaty anonsu Hello i bye.
+Metody `OnOnlineEvent` i `OnOfflineEvent` obsługują odpowiednio Komunikaty anonsu Hello i bye.
 
 ```csharp
 static void OnOnlineEvent(object sender, AnnouncementEventArgs e)
@@ -86,6 +86,6 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`

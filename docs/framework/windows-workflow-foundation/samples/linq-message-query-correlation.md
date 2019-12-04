@@ -2,21 +2,21 @@
 title: Korelacja zapytania komunikatów LINQ
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: 202d65914d32245952f308d3115ec93231f95f15
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: a4b0ed058cfe8d3d487342c9feefdf1b1efe07c8
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989339"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715588"
 ---
 # <a name="linq-message-query-correlation"></a>Korelacja zapytania komunikatów LINQ
-Ten przykład pokazuje, jak przeprowadzić korelację opartą na zawartości przy <xref:System.ServiceModel.Dispatcher.MessageQuery> użyciu niestandardowej implementacji, w przeciwieństwie do dostarczonych <xref:System.ServiceModel.XPathMessageQuery>przez system.  
+Ten przykład pokazuje, jak przeprowadzić korelację opartą na zawartości przy użyciu niestandardowej implementacji <xref:System.ServiceModel.Dispatcher.MessageQuery>, w przeciwieństwie do <xref:System.ServiceModel.XPathMessageQuery>dostarczonych przez system.  
   
-## <a name="demonstrates"></a>Demonstracje  
- Niestandardowa <xref:System.ServiceModel.Dispatcher.MessageQuery>korelacja oparta na zawartości.  
+## <a name="demonstrates"></a>Przedstawia  
+ <xref:System.ServiceModel.Dispatcher.MessageQuery>niestandardowe, korelacja oparta na zawartości.  
   
 ## <a name="discussion"></a>Dyskusji  
- Ten przykład pokazuje, <xref:System.ServiceModel.Dispatcher.MessageQuery> jak rozłożyć z klasy podstawowej na potrzeby korelacji. Implementacja niestandardowa `LinqMessageQuery`, umożliwia użytkownikom udostępnianie XName w wiadomości przy użyciu XLinq. Dane pobierane przez zapytanie są używane do tworzenia klucza korelacji do wysyłania komunikatów do odpowiedniego wystąpienia przepływu pracy.  
+ Ten przykład pokazuje, jak rozłożyć z klasy bazowej <xref:System.ServiceModel.Dispatcher.MessageQuery> na potrzeby korelacji. Implementacja niestandardowa, `LinqMessageQuery`, umożliwia użytkownikom podawanie XName do znajdowania w komunikacie przy użyciu XLinq. Dane pobierane przez zapytanie są używane do tworzenia klucza korelacji do wysyłania komunikatów do odpowiedniego wystąpienia przepływu pracy.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
@@ -39,6 +39,6 @@ Ten przykład pokazuje, jak przeprowadzić korelację opartą na zawartości prz
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\LinqMessageQueryCorrelation`

@@ -2,12 +2,12 @@
 title: Śledzenie cykliczne
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
-ms.openlocfilehash: ad3e4acca7e4bce24c839e71381bf321365a4b2e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0778a25c75ae48c2215625f40b08a1e3815ba81
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045691"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716006"
 ---
 # <a name="circular-tracing"></a>Śledzenie cykliczne
 
@@ -26,7 +26,7 @@ Ten odbiornik pochodzi z `XmlWriteTraceListener` i umożliwia wyświetlanie dzie
 
 ## <a name="configuration"></a>Konfiguracja
 
-Usługę można skonfigurować tak, aby korzystała z detektora śledzenia cyklicznego buforu przez dodanie następującego kodu dla odbiornika i elementów źródłowych. Maksymalny rozmiar pliku jest określony przez ustawienie `maxFileSizeKB` atrybutu w konfiguracji detektora cyklicznego śledzenia. Przedstawiono to w poniższym kodzie.
+Usługę można skonfigurować tak, aby korzystała z detektora śledzenia cyklicznego buforu przez dodanie następującego kodu dla odbiornika i elementów źródłowych. Maksymalny rozmiar pliku jest określony przez ustawienie atrybutu `maxFileSizeKB` w konfiguracji detektora cyklicznego śledzenia. Przedstawiono to w poniższym kodzie.
 
 ```xml
 <system.diagnostics>
@@ -58,7 +58,7 @@ Usługę można skonfigurować tak, aby korzystała z detektora śledzenia cykli
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`
 

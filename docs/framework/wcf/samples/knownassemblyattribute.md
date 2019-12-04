@@ -2,15 +2,15 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 5a911e0ae49955c5b089bb231f94e4afc0c05c97
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6e3708fb386760ae067de0e86e4315114c85113c
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039545"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714901"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
-Ten przykład pokazuje, jak procesy serializacji i deserializacji można dostosować za pomocą <xref:System.Runtime.Serialization.DataContractResolver> klasy. Ten przykład pokazuje, jak dynamicznie dodawać znane typy podczas serializacji i deserializacji.  
+Ten przykład pokazuje, jak można dostosowywać procesy serializacji i deserializacji za pomocą klasy <xref:System.Runtime.Serialization.DataContractResolver>. Ten przykład pokazuje, jak dynamicznie dodawać znane typy podczas serializacji i deserializacji.  
   
 ## <a name="sample-details"></a>Przykładowe szczegóły  
  Ten przykład składa się z czterech projektów. Jeden z nich odpowiada usłudze, która jest hostowana przez usługi IIS, która definiuje następujący kontrakt usługi.  
@@ -187,11 +187,11 @@ public interface IDataContractCalculator
 }  
 ```  
   
- Definicja kontraktu usługi jest oznaczona `KnownAssembly` atrybutem. Ten atrybut zawiera nazwę biblioteki typów, która jest znana w czasie wykonywania przez usługę i klienta.  
+ Definicja kontraktu usługi jest oznaczona atrybutem `KnownAssembly`. Ten atrybut zawiera nazwę biblioteki typów, która jest znana w czasie wykonywania przez usługę i klienta.  
   
- Atrybut implementuje `IContractBehavior` w celu zdefiniowania elementu `DataContractSerializer` z `DataContractResolver` zdefiniowaną dla każdego zachowania operacji. `KnownAssembly` `DataContractResolver` Odzwierciedla zestaw podczas jego tworzenia i tworzy słownik z mapowaniem między typami i nazwami, które mają być używane podczas serializacji i deserializacji różnych typów. W ten sposób `ResolveType` typy i `ResolveName` muszą wyszukiwać dane wymagane w słowniku.  
+ Atrybut `KnownAssembly` implementuje `IContractBehavior` w celu zdefiniowania `DataContractSerializer` z `DataContractResolver` zdefiniowaną dla każdego zachowania operacji. `DataContractResolver` odzwierciedla zestaw podczas jego tworzenia i tworzy słownik z mapowaniem między typami i nazwami, które mają być używane podczas serializacji i deserializacji różnych typów. W ten sposób typy `ResolveType` i `ResolveName` muszą wyszukiwać dane wymagane w słowniku.  
   
- `DataContractResolver` Zdefiniowano dla tego przykładu pokazano w następującym przykładzie.  
+ `DataContractResolver` zdefiniowane dla tego przykładu przedstawiono w poniższym przykładzie.  
   
 ```csharp
 public class MyDataContractResolver : DataContractResolver  
@@ -320,7 +320,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- Należy zauważyć `ComplexNumber` , że nie trzeba statycznie `ComplexNumberWithMagnitude` znać typu, ponieważ jest on znany w czasie wykonywania.  
+ Należy pamiętać, że `ComplexNumber` nie musi statycznie znać typu `ComplexNumberWithMagnitude`, ponieważ jest on znany w czasie wykonywania.  
   
  Po skompilowaniu i wykonaniu próbki jest to oczekiwane dane wyjściowe uzyskane na kliencie:  
   
@@ -367,6 +367,6 @@ Lists combined:
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  

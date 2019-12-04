@@ -2,22 +2,22 @@
 title: Używanie elementów DataContractSerializer i DataContractResolver do udostępniania funkcji elementu NetDataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: e52b6da80100cbffb7dc8725d16c31a67bc19445
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 3a0f88310caf9865756d9c04011b709dd4c4c2eb
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351667"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716907"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>Używanie elementów DataContractSerializer i DataContractResolver do udostępniania funkcji elementu NetDataContractSerializer
-Ten przykład ilustruje sposób użycia <xref:System.Runtime.Serialization.DataContractSerializer> z odpowiednią <xref:System.Runtime.Serialization.DataContractResolver> zapewnia te same funkcje co <xref:System.Runtime.Serialization.NetDataContractSerializer>. Ten przykład pokazuje, jak utworzyć odpowiednie <xref:System.Runtime.Serialization.DataContractResolver> i jak dodać je do <xref:System.Runtime.Serialization.DataContractSerializer>.
+W tym przykładzie pokazano, jak korzystanie z <xref:System.Runtime.Serialization.DataContractSerializer> z odpowiednimi <xref:System.Runtime.Serialization.DataContractResolver> zapewnia te same funkcje co <xref:System.Runtime.Serialization.NetDataContractSerializer>. Ten przykład pokazuje, jak utworzyć odpowiednie <xref:System.Runtime.Serialization.DataContractResolver> i sposób dodawania go do <xref:System.Runtime.Serialization.DataContractSerializer>.
 
 ## <a name="sample-details"></a>Przykładowe szczegóły
- <xref:System.Runtime.Serialization.NetDataContractSerializer> różni się od <xref:System.Runtime.Serialization.DataContractSerializer> w jeden ważny sposób: <xref:System.Runtime.Serialization.NetDataContractSerializer> zawiera informacje o typie CLR w serializowanym kodzie XML, natomiast <xref:System.Runtime.Serialization.DataContractSerializer> nie. W związku z tym, <xref:System.Runtime.Serialization.NetDataContractSerializer> może być używane tylko wtedy, gdy obie operacje serializacji i deserializacji współużytkują te same typy CLR. Zaleca się jednak używanie <xref:System.Runtime.Serialization.DataContractSerializer>, ponieważ jego wydajność jest lepsza niż <xref:System.Runtime.Serialization.NetDataContractSerializer>. Informacje, które są serializowane w <xref:System.Runtime.Serialization.DataContractSerializer>, można zmienić, dodając do niego <xref:System.Runtime.Serialization.DataContractResolver>.
+ <xref:System.Runtime.Serialization.NetDataContractSerializer> różni się od <xref:System.Runtime.Serialization.DataContractSerializer> w jeden ważny sposób: <xref:System.Runtime.Serialization.NetDataContractSerializer> zawiera informacje o typie CLR w serializowanym kodzie XML, natomiast <xref:System.Runtime.Serialization.DataContractSerializer> nie. W związku z tym, <xref:System.Runtime.Serialization.NetDataContractSerializer> mogą być używane tylko wtedy, gdy obie operacje serializacji i deserializacji współużytkują te same typy CLR. Zaleca się jednak używanie <xref:System.Runtime.Serialization.DataContractSerializer>, ponieważ jego wydajność jest lepsza niż <xref:System.Runtime.Serialization.NetDataContractSerializer>. Można zmienić informacje, które są serializowane w <xref:System.Runtime.Serialization.DataContractSerializer> przez dodanie <xref:System.Runtime.Serialization.DataContractResolver> do niego.
 
  Ten przykład składa się z dwóch projektów. Pierwszy projekt używa <xref:System.Runtime.Serialization.NetDataContractSerializer> do serializacji obiektu. Drugi projekt używa <xref:System.Runtime.Serialization.DataContractSerializer> z <xref:System.Runtime.Serialization.DataContractResolver>, aby zapewnić te same funkcje co pierwszy projekt.
 
- Poniższy przykład kodu pokazuje implementację niestandardowej <xref:System.Runtime.Serialization.DataContractResolver> o nazwie `MyDataContractResolver`, która jest dodawana do <xref:System.Runtime.Serialization.DataContractSerializer> w projekcie DCSwithDCR.
+ Poniższy przykład kodu pokazuje implementację niestandardowego <xref:System.Runtime.Serialization.DataContractResolver> o nazwie `MyDataContractResolver`, która jest dodawana do <xref:System.Runtime.Serialization.DataContractSerializer> w projekcie DCSwithDCR.
 
 ```csharp
 class MyDataContractResolver : DataContractResolver
@@ -75,6 +75,6 @@ class MyDataContractResolver : DataContractResolver
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  

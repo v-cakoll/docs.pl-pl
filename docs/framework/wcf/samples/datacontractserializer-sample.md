@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: 675b6b8a177fe5851c2abd1f785ac617de2cf37d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 59bbeb4091c101efeac4e0562f0e3cbd5a8b5f79
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045072"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716355"
 ---
 # <a name="datacontractserializer-sample"></a>Przykład elementu DataContractSerializer
-Przykład DataContractSerializer pokazuje <xref:System.Runtime.Serialization.DataContractSerializer>, który wykonuje ogólne usługi serializacji i deserializacji dla klas kontraktu danych. Przykład tworzy `Record` obiekt, serializować go do strumienia pamięci i deserializacji strumień pamięci z powrotem do innego `Record` obiektu, aby <xref:System.Runtime.Serialization.DataContractSerializer>pokazać użycie. Następnie próbka serializować `Record` Obiekt przy użyciu binarnego składnika zapisywania, aby zademonstrować, jak moduł zapisujący ma wpływ na serializacji.  
+Przykład DataContractSerializer ilustruje <xref:System.Runtime.Serialization.DataContractSerializer>, który wykonuje ogólne usługi serializacji i deserializacji dla klas kontraktu danych. Przykład tworzy obiekt `Record`, serializować go do strumienia pamięci i deserializacji strumień pamięci z powrotem do innego obiektu `Record`, aby pokazać użycie <xref:System.Runtime.Serialization.DataContractSerializer>. Przykład następnie serializacja obiektu `Record` przy użyciu binarnego składnika zapisywania do zademonstrowania, w jaki sposób składnik zapisywania ma wpływ na serializacji.  
   
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Kontrakt danych dla programu `Record` jest wyświetlany w następującym przykładowym kodzie.  
+ Kontrakt danych dla `Record` jest przedstawiony w poniższym przykładowym kodzie.  
   
 ```csharp  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -71,7 +71,7 @@ internal class Record
 }  
 ```  
   
- Przykładowy kod tworzy `Record` obiekt o nazwie `record1` , a następnie wyświetla obiekt.  
+ Przykładowy kod tworzy obiekt `Record` o nazwie `record1` następnie wyświetla obiekt.  
   
 ```csharp
 Record record1 = new Record(1, 2, "+", 3);  
@@ -88,7 +88,7 @@ DataContractSerializer serializer = new DataContractSerializer(typeof(Record));
 serializer.WriteObject(stream1, record1);  
 ```  
   
- Następnie przykład używa <xref:System.Runtime.Serialization.DataContractSerializer> do deserializacji strumienia pamięci z powrotem do nowego `Record` obiektu i wyświetla go.  
+ Następnie przykład używa <xref:System.Runtime.Serialization.DataContractSerializer>, aby deserializować strumień pamięci do nowego obiektu `Record` i wyświetlić go.  
   
 ```csharp  
 stream1.Position = 0;  
@@ -99,7 +99,7 @@ Record record2 = (Record)serializer.ReadObject(stream1);
 Console.WriteLine("Deserialized record: {0}", record2.ToString());  
 ```  
   
- Domyślnie `DataContractSerializer` kodowanie obiektów do strumienia przy użyciu tekstowej reprezentacji XML. Można jednak mieć wpływ na kodowanie kodu XML przez przekazanie w innym składniku zapisywania. Przykład tworzy binarny moduł zapisujący przez <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>wywołanie. Następnie przekazuje moduł zapisujący i obiekt rekordu do serializatora podczas wywoływania <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>. Na koniec przykład opróżnia składnik zapisywania i raporty o długości strumieni.  
+ Domyślnie `DataContractSerializer` koduje obiekty do strumienia przy użyciu tekstowej reprezentacji XML. Można jednak mieć wpływ na kodowanie kodu XML przez przekazanie w innym składniku zapisywania. Przykład tworzy binarny moduł zapisujący, wywołując <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>. Następnie przekazuje moduł zapisujący i obiekt rekordu do serializatora, gdy wywoła <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>. Na koniec przykład opróżnia składnik zapisywania i raporty o długości strumieni.  
   
 ```csharp  
 MemoryStream stream2 = new MemoryStream();  
@@ -137,6 +137,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractSerializer`  

@@ -2,18 +2,18 @@
 title: Komunikacja asynchroniczna
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: b5cf788ce4587dacb5a7642e25cb1b5b1e6f3e3c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 28b325a6bd870282577a2989b616628d52262deb
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044365"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711860"
 ---
 # <a name="asynchronous-communication"></a>Komunikacja asynchroniczna
 W tym przykładzie pokazano, jak komunikacja między dwiema różnymi usługami Windows Workflow Foundation (WF) odbywa się domyślnie asynchronicznie.  
   
-## <a name="demonstrates"></a>Demonstracje  
- Asynchroniczna komunikacja [!INCLUDE[wf1](../../../../includes/wf1-md.md)] między usługami.  
+## <a name="demonstrates"></a>Przedstawia  
+ Asynchroniczna komunikacja między usługami [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  
   
 ## <a name="discussion"></a>Dyskusji  
  Ten przykład pokazuje, jak komunikacja między [!INCLUDE[wf1](../../../../includes/wf1-md.md)] aplikacjami odbywa się asynchronicznie przy użyciu działań dotyczących komunikatów dostarczonych przez .NET Framework.  
@@ -24,10 +24,10 @@ W tym przykładzie pokazano, jak komunikacja między dwiema różnymi usługami 
  Ta usługa otrzymuje wynik kredytowy określonej osoby lub wartość elementu do pobrania, a następnie decyduje o tym, czy kredyt został udzielony.  
   
  RentalApprovalService  
- Ta usługa otrzymuje aplikację od osoby, która jest w trakcie pewnego kredytu. Ta usługa komunikuje się asynchronicznie `CreditCheckService` z, aby określić, czy aplikacja kredytowa jest ważna.  
+ Ta usługa otrzymuje aplikację od osoby, która jest w trakcie pewnego kredytu. Ta usługa komunikuje się asynchronicznie z `CreditCheckService`, aby zdecydować, czy aplikacja kredytowa jest prawidłowa.  
   
  Klient  
- Klient komunikuje się synchronicznie z informacją o tym, `RentalApprovalService` czy środki zostały zatwierdzone.  
+ Klient komunikuje się synchronicznie z `RentalApprovalService`, aby dowiedzieć się, czy kredyt został zatwierdzony.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
@@ -44,6 +44,6 @@ W tym przykładzie pokazano, jak komunikacja między dwiema różnymi usługami 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\AsynchronousCommunication`

@@ -2,17 +2,17 @@
 title: Zasady ochrony rozszerzonej
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: c7c2e85872c158facb2de91a7413ac5a04491d7f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1cb6d44e8f6ee8f54f776453e5a1783ab0cfa4f0
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044984"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716423"
 ---
 # <a name="extended-protection-policy"></a>Zasady ochrony rozszerzonej
 Ochrona rozszerzona to inicjatywa zabezpieczeń chroniąca przed atakami typu man-in-the-Middle (MITM). Atak MITM polega na zagrożeniu bezpieczeństwa, w którym MITM Pobiera poświadczenia klienta i przekazuje je do serwera.  
   
-## <a name="demonstrates"></a>Demonstracje  
+## <a name="demonstrates"></a>Przedstawia  
  Ochrona rozszerzona  
   
 ## <a name="discussion"></a>Dyskusji  
@@ -59,6 +59,6 @@ Ochrona rozszerzona to inicjatywa zabezpieczeń chroniąca przed atakami typu ma
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Security\ExtendedProtection`

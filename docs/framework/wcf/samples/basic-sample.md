@@ -2,12 +2,12 @@
 title: Podstawowy przykład
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 07015c61ccab303d0fe38e65077d984ff40ce357
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5d0470fefff86ee3a88fa290be5f349c38ca8276
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045720"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716080"
 ---
 # <a name="basic-sample"></a>Podstawowy przykład
 
@@ -16,9 +16,9 @@ Ten przykład pokazuje, jak umożliwić odnajdywanie usługi i wyszukiwanie i wy
 > [!NOTE]
 > Ten przykład implementuje odnajdywanie w kodzie.  Aby uzyskać przykład, który implementuje odnajdywanie w konfiguracji, zobacz [Konfiguracja](../../../../docs/framework/wcf/samples/configuration-sample.md).
 
-## <a name="service"></a>Usługa
+## <a name="service"></a>NDES
 
-To jest prosta implementacja usługi kalkulatora. Kod powiązany z odnajdywaniem można znaleźć w `Main` <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> miejscu, w którym jest dodawany do hosta usługi i <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> jest dodawany, jak pokazano w poniższym kodzie.
+To jest prosta implementacja usługi kalkulatora. Kod związany z odnajdywaniem można znaleźć w `Main`, w którym <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> zostanie dodany do hosta usługi i zostanie dodana <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, jak pokazano w poniższym kodzie.
 
 ```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))
@@ -37,7 +37,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 
 ## <a name="client"></a>Klient
 
-Klient używa programu <xref:System.ServiceModel.Discovery.DynamicEndpoint> w celu zlokalizowania usługi. <xref:System.ServiceModel.Discovery.DynamicEndpoint>Standardowy punkt końcowy rozwiązuje punkt końcowy usługi podczas otwierania klienta. W tym przypadku <xref:System.ServiceModel.Discovery.DynamicEndpoint> szuka usługi na podstawie kontraktu usługi. Domyślnie wykonuje wyszukiwanie w przeszukiwaniu <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>. <xref:System.ServiceModel.Discovery.DynamicEndpoint> Po znalezieniu punktu końcowego usługi klient nawiązuje połączenie z tą usługą względem określonego powiązania.
+Klient używa <xref:System.ServiceModel.Discovery.DynamicEndpoint> do lokalizowania usługi. <xref:System.ServiceModel.Discovery.DynamicEndpoint>, standardowy punkt końcowy, rozwiązuje punkt końcowy usługi podczas otwierania klienta. W tym przypadku <xref:System.ServiceModel.Discovery.DynamicEndpoint> szuka usługi na podstawie kontraktu usługi. <xref:System.ServiceModel.Discovery.DynamicEndpoint> domyślnie przeszukiwane jest <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>. Po znalezieniu punktu końcowego usługi klient nawiązuje połączenie z tą usługą względem określonego powiązania.
 
 ```csharp
 public static void Main()
@@ -47,7 +47,7 @@ public static void Main()
 }
 ```
 
-Klient definiuje metodę o nazwie `InvokeCalculatorService` , która <xref:System.ServiceModel.Discovery.DiscoveryClient> używa klasy do wyszukiwania usług. Dziedziczy z <xref:System.ServiceModel.Description.ServiceEndpoint>, więc`InvokeCalculatorService` można go przesłać do metody. <xref:System.ServiceModel.Discovery.DynamicEndpoint> Ten przykład używa <xref:System.ServiceModel.Discovery.DynamicEndpoint> do tworzenia `CalculatorServiceClient` wystąpienia i wywołuje różne operacje usługi Kalkulator.
+Klient definiuje metodę o nazwie `InvokeCalculatorService`, która używa klasy <xref:System.ServiceModel.Discovery.DiscoveryClient> do wyszukiwania usług. <xref:System.ServiceModel.Discovery.DynamicEndpoint> dziedziczy po <xref:System.ServiceModel.Description.ServiceEndpoint>, więc można go przesłać do metody `InvokeCalculatorService`. Przykład używa <xref:System.ServiceModel.Discovery.DynamicEndpoint>, aby utworzyć wystąpienie `CalculatorServiceClient` i wywołuje różne operacje usługi Kalkulator.
 
 ```csharp
 static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
@@ -100,6 +100,6 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`

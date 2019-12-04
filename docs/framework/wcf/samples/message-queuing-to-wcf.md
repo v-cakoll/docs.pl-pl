@@ -2,19 +2,19 @@
 title: Obsługa kolejek komunikatów programu Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: aa2034ceece92c0f873b5a20860df36999b114b3
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 4daa3694287f93aa42a139ed701578e26433bc44
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044889"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714836"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Obsługa kolejek komunikatów programu Windows Communication Foundation
 Ten przykład pokazuje, jak aplikacja usługi kolejkowania komunikatów (MSMQ) może wysyłać komunikat usługi MSMQ do usługi Windows Communication Foundation (WCF). Usługa to samodzielna aplikacja konsolowa, która umożliwia obserwowanie usługi do odebrania komunikatów znajdujących się w kolejce.  
   
- Kontrakt usługi to `IOrderProcessor`, który definiuje usługę jednokierunkową, która jest odpowiednia do użycia z kolejkami. Komunikat usługi MSMQ nie zawiera nagłówka akcji, więc nie jest możliwe automatyczne Mapowanie komunikatów usługi MSMQ do kontraktów operacji. W związku z tym może istnieć tylko jeden kontrakt operacji. Jeśli chcesz zdefiniować więcej niż jeden kontrakt operacji dla usługi, aplikacja musi podać informacje o nagłówku wiadomości MSMQ (na przykład etykieta lub identyfikator korelacji), aby określić, którą umowę operacji wysłać.
+ Kontrakt usługi jest `IOrderProcessor`, który definiuje usługę jednokierunkową, która jest odpowiednia do użycia z kolejkami. Komunikat usługi MSMQ nie zawiera nagłówka akcji, więc nie jest możliwe automatyczne Mapowanie komunikatów usługi MSMQ do kontraktów operacji. W związku z tym może istnieć tylko jeden kontrakt operacji. Jeśli chcesz zdefiniować więcej niż jeden kontrakt operacji dla usługi, aplikacja musi podać informacje o nagłówku wiadomości MSMQ (na przykład etykieta lub identyfikator korelacji), aby określić, którą umowę operacji wysłać.
   
- Komunikat MSMQ nie zawiera informacji o tym, które nagłówki są mapowane na różne parametry kontraktu operacji. Parametr jest typu <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`), który zawiera źródłowy komunikat MSMQ. Typ "T" w <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>klasie (`MsmqMessage<T>`) reprezentuje dane, które są serializowane w treści wiadomości MSMQ. W tym przykładzie `PurchaseOrder` typ jest serializowany do treści wiadomości MSMQ.  
+ Komunikat MSMQ nie zawiera informacji o tym, które nagłówki są mapowane na różne parametry kontraktu operacji. Parametr jest typu <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`), który zawiera źródłowy komunikat MSMQ. Typ "T" w klasie <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) reprezentuje dane, które są serializowane w treści wiadomości MSMQ. W tym przykładzie typ `PurchaseOrder` jest serializowany do treści wiadomości MSMQ.  
   
  Następujący przykładowy kod przedstawia kontrakt usługi dla usługi przetwarzania zamówień.  
 
@@ -44,7 +44,7 @@ public static void Main()
 }
 ```
 
- Usługa tworzy i otwiera <xref:System.ServiceModel.ServiceHost> `OrderProcessorService`dla, jak pokazano w poniższym przykładowym kodzie.
+ Usługa tworzy i otwiera <xref:System.ServiceModel.ServiceHost> dla `OrderProcessorService`, jak pokazano w poniższym przykładowym kodzie.
 
 ```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
@@ -68,7 +68,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 </appSettings>
 ```
 
- Aplikacja kliencka jest aplikacją usługi MSMQ, która używa <xref:System.Messaging.MessageQueue.Send%2A> metody do wysyłania trwałych i transakcyjnych komunikatów do kolejki, jak pokazano w poniższym przykładowym kodzie.
+ Aplikacja kliencka jest aplikacją usługi MSMQ, która używa metody <xref:System.Messaging.MessageQueue.Send%2A> do wysyłania trwałych i transakcyjnych komunikatów do kolejki, jak pokazano w poniższym przykładowym kodzie.
 
 ```csharp
 //Connect to the queue.
@@ -149,12 +149,12 @@ Console.ReadLine();
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Kolejki programu WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
-- [Instrukcje: Wymiana komunikatów z punktami końcowymi WCF i aplikacjami usługi kolejkowania komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Instrukcje: wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Kolejkowanie komunikatów](https://go.microsoft.com/fwlink/?LinkId=94968)

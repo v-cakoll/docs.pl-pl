@@ -2,18 +2,18 @@
 title: Federacja — przykład
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: d3a326f08e78edb79908485361f161c1b6da6625
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 271790e08476533fc1d83e22c5a0daf2f1eaa42a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044976"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716924"
 ---
 # <a name="federation-sample"></a>Federacja — przykład
 Ten przykład pokazuje zabezpieczenia federacyjne.  
   
 ## <a name="sample-details"></a>Przykładowe szczegóły  
- Windows Communication Foundation (WCF) zapewnia obsługę wdrażania federacyjnych architektur zabezpieczeń za pomocą programu `wsFederationHttpBinding`. `wsFederationHttpBinding` Zapewnia bezpieczne, niezawodne i interoperacyjne powiązanie, które polega na użyciu protokołu HTTP jako podstawowego mechanizmu transportowego do komunikacji żądania/odpowiedzi oraz text/xml jako formatu sieci do kodowania. Aby uzyskać więcej informacji na temat Federacji w programie WCF, zobacz [Federacja](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Windows Communication Foundation (WCF) zapewnia obsługę wdrażania federacyjnych architektur zabezpieczeń przy użyciu `wsFederationHttpBinding`. `wsFederationHttpBinding` zapewnia bezpieczne, niezawodne i interoperacyjne powiązanie, które obejmuje użycie protokołu HTTP jako podstawowego mechanizmu transportowego do komunikacji żądania/odpowiedzi oraz tekstu/XML jako formatu sieci do kodowania. Aby uzyskać więcej informacji na temat Federacji w programie WCF, zobacz [Federacja](../../../../docs/framework/wcf/feature-details/federation.md).  
   
  Scenariusz składa się z 4 sztuk:  
   
@@ -25,7 +25,7 @@ Ten przykład pokazuje zabezpieczenia federacyjne.
   
 - Klient księgarni  
   
- Usługa księgarni obsługuje dwie operacje `BrowseBooks` i. `BuyBook` Umożliwia anonimowy dostęp do `BrowseBooks` operacji, ale wymaga dostępu uwierzytelnionego, aby `BuyBooks` uzyskać dostęp do operacji. Uwierzytelnianie przyjmuje postać tokenu wystawionego przez usługę STS księgarni. Plik konfiguracji dla klientów punktów usługi księgarni w usłudze STS księgarni przy użyciu `wsFederationHttpBinding`.  
+ Usługa księgarni obsługuje dwie operacje, `BrowseBooks` i `BuyBook`. Umożliwia anonimowy dostęp do operacji `BrowseBooks`, ale wymaga dostępu uwierzytelnionego, aby uzyskać dostęp do operacji `BuyBooks`. Uwierzytelnianie przyjmuje postać tokenu wystawionego przez usługę STS księgarni. Plik konfiguracji dla klientów punktów usługi księgarni w usłudze STS księgarni przy użyciu `wsFederationHttpBinding`.  
   
 ```xml  
 <wsFederationHttpBinding>  
@@ -65,7 +65,7 @@ Ten przykład pokazuje zabezpieczenia federacyjne.
 </wsFederationHttpBinding>  
 ```  
   
- Sekwencja zdarzeń podczas uzyskiwania dostępu `BuyBook` do operacji jest następująca:  
+ Sekwencja zdarzeń podczas uzyskiwania dostępu do `BuyBook` operacji jest następująca:  
   
 1. Klient jest uwierzytelniany w usłudze STS HomeRealm przy użyciu poświadczeń systemu Windows.  
   
@@ -77,7 +77,7 @@ Ten przykład pokazuje zabezpieczenia federacyjne.
   
 5. Klient jest uwierzytelniany w usłudze księgarni przy użyciu tokenu wystawionego przez usługę księgarni STS.  
   
-6. Klient uzyskuje dostęp `BuyBook` do operacji.  
+6. Klient uzyskuje dostęp do `BuyBook` operacji.  
   
  Zapoznaj się z poniższymi instrukcjami dotyczącymi sposobu konfigurowania i uruchamiania tego przykładu.  
   
@@ -89,11 +89,11 @@ Ten przykład pokazuje zabezpieczenia federacyjne.
 1. Otwórz okno polecenia zestawu SDK. W przykładowej ścieżce uruchom setup. bat. Spowoduje to utworzenie katalogów wirtualnych wymaganych dla przykładu i zainstalowanie wymaganych certyfikatów z odpowiednimi uprawnieniami.  
   
     > [!NOTE]
-    > Plik wsadowy Setup. bat został zaprojektowany tak, aby można go było uruchomić z poziomu wiersza polecenia Windows SDK. Wymaga, aby zmienna środowiskowa MSSDK wskazywała katalog, w którym zainstalowano zestaw SDK. Ta zmienna środowiskowa jest ustawiana automatycznie w wierszu polecenia Windows SDK. W [!INCLUDE[wv](../../../../includes/wv-md.md)]systemie należy upewnić się, że zgodność z zarządzaniem usługami IIS 6,0 jest zainstalowana, ponieważ konfiguracja używa skryptów administratora usług IIS. Uruchomienie skryptu konfiguracji w [!INCLUDE[wv](../../../../includes/wv-md.md)] programie wymaga uprawnień administratora.  
+    > Plik wsadowy Setup. bat został zaprojektowany tak, aby można go było uruchomić z poziomu wiersza polecenia Windows SDK. Wymaga, aby zmienna środowiskowa MSSDK wskazywała katalog, w którym zainstalowano zestaw SDK. Ta zmienna środowiskowa jest ustawiana automatycznie w wierszu polecenia Windows SDK. Na [!INCLUDE[wv](../../../../includes/wv-md.md)]należy upewnić się, że zgodność z zarządzaniem usługami IIS 6,0 jest zainstalowana, ponieważ konfiguracja używa skryptów administratora usług IIS. Uruchomienie skryptu konfigurowania na [!INCLUDE[wv](../../../../includes/wv-md.md)] wymaga uprawnień administratora.  
   
 2. Otwórz FederationSample. sln w programie Visual Studio i wybierz opcję **Kompiluj rozwiązanie** z menu **kompilacja** . Powoduje to utworzenie wspólnych plików projektu, usług księgarni, księgarni STS, HomeRealm STS i wdrożenie ich w usługach IIS. Powoduje to również kompilację aplikacji klienckiej księgarni i umieszczenie pliku wykonywalnego BookStoreClient. exe w folderze FederationSample\BookStoreClient\bin\Debug.  
   
-3. Double-click BookStoreClient.exe. Zostanie wyświetlone okno BookStoreClient.  
+3. Kliknij dwukrotnie plik BookStoreClient. exe. Zostanie wyświetlone okno BookStoreClient.  
   
 4. Książki dostępne w księgarni można przeglądać, klikając pozycję **Przeglądaj książki**.  
   
@@ -113,6 +113,6 @@ Ten przykład pokazuje zabezpieczenia federacyjne.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  

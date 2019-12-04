@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: f0082bd99b154f87ab90bee7a89afdb8405f6623
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920317"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715891"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Wskazówki: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF
 Buforowanie umożliwia przechowywanie danych w pamięci w celu szybkiego dostępu. Po ponownym uzyskaniu dostępu do danych aplikacje mogą pobrać dane z pamięci podręcznej, zamiast pobierać je z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowanie sprawia, że dane są dostępne, gdy źródło danych jest tymczasowo niedostępne.
@@ -78,7 +78,7 @@ Buforowanie umożliwia przechowywanie danych w pamięci w celu szybkiego dostęp
      Projektant WPF zostanie otwarty w widoku **projektu** i zostanie wyświetlony plik MainWindow. XAML. Program Visual Studio tworzy folder **My Project** , plik Application. XAML i plik MainWindow. XAML.
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Kierowanie .NET Framework i Dodawanie odwołania do zestawów buforowania
- Domyślnie aplikacje WPF są przeznaczone dla [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Aby użyć przestrzeni nazw <xref:System.Runtime.Caching> w aplikacji WPF, aplikacja musi być ukierunkowana na .NET Framework 4 (nie [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) i musi zawierać odwołanie do przestrzeni nazw.
+ Domyślnie aplikacje WPF są przeznaczone dla profilu klienta .NET Framework 4. Aby użyć przestrzeni nazw <xref:System.Runtime.Caching> w aplikacji WPF, aplikacja musi być ukierunkowana na .NET Framework 4 (a nie profil klienta .NET Framework 4) i musi zawierać odwołanie do przestrzeni nazw.
 
  W związku z tym następnym krokiem jest zmiana elementu docelowego .NET Framework i dodanie odwołania do <xref:System.Runtime.Caching> przestrzeni nazw.
 
@@ -97,7 +97,7 @@ Buforowanie umożliwia przechowywanie danych w pamięci w celu szybkiego dostęp
 
      Zostanie wyświetlone okno dialogowe **Zaawansowane ustawienia kompilatora** .
 
-4. Na liście **platformy docelowej (wszystkie konfiguracje)** wybierz pozycję .NET Framework 4. (Nie wybieraj [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
+4. Na liście **platformy docelowej (wszystkie konfiguracje)** wybierz pozycję .NET Framework 4. (Nie wybieraj .NET Framework 4 profilu klienta).
 
 5. Kliknij przycisk **OK**.
 

@@ -2,12 +2,12 @@
 title: Powiązanie niestandardowe imperatywne
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-ms.openlocfilehash: b5f6587567eaf7f719028a7d92f3db8f8259b6e1
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 758d197ceadcbf6019f69117939f99eb333e18a2
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990038"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714942"
 ---
 # <a name="custom-binding-imperative"></a>Powiązanie niestandardowe imperatywne
 W przykładzie pokazano, jak napisać sam kod w celu zdefiniowania i użycia niestandardowych powiązań bez użycia pliku konfiguracji ani klienta wygenerowanego przez program Windows Communication Foundation (WCF). Ten przykład łączy funkcje zapewniane przez transport HTTP i kanał niezawodnej sesji w celu utworzenia niezawodnego powiązania opartego na protokole HTTP. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje usługę kalkulatora.  
@@ -34,7 +34,7 @@ CustomBinding binding = new CustomBinding(reliableSession, httpTransport);
 serviceHost.AddServiceEndpoint(typeof(ICalculator), binding, "");  
 ```
 
- Na kliencie powiązanie jest używane przez program, <xref:System.ServiceModel.ChannelFactory> aby utworzyć kanał do usługi:  
+ Na kliencie powiązanie jest używane przez <xref:System.ServiceModel.ChannelFactory> do utworzenia kanału do usługi:  
 
 ```csharp
 EndpointAddress address = new EndpointAddress("http://localhost:8000/servicemodelsamples/service");  
@@ -76,7 +76,7 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Custom\Imperative`  
   

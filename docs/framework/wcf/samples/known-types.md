@@ -2,15 +2,15 @@
 title: Znane typy
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: 40f1fd9b3051d643596c296a709e0df61ab4d955
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5d772caa262a271db180bf764e0763999fffd7f3
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045528"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715712"
 ---
 # <a name="known-types"></a>Znane typy
-Ten przykład pokazuje, jak określić informacje o typach pochodnych w kontrakcie danych. Kontrakty danych umożliwiają przekazywanie danych strukturalnych do i z usług. W programowaniu zorientowanym na obiekt, typ, który dziedziczy z innego typu, może być użyty zamiast oryginalnego typu. W programowaniu zorientowanym na usługę, schematy, a nie typy, są przekazywane i w związku z tym relacja między typami nie jest zachowywana. Ten <xref:System.Runtime.Serialization.KnownTypeAttribute> atrybut umożliwia uwzględnienie informacji o typach pochodnych w kontrakcie danych. Jeśli ten mechanizm nie jest używany, nie można wysłać ani odebrać typu pochodnego, gdzie oczekiwany jest typ podstawowy.  
+Ten przykład pokazuje, jak określić informacje o typach pochodnych w kontrakcie danych. Kontrakty danych umożliwiają przekazywanie danych strukturalnych do i z usług. W programowaniu zorientowanym na obiekt, typ, który dziedziczy z innego typu, może być użyty zamiast oryginalnego typu. W programowaniu zorientowanym na usługę, schematy, a nie typy, są przekazywane i w związku z tym relacja między typami nie jest zachowywana. Atrybut <xref:System.Runtime.Serialization.KnownTypeAttribute> umożliwia dołączenie informacji o typach pochodnych do kontraktu danych. Jeśli ten mechanizm nie jest używany, nie można wysłać ani odebrać typu pochodnego, gdzie oczekiwany jest typ podstawowy.  
   
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
@@ -33,7 +33,7 @@ public interface ICalculator
 }  
 ```  
   
- I jest stosowany do`ComplexNumber` klasy, aby wskazać, które pola klasy mogą być przesyłane między klientem a usługą. <xref:System.Runtime.Serialization.DataMemberAttribute> <xref:System.Runtime.Serialization.DataContractAttribute> Klasa pochodna `ComplexNumberWithMagnitude` może być używana `ComplexNumber`zamiast. Atrybut tego `ComplexNumber` typu wskazuje na to. <xref:System.Runtime.Serialization.KnownTypeAttribute>  
+ <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> są stosowane do klasy `ComplexNumber`, aby wskazać, które pola klasy mogą być przesyłane między klientem a usługą. Klasy pochodnej `ComplexNumberWithMagnitude` można użyć zamiast `ComplexNumber`. Atrybut <xref:System.Runtime.Serialization.KnownTypeAttribute> typu `ComplexNumber` wskazuje na to.  
   
 ```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -53,7 +53,7 @@ public class ComplexNumber
 }  
 ```  
   
- Typ pochodzi z `ComplexNumber` , ale dodaje dodatkowy element członkowski danych, `Magnitude`. `ComplexNumberWithMagnitude`  
+ Typ `ComplexNumberWithMagnitude` pochodzi od `ComplexNumber` ale dodaje dodatkowy element członkowski danych, `Magnitude`.  
   
 ```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -71,7 +71,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- Aby przedstawić funkcję znanych typów, usługa jest zaimplementowana w taki sposób, że zwraca `ComplexNumberWithMagnitude` tylko do dodawania i odejmowania. (Mimo że kontrakt Określa `ComplexNumber`, jest to dozwolone `KnownTypeAttribute` z powodu atrybutu). Mnożenie i dzielenie nadal zwracają typ podstawowy `ComplexNumber` .  
+ Aby przedstawić funkcję znanych typów, usługa jest implementowana w taki sposób, że zwraca `ComplexNumberWithMagnitude` tylko do dodawania i odejmowania. (Mimo że kontrakt Określa `ComplexNumber`, jest to dozwolone ze względu na atrybut `KnownTypeAttribute`). Mnożenie i dzielenie nadal zwracają podstawowy typ `ComplexNumber`.  
   
 ```csharp
 public class DataContractCalculatorService : IDataContractCalculator  
@@ -114,7 +114,7 @@ public class DataContractCalculatorService : IDataContractCalculator
 }  
 ```  
   
- Na kliencie zarówno kontrakt usługi, jak i kontrakt danych są zdefiniowane w pliku źródłowym generatedClient.cs, który jest generowany przez [Narzędzie narzędzia metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) z metadanych usługi. Ponieważ atrybut jest określony w kontrakcie danych usługi, klient może odbierać `ComplexNumber` zarówno klasy, jak i `ComplexNumberWithMagnitude` przy użyciu usługi. <xref:System.Runtime.Serialization.KnownTypeAttribute> Klient wykrywa, czy pobrano `ComplexNumberWithMagnitude` i wygenerował odpowiednie dane wyjściowe:  
+ Na kliencie zarówno kontrakt usługi, jak i kontrakt danych są zdefiniowane w pliku źródłowym generatedClient.cs, który jest generowany przez [Narzędzie narzędzia metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) z metadanych usługi. Ponieważ atrybut <xref:System.Runtime.Serialization.KnownTypeAttribute> jest określony w kontrakcie danych usługi, klient może odbierać zarówno klasy `ComplexNumber`, jak i `ComplexNumberWithMagnitude` podczas korzystania z usługi. Klient wykrywa `ComplexNumberWithMagnitude` i generuje odpowiednie dane wyjściowe:  
   
 ```csharp
 // Create a client  
@@ -167,6 +167,6 @@ No magnitude was sent from the service
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  

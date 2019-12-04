@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: f2dee85f3d84d840b33d81277419ab22e88e8556
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dc417300eb6f62b89a1c07a4f2291b7366e410b1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928593"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716547"
 ---
 # <a name="default-nettcpbinding"></a>Domyślny element NetTcpBinding
-Ten przykład ilustruje użycie <xref:System.ServiceModel.NetTcpBinding> powiązania. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje usługę kalkulatora. W tym przykładzie usługa jest samodzielna. Klientem i usługą są aplikacje konsolowe.  
+Ten przykład ilustruje użycie powiązania <xref:System.ServiceModel.NetTcpBinding>. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje usługę kalkulatora. W tym przykładzie usługa jest samodzielna. Klientem i usługą są aplikacje konsolowe.  
   
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
@@ -22,11 +22,11 @@ Ten przykład ilustruje użycie <xref:System.ServiceModel.NetTcpBinding> powiąz
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- Powiązanie jest określone w plikach konfiguracji klienta i usługi. Typ powiązania jest określony w `binding` atrybucie [ \<elementu punktu końcowego >](../../configure-apps/file-schema/wcf/endpoint-element.md) , jak pokazano w poniższej konfiguracji przykładowej.  
+ Powiązanie jest określone w plikach konfiguracji klienta i usługi. Typ powiązania jest określony w atrybucie `binding` elementu [punktu końcowego\<](../../configure-apps/file-schema/wcf/endpoint-element.md) , jak pokazano w poniższej konfiguracji przykładowej.  
   
 ```xml  
 <endpoint address=""  
@@ -34,7 +34,7 @@ Ten przykład ilustruje użycie <xref:System.ServiceModel.NetTcpBinding> powiąz
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Poprzedni przykład pokazuje, jak skonfigurować punkt końcowy do używania `netTcpBinding` powiązania z ustawieniami domyślnymi. Jeśli chcesz skonfigurować `netTcpBinding` powiązanie i zmienić niektóre z jego ustawień, musisz zdefiniować konfigurację powiązania. Punkt końcowy musi odwoływać się do konfiguracji powiązania za pomocą `bindingConfiguration` nazwy z atrybutem. W tym przykładzie Konfiguracja powiązania ma nazwę `Binding1` i jest zdefiniowana, jak pokazano w poniższej konfiguracji przykładowej.  
+ Poprzedni przykład pokazuje, jak skonfigurować punkt końcowy do używania powiązania `netTcpBinding` z ustawieniami domyślnymi. Aby skonfigurować powiązanie `netTcpBinding` i zmienić niektóre z jego ustawień, należy zdefiniować konfigurację powiązania. Punkt końcowy musi odwoływać się do konfiguracji powiązania za pomocą nazwy z atrybutem `bindingConfiguration`. W tym przykładzie Konfiguracja powiązania ma nazwę `Binding1` i jest zdefiniowana, jak pokazano w poniższej konfiguracji przykładowej.  
   
 ```xml  
 <services>  

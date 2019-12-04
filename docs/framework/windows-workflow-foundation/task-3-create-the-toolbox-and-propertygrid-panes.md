@@ -2,16 +2,16 @@
 title: Zadanie 3. Tworzenie okienek Przybornik i PropertyGrid
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 402a25c1cb82c245afa94f58cefc180515622ea9
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 29e50b24135cd3d6a02052d846e1781b0d9fa325
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275865"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716231"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Zadanie 3. Tworzenie okienek Przybornik i PropertyGrid
 
-W tym zadaniu utworzysz okienka **Przybornik** i **PropertyGrid** , a następnie dodasz je do hosta [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].
+W tym zadaniu utworzysz okienka **Przybornik** i **PropertyGrid** i dodasz je do Projektant przepływu pracy ponownie hostowanego systemu Windows.
 
 W przypadku odwołania, kod, który powinien znajdować się w pliku MainWindow.xaml.cs, po wykonaniu trzech zadań w [Projektant przepływu pracy](rehosting-the-workflow-designer.md) serii tematów znajduje się na końcu tego tematu.
 
@@ -104,7 +104,7 @@ W przypadku odwołania, kod, który powinien znajdować się w pliku MainWindow.
     }
     ```
 
-4. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić rozwiązanie. Dla **przybornika**, kanwy projektu przepływu pracy i okienka **PropertyGrid** powinny być wyświetlane wszystkie, a po przeciągnięciu działania <xref:System.Activities.Statements.Assign> lub działania <xref:System.Activities.Statements.Sequence> na kanwę projektu siatka właściwości powinna zostać zaktualizowana w zależności od wyróżnionego działania.
+4. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić rozwiązanie. Wszystkie okienka dla **przybornika**, kanwy projektu i elementu **PropertyGrid** powinny być wyświetlane, a po przeciągnięciu działania <xref:System.Activities.Statements.Assign> lub działania <xref:System.Activities.Statements.Sequence> na kanwę projektu siatka właściwości powinna zostać zaktualizowana w zależności od wyróżnionego działania.
 
 ## <a name="example"></a>Przykład
 
@@ -216,6 +216,6 @@ namespace HostingApplication
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Hostowanie Projektant przepływu pracy](rehosting-the-workflow-designer.md)
-- [Zadanie 1. Tworzenie nowej aplikacji Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
-- [Zadanie 2. hostowanie Projektant przepływu pracy](task-2-host-the-workflow-designer.md)
+- [Rehostowanie projektanta przepływu pracy](rehosting-the-workflow-designer.md)
+- [Zadanie 1: Tworzenie nowej aplikacji Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Zadanie 2: Hostowanie projektanta przepływu pracy](task-2-host-the-workflow-designer.md)

@@ -2,17 +2,17 @@
 title: Niestandardowy dyspozytor kanału
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-ms.openlocfilehash: 0bd83e068de7cfa9cc531ee6b46b9b51c44c1b1d
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 00caa5eda37e5da9462286e71bbdbc2ff50d5081
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291542"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716859"
 ---
 # <a name="custom-channel-dispatcher"></a>Niestandardowy dyspozytor kanału
 Ten przykład pokazuje, jak zbudować stos kanałów w niestandardowy sposób, implementując <xref:System.ServiceModel.ServiceHostBase> bezpośrednio i jak utworzyć niestandardowy Dyspozytor kanału w środowisku hosta sieci Web. Dyspozytor kanału współdziała z <xref:System.ServiceModel.Channels.IChannelListener>, aby akceptować kanały i pobierać komunikaty ze stosu kanału. Ten przykład zawiera również podstawowy przykład pokazujący sposób tworzenia stosu kanału w środowisku hosta sieci Web przy użyciu <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
   
-## <a name="custom-servicehostbase"></a>Custom ServiceHostBase  
+## <a name="custom-servicehostbase"></a>Niestandardowy obiektu ServiceHostBase  
  Ten przykład implementuje typ podstawowy <xref:System.ServiceModel.ServiceHostBase> zamiast <xref:System.ServiceModel.ServiceHost>, aby pokazać, jak zastąpić implementację stosu Windows Communication Foundation (WCF) przy użyciu niestandardowej warstwy obsługi komunikatów na stosie kanału. Można zastąpić metodę wirtualną <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> w celu utworzenia odbiorników kanału i dyspozytora kanału.  
   
  W celu zaimplementowania usługi hostowanej w sieci Web Pobierz rozszerzenie usługi <xref:System.ServiceModel.Activation.VirtualPathExtension> z kolekcji <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> i Dodaj je do <xref:System.ServiceModel.Channels.BindingParameterCollection>, dzięki czemu warstwa transportu wie, jak skonfigurować odbiornik kanału w oparciu o ustawienia środowiska macierzystego, czyli Internet Information Services (IIS) ustawienia usługi aktywacji procesów/Windows (WAS).  
@@ -51,6 +51,6 @@ Server replied: You said: Howdy. Message id: 5
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`

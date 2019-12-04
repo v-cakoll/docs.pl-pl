@@ -2,25 +2,25 @@
 title: Zarządzanie wstrzymanymi wystąpieniami
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: 7a2f36ac2c127376eea56601f54aa5e571d66a55
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3f1f4f8edcbe0e05067d3ca739ef3d5f4fe4d798
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037891"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715943"
 ---
 # <a name="suspended-instance-management"></a>Zarządzanie wstrzymanymi wystąpieniami
-Ten przykład pokazuje, jak zarządzać wystąpieniami przepływów pracy, które zostały zawieszone.  Domyślna akcja dla elementu <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> is `AbandonAndSuspend`. Oznacza to, że domyślnie Nieobsłużone wyjątki zgłaszane z wystąpienia przepływu pracy hostowanego w programie <xref:System.ServiceModel.WorkflowServiceHost> spowodują, że wystąpienie zostanie usunięte z pamięci (porzucone) i trwałe/utrwalone wersje wystąpienia zostanie oznaczone jako wstrzymane. Nie będzie można uruchomić wstrzymanego wystąpienia przepływu pracy, dopóki nie zostanie ono zawieszone.
+Ten przykład pokazuje, jak zarządzać wystąpieniami przepływów pracy, które zostały zawieszone.  Domyślna akcja dla <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> jest `AbandonAndSuspend`. Oznacza to, że domyślnie Nieobsłużone wyjątki zgłaszane z wystąpienia przepływu pracy hostowanego w <xref:System.ServiceModel.WorkflowServiceHost> spowodują, że wystąpienie zostanie usunięte z pamięci (porzucone) i trwałe/utrwalone wersje wystąpienia zostanie oznaczone jako wstrzymane. Nie będzie można uruchomić wstrzymanego wystąpienia przepływu pracy, dopóki nie zostanie ono zawieszone.
 
  Przykład pokazuje, jak można zaimplementować narzędzie wiersza polecenia, aby wykonać zapytanie o wstrzymane wystąpienia oraz jak dać użytkownikowi możliwość wznowienia lub zakończenia wystąpienia. W tym przykładzie usługa przepływu pracy celowo zgłasza wyjątek, powodując jego zawieszenie. Narzędzia wiersza polecenia można następnie użyć, aby wykonać zapytanie dotyczące wystąpienia, a następnie wznowić lub przerwać wystąpienie.
 
-## <a name="demonstrates"></a>Demonstracje
- <xref:System.ServiceModel.WorkflowServiceHost>z <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> i<xref:System.ServiceModel.Activities.WorkflowControlEndpoint> w Windows Workflow Foundation (WF).
+## <a name="demonstrates"></a>Przedstawia
+ <xref:System.ServiceModel.WorkflowServiceHost> z <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> i <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> w Windows Workflow Foundation (WF).
 
 ## <a name="discussion"></a>Dyskusji
- Narzędzie wiersza polecenia zaimplementowane w tym przykładzie jest specyficzne dla implementacji magazynu wystąpień SQL, która jest dostarczana [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]przez program. Jeśli masz niestandardową implementację magazynu wystąpień, możesz dostosować to narzędzie, zastępując `WorkflowInstanceCommand` implementacje w przykładzie z implementacjami specyficznymi dla Twojego magazynu wystąpień.
+ Narzędzie wiersza polecenia zaimplementowane w tym przykładzie jest specyficzne dla implementacji magazynu wystąpień SQL, która jest dostarczana w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Jeśli masz niestandardową implementację magazynu wystąpień, możesz dostosować to narzędzie, zastępując implementacje `WorkflowInstanceCommand` w przykładzie z implementacjami specyficznymi dla Twojego magazynu wystąpień.
 
- Podana implementacja uruchamia polecenia SQL względem magazynu wystąpień SQL bezpośrednio w celu wyświetlenia listy wstrzymanych wystąpień i opiera się na dodaniu <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> <xref:System.ServiceModel.WorkflowServiceHost> do elementu w celu wznowienia lub zakończenia wystąpień.
+ Podana implementacja uruchamia polecenia SQL względem magazynu wystąpień SQL bezpośrednio w celu wyświetlenia listy wstrzymanych wystąpień i opiera się na <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> dodane do <xref:System.ServiceModel.WorkflowServiceHost> w celu wznowienia lub zakończenia wystąpień.
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
@@ -64,11 +64,11 @@ Ten przykład pokazuje, jak zarządzać wystąpieniami przepływów pracy, któr
 
          `SuspendedInstanceManagement -Command:[CommandName] -Server:[ServerName] -Database:[DatabaseName] -InstanceId:[InstanceId]`
 
-         Obsługiwane są następujące polecenia: `Query`, `Resume`, i `Terminate`.  Przełącznik InstanceId jest wymagany tylko dla `Resume` operacji i. `Terminate`
+         Obsługiwane polecenia to: `Query`, `Resume`i `Terminate`.  Przełącznik InstanceId jest wymagany tylko w przypadku operacji `Resume` i `Terminate`.
 
 #### <a name="to-cleanup-optional"></a>Aby oczyścić (opcjonalnie)
 
-1. Otwórz konsolę zarządzania komputerem, uruchamiając `vs2010` polecenie compmgmt. msc z poziomu wiersza polecenia.
+1. Otwórz konsolę zarządzania komputerem, uruchamiając polecenie compmgmt. msc z wiersza polecenia `vs2010`.
 
 2. Rozwiń węzeł **usługi i aplikacje**, kolejkowanie **komunikatów**, **kolejki prywatne**.
 
@@ -81,6 +81,6 @@ Ten przykład pokazuje, jak zarządzać wystąpieniami przepływów pracy, któr
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`

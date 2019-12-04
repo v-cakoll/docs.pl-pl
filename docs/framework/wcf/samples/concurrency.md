@@ -5,15 +5,15 @@ helpviewer_keywords:
 - service behaviors, concurency sample
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
-ms.openlocfilehash: 3a78612f679218711a81278184c16b04d6d6f802
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1342e50a5dca56260f832f5e0d684f4f79d355e2
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045674"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715992"
 ---
 # <a name="concurrency"></a>Współbieżność
-Przykład współbieżności ilustruje użycie <xref:System.ServiceModel.ServiceBehaviorAttribute> <xref:System.ServiceModel.ConcurrencyMode> z wyliczeniem, które określa, czy wystąpienie usługi przetwarza komunikaty sekwencyjnie czy współbieżnie. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontrakt usługi. Ten przykład definiuje nowy kontrakt `ICalculatorConcurrency`, który dziedziczy z `ICalculator`, dostarczając dwie dodatkowe operacje do sprawdzania stanu współbieżności usługi. Zmieniając ustawienie współbieżności, można obserwować zmianę zachowania przez uruchomienie klienta.  
+Przykład współbieżności ilustruje użycie <xref:System.ServiceModel.ServiceBehaviorAttribute> z wyliczeniem <xref:System.ServiceModel.ConcurrencyMode>, które określa, czy wystąpienie usługi przetwarza komunikaty sekwencyjnie czy współbieżnie. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje kontrakt usługi `ICalculator`. Ten przykład definiuje nowy kontrakt, `ICalculatorConcurrency`, który dziedziczy po `ICalculator`, zapewniając dwie dodatkowe operacje do sprawdzania stanu współbieżności usługi. Zmieniając ustawienie współbieżności, można obserwować zmianę zachowania przez uruchomienie klienta.  
   
  W tym przykładzie klient jest aplikacją konsolową (. exe), a usługa jest hostowana przez Internet Information Services (IIS).  
   
@@ -22,15 +22,15 @@ Przykład współbieżności ilustruje użycie <xref:System.ServiceModel.Service
   
  Dostępne są trzy tryby współbieżności:  
   
-- `Single`: Każde wystąpienie usługi przetwarza jeden komunikat w danym momencie. Jest to domyślny tryb współbieżności.  
+- `Single`: każde wystąpienie usługi przetwarza jeden komunikat w danym momencie. Jest to domyślny tryb współbieżności.  
   
-- `Multiple`: Każde wystąpienie usługi przetwarza jednocześnie wiele komunikatów. Implementacja usługi musi być bezpieczna wątkowo, aby można było używać tego trybu współbieżności.  
+- `Multiple`: każde wystąpienie usługi przetwarza wiele komunikatów jednocześnie. Implementacja usługi musi być bezpieczna wątkowo, aby można było używać tego trybu współbieżności.  
   
-- `Reentrant`: Każde wystąpienie usługi przetwarza jeden komunikat w danym momencie, ale akceptuje wywołania współużytkowane. Usługa akceptuje te wywołania tylko wtedy, gdy jest wywoływany. Reprezentacja jest przedstawiona w przykładzie [concurrency.](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) Retail.  
+- `Reentrant`: każde wystąpienie usługi przetwarza jeden komunikat w danym momencie, ale akceptuje wywołania współużytkowane. Usługa akceptuje te wywołania tylko wtedy, gdy jest wywoływany. Reprezentacja jest przedstawiona w przykładzie [concurrency.](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) Retail.  
   
- Użycie współbieżności jest związane z trybem wystąpienia. W <xref:System.ServiceModel.InstanceContextMode.PerCall> przypadku tworzenia wystąpień współbieżność nie jest istotna, ponieważ każdy komunikat jest przetwarzany przez nowe wystąpienie usługi. W <xref:System.ServiceModel.InstanceContextMode.Single> przypadkuwystąpienia<xref:System.ServiceModel.ConcurrencyMode.Multiple> , w zależności od tego, czy pojedyncze wystąpienie przetwarza komunikaty sekwencyjnie, czy współbieżnie. <xref:System.ServiceModel.ConcurrencyMode.Single> W <xref:System.ServiceModel.InstanceContextMode.PerSession> przypadku wystąpienia może być istotny dowolny z trybów współbieżności.  
+ Użycie współbieżności jest związane z trybem wystąpienia. W <xref:System.ServiceModel.InstanceContextMode.PerCall> tworzenia wystąpienia współbieżność nie jest istotna, ponieważ każdy komunikat jest przetwarzany przez nowe wystąpienie usługi. W <xref:System.ServiceModel.InstanceContextMode.Single> tworzeniu wystąpienia <xref:System.ServiceModel.ConcurrencyMode.Single> lub <xref:System.ServiceModel.ConcurrencyMode.Multiple> współbieżność jest istotna, w zależności od tego, czy pojedyncze wystąpienie przetwarza komunikaty sekwencyjnie czy współbieżnie. W <xref:System.ServiceModel.InstanceContextMode.PerSession> wystąpieniach mogą być odpowiednie wszystkie tryby współbieżności.  
   
- Klasa usługi określa zachowanie współbieżności z `[ServiceBehavior(ConcurrencyMode=<setting>)]` atrybutem, jak pokazano w poniższym przykładzie kodu. Poprzez zmianę wierszy, które są oznaczone jako komentarze, można eksperymentować `Single` z `Multiple` trybami współbieżności i. Pamiętaj, aby ponownie skompilować usługę po zmianie trybu współbieżności.  
+ Klasa usługi określa zachowanie współbieżności z atrybutem `[ServiceBehavior(ConcurrencyMode=<setting>)]`, jak pokazano w poniższym przykładzie kodu. Poprzez zmianę wierszy, które są oznaczone jako komentarze, można eksperymentować z `Single` i `Multiple` trybów współbieżności. Pamiętaj, aby ponownie skompilować usługę po zmianie trybu współbieżności.  
   
 ```csharp
 // Single allows a single message to be processed sequentially by each service instance.  
@@ -89,15 +89,15 @@ public class CalculatorService : ICalculatorConcurrency
 }  
 ```  
   
- Przykład domyślnie używa <xref:System.ServiceModel.ConcurrencyMode.Multiple> współbieżności <xref:System.ServiceModel.InstanceContextMode.Single> z wystąpieniami. Kod klienta został zmodyfikowany w celu korzystania z asynchronicznego serwera proxy. Dzięki temu Klient może wykonywać wiele wywołań do usługi bez oczekiwania na odpowiedź między każdym wywołaniem. Można obserwować różnicę w działaniu trybu współbieżności usługi.  
+ Przykład domyślnie używa <xref:System.ServiceModel.ConcurrencyMode.Multiple> współbieżności z wystąpieniami <xref:System.ServiceModel.InstanceContextMode.Single>. Kod klienta został zmodyfikowany w celu korzystania z asynchronicznego serwera proxy. Dzięki temu Klient może wykonywać wiele wywołań do usługi bez oczekiwania na odpowiedź między każdym wywołaniem. Można obserwować różnicę w działaniu trybu współbieżności usługi.  
   
- Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Zostanie wyświetlona opcja tryb współbieżności, w którym jest uruchomiona usługa, każda operacja jest wywoływana, a następnie wyświetlana jest liczba operacji. Należy zauważyć, że gdy tryb współbieżności to `Multiple`, wyniki są zwracane w innej kolejności niż w sposobie ich wywołania, ponieważ usługa przetwarza wiele komunikatów współbieżnie. Zmieniając tryb współbieżności na `Single`, wyniki są zwracane w kolejności, w jakiej zostały wywołane, ponieważ usługa przetwarza każdy komunikat sekwencyjnie. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
+ Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Zostanie wyświetlona opcja tryb współbieżności, w którym jest uruchomiona usługa, każda operacja jest wywoływana, a następnie wyświetlana jest liczba operacji. Należy zauważyć, że gdy tryb współbieżności jest `Multiple`, wyniki są zwracane w innej kolejności niż w przypadku ich wywołania, ponieważ usługa przetwarza wiele komunikatów współbieżnie. Zmieniając tryb współbieżności na `Single`, wyniki są zwracane w kolejności, w jakiej zostały wywołane, ponieważ usługa przetwarza każdy komunikat sekwencyjnie. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
 1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Jeśli używasz programu Svcutil. exe do generowania klienta proxy, upewnij się, że dołączysz `/async` opcję.  
+2. Jeśli używasz programu Svcutil. exe do generowania klienta proxy, upewnij się, że dołączysz opcję `/async`.  
   
 3. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -108,6 +108,6 @@ public class CalculatorService : ICalculatorConcurrency
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Concurrency`  

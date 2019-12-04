@@ -1,24 +1,24 @@
 ---
-title: Powiązanie HTTP Federacji protokołu WS 2007
+title: Powiązanie HTTP w standardzie WS 2007 Federation
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: ad56665b5b6648fb93a9f31f18167a964b4cba92
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2f924bdcbf9082d9d43e02d82c9d00c32ebcaacf
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834657"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714975"
 ---
-# <a name="ws-2007-federation-http-binding"></a>Powiązanie HTTP Federacji protokołu WS 2007
+# <a name="ws-2007-federation-http-binding"></a>Powiązanie HTTP w standardzie WS 2007 Federation
 
 Ten przykład ilustruje użycie <xref:System.ServiceModel.WS2007FederationHttpBinding>, standardowego powiązania, którego można użyć do kompilowania scenariuszy federacyjnych, które obsługują wersję 1,3 specyfikacji WS-Trust.
 
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
 
-Przykład składa się z programu klienckiego opartego na konsoli (*Client. exe*), programu usługi tokenu zabezpieczającego opartego na konsoli (*SecurityTokenService. exe*) i programu usług opartego na konsoli (*Service. exe*). Usługa implementuje kontrakt definiujący wzorzec komunikacji żądania/odpowiedzi. Umowa jest definiowana przez interfejs `ICalculator`, który udostępnia operacje matematyczne (`Add`, `Subtract`, `Multiply` i `Divide`). Klient uzyskuje token zabezpieczający z usługi tokenu zabezpieczającego (STS) i wysyła synchroniczne żądania do usługi dla danej operacji matematycznej. Następnie usługa wysyła odpowiedzi z wynikiem. Aktywność klienta jest widoczna w oknie konsoli.
+Przykład składa się z programu klienckiego opartego na konsoli (*Client. exe*), programu usługi tokenu zabezpieczającego opartego na konsoli (*SecurityTokenService. exe*) i programu usług opartego na konsoli (*Service. exe*). Usługa implementuje kontrakt definiujący wzorzec komunikacji żądania/odpowiedzi. Umowa jest definiowana przez interfejs `ICalculator`, który uwidacznia operacje matematyczne (`Add`, `Subtract`, `Multiply`i `Divide`). Klient uzyskuje token zabezpieczający z usługi tokenu zabezpieczającego (STS) i wysyła synchroniczne żądania do usługi dla danej operacji matematycznej. Następnie usługa wysyła odpowiedzi z wynikiem. Aktywność klienta jest widoczna w oknie konsoli.
 
-Przykład powoduje, że kontrakt `ICalculator` jest dostępny przy użyciu elementu `ws2007FederationHttpBinding`. Konfiguracja tego powiązania na kliencie jest pokazana w poniższym kodzie:
+Przykład umożliwia udostępnienie `ICalculator` kontraktu przy użyciu elementu `ws2007FederationHttpBinding`. Konfiguracja tego powiązania na kliencie jest pokazana w poniższym kodzie:
 
 ```xml
 <bindings>
@@ -37,7 +37,7 @@ Przykład powoduje, że kontrakt `ICalculator` jest dostępny przy użyciu eleme
 </bindings>
 ```
 
-W [\<security >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)wartość `security` określa tryb zabezpieczeń, który ma być używany. W tym przykładzie użyto zabezpieczeń `message`, co oznacza, że [> \<message](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) jest określony w [> \<security](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). Element [\<issuer >](../../configure-apps/file-schema/wcf/issuer.md) wewnątrz [\<message >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) określa adres i powiązanie dla usługi STS, która wystawia token zabezpieczający dla klienta, aby klient mógł uwierzytelnić się w usłudze `ICalculator`.
+Na [> zabezpieczeń\<](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)wartość `security` określa tryb zabezpieczeń, który ma być używany. W tym przykładzie użyto `message` zabezpieczeń, co oznacza, że [> komunikat\<](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) został określony w [\<> zabezpieczeń](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). [\<wystawca >](../../configure-apps/file-schema/wcf/issuer.md) element wewnątrz [wiadomości\<](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) określa adres i powiązanie dla usługi STS, która wystawia token zabezpieczający dla klienta, aby klient mógł uwierzytelnić się w usłudze `ICalculator`.
   
 Konfiguracja tego powiązania w usłudze jest pokazana w poniższym kodzie:
 
@@ -64,7 +64,7 @@ Konfiguracja tego powiązania w usłudze jest pokazana w poniższym kodzie:
 </bindings>
 ```
 
-W [\<security >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)wartość `security` określa tryb zabezpieczeń, który ma być używany. W tym przykładzie użyto zabezpieczeń `message`, co oznacza, że [> \<message](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) jest określony w [> \<security](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). [@No__t-1issuerMetadata >](../../configure-apps/file-schema/wcf/issuermetadata.md) element `ws2007FederationHttpBinding` w [\<message >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) określa adres i tożsamość punktu końcowego, którego można użyć do pobrania metadanych dla usługi STS.
+Na [> zabezpieczeń\<](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)wartość `security` określa tryb zabezpieczeń, który ma być używany. W tym przykładzie użyto `message` zabezpieczeń, co oznacza, że [> komunikat\<](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) został określony w [\<> zabezpieczeń](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). [\<issuerMetadata >](../../configure-apps/file-schema/wcf/issuermetadata.md) element `ws2007FederationHttpBinding` w [\<komunikat >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) określa adres i tożsamość punktu końcowego, którego można użyć do pobrania metadanych dla usługi STS.
 
 Zachowanie usługi jest pokazane w następującym kodzie:
 
@@ -93,9 +93,9 @@ Zachowanie usługi jest pokazane w następującym kodzie:
 </behaviors>
 ```
   
-[@No__t-1issuedTokenAuthentication >](../../configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)> umożliwia usłudze określenie ograniczeń dotyczących tokenów, które umożliwiają klientom prezentowanie podczas uwierzytelniania. Ta konfiguracja określa, że tokeny podpisane przez certyfikat, którego nazwa podmiotu to CN = STS, są akceptowane przez usługę.
+[\<issuedTokenAuthentication >](../../configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)> umożliwia usłudze określenie ograniczeń dotyczących tokenów, które umożliwiają klientom prezentowanie podczas uwierzytelniania. Ta konfiguracja określa, że tokeny podpisane przez certyfikat, którego nazwa podmiotu to CN = STS, są akceptowane przez usługę.
 
-Usługa STS udostępnia jeden punkt końcowy przy użyciu standardowego <xref:System.ServiceModel.WS2007HttpBinding>. Usługa odpowiada na żądania od klientów tokenów. Jeśli klient jest uwierzytelniany przy użyciu konta systemu Windows, usługa wystawia token, który zawiera nazwę użytkownika klienta jako rolę żądania. W ramach tworzenia tokenu usługa STS podpisuje token przy użyciu klucza prywatnego skojarzonego z certyfikatem usługi STS. Ponadto tworzy klucz symetryczny i szyfruje go przy użyciu klucza publicznego skojarzonego z certyfikatem CN = localhost. W przypadku zwracania tokenu do klienta usługa STS zwraca również klucz symetryczny. Klient przedstawia wystawiony token dla usługi `ICalculator` i potwierdza, że zna klucz symetryczny, podpisując komunikat przy użyciu tego klucza.
+Usługa STS udostępnia jeden punkt końcowy przy użyciu standardowej <xref:System.ServiceModel.WS2007HttpBinding>. Usługa odpowiada na żądania od klientów tokenów. Jeśli klient jest uwierzytelniany przy użyciu konta systemu Windows, usługa wystawia token, który zawiera nazwę użytkownika klienta jako rolę żądania. W ramach tworzenia tokenu usługa STS podpisuje token przy użyciu klucza prywatnego skojarzonego z certyfikatem usługi STS. Ponadto tworzy klucz symetryczny i szyfruje go przy użyciu klucza publicznego skojarzonego z certyfikatem CN = localhost. W przypadku zwracania tokenu do klienta usługa STS zwraca również klucz symetryczny. Klient przedstawia wystawiony token usłudze `ICalculator` i potwierdza, że zna klucz symetryczny, podpisując komunikat przy użyciu tego klucza.
 
 Po uruchomieniu przykładu żądanie tokenu zabezpieczającego jest wyświetlane w oknie konsoli STS. Żądania i odpowiedzi operacji są wyświetlane w oknach konsoli klienta i usługi. Naciśnij klawisz ENTER w dowolnym systemie Windows Console, aby zamknąć aplikację.
 
@@ -126,6 +126,6 @@ Plik *Setup. bat* dołączony do tego przykładu umożliwia skonfigurowanie serw
 > 
 > `<InstallDrive>:\WF_WCF_Samples`
 > 
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu:
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu:
 > 
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\WS2007FederationHttp`

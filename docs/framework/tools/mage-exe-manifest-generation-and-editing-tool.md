@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: aa2ad9222460f8732397f8b1c72e36085bbe4a21
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3752ac7108a9fcd55b61b32b889a717ef7c0faff
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449421"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714473"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Narzędzie generowania manifestu i edytowania)
 
@@ -55,11 +55,11 @@ W poniższej tabeli przedstawiono opcje obsługiwane przez `-New` i `-Update` po
 |**-CSP,-obiekt cryptoprovider** `provider-name`||Wszystkie typy plików.|Określa nazwę dostawcy usług kryptograficznych (CSP), który zawiera kontener klucza prywatnego. Ta opcja wymaga opcji **-containerer** .<br/><br/>Ta opcja jest dostępna od .NET Framework 4,7.|
 |**-FD,-FromDirectory** `directoryPath`||Manifesty aplikacji.|Wypełnia manifest aplikacji opisami wszystkich zestawów i plików znalezionych w `directoryPath`, w tym wszystkich podkatalogów, gdzie `directoryPath` jest katalogiem zawierającym aplikację, którą chcesz wdrożyć. Dla każdego pliku w katalogu Program *Mage. exe* decyduje o tym, czy plik jest zestawem, czy plikiem statycznym. Jeśli jest to zestaw, dodaje tag `<dependency>` i atrybut `installFrom` do aplikacji z nazwą zestawu, bazą kodu i wersją. Jeśli jest to plik statyczny, dodaje tag `<file>`. Program *Mage. exe* również użyje prostego zestawu heurystycznych do wykrycia głównego pliku wykonywalnego dla aplikacji i oznaczy go jako punkt wejścia aplikacji ClickOnce w manifeście.<br /><br /> Program *Mage. exe* nigdy nie automatycznie oznaczy pliku jako pliku "Data". Tę czynność należy wykonać ręcznie. Aby uzyskać więcej informacji, zobacz [jak to zrobić: Dołączanie pliku danych do aplikacji ClickOnce](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application).<br /><br /> Program *Mage. exe* generuje również skrót dla każdego pliku na podstawie jego rozmiaru. Technologia ClickOnce używa tych skrótów, aby zagwarantować, że nikt nie ingerował w pliki wdrożenia od czasu utworzenia manifestu. Jeśli którykolwiek z plików we wdrożeniu ulegnie zmianie, można uruchomić program *Mage. exe* z poleceniem **-Update** i opcją **-FromDirectory** . spowoduje to zaktualizowanie skrótów i wersji zestawu wszystkich plików, do których istnieją odwołania.<br /><br /> **-FromDirectory** będzie zawierać wszystkie pliki we wszystkich podkatalogach, które znajdują się w `directoryPath`.<br /><br /> Jeśli używasz **-FromDirectory** z poleceniem **-Update** , program *Mage. exe* usunie wszystkie pliki w manifeście aplikacji, które nie istnieją już w katalogu.|
 |**-IF,-IconFile**`filePath`||Manifesty aplikacji.|Określa pełną ścieżkę do pliku ikony ICO. Ta ikona pojawia się obok nazwy aplikacji w menu Start oraz we wpisie w aplecie Dodaj lub usuń programy. Jeśli nie zostanie dostarczona ikona, będzie używana ikona domyślna.|
-|**-IP,-IncludeProviderURL**`url`|{1&gt;true&lt;1}|Manifesty wdrożenia.|Wskazuje, czy manifest wdrożenia zawiera wartość lokalizacji aktualizacji ustawioną przez **-providerUrl**.|
-|**-i,-zainstaluj** `willInstall`|{1&gt;true&lt;1}|Manifesty wdrożenia.|Wskazuje, czy aplikacja ClickOnce ma zostać zainstalowana na komputerze lokalnym, czy ma być uruchamiana z sieci Web. Zainstalowanie aplikacji zapewnia, że aplikacja jest dostępna w menu **Start** systemu Windows. Prawidłowymi wartościami są „true” lub „t” oraz „false” lub „f”.<br /><br /> Jeśli zostanie określona opcja **-MinVersion** , a użytkownik ma zainstalowaną wersję niższą niż **-MinVersion** , wymusi to zainstalowanie aplikacji niezależnie od wartości przekazywanej do **instalacji**.<br /><br /> Tej opcji nie można używać z opcją **-BrowserHosted** . Próba określenia obu tych opcji dla jednego manifestu spowoduje błąd.|
+|**-IP,-IncludeProviderURL**`url`|true|Manifesty wdrożenia.|Wskazuje, czy manifest wdrożenia zawiera wartość lokalizacji aktualizacji ustawioną przez **-providerUrl**.|
+|**-i,-zainstaluj** `willInstall`|true|Manifesty wdrożenia.|Wskazuje, czy aplikacja ClickOnce ma zostać zainstalowana na komputerze lokalnym, czy ma być uruchamiana z sieci Web. Zainstalowanie aplikacji zapewnia, że aplikacja jest dostępna w menu **Start** systemu Windows. Prawidłowymi wartościami są „true” lub „t” oraz „false” lub „f”.<br /><br /> Jeśli zostanie określona opcja **-MinVersion** , a użytkownik ma zainstalowaną wersję niższą niż **-MinVersion** , wymusi to zainstalowanie aplikacji niezależnie od wartości przekazywanej do **instalacji**.<br /><br /> Tej opcji nie można używać z opcją **-BrowserHosted** . Próba określenia obu tych opcji dla jednego manifestu spowoduje błąd.|
 |**-KC,-`name` kontenerów**||Wszystkie typy plików.|Określa kontener klucza, który zawiera nazwę klucza prywatnego. Ta opcja wymaga opcji **obiekt CryptoProvider** .<br/><br/>Ta opcja jest dostępna od .NET Framework 4,7.|
 |**-MV,-MinVersion**`[version]`|Wersja wymieniona w manifeście wdrażania ClickOnce określona przez flagę **-Version** .|Manifesty wdrożenia.|Minimalna wersja aplikacji, jaką może uruchomić użytkownik. Ta flaga powoduje, że nazwana wersja aplikacji staje się wymaganą aktualizacją. Jeśli zostanie wydana wersja produktu z aktualizacją dotyczącą ważnej zmiany lub krytycznej wady zabezpieczeń, można użyć tej flagi, aby określić, że ta aktualizacja musi zostać zainstalowana, a użytkownik nie może kontynuować używania wcześniejszych wersji.<br /><br /> `version` ma tę samą semantykę jako argument flagi **-Version** .|
-|**-n,-nazwa** `nameString`|Wdróż|Wszystkie typy plików.|Nazwa, która jest używana do identyfikacji aplikacji. Technologia ClickOnce będzie używać tej nazwy do identyfikowania aplikacji w menu **Start** (Jeśli aplikacja jest skonfigurowana do samodzielnego instalowania) i w oknach dialogowych podniesienia uprawnień. **Uwaga:**  Jeśli aktualizujesz istniejący manifest i nie określisz nazwy wydawcy z tą opcją, program *Mage. exe* zaktualizuje manifest o nazwie organizacji zdefiniowanej na komputerze. Aby użyć innej nazwy, należy użyć tej opcji i określić odpowiednią nazwę wydawcy.|
+|**-n,-nazwa** `nameString`|Wdrażanie programu|Wszystkie typy plików.|Nazwa, która jest używana do identyfikacji aplikacji. Technologia ClickOnce będzie używać tej nazwy do identyfikowania aplikacji w menu **Start** (Jeśli aplikacja jest skonfigurowana do samodzielnego instalowania) i w oknach dialogowych podniesienia uprawnień. **Uwaga:**  Jeśli aktualizujesz istniejący manifest i nie określisz nazwy wydawcy z tą opcją, program *Mage. exe* zaktualizuje manifest o nazwie organizacji zdefiniowanej na komputerze. Aby użyć innej nazwy, należy użyć tej opcji i określić odpowiednią nazwę wydawcy.|
 |**-PWD, `passwd` hasła**||Wszystkie typy plików.|Hasło używane do podpisywania manifestu za pomocą certyfikatu cyfrowego. Musi być używany w połączeniu z opcją **-CERTFILE** .|
 |**-p, `processorValue` procesora**|Msil|Manifesty aplikacji.<br /><br /> Manifesty wdrożenia.|Architektura mikroprocesora, na której będzie uruchomiona dystrybucja. Ta wartość jest wymagana, jeśli jest przygotowywanych kilka instalacji, których zestawy są wstępnie kompilowane dla określonego mikroprocesora. Prawidłowe wartości to `msil`, `x86`, `ia64`i `amd64`. `msil` jest językiem pośrednim firmy Microsoft, co oznacza, że wszystkie zestawy są niezależne od platformy, a środowisko uruchomieniowe języka wspólnego (CLR) rozpocznie się po raz pierwszy podczas pierwszego uruchomienia aplikacji.|
 |**-PU,** **-providerUrl** `url`||Manifesty wdrożenia.|Określa adres URL, pod którym technologia ClickOnce będzie szukać aktualizacji aplikacji.|
@@ -117,17 +117,17 @@ W poniższych tabelach przedstawiono następujące funkcje i ograniczenia:
 
 |Wersja manifestu|Operacja|Mage w wersji 2.0|Mage w wersji 4.0|
 |----------------------|---------------|---------------|---------------|
-|Manifest dla aplikacji, których platforma docelowa to wersja 2.0 lub 3.x programu .NET Framework|Otwarty|OK|OK|
-||Zamknij|OK|OK|
+|Manifest dla aplikacji, których platforma docelowa to wersja 2.0 lub 3.x programu .NET Framework|Otwarcie|OK|OK|
+||Zamknięcie|OK|OK|
 ||Zapisz|OK|OK|
 ||Ponowne podpisane|OK|OK|
-||Nowa|OK|Nieobsługiwane|
+||New|OK|Nieobsługiwane|
 ||Aktualizacja (zobacz poniżej)|OK|OK|
-|Manifest dla aplikacji, których platforma docelowa to wersja 4 programu .NET Framework|Otwarty|OK|OK|
-||Zamknij|OK|OK|
+|Manifest dla aplikacji, których platforma docelowa to wersja 4 programu .NET Framework|Otwarcie|OK|OK|
+||Zamknięcie|OK|OK|
 ||Zapisz|OK|OK|
 ||Ponowne podpisane|OK|OK|
-||Nowa|Nieobsługiwane|OK|
+||New|Nieobsługiwane|OK|
 ||Aktualizacja (zobacz poniżej)|Nieobsługiwane|OK|
 
 |Wersja manifestu|Szczegóły operacji aktualizacji|Mage w wersji 2.0|Mage w wersji 4.0|
@@ -139,9 +139,9 @@ W poniższych tabelach przedstawiono następujące funkcje i ograniczenia:
 ||Dodanie zestawu|Nieobsługiwane|OK|
 ||Usunięcie zestawu|Nieobsługiwane|OK|
 
- Program Mage. exe tworzy nowe manifesty, które są przeznaczone dla [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Aplikacje ClickOnce przeznaczone dla [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] mogą działać na [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] i pełnej wersji .NET Framework 4. Jeśli aplikacja jest przeznaczona dla pełnej wersji .NET Framework 4 i nie można jej uruchomić na [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)], Usuń element `<framework>` klienta przy użyciu edytora tekstów i ponownym podpisem manifestu.
+ Program Mage. exe tworzy nowe manifesty ukierunkowane na profil klienta .NET Framework 4. Aplikacje ClickOnce przeznaczone dla profilu klienta .NET Framework 4 mogą działać zarówno w profilu klienta .NET Framework 4, jak i w pełnej wersji .NET Framework 4. Jeśli aplikacja jest przeznaczona dla pełnej wersji .NET Framework 4 i nie można jej uruchomić w profilu klienta .NET Framework 4, Usuń element `<framework>` klienta, używając edytora tekstów, a następnie zarejestruj manifest.
 
-Poniżej znajduje się przykładowy element `<framework>`, który jest przeznaczony dla [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]:
+Poniżej znajduje się przykładowy element `<framework>`, który jest przeznaczony dla profilu klienta .NET Framework 4:
 
 ```xml
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />

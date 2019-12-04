@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: d59ff7f66076fc56ebb27841105fad07a7c7fee1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204798"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716268"
 ---
 # <a name="file-and-stream-io"></a>We/Wy plików i strumieni
 
@@ -143,11 +143,11 @@ Zobacz [izolowany magazyn](isolated-storage.md).
 
 ## <a name="io-operations-in-windows-store-apps"></a>Operacje we/wy w aplikacjach ze sklepu Windows
 
-[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] zawiera wiele typów do odczytu i zapisu do strumieni; Jednak ten zestaw nie obejmuje wszystkich typów .NET Framework we/wy.
+Aplikacje ze sklepu .NET dla systemu Windows 8. x zawierają wiele typów do odczytu i zapisu do strumieni; Jednak ten zestaw nie obejmuje wszystkich typów .NET Framework we/wy.
 
 Kilka ważnych różnic podczas korzystania z operacji we/wy w aplikacjach ze sklepu Windows 8. x:
 
-- Typy, w odniesieniu do operacji dotyczących plików, takie jak <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> i <xref:System.IO.DirectoryInfo>, nie są uwzględnione w [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Zamiast tego należy użyć typów w przestrzeni nazw <xref:Windows.Storage?displayProperty=nameWithType> środowisko wykonawcze systemu Windows, takich jak <xref:Windows.Storage.StorageFile> i <xref:Windows.Storage.StorageFolder>.
+- Typy przeznaczone wyłącznie dla operacji na plikach, takich jak <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> i <xref:System.IO.DirectoryInfo>, nie są zawarte w aplikacjach w sklepie .NET dla systemu Windows 8. x. Zamiast tego należy użyć typów w przestrzeni nazw <xref:Windows.Storage?displayProperty=nameWithType> środowisko wykonawcze systemu Windows, takich jak <xref:Windows.Storage.StorageFile> i <xref:Windows.Storage.StorageFolder>.
 
 - Magazyn izolowany nie jest dostępny. Zamiast tego należy użyć [danych aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
 

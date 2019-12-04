@@ -2,21 +2,21 @@
 title: Ustawianie właściwości use i style — przykłady WCF
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: 946f8f6aab253eb881faaba7adfdc68dc54d7f0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f92b25144759692c54aa7a1730a9bb85cab4f15f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958802"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714437"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Ustawianie właściwości Use i Style
 
-Ten przykład ilustruje sposób użycia właściwości use i style w <xref:System.ServiceModel.XmlSerializerFormatAttribute> <xref:System.ServiceModel.DataContractFormatAttribute>i. Te właściwości wpływają na sposób formatowania komunikatów. Domyślnie treść komunikatu jest formatowana stylem ustawionym na <xref:System.ServiceModel.OperationFormatStyle.Document>. Te ustawienia można określić na poziomie kontraktu usługi lub na poziomie kontraktu operacji.
+Ten przykład ilustruje sposób użycia właściwości use i style na <xref:System.ServiceModel.XmlSerializerFormatAttribute> i <xref:System.ServiceModel.DataContractFormatAttribute>. Te właściwości wpływają na sposób formatowania komunikatów. Domyślnie treść komunikatu jest formatowana stylem ustawionym na <xref:System.ServiceModel.OperationFormatStyle.Document>. Te ustawienia można określić na poziomie kontraktu usługi lub na poziomie kontraktu operacji.
 
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
 
-Właściwość <xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> style określa sposób formatowania metadanych WSDL dla usługi. Możliwe wartości to <xref:System.ServiceModel.OperationFormatStyle.Document>, i <xref:System.ServiceModel.OperationFormatStyle.Rpc>. RPC oznacza, że reprezentacja WSDL komunikatów wymienianych dla operacji zawiera parametry tak, jakby były zdalnego wywołania procedury. Oto przykład.
+Właściwość Style <xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> określa sposób formatowania metadanych WSDL dla usługi. Możliwe wartości to <xref:System.ServiceModel.OperationFormatStyle.Document>i <xref:System.ServiceModel.OperationFormatStyle.Rpc>. RPC oznacza, że reprezentacja WSDL komunikatów wymienianych dla operacji zawiera parametry tak, jakby były zdalnego wywołania procedury. Poniżej przedstawiono przykład.
 
 ```xml
 <wsdl:message name="IUseAndStyleCalculator_Add_InputMessage">
@@ -25,7 +25,7 @@ Właściwość <xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> s
 </wsdl:message>
 ```
 
-Ustawienie stylu <xref:System.ServiceModel.OperationFormatStyle.Document> oznacza, że reprezentacja WSDL zawiera pojedynczy element reprezentujący dokument wymieniany dla operacji, jak pokazano w poniższym przykładzie.
+Ustawienie stylu na <xref:System.ServiceModel.OperationFormatStyle.Document> oznacza, że reprezentacja WSDL zawiera pojedynczy element reprezentujący dokument wymieniany dla operacji, jak pokazano w poniższym przykładzie.
 
 ```xml
 <wsdl:message name="IUseAndStyleCalculator_Add_InputMessage">
@@ -33,7 +33,7 @@ Ustawienie stylu <xref:System.ServiceModel.OperationFormatStyle.Document> oznacz
 </wsdl:message>
 ```
 
-<xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> Właściwość określa format wiadomości. Możliwe wartości to <xref:System.ServiceModel.OperationFormatUse.Literal> i <xref:System.ServiceModel.OperationFormatUse.Encoded>; wartość domyślna to <xref:System.ServiceModel.OperationFormatUse.Literal>. Literał oznacza, że komunikat jest wystąpieniem literału schematu w języku WSDL, jak pokazano w poniższym przykładzie dokumentu/literału.
+Właściwość <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> określa format wiadomości. Możliwe wartości to <xref:System.ServiceModel.OperationFormatUse.Literal> i <xref:System.ServiceModel.OperationFormatUse.Encoded>; wartość domyślna to <xref:System.ServiceModel.OperationFormatUse.Literal>. Literał oznacza, że komunikat jest wystąpieniem literału schematu w języku WSDL, jak pokazano w poniższym przykładzie dokumentu/literału.
 
 ```xml
 <Add xmlns="http://Microsoft.ServiceModel.Samples">
@@ -51,11 +51,11 @@ Zakodowane oznacza, że schematy w języku WSDL są specyfikacjami abstrakcyjnym
 </q1:Add>
 ```
 
-Profil WS-I Basic 1,0 zabrania korzystania z programu <xref:System.ServiceModel.OperationFormatUse.Encoded> i należy go używać tylko wtedy, gdy jest to wymagane przez starsze usługi. Format `Encoded` wiadomości jest dostępny tylko w przypadku korzystania z elementu XmlSerializer.
+Profil WS-I Basic 1,0 zabrania używania <xref:System.ServiceModel.OperationFormatUse.Encoded> i należy go używać tylko wtedy, gdy jest to wymagane przez starsze usługi. Format komunikatu `Encoded` jest dostępny tylko w przypadku korzystania z elementu XmlSerializer.
 
-Aby umożliwić wyświetlanie wysyłanych i odbieranych komunikatów, ten przykład jest oparty na [śledzeniu i rejestrowaniu komunikatów](tracing-and-message-logging.md). Konfiguracja usługi i kod źródłowy zostały zmodyfikowane w celu włączenia śledzenia i rejestrowania komunikatów. Ponadto program <xref:System.ServiceModel.WSHttpBinding> został skonfigurowany bez zabezpieczeń, dlatego zarejestrowane komunikaty można wyświetlać w nieszyfrowanym formacie. Wynikowe dzienniki śledzenia (System. ServiceModel. e2e i Message. log) powinny być przeglądane przy użyciu [narzędzia Podgląd śledzenia usługi (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md). Ślady są konfigurowane do utworzenia w folderze C:\LOGS. Utwórz folder przed uruchomieniem przykładu. Aby wyświetlić zawartość wiadomości w narzędziu Podgląd śledzenia, wybierz pozycję **komunikaty** w lewym okienku narzędzia.
+Aby umożliwić wyświetlanie wysyłanych i odbieranych komunikatów, ten przykład jest oparty na [śledzeniu i rejestrowaniu komunikatów](tracing-and-message-logging.md). Konfiguracja usługi i kod źródłowy zostały zmodyfikowane w celu włączenia śledzenia i rejestrowania komunikatów. Ponadto <xref:System.ServiceModel.WSHttpBinding> została skonfigurowana bez zabezpieczeń, dlatego zarejestrowane komunikaty mogą być wyświetlane w nieszyfrowanym formacie. Wynikowe dzienniki śledzenia (System. ServiceModel. e2e i Message. log) powinny być przeglądane przy użyciu [narzędzia Podgląd śledzenia usługi (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md). Ślady są konfigurowane do utworzenia w folderze C:\LOGS. Utwórz folder przed uruchomieniem przykładu. Aby wyświetlić zawartość wiadomości w narzędziu Podgląd śledzenia, wybierz pozycję **komunikaty** w lewym okienku narzędzia.
 
-Poniższy kod <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> przedstawia kontrakt usługi z właściwością ustawioną na <xref:System.ServiceModel.OperationFormatUse> i format treści wiadomości zmienia się z domyślnej <xref:System.ServiceModel.OperationFormatStyle> na <xref:System.ServiceModel.OperationFormatStyle.Document>.
+Poniższy kod przedstawia kontrakt usługi z właściwością <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> ustawioną na <xref:System.ServiceModel.OperationFormatUse> i format treści wiadomości został zmieniony z domyślnej <xref:System.ServiceModel.OperationFormatStyle> na <xref:System.ServiceModel.OperationFormatStyle.Document>.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),
@@ -74,7 +74,7 @@ public interface IUseAndStyleCalculator
 }
 ```
 
-Aby zobaczyć różnicę między różnymi <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> i <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> ustawieniami, zmodyfikuj je w usłudze, ponownie Wygeneruj klienta, uruchom przykład i sprawdź plik c:\logs\Message.Logs za pomocą narzędzia Podgląd śledzenia usługi. Zwróć uwagę na wpływ na metadane przez wyświetlenie `http://localhost/ServiceModelSamples/service.svc?wsdl`. Metadane usług są zwykle podzielone na wiele stron. Główna strona WSDL zawiera powiązania WSDL, ale widok `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` , aby obserwować definicje komunikatów.
+Aby zobaczyć różnicę między różnymi ustawieniami <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> i <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A>, zmodyfikuj je w usłudze, ponownie Wygeneruj klienta, uruchom przykład i sprawdź plik c:\logs\Message.Logs za pomocą narzędzia Podgląd śledzenia usługi. Zaobserwuj również wpływ na metadane, wyświetlając `http://localhost/ServiceModelSamples/service.svc?wsdl`. Metadane usług są zwykle podzielone na wiele stron. Główna strona WSDL zawiera powiązania WSDL, ale Wyświetl `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0`, aby obserwować definicje komunikatów.
 
 ## <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
@@ -91,6 +91,6 @@ Aby zobaczyć różnicę między różnymi <xref:System.ServiceModel.XmlSerializ
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
 > 
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\UseAndStyle`

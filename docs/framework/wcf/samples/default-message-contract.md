@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 2115ac88c52efca09d32a870fc52905f80f6f746
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dcdeeda0d6054c9cf6fefa31ea33d720c0c0f3f7
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045053"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716583"
 ---
 # <a name="default-message-contract"></a>Domyślny kontrakt komunikatów
-Domyślny przykład kontraktu komunikatu pokazuje usługę, w której do i z operacji usługi jest przesyłany niestandardowy komunikat zdefiniowany przez użytkownika. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje interfejs kalkulatora jako usługę o określonym typie. Zamiast poszczególnych operacji usługi do dodawania, odejmowania, mnożenia i dzielenia używanych w [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), ten przykład przekazuje komunikat niestandardowy, który zawiera operandy i operator, i zwraca wynik Obliczanie arytmetyczne.  
+Domyślny przykład kontraktu komunikatu pokazuje usługę, w której do i z operacji usługi jest przesyłany niestandardowy komunikat zdefiniowany przez użytkownika. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje interfejs kalkulatora jako usługę o określonym typie. Zamiast poszczególnych operacji usługi do dodawania, odejmowania, mnożenia i dzielenia używanych w [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), ten przykład przekazuje komunikat niestandardowy, który zawiera operandy i operator, i zwraca wynik obliczeń arytmetycznych.  
   
  Klient jest programem konsolowym (. exe), a Biblioteka usług (. dll) jest hostowana przez Internet Information Services (IIS). Aktywność klienta jest widoczna w oknie konsoli.  
   
@@ -31,7 +31,7 @@ public interface ICalculator
 }  
 ```  
   
- Wiadomość `MyMessage` niestandardowa jest definiowana w klasie <xref:System.ServiceModel.MessageHeaderAttribute> z <xref:System.ServiceModel.MessageContractAttribute>adnotacjami i <xref:System.ServiceModel.MessageBodyMemberAttribute> atrybutami. Tylko trzeci Konstruktor jest używany w tym przykładzie. Używanie kontraktów komunikatów umożliwia pełną kontrolę nad komunikatem protokołu SOAP. W tym przykładzie <xref:System.ServiceModel.MessageHeaderAttribute> atrybut jest używany do umieszczania `Operation` w nagłówku protokołu SOAP. Operandy `N1`i <xref:System.ServiceModel.MessageBodyMemberAttribute> `N2` pojawiająsięwtreściprotokołuSOAP,ponieważmajązastosowaneatrybuty.`Result`  
+ Niestandardowy `MyMessage` komunikatów jest zdefiniowany w klasie z adnotacjami <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> i <xref:System.ServiceModel.MessageBodyMemberAttribute> atrybutów. Tylko trzeci Konstruktor jest używany w tym przykładzie. Używanie kontraktów komunikatów umożliwia pełną kontrolę nad komunikatem protokołu SOAP. W tym przykładzie atrybut <xref:System.ServiceModel.MessageHeaderAttribute> jest używany do umieszczania `Operation` w nagłówku protokołu SOAP. Operandy `N1`, `N2` i `Result` pojawiają się w treści protokołu SOAP, ponieważ mają zastosowany atrybut <xref:System.ServiceModel.MessageBodyMemberAttribute>.  
   
 ```csharp
 [MessageContract]  
@@ -97,7 +97,7 @@ public class MyMessage
 }  
 ```  
   
- Klasa implementacji zawiera kod dla `Calculate` operacji usługi. `CalculateService` Klasa uzyskuje operandy i operator z komunikatu żądania i tworzy komunikat odpowiedzi, który zawiera wynik żądanego obliczenia, jak pokazano w poniższym przykładowym kodzie.  
+ Klasa implementacji zawiera kod dla operacji usługi `Calculate`. Klasa `CalculateService` uzyskuje operandy i operator z komunikatu żądania i tworzy komunikat odpowiedzi zawierający wynik żądanego obliczenia, jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp
 // Service class which implements the service contract.  
@@ -131,13 +131,13 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- Wygenerowany kod klienta dla klienta został utworzony za pomocą narzędzia [Svcutil. exe (narzędzie do przesyłania metadanych)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) . W razie potrzeby narzędzie automatycznie tworzy w kodzie wygenerowanym klienta typy kontraktów komunikatów. Opcja `/messageContract` polecenia może być określona, aby wymusić generowanie kontraktów komunikatów.  
+ Wygenerowany kod klienta dla klienta został utworzony za pomocą narzędzia [Svcutil. exe (narzędzie do przesyłania metadanych)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) . W razie potrzeby narzędzie automatycznie tworzy w kodzie wygenerowanym klienta typy kontraktów komunikatów. Opcja polecenia `/messageContract` może być określona, aby wymusić generowanie kontraktów komunikatów.  
   
 ```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- Następujący przykładowy kod demonstruje klienta korzystającego z `MyMessage` wiadomości.  
+ Następujący przykładowy kod demonstruje klienta przy użyciu komunikatu `MyMessage`.  
   
 ```csharp
 // Create a client with given client endpoint configuration  
@@ -181,6 +181,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  

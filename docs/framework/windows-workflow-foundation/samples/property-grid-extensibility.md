@@ -1,44 +1,44 @@
 ---
-title: Rozszerzalność siatki właściwości — przykładowe WF
+title: Rozszerzalność siatki właściwości — przykład WF
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: 1cc8b8b34d6236e263f95439da84994e35d627ed
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 130d8702795bccf0d5f28b5c0940bd7c25be3556
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170353"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715603"
 ---
 # <a name="property-grid-extensibility"></a>Rozszerzalność siatki właściwości
 
-Deweloper może dostosować siatki właściwości, wyświetlanego po wybraniu danego działania w projektancie. Można to zrobić, aby utworzyć zaawansowane środowisko edycji. Niniejszy przykład pokazuje, jak można to zrobić.
+Deweloper może dostosować siatkę właściwości, która jest wyświetlana po wybraniu danego działania w projektancie. Można to zrobić, aby utworzyć bogate środowisko edycji. Ten przykład pokazuje, jak można to zrobić.
 
-## <a name="demonstrates"></a>Demonstracje
+## <a name="demonstrates"></a>Przedstawia
 
 Rozszerzalność siatki właściwości projektanta przepływu pracy.
 
 > [!IMPORTANT]
-> Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`
 
-## <a name="discussion"></a>Dyskusja
+## <a name="discussion"></a>Dyskusji
 
-Aby rozszerzyć siatki właściwości, deweloper ma opcje dostosowania wyglądu wbudowanego edytora siatki właściwości lub okno dialogowe, które pojawia się dla bardziej zaawansowanych powierzchni edycji. Istnieją dwa różne edytory przedstawiona w tym przykładzie; Edytor wbudowane i Edytor okien dialogowych.
+Aby można było rozwinąć siatkę właściwości, deweloper ma opcje umożliwiające dostosowanie wbudowanego elementu edytora siatki właściwości lub wyświetlenie okna dialogowego, które jest wyświetlane dla bardziej zaawansowanej powierzchni edycji. W tym przykładzie przedstawiono dwa różne edytory: Edytor wbudowany i Edytor okna dialogowego.
 
-## <a name="inline-editor"></a>Edytor wbudowane
+## <a name="inline-editor"></a>Edytor wbudowany
 
-Przykład edytora wbudowane pokazuje następujące czynności:
+W przykładzie edytora wbudowanego zademonstrowano następujące elementy:
 
-- Tworzy typ, który pochodzi od klasy <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor>.
+- Tworzy typ, który pochodzi od <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor>.
 
-- W Konstruktorze <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> wartość została ustawiona za pomocą szablonu danych Windows Presentation Foundation (WPF). To może być powiązana z szablonem XAML, ale w tym przykładzie kodu służy do inicjowania powiązanie danych.
+- W konstruktorze wartość <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> jest ustawiana za pomocą szablonu danych Windows Presentation Foundation (WPF). Może to być powiązane z szablonem XAML, ale w tym przykładzie kod jest używany do inicjowania powiązania danych.
 
-- Szablon danych ma kontekstu danych <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> elementu renderowane w siatce właściwości. Uwaga w poniższym kodzie (z CustomInlineEditor.cs), który następnie powiąże tego kontekstu `Value` właściwości.
+- Szablon danych zawiera kontekst danych <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> elementu renderowanego w siatce właściwości. Zwróć uwagę na następujący kod (z CustomInlineEditor.cs), który następnie tworzy powiązanie z właściwością `Value`.
 
     ```csharp
     FrameworkElementFactory stack = new FrameworkElementFactory(typeof(StackPanel));
@@ -51,7 +51,7 @@ Przykład edytora wbudowane pokazuje następujące czynności:
     stack.AppendChild(slider);
     ```
 
-- Ponieważ działania i Projektant znajdują się w tym samym zestawie, rejestracja atrybuty projektanta działań są realizowane w konstruktorze statycznym działania, jak pokazano w następującym przykładzie SimpleCodeActivity.cs.
+- Ponieważ działanie i Projektant znajdują się w tym samym zestawie, rejestracja atrybutów projektanta działań jest realizowana w konstruktorze statycznym działania, jak pokazano w poniższym przykładzie z SimpleCodeActivity.cs.
 
     ```csharp
     static SimpleCodeActivity()
@@ -65,13 +65,13 @@ Przykład edytora wbudowane pokazuje następujące czynności:
 
 ## <a name="dialog-editor"></a>edytor okien dialogowych
 
-Przykład edytora okna dialogowego pokazuje następujące czynności:
+W przykładzie edytora okien dialogowych przedstawiono następujące elementy:
 
-1. Tworzy typ, który pochodzi od klasy <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>.
+1. Tworzy typ, który pochodzi od <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>.
 
-2. Zestawy <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> wartość w Konstruktorze przy użyciu szablonu danych WPF. To mogą być tworzone w XAML, ale w tym przykładzie zostanie on utworzony w kodzie.
+2. Ustawia wartość <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> w konstruktorze z szablonem danych WPF. Tę opcję można utworzyć w języku XAML, ale w tym przykładzie jest to tworzone w kodzie.
 
-3. Szablon danych ma kontekstu danych <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> elementu renderowane w siatce właściwości. W poniższym kodzie następnie powiąże `Value` właściwości. Podstawowe znaczenie ma obejmować <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> zapewnienie przycisk, który wywołuje okno dialogowe w FilePickerEditor.cs.
+3. Szablon danych zawiera kontekst danych <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> elementu renderowanego w siatce właściwości. W poniższym kodzie, następnie tworzy powiązanie z właściwością `Value`. Należy również uwzględnić <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton>, aby udostępnić przycisk, który wywołuje okno dialogowe w FilePickerEditor.cs.
 
     ```csharp
     this.InlineEditorTemplate = new DataTemplate();
@@ -94,7 +94,7 @@ Przykład edytora okna dialogowego pokazuje następujące czynności:
     this.InlineEditorTemplate.VisualTree = stack;
     ```
 
-4. Zastępuje <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor.ShowDialog%2A> metoda w typie projektanta do obsługi wyświetlania okna dialogowego. W tym przykładzie podstawową <xref:System.Windows.Forms.FileDialog> jest wyświetlany.
+4. Zastępuje metodę <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor.ShowDialog%2A> w typie projektanta, aby obsłużyć wyświetlanie okna dialogowego. W tym przykładzie jest pokazywana podstawowa <xref:System.Windows.Forms.FileDialog>.
 
     ```csharp
     public override void ShowDialog(PropertyValue propertyValue, IInputElement commandSource)
@@ -107,7 +107,7 @@ Przykład edytora okna dialogowego pokazuje następujące czynności:
     }
     ```
 
-5. Ponieważ działania i Projektant znajdują się w tym samym zestawie, rejestracja atrybuty projektanta działań są realizowane w konstruktorze statycznym działania, jak pokazano w następującym przykładzie SimpleCodeActivity.cs.
+5. Ponieważ działanie i Projektant znajdują się w tym samym zestawie, rejestracja atrybutów projektanta działań jest realizowana w konstruktorze statycznym działania, jak pokazano w poniższym przykładzie z SimpleCodeActivity.cs.
 
     ```csharp
     static SimpleCodeActivity()
@@ -119,19 +119,19 @@ Przykład edytora okna dialogowego pokazuje następujące czynności:
     }
     ```
 
-## <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej
+## <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
-1. Skompiluj rozwiązanie, a następnie otwórz Workflow1.xaml.
+1. Skompiluj rozwiązanie, a następnie otwórz Workflow1. XAML.
 
-2. Przeciągnij **SimpleCodeActivity** z przybornika na kanwie projektanta.
+2. Przeciągnij **SimpleCodeActivity** z przybornika na kanwę projektanta.
 
-3. Kliknij przycisk **SimpleCodeActivity** , a następnie otwórz siatki właściwości, gdy formant suwaka i plik pobrania kontroli.
+3. Kliknij **SimpleCodeActivity** , a następnie otwórz siatkę właściwości, w której znajduje się kontrolka suwaka i formant wyboru pliku.
 
 > [!IMPORTANT]
-> Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`

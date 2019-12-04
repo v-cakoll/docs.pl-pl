@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 99f522181232d16b9913ba3c55f34274b75d8966
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7d09e1283be8ec75df89957e91f0d8411c125b3b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449414"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714459"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Narzędzie generowania i edytowania manifestu, klient grafiki)
 
-MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.exe, ale z interfejsem użytkownika systemu Windows (UI). Za pomocą tego narzędzia można tworzyć, edytować i podpisywać manifesty wdrażania i aplikacji. Nowe manifesty, które są tworzone za pomocą MageUI. exe, są przeznaczone dla [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Poprzednie wersje MageUI.exe stosuje się do poprzednich wersji .NET Framework. W przypadku dodawania lub usuwania zestawów z manifestu lub ponownego podpisywania istniejących manifestów MageUI. exe nie aktualizuje manifestu do celu [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Aby uzyskać więcej informacji, zobacz [plik Mage. exe (narzędzie tworzenia i edycji manifestów)](mage-exe-manifest-generation-and-editing-tool.md).
+MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.exe, ale z interfejsem użytkownika systemu Windows (UI). Za pomocą tego narzędzia można tworzyć, edytować i podpisywać manifesty wdrażania i aplikacji. Nowe manifesty tworzone za pomocą MageUI. exe są przeznaczone dla profilu klienta .NET Framework 4. Poprzednie wersje MageUI.exe stosuje się do poprzednich wersji .NET Framework. Po dodaniu lub usunięciu zestawów z manifestu lub ponownym podpisaniu istniejących manifestów MageUI. exe nie aktualizuje manifestu pod kątem docelowego profilu klienta .NET Framework 4. Aby uzyskać więcej informacji, zobacz [plik Mage. exe (narzędzie tworzenia i edycji manifestów)](mage-exe-manifest-generation-and-editing-tool.md).
 
  To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).
 
@@ -40,7 +40,7 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
 |**Wklejony**|**Edytowanie**|CTRL+X|Usuwa zaznaczony tekst z aplikacji i przenosi je do Schowka systemu Windows.|  
 |**Kopiuj**|**Edytowanie**|CTRL+C|Kopiuje zaznaczony tekst do Schowka systemu Windows.|  
 |**Wklej**|**Edytowanie**|CTRL+V|Wkleja tekst ze Schowka systemu Windows do aktywnego elementu tekstu.|  
-|**Usuwanie**|**Edytowanie**||Usuwa element aktualnie wybrany na liście, na przykład licencji zaufania na karcie **manifest wdrożenia** .|  
+|**Delete**|**Edytowanie**||Usuwa element aktualnie wybrany na liście, na przykład licencji zaufania na karcie **manifest wdrożenia** .|  
 |**Zamknij wszystko**|**Dział**||Zamyka wszystkie pliki otwarte w MageUI.exe. Jeżeli jeden lub więcej plików wymagają zapisania, MageUI.exe wyświetli monit o zapisanie ich. MageUI.exe również wyświetla monit o wybranie klucza podpisywania dla każdego niepodpisanego lub zmienionego pliku.|  
 |**O**|**Pomoc**||Wyświetla informacje o wersji i prawach autorskich dotyczące MageUI.exe.|  
   
@@ -90,11 +90,11 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
   
 |Element interfejsu użytkownika|Opis|  
 |----------------|-----------------|  
-|**Nazwa**|Wymagana. Nazwa manifestu aplikacji. Zwykle taka sama jak nazwa pliku.|  
-|**Wersja**|Wymagana. Numer wersji wdrożenia w postaci *N. n. n. n*. Wymagany jest tylko pierwszy główny numer kompilacji. Na przykład w przypadku wersji 1,0 aplikacji prawidłowe wartości mogą obejmować `1`, `1.0`, `1.0.0`i `1.0.0.0`.|  
-|**Extreme**|Opcjonalna. Architektura komputera, na którym można uruchomić to wdrożenie. Wartość domyślna to `msil`lub języka pośredniego firmy Microsoft, który jest domyślnym formatem wszystkich zestawów zarządzanych. Zmień to pole, jeśli wstępnie skompilowano zestawy w aplikacji dla określonej architektury. Aby uzyskać więcej informacji na temat wstępnej kompilacji, zobacz [Ngen. exe (Generator obrazu natywnego)](ngen-exe-native-image-generator.md).|  
-|**Dziedzinie**|Opcjonalna. Dwuczęściowy kod kraju i regionu ISO, w którym działa ta aplikacja. Wartość domyślna to `neutral`.|  
-|**Token klucza publicznego**|Opcjonalna. Klucz publiczny, z którym jest podpisany ten manifest aplikacji. Jeśli jest to nowy lub niepodpisany manifest, to pole będzie wyświetlane jako `Unsigned`.|  
+|**Nazwa**|Wymagany. Nazwa manifestu aplikacji. Zwykle taka sama jak nazwa pliku.|  
+|**Wersja**|Wymagany. Numer wersji wdrożenia w postaci *N. n. n. n*. Wymagany jest tylko pierwszy główny numer kompilacji. Na przykład w przypadku wersji 1,0 aplikacji prawidłowe wartości mogą obejmować `1`, `1.0`, `1.0.0`i `1.0.0.0`.|  
+|**Extreme**|Opcjonalny. Architektura komputera, na którym można uruchomić to wdrożenie. Wartość domyślna to `msil`lub języka pośredniego firmy Microsoft, który jest domyślnym formatem wszystkich zestawów zarządzanych. Zmień to pole, jeśli wstępnie skompilowano zestawy w aplikacji dla określonej architektury. Aby uzyskać więcej informacji na temat wstępnej kompilacji, zobacz [Ngen. exe (Generator obrazu natywnego)](ngen-exe-native-image-generator.md).|  
+|**Dziedzinie**|Opcjonalny. Dwuczęściowy kod kraju i regionu ISO, w którym działa ta aplikacja. Wartość domyślna to `neutral`.|  
+|**Token klucza publicznego**|Opcjonalny. Klucz publiczny, z którym jest podpisany ten manifest aplikacji. Jeśli jest to nowy lub niepodpisany manifest, to pole będzie wyświetlane jako `Unsigned`.|  
   
 ### <a name="description-tab"></a>Karta opis  
  Te informacje są zwykle dostępne w manifeście wdrożenia. Te pola można modyfikować tylko wtedy, gdy na karcie **Opcje aplikacji** jest zaznaczone pole wyboru **Użyj informacji o zaufaniu manifestu aplikacji** .  
@@ -119,7 +119,7 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
 |**Katalog aplikacji**|Katalog, w którym znajdują się pliki aplikacji. Użyj przycisku wielokropka ( **...** ), aby wybrać katalog.|  
 |**Wypełniono**|Dodaje wszystkie pliki w katalogu aplikacji i podkatalogach do manifestu aplikacji. Jeśli MageUI. exe odnajdzie pojedynczy plik wykonywalny w katalogu, automatycznie oznacza to jako punkt wejścia, który jest pierwszy wykonywany, gdy aplikacja ClickOnce zostanie uruchomiona na kliencie.|  
 |**Pliki aplikacji**|Wyświetla listę wszystkich plików w aplikacji. Każdy plik ma trzy atrybuty edytowalne opisane poniżej.|  
-|**Typ pliku**|Typ pliku może być jedną z czterech wartości:<br /><br /> Dawaj.<br />-   Entry Point. Podstawowy plik wykonywalny aplikacji. Tylko jeden plik wykonywalny może być oznaczony jako punkt wejścia.<br />— Plik danych. Plik, taki jak plik XML, który dostarcza dane do aplikacji.<br />— Plik ikony. Ikona aplikacji, na przykład pojawia się na pulpicie lub w rogu okna aplikacji.|  
+|**Typ pliku**|Typ pliku może być jedną z czterech wartości:<br /><br /> Dawaj.<br />-Punkt wejścia. Podstawowy plik wykonywalny aplikacji. Tylko jeden plik wykonywalny może być oznaczony jako punkt wejścia.<br />— Plik danych. Plik, taki jak plik XML, który dostarcza dane do aplikacji.<br />— Plik ikony. Ikona aplikacji, na przykład pojawia się na pulpicie lub w rogu okna aplikacji.|  
 |**Optional**|Pliki oznaczone jako opcjonalne nie są pobierane podczas początkowej instalacji lub aktualizacji, ale mogą być pobierane w czasie wykonywania za pomocą interfejsu API System. Deployment na żądanie. Aby uzyskać więcej informacji, zobacz [Przewodnik: pobieranie zestawów na żądanie za pomocą interfejsu API wdrażania ClickOnce przy użyciu narzędzia Projektant](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
 |**Group**|Etykieta zestawu opcjonalnych plików. Możesz zastosować etykietę grupy do zestawu plików i użyć interfejsu API na żądanie, aby pobrać partię plików z pojedynczym wywołaniem interfejsu API.|  
   
@@ -147,30 +147,30 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
   
 |Element interfejsu użytkownika|Opis|  
 |----------------|-----------------|  
-|**Nazwa**|Wymagana. Nazwa manifestu wdrożenia. Zwykle taka sama jak nazwa pliku.|  
-|**Wersja**|Wymagana. Numer wersji wdrożenia w postaci *N. n. n. n*. Wymagany jest tylko pierwszy główny numer kompilacji. Na przykład w przypadku wersji 1,0 aplikacji prawidłowe wartości mogą obejmować `1`, `1.0`, `1.0.0`i `1.0.0.0`.|  
-|**Extreme**|Opcjonalna. Architektura komputera, na którym można uruchomić to wdrożenie. Wartość domyślna to `msil`lub języka pośredniego firmy Microsoft, domyślnego formatu wszystkich zarządzanych zestawów. Zmień to pole, jeśli zestawy w aplikacji zostały skompilowane dla określonej architektury.|  
-|**Dziedzinie**|Opcjonalna. Dwuczęściowy kod kraju/regionu ISO, w którym działa ta aplikacja. Wartość domyślna to `neutral`.|  
-|**Token klucza publicznego**|Opcjonalna. Klucz publiczny, z którym został podpisany ten manifest wdrożenia. Jeśli jest to nowy lub niepodpisany manifest, to pole będzie wyświetlane jako `Unsigned`.|  
+|**Nazwa**|Wymagany. Nazwa manifestu wdrożenia. Zwykle taka sama jak nazwa pliku.|  
+|**Wersja**|Wymagany. Numer wersji wdrożenia w postaci *N. n. n. n*. Wymagany jest tylko pierwszy główny numer kompilacji. Na przykład w przypadku wersji 1,0 aplikacji prawidłowe wartości mogą obejmować `1`, `1.0`, `1.0.0`i `1.0.0.0`.|  
+|**Extreme**|Opcjonalny. Architektura komputera, na którym można uruchomić to wdrożenie. Wartość domyślna to `msil`lub języka pośredniego firmy Microsoft, domyślnego formatu wszystkich zarządzanych zestawów. Zmień to pole, jeśli zestawy w aplikacji zostały skompilowane dla określonej architektury.|  
+|**Dziedzinie**|Opcjonalny. Dwuczęściowy kod kraju/regionu ISO, w którym działa ta aplikacja. Wartość domyślna to `neutral`.|  
+|**Token klucza publicznego**|Opcjonalny. Klucz publiczny, z którym został podpisany ten manifest wdrożenia. Jeśli jest to nowy lub niepodpisany manifest, to pole będzie wyświetlane jako `Unsigned`.|  
   
 ### <a name="description-tab"></a>Karta opis  
   
 |Element interfejsu użytkownika|Opis|  
 |----------------|-----------------|  
-|**Dawc**|Wymagana. Nazwisko osoby lub organizacji odpowiedzialnej za aplikację. Ta wartość jest używana jako nazwa folderu menu Start.|  
-|**Iloczyn**|Wymagana. Pełna nazwa produktu. Jeśli wybrano opcję **Zainstaluj lokalnie** dla **elementu Typ aplikacji** na karcie **Opcje wdrożenia** , ta nazwa będzie wyświetlana w linku menu **Start** i w **aplecie Dodaj lub usuń programy** dla tej aplikacji.|  
-|**Lokalizacja obsługi**|Opcjonalna. Adres URL, z którego klienci mogą uzyskać pomoc i obsługę aplikacji.|  
+|**Dawc**|Wymagany. Nazwisko osoby lub organizacji odpowiedzialnej za aplikację. Ta wartość jest używana jako nazwa folderu menu Start.|  
+|**Iloczyn**|Wymagany. Pełna nazwa produktu. Jeśli wybrano opcję **Zainstaluj lokalnie** dla **elementu Typ aplikacji** na karcie **Opcje wdrożenia** , ta nazwa będzie wyświetlana w linku menu **Start** i w **aplecie Dodaj lub usuń programy** dla tej aplikacji.|  
+|**Lokalizacja obsługi**|Opcjonalny. Adres URL, z którego klienci mogą uzyskać pomoc i obsługę aplikacji.|  
   
 ### <a name="deployment-options-tab"></a>Karta opcje wdrożenia  
   
 |Element interfejsu użytkownika|Opis|  
 |----------------|-----------------|  
-|**Typ aplikacji**|Opcjonalna. Określa, czy ta aplikacja jest instalowana na komputerze klienckim (**Instalacja lokalna**), działa w trybie online (**tylko w trybie online**), czy też jest aplikacją WPF działającą w przeglądarce (**Aplikacja przeglądarki WPF**). Wartość domyślna to **Instaluj lokalnie**.|  
-|**Lokalizacja początkowa**|Opcjonalna. Adres URL, z którego aplikacja ma zostać faktycznie uruchomiona. Przydatne podczas wdrażania aplikacji z dysku CD, który powinien zostać zaktualizowany z sieci Web.|  
-|**Uwzględnij lokalizację początkową (ProviderURL) w manifeście**|Opcjonalna. Określa adres URL, pod którym technologia ClickOnce będzie szukać aktualizacji aplikacji.|  
-|**Automatycznie uruchamiaj aplikację po zainstalowaniu**|Wymagana. Określa, że aplikacja ClickOnce powinna być uruchamiana natychmiast po początkowej instalacji z adresu URL. Wartość domyślna to pole wyboru jest zaznaczone.|  
-|**Zezwalaj na przekazywanie parametrów adresu URL do aplikacji**|Wymagana. Zezwala na przesyłanie danych parametrów do aplikacji ClickOnce za pomocą ciągu zapytania dołączonego do adresu URL manifestu wdrożenia. Wartość domyślna to pole wyboru jest wyczyszczone.|  
-|**Użyj rozszerzenia pliku. deploy**|Wymagana. Po wybraniu tej opcję wszystkie pliki w manifeście aplikacji muszą mieć rozszerzenie. deploy. Wartość domyślna to pole wyboru jest wyczyszczone.|  
+|**Typ aplikacji**|Opcjonalny. Określa, czy ta aplikacja jest instalowana na komputerze klienckim (**Instalacja lokalna**), działa w trybie online (**tylko w trybie online**), czy też jest aplikacją WPF działającą w przeglądarce (**Aplikacja przeglądarki WPF**). Wartość domyślna to **Instaluj lokalnie**.|  
+|**Lokalizacja początkowa**|Opcjonalny. Adres URL, z którego aplikacja ma zostać faktycznie uruchomiona. Przydatne podczas wdrażania aplikacji z dysku CD, który powinien zostać zaktualizowany z sieci Web.|  
+|**Uwzględnij lokalizację początkową (ProviderURL) w manifeście**|Opcjonalny. Określa adres URL, pod którym technologia ClickOnce będzie szukać aktualizacji aplikacji.|  
+|**Automatycznie uruchamiaj aplikację po zainstalowaniu**|Wymagany. Określa, że aplikacja ClickOnce powinna być uruchamiana natychmiast po początkowej instalacji z adresu URL. Wartość domyślna to pole wyboru jest zaznaczone.|  
+|**Zezwalaj na przekazywanie parametrów adresu URL do aplikacji**|Wymagany. Zezwala na przesyłanie danych parametrów do aplikacji ClickOnce za pomocą ciągu zapytania dołączonego do adresu URL manifestu wdrożenia. Wartość domyślna to pole wyboru jest wyczyszczone.|  
+|**Użyj rozszerzenia pliku. deploy**|Wymagany. Po wybraniu tej opcję wszystkie pliki w manifeście aplikacji muszą mieć rozszerzenie. deploy. Wartość domyślna to pole wyboru jest wyczyszczone.|  
   
 ### <a name="update-options-tab"></a>Karta Opcje aktualizacji  
  Karta **Opcje aktualizacji** zawiera opcje wymienione tutaj, gdy pole wyboru **Typ aplikacji** na karcie **Nazwa** jest ustawione na **Instaluj lokalnie**.  
@@ -180,7 +180,7 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
 |**Ta aplikacja powinna sprawdzać dostępność aktualizacji**|Określa, czy technologia ClickOnce ma sprawdzać dostępność aktualizacji aplikacji. Jeśli to pole wyboru nie jest zaznaczone, aplikacja nie będzie sprawdzać dostępności aktualizacji, o ile nie zostanie ona zaktualizowana programowo przy użyciu interfejsów API w przestrzeni nazw <xref:System.Deployment.Application>.|  
 |**Wybierz, kiedy aplikacja ma sprawdzać dostępność aktualizacji**|Program udostępnia dwie opcje sprawdzania aktualizacji:<br /><br /> -   **przed uruchomieniem aplikacji**. Sprawdzanie aktualizacji jest przeprowadzane przed wykonaniem aplikacji.<br />-   **po uruchomieniu aplikacji**. Sprawdzanie aktualizacji rozpocznie się po zainicjowaniu głównej formy aplikacji i zostanie uruchomione przy następnym uruchomieniu aplikacji.|  
 |**Częstotliwość sprawdzania aktualizacji**|Określa, jak często ClickOnce powinna sprawdzać dostępność aktualizacji:<br /><br /> -   **sprawdzaj przy każdym uruchomieniu aplikacji**. Technologia ClickOnce będzie przeprowadzać sprawdzanie aktualizacji za każdym razem, gdy użytkownik otworzy aplikację.<br />-   **Sprawdzaj co**: Wybierz przedział czasu i jednostkę (godziny, dni lub tygodnie), które muszą upłynąć przed sprawdzeniem dostępności aktualizacji.|  
-|**Określ minimalną wersję wymaganą dla tej aplikacji**|Opcjonalna. Określa, że określona wersja aplikacji jest wymaganą instalacją, uniemożliwiając użytkownikom pracę z wcześniejszą wersją.|  
+|**Określ minimalną wersję wymaganą dla tej aplikacji**|Opcjonalny. Określa, że określona wersja aplikacji jest wymaganą instalacją, uniemożliwiając użytkownikom pracę z wcześniejszą wersją.|  
 |**Wersja**|Wymagane, jeśli pole wyboru **Określ minimalną wymaganą wersję dla tej aplikacji** jest zaznaczone. Podany numer wersji musi mieć postać *N. n. n*. n. Wymagany jest tylko pierwszy główny numer kompilacji. Na przykład w przypadku wersji 1,0 aplikacji prawidłowe wartości mogą obejmować `1`, `1.0`, `1.0.0`i `1.0.0.0`.|  
   
 ### <a name="application-reference-tab"></a>Karta odwołanie do aplikacji  

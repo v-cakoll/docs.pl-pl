@@ -2,12 +2,12 @@
 title: Kontrakt błędu
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 907497101c13e1f62ff2abb5da563178c9643c6c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d8ea7010bef389b49f68c811565a641a580e230a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039660"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716961"
 ---
 # <a name="fault-contract"></a>Kontrakt błędu
 Przykładowa umowa dotycząca błędu demonstruje sposób komunikacji z klientem informacji o błędach z usługi. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), z dodatkowym kodem dodanym do usługi w celu przekonwertowania wewnętrznego wyjątku na błąd. Klient próbuje wykonać dzielenie przez zero w celu wymuszenia błędu w usłudze.  
@@ -15,7 +15,7 @@ Przykładowa umowa dotycząca błędu demonstruje sposób komunikacji z klientem
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Kontrakt kalkulatora został zmodyfikowany w taki sposób, <xref:System.ServiceModel.FaultContractAttribute> aby zawierał element, jak pokazano w poniższym przykładowym kodzie.  
+ Kontrakt kalkulatora został zmodyfikowany w celu uwzględnienia <xref:System.ServiceModel.FaultContractAttribute>, jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -33,7 +33,7 @@ public interface ICalculator
 }  
 ```  
   
- Ten <xref:System.ServiceModel.FaultContractAttribute> atrybut wskazuje `Divide` , że operacja może zwrócić błąd typu `MathFault`. Błąd może być dowolnego typu, który może być serializowany. W tym przypadku `MathFault` jest to kontrakt danych w następujący sposób:  
+ Atrybut <xref:System.ServiceModel.FaultContractAttribute> wskazuje, że operacja `Divide` może zwracać błąd typu `MathFault`. Błąd może być dowolnego typu, który może być serializowany. W tym przypadku `MathFault` jest kontraktem danych w następujący sposób:  
   
 ```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -58,7 +58,7 @@ public class MathFault
 }  
 ```  
   
- `Divide` Metoda<xref:System.ServiceModel.FaultException%601> zgłasza wyjątek, gdy wystąpi wyjątek dzielenia przez zero, jak pokazano w poniższym przykładowym kodzie. Ten wyjątek powoduje, że błąd jest wysyłany do klienta.  
+ Metoda `Divide` zgłasza wyjątek <xref:System.ServiceModel.FaultException%601>, gdy wystąpi wyjątek dzielenia przez zero, jak pokazano w poniższym przykładowym kodzie. Ten wyjątek powoduje, że błąd jest wysyłany do klienta.  
   
 ```csharp
 public int Divide(int n1, int n2)  
@@ -88,7 +88,7 @@ FaultException<MathFault>: Math fault while doing division. Problem: divide by z
 Press <ENTER> to terminate client.  
 ```  
   
- Klient wykonuje to poprzez przechwycenie odpowiedniego `FaultException<MathFault>` wyjątku:  
+ W tym celu klient przechwytuje odpowiedni wyjątek `FaultException<MathFault>`:  
   
 ```csharp
 catch (FaultException<MathFault> e)  
@@ -98,9 +98,9 @@ catch (FaultException<MathFault> e)
 }  
 ```  
   
- Domyślnie szczegóły nieoczekiwanych wyjątków nie są wysyłane do klienta, aby zapobiec szczegółom implementacji usługi z ucieczki bezpiecznej granicy usługi. `FaultContract`zapewnia sposób opisywania błędów w kontrakcie i oznaczania niektórych typów wyjątków zgodnie z potrzebami do przesyłania danych do klienta. `FaultException<T>`zapewnia mechanizm czasu wykonywania do wysyłania błędów do odbiorców.  
+ Domyślnie szczegóły nieoczekiwanych wyjątków nie są wysyłane do klienta, aby zapobiec szczegółom implementacji usługi z ucieczki bezpiecznej granicy usługi. `FaultContract` zapewnia sposób opisywania błędów w kontrakcie i oznaczania niektórych typów wyjątków zgodnie z potrzebami przesyłania do klienta. `FaultException<T>` zapewnia mechanizm czasu wykonywania do wysyłania błędów do klientów.  
   
- Jednak podczas debugowania warto zobaczyć wewnętrzne szczegóły błędu usługi. Aby wyłączyć wcześniej opisane bezpieczne zachowanie, można wskazać, że szczegóły każdego nieobsługiwanego wyjątku na serwerze powinny być dołączone do błędu wysyłanego do klienta programu. Jest to realizowane przez ustawienie <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>. `true` Można ustawić ją w kodzie lub w konfiguracji, jak pokazano w poniższym przykładzie.  
+ Jednak podczas debugowania warto zobaczyć wewnętrzne szczegóły błędu usługi. Aby wyłączyć wcześniej opisane bezpieczne zachowanie, można wskazać, że szczegóły każdego nieobsługiwanego wyjątku na serwerze powinny być dołączone do błędu wysyłanego do klienta programu. Jest to realizowane przez ustawienie <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> `true`. Można ustawić ją w kodzie lub w konfiguracji, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <behaviors>  
@@ -113,9 +113,9 @@ catch (FaultException<MathFault> e)
 </behaviors>  
 ```  
   
- Ponadto zachowanie musi być skojarzone z usługą przez ustawienie `behaviorConfiguration` atrybutu usługi w pliku konfiguracji na "CalculatorServiceBehavior".  
+ Ponadto zachowanie musi być skojarzone z usługą przez ustawienie atrybutu `behaviorConfiguration` usługi w pliku konfiguracji na "CalculatorServiceBehavior".  
   
- Aby przechwytywać takie błędy na kliencie, należy przechwycić nieogólne <xref:System.ServiceModel.FaultException> .  
+ Aby przechwytywać takie błędy na kliencie, należy przechwycić nieogólne <xref:System.ServiceModel.FaultException>.  
   
  Takie zachowanie powinno być używane tylko do celów debugowania i nigdy nie powinno być włączone w środowisku produkcyjnym.  
   
@@ -132,6 +132,6 @@ catch (FaultException<MathFault> e)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  

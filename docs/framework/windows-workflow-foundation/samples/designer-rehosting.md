@@ -2,12 +2,12 @@
 title: Rehostowanie projektanta
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: ecbea5822825cca5f3f5cf40e20d5d249b17b07c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f98b1823c74471c96f6d4b67ec47637bb0785d8f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038194"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715236"
 ---
 # <a name="designer-rehosting"></a>Rehostowanie projektanta
 Rehostowanie projektanta jest typowym scenariuszem, który odnosi się do hostingu kanwy projektowania przepływu pracy w aplikacji niestandardowej. Aplikacja hostingu większość osób zna program Visual Studio, jednak istnieje kilka scenariuszy, w których wyświetlanie projektanta przepływu pracy w aplikacji może być przydatne:  
@@ -40,7 +40,7 @@ Rehostowanie projektanta jest typowym scenariuszem, który odnosi się do hostin
 </Grid>  
 ```  
   
- Następnie przykład tworzy projektanta i kojarzy jego podstawową <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> i <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> z odpowiednim kontenerem w interfejsie użytkownika. W poniższym przykładzie znajduje się kilka dodatkowych wierszy kodu, które stanowią objaśnienie niektórych wyjaśnień. <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> Wywołanie jest wymagane do skojarzenia domyślnego projektanta działań dla działań dostarczonych z .NET Framework. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A>jest wywoływana, aby przekazać element WF do edycji. Na koniec <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (główna Kanwa) i (siatka właściwości) są umieszczane na powierzchni interfejsu użytkownika. <xref:System.Activities.Presentation.WorkflowDesigner.View%2A>  
+ Następnie przykład tworzy projektanta i kojarzy jego podstawową <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> i <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> z odpowiednim kontenerem w interfejsie użytkownika. W poniższym przykładzie znajduje się kilka dodatkowych wierszy kodu, które stanowią objaśnienie niektórych wyjaśnień. Wywołanie <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> jest wymagane do skojarzenia domyślnego projektanta działań dla działań dostarczonych z .NET Framework. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> jest wywoływana, aby przekazać element WF do edycji. Na koniec <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (główna Kanwa) i <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (siatka właściwości) są umieszczane na powierzchni interfejsu użytkownika.  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -58,7 +58,7 @@ protected override void OnInitialized(EventArgs e)
 ```  
   
 ## <a name="using-the-rehosted-toolbox"></a>Korzystanie z przybornika przehostowanego  
- Ten przykład używa wbudowanej kontrolki przybornika w języku XAML. Należy zauważyć, że w kodzie, jeden może przekazać typ do <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper> konstruktora.  
+ Ten przykład używa wbudowanej kontrolki przybornika w języku XAML. Należy zauważyć, że w kodzie, jeden może przekazać typ do konstruktora <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper>.  
   
 ```xaml  
 <!-- Copyright (c) Microsoft Corporation. All rights reserved-->  
@@ -125,6 +125,6 @@ protected override void OnInitialized(EventArgs e)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`

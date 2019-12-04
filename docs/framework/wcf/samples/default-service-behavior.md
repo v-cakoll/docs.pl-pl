@@ -5,22 +5,22 @@ helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: 3728d9808eb0ad90d24a894b18857e414906f9f3
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7d2829e5c6d86d54f109fec6bf933049a093fd1c
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045021"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716564"
 ---
 # <a name="default-service-behavior"></a>Domyślne zachowanie usługi
-Ten przykład pokazuje, jak można skonfigurować ustawienia zachowania usługi. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontrakt usługi. Ten przykład jawnie definiuje zachowania usługi i zachowania operacji przy użyciu <xref:System.ServiceModel.ServiceBehaviorAttribute> atrybutów <xref:System.ServiceModel.OperationBehaviorAttribute> i. Można skonfigurować zachowania w plikach konfiguracyjnych lub w sposób niezależny w kodzie (jak pokazano w tym przykładzie).  
+Ten przykład pokazuje, jak można skonfigurować ustawienia zachowania usługi. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje kontrakt usługi `ICalculator`. Ten przykład jawnie definiuje zachowania usługi i zachowania operacji przy użyciu atrybutów <xref:System.ServiceModel.ServiceBehaviorAttribute> i <xref:System.ServiceModel.OperationBehaviorAttribute>. Można skonfigurować zachowania w plikach konfiguracyjnych lub w sposób niezależny w kodzie (jak pokazano w tym przykładzie).  
   
  W tym przykładzie klient jest aplikacją konsolową (. exe), a usługa jest hostowana przez Internet Information Services (IIS).  
   
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Klasa usługi określa zachowania z <xref:System.ServiceModel.ServiceBehaviorAttribute> i, <xref:System.ServiceModel.OperationBehaviorAttribute> jak pokazano w poniższym przykładzie kodu. Wszystkie określone wartości są wartościami domyślnymi.  
+ Klasa usługi określa zachowania przy użyciu <xref:System.ServiceModel.ServiceBehaviorAttribute> i <xref:System.ServiceModel.OperationBehaviorAttribute>, jak pokazano w poniższym przykładzie kodu. Wszystkie określone wartości są wartościami domyślnymi.  
   
 ```csharp
 [ServiceBehavior(  
@@ -45,19 +45,19 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- Zachowania usługi są określane przy użyciu <xref:System.ServiceModel.ServiceBehaviorAttribute> atrybutu. W poniższej tabeli opisano niektóre z tych zachowań.  
+ Zachowania usługi są określane przy użyciu atrybutu <xref:System.ServiceModel.ServiceBehaviorAttribute>. W poniższej tabeli opisano niektóre z tych zachowań.  
   
 |Zachowanie usługi|Opis|  
 |----------------------|-----------------|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown%2A>|Automatycznie zamyka sesję na żądanie klienta.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|Określa tryb współbieżności dla każdego wystąpienia usługi.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>|Określa tryb kontekstu wystąpienia.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A>|Określa, czy należy użyć podanego kontekstu synchronizacji, jeśli został ustawiony. Użyj tego, jeśli chcesz kontrolować, czy należy używać `WindowsFormsSynchronizationContext` w Windows Forms aplikacji.|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A>|Określa, czy należy użyć podanego kontekstu synchronizacji, jeśli został ustawiony. Użyj tego, aby określić, czy w aplikacjach Windows Forms ma być używana `WindowsFormsSynchronizationContext`.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>|Określa, czy ogólne Nieobsłużone wyjątki wykonywania mają być konwertowane do `Fault<string>` i wysyłane jako komunikat o błędzie.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>|Określa poziom izolacji dla transakcji.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ValidateMustUnderstand%2A>|Określa, czy nieoczekiwane nagłówki komunikatów powodują wystąpienie błędu.|  
   
- Zachowania operacji są określane przy użyciu <xref:System.ServiceModel.OperationBehaviorAttribute> atrybutu. W poniższej tabeli opisano niektóre z tych zachowań.  
+ Zachowania operacji są określane przy użyciu atrybutu <xref:System.ServiceModel.OperationBehaviorAttribute>. W poniższej tabeli opisano niektóre z tych zachowań.  
   
 |Zachowanie operacji|Opis|  
 |------------------------|-----------------|  
@@ -90,6 +90,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Default`  

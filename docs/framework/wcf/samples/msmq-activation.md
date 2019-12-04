@@ -2,12 +2,12 @@
 title: Aktywacja usługi MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 038f4d7e3d713cfe4134ea98f7858ef71f29bab4
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: be33e3d9377c30058c7a2ee06543c11f10251ebd
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895251"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714773"
 ---
 # <a name="msmq-activation"></a>Aktywacja usługi MSMQ
 
@@ -19,19 +19,19 @@ Ten przykład pokazuje, jak hostować aplikacje w usłudze aktywacji procesów s
 > [!NOTE]
 > Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
 >
-> \<InstallDrive>:\WF_WCF_Samples
+> \<InstallDrive >: \ WF_WCF_Samples
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie WCF i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie przykłady WCF i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
 >
-> \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
+> \<InstallDrive >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
 
-Usługa aktywacji procesów systemu Windows (was) — nowy mechanizm aktywacji procesów dla [!INCLUDE[lserver](../../../../includes/lserver-md.md)]programu, zapewnia funkcje podobne do usług IIS, które wcześniej były dostępne tylko dla aplikacji opartych na protokole HTTP, do aplikacji korzystających z protokołów innych niż http. Windows Communication Foundation (WCF) używa interfejsu adaptera odbiornika do przekazywania żądań aktywacji odbieranych za pośrednictwem protokołów innych niż HTTP obsługiwanych przez funkcję WCF, takich jak TCP, nazwane potoki i MSMQ. Funkcja otrzymywania żądań za pośrednictwem protokołów innych niż HTTP jest hostowana przez zarządzane usługi systemu Windows działające w SMSvcHost. exe.
+Usługa aktywacji procesów systemu Windows (WAS), nowy mechanizm aktywacji procesu dla [!INCLUDE[lserver](../../../../includes/lserver-md.md)], zapewnia funkcje podobne do usług IIS, które wcześniej były dostępne tylko dla aplikacji opartych na protokole HTTP, do aplikacji korzystających z protokołów innych niż HTTP. Windows Communication Foundation (WCF) używa interfejsu adaptera odbiornika do przekazywania żądań aktywacji odbieranych za pośrednictwem protokołów innych niż HTTP obsługiwanych przez funkcję WCF, takich jak TCP, nazwane potoki i MSMQ. Funkcja otrzymywania żądań za pośrednictwem protokołów innych niż HTTP jest hostowana przez zarządzane usługi systemu Windows działające w SMSvcHost. exe.
 
 Usługa adaptera odbiornika NET. msmq (NetMsmqActivator) aktywuje aplikacje znajdujące się w kolejce na podstawie komunikatów w kolejce.
 
 Klient wysyła zamówienia zakupu do usługi z zakresu transakcji. Usługa otrzymuje zamówienia w transakcji i przetwarza je. Następnie usługa wywołuje klienta przy użyciu stanu zamówienia. Aby ułatwić komunikację dwukierunkową, klient i usługa używają kolejek do dodawania do kolejki zamówień zakupu i stanu zamówienia.
 
-Kontrakt `IOrderProcessor` usługi definiuje jednokierunkowe operacje usługi, które działają z kolejkowanie. Operacja usługi używa punktu końcowego odpowiedzi do wysyłania do klienta stanu zamówienia. Adres punktu końcowego odpowiedzi to identyfikator URI kolejki użytej do wysłania stanu zamówienia z powrotem do klienta. Aplikacja do przetwarzania zamówień implementuje ten kontrakt.
+Kontrakt usługi `IOrderProcessor` definiuje operacje jednokierunkowej usługi, które działają z kolejkowanie. Operacja usługi używa punktu końcowego odpowiedzi do wysyłania do klienta stanu zamówienia. Adres punktu końcowego odpowiedzi to identyfikator URI kolejki użytej do wysłania stanu zamówienia z powrotem do klienta. Aplikacja do przetwarzania zamówień implementuje ten kontrakt.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -54,7 +54,7 @@ public interface IOrderStatus
 }
 ```
 
-Operacja usługi przetwarza przesłane zamówienie zakupu. <xref:System.ServiceModel.OperationBehaviorAttribute> Jest stosowana do operacji usługi, aby określić automatyczną rejestrację w transakcji, która jest używana do odbierania komunikatu z kolejki i automatycznego uzupełniania transakcji po zakończeniu operacji usługi. `Orders` Klasa hermetyzuje funkcje przetwarzania zamówień. W takim przypadku dodaje zamówienie zakupu do słownika. Transakcja, w której rejestrowana jest operacja usługi, jest dostępna dla operacji w `Orders` klasie.
+Operacja usługi przetwarza przesłane zamówienie zakupu. <xref:System.ServiceModel.OperationBehaviorAttribute> jest stosowana do operacji usługi, aby określić automatyczną rejestrację w transakcji, która jest używana do odbierania komunikatu z kolejki i automatycznego uzupełniania transakcji po zakończeniu operacji usługi. Klasa `Orders` hermetyzuje funkcje przetwarzania zamówień. W takim przypadku dodaje zamówienie zakupu do słownika. Transakcja, w której zarejestrowana jest operacja usługi, jest dostępna dla operacji w klasie `Orders`.
 
 Operacja usługi, oprócz przetwarzania przesłanego zamówienia zakupu, odpowiada klientowi na informacje o stanie zamówienia.
 
@@ -90,7 +90,7 @@ Nazwa kolejki MSMQ jest określona w sekcji appSettings w pliku konfiguracji. Pu
 
 Plik. svc o nazwie klasy jest używany do hostowania kodu usługi w programie.
 
-Sam plik Service. svc zawiera dyrektywę służącą do utworzenia `OrderProcessorService`.
+Sam plik Service. svc zawiera dyrektywę służącą do tworzenia `OrderProcessorService`.
 
 `<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>`
 
@@ -98,7 +98,7 @@ Plik Service. svc zawiera także dyrektywę zestawu, aby upewnić się, że syst
 
 `<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>`
 
-Klient tworzy zakres transakcji. Komunikacja z usługą odbywa się w zakresie transakcji, powodując, że jest ona traktowana jako jednostka niepodzielna, w której wszystkie komunikaty kończą się powodzeniem lub niepowodzeniem. Transakcja jest zatwierdzona przez wywołanie `Complete` zakresu transakcji.
+Klient tworzy zakres transakcji. Komunikacja z usługą odbywa się w zakresie transakcji, powodując, że jest ona traktowana jako jednostka niepodzielna, w której wszystkie komunikaty kończą się powodzeniem lub niepowodzeniem. Transakcja jest zatwierdzana przez wywołanie `Complete` w zakresie transakcji.
 
 ```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
@@ -153,7 +153,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     }
 ```
 
-Kod klienta implementuje `IOrderStatus` kontrakt, aby otrzymać stan zamówienia z usługi. W takim przypadku drukuje stan zamówienia.
+Kod klienta implementuje kontrakt `IOrderStatus`, aby otrzymywać stan zamówienia z usługi. W takim przypadku drukuje stan zamówienia.
 
 ```csharp
 [ServiceBehavior]
@@ -169,7 +169,7 @@ public class OrderStatusService : IOrderStatus
 }
 ```
 
-Kolejka stanu zamówienia jest tworzona w `Main` metodzie. Konfiguracja klienta zawiera konfigurację usługi stanu zamówienia do hostowania usługi stanu zamówienia, jak pokazano w poniższej konfiguracji przykładowej.
+Kolejka stanu zamówienia jest tworzona w metodzie `Main`. Konfiguracja klienta zawiera konfigurację usługi stanu zamówienia do hostowania usługi stanu zamówienia, jak pokazano w poniższej konfiguracji przykładowej.
 
 ```xml
 <appSettings>
@@ -267,9 +267,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         > To polecenie jest pojedynczym wierszem tekstu.
 
-        To polecenie umożliwia dostęp do aplikacji/servicemodelsamples przy użyciu `http://localhost/servicemodelsamples` i. `net.msmq://localhost/servicemodelsamples`
+        To polecenie umożliwia dostęp do aplikacji/servicemodelsamples przy użyciu `http://localhost/servicemodelsamples` i `net.msmq://localhost/servicemodelsamples`.
 
-7. Jeśli nie zostało to wcześniej zrobione, upewnij się, że usługa aktywacji MSMQ jest włączona. W menu **Start** kliknij polecenie **Uruchom**, a następnie wpisz `Services.msc`. Przeszukaj listę usług dla **karty odbiornika NET. MSMQ**. Kliknij prawym przyciskiem myszy i wybierz pozycję **Właściwości**. Ustaw **Typ uruchamiania** na **automatyczny**, kliknij przycisk **Zastosuj** , a następnie kliknij przycisk **Uruchom** . Ten krok należy wykonać tylko raz przed pierwszym użyciem usługi adaptera odbiornika NET. MSMQ.
+7. Jeśli nie zostało to wcześniej zrobione, upewnij się, że usługa aktywacji MSMQ jest włączona. W menu **Start** kliknij pozycję **Uruchom**, a następnie wpisz `Services.msc`. Przeszukaj listę usług dla **karty odbiornika NET. MSMQ**. Kliknij prawym przyciskiem myszy i wybierz pozycję **Właściwości**. Ustaw **Typ uruchamiania** na **automatyczny**, kliknij przycisk **Zastosuj** , a następnie kliknij przycisk **Uruchom** . Ten krok należy wykonać tylko raz przed pierwszym użyciem usługi adaptera odbiornika NET. MSMQ.
 
 8. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Ponadto należy zmienić kod na kliencie, który przesyła zamówienie zakupu w celu odzwierciedlenia nazwy komputera w identyfikatorze URI kolejki podczas przesyłania zamówienia zakupu. Użyj następującego kodu:
 
@@ -302,7 +302,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     > [!WARNING]
     > Uruchomienie pliku wsadowego spowoduje zresetowanie tej opcji do uruchamiania przy użyciu .NET Framework w wersji 2,0.
 
-Domyślnie w przypadku `netMsmqBinding` transportu powiązań jest włączone zabezpieczenia. Dwie właściwości, `MsmqAuthenticationMode` a `MsmqProtectionLevel`także określają typ zabezpieczenia transportu. Domyślnie tryb uwierzytelniania jest ustawiony na `Windows` , a poziom ochrony jest ustawiony na. `Sign` Aby usługa MSMQ zapewniała funkcję uwierzytelniania i podpisywania, musi być częścią domeny. W przypadku uruchomienia tego przykładu na komputerze, który nie jest częścią domeny, zostanie wyświetlony następujący komunikat o błędzie: "Wewnętrzny certyfikat usługi kolejkowania komunikatów użytkownika nie istnieje".
+Domyślnie z transportem powiązań `netMsmqBinding` są włączone zabezpieczenia. Dwie właściwości, `MsmqAuthenticationMode` i `MsmqProtectionLevel`, wspólnie określają typ zabezpieczenia transportu. Domyślnie tryb uwierzytelniania jest ustawiony na `Windows` a poziom ochrony jest ustawiony na `Sign`. Aby usługa MSMQ zapewniała funkcję uwierzytelniania i podpisywania, musi być częścią domeny. Jeśli ten przykład zostanie uruchomiony na komputerze, który nie jest częścią domeny, zostanie wyświetlony następujący komunikat o błędzie: "wewnętrzny certyfikat usługi kolejkowania komunikatów użytkownika nie istnieje".
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Aby uruchomić przykład na komputerze przyłączonym do grupy roboczej
 
@@ -321,7 +321,7 @@ Domyślnie w przypadku `netMsmqBinding` transportu powiązań jest włączone za
 2. Przed uruchomieniem przykładu Zmień konfigurację na serwerze i kliencie.
 
     > [!NOTE]
-    > `security mode` Ustawienieodpowiada`MsmqProtectionLevel` ustawieniu i`MsmqAuthenticationMode` zabezpieczeniana`None`. `None` `Message`
+    > Ustawienie `security mode` `None` jest równoznaczne z ustawieniem `MsmqAuthenticationMode`, `MsmqProtectionLevel` i `Message` zabezpieczenia `None`.
 
 3. Aby włączyć aktywację na komputerze przyłączonym do grupy roboczej, należy uruchomić zarówno usługę aktywacji, jak i proces roboczy przy użyciu określonego konta użytkownika (musi być taka sama dla obu), a kolejka musi mieć listy ACL dla określonego konta użytkownika.
 

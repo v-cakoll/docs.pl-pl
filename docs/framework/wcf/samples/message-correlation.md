@@ -2,21 +2,21 @@
 title: Korelacja komunikatów
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 657f7c6e3fd544614e193d9e6843a8ed58881387
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 0f5124b8172a7a4d553d19e08309affb48e7468c
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039410"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714867"
 ---
 # <a name="message-correlation"></a>Korelacja komunikatów
 Ten przykład pokazuje, jak aplikacja usługi kolejkowania komunikatów (MSMQ) może wysyłać komunikat usługi MSMQ do usługi Windows Communication Foundation (WCF) oraz jak można skorelować komunikaty między aplikacjami nadawcy i odbiorcy w scenariuszu żądania/odpowiedzi. Ten przykład używa powiązania msmqIntegrationBinding. Usługa w tym przypadku jest samoobsługową aplikacją konsolową, która umożliwia obserwowanie usługi, która odbiera wiadomości w kolejce. k  
   
- Usługa przetwarza komunikat odebrany od nadawcy i wysyła komunikat odpowiedzi z powrotem do nadawcy. Nadawca skorelowanie odpowiedzi otrzymanej na żądanie wysłane pierwotnie. Właściwości `MessageID` i`CorrelationID` komunikatu są używane do skorelowania komunikatów żądania i odpowiedzi.  
+ Usługa przetwarza komunikat odebrany od nadawcy i wysyła komunikat odpowiedzi z powrotem do nadawcy. Nadawca skorelowanie odpowiedzi otrzymanej na żądanie wysłane pierwotnie. Właściwości `MessageID` i `CorrelationID` komunikatu są używane do skorelowania komunikatów żądania i odpowiedzi.  
   
- Kontrakt `IOrderProcessor` usługi definiuje jednokierunkową operację usługi, która jest odpowiednia do użycia z kolejkami. Komunikat usługi MSMQ nie zawiera nagłówka akcji, więc nie jest możliwe automatyczne Mapowanie komunikatów usługi MSMQ do kontraktów operacji. W związku z tym w tym przypadku może istnieć tylko jeden kontrakt operacji. Jeśli chcesz zdefiniować więcej kontraktów operacji w usłudze, aplikacja musi podać informacje dotyczące tego, w którym nagłówku wiadomości MSMQ (na przykład etykieta lub identyfikator korelacji) można użyć do określenia, który kontrakt operacji ma zostać przesłany. 
+ Kontrakt usługi `IOrderProcessor` definiuje jednokierunkową operację usługi, która jest odpowiednia do użycia z kolejką. Komunikat usługi MSMQ nie zawiera nagłówka akcji, więc nie jest możliwe automatyczne Mapowanie komunikatów usługi MSMQ do kontraktów operacji. W związku z tym w tym przypadku może istnieć tylko jeden kontrakt operacji. Jeśli chcesz zdefiniować więcej kontraktów operacji w usłudze, aplikacja musi podać informacje dotyczące tego, w którym nagłówku wiadomości MSMQ (na przykład etykieta lub identyfikator korelacji) można użyć do określenia, który kontrakt operacji ma zostać przesłany. 
   
- Komunikat MSMQ nie zawiera również informacji o tym, które nagłówki są mapowane na różne parametry kontraktu operacji. W związku z tym w kontrakcie operacji może istnieć tylko jeden parametr. Parametr jest typu <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, który zawiera źródłowy komunikat MSMQ. Typ "T" w `MsmqMessage<T>` klasie reprezentuje dane, które są serializowane w treści wiadomości MSMQ. W tym przykładzie `PurchaseOrder` typ jest serializowany do treści wiadomości MSMQ.  
+ Komunikat MSMQ nie zawiera również informacji o tym, które nagłówki są mapowane na różne parametry kontraktu operacji. W związku z tym w kontrakcie operacji może istnieć tylko jeden parametr. Parametr jest typu <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, który zawiera źródłowy komunikat MSMQ. Typ "T" w klasie `MsmqMessage<T>` reprezentuje dane, które są serializowane w treści wiadomości MSMQ. W tym przykładzie typ `PurchaseOrder` jest serializowany do treści wiadomości MSMQ.  
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -28,7 +28,7 @@ public interface IOrderProcessor
 }
 ```
 
- Operacja usługi przetwarza zamówienie zakupu i wyświetla zawartość zamówienia zakupu oraz jego stan w oknie konsoli usługi. <xref:System.ServiceModel.OperationBehaviorAttribute> Konfiguruje operację do rejestracji w transakcji z kolejką i oznacza, że transakcja została ukończona, gdy operacja zwróci wartość. `PurchaseOrder` Zawiera szczegółowe informacje o zamówieniach, które muszą zostać przetworzone przez usługę.
+ Operacja usługi przetwarza zamówienie zakupu i wyświetla zawartość zamówienia zakupu oraz jego stan w oknie konsoli usługi. <xref:System.ServiceModel.OperationBehaviorAttribute> konfiguruje operację do rejestracji w transakcji z kolejką i oznacza, że transakcja została ukończona, gdy operacja zwróci wartość. `PurchaseOrder` zawiera szczegółowe informacje o zamówieniach, które muszą zostać przetworzone przez usługę.
 
 ```csharp
 // Service class that implements the service contract.
@@ -65,9 +65,9 @@ public class OrderProcessorService : IOrderProcessor
 }
 ```
 
- Usługa używa klienta `OrderResponseClient` niestandardowego do wysyłania wiadomości MSMQ do kolejki. Ponieważ aplikacja, która odbiera i przetwarza komunikat, jest aplikacją usługi MSMQ, a nie aplikacją WCF, nie istnieje niejawna Umowa serwisowa między tymi dwiema aplikacjami. Dlatego nie można utworzyć serwera proxy za pomocą narzędzia Svcutil. exe w tym scenariuszu.
+ Usługa używa niestandardowego klienta `OrderResponseClient` do wysyłania wiadomości MSMQ do kolejki. Ponieważ aplikacja, która odbiera i przetwarza komunikat, jest aplikacją usługi MSMQ, a nie aplikacją WCF, nie istnieje niejawna Umowa serwisowa między tymi dwiema aplikacjami. Dlatego nie można utworzyć serwera proxy za pomocą narzędzia Svcutil. exe w tym scenariuszu.
 
- Niestandardowy serwer proxy jest zasadniczo taki sam dla wszystkich aplikacji WCF, które używają `msmqIntegrationBinding` powiązania do wysyłania komunikatów. W przeciwieństwie do innych serwerów proxy, nie obejmuje zakresu operacji usługi. Jest to tylko operacja przesyłania wiadomości.
+ Niestandardowy serwer proxy jest zasadniczo taki sam dla wszystkich aplikacji WCF, które używają powiązania `msmqIntegrationBinding` do wysyłania komunikatów. W przeciwieństwie do innych serwerów proxy, nie obejmuje zakresu operacji usługi. Jest to tylko operacja przesyłania wiadomości.
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -99,7 +99,7 @@ public partial class OrderResponseClient : System.ServiceModel.ClientBase<IOrder
 }
 ```
 
- Usługa jest samodzielna. W przypadku korzystania z transportu integracji usługi MSMQ użyta Kolejka musi zostać utworzona z góry. Można to zrobić ręcznie lub przy użyciu kodu. W tym przykładzie usługa zawiera <xref:System.Messaging> kod służący do sprawdzania istnienia kolejki i tworzenia jej w razie potrzeby. Nazwa kolejki jest odczytywana z pliku konfiguracji.
+ Usługa jest samodzielna. W przypadku korzystania z transportu integracji usługi MSMQ użyta Kolejka musi zostać utworzona z góry. Można to zrobić ręcznie lub przy użyciu kodu. W tym przykładzie usługa zawiera kod <xref:System.Messaging>, aby sprawdzić istnienie kolejki i utworzyć ją w razie potrzeby. Nazwa kolejki jest odczytywana z pliku konfiguracji.
 
 ```csharp
 public static void Main()
@@ -125,7 +125,7 @@ public static void Main()
 }
 ```
 
- Kolejka MSMQ, do której wysyłane są żądania zamówienia, jest określona w sekcji appSettings w pliku konfiguracji. Punkty końcowe klienta i usługi są zdefiniowane w sekcji System. serviceModel w pliku konfiguracji. Oba określają `msmqIntegrationbinding` powiązanie.
+ Kolejka MSMQ, do której wysyłane są żądania zamówienia, jest określona w sekcji appSettings w pliku konfiguracji. Punkty końcowe klienta i usługi są zdefiniowane w sekcji System. serviceModel w pliku konfiguracji. Oba określają powiązanie `msmqIntegrationbinding`.
 
 ```xml
 <appSettings>
@@ -164,7 +164,7 @@ public static void Main()
 </system.serviceModel>
 ```
 
- Aplikacja kliencka używa <xref:System.Messaging> programu w celu wysyłania trwałych i transakcyjnych komunikatów do kolejki. Treść wiadomości zawiera zamówienie zakupu.
+ Aplikacja kliencka używa <xref:System.Messaging> do wysyłania trwałych i transakcyjnych komunikatów do kolejki. Treść wiadomości zawiera zamówienie zakupu.
 
 ```csharp
 static void PlaceOrder()
@@ -221,7 +221,7 @@ static void PlaceOrder()
 </appSettings>
 ```
 
- Aplikacja kliencka zapisuje `messageID` komunikat żądania zamówienia wysyłany do usługi i czeka na odpowiedź z usługi. Po nadejściu odpowiedzi w kolejce klient korelacji z komunikatem o zamówieniu, który został wysłany przy `correlationID` użyciu właściwości komunikatu, `messageID` zawierającego komunikat o kolejności, który został pierwotnie Wysłany przez klienta do usługi.
+ Aplikacja kliencka zapisuje `messageID` komunikatu żądania zamówienia wysyłanego do usługi i czeka na odpowiedź z usługi. Po nadejściu odpowiedzi w kolejce klient jest skorelowany z komunikatem o zamówieniu, który został wysłany przy użyciu właściwości `correlationID` komunikatu, który zawiera `messageID` komunikatu o zamówieniu, że klient wysłał do usługi oryginalnie.
 
 ```csharp
 static void DisplayOrderStatus()
@@ -308,7 +308,7 @@ static void DisplayOrderStatus()
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   

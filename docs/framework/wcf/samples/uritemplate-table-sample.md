@@ -2,23 +2,23 @@
 title: Przykład tabeli UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 5dd1d38f-1989-4c64-820d-821f5a02216a
-ms.openlocfilehash: 9d60de39c8c025b31c45c79309442906fc3aab4e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: fb5932acce60e2da45f99730580237d31130d918
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044572"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715403"
 ---
 # <a name="uritemplate-table-sample"></a>Przykład tabeli UriTemplate
-Klasa zawiera strukturę tabeli asocjacyjnej, która umożliwia pracę z `UriTemplate` zestawem wystąpień. <xref:System.UriTemplateTable> Określone identyfikatory URI (Uniform Resource Identifier) można efektywnie dopasować do wszystkich szablonów w tabeli, a dane skojarzone z pasującym szablonem mogą zostać pobrane.  
+Klasa <xref:System.UriTemplateTable> udostępnia strukturę tabeli asocjacyjnej, która umożliwia pracę z zestawem `UriTemplate` wystąpień. Określone identyfikatory URI (Uniform Resource Identifier) można efektywnie dopasować do wszystkich szablonów w tabeli, a dane skojarzone z pasującym szablonem mogą zostać pobrane.  
   
- Ten przykład ilustruje następujące kluczowe pojęcia związane `UriTemplateTable` z klasą:  
+ Ten przykład ilustruje następujące kluczowe pojęcia związane z klasą `UriTemplateTable`:  
   
-- Składnia dla tworzenia wystąpienia `UriTemplateTable`.  
+- Składnia tworzenia wystąpienia `UriTemplateTable`.  
   
 - Wypełnianie `UriTemplateTable` z zestawem par klucz/wartość.  
   
-- Dopasowanie identyfikatora URI kandydata do tabeli przy <xref:System.UriTemplateTable.MatchSingle%2A>użyciu.  
+- Dopasowanie identyfikatora URI kandydata do tabeli przy użyciu <xref:System.UriTemplateTable.MatchSingle%2A>.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
@@ -31,7 +31,7 @@ Klasa zawiera strukturę tabeli asocjacyjnej, która umożliwia pracę z `UriTem
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplateTable`  
   

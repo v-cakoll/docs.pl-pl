@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ffcb288995975433bdd915362fccca03f345b5f5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c651f5c02bd49acc593c585395bc52e9ee64f870
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281653"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714494"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Co nowego w .NET Framework
 
@@ -350,7 +350,7 @@ Obsługa dekompresji przy użyciu interfejsów API systemu Windows jest włączo
 
 **Dodatkowe interfejsy API kolekcji**
 
-.NET Framework 4.7.2 dodaje wiele nowych interfejsów API do typów <xref:System.Collections.Generic.SortedSet%601> i <xref:System.Collections.Generic.HashSet%601>. Należą do nich:
+.NET Framework 4.7.2 dodaje wiele nowych interfejsów API do typów <xref:System.Collections.Generic.SortedSet%601> i <xref:System.Collections.Generic.HashSet%601>. Należą do nich następujące elementy:
 
 - Metody `TryGetValue`, które zwiększają wzorzec try użyty w innych typach kolekcji do tych dwóch typów. Metody są następujące:
 
@@ -383,7 +383,7 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 <a name="asp-net472" />
 
-#### <a name="aspnet"></a>ASP.NET
+#### <a name="aspnet"></a>Platforma ASP.NET
 
 **Obsługa iniekcji zależności w formularzach sieci Web**
 
@@ -434,7 +434,7 @@ Można dodać SameSite dla plików cookie <xref:System.Web.Security.FormsAuthent
 
 <a name="net472" />
 
-#### <a name="networking"></a>Networking
+#### <a name="networking"></a>Obsługa sieci
 
 **Implementacja właściwości HttpClientHandler**
 
@@ -630,7 +630,7 @@ Zmiany w wyrzucaniu elementów bezużytecznych (GC) w .NET Framework 4.7.1 popra
 
 <a name="net471"/>
 
-#### <a name="networking"></a>Networking
+#### <a name="networking"></a>Obsługa sieci
 
 **Obsługa algorytmu SHA-2 dla komunikatu. algorytm**
 
@@ -638,7 +638,7 @@ W .NET Framework 4,7 i starszych wersjach Właściwość <xref:System.Messaging.
 
 <a name="asp-net471" />
 
-#### <a name="aspnet"></a>ASP.NET
+#### <a name="aspnet"></a>Platforma ASP.NET
 
 **Kroki wykonywania w aplikacjach ASP.NET**
 
@@ -699,7 +699,7 @@ W .NET Framework 4,7 <xref:System.Runtime.Serialization.Json.DataContractJsonSer
 
 <a name="net47" />
 
-#### <a name="networking"></a>Networking
+#### <a name="networking"></a>Obsługa sieci
 
 .NET Framework 4,7 dodaje następującą funkcję powiązaną z siecią:
 
@@ -709,7 +709,7 @@ Stos protokołu TLS używany przez <xref:System.Net.Security.SslStream?displayPr
 
 <a name="ASP-NET47" />
 
-#### <a name="aspnet"></a>ASP.NET
+#### <a name="aspnet"></a>Platforma ASP.NET
 
 W .NET Framework 4,7 ASP.NET zawiera następujące nowe funkcje:
 
@@ -741,7 +741,7 @@ Począwszy od .NET Framework 4,7, usługa WCF umożliwia skonfigurowanie program
 
 **Zwiększona niezawodność aplikacji WCF i serializacji WCF**
 
-Program WCF zawiera szereg zmian w kodzie, które eliminują sytuacje wyścigu, co poprawia wydajność i niezawodność opcji serializacji. Należą do nich:
+Program WCF zawiera szereg zmian w kodzie, które eliminują sytuacje wyścigu, co poprawia wydajność i niezawodność opcji serializacji. Należą do nich następujące elementy:
 
 - Lepsza obsługa mieszania kodu asynchronicznego i synchronicznego w wywołaniach **SocketConnection. BeginRead** i **SocketConnection. Read**.
 - Zwiększona niezawodność podczas przerywania połączenia z **SharedConnectionListener** i **DuplexChannelBinder**.
@@ -804,7 +804,7 @@ Aby uzyskać listę nowych interfejsów API dodanych do .NET Framework 4.6.2, zo
 
 <a name="ASPNET462" />
 
-### <a name="aspnet"></a>ASP.NET
+### <a name="aspnet"></a>Platforma ASP.NET
 
 W .NET Framework 4.6.2 ASP.NET obejmuje następujące udoskonalenia:
 
@@ -1039,13 +1039,13 @@ Dodanie nowego słowa kluczowego `PoolBlockingPeriod` umożliwia wybranie okresu
 
 Okres blokowania puli połączeń dla aplikacji, która łączy się z Azure SQL Database, jest wyłączony, a okres blokowania puli połączeń dla aplikacji łączącej się z jakimkolwiek innym wystąpieniem SQL Server jest włączony. Jest to wartość domyślna. Jeśli nazwa punktu końcowego serwera zostanie zakończona z dowolnego z poniższych, są one uznawane za bazy danych SQL Azure:
 
-- .database.windows.net
+- . database.windows.net
 
-- .database.chinacloudapi.cn
+- . database.chinacloudapi.cn
 
-- .database.usgovcloudapi.net
+- . database.usgovcloudapi.net
 
-- .database.cloudapi.de
+- . database.cloudapi.de
 
 <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock>
 
@@ -1665,7 +1665,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   - **Wysyłanie komunikatów przy użyciu różnych połączeń HTTP**
 
-    Usługa WCF umożliwia teraz użytkownikom zapewnienie, że niektóre komunikaty są wysyłane przy użyciu różnych podstawowych połączeń HTTP. Istnieją dwa sposoby, w tym celu:
+    Usługa WCF umożliwia teraz użytkownikom zapewnienie, że niektóre komunikaty są wysyłane przy użyciu różnych podstawowych połączeń HTTP. Istnieją dwa sposoby wykonania tej czynności:
 
     - **Używanie prefiksu nazwy grupy połączeń**
 
@@ -1900,7 +1900,7 @@ Nowe funkcje w programie ASP.NET 4.5.1 można znaleźć w temacie [ASP.NET and W
 
 <a name="v45" />
 
-## <a name="whats-new-in-net-framework-45"></a>Co nowego w .NET Framework 4,5
+## <a name="whats-new-in-net-framework-45"></a>{1&gt;{2&gt;Co nowego w programie .NET Framework 4.5&lt;2}&lt;1}
 
 ### <a name="base-classes"></a>Klas podstawowych
 
@@ -1970,7 +1970,7 @@ Optymalizacja z przewodnikiem zarządzanym profilem (Mpgo. exe) umożliwia skró
 
 ### <a name="web"></a>sieć Web
 
-ASP.NET 4,5 i 4.5.1 Dodawanie powiązania modelu dla formularzy sieci Web, obsługi protokołu WebSocket, obsługi asynchronicznych, ulepszeń wydajności i wielu innych funkcji. Aby uzyskać więcej informacji, zobacz następujące zasoby:
+ASP.NET 4,5 i 4.5.1 Dodawanie powiązania modelu dla formularzy sieci Web, obsługi protokołu WebSocket, obsługi asynchronicznych, ulepszeń wydajności i wielu innych funkcji. Więcej informacji można znaleźć w następujących zasobach:
 
 - [ASP.NET 4,5 i Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 
@@ -2116,13 +2116,13 @@ Aby uzyskać więcej informacji, zobacz [co nowego w Windows Workflow Foundation
 
 <a name="tailored" />
 
-### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
+### <a name="net-for-windows-8x-store-apps"></a>Platforma .NET dla aplikacji do Sklepu Windows 8.x
 
-Aplikacje ze sklepu Windows 8. x są przeznaczone do określonych współczynników i wykorzystują możliwości systemu operacyjnego Windows. Podzestaw .NET Framework 4,5 lub 4.5.1 jest dostępny do kompilowania aplikacji ze sklepu Windows 8. x dla systemu Windows przy użyciu C# programu lub Visual Basic. Ten podzbiór jest nazywany [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] i został omówiony w [omówieniu](https://go.microsoft.com/fwlink/?LinkId=228491) w centrum deweloperów systemu Windows.
+Aplikacje ze sklepu Windows 8. x są przeznaczone do określonych współczynników i wykorzystują możliwości systemu operacyjnego Windows. Podzestaw .NET Framework 4,5 lub 4.5.1 jest dostępny do kompilowania aplikacji ze sklepu Windows 8. x dla systemu Windows przy użyciu C# programu lub Visual Basic. Ten podzbiór nosi nazwę .NET dla systemu Windows 8. x aplikacje ze sklepu i został omówiony w [przeglądzie](https://go.microsoft.com/fwlink/?LinkId=228491) w centrum deweloperów systemu Windows.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Przenośne biblioteki klas <a name="portable" />
 
-Przenośna biblioteka klas w programie Visual Studio 2012 (i nowszych wersjach) umożliwia pisanie i kompilowanie zestawów zarządzanych, które działają na wielu platformach .NET Framework. Za pomocą przenośnego projektu biblioteki klas należy wybrać platformy (takie jak Windows Phone i [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]) do celów. Dostępne typy i elementy członkowskie w projekcie są automatycznie ograniczone do wspólnych typów i elementów członkowskich na tych platformach. Aby uzyskać więcej informacji, zobacz [Przenośna biblioteka klas](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+Przenośna biblioteka klas w programie Visual Studio 2012 (i nowszych wersjach) umożliwia pisanie i kompilowanie zestawów zarządzanych, które działają na wielu platformach .NET Framework. Korzystając z projektu biblioteki klas przenośnych, należy wybrać platformy (takie jak Windows Phone i .NET dla systemu Windows 8. x aplikacji do sklepu). Dostępne typy i elementy członkowskie w projekcie są automatycznie ograniczone do wspólnych typów i elementów członkowskich na tych platformach. Aby uzyskać więcej informacji, zobacz [Przenośna biblioteka klas](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
 ## <a name="see-also"></a>Zobacz także
 

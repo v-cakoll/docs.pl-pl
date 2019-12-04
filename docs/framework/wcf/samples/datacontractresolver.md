@@ -2,15 +2,15 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: 224ffcf277f9ceaf6b1f970ad6f92480f5857999
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 101c33ca197be9dff52a73c844dd0b006e62b2ac
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045081"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716590"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
-Ten przykład pokazuje, jak procesy serializacji i deserializacji można dostosować za pomocą <xref:System.Runtime.Serialization.DataContractResolver> klasy. Ten przykład pokazuje, jak używać obiektu DataContractResolver do mapowania typów CLR do i z reprezentacji xsi: Type podczas serializacji i deserializacji.
+Ten przykład pokazuje, jak można dostosowywać procesy serializacji i deserializacji za pomocą klasy <xref:System.Runtime.Serialization.DataContractResolver>. Ten przykład pokazuje, jak używać obiektu DataContractResolver do mapowania typów CLR do i z reprezentacji xsi: Type podczas serializacji i deserializacji.
 
 ## <a name="sample-details"></a>Przykładowe szczegóły
  Przykład definiuje następujące typy CLR.
@@ -47,7 +47,7 @@ namespace Types
 }
 ```
 
- Przykład ładuje zestaw, wyodrębnia każdy z tych typów, a następnie serializować i deserializacji. Program jest podłączony do procesu serializacji przez przekazanie wystąpienia <xref:System.Runtime.Serialization.DataContractResolver>klasy pochodnej do <xref:System.Runtime.Serialization.DataContractSerializer> konstruktora, jak pokazano w poniższym przykładzie. <xref:System.Runtime.Serialization.DataContractResolver>
+ Przykład ładuje zestaw, wyodrębnia każdy z tych typów, a następnie serializować i deserializacji. <xref:System.Runtime.Serialization.DataContractResolver> jest podłączony do procesu serializacji przez przekazanie wystąpienia klasy pochodnej <xref:System.Runtime.Serialization.DataContractResolver>do konstruktora <xref:System.Runtime.Serialization.DataContractSerializer>, jak pokazano w poniższym przykładzie.
 
 ```csharp
 this.serializer = new DataContractSerializer(typeof(Object), null, int.MaxValue, false, true, null, new MyDataContractResolver(assembly));
@@ -97,7 +97,7 @@ public void deserialize(Type type)
 }
 ```
 
- Ponieważ element niestandardowy <xref:System.Runtime.Serialization.DataContractResolver> jest przekazywać <xref:System.Runtime.Serialization.DataContractSerializer> do konstruktora, <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> jest wywoływany podczas serializacji w celu mapowania typu CLR na odpowiednik `xsi:type`. Podobnie jest wywoływana podczas deserializacji w celu `xsi:type` mapowania do równoważnego typu CLR. <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> W tym <xref:System.Runtime.Serialization.DataContractResolver> przykładzie jest zdefiniowana, tak jak pokazano w poniższym przykładzie.
+ Ponieważ <xref:System.Runtime.Serialization.DataContractResolver> niestandardowe jest przenoszona do konstruktora <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> jest wywoływana podczas serializacji w celu mapowania typu CLR na odpowiedni `xsi:type`. Podobnie <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> jest wywoływana podczas deserializacji, aby zmapować `xsi:type` do równoważnego typu CLR. W tym przykładzie <xref:System.Runtime.Serialization.DataContractResolver> jest zdefiniowana, jak pokazano w poniższym przykładzie.
 
  Poniższy przykład kodu jest klasą pochodną <xref:System.Runtime.Serialization.DataContractResolver>.
 
@@ -161,7 +161,7 @@ class MyDataContractResolver : DataContractResolver
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
   

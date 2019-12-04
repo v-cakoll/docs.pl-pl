@@ -2,21 +2,21 @@
 title: Przykład dyspozytora tabeli UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
-ms.openlocfilehash: 724a13504cea2672aef7ff155fbbff055aac34e6
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e2ec85027274f302c59673a3d937be8f03d0b43b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044591"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715354"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>Przykład dyspozytora tabeli UriTemplate
-Klasa zawiera strukturę tabeli asocjacyjnej, która umożliwia pracę z <xref:System.UriTemplate> zestawem wystąpień. <xref:System.UriTemplateTable> W tym przykładzie przedstawiono podstawowy aparat wysyłania, który został utworzony `UriTemplateTable`przy użyciu, typowy scenariusz użycia `UriTemplateTable` dla klasy.  
+Klasa <xref:System.UriTemplateTable> udostępnia strukturę tabeli asocjacyjnej, która umożliwia pracę z zestawem <xref:System.UriTemplate> wystąpień. Ten przykład ilustruje podstawowy aparat do wysyłania z wykorzystaniem `UriTemplateTable`, typowy scenariusz użycia dla klasy `UriTemplateTable`.  
   
- Ten przykład ilustruje następujące kluczowe pojęcia dotyczące `UriTemplateTable` klasy:  
+ Ten przykład ilustruje następujące kluczowe pojęcia dotyczące klasy `UriTemplateTable`:  
   
-- Kojarzenie delegatów za `UriTemplates` pomocą elementu `UriTemplateTable`w.  
+- Kojarzenie delegatów z `UriTemplates` w `UriTemplateTable`.  
   
-- Korzystanie <xref:System.UriTemplateTable.MatchSingle%2A> z programu w celu uzyskania poprawnego delegata programu obsługi dla określonego identyfikatora URI.  
+- Używanie <xref:System.UriTemplateTable.MatchSingle%2A>, aby uzyskać prawidłowy delegat programu obsługi dla określonego identyfikatora URI.  
   
 - Wywoływanie delegata procedury obsługi w celu przetworzenia żądania.  
   
@@ -31,7 +31,7 @@ Klasa zawiera strukturę tabeli asocjacyjnej, która umożliwia pracę z <xref:S
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplateDispatcher`  
   

@@ -5,46 +5,46 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: b28981196490e249d053ecd1704f6ba978585520
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 542440d6bf9d6809abee1ec37c85c44ce72fd132
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662866"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715159"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Projektanci niestandardowych elementów złożonych — prezenter elementu przepływu pracy
 
-<xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> Typ klucza w WF projektanta model programowania, który umożliwia edytowanie kolekcję elementów zawartych. Niniejszy przykład pokazuje sposób kompilowania, Projektant działań, która udostępnia można edytować kolekcji.
+<xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> jest typem klucza w modelu programowania projektanta WF, który umożliwia edytowanie kolekcji zawartych elementów. Ten przykład pokazuje, jak utworzyć projektanta działań, który wyświetla tę kolekcję edytowalną.
 
-W tym przykładzie przedstawiono:
+Ten przykład ilustruje:
 
-- Tworzenie niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.
+- Tworzenie niestandardowego projektanta działań za pomocą <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.
 
-- Tworzenie projektanta działań przy użyciu widoku "zwiniętego" i "rozwiniętego".
+- Tworzenie projektanta działań z widokiem "zwinięte" i "rozwinięte".
 
-- Zastępowanie domyślnego projektanta w rehostowanym aplikacji.
+- Zastępowanie domyślnego projektanta w aplikacji przehostowanej.
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
-1. Otwórz **UsingWorkflowItemsPresenter.sln** przykładowe rozwiązanie dla języka C# lub VB w programie Visual Studio 2010.
+1. Otwórz przykładowe rozwiązanie **UsingWorkflowItemsPresenter. sln** dla C# programu lub dla języka vb w programie Visual Studio 2010.
 
-2. Skompiluj i uruchom rozwiązanie. Powinna zostać otwarta aplikacja projektanta rehostowanym przepływu pracy i działania można przeciągnąć na kanwę.
+2. Kompiluj i uruchamiaj rozwiązanie. Powinna zostać otwarta aplikacja projektanta przepływów pracy, na której można przeciągnąć działania na kanwę.
 
-## <a name="sample-highlights"></a>Najważniejsze funkcje próbki
+## <a name="sample-highlights"></a>Przykładowe najważniejsze elementy
 
-Kod w tym przykładzie przedstawiono poniżej:
+Kod dla tego przykładu pokazuje następujące elementy:
 
-- Działanie programu designer zaprojektowano pod kątem:  `Parallel`
+- Działanie, dla którego utworzono projektanta: `Parallel`
 
-- Tworzenie niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Kilka kwestii, które zwracają uwagę na:
+- Tworzenie niestandardowego projektanta działań za pomocą <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Kilka rzeczy, które należy wskazać:
 
-  - Zwróć uwagę na użycie powiązanie danych WPF można powiązać `ModelItem.Branches`. `ModelItem` jest to właściwość na `WorkflowElementDesigner` odwołujący się do obiektu źródłowego projektanta jest używany, w tym przypadku nasze `Parallel`.
+  - Zwróć uwagę na użycie powiązania danych WPF do powiązania z `ModelItem.Branches`. `ModelItem` jest właściwością `WorkflowElementDesigner` odwołującą się do obiektu źródłowego, który jest używany przez projektanta, w tym przypadku naszych `Parallel`.
 
-  - <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> Można umieścić element wizualny, aby wyświetlić między poszczególne elementy w kolekcji.
+  - <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> może służyć do umieszczania wizualizacji między poszczególnymi elementami w kolekcji.
 
-  - <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> jest szablon, który można przekazać do określania układu elementów w kolekcji. W tym przypadku jest używany panel stosu poziomej.
+  - <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> to szablon, który można podać w celu określenia układu elementów w kolekcji. W takim przypadku używany jest poziomy Panel stosu.
 
-  Ten poniższy przykład kodu pokazuje to.
+  Poniższy przykładowy kod przedstawia ten sposób.
 
   ```xaml
   <sad:WorkflowItemsPresenter HintText="Drop Activities Here"
@@ -62,11 +62,11 @@ Kod w tym przykładzie przedstawiono poniżej:
     </sad:WorkflowItemsPresenter>
   ```
 
-- Wykonaj stowarzyszenie `DesignerAttribute` do `Parallel` typu i następnie dane wyjściowe zgłaszane atrybutów.
+- Wykonaj skojarzenie `DesignerAttribute` z typem `Parallel`, a następnie dane wyjściowe raportowanych atrybutów.
 
-  - Najpierw należy zarejestrować wszystkie domyślne projektantów.
+  - Najpierw Zarejestruj wszystkie domyślne projektantów.
 
-    Poniżej przedstawiono przykładowy kod.
+    Oto przykład kodu.
 
     ```csharp
     // register metadata
@@ -82,9 +82,9 @@ Kod w tym przykładzie przedstawiono poniżej:
     RegisterCustomMetadata()
     ```
 
-  - Następnie zastąp równoległego w `RegisterCustomMetadata` metody.
+  - Następnie Zastąp metodę Parallel w `RegisterCustomMetadata`.
 
-    Poniższy kod przedstawia to w języku C# i Visual Basic.
+    Poniższy kod ilustruje to w C# i Visual Basic.
 
     ```csharp
     void RegisterCustomMetadata()
@@ -103,9 +103,9 @@ Kod w tym przykładzie przedstawiono poniżej:
     End Sub
     ```
 
-- Na koniec Zwróć uwagę na użycie różnych szablonów danych i wyzwalaczy, aby wybrać odpowiedni szablon na podstawie `IsRootDesigner` właściwości.
+- Na koniec należy zwrócić uwagę na użycie różnych szablonów danych i wyzwalaczy, aby wybrać odpowiedni szablon na podstawie właściwości `IsRootDesigner`.
 
-  Poniżej przedstawiono przykładowy kod.
+  Oto przykład kodu.
 
   ```xaml
   <sad:ActivityDesigner x:Class="Microsoft.Samples.CustomParallelDesigner"
@@ -151,11 +151,11 @@ Kod w tym przykładzie przedstawiono poniżej:
   ```
 
 > [!IMPORTANT]
-> Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`
 

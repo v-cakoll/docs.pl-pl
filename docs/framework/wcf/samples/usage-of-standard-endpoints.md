@@ -2,22 +2,22 @@
 title: Użycie standardowych punktów końcowych
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: a2af1ae793166d1ed3742782b911ded30d0b9d35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2b210bfe683669aeebf54a1701f07d492e6abdb4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662390"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715345"
 ---
 # <a name="usage-of-standard-endpoints"></a>Użycie standardowych punktów końcowych
 
-W tym przykładzie pokazano, jak używać standardowych punktów końcowych w plikach konfiguracji usługi. Standardowy punkt końcowy umożliwia użytkownikowi Uprość definicji punktów końcowych przy użyciu pojedynczej właściwości do opisania za pomocą dodatkowych właściwości skojarzone z jego adres, powiązania i umowy. Niniejszy przykład pokazuje, jak definiować ani implementować niestandardowe standardowy punkt końcowy oraz jak zdefiniować konkretne właściwości w punkcie końcowym.
+Ten przykład pokazuje, jak używać standardowych punktów końcowych w plikach konfiguracji usługi. Standardowy punkt końcowy umożliwia użytkownikowi uproszczenie definicji punktów końcowych przy użyciu pojedynczej właściwości do opisywania kombinacji adresu, powiązania i kontraktu z dodatkowymi skojarzonymi właściwościami. Ten przykład ilustruje sposób definiowania i implementowania niestandardowego standardowego punktu końcowego oraz sposobu definiowania określonych właściwości w punkcie końcowym.
 
-## <a name="sample-details"></a>Przykład szczegółów
+## <a name="sample-details"></a>Przykładowe szczegóły
 
-Punkty końcowe usługi można określić, podając trzy parametry: adres i powiązanie i umowy. Inne parametry, które mogą być dostarczane obejmują konfigurację zachowania, nagłówki, identyfikatora URI nasłuchiwania i tak dalej. W niektórych przypadkach, dowolne lub wszystkie adresy powiązania i kontrakty mają wartości, których nie można zmienić. Z tego powodu jest możliwe użycie standardowych punktów końcowych. Przykłady takich punktów końcowych to punkty końcowe wymiany metadanych i odnajdywania. Standardowe punkty końcowe również zwiększyć użyteczność, umożliwiając konfiguracji punktów końcowych usługi bez konieczności zawierają informacje o charakterze stałej lub utworzyć własne standardowych punktów końcowych, na przykład aby zwiększyć użyteczność, podając uzasadnione zestaw domyślnych wartości i zmniejszając w ten sposób poziom szczegółowości plików konfiguracyjnych.
+Punkty końcowe usługi można określić, dostarczając trzy parametry: Address, Binding i Contract. Inne parametry, które można podać, obejmują konfigurację zachowań, nagłówki, identyfikator URI nasłuchiwania i tak dalej. W niektórych przypadkach wszystkie lub wszystkie adresy, powiązania i kontrakty mają wartości, których nie można zmienić. Z tego powodu można używać standardowych punktów końcowych. Niektóre przykłady takich punktów końcowych obejmują punkty końcowe wymiany metadanych i punkty końcowe odnajdywania. Standardowe punkty końcowe również zwiększają użyteczność, umożliwiając Konfigurowanie punktów końcowych usługi bez konieczności dostarczania informacji o stałym charakterze lub do tworzenia własnych standardowych punktów końcowych, na przykład w celu poprawy użyteczności przez dostarczanie rozsądnego zestawu domyślnego wartości, co zmniejsza poziom szczegółowości plików konfiguracji.
 
-Ten przykład obejmuje dwa projekty: usługa, która definiuje dwa standardowe punkty końcowe i klienta, który komunikuje się z usługą. Sposób zdefiniowanych standardowych punktów końcowych usługi w pliku konfiguracji jest show w poniższym przykładzie.
+Ten przykład składa się z dwóch projektów: usługi, która definiuje dwa standardowe punkty końcowe i klienta, który komunikuje się z usługą. W poniższym przykładzie pokazano sposób definiowania standardowych punktów końcowych dla usługi w pliku konfiguracji.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -50,9 +50,9 @@ Ten przykład obejmuje dwa projekty: usługa, która definiuje dwa standardowe p
 </configuration>
 ```
 
-Pierwszy punkt końcowy zdefiniowany dla usługi jest rodzaju `customEndpoint`, którego definicja będzie widoczne w `<standardEndpoints>` sekcji, w którym właściwość `property` jest podana wartość `true`. Dotyczy to dostosować za pomocą nowej właściwości punktu końcowego. Drugi punkt końcowy odnosi się do punktu końcowego metadanych, w którym są stałe wartości dla adresu, powiązania i umowy.
+Pierwszy punkt końcowy zdefiniowany dla usługi jest typu `customEndpoint`, którego definicja może być widoczna w sekcji `<standardEndpoints>`, w której Właściwość `property` ma daną wartość `true`. Jest to przypadek punktu końcowego dostosowany do nowej właściwości. Drugi punkt końcowy odpowiada punktowi końcowemu metadanych, w którym są naprawione wartości adresu, powiązania i kontraktu.
 
-Aby zdefiniować element standardowy punkt końcowy, klasa, która pochodzi od klasy `StandardEndpointElement` musi zostać utworzona. W przypadku ten przykład `CustomEndpointElement` klasy została zdefiniowana, jak pokazano w poniższym przykładzie.
+Aby zdefiniować standardowy element punktu końcowego, należy utworzyć klasę, która dziedziczy z `StandardEndpointElement`. W przypadku tego przykładu Klasa `CustomEndpointElement` została zdefiniowana, jak pokazano w poniższym przykładzie.
 
 ```csharp
 public class CustomEndpointElement : StandardEndpointElement
@@ -105,7 +105,7 @@ public class CustomEndpointElement : StandardEndpointElement
 }
 ```
 
-W `CreateServiceEndpoint` funkcji `CustomEndpoint` obiekt zostanie utworzony. W poniższym przykładzie pokazano definicję:
+W funkcji `CreateServiceEndpoint` tworzony jest obiekt `CustomEndpoint`. Jego definicja jest pokazana w poniższym przykładzie:
 
 ```csharp
 public class CustomEndpoint : ServiceEndpoint
@@ -135,38 +135,38 @@ public class CustomEndpoint : ServiceEndpoint
 }
 ```
 
- Aby wykonać komunikacji między usługą i klienta, odwołanie do usługi jest tworzony w klienta do usługi. Gdy próbki są kompilowane i wykonywany, usługa była wykonywana, a klient komunikuje się z nim. Należy zauważyć, że odwołanie do usługi mają być aktualizowane za każdym razem, gdy niektóre zmiany w usłudze.
+ W celu przeprowadzenia komunikacji między usługą a klientem do usługi jest tworzone odwołanie do usługi. Po skompilowaniu i wykonaniu przykładu usługa jest wykonywana i klient komunikuje się z nią. Należy pamiętać, że odwołanie do usługi powinno być aktualizowane za każdym razem, gdy w usłudze wprowadzono pewne zmiany.
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1. Za pomocą programu Visual Studio 2012, otwórz plik StandardEndpoints.sln.
+1. Za pomocą programu Visual Studio 2012 Otwórz plik StandardEndpoints. sln.
 
-2. Włączanie wielu projektów do uruchomienia.
+2. Włącz uruchamianie wielu projektów.
 
-    1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy rozwiązanie standardowych punktów końcowych, a następnie wybierz **właściwości**.
+    1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy standardowe rozwiązanie punktów końcowych, a następnie wybierz polecenie **Właściwości**.
 
-    2. W **wspólne właściwości**, wybierz opcję **projekt startowy**, a następnie kliknij przycisk **wiele projektów startowych**.
+    2. W obszarze **wspólne właściwości**wybierz pozycję **projekt startowy**, a następnie kliknij pozycję **wiele projektów startowych**.
 
-    3. Przenieś projektu usługi na początku listy, za pomocą **akcji** równa **Start**.
+    3. Przenieś projekt usługi na początek listy z **akcją** ustawioną na wartość **Rozpocznij**.
 
-    4. Przejściem projekt klienta po projektu usługi również **akcji** równa **Start**.
+    4. Przenieś projekt klienta po projekcie usługi, również z **akcją** ustawioną na wartość **Uruchom**.
 
-         To ustawienie określa, że projekt klienta jest wykonywane po projektu usługi.
+         Oznacza to, że projekt klienta jest wykonywany po projekcie usługi.
 
 3. Aby uruchomić rozwiązanie, naciśnij klawisz F5.
 
 > [!NOTE]
-> Jeśli te kroki nie zadziałają, należy sprawdzić, czy środowiska prawidłowo skonfigurowano, wykonując następujące czynności:
+> Jeśli te kroki nie działają, upewnij się, że środowisko zostało prawidłowo skonfigurowane, wykonując następujące czynności:
 >
-> 1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
-> 2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](building-the-samples.md).
-> 3. Do uruchomienia przykładu w jednej lub wielu konfiguracji komputera, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).
+> 1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
+> 2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
+> 3. Aby uruchomić przykład w jednej lub wielu konfiguracjach komputera, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).
 
 > [!IMPORTANT]
-> Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\StandardEndpoints`

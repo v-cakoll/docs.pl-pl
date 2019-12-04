@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15d6262fb5e7dfb99759f0f85c9a197157713300
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204955"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714488"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Obsługa .NET Framework dla aplikacji sklepu Windows Store i środowiska wykonawczego systemu Windows
 
@@ -32,7 +32,7 @@ W tym temacie opisano pomoc .NET Framework techniczną dla wszystkich trzech kat
 
 ## <a name="the-basics"></a>Podstawowe informacje
 
-.NET Framework obsługuje trzy scenariusze programowania wymienione wcześniej przez zapewnienie [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]i przez obsługę środowisko wykonawcze systemu Windows.
+.NET Framework obsługuje trzy scenariusze programowania wymienione wcześniej przez udostępnienie platformy .NET dla systemu Windows 8. x aplikacji ze sklepu i przez obsługę środowisko wykonawcze systemu Windows
 
 - [Przestrzenie nazw .NET Framework i środowisko wykonawcze systemu Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) zapewniają usprawniony widok bibliotek klas .NET Framework i zawierają tylko typy i elementy członkowskie, których można użyć do tworzenia aplikacji do sklepu Windows 8. x i składników Środowisko wykonawcze systemu Windows.
 
@@ -42,7 +42,7 @@ W tym temacie opisano pomoc .NET Framework techniczną dla wszystkich trzech kat
 
   - Funkcje, które po prostu zawijają interfejs API systemu operacyjnego, są również usuwane, ponieważ środowisko wykonawcze systemu Windows jest łatwe do wywołania z kodu zarządzanego.
 
-  Aby dowiedzieć się więcej na temat [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], zobacz [Omówienie programu .NET dla aplikacji do sklepu Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Aby zapoznać się z procesem wyboru interfejsu API, zobacz wpis [.net for Metro style Apps](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) w blogu platformy .NET.
+  Aby dowiedzieć się więcej na temat aplikacji ze sklepu .NET dla systemu Windows 8. x, zobacz [Omówienie programu .NET dla aplikacji do sklepu Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Aby zapoznać się z procesem wyboru interfejsu API, zobacz wpis [.net for Metro style Apps](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) w blogu platformy .NET.
 
 - [Środowisko wykonawcze systemu Windows](/uwp/api/) udostępnia elementy interfejsu użytkownika do kompilowania aplikacji ze sklepu Windows 8. x i zapewnia dostęp do funkcji systemu operacyjnego. Podobnie jak w przypadku .NET Framework, środowisko wykonawcze systemu Windows zawiera metadane, które C# umożliwiają kompilatorom i Visual Basic używanie środowisko wykonawcze systemu Windows w sposób, w jaki korzystają z bibliotek klas .NET Framework. .NET Framework ułatwia korzystanie z środowisko wykonawcze systemu Windows, ukrywając pewne różnice:
 
@@ -157,7 +157,7 @@ Kod zarządzany można spakować z istniejących aplikacji klasycznych jako skł
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
-|Stanowisko|Opis|
+|Tytuł|Opis|
 |-----------|-----------------|
 |[Omówienie programu .NET dla aplikacji do sklepu Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Zawiera opis typów .NET Framework i członków, których można użyć do tworzenia aplikacji do sklepu Windows 8. x i RuntimeComponents systemu Windows. (W centrum deweloperów systemu Windows).|
 |[Plan dla aplikacji ze sklepu Windows C# przy użyciu lub Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Udostępnia kluczowe zasoby ułatwiające rozpoczęcie opracowywania aplikacji ze sklepu Windows 8. x przy użyciu C# programu lub Visual Basic, w tym wiele tematów szybkiego startu, wytycznych i najlepszych rozwiązań. (W centrum deweloperów systemu Windows).|

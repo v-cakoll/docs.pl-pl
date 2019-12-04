@@ -293,9 +293,6 @@
             - name: Zasoby w aplikacjach klasycznych
               tocHref: /dotnet/framework/resources/
               topicHref: /dotnet/framework/resources/index
-            - name: Zabezpieczenia w programie .NET Framework
-              tocHref: /dotnet/framework/security/
-              topicHref: /dotnet/framework/security/index
             - name: Narzędzia programu .NET Framework
               tocHref: /dotnet/framework/tools/
               topicHref: /dotnet/framework/tools/index

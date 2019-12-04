@@ -5,15 +5,15 @@ helpviewer_keywords:
 - service behaviors, instancing sample
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-ms.openlocfilehash: 1e755a28ff4ce6450db4189783fa688002ebe8eb
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 868d88cff1c398009f136fe50f6cc3fe8c62d8e1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045557"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715759"
 ---
 # <a name="instancing"></a>Tworzenie wystąpienia
-Przykładowa funkcja tworzenia wystąpień pokazuje ustawienie zachowania tworzenia wystąpienia, które określa sposób, w jaki wystąpienie klasy usługi jest tworzone w odpowiedzi na żądania klientów. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontrakt usługi. Ten przykład definiuje nowy kontrakt `ICalculatorInstance`, który dziedziczy z. `ICalculator` Kontrakt określony przez `ICalculatorInstance` zawiera trzy dodatkowe operacje umożliwiające sprawdzenie stanu wystąpienia usługi. Zmieniając ustawienie tworzenia wystąpienia, można obserwować zmianę zachowania przez uruchomienie klienta.  
+Przykładowa funkcja tworzenia wystąpień pokazuje ustawienie zachowania tworzenia wystąpienia, które określa sposób, w jaki wystąpienie klasy usługi jest tworzone w odpowiedzi na żądania klientów. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje kontrakt usługi `ICalculator`. Ten przykład definiuje nowy kontrakt, `ICalculatorInstance`, który dziedziczy z `ICalculator`. Kontrakt określony przez `ICalculatorInstance` zawiera trzy dodatkowe operacje umożliwiające sprawdzenie stanu wystąpienia usługi. Zmieniając ustawienie tworzenia wystąpienia, można obserwować zmianę zachowania przez uruchomienie klienta.  
   
  W tym przykładzie klient jest aplikacją konsolową (. exe), a usługa jest hostowana przez Internet Information Services (IIS).  
   
@@ -22,13 +22,13 @@ Przykładowa funkcja tworzenia wystąpień pokazuje ustawienie zachowania tworze
   
  Dostępne są następujące tryby wystąpienia:  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Nowe wystąpienie usługi jest tworzone dla każdego żądania klienta.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: dla każdego żądania klienta zostanie utworzone nowe wystąpienie usługi.  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Nowe wystąpienie jest tworzone dla każdej nowej sesji klienta i utrzymywane przez okres istnienia tej sesji (wymaga powiązania, które obsługuje sesję).  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: nowe wystąpienie jest tworzone dla każdej nowej sesji klienta i utrzymywane przez okres istnienia sesji (wymaga powiązania, które obsługuje sesję).  
   
-- <xref:System.ServiceModel.InstanceContextMode.Single>: Pojedyncze wystąpienie klasy usługi obsługuje wszystkie żądania klientów w okresie istnienia aplikacji.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: pojedyncze wystąpienie klasy usługi obsługuje wszystkie żądania klientów w okresie istnienia aplikacji.  
   
- Klasa usługi określa zachowanie podczas wystąpienia z `[ServiceBehavior(InstanceContextMode=<setting>)]` atrybutem, jak pokazano w poniższym przykładzie kodu. Zmieniając wiersze, które są oznaczone jako komentarze, można obserwować zachowanie każdego z trybów wystąpienia. Pamiętaj, aby ponownie skompilować usługę po zmianie trybu tworzenia wystąpienia. Brak ustawień związanych z tworzeniem wystąpień do określenia na kliencie.  
+ Klasa usługi określa zachowanie podczas wystąpienia z atrybutem `[ServiceBehavior(InstanceContextMode=<setting>)]`, jak pokazano w poniższym przykładzie kodu. Zmieniając wiersze, które są oznaczone jako komentarze, można obserwować zachowanie każdego z trybów wystąpienia. Pamiętaj, aby ponownie skompilować usługę po zmianie trybu tworzenia wystąpienia. Brak ustawień związanych z tworzeniem wystąpień do określenia na kliencie.  
   
 ```csharp
 // Enable one of the following instance modes to compare instancing behaviors.  
@@ -135,6 +135,6 @@ static void Main()
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Instancing`  

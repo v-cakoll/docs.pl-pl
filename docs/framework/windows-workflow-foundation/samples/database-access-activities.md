@@ -2,12 +2,12 @@
 title: Działania dostępu do bazy danych
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: 31794a583e87b5948457fac754cb5bf66fafa09c
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: eec368803eeacb2bab729bcd6d57cc7fc6107256
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016037"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710861"
 ---
 # <a name="database-access-activities"></a>Działania dostępu do bazy danych
 
@@ -18,7 +18,7 @@ Działania dostępu do bazy danych umożliwiają dostęp do bazy danych w ramach
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do strony (strona pobierania), aby pobrać wszystkie Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] i przykłady. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do strony (strona pobierania), aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbki. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`
 
@@ -30,13 +30,13 @@ W poniższych sekcjach szczegółowo opisano listę działań uwzględnionych w 
 
 Wykonuje zapytanie SQL, które generuje modyfikację bazy danych (Wstawianie, aktualizowanie, usuwanie i inne modyfikacje).
 
-Ta klasa wykonuje swoją działania asynchronicznie (pochodzi z <xref:System.Activities.AsyncCodeActivity> i używa jego funkcji asynchronicznych).
+Ta klasa wykonuje swoją działania asynchronicznie (pochodzi z <xref:System.Activities.AsyncCodeActivity> i używa jej funkcji asynchronicznych).
 
 Informacje o połączeniu można skonfigurować przez ustawienie niezmiennej nazwy dostawcy (`ProviderName`) i parametrów połączenia (`ConnectionString`) lub po prostu użycie nazwy konfiguracji parametrów połączenia (`ConfigFileSectionName`) z pliku konfiguracyjnego aplikacji.
 
-Zapytanie, które ma zostać wykonane, jest skonfigurowane `Sql` w jego właściwości, a parametry są przesyłane `Parameters` za pomocą kolekcji.
+Zapytanie, które ma zostać wykonane, jest skonfigurowane we właściwości `Sql`, a parametry są przesyłane przez kolekcję `Parameters`.
 
-Po `DbUpdate` wykonaniu tej `AffectedRecords` właściwości zwracana jest liczba rekordów, których to dotyczy.
+Po wykonaniu `DbUpdate` liczba rekordów, których to dotyczy, jest zwracana we właściwości `AffectedRecords`.
 
 ```csharp
 Public class DbUpdate: AsyncCodeActivity
@@ -74,11 +74,11 @@ Public class DbUpdate: AsyncCodeActivity
 
 |Argument|Opis|
 |-|-|
-|ProviderName|Niezmienna nazwa dostawcy ADO.NET. Jeśli ten argument jest ustawiony, `ConnectionString` należy również ustawić wartość.|
-|Przekształcon|Parametry połączenia w celu nawiązania połączenia z bazą danych. Jeśli ten argument jest ustawiony, `ProviderName` należy również ustawić wartość.|
-|Konfiguracja pliku|Nazwa sekcji pliku konfiguracji, w której są przechowywane informacje o połączeniu. Gdy ten argument jest ustawiony `ProviderName` i `ConnectionString` nie jest wymagany.|
-|CommandType|Typ, <xref:System.Data.Common.DbCommand> który ma zostać wykonany.|
-|Sql|Polecenie SQL, które ma zostać wykonane.|
+|ProviderName|Niezmienna nazwa dostawcy ADO.NET. Jeśli ten argument jest ustawiony, należy również ustawić `ConnectionString`.|
+|Przekształcon|Parametry połączenia w celu nawiązania połączenia z bazą danych. Jeśli ten argument jest ustawiony, należy również ustawić `ProviderName`.|
+|Konfiguracja pliku|Nazwa sekcji pliku konfiguracji, w której są przechowywane informacje o połączeniu. Gdy ten argument jest ustawiony `ProviderName` i `ConnectionString` nie są wymagane.|
+|CommandType|Typ <xref:System.Data.Common.DbCommand>, który ma zostać wykonany.|
+|Server|Polecenie SQL, które ma zostać wykonane.|
 |Parametry|Kolekcja parametrów zapytania SQL.|
 |AffectedRecords|Liczba rekordów, których dotyczy Ostatnia operacja.|
 
@@ -86,13 +86,13 @@ Public class DbUpdate: AsyncCodeActivity
 
 Wykonuje zapytanie, które pobiera pojedynczą wartość z bazy danych.
 
-Ta klasa wykonuje swoją działania asynchronicznie (pochodzi z <xref:System.Activities.AsyncCodeActivity%601> i używa jego funkcji asynchronicznych).
+Ta klasa wykonuje swoją działania asynchronicznie (pochodzi z <xref:System.Activities.AsyncCodeActivity%601> i używa jej funkcji asynchronicznych).
 
 Informacje o połączeniu można skonfigurować przez ustawienie niezmiennej nazwy dostawcy (`ProviderName`) i parametrów połączenia (`ConnectionString`) lub po prostu użycie nazwy konfiguracji parametrów połączenia (`ConfigFileSectionName`) z pliku konfiguracyjnego aplikacji.
 
-Zapytanie, które ma zostać wykonane, jest skonfigurowane `Sql` w jego właściwości, a parametry są przesyłane `Parameters` za pomocą kolekcji.
+Zapytanie, które ma zostać wykonane, jest skonfigurowane we właściwości `Sql`, a parametry są przesyłane przez kolekcję `Parameters`.
 
-Po `DbQueryScalar` wykonaniu funkcja skalarna jest zwracana `Result out` w argumencie (typu `TResult`, który jest zdefiniowany w klasie <xref:System.Activities.AsyncCodeActivity%601>bazowej).
+Po wykonaniu `DbQueryScalar` wartość skalarna jest zwracana w argumencie `Result out` (typu `TResult`, który jest zdefiniowany w klasie bazowej <xref:System.Activities.AsyncCodeActivity%601>).
 
 ```csharp
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
@@ -128,23 +128,23 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 
 |Argument|Opis|
 |-|-|
-|ProviderName|Niezmienna nazwa dostawcy ADO.NET. Jeśli ten argument jest ustawiony, `ConnectionString` należy również ustawić wartość.|
-|Przekształcon|Parametry połączenia w celu nawiązania połączenia z bazą danych. Jeśli ten argument jest ustawiony, `ProviderName` należy również ustawić wartość.|
-|Konfiguracja pliku|Nazwa sekcji pliku konfiguracji, w której są przechowywane informacje o połączeniu. Gdy ten argument jest ustawiony `ProviderName` i `ConnectionString` nie jest wymagany.|
-|CommandType|Typ, <xref:System.Data.Common.DbCommand> który ma zostać wykonany.|
-|Sql|Polecenie SQL, które ma zostać wykonane.|
+|ProviderName|Niezmienna nazwa dostawcy ADO.NET. Jeśli ten argument jest ustawiony, należy również ustawić `ConnectionString`.|
+|Przekształcon|Parametry połączenia w celu nawiązania połączenia z bazą danych. Jeśli ten argument jest ustawiony, należy również ustawić `ProviderName`.|
+|Konfiguracja pliku|Nazwa sekcji pliku konfiguracji, w której są przechowywane informacje o połączeniu. Gdy ten argument jest ustawiony `ProviderName` i `ConnectionString` nie są wymagane.|
+|CommandType|Typ <xref:System.Data.Common.DbCommand>, który ma zostać wykonany.|
+|Server|Polecenie SQL, które ma zostać wykonane.|
 |Parametry|Kolekcja parametrów zapytania SQL.|
 |Wynik|Wartość skalarna, która jest uzyskiwana po wykonaniu zapytania. Ten argument jest typu `TResult`.|
 
 ## <a name="dbquery"></a>DBQuery
 
-Wykonuje zapytanie, które pobiera listę obiektów. Po wykonaniu zapytania funkcja mapowania jest wykonywana ( <xref:System.Func%601>może być `DbDataReader` < `DbDataReader` `TResult` <> <xref:System.Activities.ActivityFunc%601> lub`TResult`>). Ta funkcja mapowania pobiera rekord w `DbDataReader` i mapuje go do obiektu, który ma zostać zwrócony.
+Wykonuje zapytanie, które pobiera listę obiektów. Po wykonaniu zapytania funkcja mapowania jest wykonywana (może być <xref:System.Func%601><`DbDataReader``TResult`> lub <xref:System.Activities.ActivityFunc%601><`DbDataReader``TResult`). Ta funkcja mapowania pobiera rekord w `DbDataReader` i mapuje go do obiektu, który ma zostać zwrócony.
 
 Informacje o połączeniu można skonfigurować przez ustawienie niezmiennej nazwy dostawcy (`ProviderName`) i parametrów połączenia (`ConnectionString`) lub po prostu użycie nazwy konfiguracji parametrów połączenia (`ConfigFileSectionName`) z pliku konfiguracyjnego aplikacji.
 
-Zapytanie, które ma zostać wykonane, jest skonfigurowane `Sql` w jego właściwości, a parametry są przesyłane `Parameters` za pomocą kolekcji.
+Zapytanie, które ma zostać wykonane, jest skonfigurowane we właściwości `Sql`, a parametry są przesyłane przez kolekcję `Parameters`.
 
-Wyniki zapytania SQL są pobierane przy użyciu `DbDataReader`. Działanie iteruje `DbDataReader` i mapuje wiersze `DbDataReader` w do wystąpienia `TResult`. `DbQuery` Użytkownik `TResult`musi podać kod mapowania i można to zrobić na dwa sposoby: < <xref:System.Func%601> `DbDataReader`przy użyciu, `TResult`> lub <xref:System.Activities.ActivityFunc%601> < `DbDataReader`>. W pierwszym przypadku mapa jest wykonywana w ramach jednego impulsu wykonywania. W związku z tym jest to szybsze, ale nie można go serializować do XAML. W ostatnim przypadku mapa jest wykonywana w wielu pulsach. W związku z tym może być wolniejszy, ale może być serializowany do XAML i w sposób deklaratywny (wszystkie istniejące działania mogą uczestniczyć w mapowaniu).
+Wyniki zapytania SQL są pobierane przy użyciu `DbDataReader`. Działanie iteruje `DbDataReader` i mapuje wiersze w `DbDataReader` do wystąpienia `TResult`. Użytkownik `DbQuery` musi dostarczyć kod mapowania i można to zrobić na dwa sposoby: używając <xref:System.Func%601><`DbDataReader`, `TResult`> lub <xref:System.Activities.ActivityFunc%601><`DbDataReader``TResult`. W pierwszym przypadku mapa jest wykonywana w ramach jednego impulsu wykonywania. W związku z tym jest to szybsze, ale nie można go serializować do XAML. W ostatnim przypadku mapa jest wykonywana w wielu pulsach. W związku z tym może być wolniejszy, ale może być serializowany do XAML i w sposób deklaratywny (wszystkie istniejące działania mogą uczestniczyć w mapowaniu).
 
 ```csharp
 public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult : class
@@ -188,25 +188,25 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 
 |Argument|Opis|
 |-|-|
-|ProviderName|Niezmienna nazwa dostawcy ADO.NET. Jeśli ten argument jest ustawiony, `ConnectionString` należy również ustawić wartość.|
-|Przekształcon|Parametry połączenia w celu nawiązania połączenia z bazą danych. Jeśli ten argument jest ustawiony, `ProviderName` należy również ustawić wartość.|
-|Konfiguracja pliku|Nazwa sekcji pliku konfiguracji, w której są przechowywane informacje o połączeniu. Gdy ten argument jest ustawiony `ProviderName` i `ConnectionString` nie jest wymagany.|
-|CommandType|Typ, <xref:System.Data.Common.DbCommand> który ma zostać wykonany.|
-|Sql|Polecenie SQL, które ma zostać wykonane.|
+|ProviderName|Niezmienna nazwa dostawcy ADO.NET. Jeśli ten argument jest ustawiony, należy również ustawić `ConnectionString`.|
+|Przekształcon|Parametry połączenia w celu nawiązania połączenia z bazą danych. Jeśli ten argument jest ustawiony, należy również ustawić `ProviderName`.|
+|Konfiguracja pliku|Nazwa sekcji pliku konfiguracji, w której są przechowywane informacje o połączeniu. Gdy ten argument jest ustawiony `ProviderName` i `ConnectionString` nie są wymagane.|
+|CommandType|Typ <xref:System.Data.Common.DbCommand>, który ma zostać wykonany.|
+|Server|Polecenie SQL, które ma zostać wykonane.|
 |Parametry|Kolekcja parametrów zapytania SQL.|
-|Wzor|Funkcja mapowania (<xref:System.Func%601>< `DataReader` , >), która przyjmuje rekord uzyskany w wyniku wykonania zapytania i zwraca wystąpienie obiektu typu `TResult` , który ma zostać dodany do `TResult``DbDataReader` `Result` kolekcja.<br /><br /> W takim przypadku mapowanie jest wykonywane w ramach pojedynczego impulsu wykonywania, ale nie można go utworzyć deklaratywnie przy użyciu projektanta.|
-|MapperFunc|Funkcja mapowania (<xref:System.Activities.ActivityFunc%601>< `DataReader` , >), która przyjmuje rekord uzyskany w wyniku wykonania zapytania i zwraca wystąpienie obiektu typu `TResult` , który ma zostać dodany do `TResult``DbDataReader` `Result` kolekcja.<br /><br /> W takim przypadku mapowanie jest wykonywane w wielu impulsach wykonania. Tę funkcję można serializować do języka XAML i utworzyć deklaratywnie (wszystkie istniejące działania mogą uczestniczyć w mapowaniu).|
+|wzor|Funkcja mapowania (<xref:System.Func%601><`DbDataReader`, `TResult`>), która pobiera rekord w `DataReader` uzyskany w wyniku wykonania zapytania i zwraca wystąpienie obiektu typu `TResult`, który zostanie dodany do kolekcji `Result`.<br /><br /> W takim przypadku mapowanie jest wykonywane w ramach pojedynczego impulsu wykonywania, ale nie można go utworzyć deklaratywnie przy użyciu projektanta.|
+|MapperFunc|Funkcja mapowania (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>), która pobiera rekord w `DataReader` uzyskany w wyniku wykonania zapytania i zwraca wystąpienie obiektu typu `TResult`, który zostanie dodany do kolekcji `Result`.<br /><br /> W takim przypadku mapowanie jest wykonywane w wielu impulsach wykonania. Tę funkcję można serializować do języka XAML i utworzyć deklaratywnie (wszystkie istniejące działania mogą uczestniczyć w mapowaniu).|
 |Wynik|Lista obiektów uzyskanych jako wynik wykonywania zapytania i wykonująca funkcję mapowania dla każdego rekordu w `DataReader`.|
 
 ## <a name="dbquerydataset"></a>DbQueryDataSet
 
-Wykonuje zapytanie zwracające wartość <xref:System.Data.DataSet>. Ta klasa wykonuje asynchroniczne działanie. Pochodzi on z <xref:System.Activities.AsyncCodeActivity> <>iużywa jegofunkcjiasynchronicznych`TResult`.
+Wykonuje zapytanie, które zwraca <xref:System.Data.DataSet>. Ta klasa wykonuje asynchroniczne działanie. Pochodzi on z <xref:System.Activities.AsyncCodeActivity><`TResult`> i używa jego funkcji asynchronicznych.
 
 Informacje o połączeniu można skonfigurować przez ustawienie niezmiennej nazwy dostawcy (`ProviderName`) i parametrów połączenia (`ConnectionString`) lub po prostu użycie nazwy konfiguracji parametrów połączenia (`ConfigFileSectionName`) z pliku konfiguracyjnego aplikacji.
 
-Zapytanie, które ma zostać wykonane, jest skonfigurowane `Sql` w jego właściwości, a parametry są przesyłane `Parameters` za pomocą kolekcji.
+Zapytanie, które ma zostać wykonane, jest skonfigurowane we właściwości `Sql`, a parametry są przesyłane przez kolekcję `Parameters`.
 
-`Result out` `TResult`Po wykonaniu jest zwracany w argumencie (typu, który jest zdefiniowany w klasie <xref:System.Activities.AsyncCodeActivity%601>bazowej). `DataSet` `DbQueryDataSet`
+Po wykonaniu `DbQueryDataSet` `DataSet` jest zwracany w argumencie `Result out` (typu `TResult`, który jest zdefiniowany w klasie podstawowej <xref:System.Activities.AsyncCodeActivity%601>).
 
 ```csharp
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>
@@ -242,13 +242,13 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
 |Argument|Opis|
 |-|-|
-|ProviderName|Niezmienna nazwa dostawcy ADO.NET. Jeśli ten argument jest ustawiony, `ConnectionString` należy również ustawić wartość.|
-|Przekształcon|Parametry połączenia w celu nawiązania połączenia z bazą danych. Jeśli ten argument jest ustawiony, `ProviderName` należy również ustawić wartość.|
-|Konfiguracja pliku|Nazwa sekcji pliku konfiguracji, w której są przechowywane informacje o połączeniu. Gdy ten argument jest ustawiony `ProviderName` i `ConnectionString` nie jest wymagany.|
-|CommandType|Typ, <xref:System.Data.Common.DbCommand> który ma zostać wykonany.|
-|Sql|Polecenie SQL, które ma zostać wykonane.|
+|ProviderName|Niezmienna nazwa dostawcy ADO.NET. Jeśli ten argument jest ustawiony, należy również ustawić `ConnectionString`.|
+|Przekształcon|Parametry połączenia w celu nawiązania połączenia z bazą danych. Jeśli ten argument jest ustawiony, należy również ustawić `ProviderName`.|
+|Konfiguracja pliku|Nazwa sekcji pliku konfiguracji, w której są przechowywane informacje o połączeniu. Gdy ten argument jest ustawiony `ProviderName` i `ConnectionString` nie są wymagane.|
+|CommandType|Typ <xref:System.Data.Common.DbCommand>, który ma zostać wykonany.|
+|Server|Polecenie SQL, które ma zostać wykonane.|
 |Parametry|Kolekcja parametrów zapytania SQL.|
-|Wynik|<xref:System.Data.DataSet>jest uzyskiwany po wykonaniu zapytania.|
+|Wynik|<xref:System.Data.DataSet> uzyskiwany po wykonaniu zapytania.|
 
 ## <a name="configuring-connection-information"></a>Konfigurowanie informacji o połączeniu
 
@@ -333,6 +333,6 @@ Skrypt Setup. cmd wywołuje plik skryptu CreateDb. SQL, który zawiera polecenia
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

@@ -2,12 +2,12 @@
 title: Niestandardowe powiązanie niezawodnej sesji przez protokół HTTPS
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: d4845a1058f42dab35919eb7bb83b16b45e42ff3
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: b83f7af2cd4d0518454a5147904c21c9ffbbbf21
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990026"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710979"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Niestandardowe powiązanie niezawodnej sesji przez protokół HTTPS
 W tym przykładzie przedstawiono sposób korzystania z zabezpieczeń transportu SSL z niezawodnymi sesjami. Niezawodne sesje programu implementują protokół obsługi komunikatów w usłudze WS-niezawodny. Można korzystać z bezpiecznej niezawodnej sesji, tworząc usługę WS-Security przez niezawodne sesje. Czasami jednak zamiast tego można użyć zabezpieczeń transportu HTTP z protokołem SSL.  
@@ -17,14 +17,14 @@ W tym przykładzie przedstawiono sposób korzystania z zabezpieczeń transportu 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSessionOverHttps`  
   
 ## <a name="sample-details"></a>Przykładowe szczegóły  
  Protokół SSL gwarantuje, że pakiety są zabezpieczone. Należy pamiętać, że różni się to od zabezpieczania niezawodnej sesji przy użyciu konwersacji WS-Secure.  
   
- Aby korzystać z niezawodnej sesji za pośrednictwem protokołu HTTPS, należy utworzyć niestandardowe powiązanie. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje usługę kalkulatora. Niestandardowe powiązanie jest tworzone przy użyciu elementu powiązania niezawodnej sesji i [ \<httpsTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md). Następująca konfiguracja jest powiązaniem niestandardowym.  
+ Aby korzystać z niezawodnej sesji za pośrednictwem protokołu HTTPS, należy utworzyć niestandardowe powiązanie. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje usługę kalkulatora. Niestandardowe powiązanie jest tworzone przy użyciu elementu powiązania niezawodnej sesji i [\<> httpsTransport](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md). Następująca konfiguracja jest powiązaniem niestandardowym.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -102,7 +102,7 @@ W tym przykładzie przedstawiono sposób korzystania z zabezpieczeń transportu 
   
  Określony adres używa schematu https://.  
   
- Ponieważ certyfikat używany w tym przykładzie jest certyfikatem testowym utworzonym za pomocą Makecert. exe, podczas próby uzyskania dostępu do adresu https:, takiego jak https://localhost/servicemodelsamples/service.svc, z przeglądarki, pojawia się Alert zabezpieczeń. Aby umożliwić klientowi Windows Communication Foundation (WCF) współpracujący z certyfikatem testowym, do klienta został dodany dodatkowy kod, aby pominąć alert zabezpieczeń. Ten kod i Klasa towarzysząca nie są wymagane w przypadku korzystania z certyfikatów produkcyjnych.  
+ Ponieważ certyfikat używany w tym przykładzie jest certyfikatem testowym utworzonym przy użyciu programu Makecert. exe, po próbie uzyskania dostępu do adresu https:, takiego jak https://localhost/servicemodelsamples/service.svc, w przeglądarce zostanie wyświetlony alert zabezpieczeń. Aby umożliwić klientowi Windows Communication Foundation (WCF) współpracujący z certyfikatem testowym, do klienta został dodany dodatkowy kod, aby pominąć alert zabezpieczeń. Ten kod i Klasa towarzysząca nie są wymagane w przypadku korzystania z certyfikatów produkcyjnych.  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  

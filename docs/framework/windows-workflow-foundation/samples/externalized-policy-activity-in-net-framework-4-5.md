@@ -2,12 +2,12 @@
 title: Działanie zasad zewnętrznych w programie .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: efc8b8169a6b984e003444c4669122ce6fa7f9d0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9184386751bb44e89dfdcedd34ab0ab84a27323e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283162"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710925"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Działanie zasad zewnętrznych w programie .NET Framework 4.5
 
@@ -47,7 +47,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 |RuleSetFilePath|Ścieżka do pliku <xref:System.Workflow.Activities.Rules.RuleSet> .NET Framework 3,5 do oceny, gdy działanie zostanie wykonane.|
 |Zestaw reguł|Nazwa <xref:System.Workflow.Activities.Rules.RuleSet>, która ma być używana w pliku reguł.|
 |TargetObject|Obiekt, względem którego są oceniane obiekty <xref:System.Workflow.Activities.Rules.Rule> w <xref:System.Workflow.Activities.Rules.RuleSet>.|
-|ResultObject|Obiekt wynikowy po zastosowaniu reguł (na przykład reguły są stosowane względem argumentu wejściowego, a wynik jest przechowywany w argumencie wynik.|
+|Resultobject|Obiekt wynikowy po zastosowaniu reguł (na przykład reguły są stosowane względem argumentu wejściowego, a wynik jest przechowywany w argumencie wynik.|
 |ValidationError|Lista błędów walidacji zwróconych przez aparat reguł WF 3,5 podczas walidacji <xref:System.Workflow.Activities.Rules.RuleSet> względem obiektu docelowego przed wykonaniem.|
 
 ## <a name="externalizedpolicy4-activity-designer"></a>ExternalizedPolicy4, Projektant działań
@@ -87,7 +87,7 @@ Ten przykład zawiera dwie aplikacje klienckie: ImperativeCodeClientSample i Des
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)].
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)].
 >
 > Ten przykład znajduje się w następującym katalogu:
 >

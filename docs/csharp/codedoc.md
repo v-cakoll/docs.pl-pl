@@ -4,12 +4,12 @@ description: Dowiedz się, jak udokumentować kod za pomocą komentarzy dokument
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: c858a92309710a0ac6b68e9194f2d7ef4c9577a0
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 92a64a8f7a652f8b957013fc05f426e6b983655d
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140665"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710989"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentowanie kodu za pomocą komentarzy XML
 
@@ -51,7 +51,7 @@ Oto kod dla prostej biblioteki matematycznej:
 
 Biblioteka Przykładowa obsługuje cztery główne operacje arytmetyczne `add`, `subtract`, `multiply` i `divide` na `int` i `double` typy danych.
 
-Teraz chcesz mieć możliwość utworzenia dokumentu referencyjnego interfejsu API na podstawie kodu dla deweloperów innych firm, którzy korzystają z biblioteki, ale nie mają dostępu do kodu źródłowego.
+Teraz chcesz mieć możliwość utworzenia dokumentu odniesienia interfejsu API z kodu dla deweloperów innych firm, którzy korzystają z biblioteki, ale nie mają dostępu do kodu źródłowego.
 Jak wspomniano wcześniej Tagi dokumentacji XML, można użyć w tym celu. Teraz będziesz wprowadzać do standardowych tagów XML obsługiwanych przez C# kompilator.
 
 ## <a name="summary"></a>\<summary>
@@ -59,36 +59,36 @@ Jak wspomniano wcześniej Tagi dokumentacji XML, można użyć w tym celu. Teraz
 Tag `<summary>` dodaje krótkie informacje dotyczące typu lub składowej.
 Pokażę swoje użycie przez dodanie go do definicji klasy `Math` i pierwszej metody `Add`. Śmiało, aby zastosować go do pozostałej części kodu.
 
-[!code-csharp[Summary Tag](../../samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
+[!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
 Tag `<summary>` jest bardzo istotny i zalecamy dołączenie go, ponieważ jego zawartość jest podstawowym źródłem informacji o typie lub elemencie członkowskim w technologii IntelliSense lub dokumentacji interfejsu API.
 
-## <a name="remarks"></a>\<remarks >
+## <a name="remarks"></a>\<uwagi >
 
 Tag `<remarks>` uzupełnia informacje o typach lub elementach członkowskich udostępnianych przez tag `<summary>`. W tym przykładzie wystarczy dodać go do klasy.
 
-[!code-csharp[Remarks Tag](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
+[!code-csharp[Remarks Tag](~/samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
 ## <a name="returns"></a>\<returns>
 
 Tag `<returns>` opisuje wartość zwracaną deklaracji metody.
 Tak jak wcześniej Poniższy przykład ilustruje tag `<returns>` na pierwszej `Add` metodzie. Można to zrobić w innych metodach.
 
-[!code-csharp[Returns Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
+[!code-csharp[Returns Tag](~/samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
 ## <a name="value"></a>\<value>
 
 Tag `<value>` jest podobny do tagu `<returns>`, z tą różnicą, że jest używany do właściwości.
 Zakładając, że biblioteka `Math` ma właściwość statyczną o nazwie `PI`, poniżej przedstawiono sposób użycia tego tagu:
 
-[!code-csharp[Value Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
+[!code-csharp[Value Tag](~/samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
-## <a name="example"></a>\<example >
+## <a name="example"></a>przykład \<
 
 Używasz znacznika `<example>`, aby dołączyć przykład do dokumentacji XML.
 Obejmuje to użycie znacznika `<code>` podrzędnego.
 
-[!code-csharp[Example Tag](../../samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
+[!code-csharp[Example Tag](~/samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
 
 Tag `code` zachowuje podziały wierszy i wcięcia dla dłuższych przykładów.
 
@@ -97,7 +97,7 @@ Tag `code` zachowuje podziały wierszy i wcięcia dla dłuższych przykładów.
 Aby sformatować zawartość w tagu nadrzędnym, Użyj znacznika `<para>`. `<para>` jest zwykle używany wewnątrz tagu, takiego jak `<remarks>` lub `<returns>`, aby podzielić tekst na akapity.
 Można sformatować zawartość tagu `<remarks>` w definicji klasy.
 
-[!code-csharp[Para Tag](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
+[!code-csharp[Para Tag](~/samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
 ## <a name="c"></a>\<c >
 
@@ -105,32 +105,32 @@ Nadal w temacie formatowania, używasz znacznika `<c>` do oznaczania części te
 Przypomina znacznik `<code>`, ale wbudowany. Jest to przydatne, gdy chcesz pokazać przykładowy kod jako część zawartości znacznika.
 Zaktualizujmy dokumentację klasy `Math`.
 
-[!code-csharp[C Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
+[!code-csharp[C Tag](~/samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
-## <a name="exception"></a>\<exception >
+## <a name="exception"></a>\<wyjątek >
 
 Przy użyciu znacznika `<exception>` pozwalasz deweloperom znać, że metoda może zgłosić określone wyjątki.
 Przeglądając bibliotekę `Math`, można zobaczyć, że obie metody `Add` zgłaszają wyjątek, jeśli spełniony jest określony warunek. Chociaż nie jest to oczywiste, jest to, że metoda `Divide` Integer zwraca również, jeśli parametr `b` ma wartość zero. Teraz Dodaj dokumentację wyjątku do tej metody.
 
-[!code-csharp[Exception Tag](../../samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
+[!code-csharp[Exception Tag](~/samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
 
 Atrybut `cref` reprezentuje odwołanie do wyjątku, który jest dostępny w bieżącym środowisku kompilacji.
 Może to być dowolny typ zdefiniowany w projekcie lub przywoływanym zestawie. Kompilator wyświetli ostrzeżenie, jeśli nie można rozpoznać jego wartości.
 
-## <a name="see"></a>\<see >
+## <a name="see"></a>\<Zobacz >
 
 Tag `<see>` umożliwia utworzenie linku kliknięcia do strony dokumentacji dla innego elementu kodu. W następnym przykładzie utworzysz link do kliknięcia między dwoma `Add` metodami.
 
-[!code-csharp[See Tag](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
+[!code-csharp[See Tag](~/samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
 `cref` jest **wymaganym** atrybutem, który reprezentuje odwołanie do typu lub jego elementu członkowskiego, który jest dostępny w bieżącym środowisku kompilacji.
 Może to być dowolny typ zdefiniowany w projekcie lub przywoływanym zestawie.
 
-## <a name="seealso"></a>\<seealso >
+## <a name="seealso"></a>\<seealso — >
 
 Używasz znacznika `<seealso>` w taki sam sposób jak tag `<see>`. Jedyną różnicą jest to, że jej zawartość jest zwykle umieszczana w sekcji "Zobacz też". Tutaj dodamy znacznik `seealso` w metodzie `Add` Integer, aby odwołać się do innych metod w klasie, która akceptuje parametry całkowite:
 
-[!code-csharp[Seealso Tag](../../samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
+[!code-csharp[Seealso Tag](~/samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
 
 Atrybut `cref` reprezentuje odwołanie do typu lub jego elementu członkowskiego, który jest dostępny w bieżącym środowisku kompilacji.
 Może to być dowolny typ zdefiniowany w projekcie lub przywoływanym zestawie.
@@ -139,34 +139,34 @@ Może to być dowolny typ zdefiniowany w projekcie lub przywoływanym zestawie.
 
 Za pomocą tagu `<param>` można opisać parametry metody. Oto przykład dotyczący metody Double `Add`: parametr opisany w opisie jest określony w **wymaganym** atrybucie `name`.
 
-[!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
+[!code-csharp[Param Tag](~/samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
 ## <a name="typeparam"></a>\<typeparam >
 
 Używasz tagu `<typeparam>`, podobnie jak tag `<param>`, ale dla deklaracji typu ogólnego lub metody, aby opisać parametr generyczny.
 Dodaj szybką metodę rodzajową do klasy `Math`, aby sprawdzić, czy jedna ilość jest większa niż inna.
 
-[!code-csharp[Typeparam Tag](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
+[!code-csharp[Typeparam Tag](~/samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
 ## <a name="paramref"></a>\<paramref >
 
 Czasami może być w środku opisującym opisywanie metody w tym, co może być tagiem `<summary>` i można utworzyć odwołanie do parametru. Tag `<paramref>` jest świetny dla samego siebie. Zaktualizujmy podsumowanie naszej metody `Add` opartej na podwójnej precyzji. Podobnie jak w przypadku znacznika `<param>` Nazwa parametru jest określona w **wymaganym** atrybucie `name`.
 
-[!code-csharp[Paramref Tag](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
+[!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
 ## <a name="typeparamref"></a>\<typeparamref >
 
 Używasz tagu `<typeparamref>`, podobnie jak tag `<paramref>`, ale dla deklaracji typu ogólnego lub metody, aby opisać parametr generyczny.
 Możesz użyć tej samej metody generycznej, która została wcześniej utworzona.
 
-[!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
+[!code-csharp[Typeparamref Tag](~/samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
-## <a name="list"></a>\<list >
+## <a name="list"></a>> Lista \<
 
 Tag `<list>` służy do formatowania informacji dokumentacji jako listy uporządkowanej, nieuporządkowanej listy lub tabeli.
 Utwórz nieuporządkowaną listę każdej operacji matematycznej obsługiwanej przez bibliotekę `Math`.
 
-[!code-csharp[List Tag](../../samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
+[!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
 Można utworzyć uporządkowaną listę lub tabelę, zmieniając atrybut `type` na odpowiednio `number` lub `table`.
 
@@ -174,24 +174,24 @@ Można utworzyć uporządkowaną listę lub tabelę, zmieniając atrybut `type` 
 
 Jeśli wykonano ten samouczek i zastosowano znaczniki do kodu w razie potrzeby, kod powinien teraz wyglądać podobnie do poniższego:
 
-[!code-csharp[Tagged Library](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
+[!code-csharp[Tagged Library](~/samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
 
 Z poziomu kodu można wygenerować szczegółową witrynę sieci Web, która została ukończona z kliknięciami odwołania krzyżowego. Ale nastąpiło inne zagadnienie: Twój kod stał się trudno odczytać.
 Istnieje dużo informacji do przesiania przez to, że jest to okropnej dla każdego dewelopera, który chce współtworzyć ten kod.
 Thankfully istnieje tag XML, który może pomóc Ci w poradzić sobie z:
 
-## <a name="include"></a>\<include >
+## <a name="include"></a>\<Uwzględnij >
 
 Tag `<include>` umożliwia odwoływanie się do komentarzy w osobnym pliku XML, który opisuje typy i elementy członkowskie w kodzie źródłowym, zamiast umieszczania komentarzy do dokumentacji bezpośrednio w pliku kodu źródłowego.
 
 Teraz można przenieść wszystkie tagi XML do oddzielnego pliku XML o nazwie `docs.xml`. Możesz nawiązać dowolną nazwę pliku.
 
-[!code-xml[Sample XML](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
+[!code-xml[Sample XML](~/samples/snippets/csharp/concepts/codedoc/include.xml)]
 
 W powyższym kodzie XML komentarze dokumentacji każdego członka są wyświetlane bezpośrednio wewnątrz tagu o nazwie po tym, co robią. Możesz wybrać własną strategię.
 Teraz, gdy masz Komentarze XML w osobnym pliku, zobaczmy, jak kod może być bardziej czytelny przy użyciu tagu `<include>`:
 
-[!code-csharp[Include Tag](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
+[!code-csharp[Include Tag](~/samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
 
 Jest to możliwe: kod jest z powrotem odczytywany, a informacje o dokumentacji nie zostały utracone.
 

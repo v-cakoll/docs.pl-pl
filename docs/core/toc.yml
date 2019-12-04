@@ -2,7 +2,7 @@
   href: index.md
 - name: Informacje o platformie .NET Core
   href: about.md
-- name: Instalowanie
+- name: Zainstaluj
   items:
     - name: Omówienie
       href: install/index.md
@@ -42,26 +42,26 @@
           href: install/linux-package-manager-sles12.md
         - name: SLES 15
           href: install/linux-package-manager-sles15.md
-- name: Rozpoczęcie pracy
+- name: Wprowadzenie
   href: get-started.md
   items:
     - name: 'Wprowadzenie do języka C# i programu Visual Studio Code'
       href: tutorials/with-visual-studio-code.md
-    - name: 'Tworzenie aplikacji Hello World w języku C# na platformie .NET Core w programie Visual Studio 2017'
+    - name: 'Tworzenie aplikacji Hello World w języku C# w programie Visual Studio'
       href: tutorials/with-visual-studio.md
-    - name: Tworzenie aplikacji Hello World w języku Visual Basic na platformie .NET Core w programie Visual Studio 2017
+    - name: Tworzenie aplikacji Hello World w języku Visual Basic w programie Visual Studio
       href: tutorials/vb-with-visual-studio.md
-    - name: 'Debugowanie aplikacji Hello world w języku C# lub Visual Basic .NET Core przy użyciu programu Visual Studio 2017'
+    - name: Debugowanie aplikacji za pomocą programu Visual Studio
       href: tutorials/debugging-with-visual-studio.md
-    - name: Publikowanie aplikacji Hello world za pomocą programu Visual Studio 2017
+    - name: Publikowanie aplikacji za pomocą programu Visual Studio
       href: tutorials/publishing-with-visual-studio.md
-    - name: 'Tworzenie biblioteki .NET Standard w języku C# i na platformie .NET Core w programie Visual Studio 2017'
+    - name: 'Tworzenie biblioteki .NET Standard w języku C# w programie Visual Studio'
       href: tutorials/library-with-visual-studio.md
-    - name: Tworzenie biblioteki .NET Standard w języku Visual Basic i na platformie .NET Core w programie Visual Studio 2017
+    - name: Tworzenie biblioteki .NET Standard w języku Visual Basic w programie Visual Studio
       href: tutorials/vb-library-with-visual-studio.md
-    - name: Testowanie biblioteki .NET Standard na platformie .NET Core w programie Visual Studio 2017
+    - name: Testowanie biblioteki .NET Standard w programie Visual Studio
       href: tutorials/testing-library-with-visual-studio.md
-    - name: Korzystanie z biblioteki .NET Standard w programie Visual Studio 2017
+    - name: Korzystanie z biblioteki .NET Standard w programie Visual Studio
       href: tutorials/consuming-library-with-visual-studio.md
 - name: Co nowego w programie .NET Core
   items:
@@ -73,7 +73,7 @@
       href: whats-new/dotnet-core-2-1.md
     - name: Co nowego w programie .NET Core 2.0
       href: whats-new/dotnet-core-2-0.md
-- name: Zmiany powodujące niezgodność
+- name: Fundamentalne zmiany
   displayName: app compatibility
   href: compatibility/
 - name: Samouczki
@@ -132,7 +132,7 @@
       href: migration/index.md
     - name: Mapowanie między formatami project.json i csproj
       href: tools/project-json-to-csproj.md
-    - name: Migrowanie ze środowiska DNX
+    - name: Migrowanie z rozwiązania DNX
       href: migration/from-dnx.md
 - name: Wdrażanie aplikacji
   href: deploying/index.md
@@ -171,7 +171,7 @@
           href: diagnostics/dotnet-dump.md
         - name: dotnet-trace
           href: diagnostics/dotnet-trace.md
-- name: Testowanie jednostkowe
+- name: Testowanie jednostek
   href: testing/index.md
   items:
     - name: Najlepsze rozwiązania dotyczące testów jednostkowych
@@ -202,7 +202,7 @@
       href: /visualstudio/test/live-unit-testing-start
 - name: Ciągła integracja
   href: tools/using-ci-with-cli.md
-- name: Obsługa wersji
+- name: Przechowywanie wersji
   href: versions/index.md
   items:
     - name: Wybieranie wersji platformy .NET Core
@@ -235,7 +235,7 @@
       href: tools/extensibility.md
     - name: Szablony niestandardowe
       href: tools/custom-templates.md
-    - name: Włączanie uzupełniania po naciśnięciu klawisza TAB
+    - name: Włączanie uzupełniania po naciśnięciu klawisza Tab
       href: tools/enable-tab-autocomplete.md
     - name: Telemetria
       href: tools/telemetry.md
@@ -341,7 +341,7 @@
       items:
         - name: Jak przenieść projekt
           href: porting/winforms.md
-        - name: Zmiany powodujące niezgodność
+        - name: Fundamentalne zmiany
           href: porting/winforms-breaking-changes.md
     - name: Przenoszenie projektów WPF
       href: porting/wpf.md

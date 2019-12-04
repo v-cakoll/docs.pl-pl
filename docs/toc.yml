@@ -12,7 +12,7 @@
   href: csharp/index.yml
 - name: 'Podręcznik języka F#'
   href: fsharp/
-- name: Przewodnik po Visual Basic
+- name: Przewodnik po języku Visual Basic
   href: visual-basic/
 - name: Przewodnik po strukturze ML.NET
   href: machine-learning/index.yml

@@ -6,25 +6,35 @@ ms.author: adegeo
 ms.date: 11/06/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 54819b409422e8bda9efe25478aa3424683a380b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 290bdfb05b328bb311e6ff5ef493048b05985899
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567470"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801941"
 ---
 # <a name="install-the-net-core-sdk"></a>Zainstaluj zestaw .NET Core SDK
 
 W tym artykule dowiesz się, jak zainstalować zestaw .NET Core SDK. Zestaw .NET Core SDK jest używany do tworzenia aplikacji i bibliotek platformy .NET Core. Środowisko uruchomieniowe platformy .NET Core jest zawsze instalowane z zestawem SDK.
 
-::: zone pivot="os-windows,os-macos"
+::: zone pivot="os-windows"
 
 ## <a name="install-with-an-installer"></a>Instalowanie za pomocą Instalatora
 
-Zarówno system Windows, jak i macOS mają autonomiczne Instalatory, których można użyć do zainstalowania zestawu SDK platformy .NET Core 3,0.
+System Windows ma autonomiczne Instalatory, których można użyć do zainstalowania zestawu SDK programu .NET Core 3,0:
 
-- Procesory Windows [x64 (64-bitowe)](https://dotnet.microsoft.com/download/dotnet-core/3.0) | [procesora x86 (32-bitowe)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- [procesory macOS x64 (64-bitowe)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [Procesory x64 (64-bitowe)](https://dotnet.microsoft.com/download/dotnet-core/3.0) 
+- [Procesory x86 (32-bitowe)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+
+::: zone-end
+
+::: zone pivot="os-macos"
+
+## <a name="install-with-an-installer"></a>Instalowanie za pomocą Instalatora
+
+macOS ma autonomiczne Instalatory, których można użyć do zainstalowania zestawu SDK programu .NET Core 3,0:
+
+- [Procesory x64 (64-bitowe)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 
 ::: zone-end
 
@@ -69,8 +79,8 @@ Jeśli używasz programu Visual Studio do tworzenia aplikacji platformy .NET Cor
 | --------------------- | ------------------------------------------ |
 | wersja zapoznawcza 3,1           | Visual Studio 2019 w wersji 16,4 Preview lub nowszej. |
 | 3.0                   | Program Visual Studio 2019 w wersji 16,3 lub nowszej. |
-| 2,2                   | Program Visual Studio 2017 w wersji 15,9 lub nowszej. |
-| 2,1                   | Program Visual Studio 2017 w wersji 15,7 lub nowszej. |
+| 2.2                   | Program Visual Studio 2017 w wersji 15,9 lub nowszej. |
+| 2.1                   | Program Visual Studio 2017 w wersji 15,7 lub nowszej. |
 
 Jeśli masz już zainstalowany program Visual Studio, możesz sprawdzić swoją wersję, wykonując poniższe kroki.
 

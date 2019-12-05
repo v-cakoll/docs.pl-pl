@@ -13,14 +13,14 @@ helpviewer_keywords:
 - international applications [.NET], calendars
 - culture, calendars
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
-ms.openlocfilehash: 7795fa8d348a3053e6d999d007a558b418cafbd3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: de8e5a03c769a22f3320c7785706555898bf8c1c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132528"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802742"
 ---
-# <a name="working-with-calendars"></a>Praca z kalendarzami
+# <a name="work-with-calendars"></a>Pracuj z kalendarzami
 
 Wartość daty i godziny reprezentuje moment w czasie, ale jej reprezentacja w postaci ciągu jest zależna od kultury, ponieważ zależy zarówno od konwencji używanych do wyświetlania wartości daty i godziny obowiązujących w danej kulturze, jak i od kalendarza używanego w tej kulturze. W tym temacie przedstawiono obsługę kalendarzy w programie .NET i omówiono użycie klas kalendarza podczas pracy z wartościami dat.
 
@@ -82,7 +82,7 @@ W poniższym przykładzie jest zmieniany kalendarz używany przez kulturę Arabs
 
 ## <a name="dates-and-calendars"></a>Daty i kalendarze
 
-Z wyjątkiem konstruktorów, które zawierają parametr typu <xref:System.Globalization.Calendar> i zezwalają na elementy daty (czyli miesiąc, dzień i rok), aby odzwierciedlić wartości w wyznaczonej kalendarzu, oba <xref:System.DateTime> i <xref:System.DateTimeOffset> wartości są zawsze oparte na Kalendarz gregoriański. Oznacza to, na przykład, że właściwość <xref:System.DateTime.Year%2A?displayProperty=nameWithType> zwraca rok w kalendarzu gregoriańskim, a właściwość <xref:System.DateTime.Day%2A?displayProperty=nameWithType> Zwraca dzień miesiąca w kalendarzu gregoriańskim.
+Z wyjątkiem konstruktorów, które zawierają parametr typu <xref:System.Globalization.Calendar> i zezwalają na elementy daty (czyli miesiąc, dzień i rok), aby odzwierciedlić wartości w wyznaczonej kalendarzu, oba <xref:System.DateTime> i <xref:System.DateTimeOffset> wartości są zawsze oparte na kalendarzu gregoriańskim. Oznacza to, na przykład, że właściwość <xref:System.DateTime.Year%2A?displayProperty=nameWithType> zwraca rok w kalendarzu gregoriańskim, a właściwość <xref:System.DateTime.Day%2A?displayProperty=nameWithType> Zwraca dzień miesiąca w kalendarzu gregoriańskim.
 
 > [!IMPORTANT]
 > Ważne jest, aby pamiętać o różnicy między wartością daty a jej reprezentacją w formacie ciągu. Pierwsza jest oparta na kalendarzu gregoriańskim, a druga na bieżącym kalendarzu określonej kultury.
@@ -92,7 +92,7 @@ Poniższy przykład ilustruje tę różnicę między właściwościami <xref:Sys
 [!code-csharp[Conceptual.Calendars#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/datesandcalendars2.cs#3)]
 [!code-vb[Conceptual.Calendars#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/datesandcalendars2.vb#3)]
 
-### <a name="instantiating-dates-based-on-a-calendar"></a>Tworzenie wystąpień dat na podstawie kalendarza
+### <a name="instantiate-dates-based-on-a-calendar"></a>Tworzenie wystąpienia dat na podstawie kalendarza
 
 Ponieważ wartości <xref:System.DateTime> i <xref:System.DateTimeOffset> są oparte na kalendarzu gregoriańskim, należy wywołać przeciążony Konstruktor zawierający parametr typu <xref:System.Globalization.Calendar> w celu utworzenia wystąpienia wartości daty, jeśli chcesz użyć wartości dnia, miesiąca lub roku z innego kalendarza. Możesz również wywołać jedno z przeciążeń określonej metody <xref:System.Globalization.Calendar.ToDateTime%2A?displayProperty=nameWithType> kalendarza, aby utworzyć wystąpienie obiektu <xref:System.DateTime> na podstawie wartości określonego kalendarza.
 
@@ -101,7 +101,7 @@ Poniższy przykład tworzy wystąpienie jednej <xref:System.DateTime> wartość 
 [!code-csharp[Conceptual.Calendars#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatehcdate1.cs#4)]
 [!code-vb[Conceptual.Calendars#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatehcdate1.vb#4)]
 
-### <a name="representing-dates-in-the-current-calendar"></a>Przedstawianie dat w bieżącym kalendarzu
+### <a name="represent-dates-in-the-current-calendar"></a>Przedstawianie dat w bieżącym kalendarzu
 
 Metody formatowania daty i godziny zawsze używają bieżącego kalendarza podczas konwertowania dat na ciągi. Oznacza to, że reprezentacja roku, miesiąca i dnia miesiąca w formacie ciągu odzwierciedla bieżący kalendarz i nie musi to być kalendarz gregoriański.
 
@@ -110,7 +110,7 @@ W poniższym przykładzie pokazano, jak bieżący kalendarz wpływa na reprezent
 [!code-csharp[Conceptual.Calendars#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/currentcalendar1.cs#5)]
 [!code-vb[Conceptual.Calendars#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/currentcalendar1.vb#5)]
 
-### <a name="representing-dates-in-a-non-current-calendar"></a>Przedstawianie dat w kalendarzu innym niż bieżący
+### <a name="represent-dates-in-a-non-current-calendar"></a>Przedstawianie dat w kalendarzu innym niż bieżący
 
 Aby przedstawić datę przy użyciu kalendarza, który nie jest bieżącym kalendarzem danej kultury, należy wywołać metody tego obiektu <xref:System.Globalization.Calendar>. Na przykład metody <xref:System.Globalization.Calendar.GetYear%2A?displayProperty=nameWithType>, <xref:System.Globalization.Calendar.GetMonth%2A?displayProperty=nameWithType>i <xref:System.Globalization.Calendar.GetDayOfMonth%2A?displayProperty=nameWithType> konwertują rok, miesiąc i dzień na wartości, które odzwierciedlają określony kalendarz.
 
@@ -131,7 +131,7 @@ Istnieje jednak jeden ważny wyjątek. Wartość domyślna (niezainicjowana) obi
 [!code-csharp[Conceptual.Calendars#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/minsupporteddatetime1.cs#11)]
 [!code-vb[Conceptual.Calendars#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/minsupporteddatetime1.vb#11)]
 
-## <a name="working-with-eras"></a>Praca z wymazywaniem
+## <a name="work-with-eras"></a>Pracuj z wymazywaniem
 
 Daty w kalendarzach są zazwyczaj dzielone na ery. Jednak klasy <xref:System.Globalization.Calendar> w programie .NET nie obsługują każdej oceny era zdefiniowanej przez kalendarz, a większość klas <xref:System.Globalization.Calendar> obsługuje tylko pojedynczą ERA. Tylko klasy <xref:System.Globalization.JapaneseCalendar> i <xref:System.Globalization.JapaneseLunisolarCalendar> obsługują wiele wymazanych.
 
@@ -140,7 +140,7 @@ Daty w kalendarzach są zazwyczaj dzielone na ery. Jednak klasy <xref:System.Glo
 >
 > - [Obsługa nowej ERA w kalendarzu japońskim w programie .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), które dokumenty zostały dodane do platformy .NET, aby obsługiwać kalendarze z wieloma wymazywanymi i omawiać najlepsze rozwiązania w zakresie obsługi kalendarzy wieloletnich.
 > - [Przygotuj aplikację dla japońskiej zmiany ery](/windows/uwp/design/globalizing/japanese-era-change), która zawiera informacje dotyczące testowania aplikacji w systemie Windows w celu zapewnienia ich gotowości do zmiany ERA.
-> - [Podsumowanie nowych, japońskich aktualizacji ery dla .NET Framework](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), które zawierają informacje o .NET Framework aktualizacjach dla poszczególnych wersji systemu Windows, które są powiązane z nowym kalendarzem japońskim — ERA, nowe funkcje .NET Framework do obsługi wieloetapowej oceny, a także zawiera elementy do Poszukaj w temacie Testowanie aplikacji.
+> - [Podsumowanie nowych, japońskich aktualizacji ery dla .NET Framework](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), które zawierają informacje o .NET Framework aktualizacjach dla poszczególnych wersji systemu Windows, które są powiązane z nowym kalendarzem japońskim — ERA, nowe funkcje .NET Framework do obsługi wieloetapowej oceny, a także zawiera elementy do wyszukania w testowaniu aplikacji.
 
 Ocena ERA w większości kalendarzy oznacza bardzo długi czas. Na przykład w kalendarzu gregoriańskim bieżące era obejmuje więcej niż dwa Millennia. W przypadku <xref:System.Globalization.JapaneseCalendar> i <xref:System.Globalization.JapaneseLunisolarCalendar>dwa kalendarze, które obsługują wiele wymazania, nie jest to przypadek. Era odpowiada okresowi Imperatora Reign. Obsługa wielu wymazów, szczególnie w przypadku, gdy górny limit bieżącej ery jest nieznany, stanowi specjalne wyzwania.
 
@@ -169,7 +169,7 @@ Nazwa, która odnosi się do określonego numeru ERA, można pobrać, przekazuj�
 
 Ponadto niestandardowy format daty i godziny „g” dołącza nazwę ery kalendarza do reprezentacji daty i godziny w formacie ciągu. Aby uzyskać więcej informacji, zobacz [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).
 
-### <a name="instantiating-a-date-with-an-era"></a>Tworzenie wystąpienia daty z era
+### <a name="instantiatie-a-date-with-an-era"></a>Tworzenie wystąpienia daty z era
 
 Dla dwóch <xref:System.Globalization.Calendar> klas, które obsługują wiele wymazów, Data, która składa się z określonego roku, miesiąca i dnia wartości miesiąca, może być niejednoznaczna. Na przykład wszystkie wymazy obsługiwane przez <xref:System.Globalization.JapaneseCalendar> mają lata, których numer to 1. Normalnie, jeśli era nie jest określona, metody daty i godziny oraz kalendarza zakładają, że wartości należą do bieżącej ery. Jest to prawdziwe dla <xref:System.DateTime.%23ctor%2A> i konstruktorów <xref:System.DateTimeOffset.%23ctor%2A>, które obejmują parametry typu <xref:System.Globalization.Calendar>, a także metody [JapaneseCalendar. ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) i [JapaneseLunisolarCalendar. ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) . Poniższy przykład tworzy wystąpienie daty, która reprezentuje 1 stycznia drugiego roku nieokreślonego ery. W przypadku wykonania przykładu, gdy Reiwa era to bieżąca ERA, data jest interpretowana jako drugi rok Reiwa ERA. Era, 令和, poprzedza rok w ciągu zwracanym przez metodę <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> i odpowiada 1 stycznia 2020 w kalendarzu gregoriańskim. (Reiwa era rozpoczyna się w roku 2019 kalendarza gregoriańskiego).
 
@@ -187,7 +187,7 @@ Jednak w przypadku zmiany ery zamiar tego kodu jest niejednoznaczny. Jest datą 
 
   - Metoda <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> klasy <xref:System.Globalization.JapaneseCalendar> lub <xref:System.Globalization.JapaneseLunisolarCalendar>.
 
-  - Metoda analizy <xref:System.DateTime> lub <xref:System.DateTimeOffset>, taka jak <xref:System.DateTime.Parse%2A>, <xref:System.DateTime.TryParse%2A>, <xref:System.DateTime.ParseExact%2A>lub <xref:System.DateTime.TryParseExact%2A>, która zawiera ciąg do analizy i opcjonalnie argument <xref:System.Globalization.DateTimeStyles>, jeśli bieżącą kulturą jest japoński-Japonia ("ja-JP"), a kalendarz kultury jest <xref:System.Globalization.JapaneseCalendar>. Ciąg, który ma być analizowany, musi zawierać ERA.
+  - Metoda analizy <xref:System.DateTime> lub <xref:System.DateTimeOffset>, taka jak <xref:System.DateTime.Parse%2A>, <xref:System.DateTime.TryParse%2A>, <xref:System.DateTime.ParseExact%2A>lub <xref:System.DateTime.TryParseExact%2A>, która zawiera ciąg do analizy i opcjonalnie argument <xref:System.Globalization.DateTimeStyles>, jeśli bieżącą kulturą jest japoński-Japonia ("ja-JP"), a kalendarz kultury to <xref:System.Globalization.JapaneseCalendar>. Ciąg, który ma być analizowany, musi zawierać ERA.
 
   - Metoda analizy <xref:System.DateTime> lub <xref:System.DateTimeOffset>, która zawiera parametr `provider` typu <xref:System.IFormatProvider>. `provider` musi być obiektem <xref:System.Globalization.CultureInfo>, który reprezentuje kulturę Japońska-Japonia ("ja-JP"), której bieżący kalendarz jest <xref:System.Globalization.JapaneseCalendar> lub <xref:System.Globalization.DateTimeFormatInfo> obiekt, którego właściwość <xref:System.Globalization.DateTimeFormatInfo.Calendar> jest <xref:System.Globalization.JapaneseCalendar>. Ciąg, który ma być analizowany, musi zawierać ERA.
 
@@ -216,7 +216,7 @@ Poniższy przykład próbuje utworzyć wystąpienie daty w roku 65th na Showa ER
 
 Jeśli kontrole zakresu swobodnego są niepożądane, można przywrócić ścisłe kontrole zakresu na wiele sposobów, w zależności od wersji platformy .NET, w której działa aplikacja:
 
-- **.NET Core:** Do pliku konfiguracyjnego *. Core. Runtime. JSON* można dodać następujące elementy:
+- **.NET Core:** Dodaj następujący kod do pliku config *. servicecore. Runtime. JSON* :
 
   ```json
   "runtimeOptions": {
@@ -226,7 +226,7 @@ Jeśli kontrole zakresu swobodnego są niepożądane, można przywrócić ścis�
   }
   ```
 
-- **.NET Framework 4,6 lub nowszy:** Można ustawić następujący przełącznik AppContext:
+- **.NET Framework 4,6 lub nowszy:** Ustaw następujący przełącznik AppContext w pliku *App. config* :
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -237,14 +237,14 @@ Jeśli kontrole zakresu swobodnego są niepożądane, można przywrócić ścis�
   </configuration>
   ```
 
-- **.NET Framework 4.5.2 lub wcześniejszy:** Można ustawić następującą wartość rejestru:
+- **.NET Framework 4.5.2 lub wcześniejszy:** Ustaw następującą wartość rejestru:
 
    |  |  |
    |--|--|
-   |Key | HKEY_LOCAL_MACHINE\Software\Microsoft\.NETFramework\AppContext |
-   |Nazwa | Switch. System. globalizacja. EnforceJapaneseEraYearRanges |
-   |Typ | REG_SZ |
-   |Wartość | true |
+   | **Key** | **HKEY_LOCAL_MACHINE \Software\Microsoft\\. NETFramework\AppContext** |
+   | **Nazwa** | Switch.System.Globalization.EnforceJapaneseEraYearRanges |
+   | **Typ** | REG_SZ |
+   | **Wartość** | true |
 
 W przypadku włączenia kontroli ścisłego zakresu w poprzednim przykładzie jest zgłaszany <xref:System.ArgumentOutOfRangeException> i wyświetlane są następujące dane wyjściowe:
 
@@ -256,7 +256,7 @@ Parameter name: year
    at Example.Main()
 ```
 
-### <a name="representing-dates-in-calendars-with-multiple-eras"></a>Przedstawianie dat w kalendarzach z wieloma wymazywanymi
+### <a name="represent-dates-in-calendars-with-multiple-eras"></a>Przedstawianie dat w kalendarzach z wieloma wymazywanymi
 
 Jeśli obiekt <xref:System.Globalization.Calendar> obsługuje wymazywanie i jest bieżącym kalendarzem obiektu <xref:System.Globalization.CultureInfo>, era jest uwzględniona w ciągu reprezentacji wartości daty i godziny dla pełnych wzorców daty i godziny, daty długiej i daty krótkiej. W poniższym przykładzie są wyświetlane te wzorce, gdy bieżącą kulturą jest Japonia (Japoński), a bieżącym kalendarzem jest kalendarz japoński.
 
@@ -271,12 +271,12 @@ Specyfikator formatu niestandardowego „g” dołącza erę do ciągu wynikoweg
 [!code-csharp[Conceptual.Calendars#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/formatstrings2.cs#9)]
 [!code-vb[Conceptual.Calendars#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings2.vb#9)]
 
-W przypadku, gdy ciąg reprezentujący datę jest wyrażony w kalendarzu, który nie jest bieżącym kalendarzem, Klasa <xref:System.Globalization.Calendar> zawiera metodę <xref:System.Globalization.Calendar.GetEra%2A?displayProperty=nameWithType>, która może być używana razem z metodami <xref:System.Globalization.Calendar.GetYear%2A?displayProperty=nameWithType>, <xref:System.Globalization.Calendar.GetMonth%2A?displayProperty=nameWithType>i <xref:System.Globalization.Calendar.GetDayOfMonth%2A?displayProperty=nameWithType>, aby jednoznacznie wskazywać datę a także ERA, do której należy. Poniższy przykład używa klasy <xref:System.Globalization.JapaneseLunisolarCalendar>, aby dostarczyć ilustrację. Należy jednak pamiętać, że w tym opisową nazwę lub skrót zamiast liczby całkowitej dla ery w ciągu wynikowym, należy utworzyć wystąpienie obiektu <xref:System.Globalization.DateTimeFormatInfo> i wprowadzić <xref:System.Globalization.JapaneseCalendar> jego bieżący kalendarz. (Kalendarz <xref:System.Globalization.JapaneseLunisolarCalendar> nie może być bieżącym kalendarzem żadnej kultury, ale w tym przypadku dwa kalendarze mają te same wymazywanie).
+W przypadku, gdy ciąg reprezentujący datę jest wyrażony w kalendarzu, który nie jest bieżącym kalendarzem, Klasa <xref:System.Globalization.Calendar> zawiera metodę <xref:System.Globalization.Calendar.GetEra%2A?displayProperty=nameWithType>, która może być używana razem z metodami <xref:System.Globalization.Calendar.GetYear%2A?displayProperty=nameWithType>, <xref:System.Globalization.Calendar.GetMonth%2A?displayProperty=nameWithType>i <xref:System.Globalization.Calendar.GetDayOfMonth%2A?displayProperty=nameWithType>, aby jednoznacznie wskazywać datę oraz ocenę ERA, do której należy. Poniższy przykład używa klasy <xref:System.Globalization.JapaneseLunisolarCalendar>, aby dostarczyć ilustrację. Należy jednak pamiętać, że w tym opisową nazwę lub skrót zamiast liczby całkowitej dla ery w ciągu wynikowym, należy utworzyć wystąpienie obiektu <xref:System.Globalization.DateTimeFormatInfo> i wprowadzić <xref:System.Globalization.JapaneseCalendar> jego bieżący kalendarz. (Kalendarz <xref:System.Globalization.JapaneseLunisolarCalendar> nie może być bieżącym kalendarzem żadnej kultury, ale w tym przypadku dwa kalendarze mają te same wymazywanie).
 
 [!code-csharp[Conceptual.Calendars#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/formatstrings3.cs#10)]
 [!code-vb[Conceptual.Calendars#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings3.vb#10)]
 
-W kalendarzach japońskich pierwszy rok era nosi nazwę Gannen (元年). Na przykład zamiast Heisei 1, pierwszy rok oceny era Heisei można opisać jako Heisei Gannen. Platforma .NET przyjmuje niniejszą Konwencję w operacjach formatowania dat i godzin sformatowanych przy użyciu następujących standardowych lub niestandardowych ciągów formatu daty i godziny, gdy są one używane z obiektem <xref:System.Globalization.CultureInfo>, który reprezentuje kulturę Japońska-Japonia ("ja-JP") z <xref:System.Globalization.JapaneseCalendar> określonej
+W kalendarzach japońskich pierwszy rok era nosi nazwę Gannen (元年). Na przykład zamiast Heisei 1, pierwszy rok oceny era Heisei można opisać jako Heisei Gannen. Platforma .NET przyjmuje niniejszą Konwencję w operacjach formatowania dat i godzin sformatowanych przy użyciu następujących standardowych lub niestandardowych ciągów formatu daty i godziny, gdy są one używane z obiektem <xref:System.Globalization.CultureInfo>, który reprezentuje kulturę Japońska-Japonia ("ja-JP") z klasą <xref:System.Globalization.JapaneseCalendar>:
 
 - [Wzorzec daty długiej](../base-types/standard-date-and-time-format-strings.md#LongDate), wskazywany przez ciąg standardowego formatu daty i godziny "D".
 - [Wzorzec pełnej daty długiej](../base-types/standard-date-and-time-format-strings.md#FullDateLongTime), wskazywany przez ciąg standardowego formatu daty i godziny "F".
@@ -291,7 +291,7 @@ Na przykład poniższy przykład wyświetla datę w pierwszym roku Heisei ERA w 
 
 Jeśli takie zachowanie jest niepożądane w operacjach formatowania, można przywrócić poprzednie zachowanie, które zawsze przedstawia pierwszy rok oceny era jako "1" zamiast "Gannen", wykonując następujące czynności, w zależności od wersji programu .NET:
 
-- **.NET Core:** Do pliku konfiguracyjnego *. Core. Runtime. JSON* można dodać następujące elementy:
+- **.NET Core:** Dodaj następujący kod do pliku config *. servicecore. Runtime. JSON* :
 
   ```json
   "runtimeOptions": {
@@ -301,7 +301,7 @@ Jeśli takie zachowanie jest niepożądane w operacjach formatowania, można prz
   }
   ```
 
-- **.NET Framework 4,6 lub nowszy:** Można ustawić następujący przełącznik AppContext:
+- **.NET Framework 4,6 lub nowszy:** Ustaw następujący przełącznik AppContext w pliku *App. config* :
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -312,14 +312,14 @@ Jeśli takie zachowanie jest niepożądane w operacjach formatowania, można prz
   </configuration>
   ```
 
-- **.NET Framework 4.5.2 lub wcześniejszy:** Można ustawić następującą wartość rejestru:
+- **.NET Framework 4.5.2 lub wcześniejszy:** Ustaw następującą wartość rejestru:
 
    |  |  |
    |--|--|
-   |Key | HKEY_LOCAL_MACHINE\Software\Microsoft\.NETFramework\AppContext |
-   |Nazwa | Switch. System. globalizacja. FormatJapaneseFirstYearAsANumber |
-   |Typ | REG_SZ |
-   |Wartość | true |
+   | **Key** | **HKEY_LOCAL_MACHINE \Software\Microsoft\\. NETFramework\AppContext** |
+   | **Nazwa** | Switch. System. globalizacja. FormatJapaneseFirstYearAsANumber |
+   | **Typ** | REG_SZ |
+   | **Wartość** | true |
 
 W przypadku wyłączenia obsługi Gannen w operacjach formatowania w poprzednim przykładzie są wyświetlane następujące dane wyjściowe:
 
@@ -329,7 +329,7 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 
 Program .NET został także zaktualizowany tak, aby operacje analizowania daty i godziny obsługiwały ciągi zawierające rok reprezentowane jako "1" lub Gannen. Chociaż nie należy tego robić, można przywrócić poprzednie zachowanie, aby rozpoznawać tylko "1" jako pierwszy rok ERA. Można to zrobić w następujący sposób, w zależności od wersji programu .NET:
 
-- **.NET Core:** Do pliku konfiguracyjnego *. Core. Runtime. JSON* można dodać następujące elementy:
+- **.NET Core:** Dodaj następujący kod do pliku config *. servicecore. Runtime. JSON* :
 
   ```json
   "runtimeOptions": {
@@ -339,7 +339,7 @@ Program .NET został także zaktualizowany tak, aby operacje analizowania daty i
   }
   ```
 
-- **.NET Framework 4,6 lub nowszy:** Można ustawić następujący przełącznik AppContext:
+- **.NET Framework 4,6 lub nowszy:** Ustaw następujący przełącznik AppContext w pliku *App. config* :
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -350,14 +350,14 @@ Program .NET został także zaktualizowany tak, aby operacje analizowania daty i
   </configuration>
   ```
 
-- **.NET Framework 4.5.2 lub wcześniejszy:** Można ustawić następującą wartość rejestru:
+- **.NET Framework 4.5.2 lub wcześniejszy:** Ustaw następującą wartość rejestru:
 
    |  |  |
-   |--|--|  
-   |Key | HKEY_LOCAL_MACHINE\Software\Microsoft\.NETFramework\AppContext |
-   |Nazwa | Switch. System. globalizacja. EnforceLegacyJapaneseDateParsing |
-   |Typ | REG_SZ |
-   |Wartość | true | 
+   |--|--|
+   | **Key** | **HKEY_LOCAL_MACHINE \Software\Microsoft\\. NETFramework\AppContext** |
+   | **Nazwa** | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
+   | **Typ** | REG_SZ |
+   | **Wartość** | true |
 
 ## <a name="see-also"></a>Zobacz także
 

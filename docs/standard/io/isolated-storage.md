@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94d435d8f50683c24e7ca28100fbf5abf0fdcc19
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 33583f430e5af2f3fa7027233febd9ec61f85a3f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204778"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802456"
 ---
 # <a name="isolated-storage"></a>Izolowany magazyn
 <a name="top"></a>W przypadku aplikacji klasycznych magazyn izolowany jest mechanizmem magazynu danych, który zapewnia izolację i bezpieczeństwo przez definiowanie ustandaryzowanych metod kojarzenia kodu z zapisanymi danymi. Standaryzacja oferuje także inne korzyści. Administratorzy mogą używać narzędzi przeznaczonych do wykonywania operacji na wydzielonej pamięci masowej w celu konfigurowania ilości miejsca przeznaczonego na pliki, ustawiania zasad zabezpieczeń i usuwania nieużywanych danych. Dzięki wydzielonej pamięci masowej kod nie wymaga unikatowych ścieżek określających bezpieczne lokalizacje w systemie plików, a dane są chronione przed innymi aplikacjami, które mają dostęp tylko do wydzielonej pamięci masowej. Ustalona informacja, która wskazuje, gdzie jest zlokalizowany obszar pamięci aplikacji nie jest potrzebna.
@@ -51,7 +51,7 @@ Ten temat zawiera następujące sekcje:
 
 - [Tematy pokrewne](#related_topics)
 
-- [Dokumentacja](#reference)
+- [Tematy pomocy](#reference)
 
 <a name="data_compartments_and_stores"></a>
 
@@ -118,7 +118,7 @@ Czasami jest ono pomocne podczas weryfikowania zmiany w wydzielonej pamięci mas
 |Windows 2000, Windows XP, Windows Server 2003 (uaktualnienie z systemu Windows NT 4.0)|Magazyny z obsługą roamingu =<br /><br /> \<GŁÓWNY_KATALOG_SYSTEMOWY > \Profiles\\< użytkownik\>\Dane danych<br /><br /> Magazyny bez obsługi roamingu =<br /><br /> \<GŁÓWNY_KATALOG_SYSTEMOWY > \Profiles\\< użytkownik\>\Ustawienia Lokalne\dane dane|
 |Windows 2000 — czysta instalacja (oraz uaktualnienia z systemu Windows 98 i Windows NT 3.51)|Magazyny z obsługą roamingu =<br /><br /> \<DYSKSYSTEMOWY > \Dokumenty i ustawienia\\< użytkownik\>\Dane danych<br /><br /> Magazyny bez obsługi roamingu =<br /><br /> \<DYSKSYSTEMOWY > \Dokumenty i ustawienia\\< użytkownik\>\Ustawienia Lokalne\dane dane|
 |Windows XP, Windows Server 2003 — czysta instalacja (i uaktualnienia z systemu Windows 2000 i Windows 98)|Magazyny z obsługą roamingu =<br /><br /> \<DYSKSYSTEMOWY > \Dokumenty i ustawienia\\< użytkownik\>\Dane danych<br /><br /> Magazyny bez obsługi roamingu =<br /><br /> \<DYSKSYSTEMOWY > \Dokumenty i ustawienia\\< użytkownik\>\Ustawienia Lokalne\dane dane|
-|[!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7, Windows Server 2008, Windows Vista|Magazyny z obsługą roamingu =<br /><br /> \<dysk_systemowy > \Users\\< użytkownika\>\AppData\Roaming<br /><br /> Magazyny bez obsługi roamingu =<br /><br /> \<dysk_systemowy > \Users\\< użytkownika\>\AppData\Local|
+|Windows 8, Windows 7, Windows Server 2008, Windows Vista|Magazyny z obsługą roamingu =<br /><br /> \<dysk_systemowy > \Users\\< użytkownika\>\AppData\Roaming<br /><br /> Magazyny bez obsługi roamingu =<br /><br /> \<dysk_systemowy > \Users\\< użytkownika\>\AppData\Local|
 
 <a name="isolated_storage_tasks"></a>
 

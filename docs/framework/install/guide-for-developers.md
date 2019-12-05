@@ -8,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 8c4b328cdecb468af57fe699283584e901772175
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6098c2b855e692eef198e388ba9b29a4e8cc8de1
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091993"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802222"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Zainstaluj .NET Framework dla deweloperów
 
@@ -22,7 +22,7 @@ Platforma .NET jest integralną częścią wielu aplikacji działających w syst
 > [!NOTE]
 > Ten temat jest przeznaczony dla **deweloperów** , którzy chcą zainstalować .NET Framework w ich własnym systemie lub którzy chcą zainstalować ją z aplikacjami. **Użytkownicy** zainteresowani instalacją .NET Framework można znaleźć w poszczególnych tematach, które omawiają Instalowanie .NET Framework w określonych systemach operacyjnych, takich jak [Instalowanie .NET Framework w systemach Windows 10 i Windows Server 2016](on-windows-10.md).
 
-Ten artykuł zawiera linki do instalowania wszystkich wersji .NET Framework z .NET Framework 4,5 do .NET Framework 4,8 na komputerze. Jeśli jesteś deweloperem, możesz również użyć tych linków do pobrania i rozproszenia .NET Framework z aplikacjami. Aby uzyskać informacje na temat wdrażania wersji .NET Framework za pomocą aplikacji, zobacz [.NET Framework Przewodnik wdrażania dla deweloperów](../deployment/deployment-guide-for-developers.md).
+Ten artykuł zawiera linki do instalowania wszystkich wersji .NET Framework z .NET Framework 4,5 do .NET Framework 4,8 na komputerze. Jeśli jesteś programistą, możesz również użyć tych łączy do pobrania i rozpowszechnienia środowiska .NET Framework razem z aplikacjami. Aby uzyskać informacje na temat wdrażania wersji .NET Framework za pomocą aplikacji, zobacz [.NET Framework Przewodnik wdrażania dla deweloperów](../deployment/deployment-guide-for-developers.md).
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
@@ -31,20 +31,20 @@ Aby uzyskać więcej informacji o wersjach .NET Framework i sposobach ustalania,
 > [!NOTE]
 > Aby uzyskać informacje dotyczące .NET Framework 3,5, zobacz [instalowanie .NET Framework 3,5 w systemie Windows 10, Windows 8.1 i Windows 8](dotnet-35-windows-10.md).
 
-Aby uzyskać szczegółowe informacje, Skorzystaj z poniższej tabeli. Aby wyświetlić wymagania systemowe .NET Framework przed instalacją, zobacz [wymagania systemowe](../get-started/system-requirements.md). Aby uzyskać pomoc dotyczącą rozwiązywania problemów, zobacz [Rozwiązywanie problemów](troubleshoot-blocked-installations-and-uninstallations.md).
+Użyj następującej tabeli szybkich łączy lub czytaj dalej, aby uzyskać szczegółowe informacje. Aby wyświetlić wymagania systemowe .NET Framework przed instalacją, zobacz [wymagania systemowe](../get-started/system-requirements.md). Aby uzyskać pomoc dotyczącą rozwiązywania problemów, zobacz [Rozwiązywanie problemów](troubleshoot-blocked-installations-and-uninstallations.md).
 
 |Wersja programu .NET Framework|Instalacja dewelopera|Instalacja redystrybucyjna|Obsługa platform|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4,8**|[Pakiet dewelopera .NET Framework 4,8](https://go.microsoft.com/fwlink/?linkid=2088517)|[Instalator sieci Web Centrum pobierania 4,8](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[Pobierz instalatora offline centrum pobierania 4,8](https://go.microsoft.com/fwlink/?linkid=2088631)|**Uwzględnione w:**<br/><br/>Aktualizacja systemu Windows 10 maja 2019<br /><br /> **Program można zainstalować na:**<br/><br/>Aktualizacja systemu Windows 10 październik 2018<br/>Aktualizacja systemu Windows 10 z kwietnia 2018<br/>Aktualizacja systemu Windows 10 dla twórców<br/>Aktualizacja systemu Windows 10 dla twórców <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze<br /> System Windows Server 2019<br/>System Windows Server w wersji 1809<br/>System Windows Server w wersji 1803<br /><br/> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).||
-|**4.7.2**|[.NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[Instalator sieci Web Centrum pobierania 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Instalator offline centrum pobierania 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)|**Uwzględnione w:** <br/><br/>Aktualizacja systemu Windows 10 październik 2018<br/>Aktualizacja systemu Windows 10 z kwietnia 2018<br/>System Windows Server 2019<br/>System Windows Server w wersji 1809<br/>System Windows Server w wersji 1803<br /><br /> **Program można zainstalować na:**<br/> <br/>Aktualizacja systemu Windows 10 dla twórców<br/>Aktualizacja systemu Windows 10 dla twórców <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze<br /> System Windows Server, wersja 1709 i starsze wersje<br /><br/> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).||
-|**4.7.1**|[.NET Framework 4.7.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=852105)|[Strona pobierania dla Instalatora sieci Web 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Strona pobierania dla Instalatora 4.7.1 offline](https://go.microsoft.com/fwlink/?LinkId=852107)|**Uwzględnione w:** <br/><br/>Aktualizacja systemu Windows 10 dla twórców<br/>System Windows Server w wersji 1709<br /><br /> **Program można zainstalować na:**<br/><br/> Aktualizacja systemu Windows 10 dla twórców <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze<br /> Windows Server 2016 i starsze<br /> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).||
-|**4,7**|[.NET Framework 4,7 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=825319)|[Strona pobierania dla Instalatora sieci Web 4,7](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Strona pobierania dla Instalatora w trybie offline 4,7](https://go.microsoft.com/fwlink/?LinkId=825303)|**Uwzględnione w:** <br/><br/>Aktualizacja systemu Windows 10 dla twórców<br /><br /> **Program można zainstalować na:**<br /><br/> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze<br /> Windows Server 2016 i starsze<br /> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).||
+|**4.8**|[Pakiet dewelopera .NET Framework 4,8](https://go.microsoft.com/fwlink/?linkid=2088517)|[Instalator sieci Web Centrum pobierania 4,8](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[Pobierz instalatora offline centrum pobierania 4,8](https://go.microsoft.com/fwlink/?linkid=2088631)|**Uwzględnione w:**<br/><br/>Aktualizacja systemu Windows 10 maja 2019<br /><br /> **Program można zainstalować na:**<br/><br/>Aktualizacja systemu Windows 10 październik 2018<br/>Aktualizacja systemu Windows 10 z kwietnia 2018<br/>Jesienna aktualizacja systemu Windows 10 dla twórców<br/>Aktualizacja systemu Windows 10 dla twórców <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze<br /> Windows Server 2019<br/>System Windows Server w wersji 1809<br/>System Windows Server w wersji 1803<br /><br/> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).||
+|**4.7.2**|[.NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[Instalator sieci Web Centrum pobierania 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Instalator offline centrum pobierania 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)|**Uwzględnione w:** <br/><br/>Aktualizacja systemu Windows 10 październik 2018<br/>Aktualizacja systemu Windows 10 z kwietnia 2018<br/>Windows Server 2019<br/>System Windows Server w wersji 1809<br/>System Windows Server w wersji 1803<br /><br /> **Program można zainstalować na:**<br/> <br/>Jesienna aktualizacja systemu Windows 10 dla twórców<br/>Aktualizacja systemu Windows 10 dla twórców <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze<br /> System Windows Server, wersja 1709 i starsze wersje<br /><br/> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).||
+|**4.7.1**|[.NET Framework 4.7.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=852105)|[Strona pobierania dla Instalatora sieci Web 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Strona pobierania dla Instalatora 4.7.1 offline](https://go.microsoft.com/fwlink/?LinkId=852107)|**Uwzględnione w:** <br/><br/>Jesienna aktualizacja systemu Windows 10 dla twórców<br/>Windows Server w wersji 1709<br /><br /> **Program można zainstalować na:**<br/><br/> Aktualizacja systemu Windows 10 dla twórców <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze<br /> Windows Server 2016 i starsze<br /> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).||
+|**4.7**|[.NET Framework 4,7 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=825319)|[Strona pobierania dla Instalatora sieci Web 4,7](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Strona pobierania dla Instalatora w trybie offline 4,7](https://go.microsoft.com/fwlink/?LinkId=825303)|**Uwzględnione w:** <br/><br/>Aktualizacja systemu Windows 10 dla twórców<br /><br /> **Program można zainstalować na:**<br /><br/> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze<br /> Windows Server 2016 i starsze<br /> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).||
 |**4.6.2**|[.NET Framework 4.6.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=780617)|[Strona pobierania dla Instalatora sieci Web 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [Strona pobierania dla Instalatora 4.6.2 offline](https://go.microsoft.com/fwlink/?LinkId=780601)|**Uwzględnione w:** <br/><br /> Rocznicowa aktualizacja systemu Windows 10<br /><br /> **Program można zainstalować na:**<br /><br/> Aktualizacja systemu Windows 10 listopad <br/> Windows 10 <br /> Windows 8.1 i starsze<br /> Windows Server 2012 R2 i starsze<br /> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).|
 |**4.6.1**|[.NET Framework 4.6.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=690706)|[Strona pobierania dla Instalatora sieci Web 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [Strona pobierania dla Instalatora w trybie offline 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671744)|**Program można zainstalować na:**<br /><br/> Windows 10 <br /> Windows 8.1 i starsze<br /> Windows Server 2012 R2 i starsze<br /> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).|
-|**4,6**|Uwzględnione w programie Visual Studio 2015.<br /><br /> [Pakiet docelowy Microsoft .NET Framework 4,6](https://go.microsoft.com/fwlink/?LinkId=528261)|[Strona pobierania dla Instalatora sieci Web 4,6](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [Strona pobierania dla Instalatora w trybie offline 4,6](https://go.microsoft.com/fwlink/?LinkId=528233)|**Uwzględnione w:** <br/><br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **Można również zainstalować następujące instrukcje:**<br /><br/> Windows 8.1 i starsze<br /> Windows Server 2012 R2 i starsze<br /> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).|
+|**4.6**|Uwzględnione w programie Visual Studio 2015.<br /><br /> [Pakiet docelowy Microsoft .NET Framework 4,6](https://go.microsoft.com/fwlink/?LinkId=528261)|[Strona pobierania dla Instalatora sieci Web 4,6](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [Strona pobierania dla Instalatora w trybie offline 4,6](https://go.microsoft.com/fwlink/?LinkId=528233)|**Uwzględnione w:** <br/><br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **Można również zainstalować następujące instrukcje:**<br /><br/> Windows 8.1 i starsze<br /> Windows Server 2012 R2 i starsze<br /> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).|
 |**4.5.2**|[Microsoft .NET Framework 4.5.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> Do użytku z Visual Studio 2013, Visual Studio 2012 lub innych środowisk IDE|[Strona pobierania dla Instalatora sieci Web 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [Strona pobierania dla instalatora offline.](https://go.microsoft.com/fwlink/p/?LinkId=397706)|**Program można zainstalować na:**<br /><br/> Windows 8.1 i starsze<br /> Windows Server 2012 R2 i starsze<br /> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).|
-|**4.5.1**|[Microsoft .NET Framework 4.5.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Do użytku z Visual Studio 2013, Visual Studio 2012 lub innych środowisk IDE|[Strona pobierania dla Instalatora sieci Web 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [Strona pobierania dla Instalatora w trybie offline 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**Uwzględnione w:**<br /> <br/>[!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 z dodatkiem R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **Można również zainstalować następujące instrukcje:**<br /><br/> [!INCLUDE[win8](../../../includes/win8-md.md)] i starsze<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] i starsze<br />(aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).|
-|**4,5**|Uwzględnione w programie Visual Studio 2012<br /><br /> Dostępne również w ramach zestawu SDK systemu Windows 8|[Strona pobierania dla Instalatora sieci Web 4,5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Uwzględnione w:** <br/><br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Można również zainstalować następujące instrukcje:**<br/><br /> Windows 7 i starsze<br /> Windows Server 2008 z dodatkiem SP2 i starszy<br />(aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).|
+|**4.5.1**|[Microsoft .NET Framework 4.5.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Do użytku z Visual Studio 2013, Visual Studio 2012 lub innych środowisk IDE|[Strona pobierania dla Instalatora sieci Web 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [Strona pobierania dla Instalatora w trybie offline 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**Uwzględnione w:**<br /> <br/>Windows 8.1<br /> Windows Server 2012 z dodatkiem R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **Można również zainstalować następujące instrukcje:**<br /><br/> System Windows 8 lub starszy<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] i starsze<br />(aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).|
+|**4.5**|Uwzględnione w programie Visual Studio 2012<br /><br /> Dostępne również w ramach zestawu SDK systemu Windows 8|[Strona pobierania dla Instalatora sieci Web 4,5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Uwzględnione w:** <br/><br /> Windows 8<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Można również zainstalować następujące instrukcje:**<br/><br /> Windows 7 i wcześniejsze wersje<br /> Windows Server 2008 SP2 i wcześniejsze wersje<br />(aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).|
 
 **Pakiet dewelopera** dla określonej wersji .NET Framework, jeśli jest dostępny, można zainstalować na wszystkich obsługiwanych platformach.
 
@@ -58,7 +58,7 @@ Aby uzyskać pełną listę, zobacz [wymagania systemowe](../get-started/system-
 
 Aby uzyskać ogólne wprowadzenie do .NET Framework dla użytkowników i deweloperów, zobacz [wprowadzenie](../get-started/index.md). Aby uzyskać informacje na temat wdrażania .NET Framework za pomocą aplikacji, zobacz [Przewodnik wdrażania](../deployment/deployment-guide-for-developers.md). Aby zapoznać się z informacjami dotyczącymi architektury i kluczowych funkcji .NET Framework, zobacz [Omówienie](../get-started/overview.md).
 
-## <a name="installation-choices"></a>Opcje instalacji
+## <a name="installation-choices"></a>Wybór instalacji
 
 Zainstaluj pakiet przeznaczony dla deweloperów, aby opracowywać najnowszą wersję .NET Framework w programie Visual Studio lub w innym środowisku programistycznym, lub Pobierz pakiet redystrybucyjny .NET Framework na potrzeby dystrybucji z aplikacją lub kontrolką.
 
@@ -96,19 +96,19 @@ Podczas kompilowania aplikacji z programu Visual Studio lub korzystania z progra
 
 ### <a name="to-install-or-download-the-net-framework-redistributable"></a>Aby zainstalować lub pobrać pakiet redystrybucyjny .NET Framework
 
-Instalatory pobierają składniki .NET Framework dla aplikacji lub kontrolki, która jest przeznaczona dla tych wersji .NET Framework. Te składniki muszą być zainstalowane na każdym komputerze, na którym działa aplikacja lub formant. Te Instalatory są redystrybucyjne, więc można je uwzględnić w programie instalacyjnym aplikacji.
+Instalatory pobierają składniki .NET Framework dla aplikacji lub kontrolki, która jest przeznaczona dla tych wersji .NET Framework. Składniki te muszą być instalowane na każdym komputerze, na którym działa aplikacja lub formant. Te Instalatory są redystrybucyjne, więc można je uwzględnić w programie instalacyjnym aplikacji.
 
-Strona pobierania jest dostępna w kilku językach, ale większość plików do pobrania jest dostępna tylko w języku angielskim. Aby zapewnić obsługę dodatkowych języków, należy zainstalować pakiet językowy.
+Strona pobierania może być wyświetlana w kilku językach, ale większość plików do pobrania jest tylko w języku angielskim. Aby uzyskać obsługę dodatkowych języków, należy zainstalować pakiet językowy.
 
 Dostępne są dwa typy instalatorów redystrybucyjnych:
 
-- **Instalator sieci Web** (program inicjujący sieci Web) Pobiera wymagane składniki i pakiet językowy, który pasuje do systemu operacyjnego komputera instalacyjnego z sieci Web. Ten pakiet jest znacznie mniejszy niż Instalator w trybie offline, ale wymaga spójnego połączenia z Internetem. Możesz pobrać [Autonomiczne pakiety językowe](#to-install-language-packs) , aby zainstalować dodatkową obsługę języka.
+- **Instalator sieci Web** (program inicjujący sieci Web) Pobiera wymagane składniki i pakiet językowy, który pasuje do systemu operacyjnego komputera instalacyjnego z sieci Web. Ten pakiet jest znacznie mniejszy niż instalator w trybie offline, ale wymaga zgodnego połączenia internetowego. Możesz pobrać [Autonomiczne pakiety językowe](#to-install-language-packs) , aby zainstalować dodatkową obsługę języka.
 
-- **Instalator offline** (Autonomiczny pakiet redystrybucyjny) zawiera wszystkie składniki wymagane do zainstalowania .NET Framework ale nie zawiera pakietów językowych. Ten pobrany rozmiar jest większy niż Instalator sieci Web. Instalator w trybie offline nie wymaga połączenia z Internetem. Po uruchomieniu Instalatora w trybie offline można pobrać [Autonomiczne pakiety językowe](#to-install-language-packs) , aby zainstalować obsługę języka. Jeśli nie możesz polegać na spójnym połączeniu internetowym, użyj Instalatora w trybie offline.
+- **Instalator offline** (Autonomiczny pakiet redystrybucyjny) zawiera wszystkie składniki wymagane do zainstalowania .NET Framework ale nie zawiera pakietów językowych. Ten plik do pobrania jest większy niż instalator sieci Web. Instalator w trybie offline nie wymaga połączenia z Internetem. Po uruchomieniu Instalatora w trybie offline można pobrać [Autonomiczne pakiety językowe](#to-install-language-packs) , aby zainstalować obsługę języka. Jeśli nie możesz polegać na spójnym połączeniu internetowym, użyj Instalatora w trybie offline.
 
 Programy instalacyjne sieci Web i offline są przeznaczone dla komputerów opartych na architekturze x86 i x64 (zobacz [wymagania systemowe](../get-started/system-requirements.md)), ale nie obsługują komputerów z procesorem Itanium.
 
-1. Otwórz stronę pobierania dla .NET Framework wersji, którą chcesz zainstalować:
+1. Otwórz stronę pobierania dla wersji .NET Framework, którą chcesz zainstalować.
 
    - .NET Framework 4,8 ([Instalator sieci Web](https://go.microsoft.com/fwlink/?LinkId=2085155) lub [Instalator w trybie offline](https://go.microsoft.com/fwlink/?linkid=2088631))
 
@@ -130,7 +130,7 @@ Programy instalacyjne sieci Web i offline są przeznaczone dla komputerów opart
 
    - [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
 
-1. Wybierz język strony pobierania. Ta opcja nie pobiera zlokalizowanych zasobów .NET Framework; dotyczy tylko tekstu wyświetlanego na stronie pobierania.
+1. Wybierz język dla strony pobierania. Ta opcja nie pobiera zlokalizowanych zasobów .NET Framework; dotyczy tylko tekstu wyświetlanego na stronie pobierania.
 
 1. Wybierz pozycję **Pobierz**.
 
@@ -157,16 +157,16 @@ Programy instalacyjne sieci Web i offline są przeznaczone dla komputerów opart
 
 - Musisz mieć poświadczenia administracyjne, aby zainstalować .NET Framework 4,5, jego wydania punktowe, .NET Framework 4,6 i jego wydania punktowe, .NET Framework 4,7 i jego wydania punktowe oraz .NET Framework 4,8.
 
-- Pakiet redystrybucyjny .NET Framework 4,5 został zaktualizowany w dniu 9 października 2012, aby rozwiązać problem związany z niewłaściwym znacznikiem czasu w certyfikacie cyfrowym, który spowodował Przedwczesne wygaśnięcie podpisu cyfrowego plików utworzonych i podpisanych przez firmę Microsoft. Jeśli wcześniej zainstalowano pakiet redystrybucyjny .NET Framework 4,5 z 16 sierpnia 2012, Zalecamy zaktualizowanie kopii przy użyciu najnowszego pakietu redystrybucyjnego z [Centrum pobierania Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=245484). Aby uzyskać więcej informacji o tym problemie, zobacz [Poradnik zabezpieczeń firmy Microsoft 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) i [artykuł z bazy wiedzy 2770445](https://support.microsoft.com/kb/2770445).
+- .NET Framework 4.5 Redistributable został zaktualizowany w dniu 9 października 2012 r., aby rozwiązać problem związany z niewłaściwym znacznikiem czasu dla certyfikatu cyfrowego, który spowodował przedwczesne wygaśnięcie cyfrowego podpisu wygenerowanego i podpisanego przez firmę Microsoft. Jeśli wcześniej zainstalowano pakiet redystrybucyjny .NET Framework 4,5 z 16 sierpnia 2012, Zalecamy zaktualizowanie kopii przy użyciu najnowszego pakietu redystrybucyjnego z [Centrum pobierania Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=245484). Aby uzyskać więcej informacji o tym problemie, zobacz [Poradnik zabezpieczeń firmy Microsoft 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) i [artykuł z bazy wiedzy 2770445](https://support.microsoft.com/kb/2770445).
 
 ## <a name="to-install-language-packs"></a>Aby zainstalować pakiety językowe
 
-Pakiety językowe są plikami wykonywalnymi zawierającymi zlokalizowane zasoby (takie jak tłumaczone komunikaty o błędach i tekst interfejsu użytkownika) dla obsługiwanych języków. Jeśli nie zainstalujesz pakietu językowego, .NET Framework komunikaty o błędach i inne teksty są wyświetlane w języku angielskim.  Należy pamiętać, że Instalator sieci Web automatycznie instaluje pakiet językowy zgodny z systemem operacyjnym, ale można pobrać dodatkowe pakiety językowe na komputer. Instalatorzy w trybie offline nie zawierają żadnych pakietów językowych.
+Pakiety językowe są plikami wykonywalnymi, które zawierają zlokalizowane zasoby (na przykład przetłumaczone komunikaty i tekst interfejsu użytkownika) dla obsługiwanych języków. Jeśli nie zainstalujesz pakietu językowego, komunikaty o błędach i inne teksty programu .NET Framework są wyświetlane w języku angielskim.  Należy zauważyć, że Instalator sieci web automatycznie instaluje pakiet językowy, który pasuje do systemu operacyjnego, ale dodatkowe pakiety językowe można pobrać na komputer. Instalatory offline nie zawierają żadnych pakietów językowych.
 
 > [!IMPORTANT]
-> Pakiety językowe nie zawierają składników .NET Framework, które są wymagane do uruchomienia aplikacji, więc przed zainstalowaniem pakietu językowego należy uruchomić Instalatora sieci Web lub offline. Jeśli pakiet językowy został już zainstalowany, odinstaluj go, Zainstaluj .NET Framework a następnie ponownie zainstaluj pakiet językowy.
+> Pakiety językowe nie zawierają składników programu .NET Framework, które są wymagane do uruchamiania aplikacji, więc przed zainstalowaniem pakietów językowych należy uruchomić instalatora w trybie sieci web lub offline. Jeśli pakiet językowy został już zainstalowany, odinstaluj go, Zainstaluj .NET Framework a następnie ponownie zainstaluj pakiet językowy.
 
-1. Otwórz stronę pobierania pakietu językowego dla zainstalowanej wersji .NET Framework:
+1. Otwórz stronę pobierania pakietu językowego dla wersji .NET Framework, którą zainstalowałeś.
 
     - [Pakiety językowe .NET Framework 4,8](https://go.microsoft.com/fwlink/?LinkId=2053984)
 
@@ -188,38 +188,38 @@ Pakiety językowe są plikami wykonywalnymi zawierającymi zlokalizowane zasoby 
 
     - [Pakiety językowe .NET Framework 4,5](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
-2. Na liście język wybierz język, który chcesz pobrać, i poczekaj kilka sekund, aż strona zostanie załadowana w tym języku.
+2. Na liście Język wybierz język, który chcesz pobrać, a następnie odczekaj kilka sekund aż strona przeładuje się w tym języku.
 
 3. Wybierz pozycję **Pobierz**.
 
 Poniższa tabela zawiera listę obsługiwanych języków.
 
-| Język              | dziedzinie |
+| Język              | Kultura |
 | --------------------- | :-----: |
-| Arabski                | ty      |
-| czeski                 | Rejestr      |
-| duński                | Funkcją      |
-| Holenderski                 | NL      |
-| fiński               | Finlandia      |
-| Angielski (USA)         | pl-US   |
+| arabski                | ty      |
+| czeski                 | cs      |
+| duński                | da      |
+| holenderski                 | nl      |
+| fiński               | fi      |
+| Angielski (USA)         | pl-pl   |
 | francuski                | fr      |
-| niemiecki                | Ukryj      |
-| grecki                 | Colon      |
-| Hebrajski                | Przewodniczący      |
-| węgierski             | Węgry      |
-| Włoski               | go      |
-| japoński              | Japonia      |
-| koreański                | Ko      |
-| Norweski             | znaleziono      |
-| polski                | zysków      |
+| niemiecki                | de      |
+| grecki                 | el      |
+| hebrajski                | Przewodniczący      |
+| węgierski             | hu      |
+| Włoski               | it      |
+| japoński              | ja      |
+| koreański                | ko      |
+| Norweski             | nie      |
+| polski                | pl      |
 | portugalski (Brazylia)   | pt-BR   |
 | Portugalski (Portugalia) | pt-PT   |
 | rosyjski               | ru      |
 | Chiński uproszczony    | zh-CHS  |
-| Hiszpański               | AK      |
-| szwedzki               | OHR      |
+| Hiszpański               | Tak      |
+| szwedzki               | sv      |
 | chiński tradycyjny   | zh-CHT  |
-| turecki               | zdawczy      |
+| turecki               | tr      |
 
 ## <a name="next-steps"></a>Następne kroki
 

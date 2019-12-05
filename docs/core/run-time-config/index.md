@@ -2,12 +2,12 @@
 title: Konfiguracja czasu wykonywania
 description: Dowiedz się, jak skonfigurować aplikacje platformy .NET Core za pomocą ustawień konfiguracji czasu wykonywania.
 ms.date: 11/13/2019
-ms.openlocfilehash: e3922f6df81198b5e122f16d5cfc4b6d15cbb4ae
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 2665026347e94d26026821beb2bfcf8441f755f6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567387"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801914"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>Ustawienia konfiguracji środowiska uruchomieniowego .NET Core
 
@@ -26,11 +26,11 @@ Platforma .NET Core udostępnia następujące mechanizmy konfigurowania aplikacj
 
 - [Zmienne środowiskowe](#environment-variables)
 
-Artykuły w tej sekcji dokumentacji obejmują elementy uporządkowane według kategorii, na przykład debugowania i wyrzucania elementów bezużytecznych. Dostępne opcje konfiguracji są wyświetlane dla *runtimeconfig. JSON* (tylko dla platformy .NET Core), *App. config* (tylko .NET Framework) i zmiennych środowiskowych.
+Artykuły w tej sekcji dokumentacji obejmują elementy uporządkowane według kategorii, na przykład debugowania i wyrzucania elementów bezużytecznych. Jeśli ma to zastosowanie, opcje konfiguracji są wyświetlane dla *runtimeconfig. JSON* (tylko dla platformy .NET Core), *App. config* (tylko .NET Framework) i zmiennych środowiskowych.
 
 ## <a name="runtimeconfigjson"></a>runtimeconfig. JSON
 
-Określ opcje konfiguracji czasu wykonywania w sekcji **configProperties** pliku *runtimeconfig. JSON* . Ta sekcja ma postać:
+Określ opcje konfiguracji czasu wykonywania w sekcji **configProperties** w pliku *runtimeconfig. JSON* aplikacji. Ta sekcja ma postać:
 
 ```json
 {

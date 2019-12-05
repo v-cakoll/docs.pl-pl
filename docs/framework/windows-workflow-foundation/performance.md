@@ -2,12 +2,12 @@
 title: Wydajność programu Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 9a7e1dd2c5ab92ace955aa3b3095f2ed04ee3272
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6e6669cd41795c356e4b7b30f19d93bd8dfa917a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283233"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802651"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Wydajność programu Windows Workflow Foundation 4
 
@@ -17,7 +17,7 @@ ms.locfileid: "74283233"
 
 ## <a name="terminology"></a>Terminologia
 
- Wersja [!INCLUDE[wf1](../../../includes/wf1-md.md)] wprowadzona w .NET Framework 4 będzie określana jako WF4 w pozostałej części tego tematu. [!INCLUDE[wf1](../../../includes/wf1-md.md)] został wprowadzony w .NET Framework 3,0 i zawierał kilka drobnych poprawek w .NET Framework 3,5 z dodatkiem SP1. Wersja .NET Framework 3,5 programu Workflow Foundation będzie określana jako WF3 w pozostałej części tego tematu. WF3 jest dostarczany w .NET Framework 4 obok WF4. Aby uzyskać więcej informacji na temat migrowania artefaktów WF3 do WF4, zobacz: [Przewodnik migracji Windows Workflow Foundation 4](https://go.microsoft.com/fwlink/?LinkID=153313).
+ Wersja [!INCLUDE[wf1](../../../includes/wf1-md.md)] wprowadzona w .NET Framework 4 będzie określana jako WF4 w pozostałej części tego tematu. [!INCLUDE[wf1](../../../includes/wf1-md.md)] został wprowadzony w .NET Framework 3,0 i zawierał kilka drobnych poprawek w .NET Framework 3,5 z dodatkiem SP1. Wersja .NET Framework 3,5 programu Workflow Foundation będzie określana jako WF3 w pozostałej części tego tematu. WF3 jest dostarczany w .NET Framework 4 obok WF4. Aby uzyskać więcej informacji na temat migrowania artefaktów WF3 do WF4, zobacz: [Przewodnik migracji Windows Workflow Foundation 4](migration-guidance.md).
 
  Windows Communication Foundation (WCF) to ujednolicony model programowania firmy Microsoft służący do tworzenia aplikacji zorientowanych na usługę. Najpierw została wprowadzona jako część programu .NET 3,0 wraz z WF3 i teraz jest jednym z najważniejszych składników .NET Framework.
 
@@ -59,13 +59,13 @@ ms.locfileid: "74283233"
 
  W WF4, język XAML zapewnia prawdziwie deklaracyjne środowisko i umożliwia zdefiniowanie całej definicji przepływu pracy w znaczniku XML, odwołujące się do działań i typów utworzonych przy użyciu platformy .NET. Było to trudne do wykonania w WF3 z formatem XOML, bez uwzględniania niestandardowej logiki związanej z kodem. Nowy stos XAML w programie .NET 4 ma znacznie lepszą wydajność podczas serializowania/deserializacji artefaktów przepływu pracy i sprawia, że deklaratywne programowanie jest bardziej atrakcyjne i trwałe.
 
-### <a name="workflow-designer"></a>Projektant przepływu pracy
+### <a name="workflow-designer"></a>Projektant przepływów pracy
  W pełni deklaracyjne wsparcie programistyczne dla WF4 jawnie nakłada wyższe wymagania dotyczące wydajności czasu projektowania dla dużych przepływów pracy. Projektant przepływu pracy w programie WF4 ma znacznie lepszą skalowalność dla dużych przepływów pracy niż w przypadku WF3. Dzięki obsłudze wirtualizacji interfejsu użytkownika Projektant może łatwo ładować duże przepływy pracy 1000 działań w ciągu kilku sekund, podczas gdy niemal niemożliwe jest załadowanie przepływu pracy kilku setek działań za pomocą projektanta WF3.
 
 ## <a name="component-level-performance-comparisons"></a>Porównania wydajności na poziomie składników
  Ta sekcja zawiera dane dotyczące bezpośredniego porównania między poszczególnymi działaniami w przepływach pracy WF3 i WF4.  Kluczowe obszary, takie jak trwałość, mają bardziej głęboki wpływ na wydajność niż poszczególne składniki działania.  Udoskonalenia wydajności w poszczególnych składnikach WF4 są ważne, ponieważ składniki są teraz wystarczająco szybkie, aby można je było porównać z logiką aranżacji.  Przykład, który został omówiony w następnej sekcji: "scenariusz tworzenia usług".
 
-### <a name="environment-setup"></a>Konfiguracja środowiska
+### <a name="environment-setup"></a>Konfigurowanie środowiska
  ![Konfiguracja środowiska dla pomiaru wydajności przepływu pracy](./media/performance/performance-test-environment.gif)
 
  Powyższy rysunek przedstawia konfigurację komputera używaną do pomiaru wydajności na poziomie składnika. Jeden serwer i pięć klientów połączonych za pośrednictwem jednego interfejsu sieciowego Ethernet 1 GB/s. W celu ułatwienia pomiarów serwer jest skonfigurowany do korzystania z jednego rdzenia serwera dwuprocesowego/Quad-Core z systemem Windows Server 2008 x86. Użycie procesora CPU systemu jest utrzymywane o niemal 100%.
@@ -200,7 +200,7 @@ Na poniższym diagramie przedstawiono podstawowy przepływ pracy związane z wyn
 #### <a name="workflow-activation-latency"></a>Opóźnienie aktywacji przepływu pracy
  W aplikacji usługi przepływu pracy WCF czas oczekiwania na uruchomienie nowego przepływu pracy lub załadowanie istniejącego przepływu pracy jest istotny, ponieważ może być blokowany.  Ten przypadek testowy mierzy WF3 hosta XOML dla hosta WF4 XAMLX w typowym scenariuszu.
 
-##### <a name="environment-setup"></a>Konfiguracja środowiska
+##### <a name="environment-setup"></a>Konfigurowanie środowiska
  ![Konfiguracja środowiska dla testów opóźnienia i przepływności](./media/performance/latency-throughput-environment-setup.gif)
 
 ##### <a name="test-setup"></a>Konfiguracja testu
@@ -225,7 +225,7 @@ Na poniższym diagramie przedstawiono podstawowy przepływ pracy związane z wyn
 
  Korelacja oparta na kontekście ma zalety wydajności w przypadku, gdy klucz korelacji znajduje się w nagłówku komunikatu.  Klucz można odczytać z komunikatu bez deserializacji/kopiowania komunikatów.  W korelacji opartej na zawartości klucz korelacji jest przechowywany w treści komunikatu.  Wyrażenie XPath służy do lokalizowania klucza.  Koszt tego dodatkowego przetwarzania zależy od rozmiaru wiadomości, głębokości klucza w treści i liczby kluczy...  Ten test porównuje korelację opartą na kontekście i treści, a także pokazuje spadek wydajności podczas korzystania z wielu kluczy.
 
-#### <a name="environment-setup"></a>Konfiguracja środowiska
+#### <a name="environment-setup"></a>Konfigurowanie środowiska
 ![Konfiguracja środowiska dla testu wydajności przepływu pracy](./media/performance/performance-test-environment.gif)
 
 #### <a name="test-setup"></a>Konfiguracja testu
@@ -301,7 +301,7 @@ Na poniższym diagramie przedstawiono podstawowy przepływ pracy związane z wyn
  Jedną z oczywistych trendów, które należy zwrócić na ten Graf, jest to, że zagnieżdżanie ma stosunkowo minimalny wpływ na użycie pamięci zarówno w WF3, jak i w WF4.  Najbardziej znaczący wpływ na pamięć pochodzi z liczby działań w danym przepływie pracy.  Dane z sekwencji 1000, złożonej głębokości 5 sekwencji 5 i złożoności złożonej 7 sekwencji 1 są oczywiste, ponieważ liczba działań przejdzie do tysięcy, a wzrost wykorzystania pamięci będzie bardziej zauważalny.  W skrajnym przypadku (głębokość 7 sekwencji 1), w której znajdują się 29K działania, WF4 używa niemal 79% mniej pamięci niż WF3.
 
 ### <a name="multiple-workflow-definitions-test"></a>Test wielu definicji przepływu pracy
- Pomiar ilości pamięci na definicję przepływu pracy jest podzielony na dwa różne testy ze względu na dostępne opcje hostingu przepływów pracy w WF3 i WF4.  Testy są uruchamiane w inny sposób niż w teście złożoności przepływu pracy w przypadku wystąpienia danego przepływu pracy, który jest wykonywany tylko raz dla każdej definicji.  Wynika to z faktu, że definicja przepływu pracy i jego host pozostają w pamięci przez okres istnienia elementu AppDomain.  Podczas wyrzucania elementów bezużytecznych należy oczyścić pamięć używaną przez uruchomienie danego wystąpienia przepływu pracy.  Wskazówki dotyczące migracji WF4 zawierają bardziej szczegółowe informacje na temat opcji hostingu. Aby uzyskać więcej informacji, zobacz temat [migracja WF Cookbook: hosting przepływu pracy](https://go.microsoft.com/fwlink/?LinkID=153313).
+ Pomiar ilości pamięci na definicję przepływu pracy jest podzielony na dwa różne testy ze względu na dostępne opcje hostingu przepływów pracy w WF3 i WF4.  Testy są uruchamiane w inny sposób niż w teście złożoności przepływu pracy w przypadku wystąpienia danego przepływu pracy, który jest wykonywany tylko raz dla każdej definicji.  Wynika to z faktu, że definicja przepływu pracy i jego host pozostają w pamięci przez okres istnienia elementu AppDomain.  Podczas wyrzucania elementów bezużytecznych należy oczyścić pamięć używaną przez uruchomienie danego wystąpienia przepływu pracy.  Wskazówki dotyczące migracji WF4 zawierają bardziej szczegółowe informacje na temat opcji hostingu. Aby uzyskać więcej informacji, zobacz temat [migracja WF Cookbook: hosting przepływu pracy](migration-guidance.md).
 
  Tworzenie wielu definicji przepływu pracy dla testu definicji przepływu pracy można wykonać na kilka sposobów.  Na przykład, jeden może użyć generowania kodu, aby utworzyć zestaw 1000 przepływów pracy, które są identyczne, z wyjątkiem nazwy i Zapisz każdy z tych przepływów pracy w oddzielnych plikach.  To podejście zostało wykonane dla testu obsługiwanego przez konsolę.  W WF3, Klasa <xref:System.Workflow.Runtime.WorkflowRuntime> była używana do uruchamiania definicji przepływu pracy.  WF4 może użyć <xref:System.Activities.WorkflowApplication> do utworzenia pojedynczego wystąpienia przepływu pracy lub bezpośredniego użycia <xref:System.Activities.WorkflowInvoker> do uruchomienia działania tak, jakby było wywołaniem metody.  <xref:System.Activities.WorkflowApplication> jest hostem pojedynczego wystąpienia przepływu pracy i ma bliższą <xref:System.Workflow.Runtime.WorkflowRuntime>ą funkcję, która została użyta w tym teście.
 
@@ -358,7 +358,7 @@ public class Workflow1 : Activity
 
  Dostawca trwałości SQL WF4 próbował rozwiązać niektóre z tych problemów.  Tabele trwałości uwidaczniają pewne informacje, takie jak aktywne zakładki i właściwości promocji.  Nowa funkcja korelacji oparta na zawartości w programie WF4 nie będzie działać prawidłowo przy użyciu metody trwałości SQL WF3, która jest oparta na pewnych zmianach w organizacji wystąpienia utrwalonego przepływu pracy.  Dzięki temu zadanie dostawcy trwałości jest bardziej złożone i ma dodatkowe obciążenie bazy danych.
 
-### <a name="environment-setup"></a>Konfiguracja środowiska
+### <a name="environment-setup"></a>Konfigurowanie środowiska
 ![Konfiguracja środowiska dla testu wydajności przepływu pracy](./media/performance/performance-test-environment.gif)
 
 ### <a name="test-setup"></a>Konfiguracja testu
@@ -424,7 +424,7 @@ public class Workflow1 : Activity
 
  Włączenie śledzenia przepływu pracy będzie miało wpływ na wydajność w różnych stopniach.  Poniższy wzorzec używa narzędzia Logman do użycia zdarzeń śledzenia ETW i rejestrowania ich w pliku ETL.  Koszt śledzenia SQL w programie AppFabric nie jest objęty zakresem tego artykułu.  W tym teście porównawczym jest wyświetlany podstawowy profil śledzenia, używany również w programie AppFabric.  Uwzględniono również koszt śledzenia tylko zdarzeń monitorowania kondycji.  Te zdarzenia są przydatne do rozwiązywania problemów i określania średniej przepływności systemu.
 
-### <a name="environment-setup"></a>Konfiguracja środowiska
+### <a name="environment-setup"></a>Konfigurowanie środowiska
  ![Konfiguracja środowiska dla testu wydajności przepływu pracy](./media/performance/performance-test-environment.gif)
 
 ### <a name="test-results"></a>Wyniki tekstu
@@ -434,9 +434,9 @@ public class Workflow1 : Activity
  Monitorowanie kondycji ma około 3% wpływu na przepływność.  Koszt profilu podstawowego wynosi około 8%.
 
 ## <a name="interop"></a>Interop
- WF4 to prawie pełny zapis [!INCLUDE[wf1](../../../includes/wf1-md.md)] i dlatego WF3 przepływy pracy i działania nie są bezpośrednio zgodne z WF4.  Wielu klientów, którzy wcześniej przyjęli Windows Workflow Foundation, będą mieć definicje przepływów pracy lub innych firm, a także niestandardowe działania dla WF3.  Jednym ze sposobów ułatwienia przejścia do WF4 jest użycie działania międzyoperacyjności, które może wykonywać działania WF3 z poziomu przepływu pracy WF4.  Zaleca się, aby działanie <xref:System.Activities.Statements.Interop> było używane tylko wtedy, gdy jest to konieczne. Aby uzyskać więcej informacji na temat migracji do programu WF4, zapoznaj się ze [wskazówkami dotyczącymi migracji WF4](https://go.microsoft.com/fwlink/?LinkID=153313).
+ WF4 to prawie pełny zapis [!INCLUDE[wf1](../../../includes/wf1-md.md)] i dlatego WF3 przepływy pracy i działania nie są bezpośrednio zgodne z WF4.  Wielu klientów, którzy wcześniej przyjęli Windows Workflow Foundation, będą mieć definicje przepływów pracy lub innych firm, a także niestandardowe działania dla WF3.  Jednym ze sposobów ułatwienia przejścia do WF4 jest użycie działania międzyoperacyjności, które może wykonywać działania WF3 z poziomu przepływu pracy WF4.  Zaleca się, aby działanie <xref:System.Activities.Statements.Interop> było używane tylko wtedy, gdy jest to konieczne. Aby uzyskać więcej informacji na temat migracji do programu WF4, zapoznaj się ze [wskazówkami dotyczącymi migracji WF4](migration-guidance.md).
 
-### <a name="environment-setup"></a>Konfiguracja środowiska
+### <a name="environment-setup"></a>Konfigurowanie środowiska
  ![Konfiguracja środowiska dla testu wydajności przepływu pracy](./media/performance/performance-test-environment.gif)
 
 ### <a name="test-results"></a>Wyniki tekstu

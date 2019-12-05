@@ -4,12 +4,12 @@ description: Pomoc dla właścicieli projektu, którzy chcą kompilować rozwią
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 701aa64be8d6c712ef635411ad6c226a3c3ab8ed
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 789f50ffb61b80f590a24bc45693df895b3424f7
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522973"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801927"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organizuj projekt, aby obsługiwał zarówno .NET Framework, jak i .NET Core
 
@@ -24,12 +24,12 @@ Dowiedz się, jak utworzyć rozwiązanie, które kompiluje zarówno .NET Framewo
   - Umożliwia pisanie kodu dla konkretnej wersji .NET Framework w bibliotekach za pomocą dyrektyw kompilatora.
 
   *Nieobsługiwane scenariusze:*
-  - Aby otworzyć istniejące projekty, deweloperzy muszą używać programu Visual Studio 2017. Aby można było obsługiwać starsze wersje programu Visual Studio, [zachowywanie plików projektu w różnych folderach](#support-vs) jest lepszym rozwiązaniem.
+  - Aby otworzyć istniejące projekty, deweloperzy muszą używać programu Visual Studio 2017 lub nowszej wersji. Aby można było obsługiwać starsze wersje programu Visual Studio, [zachowywanie plików projektu w różnych folderach](#support-vs) jest lepszym rozwiązaniem.
 
 - <a name="support-vs"></a>[**Przechowuj istniejące projekty i nowe projekty .NET Core**](#keep-existing-projects-and-create-a-net-core-project)
 
   *Co to jest dobre dla:*
-  - Kontynuuje obsługę opracowywania istniejących projektów bez konieczności przeprowadzania uaktualnienia dla deweloperów/współautorów, którzy nie mają programu Visual Studio 2017.
+  - Obsługa opracowywania istniejących projektów dla deweloperów i współautorów, którzy nie mają programu Visual Studio w wersji 2017 lub nowszej.
   - Zmniejszenie możliwości tworzenia nowych usterek w istniejących projektach, ponieważ w tych projektach nie są wymagane żadne zmiany w kodzie.
 
 ## <a name="example"></a>Przykład
@@ -52,7 +52,7 @@ Uporządkuj repozytorium, aby wszystkie istniejące pliki *\*. csproj* zostały 
 
 Zmiany w notatce:
 
-- Zastąpienie elementów *Packages. config* i *\*. csproj* przy użyciu nowego [\* .NET Core *. csproj*](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj). Pakiety NuGet są określone za pomocą `<PackageReference> ItemGroup`.
+- Zastąpienie elementów *Packages. config* i *\*. csproj* przy użyciu nowego [\*.NET Core *. csproj*](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj). Pakiety NuGet są określone za pomocą `<PackageReference> ItemGroup`.
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>Zachowaj istniejące projekty i Utwórz projekt platformy .NET Core
 

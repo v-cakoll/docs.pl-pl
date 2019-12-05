@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 9dcaa5f73dd8a4ec1943cb7fc840feee889563b8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 360479a2ba17c4542d61a737856d23992296e276
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319848"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802311"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Podstawowe pojęcia programu Windows Communication Foundation
 
@@ -71,7 +71,7 @@ Usługa WCF jest narażona na świecie jako zbiór punktów końcowych.
 **Punkt końcowy infrastruktury**  
  Punkt końcowy, który jest udostępniany przez infrastrukturę w celu ułatwienia funkcjonalności, która jest wymagana lub oferowana przez usługę, która nie jest powiązana z umową usługi. Na przykład usługa może mieć punkt końcowy infrastruktury, który zawiera informacje o metadanych.
 
-**Ulica**  
+**Adres**  
  Określa lokalizację, w której odbierane są komunikaty. Jest on określony jako Uniform Resource Identifier (URI). Część schematu identyfikatora URI nazywa mechanizm transportu, który ma być używany do uzyskiwania dostępu do adresu, takiego jak HTTP i TCP. Hierarchiczna część identyfikatora URI zawiera unikatową lokalizację, której format zależy od mechanizmu transportowego.
 
 Adres punktu końcowego umożliwia tworzenie unikatowych adresów punktów końcowych dla każdego punktu końcowego w usłudze lub w określonych warunkach, aby udostępnić adres między punktami końcowymi. Poniższy przykład przedstawia adres przy użyciu protokołu HTTPS z portem innym niż domyślny:
@@ -144,13 +144,13 @@ Metadane udostępniane przez usługę obejmują dokumenty schematu XML, które d
 Po włączeniu tej funkcji metadane usługi są generowane automatycznie przez program WCF przez sprawdzenie usługi i jej punktów końcowych. Aby opublikować metadane z usługi, należy jawnie włączyć zachowanie metadanych.
 
 **Security**  
- W programie WCF obejmuje poufność (szyfrowanie komunikatów, aby zapobiec podsłuchiwaniu), integralność (środki na potrzeby wykrywania manipulowania komunikatem), uwierzytelnianie (sposób sprawdzania poprawności serwerów i klientów) oraz autoryzację (kontrolę dostępu do zasoby). Te funkcje są udostępniane przy użyciu istniejących mechanizmów zabezpieczeń, takich jak TLS przez HTTP (znany również jako HTTPS) lub przez implementację co najmniej jednej z różnych specyfikacji zabezpieczeń WS-\*.
+ W programie WCF obejmuje poufność (szyfrowanie komunikatów, aby zapobiec podsłuchiwaniu), integralność (środki na potrzeby wykrywania manipulowania komunikatem), uwierzytelnianie (sposób sprawdzania poprawności serwerów i klientów) oraz autoryzację (kontrolę dostępu do zasoby). Te funkcje są udostępniane przy użyciu istniejących mechanizmów zabezpieczeń, takich jak TLS przez HTTP (znanego również jako HTTPS) lub przez implementację co najmniej jednej z różnych specyfikacji zabezpieczeń WS-\*.
 
 **Tryb zabezpieczeń transportu**  
  Określa, że poufność, integralność i uwierzytelnianie są udostępniane przez mechanizmy warstwy transportowej (takie jak HTTPS). W przypadku korzystania z transportu, takiego jak HTTPS, ten tryb ma zaletę wydajnej wydajności i jest zrozumiały ze względu na jego powszechność w Internecie. Wadą jest to, że ten rodzaj zabezpieczeń jest stosowany osobno dla każdego przeskoku w ścieżce komunikacji, co sprawia, że komunikacja jest podatna na ataki "man in the middle".
 
 **Tryb zabezpieczeń wiadomości**  
- Określa, że zabezpieczenia są zapewniane przez implementację co najmniej jednej specyfikacji zabezpieczeń, takiej jak specyfikacja o nazwie [zabezpieczenia usług w sieci Web: zabezpieczenia komunikatów protokołu SOAP](https://go.microsoft.com/fwlink/?LinkId=94684). Każdy komunikat zawiera niezbędne mechanizmy zapewnienia bezpieczeństwa w trakcie jego przesyłania oraz umożliwienie odbiornikom wykrywania naruszenia i odszyfrowywania wiadomości. W tym sensie zabezpieczenia są hermetyzowane w każdym komunikacie, zapewniając kompleksowe zabezpieczenia dla wielu przeskoków. Ze względu na to, że informacje o zabezpieczeniach staną się częścią komunikatu, można również uwzględnić wiele rodzajów poświadczeń z komunikatem (są one określane jako _oświadczenia_). Takie podejście umożliwia również umożliwienie bezpiecznego przesyłania komunikatów w ramach dowolnego transportu, w tym wielu transportów między jej źródłem i miejscem docelowym. Wadą tej metody jest złożoność stosowanych mechanizmów kryptograficznych, co skutkuje wpływem na wydajność.
+ Określa, że zabezpieczenia są zapewniane przez implementację co najmniej jednej specyfikacji zabezpieczeń, takiej jak specyfikacja o nazwie [zabezpieczenia usług w sieci Web: zabezpieczenia komunikatów protokołu SOAP](http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf). Każdy komunikat zawiera niezbędne mechanizmy zapewnienia bezpieczeństwa w trakcie jego przesyłania oraz umożliwienie odbiornikom wykrywania naruszenia i odszyfrowywania wiadomości. W tym sensie zabezpieczenia są hermetyzowane w każdym komunikacie, zapewniając kompleksowe zabezpieczenia dla wielu przeskoków. Ze względu na to, że informacje o zabezpieczeniach staną się częścią komunikatu, można również uwzględnić wiele rodzajów poświadczeń z komunikatem (są one określane jako _oświadczenia_). Takie podejście umożliwia również umożliwienie bezpiecznego przesyłania komunikatów w ramach dowolnego transportu, w tym wielu transportów między jej źródłem i miejscem docelowym. Wadą tej metody jest złożoność stosowanych mechanizmów kryptograficznych, co skutkuje wpływem na wydajność.
 
 **Transport z użyciem poświadczeń komunikatów tryb zabezpieczeń**  
  Określa użycie warstwy transportowej w celu zapewnienia poufności, uwierzytelniania i integralności komunikatów, natomiast każdy komunikat może zawierać wiele poświadczeń (oświadczeń) wymaganych przez odbiorniki wiadomości.

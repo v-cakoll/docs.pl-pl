@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 0d6eda0aea9ad97063cc5362d83163443de034a6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a7a11029c4e896b0486311bc3caf42fab53d1ea6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976956"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802101"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Ustawienie rejestru renderowania grafiki
 Ten temat zawiera omówienie ustawień rejestru renderowania grafiki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], które mają wpływ na aplikacje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -24,7 +24,7 @@ Ten temat zawiera omówienie ustawień rejestru renderowania grafiki [!INCLUDE[T
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>Co to są XPDM i WDDM?  
- Niektóre ustawienia rejestru renderowania grafiki mają różne wartości domyślne, w zależności od tego, czy karta wideo korzysta ze sterownika XPDM czy WDDM. XPDM to model sterownika wyświetlania [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] i WDDM to model sterownika wyświetlania systemu Windows. WDDM jest dostępny na komputerach z systemem Windows Vista i [!INCLUDE[win7](../../../../includes/win7-md.md)]. XPDM jest dostępna na komputerach z systemem Windows Vista, [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]i [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Aby uzyskać więcej informacji na temat usługi WDDM, zobacz [Przewodnik dotyczący projektowania modelu sterownika wyświetlania systemu Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178394).  
+ Niektóre ustawienia rejestru renderowania grafiki mają różne wartości domyślne, w zależności od tego, czy karta wideo korzysta ze sterownika XPDM czy WDDM. XPDM to model sterownika wyświetlania [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] i WDDM to model sterownika wyświetlania systemu Windows. WDDM jest dostępny na komputerach z systemem Windows Vista i Windows 7. XPDM jest dostępna na komputerach z systemem Windows Vista, [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]i [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Aby uzyskać więcej informacji na temat usługi WDDM, zobacz [Przewodnik dotyczący projektowania modelu sterownika wyświetlania systemu Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178394).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Ustawienia rejestru  

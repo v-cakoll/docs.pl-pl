@@ -2,26 +2,26 @@
 title: 'Instrukcje: Włączanie trwałości SQL dla przepływów pracy i usług przepływu pracy'
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 4dc5648d748372828c5b9a36441bfb02eef045e1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: bef95dbeaaa96678a66ba94494a0207c7314c326
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460877"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802586"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Instrukcje: Włączanie trwałości SQL dla przepływów pracy i usług przepływu pracy
 
 W tym temacie opisano sposób konfigurowania funkcji magazynu wystąpień przepływu pracy SQL w celu zapewnienia trwałości dla przepływów pracy i usług przepływu pracy w sposób programistyczny i przy użyciu pliku konfiguracji.
 
-Sieć szkieletowa aplikacji systemu Windows Server upraszcza proces konfigurowania trwałości. Aby uzyskać więcej informacji, zobacz [Konfiguracja trwałości usługi App Fabric](https://go.microsoft.com/fwlink/?LinkId=201204).
+Sieć szkieletowa aplikacji systemu Windows Server upraszcza proces konfigurowania trwałości. Aby uzyskać więcej informacji, zobacz [Konfiguracja trwałości usługi App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee790848(v=azure.10)).
 
 Przed użyciem funkcji magazynu wystąpień przepływu pracy SQL Utwórz bazę danych używaną przez funkcję do utrwalania wystąpień przepływu pracy. Program konfiguracji [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] kopiuje pliki skryptów SQL skojarzonych z funkcją Magazyn wystąpień przepływu pracy SQL do folderu%WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN. Uruchom te pliki skryptów dla bazy danych SQL Server 2005 lub SQL Server 2008, która ma być używana przez magazyn wystąpień programu SQL do utrwalania wystąpień przepływu pracy. Najpierw uruchom plik SqlWorkflowInstanceStoreSchema. SQL, a następnie uruchom plik SqlWorkflowInstanceStoreLogic. SQL.
 
 > [!NOTE]
 > Aby wyczyścić bazę danych trwałości w celu utworzenia nowej bazy danych, Uruchom skrypty w%WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN w następującej kolejności.
 >
-> 1. SqlWorkflowInstanceStoreSchema. SQL
-> 2. SqlWorkflowInstanceStoreLogic. SQL
+> 1. SqlWorkflowInstanceStoreSchema.sql
+> 2. SqlWorkflowInstanceStoreLogic.sql
 
 > [!IMPORTANT]
 > Jeśli nie utworzysz bazy danych trwałości, funkcja magazynu wystąpień przepływu pracy SQL zgłasza wyjątek podobny do poniższego, gdy host próbuje utrwalać przepływy pracy.
@@ -152,7 +152,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> Zaleca się, aby nie przechowywać poufnych informacji, takich jak nazwy użytkowników i hasła w pliku Web. config. Jeśli przechowujesz poufne informacje w pliku Web. config, należy zabezpieczyć dostęp do pliku Web. config za pomocą list Access Control systemu plików (ACL). Ponadto można zabezpieczyć wartości konfiguracyjne w pliku konfiguracji, jak wspomniano w temacie [szyfrowanie informacji o konfiguracji za pomocą konfiguracji chronionej](https://go.microsoft.com/fwlink/?LinkId=178419).
+> Zaleca się, aby nie przechowywać poufnych informacji, takich jak nazwy użytkowników i hasła w pliku Web. config. Jeśli przechowujesz poufne informacje w pliku Web. config, należy zabezpieczyć dostęp do pliku Web. config za pomocą list Access Control systemu plików (ACL). Ponadto można zabezpieczyć wartości konfiguracyjne w pliku konfiguracji, jak wspomniano w temacie [szyfrowanie informacji o konfiguracji za pomocą konfiguracji chronionej](https://docs.microsoft.com/en-us/previous-versions/aspnet/53tyfkaw(v=vs.100)).
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>Elementy Machine. config powiązane z funkcją magazynu wystąpień przepływu pracy SQL
 

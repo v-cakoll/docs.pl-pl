@@ -2,12 +2,12 @@
 title: Debugowanie przepływów pracy
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-ms.openlocfilehash: 3947e61161b0e2108fa48fbc7e33fb7601645a1b
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 2bfc50215697636f1771d6bb35510fbf9e0b435d
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291491"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802638"
 ---
 # <a name="debugging-workflows"></a>Debugowanie przepływów pracy
 
@@ -31,10 +31,10 @@ Debugowanie przepływu pracy obsługuje również korzystanie z infrastruktury p
 
 ## <a name="remote-debugging"></a>Debugowanie zdalne
 
-Debugowanie zdalne Windows Workflow Foundation (WF) działa tak samo jak debugowanie zdalne dla innych składników programu Visual Studio. Aby uzyskać informacje na temat korzystania z debugowania zdalnego, zobacz [How to: Enable Remote Debug](https://go.microsoft.com/fwlink/?LinkId=196257).
+Debugowanie zdalne Windows Workflow Foundation (WF) działa tak samo jak debugowanie zdalne dla innych składników programu Visual Studio. Aby uzyskać informacje na temat korzystania z debugowania zdalnego, zobacz [How to: Enable Remote Debug](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100)).
 
 > [!NOTE]
-> Jeśli aplikacja przepływu pracy jest ukierunkowana na architekturę x86 i jest hostowana na komputerze z 64-bitowym systemem operacyjnym, debugowanie zdalne nie będzie działać, jeśli program Visual Studio nie jest zainstalowany na komputerze zdalnym lub obiekt docelowy dla aplikacji przepływu pracy zostanie zmieniony na **Dowolny procesor**.
+> Jeśli aplikacja przepływu pracy jest ukierunkowana na architekturę x86 i jest hostowana na komputerze z uruchomionym 64-bitowym systemem operacyjnym, debugowanie zdalne nie będzie działać, jeśli program Visual Studio nie jest zainstalowany na komputerze zdalnym lub obiekt docelowy dla aplikacji przepływu pracy zostanie zmieniony na **dowolny procesor CPU**.
 
 ## <a name="extending-the-workflow-debugging-service"></a>Rozszerzanie usługi debugowania przepływu pracy
 

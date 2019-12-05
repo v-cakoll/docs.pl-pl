@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 86aab2b39aaa9c7d7d92f7d5738482723cf6852f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: dfbf5a9b437d0acea16a75236fd3d2861c0f2e06
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320179"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802368"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Szybki start: rozwiązywanie problemów z architekturą WCF
 W tym temacie wymieniono kilka znanych problemów, z którymi klienci korzystali podczas opracowywania klientów i usług WCF. Jeśli problem, z którym korzystasz, nie znajduje się na liście, zalecamy skonfigurowanie śledzenia dla usługi. Spowoduje to wygenerowanie pliku śledzenia, który można wyświetlić za pomocą podglądu plików śledzenia i uzyskać szczegółowe informacje o wyjątkach, które mogą wystąpić w ramach usługi. Aby uzyskać więcej informacji na temat konfigurowania śledzenia, zobacz: [Konfigurowanie śledzenia](./diagnostics/tracing/configuring-tracing.md). Aby uzyskać więcej informacji na temat podglądu plików śledzenia, zobacz: [narzędzie Podgląd śledzenia usług (SvcTraceViewer. exe)](service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -136,9 +136,9 @@ public class MyServiceHost : ServiceHost
   
 - [Debugowanie błędów uwierzytelniania systemu Windows](./feature-details/debugging-windows-authentication-errors.md)  
   
-- [Rejestrowanie nazw głównych usługi Kerberos przy użyciu protokołu HTTP. sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [Rejestrowanie nazw głównych usługi Kerberos przy użyciu protokołu HTTP. sys](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms178119(v=sql.105))  
   
-- [Objaśnienie protokołu Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Objaśnienie protokołu Kerberos](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v%3dtechnet.10))  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Gdy zgłaszam wyjątek FaultException\<>, gdzie typ jest wyjątkiem, zawsze otrzymuję ogólny typ Błęduexception na kliencie, a nie typ ogólny. Co się dzieje?  

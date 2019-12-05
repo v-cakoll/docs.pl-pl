@@ -2,12 +2,12 @@
 title: Używanie działań WF programu .NET Framework 3.0 w .NET Framework 4 przy użyciu działań Interop
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: de0a0474f0a996ce8c781064f56c03b483ca1bb9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fb9536d5ee7a31039d77deffc3c0b0c7a6263b66
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283196"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802573"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Używanie działań WF programu .NET Framework 3.0 w .NET Framework 4 przy użyciu działań Interop
 Działanie <xref:System.Activities.Statements.Interop> to działanie [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4,5), które otacza działanie .NET Framework 3,5 (WF 3,5) w ramach przepływu pracy [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. Działanie WF 3 może być jednym działaniem typu liść lub całym drzewem działań. Wykonanie (w tym operacje anulowania i obsługi wyjątków) i trwałość działania .NET Framework 3,5 odbywa się w kontekście wykonywania [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]go wystąpienia przepływu pracy.  
@@ -24,7 +24,7 @@ Działanie <xref:System.Activities.Statements.Interop> to działanie [!INCLUDE[n
   
 - Działanie WF 3 musi mieć publiczny Konstruktor bez parametrów.  
   
-- Ze względu na ograniczenia w typach interfejsów obsługiwanych przez działanie <xref:System.Activities.Statements.Interop>, <xref:System.Workflow.Activities.HandleExternalEventActivity> i <xref:System.Workflow.Activities.CallExternalMethodActivity> nie mogą być używane bezpośrednio, ale można użyć działań pochodnych utworzonych za pomocą narzędzia działania komunikacyjnego przepływu pracy (WCA. exe). Zobacz [narzędzia Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=178889) , aby uzyskać szczegółowe informacje.  
+- Ze względu na ograniczenia w typach interfejsów obsługiwanych przez działanie <xref:System.Activities.Statements.Interop>, <xref:System.Workflow.Activities.HandleExternalEventActivity> i <xref:System.Workflow.Activities.CallExternalMethodActivity> nie mogą być używane bezpośrednio, ale można użyć działań pochodnych utworzonych za pomocą narzędzia działania komunikacyjnego przepływu pracy (WCA. exe). Zobacz [narzędzia Windows Workflow Foundation](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734408(v=vs.90)) , aby uzyskać szczegółowe informacje.  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>Konfigurowanie działania WF 3 w działaniu międzyoperacyjnym  
  Aby skonfigurować i przekazać dane do działania programu WF 3 i z niego z niej, w granicach międzyoperacyjnych właściwości działania WF 3 i właściwości metadanych są uwidaczniane przez działanie <xref:System.Activities.Statements.Interop>. Właściwości metadanych działania WF 3 (takie jak <xref:System.Workflow.ComponentModel.Activity.Name%2A>) są uwidaczniane przez kolekcję <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A>. Jest to kolekcja par nazwa-wartość służąca do definiowania wartości właściwości metadanych działania WF 3. Właściwość metadanych jest właściwością utworzoną przez właściwość zależności, dla której ustawiono flagę <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata>.  

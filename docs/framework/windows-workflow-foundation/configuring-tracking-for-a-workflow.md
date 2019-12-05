@@ -2,12 +2,12 @@
 title: Konfigurowanie śledzenia dla przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 97b25873e9f20d5d390b7a59531b3a5af32296df
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458901"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802677"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Konfigurowanie śledzenia dla przepływu pracy
 
@@ -50,7 +50,7 @@ instance.Extensions.Add(trackingParticipant);
 
 ### <a name="configuring-workflow-service-tracking"></a>Konfigurowanie śledzenia usługi przepływu pracy
 
-Przepływ pracy może być ujawniony jako usługa WCF, gdy jest hostowany na hoście usługi <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowServiceHost> to wyspecjalizowana implementacja ServiceHost platformy .NET dla usługi opartej na przepływie pracy. W tej sekcji wyjaśniono, jak skonfigurować śledzenie dla usługi przepływu pracy [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] działającej w programie <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Jest ona konfigurowana za pośrednictwem pliku Web. config (dla usługi hostowanej w sieci Web) lub pliku App. config (dla usługi hostowanej w aplikacji autonomicznej, takiej jak Aplikacja konsolowa) przez określenie zachowania usługi lub za pośrednictwem kodu przez dodanie zachowania specyficznego dla śledzenia Kolekcja <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> dla hosta usługi.
+Przepływ pracy może być ujawniony jako usługa WCF, gdy jest hostowany na hoście usługi <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowServiceHost> to wyspecjalizowana implementacja ServiceHost platformy .NET dla usługi opartej na przepływie pracy. W tej sekcji wyjaśniono, jak skonfigurować śledzenie dla usługi przepływu pracy [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] działającej w programie <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Jest ona konfigurowana za pośrednictwem pliku Web. config (dla usługi hostowanej w sieci Web) lub pliku App. config (dla usługi hostowanej w aplikacji autonomicznej, takiej jak Aplikacja konsolowa) przez określenie zachowania usługi lub za pośrednictwem kodu przez dodanie zachowania specyficznego dla śledzenia do kolekcji <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> dla hosta usługi.
 
 W przypadku usługi przepływu pracy hostowanej w <xref:System.ServiceModel.WorkflowServiceHost>można dodać <xref:System.Activities.Tracking.EtwTrackingParticipant> przy użyciu elementu <`behavior`> w pliku konfiguracji, jak pokazano w poniższym przykładzie.
 
@@ -134,7 +134,7 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> Więcej informacji o profilach śledzenia można znaleźć w tematach [śledzenie profilów](https://go.microsoft.com/fwlink/?LinkId=201310).
+> Więcej informacji o profilach śledzenia można znaleźć w tematach [śledzenie profilów](tracking-profiles.md).
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Konfigurowanie śledzenia przy użyciu WorkflowInvoker
 
@@ -196,7 +196,7 @@ Jeśli zdarzenia muszą być zapisywane w określonym dzienniku aplikacji, wykon
     </system.serviceModel>
     ```
 
-2. Skopiuj plik manifestu z%windir%\Microsoft.NET\Framework\\\<najnowszej wersji [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man do tymczasowej lokalizacji i zmień jego nazwę na Microsoft. Windows. ApplicationServer. Applications_Provider1. Man
+2. Skopiuj plik manifestu z%windir%\Microsoft.NET\Framework\\\<najnowszej wersji [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man do lokalizacji tymczasowej, a następnie zmień jego nazwę na Microsoft. Windows. ApplicationServer. Applications_Provider1. Man
 
 3. Zmień identyfikator GUID w pliku manifestu na nowy identyfikator GUID.
 
@@ -222,7 +222,7 @@ Jeśli zdarzenia muszą być zapisywane w określonym dzienniku aplikacji, wykon
 
 6. Wygeneruj bibliotekę DLL zasobów, wykonując następujące kroki.
 
-    1. Zainstaluj Windows SDK. Windows SDK obejmuje kompilator komunikatów ([mc. exe](https://go.microsoft.com/fwlink/?LinkId=184606)) i kompilator zasobów ([RC. exe](https://go.microsoft.com/fwlink/?LinkId=184605)).
+    1. Zainstaluj Windows SDK. Windows SDK obejmuje kompilator komunikatów ([mc. exe](/windows/win32/wes/message-compiler--mc-exe-)) i kompilator zasobów ([RC. exe](/windows/win32/menurc/using-rc-the-rc-command-line-)).
 
     2. W Windows SDK wierszu polecenia Uruchom polecenie mc. exe w nowym pliku manifestu.
 
@@ -250,7 +250,7 @@ Jeśli zdarzenia muszą być zapisywane w określonym dzienniku aplikacji, wykon
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
         ```
 
-    7. Użyj [wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) , aby zarejestrować manifest.
+    7. Użyj [wevtutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10)) , aby zarejestrować manifest.
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
@@ -258,5 +258,5 @@ Jeśli zdarzenia muszą być zapisywane w określonym dzienniku aplikacji, wykon
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Monitorowanie aplikacji sieci szkieletowej systemu Windows Server](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Monitorowanie aplikacji przy użyciu sieci szkieletowej aplikacji](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Monitorowanie aplikacji sieci szkieletowej systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [Monitorowanie aplikacji przy użyciu sieci szkieletowej aplikacji](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

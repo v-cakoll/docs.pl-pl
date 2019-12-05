@@ -2,12 +2,12 @@
 title: Host usługi WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: a4efa0d5a46eb0d8e6eef08fd17c38f7db3e7e9e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c855fe7cc804fac14348990b7a6f5f84a0956b0c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423837"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802411"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host usługi WCF (WcfSvcHost.exe)
 
@@ -15,7 +15,7 @@ Windows Communication Foundation (WCF) Host usługi (WcfSvcHost. exe) umożliwia
 
 ## <a name="wcf-service-host"></a>Host usługi WCF
 
-Host usługi WCF wylicza usługi w projekcie usługi WCF, ładuje konfigurację projektu i tworzy wystąpienie hosta dla każdej znalezionej usługi. Narzędzie jest zintegrowane z programem Visual Studio za pomocą szablonu usługi WCF i jest wywoływane po rozpoczęciu debugowania projektu.
+Host usługi WCF wylicza usługi w projekcie usługi WCF, ładuje tej konfiguracji projektu, a następnie tworzy wystąpienie hosta dla każdej usługi, które znajdzie. Narzędzie jest zintegrowane z programem Visual Studio za pomocą szablonu usługi WCF i jest wywoływane po rozpoczęciu debugowania projektu.
 
 Korzystając z hosta usługi WCF, można hostować usługę WCF (w projekcie biblioteki usługi WCF) bez konieczności pisania dodatkowego kodu lub zatwierdzania do określonego hosta podczas opracowywania.
 
@@ -33,7 +33,7 @@ Należy jednak pamiętać, że narzędzie nie pomoże Ci skonfigurować hosta. W
 
 ## <a name="scenarios-for-using-wcf-service-host-inside-visual-studio"></a>Scenariusze korzystania z hosta usługi WCF w programie Visual Studio
 
-W poniższej tabeli wymieniono wszystkie parametry w oknie dialogowym **argumenty wiersza polecenia** , które można znaleźć, klikając prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań** w programie Visual Studio, wybierając pozycję **Właściwości**, a następnie wybierając polecenie **Debuguj** i kliknij pozycję **Uruchom projekt**. Parametry te są przydatne podczas konfigurowania hosta usługi WCF.
+W poniższej tabeli wymieniono wszystkie parametry w oknie dialogowym **argumenty wiersza polecenia** , które można znaleźć, klikając prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań** w programie Visual Studio, wybierając **Właściwości**, a następnie wybierając kartę **debugowanie** i klikając polecenie **Uruchom projekt**. Parametry te są przydatne podczas konfigurowania hosta usługi WCF.
 
 |Parametr|Znaczenie|
 |---------------|-------------|
@@ -45,13 +45,13 @@ W poniższej tabeli wymieniono wszystkie parametry w oknie dialogowym **argument
 
 Po utworzeniu nowego projektu usługi WCF i naciśnięciu klawisza F5 w celu uruchomienia debugera, Host usługi WCF rozpocznie hostowanie wszystkich usług znalezionych w projekcie. Klient testowy WCF zostanie automatycznie otwarty i zostanie wyświetlona lista punktów końcowych usługi zdefiniowanych w pliku konfiguracji. W oknie głównym można testować parametry i wywoływać usługę.
 
-Aby upewnić się, że klient testowy WCF jest używany, kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań** w programie Visual Studio, wybierz polecenie **Właściwości**, a następnie wybierz kartę **debugowanie** . kliknij przycisk **Start Project** i upewnij się, że w obszarze  **Argumenty wiersza polecenia** okno dialogowe.
+Aby upewnić się, że klient testowy WCF jest używany, kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań** w programie Visual Studio, wybierz polecenie **Właściwości**, a następnie wybierz kartę **debugowanie** . kliknij przycisk **Start Project** i upewnij się, że w oknie dialogowym **argumenty wiersza polecenia** pojawiają się następujące elementy.
 
 `/client:WcfTestClient.exe`
 
 #### <a name="using-a-custom-client"></a>Korzystanie z niestandardowego klienta
 
-Aby użyć niestandardowego klienta, kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań** w programie Visual Studio, wybierz polecenie **Właściwości**, a następnie wybierz kartę **debugowanie** . kliknij przycisk **Start Project** i edytuj parametr `/client` w **argumentach wiersza polecenia.** okno dialogowe, które umożliwia wskazanie niestandardowego klienta, jak pokazano w poniższym przykładzie.
+Aby użyć niestandardowego klienta, kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań** w programie Visual Studio, wybierz polecenie **Właściwości**, a następnie wybierz kartę **debugowanie** . kliknij przycisk **Start Project** i edytuj parametr `/client` w oknie dialogowym **argumenty wiersza polecenia** , aby wskazać niestandardowego klienta, jak pokazano w poniższym przykładzie.
 
 `/client:"path/CustomClient.exe"`
 
@@ -67,7 +67,7 @@ Na przykład jeśli używasz szablonu biblioteki usługi zespolonej, możesz uż
 
 #### <a name="specifying-no-client"></a>Określanie braku klienta
 
-Aby określić, że żaden klient nie będzie używany po uruchomieniu usługi WCF, kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań** w programie Visual Studio, wybierz polecenie **Właściwości**, a następnie wybierz kartę **debugowanie** . kliknij przycisk **Start projekt** i pozostaw **polecenie pole dialogowe argumenty wiersza** jest puste.
+Aby określić, że żaden klient nie będzie używany po uruchomieniu usługi WCF, kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań** w programie Visual Studio, wybierz polecenie **Właściwości**, a następnie wybierz kartę **debugowanie** . kliknij przycisk **Start Project** i pozostaw puste okno dialogowe **argumenty wiersza polecenia** .
 
 #### <a name="using-a-custom-host"></a>Korzystanie z hosta niestandardowego
 
@@ -119,7 +119,7 @@ Dostęp można modyfikować za pomocą narzędzia Netsh. exe w [!INCLUDE[wv](../
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 
-Aby uzyskać więcej informacji na temat narzędzia Netsh. exe, zobacz "[jak używać narzędzia Netsh. exe i przełączników wiersza polecenia](https://go.microsoft.com/fwlink/?LinkId=97877)".
+Aby uzyskać więcej informacji na temat narzędzia Netsh. exe, zobacz "[jak używać narzędzia Netsh. exe i przełączników wiersza polecenia](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))".
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,12 +2,12 @@
 title: Informacje o platformie .NET Core
 description: Dowiedz się więcej o programie .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: b3cdc8d4aeaf85765b51543069a5f279e84f8623
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711204"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801948"
 ---
 # <a name="about-net-core"></a>Informacje o platformie .NET Core
 
@@ -52,11 +52,11 @@ W oparciu o platformę .NET Core zostały utworzone wiele platform:
 - [Platforma uniwersalna systemu Windows systemu Windows 10 (platformy UWP)](https://developer.microsoft.com/windows)
 - [Tizen](https://developer.tizen.org/development/training/.net-application)
 
-## <a name="composition"></a>Budowa
+## <a name="composition"></a>Kompozycja
 
 Platforma .NET Core składa się z następujących części:
 
-- [Środowisko uruchomieniowe platformy .NET Core](https://github.com/dotnet/coreclr), które udostępnia system typów, ładowanie zestawu, Moduł wyrzucania elementów bezużytecznych, natywną międzyoperacyjność i inne podstawowe usługi. [Biblioteki .NET Core Framework](https://github.com/dotnet/corefx) zapewniają typy danych pierwotnych, typy kompozycji aplikacji i podstawowe narzędzia.
+- [Środowisko uruchomieniowe platformy .NET Core](https://github.com/dotnet/runtime/tree/master/src/coreclr), które udostępnia system typów, ładowanie zestawu, Moduł wyrzucania elementów bezużytecznych, natywną międzyoperacyjność i inne podstawowe usługi. [Biblioteki .NET Core Framework](https://github.com/dotnet/runtime/tree/master/src/libraries) zapewniają typy danych pierwotnych, typy kompozycji aplikacji i podstawowe narzędzia.
 - [Środowisko uruchomieniowe ASP.NET](https://github.com/aspnet/home), które zapewnia platformę do tworzenia nowoczesnych, opartych na chmurze aplikacji internetowych, takich jak aplikacje internetowe, aplikacje IoT i frontony mobilne.
 - [Narzędzia interfejs wiersza polecenia platformy .NET Core](https://github.com/dotnet/cli) i kompilatory języka ([Roslyn](https://github.com/dotnet/roslyn) i [F#](https://github.com/microsoft/visualfsharp)), które umożliwiają środowisko deweloperskie platformy .NET Core.
 - [Narzędzie dotnet](https://github.com/dotnet/core-setup), które służy do uruchamiania aplikacji .NET Core i narzędzi interfejsu wiersza polecenia. Wybiera środowisko uruchomieniowe i obsługuje środowisko uruchomieniowe, zawiera zasady ładowania zestawu oraz uruchamia aplikacje i narzędzia.
@@ -79,17 +79,17 @@ Produkt jest podzielony na kilka części, dzięki czemu różne części można
 
 Ludzie często pytają, w jaki sposób platforma .NET Core jest zaimplementowana w celu obsługi wielu systemów operacyjnych. Zazwyczaj pytają, czy istnieją oddzielne implementacje lub kiedy jest używana [Kompilacja warunkowa](https://en.wikipedia.org/wiki/Conditional_compilation) . Jest to zarówno, jak i silna różnica w stosunku do kompilacji warunkowej.
 
-Na poniższym wykresie można zobaczyć, że większość [CoreFX](https://github.com/dotnet/corefx) jest kodem niezależnym od platformy, który jest udostępniany na wszystkich platformach. Kod neutralny dla platformy można zaimplementować jako pojedynczy zestaw przenośny, który jest używany na wszystkich platformach.
+Na poniższym wykresie można zobaczyć, że większość [bibliotek .NET Core](https://github.com/dotnet/runtime/tree/master/src/libraries) jest kodem niezależnym od platformy, który jest współużytkowany na wszystkich platformach. Kod neutralny dla platformy można zaimplementować jako pojedynczy zestaw przenośny, który jest używany na wszystkich platformach.
 
 ![CoreFX: wiersze kodu na platformę](../images/corefx-platforms-loc.png)
 
-Implementacje systemów Windows i UNIX mają podobne rozmiary. System Windows ma większą implementację, ponieważ CoreFX implementuje niektóre funkcje tylko dla systemu Windows, takie jak [Microsoft. Win32. Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry) , ale nie implementuje jeszcze wielu koncepcji tylko dla systemu UNIX. Zobaczysz również, że większość implementacji systemów Linux i macOS jest współdzielona przez implementację systemu UNIX, podczas gdy implementacje specyficzne w systemach Linux i macOS są w przybliżeniu podobne do wielkości.
+Implementacje systemów Windows i UNIX mają podobne rozmiary. System Windows ma większą implementację, ponieważ biblioteki .NET Core implementują niektóre funkcje tylko systemu Windows, takie jak [Microsoft. Win32. Registry](https://github.com/dotnet/runtime/tree/master/src/libraries/Microsoft.Win32.Registry) , ale nie implementują jeszcze wielu koncepcji tylko dla systemu UNIX. Zobaczysz również, że większość implementacji systemów Linux i macOS jest współdzielona przez implementację systemu UNIX, podczas gdy implementacje specyficzne w systemach Linux i macOS są w przybliżeniu podobne do wielkości.
 
 Platforma .NET Core ma wiele bibliotek opartych na platformie i niezależnych od platformy. Wzorzec można zobaczyć w kilku przykładach:
 
-- [CoreCLR](https://github.com/dotnet/coreclr) jest specyficzna dla platformy. Jest ona oparta na podsystemach systemu operacyjnego, takich jak Menedżer pamięci i harmonogram wątków.
-- [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) i [System. Security. Cryptography. algorytmy](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) są specyficzne dla platformy, przy czym interfejsy API magazynu i kryptografii są różne w poszczególnych systemach operacyjnych.
-- [System. Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) i [System. LINQ](https://github.com/dotnet/corefx/tree/master/src/System.Linq) są niezależne od platformy, co oznacza, że tworzą i pracują ze strukturami danych.
+- [CoreCLR](https://github.com/dotnet/runtime/tree/master/src/coreclr) jest specyficzna dla platformy. Jest ona oparta na podsystemach systemu operacyjnego, takich jak Menedżer pamięci i harmonogram wątków.
+- [System.IO](https://github.com/dotnet/runtime/tree/master/src/libraries/System.IO) i [System. Security. Cryptography. algorytmy](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Security.Cryptography.Algorithms) są specyficzne dla platformy, przy czym interfejsy API magazynu i kryptografii są różne w poszczególnych systemach operacyjnych.
+- [System. Collections](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Collections) i [System. LINQ](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Linq) są niezależne od platformy, co oznacza, że tworzą i pracują ze strukturami danych.
 
 ## <a name="comparisons-to-other-net-implementations"></a>Porównania z innymi implementacjami platformy .NET
 

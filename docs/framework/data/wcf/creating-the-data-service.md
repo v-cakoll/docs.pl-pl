@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: d30b2e30639837730ecb185a2c0f659a63955004
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72e3b35465968674a20aa48262d3425a2190ff74
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975395"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802266"
 ---
 # <a name="create-the-data-service"></a>Utworzenie usługi danych
 
@@ -54,7 +54,7 @@ W tym temacie opisano Tworzenie przykładowej usługi danych korzystającej z Us
 
     - Jeśli nie masz już skonfigurowanego połączenia z bazą danych, kliknij pozycję **nowe połączenie** i Utwórz nowe połączenie. Aby uzyskać więcej informacji, zobacz [How to: Create Connections to SQL Server Databases](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). To wystąpienie SQL Server musi mieć dołączoną przykładową bazę danych Northwind.
 
-         \- lub-
+         \- lub —
 
     - Jeśli masz już połączenie z bazą danych do łączenia się z bazą danych Northwind, wybierz to połączenie z listy połączeń.
 
@@ -71,7 +71,7 @@ W tym temacie opisano Tworzenie przykładowej usługi danych korzystającej z Us
    ![Szablon elementu usługi danych programu WCF w programie Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > Szablon **usługi danych programu WCF** jest dostępny w programie visual Studio 2015, ale nie w programie visual Studio 2017.
+   > Szablon **usługi danych programu WCF** jest dostępny w programie visual Studio 2015, ale nie w programie visual Studio 2017 lub nowszym.
 
 3. W polu Nazwa usługi wpisz `Northwind`.
 

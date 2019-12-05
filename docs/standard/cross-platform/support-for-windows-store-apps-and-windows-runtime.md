@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714488"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802755"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Obsługa .NET Framework dla aplikacji sklepu Windows Store i środowiska wykonawczego systemu Windows
 
@@ -137,7 +137,7 @@ Scenariusze obsługiwane przez składniki zarządzane środowisko wykonawcze sys
 - Typy w składniku mogą pochodzić od typów środowisko wykonawcze systemu Windows. Formanty mogą pochodzić od typów kontrolek pierwotnych w przestrzeni nazw <xref:Windows.UI.Xaml.Controls.Primitives> lub od bardziej gotowych kontrolek, takich jak <xref:Windows.UI.Xaml.Controls.Button>.
 
   > [!IMPORTANT]
-  > Począwszy od [!INCLUDE[win8](../../../includes/win8-md.md)] i .NET Framework 4,5 wszystkie typy publiczne w składniku zarządzanym środowisko wykonawcze systemu Windows muszą być zapieczętowane. Typ w innym składniku środowisko wykonawcze systemu Windows nie może dziedziczyć z nich. Jeśli chcesz zapewnić zachowanie polimorficzne w składniku, możesz utworzyć interfejs i zaimplementować go w typach polimorficznych.
+  > Począwszy od systemu Windows 8 i .NET Framework 4,5 wszystkie typy publiczne w składniku zarządzanym środowisko wykonawcze systemu Windows muszą być zapieczętowane. Typ w innym składniku środowisko wykonawcze systemu Windows nie może dziedziczyć z nich. Jeśli chcesz zapewnić zachowanie polimorficzne w składniku, możesz utworzyć interfejs i zaimplementować go w typach polimorficznych.
 
 - Wszystkie typy parametrów i zwracanych typów publicznych w składniku muszą być środowisko wykonawcze systemu Windows typy (w tym typy środowisko wykonawcze systemu Windows zdefiniowane przez składnik).
 

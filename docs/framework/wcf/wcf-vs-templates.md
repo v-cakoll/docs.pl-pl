@@ -2,12 +2,12 @@
 title: Szablony programu Visual Studio na potrzeby programu WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 1b4a600e4ed19b967bcaeb6d880ea181b7c2d61f
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: ec73036921632bc855e79239f1fc578587de7ca3
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197194"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802347"
 ---
 # <a name="wcf-visual-studio-templates"></a>Szablony programu Visual Studio na potrzeby programu WCF
 Windows Communication Foundation (WCF) szablony programu Visual Studio są wstępnie zdefiniowanymi szablonami projektu i elementów, których można użyć w programie Visual Studio, aby szybko tworzyć usługi WCF i otaczające aplikacje.  
@@ -45,7 +45,7 @@ Windows Communication Foundation (WCF) szablony programu Visual Studio są wstę
  Szablon automatycznie tworzy witrynę sieci Web (do wdrożenia w katalogu wirtualnym) i hostuje w niej usługę.  
   
 ### <a name="wcf-web-site-template"></a>Szablon witryny sieci Web WCF  
- Szablon witryny sieci Web WCF jest dostępny w oknie dialogowym Nowy projekt w obszarze **Visual C#\Serwer sieci Site\WCF Service** i **Visual Basic\Web Site\WCF Service**. Spowoduje to utworzenie takich samych plików jak szablon aplikacji usługi WCF, ale organizuje je tak, jakby była witryną sieci Web ASP.NET. Tworzone są foldery App_Code i App_Data.  
+ Szablon witryny sieci Web WCF jest dostępny w oknie dialogowym Nowy projekt w obszarze **Visual C#\Serwer sieci Site\WCF Service** i **Visual Basic\Web Site\WCF Service**. Spowoduje to utworzenie takich samych plików jak szablon aplikacji usługi WCF, ale organizuje je tak, jakby była witryną sieci Web ASP.NET. Tworzone są App_Code i App_Data folderów.  
   
 ### <a name="wcf-service-item-template"></a>Szablon elementu usługi WCF  
  Szablon elementu usługi WCF jest szablonem niestandardowym, który umożliwia szybkie dodawanie usług WCF do istniejących projektów programu Visual Studio.  
@@ -72,7 +72,7 @@ Windows Communication Foundation (WCF) szablony programu Visual Studio są wstę
  W przypadku zmiany adresu kanału informacyjnego należy również zmienić adres na karcie **debugowanie** . Jeśli tego nie zrobisz, program Internet Explorer podejmie próbę otwarcia źródła danych przy użyciu adresu domyślnego i niepowodzeniem.  
   
 ### <a name="ajax-enabled-wcf-service-item-template"></a>Szablon elementu usługi WCF z włączoną obsługą technologii AJAX  
- Ten szablon udostępnia kontrolkę AJAX jako usługę WCF. Aby uzyskać więcej informacji na temat kontrolek AJAX, zobacz [dokumentację kontroli AJAX](https://go.microsoft.com/fwlink/?LinkId=96717).  
+ Ten szablon udostępnia kontrolkę AJAX jako usługę WCF. Aby uzyskać więcej informacji na temat kontrolek AJAX, zobacz [dokumentację kontroli AJAX](https://docs.microsoft.com/aspnet/ajax/).  
   
 ### <a name="silverlight-enabled-wcf-service-item-template"></a>Szablon elementu usługi WCF z włączonym dodatkiem Silverlight  
  Ten szablon służy do tworzenia usługi sieci Web, która dostarcza dane do klienta Silverlight lub frontonu. Szablon można dodać do witryny sieci Web lub projektu aplikacji sieci Web w celu utworzenia usługi WCF, która zawiera kod i konfigurację usługi, która obsługuje komunikację z klientem Silverlight. Następnie można użyć **Dodaj odwołanie do usługi** , aby dodać klienta serwera proxy usługi do klienta i wymiany danych między klientem Silverlight a usługą WCF obsługującą program Silverlight.  
@@ -80,7 +80,7 @@ Windows Communication Foundation (WCF) szablony programu Visual Studio są wstę
  Aby uzyskać dostęp do tego szablonu, kliknij prawym przyciskiem myszy witrynę sieci Web lub projekt aplikacji sieci Web w **Eksplorator rozwiązań**, kliknij przycisk **Dodaj nowy element**, a następnie kliknij pozycję **usługa WCF z włączoną obsługą Silverlight**.  
   
 > [!NOTE]
-> Usługa WCF z włączoną obsługą technologii Silverlight uwidacznia punkt końcowy `basicHttpBinding` bez włączania żadnych ustawień zabezpieczeń. W związku z tym informacje o usłudze mogą zostać uzyskane przez wszystkich klientów, którzy łączą się z tą usługą. Komunikaty wymieniane między usługą a klientem również nie są podpisane ani zaszyfrowane. Aby prawidłowo zabezpieczyć punkt końcowy, należy użyć uwierzytelniania ASP.NET, protokołu HTTPS lub innych mechanizmów.  
+> Usługa WCF obsługująca program Silverlight udostępnia `basicHttpBinding` punkt końcowy bez włączania żadnych ustawień zabezpieczeń. W związku z tym informacje o usłudze mogą zostać uzyskane przez wszystkich klientów, którzy łączą się z tą usługą. Komunikaty wymieniane między usługą a klientem również nie są podpisane ani zaszyfrowane. Aby prawidłowo zabezpieczyć punkt końcowy, należy użyć uwierzytelniania ASP.NET, protokołu HTTPS lub innych mechanizmów.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,12 +2,12 @@
 title: Charakterystyka funkcji programu Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 0c312eed1a5ba064771e7cc4c260b43d97b16315
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141870"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802599"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Charakterystyka funkcji programu Windows Workflow Foundation
 
@@ -29,7 +29,7 @@ Działania obsługi komunikatów (<xref:System.ServiceModel.Activities.Receive>,
 
 Usługa `BestPriceFinder` wywołuje wiele usług lotniczych, aby znaleźć najlepszą cenę biletów dla określonej trasy. Wdrożenie tego scenariusza wymagało użycia komunikatów o działaniach w celu uzyskania żądania ceny, pobrania cen z usług zaplecza i odpowiedzi na żądanie ceny przy użyciu najlepszej ceny. Wymaga to również użycia innych działań poza biurem do tworzenia logiki biznesowej do obliczania najlepszej ceny.
 
-## <a name="workflowservicehost"></a>Obiektu
+## <a name="workflowservicehost"></a>WorkflowServiceHost
 
 <xref:System.ServiceModel.WorkflowServiceHost> jest hostem przepływu pracy, który obsługuje wiele wystąpień, konfiguracji i komunikatów WCF (chociaż przepływy pracy nie są wymagane do obsługi komunikatów, aby były hostowane). Integruje się ona również z zachowaniem trwałości, śledzenia i kontroli wystąpienia za pomocą zestawu zachowań usługi. Podobnie jak w przypadku <xref:System.ServiceModel.ServiceHost>WCF, <xref:System.ServiceModel.WorkflowServiceHost> może być samodzielnie hostowane w konsoli/WinForms/aplikacji WPF lub usłudze systemu Windows albo w sieci Web (jako plik. xamlx) w usługach IIS lub WAS.
 
@@ -95,15 +95,15 @@ Schemat konfiguracji programu WCF jest skomplikowany i oferuje użytkownikom wie
 
 ### <a name="getting-started"></a>Wprowadzenie
 
-- [Przewodnik dewelopera dotyczący programu WCF 4,0](https://go.microsoft.com/fwlink/?LinkId=204940)
+- [Przewodnik dewelopera dotyczący programu WCF 4,0](https://docs.microsoft.com/previous-versions/dotnet/articles/ee354381(v=msdn.10))
 
-- [Fabryka kanałów konfiguracji](https://go.microsoft.com/fwlink/?LinkId=204941)
+- [Fabryka kanałów konfiguracji](xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601)
 
-- [Standardowy element punktu końcowego](https://go.microsoft.com/fwlink/?LinkId=204942)
+- [Standardowy element punktu końcowego](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [Ulepszenia konfiguracji usługi w .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [Ulepszenia konfiguracji usługi w .NET Framework 4](https://blogs.msdn.microsoft.com/endpoint/2009/06/30/service-configuration-improvements-in-net-4/)
 
-- [Typowy błąd użytkownika w programie .NET 4: wpisywanie nazwy konfiguracji WF/WCF usługi](https://go.microsoft.com/fwlink/?LinkId=204944)
+- [Typowy błąd użytkownika w programie .NET 4: wpisywanie nazwy konfiguracji WF/WCF usługi](https://blogs.msdn.microsoft.com/endpoint/2009/11/09/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name/)
 
 ### <a name="simplified-configuration-scenarios"></a>Uproszczone scenariusze konfiguracji
 
@@ -125,9 +125,9 @@ W programie .NET 3,5 istniały pewne ograniczenia dotyczące projektowania znany
 
 ### <a name="getting-started"></a>Wprowadzenie
 
-- [Dokumentacja interfejsu API programu rozpoznawania kontraktów danych](https://go.microsoft.com/fwlink/?LinkId=204946)
+- [Dokumentacja interfejsu API programu rozpoznawania kontraktów danych](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [Wprowadzenie do programu rozpoznawania kontraktu danych](https://go.microsoft.com/fwlink/?LinkId=204947)
+- [Wprowadzenie do programu rozpoznawania kontraktu danych](https://blogs.msdn.microsoft.com/youssefm/2009/06/05/configuring-known-types-dynamically-introducing-the-datacontractresolver/)
 
 - Badan
 
@@ -287,7 +287,7 @@ Usługa routingu w programie .NET 4 została zaprojektowana tak, aby ułatwić r
 
 2. Przykłady: [usługi &#91;routingu — przykłady&#93; WCF](../wcf/samples/routing-services.md)
 
-3. Blog: [reguły routingu!](https://go.microsoft.com/fwlink/?LinkId=204956)
+3. Blog: [reguły routingu!](https://blogs.msdn.microsoft.com/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>Scenariusze routingu
 

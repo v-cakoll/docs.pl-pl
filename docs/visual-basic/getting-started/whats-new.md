@@ -8,18 +8,18 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 1efcee0ac3bdba1b7e1379a0ac072ea714add756
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 45763504c2d25596b0adfb4b8a0236b332d89e8c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423917"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802044"
 ---
 # <a name="whats-new-for-visual-basic"></a>Co nowego w Visual Basic
 
 Ten temat zawiera listę najważniejszych nazw funkcji dla każdej wersji Visual Basic z szczegółowymi opisami nowych i ulepszonych funkcji w najnowszych wersjach języka.
 
-## <a name="current-version"></a>Bieżąca wersja
+## <a name="current-version"></a>Wersja bieżąca
 
 Visual Basic 16,0/Visual Studio 2019 wersja 16,0 \
 Aby poznać nowe funkcje, zobacz [Visual Basic 16,0](#visual-basic-160).
@@ -45,7 +45,7 @@ Visual Basic/Visual Studio 2013 \
 Wersje zapoznawcze technologii .NET Compiler Platform ("Roslyn")
 
 Visual Basic/Visual Studio 2012 \
-`Async` i `await` słowa kluczowe, Iteratory, atrybuty informacji o wywołującym
+Słowa kluczowe `Async` i `await`, iteratory, atrybuty informacji obiektów wywołujących
 
 Visual Basic, Visual Studio 2010 \
 Właściwości zaimplementowane przez autoimplementację, Inicjatory kolekcji, niejawne kontynuacja wiersza, dynamiczne, ogólne, proste/odchylenia, globalny dostęp do przestrzeni nazw
@@ -112,11 +112,11 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 Należy zauważyć, że to obcina zamiast zaokrąglania wartości zmiennoprzecinkowych.
 
-## <a name="visual-basic-155"></a>Visual Basic 15,5
+## <a name="visual-basic-155"></a>Visual Basic 15.5
 
 [Argumenty nazwane inne niż końcowe](../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md#mixing-arguments-by-position-and-by-name)
 
-W Visual Basic 15,3 i starszych wersjach, gdy wywołanie metody zawierało argumenty w obu położeniach i według nazwy, argumenty pozycyjne musiały poprzedzać nazwane argumenty. Począwszy od Visual Basic 15,5, argumenty pozycyjne i nazwane mogą pojawiać się w dowolnej kolejności, tak długo, jak wszystkie argumenty do ostatniego argumentu pozycyjnego znajdują się w poprawnej pozycji. Jest to szczególnie przydatne w przypadku, gdy nazwane argumenty są używane w celu łatwiejszego odczytywania kodu.
+W wersji Visual Basic 15.3 i starszych wersjach gdy wywołanie metody uwzględniało argumenty zarówno według pozycji, jak i według nazwy, argumenty pozycyjne musiały poprzedzać argumenty nazwane. W wersji Visual Basic 15.5 i nowszych argumenty pozycyjne i argumenty nazwane mogą występować w dowolnej kolejności, pod warunkiem że wszystkie argumenty (do ostatniego argumentu pozycyjnego) znajdują się we właściwych pozycjach. Jest to szczególnie przydatne, gdy argumenty nazwane są stosowane w celu poprawy czytelności kodu.
 
 Na przykład następujące wywołanie metody ma dwa argumenty pozycyjne między nazwanym argumentem. Nazwany argument sprawia, że wartość 19 reprezentuje wiek.
 
@@ -128,15 +128,15 @@ StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 
 Ta nowa kombinacja słów kluczowych definiuje element członkowski, który jest dostępny dla wszystkich elementów członkowskich w jego klasie zawierającej, a także typów pochodzących od klasy zawierającej, ale tylko wtedy, gdy znajdują się one również w zawierającym go zestawie. Ponieważ struktury nie mogą być dziedziczone, `Private Protected` mogą być stosowane tylko do elementów członkowskich klasy.
 
-**Wiodący separator szesnastkowy/binarny**
+**Wiodący znak separatora szesnastkowy/binarny/ósemkowy**
 
-Visual Basic 2017 dodano obsługę znaku podkreślenia (`_`) jako separatora cyfr. Począwszy od Visual Basic 15,5, można użyć znaku podkreślenia jako wiodącego separatora między cyframi prefiksu i szesnastkowym, dwójkowym lub ósemkowym. W poniższym przykładzie zastosowano wiodący separator cyfr, aby zdefiniować 3 271 948 384 jako liczbę szesnastkową:
+W wersji +Visual Basic 2017 dodano obsługę znaku podkreślenia (`_`) jako separatora cyfr. Począwszy od wersji Visual Basic 15.5, można używać znaku podkreślenia jako separatora wiodącego między prefiksem a cyframi szesnastkowymi, binarnymi lub ósemkowymi. W poniższym przykładzie użyto separatora wiodącego cyfr, aby zdefiniować liczbę 3 271 948 384 w postaci szesnastkowej:
 
 ```vb
 Dim number As Integer = &H_C305_F860
 ```
 
-Aby użyć znaku podkreślenia jako separatora wiodącego, należy dodać następujący element do pliku projektu Visual Basic (\*. vbproj):
+Aby użyć znaku podkreślenia jako separatora wiodącego, należy dodać następujący element do pliku projektu Visual Basic (\*.vbproj):
 
 ```xml
 <PropertyGroup>
@@ -144,11 +144,11 @@ Aby użyć znaku podkreślenia jako separatora wiodącego, należy dodać nastę
 </PropertyGroup>
 ```
 
-## <a name="visual-basic-153"></a>Visual Basic 15,3
+## <a name="visual-basic-153"></a>Visual Basic 15.3
 
 [**Wnioskowanie o nazwie krotki**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
-Podczas przypisywania wartości elementów krotki ze zmiennych, Visual Basic wnioskuje nazwę elementów krotki z odpowiednich nazw zmiennych; nie ma potrzeby jawnej nazwy elementu krotki. Poniższy przykład używa wnioskowania, aby utworzyć krotkę z trzema nazwanymi elementami, `state`, `stateName` i `capital`.
+Podczas przypisywania wartości elementów krotki ze zmiennych, Visual Basic wnioskuje nazwę elementów krotki z odpowiednich nazw zmiennych; nie ma potrzeby jawnej nazwy elementu krotki. Poniższy przykład używa wnioskowania, aby utworzyć krotkę z trzema nazwanymi elementami, `state`, `stateName`i `capital`.
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
@@ -216,7 +216,7 @@ Do konstruowania ciągów można użyć wyrażeń interpolacji ciągów.  Wyraż
 
 [Dostęp warunkowy do elementu członkowskiego o wartości null i indeksowanie](../language-reference/operators/null-conditional-operators.md)
 
-Można testować pod kątem wartości null w bardzo jasny sposób składni przed wykonaniem operacji dostępu do elementu członkowskiego (`?.`) lub indeksu (`?[]`).  Te operatory pomagają pisać mniej kodu do obsługi kontroli wartości null, szczególnie w przypadku malejących struktur danych.  Jeśli lewy operand lub odwołanie do obiektu ma wartość null, operacje zwracają wartość null.
+Można testować pod kątem wartości null w bardzo jasny sposób składni przed wykonaniem operacji dostępu do elementu członkowskiego (`?.`) lub indeksu (`?[]`).  Operatory te pomagają ograniczyć ilość kodu potrzebnego do sprawdzenia wystąpień wartości „null”, zwłaszcza w przypadku wchodzenia głębiej w struktury danych.  Jeśli lewy operand lub odwołanie do obiektu ma wartość null, operacje zwracają wartość null.
 
 [Wielowierszowe literały ciągów](../../visual-basic/programming-guide/language-features/strings/string-basics.md)
 
@@ -242,7 +242,7 @@ Właściwości interfejsu ReadOnly można zaimplementować przy użyciu właści
 
 Aby zwiększyć czytelność kodu, można teraz używać `TypeOf` z `IsNot`.
 
-[#Disable \<ID ostrzeżeń > i #Enable ostrzeżeń \<ID >](../../visual-basic/language-reference/directives/index.md)
+[#Disable \<ostrzeżeń o IDENTYFIKATORze > i #Enable ostrzeżenia \<](../../visual-basic/language-reference/directives/index.md)
 
 Można wyłączyć i włączyć określone ostrzeżenia dla regionów w pliku źródłowym.
 
@@ -292,3 +292,4 @@ Teraz kompilator będzie używać normalnych reguł rozpoznawania przeciążenia
 ## <a name="see-also"></a>Zobacz także
 
 - [Co nowego w programie Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
+- [Co nowego w programie Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)

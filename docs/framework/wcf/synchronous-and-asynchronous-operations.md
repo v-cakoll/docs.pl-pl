@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 39a7db3fb7dc3651f2cf6c850e7ebb5525e24963
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 143cc0f4566d86f1d42ebd11063f9af3c1ec331f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281632"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802443"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operacje synchroniczne i asynchroniczne
 W tym temacie omówiono implementowanie i wywoływanie asynchronicznych operacji usługi.  
@@ -107,7 +107,7 @@ public class AsyncExample
 }  
 ```  
   
- Aby uzyskać więcej informacji na temat wzorca asynchronicznego opartego na zdarzeniach, zobacz [wzorzec asynchroniczny oparty na zdarzeniach](https://go.microsoft.com/fwlink/?LinkId=232515).  
+ Aby uzyskać więcej informacji na temat wzorca asynchronicznego opartego na zdarzeniach, zobacz [wzorzec asynchroniczny oparty na zdarzeniach](../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>Wzorzec asynchroniczny IAsyncResult  
  Operację usługi można zaimplementować w sposób asynchroniczny za pomocą wzorca programowania asynchronicznego .NET Framework i oznaczyć metodę `<Begin>` z właściwością <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> ustawioną na `true`. W takim przypadku operacja asynchroniczna jest uwidaczniana w metadanych w tym samym formularzu co operacja synchroniczna: jest uwidaczniana jako jedna operacja z komunikatem żądania i komunikatem skorelowanej odpowiedzi. Następnie modele programowania klientów mają wybór. Mogą one reprezentować ten wzorzec jako operację synchroniczną lub asynchronicznie, tak długo, jak w przypadku wywołania usługi do programu Exchange-odpowiedź żądania.  

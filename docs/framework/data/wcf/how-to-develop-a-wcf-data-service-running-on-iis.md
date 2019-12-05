@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie usługi danych WCF działającej na serwerze IIS'
+title: 'Instrukcje: Tworzenie usługi danych programu WCF uruchomionej w usługach IIS'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 89be7aa8339a4edf6d6ab9c0c243e4320d2fdfa8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 684361dbb97e70296a3061f71102662023f88d9a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052977"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800511"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Instrukcje: Tworzenie usługi danych programu WCF uruchomionej w usługach IIS
 
@@ -25,11 +25,11 @@ W tym temacie pokazano, jak za pomocą Usługi danych programu WCF utworzyć us�
 
 W tym temacie przedstawiono sposób tworzenia usługi danych przy użyciu dostawcy Entity Framework. Inni dostawcy usług danych są dostępni. Aby uzyskać więcej informacji, zobacz [Data Services Providers](data-services-providers-wcf-data-services.md).
 
-Po utworzeniu usługi należy jawnie zapewnić dostęp do zasobów usługi danych. Aby uzyskać więcej informacji, zobacz [jak: Włącz dostęp do usługi](how-to-enable-access-to-the-data-service-wcf-data-services.md)danych.
+Po utworzeniu usługi należy jawnie zapewnić dostęp do zasobów usługi danych. Aby uzyskać więcej informacji, zobacz [jak: Włączanie dostępu do usługi danych](how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>Tworzenie aplikacji sieci Web ASP.NET działającej w usługach IIS
 
-1. W programie Visual Studio w menu **plik** wybierz pozycję **Nowy** > **projekt**.
+1. W programie Visual Studio w menu **plik** wybierz pozycję **Nowy** **projekt** > .
 
 2. W oknie dialogowym **Nowy projekt** wybierz **zainstalowaną** > [**Visual C#**  lub **Visual Basic**] > kategorii **sieci Web** .
 
@@ -53,7 +53,7 @@ Po utworzeniu usługi należy jawnie zapewnić dostęp do zasobów usługi danyc
         "%windir%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
         ```
 
-    - 64-bitowe systemy:
+    - Systemy 64-bitowe:
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
@@ -69,7 +69,7 @@ Po utworzeniu usługi należy jawnie zapewnić dostęp do zasobów usługi danyc
         "%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe" -i -enable
         ```
 
-    - 64-bitowe systemy:
+    - Systemy 64-bitowe:
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe" -i -enable
@@ -126,13 +126,13 @@ Po utworzeniu usługi należy jawnie zapewnić dostęp do zasobów usługi danyc
 
 2. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **ADO.NET Entity Data Model**.
 
-3. Wpisz `Northwind.edmx`nazwę modelu danych.
+3. W polu Nazwa modelu danych wpisz `Northwind.edmx`.
 
 4. W Kreatorze Entity Data Model wybierz pozycję **Generuj z bazy danych**, a następnie kliknij przycisk **dalej**.
 
 5. Aby połączyć model danych z bazą danych, wykonaj jedną z następujących czynności, a następnie kliknij przycisk **dalej**:
 
-    - Jeśli nie masz już skonfigurowanego połączenia z bazą danych, kliknij pozycję **nowe połączenie** i Utwórz nowe połączenie. Aby uzyskać więcej informacji, zobacz [jak: Utwórz połączenia z bazami](https://go.microsoft.com/fwlink/?LinkId=123631)danych SQL Server. To wystąpienie SQL Server musi mieć dołączoną przykładową bazę danych Northwind.
+    - Jeśli nie masz już skonfigurowanego połączenia z bazą danych, kliknij pozycję **nowe połączenie** i Utwórz nowe połączenie. Aby uzyskać więcej informacji, zobacz [How to: Create Connections to SQL Server Databases](https://go.microsoft.com/fwlink/?LinkId=123631). To wystąpienie SQL Server musi mieć dołączoną przykładową bazę danych Northwind.
 
          \- lub —
 
@@ -151,13 +151,13 @@ Po utworzeniu usługi należy jawnie zapewnić dostęp do zasobów usługi danyc
    ![Szablon elementu usługi danych programu WCF w programie Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > Szablon **usługi danych programu WCF** jest dostępny w programie visual Studio 2015, ale nie w programie visual Studio 2017.
+   > Szablon **usługi danych programu WCF** jest dostępny w programie visual Studio 2015, ale nie w programie visual Studio 2017 lub nowszym.
 
-3. W polu Nazwa usługi wprowadź `Northwind`wartość.
+3. W polu Nazwa usługi wprowadź `Northwind`.
 
      Program Visual Studio tworzy znaczniki XML i pliki kodu dla nowej usługi. Domyślnie zostanie otwarte okno edytora kodu. W **Eksplorator rozwiązań**usługa ma nazwę, Northwind i rozszerzenie. svc.cs lub. svc. vb.
 
-4. W kodzie usługi danych Zastąp komentarz `/* TODO: put your data source class name here */` w definicji klasy, która definiuje usługę danych z typem, który jest kontenerem jednostek modelu danych, w tym `NorthwindEntities`przypadku. Definicja klasy powinna wyglądać następująco:
+4. W kodzie usługi danych Zastąp komentarz `/* TODO: put your data source class name here */` w definicji klasy, która definiuje usługę danych z typem, który jest kontenerem jednostek modelu danych, które w tym przypadku jest `NorthwindEntities`. Definicja klasy powinna wyglądać następująco:
 
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]

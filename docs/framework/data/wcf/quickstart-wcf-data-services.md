@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: d0002182c5ae519c36348acdd2587bca499fe72e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: df3151dfd3628231d84d2d128c61d1c0b6b0d48e
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975140"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800350"
 ---
 # <a name="quickstart-wcf-data-services"></a>Szybki Start (Usługi danych programu WCF)
 
 Ten przewodnik Szybki Start pomaga zapoznać się z Usługi danych programu WCF i protokołem Open Data Protocol (OData), korzystając z szeregu zadań, które obsługują tematy w programie [wprowadzenie](getting-started-with-wcf-data-services.md).
 
-## <a name="what-youll-learn"></a>Dowiesz się
+## <a name="what-youll-learn"></a>Informacje przedstawiane podczas szkolenia
 
 Pierwsze zadanie w tym przewodniku szybki start przedstawia sposób tworzenia usługi danych w celu udostępnienia źródła strumieniowego OData z przykładowej bazy danych Northwind. W kolejnych tematach można uzyskać dostęp do źródła danych OData przy użyciu przeglądarki sieci Web, a także utworzyć aplikację kliencką Windows Presentation Foundation (WPF), która korzysta ze źródła danych OData przy użyciu bibliotek klienckich.
 
@@ -24,9 +24,9 @@ Pierwsze zadanie w tym przewodniku szybki start przedstawia sposób tworzenia us
 
 Aby ukończyć ten przewodnik Szybki Start, należy zainstalować następujące składniki:
 
-- Visual Studio
+- {1&gt;Visual Studio&lt;1}
 
-- Wystąpienie SQL Server. Obejmuje to SQL Server Express, które są dołączone do domyślnej instalacji programu Visual Studio 2015 lub w ramach obciążenia **magazynu i przetwarzania danych** w programie visual Studio 2017.
+- Wystąpienie SQL Server. Obejmuje to SQL Server Express, które są dołączone do domyślnej instalacji programu Visual Studio 2015 lub w ramach obciążenia **magazynu i przetwarzania danych** w programie visual Studio 2017 lub nowszym.
 
 - Przykładowa bazy danych Northwind. Aby pobrać tę przykładową bazę danych, zobacz stronę pobierania, [przykładowe bazy danych dla SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
 

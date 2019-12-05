@@ -2,12 +2,12 @@
 title: Co nowego w programie .NET Core 2.0
 description: Dowiedz się więcej o nowych funkcjach dostępnych w programie .NET Core.
 ms.date: 08/13/2017
-ms.openlocfilehash: fcac4255e7370f31ea6c26771fdd7d341bafe38b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100839"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801892"
 ---
 # <a name="whats-new-in-net-core-20"></a>Co nowego w programie .NET Core 2.0
 
@@ -56,7 +56,7 @@ Aby uzyskać więcej informacji na temat migrowania projektu do programu .NET Co
 
 Oprócz obsługi C# i F#programu .NET Core 2,0 obsługuje również Visual Basic.
 
-### <a name="visual-basic"></a>Visual Basic
+### <a name="visual-basic"></a>Język Visual Basic
 
 W wersji 2,0 program .NET Core obsługuje teraz Visual Basic 2017. Za pomocą Visual Basic można utworzyć następujące typy projektów:
 
@@ -136,7 +136,7 @@ Aby przekierować projekt w programie Visual Studio, Otwórz kartę **aplikacji*
 
 Za każdym razem, gdy modyfikujesz swój kod, Live Unit Testing automatycznie uruchamia wszystkie objęte testy jednostkowe w tle i wyświetla wyniki i pokrycie kodu na żywo w środowisku programu Visual Studio. Platforma .NET Core 2,0 obsługuje teraz Live Unit Testing. Wcześniej Live Unit Testing był dostępny tylko dla aplikacji .NET Framework.
 
-Aby uzyskać więcej informacji, zobacz [Live Unit Testing z programem Visual Studio 2017](/visualstudio/test/live-unit-testing) i [Live Unit Testing często zadawanych pytań](/visualstudio/test/live-unit-testing-faq).
+Aby uzyskać więcej informacji, zobacz [Live Unit Testing z programem Visual Studio](/visualstudio/test/live-unit-testing) i [Live Unit Testing często zadawanych pytań](/visualstudio/test/live-unit-testing-faq).
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>Lepsza obsługa wielu platform docelowych
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: c6856002288a46e78d1e1373201cf149407a814f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4c9acc3ef806eabea05d1b64080275293c83e895
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974017"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802140"
 ---
 # <a name="graphics-rendering-tiers"></a>Poziomy zmiany grafiki
 Warstwa renderowania definiuje poziom graficznej możliwości sprzętowej i wydajności dla urządzenia, na którym działa aplikacja [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -78,7 +78,7 @@ Warstwa renderowania definiuje poziom graficznej możliwości sprzętowej i wyda
   
 |Funkcja|Uwagi|  
 |-------------|-----------|  
-|Antyaliasowanie 3W|Antyaliasowanie 3W jest obsługiwane tylko w systemach operacyjnych, które obsługują model Windows Display monitor (WDDM), takich jak Windows Vista i [!INCLUDE[win7](../../../../includes/win7-md.md)].|  
+|Antyaliasowanie 3W|Antyaliasowanie 3W jest obsługiwane tylko w systemach operacyjnych, które obsługują model wyświetlania sterowników systemu Windows (WDDM), takich jak Windows Vista i Windows 7.|  
   
  Następujące funkcje i możliwości **nie** są przyspieszane sprzętowo:  
   
@@ -89,7 +89,7 @@ Warstwa renderowania definiuje poziom graficznej możliwości sprzętowej i wyda
 |Zawartość z rozdziałami, która używa <xref:System.Windows.Media.TileBrush>|Dowolna zawartość z rozdziałami, w której Właściwość <xref:System.Windows.Media.TileBrush.TileMode%2A> <xref:System.Windows.Media.TileBrush> jest ustawiona na <xref:System.Windows.Media.TileMode.Tile>.|  
 |Powierzchnie, które przekraczają maksymalny rozmiar tekstury sprzętu graficznego|W przypadku większości sprzętu graficznego duże powierzchnie są 2048x2048 lub 4096x4096 pikseli.|  
 |Każda operacja, której wymagania dotyczące pamięci RAM wideo przekracza pamięć sprzętową urządzenia graficznego|Można monitorować użycie pamięci RAM wideo aplikacji przy użyciu narzędzia perforacja, które jest zawarte w [pakiecie wydajności WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) w Windows SDK.|  
-|Okna z warstwami|Warstwowe okna umożliwiają aplikacjom [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderowanie zawartości na ekranie w nieprostokątnym oknie. W systemach operacyjnych obsługujących system Windows Display Driver Model (WDDM), takich jak Windows Vista i [!INCLUDE[win7](../../../../includes/win7-md.md)], w warstwowych oknach są przyspieszone sprzęt. W innych systemach, takich jak [!INCLUDE[winxp](../../../../includes/winxp-md.md)], okna z warstwami są renderowane przez oprogramowanie bez przyspieszania sprzętowego.<br /><br /> Okna z warstwami można włączyć w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przez ustawienie następujących właściwości <xref:System.Windows.Window>:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|Okna z warstwami|Warstwowe okna umożliwiają aplikacjom [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderowanie zawartości na ekranie w nieprostokątnym oknie. W systemach operacyjnych obsługujących system Windows Display Driver Model (WDDM), takich jak Windows Vista i Windows 7, w warstwowych oknach są przyspieszone sprzęt. W innych systemach, takich jak [!INCLUDE[winxp](../../../../includes/winxp-md.md)], okna z warstwami są renderowane przez oprogramowanie bez przyspieszania sprzętowego.<br /><br /> Okna z warstwami można włączyć w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przez ustawienie następujących właściwości <xref:System.Windows.Window>:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
 ## <a name="other-resources"></a>Inne zasoby  
@@ -117,7 +117,7 @@ Warstwa renderowania definiuje poziom graficznej możliwości sprzętowej i wyda
   
  Zestaw wydajności WPF oferuje bogaty i graficzny widok danych wydajności. Aby uzyskać więcej informacji na temat narzędzi wydajności WPF, zobacz [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)).  
   
-### <a name="directx-diagnostic-tool"></a>Narzędzie diagnostyczne DirectX  
+### <a name="directx-diagnostic-tool"></a>Narzędziu diagnostycznym DirectX  
  Narzędzie diagnostyczne DirectX, dxdiag. exe, zostało zaprojektowane w celu ułatwienia rozwiązywania problemów związanych z programem DirectX. Domyślny folder instalacji dla narzędzia diagnostycznego DirectX to:  
   
  `~\Windows\System32`  

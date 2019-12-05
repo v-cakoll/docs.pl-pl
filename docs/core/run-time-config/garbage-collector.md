@@ -1,14 +1,14 @@
 ---
 title: Ustawienia konfiguracji modułu wyrzucania elementów bezużytecznych
-description: Informacje o ustawieniach czasu wykonywania w celu skonfigurowania sposobu zarządzania pamięcią przez moduł zbierający elementy bezużyteczne.
+description: Informacje o ustawieniach czasu wykonywania w celu skonfigurowania sposobu, w jaki moduł zbierający elementy bezużyteczne zarządza pamięcią dla aplikacji platformy .NET Core.
 ms.date: 11/13/2019
 ms.topic: reference
-ms.openlocfilehash: 220b94e92f61fd44d2ab13291e41b8007a287cc7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e7f6877a3cbc7f28776a93b9126f4b64026487fa
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428702"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800626"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opcje konfiguracji czasu wykonywania dla wyrzucania elementów bezużytecznych
 
@@ -38,7 +38,7 @@ Użyj następujących ustawień, aby wybrać typy wyrzucania elementów bezużyt
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.Server` | `false` — stacja robocza<br/>`true` — serwer | .NET Core 1.0 |
-| **Zmienna środowiskowa** | `COMPlus_gcServer` | 0 — stacja robocza<br/>1 — serwer | .NET Core 1.0 |
+| **Zmienna środowiskowa** | `COMPlus_gcServer` | `0` — stacja robocza<br/>`1` — serwer | .NET Core 1.0 |
 | **App. config dla .NET Framework** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false` — stacja robocza<br/>`true` — serwer |  |
 
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System. GC. współbieżne/COMPlus_gcConcurrent
@@ -110,13 +110,13 @@ Aby uzyskać więcej informacji na temat niektórych z tych ustawień, zapoznaj 
   Gdy 64-bitowy komputer z systemem Windows ma wiele grup CPU, oznacza to, że istnieje więcej niż 64 procesorów, włączając ten element rozszerza wyrzucanie elementów bezużytecznych we wszystkich grupach CPU. Moduł wyrzucania elementów bezużytecznych używa wszystkich rdzeni do tworzenia i równoważenia sterty.
 
 - Dotyczy tylko systemów operacyjnych Windows Server wyrzucania elementów bezużytecznych (GC) na 64-bitowych.
-- Domyślnie: wyłączone (0).
+- Domyślnie: wyłączone (`0`).
 - Aby uzyskać więcej informacji, zobacz temat [Zapewnianie lepszej konfiguracji procesora dla GC na maszynach z > 64 procesorów CPU](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) na blogu Maoni Stephens.
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | Brak | Brak | Brak |
-| **Zmienna środowiskowa** | `COMPlus_GCCpuGroup` | 0 — wyłączone<br/>1 — włączone | .NET Core 1.0 |
+| **runtimeconfig. JSON** | N/D | N/D | N/D |
+| **Zmienna środowiskowa** | `COMPlus_GCCpuGroup` | `0` — wyłączone<br/>`1` — włączono | .NET Core 1.0 |
 | **App. config dla .NET Framework** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false` — wyłączone<br/>`true` — włączono |  |
 
 > [!NOTE]
@@ -131,7 +131,7 @@ Aby uzyskać więcej informacji na temat niektórych z tych ustawień, zapoznaj 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.NoAffinitize` | `false` — koligacji<br/>`true` — nie koligacji | .NET Core 3.0 |
-| **Zmienna środowiskowa** | `COMPlus_GCNoAffinitize` | 0 — koligacji<br/>1 — nie koligacji | .NET Core 3.0 |
+| **Zmienna środowiskowa** | `COMPlus_GCNoAffinitize` | `0` — koligacji<br/>`1` — nie koligacji | .NET Core 3.0 |
 | **App. config dla .NET Framework** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false` — koligacji<br/>`true` — nie koligacji | 4.6.2 |
 
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System. GC. HeapHardLimit/COMPlus_GCHeapHardLimit
@@ -166,34 +166,34 @@ Aby uzyskać więcej informacji na temat niektórych z tych ustawień, zapoznaj 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.RetainVM` | `false` — wydanie do systemu operacyjnego<br/>`true` — Umieść w stanie wstrzymania| .NET Core 1.0 |
-| **Zmienna środowiskowa** | `COMPlus_GCRetainVM` | 0 — wydanie do systemu operacyjnego<br/>1 — umieszczenie w stanie wstrzymania | .NET Core 1.0 |
+| **Zmienna środowiskowa** | `COMPlus_GCRetainVM` | `0` — wydanie do systemu operacyjnego<br/>`1` — Umieść w stanie wstrzymania | .NET Core 1.0 |
 
 ## <a name="large-pages"></a>Duże strony
 
 ### <a name="complus_gclargepages"></a>COMPlus_GCLargePages
 
 - Określa, czy mają być używane duże strony, gdy jest ustawiony limit sztywny sterty.
-- Domyślnie: wyłączone (0).
+- Domyślnie: wyłączone (`0`).
 - Jest to ustawienie eksperymentalne.
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | Brak | Brak | Brak |
-| **Zmienna środowiskowa** | `COMPlus_GCLargePages` | 0 — wyłączone<br/>1 — włączone | .NET Core 3.0 |
+| **runtimeconfig. JSON** | N/D | N/D | N/D |
+| **Zmienna środowiskowa** | `COMPlus_GCLargePages` | `0` — wyłączone<br/>`1` — włączono | .NET Core 3.0 |
 
 ## <a name="large-objects"></a>Duże obiekty
 
 ### <a name="complus_gcallowverylargeobjects"></a>COMPlus_gcAllowVeryLargeObjects
 
 - Konfiguruje obsługę modułu wyrzucania elementów bezużytecznych na platformach 64-bitowych dla tablic, które są większe niż 2 gigabajty (GB) w łącznym rozmiarze.
-- Wartość domyślna: włączone (1).
+- Wartość domyślna: włączone (`1`).
 - Ta opcja może stać się przestarzała w przyszłej wersji platformy .NET.
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | Brak | Brak | Brak |
-| **Zmienna środowiskowa** | `COMPlus_gcAllowVeryLargeObjects` | 1 — włączone<br/> 0 — wyłączone | .NET Core 1.0 |
-| **App. config dla .NET Framework** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | 1 — włączone<br/> 0 — wyłączone | .NET Framework 4.5 |
+| **runtimeconfig. JSON** | N/D | N/D | N/D |
+| **Zmienna środowiskowa** | `COMPlus_gcAllowVeryLargeObjects` | `1` — włączono<br/> `0` — wyłączone | .NET Core 1.0 |
+| **App. config dla .NET Framework** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | `1` — włączono<br/> `0` — wyłączone | .NET Framework 4.5 |
 
 ## <a name="large-object-heap-threshold"></a>Próg sterty dla dużego obiektu
 
@@ -221,5 +221,5 @@ Aby uzyskać więcej informacji na temat niektórych z tych ustawień, zapoznaj 
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | Brak | Brak | Brak |
+| **runtimeconfig. JSON** | N/D | N/D | N/D |
 | **Zmienna środowiskowa** | `COMPlus_GCName` | *string_path* | .NET Core 2.0 |

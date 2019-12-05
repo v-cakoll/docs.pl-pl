@@ -8,12 +8,12 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: f0979d2e0caeb0b22b90572aef0ad53235020f1d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: afee69eb894518b1c88483e34a1d64d452019244
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697823"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802127"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<element > requestCaching (Ustawienia sieci)
 Kontroluje mechanizm buforowania dla żądań sieci.  
@@ -29,7 +29,7 @@ Kontroluje mechanizm buforowania dla żądań sieci.
   isPrivateCache ="true|false"  
   disableAllCaching="true|false"  
   defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
-  unspecifiedMaximumAge= "d.hh.mm.ss">  
+  unspecifiedMaximumAge= "d.hh:mm:ss">  
     <defaultHttpCachePolicy>...</defaultHttpCachePolicy>  
     <defaultFtpCachePolicy>...</defaultFtpCachePolicy>  
 </requestCaching>
@@ -38,7 +38,7 @@ Kontroluje mechanizm buforowania dla żądań sieci.
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
  W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
-### <a name="attributes"></a>Atrybuty  
+### <a name="attributes"></a>{1&gt;{2&gt;Atrybuty&lt;2}&lt;1}  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
@@ -49,7 +49,7 @@ Kontroluje mechanizm buforowania dla żądań sieci.
   
 ## <a name="policylevel-attribute"></a>policyLevel — atrybut  
   
-|Value|Opis|  
+|Wartość|Opis|  
 |-----------|-----------------|  
 |`Default`|Zwraca buforowany zasób, jeśli zasób jest świeży, długość zawartości jest dokładna i atrybuty daty wygaśnięcia, modyfikacji i długości zawartości są obecne.|  
 |`BypassCache`|Zwraca zasób z serwera.|  

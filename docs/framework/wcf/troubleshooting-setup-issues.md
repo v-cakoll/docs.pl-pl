@@ -2,12 +2,12 @@
 title: Rozwiązywanie problemów dotyczących konfiguracji
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 586defea0f761f8b6dea691b778d221cff62c7cf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: becf2576528dc0011a77597b3665d77f6907a3cc
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281610"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802430"
 ---
 # <a name="troubleshooting-setup-issues"></a>Rozwiązywanie problemów dotyczących konfiguracji
 W tym temacie opisano sposób rozwiązywania problemów z konfigurowaniem programu Windows Communication Foundation (WCF).  
@@ -46,13 +46,13 @@ W tym temacie opisano sposób rozwiązywania problemów z konfigurowaniem progra
   
      lub:  
   
-     ServiceModelReg [07:19:32:750]: System. IO. FileNotFoundException: nie można załadować pliku lub zestawu "C:\WINDOWS\system32\wbem\mofcomp.exe" lub jednej z jego zależności. W systemie nie można odnaleźć określonego pliku.  
+     ServiceModelReg [07:19:32:750]: System. IO. FileNotFoundException: nie można załadować pliku lub zestawu "C:\WINDOWS\system32\wbem\mofcomp.exe" lub jednej z jego zależności. System nie może odnaleźć określonego pliku.  
   
      Nazwa pliku: "C:\WINDOWS\system32\wbem\mofcomp.exe  
   
  Należy postępować zgodnie z poniższymi krokami, aby rozwiązać opisany wcześniej problem.  
   
-1. Uruchom [Narzędzie diagnostyczne WMI w wersji 2,0,](https://go.microsoft.com/fwlink/?LinkId=94685) aby naprawić usługę WMI. Aby uzyskać więcej informacji na temat korzystania z tego narzędzia, zobacz temat [Narzędzie diagnostyczne WMI](https://go.microsoft.com/fwlink/?LinkId=94686) .  
+1. Uruchom [Narzędzie diagnostyczne WMI w wersji 2,0,](https://go.microsoft.com/fwlink/?LinkId=94685) aby naprawić usługę WMI. Aby uzyskać więcej informacji na temat korzystania z tego narzędzia, zobacz artykuł [Narzędzie diagnostyczne WMI](https://docs.microsoft.com/previous-versions/tn-archive/ff404265(v%3dmsdn.10)) .  
   
  Napraw instalację .NET Framework 3,0 przy użyciu apletu **Dodaj/Usuń programy** znajdującego się w **Panelu sterowania**lub odinstaluj/ponownie zainstaluj .NET Framework 3,0.  
   

@@ -2,20 +2,20 @@
 title: Niestandardowe rekordy śledzenia
 ms.date: 03/30/2017
 ms.assetid: 24284565-c68b-40bf-b7f1-e148d151a6fc
-ms.openlocfilehash: d4733b4ffc0d866cf90fd5a5e7d649de261c45fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 986f0350c24414d0ff960474445adf6ac3f39734
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945837"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802625"
 ---
 # <a name="custom-tracking-records"></a>Niestandardowe rekordy śledzenia
 
-W tym temacie pokazano, jak utworzyć niestandardowe rekordy śledzenia i wypełnić je danymi jest emitowany wraz z rekordów.
+W tym temacie pokazano, jak utworzyć niestandardowe rekordy śledzenia i wypełnić je danymi, które mają być emitowane wraz z rekordami.
 
-## <a name="emitting-custom-tracking-records"></a>Emitowanie niestandardowe rekordy śledzenia
+## <a name="emitting-custom-tracking-records"></a>Emitowanie niestandardowych rekordów śledzenia
 
-Niestandardowe rekordy śledzenia może być emitowana działania kodu, jak pokazano w poniższym przykładzie.
+Niestandardowe rekordy śledzenia mogą być emitowane z działania kodu, jak pokazano w poniższym przykładzie.
 
 ```csharp
 protected override void Execute(CodeActivityContext context)
@@ -27,9 +27,9 @@ protected override void Execute(CodeActivityContext context)
 }
 ```
 
-A <xref:System.Activities.Tracking.CustomTrackingRecord> emitowane w działaniu kodu, wywołując <xref:System.Activities.NativeActivityContext.Track%2A> metody `ActivityContext`.
+<xref:System.Activities.Tracking.CustomTrackingRecord> jest emitowane w działaniu kodu przez wywoływanie metody <xref:System.Activities.NativeActivityContext.Track%2A> na `ActivityContext`.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Windows Server AppFabric monitorowania](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Monitorowanie aplikacji sieci szkieletowej systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [Monitorowanie aplikacji przy użyciu sieci szkieletowej aplikacji](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

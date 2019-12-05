@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: c88f4e5407e550047eaf0f5c8d0d2924da611e93
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9783844ff0fe719b0581c1c9e1fb96eb31933b89
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699220"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801870"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<element > applicationPool (Ustawienia sieci Web)
 Określa ustawienia konfiguracji, które są używane przez ASP.NET do zarządzania zachowaniem całego procesu, gdy aplikacja ASP.NET działa w trybie zintegrowanym w usługach IIS 7,0 lub nowszym.  
@@ -35,7 +35,7 @@ Określa ustawienia konfiguracji, które są używane przez ASP.NET do zarządza
 
 W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
-### <a name="attributes"></a>Atrybuty  
+### <a name="attributes"></a>{1&gt;{2&gt;Atrybuty&lt;2}&lt;1}  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
@@ -59,7 +59,7 @@ Po uruchomieniu usług IIS 7,0 lub nowszej wersji w trybie zintegrowanym Ta komb
 Ustawienia `applicationPool` dotyczą wszystkich pul aplikacji, które są uruchamiane w określonej wersji .NET Framework. Ustawienia są zawarte w pliku aspnet. config. Istnieje wersja tego pliku dla wersji 2,0 i 4,0 .NET Framework. (Wersje 3,0 i 3,5 .NET Framework współużytkują plik ASPNET. config z wersją 2,0).  
   
 > [!IMPORTANT]
-> W przypadku uruchamiania usług IIS 7,0 na [!INCLUDE[win7](../../../../../includes/win7-md.md)]można skonfigurować oddzielny plik ASPNET. config dla każdej puli aplikacji. Pozwala to na dostosowanie wydajności wątków dla każdej puli aplikacji.  
+> W przypadku uruchamiania usług IIS 7,0 w systemie Windows 7 można skonfigurować oddzielny plik ASPNET. config dla każdej puli aplikacji. Pozwala to na dostosowanie wydajności wątków dla każdej puli aplikacji.  
   
 W przypadku ustawienia `maxConcurrentRequestsPerCPU` domyślne ustawienie "5000" w .NET Framework 4 skutecznie wyłącza ograniczanie żądań, które jest kontrolowane przez ASP.NET, chyba że rzeczywiście masz 5000 lub więcej żądań na procesor CPU. Ustawienie domyślne jest zależne od tego, czy w puli wątków CLR w celu automatycznego zarządzania współbieżnością na procesor CPU. Aplikacje, które znacznie wykorzystują asynchroniczne przetwarzanie żądań lub mają wiele długotrwałych żądań zablokowanych we/wy sieci, będą korzystać z zwiększonego limitu domyślnego w .NET Framework 4. Ustawienie `maxConcurrentRequestsPerCPU` na zero wyłącza używanie zarządzanych wątków do przetwarzania żądań ASP.NET. Gdy aplikacja jest uruchamiana w puli aplikacji IIS, żądania pozostają w wątku we/wy usług IIS i w związku z tym współbieżność jest ograniczana przez ustawienia wątku IIS.  
   

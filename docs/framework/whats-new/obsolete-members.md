@@ -7,12 +7,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: 2231552f9c3353890963a4ad5388194036fa27bf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 063d7b5cfddace89efa636327c71a214ee01fdd0
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134100"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802729"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Przestarzałe składowe w .NET Framework
 
@@ -20,51 +20,51 @@ W tabelach w tym artykule wymieniono elementy członkowskie typu, które są prz
 
 - [Przestarzałe składowe w zestawach systemowych](#SystemMembers)
 
-  - [mscorlib. dll](#mscorlib)
+  - [mscorlib.dll](#mscorlib)
 
-  - ['Presentationcore. dll](#PresentationCore)
+  - [PresentationCore.dll](#PresentationCore)
 
-  - [Platformie docelowej. dll](#PresFW)
+  - [PresentationFramework.dll](#PresFW)
 
-  - [System. Activities. dll](#Act)
+  - [System.Activities.dll](#Act)
 
-  - [System. Activities. Presentation. dll](#ActPres)
+  - [System.Activities.Presentation.dll](#ActPres)
 
-  - [System. Core. dll](#core)
+  - [System.Core.dll](#core)
 
-  - [System. Data. dll](#data)
+  - [System.Data.dll](#data)
 
-  - [System. Data. Entity. dll](#entity)
+  - [System.Data.Entity.dll](#entity)
 
-  - [System. Data. OracleClient. dll](#oracleclient)
+  - [System.Data.OracleClient.dll](#oracleclient)
 
-  - [System. Design. dll](#design)
+  - [System.Design.dll](#design)
 
-  - [System. dll](#system)
+  - [System.dll](#system)
 
-  - [System. Drawing. dll](#drawing)
+  - [System.Drawing.dll](#drawing)
 
-  - [System. Messaging. dll](#messaging)
+  - [System.Messaging.dll](#messaging)
 
-  - [System. ServiceModel. dll](#servicemodel)
+  - [System.ServiceModel.dll](#servicemodel)
 
-  - [System. ServiceModel. Discovery. dll](#smDisc)
+  - [System.ServiceModel.Discovery.dll](#smDisc)
 
-  - [System. Web. datawizualizacja. dll](#datavisualization)
+  - [System.Web.DataVisualization.dll](#datavisualization)
 
-  - [System. Web. dll](#web)
+  - [System.Web.dll](#web)
 
-  - [System. Web. DynamicData. dll](#dynamicdata)
+  - [System.Web.DynamicData.dll](#dynamicdata)
 
-  - [System. Web. Extensions. dll](#extensions)
+  - [System.Web.Extensions.dll](#extensions)
 
-  - [System. Web. Services. dll](#services)
+  - [System.Web.Services.dll](#services)
 
-  - [System. Windows. Forms. dll](#forms)
+  - [System.Windows.Forms.dll](#forms)
 
-  - [System. XAML. dll](#xaml)
+  - [System.Xaml.dll](#xaml)
 
-  - [System. XML. dll](#xml)
+  - [System.Xml.dll](#xml)
 
 - [Przestarzałe elementy członkowskie w zestawach firmy Microsoft](#MicrosoftMembers)
 
@@ -72,17 +72,17 @@ W tabelach w tym artykule wymieniono elementy członkowskie typu, które są prz
 
   - [ISymWrapper. dll](#isymwrapper)
 
-  - [Microsoft. Build. Conversion. v 4.0. dll](#conversion)
+  - [Microsoft.Build.Conversion.v4.0.dll](#conversion)
 
-  - [Microsoft. Build. Engine. dll](#engine)
+  - [Microsoft.Build.Engine.dll](#engine)
 
-  - [Microsoft. Build. Framework. dll](#BuildFW)
+  - [Microsoft.Build.Framework.dll](#BuildFW)
 
-  - [Microsoft. Build. Utilities. v 4.0. dll](#BuildUtil4)
+  - [Microsoft.Build.Utilities.v4.0.dll](#BuildUtil4)
 
-  - [Microsoft. Data. Entity. Build. Tasks. dll](#data_entity_tasks)
+  - [Microsoft.Data.Entity.Build.Tasks.dll](#data_entity_tasks)
 
-  - [Microsoft. VisualBasic. dll](#visualbasic)
+  - [Microsoft.VisualBasic.dll](#visualbasic)
 
 <a name="SystemMembers"></a>
 
@@ -319,7 +319,7 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 
 <a name="ActPres"></a>
 
-### <a name="assembly-systemactivitiespresentationdll"></a>Zestaw: System. Activities. Presentation. dll
+### <a name="assembly-systemactivitiespresentationdll"></a>Assembly: System.Activities.Presentation.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -379,7 +379,7 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 
 <a name="data"></a>
 
-### <a name="assembly-systemdatadll"></a>Zestaw: System. Data. dll
+### <a name="assembly-systemdatadll"></a>Assembly: System.Data.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -402,7 +402,7 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 
 <a name="entity"></a>
 
-### <a name="assembly-systemdataentitydll"></a>Zestaw: System. Data. Entity. dll
+### <a name="assembly-systemdataentitydll"></a>Assembly: System.Data.Entity.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -413,7 +413,7 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 
 <a name="oracleclient"></a>
 
-### <a name="assembly-systemdataoracleclientdll"></a>Zestaw: System. Data. OracleClient. dll
+### <a name="assembly-systemdataoracleclientdll"></a>Assembly: System.Data.OracleClient.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -423,7 +423,7 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 
 <a name="design"></a>
 
-### <a name="assembly-systemdesigndll"></a>Zestaw: System. Design. dll
+### <a name="assembly-systemdesigndll"></a>Assembly: System.Design.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -512,8 +512,8 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 |<xref:System.ComponentModel.TypeDescriptor?displayProperty=nameWithType>|<xref:System.ComponentModel.TypeDescriptor.ComNativeDescriptorHandler%2A>|Ta właściwość jest przestarzała. Użyj dostawcy opisu typu, aby dostarczyć informacje o typie dla typów COM.|
 |<xref:System.ComponentModel.Design.DesignerTransactionCloseEventArgs?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.DesignerTransactionCloseEventArgs.%23ctor%28System.Boolean%29>|Ten konstruktor jest przestarzały. Zamiast nich należy używać słów kluczowych <xref:System.ComponentModel.Design.DesignerTransactionCloseEventArgs.%23ctor%28System.Boolean%2CSystem.Boolean%29>.|
 |<xref:System.ComponentModel.Design.SelectionTypes?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.SelectionTypes.Click>|Ta wartość jest przestarzała. Zamiast nich należy używać słów kluczowych <xref:System.ComponentModel.Design.SelectionTypes.Primary?displayProperty=nameWithType>.|
-|<xref:System.ComponentModel.Design.SelectionTypes?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.SelectionTypes.MouseDown>|Ta wartość jest przestarzała. Nie jest już obsługiwane.|
-|<xref:System.ComponentModel.Design.SelectionTypes?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.SelectionTypes.MouseUp>|Ta wartość jest przestarzała. Nie jest już obsługiwane.|
+|<xref:System.ComponentModel.Design.SelectionTypes?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.SelectionTypes.MouseDown>|Ta wartość jest przestarzała. Nie jest już obsługiwany.|
+|<xref:System.ComponentModel.Design.SelectionTypes?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.SelectionTypes.MouseUp>|Ta wartość jest przestarzała. Nie jest już obsługiwany.|
 |<xref:System.ComponentModel.Design.SelectionTypes?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.SelectionTypes.Normal>|Ta wartość jest przestarzała. Zamiast nich należy używać słów kluczowych <xref:System.ComponentModel.Design.SelectionTypes.Auto?displayProperty=nameWithType>.|
 |<xref:System.ComponentModel.Design.SelectionTypes?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.SelectionTypes.Valid>|Ta wartość jest przestarzała. Użyj metod klasy <xref:System.Enum?displayProperty=nameWithType>, aby określić prawidłowe wartości lub użyć konwertera typów.|
 |<xref:System.ComponentModel.Design.ViewTechnology?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ViewTechnology.Passthrough>|Ta wartość jest przestarzała. Zamiast nich należy używać słów kluczowych <xref:System.ComponentModel.Design.ViewTechnology.Default?displayProperty=nameWithType>.|
@@ -526,7 +526,7 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 |<xref:System.Configuration.ConfigurationException?displayProperty=nameWithType>|<xref:System.Configuration.ConfigurationException.%23ctor%28System.String%2CSystem.String%2CSystem.Int32%29>|Ta klasa jest przestarzała. Aby utworzyć nowy wyjątek, Utwórz <xref:System.Configuration.ConfigurationErrorsException?displayProperty=nameWithType>.|
 |<xref:System.Configuration.ConfigurationException?displayProperty=nameWithType>|<xref:System.Configuration.ConfigurationException.%23ctor%28System.String%2CSystem.Xml.XmlNode%29>|Ta klasa jest przestarzała. Aby utworzyć nowy wyjątek, Utwórz <xref:System.Configuration.ConfigurationErrorsException?displayProperty=nameWithType>.|
 |<xref:System.Configuration.ConfigurationException?displayProperty=nameWithType>|<xref:System.Configuration.ConfigurationException.GetXmlNodeFilename%2A>|Ta klasa jest przestarzała. Zamiast nich należy używać słów kluczowych <xref:System.Configuration.ConfigurationErrorsException.GetFilename%2A?displayProperty=nameWithType>.|
-|<xref:System.Configuration.ConfigurationException?displayProperty=nameWithType>|<xref:System.Configuration.ConfigurationException.GetXmlNodeLineNumber%2A>|Ta klasa jest przestarzała. Zamiast tego użyj <xref:System.Configuration.ConfigurationErrorsException.GetLineNumber%28System.Xml.XmlNode%29?displayProperty=nameWithType>|
+|<xref:System.Configuration.ConfigurationException?displayProperty=nameWithType>|<xref:System.Configuration.ConfigurationException.GetXmlNodeLineNumber%2A>|Ta klasa jest przestarzała. Zamiast tego użyj polecenia <xref:System.Configuration.ConfigurationErrorsException.GetLineNumber%28System.Xml.XmlNode%29?displayProperty=nameWithType>|
 |<xref:System.Configuration.ConfigurationSettings?displayProperty=nameWithType>|<xref:System.Configuration.ConfigurationSettings.AppSettings%2A>|Ta metoda jest przestarzała. Został on zastąpiony przez <xref:System.Configuration.ConfigurationManager.AppSettings%2A?displayProperty=nameWithType>.|
 |<xref:System.Configuration.ConfigurationSettings?displayProperty=nameWithType>|<xref:System.Configuration.ConfigurationSettings.GetConfig%2A>|Ta metoda jest przestarzała. Został on zastąpiony przez <xref:System.Configuration.ConfigurationManager.GetSection%2A?displayProperty=nameWithType>.|
 |<xref:System.Diagnostics.EventLog?displayProperty=nameWithType>|<xref:System.Diagnostics.EventLog.CreateEventSource%28System.String%2CSystem.String%2CSystem.String%29>|Ta metoda jest przestarzała. Zamiast nich należy używać słów kluczowych <xref:System.Diagnostics.EventLog.CreateEventSource%28System.Diagnostics.EventSourceCreationData%29>.|
@@ -590,7 +590,7 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 
 <a name="drawing"></a>
 
-### <a name="assembly-systemdrawingdll"></a>Zestaw: System. Drawing. dll
+### <a name="assembly-systemdrawingdll"></a>Assembly: System.Drawing.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -599,7 +599,7 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 
 <a name="messaging"></a>
 
-### <a name="assembly-systemmessagingdll"></a>Zestaw: System. Messaging. dll
+### <a name="assembly-systemmessagingdll"></a>Assembly: System.Messaging.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -608,7 +608,7 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 
 <a name="servicemodel"></a>
 
-### <a name="assembly-systemservicemodeldll"></a>Zestaw: System. ServiceModel. dll
+### <a name="assembly-systemservicemodeldll"></a>Assembly: System.ServiceModel.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -621,7 +621,7 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 
 <a name="smDisc"></a>
 
-### <a name="assembly-systemservicemodeldiscoverydll"></a>Zestaw: System. ServiceModel. Discovery. dll
+### <a name="assembly-systemservicemodeldiscoverydll"></a>Assembly: System.ServiceModel.Discovery.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -630,7 +630,7 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 
 <a name="datavisualization"></a>
 
-### <a name="assembly-systemwebdatavisualizationdll"></a>Zestaw: System. Web. datawizualizacja. dll
+### <a name="assembly-systemwebdatavisualizationdll"></a>Assembly: System.Web.DataVisualization.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -638,7 +638,7 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 
 <a name="web"></a>
 
-### <a name="assembly-systemwebdll"></a>Zestaw: System. Web. dll
+### <a name="assembly-systemwebdll"></a>Assembly: System.Web.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -646,10 +646,10 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetConfig%2A>|Zalecaną alternatywą jest <xref:System.Web.HttpContext.GetSection%2A?displayProperty=nameWithType> w programie System. Web. dll.|
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicode%2A>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> Ta metoda tworzy standardy nie\-\-zgodności i ma problemy ze współdziałaniem. Preferowana alternatywa to <xref:System.Web.HttpUtility.UrlEncode%28System.String%29>.|
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicodeToBytes%2A>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> Ta metoda tworzy standardy nie\-\-zgodności i ma problemy ze współdziałaniem. Preferowana alternatywa to <xref:System.Web.HttpUtility.UrlEncodeToBytes%28System.String%29>.|
-|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|To pole jest przestarzałe. Produkt uwierzytelniania paszportu nie jest już obsługiwany i został zastąpiony przez [konto Microsoft](https://go.microsoft.com/fwlink/?LinkId=733413).|
-|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|Ta właściwość jest przestarzała. Produkt uwierzytelniania paszportu nie jest już obsługiwany i został zastąpiony przez [konto Microsoft](https://go.microsoft.com/fwlink/?LinkId=733413).|
+|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|To pole jest przestarzałe. Produkt uwierzytelniania paszportu nie jest już obsługiwany i został zastąpiony przez [konto Microsoft](https://account.microsoft.com/account/Account?destrt=home-index).|
+|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|Ta właściwość jest przestarzała. Produkt uwierzytelniania paszportu nie jest już obsługiwany i został zastąpiony przez [konto Microsoft](https://account.microsoft.com/account/Account?destrt=home-index).|
 |<xref:System.Web.Configuration.HttpCapabilitiesBase?displayProperty=nameWithType>|<xref:System.Web.Configuration.HttpCapabilitiesBase.JavaScript%2A>|Zalecaną alternatywą jest właściwość <xref:System.Web.Configuration.HttpCapabilitiesBase.EcmaScriptVersion%2A?displayProperty=nameWithType>. Wartość <xref:System.Version.Major%2A?displayProperty=nameWithType> wersji większa lub równa 1 oznacza obsługę języka JavaScript.|
-|<xref:System.Web.Configuration.SystemWebSectionGroup?displayProperty=nameWithType>|<xref:System.Web.Configuration.SystemWebSectionGroup.MobileControls%2A>|System. Web. Mobile. dll jest przestarzały.|
+|<xref:System.Web.Configuration.SystemWebSectionGroup?displayProperty=nameWithType>|<xref:System.Web.Configuration.SystemWebSectionGroup.MobileControls%2A>|System.Web.Mobile.dll is obsolete.|
 |<xref:System.Web.Routing.UrlRoutingModule?displayProperty=nameWithType>|<xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A>|Ta metoda jest przestarzała. Zastąp metodę <xref:System.Web.Routing.UrlRoutingModule.Init%2A>, aby użyć zdarzenia <xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A>.|
 |<xref:System.Web.Security.FormsAuthentication?displayProperty=nameWithType>|<xref:System.Web.Security.FormsAuthentication.Authenticate%2A>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> Zalecaną alternatywą jest użycie interfejsów API <xref:System.Web.Security.Membership?displayProperty=nameWithType>, takich jak <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType>.|
 |<xref:System.Web.Security.FormsAuthentication?displayProperty=nameWithType>|<xref:System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile%2A>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> Zalecaną alternatywą jest użycie interfejsów API <xref:System.Web.Security.Membership?displayProperty=nameWithType>, takich jak <xref:System.Web.Security.Membership.CreateUser%2A?displayProperty=nameWithType>.|
@@ -674,7 +674,7 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 
 <a name="dynamicdata"></a>
 
-### <a name="assembly-systemwebdynamicdatadll"></a>Zestaw: System. Web. DynamicData. dll
+### <a name="assembly-systemwebdynamicdatadll"></a>Assembly: System.Web.DynamicData.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -682,7 +682,7 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 
 <a name="extensions"></a>
 
-### <a name="assembly-systemwebextensionsdll"></a>Zestaw: System. Web. Extensions. dll
+### <a name="assembly-systemwebextensionsdll"></a>Assembly: System.Web.Extensions.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -697,7 +697,7 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 
 <a name="services"></a>
 
-### <a name="assembly-systemwebservicesdll"></a>Zestaw: System. Web. Services. dll
+### <a name="assembly-systemwebservicesdll"></a>Assembly: System.Web.Services.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -706,12 +706,12 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 
 <a name="forms"></a>
 
-### <a name="assembly-systemwindowsformsdll"></a>Zestaw: System. Windows. Forms. dll
+### <a name="assembly-systemwindowsformsdll"></a>Assembly: System.Windows.Forms.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
-|<xref:System.Windows.Forms.AccessibleStates?displayProperty=nameWithType>|<xref:System.Windows.Forms.AccessibleStates.Valid>|Ta wartość wyliczenia jest przestarzała. Nie ma żadnych zastąpień.|
-|<xref:System.Windows.Forms.ComboBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ComboBox.AddItemsCore%2A>|Ta metoda jest przestarzała. Nie ma żadnych zastąpień.|
+|<xref:System.Windows.Forms.AccessibleStates?displayProperty=nameWithType>|<xref:System.Windows.Forms.AccessibleStates.Valid>|Ta wartość wyliczenia jest przestarzała. Nie został zastąpiony innym plikiem.|
+|<xref:System.Windows.Forms.ComboBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ComboBox.AddItemsCore%2A>|Ta metoda jest przestarzała. Nie został zastąpiony innym plikiem.|
 |<xref:System.Windows.Forms.Control?displayProperty=nameWithType>|<xref:System.Windows.Forms.Control.RenderRightToLeft%2A>|Ta właściwość jest przestarzała. Zamiast nich należy używać słów kluczowych <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=nameWithType>.|
 |<xref:System.Windows.Forms.Control?displayProperty=nameWithType>|<xref:System.Windows.Forms.Control.Scale%28System.Single%29>|Ta metoda jest przestarzała. Zamiast tego użyj metody <xref:System.Windows.Forms.Control.Scale%28System.Drawing.SizeF%29?displayProperty=nameWithType>.|
 |<xref:System.Windows.Forms.Control?displayProperty=nameWithType>|<xref:System.Windows.Forms.Control.Scale%28System.Single%2CSystem.Single%29>|Ta metoda jest przestarzała. Zamiast tego użyj metody <xref:System.Windows.Forms.Control.Scale%28System.Drawing.SizeF%29?displayProperty=nameWithType>.|
@@ -719,12 +719,12 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 |<xref:System.Windows.Forms.Form?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.AutoScale%2A>|Ta właściwość jest przestarzała. Zamiast tego użyj właściwości <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A?displayProperty=nameWithType>.|
 |<xref:System.Windows.Forms.Form?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.GetAutoScaleSize%2A>|Ta metoda jest przestarzała. Zamiast tego użyj właściwości <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=nameWithType>.|
 |<xref:System.Windows.Forms.Label?displayProperty=nameWithType>|<xref:System.Windows.Forms.Label.RenderTransparent%2A>|Ta właściwość jest przestarzała. Zamiast nich należy używać słów kluczowych <xref:System.Windows.Forms.Control.BackColor%2A>.|
-|<xref:System.Windows.Forms.ListBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ListBox.AddItemsCore%2A>|Ta metoda jest przestarzała. Nie ma żadnych zastąpień.|
+|<xref:System.Windows.Forms.ListBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ListBox.AddItemsCore%2A>|Ta metoda jest przestarzała. Nie został zastąpiony innym plikiem.|
 |<xref:System.Windows.Forms.PrintPreviewDialog?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>|Ta właściwość jest przestarzała. Zamiast tego użyj właściwości <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=nameWithType>.|
 
 <a name="xaml"></a>
 
-### <a name="assembly-systemxamldll"></a>Zestaw: System. XAML. dll
+### <a name="assembly-systemxamldll"></a>Assembly: System.Xaml.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -733,7 +733,7 @@ W poniższych tabelach znajduje się lista przestarzałych elementów członkows
 
 <a name="xml"></a>
 
-### <a name="assembly-systemxmldll"></a>Zestaw: System. XML. dll
+### <a name="assembly-systemxmldll"></a>Assembly: System.Xml.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -787,7 +787,7 @@ Zestawy IEHost. dll i IEExec. exe zostały usunięte z .NET Framework. Wszystkie
 
 <a name="engine"></a>
 
-### <a name="assembly-microsoftbuildenginedll"></a>Zestaw: Microsoft. Build. Engine. dll
+### <a name="assembly-microsoftbuildenginedll"></a>Assembly: Microsoft.Build.Engine.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -796,7 +796,7 @@ Zestawy IEHost. dll i IEExec. exe zostały usunięte z .NET Framework. Wszystkie
 
 <a name="BuildFW"></a>
 
-### <a name="assembly-microsoftbuildframeworkdll"></a>Zestaw: Microsoft. Build. Framework. dll
+### <a name="assembly-microsoftbuildframeworkdll"></a>Assembly: Microsoft.Build.Framework.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -804,7 +804,7 @@ Zestawy IEHost. dll i IEExec. exe zostały usunięte z .NET Framework. Wszystkie
 
 <a name="BuildUtil4"></a>
 
-### <a name="assembly-microsoftbuildutilitiesv40dll"></a>Zestaw: Microsoft. Build. Utilities. v 4.0. dll
+### <a name="assembly-microsoftbuildutilitiesv40dll"></a>Assembly: Microsoft.Build.Utilities.v4.0.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -812,7 +812,7 @@ Zestawy IEHost. dll i IEExec. exe zostały usunięte z .NET Framework. Wszystkie
 
 <a name="data_entity_tasks"></a>
 
-### <a name="assembly-microsoftdataentitybuildtasksdll"></a>Zestaw: Microsoft. Data. Entity. Build. Tasks. dll
+### <a name="assembly-microsoftdataentitybuildtasksdll"></a>Assembly: Microsoft.Data.Entity.Build.Tasks.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|
@@ -820,7 +820,7 @@ Zestawy IEHost. dll i IEExec. exe zostały usunięte z .NET Framework. Wszystkie
 
 <a name="visualbasic"></a>
 
-### <a name="assembly-microsoftvisualbasicdll"></a>Zestaw: Microsoft. VisualBasic. dll
+### <a name="assembly-microsoftvisualbasicdll"></a>Assembly: Microsoft.VisualBasic.dll
 
 |Typ|Element członkowski|Komunikat|
 |----------|------------|-------------|

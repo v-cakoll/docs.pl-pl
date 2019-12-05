@@ -7,20 +7,20 @@ helpviewer_keywords:
 - GetHashCode method
 - hash codes, calculating
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
-ms.openlocfilehash: 193f9a15768e4060d977063117c07558bbb1d766
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 413eb6c6e61b509135601c65cf045eabd849e8b3
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116127"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802112"
 ---
-# <a name="netfx45_cultureawarecomparergethashcode_longstrings-element"></a>\<element > NetFx45_CultureAwareComparerGetHashCode_LongStrings
+# <a name="netfx45_cultureawarecomparergethashcode_longstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings> Element
 
 Określa, czy środowisko uruchomieniowe używa stałej ilości pamięci do obliczenia kodów skrótów dla metody <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>.
 
-[ **\<configuration >** ](../configuration-element.md) \
+[ **\<> konfiguracji**](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx45_CultureAwareComparerGetHashCode_LongStrings >**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<** NetFx45_CultureAwareComparerGetHashCode_LongStrings >  
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,7 +32,7 @@ Określa, czy środowisko uruchomieniowe używa stałej ilości pamięci do obli
 
 W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.
 
-### <a name="attributes"></a>Atrybuty
+### <a name="attributes"></a>{1&gt;{2&gt;Atrybuty&lt;2}&lt;1}
 
 |Atrybut|Opis|
 |---------------|-----------------|
@@ -42,7 +42,7 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Wartość|Opis|
 |-----------|-----------------|
-|0|Środowisko uruchomieniowe języka wspólnego przydziela zmienną ilość pamięci dla metody <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>, aby obliczyć kody skrótów. Domyślnie włączone.|
+|0|Środowisko uruchomieniowe języka wspólnego przydziela zmienną ilość pamięci dla metody <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>, aby obliczyć kody skrótów. Jest to domyślne ustawienie.|
 |1|Środowisko uruchomieniowe języka wspólnego przydziela stałą ilość pamięci dla metody <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>, aby obliczyć kody skrótów.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
@@ -61,7 +61,7 @@ Brak.
 Domyślnie środowisko uruchomieniowe języka wspólnego przydziela zmienną ilość pamięci dla metody <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> i <xref:System.ArgumentException> może być zgłaszane, gdy metoda próbuje obliczyć kod skrótu bardzo dużych ciągów (ponad kilka milionów znaków). Dodając ten element do pliku konfiguracji aplikacji i ustawiając jego atrybut `enabled` na wartość "1", można określić, że metoda <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> użyć alternatywnego algorytmu, który przydziela stałą ilość pamięci do obliczeń kodów skrótów.
 
 > [!IMPORTANT]
-> Element `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` nie jest używany w [!INCLUDE[win8](../../../../../includes/win8-md.md)] i nowszych wersjach.
+> Element `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` nie jest używany w systemie Windows 8 i nowszych wersjach.
 
 ## <a name="see-also"></a>Zobacz także
 

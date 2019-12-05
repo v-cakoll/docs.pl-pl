@@ -109,8 +109,18 @@
   items:
     - name: Ustawienia
       href: run-time-config/index.md
+    - name: Ustawienia kompilacji
+      href: run-time-config/compilation.md
+    - name: Ustawienia debugowania i profilowania
+      href: run-time-config/debugging-profiling.md
     - name: Ustawienia modułu zbierającego elementy bezużyteczne
       href: run-time-config/garbage-collector.md
+    - name: Ustawienia globalizacji
+      href: run-time-config/globalization.md
+    - name: Ustawienia sieci
+      href: run-time-config/networking.md
+    - name: Ustawienia wątkowości
+      href: run-time-config/threading.md
 - name: Współdziałanie natywne
   items:
     - name: Uwidacznianie składników .NET Core dla modelu COM

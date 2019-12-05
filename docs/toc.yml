@@ -11,9 +11,9 @@
 - name: 'Przewodnik dla języka C#'
   href: csharp/index.yml
 - name: 'Podręcznik języka F#'
-  href: fsharp/
+  href: fsharp/index.yml
 - name: Przewodnik po języku Visual Basic
-  href: visual-basic/
+  href: visual-basic/index.yml
 - name: Przewodnik po strukturze ML.NET
   href: machine-learning/index.yml
 - name: Przewodnik platformy .NET dla platformy Apache Spark

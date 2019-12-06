@@ -96,7 +96,7 @@
     - name: Tworzenie kompletnego rozwiązania .NET Core w systemie macOS
       href: tutorials/using-on-mac-vs-full-solution.md
     - name: Rozpoczynanie pracy z platformą .NET Core przy użyciu narzędzi interfejsu wiersza polecenia
-      href: tutorials/using-with-xplat-cli.md
+      href: tutorials/cli-create-console-app.md
     - name: Organizowanie i testowanie projektów przy użyciu interfejsu wiersza polecenia platformy .NET Core
       href: tutorials/testing-with-cli.md
     - name: Tworzenie bibliotek za pomocą narzędzi dla wielu platform

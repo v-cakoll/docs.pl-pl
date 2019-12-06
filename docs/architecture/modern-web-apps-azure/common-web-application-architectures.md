@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: b376f8b38749f242f4e78a10808532989e0ac834
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6a4e971c1cb19a12710ad7893378a49758b4016e
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972132"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884244"
 ---
 # <a name="common-web-application-architectures"></a>Typowe architektury aplikacji internetowych
 
@@ -38,7 +38,7 @@ Chociaż proste, jednoprojektowe rozwiązanie monolityczne ma pewne wady. Wraz z
 
 Aby rozwiązać te problemy, aplikacje często są rozłożone na rozwiązania obejmujące wiele projektów, w których każdy projekt jest traktowany jako znajdujący się w określonej _warstwie_ aplikacji.
 
-## <a name="what-are-layers"></a>Co to są warstwy?
+## <a name="what-are-layers"></a>Co to są warstwy logiczne?
 
 W miarę wzrostu złożoności aplikacji jeden ze sposobów zarządzania tą złożonością polega na rozdzieleniu aplikacji zależnie od jej obowiązków lub obaw. Jest to zgodne z regułą separacji i może pomóc w utrzymaniu zorganizowanej bazy kodu w taki sposób, aby deweloperzy mogli łatwo znajdować określone funkcje. Architektura warstwowa oferuje wiele korzyści poza organizacją kodu, chociaż.
 
@@ -173,7 +173,7 @@ Warstwa interfejsu użytkownika w aplikacji ASP.NET Core MVC jest punktem wejśc
 - Filtry
 - Widoki
 - Modele widoków
-- Folderze
+- Uruchamianie
 
 Klasa startowa jest odpowiedzialna za skonfigurowanie aplikacji oraz w celu zapewnienia obsługi typów implementacji w interfejsach, co pozwala na prawidłowe działanie iniekcji zależności w czasie wykonywania.
 
@@ -302,6 +302,8 @@ Jeśli chcesz dodać obsługę platformy Docker do aplikacji przy użyciu progra
   <https://github.com/ardalis/cleanarchitecture>
 - **Tworzenie architektury książki elektronicznej mikrousług**  
   <https://aka.ms/MicroservicesEbook>
+- **DDD (Projektowanie oparte na domenie)**  
+  <https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/>
 
 >[!div class="step-by-step"]
 >[Poprzedni](architectural-principles.md)

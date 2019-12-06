@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 939c9c6b8a8a8822174f08d5c0b50ef051264ee1
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 75e6c7b4886bd490c462e9128eca7ec13f233824
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802091"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837301"
 ---
 # <a name="security-wpf"></a>Zabezpieczenia (WPF)
 <a name="introduction"></a>Podczas opracowywania aplikacji autonomicznych i hostowanych przez program Windows Presentation Foundation (WPF) należy wziąć pod uwagę model zabezpieczeń. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Aplikacje autonomiczne są wykonywane z nieograniczonymi uprawnieniami (zestaw uprawnień CAS**FullTrust** ), niezależnie od tego, czy wdrożono przy użyciu Instalator Windows (. msi), XCOPY lub ClickOnce. Wdrożenie częściowego zaufania, autonomiczne aplikacje WPF za pomocą technologii ClickOnce nie jest obsługiwane. Jednak w pełni zaufane aplikacje hosta mogą utworzyć <xref:System.AppDomain> relacji zaufania z użyciem .NET Framework modelu dodatków. Aby uzyskać więcej informacji, zobacz [Omówienie dodatków WPF](./app-development/wpf-add-ins-overview.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "74802091"
   
 <a name="InternetExplorerSecuritySettings"></a>   
 ## <a name="web-browsing-software-security-settings"></a>Ustawienia zabezpieczeń oprogramowania do przeglądania sieci Web  
- Ustawienia zabezpieczeń na komputerze określają dostęp do dowolnego oprogramowania do przeglądania sieci Web. Oprogramowanie do przeglądania sieci Web obejmuje dowolną aplikację lub składnik korzystający z interfejsów API [WinInet](https://go.microsoft.com/fwlink/?LinkId=179379) lub [Urlmon](https://go.microsoft.com/fwlink/?LinkId=179383) , w tym programów Internet Explorer i PresentationHost. exe.  
+ Ustawienia zabezpieczeń na komputerze określają dostęp do dowolnego oprogramowania do przeglądania sieci Web. Oprogramowanie do przeglądania sieci Web obejmuje dowolną aplikację lub składnik korzystający z interfejsów API [WinInet](/windows/win32/wininet/portal) lub [Urlmon](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767916(v=vs.85)) , w tym programów Internet Explorer i PresentationHost. exe.  
   
  Program Internet Explorer oferuje mechanizm, za pomocą którego można skonfigurować funkcje, które mogą być wykonywane przez program lub z programu Internet Explorer, w tym następujące:  
   
@@ -148,14 +148,14 @@ ms.locfileid: "74802091"
   
 <a name="webbrowser_control_and_feature_controls"></a>   
 ## <a name="webbrowser-control-and-feature-controls"></a>Kontrolki WebBrowser i kontrolki funkcji  
- Formant <xref:System.Windows.Controls.WebBrowser> WPF może służyć do hostowania zawartości sieci Web. Formant <xref:System.Windows.Controls.WebBrowser> WPF otacza podstawową kontrolkę ActiveX WebBrowser. WPF udostępnia pewne wsparcie w zakresie zabezpieczania aplikacji przy użyciu kontrolki <xref:System.Windows.Controls.WebBrowser> WPF do hostowania niezaufanej zawartości sieci Web. Jednak niektóre funkcje zabezpieczeń muszą być stosowane bezpośrednio przez aplikacje przy użyciu kontrolki <xref:System.Windows.Controls.WebBrowser>. Aby uzyskać więcej informacji na temat kontrolki ActiveX WebBrowser, zobacz [przeglądanie i samouczki kontrolki WebBrowser](https://go.microsoft.com/fwlink/?LinkId=179388).  
+ Formant <xref:System.Windows.Controls.WebBrowser> WPF może służyć do hostowania zawartości sieci Web. Formant <xref:System.Windows.Controls.WebBrowser> WPF otacza podstawową kontrolkę ActiveX WebBrowser. WPF udostępnia pewne wsparcie w zakresie zabezpieczania aplikacji przy użyciu kontrolki <xref:System.Windows.Controls.WebBrowser> WPF do hostowania niezaufanej zawartości sieci Web. Jednak niektóre funkcje zabezpieczeń muszą być stosowane bezpośrednio przez aplikacje przy użyciu kontrolki <xref:System.Windows.Controls.WebBrowser>. Aby uzyskać więcej informacji na temat kontrolki ActiveX WebBrowser, zobacz [przeglądanie i samouczki kontrolki WebBrowser](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752041(v=vs.85)).  
   
 > [!NOTE]
 > Ta sekcja ma zastosowanie również do kontrolki <xref:System.Windows.Controls.Frame>, ponieważ używa <xref:System.Windows.Controls.WebBrowser> do nawigowania do zawartości HTML.  
   
  Jeśli formant <xref:System.Windows.Controls.WebBrowser> WPF jest używany do hostowania niezaufanej zawartości sieci Web, aplikacja powinna używać <xref:System.AppDomain> częściowej relacji zaufania, aby pomóc w izolowaniu kodu aplikacji od potencjalnie złośliwego kodu skryptu HTML. Jest to szczególnie prawdziwe, jeśli aplikacja działa z hostowanym skryptem za pomocą metody <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> i właściwości <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A>. Aby uzyskać więcej informacji, zobacz [Omówienie dodatków WPF](./app-development/wpf-add-ins-overview.md).  
   
- Jeśli aplikacja używa kontrolki <xref:System.Windows.Controls.WebBrowser> WPF, inny sposób zwiększania bezpieczeństwa i ograniczania ataków polega na włączeniu formantów funkcji programu Internet Explorer. Formanty funkcji to dodatki do programu Internet Explorer, które umożliwiają administratorom i deweloperom Konfigurowanie funkcji programu Internet Explorer i aplikacji obsługujących formant ActiveX WebBrowser, które są zawijane przez formant <xref:System.Windows.Controls.WebBrowser> WPF. Formanty funkcji można skonfigurować za pomocą funkcji [CoInternetSetFeatureEnabled](https://go.microsoft.com/fwlink/?LinkId=179394) lub zmieniając wartości w rejestrze. Aby uzyskać więcej informacji na temat kontrolek funkcji, zobacz [wprowadzenie do kontrolek funkcji](https://go.microsoft.com/fwlink/?LinkId=179390) i [kontrolek funkcji internetowych](https://go.microsoft.com/fwlink/?LinkId=179392).  
+ Jeśli aplikacja używa kontrolki <xref:System.Windows.Controls.WebBrowser> WPF, inny sposób zwiększania bezpieczeństwa i ograniczania ataków polega na włączeniu formantów funkcji programu Internet Explorer. Formanty funkcji to dodatki do programu Internet Explorer, które umożliwiają administratorom i deweloperom Konfigurowanie funkcji programu Internet Explorer i aplikacji obsługujących formant ActiveX WebBrowser, które są zawijane przez formant <xref:System.Windows.Controls.WebBrowser> WPF. Formanty funkcji można skonfigurować za pomocą funkcji [CoInternetSetFeatureEnabled](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537168(v=vs.85)) lub zmieniając wartości w rejestrze. Aby uzyskać więcej informacji na temat kontrolek funkcji, zobacz [wprowadzenie do kontrolek funkcji](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537184(v=vs.85)) i [kontrolek funkcji internetowych](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/general-info/ee330720(v=vs.85)).  
   
  Jeśli tworzysz autonomiczną aplikację WPF, która używa kontrolki <xref:System.Windows.Controls.WebBrowser> WPF, WPF automatycznie włącza następujące kontrolki funkcji dla aplikacji.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "74802091"
  Kontrolki funkcji są stosowane przez proces tworzenia wystąpienia obiektu ActiveX WebBrowser. W związku z tym, jeśli tworzysz aplikację autonomiczną, która może nawigować do niezaufanej zawartości, należy rozważyć włączenie dodatkowych kontroli funkcji.  
   
 > [!NOTE]
-> To zalecenie jest oparte na ogólnych zaleceniach dotyczących zabezpieczeń hosta MSHTML i SHDOCVW. Aby uzyskać więcej informacji, zobacz sekcję dotyczącą [zabezpieczeń hosta MSHTML często zadawanych pytań: część I z II](https://go.microsoft.com/fwlink/?LinkId=179396) i informacje o [zabezpieczeniach hosta MSHTML — często zadawane pytania: część II z II](https://go.microsoft.com/fwlink/?LinkId=179415).  
+> To zalecenie jest oparte na ogólnych zaleceniach dotyczących zabezpieczeń hosta MSHTML i SHDOCVW. Aby uzyskać więcej informacji, zobacz sekcję dotyczącą [zabezpieczeń hosta MSHTML często zadawanych pytań: część I z II](https://msrc-blog.microsoft.com/archive/2009/04/02/the-mshtml-host-security-faq.aspx) i informacje o [zabezpieczeniach hosta MSHTML — często zadawane pytania: część II z II](https://msrc-blog.microsoft.com/archive/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii.aspx).  
   
  W przypadku pliku wykonywalnego Rozważ włączenie następujących kontrolek funkcji przez ustawienie wartości rejestru na 1.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "74802091"
   
  Jeśli uruchamiasz aplikację przeglądarki XAML z częściowym zaufaniem (XBAP), która zawiera formant <xref:System.Windows.Controls.WebBrowser> WPF w programie Windows Internet Explorer, WPF hostuje formant ActiveX WebBrowser w przestrzeni adresowej procesu programu Internet Explorer. Ponieważ Kontrolka ActiveX WebBrowser jest hostowana w procesie programu Internet Explorer, wszystkie formanty funkcji dla programu Internet Explorer również są włączone dla kontrolki ActiveX WebBrowser.  
   
- Aplikacje XBAP działające w programie Internet Explorer również uzyskują dodatkowy poziom zabezpieczeń w porównaniu z normalnymi aplikacjami autonomicznymi. To dodatkowe zabezpieczenia wynika z faktu, że program Internet Explorer i w związku z tym Kontrolka ActiveX WebBrowser są domyślnie uruchamiane w trybie chronionym w systemach Windows Vista i Windows 7. Aby uzyskać więcej informacji na temat trybu chronionego, zobacz [Opis i praca w trybie chronionym programu Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
+ Aplikacje XBAP działające w programie Internet Explorer również uzyskują dodatkowy poziom zabezpieczeń w porównaniu z normalnymi aplikacjami autonomicznymi. To dodatkowe zabezpieczenia wynika z faktu, że program Internet Explorer i w związku z tym Kontrolka ActiveX WebBrowser są domyślnie uruchamiane w trybie chronionym w systemach Windows Vista i Windows 7. Aby uzyskać więcej informacji na temat trybu chronionego, zobacz [Opis i praca w trybie chronionym programu Internet Explorer](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/).  
   
 > [!NOTE]
 > Jeśli spróbujesz uruchomić aplikację XBAP, która zawiera kontrolkę <xref:System.Windows.Controls.WebBrowser> WPF w przeglądarce Firefox, w strefie Internet zostanie wygenerowany <xref:System.Security.SecurityException>. Jest to spowodowane zasadami zabezpieczeń WPF.  
@@ -266,7 +266,7 @@ ms.locfileid: "74802091"
   
 |Obszar|Zasób|  
 |----------|--------------|  
-|Kod zarządzany|[Wskazówki dotyczące zabezpieczeń wzorców i praktyk dotyczących aplikacji](https://go.microsoft.com/fwlink/?LinkId=117426)|  
+|Kod zarządzany|[Wskazówki dotyczące zabezpieczeń wzorców i praktyk dotyczących aplikacji](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))|  
 |CAS|[Zabezpieczenia dostępu kodu](../misc/code-access-security.md)|  
 |ClickOnce|[Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[Zabezpieczenie częściowej relacji zaufania WPF](wpf-partial-trust-security.md)|  
@@ -276,7 +276,7 @@ ms.locfileid: "74802091"
 - [Zabezpieczenie częściowej relacji zaufania WPF](wpf-partial-trust-security.md)
 - [Strategia zabezpieczeń WPF — zabezpieczenia platformy](wpf-security-strategy-platform-security.md)
 - [Strategia zabezpieczeń WPF — projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)
-- [Wskazówki dotyczące zabezpieczeń wzorców i praktyk dotyczących aplikacji](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [Wskazówki dotyczące zabezpieczeń wzorców i praktyk dotyczących aplikacji](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))
 - [Zabezpieczenia dostępu kodu](../misc/code-access-security.md)
 - [Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Przegląd XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)

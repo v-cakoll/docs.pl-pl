@@ -3,13 +3,13 @@ title: Instalowanie platformy .NET Core w systemach Windows, Linux i macOS — .
 description: Dowiedz się, gdzie i co instalować na platformie .NET Core w wersjach systemu Windows, Linux i macOS. Odkryj zależności wymagane do tworzenia, wdrażania i uruchamiania aplikacji platformy .NET Core.
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
-ms.openlocfilehash: d4c2e8507b022d03eed482f827407db5cff8ebfe
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/04/2019
+ms.openlocfilehash: 4a133393db28ac5c7fd2384c4b842483c7c30d6f
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74451088"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74836995"
 ---
 # <a name="download-and-install-net-core"></a>Pobierz i zainstaluj program .NET Core
 

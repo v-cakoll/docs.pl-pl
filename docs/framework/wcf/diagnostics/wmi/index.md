@@ -2,12 +2,12 @@
 title: Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 0b67f06b9a99d7e9001c8415d0e94adef8436a3d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 26758c8a4f537f9522d5ab650ae6b3cd8f044db2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855814"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837444"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 Windows Communication Foundation (WCF) ujawnia dane inspekcji usługi w czasie wykonywania za pomocą dostawcy Instrumentacja zarządzania Windows WCF (WMI).  
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) ujawnia dane inspekcji usługi w czasie w
   
  Dostawca usługi WMI to składnik, który udostępnia instrumentację w czasie wykonywania za pomocą interfejsu zgodnego z pakietem WBEM. Składa się z zestawu obiektów usługi WMI, które mają pary atrybut/wartość. Pary mogą mieć różne typy proste. Narzędzia do zarządzania programu mogą łączyć się z usługami za pomocą interfejsu w czasie wykonywania. Funkcja WCF udostępnia atrybuty usług, takie jak adresy, powiązania, zachowania i odbiorniki.  
   
- Wbudowanego dostawcę usługi WMI można aktywować w pliku konfiguracji aplikacji. Odbywa się to za pomocą `wmiProviderEnabled` atrybutu [ \<diagnostyki >](../../../configure-apps/file-schema/wcf/diagnostics.md) w [ \<sekcji > System. ServiceModel](../../../configure-apps/file-schema/wcf/system-servicemodel.md) , jak pokazano w poniższej konfiguracji przykładowej.  
+ Wbudowanego dostawcę usługi WMI można aktywować w pliku konfiguracji aplikacji. Odbywa się to za pomocą atrybutu `wmiProviderEnabled` [diagnostyki\<](../../../configure-apps/file-schema/wcf/diagnostics.md) w sekcji [\<system. ServiceModel >](../../../configure-apps/file-schema/wcf/system-servicemodel.md) , jak pokazano w poniższej konfiguracji przykładowej.  
   
 ```xml  
 <system.serviceModel>  
@@ -33,24 +33,24 @@ Windows Communication Foundation (WCF) ujawnia dane inspekcji usługi w czasie w
  Dostęp do danych usługi WMI można uzyskać na wiele różnych sposobów. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów, C++ aplikacji Visual Basic, aplikacji i .NET Framework. Aby uzyskać więcej informacji, zobacz [Korzystanie z usługi WMI](https://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
-> Jeśli używasz .NET Framework dostarczonych metod do programistycznego uzyskiwania dostępu do danych WMI, należy pamiętać, że takie metody mogą generować wyjątki po ustanowieniu połączenia. Połączenie nie jest ustanawiane podczas konstruowania <xref:System.Management.ManagementObject> wystąpienia, ale przy pierwszym żądaniu obejmującym rzeczywistą wymianę danych. W związku z tym należy użyć `try..catch` bloku, aby przechwycić możliwe wyjątki.  
+> Jeśli używasz .NET Framework dostarczonych metod do programistycznego uzyskiwania dostępu do danych WMI, należy pamiętać, że takie metody mogą generować wyjątki po ustanowieniu połączenia. Połączenie nie jest ustanawiane podczas konstruowania wystąpienia <xref:System.Management.ManagementObject>, ale przy pierwszym żądaniu obejmującym rzeczywistą wymianę danych. W związku z tym należy użyć bloku `try..catch`, aby przechwycić możliwe wyjątki.  
   
- Można zmienić poziom rejestrowania śledzenia i komunikatów, a także opcje rejestrowania komunikatów dla `System.ServiceModel` źródła śledzenia w usłudze WMI. Można to zrobić, uzyskując dostęp do wystąpienia [AppDomainInfo](appdomaininfo.md) , które uwidacznia następujące właściwości logiczne `LogMessagesAtServiceLevel`: `LogMessagesAtTransportLevel`, `LogMalformedMessages`,, `TraceLevel`i. `false` W związku z tym, jeśli skonfigurujesz odbiornik śledzenia do rejestrowania komunikatów, ale ustawisz te opcje w konfiguracji, możesz później zmienić je `true` na, gdy aplikacja jest uruchomiona. Pozwoli to efektywnie włączyć rejestrowanie komunikatów w czasie wykonywania. Podobnie, jeśli włączysz rejestrowanie komunikatów w pliku konfiguracji, możesz go wyłączyć w czasie wykonywania za pomocą usługi WMI.  
+ Można zmienić poziom rejestrowania śledzenia i komunikatów, a także opcje rejestrowania komunikatów dla źródła śledzenia `System.ServiceModel` w usłudze WMI. Można to zrobić, uzyskując dostęp do wystąpienia [AppDomainInfo](appdomaininfo.md) , które uwidacznia następujące właściwości logiczne: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, `LogMalformedMessages`i `TraceLevel`. W związku z tym, jeśli skonfigurujesz odbiornik śledzenia do rejestrowania komunikatów, ale ustawisz te opcje `false` w konfiguracji, możesz później zmienić je na `true`, gdy aplikacja jest uruchomiona. Pozwoli to efektywnie włączyć rejestrowanie komunikatów w czasie wykonywania. Podobnie, jeśli włączysz rejestrowanie komunikatów w pliku konfiguracji, możesz go wyłączyć w czasie wykonywania za pomocą usługi WMI.  
   
- Należy pamiętać, że jeśli w pliku konfiguracji nie zostaną określone detektory śledzenia komunikatów rejestrowania komunikatów `System.ServiceModel` lub żadne detektory śledzenia dla śledzenia nie zostaną uwzględnione, pomimo że zmiany są akceptowane przez usługę WMI. Aby uzyskać więcej informacji na temat prawidłowego konfigurowania odpowiednich odbiorników, zobacz [Konfigurowanie rejestrowania komunikatów](../configuring-message-logging.md) i [Konfigurowanie śledzenia](../tracing/configuring-tracing.md). Poziom śledzenia wszystkich innych źródeł śledzenia określonych przez konfigurację jest efektywny, gdy aplikacja zostanie uruchomiona i nie można jej zmienić.  
+ Należy pamiętać, że jeśli w pliku konfiguracyjnym nie zostaną określone detektory śledzenia komunikatów rejestrowania komunikatów lub nie `System.ServiceModel` detektorów śledzenia dla śledzenia, żadna zmiana nie zostanie uwzględniona, nawet jeśli zmiany są akceptowane przez usługę WMI. Aby uzyskać więcej informacji na temat prawidłowego konfigurowania odpowiednich odbiorników, zobacz [Konfigurowanie rejestrowania komunikatów](../configuring-message-logging.md) i [Konfigurowanie śledzenia](../tracing/configuring-tracing.md). Poziom śledzenia wszystkich innych źródeł śledzenia określonych przez konfigurację jest efektywny, gdy aplikacja zostanie uruchomiona i nie można jej zmienić.  
   
- Funkcja WCF udostępnia `GetOperationCounterInstanceName` metodę tworzenia skryptów. Ta metoda zwraca nazwę wystąpienia licznika wydajności, jeśli jest podano nazwę operacji. Nie sprawdza ona jednak danych wejściowych. W związku z tym, jeśli podano niepoprawną nazwę operacji, zwracana jest niepoprawna nazwa licznika.  
+ Usługa WCF udostępnia metodę `GetOperationCounterInstanceName` na potrzeby obsługi skryptów. Ta metoda zwraca nazwę wystąpienia licznika wydajności, jeśli jest podano nazwę operacji. Nie sprawdza ona jednak danych wejściowych. W związku z tym, jeśli podano niepoprawną nazwę operacji, zwracana jest niepoprawna nazwa licznika.  
   
- Właściwość wystąpienia nie zawiera liczby kanałów otwartych przez usługę w celu nawiązania połączenia z inną usługą, jeśli klient programu WCF do usługi docelowej nie `Service` został utworzony w ramach metody. `Service` `OutgoingChannel`  
+ Właściwość `OutgoingChannel` wystąpienia `Service` nie zlicza kanałów otwartych przez usługę w celu nawiązania połączenia z inną usługą, jeśli klient programu WCF do usługi docelowej nie został utworzony w ramach metody `Service`.  
   
- **Przestroga** Usługa WMI obsługuje <xref:System.TimeSpan> tylko wartość do 3 punktów dziesiętnych. Na przykład, jeśli usługa ustawi jedną z jej właściwości na <xref:System.TimeSpan.MaxValue>, jej wartość jest obcinana po 3 miejscach dziesiętnych wyświetlanych za pomocą usługi WMI.  
+ **Przestroga** Usługa WMI obsługuje tylko wartość <xref:System.TimeSpan> do 3 punktów dziesiętnych. Na przykład jeśli usługa ustawi jedną z jej właściwości na <xref:System.TimeSpan.MaxValue>, jej wartość zostanie obcięta po 3 miejscach dziesiętnych wyświetlanych za pomocą usługi WMI.  
   
 ## <a name="security"></a>Zabezpieczenia  
  Ponieważ dostawca usługi WCF WMI umożliwia odnajdywanie usług w środowisku, należy zachować szczególną ostrożność, aby udzielić dostępu do niego. W przypadku złagodzenia domyślnego dostępu tylko do administratora można zezwolić mniej zaufanym stronom na dostęp do poufnych danych w danym środowisku. W przypadku oddalenia uprawnień dostępu do zdalnej usługi WMI mogą wystąpić ataki z zalaniem. Jeśli proces jest zalewany przez nadmierne żądania usługi WMI, jego wydajność może być obniżona.  
   
  Ponadto w przypadku złagodzenia uprawnień dostępu do pliku MOF mniej zaufane strony mogą manipulować zachowaniem usługi WMI i zmieniać obiekty, które są ładowane w schemacie usługi WMI. Na przykład pola mogą zostać usunięte w taki sposób, że dane krytyczne są ukrywane przez administratora lub pola, które nie wypełniają lub nie powodują wyjątków, są dodawane do pliku.  
   
- Domyślnie dostawca WMI usługi WCF przypisuje uprawnienie "wykonaj metodę", "zapis dostawcy" i "Włącz konto" dla administratora oraz uprawnienie "Włączanie konta" dla usługi ASP.NET, usług lokalnych i sieciowych. W szczególności w przypadku braku[!INCLUDE[wv](../../../../../includes/wv-md.md)] na platformach konto ASP.net ma dostęp do odczytu do przestrzeni nazw usługi WMI. Jeśli nie chcesz przyznawać tych uprawnień dla określonej grupy użytkowników, należy dezaktywować dostawcę usługi WMI (jest on domyślnie wyłączony) lub wyłączyć dostęp dla określonej grupy użytkowników.  
+ Domyślnie dostawca WMI usługi WCF przypisuje uprawnienie "wykonaj metodę", "zapis dostawcy" i "Włącz konto" dla administratora oraz uprawnienie "Włączanie konta" dla usługi ASP.NET, usług lokalnych i sieciowych. W szczególności na platformach innych niż Windows Vista konto ASP.NET ma dostęp do odczytu do przestrzeni nazw usługi WMI. Jeśli nie chcesz przyznawać tych uprawnień dla określonej grupy użytkowników, należy dezaktywować dostawcę usługi WMI (jest on domyślnie wyłączony) lub wyłączyć dostęp dla określonej grupy użytkowników.  
   
  Ponadto podczas próby włączenia usługi WMI za pomocą konfiguracji usługa WMI może nie być włączona z powodu niewystarczających uprawnień użytkownika. Nie ma jednak żadnego zdarzenia w dzienniku zdarzeń w celu zarejestrowania tego błędu.  
   
@@ -155,7 +155,7 @@ Whoami /user
 ### <a name="wmi-cim-studio"></a>WMI CIM Studio  
  Jeśli zainstalowano [Narzędzia administracyjne WMI](https://go.microsoft.com/fwlink/?LinkId=95185), można użyć usługi WMI CIM Studio do uzyskiwania dostępu do wystąpień usługi WMI. Narzędzia znajdują się w następującym folderze  
   
- **Narzędzia%windir%\Program Files\WMI\\**  
+ **\\ narzędzia Files\WMI%windir%\Program**  
   
 1. W oknie **łączenie z przestrzenią nazw:** wpisz **root\ServiceModel** , a następnie kliknij przycisk **OK.**  
   
@@ -169,7 +169,7 @@ Whoami /user
 2. W nowym oknie wprowadź **root\ServiceModel** dla pola **przestrzeń nazw** , a następnie wybierz opcję **Prywatność pakietów** dla **poziomu uwierzytelniania**. Kliknij przycisk **Połącz**.  
   
 ### <a name="using-managed-code"></a>Korzystanie z kodu zarządzanego  
- Możesz również uzyskać dostęp do zdalnych wystąpień usługi WMI programowo przy użyciu klas dostarczonych <xref:System.Management> przez przestrzeń nazw. Poniższy przykład kodu demonstruje, jak to zrobić.  
+ Możesz również uzyskać dostęp do zdalnych wystąpień usługi WMI programowo przy użyciu klas dostarczonych przez przestrzeń nazw <xref:System.Management>. Poniższy przykład kodu demonstruje, jak to zrobić.  
   
 ```csharp
 String wcfNamespace = $@"\\{this.serviceMachineName}\Root\ServiceModel");

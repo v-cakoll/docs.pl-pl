@@ -3,14 +3,14 @@ title: Kod testu C# jednostkowego w programie .NET Core przy użyciu testu dotne
 description: Poznaj koncepcje testów jednostkowych w C# oprogramowaniu i .NET Core za pośrednictwem interaktywnego środowiska tworzenia przykładowego rozwiązania krok po kroku przy użyciu testu dotnet i xUnit.
 author: ardalis
 ms.author: wiwagn
-ms.date: 11/29/2017
+ms.date: 12/04/2019
 ms.custom: seodec18
-ms.openlocfilehash: eee8ab675ecc66b842a1447e3f2de1b6b9765c4d
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 420ab4c7f23ef3fd6cd26d91c2b4f075f1a205f5
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801906"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835450"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Testowanie C# jednostkowe w programie .NET Core przy użyciu testu dotnet i xUnit
 

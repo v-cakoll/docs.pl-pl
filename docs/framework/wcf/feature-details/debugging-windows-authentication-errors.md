@@ -8,19 +8,19 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 20ca8f049298f75412da4c8a7e58975954f67741
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 52e968706ef4ca703a26e613e681cff3c30ba181
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968857"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838029"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debugowanie błędów uwierzytelniania systemu Windows
 W przypadku korzystania z uwierzytelniania systemu Windows jako mechanizmu zabezpieczeń interfejs dostawcy obsługi zabezpieczeń (SSPI) obsługuje procesy zabezpieczeń. Gdy w warstwie SSPI wystąpią błędy zabezpieczeń, są one nałożone przez Windows Communication Foundation (WCF). Ten temat zawiera informacje o strukturze i zestawie pytań ułatwiających zdiagnozowanie błędów.  
   
  Aby zapoznać się z omówieniem protokołu Kerberos, zobacz Omówienie protokołu [Kerberos](https://go.microsoft.com/fwlink/?LinkID=86946). Aby zapoznać się z omówieniem interfejsu SSPI, zobacz [SSPI](https://go.microsoft.com/fwlink/?LinkId=88941).  
   
- W przypadku uwierzytelniania systemu Windows funkcja WCF zazwyczaj używa dostawcy usługi negocjowania zabezpieczeń (SSP), który wykonuje wzajemne uwierzytelnianie Kerberos między klientem a usługą. Jeśli protokół Kerberos nie jest dostępny, domyślnie WCF powraca do programu NT LAN Manager (NTLM). Można jednak skonfigurować funkcję WCF do używania tylko protokołu Kerberos (i zgłosić wyjątek, jeśli protokół Kerberos nie jest dostępny). Istnieje również możliwość skonfigurowania programu WCF do korzystania z ograniczonych form protokołu Kerberos.  
+ W przypadku uwierzytelniania systemu Windows funkcja WCF zazwyczaj używa dostawcy usługi *negocjowania* zabezpieczeń (SSP), który wykonuje wzajemne uwierzytelnianie Kerberos między klientem a usługą. Jeśli protokół Kerberos nie jest dostępny, domyślnie WCF powraca do programu NT LAN Manager (NTLM). Można jednak skonfigurować funkcję WCF do używania tylko protokołu Kerberos (i zgłosić wyjątek, jeśli protokół Kerberos nie jest dostępny). Istnieje również możliwość skonfigurowania programu WCF do korzystania z ograniczonych form protokołu Kerberos.  
   
 ## <a name="debugging-methodology"></a>Metodologia debugowania  
  Podstawowa metoda jest następująca:  
@@ -45,16 +45,16 @@ W przypadku korzystania z uwierzytelniania systemu Windows jako mechanizmu zabez
   
  W każdym przypadku cztery typy kont obejmują:  
   
-- Użytkownik lokalny: Profil użytkownika tylko dla komputera. Na przykład: `MachineName\Administrator` lub `MachineName\ProfileName`.  
+- Użytkownik lokalny: profil użytkownika tylko dla komputera. Na przykład: `MachineName\Administrator` lub `MachineName\ProfileName`.  
   
-- System lokalny: Wbudowanego systemu kont na komputerze, który nie jest przyłączony do domeny.  
+- System lokalny: wbudowany SYSTEM kont na komputerze, który nie jest przyłączony do domeny.  
   
-- Użytkownik domeny: Konto użytkownika w domenie systemu Windows. Na przykład: `DomainName\ProfileName`.  
+- Użytkownik domeny: konto użytkownika w domenie systemu Windows. Na przykład: `DomainName\ProfileName`.  
   
-- Komputer domeny: Proces z tożsamością komputera uruchomioną na komputerze przyłączonym do domeny systemu Windows. Na przykład: `MachineName\Network Service`.  
+- Komputer domeny: proces z tożsamością komputera uruchomioną na komputerze przyłączonym do domeny systemu Windows. Na przykład: `MachineName\Network Service`.  
   
 > [!NOTE]
-> Poświadczenie usługi jest przechwytywane, <xref:System.ServiceModel.ICommunicationObject.Open%2A> gdy wywoływana jest <xref:System.ServiceModel.ServiceHost> metoda klasy. Poświadczenie klienta jest odczytywane za każdym razem, gdy klient wysyła komunikat.  
+> Poświadczenie usługi jest przechwytywane, gdy wywoływana jest metoda <xref:System.ServiceModel.ICommunicationObject.Open%2A> klasy <xref:System.ServiceModel.ServiceHost>. Poświadczenie klienta jest odczytywane za każdym razem, gdy klient wysyła komunikat.  
   
 ## <a name="common-windows-authentication-problems"></a>Typowe problemy z uwierzytelnianiem systemu Windows  
  W tej sekcji omówiono niektóre typowe problemy z uwierzytelnianiem systemu Windows i możliwe środki zaradcze.  
@@ -69,7 +69,7 @@ W przypadku korzystania z uwierzytelniania systemu Windows jako mechanizmu zabez
  Aby uzyskać nazwę SPN konta usługi, musisz być administratorem domeny Active Directory. Aby uzyskać więcej informacji, zobacz [dodatek dotyczący protokołu Kerberos dla systemu Windows](https://go.microsoft.com/fwlink/?LinkID=88330).  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Protokół Kerberos Direct wymaga, aby usługa działała w ramach konta komputera domeny  
- Dzieje się tak, `ClientCredentialType` gdy właściwość jest ustawiona `Windows` na, <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> a właściwość jest ustawiona `false`na, jak pokazano w poniższym kodzie.  
+ Dzieje się tak, gdy właściwość `ClientCredentialType` jest ustawiona na `Windows`, a właściwość <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> jest ustawiona na `false`, jak pokazano w poniższym kodzie.  
   
  [!code-csharp[C_DebuggingWindowsAuth#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#1)]
  [!code-vb[C_DebuggingWindowsAuth#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#1)]  
@@ -81,24 +81,24 @@ W przypadku korzystania z uwierzytelniania systemu Windows jako mechanizmu zabez
   
  Aby zaimplementować protokół Kerberos za pomocą negocjacji poświadczeń, wykonaj następujące czynności:  
   
-1. Implementowanie delegowania <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> przez <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>ustawienie do.  
+1. Implementowanie delegowania przez ustawienie <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>.  
   
 2. Wymagaj negocjacji interfejsu SSPI:  
   
-    1. Jeśli używasz powiązań standardowych, ustaw `NegotiateServiceCredential` właściwość na. `true`  
+    1. Jeśli używasz powiązań standardowych, ustaw właściwość `NegotiateServiceCredential` na `true`.  
   
-    2. Jeśli używasz powiązań niestandardowych, ustaw `AuthenticationMode` atrybut `Security` elementu na `SspiNegotiated`.  
+    2. Jeśli używasz powiązań niestandardowych, ustaw atrybut `AuthenticationMode` elementu `Security` na `SspiNegotiated`.  
   
 3. Wymagaj negocjacji interfejsu SSPI do korzystania z protokołu Kerberos przez niezezwalanie na korzystanie z uwierzytelniania NTLM:  
   
-    1. Zrób to w kodzie, z następującą instrukcją:`ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1. Zrób to w kodzie, z następującą instrukcją: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
-    2. Lub można to zrobić w pliku konfiguracji przez ustawienie `allowNtlm` atrybutu na. `false` Ten atrybut jest zawarty w [ \<> systemu Windows](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
+    2. Lub możesz to zrobić w pliku konfiguracji, ustawiając atrybut `allowNtlm` na `false`. Ten atrybut jest zawarty w [\<> systemu Windows](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
   
 ### <a name="ntlm-protocol"></a>Protokół NTLM  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>Negocjowanie dostawcy SSP powraca do protokołu NTLM, ale uwierzytelnianie NTLM jest wyłączone  
- Właściwość jest ustawiona na `false`, co powoduje, że Windows Communication Foundation (WCF), aby najlepszym wysiłku zgłosić wyjątek, jeśli jest używany protokół NTLM. <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> Należy pamiętać, że ustawienie tej `false` właściwości na nie zapobiega wysyłaniu poświadczeń NTLM za pośrednictwem sieci.  
+ Właściwość <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> jest ustawiona na `false`, co powoduje, że Windows Communication Foundation (WCF), aby najlepszym wysiłku zgłosić wyjątek, jeśli jest używany protokół NTLM. Należy pamiętać, że ustawienie tej właściwości na `false` może nie uniemożliwiać wysyłania poświadczeń NTLM za pośrednictwem sieci.  
   
  Poniżej przedstawiono sposób wyłączenia powrotu do protokołu NTLM.  
   
@@ -109,7 +109,7 @@ W przypadku korzystania z uwierzytelniania systemu Windows jako mechanizmu zabez
  Poświadczenia klienta nie są prawidłowe w usłudze. Sprawdź, czy nazwa użytkownika i hasło są poprawnie ustawione i odpowiadają kontu znanemu komputerowi, na którym uruchomiono usługę. Protokół NTLM używa określonych poświadczeń do logowania się do komputera usługi. Poświadczenia mogą być prawidłowe na komputerze, na którym jest uruchomiony klient programu, więc logowanie nie powiedzie się, jeśli poświadczenia na komputerze usługi nie są prawidłowe.  
   
 #### <a name="anonymous-ntlm-logon-occurs-but-anonymous-logons-are-disabled-by-default"></a>Występuje anonimowe logowanie NTLM, ale Logowanie anonimowe jest domyślnie wyłączone  
- Podczas tworzenia klienta <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> właściwość jest ustawiona na <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>, jak pokazano w poniższym przykładzie, ale domyślnie serwer nie zezwala na Logowanie anonimowe. Dzieje się tak, ponieważ wartość <xref:System.ServiceModel.Security.WindowsServiceCredential.AllowAnonymousLogons%2A> domyślna właściwości <xref:System.ServiceModel.Security.WindowsServiceCredential> klasy to `false`.  
+ Podczas tworzenia klienta Właściwość <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> jest ustawiona na <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>, jak pokazano w poniższym przykładzie, ale domyślnie serwer nie zezwala na Logowanie anonimowe. Dzieje się tak, ponieważ wartość domyślna właściwości <xref:System.ServiceModel.Security.WindowsServiceCredential.AllowAnonymousLogons%2A> klasy <xref:System.ServiceModel.Security.WindowsServiceCredential> jest `false`.  
   
  Poniższy kod klienta próbuje włączyć Logowanie anonimowe (należy pamiętać, że właściwość domyślna to `Identification`).  
   
@@ -128,7 +128,7 @@ W przypadku korzystania z uwierzytelniania systemu Windows jako mechanizmu zabez
 ### <a name="other-problems"></a>Inne problemy  
   
 #### <a name="client-credentials-are-not-set-correctly"></a>Poświadczenia klienta nie są ustawione prawidłowo  
- Uwierzytelnianie systemu Windows używa <xref:System.ServiceModel.Security.WindowsClientCredential> wystąpienia zwróconego <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> przez właściwość <xref:System.ServiceModel.ClientBase%601> klasy, a <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>nie elementu. Poniżej przedstawiono nieprawidłowy przykład.  
+ Uwierzytelnianie systemu Windows używa wystąpienia <xref:System.ServiceModel.Security.WindowsClientCredential> zwróconego przez właściwość <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> klasy <xref:System.ServiceModel.ClientBase%601>, a nie do <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>. Poniżej przedstawiono nieprawidłowy przykład.  
   
  [!code-csharp[C_DebuggingWindowsAuth#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#2)]
  [!code-vb[C_DebuggingWindowsAuth#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#2)]  
@@ -139,10 +139,10 @@ W przypadku korzystania z uwierzytelniania systemu Windows jako mechanizmu zabez
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>Interfejs SSPI jest niedostępny  
- Następujące systemy operacyjne nie obsługują uwierzytelniania systemu Windows, gdy jest używany jako serwer: [!INCLUDE[wxp](../../../../includes/wxp-md.md)]Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition i [!INCLUDE[wv](../../../../includes/wv-md.md)]wersje Home.  
+ Następujące systemy operacyjne nie obsługują uwierzytelniania systemu Windows, gdy jest używany jako serwer: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition i Windows Vista Home wersje.  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>Opracowywanie i wdrażanie przy użyciu różnych tożsamości  
- Jeśli tworzysz aplikację na jednej maszynie i wdrażasz ją na innym serwerze i używasz innych typów kont do uwierzytelniania na każdej maszynie, może wystąpić inne zachowanie. Załóżmy na przykład, że tworzysz aplikację na komputerze z systemem Windows XP Pro przy użyciu `SSPI Negotiated` trybu uwierzytelniania. Jeśli używasz konta użytkownika lokalnego do uwierzytelniania za pomocą programu, zostanie użyty protokół NTLM. Po opracowaniu aplikacji należy wdrożyć usługę na komputerze z systemem Windows Server 2003, na którym działa w ramach konta domeny. W tym momencie klient nie będzie w stanie uwierzytelnić usługi, ponieważ będzie korzystać z protokołu Kerberos i kontrolera domeny.  
+ Jeśli tworzysz aplikację na jednej maszynie i wdrażasz ją na innym serwerze i używasz innych typów kont do uwierzytelniania na każdej maszynie, może wystąpić inne zachowanie. Załóżmy na przykład, że tworzysz aplikację na komputerze z systemem Windows XP Pro przy użyciu trybu uwierzytelniania `SSPI Negotiated`. Jeśli używasz konta użytkownika lokalnego do uwierzytelniania za pomocą programu, zostanie użyty protokół NTLM. Po opracowaniu aplikacji należy wdrożyć usługę na komputerze z systemem Windows Server 2003, na którym działa w ramach konta domeny. W tym momencie klient nie będzie w stanie uwierzytelnić usługi, ponieważ będzie korzystać z protokołu Kerberos i kontrolera domeny.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,12 +2,12 @@
 title: Śledzenie za pomocą funkcji ETW
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: c9f2b3019ee30ded59a7549a4d3be834c9ab9811
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 25a4281cbf5a9ad81a63eee13d768715eebedfb6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716432"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837899"
 ---
 # <a name="etw-tracing"></a>Śledzenie za pomocą funkcji ETW
 Ten przykład pokazuje, jak zaimplementować śledzenie kompleksowego (E2E) przy użyciu funkcji śledzenia zdarzeń systemu Windows (ETW) i `ETWTraceListener` dostarczanych z tym przykładem. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i zawiera śledzenie ETW.  
@@ -85,7 +85,7 @@ logman stop Wcf
 2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
     > [!NOTE]
-    > Aby użyć poleceń RegisterProvider. bat, SetupETW. bat i CleanupETW. bat, należy uruchomić program przy użyciu konta administratora lokalnego. Jeśli używasz programu [!INCLUDE[wv](../../../../includes/wv-md.md)] lub nowszego, musisz również uruchomić wiersz polecenia z podwyższonym poziomem uprawnień. Aby to zrobić, kliknij prawym przyciskiem myszy ikonę wiersza polecenia, a następnie kliknij polecenie **Uruchom jako administrator**.  
+    > Aby użyć poleceń RegisterProvider. bat, SetupETW. bat i CleanupETW. bat, należy uruchomić program przy użyciu konta administratora lokalnego. W przypadku korzystania z systemu Windows Vista lub nowszego należy również uruchomić wiersz polecenia z podwyższonym poziomem uprawnień. Aby to zrobić, kliknij prawym przyciskiem myszy ikonę wiersza polecenia, a następnie kliknij polecenie **Uruchom jako administrator**.  
   
 3. Przed uruchomieniem przykładu należy uruchomić program RegisterProvider. bat na kliencie i serwerze. Powoduje to skonfigurowanie wynikowego pliku ETWTracingSampleLog. etl w celu wygenerowania śladów, które mogą być odczytywane przez Podgląd śledzenia usługi. Ten plik znajduje się w folderze C:\LOGS. Jeśli ten folder nie istnieje, należy go utworzyć lub nie są generowane żadne dane śledzenia. Następnie uruchom program SetupETW. bat na komputerach klienckich i serwerach, aby rozpocząć sesję śledzenia ETW. Plik SetupETW. bat można znaleźć w folderze CS\Client.  
   

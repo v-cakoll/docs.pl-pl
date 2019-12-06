@@ -3,28 +3,38 @@ title: Instalowanie środowiska uruchomieniowego platformy .NET Core w systemach
 description: Dowiedz się, jak zainstalować platformę .NET Core w systemach Windows, Linux i macOS. Odkryj zależności wymagane do uruchamiania aplikacji platformy .NET Core.
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
+ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: fbe9b9e12dc53d9ab6570299e03f2b0a8868fb53
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8f4a895ad66dea3063a32f785e4c521196266978
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567271"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835729"
 ---
 # <a name="install-the-net-core-runtime"></a>Instalowanie środowiska uruchomieniowego platformy .NET Core
 
 W tym artykule dowiesz się, jak pobrać i zainstalować środowisko uruchomieniowe programu .NET Core. Środowisko uruchomieniowe platformy .NET Core służy do uruchamiania aplikacji utworzonych za pomocą platformy .NET Core.
 
-::: zone pivot="os-windows,os-macos"
+::: zone pivot="os-windows"
 
 ## <a name="install-with-an-installer"></a>Instalowanie za pomocą Instalatora
 
-Zarówno system Windows, jak i macOS mają autonomiczne Instalatory, których można użyć do zainstalowania środowiska uruchomieniowego programu .NET Core 3,0.
+System Windows ma autonomiczne Instalatory, których można użyć do zainstalowania środowiska uruchomieniowego programu .NET Core 3,1:
 
-- Procesory Windows [x64 (64-bitowe)](https://dotnet.microsoft.com/download/dotnet-core/3.0) | [procesora x86 (32-bitowe)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- [procesory macOS x64 (64-bitowe)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [Procesory x64 (64-bitowe)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [Procesory x86 (32-bitowe)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+::: zone-end
+
+::: zone pivot="os-macos"
+
+## <a name="install-with-an-installer"></a>Instalowanie za pomocą Instalatora
+
+macOS ma autonomiczne Instalatory, których można użyć do zainstalowania środowiska uruchomieniowego programu .NET Core 3,1:
+
+- [Procesory x64 (64-bitowe)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ::: zone-end
 
@@ -42,11 +52,14 @@ Zarówno system Windows, jak i macOS mają autonomiczne Instalatory, których mo
 
 [Skrypty programu dotnet-Install](../tools/dotnet-install-script.md) są używane na potrzeby automatyzacji i instalacji niebędących administratorami środowiska uruchomieniowego. Skrypt można pobrać ze [strony odniesienia do skryptu dotnet-Install](../tools/dotnet-install-script.md).
 
-Skrypt domyślnie instaluje najnowszą [LTS](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) wersję, która jest platformą .net Core 2,1. Aby zainstalować bieżącą wersję programu .NET Core (3,0), uruchom skrypt z następującym przełącznikiem:
+Skrypt domyślnie instaluje najnowszą [LTS](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) wersję, która jest platformą .net Core 3,1. Możesz wybrać określoną wersję, określając przełącznik `Channel`. Dołącz przełącznik `Runtime`, aby zainstalować środowisko uruchomieniowe. W przeciwnym razie skrypt instaluje [zestaw SDK](sdk.md).
 
 ```powershell
-dotnet-install.ps1 -Channel 3.0
+dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
 ```
+
+> [!NOTE]
+> Powyższe polecenie instaluje środowisko uruchomieniowe ASP.NET Core, aby uzyskać maksymalną zgodność. Środowisko uruchomieniowe ASP.NET Core obejmuje również standardowe środowisko uruchomieniowe programu .NET Core.
 
 ::: zone-end
 
@@ -56,11 +69,14 @@ dotnet-install.ps1 -Channel 3.0
 
 [Skrypty programu dotnet-Install](../tools/dotnet-install-script.md) są używane na potrzeby automatyzacji i instalacji niebędących administratorami środowiska uruchomieniowego. Skrypt można pobrać ze [strony odniesienia do skryptu dotnet-Install](../tools/dotnet-install-script.md).
 
-Skrypt domyślnie instaluje najnowszą [LTS](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) wersję, która jest platformą .net Core 2,1. Aby zainstalować bieżącą wersję programu .NET Core (3,0), uruchom skrypt z następującym przełącznikiem:
+Skrypt domyślnie instaluje najnowszą [LTS](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) wersję, która jest platformą .net Core 3,1. Możesz wybrać określoną wersję, określając przełącznik `current`. Dołącz przełącznik `runtime`, aby zainstalować środowisko uruchomieniowe. W przeciwnym razie skrypt instaluje [zestaw SDK](sdk.md).
 
 ```bash
-./dotnet-install.sh -c Current
+./dotnet-install.sh --current 3.1 --runtime aspnetcore
 ```
+
+> [!NOTE]
+> Powyższe polecenie instaluje środowisko uruchomieniowe ASP.NET Core, aby uzyskać maksymalną zgodność. Środowisko uruchomieniowe ASP.NET Core obejmuje również standardowe środowisko uruchomieniowe programu .NET Core.
 
 ::: zone-end
 
@@ -68,7 +84,7 @@ Skrypt domyślnie instaluje najnowszą [LTS](https://dotnet.microsoft.com/platfo
 
 Program .NET Core można pobrać i zainstalować bezpośrednio przy użyciu jednego z następujących linków:
 
-- [Pobieranie z wersji zapoznawczej programu .NET Core 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [Pliki do pobrania w programie .NET Core 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 - [Pliki do pobrania w programie .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 - [Pliki do pobrania w programie .NET Core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
 - [Pliki do pobrania w programie .NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1)

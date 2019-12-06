@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: konfigurowanie portu z certyfikatem SSL'
+title: 'Instrukcje: Konfigurowanie portu z certyfikatem SSL'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 6e21311802b0a3ce4e415b14686b101d31f18035
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d2fe9a73f79408db08ef48d380940fcf6bb831c0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70893313"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838003"
 ---
-# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Instrukcje: konfigurowanie portu z certyfikatem SSL
-Podczas tworzenia samohostowanej usługi Windows Communication Foundation (WCF) z <xref:System.ServiceModel.WSHttpBinding> klasą, która korzysta z zabezpieczeń transportu, należy również skonfigurować port za pomocą certyfikatu X. 509. Jeśli nie tworzysz usługi samodzielnej, możesz hostować usługę w Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Instrukcje: Konfigurowanie portu z certyfikatem SSL
+Podczas tworzenia samohostowanej usługi Windows Communication Foundation (WCF) z klasą <xref:System.ServiceModel.WSHttpBinding>, która korzysta z zabezpieczeń transportu, należy również skonfigurować port za pomocą certyfikatu X. 509. Jeśli nie tworzysz usługi samodzielnej, możesz hostować usługę w Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Aby skonfigurować port, używane narzędzie zależy od systemu operacyjnego działającego na komputerze.  
   
- Jeśli używasz programu [!INCLUDE[wxp](../../../../includes/wxp-md.md)]lub,Użyj narzędzia HttpCfg. exe. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] Po [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] zainstalowaniu tego narzędzia. Za [!INCLUDE[wxp](../../../../includes/wxp-md.md)]pomocą narzędzia można pobrać narzędzie w [systemie Windows XP z dodatkiem Service Pack 2](https://go.microsoft.com/fwlink/?LinkId=88606). Aby uzyskać więcej informacji, zobacz [Httpcfg Overview (przegląd](https://go.microsoft.com/fwlink/?LinkId=88605)). [Dokumentacja narzędzi pomocy technicznej systemu Windows](https://go.microsoft.com/fwlink/?LinkId=94840) objaśnia składnię dla narzędzia HttpCfg. exe.  
+ Jeśli używasz programu [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], użyj narzędzia HttpCfg. exe. Za pomocą [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] to narzędzie jest zainstalowane. Za pomocą [!INCLUDE[wxp](../../../../includes/wxp-md.md)]można pobrać narzędzie w [systemie Windows XP z dodatkiem Service Pack 2](https://go.microsoft.com/fwlink/?LinkId=88606). Aby uzyskać więcej informacji, zobacz [Httpcfg Overview (przegląd](https://go.microsoft.com/fwlink/?LinkId=88605)). [Dokumentacja narzędzi pomocy technicznej systemu Windows](https://go.microsoft.com/fwlink/?LinkId=94840) objaśnia składnię dla narzędzia HttpCfg. exe.  
   
- Jeśli używasz programu, użyj narzędzia Netsh. exe, które jest już zainstalowane. [!INCLUDE[wv](../../../../includes/wv-md.md)]  
+ Jeśli korzystasz z systemu Windows Vista, użyj narzędzia Netsh. exe, które jest już zainstalowane.  
   
  W tym temacie opisano sposób wykonywania kilku procedur:  
   
@@ -41,13 +41,13 @@ Podczas tworzenia samohostowanej usługi Windows Communication Foundation (WCF) 
   
 ### <a name="to-determine-how-ports-are-configured"></a>Aby określić sposób konfiguracji portów  
   
-1. W [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] programie [!INCLUDE[wxp](../../../../includes/wxp-md.md)]lub użyj narzędzia HttpCfg. exe, aby wyświetlić bieżącą konfigurację portu przy użyciu **zapytań** i przełączników **SSL** , jak pokazano w poniższym przykładzie.  
+1. W [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)]Użyj narzędzia HttpCfg. exe, aby wyświetlić bieżącą konfigurację portu przy użyciu **zapytań** i przełączników **SSL** , jak pokazano w poniższym przykładzie.  
   
     ```console
     httpcfg query ssl  
     ```  
   
-2. W [!INCLUDE[wv](../../../../includes/wv-md.md)]programie Użyj narzędzia Netsh. exe, aby wyświetlić bieżącą konfigurację portu, jak pokazano w poniższym przykładzie.  
+2. W systemie Windows Vista Użyj narzędzia Netsh. exe, aby wyświetlić bieżącą konfigurację portu, jak pokazano w poniższym przykładzie.  
   
     ```console  
     netsh http show sslcert  
@@ -55,9 +55,9 @@ Podczas tworzenia samohostowanej usługi Windows Communication Foundation (WCF) 
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Aby uzyskać odcisk palca certyfikatu  
   
-1. Za pomocą przystawki MMC Certyfikaty Znajdź certyfikat X. 509, który ma zamierzony cel uwierzytelniania klientów. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie certyfikatów z przystawką](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)programu MMC.  
+1. Za pomocą przystawki MMC Certyfikaty Znajdź certyfikat X. 509, który ma zamierzony cel uwierzytelniania klientów. Aby uzyskać więcej informacji, zobacz [How to: View Certificates za pomocą przystawki MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2. Uzyskaj dostęp do odcisku palca certyfikatu. Aby uzyskać więcej informacji, zobacz [jak: Pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2. Uzyskaj dostęp do odcisku palca certyfikatu. Aby uzyskać więcej informacji, zobacz [Instrukcje: Pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3. Skopiuj odcisk palca certyfikatu do edytora tekstu, takiego jak Notatnik.  
   
@@ -65,17 +65,17 @@ Podczas tworzenia samohostowanej usługi Windows Communication Foundation (WCF) 
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>Aby powiązać certyfikat protokołu SSL z numerem portu  
   
-1. W [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] systemie [!INCLUDE[wxp](../../../../includes/wxp-md.md)]lub użyj narzędzia HttpCfg. exe w trybie "Set" w magazynie SSL (SSL), aby powiązać certyfikat z numerem portu. Narzędzie używa odcisku palca do identyfikowania certyfikatu, jak pokazano w poniższym przykładzie.  
+1. W [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)]Użyj narzędzia HttpCfg. exe w trybie "Set" w magazynie SSL (SSL), aby powiązać certyfikat z numerem portu. Narzędzie używa odcisku palca do identyfikowania certyfikatu, jak pokazano w poniższym przykładzie.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    - Przełącznik **-i** ma składnię `IP`:`port` i instruuje narzędzie, aby ustawić certyfikat na port 8012 komputera. Opcjonalnie cztery zera, które poprzedzają liczbę, można również zastąpić rzeczywistym adresem IP komputera.  
+    - Przełącznik **-i** ma składnię `IP`:`port` i instruuje narzędzie, aby ustawił certyfikat na port 8012 na komputerze. Opcjonalnie cztery zera, które poprzedzają liczbę, można również zastąpić rzeczywistym adresem IP komputera.  
   
     - Przełącznik **-h** określa odcisk palca certyfikatu.  
   
-2. W [!INCLUDE[wv](../../../../includes/wv-md.md)]programie Użyj narzędzia Netsh. exe, jak pokazano w poniższym przykładzie.  
+2. W systemie Windows Vista Użyj narzędzia Netsh. exe, jak pokazano w poniższym przykładzie.  
   
     ```console  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
@@ -89,15 +89,15 @@ Podczas tworzenia samohostowanej usługi Windows Communication Foundation (WCF) 
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Aby powiązać certyfikat protokołu SSL z numerem portu i obsługiwać certyfikaty klienta  
   
-1. W [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] programie [!INCLUDE[wxp](../../../../includes/wxp-md.md)]lub, aby obsługiwać klientów, którzy uwierzytelniają się za pomocą certyfikatów X. 509 w warstwie transportowej, postępuj zgodnie z powyższą procedurą, ale Przekaż dodatkowy parametr wiersza polecenia do HttpCfg. exe, jak pokazano w poniższym przykładzie.  
+1. W [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], aby obsługiwać klientów uwierzytelnianych za pomocą certyfikatów X. 509 w warstwie transportowej, wykonaj poprzednią procedurę, ale Przekaż dodatkowy parametr wiersza polecenia do HttpCfg. exe, jak pokazano w poniższym przykładzie.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
     ```  
   
-     Przełącznik **-f** ma składnię, gdzie `n` n jest liczbą z zakresu od 1 do 7. Wartość 2, jak pokazano w powyższym przykładzie, umożliwia korzystanie z certyfikatów klienta w warstwie transportowej. Wartość 3 włącza certyfikaty klienta i mapuje te certyfikaty na konto systemu Windows. Zapoznaj się z tematem zachowanie innych wartości w pomocy programu HttpCfg. exe.  
+     Przełącznik **-f** ma składnię `n` gdzie n jest liczbą z zakresu od 1 do 7. Wartość 2, jak pokazano w powyższym przykładzie, umożliwia korzystanie z certyfikatów klienta w warstwie transportowej. Wartość 3 włącza certyfikaty klienta i mapuje te certyfikaty na konto systemu Windows. Zapoznaj się z tematem zachowanie innych wartości w pomocy programu HttpCfg. exe.  
   
-2. W [!INCLUDE[wv](../../../../includes/wv-md.md)]programie w celu obsługi klientów uwierzytelnianych za pomocą certyfikatów X. 509 w warstwie transportowej postępuj zgodnie z poprzednią procedurą, ale z dodatkowym parametrem, jak pokazano w poniższym przykładzie.  
+2. W systemie Windows Vista w celu obsługi klientów uwierzytelnianych za pomocą certyfikatów X. 509 w warstwie transportowej Wykonaj poprzednią procedurę, ale z dodatkowym parametrem, jak pokazano w poniższym przykładzie.  
   
     ```console  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable  
@@ -111,20 +111,20 @@ Podczas tworzenia samohostowanej usługi Windows Communication Foundation (WCF) 
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. W [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] programie [!INCLUDE[wxp](../../../../includes/wxp-md.md)]lub użyj narzędzia HttpCfg. exe ze słowami kluczowymi **delete** i **SSL** . Aby`IP`określićodciskpalca, należy **użyć przełącznika** **-i.** `port`  
+2. W [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)]Użyj narzędzia HttpCfg. exe ze słowami kluczowymi **delete** i **SSL** . Użyj przełącznika **-i** , aby określić `IP`: numer`port` i przełącznik **-h** , aby określić odcisk palca.  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-3. W [!INCLUDE[wv](../../../../includes/wv-md.md)]programie Użyj narzędzia Netsh. exe, jak pokazano w poniższym przykładzie.  
+3. W systemie Windows Vista Użyj narzędzia Netsh. exe, jak pokazano w poniższym przykładzie.  
   
     ```console  
     Netsh http delete sslcert ipport=0.0.0.0:8005  
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia sposób tworzenia usługi samodzielnej przy użyciu <xref:System.ServiceModel.WSHttpBinding> klasy ustawionej na zabezpieczenia transportu. Podczas tworzenia aplikacji należy określić numer portu w adresie.  
+ Poniższy kod przedstawia sposób tworzenia usługi samodzielnej przy użyciu klasy <xref:System.ServiceModel.WSHttpBinding> ustawionej na zabezpieczenia transportu. Podczas tworzenia aplikacji należy określić numer portu w adresie.  
   
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  

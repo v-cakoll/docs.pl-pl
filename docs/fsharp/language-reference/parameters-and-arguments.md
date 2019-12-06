@@ -1,13 +1,13 @@
 ---
 title: Parametry i argumenty
 description: Dowiedz F# się więcej o obsłudze języków do definiowania parametrów i przekazywania argumentów do funkcji, metod i właściwości.
-ms.date: 05/16/2016
-ms.openlocfilehash: e8094ffbc55870b5de75acb740aa2736ec6590a5
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.date: 12/04/2019
+ms.openlocfilehash: b234ef939128e7cf09d35f9580d4d5010d7dc639
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216824"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837132"
 ---
 # <a name="parameters-and-arguments"></a>Parametry i argumenty
 
@@ -25,7 +25,7 @@ Parametry dostarczone do funkcji i metod są ogólnie wzorce oddzielone spacjami
 
 Metody zwykle używają spójnej formy przekazywania argumentów. Pozwala to uzyskać wyraźniejszy wynik z perspektywy innych języków .NET, ponieważ formularz spójny pasuje do sposobu przekazywania argumentów w metodach .NET.
 
-Formularz rozwinięte jest najczęściej używany z funkcjami utworzonymi przy użyciu `let` powiązań.
+Formularz rozwinięte jest najczęściej używany z funkcjami utworzonymi przy użyciu powiązań `let`.
 
 W poniższym pseudokodzie przedstawiono przykłady argumentów krotki i rozwinięte.
 
@@ -50,7 +50,7 @@ Wzorzec symbol wieloznaczny może być przydatny, gdy nie są potrzebne argument
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3802.fs)]
 
-Inne wzorce, które są czasami używane w argumentach `as` są wzorcem i wzorcami identyfikatorów skojarzonymi z związkami rozłącznych i aktywnymi wzorcami. Możesz użyć wzorca Union o pojedynczej wielkości liter w następujący sposób.
+Inne wzorce, które są czasami używane w argumentach, są wzorcem `as` i wzorcami identyfikatorów skojarzonymi z związkami rozłącznych i aktywnymi wzorcami. Możesz użyć wzorca Union o pojedynczej wielkości liter w następujący sposób.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3803.fs)]
 
@@ -73,7 +73,7 @@ let radius (Polar(r, _)) = r
 let angle (Polar(_, theta)) = theta
 ```
 
-Możesz użyć `as` wzorca, aby przechowywać dopasowaną wartość jako wartość lokalną, jak pokazano w następującym wierszu kodu.
+Możesz użyć wzorca `as`, aby przechowywać dopasowaną wartość jako wartość lokalną, jak pokazano w następującym wierszu kodu.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3805.fs)]
 
@@ -81,7 +81,7 @@ Inny wzorzec, który jest używany sporadycznie to funkcja, która pozostawia os
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3804.fs)]
 
-Ten kod definiuje funkcję, która przyjmuje listę ogólną i zwraca `true` , jeśli lista jest pusta i `false` w przeciwnym razie. Użycie takich technik może utrudnić odczytywanie kodu.
+Ten kod definiuje funkcję, która przyjmuje listę ogólną i zwraca `true`, jeśli lista jest pusta, i `false` w przeciwnym razie. Użycie takich technik może utrudnić odczytywanie kodu.
 
 Czasami wzorce, które obejmują niekompletne dopasowania, są przydatne, na przykład, Jeśli wiesz, że listy w programie mają tylko trzy elementy, możesz użyć wzorca, takiego jak poniższy, na liście parametrów.
 
@@ -95,7 +95,7 @@ Argumenty metod można określić za pomocą pozycji na liście argumentów rozd
 
 Argumenty nazwane mogą sprawiać, że kod jest bardziej czytelny i bardziej dostosowywalny do niektórych typów zmian w interfejsie API, takich jak zmiana kolejności parametrów metody.
 
-Nazwane argumenty są dozwolone tylko dla metod, nie do `let`funkcji powiązanych, wartości funkcji ani wyrażeń lambda.
+Nazwane argumenty są dozwolone tylko dla metod, nie dla funkcji powiązanych `let`, wartości funkcji ani wyrażeń lambda.
 
 Poniższy przykład kodu demonstruje użycie nazwanych argumentów.
 
@@ -109,11 +109,11 @@ Aby uzyskać więcej informacji, zobacz [konstruktory (F#)](https://msdn.microso
 
 ## <a name="optional-parameters"></a>Parametry opcjonalne
 
-Można określić opcjonalny parametr dla metody przy użyciu znaku zapytania przed nazwą parametru. Parametry opcjonalne są interpretowane jako F# typ opcji, aby można było wykonywać zapytania do nich w zwykły sposób, w jaki typy opcji są badane przy użyciu `match` wyrażenia z `Some` i `None`. Parametry opcjonalne są dozwolone tylko w składach, a nie na funkcjach `let` utworzonych za pomocą powiązań.
+Można określić opcjonalny parametr dla metody przy użyciu znaku zapytania przed nazwą parametru. Parametry opcjonalne są interpretowane jako F# typ opcji, aby można było wykonywać zapytania do nich w zwykły sposób, w jaki typy opcji są badane przy użyciu wyrażenia `match` z `Some` i `None`. Parametry opcjonalne są dozwolone tylko w składach, a nie na funkcjach utworzonych przy użyciu powiązań `let`.
 
-Istniejące wartości opcjonalne można przekazać do metody za pomocą nazwy parametru, takiej jak `?arg=None` lub `?arg=Some(3)` lub `?arg=arg`. Może to być przydatne podczas kompilowania metody, która przekazuje argumenty opcjonalne do innej metody.
+Istniejące wartości opcjonalne można przekazać do metody, na przykład `?arg=None` lub `?arg=Some(3)` lub `?arg=arg`. Może to być przydatne podczas kompilowania metody, która przekazuje argumenty opcjonalne do innej metody.
 
-Można również użyć funkcji `defaultArg`, która ustawia wartość domyślną opcjonalnego argumentu. `defaultArg` Funkcja przyjmuje opcjonalny parametr jako pierwszy argument i wartość domyślną jako drugi.
+Można również użyć funkcji `defaultArg`, która ustawia wartość domyślną opcjonalnego argumentu. Funkcja `defaultArg` przyjmuje opcjonalny parametr jako pierwszy argument i wartość domyślną jako drugi.
 
 Poniższy przykład ilustruje użycie parametrów opcjonalnych.
 
@@ -130,7 +130,7 @@ Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 ```
 
-Dla celów C# i Visual Basic międzyoperacyjności można użyć atrybutów `[<Optional; DefaultParameterValue<(...)>]` w F#, aby wywołujący zobaczy argument jako opcjonalny. Jest to równoznaczne z zdefiniowaniem argumentu jako opcjonalnego C# w `MyMethod(int i = 3)`programie w programie.
+Dla celów C# i Visual Basic międzyoperacyjności można użyć atrybutów `[<Optional; DefaultParameterValue<(...)>]` w F#, aby wywołujący zobaczyli argument jako opcjonalny. Jest to równoznaczne z zdefiniowaniem argumentu jako opcjonalnego w C# `MyMethod(int i = 3)`.
 
 ```fsharp
 open System
@@ -140,7 +140,7 @@ type C =
         printfn "%s" message
 ```
 
-Możesz również określić nowy obiekt jako domyślną wartość parametru. Na przykład `Foo` element członkowski może mieć opcjonalnie `CancellationToken` jako dane wejściowe:
+Możesz również określić nowy obiekt jako domyślną wartość parametru. Na przykład element członkowski `Foo` może mieć opcjonalną `CancellationToken` jako dane wejściowe:
 
 ```fsharp
 open System.Threading
@@ -157,15 +157,15 @@ type C =
     static member Wrong([<Optional; DefaultParameterValue("string")>] i:int) = ()
 ```
 
-W takim przypadku kompilator generuje ostrzeżenie i całkowicie zignoruje oba atrybuty. Należy zauważyć, że wartość `null` domyślna musi być adnotacją typu, ponieważ w przeciwnym razie kompilator wnioskuje niewłaściwy typ, `[<Optional; DefaultParameterValue(null:obj)>] o:obj`tj.
+W takim przypadku kompilator generuje ostrzeżenie i całkowicie zignoruje oba atrybuty. Należy zauważyć, że wartość domyślna `null` musi być adnotacją typu, ponieważ w przeciwnym razie kompilator wnioskuje niewłaściwy typ, tj. `[<Optional; DefaultParameterValue(null:obj)>] o:obj`.
 
 ## <a name="passing-by-reference"></a>Przekazywanie przez odwołanie
 
 Przekazywanie F# wartości przez odwołanie obejmuje [ByRef](byrefs.md), które są zarządzanymi typami wskaźników. Wskazówki dotyczące używanego typu są następujące:
 
-- Użyj `inref<'T>` , jeśli musisz tylko odczytać wskaźnik.
-- Użyj `outref<'T>` , jeśli musisz tylko pisać na wskaźniku.
-- Użyj `byref<'T>` , jeśli musisz zarówno czytać, jak i zapisywać na wskaźniku.
+- Użyj `inref<'T>`, jeśli musisz tylko odczytać wskaźnik.
+- Użyj `outref<'T>`, jeśli musisz tylko pisać do wskaźnika.
+- Użyj `byref<'T>`, jeśli musisz zarówno czytać, jak i zapisywać na wskaźniku.
 
 ```fsharp
 let example1 (x: inref<int>) = printfn "It's %d" x
@@ -176,29 +176,30 @@ let example3 (x: byref<int>) =
     printfn "It'd %d" x
     x <- x + 1
 
-// No need to make it mutable, since it's read-only
-let x = 1
-example1 &x
+let test () =
+    // No need to make it mutable, since it's read-only
+    let x = 1
+    example1 &x
 
-// Needs to be mutable, since we write to it
-let mutable y = 2
-example2 &y
-example3 &y // Now 'y' is 3
+    // Needs to be mutable, since we write to it
+    let mutable y = 2
+    example2 &y
+    example3 &y // Now 'y' is 3
 ```
 
 Ponieważ parametr jest wskaźnikiem, a wartość jest modyfikowalna, wszelkie zmiany wartości są zachowywane po wykonaniu funkcji.
 
-Można użyć krotki jako wartości zwracanej do przechowywania dowolnych `out` parametrów w metodach biblioteki .NET. Alternatywnie można traktować `out` parametr `byref` jako parametr. Poniższy przykład kodu ilustruje obydwie metody.
+Można użyć krotki jako wartości zwracanej do przechowywania dowolnych `out` parametrów w metodach biblioteki .NET. Alternatywnie można traktować parametr `out` jako parametr `byref`. Poniższy przykład kodu ilustruje obydwie metody.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
 
 ## <a name="parameter-arrays"></a>Parameter — Tablice
 
-Czasami konieczne jest zdefiniowanie funkcji, która przyjmuje dowolną liczbę parametrów typu heterogenicznego. Nie byłoby praktyczne, aby utworzyć wszystkie możliwe przeciążone metody w celu uwzględnienia wszystkich typów, które mogą być używane. Implementacje platformy .NET zapewniają obsługę takich metod za pomocą funkcji Tablica parametrów. Metoda przyjmująca tablicę parametrów w jej podpisie może być dostarczana z dowolną liczbą parametrów. Parametry są umieszczane w tablicy. Typ elementów tablicy określa typy parametrów, które mogą być przesyłane do funkcji. Jeśli zdefiniujesz tablicę `System.Object` parametrów jako typ elementu, kod klienta może przekazać wartości dowolnego typu.
+Czasami konieczne jest zdefiniowanie funkcji, która przyjmuje dowolną liczbę parametrów typu heterogenicznego. Nie byłoby praktyczne, aby utworzyć wszystkie możliwe przeciążone metody w celu uwzględnienia wszystkich typów, które mogą być używane. Implementacje platformy .NET zapewniają obsługę takich metod za pomocą funkcji Tablica parametrów. Metoda przyjmująca tablicę parametrów w jej podpisie może być dostarczana z dowolną liczbą parametrów. Parametry są umieszczane w tablicy. Typ elementów tablicy określa typy parametrów, które mogą być przesyłane do funkcji. Jeśli zdefiniujesz tablicę parametrów z `System.Object` jako typ elementu, kod klienta może przekazać wartości dowolnego typu.
 
 W F#programie tablice parametrów można definiować tylko w metodach. Nie mogą być używane w autonomicznych funkcjach lub funkcjach, które są zdefiniowane w modułach.
 
-Należy zdefiniować tablicę parametrów przy użyciu `ParamArray` atrybutu. Ten `ParamArray` atrybut może być stosowany tylko do ostatniego parametru.
+Należy zdefiniować tablicę parametrów przy użyciu atrybutu `ParamArray`. Atrybut `ParamArray` może być stosowany tylko do ostatniego parametru.
 
 Poniższy kod ilustruje zarówno wywołanie metody .NET przyjmującej tablicę parametrów, jak i definicji typu w F# , który ma metodę, która przyjmuje tablicę parametrów.
 

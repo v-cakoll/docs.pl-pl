@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 98bfabba96e5805b96c63eb02233b15eae233cc0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b3f236b2378d6af78f034856e3ba0f7a9e17993c
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740563"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837145"
 ---
 # <a name="xmllang-handling-in-xaml"></a>xml:lang — Obsługa w XAML
 Atrybut `xml:lang` jest atrybutem zdefiniowanym przez XML, który deklaruje informacje o języku i kulturze dla elementu w formacie XML. Takie samo znaczenie atrybutu utrzymuje się w języku XAML; Niektóre dodatkowe zagadnienia są jednak stosowane.  
@@ -27,7 +27,7 @@ Atrybut `xml:lang` jest atrybutem zdefiniowanym przez XML, który deklaruje info
   
 |||  
 |-|-|  
-|*rfc3066lang*|Ciąg pochodzący ze standardu [RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454) i identyfikujący język lub region języka. Gdy jest to ostatni, język i region są rozdzielone pojedynczym łącznikiem. Aby uzyskać więcej informacji na temat wartości i formatu, zobacz <xref:System.Windows.Markup.XmlLanguage>.|  
+|*rfc3066lang*|Ciąg pochodzący ze standardu [RFC 3066](https://www.ietf.org/rfc/rfc3066.txt) i identyfikujący język lub region języka. Gdy jest to ostatni, język i region są rozdzielone pojedynczym łącznikiem. Aby uzyskać więcej informacji na temat wartości i formatu, zobacz <xref:System.Windows.Markup.XmlLanguage>.|  
   
 ## <a name="remarks"></a>Uwagi  
  Definicja atrybutu `xml:lang` w [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] pochodzi od `xml:lang`, jak określono jako "atrybut specjalny" przez organizacja World Wide Web Consortium (W3C) dla XML. Informacje o języku i kulturze mogą być przetwarzane na różne sposoby według elementów, w zależności od ich implementacji; nie ma jednak domyślnego przetwarzania [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] atrybutu `xml:lang`.  

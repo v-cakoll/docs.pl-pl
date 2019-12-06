@@ -3,13 +3,13 @@ title: Instalowanie programu .NET Core w programie Ubuntu 16,04 Package Manager 
 description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe w systemie Ubuntu 16,04 przy użyciu Menedżera pakietów.
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
-ms.openlocfilehash: 2409dc9f5e480b309bf7c9aa09b733ded01d772f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/04/2019
+ms.openlocfilehash: caca6154c8e5d4670df1688eb9f4dd445eff21fa
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450955"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74836907"
 ---
 # <a name="ubuntu-1604-package-manager---install-net-core"></a>Menedżer pakietów Ubuntu 16,04 — Instalowanie programu .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "74450955"
 
 W tym artykule opisano sposób użycia Menedżera pakietów do zainstalowania programu .NET Core w systemie Ubuntu 16,04. Jeśli instalujesz środowisko uruchomieniowe, zalecamy zainstalowanie [ASP.NET Core środowiska uruchomieniowego](#install-the-aspnet-core-runtime), ponieważ zawiera on zarówno środowisko uruchomieniowe programu .NET Core, jak i ASP.NET Core.
 
-## <a name="register-microsoft-key-and-feed"></a>Zarejestruj klucz i źródło danych firmy Microsoft
+## <a name="register-microsoft-key-and-feed"></a>Rejestrowanie klucza firmy Microsoft i kanału informacyjnego
 
 Przed zainstalowaniem programu .NET należy:
 
@@ -25,7 +25,7 @@ Przed zainstalowaniem programu .NET należy:
 - Rejestrowanie repozytorium produktu
 - Instalowanie wymaganych zależności
 
-Należy to zrobić tylko raz dla każdego komputera.
+Te operacje należy wykonać tylko jeden raz na każdej maszynie.
 
 Otwórz Terminal i uruchom następujące polecenia.
 
@@ -42,11 +42,11 @@ Zaktualizuj produkty dostępne do zainstalowania, a następnie Zainstaluj zestaw
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install dotnet-sdk-3.0
+sudo apt-get install dotnet-sdk-3.1
 ```
 
 > [!IMPORTANT]
-> Jeśli zostanie wyświetlony komunikat o błędzie podobny do **nie można zlokalizować pakietu dotnet-SDK-3,0**, zobacz sekcję [Rozwiązywanie problemów z menedżerem pakietów](#troubleshoot-the-package-manager) .
+> Jeśli zostanie wyświetlony komunikat o błędzie podobny do **nie można zlokalizować pakietu dotnet-SDK-3,1**, zobacz sekcję [Rozwiązywanie problemów z menedżerem pakietów](#troubleshoot-the-package-manager) .
 
 ## <a name="install-the-aspnet-core-runtime"></a>Zainstaluj środowisko uruchomieniowe ASP.NET Core
 
@@ -56,11 +56,11 @@ Zaktualizuj produkty dostępne do instalacji, a następnie zainstaluj środowisk
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install aspnetcore-runtime-3.0
+sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> Jeśli zostanie wyświetlony komunikat o błędzie podobny do sytuacji, w której **nie można znaleźć pakietu aspnetcore-Runtime-3,0**, zobacz sekcję [Rozwiązywanie problemów z menedżerem pakietów](#troubleshoot-the-package-manager) .
+> Jeśli zostanie wyświetlony komunikat o błędzie podobny do sytuacji, w której **nie można znaleźć pakietu aspnetcore-Runtime-3,1**, zobacz sekcję [Rozwiązywanie problemów z menedżerem pakietów](#troubleshoot-the-package-manager) .
 
 ## <a name="install-the-net-core-runtime"></a>Instalowanie środowiska uruchomieniowego platformy .NET Core
 
@@ -70,11 +70,11 @@ Zaktualizuj produkty dostępne do zainstalowania, a następnie zainstaluj środo
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install dotnet-runtime-3.0
+sudo apt-get install dotnet-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> Jeśli zostanie wyświetlony komunikat o błędzie podobny do sytuacji, w której **nie można znaleźć pakietu dotnet-Runtime-3,0**, zobacz sekcję [Rozwiązywanie problemów z menedżerem pakietów](#troubleshoot-the-package-manager) .
+> Jeśli zostanie wyświetlony komunikat o błędzie podobny do sytuacji, w której **nie można znaleźć pakietu dotnet-Runtime-3,1**, zobacz sekcję [Rozwiązywanie problemów z menedżerem pakietów](#troubleshoot-the-package-manager) .
 
 ## <a name="how-to-install-other-versions"></a>Jak zainstalować inne wersje
 

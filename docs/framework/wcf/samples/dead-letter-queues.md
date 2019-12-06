@@ -2,12 +2,12 @@
 title: Kolejki utraconych komunikatów
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 70007289e457588e94128a573ced4b28e238acf4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 244920eb9a0cdb33f4d5d83b939fe1166f4f5fcd
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710874"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837912"
 ---
 # <a name="dead-letter-queues"></a>Kolejki utraconych komunikatów
 Ten przykład pokazuje, jak obsługiwać i przetwarzać komunikaty, których dostarczenie nie powiodło się. Jest on oparty na przykładowym [wiązaniem usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . Ten przykład używa powiązania `netMsmqBinding`. Usługa to samodzielna aplikacja konsolowa, która umożliwia obserwowanie usługi do odebrania komunikatów znajdujących się w kolejce.
@@ -16,7 +16,7 @@ Ten przykład pokazuje, jak obsługiwać i przetwarzać komunikaty, których dos
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
 
 > [!NOTE]
-> Ten przykład pokazuje każdą kolejkę utraconych wiadomości aplikacji, która jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)]. Przykład można zmodyfikować tak, aby korzystał z domyślnych kolejek cały system dla usługi MSMQ 3,0 w [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+> Ten przykład pokazuje każdą kolejkę utraconych wiadomości aplikacji, która jest dostępna tylko w systemie Windows Vista. Przykład można zmodyfikować tak, aby korzystał z domyślnych kolejek cały system dla usługi MSMQ 3,0 w [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
 
  W kolejce komunikacja klient komunikuje się z usługą przy użyciu kolejki. Dokładniej, klient wysyła komunikaty do kolejki. Usługa odbiera komunikaty z kolejki. W związku z tym usługa i klient nie muszą być uruchomione w tym samym czasie w celu komunikowania się przy użyciu kolejki.
 
@@ -30,9 +30,9 @@ Ten przykład pokazuje, jak obsługiwać i przetwarzać komunikaty, których dos
 
 - `System`: Kolejka utraconych wiadomości systemowych służy do przechowywania wiadomości utraconych. Kolejka utraconych wiadomości systemowych jest udostępniana przez wszystkie aplikacje uruchomione na komputerze.
 
-- `Custom`: niestandardowa Kolejka utracona określona przy użyciu właściwości <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> służy do przechowywania wiadomości utraconych. Ta funkcja jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)]. Jest on używany, gdy aplikacja musi używać własnej kolejki utraconych wiadomości zamiast udostępniać ją innym aplikacjom uruchomionym na tym samym komputerze.
+- `Custom`: niestandardowa Kolejka utracona określona przy użyciu właściwości <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> służy do przechowywania wiadomości utraconych. Ta funkcja jest dostępna tylko w systemie Windows Vista. Jest on używany, gdy aplikacja musi używać własnej kolejki utraconych wiadomości zamiast udostępniać ją innym aplikacjom uruchomionym na tym samym komputerze.
 
-- Właściwość <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> do wyrażenia określonej kolejki, która ma być używana jako kolejka utraconych wiadomości. Jest on dostępny tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Właściwość <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> do wyrażenia określonej kolejki, która ma być używana jako kolejka utraconych wiadomości. Jest to możliwe tylko w systemie Windows Vista.
 
  W tym przykładzie klient wysyła partię komunikatów do usługi z zakresu transakcji i określa arbitralnie niską wartość "czas wygaśnięcia" dla tych komunikatów (około 2 sekund). Klient określa również niestandardową kolejkę utraconych wiadomości, która ma być używana do kolejkowania komunikatów, które wygasły.
 

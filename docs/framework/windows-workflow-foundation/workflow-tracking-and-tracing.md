@@ -4,52 +4,52 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: eaf38bad246b1f02449c1a3b99c7fb844c09a4bd
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 9f887babec5c070eed2fb3c7e4d8d35cdfb3f488
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959709"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837483"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Kontrola i śledzenie przepływu pracy
-Śledzenie przepływu pracy Windows jest [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] funkcja przeznaczona do zapewniają widoczność wykonywania przepływu pracy. Zapewnia to Infrastruktura śledzenia do śledzenia wykonywania wystąpienia przepływu pracy. Infrastruktura śledzenia WF w sposób niewidoczny dla użytkownika instruments przepływu pracy, aby emitować rekordów odzwierciedlający kluczy zdarzeń podczas wykonywania. Ta funkcja jest domyślnie dostępny dla dowolnego [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy. Żadne zmiany nie są wymagane do [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] przepływu pracy dla śledzenia wystąpienia. Jest to kwestia podejmowania decyzji o tym jak dużo danych śledzenia, które chcesz otrzymywać. Gdy wystąpienie przepływu pracy rozpoczyna się lub kończy, jego przetwarzania śledzenia są emitowane rekordów. Śledzenie również można wyodrębnić business odpowiednie dane skojarzone z zmienne przepływu pracy. Na przykład, jeśli przepływ pracy reprezentuje kolejność przetwarzania systemu, identyfikator zamówienia wyodrębniania wraz z <xref:System.Activities.Tracking.TrackingRecord> obiektu. Ogólnie rzecz biorąc włączania WF śledzenia umożliwia diagnostyki lub danymi analiz biznesowych były dostępne z wykonywania przepływu pracy.  
+Śledzenie przepływu pracy systemu Windows jest funkcją [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)], która umożliwia wgląd w wykonywanie przepływu pracy. Zapewnia infrastrukturę śledzenia do śledzenia wykonywania wystąpienia przepływu pracy. Infrastruktura śledzenia WF w sposób przezroczysty przydzieli przepływy pracy, aby emitować rekordy odzwierciedlające kluczowe zdarzenia podczas wykonywania. Ta funkcja jest domyślnie dostępna dla każdego [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]ego przepływu pracy. Aby śledzenie miało miejsce, nie trzeba wprowadzać żadnych zmian w przepływie pracy [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]. Jest to tylko kwestia decydowania o ilości danych śledzenia, które mają zostać odebrane. Gdy wystąpienie przepływu pracy zostanie rozpoczęte lub zostanie zakończone, jego rekordy śledzenia przetwarzania są emitowane. Śledzenie może również wyodrębnić dane biznesowe powiązane z zmiennymi przepływu pracy. Na przykład jeśli przepływ pracy reprezentuje system przetwarzania zamówień, można wyodrębnić identyfikator zamówienia wraz z obiektem <xref:System.Activities.Tracking.TrackingRecord>. Ogólnie rzecz biorąc, włączenie śledzenia WF ułatwia uzyskiwanie dostępu do danych diagnostycznych i analizy biznesowej z wykonywania przepływu pracy.  
   
- Te składniki śledzenia są odpowiednikiem usługi śledzenia w WinFX. W [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], zwiększona wydajność i uproszczony model programowania na potrzeby funkcja śledzenia programu WF. Środowisko uruchomieniowe śledzenia instruments wystąpienia przepływu pracy, aby emitować zdarzenia związane z cyklem życia przepływu pracy, działania przepływu pracy i zdarzeń niestandardowych.  
+ Te składniki śledzenia są równoważne usłudze śledzenia w programie WinFX. W [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]wydajność została ulepszona i model programowania uproszczony dla funkcji śledzenia WF. Funkcja śledzenia środowiska uruchomieniowego tworzy wystąpienie przepływu pracy, aby emitować zdarzenia związane z cyklem życia przepływu pracy, działaniami przepływu pracy i zdarzeniami niestandardowymi.  
   
- AppFabric w systemie Windows Server umożliwia także monitorowanie wykonania usług WCF i przepływ pracy. Aby uzyskać więcej informacji, zobacz [monitorowanie sieci szkieletowej aplikacji systemu Windows Server](https://go.microsoft.com/fwlink/?LinkId=201273) i [monitorowania aplikacji za pomocą programu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201287)  
+ Sieć szkieletowa aplikacji systemu Windows Server umożliwia również monitorowanie wykonywania usług WCF i Workflow. Aby uzyskać więcej informacji, zobacz Monitorowanie i monitorowanie aplikacji [sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10)) [za pomocą programu Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))  
   
- Aby rozwiązać problemy środowiska wykonawczego przepływów pracy, można włączyć śledzenie przepływu pracy diagnostyki. Aby uzyskać więcej informacji, zobacz [śledzenie przepływu pracy](workflow-tracing.md).  
+ Aby rozwiązać problem środowiska uruchomieniowego przepływu pracy, możesz włączyć śledzenie przepływu pracy diagnostyki. Aby uzyskać więcej informacji, zobacz [śledzenie przepływu pracy](workflow-tracing.md).  
   
- Aby poznać model programowania, podstawowymi składnikami infrastruktury śledzenia zostały omówione w tym temacie:  
+ Aby zrozumieć model programowania, podstawowe składniki infrastruktury śledzenia zostały omówione w tym temacie:  
   
-- <xref:System.Activities.Tracking.TrackingRecord> obiekty emitowane przez środowisko wykonawcze przepływów pracy. Aby uzyskać więcej informacji, zobacz [rekordów śledzenia](tracking-records.md).  
+- <xref:System.Activities.Tracking.TrackingRecord> obiekty emitowane z środowiska uruchomieniowego przepływu pracy. Aby uzyskać więcej informacji, zobacz [śledzenie rekordów](tracking-records.md).  
   
-- <xref:System.Activities.Tracking.TrackingParticipant> Subskrybuj obiektów <xref:System.Activities.Tracking.TrackingRecord> obiektów. Uczestnicy śledzenia zawiera logikę do przetwarzania ładunku z <xref:System.Activities.Tracking.TrackingRecord> obiektów (na przykład ich można wybrać do zapisu do pliku). Aby uzyskać więcej informacji, zobacz [uczestników śledzenia](tracking-participants.md).  
+- obiekty <xref:System.Activities.Tracking.TrackingParticipant> subskrybują obiekty <xref:System.Activities.Tracking.TrackingRecord>. Uczestnicy śledzenia mogą przetwarzać ładunek z obiektów <xref:System.Activities.Tracking.TrackingRecord> (na przykład mogli wybrać zapis w pliku). Aby uzyskać więcej informacji, zobacz [Śledzenie uczestników](tracking-participants.md).  
   
-- <xref:System.Activities.Tracking.TrackingProfile> Obiekty filtrowania rekordów śledzenia emitowane z wystąpienia przepływu pracy. Aby uzyskać więcej informacji, zobacz [profile śledzenia](tracking-profiles.md).  
+- <xref:System.Activities.Tracking.TrackingProfile> obiektów filtrowania rekordów śledzenia emitowanych z wystąpienia przepływu pracy. Aby uzyskać więcej informacji, zobacz [śledzenie profilów](tracking-profiles.md).  
   
 ## <a name="workflow-tracking-infrastructure"></a>Infrastruktura śledzenia przepływu pracy  
- Infrastruktura śledzenia przepływu pracy następuje paradygmatu publikowania i subskrybowania. Wystąpienie przepływu pracy, jest wydawcą śledzenia rekordów, podczas gdy subskrybenci rekordów śledzenia są rejestrowane jako rozszerzenia do przepływu pracy. Te rozszerzenia, które subskrybują <xref:System.Activities.Tracking.TrackingRecord> obiekty są nazywane śledzenia uczestników. Śledzenie uczestników są punkty rozszerzeń, które uzyskują dostęp <xref:System.Activities.Tracking.TrackingRecord> obiektów i przetworzyć je w jakikolwiek sposób, że są one zapisywane w tym celu. Infrastruktura śledzenia umożliwia stosowanie filtru na wychodzące rekordów śledzenia, aby umożliwić uczestnika do subskrybowania podzestaw rekordów. Ten mechanizm filtrowania odbywa się za pomocą śledzenia plik profilu.  
+ Infrastruktura śledzenia przepływu pracy jest zgodna z modelem publikowania i subskrybowania. Wystąpienie przepływu pracy jest wydawcą rekordów śledzenia, podczas gdy Subskrybenci rekordów śledzenia są zarejestrowani jako rozszerzenia przepływu pracy. Te rozszerzenia, które subskrybują obiekty <xref:System.Activities.Tracking.TrackingRecord>, są nazywane uczestnikami śledzenia. Śledzenie uczestników to punkty rozszerzalności, które uzyskują dostęp <xref:System.Activities.Tracking.TrackingRecord> obiektów i przetwarzają je w dowolny sposób. Infrastruktura śledzenia umożliwia stosowanie filtru dla wychodzących rekordów śledzenia, aby umożliwić uczestnikowi subskrybowanie podzestawu rekordów. Ten mechanizm filtrowania jest realizowany za pomocą pliku profilu śledzenia.  
   
- Widok wysokiego poziomu Infrastruktura śledzenia pokazano na poniższej ilustracji:  
+ Na poniższej ilustracji przedstawiono widok wysokiego poziomu infrastruktury śledzenia:  
   
- ![Zrzut ekranu pokazujący Infrastruktura śledzenia przepływu pracy. ](./media/workflow-tracking-and-tracing/workflow-tracking-infrastructure.gif "WV")  
+ ![Zrzut ekranu przedstawiający infrastrukturę śledzenia przepływu pracy.](./media/workflow-tracking-and-tracing/workflow-tracking-infrastructure.gif "WV")  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Rekordy śledzenia](tracking-records.md)  
- W tym artykule opisano rekordów śledzenia emitowane przez środowisko wykonawcze przepływów pracy.  
+ Opisuje rekordy śledzenia, które są emitowane przez środowisko uruchomieniowe przepływu pracy.  
   
  [Profile śledzenia](tracking-profiles.md)  
- W tym artykule omówiono, jak są używane profile śledzenia.  
+ W tym artykule omówiono sposób używania profilów śledzenia.  
   
  [Uczestnicy śledzenia](tracking-participants.md)  
- Opisuje sposób używania uczestnika śledzenia dostarczane przez system lub jak utworzyć niestandardowe śledzenia uczestników.  
+ Opisuje sposób użycia uczestnika śledzenia systemu lub tworzenia niestandardowych uczestników śledzenia.  
   
  [Konfigurowanie śledzenia dla przepływu pracy](configuring-tracking-for-a-workflow.md)  
- W tym artykule opisano sposób konfigurowania śledzenia dla przepływu pracy.  
+ Opisuje sposób konfigurowania śledzenia dla przepływu pracy.  
   
  [Śledzenie przepływu pracy](workflow-tracing.md)  
- W tym artykule opisano dwa sposoby, aby włączyć śledzenie debugowania dla przepływu pracy.  
+ Opisuje dwa sposoby włączania śledzenia debugowania dla przepływu pracy.  
   
 ## <a name="see-also"></a>Zobacz także
 

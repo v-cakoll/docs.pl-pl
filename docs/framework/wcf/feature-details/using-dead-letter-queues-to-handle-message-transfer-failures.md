@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: c83d48994c6038dfde67867a1766777c479c2169
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 268f14bc7294a4cbe6f7253dc7f3c71d89985133
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637733"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837964"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Używanie utraconych kolejek na potrzeby obsługi transferów komunikatów zakończonych niepowodzeniem
-Wiadomości w kolejce może zakończyć się niepowodzeniem dostarczania. Te komunikaty zakończone niepowodzeniem są rejestrowane w kolejce wiadomości utraconych. Dostarczanie nie powiodło się, może być spowodowany powodów, takich jak awarie sieci, usunięto kolejkę, pełną kolejkę, wystąpił błąd uwierzytelniania lub niepowodzenie dostarczać oprogramowanie na czas.  
+Komunikaty w kolejce mogą kończyć się niepowodzeniem. Te nieudane komunikaty są rejestrowane w kolejce utraconych wiadomości. Nieudane dostarczenie może być spowodowane przyczynami, takimi jak awarie sieci, kolejka usunięta, pełna kolejka, niepowodzenie uwierzytelniania lub niepowodzenie dostarczania na czas.  
   
- Wiadomości w kolejce może pozostawać w kolejce przez długi czas, jeśli aplikacja odbierająca nie odczytać ich z kolejki w odpowiednim czasie. To zachowanie może nie być odpowiednie dla wiadomości zależne od czasu. Komunikaty zależne od czasu ma czas wygaśnięcia (TTL) właściwością w powiązaniu umieszczonych w kolejce, który wskazuje, jak długo komunikaty mogą znajdować się w kolejce przed wygaśnięciem. Wygasłe komunikaty są wysyłane do specjalnych kolejki o nazwie kolejki utraconych wiadomości. Wiadomości możesz także umieścić w kolejce wiadomości utraconych z innych przyczyn, takich jak przekroczenia przydziału kolejki lub z powodu błędu uwierzytelniania.  
+ Wiadomości w kolejce mogą pozostawać w kolejce przez dłuższy czas, jeśli aplikacja do odbioru nie odczytuje ich z kolejki w odpowiednim czasie. Takie zachowanie może być nieodpowiednie dla komunikatów zależnych od czasu. Komunikaty zależne od czasu mają ustawioną właściwość Time to Live (TTL) ustawianą w powiązaniu umieszczonym w kolejce, która wskazuje, jak długo komunikaty mogą znajdować się w kolejce przed ich wygaśnięciem. Wygasłe komunikaty są wysyłane do kolejki specjalnej zwanej kolejką utraconych wiadomości. Komunikaty mogą być również umieszczane w kolejce utraconych z innych powodów, takich jak przekroczenie limitu przydziału kolejki lub z powodu błędu uwierzytelniania.  
   
- Ogólnie rzecz biorąc aplikacje zapisywać logiki wyrównującej odczytywanie komunikatów z kolejki utraconych wiadomości i przyczyny niepowodzenia. Logiki wyrównującej zależy od przyczynę błędu. Na przykład w przypadku niepowodzenia uwierzytelniania można poprawić certyfikatu załączonego z komunikatem i Wyślij ponownie wiadomość. Jeśli dostarczenie nie powiodło się, ponieważ osiągnięto limit przydziału kolejki docelowej, można ponownie dostarczania w nadziei, że przydział problem został rozwiązany.  
+ Ogólnie rzecz biorąc, aplikacje zapisują logikę kompensacji do odczytu wiadomości z kolejki utraconych wiadomości i przyczyn niepowodzenia. Logika kompensacji zależy od przyczyny błędu. Na przykład w przypadku niepowodzenia uwierzytelniania można poprawić certyfikat dołączony do wiadomości i ponownie wysłać wiadomość. Jeśli dostarczenie nie powiodło się, ponieważ osiągnięto limit przydziału kolejki docelowej, możesz ponowić próbę dostarczenia w ramach tej metody, aby rozwiązać problem z limitem przydziału.  
   
- Najbardziej kolejkowania systemy mają kolejki wiadomości utraconych całego systemu, gdzie są przechowywane wszystkie wiadomości nie powiodło się z tego systemu. Usługi kolejkowania komunikatów (MSMQ) udostępnia dwie kolejki utraconych wiadomości systemowe: transakcyjne kolejki wiadomości utraconych całego systemu, przechowujący wiadomości, które nie powiodło się metodę dostarczania nietransakcyjnej kolejki wiadomości utraconych całego systemu, który przechowuje, jak i kolejka transakcyjna wiadomości, które nie powiodło się dostarczania do kolejki nietransakcyjnej. Jeśli dwóch klientów są wysyłanie komunikatów do dwóch różnych usług, a w związku z tym innej kolejki programu WCF udostępniania tej samej usługi MSMQ do wysłania, następnie jest możliwość mają różne komunikaty w kolejce wiadomości utraconych systemu. Nie zawsze jest to optymalne. W kilku przypadkach (na przykład zabezpieczenia) może nie chcieć jednego klienta, aby odczytać innego klienta wiadomości z kolejki utraconych wiadomości. Udostępnione kolejki utraconych wiadomości wymaga także klientów przejrzeć Znajdź komunikat, który one wysyłane, który może być niezwykle kosztowne na podstawie liczby komunikatów w kolejce utraconych wiadomości w kolejce. W związku z tym, w programie WCF`NetMsmqBinding`, `MsmqIntegrationBinding,` i usługi MSMQ na [!INCLUDE[wv](../../../../includes/wv-md.md)] zapewniają niestandardowe kolejki utraconych wiadomości (czasami określane jako kolejki utraconych wiadomości specyficzne dla aplikacji).  
+ Większość systemów kolejkowania ma kolejkę utraconych wiadomości w całej systemie, w której przechowywane są wszystkie komunikaty zakończone niepowodzeniem z tego systemu. Usługa kolejkowania komunikatów (MSMQ) oferuje dwie kolejki utraconych wiadomości w całym systemie: transakcyjna kolejka utraconych wiadomości w całej systemie, która przechowuje komunikaty, które przestaną być dostarczone do kolejki transakcyjnej, oraz nietransakcyjnej kolejki utraconych wiadomości w całej systemie, która przechowuje komunikaty, które przekończyły się niepowodzeniem dostarczania do kolejki nietransakcyjnej. Jeśli dwa klienci wysyłają komunikaty do dwóch różnych usług, w związku z czym różne kolejki w programie WCF współużytkują tę samą usługę MSMQ do wysłania Nie zawsze jest to optymalna. W kilku przypadkach (na przykład) można nie chcieć, aby jeden klient mógł odczytywać komunikaty innego klienta z kolejki utraconych wiadomości. Udostępniona Kolejka utraconych wiadomości wymaga również od klientów przejrzenia kolejki w celu znalezienia wysyłanego komunikatu, co może być niezwykle kosztowne w oparciu o liczbę komunikatów w kolejce utraconych wiadomości. W związku z tym w`NetMsmqBinding`WCF `MsmqIntegrationBinding,` i usługi MSMQ w systemie Windows Vista zapewniają niestandardową kolejkę utraconych wiadomości (nazywaną czasami kolejką utraconych wiadomości specyficzną dla aplikacji).  
   
- Niestandardowe kolejki utraconych wiadomości zapewnia izolację między klientami, które współużytkują tę samą usługę MSMQ do wysyłania wiadomości.  
+ Niestandardowa Kolejka utraconych wiadomości zapewnia izolację między klientami, którzy korzystają z tej samej usługi MSMQ do wysyłania wiadomości.  
   
- Na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Windows Communication Foundation (WCF) zapewnia kolejki wiadomości utraconych systemowe dla wszystkich aplikacji klienckich umieszczonych w kolejce. Na [!INCLUDE[wv](../../../../includes/wv-md.md)], WCF zapewnia kolejki utraconych wiadomości dla każdej aplikacji klienta umieszczonych w kolejce.  
+ W systemach [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)]funkcja Windows Communication Foundation (WCF) zapewnia kolejkę utraconych wiadomości w całej systemie dla wszystkich aplikacji klienckich umieszczonych w kolejce. W systemie Windows Vista funkcja WCF udostępnia kolejkę utraconych wiadomości dla każdej Kolejkowanej aplikacji klienckiej.  
   
-## <a name="specifying-use-of-the-dead-letter-queue"></a>Określanie użytkowania kolejki utraconych wiadomości  
- Kolejka utraconych wiadomości jest Menedżer kolejki wysyłania aplikacji. Przechowuje komunikaty wygasły lub powiodły transferu lub dostarczania.  
+## <a name="specifying-use-of-the-dead-letter-queue"></a>Określanie użycia kolejki utraconych wiadomości  
+ Kolejka utraconych wiadomości znajduje się w Menedżerze kolejek aplikacji wysyłającej. Przechowuje komunikaty, które wygasły lub które nie powiodły się.  
   
  Powiązanie ma następujące właściwości kolejki utraconych wiadomości:  
   
@@ -34,43 +34,43 @@ Wiadomości w kolejce może zakończyć się niepowodzeniem dostarczania. Te kom
   
 - <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
-## <a name="reading-messages-from-the-dead-letter-queue"></a>Odczytywanie komunikatów z kolejki utraconych wiadomości  
- Aplikacja, która odczytuje komunikaty z kolejki utraconych wiadomości jest podobny do usługi WCF, która odczytuje z kolejki usługi aplikacji, z wyjątkiem następujących niewielkich różnic:  
+## <a name="reading-messages-from-the-dead-letter-queue"></a>Odczytywanie wiadomości z kolejki utraconych wiadomości  
+ Aplikacja, która odczytuje komunikaty z kolejki utraconych wiadomości, jest podobna do usługi WCF, która odczytuje z kolejki aplikacji, z wyjątkiem następujących drobnych różnic:  
   
-- Odczytywanie komunikatów z kolejki utraconych wiadomości transakcyjnych systemu, jednolity identyfikator zasobów (URI) musi mieć postać: net.msmq://localhost/system$; DeadXact.  
+- Aby można było odczytać wiadomości z kolejki utraconych wiadomości transakcyjnych systemu, Uniform Resource Identifier (URI) musi mieć postać: net. MSMQ://localhost/system $;D eadXact.  
   
-- Odczytywanie komunikatów z kolejki utraconych wiadomości nietransakcyjnej systemu, identyfikator URI musi mieć postać: net.msmq://localhost/system$; utraconych wiadomości.  
+- Aby można było odczytać wiadomości z nietransakcyjnej kolejki utraconych wiadomości, identyfikator URI musi mieć postać: net. MSMQ://localhost/system $;D eadLetter.  
   
-- Odczytywanie komunikatów z kolejki utraconych wiadomości niestandardowych, identyfikator URI musi być formularza: net.msmq://localhost/private/\<*niestandardowe dlq nazwy*> gdzie *niestandardowe dlq nazwy* jest nazwa niestandardowa Kolejka utraconych wiadomości.  
+- Aby można było odczytać wiadomości z niestandardowej kolejki utraconych wiadomości, identyfikator URI musi mieć postać: net. MSMQ://localhost/Private/\<*Custom-DLQ-name*> gdzie *Custom-DLQ-Name* to nazwa niestandardowej kolejki utraconych wiadomości.  
   
- Aby uzyskać więcej informacji na temat kolejek adres zobacz [punkty końcowe usługi i adresowanie kolejki](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+ Aby uzyskać więcej informacji o sposobie adresowania kolejek, zobacz [punkty końcowe usługi i adresowanie kolejki](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
- Stos WCF odbiornika dopasowuje adresów, które usługa nasłuchuje na adres w komunikacie. Jeśli adresy są zgodne, jest wysyłany komunikat; w przeciwnym razie nie wysłaniu wiadomości. Może to spowodować problemy podczas czytania z kolejki utraconych wiadomości, ponieważ komunikaty w kolejce wiadomości utraconych zwykle są wysyłane do usługi i nie usługę kolejki utraconych wiadomości. W związku z tym, Usługa odczytu z kolejki utraconych wiadomości, należy zainstalować filtr adresów `ServiceBehavior` , powoduje, że stos, aby dopasować wszystkie komunikaty w kolejce, niezależnie od adresata. W szczególności należy dodać `ServiceBehavior` z <xref:System.ServiceModel.AddressFilterMode.Any> parametru, aby usługa odczytującego komunikaty z kolejki utraconych wiadomości.  
+ Stos WCF w odbiorniku pasuje do adresów, na których nasłuchuje usługa, przy użyciu adresu w wiadomości. Jeśli adresy są zgodne, komunikat jest wysyłany; Jeśli nie, komunikat nie jest wysyłany. Może to spowodować problemy podczas odczytywania z kolejki utraconych wiadomości, ponieważ komunikaty w kolejce utraconych wiadomości są zwykle kierowane do usługi, a nie do usługi kolejki utraconych wiadomości. W związku z tym odczytywanie z kolejki utraconych wiadomości musi spowodować zainstalowanie filtru adresów `ServiceBehavior`, który nakazuje stosowi dopasowanie wszystkich komunikatów w kolejce niezależnie od adresata. W szczególnych przypadkach należy dodać `ServiceBehavior` z parametrem <xref:System.ServiceModel.AddressFilterMode.Any> do usługi odczytującej komunikaty z kolejki utraconych wiadomości.  
   
-## <a name="poison-message-handling-from-the-dead-letter-queue"></a>Obsługa zanieczyszczonych komunikatów z kolejki utraconych wiadomości  
- Zarządzanie skażonymi komunikatami, obsługa jest dostępna w kolejki utraconych wiadomości, za pomocą niektóre warunki. Ponieważ nie można utworzyć kolejki podrzędnej z kolejek systemu podczas czytania z kolejki utraconych wiadomości systemu `ReceiveErrorHandling` nie można ustawić `Move`. Należy pamiętać, że podczas czytania z kolejki utraconych wiadomości niestandardowych, może mieć kolejki podrzędnej, a więc `Move` jest prawidłowy dyspozycji skażone wiadomości.  
+## <a name="poison-message-handling-from-the-dead-letter-queue"></a>Obsługa skażonych komunikatów z kolejki utraconych wiadomości  
+ Obsługa skażonych komunikatów jest dostępna w przypadku kolejek z utraconymi komunikatami z pewnymi warunkami. Ponieważ nie można tworzyć podkolejek z kolejek systemowych, podczas odczytywania z kolejki utraconych wiadomości systemowych nie można ustawić `ReceiveErrorHandling` na `Move`. Należy pamiętać, że w przypadku odczytywania z niestandardowej kolejki utraconych wiadomości można mieć kolejki podrzędne i dlatego `Move` jest prawidłową dyspozycją dla trującego komunikatu.  
   
- Gdy `ReceiveErrorHandling` ustawiono `Reject`podczas czytania z kolejki utraconych komunikatów, zarządzanie skażonymi komunikatami jest umieszczany w kolejce wiadomości utraconych systemu. Odczytywanie z kolejki utraconych wiadomości systemu, komunikat jest odrzucany (usunięty). Odrzuć z kolejki utraconych wiadomości systemu w usłudze MSMQ spadnie (Przeczyszcza) wiadomości.  
+ Gdy `ReceiveErrorHandling` jest ustawiona na `Reject`, podczas odczytywania z niestandardowej kolejki utraconych wiadomości, Trująca wiadomość jest umieszczana w kolejce utraconych wiadomości systemowych. W przypadku odczytywania z kolejki utraconych wiadomości systemowych komunikat jest porzucany (przeczyszczany). Odrzucanie z kolejki utraconych wiadomości systemowych w usłudze MSMQ powoduje porzucanie (przeczyszczanie) wiadomości.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak można utworzyć kolejki utraconych wiadomości oraz sposób jej używać do przetwarzania wygasłe wiadomości. Przykład jest oparty na przykład w [jak: Wymiana zakolejkowanych komunikatów z punktami końcowymi programu WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md). Poniższy przykład pokazuje, jak napisać kod klienta do kolejności przetwarzania usługi korzystającej z kolejki utraconych wiadomości dla każdej aplikacji. W przykładzie pokazano również sposób przetwarzania komunikatów z kolejki utraconych wiadomości.  
+ Poniższy przykład pokazuje, jak utworzyć kolejkę utraconych wiadomości i jak używać jej do przetwarzania wygasłych komunikatów. Przykład jest oparty na przykładzie w [instrukcje: Wymiana komunikatów umieszczonych w kolejce z punktami końcowymi WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md). Poniższy przykład pokazuje, jak napisać kod klienta do usługi przetwarzania zamówień, która używa kolejki utraconych wiadomości dla każdej aplikacji. W przykładzie pokazano również, jak przetwarzać komunikaty z kolejki utraconych wiadomości.  
   
- Poniżej przedstawiono kod klienta, który określa kolejki utraconych wiadomości dla każdej aplikacji.  
+ Poniżej przedstawiono kod dla klienta, który określa kolejkę utraconych wiadomości dla każdej aplikacji.  
   
  [!code-csharp[S_DeadLetter#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_deadletter/cs/client.cs#1)]
  [!code-vb[S_DeadLetter#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/client.vb#1)]  
   
- Poniżej znajduje się kod w pliku konfiguracji klienta.  
+ Poniżej znajduje się kod pliku konfiguracji klienta.  
 
- Poniżej przedstawiono kod usługi, przetwarzanie komunikatów z kolejki utraconych wiadomości.  
+ Poniżej przedstawiono kod dla komunikatów przetwarzania usługi z kolejki utraconych wiadomości.  
   
  [!code-csharp[S_DeadLetter#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_deadletter/cs/dlservice.cs#3)]
  [!code-vb[S_DeadLetter#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/dlservice.vb#3)]  
   
- Poniżej znajduje się kod w pliku konfiguracji usługi kolejki utraconych wiadomości.  
+ Poniżej znajduje się kod pliku konfiguracji usługi kolejki utraconych wiadomości.  
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Instrukcje: Wymiana zakolejkowanych komunikatów z punktami końcowymi programu WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Instrukcje: wymiana komunikatów znajdujących się w kolejce z punktami końcowymi WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [Obsługa komunikatów zanieczyszczonych](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

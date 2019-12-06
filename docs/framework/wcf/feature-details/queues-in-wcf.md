@@ -4,62 +4,62 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 6990d2b08f0ff729f0c0138c091c728a5ba59605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e921084ed28cb4e846cb269e57e58a194e9437a5
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643541"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837340"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Kolejki programu Windows Communication Foundation
-W tematach w tej sekcji omówiono Windows Communication Foundation (WCF), obsługa kolejek. Usługi WCF zapewnia obsługę usługi kolejkowania wiadomości, wykorzystaniem Microsoft usługi kolejkowania komunikatów (wcześniej znane jako usługi MSMQ) jako transportu i umożliwia obsługę następujących scenariuszy:  
+W tematach w tej sekcji omówiono obsługę Windows Communication Foundation (WCF) dla kolejek. Funkcja WCF zapewnia obsługę kolejkowania, wykorzystując usługę kolejkowania komunikatów firmy Microsoft (wcześniej znaną jako usługa MSMQ) jako Transport i udostępnia następujące scenariusze:  
   
-- Luźno powiązanych aplikacji. Wysyłanie aplikacje mogą wysyłać wiadomości do kolejki, bez znajomości czy aplikacja jest dostępne do przetwarzania wiadomości. Kolejka zapewnia niezależność przetwarzania, który umożliwia aplikacji wysyłającej wysyłać komunikaty do kolejki z szybkością, która nie zależy od szybkości aplikacje odbierające może przetwarzać komunikaty. Ogólna dostępność systemu zwiększa się podczas wysyłania wiadomości do kolejki jest nie ściśle powiązany przetwarzanie komunikatów.  
+- Połączone aplikacje. Wysyłanie aplikacji może wysyłać komunikaty do kolejek bez konieczności dowiedzieć się, czy aplikacja do odbioru jest dostępna do przetwarzania wiadomości. Kolejka zapewnia niezależność przetwarzania, która umożliwia aplikacji wysyłającej wysyłanie komunikatów do kolejki według stawki, która nie jest zależna od tego, jak szybko aplikacje do odbioru mogą przetwarzać komunikaty. Ogólna dostępność systemu wzrasta, gdy wysyłanie komunikatów do kolejki nie jest ściśle sprzężone z przetwarzaniem komunikatów.  
   
-- Izolacja błędów. Aplikacje, wysyłanie i odbieranie komunikatów w kolejce może zakończyć się niepowodzeniem bez wpływu na siebie nawzajem. Jeśli na przykład, aplikacja zakończy się niepowodzeniem, wysyłanie aplikacja może kontynuować do wysyłania komunikatów do kolejki. Jeśli odbiorca jest ponownie uruchomiony, go przetwarzać komunikaty z kolejki. Izolacja błędów zwiększa ogólną niezawodność systemu i dostępności.  
+- Izolacja niepowodzeń. Aplikacje wysyłające lub otrzymujące komunikaty do kolejki mogą kończyć się niepowodzeniem bez wpływania na siebie nawzajem. Jeśli na przykład aplikacja otrzymująca nie powiedzie się, aplikacja wysyłająca może kontynuować wysyłanie komunikatów do kolejki. Po ponownym uruchomieniu odbiornik może przetwarzać komunikaty z kolejki. Izolacja awaryjna zwiększa ogólną niezawodność i dostępność systemu.  
   
-- Wyrównywanie obciążenia. Aplikacje wysyłające może spowodować przeciążenie aplikacje odbierające przy użyciu komunikatów. Kolejki mogą zarządzać stawki produkcji i zużycia niedopasowanych wiadomości, aby odbiorca nie przeciążeniu.  
+- Wyrównywanie obciążenia. Wysyłanie aplikacji może przeciążać aplikacje wiadomościami. Kolejki mogą zarządzać niezgodnymi stawkami produkcyjnymi i zużycie komunikatów, aby odbiorca nie mógł go przeciążyć.  
   
-- Operacje odłączonych. Wysyłanie, odbieranie i przetwarzanie operacji może stać się rozłączona podczas komunikowania się za pośrednictwem sieci z dużym opóźnieniem lub ograniczoną dostępność sieci, takich jak w przypadku urządzeń przenośnych. Kolejki umożliwiają te operacje kontynuować, nawet gdy punkty końcowe są odłączone. Po ponownym ustanowieniu połączenia, kolejki przekazuje komunikaty odbierający aplikacji.  
+- Operacje rozłączone. Operacje wysyłania, otrzymywania i przetwarzania mogą zostać rozłączone podczas komunikacji z sieciami o dużej opóźnieniu lub sieciami o ograniczonej dostępności, na przykład w przypadku urządzeń przenośnych. Kolejki umożliwiają kontynuowanie tych operacji, nawet gdy punkty końcowe są rozłączone. Gdy połączenie zostanie nawiązane, kolejka przekazuje komunikaty do aplikacji odbiorczej.  
   
- Funkcja kolejek w aplikacji WCF umożliwia standardowe powiązania, lub można utworzyć niestandardowego powiązania, jeśli jedno z powiązań standard nie spełnia wymagań. Aby uzyskać więcej informacji o odpowiednich powiązań standardowych i wybierz jedną, zobacz [jak: Wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami usługi kolejkowania komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Aby uzyskać więcej informacji na temat tworzenia powiązań niestandardowych, zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Aby użyć funkcji Queues w aplikacji WCF, można użyć jednego ze standardowych powiązań lub utworzyć niestandardowe powiązanie, jeśli jedno z powiązań standardowych nie spełnia wymagań. Aby uzyskać więcej informacji o odpowiednich powiązaniach standardowych i sposobach ich wyboru, zobacz [How to: Exchange messages with Endpoints i Applications kolejkowania komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Aby uzyskać więcej informacji na temat tworzenia powiązań niestandardowych, zobacz [powiązania niestandardowe](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- Przegląd pojęć usługi kolejkowania komunikatów.  
+ Omówienie pojęć dotyczących usługi kolejkowania komunikatów.  
   
  [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- Omówienie obsługi kolejki programu WCF.  
+ Omówienie obsługi kolejki WCF.  
   
- [Instrukcje: Wymiana zakolejkowanych komunikatów z punktami końcowymi programu WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- Opis sposobu użycia <xref:System.ServiceModel.NetMsmqBinding> klasy do komunikacji między klienta WCF i usługi WCF.  
+ [Instrukcje: wymiana komunikatów znajdujących się w kolejce z punktami końcowymi WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ Wyjaśnia, w jaki sposób używać klasy <xref:System.ServiceModel.NetMsmqBinding> do komunikacji między klientem programu WCF a usługą WCF.  
   
- [Instrukcje: Wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- Opis sposobu użycia <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> do komunikacji między aplikacjami usług WCF i usługi kolejkowania komunikatów.  
+ [Instrukcje: wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ Wyjaśnia, w jaki sposób używać <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> do komunikacji między aplikacjami WCF i kolejkowania komunikatów.  
   
  [Grupowanie komunikatów z obsługą kolejek w ramach sesji](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
- Wyjaśnia, jak należy zgrupować komunikatów w kolejce w celu ułatwienia przetwarzanie skorelowanych komunikatów przez aplikację odbierającą pojedynczego.  
+ Wyjaśnia, jak grupować komunikaty w kolejce, aby ułatwić przetwarzanie skorelowanych komunikatów przez jedną aplikację do odebrania.  
   
  [Tworzenie partii komunikatów w ramach transakcji](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
- Wyjaśnia, jak partii komunikatów w ramach transakcji.  
+ Wyjaśnia, jak należy wykonać wsadowe wiadomości w transakcji.  
   
  [Używanie utraconych kolejek na potrzeby obsługi transferów komunikatów zakończonych niepowodzeniem](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- Wyjaśnia sposób obsługi błędów transferu i dostarczania wiadomości przy użyciu kolejki utraconych wiadomości i sposób przetwarzania komunikatów z kolejki utraconych wiadomości.  
+ Wyjaśnia, jak obsługiwać błędy transferu i dostarczania komunikatów za pomocą kolejek utraconych wiadomości oraz jak przetwarzać komunikaty z kolejki utraconych list.  
   
  [Obsługa komunikatów zanieczyszczonych](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- Wyjaśnia sposób obsługi wiadomości (wiadomości, które przekroczyły maksymalną liczbę prób dostarczenia do aplikacji odbierającej).  
+ Wyjaśnia, jak obsługiwać trujące komunikaty (komunikaty, które przekroczyły maksymalną liczbę prób dostarczenia do aplikacji do odebrania).  
   
  [Różnice w funkcjach kolejkowania w systemach Windows Vista, Windows Server 2003 i Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- Różnice w funkcji kolejek usługi WCF między [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+ Podsumowuje różnice w funkcjach kolejek WCF między systemem Windows Vista, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
  [Ochrona komunikatów za pomocą zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- W tym artykule opisano sposób korzystania z zabezpieczeń transportu do zabezpieczenia wiadomości w kolejce.  
+ Opisuje sposób korzystania z zabezpieczeń transportu w celu zabezpieczenia komunikatów umieszczonych w kolejce.  
   
  [Korzystanie z zabezpieczeń komunikatów](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
- Opisuje sposób używania zabezpieczeń wiadomości do zabezpieczenia wiadomości w kolejce.  
+ Opisuje sposób korzystania z zabezpieczeń komunikatów w celu zabezpieczenia komunikatów umieszczonych w kolejce.  
   
  [Rozwiązywanie problemów obsługi komunikatów kolejek](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)  
- Wyjaśnia, jak rozwiązać typowe problemy z kolejkowania.  
+ Wyjaśnia, jak rozwiązywać typowe problemy z kolejką.  
   
  [Najlepsze rozwiązania dotyczące komunikacji z obsługą kolejek](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
- Wyjaśniono, że komunikacja kolejek najlepsze rozwiązania dotyczące korzystania z usługi WCF.  
+ Zawiera opis najlepszych rozwiązań dotyczących używania komunikacji kolejkowanej WCF.  

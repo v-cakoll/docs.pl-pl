@@ -1,0 +1,69 @@
+### YamlMime:Landing
+title: Dokumentacja Visual Basic
+summary: Visual Basic został zaprojektowany w celu ułatwienia wydajnego tworzenia bezpiecznych aplikacji typu i zorientowanych obiektowo. Visual Basic to szybki i łatwy sposób tworzenia aplikacji platformy .NET.
+metadata:
+  title: Visual Basic docs — wprowadzenie, samouczki, dokumentacja.
+  description: Uczenie się Visual Basic programowanie w programie .NET — w przypadku deweloperów, deweloperów nowych do Visual Basic i doświadczonych Visual Basic deweloperów
+  ms.topic: landing-page
+  ms.date: 11/27/2019
+  ms.openlocfilehash: 9019ed13a6e9a02710ec063a6538a406f4940e21
+  ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74838338"
+landingContent:
+- title: Wprowadzenie
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Tworzenie aplikacji "Hello world" przy użyciu platformy .NET Core
+      url: ../core/tutorials/vb-with-visual-studio.md
+    - text: Kompilowanie biblioteki klas przy użyciu .NET Standard
+      url: ../core/tutorials/vb-library-with-visual-studio.md
+    - text: Dodatkowe zasoby
+      url: getting-started/additional-resources.md
+    - text: Wskazówki
+      url: walkthroughs.md
+- title: Podstawy Visual Basic
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Pojęcia związane z programowaniem
+      url: programming-guide/concepts/index.md
+  - linkListType: concept
+    links:
+    - text: Struktura programu i konwencje związane z kodami
+      url: programming-guide/program-structure/program-structure-and-code-conventions.md
+    - text: Opracowywanie aplikacji za pomocą Visual Basic
+      url: developing-apps/index.md
+    - text: Struktura programu i konwencje związane z kodami
+      url: programming-guide/program-structure/program-structure-and-code-conventions.md
+    - text: Funkcje językowe
+      url: programming-guide/language-features/index.md
+    - text: COM interop
+      url: programming-guide/com-interop/index.md
+- title: Popularne scenariusze
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Windows Forms niestandardowych obiektów delegowanych i zdarzeń
+      url: https://social.technet.microsoft.com/wiki/contents/articles/53470.vb-net-windows-forms-custom-delegates-and-events.aspx
+    - text: Edytowanie wartości tabeli bazy danych za pomocą elementu DataGrid WPF
+      url: https://social.msdn.microsoft.com/Forums/vstudio/10a3dd61-7dcc-48f3-a6e0-f7386d06f9f1/edit-database-table-values-via-wpf-datagrid-visual-basic?forum=wpf
+    - text: 'Windows Forms ListView: badanie widoku szczegółów z SQL Server'
+      url: https://social.technet.microsoft.com/wiki/contents/articles/53356.windows-forms-listview-examining-detail-view-with-sql-server.aspx
+    - text: Jak otworzyć skoroszyt programu Excel 2016 za poorednictwem OleDbConnection
+      url: https://social.msdn.microsoft.com/Forums/vstudio/70a45808-9aaf-4320-a5fc-04cbbabf6e4d/how-to-open-excel-2016-workbook-through-oledbconnection?forum=vbgeneral
+- title: Odwołanie językowe Visual Basic
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Dokumentacja języka
+      url: language-reference/index.md
+    - text: Słowa kluczowe
+      url: language-reference/keywords/index.md
+    - text: Operatory
+      url: language-reference/operators/index.md
+    - text: Specyfikacja języka
+      url: reference/language-specification/index.md

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 0b277728d2f2c224d5e45e3990ab2fd588bc81d3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c5500b8fd8b35081e83e2e9279dc4f236ef3c7b0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318695"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837938"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informacje o prywatności dotyczące architektury WCF (Windows Communication Foundation)
 Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcowych. W przypadku kompilowania aplikacji przy użyciu programu Windows Communication Foundation (WCF) w wersji 3,0 Aplikacja może mieć wpływ na prywatność użytkowników końcowych. Na przykład aplikacja może jawnie zbierać informacje kontaktowe użytkownika lub może zażądać lub wysłać informacje przesyłane przez Internet do witryny sieci Web. Jeśli osadzisz technologię firmy Microsoft w aplikacji, ta technologia może mieć własne zachowanie, które może mieć wpływ na prywatność. Usługa WCF nie wysyła żadnych informacji do firmy Microsoft z aplikacji, chyba że użytkownik lub użytkownik końcowy zdecyduje się na wysłanie go do nas.  
@@ -21,7 +21,7 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  Nagłówki mogą zawierać routing wiadomości, informacje o zabezpieczeniach, transakcje i wiele więcej w zależności od usług używanych przez aplikację. Komunikaty są zwykle szyfrowane domyślnie. Jedynym wyjątkiem jest użycie `BasicHttpBinding`, który został zaprojektowany do użycia z niezabezpieczonymi, starszymi usługami sieci Web. Jako projektant aplikacji jest odpowiedzialny za końcowy projekt. Komunikaty w treści protokołu SOAP zawierają dane specyficzne dla aplikacji; Jednak te dane, takie jak zdefiniowane przez aplikację dane osobowe, mogą być chronione przy użyciu funkcji szyfrowania lub poufności programu WCF. W poniższych sekcjach opisano funkcje, które mogą mieć wpływ na prywatność.  
   
-## <a name="messaging"></a>Obsługa komunikatów  
+## <a name="messaging"></a>Obsługa wiadomości  
  Każdy komunikat WCF ma nagłówek adresu, który określa miejsce docelowe wiadomości i miejsce, w którym odpowiedź powinna zostać wysłana.  
   
  Składnik adresu punktu końcowego jest Uniform Resource Identifier (URI), który identyfikuje punkt końcowy. Adres może być adresem sieciowym lub adresem logicznym. Adres może zawierać nazwę komputera (nazwa hosta, w pełni kwalifikowaną nazwę domeny) i adres IP. Adres punktu końcowego może również zawierać unikatowy identyfikator globalny (GUID) lub kolekcję identyfikatorów GUID do tymczasowego adresowania służącego do rozpoznać każdego adresu. Każdy komunikat zawiera identyfikator, który jest identyfikatorem GUID. Ta funkcja jest zgodna ze standardem odwołania WS-Addressing.  
@@ -54,7 +54,7 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
 ## <a name="auditing"></a>Inspekcja  
  Inspekcja rejestruje sukces i niepowodzenie uwierzytelniania i zdarzeń autoryzacji. Rekordy inspekcji zawierają następujące dane: identyfikator URI usługi, identyfikator URI akcji i identyfikator obiektu wywołującego.  
   
- Inspekcja jest rejestrowana także wtedy, gdy administrator modyfikuje konfigurację rejestrowania komunikatów (Włączanie lub wyłączanie), ponieważ rejestrowanie komunikatów może rejestrować dane specyficzne dla aplikacji w nagłówkach i treściach. W przypadku [!INCLUDE[wxp](../../../includes/wxp-md.md)]rekord jest rejestrowany w dzienniku zdarzeń aplikacji. W przypadku [!INCLUDE[wv](../../../includes/wv-md.md)] i [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]rekord jest rejestrowany w dzienniku zdarzeń zabezpieczeń.  
+ Inspekcja jest rejestrowana także wtedy, gdy administrator modyfikuje konfigurację rejestrowania komunikatów (Włączanie lub wyłączanie), ponieważ rejestrowanie komunikatów może rejestrować dane specyficzne dla aplikacji w nagłówkach i treściach. W przypadku [!INCLUDE[wxp](../../../includes/wxp-md.md)]rekord jest rejestrowany w dzienniku zdarzeń aplikacji. W przypadku systemu Windows Vista i [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]rekord jest rejestrowany w dzienniku zdarzeń zabezpieczeń.  
   
 ## <a name="transactions"></a>Transakcje  
  Funkcja transakcji zapewnia usługi transakcyjne w aplikacji WCF.  
@@ -404,4 +404,4 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
 ## <a name="see-also"></a>Zobacz także
 
 - [Windows Communication Foundation](index.md)
-- [Zabezpieczenia](./feature-details/security.md)
+- [Security](./feature-details/security.md)

@@ -2,12 +2,12 @@
 title: Narzędzie rejestracji usług przepływu pracy (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 6b1a0b990b1657e724f527b5beccce0e8a6391a6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cf5ea345c900dec0e4859d81fcb272c1ba3d3df6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281670"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837756"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Narzędzie rejestracji usług przepływu pracy (WFServicesReg.exe)
 Narzędzie rejestracji usług przepływu pracy (WFServicesReg. exe) to autonomiczne narzędzie, które służy do dodawania, usuwania lub naprawiania elementów konfiguracji dla usług Windows Workflow Foundation (WF).  
@@ -60,7 +60,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  Na komputerach 64-bitowych narzędzie rejestruje w trybie WOW mapowania skryptów, jeśli przełącznik `Enable32BitAppOnWin64` jest włączony, lub natywnie 64-bitowe mapowania skryptów, jeśli przełącznik `Enable32BitAppOnWin64` jest wyłączony.  
   
- Na maszynach [!INCLUDE[wv](../../../includes/wv-md.md)] i Windows Server 2008 (IIS 7,0 i nowsze) są rejestrowane dwa zestawy programów xoml i rules: jeden dla trybu zintegrowanego i jeden dla trybu klasycznego.  
+ Na maszynach z systemem Windows Vista i Windows Server 2008 (IIS 7,0 lub nowszym) są rejestrowane dwa zestawy programów xoml i.  
   
  Na komputerach 64-bitowych są zarejestrowane trzy zestawy programów obsługi (bez względu na stan przełącznika `Enable32BitAppOnWin64`): jeden dla trybu zintegrowanego, jeden dla klasycznego trybu WOW i jeden dla natywnego 64-bitowego trybu klasycznego.  
   

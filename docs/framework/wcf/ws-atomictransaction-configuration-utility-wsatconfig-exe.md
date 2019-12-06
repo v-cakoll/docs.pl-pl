@@ -2,12 +2,12 @@
 title: Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 224777fe5bf8e8d832ede582f460a8fa6ae6181d
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 429e11cdafc154b6913ab9de76dabe9c5b81d924
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802332"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837717"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)
 Narzędzie konfiguracji protokołu WS-AtomicTransaction służy do konfigurowania podstawowych ustawień obsługi WS-AtomicTransaction.  
@@ -25,7 +25,7 @@ wsatConfig [Options]
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
- Jeśli korzystasz z programu [!INCLUDE[wxp](../../../includes/wxp-md.md)] lub [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], musisz pobrać aktualizację przed uruchomieniem programu WsatConfig. exe. Aby uzyskać więcej informacji o tej aktualizacji, zobacz [Aktualizacja dla Windows Communication Foundation (KB912817)](https://www.microsoft.com/en-us/download/details.aspx?id=21520).  
+ Jeśli korzystasz z programu [!INCLUDE[wxp](../../../includes/wxp-md.md)] lub [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], musisz pobrać aktualizację przed uruchomieniem programu WsatConfig. exe. Aby uzyskać więcej informacji o tej aktualizacji, zobacz [Aktualizacja dla Windows Communication Foundation (KB912817)](https://www.microsoft.com/download/details.aspx?id=21520).  
   
  W poniższej tabeli przedstawiono opcje, które mogą być używane z narzędziem konfiguracji protokołu WS-AtomicTransaction (wsatConfig. exe).  
   

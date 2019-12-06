@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: udostępnianie certyfikatów X.509 w architekturze WCF'
+title: 'Instrukcje: Udostępnianie certyfikatów X.509 w architekturze WCF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 401371bf01a62a20f2834cb76df19d9ddaacf83d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: abd074701ca667abe4590f4f17a044b34325e874
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972351"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837405"
 ---
-# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Instrukcje: udostępnianie certyfikatów X.509 w architekturze WCF
+# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Instrukcje: Udostępnianie certyfikatów X.509 w architekturze WCF
 Aby udostępnić certyfikat X. 509 dla Windows Communication Foundation (WCF), kod aplikacji musi określać nazwę i lokalizację magazynu certyfikatów. W pewnych okolicznościach tożsamość procesu musi mieć dostęp do pliku, który zawiera klucz prywatny skojarzony z certyfikatem X. 509. Aby uzyskać klucz prywatny skojarzony z certyfikatem X. 509 w magazynie certyfikatów, WCF musi mieć odpowiednie uprawnienia. Domyślnie tylko właściciel i konto systemowe mogą uzyskać dostęp do klucza prywatnego certyfikatu.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>Aby udostępnić certyfikaty X. 509 dla usługi WCF  
@@ -36,16 +36,16 @@ Aby udostępnić certyfikat X. 509 dla Windows Communication Foundation (WCF), k
   
     2. Określ lokalizację i nazwę magazynu certyfikatów, w którym przechowywany jest certyfikat.  
   
-         Magazyn certyfikatów, w którym jest przechowywany certyfikat, jest określany w kodzie aplikacji lub w konfiguracji. Na przykład poniższy przykład określa, że certyfikat znajduje się w `CurrentUser` magazynie certyfikatów o nazwie. `My`  
+         Magazyn certyfikatów, w którym jest przechowywany certyfikat, jest określany w kodzie aplikacji lub w konfiguracji. Na przykład poniższy przykład określa, że certyfikat znajduje się w `CurrentUser` magazyn certyfikatów o nazwie `My`.  
   
          [!code-csharp[x509Accessible#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/x509accessible/cs/source.cs#1)]
          [!code-vb[x509Accessible#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/x509accessible/vb/source.vb#1)]  
   
     3. Określ, gdzie klucz prywatny certyfikatu znajduje się na komputerze przy użyciu narzędzia [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) .  
   
-         Narzędzie [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) wymaga nazwy magazynu certyfikatów, lokalizacji magazynu certyfikatów i elementu, który jednoznacznie identyfikuje certyfikat. Narzędzie akceptuje nazwę podmiotu lub odcisk palca certyfikatu jako unikatowy identyfikator. Aby uzyskać więcej informacji na temat sposobu ustalania odcisku palca certyfikatu [, zobacz How to: Pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+         Narzędzie [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) wymaga nazwy magazynu certyfikatów, lokalizacji magazynu certyfikatów i elementu, który jednoznacznie identyfikuje certyfikat. Narzędzie akceptuje nazwę podmiotu lub odcisk palca certyfikatu jako unikatowy identyfikator. Aby uzyskać więcej informacji na temat sposobu ustalania odcisku palca certyfikatu, zobacz [How to: Pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
-         Poniższy przykład kodu używa narzędzia [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) do określenia lokalizacji klucza prywatnego certyfikatu w `My` magazynie `CurrentUser` przy użyciu odcisku palca `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`.  
+         Poniższy przykład kodu używa narzędzia [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) do określenia lokalizacji klucza prywatnego certyfikatu w magazynie `My` w `CurrentUser` z odciskiem palca `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`.  
   
         ```console
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
@@ -59,8 +59,8 @@ Aby udostępnić certyfikat X. 509 dla Windows Communication Foundation (WCF), k
         |--------------|----------------------|  
         |Klient (Aplikacja konsolowa lub WinForms).|Aktualnie zalogowany użytkownik.|  
         |Usługa, która jest samodzielna.|Aktualnie zalogowany użytkownik.|  
-        |Usługa hostowana w usługach IIS 6,0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) lub IIS 7,0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]).|USŁUGA SIECIOWA|  
-        |Usługa hostowana w usługach IIS 5. X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]).|Kontrolowane przez `<processModel>` element w pliku Machine. config. Domyślne konto to ASPNET.|  
+        |Usługa hostowana w usługach IIS 6,0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) lub IIS 7,0 (Windows Vista).|USŁUGA SIECIOWA|  
+        |Usługa hostowana w usługach IIS 5. X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]).|Kontrolowane przez element `<processModel>` w pliku Machine. config. Domyślne konto to ASPNET.|  
   
     5. Przyznaj uprawnienia do odczytu pliku, który zawiera klucz prywatny do konta, w ramach którego działa usługa WCF, przy użyciu narzędzia, takiego jak icacls. exe.  
   
@@ -73,5 +73,5 @@ Aby udostępnić certyfikat X. 509 dla Windows Communication Foundation (WCF), k
 ## <a name="see-also"></a>Zobacz także
 
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
-- [Instrukcje: Pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Instrukcje: pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
 - [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

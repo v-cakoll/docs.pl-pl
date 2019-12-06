@@ -2,13 +2,13 @@
 title: polecenia wypychania NuGet dotnet
 description: Polecenie polecenia push NuGet narzędzia dotnet wypycha pakiet do serwera i opublikuje go.
 author: karann-msft
-ms.date: 06/26/2019
-ms.openlocfilehash: 3299f79ec62aebdcdbef38f1e8b09a2dc5529ec4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 12/04/2019
+ms.openlocfilehash: 5e80295a570adc30a06d86b6735cb0387e39d5a3
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117493"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835522"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -20,19 +20,19 @@ ms.locfileid: "71117493"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet nuget push`— Wypchnij pakiet do serwera i opublikuje go.
+`dotnet nuget push` — wypchnij pakiet do serwera i opublikuje go.
 
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
-    [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+    [--no-service-endpoint] [-s|--source] [--skip-duplicate] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
 
 ## <a name="description"></a>Opis
 
-`dotnet nuget push` Polecenie wypycha pakiet do serwera i opublikuje go. Polecenie push używa informacji o serwerze i poświadczeniach znajdujących się w pliku konfiguracyjnym NuGet systemu lub w łańcuchu plików konfiguracji. Aby uzyskać więcej informacji na temat plików konfiguracji, zobacz [Konfigurowanie zachowania NuGet](/nuget/consume-packages/configuring-nuget-behavior). Domyślna konfiguracja narzędzia NuGet jest uzyskiwana przez załadowanie *%AppData%\NuGet\NuGet.config* (Windows) lub *$Home/.local/share* (Linux/macOS), a następnie załadowanie jakichkolwiek *NuGet. config* lub *. NuGet\NuGet.config* , począwszy od katalogu głównego dysk i zakończenie w bieżącym katalogu.
+`dotnet nuget push` polecenie wypycha pakiet do serwera i opublikuje go. Polecenie push używa informacji o serwerze i poświadczeniach znajdujących się w pliku konfiguracyjnym NuGet systemu lub w łańcuchu plików konfiguracji. Aby uzyskać więcej informacji na temat plików konfiguracji, zobacz [Konfigurowanie zachowania NuGet](/nuget/consume-packages/configuring-nuget-behavior). Domyślna konfiguracja narzędzia NuGet jest uzyskiwana przez załadowanie *%AppData%\NuGet\NuGet.config* (Windows) lub *$Home/.local/share* (Linux/macOS), a następnie załadowanie jakichkolwiek *NuGet. config* lub *. NuGet\NuGet.config* , począwszy od katalogu głównego dysku i kończącego się w bieżącym katalogu.
 
 ## <a name="arguments"></a>Argumenty
 
@@ -52,7 +52,7 @@ dotnet nuget push [-h|--help]
 
 * **`-h|--help`**
 
-Drukuje krótką pomoc dla polecenia.
+  Drukuje krótką pomoc dla polecenia.
 
 * **`--interactive`**
 
@@ -72,8 +72,12 @@ Drukuje krótką pomoc dla polecenia.
 
 * **`-s|--source <SOURCE>`**
 
-  Określa adres URL serwera. Ta opcja jest wymagana, `DefaultPushSource` chyba że wartość konfiguracji jest ustawiona w pliku konfiguracyjnym NuGet.
+  Określa adres URL serwera. Ta opcja jest wymagana, chyba że w pliku konfiguracyjnym NuGet zostanie ustawiona wartość `DefaultPushSource` konfiguracja.
 
+* **`--skip-duplicate`**
+
+  Podczas wypychania wielu pakietów do serwera HTTP (S) program traktuje wszystkie 409 odpowiedzi w konflikcie jako ostrzeżenie, aby można było kontynuować wypychanie. Dostępne od wersji .NET Core 3,1 SDK.
+                                 
 * **`-sk|--symbol-api-key <API_KEY>`**
 
   Klucz interfejsu API dla serwera symboli.
@@ -94,7 +98,7 @@ Drukuje krótką pomoc dla polecenia.
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-* Wypychanie *foo. nupkg* do niestandardowego źródła `https://customsource`wypychania, określając klucz interfejsu API:
+* Wypchnij *foo. nupkg* do niestandardowego źródła push `https://customsource`, określając klucz interfejsu API:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
@@ -126,4 +130,10 @@ Drukuje krótką pomoc dla polecenia.
   
   > [!NOTE]
   > Jeśli to polecenie nie działa, może to być spowodowane usterką, która istniała we wcześniejszych wersjach zestawu SDK (zestaw SDK programu .NET Core 2,1 i wcześniejsze wersje).
-  > Aby rozwiązać ten problem, Uaktualnij wersję zestawu SDK lub zamiast tego Uruchom następujące polecenie:`dotnet nuget push **/*.nupkg`
+  > Aby rozwiązać ten problem, Uaktualnij wersję zestawu SDK lub zamiast tego Uruchom następujące polecenie: `dotnet nuget push **/*.nupkg`
+  
+* Wypychanie wszystkich plików *. nupkg* , nawet jeśli odpowiedź na 409 jest zwracana przez serwer http (S):
+
+  ```dotnetcli
+  dotnet nuget push *.nupkg --skip-duplicate
+  ```

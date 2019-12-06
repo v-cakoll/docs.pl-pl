@@ -2,12 +2,12 @@
 title: Federacja — przykład
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 271790e08476533fc1d83e22c5a0daf2f1eaa42a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c143ad9315df94a2d836a2c2c742ffa9a7728511
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716924"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837886"
 ---
 # <a name="federation-sample"></a>Federacja — przykład
 Ten przykład pokazuje zabezpieczenia federacyjne.  
@@ -89,11 +89,11 @@ Ten przykład pokazuje zabezpieczenia federacyjne.
 1. Otwórz okno polecenia zestawu SDK. W przykładowej ścieżce uruchom setup. bat. Spowoduje to utworzenie katalogów wirtualnych wymaganych dla przykładu i zainstalowanie wymaganych certyfikatów z odpowiednimi uprawnieniami.  
   
     > [!NOTE]
-    > Plik wsadowy Setup. bat został zaprojektowany tak, aby można go było uruchomić z poziomu wiersza polecenia Windows SDK. Wymaga, aby zmienna środowiskowa MSSDK wskazywała katalog, w którym zainstalowano zestaw SDK. Ta zmienna środowiskowa jest ustawiana automatycznie w wierszu polecenia Windows SDK. Na [!INCLUDE[wv](../../../../includes/wv-md.md)]należy upewnić się, że zgodność z zarządzaniem usługami IIS 6,0 jest zainstalowana, ponieważ konfiguracja używa skryptów administratora usług IIS. Uruchomienie skryptu konfigurowania na [!INCLUDE[wv](../../../../includes/wv-md.md)] wymaga uprawnień administratora.  
+    > Plik wsadowy Setup. bat został zaprojektowany tak, aby można go było uruchomić z poziomu wiersza polecenia Windows SDK. Wymaga, aby zmienna środowiskowa MSSDK wskazywała katalog, w którym zainstalowano zestaw SDK. Ta zmienna środowiskowa jest ustawiana automatycznie w wierszu polecenia Windows SDK. W systemie Windows Vista należy upewnić się, że zgodność z zarządzaniem usługami IIS 6,0 jest zainstalowana, ponieważ konfiguracja używa skryptów administratora usług IIS. Uruchomienie skryptu konfiguracji w systemie Windows Vista wymaga uprawnień administratora.  
   
 2. Otwórz FederationSample. sln w programie Visual Studio i wybierz opcję **Kompiluj rozwiązanie** z menu **kompilacja** . Powoduje to utworzenie wspólnych plików projektu, usług księgarni, księgarni STS, HomeRealm STS i wdrożenie ich w usługach IIS. Powoduje to również kompilację aplikacji klienckiej księgarni i umieszczenie pliku wykonywalnego BookStoreClient. exe w folderze FederationSample\BookStoreClient\bin\Debug.  
   
-3. Kliknij dwukrotnie plik BookStoreClient. exe. Zostanie wyświetlone okno BookStoreClient.  
+3. Double-click BookStoreClient.exe. Zostanie wyświetlone okno BookStoreClient.  
   
 4. Książki dostępne w księgarni można przeglądać, klikając pozycję **Przeglądaj książki**.  
   

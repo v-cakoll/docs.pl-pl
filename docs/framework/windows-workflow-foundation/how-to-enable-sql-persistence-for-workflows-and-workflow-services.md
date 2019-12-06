@@ -2,12 +2,12 @@
 title: 'Instrukcje: Włączanie trwałości SQL dla przepływów pracy i usług przepływu pracy'
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: bef95dbeaaa96678a66ba94494a0207c7314c326
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: bbbd2e6a5eb3babeb1a4d06976fdefd621581766
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802586"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837691"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Instrukcje: Włączanie trwałości SQL dla przepływów pracy i usług przepływu pracy
 
@@ -152,7 +152,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> Zaleca się, aby nie przechowywać poufnych informacji, takich jak nazwy użytkowników i hasła w pliku Web. config. Jeśli przechowujesz poufne informacje w pliku Web. config, należy zabezpieczyć dostęp do pliku Web. config za pomocą list Access Control systemu plików (ACL). Ponadto można zabezpieczyć wartości konfiguracyjne w pliku konfiguracji, jak wspomniano w temacie [szyfrowanie informacji o konfiguracji za pomocą konfiguracji chronionej](https://docs.microsoft.com/en-us/previous-versions/aspnet/53tyfkaw(v=vs.100)).
+> Zaleca się, aby nie przechowywać poufnych informacji, takich jak nazwy użytkowników i hasła w pliku Web. config. Jeśli przechowujesz poufne informacje w pliku Web. config, należy zabezpieczyć dostęp do pliku Web. config za pomocą list Access Control systemu plików (ACL). Ponadto można zabezpieczyć wartości konfiguracyjne w pliku konfiguracji, jak wspomniano w temacie [szyfrowanie informacji o konfiguracji za pomocą konfiguracji chronionej](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>Elementy Machine. config powiązane z funkcją magazynu wystąpień przepływu pracy SQL
 

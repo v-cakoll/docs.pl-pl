@@ -1,25 +1,25 @@
 ---
-title: 'Instrukcje: instalowanie i konfigurowanie składników aktywacji programu WCF'
+title: 'Instrukcje: Instalowanie i konfigurowanie składników aktywacji programu WCF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 70eab39e4bb24dfd1cdd6abc5216e50126ef1f4c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 0a7be97ec157638db3eb2d656fe263b37b8d676c
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972179"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837418"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>Instrukcje: instalowanie i konfigurowanie składników aktywacji programu WCF
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>Instrukcje: Instalowanie i konfigurowanie składników aktywacji programu WCF
 
-W tym temacie opisano kroki wymagane do skonfigurowania usługi aktywacji procesów systemu Windows (znanej także jako) na [!INCLUDE[wv](../../../../includes/wv-md.md)] potrzeby usług hosta Windows Communication Foundation (WCF), które nie komunikują się za pośrednictwem protokołów sieciowych protokołu HTTP. W poniższych sekcjach opisano kroki tej konfiguracji:
+W tym temacie opisano kroki wymagane do skonfigurowania usługi aktywacji procesów systemu Windows (znanej także jako) w systemie Windows Vista do hostowania usług Windows Communication Foundation (WCF), które nie komunikują się za pośrednictwem protokołów sieciowych protokołu HTTP. W poniższych sekcjach opisano kroki tej konfiguracji:
 
 - Zainstaluj program (lub Potwierdź instalację) składników aktywacji WCF.
 
-- Skonfigurowano obsługę protokołu innego niż HTTP. Poniższa procedura służy [!INCLUDE[wv](../../../../includes/wv-md.md)] do konfigurowania aktywacji przy użyciu protokołu TCP.
+- Skonfigurowano obsługę protokołu innego niż HTTP. Poniższa procedura umożliwia skonfigurowanie aktywacji systemu Windows Vista do protokołu TCP.
 
-Po zainstalowaniu i skonfigurowaniu programu zapoznaj [się z tematem How to: Hostowanie usługi WCF w programie](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) dotyczyło procedur tworzenia usługi WCF, która uwidacznia punkt końcowy inny niż http.
+Po zainstalowaniu i skonfigurowaniu programu zapoznaj się z tematem [jak: Hostowanie usługi WCF w usłudze was](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) , aby poznać procedury tworzenia usługi WCF, która uwidacznia punkt końcowy inny niż http.
 
 ## <a name="to-install-the-wcf-non-http-activation-components"></a>Aby zainstalować składniki aktywacji programu WCF inne niż HTTP
 
@@ -52,7 +52,7 @@ Po zainstalowaniu i skonfigurowaniu programu zapoznaj [się z tematem How to: Ho
     ```
 
     > [!NOTE]
-    > To polecenie jest pojedynczym wierszem tekstu. To polecenie umożliwia dostęp do\<aplikacji/>*aplikacji programu WCF*przy użyciu `http://localhost/<WCF Application>` programów i. `net.tcp://localhost/<WCF Application>`
+    > To polecenie jest pojedynczym wierszem tekstu. To polecenie umożliwia dostęp do\<aplikacji *WCF*> aplikacji przy użyciu obu `http://localhost/<WCF Application>` i `net.tcp://localhost/<WCF Application>`.
 
      Usuń powiązanie witryny net. TCP dodane do tego przykładu.
 

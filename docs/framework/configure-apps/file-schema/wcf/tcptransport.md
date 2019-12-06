@@ -2,18 +2,18 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 6761d090206e55e58001ea2bb885eaa69f26d9eb
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: cf2abd460dcf19346d9efb41e9a5ccef99120fbb
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738650"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837067"
 ---
-# <a name="tcptransport"></a>\<tcpTransport >
+# <a name="tcptransport"></a>\<tcpTransport>
 Definiuje transport TCP, który może być używany przez kanał do przesyłania komunikatów dla niestandardowego powiązania.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<powiązań**](bindings.md) >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**CustomBinding**](custombinding.md) >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<powiązania >** \
@@ -46,7 +46,7 @@ Definiuje transport TCP, który może być używany przez kanał do przesyłania
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
  W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
-### <a name="attributes"></a>Atrybuty  
+### <a name="attributes"></a>{1&gt;{2&gt;Atrybuty&lt;2}&lt;1}  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
@@ -62,8 +62,8 @@ Definiuje transport TCP, który może być używany przez kanał do przesyłania
 |maxPendingConnections|Pobiera lub ustawia maksymalną liczbę połączeń oczekujących na wysłanie usługi.|  
 |maxReceivedMessageSize|Pobiera i ustawia maksymalny dopuszczalny rozmiar komunikatu, który można odbierać.|  
 |portSharingEnabled|Wartość logiczna określająca, czy włączone jest Udostępnianie portów TCP dla tego połączenia. Jeśli jest to `false`, każde powiązanie będzie używać własnego portu wyłącznego. Wartość domyślna to `false`.<br /><br /> To ustawienie dotyczy tylko usług. Nie dotyczy to klientów.<br /><br /> Użycie tego ustawienia wymaga włączenia usługi udostępniania portów TCP Windows Communication Foundation (WCF), zmieniając jej typ uruchamiania na ręczny lub automatyczny.|  
-|teredoEnabled|Wartość logiczna określająca, czy jest włączona funkcja Teredo (technologia do adresowania klientów znajdujących się za zaporą). Wartość domyślna to `false`.<br /><br /> Ta właściwość włącza protokół Teredo dla bazowego gniazda TCP. Aby uzyskać więcej informacji, zobacz [Omówienie protokołu Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Ta właściwość ma zastosowanie tylko do [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] i [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. [!INCLUDE[wv](../../../../../includes/wv-md.md)] ma opcję konfiguracji całego komputera dla protokołu Teredo, więc w przypadku korzystania z systemu Vista Ta właściwość jest ignorowana. Protokół Teredo wymaga, aby komputery klienckie i usługi miały zainstalowany stos IPv6 firmy Microsoft i prawidłowo skonfigurowany do użycia w protokole Teredo. Aby uzyskać więcej informacji na temat konfigurowania protokołu Teredo, zobacz [Omówienie protokołu Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Aby uzyskać więcej informacji, zobacz [centra technologiczne systemu Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=49888).|  
-|Elementy TransferMode|Pobiera lub ustawia wartość wskazującą, czy komunikaty są buforowane, czy przesyłane strumieniowo przy użyciu transportu zorientowanego na połączenia.|  
+|teredoEnabled|Wartość logiczna określająca, czy jest włączona funkcja Teredo (technologia do adresowania klientów znajdujących się za zaporą). Wartość domyślna to `false`.<br /><br /> Ta właściwość włącza protokół Teredo dla bazowego gniazda TCP. Aby uzyskać więcej informacji, zobacz [Omówienie protokołu Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Ta właściwość ma zastosowanie tylko do [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] i [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. W systemie Windows Vista jest używana opcja konfiguracji całego komputera dla protokołu Teredo, więc w przypadku korzystania z systemu Vista Ta właściwość jest ignorowana. Protokół Teredo wymaga, aby komputery klienckie i usługi miały zainstalowany stos IPv6 firmy Microsoft i prawidłowo skonfigurowany do użycia w protokole Teredo. Aby uzyskać więcej informacji na temat konfigurowania protokołu Teredo, zobacz [Omówienie protokołu Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Aby uzyskać więcej informacji, zobacz [centra technologiczne systemu Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=49888).|  
+|transferMode|Pobiera lub ustawia wartość wskazującą, czy komunikaty są buforowane, czy przesyłane strumieniowo przy użyciu transportu zorientowanego na połączenia.|  
 |connectionPoolSettings|Określa dodatkowe ustawienia puli połączeń dla powiązania nazwanego potoku.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -91,4 +91,4 @@ Definiuje transport TCP, który może być używany przez kanał do przesyłania
 - [Powiązania](../../../wcf/bindings.md)
 - [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
 - [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
-- [\<niestandardowebinding >](custombinding.md)
+- [\<customBinding>](custombinding.md)

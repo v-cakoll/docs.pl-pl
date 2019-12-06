@@ -2,12 +2,12 @@
 title: Narzędzie rejestracji modelu ServiceModel (ServiceModelReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: aa9fc1b2338007db240fb10a9af35754107b07d0
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2b2580a43270cc221de9cfdf0894a59a040ba307
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424876"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837769"
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>Narzędzie rejestracji modelu ServiceModel (ServiceModelReg.exe)
 To narzędzie wiersza polecenia zapewnia możliwość zarządzania rejestracją składników WCF i WF na jednym komputerze. W normalnych okolicznościach nie należy używać tego narzędzia, ponieważ składniki WCF i WF są skonfigurowane podczas instalacji. Jeśli jednak występują problemy z aktywacją usługi, możesz spróbować zarejestrować składniki przy użyciu tego narzędzia.  
@@ -21,10 +21,10 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
 ## <a name="remarks"></a>Uwagi  
  Narzędzie można znaleźć w następującej lokalizacji:  
   
- %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation \  
+ %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
 > [!NOTE]
-> Po uruchomieniu narzędzia rejestracji modelu ServiceModel w [!INCLUDE[wv](../../../includes/wv-md.md)]okno dialogowe **funkcji systemu Windows** może nie odzwierciedlać, że **Windows Communication Foundation opcja aktywacji HTTP** w obszarze **Microsoft .NET Framework 3,0** jest włączona. Do okna dialogowego **funkcje systemu Windows** można uzyskać dostęp przez kliknięcie przycisku **Start**, a następnie kliknij pozycję **Uruchom** , a następnie wpisz **OptionalFeatures**.  
+> Po uruchomieniu narzędzia rejestracji ServiceModel w systemie Windows Vista okno dialogowe **funkcji systemu Windows** może nie odzwierciedlać, że opcja **Windows Communication Foundation aktywacji HTTP** w obszarze **Microsoft .NET Framework 3,0** jest włączona. Do okna dialogowego **funkcje systemu Windows** można uzyskać dostęp przez kliknięcie przycisku **Start**, a następnie kliknij pozycję **Uruchom** , a następnie wpisz **OptionalFeatures**.  
   
  W poniższych tabelach opisano opcje, których można użyć w programie ServiceModelReg. exe.  
   

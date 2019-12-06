@@ -2,12 +2,12 @@
 title: Co nowego w programie Windows Workflow Foundation na platformie .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: 0244457a051740f37c11c48f41d98bdb2d741aec
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 80919dd7a726cbac5fa13680e0c79292745a7bca
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142037"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837587"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Co nowego w programie Windows Workflow Foundation na platformie .NET 4.5
 
@@ -104,7 +104,7 @@ Słowa kluczowe przeszukiwane w przepływach pracy będą zgodne z następujący
 
 - Argumenty
 
-- Wyrażenia
+- {1&gt;Wyrażenia&lt;1}
 
 Szybkie wyszukiwanie jest wykonywane w drzewie <xref:System.Activities.Presentation.Model.ModelItem> projektanta. Szybkie wyszukiwanie nie będzie lokalizować przestrzeni nazw zaimportowanych w definicji przepływu pracy.
 
@@ -220,7 +220,7 @@ Poza schematem blokowym i modelami programowania sekwencyjnego przepływu pracy 
 
 ### <a name="BKMK_StateMachine"></a>Przepływy pracy automatu Stanów
 
-Przepływy pracy automatu Stanów zostały wprowadzone w ramach .NET Framework 4 w wersji 4.0.1 na [platformie Microsoft .NET Framework 4 Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). Ta aktualizacja zawiera kilka nowych klas i działań, które pozwalają deweloperom tworzyć przepływy pracy automatu Stanów. Te klasy i działania zostały zaktualizowane dla .NET Framework 4,5. Aktualizacje obejmują:
+Przepływy pracy automatu Stanów zostały wprowadzone w ramach .NET Framework 4 w wersji 4.0.1 na [platformie Microsoft .NET Framework 4 Update 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/). Ta aktualizacja zawiera kilka nowych klas i działań, które pozwalają deweloperom tworzyć przepływy pracy automatu Stanów. Te klasy i działania zostały zaktualizowane dla .NET Framework 4,5. Aktualizacje obejmują:
 
 1. Możliwość ustawiania punktów przerwania na Stanach
 

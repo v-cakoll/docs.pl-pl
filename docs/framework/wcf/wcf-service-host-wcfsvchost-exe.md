@@ -2,12 +2,12 @@
 title: Host usługi WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: c855fe7cc804fac14348990b7a6f5f84a0956b0c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b8fb32111a80178f5eb92411eb4990decb645bb6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802411"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837743"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host usługi WCF (WcfSvcHost.exe)
 
@@ -113,7 +113,7 @@ Hosta usługi WCF można zamknąć na następujące cztery sposoby:
 
 Aby umożliwić użytkownikom bez uprawnień administratora opracowywanie usług WCF, podczas instalacji programu Visual Studio jest tworzona lista kontroli dostępu (Access Control) dla przestrzeni nazw "http://+:8731/Design_Time_Addresses". Lista ACL jest ustawiona na (UI), która obejmuje wszystkich użytkowników interakcyjnych zalogowanych na komputerze. Administratorzy mogą dodawać lub usuwać użytkowników z tej listy kontroli dostępu lub otwierać dodatkowe porty. Ta lista kontroli dostępu umożliwia użytkownikom korzystanie z funkcji Autohost usługi WCF (wcfSvcHost. exe) bez udzielania im uprawnień administratora.
 
-Dostęp można modyfikować za pomocą narzędzia Netsh. exe w [!INCLUDE[wv](../../../includes/wv-md.md)] na koncie administratora z podwyższonym poziomem uprawnień. Poniżej przedstawiono przykład użycia narzędzia Netsh. exe.
+Dostęp można modyfikować za pomocą narzędzia Netsh. exe w systemie Windows Vista w ramach konta administratora z podwyższonym poziomem uprawnień. Poniżej przedstawiono przykład użycia narzędzia Netsh. exe.
 
 ```console
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>

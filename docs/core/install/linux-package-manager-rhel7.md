@@ -4,18 +4,18 @@ description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe w syst
 author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
-ms.openlocfilehash: cc7865727927eda1406da26e64b89325fd5665a4
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: f17a410ccea1ef4dec32de1d80ef6aac889aa6f3
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801960"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74836956"
 ---
 # <a name="rhel-7-package-manager---install-net-core"></a>Menedżer pakietów RHEL 7 — Instalowanie programu .NET Core
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
-W tym artykule opisano, jak za pomocą Menedżera pakietów zainstalować platformę .NET Core w systemie RHEL 7.
+W tym artykule opisano, jak za pomocą Menedżera pakietów zainstalować platformę .NET Core w systemie RHEL 7. Platforma .NET Core 3,1 nie jest jeszcze dostępna dla RHEL 7.
 
 ## <a name="register-your-red-hat-subscription"></a>Zarejestruj swoją subskrypcję Red Hat
 

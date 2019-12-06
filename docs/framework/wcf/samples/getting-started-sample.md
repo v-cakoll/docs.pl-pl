@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 3282daff166a8fe56841a41bfe8bd9dd69f9d4c8
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 59f9edf67c03fb7d8670058eca8ea672a6f64c02
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716945"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837873"
 ---
 # <a name="getting-started-sample"></a>Wprowadzenie — przykład
 
@@ -34,7 +34,7 @@ Usługa opisuje operacje wykonywane w ramach kontraktu usługi, które ujawnia p
 
 Klient zawiera definicję kontraktu usługi i klasy proxy w celu uzyskania dostępu do usługi. Kod serwera proxy jest generowany na podstawie metadanych usługi przy użyciu [Narzędzia do obsługi metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).
 
-Na [!INCLUDE[wv](../../../../includes/wv-md.md)]usługa jest hostowana w usłudze aktywacji systemu Windows (WAS). Na [!INCLUDE[wxp](../../../../includes/wxp-md.md)] i [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]jest hostowana przez Internet Information Services (IIS) i ASP.NET. Hostowanie usługi w usługach IIS lub zezwala na automatyczne Aktywowanie usługi przy pierwszym dostępie.
+W systemie Windows Vista usługa jest hostowana w usłudze aktywacji systemu Windows (WAS). Na [!INCLUDE[wxp](../../../../includes/wxp-md.md)] i [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]jest hostowana przez Internet Information Services (IIS) i ASP.NET. Hostowanie usługi w usługach IIS lub zezwala na automatyczne Aktywowanie usługi przy pierwszym dostępie.
 
 > [!NOTE]
 > Jeśli wolisz rozpocząć pracę z przykładem, który hostuje usługę w aplikacji konsolowej zamiast usług IIS, [Zobacz przykład samoobsługi.](../../../../docs/framework/wcf/samples/self-host.md)

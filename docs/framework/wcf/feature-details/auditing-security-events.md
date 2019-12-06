@@ -4,57 +4,57 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 4e258da1478c089b01c773581472a2b0fa0c4013
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fec23439236fccb23964c0feb22691a973c787b1
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584982"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838094"
 ---
 # <a name="auditing-security-events"></a>Inspekcja zdarzeń dotyczących zabezpieczeń
-Aplikacje utworzone przy użyciu programu Windows Communication Foundation (WCF) umożliwia rejestrowanie zdarzeń związanych z zabezpieczeniami (Powodzenie, Niepowodzenie lub obie) za pomocą funkcji inspekcji. Zdarzenia są zapisywane w dzienniku zdarzeń systemu Windows i można zbadać za pomocą Podglądu zdarzeń.  
+Aplikacje utworzone za pomocą Windows Communication Foundation (WCF) mogą rejestrować zdarzenia zabezpieczeń (sukces, Niepowodzenie lub oba) przy użyciu funkcji inspekcji. Zdarzenia są zapisywane w dzienniku zdarzeń systemu Windows i można je zbadać przy użyciu Podgląd zdarzeń.  
   
- Inspekcja umożliwia administratorom wykrywanie ataku, który już wystąpił, lub jest w toku. Ponadto inspekcja może pomóc dewelopera do debugowania problemów związanych z zabezpieczeniami. Na przykład jeśli wystąpił błąd podczas konfiguracji autoryzacji lub Sprawdzanie, czy zasady przypadkowo nie zezwala na dostęp do autoryzowanego klienta, deweloper może szybko odnajdywanie i izolowania przyczynę tego błędu, sprawdzając dziennik zdarzeń.  
+ Inspekcja zapewnia administratorowi możliwość wykrywania ataku, który już się zakończył lub w toku. Ponadto inspekcja może pomóc deweloperowi w debugowaniu problemów związanych z zabezpieczeniami. Na przykład jeśli błąd w konfiguracji zasad autoryzacji lub sprawdzania przypadkowo odmówi dostępu autoryzowanemu użytkownikowi, deweloper może szybko wykryć i odizolować przyczynę tego błędu, sprawdzając dziennik zdarzeń.  
   
- Aby uzyskać więcej informacji na temat zabezpieczeń programu WCF zobacz [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). Aby uzyskać więcej informacji na temat programowania WCF, zobacz [programowanie WCF Basic](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ Aby uzyskać więcej informacji na temat zabezpieczeń WCF, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). Aby uzyskać więcej informacji na temat programowania WCF, zobacz [podstawowe programowanie WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
-## <a name="audit-level-and-behavior"></a>Poziom inspekcji i zachowania  
+## <a name="audit-level-and-behavior"></a>Poziom inspekcji i zachowanie  
  Istnieją dwa poziomy inspekcji zabezpieczeń:  
   
 - Poziom autoryzacji usługi, w którym obiekt wywołujący jest autoryzowany.  
   
-- Poziom komunikatu, w którym WCF sprawdza poprawność wiadomości, a obiekt wywołujący uwierzytelnia.  
+- Poziom komunikatu, w którym usługa WCF sprawdza poprawność komunikatów i uwierzytelnia obiekt wywołujący.  
   
- Możesz sprawdzić zarówno inspekcji poziomy powodzenie lub niepowodzenie, który jest znany jako *inspekcji zachowanie*.  
+ Można sprawdzić zarówno poziomy inspekcji, jak i błędy, które są znane jako *zachowanie inspekcji*.  
   
 ## <a name="audit-log-location"></a>Lokalizacja dziennika inspekcji  
- Po określeniu poziomu inspekcji i zachowanie użytkownika (lub administratora) można określić lokalizację dziennika inspekcji. Dostępne są następujące trzy opcje: Domyślny, aplikacji i zabezpieczeń. Podczas określania domyślny dziennik rzeczywisty zależy od używasz od systemu i tego, czy system obsługuje zapisu w dzienniku zabezpieczeń. Aby uzyskać więcej informacji zobacz sekcję "System operacyjny" w dalszej części tego tematu.  
+ Po określeniu poziomu inspekcji i zachowania, użytkownik (lub administrator) może określić lokalizację dziennika inspekcji. Dostępne są trzy opcje: domyślne, aplikacja i zabezpieczenia. Po określeniu wartości domyślnej rzeczywisty dziennik zależy od używanego systemu i od tego, czy system obsługuje zapisywanie w dzienniku zabezpieczeń. Aby uzyskać więcej informacji, zobacz sekcję "system operacyjny" w dalszej części tego tematu.  
   
- Aby zapisać w dzienniku zabezpieczeń wymaga `SeAuditPrivilege`. Domyślnie tylko konta System lokalny i Usługa sieciowa mają to uprawnienie. Aby zarządzać funkcji dziennika zabezpieczeń `read` i `delete` wymaga `SeSecurityPrivilege`. Domyślnie tylko administratorzy mają to uprawnienie.  
+ Aby można było zapisać w dzienniku zabezpieczeń, wymagany jest `SeAuditPrivilege`. Domyślnie tylko konta systemu lokalnego i usługi sieciowej mają to uprawnienie. Zarządzanie funkcjami dziennika zabezpieczeń `read` i `delete` wymaga `SeSecurityPrivilege`. Domyślnie tylko Administratorzy mają to uprawnienie.  
   
- Z kolei uwierzytelnionych użytkowników może odczytywać i zapisywać w dzienniku aplikacji. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] zapisy inspekcji zdarzenia w dzienniku aplikacji domyślnie. Dziennik może również zawierać informacje osobiste, który jest widoczny dla wszystkich uwierzytelnionych użytkowników.  
+ Z drugiej strony uwierzytelnieni użytkownicy mogą odczytywać i zapisywać dane w dzienniku aplikacji. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] domyślnie zapisuje zdarzenia inspekcji w dzienniku aplikacji. Dziennik może również zawierać informacje osobiste, które są widoczne dla wszystkich uwierzytelnionych użytkowników.  
   
-## <a name="suppressing-audit-failures"></a>Pomijanie Inspekcja niepowodzeń  
- Inną opcją podczas inspekcji jest, czy pominąć jakiekolwiek niepowodzenie inspekcji. Domyślnie Niepowodzenie inspekcji nie ma wpływu na aplikację. Jeśli jest to wymagane, jednak można ustawić opcję `false`, która powoduje zgłoszenie wyjątku.  
+## <a name="suppressing-audit-failures"></a>Pomijanie błędów inspekcji  
+ Inna opcja podczas inspekcji wskazuje, czy pomijać błędy inspekcji. Domyślnie Niepowodzenie inspekcji nie ma wpływu na aplikację. Jeśli jednak jest to wymagane, można ustawić opcję na `false`, co spowoduje zgłoszenie wyjątku.  
   
 ## <a name="programming-auditing"></a>Inspekcja programowania  
- Zachowanie inspekcji można określić programowo lub za pośrednictwem konfiguracji.  
+ Możesz określić zachowanie inspekcji programowo lub za pomocą konfiguracji.  
   
-### <a name="auditing-classes"></a>Inspekcja klas  
- W poniższej tabeli opisano klasy i właściwości używanych do programów zachowania inspekcji.  
+### <a name="auditing-classes"></a>Klasy inspekcji  
+ W poniższej tabeli opisano klasy i właściwości używane do programowania zachowań inspekcji.  
   
-|Class|Opis|  
+|Klasa|Opis|  
 |-----------|-----------------|  
-|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>|Umożliwia ustawianie opcji inspekcji jako zachowanie usługi.|  
-|<xref:System.ServiceModel.AuditLogLocation>|Wyliczenie, aby określić, zaloguj się do zapisu. Możliwe wartości to domyślne, aplikacji i zabezpieczeń. Po wybraniu domyślnego, system operacyjny Określa lokalizację dziennika rzeczywistych. Zobacz sekcję "Wybór dziennik zdarzeń aplikacji lub zabezpieczeń" w dalszej części tego tematu.|  
-|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A>|Określa, jakie typy zdarzeń uwierzytelniania wiadomości są poddawane inspekcji na poziomie komunikatu. Dostępne są następujące mechanizmy `None`, `Failure`, `Success`, i `SuccessOrFailure`.|  
-|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|Określa, jakie typy zdarzeń autoryzacji usługi są poddawane inspekcji na poziomie usługi. Dostępne są następujące mechanizmy `None`, `Failure`, `Success`, i `SuccessOrFailure`.|  
-|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|Określa, co się dzieje z żądania klienta, w przypadku inspekcji kończy się niepowodzeniem. Na przykład, gdy usługa próbuje zapisać do dziennika zabezpieczeń, ale nie ma `SeAuditPrivilege`. Wartość domyślna `true` wskazuje, że błędy są ignorowane i żądania klienta są przetwarzane w zwykły sposób.|  
+|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>|Włącza ustawienie opcji inspekcji jako zachowania usługi.|  
+|<xref:System.ServiceModel.AuditLogLocation>|Wyliczenie, aby określić, który Dziennik ma zostać zapisany. Możliwe wartości to domyślne, aplikacja i zabezpieczenia. Po wybraniu opcji domyślne system operacyjny określi rzeczywistą lokalizację dziennika. Zobacz sekcję "wybór dziennika zdarzeń aplikacji lub zabezpieczeń" w dalszej części tego tematu.|  
+|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A>|Określa, które typy zdarzeń uwierzytelniania wiadomości są poddawane inspekcji na poziomie wiadomości. Dostępne są następujące opcje `None`, `Failure`, `Success`i `SuccessOrFailure`.|  
+|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|Określa, które typy zdarzeń autoryzacji usługi są poddawane inspekcji na poziomie usługi. Dostępne są następujące opcje `None`, `Failure`, `Success`i `SuccessOrFailure`.|  
+|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|Określa, co się dzieje z żądaniem klienta, gdy Inspekcja nie powiedzie się. Na przykład gdy usługa próbuje zapisać w dzienniku zabezpieczeń, ale nie ma `SeAuditPrivilege`. Wartość domyślna `true` wskazuje, że błędy są ignorowane, a żądanie klienta jest przetwarzane normalnie.|  
   
- Aby uzyskać przykład konfigurowania aplikacji do rejestrowania zdarzeń inspekcji, zobacz [jak: Inspekcja zdarzeń zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ Przykład konfigurowania aplikacji do rejestrowania zdarzeń inspekcji można znaleźć w temacie [How to: Audit Events Security](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ### <a name="configuration"></a>Konfiguracja  
- Można również użyć konfiguracji określające zachowanie inspekcji, dodając [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) w obszarze [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md). Należy dodać element pod [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) jak pokazano w poniższym kodzie.  
+ Można również użyć opcji konfiguracja, aby określić zachowanie inspekcji poprzez dodanie [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) pod [> zachowania\<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md). Należy dodać element pod [\<zachowaniem >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) , jak pokazano w poniższym kodzie.  
   
 ```xml  
 <configuration>  
@@ -73,30 +73,30 @@ Aplikacje utworzone przy użyciu programu Windows Communication Foundation (WCF)
 </configuration>  
 ```  
   
- Jeśli inspekcja jest włączona i `auditLogLocation` nie określony, domyślna nazwa dziennika to "Zabezpieczenia" Dziennik platformy obsługi zapisu w dzienniku zabezpieczeń; w przeciwnym razie jest dziennik "Aplikacji". Tylko [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wv](../../../../includes/wv-md.md)] systemy operacyjne obsługują zapisywanie w dzienniku zabezpieczeń. Aby uzyskać więcej informacji zobacz sekcję "System operacyjny" w dalszej części tego tematu.  
+ Jeśli inspekcja jest włączona i nie określono `auditLogLocation`, domyślną nazwą dziennika jest dziennik "zabezpieczenia" dla platformy obsługującej zapisywanie w dzienniku zabezpieczeń; w przeciwnym razie jest to dziennik "aplikacja". Tylko [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i systemy operacyjne Windows Vista obsługują zapisywanie w dzienniku zabezpieczeń. Aby uzyskać więcej informacji, zobacz sekcję "system operacyjny" w dalszej części tego tematu.  
   
 ## <a name="security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
- Jeśli złośliwy użytkownik wie, że inspekcja jest włączona, że atakujący może wysłać nieprawidłowe komunikaty, które powodują wpisy inspekcji są zapisywane. Jeśli wprowadzono w dzienniku inspekcji w ten sposób, inspekcji systemu nie powiedzie się. Aby rozwiązać ten problem, należy ustawić <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> właściwość `true` i używać właściwości podglądu zdarzeń w celu sterowania zachowaniem inspekcji. Aby uzyskać więcej informacji, zobacz artykuł Microsoft Support wyświetlanie i zarządzanie dziennikami zdarzeń za pomocą Podglądu zdarzeń w Windows XP dostępne pod adresem [sposobu wyświetlania i zarządzania dziennikami zdarzeń w Podglądzie zdarzeń w Windows XP](https://go.microsoft.com/fwlink/?LinkId=89150).  
+ Jeśli złośliwy użytkownik wie, że inspekcja jest włączona, osoba atakująca może wysłać nieprawidłowe komunikaty, które powodują zapisanie wpisów inspekcji. Jeśli dziennik inspekcji zostanie wypełniony w ten sposób, system inspekcji zakończy się niepowodzeniem. Aby rozwiązać ten problem, ustaw właściwość <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> na `true` i Użyj właściwości Podgląd zdarzeń, aby kontrolować zachowanie inspekcji. Aby uzyskać więcej informacji, zobacz artykuł pomoc techniczna firmy Microsoft dotyczący wyświetlania dzienników zdarzeń i zarządzania nimi za pomocą Podgląd zdarzeń w systemie Windows XP, które są dostępne na stronie [jak wyświetlać dzienniki zdarzeń i zarządzać nimi w Podgląd zdarzeń w systemie Windows XP](https://go.microsoft.com/fwlink/?LinkId=89150).  
   
- Przeprowadź inspekcję zdarzeń, które są zapisywane w dzienniku aplikacji na [!INCLUDE[wxp](../../../../includes/wxp-md.md)] są widoczne dla każdego uwierzytelnionego użytkownika.  
+ Zdarzenia inspekcji, które są zapisywane w dzienniku aplikacji na [!INCLUDE[wxp](../../../../includes/wxp-md.md)] są widoczne dla każdego uwierzytelnionego użytkownika.  
   
-## <a name="choosing-between-application-and-security-event-logs"></a>Wybieranie między aplikacją i dzienniki zdarzeń zabezpieczeń  
- Poniższe tabele zawierają informacje ułatwiające wybranie, czy do zalogowania się do aplikacji lub w dzienniku zdarzeń zabezpieczeń.  
+## <a name="choosing-between-application-and-security-event-logs"></a>Wybieranie między aplikacjami a dziennikami zdarzeń zabezpieczeń  
+ Poniższe tabele zawierają informacje ułatwiające określenie, czy należy zalogować się do aplikacji, czy dziennika zdarzeń zabezpieczeń.  
   
 #### <a name="operating-system"></a>System operacyjny  
   
 |System|Dziennik aplikacji|Dziennik zabezpieczeń|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] lub nowszy|Obsługiwane|Nieobsługiwane|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] i [!INCLUDE[wv](../../../../includes/wv-md.md)]|Obsługiwane|Kontekst wątku musi posiadać `SeAuditPrivilege`|  
+|Program [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] lub nowszy|Obsługiwana|Nieobsługiwane|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] i Windows Vista|Obsługiwana|Kontekst wątku musi mieć `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Inne czynniki  
- Oprócz systemu operacyjnego w poniższej tabeli opisano inne ustawienia regulujące włączenie rejestrowania.  
+ Oprócz systemu operacyjnego w poniższej tabeli opisano inne ustawienia kontrolujące włączenie rejestrowania.  
   
 |współczynnik|Dziennik aplikacji|Dziennik zabezpieczeń|  
 |------------|---------------------|------------------|  
-|Zarządzanie zasadami inspekcji|Nie dotyczy.|Wraz z konfiguracji dziennika zabezpieczeń jest także kontrolowane przez zasady zabezpieczeń lokalnych (LSA) urzędu. Kategoria "Przeprowadź inspekcję dostępu do obiektów" musi być także włączona.|  
-|Domyślne środowisko użytkownika|Wszystkim uwierzytelnionym użytkownikom można napisać w dzienniku aplikacji, dzięki czemu nie dodatkowe uprawnienia krok jest niezbędny do procesów aplikacji.|Proces aplikacji (kontekstu) musi mieć `SeAuditPrivilege`.|  
+|Inspekcja zarządzania zasadami|Nie dotyczy.|Wraz z konfiguracją dziennik zabezpieczeń jest również kontrolowany przez zasady urzędu zabezpieczeń lokalnych (LSA). Należy również włączyć kategorię "Przeprowadź inspekcję dostępu do obiektów".|  
+|Środowisko użytkownika domyślnego|Wszyscy uwierzytelnieni użytkownicy mogą zapisywać w dzienniku aplikacji, więc nie jest wymagany żaden dodatkowy krok uprawnień dla procesów aplikacji.|Proces aplikacji (Context) musi mieć `SeAuditPrivilege`.|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -104,7 +104,7 @@ Aplikacje utworzone przy użyciu programu Windows Communication Foundation (WCF)
 - <xref:System.ServiceModel.AuditLogLocation>
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Podstawy programowania przy użyciu programu WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Instrukcje: Inspekcja zdarzeń zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
-- [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
-- [\<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
-- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Instrukcje: inspekcja zdarzeń zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
+- [zachowania \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

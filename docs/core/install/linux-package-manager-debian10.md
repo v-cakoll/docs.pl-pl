@@ -3,13 +3,13 @@ title: Instalowanie programu .NET Core w systemie Debian 10 — Menedżer pakiet
 description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe w systemie Debian 10 przy użyciu Menedżera pakietów.
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
-ms.openlocfilehash: 1280758e7ea9300d83fa01532f3b051c6e1c0c67
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/04/2019
+ms.openlocfilehash: 2c24a02423f5aa8f011cfb4705efb51d97cfaf1e
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74451074"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74836949"
 ---
 # <a name="debian-10-package-manager---install-net-core"></a>Menedżer pakietów Debian 10 — Instalowanie programu .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "74451074"
 
 W tym artykule opisano sposób użycia Menedżera pakietów do zainstalowania programu .NET Core w systemie Debian 10. Jeśli instalujesz środowisko uruchomieniowe, zalecamy zainstalowanie [ASP.NET Core środowiska uruchomieniowego](#install-the-aspnet-core-runtime), ponieważ zawiera on zarówno środowisko uruchomieniowe programu .NET Core, jak i ASP.NET Core.
 
-## <a name="register-microsoft-key-and-feed"></a>Zarejestruj klucz i źródło danych firmy Microsoft
+## <a name="register-microsoft-key-and-feed"></a>Rejestrowanie klucza firmy Microsoft i kanału informacyjnego
 
 Przed zainstalowaniem programu .NET należy:
 
@@ -25,7 +25,7 @@ Przed zainstalowaniem programu .NET należy:
 - Rejestrowanie repozytorium produktu
 - Instalowanie wymaganych zależności
 
-Należy to zrobić tylko raz dla każdego komputera.
+Te operacje należy wykonać tylko jeden raz na każdej maszynie.
 
 Otwórz Terminal i uruchom następujące polecenia.
 
@@ -46,7 +46,7 @@ Zaktualizuj produkty dostępne do zainstalowania, a następnie Zainstaluj zestaw
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install dotnet-sdk-3.0
+sudo apt-get install dotnet-sdk-3.1
 ```
 
 ## <a name="install-the-aspnet-core-runtime"></a>Zainstaluj środowisko uruchomieniowe ASP.NET Core
@@ -57,7 +57,7 @@ Zaktualizuj produkty dostępne do zainstalowania, a następnie zainstaluj środo
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install aspnetcore-runtime-3.0
+sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 ## <a name="install-the-net-core-runtime"></a>Instalowanie środowiska uruchomieniowego platformy .NET Core
@@ -68,7 +68,7 @@ Zaktualizuj produkty dostępne do zainstalowania, a następnie zainstaluj środo
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install dotnet-runtime-3.0
+sudo apt-get install dotnet-runtime-3.1
 ```
 
 ## <a name="how-to-install-other-versions"></a>Jak zainstalować inne wersje

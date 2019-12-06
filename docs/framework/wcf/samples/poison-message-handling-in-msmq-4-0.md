@@ -2,12 +2,12 @@
 title: Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: eb0801a3df0f6f384dd646598e43fe1c20b6eda0
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: d1d23ffd600e7f770b942899ecc3b493b84c605a
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716522"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837821"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0
 Ten przykład pokazuje, jak przeprowadzić obsługę skażonych komunikatów w usłudze. Ten przykład jest oparty na przykładowym [wiązaniem usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . Ten przykład używa `netMsmqBinding`. Usługa to samodzielna aplikacja konsolowa, która umożliwia obserwowanie usługi do odebrania komunikatów znajdujących się w kolejce.
@@ -18,12 +18,12 @@ Ten przykład pokazuje, jak przeprowadzić obsługę skażonych komunikatów w u
 
  Na podstawie wersji usługi MSMQ, usługa msmqbinding obsługuje ograniczone wykrywanie do pełnego wykrywania skażonych komunikatów. Po wykryciu komunikatu jako trującego można go obsłużyć na kilka sposobów. Ponownie na podstawie wersji usługi MSMQ, usługa msmqbinding obsługuje ograniczoną obsługę do pełnej obsługi skażonych komunikatów.
 
- Ten przykład ilustruje ograniczoną liczbę trujących obiektów, które znajdują się na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)] platformę oraz na wszystkich urządzeniach trujących, które znajdują się w [!INCLUDE[wv](../../../../includes/wv-md.md)]. W obu przykładach celem jest przeniesienie skażonego komunikatu z kolejki do innej kolejki, która następnie może być serwisowana przez trującą usługę komunikatów.
+ Ten przykład ilustruje ograniczoną liczbę trujących obiektów, które znajdują się na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)] platformę oraz w pełni skażonych obiektach zapewnianych w systemie Windows Vista. W obu przykładach celem jest przeniesienie skażonego komunikatu z kolejki do innej kolejki, która następnie może być serwisowana przez trującą usługę komunikatów.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>Przykład obsługi trującej usługi MSMQ v 4.0
- W [!INCLUDE[wv](../../../../includes/wv-md.md)]usługa MSMQ udostępnia funkcję podkolejki trującej, która może być używana do przechowywania skażonych komunikatów. W tym przykładzie przedstawiono najlepsze rozwiązania dotyczące postępowania z skażonymi komunikatami przy użyciu [!INCLUDE[wv](../../../../includes/wv-md.md)].
+ W systemie Windows Vista usługa MSMQ udostępnia funkcję podkolejki trującej, która może być używana do przechowywania skażonych komunikatów. Ten przykład ilustruje najlepsze rozwiązanie w zakresie postępowania z skażonymi komunikatami przy użyciu systemu Windows Vista.
 
- Wykrywanie skażonych komunikatów w [!INCLUDE[wv](../../../../includes/wv-md.md)] jest dość zaawansowane. Istnieją 3 właściwości, które pomagają w wykrywaniu. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> to liczba przypadków, w których dany komunikat jest ponownie odczytywany z kolejki i wysyłany do aplikacji w celu przetworzenia. Komunikat jest ponownie odczytywany z kolejki, gdy zostanie przywrócony do kolejki, ponieważ nie można wysłać komunikatu do aplikacji lub aplikacja Wycofuje transakcję w operacji usługi. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> to liczba przenoszonych komunikatów do kolejki ponownych prób. Po osiągnięciu <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> wiadomość zostanie przeniesiona do kolejki ponownych prób. Właściwość <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> jest opóźnieniem, po którym komunikat jest przenoszony z kolejki ponownych prób z powrotem do kolejki głównej. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> zostanie zresetowana do wartości 0. Wiadomość zostanie ponowiona. Jeśli wszystkie próby odczytu komunikatu zakończyły się niepowodzeniem, komunikat jest oznaczony jako trujący.
+ Wykrywanie skażonych komunikatów w systemie Windows Vista jest dość zaawansowane. Istnieją 3 właściwości, które pomagają w wykrywaniu. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> to liczba przypadków, w których dany komunikat jest ponownie odczytywany z kolejki i wysyłany do aplikacji w celu przetworzenia. Komunikat jest ponownie odczytywany z kolejki, gdy zostanie przywrócony do kolejki, ponieważ nie można wysłać komunikatu do aplikacji lub aplikacja Wycofuje transakcję w operacji usługi. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> to liczba przenoszonych komunikatów do kolejki ponownych prób. Po osiągnięciu <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> wiadomość zostanie przeniesiona do kolejki ponownych prób. Właściwość <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> jest opóźnieniem, po którym komunikat jest przenoszony z kolejki ponownych prób z powrotem do kolejki głównej. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> zostanie zresetowana do wartości 0. Wiadomość zostanie ponowiona. Jeśli wszystkie próby odczytu komunikatu zakończyły się niepowodzeniem, komunikat jest oznaczony jako trujący.
 
  Gdy wiadomość zostanie oznaczona jako trująca, komunikat jest rozpatrywany zgodnie z ustawieniami w <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> Wyliczenie. Aby ponownie powtórzyć możliwe wartości:
 
@@ -31,9 +31,9 @@ Ten przykład pokazuje, jak przeprowadzić obsługę skażonych komunikatów w u
 
 - Upuść:, aby usunąć komunikat.
 
-- Przenieś: Aby przenieść komunikat do podkolejki trujących komunikatów. Ta wartość jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Przenieś: Aby przenieść komunikat do podkolejki trujących komunikatów. Ta wartość jest dostępna tylko w systemie Windows Vista.
 
-- Odrzuć: aby odrzucić komunikat, Wyślij komunikat z powrotem do kolejki utraconych wiadomości nadawcy. Ta wartość jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Odrzuć: aby odrzucić komunikat, Wyślij komunikat z powrotem do kolejki utraconych wiadomości nadawcy. Ta wartość jest dostępna tylko w systemie Windows Vista.
 
  Przykład demonstruje użycie `Move` dyspozycji dla trującego komunikatu. `Move` powoduje, że komunikat przejdzie do podkolejki trującej.
 

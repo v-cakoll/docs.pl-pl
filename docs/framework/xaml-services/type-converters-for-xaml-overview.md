@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: b54731cc1aba1a47ed6b11f2bff5c596a53fd4b5
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 65210d8224b145ab23c7bc9ed76997c0892a5f59
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458506"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837262"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Typy konwerterów dla XAML — Omówienie
 Typy konwerterów dostarczają logiki dla składnika zapisywania obiektów, który konwertuje z ciągu znaków XAML na określone obiekty w grafie obiektów. W .NET Framework usługach XAML konwerter typów musi być klasą pochodzącą z <xref:System.ComponentModel.TypeConverter>. Niektóre konwertery obsługują również ścieżkę zapisu XAML i mogą służyć do serializacji obiektu w postaci ciągu w znaczniku serializacji. W tym temacie opisano, jak i kiedy są wywoływane konwertery typów w języku XAML, i przedstawiono porady dotyczące implementacji metod zastąpień <xref:System.ComponentModel.TypeConverter>.  
@@ -60,7 +60,7 @@ Typy konwerterów dostarczają logiki dla składnika zapisywania obiektów, któ
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> i <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> są metodami obsługi, które są używane, gdy usługa wysyła zapytanie do możliwości implementacji <xref:System.ComponentModel.TypeConverter>. Należy zaimplementować te metody, aby zwracać `true` dla przypadków specyficznych dla typów, które są równoważnymi metodami konwersji konwertera. Na potrzeby języka XAML zazwyczaj oznacza to, że typ <xref:System.String>.  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Informacje o kulturze i konwertery typów dla języka XAML  
- Każda implementacja <xref:System.ComponentModel.TypeConverter> może jednoznacznie interpretować, co jest prawidłowym ciągiem dla konwersji, i może również używać lub ignorować opis typu, który jest przesyłany jako parametry. Ważnym zagadnieniem dotyczącym konwersji kultury i języka XAML są następujące: Chociaż użycie lokalizowalnych ciągów jako wartości atrybutów jest obsługiwane przez język XAML, nie można używać tych lokalizowalnych ciągów jako danych wejściowych konwertera typów z określonymi wymaganiami kultury. To ograniczenie wynika z faktu, że konwertery typów dla wartości atrybutów XAML obejmują niekoniecznie stosowane w języku XAML zachowanie w zakresie przetwarzania, które używa `en-US` kulturę. Aby uzyskać więcej informacji na temat przyczyn związanych z projektowaniem tego ograniczenia, zobacz Specyfikacja języka XAML ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) lub [Omówienie globalizacji i lokalizacji platformy WPF](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
+ Każda implementacja <xref:System.ComponentModel.TypeConverter> może jednoznacznie interpretować, co jest prawidłowym ciągiem dla konwersji, i może również używać lub ignorować opis typu, który jest przesyłany jako parametry. Ważnym zagadnieniem dotyczącym konwersji kultury i języka XAML są następujące: Chociaż użycie lokalizowalnych ciągów jako wartości atrybutów jest obsługiwane przez język XAML, nie można używać tych lokalizowalnych ciągów jako danych wejściowych konwertera typów z określonymi wymaganiami kultury. To ograniczenie wynika z faktu, że konwertery typów dla wartości atrybutów XAML obejmują niekoniecznie stosowane w języku XAML zachowanie w zakresie przetwarzania, które używa `en-US` kulturę. Aby uzyskać więcej informacji na temat przyczyn związanych z projektowaniem tego ograniczenia, zobacz Specyfikacja języka XAML ([\[MS-XAML\]](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))) lub [Omówienie globalizacji i lokalizacji platformy WPF](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
   
  Przykładowo, gdy kultura może być problemem, niektóre kultury używają przecinka zamiast kropki jako ogranicznika przecinka dziesiętnego dla liczb w postaci ciągów. To użycie koliduje z zachowaniem wielu istniejących konwerterów typów, które ma używać przecinka jako ogranicznika. Przekazanie kultury przez `xml:lang` w otaczającym XAML nie rozwiąże problemu.  
   

@@ -2,12 +2,12 @@
 title: Obsługa nowych funkcji w programie Workflow Foundation 4.5 w rehostowanym projektancie przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 2b893fede30606789c82a64a19fa368e3fd74c4d
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: bf5c12fe7892bf81fda9714ba02870a9c8ab8b4e
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142067"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837600"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Obsługa nowych funkcji w programie Workflow Foundation 4.5 w rehostowanym projektancie przepływu pracy
 Windows Workflow Foundation (WF) w .NET Framework 4,5 wprowadzono wiele nowych funkcji, w tym kilka ulepszeń środowiska projektanta przepływu pracy. Ten temat zawiera szczegółowe informacje o tych funkcjach, które są obsługiwane w projektancie przeszukanym i które nie są obecnie obsługiwane.
@@ -59,7 +59,7 @@ Windows Workflow Foundation (WF) w .NET Framework 4,5 wprowadzono wiele nowych f
 
  Do kadrowania projektanta przepływu pracy można również użyć środkowego przycisku myszy lub paska spacji.
 
-### <a name="multi-select"></a>Wybór wieloznaczny
+### <a name="multi-select"></a>Wybór wielokrotny
  Jednocześnie można wybrać wiele działań, przeciągając wokół nich prostokąt (gdy tryb panoramowania nie jest włączony) lub przytrzymując klawisz Ctrl i klikając żądane działania po jednym z nich. Ta funkcja jest obsługiwana w projektancie przehostowanym.
 
  W projektancie można również przeciągać i upuszczać wiele opcji, a także korzystać z menu kontekstowego.
@@ -122,7 +122,7 @@ Windows Workflow Foundation (WF) w .NET Framework 4,5 wprowadzono wiele nowych f
  Poza schematem blokowym i modelami programowania sekwencyjnego przepływu pracy ta wersja obejmuje przepływy pracy automatu stanów i usługi przepływu pracy pierwszego kontraktu.  
   
 ### <a name="state-machine-workflows"></a>Przepływy pracy automatu Stanów  
- Przepływy pracy automatu Stanów zostały wprowadzone w ramach .NET Framework 4.0.1 w [ramach aktualizacji platformy Microsoft .NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=215092). Ta aktualizacja zawiera kilka nowych klas i działań, które pozwalają deweloperom tworzyć przepływy pracy automatu Stanów. Te klasy i działania zostały zaktualizowane dla .NET Framework 4,5. Aktualizacje obejmują:  
+ Przepływy pracy automatu Stanów zostały wprowadzone w ramach .NET Framework 4.0.1 w [ramach aktualizacji platformy Microsoft .NET Framework 4](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/). Ta aktualizacja zawiera kilka nowych klas i działań, które pozwalają deweloperom tworzyć przepływy pracy automatu Stanów. Te klasy i działania zostały zaktualizowane dla .NET Framework 4,5. Aktualizacje obejmują:  
   
 1. Możliwość ustawiania punktów przerwania na Stanach  
   

@@ -2,12 +2,12 @@
 title: Programowanie asynchroniczne wF#
 description: Dowiedz F# się, jak zapewniać czystą pomoc techniczną dla asynchroniczności w oparciu o model programowania na poziomie języka pochodzący z podstawowych koncepcji programowania funkcjonalnego.
 ms.date: 12/17/2018
-ms.openlocfilehash: 1ede4a5c1e26df271ac94f9b2c216ac84fb38f59
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 583b0f5154e6ad8875b21503cfb78f70a069ff7b
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395788"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837106"
 ---
 # <a name="async-programming-in-f"></a>Programowanie asynchroniczne w języku F\#
 
@@ -39,7 +39,7 @@ W praktyce, asynchroniczne obliczenia w programie F# są zaplanowane do wykonani
 
 Głównym wnioskiemem jest to, że obliczenia asynchroniczne są niezależne od przepływu głównego programu. Chociaż istnieją pewne gwarancje dotyczące tego, kiedy lub jak są wykonywane asynchroniczne obliczenia, istnieją niektóre podejścia do organizowania i planowania. Pozostała część tego artykułu eksploruje podstawowe koncepcje dotyczące F# asynchroniczności oraz sposób używania typów, funkcji i wyrażeń wbudowanych w. F#
 
-## <a name="core-concepts"></a>Podstawowe pojęcia
+## <a name="core-concepts"></a>Podstawowe koncepcje
 
 W F#programie programowanie asynchroniczne zawiera trzy podstawowe koncepcje:
 
@@ -127,6 +127,7 @@ let main argv =
     argv
     |> Array.map printTotalFileBytes
     |> Async.Sequential
+    |> Async.Ignore
     |> Async.RunSynchronously
     |> ignore
 ```
@@ -143,13 +144,13 @@ Ponieważ F# asynchroniczne obliczenia są _specyfikacją_ pracy, a nie reprezen
 
 Uruchamia obliczenie elementu podrzędnego w ramach obliczeń asynchronicznych. Umożliwia to współbieżne wykonywanie wielu asynchronicznych obliczeń. Podrzędne obliczenie udostępnia token anulowania z obliczeniami nadrzędnymi. Jeśli Obliczanie nadrzędne zostanie anulowane, obliczenia podrzędne również zostaną anulowane.
 
-Podpisane
+Podpis:
 
 ```fsharp
 computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
 ```
 
-Kiedy używać:
+Kiedy stosować:
 
 - Jeśli chcesz wykonać wiele asynchronicznych obliczeń jednocześnie, a nie jeden na raz, ale nie zaplanowano ich równolegle.
 - Gdy chcesz powiązać okres istnienia obliczeń podrzędnych z tym, że jest to obliczenie nadrzędne.
@@ -161,15 +162,15 @@ Co należy obserwować:
 
 ### <a name="asyncstartimmediate"></a>Async. StartImmediate —
 
-Uruchamia asynchroniczne obliczenie, rozpoczynając od razu od bieżącego wątku systemu operacyjnego. Jest to przydatne, jeśli trzeba zaktualizować coś w wątku wywołującym podczas obliczania. Na przykład jeśli asynchroniczne obliczenie musi zaktualizować interfejs użytkownika (na przykład zaktualizować pasek postępu), należy użyć `Async.StartImmediate`.
+Uruchamia asynchroniczne obliczenie, począwszy od razu od bieżącego wątku systemu operacyjnego. Jest to przydatne, jeśli trzeba zaktualizować coś w wątku wywołującym podczas obliczania. Na przykład jeśli asynchroniczne obliczenie musi zaktualizować interfejs użytkownika (na przykład zaktualizować pasek postępu), należy użyć `Async.StartImmediate`.
 
-Podpisane
+Podpis:
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 ```
 
-Kiedy używać:
+Kiedy stosować:
 
 - Gdy trzeba zaktualizować coś w wątku wywołującym w środku obliczeń asynchronicznych.
 
@@ -181,13 +182,13 @@ Co należy obserwować:
 
 Wykonuje obliczenia w puli wątków. Zwraca <xref:System.Threading.Tasks.Task%601>, która zostanie zakończona w odpowiadającym stanie po zakończeniu obliczeń (tworzy wynik, zgłasza wyjątek lub jest anulowany). Jeśli nie podano tokenu anulowania, zostanie użyty domyślny token anulowania.
 
-Podpisane
+Podpis:
 
 ```fsharp
 computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
 ```
 
-Kiedy używać:
+Kiedy stosować:
 
 - Gdy musisz wywołać interfejs API platformy .NET, który oczekuje <xref:System.Threading.Tasks.Task%601> do reprezentowania wyniku asynchronicznego obliczenia.
 
@@ -199,7 +200,7 @@ Co należy obserwować:
 
 Planuje sekwencję asynchronicznych obliczeń, które mają być wykonywane równolegle. Stopień równoległości można opcjonalnie dostrajać/ograniczyć, określając parametr `maxDegreesOfParallelism`.
 
-Podpisane
+Podpis:
 
 ```fsharp
 computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
@@ -219,7 +220,7 @@ Co należy obserwować:
 
 Planuje sekwencję asynchronicznych obliczeń do wykonania w kolejności, w jakiej zostały przesłane. Pierwsze obliczenie zostanie wykonane, następnie następne i tak dalej. Żadne obliczenia nie będą wykonywane równolegle.
 
-Podpisane
+Podpis:
 
 ```fsharp
 computations: seq<Async<'T>> -> Async<'T[]>
@@ -238,13 +239,13 @@ Co należy obserwować:
 
 Zwraca asynchroniczne obliczenie, które czeka na zakończenie danego <xref:System.Threading.Tasks.Task%601> i zwraca jego wynik jako `Async<'T>`
 
-Podpisane
+Podpis:
 
 ```fsharp
 task: Task<'T>  -> Async<'T>
 ```
 
-Kiedy używać:
+Kiedy stosować:
 
 - Gdy korzystasz z interfejsu API platformy .NET, który zwraca <xref:System.Threading.Tasks.Task%601> w ramach F# obliczeń asynchronicznych.
 
@@ -256,13 +257,13 @@ Co należy obserwować:
 
 Tworzy asynchroniczne obliczenie, które wykonuje daną `Async<'T>`, zwracając `Async<Choice<'T, exn>>`. W przypadku pomyślnego zapełnienia `Async<'T>` zostanie zwrócona `Choice1Of2` z wartością wynikową. Jeśli przed zakończeniem zostanie zgłoszony wyjątek, zostanie zwrócony `Choice2of2` z podniesionym wyjątek. Jeśli jest używany w przypadku obliczeń asynchronicznych, które są tworzone w wielu obliczeniach, a jedno z tych obliczeń zgłasza wyjątek, obliczenia obejmujące obejmie zostaną całkowicie zatrzymane.
 
-Podpisane
+Podpis:
 
 ```fsharp
 computation: Async<'T> -> Async<Choice<'T, exn>>
 ```
 
-Kiedy używać:
+Kiedy stosować:
 
 - Gdy wykonujesz asynchroniczne zadanie, które może zakończyć się niepowodzeniem z wyjątkiem i chcesz obsłużyć ten wyjątek w obiekcie wywołującym.
 
@@ -272,15 +273,15 @@ Co należy obserwować:
 
 ### <a name="asyncignore"></a>Async. Ignore
 
-Tworzy asynchroniczne obliczenie, które uruchamia danego obliczenia i ignoruje jego wynik.
+Tworzy asynchroniczne obliczenie, które uruchamia dane obliczenie i ignoruje wynik.
 
-Podpisane
+Podpis:
 
 ```fsharp
 computation: Async<'T> -> Async<unit>
 ```
 
-Kiedy używać:
+Kiedy stosować:
 
 - W przypadku obliczeń asynchronicznych, których wynik nie jest wymagany. Jest to analogiczne do kodu `ignore` dla kodu nieasynchronicznego.
 
@@ -292,7 +293,7 @@ Co należy obserwować:
 
 Uruchamia asynchroniczne obliczenie i czeka na wynik wątku wywołującego. To wywołanie blokuje.
 
-Podpisane
+Podpis:
 
 ```fsharp
 computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
@@ -311,7 +312,7 @@ Co należy obserwować:
 
 Uruchamia asynchroniczne obliczenie w puli wątków, która zwraca `unit`. Nie czeka na jego wynik. Zagnieżdżone obliczenia rozpoczęte dla `Async.Start` są uruchamiane całkowicie niezależnie od obliczeń nadrzędnych, które je wywołały. Ich okres istnienia nie jest powiązany z żadnym z obliczeń nadrzędnych. Jeśli Obliczanie nadrzędne zostało anulowane, nie są anulowane żadne obliczenia podrzędne.
 
-Podpisane
+Podpis:
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit

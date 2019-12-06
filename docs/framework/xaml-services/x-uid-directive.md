@@ -7,15 +7,15 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: c8f0580c987b87193b5b6a38559043e50fc7cb89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32cfd9ab0cf6037c731b619e81a7504ac92d5fb9
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938843"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837184"
 ---
 # <a name="xuid-directive"></a>x:Uid — dyrektywa
-Zawiera unikatowy identyfikator dla elementów kodu znaczników. W wielu scenariuszach ten unikatowy identyfikator jest używany przez XAML lokalizacji procesów i narzędzi.  
+Zapewnia unikatowy identyfikator dla elementów znaczników. W wielu scenariuszach Ten unikatowy identyfikator jest używany przez procesy i narzędzia lokalizacji XAML.  
   
 ## <a name="xaml-attribute-usage"></a>Użycie atrybutu języka XAML  
   
@@ -27,19 +27,19 @@ Zawiera unikatowy identyfikator dla elementów kodu znaczników. W wielu scenari
   
 |||  
 |-|-|  
-|`identifier`|Utworzony ręcznie lub automatycznie wygenerowany ciąg powinien być unikatowy w pliku, gdy jest on interpretowany przez `x:Uid` konsumenta.|  
+|`identifier`|Ręcznie utworzony lub generowany automatycznie ciąg, który powinien być unikatowy w pliku, gdy jest interpretowany przez konsumenta `x:Uid`.|  
   
 ## <a name="remarks"></a>Uwagi  
- W [MS-XAML] `x:Uid` jest zdefiniowany jako dyrektywy. Aby uzyskać więcej informacji, zobacz [ \[MS-XAML\] sekcji 5.3.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ W [MS-XAML], `x:Uid` jest zdefiniowany jako dyrektywa. Aby uzyskać więcej informacji, zobacz [sekcję\[MS-XAML\] sekcji 5.3.6](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
- `x:Uid` jest odrębny z `x:Name` zarówno z powodu określonego scenariusza lokalizacji XAML i tak, aby identyfikatory, które są używane dla lokalizacji ma żadnych zależności w konsekwencji modelu programowania `x:Name`. Ponadto `x:Name` podlega XAML namescope; jednak `x:Uid` nie podlega XAML dowolnego języka zdefiniowanego koncepcji wymuszania unikatowości. Procesory XAML szeroko (procesorów, które nie są częścią proces lokalizacji) najprawdopodobniej nie wymusza unikatowości `x:Uid` wartości. Czy odpowiedzialność jest koncepcyjnie na inicjatorem wartości. Oczekuje unikatowość `x:Uid` wartości w jednym źródle XAML jest uzasadnione dla konsumentów wartości, takich jak procesy globalizacji dedykowanych lub narzędzia. Modelu unikatowości typowy jest fakt, że `x:Uid` wartości są unikatowe w obrębie plik zakodowane w formacie XML, który reprezentuje XAML.  
+ `x:Uid` jest dyskretny od `x:Name` obu z powodu podanego scenariusza lokalizacji XAML i dlatego, że identyfikatory, które są używane dla lokalizacji, nie mają żadnych zależności od wpływu na model programowania `x:Name`. Ponadto `x:Name` podlega namescope języka XAML; Jednakże `x:Uid` nie podlega żadnym określonym w języku XAML pojęciem wymuszania unikatowości. Procesory XAML w szerokim sensie (procesory, które nie są częścią procesu lokalizacji) nie powinny wymuszać unikatowości wartości `x:Uid`. Ta odpowiedzialność jest koncepcyjnie zależna od nadawcy wartości. Oczekiwana jest unikatowość wartości `x:Uid` w ramach jednego źródła kodu XAML, które są odpowiednie dla konsumentów wartości, takich jak dedykowane procesy globalizacji lub narzędzia. Typowym modelem unikatowym jest to, że wartości `x:Uid` są unikatowe w ramach pliku zakodowanego w formacie XML, który reprezentuje kod XAML.  
   
- Narzędzia, które dysponują wiedzą na temat znaczące określonego schematu XAML można zdecydowali się zastosować `x:Uid` tylko w przypadku wartości true możliwych do zlokalizowania ciągi zamiast we wszystkich przypadkach, w którym występuje wartości ciągu tekstowego w znacznikach.  
+ Narzędzia, które mają znaczącą wiedzę o określonym schemacie XAML, mogą zastosować `x:Uid` tylko dla ważnych lokalizowalnych ciągów, a nie dla wszystkich przypadków, w których napotkano wartość ciągu tekstowego w znaczniku.  
   
- Struktury, można określić określonej właściwości w modelu obiektu jako alias dla `x:Uid` , stosując atrybut <xref:System.Windows.Markup.UidPropertyAttribute> do definiowania typu. Jeśli platforma określa danej właściwości, nie jest prawidłową podać obydwie wartości `x:Uid` i elementów członkowskich alias dla tego samego obiektu. Jeśli oba `x:Uid` i podano składowej aliasu, interfejs API programu .NET Framework XAML usług zwykle zgłasza <xref:System.Xaml.XamlDuplicateMemberException> dla tej sprawy.  
+ Struktury mogą określać określoną właściwość w swoim modelu obiektów, aby była aliasem dla `x:Uid` przez zastosowanie atrybutu <xref:System.Windows.Markup.UidPropertyAttribute> do typu definiującego. Jeśli struktura określa określoną właściwość, nie jest ona prawidłowa do określenia zarówno `x:Uid`, jak i aliasu elementu członkowskiego tego samego obiektu. Jeśli określono zarówno `x:Uid`, jak i element członkowski z aliasem, .NET Framework interfejs API usług XAML zwykle zgłasza <xref:System.Xaml.XamlDuplicateMemberException> w tym przypadku.  
   
-## <a name="wpf-usage-notes"></a>Uwagi dotyczące użytkowania WPF  
- Aby uzyskać więcej informacji o roli `x:Uid` w procesie lokalizacji WPF i formularz BAML XAML, zobacz [globalizacja dla WPF](../wpf/advanced/globalization-for-wpf.md) lub <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+## <a name="wpf-usage-notes"></a>Uwagi dotyczące użycia WPF  
+ Aby uzyskać więcej informacji na temat roli `x:Uid` w procesie lokalizowania WPF i w formie BAML języka XAML, zobacz [globalizacja dla WPF](../wpf/advanced/globalization-for-wpf.md) lub <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -3,14 +3,14 @@ title: .NET — Zapraszamy!
 description: Wprowadzenie do rodziny .NET Technologies.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/23/2019
+ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: ccff6256b56daccdf8105fd5ad31e81bb892c2a8
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 15daaafed02ab1132a3c82c12efa6fad0e0a6db2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552951"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838133"
 ---
 # <a name="welcome-to-net"></a>.NET — Zapraszamy!
 
@@ -22,16 +22,16 @@ Twórz wiele typów aplikacji za pomocą platformy .NET, takich jak chmura, IoT 
 
 Aby uzyskać informacje na temat platformy .NET, zapoznaj się z następującymi blogami:
 
-- [Blog platformy .NET](https://devblogs.microsoft.com/dotnet/)
+- [.NET Blog](https://devblogs.microsoft.com/dotnet/)
 - [Blog ASP.NET](https://devblogs.microsoft.com/aspnet/)
 - [Blog programu Visual Studio](https://devblogs.microsoft.com/visualstudio/)
 - [Zespół Visual Basic](https://devblogs.microsoft.com/vbteam/)
 
 Należy również przestrzegać najnowszych zdarzeń platformy .NET:
 
+- [Zapłon firmy Microsoft](https://www.microsoft.com/ignite)
 - [Kompilacja firmy Microsoft](https://www.microsoft.com/build)
 - [.NET conf](https://www.dotnetconf.net/)
-- [Microsoft Connect ()](https://www.microsoft.com/connectevent)
 
 Informacje o najnowszych funkcjach dodanych do implementacji platformy .NET i obsługiwanych języków można znaleźć w następujących artykułach:
 
@@ -49,7 +49,7 @@ Ta dokumentacja obejmuje szeroki zakres platformy .NET dla różnych platform i 
 - [.NET framework — przewodnik](framework/index.md)
 - [Przewodnik dla języka C#](csharp/index.yml)
 - [Podręcznik języka F#](fsharp/index.yml)
-- [Przewodnik po Visual Basic](visual-basic/index.md)
+- [Przewodnik po Visual Basic](visual-basic/index.yml)
 - [Przewodnik po strukturze ML.NET](machine-learning/index.yml)
 - [.NET dla Apache Spark](spark/index.yml)
 - [Architektura aplikacji .NET](architecture/index.yml)
@@ -67,11 +67,10 @@ Eksploruj wideo w sieci Web, na urządzeniach przenośnych C#, komputerach stacj
 Ta dokumentacja jest całkowicie [Open Source](https://github.com/dotnet/docs). Możesz współtworzyć w dowolny sposób, od tworzenia problemów związanych z pisaniem dokumentacji. Ponadto wiele z nich jest również środowiskiem Open Source. Na poniższej liście przedstawiono główne repozytoria usługi .NET GitHub:
 
 - [Strona główna platformy .NET Core](https://github.com/dotnet/core)
-- [Biblioteki .NET](https://github.com/dotnet/corefx)
-- [Środowisko uruchomieniowe platformy .NET Core](https://github.com/dotnet/coreclr)
-- [.NET Core CLI](https://github.com/dotnet/cli)
+- [Środowisko uruchomieniowe platformy .NET Core](https://github.com/dotnet/runtime)
+- [Zestaw SDK dla platformy .NET Core](https://github.com/dotnet/sdk)
 - [Roslyn (C# i Visual Basic) środowisko kompilatora i narzędzia IDE](https://github.com/dotnet/roslyn)
-- [F#Narzędzia kompilatora i IDE](https://github.com/microsoft/visualfsharp)
+- [F#Narzędzia kompilatora i IDE](https://github.com/dotnet/fsharp)
 - [Windows Forms](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 

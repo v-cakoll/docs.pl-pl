@@ -4,20 +4,20 @@ description: W tym samouczku wyjaśniono sposób organizowania i testowania proj
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: d93ba5f41f1e7b5818790d0853bd219466b317ee
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 38017a788a8e43601f49a98230cb4d96e0390061
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117373"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884218"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core
 
-Ten samouczek rozpoczyna [się od rozpoczęcia pracy z platformą .NET Core w systemie Windows/Linux/macOS przy użyciu wiersza polecenia, dzięki](using-with-xplat-cli.md)czemu nie utworzysz prostej aplikacji konsolowej do tworzenia zaawansowanych i dobrze zorganizowanych aplikacji. Po podaniu, jak używać folderów do organizowania kodu, w tym samouczku pokazano, jak zwiększyć aplikację konsolową za pomocą platformy testowania [xUnit](https://xunit.github.io/) .
+Ten samouczek rozpoczyna [się od rozpoczęcia pracy z platformą .NET Core w systemie Windows/Linux/macOS przy użyciu wiersza polecenia, dzięki](cli-create-console-app.md)czemu nie utworzysz prostej aplikacji konsolowej do tworzenia zaawansowanych i dobrze zorganizowanych aplikacji. Po podaniu, jak używać folderów do organizowania kodu, w tym samouczku pokazano, jak zwiększyć aplikację konsolową za pomocą platformy testowania [xUnit](https://xunit.github.io/) .
 
 ## <a name="using-folders-to-organize-code"></a>Organizowanie kodu przy użyciu folderów
 
-Jeśli chcesz wprowadzić nowe typy do aplikacji konsoli, możesz to zrobić przez dodanie plików zawierających typy do aplikacji. Na przykład w przypadku dodawania plików zawierających `AccountInformation` i `MonthlyReportRecords` typów do projektu Struktura pliku projektu jest płaska i łatwa do przechodzenia:
+Jeśli chcesz wprowadzić nowe typy do aplikacji konsoli, możesz to zrobić przez dodanie plików zawierających typy do aplikacji. Na przykład jeśli dodasz pliki zawierające `AccountInformation` i typy `MonthlyReportRecords` do projektu, struktura pliku projektu jest płaska i łatwa do przechodzenia:
 
 ```
 /MyProject
@@ -48,7 +48,7 @@ Projekty, które logicznie grupują pliki do folderów, są łatwe do przechodze
 
 Poniższe kroki można wykonać przy użyciu [przykładowej NewTypes zwierząt domowych](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) lub utworzyć własne pliki i foldery. Typy są logicznie zorganizowane ze strukturą folderów, która umożliwia dodanie więcej typów później, a testy są również logicznie umieszczane w folderach, co pozwala na dodanie dalszych testów później.
 
-Przykład zawiera dwa typy `Dog` i `Cat`i ma implementację wspólnego interfejsu, `IPet`. W przypadku projektu celem jest zorganizowanie typów związanych z PET w folderze *zwierząt domowych.* `NewTypes` Jeśli później zostanie dodany inny zestaw typów, *WildAnimals* na przykład, są umieszczane w folderze *NewTypes* obok folderu *zwierzęta* . Folder *WildAnimals* może zawierać typy dla zwierząt, które nie są zwierzętami, `Squirrel` takimi jak i `Rabbit` . W ten sposób, gdy są dodawane typy, projekt pozostaje dobrze zorganizowany.
+Przykład zawiera dwa typy, `Dog` i `Cat`i ma implementację wspólnego interfejsu, `IPet`. W przypadku projektu `NewTypes` celem jest zorganizowanie typów związanych z PET w folderze *zwierząt domowych* . Jeśli później zostanie dodany inny zestaw typów, *WildAnimals* na przykład, są umieszczane w folderze *NewTypes* obok folderu *zwierzęta* . Folder *WildAnimals* może zawierać typy dla zwierząt, które nie są zwierzętami, takimi jak `Squirrel` i `Rabbit`. W ten sposób, gdy są dodawane typy, projekt pozostaje dobrze zorganizowany.
 
 Utwórz następującą strukturę folderów z wyróżnioną zawartością pliku:
 
@@ -97,21 +97,21 @@ Woof!
 Meow!
 ```
 
-Ćwiczenie opcjonalne: Aby dodać nowy typ PET, taki jak `Bird`, można rozszerzyć ten projekt. Nadaj metodu`TalkToOwner`ptakowi wartośćOwner.`Tweet!` Uruchom aplikację ponownie. Dane wyjściowe będą zawierać`Tweet!`
+Ćwiczenie opcjonalne: można dodać nowy typ PET, taki jak `Bird`, rozszerzając ten projekt. Nadaj metodu `TalkToOwner` ptakowi `Tweet!` do właściciela. Ponownie uruchom aplikację. Dane wyjściowe będą zawierać `Tweet!`
 
 ### <a name="testing-the-sample"></a>Testowanie przykładu
 
-`NewTypes` Projekt jest na miejscu i został zorganizowany przez utrzymywanie typów związanych ze zwierzętami ze zwierząt domowych w folderze. Następnie utwórz projekt testowy i zacznij pisać testy za pomocą platformy testów [xUnit](https://xunit.github.io/) . Testy jednostkowe umożliwiają automatyczne sprawdzanie zachowania typów PET w celu potwierdzenia, że działają prawidłowo.
+Projekt `NewTypes` jest na miejscu i został zorganizowany przez utrzymywanie typów związanych ze zwierzętami ze zwierząt domowych w folderze. Następnie utwórz projekt testowy i zacznij pisać testy za pomocą platformy testów [xUnit](https://xunit.github.io/) . Testy jednostkowe umożliwiają automatyczne sprawdzanie zachowania typów PET w celu potwierdzenia, że działają prawidłowo.
 
-Przejdź z powrotem do folderu *src* i Utwórz folder *testowy* z folderem *NewTypesTests* w nim. W wierszu polecenia w folderze *NewTypesTests* wykonaj `dotnet new xunit`polecenie. Spowoduje to utworzenie dwóch plików: *NewTypesTests. csproj* i *UnitTest1.cs*.
+Przejdź z powrotem do folderu *src* i Utwórz folder *testowy* z folderem *NewTypesTests* w nim. W wierszu polecenia w folderze *NewTypesTests* należy wykonać `dotnet new xunit`. Spowoduje to utworzenie dwóch plików: *NewTypesTests. csproj* i *UnitTest1.cs*.
 
-Projekt testowy nie może obecnie testować typów w `NewTypes` i wymaga odwołania projektu `NewTypes` do projektu. Aby dodać odwołanie do projektu, użyj [`dotnet add reference`](../tools/dotnet-add-reference.md) polecenia:
+Projekt testowy nie może obecnie testować typów w `NewTypes` i wymaga odwołania projektu do projektu `NewTypes`. Aby dodać odwołanie do projektu, użyj [`dotnet add reference`](../tools/dotnet-add-reference.md) polecenia:
 
 ```dotnetcli
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 
-Lub można także ręcznie dodać odwołanie do projektu przez dodanie `<ItemGroup>` węzła do pliku *NewTypesTests. csproj* :
+Lub można także ręcznie dodać odwołanie do projektu, dodając węzeł `<ItemGroup>` do pliku *NewTypesTests. csproj* :
 
 ```xml
 <ItemGroup>
@@ -125,10 +125,10 @@ Lub można także ręcznie dodać odwołanie do projektu przez dodanie `<ItemGro
 
 Plik *NewTypesTests. csproj* zawiera następujące elementy:
 
-* Odwołanie do pakietu `Microsoft.NET.Test.Sdk`, do infrastruktury testowania .NET
-* Odwołanie do pakietu `xunit`, do struktury testowania xUnit
-* Odwołanie do pakietu `xunit.runner.visualstudio`, do modułu uruchamiającego testy
-* Odwołanie do projektu `NewTypes`do, kod do przetestowania
+* Odwołanie do pakietu do `Microsoft.NET.Test.Sdk`, infrastruktura testowa platformy .NET
+* Odwołanie do pakietu do `xunit`, struktura testowania xUnit
+* Odwołanie do pakietu do `xunit.runner.visualstudio`, moduł uruchamiający testy
+* Odwołanie do projektu do `NewTypes`, kod do przetestowania
 
 Zmień nazwę *UnitTest1.cs* na *PetTests.cs* i Zastąp kod w pliku następującym:
 
@@ -159,10 +159,10 @@ public class PetTests
 }
 ```
 
-Ćwiczenie opcjonalne: Jeśli `Bird` wcześniej dodano typ, który `Tweet!` przekazuje do właściciela, Dodaj metodę testową do `TalkToOwner` pliku *PetTests.cs* , `BirdTalkToOwnerReturnsTweet`aby sprawdzić, czy metoda działa prawidłowo dla tego `Bird` typu.
+Opcjonalne ćwiczenie: w przypadku dodania typu `Bird` wcześniej, który generuje `Tweet!` do właściciela, Dodaj metodę testową do pliku *PetTests.cs* , `BirdTalkToOwnerReturnsTweet`, aby sprawdzić, czy metoda `TalkToOwner` działa prawidłowo dla typu `Bird`.
 
 > [!NOTE]
-> Chociaż oczekuje się, że `expected` wartości `actual` i są równe, wstępne potwierdzenie ze `Assert.NotEqual` sprawdzaniem określa, że te wartości *nie są równe*. Zawsze należy utworzyć test, aby nie można było sprawdzić logiki testu. Po upewnieniu się, że test zakończy się niepowodzeniem, Dostosuj potwierdzenie, aby zezwolić na przekazanie testu.
+> Chociaż oczekuje się, że wartości `expected` i `actual` są równe, wstępne potwierdzenie ze sprawdzaniem `Assert.NotEqual` określa, że te wartości *nie są równe*. Zawsze należy utworzyć test, aby nie można było sprawdzić logiki testu. Po upewnieniu się, że test zakończy się niepowodzeniem, Dostosuj potwierdzenie, aby zezwolić na przekazanie testu.
 
 Poniżej przedstawiono kompletną strukturę projektu:
 
@@ -182,7 +182,7 @@ Poniżej przedstawiono kompletną strukturę projektu:
       |__NewTypesTests.csproj
 ```
 
-Uruchom w katalogu *test/NewTypesTests* . Przywróć projekt testowy za pomocą [`dotnet restore`](../tools/dotnet-restore.md) polecenia. Uruchom testy za pomocą [`dotnet test`](../tools/dotnet-test.md) polecenia. To polecenie uruchamia program Test Runner określony w pliku projektu.
+Uruchom w katalogu *test/NewTypesTests* . Przywróć projekt testowy za pomocą polecenia [`dotnet restore`](../tools/dotnet-restore.md) . Uruchom testy za pomocą polecenia [`dotnet test`](../tools/dotnet-test.md) . To polecenie uruchamia program Test Runner określony w pliku projektu.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -216,11 +216,11 @@ Test Run Failed.
 Test execution time: 1.7000 Seconds
 ```
 
-Zmień potwierdzenia testów z `Assert.NotEqual` na: `Assert.Equal`
+Zmień potwierdzenia testów z `Assert.NotEqual` na `Assert.Equal`:
 
 [!code-csharp[PetTests class](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
 
-Uruchom testy przy użyciu `dotnet test` polecenia i uzyskaj następujące dane wyjściowe:
+Uruchom testy za pomocą polecenia `dotnet test` i uzyskaj następujące dane wyjściowe:
 
 ```output
 Test run for c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp2.1\NewTypesTests.dll(.NETCoreApp,Version=v2.1)

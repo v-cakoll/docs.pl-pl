@@ -5,12 +5,12 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 7b6265cb652e6f3db702584295fac948d06ad5fc
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1355b3b0fa72a13263229848b3de2c6b9ccb3392
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420840"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884205"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Poznaj narzędzia platformy .NET Core i zestaw .NET Core SDK, korzystając z tych samouczków
 
@@ -39,7 +39,7 @@ Poniższe samouczki są dostępne do uczenia się w programie .NET Core.
 
 ## <a name="building-applications-with-the-net-core-cli-tools"></a>Tworzenie aplikacji za pomocą narzędzi interfejs wiersza polecenia platformy .NET Core
 
-- [Rozpoczynanie pracy z platformą .NET Core w systemie Windows/Linux/macOS przy użyciu narzędzi interfejs wiersza polecenia platformy .NET Core](using-with-xplat-cli.md)
+- [Rozpoczynanie pracy z platformą .NET Core w systemie Windows/Linux/macOS przy użyciu narzędzi interfejs wiersza polecenia platformy .NET Core](cli-create-console-app.md)
 - [Organizowanie i testowanie projektów przy użyciu narzędzi interfejs wiersza polecenia platformy .NET Core](testing-with-cli.md)
 - [Wprowadzenie doF#](../../fsharp/get-started/get-started-command-line.md)
 

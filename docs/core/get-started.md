@@ -4,12 +4,12 @@ description: Znajdź zasoby, aby dowiedzieć się, jak tworzyć aplikacje .NET C
 author: thraka
 ms.author: adegeo
 ms.date: 09/19/2019
-ms.openlocfilehash: 78066f2904f6a874b71165e4fe1769b6b778ae41
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 89db6d79336c01315983133d9041904d88cba301
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428870"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884257"
 ---
 # <a name="get-started-with-net-core"></a>Wprowadzenie do platformy .NET Core
 
@@ -50,15 +50,15 @@ Możesz rozpocząć tworzenie aplikacji platformy .NET Core, wykonując te Samou
 - [Kompiluj bibliotekę klas z Visual Basic i .NET Core w programie Visual Studio 2017.](./tutorials/vb-library-with-visual-studio.md)  
 - Obejrzyj film wideo na [temat sposobu instalowania i używania Visual Studio Code i platformy .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/).
 - Obejrzyj film wideo na [temat sposobu instalowania i używania programów Visual Studio 2017 i .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/).
-- [Wprowadzenie do programu .NET Core przy użyciu wiersza polecenia.](tutorials/using-with-xplat-cli.md)
+- [Wprowadzenie do programu .NET Core przy użyciu wiersza polecenia.](tutorials/cli-create-console-app.md)
 
 Listę obsługiwanych wersji systemu Windows zawiera artykuł [zależności i wymagania dotyczące platformy .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-windows) .
 
-# <a name="linuxtablinux"></a>[System](#tab/linux)
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 Aby rozpocząć tworzenie aplikacji platformy .NET Core, wykonaj następujące Samouczki krok po kroku:
 
-- [Wprowadzenie do programu .NET Core przy użyciu wiersza polecenia.](tutorials/using-with-xplat-cli.md)
+- [Wprowadzenie do programu .NET Core przy użyciu wiersza polecenia.](tutorials/cli-create-console-app.md)
 - Obejrzyj film wideo [z wprowadzeniem do Visual Studio Code przy C# użyciu oprogramowania i platformy .NET Core w systemie Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
 
 Listę obsługiwanych dystrybucje i wersji systemu Linux znajduje się w artykule [zależności i wymagania dotyczące platformy .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-linux) .
@@ -69,7 +69,7 @@ Aby rozpocząć tworzenie aplikacji platformy .NET Core, wykonaj następujące S
 
 - Obejrzyj film wideo [z wprowadzeniem do Visual Studio Code przy C# użyciu oprogramowania i platformy .NET Core w systemie macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac).
 - [Wprowadzenie do programu .NET Core w systemie macOS przy użyciu Visual Studio Code.](tutorials/using-on-macos.md)
-- [Wprowadzenie do programu .NET Core przy użyciu wiersza polecenia.](tutorials/using-with-xplat-cli.md)
+- [Wprowadzenie do programu .NET Core przy użyciu wiersza polecenia.](tutorials/cli-create-console-app.md)
 - [Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu Visual Studio dla komputerów Mac.](tutorials/using-on-mac-vs.md)
 - [Utwórz kompletne rozwiązanie platformy .NET Core w systemie macOS przy użyciu Visual Studio dla komputerów Mac.](tutorials/using-on-mac-vs-full-solution.md)
 

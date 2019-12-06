@@ -3,12 +3,12 @@ title: C#Struktura programu — Przewodnik po C# języku
 description: Zapoznaj się z podstawowymi blokami konstrukcyjnymi C# programu
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 5102c72d68108f698a0456b9c14e6713778f4325
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 5e095e71549ed3eec6c73e6a134fdb5a64fb63c0
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834156"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884387"
 ---
 # <a name="program-structure"></a>Struktura programu
 
@@ -27,7 +27,7 @@ csc /t:library acme.cs
 kompiluje przykład jako bibliotekę (kod bez punktu wejścia `Main`) i tworzy zestaw o nazwie `acme.dll`.
 
 > [!IMPORTANT]
-> Powyższe przykłady używają `csc` jako kompilator wiersza C# polecenia. Ten kompilator jest plikiem wykonywalnym systemu Windows. Aby korzystać C# z różnych platform, należy użyć narzędzi dla platformy .NET Core. Ekosystem platformy .NET Core używa interfejsu wiersza polecenia `dotnet` do zarządzania kompilacjami w wierszu poleceń. Obejmuje to zarządzanie zależnościami i wywoływanie C# kompilatora. Zapoznaj się z [tym samouczkiem](../../core/tutorials/using-with-xplat-cli.md) , aby zapoznać się z pełnymi opisami tych narzędzi na platformach obsługiwanych przez platformę .NET Core.
+> Powyższe przykłady używają `csc` jako kompilator wiersza C# polecenia. Ten kompilator jest plikiem wykonywalnym systemu Windows. Aby korzystać C# z różnych platform, należy użyć narzędzi dla platformy .NET Core. Ekosystem platformy .NET Core używa interfejsu wiersza polecenia `dotnet` do zarządzania kompilacjami w wierszu poleceń. Obejmuje to zarządzanie zależnościami i wywoływanie C# kompilatora. Zapoznaj się z [tym samouczkiem](../../core/tutorials/cli-create-console-app.md) , aby zapoznać się z pełnymi opisami tych narzędzi na platformach obsługiwanych przez platformę .NET Core.
 
 Zestawy zawierają kod wykonywalny w postaci instrukcji języka pośredniego (IL) i informacji symbolicznych w formie metadanych. Przed wykonaniem kod IL w zestawie jest automatycznie konwertowany na kod specyficzny dla procesora przez kompilator just-in-Time (JIT) środowiska uruchomieniowego języka wspólnego platformy .NET.
 

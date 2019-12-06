@@ -4,12 +4,12 @@ description: Informacje na temat przykładów i samouczków dotyczących platfor
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5132415a6be03787111aaed8d027d436bb6820fe
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423571"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884439"
 ---
 # <a name="net-samples-and-tutorials"></a>Przykłady i samouczki dotyczące platformy .NET
 
@@ -25,7 +25,7 @@ W tym przewodniku pokazano, jak utworzyć aplikację sieci Web ASP.NET Core i po
 
 ### <a name="tutorials"></a>Samouczki
 
-**[Pisanie aplikacji konsolowych platformy .NET Core przy użyciu narzędzi interfejsu wiersza polecenia: Przewodnik krok po kroku](../core/tutorials/using-with-xplat-cli.md)**
+**[Pisanie aplikacji konsolowych platformy .NET Core przy użyciu narzędzi interfejsu wiersza polecenia: Przewodnik krok po kroku](../core/tutorials/cli-create-console-app.md)**
 
 W tym przewodniku pokazano, jak używać narzędzi interfejs wiersza polecenia platformy .NET Core do kompilowania aplikacji konsolowych dla wielu platform. Rozpoczyna się od podstawowej aplikacji konsolowej i ostatecznie obejmuje wiele projektów, w tym testowania. Możesz dodawać funkcje krok po kroku, tworząc swoją wiedzę. [Ukończony przykład](https://github.com/dotnet/samples/tree/master/core/console-apps) jest dostępny w repozytorium dotnet/Samples w witrynie GitHub.
 
@@ -75,7 +75,7 @@ Przykład [ExcelDemo](https://github.com/dotnet/samples/tree/master/core/extensi
 
 W tym samouczku przedstawiono Tworzenie konsoli we/wy, strukturę aplikacji konsolowej oraz podstawowe informacje o modelu programowania asynchronicznego opartego na zadaniach. [Ukończony przykład](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) jest dostępny w repozytorium dotnet/Samples w witrynie GitHub.
 
-**[Klient REST](../csharp/tutorials/console-webapiclient.md)**
+**[REST Client](../csharp/tutorials/console-webapiclient.md)**
 
 W tym samouczku przedstawiono komunikację sieci Web, serializacji JSON i zorientowane obiektowo funkcje C# języka. [Ukończony przykład](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) jest dostępny w repozytorium dotnet/Samples w witrynie GitHub.
 
@@ -112,6 +112,6 @@ Wiele tematów pokazuje kod źródłowy i przykłady, które są dostępne do wy
 1. Nawigowanie w folderach repozytorium do lokalizacji przykładowej. Ścieżka względna do lokalizacji przykładu pojawia się na pasku adresu przeglądarki, gdy użyjesz linku do przykładu.
 1. Aby uruchomić przykład, masz kilka opcji:
    * Użyj [narzędzi interfejsu wiersza polecenia dotnet](../core/tools/index.md): w oknie konsoli przejdź do folderu przykładowego i Użyj poleceń interfejsu wiersza polecenia dotnet.
-   * Użyj [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) lub [Visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): Otwórz próbkę, wybierając pozycję **plik > Otwórz > projekt/rozwiązanie** na pasku menu, przejdź do folderu projektu przykładowego i wybierz plik projektu ( *. csproj* lub *. fsproj* ).
+   * Użyj [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) lub [Visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): Otwórz przykład, wybierając pozycję **plik > Otwórz > projekt/rozwiązanie** na pasku menu, przejdź do folderu projektu przykładowego i wybierz plik projektu ( *. csproj* lub *. fsproj*).
    * Użyj [Visual Studio Code](https://code.visualstudio.com/): Otwórz przykład, wybierając pozycję **plik > Otwórz folder** z paska menu i wybierając folder projektu przykładu.
    * Użyj innego środowiska IDE, które obsługuje projekty platformy .NET Core.

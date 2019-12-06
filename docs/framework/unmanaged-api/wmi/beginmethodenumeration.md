@@ -14,14 +14,14 @@ helpviewer_keywords:
 - BeginMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: a27787052757098d4edb2d8516e22d8a03b7009a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: be1e86e0b760ab403cf42ac19da03f84769a85cf
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138788"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884426"
 ---
-# <a name="beginenumeration-function"></a>BeingEnumeration, funkcja
+# <a name="beginmethodenumeration-function"></a>BeginMethodEnumeration, funkcja
 Rozpoczyna Wyliczenie metod dostępnych dla obiektu.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]

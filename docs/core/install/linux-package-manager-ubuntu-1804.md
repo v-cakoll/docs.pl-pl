@@ -4,12 +4,12 @@ description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe w syst
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 7d5112df4a25f885f68783419097ff30fb504612
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 38568b31bf9cd02a19a15addfe4926e8857a87b5
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74836900"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959801"
 ---
 # <a name="ubuntu-1804-package-manager---install-net-core"></a>Menedżer pakietów Ubuntu 18,04 — Instalowanie programu .NET Core
 
@@ -97,7 +97,7 @@ Jeśli to nie zadziała, można uruchomić instalację ręczną przy użyciu nas
 
 ```bash
 sudo apt-get install -y gpg
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor microsoft.asc.gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list

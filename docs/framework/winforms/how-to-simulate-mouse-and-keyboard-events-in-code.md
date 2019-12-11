@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 9fac74aacf6b902a25438151db247a1a4aee1f4c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 52f89df8d7f28f0e00c3becd9005b46e52b5532c
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802482"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960206"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Porady: symulowanie zdarzeń myszy i klawiatury w kodzie
 
@@ -72,7 +72,7 @@ Chociaż można symulować dane wejściowe z klawiatury przy użyciu strategii o
 1. Aktywuj okno aplikacji, które będzie odbierać naciśnięcia klawiszy, a następnie Wywołaj metodę <xref:System.Windows.Forms.SendKeys.Send%2A> lub <xref:System.Windows.Forms.SendKeys.SendWait%2A>. Ponieważ nie ma metody zarządzanej w celu aktywowania innej aplikacji, należy użyć natywnych metod systemu Windows, aby wymusić skupienie się na innych aplikacjach. Poniższy przykład kodu używa wywołania platformy, aby wywołać metody `FindWindow` i `SetForegroundWindow` w celu aktywowania okna aplikacji kalkulatora, a następnie wywołuje <xref:System.Windows.Forms.SendKeys.SendWait%2A>, aby wystawić serię obliczeń w aplikacji Kalkulator.
 
     > [!NOTE]
-    > Poprawne parametry wywołania `FindWindow`, które lokalizują aplikację kalkulatora, różnią się w zależności od używanej wersji systemu Windows.  Poniższy kod umożliwia znalezienie aplikacji Kalkulator w systemie Windows 7. Na [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]Zmień pierwszy parametr na "SciCalc". Aby określić poprawne parametry, można użyć narzędzia Spy + + dołączonego do programu Visual Studio.
+    > Poprawne parametry wywołania `FindWindow`, które lokalizują aplikację kalkulatora, różnią się w zależności od używanej wersji systemu Windows.  Poniższy kod umożliwia znalezienie aplikacji Kalkulator w systemie Windows 7. W systemie Windows Vista Zmień pierwszy parametr na "SciCalc". Aby określić poprawne parametry, można użyć narzędzia Spy + + dołączonego do programu Visual Studio.
 
     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 4a1eb818dfd8fb48b003ca184dd533f73d342662
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 15ea77d13a93d88bd996a22b6fe1aaad81df572d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973108"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959705"
 ---
 # <a name="how-to-search-strings"></a>Jak wyszukiwać ciągi
 
@@ -39,26 +39,26 @@ Metody <xref:System.String.IndexOf%2A> i <xref:System.String.LastIndexOf%2A> ró
 
 Klasy <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> można użyć do wyszukania ciągów. Te wyszukiwania mogą przedziałować złożoność od prostych do skomplikowanych wzorców tekstu.
 
-Poniższy przykład kodu wyszukuje wyraz "" "lub" swój "w zdaniu, ignorując wielkość liter. Metoda statyczna <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> wykonuje wyszukiwanie. Należy podać ciąg do wyszukania i wzorzec wyszukiwania. W tym przypadku trzeci argument określa wyszukiwanie bez uwzględniania wielkości liter. Aby uzyskać więcej informacji, zobacz <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
+Poniższy przykład kodu wyszukuje wyraz "" "lub" swój "w zdaniu, ignorując wielkość liter. Metoda statyczna <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> wykonuje wyszukiwanie. Należy podać ciąg do wyszukania i wzorzec wyszukiwania. W tym przypadku trzeci argument określa wyszukiwanie bez uwzględniania wielkości liter. Aby uzyskać więcej informacji, zobacz temat <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
 
 Wzorzec wyszukiwania opisuje szukany tekst. W poniższej tabeli opisano każdy element wzorca wyszukiwania. (W poniższej tabeli są stosowane pojedyncze `\`, które muszą zostać zmienione jako `\\` w C# ciągu).
 
-| Znaczne  | Znaczenie     |
+| znaczne  | Znaczenie     |
 | -------- |-------------|
-| polu      | dopasowuje tekst "" |
+| ustawienie      | dopasowuje tekst "" |
 | (EIR)?   | dopasowuje 0 lub 1 wystąpienie "EIR" |
 | \s       | Dopasowuje znak odstępu    |
   
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
   
 > [!TIP]
-> Metody `string` są zwykle lepszymi opcjami podczas wyszukiwania dokładnego ciągu. Wyrażenia regularne są lepsze, gdy wyszukiwanie pewnego wzorca jest ciągiem źródłowym.
+> Metody `string` są zwykle lepszymi opcjami podczas wyszukiwania dokładnego ciągu. Wyrażenia regularne są lepsze podczas wyszukiwania pewnego wzorca w ciągu źródłowym.
 
 ## <a name="does-a-string-follow-a-pattern"></a>Czy ciąg jest zgodny ze wzorcem?
 
 Poniższy kod używa wyrażeń regularnych do sprawdzania poprawności formatu każdego ciągu w tablicy. Walidacja wymaga, aby każdy ciąg miał postać numeru telefonu, w którym trzy grupy cyfr są oddzielone kreskami, pierwsze dwie grupy zawierają trzy cyfry, a trzecia grupa zawiera cztery cyfry. Wzorzec wyszukiwania używa wyrażenia regularnego `^\\d{3}-\\d{3}-\\d{4}$`. Aby uzyskać więcej informacji, zobacz [Język wyrażeń regularnych — szybkie informacje](../../standard/base-types/regular-expression-language-quick-reference.md).
 
-| Znaczne  | Znaczenie                             |
+| znaczne  | Znaczenie                             |
 | -------- |-------------------------------------|
 | ^        | dopasowuje początek ciągu |
 | \d{3}    | dopasowuje dokładnie 3 znaki cyfr  |

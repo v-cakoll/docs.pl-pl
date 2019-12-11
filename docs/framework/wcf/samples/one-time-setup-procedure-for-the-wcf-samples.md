@@ -2,12 +2,12 @@
 title: Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: cfe50cb2bb017292b69f578bfff2bf84bf6ba8f0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 95bba89546e6667cc36fa06a0090aa8e9570fc7e
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837834"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960140"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation
 
@@ -16,7 +16,7 @@ Większość przykładów Windows Communication Foundation (WCF) znajduje się w
 Katalog wirtualny **servicemodelsamples** służy do kompilowania i uruchamiania wszystkich przykładów korzystających z usługi hostowanej przez usługi IIS. Jest to jedyny katalog wirtualny, który jest wymagany do uruchomienia przykładów. Utworzenie przykładu spowoduje zastąpienie wszystkich wcześniej wdrożonych usług w tym katalogu wirtualnym; tylko ostatnio skompilowany przykład zostanie wdrożony i będzie dostępny w tym katalogu wirtualnym.
 
 > [!NOTE]
-> Należy uruchomić wszystkie polecenia w ramach konta administratora lokalnego. W przypadku korzystania z systemu Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]lub Windows Server 2008 R2 należy również uruchomić wiersz polecenia z podwyższonym poziomem uprawnień. Aby to zrobić, kliknij prawym przyciskiem myszy ikonę wiersza polecenia, a następnie kliknij polecenie **Uruchom jako administrator**. Wszystkie polecenia w tym temacie muszą być uruchamiane w wierszu polecenia, który ma odpowiednie ustawienia ścieżki.  Najprostszym sposobem upewnienia się, że jest to przy użyciu wiersza polecenia programu Visual Studio. Aby otworzyć ten monit, kliknij przycisk **Start**, wybierz pozycję **Wszystkie programy**, przewiń w dół do **programu Visual Studio 2010**, wybierz pozycję **Visual Studio Tools**, kliknij prawym przyciskiem myszy pozycję **wiersz polecenia programu Visual Studio (2010)** , a następnie kliknij polecenie **Uruchom jako administrator**. Jeśli masz zainstalowaną jedną z następujących wersji Visual Studio Express, ten wiersz polecenia nie jest dostępny i trzeba będzie dodać "C:\Windows\Microsoft.Net\Framework\v4.0" do ścieżki systemowej.
+> Należy uruchomić wszystkie polecenia w ramach konta administratora lokalnego. W przypadku korzystania z systemu Windows 7, Windows Vista lub Windows Server 2008 R2 należy również uruchomić wiersz polecenia z podwyższonym poziomem uprawnień. Aby to zrobić, kliknij prawym przyciskiem myszy ikonę wiersza polecenia, a następnie kliknij polecenie **Uruchom jako administrator**. Wszystkie polecenia w tym temacie muszą być uruchamiane w wierszu polecenia, który ma odpowiednie ustawienia ścieżki.  Najprostszym sposobem upewnienia się, że jest to przy użyciu wiersza polecenia programu Visual Studio. Aby otworzyć ten monit, kliknij przycisk **Start**, wybierz pozycję **Wszystkie programy**, przewiń w dół do **programu Visual Studio 2010**, wybierz pozycję **Visual Studio Tools**, kliknij prawym przyciskiem myszy pozycję **wiersz polecenia programu Visual Studio (2010)** , a następnie kliknij polecenie **Uruchom jako administrator**. Jeśli masz zainstalowaną jedną z następujących wersji Visual Studio Express, ten wiersz polecenia nie jest dostępny i trzeba będzie dodać "C:\Windows\Microsoft.Net\Framework\v4.0" do ścieżki systemowej.
 
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Procedura konfiguracji jednorazowej dla przykładów WCF
 

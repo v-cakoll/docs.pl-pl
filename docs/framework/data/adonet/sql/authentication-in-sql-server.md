@@ -2,12 +2,12 @@
 title: Uwierzytelnianie w programie SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 09f7825fd6b4f852b24142ea297c078bd8a1e221
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 0fb92f9e854e2a7a800335390d0195243a749b33
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040268"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959969"
 ---
 # <a name="authentication-in-sql-server"></a>Uwierzytelnianie w programie SQL Server
 SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu Windows i tryb mieszany.  
@@ -66,13 +66,13 @@ SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu 
 > [!IMPORTANT]
 > SQL Server instalowany przy użyciu SQL Server logowania o nazwie `sa` (skrót "administrator systemu"). Przypisz silne hasło do `sa` logowania i nie używaj `sa` logowania w aplikacji. `sa` logowania są mapowane na stałą rolę serwera `sysadmin`, która ma nieodwołalne poświadczenia administracyjne na całym serwerze. Jeśli osoba atakująca uzyska dostęp jako administrator systemu, nie ma żadnych ograniczeń dotyczących potencjalnego uszkodzenia. Wszyscy członkowie grupy `BUILTIN\Administrators` systemu Windows (grupy administratorów lokalnych) są domyślnie członkami roli `sysadmin`, ale można ją usunąć z tej roli.  
   
- SQL Server zapewnia mechanizmy zasad haseł systemu Windows dla SQL Server logowania, gdy jest uruchomiona w [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] lub nowszych wersjach. Zasady złożoności haseł zaprojektowano w celu powstrzymania ataków na ataki przez zwiększenie liczby możliwych haseł. SQL Server mogą zastosować te same zasady złożoności i wygasania używane w [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] do haseł używanych wewnątrz SQL Server.  
+ SQL Server zapewnia mechanizmy zasad haseł systemu Windows dla SQL Server logowania. Zasady złożoności haseł zaprojektowano w celu powstrzymania ataków na ataki przez zwiększenie liczby możliwych haseł. SQL Server mogą zastosować te same zasady złożoności i wygasania do haseł używanych wewnątrz SQL Server.  
   
 > [!IMPORTANT]
 > Łączenie parametrów połączenia z danymi wejściowymi użytkownika może spowodować zagrożenie dla ataku polegającego na iniekcji parametrów połączenia. Użyj <xref:System.Data.SqlClient.SqlConnectionStringBuilder>, aby utworzyć składniowo prawidłowe parametry połączenia w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [konstruktory parametrów połączenia](../connection-string-builders.md).  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
- Aby uzyskać więcej informacji, zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji, zapoznaj się z następującymi zasobami.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  

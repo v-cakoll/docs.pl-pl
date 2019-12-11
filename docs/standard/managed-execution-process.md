@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 5ead3d1ac37b3c7ee50f18a81530720205678de2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122005"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960388"
 ---
 # <a name="managed-execution-process"></a>Proces zarządzanego wykonania
 <a name="introduction"></a>Zarządzany proces wykonywania obejmuje następujące kroki, które opisano szczegółowo w dalszej części tego tematu:  
@@ -38,7 +38,7 @@ ms.locfileid: "73122005"
   
 <a name="choosing_a_compiler"></a>   
 ## <a name="choosing-a-compiler"></a>Wybieranie kompilatora  
- Aby uzyskać korzyści zapewniane przez środowisko uruchomieniowe języka wspólnego (CLR), należy użyć co najmniej jednego kompilatora języka, który jest przeznaczony dla środowiska uruchomieniowego, takiego C#jak Visual Basic C++, F#, Wizualizacja lub jeden z wielu kompilatorów innych firm, takich jak Eiffel, Perl lub Kompilator COBOL.  
+ Aby uzyskać korzyści zapewniane przez środowisko uruchomieniowe języka wspólnego (CLR), należy użyć co najmniej jednego kompilatora języka, który jest przeznaczony dla środowiska uruchomieniowego, takiego C#jak Visual Basic C++, F#, Wizualizacja lub jeden z wielu kompilatorów innych firm, takich jak Eiffel, Perl lub COBOL.  
   
  Ponieważ jest to środowisko wykonywania wielu języków, środowisko uruchomieniowe obsługuje szeroką gamę typów danych i funkcji językowych. Używany kompilator języka określa, które funkcje środowiska uruchomieniowego są dostępne i projektujesz kod przy użyciu tych funkcji. Kompilator, a nie środowisko uruchomieniowe, określa składnię, której kod musi używać. Jeśli składnik musi być całkowicie użyteczny przez składniki w innych językach, wyeksportowane typy składników muszą uwidaczniać tylko funkcje języka, które są zawarte w [niezależności od języka i składnikach niezależnych od języka](../../docs/standard/language-independence-and-language-independent-components.md) (CLS). Możesz użyć atrybutu <xref:System.CLSCompliantAttribute>, aby upewnić się, że kod jest zgodny ze specyfikacją CLS. Aby uzyskać więcej informacji, zobacz [niezależność od języka i składniki niezależne od języka](../../docs/standard/language-independence-and-language-independent-components.md).  
   
@@ -95,7 +95,7 @@ ms.locfileid: "73122005"
   
  Podczas wykonywania kod zarządzany odbiera usługi takie jak odzyskiwanie pamięci, zabezpieczenia, współdziałanie z kodem niezarządzanym, obsługa debugowania przez wiele języków oraz Ulepszona obsługa wdrażania i przechowywania wersji.  
   
- W programie Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] i [!INCLUDE[windowsver](../../includes/windowsver-md.md)]moduł ładujący systemu operacyjnego sprawdza dla modułów zarządzanych, sprawdzając bit w nagłówku COFF. Bit ustawiany oznacza moduł zarządzany. Jeśli moduł ładujący wykryje zarządzane moduły, ładuje mscoree. dll, a `_CorValidateImage` i `_CorImageUnloading` powiadamiają moduł ładujący, gdy obrazy modułu zarządzanego są ładowane i zwalniane. `_CorValidateImage` wykonuje następujące akcje:  
+ W systemie Microsoft Windows Vista moduł ładujący systemu operacyjnego sprawdza dla modułów zarządzanych, sprawdzając bit w nagłówku COFF. Bit ustawiany oznacza moduł zarządzany. Jeśli moduł ładujący wykryje zarządzane moduły, ładuje mscoree. dll, a `_CorValidateImage` i `_CorImageUnloading` powiadamiają moduł ładujący, gdy obrazy modułu zarządzanego są ładowane i zwalniane. `_CorValidateImage` wykonuje następujące akcje:  
   
 1. Zapewnia, że kod jest prawidłowym kodem zarządzanym.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: c59352f908c5f4a1fd2ca6dd631d26bb5d69f09a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 314526c1164f70e6b261df1a6f11ddce2b5fa240
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441226"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960076"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Obsługa automatyzacji interfejsu użytkownika dla standardowych formantów
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "74441226"
 ## <a name="win32-controls"></a>Kontrolki Win32  
  Większość formantów [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] jest narażonych na [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] za poorednictwem dostawców po stronie klienta w UIAutomationClientsideProviders. dll. Ten zestaw jest automatycznie rejestrowany do użytku z aplikacjami klienckimi automatyzacji interfejsu użytkownika.  
   
- Pełna pomoc techniczna jest świadczona tylko w przypadku formantów z wersji 6 programu ComCtrl32. dll (dostępnej w [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)] i nowszych).  
+ Pełna pomoc techniczna jest świadczona tylko dla formantów z wersji 6 programu *ComCtrl32. dll*.  
   
  Obsługiwane są następujące kontrolki.  
   
@@ -41,24 +41,24 @@ ms.locfileid: "74441226"
 |Przycisk|CheckBox|  
 |ComboBoxEx32|ComboBox|  
 |ComboBox|ComboBox|  
-|Edytuj|Dokument|  
-|Edytuj|Edytuj|  
+|Edytowanie|dokument|  
+|Edytowanie|Edytowanie|  
 |SysLink|Hyperlink|  
 |Static|Tekst|  
 |Static|Obraz|  
-|SysIPAddress32|Celnej|  
+|SysIPAddress32|Niestandardowy|  
 |SysHeader32|Nagłówek/HeaderItem|  
 |SysListView32|DataGrid|  
-|SysListView32|List|  
-|ListBox|List|  
+|SysListView32|Lista|  
+|ListBox|Lista|  
 |ListBox|ListItem|  
 |#32768|Menu|  
 |#32768|MenuItem|  
 |msctls_progress32|ProgressBar|  
-|RichEdit|dokumentu. Zobacz Uwaga.|  
-|RichEdit20A|Dokument|  
-|RichEdit20W|Dokument|  
-|RichEdit50W|Dokument|  
+|RichEdit|Dokumentu. Zobacz Uwaga.|  
+|RichEdit20A|dokument|  
+|RichEdit20W|dokument|  
+|RichEdit50W|dokument|  
 |ScrollBar|Suwak|  
 |msctls_trackbar32|Suwak|  
 |msctls_updown32|pokrętło|  
@@ -81,16 +81,16 @@ ms.locfileid: "74441226"
   
  Następujące kontrolki nie są obsługiwane.  
   
-|Nazwa klasy|Typ formantu|  
+|Nazwa klasy|Typ kontrolki|  
 |----------------|------------------|  
 |SysAnimate32|Obraz|  
 |SysPager|pokrętło|  
-|SysDateTimePick32|Celnej|  
+|SysDateTimePick32|Niestandardowy|  
 |SysMonthCal32|Kalendarz|  
-|MS_WINNOTE|wyowietlon|  
-|VBBubble|wyowietlon|  
+|MS_WINNOTE|Etykietka narzędzia|  
+|VBBubble|Etykietka narzędzia|  
 |Pasek przewijania (używany jako formant autonomiczny)|Suwak|  
-|Podsiatka|Celnej|  
+|Podsiatka|Niestandardowy|  
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Formanty formularzy systemu Windows  
@@ -138,7 +138,7 @@ ms.locfileid: "74441226"
   
  Następujące kontrolki są dostępne do [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] tylko w ramach obsługi usługi Microsoft Active Accessibility. Niektóre funkcje mogą być niedostępne.  
   
-|Nazwa kontrolki|  
+|Nazwa formantu|  
 |------------------|  
 |BindingSource|  
 |DataGrid|  
@@ -163,7 +163,7 @@ ms.locfileid: "74441226"
 |ToolStrip|  
 |TableLayoutPanel|  
 |SplitContainer/SplitterPanel|  
-|Dzielnik|  
+|Rozdzielacz|  
 |Elemencie RaftingContainer|  
 |StatusStrip|  
   

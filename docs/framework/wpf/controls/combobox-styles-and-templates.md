@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 92671001733f525188ba3c7bcf3ed3c55615e301
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 887698bdaebf7bc5ddac8997167589d9fbd3dd4d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283788"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960379"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox — Style i szablony
 W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.ComboBox>. Możesz zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate>, aby nadać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
@@ -22,7 +22,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 ## <a name="combobox-parts"></a>Elementy ComboBox  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.ComboBox>.  
   
-|Części|Type|Opis|  
+|Część|Typ|Opis|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Zawiera tekst <xref:System.Windows.Controls.ComboBox>.|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Lista rozwijana zawierająca elementy w polu kombi.|  
@@ -34,13 +34,13 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Normalne|CommonStates|Stan domyślny.|  
-|Wyłączone|CommonStates|Kontrolka jest wyłączona.|  
+|Normalny|CommonStates|Stan domyślny.|  
+|Wyłączono|CommonStates|Kontrolka jest wyłączona.|  
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad kontrolką <xref:System.Windows.Controls.ComboBox>.|  
-|Fokus|FocusStates|Kontrolka ma fokus.|  
+|Ustawiono fokus|FocusStates|Kontrolka ma fokus.|  
 |Bez fokusu|FocusStates|Kontrolka nie ma fokusu.|  
 |FocusedDropDown|FocusStates|Lista rozwijana dla <xref:System.Windows.Controls.ComboBox> ma fokus.|  
-|Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
+|Prawidłowy|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
 |InvalidFocused|ValidationStates|Właściwość dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` ma fokus.|  
 |InvalidUnfocused|ValidationStates|Dołączona właściwość <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true`, która nie ma fokusu.|  
 |Modyfikować|EditStates|Właściwość <xref:System.Windows.Controls.ComboBox.IsEditable%2A> jest `true`.|  
@@ -54,15 +54,15 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Normalne|CommonStates|Stan domyślny.|  
-|Wyłączone|CommonStates|Kontrolka jest wyłączona.|  
-|MouseOver|CommonStates|Wskaźnik myszy znajduje się nad kontrolką <xref:System.Windows.Controls.ComboBox>.|  
-|Fokus|FocusStates|Kontrolka ma fokus.|  
+|Normalny|CommonStates|Stan domyślny.|  
+|Wyłączono|CommonStates|Kontrolka jest wyłączona.|  
+|MouseOver|CommonStates|Wskaźnik myszy znajduje się nad kontrolką <xref:System.Windows.Controls.ComboBoxItem>.|  
+|Ustawiono fokus|FocusStates|Kontrolka ma fokus.|  
 |Bez fokusu|FocusStates|Kontrolka nie ma fokusu.|  
 |Wybrane|SelectionStates|Element jest obecnie zaznaczony.|  
 |Niezaznaczone|SelectionStates|Nie wybrano elementu.|  
 |SelectedUnfocused|SelectionStates|Element jest zaznaczony, ale nie ma fokusu.|  
-|Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
+|Prawidłowy|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
 |InvalidFocused|ValidationStates|Właściwość dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` ma fokus.|  
 |InvalidUnfocused|ValidationStates|Dołączona właściwość <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true`, która nie ma fokusu.|  
   

@@ -2,12 +2,12 @@
 title: Powiązanie HTTP w standardzie WS 2007 Federation
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 2f924bdcbf9082d9d43e02d82c9d00c32ebcaacf
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 74f21494c08f33a61eb1e1b0a102638cff59a970
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714975"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960190"
 ---
 # <a name="ws-2007-federation-http-binding"></a>Powiązanie HTTP w standardzie WS 2007 Federation
 
@@ -119,7 +119,7 @@ Plik *Setup. bat* dołączony do tego przykładu umożliwia skonfigurowanie serw
 
 1. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
 
-2. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md). Jeśli używasz [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], musisz uruchomić program *Service. exe*, *Client. exe*i *SecurityTokenService. exe* z podniesionymi uprawnieniami (kliknij pliki prawym przyciskiem myszy, a następnie kliknij polecenie **Uruchom jako administrator**).
+2. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md). W przypadku korzystania z systemu Windows Vista należy uruchomić program *Service. exe*, *Client. exe*i *SecurityTokenService. exe* z podwyższonym poziomem uprawnień (kliknij pliki prawym przyciskiem myszy, a następnie kliknij polecenie **Uruchom jako administrator**).
 
 > [!IMPORTANT]
 > Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny):

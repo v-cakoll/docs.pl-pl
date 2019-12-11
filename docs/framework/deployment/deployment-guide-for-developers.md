@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 62777356dae6e2dce9753b832f08ab2fa2cb5881
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 1b7fccc673f82986a53dcb3dfcb68e8575b99dfd
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801876"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960003"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework Przewodnik wdrażania dla deweloperów
 Ten temat zawiera informacje dla deweloperów, którzy chcą zainstalować dowolną wersję .NET Framework z .NET Framework 4,5, aby [!INCLUDE[net_current](../../../includes/net-current-version.md)] z ich aplikacjami.
@@ -51,7 +51,7 @@ Linki do pobrania znajdują się w sekcji [pakiety redystrybucyjne](#redistribut
 
 - Musisz mieć uprawnienia administratora, aby zainstalować .NET Framework 4,5 i jego wydania punktowe.
 
-- .NET Framework 4,5 jest dołączony do systemu Windows 8 i [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], dlatego nie trzeba wdrażać go w aplikacji w tych systemach operacyjnych. Podobnie .NET Framework 4.5.1 znajduje się w Windows 8.1 i Windows Server 2012 R2. .NET Framework 4.5.2 nie jest uwzględniony w żadnym systemie operacyjnym. .NET Framework 4,6 jest zawarty w systemie Windows 10, .NET Framework 4.6.1 jest zawarty w aktualizacji systemu Windows 10 listopad i .NET Framework 4.6.2 jest uwzględniony w rocznicowej aktualizacji systemu Windows 10.  .NET Framework 4,7 jest zawarta w aktualizacji systemu Windows 10 dla twórców, .NET Framework 4.7.1 jest dołączany do aktualizacji systemu Windows 10 dla twórców, a aktualizacja .NET Framework 4.7.2 została uwzględniona w aktualizacji systemu Windows 10 z października 2018 i Windows 10 kwietnia 2018. .NET Framework 4,8 jest dołączony do aktualizacji systemu Windows 10 maja 2019. Aby zapoznać się z pełną listą wymagań sprzętowych i programowych, zobacz [wymagania systemowe](../get-started/system-requirements.md).
+- .NET Framework 4,5 jest dołączony do systemu Windows 8 i Windows Server 2012, dlatego nie trzeba wdrażać go w aplikacji w tych systemach operacyjnych. Podobnie .NET Framework 4.5.1 znajduje się w Windows 8.1 i Windows Server 2012 R2. .NET Framework 4.5.2 nie jest uwzględniony w żadnym systemie operacyjnym. .NET Framework 4,6 jest zawarty w systemie Windows 10, .NET Framework 4.6.1 jest zawarty w aktualizacji systemu Windows 10 listopad i .NET Framework 4.6.2 jest uwzględniony w rocznicowej aktualizacji systemu Windows 10.  .NET Framework 4,7 jest zawarta w aktualizacji systemu Windows 10 dla twórców, .NET Framework 4.7.1 jest dołączany do aktualizacji systemu Windows 10 dla twórców, a aktualizacja .NET Framework 4.7.2 została uwzględniona w aktualizacji systemu Windows 10 z października 2018 i Windows 10 kwietnia 2018. .NET Framework 4,8 jest dołączony do aktualizacji systemu Windows 10 maja 2019. Aby zapoznać się z pełną listą wymagań sprzętowych i programowych, zobacz [wymagania systemowe](../get-started/system-requirements.md).
 
 - Począwszy od .NET Framework 4,5, użytkownicy mogą wyświetlić listę uruchomionych .NET Framework aplikacji podczas instalacji i łatwo je zamknąć. Może to pomóc uniknąć ponownych uruchomień systemu spowodowanych przez instalacje .NET Framework. Zobacz [redukowanie ponownych uruchomień systemu](reducing-system-restarts.md).
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: f3cddcd6cd90e7e43ea6af67725e709673f7650f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46d8f00f9328e9c0a4df596b709195ae42d651bf
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978337"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960132"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Rozwiązywanie problemów aplikacji hybrydowych
 <a name="introduction"></a>W tym temacie wymieniono niektóre typowe problemy, które mogą wystąpić podczas tworzenia aplikacji hybrydowych, które korzystają z technologii [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "73978337"
  Klasy <xref:System.Windows.Forms.Integration.WindowsFormsHost> i <xref:System.Windows.Forms.Integration.ElementHost> mogą obsługiwać tylko jedną kontrolkę podrzędną lub element. Aby hostować więcej niż jeden formant lub element, należy użyć kontenera jako zawartości podrzędnej. Na przykład można dodać przycisk [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i kontrolki pola wyboru do kontrolki <xref:System.Windows.Forms.Panel?displayProperty=nameWithType>, a następnie przypisać panel do właściwości <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> kontrolki <xref:System.Windows.Forms.Integration.WindowsFormsHost>. Nie można jednak dodać przycisku i kontrolek pola wyboru oddzielnie do tej samej kontrolki <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  
   
 <a name="scaling"></a>   
-## <a name="scaling"></a>Ponowne  
+## <a name="scaling"></a>Skalowanie  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] mają różne modele skalowania. Niektóre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przekształceń skalowania mają znaczenie dla [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantów, ale inne nie. Na przykład skalowanie kontrolki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] na 0 będzie możliwe, ale jeśli spróbujesz skalować tę samą kontrolkę z powrotem do wartości innej niż zero, rozmiar kontrolki pozostanie 0. Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące układu dla elementu WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="adapter"></a>   
@@ -40,17 +40,17 @@ ms.locfileid: "73978337"
  Podczas pracy z klasami <xref:System.Windows.Forms.Integration.WindowsFormsHost> i <xref:System.Windows.Forms.Integration.ElementHost> mogą wystąpić problemy, ponieważ zawierają one ukryty kontener. Klasy <xref:System.Windows.Forms.Integration.WindowsFormsHost> i <xref:System.Windows.Forms.Integration.ElementHost> mają ukryty kontener o nazwie *adapter*, którego używają do obsługi zawartości. Dla elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost> adapter pochodzi z klasy <xref:System.Windows.Forms.ContainerControl?displayProperty=nameWithType>. Dla formantu <xref:System.Windows.Forms.Integration.ElementHost>, karta pochodzi od elementu <xref:System.Windows.Controls.DockPanel>. Gdy widzisz odwołania do karty w innych tematach międzyoperacyjnych, ten kontener jest omawiany w tym scenariuszu.  
   
 <a name="nesting"></a>   
-## <a name="nesting"></a>Zagnieżdżania  
+## <a name="nesting"></a>Zagnieżdżanie  
  Zagnieżdżanie elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost> wewnątrz kontrolki <xref:System.Windows.Forms.Integration.ElementHost> nie jest obsługiwane. Zagnieżdżanie formantu <xref:System.Windows.Forms.Integration.ElementHost> wewnątrz elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost> nie jest również obsługiwane.  
   
 <a name="focus"></a>   
-## <a name="focus"></a>Fokus  
+## <a name="focus"></a>Koncentracja  
  Fokus działa inaczej w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], co oznacza, że problemy z fokusem mogą wystąpić w aplikacji hybrydowej. Na przykład jeśli masz fokus wewnątrz elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost>, a ty i przywróćesz stronę lub Pokaż modalne okno dialogowe, fokus wewnątrz elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost> może zostać utracony. Element <xref:System.Windows.Forms.Integration.WindowsFormsHost> nadal ma fokus, ale formant wewnątrz niego może nie.  
   
  Sprawdzanie poprawności danych jest również zależne od fokusu. Walidacja działa w <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemencie, ale nie działa w postaci karty z elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost> lub między dwoma różnymi <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementami.  
   
 <a name="property_mapping"></a>   
-## <a name="property-mapping"></a>Mapowanie właściwości  
+## <a name="property-mapping"></a>Odwzorowanie właściwości  
  Niektóre mapowania właściwości wymagają obszernej interpretacji do mostkowania niepodobnych implementacji między [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] technologii. Mapowania właściwości umożliwiają kodowi reagowanie na zmiany w czcionkach, kolorach i innych właściwościach. Ogólnie rzecz biorąc, mapowania właściwości działają przez nasłuchiwanie zdarzeń ze zmienionymi *właściwościami*lub na wywołania zmiany*Właściwości*oraz ustawienie odpowiednich właściwości na formancie podrzędnym lub jego karcie. Aby uzyskać więcej informacji, zobacz [Windows Forms i mapowanie właściwości WPF](windows-forms-and-wpf-property-mapping.md).  
   
 <a name="layoutrelated_properties_on_hosted_content"></a>   
@@ -86,7 +86,7 @@ ms.locfileid: "73978337"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Włączanie stylów wizualnych  
- [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] style wizualizacji w kontrolce [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] może nie być włączona. Metoda <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> jest wywoływana w szablonie dla aplikacji [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Chociaż ta metoda nie jest wywoływana domyślnie, jeśli używasz programu Visual Studio do tworzenia projektu, uzyskasz [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] style wizualizacji dla kontrolek, jeśli dostępna jest wersja 6,0 programu comctl32. dll. Należy wywołać metodę <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> przed utworzeniem uchwytów w wątku. Aby uzyskać więcej informacji, zobacz [jak: włączyć style wizualne w aplikacji hybrydowej](how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ Style wizualne systemu Microsoft Windows XP na kontrolce [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] mogą nie być włączone. Metoda <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> jest wywoływana w szablonie dla aplikacji [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Mimo że ta metoda nie jest wywoływana domyślnie, jeśli używasz programu Visual Studio do tworzenia projektu, uzyskasz dostęp do stylów wizualnych systemu Microsoft Windows XP dla kontrolek, jeśli dostępna jest wersja 6,0 programu comctl32. dll. Należy wywołać metodę <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> przed utworzeniem uchwytów w wątku. Aby uzyskać więcej informacji, zobacz [jak: włączyć style wizualne w aplikacji hybrydowej](how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Licencjonowane kontrolki  

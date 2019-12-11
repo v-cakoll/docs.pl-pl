@@ -64,5 +64,7 @@
           href: how-to-use-named-pipes-for-network-interprocess-communication.md
     - name: Potoki
       href: pipelines.md
+    - name: Praca z buforami
+      href: buffers.md
     - name: Pliki mapowane w pamięci
       href: memory-mapped-files.md

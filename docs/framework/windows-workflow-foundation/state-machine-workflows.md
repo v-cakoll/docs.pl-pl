@@ -21,7 +21,7 @@ Komputer stanu jest dobrze znanym modelem do tworzenia programów. Działania <x
   
 - <xref:System.Activities.Statements.Transition>  
   
- Aby utworzyć przepływ pracy automatu Stanów, Stany są dodawane do działania <xref:System.Activities.Statements.StateMachine>, a przejścia są używane do sterowania przepływem między Stanami. Poniższy zrzut ekranu, w [samouczku wprowadzenie](getting-started-tutorial.md) , krok po kroku [: tworzenie przepływu pracy automatu Stanów](how-to-create-a-state-machine-workflow.md), pokazuje przepływ pracy automatu Stanów z trzema stanami i trzema przejściami. **Inicjalizacja elementu docelowego** jest stanem początkowym i reprezentuje pierwszy stan w przepływie pracy. Jest to wskazane w wierszu, który zaczyna się od węzła **początkowego** . Końcowy stan w przepływie pracy nosi nazwę **FinalState**i reprezentuje punkt, w którym przepływ pracy został ukończony.  
+ Aby utworzyć przepływ pracy automatu Stanów, Stany są dodawane do działania <xref:System.Activities.Statements.StateMachine>, a przejścia są używane do sterowania przepływem między Stanami. Poniższy zrzut ekranu znajduje się w kroku [wprowadzenie samouczka](getting-started-tutorial.md) [How to: Utwórz](how-to-create-a-state-machine-workflow.md)przepływ pracy automatu Stanów, pokazuje przepływ pracy automatu Stanów z trzema stanami i trzema przejściami. **Inicjalizacja elementu docelowego** jest stanem początkowym i reprezentuje pierwszy stan w przepływie pracy. Jest to wskazane w wierszu, który zaczyna się od węzła **początkowego** . Końcowy stan w przepływie pracy nosi nazwę **FinalState**i reprezentuje punkt, w którym przepływ pracy został ukończony.  
   
  ![Ilustracja przedstawiająca ukończony przepływ pracy automatu Stanów.](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
@@ -59,12 +59,12 @@ Komputer stanu jest dobrze znanym modelem do tworzenia programów. Działania <x
 > [!NOTE]
 > Należy pamiętać, że jeśli <xref:System.Activities.Statements.Transition.Condition%2A> przejścia ma wartość `False` (lub wszystkie warunki przejścia wyzwalacza udostępnionego są oceniane do `False`), przejście nie zostanie wykonane, a wszystkie wyzwalacze dla wszystkich przejść ze stanu zostaną ponownie zaplanowane.  
   
- Aby uzyskać więcej informacji o tworzeniu przepływów pracy automatu Stanów, zobacz [jak: tworzenie przepływu pracy automatu](how-to-create-a-state-machine-workflow.md)Stanów, [Projektant działań](/visualstudio/workflow-designer/statemachine-activity-designer), działanie, Projektant działań [stanu](/visualstudio/workflow-designer/state-activity-designer), Projektant działań [FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)oraz [Projektant działań przejścia](/visualstudio/workflow-designer/transition-activity-designer).  
+ Aby uzyskać więcej informacji na temat tworzenia przepływów pracy automatu Stanów, zobacz [How to: Tworzenie przepływu pracy automatu Stanów,](how-to-create-a-state-machine-workflow.md), Projektant [działań](/visualstudio/workflow-designer/statemachine-activity-designer), [Projektant działań stanu](/visualstudio/workflow-designer/state-activity-designer), Projektant działań [FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)oraz [Projektant działań przejścia](/visualstudio/workflow-designer/transition-activity-designer).  
   
 ## <a name="state-machine-terminology"></a>Terminologia automatu Stanów  
  Ta sekcja zawiera definicję słownika automatu Stanów używanego w tym temacie.  
   
- Stan  
+ State  
  Jednostka podstawowa, która składa maszynę stanu. Komputer stanu może znajdować się w jednym stanie w określonym czasie.  
   
  Akcja Wejścia  
@@ -79,7 +79,7 @@ Komputer stanu jest dobrze znanym modelem do tworzenia programów. Działania <x
  Przejście udostępnione  
  Przejście, które udostępnia stan źródłowy i wyzwalacz z co najmniej jednym przejściem, ale ma unikatowy warunek i akcję.  
   
- Uruchamiać  
+ Wyzwalacz  
  Działanie wyzwalające, które powoduje wystąpienie przejścia.  
   
  Warunek  
@@ -102,7 +102,7 @@ Komputer stanu jest dobrze znanym modelem do tworzenia programów. Działania <x
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Tworzenie przepływu pracy automatu stanów](how-to-create-a-state-machine-workflow.md)
+- [Instrukcje: Tworzenie przepływu pracy automatu Stanów](how-to-create-a-state-machine-workflow.md)
 - [StateMachine, projektant działań](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [State, projektant działań](/visualstudio/workflow-designer/state-activity-designer)
 - [FinalState, projektant działań](/visualstudio/workflow-designer/finalstate-activity-designer)

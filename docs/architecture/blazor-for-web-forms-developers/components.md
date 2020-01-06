@@ -4,12 +4,12 @@ description: Dowiedz się, jak tworzyć składniki interfejsu użytkownika wielo
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 79919b183a4eb759f0b27c97500ee71c9378770b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088100"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337400"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Kompiluj składniki interfejsu użytkownika wielokrotnego użytku z Blazor
 
@@ -67,7 +67,7 @@ Dyrektywy Razor, podobnie jak dyrektywy w ASP.NET Web Forms, kontrolują wiele a
 - Zaimplementowane interfejsy
 - Parametry ogólne
 - Zaimportowane przestrzenie nazw
-- Rozsyłan
+- Trasy
 
 Dyrektywy Razor zaczynają się od znaku `@` i są zwykle używane na początku nowego wiersza na początku pliku. Na przykład dyrektywa `@namespace` definiuje przestrzeń nazw składnika:
 
@@ -131,7 +131,7 @@ Aby dodać elementy członkowskie do klasy składnika Razor, użyj dyrektywy `@c
 }
 ```
 
-Ze względu na to C#, że Razor jest oparta na, musi C# być skompilowana z poziomu projektu ( *. csproj*). Nie można kompilować plików *Razor* z projektu VB ( *. vbproj*). Nadal można odwoływać się do projektów VB z projektu Blazor. Przeciwieństwo jest również prawdziwe.
+Ze względu na to C#, że Razor jest oparta na, musi C# być skompilowana z poziomu projektu ( *. csproj*). Nie można kompilować plików *Razor* z projektu Visual Basic ( *. vbproj*). Nadal możesz odwoływać się do Visual Basic projektów z projektu Blazor. Przeciwieństwo jest również prawdziwe.
 
 Aby uzyskać pełne informacje dotyczące składnia Razor, zobacz [składnia Razor Reference for ASP.NET Core](/aspnet/core/mvc/views/razor).
 
@@ -196,7 +196,7 @@ Aby określić parametr składnika w Blazor, Użyj atrybutu tak jak w ASP.NET We
 <Counter IncrementAmount="10" />
 ```
 
-## <a name="event-handlers"></a>Programy obsługi zdarzeń
+## <a name="event-handlers"></a>Procedury obsługi zdarzeń
 
 Zarówno ASP.NET Web Forms, jak i Blazor zapewniają oparty na zdarzeniach model programowania do obsługi zdarzeń interfejsu użytkownika. Przykłady takich zdarzeń obejmują kliknięcia przycisku i wprowadzanie tekstu. W formularzach sieci Web ASP.NET używasz kontrolek serwera HTML do obsługi zdarzeń interfejsu użytkownika uwidocznionych przez DOM lub można obsługiwać zdarzenia udostępniane przez formanty serwera sieci Web. Zdarzenia są nakierowane na serwer za pomocą żądań post-Back. Rozważmy poniższy przycisk formularzy sieci Web, a następnie kliknij przycisk przykład:
 

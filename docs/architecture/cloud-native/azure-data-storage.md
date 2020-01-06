@@ -2,12 +2,12 @@
 title: Magazyn danych na platformie Azure
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Magazyn danych na platformie Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 1a86cecf005c6dbdfda5cf4cacfafaad4711c076
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5ba05f53faf65334f6269af8ae2c54d81e6b0779
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087764"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337460"
 ---
 # <a name="data-storage-in-azure"></a>Magazyn danych na platformie Azure
 
@@ -63,11 +63,11 @@ Oprócz tradycyjnego stosu Microsoft SQL Server platforma Azure oferuje także z
 
 - [Skalowanie](https://docs.microsoft.com/azure/mysql/concepts-high-availability) w razie konieczności w ciągu kilku sekund.
 
-- Zabezpieczony, aby chronić poufne dane w czasie spoczynku i ruchowo.
+- Zabezpieczenia zapewniające ochronę przesyłanych oraz magazynowanych poufnych danych
 
 - [Automatyczne kopie zapasowe](https://docs.microsoft.com/azure/mysql/concepts-backup) i [przywracanie do punktu w czasie](https://docs.microsoft.com/azure/mysql/concepts-backup) przez maksymalnie 35 dni.
 
-- Bezpieczeństwo i zgodność klasy korporacyjnej.
+- Mechanizmy zabezpieczeń i zgodności klasy korporacyjnej
 
 Te wbudowane funkcje PaaS są ważne dla organizacji, które mają setki baz danych "taktycznych" (niestrategicznych) w swoich centrach danych, ale nie mają zasobów do wykonywania poprawek, kopii zapasowych, zabezpieczeń i monitorowania wydajności.
 
@@ -95,7 +95,7 @@ MariaDB jest silnie stosowana i jest używana przez wiele dużych przedsiębiors
 
 - [Automatyczne kopie zapasowe](https://docs.microsoft.com/azure/mariadb/concepts-backup) i [przywracanie do punktu w czasie](https://docs.microsoft.com/azure/mariadb/concepts-backup) przez maksymalnie 35 dni.
 
-- Bezpieczeństwo i zgodność klasy korporacyjnej.
+- Mechanizmy zabezpieczeń i zgodności klasy korporacyjnej
 
 ## <a name="azure-database-for-postgresql"></a>Azure Database for PostgreSQL
 
@@ -141,7 +141,7 @@ Korzystając z Cosmos DB [interfejsów API multihostingu](https://docs.microsoft
 
 ### <a name="multi-model-support"></a>Obsługa wielomodelowa
 
-Cosmos DB to *wielomodelowa platforma danych* umożliwiająca współdziałanie z danymi przy użyciu wielu obsługiwanych modeli NoSQL, w tym dokumentów, par klucz-wartość, szerokiej kolumny i reprezentacji grafów. Wewnętrznie dane są przechowywane w prostym formacie [struktury](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs) składającym się z typów danych pierwotnych, takich jak ciągi, BOOLs i Numbers. Dla każdego żądania aparat bazy danych tłumaczy dane na wybraną reprezentację modelu. Można wybierać spośród Cosmos DB własnościowego interfejsu API opartego na języku SQL lub dowolnych [interfejsów API zgodności](https://www.wikiwand.com/en/Cosmos_DB) przedstawionych na rysunku 5-14.
+Cosmos DB to *wielomodelowa platforma danych* , która umożliwia współdziałanie z danymi przy użyciu wielu obsługiwanych modeli NoSQL, w tym dokumentów, par klucz-wartość, szerokiej kolumny i reprezentacji grafów. Wewnętrznie dane są przechowywane w prostym formacie [struktury](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs) składającym się z typów danych pierwotnych, takich jak ciągi, wartości logiczne i liczby. Dla każdego żądania aparat bazy danych tłumaczy dane na wybraną reprezentację modelu. Można wybierać spośród Cosmos DB własnościowego interfejsu API opartego na języku SQL lub dowolnych [interfejsów API zgodności](https://www.wikiwand.com/en/Cosmos_DB) przedstawionych na rysunku 5-14.
 
 ![Dostawcy Cosmos DB](./media/cosmos-db-providers.png)
 
@@ -149,7 +149,7 @@ Cosmos DB to *wielomodelowa platforma danych* umożliwiająca współdziałanie 
 
 Zanotuj na rysunku 5-14, jak Cosmos DB obsługuje [Table Storage](https://azure.microsoft.com/services/storage/tables/). Zarówno Cosmos DB, jak i [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview) współdzielą ten sam model tabeli i uwidaczniają wiele z tych samych operacji w tabeli. Jednak [interfejs API tabel Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/table-introduction) zawiera wiele ulepszeń Premium, które nie są dostępne w interfejsie API usługi Azure Storage. Te funkcje są zróżnicowane na rysunku 5-15.
 
-![interfejs API tabel platformy Azure](./media/azure-table-api.png)
+![Interfejs API tabel platformy Azure](./media/azure-table-api.png)
 
 **Rysunek 5-15**: interfejs API tabel platformy Azure
 
@@ -191,7 +191,7 @@ Zwróć uwagę na rysunek 5-18 jak każdy element zawiera klucz partycji "miasto
 
 Wewnętrznie program Cosmos DB automatycznie zarządza umieszczaniem [partycji logicznych](https://docs.microsoft.com/azure/cosmos-db/partition-data) w [partycjach fizycznych](https://docs.microsoft.com/azure/cosmos-db/partition-data) , aby skutecznie spełnić wymagania dotyczące skalowalności i wydajności kontenera. W miarę wzrostu wymagań dotyczących przepływności i magazynowania aplikacji Azure Cosmos DB przenosi partycje logiczne, aby redystrybuować obciążenie na większą liczbę serwerów. Te operacje redystrybucji są zarządzane przez Cosmos DB i wykonywane bez przerwy ani przestojów.
 
-## <a name="azure-redis-cache"></a>Azure Redis Cache
+## <a name="azure-redis-cache"></a>Usługa Azure Redis Cache
 
 Zalety buforowania w celu poprawy wydajności i skalowalności.
 

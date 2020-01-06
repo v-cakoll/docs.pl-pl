@@ -2,12 +2,12 @@
 title: Wzorce danych natywnych w chmurze
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Wzorce danych natywnych w chmurze
 ms.date: 06/30/2019
-ms.openlocfilehash: 0d251f3046fcd3f3a2f5d856a123a35d3f7ecff2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9e90409b0b633796b452cfcfecb3896e79002d4d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087699"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337421"
 ---
 # <a name="cloud-native-data-patterns"></a>Wzorce danych natywnych w chmurze
 
@@ -63,7 +63,7 @@ Podczas gdy zapytania między mikrousługami są trudne, wdrożenie transakcji w
 
 **Rysunek 5-8**. Implementowanie transakcji w mikrousługach
 
-Zwróć uwagę na to, jak w poprzednim rysunku pięciu niezależnych mikrousług wszyscy uczestniczą w rozproszonej transakcji *tworzenia zamówienia* . Jednakże transakcja dla każdego z pięciu poszczególnych mikrousług musi się powieść lub wszystkie muszą przerwać operację. Wbudowana obsługa transakcyjna jest dostępna w ramach każdej mikrousług, ale nie jest obsługiwana transakcja rozproszona w ramach wszystkich pięciu usług.
+Zwróć uwagę na to, jak w poprzednim rysunku pięciu niezależnych mikrousług wszyscy uczestniczą w rozproszonej transakcji *tworzenia zamówienia* . Jednakże transakcja dla każdego z pięciu pojedynczych mikrousług musi się powieść lub wszystkie muszą przerwać operację. Wbudowana obsługa transakcyjna jest dostępna w ramach każdej mikrousług, ale nie jest obsługiwana transakcja rozproszona w ramach wszystkich pięciu usług.
 
 Ponieważ obsługa transakcyjna jest istotna dla tej operacji, aby zachować spójność danych w poszczególnych mikrousługach, należy programowo skonstruować transakcję rozproszoną.
 

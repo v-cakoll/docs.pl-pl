@@ -2,12 +2,12 @@
 title: Natywna DevOps w chmurze
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Natywna DevOps w chmurze
 ms.date: 06/30/2019
-ms.openlocfilehash: 2b3dd47eeeb69d63f5ae39705abb9d1d51295645
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d152989061964d78c8be97b69df413b975058319
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087544"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337410"
 ---
 # <a name="cloud-native-devops"></a>Natywna DevOps w chmurze
 
@@ -59,7 +59,7 @@ Każdy z tych składników zapewnia pewne korzyści dla aplikacji natywnych w ch
 
 Organizacja kodu dla aplikacji natywnej w chmurze może być wyzwaniem. Zamiast pojedynczej aplikacji bardzo duże aplikacje natywne w chmurze składają się z sieci Web mniejszych aplikacji, które komunikują się ze sobą. Podobnie jak w przypadku wszystkich rzeczy na platformie obliczeniowej, najlepszym rozwiązaniem kodu pozostaje otwarte pytanie. Istnieją przykłady pomyślnych aplikacji korzystających z różnych rodzajów układów, ale dwie odmiany wydają się mieć największą popularność.
 
-Przed przystąpieniem do rzeczywistej kontroli źródła, prawdopodobnie warto określić liczbę projektów, które są odpowiednie. W jednym projekcie jest obsługiwana obsługa wielu repozytoriów i potoków kompilacji. Tablice są nieco bardziej skomplikowane, ale zbyt wiele zadań może być łatwo przypisanych do wielu zespołów w ramach pojedynczego projektu. Z pewnością można obsłużyć setki, nawet tysięcy deweloperów, z jednego projektu usługi Azure DevOps. Jest to prawdopodobnie najlepszym podejściem, ponieważ zapewnia to pojedyncze miejsce, dla którego wszyscy deweloperzy nie mogą pracować, i zmniejszają problemy z znalezieniem, że jedna aplikacja nie ma pewności, w którym projekcie, w którym się znajdują.
+Przed przystąpieniem do rzeczywistej kontroli źródła, prawdopodobnie warto określić liczbę projektów, które są odpowiednie. W jednym projekcie jest obsługiwana obsługa wielu repozytoriów i potoków kompilacji. Tablice są nieco bardziej skomplikowane, ale zbyt wiele zadań można łatwo przypisać do wielu zespołów w ramach pojedynczego projektu. Z pewnością można obsłużyć setki, nawet tysięcy deweloperów, z jednego projektu usługi Azure DevOps. Jest to prawdopodobnie najlepszym podejściem, ponieważ zapewnia to pojedyncze miejsce, dla którego wszyscy deweloperzy nie mogą pracować, i zmniejszają problemy z znalezieniem, że jedna aplikacja nie ma pewności, w którym projekcie, w którym się znajdują.
 
 Dzielenie kodu dla mikrousług w projekcie usługi Azure DevOps może być nieco trudniejsze.
 
@@ -238,11 +238,11 @@ Wynik końcowy kompilacji to kolekcja plików znana jako artefakty kompilacji. T
 
 ### <a name="azure-devops-releases"></a>Wersje usługi Azure DevOps
 
-Kompilacje wymagają skompilowania oprogramowania do pakietu możliwego do wysyłki, ale artefakty nadal muszą zostać wypchnięte do środowiska testowego w celu ukończenia ciągłego dostarczania. W takim przypadku usługa Azure DevOps używa osobnego narzędzia o nazwie releases. Wersje wykorzystują te same biblioteki zadań, które były dostępne dla kompilacji, ale wprowadzają pojęcie "etapów". Etap jest izolowanym środowiskiem, w którym jest zainstalowany pakiet. Na przykład produkt może wykorzystywać programowanie, pytania i odpowiedzi oraz środowisko produkcyjne. Kod jest stale dostarczany do środowiska programistycznego, w którym można uruchomić testy automatyczne. Po przejściu tych testów do środowiska pytań i odpowiedzi na testowanie ręczne. Na koniec kod jest wypychany do środowiska produkcyjnego, w którym jest widoczny dla każdego.
+Kompilacje wymagają skompilowania oprogramowania do pakietu możliwego do wysyłki, ale artefakty nadal muszą zostać wypchnięte do środowiska testowego w celu ukończenia ciągłego dostarczania. W takim przypadku usługa Azure DevOps używa osobnego narzędzia o nazwie releases. Narzędzie releases korzysta z tej samej biblioteki zadań, która była dostępna dla kompilacji, ale wprowadza koncepcję "etapów". Etap jest izolowanym środowiskiem, w którym jest zainstalowany pakiet. Na przykład produkt może wykorzystywać programowanie, pytania i odpowiedzi oraz środowisko produkcyjne. Kod jest stale dostarczany do środowiska programistycznego, w którym można uruchomić testy automatyczne. Po przejściu tych testów do środowiska pytań i odpowiedzi na testowanie ręczne. Na koniec kod jest wypychany do środowiska produkcyjnego, w którym jest widoczny dla każdego.
 
 ![Rysunek 11-9 przykład potoku wydania z etapami opracowywania, kontroli jakości i produkcji](./media/release-pipeline.png)
 
-Każdy etap kompilacji może być automatycznie wyzwalany przez zakończenie poprzedniej fazy. Jednak w wielu przypadkach nie jest to pożądane. Przeniesienie kodu do produkcji może wymagać od kogoś zatwierdzenia. Wersje obsługują tę funkcję, umożliwiając zatwierdzanie na każdym etapie potoku wydania. Zasady można skonfigurować w taki sposób, aby określona osoba lub grupa osób musiała się wylogować w wersji przed rozpoczęciem pracy w środowisku produkcyjnym. Te bramy umożliwiają ręczne sprawdzanie jakości oraz zgodność z wymaganiami prawnymi związanymi z kontrolą, co prowadzi do produkcji.
+Każdy etap kompilacji może być automatycznie wyzwalany przez zakończenie poprzedniej fazy. Jednak w wielu przypadkach nie jest to pożądane. Przeniesienie kodu do produkcji może wymagać od kogoś zatwierdzenia. Narzędzie releases obsługuje to przez umożliwienie zatwierdzania na każdym etapie potoku wydania. Zasady można skonfigurować w taki sposób, aby określona osoba lub grupa osób musiała się wylogować w wersji przed rozpoczęciem pracy w środowisku produkcyjnym. Te bramy umożliwiają ręczne sprawdzanie jakości oraz zgodność z wymaganiami prawnymi związanymi z kontrolą, co prowadzi do produkcji.
 
 ### <a name="everybody-gets-a-build-pipeline"></a>Każdy pobiera potok kompilacji
 

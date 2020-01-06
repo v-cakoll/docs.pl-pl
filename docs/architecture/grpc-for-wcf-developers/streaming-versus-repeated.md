@@ -1,13 +1,13 @@
 ---
-title: gRPC Streaming Services a powtórzone pola — gRPC dla deweloperów WCF
-description: Porównywanie powtarzających się pól z usługami przesyłania strumieniowego jako metody przekazywania kolekcji danych za pomocą gRPC.
+title: Usługi przesyłania strumieniowego a powtarzalne pola — gRPC dla deweloperów WCF
+description: Porównaj powtarzane pola z usługami przesyłania strumieniowego jako metody przekazywania kolekcji danych za pomocą gRPC.
 ms.date: 09/02/2019
-ms.openlocfilehash: f2f13776586607ed489c45ebb324c0c5713bed99
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46586ab08df6b136cdafb990ce8be75435a6bf6c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966923"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337864"
 ---
 # <a name="grpc-streaming-services-versus-repeated-fields"></a>gRPC Streaming Services a powtórzone pola
 

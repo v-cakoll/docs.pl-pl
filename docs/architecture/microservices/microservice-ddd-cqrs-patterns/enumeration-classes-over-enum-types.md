@@ -2,20 +2,20 @@
 title: Używanie klas wyliczeń zamiast typów wyliczeń
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Wyczyść, w jaki sposób można używać klas wyliczenia, zamiast wyliczeniowych, w celu rozwiązania niektórych ograniczeń dotyczących tego ostatniego.
 ms.date: 10/08/2018
-ms.openlocfilehash: 255bccab0e1fe71e00c0d0b47c8af05f80cb760b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6752adb28b1bd0982c66fa2d021b04b999447c6e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093861"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337680"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Użyj klas wyliczenia zamiast typów wyliczeniowych
 
-[Wyliczenia](../../../csharp/language-reference/keywords/enum.md) (lub *typy wyliczeniowe* dla krótki) są otoką języka cienkiego wokół typu całkowitego. Możesz chcieć ograniczyć ich użycie do momentu przechowywania jednej wartości z zamkniętego zestawu wartości. Klasyfikacja oparta na rozmiarach (mały, średni, duży) jest dobrym przykładem. Korzystanie z wyliczeń dla przepływu sterowania lub bardziej niezawodnych abstrakcji może być [zapachem kodu](https://deviq.com/code-smells/). Ten typ użycia prowadzi do delikatnego kodu z wieloma instrukcjami przepływu sterowania, sprawdzając wartości wyliczenia.
+[Wyliczenia](../../../csharp/language-reference/builtin-types/enum.md) (lub *typy wyliczeniowe* dla krótki) są otoką języka cienkiego wokół typu całkowitego. Możesz chcieć ograniczyć ich użycie do momentu przechowywania jednej wartości z zamkniętego zestawu wartości. Klasyfikacja oparta na rozmiarach (mały, średni, duży) jest dobrym przykładem. Korzystanie z wyliczeń dla przepływu sterowania lub bardziej niezawodnych abstrakcji może być [zapachem kodu](https://deviq.com/code-smells/). Ten typ użycia prowadzi do delikatnego kodu z wieloma instrukcjami przepływu sterowania, sprawdzając wartości wyliczenia.
 
 Zamiast tego można tworzyć klasy wyliczenia, które umożliwiają wszystkie bogate funkcje języka zorientowanego na obiekt.
 
-Nie jest to jednak krytyczne zagadnienie i w wielu przypadkach dla uproszczenia można nadal używać zwykłych [typów wyliczeniowych](../../../csharp/language-reference/keywords/enum.md) , jeśli jest to Twoje preferencje. Mimo to użycie klas wyliczenia jest bardziej powiązane z pojęciami związanymi z biznesem.
+Nie jest to jednak krytyczne zagadnienie i w wielu przypadkach dla uproszczenia można nadal używać zwykłych [typów wyliczeniowych](../../../csharp/language-reference/builtin-types/enum.md) , jeśli jest to Twoje preferencje. Mimo to użycie klas wyliczenia jest bardziej powiązane z pojęciami związanymi z biznesem.
 
 ## <a name="implement-an-enumeration-base-class"></a>Zaimplementuj wyliczaną klasę bazową
 

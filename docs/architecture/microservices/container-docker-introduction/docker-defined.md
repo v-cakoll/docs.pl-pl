@@ -2,12 +2,12 @@
 title: Co to jest Docker?
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Co to jest platforma Docker?
 ms.date: 08/31/2018
-ms.openlocfilehash: 215d756c631440c99a3a8ad8128ec61fef3bc26d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a53845d3bbcf24f3eaeb98b9e08b6f35a023c30e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740095"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337704"
 ---
 # <a name="what-is-docker"></a>Co to jest Docker?
 
@@ -19,7 +19,7 @@ ms.locfileid: "73740095"
 
 Kontenery platformy Docker mogą działać w dowolnym miejscu, lokalnie w centrum danych klienta, w zewnętrznym dostawcy usług lub w chmurze na platformie Azure. Kontenery obrazów platformy Docker mogą działać natywnie w systemach Linux i Windows. Jednak obrazy systemu Windows można uruchamiać tylko na hostach z systemem Windows, a obrazy systemu Linux można uruchamiać na hostach z systemem Linux i hostach Windows (do tej pory przy użyciu maszyny wirtualnej funkcji Hyper-V z systemem Linux), gdzie host oznacza serwer lub maszynę wirtualną.
 
-Deweloperzy mogą używać środowisk programistycznych w systemie Windows, Linux lub macOS. Na komputerze deweloperskim deweloper uruchamia Host platformy Docker, na którym są wdrażane obrazy platformy Docker, w tym aplikację i jej zależności. Deweloperzy, którzy pracują w systemie Linux lub na komputerach Mac, korzystają z hosta platformy Docker, który jest oparty na systemie Linux i mogą tworzyć obrazy tylko dla kontenerów systemu Linux. (Deweloperzy pracujący na komputerze Mac mogą edytować kod lub uruchomić interfejs wiersza polecenia platformy Docker z macOS, ale w czasie pisania nie można uruchamiać kontenerów bezpośrednio na macOS). Deweloperzy, którzy pracują w systemie Windows, mogą tworzyć obrazy dla kontenerów systemu Linux lub Windows.
+Deweloperzy mogą używać środowisk programistycznych w systemie Windows, Linux lub macOS. Na komputerze deweloperskim deweloper uruchamia Host platformy Docker, na którym są wdrażane obrazy platformy Docker, w tym aplikację i jej zależności. Deweloperzy pracujący w systemie Linux lub macOS używają hosta platformy Docker, który jest oparty na systemie Linux i mogą tworzyć obrazy tylko dla kontenerów systemu Linux. (Deweloperzy pracujący na macOS mogą edytować kod lub uruchamiać interfejs wiersza polecenia platformy Docker z macOS, ale w czasie tego pisania, kontenery nie są uruchamiane bezpośrednio na macOS). Deweloperzy, którzy pracują w systemie Windows, mogą tworzyć obrazy dla kontenerów systemu Linux lub Windows.
 
 Do hostowania kontenerów w środowiskach deweloperskich i dostarczania dodatkowych narzędzi programistycznych, Docker [Community Edition (CE)](https://www.docker.com/community-edition) dla systemu Windows lub dla macOS. Te produkty instalują niezbędną maszynę wirtualną (host platformy Docker) do hostowania kontenerów. Platforma Docker udostępnia również dostęp do [platformy Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), która jest przeznaczona do programowania w przedsiębiorstwie i jest używana przez zespoły IT, którzy tworzą, dostarczają i uruchamiają duże aplikacje o krytycznym znaczeniu dla firmy w środowisku produkcyjnym.
 

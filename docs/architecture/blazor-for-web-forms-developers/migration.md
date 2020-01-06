@@ -4,12 +4,12 @@ description: Dowiedz się, jak podejście do migracji istniejącej aplikacji ASP
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b6604e000eaf79bcd8da15d72a3d85713c620851
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 52f463c66c2980d59a93f3210b3cfd825bec33da
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191936"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337451"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Migrowanie z formularzy sieci Web ASP.NET do Blazor
 
@@ -252,7 +252,7 @@ Aby uzyskać więcej informacji o uruchamianiu aplikacji, zobacz [Uruchamianie a
 
 ## <a name="migrate-http-modules-and-handlers-to-middleware"></a>Migrowanie modułów i programów obsługi HTTP do oprogramowania pośredniczącego
 
-Moduły i programy obsługi HTTP są typowymi wzorcami w formularzach sieci Web w celu kontrolowania potoku żądań HTTP. Klasy implementujące `IHttpModule` lub `IHttpHandler` można rejestrować i przetwarzać żądania przychodzące. Formularze sieci Web konfigurują moduły i programy obsługi w pliku *Web. config* . Formularze sieci Web są również intensywnie oparte na obsłudze zdarzeń cyklu życia aplikacji. ASP.NET Core zamiast tego używa oprogramowania pośredniczącego. Middlewares są zarejestrowane w metodzie `Configure` klasy `Startup`. Kolejność wykonywania oprogramowania pośredniczącego zależy od kolejności rejestracji.
+Moduły i programy obsługi HTTP są typowymi wzorcami w formularzach sieci Web w celu kontrolowania potoku żądań HTTP. Klasy implementujące `IHttpModule` lub `IHttpHandler` można rejestrować i przetwarzać żądania przychodzące. Formularze sieci Web konfigurują moduły i programy obsługi w pliku *Web. config* . Formularze sieci Web są również intensywnie oparte na obsłudze zdarzeń cyklu życia aplikacji. ASP.NET Core zamiast tego używa oprogramowania pośredniczącego. Oprogramowanie pośredniczące jest zarejestrowane w metodzie `Configure` klasy `Startup`. Kolejność wykonywania oprogramowania pośredniczącego zależy od kolejności rejestracji.
 
 W sekcji [Włączanie procesu uruchamiania](#enable-startup-process) zdarzenie cyklu życia zostało zgłoszone przez formularze sieci Web jako metodę `Application_BeginRequest`. To zdarzenie nie jest dostępne w ASP.NET Core. Jednym ze sposobów osiągnięcia tego zachowania jest wdrożenie oprogramowania pośredniczącego, jak pokazano w przykładzie pliku *Startup.cs* . To oprogramowanie pośredniczące wykonuje tę samą logikę, a następnie przekazuje kontrolę do kolejnej procedury obsługi w potoku programu pośredniczącego.
 
@@ -277,7 +277,7 @@ Projekt eShop umożliwia dostęp do podstawowego pliku statycznego. Istnieje wie
 
 ## <a name="migrate-runtime-bundling-and-minification-setup"></a>Migruj konfigurację i minifikacja środowiska uruchomieniowego
 
-Tworzenie i minifikacja to techniki optymalizacji wydajności umożliwiające zmniejszenie liczby i rozmiaru żądań serwera w celu pobrania określonych typów plików. JavaScript i CSS są często poddawane pewnej formie minifikacja przed wysłaniem do klienta. W programie ASP.NET Web Forms te optymalizacje są obsługiwane w czasie wykonywania. Konwencje optymalizacji są definiowane jako plik *App_Start/BundleConfig. cs* . W ASP.NET Core zostanie przyjęte bardziej deklaracyjne podejście. Plik zawiera listę plików, które mają być zminimalizowanego, oraz określonych ustawień minifikacja.
+Tworzenie i minifikacja to techniki optymalizacji wydajności umożliwiające zmniejszenie liczby i rozmiaru żądań serwera w celu pobrania określonych typów plików. JavaScript i CSS są często poddawane pewnej formie minifikacja przed wysłaniem do klienta. W programie ASP.NET Web Forms te optymalizacje są obsługiwane w czasie wykonywania. Konwencje optymalizacji są zdefiniowane *App_Start pliku/bundleconfig.cs* . W ASP.NET Core zostanie przyjęte bardziej deklaracyjne podejście. Plik zawiera listę plików, które mają być zminimalizowanego, oraz określonych ustawień minifikacja.
 
 Aby uzyskać więcej informacji na temat grupowania i minifikacja, zobacz [zestawy i zminifikować zasobów statycznych w ASP.NET Core](/aspnet/core/client-side/bundling-and-minification).
 
@@ -627,7 +627,7 @@ Następujące zmiany związane z EF były niezbędne do eShop:
 
 Chociaż nie ma tej samej natywnej obsługi powiązań zestawu danych, Blazor zapewnia elastyczność i moc z C# obsługą na stronie Razor. Na przykład można wykonać obliczenia i wyświetlić wynik. Aby uzyskać więcej informacji na temat wzorców danych w programie Blazor, zobacz rozdział [dostępu do danych](data.md) .
 
-## <a name="architectural-changes"></a>Zmiany architektury
+## <a name="architectural-changes"></a>Zmiany w architekturze
 
 Na koniec należy wziąć pod uwagę pewne istotne różnice w architekturze podczas migracji do Blazor. Wiele z tych zmian ma zastosowanie do wszystkich elementów opartych na platformie .NET Core lub ASP.NET Core.
 
@@ -642,7 +642,7 @@ Aby uzyskać więcej informacji na temat technik umożliwiających identyfikacj�
 
 ASP.NET Core jest reobrazną wersją ASP.NET i zawiera pewne zmiany, które mogą nie być początkowo oczywiste. Główne zmiany są następujące:
 
-- Brak kontekstu synchronizacji, co oznacza, że nie ma `HttpContext.Current`, `Thread.CurrentPrincipal` ani innych metod dostępu statycznego
+- Brak kontekstu synchronizacji, co oznacza, że nie ma `HttpContext.Current`, `Thread.CurrentPrincipal`ani innych metod dostępu statycznego
 - Brak kopiowania w tle
 - Brak kolejki żądań
 
@@ -653,4 +653,4 @@ Wiele operacji w ASP.NET Core jest asynchronicznych, co umożliwia łatwiejsze �
 W tym momencie widzisz wiele przykładów potrzebnych do przeniesienia projektu formularzy sieci Web do Blazor. Pełny przykład można znaleźć w projekcie [eShopOnBlazor](https://github.com/dotnet-architecture/eShopOnBlazor) .
 
 >[!div class="step-by-step"]
->[Ubiegł](security-authentication-authorization.md)
+>[Poprzednie](security-authentication-authorization.md)

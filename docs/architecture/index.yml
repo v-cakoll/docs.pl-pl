@@ -2,7 +2,6 @@
 documentType: LandingData
 title: Wskazówki dotyczące architektury aplikacji .NET
 metadata:
-  document_id: na
   title: Wskazówki dotyczące architektury aplikacji .NET
   meta.description: 'Learn about recommended practices for architecting, designing and building .NET software.'
   ms.topic: landing-page
@@ -21,7 +20,7 @@ sections:
       - html: <ul><li><p><a href="modern-web-apps-azure/index">Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure</a></p>
       - html: '<p>Ten przewodnik zawiera wprowadzenie do zalecanej architektury, projektu i procesów wdrażania, które będą używane do kompilowania aplikacji ASP.NET i ASP.NET Core oraz hostowania aplikacji na platformie Azure.</p></li></ul>'
       - html: <ul><li><p><a href="microservices/index">Tworzenie architektury aplikacji opartych na kontenerach i mikrousługach</a></p>
-      - html: <p>Ten przewodnik stanowi wprowadzenie do tworzenia aplikacji opartych na mikrousługach i zarządzania nimi przy użyciu kontenerów. Omówiono podejścia projektowania i implementacji architektury przy użyciu programu .NET Core i kontenerów platformy Docker.</p></li></ul>
+      - html: <p>Ten przewodnik stanowi wprowadzenie do tworzenia aplikacji opartych na mikrousługach i zarządzania nimi przy użyciu kontenerów. Omówiono w nim podejścia do projektowania i implementowania architektury przy użyciu platformy .NET Core i kontenerów Docker.</p></li></ul>
       - html: '<ul><li><p><a href="serverless/index">Aplikacje bezserwerowe: architektura, wzorce i implementacja platformy Azure</a></p>'
       - html: '<p>Jest to przewodnik dotyczący tworzenia aplikacji bezserwerowych z przykładami przy użyciu platformy Azure. W tym artykule omówiono różne podejścia do architektury i projektowania, korzyści i wyzwania związane z bez serwera oraz scenariusze i przypadki użycia dla aplikacji bezserwerowych.</p></li></ul>'
   - title: Podgląd książek elektronicznych

@@ -2,12 +2,12 @@
 title: Odporność na platformę Azure
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Odporność infrastruktury chmurowej na platformę Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 02d661952c860da25442b0fa9fed0d5f93abe023
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 8b33c1cec1633c9fb25ae2b02e51f8be01c22941
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520770"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337387"
 ---
 # <a name="azure-platform-resiliency"></a>Odporność na platformę Azure
 
@@ -26,7 +26,7 @@ Zrozumienie, jak te charakterystyki współpracują ze sobą i jak mają wpływ 
 
 Awarie różnią się w zakresie wpływu. Awaria sprzętowa, taka jak uszkodzony dysk, może mieć wpływ na pojedynczy węzeł w klastrze. Uszkodzony przełącznik sieciowy może mieć wpływ na cały stojak serwera. Mniej typowe błędy, takie jak utrata mocy, mogą zakłócać całe centrum danych. Rzadko, cały region jest niedostępny.
 
-[Nadmiarowość](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) jest jednym ze sposobów zapewnienia odporności aplikacji. Dokładny poziom nadmiarowości zależy od wymagań firmy i wpłynie na koszty i złożoność systemu. Na przykład wdrożenie w wielu regionach jest droższe i bardziej skomplikowane niż w przypadku wdrożenia w jednym regionie. Aby zarządzać trybem failover i powrotu po awarii, musisz wykonać procedury operacyjne. Dodatkowy koszt i złożoność mogą być usprawiedliwione dla niektórych scenariuszy firmy, a nie innych.
+[Nadmiarowość](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) jest jednym ze sposobów zapewnienia odporności aplikacji. Dokładny poziom nadmiarowości zależy od wymagań firmy i wpłynie na koszty i złożoność systemu. Na przykład wdrożenie w wielu regionach jest droższe i bardziej skomplikowane niż w przypadku wdrożenia w jednym regionie. Aby zarządzać trybem failover i powrotu po awarii, musisz wykonać procedury operacyjne. Dodatkowy koszt i złożoność mogą być uzasadnione w pewnych scenariuszach biznesowych, a w innych — już nie.
 
 Aby zapewnić nadmiarowość, należy zidentyfikować ścieżki krytyczne w aplikacji, a następnie określić, czy istnieje nadmiarowość w każdym punkcie ścieżki? Jeśli podsystem nie powinien działać, aplikacja przejdzie w tryb failover na coś innego? Na koniec należy jasno zrozumieć te funkcje, które są wbudowane w platformę chmury platformy Azure, z których można korzystać w celu spełnienia wymagań dotyczących nadmiarowości. Poniżej przedstawiono zalecenia dotyczące tworzenia nadmiarowości:
 
@@ -78,7 +78,7 @@ Zachęcamy do stosowania najlepszych rozwiązań dotyczących implementowania op
 
 - *Azure Redis Cache.* Klient programu Redis StackExchange używa klasy Menedżera połączeń, która obejmuje ponawianie prób przy nieudanych próbach. Można skonfigurować liczbę ponownych prób, konkretne zasady ponawiania i czas oczekiwania.
 
-- *Azure Service Bus.* Klient Service Bus uwidacznia [klasę RetryPolicy](xref:Microsoft.ServiceBus.RetryPolicy) , która może być skonfigurowana z interwałem wycofywania, liczbą ponownych prób i <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>, która określa maksymalny czas trwania operacji. Domyślną zasadą jest dziewięć Maksymalna liczba ponownych prób z 30-sekundowym okresem wycofywania między kolejnymi próbami.
+- *Azure Service Bus.* Klient Service Bus uwidacznia [klasę RetryPolicy](xref:Microsoft.ServiceBus.RetryPolicy) , która może być skonfigurowana z interwałem wycofywania, liczbą ponownych prób i <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer%2A>, która określa maksymalny czas trwania operacji. Domyślną zasadą jest dziewięć Maksymalna liczba ponownych prób z 30-sekundowym okresem wycofywania między kolejnymi próbami.
 
 - *Azure SQL Database.* W przypadku korzystania z biblioteki [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) podano ponowną pomoc techniczną.
 

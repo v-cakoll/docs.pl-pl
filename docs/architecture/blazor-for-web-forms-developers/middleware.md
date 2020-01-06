@@ -4,24 +4,24 @@ description: Dowiedz się więcej na temat obsługi żądań HTTP za pomocą mod
 author: danroth27
 ms.author: daroth
 ms.date: 10/11/2019
-ms.openlocfilehash: b0be6109b9226bddbb9cbe4cebf114fd2b2a6114
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 3ecc109c54f88b5b06a1474f7c6e262d426a78a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291149"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337475"
 ---
 # <a name="modules-handlers-and-middleware"></a>Moduły, programy obsługi i oprogramowanie pośredniczące
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Aplikacja ASP.NET Core jest oparta na serii oprogramowania pośredniczącego. Middlewares są programami obsługi, które są rozmieszczone w potoku do obsługi żądań i odpowiedzi. W aplikacji formularzy sieci Web programy obsługi HTTP i moduły rozwiązują podobne problemy. W ASP.NET Core, moduły, programy obsługi, *Global.asax.cs*i cykl życia aplikacji są zastępowane przez oprogramowanie pośredniczące. W tym rozdziale dowiesz się, co to jest oprogramowanie pośredniczące w kontekście aplikacji Blazor.
+Aplikacja ASP.NET Core jest oparta na serii *oprogramowania pośredniczącego*. Oprogramowanie pośredniczące to programy obsługi, które są rozmieszczone w potoku, aby obsługiwać żądania i odpowiedzi. W aplikacji formularzy sieci Web programy obsługi HTTP i moduły rozwiązują podobne problemy. W ASP.NET Core, moduły, programy obsługi, *Global.asax.cs*i cykl życia aplikacji są zastępowane przez oprogramowanie pośredniczące. W tym rozdziale dowiesz się, co to jest oprogramowanie pośredniczące w kontekście aplikacji Blazor.
 
 ## <a name="overview"></a>Omówienie
 
 Potok żądania ASP.NET Core składa się z sekwencji delegatów żądań o nazwie jeden po drugim. Na poniższym diagramie przedstawiono koncepcję. Wątek wykonywania jest zgodny z czarnym strzałką.
 
-![Proces](media/middleware/request-delegate-pipeline.png)
+![proces](media/middleware/request-delegate-pipeline.png)
 
 Poprzedni diagram nie ma koncepcji zdarzeń cyklu życia. To pojęcie jest podstawą, w jaki sposób obsługiwane są żądania ASP.NET Web Forms. Ten system ułatwia powód, w jakim proces jest wykonywany i umożliwia wstawianie oprogramowania pośredniczącego w dowolnym momencie. Oprogramowanie pośredniczące jest wykonywane w kolejności, w jakiej zostało dodane do potoku żądania. Są one również dodawane do kodu zamiast plików konfiguracji, zwykle w *Startup.cs*.
 
@@ -35,7 +35,7 @@ ASP.NET 4. x zawiera wiele modułów. W podobny sposób ASP.NET Core ma równie�
 
 W poniższej tabeli wymieniono zamienne oprogramowanie i składniki programu w ASP.NET Core.
 
-|Moduł                 |ASP.NET 4. x — moduł           |Opcja ASP.NET Core|
+|Module                 |ASP.NET 4. x — moduł           |Opcja ASP.NET Core|
 |-----------------------|-----------------------------|-------------------|
 |Błędy HTTP            |`CustomErrorModule`          |[Oprogramowanie pośredniczące stron kodu stanu](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |Dokument domyślny       |`DefaultDocumentModule`      |[Pliki domyślne oprogramowania pośredniczącego](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
@@ -52,7 +52,7 @@ W poniższej tabeli wymieniono zamienne oprogramowanie i składniki programu w A
 |Ponowne zapisywanie adresów URL&#8224;   |`RewriteModule`              |[Oprogramowanie pośredniczące ponownego zapisywania adresów URL](/aspnet/core/fundamentals/url-rewriting)|
 |Kompresja statyczna     |`StaticCompressionModule`    |[Oprogramowanie pośredniczące kompresji odpowiedzi](/aspnet/core/performance/response-compression)|
 |Zawartość statyczna         |`StaticFileModule`           |[Oprogramowanie pośredniczące plików statycznych](/aspnet/core/fundamentals/static-files)|
-|Autoryzacja adresu URL      |`UrlAuthorizationModule`     |[ASP.NET Core Identity](/aspnet/core/security/authentication/identity)|
+|Autoryzacja adresów URL      |`UrlAuthorizationModule`     |[ASP.NET Core Identity](/aspnet/core/security/authentication/identity)|
 
 Ta lista nie jest wyczerpująca, ale powinna zawierać pomysł dotyczący tego, jakie mapowanie istnieje między tymi dwoma strukturami. Aby uzyskać bardziej szczegółową listę, zobacz [moduły usług IIS z ASP.NET Core](/aspnet/core/host-and-deploy/iis/modules).
 

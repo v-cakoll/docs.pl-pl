@@ -57,7 +57,7 @@
     - name: Niezarządzany wykaz interfejsów API
       href: unmanaged-api/
     - name: Usługi XAML
-      href: xaml-services/
+      href: ../desktop-wpf/xaml-services/
 - name: Narzędzia
   href: tools/
 - name: Dodatkowe biblioteki klas i interfejsy API

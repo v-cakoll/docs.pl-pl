@@ -5,9 +5,7 @@
 - name: Rozpocznij
   href: getting-started/index.md
   items:
-    - name: Visual Basic — przełomowe zmiany w Visual Studio
-      href: getting-started/breaking-changes-in-visual-studio.md
-    - name: Dodatkowe dla programistów Visual Basic
+    - name: Zasoby dodatkowe dla programistów Visual Basic
       href: getting-started/additional-resources.md
 - name: Tworzenie aplikacji
   href: developing-apps/index.md
@@ -401,7 +399,7 @@
           href: language-reference/modifiers/notinheritable.md
         - name: NotOverridable
           href: language-reference/modifiers/notoverridable.md
-        - name: Optional (Opcjonalność)
+        - name: Optional
           href: language-reference/modifiers/optional.md
         - name: Out (modyfikator ogólny)
           href: language-reference/modifiers/out-generic-modifier.md
@@ -893,7 +891,7 @@
           href: language-reference/error-messages/expression-cannot-be-used-as-a-type-constraint.md
         - name: Nie zadeklarowano elementu „<functionname>” (Smart Device/Błąd kompilatora Visual Basic)
           href: language-reference/error-messages/functionname-is-not-declared-smart-device-visual-basic-compiler-error.md
-        - name: Klasa „<interfacename> <membername>” jest już zaimplementowana przez klasę podstawową „<baseclassname>”. Przyjęto ponowną implementację elementu „<type>”
+        - name: Klasa „<interfacename><membername>” jest już zaimplementowana przez klasę podstawową „<baseclassname>”. Przyjęto ponowną implementację elementu „<type>”
           href: language-reference/error-messages/interfacename-membername-is-already-implemented-by-the-base-class.md
         - name: Element „<keyword>” jest prawidłowy tylko wewnątrz metody wystąpienia
           href: language-reference/error-messages/keyword-is-valid-only-within-an-instance-method.md

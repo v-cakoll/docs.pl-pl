@@ -3,10 +3,10 @@ title: Seedwork (klasy bazowe wielokrotnego użytku i interfejsy na potrzeby mod
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Użyj koncepcji seedwork jako punktu wyjścia, aby rozpocząć implementację modelu domeny zorientowanego na DDD.
 ms.date: 10/08/2018
 ms.openlocfilehash: f53988b92a05fb54f3f05d9f463450d1a11a0843
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 12/25/2019
 ms.locfileid: "73737217"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (klasy bazowe wielokrotnego użytku i interfejsy na potrzeby modelu domeny)
@@ -115,7 +115,7 @@ Repozytoria, z kodem EF Core lub innymi zależnościami infrastruktury i kodem (
 
 Wzorzec związany z tym postępowaniem (umieszczenie interfejsów repozytorium w warstwie modelu domeny) jest wzorcem interfejsu oddzielonego. Jak [wyjaśniono](https://www.martinfowler.com/eaaCatalog/separatedInterface.html) w Fowlera, "Użyj rozdzielonego interfejsu do zdefiniowania interfejsu w jednym pakiecie, ale Zaimplementuj go w innym. W ten sposób klient wymagający zależności od interfejsu może być całkowicie nieświadomy implementacji. "
 
-Po zastosowaniu wzorca interfejsu oddzielonego umożliwia warstwa aplikacji (w tym przypadku projekt internetowego interfejsu API dla mikrousługi) ma zależność od wymagań zdefiniowanych w modelu domeny, ale nie jest bezpośrednim zależnością infrastruktury/trwałości warstwy. Ponadto można użyć iniekcji zależności, aby odizolować implementację, która jest zaimplementowana w warstwie infrastruktura/trwałość przy użyciu repozytoriów.
+Po zastosowaniu wzorca interfejsu oddzielonego można korzystać z warstwy aplikacji (w tym przypadku projekt internetowego interfejsu API dla mikrousługi) ma zależność od wymagań zdefiniowanych w modelu domeny, ale nie jest bezpośrednim zależnością infrastruktury/warstwy trwałości. Ponadto można użyć iniekcji zależności, aby odizolować implementację, która jest zaimplementowana w warstwie infrastruktura/trwałość przy użyciu repozytoriów.
 
 Na przykład poniższy przykład z interfejsem IOrderRepository definiuje, jakie operacje Klasa OrderRepository będzie musiała zostać wdrożona w warstwie infrastruktury. W bieżącej implementacji aplikacji kod po prostu musi dodać lub zaktualizować zamówienia do bazy danych, ponieważ zapytania są podzielone po uproszczone podejście CQRS.
 

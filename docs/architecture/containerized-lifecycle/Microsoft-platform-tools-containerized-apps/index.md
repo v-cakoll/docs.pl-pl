@@ -3,10 +3,10 @@ title: Wprowadzenie do platformy i narzędzi firmy Microsoft dla aplikacji konte
 description: Uzyskaj informacje o ofertach firmy Microsoft w celu obsługi cyklu życia aplikacji platformy Docker.
 ms.date: 02/15/2019
 ms.openlocfilehash: 9c8c0f5688bf226351abfc7bf52d4ace05f8c6d8
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/06/2020
 ms.locfileid: "73738088"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Wprowadzenie do platformy i narzędzi firmy Microsoft dla aplikacji w kontenerze
@@ -39,7 +39,7 @@ Platforma i narzędzia firmy Microsoft dla kontenerów platformy Docker, zgodnie
 
 - **DevOps dla aplikacji platformy Docker** Deweloperzy tworzący aplikacje platformy Docker mogą używać [Azure DevOps Services](https://azure.microsoft.com/services/devops/) lub innych produktów innych firm, takich jak Jenkins, aby tworzyć kompleksowe zautomatyzowane zarządzanie cyklem życia aplikacji (ALM).
 
-  Dzięki Azure DevOps Services deweloperzy mogą tworzyć DevOps ukierunkowane na kontenery dla szybkiego, iteracyjnego procesu, który obejmuje kontrolę kodu źródłowego z dowolnego miejsca (Azure DevOps Services-git, GitHub, dowolne zdalne repozytorium Git lub podwersję), ciągłą integrację (CI) , wewnętrzne testy jednostkowe, testy integracji między kontenerami/usługami, ciągłe dostarczanie (CD) i Zarządzanie wersjami (RM). Deweloperzy mogą również zautomatyzować swoje wersje aplikacji platformy Docker w usłudze Azure Kubernetes Service (AKS), od projektowania do środowiska przejściowego i produkcyjnego.
+  Dzięki Azure DevOps Services deweloperzy mogą tworzyć DevOps ukierunkowane na kontenery dla szybkiego, iteracyjnego procesu, który obejmuje kontrolę kodu źródłowego z dowolnego miejsca (Azure DevOps Services-git, GitHub, dowolne zdalne repozytorium Git lub Podwersja), ciągłą integrację (CI), wewnętrzne testy jednostkowe, testy integracji między kontenerami/usługami, ciągłe dostarczanie (CD) i Zarządzanie wersjami (RM). Deweloperzy mogą również zautomatyzować swoje wersje aplikacji platformy Docker w usłudze Azure Kubernetes Service (AKS), od projektowania do środowiska przejściowego i produkcyjnego.
 
 - **Zarządzanie i monitorowanie** Umożliwia ona zarządzanie i monitorowanie aplikacji i usług produkcyjnych na kilka sposobów, co umożliwia integrację obu perspektyw w skonsolidowanym środowisku.
 

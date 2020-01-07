@@ -2,12 +2,12 @@
 title: Własne hostowane aplikacje gRPC — gRPC dla deweloperów WCF
 description: Wdrażanie aplikacji ASP.NET Core gRPC jako usług samoobsługowych.
 ms.date: 09/02/2019
-ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 00b4ad50eae629b5b36a890d1eecf7119386c74c
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967212"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545066"
 ---
 # <a name="self-hosted-grpc-applications"></a>Własne hostowane aplikacje gRPC
 
@@ -34,7 +34,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 Teraz Opublikuj aplikację, korzystając z programu Visual Studio, klikając prawym przyciskiem myszy projekt i wybierając pozycję *Publikuj* z menu kontekstowego lub z interfejs wiersza polecenia platformy .NET Core.
 
-Podczas publikowania aplikacji .NET Core można utworzyć wdrożenie *zależne od platformy* lub wdrożenie *samodzielne* . Wdrożenia zależne od platformy wymagają zainstalowania wspólnego środowiska uruchomieniowego platformy .NET Core na hoście, na którym są uruchamiane. Wstępnie zawarte wdrożenia są publikowane z pełną kopią środowiska uruchomieniowego i platformy .NET Core i mogą być uruchamiane na dowolnym hoście. Aby uzyskać więcej informacji, w tym zalety i wady każdego podejścia, zapoznaj się z dokumentacją [wdrażania aplikacji .NET Core](https://docs.microsoft.com/dotnet/core/deploying/) .
+Podczas publikowania aplikacji .NET Core można utworzyć wdrożenie *zależne od platformy* lub wdrożenie *samodzielne* . Wdrożenia zależne od platformy wymagają zainstalowania wspólnego środowiska uruchomieniowego platformy .NET Core na hoście, na którym są uruchamiane. Wstępnie zawarte wdrożenia są publikowane z pełną kopią środowiska uruchomieniowego i platformy .NET Core i mogą być uruchamiane na dowolnym hoście. Aby uzyskać więcej informacji, w tym zalety i wady każdego podejścia, zapoznaj się z dokumentacją [wdrażania aplikacji .NET Core](../../core/deploying/index.md) .
 
 Aby opublikować samodzielną kompilację aplikacji, która nie wymaga zainstalowania środowiska uruchomieniowego programu .NET Core 3,0 na hoście, określ środowisko uruchomieniowe, które ma zostać dołączone do aplikacji przy użyciu flagi `-r` (lub `--runtime`).
 
@@ -77,7 +77,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 > [!NOTE]
 > Jeśli aplikacja nie działa jako usługa systemu Linux, Metoda `UseSystemd` nie wykonuje żadnego działania.
 
-Teraz Opublikuj aplikację (zależną od platformy lub autonomiczną dla odpowiedniego środowiska uruchomieniowego systemu Linux, np. `linux-x64`), z poziomu programu Visual Studio, klikając prawym przyciskiem myszy projekt i wybierając pozycję *Publikuj* z menu kontekstowego lub z interfejs wiersza polecenia platformy .NET Core przy użyciu poniższego polecenia.
+Teraz Opublikuj swoją aplikację (zależną od platformy lub autonomiczną dla odpowiedniego środowiska uruchomieniowego systemu Linux, na przykład `linux-x64`), z programu Visual Studio, klikając prawym przyciskiem myszy projekt i wybierając pozycję *Publikuj* z menu kontekstowego lub z interfejs wiersza polecenia platformy .NET Core przy użyciu poniższego polecenia.
 
 ```console
 dotnet publish -c Release -r linux-x64 -o ./publish
@@ -150,7 +150,7 @@ Aby dowiedzieć się więcej o wysyłaniu zapytań do dziennika systemowego z wi
 
 Podczas uruchamiania aplikacji gRPC w środowisku produkcyjnym należy używać certyfikatu TLS z zaufanego urzędu certyfikacji (CA). Ten urząd certyfikacji może być publicznym urzędem certyfikacji lub wewnętrznym.
 
-Na hostach z systemem Windows certyfikat może zostać załadowany z bezpiecznego [magazynu certyfikatów](https://docs.microsoft.com/windows/win32/seccrypto/managing-certificates-with-certificate-stores) przy użyciu [klasy X509Store](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.0). Klasy `X509Store` można również używać z magazynem kluczy OpenSSL na niektórych hostach z systemem Linux.
+Na hostach z systemem Windows certyfikat może zostać załadowany z bezpiecznego [magazynu certyfikatów](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) przy użyciu klasy <xref:System.Security.Cryptography.X509Certificates.X509Store>. Klasy `X509Store` można również używać z magazynem kluczy OpenSSL na niektórych hostach z systemem Linux.
 
 Certyfikaty mogą być również tworzone przy użyciu jednego z [konstruktorów X509Certificate2](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0), z pliku (na przykład pliku `.pfx` chronionego za pomocą silnego hasła) lub z danych binarnych pobranych z usługi bezpiecznego magazynu, takich jak [Azure Key Vault](https://azure.microsoft.com/services/key-vault/).
 

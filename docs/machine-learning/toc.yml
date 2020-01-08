@@ -46,7 +46,7 @@
         - name: Przewidywanie cen (konstruktor modelu i regresja)
           href: tutorials/predict-prices-with-model-builder.md
         - name: Analizowanie tonacji przy użyciu interfejsu wiersza polecenia platformy ML.NET
-          href: tutorials/mlnet-cli.md
+          href: tutorials/sentiment-analysis-cli.md
         - name: Analizowanie tonacji w rozwiązaniu Razor Pages (konstruktor modelu i klasyfikacja binarna)
           href: tutorials/sentiment-analysis-model-builder.md
         - name: Kategoryzowanie naruszeń kondycji (konstruktor modeli i klasyfikacja wieloklasowa)
@@ -57,13 +57,13 @@
           href: how-to-guides/matchup-app-infer-net.md
 - name: Pojęcia
   items:
-    - name: Zadania platformy ML.NET (typy modelu)
+    - name: Zadanie ML.NET
       href: resources/tasks.md
     - name: Algorytmy
       href: how-to-choose-an-ml-net-algorithm.md
     - name: Przekształcenia danych
       href: resources/transforms.md
-    - name: Metryki
+    - name: Metryki oceny modelu
       href: resources/metrics.md
     - name: Zwiększanie dokładności modelu
       href: resources/improve-machine-learning-model-ml-net.md

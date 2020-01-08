@@ -5,6 +5,7 @@
 - name: Selektory stron
   href: breaking-changes.md
 - name: Według wersji
+  expanded: true
   items:
     - name: Z wersji 3.0 do 3.1
       href: 3.0-3.1.md
@@ -12,7 +13,10 @@
       href: 2.2-3.1.md
     - name: Z wersji 2.2 do 3.0
       href: 2.2-3.0.md
+    - name: Z wersji 2.0 do 2.1
+      href: 2.0-2.1.md
 - name: Według obszaru
+  expanded: true
   items:
     - name: ASP.NET Core
       href: aspnetcore.md
@@ -24,7 +28,7 @@
       href: /ef/core/what-is-new/ef-core-3.0/breaking-changes
     - name: Globalizacja
       href: globalization.md
-    - name: Networking
+    - name: Obsługa sieci
       href: networking.md
     - name: Visual Basic
       href: visualbasic.md

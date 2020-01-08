@@ -1,34 +1,32 @@
 - name: Platforma Windows Presentation Foundation dla platformy .NET Core
+  href: overview/index.md
+- name: Wprowadzenie
   items:
-    - name: Omówienie
+    - name: Tworzenie aplikacji WPF
+      href: 'https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json'
+- name: Migracja
+  items:
+    - name: Różnice w porównaniu z platformą .NET Framework
+      href: migration/differences-from-net-framework.md
+    - name: Migrowanie z platformy Framework na platformę Core
+      href: migration/convert-project-from-net-framework.md
+- name: Podstawy
+  items:
+    - name: XAML
+      href: fundamentals/xaml.md
+    - name: Definiowanie zasobów
+      href: fundamentals/xaml-resources-define.md
+    - name: Style i szablony
       items:
-        - name: Co to jest platforma WPF?
-          href: overview/index.md
-    - name: Wprowadzenie
-      items:
-        - name: Tworzenie aplikacji WPF
-          href: 'https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json'
-    - name: Migracja
-      items:
-        - name: Różnice w porównaniu z platformą .NET Framework
-          href: migration/differences-from-net-framework.md
-        - name: Migrowanie z platformy Framework na platformę Core
-          href: migration/convert-project-from-net-framework.md
-    - name: Podstawy
-      items:
-        - name: XAML
-          href: fundamentals/xaml.md
-        - name: Definiowanie zasobów
-          href: fundamentals/xaml-resources-define.md
-        - name: Style i szablony
-          items:
-            - name: Omówienie
-              href: fundamentals/styles-templates-overview.md
-            - name: Tworzenie i stosowanie stylu
-              href: fundamentals/styles-templates-create-apply-style.md
-            - name: Tworzenie i stosowanie szablonu
-              href: themes/how-to-create-apply-template.md
-    - name: Praca z danymi
-      items:
-        - name: Omówienie powiązań danych
-          href: data/data-binding-overview.md
+        - name: Omówienie
+          href: fundamentals/styles-templates-overview.md
+        - name: Tworzenie i stosowanie stylu
+          href: fundamentals/styles-templates-create-apply-style.md
+        - name: Tworzenie i stosowanie szablonu
+          href: themes/how-to-create-apply-template.md
+    - name: Dokumentacja języka XAML
+      href: xaml-services/
+- name: Praca z danymi
+  items:
+    - name: Omówienie powiązań danych
+      href: data/data-binding-overview.md

@@ -1,0 +1,95 @@
+- name: Dokumentacja języka XAML
+  href: index.md
+  items:
+    - name: 'Przestrzeń nazw XAML (x:) Funkcje językowe'
+      href: namespace-language-features.md
+      items:
+        - name: Funkcje języka XAML 2009 (nie WPF)
+          href: xaml-2009-language-features.md
+          items:
+            - name: Typy wbudowane dla wspólnych elementów podstawowych języka XAML
+              href: types-for-primitives.md
+            - name: 'x:Arguments — dyrektywa'
+              href: xarguments-directive.md
+            - name: 'x:FactoryMethod — dyrektywa'
+              href: xfactorymethod-directive.md
+            - name: 'x:Reference — Rozszerzenie znaczników'
+              href: xreference-markup-extension.md
+        - name: 'x:Array — Rozszerzenie znaczników'
+          href: xarray-markup-extension.md
+        - name: 'x:Class — dyrektywa'
+          href: xclass-directive.md
+        - name: 'x:ClassModifier — dyrektywa'
+          href: xclassmodifier-directive.md
+        - name: 'x:Code — Typ funkcji XAML'
+          href: xcode-intrinsic-xaml-type.md
+        - name: 'x:FieldModifier — dyrektywa'
+          href: xfieldmodifier-directive.md
+        - name: 'x:Key — dyrektywa'
+          href: xkey-directive.md
+        - name: 'x:Member — dyrektywa'
+          href: xmember-directive.md
+        - name: 'x:Members — dyrektywa'
+          href: xmembers-directive.md
+        - name: 'x:Name — dyrektywa'
+          href: xname-directive.md
+        - name: 'x:Null — Rozszerzenie znaczników'
+          href: xnull-markup-extension.md
+        - name: 'x:Property — dyrektywa'
+          href: xproperty-directive.md
+        - name: 'x:Shared — Atrybut'
+          href: xshared-attribute.md
+        - name: 'x:Static — Rozszerzenie znaczników'
+          href: xstatic-markup-extension.md
+        - name: 'x:Subclass — dyrektywa'
+          href: xsubclass-directive.md
+        - name: 'x:Type — Rozszerzenie znaczników'
+          href: xtype-markup-extension.md
+        - name: 'x:TypeArguments — dyrektywa'
+          href: xtypearguments-directive.md
+        - name: 'x:Uid — dyrektywa'
+          href: xuid-directive.md
+        - name: 'x:XData — Typ funkcji XAML'
+          href: xdata-intrinsic-xaml-type.md
+        - name: XamlName — Gramatyka
+          href: xamlname-grammar.md
+        - name: '{}, sekwencja ucieczki/rozszerzenie znaczników'
+          href: escape-sequence-markup-extension.md
+        - name: 'xml:lang — Obsługa w XAML'
+          href: xml-language-handling.md
+        - name: 'xml:space — Obsługa w XAML'
+          href: xml-space-handling.md
+    - name: Typy migrowane z WPF do System.Xaml
+      href: types-migrated-from-wpf-to-system.md
+    - name: Zapoznanie się ze strukturami i koncepcjami strumienia węzłów XAML
+      href: understanding-xaml-node-stream-structures-and-concepts.md
+    - name: Klasa XAMLServices i podstawowy odczyt lub zapis XAML
+      href: basic-reading-writing.md
+    - name: Typy konwerterów i rozszerzenia znaczników dla XAML
+      href: type-converters-and-markup-extensions.md
+      items:
+        - name: Rozszerzenia znaczników dla przeglądu XAML
+          href: markup-extensions-overview.md
+        - name: Typy konwerterów dla XAML — Omówienie
+          href: type-converters-overview.md
+        - name: Konteksty usług dostępne dla typów konwerterów i rozszerzeń znaczników
+          href: service-contexts-with-type-converters-and-markup-extensions.md
+    - name: Typy ogólne w XAML
+      href: generics.md
+    - name: Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML
+      href: define-custom-types.md
+      items:
+        - name: Atrybuty CLR związane z XAML dla niestandardowych typów i bibliotek
+          href: clr-attributes-with-custom-types-and-libraries.md
+        - name: Kolekcje i typy kolekcji dla XAML
+          href: collections-and-types.md
+    - name: Przestrzeń nazw XAML
+      href: namespaces.md
+    - name: Domyślny kontekst schematu XAML i kontekst schematu WPF XAML
+      href: default-schema-context.md
+    - name: Zagadnienia dotyczące zabezpieczeń XAML
+      href: security-considerations.md
+    - name: Przetwarzanie spacji w XAML
+      href: white-space-processing.md
+    - name: Jednostki znaków XML i XAML
+      href: xml-character-entities.md

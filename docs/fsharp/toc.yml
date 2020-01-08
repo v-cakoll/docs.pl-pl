@@ -2,18 +2,18 @@
   href: index.yml
 - name: 'Co to jest F#'
   href: what-is-fsharp.md
-- name: Rozpoczęcie pracy
+- name: Wprowadzenie
   href: get-started/index.md
   items:
     - name: 'Instalowanie języka F#'
       href: get-started/install-fsharp.md
-    - name: 'Rozpoczynanie pracy z językiem F# w programie Visual Studio'
+    - name: 'Język F# w programie Visual Studio'
       href: get-started/get-started-visual-studio.md
-    - name: 'Rozpoczynanie pracy z językiem F# w programie Visual Studio Code'
+    - name: 'Język F# w programie Visual Studio Code'
       href: get-started/get-started-vscode.md
-    - name: 'Rozpoczynanie pracy z językiem F# i interfejsem wiersza polecenia platformy .NET Core'
+    - name: 'Język F# w interfejsie wiersza polecenia platformy .NET Core'
       href: get-started/get-started-command-line.md
-    - name: 'Rozpoczynanie pracy z językiem F# w programie Visual Studio dla komputerów Mac'
+    - name: 'Język F# w programie Visual Studio dla komputerów Mac'
       href: get-started/get-started-with-visual-studio-for-mac.md
 - name: 'Przewodnik po środowisku F#'
   href: tour.md
@@ -216,7 +216,7 @@
       href: language-reference/attributes.md
     - name: 'Zarządzanie zasobami: use — Słowo kluczowe'
       href: language-reference/resource-management-the-use-keyword.md
-    - name: Przestrzenie nazw
+    - name: Namespaces
       href: language-reference/namespaces.md
     - name: Moduły
       href: language-reference/modules.md

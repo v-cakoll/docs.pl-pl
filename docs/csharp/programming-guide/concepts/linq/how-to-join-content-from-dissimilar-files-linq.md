@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Dołącz zawartość z niepodobnych plików (LINQ)C#()'
+title: Jak dołączyć zawartość z niepodobnych plików (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: eb2e5d8e598b7b671afe9271e6e591c5ce0ada2b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 49b70c15b3be2efea5cf6a9e7d85df944a67c730
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253550"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345885"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Instrukcje: Dołącz zawartość z niepodobnych plików (LINQ)C#()
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Jak dołączyć zawartość z niepodobnych plików (LINQ) (C#)
 
 Ten przykład pokazuje, jak połączyć dane z dwóch rozdzielanych przecinkami plików, które mają wspólną wartość używaną jako pasujący klucz. Ta technika może być przydatna, jeśli trzeba połączyć dane z dwóch arkuszy kalkulacyjnych lub z arkusza kalkulacyjnego oraz z pliku, który ma inny format, do nowego pliku. Możesz zmodyfikować przykład, aby współpracować z dowolnym rodzajem tekstu strukturalnego.  
   

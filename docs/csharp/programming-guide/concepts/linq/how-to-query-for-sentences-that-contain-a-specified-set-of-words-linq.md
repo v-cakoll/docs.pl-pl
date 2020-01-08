@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Zapytanie o zdania zawierające określony zestaw wyrazów (LINQ) (C#)'
+title: Jak wykonać zapytanie o zdania zawierające określony zestaw wyrazów (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: e478364f07c08a334692ba54ae1a95880b95519e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: efb0eb60a9695c19e16b507d29ef6994e904cff9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592765"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347694"
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Instrukcje: Zapytanie o zdania zawierające określony zestaw wyrazów (LINQ) (C#)
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Jak wykonać zapytanie o zdania zawierające określony zestaw wyrazów (LINQ) (C#)
 Ten przykład pokazuje, jak znaleźć zdania w pliku tekstowym zawierającym dopasowania dla każdego z określonych wyrazów. Mimo że tablica terminów wyszukiwania jest zakodowana w tym przykładzie, można ją również wypełnić dynamicznie w czasie wykonywania. W tym przykładzie zapytanie zwraca zdania zawierające słowa "historyczne", "dane" i "zintegrowane".  
   
 ## <a name="example"></a>Przykład  
@@ -62,12 +62,12 @@ Historically, the world of data and the world of objects have not been well inte
 */  
 ```  
   
- Zapytanie działa przez pierwsze dzielenie tekstu na zdania, a następnie dzielenie zdań na tablicę ciągów, które zawierają każdy wyraz. Dla każdej z tych tablic <xref:System.Linq.Enumerable.Distinct%2A> metoda powoduje usunięcie wszystkich zduplikowanych wyrazów, a następnie zapytanie <xref:System.Linq.Enumerable.Intersect%2A> wykonuje operację na tablicy słów i `wordsToMatch` tablicy. Jeśli liczba przedziałów jest taka sama jak liczba `wordsToMatch` tablicy, wszystkie wyrazy zostały znalezione w wyrazach, a zdanie oryginalne zostanie zwrócone.  
+ Zapytanie działa przez pierwsze dzielenie tekstu na zdania, a następnie dzielenie zdań na tablicę ciągów, które zawierają każdy wyraz. Dla każdej z tych tablic Metoda <xref:System.Linq.Enumerable.Distinct%2A> usuwa wszystkie zduplikowane wyrazy, a następnie wykonuje operację <xref:System.Linq.Enumerable.Intersect%2A> na tablicy słów i tablicy `wordsToMatch`. Jeśli liczba przecięć jest taka sama jak liczba tablicy `wordsToMatch`, wszystkie wyrazy zostały znalezione w wyrazach, a zdanie oryginalne zostanie zwrócone.  
   
- W wywołaniu do <xref:System.String.Split%2A>, znaki interpunkcyjne są używane jako separatory w celu usunięcia ich z ciągu. Jeśli tego nie zrobiono, na przykład możesz mieć ciąg "historyczny", który nie pasuje do "historycznie" w `wordsToMatch` tablicy. Może być konieczne użycie dodatkowych separatorów, w zależności od typów znaków interpunkcyjnych znalezionych w tekście źródłowym.  
+ W wywołaniu do <xref:System.String.Split%2A>znaki interpunkcyjne są używane jako separatory w celu usunięcia ich z ciągu. Jeśli tego nie zrobiono, na przykład możesz mieć ciąg "historyczny", który nie pasuje do "historycznie" w tablicy `wordsToMatch`. Może być konieczne użycie dodatkowych separatorów, w zależności od typów znaków interpunkcyjnych znalezionych w tekście źródłowym.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
-Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.
+Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.
 
 ## <a name="see-also"></a>Zobacz także
 

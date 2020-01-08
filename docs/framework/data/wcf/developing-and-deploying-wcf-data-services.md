@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d6d0f6f357feba903e8345fc45251c146c5406db
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d3a3539904c5d8b5db23b99ca6128bf5860a1917
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975316"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346109"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Opracowywanie i wdrażanie Usługi danych programu WCF
 
@@ -70,7 +70,7 @@ W przypadku tworzenia usługi danych programu WCF jako aplikacji ASP.NET lub wit
 
 3. **Środowisko deweloperskie systemu Windows Azure**
 
-     Narzędzia Microsoft Azure Tools for Visual Studio zawierają zintegrowany zestaw narzędzi do tworzenia usług systemu Windows Azure w programie Visual Studio. Za pomocą tych narzędzi można zaprojektować usługę danych, którą będzie można wdrożyć w systemie Microsoft Azure i przed wdrożeniem można przetestować usługę danych na komputerze lokalnym. Użyj tych narzędzi, gdy program Visual Studio jest używany do tworzenia usługi danych działającej na platformie Windows Azure. Narzędzia Windows Azure Tools for Visual Studio można pobrać z [Centrum pobierania Microsoft](https://go.microsoft.com/fwlink/?LinkID=201848). Aby uzyskać więcej informacji na temat tworzenia usługi danych działającej w systemie Windows Azure, zobacz po wdrożeniu [usługi OData w systemie Windows Azure](https://go.microsoft.com/fwlink/?LinkId=201847).
+     Narzędzia Microsoft Azure Tools for Visual Studio zawierają zintegrowany zestaw narzędzi do tworzenia usług systemu Windows Azure w programie Visual Studio. Za pomocą tych narzędzi można zaprojektować usługę danych, którą będzie można wdrożyć w systemie Microsoft Azure i przed wdrożeniem można przetestować usługę danych na komputerze lokalnym. Użyj tych narzędzi, gdy program Visual Studio jest używany do tworzenia usługi danych działającej na platformie Windows Azure. Narzędzia Windows Azure Tools for Visual Studio można pobrać z [Centrum pobierania Microsoft](https://go.microsoft.com/fwlink/?LinkID=201848). Aby uzyskać więcej informacji na temat tworzenia usługi danych działającej w systemie Windows Azure, zobacz po wdrożeniu [usługi OData w systemie Windows Azure](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/).
 
 ### <a name="development-tips"></a>Porady dotyczące projektowania
 
@@ -80,7 +80,7 @@ Podczas projektowania usługi danych należy wziąć pod uwagę następujące kw
 
 - Program inspekcji HTTP może być bardzo pomocny podczas debugowania usługi danych, umożliwiając inspekcję zawartości komunikatów żądań i odpowiedzi. Dowolnego analizatora pakietów sieciowych, który może wyświetlać pakiety nieprzetworzone, można używać do inspekcji żądań HTTP i odpowiedzi z usługi danych.
 
-- Podczas debugowania usługi danych warto uzyskać więcej informacji o błędzie z usługi danych niż podczas zwykłej operacji. Aby uzyskać dodatkowe informacje o błędzie z usługi danych, należy ustawić właściwość <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> w <xref:System.Data.Services.DataServiceConfiguration> na `true` i ustawiając właściwość <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> atrybutu <xref:System.ServiceModel.Description.ServiceDebugBehavior> w klasie usługi danych na `true`. Aby uzyskać więcej informacji, zobacz [usługi danych programu WCF debugowania](https://go.microsoft.com/fwlink/?LinkId=201868). Możesz również włączyć śledzenie w programie WCF, aby wyświetlić wyjątki wywoływane w warstwie komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../wcf/diagnostics/tracing/configuring-tracing.md).
+- Podczas debugowania usługi danych warto uzyskać więcej informacji o błędzie z usługi danych niż podczas zwykłej operacji. Aby uzyskać dodatkowe informacje o błędzie z usługi danych, należy ustawić właściwość <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> w <xref:System.Data.Services.DataServiceConfiguration> na `true` i ustawiając właściwość <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> atrybutu <xref:System.ServiceModel.Description.ServiceDebugBehavior> w klasie usługi danych na `true`. Aby uzyskać więcej informacji, zobacz [usługi danych programu WCF debugowania](https://blogs.msdn.microsoft.com/phaniraj/?m=20086). Możesz również włączyć śledzenie w programie WCF, aby wyświetlić wyjątki wywoływane w warstwie komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../wcf/diagnostics/tracing/configuring-tracing.md).
 
 - Usługa danych jest zazwyczaj opracowana jako projekt aplikacji ASP.NET, ale można również utworzyć usługę danych jako projekt witryny sieci Web ASP.NET w programie Visual Studio. Aby uzyskać informacje o różnicach między dwoma typami projektów, zobacz [projekty aplikacji sieci Web a projekty witryn sieci Web w programie Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
@@ -113,9 +113,9 @@ Usługa danych programu WCF zapewnia elastyczność, jeśli chodzi o wybór proc
     > [!TIP]
     > Przed próbą wdrożenia usługi danych w programie IIS należy przetestować wdrożenie na serwerze sieci Web, na którym działa program IIS. Aby uzyskać więcej informacji, zobacz [How to: programowanie usługi danych programu WCF działającej w usługach IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
-- **System Windows Azure**
+- **Windows Azure**
 
-     Usługę danych można wdrożyć w systemie Windows Azure przy użyciu narzędzi Windows Azure Tools for Visual Studio. Narzędzia Windows Azure Tools for Visual Studio można pobrać z [Centrum pobierania Microsoft](https://go.microsoft.com/fwlink/?LinkID=201848). Aby uzyskać więcej informacji na temat wdrażania usługi danych w systemie Windows Azure, zobacz po wdrożeniu [usługi OData w systemie Windows Azure](https://go.microsoft.com/fwlink/?LinkId=201847).
+     Usługę danych można wdrożyć w systemie Windows Azure przy użyciu narzędzi Windows Azure Tools for Visual Studio. Narzędzia Windows Azure Tools for Visual Studio można pobrać z [Centrum pobierania Microsoft](https://go.microsoft.com/fwlink/?LinkID=201848). Aby uzyskać więcej informacji na temat wdrażania usługi danych w systemie Windows Azure, zobacz po wdrożeniu [usługi OData w systemie Windows Azure](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/).
 
 ### <a name="deployment-considerations"></a>Uwagi dotyczące wdrażania
 
@@ -123,7 +123,7 @@ Podczas wdrażania usługi danych należy wziąć pod uwagę następujące kwest
 
 - Podczas wdrażania usługi danych, która używa dostawcy Entity Framework w celu uzyskania dostępu do bazy danych SQL Server, może być również konieczne propagowanie struktur danych, danych lub obu w ramach wdrożenia usługi danych. Program Visual Studio może automatycznie tworzyć skrypty (pliki SQL) w celu wykonania tej czynności w docelowej bazie danych. te skrypty można dołączać do pakietu wdrożeniowego sieci Web aplikacji ASP.NET. Aby uzyskać więcej informacji, zobacz [jak: Wdrażanie bazy danych za pomocą projektu aplikacji sieci Web](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). W przypadku witryny sieci Web ASP.NET można to zrobić za pomocą **Kreatora publikowania bazy danych** w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [publikowanie SQL Database](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
-- Ponieważ Usługi danych programu WCF zawiera podstawową implementację programu WCF, można użyć programu Windows Server AppFabric do monitorowania usługi danych wdrożonej w usługach IIS uruchomionych w systemie Windows Server. Aby uzyskać więcej informacji o używaniu programu Windows Server AppFabric do monitorowania usługi danych, zobacz [śledzenie po stronie śledzenia usługi danych programu WCF z systemem Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
+- Ponieważ Usługi danych programu WCF zawiera podstawową implementację programu WCF, można użyć programu Windows Server AppFabric do monitorowania usługi danych wdrożonej w usługach IIS uruchomionych w systemie Windows Server. Aby uzyskać więcej informacji o używaniu programu Windows Server AppFabric do monitorowania usługi danych, zobacz [śledzenie po stronie śledzenia usługi danych programu WCF z systemem Windows Server AppFabric](https://blogs.msdn.microsoft.com/rjacobs/2010/06/09/tracking-wcf-data-services-with-windows-server-appfabric/).
 
 ## <a name="see-also"></a>Zobacz także
 

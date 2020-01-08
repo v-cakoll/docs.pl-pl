@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 05a39388e8aa9681af60cf86a3df8346d744b69e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 293537ad33c8e751d49d820fc57ea525e68bc203
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345310"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347776"
 ---
 # <a name="lifetime-in-visual-basic"></a>Okres istnienia w Visual Basic
 Okres *istnienia* zadeklarowanego elementu to okres czasu, w którym jest dostępny do użycia. Zmienne są jedynymi elementami, które mają okres istnienia. W tym celu kompilator traktuje parametry procedury i funkcja zwraca jako specjalne przypadki zmiennych. Okres istnienia zmiennej reprezentuje okres czasu, w którym może być przechowywana wartość. Jego wartość może ulec zmianie w okresie istnienia, ale zawsze utrzymuje pewną wartość.  
@@ -65,10 +65,10 @@ Okres *istnienia* zadeklarowanego elementu to okres czasu, w którym jest dostę
   
  Jeśli `applesSold` zostały zadeklarowane bez użycia `Static`, poprzednie wartości skumulowane nie byłyby zachowywane dla wywołań do `runningTotal`. Przy następnym wywołaniu `runningTotal`, `applesSold` zostałyby ponownie utworzone i zainicjowane na 0, a `runningTotal` po prostu zwróci tę samą wartość, z którą został wywołany.  
   
-### <a name="compiling-the-code"></a>Kompilowanie kodu  
+### <a name="compile-the-code"></a>Skompilować kod  
  Można zainicjować wartość statycznej zmiennej lokalnej w ramach swojej deklaracji. Jeśli deklarujesz tablicę do `Static`, możesz zainicjować jej rangę (liczbę wymiarów), długość każdego wymiaru oraz wartości poszczególnych elementów.  
   
-### <a name="security"></a>Bezpieczeństwo  
+### <a name="security"></a>Zabezpieczenia  
  W powyższym przykładzie można utworzyć ten sam okres istnienia, deklarując `applesSold` na poziomie modułu. Jeśli jednak w ten sposób Zmieniono zakres zmiennej, procedura nie będzie miała już wyłącznego dostępu do niej. Ponieważ inne procedury mogą uzyskać dostęp `applesSold` i zmienić jego wartość, suma uruchamiania może być niezawodna, a kod może być trudniejszy do utrzymania.  
   
 ## <a name="see-also"></a>Zobacz także

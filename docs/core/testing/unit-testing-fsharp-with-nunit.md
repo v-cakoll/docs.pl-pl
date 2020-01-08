@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 1a5320f47b880c2d84132d70e1d0be19d6de486b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
-ms.translationtype: MT
+ms.openlocfilehash: 3be4ec01137a96a9b38869cbbb81fb0e89b7d700
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116226"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559503"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Biblioteki testów F# jednostkowych w programie .NET Core przy użyciu testu dotnet i nunit
 
@@ -22,7 +22,7 @@ Ten samouczek przeprowadzi Cię przez interaktywny proces tworzenia przykładowe
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 - [Zestaw .NET Core 2,1 SDK](https://dotnet.microsoft.com/download) lub jego nowsze wersje.
-- Edytor tekstu lub Edytor kodu.
+- Wybrany edytor tekstu lub edytor kodu.
 
 ## <a name="creating-the-source-project"></a>Tworzenie projektu źródłowego
 
@@ -44,7 +44,7 @@ Następnie Utwórz katalog *mathservice* . Poniższy konspekt przedstawia strukt
 Ustaw *mathservice* w bieżącym katalogu i uruchom następujące polecenie, aby utworzyć projekt źródłowy:
 
 ```dotnetcli
-dotnet new classlib -lang F#
+dotnet new classlib -lang "F#"
 ```
 
 Tworzysz nieprawidłową implementację usługi matematycznej:
@@ -76,7 +76,7 @@ Następnie Utwórz katalog *mathservice. Tests* . Poniższy konspekt przedstawia
 Utwórz katalog *mathservice. Tests* jako bieżący katalog i Utwórz nowy projekt za pomocą następującego polecenia:
 
 ```dotnetcli
-dotnet new nunit -lang F#
+dotnet new nunit -lang "F#"
 ```
 
 Spowoduje to utworzenie projektu testowego, który używa NUnit jako środowiska testowego. Wygenerowany szablon służy do konfigurowania modułu uruchamiającego testy w *MathServiceTests. fsproj*:
@@ -89,7 +89,7 @@ Spowoduje to utworzenie projektu testowego, który używa NUnit jako środowiska
 </ItemGroup>
 ```
 
-Projekt testowy wymaga innych pakietów do tworzenia i uruchamiania testów jednostkowych. `dotnet new`w poprzednim kroku dodano NUnit i kartę testową NUnit. Teraz Dodaj `MathService` bibliotekę klas jako inną zależność do projektu. [`dotnet add reference`](../tools/dotnet-add-reference.md) Użyj polecenia:
+Projekt testowy wymaga innych pakietów do tworzenia i uruchamiania testów jednostkowych. `dotnet new` w poprzednim kroku został dodany NUnit i adapter testowy NUnit. Teraz dodaj bibliotekę klas `MathService` jako inną zależność do projektu. Użyj `dotnet add reference` polecenia:
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -138,9 +138,9 @@ type TestClass () =
      member this.FailEveryTime() = Assert.True(false)
 ```
 
-Ten `[<TestFixture>]` atrybut oznacza klasę, która zawiera testy. Ten `[<Test>]` atrybut oznacza metodę testową, która jest uruchamiana przez program Test Runner. W katalogu *test jednostkowy-with-FSharp* wykonaj [`dotnet test`](../tools/dotnet-test.md) , aby skompilować testy i bibliotekę klas, a następnie uruchom testy. Program NUnit Test Runner zawiera punkt wejścia programu do uruchamiania testów. `dotnet test`uruchamia program Test Runner przy użyciu utworzonego projektu testu jednostkowego.
+Atrybut `[<TestFixture>]` oznacza klasę, która zawiera testy. Atrybut `[<Test>]` oznacza metodę testową, która jest uruchamiana przez program Test Runner. W katalogu *testy jednostkowe-with-FSharp* należy wykonać `dotnet test`, aby skompilować testy i bibliotekę klas, a następnie uruchomić testy. Program NUnit Test Runner zawiera punkt wejścia programu do uruchamiania testów. `dotnet test` uruchamia program Test Runner przy użyciu utworzonego projektu testu jednostkowego.
 
-Te dwa testy pokazują najbardziej podstawowe testy dotyczące przekazywania i niepowodzenia. `My test``Fail every time` kończy się niepowodzeniem. Teraz Utwórz test dla `squaresOfOdds` metody. `squaresOfOdds` Metoda zwraca sekwencję kwadratów wszystkich nieparzystych wartości całkowitych, które są częścią sekwencji wejściowej. Zamiast próbować zapisywać wszystkie te funkcje jednocześnie, można iteracyjnie utworzyć testy, które weryfikują funkcjonalność. Każdy przebieg testowy oznacza tworzenie niezbędnych funkcji dla metody.
+Te dwa testy pokazują najbardziej podstawowe testy dotyczące przekazywania i niepowodzenia. `My test` passs i `Fail every time` nie powiedzie się. Teraz Utwórz test dla metody `squaresOfOdds`. Metoda `squaresOfOdds` zwraca sekwencję kwadratów wszystkich nieparzystych wartości całkowitych, które są częścią sekwencji wejściowej. Zamiast próbować zapisywać wszystkie te funkcje jednocześnie, można iteracyjnie utworzyć testy, które weryfikują funkcjonalność. Każdy przebieg testowy oznacza tworzenie niezbędnych funkcji dla metody.
 
 Najprostszym testem możemy napisać jest wywołanie `squaresOfOdds` ze wszystkimi parzystymi liczbami, gdzie wynik powinien być pustą sekwencją liczb całkowitych.  Oto test:
 
@@ -152,7 +152,7 @@ member this.TestEvenSequence() =
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
-Zauważ, że `expected` sekwencja została przekonwertowana na listę. Platforma NUnit jest oparta na wielu standardowych typach .NET. Ta zależność oznacza, że interfejs publiczny i oczekiwane wyniki <xref:System.Collections.ICollection> są obsługiwane <xref:System.Collections.IEnumerable>, a nie.
+Zwróć uwagę, że sekwencja `expected` została przekonwertowana na listę. Platforma NUnit jest oparta na wielu standardowych typach .NET. Ta zależność oznacza, że interfejs publiczny i oczekiwane wyniki obsługują <xref:System.Collections.ICollection>, a nie <xref:System.Collections.IEnumerable>.
 
 Po uruchomieniu testu zobaczysz, że test zakończy się niepowodzeniem. Nie utworzono jeszcze implementacji. Wykonaj ten test, pisząc najprostszy kod w klasie *Library. FS* w projekcie mathservice, który działa:
 
@@ -161,11 +161,11 @@ let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
-W katalogu *testy jednostkowe-with-FSharp* Uruchom `dotnet test` ponownie. Polecenie uruchamia kompilację `MathService` dla `MathService.Tests` projektu, a następnie dla projektu. `dotnet test` Po skompilowaniu obu projektów uruchamiamy testy. Dwa testy są teraz zakończone pomyślnie.
+W katalogu *testy jednostkowe-with-FSharp* uruchom ponownie `dotnet test`. `dotnet test` polecenie uruchamia kompilację dla projektu `MathService`, a następnie dla projektu `MathService.Tests`. Po skompilowaniu obu projektów uruchamiamy testy. Dwa testy są teraz zakończone pomyślnie.
 
 ## <a name="completing-the-requirements"></a>Spełnienie wymagań
 
-Teraz, po wykonaniu jednego przebiegu testowego, należy napisać więcej. Następny prosty przypadek działa z sekwencją, której jedyną liczbą nieparzystą jest `1`. Numer 1 jest łatwiejszy, ponieważ kwadrat 1 ma wartość 1. Oto następny test:
+Teraz, po wykonaniu jednego przebiegu testowego, należy napisać więcej. Następny prosty przypadek działa z sekwencją, której tylko numer nieparzysty jest `1`. Numer 1 jest łatwiejszy, ponieważ kwadrat 1 ma wartość 1. Oto następny test:
 
 ```fsharp
 [<Test>]
@@ -175,7 +175,7 @@ member public this.TestOnesAndEvens() =
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
-Wykonywanie `dotnet test` nowego testu nie powiodło się. Musisz zaktualizować `squaresOfOdds` metodę, aby obsłużyć ten nowy test. Należy odfiltrować wszystkie liczby parzyste z sekwencji, aby wykonać ten test. Możesz to zrobić, pisząc małą funkcję filtrowania i używając `Seq.filter`:
+Wykonanie `dotnet test` nie powiedzie się w nowym teście. Należy zaktualizować metodę `squaresOfOdds`, aby obsługiwała ten nowy test. Należy odfiltrować wszystkie liczby parzyste z sekwencji, aby wykonać ten test. Możesz to zrobić, pisząc małą funkcję filtrowania i używając `Seq.filter`:
 
 ```fsharp
 let private isOdd x = x % 2 <> 0
@@ -185,7 +185,7 @@ let squaresOfOdds xs =
     |> Seq.filter isOdd
 ```
 
-Zwróć uwagę na `Seq.toList`wywołanie. Tworzy listę, która implementuje <xref:System.Collections.ICollection> interfejs.
+Zwróć uwagę na wywołanie `Seq.toList`. Tworzy listę, która implementuje interfejs <xref:System.Collections.ICollection>.
 
 Istnieje jeden krok do przechodzenia: kwadrat każdej z liczb nieparzystych. Zacznij od zapisania nowego testu:
 
@@ -210,3 +210,8 @@ let squaresOfOdds xs =
 ```
 
 Utworzono niewielką bibliotekę i zestaw testów jednostkowych dla tej biblioteki. Rozbudowane rozwiązanie jest przeznaczone do dodawania nowych pakietów i testów jest częścią normalnego przepływu pracy. Zbyt najwięcej czasu i wysiłku na rozwiązywanie celów aplikacji.
+
+## <a name="see-also"></a>Zobacz także
+
+- [dotnet add reference](../tools/dotnet-add-reference.md)
+- [dotnet test](../tools/dotnet-test.md)

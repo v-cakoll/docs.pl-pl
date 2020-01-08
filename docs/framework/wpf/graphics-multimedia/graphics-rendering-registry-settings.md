@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: adb4848e844ff091c45ec9a8a2e6d36f01c3cf91
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 53f25be3bc38d88aa7723f6a0858317ee5ce6143
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960147"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559654"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Ustawienie rejestru renderowania grafiki
 Ten temat zawiera omówienie ustawień rejestru renderowania grafiki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], które mają wpływ na aplikacje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -24,7 +24,7 @@ Ten temat zawiera omówienie ustawień rejestru renderowania grafiki [!INCLUDE[T
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>Co to są XPDM i WDDM?  
- Niektóre ustawienia rejestru renderowania grafiki mają różne wartości domyślne, w zależności od tego, czy karta wideo korzysta ze sterownika XPDM czy WDDM. XPDM to model sterownika wyświetlania systemu Microsoft Windows XP, a WDDM to model sterownika Windows Display. WDDM jest dostępny na komputerach z systemem Windows Vista i Windows 7. XPDM jest dostępna na komputerach z systemem Windows Vista, Microsoft Windows XP i [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Aby uzyskać więcej informacji na temat usługi WDDM, zobacz [Przewodnik dotyczący projektowania modelu sterownika wyświetlania systemu Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178394).  
+ Niektóre ustawienia rejestru renderowania grafiki mają różne wartości domyślne, w zależności od tego, czy karta wideo korzysta ze sterownika XPDM czy WDDM. XPDM to model sterownika wyświetlania systemu Microsoft Windows XP, a WDDM to model sterownika Windows Display. WDDM jest dostępny na komputerach z systemem Windows Vista i Windows 7. XPDM jest dostępna na komputerach z systemem Windows Vista, Microsoft Windows XP i Microsoft Windows Server 2003. Aby uzyskać więcej informacji na temat usługi WDDM, zobacz [Przewodnik dotyczący projektowania modelu sterownika wyświetlania systemu Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178394).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Ustawienia rejestru  

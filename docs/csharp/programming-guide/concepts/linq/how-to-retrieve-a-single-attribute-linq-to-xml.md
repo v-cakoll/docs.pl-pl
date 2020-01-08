@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Pobierz pojedynczy atrybut (LINQ to XML) (C#)'
+title: Jak pobrać pojedynczy atrybut (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: d8c8d0e3a99f94c4404f0ab23a5edf082be77952
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 31b34bddc9e748b473641235402847991d444c39
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253413"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347494"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Instrukcje: Pobierz pojedynczy atrybut (LINQ to XML) (C#)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Jak pobrać pojedynczy atrybut (LINQ to XML) (C#)
 W tym temacie wyjaśniono, jak pobrać pojedynczy atrybut elementu, pod nazwą atrybutu. Jest to przydatne w przypadku pisania wyrażeń zapytania, gdzie chcesz znaleźć element, który ma określony atrybut.  
   
- <xref:System.Xml.Linq.XElement.Attribute%2A> Metoda klasy<xref:System.Xml.Linq.XElement> zwraca z<xref:System.Xml.Linq.XAttribute> określoną nazwą.  
+ Metoda <xref:System.Xml.Linq.XElement.Attribute%2A> klasy <xref:System.Xml.Linq.XElement> zwraca <xref:System.Xml.Linq.XAttribute> o określonej nazwie.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie zastosowano <xref:System.Xml.Linq.XElement.Attribute%2A> metodę.  
+ W poniższym przykładzie zastosowano metodę <xref:System.Xml.Linq.XElement.Attribute%2A>.  
   
 ```csharp  
 XElement cust = new XElement("PhoneNumbers",  
@@ -43,7 +43,7 @@ work
 ```  
   
 ## <a name="example"></a>Przykład  
- Jeśli chcesz pobrać wartość atrybutu, możesz go rzutować, tak jak w przypadku <xref:System.Xml.Linq.XElement> obiektów. Poniższy przykład ilustruje to.  
+ Jeśli chcesz pobrać wartość atrybutu, możesz go rzutować w taki sam sposób, jak w przypadku obiektów <xref:System.Xml.Linq.XElement>. Poniższy przykład ilustruje to.  
   
 ```csharp  
 XElement cust = new XElement("PhoneNumbers",  
@@ -68,7 +68,7 @@ home
 work  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zapewnia jawne Operatory rzutowania dla <xref:System.Xml.Linq.XAttribute> klasy do `string` `int` `bool?` `bool` `int?`,, ,,`long?`,, ,,,`uint?` `uint` `long` `ulong`, `ulong?` ,`float?` ,,`TimeSpan`, ,`decimal?`, ,,`TimeSpan?`,, ,`GUID`i `float` `double` `DateTime` `double?` `decimal` `DateTime?`  `GUID?`.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zawiera jawne Operatory rzutowania dla klasy <xref:System.Xml.Linq.XAttribute> do `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, `GUID?`.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje ten sam kod dla atrybutu, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  

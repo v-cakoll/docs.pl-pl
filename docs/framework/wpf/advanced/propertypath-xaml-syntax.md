@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 17c8982a66960626a5d049fa2da90f5f2d995d14
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740781"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559771"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath — Składnia XAML
 
@@ -192,7 +192,7 @@ Aby można było obsłużyć klonowanie na potrzeby animowania <xref:System.Wind
 
 `propertyName2` musi być nazwą właściwości zależności, która istnieje w obiekcie, który jest wartością `propertyName`. Innymi słowy, `propertyName2` musi istnieć jako właściwość zależności w typie, który jest <xref:System.Windows.DependencyProperty.PropertyType%2A>`propertyName`.
 
-Pośredni cel animacji jest konieczny ze względu na zastosowane style i szablony. Aby można było utworzyć animację, potrzebujesz <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> w obiekcie docelowym, a nazwa jest określana przez [x:Name](../../xaml-services/x-name-directive.md) lub <xref:System.Windows.FrameworkElement.Name%2A>. Chociaż elementy szablonu i stylu mogą także mieć nazwy, te nazwy są prawidłowe tylko w namescope stylu i szablonu. (Jeśli szablony i style współużytkują Zakresy nazw WPF z znacznikiem aplikacji, nazwy nie mogły być unikatowe. Style i szablony są dosłownie współużytkowane przez wystąpienia i perpetuate zduplikowane nazwy.) W takim przypadku, jeśli poszczególne właściwości elementu, który można animować, pochodzą z stylu lub szablonu, należy rozpocząć od wystąpienia nazwanego elementu, który nie jest z szablonu stylu, a następnie skierować do drzewa wizualnego stylu lub szablonu, aby dotrzeć do właściwości chcesz animować.
+Pośredni cel animacji jest konieczny ze względu na zastosowane style i szablony. Aby można było utworzyć animację, potrzebujesz <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> w obiekcie docelowym, a nazwa jest określana przez [x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) lub <xref:System.Windows.FrameworkElement.Name%2A>. Chociaż elementy szablonu i stylu mogą także mieć nazwy, te nazwy są prawidłowe tylko w namescope stylu i szablonu. (Jeśli szablony i style współużytkują Zakresy nazw WPF z znacznikiem aplikacji, nazwy nie mogły być unikatowe. Style i szablony są dosłownie współużytkowane przez wystąpienia i perpetuate zduplikowane nazwy.) W takim przypadku, jeśli poszczególne właściwości elementu, który można animować, pochodzą z stylu lub szablonu, należy rozpocząć od wystąpienia nazwanego elementu, który nie jest z szablonu stylu, a następnie skierować do drzewa wizualnego stylu lub szablonu, aby dotrzeć do właściwości chcesz animować.
 
 Na przykład właściwość <xref:System.Windows.Controls.Panel.Background%2A> <xref:System.Windows.Controls.Panel> jest kompletną <xref:System.Windows.Media.Brush> (w rzeczywistości <xref:System.Windows.Media.SolidColorBrush>), która pochodzi z szablonu motywu. Aby animować <xref:System.Windows.Media.Brush> w całości, należy mieć BrushAnimation (prawdopodobnie jeden dla każdego typu <xref:System.Windows.Media.Brush>) i nie istnieje taki typ. Aby animować pędzla, należy zamiast tego animować właściwości określonego typu <xref:System.Windows.Media.Brush>. Musisz uzyskać od <xref:System.Windows.Media.SolidColorBrush> do <xref:System.Windows.Media.SolidColorBrush.Color%2A>, aby zastosować <xref:System.Windows.Media.Animation.ColorAnimation> tam. Ścieżka właściwości dla tego przykładu byłaby `Background.Color`.
 

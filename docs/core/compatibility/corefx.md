@@ -2,12 +2,12 @@
 title: Podstawowe zmiany w bibliotece klas podstawowych — .NET Core
 description: Wyświetla listę istotnych zmian w programie .NET CoreFx, biblioteki klas bazowych.
 ms.date: 09/20/2019
-ms.openlocfilehash: 9462e8f8a54a12c19744f7cce55b2a8998ae9f94
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 1b578a6e3ae986a4c12c36fdf558b1fa5d8a3d66
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568130"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344858"
 ---
 # <a name="corefx-breaking-changes"></a>CoreFx istotne zmiany
 
@@ -64,3 +64,11 @@ Poniżej znajduje się lista CoreFxch zmian w wersji platformy .NET Core. CoreFx
 ## <a name="net-core-30-preview-7"></a>.NET Core 3,0 (wersja zapoznawcza 7)
 
 [!INCLUDE[JsonElement API changes](~/includes/core-changes/corefx/3.0/jsonelement-api-changes.md)]
+
+## <a name="net-core-21"></a>.NET Core 2.1
+
+[!INCLUDE[Instantiate struct](~/includes/core-changes/corefx/2.1/instantiate-struct.md)]
+
+***
+
+[!INCLUDE[Process.Start changes](~/includes/core-changes/corefx/2.1/process-start-changes.md)]

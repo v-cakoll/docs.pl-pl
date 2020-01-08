@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Przekształcanie kształtu drzewa XML (C#)'
+title: Jak przekształcić kształt drzewa XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
-ms.openlocfilehash: c6f78decdcc32d202f4a0f1e51a012dce8aa7d6c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 91f91ed6fea5371fae2ce67a413f4825f37af6c3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592221"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347303"
 ---
-# <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>Instrukcje: Przekształcanie kształtu drzewa XML (C#)
+# <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>Jak przekształcić kształt drzewa XML (C#)
 *Kształt* dokumentu XML odwołuje się do jego nazw elementów, nazw atrybutów i cech hierarchii.  
   
  Czasami trzeba będzie zmienić kształt dokumentu XML. Na przykład może być konieczne wysłanie istniejącego dokumentu XML do innego systemu, który wymaga innych nazw elementów i atrybutów. Możesz przejść przez dokument, usunąć i zmienić nazwy elementów zgodnie z potrzebami, ale użycie konstrukcji funkcjonalnej skutkuje bardziej czytelnym i możliwym do utrzymania kodem. Aby uzyskać więcej informacji na temat konstrukcji funkcjonalnej, zobacz [konstrukcja funkcjonalnaC#(LINQ to XML) ()](./functional-construction-linq-to-xml.md).  
@@ -21,9 +21,9 @@ ms.locfileid: "69592221"
 ## <a name="example"></a>Przykład  
  Poniższy kod zmienia kształt pliku XML przy użyciu osadzonych wyrażeń zapytań.  
   
- Źródłowy dokument XML w tym przykładzie zawiera `Customers` element `Root` w obszarze elementu, który zawiera wszystkich klientów. Zawiera `Orders` również element `Root` w obszarze elementu, który zawiera wszystkie zamówienia. Ten przykład tworzy nowe drzewo XML, w którym zamówienia dla każdego klienta są zawarte w `Orders` elemencie `Customer` w elemencie. Oryginalny dokument zawiera `CustomerID` również element `Order` w elemencie; ten element zostanie usunięty z dokumentu, który można zmienić.  
+ Źródłowy dokument XML w tym przykładzie zawiera element `Customers` w elemencie `Root`, który zawiera wszystkich klientów. Zawiera również element `Orders` w elemencie `Root`, który zawiera wszystkie zamówienia. Ten przykład tworzy nowe drzewo XML, w którym zamówienia dla każdego klienta znajdują się w `Orders` elementu w ramach elementu `Customer`. Oryginalny dokument zawiera również element `CustomerID` w elemencie `Order`; Ten element zostanie usunięty z dokumentu, który można zmienić.  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  
@@ -88,9 +88,9 @@ Console.WriteLine(newCustOrd);
 ## <a name="example"></a>Przykład  
  Ten przykład zmienia nazwę niektórych elementów i konwertuje niektóre atrybuty do elementów.  
   
- Kod wywołuje `ConvertAddress`metodę, która zwraca <xref:System.Xml.Linq.XElement> listę obiektów. Argument metody jest zapytanie, które określa `Address` element złożony, `Type` gdzie `"Shipping"`atrybut ma wartość.  
+ Kod wywołuje `ConvertAddress`, który zwraca listę obiektów <xref:System.Xml.Linq.XElement>. Argument metody jest zapytanie, które określa `Address` element złożony, gdzie atrybut `Type` ma wartość `"Shipping"`.  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Typowe zamówienie zakupu (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: typowe zamówienie zakupu (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 static IEnumerable<XElement> ConvertAddress(XElement add)  

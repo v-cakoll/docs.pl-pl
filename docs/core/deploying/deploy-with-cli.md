@@ -3,17 +3,17 @@ title: Publikowanie aplikacji platformy .NET Core za pomocą interfejsu wiersza 
 description: Dowiedz się, jak opublikować aplikację platformy .NET Core przy użyciu narzędzi interfejsu wiersza polecenia zestaw .NET Core SDK (CLI).
 author: thraka
 ms.author: adegeo
-ms.date: 01/16/2019
+ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 41af1c708a264833f1f7217529b5c0206d405449
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 0c175d8ba8e4011213265a6cfa2e5e8fea0303b2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428915"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343571"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publikowanie aplikacji platformy .NET Core za pomocą interfejsu wiersza polecenia
 
@@ -43,9 +43,9 @@ Jeśli chcesz utworzyć więcej niż jedną strukturę, możesz ustawić `<Targe
 
 Jeśli nie ustawisz inaczej, katalog wyjściowy polecenia [`dotnet publish`](../tools/dotnet-publish.md) jest `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Domyślny tryb **kompilacji — konfiguracja** jest **debugowany** , chyba że zostanie zmieniony przy użyciu parametru `-c`. Na przykład `dotnet publish -c Release -f netcoreapp2.1` publikuje w `myfolder/bin/Release/netcoreapp2.1/publish/`.
 
-Jeśli używasz zestaw .NET Core SDK 3,0, domyślnym trybem publikowania dla aplikacji przeznaczonych dla platformy .NET Core w wersji 2,1, 2,2 lub 3,0 jest plik wykonywalny zależny od platformy.
+Jeśli używasz zestaw .NET Core SDK 3,0 lub nowszej, domyślnym trybem publikowania dla aplikacji przeznaczonych dla platformy .NET Core w wersji 2,1, 2,2, 3,0 lub nowszej wersji jest plik wykonywalny zależny od struktury.
 
-Jeśli używasz zestaw .NET Core SDK 2,1, domyślnym trybem publikowania dla aplikacji przeznaczonych dla platformy .NET Core w wersji 2,1, 2,2 jest wdrożenie zależne od platformy.
+Jeśli używasz zestaw .NET Core SDK 2,1, domyślnym trybem publikowania dla aplikacji przeznaczonych dla platformy .NET Core w wersji 2,1 i 2,2 jest wdrożenie zależne od platformy.
 
 ### <a name="native-dependencies"></a>Zależności natywne
 
@@ -110,7 +110,7 @@ W przypadku interfejsu wiersza polecenia zestaw .NET Core SDK 2. x wdrożenie za
 
 Po opublikowaniu aplikacji jako FDD w folderze `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` zostanie utworzony plik `<PROJECT-NAME>.dll`. Aby uruchomić aplikację, przejdź do folderu danych wyjściowych i użyj polecenia `dotnet <PROJECT-NAME>.dll`.
 
-Twoja aplikacja jest skonfigurowana pod kątem określonej wersji platformy .NET Core. Odpowiednie środowisko uruchomieniowe platformy .NET Core musi znajdować się na komputerze, na którym chcesz uruchomić aplikację. Na przykład jeśli aplikacja jest przeznaczona dla platformy .NET Core 2,2, na każdym komputerze, na którym działa aplikacja, musi być zainstalowany program .NET Core 2,2 Runtime. Zgodnie z opisem w sekcji [Informacje o publikowaniu](#publishing-basics) można edytować plik projektu, aby zmienić domyślną platformę docelową lub docelową więcej niż jedną strukturę.
+Twoja aplikacja jest skonfigurowana pod kątem określonej wersji platformy .NET Core. Odpowiednie środowisko uruchomieniowe platformy .NET Core musi znajdować się na dowolnym komputerze, na którym działa aplikacja. Na przykład jeśli aplikacja jest przeznaczona dla platformy .NET Core 2,2, na każdym komputerze, na którym działa aplikacja, musi być zainstalowany program .NET Core 2,2 Runtime. Zgodnie z opisem w sekcji [Informacje o publikowaniu](#publishing-basics) można edytować plik projektu, aby zmienić domyślną platformę docelową lub docelową więcej niż jedną strukturę.
 
 Opublikowanie FDD powoduje utworzenie aplikacji, która automatycznie przeniesie do najnowszej wersji programu .NET Core w systemie, w której działa aplikacja. Aby uzyskać więcej informacji na temat powiązań wersji w czasie kompilacji, zobacz [Wybieranie wersji platformy .NET Core do użycia](../versions/selection.md#framework-dependent-apps-roll-forward).
 
@@ -120,11 +120,11 @@ W przypadku interfejsu wiersza polecenia zestaw .NET Core SDK 3. x zależny od s
 
 W tym trybie jest tworzony Host wykonywalny specyficzny dla platformy, który umożliwia hostowanie aplikacji dla wielu platform. Ten tryb jest podobny do FDD, ponieważ FDD wymaga hosta w postaci polecenia `dotnet`. Nazwa pliku wykonywalnego hosta różni się w zależności od platformy i nosi nazwę podobną do `<PROJECT-FILE>.exe`. Można uruchomić ten plik wykonywalny bezpośrednio zamiast wywoływania `dotnet <PROJECT-FILE>.dll`, który nadal jest akceptowalnym sposobem uruchamiania aplikacji.
 
-Twoja aplikacja jest skonfigurowana pod kątem określonej wersji platformy .NET Core. Odpowiednie środowisko uruchomieniowe platformy .NET Core musi znajdować się na komputerze, na którym chcesz uruchomić aplikację. Na przykład jeśli aplikacja jest przeznaczona dla platformy .NET Core 2,2, na każdym komputerze, na którym działa aplikacja, musi być zainstalowany program .NET Core 2,2 Runtime. Zgodnie z opisem w sekcji [Informacje o publikowaniu](#publishing-basics) można edytować plik projektu, aby zmienić domyślną platformę docelową lub docelową więcej niż jedną strukturę.
+Twoja aplikacja jest skonfigurowana pod kątem określonej wersji platformy .NET Core. Odpowiednie środowisko uruchomieniowe platformy .NET Core musi znajdować się na dowolnym komputerze, na którym działa aplikacja. Na przykład jeśli aplikacja jest przeznaczona dla platformy .NET Core 2,2, na każdym komputerze, na którym działa aplikacja, musi być zainstalowany program .NET Core 2,2 Runtime. Zgodnie z opisem w sekcji [Informacje o publikowaniu](#publishing-basics) można edytować plik projektu, aby zmienić domyślną platformę docelową lub docelową więcej niż jedną strukturę.
 
 Opublikowanie całego powoduje utworzenie aplikacji, która automatycznie przeniesie do najnowszej wersji programu .NET Core w systemie, w której działa aplikacja. Aby uzyskać więcej informacji na temat powiązań wersji w czasie kompilacji, zobacz [Wybieranie wersji platformy .NET Core do użycia](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-Musisz (z wyjątkiem programu .NET Core 3. x, gdy jest przeznaczony dla bieżącej platformy), użyj następujących przełączników z `dotnet publish` polecenie, aby opublikować całego:
+W przypadku platformy .NET Core 2,2 i starszych należy użyć następujących przełączników z `dotnet publish` polecenie, aby opublikować całego:
 
 - `-r <RID>` ten przełącznik używa identyfikatora (RID), aby określić platformę docelową. Aby uzyskać listę identyfikatorów środowiska uruchomieniowego, zobacz [wykaz identyfikatorów środowiska uruchomieniowego (RID)](../rid-catalog.md).
 
@@ -141,7 +141,7 @@ Jeśli używasz [przykładowej aplikacji](#sample-app), uruchom `dotnet publish 
 
 Po opublikowaniu wdrożenia samodzielnego (SCD), zestaw .NET Core SDK tworzy plik wykonywalny specyficzny dla platformy. Opublikowanie SCD obejmuje wszystkie wymagane pliki .NET Core do uruchomienia aplikacji, ale nie obejmuje [natywnych zależności programu .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Te zależności muszą być obecne w systemie przed uruchomieniem aplikacji.
 
-Opublikowanie SCD tworzy aplikację, która nie przekazuje do najnowszej dostępnej poprawki zabezpieczeń platformy .NET Core. Aby uzyskać więcej informacji na temat powiązań wersji w czasie kompilacji, zobacz [Wybieranie wersji platformy .NET Core do użycia](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
+Opublikowanie elementu SCD powoduje utworzenie aplikacji, która nie przekazuje do najnowszej dostępnej poprawki zabezpieczeń platformy .NET Core. Aby uzyskać więcej informacji na temat powiązań wersji w czasie kompilacji, zobacz [Wybieranie wersji platformy .NET Core do użycia](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
 
 Aby opublikować SCD, należy użyć następujących przełączników z poleceniem `dotnet publish`:
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: d05307735506db0f0e4abab067334e4f0466ee6a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
-ms.translationtype: MT
+ms.openlocfilehash: 19bf511ee7252bc305dbb4b6f32636955eba0ab8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204637"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337268"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Ograniczenia dotyczące parametrów typu (C# Przewodnik programowania)
 
@@ -24,7 +24,7 @@ Ograniczenia informują kompilator o możliwościach, które argument typu musi 
 |`where T : class`|Argument typu musi być typem referencyjnym. To ograniczenie dotyczy również dowolnego typu klasy, interfejsu, delegata lub tablicy.|
 |`where T : notnull`|Argument typu musi być typem niedopuszczający wartości null. Argument może być typem referencyjnym niedopuszczający wartości null C# w 8,0 lub późniejszym lub nie DOPUSZCZANYM typem wartości. To ograniczenie dotyczy również dowolnego typu klasy, interfejsu, delegata lub tablicy.|
 |`where T : unmanaged`|Argument typu musi być [typem niezarządzanym](../../language-reference/builtin-types/unmanaged-types.md)niedopuszczający wartości null. Ograniczenie `unmanaged` implikuje ograniczenie `struct` i nie można go łączyć z ograniczeniami `struct` lub `new()`.|
-|`where T : new()`|Typ argumentu musi mieć publicznego konstruktora bez parametrów. W przypadku użycia razem z innymi ograniczeniami, ograniczenie `new()` musi być określone jako ostatnie. Nie można łączyć ograniczenia `new()` z ograniczeniami `struct` i `unmanaged`.|
+|`where T : new()`|Typ argumentu musi mieć publicznego konstruktora bez parametrów. Gdy jest używany z innymi ograniczeniami `new()` ograniczenie musi być określony jako ostatni. Nie można łączyć ograniczenia `new()` z ograniczeniami `struct` i `unmanaged`.|
 |`where T :` *\<nazwę klasy bazowej >*|Argument typu musi być lub pochodzić od określonej klasy podstawowej.|
 |`where T :` *\<nazwy interfejsu >*|Argument typu muszą być lub implementować określonego interfejsu. Można określić wiele ograniczeń interfejsu. Można też ogólnego ograniczający interfejsu.|
 |`where T : U`|Argumentu typu dostarczonego T musi być lub pochodzić od argument dostarczony dla U.|
@@ -59,7 +59,7 @@ Można zastosować ograniczenia do wielu parametrów i wiele ograniczeń do jedn
 
 - Nie można używać operatorów `!=` i `==`, ponieważ nie ma gwarancji, że konkretny argument typu będzie obsługiwał te operatory.
 - Mogą być konwertowane na i z `System.Object` lub jawnie konwertowane na dowolny typ interfejsu.
-- Można je porównać z [wartością null](../../language-reference/keywords/null.md). Jeśli niezwiązany parametr jest porównywany z `null`, porównanie zwróci wartość false, jeśli argument typu jest typem wartości.
+- Można je porównać z wartością [null](../../language-reference/keywords/null.md). Jeśli niezwiązany parametr jest porównywany z `null`, porównanie zwróci wartość false, jeśli argument typu jest typem wartości.
 
 ## <a name="type-parameters-as-constraints"></a>Parametry typu jako ograniczenia
 
@@ -107,15 +107,15 @@ Usunięcie komentarza do ostatniego wiersza nie spowoduje skompilowania. Zarówn
 
 Począwszy od C# 7,3, można również określić typ <xref:System.Enum?displayProperty=nameWithType> jako ograniczenie klasy bazowej. Środowisko CLR zawsze zezwala na to ograniczenie, ale C# język nie jest dozwolony. Typy ogólne wykorzystujące `System.Enum` zapewniają programowanie bezpiecznego typu w celu buforowania wyników z używania metod statycznych w `System.Enum`. Poniższy przykład odnajduje wszystkie prawidłowe wartości dla typu wyliczeniowego, a następnie tworzy słownik, który mapuje te wartości na jego reprezentację w postaci ciągu.
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
+[!code-csharp[using the enum constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
 
-Używane metody wykorzystują odbicie, które mają wpływ na wydajność. Można wywołać tę metodę, aby utworzyć kolekcję, która jest buforowana i ponownie używana zamiast powtarzających się wywołań, które wymagają odbicia.
+Metody używane do użycia odbicia, które ma wpływ na wydajność. Można wywołać tę metodę, aby utworzyć kolekcję, która jest buforowana i ponownie używana zamiast powtarzających się wywołań, które wymagają odbicia.
 
 Można go użyć, jak pokazano w poniższym przykładzie, aby utworzyć Wyliczenie i skompilować słownik jego wartości i nazw:
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
+[!code-csharp[enum definition](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
+[!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
 ## <a name="see-also"></a>Zobacz także
 

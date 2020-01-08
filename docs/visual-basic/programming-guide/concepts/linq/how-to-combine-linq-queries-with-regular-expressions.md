@@ -2,12 +2,12 @@
 title: Sposób łączenia zapytań LINQ z wyrażeniami regularnymi
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-ms.openlocfilehash: 27fc46056ad78567339ca0c5818aef38d0fbb9a6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a091418be1f7cc30d42a98f80ebae2d36d29b5d8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348418"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337547"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Jak połączyć zapytania LINQ z wyrażeniami regularnymi (Visual Basic)
 
@@ -84,9 +84,9 @@ End Class
 
 Należy zauważyć, że można także zbadać obiekt <xref:System.Text.RegularExpressions.MatchCollection>, który jest zwracany przez wyszukiwanie `RegEx`. W tym przykładzie tylko wartość każdego dopasowania jest generowana w wynikach. Można jednak używać LINQ do wykonywania wszelkiego rodzaju filtrowania, sortowania i grupowania w tej kolekcji. Ponieważ <xref:System.Text.RegularExpressions.MatchCollection> jest nieogólną kolekcją <xref:System.Collections.IEnumerable>, należy jawnie podać typ zmiennej zakresu w zapytaniu.
 
-## <a name="compiling-the-code"></a>Kompilowanie kodu
+## <a name="compile-the-code"></a>Skompilować kod
 
-Utwórz projekt aplikacji konsolowej VB.NET, skopiuj i wklej przykładowy kod, a następnie Dostosuj wartość obiektu uruchomieniowego we właściwościach projektu.
+Utwórz projekt aplikacji konsolowej Visual Basic, skopiuj i wklej przykładowy kod, a następnie Dostosuj wartość obiektu uruchomieniowego we właściwościach projektu.
 
 ## <a name="see-also"></a>Zobacz także
 

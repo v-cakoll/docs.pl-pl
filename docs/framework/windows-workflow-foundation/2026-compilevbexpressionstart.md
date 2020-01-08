@@ -2,32 +2,32 @@
 title: 2026 — CompileVbExpressionStart
 ms.date: 03/30/2017
 ms.assetid: daad57eb-8198-49b5-9920-aa0e7428ccf1
-ms.openlocfilehash: a80cc9c6c7768626d65c3a31570d5342a395edf2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f8fc79a6b56b85bb55569420ca7511fa7e41d7a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755717"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344605"
 ---
 # <a name="2026---compilevbexpressionstart"></a>2026 — CompileVbExpressionStart
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|Identyfikator|2026|  
-|słowa kluczowe|WFRuntime|  
+|ID|2026|  
+|Słowa kluczowe|WFRuntime|  
 |Poziom|Pełny|  
 |Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
- Wskazuje początek kompilowania wyrażeń VB.  
+ Wskazuje początek kompilacji wyrażenia Visual Basic.  
   
 ## <a name="message"></a>Komunikat  
- Kompilowanie wyrażenie VB "%1"  
+ Kompilowanie wyrażenia Visual Basic ' %1 '  
   
 ## <a name="details"></a>Szczegóły  
   
 |Nazwa elementu danych|Typ elementu danych|Opis|  
 |--------------------|--------------------|-----------------|  
-|Wyrażenie|xs:String|Wyrażenie języka Visual Basic do skompilowania.|  
-|AppDomain|xs:String|Ciąg zwracany przez AppDomain.CurrentDomain.FriendlyName.|
+|Wyrażenie|XS: ciąg|Wyrażenie języka VisualBasic do skompilowania.|  
+|Wywołując|XS: ciąg|Ciąg zwracany przez element AppDomain. CurrentDomain —. FriendlyName.|

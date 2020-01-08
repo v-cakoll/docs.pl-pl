@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 6689eb36-c471-469f-a82d-099ab8197b25
-ms.openlocfilehash: af5ea809cb0777b16230f20e133764dd5f1f86d9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 32bdb1ba476a954bdad1f23c3ecc6129c90ccaac
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332340"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347177"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>Porady: dostęp do elementów podrzędnych XML (Visual Basic)
 Ten przykład pokazuje, jak używać właściwości osi podrzędnej w celu uzyskania dostępu do wszystkich elementów podrzędnych XML, które mają określoną nazwę w elemencie XML. W szczególności używa właściwości <xref:System.Xml.Linq.XElement.Value%2A>, aby pobrać wartość pierwszego elementu w kolekcji, która zwraca `name` właściwości osi podrzędnej. Właściwość osi elementu podrzędnego `name` pobiera wszystkie elementy podrzędne o nazwie `phone` w obiekcie `contact`. W tym przykładzie użyta jest również właściwość `phone` osi podrzędnej, aby uzyskać dostęp do wszystkich elementów podrzędnych o nazwach `phone` zawartych w obiekcie `contact`.  
@@ -20,7 +20,7 @@ Ten przykład pokazuje, jak używać właściwości osi podrzędnej w celu uzysk
 ## <a name="example"></a>Przykład  
  [!code-vb[VbXMLSamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#10)]  
   
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
+## <a name="compile-the-code"></a>Skompilować kod  
  Ten przykład wymaga:  
   
 - Odwołanie do przestrzeni nazw <xref:System.Xml.Linq>.  

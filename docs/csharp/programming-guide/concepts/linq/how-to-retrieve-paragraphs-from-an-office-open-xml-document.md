@@ -1,27 +1,27 @@
 ---
-title: 'Instrukcje: Pobierz akapity z dokumentu Office Open XML (C#)'
+title: Jak pobrać akapity z dokumentu Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: bfac597e0c36f41216821947928babd471fd61b3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 241bacc730f205bf501c1ab1ab47f6fda4c15d64
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253388"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347458"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Instrukcje: Pobierz akapity z dokumentu Office Open XML (C#)
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Jak pobrać akapity z dokumentu Office Open XML (C#)
 W tym temacie przedstawiono przykład, który otwiera dokument Office Open XML i pobiera kolekcję wszystkich akapitów w dokumencie.  
   
  Aby uzyskać więcej informacji na temat pakietu Office Open XML, zobacz [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) i [www.ericwhite.com](http://ericwhite.com/).  
   
 ## <a name="example"></a>Przykład  
- Ten przykład otwiera pakiet Office Open XML, używa relacji w otwartym pakiecie XML do znajdowania dokumentu i części stylu. Następnie wysyła zapytanie do dokumentu, projekcję kolekcji typu anonimowego, który zawiera węzeł akapitu <xref:System.Xml.Linq.XElement> , nazwę stylu każdego akapitu i tekst każdego akapitu.  
+ Ten przykład otwiera pakiet Office Open XML, używa relacji w otwartym pakiecie XML do znajdowania dokumentu i części stylu. Następnie wysyła zapytanie do dokumentu, projekcję kolekcji typu anonimowego, który zawiera akapit <xref:System.Xml.Linq.XElement> węzła, nazwę stylu każdego akapitu i tekst każdego akapitu.  
   
- W przykładzie zastosowano metodę rozszerzającą `StringConcatenate`o nazwie, która jest również podana w przykładzie.  
+ W przykładzie zastosowano metodę rozszerzającą o nazwie `StringConcatenate`, która jest również podana w przykładzie.  
   
  Aby zapoznać się z szczegółowym samouczkiem wyjaśniającym sposób działania tego przykładu, zobacz [czysteC#przekształceń języka XML ()](./introduction-to-pure-functional-transformations.md).  
   
- Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
+ Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```csharp  
 public static class LocalExtensions  

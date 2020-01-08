@@ -1,19 +1,19 @@
 ---
-title: Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
+title: Rozpoczynanie pracy z platformą .NET Core przy użyciu programu Visual Studio dla komputerów Mac
 description: W tym temacie omówiono tworzenie prostej aplikacji konsolowej przy użyciu Visual Studio dla komputerów Mac i .NET Core.
 author: mairaw
-ms.date: 07/11/2019
+ms.date: 12/19/2019
 ms.custom: seodec18
-ms.openlocfilehash: feaed88e902080c5c3b07578b78f8437489a690c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: f6faf5519109202a2865b0f316251bd2c85a5606
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428585"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342963"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
 
-Visual Studio dla komputerów Mac udostępnia w pełni funkcjonalne zintegrowane środowisko programistyczne (IDE) do tworzenia aplikacji platformy .NET Core. W tym temacie omówiono tworzenie prostej aplikacji konsolowej przy użyciu Visual Studio dla komputerów Mac i .NET Core.
+Visual Studio dla komputerów Mac udostępnia w pełni funkcjonalne zintegrowane środowisko programistyczne (IDE) do tworzenia aplikacji platformy .NET Core. W tym artykule przedstawiono proces tworzenia prostej aplikacji konsolowej przy użyciu Visual Studio dla komputerów Mac i platformy .NET Core.
 
 > [!NOTE]
 > Opinie są wysoce wyceniane. Istnieją dwa sposoby przekazywania opinii zespołowi programistycznemu na Visual Studio dla komputerów Mac:
@@ -23,11 +23,11 @@ Visual Studio dla komputerów Mac udostępnia w pełni funkcjonalne zintegrowane
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Zobacz temat [zależności i wymagania dotyczące platformy .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-macos) .
+Zapoznaj się z artykułem [zależności i wymagania dotyczące platformy .NET Core](../install/dependencies.md?pivots=os-macos) .
 
 Zapoznaj się z artykułem [obsługi .NET Core](/visualstudio/mac/net-core-support) , aby upewnić się, że używasz obsługiwanej wersji programu .NET Core.
 
-## <a name="get-started"></a>Rozpoczęcie pracy
+## <a name="get-started"></a>Wprowadzenie
 
 Jeśli zainstalowano już wymagania wstępne i Visual Studio dla komputerów Mac, Pomiń tę sekcję i Kontynuuj, aby [utworzyć projekt](#creating-a-project). Wykonaj następujące kroki, aby zainstalować wymagania wstępne i Visual Studio dla komputerów Mac:
 
@@ -45,7 +45,7 @@ Pobierz [instalatora Visual Studio dla komputerów Mac](https://visualstudio.mic
 
 1. Jeśli masz zainstalowaną więcej niż jedną wersję programu .NET Core, Wybierz platformę docelową dla projektu.
 
-1. Wpisz "HelloWorld" dla **nazwy projektu**. Wybierz pozycję **Utwórz**.
+1. Wpisz "HelloWorld" dla **nazwy projektu**. Wybierz **tworzenie**.
 
    ![Okno dialogowe Konfigurowanie nowej aplikacji konsolowej](./media/using-on-mac-vs/visual-studio-mac-new-options.png)
 

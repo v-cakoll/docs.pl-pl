@@ -1,15 +1,15 @@
 ---
-title: Przykład FindPrivateKey — WCF
+title: Przykład FindPrivateKey
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: 4ba4316489c1494da9421bea5c513e44c6eb50a7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0ed1e5e81a5d2f7f3586e5dce306e8244b5ebd48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989884"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346015"
 ---
 # <a name="findprivatekey-sample"></a>Przykład FindPrivateKey
 
@@ -46,13 +46,13 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 Aby pobrać projekt, odwiedź [przykłady Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459).
 
-1. Otwórz Eksploratora plików i przejdź do folderu *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* w lokalizacji katalogu, w której zainstalowano przykład.
+1. Otwórz Eksploratora plików i przejdź do folderu *WF_WCF_Samples \wcf\setup\findprivatekey\cs* w lokalizacji katalogu, w której zainstalowano przykład.
 
 2. Kliknij dwukrotnie ikonę pliku. sln, aby otworzyć plik w programie Visual Studio.
 
 3. W menu **kompilacja** wybierz opcję **Kompiluj ponownie rozwiązanie**.
 
-4. Kompilowanie rozwiązania spowoduje wygenerowanie pliku: FindPrivateKey.exe.
+4. Kompilowanie rozwiązania generuje plik: FindPrivateKey. exe.
 
 ## <a name="conventionscommand-line-entries"></a>Konwencje — wpisy wiersza polecenia
 
@@ -64,7 +64,7 @@ Aby pobrać projekt, odwiedź [przykłady Windows Communication Foundation (WCF)
 
  "\<*wartość*>" reprezentuje wartość parametru, która ma zostać wprowadzona.
 
-## <a name="usage"></a>Użycie
+## <a name="usage"></a>Pomiar
 
 ```console
 FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]

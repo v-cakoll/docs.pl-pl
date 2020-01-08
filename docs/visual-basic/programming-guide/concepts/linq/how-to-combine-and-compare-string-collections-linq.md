@@ -2,18 +2,18 @@
 title: 'Porady: łączenie i porównywanie kolekcji ciągów (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: e9bc8a5f88585bd8625633c54796a1c658c7a7af
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2df5db16e51e8f9de8a8e3506eb1f7b737065a14
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348437"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337567"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Instrukcje: łączenie i porównywanie kolekcji ciągów (LINQ) (Visual Basic)
 
 Ten przykład pokazuje, jak scalać pliki zawierające wiersze tekstu, a następnie sortować wyniki. W związku z tym pokazuje, jak wykonać prostą metodę łączenia, Unii i przecięcia na dwóch zestawach wierszy tekstu.
 
-### <a name="to-set-up-the-project-and-the-text-files"></a>Aby skonfigurować projekt i pliki tekstowe
+## <a name="set-up-the-project-and-the-text-files"></a>Konfigurowanie projektu i plików tekstowych
 
 1. Skopiuj te nazwy do pliku tekstowego o nazwie names1. txt i Zapisz go w folderze projektu:
 
@@ -163,9 +163,9 @@ End Class
 ' 2 total names in list
 ```
 
-## <a name="compiling-the-code"></a>Kompilowanie kodu
+## <a name="compile-the-code"></a>Skompilować kod
 
-Utwórz projekt aplikacji konsolowej VB.NET z instrukcją `Imports` dla przestrzeni nazw System. LINQ.
+Utwórz projekt aplikacji konsolowej Visual Basic. Dodaj instrukcję `Imports` dla przestrzeni nazw System. LINQ.
 
 ## <a name="see-also"></a>Zobacz także
 

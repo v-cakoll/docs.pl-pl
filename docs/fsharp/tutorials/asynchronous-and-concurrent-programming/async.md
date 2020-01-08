@@ -1,13 +1,13 @@
 ---
-title: Programowanie asynchroniczne wF#
+title: Programowanie asynchroniczne
 description: Dowiedz F# się, jak zapewniać czystą pomoc techniczną dla asynchroniczności w oparciu o model programowania na poziomie języka pochodzący z podstawowych koncepcji programowania funkcjonalnego.
 ms.date: 12/17/2018
-ms.openlocfilehash: 583b0f5154e6ad8875b21503cfb78f70a069ff7b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 471566befd69f330fb9254dbd57b19569d9f9ad3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837106"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344662"
 ---
 # <a name="async-programming-in-f"></a>Programowanie asynchroniczne w języku F\#
 
@@ -16,7 +16,7 @@ Programowanie asynchroniczne jest mechanizmem, który jest niezbędny dla nowocz
 - Przedstawienie procesu serwera, który może obsłużyć znaczną liczbę współbieżnych żądań przychodzących, jednocześnie minimalizując zasoby systemowe zajęte podczas przetwarzania żądań czeka na dane wejściowe z systemów lub usług zewnętrznych dla tego procesu
 - Utrzymywanie odpowiedzi na interfejsie użytkownika lub głównego wątku podczas współbieżnego postępu pracy w tle
 
-Mimo że prace w tle często obejmują wykorzystanie wielu wątków, ważne jest, aby rozważyć koncepcje asynchroniczności i wielowątkowości osobno. W rzeczywistości są one oddzielnymi problemami, a jeden z nich nie ma innych. W tym artykule opisano to w bardziej szczegółowy sposób.
+Mimo że prace w tle często obejmują wykorzystanie wielu wątków, ważne jest, aby rozważyć koncepcje asynchroniczności i wielowątkowości osobno. W rzeczywistości są one oddzielnymi problemami, a jeden z nich nie ma innych. W tym artykule opisano to bardziej szczegółowo.
 
 ## <a name="asynchrony-defined"></a>Asynchroniczności zdefiniowany
 
@@ -69,13 +69,13 @@ let main argv =
     0
 ```
 
-W przykładzie funkcja `printTotalFileBytes` jest typu `string -> Async<unit>`. Wywołanie funkcji nie powoduje rzeczywistego wykonania obliczeń asynchronicznych. Zamiast tego zwraca `Async<unit>`, który działa jako Specyfikacja * dla pracy, która jest wykonywana asynchronicznie. Wywoła `Async.AwaitTask` w swojej treści, co spowoduje przekonwertowanie wyniku <xref:System.IO.File.WriteAllBytesAsync%2A> do odpowiedniego typu, gdy zostanie on wywołany.
+W przykładzie funkcja `printTotalFileBytes` jest typu `string -> Async<unit>`. Wywołanie funkcji nie powoduje rzeczywistego wykonania obliczeń asynchronicznych. Zamiast tego zwraca `Async<unit>`, który działa jako *Specyfikacja* pracy, która jest wykonywana asynchronicznie. Wywołuje `Async.AwaitTask` w swojej treści, co konwertuje wynik <xref:System.IO.File.WriteAllBytesAsync%2A> do odpowiedniego typu.
 
 Innym ważnym wierszem jest wywołanie `Async.RunSynchronously`. Jest to jeden z funkcji uruchamiania modułów asynchronicznych, które należy wywołać, jeśli chcesz rzeczywiście wykonać F# asynchroniczne obliczanie.
 
-Jest to podstawowa różnica ze stylem C#/VB programowania `async`. W F#programie asynchroniczne obliczenia można traktować jako **zimne zadania**. Muszą być jawnie uruchomione w celu rzeczywistego wykonania. Ma to pewne zalety, ponieważ umożliwia łączenie i sekwencję asynchronicznych zadań znacznie łatwiej niż w C#/VB.
+Jest to podstawowa różnica przy C#/Visual podstawowych `async` stylu programowania. W F#programie asynchroniczne obliczenia można traktować jako **zimne zadania**. Muszą być jawnie uruchomione w celu rzeczywistego wykonania. Ma to pewne zalety, ponieważ umożliwia łączenie i sekwencję asynchronicznych działań znacznie łatwiej niż w programie C# lub Visual Basic.
 
-## <a name="combining-asynchronous-computations"></a>Łączenie asynchronicznych obliczeń
+## <a name="combine-asynchronous-computations"></a>Łączenie asynchronicznych obliczeń
 
 Oto przykład, który kompiluje się na poprzednim, przez połączenie obliczeń:
 
@@ -110,7 +110,7 @@ Jak widać, funkcja `main` ma wiele większej liczby wywołań. Koncepcyjnie wyk
 
 Po uruchomieniu tego programu `printTotalFileBytes` działa równolegle dla każdego argumentu wiersza polecenia. Ponieważ asynchroniczne obliczenia są wykonywane niezależnie od przepływu programu, nie ma kolejności, w której drukują informacje i kończą wykonywanie. Obliczenia będą wykonywane równolegle, ale ich kolejność wykonywania nie jest gwarantowana.
 
-## <a name="sequencing-asynchronous-computations"></a>Asynchroniczne obliczenia sekwencjonowania
+## <a name="sequence-asynchronous-computations"></a>Asynchroniczne obliczenia sekwencji
 
 Ponieważ `Async<'T>` to specyfikacja pracy, a nie zadania już uruchomionego, można łatwo wykonywać bardziej intricatee przekształcenia. Oto przykład, który służy do sekwencjonowania zestawu asynchronicznych obliczeń, tak aby były wykonywane jeden po drugim.
 
@@ -162,7 +162,7 @@ Co należy obserwować:
 
 ### <a name="asyncstartimmediate"></a>Async. StartImmediate —
 
-Uruchamia asynchroniczne obliczenie, począwszy od razu od bieżącego wątku systemu operacyjnego. Jest to przydatne, jeśli trzeba zaktualizować coś w wątku wywołującym podczas obliczania. Na przykład jeśli asynchroniczne obliczenie musi zaktualizować interfejs użytkownika (na przykład zaktualizować pasek postępu), należy użyć `Async.StartImmediate`.
+Uruchamia asynchroniczne obliczenie, rozpoczynając od razu od bieżącego wątku systemu operacyjnego. Jest to przydatne, jeśli trzeba zaktualizować coś w wątku wywołującym podczas obliczania. Na przykład jeśli asynchroniczne obliczenie musi zaktualizować interfejs użytkownika (na przykład zaktualizować pasek postępu), należy użyć `Async.StartImmediate`.
 
 Podpis:
 
@@ -273,7 +273,7 @@ Co należy obserwować:
 
 ### <a name="asyncignore"></a>Async. Ignore
 
-Tworzy asynchroniczne obliczenie, które uruchamia dane obliczenie i ignoruje wynik.
+Tworzy asynchroniczne obliczenie, które uruchamia danego obliczenia i ignoruje jego wynik.
 
 Podpis:
 
@@ -330,7 +330,7 @@ Co należy obserwować:
 - Wyjątki wywoływane przez obliczenia rozpoczęte z `Async.Start` nie są propagowane do obiektu wywołującego. Stos wywołań zostanie całkowicie odłożony.
 - Wszelkie efekty pracy (takie jak wywołanie `printfn`) rozpoczęte z `Async.Start` nie spowoduje wystąpienia efektu w głównym wątku wykonywania programu.
 
-## <a name="interoperating-with-net"></a>Współdziałanie z platformą .NET
+## <a name="interoperate-with-net"></a>Współdziałanie z platformą .NET
 
 Być może pracujesz z biblioteką lub C# bazą kodu .NET, która używa asynchronicznego [/oczekującego](../../../standard/async.md)programowania w stylu. Ze C# względu na to, że większość bibliotek .NET używa typów <xref:System.Threading.Tasks.Task%601> i <xref:System.Threading.Tasks.Task> jako ich rdzeń podstawowy, a nie `Async<'T>`, należy przekroczyć granicę między tymi dwoma podejściami do asynchroniczności.
 
@@ -371,7 +371,7 @@ module Async =
 
 Istnieje już `Async.AwaitTask`, które akceptuje <xref:System.Threading.Tasks.Task> jako dane wejściowe. Za pomocą tej i wcześniej zdefiniowanej funkcji `startTaskFromAsyncUnit` można rozpoczynać i czekać <xref:System.Threading.Tasks.Task> typów z obliczeń F# asynchronicznych.
 
-## <a name="relationship-to-multithreading"></a>Relacja do wielowątkowości
+## <a name="relationship-to-multi-threading"></a>Relacja do wielowątkowości
 
 Chociaż wątki są wymienione w tym artykule, istnieją dwie ważne kwestie, które należy zapamiętać:
 

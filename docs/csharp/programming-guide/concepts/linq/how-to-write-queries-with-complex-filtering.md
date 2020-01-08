@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: Zapisuj zapytania ze złożonym filtrowaniemC#()'
+title: Jak pisać zapytania ze złożonym filtrowaniem (C#)
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 7759a02c1b9ef0ae0c1af4bfb2600543b21cdf0f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a4918631fed21967b402c5c56cfb8a211d44c139
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253198"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337360"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-c"></a>Instrukcje: Zapisuj zapytania ze złożonym filtrowaniemC#()
+# <a name="how-to-write-queries-with-complex-filtering-c"></a>Jak pisać zapytania ze złożonym filtrowaniem (C#)
 Czasami chcesz pisać zapytania LINQ to XML ze złożonymi filtrami. Na przykład może być konieczne znalezienie wszystkich elementów, które mają element podrzędny o określonej nazwie i wartości. Ten temat zawiera przykład tworzenia zapytania z skomplikowanym filtrowaniem.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład pokazuje, jak znaleźć wszystkie `PurchaseOrder` elementy, które mają element `Address` podrzędny, który ma `Type` atrybut równy "wysyłce" i element podrzędny `State` równy "NY". Używa zapytania zagnieżdżonego w `Where` klauzuli `Any` i operator zwraca `true` , jeśli kolekcja zawiera jakiekolwiek elementy. Aby uzyskać informacje o używaniu składni zapytania opartej na metodzie, zobacz [składnia zapytań i składnia metod w LINQ](./query-syntax-and-method-syntax-in-linq.md).  
+ Ten przykład pokazuje, jak znaleźć wszystkie `PurchaseOrder` elementy mające element podrzędny `Address`, który ma atrybut `Type` równy "wysyłce" i podrzędny element `State` równy "NY". Używa zagnieżdżonego zapytania w klauzuli `Where`, a operator `Any` zwraca `true`, jeśli kolekcja zawiera jakiekolwiek elementy. Aby uzyskać informacje o używaniu składni zapytania opartej na metodzie, zobacz [składnia zapytań i składnia metod w LINQ](./query-syntax-and-method-syntax-in-linq.md).  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Wiele zamówień zakupu (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
- Aby uzyskać więcej informacji na `Any` temat operatora, zobacz [Operacje kwantyfikatoraC#()](./quantifier-operations.md).  
+ Aby uzyskać więcej informacji na temat operatora `Any`, zobacz [Operacje kwantyfikatoraC#()](./quantifier-operations.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrders.xml");  
@@ -44,7 +44,7 @@ foreach (XElement el in purchaseOrders)
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Wiele zamówień zakupu w przestrzeni nazw](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu w przestrzeni nazw](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrdersInNamespace.xml");  

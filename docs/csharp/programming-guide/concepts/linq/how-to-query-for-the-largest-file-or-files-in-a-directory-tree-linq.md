@@ -1,29 +1,29 @@
 ---
-title: 'Instrukcje: Zapytanie o największy plik lub pliki w drzewie katalogów (LINQ) (C#)'
+title: Jak wykonać zapytanie o największy plik lub pliki w drzewie katalogów (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: 966138795dca53db99a0752b9bb7b85cc4601ee3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: dee501dc8d0cabd718307b45c99ca049ae4250aa
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592753"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344563"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Instrukcje: Zapytanie o największy plik lub pliki w drzewie katalogów (LINQ) (C#)
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Jak wykonać zapytanie o największy plik lub pliki w drzewie katalogów (LINQ) (C#)
 Ten przykład pokazuje pięć zapytań związanych z rozmiarem pliku w bajtach:  
   
 - Jak pobrać rozmiar w bajtach największego pliku.  
   
 - Jak pobrać rozmiar w bajtach najmniejszego pliku.  
   
-- Jak pobrać <xref:System.IO.FileInfo> największy lub najmniejszy plik z co najmniej jednego folderu w określonym folderze głównym.  
+- Jak pobrać obiekt <xref:System.IO.FileInfo> największy lub najmniejszy z jednego lub kilku folderów w określonym folderze głównym.  
   
 - Jak pobrać sekwencję, taką jak 10 największych plików.  
   
 - Jak zamówić pliki w grupach na podstawie ich rozmiaru pliku w bajtach, ignorowanie plików mniejszych niż określony rozmiar.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zawiera pięć oddzielnych zapytań, które pokazują, jak wykonywać zapytania i grupować pliki, w zależności od rozmiaru pliku w bajtach. Można łatwo zmodyfikować te przykłady, aby oprzeć zapytania na innej właściwości <xref:System.IO.FileInfo> obiektu.  
+ Poniższy przykład zawiera pięć oddzielnych zapytań, które pokazują, jak wykonywać zapytania i grupować pliki, w zależności od rozmiaru pliku w bajtach. Można łatwo zmodyfikować te przykłady, aby oprzeć zapytania na innej właściwości obiektu <xref:System.IO.FileInfo>.  
   
 ```csharp  
 class QueryBySize  
@@ -138,12 +138,12 @@ class QueryBySize
 }  
 ```  
   
- Aby zwrócić jeden lub więcej kompletnych <xref:System.IO.FileInfo> obiektów, zapytanie najpierw musi zbadać każdy z nich w źródle danych, a następnie posortować je według wartości właściwości length. Następnie może zwrócić jedną lub sekwencję o największą długość. Użyj <xref:System.Linq.Enumerable.First%2A> do zwrócenia pierwszego elementu na liście. Użyj <xref:System.Linq.Enumerable.Take%2A> , aby zwrócić pierwsze n liczbę elementów. Określ malejący porządek sortowania, aby umieścić najmniejsze elementy na początku listy.  
+ Aby zwrócić jeden lub więcej kompletnych obiektów <xref:System.IO.FileInfo>, zapytanie najpierw musi zbadać każdy z nich w źródle danych, a następnie posortować je według wartości właściwości length. Następnie może zwrócić jedną lub sekwencję o największą długość. Użyj <xref:System.Linq.Enumerable.First%2A> do zwrócenia pierwszego elementu na liście. Użyj <xref:System.Linq.Enumerable.Take%2A>, aby zwrócić pierwsze n liczbę elementów. Określ malejący porządek sortowania, aby umieścić najmniejsze elementy na początku listy.  
   
- Wywołuje zapytanie do oddzielnych metodach, aby uzyskać rozmiar pliku w bajtach w celu korzystania z możliwości wyjątek, który zostanie wygenerowany, w przypadku, w którym plik został usunięty w innym wątku w okresie od <xref:System.IO.FileInfo> obiekt został utworzony w wywołaniu `GetFiles`. Nawet za pośrednictwem <xref:System.IO.FileInfo> obiektu został już utworzony, wyjątek może wystąpić, <xref:System.IO.FileInfo> ponieważ obiekt podejmie próbę odświeżenia <xref:System.IO.FileInfo.Length%2A> jego właściwości przy użyciu najbardziej aktualnego rozmiaru w bajtach przy pierwszym dostępie do tej właściwości. Przez umieszczenie tej operacji w bloku try-catch poza zapytaniem przestrzegamy zasad unikania operacji w zapytaniach, które mogą spowodować skutki uboczne. Ogólnie rzecz biorąc należy zachować szczególną ostrożność podczas zużywania wyjątków, aby upewnić się, że aplikacja nie jest pozostawiona w nieznanym stanie.  
+ Wywołuje zapytanie do oddzielnych metodach, aby uzyskać rozmiar pliku w bajtach w celu korzystania z możliwości wyjątek, który zostanie wygenerowany, w przypadku, w którym plik został usunięty w innym wątku w okresie od <xref:System.IO.FileInfo> obiekt został utworzony w wywołaniu `GetFiles`. Mimo że obiekt <xref:System.IO.FileInfo> został już utworzony, może wystąpić wyjątek, ponieważ obiekt <xref:System.IO.FileInfo> spróbuje odświeżyć jego właściwość <xref:System.IO.FileInfo.Length%2A> przy użyciu najbardziej aktualnego rozmiaru w bajtach przy pierwszym dostępie do tej właściwości. Przez umieszczenie tej operacji w bloku try-catch poza zapytaniem przestrzegamy zasad unikania operacji w zapytaniach, które mogą spowodować skutki uboczne. Ogólnie rzecz biorąc należy zachować szczególną ostrożność podczas zużywania wyjątków, aby upewnić się, że aplikacja nie jest pozostawiona w nieznanym stanie.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
-Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.
+Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.
  
 ## <a name="see-also"></a>Zobacz także
 

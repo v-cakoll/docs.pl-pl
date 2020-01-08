@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Wypełnianie drzewa XML z systemu plików (C#)'
+title: Jak wypełnić drzewo XML z systemu plików (C#)
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: dc3850c943ebac8980abbff0933413538823d21d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: beb44be1a787fa09b091aa48022dbb5b10c4632b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485171"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345780"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Instrukcje: Wypełnianie drzewa XML z systemu plików (C#)
-Typowe i przydatne stosowania drzew XML jest do przechowywania danych hierarchicznych nazwa/wartość. Możesz można wypełnianie drzewa XML z danymi hierarchicznymi i następnie wykonuje zapytania, przekształcania go i jeśli to konieczne, serializować go. W tym scenariuszu użycia nie są wiele semantyki określonych XML, takie jak przestrzenie nazw i zachowania biały znak, ważne. Zamiast tego której używasz drzewa XML jako mały w pamięci, bazie danych hierarchicznych jednego użytkownika.  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Jak wypełnić drzewo XML z systemu plików (C#)
+Typową i użyteczną aplikacją drzew XML jest hierarchiczny magazyn danych nazw/wartości. Można wypełnić drzewo XML danymi hierarchicznymi, a następnie wykonać do nich zapytania, przekształcić je i w razie potrzeby serializować. W tym scenariuszu użycia wiele semantyki specyficznych dla XML, takich jak przestrzeń nazw i zachowanie białych znaków, nie są ważne. Zamiast tego używasz drzewa XML jako małej, w pamięci, hierarchicznej bazy danych pojedynczego użytkownika.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład powoduje wypełnienie drzewa XML z lokalnego systemu plików przy użyciu rekursji. Następnie wykonuje zapytanie drzewa, obliczanie łączny rozmiar wszystkich plików w drzewie.  
+ Poniższy przykład wypełnia drzewo XML z lokalnego systemu plików przy użyciu rekursji. Następnie wykonuje zapytanie do drzewa, obliczając łączny rozmiar wszystkich plików w drzewie.  
   
 ```csharp  
 class Program  

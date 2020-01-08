@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 047d566c13f03803d2e5c3bc6cce0db56df4a3f0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 94f12b4cc6cb35864fefbb3b5bb1378bec5e974c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345850"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347566"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Porady: przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów (Visual Basic)
 Jeśli procedura zawiera parametr [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) , nie można zdefiniować przeciążonej wersji pobierającej tablicę jednowymiarową dla tablicy parametrów. Aby uzyskać więcej informacji, zobacz "niejawne przeciążenia dla parametru ParamArray" w artykule dotyczącym [przeciążania procedur](./considerations-in-overloading-procedures.md).  
@@ -47,10 +47,10 @@ Jeśli procedura zawiera parametr [ParamArray](../../../../visual-basic/language
   
  Kod w przeciążonych wersjach nie musi testować, czy kod wywołujący dostarczył jedną lub więcej wartości dla parametru `ParamArray`, czy tak, ile. Visual Basic przekazuje kontrolę do wersji zgodnej z listą argumentów wywołujących.  
   
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
+## <a name="compile-the-code"></a>Skompilować kod  
  Ponieważ procedura z parametrem `ParamArray` jest równoważna z zestawem przeciążonych wersji, nie można przeciążyć takiej procedury z listą parametrów odpowiadającą każdemu z tych niejawnych przeciążeń. Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md).  
   
-## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
+## <a name="net-framework-security"></a>Zabezpieczenia programu .NET Framework  
  Za każdym razem, gdy zajmujesz się tablicą, która może być nienieskończona, istnieje ryzyko, że zachodzi taka Wewnętrzna pojemność aplikacji. Jeśli zaakceptujesz tablicę parametrów, należy sprawdzić długość tablicy, do której przeszedł kod wywołujący, i wykonać odpowiednie czynności, jeśli jest zbyt duży dla aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także

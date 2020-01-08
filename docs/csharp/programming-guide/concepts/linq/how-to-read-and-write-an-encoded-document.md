@@ -1,22 +1,22 @@
 ---
-title: 'Instrukcje: Odczytuj i zapisuj zakodowany dokument (C#)'
+title: Jak czytać i pisać zakodowany dokument (C#)
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: a611fe064401c0da80d76ef8c64cd58d9b0fb5d6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: fa28c26845a0c6019943e0532ea0692a6dffd5a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253471"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347665"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-c"></a>Instrukcje: Odczytuj i zapisuj zakodowany dokument (C#)
+# <a name="how-to-read-and-write-an-encoded-document-c"></a>Jak czytać i pisać zakodowany dokument (C#)
 Aby utworzyć zakodowany dokument XML, należy dodać <xref:System.Xml.Linq.XDeclaration> do drzewa XML, ustawiając kodowanie na żądaną nazwę strony kodowej.  
   
- Każda wartość zwrócona <xref:System.Text.Encoding.WebName%2A> przez jest prawidłową wartością.  
+ Każda wartość zwrócona przez <xref:System.Text.Encoding.WebName%2A> jest prawidłową wartością.  
   
- Jeśli odczytasz zakodowany dokument, <xref:System.Xml.Linq.XDeclaration.Encoding%2A> właściwość zostanie ustawiona na nazwę strony kodowej.  
+ Jeśli odczytasz zakodowany dokument, właściwość <xref:System.Xml.Linq.XDeclaration.Encoding%2A> zostanie ustawiona na nazwę strony kodowej.  
   
- W przypadku wybrania prawidłowej [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nazwy strony kodowej program zaserializacji z określonym kodowaniem. <xref:System.Xml.Linq.XDeclaration.Encoding%2A>  
+ Jeśli ustawisz <xref:System.Xml.Linq.XDeclaration.Encoding%2A> na poprawną nazwę strony kodowej, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zostanie Zserializowany z określonym kodowaniem.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład tworzy dwa dokumenty, jeden z kodowaniem UTF-8 i jeden z kodowaniem UTF-16. Następnie ładuje dokumenty i drukuje kodowanie do konsoli programu.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 04e0e3c613b194ac85241d50d3bc5fd5dc0b6e54
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 8198359e2c54c4ed098703fbcc070f7469b3362a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977328"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344653"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>Obsługa elementów DateTime i DateTimeOffset w pliku System.Text.Json
 
@@ -74,7 +74,7 @@ Oto kilka przykładów:
 
 Jeśli nie możesz określić formatów danych wejściowych <xref:System.DateTime> lub <xref:System.DateTimeOffset> reprezentacje tekstu, możesz użyć metody `DateTime(Offset).Parse` w logice odczytu konwertera. Umożliwia to korzystanie z programu. Rozległa pomoc techniczna w sieci na potrzeby analizowania różnych <xref:System.DateTime> i <xref:System.DateTimeOffset> formatów tekstu, w tym ciągów z niestandardem ISO 8601 i formatów ISO 8601, które nie są zgodne z rozszerzonym profilem ISO 8601-1:2019. Ta metoda jest znacznie mniej wydajna niż użycie natywnej implementacji serializatora.
 
-Do serializacji można użyć metody `DateTime(Offset).ToString` w logice zapisu konwertera. Dzięki temu można pisać <xref:System.DateTime> i <xref:System.DateTimeOffset> wartości przy użyciu dowolnych [standardowych formatów daty i godziny](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings)oraz [niestandardowych formatów daty i godziny](https://docs.microsoft.com/dotnet/standard/base-types/custom-date-and-time-format-strings).
+Do serializacji można użyć metody `DateTime(Offset).ToString` w logice zapisu konwertera. Dzięki temu można pisać <xref:System.DateTime> i <xref:System.DateTimeOffset> wartości przy użyciu dowolnych [standardowych formatów daty i godziny](../base-types/standard-date-and-time-format-strings.md)oraz [niestandardowych formatów daty i godziny](../base-types/custom-date-and-time-format-strings.md).
 Jest to również znacznie mniej wydajne niż użycie natywnej implementacji serializatora.
 
 [!code-csharp[example-showing-datetime-parse](~/samples/snippets/standard/datetime/json/csharp/datetime-converter-examples/example1/Program.cs)]
@@ -85,9 +85,9 @@ Parametr jest przydatny do obsługi przypadków polimorficznych i używania typ�
 
 #### <a name="using-xrefsystembufferstextutf8parser-and-xrefsystembufferstextutf8formatter"></a>Używanie <xref:System.Buffers.Text.Utf8Parser> i <xref:System.Buffers.Text.Utf8Formatter>
 
-W logice konwertera można używać szybkich metod analizy i formatowania opartych na kodowaniu UTF-8, jeśli dane wejściowe <xref:System.DateTime> lub <xref:System.DateTimeOffset> są zgodne z jednym z ciągów "R", "l", "O" lub "G" [standardowego formatu daty i godziny](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings), lub chcesz pisać według jednego z tych formatów. Jest to znacznie szybsze niż używanie `DateTime(Offset).Parse` i `DateTime(Offset).ToString`.
+W logice konwertera można używać szybkich metod analizy i formatowania opartych na kodowaniu UTF-8, jeśli dane wejściowe <xref:System.DateTime> lub <xref:System.DateTimeOffset> są zgodne z jednym z ciągów "R", "l", "O" lub "G" [standardowego formatu daty i godziny](../base-types/standard-date-and-time-format-strings.md), lub chcesz pisać według jednego z tych formatów. Jest to znacznie szybsze niż używanie `DateTime(Offset).Parse` i `DateTime(Offset).ToString`.
 
-W tym przykładzie przedstawiono niestandardowy konwerter, który serializować i deserializacji wartości <xref:System.DateTime> zgodnie z [formatem standardowym "R"](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings#the-rfc1123-r-r-format-specifier):
+W tym przykładzie przedstawiono niestandardowy konwerter, który serializować i deserializacji wartości <xref:System.DateTime> zgodnie z [formatem standardowym "R"](../base-types/standard-date-and-time-format-strings.md#the-rfc1123-r-r-format-specifier):
 
 [!code-csharp[example-showing-utf8-parser-and-formatter](~/samples/snippets/standard/datetime/json/csharp/datetime-converter-examples/example2/Program.cs)]
 
@@ -103,7 +103,7 @@ Ten przykład pokazuje, że po niepowodzeniu analizy <xref:System.DateTime> repr
 
 ### <a name="when-writing-with-xrefsystemtextjsonutf8jsonwriter"></a>Podczas pisania przy użyciu <xref:System.Text.Json.Utf8JsonWriter>
 
-Jeśli chcesz napisać niestandardowy <xref:System.DateTime> lub <xref:System.DateTimeOffset> reprezentację tekstową za pomocą <xref:System.Text.Json.Utf8JsonWriter>, możesz sformatować swoją niestandardową reprezentację do <xref:System.String>, `ReadOnlySpan<Byte>`, `ReadOnlySpan<Char>`lub <xref:System.Text.Json.JsonEncodedText>, a następnie przekazać ją do odpowiedniej metody [Utf8JsonWriter. WriteStringValue](https://docs.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter.writestringvalue?view=netcore-3.0) lub [Utf8JsonWriter. WriteString](https://docs.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter.writestring?view=netcore-3.0) .
+Jeśli chcesz napisać niestandardowy <xref:System.DateTime> lub <xref:System.DateTimeOffset> reprezentację tekstową za pomocą <xref:System.Text.Json.Utf8JsonWriter>, możesz sformatować swoją niestandardową reprezentację do <xref:System.String>, `ReadOnlySpan<Byte>`, `ReadOnlySpan<Char>`lub <xref:System.Text.Json.JsonEncodedText>, a następnie przekazać ją do odpowiedniej metody <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue%2A?displayProperty=nameWithType> lub <xref:System.Text.Json.Utf8JsonWriter.WriteString%2A?displayProperty=nameWithType>.
 
 Poniższy przykład pokazuje, jak <xref:System.DateTime> format niestandardowy można utworzyć za pomocą <xref:System.DateTime.ToString(System.String,System.IFormatProvider)>, a następnie napisać przy użyciu metody <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue(System.String)>:
 
@@ -126,7 +126,7 @@ Profil rozszerzonego ISO 8601-1:2019 zaimplementowany w <xref:System.Text.Json> 
 | Składnik       | Format                      | Opis                                                                     |
 |-----------------|-----------------------------|---------------------------------------------------------------------------------|
 | Rok            | „yyyy”                      | 0001-9999                                                                       |
-| Bieżącym           | „MM”                        | 01-12                                                                           |
+| Month           | „MM”                        | 01-12                                                                           |
 | Dzień             | „dd”                        | 01-28, 01-29, 01-30, 01-31 w oparciu o miesiąc/rok                                  |
 | Godzina            | „HH”                        | 00-23                                                                           |
 | Minuta          | „mm”                        | 00-59                                                                           |
@@ -149,7 +149,7 @@ Następujące poziomy szczegółowości są zdefiniowane do analizy:
     1. "yyyy'-'MM'-'dd'T'HH": "mm"
 
 3. "" Pełna Data "" t "" częściowe czas ""
-    1. "yyyy'-'MM'-'dd'T'HH": "mm": "SS" ([specyfikator formatu sortowania ("s")](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings#the-sortable-s-format-specifier)
+    1. "yyyy'-'MM'-'dd'T'HH": "mm": "SS" ([specyfikator formatu sortowania ("s")](../base-types/standard-date-and-time-format-strings.md#the-sortable-s-format-specifier)
     2. "yyyy'-'MM'-'dd'T'HH": "mm": "SS". " FFFFFFF
 
 4. "" Pełna Data "" t "godzina" ":" minuta "przesunięcie czasu" "
@@ -174,7 +174,7 @@ Sekundy przestępne nie są obsługiwane.
 Następujące poziomy szczegółowości są zdefiniowane na potrzeby formatowania:
 
 1. "" Pełna Data "" t "" częściowe czas ""
-    1. "yyyy'-'MM'-'dd'T'HH": "mm": "SS" ([specyfikator formatu sortowania ("s")](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings#the-sortable-s-format-specifier)
+    1. "yyyy'-'MM'-'dd'T'HH": "mm": "SS" ([specyfikator formatu sortowania ("s")](../base-types/standard-date-and-time-format-strings.md#the-sortable-s-format-specifier)
 
         Służy do formatowania <xref:System.DateTime> bez ułamków sekund i bez informacji o przesunięciu.
 

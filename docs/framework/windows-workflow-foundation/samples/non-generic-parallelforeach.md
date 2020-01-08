@@ -2,12 +2,12 @@
 title: Nieogólny ParallelForEach
 ms.date: 03/30/2017
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
-ms.openlocfilehash: 33e0c8ef8c04b7d58815760ae1152f63891fdfd5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ea7f57b8812dca3dfcb4908730dd788182d50c5c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715643"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347618"
 ---
 # <a name="non-generic-parallelforeach"></a>Nieogólny ParallelForEach
 
@@ -19,7 +19,7 @@ Ten przykład pokazuje, jak zaimplementować nieogólne działanie <xref:System.
 
 ## <a name="parallelforeach-activity"></a>Działanie ParallelForEach
 
-Instrukcja C#/VB `foreach` wylicza elementy kolekcji, wykonując osadzoną instrukcję dla każdego elementu kolekcji. [!INCLUDE[wf1](../../../../includes/wf1-md.md)] równoważne działania są <xref:System.Activities.Statements.ForEach%601> i <xref:System.Activities.Statements.ParallelForEach%601>. Działanie <xref:System.Activities.Statements.ForEach%601> zawiera listę wartości i treść. W czasie wykonywania lista jest powtarzana i jest wykonywana dla każdej wartości na liście.
+Instrukcja C#/Visual Basic `foreach` wylicza elementy kolekcji, wykonując osadzoną instrukcję dla każdego elementu kolekcji. [!INCLUDE[wf1](../../../../includes/wf1-md.md)] równoważne działania są <xref:System.Activities.Statements.ForEach%601> i <xref:System.Activities.Statements.ParallelForEach%601>. Działanie <xref:System.Activities.Statements.ForEach%601> zawiera listę wartości i treść. W czasie wykonywania lista jest powtarzana i jest wykonywana dla każdej wartości na liście.
 
 <xref:System.Activities.Statements.ParallelForEach%601> ma <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>, dzięki czemu działanie <xref:System.Activities.Statements.ParallelForEach%601> może zakończyć się wcześnie, jeśli Obliczanie <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> zwraca `true`. <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> jest oceniane po zakończeniu każdej iteracji.
 
@@ -110,7 +110,7 @@ public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
 
     2. **DesignerTestClient** pokazuje, jak używać działania w projektancie.
 
-2. Skompiluj i Uruchom projekt.
+2. Skompiluj i uruchom projekt.
 
 > [!IMPORTANT]
 > Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).

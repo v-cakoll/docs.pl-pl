@@ -4,12 +4,12 @@ description: W tym artykule omówiono sposób wersji zestaw .NET Core SDK i śro
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: b8cfb2d40b1ae88ef03daca6c31b283256bc6f26
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
-ms.translationtype: MT
+ms.openlocfilehash: cc3a834fdb6347f2cfd93b2c8daeae5bcc222575
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179959"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342920"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Omówienie wersji platformy .NET Core
 
@@ -32,7 +32,7 @@ Trzecia pozycja numeru wersji zestawu SDK komunikuje się zarówno z literą, ja
 | Środowisko uruchomieniowe i poprawka zestawu SDK | 2.2.1             | 2.2.102           |
 | Zmiana funkcji zestawu SDK    | 2.2.1             | 2.2.200           |
 
-(\*) Ten wykres używa przyszłych 2,2 środowiska uruchomieniowego platformy .NET Core jako przykładu, ponieważ artefakt historyczny mający pierwszy zestaw SDK dla platformy .NET Core 2,1 to 2.1.300. Aby uzyskać więcej informacji, zobacz [wybór wersji platformy .NET Core](selection.md).
+(\*) Ten wykres używa środowiska uruchomieniowego programu .NET Core 2,2 jako przykładu, ponieważ artefakt historyczny mający pierwszy zestaw SDK dla platformy .NET Core 2,1 to 2.1.300. Aby uzyskać więcej informacji, zobacz [wybór wersji platformy .NET Core](selection.md).
 
 O
 

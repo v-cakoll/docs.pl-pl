@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-ms.openlocfilehash: c5f6bd001a5198f14bf05c0730f3988d54142eae
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: a5041b04151a288f9c6c1a567dacec8da8c80a42
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569247"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346134"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>Niestandardowi dostawcy usług danych (Usługi danych programu WCF)
 Usługi danych programu WCF obejmuje zestaw dostawców, który umożliwia zdefiniowanie modelu danych na podstawie późnych typów danych.  
@@ -21,8 +21,6 @@ Usługi danych programu WCF obejmuje zestaw dostawców, który umożliwia zdefin
 |Aktualizuj dostawcę|Ten dostawca umożliwia Dokonywanie aktualizacji typów, które są widoczne w niestandardowym dostawcy usług danych i Zarządzanie współbieżnością. Dostawca aktualizacji jest tworzony przez implementację interfejsu <xref:System.Data.Services.Providers.IDataServiceUpdateProvider>|  
 |Dostawca stronicowania|Ten dostawca jest używany z niestandardowym dostawcą usług danych w celu włączenia obsługi stronicowania opartego na serwerze. Dostawca stronicowania dla niestandardowej usługi danych jest tworzony przez implementację interfejsu <xref:System.Data.Services.Providers.IDataServicePagingProvider>.|  
 |Dostawca przesyłania strumieniowego|Ten dostawca pozwala udostępnić binarne typy danych typu binary jako strumień. Dostawca przesyłania strumieniowego jest tworzony przez implementację interfejsu <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Dostawca przesyłania strumieniowego może być również używany z dostawcami źródeł danych Entity Framework i odbicia. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](streaming-provider-wcf-data-services.md).|  
-  
- Aby uzyskać więcej informacji, zapoznaj się z artykułem [Custom Data Service Providers](https://go.microsoft.com/fwlink/?LinkID=186850) and The Open Data Protocol (OData) Provider w [zestawie SDK OData](https://go.microsoft.com/fwlink/?LinkId=186069).  
   
 ## <a name="see-also"></a>Zobacz także
 

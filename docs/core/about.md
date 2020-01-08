@@ -2,12 +2,12 @@
 title: Informacje o platformie .NET Core
 description: Dowiedz się więcej o programie .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ed153e817746a88277c191dfb14c465ff2d8bfa1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801948"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344905"
 ---
 # <a name="about-net-core"></a>Informacje o platformie .NET Core
 
@@ -58,7 +58,7 @@ Platforma .NET Core składa się z następujących części:
 
 - [Środowisko uruchomieniowe platformy .NET Core](https://github.com/dotnet/runtime/tree/master/src/coreclr), które udostępnia system typów, ładowanie zestawu, Moduł wyrzucania elementów bezużytecznych, natywną międzyoperacyjność i inne podstawowe usługi. [Biblioteki .NET Core Framework](https://github.com/dotnet/runtime/tree/master/src/libraries) zapewniają typy danych pierwotnych, typy kompozycji aplikacji i podstawowe narzędzia.
 - [Środowisko uruchomieniowe ASP.NET](https://github.com/aspnet/home), które zapewnia platformę do tworzenia nowoczesnych, opartych na chmurze aplikacji internetowych, takich jak aplikacje internetowe, aplikacje IoT i frontony mobilne.
-- [Narzędzia interfejs wiersza polecenia platformy .NET Core](https://github.com/dotnet/cli) i kompilatory języka ([Roslyn](https://github.com/dotnet/roslyn) i [F#](https://github.com/microsoft/visualfsharp)), które umożliwiają środowisko deweloperskie platformy .NET Core.
+- [Narzędzia interfejs wiersza polecenia platformy .NET Core](https://github.com/dotnet/sdk) i kompilatory języka ([Roslyn](https://github.com/dotnet/roslyn) i [F#](https://github.com/microsoft/visualfsharp)), które umożliwiają środowisko deweloperskie platformy .NET Core.
 - [Narzędzie dotnet](https://github.com/dotnet/core-setup), które służy do uruchamiania aplikacji .NET Core i narzędzi interfejsu wiersza polecenia. Wybiera środowisko uruchomieniowe i obsługuje środowisko uruchomieniowe, zawiera zasady ładowania zestawu oraz uruchamia aplikacje i narzędzia.
 
 Te składniki są dystrybuowane w następujący sposób:

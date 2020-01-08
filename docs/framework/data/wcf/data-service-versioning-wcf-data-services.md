@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: 730a7e4b58d544af9ebc58317cda336be8e946e2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 341cd8e21b84b220236947bca50311e5a1a75c72
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283036"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346126"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Przechowywanie wersji usługi danych (Usługi danych programu WCF)
 Protokół Open Data Protocol (OData) umożliwia tworzenie usług danych w taki sposób, aby klienci mogli uzyskiwać dostęp do danych jako zasoby przy użyciu identyfikatorów URI opartych na modelu danych. Protokół OData obsługuje również definicje operacji usługi. Po wstępnym wdrożeniu i potencjalnie kilka razy w okresie istnienia tych usług mogą być konieczne zmiany w przypadku różnych powodów, takich jak zmiana potrzeb firmy, wymagania dotyczące technologii informatycznych lub Rozwiązywanie innych problemów. Po wprowadzeniu zmian w istniejącej usłudze danych należy wziąć pod uwagę, czy należy zdefiniować nową wersję usługi danych i jak najlepiej zminimalizować wpływ istniejących aplikacji klienckich. Ten temat zawiera wskazówki dotyczące tego, kiedy i jak utworzyć nową wersję usługi danych. Opisano w nim również, w jaki sposób Usługi danych programu WCF obsługuje wymianę między klientami i usługami danych, które obsługują różne wersje protokołu OData.
@@ -34,7 +34,7 @@ Protokół Open Data Protocol (OData) umożliwia tworzenie usług danych w taki 
 |Zachowania usługi|-Disable żądania Count<br />-Wyłącz obsługę projekcji<br />-Zwiększ wymaganą wersję usługi danych|-Włącz żądania Count<br />-Włącz obsługę projekcji<br />-Zmniejsz wymaganą wersję usługi danych|
 |Uprawnienia do zestawu jednostek|-Ograniczanie uprawnień zestawu jednostek<br />-Zmiana kodu odpowiedzi (Nowa pierwsza wartość cyfry) <sup>1</sup>|-Złagodzenie uprawnień do ustawiania jednostek<br />-Zmiana kodu odpowiedzi (ta sama wartość pierwszej cyfry)|
 |Właściwości jednostki|-Usuń istniejącą właściwość lub relację<br />-Dodaj właściwość niedopuszczające wartości null<br />-Zmiana istniejącej właściwości|-Dodaj właściwość null<sup>2</sup>|
-|Zestawy jednostek|-Usuń zestaw jednostek|-Dodaj typ pochodny<br />-Zmień typ podstawowy<br />-Dodaj zestaw jednostek|
+|zestawy jednostek|-Usuń zestaw jednostek|-Dodaj typ pochodny<br />-Zmień typ podstawowy<br />-Dodaj zestaw jednostek|
 |Dostosowanie kanału informacyjnego|-Zmień mapowanie właściwości Entity-Property||
 
  <sup>1</sup> może zależeć od tego, jak ścisła aplikacja kliencka korzysta z uzyskiwania określonego kodu błędu.
@@ -53,7 +53,7 @@ Protokół Open Data Protocol (OData) umożliwia tworzenie usług danych w taki 
 ## <a name="odata-protocol-versions"></a>Wersje protokołu OData
  Po udostępnieniu nowych wersji usługi OData aplikacje klienckie mogą nie używać tej samej wersji protokołu OData obsługiwanej przez usługę danych. Starsza aplikacja kliencka może uzyskać dostęp do usługi danych, która obsługuje nowszą wersję protokołu OData. Aplikacja kliencka może również korzystać z nowszej wersji biblioteki klienta Usługi danych programu WCF, która obsługuje nowszą wersję protokołu OData niż usługa danych, do której uzyskuje się dostęp.
 
- Usługi danych programu WCF wykorzystuje pomoc techniczną dostępną przez usługi OData do obsługi takich scenariuszy przechowywania wersji. Obsługiwane jest również generowanie metadanych modelu danych i używanie ich do tworzenia klas usługi danych klienta, gdy klient korzysta z innej wersji protokołu OData niż używana przez usługę danych. Aby uzyskać więcej informacji, zobacz Usługa [OData: obsługa wersji protokołu](https://go.microsoft.com/fwlink/?LinkId=186071).
+ Usługi danych programu WCF wykorzystuje pomoc techniczną dostępną przez usługi OData do obsługi takich scenariuszy przechowywania wersji. Obsługiwane jest również generowanie metadanych modelu danych i używanie ich do tworzenia klas usługi danych klienta, gdy klient korzysta z innej wersji protokołu OData niż używana przez usługę danych. Aby uzyskać więcej informacji, zapoznaj się z sekcją obsługa wersji protokołu w artykule dotyczącym usługi [OData: przegląd](https://www.odata.org/documentation/odata-version-2-0/overview/) .
 
 ### <a name="version-negotiation"></a>Negocjowanie wersji
  Usługę danych można skonfigurować w celu zdefiniowania najwyższej wersji protokołu OData, który będzie używany przez usługę, niezależnie od wersji żądanej przez klienta. Można to zrobić, określając <xref:System.Data.Services.Common.DataServiceProtocolVersion> wartość właściwości <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> <xref:System.Data.Services.DataServiceBehavior> używanej przez usługę danych. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usługi danych](configuring-the-data-service-wcf-data-services.md).
@@ -71,7 +71,7 @@ Protokół Open Data Protocol (OData) umożliwia tworzenie usług danych w taki 
 ### <a name="metadata-versions"></a>Wersje metadanych
  Domyślnie program Usługi danych programu WCF reprezentuje model danych przy użyciu wersji 1,1 CSDL. Jest to zawsze przypadek dla modeli danych opartych na dostawcy odbicia lub niestandardowym dostawcy usługi danych. Jeśli jednak model danych jest zdefiniowany przy użyciu Entity Framework, zwracana wersja usługi CSDL jest taka sama jak wersja używana przez Entity Framework. Wersja CSDL jest określana na podstawie przestrzeni nazw [elementu schematu (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#schema-element-csdl).
 
- Element `DataServices` zwracanych metadanych również zawiera atrybut `DataServiceVersion`, który ma taką samą wartość jak nagłówek `DataServiceVersion` w komunikacie odpowiedzi. Aplikacje klienckie, takie jak okno dialogowe **Dodaj odwołanie do usługi** w programie Visual Studio, wykorzystują te informacje w celu wygenerowania klas usługi danych klienta, które działają poprawnie z wersją usługi danych programu WCF, która obsługuje usługę danych. Aby uzyskać więcej informacji, zobacz Usługa [OData: obsługa wersji protokołu](https://go.microsoft.com/fwlink/?LinkId=186071).
+ Element `DataServices` zwracanych metadanych również zawiera atrybut `DataServiceVersion`, który ma taką samą wartość jak nagłówek `DataServiceVersion` w komunikacie odpowiedzi. Aplikacje klienckie, takie jak okno dialogowe **Dodaj odwołanie do usługi** w programie Visual Studio, wykorzystują te informacje w celu wygenerowania klas usługi danych klienta, które działają poprawnie z wersją usługi danych programu WCF, która obsługuje usługę danych. Aby uzyskać więcej informacji, zapoznaj się z sekcją obsługa wersji protokołu w artykule dotyczącym usługi [OData: przegląd](https://www.odata.org/documentation/odata-version-2-0/overview/) .
 
 ## <a name="see-also"></a>Zobacz także
 

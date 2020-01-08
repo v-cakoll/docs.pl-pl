@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 968154908bc6cb62bb221d42a1f71b329aa7096f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 728c17cd2ed8661e0a5f1f2b8e929059713a1edf
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349457"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545120"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>Właściwości osi elementu podrzędnego XML (Visual Basic)
 Zapewnia dostęp do elementów podrzędnych jednego z następujących: obiektu <xref:System.Xml.Linq.XElement>, obiektu <xref:System.Xml.Linq.XDocument>, kolekcji obiektów <xref:System.Xml.Linq.XElement> lub kolekcji obiektów <xref:System.Xml.Linq.XDocument>.  
@@ -30,12 +30,12 @@ object.<child>
   
 |Termin|Definicja|  
 |---|---|  
-|`object`|Wymagana. Obiekt <xref:System.Xml.Linq.XElement>, obiekt <xref:System.Xml.Linq.XDocument>, kolekcja obiektów <xref:System.Xml.Linq.XElement> lub kolekcja obiektów <xref:System.Xml.Linq.XDocument>.|  
-|.<|Wymagana. Wskazuje początek właściwości osi podrzędnej.|  
-|`child`|Wymagana. Nazwa węzłów podrzędnych do uzyskania dostępu do formularza [`prefix:]name`.<br /><br /> -   `Prefix` — opcjonalne. Prefiks przestrzeni nazw XML dla węzła podrzędnego. Musi to być globalna przestrzeń nazw XML zdefiniowana za pomocą instrukcji `Imports`.<br />-   `Name` — wymagane. Nazwa lokalnego węzła podrzędnego. Zobacz [nazwy zadeklarowanych elementów i atrybutów XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
-|>|Wymagana. Oznacza koniec właściwości osi podrzędnej.|  
+|`object`|Wymagany. Obiekt <xref:System.Xml.Linq.XElement>, obiekt <xref:System.Xml.Linq.XDocument>, kolekcja obiektów <xref:System.Xml.Linq.XElement> lub kolekcja obiektów <xref:System.Xml.Linq.XDocument>.|  
+|.<|Wymagany. Wskazuje początek właściwości osi podrzędnej.|  
+|`child`|Wymagany. Nazwa węzłów podrzędnych do uzyskania dostępu w formularzu `[prefix:]name`.<br /><br /> -   `Prefix` — opcjonalne. Prefiks przestrzeni nazw XML dla węzła podrzędnego. Musi to być globalna przestrzeń nazw XML zdefiniowana za pomocą instrukcji `Imports`.<br />-   `Name` — wymagane. Nazwa lokalnego węzła podrzędnego. Zobacz [nazwy zadeklarowanych elementów i atrybutów XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|>|Wymagany. Oznacza koniec właściwości osi podrzędnej.|  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  Kolekcja obiektów <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="remarks"></a>Uwagi  

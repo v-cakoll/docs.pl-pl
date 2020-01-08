@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Modyfikowanie dokumentu Office Open XML (C#)'
+title: Jak zmodyfikować dokument Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: cb80a450de104760f64c84e11829f6609d8ee177
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 620530b14513356dc9bb5d942e8db7691a03880d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253538"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345841"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-c"></a>Instrukcje: Modyfikowanie dokumentu Office Open XML (C#)
+# <a name="how-to-modify-an-office-open-xml-document-c"></a>Jak zmodyfikować dokument Office Open XML (C#)
 W tym temacie przedstawiono przykład, który powoduje otwarcie dokumentu Office Open XML, zmodyfikowanie go i zapisanie.  
   
  Aby uzyskać więcej informacji na temat pakietu Office Open XML, zobacz [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) i [www.ericwhite.com](http://ericwhite.com/).  
@@ -17,7 +17,7 @@ W tym temacie przedstawiono przykład, który powoduje otwarcie dokumentu Office
 ## <a name="example"></a>Przykład  
  Ten przykład umożliwia znalezienie pierwszego elementu akapitu w dokumencie. Pobiera tekst z akapitu, a następnie usuwa wszystkie uruchomienia tekstu w akapicie. Tworzy nowe uruchomienie tekstu, które składa się z pierwszego tekstu akapitu, który został przekonwertowany na wielkie litery. Następnie program serializacji zmieniony kod XML do otwartego pakietu XML i zamyka go.  
   
- Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
+ Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```csharp  
 public static class LocalExtensions  

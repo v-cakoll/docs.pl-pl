@@ -1,15 +1,15 @@
 ---
-title: Używanie zestaw .NET Core SDK i narzędzi w ciągłej integracji (CI)
-description: Informacje na temat użycia zestaw .NET Core SDK i jego narzędzi na serwerze kompilacji.
+title: Ciągła integracja (CI) z zestaw .NET Core SDK i narzędziami
+description: Dowiedz się, jak używać zestaw .NET Core SDK i narzędzi na serwerze kompilacji z ciągłą integracją.
 author: mairaw
 ms.date: 05/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 481d54904192ee82da1f9d34bbf62fa8ffe1cd3b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 0f6049d1f2868ff330fd59c4f40e6c02231c6f71
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428596"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343538"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Używanie zestaw .NET Core SDK i narzędzi w ciągłej integracji (CI)
 
@@ -142,7 +142,7 @@ install:
   # See appveyor.yml example for install script
 ```
 
-### <a name="azure-devops-services"></a>Usługom DevOps platformy Azure
+### <a name="azure-devops-services"></a>Azure DevOps Services
 
 Skonfiguruj Azure DevOps Services do kompilowania projektów .NET Core przy użyciu jednej z następujących metod:
 

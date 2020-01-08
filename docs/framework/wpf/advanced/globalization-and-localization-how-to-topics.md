@@ -7,15 +7,15 @@ helpviewer_keywords:
 - localization [WPF], features
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
-ms.openlocfilehash: a2ab04f40a3299bc0cd5a17c0f31e4f4ee0433ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98368a54fad095337038236d7bfdc2123edb6be2
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010296"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559412"
 ---
 # <a name="globalization-and-localization-how-to-topics"></a>Globalizacja i lokalizacja Tematy porad
-Tematy w tej sekcji opisano sposób opracowywania aplikacji gotowej dla całego świata.  
+W tematach w tej sekcji opisano sposób tworzenia aplikacji gotowych do użycia na całym świecie.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Lokalizowanie aplikacji](how-to-localize-an-application.md)  
@@ -31,6 +31,6 @@ Tematy w tej sekcji opisano sposób opracowywania aplikacji gotowej dla całego 
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [xml:lang, obsługa w XAML](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [xml:lang, obsługa w XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne

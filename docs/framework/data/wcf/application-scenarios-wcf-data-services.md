@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 38bba2e9f63ab6cce0ede1a82658b6a21f5d4a4b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8eb1e6e2a9338230520ebf3aec1c9ba50aa15ed9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569395"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346197"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Scenariusze aplikacji (Usługi danych programu WCF)
 
@@ -42,7 +42,7 @@ Korzystanie ze źródła danych OData w aplikacji klienckiej opartej na .NET Fra
 
 Korzystanie ze źródła danych OData w aplikacji klienckiej opartej na technologii Silverlight.
 
-- [Usługi danych programu WCF (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
+- [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
 
 - [Operacje asynchroniczne](asynchronous-operations-wcf-data-services.md)
 
@@ -52,9 +52,9 @@ Korzystanie ze źródła danych OData w aplikacji klienckiej opartej na technolo
 
 - [Używanie usługi danych w aplikacji klienta](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
-- [OData: konwencje URI](https://go.microsoft.com/fwlink/?LinkId=185564)
+- [OData: konwencje URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)
 
-- [Format OData: JavaScript Object Notation (JSON)](https://go.microsoft.com/fwlink/?LinkId=185790)
+- [Format OData: JavaScript Object Notation (JSON)](https://www.odata.org/developers/protocols/json-format/)
 
 Utwórz kompleksowe rozwiązanie do przesyłania danych korzystające z protokołu OData do transferowania danych między klientem i serwerem.
 
@@ -70,7 +70,7 @@ Utwórz aplikację kliencką opartą na .NET Framework, która asynchronicznie w
 
 - [Operacje asynchroniczne](asynchronous-operations-wcf-data-services.md)
 
-- [Usługi danych programu WCF (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
+- [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
 
 Udostępniaj strumieniowe źródło danych OData i korzystaj z niego przy użyciu dużego obiektu binarnego, który jest dostępny i zmieniany jako strumień.
 

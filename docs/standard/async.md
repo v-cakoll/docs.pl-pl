@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: 2f76eb7d2b769b59809bec81aefacb7cec90a450
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 1570909b7b416eff81dd90a936ff5ed10aad94f1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106690"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346084"
 ---
 # <a name="async-overview"></a>Przegląd Async
 
@@ -20,7 +20,7 @@ Tak długo aplikacje były szybsze po prostu przez zakup nowszego komputera lub 
 - Aplikacje klienckie powinny być zawsze włączone, zawsze połączone i stale reagować na interakcję z użytkownikiem (na przykład Touch) ze wszystkimi klasyfikacjami w sklepie App Store.
 - Usługi powinny obsłużyć wzrost ruchu przez bezpieczne skalowanie w górę i w dół. 
 
-Programowanie asynchroniczne to kluczowa technika, która ułatwia obsługę blokowania operacji we/wy i współbieżnych na wielu rdzeniach. Platforma .NET oferuje możliwość, aby aplikacje i usługi były w stanie reagować i elastycznie korzystać z łatwych w użyciu modeli programów asynchronicznych na C#poziomie języka w językach F#, VB i.
+Programowanie asynchroniczne to kluczowa technika, która ułatwia obsługę blokowania operacji we/wy i współbieżnych na wielu rdzeniach. Platforma .NET oferuje możliwość, aby aplikacje i usługi były w stanie reagować i elastycznie korzystać z łatwych w użyciu modeli programów asynchronicznych na C#poziomie języka w programie F#, Visual Basic i.
 
 ## <a name="why-write-async-code"></a>Dlaczego warto pisać kod asynchroniczny?
 
@@ -39,10 +39,10 @@ Więcej informacji znajduje się w temacie [Async in głębokości](async-in-dep
 
 Temat [wzorce programowania asynchronicznego](asynchronous-programming-patterns/index.md) zawiera przegląd trzech asynchronicznych wzorców programowania obsługiwanych w programie .NET:  
   
-- [Model programowania asynchronicznego (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) starszych  
+- [Model programowania asynchronicznego (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (starsza wersja)  
   
-- [Wzorzec asynchroniczny oparty na zdarzeniach (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) starszych  
+- [Wzorzec asynchroniczny oparty na zdarzeniach (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (starsza wersja)  
   
-- [Wzorzec asynchroniczny oparty na zadaniach (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (zalecane dla nowego programowania)  
+- [Wzorzec asynchroniczny oparty na zadaniach (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (zalecany dla nowego programowania)  
 
 Aby uzyskać więcej informacji na temat zalecanego modelu programowania opartego na zadaniach, zapoznaj się z tematem [programowanie asynchroniczne oparte na zadaniach](parallel-programming/task-based-asynchronous-programming.md) .

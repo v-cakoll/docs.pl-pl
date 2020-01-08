@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: Nowy typ projektu (LINQ to XML) (C#)'
+title: Tworzenie projektu nowego typu (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: 32c3de9f4dd967cf0aafa7f4e571d8714ca41e3a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3a54677fa0fa2845dd635f89ddb7ed1c5c279e03
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253506"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345718"
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-c"></a>Instrukcje: Nowy typ projektu (LINQ to XML) (C#)
+# <a name="how-to-project-a-new-type-linq-to-xml-c"></a>Tworzenie projektu nowego typu (LINQ to XML) (C#)
 
-W innych przykładach w tej sekcji przedstawiono zapytania, które zwracają <xref:System.Collections.Generic.IEnumerable%601> wyniki <xref:System.Xml.Linq.XElement>w <xref:System.Collections.Generic.IEnumerable%601> `string`zakresie od, <xref:System.Collections.Generic.IEnumerable%601> do `int`i. Są to typowe typy wyników, ale nie są one odpowiednie dla każdego scenariusza. W wielu przypadkach zapytania będą zwracały <xref:System.Collections.Generic.IEnumerable%601> inne typy.
+W innych przykładach w tej sekcji przedstawiono zapytania, które zwracają wyniki jako <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> `string`i <xref:System.Collections.Generic.IEnumerable%601> `int`. Są to typowe typy wyników, ale nie są one odpowiednie dla każdego scenariusza. W wielu przypadkach zapytania będą zwracać <xref:System.Collections.Generic.IEnumerable%601> innego typu.
 
 ## <a name="example"></a>Przykład
 
-Ten przykład pokazuje, jak utworzyć wystąpienie obiektów w `select` klauzuli. Kod najpierw definiuje nową klasę z konstruktorem, a następnie modyfikuje `select` instrukcję tak, aby wyrażenie było nowym wystąpieniem nowej klasy.
+Ten przykład pokazuje, jak utworzyć wystąpienie obiektów w klauzuli `select`. Kod najpierw definiuje nową klasę z konstruktorem, a następnie modyfikuje instrukcję `select` tak, aby wyrażenie było nowym wystąpieniem nowej klasy.
 
-W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Typowe zamówienie zakupu (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).
+W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: typowe zamówienie zakupu (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).
 
 ```csharp
 class NameQty 
@@ -49,7 +49,7 @@ class Program {
 }
 ```
 
-W tym przykładzie użyto <xref:System.Xml.Linq.XContainer.Element%2A> metody, która została wprowadzona w temacie [How to: Pobierz pojedynczy element podrzędny (LINQ to XML) (C#).](how-to-retrieve-a-single-child-element-linq-to-xml.md) Używa również rzutowania do pobrania wartości elementów, które są zwracane przez <xref:System.Xml.Linq.XContainer.Element%2A> metodę.  
+W tym przykładzie użyto metody <xref:System.Xml.Linq.XContainer.Element%2A>, która została wprowadzona w temacie [jak pobrać pojedynczy element podrzędny (LINQ to XML) (C#)](how-to-retrieve-a-single-child-element-linq-to-xml.md). Używa również rzutowania do pobrania wartości elementów, które są zwracane przez metodę <xref:System.Xml.Linq.XContainer.Element%2A>.  
 
 Ten przykład generuje następujące wyniki:
 

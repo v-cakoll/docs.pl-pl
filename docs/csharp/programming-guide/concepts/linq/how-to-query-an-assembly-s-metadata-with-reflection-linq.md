@@ -1,17 +1,17 @@
 ---
-title: 'Instrukcje: Wykonywanie zapytania dotyczącego metadanych zestawu przy użyciu odbicia (C#LINQ) ()'
+title: Jak wykonać zapytanie dotyczące metadanych zestawu z odbiciem (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: fb0fb118eaabbd9d66c5c4a445b0393a69dd2355
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 65f27ae17d77553bfd7a78c1310febd337a55a6e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592914"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345688"
 ---
-# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Instrukcje: Wykonywanie zapytania dotyczącego metadanych zestawu przy użyciu odbicia (C#LINQ) ()
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Jak wykonać zapytanie dotyczące metadanych zestawu z odbiciem (LINQ) (C#)
 
-Interfejsy API odbicia w bibliotece klas .NET Framework mogą służyć do badania metadanych w zestawie .NET i tworzenia kolekcji typów, elementów członkowskich, parametrów i tak dalej, które znajdują się w tym zestawie. Ponieważ te kolekcje obsługują interfejs ogólny <xref:System.Collections.Generic.IEnumerable%601> , można je zbadać przy użyciu LINQ.  
+Interfejsy API odbicia w bibliotece klas .NET Framework mogą służyć do badania metadanych w zestawie .NET i tworzenia kolekcji typów, elementów członkowskich, parametrów i tak dalej, które znajdują się w tym zestawie. Ponieważ te kolekcje obsługują ogólny interfejs <xref:System.Collections.Generic.IEnumerable%601>, można je zbadać przy użyciu LINQ.  
   
 Poniższy przykład pokazuje, w jaki sposób LINQ może być używane z odbiciem w celu pobrania określonych metadanych dotyczących metod, które pasują do określonego kryterium wyszukiwania. W takim przypadku zapytanie znajdzie nazwy wszystkich metod w zestawie, które zwracają wyliczalne typy, takie jak tablice.  
   
@@ -51,7 +51,7 @@ class ReflectionHowTO
 }
 ```  
 
-W przykładzie zastosowano <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> metodę, aby zwrócić tablicę typów w określonym zestawie. Filtr [WHERE](../../../language-reference/keywords/where-clause.md) jest stosowany, aby zwracane były tylko typy publiczne. Dla każdego typu publicznego podzapytanie jest generowane przy użyciu <xref:System.Reflection.MethodInfo> tablicy zwracanej <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> z wywołania. Te wyniki są filtrowane tak, aby zwracały tylko te metody, których typem zwracanym jest tablica lub inny <xref:System.Collections.Generic.IEnumerable%601>typ, który implementuje. Na koniec te wyniki są pogrupowane przy użyciu nazwy typu jako klucza.  
+W przykładzie zastosowano metodę <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>, aby zwrócić tablicę typów w określonym zestawie. Filtr [WHERE](../../../language-reference/keywords/where-clause.md) jest stosowany, aby zwracane były tylko typy publiczne. Dla każdego typu publicznego podzapytanie jest generowane przy użyciu tablicy <xref:System.Reflection.MethodInfo>, która jest zwracana z wywołania <xref:System.Type.GetMethods%2A?displayProperty=nameWithType>. Te wyniki są filtrowane tak, aby zwracały tylko te metody, których typem zwracanym jest tablica lub inny typ, który implementuje <xref:System.Collections.Generic.IEnumerable%601>. Na koniec te wyniki są pogrupowane przy użyciu nazwy typu jako klucza.  
   
 ## <a name="see-also"></a>Zobacz także
 

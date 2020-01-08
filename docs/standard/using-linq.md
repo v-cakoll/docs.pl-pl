@@ -1,6 +1,6 @@
 ---
-title: LINQ (Language Integrated Query)
-description: Dowiedz się, jak LINQ zapewnia możliwości zapytań w poziomie języka i interfejs API języka C# i VB jako sposób pisania kodu ekspresyjna, deklaratywnego.
+title: LINQ (zapytanie zintegrowane z językiem)
+description: Dowiedz się, w jaki sposób LINQ udostępnia funkcje zapytań na poziomie języka C# i interfejs API do i Visual Basic jako sposób pisania kodu, który jest bardziej wyraźny.
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -9,20 +9,20 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 2e4b23b7bf197c9984c53b2f4cc2acaa61731d38
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 6ec86b7e728eef2cb4937662fd013d7fe951904d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238631"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347271"
 ---
-# <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
+# <a name="linq-language-integrated-query"></a>LINQ (zapytanie zintegrowane z językiem)
 
 ## <a name="what-is-it"></a>Co to jest?
 
-LINQ zapewnia możliwości zapytań w poziomie języka i [funkcja wyższego rzędu](https://en.wikipedia.org/wiki/Higher-order_function) interfejsu API języka C# i VB jako sposób pisania kodu ekspresyjna, deklaratywnego.
+LINQ udostępnia funkcje obsługi zapytań na poziomie języka i interfejs API [funkcji wyższej kolejności](https://en.wikipedia.org/wiki/Higher-order_function) do C# i Visual Basic jako sposób pisania kodu, który jest bardziej wyraźny.
 
-Składnia poziomu języka zapytań:
+Składnia zapytania na poziomie języka:
 
 ```csharp
 var linqExperts = from p in programmers
@@ -36,7 +36,7 @@ Dim linqExperts = From p in programmers
                   Select New LINQExpert(p)
 ```
 
-Przy użyciu tego samego przykładu `IEnumerable<T>` interfejsu API:
+Ten sam przykład przy użyciu interfejsu API `IEnumerable<T>`:
 
 ```csharp
 var linqExperts = programmers.Where(p => p.IsNewToLINQ)
@@ -48,11 +48,11 @@ Dim linqExperts = programmers.Where(Function(p) p.IsNewToLINQ).
                              Select(Function(p) New LINQExpert(p))
 ```
 
-## <a name="linq-is-expressive"></a>LINQ to Expressive
+## <a name="linq-is-expressive"></a>LINQ jest wyraźne
 
-Wyobraź sobie listę zwierząt domowych, ale chcesz przekonwertować ją do słownika, w którym możesz uzyskać dostęp pet bezpośrednio przez jego `RFID` wartość.
+Wyobraź sobie, że masz listę zwierząt domowych, ale chcesz ją przekonwertować na słownik, w którym możesz uzyskać dostęp do Pet bezpośrednio przez jego wartość `RFID`.
 
-Tradycyjne kodu imperatywnego:
+Tradycyjny, bezwzględny kod:
 
 ```csharp
 var petLookup = new Dictionary<int, Pet>();
@@ -71,7 +71,7 @@ For Each pet in pets
 Next
 ```
 
-Za kod jest nie do tworzenia nowego `Dictionary<int, Pet>` i dodać do niego za pomocą pętli, to można przekonwertować istniejącej listy do słownika! LINQ zachowuje zamiar, dlatego nie ma kodu imperatywnego.
+Zamiarem za kod nie jest utworzenie nowego `Dictionary<int, Pet>` i dodanie go do niego za pośrednictwem pętli. ma to na celu konwersję istniejącej listy do słownika. LINQ zachowuje zamiar, a sam kod nie jest.
 
 Równoważne wyrażenie LINQ:
 
@@ -83,13 +83,13 @@ var petLookup = pets.ToDictionary(pet => pet.RFID);
 Dim petLookup = pets.ToDictionary(Function(pet) pet.RFID)
 ```
 
-Kod za pomocą LINQ jest przydatne, ponieważ evens szans między intencji i kodu, podczas wnioskowania programistą. Podwyższenie innego jest zwięzłości kodu. Wyobraź sobie, zmniejszanie dużych fragmentów kodu poprzez 1/3 jako gotowe powyżej. Całkiem osiąganie słodkiego transakcji, odpowiednie?
+Kod przy użyciu LINQ jest cenny, ponieważ nawet pole Play między intencją a kodem, gdy jest to programista. Kolejną premią jest zwięzłości kodu. Załóżmy, że zmniejszasz duże fragmenty kodu bazy danych o 1/3 jak powyżej. Dość słodkiej transakcji?
 
-## <a name="linq-providers-simplify-data-access"></a>Dostawcy LINQ uprościć dostęp do danych
+## <a name="linq-providers-simplify-data-access"></a>Dostawcy LINQ upraszczają dostęp do danych
 
-Znaczne fragmenty oprogramowania na zewnątrz wszystko, czego dotyczy tego radzenia sobie z danymi z określonego źródła (baz danych, JSON, XML itp.). Często ten proces obejmuje uczenie nowego interfejsu API dla każdego źródła danych, które mogą być irytujące. LINQ upraszcza to abstrakcyjność wspólne elementy dostęp do danych w składni zapytań, który wygląda tak samo niezależnie od tego źródła danych wybierz.
+Aby uzyskać znaczący fragment oprogramowania na świecie, wszystko to koncentruje się na danych z niektórych źródeł (baz danych, JSON, XML itp.). Często obejmuje to uczenie nowego interfejsu API dla każdego źródła danych, co może być irytujące. LINQ upraszcza to dzięki abstrakcyjnym typowym elementom dostępu do danych do składni zapytań, która wygląda tak samo niezależnie od wybranego źródła danych.
 
-Rozważ następujące opcje: znajdowanie wszystkich elementów XML z wartością konkretnego atrybutu.
+Rozważ następujące kwestie: znalezienie wszystkich elementów XML z określoną wartością atrybutu.
 
 ```csharp
 public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement documentRoot, string elementName,
@@ -111,13 +111,13 @@ End Function
 
 ```
 
-Pisanie kodu w celu ręcznego przechodzenia dokumentu XML, aby wykonać to zadanie będzie znacznie trudniejsze.
+Pisanie kodu do ręcznego przechodzenia dokumentu XML w celu wykonania tego zadania byłoby znacznie trudniejsze.
 
-Wchodzenie w interakcje z danymi XML nie jest jedyną czynnością, którą można zrobić za pomocą dostawców LINQ. [LINQ do SQL](../../docs/framework/data/adonet/sql/linq/index.md) jest dość bez kości obiektowo-relacyjny mapowania (ORM) dla bazy danych MSSQL. [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) Biblioteka zapewnia wydajne przechodzenie dokumentów JSON za pomocą LINQ. Ponadto, jeśli nie istnieje biblioteki, która obsługuje, czego potrzebujesz, możesz również [pisania własnego dostawcy LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))!
+Korzystanie z języka XML nie jest jedynym elementem, który można wykonywać za pomocą dostawców LINQ. [LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md) to stosunkowo jednoskładnikowo-relacyjny obiekt mapowania (ORM) dla bazy danych serwera MSSQL. Biblioteka [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) zapewnia wydajną przechodzenie dokumentów JSON za pośrednictwem LINQ. Ponadto jeśli nie ma biblioteki, która robi to potrzebne, możesz również [napisać własnego dostawcę LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110)).
 
-## <a name="why-use-the-query-syntax"></a>Dlaczego warto używać składni zapytań?
+## <a name="why-use-the-query-syntax"></a>Dlaczego warto używać składni zapytania?
 
-Jest to pytanie, które często jest dostarczany w górę. Gdy wszystkie ten,
+Jest to pytanie, które często się pojawia. Następnie,
 
 ```csharp
 var filteredItems = myItems.Where(item => item.Foo);
@@ -127,7 +127,7 @@ var filteredItems = myItems.Where(item => item.Foo);
 Dim filteredItems = myItems.Where(Function(item) item.Foo)
 ```
 
-jest znacznie bardziej zwięzłe niż to:
+jest znacznie bardziej zwięzły niż:
 
 ```csharp
 var filteredItems = from item in myItems
@@ -141,31 +141,31 @@ Dim filteredItems = From item In myItems
                     Select item
 ```
 
-Składnia interfejsu API nie jest po prostu bardziej zwarty sposób przeprowadzenia składnia zapytania?
+Czy składnia interfejsu API jest bardziej zwięzła, aby wykonać składnię zapytania?
 
-Nie. Składnia zapytań pozwala na korzystanie z **umożliwiają** klauzula, która pozwala na wprowadzenie i powiązać zmiennej w zakresie wyrażenie, używając go w kolejnych częściach wyrażenia. Odtwarzanie tego samego kodu przy użyciu składni interfejsu API może odbywać się, ale prawdopodobnie doprowadzi do kodu, który jest trudny do odczytania.
+Nie. Składnia zapytania umożliwia użycie klauzuli **Let** , która umożliwia wprowadzenie i powiązanie zmiennej w zakresie wyrażenia, przy użyciu jej w kolejnych fragmentach wyrażenia. Odtwarzanie tego samego kodu tylko przy użyciu składni interfejsu API można wykonać, ale najprawdopodobniej prowadzi to do kodu, który jest trudno odczytać.
 
-Tak wymaga to pytanie, **należy po prostu użyć składni zapytania?**
+W związku z tym begs pytanie, **czy wystarczy użyć składni zapytania?**
 
-Odpowiedź na to pytanie jest **tak** Jeśli...
+Odpowiedź na to pytanie ma **wartość tak** , jeśli...
 
-* Istniejącej bazy kodu już używa składni zapytania
-* Należy do zakresu zmiennych w ciągu zapytania z powodu złożoności
-* Preferuj składnia zapytania i jej nie będzie niekorzystnie wpłynąć na bazie kodu
+* Istniejąca baza kodu używa już składni zapytania
+* Należy określić zakres zmiennych w zapytaniach ze względu na złożoność
+* Wolisz składnię zapytania i nie będzie ona przeszkadzać w kodzie bazowej
 
-Odpowiedź na to pytanie jest **nie** Jeśli...
+Odpowiedź na to pytanie **nie** dotyczy, jeśli...
 
-* Istniejącej bazy kodu już używa składni interfejsu API
-* Użytkownik nie ma potrzeby do zakresu zmiennych w ciągu zapytania
-* Preferuj składni interfejsu API i jego nie będzie niekorzystnie wpłynąć na bazie kodu
+* Istniejąca baza kodu używa już składni interfejsu API
+* Nie ma potrzeby określania zakresu zmiennych w zapytaniach
+* Wolisz składnię interfejsu API i nie będzie ona przeszkadzać w kodzie bazowym
 
-## <a name="essential-samples"></a>Podstawowe przykłady
+## <a name="essential-samples"></a>Najważniejsze przykłady
 
-Aby naprawdę pełną listę przykładów LINQ, odwiedź stronę [101 przykładów LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b).
+Aby zapoznać się z prawdziwie obszerną listą przykładów LINQ, zobacz [101 LINQ Samples](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b).
 
-Poniżej przedstawiono szybki pokaz niektórych podstawowych rodzajów LINQ. To jest w żaden sposób nie wszechstronne LINQ zapewnia znacznie więcej funkcji niż co jest pokazywane w tym miejscu.
+Poniżej znajduje się szybka Prezentacja niektórych najważniejszych fragmentów LINQ. Ta funkcja nie jest kompletna, ponieważ składnik LINQ zapewnia znacznie większą funkcjonalność niż to, co zostało przedstawione w tym miejscu.
 
-* Masła i chleb - `Where`, `Select`, i `Aggregate`:
+* Chleb i masło `Where`, `Select`i `Aggregate`:
 
 ```csharp
 // Filtering a list.
@@ -209,7 +209,7 @@ Dim seed As Integer = 0
 Dim sumOfStrings As Integer = strings.Aggregate(seed, Function(s1, s2) s1.Length + s2.Length)
 ```
 
-* Spłaszczanie listę list:
+* Spłaszczanie listy list:
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
@@ -221,7 +221,7 @@ var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 Dim allDogsFromKennels = kennels.SelectMany(Function(kennel) kennel.Dogs)
 ```
 
-* Związek między dwoma zestawami (przy użyciu niestandardowych komparator):
+* Złożenie między dwoma zestawami (z niestandardowym komparatorem):
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -282,7 +282,7 @@ End Class
 Dim allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, New DogHairLengthComparer())
 ```
 
-* Część wspólną między dwoma zestawami:
+* Część wspólna między dwoma zestawami:
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -296,7 +296,7 @@ Dim volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      New VolunteerTimeComparer())
 ```
 
-* Określanie kolejności:
+* Zamówienie
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -312,7 +312,7 @@ Dim results = DirectionsProcessor.GetDirections(start, end).
                 ThenBy(Function(direction) direction.EstimatedTime)
 ```
 
-* Na koniec bardziej zaawansowany przykład: Określanie, czy wartości właściwości z dwóch wystąpień tego samego typu są równe (Borrowed i zmodyfikowane od [ten wpis w witrynie StackOverflow](https://stackoverflow.com/a/844855)):
+* Na koniec bardziej zaawansowaną próbkę: określenie, czy wartości właściwości dwóch wystąpień tego samego typu są równe (zapożyczone i zmodyfikowane z [tego StackOverflow post](https://stackoverflow.com/a/844855)):
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -352,7 +352,7 @@ End Function
 
 ## <a name="plinq"></a>PLINQ
 
-Program PLINQ lub równoległe LINQ jest aparatem wykonywania równoległego wyrażenia LINQ. Innymi słowy wyrażenie regularne LINQ może być przypadku przetwarzane równolegle w dowolnej liczbie wątków. Jest to realizowane poprzez wywołanie `AsParallel()` przed wyrażeniem.
+PLINQ lub Parallel LINQ jest aparatem wykonywania równoległym dla wyrażeń LINQ. Inaczej mówiąc, regularne wyrażenie LINQ może być równolegle równoległe do dowolnej liczby wątków. Jest to realizowane za pośrednictwem wywołania `AsParallel()` poprzedzającego wyrażenie.
 
 Rozważ następujące opcje:
 
@@ -384,16 +384,16 @@ Public Shared GetAllFacebookUserLikesMessage(facebookUsers As IEnumerable(Of Fac
 }
 ```
 
-Ten kod będzie partycji `facebookUsers` na wątki systemowe zgodnie z potrzebami, sumują łączna liczba polubień na każdy wątek w sposób równoległy, Suma wyników obliczone przez każdego wątku i projektu wynik na ciąg dobre rozwiązanie.
+Ten kod będzie dzielić na partycje `facebookUsers` między wątkami systemowymi, w razie potrzeby Sumuj łączną liczbę polubień w każdym wątku równolegle, Sumuj wyniki obliczone przez poszczególne wątki oraz projekt, który spowoduje powstanie ciągu znaków.
 
-W postaci diagramu:
+W formularzu diagramu:
 
-![PLINQ diagram](./media/using-linq/plinq-diagram.png)
+![Diagram PLINQ](./media/using-linq/plinq-diagram.png)
 
-Równoległego zadania zależne od Procesora CPU, które mogą być łatwo wyrażone za pomocą LINQ (innymi słowy, czystej funkcji i mieć żadnych efektów ubocznych) są doskonałym kandydatem do PLINQ. Dla zadań, które _czy_ ma efekt uboczny, należy rozważyć użycie [Biblioteka zadań równoległych](./parallel-programming/task-parallel-library-tpl.md).
+Działania równoległego zadania związane z PROCESORem, które można łatwo wyrazić za pośrednictwem LINQ (innymi słowy, są czystymi funkcjami i nie mają efektów ubocznych) są doskonałym kandydatem do PLINQ. W przypadku zadań _, które mają_ efekt uboczny, należy rozważyć użycie [biblioteki zadań równoległych](./parallel-programming/task-parallel-library-tpl.md).
 
 ## <a name="further-resources"></a>Dalsze zasoby:
 
-* [101 przykładów LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-* [Linqpad](https://www.linqpad.net/), Plac zabaw dla środowiska i wykonywanie zapytań w bazie danych aparat C#/F#/VB
-* [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), e-book, prezentującą implementacji LINQ do obiektów
+* [Przykłady dla LINQ 101](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [LINQPad](https://www.linqpad.net/), środowisko plac zabaw i aparat zapytań bazy danych dla C#/F#/Visual Basic
+* [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)— książka elektroniczna do uczenia się, jak jest implementowane LINQ-to-Objects

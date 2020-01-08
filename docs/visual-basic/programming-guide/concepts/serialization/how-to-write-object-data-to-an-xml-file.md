@@ -2,12 +2,12 @@
 title: 'Porady: wpisywanie danych o obiektach do pliku XML'
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: b2181a74c83782cf4737b2a94fc5fb08fee28a10
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 989920709428f0e9cb4ddb8aeacfc71a2df220d2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345455"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345975"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Instrukcje: zapisywanie danych obiektu w pliku XML (Visual Basic)
 Ten przykład zapisuje obiekt z klasy do pliku XML przy użyciu klasy <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -37,10 +37,10 @@ Public Module XMLWrite
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
+## <a name="compile-the-code"></a>Skompilować kod  
  Klasa musi mieć Konstruktor publiczny bez parametrów.  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
+## <a name="robust-programming"></a>Skuteczne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
 - Serializowana Klasa nie ma publicznego konstruktora bez parametrów.  
@@ -51,7 +51,7 @@ End Module
   
 - Dysk jest pełny (<xref:System.IO.IOException>).  
   
-## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
+## <a name="net-framework-security"></a>Zabezpieczenia programu .NET Framework  
  Ten przykład tworzy nowy plik, jeśli plik jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, ta aplikacja wymaga `Create` dostępu do folderu. Jeśli plik już istnieje, aplikacja wymaga tylko `Write` dostępu, ale ma mniejsze uprawnienia. Jeśli to możliwe, bezpieczniejsze jest tworzenie plików podczas wdrażania i udzielanie `Read` dostęp do pojedynczego pliku, a nie `Create` dostępu do folderu.  
   
 ## <a name="see-also"></a>Zobacz także

@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: zapytanie o zawartość plików tekstowych w folderze (LINQ) (C#)'
+title: Jak zbadać zawartość plików tekstowych w folderze (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 41be9aadcea3999cb7ea8c01460e72ff99e01765
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 9487e00ac4cb69180ad3744183a3ef8467cbac28
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140954"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347681"
 ---
-# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Instrukcje: zapytanie o zawartość plików tekstowych w folderze (LINQ) (C#)
+# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Jak zbadać zawartość plików tekstowych w folderze (LINQ) (C#)
 Ten przykład pokazuje, jak badać wszystkie pliki w określonym drzewie katalogów, otwierać każdy plik i sprawdzać jego zawartość. Ten typ technika może służyć do tworzenia indeksów lub odwracania indeksów zawartości drzewa katalogów. W tym przykładzie jest wykonywane proste wyszukiwanie ciągu. Jednak bardziej złożone typy dopasowywania do wzorców można wykonać przy użyciu wyrażenia regularnego. Aby uzyskać więcej informacji, zobacz [jak łączyć zapytania LINQ z wyrażeniami regularnymi (C#)](./how-to-combine-linq-queries-with-regular-expressions.md).  
   
 ## <a name="example"></a>Przykład  

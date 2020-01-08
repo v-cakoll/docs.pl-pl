@@ -1,20 +1,20 @@
 ---
-title: 'Instrukcje: Sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ)C#()'
+title: Sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: e6c0cbf523095122be4227bebee8d7a234eba2d0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e869d57c413d175c092cdc15a6fe54cab94e04b8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592395"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347351"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Instrukcje: Sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ)C#()
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ) (C#)
 Poniższy przykład pokazuje, jak sortować wiersze tekstu strukturalnego, takie jak wartości rozdzielane przecinkami, według dowolnego pola w wierszu. Pole może być określane dynamicznie w czasie wykonywania. Załóżmy, że pola w pliku Scores. csv reprezentują numer IDENTYFIKACYJNy studenta, a następnie serię czterech wyników testu.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Aby utworzyć plik zawierający dane  
   
-1. Skopiuj dane z pliku Scores. CSV z [tematu How to: Dołącz zawartość z niepodobnych plików (LINQ)C#(](./how-to-join-content-from-dissimilar-files-linq.md) ) i Zapisz ją w folderze rozwiązania.  
+1. Skopiuj dane Score. CSV z tematu [jak dołączyć zawartość z niepodobnych plików (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) i zapisać je w folderze rozwiązania.  
   
 ## <a name="example"></a>Przykład  
   
@@ -76,7 +76,7 @@ public class SortLines
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
 
-Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.
+Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.
   
 ## <a name="see-also"></a>Zobacz także
 

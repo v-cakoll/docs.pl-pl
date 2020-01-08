@@ -1,13 +1,13 @@
 ---
-title: Dokumentacja XML (F#)
+title: Dokumentacja XML
 description: Dowiedz się więcej F# o pomocy technicznej w programie w celu wygenerowania dokumentacji z komentarzy.
 ms.date: 05/16/2016
-ms.openlocfilehash: b89ab4117f4dd71126f8e203f4a5271ab3c30021
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0a87915c361fc88f0c05264e1c17278fd656a167
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630821"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344692"
 ---
 # <a name="xml-documentation"></a>Dokumentacja XML
 
@@ -25,16 +25,16 @@ Istnieją dwa sposoby zapisywania komentarzy do dokumentacji XML. Po prostu napi
 
 |Składnia tagów|Opis|
 |----------|-----------|
-|_tekst_ **c/c\> \<** **\<\>**|Określa, że *tekst* jest kodem. Ten tag może być używany przez generatory dokumentacji do wyświetlania tekstu w czcionce, która jest odpowiednia dla kodu.|
-|**Podsumowanietekstu\>/Summary \<** **\<\>**|Określa, że *tekst* jest krótkim opisem elementu programu. Opis jest zwykle jednym lub dwoma zdaniami.|
-|**uwagitekstowe\>/Remarks \<** **\<\>**|Określa, że *tekst* zawiera dodatkowe informacje o elemencie program.|
-|**\>**  **param\<Name = "** Name"**Description/param\<\>**|Określa nazwę i opis parametru funkcji lub metody.|
-|**\>**  **typeparam\<Name = "** Name"**Description/typeparam\<\>**|Określa nazwę i opis parametru typu.|
-|**zwracatekst\>/Returns \<** **\<\>**|Określa, że *tekst* opisuje wartość zwracaną przez funkcję lub metodę.|
-|**\>**  **Exception\<cref = "** Type"**Description/Exception\<\>**|Określa typ wyjątku, który może być wygenerowany i okoliczności, w których jest generowany.|
-|**\>**  **Zobacz\<cref = "** Reference"**Text/See\<\>**|Określa link wbudowany do innego elementu programu. *Odwołanie* jest nazwą wyświetlaną w pliku dokumentacji XML. *Tekst* jest tekstem wyświetlanym w łączu.|
-|**\>** seealso — cref = "odwołanie"/  **\<**|Określa również link do dokumentacji dla innego typu. *Odwołanie* jest nazwą wyświetlaną w pliku dokumentacji XML. Zobacz także linki zwykle wyświetlane w dolnej części strony dokumentacji.|
-|**\>/para \<** _tekstu_**akapitu\<\>**|Określa akapit tekstu. Służy do rozdzielania tekstu wewnątrz znacznika **uwagi** .|
+|**\<c\>** _tekst_ **\</c\>**|Określa, że *tekst* jest kodem. Ten tag może być używany przez generatory dokumentacji do wyświetlania tekstu w czcionce, która jest odpowiednia dla kodu.|
+|**\<podsumowanie\>** _tekstu_ **\</Summary\>**|Określa, że *tekst* jest krótkim opisem elementu programu. Opis jest zwykle jednym lub dwoma zdaniami.|
+|**\<uwagi\>** _tekst_ **\</Remarks\>**|Określa, że *tekst* zawiera dodatkowe informacje o elemencie program.|
+|**\<param Name = "** _name_ **"\>** _Description_ **\</param\>**|Określa nazwę i opis parametru funkcji lub metody.|
+|**\<typeparam Name = "** _name_ **"\>** _Description_ **\</typeparam\>**|Określa nazwę i opis parametru typu.|
+|**\<zwraca\>** _text_ **\</Returns\>**|Określa, że *tekst* opisuje wartość zwracaną przez funkcję lub metodę.|
+|**\<Exception cref = "** _Type_ **"\>** _Description_ **\</Exception\>**|Określa typ wyjątku, który może być wygenerowany i okoliczności, w których jest generowany.|
+|**\<Zobacz cref = "** _Reference_ **"\>** _Text_ **\</See\>**|Określa link wbudowany do innego elementu programu. *Odwołanie* jest nazwą wyświetlaną w pliku dokumentacji XML. *Tekst* jest tekstem wyświetlanym w łączu.|
+|**\<seealso — cref = "** _reference_ **"/\>**|Określa również link do dokumentacji dla innego typu. *Odwołanie* jest nazwą wyświetlaną w pliku dokumentacji XML. Zobacz także linki zwykle wyświetlane w dolnej części strony dokumentacji.|
+|**\<para\>** _tekstu_ **\</para\>**|Określa akapit tekstu. Służy do rozdzielania tekstu wewnątrz znacznika **uwagi** .|
 
 ## <a name="example"></a>Przykład
 

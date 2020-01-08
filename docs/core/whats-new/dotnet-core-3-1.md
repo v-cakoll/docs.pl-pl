@@ -1,23 +1,23 @@
 ---
-title: Co nowego w programie .NET Core 3,1
+title: Co nowego w programie .NET Core 3.1
 description: Dowiedz się więcej o nowych funkcjach dostępnych w programie .NET Core 3,1.
 dev_langs:
 - csharp
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 08ae824b79ba6a1ff5a92a0b4306eabe5ccadfd2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a9f47c2909375251460b45792822e491d56fb242
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838324"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342863"
 ---
-# <a name="whats-new-in-net-core-31"></a>Co nowego w programie .NET Core 3,1
+# <a name="whats-new-in-net-core-31"></a>Co nowego w programie .NET Core 3.1
 
 W tym artykule opisano nowości w programie .NET Core 3,1. Ta wersja zawiera drobne ulepszenia programu .NET Core 3,0, skupiając się na małych, ale ważnych poprawkach. Najważniejszym elementem na platformie .NET Core 3,1 jest to, że jest to wersja [długoterminowa (LTS)](#long-term-support) .
 
-Jeśli używasz programu Visual Studio 2019, musisz zaktualizować [program do programu Visual studio 2019 16,4](https://visualstudio.microsoft.com/downloads/) , aby współpracował z projektami .net Core 3,1. Aby uzyskać więcej informacji na temat Nowości w programie Visual Studio, zobacz [Blog programu Visual Studio](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/).
+W przypadku korzystania z programu Visual Studio 2019 należy zaktualizować program do [wersji Visual studio 2019 wersja 16,4](https://visualstudio.microsoft.com/downloads/) , aby działał z projektami .net Core 3,1. Aby uzyskać więcej informacji na temat Nowości w programie Visual Studio, zobacz [Blog programu Visual Studio](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/).
 
 Visual Studio dla komputerów Mac obsługuje również program .NET Core 3,1 i zawiera go w kanale Visual Studio dla komputerów Mac 8,4 w wersji zapoznawczej. Aby korzystać z platformy .NET Core 3,1, należy wybrać kanał w wersji zapoznawczej.
 

@@ -1,15 +1,15 @@
 ---
-title: Instalowanie programu .NET Framework 3.5 w systemie Windows 10, Windows 8.1 lub Windows 8
+title: Zainstaluj .NET Framework 3,5 w systemie Windows 10, 8,1, 8
 description: Dowiedz się, jak zainstalować .NET Framework 3,5 w systemie Windows 10, Windows 8.1 i Windows 8.
 author: rlander
 ms.author: mairaw
 ms.date: 07/16/2018
-ms.openlocfilehash: 949f73febe2eb2ad7155bddd2b7b7514eddfe6c9
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
-ms.translationtype: MT
+ms.openlocfilehash: 16bc8b48d3e54cf3094b6bcc7a47ef863fa639b2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319121"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344833"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Instalowanie programu .NET Framework 3.5 w systemie Windows 10, Windows 8.1 lub Windows 8
 
@@ -29,13 +29,13 @@ Jeśli spróbujesz uruchomić aplikację, która wymaga .NET Framework 3,5, moż
 
 .NET Framework 3,5 można włączyć za pomocą panelu sterowania systemu Windows. Ta opcja wymaga połączenia internetowego.
 
-1. Naciśnij klawisz Windows ![Screenshot logo Key systemu Windows. ](./media/dotnet-35-windows-10/windows-keyboard-logo.png) na klawiaturze wpisz "funkcje systemu Windows", a następnie naciśnij klawisz ENTER. Zostanie wyświetlone okno dialogowe **Włączanie lub wyłączanie funkcji systemu Windows** .
+1. Naciśnij zrzut ekranu ![klucza systemu Windows w logo klucza systemu Windows.](./media/dotnet-35-windows-10/windows-keyboard-logo.png) na klawiaturze wpisz "funkcje systemu Windows", a następnie naciśnij klawisz ENTER. Zostanie wyświetlone okno dialogowe **Włączanie lub wyłączanie funkcji systemu Windows** .
 
 2. Zaznacz pole wyboru **.NET Framework 3,5 (zawiera .net 2,0 i 3,0)** , wybierz **przycisk OK**, a następnie uruchom ponownie komputer po wyświetleniu monitu.
 
    ![Zrzut ekranu przedstawiający instalację platformy .NET przy użyciu panelu sterowania.](./media/dotnet-35-windows-10/dotnet-control-panel.png)
 
-   Nie musisz wybierać elementów podrzędnych dla **Windows Communication Foundation (WCF) Aktywacja HTTP** i **Windows Communication Foundation (WCF) Aktywacja bez http** , chyba że jesteś deweloperem lub administratorem serwera, który wymaga tego zestaw.
+   Nie musisz wybierać elementów podrzędnych dla **Windows Communication Foundation (WCF) Aktywacja HTTP** i **Windows Communication Foundation (WCF) Aktywacja bez http** , chyba że jesteś deweloperem lub administratorem serwera, który wymaga tej funkcji.
 
 ## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a>Rozwiązywanie problemów z instalacją .NET Framework 3,5
 

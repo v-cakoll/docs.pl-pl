@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: 3e8d3ec46362751ea8bbfe5120e35a050d0e7a6c
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 5191f3d03facaafc64f6df494ff90cd0ce1c1988
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569362"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346179"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Operacje asynchroniczne (Usługi danych programu WCF)
 Aplikacje sieci Web muszą obsługiwać wyższe opóźnienia między klientem a serwerem niż aplikacje, które działają w sieciach wewnętrznych. Aby zoptymalizować wydajność i środowisko użytkownika aplikacji, zalecamy używanie asynchronicznych metod klas <xref:System.Data.Services.Client.DataServiceContext> i <xref:System.Data.Services.Client.DataServiceQuery%601> podczas uzyskiwania dostępu do serwerów Usługi danych programu WCF za pośrednictwem sieci Web.  
@@ -21,7 +21,7 @@ Aplikacje sieci Web muszą obsługiwać wyższe opóźnienia między klientem a 
  Operacje asynchroniczne można wykonywać przy użyciu pary metod na <xref:System.Data.Services.Client.DataServiceContext> i <xref:System.Data.Services.Client.DataServiceQuery%601> klas, które zaczynają *się od początku* i na *końcu* . Metody *BEGIN* rejestrują delegata, który wywołuje Usługa po zakończeniu operacji. Metody *End* powinny być wywoływane w delegatze, który jest zarejestrowany do obsługi wywołania zwrotnego z ukończonych operacji. Gdy wywoływana jest metoda *End* w celu ukończenia operacji asynchronicznej, należy to zrobić z tego samego <xref:System.Data.Services.Client.DataServiceQuery%601> lub wystąpienia <xref:System.Data.Services.Client.DataServiceContext>, które zostało użyte do rozpoczęcia operacji. Każda metoda *BEGIN* przyjmuje parametr `state`, który może przekazać obiekt stanu do wywołania zwrotnego. Ten obiekt stanu jest pobierany z <xref:System.IAsyncResult>, który jest dostarczany z wywołaniem zwrotnym i jest używany do wywołania odpowiedniej metody *End* w celu ukończenia operacji asynchronicznej. Na przykład, jeśli podasz wystąpienie <xref:System.Data.Services.Client.DataServiceQuery%601> jako parametr `state` po wywołaniu metody <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> w wystąpieniu, to to samo wystąpienie <xref:System.Data.Services.Client.DataServiceQuery%601> jest zwracane przez <xref:System.IAsyncResult>. To wystąpienie <xref:System.Data.Services.Client.DataServiceQuery%601> jest następnie używane do wywołania metody <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> w celu ukończenia operacji zapytania. Aby uzyskać więcej informacji, zobacz [jak: wykonywanie zapytań asynchronicznych usługi danych](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md).  
   
 > [!NOTE]
-> Tylko operacje asynchroniczne są obsługiwane przez biblioteki klienckie udostępniane w .NET Framework dla programu Silverlight. Aby uzyskać więcej informacji, zobacz [usługi danych programu WCF (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149).  
+> Tylko operacje asynchroniczne są obsługiwane przez biblioteki klienckie udostępniane w .NET Framework dla programu Silverlight. Aby uzyskać więcej informacji, zobacz [usługi danych programu WCF (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)).  
   
  Biblioteki klienta .NET Framework obsługują następujące operacje asynchroniczne:  
   

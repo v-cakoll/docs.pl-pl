@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: bc2338191bbf6922f56c833ebf115c5b21d92b00
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 1b8a00c7716a60daec4e4f6af6ae8e3a7a45e943
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569314"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346173"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Operacje usługi wywołującej (Usługi danych programu WCF)
 Protokół Open Data Protocol (OData) definiuje operacje usługi dla usługi danych. Usługi danych programu WCF umożliwia definiowanie takich operacji jako metod usługi danych. Podobnie jak w przypadku innych zasobów usługi danych, te operacje usług są rozwiązywane przy użyciu identyfikatorów URI. Operacja usługi może zwracać kolekcje typów jednostek, pojedyncze wystąpienia typu jednostki i typy pierwotne, takie jak liczba całkowita i ciąg. Operacja usługi może również zwracać `null` (`Nothing` w Visual Basic). Biblioteka klienta Usługi danych programu WCF może służyć do uzyskiwania dostępu do operacji usługi, które obsługują żądania HTTP GET. Te rodzaje operacji usługi są definiowane jako metody, do których zastosowano <xref:System.ServiceModel.Web.WebGetAttribute>. Aby uzyskać więcej informacji, zobacz [operacje usługi](service-operations-wcf-data-services.md).  
@@ -32,7 +32,7 @@ Protokół Open Data Protocol (OData) definiuje operacje usługi dla usługi dan
   
 - Nie można użyć <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> do wywołania operacji pobierania usługi zwracającej pojedynczy wynik, dla jednostki lub typu pierwotnego lub wymagającej więcej niż jednego parametru wejściowego. Zamiast tego należy wywołać metodę <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>.  
   
-- Rozważ utworzenie metody rozszerzającej na silnie wpisanej klasie częściowej <xref:System.Data.Services.Client.DataServiceContext>, która jest generowana przez narzędzia, która używa <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> lub metody <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> do wywołania operacji usługi. Umożliwia to wywoływanie operacji usługi bezpośrednio z kontekstu. Aby uzyskać więcej informacji, zobacz operacje usługi wpis w blogu [i klienta usługi danych programu WCF](https://go.microsoft.com/fwlink/?LinkId=215668).  
+- Rozważ utworzenie metody rozszerzającej na silnie wpisanej klasie częściowej <xref:System.Data.Services.Client.DataServiceContext>, która jest generowana przez narzędzia, która używa <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> lub metody <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> do wywołania operacji usługi. Umożliwia to wywoływanie operacji usługi bezpośrednio z kontekstu. Aby uzyskać więcej informacji, zobacz operacje usługi wpis w blogu [i klienta usługi danych programu WCF](https://blogs.msdn.microsoft.com/astoriateam/2010/05/26/service-operations-and-the-wcf-data-services-client/).  
   
 - W przypadku użycia <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> w celu wywołania operacji usługi Biblioteka klienta automatycznie wyprowadza znaki dostarczone do <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> przez wykonanie kodowania procentowo znaków zarezerwowanych, takich jak znak handlowego "i" (&) i ucieczki pojedynczych cudzysłowów w ciągach. Jednak w przypadku wywołania jednej z metod *wykonywania* w celu wywołania operacji usługi należy pamiętać, aby wykonać to anulowanie wartości ciągów dostarczonych przez użytkownika. Pojedyncze cudzysłowy w identyfikatorach URI są wyprowadzane jako pary pojedynczego cudzysłowu.  
   

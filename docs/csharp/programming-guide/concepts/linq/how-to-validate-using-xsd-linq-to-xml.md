@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Weryfikuj przy użyciu XSD (LINQ to XML)C#()'
+title: Sprawdzanie poprawności przy użyciu XSD (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: 0e35e12efa9530fd5bbcf7a21e86ed03c1325bc4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 29830457b63f36dd401a412364060339344f35cb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253254"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347254"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Instrukcje: Weryfikuj przy użyciu XSD (LINQ to XML)C#()
-<xref:System.Xml.Schema> Przestrzeń nazw zawiera metody rozszerzające, które ułatwiają Weryfikowanie drzewa XML względem pliku języka definicji schematu XML (XSD). Aby uzyskać więcej informacji, zobacz <xref:System.Xml.Schema.Extensions.Validate%2A> dokumentację metody.  
+# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Sprawdzanie poprawności przy użyciu XSD (LINQ to XML) (C#)
+Przestrzeń nazw <xref:System.Xml.Schema> zawiera metody rozszerzające, które ułatwiają Weryfikowanie drzewa XML względem pliku języka definicji schematu XML (XSD). Aby uzyskać więcej informacji, zobacz dokumentację metody <xref:System.Xml.Schema.Extensions.Validate%2A>.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy <xref:System.Xml.Schema.XmlSchemaSet>, a następnie weryfikuje dwa <xref:System.Xml.Linq.XDocument> obiekty względem zestawu schematów. Jeden z dokumentów jest prawidłowy, drugi nie jest.  
+ Poniższy przykład tworzy <xref:System.Xml.Schema.XmlSchemaSet>, a następnie sprawdza poprawność dwóch obiektów <xref:System.Xml.Linq.XDocument> względem zestawu schematów. Jeden z dokumentów jest prawidłowy, drugi nie jest.  
   
 ```csharp  
 string xsdMarkup =  
@@ -76,11 +76,11 @@ doc2 did not validate
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład sprawdza, czy dokument XML z [przykładowego pliku XML: Klienci i zamówienia (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) są prawidłowe dla schematu z [przykładowego pliku XSD: Klienci i zamówienia](./sample-xsd-file-customers-and-orders1.md). Następnie modyfikuje źródłowy dokument XML. Zmienia `CustomerID` atrybut pierwszego klienta. Po zmianie zamówienia odwołują się do klienta, który nie istnieje, więc dokument XML nie zostanie już zweryfikowany.  
+ Poniższy przykład sprawdza, czy dokument XML z [przykładowego pliku XML: klienci i zamówienia (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) są prawidłowe dla schematu z [przykładowego pliku XSD: klienci i zamówienia](./sample-xsd-file-customers-and-orders1.md). Następnie modyfikuje źródłowy dokument XML. Zmienia atrybut `CustomerID` pierwszego klienta. Po zmianie zamówienia odwołują się do klienta, który nie istnieje, więc dokument XML nie zostanie już zweryfikowany.  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
- W tym przykładzie zastosowano następujący schemat XSD: [Przykładowy plik XSD: Klienci i zamówienia](./sample-xsd-file-customers-and-orders1.md).  
+ W tym przykładzie zastosowano następujący schemat XSD: [przykładowy plik XSD: klienci i zamówienia](./sample-xsd-file-customers-and-orders1.md).  
   
 ```csharp  
 XmlSchemaSet schemas = new XmlSchemaSet();  

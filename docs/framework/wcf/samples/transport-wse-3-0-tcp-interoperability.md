@@ -2,12 +2,12 @@
 title: 'Transport: Współdziałanie protokołu TCP z usługami WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 6541ddf322a2084601daf2f1271ac5c888073f8f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8166e1c378bc745eb8c9f37d6982642e754813cb
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423872"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544624"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: Współdziałanie protokołu TCP z usługami WSE 3.0
 Przykład transportu współdziałania TCP w programie WSE 3,0 demonstruje sposób implementacji sesji dwustronnej TCP jako transportu niestandardowego Windows Communication Foundation (WCF). Przedstawiono w nim również, jak można użyć rozszerzalności warstwy kanału do interfejsu przez sieć z istniejącymi wdrożonymi systemami. Poniższe kroki pokazują, jak utworzyć niestandardowy transport WCF:  
@@ -133,7 +133,7 @@ Przykład transportu współdziałania TCP w programie WSE 3,0 demonstruje spos�
   
  Podczas uruchamiania przykładu, oczekiwane są następujące dane wyjściowe.  
   
- Klient:  
+ Client:  
   
 ```console  
 Calling soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
@@ -157,7 +157,7 @@ Received Body: to me.
 Press enter.  
 ```  
   
- Server  
+ Serwer:  
   
 ```console  
 Listening for messages at soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
@@ -175,7 +175,7 @@ Symbols:
 1. Aby uruchomić ten przykład, musisz mieć zainstalowaną przykład WSE 3,0 i WSE `TcpSyncStockService`. [WSE 3,0 można pobrać z witryny MSDN](https://go.microsoft.com/fwlink/?LinkId=95000).  
   
 > [!NOTE]
-> Ponieważ WSE 3,0 nie jest obsługiwane w [!INCLUDE[lserver](../../../../includes/lserver-md.md)], nie można zainstalować ani uruchomić przykładowego `TcpSyncStockService` w tym systemie operacyjnym.  
+> Ponieważ WSE 3,0 nie jest obsługiwany w systemie Windows Server 2008, nie można zainstalować ani uruchomić przykładowego `TcpSyncStockService` w tym systemie operacyjnym.  
   
 1. Po zainstalowaniu przykładu `TcpSyncStockService` wykonaj następujące czynności:  
   

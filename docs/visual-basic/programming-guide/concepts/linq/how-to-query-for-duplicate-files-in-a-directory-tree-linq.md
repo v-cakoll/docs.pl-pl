@@ -2,12 +2,12 @@
 title: 'Porady: zapytanie o zduplikowane pliki w drzewie katalogu (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: 9be0d1e7be70569e1fac0033414400a85071bfec
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9870ccae327bccb0f6f93d49e3b2fc77d72f95cd
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347704"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342184"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Instrukcje: zapytanie o zduplikowane pliki w drzewie katalogów (LINQ) (Visual Basic)
 Czasami pliki o tej samej nazwie mogą znajdować się w więcej niż jednym folderze. Na przykład w folderze instalacyjnym programu Visual Studio kilka folderów zawiera plik Readme. htm. Ten przykład pokazuje, jak wykonać zapytanie o takie zduplikowane nazwy plików w określonym folderze głównym. Drugi przykład pokazuje, jak wykonywać zapytania dotyczące plików, których rozmiar i czasy tworzenia są również zgodne.  
@@ -100,8 +100,8 @@ End Module
   
  Pierwsze zapytanie używa prostego klucza w celu określenia dopasowania; spowoduje to znalezienie plików o tej samej nazwie, ale których zawartość może się różnić. Drugie zapytanie używa klucza złożonego, aby dopasować się do trzech właściwości obiektu <xref:System.IO.FileInfo>. To zapytanie jest znacznie bardziej prawdopodobnie, aby znaleźć pliki o tej samej nazwie i podobnej lub identycznej zawartości.  
   
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
-Utwórz projekt aplikacji konsolowej VB.NET z instrukcją `Imports` dla przestrzeni nazw System. LINQ.
+## <a name="compile-the-code"></a>Skompilować kod  
+Utwórz projekt aplikacji konsolowej Visual Basic przy użyciu instrukcji `Imports` dla przestrzeni nazw System. LINQ.
   
 ## <a name="see-also"></a>Zobacz także
 

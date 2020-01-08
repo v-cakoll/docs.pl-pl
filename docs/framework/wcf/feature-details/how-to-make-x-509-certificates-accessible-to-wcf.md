@@ -9,12 +9,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: abd074701ca667abe4590f4f17a044b34325e874
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7f24966f06730e62ea7a8967c3930f05ca78f50e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837405"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347082"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Instrukcje: Udostępnianie certyfikatów X.509 w architekturze WCF
 Aby udostępnić certyfikat X. 509 dla Windows Communication Foundation (WCF), kod aplikacji musi określać nazwę i lokalizację magazynu certyfikatów. W pewnych okolicznościach tożsamość procesu musi mieć dostęp do pliku, który zawiera klucz prywatny skojarzony z certyfikatem X. 509. Aby uzyskać klucz prywatny skojarzony z certyfikatem X. 509 w magazynie certyfikatów, WCF musi mieć odpowiednie uprawnienia. Domyślnie tylko właściciel i konto systemowe mogą uzyskać dostęp do klucza prywatnego certyfikatu.  
@@ -59,7 +59,7 @@ Aby udostępnić certyfikat X. 509 dla Windows Communication Foundation (WCF), k
         |--------------|----------------------|  
         |Klient (Aplikacja konsolowa lub WinForms).|Aktualnie zalogowany użytkownik.|  
         |Usługa, która jest samodzielna.|Aktualnie zalogowany użytkownik.|  
-        |Usługa hostowana w usługach IIS 6,0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) lub IIS 7,0 (Windows Vista).|USŁUGA SIECIOWA|  
+        |Usługa hostowana w usługach IIS 6,0 (Windows Server 2003) lub IIS 7,0 (Windows Vista).|USŁUGA SIECIOWA|  
         |Usługa hostowana w usługach IIS 5. X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]).|Kontrolowane przez element `<processModel>` w pliku Machine. config. Domyślne konto to ASPNET.|  
   
     5. Przyznaj uprawnienia do odczytu pliku, który zawiera klucz prywatny do konta, w ramach którego działa usługa WCF, przy użyciu narzędzia, takiego jak icacls. exe.  

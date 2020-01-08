@@ -1,5 +1,5 @@
 ---
-title: Niestandardowe ciągi formatujące TimeSpan — .NET
+title: Niestandardowe ciągi formatujące TimeSpan
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-ms.openlocfilehash: f38ea3a1e2d687044f862e5d6c0a78c6c12965d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5963f9afe422206627a1baea47339ecb81becf0
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126552"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348319"
 ---
 # <a name="custom-timespan-format-strings"></a>Niestandardowe ciągi formatujące TimeSpan
 
@@ -43,31 +43,31 @@ Niestandardowe ciągi formatujące <xref:System.TimeSpan> są również używane
 
 | Specyfikator formatu | Opis | Przykład |
 |----------------------|-----------------|-------------|
-|"d", "% d"|Liczba pełnych dni w przedziale czasu.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "d"](#dSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d`--> "6"<br /><br /> `d\.hh\:mm`--> "6.14:32"|
-|"DD" — "dddddddd"|Liczba pełnych dni w przedziale czasu, uzupełniona wiodącymi zerami, zgodnie z potrzebami.<br /><br /> Więcej informacji: [specyfikatory formatu niestandardowego "DD"-"dddddddd"](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd`--> "006"<br /><br /> `dd\.hh\:mm`--> "06.14:32"|
-|"h", "% h"|Liczba pełnych godzin w przedziale czasu, które nie są zliczane jako część dni. Godziny z pojedynczą cyfrą nie mają zera wiodącego.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "h"](#hSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%h`--> "14"<br /><br /> `hh\:mm`--> "14:32"|
-|„hh”|Liczba pełnych godzin w przedziale czasu, które nie są zliczane jako część dni. Godziny z jedną cyfrą mają zero wiodące.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "HH"](#hhSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `hh`--> "14"<br /><br /> `new TimeSpan(6, 8, 32, 17, 685):`<br /><br /> `hh`--> 08|
-|"m", "% m"|Liczba pełnych minut w przedziale czasu, które nie są uwzględnione w godzinach lub dniach. Minuty z pojedynczą cyfrą nie mają zera wiodącego.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "m"](#mSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `%m`--> "8"<br /><br /> `h\:m`--> "14:8"|
-|„mm”|Liczba pełnych minut w przedziale czasu, które nie są uwzględnione w godzinach lub dniach. Minuty z jedną cyfrą mają wiodące zero.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "mm"](#mmSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `mm`--> "08"<br /><br /> `new TimeSpan(6, 8, 5, 17, 685):`<br /><br /> `d\.hh\:mm\:ss`--> 6.08:05:17|
-|"s", "% s"|Liczba pełnych sekund w przedziale czasu, które nie są uwzględnione w godzinach, dniach lub minutach. Sekundy o pojedynczej cyfrze nie mają zera wiodącego.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "s"](#sSpecifier).|`TimeSpan.FromSeconds(12.965)`:<br /><br /> `%s` — > 12<br /><br /> `s\.fff`--> 12,965|
-|„ss”|Liczba pełnych sekund w przedziale czasu, które nie są uwzględnione w godzinach, dniach lub minutach.  Kilka sekund ma wiodące zero.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "SS"](#ssSpecifier).|`TimeSpan.FromSeconds(6.965)`:<br /><br /> `ss` — > 06<br /><br /> `ss\.fff`--> 06,965|
-|"f", "% f"|Dziesiątki sekundy w przedziale czasu.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "f"](#fSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `f`--> 8<br /><br /> `ss\.f`--> 06,8|
-|„ff”|Setne części sekundy w przedziale czasu.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FF"](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff`--> 89<br /><br /> `ss\.ff`--> 06,89|
-|„fff”|Milisekundy w przedziale czasu.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFF"](#f3Specifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `fff`--> 895<br /><br /> `ss\.fff`--> 06,895|
-|„ffff”|Dziesięć stutysięcznych sekundy w przedziale czasu.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFF"](#f4Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffff`--> 8954<br /><br /> `ss\.ffff`--> 06,8954|
-|„fffff”|Setki stutysięcznych sekund w przedziale czasu.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "fffff"](#f5Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffff`--> 89543<br /><br /> `ss\.fffff`--> 06,89543|
-|„ffffff”|Dziesięciomilionowych sekundy w przedziale czasu.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFFF"](#f6Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffffff`--> 895432<br /><br /> `ss\.ffffff`--> 06,895432|
-|„fffffff”|Dziesięć dziesięciomilionowych sekund (lub kresek ułamkowych) w przedziale czasu.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "fffffff"](#f7Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffffff`--> 8954321<br /><br /> `ss\.fffffff`--> 06,8954321|
+|"d", "% d"|Liczba pełnych dni w przedziale czasu.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "d"](#dSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` --> "6"<br /><br /> `d\.hh\:mm` --> "6.14:32"|
+|"DD" — "dddddddd"|Liczba pełnych dni w przedziale czasu, uzupełniona wiodącymi zerami, zgodnie z potrzebami.<br /><br /> Więcej informacji: [specyfikatory formatu niestandardowego "DD"-"dddddddd"](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --> "06.14:32"|
+|"h", "% h"|Liczba pełnych godzin w przedziale czasu, które nie są zliczane jako część dni. Godziny z pojedynczą cyfrą nie mają zera wiodącego.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "h"](#hSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%h` --> "14"<br /><br /> `hh\:mm` --> "14:32"|
+|„hh”|Liczba pełnych godzin w przedziale czasu, które nie są zliczane jako część dni. Godziny z jedną cyfrą mają zero wiodące.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "HH"](#hhSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `hh` --> "14"<br /><br /> `new TimeSpan(6, 8, 32, 17, 685):`<br /><br /> `hh` --> 08|
+|"m", "% m"|Liczba pełnych minut w przedziale czasu, które nie są uwzględnione w godzinach lub dniach. Minuty z pojedynczą cyfrą nie mają zera wiodącego.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "m"](#mSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `%m` --> "8"<br /><br /> `h\:m` --> "14:8"|
+|„mm”|Liczba pełnych minut w przedziale czasu, które nie są uwzględnione w godzinach lub dniach. Minuty z jedną cyfrą mają wiodące zero.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "mm"](#mmSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `mm` --> "08"<br /><br /> `new TimeSpan(6, 8, 5, 17, 685):`<br /><br /> `d\.hh\:mm\:ss` --> 6.08:05:17|
+|"s", "% s"|Liczba pełnych sekund w przedziale czasu, które nie są uwzględnione w godzinach, dniach lub minutach. Sekundy o pojedynczej cyfrze nie mają zera wiodącego.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "s"](#sSpecifier).|`TimeSpan.FromSeconds(12.965)`:<br /><br /> `%s` --> 12<br /><br /> `s\.fff` --> 12.965|
+|„ss”|Liczba pełnych sekund w przedziale czasu, które nie są uwzględnione w godzinach, dniach lub minutach.  Kilka sekund ma wiodące zero.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "SS"](#ssSpecifier).|`TimeSpan.FromSeconds(6.965)`:<br /><br /> `ss` --> 06<br /><br /> `ss\.fff` --> 06.965|
+|"f", "% f"|Dziesiątki sekundy w przedziale czasu.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "f"](#fSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `f` --> 8<br /><br /> `ss\.f` --> 06.8|
+|„ff”|Setne części sekundy w przedziale czasu.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FF"](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|
+|„fff”|Milisekundy w przedziale czasu.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFF"](#f3Specifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `fff` --> 895<br /><br /> `ss\.fff` --> 06.895|
+|„ffff”|Dziesięć stutysięcznych sekundy w przedziale czasu.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFF"](#f4Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffff` --> 8954<br /><br /> `ss\.ffff` --> 06.8954|
+|„fffff”|Setki stutysięcznych sekund w przedziale czasu.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "fffff"](#f5Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffff` --> 89543<br /><br /> `ss\.fffff` --> 06.89543|
+|„ffffff”|Dziesięciomilionowych sekundy w przedziale czasu.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFFF"](#f6Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffffff` --> 895432<br /><br /> `ss\.ffffff` --> 06.895432|
+|„fffffff”|Dziesięć dziesięciomilionowych sekund (lub kresek ułamkowych) w przedziale czasu.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "fffffff"](#f7Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffffff` --> 8954321<br /><br /> `ss\.fffffff` --> 06.8954321|
 |"F", "% F"|Dziesiątki sekundy w przedziale czasu. Nic nie jest wyświetlane, jeśli cyfra jest równa zero.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "F"](#F_Specifier).|`TimeSpan.Parse("00:00:06.32")`:<br /><br /> `%F`: 3<br /><br /> `TimeSpan.Parse("0:0:3.091")`:<br /><br /> `ss\.F`: 03.|
-|„FF”|Setne części sekundy w przedziale czasu. Nie są uwzględniane żadne zera końcowe lub dwie cyfry zerowe.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FF"](#FF_Specifier).|`TimeSpan.Parse("00:00:06.329")`:<br /><br /> `FF`: 32<br /><br /> `TimeSpan.Parse("0:0:3.101")`:<br /><br /> `ss\.FF`: 03,1|
-|„FFF”|Milisekundy w przedziale czasu. Wszystkie zera końcowe nie są uwzględniane.<br /><br /> Więcej informacji:|`TimeSpan.Parse("00:00:06.3291")`:<br /><br /> `FFF`: 329<br /><br /> `TimeSpan.Parse("0:0:3.1009")`:<br /><br /> `ss\.FFF`: 03,1|
-|„FFFF”|Dziesięć stutysięcznych sekundy w przedziale czasu. Wszystkie zera końcowe nie są uwzględniane.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFF"](#F4_Specifier).|`TimeSpan.Parse("00:00:06.32917")`:<br /><br /> `FFFFF`: 3291<br /><br /> `TimeSpan.Parse("0:0:3.10009")`:<br /><br /> `ss\.FFFF`: 03,1|
-|„FFFFF”|Setki stutysięcznych sekund w przedziale czasu. Wszystkie zera końcowe nie są uwzględniane.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "fffff"](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03,1|
-|„FFFFFF”|Dziesięciomilionowych sekundy w przedziale czasu. Wszystkie zera końcowe nie są wyświetlane.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03,1|
-|„FFFFFFF”|Dziesięć milionów sekund w przedziale czasu. Nie są wyświetlane żadne zera końcowe lub siedem zer.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03,19|
-|"*String*"|Ogranicznik ciągu literału.<br /><br /> Więcej informacji: [inne znaki](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss`--> "14:32:17"|
-|&#92;|Znak ucieczki.<br /><br /> Więcej informacji: [inne znaki](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss`--> "14:32:17"|
-|Jakikolwiek inny znak|Każdy inny niezmieniony znak jest interpretowany jako specyfikator formatu niestandardowego.<br /><br /> Więcej informacji: [inne znaki](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss`--> "14:32:17"|
+|„FF”|Setne części sekundy w przedziale czasu. Nie są uwzględniane żadne zera końcowe lub dwie cyfry zerowe.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FF"](#FF_Specifier).|`TimeSpan.Parse("00:00:06.329")`:<br /><br /> `FF`: 32<br /><br /> `TimeSpan.Parse("0:0:3.101")`:<br /><br /> `ss\.FF`: 03.1|
+|„FFF”|Milisekundy w przedziale czasu. Wszystkie zera końcowe nie są uwzględniane.<br /><br /> Więcej informacji:|`TimeSpan.Parse("00:00:06.3291")`:<br /><br /> `FFF`: 329<br /><br /> `TimeSpan.Parse("0:0:3.1009")`:<br /><br /> `ss\.FFF`: 03.1|
+|„FFFF”|Dziesięć stutysięcznych sekundy w przedziale czasu. Wszystkie zera końcowe nie są uwzględniane.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFF"](#F4_Specifier).|`TimeSpan.Parse("00:00:06.32917")`:<br /><br /> `FFFFF`: 3291<br /><br /> `TimeSpan.Parse("0:0:3.10009")`:<br /><br /> `ss\.FFFF`: 03.1|
+|„FFFFF”|Setki stutysięcznych sekund w przedziale czasu. Wszystkie zera końcowe nie są uwzględniane.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "fffff"](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03.1|
+|„FFFFFF”|Dziesięciomilionowych sekundy w przedziale czasu. Wszystkie zera końcowe nie są wyświetlane.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
+|„FFFFFFF”|Dziesięć milionów sekund w przedziale czasu. Nie są wyświetlane żadne zera końcowe lub siedem zer.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|
+|"*String*"|Ogranicznik ciągu literału.<br /><br /> Więcej informacji: [inne znaki](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|&#92;|Znak ucieczki.<br /><br /> Więcej informacji: [inne znaki](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
+|Jakikolwiek inny znak|Każdy inny niezmieniony znak jest interpretowany jako specyfikator formatu niestandardowego.<br /><br /> Więcej informacji: [inne znaki](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
 ## <a name="dSpecifier"></a>Specyfikator formatu niestandardowego "d"
 

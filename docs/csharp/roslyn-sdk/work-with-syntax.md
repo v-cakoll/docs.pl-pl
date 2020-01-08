@@ -3,12 +3,12 @@ title: Użyj modelu składni .NET Compiler Platform SDK
 description: To omówienie zawiera opis typów używanych do zrozumienia i manipulowania węzłami składni.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 940d2756ef7735ee96d38d0286f99fadf7b81dc6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 2cfd3c8bc8f47421c7992f7fea28c7b156450147
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774098"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346927"
 ---
 # <a name="work-with-syntax"></a>Korzystanie ze składni
 
@@ -35,9 +35,9 @@ Węzły składni są jednym z głównych elementów drzew składni. Te węzły r
 
 Wszystkie węzły składni nie są węzłami terminalu w drzewie składni, co oznacza, że zawsze mają inne węzły i tokeny jako elementy podrzędne. Jako element podrzędny innego węzła każdy węzeł ma węzeł nadrzędny, do którego można uzyskać dostęp za pomocą właściwości <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType>. Ponieważ węzły i drzewa są niezmienne, nadrzędny węzeł nigdy nie ulega zmianie. Katalog główny drzewa ma element nadrzędny o wartości null.
 
-Każdy węzeł ma metodę <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType>, która zwraca listę węzłów podrzędnych w kolejności sekwencyjnej na podstawie ich położenia w tekście źródłowym. Ta lista nie zawiera tokenów. Każdy węzeł ma także metody do badania elementów podrzędnych, takich jak <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A> lub <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A> reprezentujące listę wszystkich węzłów, tokenów lub kwizy, które istnieją w poddrzewie głównym, które znajdują się na tym węźle.
+Każdy węzeł ma metodę <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType>, która zwraca listę węzłów podrzędnych w kolejności sekwencyjnej na podstawie ich położenia w tekście źródłowym. Ta lista nie zawiera tokenów. Każdy węzeł ma także metody do badania elementów podrzędnych, takich jak <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A>lub <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A> reprezentujące listę wszystkich węzłów, tokenów lub kwizy, które istnieją w poddrzewie głównym, które znajdują się na tym węźle.
 
-Ponadto każda podklasa węzłów węzła uwidacznia wszystkie te same elementy podrzędne za pomocą właściwości silnie wpisanych. Na przykład klasa węzła <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> ma trzy dodatkowe właściwości specyficzne dla operatorów binarnych: <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> i <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>. Typ <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left> i <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> jest <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax>, a typ <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> to <xref:Microsoft.CodeAnalysis.SyntaxToken>.
+Ponadto każda podklasa węzłów węzła uwidacznia wszystkie te same elementy podrzędne za pomocą właściwości silnie wpisanych. Na przykład klasa węzła <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> ma trzy dodatkowe właściwości specyficzne dla operatorów binarnych: <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken>i <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>. Typ <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left> i <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> jest <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax>, a typ <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> to <xref:Microsoft.CodeAnalysis.SyntaxToken>.
 
 Niektóre węzły składni mają opcjonalne elementy podrzędne. Na przykład <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax> ma opcjonalne <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax>. Jeśli element podrzędny nie istnieje, właściwość zwraca wartość null.
 
@@ -61,7 +61,7 @@ Możesz uzyskać dostęp do kwizy, sprawdzając kolekcje <xref:Microsoft.CodeAna
 
 W przeciwieństwie do węzłów składni i tokenów składnia kwizy nie ma elementów nadrzędnych. Jeszcze ponieważ są one częścią drzewa, a każda z nich jest skojarzona z pojedynczym tokenem, można uzyskać dostęp do tokenu skojarzonego z użyciem właściwości <xref:Microsoft.CodeAnalysis.SyntaxTrivia.Token?displayProperty=nameWithType>.
 
-## <a name="spans"></a>Obejmuje
+## <a name="spans"></a>Zakresy
 
 Każdy węzeł, token lub kwizy wie swoją pozycję w tekście źródłowym oraz liczbę znaków, które zawiera. Pozycja tekstowa jest reprezentowana jako 32-bitowa liczba całkowita, która jest indeksem `char` liczonym od zera. Obiekt <xref:Microsoft.CodeAnalysis.Text.TextSpan> jest pozycją początkową i liczbą znaków, reprezentowanych jako liczby całkowite. Jeśli <xref:Microsoft.CodeAnalysis.Text.TextSpan> ma zerową długość, odnosi się do lokalizacji między dwoma znakami.
 
@@ -85,11 +85,11 @@ Węzeł instrukcji wewnątrz bloku ma zakres wskazany przez pojedyncze pionowe s
 
 ## <a name="kinds"></a>Rodzaje
 
-Każdy węzeł, token lub kwizy ma właściwość <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> typu <xref:System.Int32?displayProperty=nameWithType>, która identyfikuje dokładnie przedstawiony element składni. Ta wartość może być rzutowana na Wyliczenie specyficzne dla języka; Każdy język C# lub VB ma jeden `SyntaxKind` Wyliczenie (odpowiednio <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> i <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>), które wyświetla listę wszystkich możliwych węzłów, tokenów i elementów kwizy w gramatyce. Tę konwersję można wykonać automatycznie, uzyskując dostęp do metod rozszerzenia <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> lub <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
+Każdy węzeł, token lub kwizy ma właściwość <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> typu <xref:System.Int32?displayProperty=nameWithType>, która identyfikuje dokładnie przedstawiony element składni. Ta wartość może być rzutowana na Wyliczenie specyficzne dla języka. Każdy język C# lub Visual Basic ma jeden `SyntaxKind` Wyliczenie (odpowiednio<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> i <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>), które wyświetla listę wszystkich możliwych węzłów, tokenów i elementów kwizy w gramatyce. Tę konwersję można wykonać automatycznie, uzyskując dostęp do metod rozszerzenia <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> lub <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
 
 Właściwość <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> umożliwia łatwe Uściślanie typów węzłów składni, które współużytkują tę samą klasę węzła. W przypadku tokenów i kwizy ta właściwość jest jedynym sposobem odróżnienia jednego typu elementu od innego.
 
-Na przykład pojedyncza Klasa <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> ma <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> i <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> jako elementy podrzędne. Właściwość <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> odróżnia, czy jest to <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> lub <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> rodzaj węzła składni.
+Na przykład pojedyncza Klasa <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> ma <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken>i <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> jako elementy podrzędne. Właściwość <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> odróżnia, czy jest to <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression>lub <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> rodzaj węzła składni.
 
 ## <a name="errors"></a>błędy
 

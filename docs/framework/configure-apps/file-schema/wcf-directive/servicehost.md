@@ -2,12 +2,12 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: dd3dd026749ccc299cd922b79dcae8ccbcc722d8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3c7da8d5a473b801da8c48d1cb1504b95cc6c769
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968827"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342130"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 Kojarzy fabrykę używaną do tworzenia hosta usługi z usługą, która ma być hostowana, i innych aspektów programistycznych wymaganych do uzyskania dostępu lub skompilowania kodu hostingu podanego w pliku SVC.  
@@ -24,21 +24,21 @@ CodeBehind = "CodeBehind"
 %>
 ```  
   
-## <a name="attributes"></a>Atrybuty  
+## <a name="attributes"></a>{1&gt;{2&gt;Atrybuty&lt;2}&lt;1}  
   
-#### <a name="service"></a>Usługa  
+#### <a name="service"></a>NDES  
  Nazwa typu CLR hostowanej usługi. Powinna to być kwalifikowana nazwa typu, który implementuje co najmniej jeden kontakt usługi.  
   
-#### <a name="factory"></a>indywidual  
+#### <a name="factory"></a>Fabryka  
  Nazwa typu CLR fabryki hosta usługi użyta do utworzenia wystąpienia hosta usługi. Ten atrybut jest opcjonalny. Jeśli nie zostanie określony, zostanie użyta domyślna <xref:System.ServiceModel.Activation.ServiceHostFactory>, która zwraca wystąpienie <xref:System.ServiceModel.ServiceHost>.  
   
 #### <a name="debug"></a>Debugowanie  
  Wskazuje, czy usługa Windows Communication Foundation (WCF) powinna być skompilowana przy użyciu symboli debugowania. `true`, jeśli usługa WCF powinna być skompilowana przy użyciu symboli debugowania; w przeciwnym razie `false`.  
   
 #### <a name="language"></a>Język  
- Określa język używany podczas kompilowania całego kodu śródwierszowego w pliku (. svc). Wartości mogą reprezentować dowolne. Język obsługiwany w sieci, w C#tym VB i JS, który odnosi się C#odpowiednio do, Visual Basic .NET i JScript .NET. Ten atrybut jest opcjonalny.  
+ Określa język używany podczas kompilowania całego kodu śródwierszowego w pliku (. svc). Wartości mogą reprezentować dowolne. Język obsługiwany w sieci, w tym `C#`, `VB`i `JS`, który odwołuje C#się odpowiednio do, Visual Basic i JScript .NET. Ten atrybut jest opcjonalny.  
   
-#### <a name="codebehind"></a>CodeBehind  
+#### <a name="codebehind"></a>Plik CodeBehind  
  Określa plik źródłowy, który implementuje usługę sieci Web XML, gdy Klasa implementująca usługę XML sieci Web nie znajduje się w tym samym pliku i nie została skompilowana do zestawu i umieszczona w katalogu \Bin.  
   
 ## <a name="remarks"></a>Uwagi  

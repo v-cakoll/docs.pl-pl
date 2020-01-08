@@ -3,12 +3,12 @@ title: 'Samouczek: Napisz pierwszy Analizator i poprawkę kodu'
 description: Ten samouczek zawiera instrukcje krok po kroku dotyczące kompilowania analizatora i poprawki kodu przy użyciu zestawu SDK kompilatora .NET (interfejsy API Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 7bd0fda9fb717a48c09aafde47f9b7f4f360c357
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 99401e74588088d56b3fbd916e050f5d468722a1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837054"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346939"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Samouczek: Napisz pierwszy Analizator i poprawkę kodu
 
@@ -520,7 +520,7 @@ int k = i + j;
 
 Po wprowadzeniu tych zmian otrzymujesz czerwoną literę tylko dla pierwszych dwóch zmiennych. Dodaj `const` do obu `i` i `j`i uzyskasz nowe ostrzeżenie na temat `k`, ponieważ teraz można `const`.
 
-Gratulacje! Zostało utworzone pierwsze rozszerzenie .NET Compiler Platform, które wykonuje analizę kodu na bieżąco w celu wykrywania problemu i zawiera szybką poprawkę, aby rozwiązać ten problem. W ten sposób poznasz wiele interfejsów API kodu, które są częścią zestawu SDK .NET Compiler Platform (Roslyn interfejsy API). Możesz sprawdzić, czy pracujesz z [ukończonym przykładem](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst) w naszym repozytorium GitHub. Lub można pobrać [plik zip ukończonego projektu](https://github.com/dotnet/samples/blob/master/csharp/roslyn-sdk/Tutorials/MakeConst.zip)
+Gratulacje! Zostało utworzone pierwsze rozszerzenie .NET Compiler Platform, które wykonuje analizę kodu na bieżąco w celu wykrywania problemu i zawiera szybką poprawkę, aby rozwiązać ten problem. W ten sposób poznasz wiele interfejsów API kodu, które są częścią zestawu SDK .NET Compiler Platform (Roslyn interfejsy API). Możesz sprawdzić, czy pracujesz z [ukończonym przykładem](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst) w naszym repozytorium GitHub.
 
 ## <a name="other-resources"></a>Inne zasoby
 

@@ -2,19 +2,19 @@
 title: 'Instrukcje: Zastępowanie rezerwacji adresu URL programu WCF ograniczoną rezerwacją'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 900b258a1119b069e5ef0a6ff66078281bb06f1b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 3d14d76334b15bdb490184a48da11ba48b84deea
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837392"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544648"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Instrukcje: Zastępowanie rezerwacji adresu URL programu WCF ograniczoną rezerwacją
 Rezerwacja adresu URL umożliwia ograniczenie użytkowników, którzy mogą odbierać wiadomości z adresu URL lub zestawu adresów URL. Rezerwacja składa się z szablonu adresu URL, listy kontroli dostępu (ACL) i zestawu flag. Szablon adresu URL określa adresy URL, na które ma wpływ rezerwacja. Aby uzyskać więcej informacji na temat sposobu przetwarzania szablonów adresów URL, zobacz [Routing przychodzących żądań](https://go.microsoft.com/fwlink/?LinkId=136764). Lista ACL kontroluje, jakiemu użytkownikowi lub grupie użytkowników można odbierać wiadomości z określonych adresów URL. Flagi wskazują, czy rezerwacja ma dać użytkownikowi lub grupie uprawnienie do nasłuchiwania bezpośrednio na adresie URL lub delegowania uprawnień do nasłuchiwania w innym procesie.  
   
  W ramach domyślnej konfiguracji systemu operacyjnego program Windows Communication Foundation (WCF) tworzy globalnie dostępną rezerwację dla portu 80, aby umożliwić wszystkim użytkownikom uruchamianie aplikacji korzystających z podwójnego powiązania protokołu HTTP na potrzeby komunikacji dwukierunkowej. Ponieważ lista kontroli dostępu dla tej rezerwacji jest dla wszystkich, Administratorzy nie mogą jawnie zezwolić na nasłuchiwanie adresu URL lub zestawu adresów URL ani nie zezwalać na nie. W tym temacie opisano sposób usuwania tej rezerwacji i ponownego tworzenia rezerwacji z ograniczoną listą ACL.  
   
- W systemie Windows Vista lub [!INCLUDE[lserver](../../../../includes/lserver-md.md)] można wyświetlić wszystkie rezerwacje adresów URL protokołu HTTP z wiersza polecenia z podwyższonym poziomem uprawnień, wpisując `netsh http show urlacl`.  W poniższym przykładzie pokazano, co powinno być podobne do rezerwacji adresu URL programu WCF.  
+W systemie Windows Vista lub Windows Server 2008 można wyświetlić wszystkie rezerwacje adresów URL HTTP z wiersza polecenia z podwyższonym poziomem uprawnień, wprowadzając `netsh http show urlacl`. W poniższym przykładzie przedstawiono sposób rezerwacji adresu URL programu WCF:
 
 ```
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  

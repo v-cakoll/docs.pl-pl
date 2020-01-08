@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Napisz metodę osi LINQ to XML (C#)'
+title: Jak napisać metodę osi LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 74105ff9d08479a4fc702b02e6929130272b237b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: fc602f91dc6da16c4a019bb42ff178ae3de4ea03
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253221"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348360"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Instrukcje: Napisz metodę osi LINQ to XML (C#)
+# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Jak napisać metodę osi LINQ to XML (C#)
 Można napisać własne metody osi, aby pobierać kolekcje z drzewa XML. Najlepszym sposobem, aby to zrobić, jest zapisanie metody rozszerzającej zwracającej kolekcję elementów lub atrybutów. Można napisać metodę rozszerzenia w celu zwrócenia określonych podzbiorów elementów lub atrybutów na podstawie wymagań aplikacji.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie zastosowano dwie metody rozszerzenia. Pierwsza metoda rozszerzająca, `GetXPath`, działa na <xref:System.Xml.Linq.XObject>i zwraca wyrażenie XPath, które po obliczeniu zwróci węzeł lub atrybut. Druga metoda rozszerzenia, `Find`, działa na. <xref:System.Xml.Linq.XElement> Zwraca kolekcję <xref:System.Xml.Linq.XAttribute> obiektów i <xref:System.Xml.Linq.XElement> obiektów, które zawierają określony tekst.  
+ W poniższym przykładzie zastosowano dwie metody rozszerzenia. Pierwsza metoda rozszerzająca, `GetXPath`, działa na <xref:System.Xml.Linq.XObject>i zwraca wyrażenie XPath, które po obliczeniu zwróci węzeł lub atrybut. Druga metoda rozszerzająca `Find`, działa na <xref:System.Xml.Linq.XElement>. Zwraca kolekcję obiektów <xref:System.Xml.Linq.XAttribute> i <xref:System.Xml.Linq.XElement> obiektów, które zawierają określony tekst.  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Wiele zamówień zakupu (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 public static class MyExtensions  

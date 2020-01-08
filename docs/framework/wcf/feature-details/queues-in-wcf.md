@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: e921084ed28cb4e846cb269e57e58a194e9437a5
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: fbe3a546fd431beb5ddf1d71153d38580a19ecc9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837340"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348339"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Kolejki programu Windows Communication Foundation
 W tematach w tej sekcji omówiono obsługę Windows Communication Foundation (WCF) dla kolejek. Funkcja WCF zapewnia obsługę kolejkowania, wykorzystując usługę kolejkowania komunikatów firmy Microsoft (wcześniej znaną jako usługa MSMQ) jako Transport i udostępnia następujące scenariusze:  
@@ -50,7 +50,7 @@ W tematach w tej sekcji omówiono obsługę Windows Communication Foundation (WC
  Wyjaśnia, jak obsługiwać trujące komunikaty (komunikaty, które przekroczyły maksymalną liczbę prób dostarczenia do aplikacji do odebrania).  
   
  [Różnice w funkcjach kolejkowania w systemach Windows Vista, Windows Server 2003 i Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- Podsumowuje różnice w funkcjach kolejek WCF między systemem Windows Vista, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+ Podsumowuje różnice w funkcjach kolejek WCF między systemem Windows Vista, Windows Server 2003 i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
  [Ochrona komunikatów za pomocą zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  Opisuje sposób korzystania z zabezpieczeń transportu w celu zabezpieczenia komunikatów umieszczonych w kolejce.  

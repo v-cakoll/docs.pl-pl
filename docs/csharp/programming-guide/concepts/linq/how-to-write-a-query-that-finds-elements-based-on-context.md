@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Napisz zapytanie, które znajduje elementy na podstawie kontekstu (C#)'
+title: Jak napisać zapytanie, które znajduje elementy na podstawie kontekstu (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: e3ac8fc965132521b85cce6391908634cdb17127
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3fc131fdeb8dbf8871bfa455bc54eab0eeca7022
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253216"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348364"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Instrukcje: Napisz zapytanie, które znajduje elementy na podstawie kontekstu (C#)
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Jak napisać zapytanie, które znajduje elementy na podstawie kontekstu (C#)
 Czasami może być konieczne zapisanie zapytania, które wybiera elementy na podstawie ich kontekstu. Można filtrować na podstawie poprzedzających lub następujących elementów równorzędnych. Można filtrować na podstawie elementów podrzędnych lub nadrzędnych.  
   
- Można to zrobić przez zapisanie zapytania i użycie wyników zapytania w `where` klauzuli. Jeśli konieczne jest pierwsze przetestowanie na wartość null, a następnie przetestowanie wartości, bardziej wygodne jest wykonanie zapytania w `let` klauzuli, a następnie użycie wyników `where` w klauzuli.  
+ Można to zrobić przez zapisanie zapytania i użycie wyników zapytania w klauzuli `where`. Jeśli konieczne jest pierwsze przetestowanie na wartość null, a następnie przetestowanie wartości, bardziej wygodne jest wykonanie zapytania w klauzuli `let`, a następnie użycie wyników w klauzuli `where`.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie wybrano `p` wszystkie elementy, które są bezpośrednio następuje `ul` po elemencie.  
+ Poniższy przykład zaznacza wszystkie elementy `p`, po których bezpośrednio następuje element `ul`.  
   
 ```csharp  
 XElement doc = XElement.Parse(@"<Root>  

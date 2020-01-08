@@ -4,34 +4,34 @@ description: W tym samouczku przedstawiono sposób generowania sekwencji przy u�
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: b25cd1763511f460537bccaf6011a3d23390ea72
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039170"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345612"
 ---
-# <a name="working-with-linq"></a>Praca z technologią LINQ
+# <a name="work-with-language-integrated-query-linq"></a>Korzystanie z zapytań zintegrowanych z językiem (LINQ)
 
 ## <a name="introduction"></a>Wprowadzenie
 
-W tym samouczku przedstawiono funkcje platformy .NET Core i C# języka. Dowiesz się:
+W tym samouczku przedstawiono funkcje platformy .NET Core i C# języka. Omawiane tematy:
 
-- Jak generować sekwencje przy użyciu LINQ.
-- Jak pisać metody, które mogą być łatwo używane w zapytaniach LINQ.
-- Sposób rozróżniania między eager i oceną z opóźnieniem.
+- Generuj sekwencje przy użyciu LINQ.
+- Metody zapisu, które mogą być łatwo używane w zapytaniach LINQ.
+- Rozróżnianie między eager i oceną z opóźnieniem.
 
 Poznasz te techniki, tworząc aplikację, która pokazuje jedną z podstawowych umiejętności dowolnego czarodziej: [Faro losowo](https://en.wikipedia.org/wiki/Faro_shuffle). Krótko Faro losowo to technika, w której można podzielić talię kart dokładnie na połowę, a następnie losowo przeplata każdą kartę z każdej połowy w celu odbudowania oryginalnego talii.
 
 Magicians użyć tej techniki, ponieważ każda karta znajduje się w znanej lokalizacji po każdym rozłożeniu losowym, a kolejność jest powtarzalnym wzorcem.
 
-Na potrzeby Twoich celów jest jasne spojrzenie na manipulowanie sekwencjami danych. Aplikacja, którą utworzysz, utworzy talię kart, a następnie wykona sekwencję losowych, co oznacza, że sekwencję można napisać za każdym razem. Porównano również zaktualizowaną kolejność do oryginalnej kolejności.
+Na potrzeby Twoich celów jest jasne spojrzenie na manipulowanie sekwencjami danych. Aplikacja, którą utworzysz, konstruuje talię kart, a następnie wykonuje sekwencję losową, pisząc sekwencję za każdym razem. Porównano również zaktualizowaną kolejność do oryginalnej kolejności.
 
 Ten samouczek zawiera wiele kroków. Po każdym kroku można uruchomić aplikację i postępować według postępu. Możesz również zobaczyć [ukończony przykład](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) w repozytorium GitHub/Samples. Aby uzyskać instrukcje dotyczące pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Musisz skonfigurować maszynę do uruchamiania programu .NET Core. Instrukcje instalacji można znaleźć na stronie [pobierania programu .NET Core](https://dotnet.microsoft.com/download) . Możesz uruchomić tę aplikację w systemie Windows, Ubuntu Linux, OS X lub w kontenerze platformy Docker. Musisz zainstalować swój ulubiony Edytor kodu. Poniższe opisy wykorzystują [Visual Studio Code](https://code.visualstudio.com/) , czyli edytor Międzyplatformowy. Można jednak korzystać z dowolnych narzędzi, z którymi masz doświadczenie.
+Musisz skonfigurować maszynę do uruchamiania programu .NET Core. Instrukcje instalacji można znaleźć na stronie [pobierania programu .NET Core](https://dotnet.microsoft.com/download) . Możesz uruchomić tę aplikację w systemie Windows, Ubuntu Linux lub OS X lub w kontenerze platformy Docker. Musisz zainstalować swój ulubiony Edytor kodu. Poniższe opisy wykorzystują [Visual Studio Code](https://code.visualstudio.com/) , który jest edytorem dla wielu platform. Można jednak korzystać z dowolnych narzędzi, z którymi masz doświadczenie.
 
 ## <a name="create-the-application"></a>Tworzenie aplikacji
 
@@ -39,7 +39,7 @@ Pierwszym krokiem jest utworzenie nowej aplikacji. Otwórz wiersz polecenia i Ut
 
 Jeśli wcześniej nie korzystano C# z [tego samouczka, ten samouczek](console-teleprompter.md) wyjaśnia strukturę C# programu. Możesz przeczytać ten element, a następnie wrócić tutaj, aby dowiedzieć się więcej na temat LINQ.
 
-## <a name="creating-the-data-set"></a>Tworzenie zestawu danych
+## <a name="create-the-data-set"></a>Tworzenie zestawu danych
 
 Przed rozpoczęciem upewnij się, że następujące wiersze znajdują się na początku pliku `Program.cs` wygenerowanego przez `dotnet new console`:
 
@@ -118,7 +118,7 @@ Zacznij korzystać z przykładu skompilowanego w tym punkcie. Spowoduje to wyśw
 
 ![Okno konsoli z zapisaniem aplikacji z kartami 52.](./media/working-with-linq/console-52-card-application.png)
 
-## <a name="manipulating-the-order"></a>Manipulowanie kolejnością
+## <a name="manipulate-the-order"></a>Manipulowanie kolejnością
 
 Następnie należy skoncentrować się na tym, w jaki sposób mają być losowo używane karty na pokładzie. Pierwszym krokiem w każdym dobrym rozbiciem jest podzielenie talii na dwa. Metody <xref:System.Linq.Enumerable.Take%2A> i <xref:System.Linq.Enumerable.Skip%2A>, które są częścią interfejsów API LINQ, udostępniają tę funkcję. Umieść je poniżej pętli `foreach`:
 
@@ -351,8 +351,8 @@ Oprócz LINQ wyuczysz się, jak korzystać z techniki Magicians na wskazówki do
 Aby uzyskać więcej informacji na temat LINQ, zobacz:
 
 - [Language Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
-  - [Wprowadzenie do LINQ](../programming-guide/concepts/linq/index.md)
-  - [Podstawowe operacje zapytań LINQ (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-  - [Przekształcenia danych za pomocą LINQC#()](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-  - [Składnia zapytania i składni metody w LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-  - [Funkcje C# obsługujące LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)
+- [Wprowadzenie do LINQ](../programming-guide/concepts/linq/index.md)
+- [Podstawowe operacje zapytań LINQ (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+- [Przekształcenia danych za pomocą LINQC#()](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+- [Składnia zapytania i składni metody w LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+- [Funkcje C# obsługujące LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)

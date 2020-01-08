@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 47e11ff2bc5b1c3eca152ba1fa429b5785c2f01b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a73f6333a91cd8018fe8e0c34d44db87938b8058
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976123"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347095"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Instrukcje: rejestrowanie i Konfigurowanie monikera usługi
 Przed użyciem monikera usługi Windows Communication Foundation (WCF) w ramach aplikacji COM z umową z określonym typem, należy zarejestrować wymagane typy z atrybutami COM i skonfigurować aplikację COM oraz moniker z wymaganym powiązaniem skonfigurować.  
@@ -87,7 +87,7 @@ Przed użyciem monikera usługi Windows Communication Foundation (WCF) w ramach 
     > [!NOTE]
     > : Jeśli moniker jest źle sformułowany lub usługa jest niedostępna, wywołanie do `GetObject` zwraca błąd "Nieprawidłowa składnia". Jeśli wystąpi ten błąd, upewnij się, że moniker, którego używasz, jest poprawna i że usługa jest dostępna.  
   
-     Chociaż ten temat koncentruje się na używaniu monikera usługi w kodzie VB 6,0, można użyć monikera usługi z innych języków. W przypadku używania monikera C++ z kodu, zestaw wygenerowany przez Svcutil. exe powinien zostać zaimportowany z "no_namespace named_guids raw_interfaces_only", jak pokazano w poniższym kodzie.  
+     Chociaż ten temat koncentruje się na używaniu monikera usługi w Visual Basic kodzie 6,0, można użyć monikera usługi z innych języków. W przypadku używania monikera C++ z kodu, zestaw wygenerowany przez Svcutil. exe powinien zostać zaimportowany z "no_namespace named_guids raw_interfaces_only", jak pokazano w poniższym kodzie.  
   
     ```cpp
     #import "ComTestProxy.tlb" no_namespace named_guids  

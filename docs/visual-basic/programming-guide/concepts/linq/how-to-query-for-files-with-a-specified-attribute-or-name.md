@@ -2,12 +2,12 @@
 title: 'Porady: zapytanie o pliki o określonym atrybucie lub nazwie'
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 68b8f02e3c7f53092ef91f2b8b96736a644a7fd1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 970fb862b843016425e3a0f0c2bcf00e6fcba3a6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347687"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342138"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Instrukcje: zapytanie o pliki o określonym atrybucie lub nazwie (Visual Basic)
 Ten przykład pokazuje, jak znaleźć wszystkie pliki, które mają określone rozszerzenie nazwy pliku (na przykład ". txt") w określonym drzewie katalogów. Przedstawiono w nim również, jak zwrócić najnowszy lub najstarszy plik w drzewie na podstawie czasu utworzenia.  
@@ -60,8 +60,8 @@ Module FindFileByExtension
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
-Utwórz projekt aplikacji konsolowej VB.NET z instrukcją `Imports` dla przestrzeni nazw System. LINQ.
+## <a name="compile-the-code"></a>Skompilować kod  
+Utwórz projekt aplikacji konsolowej Visual Basic przy użyciu instrukcji `Imports` dla przestrzeni nazw System. LINQ.
   
 ## <a name="see-also"></a>Zobacz także
 

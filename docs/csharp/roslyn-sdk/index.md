@@ -1,66 +1,66 @@
 ---
 title: Zestaw SDK platformy kompilatora .NET (interfejsy API Roslyn)
-description: Dowiedz się, za pomocą SDK platformy kompilatora .NET (nazywane również interfejsy API Roslyn) zrozumieć kod platformy .NET, wykrywać błędy i Rozwiąż te błędy.
+description: Dowiedz się, jak używać zestawu SDK .NET Compiler Platform (zwanego również interfejsami API Roslyn) w celu zrozumienia kodu platformy .NET, błędów w programie i naprawienia tych błędów.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a202d977237ce716e3f8c0cf906894efd02196d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706549"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346953"
 ---
-# <a name="the-net-compiler-platform-sdk"></a>Zestaw SDK platformy kompilatora .NET
+# <a name="the-net-compiler-platform-sdk"></a>Zestaw SDK .NET Compiler Platform
 
-Kompilatory tworzyć szczegółowy model kodu aplikacji, jak sprawdzają poprawność składnia i semantyka tego kodu. Używają tego modelu do tworzenia pliku wykonywalnego dane wyjściowe z kodu źródłowego. Zestaw SDK platformy kompilatora .NET zapewnia dostęp do tego modelu. Coraz częściej, możemy polegać na funkcje środowiska (IDE) zintegrowanego rozwoju takich jak funkcja IntelliSense, Refaktoryzacja, inteligentne rename "Znajdź wszystkie odwołania" i "Przejdź do definicji" zwiększyć naszą produktywność. Polegamy narzędzi analizy kodu w celu ulepszania swojego jakość kodu i generatorów kodu, aby ułatwić budowy aplikacji. Jak uzyskuj tych narzędzi, potrzebować dostępu do coraz więcej modelu, który tylko kompilatory tworzyć zgodnie z ich przetwarzanie kodu aplikacji. Jest to misję podstawowe interfejsy API Roslyn: otwarcie czarne skrzynki narzędzi i użytkownikom końcowym udostępnianie w szeregu informacji kompilatory się o naszego kodu.
-Zamiast nieprzezroczystości źródła code w i obiektu kodu komentarz tłumaczy przy użyciu platformy Roslyn, kompilatory stają się platform: W przypadku interfejsów API, które służy do zadań związanych z kodu, narzędzia i aplikacje.
+Kompilatory tworzą szczegółowy model kodu aplikacji, ponieważ weryfikują składnię i semantykę tego kodu. Używają tego modelu do kompilowania plików wyjściowych z kodu źródłowego. Zestaw SDK .NET Compiler Platform zapewnia dostęp do tego modelu. W coraz większym stopniu korzystamy z funkcji zintegrowanego środowiska programistycznego (IDE), takich jak IntelliSense, Refaktoryzacja, inteligentna zmiana nazwy, "Znajdź wszystkie odwołania" i "przejdź do definicji", aby zwiększyć produktywność. Korzystamy z narzędzi analizy kodu, aby poprawić jakość kodu i generatory kodu pomocne w konstruowaniu aplikacji. Ponieważ narzędzia te stają się inteligentniejsze, muszą mieć dostęp do większej i większej liczby modeli, które są tworzone tylko przez kompilatory, gdy przetwarzają kod aplikacji. Jest to podstawowa misja interfejsów API Roslyn: otwieranie czarnych pól i Zezwalanie narzędzi i użytkownikom końcowym na bogactwo informacji o kodzie.
+Zamiast nieprzezroczysty kod źródłowy — w przypadku tłumaczeń kodu obiektów i interfejsów, za pomocą Roslyn, kompilatory stają się platformami: API, których można użyć do zadań związanych z kodem w narzędziach i aplikacjach.
 
-## <a name="net-compiler-platform-sdk-concepts"></a>Pojęcia dotyczące zestawu SDK platformy kompilatora .NET
+## <a name="net-compiler-platform-sdk-concepts"></a>Pojęcia dotyczące .NET Compiler Platform SDK
 
-Zestaw SDK platformy kompilatora .NET znacznie zmniejsza barierę do tworzenia kodu, które skupia się narzędzia i aplikacje. Tworzy wiele możliwości do innowacji w obszarach, takich jak meta-programowania, generowanie kodu i transformacji, interaktywne korzystanie z języków C# i VB i osadzanie języka C# i VB w języki specyficzne dla domeny.
+Zestaw .NET Compiler Platform SDK znacząco obniży barierę do wprowadzenia do tworzenia narzędzi i aplikacji ukierunkowanych na kod. Tworzy wiele możliwości innowacji w obszarach, takich jak meta-programowanie, generowanie kodu i przekształcanie, interaktywne użycie języków C# i Visual Basic oraz osadzanie C# i Visual Basic w językach specyficznych dla domeny.
 
-Zestaw SDK platformy kompilatora .NET umożliwia tworzenie ***analizatory*** i ***poprawki kodu*** , Znajdź i poprawiaj błędy kodowania. ***Analizatory*** poznać składnię i struktury kodu i wykrywanie praktyk, które powinny zostać poprawione. ***Poprawki kodu*** Podaj co najmniej jeden z sugerowanymi poprawkami adresowania kodowania błędów znalezionych przez analizatory. Zazwyczaj analizator i poprawki kodu skojarzone są dostarczane razem w jednym projekcie.
+Zestaw .NET Compiler Platform SDK umożliwia tworzenie ***analizatorów*** i ***poprawek kodu*** , które wyszukują i poprawiają błędy kodowania. ***Analizatory*** wiedzą składnię i strukturę kodu oraz wykrywają praktyki, które należy skorygować. ***Poprawki kodu*** zawierają jedną lub więcej sugerowanych poprawek do obsługi błędów kodowania znalezionych przez analizatory. Zwykle Analizator i powiązane poprawki kodu są pakowane razem w jednym projekcie.
 
-Analizatory i poprawki kodu należy użyć analizy statycznej, aby zrozumieć kod. Nie uruchomić lub inne zalety testowania. Mogą one jednak punktu rozwiązania, które często prowadzić do błędów, kodu trudnego w utrzymaniu lub sprawdzania poprawności standardowych wytycznych.
+Analizatory i poprawki kodu używają statycznej analizy do zrozumienia kodu. Nie uruchamiają kodu ani nie zapewniają innych korzyści z testowania. Mogą jednak wskazywać praktyki, które często prowadzą do błędów, nieobsługiwanego kodu lub standardowej weryfikacji podstawowej.
 
-Zestaw SDK platformy kompilatora .NET zawiera jeden zestaw interfejsów API, które pozwalają zbadać i zrozumienie kodu C# lub Visual Basic. Ponieważ można użyć tego pojedynczą bazą kodu, można napisać analizatory i poprawek kodu, aby łatwiej dzięki wykorzystaniu syntaktyczna i semantyczna analiza interfejsów API dostarczonych przez zestaw SDK platformy kompilatora .NET. Zwolniona z dużych zadanie analizy wykonywanego przez kompilator replikacji, możesz skoncentrować się na bardziej ukierunkowaną zadań znajdowania i naprawiania typowych błędów kodowania dla projektu lub biblioteki.
+Zestaw SDK .NET Compiler Platform zawiera pojedynczy zestaw interfejsów API, które umożliwiają badanie i zrozumienie kodu bazowej C# lub Visual Basic. Ze względu na to, że można użyć tej pojedynczej bazy kodu, można łatwiej pisać analizatory i poprawki kodu, wykorzystując składnię i interfejsy API analizy semantyki dostarczone przez zestaw SDK .NET Compiler Platform. Zwolniony z dużego zadania replikowania analizy wykonanej przez kompilator, można skoncentrować się na bardziej skoncentrowanym zadaniu wyszukiwania i rozwiązywania typowych błędów kodowania dla projektu lub biblioteki.
 
-Korzyści z mniejszych jest swoje analizatory i poprawki kodu są mniejsze i zużywać znacznie mniej pamięci po załadowaniu w programie Visual Studio, niż ich czy jeśli napiszesz własne bazy kodu w celu zrozumienie kodu w projekcie. Korzystając z tych samych klas, które są używane przez kompilator i programu Visual Studio, możesz utworzyć własne narzędzia do analizy statycznej. Oznacza to, zespół może wykorzystać analizatory i poprawki kodu, bez zauważalnego wpływu na wydajność środowiska IDE.
+Mniejsza korzyść polega na tym, że analizatory i poprawki kodu są mniejsze i używają znacznie mniejszej ilości pamięci w przypadku załadowania do programu Visual Studio, jeśli zapisałeś własną bazę kodu w celu zrozumienia kodu w projekcie. Wykorzystując te same klasy, które są używane przez kompilator i program Visual Studio, można utworzyć własne statyczne narzędzia do analizy. Oznacza to, że zespół może używać analizatorów i poprawek kodu bez zauważalnego wpływu na wydajność IDE.
 
-Istnieją trzy główne scenariusze dotyczące pisania analizatory i poprawki kodu:
+Istnieją trzy główne scenariusze pisania analizatorów i poprawki kodu:
 
-1. [*Wymuszanie norm kodowania w ramach zespołu*](#enforce-team-coding-standards)
-1. [*Zapewnić wskazówki dotyczące pakietów biblioteki*](#provide-guidance-with-library-packages)
-1. [*Ogólne wytyczne*](#provide-general-guidance)
+1. [*Wymuś standardy kodowania zespołów*](#enforce-team-coding-standards)
+1. [*Zapewnianie wskazówek dotyczących pakietów bibliotecznych*](#provide-guidance-with-library-packages)
+1. [*Podaj ogólne wskazówki*](#provide-general-guidance)
 
-## <a name="enforce-team-coding-standards"></a>Wymuszanie norm kodowania w ramach zespołu
+## <a name="enforce-team-coding-standards"></a>Wymuś standardy kodowania zespołów
 
-Wiele zespołów mają standardy, które są wymuszane za pomocą przeglądów kodu z innymi członkami zespołu kodowania. Analizatory i poprawki kodu ułatwia ten proces znacznie bardziej wydajne. Przeglądy kodu się zdarzyć, gdy deweloper udostępnia swoją pracę z innymi osobami w zespole. Deweloper zainwestowali będzie cały czas potrzebne do ukończenia nową funkcję, zanim uzyska wszelkie komentarze. Tygodni może przechodzą dewelopera wzmacnia nawyków, które nie są zgodne z zespołu rozwiązań.
+Wiele zespołów ma standardy kodowania, które są wymuszane przez przeglądy kodu z innymi członkami zespołu. Analizatory i poprawki kodu mogą znacznie zwiększyć efektywność tego procesu. Przeglądy kodu są wykonywane, gdy deweloper udostępni swoją współpracę innym członkom zespołu. Deweloper zainwestował cały czas wymagany do ukończenia nowej funkcji przed uzyskaniem jakichkolwiek komentarzy. Tygodnie mogą wystąpić, gdy deweloper wzmacnia zwyczajy, które nie pasują do praktyk zespołu.
 
-Analizatory Uruchom jako deweloper pisze kod. Deweloper pobiera natychmiastowe informacje zwrotne, które wspiera następujące wskazówki od razu. Deweloper opracowuje nawyki do pisania kodu zgodne, tak szybko, jak oni rozpocząć tworzenie prototypów. Gdy funkcja jest gotowa dla ludzi przejrzeć, została wymuszona standardowych wytycznych.
+Analizatory są uruchamiane w postaci kodu zapisu dla deweloperów. Deweloper otrzymuje natychmiastową opinię, która zachęca do natychmiastowego zaleceń. Deweloper kompiluje zwyczajy, aby pisać zgodny kod zaraz po rozpoczęciu tworzenia prototypów. Gdy ta funkcja jest gotowa do przeglądu, wszystkie standardowe wskazówki zostały wymuszone.
 
-Zespoły mogą tworzyć analizatory i poprawek kodu tego wygląd na potrzeby najbardziej typowych praktyk, które naruszają zespołu kodowania. Mogą być instalowane na komputerze Każdy deweloper, aby wymuszanie standardów.
+Zespoły mogą tworzyć analizatory i poprawki kodu, które szukają najbardziej typowych praktyk, które naruszają metody tworzenia kodu zespołu. Można je zainstalować na komputerze dewelopera, aby wymusić standardy.
 
-## <a name="provide-guidance-with-library-packages"></a>Zapewnić wskazówki dotyczące pakietów biblioteki
+## <a name="provide-guidance-with-library-packages"></a>Zapewnianie wskazówek dotyczących pakietów bibliotecznych
 
-Brak dostępnych szeregu bibliotek dla deweloperów platformy .NET dla narzędzia NuGet.
-Niektóre z tych pochodzą od firmy Microsoft, niektóre z innych firm i innych członków społeczności i ochotników. Te biblioteki otrzymaj więcej przyjęcia i przeglądy wyższe, gdy deweloperzy mogą zostać obsłużone za pomocą tych bibliotek.
+Istnieją wiele bibliotek dostępnych dla deweloperów platformy .NET w oprogramowaniu NuGet.
+Niektóre z nich pochodzą od firmy Microsoft, niektórych od innych firm i od członków społeczności. Te biblioteki uzyskają więcej rozwiązań i wyższe oceny, gdy deweloperzy mogą pomyślnie korzystać z tych bibliotek.
 
-Oprócz zapewniania dokumentacji, można podać analizatory i poprawki kodu, które znaleźć i naprawić najczęstsze zastosowania niewłaściwa biblioteki. Te korekty natychmiastowego pomoże deweloperom powiedzie się szybciej.
+Oprócz dostarczania dokumentacji można udostępniać analizatory i poprawki kodu, które wyszukują i poprawiają typowe źle używane biblioteki. Te natychmiastowe poprawki ułatwią deweloperom szybsze przechodzenie.
 
-Można spakować analizatory i poprawek kodu za pomocą biblioteki dla narzędzia NuGet. W tym scenariuszu Każdy deweloper, który instaluje pakiet NuGet zainstaluje pakiet analizatora. Wszystkich deweloperów przy użyciu biblioteki natychmiast Uzyskaj wskazówki od członków zespołu w postaci natychmiastowej opinii na temat błędów i sugerowanych poprawek.
+Analizatory i poprawki kodu można spakować z biblioteką programu NuGet. W tym scenariuszu każdy deweloper instalujący pakiet NuGet również zainstaluje pakiet analizatora. Wszyscy deweloperzy korzystający z biblioteki natychmiast uzyskają wskazówki od zespołu w formie natychmiastowej opinii na temat błędów i sugerowanych poprawek.
 
-## <a name="provide-general-guidance"></a>Ogólne wytyczne
+## <a name="provide-general-guidance"></a>Podaj ogólne wskazówki
 
-Odnalezione społeczności deweloperów platformy .NET przy użyciu wzorców środowisko, które dobrze działają i wzorce, które są najlepiej unikać. Kilka członków społeczności utworzono analizatorów, które wymuszają zaczną zalecane. Jak możemy dowiedzieć się więcej, jest zawsze miejsce na nowe pomysły.
+Społeczność deweloperów platformy .NET wykryła wzorce środowiskowe, które dobrze się sprawdzają, i najlepiej unikać wzorców. Kilku członków społeczności utworzy analizatory, które wymuszają te zalecane wzorce. Dowiesz się więcej na temat nowych pomysłów.
 
-Te analizatory mogą być przekazywane [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) i pobrany przez deweloperów używających programu Visual Studio. Nowe do języka i platformy szybko poznać akceptowane rozwiązania i stają się produktywności w podróży .NET. Ponieważ te staną się bardziej powszechnie używane, społeczności przyjmuje tych rozwiązań.
+Te analizatory mogą być przekazywane do [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) i pobierane przez deweloperów przy użyciu programu Visual Studio. Informacje o języku i platformie umożliwiają szybkie uczenie się i efektywne osiąganie zaakceptowanych praktyk. W miarę jak są one szeroko używane, Wspólnota przyjmuje te praktyki.
 
 ## <a name="next-steps"></a>Następne kroki
 
-W zestawie SDK platformy kompilatora .NET zawiera najnowsze modele obiektów języka dla generowania kodu, analizy i refaktoryzacji. Ta sekcja zawiera omówienie pojęć dotyczących zestawu SDK platformy kompilatora .NET. Więcej szczegółowych informacji można znaleźć w sekcjach przewodników Szybki Start, przykładami i samouczkami.
+Zestaw SDK .NET Compiler Platform zawiera najnowsze modele obiektów języka do generowania, analizy i refaktoryzacji kodu. Ta sekcja zawiera omówienie pojęć związanych z zestawem SDK .NET Compiler Platform. Więcej informacji można znaleźć w sekcjach przewodników Szybki Start, przykłady i samouczki.
 
-Możesz dowiedzieć się więcej o koncepcjach w zestawie SDK platformy kompilatora .NET w tych pięciu tematach:
+Więcej informacji o pojęciach dotyczących zestawu SDK .NET Compiler Platform można znaleźć w następujących pięciu tematach:
 
 - [Eksplorowanie kodu za pomocą wizualizatora składni](syntax-visualizer.md)
 - [Omówienie modelu interfejsu API kompilatora](compiler-api-model.md)
@@ -68,7 +68,7 @@ Możesz dowiedzieć się więcej o koncepcjach w zestawie SDK platformy kompilat
 - [Korzystanie z semantyki](work-with-semantics.md)
 - [Korzystanie z obszaru roboczego](work-with-workspace.md)
 
-Aby rozpocząć pracę, musisz zainstalować **zestawu SDK platformy kompilatora .NET**:
+Aby rozpocząć, musisz zainstalować **zestaw SDK .NET compiler platform**:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 

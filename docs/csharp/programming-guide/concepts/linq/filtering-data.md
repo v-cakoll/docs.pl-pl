@@ -2,12 +2,12 @@
 title: Filtrowanie danych (C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: eb448c1c2ea6d9b3fcf0120043cafebc01cd3805
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 74399244990f8ff2deaa1d10576ea94a57c16bee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418474"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346993"
 ---
 # <a name="filtering-data-c"></a>Filtrowanie danych (C#)
 Filtrowanie odwołuje się do operacji ograniczającej zestaw wyników tak, aby zawierała tylko te elementy, które spełniają określony warunek. Jest on również znany jako wybór.  
@@ -50,7 +50,7 @@ foreach (string str in query)
 - <xref:System.Linq>
 - [Standardowe operatory zapytań — OmówienieC#()](./standard-query-operators-overview.md)
 - [where, klauzula](../../../language-reference/keywords/where-clause.md)
-- [Instrukcje: dynamiczne określanie filtrów predykatu w czasie wykonywania](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
-- [Instrukcje: zapytanie dotyczące metadanych zestawu z odbiciem (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [Instrukcje: zapytanie o pliki o określonym atrybucie lub nazwie (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [Instrukcje: sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Dynamiczne określanie filtrów predykatów w środowisku uruchomieniowym](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
+- [Jak wykonać zapytanie dotyczące metadanych zestawu z odbiciem (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [Jak wykonać zapytanie o pliki o określonym atrybucie lub nazwie (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [Sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

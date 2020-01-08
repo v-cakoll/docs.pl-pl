@@ -1,33 +1,33 @@
 ---
-title: C#Delegaty — Przewodnik po przykładzie C# języka
-description: Dowiedz się, późne powiązania z C# delegatów
+title: C#Delegaty — Przewodnik po C# języku
+description: Uzyskaj późne powiązania C# z delegatami
 ms.date: 08/10/2016
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.openlocfilehash: 35a1e212b50e77eb43271a657c8abb21eb6cfb4a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 317d3ee6fb1350824fa9b3b4d0e3e851780ce4d4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634636"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346869"
 ---
 # <a name="delegates"></a>Delegaty
 
-A ***typ delegowany*** reprezentuje odwołania do metod z określonego parametru listy i typ zwracany. Delegatów można umożliwić traktować metod jako jednostki, które mogą być przypisane do zmiennych i przekazywane jako parametry. Delegaty są podobne do koncepcji wskaźników funkcji, w przeciwieństwie do innych języków, ale w przeciwieństwie do wskaźników funkcji, obiekty delegowane są zorientowane obiektowo i bezpieczny typowo.
+***Typ delegata*** reprezentuje odwołania do metod z określoną listą parametrów i zwracanym typem. Delegaty umożliwiają traktowanie metod jako jednostek, które mogą być przypisane do zmiennych i przekazane jako parametry. Delegaty są podobne do koncepcji wskaźników funkcji, które znajdują się w innych językach, ale w przeciwieństwie do wskaźników funkcji Delegaty są zorientowane obiektowo i są bezpieczne dla typów.
 
-Poniższy przykład deklaruje i wykorzystuje typ delegata, o nazwie `Function`.
+Poniższy przykład deklaruje i używa typu delegata o nazwie `Function`.
 
 [!code-csharp[DelegateExample](../../../samples/snippets/csharp/tour/delegates/Program.cs#L3-L37)]
 
-Wystąpienie `Function` typ delegata można odwoływać się do dowolnej metody, która przyjmuje `double` argument i zwraca `double` wartość. `Apply` Metodę stosuje się daną funkcję do elementów `double[]`, zwracanie `double[]` z wynikami. W `Main` metody `Apply` służy do trzech różnych funkcji w celu stosowania `double[]`.
+Wystąpienie typu delegata `Function` może odwoływać się do dowolnej metody, która przyjmuje argument `double` i zwraca wartość `double`. Metoda `Apply` stosuje daną funkcję do elementów `double[]`, zwracając `double[]` z wynikami. W metodzie `Main` `Apply` służy do zastosowania trzech różnych funkcji do `double[]`.
 
-Delegat może odwoływać się statycznej metody (takie jak `Square` lub `Math.Sin` w poprzednim przykładzie) lub metodą wystąpienia (takie jak `m.Multiply` w poprzednim przykładzie). Delegat, który odwołuje się do metody wystąpienia odwołuje się konkretny obiekt, a gdy wywoływana jest metoda wystąpienia, za pośrednictwem delegata, staje się ten obiekt `this` w wywołaniu.
+Delegat może odwoływać się do metody statycznej (takiej jak `Square` lub `Math.Sin` w poprzednim przykładzie) lub metody wystąpienia (takiej jak `m.Multiply` w poprzednim przykładzie). Delegat odwołujący się do metody instancji odwołuje się również do określonego obiektu i gdy wywoływana jest metoda wystąpienia za pomocą delegata, obiekt ten zostanie `this` w wywołaniu.
 
-Delegatów można także tworzyć, używając funkcji anonimowych, które są "wbudowane metody", które są tworzone na bieżąco. Funkcje anonimowe można zobaczyć zmienne lokalne otaczającym metody. Zatem w powyższym przykładzie mnożnik mogą być zapisywane łatwiej bez korzystania z klasy mnożnik:
+Delegatów można także tworzyć za pomocą funkcji anonimowych, które są "metodami wbudowanymi", które są tworzone na bieżąco. Funkcje anonimowe mogą zobaczyć zmienne lokalne otaczających metod. W ten sposób przykład mnożnika można napisać łatwiej, bez użycia klasy mnożnika:
 
 [!code-csharp[LambdaExample](../../../samples/snippets/csharp/tour/delegates/Program.cs#L44-L44)]
 
-Interesujące i przydatne własności delegata jest, nie wiedzieć, i nie interesuje klasy, metody, która odwołuje się do; wszystko, co dla Ciebie ważne jest, do którego istnieje odwołanie metoda ma te same parametry oraz zwracany typ jak delegat.
+Interesująca i przydatna właściwość delegata polega na tym, że nie wie ani nie posługuje się klasą metody, do której się odwołuje; wszystkie te kwestie polegają na tym, że metoda przywoływana ma te same parametry i zwracany typ jako delegat.
 
 >[!div class="step-by-step"]
->[Poprzednie](enums.md)
->[dalej](attributes.md)
+>[Poprzedni](interfaces.md)
+>[Następny](attributes.md)

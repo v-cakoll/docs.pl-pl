@@ -4,18 +4,18 @@ description: Ten zaawansowany Samouczek uczy się, jak eksplorować dane przy u�
 ms.date: 09/20/2019
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3d4c022ff8d6e7f260632e34d6f28277014c85c8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039674"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345631"
 ---
 # <a name="indices-and-ranges"></a>Indeksy i zakresy
 
 Zakresy i indeksy zapewniają zwięzłą składnię do uzyskiwania dostępu do pojedynczych elementów lub zakresów w sekwencji.
 
-W tym samouczku dowiesz się, jak:
+Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 > [!div class="checklist"]
 >
@@ -78,9 +78,11 @@ Poniższy przykład pokazuje wiele przyczyn tego wyboru. Zmodyfikuj `x`, `y`i `z
 
 ## <a name="type-support-for-indices-and-ranges"></a>Obsługa typów indeksów i zakresów
 
-Jeśli typ zawiera [indeksator](../programming-guide/indexers/index.md) z parametrem <xref:System.Index> lub <xref:System.Range>, jawnie obsługuje odpowiednio indeksy lub zakresy.
+Indeksy i zakresy zapewniają jednoznaczne, zwięzłą składnię, aby uzyskać dostęp do pojedynczego elementu lub podzakresu elementów w sekwencji. Wyrażenie indeksu zwykle zwraca typ elementów sekwencji. Wyrażenie zakresu zwykle zwraca ten sam typ sekwencji co sekwencja źródłowa.
 
-Typ jest możliwy do **zliczenia** , jeśli ma właściwość o nazwie `Length` lub `Count` z dostępną metodę pobierającą i typem zwracanym `int`. Typ z liczbą, która nie obsługuje jawnie indeksów lub zakresów może zapewnić niejawną obsługę. Aby uzyskać więcej informacji, zapoznaj się z sekcją obsługa niejawnych [indeksów](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) i [Obsługa niejawnego zakresu](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) w artykule [propozycja funkcji](~/_csharplang/proposals/csharp-8.0/ranges.md).
+Jeśli typ zawiera [indeksator](../programming-guide/indexers/index.md) z parametrem <xref:System.Index> lub <xref:System.Range>, jawnie obsługuje odpowiednio indeksy lub zakresy. Gdy typ dostarcza indeksator, który przyjmuje jeden parametr <xref:System.Range>, może zwrócić inny typ sekwencji, taki jak <xref:System.Span%601?displayProperty=nameWithType>.
+
+Typ jest możliwy do **zliczenia** , jeśli ma właściwość o nazwie `Length` lub `Count` z dostępną metodę pobierającą i typem zwracanym `int`. Typ z liczbą, która nie obsługuje jawnie indeksów lub zakresów może zapewnić niejawną obsługę. Aby uzyskać więcej informacji, zapoznaj się z sekcją obsługa niejawnych [indeksów](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) i [Obsługa niejawnego zakresu](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) w artykule [propozycja funkcji](~/_csharplang/proposals/csharp-8.0/ranges.md). Zakresy korzystające z obsługi niejawnego zakresu zwracają ten sam typ sekwencji co sekwencja źródłowa.
 
 Na przykład następujące typy .NET obsługują zarówno indeksy, jak i zakresy: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601>i <xref:System.ReadOnlySpan%601>. <xref:System.Collections.Generic.List%601> obsługuje indeksy, ale nie obsługuje zakresów.
 

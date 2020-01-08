@@ -2,12 +2,12 @@
 title: Instrukcje (C# przewodnik)
 description: Kolekcja szybkich porad i krótkich, ukierunkowanych przykładów kodu
 ms.date: 12/20/2017
-ms.openlocfilehash: 855ea90d22174c2b7c0b53a526c47a5edbe5496d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736890"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339217"
 ---
 # <a name="how-to-c"></a>Instrukcje (C#)
 
@@ -15,13 +15,13 @@ W sekcji C# jak można znaleźć szybkie odpowiedzi na często zadawane pytania.
 
 ## <a name="general-c-concepts"></a>Pojęcia C# ogólne
 
-Istnieje kilka porad i wskazówek, które są typowymi C# rozwiązaniami programistycznymi.
+Istnieje kilka porad i wskazówek, które są typowymi C# rozwiązaniami deweloperskimi:
 
 - [Inicjowanie obiektów za pomocą inicjatora obiektów](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [Zapoznaj się z różnicami między przekazywaniem struktury a klasą do metody](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Użyj przeciążenia operatora](../language-reference/operators/operator-overloading.md).
 - [Implementowanie i wywoływanie niestandardowej metody rozszerzenia](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
-- Nawet C# programiści mogą chcieć [użyć przestrzeni nazw `My` w języku VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
+- Nawet C# programiści mogą chcieć [użyć przestrzeni nazw `My` z Visual Basic](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Utwórz nową metodę dla typu `enum` przy użyciu metod rozszerzających](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ### <a name="class-and-struct-members"></a>Elementy członkowskie klasy i struktury

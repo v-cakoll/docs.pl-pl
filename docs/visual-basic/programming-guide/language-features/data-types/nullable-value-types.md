@@ -1,5 +1,5 @@
 ---
-title: Typy wartości null-Visual Basic
+title: Typy o wartości zerowalnej
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Nullable
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 1fb8f8d1657b8eab6b15858c2a6607cbde82e542
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0d259e11a969f4eb7e64626a4adf498db06ece06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732937"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347839"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Typy o wartości zerowalnej (Visual Basic)
 
@@ -66,7 +66,7 @@ Aby pobrać wartość zmiennej typu Nullable, należy najpierw przetestować jej
 
 Gdy wartości null `Boolean` zmienne są używane w wyrażeniach logicznych, wynik może być `True`, `False`lub `Nothing`. Poniżej przedstawiono tabelę prawdziwą dla `And` i `Or`. Ponieważ `b1` i `b2` teraz mają trzy możliwe wartości, istnieje dziewięć kombinacji do obliczenia.
 
-|B1|B2|B1 i B2|B1 lub B2|
+|b1|b2|B1 i B2|B1 lub B2|
 |--------|--------|---------------|--------------|
 |`Nothing`|`Nothing`|`Nothing`|`Nothing`|
 |`Nothing`|`True`|`Nothing`|`True`|
@@ -78,7 +78,7 @@ Gdy wartości null `Boolean` zmienne są używane w wyrażeniach logicznych, wyn
 |`False`|`True`|`False`|`True`|
 |`False`|`False`|`False`|`False`|
 
-Gdy wartość zmiennej lub wyrażenia logicznego jest `Nothing`, nie `true` ani `false`. Rozważmy następujący przykład.
+Gdy wartość zmiennej lub wyrażenia logicznego jest `Nothing`, nie `true` ani `false`. Rozpatrzmy następujący przykład.
 
 [!code-vb[VbVbalrNullableValue#6](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#6)]
 

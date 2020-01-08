@@ -11,12 +11,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: 9ec4b4c07910100dd02cc86e882b44aa7dbd2ced
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 455c839702b90738ec5aea37c1b09d72eba42ff4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346034"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347891"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Porady: używanie klasy definiującej operatory (Visual Basic)
 Jeśli używasz klasy lub struktury, która definiuje własne operatory, możesz uzyskać dostęp do tych operatorów z Visual Basic.  
@@ -32,7 +32,7 @@ Jeśli używasz klasy lub struktury, która definiuje własne operatory, możesz
   
  Struktura <xref:System.Data.SqlTypes.SqlString> definiuje operator konwersji ([Funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md)) z `String` do <xref:System.Data.SqlTypes.SqlString> i innej od <xref:System.Data.SqlTypes.SqlString> do `String`. Instrukcja, która przypisuje `title` do `jobTitle` używa pierwszego operatora, a wywołanie funkcji <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> używa drugiego.  
   
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
+## <a name="compile-the-code"></a>Skompilować kod  
  Upewnij się, że używana Klasa lub struktura definiuje operatora, którego chcesz użyć. Nie należy zakładać, że Klasa lub struktura zdefiniowano każdy operator dostępny do przeciążenia. Aby uzyskać listę dostępnych operatorów, zobacz [instrukcja operatora](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
  Uwzględnij odpowiednią instrukcję `Imports` dla ciągu SQL na początku pliku źródłowego (w tym przypadku <xref:System.Data.SqlTypes>).  

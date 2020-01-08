@@ -17,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: c699ed68606293b1a49a540e00636cf7f56bdf2f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ec06edc16829c6d4caf8c760922aac1471e365c2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972092"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346629"
 ---
 # <a name="standard-timespan-format-strings"></a>Standardowe ciągi formatujące TimeSpan
 
@@ -42,24 +42,24 @@ Poniższa tabela zawiera listę specyfikatorów formatu standardowego interwału
   
 |Specyfikator formatu|Nazwa|Opis|Przykłady|  
 |----------------------|----------|-----------------|--------------|  
-|s|Stały format (niezmienny)|Ten specyfikator nie jest uwzględniany w kulturze. Formularz `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (Ciągi formatu "t" i "T" dają te same wyniki).<br /><br /> Więcej informacji: [specyfikator formatu stałej ("c")](#the-constant-c-format-specifier).|`TimeSpan.Zero`-> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)`-> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)`-> 3.17:25:30.5000000|  
+|s|Stały format (niezmienny)|Ten specyfikator nie jest uwzględniany w kulturze. Formularz `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (Ciągi formatu "t" i "T" dają te same wyniki).<br /><br /> Więcej informacji: [specyfikator formatu stałej ("c")](#the-constant-c-format-specifier).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |„g”|Ogólny krótki format|Ten specyfikator wyprowadza tylko to, co jest potrzebne. Jest ona zależna od kultury i ma postać `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Więcej informacji: [specyfikator formatu ogólnego ("g")](#the-general-short-g-format-specifier).|`New TimeSpan(1, 3, 16, 50, 500)`-> 1:3: 16:50.5 (pl-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)`-> 1:3: 16:50, 5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)`-> 1:3: 16:50.599 (pl-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)`-> 1:3: 16:50599 (fr-FR)|  
 |„G”|Format ogólnie długi|Ten specyfikator zawsze Wyprowadza dni i siedem cyfr. Jest ona zależna od kultury i ma postać `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Więcej informacji: [specyfikator formatu ogólnego ("G")](#the-general-long-g-format-specifier).|`New TimeSpan(18, 30, 0)`-> 0:18:30:00.0000000 (EN-US)<br /><br /> `New TimeSpan(18, 30, 0)`-> 0:18:30:00, 0000000 (fr-FR)|  
 
 ## <a name="the-constant-c-format-specifier"></a>Specyfikator formatu stałej ("c")  
  Specyfikator formatu "c" zwraca reprezentację ciągu <xref:System.TimeSpan> wartości w następującej postaci:  
   
- [-] [*d*.] *hh*:*mm*:*SS*[. *fffffff*]  
+ [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
   
  Elementy w nawiasach kwadratowych ([ i ]) są opcjonalne. Kropka (.) i dwukropek (:) są symbolami literału. W poniższej tabeli opisano pozostałe elementy.  
   
 |Element|Opis|  
 |-------------|-----------------|  
 |*-*|Opcjonalny znak ujemny, który wskazuje ujemny przedział czasu.|  
-|*Wykres*|Opcjonalna liczba dni bez zer wiodących.|  
-|*formacie*|Liczba godzin z zakresu od "00" do "23".|  
-|*–*|Liczba minut obejmująca wartość "00" do "59".|  
-|*RR*|Liczba sekund określająca zakres od "0" do "59".|  
+|*d*|Opcjonalna liczba dni bez zer wiodących.|  
+|*hh*|Liczba godzin z zakresu od "00" do "23".|  
+|*mm*|Liczba minut obejmująca wartość "00" do "59".|  
+|*ss*|Liczba sekund określająca zakres od "0" do "59".|  
 |*fffffff*|Opcjonalna część ułamkowa sekundy.  Jego wartość może być z zakresu od "0000001" (jeden takt lub 1 10-milionowego sekundy) do "9999999" (9 999 999 10-dziesięciomilionowych sekundy lub jeden drugi z więcej niż jeden takt).|  
   
  W przeciwieństwie do specyfikatorów formatu "g" i "G", specyfikator formatu "c" nie jest uwzględniany w kulturze. Generuje ciąg reprezentujący wartość <xref:System.TimeSpan>, która jest niezmienna i która jest wspólna dla wszystkich poprzednich wersji .NET Framework przed .NET Framework 4. "c" jest domyślnym ciągiem formatu <xref:System.TimeSpan>; Metoda <xref:System.TimeSpan.ToString?displayProperty=nameWithType> formatuje wartość przedziału czasu przy użyciu ciągu formatu "c".  
@@ -82,10 +82,10 @@ Poniższa tabela zawiera listę specyfikatorów formatu standardowego interwału
 |Element|Opis|  
 |-------------|-----------------|  
 |*-*|Opcjonalny znak ujemny, który wskazuje ujemny przedział czasu.|  
-|*Wykres*|Opcjonalna liczba dni bez zer wiodących.|  
-|*c*|Liczba godzin z zakresu od "0" do "23" bez zer wiodących.|  
-|*–*|Liczba minut obejmująca wartość "00" do "59".|  
-|*RR*|Liczba sekund określająca zakres od "00" do "59"..|  
+|*d*|Opcjonalna liczba dni bez zer wiodących.|  
+|*h*|Liczba godzin z zakresu od "0" do "23" bez zer wiodących.|  
+|*mm*|Liczba minut obejmująca wartość "00" do "59".|  
+|*ss*|Liczba sekund określająca zakres od "00" do "59"..|  
 |*.*|Separator sekund ułamkowych. Jest ona równoważna z właściwością <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> określonej kultury bez zastąpień użytkownika.|  
 |*FFFFFFF*|Ułamki sekund. Zostanie wyświetlona najmniejsza liczba cyfr.|  
   
@@ -106,10 +106,10 @@ Poniższa tabela zawiera listę specyfikatorów formatu standardowego interwału
 |Element|Opis|  
 |-------------|-----------------|  
 |*-*|Opcjonalny znak ujemny, który wskazuje ujemny przedział czasu.|  
-|*Wykres*|Liczba dni bez zer wiodących.|  
-|*formacie*|Liczba godzin z zakresu od "00" do "23".|  
-|*–*|Liczba minut obejmująca wartość "00" do "59".|  
-|*RR*|Liczba sekund określająca zakres od "00" do "59".|  
+|*d*|Liczba dni bez zer wiodących.|  
+|*hh*|Liczba godzin z zakresu od "00" do "23".|  
+|*mm*|Liczba minut obejmująca wartość "00" do "59".|  
+|*ss*|Liczba sekund określająca zakres od "00" do "59".|  
 |*.*|Separator sekund ułamkowych. Jest ona równoważna z właściwością <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> określonej kultury bez zastąpień użytkownika.|  
 |*fffffff*|Ułamki sekund.|  
   

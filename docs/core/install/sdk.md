@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 1f7efaedaa1a0be90f7b619f954bdf78eecafa07
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 004ef2a768f4a5415942d405e4a8292928c89f94
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959828"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340656"
 ---
 # <a name="install-the-net-core-sdk"></a>Zainstaluj zestaw .NET Core SDK
 
@@ -44,9 +44,11 @@ macOS ma autonomiczne Instalatory, których można użyć do zainstalowania zest
 
 Zestaw .NET Core SDK można zainstalować przy użyciu wielu popularnych menedżerów pakietów systemu Linux. Aby uzyskać więcej informacji, zobacz [Menedżer pakietów systemu Linux — Instalowanie programu .NET Core](linux-package-managers.md).
 
+Instalowanie za pomocą Menedżera pakietów jest obsługiwane tylko w architekturze x64. Jeśli instalujesz zestaw .NET Core SDK z inną architekturą, taką jak ARM, postępuj zgodnie z poniższymi instrukcjami [pobierania i ręcznej instalacji](#download-and-manually-install) . Aby uzyskać więcej informacji o obsługiwanych architekturach, zobacz temat [zależności i wymagania dotyczące platformy .NET Core](dependencies.md).
+
 ## <a name="download-and-manually-install"></a>Pobierz i ręcznie zainstaluj
 
-Aby wyodrębnić zestaw SDK i udostępnić polecenia w terminalu, należy najpierw [pobrać](#all-net-core-downloads) wydanie binarne platformy .NET Core. Następnie otwórz Terminal i uruchom następujące polecenia.
+Aby wyodrębnić zestaw SDK i udostępnić interfejs wiersza polecenia platformy .NET Core polecenia w terminalu, należy najpierw [pobrać](#all-net-core-downloads) wydanie binarne platformy .NET Core. Następnie otwórz Terminal i uruchom następujące polecenia.
 
 ```bash
 mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.100-linux-x64.tar.gz -C $HOME/dotnet
@@ -55,14 +57,14 @@ export PATH=$PATH:$HOME/dotnet
 ```
 
 > [!TIP]
-> Powyższe polecenia spowodują udostępnienie poleceń zestawu .NET SDK dla sesji terminalu, w której został uruchomiony.
+> Poprzednie polecenia `export` powodują, że interfejs wiersza polecenia platformy .NET Core polecenia dostępne dla sesji terminalu, w której został uruchomiony.
 >
 > Możesz edytować profil powłoki, aby trwale dodać polecenia. Istnieje wiele różnych powłok dostępnych dla systemu Linux, a każdy z nich ma inny profil. Na przykład:
 >
 > - **Bash Shell**: *~/. bash_profile*, *~/.bashrc.*
 > - **Powłoka Korn**: *~/.KSHRC* lub *. profile*
 > - **Powłoka Z**: *~/.zshrc* lub *. zprofile*
-> 
+>
 > Edytuj odpowiedni plik źródłowy dla powłoki i Dodaj `:$HOME/dotnet` na końcu istniejącej instrukcji `PATH`. Jeśli nie dołączono żadnej instrukcji `PATH`, Dodaj nowy wiersz z `export PATH=$PATH:$HOME/dotnet`.
 >
 > Ponadto Dodaj `export DOTNET_ROOT=$HOME/dotnet` na końcu pliku.
@@ -176,8 +178,7 @@ Aby uzyskać więcej informacji na temat korzystania z platformy .NET Core w kon
 
 ::: zone pivot="os-windows"
 
-- [Samouczek: C# samouczek Hello World](../tutorials/with-visual-studio.md).
-- [Samouczek: Visual Basic Hello World samouczka](../tutorials/vb-with-visual-studio.md).
+- [Samouczek: samouczek Hello World](../tutorials/with-visual-studio.md).
 - [Samouczek: Tworzenie nowej aplikacji przy użyciu Visual Studio Code](../tutorials/with-visual-studio-code.md).
 - [Samouczek: konteneryzowanie aplikacji .NET Core](../docker/build-container.md).
 

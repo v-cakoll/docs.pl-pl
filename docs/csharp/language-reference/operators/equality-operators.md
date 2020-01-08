@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 11d2161004af5199d9e501f8ab1e3c0382e6bfe7
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: ecbb90dab8ccbd9148461c1372e21c523f3835e3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039024"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345314"
 ---
 # <a name="equality-operators-c-reference"></a>Operatory równości (C# odwołanie)
 
@@ -37,13 +37,13 @@ Argumenty operacji [wbudowanych typów wartości](../keywords/value-types-table.
 [!code-csharp-interactive[value types equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ValueTypesEquality)]
 
 > [!NOTE]
-> Dla `==`, [`<`, `>`, `<=` i `>=`](comparison-operators.md) operatory, jeśli którykolwiek z operandów nie jest liczbą (<xref:System.Double.NaN?displayProperty=nameWithType> lub <xref:System.Single.NaN?displayProperty=nameWithType>), wynikiem operacji jest `false`. Oznacza to, że wartość `NaN` nie może być większa niż ani równa żadnej innej wartości `double` (lub `float`), w tym `NaN`. Aby uzyskać więcej informacji i przykładów, zobacz artykuł dotyczący odniesienia <xref:System.Double.NaN?displayProperty=nameWithType> lub <xref:System.Single.NaN?displayProperty=nameWithType>.
+> Dla operatorów `==`, [`<`, `>`, `<=`i `>=`](comparison-operators.md) , jeśli którykolwiek z operandów nie jest liczbą (<xref:System.Double.NaN?displayProperty=nameWithType> lub <xref:System.Single.NaN?displayProperty=nameWithType>), wynik operacji jest `false`. Oznacza to, że wartość `NaN` nie może być większa niż ani równa żadnej innej wartości `double` (lub `float`), w tym `NaN`. Aby uzyskać więcej informacji i przykładów, zobacz artykuł <xref:System.Double.NaN?displayProperty=nameWithType> lub <xref:System.Single.NaN?displayProperty=nameWithType> Reference.
 
-Dwa operandy tego samego typu [wyliczeniowego](../keywords/enum.md) są równe, jeśli odpowiadające wartości bazowego typu całkowitego są równe.
+Dwa operandy tego samego typu [wyliczeniowego](../builtin-types/enum.md) są równe, jeśli odpowiadające wartości bazowego typu całkowitego są równe.
 
-Zdefiniowane przez użytkownika typy [struktur](../keywords/struct.md) nie obsługują domyślnie operatora `==`. Aby można było obsługiwać operator `==`, struktura zdefiniowana przez użytkownika musi [przeciążać](operator-overloading.md) ją.
+Zdefiniowane przez użytkownika typy [struktur](../keywords/struct.md) nie obsługują domyślnie operatora `==`. Aby zapewnić obsługę operatora `==`, struktura zdefiniowana przez użytkownika musi [przeciążać](operator-overloading.md) ją.
 
-Począwszy od C# 7,3, operatory `==` i `!=` są obsługiwane przez C# [krotki](../../tuples.md). Aby uzyskać więcej informacji, zobacz sekcję [równości i krotek](../../tuples.md#equality-and-tuples) w artykule [ C# typy krotek](../../tuples.md) .
+Począwszy od C# 7,3 operatory `==` i `!=` są obsługiwane przez C# [krotki](../../tuples.md). Aby uzyskać więcej informacji, zobacz sekcję [równości i krotek](../../tuples.md#equality-and-tuples) w artykule [ C# typy krotek](../../tuples.md) .
 
 ### <a name="reference-types-equality"></a>Równość typów referencyjnych
 
@@ -63,7 +63,7 @@ Jest to porównanie porządkowe z uwzględnieniem wielkości liter. Aby uzyskać
 
 ### <a name="delegate-equality"></a>Równość delegowania
 
-Dwa operandy [delegatów](../../programming-guide/delegates/index.md) tego samego typu środowiska uruchomieniowego są równe, gdy oba z nich są `null` lub ich listy wywołania mają taką samą długość i mają równe wpisy w każdej pozycji:
+Dwa operandy [delegatów](../../programming-guide/delegates/index.md) tego samego typu środowiska uruchomieniowego są równe, gdy oba z nich są `null` lub ich listy wywołań są o tej samej długości i mają równe wpisy w każdej pozycji:
 
 [!code-csharp-interactive[delegate equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#DelegateEquality)]
 
@@ -75,7 +75,7 @@ Delegaty wytwarzane z oceny semantycznie identycznych [wyrażeń lambda](../../p
 
 ## <a name="inequality-operator-"></a>Operator nierówności! =
 
-Operator nierówności `!=` zwraca `true`, jeśli jego operandy nie są równe, `false` w przeciwnym razie. Dla argumentów operacji [typu wbudowanego](../keywords/built-in-types-table.md)wyrażenie `x != y` daje ten sam wynik, co wyrażenie `!(x == y)`. Aby uzyskać więcej informacji na temat równości typów, zobacz sekcję [operator równości](#equality-operator-) .
+Operator nierówności `!=` zwraca `true`, jeśli jego operandy nie są równe, `false` w przeciwnym razie. Dla argumentów operacji [typu wbudowanego](../keywords/built-in-types-table.md)wyrażenie `x != y` daje ten sam wynik, co `!(x == y)`wyrażenia. Aby uzyskać więcej informacji na temat równości typów, zobacz sekcję [operator równości](#equality-operator-) .
 
 Poniższy przykład ilustruje użycie operatora `!=`:
 

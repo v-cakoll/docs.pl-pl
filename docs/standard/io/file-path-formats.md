@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 808c92e906a0bf6f8fdc368396d6d240573de501
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 258cf59fb8383fe131f4a0e78dac6189e1d9c91e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120774"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337670"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formaty ścieżek plików w systemie Windows
 
@@ -44,7 +44,7 @@ Jeśli wszystkie trzy składniki są obecne, ścieżka jest bezwzględna. Jeśli
 
 Można określić, czy ścieżka pliku jest w pełni kwalifikowana (czyli czy ścieżka jest niezależna od bieżącego katalogu i nie ulega zmianie, gdy bieżący katalog ulegnie zmianie) przez wywołanie metody <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType>. Należy zauważyć, że taka ścieżka może zawierać względne segmenty katalogów (`.` i `..`) i nadal być w pełni kwalifikowane, jeśli rozpoznana ścieżka zawsze wskazuje tę samą lokalizację.
 
-Poniższy przykład ilustruje różnicę między ścieżkami bezwzględnymi i względnymi. Przyjęto założenie, że katalog D:\FY2018\ istnieje i że nie ustawiono żadnego katalogu bieżący dla D:\ w wierszu polecenia przed uruchomieniem przykładu.
+Poniższy przykład ilustruje różnicę między ścieżkami bezwzględnymi i względnymi. Przyjęto założenie, że katalog D:\FY2018\ istnieje i nie ustawił bieżącego katalogu dla D:\ w wierszu polecenia przed uruchomieniem przykładu.
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -71,7 +71,7 @@ Poniżej przedstawiono kilka przykładów ścieżek UNC:
 
 System operacyjny Windows ma ujednolicony model obiektów, który wskazuje na wszystkie zasoby, w tym pliki. Te ścieżki obiektów są dostępne z okna konsoli i są widoczne dla warstwy Win32 za pośrednictwem specjalnego folderu linków symbolicznych, do których są mapowane starsze ścieżki DOS i UNC. Dostęp do tego folderu specjalnego uzyskuje się za pośrednictwem składni ścieżki urządzenia DOS, która jest jedną z:
 
-`\\.\C:\Test\Foo.txt`  
+`\\.\C:\Test\Foo.txt`
 `\\?\C:\Test\Foo.txt`
 
 Oprócz identyfikowania dysku za pomocą jego litery dysku, można zidentyfikować wolumin przy użyciu identyfikatora GUID woluminu. Ma to formę:
@@ -95,10 +95,10 @@ Oprócz identyfikowania dysku za pomocą jego litery dysku, można zidentyfikowa
 
    Istnieje konkretne łącze dla UNCs o nazwie, a nie Surprisingly, `UNC`. Na przykład:
 
-  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    W przypadku urządzenia UNCs część serwer/udział tworzy wolumin. Na przykład w `\\?\server1\e:\utilities\\filecomparer\`część serwer/udział jest server1\utilities. Jest to istotne w przypadku wywołania metody, takiej jak <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> z względnymi segmentami katalogu; nie jest możliwe przechodzenie poza wolumin. 
+    W przypadku urządzenia UNCs część serwer/udział tworzy wolumin. Na przykład w `\\?\server1\e:\utilities\\filecomparer\`część serwer/udział jest server1\utilities. Jest to istotne w przypadku wywołania metody, takiej jak <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> z względnymi segmentami katalogu; nie jest możliwe przechodzenie poza wolumin.
 
 Ścieżki urządzeń systemu DOS są w pełni kwalifikowane według definicji. Powiązane segmenty katalogu (`.` i `..`) są niedozwolone. Bieżące katalogi nigdy nie są wprowadzane do ich użycia.
 
@@ -126,7 +126,7 @@ Ta normalizacja występuje niejawnie, ale można ją jawnie, wywołując metodę
 Pierwszy krok w normalizacji ścieżki identyfikuje typ ścieżki. Ścieżki mieszczą się w jednej z kilku kategorii:
 
 - Są to ścieżki urządzeń; oznacza to, że zaczynają się od dwóch separatorów i znaku zapytania lub kropki (`\\?` lub `\\.`).
-- Są to ścieżki UNC; oznacza to, że zaczynają się od dwóch separatorów bez znaku zapytania lub kropki. 
+- Są to ścieżki UNC; oznacza to, że zaczynają się od dwóch separatorów bez znaku zapytania lub kropki.
 - Są to w pełni kwalifikowane ścieżki DOS; oznacza to, że zaczynają się literą dysku, separatorem woluminów i separatorem składników (`C:\`).
 - Wyznaczy starsze urządzenie (`CON`, `LPT1`).
 - Są one względne dla katalogu głównego bieżącego dysku; oznacza to, że zaczynają się od pojedynczego separatora składnika (`\`).
@@ -137,7 +137,7 @@ Typ ścieżki Określa, czy bieżący katalog jest stosowany w jakiś sposób. O
 
 ### <a name="handling-legacy-devices"></a>Obsługa starszych urządzeń
 
-Jeśli ścieżka to starsze urządzenie systemu DOS, takie jak `CON`, `COM1`lub `LPT1`, jest konwertowane na ścieżkę urządzenia, w zależności od tego, `\\.\` i zwrócone. 
+Jeśli ścieżka to starsze urządzenie systemu DOS, takie jak `CON`, `COM1`lub `LPT1`, jest konwertowane na ścieżkę urządzenia, w zależności od tego, `\\.\` i zwrócone.
 
 Ścieżka rozpoczynająca się od starszej nazwy urządzenia jest zawsze interpretowana jako starsze urządzenie przez metodę <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType>. Na przykład ścieżka urządzenia DOS dla `CON.TXT` jest `\\.\CON`, a ścieżka urządzenia DOS dla `COM1.TXT\file1.txt` jest `\\.\COM1`.
 
@@ -152,7 +152,7 @@ Jeśli ścieżka rozpoczyna się od litery dysku, separatora woluminu i bez sepa
 Jeśli ścieżka zaczyna się od czegoś innego niż separator, zostanie zastosowany bieżący dysk i bieżący katalog. Na przykład jeśli ścieżka jest `filecompare` a bieżący katalog jest `C:\utilities\`, wynik jest `C:\utilities\filecompare\`.
 
 > [!IMPORTANT]
-> Ścieżki względne są niebezpieczne w aplikacjach wielowątkowych (czyli większości aplikacji), ponieważ bieżący katalog jest ustawieniem dla procesu. Dowolny wątek może zmienić bieżący katalog w dowolnym momencie. Począwszy od platformy .NET Core 2,1, można wywołać metodę <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType>, aby uzyskać ścieżkę bezwzględną ze ścieżki względnej i ścieżki podstawowej (bieżącego katalogu), dla której chcesz rozwiązać ten problem. 
+> Ścieżki względne są niebezpieczne w aplikacjach wielowątkowych (czyli większości aplikacji), ponieważ bieżący katalog jest ustawieniem dla procesu. Dowolny wątek może zmienić bieżący katalog w dowolnym momencie. Począwszy od platformy .NET Core 2,1, można wywołać metodę <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType>, aby uzyskać ścieżkę bezwzględną ze ścieżki względnej i ścieżki podstawowej (bieżącego katalogu), dla której chcesz rozwiązać ten problem.
 
 ### <a name="canonicalizing-separators"></a>Separatory formę kanoniczną działa
 
@@ -160,7 +160,7 @@ Wszystkie ukośniki (`/`) są konwertowane na standardowy separator systemu Wind
 
 ### <a name="evaluating-relative-components"></a>Ocenianie składników względnych
 
-W miarę przetwarzania ścieżki są oceniane wszystkie składniki lub segmenty składające się z pojedynczego lub podwójnego okresu (`.` lub `..`): 
+W miarę przetwarzania ścieżki są oceniane wszystkie składniki lub segmenty składające się z pojedynczego lub podwójnego okresu (`.` lub `..`):
 
 - W przypadku pojedynczego okresu bieżący segment jest usuwany, ponieważ odnosi się do bieżącego katalogu.
 
@@ -174,9 +174,9 @@ Wraz z uruchomieniami separatorów i segmentów względnych usuniętych wcześni
 
 - Jeśli segment zostanie zakończony w pojedynczym okresie, ten okres jest usuwany. (Segment pojedynczego lub podwójnego okresu jest znormalizowany w poprzednim kroku. Segment trzech lub więcej okresów nie jest znormalizowany i jest w rzeczywistości prawidłową nazwą pliku/katalogu.
 
-- Jeśli ścieżka nie kończy się separatorem, wszystkie końcowe kropki i spacje (U + 0020) są usuwane. Jeśli ostatni segment jest po prostu pojedynczym lub podwójnym okresem, jest on objęty powyższą regułą składników względnych. 
+- Jeśli ścieżka nie kończy się separatorem, wszystkie końcowe kropki i spacje (U + 0020) są usuwane. Jeśli ostatni segment jest po prostu pojedynczym lub podwójnym okresem, jest on objęty powyższą regułą składników względnych.
 
-   Ta reguła oznacza, że można utworzyć nazwę katalogu z końcowym miejscem, dodając separator końcowy po odstępie.  
+   Ta reguła oznacza, że można utworzyć nazwę katalogu z końcowym miejscem, dodając separator końcowy po odstępie.
 
    > [!IMPORTANT]
    > **Nigdy nie** należy tworzyć katalogów ani nazw plików z końcowym miejscem. Spacje końcowe mogą być trudne lub niemożliwe do uzyskania dostępu do katalogu, a aplikacje często kończą się niepowodzeniem podczas próby obsługi katalogów lub plików, których nazwy zawierają spacje końcowe.
@@ -187,7 +187,7 @@ Zwykle wszystkie ścieżki przesłane do interfejsu API systemu Windows są (efe
 
 Dlaczego chcesz pominąć normalizację? Istnieją trzy główne przyczyny:
 
-1. Aby uzyskać dostęp do ścieżek, które są zwykle niedostępne, ale są dozwolone. Plik lub katalog o nazwie `hidden.`, na przykład, jest niemożliwe do uzyskania dostępu w inny sposób. 
+1. Aby uzyskać dostęp do ścieżek, które są zwykle niedostępne, ale są dozwolone. Plik lub katalog o nazwie `hidden.`, na przykład, jest niemożliwe do uzyskania dostępu w inny sposób.
 
 1. Aby poprawić wydajność dzięki pominięciu normalizacji, jeśli został już znormalizowany.
 
@@ -200,7 +200,7 @@ Pomijanie normalizacji i maksymalne sprawdzanie ścieżki jest jedyną różnic�
 
 Ścieżki, które zaczynają się od `\\?\` są ciągle znormalizowane, jeśli zostaną jawnie przekazane do [funkcji GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-Należy pamiętać, że ścieżki zawierające więcej niż `MAX_PATH` znaków można [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) bez `\\?\`. Obsługuje ona dowolne ścieżki długości do maksymalnego rozmiaru ciągu, który może obsłużyć system Windows.
+Można przekazać ścieżki zawierające więcej niż `MAX_PATH` znaków do [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) bez `\\?\`. Obsługuje ona dowolne ścieżki długości do maksymalnego rozmiaru ciągu, który może obsłużyć system Windows.
 
 ## <a name="case-and-the-windows-file-system"></a>Wielkość liter i system plików Windows
 

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 08df16be9df6d55ab9f1426e205e56d9609ce72e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: f34ee198ba49a168ed8b56785bea68beee2eb214
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569220"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348124"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Dostosowywanie kanału informacyjnego (Usługi danych programu WCF)
-Usługi danych programu WCF używa protokołu Open Data Protocol (OData) do udostępniania danych jako źródła strumieniowego. Usługa OData obsługuje formaty Atom i JavaScript Object Notation (JSON) dla strumieniowych źródeł danych. Korzystając z kanału informacyjnego Atom, usługa OData zapewnia standardową metodę serializowania danych, takich jak jednostki i relacje, do formatu XML, który może zostać uwzględniony w treści wiadomości HTTP. Usługa OData definiuje domyślne mapowanie właściwości jednostki między danymi zawartymi w jednostkach i elementach Atom. Aby uzyskać więcej informacji, zobacz [Format OData: Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  
+Usługi danych programu WCF używa protokołu Open Data Protocol (OData) do udostępniania danych jako źródła strumieniowego. Usługa OData obsługuje formaty Atom i JavaScript Object Notation (JSON) dla strumieniowych źródeł danych. Korzystając z kanału informacyjnego Atom, usługa OData zapewnia standardową metodę serializowania danych, takich jak jednostki i relacje, do formatu XML, który może zostać uwzględniony w treści wiadomości HTTP. Usługa OData definiuje domyślne mapowanie właściwości jednostki między danymi zawartymi w jednostkach i elementach Atom. Aby uzyskać więcej informacji, zobacz [Format OData: Atom](https://www.odata.org/documentation/odata-version-2-0/atom-format/).  
   
  Może istnieć scenariusz aplikacji, który wymaga, aby dane właściwości zwrócone przez usługę danych były serializowane w sposób dostosowany, a nie w standardowym formacie kanału informacyjnego. Za pomocą protokołu OData można dostosować serializację w strumieniowym źródle danych, tak aby właściwości jednostki mogły być mapowane do nieużywanych elementów i atrybutów wpisu lub do niestandardowych elementów wpisu w strumieniu.  
   
@@ -31,7 +31,7 @@ Usługi danych programu WCF używa protokołu Open Data Protocol (OData) do udos
 > Podczas definiowania niestandardowych kanałów informacyjnych należy zagwarantować, że wszystkie właściwości jednostki, które mają zdefiniowane mapowania niestandardowe, są uwzględniane w projekcji. Gdy właściwość mapowanego obiektu nie jest uwzględniona w projekcji, może dojść do utraty danych. Aby uzyskać więcej informacji, zobacz [projekcje zapytań](query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Dostosowywanie kanałów informacyjnych za pomocą dostawcy Entity Framework  
- Model danych używany z dostawcą Entity Framework jest reprezentowany jako XML w pliku edmx. W takim przypadku atrybuty definiujące niestandardowe źródła są dodawane do `EntityType` i `Property` elementów, które reprezentują typy jednostek i właściwości w modelu danych. Te atrybuty dostosowania kanału informacyjnego nie są zdefiniowane w [\[MC-CSDL\]: Format pliku definicji schematu koncepcyjnego](https://go.microsoft.com/fwlink/?LinkId=159072), który jest formatem używanym przez dostawcę Entity Framework do definiowania modelu danych. W związku z tym należy zadeklarować atrybuty dostosowania kanału informacyjnego w określonej przestrzeni nazw schematu, która jest definiowana jako `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Poniższy fragment kodu XML przedstawia atrybuty dostosowania źródła zastosowane do `Property` elementów `Products` typu jednostki, które definiują właściwości `ProductName`, `ReorderLevel`i `UnitsInStock`.  
+ Model danych używany z dostawcą Entity Framework jest reprezentowany jako XML w pliku edmx. W takim przypadku atrybuty definiujące niestandardowe źródła są dodawane do `EntityType` i `Property` elementów, które reprezentują typy jednostek i właściwości w modelu danych. Te atrybuty dostosowania kanału informacyjnego nie są zdefiniowane w [\[MC-CSDL\]: Format pliku definicji schematu koncepcyjnego](https://docs.microsoft.com/openspecs/windows_protocols/mc-csdl/c03ad8c3-e8b7-4306-af96-a9e52bb3df12), który jest formatem używanym przez dostawcę Entity Framework do definiowania modelu danych. W związku z tym należy zadeklarować atrybuty dostosowania kanału informacyjnego w określonej przestrzeni nazw schematu, która jest definiowana jako `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Poniższy fragment kodu XML przedstawia atrybuty dostosowania źródła zastosowane do `Property` elementów `Products` typu jednostki, które definiują właściwości `ProductName`, `ReorderLevel`i `UnitsInStock`.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   

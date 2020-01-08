@@ -3,15 +3,15 @@ title: 'Samouczek: automatyczna Inspekcja wizualizacji przy użyciu uczenia prze
 description: W tym samouczku pokazano, jak używać uczenia przeniesienia do uczenia modelu uczenia głębokiego TensorFlow w ML.NET przy użyciu interfejsu API wykrywania obrazów do klasyfikowania obrazów konkretnych powierzchni jako pękniętych lub niepękniętych.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 11/14/2019
+ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 443f9e9a83ebf31bb6c62323015af4a554323b67
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 4781e39a0c8827adb6ab0155d5215645242208a5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74205060"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348154"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Samouczek: automatyczne Inspekcja wizualizacji przy użyciu uczenia transferowego za pomocą interfejsu API klasyfikacji obrazów ML.NET
 
@@ -84,7 +84,7 @@ Teraz, gdy znasz już ogólną wiedzę o uczeniu przenoszenia i interfejsie API 
 1. Zainstaluj pakiet NuGet **Microsoft.ml** w wersji **1.4.0** :
     1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**.
     1. Wybierz pozycję "nuget.org" jako źródło pakietu.
-    1. Wybierz kartę **przeglądanie** .
+    1. Wybierz kartę **Przeglądaj**.
     1. Zaznacz pole wyboru **Uwzględnij wersję wstępną** .
     1. Wyszukaj **Microsoft.ml**.
     1. Wybierz przycisk **Instaluj** .
@@ -394,7 +394,7 @@ Jeśli wyniki Twojego modelu nie są zadowalające, możesz spróbować zwiększ
 - **Eksperymentowanie z parametrami funkcji Hyper-Parameters**: Oprócz parametrów używanych w tym samouczku, inne parametry można dostrajać w celu zwiększenia wydajności. Zmiana stawki szkoleniowej, która określa wielkość aktualizacji dokonanych w modelu po każdej epoki, może zwiększyć wydajność.
 - **Użyj innej architektury modelu**: w zależności od tego, jak wyglądają Twoje dane, model, który najlepiej uczy się, że jego funkcje mogą się różnić. Jeśli nie masz zadowalającej wydajności modelu, spróbuj zmienić architekturę.
 
-### <a name="additional-resources"></a>Dodatkowe zasoby
+### <a name="additional-resources"></a>Dodatkowe materiały
 
 - [Uczenie głębokie a Machine Learning](/azure/machine-learning/service/concept-deep-learning-vs-machine-learning).
 

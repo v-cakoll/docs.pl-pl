@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: bc3a139db80066c9cad5199c7734fe66a8639400
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8fea61c463928ee69ef5dd0dfbf107f89c5384ff
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460033"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544468"
 ---
 # <a name="binding-declarations-overview"></a>Przegląd Wiązanie deklaracji
 
@@ -110,9 +110,9 @@ Użyj właściwości <xref:System.Windows.Data.Binding.Path%2A>, aby określić 
 
 - Jeśli ustawisz <xref:System.Windows.Data.Binding.Path%2A> w języku XAML, musisz również wyjść (przy użyciu jednostek XML) określonych znaków, które są specjalne dla definicji języka XML:
 
-  - Użyj `&` do ucieczki znaku "&".
+  - Użyj `&amp;` do ucieczki znaku "&".
 
-  - Użyj `>` do ucieczki znacznika końcowego ">".
+  - Użyj `&gt;` do ucieczki znacznika końcowego ">".
 
 - Ponadto w przypadku opisania całego powiązania w atrybucie przy użyciu składni rozszerzenia znaczników należy wyjść z (przy użyciu ukośnika odwrotnego \\), które są specyficzne dla analizatora rozszerzeń znaczników [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:
 
@@ -134,7 +134,7 @@ Zachowanie domyślne jest następujące, jeśli nie zostanie określone w deklar
 
 - Jeśli nie ustawisz <xref:System.Windows.Data.Binding.ConverterCulture%2A>, aparat powiązań używa właściwości `Language` obiektu docelowego powiązania. W języku XAML domyślnie jest to "en-US" lub dziedziczy wartość z elementu głównego (lub dowolnego elementu) strony, jeśli został on jawnie ustawiony.
 
-- Tak długo, jak powiązanie ma już kontekst danych (na przykład Dziedziczony kontekst danych pochodzący z elementu nadrzędnego), a wszelkie elementy lub kolekcje zwracane przez ten kontekst są odpowiednie do powiązania bez konieczności dalszej modyfikacji ścieżki, Deklaracja powiązania nie może mieć żadnych klauzul w ogóle: `{Binding}` jest to często określone powiązanie dla stylów danych, gdzie powiązanie działa na kolekcji. Aby uzyskać więcej informacji, zobacz sekcję "całe obiekty używane jako źródło powiązań" w [omówieniu źródeł powiązań](binding-sources-overview.md).
+- Tak długo, jak powiązanie ma już kontekst danych (na przykład Dziedziczony kontekst danych pochodzący z elementu nadrzędnego), a wszelkie elementy lub kolekcje zwracane przez ten kontekst są odpowiednie do powiązania bez konieczności dalszej modyfikacji ścieżki, deklaracja powiązania może nie mieć żadnych klauzul w ogóle: `{Binding}` jest to częstość określenia powiązania dla stylów danych, gdzie powiązanie działa na kolekcji. Aby uzyskać więcej informacji, zobacz sekcję "całe obiekty używane jako źródło powiązań" w [omówieniu źródeł powiązań](binding-sources-overview.md).
 
 - Domyślne <xref:System.Windows.Data.Binding.Mode%2A> różnią się między jednokierunkowe i dwukierunkowe w zależności od właściwości zależności, która jest powiązana. Można zawsze zadeklarować tryb powiązania jawnie, aby upewnić się, że powiązanie ma odpowiednie zachowanie. Ogólnie rzecz biorąc, edytowane przez użytkownika właściwości kontrolki, takie jak <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> i <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, domyślnie do powiązań dwukierunkowych, a większość innych właściwości domyślnie do powiązań jednokierunkowych.
 

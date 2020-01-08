@@ -2,12 +2,12 @@
 title: Narzędzie rejestracji usług przepływu pracy (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: cf5ea345c900dec0e4859d81fcb272c1ba3d3df6
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 182bef75bff1785905d77d3bc497e0701e297912
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837756"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346590"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Narzędzie rejestracji usług przepływu pracy (WFServicesReg.exe)
 Narzędzie rejestracji usług przepływu pracy (WFServicesReg. exe) to autonomiczne narzędzie, które służy do dodawania, usuwania lub naprawiania elementów konfiguracji dla usług Windows Workflow Foundation (WF).  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  Narzędzie rejestruje również właściwości xoml i. rules oraz programy obsługi w metabazie usług IIS.  
   
- Na maszynach [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../includes/wxp-md.md)] (IIS 5,1 i IIS 6,0) jest rejestrowany jeden zestaw właściwości xoml i. rules.  
+ Na komputerach z systemem Windows Server 2003 i [!INCLUDE[wxp](../../../includes/wxp-md.md)] (IIS 5,1 i IIS 6,0) jest rejestrowany jeden zestaw właściwości xoml i rules.  
   
  Na komputerach 64-bitowych narzędzie rejestruje w trybie WOW mapowania skryptów, jeśli przełącznik `Enable32BitAppOnWin64` jest włączony, lub natywnie 64-bitowe mapowania skryptów, jeśli przełącznik `Enable32BitAppOnWin64` jest wyłączony.  
   
@@ -70,17 +70,17 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="usage-scenarios"></a>Scenariusze użycia  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>Instalowanie usług IIS po zainstalowaniu .NET Framework 3,5  
- Na komputerze z systemem [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] .NET Framework 3,5 jest instalowany przed instalacją usług IIS. Ze względu na niedostępność metabazy usług IIS instalacja programu .NET Framework 3,5 kończy się niepowodzeniem bez instalowania. xoml i. rules.  
+ Na komputerze z systemem Windows Server 2003 program .NET Framework 3,5 jest instalowany przed instalacją usług IIS. Ze względu na niedostępność metabazy usług IIS instalacja programu .NET Framework 3,5 kończy się niepowodzeniem bez instalowania. xoml i. rules.  
   
  Po zainstalowaniu usług IIS można użyć narzędzia WFServicesReg. exe z przełącznikiem `/c`, aby zainstalować te konkretne mapy skryptów.  
   
 ### <a name="repairing-the-scriptmaps"></a>Naprawianie skryptów  
   
 #### <a name="scriptmap-deleted-under-web-sites-node"></a>Właściwości scriptmap usunięte w węźle witryny sieci Web  
- Na maszynie [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], pliku xoml lub reguły są przypadkowo usuwane z węzła witryny sieci Web. Można to naprawić, uruchamiając narzędzie WFServicesReg. exe z przełącznikiem `/c`.  
+ Na komputerze z systemem Windows Server 2003, xoml lub. reguły są przypadkowo usuwane z węzła witryny sieci Web. Można to naprawić, uruchamiając narzędzie WFServicesReg. exe z przełącznikiem `/c`.  
   
 #### <a name="scriptmap-deleted-under-a-particular-web-site"></a>Właściwości scriptmap usunięte w określonej witrynie sieci Web  
- Na komputerze [!INCLUDE[ws2003](../../../includes/ws2003-md.md)],. xoml lub. reguły są przypadkowo usuwane z określonej witryny sieci Web (na przykład domyślnej witryny sieci Web), a nie z węzła witryny sieci Web.  
+ Na komputerze z systemem Windows Server 2003, xoml lub. reguły są przypadkowo usuwane z określonej witryny sieci Web (na przykład domyślnej witryny sieci Web), a nie z węzła witryny sieci Web.  
   
  Aby naprawić usunięte programy obsługi dla określonej witryny sieci Web, należy uruchomić polecenie "WFServicesReg. exe/r", aby usunąć programy obsługi ze wszystkich witryn sieci Web, a następnie uruchomić polecenie "WFServicesReg. exe/c" w celu utworzenia odpowiednich programów obsługi dla wszystkich witryn sieci Web.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 9957c38ad625a27395a3bcc3ddd9ce0b4797b93d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 16daa0ef3133b6cd04dc48b7f79fd365098e4bdf
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127615"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348072"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analizowanie ciągów daty i godziny w programie .NET
 
@@ -48,7 +48,7 @@ Oprócz daty i składnika czasu, Reprezentacja ciągu daty i godziny może zawie
   
 Dostawca formatu jest również używany do interpretowania niejednoznacznej daty liczbowej. Nie jest jasne, które składniki daty reprezentowanej przez ciąg "02/03/04" to miesiąc, dzień i rok. Składniki są interpretowane zgodnie z kolejnością podobnych formatów daty w dostawcy formatu.
 
-## <a name="parse"></a>Przetwarzania
+## <a name="parse"></a>Analizuj
 
 Poniższy przykład ilustruje użycie metody <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>, aby skonwertować `string` do <xref:System.DateTime>. W tym przykładzie zastosowano kulturę skojarzoną z bieżącym wątkiem. Jeśli <xref:System.Globalization.CultureInfo> skojarzona z bieżącą kulturą nie może przeanalizować ciągu wejściowego, zostanie zgłoszony <xref:System.FormatException>.
 
@@ -56,7 +56,7 @@ Poniższy przykład ilustruje użycie metody <xref:System.DateTime.Parse%2A?disp
 > Wszystkie C# przykłady w tym artykule działają w przeglądarce. Naciśnij przycisk **Run (Uruchom** ), aby wyświetlić dane wyjściowe. Możesz również edytować je, aby samodzielnie eksperymentować.
 
 > [!NOTE]
-> Te przykłady są dostępne w repozytorium docs w witrynie GitHub dla [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) programów i [VB](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions). Lub można pobrać projekt jako zipfile dla [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) lub [VB](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
+> Te przykłady są dostępne w repozytorium docs w witrynie GitHub dla [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) obu i [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions). Lub można pobrać projekt jako plik ZIP dla [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) lub [Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]

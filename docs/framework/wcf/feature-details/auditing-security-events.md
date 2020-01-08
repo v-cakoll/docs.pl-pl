@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: fec23439236fccb23964c0feb22691a973c787b1
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 62b218a7259d824930a2eb2c7f810b480034e2b6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838094"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338016"
 ---
 # <a name="auditing-security-events"></a>Inspekcja zdarzeń dotyczących zabezpieczeń
 Aplikacje utworzone za pomocą Windows Communication Foundation (WCF) mogą rejestrować zdarzenia zabezpieczeń (sukces, Niepowodzenie lub oba) przy użyciu funkcji inspekcji. Zdarzenia są zapisywane w dzienniku zdarzeń systemu Windows i można je zbadać przy użyciu Podgląd zdarzeń.  
@@ -73,7 +73,7 @@ Aplikacje utworzone za pomocą Windows Communication Foundation (WCF) mogą reje
 </configuration>  
 ```  
   
- Jeśli inspekcja jest włączona i nie określono `auditLogLocation`, domyślną nazwą dziennika jest dziennik "zabezpieczenia" dla platformy obsługującej zapisywanie w dzienniku zabezpieczeń; w przeciwnym razie jest to dziennik "aplikacja". Tylko [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i systemy operacyjne Windows Vista obsługują zapisywanie w dzienniku zabezpieczeń. Aby uzyskać więcej informacji, zobacz sekcję "system operacyjny" w dalszej części tego tematu.  
+ Jeśli inspekcja jest włączona i nie określono `auditLogLocation`, domyślną nazwą dziennika jest dziennik "zabezpieczenia" dla platformy obsługującej zapisywanie w dzienniku zabezpieczeń; w przeciwnym razie jest to dziennik "aplikacja". Tylko systemy operacyjne Windows Server 2003 i Windows Vista obsługują zapisywanie w dzienniku zabezpieczeń. Aby uzyskać więcej informacji, zobacz sekcję "system operacyjny" w dalszej części tego tematu.  
   
 ## <a name="security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
  Jeśli złośliwy użytkownik wie, że inspekcja jest włączona, osoba atakująca może wysłać nieprawidłowe komunikaty, które powodują zapisanie wpisów inspekcji. Jeśli dziennik inspekcji zostanie wypełniony w ten sposób, system inspekcji zakończy się niepowodzeniem. Aby rozwiązać ten problem, ustaw właściwość <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> na `true` i Użyj właściwości Podgląd zdarzeń, aby kontrolować zachowanie inspekcji. Aby uzyskać więcej informacji, zobacz artykuł pomoc techniczna firmy Microsoft dotyczący wyświetlania dzienników zdarzeń i zarządzania nimi za pomocą Podgląd zdarzeń w systemie Windows XP, które są dostępne na stronie [jak wyświetlać dzienniki zdarzeń i zarządzać nimi w Podgląd zdarzeń w systemie Windows XP](https://go.microsoft.com/fwlink/?LinkId=89150).  
@@ -87,8 +87,8 @@ Aplikacje utworzone za pomocą Windows Communication Foundation (WCF) mogą reje
   
 |System|Dziennik aplikacji|Dziennik zabezpieczeń|  
 |------------|---------------------|------------------|  
-|Program [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] lub nowszy|Obsługiwana|Nieobsługiwane|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] i Windows Vista|Obsługiwana|Kontekst wątku musi mieć `SeAuditPrivilege`|  
+|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] lub nowszy|Obsługiwana|Nieobsługiwane|  
+|Windows Server 2003 z dodatkiem SP1 i Windows Vista|Obsługiwana|Kontekst wątku musi mieć `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Inne czynniki  
  Oprócz systemu operacyjnego w poniższej tabeli opisano inne ustawienia kontrolujące włączenie rejestrowania.  

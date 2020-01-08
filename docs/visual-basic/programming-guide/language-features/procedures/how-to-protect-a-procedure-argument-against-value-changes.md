@@ -14,12 +14,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: 36092eb597b5b20e1da42cd9d15ab8633636cfb1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 75c718c83f36e2f0b2c4cfb5504c2d740eaa3520
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344859"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347901"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Porady: chronienie argumentu procedury przed zmianami wartości (Visual Basic)
 Jeśli procedura deklaruje parametr jako [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic daje kod procedury bezpośrednio odwołanie do elementu programowania, który jest powiązany z argumentem w kodzie wywołującym. Pozwala to na procedurę zmiany wartości bazowej argumentu w wywoływanym kodzie. W niektórych przypadkach kod wywołujący może chcieć chronić przed takimi zmianami.  
@@ -39,7 +39,7 @@ Jeśli procedura deklaruje parametr jako [ByRef](../../../../visual-basic/langua
   
  Drugie wywołanie `MsgBox` wyświetla "po zastąpieniu (n): 11, 21, 31, 41". Ponieważ `n` jest przenoszona `ByVal`, `replace` nie może zmodyfikować zmiennej `n` w wywoływanym kodzie, przypisując do niej nową tablicę. Gdy `replace` tworzy nowe wystąpienie tablicy `k` i przypisze je do zmiennej lokalnej `a`, utraci odwołanie do `n` przekazaną przez kod wywołujący. W przypadku zmiany elementów członkowskich `a`dotyczy tylko `k` tablicy lokalnej. W związku z tym `replace` nie zwiększa wartości tablicy `n` w kodzie wywołującym.  
   
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
+## <a name="compile-the-code"></a>Skompilować kod  
  Wartością domyślną w Visual Basic jest przekazanie argumentów według wartości. Jednak dobrym sposobem programowania jest dołączenie albo słowa kluczowego [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) z każdym zadeklarowanym parametrem. Ułatwia to odczytywanie kodu.  
   
 ## <a name="see-also"></a>Zobacz także

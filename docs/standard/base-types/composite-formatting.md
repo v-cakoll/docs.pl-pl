@@ -1,5 +1,5 @@
 ---
-title: Złożone formatowanie
+title: Formatowanie złożone
 ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 12666ca5ad8f223f2fba4a63a7cc7525601367a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ae0ba0bf15b6a02df5130d34d277322897826697
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091568"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338509"
 ---
-# <a name="composite-formatting"></a>Złożone formatowanie
+# <a name="composite-formatting"></a>Formatowanie złożone
 
 Funkcja formatowania złożonego .NET przyjmuje listę obiektów i ciąg formatu złożonego jako dane wejściowe. Ciąg formatu złożonego składa się ze stałego tekstu zmieszanego z indeksowanymi symbolami zastępczymi (nazywanymi też elementami formatu), które odpowiadają obiektom na liście. Operacja formatowania zwraca ciąg wynikowy, który składa się z oryginalnego stałego tekstu zmieszanego z ciągiem reprezentującym obiekty na liście.  
   
 > [!IMPORTANT]
-> Zamiast korzystać z ciągów formatu złożonego, można użyć *interpolowanych ciągów* , jeśli używany język i wersja językowa są obsługiwane. Ciąg interpolowany jest ciągiem, który zawiera *interpolowane wyrażenia*. Każde wyrażenie interpolowane jest rozpoznawane za pomocą wartości wyrażenia i uwzględniane w ciągu wynikowym, gdy ciąg jest przypisany. Aby uzyskać więcej informacji, zobacz [Interpolacja ciągówC# (odwołanie)](../../csharp/language-reference/tokens/interpolated.md) i [ciągi interpolowane (odwołanie Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+> Zamiast korzystać z ciągów formatu złożonego, można użyć *interpolowanych ciągów* , jeśli używany język i wersja językowa są obsługiwane. Ciąg interpolowany jest ciąg zawierający *wyrażeń interpolowanych*. Każde wyrażenie interpolowane jest rozwiązany wartość wyrażenia i uwzględnione w ciągu wynikowym, jeśli ciąg jest przypisany. Aby uzyskać więcej informacji, zobacz [Interpolacja ciągówC# (odwołanie)](../../csharp/language-reference/tokens/interpolated.md) i [ciągi interpolowane (odwołanie Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
 
 Funkcja formatowania złożonego jest obsługiwana przez metody, takie jak:  
   
@@ -81,7 +81,7 @@ Funkcja formatowania złożonego jest obsługiwana przez metody, takie jak:
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Element ciągu formatującego  
- Opcjonalny składnik *FormatString* jest ciągiem formatu, który jest odpowiedni dla typu formatowanego obiektu. Określ standardowy lub niestandardowy ciąg formatu liczbowego, jeśli odpowiedni obiekt jest wartością liczbową, standardowym lub niestandardowym ciągiem formatu daty i godziny, jeśli odpowiedni obiekt jest obiektem <xref:System.DateTime> lub [ciągiem formatu wyliczenia](../../../docs/standard/base-types/enumeration-format-strings.md) , jeśli odpowiada Obiekt jest wartością wyliczenia. Jeśli element *FormatString* nie zostanie określony, używany jest specyfikator formatu ogólnego ("G") dla typu liczbowego, daty i godziny lub wyliczenia. Dwukropek jest wymagany, jeśli jest określony parametr *FormatString* .  
+ Opcjonalny składnik *FormatString* jest ciągiem formatu, który jest odpowiedni dla typu formatowanego obiektu. Określ standardowy lub niestandardowy ciąg formatu liczbowego, jeśli odpowiedni obiekt jest wartością liczbową, standardowym lub niestandardowym ciągiem formatu daty i godziny, jeśli odpowiedni obiekt jest obiektem <xref:System.DateTime> lub [ciągiem formatu wyliczenia](../../../docs/standard/base-types/enumeration-format-strings.md) , jeśli odpowiedni obiekt jest wartością wyliczenia. Jeśli element *FormatString* nie zostanie określony, używany jest specyfikator formatu ogólnego ("G") dla typu liczbowego, daty i godziny lub wyliczenia. Dwukropek jest wymagany, jeśli jest określony parametr *FormatString* .  
   
  Poniższa tabela zawiera listę typów lub kategorii typów w bibliotece klas programu .NET Framework, które obsługują wstępnie zdefiniowany zestaw ciągów formatu i zawiera łącza do tematów zawierających opisy obsługiwanych ciągów formatu. Należy zauważyć, że formatowanie ciągów jest rozszerzalnym mechanizmem, który umożliwia definiowanie nowych ciągów formatu dla każdego istniejącego typu, podobnie jak definiowanie zestawu ciągów formatu obsługiwanych przez typ zdefiniowany przez aplikację. Aby uzyskać więcej informacji, zobacz temat informacje o interfejsie <xref:System.IFormattable> i <xref:System.ICustomFormatter>.  
   

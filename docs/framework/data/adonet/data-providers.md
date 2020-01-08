@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 3891cae272d93c2bb1ba8929a40fbdb8c332765c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2c986aab33f2c4dcefb5924ea61e8b9f6b3c50a3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785648"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347811"
 ---
 # <a name="net-framework-data-providers"></a>Dostawcy danych .NET Framework
-Dostawca danych .NET Framework jest używany do łączenia się z bazą danych, wykonywania poleceń i pobierania wyników. Te wyniki są przetwarzane bezpośrednio, umieszczane w <xref:System.Data.DataSet> , aby były udostępniane użytkownikowi w miarę potrzeby, w połączeniu z danymi z wielu źródeł lub zdalnie między warstwami. Dostawcy danych .NET Framework są lekkie, tworząc minimalną warstwę między źródłem danych i kodem, zwiększając wydajność bez ograniczania funkcjonalności.  
+Dostawca danych .NET Framework jest używany do łączenia się z bazą danych, wykonywania poleceń i pobierania wyników. Te wyniki są przetwarzane bezpośrednio, umieszczane w <xref:System.Data.DataSet>, aby można było je uwidocznić użytkownikowi w razie potrzeby, w połączeniu z danymi z wielu źródeł lub zdalnie między warstwami. Dostawcy danych .NET Framework są lekkie, tworząc minimalną warstwę między źródłem danych i kodem, zwiększając wydajność bez ograniczania funkcjonalności.  
   
  Poniższa tabela zawiera listę dostawców danych uwzględnionych w .NET Framework.  
   
 |Dostawca danych .NET Framework|Opis|  
 |-------------------------------------------------------------------------------|-----------------|  
-|.NET Framework Dostawca danych SQL Server|Zapewnia dostęp do danych Microsoft SQL Server. <xref:System.Data.SqlClient> Używa przestrzeni nazw.|  
-|.NET Framework Dostawca danych OLE DB|Dla źródeł danych udostępnianych przy użyciu OLE DB. <xref:System.Data.OleDb> Używa przestrzeni nazw.|  
-|.NET Framework Dostawca danych dla ODBC|Dla źródeł danych narażonych na korzystanie z ODBC. <xref:System.Data.Odbc> Używa przestrzeni nazw.|  
-|.NET Framework Dostawca danych dla programu Oracle|Dla źródeł danych Oracle. .NET Framework dostawca danych dla programu Oracle obsługuje oprogramowanie klienckie Oracle w wersji 8.1.7 lub nowszej, a następnie <xref:System.Data.OracleClient> używa przestrzeni nazw.|  
-|Dostawca EntityClient|Zapewnia dostęp do danych dla aplikacji Entity Data Model (EDM). <xref:System.Data.EntityClient> Używa przestrzeni nazw.|  
+|.NET Framework Dostawca danych SQL Server|Zapewnia dostęp do danych Microsoft SQL Server. Używa przestrzeni nazw <xref:System.Data.SqlClient>.|  
+|.NET Framework Dostawca danych OLE DB|Dla źródeł danych udostępnianych przy użyciu OLE DB. Używa przestrzeni nazw <xref:System.Data.OleDb>.|  
+|.NET Framework Dostawca danych dla ODBC|Dla źródeł danych narażonych na korzystanie z ODBC. Używa przestrzeni nazw <xref:System.Data.Odbc>.|  
+|.NET Framework Dostawca danych dla programu Oracle|Dla źródeł danych Oracle. .NET Framework Dostawca danych dla programu Oracle obsługuje oprogramowanie klienckie Oracle w wersji 8.1.7 lub nowszej, a następnie używa przestrzeni nazw <xref:System.Data.OracleClient>.|  
+|Dostawca EntityClient|Zapewnia dostęp do danych dla aplikacji Entity Data Model (EDM). Używa przestrzeni nazw <xref:System.Data.EntityClient>.|  
 |.NET Framework Dostawca danych SQL Server Compact 4,0.|Zapewnia dostęp do danych dla Microsoft SQL Server Compact 4,0. Używa przestrzeni nazw [System. Data. SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) .|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>Podstawowe obiekty dostawców danych .NET Framework  
@@ -31,22 +31,22 @@ Dostawca danych .NET Framework jest używany do łączenia się z bazą danych, 
   
 |Obiekt|Opis|  
 |------------|-----------------|  
-|`Connection`|Ustanawia połączenie z określonym źródłem danych. Klasa bazowa dla wszystkich `Connection` obiektów <xref:System.Data.Common.DbConnection> jest klasą.|  
-|`Command`|Wykonuje polecenie względem źródła danych. Uwidacznia `Parameters` i może być `Transaction` wykonywane w zakresie od a `Connection`do. Klasa bazowa dla wszystkich `Command` obiektów <xref:System.Data.Common.DbCommand> jest klasą.|  
-|`DataReader`|Odczytuje strumień danych tylko do odczytu z źródła danych. Klasa bazowa dla wszystkich `DataReader` obiektów <xref:System.Data.Common.DbDataReader> jest klasą.|  
-|`DataAdapter`|`DataSet` Wypełnia i rozwiązuje aktualizacje ze źródłem danych. Klasa bazowa dla wszystkich `DataAdapter` obiektów <xref:System.Data.Common.DbDataAdapter> jest klasą.|  
+|`Connection`|Ustanawia połączenie z określonym źródłem danych. Klasa bazowa dla wszystkich obiektów `Connection` jest klasą <xref:System.Data.Common.DbConnection>.|  
+|`Command`|Wykonuje polecenie względem źródła danych. Uwidacznia `Parameters` i może być wykonywany w zakresie `Transaction` z `Connection`. Klasa bazowa dla wszystkich obiektów `Command` jest klasą <xref:System.Data.Common.DbCommand>.|  
+|`DataReader`|Odczytuje strumień danych tylko do odczytu z źródła danych. Klasa bazowa dla wszystkich obiektów `DataReader` jest klasą <xref:System.Data.Common.DbDataReader>.|  
+|`DataAdapter`|Wypełnia `DataSet` i rozwiązuje aktualizacje ze źródłem danych. Klasa bazowa dla wszystkich obiektów `DataAdapter` jest klasą <xref:System.Data.Common.DbDataAdapter>.|  
   
  Oprócz klas podstawowych wymienionych w tabeli wcześniej w tym dokumencie, dostawca danych .NET Framework również zawiera klasy wymienione w poniższej tabeli.  
   
 |Obiekt|Opis|  
 |------------|-----------------|  
-|`Transaction`|Rejestrowane są polecenia w transakcjach w źródle danych. Klasa bazowa dla wszystkich `Transaction` obiektów <xref:System.Data.Common.DbTransaction> jest klasą. ADO.NET zapewnia również obsługę transakcji przy użyciu klas w <xref:System.Transactions> przestrzeni nazw.|  
-|`CommandBuilder`|Obiekt pomocnika, który automatycznie generuje właściwości `DataAdapter` polecenia lub dziedziczy informacje o parametrach z procedury składowanej i wypełnia `Parameters` kolekcję `Command` obiektu. Klasa bazowa dla wszystkich `CommandBuilder` obiektów <xref:System.Data.Common.DbCommandBuilder> jest klasą.|  
-|`ConnectionStringBuilder`|Obiekt pomocnika, który zapewnia prosty sposób tworzenia zawartości parametrów połączenia używanych przez `Connection` obiekty i zarządzania nią. Klasa bazowa dla wszystkich `ConnectionStringBuilder` obiektów <xref:System.Data.Common.DbConnectionStringBuilder> jest klasą.|  
-|`Parameter`|Definiuje parametry danych wejściowych, wyjściowych i wartości zwracanych dla poleceń i procedur składowanych. Klasa bazowa dla wszystkich `Parameter` obiektów <xref:System.Data.Common.DbParameter> jest klasą.|  
-|`Exception`|Zwracany w przypadku napotkania błędu w źródle danych. W przypadku błędu na kliencie .NET Framework dostawcy danych zgłaszają wyjątek .NET Framework. Klasa bazowa dla wszystkich `Exception` obiektów <xref:System.Data.Common.DbException> jest klasą.|  
+|`Transaction`|Rejestrowane są polecenia w transakcjach w źródle danych. Klasa bazowa dla wszystkich obiektów `Transaction` jest klasą <xref:System.Data.Common.DbTransaction>. ADO.NET zapewnia również obsługę transakcji przy użyciu klas w przestrzeni nazw <xref:System.Transactions>.|  
+|`CommandBuilder`|Obiekt pomocnika, który automatycznie generuje właściwości polecenia `DataAdapter` lub dziedziczy informacje o parametrach z procedury składowanej i wypełnia `Parameters` kolekcję obiektu `Command`. Klasa bazowa dla wszystkich obiektów `CommandBuilder` jest klasą <xref:System.Data.Common.DbCommandBuilder>.|  
+|`ConnectionStringBuilder`|Obiekt pomocnika, który zapewnia prosty sposób tworzenia zawartości parametrów połączenia używanych przez obiekty `Connection` i zarządzania nią. Klasa bazowa dla wszystkich obiektów `ConnectionStringBuilder` jest klasą <xref:System.Data.Common.DbConnectionStringBuilder>.|  
+|`Parameter`|Definiuje parametry danych wejściowych, wyjściowych i wartości zwracanych dla poleceń i procedur składowanych. Klasa bazowa dla wszystkich obiektów `Parameter` jest klasą <xref:System.Data.Common.DbParameter>.|  
+|`Exception`|Zwracany w przypadku napotkania błędu w źródle danych. W przypadku błędu na kliencie .NET Framework dostawcy danych zgłaszają wyjątek .NET Framework. Klasa bazowa dla wszystkich obiektów `Exception` jest klasą <xref:System.Data.Common.DbException>.|  
 |`Error`|Ujawnia informacje z ostrzeżenia lub błędu zwróconego przez źródło danych.|  
-|`ClientPermission`|Dostępne dla atrybutów zabezpieczeń dostępu kodu dostawcy danych .NET Framework. Klasa bazowa dla wszystkich `ClientPermission` obiektów <xref:System.Data.Common.DBDataPermission> jest klasą.|  
+|`ClientPermission`|Dostępne dla atrybutów zabezpieczeń dostępu kodu dostawcy danych .NET Framework. Klasa bazowa dla wszystkich obiektów `ClientPermission` jest klasą <xref:System.Data.Common.DBDataPermission>.|  
   
 ## <a name="net-framework-data-provider-for-sql-server-sqlclient"></a>.NET Framework Dostawca danych SQL Server (SqlClient)  
  Dostawca danych .NET Framework dla SQL Server (SqlClient) używa własnego protokołu do komunikowania się z SQL Server. Jest to lekkie i dobrze działa, ponieważ jest zoptymalizowany pod kątem dostępu do SQL Server bezpośrednio bez dodawania warstwy OLE DB lub Open Database Connectivity (ODBC). Poniższa ilustracja kontrastuje Dostawca danych .NET Framework dla SQL Server z .NET Framework Dostawca danych dla OLE DB. Dostawca danych .NET Framework dla OLE DB komunikuje się ze OLE DB źródłem danych za pomocą składnika usługi OLE DB, który zapewnia obsługę puli połączeń i usług transakcyjnych oraz dostawcę OLE DB dla źródła danych.  
@@ -54,14 +54,14 @@ Dostawca danych .NET Framework jest używany do łączenia się z bazą danych, 
 > [!NOTE]
 > .NET Framework Dostawca danych dla ODBC ma podobną architekturę do .NET Framework Dostawca danych dla OLE DB; na przykład wywołuje do składnika usługi ODBC.  
   
- ![Data providers](./media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
+ ![Dostawcy danych](./media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
 Porównanie Dostawca danych .NET Framework dla SQL Server i .NET Framework Dostawca danych dla OLE DB  
   
- Dostawca danych .NET Framework klas SQL Server znajdują się w <xref:System.Data.SqlClient> przestrzeni nazw.  
+ Dostawca danych .NET Framework klas SQL Server znajdują się w przestrzeni nazw <xref:System.Data.SqlClient>.  
   
- Dostawca danych .NET Framework dla SQL Server obsługuje zarówno transakcje lokalne, jak i rozproszone. W przypadku transakcji rozproszonych SQL Server Dostawca danych .NET Framework, domyślnie jest automatycznie rejestrowana w transakcji i uzyskuje szczegóły transakcji z usług składowych systemu Windows lub <xref:System.Transactions>. Aby uzyskać więcej informacji, zobacz [transakcje i współbieżność](transactions-and-concurrency.md).  
+ Dostawca danych .NET Framework dla SQL Server obsługuje zarówno transakcje lokalne, jak i rozproszone. W przypadku transakcji rozproszonych .NET Framework Dostawca danych dla SQL Server domyślnie automatycznie zarejestrowana w transakcji i uzyskuje szczegóły transakcji z usług składników systemu Windows lub <xref:System.Transactions>. Aby uzyskać więcej informacji, zobacz [transakcje i współbieżność](transactions-and-concurrency.md).  
   
- Poniższy przykład kodu pokazuje, `System.Data.SqlClient` jak uwzględnić przestrzeń nazw w aplikacjach.  
+ Poniższy przykład kodu pokazuje, jak uwzględnić przestrzeń nazw `System.Data.SqlClient` w aplikacjach.  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -76,7 +76,7 @@ using System.Data.SqlClient;
   
  W poniższej tabeli przedstawiono dostawców, którzy zostali przetestowani za pomocą ADO.NET.  
   
-|Sterownik|Dostawca|  
+|Sterownik|Provider|  
 |------------|--------------|  
 |SQLOLEDB|Dostawca OLE DB firmy Microsoft dla SQL Server|  
 |MSDAORA|Dostawca OLE DB firmy Microsoft dla oprogramowania Oracle|  
@@ -89,7 +89,7 @@ using System.Data.SqlClient;
   
  Dostawca danych .NET Framework dla OLE DB nie działa z dostawcą OLE DB dla ODBC (MSDASQL). Aby uzyskać dostęp do źródła danych ODBC przy użyciu ADO.NET, użyj Dostawca danych .NET Framework dla ODBC.  
   
- Dostawca danych .NET Framework klas OLE DB znajdują się w <xref:System.Data.OleDb> przestrzeni nazw. Poniższy przykład kodu pokazuje, `System.Data.OleDb` jak uwzględnić przestrzeń nazw w aplikacjach.  
+ .NET Framework Dostawca danych dla klas OLE DB znajdują się w przestrzeni nazw <xref:System.Data.OleDb>. Poniższy przykład kodu pokazuje, jak uwzględnić przestrzeń nazw `System.Data.OleDb` w aplikacjach.  
   
 ```vb  
 Imports System.Data.OleDb  
@@ -106,13 +106,13 @@ using System.Data.OleDb;
   
 |Sterownik|  
 |------------|  
-|SQL Server|  
+|Serwer SQL|  
 |ODBC firmy Microsoft dla programu Oracle|  
 |Sterownik programu Microsoft Access (*. mdb)|  
   
- .NET Framework dostawca danych dla klas ODBC znajdują się w <xref:System.Data.Odbc> przestrzeni nazw.  
+ .NET Framework Dostawca danych dla klas ODBC znajdują się w przestrzeni nazw <xref:System.Data.Odbc>.  
   
- Poniższy przykład kodu pokazuje, `System.Data.Odbc` jak uwzględnić przestrzeń nazw w aplikacjach.  
+ Poniższy przykład kodu pokazuje, jak uwzględnić przestrzeń nazw `System.Data.Odbc` w aplikacjach.  
   
 ```vb  
 Imports System.Data.Odbc  
@@ -123,16 +123,16 @@ using System.Data.Odbc;
 ```  
   
 > [!NOTE]
-> Dostawca danych .NET Framework dla ODBC wymaga programu MDAC 2,6 lub nowszej wersji, a zaleca się używanie programu MDAC 2,8 z dodatkiem SP1. Program MDAC 2,8 z dodatkiem SP1 można pobrać z [Centrum deweloperów dostępu do danych i magazynu](https://go.microsoft.com/fwlink/?linkid=4173).  
+> Dostawca danych .NET Framework dla ODBC wymaga programu MDAC 2,6 lub nowszej wersji, a zaleca się używanie programu MDAC 2,8 z dodatkiem SP1. Program MDAC 2,8 z dodatkiem SP1 można pobrać z [Centrum pobierania Microsoft](https://www.microsoft.com/download/details.aspx?id=5793).
   
 ## <a name="net-framework-data-provider-for-oracle"></a>.NET Framework Dostawca danych dla programu Oracle  
  .NET Framework Dostawca danych dla programu Oracle (OracleClient) umożliwia dostęp do danych w źródłach danych Oracle przy użyciu oprogramowania łączności klienta Oracle. Dostawca danych obsługuje oprogramowanie klienckie Oracle w wersji 8.1.7 lub nowszej. Dostawca danych obsługuje zarówno transakcje lokalne, jak i rozproszone. Aby uzyskać więcej informacji, zobacz [transakcje i współbieżność](transactions-and-concurrency.md).  
   
  Aby można było nawiązać połączenie ze źródłem danych Oracle, Dostawca danych .NET Framework dla systemu Oracle wymaga oprogramowania klienckiego Oracle (w wersji 8.1.7 lub nowszej).  
   
- .NET Framework dostawca danych dla klas Oracle znajdują się w <xref:System.Data.OracleClient> przestrzeni nazw i znajdują się `System.Data.OracleClient.dll` w zestawie. Należy odwoływać się zarówno `System.Data.dll` do, `System.Data.OracleClient.dll` jak i podczas kompilowania aplikacji, która używa dostawcy danych.  
+ .NET Framework Dostawca danych dla klas Oracle znajdują się w <xref:System.Data.OracleClient> przestrzeni nazw i znajdują się w zestawie `System.Data.OracleClient.dll`. Podczas kompilowania aplikacji, która korzysta z dostawcy danych, należy odwoływać się zarówno do `System.Data.dll`, jak i `System.Data.OracleClient.dll`.  
   
- Poniższy przykład kodu pokazuje, `System.Data.OracleClient` jak uwzględnić przestrzeń nazw w aplikacjach.  
+ Poniższy przykład kodu pokazuje, jak uwzględnić przestrzeń nazw `System.Data.OracleClient` w aplikacjach.  
   
 ```vb  
 Imports System.Data  
@@ -147,7 +147,7 @@ using System.Data.OracleClient;
 ## <a name="choosing-a-net-framework-data-provider"></a>Wybieranie Dostawca danych .NET Framework  
  W zależności od projektu i źródła danych aplikacji wybór .NET Framework dostawcy danych może poprawić wydajność, możliwości i integralność aplikacji. W poniższej tabeli omówiono zalety i ograniczenia poszczególnych dostawców danych .NET Framework.  
   
-|Dostawca|Uwagi|  
+|Provider|Uwagi|  
 |--------------|-----------|  
 |.NET Framework Dostawca danych SQL Server|Zalecane w przypadku aplikacji warstwy środkowej, które używają Microsoft SQL Server.<br /><br /> Zalecane w przypadku aplikacji jednowarstwowych, które korzystają z aparatu Microsoft Database Engine (MSDE) lub SQL Server.<br /><br /> Zalecane użycie dostawcy OLE DB dla SQL Server (SQLOLEDB) z Dostawca danych .NET Framework dla OLE DB.|  
 |.NET Framework Dostawca danych OLE DB|W przypadku SQL Server zaleca się .NET Framework Dostawca danych dla SQL Server zamiast tego dostawcy.<br /><br /> Zalecane w przypadku aplikacji jednowarstwowych, które korzystają z baz danych programu Microsoft Access. Nie zaleca się używania bazy danych programu Access dla aplikacji warstwy środkowej.|  

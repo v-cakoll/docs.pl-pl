@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 542440d6bf9d6809abee1ec37c85c44ce72fd132
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 081dce85946fab85cff474508c46770c762b9e76
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715159"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338723"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Projektanci niestandardowych elementów złożonych — prezenter elementu przepływu pracy
 
@@ -24,11 +24,13 @@ Ten przykład ilustruje:
 
 - Zastępowanie domyślnego projektanta w aplikacji przehostowanej.
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
+## <a name="set-up-build-and-run-the-sample"></a>Konfigurowanie, kompilowanie i uruchamianie przykładu
 
-1. Otwórz przykładowe rozwiązanie **UsingWorkflowItemsPresenter. sln** dla C# programu lub dla języka vb w programie Visual Studio 2010.
+1. Otwórz przykładowe rozwiązanie **UsingWorkflowItemsPresenter. sln** dla C# programu lub dla Visual Basic w programie Visual Studio 2010.
 
-2. Kompiluj i uruchamiaj rozwiązanie. Powinna zostać otwarta aplikacja projektanta przepływów pracy, na której można przeciągnąć działania na kanwę.
+2. Skompiluj i uruchom rozwiązanie.
+
+   Zostanie otwarta aplikacja projektanta przepływów pracy, na której można przeciągnąć działania na kanwę.
 
 ## <a name="sample-highlights"></a>Przykładowe najważniejsze elementy
 

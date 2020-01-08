@@ -2,12 +2,12 @@
 title: 'Porady: zapytanie o znaki w ciągu (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: 9da6d5abd6155a7af5ec59e17693e8acae7e7b73
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2f306a488610aaa5775210eba3d7312b092545a7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347721"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345524"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Instrukcje: zapytanie o znaki w ciągu (LINQ) (Visual Basic)
 
@@ -56,9 +56,9 @@ End Class
 ' ABCDE99F
 ```
 
-## <a name="compiling-the-code"></a>Kompilowanie kodu
+## <a name="compile-the-code"></a>Skompilować kod
 
-Utwórz projekt aplikacji konsolowej VB.NET z instrukcją `Imports` dla przestrzeni nazw System. LINQ.
+Utwórz projekt aplikacji konsolowej Visual Basic przy użyciu instrukcji `Imports` dla przestrzeni nazw System. LINQ.
 
 ## <a name="see-also"></a>Zobacz także
 

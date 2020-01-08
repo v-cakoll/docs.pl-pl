@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 274fea83c474d4b67aab919b604eda893d8204d7
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552862"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337578"
 ---
 # <a name="tour-of-net"></a>Przewodnik po środowisku .NET
 
@@ -27,13 +27,13 @@ Aby dowiedzieć się, jak skonfigurować środowisko programistyczne do uruchami
 
 Platforma .NET obsługuje wiele języków programowania. Implementacje platformy .NET implementują [Common Language Infrastructure (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), które między innymi określają środowisko uruchomieniowe niezależne od języka i współdziałanie języków. Oznacza to, że wybierasz dowolny język .NET do kompilowania aplikacji i usług na platformie .NET.
 
-Firma Microsoft aktywnie opracowuje i obsługuje trzy języki .NET C#: F#, i Visual Basic (VB). 
+Firma Microsoft aktywnie opracowuje i obsługuje trzy języki .NET C#: F#, i Visual Basic. 
 
-* C#jest proste, zaawansowane, bezpieczne dla typów i zorientowane obiektowo, zachowując wyrazistości i elegancji języka C-style. Każda osoba znająca język C i podobne Języki odnajduje kilka problemów w C#dostosowywaniu do programu. Zapoznaj się z [ C# przewodnikiem](../csharp/index.yml) , aby C#dowiedzieć się więcej.
+* C# to prosta, wydajna, bezpieczne i zorientowane obiektowo, przy zachowaniu wyrazistości i elegancji stylów języka c. Każda osoba znająca język C i podobne Języki odnajduje kilka problemów w C#dostosowywaniu do programu. Zapoznaj się z [ C# przewodnikiem](../csharp/index.yml) , aby C#dowiedzieć się więcej.
 
 * F#to międzyplatformowy, funkcjonalny język programowania, który obsługuje także tradycyjne programowanie zorientowane obiektowo i bezwzględne. Zapoznaj się z [ F# przewodnikiem](../fsharp/index.yml) , aby F#dowiedzieć się więcej.
 
-* Visual Basic to prosty język, dzięki któremu można dowiedzieć się, jak tworzyć różne aplikacje działające na platformie .NET. W językach .NET składnia VB jest najbardziej zbliżona do zwykłego języka ludzkiego, często ułatwiająca tworzenie nowych oprogramowania przez inne osoby.
+* Visual Basic to prosty język, dzięki któremu można dowiedzieć się, jak tworzyć różne aplikacje działające na platformie .NET. W językach .NET składnia Visual Basic jest najbardziej zbliżona do zwykłego języka ludzkiego, często ułatwiająca tworzenie nowych oprogramowania przez inne osoby.
 
 ## <a name="automatic-memory-management"></a>Automatyczne zarządzanie pamięcią
 
@@ -47,7 +47,7 @@ Nie istnieje podobne słowo kluczowe do cofnięcia przydzielenia pamięci, ponie
 
 Moduł wyrzucania elementów bezużytecznych jest jedną z usług, które zapewniają *bezpieczeństwo pamięci*. Program jest bezpieczny dla pamięci, jeśli uzyskuje dostęp tylko do przydzieloną pamięci. Na przykład środowisko uruchomieniowe zapewnia, że aplikacja nie uzyskuje dostępu do nieprzypisanej pamięci poza granicami tablicy.
 
-W poniższym przykładzie środowisko uruchomieniowe zgłasza wyjątek `InvalidIndexException`, aby wymusić bezpieczeństwo pamięci:
+W poniższym przykładzie środowisko uruchomieniowe zgłasza wyjątek <xref:System.IndexOutOfRangeException>, aby wymusić bezpieczeństwo pamięci:
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
@@ -65,7 +65,7 @@ Aby uzyskać więcej informacji, zobacz następujące tematy:
 
 * Dla C#programu można znaleźć w temacie [usingC# (odwołanie)](../csharp/language-reference/keywords/using-statement.md) .
 * W F#przypadku programu zobacz [Zarządzanie zasobami: słowo kluczowe use](../fsharp/language-reference/resource-management-the-use-keyword.md).
-* W przypadku języka VB Zobacz temat [using (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) .
+* Aby uzyskać Visual Basic, zobacz temat [using (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) .
 
 ## <a name="type-safety"></a>Bezpieczeństwo typów
 
@@ -79,11 +79,11 @@ Zabezpieczenia typu są również używane do wymuszania hermetyzacji przez zagw
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#, VB i F# obsługują *wnioskowanie typu*lokalnego. Wnioskowanie o typie oznacza, że kompilator określa typ wyrażenia po lewej stronie wyrażenia po prawej stronie. Nie oznacza to, że bezpieczeństwo typu jest zerwane lub nieuniknione. Typ wynikowy ma silny typ z wszystko, co oznacza. W poprzednim przykładzie `dog` jest zapisywana w celu wprowadzenia wnioskowania o typie, a pozostała część tego przykładu nie jest zmieniona:
+C#, Visual Basic i F# obsługują *wnioskowanie o typie*lokalnym. Wnioskowanie o typie oznacza, że kompilator określa typ wyrażenia po lewej stronie wyrażenia po prawej stronie. Nie oznacza to, że bezpieczeństwo typu jest zerwane lub nieuniknione. Typ wynikowy ma silny typ z wszystko, co oznacza. W poprzednim przykładzie `dog` jest zapisywana w celu wprowadzenia wnioskowania o typie, a pozostała część tego przykładu nie jest zmieniona:
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
-F#ma jeszcze więcej możliwości wnioskowania o typie niż w metodzie i w C# języku VB. Aby dowiedzieć się więcej, zobacz [wnioskowanie o typie](../fsharp/language-reference/type-inference.md).
+F#ma jeszcze więcej możliwości wnioskowania o typie niż w metodzie C# i Visual Basic. Aby dowiedzieć się więcej, zobacz [wnioskowanie o typie](../fsharp/language-reference/type-inference.md).
 
 ## <a name="delegates-and-lambdas"></a>Delegaci i wyrażenia lambda
 
@@ -97,7 +97,7 @@ W programie .NET Delegaty są często używane w obsłudze zdarzeń, w definiowa
 
 Typy ogólne umożliwiają programistom wprowadzanie *parametrów typu* podczas projektowania klas, które umożliwiają kod klienta (Użytkownicy typu), aby określić dokładny typ do użycia zamiast parametru typu.
 
-Typy ogólne zostały dodane w celu ułatwienia deweloperom implementowania ogólnych struktur danych. Przed przybyciem w celu wybrania typu, takiego jak typ `List`, powinien działać z elementami typu `object`. Miało to różne problemy z wydajnością i semantyką oraz potencjalne błędy w czasie wykonywania. Najbardziej Notorious tej ostatniej jest, gdy struktura danych zawiera, na przykład, zarówno liczby całkowite, jak i ciągi, i `InvalidCastException` jest generowany podczas pracy z członkami listy.
+Typy ogólne zostały dodane w celu ułatwienia deweloperom implementowania ogólnych struktur danych. Przed przybyciem, aby typ, taki jak typ `List`, był ogólny, musiał działać z elementami typu `object`. Miało to różne problemy z wydajnością i semantyką oraz potencjalne drobne błędy w czasie wykonywania. Typowy błąd czasu wykonywania polega na tym, że struktura danych zawiera na przykład zarówno liczby całkowite, jak i ciągi, a podczas przetwarzania członków listy jest zgłaszany <xref:System.InvalidCastException>.
 
 Poniższy przykład pokazuje program podstawowy uruchomiony przy użyciu wystąpienia <xref:System.Collections.Generic.List%601> typów:
 
@@ -113,7 +113,7 @@ Aby dowiedzieć się więcej o programowaniu asynchronicznym w programie .NET, R
 
 ## <a name="language-integrated-query-linq"></a>Language Integrated Query (LINQ)
 
-LINQ to zaawansowany zestaw funkcji dla C# i VB, który umożliwia pisanie prostego, deklaratywnego kodu do obsługi danych. Dane mogą znajdować się w wielu formularzach (takich jak obiekty znajdujące się w pamięci, bazy danych SQL lub dokumenty XML), ale kod LINQ, który jest zwykle nie różni się od źródła danych.
+LINQ to zaawansowany zestaw funkcji dla C# i Visual Basic, które umożliwiają pisanie prostego, deklaratywnego kodu do obsługi danych. Dane mogą znajdować się w wielu formularzach (takich jak obiekty znajdujące się w pamięci, bazy danych SQL lub dokumenty XML), ale kod LINQ, który jest zwykle nie różni się od źródła danych.
 
 Aby dowiedzieć się więcej i zapoznać się z przykładami, zobacz temat [LINQ (Language Integrated Query)](using-linq.md) .
 

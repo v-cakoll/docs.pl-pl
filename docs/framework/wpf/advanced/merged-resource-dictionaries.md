@@ -5,12 +5,12 @@ helpviewer_keywords:
 - merged resource dictionaries [WPF]
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
-ms.openlocfilehash: 6647e52ef8477221dd5849a19809a34fb06189a6
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 899955a9f3302e67de4efa0ce0cb6baf6bf0ec5d
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455420"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559784"
 ---
 # <a name="merged-resource-dictionaries"></a>Połączone słowniki zasobów
 zasoby [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] obsługują funkcję scalonego słownika zasobów. Ta funkcja udostępnia sposób definiowania części zasobów aplikacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] poza skompilowaną [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplikacji. Zasoby mogą być następnie współużytkowane przez aplikacje i bardziej wygodnie odizolowane pod kątem lokalizacji.  
@@ -20,7 +20,7 @@ zasoby [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-m
   
  [!code-xaml[ResourceMergeDictionary#MergedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
   
- Należy zauważyć, że element <xref:System.Windows.ResourceDictionary> nie ma [dyrektywy x:Key](../../xaml-services/x-key-directive.md), która jest zwykle wymagana dla wszystkich elementów w kolekcji zasobów. Ale inne odwołanie <xref:System.Windows.ResourceDictionary> w ramach kolekcji <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> jest specjalnym przypadkiem zarezerwowanym dla tego scenariusza scalonego słownika zasobów. <xref:System.Windows.ResourceDictionary> wprowadzający scalony słownik zasobów nie może mieć [dyrektywy x:Key](../../xaml-services/x-key-directive.md). Zazwyczaj każda <xref:System.Windows.ResourceDictionary> w kolekcji <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> określa atrybut <xref:System.Windows.ResourceDictionary.Source%2A>. Wartość <xref:System.Windows.ResourceDictionary.Source%2A> powinna być jednolitym identyfikatorem zasobów (URI), który jest rozpoznawany jako lokalizacja pliku zasobów do scalenia. Miejsce docelowe tego identyfikatora URI musi być innym plikiem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], z <xref:System.Windows.ResourceDictionary> jako jego element główny.  
+ Należy zauważyć, że element <xref:System.Windows.ResourceDictionary> nie ma [dyrektywy x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md), która jest zwykle wymagana dla wszystkich elementów w kolekcji zasobów. Ale inne odwołanie <xref:System.Windows.ResourceDictionary> w ramach kolekcji <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> jest specjalnym przypadkiem zarezerwowanym dla tego scenariusza scalonego słownika zasobów. <xref:System.Windows.ResourceDictionary> wprowadzający scalony słownik zasobów nie może mieć [dyrektywy x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md). Zazwyczaj każda <xref:System.Windows.ResourceDictionary> w kolekcji <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> określa atrybut <xref:System.Windows.ResourceDictionary.Source%2A>. Wartość <xref:System.Windows.ResourceDictionary.Source%2A> powinna być jednolitym identyfikatorem zasobów (URI), który jest rozpoznawany jako lokalizacja pliku zasobów do scalenia. Miejsce docelowe tego identyfikatora URI musi być innym plikiem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], z <xref:System.Windows.ResourceDictionary> jako jego element główny.  
   
 > [!NOTE]
 > Istnieje możliwość zdefiniowania zasobów w <xref:System.Windows.ResourceDictionary>, który jest określony jako scalony słownik, jako alternatywa dla określenia <xref:System.Windows.ResourceDictionary.Source%2A>lub oprócz zasobów uwzględnionych w określonym źródle. Nie jest to jednak typowy scenariusz; głównym scenariuszem dla scalonych słowników jest scalanie zasobów z zewnętrznych lokalizacji plików. Jeśli chcesz określić zasoby wewnątrz znacznika dla strony, należy zwykle zdefiniować je w głównym <xref:System.Windows.ResourceDictionary>, a nie w scalonych słownikach.  

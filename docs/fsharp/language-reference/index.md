@@ -1,13 +1,13 @@
 ---
-title: Materiały referencyjne dotyczące języka F#
+title: Dokumentacja języka
 description: Znajdź F# informacje o funkcjach języka z tego odwołania do tokenów języka, pojęć, typów, wyrażeń i tematów konstrukcyjnych obsługiwanych przez kompilator.
 ms.date: 05/16/2016
-ms.openlocfilehash: bd9894176fa736b9eed939d72972e676e2bd2671
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d557cc71b34eb7c005eaeb904b01a38b506639fe
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552905"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348198"
 ---
 # <a name="f-language-reference"></a>Materiały referencyjne dotyczące języka F#
 
@@ -83,7 +83,7 @@ W poniższej tabeli przedstawiono dostępne tematy referencyjne opisujące Typy 
 |[Jednostki miary](units-of-measure.md)|Opisuje jednostki miary. Wartości zmiennoprzecinkowe w F# mogą mieć skojarzone jednostki miary, które zwykle są używane do wskazywania długości, objętości, masy itd.|
 |[Dostawcy typów](../tutorials/type-providers/index.md)|Opis typu udostępnia i zawiera linki do przewodników dotyczących korzystania z wbudowanych dostawców typów w celu uzyskania dostępu do baz danych i usług sieci Web.|
 
-## <a name="f-expressions"></a>F#Wyrażeń
+## <a name="f-expressions"></a>F# Expressions
 
 W poniższej tabeli wymieniono tematy opisujące F# wyrażenia.
 

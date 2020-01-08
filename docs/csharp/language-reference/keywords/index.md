@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 91dbe36efd58c2455df5b38ac4bc6b1b56bc452f
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 4919aed8f5b1d134f3bbfce437228d1a67911a1b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552182"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345428"
 ---
 # <a name="c-keywords"></a>Słowa kluczowe języka C#
 
@@ -25,13 +25,13 @@ Słowa kluczowe są wstępnie zdefiniowanymi, zarezerwowanymi identyfikatorami, 
 |||||  
 |---|---|---|---|  
 |[abstract](abstract.md)|[as](../operators/type-testing-and-cast.md#as-operator)|[base](base.md)|[bool](../builtin-types/bool.md)|  
-|[break](break.md)|[byte](../builtin-types/integral-numeric-types.md)|[case](switch.md)|[efektywn](try-catch.md)|  
+|[break](break.md)|[byte](../builtin-types/integral-numeric-types.md)|[case](switch.md)|[catch](try-catch.md)|  
 |[char](../builtin-types/char.md)|[checked](checked.md)|[class](class.md)|[const](const.md)|  
 |[continue](continue.md)|[decimal](../builtin-types/floating-point-numeric-types.md)|[default](default.md)|[delegate](../builtin-types/reference-types.md)|  
-|[do](do.md)|[double](../builtin-types/floating-point-numeric-types.md)|[Przejmi](if-else.md)|[enum](enum.md)|  
+|[do](do.md)|[double](../builtin-types/floating-point-numeric-types.md)|[Przejmi](if-else.md)|[enum](../builtin-types/enum.md)|  
 |[event](event.md)|[explicit](../operators/user-defined-conversion-operators.md)|[extern](extern.md)|[false](../builtin-types/bool.md)|  
 |[finally](try-finally.md)|[FIXED](fixed-statement.md)|[float](../builtin-types/floating-point-numeric-types.md)|[for](for.md)|  
-|[spowodował](foreach-in.md)|[goto](goto.md)|[przypadku](if-else.md)|[implicit](../operators/user-defined-conversion-operators.md)|  
+|[spowodował](foreach-in.md)|[goto](goto.md)|[if](if-else.md)|[implicit](../operators/user-defined-conversion-operators.md)|  
 |[in](in.md)|[int](../builtin-types/integral-numeric-types.md)|[interface](interface.md)|[internal](internal.md)|
 |[is](is.md)|[lock](lock-statement.md)|[long](../builtin-types/integral-numeric-types.md)|[namespace](namespace.md)|
 |[new](../operators/new-operator.md)|[null](null.md)|[object](../builtin-types/reference-types.md)|[operator](../operators/operator-overloading.md)|
@@ -51,13 +51,13 @@ Słowa kluczowe są wstępnie zdefiniowanymi, zarezerwowanymi identyfikatorami, 
   
 ||||  
 |---|---|---|  
-|[add](add.md)|[Użyj](extern-alias.md)|[ascending](ascending.md)|
+|[add](add.md)|[alias](extern-alias.md)|[ascending](ascending.md)|
 |[async](async.md)|[await](../operators/await.md)|[by](by.md)|
 |[descending](descending.md)|[dynamic](../builtin-types/reference-types.md)|[equals](equals.md)|
-|[wniosek](from-clause.md)|[get](get.md)|[global](../operators/namespace-alias-qualifier.md)|
-|[Group](group-clause.md)|[into](into.md)|[Złącza](join-clause.md)|
+|[from](from-clause.md)|[get](get.md)|[global](../operators/namespace-alias-qualifier.md)|
+|[Group](group-clause.md)|[into](into.md)|[join](join-clause.md)|
 |[wpuść](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
-|[OrderBy](orderby-clause.md)|[częściowy (typ)](partial-type.md)|[częściowe (Metoda)](partial-method.md)|
+|[orderby](orderby-clause.md)|[częściowy (typ)](partial-type.md)|[częściowe (Metoda)](partial-method.md)|
 |[remove](remove.md)|[zaznaczenia](select-clause.md)|[set](set.md)|
 |[niezarządzane (ograniczenie typu ogólnego)](where-generic-type-constraint.md)|[value](value.md)|[var](var.md)|
 |[when (warunek filtru)](when.md)|[where (ograniczenie typu ogólnego)](where-generic-type-constraint.md)|[WHERE (klauzula zapytania)](where-clause.md)|

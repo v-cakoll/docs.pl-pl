@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 684361dbb97e70296a3061f71102662023f88d9a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5c75425783d3468ac42ef7cb32cd9c93e812192a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800511"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338349"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Instrukcje: Tworzenie usługi danych programu WCF uruchomionej w usługach IIS
 
@@ -132,7 +132,7 @@ Po utworzeniu usługi należy jawnie zapewnić dostęp do zasobów usługi danyc
 
 5. Aby połączyć model danych z bazą danych, wykonaj jedną z następujących czynności, a następnie kliknij przycisk **dalej**:
 
-    - Jeśli nie masz już skonfigurowanego połączenia z bazą danych, kliknij pozycję **nowe połączenie** i Utwórz nowe połączenie. Aby uzyskać więcej informacji, zobacz [How to: Create Connections to SQL Server Databases](https://go.microsoft.com/fwlink/?LinkId=123631). To wystąpienie SQL Server musi mieć dołączoną przykładową bazę danych Northwind.
+    - Jeśli nie masz już skonfigurowanego połączenia z bazą danych, kliknij pozycję **nowe połączenie** i Utwórz nowe połączenie. Aby uzyskać więcej informacji, zobacz [How to: Create Connections to SQL Server Databases](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). To wystąpienie SQL Server musi mieć dołączoną przykładową bazę danych Northwind.
 
          \- lub —
 

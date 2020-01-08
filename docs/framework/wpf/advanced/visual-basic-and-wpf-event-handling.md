@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5625b63f2a2162f8f188476bfd61bde4c717f1dd
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458301"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559862"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Obsługa zdarzeń Visual Basic oraz WPF
 W przypadku języka Microsoft Visual Basic .NET w konkretnym przypadku można użyć słowa kluczowego `Handles` specyficznego dla języka w celu skojarzenia programów obsługi zdarzeń z wystąpieniami, zamiast dołączać obsługi zdarzeń z atrybutami lub przy użyciu metody <xref:System.Windows.UIElement.AddHandler%2A>. Jednak technika `Handles` dołączania programów obsługi do wystąpień ma pewne ograniczenia, ponieważ składnia `Handles` nie może obsługiwać niektórych określonych funkcji zdarzeń kierowanych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] systemie zdarzeń.  
   
 ## <a name="using-handles-in-a-wpf-application"></a>Używanie "dojść" w aplikacji WPF  
- Programy obsługi zdarzeń, które są połączone z wystąpieniami i zdarzeniami ze `Handles` muszą być zdefiniowane w deklaracji klasy częściowej wystąpienia, co jest również wymaganiem dla programów obsługi zdarzeń, które są przypisywane za pomocą wartości atrybutów dla elementów. Na stronie można określić tylko `Handles` dla elementu, który ma <xref:System.Windows.FrameworkContentElement.Name%2A> wartość właściwości (lub zadeklarowaną [dyrektywę x:Name](../../xaml-services/x-name-directive.md) ). Dzieje się tak, ponieważ <xref:System.Windows.FrameworkContentElement.Name%2A> w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tworzy odwołanie do wystąpienia, które jest niezbędne do obsługi *wystąpienia.* format odwołania zdarzenia wymagany przez składnię `Handles`. Jedynym elementem, który może być używany dla `Handles` bez odwołania <xref:System.Windows.FrameworkContentElement.Name%2A>, jest wystąpienie elementu głównego, które definiuje klasę częściową.  
+ Programy obsługi zdarzeń, które są połączone z wystąpieniami i zdarzeniami ze `Handles` muszą być zdefiniowane w deklaracji klasy częściowej wystąpienia, co jest również wymaganiem dla programów obsługi zdarzeń, które są przypisywane za pomocą wartości atrybutów dla elementów. Na stronie można określić tylko `Handles` dla elementu, który ma <xref:System.Windows.FrameworkContentElement.Name%2A> wartość właściwości (lub zadeklarowaną [dyrektywę x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) ). Dzieje się tak, ponieważ <xref:System.Windows.FrameworkContentElement.Name%2A> w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tworzy odwołanie do wystąpienia, które jest niezbędne do obsługi *wystąpienia.* format odwołania zdarzenia wymagany przez składnię `Handles`. Jedynym elementem, który może być używany dla `Handles` bez odwołania <xref:System.Windows.FrameworkContentElement.Name%2A>, jest wystąpienie elementu głównego, które definiuje klasę częściową.  
   
  Tę samą procedurę obsługi można przypisać do wielu elementów, oddzielając *wystąpienia.* odwołania do zdarzeń po `Handles` przecinkami.  
   
@@ -37,7 +37,7 @@ W przypadku języka Microsoft Visual Basic .NET w konkretnym przypadku można u�
 > Nie należy używać składni `Handles` w kodzie Visual Basic podczas określania programu obsługi zdarzeń dla tego samego zdarzenia w języku XAML. W takim przypadku program obsługi zdarzeń jest wywoływany dwukrotnie.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>Jak WPF implementuje funkcje "Handles"  
- Po skompilowaniu strony [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] plik pośredni deklaruje `Friend` `WithEvents` odwołań do każdego elementu na stronie, który ma zestaw właściwości <xref:System.Windows.FrameworkContentElement.Name%2A> (lub zadeklarowana [dyrektywa x:Name](../../xaml-services/x-name-directive.md) ). Każde nazwane wystąpienie jest potencjalnie elementem, który można przypisać do programu obsługi za pomocą `Handles`.  
+ Po skompilowaniu strony [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] plik pośredni deklaruje `Friend` `WithEvents` odwołań do każdego elementu na stronie, który ma zestaw właściwości <xref:System.Windows.FrameworkContentElement.Name%2A> (lub zadeklarowana [dyrektywa x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) ). Każde nazwane wystąpienie jest potencjalnie elementem, który można przypisać do programu obsługi za pomocą `Handles`.  
   
 > [!NOTE]
 > W programie Visual Studio technologia IntelliSense może pokazać, które elementy są dostępne dla `Handles` odwołanie na stronie. Jednak może to potrwać jeden przebieg kompilacji, aby plik pośredni mógł wypełnić wszystkie `Friends` odwołania.  

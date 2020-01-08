@@ -2,12 +2,12 @@
 title: Charakterystyka funkcji programu Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c534575fcf70035bc728642dbb65b05db1fd4686
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802599"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345107"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Charakterystyka funkcji programu Windows Workflow Foundation
 
@@ -189,7 +189,7 @@ Działanie Flowchart może służyć do implementowania gry do odgadnięcia. Gra
 
 ## <a name="procedural-activities-sequence-if-foreach-switch-assign-dowhile-while"></a>Działania proceduralne (sekwencja, if, ForEach, Switch, Assign, DoWhile, while)
 
-Działania proceduralne zapewniają mechanizm modelowania sekwencyjnego przepływu sterowania przy użyciu koncepcji, które są znane dla programistów. Działania te umożliwiają tradycyjną strukturę programowania strukturalnego i, w razie potrzeby, zapewniają parzystość języka za pomocą wspólnych C#języków proceduralnych, takich jak/VB.
+Działania proceduralne zapewniają mechanizm modelowania sekwencyjnego przepływu sterowania przy użyciu koncepcji, które są znane dla programistów. Te działania umożliwiają włączenie konstrukcji języka programowania z tradycyjną strukturą i, w razie potrzeby, zapewniania parzystości C# języka za pomocą wspólnych języków proceduralnych, takich jak i Visual Basic.
 
 ### <a name="getting-started"></a>Wprowadzenie
 
@@ -231,7 +231,7 @@ Działanie <xref:System.Activities.Statements.InvokeMethod> umożliwia wywoływa
 
 ## <a name="error-handling-activities"></a>Działania obsługi błędów
 
-Działanie <xref:System.Activities.Statements.TryCatch> zapewnia mechanizm przechwytywania wyjątków, które występują podczas wykonywania zestawu zawartych działań (podobnie jak konstrukcja try/catch w C#/VB). <xref:System.Activities.Statements.TryCatch> zapewnia obsługę wyjątków na poziomie przepływu pracy. Gdy zostanie zgłoszony nieobsługiwany wyjątek, przepływ pracy zostanie przerwany i blok finally nie zostanie wykonany. To zachowanie jest zgodne z C#programem.
+Działanie <xref:System.Activities.Statements.TryCatch> zapewnia mechanizm przechwytywania wyjątków, które występują podczas wykonywania zestawu zawartych działań (podobnie jak konstrukcja try/catch w C# i Visual Basic). <xref:System.Activities.Statements.TryCatch> zapewnia obsługę wyjątków na poziomie przepływu pracy. Gdy zostanie zgłoszony nieobsługiwany wyjątek, przepływ pracy zostanie przerwany i blok finally nie zostanie wykonany. To zachowanie jest zgodne z C#programem.
 
 ### <a name="getting-started"></a>Wprowadzenie
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ca2513a0f865fd7da728f7d3247bdb7b50a2f48a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8701991542f1e950914d5b4275ae8dcd68ad83a1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036427"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345367"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatory arytmetyczneC# (odwołanie)
 
@@ -47,7 +47,7 @@ Te operatory są obsługiwane przez wszystkie typy liczbowe [całkowite](../buil
 
 Jednoargumentowy operator przyrostu `++` zwiększa jego operand o 1. Operand musi być zmienną, dostępem do [Właściwości](../../programming-guide/classes-and-structs/properties.md) lub dostępem [indeksatora](../../programming-guide/indexers/index.md) .
 
-Operator przyrostu jest obsługiwany w dwóch formach: Przyrostkowy operator przyrostu, `x++` i operator przyrostu prefiksu, `++x`.
+Operator przyrostu jest obsługiwany w dwóch formach: Przyrostkowy operator przyrostu, `x++`i operator przyrostu prefiksu, `++x`.
 
 ### <a name="postfix-increment-operator"></a>Operator inkrementacji przyrostkowej
 
@@ -65,7 +65,7 @@ Wynik `++x` jest wartością `x` *po* operacji, jak pokazano w poniższym przyk�
 
 Operator zmniejszania jednoargumentowego `--` zmniejsza jego operand o 1. Operand musi być zmienną, dostępem do [Właściwości](../../programming-guide/classes-and-structs/properties.md) lub dostępem [indeksatora](../../programming-guide/indexers/index.md) .
 
-Operator zmniejszania jest obsługiwany w dwóch formach: operator zmniejszania przyrostkowego, `x--` i operator zmniejszania prefiksu, `--x`.
+Operator zmniejszania jest obsługiwany w dwóch formach: operator zmniejszania przyrostkowego, `x--`i operator zmniejszania prefiksu, `--x`.
 
 ### <a name="postfix-decrement-operator"></a>Operator dekrementacji przyrostkowej
 
@@ -105,13 +105,13 @@ W przypadku operandów typu Integer wynik operatora `/` jest typu integer i jest
 
 [!code-csharp-interactive[integer division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerDivision)]
 
-Aby uzyskać iloraz dwóch operandów jako liczby zmiennoprzecinkowej, użyj typu `float`, `double` lub `decimal`:
+Aby uzyskać iloraz dwóch operandów jako liczby zmiennoprzecinkowej, użyj typu `float`, `double`lub `decimal`:
 
 [!code-csharp-interactive[integer as floating-point division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerAsFloatingPointDivision)]
 
 ### <a name="floating-point-division"></a>Dzielenie zmiennoprzecinkowe
 
-Dla typów `float`, `double` i `decimal`, wynik operatora `/` jest ilorazem dwóch operandów:
+Dla typów `float`, `double`i `decimal`, wynik operatora `/` jest ilorazem dwóch operandów:
 
 [!code-csharp-interactive[floating-point division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointDivision)]
 
@@ -134,7 +134,7 @@ Użyj metody <xref:System.Math.DivRem%2A?displayProperty=nameWithType>, aby obli
 W przypadku operandów `float` i `double` wynik `x % y` dla skończonego `x` i `y` jest wartością `z` taką, która
 
 - Znak `z`, jeśli wartość jest różna od zera, jest taka sama jak znak `x`.
-- Wartość bezwzględna `z` jest wartością wygenerowaną przez `|x| - n * |y|`, gdzie `n` jest największą możliwą liczbą całkowitą, która jest mniejsza lub równa `|x| / |y|` i `|x|` i `|y|` są wartościami bezwzględnymi `x` i `y` piwo.
+- Wartość bezwzględna `z` jest wartością wygenerowaną przez `|x| - n * |y|`, gdzie `n` jest największą możliwą liczbą całkowitą, która jest mniejsza lub równa `|x| / |y|` i `|x|` i `|y|` są odpowiednio wartościami bezwzględnymi `x` i `y`.
 
 > [!NOTE]
 > Ta metoda przetwarzania reszty jest analogiczna do tego, który jest używany dla argumentów wartości całkowitych, ale różni się od specyfikacji IEEE 754. Jeśli potrzebujesz pozostałej operacji, która jest zgodna ze specyfikacją IEEE 754, użyj metody <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>.
@@ -153,7 +153,7 @@ Operator dodawania `+` oblicza sumę argumentów operacji:
 
 [!code-csharp-interactive[addition operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Addition)]
 
-Można też użyć operatora `+`, aby łączyć ciągów i delegatów. Aby uzyskać więcej informacji, zobacz artykuł dotyczący [operatorów `+` i `+=`](addition-operator.md) .
+Można też użyć operatora `+`, aby łączyć ciągów i delegatów. Aby uzyskać więcej informacji, zobacz artykuł dotyczący [operatorów`+` i `+=`](addition-operator.md) .
 
 ## <a name="subtraction-operator--"></a>Operator odejmowania —
 
@@ -165,7 +165,7 @@ Można też użyć operatora `-` do usuwania delegatów. Aby uzyskać więcej in
 
 ## <a name="compound-assignment"></a>Przypisanie złożone
 
-Dla operatora binarnego `op` wyrażenie złożonego przypisania formularza
+Dla operatora binarnego `op`wyrażenie złożonego przypisania formularza
 
 ```csharp
 x op= y
@@ -177,17 +177,17 @@ jest równoważny
 x = x op y
 ```
 
-z tą różnicą, że `x` jest obliczana tylko raz.
+z tą różnicą, że `x` jest obliczone tylko raz.
 
 Poniższy przykład ilustruje użycie przypisania złożonego z operatorami arytmetycznymi:
 
 [!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
-Ze względu na [promocje liczbowe](~/_csharplang/spec/expressions.md#numeric-promotions)wynik operacji `op` może nie być niejawnie konwertowany na typ `T` `x`. W takim przypadku, jeśli `op` jest wstępnie zdefiniowanym operatorem, a wynik operacji jest jawnie konwertowany na typ `T` `x`, wyrażenie złożonego przypisania formularza `x op= y` jest równoważne `x = (T)(x op y)` , z tą różnicą, że `x` jest oceniane tylko raz. Poniższy przykład ilustruje takie zachowanie:
+Ze względu na [promocje liczbowe](~/_csharplang/spec/expressions.md#numeric-promotions)wynik operacji `op` może nie być niejawnie konwertowany na typ `T` `x`. W takim przypadku, jeśli `op` jest wstępnie zdefiniowanym operatorem, a wynik operacji jest jawnie konwertowany na typ `T` `x`, wyrażenie przypisania złożonego `x op= y` jest równoważne z `x = (T)(x op y)`, z tą różnicą, że `x` są oceniane tylko raz. Poniższy przykład ilustruje takie zachowanie:
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
-Możesz również użyć operatorów `+=` i `-=`, aby subskrybować lub anulować subskrypcję [zdarzenia](../keywords/event.md). Aby uzyskać więcej informacji, zobacz [How to: subskrybowanie i anulowanie subskrypcji zdarzeń](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+Możesz również użyć operatorów `+=` i `-=`, aby subskrybować lub anulować subskrypcję [zdarzenia](../keywords/event.md). Aby uzyskać więcej informacji, zobacz [subskrybowanie i anulowanie subskrypcji zdarzeń](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
 ## <a name="operator-precedence-and-associativity"></a>Pierwszeństwo operatorów i łączność
 

@@ -1,43 +1,43 @@
 ---
-title: C#Interfejsy — Przewodnik po przykładzie C# języka
-description: Interfejsy definiują kontraktów implementowany przez typy wC#
+title: C#Interfejsy — Przewodnik po C# języku
+description: Interfejsy definiują kontrakty zaimplementowane przez typy wC#
 ms.date: 08/10/2016
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.openlocfilehash: 240ddfb321c5a89c8aada4353845915d0e242ae0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d10d9f69cebe9a05cdff9b9ff5d817237bf8c56f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634554"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346837"
 ---
 # <a name="interfaces"></a>Interfejsy
 
-***Interfejsu*** definiuje kontrakt, który może być implementowany przez klas i struktur. Interfejs może zawierać metody, właściwości, zdarzeń i indeksatorów. Interfejs nie zawiera implementacji członków definiuje — jedynie określa elementy członkowskie, które muszą być dostarczane przez klasy lub struktury, które implementują interfejs.
+***Interfejs*** definiuje kontrakt, który może być zaimplementowany przez klasy i struktury. Interfejs może zawierać metody, właściwości, zdarzenia i indeksatory. Interfejs nie dostarcza implementacji elementów członkowskich, które definiuje — tylko określa elementy członkowskie, które muszą być dostarczone przez klasy lub struktury, które implementują interfejs.
 
-Interfejsy mogą stosować ***wielokrotne dziedziczenie***. W poniższym przykładzie interfejs `IComboBox` dziedziczy z obu `ITextBox` i `IListBox`.
+Interfejsy mogą wykorzystywać ***wielokrotne dziedziczenie***. W poniższym przykładzie interfejs `IComboBox` dziedziczy po obu `ITextBox` i `IListBox`.
 
 [!code-csharp[InterfacesOne](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L5-L17)]
 
-Klasy i struktury można zaimplementować wiele interfejsów. W poniższym przykładzie klasa `EditBox` implementuje interfejsy `IControl` i `IDataBound`.
+Klasy i struktury mogą implementować wiele interfejsów. W poniższym przykładzie Klasa `EditBox` implementuje obu `IControl` i `IDataBound`.
 
 [!code-csharp[InterfacesTwo](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L19-L27)]
 
-Gdy klasa lub struktura implementuje danego interfejsu, wystąpienia tej klasy lub struktury mogą być niejawnie konwertowane do tego typu interfejsu. Na przykład
+Gdy Klasa lub struktura implementuje określony interfejs, wystąpienia tej klasy lub struktury mogą być niejawnie konwertowane na typ tego interfejsu. Na przykład
 
 [!code-csharp[InterfacesThree](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L33-L35)]
 
-W przypadkach, gdy wystąpienie nie jest znany statycznie do implementowania określonego interfejsu służy rzutowania typu dynamicznego. Na przykład poniższe instrukcje użyć rzutowania typu dynamicznego do uzyskiwania obiektu `IControl` i `IDataBound` implementacji interfejsu. Ponieważ jest środowiska wykonawczego, rzeczywisty typ obiektu `EditBox`, rzutowania powiodło się.
+W przypadkach, gdy wystąpienie nie jest statycznie znane do implementacji określonego interfejsu, można użyć rzutowania typu dynamicznego. Na przykład następujące instrukcje używają rzutowania typu dynamicznego do uzyskiwania `IControl` i implementacji interfejsu `IDataBound`. Ponieważ rzeczywisty typ obiektu jest `EditBox`, rzutowania powiodło się.
 
 [!code-csharp[InterfacesFour](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L40-L42)]
 
-W ciągu poprzednich `EditBox` klasy `Paint` metody z `IControl` interfejsu i `Bind` metody z `IDataBound` interfejsu są implementowane przy użyciu publicznych składowych. C#również obsługuje jawnej ***interfejsu implementacji elementu członkowskiego***, umożliwiając klasy lub struktury, aby uniknąć konieczności publiczne elementy członkowskie. Implementacja interfejsu jawnego członka jest zapisywany przy użyciu interfejsu w pełni kwalifikowana nazwa elementu członkowskiego. Na przykład `EditBox` implementacji klasy `IControl.Paint` i `IDataBound.Bind` metod za pomocą jawnych implementacji elementu członkowskiego interfejsu w następujący sposób.
+W poprzedniej klasie `EditBox` Metoda `Paint` z interfejsu `IControl` oraz Metoda `Bind` z interfejsu `IDataBound` są implementowane przy użyciu publicznych członków. C#obsługuje również jawne ***implementacje elementu członkowskiego interfejsu***, co pozwala klasie lub strukturze uniknąć udostępniania elementów członkowskich publicznie. Implementacja jawnego elementu członkowskiego interfejsu jest zapisywana przy użyciu w pełni kwalifikowanej nazwy elementu członkowskiego interfejsu. Na przykład Klasa `EditBox` może zaimplementować metody `IControl.Paint` i `IDataBound.Bind` przy użyciu jawnych implementacji elementu członkowskiego interfejsu w następujący sposób.
 
 [!code-csharp[InterfacesFive](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L60-L64)]
 
-Elementy członkowskie interfejsu jawnego zostać oceniony jedynie przez typ interfejsu. Na przykład implementacji `IControl.Paint` dostarczone przez poprzednie EditBox klasy może być wywoływany tylko przez uprzedniego przekonwertowania `EditBox` odwołanie do `IControl` typ interfejsu.
+Dostęp do jawnych elementów członkowskich interfejsu można uzyskać tylko za pośrednictwem typu interfejsu. Na przykład implementacja `IControl.Paint` dostarczonej przez poprzednią klasę EditBox można wywołać tylko przez pierwsze przekonwertowanie odwołania `EditBox` do typu interfejsu `IControl`.
 
 [!code-csharp[InterfacesFive](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L71-L74)]
 
 >[!div class="step-by-step"]
->[Poprzednie](arrays.md)
->[dalej](enums.md)
+>[Poprzedni](arrays.md)
+>[Następny](delegates.md)

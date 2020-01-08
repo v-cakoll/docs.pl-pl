@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: b8777e1402bef1708136a5f81a641beb8c761905
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: c2b78b990969fb5bc9814ebda8ffcf38efa458b1
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740711"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559927"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Przegląd Lokalizacja i globalizacja WPF
 
@@ -42,7 +42,7 @@ Podczas projektowania [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-u
 
 - Włącz <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> na <xref:System.Windows.Controls.TextBlock>, aby uniknąć obcinania.
 
-- Ustaw atrybut `xml:lang`. Ten atrybut opisuje kulturę określonego elementu i jego elementów podrzędnych. Wartość tej właściwości zmienia zachowanie kilku funkcji w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Na przykład zmienia zachowanie dzielenia wyrazów, sprawdzania pisowni, podstawiania numerów, złożonego kształtu skryptu i powrotu do czcionki. Zobacz [globalizacja dla WPF](globalization-for-wpf.md) , aby uzyskać więcej informacji na temat ustawiania [obsługi XML: lang w języku XAML](../../xaml-services/xml-lang-handling-in-xaml.md).
+- Ustaw atrybut `xml:lang`. Ten atrybut opisuje kulturę określonego elementu i jego elementów podrzędnych. Wartość tej właściwości zmienia zachowanie kilku funkcji w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Na przykład zmienia zachowanie dzielenia wyrazów, sprawdzania pisowni, podstawiania numerów, złożonego kształtu skryptu i powrotu do czcionki. Zobacz [globalizacja dla WPF](globalization-for-wpf.md) , aby uzyskać więcej informacji na temat ustawiania [obsługi XML: lang w języku XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md).
 
 - Utwórz dostosowaną czcionkę kompozytową, aby uzyskać lepszą kontrolę nad czcionkami używanymi w różnych językach. Domyślnie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa czcionki GlobalUserInterface. Composite w katalogu Windows\Fonts.
 
@@ -148,11 +148,11 @@ Należy zauważyć, że w przykładzie zastosowano funkcję współużytkowanego
 
 `xml:lang="en-US"`
 
-Zwróć uwagę, że [Obsługa języka XML: lang w języku XAML](../../xaml-services/xml-lang-handling-in-xaml.md) umieszczonym w elemencie głównym [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Ta właściwość opisuje kulturę danego elementu i jego elementów podrzędnych. Ta wartość jest używana przez kilka funkcji w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i powinna być odpowiednio zmieniana podczas lokalizacji. Ta wartość zmienia używany słownik języka do dzielenia wyrazów i sprawdzania pisowni. Ma także wpływ na wyświetlanie cyfr i sposób, w jaki system rezerwowy czcionki wybiera czcionkę do użycia. Na koniec Właściwość wpływa na sposób wyświetlania liczb i sposób, w jaki teksty złożone w złożonych skryptach są w kształcie. Wartość domyślna to "pl-US".
+Zwróć uwagę, że [Obsługa języka XML: lang w języku XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md) umieszczonym w elemencie głównym [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Ta właściwość opisuje kulturę danego elementu i jego elementów podrzędnych. Ta wartość jest używana przez kilka funkcji w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i powinna być odpowiednio zmieniana podczas lokalizacji. Ta wartość zmienia używany słownik języka do dzielenia wyrazów i sprawdzania pisowni. Ma także wpływ na wyświetlanie cyfr i sposób, w jaki system rezerwowy czcionki wybiera czcionkę do użycia. Na koniec Właściwość wpływa na sposób wyświetlania liczb i sposób, w jaki teksty złożone w złożonych skryptach są w kształcie. Wartość domyślna to "pl-US".
 
 **Kompilowanie zestawu zasobów satelitarnych**
 
-*W. csproj:*
+*In .csproj:*
 
 Edytuj plik `.csproj` i Dodaj następujący tag do niewarunkowego `<PropertyGroup>`:
 
@@ -180,31 +180,31 @@ Użyj ulubionego edytora CSV, który obsługuje kodowanie Unicode, aby edytować
 
 |Klucz zasobu|Kategoria lokalizacji|Wartość|
 |-|-|-|
-|Button_1: System. Windows. Controls. Button. $Content|Przycisk|OK|
-|Button_2: System. Windows. Controls. Button. $Content|Przycisk|Anuluj|
-|Button_3: System. Windows. Controls. Button. $Content|Przycisk|Przeglądaj...|
-|ComboBox_1: System. Windows. Controls. ComboBox. $Content|ComboBox||
-|TextBlock_1: System. Windows. Controls. TextBlock. $Content|Tekst|Wpisz nazwę programu, folderu, dokumentu lub zasobu internetowego, a system Windows otworzy go.|
-|TextBlock_2: System. Windows. Controls. TextBlock. $Content|Tekst|Otwórz|
-|Window_1: System. Windows. Window. title|Tytuł|Uruchom|
+|Button_1:System.Windows.Controls.Button.$Content|Przycisk|OK|
+|Button_2:System.Windows.Controls.Button.$Content|Przycisk|Anuluj|
+|Button_3:System.Windows.Controls.Button.$Content|Przycisk|Przeglądaj...|
+|ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Tekst|Wpisz nazwę programu, folderu, dokumentu lub zasobu internetowego, a system Windows go otworzy.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Tekst|Otwarty:|
+|Window_1:System.Windows.Window.Title|Tytuł|Uruchom|
 
 Lokalizowanie aplikacji do wersji niemieckiej wymaga następujących tłumaczeń:
 
 |Klucz zasobu|Kategoria lokalizacji|Wartość|
 |-|-|-|
-|Button_1: System. Windows. Controls. Button. $Content|Przycisk|OK|
-|Button_2: System. Windows. Controls. Button. $Content|Przycisk|Abbrechen|
-|Button_3: System. Windows. Controls. Button. $Content|Przycisk|Durchsuchen...|
-|ComboBox_1: System. Windows. Controls. ComboBox. $Content|ComboBox||
-|TextBlock_1: System. Windows. Controls. TextBlock. $Content|Tekst|Geben sie Den Namen, eines, Ordners, Dokuments Oder einer Internetresource.|
-|TextBlock_2: System. Windows. Controls. TextBlock. $Content|Tekst|Öffnen:|
-|Window_1: System. Windows. Window. title|Tytuł|Uruchom|
+|Button_1:System.Windows.Controls.Button.$Content|Przycisk|OK|
+|Button_2:System.Windows.Controls.Button.$Content|Przycisk|Abbrechen|
+|Button_3:System.Windows.Controls.Button.$Content|Przycisk|Durchsuchen...|
+|ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Tekst|Geben sie Den Namen, eines, Ordners, Dokuments Oder einer Internetresource.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Tekst|Öffnen:|
+|Window_1:System.Windows.Window.Title|Tytuł|Uruchom|
 
 **Utworzenie**
 
 Ostatni krok lokalizacji obejmuje utworzenie nowo zlokalizowanego zestawu satelickiego. Można to zrobić za pomocą następującego polecenia LocBaml:
 
-**LocBaml. exe/Generate RunDialog. resources. dll/Trans: RunDialog. resources. dll. CSV/out:. /CUL: de-DE**
+**LocBaml.exe /generate RunDialog.resources.dll /trans:RunDialog.resources.dll.CSV /out: . /cul:de-DE**
 
 W przypadku okien niemieckich, jeśli ten plik resources. dll zostanie umieszczony w folderze de-DE obok zestawu głównego, ten zasób zostanie automatycznie załadowany zamiast tego w folderze en-US. Jeśli nie masz niemieckiej wersji systemu Windows do przetestowania, ustaw kulturę na dowolną kulturę systemu Windows, z której korzystasz (na przykład `en-US`), i Zastąp pierwotną bibliotekę DLL zasobów.
 
@@ -221,7 +221,7 @@ Program .NET Framework automatycznie wybiera, który zestaw zasobów satelitarny
 
 następnie en-US\MyDialog.resources.dll będzie używany z niemieckimi oknami, jeśli de-DE\MyDialog.resources.dll lub de\MyDialog.resources.dll są niedostępne.
 
-### <a name="microsoft-saudi-arabia-homepage"></a>Strona główna Microsoft Arabia Saudyjska
+### <a name="microsoft-saudi-arabia-homepage"></a>Microsoft Saudi Arabia Homepage
 
 Na poniższej grafice przedstawiono angielskie i arabskiej stronę główną. Aby zapoznać się z kompletnym przykładem, który tworzy te grafiki, zobacz sekcję dotyczącą [globalizacji strony głównej](https://go.microsoft.com/fwlink/?LinkID=159990).
 
@@ -247,11 +247,11 @@ Zwróć uwagę na Właściwość <xref:System.Windows.FrameworkElement.FlowDirec
 
 Zwróć uwagę, że nawet pędzle gradientu tła są przerzucane prawidłowo po zmianie <xref:System.Windows.FrameworkElement.FlowDirection%2A> głównej:
 
-**FlowDirection = "LeftToRight"**
+**FlowDirection="LeftToRight"**
 
 ![Zrzut ekranu przedstawiający przepływ gradientu od lewej do prawej.](./media/wpf-globalization-and-localization-overview/gradient-flow-left-right.png)
 
-**FlowDirection = "RightToLeft"**
+**FlowDirection="RightToLeft"**
 
 ![Zrzut ekranu przedstawiający przepływ gradientu od prawej do lewej.](./media/wpf-globalization-and-localization-overview/gradient-flow-right-left.png)
 
@@ -265,11 +265,11 @@ Istnieje wiele przypadków, w których zawartość może być niejednoznaczna i 
 
 [!code-xaml[GlobalizationHomepage#LocalizationComment](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcomment)]
 
-Ten komentarz jest kojarzony z zawartością TextBlock_1's i w przypadku narzędzia LocBaml (zobacz temat [lokalizowanie aplikacji](how-to-localize-an-application.md)), można go zobaczyć w szóstej kolumnie wiersza TextBlock_1 w pliku Output. CSV:
+Ten komentarz jest kojarzony z zawartością TextBlock_1 i w przypadku narzędzia LocBaml (zobacz temat [lokalizowanie aplikacji](how-to-localize-an-application.md)). można go zobaczyć w szóstej kolumnie TextBlock_1 wiersza w pliku Output. CSV:
 
-|Klucz zasobu|Kategoria|odczytu|Można modyfikować|Komentarz|Wartość|
+|Klucz zasobu|Kategoria|Odczytu|Można modyfikować|Komentarz|Wartość|
 |-|-|-|-|-|-|
-|TextBlock_1: System. Windows. Controls. TextBlock. $Content|Tekst|OZNACZA|OZNACZA|Ten znak jest używany jako reguła dekoracyjna.|&#124;|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Tekst|TRUE|TRUE|Ten znak jest używany jako reguła dekoracyjna.|&#124;|
 
 Komentarze mogą być umieszczane na zawartości lub właściwości dowolnego elementu przy użyciu następującej składni:
 
@@ -277,7 +277,7 @@ Komentarze mogą być umieszczane na zawartości lub właściwości dowolnego el
 
 **Atrybuty lokalizacji**
 
-Często menedżerowie deweloperów lub lokalizacji wymagają kontroli, jakie lokalizatory mogą odczytywać i modyfikować. Na przykład możesz nie chcieć, aby lokalizator przetłumaczy nazwę firmy lub wyraz prawny. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera atrybuty, które umożliwiają ustawienie czytelności, modifiability i kategorii zawartości lub właściwości elementu, którego narzędzie lokalizacyjne może używać do blokowania, ukrywania i sortowania elementów. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Localization.Attributes%2A>. Na potrzeby tego przykładu narzędzie LocBaml jedynie wyprowadza wartości tych atrybutów. kontrolki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wszystkie mają wartości domyślne dla tych atrybutów, ale można je zastąpić. Na przykład poniższy przykład zastępuje domyślne atrybuty lokalizacji `TextBlock_1` i ustawia zawartość do odczytu, ale nie można jej modyfikować dla lokalizatorów.
+Często menedżerowie deweloperów lub lokalizacji wymagają kontroli, jakie lokalizatory mogą odczytywać i modyfikować. Na przykład możesz nie chcieć, aby lokalizator przetłumaczy nazwę firmy lub wyraz prawny. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera atrybuty, które umożliwiają ustawienie czytelności, modifiability i kategorii zawartości lub właściwości elementu, którego narzędzie lokalizacyjne może używać do blokowania, ukrywania i sortowania elementów. Aby uzyskać więcej informacji, zobacz temat <xref:System.Windows.Localization.Attributes%2A>. Na potrzeby tego przykładu narzędzie LocBaml jedynie wyprowadza wartości tych atrybutów. kontrolki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wszystkie mają wartości domyślne dla tych atrybutów, ale można je zastąpić. Na przykład poniższy przykład zastępuje domyślne atrybuty lokalizacji `TextBlock_1` i ustawia zawartość do odczytu, ale nie można jej modyfikować dla lokalizatorów.
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]
 

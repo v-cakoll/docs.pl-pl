@@ -2,12 +2,12 @@
 title: Rozszerzenia typu
 description: Dowiedz F# się, jak rozszerzenia typów umożliwiają dodawanie nowych elementów członkowskich do wcześniej zdefiniowanego typu obiektu.
 ms.date: 11/04/2019
-ms.openlocfilehash: d26d7b2b507f04e9cb68ade4c0409403643f74ba
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3e2c6971156bd562ed5d5428e6b7ffdc520c4cf5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978248"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341571"
 ---
 # <a name="type-extensions"></a>Rozszerzenia typu
 
@@ -98,7 +98,7 @@ Rozszerzenia opcjonalne nie są wyświetlane na rozszerzonym typie, gdy są bada
 
 Opcjonalne elementy członkowskie rozszerzenia są kompilowane do statycznych elementów członkowskich, dla których wystąpienie obiektu jest przekazaniem niejawnie jako pierwszy parametr. Jednak działają tak, jakby były członkami wystąpienia lub statycznymi elementami członkowskimi zgodnie z ich deklarowaniem.
 
-Opcjonalne elementy członkowskie rozszerzenia również nie są widoczne C# dla użytkowników w języku VB. Mogą być używane tylko w innym F# kodzie.
+Opcjonalne elementy członkowskie rozszerzenia nie są również widoczne C# dla użytkowników ani Visual Basic. Mogą być używane tylko w innym F# kodzie.
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>Ogólne ograniczenie wewnętrznych i opcjonalnych rozszerzeń typów
 

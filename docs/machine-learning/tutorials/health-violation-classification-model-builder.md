@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 07729e1667f8aa3aba74576943d79eaa3bcd14d8
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 90abbc9ffe5765880d18d0d29c8e13bc1330ddc3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552887"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341554"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Samouczek: klasyfikowanie ważności naruszeń kondycji restauracji przy użyciu konstruktora modelu
 
@@ -25,7 +25,7 @@ Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 > - Wybierz scenariusz
 > - Ładowanie danych z bazy danych
 > - Uczenie modelu
-> - Oceń model
+> - Ocenianie modelu
 > - Używanie modelu dla prognoz
 
 > [!NOTE]
@@ -81,7 +81,7 @@ Konstruktor modelu akceptuje dane z bazy danych SQL Server lub pliku lokalnego w
     1. W oknie dialogowym **Wybierz dane** wybierz pozycję **plik bazy danych Microsoft SQL Server**.
     1. Usuń zaznaczenie pola wyboru **zawsze używaj tego zaznaczenia** i wybierz pozycję **Kontynuuj**.
     1. W oknie dialogowym **Właściwości połączenia** wybierz pozycję **Przeglądaj** i wybierz pobrany plik *RestaurantScores. mdf* .
-    1. Wybierz **przycisk OK**.
+    1. Wybierz **OK**.
 1. Wybierz pozycję **naruszenia** z listy rozwijanej **Nazwa tabeli** .
 1. Wybierz pozycję **RiskCategory** w **kolumnie do przewidywania (etykieta)** listy rozwijanej.
 1. Pozostaw domyślne zaznaczenia kolumn, **Inspekcja** i **ViolationDescription**, zaznaczone na liście rozwijanej **kolumny wejściowe (funkcje)** .
@@ -105,7 +105,7 @@ Czas wymagany przez model do uczenia jest proporcjonalny do ilości danych. Kons
 
 1. Po zakończeniu szkolenia wybierz łącze **Oceń** , aby przejść do następnego kroku.
 
-## <a name="evaluate-the-model"></a>Oceń model
+## <a name="evaluate-the-model"></a>Ocenianie modelu
 
 Wynikiem kroku szkolenia jest model, który miał najlepszą wydajność. W kroku szacowania konstruktora modelu sekcja Output zawiera algorytm używany przez model najlepszego wykonywania w najlepszym wpisie **modelu** oraz metryki w **najlepszej dokładności modelu**. Ponadto zostanie wyświetlona tabela podsumowująca zawierająca maksymalnie pięć modeli, które zostały zbadane i są wyświetlane metryki.
 
@@ -144,7 +144,7 @@ W wyniku procesu szkolenia tworzone są dwa projekty.
 
 Jeśli musisz odwoływać się do wygenerowanych projektów w późniejszym czasie w innym rozwiązaniu, możesz je znaleźć w katalogu `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`.
 
-Nabycia! Pomyślnie skompilowano model uczenia maszynowego w celu kategoryzacji ryzyka naruszeń kondycji przy użyciu konstruktora modeli. Kod źródłowy dla tego samouczka można znaleźć w repozytorium usługi GitHub [/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) .
+Gratulacje! Pomyślnie skompilowano model uczenia maszynowego w celu kategoryzacji ryzyka naruszeń kondycji przy użyciu konstruktora modeli. Kod źródłowy dla tego samouczka można znaleźć w repozytorium usługi GitHub [/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) .
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
@@ -152,4 +152,4 @@ Aby dowiedzieć się więcej na temat tematów wymienionych w tym samouczku, odw
 
 - [Scenariusze konstruktora modelu](../automate-training-with-model-builder.md#scenarios)
 - [Klasyfikacja wieloklasowa](../resources/glossary.md#multiclass-classification)
-- [Metryki modelu klasyfikacji wieloklasowej](../resources/metrics.md#metrics-for-multi-class-classification)
+- [Metryki modelu klasyfikacji wieloklasowej](../resources/metrics.md#evaluation-metrics-for-multi-class-classification)

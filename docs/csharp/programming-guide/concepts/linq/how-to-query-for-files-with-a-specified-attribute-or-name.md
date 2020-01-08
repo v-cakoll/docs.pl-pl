@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Zapytanie o pliki o określonym atrybucie lub nazwie (C#)'
+title: Jak wykonać zapytanie o pliki o określonym atrybucie lub nazwie (C#)
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: c1ecaad7e4fb4538331ba8f8076c9795acc52877
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8ecf3263dcee9b54d01dd0b577ba8bec2a199da9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592903"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346714"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Instrukcje: Zapytanie o pliki o określonym atrybucie lub nazwie (C#)
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Jak wykonać zapytanie o pliki o określonym atrybucie lub nazwie (C#)
 Ten przykład pokazuje, jak znaleźć wszystkie pliki, które mają określone rozszerzenie nazwy pliku (na przykład ". txt") w określonym drzewie katalogów. Przedstawiono w nim również, jak zwrócić najnowszy lub najstarszy plik w drzewie na podstawie czasu utworzenia.  
   
 ## <a name="example"></a>Przykład  
@@ -64,7 +64,7 @@ class FindFileByExtension
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
-  Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.
+  Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.
   
 ## <a name="see-also"></a>Zobacz także
 

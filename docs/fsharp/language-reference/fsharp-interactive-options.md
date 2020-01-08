@@ -1,13 +1,13 @@
 ---
-title: Opcje interakcyjne F#
+title: Opcje interaktywne
 description: Dowiedz się więcej na temat opcji wiersza polecenia F# obsługiwanych przez program Interactive, FSI. exe.
 ms.date: 05/16/2016
-ms.openlocfilehash: e4ce0f3f76a7be803942e4b403e5fa6543a09e54
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: cceb8fb50434f3525ebb2ede16e84720d10d320c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425316"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348223"
 ---
 # <a name="f-interactive-options"></a>Opcje interakcyjne F#
 
@@ -35,38 +35,38 @@ Gdzie listy pojawiają F# się w argumentach opcji interaktywnych, elementy list
 |Opcja|Opis|
 |------|-----------|
 |**--**|Służy do Poinstruuj F# interaktywnie, aby traktować pozostałe argumenty jako argumenty wiersza F# polecenia do programu lub skryptu, do którego można uzyskać dostęp w kodzie przy użyciu listy **FSI. CommandLineArgs —** .|
-|**--Checked**[ **+** &#124; **-** ]|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
+|**--checked**[ **+** &#124; **-** ]|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
 |**--CodePage:&lt;int&gt;**|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
 |**--consolecolors**[ **+** &#124; **-** ]|Wyświetla ostrzeżenia i komunikaty o błędach w kolorze.|
 |**--crossoptimize**[ **+** &#124; **-** ]|Włączać lub wyłączać optymalizacje między modułami.|
-|**--Debug**[ **+** &#124; **-** ]<br /><br />**--Debug:** [**pełna**&#124;**pdbonly**&#124;**Portable**&#124;**Embedded**]<br /><br />**-g**[ **+** &#124; **-** ]<br /><br />**-g:** [**pełne**&#124;**pdbonly**&#124;**przenośne**&#124;**Embedded**]|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
+|**--debug**[ **+** &#124; **-** ]<br /><br />**--debug:** [**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]<br /><br />**-g**[ **+** &#124; **-** ]<br /><br />**-g:** [**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
 |**--define:&lt;ciąg&gt;**|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
-|**--deterministyczny**[ **+** &#124; **-** ]|Tworzy deterministyczny zestaw (w tym identyfikator GUID i sygnaturę czasową wersji modułu).|
+|**--deterministic**[ **+** &#124; **-** ]|Tworzy deterministyczny zestaw (w tym identyfikator GUID i sygnaturę czasową wersji modułu).|
 |**--exec**|Instruuje F# interaktywny, aby wyjść po załadowaniu plików lub uruchomieniu pliku skryptu podanym w wierszu polecenia.|
-|**--fullpaths —**|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
-|**--GUI**[ **+** &#124; **-** ]|Włącza lub wyłącza pętlę zdarzeń Windows Forms. Wartość domyślna jest włączona.|
-|**--Pomoc**<br /><br />**-?**|Służy do wyświetlania składni wiersza polecenia i krótkiego opisu każdej opcji.|
-|**--lib:&lt;listy folderów&gt;**<br /><br />**-I:&lt;listy folderów&gt;**|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
+|**--fullpaths**|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
+|**--gui**[ **+** &#124; **-** ]|Włącza lub wyłącza pętlę zdarzeń Windows Forms. Wartość domyślna jest włączona.|
+|**--help**<br /><br />**-?**|Służy do wyświetlania składni wiersza polecenia i krótkiego opisu każdej opcji.|
+|**--lib:&lt;folder-list&gt;**<br /><br />**-I:&lt;folder-list&gt;**|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
 |**--Load:&lt;filename&gt;**|Kompiluje dany kod źródłowy przy uruchamianiu i ładuje skompilowane F# konstrukcje do sesji. Jeśli źródło docelowe zawiera dyrektywy skryptów, takie jak **#use** lub **#load**, należy użyć polecenia **--use** lub **#use** zamiast **--Load** lub **#load**.|
 |**--mlcompatibility**|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
 |**--noframework**|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md)|
 |**--nologo**|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
 |**--nowarn:&lt;list ostrzeżeń&gt;**|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
-|**--Optymalizuj**[ **+** &#124; **-** ]|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
+|**--optimize**[ **+** &#124; **-** ]|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
 |**--preferreduilang:&lt;lang&gt;**| Określa nazwę preferowanej kultury języka wyjściowego (na przykład es-ES, ja-JP). |
 |**--quiet**|Pomijaj F# interaktywne dane wyjściowe do strumienia **stdout** .|
-|**--Cytaty-debugowanie**|Określa, że powinny być emitowane dodatkowe informacje o debugowaniu dla wyrażeń, F# które pochodzą z literałów cudzysłowu i odbitej definicji. Informacje debugowania są dodawane do atrybutów niestandardowych węzła drzewa F# wyrażenia. Zobacz [cytaty kodu](code-quotations.md) i [expr. CustomAttributes —](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
-|**--ReadLine**[ **+** &#124; **-** ]|Włącza lub wyłącza uzupełnianie kart w trybie interaktywnym.|
+|**--quotations-debug**|Określa, że powinny być emitowane dodatkowe informacje o debugowaniu dla wyrażeń, F# które pochodzą z literałów cudzysłowu i odbitej definicji. Informacje debugowania są dodawane do atrybutów niestandardowych węzła drzewa F# wyrażenia. Zobacz [cytaty kodu](code-quotations.md) i [expr. CustomAttributes —](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
+|**--readline**[ **+** &#124; **-** ]|Włącza lub wyłącza uzupełnianie kart w trybie interaktywnym.|
 |**--Reference:&lt;filename&gt;**<br /><br />**-r:&lt;filename&gt;**|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
 |**--shadowcopyreferences**[ **+** &#124; **-** ]|Uniemożliwia blokowanie odwołań przez proces F# interaktywny.|
 |**--simpleresolution**|Rozwiązuje odwołania do zestawów przy użyciu reguł opartych na katalogu, a nie rozpoznawania MSBuild.|
 |**--tailcalls**[ **+** &#124; **-** ]|Włącza lub wyłącza użycie instrukcji "tail IL", która powoduje, że ramka stosu będzie ponownie używana na potrzeby funkcji cyklicznych. Ta opcja jest domyślnie włączona.|
 |**--targetprofile:&lt;ciąg&gt;**|Określa Profil platformy docelowej tego zestawu. Prawidłowe wartości to mscorlib, Core lub standard.  Wartość domyślna to mscorlib.|
 |**--Użyj:&lt;filename&gt;**|Instruuje interpretera, aby używał danego pliku przy uruchamianiu jako początkowej danych wejściowych.|
-|**--utf8output —**|Analogicznie jak opcja kompilatora Urząd nadzoru. exe. Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
+|**--utf8output**|Analogicznie jak opcja kompilatora Urząd nadzoru. exe. Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
 |**--WARN:&lt;poziom ostrzeżeń&gt;**|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
-|**--warnaserror —** [ **+** &#124; **-** ]|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
-|**--warnaserror —** [ **+** &#124; **-** ]: **&lt;int-list&gt;**|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
+|**--warnaserror**[ **+** &#124; **-** ]|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
+|**--warnaserror**[ **+** &#124; **-** ]: **&lt;int-list&gt;**|Analogicznie jak opcja kompilatora **Urząd nadzoru. exe** . Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](compiler-options.md).|
 
 ## <a name="related-topics"></a>Tematy pokrewne
 

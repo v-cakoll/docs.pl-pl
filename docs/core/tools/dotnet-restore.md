@@ -2,12 +2,12 @@
 title: polecenie dotnet restore
 description: Informacje o sposobie przywracania zależności i narzędzi specyficznych dla projektu przy użyciu polecenia dotnet restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 055a4250755af02ad392877663985f86a647f892
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 82dd85e340a4cb520f781d977b0798b0f532a088
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275750"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340435"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -21,7 +21,7 @@ ms.locfileid: "72275750"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 ```dotnetcli
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache]
@@ -29,7 +29,7 @@ dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-
 dotnet restore [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache]
@@ -41,29 +41,29 @@ dotnet restore [-h|--help]
 
 ## <a name="description"></a>Opis
 
-Polecenie `dotnet restore` używa NuGet do przywracania zależności oraz narzędzi specyficznych dla projektu, które są określone w pliku projektu. Domyślnie przywracanie zależności i narzędzi jest wykonywane równolegle.
+Polecenie `dotnet restore` używa narzędzia NuGet do przywracania zależności oraz narzędzi specyficznych dla projektu, które są określone w pliku projektu. Domyślnie przywracanie zależności i narzędzi jest wykonywane równolegle.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Aby przywrócić zależności, program NuGet potrzebuje kanałów informacyjnych, w których znajdują się pakiety. Kanały informacyjne są zazwyczaj udostępniane za pośrednictwem pliku konfiguracyjnego *NuGet. config* . Domyślny plik konfiguracji jest dostarczany podczas instalacji narzędzi interfejsu wiersza polecenia. Możesz określić dodatkowe źródła danych, tworząc własny plik *NuGet. config* w katalogu projektu. W wierszu polecenia można także określić dodatkowe źródła danych dla każdego wywołania.
+Aby przywrócić zależności, program NuGet potrzebuje kanałów informacyjnych, w których znajdują się pakiety. Kanały informacyjne są zazwyczaj udostępniane za pośrednictwem pliku konfiguracyjnego *NuGet. config* . Domyślny plik konfiguracji jest dostarczany podczas instalacji narzędzi interfejsu wiersza polecenia. Możesz określić dodatkowe źródła danych, tworząc własny plik *NuGet. config* w katalogu projektu. Można zastąpić źródła danych *NuGet. config* opcją `-s`.
 
 W przypadku zależności należy określić miejsce, w którym przywrócone pakiety są umieszczane podczas operacji przywracania przy użyciu argumentu `--packages`. Jeśli nie zostanie określony, zostanie użyta domyślna pamięć podręczna pakietów NuGet, która znajduje się w katalogu `.nuget/packages` w katalogu macierzystym użytkownika we wszystkich systemach operacyjnych. Na przykład */home/user1* na system Linux lub *C:\Users\user1* w systemie Windows.
 
-W przypadku narzędzi specyficznych dla projektu `dotnet restore` najpierw przywraca pakiet, w którym narzędzie jest spakowane, a następnie przywraca zależności narzędzia, jak określono w pliku projektu.
+W przypadku narzędzi specyficznych dla projektu `dotnet restore` najpierw przywraca pakiet, w którym narzędzie jest spakowane, a następnie przechodzi do przywracania zależności narzędzia, jak określono w pliku projektu.
 
 ### <a name="nugetconfig-differences"></a>różnice NuGet. config
 
-Na zachowanie polecenia `dotnet restore` mają wpływ ustawienia w pliku *NuGet. config* (jeśli istnieją). Na przykład ustawienie wartości `globalPackagesFolder` w *pliku NuGet. config* powoduje umieszczenie przywróconych pakietów NuGet w określonym folderze. Jest to alternatywa dla określenia opcji `--packages` w poleceniu `dotnet restore`. Aby uzyskać więcej informacji, zobacz [Dokumentacja NuGet. config](/nuget/schema/nuget-config-file).
+Na zachowanie polecenia `dotnet restore` są zależne od ustawień w pliku *NuGet. config* (jeśli istnieją). Na przykład ustawienie `globalPackagesFolder` w *pliku NuGet. config* powoduje umieszczenie przywróconych pakietów NuGet w określonym folderze. Jest to alternatywa dla określenia opcji `--packages` na `dotnet restore` polecenie. Aby uzyskać więcej informacji, zobacz [Dokumentacja NuGet. config](/nuget/schema/nuget-config-file).
 
 Istnieją trzy określone ustawienia, które `dotnet restore` ignoruje:
 
 - [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
 
-  Przekierowania powiązań nie współpracują z elementami `<PackageReference>`, a platforma .NET Core obsługuje tylko elementy `<PackageReference>` dla pakietów NuGet.
+  Przekierowania powiązań nie współpracują z `<PackageReference>` elementami, a platforma .NET Core obsługuje tylko `<PackageReference>` elementów dla pakietów NuGet.
 
 - [Narzędzie](/nuget/schema/nuget-config-file#solution-section)
 
-  To ustawienie dotyczy programu Visual Studio i nie ma zastosowania do programu .NET Core. Platforma .NET Core nie używa pliku `packages.config`, a zamiast tego używa elementów `<PackageReference>` dla pakietów NuGet.
+  To ustawienie dotyczy programu Visual Studio i nie ma zastosowania do programu .NET Core. Platforma .NET Core nie używa pliku `packages.config` i zamiast tego używa elementów `<PackageReference>` dla pakietów NuGet.
 
 - [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 
@@ -71,7 +71,7 @@ Istnieją trzy określone ustawienia, które `dotnet restore` ignoruje:
 
 ## <a name="implicit-dotnet-restore"></a>Niejawny `dotnet restore`
 
-Począwszy od platformy .NET Core 2,0, `dotnet restore` jest uruchamiany niejawnie w razie potrzeby, gdy zostaną wystawione następujące polecenia:
+Począwszy od platformy .NET Core 2,0, `dotnet restore` jest uruchamiane niejawnie w razie potrzeby, gdy zostaną wystawione następujące polecenia:
 
 - [`dotnet new`](dotnet-new.md)
 - [`dotnet build`](dotnet-build.md)
@@ -83,7 +83,7 @@ Począwszy od platformy .NET Core 2,0, `dotnet restore` jest uruchamiany niejawn
 
 W większości przypadków nie trzeba już jawnie używać `dotnet restore` polecenia.
 
-Czasami może być niewygodne uruchamianie `dotnet restore` niejawnie. Na przykład niektóre zautomatyzowane systemy, takie jak systemy kompilacji, muszą jawnie wywołać `dotnet restore`, aby określić, kiedy następuje przywracanie, aby umożliwić im sterowanie użyciem sieci. Aby zapobiec niejawnemu uruchamianiu `dotnet restore`, można użyć flagi `--no-restore` z dowolnym z tych poleceń, aby wyłączyć Przywracanie niejawne.
+Czasami może być niewygodne uruchamianie `dotnet restore` niejawnie. Na przykład niektóre zautomatyzowane systemy, takie jak systemy kompilacji, muszą wywoływać `dotnet restore` jawnie, aby określić, kiedy następuje przywracanie, aby umożliwić im sterowanie użyciem sieci. Aby zapobiec niejawnemu uruchamianiu `dotnet restore`, można użyć flagi `--no-restore` z dowolnym z tych poleceń, aby wyłączyć Przywracanie niejawne.
 
 ## <a name="arguments"></a>Argumenty
 
@@ -93,7 +93,7 @@ Opcjonalna ścieżka do pliku projektu do przywrócenia.
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 `--configfile <FILE>`
 
@@ -137,13 +137,13 @@ Określa źródło pakietu NuGet do użycia podczas operacji przywracania. To us
 
 `--verbosity <LEVEL>`
 
-Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` i `diag[nostic]`. Wartość domyślna to `minimal`.
+Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`. Wartość domyślna to `minimal`.
 
 `--interactive`
 
-Umożliwia zatrzymanie polecenia i oczekiwanie na dane wejściowe użytkownika lub akcję (na przykład zakończenie uwierzytelniania). Od programu .NET Core 2.1.400.
+Umożliwia zatrzymanie polecenia i oczekiwanie na dane wejściowe użytkownika lub akcję (na przykład zakończenie uwierzytelniania). Since .NET Core 2.1.400.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--configfile <FILE>`
 
@@ -179,11 +179,11 @@ Określa środowisko uruchomieniowe przywracania pakietu. Służy do przywracani
 
 `-s|--source <SOURCE>`
 
-Określa źródło pakietu NuGet do użycia podczas operacji przywracania. Zastępuje to wszystkie źródła określone w plikach *NuGet. config* , efektywnie odczytując plik *NuGet. config* , tak jakby element `<packageSource>` nie istniał. Można podać wiele źródeł, określając tę opcję wiele razy.
+Określa źródło pakietu NuGet do użycia podczas operacji przywracania. Zastępuje wszystkie źródła określone w plikach *NuGet. config* , efektywnie odczytując plik *NuGet. config* tak, jakby nie było tam `<packageSource>`. Można podać wiele źródeł, określając tę opcję wiele razy.
 
 `--verbosity <LEVEL>`
 
-Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` i `diag[nostic]`. Wartość domyślna to `minimal`.
+Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`. Wartość domyślna to `minimal`.
 
 ---
 

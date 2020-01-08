@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: b67b00fdb4a5c484c112cc2f3321ce2268d4dad7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 883902142a91e275ab64ad5d12c197c665bd9b36
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121720"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346652"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standardowe ciągi formatujące datę i godzinę
 
@@ -41,13 +41,13 @@ Ciągi standardowego formatu daty i godziny mogą być używane z wartościami <
 |Specyfikator formatu|Opis|Przykłady|
 |----------------------|-----------------|--------------|
 |„d”|Wzorzec daty krótkiej.<br /><br /> Więcej informacji:[specyfikator formatu daty krótkiej ("d")](#ShortDate).|2009-06-15T13:45:30-> 6/15/2009 (EN-US)<br /><br /> 2009-06-15T13:45:30-> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30-> 2009/06/15 (ja-JP)|
-|„D”|Wzorzec daty długiej.<br /><br /> Więcej informacji:[specyfikator formatu daty długiej ("D")](#LongDate).|2009-06-15T13:45:30-> poniedziałek, 15 czerwca, 2009 (EN-US)<br /><br /> 2009-06-15T13:45:30-> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30-> Montag, 15. Juni 2009 (de-DE)|
+|„D”|Wzorzec daty długiej.<br /><br /> Więcej informacji:[specyfikator formatu daty długiej ("D")](#LongDate).|2009-06-15T13:45:30-> poniedziałek, 15 czerwca, 2009 (EN-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30-> Montag, 15. Juni 2009 (de-DE)|
 |„f”|Wzorzec pełnej daty/godziny (godzina krótka).<br /><br /> Więcej informacji: [specyfikator formatu pełnej daty i godziny krótkiej ("f")](#FullDateShortTime).|2009-06-15T13:45:30-> poniedziałek, 15 czerwca, 2009 1:45 PM (pl-US)<br /><br /> 2009-06-15T13:45:30-> Den 15 Juni 2009 13:45 (SV-SE)<br /><br /> 2009-06-15T13:45:30-> Δευτέρα, 15 Ιουνίου 2009 1:45 Μμ (El-GR)|
 |„F”|Wzorzec pełnej daty/godziny (godzina długa).<br /><br /> Więcej informacji: [specyfikator formatu pełnej daty i godziny długiej ("F")](#FullDateLongTime).|2009-06-15T13:45:30-> poniedziałek, 15 czerwca, 2009 1:45:30 PM (pl-US)<br /><br /> 2009-06-15T13:45:30-> Den 15 Juni 2009 13:45:30 (SV-SE)<br /><br /> 2009-06-15T13:45:30-> Δευτέρα, 15 Ιουνίου 2009 1:45:30 Μμ (El-GR)|
 |„g”|Wzorzec ogólnej daty/godziny (godzina krótka).<br /><br /> Więcej informacji: [specyfikator formatu daty ogólnej i godziny krótkiej ("g")](#GeneralDateShortTime).|2009-06-15T13:45:30-> 6/15/2009 1:45 PM (pl-US)<br /><br /> 2009-06-15T13:45:30-> 15/06/2009 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30-> 2009/6/15 13:45 (zh-CN)|
 |„G”|Wzorzec ogólnej daty/godziny (godzina długa).<br /><br /> Więcej informacji: [specyfikator formatu daty ogólnej godziny długiej ("G")](#GeneralDateLongTime).|2009-06-15T13:45:30-> 6/15/2009 1:45:30 PM (pl-US)<br /><br /> 2009-06-15T13:45:30-> 15/06/2009 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30-> 2009/6/15 13:45:30 (zh-CN)|
-|„M”, „m”|Wzorzec miesiąc/dzień.<br /><br /> Więcej informacji: [specyfikator formatu miesiąca ("m", "m")](#MonthDay).|2009-06-15T13:45:30 — > Czerwiec 15 (EN-US)<br /><br /> 2009 — 06-15T13:45:30-> 15. Juni (da-DK)<br /><br /> 2009-06-15T13:45:30-> 15 Juni (identyfikator ID)|
-|„O”, „o”|Wzorzec dwustronnej konwersji data/godzina.<br /><br /> Więcej informacji: [specyfikator formatu rundying ("o", "o")](#Roundtrip).|wartości <xref:System.DateTime>:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. local)--> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. UTC)--> 2009-06-15T13:45:30.0000000 Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.)--> 2009-06-15T13:45:30.0000000<br /><br /> wartości <xref:System.DateTimeOffset>:<br /><br /> 2009-06-15T13:45:30-07:00--> 2009-06-15T13:45:30.0000000-07:00|
+|„M”, „m”|Wzorzec miesiąc/dzień.<br /><br /> Więcej informacji: [specyfikator formatu miesiąca ("m", "m")](#MonthDay).|2009-06-15T13:45:30 — > Czerwiec 15 (EN-US)<br /><br /> 2009-06-15T13:45:30 -> 15. Juni (da-DK)<br /><br /> 2009-06-15T13:45:30-> 15 Juni (identyfikator ID)|
+|„O”, „o”|Wzorzec dwustronnej konwersji data/godzina.<br /><br /> Więcej informacji: [specyfikator formatu rundying ("o", "o")](#Roundtrip).|wartości <xref:System.DateTime>:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. local)--> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. UTC)--> 2009-06-15T13:45:30.0000000 Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.)--> 2009-06-15T13:45:30.0000000<br /><br /> wartości <xref:System.DateTimeOffset>:<br /><br /> 2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00|
 |„R”, „r”|Wzorzec RFC1123.<br /><br /> Więcej informacji: [specyfikator formatu RFC1123 ("r", "r")](#RFC1123).|2009-06-15T13:45:30-> PN, 15 Jun 2009 20:45:30 GMT|
 |„s”|Wzorzec sortowalnej daty/godziny.<br /><br /> Więcej informacji: [specyfikator formatu sortowania ("s")](#Sortable).|2009-06-15T13:45:30 (DateTimeKind. local)-> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. UTC)-> 2009-06-15T13:45:30|
 |„t”|Wzorzec godziny krótkiej.<br /><br /> Więcej informacji: [specyfikator formatu godziny krótkiej ("t")](#ShortTime).|2009-06-15T13:45:30-> 1:45 PM (pl-US)<br /><br /> 2009-06-15T13:45:30-> 13:45 (HR-HR)<br /><br /> 2009-06-15T13:45:30-> 01:45 م (AR-EG)|
@@ -316,7 +316,7 @@ W poniższym przykładzie pokazano użycie specyfikatora formatu "r", aby wyświ
 
 Specyfikator formatu standardowego "s" reprezentuje ciąg niestandardowego formatu daty i godziny zdefiniowany przez właściwość <xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A?displayProperty=nameWithType>. Wzorzec odzwierciedla zdefiniowany standard (ISO 8601), a właściwość jest tylko do odczytu. Dlatego też zawsze jest taki sam, niezależnie od używanej kultury oraz dostarczonego dostawcy formatów. Ciąg formatu niestandardowego to „yyyy'-'MM'-'dd'T'HH':'mm':'ss”.
 
-Specyfikator formatu "s" polega na wykorzystaniu ciągów wynikowych, które są sortowane w kolejności rosnącej lub malejącej na podstawie wartości daty i godziny. W związku z tym, chociaż specyfikator formatu standardowego "s" reprezentuje wartość daty i godziny w spójnym formacie, Operacja formatowania nie modyfikuje wartości obiektu daty i godziny, który jest formatowany w celu odzwierciedlenia jego właściwości <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> lub jego <xref:System.DateTimeOffset.Offset%2A?displayProperty=nameWithType> wartościami. Na przykład ciągi wynikowe tworzone przez formatowanie wartości daty i godziny 2014-11-15T18:32:17 + 00:00 i 2014-11-15T18:32:17 + 08:00 są identyczne.
+Specyfikator formatu "s" polega na wykorzystaniu ciągów wynikowych, które są sortowane w kolejności rosnącej lub malejącej na podstawie wartości daty i godziny. W związku z tym, chociaż specyfikator formatu standardowego "s" reprezentuje wartość daty i godziny w spójnym formacie, Operacja formatowania nie modyfikuje wartości obiektu daty i godziny, który jest formatowany w celu odzwierciedlenia jego właściwości <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> lub jego wartości <xref:System.DateTimeOffset.Offset%2A?displayProperty=nameWithType>. Na przykład ciągi wynikowe tworzone przez formatowanie wartości daty i godziny 2014-11-15T18:32:17 + 00:00 i 2014-11-15T18:32:17 + 08:00 są identyczne.
 
 Gdy jest używany ten specyfikator formatu standardowego, w operacji formatowania lub analizowania zawsze jest używana niezmienna kultura.
 
@@ -440,7 +440,7 @@ W poniższym przykładzie użyto specyfikatora formatu „y”, aby wyświetlić
 
 Ustawienia w elemencie **Opcje regionalne i językowe** w panelu sterowania wpływają na ciąg wynikowy generowany przez operację formatowania. Te ustawienia są używane do inicjowania obiektu <xref:System.Globalization.DateTimeFormatInfo> skojarzonego z bieżącą kulturą wątku, która zapewnia wartości używane do zarządzania formatowaniem. Na komputerach, na których są używane różne ustawienia, są generowane różne ciągi wynikowe.
 
-Ponadto, jeśli używasz konstruktora <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> do utworzenia wystąpienia nowego obiektu <xref:System.Globalization.CultureInfo>, który reprezentuje tę samą kulturę co bieżąca kultura systemu, wszelkie dostosowania ustanowione przez element **Opcje regionalne i językowe** w panelu sterowania będą zastosowano do nowego obiektu <xref:System.Globalization.CultureInfo>. Można użyć konstruktora <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>, aby utworzyć obiekt <xref:System.Globalization.CultureInfo>, który nie odzwierciedla dostosowań systemu.
+Ponadto, jeśli używasz konstruktora <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> do utworzenia wystąpienia nowego obiektu <xref:System.Globalization.CultureInfo>, który reprezentuje tę samą kulturę co bieżąca kultura systemu, wszelkie dostosowania ustanowione przez element **Opcje regionalne i językowe** w panelu sterowania zostaną zastosowane do nowego obiektu <xref:System.Globalization.CultureInfo>. Można użyć konstruktora <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>, aby utworzyć obiekt <xref:System.Globalization.CultureInfo>, który nie odzwierciedla dostosowań systemu.
 
 ### <a name="datetimeformatinfo-properties"></a>Właściwości obiektu DateTimeFormatInfo
 

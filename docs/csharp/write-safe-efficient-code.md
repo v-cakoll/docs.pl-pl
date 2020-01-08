@@ -4,12 +4,12 @@ description: Najnowsze ulepszenia C# języka umożliwiają pisanie możliwego do
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 3dc3213cf24f4cdd8f0f1b7752263b4a609b2fa2
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f590a338d35966e2cd3a507164057a49b8a5f6f8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039626"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346706"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Zapisz bezpieczny i wydajny C# kod
 
@@ -72,42 +72,42 @@ Postępuj zgodnie z tym zaleceniem za każdym razem, gdy zamierzasz utworzyć ni
 
 ## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>Zadeklaruj składowe tylko do odczytu, gdy struktura nie może być niezmienna
 
-W C# 8,0 i nowszych, gdy typ struktury jest modyfikowalny, należy zadeklarować składowe, które nie powodują`readonly`mutacji. Na przykład poniżej przedstawiono modyfikowalną odmianę struktury punktu 3W:
+W C# 8,0 i nowszych, gdy typ struktury jest modyfikowalny, należy zadeklarować składowe, które nie powodują `readonly`mutacji. Na przykład poniżej przedstawiono modyfikowalną odmianę struktury punktu 3W:
 
 ```csharp
 public struct Point3D
 {
     public Point3D(double x, double y, double z)
     {
-        this.X = x;
-        this.Y = y;
-        this.Z = z;
+        _x = x;
+        _y = y;
+        _z = z;
     }
 
     private double _x;
-    public double X 
-    { 
-        readonly get { return _x;}; 
-        set { _x = value; }
+    public double X
+    {
+        readonly get => _x;
+        set => _x = value;
     }
-    
+
     private double _y;
-    public double Y 
-    { 
-        readonly get { return _y;}; 
-        set { _y = value; }
+    public double Y
+    {
+        readonly get => _y;
+        set => _y = value;
     }
 
     private double _z;
-    public double Z 
-    { 
-        readonly get { return _z;}; 
-        set { _z = value; }
+    public double Z
+    {
+        readonly get => _z;
+        set => _z = value;
     }
 
     public readonly double Distance => Math.Sqrt(X * X + Y * Y + Z * Z);
 
-    public readonly override string ToString() => $"{X, Y, Z }";
+    public readonly override string ToString() => $"{X}, {Y}, {Z}";
 }
 ```
 
@@ -137,7 +137,7 @@ public struct Point3D
 }
 ```
 
-Nie chcesz, aby wywołujący modyfikowali źródło, więc należy zwrócić wartość `readonly ref`:
+Nie chcesz, aby wywołujący modyfikowali źródło, więc należy zwrócić wartość `ref readonly`:
 
 ```csharp
 public struct Point3D
@@ -152,7 +152,7 @@ public struct Point3D
 
 Zwrócenie `ref readonly` umożliwia zapisanie kopiowania większych struktur i zachowanie niezmienności wewnętrznych elementów członkowskich danych.
 
-W odniesieniu do witryny wywołującej może być używana Właściwość `Origin` jako `readonly ref` lub jako wartość:
+W odniesieniu do witryny wywołującej może być używana Właściwość `Origin` jako `ref readonly` lub jako wartość:
 
 [!code-csharp[AssignRefReadonly](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 
@@ -176,7 +176,7 @@ Typy wartości są kopiowane, gdy są przesyłane do wywołanej metody, jeśli n
 
 Dodaj modyfikator `in`, aby przekazać argument przez odwołanie i zadeklarować intencję projektowania do przekazywania argumentów przez odwołanie, aby uniknąć niepotrzebnego kopiowania. Nie zamierzasz modyfikować obiektu używanego jako ten argument.
 
-To rozwiązanie często zwiększa wydajność dla typów wartości tylko do odczytu, które są większe niż <xref:System.IntPtr.Size?displayProperty=nameWithType>. Dla typów prostych (`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal`, `bool`i `enum` typów) , wszelkie potencjalne zyski wydajności są minimalne. W rzeczywistości wydajność może się pogorszyć za pomocą przekazywania informacji dla typów mniejszych niż <xref:System.IntPtr.Size?displayProperty=nameWithType>.
+To rozwiązanie często zwiększa wydajność dla typów wartości tylko do odczytu, które są większe niż <xref:System.IntPtr.Size?displayProperty=nameWithType>. W przypadku typów prostych (`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal` i `bool`, oraz `enum` typów) wszystkie potencjalne zyski wydajności są minimalne. W rzeczywistości wydajność może się pogorszyć za pomocą przekazywania informacji dla typów mniejszych niż <xref:System.IntPtr.Size?displayProperty=nameWithType>.
 
 Poniższy kod przedstawia przykład metody, która oblicza odległość między dwoma punktami w przestrzeni 3D.
 
@@ -238,7 +238,7 @@ Pokrewna funkcja języka jest możliwość zadeklarować typ wartości, który m
 
 Podobne wymagania mogą pracować z pamięcią utworzoną przy użyciu [`stackalloc`](language-reference/operators/stackalloc.md) lub w przypadku korzystania z pamięci z interfejsów API międzyoperacyjności. Dla tych potrzeb można definiować własne typy `ref struct`.
 
-## <a name="readonly-ref-struct-type"></a>Typ `readonly ref struct`
+## <a name="readonly-ref-struct-type"></a>Typ: `readonly ref struct`
 
 Deklarowanie struktury jako `readonly ref` łączy zalety i ograniczenia `ref struct` i deklaracji `readonly struct`. Pamięć używana przez zakres tylko do odczytu jest ograniczona do pojedynczej ramki stosu i nie można modyfikować pamięci używanej przez zakres tylko do odczytu.
 
@@ -264,5 +264,5 @@ Te ulepszenia C# języka są przeznaczone dla krytycznych algorytmów wydajnośc
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ref — słowo kluczowe](language-reference/keywords/ref.md)
+- [ref keyword](language-reference/keywords/ref.md)
 - [Wartości zwracane ref i zmienne lokalne ref](programming-guide/classes-and-structs/ref-returns.md)

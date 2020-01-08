@@ -1,5 +1,5 @@
 ---
-title: 'Samouczek: Zdefiniuj kontrakt usługi Windows Communication Foundation'
+title: 'Samouczek: Definiowanie kontraktu usługi Windows Communication Foundation'
 ms.date: 03/19/2019
 helpviewer_keywords:
 - service contracts [WCF], defining
@@ -7,24 +7,24 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: ba88fc6ba4cba8d46ed1b43080d471b1b7c4bd75
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 49526808a65b68c6df734bd7f3e76eff1e4a6bc5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928877"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338294"
 ---
-# <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Samouczek: Zdefiniuj kontrakt usługi Windows Communication Foundation
+# <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Samouczek: Definiowanie kontraktu usługi Windows Communication Foundation
 
-W tym samouczku opisano pierwsze pięć zadań wymaganych do utworzenia aplikacji podstawowej Windows Communication Foundation (WCF). Aby zapoznać się z omówieniem samouczków, [zobacz Samouczek: Rozpocznij pracę z aplikacjami](getting-started-tutorial.md)Windows Communication Foundation.
+W tym samouczku opisano pierwsze pięć zadań wymaganych do utworzenia aplikacji podstawowej Windows Communication Foundation (WCF). Aby zapoznać się z omówieniem samouczków, zobacz [Samouczek: Rozpoczynanie pracy z aplikacjami Windows Communication Foundation](getting-started-tutorial.md).
 
-Podczas tworzenia usługi WCF pierwsze zadanie polega na zdefiniowaniu kontraktu usługi. Kontrakt usługi określa operacje obsługiwane przez usługę. Operację można traktować jako metodę usługi sieci Web. Kontrakty usługi można tworzyć przez zdefiniowanie C# interfejsu wizualizacji lub Visual Basic (VB). Interfejs ma następującą charakterystykę:
+Podczas tworzenia usługi WCF pierwsze zadanie polega na zdefiniowaniu kontraktu usługi. Kontrakt usługi określa operacje obsługiwane przez usługę. Operację można traktować jako metodę usługi sieci Web. Kontrakty usługi można tworzyć przez zdefiniowanie interfejsu C# lub Visual Basic. Interfejs ma następującą charakterystykę:
 
 - Każda metoda w interfejsie odpowiada określonej operacji usługi. 
-- Dla każdego interfejsu należy zastosować <xref:System.ServiceModel.ServiceContractAttribute> atrybut.
-- Dla każdej operacji/metody należy zastosować <xref:System.ServiceModel.OperationContractAttribute> atrybut. 
+- Dla każdego interfejsu należy zastosować atrybut <xref:System.ServiceModel.ServiceContractAttribute>.
+- Dla każdej operacji/metody należy zastosować atrybut <xref:System.ServiceModel.OperationContractAttribute>. 
 
-Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 > [!div class="checklist"]
 >
 > - Utwórz projekt **biblioteki usługi WCF** .
@@ -45,7 +45,7 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 
    3. W dolnej części okna wprowadź *GettingStartedLib* dla **nazwy** i *GettingStarted* **nazwy rozwiązania**. 
 
-   4. Kliknij przycisk **OK**.
+   4. Wybierz **OK**.
 
       Program Visual Studio tworzy projekt, który ma trzy pliki: *IService1.cs* (lub *IService1. vb* dla projektu Visual Basic), *Service1.cs* (lub *Service1. vb* dla projektu Visual Basic) i *App. config*. Program Visual Studio definiuje te pliki w następujący sposób: 
       - Plik *IService1* zawiera definicję domyślną kontraktu usługi. 
@@ -98,7 +98,7 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
     End Namespace
     ```
 
-     Ten kontrakt definiuje Kalkulator online. Zauważ, `ICalculator` że interfejs jest oznaczony <xref:System.ServiceModel.ServiceContractAttribute> atrybutem (uproszczony `ServiceContract`jako). Ten atrybut definiuje przestrzeń nazw, aby odróżnić nazwę kontraktu. Kod oznacza każdą operację kalkulatora z <xref:System.ServiceModel.OperationContractAttribute> atrybutem (uproszczony jako `OperationContract`).
+     Ten kontrakt definiuje Kalkulator online. Zauważ, że interfejs `ICalculator` jest oznaczony atrybutem <xref:System.ServiceModel.ServiceContractAttribute> (uproszczony jako `ServiceContract`). Ten atrybut definiuje przestrzeń nazw, aby odróżnić nazwę kontraktu. Kod oznacza każdą operację kalkulatora z atrybutem <xref:System.ServiceModel.OperationContractAttribute> (uproszczony jako `OperationContract`).
 
 ## <a name="next-steps"></a>Następne kroki
 

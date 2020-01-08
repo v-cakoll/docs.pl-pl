@@ -1,27 +1,27 @@
 ---
-title: Przegląd usług przepływu pracy — WCF
+title: Usługi przepływu pracy — Omówienie
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: 757a55363a8cb92fc547750183d1261f51f8f682
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cb013dd419d09af61eaff290709164427b1b655f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639239"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347864"
 ---
-# <a name="workflow-services-overview"></a>Przegląd usług przepływu pracy
+# <a name="workflow-services-overview"></a>Usługi przepływu pracy — Omówienie
 
-Usługi przepływu pracy są usługi oparte na protokole WCF, które są implementowane przy użyciu przepływów pracy. Usługi przepływu pracy są przepływy pracy korzystające z działań dotyczących komunikatów w celu wysyłania i odbierania komunikatów Windows Communication Foundation (WCF). .NET framework 4.5 wprowadzono szereg działań dotyczących komunikatów, które umożliwiają wysyłanie i odbieranie komunikatów z przepływu pracy. Aby uzyskać więcej informacji na temat obsługi komunikatów, działań i jak ich może służyć do implementowania wzorców exchange inny komunikat, zobacz [działań Messaging](messaging-activities.md).
+Usługi przepływu pracy są usługami opartymi na WCF, które są implementowane za pomocą przepływów pracy. Usługi przepływu pracy to przepływy pracy korzystające z działań związanych z przesyłaniem komunikatów w celu wysyłania i odbierania komunikatów Windows Communication Foundation (WCF). W .NET Framework 4,5 wprowadzono wiele działań związanych z obsługą komunikatów, które umożliwiają wysyłanie i odbieranie komunikatów z przepływu pracy. Aby uzyskać więcej informacji o działaniach związanych z obsługą komunikatów i sposobach ich użycia do implementowania różnych wzorców wymiany komunikatów, zobacz [działania dotyczące komunikatów](messaging-activities.md).
 
-## <a name="benefits-of-using-workflow-services"></a>Korzyści z używania usługi przepływu pracy
+## <a name="benefits-of-using-workflow-services"></a>Zalety korzystania z usług Workflow Services
 
-Jak aplikacje stają się coraz bardziej dystrybuowane, poszczególnych usług stają się odpowiada za wywołanie innych usług w celu odciążenia część obciążenia pracą. Implementowanie tych wywołań jako operacji asynchronicznych wprowadza złożoność w kodzie. Obsługa błędów dodaje dodatkowej złożoności w formie obsługi wyjątków, a także szczegółowe informacje śledzenia. Niektóre usługi są często długotrwałe i może potrwać cennych zasobów systemowych podczas oczekiwania na dane wejściowe. Ze względu na te problemy aplikacje rozproszone są często bardzo złożone i trudne do pisania i konserwacji. Przepływy pracy są w naturalny sposób wyrażania koordynacji prac asynchronicznych, szczególnie wywołania usług zewnętrznych. Przepływy pracy są również obowiązujące od reprezentujący długotrwałe procesy biznesowe. Jest tych klas, wchodzące w przepływie pracy wspaniałych zasobów do tworzenia usług w środowisku rozproszonym.
+Gdy aplikacje stają się coraz bardziej dystrybuowane, poszczególne usługi staną się odpowiedzialne za wywoływanie innych usług w celu odciążenia części pracy. Implementacja tych wywołań jako operacje asynchroniczne wprowadza pewną złożoność do kodu. Obsługa błędów dodaje dodatkową złożoność w postaci obsługi wyjątków i dostarczając szczegółowe informacje o śledzeniu. Niektóre usługi są często długotrwałe i mogą przyjmować cenne zasoby systemowe podczas oczekiwania na dane wejściowe. Ze względu na te problemy aplikacje rozproszone są często bardzo skomplikowane i trudno je pisać i konserwować. Przepływy pracy są naturalnym sposobem wyrażania koordynacji pracy asynchronicznej, szczególnie wywołań usług zewnętrznych. Przepływy pracy są również efektywne dla reprezentowania długotrwałych procesów roboczych. Są to te jakości, które sprawiają, że przepływ pracy jest doskonałym zasobem do kompilowania usług w środowisku rozproszonym.
 
-## <a name="implementing-a-workflow-service"></a>Wdrażanie usługi przepływu pracy
+## <a name="implementing-a-workflow-service"></a>Implementowanie usługi przepływu pracy
 
-Podczas implementowania usługi WCF, należy zdefiniować liczbę zamówień, które opisują usługi i dane, które wysyła i odbiera. Dane są reprezentowane jako kontraktów danych i kontrakty komunikatów. Usługi WCF i przepływu pracy Użyj definicje kontraktu danych kontraktu i komunikat jako część opisy usług. Sama usługa udostępnia metadane (w formie WSDL) do opisywania operacje usługi. W programie WCF kontraktów usług i kontrakty operacji definiują usługi i operacje, które obsługuje. Jednak w usłudze przepływu pracy, umowy te są częścią procesu biznesowego, sam. Są one widoczne w metadanych w procesie nazywanym wnioskowania kontraktu. Gdy usługi przepływu pracy znajduje się za pomocą <xref:System.ServiceModel.Activities.WorkflowServiceHost>definicji przepływu pracy jest badany i kontrakt jest generowany na podstawie zestawu działań w przepływie pracy do obsługi komunikatów. W szczególności następujące działania i właściwości są używane do generowania umowy:
+Podczas implementowania usługi WCF należy zdefiniować kilka kontraktów, które opisują usługę i dane wysyłane i odbierane. Dane są reprezentowane jako Kontrakty danych i kontrakty komunikatów. Usługi WCF i Workflow Services korzystają z kontraktów danych i definicji kontraktu komunikatów w ramach opisów usług. Sama usługa ujawnia metadane (w postaci WSDL) opisujące operacje usługi. W programie WCF kontrakty usług i kontrakty operacji definiują usługę i obsługiwane przez nią operacje. Jednak w usłudze przepływu pracy te kontrakty są częścią procesu biznesowego. Są one ujawniane w metadanych przez proces o nazwie wnioskowanie kontraktu. Gdy usługa przepływu pracy jest hostowana przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost>, sprawdzana jest definicja przepływu pracy i jest generowana umowa oparta na zestawie działań obsługi komunikatów znalezionych w przepływie pracy. W szczególności następujące działania i właściwości są używane do generowania kontraktu:
 
-<xref:System.ServiceModel.Activities.Receive> Działanie
+Działanie <xref:System.ServiceModel.Activities.Receive>
 
 - <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>
 
@@ -29,36 +29,36 @@ Podczas implementowania usługi WCF, należy zdefiniować liczbę zamówień, kt
 
 - <xref:System.ServiceModel.Activities.Receive.Action%2A>
 
-<xref:System.ServiceModel.Activities.SendReply> Działanie
+Działanie <xref:System.ServiceModel.Activities.SendReply>
 
 - <xref:System.ServiceModel.Activities.SendReply.Action%2A>
 
-<xref:System.ServiceModel.Activities.TransactedReceiveScope> Działanie
+Działanie <xref:System.ServiceModel.Activities.TransactedReceiveScope>
 
-Wynik końcowy wnioskowania kontraktu jest opis usługi przy użyciu tych samych struktur danych jako usługi WCF i kontrakty operacji. Te informacje jest następnie używane do udostępnienia WSDL usługi przepływu pracy.
+Końcowy wynik wnioskowania o umowę to opis usługi przy użyciu tych samych struktur danych, co w przypadku usług WCF i kontraktów operacji. Te informacje są następnie używane w celu udostępnienia WSDL dla usługi przepływu pracy.
 
 > [!NOTE]
-> [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] Umożliwia pisanie usług przepływu pracy przy użyciu istniejącą definicję kontraktu bez obsługi niektórych dodatkowych narzędzi. Kontrakty usług przepływu pracy są tworzone przez proces wnioskowania umowy omówionych wcześniej. Kontrakty komunikatów i kontrakty danych są w pełni obsługiwane, ale.
+> [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] nie pozwala na pisanie usług przepływu pracy przy użyciu istniejącej definicji kontraktu bez dodatkowej obsługi narzędzi. Kontrakty usługi przepływu pracy są tworzone w omawianym wcześniej procesie wnioskowania o umowę. Umowy dotyczące komunikatów i kontrakty danych są jednak w pełni obsługiwane.
 
-## <a name="workflow-services-and-msmq-based-bindings"></a>Usługi przepływu pracy i powiązań na podstawie usługi MSMQ
+## <a name="workflow-services-and-msmq-based-bindings"></a>Usługi przepływu pracy i powiązania oparte na usłudze MSMQ
 
-Usługi WCF definiuje dwa powiązania opartych na usłudze MSMQ <xref:System.ServiceModel.NetMsmqBinding> i <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.  Oparte na usłudze MSMQ powiązania są często używane przy użyciu usług przepływu pracy ze względu na charakter długotrwałych tych usług. Oparte na usłudze MSMQ powiązania ma `ValidityDuration` właściwość, która określa, ile wiadomości usługi MSMQ, można założyć był prawidłowy. Ze względu na rodzaj długo działającej usługi przepływu pracy jest możliwe, że okres ważności wiadomości usługi MSMQ może upłynąć, zanim usługa przepływu pracy można go przetworzyć. W związku z tym jest bardzo ważne, aby ustawić okres ważności powiązanie usługi MSMQ do odpowiedniej wartości. Ta wartość musi być wybierane na podstawie przepływu pracy i jak są przetwarzane komunikaty. Na przykład jeśli masz przepływ pracy o <xref:System.ServiceModel.Activities.Receive> działania niestandardowe działanie, które przyjmuje 10 minut, a następnie następuje innego <xref:System.ServiceModel.Activities.Receive> aktywności, poprawnej wartości `ValidityDuration` będzie większa niż 10 minut.
+Funkcja WCF definiuje dwa powiązania oparte na usłudze MSMQ <xref:System.ServiceModel.NetMsmqBinding> i <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.  Powiązania oparte na usłudze MSMQ są często używane z usługami Workflow Services ze względu na długotrwały charakter takich usług. Powiązania oparte na usłudze MSMQ mają właściwość `ValidityDuration`, która określa, jak długo komunikaty MSMQ mogą być prawidłowe. Ze względu na długotrwały charakter usług przepływu pracy istnieje możliwość, że okres ważności komunikatu MSMQ może upłynąć, zanim usługa przepływu pracy będzie mogła je przetworzyć. Dlatego bardzo ważne jest, aby ustawić okres ważności powiązania usługi MSMQ na odpowiednią wartość. Ta wartość musi być wybierana na podstawie przepływu pracy i sposobu przetwarzania komunikatów przez nią. Na przykład jeśli masz przepływ pracy z działaniem <xref:System.ServiceModel.Activities.Receive>, po którym następuje działanie niestandardowe, które trwa 10 minut, a po nim działa inne działanie <xref:System.ServiceModel.Activities.Receive>, poprawna wartość dla `ValidityDuration` będzie większa niż 10 minut.
 
 ## <a name="hosting-a-workflow-service"></a>Hostowanie usługi przepływu pracy
 
-Podobnie jak usługi WCF usług przepływu pracy musi być obsługiwana. Użyj usług WCF <xref:System.ServiceModel.ServiceHost> klasy do hostowania usług i przepływ pracy usługi użyj <xref:System.ServiceModel.Activities.WorkflowServiceHost> do hostowania usług. Podobnie jak usługi WCF usług przepływu pracy mogą być hostowane na wiele sposobów, na przykład:
+Podobnie jak w przypadku usług WCF usługi przepływu pracy muszą być hostowane. Usługi WCF używają klasy <xref:System.ServiceModel.ServiceHost>, aby hostować usługi i usługi przepływu pracy przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost> do usług hosta. Podobnie jak w przypadku usług WCF usługi przepływu pracy mogą być hostowane na różne sposoby, na przykład:
 
-- W aplikacji zarządzanej .NET Framework.
+- W zarządzanej aplikacji .NET Framework.
 
-- In Internet Information Services (IIS).
+- W Internet Information Services (IIS).
 
-- W przypadku usługi Windows Process Activation Service (WAS).
+- W usłudze aktywacji procesów systemu Windows (WAS).
 
-- W ramach zarządzanej usługi Windows.
+- W usłudze zarządzanej systemu Windows.
 
-Przepływ pracy usług hostowanych w aplikacji zarządzanej .NET Framework lub zarządzanych usług Windows, Utwórz wystąpienie obiektu <xref:System.ServiceModel.Activities.WorkflowServiceHost> klasy i przekazać go wystąpienie <xref:System.ServiceModel.Activities.WorkflowService> zawierający definicję przepływu pracy w ramach <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> właściwości. Definicja przepływu pracy, który zawiera działań dotyczących komunikatów jest udostępniany jako usługa przepływu pracy.
+Usługi przepływu pracy hostowane w zarządzanej aplikacji .NET Framework lub zarządzanej usłudze systemu Windows tworzą wystąpienie klasy <xref:System.ServiceModel.Activities.WorkflowServiceHost> i przekażą wystąpienie <xref:System.ServiceModel.Activities.WorkflowService>, które zawiera definicję przepływu pracy w ramach właściwości <xref:System.ServiceModel.Activities.WorkflowService.Body%2A>. Definicja przepływu pracy, która zawiera działania dotyczące komunikatów, jest udostępniana jako usługa przepływu pracy.
 
-Hostowanie usługi przepływu pracy w usługach IIS i WAS, należy umieścić plik .xamlx, który zawiera definicję usługi przepływu pracy do katalogu wirtualnego. Domyślny punkt końcowy (przy użyciu <xref:System.ServiceModel.BasicHttpBinding>) jest tworzone automatycznie, aby uzyskać więcej informacji, zobacz [uproszczona konfiguracja](../../../../docs/framework/wcf/simplified-configuration.md). Można także umieścić plik Web.config w katalogu wirtualnym, aby określić własne punkty końcowe. Jeśli Twoja definicja przepływu pracy jest w zestawie, można umieścić plików .svc w katalogu wirtualnego i zestawu przepływu pracy w katalogu App_Code. Plik .svc należy określić fabryki hostów usług i klasy, która implementuje usługi przepływu pracy. Poniższy przykład pokazuje, jak określić fabryki hostów usług i określić klasę, która implementuje usługi przepływu pracy.
+Aby hostować usługę przepływu pracy w usługach IIS lub WAS, Umieść plik. xamlx, który zawiera definicję usługi przepływu pracy w katalogu wirtualnym. Domyślny punkt końcowy (przy użyciu <xref:System.ServiceModel.BasicHttpBinding>) jest tworzony automatycznie, aby uzyskać więcej informacji, zobacz [Uproszczona konfiguracja](../../../../docs/framework/wcf/simplified-configuration.md). Możesz również umieścić plik Web. config w katalogu wirtualnym, aby określić własne punkty końcowe. Jeśli definicja przepływu pracy znajduje się w zestawie, można umieścić plik. svc w katalogu wirtualnym i zestaw przepływu pracy w katalogu App_Code. Plik SVC musi określać fabrykę hosta usługi i klasę implementującą usługę przepływu pracy. Poniższy przykład pokazuje, jak określić fabrykę hosta usługi i określić klasę implementującą usługę przepływu pracy.
 
 ```
 <%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory

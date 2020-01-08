@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: ed2afe307492b6d38e7e2f9d8ae02dafbb5ae1f4
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 254f3c4c05a2c18f6182fc5f18d93114e20ed953
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552928"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344991"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Samouczek: prognozowanie cen przy użyciu regresji z konstruktorem modelu
 
@@ -26,7 +26,7 @@ Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 > - Wybierz scenariusz
 > - Ładowanie danych
 > - Uczenie modelu
-> - Oceń model
+> - Ocenianie modelu
 > - Używanie modelu dla prognoz
 
 > [!NOTE]
@@ -104,7 +104,7 @@ W trakcie całego procesu szkolenia dane o postępie są wyświetlane w sekcji `
 
 Po zakończeniu szkolenia przejdź do kroku szacowania.
 
-## <a name="evaluate-the-model"></a>Oceń model
+## <a name="evaluate-the-model"></a>Ocenianie modelu
 
 Wynikiem kroku szkolenia będzie jeden model, który miał najlepszą wydajność. W kroku szacowania narzędzia model Builder sekcja Output będzie zawierać algorytm używany przez model najlepszego wykonywania w najlepszym wpisie *modelu* oraz metryki w *najlepszej jakości modelu (RSquared)* . Ponadto tabela podsumowująca zawierająca pięć najważniejszych modeli i ich metryki.
 
@@ -163,14 +163,14 @@ Jeśli musisz odwoływać się do wygenerowanych projektów w późniejszym czas
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
+W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > - Przygotuj i poznanie danych
 > - Wybierz scenariusz
 > - Ładowanie danych
 > - Uczenie modelu
-> - Oceń model
+> - Ocenianie modelu
 > - Używanie modelu dla prognoz
 
 ### <a name="additional-resources"></a>Dodatkowe materiały
@@ -178,6 +178,6 @@ W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
 Aby dowiedzieć się więcej na temat tematów wymienionych w tym samouczku, odwiedź następujące zasoby:
 
 - [Scenariusze konstruktora modelu](../automate-training-with-model-builder.md#scenarios)
-- [Ubytk](../resources/glossary.md#regression)
-- [Metryki modelu regresji](../resources/metrics.md#metrics-for-regression)
+- [Regression](../resources/glossary.md#regression)
+- [Metryki modelu regresji](../resources/metrics.md#evaluation-metrics-for-regression-and-recommendation)
 - [Zestaw danych podróży NYC TLC](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: ba2a8cd4995b9baab2071d3fb3c7980e45565692
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e69cc5a9634f0b5232562782557645894f94ce2e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038998"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345303"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatory dostępu do elementówC# członkowskich (odwołanie)
 
@@ -109,9 +109,15 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Operatory warunkowe o wartości null?. lub? []
 
-W C# wersji 6 i nowszych operator warunkowy o wartości null stosuje dostęp do elementu członkowskiego,`?.`lub dostęp do elementów,`?[]`, operacji do operandu tylko wtedy, gdy ten operand zostanie obliczony do wartości innej niż null. Jeśli operand zostanie obliczony do `null`, wynik zastosowania operatora jest `null`. Operator dostępu warunkowego o wartości null `?.` jest również znany jako operator Elvis.
+W C# wersji 6 i nowszych operator warunkowy o wartości null stosuje dostęp do elementu [członkowskiego](#member-access-operator-), `?.`lub [dostęp do elementów](#indexer-operator-), `?[]`, operacji do operandu tylko wtedy, gdy ten operand zwróci wartość różną od null; w przeciwnym razie zwraca `null`. Czyli
 
-Operatory warunkowe o wartości null są krótkimi obwodami. Oznacza to, że jeśli jedna operacja w łańcuchu operacji warunkowego elementu członkowskiego lub dostępu do elementu zwraca `null`, reszta łańcucha nie zostanie wykonana. W poniższym przykładzie `B` nie zostanie oceniona, jeśli `A` szacuje się w `null` i `C` nie zostanie oceniona, jeśli `A` lub `B` oblicza `null`:
+- Jeśli `a` oblicza `null`, wynik `a?.x` lub `a?[x]` jest `null`.
+- Jeśli `a` ma wartość różną od null, wynik `a?.x` lub `a?[x]` jest taki sam jak wynik `a.x` lub `a[x]`.
+
+  > [!NOTE]
+  > Jeśli `a.x` lub `a[x]` zgłasza wyjątek, `a?.x` lub `a?[x]` zgłosi ten sam wyjątek dla niezerowego `a`. Na przykład jeśli `a` jest wystąpieniem tablicy o wartości innej niż null i `x` wykracza poza granice `a`, `a?[x]` spowodowałaby zgłoszenie <xref:System.IndexOutOfRangeException>.
+
+Operatory warunkowe `null` skracają łańcuch wykonywania operacji. Oznacza to, że jeśli jedna operacja w łańcuchu operacji warunkowego elementu członkowskiego lub dostępu do elementu zwraca `null`, reszta łańcucha nie zostanie wykonana. W poniższym przykładzie `B` nie zostanie oceniona, jeśli `A` szacuje się w `null` i `C` nie zostanie oceniona, jeśli `A` lub `B` oblicza `null`:
 
 ```csharp
 A?.B?.Do(C);
@@ -123,6 +129,8 @@ Poniższy przykład ilustruje użycie operatorów `?.` i `?[]`:
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
 Powyższy przykład używa również [operatora łączenia wartości null `??`](null-coalescing-operator.md) , aby określić alternatywne wyrażenie do obliczenia w przypadku, gdy wynik operacji warunkowej o wartości null jest `null`.
+
+Operator dostępu warunkowego o wartości null `?.` jest również znany jako operator Elvis.
 
 ### <a name="thread-safe-delegate-invocation"></a>Wywołanie delegowania bezpiecznego wątku
 
@@ -160,7 +168,7 @@ Należy również użyć nawiasów, aby dostosować kolejność, w której mają
 
 ## <a name="index-from-end-operator-"></a>Indeks z operatora końcowego ^
 
-Dostępne w C# 8,0 i nowszych`^`operator wskazuje położenie elementu od końca sekwencji. Dla sekwencji `^n` `length`długość wskazuje element z przesunięciem `length - n` od początku sekwencji. Na przykład `^1` wskazuje ostatni element sekwencji i `^length` wskazuje na pierwszy element sekwencji.
+Dostępne w C# 8,0 i nowszych `^` operator wskazuje położenie elementu od końca sekwencji. Dla sekwencji `^n` `length`długość wskazuje element z przesunięciem `length - n` od początku sekwencji. Na przykład `^1` wskazuje ostatni element sekwencji i `^length` wskazuje na pierwszy element sekwencji.
 
 [!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
 
@@ -170,7 +178,7 @@ Można też użyć operatora `^` z [operatorem zakresu](#range-operator-) , aby 
 
 ## <a name="range-operator-"></a>Operator zakresu..
 
-Dostępne w C# 8,0 i nowszych operator`..`określa początek i koniec zakresu indeksów jako operandy. Argument operacji po lewej stronie *jest początkową* częścią zakresu. Prawy operand jest *wyłącznym* końcem zakresu. Jeden z operandów może być indeksem od początku lub od końca sekwencji, jak pokazano w poniższym przykładzie:
+Dostępne w C# 8,0 i nowszych operator `..` określa początek i koniec zakresu indeksów jako operandy. Argument operacji po lewej stronie *jest początkową* częścią zakresu. Prawy operand jest *wyłącznym* końcem zakresu. Jeden z operandów może być indeksem od początku lub od końca sekwencji, jak pokazano w poniższym przykładzie:
 
 [!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
 

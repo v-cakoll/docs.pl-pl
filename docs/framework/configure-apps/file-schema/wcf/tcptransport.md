@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: cf2abd460dcf19346d9efb41e9a5ccef99120fbb
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 45b710c3b2d1647e1bf7e57b30a96192abb9d788
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837067"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345052"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 Definiuje transport TCP, który może być używany przez kanał do przesyłania komunikatów dla niestandardowego powiązania.  
@@ -62,7 +62,7 @@ Definiuje transport TCP, który może być używany przez kanał do przesyłania
 |maxPendingConnections|Pobiera lub ustawia maksymalną liczbę połączeń oczekujących na wysłanie usługi.|  
 |maxReceivedMessageSize|Pobiera i ustawia maksymalny dopuszczalny rozmiar komunikatu, który można odbierać.|  
 |portSharingEnabled|Wartość logiczna określająca, czy włączone jest Udostępnianie portów TCP dla tego połączenia. Jeśli jest to `false`, każde powiązanie będzie używać własnego portu wyłącznego. Wartość domyślna to `false`.<br /><br /> To ustawienie dotyczy tylko usług. Nie dotyczy to klientów.<br /><br /> Użycie tego ustawienia wymaga włączenia usługi udostępniania portów TCP Windows Communication Foundation (WCF), zmieniając jej typ uruchamiania na ręczny lub automatyczny.|  
-|teredoEnabled|Wartość logiczna określająca, czy jest włączona funkcja Teredo (technologia do adresowania klientów znajdujących się za zaporą). Wartość domyślna to `false`.<br /><br /> Ta właściwość włącza protokół Teredo dla bazowego gniazda TCP. Aby uzyskać więcej informacji, zobacz [Omówienie protokołu Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Ta właściwość ma zastosowanie tylko do [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] i [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. W systemie Windows Vista jest używana opcja konfiguracji całego komputera dla protokołu Teredo, więc w przypadku korzystania z systemu Vista Ta właściwość jest ignorowana. Protokół Teredo wymaga, aby komputery klienckie i usługi miały zainstalowany stos IPv6 firmy Microsoft i prawidłowo skonfigurowany do użycia w protokole Teredo. Aby uzyskać więcej informacji na temat konfigurowania protokołu Teredo, zobacz [Omówienie protokołu Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Aby uzyskać więcej informacji, zobacz [centra technologiczne systemu Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=49888).|  
+|teredoEnabled|Wartość logiczna określająca, czy jest włączona funkcja Teredo (technologia do adresowania klientów znajdujących się za zaporą). Wartość domyślna to `false`.<br /><br /> Ta właściwość włącza protokół Teredo dla bazowego gniazda TCP. Aby uzyskać więcej informacji, zobacz [Omówienie protokołu Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Ta właściwość ma zastosowanie tylko do [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] i systemu Windows Server 2003. W systemie Windows Vista jest używana opcja konfiguracji całego komputera dla protokołu Teredo, więc w przypadku korzystania z systemu Vista Ta właściwość jest ignorowana. Protokół Teredo wymaga, aby komputery klienckie i usługi miały zainstalowany stos IPv6 firmy Microsoft i prawidłowo skonfigurowany do użycia w protokole Teredo. Aby uzyskać więcej informacji na temat konfigurowania protokołu Teredo, zobacz [Omówienie protokołu Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Aby uzyskać więcej informacji, zobacz [centra technologiczne systemu Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=49888).|  
 |transferMode|Pobiera lub ustawia wartość wskazującą, czy komunikaty są buforowane, czy przesyłane strumieniowo przy użyciu transportu zorientowanego na połączenia.|  
 |connectionPoolSettings|Określa dodatkowe ustawienia puli połączeń dla powiązania nazwanego potoku.|  
   

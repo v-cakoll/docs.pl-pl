@@ -1,15 +1,15 @@
 ---
 title: Przewodnik platformy .NET Core
-description: .NET Core to modularna, wielowydajna implementacja platformy .NET do tworzenia aplikacji dla systemów Windows, Linux i Mac. Dowiedz się więcej o programie .NET Core, aby rozpocząć pracę.
+description: .NET Core to modularna, wielowydajna implementacja platformy .NET do tworzenia aplikacji dla systemów Windows, Linux i macOS. Dowiedz się więcej o programie .NET Core, aby rozpocząć pracę.
 author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: b2622dba53d64c9dcf58e852d57de117fe79eb2e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 80a3b12972e24c3022ac2aa14406aa60635815a3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837015"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341367"
 ---
 # <a name="net-core-guide"></a>Przewodnik platformy .NET Core
 
@@ -27,11 +27,11 @@ Wszystkie wersje programu .NET Core są dostępne w [programie .NET Core downloa
 
 ## <a name="net-core-31"></a>.NET Core 3,1
 
-Najnowsza wersja to .NET Core 3,1. Obejmuje to drobne ulepszenia w porównaniu z platformą .NET Core 3,0. Jednak .NET Core 3,1 to długoterminowa obsługiwana wersja. Aby uzyskać więcej informacji o wersji programu .NET Core 3,1, zobacz [co nowego w programie .net core 3,1](./whats-new/dotnet-core-3-1.md).
+Najnowsza wersja to .NET Core 3,1. 3,1 zawiera drobne ulepszenia w porównaniu z platformą .NET Core 3,0, jednak .NET Core 3,1 jest [długoterminową obsługiwaną wersją](https://dotnet.microsoft.com/platform/support/policy/dotnet-core). Aby uzyskać więcej informacji o wersji programu .NET Core 3,1, zobacz [co nowego w programie .net core 3,1](./whats-new/dotnet-core-3-1.md).
 
 ## <a name="create-your-first-application"></a>Utwórz swoją pierwszą aplikację
 
-Po zainstalowaniu zestaw .NET Core SDK Otwórz wiersz polecenia. Wpisz następujące polecenia `dotnet`, aby utworzyć i uruchomić C# aplikację:
+Po zainstalowaniu zestaw .NET Core SDK Otwórz wiersz polecenia. Wprowadź następujące polecenia `dotnet`, aby utworzyć i uruchomić C# aplikację:
 
 ```dotnetcli
 dotnet new console

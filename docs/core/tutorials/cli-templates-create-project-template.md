@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318281"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340362"
 ---
 # <a name="tutorial-create-a-project-template"></a>Samouczek: Tworzenie szablonu projektu
 
@@ -29,13 +29,13 @@ W tej części serii dowiesz się, jak:
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 * Ukończ [część 1](cli-templates-create-item-template.md) tej serii samouczków.
-* Otwórz Terminal i przejdź do folderu _working\templates\\_ .
+* Otwórz Terminal i przejdź do folderu _working\templates_ .
 
 ## <a name="create-a-project-template"></a>Utwórz szablon projektu
 
 Szablony projektów tworzą gotowe do uruchomienia projekty, które ułatwiają użytkownikom rozpoczęcie pracy z zestawem roboczym kodu. Platforma .NET Core zawiera kilka szablonów projektu, takich jak Aplikacja konsolowa lub Biblioteka klas. W tym przykładzie utworzysz nowy projekt konsoli, który umożliwia C# 8,0 i generuje punkt wejścia `async main`.
 
-W terminalu przejdź do folderu _working\templates\\_ i Utwórz nowy podfolder o nazwie _consoleasync_. Wprowadź podfolder i uruchom `dotnet new console` w celu wygenerowania standardowej aplikacji konsolowej. Będziesz edytować pliki utworzone przez ten szablon w celu utworzenia nowego szablonu.
+W terminalu przejdź do folderu _working\templates_ i Utwórz nowy podfolder o nazwie _consoleasync_. Wprowadź podfolder i uruchom `dotnet new console` w celu wygenerowania standardowej aplikacji konsolowej. Będziesz edytować pliki utworzone przez ten szablon w celu utworzenia nowego szablonu.
 
 ```console
 working
@@ -98,7 +98,7 @@ Teraz, gdy masz już utworzoną zawartość szablonu, musisz utworzyć konfigura
 
 ## <a name="create-the-template-config"></a>Utwórz konfigurację szablonu
 
-Szablony są rozpoznawane w programie .NET Core za pomocą specjalnego folderu i pliku konfiguracji, który istnieje w katalogu głównym szablonu. W tym samouczku folder szablonu znajduje się w witrynie _working\templates\consoleasync\\_ .
+Szablony są rozpoznawane w programie .NET Core za pomocą specjalnego folderu i pliku konfiguracji, który istnieje w katalogu głównym szablonu. W tym samouczku folder szablonu znajduje się w lokalizacji _working\templates\consoleasync_.
 
 Podczas tworzenia szablonu wszystkie pliki i foldery znajdujące się w folderze szablonów są uwzględniane jako część szablonu, z wyjątkiem folderu specjalnej konfiguracji. Ten folder konfiguracji ma nazwę _. Template. config_.
 

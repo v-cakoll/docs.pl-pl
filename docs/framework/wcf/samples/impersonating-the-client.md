@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 40bde7d9bd2735dfd6f1a18f9359533db0e11724
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0c262d8b5460f236ef0429154ae337c7adf96714
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989823"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338711"
 ---
 # <a name="impersonating-the-client"></a>Personifikowanie klienta
 Przykład personifikacji demonstruje sposób personifikacji aplikacji wywołującej w usłudze, aby usługa mogła uzyskać dostęp do zasobów systemowych w imieniu obiektu wywołującego.  
@@ -21,7 +21,7 @@ Przykład personifikacji demonstruje sposób personifikacji aplikacji wywołują
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Kod usługi został zmodyfikowany w taki sposób, że `Add` Metoda w usłudze personifikuje obiekt wywołujący <xref:System.ServiceModel.OperationBehaviorAttribute> przy użyciu metody, jak pokazano w poniższym przykładowym kodzie.  
+ Kod usługi został zmodyfikowany w taki sposób, że metoda `Add` w usłudze personifikuje obiekt wywołujący przy użyciu <xref:System.ServiceModel.OperationBehaviorAttribute>, jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp
 [OperationBehavior(Impersonation = ImpersonationOption.Required)]  
@@ -35,9 +35,9 @@ public double Add(double n1, double n2)
 }  
 ```  
   
- W związku z tym kontekst zabezpieczeń wykonywanego wątku jest przełączany w celu personifikacji obiektu wywołującego przed wprowadzeniem `Add` metody i przywróceniem wyjścia z metody.  
+ W związku z tym kontekst zabezpieczeń wykonywanego wątku jest przełączany w celu personifikacji obiektu wywołującego przed wprowadzeniem metody `Add` i przywróceniem wyjścia z metody.  
   
- `DisplayIdentityInformation` Metoda pokazana w poniższym przykładowym kodzie to funkcja narzędziowa, która wyświetla tożsamość obiektu wywołującego.  
+ Metoda `DisplayIdentityInformation` pokazana w poniższym przykładowym kodzie to funkcja narzędziowa, która wyświetla tożsamość obiektu wywołującego.  
   
 ```csharp
 static void DisplayIdentityInformation()  
@@ -52,7 +52,7 @@ static void DisplayIdentityInformation()
 }  
 ```  
   
- `Subtract` Metoda w usłudze personifikuje wywołującego za pomocą bezwzględnych wywołań, jak pokazano w poniższym przykładowym kodzie.  
+ Metoda `Subtract` w usłudze personifikuje obiekt wywołujący przy użyciu bezwzględnych wywołań, jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp
 public double Subtract(double n1, double n2)  
@@ -90,7 +90,7 @@ public double Subtract(double n1, double n2)
   
  Inne metody nie personifikują wywołującego.  
   
- Kod klienta został zmodyfikowany w celu ustawienia poziomu personifikacji na <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>. Klient określa poziom personifikacji, który ma być używany przez usługę, przy użyciu <xref:System.Security.Principal.TokenImpersonationLevel> wyliczenia. Wyliczenie obsługuje następujące wartości: <xref:System.Security.Principal.TokenImpersonationLevel.None>, <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>, <xref:System.Security.Principal.TokenImpersonationLevel.Identification> <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> i. <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> Aby przeprowadzić sprawdzanie dostępu podczas uzyskiwania dostępu do zasobu systemowego na komputerze lokalnym, który jest chroniony przy użyciu list ACL systemu Windows, poziom personifikacji <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>musi być ustawiony na, jak pokazano w poniższym przykładowym kodzie.  
+ Kod klienta został zmodyfikowany w celu ustawienia poziomu personifikacji na <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>. Klient określa poziom personifikacji, który ma być używany przez usługę, przy użyciu wyliczenia <xref:System.Security.Principal.TokenImpersonationLevel>. Wyliczenie obsługuje następujące wartości: <xref:System.Security.Principal.TokenImpersonationLevel.None>, <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>, <xref:System.Security.Principal.TokenImpersonationLevel.Identification>, <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> i <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. Aby przeprowadzić sprawdzanie dostępu podczas uzyskiwania dostępu do zasobu systemowego na komputerze lokalnym, który jest chroniony przy użyciu list ACL systemu Windows, poziom personifikacji musi być ustawiony na <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>, jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp
 // Create a client with given client endpoint configuration  
@@ -102,10 +102,10 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane zarówno w systemie, jak i w oknach konsoli klienta. Naciśnij klawisz ENTER w każdym oknie konsoli, aby zamknąć usługę i klienta.  
   
 > [!NOTE]
-> Usługa musi być uruchomiona na koncie administracyjnym lub konto, w którym jest uruchamiane, musi mieć przyznane prawa do rejestracji `http://localhost:8000/ServiceModelSamples` identyfikatora URI za pomocą warstwy http. Takie prawa można udzielić przez skonfigurowanie [rezerwacji przestrzeni nazw](https://go.microsoft.com/fwlink/?LinkId=95012) za pomocą [narzędzia HttpCfg. exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
+> Usługa musi być uruchomiona w ramach konta administracyjnego lub konto, na którym jest uruchamiane, musi mieć przyznane prawa do rejestrowania identyfikatora URI `http://localhost:8000/ServiceModelSamples` za pomocą warstwy HTTP. Takie prawa można udzielić przez skonfigurowanie [rezerwacji przestrzeni nazw](https://go.microsoft.com/fwlink/?LinkId=95012) za pomocą [narzędzia HttpCfg. exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
   
 > [!NOTE]
-> Na komputerach z [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]systemem Personifikacja jest obsługiwana tylko wtedy, gdy aplikacja host. exe ma uprawnienie personifikacji. (Domyślnie tylko Administratorzy mają to uprawnienie). Aby dodać to uprawnienie do konta, na którym działa usługa, przejdź do pozycji **Narzędzia administracyjne**, Otwórz pozycję **zasady zabezpieczeń lokalnych**, Otwórz **Zasady lokalne**, kliknij pozycję **Przypisywanie praw użytkownika**, a następnie wybierz opcję **Personifikuj klienta po Uwierzytelnianie** i kliknij dwukrotnie przycisk **Właściwości** , aby dodać użytkownika lub grupę.  
+> Na komputerach z systemem Windows Server 2003 Personifikacja jest obsługiwana tylko wtedy, gdy aplikacja host. exe ma uprawnienie personifikacji. (Domyślnie tylko Administratorzy mają to uprawnienie). Aby dodać to uprawnienie do konta, na którym działa usługa, przejdź do pozycji **Narzędzia administracyjne**, Otwórz **pozycję Zasady zabezpieczeń lokalnych**, Otwórz **Zasady lokalne**, kliknij pozycję **Przypisywanie praw użytkownika**, a następnie wybierz opcję **Personifikuj klienta po uwierzytelnieniu** , a następnie kliknij dwukrotnie pozycję **Właściwości** , aby dodać użytkownika lub grupę.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   

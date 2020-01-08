@@ -1,16 +1,16 @@
 ---
-title: 'Instrukcje: Zapisz dane obiektu w pliku XML (C#)'
+title: Jak napisać dane obiektu do pliku XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 5da79d68bf7e1c955cb6edededb3914bd9c898e5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 475e9398f20a2a4db9fb537d0b8d44f0273e980b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590687"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346448"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-c"></a>Instrukcje: Zapisz dane obiektu w pliku XML (C#)
-Ten przykład zapisuje obiekt z klasy do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.  
+# <a name="how-to-write-object-data-to-an-xml-file-c"></a>Jak napisać dane obiektu do pliku XML (C#)
+Ten przykład zapisuje obiekt z klasy do pliku XML przy użyciu klasy <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Przykład  
   
@@ -47,7 +47,7 @@ public class XMLWrite
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Serializacja klasy musi mieć Konstruktor publiczny bez parametrów.  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
+## <a name="robust-programming"></a>Skuteczne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
 - Serializowana Klasa nie ma publicznego konstruktora bez parametrów.  
@@ -58,11 +58,11 @@ public class XMLWrite
   
 - Dysk jest pełny (<xref:System.IO.IOException>).  
   
-## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Ten przykład tworzy nowy plik, jeśli plik jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, aplikacja musi `Create` mieć dostęp do tego folderu. Jeśli plik już istnieje, aplikacja wymaga tylko `Write` dostępu, ale ma mniejsze uprawnienia. Jeśli to możliwe, bezpieczniejsze jest tworzenie pliku podczas wdrażania i udzielanie `Read` dostępu do pojedynczego pliku, `Create` a nie dostęp do folderu.  
+## <a name="net-framework-security"></a>Zabezpieczenia programu .NET Framework  
+ Ten przykład tworzy nowy plik, jeśli plik jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, ta aplikacja wymaga `Create` dostępu do folderu. Jeśli plik już istnieje, aplikacja wymaga tylko `Write` dostępu, ale ma mniejsze uprawnienia. Jeśli to możliwe, bezpieczniejsze jest tworzenie plików podczas wdrażania i udzielanie `Read` dostęp do pojedynczego pliku, a nie `Create` dostępu do folderu.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.IO.StreamWriter>
-- [Instrukcje: Odczytaj dane obiektu z pliku XML (C#)](./how-to-read-object-data-from-an-xml-file.md)
+- [Jak odczytać dane obiektu z pliku XML (C#)](./how-to-read-object-data-from-an-xml-file.md)
 - [Serializacja (C#)](./index.md)

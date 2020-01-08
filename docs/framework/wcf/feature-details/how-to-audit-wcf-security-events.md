@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: b96c68c06099db2f396d16772cfaa8aee37390fe
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7071aaf88346ee217226632501ebd6c82cfc1cb8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838016"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346757"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Instrukcje: Inspekcja Windows Communication Foundation zdarzeń zabezpieczeń
 Windows Communication Foundation (WCF) umożliwia rejestrowanie zdarzeń zabezpieczeń w dzienniku zdarzeń systemu Windows, który można wyświetlić za pomocą Podgląd zdarzeń systemu Windows. W tym temacie wyjaśniono, jak skonfigurować aplikację tak, aby rejestrowała zdarzenia zabezpieczeń. Aby uzyskać więcej informacji na temat inspekcji WCF, zobacz [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) umożliwia rejestrowanie zdarzeń zabezpi
      [!code-csharp[AuditingSecurityEvents#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#2)]
      [!code-vb[AuditingSecurityEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#2)]  
   
-     Wyliczenie <xref:System.ServiceModel.AuditLogLocation> ma trzy wartości: `Application`, `Security`lub `Default`. Wartość określa jeden z dzienników widocznych w Podgląd zdarzeń, dziennik zabezpieczeń lub dziennik aplikacji. W przypadku użycia wartości `Default` rzeczywisty dziennik będzie zależeć od systemu operacyjnego, w którym działa aplikacja. Jeśli inspekcja jest włączona, a lokalizacja dziennika nie jest określona, domyślnym dziennikiem `Security` dla platform, które obsługują zapisywanie w dzienniku zabezpieczeń; w przeciwnym razie nastąpi zapis do dziennika `Application`. Tylko [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i Windows Vista obsługują zapisywanie w dzienniku zabezpieczeń domyślnie.  
+     Wyliczenie <xref:System.ServiceModel.AuditLogLocation> ma trzy wartości: `Application`, `Security`lub `Default`. Wartość określa jeden z dzienników widocznych w Podgląd zdarzeń, dziennik zabezpieczeń lub dziennik aplikacji. W przypadku użycia wartości `Default` rzeczywisty dziennik będzie zależeć od systemu operacyjnego, w którym działa aplikacja. Jeśli inspekcja jest włączona, a lokalizacja dziennika nie jest określona, domyślnym dziennikiem `Security` dla platform, które obsługują zapisywanie w dzienniku zabezpieczeń; w przeciwnym razie nastąpi zapis do dziennika `Application`. Tylko systemy Windows Server 2003 i Windows Vista domyślnie obsługują zapisywanie w dzienniku zabezpieczeń.  
   
 2. Skonfiguruj typy zdarzeń do inspekcji. Można jednocześnie przeprowadzać inspekcję zdarzeń na poziomie usługi lub zdarzeń autoryzacji na poziomie wiadomości. W tym celu należy ustawić właściwość <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> lub właściwość <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> na jedną z <xref:System.ServiceModel.AuditLevel> wartości wyliczenia, jak pokazano w poniższym kodzie.  
   

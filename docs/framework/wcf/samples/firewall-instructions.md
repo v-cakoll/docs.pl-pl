@@ -2,12 +2,12 @@
 title: Instrukcje dotyczące zapory
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 3c94f0edbb244b6c378cc32f05c34fd029d253ff
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: e2c4dd8e784599a5e110e7454d9d0e709cbc5776
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837847"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544779"
 ---
 # <a name="firewall-instructions"></a>Instrukcje dotyczące zapory
 Należy włączyć kilka portów lub programów w zaporze, aby umożliwić działanie przykładów Windows Communication Foundation (WCF). Wiele przykładów komunikuje się za pomocą portów z zakresu 8000-8003 i portu 9000. Zapora jest domyślnie włączona i uniemożliwia dostęp do tych portów. Aby włączyć zaporę dla przykładów, wykonaj jedną z następujących procedur, w zależności od wymagań i środowiska zabezpieczeń:  
@@ -36,7 +36,7 @@ Należy włączyć kilka portów lub programów w zaporze, aby umożliwić dzia�
   
     - W systemie Windows 7 lub Windows Server 2008 R2 kliknij opcję **Zezwól programowi lub funkcji za pomocą zapory systemu Windows**. Kliknij pozycję **Zmień ustawienia**, Zezwól na **inny program...** .  
   
-    - W systemie Windows Vista lub [!INCLUDE[lserver](../../../../includes/lserver-md.md)]kliknij pozycję **Zezwól programowi przez zaporę systemu Windows**.  
+    - W systemie Windows Vista lub Windows Server 2008 kliknij opcję **Zezwól programowi przez zaporę systemu Windows**.  
   
 4. Na karcie **wyjątki** kliknij pozycję **Dodaj program**.  
   
@@ -72,7 +72,7 @@ Należy włączyć kilka portów lub programów w zaporze, aby umożliwić dzia�
   
     10. Kliknij pozycję **reguły ruchu wychodzącego** i powtórz kroki od c do h.  
   
-3. W systemie Windows Vista lub [!INCLUDE[lserver](../../../../includes/lserver-md.md)]wykonaj następujące kroki.  
+3. W systemie Windows Vista lub Windows Server 2008 wykonaj następujące kroki.  
   
     1. Kliknij pozycję **Zezwól programowi przez zaporę systemu Windows**.  
   

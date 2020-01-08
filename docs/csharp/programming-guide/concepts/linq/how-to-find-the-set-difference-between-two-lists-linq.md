@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Wyszukiwanie zestawu różnic między dwoma listami (LINQ) (C#)'
+title: Jak znaleźć różnice między dwoma listami (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 9e2a42a466a71d4e351df89398be197197a54042
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 227405428a1b418cbe6ceb3d0e3274595307e5ef
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140987"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345941"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Instrukcje: Wyszukiwanie zestawu różnic między dwoma listami (LINQ) (C#)
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Jak znaleźć różnice między dwoma listami (LINQ) (C#)
 Ten przykład pokazuje, jak używać LINQ do porównywania dwóch list ciągów i wyprowadzania tych wierszy w names1. txt, ale nie w names2. txt.  
   
 ### <a name="to-create-the-data-files"></a>Aby utworzyć pliki danych  

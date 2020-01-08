@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1d6430ba5969d8a05db47baf9521d2409e596c23
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 769afe4d301a7b0fafd26018255f98b6faa29887
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740865"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559438"
 ---
 # <a name="globalization-for-wpf"></a>Globalizacja dla WPF
 Ten temat zawiera informacje o problemach, które należy wziąć pod uwagę podczas pisania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji dla globalnego rynku. Elementy programistyczne globalizacji są zdefiniowane w programie .NET w przestrzeni nazw <xref:System.Globalization>.
@@ -36,7 +36,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>Kody
+### <a name="encoding"></a>Kodowanie
  Kodowanie obsługiwane przez [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] to ASCII, Unicode UTF-16 i UTF-8. Instrukcja kodowania znajduje się na początku dokumentu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Jeśli żaden atrybut kodowania nie istnieje i nie ma kolejności bajtów, Analizator domyślnie używa kodowania UTF-8. Kodowanie UTF-8 i UTF-16 są preferowanymi kodowaniami. Kodowanie UTF-7 nie jest obsługiwane. Poniższy przykład ilustruje sposób określania kodowania UTF-8 w pliku [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 ```xaml
@@ -45,7 +45,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>Atrybut Language
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] używa [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) do reprezentowania atrybutu języka elementu.  Aby skorzystać z klasy <xref:System.Globalization.CultureInfo>, wartość atrybutu języka musi być jedną z nazw kultur wstępnie zdefiniowanych przez <xref:System.Globalization.CultureInfo>. [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) można dziedziczyć w drzewie elementów (według reguł XML, niekoniecznie ze względu na dziedziczenie właściwości zależności), a jego wartość domyślna to pusty ciąg, jeśli nie jest on jawnie przypisany.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] używa [XML: lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) do reprezentowania atrybutu języka elementu.  Aby skorzystać z klasy <xref:System.Globalization.CultureInfo>, wartość atrybutu języka musi być jedną z nazw kultur wstępnie zdefiniowanych przez <xref:System.Globalization.CultureInfo>. [XML: lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) można dziedziczyć w drzewie elementów (według reguł XML, niekoniecznie ze względu na dziedziczenie właściwości zależności), a jego wartość domyślna to pusty ciąg, jeśli nie jest on jawnie przypisany.
 
  Atrybut Language jest bardzo przydatny do określania dialektów. Na przykład francuski ma inną pisownię, słownictwo i wymowę w Francji, Quebec, Belgii i Szwajcarii. W standardzie Unicode, a także w językach chińskim, japońskim i koreańskim, ale kształty ideograficzne różnią się od siebie i używają całkowicie różnych czcionek.
 
@@ -69,9 +69,9 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
  Obecnie obsługiwane są następujące skrypty:
 
-- Arabski
+- arabski
 
-- Bengalski
+- Bengali
 
 - Devanagari
 
@@ -79,23 +79,23 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 - grecki
 
-- Gudżarati
+- Gujarati
 
 - Gurmukhi
 
-- Hebrajski
+- hebrajski
 
 - Skrypty ideograficzne
 
 - Kannada
 
-- -
+- Lao
 
 - Wielka
 
-- Malayalam
+- Malajalam
 
-- Mongolski
+- Mongolian
 
 - Odia
 
@@ -119,7 +119,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 - Stary Hangul koreański
 
-- Mjanma
+- Myanmar
 
 - Syngaleski
 

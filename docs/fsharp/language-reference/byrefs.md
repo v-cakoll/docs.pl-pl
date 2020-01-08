@@ -2,12 +2,12 @@
 title: Byrefs
 description: Dowiedz się więcej o typach ByRef i ByRef F#, które są używane w programowaniu niskiego poziomu.
 ms.date: 11/04/2019
-ms.openlocfilehash: 2c46cea2329b6817dd753e67c6702fb163ce2193
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a6d3d69c4a163be9ecef7e33c284c4a73e800405
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976830"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545128"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -82,7 +82,7 @@ Jeśli chcesz tylko napisać wskaźnik zamiast odczytywania go, rozważ użycie 
 
 ### <a name="inref-semantics"></a>Semantyka Inref
 
-Rozważmy następujący kod:
+Spójrzmy na poniższy kod:
 
 ```fsharp
 let f (x: inref<SomeStruct>) = x.SomeField
@@ -104,7 +104,7 @@ Wszystkie te reguły razem oznaczają, że posiadacz wskaźnika `inref` może ni
 
 ### <a name="outref-semantics"></a>Semantyka Outref
 
-Celem `outref<'T>` jest wskazanie, że wskaźnik powinien być tylko do odczytu. Nieoczekiwanie, `outref<'T>` umożliwia odczytywanie wartości podstawowej pomimo jej nazwy. Jest to przeznaczone do celów zgodności. Semantyka `outref<'T>` nie różni się od `byref<'T>`.
+Celem `outref<'T>` jest wskazanie, że na wskaźniku należy zapisywać tylko. Nieoczekiwanie, `outref<'T>` umożliwia odczytywanie wartości podstawowej pomimo jej nazwy. Jest to przeznaczone do celów zgodności. Semantyka `outref<'T>` nie różni się od `byref<'T>`.
 
 ### <a name="interop-with-c"></a>Współdziałanie z\# C
 
@@ -121,10 +121,10 @@ W poniższej tabeli przedstawiono, F# co emituje:
 
 |F#Konstruuj|Wyemitowana konstrukcja|
 |------------|-----------------|
-|`inref<'T>` argument|`[In]` atrybutu w argumencie|
+|Argument `inref<'T>`|`[In]` atrybutu w argumencie|
 |`inref<'T>` Zwróć|`modreq` atrybutu wartości|
 |`inref<'T>` w nieabstrakcyjnym gnieździe lub implementacji|`modreq` argumentu lub Return|
-|`outref<'T>` argument|`[Out]` atrybutu w argumencie|
+|Argument `outref<'T>`|`[Out]` atrybutu w argumencie|
 
 ### <a name="type-inference-and-overloading-rules"></a>Wnioskowanie o typie i reguły przeciążania
 

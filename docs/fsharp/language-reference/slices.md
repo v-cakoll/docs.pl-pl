@@ -1,17 +1,17 @@
 ---
-title: WycinkiF#()
-description: Informacje na temat używania wycinków dla istniejących F# typów danych oraz sposobu definiowania własnych wycinków dla innych typów danych.
-ms.date: 01/22/2019
-ms.openlocfilehash: 2f7b87cda87aad1fdac05b4e14b16f454f8c0461
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+title: Wycinki
+description: Dowiedz się, jak używać wycinków dla istniejących F# typów danych i jak definiować własne wycinki dla innych typów danych.
+ms.date: 12/23/2019
+ms.openlocfilehash: 3911139c7ce656043817eb23d30f3686555b6efe
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733371"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545101"
 ---
 # <a name="slices"></a>Wycinki
 
-W F#programie wycinek jest podzbiorem typu danych. Aby można było uzyskać wycinka z typu danych, typ danych musi definiować metodę `GetSlice` lub w [rozszerzeniu typu](type-extensions.md) , który znajduje się w zakresie. W tym artykule wyjaśniono, jak korzystać z F# wycinków z istniejących typów i jak definiować własne.
+W F#programie wycinek jest podzbiorem dowolnego typu danych, który ma metodę `GetSlice` w jej definicji lub w [rozszerzeniu typu](type-extensions.md)w zakresie. Jest najczęściej używany z F# tablicami i listami. W tym artykule wyjaśniono, jak korzystać z F# wycinków z istniejących typów i jak definiować własne wycinki.
 
 Wycinki są podobne do [indeksatorów](./members/indexed-properties.md), ale zamiast zwracać jedną wartość z bazowej struktury danych, uzyskują wiele z nich.
 
@@ -89,7 +89,7 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-Biblioteka F# podstawowa nie definiuje`GetSlice`dla tablic 3W. Jeśli chcesz wyrównać te lub inne tablice o większej liczbie wymiarów, musisz samodzielnie zdefiniować element członkowski `GetSlice`.
+Biblioteka F# podstawowa nie definiuje obecnie `GetSlice` dla tablic 3W. Jeśli chcesz wydzielić tablice 3D lub inne tablice o większej liczbie wymiarów, zdefiniuj `GetSlice` członka.
 
 ## <a name="defining-slices-for-other-data-structures"></a>Definiowanie wycinków dla innych struktur danych
 
@@ -140,6 +140,17 @@ printSpan sp.[0..] // [|1; 2; 3; 4; 5|]
 printSpan sp.[..5] // [|1; 2; 3; 4; 5|]
 printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..2] // |2; 3|]
+```
+
+## <a name="built-in-f-slices-are-end-inclusive"></a>F# Wycinki wbudowane są gotowe do końca
+
+Wszystkie wycinki wewnętrzne F# w programie są końcami włącznie; oznacza to, że górna granica jest uwzględniona w wycinku. Dla danego wycinka z indeksem początkowym `x` i końcowe `y`indeksu, powstający wycink będzie zawierać wartość *Yth* .
+
+```fsharp
+// Define a new list
+let xs = [1 .. 10]
+
+printfn "%A" xs.[2..5] // Includes the 5th index
 ```
 
 ## <a name="see-also"></a>Zobacz także

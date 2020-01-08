@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 0137066b3a351d60bf1cc2e06640030ba1216d03
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: f853663bef4dd0de7ac61e706dedf8c6a19b5b51
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960065"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545014"
 ---
 # <a name="net-framework-system-requirements"></a>Wymagania systemowe .NET Framework
 
@@ -78,7 +78,7 @@ Aby uzyskać informacje na temat cyklu pomocy technicznej .NET Framework wersji,
 
 - W przypadku wszystkich platform zalecamy przeprowadzenie uaktualnienia do najnowszego dodatku Service Pack systemu Windows i zainstalowanie aktualizacji krytycznych dostępnych w [Windows Update](https://support.microsoft.com/help/12373/windows-update-faq) , aby zapewnić najlepszą zgodność i bezpieczeństwo.
 
-- W 64-bitowych systemach operacyjnych .NET Framework obsługuje środowisko WOW64 (32-bitowe przetwarzanie na komputerze 64-bitowym) i | natywne przetwarzanie 64-bitowe.
+- W 64-bitowych systemach operacyjnych .NET Framework obsługuje zarówno 64 procesor WOW64 (32-bitowy), jak i natywne przetwarzanie 64-bitowe.
 
 ## <a name="supported-server-operating-systems"></a>Obsługiwane systemy operacyjne serwera
 
@@ -96,7 +96,7 @@ Aby uzyskać informacje na temat cyklu pomocy technicznej .NET Framework wersji,
 
  **Uwagi:**
 
-- System Windows Server 2012 zawiera .NET Framework 4,5, więc nie trzeba go instalować oddzielnie. Podobnie [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] zawiera .NET Framework 4.5.1.
+- System Windows Server 2012 zawiera .NET Framework 4,5, więc nie trzeba go instalować oddzielnie. Podobnie system Windows Server 2012 R2 zawiera .NET Framework 4.5.1.
 
 - .NET Framework ma ograniczoną obsługę roli Server Core w systemie Windows Server 2008 R2 z dodatkiem SP1 lub nowszym. Listę nieobsługiwanych interfejsów API można znaleźć w temacie [funkcje serwera .NET Core](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)) .
 
@@ -104,9 +104,9 @@ Aby uzyskać informacje na temat cyklu pomocy technicznej .NET Framework wersji,
 
 - W systemie Windows Server 2008 z dodatkiem SP2 .NET Framework nie jest obsługiwany w roli Server Core.
 
-- W przypadku wszystkich platform zalecamy przeprowadzenie uaktualnienia do najnowszego dodatku Service Pack dla systemu Windows i aktualizacji krytycznych dostępnych w [Windows Update](https://support.microsoft.com/help/12373/windows-update-faq) , aby zapewnić najlepszą zgodność i bezpieczeństwo. Instalacja najnowszego dodatku Service Pack dla systemu Windows może być wymagane w niektórych systemach operacyjnych.
+- W przypadku wszystkich platform zalecamy przeprowadzenie uaktualnienia do najnowszego dodatku Service Pack dla systemu Windows i aktualizacji krytycznych dostępnych w [Windows Update](https://support.microsoft.com/help/12373/windows-update-faq) , aby zapewnić najlepszą zgodność i bezpieczeństwo. W niektórych systemach operacyjnych może być wymagana instalacja najnowszego dodatku Service Pack dla systemu Windows.
 
-- W 64-bitowych systemach operacyjnych program .NET Framework obsługuje mechanizm WOW64 (32-bitowe przetwarzanie na komputerze 64-bitowym) i macierzyste 64-bitowe przetwarzanie.
+- W 64-bitowych systemach operacyjnych .NET Framework obsługuje zarówno 64 procesor WOW64 (32-bitowy), jak i natywne przetwarzanie 64-bitowe.
 
 ## <a name="see-also"></a>Zobacz także
 

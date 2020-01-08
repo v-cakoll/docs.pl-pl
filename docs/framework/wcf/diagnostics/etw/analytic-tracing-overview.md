@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: f6ffed3d9f0bf5e3dc5698d51276eb1db276993c
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: f1a24e34375e98d4bfb48c1e2fd84290e08f6eea
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837496"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544752"
 ---
 # <a name="analytic-tracing-overview"></a>Omówienie śledzenia analitycznego
 Śledzenie analityczne w [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] to funkcja śledzenia o wysokiej wydajności i niskim poziomie szczegółowości dla systemu Windows (ETW). Funkcja ETW działa na poziomie jądra, aby znacznie zmniejszyć obciążenie operacji śledzenia. Efektywnie buforuje zdarzenia użytkownika i trybu jądra oraz umożliwia dynamiczne Włączanie rejestrowania bez konieczności ponownego uruchamiania usługi. Dane śledzenia są dostępne w dziennikach zdarzeń po ich emisji i odebraniu.  
   
  Aby uzyskać więcej informacji na temat funkcji ETW, zobacz [ulepszanie debugowania i dostrajania wydajności za pomocą funkcji ETW](https://go.microsoft.com/fwlink/?LinkId=164781).  
   
- Oprócz korzystania z dzienników zdarzeń systemu Windows, zabezpieczeń i aplikacji w celu przeanalizowania aplikacji, systemu Windows Vista i [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] wprowadzono dodatkowe dzienniki w węźle aplikacje i usługi Dzienniki najwyższego poziomu. Te nowe dzienniki mają na celu przechowywanie zdarzeń dla konkretnej aplikacji lub określonego składnika zamiast zdarzeń globalnych, które mają wpływ na cały system (na przykład typ zdarzeń, które mogą być rejestrowane w dzienniku zdarzeń zabezpieczeń). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] łączy i skorelowanie rejestrowania zdarzeń śledzenia WCF, dzienników komunikatów WCF i [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] śledzenia rekordów w dziennikach aplikacji i usług.  
+ Oprócz korzystania z dzienników zdarzeń systemu Windows, zabezpieczeń i aplikacji do analizowania aplikacji, Windows Vista i Windows Server 2008 wprowadzono dodatkowe dzienniki w węźle aplikacje i usługi Dzienniki najwyższego poziomu. Te nowe dzienniki mają na celu przechowywanie zdarzeń dla konkretnej aplikacji lub określonego składnika zamiast zdarzeń globalnych, które mają wpływ na cały system (na przykład typ zdarzeń, które mogą być rejestrowane w dzienniku zdarzeń zabezpieczeń). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] łączy i skorelowanie rejestrowania zdarzeń śledzenia WCF, dzienników komunikatów WCF i [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] śledzenia rekordów w dziennikach aplikacji i usług.  
   
 ## <a name="concepts-and-capabilities"></a>Koncepcje i możliwości  
  Poniższe koncepcje i możliwości dotyczą śledzenia analitycznego WCF.  

@@ -1,19 +1,19 @@
 ---
-ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 469be53e14c42775f21ef1ef815becd5cad03a97
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191697"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336724"
 ---
-# <a name="contributing"></a>Udział
+# <a name="contributing"></a>Współtworzenie
 
-Dziękujemy za zainteresowanie korzystaniem z dokumentacji platformy .NET.
+Dziękujemy za zainteresowanie współtworzeniem dokumentacji platformy .NET.
 
 > Jesteśmy w trakcie przechodzenia naszych wytycznych do przewodnika po całej lokacji.
 > Aby zapoznać się z nowymi wskazówkami, odwiedź stronę [Microsoft docs przewodnika współautora](https://docs.microsoft.com/contribute/).
 
-W dokumencie omówiono proces współtworzenia artykułów i przykładów kodu, które są hostowane w [witrynie dokumentacji programu .NET](https://docs.microsoft.com/dotnet). Wkłady mogą być bardzo proste jako poprawki literówki lub złożone jako nowe artykuły.
+W dokumencie omówiono proces współtworzenia artykułów i przykładów kodu, które są hostowane w [witrynie dokumentacji programu .NET](https://docs.microsoft.com/dotnet). Współtworzyć można na różne sposoby, od poprawiania literówek po pisanie nowych artykułów.
 
 - [DOs i podstawowe](#dos-and-donts)
 - [Proces współtworzenia](#process-for-contributing)
@@ -22,67 +22,64 @@ W dokumencie omówiono proces współtworzenia artykułów i przykładów kodu, 
 
 To repozytorium zawiera dokumentację koncepcyjną dla platformy .NET. Witryna dokumentacji programu .NET została utworzona na podstawie wielu repozytoriów, a także do tego:
 
-- [Przykłady i fragmenty kodu](https://github.com/dotnet/samples)  
-    Problemy i zadania dla tego repozytorium są śledzone w usłudze [dotnet/docs/problemy](https://github.com/dotnet/docs/issues).
-- [Dokumentacja interfejsów API platformy .NET](https://github.com/dotnet/dotnet-api-docs)  
-    Problemy i zadania dla tego repozytorium są śledzone w programie [dotnet/dotnet-API-docs/problemy](https://github.com/dotnet/dotnet-api-docs/issues).
-- [Dokumentacja zestawu SDK .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs)  
-    Problemy i taks dla tego repozytorium są śledzone w usłudze [dotnet/docs/problemy](https://github.com/dotnet/docs/issues).
+- [Przykłady i fragmenty kodu](https://github.com/dotnet/samples) Problemy i zadania dla tego repozytorium są śledzone w usłudze [dotnet/docs/problemy](https://github.com/dotnet/docs/issues).
+- [Dokumentacja interfejsu API platformy .NET](https://github.com/dotnet/dotnet-api-docs) Problemy i zadania dla tego repozytorium są śledzone w programie [dotnet/dotnet-API-docs/problemy](https://github.com/dotnet/dotnet-api-docs/issues).
+- [Dokumentacja zestawu SDK .NET compiler platform](https://github.com/dotnet/roslyn-api-docs) Problemy i zadania dla tego repozytorium są śledzone w usłudze [dotnet/docs/problemy](https://github.com/dotnet/docs/issues).
 
 ## <a name="dos-and-donts"></a>DOs i podstawowe
 
-Na poniższej liście przedstawiono niektóre reguły identyfikatorów GUID, które należy wziąć pod uwagę podczas korzystania z dokumentacji programu .NET:
+Poniższa lista przedstawia pewne wskazówki, o których należy pamiętać podczas współtworzenia dokumentacji platformy .NET:
 
-- **Nie ryzykuj** nas z dużymi żądaniami ściągnięcia. Zamiast tego należy rozwiązać problem i zacząć dyskusję, dzięki czemu możemy wyrazić zgodę na kierunek przed zainwestowaniem dużej ilości czasu. W przypadku zmian zbiorczych należy przerwać działanie w mniejszych żądań ściągnięcia (do 100 plików). Te wytyczne są zdecydowanie zalecane, jeśli żądanie ściągnięcia nie postępuje zgodnie z poniższymi wskazówkami.
+- **NIE ZASKAKUJ NAS** dużymi żądaniami ściągnięcia. Zamiast tego zgłoś problem i rozpocznij dyskusję, abyśmy uzgodnili kierunek zanim zainwestujesz dużo czasu. W przypadku zmian zbiorczych należy przerwać działanie w mniejszych żądań ściągnięcia (do 100 plików). Te wytyczne są zdecydowanie zalecane, jeśli żądanie ściągnięcia nie postępuje zgodnie z poniższymi wskazówkami.
 - **Zapoznaj się** z bieżącą usługą [w celu](https://github.com/dotnet/docs/labels/up-for-grabs) dołączania problemów związanych z sugestiami dotyczącymi zadań.
 - **Utwórz jedną** żądanie ściągnięcia dla każdego zadania. Żądań ściągnięcia, które obejmują wiele niepowiązanych zmian, są znacznie trudniejsze do przejrzenia. To opóźnia przeglądy i scalanie żądań ściągnięcia. Te wytyczne dotyczą również przeglądów: staramy się, aby nie sugerowały niezwiązanych zmian w przeglądach; Firma Microsoft zaleca, aby Recenzje społeczności przestrzegać tych wytycznych.
 - **Podaj jasny** opis pracy w ramach żądania ściągnięcia. Powiedz nam, co zmieniono i dlaczego. Domyślny opis "Update article.md" nie jest pomocny dla recenzentów.
-- **Nie** przesyłaj żądań ściągnięcia wyłącznie do stylów bez wcześniejszej dyskusji. Te żądań ściągnięcia pomogą Ci uzyskać więcej czasu na sprawdzenie dokładności i scalanie ich często powoduje konflikty scalania z innymi ważnymi aktualizacjami. Pracujemy nad spójnym stylem, ale firma Microsoft gwarantuje, że pracujemy nad innymi zadaniami. Artykuły są zgodne ze stylem, gdy wprowadzamy najważniejsze aktualizacje z innych przyczyn. 
+- **Nie** przesyłaj żądań ściągnięcia wyłącznie do stylów bez wcześniejszej dyskusji. Te żądań ściągnięcia pomogą Ci uzyskać więcej czasu na sprawdzenie dokładności i scalanie ich często powoduje konflikty scalania z innymi ważnymi aktualizacjami. Pracujemy nad spójnym stylem, ale firma Microsoft gwarantuje, że pracujemy nad innymi zadaniami. Artykuły są zgodne ze stylem, gdy wprowadzamy najważniejsze aktualizacje z innych przyczyn.
 - **Przeczytaj** [Przewodnik po stylu](./styleguide/template.md) i wskazówki dotyczące [głosu i tonu](./styleguide/voice-tone.md) . Nowe dodatki powinny być zgodne z tymi wskazówkami.
-- Przed rozpoczęciem pracy z artykułami utwórz oddzielną gałąź w rozwidleniu.
-- **Postępuj zgodnie z** [przepływem pracy przepływu usługi GitHub](https://guides.github.com/introduction/flow/).
-- Bądź **na blogu i** tweety (lub niezależnie od tego) o Twoje wkłady — często!
+- **UTWÓRZ** oddzielną gałąź swojego rozwidlenia zanim zaczniesz pracę przy artykułach.
+- **POSTĘPUJ** zgodnie z [przepływem pracy usługi GitHub Flow](https://guides.github.com/introduction/flow/).
+- **PISZ** bloga i tweety (lub coś innego) o swoim wkładzie, i rób to często!
 
 Te wskazówki pomagają nam w zaszanowaniu czasu. Wiele osób współtworzy te repozytoria. Postępując zgodnie z tymi wskazówkami, można ułatwić nam przeglądanie i scalanie żądania ściągnięcia. Te praktyki minimalizują konflikty z żądań ściągnięcia od innych członków społeczności i naszego zespołu. Ponieważ żądań ściągnięcia, które nie są zgodne z tymi wytycznymi często, powodują, że firma Microsoft i członkowie społeczności mogą je odrzucić. Jeśli chcesz utworzyć wyjątek, Zacznij od utworzenia problemu.
 
-> Uwaga: możesz zauważyć, że niektóre tematy nie są obecnie zgodne ze wszystkimi wytycznymi określonymi tutaj i w [przewodniku po stylu](./styleguide/template.md) . Pracujemy nad osiągnięciem spójności w całej lokacji.
+> Uwaga: możesz zauważyć, że niektóre tematy nie są obecnie zgodne ze wszystkimi wytycznymi określonymi tutaj i w [przewodniku po stylu](./styleguide/template.md) . Pracujemy nad osiągnięciem spójności w ramach witryny.
 
 ## <a name="process-for-contributing"></a>Proces współtworzenia
 
 Potrzebna jest podstawowa znajomość usługi [git i GitHub.com](https://guides.github.com/activities/hello-world/).
 
-**Krok 1:** Pomiń ten krok w przypadku małych zmian (na przykład w przypadku korygowania literówki lub natychmiastowego otwarcia żądania ściągnięcia w celu rozwiązania problemu znalezionego w dokumentacji). Jeśli interesuje Cię Pisanie nowej zawartości lub dokładne poprawianie istniejącej zawartości, Otwórz [problem](https://github.com/dotnet/docs/issues) z opisem tego, co chcesz zrobić.
-Zawartość w folderze *docs* jest zorganizowana w sekcje, które są odzwierciedlone w spisie treści (TOC). Zdefiniuj, gdzie temat będzie znajdował się w spisie treści. Uzyskaj opinię na temat propozycji.
+**Krok 1:** Pomiń ten krok w przypadku małych zmian (na przykład w przypadku korygowania literówki lub natychmiastowego otwarcia żądania ściągnięcia w celu rozwiązania problemu znalezionego w dokumentacji). Jeśli interesuje Cię pisanie nowej zawartości lub gruntowna korekta istniejącej zawartości, otwórz [problem](https://github.com/dotnet/docs/issues), opisując, co chcesz zrobić.
+Zawartość w folderze *docs* jest podzielona na sekcje, które zostały odzwierciedlone w spisie treści. Określ, gdzie w spisie treści będzie się znajdował temat. Uzyskaj opinie na temat swojej propozycji.
 
-—lub—
+lub
 
-Możesz również wybrać spośród istniejących problemów, dla których wkłady społecznościowe są powitane. [Projekty dla współautorów społeczności .NET](https://github.com/dotnet/docs/projects/35) wyświetlają wiele elementów roboczych, które są dostępne dla współautorów społecznościowych. W zależności od zainteresowań i poziomu zobowiązań możesz wybierać spośród problemów w następujących kategoriach:
+Możesz też wybierać spośród istniejących problemów, dla których współtworzenie w ramach społeczności jest mile widziane. [Projekty dla współautorów społeczności .NET](https://github.com/dotnet/docs/projects/35) wyświetlają wiele elementów roboczych, które są dostępne dla współautorów społecznościowych. W zależności od zainteresowań i poziomu zaangażowania możesz wybierać spośród problemów w następujących kategoriach:
 
-- **Konserwacja**. Ta kategoria obejmuje dość proste wkłady, takie jak Naprawianie uszkodzonych lub nieprawidłowych linków, Dodawanie brakujących przykładów kodu lub Rozwiązywanie problemów z zawartością. W niektórych przypadkach te problemy mogą dotyczyć dużej liczby plików. W takim przypadku należy poinformować nas, co chcesz zrobić, zanim zaczniesz.
+- **Konserwacja**. Ta kategoria obejmuje dosyć prosty wkład, taki jak naprawianie uszkodzonych lub niepoprawnych linków, dodawanie brakujących przykładów kodu lub rozwiązywanie ograniczonych problemów z zawartością. W niektórych przypadkach te problemy mogą dotyczyć bardzo wielu plików. W takim przypadku powiadom nas, nad czym chcesz pracować, zanim zaczniesz.
 
-- **Aktualizacje zawartości**. Po enormity zestawu dokumentów zawartość jest łatwo przestarzała i wymaga poprawki. Ponadto, z wielu powodów, pewna zawartość została zduplikowana lub nawet triplicated. Aktualizacja zawartości polega na tym, że poszczególne tematy są aktualne lub poprawiają zawartość w obszarze funkcji w celu wyeliminowania duplikatów i zapewnienia, że cała unikatowa zawartość jest zachowywana w mniejszych zestawach dokumentacji.
+- **Aktualizacje zawartości**. Biorąc pod uwagę ogrom zbioru dokumentów, zawartość łatwo staje się przestarzała i wymaga poprawy. Ponadto, z wielu powodów, pewna zawartość została zduplikowana lub nawet triplicated. Aktualizowanie zawartości wymaga upewnienia się, że poszczególne tematy są aktualne lub poprawiają treść w obszarze funkcji w celu wyeliminowania duplikacji i zapewnienia, że cała unikatowa zawartość jest zachowana w mniejszym zbiorze dokumentacji.
 
-- **Tworzenie nowej zawartości**. Jeśli interesuje Cię Tworzenie własnego tematu, te problemy mogą zostać dodane do naszego zestawu dokumentów. Daj nam znać przed rozpoczęciem pracy z tematem. Jeśli interesuje Cię pisanie tematu, którego nie ma na liście, Otwórz problem.
+- **Tworzenie nowych treści**. Jeśli interesuje Cię tworzenie własnego tematu, następujące problemy zawierają listę tematów, o których wiemy, że chcemy je dodać do naszego zestawu dokumentów. Poinformuj nas jednak, zanim zaczniesz pracować nad tematem. Jeśli interesuje Cię napisanie tematu, który nie został tu wymieniony, otwórz problem.
 
-Możesz również zapoznać się z naszą listą [problemów otwartych](https://github.com/dotnet/docs/issues) i od osoby zależnej, aby zacząć korzystać z interesujących Cię elementów. Używamy etykiety [up-for-](https://github.com/dotnet/docs/labels/up-for-grabs) dodaliśmy do tagów problemów otwartych dla udziału. 
+Możesz też obejrzeć naszą listę [otwartych problemów](https://github.com/dotnet/docs/issues) i zgłosić się na ochotnika do pracy przy tych, które Cię interesują. Używamy etykiety [up-for-](https://github.com/dotnet/docs/labels/up-for-grabs) dodaliśmy do tagów problemów otwartych dla udziału.
 
 **Krok 2:** Rozwidlenie `dotnet/docs`, `dotnet/samples` lub `dotnet/dotnet-api-docs` repozytoriów w razie potrzeby i utworzenie gałęzi dla zmian.
 
 W przypadku małych zmian można użyć interfejsu internetowego usługi GitHub. Po prostu kliknij pozycję **Edytuj plik w rozwidleniu tego projektu** w pliku, który chcesz zmienić. W witrynie GitHub zostanie utworzona nowa gałąź po przesłaniu zmian.
 
-**Krok 3.** Wprowadź zmiany w tej nowej gałęzi.
+**Krok 3.** Wprowadzaj zmiany w tej nowej gałęzi.
 
-Jeśli jest to nowy temat, możesz użyć tego [pliku szablonu](./styleguide/template.md) jako punktu początkowego. Zawiera wytyczne dotyczące pisania i objaśnia metadane wymagane dla każdego artykułu, takie jak informacje o autorze.
+Jeśli jest to nowy temat, jako punktu początkowego możesz użyć tego [pliku szablonu](./styleguide/template.md). Zawiera on wytyczne dotyczące pisania, jak również objaśnia metadane wymagane dla każdego artykułu, takie jak informacje o autorze.
 
-Przejdź do folderu, który odpowiada lokalizacji spisu treści określonego dla artykułu w kroku 1.
-Ten folder zawiera pliki promocji dla wszystkich artykułów w tej sekcji.
-W razie potrzeby utwórz nowy folder, aby umieścić pliki dla zawartości. Główny artykuł dotyczący tej sekcji nosi nazwę *index.MD*.
-W przypadku obrazów i innych zasobów statycznych utwórz podfolder o nazwie *multimedia* w folderze zawierającym artykuł, jeśli jeszcze nie istnieje. W folderze *Media* utwórz podfolder o nazwie artykułu (z wyjątkiem pliku indeksu).
+W kroku 1 przejdź do folderu odpowiadającego lokalizacji w spisie treści określonej dla Twojego artykułu.
+Ten folder zawiera pliki Markdown dla wszystkich artykułów w tej sekcji.
+W razie potrzeby utwórz nowy folder na pliki dla Twojej zawartości. Główny artykuł w tej sekcji nosi nazwę *index.md*.
+W przypadku obrazów i innych zasobów statycznych utwórz podfolder o nazwie *media* wewnątrz folderu zawierającego Twój artykuł, jeśli jeszcze nie istnieje. Wewnątrz folderu *media* utwórz podfolder mający nazwę artykułu (z wyjątkiem pliku indeksu).
 Uwzględnij większe próbki w folderze *Samples* w katalogu głównym repozytorium.
 
-Upewnij się, że przestrzegasz odpowiedniej składni promocji. Aby uzyskać więcej informacji, zobacz [Przewodnik po stylu](./styleguide/template.md).
+Należy pamiętać o przestrzeganiu składni Markdown. Aby uzyskać więcej informacji, zobacz [Przewodnik po stylu](./styleguide/template.md).
 
-### <a name="example-structure"></a>Przykładowa struktura
+### <a name="example-structure"></a>Struktura przykładu
 
 ```
 docs
@@ -95,69 +92,69 @@ docs
             portability_report.png
 ```
 
-**Krok 4.** Prześlij żądanie ściągnięcia z gałęzi do `dotnet/docs/master`, `dotnet/dotnet-api-docs/master` lub `dotnet/samples/master`.
+**Krok 4.** Prześlij żądanie ściągnięcia z gałęzi do `dotnet/docs/master`, `dotnet/dotnet-api-docs/master`lub `dotnet/samples/master`.
 
 Żądanie ściągnięcia powinno *zawsze* wskazywać domyślną gałąź repozytorium (chyba że Pracujesz w gałęzi wydania). W przypadku dotnet/docs gałąź główna jest gałęzią domyślną. W przypadku zlokalizowanych repozytoriów aktywna gałąź jest domyślną. *Nigdy nie* należy otwierać żądania ściągnięcia, które jest przeznaczone dla aktywnej gałęzi w programie dotnet/docs.
 
-Każdy element żądania ściągnięcia powinien zwykle dotyczyć jednego problemu w danym momencie. Żądanie ściągnięcia może zmodyfikować jeden lub wiele plików. W przypadku rozwiązywania wielu poprawek w różnych plikach preferowane są osobne żądań ściągnięcia.
+Każde żądanie ściągnięcia zazwyczaj powinno dotyczyć jednego rozwiązania problemu naraz. Żądanie ściągnięcia może modyfikować jeden lub więcej plików. Jeśli wprowadzasz wiele poprawek do różnych plików, zalecane są różne żądania ściągnięcia.
 
-Jeśli żądanie ściągnięcia dotyczy istniejącego problemu, Dodaj słowo kluczowe `Fixes #Issue_Number` do komunikatu zatwierdzenia lub opisu żądania ściągnięcia. W ten sposób problem zostanie automatycznie zamknięty po scaleniu żądania ściągnięcia. Aby uzyskać więcej informacji, zobacz [zamykanie problemów za pomocą komunikatów zatwierdzania](https://help.github.com/articles/closing-issues-via-commit-messages/).
+Jeśli żądanie ściągnięcia dotyczy istniejącego problemu, Dodaj słowo kluczowe `Fixes #Issue_Number` do komunikatu zatwierdzenia lub opisu żądania ściągnięcia. Dzięki temu problem zostanie automatycznie zamknięty po scaleniu żądania ściągnięcia. Aby uzyskać więcej informacji, zobacz [Zamykanie problemów za pomocą komunikatów zatwierdzania](https://help.github.com/articles/closing-issues-via-commit-messages/).
 
-Zespół platformy .NET sprawdzi swój stan żądania ściągnięcia i poinformuje o tym, czy istnieją inne aktualizacje/zmiany niezbędne do zatwierdzenia.
+Zespół platformy .NET sprawdzi Twoje żądanie ściągnięcia i da Ci znać, czy do jego zatwierdzenia są konieczne jakiekolwiek inne aktualizacje/zmiany.
 
-**Krok 5.** Wykonaj wszelkie niezbędne aktualizacje gałęzi, jak to opisano w zespole.
+**Krok 5.** Wprowadź wszelkie niezbędne aktualizacje do swojej gałęzi w sposób omówiony z zespołem.
 
-W przypadku, gdy zastosowana została opinia i zostanie zatwierdzona zmiana zostanie scalona żądanie ściągnięcia z gałęzią główną.
+Osoby odpowiedzialne za obsługę scalą Twoje żądanie ściągnięcia z gałęzią główną, gdy opinia zostanie zastosowana i Twoja zmiana zostanie zatwierdzona.
 
 W przypadku niektórych erze wszystkie zatwierdzenia z gałęzi głównej są przekazywane do aktywnej gałęzi, a następnie będzie można zobaczyć swój udział na żywo w https://docs.microsoft.com/dotnet/.
 
 ### <a name="contributing-to-samples"></a>Współtworzenie przykładów
 
-Dla kodu, który istnieje w naszym repozytorium, wprowadzimy następujące rozróżnienia:
+Wprowadzamy następujące rozróżnienie dla kodu istniejącego w naszym repozytorium:
 
-- Przykłady: czytelnicy mogą pobrać i uruchomić przykłady. Wszystkie przykłady powinny być kompletnymi aplikacjami lub bibliotekami. Gdzie przykład tworzy bibliotekę, powinna obejmować testy jednostkowe lub aplikację, która umożliwia czytelnikom uruchamianie kodu.
+- Przykłady: czytelnicy mogą pobrać i uruchomić przykłady. Wszystkie przykłady powinny być kompletnymi aplikacjami lub bibliotekami. Gdy przykład tworzy bibliotekę, powinien on zawierać testy jednostkowe lub aplikację, która umożliwi czytelnikom uruchomienie kodu.
 
-- Fragmenty kodu: ilustrują mniejszą koncepcję lub zadanie. Są one kompilowane, ale nie są przeznaczone do kompletnych aplikacji.
+- Fragmenty kodu: ilustrują mniejszą koncepcję lub zadanie. Można je skompilować, ale nie mają one być kompletnymi aplikacjami.
 
-Kod wszystkie są przechowywane w repozytorium [dotnet/Samples](https://github.com/dotnet/samples) . Pracujemy nad modelem, w którym nasze przykłady struktury folderów są zgodne z naszą strukturą folderów docs. Stosowane są następujące standardy:
+Cały kod znajduje się w repozytorium [dotnet/samples](https://github.com/dotnet/samples). Pracujemy nad modelem, w którym struktura naszego folderu przykładów będzie pasować do struktury naszego folderu dokumentów. Do standardów, których przestrzegamy, należą:
 
-- Folder *wstawek* najwyższego poziomu zawiera fragmenty kodu dla małych, ukierunkowanych próbek.
-- Przykłady referencyjne interfejsu API znajdują się w folderze następującym po tym wzorcu: *fragmenty kodu/\<language >/api/\<namespace >/\<apiname >* .
-- Inne foldery najwyższego poziomu są zgodne z folderami najwyższego poziomu w repozytorium *docs* . Na przykład repozytorium docs zawiera folder *uczenie maszynowego/samouczków* , a przykłady samouczków dotyczących uczenia maszynowego znajdują się w folderze *Samples/Machine-Learning/samouczki* .
+- Folder *snippets* najwyższego poziomu zawiera fragmenty kodu dla małych, konkretnych przykładów.
+- Przykłady referencyjne interfejsu API znajdują się w folderze następującym po tym wzorcu: *fragmenty kodu/\<language >/api/\<przestrzeni nazw >/\<apiname >* .
+- Inne foldery najwyższego poziomu są zgodne z folderami najwyższego poziomu w repozytorium *docs*. Na przykład w repozytorium docs jest folder *machine-learning/tutorials*, a przykłady dotyczące samouczków uczenia maszynowego są w folderze *samples/machine-learning/tutorials*.
 
-Ponadto wszystkie przykłady w folderach *podstawowe* i *standardowe* powinny być kompilowane i uruchamiane na wszystkich platformach obsługiwanych przez platformę .NET Core. Nasz system kompilacji elementu konfiguracji będzie wymuszać to. Folder *struktury* najwyższego poziomu zawiera przykłady, które są kompilowane i sprawdzane tylko w systemie Windows.
+Ponadto wszystkie przykłady w folderach *core* i *standard* powinny się skompilować i uruchomić na wszystkich platformach obsługiwanych przez platformę .NET Core. Nasz system kompilacji ciągłej integracji wymusi to. Folder najwyższego poziomu *framework* zawiera przykłady, które są kompilowane i weryfikowane tylko w systemie Windows.
 
-Firma Microsoft może rozszerzyć te katalogi, ponieważ repozytorium docs dodaje nową zawartość. Na przykład dodamy katalogi platformy Xamarin, takie jak `xamarin-ios` i `xamarin-android`.
+Firma Microsoft może rozszerzyć te katalogi, ponieważ repozytorium docs dodaje nową zawartość. Na przykład dodamy katalogi platformy Xamarin, takie jak `xamarin-ios` i `xamarin-android` katalogi.
 
-Każdy kompletny przykład tworzony przez Ciebie powinien zawierać plik *README.MD* . Ten plik powinien zawierać Krótki opis przykładu (jeden lub dwa akapity). Twoja *README.MD* powinna poinformować czytelników, co pouczy się, eksplorowanie tego przykładu. Plik *README.MD* powinien również zawierać link do dokumentu na żywo w [witrynie dokumentacji programu .NET](https://docs.microsoft.com/dotnet/welcome).
-Aby określić, gdzie dany plik w repozytorium jest mapowany do tej lokacji, Zastąp `/docs` w ścieżce repozytorium `https://docs.microsoft.com/dotnet`.
+Każdy kompletny przykład, który tworzysz, powinien zawierać plik *readme.md*. Ten plik powinien zawierać krótki opis przykładu (jeden lub dwa akapity). Plik *readme.md* powinien informować czytelników o tym, czego się dowiedzą, analizując ten przykład. Plik *readme.md* powinien też zawierać link do opublikowanego dokumentu w [witrynie dokumentacji platformy .NET](https://docs.microsoft.com/dotnet/welcome).
+Aby ustalić, gdzie dany plik w repozytorium jest zamapowany na daną witrynę, zastąp fragment `/docs` w ścieżce repozytorium fragmentem `https://docs.microsoft.com/dotnet`.
 
-Temat zawiera również linki do przykładu. Połącz bezpośrednio z folderem przykładu w usłudze GitHub.
+Twój temat będzie też zawierał linki do przykładu. Link powinien prowadzić bezpośrednio do folderu przykładu w usłudze GitHub.
 
 Aby uzyskać więcej informacji, zobacz [plik Readme przykładów](https://github.com/dotnet/samples/blob/master/README.md).
 
-## <a name="the-c-interactive-experience"></a>Środowisko C# interaktywne
+## <a name="the-c-interactive-experience"></a>Interaktywna platforma języka C#
 
-Krótkie przykłady kodu w C# programie mogą użyć znacznika języka `csharp-interactive`, aby określić C# przykład, który działa w przeglądarce. (Wbudowane przykłady kodu używają tagu `csharp-interactive`, dla wstawek zawartych ze źródła, Użyj znacznika `code-csharp-interactive`). Te przykłady kodu zawierają okno kod i okno dane wyjściowe w artykule. W oknie dane wyjściowe są wyświetlane wszystkie dane wyjściowe z wykonywania kodu interaktywnego, gdy użytkownik uruchomi przykład. 
+Krótkie przykłady kodu w języku C# mogą używać tagu języka `csharp-interactive` do określenia przykładu w języku C# uruchomionego w przeglądarce. (Wbudowane przykłady kodu używają znacznika `csharp-interactive`, w przypadku wstawek zawartych ze źródła, Użyj tagu `code-csharp-interactive`). Te przykłady kodu zawierają okno kod i okno dane wyjściowe w artykule. Okno wyjściowe pokazuje wszelkie dane wyjściowe po wykonaniu interaktywnego kodu, gdy użytkownik uruchomił przykład.
 
-C# Interaktywny proces zmienia sposób pracy z przykładami. Odwiedzający mogą uruchomić przykład, aby zobaczyć wyniki. Wiele czynników pomaga ustalić, czy próbka lub odpowiedni tekst powinien zawierać informacje o danych wyjściowych.
+Interaktywna platforma języka C# zmienia sposób pracy z przykładami. Goście mogą uruchomić przykład, aby zobaczyć wyniki. Wiele czynników pomaga ustalić, czy przykład lub odpowiadający mu tekst ma zawierać informacje o danych wyjściowych.
 
-### <a name="when-to-display-the-expected-output-without-running-the-sample"></a>Kiedy mają być wyświetlane oczekiwane dane wyjściowe bez uruchamiania przykładu
+### <a name="when-to-display-the-expected-output-without-running-the-sample"></a>Kiedy wyświetlić oczekiwane dane wyjściowe bez uruchamiania przykładu
 
-- Artykuły przeznaczone dla początkujących powinny dostarczyć dane wyjściowe, dzięki czemu czytelnicy mogą porównać wyniki pracy z oczekiwaną odpowiedzią.
-- Próbki, w których dane wyjściowe są integralne względem tematu, powinny wyświetlać te dane wyjściowe. Na przykład artykuły na sformatowanym tekście powinny zawierać format tekstu bez uruchamiania przykładu.
-- Gdy zarówno próbka, jak i oczekiwane dane wyjściowe są krótkie, należy rozważyć wyświetlanie danych wyjściowych. Oszczędza czas.
-- Artykuły objaśniające, w jaki sposób bieżąca kultura lub Niezmienna kultura ma wpływ na dane wyjściowe powinny wyjaśnić oczekiwane dane wyjściowe. Interaktywna REPL (odczyt) jest uruchamiana na hoście opartym na systemie Linux. Kultura domyślna i Niezmienna kultura tworzą różne dane wyjściowe w różnych systemach operacyjnych i komputerach. W tym artykule wyjaśniono dane wyjściowe w systemach Windows, Linux i Mac.
+- Artykuły przeznaczone dla początkujących powinny udostępniać dane wyjściowe, aby czytelnicy mogli porównać dane wyjściowe swojej pracy z oczekiwaną odpowiedzią.
+- Dane wyjściowe powinny być prezentowane dla przykładów, w których dane wyjściowe są integralną częścią tematu. Na przykład artykuły na temat sformatowanego tekstu powinny pokazywać format tekstu bez uruchamiania przykładu.
+- Gdy zarówno przykład, jak i oczekiwane dane wyjściowe są krótkie, rozważ pokazanie danych wyjściowych. Zaoszczędzi to trochę czasu.
+- Artykuły objaśniające, jak bieżąca kultura lub kultura niezmienna wpływają na dane wyjściowe, powinny objaśniać oczekiwane dane wyjściowe. Interaktywna pętla REPL (Read Evaluate Print Loop) działa na hostach opartych na systemie Linux. Domyślna kultura i kultura niezmienna tworzą inne dane wyjściowe dla różnych systemów operacyjnych i maszyn. Artykuł powinien objaśniać dane wyjściowe w systemach Windows, Linux i Mac.
 
-### <a name="when-to-exclude-expected-output-from-the-sample"></a>Kiedy należy wykluczyć oczekiwane dane wyjściowe z przykładu 
+### <a name="when-to-exclude-expected-output-from-the-sample"></a>Kiedy wykluczać oczekiwane dane wyjściowe z przykładu
 
-- Artykuły, w których próbka generuje większe dane wyjściowe nie powinny uwzględniać tego w komentarzach. Po uruchomieniu próbki program zasłania kod.
-- Artykuły, w których przykład ilustruje temat, ale dane wyjściowe nie są integralną częścią tego tematu. Na przykład kod, który uruchamia zapytanie LINQ, aby wyjaśnić składnię zapytania, a następnie wyświetlić każdy element w kolekcji wyjściowej.
+- Artykuły, gdzie przykład generuje większe dane wyjściowe, nie powinny zawierać ich w komentarzach. Przesłania to kod, gdy przykład zostanie uruchomiony.
+- Artykuły, gdzie przykład jest ilustracją tematu, ale dane wyjściowe nie są konieczne do jego zrozumienia. Na przykład kod uruchamiający zapytanie LINQ w celu wyjaśnienia składni zapytania, a następnie wyświetlający każdy element z kolekcji wyjściowej.
 
 ## <a name="contributor-license-agreement"></a>Umowa licencyjna współautora
 
-Przed scaleniem żądania ściągnięcia należy podpisać [umowę licencyjną programu .NET Foundation (CLA)](https://cla.dotnetfoundation.org) . Jest to jednorazowe wymaganie dla projektów w programie .NET Foundation. Więcej informacji na temat [umów licencyjnych dotyczących udziałów (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement) można znaleźć w witrynie Wikipedia.
+Zanim Twoje żądanie ściągnięcia zostanie scalone, musisz podpisać [Umowę licencyjną współautora platformy .NET Foundation (CLA)](https://cla.dotnetfoundation.org). Jest to jednorazowe wymaganie dla projektów na platformie .NET Foundation. Więcej na temat [umów licencyjnych współautora (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement) możesz przeczytać w Wikipedii.
 
-Umowa: [NET-Foundation-Contribution-License-Agreement. PDF](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
+Umowa: [net-foundation-contribution-license-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 
-Nie musisz podpisać umowy z góry. Można klonować, rozwidlenie i przesłać żądanie ściągnięcia w zwykły sposób. Po utworzeniu żądania ściągnięcia jest ono klasyfikowane przez CLA bot. Jeśli zmiana jest prosta (na przykład Naprawiono literówki), żądanie ściągnięcia jest oznaczone `cla-not-required`. W przeciwnym razie jest sklasyfikowany jako `cla-required`. Po podpisaniu CLA bieżące i wszystkie przyszłe żądania ściągnięcia są oznaczone jako `cla-signed`.
+Nie musisz z góry podpisywać umowy. Możesz sklonować, rozwidlić i przekazać swoje żądanie ściągnięcia w zwykły sposób. Gdy Twoje żądanie ściągnięcia jest tworzone, jest ono klasyfikowane przez bota CLA. Jeśli zmiana jest prosta (na przykład Naprawiono literówki), żądanie ściągnięcia jest oznaczone `cla-not-required`. W przeciwnym razie jest ono klasyfikowane jako `cla-required`. Po podpisaniu umowy CLA bieżące i wszystkie przyszłe żądania ściągnięcia będą oznaczone jako `cla-signed`.

@@ -1,16 +1,16 @@
 ---
-title: Omówienie zabezpieczeń — WCF
+title: Przegląd zabezpieczeń
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: ae03684449e902c0d05744a19671169f2e0b8be2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 58057709e2d5c5e34d0aa37158ea9b033840f840
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949356"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344704"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Omówienie zabezpieczeń Windows Communication Foundation
 Windows Communication Foundation (WCF) to platforma programowania oparta na komunikatach protokołu SOAP, a zabezpieczenia komunikatów między klientami i usługami są niezbędne do ochrony danych. Funkcja WCF zapewnia uniwersalną i międzyplatformową platforma do wymiany bezpiecznych komunikatów opartych na istniejącej infrastrukturze zabezpieczeń i uznanych standardach zabezpieczeń dla komunikatów protokołu SOAP.  
@@ -68,9 +68,9 @@ Windows Communication Foundation (WCF) to platforma programowania oparta na komu
 ### <a name="standards-and-interoperability"></a>Standardy i współdziałanie  
  W świecie z dużymi istniejącymi wdrożeniami jednorodność jest bardzo rzadki. Rozproszone platformy przetwarzania/komunikacji muszą współdziałać z ofertami różnych dostawców. Ponadto zabezpieczenia muszą być również interoperacyjne.  
   
- Aby włączyć interoperacyjne systemy zabezpieczeń, firmy aktywne w branży usług sieci Web, które utworzyły różne standardy. W odniesieniu do zabezpieczeń zaproponowano kilka istotnych standardów: Zabezpieczenia WS-Security: Zabezpieczenia komunikatów protokołu SOAP (akceptowane przez treść języka Oasis Standards i dawniej znane jako WS-Security), WS-Trust, WS-SecureConversation i WS-SecurityPolicy.  
+ Aby włączyć interoperacyjne systemy zabezpieczeń, firmy aktywne w branży usług sieci Web, które utworzyły różne standardy. W odniesieniu do zabezpieczeń zaproponowano kilka istotnych standardów: WS-Security: zabezpieczenia komunikatów protokołu SOAP (zaakceptowane przez treść języka Oasis Standards i dawniej znane jako WS-Security), WS-Trust, WS-SecureConversation i WS-SecurityPolicy.  
   
- Usługa WCF obsługuje szeroką gamę scenariuszy współdziałania. Klasa jest przeznaczona dla podstawowego profilu zabezpieczeń (zestawu Winsock), <xref:System.ServiceModel.WSHttpBinding> a Klasa jest przeznaczona dla najnowszych standardów zabezpieczeń, takich jak WS-Security 1,1 i WS-SecureConversation. <xref:System.ServiceModel.BasicHttpBinding> Dzięki przestrzeganiu tych standardów zabezpieczenia WCF mogą współdziałać i integrować z usługami sieci Web, które są hostowane w systemach operacyjnych i na platformach innych niż Microsoft Windows.  
+ Usługa WCF obsługuje szeroką gamę scenariuszy współdziałania. Klasa <xref:System.ServiceModel.BasicHttpBinding> jest przeznaczona dla podstawowego profilu zabezpieczeń (zestawu Winsock), a Klasa <xref:System.ServiceModel.WSHttpBinding> jest przeznaczona dla najnowszych standardów zabezpieczeń, takich jak WS-Security 1,1 i WS-SecureConversation. Dzięki przestrzeganiu tych standardów zabezpieczenia WCF mogą współdziałać i integrować z usługami sieci Web, które są hostowane w systemach operacyjnych i na platformach innych niż Microsoft Windows.  
   
 ## <a name="wcf-security-functional-areas"></a>Obszary funkcjonalne zabezpieczeń WCF  
  Zabezpieczenia WCF są podzielone na trzy obszary funkcjonalne: zabezpieczenia transferu, kontrola dostępu i inspekcja. Poniższe sekcje krótko omawiają te obszary i zawierają linki umożliwiające więcej informacji.  
@@ -87,15 +87,15 @@ Windows Communication Foundation (WCF) to platforma programowania oparta na komu
   
  Aby uzyskać więcej informacji na temat tych różnic, zobacz [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   
- Trzeci tryb zabezpieczeń używa powyższych trybów i oferuje zalety obu tych elementów. Ten tryb jest wywoływany `TransportWithMessageCredential`. W tym trybie zabezpieczenia komunikatów są używane do uwierzytelniania klienta, a zabezpieczenia transportu są używane do uwierzytelniania serwera i zapewniania poufności i integralności komunikatów. Dzięki temu `TransportWithMessageCredential` tryb zabezpieczeń jest prawie tak szybko jak tryb zabezpieczeń transportu i zapewnia rozszerzalność uwierzytelniania klienta w taki sam sposób, jak zabezpieczenia komunikatów. Jednak, w przeciwieństwie do trybu zabezpieczeń wiadomości, nie zapewnia pełnego zabezpieczenia kompleksowego.  
+ Trzeci tryb zabezpieczeń używa powyższych trybów i oferuje zalety obu tych elementów. Ten tryb jest nazywany `TransportWithMessageCredential`. W tym trybie zabezpieczenia komunikatów są używane do uwierzytelniania klienta, a zabezpieczenia transportu są używane do uwierzytelniania serwera i zapewniania poufności i integralności komunikatów. Dzięki temu tryb zabezpieczeń `TransportWithMessageCredential` jest prawie tak szybko jak tryb zabezpieczeń transportu i zapewnia rozszerzalność uwierzytelniania klienta w taki sam sposób, jak w przypadku zabezpieczeń komunikatów. Jednak, w przeciwieństwie do trybu zabezpieczeń wiadomości, nie zapewnia pełnego zabezpieczenia kompleksowego.  
   
 ### <a name="access-control"></a>Kontrola dostępu  
  *Kontrola dostępu* jest również znana jako autoryzacja. *Autoryzacja* pozwala różnym użytkownikom mieć różne uprawnienia do wyświetlania danych. Na przykład, ponieważ pliki zasobów ludzkich firmy zawierają poufne dane pracownika, tylko menedżerowie mogą wyświetlać dane pracowników. Ponadto menedżerowie mogą wyświetlać tylko dane dla ich bezpośrednich raportów. W takim przypadku kontrola dostępu jest oparta na roli (kierowniku), a także w określonej tożsamości Menedżera (aby uniemożliwić jednemu z nich przeglądanie rekordów pracowników innego kierownika).  
   
- W programie WCF funkcje kontroli dostępu są udostępniane w ramach integracji ze środowiskiem uruchomieniowym języka wspólnego <xref:System.Security.Permissions.PrincipalPermissionAttribute> (CLR) i zestawem interfejsów API znanych jako *model tożsamości*. Aby uzyskać szczegółowe informacje na temat kontroli dostępu i autoryzacji opartej na oświadczeniach, zobacz [rozszerzanie zabezpieczeń](../../../../docs/framework/wcf/extending/extending-security.md).  
+ W programie WCF funkcje kontroli dostępu są udostępniane w ramach integracji z <xref:System.Security.Permissions.PrincipalPermissionAttribute> środowiska uruchomieniowego języka wspólnego (CLR) i za pomocą zestawu interfejsów API znanych jako *model tożsamości*. Aby uzyskać szczegółowe informacje na temat kontroli dostępu i autoryzacji opartej na oświadczeniach, zobacz [rozszerzanie zabezpieczeń](../../../../docs/framework/wcf/extending/extending-security.md).  
   
 ### <a name="auditing"></a>Inspekcja  
- *Inspekcja* to rejestrowanie zdarzeń zabezpieczeń w dzienniku zdarzeń systemu Windows. Można rejestrować zdarzenia związane z zabezpieczeniami, takie jak błędy uwierzytelniania (lub sukcesy). Aby uzyskać więcej informacji, [](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)zobacz Inspekcja. Aby uzyskać szczegółowe informacje dotyczące [programowania, zobacz How to: Inspekcja zdarzeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)zabezpieczeń.  
+ *Inspekcja* to rejestrowanie zdarzeń zabezpieczeń w dzienniku zdarzeń systemu Windows. Można rejestrować zdarzenia związane z zabezpieczeniami, takie jak błędy uwierzytelniania (lub sukcesy). Aby uzyskać więcej informacji, zobacz [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Aby uzyskać szczegółowe informacje dotyczące programowania, zobacz [jak: Inspekcja zdarzeń zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

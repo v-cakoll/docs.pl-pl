@@ -2,12 +2,12 @@
 title: Istotne zmiany kategorii — .NET Core
 description: Dowiedz się więcej na temat sposobu kategoryzowania istotnych zmian w programie .NET Core.
 ms.date: 06/10/2019
-ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 32cf55dc3ba0b16bae8cfe6179211150b2c90e2c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567927"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343598"
 ---
 # <a name="breaking-change-categories"></a>Kategorie zmian powodujących niezgodność
 
@@ -18,8 +18,7 @@ ms.locfileid: "74567927"
 - [zgodność ze źródłem](#source-compatibility)
 - [zgodność czasu projektowania](#design-time-compatibility)
 - [zgodność z poprzednimi wersjami](#backwards-compatibility)
-
-[Zgodność do przodu](#forward-compatibility) nie jest celem platformy .NET Core.
+- [zgodność do przodu](#forward-compatibility) (nie jest celem programu .NET Core)
 
 ## <a name="behavioral-change"></a>Zmiana zachowania
 
@@ -43,7 +42,7 @@ Zgodność czasu projektowania odnosi się do zachowania środowiska czasu proje
 
 Zgodność z poprzednimi wersjami odnosi się do zdolności klienta interfejsu API do uruchamiania w nowej wersji, zachowując się w ten sam sposób. Obie zmiany w zachowaniu i zmiany w zgodności binarnej wpływają na zgodność z poprzednimi wersjami. Jeśli klient nie może działać lub działa inaczej w przypadku uruchamiania w nowszej wersji interfejsu API, interfejs API nie jest *zgodny z poprzednimi*wersjami.
 
-Zmiany wpływające na zgodność z poprzednimi wersjami są zdecydowanie odradzane, ponieważ deweloperzy domyślnie oczekują wsteczną zgodność w nowszych wersjach interfejsu API.
+Zmiany wpływające na zgodność z poprzednimi wersjami nie są zalecane, ponieważ deweloperzy oczekują wstecznej zgodności w nowszych wersjach interfejsu API.
 
 ## <a name="forward-compatibility"></a>Zgodność dalej
 

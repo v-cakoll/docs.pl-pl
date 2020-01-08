@@ -11,15 +11,15 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: 0d01f7536c120f51372961d944804cfe0063fb9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80e0bf641c46eb1461769f5a85950982258c78f5
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010283"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559425"
 ---
 # <a name="globalization-and-localization"></a>Lokalizacja i globalizacja
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje zaawansowaną obsługę dla opracowywania aplikacji gotowej dla całego świata.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia szeroką pomoc techniczną dla opracowywania aplikacji gotowych do użycia na całym świecie.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Przeglądanie globalizacji i lokalizacji WPF](wpf-globalization-and-localization-overview.md)  
@@ -36,6 +36,6 @@ ms.locfileid: "62010283"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [xml:lang, obsługa w XAML](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [xml:lang, obsługa w XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne

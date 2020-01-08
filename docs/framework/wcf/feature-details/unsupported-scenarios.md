@@ -2,12 +2,12 @@
 title: Scenariusze nieobsługiwane
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 67a4e64208e00f9124b3cdc53d743c060274dac2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 87c0d9984fe823eae0e3cc281ebda55bc33a541e
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837977"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544792"
 ---
 # <a name="unsupported-scenarios"></a>Scenariusze nieobsługiwane
 Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niektórych określonych scenariuszy zabezpieczeń. Na przykład [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition nie implementuje protokołów uwierzytelniania SSPI ani protokołu Kerberos, dlatego program WCF nie obsługuje uruchamiania usługi z uwierzytelnianiem systemu Windows na tej platformie. Inne mechanizmy uwierzytelniania, takie jak nazwa użytkownika i hasło oraz zintegrowane uwierzytelnianie HTTP/HTTPS, są obsługiwane w przypadku uruchamiania programu WCF w systemie Windows XP Home Edition.  
@@ -62,7 +62,7 @@ Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niekt
  Szyfrowanie AES zgodne ze standardem FIPS nie działa w bezstronnych wywołaniach zwrotnych pod personifikacją na poziomie tożsamości.  
   
 ### <a name="cngksp-certificates"></a>Certyfikaty CNG/dostawcy magazynu kluczy  
- *Kryptografia API: Next Generation (CNG)* to długoterminowe zastąpienie interfejsu CryptoAPI. Ten interfejs API jest dostępny w kodzie niezarządzanym w systemie Windows Vista, [!INCLUDE[lserver](../../../../includes/lserver-md.md)] i nowszych wersjach systemu Windows.  
+ *Kryptografia API: Next Generation (CNG)* to długoterminowe zastąpienie interfejsu CryptoAPI. Ten interfejs API jest dostępny w kodzie niezarządzanym w systemie Windows Vista, Windows Server 2008 i nowszych wersjach systemu Windows.  
   
  .NET Framework 4.6.1 i wcześniejsze wersje nie obsługują tych certyfikatów, ponieważ używają starszego interfejsu CryptoAPI do obsługi certyfikatów CNG/dostawcy magazynu kluczy. Użycie tych certyfikatów w .NET Framework 4.6.1 i wcześniejszych wersji spowoduje wystąpienie wyjątku.  
   

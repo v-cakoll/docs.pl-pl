@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 1e79de6d9e5cf973ce394bfb06871777c562c8ac
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 577ccd3bb9a20964dcdfc79ef2028854e4a55dc6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74553038"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342699"
 ---
 # <a name="bool-c-reference"></a>bool (C# odwołanie)
 
@@ -29,15 +29,15 @@ Można użyć literałów `true` i `false`, aby zainicjować zmienną `bool` lub
 
 [!code-csharp-interactive[bool literals](~/samples/csharp/language-reference/builtin-types/BoolType.cs#Literals)]
 
-## <a name="conversions"></a>Konwersje
-
-C#zawiera tylko dwie konwersje, które obejmują typ `bool`. Są one niejawną konwersją do odpowiedniego typu `bool?` nullable i jawnej konwersji z typu `bool?`. Jednak platforma .NET udostępnia dodatkowe metody, których można użyć do przekonwertowania na typ `bool` lub z niego. Aby uzyskać więcej informacji, zobacz sekcję [konwertowanie do i z wartości logicznych](/dotnet/api/system.boolean#converting-to-and-from-boolean-values) na stronie informacje o interfejsie API <xref:System.Boolean?displayProperty=nameWithType>.
-
 ## <a name="three-valued-boolean-logic"></a>Logika logiczna z trzema wartościami
 
 Typ `bool?` dopuszczający wartość null, jeśli potrzebna jest obsługa logiki trójwarstwowej, na przykład podczas pracy z bazami danych, które obsługują typ Boolean o wartości 3. W przypadku operandów `bool?` wstępnie zdefiniowane `&` i operatory `|` obsługują logikę z trzema wartościami. Aby uzyskać więcej informacji, zobacz sekcję [Operatory logiczne wartości null](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) w artykule [Operatory logiczne Boolean](../operators/boolean-logical-operators.md) .
 
 Aby uzyskać więcej informacji na temat typów wartości null, zobacz [dopuszczanie typów wartości null](nullable-value-types.md).
+
+## <a name="conversions"></a>Konwersje
+
+C#zawiera tylko dwie konwersje, które obejmują typ `bool`. Są one niejawną konwersją do odpowiedniego typu `bool?` nullable i jawnej konwersji z typu `bool?`. Jednak platforma .NET udostępnia dodatkowe metody, których można użyć do przekonwertowania na typ `bool` lub z niego. Aby uzyskać więcej informacji, zobacz sekcję [konwertowanie do i z wartości logicznych](/dotnet/api/system.boolean#converting-to-and-from-boolean-values) na stronie informacje o interfejsie API <xref:System.Boolean?displayProperty=nameWithType>.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 

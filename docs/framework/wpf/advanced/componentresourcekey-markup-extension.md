@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 85e6862d59284df1b51bf5ea7fbba786fe0492d7
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ccc4f3154996a4e442a4092833f5c9ed9c8938a
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458971"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559464"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey — Rozszerzenie znaczników
 Definiuje i odwołuje się do kluczy dla zasobów, które są ładowane z zestawów zewnętrznych. Dzięki temu Wyszukiwanie zasobów pozwala określić typ docelowy w zestawie, a nie jawny słownik zasobów w zestawie lub w klasie.  
@@ -47,7 +47,7 @@ Definiuje i odwołuje się do kluczy dla zasobów, które są ładowane z zestaw
 |||  
 |-|-|  
 |`targetTypeName`|Nazwa typu publicznego środowiska uruchomieniowego języka wspólnego (CLR), który jest zdefiniowany w zestawie zasobów.|  
-|`targetID`|Klucz zasobu. Podczas wyszukiwania zasobów `targetID` będą analogiczne do [dyrektywy x:Key](../../xaml-services/x-key-directive.md) zasobu.|  
+|`targetID`|Klucz zasobu. Podczas wyszukiwania zasobów `targetID` będą analogiczne do [dyrektywy x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) zasobu.|  
   
 ## <a name="remarks"></a>Uwagi  
  Jak pokazano powyżej, użycie rozszerzenia znacznika {`ComponentResourceKey`} zostało znalezione w dwóch miejscach:  
@@ -66,7 +66,7 @@ Definiuje i odwołuje się do kluczy dla zasobów, które są ładowane z zestaw
   
  Pokazana składnia Compact opiera się na sygnaturze konstruktora <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> i użyciu parametru pozycyjnego dla rozszerzenia znaczników. Kolejność, w której są określone `targetTypeName` i `targetID`, jest ważna. Składnia verbose opiera się na konstruktorze bez parametrów <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType>, a następnie ustawia <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> i <xref:System.Windows.ComponentResourceKey.ResourceId%2A> w taki sposób, który jest analogiczny do prawdziwej składni atrybutu w elemencie obiektu. W pełnej składni kolejność, w jakiej są ustawiane właściwości, nie jest ważna. Relacje i mechanizmy tych dwóch alternatyw (Compact i verbose) są opisane bardziej szczegółowo w tematach [rozszerzeń znaczników tematu i języka XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
- Technicznie wartość `targetID` może być dowolnym obiektem, nie musi być ciągiem. Jednak najbardziej typowym sposobem użycia w platformie WPF jest wyrównanie `targetID` wartości za pomocą ciągów, które są ciągami i gdzie takie ciągi są prawidłowe w [gramatyki XamlName](../../xaml-services/xamlname-grammar.md).  
+ Technicznie wartość `targetID` może być dowolnym obiektem, nie musi być ciągiem. Jednak najbardziej typowym sposobem użycia w platformie WPF jest wyrównanie `targetID` wartości za pomocą ciągów, które są ciągami i gdzie takie ciągi są prawidłowe w [gramatyki XamlName](../../../desktop-wpf/xaml-services/xamlname-grammar.md).  
   
  `ComponentResourceKey` można używać w składni elementu obiektu. W takim przypadku określenie wartości właściwości <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> i <xref:System.Windows.ComponentResourceKey.ResourceId%2A> jest wymagane do prawidłowego zainicjowania rozszerzenia.  
   

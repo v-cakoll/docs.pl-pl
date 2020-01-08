@@ -2,12 +2,12 @@
 title: Wprowadzenie do F# narzędzia wiersza polecenia
 description: Dowiedz się, jak utworzyć proste rozwiązanie z obsługą F# kilku projektów przy użyciu interfejs wiersza polecenia platformy .NET Core w dowolnym systemie operacyjnym (Windows, MacOS lub Linux).
 ms.date: 03/26/2018
-ms.openlocfilehash: f9177e653273e5a2191407c4fb22343ded11fece
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: aa3ed84660a951eeafc11a00ea3831f587b6d876
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117918"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559490"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Wprowadzenie do programu F# z interfejs wiersza polecenia platformy .NET Core
 
@@ -38,10 +38,10 @@ FSNetCore
 
 Zmień katalogi na *FSNetCore*.
 
-Za pomocą polecenia Utwórz projekt biblioteki klas w folderze src o nazwie Library. `dotnet new`
+Użyj `dotnet new` polecenie, Utwórz projekt biblioteki klas w folderze **src** o nazwie Library.
 
 ```dotnetcli
-dotnet new classlib -lang F# -o src/Library
+dotnet new classlib -lang "F#" -o src/Library
 ```
 
 Następująca struktura katalogów jest generowana po uruchomieniu poprzedniego polecenia:
@@ -72,20 +72,20 @@ Dodaj pakiet NuGet Newtonsoft. JSON do projektu biblioteki.
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
-Dodaj projekt do rozwiązania przy użyciu polecenia [dotnet sln Add:](../../core/tools/dotnet-sln.md) `FSNetCore` `Library`
+Dodaj projekt `Library` do rozwiązania `FSNetCore` za pomocą polecenia [dotnet sln Add](../../core/tools/dotnet-sln.md) :
 
 ```dotnetcli
 dotnet sln add src/Library/Library.fsproj
 ```
 
-Uruchom `dotnet build` , aby skompilować projekt. Nierozwiązane zależności zostaną przywrócone podczas kompilowania.
+Uruchom `dotnet build`, aby skompilować projekt. Nierozwiązane zależności zostaną przywrócone podczas kompilowania.
 
 ### <a name="write-a-console-application-that-consumes-the-class-library"></a>Napisz aplikację konsolową, która używa biblioteki klas
 
-Za pomocą polecenia Utwórz aplikację konsolową w folderze src o nazwie App. `dotnet new`
+Użyj `dotnet new` polecenie, Utwórz aplikację konsolową w folderze **src** o nazwie App.
 
 ```dotnetcli
-dotnet new console -lang F# -o src/App
+dotnet new console -lang "F#" -o src/App
 ```
 
 Następująca struktura katalogów jest generowana po uruchomieniu poprzedniego polecenia:
@@ -102,7 +102,7 @@ Następująca struktura katalogów jest generowana po uruchomieniu poprzedniego 
             └── Library.fsproj
 ```
 
-Zastąp zawartość `Program.fs` pliku następującym kodem:
+Zastąp zawartość pliku `Program.fs` następującym kodem:
 
 ```fsharp
 open System
@@ -119,28 +119,28 @@ let main argv =
     0 // return an integer exit code
 ```
 
-Dodaj odwołanie do `Library` projektu przy użyciu [dodatku dotnet Dodaj odwołanie](../../core/tools/dotnet-add-reference.md).
+Dodaj odwołanie do projektu `Library` przy użyciu [dodatku dotnet Dodaj odwołanie](../../core/tools/dotnet-add-reference.md).
 
 ```dotnetcli
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
-Dodaj projekt do rozwiązania przy użyciu `dotnet sln add` polecenia: `FSNetCore` `App`
+Dodaj projekt `App` do rozwiązania `FSNetCore` za pomocą polecenia `dotnet sln add`:
 
 ```dotnetcli
 dotnet sln add src/App/App.fsproj
 ```
 
-Przywróć zależności NuGet i uruchom `dotnet restore` `dotnet build` polecenie, aby skompilować projekt.
+Przywróć zależności NuGet, `dotnet restore` i uruchom `dotnet build` w celu skompilowania projektu.
 
-Zmień katalog na `src/App` projekt konsoli i uruchom przekazywanie `Hello World` projektu jako argumenty:
+Zmień katalog na projekt konsoli `src/App` i Uruchom projekt przekazywać `Hello World` jako argumenty:
 
 ```console
 cd src/App
 dotnet run Hello World
 ```
 
-Powinny być widoczne następujące wyniki:
+Powinny zostać wyświetlone następujące wyniki:
 
 ```console
 Nice command-line arguments! Here's what JSON.NET has to say about them:

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 7e907f234afd0fc5e81d586ed456279f684c29de
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: bfbff63c8c2cdb76d5f6d84424a9b03233744dae
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837951"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347102"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Praca z translatorami adresów sieciowych i zaporami
 Klient i serwer połączenia sieciowego często nie mają bezpośredniego i otwartej ścieżki do komunikacji. Pakiety są filtrowane, kierowane, analizowane i przekształcane zarówno na maszynach końcowych, jak i na maszynach pośrednich w sieci. Translacji adresów sieciowych (NAT) i zapory są typowymi przykładami aplikacji pośrednich, które mogą uczestniczyć w komunikacji sieciowej.  
@@ -32,7 +32,7 @@ Klient i serwer połączenia sieciowego często nie mają bezpośredniego i otwa
  Typową konfiguracją zapory użytkownika domowego jest Zabroń połączeń przychodzących, chyba że połączenie wychodzące nie zostało wcześniej nawiązane z tą maszyną. Typowa konfiguracja zapory użytkownika dla firm polega na tym, że połączenia przychodzące na wszystkich portach z wyjątkiem określonej przez grupę. Przykładem jest Zapora, która zabrania połączeń na wszystkich portach z wyjątkiem portów 80 i 443 w celu zapewnienia usługi HTTP i HTTPS. Zapory zarządzane istnieją zarówno dla użytkowników domowych, jak i firmowych, co pozwala na zmianę konfiguracji zapory przez zaufanego użytkownika lub proces na komputerze. Zarządzane zapory są bardziej popularne dla użytkowników domowych, w których nie ma kontroli nad użyciem zasad firmowych.  
   
 ## <a name="using-teredo"></a>Korzystanie z protokołu Teredo  
- Teredo to technologia przejściowa IPv6, która umożliwia bezpośrednie adresowanie maszyn za translatorem adresów sieciowych. Teredo korzysta z serwera, który może być publicznie i globalnie kierowany do anonsowania potencjalnych połączeń. Serwer Teredo zapewnia klientowi aplikacji i serwerowi wspólny punkt spotkania, w którym mogą wymieniać informacje o połączeniu. Komputery następnie żądają tymczasowego adresu Teredo, a pakiety są tunelowane za pomocą istniejącej sieci. Obsługa protokołu Teredo w programie WCF wymaga włączenia obsługi protokołów IPv6 i Teredo w systemie operacyjnym. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] i nowsze systemy operacyjne obsługują protokół Teredo. System Windows Vista i nowsze systemy operacyjne obsługują protokół IPv6 domyślnie i wymagają, aby użytkownik mógł włączyć protokół Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] i [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] wymagają od użytkownika włączenia protokołów IPv6 i Teredo. Aby uzyskać więcej informacji, zobacz [Omówienie protokołu Teredo](https://go.microsoft.com/fwlink/?LinkId=87571).  
+ Teredo to technologia przejściowa IPv6, która umożliwia bezpośrednie adresowanie maszyn za translatorem adresów sieciowych. Teredo korzysta z serwera, który może być publicznie i globalnie kierowany do anonsowania potencjalnych połączeń. Serwer Teredo zapewnia klientowi aplikacji i serwerowi wspólny punkt spotkania, w którym mogą wymieniać informacje o połączeniu. Komputery następnie żądają tymczasowego adresu Teredo, a pakiety są tunelowane za pomocą istniejącej sieci. Obsługa protokołu Teredo w programie WCF wymaga włączenia obsługi protokołów IPv6 i Teredo w systemie operacyjnym. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] i nowsze systemy operacyjne obsługują protokół Teredo. System Windows Vista i nowsze systemy operacyjne obsługują protokół IPv6 domyślnie i wymagają, aby użytkownik mógł włączyć protokół Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] i Windows Server 2003 wymagają, aby użytkownik włączył zarówno protokół IPv6, jak i Teredo. Aby uzyskać więcej informacji, zobacz [Omówienie protokołu Teredo](https://go.microsoft.com/fwlink/?LinkId=87571).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Wybór wzorca transportu i wymiany komunikatów  
  Wybór transportu i unikatowy MEP jest procesem trzech etapów:  

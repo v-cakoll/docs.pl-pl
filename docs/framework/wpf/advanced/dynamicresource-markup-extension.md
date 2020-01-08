@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: a04e1569f77fed73a480fda3d63cabf6dbc30664
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f8b05f314be84e6104f1a9c7fe2edfdf826e51da
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460507"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559451"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource — Rozszerzenie znaczników
 Udostępnia wartość dowolnego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atrybutu właściwości przez odroczenie tej wartości jako odwołania do zdefiniowanego zasobu. Zachowanie wyszukiwania dla tego zasobu jest analogiczne do wyszukiwania w czasie wykonywania.  
@@ -38,7 +38,7 @@ Udostępnia wartość dowolnego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tl
   
 |||  
 |-|-|  
-|`key`|Klucz dla żądanego zasobu. Ten klucz został początkowo przypisany przez [dyrektywę x:Key](../../xaml-services/x-key-directive.md) , jeśli zasób został utworzony w znaczniku lub został dostarczony jako parametr `key` podczas wywoływania <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>, jeśli zasób został utworzony w kodzie.|  
+|`key`|Klucz dla żądanego zasobu. Ten klucz został początkowo przypisany przez [dyrektywę x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) , jeśli zasób został utworzony w znaczniku lub został dostarczony jako parametr `key` podczas wywoływania <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>, jeśli zasób został utworzony w kodzie.|  
   
 ## <a name="remarks"></a>Uwagi  
  `DynamicResource` utworzy tymczasowe wyrażenie podczas początkowej kompilacji i w ten sposób opóźnia Wyszukiwanie zasobów do momentu, gdy żądana wartość zasobu jest wymagana w celu skonstruowania obiektu. Może to być możliwe po załadowaniu strony [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Wartość zasobu zostanie znaleziona na podstawie wyszukiwania kluczy względem wszystkich aktywnych słowników zasobów, zaczynając od bieżącego zakresu strony i jest zastępowana dla wyrażenia symbolu zastępczego z kompilacji.  
@@ -48,9 +48,9 @@ Udostępnia wartość dowolnego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tl
   
  Niektóre scenariusze dostępu do zasobów są szczególnie odpowiednie dla `DynamicResource`, w przeciwieństwie do [rozszerzenia znacznika StaticResource](staticresource-markup-extension.md). Zobacz [zasoby XAML](xaml-resources.md) , aby poznać informacje o względnych wartościach i wpływach wydajności `DynamicResource` i `StaticResource`.  
   
- Określony <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> powinien odpowiadać istniejącemu zasobowi, który został określony przez [dyrektywę x:Key](../../xaml-services/x-key-directive.md) na pewnym poziomie na stronie, aplikacji, dostępnych motywów kontroli i zasobach zewnętrznych lub zasobów systemowych, a wyszukiwanie zasobów nastąpi w Ta kolejność. Aby uzyskać więcej informacji na temat wyszukiwania zasobów dla zasobów statycznych i dynamicznych, zobacz [zasoby XAML](xaml-resources.md).  
+ Określony <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> powinien odpowiadać istniejącemu zasobowi, który został określony przez [dyrektywę x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) na pewnym poziomie na stronie, aplikacji, dostępnych motywach formantów i zasobach zewnętrznych, a także w tej kolejności Wyszukiwanie zasobów. Aby uzyskać więcej informacji na temat wyszukiwania zasobów dla zasobów statycznych i dynamicznych, zobacz [zasoby XAML](xaml-resources.md).  
   
- Klucz zasobu może być dowolnym ciągiem zdefiniowanym w [gramatycename języka XAML](../../xaml-services/xamlname-grammar.md). Klucz zasobu może być również innymi typami obiektów, takimi jak <xref:System.Type>. Klucz <xref:System.Type> ma podstawowe znaczenie dla formantów, które mogą być wzorowane przez motywy. Aby uzyskać więcej informacji, zobacz temat [Tworzenie kontroli — przegląd](../controls/control-authoring-overview.md).  
+ Klucz zasobu może być dowolnym ciągiem zdefiniowanym w [gramatycename języka XAML](../../../desktop-wpf/xaml-services/xamlname-grammar.md). Klucz zasobu może być również innymi typami obiektów, takimi jak <xref:System.Type>. Klucz <xref:System.Type> ma podstawowe znaczenie dla formantów, które mogą być wzorowane przez motywy. Aby uzyskać więcej informacji, zobacz temat [Tworzenie kontroli — przegląd](../controls/control-authoring-overview.md).  
   
  Interfejsy API do wyszukiwania wartości zasobów, takich jak <xref:System.Windows.FrameworkElement.FindResource%2A>, postępuj zgodnie z tą samą logiką wyszukiwania zasobów, która jest używana przez `DynamicResource`.  
   
@@ -76,7 +76,7 @@ Udostępnia wartość dowolnego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tl
 
 - [Zasoby XAML](xaml-resources.md)
 - [Zasoby i kod](resources-and-code.md)
-- [x:Key, dyrektywa](../../xaml-services/x-key-directive.md)
+- [x:Key, dyrektywa](../../../desktop-wpf/xaml-services/xkey-directive.md)
 - [Przegląd XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [StaticResource, rozszerzenie znaczników](staticresource-markup-extension.md)

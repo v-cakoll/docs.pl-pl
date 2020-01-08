@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: analizowanie ciągu (C#)'
+title: Jak przeanalizować ciąg (C#)
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: 086a4baecee9ee927b08d6da53d16324ef32e8a8
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 79821eb9e5cd7187ac3c2a93f85eaae45c5c48ac
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140979"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345812"
 ---
-# <a name="how-to-parse-a-string-c"></a>Instrukcje: analizowanie ciągu (C#)
+# <a name="how-to-parse-a-string-c"></a>Jak przeanalizować ciąg (C#)
 
 W tym temacie pokazano, jak przeanalizować ciąg w celu utworzenia drzewa C#XML w.
 

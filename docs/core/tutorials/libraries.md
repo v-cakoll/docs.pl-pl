@@ -4,12 +4,12 @@ description: Dowiedz się, jak tworzyć biblioteki platformy .NET Core przy uży
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: dcd454f0bd1739597fc27dccf2849fc259767292
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 13c8541d1045f9130b3b5b260769a50fdc2316ba
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420460"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559542"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Tworzenie bibliotek za pomocą narzędzi międzyplatformowych
 
@@ -23,14 +23,14 @@ W przypadku sekcji tego dokumentu, w których znajdują się .NET Framework wers
 
 Ponadto, jeśli chcesz obsługiwać starsze elementy docelowe .NET Framework, musisz zainstalować pakiety dla starszych wersji programu, korzystając ze [strony archiwa pobierania programu .NET](https://dotnet.microsoft.com/download/archives). Zapoznaj się z tą tabelą:
 
-| Wersja programu .NET Framework | Co należy pobrać                                       |
+| Wersja systemu .NET Framework | Co należy pobrać                                       |
 | ---------------------- | ------------------------------------------------------ |
 | 4.6.1                  | .NET Framework 4.6.1                    |
 | 4.6                    | Pakiet docelowy .NET Framework 4,6                      |
 | 4.5.2                  | .NET Framework 4.5.2 — Pakiet dewelopera                    |
-| 4.5.1                  | .NET Framework 4.5.1 — pakiet dewelopera                    |
+| 4.5.1                  | .NET Framework 4.5.1 Developer Pack                    |
 | 4.5                    | Zestaw Windows Software Development Kit dla systemu Windows 8         |
-| 4,0                    | Windows SDK dla systemów Windows 7 i .NET Framework 4         |
+| 4.0                    | Windows SDK dla systemów Windows 7 i .NET Framework 4         |
 | 2,0, 3,0 i 3,5      | Środowisko uruchomieniowe .NET Framework 3,5 z dodatkiem SP1 (lub Windows 8 + wersja) |
 
 ## <a name="how-to-target-the-net-standard"></a>Jak kierować .NET Standard
@@ -76,15 +76,15 @@ Jeśli chcesz uzyskać dostęp do maksymalnej liczby deweloperów i projektów, 
 | ---------------------- | -------- |
 | .NET Framework 2.0     | `net20`  |
 | .NET Framework 3.0     | `net30`  |
-| Program .NET Framework 3,5     | `net35`  |
-| .NET Framework 4,0     | `net40`  |
+| .NET Framework 3.5     | `net35`  |
+| .NET Framework 4.0     | `net40`  |
 | .NET Framework 4.5     | `net45`  |
 | .NET Framework 4.5.1   | `net451` |
 | .NET Framework 4.5.2   | `net452` |
 | .NET Framework 4.6     | `net46`  |
 | .NET Framework 4.6.1   | `net461` |
 | .NET Framework 4.6.2   | `net462` |
-| .NET Framework 4,7     | `net47`  |
+| .NET framework 4.7     | `net47`  |
 | .NET Framework 4,8     | `net48`  |
 
 Następnie należy wstawić ten TFM do sekcji `TargetFramework` w pliku projektu. Załóżmy na przykład, że napiszesz bibliotekę, która jest przeznaczona dla .NET Framework 4,0:
@@ -97,7 +97,7 @@ Następnie należy wstawić ten TFM do sekcji `TargetFramework` w pliku projektu
 </Project>
 ```
 
-I to wszystko! Chociaż jest to kompilowane tylko dla .NET Framework 4, można użyć biblioteki w nowszych wersjach .NET Framework.
+I to już wszystko! Chociaż jest to kompilowane tylko dla .NET Framework 4, można użyć biblioteki w nowszych wersjach .NET Framework.
 
 ## <a name="how-to-multitarget"></a>Jak wieloelementowy
 
@@ -258,7 +258,7 @@ Ważne jest, aby móc testować między platformami. Możesz użyć [xUnit](http
 
 1. Sprawdź, czy xUnit działa, wykonując polecenie `dotnet test`. W przypadku wybrania opcji używania MSTest, zamiast tego należy uruchomić moduł uruchamiający konsolę programu MSTest.
 
-I to wszystko! Teraz można testować bibliotekę na wszystkich platformach przy użyciu narzędzi wiersza polecenia. Aby kontynuować testowanie teraz, gdy wszystko jest skonfigurowane, testowanie biblioteki jest bardzo proste:
+I to już wszystko! Teraz można testować bibliotekę na wszystkich platformach przy użyciu narzędzi wiersza polecenia. Aby kontynuować testowanie teraz, gdy wszystko jest skonfigurowane, testowanie biblioteki jest bardzo proste:
 
 1. Wprowadź zmiany w bibliotece.
 1. Uruchom testy z wiersza polecenia w katalogu testowym przy użyciu polecenia `dotnet test`.
@@ -308,7 +308,7 @@ mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib
 cd ..
 mkdir AwesomeLibrary.CSharp && cd AwesomeLibrary.CSharp && dotnet new classlib
 cd ..
-mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang F#
+mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang "F#"
 cd ..
 dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj

@@ -2,21 +2,21 @@
 title: 'Przykładowy plik XML: klienci i zamówienia (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: d6d1c9ea-be74-4e6d-bfdd-d4bcc2d301cf
-ms.openlocfilehash: e6c1dd026a99c21afa788d6eea73cbc9d240987f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 01c1719bd67bbaf0d46dc6e3c23b5031afd271f8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591154"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346498"
 ---
-# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a><span data-ttu-id="ee844-102">Przykładowy plik XML: klienci i zamówienia (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="ee844-102">Sample XML File: Customers and Orders (LINQ to XML)</span></span>
-<span data-ttu-id="ee844-103">Następujący plik XML jest używany w różnych przykładach w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="ee844-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="ee844-104">Ten plik zawiera klientów i zamówienia.</span><span class="sxs-lookup"><span data-stu-id="ee844-104">This file contains customers and orders.</span></span>  
+# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a><span data-ttu-id="2c51e-102">Przykładowy plik XML: klienci i zamówienia (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="2c51e-102">Sample XML File: Customers and Orders (LINQ to XML)</span></span>
+<span data-ttu-id="2c51e-103">Poniższy plik XML jest używany w różnych przykładach w dokumentacji [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2c51e-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="2c51e-104">Ten plik zawiera klientów i zamówienia.</span><span class="sxs-lookup"><span data-stu-id="2c51e-104">This file contains customers and orders.</span></span>  
   
- <span data-ttu-id="ee844-105">Przykładowy plik [XSD tematu: Klienci i zamówienia](./sample-xsd-file-customers-and-orders1.md) zawierają XSD, których można użyć do zweryfikowania tego dokumentu.</span><span class="sxs-lookup"><span data-stu-id="ee844-105">The topic [Sample XSD File: Customers and Orders](./sample-xsd-file-customers-and-orders1.md) contains an XSD that can be used to validate this document.</span></span> <span data-ttu-id="ee844-106">Używa `xs:key` `CustomerID` i `Customer` `Order` funkcji XSD, aby określić, że atrybutelementujestkluczemiabyustanowićrelacjęmiędzyelementemwkażdymelemenciea`CustomerID` `xs:keyref` atrybut w każdym `Customer`elemencie. `CustomerID`</span><span class="sxs-lookup"><span data-stu-id="ee844-106">It uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
+ <span data-ttu-id="2c51e-105">[Przykładowy plik XSD tematu: klienci i zamówienia](./sample-xsd-file-customers-and-orders1.md) zawierają XSD, których można użyć do zweryfikowania tego dokumentu.</span><span class="sxs-lookup"><span data-stu-id="2c51e-105">The topic [Sample XSD File: Customers and Orders](./sample-xsd-file-customers-and-orders1.md) contains an XSD that can be used to validate this document.</span></span> <span data-ttu-id="2c51e-106">Używa `xs:key` i `xs:keyref` funkcji XSD, aby określić, że atrybut `CustomerID` elementu `Customer` jest kluczem i aby ustanowić relację między `CustomerID` elementu w każdym `Order` elementu i atrybut `CustomerID` w każdym `Customer` elementu.</span><span class="sxs-lookup"><span data-stu-id="2c51e-106">It uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
   
- <span data-ttu-id="ee844-107">Przykład pisania zapytań LINQ wykorzystujących tę relację `Join` można znaleźć w temacie [How to: Dołącz dwie kolekcje (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="ee844-107">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to: Join Two Collections (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="2c51e-107">Przykład pisania zapytań LINQ wykorzystujących tę relację przy użyciu klauzuli `Join` można znaleźć w temacie [jak sprzęgać dwie kolekcje (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="2c51e-107">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to join two collections (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).</span></span>  
   
-## <a name="customersordersxml"></a><span data-ttu-id="ee844-108">CustomersOrders. XML</span><span class="sxs-lookup"><span data-stu-id="ee844-108">CustomersOrders.xml</span></span>  
+## <a name="customersordersxml"></a><span data-ttu-id="2c51e-108">CustomersOrders. XML</span><span class="sxs-lookup"><span data-stu-id="2c51e-108">CustomersOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

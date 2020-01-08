@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: d45aca8b137f56cf058b63b9286504259c0005eb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 589b0b362cc25fd10e2780fd541cf9f7cfb546a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346705"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344635"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Obiekty i klasy w Visual Basic
 
@@ -71,7 +71,7 @@ warningLabel.Text = "Data not saved"
 
 #### <a name="intellisense-listing-of-members"></a>Lista elementów członkowskich IntelliSense
 
-Funkcja IntelliSense wyświetla listę elementów członkowskich klasy po wywołaniu opcji członków listy, na przykład podczas wpisywania okresu (`.`) jako operatora dostępu do elementów członkowskich. Jeśli wpiszesz kropkę po nazwie zmiennej zadeklarowanej jako wystąpienie tej klasy, IntelliSense wyświetla wszystkie elementy członkowskie wystąpienia i żaden z udostępnionych elementów członkowskich. Jeśli wpiszesz kropkę po samej nazwie klasy, IntelliSense wyświetla wszystkie udostępnione elementy członkowskie i żaden z elementów członkowskich wystąpienia. Aby uzyskać więcej informacji, zobacz [Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense).
+Funkcja IntelliSense wyświetla listę elementów członkowskich klasy po wywołaniu opcji członków listy, na przykład podczas wpisywania okresu (`.`) jako operatora dostępu do elementów członkowskich. Jeśli wpiszesz kropkę po nazwie zmiennej zadeklarowanej jako wystąpienie tej klasy, IntelliSense wyświetla wszystkie elementy członkowskie wystąpienia i żaden z udostępnionych elementów członkowskich. Jeśli wpiszesz kropkę po samej nazwie klasy, IntelliSense wyświetla wszystkie udostępnione elementy członkowskie i żaden z elementów członkowskich wystąpienia. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense).
 
 ### <a name="fields-and-properties"></a>Pola i właściwości
 
@@ -239,7 +239,7 @@ W poniższym przykładzie Załóżmy, że chcesz zdefiniować specjalny rodzaj <
 
 Klasy pochodne dziedziczą elementy członkowskie z klasy, na której bazują, co pozwala na dodawanie złożoności w miarę postępu w hierarchii klas. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [dziedziczeniu](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).
 
-### <a name="compiling-the-code"></a>Kompilowanie kodu
+### <a name="compile-the-code"></a>Skompilować kod
 
 Upewnij się, że kompilator ma dostęp do klasy, z której zamierzasz utworzyć nową klasę. Może to oznaczać, że w pełni kwalifikuje swoją nazwę, tak jak w poprzednim przykładzie, lub identyfikując jej przestrzeń nazw w [instrukcji Imports (przestrzeń nazw i typ platformy .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Jeśli Klasa znajduje się w innym projekcie, może być konieczne dodanie odwołania do tego projektu. Aby uzyskać więcej informacji, zobacz [Zarządzanie odwołaniami w projekcie](/visualstudio/ide/managing-references-in-a-project).
 

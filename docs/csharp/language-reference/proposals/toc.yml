@@ -78,3 +78,5 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
         - name: Elementy członkowskie wystąpień tylko do odczytu
           href: ../../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
+        - name: Zagnieżdżony operator stackalloc
+          href: ../../../../_csharplang/proposals/csharp-8.0/nested-stackalloc.md

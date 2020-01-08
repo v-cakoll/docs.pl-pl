@@ -1,5 +1,7 @@
 - name: Witamy
   href: welcome.md
+- name: Co nowego w dokumentacji platformy .NET
+  href: whats-new/index.yml
 - name: .NET — przewodnik
   href: standard/
 - name: Przewodnik platformy .NET Core

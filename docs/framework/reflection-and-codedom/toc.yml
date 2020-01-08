@@ -44,13 +44,14 @@
     - name: Przegląd środowiska uruchomieniowego języka dynamicznego
       href: dynamic-language-runtime-overview.md
     - name: Dynamiczne generowanie i kompilacja kodu źródłowego
-      href: dynamic-source-code-generation-and-compilation.md
       items:
+        - name: Omówienie
+          href: dynamic-source-code-generation-and-compilation.md
         - name: Używanie modelu CodeDOM
           href: using-the-codedom.md
         - name: Generowanie i kompilowanie kodu źródłowego z wykresu CodeDOM
           href: generating-and-compiling-source-code-from-a-codedom-graph.md
-        - name: 'Instrukcje: Tworzenie pliku dokumentacji XML przy użyciu modelu CodeDOM'
+        - name: Tworzenie pliku dokumentacji XML przy użyciu modelu CodeDOM
           href: how-to-create-an-xml-documentation-file-using-codedom.md
-        - name: 'Instrukcje: Tworzenie klasy za pomocą modelu CodeDOM'
+        - name: Tworzenie klasy za pomocą modelu CodeDOM
           href: how-to-create-a-class-using-codedom.md

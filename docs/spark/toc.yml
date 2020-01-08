@@ -3,7 +3,7 @@
 - name: Omówienie
   expanded: true
   items:
-    - name: Co to jest platforma Apache Spark?
+    - name: Co to jest Apache Spark?
       href: what-is-spark.md
     - name: Co to jest platforma .NET dla platformy Apache Spark?
       href: what-is-apache-spark-dotnet.md
@@ -17,6 +17,8 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Wdrażanie w usłudze Databricks
       href: tutorials/databricks-deployment.md
+    - name: Przetwarzanie wsadowe
+      href: tutorials/batch-processing.md
     - name: Przesyłanie strumieniowe ze strukturą
       href: tutorials/streaming.md
 - name: Przewodniki z instrukcjami

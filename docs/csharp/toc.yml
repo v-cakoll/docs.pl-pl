@@ -1,6 +1,6 @@
 - name: 'Dokumentacja języka C#'
   href: index.yml
-- name: Rozpoczęcie pracy
+- name: Rozpocznij
   items:
     - name: Omówienie
       href: getting-started/index.md
@@ -14,7 +14,7 @@
       items:
         - name: Wybieranie pierwszej lekcji
           href: tutorials/intro-to-csharp/index.md
-        - name: Witaj świecie
+        - name: Hello world
           href: tutorials/intro-to-csharp/hello-world.yml
         - name: 'Liczby w języku C#'
           href: tutorials/intro-to-csharp/numbers-in-csharp.yml
@@ -56,13 +56,13 @@
       href: tutorials/generate-consume-asynchronous-stream.md
     - name: Zwiększanie możliwości danych za pomocą dopasowania wzorca
       href: tutorials/pattern-matching.md
-    - name: Aplikacja konsolowa
+    - name: Aplikacja konsoli
       href: tutorials/console-teleprompter.md
     - name: Klient REST
       href: tutorials/console-webapiclient.md
     - name: 'Dziedziczenie w języku C# i .NET'
       href: tutorials/inheritance.md
-    - name: Praca z technologią LINQ
+    - name: Praca z LINQ
       href: tutorials/working-with-linq.md
     - name: Korzystanie z atrybutów
       href: tutorials/attributes.md
@@ -86,8 +86,6 @@
       href: tour-of-csharp/arrays.md
     - name: Interfejsy
       href: tour-of-csharp/interfaces.md
-    - name: Wyliczenia
-      href: tour-of-csharp/enums.md
     - name: Delegaty
       href: tour-of-csharp/delegates.md
     - name: Atrybuty
@@ -106,6 +104,8 @@
       href: whats-new/csharp-7.md
     - name: 'C# 6'
       href: whats-new/csharp-6.md
+    - name: Fundamentalne zmiany w kompilatorze
+      href: whats-new/breaking-changes.md
     - name: 'Historia wersji języka C#'
       href: whats-new/csharp-version-history.md
     - name: Relacje między językiem a platformą
@@ -120,7 +120,7 @@
       href: nullable-references.md
     - name: Opisywanie interfejsów API dopuszczających wartość null przy użyciu atrybutów i ograniczeń
       href: nullable-attributes.md
-    - name: Przestrzenie nazw
+    - name: Namespaces
       href: programming-guide/namespaces/index.md
     - name: Typy podstawowe
       href: basic-types.md
@@ -140,7 +140,7 @@
       href: programming-guide/statements-expressions-operators/lambda-expressions.md
     - name: Właściwości
       href: properties.md
-    - name: Indexers (Indeksatory)
+    - name: Indeksatory
       href: indexers.md
     - name: Odrzucenia
       href: discards.md
@@ -166,7 +166,7 @@
           href: modern-events.md
         - name: Wyróżniające się obiekty delegowane i zdarzenia
           href: distinguish-delegates-events.md
-    - name: Language Integrated Query (LINQ)
+    - name: Zapytanie o języku zintegrowanym (LINQ)
       items:
         - name: Omówienie zapytań LINQ
           href: linq/index.md
@@ -236,7 +236,7 @@
       href: programming-guide/interop/index.md
     - name: Dokumentowanie kodu
       href: codedoc.md
-    - name: Obsługa wersji
+    - name: Przechowywanie wersji
       href: versioning.md
 - name: 'Tematy z instrukcjami dotyczącymi języka C#'
   items:
@@ -304,7 +304,7 @@
           href: programming-guide/main-and-command-args/index.md
         - name: Argumenty wiersza poleceń
           href: programming-guide/main-and-command-args/command-line-arguments.md
-        - name: 'Instrukcje: wyświetlanie argumentów wiersza polecenia'
+        - name: Wyświetlanie argumentów wiersza polecenia
           href: programming-guide/main-and-command-args/how-to-display-command-line-arguments.md
         - name: Main() — Zwracane wartości
           href: programming-guide/main-and-command-args/main-return-values.md
@@ -464,51 +464,51 @@
                   items:
                     - name: Sposób liczenia wystąpień słowa w ciągu (LINQ)
                       href: programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md
-                    - name: 'Instrukcje: zapytanie o zdania zawierające określony zestaw słów (LINQ)'
+                    - name: Zapytanie o zdania zawierające określony zestaw wyrazów (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
-                    - name: 'Instrukcje: zapytanie o znaki w ciągu (LINQ)'
+                    - name: Zapytanie o znaki w ciągu (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-characters-in-a-string-linq.md
                     - name: Sposób łączenia zapytań LINQ z wyrażeniami regularnymi
                       href: programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md
-                    - name: 'Instrukcje: wyszukiwanie zestawu różnic między dwiema listami (LINQ)'
+                    - name: Znajdowanie różnicy pomiędzy dwiema listami (LINQ)
                       href: programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md
-                    - name: 'Instrukcje: sortowanie lub filtrowanie danych tekstowych według dowolnego słowa lub pola (LINQ)'
+                    - name: Sortowanie lub filtrowanie danych tekstowych według dowolnego słowa lub pola (LINQ)
                       href: programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
-                    - name: 'Instrukcje: zmienianie kolejności pól w rozdzielonym pliku (LINQ)'
+                    - name: Zmienianie kolejności pól w pliku rozdzielanym (LINQ)
                       href: programming-guide/concepts/linq/how-to-reorder-the-fields-of-a-delimited-file-linq.md
                     - name: Sposób łączenia i porównywania kolekcji ciągów (LINQ)
                       href: programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md
-                    - name: 'Instrukcje: wypełnianie kolekcji obiektów z wielu źródeł (LINQ)'
+                    - name: Wypełnianie kolekcji obiektów z wielu źródeł (LINQ)
                       href: programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md
-                    - name: 'Instrukcje: dzielenie pliku na kilka plików za pomocą grup (LINQ)'
+                    - name: Dzielenie pliku na kilka plików za pomocą grup (LINQ)
                       href: programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md
-                    - name: 'Instrukcje: łączenie zawartości niepodobnych plików (LINQ)'
+                    - name: Łączenie zawartości niepodobnych plików (LINQ)
                       href: programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md
                     - name: Sposób obliczania wartości kolumn w pliku tekstowym CSV (LINQ)
                       href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
                 - name: LINQ i odbicie
                   href: programming-guide/concepts/linq/linq-and-reflection.md
-                - name: 'Instrukcje: zapytanie dotyczące metadanych zestawu z odbiciem (LINQ)'
+                - name: Zapytanie dotyczące metadanych zestawu z odbiciem (LINQ)
                   href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
                 - name: LINQ i katalogi plików
                   items:
                     - name: Omówienie
                       href: programming-guide/concepts/linq/linq-and-file-directories.md
-                    - name: 'Instrukcje: zapytanie o pliki o określonym atrybucie lub nazwie'
+                    - name: Zapytanie o pliki o określonym atrybucie lub nazwie
                       href: programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md
-                    - name: 'Instrukcje: grupowanie plików według rozszerzenia (LINQ)'
+                    - name: Grupowanie plików według rozszerzenia (LINQ)
                       href: programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md
-                    - name: 'Instrukcje: zapytanie o całkowitą liczbę bajtów w zestawie folderów (LINQ)'
+                    - name: Zapytanie o całkowitą liczbę bajtów w zestawie folderów (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md
                     - name: Sposób porównywania zawartości dwóch folderów (LINQ)
                       href: programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md
-                    - name: 'Instrukcje: zapytanie o największy plik lub pliki w drzewie katalogu (LINQ)'
+                    - name: Zapytanie o największy plik lub pliki w drzewie katalogu (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md
-                    - name: 'Instrukcje: zapytanie o zduplikowane pliki w drzewie katalogu (LINQ)'
+                    - name: Zapytanie o zduplikowane pliki w drzewie katalogu (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
-                    - name: 'Instrukcje: zapytanie o zawartość plików w folderze (LINQ)'
+                    - name: Jak wykonywać zapytania o zawartość plików w folderze (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md
-                - name: 'Instrukcje: zapytanie w ArrayList za pomocą LINQ'
+                - name: Zapytanie w ArrayList za pomocą LINQ
                   href: programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md
                 - name: Sposób dodawania metod niestandardowych do zapytań LINQ
                   href: programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md
@@ -546,9 +546,9 @@
                           href: programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md
                         - name: Analizowanie kodu XML
                           items:
-                            - name: 'Instrukcje: analizowanie ciągu'
+                            - name: Analizowanie ciągu
                               href: programming-guide/concepts/linq/how-to-parse-a-string.md
-                            - name: 'Instrukcje: ładowanie kodu XML z pliku'
+                            - name: Ładowanie kodu XML z pliku
                               href: programming-guide/concepts/linq/how-to-load-xml-from-a-file.md
                             - name: Zachowywanie białych znaków podczas ładowania lub analizowania kodu XML
                               href: programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml1.md
@@ -556,11 +556,11 @@
                               href: programming-guide/concepts/linq/how-to-catch-parsing-errors.md
                             - name: Sposób tworzenia drzewa na podstawie elementu XmlReader
                               href: programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md
-                            - name: 'Instrukcje: przesyłanie strumieniowo fragmentów kodu XML z elementu XmlReader'
+                            - name: Przesyłanie strumieniowo fragmentów kodu XML z elementu XmlReader
                               href: programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md
-                        - name: 'Instrukcje: wypełnianie drzewa XML elementem XmlWriter (LINQ to XML)'
+                        - name: Wypełnianie drzewa XML elementem XmlWriter (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md
-                        - name: 'Instrukcje: weryfikowanie przy użyciu XSD (LINQ to XML)'
+                        - name: Weryfikowanie przy użyciu XSD (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md
                         - name: Weryfikowanie zawartości obiektów XElement i XDocument
                           href: programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects3.md
@@ -574,7 +574,7 @@
                           href: programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md
                         - name: 'Zakres domyślnych przestrzeni nazw w języku C#'
                           href: programming-guide/concepts/linq/scope-of-default-namespaces.md
-                        - name: 'Instrukcje: pisanie zapytań dotyczących kodu XML w przestrzeniach nazw'
+                        - name: Pisanie zapytań dotyczących kodu XML w przestrzeniach nazw
                           href: programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md
                     - name: Serializowanie drzew XML
                       items:
@@ -590,23 +590,23 @@
                       items:
                         - name: Osie LINQ to XML — przegląd
                           href: programming-guide/concepts/linq/linq-to-xml-axes-overview.md
-                        - name: 'Instrukcje: pobieranie kolekcji elementów (LINQ to XML)'
+                        - name: Pobieranie kolekcji elementów (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md
-                        - name: 'Instrukcje: pobieranie wartości elementu (LINQ to XML)'
+                        - name: Pobieranie wartości elementu (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md
                         - name: Sposób filtrowania nazw elementów (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md
                         - name: Sposób łączenia łańcuchowo wywołań metody osi (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md
-                        - name: 'Instrukcje: pobieranie pojedynczego elementu podrzędnego (LINQ to XML)'
+                        - name: Pobieranie pojedynczego elementu podrzędnego (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md
-                        - name: 'Instrukcje: pobieranie kolekcji atrybutów (LINQ to XML)'
+                        - name: Pobieranie kolekcji atrybutów (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-a-collection-of-attributes-linq-to-xml.md
-                        - name: 'Instrukcje: pobieranie pojedynczego atrybutu (LINQ to XML)'
+                        - name: Pobieranie pojedynczego atrybutu (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-a-single-attribute-linq-to-xml.md
-                        - name: 'Instrukcje: pobieranie wartości atrybutu (LINQ to XML)'
+                        - name: Pobieranie wartości atrybutu (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md
-                        - name: 'Instrukcje: pobieranie płytkiej wartości elementu'
+                        - name: Pobieranie płytkiej wartości elementu
                           href: programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md
                     - name: Tworzenie zapytań dotyczących drzew XML
                       items:
@@ -622,59 +622,59 @@
                               href: programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md
                             - name: Sposób wyszukiwania pojedynczego elementu potomnego przy użyciu metody elementów potomnych
                               href: programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md
-                            - name: 'Instrukcje: pisanie zapytań z zaawansowanym filtrowaniem'
+                            - name: Pisanie zapytań z zaawansowanym filtrowaniem
                               href: programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md
                             - name: Sposób filtrowania elementu opcjonalnego
                               href: programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md
                             - name: Sposób wyszukiwania węzłów w przestrzeni nazw
                               href: programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md
-                            - name: 'Instrukcje: Elementy raportów'
+                            - name: Sortowanie elementów
                               href: programming-guide/concepts/linq/how-to-sort-elements.md
-                            - name: 'Instrukcje: sortowanie elementów na wielu kluczach'
+                            - name: Sortowanie elementów na wielu kluczach
                               href: programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md
                             - name: Sposób obliczania wartości pośrednich
                               href: programming-guide/concepts/linq/how-to-calculate-intermediate-values.md
-                            - name: 'Instrukcje: pisanie zapytania odnajdującego elementy na podstawie kontekstu'
+                            - name: Pisanie zapytania odnajdującego elementy na podstawie kontekstu
                               href: programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md
                             - name: Sposób debugowania zestawów wyników zapytania
                               href: programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md
                         - name: Projekcje i przekształcenia (LINQ to XML)
                           items:
-                            - name: 'Instrukcje: praca ze słownikami przy użyciu LINQ to XML'
+                            - name: Praca ze słownikami przy użyciu LINQ to XML
                               href: programming-guide/concepts/linq/how-to-work-with-dictionaries-using-linq-to-xml.md
-                            - name: 'Instrukcje: przekształcanie kształtu drzewa XML'
+                            - name: Przekształcanie kształtu drzewa XML
                               href: programming-guide/concepts/linq/how-to-transform-the-shape-of-an-xml-tree.md
                             - name: Sposób kontrolowania typu projekcji
                               href: programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md
-                            - name: 'Instrukcje: projektowanie nowego typu (LINQ to XML)'
+                            - name: Projektowanie nowego typu (LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-project-a-new-type-linq-to-xml.md
-                            - name: 'Instrukcje: projektowanie wykresu obiektu'
+                            - name: Projektowanie wykresu obiektu
                               href: programming-guide/concepts/linq/how-to-project-an-object-graph.md
-                            - name: 'Instrukcje: projektowanie typu anonimowego'
+                            - name: Projektowanie typu anonimowego
                               href: programming-guide/concepts/linq/how-to-project-an-anonymous-type.md
-                            - name: 'Instrukcje: generowanie plików tekstowych z kodu XML'
+                            - name: Generowanie plików tekstowych z kodu XML
                               href: programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md
-                            - name: 'Instrukcje: generowanie kodu XML z plików CSV'
+                            - name: Generowanie kodu XML z plików CSV
                               href: programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md
                         - name: Zaawansowane techniki zapytań (LINQ to XML)
                           items:
-                            - name: 'Instrukcje: łączenie dwóch kolekcji (LINQ to XML)'
+                            - name: Łączenie dwóch kolekcji (LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md
                             - name: Sposób tworzenia hierarchii przy użyciu grupowania
                               href: programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md
-                            - name: 'Instrukcje: tworzenie zapytań dotyczących LINQ to XML przy użyciu metody XPath'
+                            - name: Tworzenie zapytań dotyczących LINQ to XML przy użyciu metody XPath
                               href: programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md
-                            - name: 'Instrukcje: pisanie metody osi LINQ to XML'
+                            - name: Pisanie metody osi LINQ to XML
                               href: programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md
-                            - name: 'Instrukcje: wykonywanie przekształceń strumieniowych tekstu do kodu XML'
+                            - name: Wykonywanie przekształceń strumieniowych tekstu do kodu XML
                               href: programming-guide/concepts/linq/how-to-perform-streaming-transformations-of-text-to-xml.md
-                            - name: 'Instrukcje: wyświetlanie listy wszystkich węzłów w drzewie'
+                            - name: Wyświetlanie listy wszystkich węzłów w drzewie
                               href: programming-guide/concepts/linq/how-to-list-all-nodes-in-a-tree.md
-                            - name: 'Instrukcje: pobieranie akapitów z dokumentu Office Open XML'
+                            - name: Pobieranie akapitów z dokumentu Office Open XML
                               href: programming-guide/concepts/linq/how-to-retrieve-paragraphs-from-an-office-open-xml-document.md
-                            - name: 'Instrukcje: modyfikowanie dokumentu Office Open XML'
+                            - name: Modyfikowanie dokumentu Office Open XML
                               href: programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md
-                            - name: 'Instrukcje: wypełnianie drzewa XML z systemu plików'
+                            - name: Wypełnianie drzewa XML z systemu plików
                               href: programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md
                         - name: LINQ to XML dla użytkowników metody XPath
                           items:
@@ -684,7 +684,7 @@
                               href: programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md
                             - name: Sposób wyszukiwania listy elementów podrzędnych (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md
-                            - name: 'Instrukcje: wyszukiwanie elementu głównego (XPath-LINQ to XML)'
+                            - name: Wyszukiwanie elementu głównego (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md
                             - name: Sposób wyszukiwania elementów potomnych (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-descendant-elements-xpath-linq-to-xml.md
@@ -812,21 +812,21 @@
                           href: programming-guide/concepts/linq/programming-with-nodes.md
                         - name: Mieszane błędy kodu deklaratywnego i imperatywnego (LINQ to XML)
                           href: programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md
-                        - name: 'Instrukcje: przesyłanie strumieniowe fragmentów z dostępem do informacji o nagłówku'
+                        - name: Przesyłanie strumieniowe fragmentów z dostępem do informacji o nagłówku
                           href: programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md
-                        - name: 'Instrukcje: wykonywanie przekształceń strumieniowych dużych dokumentów XML'
+                        - name: Wykonywanie przekształceń strumieniowych dużych dokumentów XML
                           href: programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md
-                        - name: 'Instrukcje: odczytywanie i zapisywanie zakodowanego dokumentu'
+                        - name: Odczytywanie i zapisywanie zakodowanego dokumentu
                           href: programming-guide/concepts/linq/how-to-read-and-write-an-encoded-document.md
                         - name: Przekształcanie drzewa XML przy użyciu transformacji XSLT
                           href: programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md
-                        - name: 'Instrukcje: przekształcanie drzew LINQ to XML w stylu XSLT przy użyciu adnotacji'
+                        - name: Przekształcanie drzew LINQ to XML w stylu XSLT przy użyciu adnotacji
                           href: programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md
                         - name: 'Serializowanie wykresów obiektów, które zawierają obiekty XElement'
                           items:
-                            - name: 'Instrukcje: serializowanie przy użyciu elementu XmlSerializer'
+                            - name: Serializowanie przy użyciu elementu XmlSerializer
                               href: programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md
-                            - name: 'Instrukcje: serializowanie przy użyciu elementu DataContractSerializer'
+                            - name: Serializowanie przy użyciu elementu DataContractSerializer
                               href: programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md
                     - name: Zabezpieczenia LINQ to XML
                       href: programming-guide/concepts/linq/linq-to-xml-security.md
@@ -874,9 +874,9 @@
           items:
             - name: Omówienie
               href: programming-guide/concepts/serialization/index.md
-            - name: 'Instrukcje: Wpisywanie danych o obiektach do pliku XML'
+            - name: Zapisywanie danych o obiektach do pliku XML
               href: programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md
-            - name: 'Instrukcje: Odczytywanie danych o obiektach z pliku XML'
+            - name: Odczytywanie danych o obiektach z pliku XML
               href: programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md
             - name: 'Przewodnik: przechowywanie obiektu w programie Visual Studio'
               href: programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md
@@ -896,17 +896,17 @@
               href: programming-guide/statements-expressions-operators/anonymous-functions.md
             - name: Wyrażenia lambda
               href: programming-guide/statements-expressions-operators/lambda-expressions.md
-            - name: 'Instrukcje: użycie wyrażeń lambda w zapytaniu'
+            - name: Użycie wyrażeń lambda w zapytaniu
               href: programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md
         - name: Równość i porównywanie równości
           items:
             - name: Porównywanie równości
               href: programming-guide/statements-expressions-operators/equality-comparisons.md
-            - name: 'Instrukcje: definiowanie równości wartości dla typu'
+            - name: Definiowanie równości wartości dla typu
               href: programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md
-            - name: 'Instrukcje: testowanie równości odwołań (tożsamości)'
+            - name: Testowanie równości odwołań (tożsamości)
               href: programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md
-    - name: Typy
+    - name: Types
       items:
         - name: Użycie i definiowanie typów
           href: programming-guide/types/index.md
@@ -914,11 +914,11 @@
           href: programming-guide/types/casting-and-type-conversions.md
         - name: Opakowywanie i rozpakowywanie
           href: programming-guide/types/boxing-and-unboxing.md
-        - name: 'Instrukcje: Konwertowanie tablicy bajtowej na liczbę całkowitą'
+        - name: Konwertowanie tablicy typu Byte na liczbę całkowitą
           href: programming-guide/types/how-to-convert-a-byte-array-to-an-int.md
-        - name: 'Instrukcje: Konwertowanie ciągu na liczbę'
+        - name: Konwertowanie ciągu na liczbę
           href: programming-guide/types/how-to-convert-a-string-to-a-number.md
-        - name: 'Instrukcje: Konwertowanie ciągów szesnastkowych na typy liczbowe'
+        - name: Konwertowanie ciągów szesnastkowych na typy liczbowe
           href: programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md
         - name: Używanie typu dynamicznego
           href: programming-guide/types/using-type-dynamic.md
@@ -1034,9 +1034,9 @@
           href: programming-guide/classes-and-structs/destructors.md
         - name: Inicjatory obiektów i kolekcji
           href: programming-guide/classes-and-structs/object-and-collection-initializers.md
-        - name: 'Porada: inicjowanie obiektów za pomocą inicjatora obiektów'
+        - name: Inicjowanie obiektów za pomocą inicjatora obiektów
           href: programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md
-        - name: 'Instrukcje: Inicjowanie słownika przy użyciu inicjatora kolekcji'
+        - name: Inicjowanie słownika przy użyciu inicjatora kolekcji
           href: programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md
         - name: Zagnieżdżone typy
           href: programming-guide/classes-and-structs/nested-types.md
@@ -1052,12 +1052,10 @@
           href: programming-guide/interfaces/index.md
         - name: Implementacja interfejsu jawnego
           href: programming-guide/interfaces/explicit-interface-implementation.md
-        - name: 'Instrukcje: Jawne implementowanie elementów interfejsu'
+        - name: Jawne implementowanie elementów interfejsu
           href: programming-guide/interfaces/how-to-explicitly-implement-interface-members.md
-        - name: 'Instrukcje: Jawne implementowanie elementów dwóch interfejsów'
+        - name: Jawne implementowanie elementów dwóch interfejsów
           href: programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md
-    - name: Typy wyliczeniowe
-      href: programming-guide/enumeration-types.md
     - name: Delegaty
       items:
         - name: Omówienie
@@ -1066,9 +1064,9 @@
           href: programming-guide/delegates/using-delegates.md
         - name: Delegaty z metodami nazwanymi lub Metody anonimowe
           href: programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md
-        - name: 'Instrukcje: Łączenie obiektów delegowanych (obiekty delegowane multiemisji) (Przewodnik programowania w języku C#)'
+        - name: 'Łączenie obiektów delegowanych (obiekty delegowane multiemisji) (Przewodnik programowania w języku C#)'
           href: programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md
-        - name: 'Instrukcje: Deklarowanie, tworzenie wystąpień i użycie delegata'
+        - name: 'Deklarowanie, tworzenie wystąpień i użycie delegowania'
           href: programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md
     - name: Tablice
       items:
@@ -1092,9 +1090,9 @@
       items:
         - name: Programowanie przy użyciu ciągów
           href: programming-guide/strings/index.md
-        - name: 'Instrukcje: Określanie, czy ciąg reprezentuje wartość liczbową'
+        - name: 'Określanie, czy ciąg reprezentuje wartość numeryczną'
           href: programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md
-    - name: Indexers (Indeksatory)
+    - name: Indeksatory
       items:
         - name: Omówienie
           href: programming-guide/indexers/index.md
@@ -1108,15 +1106,15 @@
       items:
         - name: Omówienie
           href: programming-guide/events/index.md
-        - name: 'Instrukcje: Subskrybowanie i anulowanie subskrypcji zdarzeń'
+        - name: Subskrybowanie i anulowanie subskrypcji zdarzeń
           href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
-        - name: 'Instrukcje: Publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi platformy .NET Framework'
+        - name: Publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework
           href: programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md
-        - name: 'Instrukcje: Wywoływanie zdarzeń klasy podstawowej w klasach pochodnych'
+        - name: Wywoływanie zdarzeń klasy podstawowej w klasach pochodnych
           href: programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md
-        - name: 'Instrukcje: zdarzenia implementowania interfejsu'
+        - name: Implementowanie zdarzeń interfejsu
           href: programming-guide/events/how-to-implement-interface-events.md
-        - name: 'Instrukcje: implementowanie niestandardowych metod dostępu zdarzeń'
+        - name: Implementowanie niestandardowych metod dostępu zdarzeń
           href: programming-guide/events/how-to-implement-custom-event-accessors.md
     - name: Typy ogólne
       items:
@@ -1144,13 +1142,13 @@
           href: programming-guide/generics/generics-and-reflection.md
         - name: Typy ogólne i atrybuty
           href: programming-guide/generics/generics-and-attributes.md
-    - name: Przestrzenie nazw
+    - name: Namespaces
       items:
         - name: Omówienie
           href: programming-guide/namespaces/index.md
         - name: Korzystanie z przestrzeni nazw
           href: programming-guide/namespaces/using-namespaces.md
-        - name: 'Instrukcje: korzystanie z przestrzeni nazw typu My'
+        - name: Korzystanie z przestrzeni nazw typu My
           href: programming-guide/namespaces/how-to-use-the-my-namespace.md
     - name: Niebezpieczny kod i wskaźniki
       items:
@@ -1164,7 +1162,7 @@
               href: programming-guide/unsafe-code-pointers/pointer-types.md
             - name: Konwersje wskaźników
               href: programming-guide/unsafe-code-pointers/pointer-conversions.md
-            - name: 'Instrukcje: użycie wskaźników do kopiowania tablicy bajtów'
+            - name: Użycie wskaźników do kopiowania tablicy bajtów
               href: programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md
     - name: Komentarze dokumentacji XML
       items:
@@ -1176,7 +1174,7 @@
           href: programming-guide/xmldoc/processing-the-xml-file.md
         - name: Ograniczniki tagów dokumentacji
           href: programming-guide/xmldoc/delimiters-for-documentation-tags.md
-        - name: 'Instrukcje: Używanie funkcji dokumentacji XML'
+        - name: Używanie funkcji dokumentacji XML
           href: programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md
         - name: Dokumentacja tagów dokumentacji
           items:
@@ -1230,33 +1228,33 @@
           href: programming-guide/exceptions/creating-and-throwing-exceptions.md
         - name: Wyjątki generowane przez kompilator
           href: programming-guide/exceptions/compiler-generated-exceptions.md
-        - name: 'Instrukcje: Obsługa wyjątków za pomocą bloku try-catch'
+        - name: Obsługa wyjątków za pomocą bloku try-catch
           href: programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md
-        - name: 'Instrukcje: Wykonywanie czyszczenia kodu za pomocą instrukcji finally'
+        - name: Wykonywanie czyszczenia kodu za pomocą instrukcji finally
           href: programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md
-        - name: 'Instrukcje: Przechwytywanie wyjątku typu non-CLS'
+        - name: Przechwytywanie wyjątku typu non-CLS
           href: programming-guide/exceptions/how-to-catch-a-non-cls-exception.md
     - name: System plików i rejestr
       items:
         - name: Omówienie
           href: programming-guide/file-system/index.md
-        - name: 'Instrukcje: Iterowanie po drzewie katalogów'
+        - name: Iterowanie drzewa katalogów
           href: programming-guide/file-system/how-to-iterate-through-a-directory-tree.md
-        - name: 'Instrukcje: Pobieranie informacji o plikach, folderach i dyskach'
+        - name: 'Pobieranie informacji o plikach, folderach i dyskach'
           href: programming-guide/file-system/how-to-get-information-about-files-folders-and-drives.md
-        - name: 'Instrukcje: Tworzenie pliku lub folderu'
+        - name: Tworzenie pliku lub folderu
           href: programming-guide/file-system/how-to-create-a-file-or-folder.md
-        - name: 'Instrukcje: Kopiowanie, usuwanie i przenoszenie plików i folderów'
+        - name: 'Kopiowanie, usuwanie i przenoszenie plików i folderów'
           href: programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders.md
-        - name: 'Instrukcje: Dostarczanie okna dialogowego postępu dla operacji na plikach'
+        - name: Dostarczanie okna dialogowego postępu dla operacji na plikach
           href: programming-guide/file-system/how-to-provide-a-progress-dialog-box-for-file-operations.md
-        - name: 'Instrukcje: Zapisywanie do pliku tekstowego'
+        - name: Zapisywanie do pliku tekstowego
           href: programming-guide/file-system/how-to-write-to-a-text-file.md
-        - name: 'Instrukcje: Odczytywanie z pliku tekstowego'
+        - name: Odczytywanie z pliku tekstowego
           href: programming-guide/file-system/how-to-read-from-a-text-file.md
-        - name: 'Instrukcje: Odczytywanie pliku tekstowego po jednym wierszu (Visual C#)'
+        - name: Odczytywanie pliku tekstowego po jednym wierszu
           href: programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md
-        - name: 'Instrukcje: Tworzenie klucza w rejestrze (Visual C#)'
+        - name: Tworzenie klucza w rejestrze
           href: programming-guide/file-system/how-to-create-a-key-in-the-registry.md
     - name: Współdziałanie
       items:
@@ -1264,11 +1262,11 @@
           href: programming-guide/interop/index.md
         - name: Przegląd współdziałania
           href: programming-guide/interop/interoperability-overview.md
-        - name: 'Instrukcje: Uzyskiwanie dostępu do obiektów międzyoperacyjności pakietu Office za pomocą funkcji Visual C#'
+        - name: 'Uzyskiwanie dostępu do obiektów międzyoperacyjności pakietu Office za pomocą funkcji języka C#'
           href: programming-guide/interop/how-to-access-office-onterop-objects.md
-        - name: 'Instrukcje: Użycie właściwości indeksowanych w programowaniu usługi międzyoperacyjnej modelu COM'
+        - name: Używanie właściwości indeksowanych w programowaniu usługi międzyoperacyjnej modelu COM
           href: programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md
-        - name: 'Instrukcje: Użycie wywołania platformy do odtwarzania pliku Wave'
+        - name: Używanie wywołania platformy do odtwarzania pliku WAV
           href: programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md
         - name: 'Przewodnik: Programowanie Office (C# i Visual Basic)'
           href: programming-guide/interop/walkthrough-office-programming.md
@@ -1304,8 +1302,9 @@
                 - name: char
                   href: language-reference/builtin-types/char.md
                   displayName: 'Unicode, character, UTF-16'
-                - name: enum
-                  href: language-reference/keywords/enum.md
+                - name: Typów wyliczeniowych
+                  href: language-reference/builtin-types/enum.md
+                  displayName: 'enum, bit flags, bit field'
                 - name: struktura
                   href: language-reference/keywords/struct.md
                 - name: Typy wartości dopuszczające wartość null
@@ -1487,7 +1486,7 @@
           items:
             - name: base
               href: language-reference/keywords/base.md
-            - name: względem tego ruchu
+            - name: this
               href: language-reference/keywords/this.md
         - name: Słowa kluczowe literału
           items:
@@ -1515,7 +1514,7 @@
               href: language-reference/keywords/set.md
             - name: when (warunek filtru)
               href: language-reference/keywords/when.md
-            - name: wartość
+            - name: value
               href: language-reference/keywords/value.md
             - name: yield
               href: language-reference/keywords/yield.md
@@ -1580,7 +1579,7 @@
         - name: Operatory konwersji zdefiniowane przez użytkownika
           href: language-reference/operators/user-defined-conversion-operators.md
           displayName: 'implicit, explicit'
-        - name: Operatory związane ze wskaźnikiem
+        - name: Operatory powiązane ze wskaźnikiem
           href: language-reference/operators/pointer-related-operators.md
           displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
         - name: Operatory przypisania
@@ -1803,5 +1802,5 @@
       href: language-reference/specification/
     - name: 'Propozycje dotyczące języka C# 7.0–8.0'
       href: language-reference/proposals/
-- name: Przewodniki
+- name: Wskazówki
   href: walkthroughs.md

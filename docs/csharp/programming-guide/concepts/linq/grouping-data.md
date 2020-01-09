@@ -2,12 +2,12 @@
 title: Grupowanie danych (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: e7f10b121a7a1c599d88731a806fe784eb1a7e66
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7ef3d3c9097d7a9478605565518ac8975feb9fe2
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423417"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635746"
 ---
 # <a name="grouping-data-c"></a>Grupowanie danych (C#)
 Grupowanie odwołuje się do operacji umieszczania danych w grupach, tak aby elementy w każdej grupie miały wspólny atrybut.  
@@ -22,7 +22,7 @@ Grupowanie odwołuje się do operacji umieszczania danych w grupach, tak aby ele
   
 |Nazwa metody|Opis|C#Składnia wyrażenia zapytania|Więcej informacji|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|GroupBy|Grupuje elementy, które mają wspólny atrybut. Każda grupa jest reprezentowana przez obiekt <xref:System.Linq.IGrouping%602>.|`group … by`<br /><br /> —lub—<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|GroupBy|Grupuje elementy, które mają wspólny atrybut. Każda grupa jest reprezentowana przez obiekt <xref:System.Linq.IGrouping%602>.|`group … by`<br /><br /> lub<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|Wstawia elementy do <xref:System.Linq.Lookup%602> (słownik "jeden do wielu") na podstawie funkcji selektora kluczy.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Przykład składni wyrażenia zapytania  
@@ -64,8 +64,8 @@ foreach (var group in query)
 - <xref:System.Linq>
 - [Standardowe operatory zapytań — OmówienieC#()](./standard-query-operators-overview.md)
 - [group, klauzula](../../../language-reference/keywords/group-clause.md)
-- [Instrukcje: Tworzenie grupy zagnieżdżonej](../../../linq/create-a-nested-group.md)
-- [Instrukcje: grupowanie plików według rozszerzenia (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
-- [Instrukcje: grupowanie wyników zapytania](../../../linq/group-query-results.md)
-- [Instrukcje: wykonywanie podzapytania w operacji grupowania](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
-- [Instrukcje: dzielenie pliku na wiele plików przy użyciu grup (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Tworzenie grupy zagnieżdżonej](../../../linq/create-a-nested-group.md)
+- [Jak grupować pliki według rozszerzenia (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
+- [Grupowanie wyników zapytania](../../../linq/group-query-results.md)
+- [Wykonanie podzapytania w operacji grupowania](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
+- [Jak podzielić plik na wiele plików przy użyciu grup (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

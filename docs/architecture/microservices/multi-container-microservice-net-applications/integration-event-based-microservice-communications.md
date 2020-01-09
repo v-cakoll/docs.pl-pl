@@ -2,12 +2,12 @@
 title: Implementowanie komunikacji opartej na zdarzeniach między mikrousługami (zdarzenia integracji)
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zrozumienie zdarzeń integracji w celu zaimplementowania komunikacji opartej na zdarzeniach między mikrousługami.
 ms.date: 10/02/2018
-ms.openlocfilehash: a355ba9ede4e3390edd858d173dd88548e876202
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6d4e324a05def91935a82df41c971a75cb75c3f8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711225"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712406"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementowanie komunikacji opartej na zdarzeniach między mikrousługami (zdarzenia integracji)
 
@@ -27,7 +27,7 @@ Zgodnie z opisem w sekcji architektura można wybrać jedną z wielu technologii
 
 W celu zaimplementowania tylko weryfikacji usługi Event Bus dla środowiska deweloperskiego, tak jak w przykładzie eShopOnContainers, prosta implementacja na RabbitMQ działa jako kontener może być wystarczająca. Jednak w przypadku systemów o znaczeniu krytycznym i produkcyjnym wymagających wysokiej skalowalności warto oszacować i użyć Azure Service Bus.
 
-Jeśli wymagane są abstrakcje wysokiego poziomu i bogatsze funkcje, takie jak [sagach](https://docs.particular.net/nservicebus/sagas/) dla długotrwałych procesów, które ułatwiają opracowywanie rozproszonego, inne komercyjne i typu "open source", takie jak NServiceBus, MassTransit i jaśniejszy oceny. W takim przypadku abstrakcje i interfejsy API, które mają być używane, zwykle są bezpośrednio podane przez te magistrale usług wyższego poziomu zamiast własnych streszczeń (takich jak [proste abstrakcje magistrali zdarzeń dostępne w eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). W takim przypadku można zbadać [eShopOnContainers rozwidlenia przy użyciu NServiceBus](https://go.particular.net/eShopOnContainers) (dodatkowe pochodne próbki zaimplementowane przez określone oprogramowanie)
+Jeśli wymagane są abstrakcje wysokiego poziomu i bogatsze funkcje, takie jak [sagach](https://docs.particular.net/nservicebus/sagas/) dla długotrwałych procesów, które ułatwiają opracowywanie rozproszonego, inne komercyjne i typu "open source", takie jak NServiceBus, MassTransit i jaśniejszy, oceniają. W takim przypadku abstrakcje i interfejsy API, które mają być używane, zwykle są bezpośrednio podane przez te magistrale usług wyższego poziomu zamiast własnych streszczeń (takich jak [proste abstrakcje magistrali zdarzeń dostępne w eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). W takim przypadku można zbadać [eShopOnContainers rozwidlenia przy użyciu NServiceBus](https://go.particular.net/eShopOnContainers) (dodatkowe pochodne próbki zaimplementowane przez określone oprogramowanie).
 
 Oczywiście można zawsze tworzyć własne funkcje usługi Service Bus na podstawie technologii niższego poziomu, takich jak RabbitMQ i Docker, ale pracy wymaganej do "odtworzenia kółka" może być zbyt kosztowne dla niestandardowej aplikacji przedsiębiorstwa.
 
@@ -141,5 +141,5 @@ Niektóre rozwiązania do obsługi komunikatów w środowisku produkcyjnym:
   <https://masstransit-project.com/>
 
 > [!div class="step-by-step"]
-> [Poprzednie](database-server-container.md)
-> [dalej](rabbitmq-event-bus-development-test-environment.md)
+> [Poprzedni](database-server-container.md)
+> [Następny](rabbitmq-event-bus-development-test-environment.md)

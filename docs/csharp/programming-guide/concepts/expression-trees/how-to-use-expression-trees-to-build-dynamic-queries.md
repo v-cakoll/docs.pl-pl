@@ -2,12 +2,12 @@
 title: Jak używać drzew wyrażeń do kompilowania zapytań dynamicznych (C#)
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 36a81b145b6a9a25c22243f63cfb71a6a39c5891
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6114ec13dd43a7df146b87dda00fba06d6eb870c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969873"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635902"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Jak używać drzew wyrażeń do kompilowania zapytań dynamicznych (C#)
 W LINQ, drzewa wyrażeń służą do reprezentowania zapytań strukturalnych, które są docelowymi źródłami danych, które implementują <xref:System.Linq.IQueryable%601>. Na przykład dostawca LINQ implementuje interfejs <xref:System.Linq.IQueryable%601> do wykonywania zapytań dotyczących relacyjnych magazynów danych. C# Kompilator kompiluje zapytania, które są przeznaczone dla tych źródeł danych w kodzie, który kompiluje drzewo wyrażeń w czasie wykonywania. Dostawca zapytań może następnie przechodzenie przez strukturę danych drzewa wyrażenia i przetłumaczyć je do języka zapytań odpowiedniego dla źródła danych.  
@@ -109,4 +109,4 @@ foreach (string company in results)
 
 - [Drzewa wyrażeń (C#)](./index.md)
 - [Jak wykonać drzewa wyrażeń (C#)](./how-to-execute-expression-trees.md)
-- [Instrukcje: dynamiczne określanie filtrów predykatu w czasie wykonywania](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
+- [Dynamiczne określanie filtrów predykatów w środowisku uruchomieniowym](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)

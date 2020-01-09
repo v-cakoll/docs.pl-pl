@@ -13,19 +13,19 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 75e6c7b4886bd490c462e9128eca7ec13f233824
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 612b99354310c18030cefce4e6f02fab8ed20f83
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837301"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636775"
 ---
 # <a name="security-wpf"></a>Zabezpieczenia (WPF)
-<a name="introduction"></a>Podczas opracowywania aplikacji autonomicznych i hostowanych przez program Windows Presentation Foundation (WPF) należy wziąć pod uwagę model zabezpieczeń. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Aplikacje autonomiczne są wykonywane z nieograniczonymi uprawnieniami (zestaw uprawnień CAS**FullTrust** ), niezależnie od tego, czy wdrożono przy użyciu Instalator Windows (. msi), XCOPY lub ClickOnce. Wdrożenie częściowego zaufania, autonomiczne aplikacje WPF za pomocą technologii ClickOnce nie jest obsługiwane. Jednak w pełni zaufane aplikacje hosta mogą utworzyć <xref:System.AppDomain> relacji zaufania z użyciem .NET Framework modelu dodatków. Aby uzyskać więcej informacji, zobacz [Omówienie dodatków WPF](./app-development/wpf-add-ins-overview.md).  
+<a name="introduction"></a>Podczas opracowywania aplikacji autonomicznych i hostowanych przez program Windows Presentation Foundation (WPF) należy wziąć pod uwagę model zabezpieczeń. Aplikacje autonomiczne WPF są wykonywane z nieograniczonymi uprawnieniami (zestaw uprawnień CAS**FullTrust** ), niezależnie od tego, czy wdrożono przy użyciu Instalator Windows (. msi), XCOPY lub ClickOnce. Wdrożenie częściowego zaufania, autonomiczne aplikacje WPF za pomocą technologii ClickOnce nie jest obsługiwane. Jednak w pełni zaufane aplikacje hosta mogą utworzyć <xref:System.AppDomain> relacji zaufania z użyciem .NET Framework modelu dodatków. Aby uzyskać więcej informacji, zobacz [Omówienie dodatków WPF](./app-development/wpf-add-ins-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje hostowane w przeglądarce są hostowane w programie Windows Internet Explorer lub Firefox i mogą być aplikacjami przeglądarki XAML (XBAP) lub luźno [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] dokumenty, aby uzyskać więcej informacji, zobacz [Omówienie aplikacji przeglądarki XAML w języku WPF](./app-development/wpf-xaml-browser-applications-overview.md).  
+ Aplikacje hostowane w przeglądarce WPF są hostowane w programie Windows Internet Explorer lub Firefox i mogą być aplikacjami przeglądarki XAML (XBAP) lub luźno [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] dokumenty, aby uzyskać więcej informacji, zobacz [Omówienie aplikacji przeglądarki XAML w języku WPF](./app-development/wpf-xaml-browser-applications-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje hostowane w przeglądarce działają w obszarze piaskownicy zabezpieczeń częściowej relacji zaufania, domyślnie, która jest ograniczona do domyślnego zestawu uprawnień strefy**internetowej** CAS. W ten sam sposób izoluje [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje hostowane w przeglądarce z komputera klienckiego w taki sam sposób, w jaki można oczekiwać, że typowe aplikacje sieci Web mają być izolowane. Aplikacje XBAP mogą podwyższyć poziom uprawnień, do pełnego zaufania, w zależności od strefy zabezpieczeń w adresie URL wdrożenia i konfiguracji zabezpieczeń klienta. Aby uzyskać więcej informacji, zobacz temat informacje o [zabezpieczeniach częściowej relacji zaufania WPF](wpf-partial-trust-security.md).  
+ Aplikacje hostowane w przeglądarce WPF działają w obszarze piaskownicy zabezpieczeń częściowej relacji zaufania, domyślnie, co jest ograniczone do domyślnego zestawu uprawnień strefy**internetowej** CAS. W ten sam sposób izoluje aplikacje hostowane w przeglądarce WPF z komputera klienckiego w taki sam sposób, w jaki można oczekiwać, że typowe aplikacje sieci Web mają być izolowane. Aplikacje XBAP mogą podwyższyć poziom uprawnień, do pełnego zaufania, w zależności od strefy zabezpieczeń w adresie URL wdrożenia i konfiguracji zabezpieczeń klienta. Aby uzyskać więcej informacji, zobacz temat informacje o [zabezpieczeniach częściowej relacji zaufania WPF](wpf-partial-trust-security.md).  
   
  W tym temacie omówiono model zabezpieczeń dla aplikacji autonomicznych i hostowanych przez przeglądarkę dla Windows Presentation Foundation (WPF).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74837301"
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>Bezpieczna nawigacja  
- W przypadku aplikacji XBAP [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] rozróżniane są dwa typy nawigacji: aplikacja i przeglądarka.  
+ W przypadku aplikacji XBAP funkcja WPF rozróżnia dwa typy nawigacji: aplikacja i przeglądarka.  
   
  *Nawigowanie po aplikacji* to nawigacja między elementami zawartości w aplikacji hostowanej w przeglądarce. *Nawigacja w przeglądarce* to Nawigacja, która zmienia zawartość i adres URL w przeglądarce. Relacja między nawigacją aplikacji (zazwyczaj XAML) i nawigacją przeglądarki (zwykle HTML) pokazano na poniższej ilustracji:
   
@@ -220,7 +220,7 @@ ms.locfileid: "74837301"
   
  Jednak w przypadku zestawu APTCA może zostać wystawiona Luka w zabezpieczeniach po zainstalowaniu w pamięci podręcznej GAC. Po znalezieniu usterki zabezpieczeń wydawcy zestawu mogą utworzyć aktualizację zabezpieczeń, aby rozwiązać problem z istniejącymi instalacjami oraz chronić przed instalacjami, które mogą wystąpić po wykryciu problemu. Jedną z opcji aktualizacji jest odinstalowanie zestawu, chociaż może to spowodować uszkodzenie innych w pełni zaufanych aplikacji klienckich korzystających z zestawu.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] zapewnia mechanizm, za pomocą którego można wyłączyć zestaw APTCA dla częściowo zaufanych aplikacji XBAP bez odinstalowywania zestawu APTCA.  
+ WPF udostępnia mechanizm, za pomocą którego można wyłączyć zestaw APTCA dla częściowo zaufanych aplikacji XBAP bez odinstalowywania zestawu APTCA.  
   
  Aby wyłączyć zestaw APTCA, należy utworzyć specjalny klucz rejestru:  
   
@@ -262,14 +262,14 @@ ms.locfileid: "74837301"
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Zasoby służące do opracowywania aplikacji WPF promujących zabezpieczenia  
- Poniżej przedstawiono kilka dodatkowych zasobów, które ułatwiają opracowywanie [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacji promujących zabezpieczenia:  
+ Poniżej przedstawiono kilka dodatkowych zasobów, które ułatwiają opracowywanie aplikacji WPF, które promują zabezpieczenia:  
   
 |Obszar|Zasób|  
 |----------|--------------|  
 |Kod zarządzany|[Wskazówki dotyczące zabezpieczeń wzorców i praktyk dotyczących aplikacji](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))|  
 |CAS|[Zabezpieczenia dostępu kodu](../misc/code-access-security.md)|  
 |ClickOnce|[Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
-|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[Zabezpieczenie częściowej relacji zaufania WPF](wpf-partial-trust-security.md)|  
+|WPF|[Zabezpieczenie częściowej relacji zaufania WPF](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,79 +1,91 @@
 ---
 title: Serializacja (C#)
-ms.date: 04/26/2018
-ms.openlocfilehash: 638fdbd31912ffeb284d734e1f8ce2ecd879b540
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.date: 01/02/2020
+ms.openlocfilehash: 1d2bda9022b7e43744dd8a0286eff88914cf65a3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680122"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635733"
 ---
 # <a name="serialization-c"></a>Serializacja (C#)
 
-Serializacja jest proces konwersji obiektu do strumienia bajtów do zapisu obiektu lub przekazuje je do pamięci, bazie danych lub pliku. Głównym celem jest zapisanie stanu obiektu, aby można było utworzyć ponownie w razie. Zwrotny proces jest nazywany deserializacji.
+Serializacja jest procesem konwertowania obiektu do strumienia bajtów w celu przechowywania obiektu lub przesyłania go do pamięci, bazy danych lub pliku. Jego głównym celem jest zapisanie stanu obiektu, aby można było go odtworzyć w razie potrzeby. Proces odwrotny nazywa się deserializacji.
 
-## <a name="how-serialization-works"></a>Jak działa serializacji
+## <a name="how-serialization-works"></a>Jak działa Serializacja
 
-Ta ilustracja przedstawia ogólny proces serializacji:
+Na tej ilustracji przedstawiono ogólny proces serializacji:
 
-![Grafika przedstawiająca serializację](./media/index/serialization-process.gif)
+![Grafika serializacji](./media/index/serialization-process.gif)
 
-Obiekt jest serializowany do strumienia, niesie ze sobą nie tylko dane, ale informacje o typie obiektu, takie jak jego nazwa wersji, kultury i zestawu. W strumieniu mogą być przechowywane w bazie danych, plików lub ilości pamięci.
+Obiekt jest serializowany do strumienia, który przenosi dane. Strumień może również zawierać informacje o typie obiektu, takie jak jego wersja, kultura i nazwa zestawu. Z tego strumienia obiekt może być przechowywany w bazie danych, pliku lub pamięci.
 
-### <a name="uses-for-serialization"></a>Zastosowań serializacji
+### <a name="uses-for-serialization"></a>Używa do serializacji
 
-Serializacja umożliwia deweloperowi zapisany stan obiektu i utwórz go ponownie zgodnie z potrzebami, przeznaczone do przechowywania obiektów, a także wymiany danych. Za pomocą serializacji, deweloper można wykonać akcje, takie jak wysyłanie obiektu do zdalnej aplikacji za pomocą usługi sieci Web, przekazywania obiektu z jednej domeny do innego, przekazywania obiektu przez zaporę jako ciąg znaków XML lub zachowanie bezpieczeństwa lub informacje dotyczące użytkownika w aplikacjach.
+Serializacja umożliwia deweloperowi zapisanie stanu obiektu i ponowne utworzenie go w razie potrzeby, zapewniając przechowywanie obiektów oraz wymianę danych. Dzięki serializacji programista może wykonywać takie działania, jak:
 
-### <a name="making-an-object-serializable"></a>Tworzenie możliwych do serializacji obiektu
+* Wysyłanie obiektu do aplikacji zdalnej przy użyciu usługi sieci Web
+* Przekazywanie obiektu z jednej domeny do innej
+* Przekazywanie obiektu przez zaporę jako ciąg JSON lub XML
+* Utrzymywanie zabezpieczeń lub informacji specyficznych dla użytkownika w aplikacjach
 
-Do serializacji obiektu, należy obiekt do zserializowania, strumień zawiera Zserializowany obiekt oraz a <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization> zawiera klasy, które są niezbędne do serializacji i deserializacji obiektów.
+## <a name="json-serialization"></a>Serializacja JSON
 
-Zastosuj <xref:System.SerializableAttribute> atrybutu typu, aby wskazać, że wystąpień tego typu może być serializowany. Wyjątek jest generowany, jeśli próby serializacji, ale nie ma typu <xref:System.SerializableAttribute> atrybutu.
+Przestrzeń nazw <xref:System.Text.Json> zawiera klasy dla serializacji JavaScript Object Notation (JSON) i deserializacji. JSON to otwarty standard, który jest często używany do udostępniania danych w sieci Web.
 
-Jeśli nie chcesz polem w obrębie swojej klasy jako możliwy do serializacji, zastosuj <xref:System.NonSerializedAttribute> atrybutu. Jeśli pole typu umożliwiającego serializację zawiera wskaźnik, dojście lub niektóre inne struktury danych, które są specyficzne dla określonego środowiska i pola nie może być znacząco odtworzone w innym środowisku, może być zapewnienie nonserializable.
+Serializacja JSON serializacji właściwości publicznych obiektu do ciągu, tablicy bajtów lub strumienia zgodnego ze [specyfikacją JSON RFC 8259](https://tools.ietf.org/html/rfc8259). Aby kontrolować sposób <xref:System.Text.Json.JsonSerializer> serializacji lub deserializacji wystąpienia klasy:
 
-Jeśli klasa serializacji zawiera odwołania do obiektów innych klas, które są oznaczone <xref:System.SerializableAttribute>, również będą wykonywane szeregowo tych obiektów.
+* Używanie obiektu <xref:System.Text.Json.JsonSerializerOptions>
+* Zastosuj atrybuty z przestrzeni nazw <xref:System.Text.Json.Serialization> do klas lub właściwości
+* [Implementowanie konwerterów niestandardowych](../../../../standard/serialization/system-text-json-converters-how-to.md)
 
-## <a name="binary-and-xml-serialization"></a>Plik binarny i serializacji XML
+## <a name="binary-and-xml-serialization"></a>Serializacja binarna i XML
 
-Można użyć pliku binarnego lub serializacji XML. W serializacji binarnej, wszystkich elementów członkowskich, nawet elementów członkowskich, które są tylko do odczytu są serializowane i zwiększa wydajność. Serializacji XML zapewnia lepszą czytelność kodu i większa elastyczność użycia na współdziałanie i udostępniania obiektów.
+Przestrzeń nazw <xref:System.Runtime.Serialization> zawiera klasy dla serializacji binarnej i kodu XML oraz deserializacji.
 
-### <a name="binary-serialization"></a>Serializacja binarna
+Serializacja binarna korzysta z kodowania binarnego w celu utworzenia kompaktowej serializacji do użycia, takich jak magazyn lub strumienie sieciowe oparte na gnieździe. W serializacji binarnej wszystkie elementy członkowskie, nawet elementy członkowskie, które są tylko do odczytu, są serializowane i zwiększają wydajność. 
 
-Serializacja binarna używa kodowania binarnego w celu wygenerowania compact serializacji dla zastosowań, takich jak pamięci masowej lub sieci na podstawie gniazda strumieni.
+Serializacji XML serializować pola publiczne i właściwości obiektu, lub parametry i wartości zwracane metod do strumienia XML, który jest zgodny z konkretnym dokumentem języka definicji schematu XML (XSD). Serializacja XML skutkuje silnie określonymi klasami z właściwościami publicznymi i polami, które są konwertowane na format XML. <xref:System.Xml.Serialization> zawiera klasy do serializacji i deserializacji XML. Należy zastosować atrybuty do klas i elementów członkowskich klasy, aby kontrolować sposób, w jaki <xref:System.Xml.Serialization.XmlSerializer> serializować lub deserializacji wystąpienia klasy.
 
-### <a name="xml-serialization"></a>Serializacja XML
+### <a name="making-an-object-serializable"></a>Tworzenie obiektu jako możliwego do serializacji
 
-Serializacji XML serializuje pola publiczne i właściwości obiektu, lub parametry i wartości zwracane metod do strumień XML, który odpowiada określony dokument języka (XSD) definicji schematu XML. Wyniki serializacji XML w silnie typizowane klasy z właściwości publiczne i pola, które są konwertowane na format XML. <xref:System.Xml.Serialization> zawiera klasy, które są niezbędne do serializacji i deserializacji XML.
+W przypadku serializacji binarnej lub XML potrzebne są:
 
-Stosowanie atrybutów do klas i składowych klasy, aby kontrolować sposób <xref:System.Xml.Serialization.XmlSerializer> serializuje i deserializuje wystąpienia klasy.
+* Obiekt, który ma zostać Zserializowany
+* Strumień zawierający serializowany obiekt
+* Wystąpienie <xref:System.Runtime.Serialization.Formatter?displayProperty=fullName>
 
-## <a name="basic-and-custom-serialization"></a>Serializacja podstawowych i niestandardowych
+Zastosuj atrybut <xref:System.SerializableAttribute> do typu, aby wskazać, że wystąpienia typu mogą być serializowane. Wyjątek jest zgłaszany w przypadku próby serializacji, ale typ nie ma atrybutu <xref:System.SerializableAttribute>.
 
-Serializacja można wykonać na dwa sposoby podstawowych i niestandardowych. Serializacja podstawowa używa programu .NET Framework, aby automatycznie serializacji obiektu.
+Aby zapobiec serializowaniu pola, zastosuj atrybut <xref:System.NonSerializedAttribute>. Jeśli pole o typie możliwym do serializacji zawiera wskaźnik, uchwyt lub inną strukturę danych, która jest specyficzna dla określonego środowiska, a pole nie może być w znaczący sposób odtworzone w innym środowisku, można sprawić, aby nie można było jej serializować.
 
-### <a name="basic-serialization"></a>Serializacja podstawowa
+Jeśli serializowana Klasa zawiera odwołania do obiektów innych klas, które są oznaczone <xref:System.SerializableAttribute>, te obiekty również będą serializowane.
 
-Jedynym wymaganiem podstawowe serializacji jest, że obiekt ma <xref:System.SerializableAttribute> zastosowany. <xref:System.NonSerializedAttribute> Może służyć do uniemożliwić serializowanego określonych pól.
+### <a name="basic-and-custom-serialization"></a>Serializacja podstawowa i niestandardowa
 
-Gdy używasz podstawowe serializacji, przechowywanie wersji obiektów może spowodować problemy. Można użyć niestandardowej serializacji, gdy problemy z wersjonowaniem są ważne. Serializacja podstawowa jest najprostszym sposobem wykonania serializacji, ale nie zapewnia poziom kontroli nad procesem.
+Serializacja binarna i XML może być wykonywana na dwa sposoby — podstawowa i niestandardowa.
 
-### <a name="custom-serialization"></a>Niestandardowej serializacji
+Serializacja podstawowa używa .NET Framework do automatycznego serializacji obiektu. Jedyny wymóg polega na tym, że Klasa ma zastosowany atrybut <xref:System.SerializableAttribute>. <xref:System.NonSerializedAttribute> może służyć do zachowywania serializacji określonych pól.
 
-W niestandardowej serializacji można określić dokładnie obiekty, które będą serializowane i jak to robi. Klasa musi być oznaczona <xref:System.SerializableAttribute> i zaimplementować <xref:System.Runtime.Serialization.ISerializable> interfejsu.
+W przypadku korzystania z serializacji podstawowej wersja obiektów może tworzyć problemy. Podczas rozwiązywania problemów dotyczących wersji należy użyć serializacji niestandardowej. Serializacja podstawowa jest najprostszym sposobem na wykonywanie serializacji, ale nie zapewnia większej kontroli nad procesem.
 
-Jeśli chcesz, aby obiekt mógł zostać przeprowadzona w niestandardowy sposób także, należy użyć konstruktora niestandardowego.
+W przypadku serializacji niestandardowej można określić, które obiekty będą serializowane i jak będą wykonywane. Klasa musi być oznaczona <xref:System.SerializableAttribute> i implementować interfejs <xref:System.Runtime.Serialization.ISerializable>. Jeśli chcesz, aby obiekt był deserializowany w sposób niestandardowy, użyj konstruktora niestandardowego.
 
 ## <a name="designer-serialization"></a>Serializacja projektanta
 
-Serializacja projektanta jest specjalną forma serializacji, która obejmuje rodzaj trwałość obiektów skojarzonych z narzędziami programistycznymi. Serializacja projektanta jest procesem konwertowania wykresu obiektu do pliku źródłowego, który później może służyć do odzyskania wykresu obiektu. Plik źródłowy może zawierać kod, znaczników lub nawet informacji o tabeli SQL.
+Serializacja projektanta jest specjalną formą serializacji, która obejmuje rodzaj trwałości obiektu skojarzony z narzędziami programistycznymi. Serializacja projektanta to proces przekonwertowania grafu obiektów na plik źródłowy, który można później użyć do odzyskania grafu obiektów. Plik źródłowy może zawierać kod, znacznik, a nawet informacje tabeli SQL.
 
-## <a name="BKMK_RelatedTopics"></a> Tematy pokrewne i przykłady  
-[Przewodnik: Przechowywanie obiektu w programie Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
-Pokazuje, jak serializacji może służyć do utrwalenia danych obiektu między wystąpieniami, co pozwala na przechowywanie wartości i pobierać je podczas następnego, które jest tworzone wystąpienie obiektu.
+## <a name="BKMK_RelatedTopics"></a>Tematy pokrewne i przykłady  
 
-[Instrukcje: Odczytywanie danych o obiektach z pliku XML (C#)](how-to-read-object-data-from-an-xml-file.md)  
- Pokazuje, jak odczytywanie danych o obiektach, które zostały wcześniej zapisane do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.
+[System. Text. JSON — Omówienie](../../../../standard/serialization/system-text-json-overview.md) Pokazuje, jak uzyskać bibliotekę `System.Text.Json`.
 
-[Instrukcje: Zapisywania obiektów danych do pliku XML (C#)](how-to-write-object-data-to-an-xml-file.md)  
-Przedstawia sposób zapisania obiektu z klasy do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.
+[Jak serializować i deserializować kod JSON w programie .NET](../../../../standard/serialization/system-text-json-how-to.md). Pokazuje, jak odczytywać i zapisywać dane obiektów do i z JSON przy użyciu klasy <xref:System.Text.Json.JsonSerializer>.
+
+[Przewodnik: utrwalanie obiektu w programie Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
+Pokazuje, jak Serializacja może być używana do utrwalania danych obiektu między wystąpieniami, umożliwiając przechowywanie wartości i pobieranie ich przy następnym tworzeniu wystąpienia obiektu.
+
+[Jak odczytać dane obiektu z pliku XML (C#)](how-to-read-object-data-from-an-xml-file.md)  
+Pokazuje, jak odczytywać dane obiektów, które zostały wcześniej zapisaną w pliku XML przy użyciu klasy <xref:System.Xml.Serialization.XmlSerializer>.
+
+[Jak napisać dane obiektu do pliku XML (C#)](how-to-write-object-data-to-an-xml-file.md)  
+Pokazuje, jak napisać obiekt z klasy do pliku XML przy użyciu klasy <xref:System.Xml.Serialization.XmlSerializer>.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 20e46d7ecc206abb28240075d9ec5f764ab78d01
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e6ffc649d7eb841c2d009b0ec1237975f46e2d2d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346137"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636812"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inicjatory obiektów: typy nazwane i anonimowe (Visual Basic)
 Inicjatory obiektów umożliwiają określanie właściwości dla obiektu złożonego za pomocą jednego wyrażenia. Mogą służyć do tworzenia wystąpień nazwanych typów i typów anonimowych.  
@@ -105,7 +105,7 @@ Inicjatory obiektów umożliwiają określanie właściwości dla obiektu złoż
   
  Ponieważ nazwa typu jest niedostępna, nie można zadeklarować `cust13`za pomocą klauzuli `As`. Jego typ musi być wywnioskowany. Bez używania późnego wiązania, to ogranicza użycie typów anonimowych do zmiennych lokalnych.  
   
- Typy anonimowe zapewniają krytyczną obsługę zapytań [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Aby uzyskać więcej informacji o korzystaniu z typów anonimowych w zapytaniach, zobacz [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) i [wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
+ Typy anonimowe zapewniają krytyczną obsługę zapytań LINQ. Aby uzyskać więcej informacji o korzystaniu z typów anonimowych w zapytaniach, zobacz [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) i [wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
 ### <a name="remarks-about-anonymous-types"></a>Uwagi dotyczące typów anonimowych  
   

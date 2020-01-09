@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e81d0434aa60e0c7b316b72fb78ebfe2a3782cbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57c0566f9a76715e48b20f2e6493aa1a506c64be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353513"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636864"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Funkcje Visual Basic obsługujące LINQ
-Nazwa [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] odnosi się do technologii w Visual Basic, która obsługuje składnię zapytań i inne konstrukcje języka bezpośrednio w języku. Za pomocą [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]nie trzeba uczyć się nowego języka do wykonywania zapytań względem zewnętrznego źródła danych. Możesz wykonywać zapytania dotyczące danych w relacyjnych bazach danych, sklepach XML lub obiektach przy użyciu Visual Basic. Ta integracja funkcji zapytania w języku umożliwia sprawdzanie w czasie kompilacji pod kątem błędów składni i bezpieczeństwa typów. Ta integracja zapewnia również, że znasz już większość informacji, które należy znać, aby pisać rozbudowane, różne zapytania w Visual Basic.  
+Nazwa języka (LINQ) (Language-Integrated Query) odnosi się do technologii w Visual Basic, która obsługuje składnię zapytań i inne konstrukcje języka bezpośrednio w języku. Za pomocą LINQ nie trzeba uczyć się nowego języka do wykonywania zapytań względem zewnętrznego źródła danych. Możesz wykonywać zapytania dotyczące danych w relacyjnych bazach danych, sklepach XML lub obiektach przy użyciu Visual Basic. Ta integracja funkcji zapytania w języku umożliwia sprawdzanie w czasie kompilacji pod kątem błędów składni i bezpieczeństwa typów. Ta integracja zapewnia również, że znasz już większość informacji, które należy znać, aby pisać rozbudowane, różne zapytania w Visual Basic.  
   
  W poniższych sekcjach opisano konstrukcje języka, które obsługują LINQ w wystarczająco szczegółowy sposób, aby można było rozpocząć odczytywanie dokumentacji wprowadzającej, przykładów kodu i przykładowych aplikacji. Możesz również kliknąć linki, aby znaleźć bardziej szczegółowe wyjaśnienie sposobu, w jaki funkcje języka łączą się ze sobą, aby włączyć zapytanie zintegrowane z językiem. Dobrym miejscem do rozpoczęcia jest [Przewodnik: Pisanie zapytań w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
@@ -56,7 +56,7 @@ Nazwa [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] odnosi się do tec
  Aby uzyskać więcej informacji, zobacz [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
 ## <a name="extension-methods"></a>Metody rozszerzenia  
- Metody rozszerzające umożliwiają dodawanie metod do typu danych lub interfejsu spoza definicji. Ta funkcja umożliwia, w efekcie, dodawać nowe metody do istniejącego typu bez faktycznego modyfikowania typu. Standardowe operatory zapytań to zestawy metod rozszerzających, które zapewniają [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] funkcję zapytania dla dowolnego typu, który implementuje <xref:System.Collections.Generic.IEnumerable%601>. Inne rozszerzenia <xref:System.Collections.Generic.IEnumerable%601> obejmują <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>i <xref:System.Linq.Enumerable.Intersect%2A>.  
+ Metody rozszerzające umożliwiają dodawanie metod do typu danych lub interfejsu spoza definicji. Ta funkcja umożliwia, w efekcie, dodawać nowe metody do istniejącego typu bez faktycznego modyfikowania typu. Standardowe operatory zapytań to zestawy metod rozszerzających, które udostępniają funkcje zapytań LINQ dla dowolnego typu, który implementuje <xref:System.Collections.Generic.IEnumerable%601>. Inne rozszerzenia <xref:System.Collections.Generic.IEnumerable%601> obejmują <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>i <xref:System.Linq.Enumerable.Intersect%2A>.  
   
  Następujące metody rozszerzające umożliwiają dodanie metody Print do klasy <xref:System.String>.  
   
@@ -77,7 +77,7 @@ Nazwa [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] odnosi się do tec
   
  [!code-vb[VbLINQVbFeatures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#12)]  
   
- W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]wyrażenia lambda podstawą wiele standardowych operatorów zapytań. Kompilator tworzy wyrażenia lambda do przechwytywania obliczeń, które są zdefiniowane w podstawowych metodach zapytań, takich jak `Where`, `Select`, `Order By`, `Take While`i innych.  
+ W LINQ, wyrażenia lambda podstawą wiele standardowych operatorów zapytań. Kompilator tworzy wyrażenia lambda do przechwytywania obliczeń, które są zdefiniowane w podstawowych metodach zapytań, takich jak `Where`, `Select`, `Order By`, `Take While`i innych.  
   
  Na przykład poniższy kod definiuje zapytanie, które zwraca wszystkich wyższych uczniów z listy uczniów.  
   

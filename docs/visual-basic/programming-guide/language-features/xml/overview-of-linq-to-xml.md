@@ -5,17 +5,17 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 80d94ecb7dcc196ad831be7418bfecc785015cf9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0d804a00eca1910a5415859b1ed3a18ad2f8e9d2
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346236"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636227"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Przegląd LINQ to XML w Visual Basic
 Visual Basic zapewnia obsługę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] za pomocą literałów XML i właściwości osi XML. Dzięki temu można używać znanej, wygodnej składni do pracy z danymi XML w kodzie Visual Basic. *Literały XML* umożliwiają dołączenie kodu XML bezpośrednio w kodzie. *Właściwości osi XML* umożliwiają dostęp do węzłów podrzędnych, węzłów podrzędnych i atrybutów literału XML. Aby uzyskać więcej informacji, zobacz [Omówienie literałów XML](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) i [Uzyskiwanie dostępu do kodu XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to interfejs API programowania w pamięci XML zaprojektowany specjalnie w celu skorzystania z [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Chociaż można wywołać interfejsy API [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] bezpośrednio, tylko Visual Basic umożliwiają deklarowanie literałów XML i bezpośredni dostęp do właściwości osi XML.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to interfejs API programowania w pamięci, zaprojektowany specjalnie z myślą o korzystaniu z programu Language-Integrated Query (LINQ). Mimo że można wywołać interfejsy API LINQ bezpośrednio, tylko Visual Basic umożliwiają deklarowanie literałów XML i bezpośredni dostęp do właściwości osi XML.  
   
 > [!NOTE]
 > Literały XML i właściwości osi XML nie są obsługiwane w kodzie deklaratywnym na stronie ASP.NET. Aby korzystać z funkcji Visual Basic XML, należy umieścić kod na stronie powiązanej z kodem w aplikacji ASP.NET.  
@@ -23,14 +23,14 @@ Visual Basic zapewnia obsługę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md
  [Przycisk odtwarzania](./media/overview-of-linq-to-xml/play-video-icon-example.gif) Aby zapoznać się z pokrewnymi pokazami wideo, zobacz [jak rozpocząć pracę z LINQ to XML?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml) i [jak utworzyć arkusze kalkulacyjne programu Excel przy użyciu LINQ to XML?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml).   
   
 ## <a name="creating-xml"></a>Tworzenie kodu XML  
- Istnieją dwa sposoby tworzenia drzew XML w Visual Basic. Można zadeklarować literał XML bezpośrednio w kodzie lub użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] interfejsów API do utworzenia drzewa. Oba procesy umożliwiają kod odzwierciedlający końcową strukturę drzewa XML. Na przykład poniższy kod ilustruje tworzenie elementu XML:  
+ Istnieją dwa sposoby tworzenia drzew XML w Visual Basic. Można zadeklarować literał XML bezpośrednio w kodzie lub użyć interfejsów API LINQ do utworzenia drzewa. Oba procesy umożliwiają kod odzwierciedlający końcową strukturę drzewa XML. Na przykład poniższy kod ilustruje tworzenie elementu XML:  
   
  [!code-vb[VbXmlSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
  Aby uzyskać więcej informacji, zobacz [Tworzenie kodu XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md).  
   
 ## <a name="accessing-and-navigating-xml"></a>Uzyskiwanie dostępu do pliku XML i nawigowanie po nim  
- Visual Basic udostępnia właściwości osi XML na potrzeby uzyskiwania dostępu do struktur XML i nawigowania w nich. Te właściwości umożliwiają dostęp do elementów i atrybutów XML przez określenie nazw elementów podrzędnych XML. Alternatywnie można jawnie wywołać metody [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] do nawigowania i lokalizowania elementów i atrybutów. Na przykład poniższy przykład kodu używa właściwości osi XML do odwoływania się do atrybutów i elementów podrzędnych elementu XML. W przykładzie kodu jest wykorzystywane zapytanie [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], które umożliwia pobieranie elementów podrzędnych i wyprowadzanie ich jako elementów XML, efektywnie wykonując transformację.  
+ Visual Basic udostępnia właściwości osi XML na potrzeby uzyskiwania dostępu do struktur XML i nawigowania w nich. Te właściwości umożliwiają dostęp do elementów i atrybutów XML przez określenie nazw elementów podrzędnych XML. Alternatywnie można jawnie wywołać metody LINQ do nawigowania i lokalizowania elementów i atrybutów. Na przykład poniższy przykład kodu używa właściwości osi XML do odwoływania się do atrybutów i elementów podrzędnych elementu XML. Przykładowy kod używa zapytania LINQ do pobierania elementów podrzędnych i wyprowadzania ich jako elementów XML, efektywnie wykonując transformację.  
   
  [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   

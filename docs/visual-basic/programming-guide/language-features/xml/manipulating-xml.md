@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: 2565f43c1014bf0fa9fab1618fedfd1bd6bdb7ca
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bb5aed5099d81f8c8898cd61523b90a43f27db78
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330442"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636162"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Manipulowanie XML w Visual Basic
-*Literałów XML* można użyć do ZAŁADOWANIA kodu XML ze źródła zewnętrznego, takiego jak ciąg, plik lub strumień. Następnie można użyć [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do manipulowania XML i używania [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] do wykonywania zapytań dotyczących XML.  
+*Literałów XML* można użyć do ZAŁADOWANIA kodu XML ze źródła zewnętrznego, takiego jak ciąg, plik lub strumień. Następnie można użyć [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do manipulowania XML i użycia programu Query-Integrated Language (LINQ) do wykonywania zapytań dotyczących kodu XML.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje: ładowanie kodu XML z pliku, ciągu lub strumienia](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  

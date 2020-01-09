@@ -2,12 +2,12 @@
 title: Operacje join (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: 456894dd07f512d7e694ad0056b1e861dc3012c5
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 86d85c7de16887fbe3001dc548d940d9c114e634
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423383"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635603"
 ---
 # <a name="join-operations-c"></a>Operacje join (C#)
 *Sprzężenie* dwóch źródeł danych to skojarzenie obiektów w jednym źródle danych z obiektami, które współużytkują wspólny atrybut w innym źródle danych.  
@@ -34,11 +34,11 @@ ms.locfileid: "73423383"
 - [Typy anonimowe](../../classes-and-structs/anonymous-types.md)
 - [Formułowanie połączeń i zapytań między produktami](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
 - [join, klauzula](../../../language-reference/keywords/join-clause.md)
-- [Instrukcje: dołączanie przy użyciu kluczy złożonych](../../../linq/join-by-using-composite-keys.md)
-- [Instrukcje: dołączanie zawartości z niepodobnych plików (LINQC#) ()](./how-to-join-content-from-dissimilar-files-linq.md)
-- [Instrukcje: kolejność wyników klauzuli join](../../../linq/order-the-results-of-a-join-clause.md)
-- [Instrukcje: wykonywanie niestandardowych operacji łączenia](../../../linq/perform-custom-join-operations.md)
-- [Instrukcje: wykonywanie sprzężeń zgrupowanych](../../../linq/perform-grouped-joins.md)
-- [Instrukcje: wykonywanie sprzężeń wewnętrznych](../../../linq/perform-inner-joins.md)
-- [Instrukcje: wykonanie lewych sprzężeń zewnętrznych](../../../linq/perform-left-outer-joins.md)
-- [Instrukcje: wypełnianie kolekcji obiektów z wielu źródeł (LINQ)C#()](./how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Sprzęganie za pomocą kluczy złożonych](../../../linq/join-by-using-composite-keys.md)
+- [Jak dołączyć zawartość z niepodobnych plików (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
+- [Kolejność wyników klauzuli join](../../../linq/order-the-results-of-a-join-clause.md)
+- [Wykonywanie niestandardowych operacji łączenia](../../../linq/perform-custom-join-operations.md)
+- [Wykonywanie sprzężeń grupowanych](../../../linq/perform-grouped-joins.md)
+- [Wykonywanie sprzężeń wewnętrznych](../../../linq/perform-inner-joins.md)
+- [Wykonywanie lewych sprzężeń zewnętrznych](../../../linq/perform-left-outer-joins.md)
+- [Jak wypełnić kolekcje obiektów z wielu źródeł (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 907c1f02e07c60ac38c8e09e94fc96ae2573e97c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ce9341a45b43c4af4543cf473597c273c33701fc
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455318"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636552"
 ---
 # <a name="wpf-partial-trust-security"></a>Zabezpieczenie częściowej relacji zaufania WPF
-<a name="introduction"></a>Ogólnie rzecz biorąc, aplikacje internetowe powinny być ograniczone przez bezpośredni dostęp do krytycznych zasobów systemowych, aby zapobiec złośliwym szkodom. Domyślnie języki skryptów HTML i po stronie klienta nie mogą uzyskać dostępu do krytycznych zasobów systemowych. Ponieważ aplikacje hostowane w przeglądarce Windows Presentation Foundation (WPF) mogą być uruchamiane z przeglądarki, powinny one być zgodne z podobnym zestawem ograniczeń. Aby wymusić te ograniczenia, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] opiera się zarówno na zabezpieczeniach dostępu kodu (CAS), jak i ClickOnce (zobacz [strategia zabezpieczeń WPF-platforma — zabezpieczenia platformy](wpf-security-strategy-platform-security.md)). Domyślnie aplikacje hostowane w przeglądarce żądają zestawu uprawnień strefy Internetu, niezależnie od tego, czy są uruchamiane z Internetu, lokalnego intranetu, czy komputera lokalnego. Aplikacje działające z dowolnym elementem mniejszym niż pełny zestaw uprawnień są uznawane za działające z częściowym zaufaniem.  
+<a name="introduction"></a>Ogólnie rzecz biorąc, aplikacje internetowe powinny być ograniczone przez bezpośredni dostęp do krytycznych zasobów systemowych, aby zapobiec złośliwym szkodom. Domyślnie języki skryptów HTML i po stronie klienta nie mogą uzyskać dostępu do krytycznych zasobów systemowych. Ponieważ aplikacje hostowane w przeglądarce Windows Presentation Foundation (WPF) mogą być uruchamiane z przeglądarki, powinny one być zgodne z podobnym zestawem ograniczeń. Aby wymusić te ograniczenia, WPF korzysta z zabezpieczeń dostępu kodu (CAS) i ClickOnce (zobacz [strategia zabezpieczeń WPF-platforma Security](wpf-security-strategy-platform-security.md)). Domyślnie aplikacje hostowane w przeglądarce żądają zestawu uprawnień strefy Internetu, niezależnie od tego, czy są uruchamiane z Internetu, lokalnego intranetu, czy komputera lokalnego. Aplikacje działające z dowolnym elementem mniejszym niż pełny zestaw uprawnień są uznawane za działające z częściowym zaufaniem.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] zapewnia szeroką gamę pomocy technicznej, aby zapewnić, że możliwie największej funkcjonalności można bezpiecznie użyć w częściowej relacji zaufania, a wraz z urzędem certyfikacji zapewnia dodatkową pomoc techniczną w zakresie programowania częściowego zaufania.  
+ WPF zapewnia szeroką gamę pomocy technicznej, aby zapewnić, że możliwie największej funkcjonalności można bezpiecznie używać w częściowej relacji zaufania, a także w przypadku urzędów certyfikacji zapewnia dodatkową pomoc techniczną w zakresie programowania częściowego zaufania.  
   
  Ten temat zawiera następujące sekcje:  
   
@@ -43,14 +43,14 @@ ms.locfileid: "73455318"
   
 |Obszar funkcji|Funkcja|  
 |------------------|-------------|  
-|Ogólne|Okno przeglądarki<br /><br /> Dostęp do lokacji pochodzenia<br /><br /> IsolatedStorage (limit 512 KB)<br /><br /> Dostawcy UIAutomation<br /><br /> Przegląd<br /><br /> Edytory Input Method Editor (IME)<br /><br /> Pióro i atrament<br /><br /> Symulowane przeciąganie/upuszczanie przy użyciu funkcji przechwytywania i przenoszenia myszy<br /><br /> OpenFileDialog<br /><br /> Deserializacja XAML (za pośrednictwem XamlReader. Load)|  
-|Integracja z siecią Web|Okno dialogowe pobierania przeglądarki<br /><br /> Nawigacja zainicjowana przez użytkownika najwyższego poziomu<br /><br /> mailto: linki<br /><br /> Parametry Uniform Resource Identifier<br /><br /> HTTPWebRequest<br /><br /> Zawartość WPF hostowana w elemencie IFRAME<br /><br /> Hosting stron HTML na tej samej stronie przy użyciu ramki<br /><br /> Hosting tych samych stron HTML witryny przy użyciu przeglądarki WebBrowser<br /><br /> Usługi sieci Web (ASMX)<br /><br /> Usługi sieci Web (przy użyciu Windows Communication Foundation)<br /><br /> Wykonywanie skryptów<br /><br /> Document Object Model|  
-|Wizualizacji|2D i 3W<br /><br /> Animacja<br /><br /> Nośnik (lokacja źródłowa i międzydomenowa)<br /><br /> Przetwarzanie obrazów/audio/wideo|  
-|Odczytu|FlowDocuments<br /><br /> Dokumenty XPS<br /><br /> Osadzone & czcionki systemowe<br /><br /> CFF & czcionki TrueType|  
+|Ogólne|Okno przeglądarki<br /><br /> Dostęp do lokacji pochodzenia<br /><br /> IsolatedStorage (limit 512 KB)<br /><br /> Dostawcy UIAutomation<br /><br /> Polecenia<br /><br /> Edytory Input Method Editor (IME)<br /><br /> Pióro i atrament<br /><br /> Symulowane przeciąganie/upuszczanie przy użyciu funkcji przechwytywania i przenoszenia myszy<br /><br /> OpenFileDialog<br /><br /> Deserializacja XAML (za pośrednictwem XamlReader. Load)|  
+|Integracja z siecią Web|Okno dialogowe pobierania przeglądarki<br /><br /> Nawigacja zainicjowana przez użytkownika najwyższego poziomu<br /><br /> mailto: linki<br /><br /> Parametry Uniform Resource Identifier<br /><br /> HTTPWebRequest<br /><br /> Zawartość WPF hostowana w elemencie IFRAME<br /><br /> Hosting stron HTML na tej samej stronie przy użyciu ramki<br /><br /> Hosting tych samych stron HTML witryny przy użyciu przeglądarki WebBrowser<br /><br /> Usługi sieci Web (ASMX)<br /><br /> Usługi sieci Web (przy użyciu Windows Communication Foundation)<br /><br /> Obsługa skryptów<br /><br /> Document Object Model|  
+|Wizualizacje|2D i 3W<br /><br /> Animacja<br /><br /> Nośnik (lokacja źródłowa i międzydomenowa)<br /><br /> Przetwarzanie obrazów/audio/wideo|  
+|Czytanie|FlowDocuments<br /><br /> Dokumenty XPS<br /><br /> Osadzone & czcionki systemowe<br /><br /> CFF & czcionki TrueType|  
 |Edytowanie|Sprawdzanie pisowni<br /><br /> RichTextBox<br /><br /> Obsługa przezroczystego tekstu i schowka<br /><br /> Wklej zainicjowany przez użytkownika<br /><br /> Kopiowanie wybranej zawartości|  
 |Formanty|Formanty ogólne|  
   
- Ta tabela obejmuje funkcje [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] na wysokim poziomie. Aby uzyskać bardziej szczegółowe informacje, Windows SDK dokumentuje uprawnienia, które są wymagane przez każdego członka w programie [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Ponadto poniższe funkcje zawierają bardziej szczegółowe informacje dotyczące częściowego wykonywania zaufania, w tym zagadnienia specjalne.  
+ Ta tabela obejmuje funkcje WPF na wysokim poziomie. Aby uzyskać bardziej szczegółowe informacje, Windows SDK dokumentuje uprawnienia, które są wymagane przez każdy element członkowski w WPF. Ponadto poniższe funkcje zawierają bardziej szczegółowe informacje dotyczące częściowego wykonywania zaufania, w tym zagadnienia specjalne.  
   
 - [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (zobacz [XAML — Omówienie (WPF)](../../desktop-wpf/fundamentals/xaml.md)).  
   
@@ -66,14 +66,14 @@ ms.locfileid: "73455318"
   
 - Otwórz plik — okno dialogowe (zobacz <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
   
- W poniższej tabeli opisano funkcje [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], które nie są bezpieczne do uruchomienia w ramach limitów zestawu uprawnień strefy internetowej.  
+ W poniższej tabeli opisano funkcje WPF, które nie są bezpieczne do uruchomienia w ramach limitów zestawu uprawnień strefy internetowej.  
   
  Tabela 2: funkcje WPF, które nie są bezpieczne w częściowej relacji zaufania  
   
 |Obszar funkcji|Funkcja|  
 |------------------|-------------|  
 |Ogólne|Okno (zdefiniowane przez aplikację okna i okna dialogowe)<br /><br /> SaveFileDialog<br /><br /> System plików<br /><br /> Dostęp do rejestru<br /><br /> Przeciągnij i opuść<br /><br /> Serializacja XAML (za pośrednictwem XamlWriter. Save)<br /><br /> UIAutomation klienci<br /><br /> Dostęp do okna źródłowego (HwndHost)<br /><br /> Pełna pomoc techniczna mowy<br /><br /> Współdziałanie Windows Forms|  
-|Wizualizacji|Efekty mapy bitowej<br /><br /> Kodowanie obrazu|  
+|Wizualizacje|Efekty mapy bitowej<br /><br /> Kodowanie obrazu|  
 |Edytowanie|Schowek formatu tekstu sformatowanego<br /><br /> Pełna obsługa XAML|  
   
 <a name="Partial_Trust_Programming"></a>   
@@ -82,14 +82,14 @@ ms.locfileid: "73455318"
   
 |Strefa zabezpieczeń|Zachowanie|Pobieranie pełnego zaufania|  
 |-------------------|--------------|------------------------|  
-|Komputer lokalny|Automatyczne pełne zaufanie|Nie jest wymagana żadna akcja.|  
+|Komputer lokalny|Automatyczne pełne zaufanie|Nie trzeba wykonywać żadnych czynności.|  
 |Intranet i Zaufane witryny|Monituj o pełne zaufanie|Podpisz element XBAP przy użyciu certyfikatu, aby użytkownik widział źródło w monicie.|  
 |Internet|Niepowodzenie z "zaufaniem nieudzielonym"|Podpisz element XBAP przy użyciu certyfikatu.|  
   
 > [!NOTE]
 > Zachowanie opisane w poprzedniej tabeli służy do pełnego zaufania XBAP, które nie są zgodne z zaufanym modelem wdrażania ClickOnce.  
   
- Ogólnie rzecz biorąc, kod, który może przekroczyć dozwolone uprawnienia, prawdopodobnie będzie typowym kodem, który jest współużytkowany przez aplikacje autonomiczne i hostowane w przeglądarce. Urzędy certyfikacji i [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] oferują kilka technik zarządzania tym scenariuszem.  
+ Ogólnie rzecz biorąc, kod, który może przekroczyć dozwolone uprawnienia, prawdopodobnie będzie typowym kodem, który jest współużytkowany przez aplikacje autonomiczne i hostowane w przeglądarce. Urzędy certyfikacji i WPF oferują kilka technik związanych z zarządzaniem tym scenariuszem.  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
 ### <a name="detecting-permissions-using-cas"></a>Wykrywanie uprawnień przy użyciu urzędów certyfikacji  
@@ -133,20 +133,20 @@ ms.locfileid: "73455318"
 |systemem DNS,|Dostęp do serwerów DNS|Tak|Nie|  
 |Zmienne środowiskowe|Odczyt|Tak|Nie|  
 |Okna dialogowe plików|Otwarcie|Tak|Tak|  
-|Okna dialogowe plików|Nieograniczone|Tak|Nie|  
+|Okna dialogowe plików|Bez ograniczeń|Tak|Nie|  
 |Izolowany magazyn|Izolacja zestawu przez użytkownika|Tak|Nie|  
 |Izolowany magazyn|Nieznana izolacja|Tak|Tak|  
 |Izolowany magazyn|Nieograniczony limit przydziału użytkowników|Tak|Nie|  
-|Multimedialny|Bezpieczne audio, wideo i obrazy|Tak|Tak|  
+|Nośnik|Bezpieczne audio, wideo i obrazy|Tak|Tak|  
 |Drukowanie|Drukowanie domyślne|Tak|Nie|  
 |Drukowanie|Bezpieczne drukowanie|Tak|Tak|  
 |Odbicie|Wysyłać|Tak|Nie|  
 |Zabezpieczenia|Wykonywanie kodu zarządzanego|Tak|Tak|  
 |Zabezpieczenia|Potwierdzenie przyznanych uprawnień|Tak|Nie|  
-|Interfejs użytkownika|Nieograniczone|Tak|Nie|  
+|Interfejs użytkownika|Bez ograniczeń|Tak|Nie|  
 |Interfejs użytkownika|Bezpieczne okna najwyższego poziomu|Tak|Tak|  
 |Interfejs użytkownika|Własny schowek|Tak|Tak|  
-|Przeglądarka sieci Web|Bezpieczne nawigowanie po ramce do kodu HTML|Tak|Tak|  
+|Przeglądarki sieci Web|Bezpieczne nawigowanie po ramce do kodu HTML|Tak|Tak|  
   
 > [!NOTE]
 > Operacje wycinania i wklejania są dozwolone tylko w częściowej relacji zaufania po zainicjowaniu użytkownika.  
@@ -165,6 +165,6 @@ ms.locfileid: "73455318"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Security](security-wpf.md)
+- [Zabezpieczenia](security-wpf.md)
 - [Strategia zabezpieczeń WPF — zabezpieczenia platformy](wpf-security-strategy-platform-security.md)
 - [Strategia zabezpieczeń WPF — projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: a6e45e31e2678ce05dc0f637ed1121b54d8d6cbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 76f9b428bc5f613296e24d893f49f124bb13c089
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352841"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636045"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Język Visual Basic — Wskazówki
 
@@ -35,7 +35,7 @@ Instruktaże zawierają instrukcje krok po kroku dla typowych scenariuszy, co sp
  Opisuje sposób deklarowania klasy i jej pól, właściwości, metod i zdarzeń.
 
 - [Pisanie zapytań w Visual Basic](programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- Demonstruje, w jaki sposób można użyć Visual Basic funkcji języka do pisania wyrażeń zapytania [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].
+ Pokazuje, w jaki sposób można użyć funkcji języka Visual Basic, aby napisać wyrażenia zapytania dotyczące języka LINQ.
 
 - [Implementowanie interfejsu IEnumerable (Of T) w Visual Basic](programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
  Demonstruje sposób tworzenia klasy implementującej interfejs `IEnumerable(Of String)` i klasy implementującej interfejs `IEnumerator(Of String)` do odczytywania pliku tekstowego po jednym wierszu.

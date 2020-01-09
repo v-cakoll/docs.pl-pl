@@ -2,12 +2,12 @@
 title: Osie LINQ to XML — przegląd
 ms.date: 07/20/2015
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
-ms.openlocfilehash: 47e95fcca251212475c925a24d382ba2dceedd62
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0cf3c20266d0ca9d861eec963afda8f2e71a55a3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352038"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636487"
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>Przegląd osi LINQ to XML (Visual Basic)
 Po utworzeniu drzewa XML lub załadowaniu dokumentu XML do drzewa XML można wykonać zapytania do niego, aby znaleźć elementy i atrybuty i pobrać ich wartości. Kolekcje są pobierane za pomocą *metod osi*, nazywanych również *osiami*. Niektóre osie są metodami klas <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XDocument>, które zwracają <xref:System.Collections.Generic.IEnumerable%601> kolekcje. Niektóre osie są metodami rozszerzającymi w klasie <xref:System.Xml.Linq.Extensions>. Osie zaimplementowane jako metody rozszerzające działają na kolekcjach i zwracają kolekcje.  
@@ -16,7 +16,7 @@ Po utworzeniu drzewa XML lub załadowaniu dokumentu XML do drzewa XML można wyk
   
  Oprócz metod osi, które zwracają kolekcje, istnieją dwie metody, które są często używane w kwerendach [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Metoda <xref:System.Xml.Linq.XContainer.Element%2A> zwraca pojedynczy <xref:System.Xml.Linq.XElement>. Metoda <xref:System.Xml.Linq.XElement.Attribute%2A> zwraca pojedynczy <xref:System.Xml.Linq.XAttribute>.  
   
- W wielu celach [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania zapewniają najbardziej wydajny sposób badania drzewa, wyodrębniania danych z niego i przekształcania. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania działają na obiektach implementujących <xref:System.Collections.Generic.IEnumerable%601>, a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] osi zwracają <xref:System.Collections.Generic.IEnumerable%601> kolekcji <xref:System.Xml.Linq.XElement> i <xref:System.Collections.Generic.IEnumerable%601> kolekcji <xref:System.Xml.Linq.XAttribute>. Te kolekcje są potrzebne do wykonywania zapytań.  
+ W wielu celach zapytania LINQ zapewniają najbardziej wydajny sposób badania drzewa, wyodrębniania danych z niego i przekształcania. Zapytania LINQ działają na obiektach, które implementują <xref:System.Collections.Generic.IEnumerable%601>, a osie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zwracają <xref:System.Collections.Generic.IEnumerable%601> kolekcji <xref:System.Xml.Linq.XElement> i <xref:System.Collections.Generic.IEnumerable%601> kolekcje <xref:System.Xml.Linq.XAttribute>. Te kolekcje są potrzebne do wykonywania zapytań.  
   
  Oprócz metod osi, które pobierają kolekcje elementów i atrybutów, istnieją metody osi, które umożliwiają iteracyjne przechodzenie między drzewa. Na przykład zamiast zajmowania się elementami i atrybutami można współpracować z węzłami drzewa. Węzły to bardziej szczegółowy poziom szczegółowości niż elementy i atrybuty. Podczas pracy z węzłami można analizować Komentarze XML, węzły tekstowe, instrukcje przetwarzania i nie tylko. Ta funkcja jest ważna, na przykład do osoby, która piszą Edytor tekstów i chce zapisywać dokumenty jako XML. Jednakże większość programistów XML dotyczy głównie elementów, atrybutów i ich wartości.  
   

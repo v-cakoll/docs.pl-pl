@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3bc31391d30b0724a480152aa7f1d0dc93380b8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740676"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636409"
 ---
 # <a name="wpf-windows-overview"></a>Przegląd Okna WPF
-Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundation (WPF) za pomocą systemu Windows. Głównym celem okna jest hostowanie zawartości, która wizualizuje dane i umożliwia użytkownikom współdziałanie z danymi. Autonomiczne aplikacje [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zapewniają własne okna przy użyciu klasy <xref:System.Windows.Window>. Ten temat zawiera wprowadzenie <xref:System.Windows.Window> przed rozpoczęciem omawiania podstaw tworzenia i zarządzania oknami w aplikacjach autonomicznych.  
+Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundation (WPF) za pomocą systemu Windows. Głównym celem okna jest hostowanie zawartości, która wizualizuje dane i umożliwia użytkownikom współdziałanie z danymi. Autonomiczne aplikacje WPF zapewniają własne okna przy użyciu klasy <xref:System.Windows.Window>. Ten temat zawiera wprowadzenie <xref:System.Windows.Window> przed rozpoczęciem omawiania podstaw tworzenia i zarządzania oknami w aplikacjach autonomicznych.  
   
 > [!NOTE]
-> Obsługiwane przez przeglądarkę [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje, w tym aplikacje przeglądarki XAML (XBAP) i luźne strony [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], nie zapewniają własnych okien. Zamiast tego są one hostowane w systemie Windows udostępnianym przez program Windows Internet Explorer. Zobacz [Omówienie aplikacji przeglądarki XAML w języku WPF](wpf-xaml-browser-applications-overview.md).  
+> Hostowane w przeglądarce aplikacje WPF, w tym aplikacje przeglądarki XAML (XBAP) i luźno [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] strony, nie zapewniają własnych okien. Zamiast tego są one hostowane w systemie Windows udostępnianym przez program Windows Internet Explorer. Zobacz [Omówienie aplikacji przeglądarki XAML w języku WPF](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Klasa okna  
@@ -49,7 +49,7 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
   
  Okno jest podzielone na dwa obszary: obszar niebędący klientem i obszar klienta.  
   
- *Obszar niekliencki* okna jest implementowany przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] i obejmuje części okna, które są wspólne dla większości systemu Windows, w tym następujące:  
+ *Obszar niebędący klientem* okna jest implementowany przez WPF i zawiera części okna, które są wspólne dla większości systemu Windows, w tym:  
   
 - Obramowanie.  
   
@@ -65,7 +65,7 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
   
  *Obszar klienta* okna to obszar w obszarze nieklienckim okna, który jest używany przez deweloperów do dodawania zawartości specyficznej dla aplikacji, takiej jak paski menu, paski narzędzi i formanty.  
   
- W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]okno jest hermetyzowane przez klasę <xref:System.Windows.Window>, za pomocą której można wykonać następujące czynności:  
+ W WPF, okno jest hermetyzowane przez klasę <xref:System.Windows.Window>, która służy do wykonywania następujących czynności:  
   
 - Wyświetl okno.  
   
@@ -77,7 +77,7 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>Implementowanie okna  
- Implementacja typowego okna składa się zarówno z wyglądu, jak i zachowania, w którym *wygląd* okna jest przeszukiwany użytkownikom i *zachowanie* definiuje sposób, w jaki okno działa jak użytkownicy. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]można zaimplementować wygląd i zachowanie okna przy użyciu kodu lub [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników.  
+ Implementacja typowego okna składa się zarówno z wyglądu, jak i zachowania, w którym *wygląd* okna jest przeszukiwany użytkownikom i *zachowanie* definiuje sposób, w jaki okno działa jak użytkownicy. W WPF można zaimplementować wygląd i zachowanie okna przy użyciu kodu lub [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników.  
   
  Ogólnie rzecz biorąc, wygląd okna jest implementowany przy użyciu znaczników [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], a jego zachowanie jest implementowane za pomocą kodu, jak pokazano w poniższym przykładzie.  
   
@@ -90,9 +90,9 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
   
 - W znaczniku element `Window` musi zawierać atrybut `x:Class`. Po skompilowaniu aplikacji istnienie `x:Class` w pliku znaczników powoduje, że program Microsoft Build Engine (MSBuild) tworzy klasę `partial`, która pochodzi od <xref:System.Windows.Window> i ma nazwę określoną przez atrybut `x:Class`. Wymaga to dodania deklaracji przestrzeni nazw XML dla schematu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). Wygenerowana Klasa `partial` implementuje metodę `InitializeComponent`, która jest wywoływana, aby zarejestrować zdarzenia i ustawić właściwości zaimplementowane w znaczniku.  
   
-- W kodzie, Klasa musi być klasą `partial` o tej samej nazwie, która jest określona przez atrybut `x:Class` w znaczniku i musi pochodzić od <xref:System.Windows.Window>. Pozwala to skojarzyć plik związany z kodem z klasą `partial`, która jest generowana dla pliku znaczników podczas kompilowania aplikacji (zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)).  
+- W kodzie, Klasa musi być klasą `partial` o tej samej nazwie, która jest określona przez atrybut `x:Class` w znaczniku i musi pochodzić od <xref:System.Windows.Window>. Pozwala to skojarzyć plik związany z kodem z klasą `partial` generowaną dla pliku znaczników podczas kompilowania aplikacji (zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)).  
   
-- W kodzie, Klasa <xref:System.Windows.Window> musi implementować konstruktora, który wywołuje metodę `InitializeComponent`. `InitializeComponent` jest implementowana przez wygenerowaną przez plik znaczników `partial` klasę, aby zarejestrować zdarzenia i ustawić właściwości zdefiniowane w znaczniku.  
+- W kodzie, Klasa <xref:System.Windows.Window> musi implementować konstruktora, który wywołuje metodę `InitializeComponent`. `InitializeComponent` jest implementowana przez wygenerowaną klasę `partial` pliku znaczników w celu rejestrowania zdarzeń i ustawiania właściwości, które są zdefiniowane w znaczniku.  
   
 > [!NOTE]
 > Po dodaniu nowego <xref:System.Windows.Window> do projektu przy użyciu programu Visual Studio, <xref:System.Windows.Window> jest implementowane przy użyciu znaczników i kodu, i zawiera konfigurację niezbędną do utworzenia skojarzenia między plikami znaczników i kodu, zgodnie z opisem w tym miejscu.  
@@ -124,7 +124,7 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
 </Project>  
 ```  
   
- Aby uzyskać informacje na temat tworzenia aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md).  
+ Aby uzyskać informacje na temat tworzenia aplikacji WPF, zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md).  
   
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Okres istnienia okna  
@@ -325,13 +325,13 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
   
  Jeśli chcesz, aby szerokość i wysokość okna miały rozmiar, który pasuje do rozmiaru zawartości okna, możesz użyć właściwości <xref:System.Windows.Window.SizeToContent%2A>, która ma następujące wartości:  
   
-- <xref:System.Windows.SizeToContent.Manual>., Brak efektu (wartość domyślna).  
+- <xref:System.Windows.SizeToContent.Manual>. Brak efektu (wartość domyślna).  
   
-- <xref:System.Windows.SizeToContent.Width>., Dopasuj do szerokości zawartości, która ma taki sam efekt jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinWidth%2A>, jak i <xref:System.Windows.FrameworkElement.MaxWidth%2A> do szerokości zawartości.  
+- <xref:System.Windows.SizeToContent.Width>. Dopasuj do szerokości zawartości, która ma taki sam efekt jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinWidth%2A>, jak i <xref:System.Windows.FrameworkElement.MaxWidth%2A> do szerokości zawartości.  
   
-- <xref:System.Windows.SizeToContent.Height>., Dopasuj do wysokości zawartości, która ma taki sam efekt jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A>, jak i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości.  
+- <xref:System.Windows.SizeToContent.Height>. Dopasuj do wysokości zawartości, która ma taki sam efekt jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A>, jak i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości.  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight>., Dopasuj do szerokości i wysokości zawartości, która ma taki sam skutek jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A>, jak i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości, i Ustawianie zarówno <xref:System.Windows.FrameworkElement.MinWidth%2A>, jak i <xref:System.Windows.FrameworkElement.MaxWidth%2A> do szerokości zawartości.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>. Dopasuj do szerokości i wysokości zawartości, która ma taki sam skutek jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A>, jak i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości, i Ustawianie zarówno <xref:System.Windows.FrameworkElement.MinWidth%2A>, jak i <xref:System.Windows.FrameworkElement.MaxWidth%2A> do szerokości zawartości.  
   
  W poniższym przykładzie pokazano okno, które automatycznie dopasowuje rozmiar do jego zawartości, zarówno w pionie, jak i w poziomie.  
   
@@ -401,7 +401,7 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
 
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>Tryb zmiany rozmiaru  
- W zależności od właściwości <xref:System.Windows.Window.WindowStyle%2A> można kontrolować sposób, w jaki użytkownicy mogą zmieniać rozmiar okna. Wybór stylu okna ma wpływ na to, czy użytkownik może zmienić rozmiar okna, przeciągając jego obramowanie przy użyciu myszy, czy przyciski **Minimalizuj**, **Maksymalizuj**i **Zmień rozmiar** pojawiają się w obszarze nieklienckim i, jeśli są wyświetlane, niezależnie od tego, czy są dostępny.  
+ W zależności od właściwości <xref:System.Windows.Window.WindowStyle%2A> można kontrolować sposób, w jaki użytkownicy mogą zmieniać rozmiar okna. Wybór stylu okna ma wpływ na to, czy użytkownik może zmienić rozmiar okna, przeciągając jego obramowanie przy użyciu myszy, czy przyciski **Minimalizuj**, **Maksymalizuj**i **Zmień rozmiar** pojawiają się w obszarze nieklienckim i, jeśli są wyświetlane, niezależnie od tego, czy są włączone.  
   
  Można skonfigurować sposób zmiany rozmiaru okna przez ustawienie jego właściwości <xref:System.Windows.Window.ResizeMode%2A>, która może być jedną z następujących <xref:System.Windows.ResizeMode> wartości wyliczenia:  
   

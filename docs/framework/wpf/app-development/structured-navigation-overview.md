@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 09c3c57f3ac1009416a5c67b37c035fe30cd5b5e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5e8c27d017ed4bf8a7dcc2dda18877c9ed8dba69
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425326"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636344"
 ---
 # <a name="structured-navigation-overview"></a>Przegląd Strukturyzowana nawigacja
 
@@ -135,7 +135,7 @@ Nie jest wymagane przekazywanie parametrów do wywoływanej strony. Zamiast tego
 
   - Pobierz i Użyj parametrów przechowywanych w <xref:System.Windows.Application.Properties%2A>.
 
-Mimo że zobaczysz się wkrótce, będziesz potrzebować użyć kodu do utworzenia wystąpienia i przejścia do wywoływanej strony, aby zebrać dane zwrócone przez wywoływaną stronę. Z tego powodu <xref:System.Windows.Navigation.PageFunction%601> należy zachować aktywności; w przeciwnym razie przy następnym przejściu do <xref:System.Windows.Navigation.PageFunction%601>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tworzy wystąpienie <xref:System.Windows.Navigation.PageFunction%601> przy użyciu konstruktora bez parametrów.
+Mimo że zobaczysz się wkrótce, będziesz potrzebować użyć kodu do utworzenia wystąpienia i przejścia do wywoływanej strony, aby zebrać dane zwrócone przez wywoływaną stronę. Z tego powodu <xref:System.Windows.Navigation.PageFunction%601> należy zachować aktywności; w przeciwnym razie przy następnym przejściu do <xref:System.Windows.Navigation.PageFunction%601>, WPF tworzy wystąpienie <xref:System.Windows.Navigation.PageFunction%601> przy użyciu konstruktora bez parametrów.
 
 Zanim wywoływana strona będzie mogła zwracać, musi zwrócić dane, które mogą być pobierane przez stronę wywołującą.
 

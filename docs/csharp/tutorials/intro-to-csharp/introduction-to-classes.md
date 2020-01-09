@@ -3,12 +3,12 @@ title: Klasy i obiekty — wprowadzenie do C# samouczka
 description: Utwórz pierwszy C# program i Eksploruj koncepcje zorientowane obiektowo
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: e4cf7912de69946289c0594944b8ac3a8c252ac2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 06d1a30abc0d031badcba4ec60f7deb3c670a3ae
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736832"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634953"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Eksploruj programowanie zorientowane obiektowo przy użyciu klas i obiektów
 
@@ -16,7 +16,7 @@ Ten samouczek oczekuje, że masz maszynę, której możesz użyć do programowan
 
 ## <a name="create-your-application"></a>Tworzenie aplikacji
 
-Za pomocą okna terminalu Utwórz katalog o nazwie *Classes*. W tym miejscu utworzysz aplikację. Przejdź do tego katalogu i wpisz `dotnet new console` w oknie konsoli. To polecenie tworzy aplikację. Otwórz *program.cs*. Powinien wyglądać następująco:
+Za pomocą okna terminalu Utwórz katalog o nazwie *Classes*. W tym miejscu utworzysz aplikację. Przejdź do tego katalogu i wpisz `dotnet new console` w oknie konsoli. To polecenie tworzy aplikację. Otwórz *program.cs*. Jego powinien wyglądać następująco:
 
 ```csharp
 using System;
@@ -73,7 +73,7 @@ namespace classes
 
 Przed rozpoczęciem przejdźmy do tego, co zostało skompilowane.  Deklaracja `namespace` zapewnia sposób logicznego organizowania kodu. Ten samouczek jest stosunkowo mały, więc umieścisz cały kod w jednej przestrzeni nazw. 
 
-`public class BankAccount` definiuje klasę lub typ, który tworzysz. Wszystko wewnątrz `{` i `}`, które następuje po deklaracji klasy definiuje zachowanie klasy. Istnieje pięć ***członków*** klasy `BankAccount`. Pierwsze trzy są ***właściwościami***. Właściwości są elementami danych i mogą mieć kod, który wymusza walidację lub inne reguły. Ostatnie dwa są ***metodami***. Metody to bloki kodu, które wykonują pojedynczą funkcję. Odczytywanie nazw każdego z członków powinno zapewnić wystarczającą ilość informacji dla Ciebie lub innego dewelopera, aby zrozumieć, co robi Klasa.
+`public class BankAccount` definiuje klasę lub typ, który tworzysz. Wszystko wewnątrz `{` i `}`, które następuje po deklaracji klasy, definiuje stan i zachowanie klasy. Istnieje pięć ***członków*** klasy `BankAccount`. Pierwsze trzy są ***właściwościami***. Właściwości są elementami danych i mogą mieć kod, który wymusza walidację lub inne reguły. Ostatnie dwa są ***metodami***. Metody to bloki kodu, które wykonują pojedynczą funkcję. Odczytywanie nazw każdego z członków powinno zapewnić wystarczającą ilość informacji dla Ciebie lub innego dewelopera, aby zrozumieć, co robi Klasa.
 
 ## <a name="open-a-new-account"></a>Otwórz nowe konto
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-Konstruktory są wywoływane podczas tworzenia obiektu przy użyciu [`new`](../../language-reference/operators/new-operator.md). Zastąp wiersz `Console.WriteLine("Hello World!");` w *program.cs* następującym wierszem (zastąp `<name>` nazwą):
+Konstruktory są wywoływane podczas tworzenia obiektu przy użyciu [`new`](../../language-reference/operators/new-operator.md). Zastąp wiersz `Console.WriteLine("Hello World!");` w *program.cs* następującym kodem (zastąp `<name>` nazwą):
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -119,7 +119,7 @@ Wpisz `dotnet run`, aby wyświetlić wyniki.
 
 Twoja Klasa konta bankowego musi akceptować depozyty i wycofywania, aby działały prawidłowo. Zaimplementujmy depozyty i wycofania, tworząc arkusz każdej transakcji dla konta. Ma kilka korzyści w porównaniu do zwykłego aktualizowania salda każdej transakcji. Historia może służyć do inspekcji wszystkich transakcji i zarządzania bilansami dziennymi. Dzięki wykorzystaniu salda z historii wszystkich transakcji, gdy jest to potrzebne, wszelkie błędy w pojedynczej transakcji, które są stałe, zostaną prawidłowo odzwierciedlone w saldzie następnego obliczenia.
 
-Zacznijmy od utworzenia nowego typu do reprezentowania transakcji. Jest to prosty typ, który nie ma żadnych obowiązków. Potrzebuje on kilku właściwości. Utwórz nowy plik o nazwie *Transaction.cs*. Dodaj do niego następujący kod:
+Zacznijmy od utworzenia nowego typu do reprezentowania transakcji. Jest to prosty typ, który nie ma żadnych obowiązków. Potrzebuje on kilku właściwości. Utwórz nowy plik o nazwie *Transaction.cs*. Dodaj do niej następujący kod:
 
 [!code-csharp[Transaction](~/samples/csharp/classes-quickstart/Transaction.cs)]
 

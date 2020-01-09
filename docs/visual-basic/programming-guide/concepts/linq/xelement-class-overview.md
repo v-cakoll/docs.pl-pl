@@ -2,12 +2,12 @@
 title: XElement, klasa — przegląd
 ms.date: 07/20/2015
 ms.assetid: 52331fcd-6023-4d19-b423-7b24f2d86ded
-ms.openlocfilehash: ff751a14abf9a9cb5d64e44e601c5d0ca6218c7d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2e5a1e161345df39ff5c006f751fb293cad60510
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349320"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636669"
 ---
 # <a name="xelement-class-overview-visual-basic"></a>Przegląd klasy XElement (Visual Basic)
 Klasa <xref:System.Xml.Linq.XElement> jest jedną z podstawowych klas w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Reprezentuje element XML. Możesz użyć tej klasy do tworzenia elementów; Zmień zawartość elementu; Dodawanie, zmienianie lub usuwanie elementów podrzędnych; Dodaj atrybuty do elementu; lub serializować zawartości elementu w postaci tekstowej. Możesz również współpracować z innymi klasami w <xref:System.Xml?displayProperty=nameWithType>, takich jak <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>i <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -44,7 +44,7 @@ Dim contacts As XElement = _
     </Contacts>  
 ```  
   
- Inna bardzo często stosowana technika tworzenia drzewa XML obejmuje użycie wyników zapytania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], aby wypełnić drzewo XML, jak pokazano w następującym przykładzie:  
+ Inna bardzo często stosowana technika tworzenia drzewa XML obejmuje użycie wyników zapytania LINQ do wypełnienia drzewa XML, jak pokazano w następującym przykładzie:  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -84,12 +84,12 @@ Console.WriteLine(xmlTree)
  Aby uzyskać więcej informacji, zobacz [Serializowanie drzew XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md).  
   
 ### <a name="retrieving-xml-data-via-axis-methods"></a>Pobieranie danych XML za pomocą metod osi  
- Możesz użyć metod osi do pobierania atrybutów, elementów podrzędnych, elementów podrzędnych i elementów nadrzędnych. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania działają na podstawie metod osi i zapewniają kilka elastycznych i wydajnych sposobów nawigowania i przetwarzania drzewa XML.  
+ Możesz użyć metod osi do pobierania atrybutów, elementów podrzędnych, elementów podrzędnych i elementów nadrzędnych. Zapytania LINQ działają na podstawie metod osi i zapewniają kilka elastycznych i wydajnych sposobów nawigowania i przetwarzania drzewa XML.  
   
  Aby uzyskać więcej informacji, zobacz [LINQ to XML osi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md).  
   
 ### <a name="querying-xml-trees"></a>Tworzenie zapytań dotyczących drzew XML  
- Można pisać [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytań, które wyodrębniają dane z drzewa XML.  
+ Można napisać zapytania LINQ wyodrębniające dane z drzewa XML.  
   
  Aby uzyskać więcej informacji, zobacz temat Tworzenie [zapytań dotyczących drzew XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md).  
   

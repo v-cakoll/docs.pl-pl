@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: af7bf487ff4ed250025b946f0948c269fcc5bf09
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418560"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635798"
 ---
 # <a name="c-features-that-support-linq"></a>Funkcje C# obsługujące LINQ
 
-W poniższej sekcji wprowadzono nowe konstrukcje języka wprowadzone w C# 3,0. Chociaż te nowe funkcje są używane do stopnia z [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytań, nie są ograniczone do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] i mogą być używane w dowolnym kontekście, w którym są użyteczne.
+W poniższej sekcji wprowadzono nowe konstrukcje języka wprowadzone w C# 3,0. Chociaż te nowe funkcje są używane do stopnia z zapytania LINQ, nie są ograniczone do LINQ i mogą być używane w dowolnym kontekście, w którym są użyteczne.
 
 ## <a name="query-expressions"></a>Wyrażenia kwerend
 
-Wyrażenia zapytań używają składni deklaracyjnej podobnej do SQL lub XQuery w celu wykonywania zapytań na kolekcjach IEnumerable. W czasie kompilacji Składnia zapytania jest konwertowana na wywołania metody do implementacji dostawcy [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] standardowych metod rozszerzenia operatora zapytania. Aplikacje kontrolują standardowe operatory zapytań, które znajdują się w zakresie, określając odpowiednią przestrzeń nazw z dyrektywą `using`. Następujące wyrażenie zapytania pobiera tablicę ciągów, grupuje je według pierwszego znaku w ciągu i porządkuje grupy.
+Wyrażenia zapytań używają składni deklaracyjnej podobnej do SQL lub XQuery w celu wykonywania zapytań na kolekcjach IEnumerable. W czasie kompilacji Składnia zapytania jest konwertowana na wywołania metody do implementacji dostawcy LINQ standardowych metod rozszerzenia operatora zapytania. Aplikacje kontrolują standardowe operatory zapytań, które znajdują się w zakresie, określając odpowiednią przestrzeń nazw z dyrektywą `using`. Następujące wyrażenie zapytania pobiera tablicę ciągów, grupuje je według pierwszego znaku w ciągu i porządkuje grupy.
 
 ```csharp
 var query = from str in stringArray
@@ -82,15 +82,15 @@ select new {name = cust.Name, phone = cust.Phone};
 
 Aby uzyskać więcej informacji, zobacz [Typy anonimowe](../../classes-and-structs/anonymous-types.md).
 
-## <a name="extension-methods"></a>Metody rozszerzeń
+## <a name="extension-methods"></a>Metody rozszerzenia
 
-Metoda rozszerzenia to metoda statyczna, która może być skojarzona z typem, tak aby można ją było wywołać tak, jakby była metodą wystąpienia w typie. Ta funkcja umożliwia, w efekcie, "dodać" nowe metody do istniejących typów bez ich faktycznego modyfikowania. Standardowe operatory zapytań to zestaw metod rozszerzających, które udostępniają [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] funkcje zapytania dla dowolnego typu, który implementuje <xref:System.Collections.Generic.IEnumerable%601>.
+Metoda rozszerzenia to metoda statyczna, która może być skojarzona z typem, tak aby można ją było wywołać tak, jakby była metodą wystąpienia w typie. Ta funkcja umożliwia, w efekcie, "dodać" nowe metody do istniejących typów bez ich faktycznego modyfikowania. Standardowe operatory zapytań to zestaw metod rozszerzających, które udostępniają funkcje zapytań LINQ dla dowolnego typu, który implementuje <xref:System.Collections.Generic.IEnumerable%601>.
 
 Aby uzyskać więcej informacji, zobacz [metody rozszerzenia](../../classes-and-structs/extension-methods.md).
 
 ## <a name="lambda-expressions"></a>Wyrażenia lambda
 
-Wyrażenie lambda jest funkcją wbudowaną, która używa operatora = > do oddzielania parametrów wejściowych od treści funkcji i może być konwertowana w czasie kompilacji do delegata lub drzewa wyrażenia. W programowaniu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] podczas wykonywania wywołań metody bezpośredniej do standardowych operatorów zapytań są wyświetlane wyrażenia lambda.
+Wyrażenie lambda jest funkcją wbudowaną, która używa operatora = > do oddzielania parametrów wejściowych od treści funkcji i może być konwertowana w czasie kompilacji do delegata lub drzewa wyrażenia. W programowaniu LINQ, można napotkać wyrażenia lambda podczas wykonywania wywołań metody bezpośredniej do standardowych operatorów zapytań.
 
 Aby uzyskać więcej informacji, zobacz:
 

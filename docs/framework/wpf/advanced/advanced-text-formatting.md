@@ -9,17 +9,17 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: 2c120c6d71cb22bc38909f980b2f6faf2b5c3663
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: d509de02cd1b3f645ee439c0b0eb33fd1ddbdb07
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395216"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636110"
 ---
 # <a name="advanced-text-formatting"></a>Zaawansowane formatowanie tekstu
-Windows Presentation Foundation (WPF) oferuje niezawodny zestaw interfejsów API do dołączania tekstu w aplikacji. Układy i [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]interfejsy API, takie jak <xref:System.Windows.Controls.TextBlock>, zapewniają najpopularniejsze i ogólne elementy do użycia na potrzeby prezentacji tekstowej. Rysowanie interfejsów API, takich jak <xref:System.Windows.Media.GlyphRunDrawing> i <xref:System.Windows.Media.FormattedText>, zapewniają metodę dołączenia tekstu sformatowanego na rysunku. Na najbardziej zaawansowanym poziomie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zapewnia rozszerzalny aparat formatowania tekstu do sterowania każdym aspektem prezentacji tekstu, taki jak zarządzanie magazynem tekstu, zarządzanie formatowaniem tekstu i zarządzanie obiektami osadzonymi.  
+Windows Presentation Foundation (WPF) oferuje niezawodny zestaw interfejsów API do dołączania tekstu w aplikacji. [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] układów i interfejsów API, takich jak <xref:System.Windows.Controls.TextBlock>, zapewniają najbardziej typowe i ogólne elementy do prezentacji tekstowej. Rysowanie interfejsów API, takich jak <xref:System.Windows.Media.GlyphRunDrawing> i <xref:System.Windows.Media.FormattedText>, zapewniają metodę dołączenia tekstu sformatowanego na rysunku. Na najbardziej zaawansowanym poziomie funkcja WPF udostępnia rozszerzalny aparat formatowania tekstu do kontrolowania każdego aspektu prezentacji tekstu, takiej jak zarządzanie magazynem tekstu, zarządzanie formatowaniem tekstu i zarządzanie obiektami osadzonymi.  
   
- Ten temat zawiera wprowadzenie do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] formatowania tekstu. Koncentruje się na implementacji klienta i korzystaniu z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aparatu formatowania tekstu.  
+ Ten temat zawiera wprowadzenie do formatowania tekstu WPF. Koncentruje się na implementacji klienta i korzystaniu z aparatu formatowania tekstu WPF.  
   
 > [!NOTE]
 > Wszystkie przykłady kodu w tym dokumencie można znaleźć w [przykładowym formacie tekstu zaawansowanego](https://go.microsoft.com/fwlink/?LinkID=159965).  
@@ -30,13 +30,13 @@ Windows Presentation Foundation (WPF) oferuje niezawodny zestaw interfejsów API
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>Zaawansowane formatowanie tekstu  
- Układ tekstu i kontrolki [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] udostępniają właściwości formatowania, które umożliwiają łatwe dołączanie sformatowanego tekstu do aplikacji. Te kontrolki uwidaczniają wiele właściwości, które obsługują prezentację tekstu, w tym jej krój, rozmiar i kolor. W normalnych warunkach te kontrolki mogą obsługiwać większość prezentacji tekstowej w aplikacji. Jednak niektóre zaawansowane scenariusze wymagają kontroli nad przechowywaniem tekstu oraz prezentacji tekstowej. w tym celu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zapewnia rozszerzalny aparat formatowania tekstu.  
+ Układ tekstu i kontrolki [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] w WPF udostępniają właściwości formatowania, które umożliwiają łatwe dołączanie sformatowanego tekstu do aplikacji. Te kontrolki uwidaczniają wiele właściwości, które obsługują prezentację tekstu, w tym jej krój, rozmiar i kolor. W normalnych warunkach te kontrolki mogą obsługiwać większość prezentacji tekstowej w aplikacji. Jednak niektóre zaawansowane scenariusze wymagają kontroli nad przechowywaniem tekstu oraz prezentacji tekstowej. W tym celu program WPF udostępnia rozszerzalny aparat formatowania tekstu.  
   
- Zaawansowane funkcje formatowania tekstu dostępne w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawierają aparat formatowania tekstu, magazyn tekstu, przebiegi tekstowe i właściwości formatowania. Aparat formatowania tekstu <xref:System.Windows.Media.TextFormatting.TextFormatter>, tworzy wiersze tekstu, które mają być używane na potrzeby prezentacji. Jest to osiągane przez zainicjowanie procesu formatowania linii i wywołanie <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>programu formatującego tekstu. Program formatujący tekst pobiera przebiegi tekstowe z magazynu tekstu przez wywołanie metody <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> sklepu. Obiekty <xref:System.Windows.Media.TextFormatting.TextRun> są następnie tworzone w <xref:System.Windows.Media.TextFormatting.TextLine> obiektów przez program formatujący tekst i nadawane aplikacji do inspekcji lub wyświetlania.  
+ Zaawansowane funkcje formatowania tekstu dostępne w WPF obejmują aparat formatowania tekstu, magazyn tekstu, przebiegi tekstowe i właściwości formatowania. Aparat formatowania tekstu <xref:System.Windows.Media.TextFormatting.TextFormatter>, tworzy wiersze tekstu, które mają być używane na potrzeby prezentacji. Jest to osiągane przez zainicjowanie procesu formatowania linii i wywołanie <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>programu formatującego tekstu. Program formatujący tekst pobiera przebiegi tekstowe z magazynu tekstu przez wywołanie metody <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> sklepu. Obiekty <xref:System.Windows.Media.TextFormatting.TextRun> są następnie tworzone w <xref:System.Windows.Media.TextFormatting.TextLine> obiektów przez program formatujący tekst i nadawane aplikacji do inspekcji lub wyświetlania.  
   
 <a name="section2"></a>   
 ## <a name="using-the-text-formatter"></a>Korzystanie z programu formatującego tekstu  
- <xref:System.Windows.Media.TextFormatting.TextFormatter> jest aparatem formatowania tekstu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] i udostępnia usługi do formatowania i przerywania wierszy tekstu. Program formatujący tekst może obsługiwać różne formaty znaków tekstu i style akapitów, a także obsługuje międzynarodowy układ tekstu.  
+ <xref:System.Windows.Media.TextFormatting.TextFormatter> jest aparatem formatowania tekstu WPF i udostępnia usługi do formatowania i przerywania wierszy tekstu. Program formatujący tekst może obsługiwać różne formaty znaków tekstu i style akapitów, a także obsługuje międzynarodowy układ tekstu.  
   
  W przeciwieństwie do tradycyjnego interfejsu API tekstu, <xref:System.Windows.Media.TextFormatting.TextFormatter> współdziała z klientem układu tekstu za pomocą zestawu metod wywołania zwrotnego. Wymaga, aby klient dostarczał te metody w implementacji klasy <xref:System.Windows.Media.TextFormatting.TextSource>. Na poniższym diagramie przedstawiono interakcje układu tekstu między aplikacją kliencką a <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
@@ -67,7 +67,7 @@ Windows Presentation Foundation (WPF) oferuje niezawodny zestaw interfejsów API
   
  W poniższej tabeli przedstawiono niektóre wstępnie zdefiniowane obiekty <xref:System.Windows.Media.TextFormatting.TextRun>.  
   
-|Typ TextRun|Użycie|  
+|Typ TextRun|Pomiar|  
 |------------------|-----------|  
 |<xref:System.Windows.Media.TextFormatting.TextCharacters>|Wyspecjalizowane uruchomienie tekstu używane do przekazywania reprezentacji symboli znaków z powrotem do programu formatującego tekstu.|  
 |<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|Wyspecjalizowany przebieg tekstu służący do dostarczania zawartości, w której pomiary, testowanie trafień i Rysowanie odbywa się w całości, na przykład w postaci przycisku lub obrazu w tekście.|  

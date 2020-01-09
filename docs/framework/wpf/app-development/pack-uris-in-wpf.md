@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: efaf55220a41526b8952f01b8225f8336a4e8657
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e20053c451d12c6a8493d5d7fcfc72fe3d3d764e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459665"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636383"
 ---
 # <a name="pack-uris-in-wpf"></a>Pakuj URI w WPF
 
@@ -38,7 +38,7 @@ Ponadto identyfikatory URI mogą służyć do identyfikowania i ładowania plik�
 
 - Lokacja źródłowa aplikacji.
 
-Aby zapewnić spójny mechanizm do identyfikowania i ładowania tych typów plików z tych lokalizacji, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wykorzystuje rozszerzalność *schematu identyfikatora URI pakietu*. Ten temat zawiera omówienie schematu, w którym opisano sposób konstruowania identyfikatorów URI pakietów dla różnych scenariuszy, omówiono bezwzględne i względne identyfikatory URI oraz rozpoznawanie identyfikatorów URI, przed pokazywaniem sposobu używania identyfikatorów URI pakietów z znaczników i kodu.
+Aby zapewnić spójny mechanizm do identyfikowania i ładowania tych typów plików z tych lokalizacji, WPF wykorzystuje rozszerzalność *schematu identyfikatora URI*. Ten temat zawiera omówienie schematu, w którym opisano sposób konstruowania identyfikatorów URI pakietów dla różnych scenariuszy, omówiono bezwzględne i względne identyfikatory URI oraz rozpoznawanie identyfikatorów URI, przed pokazywaniem sposobu używania identyfikatorów URI pakietów z znaczników i kodu.
 
 <a name="The_Pack_URI_Scheme"></a>
 
@@ -52,7 +52,7 @@ Aby zidentyfikować części, Specyfikacja OPC korzysta z rozszerzalności RFC 2
 
 Schemat, który jest określony za pomocą identyfikatora URI, jest definiowany za pomocą jego prefiksu; protokoły HTTP, FTP i File są dobrze znane przykłady. Schemat URI pakietu używa pakietu "Pack" jako schematu i zawiera dwa składniki: Authority i Path. Poniżej przedstawiono format identyfikatora URI pakietu.
 
-*ścieżka* /*urzędu* Pack://
+*ścieżka*/*urzędu* Pack://
 
 *Urząd* określa typ pakietu, w którym znajduje się część, a *ścieżka* określa lokalizację części w ramach pakietu.
 
@@ -72,7 +72,7 @@ Pakiety i części są analogiczne do aplikacji i plików, w których aplikacja 
 
 - Lokacja plików pochodzenia.
 
-Aby uzyskać dostęp do tych typów plików, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] obsługuje dwa urzędy: application:///i siteoforigin:///. Urząd application:///identyfikuje pliki danych aplikacji, które są znane w czasie kompilacji, w tym pliki zasobów i zawartości. Urząd siteoforigin:///określa lokację plików pochodzenia. Zakres każdego urzędu pokazano na poniższej ilustracji.
+Aby uzyskać dostęp do tych typów plików, WPF obsługuje dwa urzędy: application:///i siteoforigin:///. Urząd application:///identyfikuje pliki danych aplikacji, które są znane w czasie kompilacji, w tym pliki zasobów i zawartości. Urząd siteoforigin:///określa lokację plików pochodzenia. Zakres każdego urzędu pokazano na poniższej ilustracji.
 
 ![Diagram URI pakietu](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)
 
@@ -139,7 +139,7 @@ W poniższym przykładzie przedstawiono identyfikator URI pakietu dla pliku zaso
 
 `pack://application:,,,/ReferencedAssembly;v1.0.0.1;component/ResourceFile.xaml`
 
-Należy zauważyć, że składnia identyfikatora URI pakietu dla przywoływanych plików zasobów zestawu może być używana tylko z urzędem application:///. Na przykład następujące elementy nie są obsługiwane w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+Należy zauważyć, że składnia identyfikatora URI pakietu dla przywoływanych plików zasobów zestawu może być używana tylko z urzędem application:///. Na przykład następujące elementy nie są obsługiwane w WPF.
 
 `pack://siteoforigin:,,,/SomeAssembly;component/ResourceFile.xaml`
 
@@ -184,7 +184,7 @@ Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xa
 
 <a name="Page_Files"></a>
 
-## <a name="page-files"></a>Pliki stronicowania
+## <a name="page-files"></a>Pliki stron
 
 Pliki XAML, które są skonfigurowane jako elementy `Page` MSBuild, są kompilowane do zestawów w taki sam sposób jak pliki zasobów. W związku z tym elementy `Page` MSBuild można zidentyfikować przy użyciu identyfikatorów URI pakietów dla plików zasobów.
 
@@ -251,7 +251,7 @@ Ten bezwzględny identyfikator URI pakietu może odwoływać się do pliku zasob
 
 `/ResourceOrContentFile.xaml`
 
-Aby określić typ pliku, do którego odwołuje się identyfikator URI pakietu, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] rozpoznaje identyfikatory URI dla plików zasobów w lokalnych zestawach i plikach zawartości przy użyciu następujących algorytmów heurystycznych:
+Aby określić typ pliku, do którego odwołuje się identyfikator URI pakietu, WPF rozpoznaje identyfikatory URI dla plików zasobów w lokalnych zestawach i plikach zawartości przy użyciu następujących algorytmów heurystycznych:
 
 1. Sondowanie metadanych zestawu dla <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atrybutu, który jest zgodny z identyfikatorem URI pakietu.
 
@@ -265,7 +265,7 @@ Aby określić typ pliku, do którego odwołuje się identyfikator URI pakietu, 
 
 Rozpoznawanie identyfikatorów URI nie ma zastosowania w przypadku identyfikatorów URI, które odwołują się do następujących:
 
-- Pliki zawartości w przywoływanych zestawach: te typy plików nie są obsługiwane przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+- Pliki zawartości w przywoływanych zestawach: te typy plików nie są obsługiwane przez WPF.
 
 - Osadzone pliki w przywoływanych zestawach: identyfikatory URI, które identyfikują je są unikatowe, ponieważ zawierają zarówno nazwę przywoływanego zestawu, jak i sufiks `;component`.
 
@@ -277,7 +277,7 @@ Jednym z elementów uproszczenia, jakie jest rozpoznawanie identyfikatorów URI 
 
 ## <a name="programming-with-pack-uris"></a>Programowanie przy użyciu identyfikatorów URI pakietów
 
-Wiele klas [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementuje właściwości, które można ustawić za pomocą identyfikatorów URI pakietów, takich jak:
+Wiele klas WPF implementuje właściwości, które można ustawić za pomocą identyfikatorów URI pakietów, takich jak:
 
 - <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>
 
@@ -397,13 +397,13 @@ Tabela 4: względne identyfikatory URI pakietu w kodzie
 
 ### <a name="common-pack-uri-scenarios"></a>Scenariusze typowych identyfikatorów URI pakietu
 
-W powyższych sekcjach omówiono sposób tworzenia identyfikatorów URI pakietów w celu identyfikowania zasobów, zawartości i lokacji plików pochodzenia. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]te konstrukcje są używane na różne sposoby, a poniższe sekcje obejmują kilka typowych zastosowań.
+W powyższych sekcjach omówiono sposób tworzenia identyfikatorów URI pakietów w celu identyfikowania zasobów, zawartości i lokacji plików pochodzenia. W WPF te konstrukcje są używane na różne sposoby, a poniższe sekcje obejmują kilka typowych zastosowań.
 
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>
 
 #### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>Określanie interfejsu użytkownika do wyświetlania podczas uruchamiania aplikacji
 
-<xref:System.Windows.Application.StartupUri%2A> określa pierwszy [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], który ma być wyświetlany podczas uruchamiania aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. W przypadku aplikacji autonomicznych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] może być oknem, jak pokazano w poniższym przykładzie.
+<xref:System.Windows.Application.StartupUri%2A> określa pierwszy [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], który ma być wyświetlany podczas uruchamiania aplikacji WPF. W przypadku aplikacji autonomicznych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] może być oknem, jak pokazano w poniższym przykładzie.
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
@@ -411,7 +411,7 @@ Aplikacje autonomiczne i aplikacje przeglądarki XAML (XBAP) mogą również okr
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-Jeśli aplikacja jest aplikacją autonomiczną, a strona jest określona za pomocą <xref:System.Windows.Application.StartupUri%2A>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] otwiera <xref:System.Windows.Navigation.NavigationWindow> do hostowania strony. W przypadku aplikacji XBAP strona jest wyświetlana w przeglądarce hosta.
+Jeśli aplikacja jest aplikacją autonomiczną, a strona jest określona za pomocą <xref:System.Windows.Application.StartupUri%2A>, WPF otwiera <xref:System.Windows.Navigation.NavigationWindow> do hostowania strony. W przypadku aplikacji XBAP strona jest wyświetlana w przeglądarce hosta.
 
 <a name="Navigating_to_a_Page"></a>
 
@@ -423,7 +423,7 @@ Poniższy przykład pokazuje, jak przejść do strony.
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]
 
-Aby uzyskać więcej informacji na temat różnych sposobów nawigowania w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], zobacz [Omówienie nawigacji](navigation-overview.md).
+Aby uzyskać więcej informacji na temat różnych sposobów nawigowania w programie WPF, zobacz [Omówienie nawigacji](navigation-overview.md).
 
 <a name="Specifying_a_Window_Icon"></a>
 
@@ -433,13 +433,13 @@ Poniższy przykład pokazuje, jak używać identyfikatora URI, aby określić ik
 
 [!code-xaml[WindowIconSnippets#WindowIconSetXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]
 
-Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Window.Icon%2A>.
+Aby uzyskać więcej informacji, zobacz temat <xref:System.Windows.Window.Icon%2A>.
 
 <a name="Loading_Image__Audio__and_Video_Files"></a>
 
 #### <a name="loading-image-audio-and-video-files"></a>Ładowanie plików obrazów, audio i wideo
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] umożliwia aplikacjom korzystanie z różnych typów nośników, które można zidentyfikować i załadować przy użyciu identyfikatorów URI pakietów, jak pokazano w poniższych przykładach.
+WPF umożliwia aplikacjom używanie szerokiej gamy typów nośników, które można zidentyfikować i załadować przy użyciu identyfikatorów URI pakietów, jak pokazano w poniższych przykładach.
 
 [!code-xaml[MediaPlayerVideoSample#VideoPackURIAtSOO](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerVideoSample/CS/HomePage.xaml#videopackuriatsoo)]
 
@@ -457,7 +457,7 @@ Słowniki zasobów (<xref:System.Windows.ResourceDictionary>) mogą służyć do
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 
-Aby zapoznać się z omówieniem tematów w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], zobacz [Style i tworzenia szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
+Aby zapoznać się z omówieniem motywów w WPF, zobacz [Style i tworzenia szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 ## <a name="see-also"></a>Zobacz także
 

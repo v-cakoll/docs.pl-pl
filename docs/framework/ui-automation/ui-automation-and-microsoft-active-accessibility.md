@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 96998b2e625c7e395dd61d6905bc437ef1ca697d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f9fc7e2e1a6d5ee26f04b239723c6b7d4283dbce
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436635"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632327"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Automatyzacja interfejsu użytkownika a Microsoft Active Accessibility
 > [!NOTE]
@@ -28,7 +28,7 @@ ms.locfileid: "74436635"
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Obsługa w Windows Presentation Foundation  
- Windows Presentation Foundation (WPF) to nowy model tworzenia interfejsów użytkownika. elementy [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] nie zawierają natywnej obsługi Active Accessibility; są jednak obsługiwane [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], które obejmują obsługę mostkowania dla aktywnych klientów. Tylko klienci zaawansowani do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] mogą w pełni korzystać z funkcji ułatwień dostępu [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], takich jak rozbudowana obsługa tekstu.  
+ Windows Presentation Foundation (WPF) to nowy model tworzenia interfejsów użytkownika. Elementy WPF nie zawierają natywnej obsługi Active Accessibility; są jednak obsługiwane [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], które obejmują obsługę mostkowania dla aktywnych klientów. Tylko klienci zaawansowani do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] mogą w pełni korzystać z funkcji ułatwień dostępu platformy WPF, takich jak rozbudowana obsługa tekstu.  
   
 <a name="Servers_and_Clients_compare"></a>   
 ## <a name="servers-and-clients"></a>Serwery i klienci  
@@ -74,22 +74,22 @@ ms.locfileid: "74436635"
 |ROLE_SYSTEM_CLIENT|Kalendarz|  
 |ROLE_SYSTEM_CHECKBUTTON|Pole wyboru|  
 |ROLE_SYSTEM_COMBOBOX|Pole kombi|  
-|ROLE_SYSTEM_CLIENT|Celnej|  
+|ROLE_SYSTEM_CLIENT|Niestandardowe|  
 |ROLE_SYSTEM_LIST|Siatka danych|  
 |ROLE_SYSTEM_LISTITEM|Element danych|  
-|ROLE_SYSTEM_DOCUMENT|Dokument|  
-|ROLE_SYSTEM_TEXT|Edytuj|  
+|ROLE_SYSTEM_DOCUMENT|dokument|  
+|ROLE_SYSTEM_TEXT|Edytowanie|  
 |ROLE_SYSTEM_GROUPING|Grupa|  
-|ROLE_SYSTEM_LIST|Nagłówek|  
+|ROLE_SYSTEM_LIST|nagłówek|  
 |ROLE_SYSTEM_COLUMNHEADER|Element nagłówka|  
 |ROLE_SYSTEM_LINK|Hyperlink|  
 |ROLE_SYSTEM_GRAPHIC|Obraz|  
-|ROLE_SYSTEM_LIST|List|  
+|ROLE_SYSTEM_LIST|Lista|  
 |ROLE_SYSTEM_LISTITEM|Element listy|  
 |ROLE_SYSTEM_MENUPOPUP|Menu|  
 |ROLE_SYSTEM_MENUBAR|Pasek menu|  
 |ROLE_SYSTEM_MENUITEM|Element menu|  
-|ROLE_SYSTEM_PANE|Okienko|  
+|ROLE_SYSTEM_PANE|Pane|  
 |ROLE_SYSTEM_PROGRESSBAR|Pasek postępu|  
 |ROLE_SYSTEM_RADIOBUTTON|Przycisk radiowy|  
 |ROLE_SYSTEM_SCROLLBAR|Pasek przewijania|  
@@ -100,7 +100,7 @@ ms.locfileid: "74436635"
 |ROLE_SYSTEM_STATUSBAR|Pasek stanu|  
 |ROLE_SYSTEM_PAGETABLIST|Tab|  
 |ROLE_SYSTEM_PAGETAB|Element karty|  
-|ROLE_SYSTEM_TABLE|Tabela|  
+|ROLE_SYSTEM_TABLE|tabela|  
 |ROLE_SYSTEM_STATICTEXT|Tekst|  
 |ROLE_SYSTEM_INDICATOR|Thumb|  
 |ROLE_SYSTEM_TITLEBAR|Pasek tytułu|  
@@ -142,20 +142,20 @@ ms.locfileid: "74436635"
 |STATE_SYSTEM_CHECKED|Dla pola wyboru, <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Dla przycisku radiowego, <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|T|  
 |STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|T|  
 |STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded> lub <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|T|  
-|STATE_SYSTEM_FOCUSABLE|<xref:System.Windows.Automation.AutomationElement.IsKeyboardFocusableProperty>|Nie|  
-|STATE_SYSTEM_FOCUSED|<xref:System.Windows.Automation.AutomationElement.HasKeyboardFocusProperty>|Nie|  
-|STATE_SYSTEM_HASPOPUP|<xref:System.Windows.Automation.ExpandCollapsePattern> elementów menu|Nie|  
-|STATE_SYSTEM_INVISIBLE|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> = true i <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A> powoduje <xref:System.Windows.Automation.NoClickablePointException>|Nie|  
-|STATE_SYSTEM_LINKED|<xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> =<br /><br /> <xref:System.Windows.Automation.ControlType.Hyperlink>|Nie|  
-|STATE_SYSTEM_MIXED|<xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> = <xref:System.Windows.Automation.ToggleState.Indeterminate>|Nie|  
-|STATE_SYSTEM_MOVEABLE|<xref:System.Windows.Automation.TransformPattern.CanMoveProperty>|Nie|  
-|STATE_SYSTEM_MUTLISELECTABLE|<xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty>|Nie|  
-|STATE_SYSTEM_OFFSCREEN|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> = true|Nie|  
-|STATE_SYSTEM_PROTECTED|<xref:System.Windows.Automation.AutomationElement.IsPasswordProperty>|Nie|  
-|STATE_SYSTEM_READONLY|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty?displayProperty=nameWithType> i <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty?displayProperty=nameWithType>|Nie|  
-|STATE_SYSTEM_SELECTABLE|<xref:System.Windows.Automation.SelectionItemPattern> jest obsługiwana|Nie|  
-|STATE_SYSTEM_SELECTED|<xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|Nie|  
-|STATE_SYSTEM_SIZEABLE|<xref:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize%2A>|Nie|  
+|STATE_SYSTEM_FOCUSABLE|<xref:System.Windows.Automation.AutomationElement.IsKeyboardFocusableProperty>|N|  
+|STATE_SYSTEM_FOCUSED|<xref:System.Windows.Automation.AutomationElement.HasKeyboardFocusProperty>|N|  
+|STATE_SYSTEM_HASPOPUP|<xref:System.Windows.Automation.ExpandCollapsePattern> elementów menu|N|  
+|STATE_SYSTEM_INVISIBLE|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> = true i <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A> powoduje <xref:System.Windows.Automation.NoClickablePointException>|N|  
+|STATE_SYSTEM_LINKED|<xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> =<br /><br /> <xref:System.Windows.Automation.ControlType.Hyperlink>|N|  
+|STATE_SYSTEM_MIXED|<xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> = <xref:System.Windows.Automation.ToggleState.Indeterminate>|N|  
+|STATE_SYSTEM_MOVEABLE|<xref:System.Windows.Automation.TransformPattern.CanMoveProperty>|N|  
+|STATE_SYSTEM_MUTLISELECTABLE|<xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty>|N|  
+|STATE_SYSTEM_OFFSCREEN|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> = true|N|  
+|STATE_SYSTEM_PROTECTED|<xref:System.Windows.Automation.AutomationElement.IsPasswordProperty>|N|  
+|STATE_SYSTEM_READONLY|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty?displayProperty=nameWithType> i <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty?displayProperty=nameWithType>|N|  
+|STATE_SYSTEM_SELECTABLE|<xref:System.Windows.Automation.SelectionItemPattern> jest obsługiwana|N|  
+|STATE_SYSTEM_SELECTED|<xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|N|  
+|STATE_SYSTEM_SIZEABLE|<xref:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize%2A>|N|  
 |STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|T|  
   
  Następujące stany nie zostały zaimplementowane przez większość aktywnych serwerów kontroli dostępności lub nie mają odpowiednika w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
@@ -244,7 +244,7 @@ ms.locfileid: "74436635"
 |Brak równoważnej|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
   
 <a name="Security_compare"></a>   
-## <a name="security"></a>Bezpieczeństwo  
+## <a name="security"></a>Zabezpieczenia  
  Niektóre `IAccessible` scenariusze dostosowania wymagają zawijania `IAccessible` podstawowego i wywoływania do niego. Ma to wpływ na bezpieczeństwo, ponieważ częściowo zaufany składnik nie powinien być pośrednikiem w ścieżce kodu.  
   
  Model [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]u eliminuje konieczność wywoływania przez dostawców do innego kodu dostawcy. Usługa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Core wykonuje wszystkie wymagane agregacje.  

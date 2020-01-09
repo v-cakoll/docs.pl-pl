@@ -6,16 +6,16 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: e1fdc3ef51e8658e07bc555238229bed9116e165
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10d049288cf560dadedf7bc5e624deb7c42aae81
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460094"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636175"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Wskazówki: utwórz przycisk przy użyciu Microsoft Expression Blend
 
-Ten Instruktaż przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] niestandardowego przycisku przy użyciu programu Microsoft Expression Blend.
+Ten Instruktaż przeprowadzi Cię przez proces tworzenia niestandardowego przycisku WPF przy użyciu programu Microsoft Expression Blend.
 
 > [!IMPORTANT]
 > Program Microsoft Expression Blend działa przez wygenerowanie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], który następnie jest kompilowany, aby uczynić program wykonywalny. Jeśli wolisz korzystać z języka XAML bezpośrednio, istnieje inny przewodnik, który tworzy tę samą aplikację jak ta, przy użyciu języka XAML z Visual Studio, a nie Blend. Aby uzyskać więcej informacji [, zobacz Tworzenie przycisku przy użyciu języka XAML](walkthrough-create-a-button-by-using-xaml.md) .
@@ -40,7 +40,7 @@ W pierwszej części tego przewodnika utworzysz niestandardowy wygląd przycisku
 
 5. Nazwij projekt `CustomButton` a następnie naciśnij przycisk **OK**.
 
-W tym momencie masz pusty projekt [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Możesz nacisnąć klawisz F5, aby uruchomić aplikację. Zgodnie z oczekiwaniami aplikacja składa się tylko z pustego okna. Następnie utworzysz prostokąt zaokrąglony i przekonwertujesz go na przycisk.
+W tym momencie masz pusty projekt WPF. Możesz nacisnąć klawisz F5, aby uruchomić aplikację. Zgodnie z oczekiwaniami aplikacja składa się tylko z pustego okna. Następnie utworzysz prostokąt zaokrąglony i przekonwertujesz go na przycisk.
 
 ### <a name="to-convert-a-rectangle-to-a-button"></a>Aby skonwertować prostokąt na przycisk
 

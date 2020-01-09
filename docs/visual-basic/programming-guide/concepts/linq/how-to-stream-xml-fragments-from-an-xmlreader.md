@@ -2,12 +2,12 @@
 title: 'Instrukcje: strumieniowe fragmenty XML z elementu XmlReader'
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-ms.openlocfilehash: abefc8c6e75ae41c47135a2e89cdb3be6a8e5cd6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 42d3edb390035d20f506388974000aa204312109
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346226"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636799"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Instrukcje: strumieniowe fragmenty XML z elementu XmlReader (Visual Basic)
 W przypadku konieczności przetworzenia dużych plików XML może nie być możliwe załadowanie całego drzewa XML do pamięci. W tym temacie pokazano, jak przesyłać fragmenty strumieni przy użyciu <xref:System.Xml.XmlReader>.  
@@ -23,7 +23,7 @@ W przypadku konieczności przetworzenia dużych plików XML może nie być możl
  Temat [instrukcje: wykonywanie transformacji strumieniowej dużych dokumentów XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) zawiera przykład użycia LINQ to XML do przekształcania bardzo dużych dokumentów XML przy zachowaniu małej ilości pamięci.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie jest tworzona Metoda osi niestandardowej. Zapytanie można wykonać przy użyciu kwerendy [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Metoda osi niestandardowej, `StreamRootChildDoc`, to metoda, która jest przeznaczona specjalnie do odczytywania dokumentu, który ma powtarzający się element `Child`.  
+ W tym przykładzie jest tworzona Metoda osi niestandardowej. Zapytanie można wykonać za pomocą zapytania LINQ. Metoda osi niestandardowej, `StreamRootChildDoc`, to metoda, która jest przeznaczona specjalnie do odczytywania dokumentu, który ma powtarzający się element `Child`.  
   
 ```vb  
 Module Module1  

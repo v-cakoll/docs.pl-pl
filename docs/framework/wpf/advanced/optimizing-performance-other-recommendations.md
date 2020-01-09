@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 6b4a5379145ebdffde0d5b76d8c7b9ab57261007
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b6d99d90a3da232e1873ebe8433e01ceb2977de6
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975787"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636435"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optymalizacja wydajności: inne zalecenia
 <a name="introduction"></a>Ten temat zawiera zalecenia dotyczące wydajności, a także te, które zostały omówione w sekcji [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md) .  
@@ -64,13 +64,13 @@ ms.locfileid: "73975787"
   
 <a name="Avoid_Using_ScrollBarVisibility"></a>   
 ## <a name="avoid-using-scrollbarvisibilityauto"></a>Unikaj używania ScrollBarVisibility =  
- Jeśli to możliwe, Unikaj używania wartości <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> dla właściwości `HorizontalScrollBarVisibility` i `VerticalScrollBarVisibility`. Te właściwości są zdefiniowane dla obiektów <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer> i <xref:System.Windows.Controls.TextBox> oraz jako właściwość dołączona do obiektu <xref:System.Windows.Controls.ListBox>. Zamiast tego należy ustawić <xref:System.Windows.Controls.ScrollBarVisibility> na <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden> lub <xref:System.Windows.Controls.ScrollBarVisibility.Visible>.  
+ Jeśli to możliwe, Unikaj używania wartości <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> dla właściwości `HorizontalScrollBarVisibility` i `VerticalScrollBarVisibility`. Te właściwości są zdefiniowane dla obiektów <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer>i <xref:System.Windows.Controls.TextBox> oraz jako właściwość dołączona do obiektu <xref:System.Windows.Controls.ListBox>. Zamiast tego należy ustawić <xref:System.Windows.Controls.ScrollBarVisibility> na <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden>lub <xref:System.Windows.Controls.ScrollBarVisibility.Visible>.  
   
  Wartość <xref:System.Windows.Controls.ScrollBarVisibility.Auto> jest przeznaczona dla przypadków, gdy ilość miejsca jest ograniczona, a paski przewijania powinny być wyświetlane tylko w razie potrzeby. Na przykład przydatne może być użycie tej <xref:System.Windows.Controls.ScrollBarVisibility> wartości z <xref:System.Windows.Controls.ListBox> 30 elementów, a nie <xref:System.Windows.Controls.TextBox> z setkami wierszy tekstu.  
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Konfigurowanie Cache Service czcionki w celu skrócenia czasu uruchamiania  
- Usługa [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] buforowania czcionek udostępnia dane czcionki między aplikacjami [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Pierwsza uruchomiona aplikacja [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uruchamia tę usługę, jeśli usługa nie jest już uruchomiona. W przypadku korzystania z systemu Windows Vista można ustawić "Windows Presentation Foundation (WPF) 3.0.0.0 pamięci podręcznej czcionek" z "ręczne" (domyślnie), aby skrócić czas uruchamiania aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ Usługa w pamięci podręcznej czcionek WPF udostępnia dane czcionek między aplikacjami WPF. Pierwsza uruchomiona aplikacja WPF uruchamia tę usługę, jeśli usługa nie jest już uruchomiona. W przypadku korzystania z systemu Windows Vista można ustawić "Windows Presentation Foundation (WPF) 3.0.0.0 pamięci podręcznej czcionek" z "ręczne" (domyślnie), aby zmniejszyć początkowy czas uruchamiania aplikacji WPF.  
   
 ## <a name="see-also"></a>Zobacz także
 

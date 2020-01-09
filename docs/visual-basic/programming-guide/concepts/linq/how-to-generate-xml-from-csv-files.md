@@ -2,18 +2,18 @@
 title: 'Instrukcje: generowanie XML z plików CSV'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 2e2d76fdae8473e47e397f2559f3051c47a180fd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 79b609c3a706db4c8b4c082fbeaf143632a75033
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344593"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636825"
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Instrukcje: generowanie kodu XML z plików CSV (Visual Basic)
-Ten przykład pokazuje, jak używać [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do generowania pliku XML z pliku z wartościami rozdzielanymi przecinkami (CSV).  
+Ten przykład pokazuje, jak używać języka CLR (Language-Integrated Query) i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do generowania pliku XML z pliku z wartościami rozdzielanymi przecinkami (CSV).  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod wykonuje zapytanie [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] w tablicy ciągów.  
+ Poniższy kod wykonuje zapytanie LINQ na tablicy ciągów.  
   
 ```vb  
       ' Create the text file.  

@@ -2,12 +2,12 @@
 title: 'Instrukcje: Tworzenie projektu grafu obiektów'
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 68b58226dbf30f82709a39e96bef0f8cce95d0ec
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 71d41b515983e19f90e163f76ca400248d3cc848
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347768"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636682"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a>Instrukcje: Tworzenie projektu grafu obiektów (Visual Basic)
 W tym temacie pokazano, jak projektować i wypełniać Graf obiektów z pliku XML.  
@@ -296,7 +296,7 @@ Sub Main()
 End Sub  
 ```  
   
- W tym przykładzie wynik kwerendy [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] jest zwracany jako <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`. Elementy w klasie `PurchaseOrder` są typu <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`. Kod używa metody rozszerzenia <xref:System.Linq.Enumerable.ToList%2A>, aby utworzyć kolekcję <xref:System.Collections.Generic.List%601> z wyników zapytania.  
+ W tym przykładzie wynik zapytania LINQ jest zwracany jako <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`. Elementy w klasie `PurchaseOrder` są typu <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`. Kod używa metody rozszerzenia <xref:System.Linq.Enumerable.ToList%2A>, aby utworzyć kolekcję <xref:System.Collections.Generic.List%601> z wyników zapytania.  
   
  Przykład generuje następujące dane wyjściowe:  
   

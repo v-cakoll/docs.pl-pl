@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: fb7ad54f61d9dcfe94379aef14930a0395da5291
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: a4d3b808aee14d5d2f29053b0c60798f9f626e8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424592"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636331"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Przegląd Aplikacje przeglądarek WPF XAML
 <a name="introduction"></a>Aplikacje przeglądarki XAML (XBAP) łączą funkcje aplikacji sieci Web i aplikacji z rozbudowanymi aplikacjami klienckimi. Na przykład aplikacje sieci Web XBAP mogą być wdrażane na serwerze sieci Web i uruchamiane z przeglądarki Internet Explorer lub Firefox. Podobnie jak w przypadku aplikacji z rozbudowanymi aplikacjami klienckimi, aplikacje XBAP mogą korzystać z możliwości platformy WPF. Tworzenie aplikacji XBAP jest również podobne do rozbudowanych wdrożeń klientów. Ten temat zawiera proste, górne wprowadzenie do programowania aplikacji XBAP i opisuje, gdzie Programowanie aplikacji XBAP różni się od standardowego rozbudowanego środowiska programistycznego.
@@ -51,7 +51,7 @@ ms.locfileid: "73424592"
 |Manifest aplikacji (manifest)|Zawiera metadane skojarzone z aplikacją i ma rozszerzenie. manifest.|
 |Manifest wdrożenia (. XBAP)|Ten plik zawiera informacje używane w technologii ClickOnce do wdrażania aplikacji i ma rozszerzenie. XBAP.|
 
- Wdrażasz aplikacje XBAP na serwerze sieci Web, na przykład Microsoft Internet Information Services (IIS) w wersji 5,0 lub nowszej. Nie trzeba instalować .NET Framework na serwerze sieci Web, ale trzeba zarejestrować typy [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] MIME (Multipurpose Internet Mail Extensions) i rozszerzenia nazw plików. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usług iis 5,0 i iis 6,0 do wdrażania aplikacji WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).
+ Wdrażasz aplikacje XBAP na serwerze sieci Web, na przykład Microsoft Internet Information Services (IIS) w wersji 5,0 lub nowszej. Nie trzeba instalować .NET Framework na serwerze sieci Web, ale konieczne jest zarejestrowanie typów MIME (Multipurpose Internet Mail Extensions) WPF i rozszerzeń nazw plików. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usług iis 5,0 i iis 6,0 do wdrażania aplikacji WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).
 
  Aby przygotować serwer XBAP do wdrożenia, skopiuj plik. exe i powiązane z nim manifesty do serwera sieci Web. Utwórz stronę HTML zawierającą hiperłącze, aby otworzyć manifest wdrożenia, który jest plikiem z rozszerzeniem. XBAP. Gdy użytkownik kliknie link do pliku. XBAP, ClickOnce automatycznie obsługuje Mechanics pobierania i uruchamiania aplikacji. Poniższy przykładowy kod pokazuje stronę HTML zawierającą hiperłącze wskazujące na aplikację XBAP.
 
@@ -101,7 +101,7 @@ ms.locfileid: "73424592"
 
 1. W programie Visual Studio Otwórz właściwości projektu.
 
-2. Na karcie **zabezpieczenia** kliknij przycisk **Zaawansowane**.
+2. Na **zabezpieczeń** kliknij pozycję **Zaawansowane**.
 
      Zostanie wyświetlone okno dialogowe Zaawansowane ustawienia zabezpieczeń.
 
@@ -113,7 +113,7 @@ ms.locfileid: "73424592"
 
      Zostanie wyświetlone okno dialogowe Opcje internetowe.
 
-6. Kliknij kartę **Zaawansowane** .
+6. Kliknij przycisk **zaawansowane** kartę.
 
 7. Na liście **Ustawienia** w obszarze **zabezpieczenia**zaznacz pole wyboru **Zezwalaj na uruchamianie aktywnej zawartości w plikach na moim komputerze** .
 
@@ -168,7 +168,7 @@ ms.locfileid: "73424592"
 
 |Strefa zabezpieczeń|Zachowanie|Pobieranie pełnego zaufania|
 |-------------------|--------------|------------------------|
-|Komputer lokalny|Automatyczne pełne zaufanie|Nie jest wymagana żadna akcja.|
+|Komputer lokalny|Automatyczne pełne zaufanie|Nie trzeba wykonywać żadnych czynności.|
 |Intranet i Zaufane witryny|Monituj o pełne zaufanie|Podpisz element XBAP przy użyciu certyfikatu, aby użytkownik widział źródło w monicie.|
 |Internet|Niepowodzenie z "zaufaniem nieudzielonym"|Podpisz element XBAP przy użyciu certyfikatu.|
 

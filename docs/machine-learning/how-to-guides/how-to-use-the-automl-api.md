@@ -1,14 +1,14 @@
 ---
 title: Jak korzystać z interfejsu API zautomatyzowanej ML.NET ML
 description: Interfejs API zautomatyzowanej sieci ML.NET automatyzuje proces tworzenia modelu i generuje model gotowy do wdrożenia. Informacje na temat opcji, których można użyć do konfigurowania automatycznych zadań uczenia maszynowego.
-ms.date: 11/7/2019
+ms.date: 12/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c1c18decc48bc1499aa55210becff305cdec4a53
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977114"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636565"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Jak korzystać z interfejsu API automatycznego uczenia maszynowego ML.NET
 
@@ -37,7 +37,8 @@ Przed utworzeniem eksperymentu należy określić rodzaj problemu z uczeniem mas
 
 * Klasyfikacja binarna
 * Klasyfikacja wieloklasowa
-* ubytk
+* Regresji
+* Zalecenie
 
 ## <a name="create-experiment-settings"></a>Utwórz ustawienia eksperymentu
 
@@ -55,17 +56,23 @@ Utwórz ustawienia eksperymentu dla typu zadania o określonej ML:
   var experimentSettings = new MulticlassExperimentSettings();
   ```
 
-* ubytk
+* Regresji
 
   ```csharp
   var experimentSettings = new RegressionExperimentSettings();
+  ```
+
+* Zalecenie
+
+  ```csharp
+  var experimentSettings = new RecommendationExperimentSettings();
   ```
 
 ## <a name="configure-experiment-settings"></a>Konfigurowanie ustawień eksperymentu
 
 Eksperymenty są wysoce konfigurowalne. Zobacz dokumentację [interfejsu API AutoML](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview) , aby uzyskać pełną listę ustawień konfiguracji.
 
-Oto kilka przykładów:
+Oto niektóre przykłady:
 
 1. Określ maksymalny czas działania eksperymentu.
 
@@ -110,12 +117,13 @@ Listę obsługiwanych zadań instruktorów na ML można znaleźć w odpowiadają
 * [Obsługiwane algorytmy klasyfikacji binarnej](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [Obsługiwane algorytmy klasyfikacji wieloklasowej](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [Obsługiwane algorytmy regresji](xref:Microsoft.ML.AutoML.RegressionTrainer)
+* [Obsługiwane algorytmy rekomendacji](xref:Microsoft.ML.AutoML.RecommendationTrainer)
 
 ## <a name="optimizing-metric"></a>Optymalizowanie metryki
 
 Metryka optymalizacji, jak pokazano w powyższym przykładzie, określa metrykę do zoptymalizowania podczas uczenia modelu. Metryka optymalizacji, którą można wybrać, zależy od wybranego typu zadania. Poniżej znajduje się lista dostępnych metryk.
 
-|[Klasyfikacja binarna](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Klasyfikacja wieloklasowa](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Ubytk](xref:Microsoft.ML.AutoML.RegressionMetric)
+|[Klasyfikacja binarna](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Klasyfikacja wieloklasowa](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Zalecenie dotyczące & regresji](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
 |Odpowiedni| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -126,16 +134,16 @@ Metryka optymalizacji, jak pokazano w powyższym przykładzie, określa metrykę
 |PositivePrecision
 |PositiveRecall
 
-## <a name="data-pre-processing-and-featurization"></a>Wstępne przetwarzanie i cechowania danych
+## <a name="data-pre-processing-and-featurization"></a>Wstępne przetwarzanie danych i cechowania
 
 > [!NOTE]
-> W kolumnie funkcji obsługiwane są tylko typy <xref:System.Boolean>, <xref:System.Single> i <xref:System.String>.
+> W kolumnie funkcji obsługiwane są tylko typy <xref:System.Boolean>, <xref:System.Single>i <xref:System.String>.
 
 Przetwarzanie wstępne danych odbywa się domyślnie, a następujące kroki są wykonywane automatycznie:
 
 1. Funkcje upuszczania bez użytecznych informacji
 
-    Porzuć funkcje bez użytecznych informacji dotyczących szkoleń i zestawów walidacji. Obejmują one funkcje, w których brakuje wszystkich wartości, takich same jak wszystkie wiersze, lub z bardzo dużą kardynalnością (np. skrótami, identyfikatorami lub identyfikatorami GUID).
+    Usuwanie funkcji żadnych użytecznych informacji z zestawów szkolenia i sprawdzania poprawności. Obejmują one funkcje wszystkich wartości Brak, tę samą wartość we wszystkich wierszach lub bardzo dużej kardynalności (np. skróty, lub identyfikatory GUID).
 
 1. Brak wskazania wartości i nie należy ich przypisywaniu
 
@@ -195,9 +203,9 @@ AutoML zapewnia przeciążoną metodę wykonywania eksperymentu, która umożliw
 experiment.Execute(trainDataView);
 ```
 
-### <a name="custom-validation-dataset"></a>Niestandardowy zestaw danych walidacji
+### <a name="custom-validation-dataset"></a>Zestaw niestandardowego sprawdzania poprawności danych
 
-Użyj niestandardowego zestawu danych walidacji, jeśli podział losowy nie jest akceptowalny, jak zwykle jest to przypadek z danymi szeregów czasowych. Możesz określić własny zestaw danych walidacji. Model zostanie oceniony względem określonego zestawu danych walidacji, a nie do co najmniej jednego losowo ustawionego typu danych.
+Użyj niestandardowego zestawu danych walidacji, jeśli podział losowy nie jest akceptowalny, jak zwykle jest to przypadek z danymi szeregów czasowych. Można określić własnego zestawu danych walidacji. Model zostanie oceniony względem określonego zestawu danych walidacji, a nie do co najmniej jednego losowo ustawionego typu danych.
 
 ```csharp
 experiment.Execute(trainDataView, validationDataView);
@@ -219,7 +227,7 @@ Poniżej znajdują się wszystkie dostępne metryki na ML zadania:
 
 * [Metryki klasyfikacji binarnej](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [Metryki klasyfikacji wieloklasowej](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
-* [Metryki regresji](xref:Microsoft.ML.AutoML.RegressionMetric)
+* [Metryki rekomendacji & regresji](xref:Microsoft.ML.AutoML.RegressionMetric)
 
 ## <a name="see-also"></a>Zobacz także
 

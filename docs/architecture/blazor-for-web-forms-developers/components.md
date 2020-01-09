@@ -4,12 +4,12 @@ description: Dowiedz się, jak tworzyć składniki interfejsu użytkownika wielo
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b34bdf61a425807030cf7648df245cc7a01c95de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337400"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705733"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Kompiluj składniki interfejsu użytkownika wielokrotnego użytku z Blazor
 
@@ -269,7 +269,7 @@ Procedury obsługi zdarzeń mogą być wykonywane synchronicznie lub asynchronic
 Po obsłudze zdarzenia składnik jest renderowany w celu uwzględnienia zmian stanu składnika. W przypadku obsługi zdarzeń asynchronicznych składnik jest renderowany natychmiast po zakończeniu wykonywania procedury obsługi. Składnik jest renderowany *ponownie* po zakończeniu `Task` asynchronicznej. Ten asynchroniczny tryb wykonywania umożliwia renderowanie niektórych odpowiednich interfejsów użytkownika, gdy asynchroniczne `Task` nadal trwa.
 
 ```razor
-<button @onclick="Get message">Get message</button>
+<button @onclick="ShowMessage">Get message</button>
 
 @if (showMessage)
 {

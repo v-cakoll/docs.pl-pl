@@ -1,25 +1,25 @@
 ---
-title: Pisanie pierwszego zapytania LINQ
+title: Pisanie pierwszej kwerendy LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: a9fe4241972815a04ec9c6a51a45760d72a8bbb2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: addf35afa2a4c88faf73ebc3d60fbcf9c4db1518
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349346"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636708"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Pisanie pierwszego zapytania LINQ (Visual Basic)
 *Zapytanie* jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są wyrażane w dedykowanym języku zapytań. W miarę upływu czasu różne języki zostały opracowane dla różnych typów źródeł danych, na przykład SQL dla relacyjnych baz danych i XQuery dla XML. Dzięki temu deweloper aplikacji może poznać nowy język zapytań dla każdego typu źródła danych lub obsługiwanego formatu danych.  
   
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] upraszcza sytuację, oferując spójny model do pracy z danymi w różnych rodzajach źródeł danych i formatach. W zapytaniu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zawsze pracujesz z obiektami. Te same podstawowe wzorce kodowania służą do wykonywania zapytań i przekształcania danych w dokumentach XML, baz danych SQL, ADO.NET zbiorach i jednostkach, kolekcjach .NET Framework oraz innych źródłach lub formatach, dla których dostawca [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] jest dostępny. W tym dokumencie opisano trzy etapy tworzenia i używania podstawowych zapytań [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+ Program Query Integrated Language (LINQ) upraszcza sytuację, oferując spójny model do pracy z danymi w różnych rodzajach źródeł danych i formatach. W zapytaniu LINQ zawsze pracujesz z obiektami. Te same podstawowe wzorce kodowania służą do wykonywania zapytań i przekształcania danych w dokumentach XML, baz danych SQL, ADO.NET zbiorach i jednostkach, kolekcjach .NET Framework i innych źródłach lub formatach, dla których jest dostępny dostawca LINQ. W tym dokumencie opisano trzy etapy tworzenia i używania podstawowych zapytań LINQ.  
   
 ## <a name="three-stages-of-a-query-operation"></a>Trzy etapy operacji zapytania  
- operacje zapytań [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] składają się z trzech akcji:  
+ Operacje zapytań LINQ składają się z trzech akcji:  
   
 1. Uzyskaj źródło danych lub źródła.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "74349346"
   
 3. Wykonaj zapytanie.  
   
- W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]wykonywanie zapytania jest różne od tworzenia zapytania. Nie są pobierane żadne dane tylko przez utworzenie zapytania. Ten punkt jest omówiona bardziej szczegółowo w dalszej części tego tematu.  
+ W LINQ, wykonywanie zapytania jest różne od tworzenia zapytania. Nie są pobierane żadne dane tylko przez utworzenie zapytania. Ten punkt jest omówiona bardziej szczegółowo w dalszej części tego tematu.  
   
  Poniższy przykład ilustruje trzy części operacji zapytania. W przykładzie zastosowano tablicę liczb całkowitych jako wygodne źródło danych do celów demonstracyjnych. Jednak te same koncepcje dotyczą również innych źródeł danych.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "74349346"
  `0 2 4 6`  
   
 ## <a name="the-data-source"></a>Źródło danych  
- Ze względu na to, że źródło danych w poprzednim przykładzie jest tablicą, niejawnie obsługuje interfejs ogólny <xref:System.Collections.Generic.IEnumerable%601>. Jest to fakt, że umożliwia użycie tablicy jako źródła danych dla zapytania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Typy obsługujące <xref:System.Collections.Generic.IEnumerable%601> lub interfejs pochodny, takie jak generyczne <xref:System.Linq.IQueryable%601>, są nazywane *typami Queryable*.  
+ Ze względu na to, że źródło danych w poprzednim przykładzie jest tablicą, niejawnie obsługuje interfejs ogólny <xref:System.Collections.Generic.IEnumerable%601>. Jest to fakt, że umożliwia użycie tablicy jako źródła danych dla zapytania LINQ. Typy obsługujące <xref:System.Collections.Generic.IEnumerable%601> lub interfejs pochodny, takie jak generyczne <xref:System.Linq.IQueryable%601>, są nazywane *typami Queryable*.  
   
- Jako niejawnie queryable typ, tablica nie wymaga modyfikacji ani specjalnego traktowania, które ma stanowić [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] źródło danych. Ta sama wartość dotyczy wszystkich typów kolekcji, które obsługują <xref:System.Collections.Generic.IEnumerable%601>, w tym <xref:System.Collections.Generic.List%601>ogólnych, <xref:System.Collections.Generic.Dictionary%602>i innych klas w bibliotece klas .NET Framework.  
+ Jako niejawnie queryable typ, tablica nie wymaga modyfikacji ani specjalnego traktowania, które ma stanowić źródło danych LINQ. Ta sama wartość dotyczy wszystkich typów kolekcji, które obsługują <xref:System.Collections.Generic.IEnumerable%601>, w tym <xref:System.Collections.Generic.List%601>ogólnych, <xref:System.Collections.Generic.Dictionary%602>i innych klas w bibliotece klas .NET Framework.  
   
- Jeśli dane źródłowe nie implementują jeszcze <xref:System.Collections.Generic.IEnumerable%601>, dostawca [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] jest wymagany do zaimplementowania funkcji *standardowych operatorów zapytań* dla tego źródła danych. Na przykład [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obsługuje Work ładowania dokumentu XML do typu <xref:System.Xml.Linq.XElement> queryable, jak pokazano w poniższym przykładzie. Aby uzyskać więcej informacji na temat standardowych operatorów zapytań, zobacz [standardowe operatory zapytań — Omówienie (Visual Basic)](standard-query-operators-overview.md).  
+ Jeśli dane źródłowe nie implementują jeszcze <xref:System.Collections.Generic.IEnumerable%601>, dostawca LINQ jest wymagany do zaimplementowania funkcji *standardowych operatorów zapytań* dla tego źródła danych. Na przykład [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obsługuje Work ładowania dokumentu XML do typu <xref:System.Xml.Linq.XElement> queryable, jak pokazano w poniższym przykładzie. Aby uzyskać więcej informacji na temat standardowych operatorów zapytań, zobacz [standardowe operatory zapytań — Omówienie (Visual Basic)](standard-query-operators-overview.md).  
   
  [!code-vb[VbLINQFirstQuery#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#2)]  
   
@@ -57,10 +57,10 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- Aby uzyskać więcej informacji o sposobach tworzenia określonych typów źródeł danych, zapoznaj się z dokumentacją dla różnych dostawców [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (Aby uzyskać listę tych dostawców, zobacz [LINQ (zapytanie zintegrowane z językiem)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) Podstawowa reguła jest prosta: [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] źródłem danych jest dowolny obiekt obsługujący ogólny interfejs <xref:System.Collections.Generic.IEnumerable%601> lub interfejs, który dziedziczy z niego.  
+ Więcej informacji o sposobach tworzenia określonych typów źródeł danych znajduje się w dokumentacji dotyczącej różnych dostawców LINQ. (Aby uzyskać listę tych dostawców, zobacz [LINQ (zapytanie zintegrowane z językiem)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) Podstawowa reguła jest prosta: Źródło danych LINQ to każdy obiekt, który obsługuje ogólny interfejs <xref:System.Collections.Generic.IEnumerable%601> lub interfejs, który dziedziczy z niego.  
   
 > [!NOTE]
-> Typy takie jak <xref:System.Collections.ArrayList> obsługujące nieogólny interfejs <xref:System.Collections.IEnumerable> mogą być również używane jako [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] źródła danych. Aby zapoznać się z przykładem, który używa <xref:System.Collections.ArrayList>, zobacz [How to: Query a ArrayList with LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
+> Typy takie jak <xref:System.Collections.ArrayList> obsługujące nieogólny interfejs <xref:System.Collections.IEnumerable> mogą być również używane jako źródła danych LINQ. Aby zapoznać się z przykładem, który używa <xref:System.Collections.ArrayList>, zobacz [How to: Query a ArrayList with LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
   
 ## <a name="the-query"></a>Zapytanie  
  W zapytaniu należy określić, jakie informacje mają być pobierane ze źródła danych lub źródeł. Istnieje również możliwość określenia, w jaki sposób te informacje mają być sortowane, grupowane lub strukturalne przed zwróceniem. Aby włączyć Tworzenie zapytania, Visual Basic zawiera nową składnię zapytania w języku.  
@@ -69,7 +69,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
- Wyrażenie zapytania zawiera trzy klauzule: `From`, `Where`i `Select`. Określona funkcja i cel każdej klauzuli wyrażenia zapytania są omówione w [podstawowych operacjach zapytań (Visual Basic)](basic-query-operations.md). Aby uzyskać więcej informacji, zobacz [zapytania](../../../../visual-basic/language-reference/queries/index.md). Należy pamiętać, że w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]definicja zapytania często jest przechowywana w zmiennej i wykonywany później. Zmienna zapytania, taka jak `evensQuery` w poprzednim przykładzie, musi być typem queryable. Typ `evensQuery` jest `IEnumerable(Of Integer)`, przypisany przez kompilator przy użyciu wnioskowania typu lokalnego.  
+ Wyrażenie zapytania zawiera trzy klauzule: `From`, `Where`i `Select`. Określona funkcja i cel każdej klauzuli wyrażenia zapytania są omówione w [podstawowych operacjach zapytań (Visual Basic)](basic-query-operations.md). Aby uzyskać więcej informacji, zobacz [zapytania](../../../../visual-basic/language-reference/queries/index.md). Należy zauważyć, że w LINQ, definicja zapytania często jest przechowywana w zmiennej i wykonywany później. Zmienna zapytania, taka jak `evensQuery` w poprzednim przykładzie, musi być typem queryable. Typ `evensQuery` jest `IEnumerable(Of Integer)`, przypisany przez kompilator przy użyciu wnioskowania typu lokalnego.  
   
  Należy pamiętać, że zmienna zapytania nie przyjmuje żadnej akcji i nie zwraca żadnych danych. Przechowuje tylko definicję zapytania. W poprzednim przykładzie jest to `For Each` pętla, która wykonuje zapytanie.  
   
@@ -77,7 +77,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  Wykonanie zapytania jest niezależne od tworzenia zapytania. Tworzenie zapytania definiuje zapytanie, ale wykonywanie jest wyzwalane przez inny mechanizm. Zapytanie może być wykonywane zaraz po jego zdefiniowaniu (*natychmiastowe wykonanie*) lub definicji może być przechowywane, a zapytanie można wykonać później (*odroczone wykonanie*).  
   
 ### <a name="deferred-execution"></a>Wykonanie odroczone  
- Typowa kwerenda [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] jest podobna do przedstawionej w poprzednim przykładzie, w której `evensQuery` jest zdefiniowana. Tworzy zapytanie, ale nie wykonuje go od razu. Zamiast tego definicja zapytania jest przechowywana w zmiennej zapytania `evensQuery`. Zapytanie jest wykonywane później, zazwyczaj przy użyciu pętli `For Each`, która zwraca sekwencję wartości lub przez zastosowanie standardowego operatora zapytania, takiego jak `Count` lub `Max`. Ten proces jest nazywany *wykonaniem odroczonym*.  
+ Typowa kwerenda LINQ jest podobna do przedstawionej w poprzednim przykładzie, w którym zdefiniowano `evensQuery`. Tworzy zapytanie, ale nie wykonuje go od razu. Zamiast tego definicja zapytania jest przechowywana w zmiennej zapytania `evensQuery`. Zapytanie jest wykonywane później, zazwyczaj przy użyciu pętli `For Each`, która zwraca sekwencję wartości lub przez zastosowanie standardowego operatora zapytania, takiego jak `Count` lub `Max`. Ten proces jest nazywany *wykonaniem odroczonym*.  
   
  [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
   

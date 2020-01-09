@@ -17,21 +17,21 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: a31dc2c5431c8201607462e8bdef4b8bae0fb41d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d966116db09c2baef7deabf5d01138e8445098be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460913"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636266"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Zasoby aplikacji WPF, zawartość, pliki danych
 Aplikacje Microsoft Windows często zależą od plików, które zawierają dane niewykonywalne, takie jak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], obrazy, wideo i dźwięk. Windows Presentation Foundation (WPF) oferuje specjalną obsługę konfigurowania, identyfikowania i korzystania z tych typów plików danych, które są nazywane plikami danych aplikacji. Ta obsługa dotyczy określonego zestawu typów plików danych aplikacji, w tym:  
   
-- **Pliki zasobów**: pliki danych, które są kompilowane do pliku wykonywalnego lub biblioteki [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zestawu.  
+- **Pliki zasobów**: pliki danych, które są kompilowane do pliku wykonywalnego lub zestawu WPF Library.  
   
-- **Pliki zawartości**: autonomiczne pliki danych z jawnym skojarzeniem z wykonywalnym zestawem [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+- **Pliki zawartości**: autonomiczne pliki danych z jawnym skojarzeniem z wykonywalnym zestawem WPF.  
   
-- **Lokacja plików początkowych**: autonomiczne pliki danych, które nie mają skojarzenia z wykonywalnym zestawem [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+- **Lokacja plików pochodzenia**: autonomiczne pliki danych, które nie mają skojarzenia z wykonywalnym zestawem WPF.  
   
  Jednym z ważnych różnic między tymi trzema typami plików jest to, że pliki zasobów i zawartości są znane w czasie kompilacji; zestaw ma jawną wiedzę o nich. Jednak w przypadku lokacji z plikami pochodzenia zestaw może nie mieć w ogóle informacji o nich ani niejawnej wiedzy za pomocą odwołania URI (Uniform Resource Identifier). w przypadku tej ostatniej nie ma gwarancji, że w rzeczywistości istnieje przywoływana lokacja pliku pierwotnego.  
   
@@ -55,7 +55,7 @@ Aplikacje Microsoft Windows często zależą od plików, które zawierają dane 
 > Pliki zasobów opisane w tej sekcji są inne niż pliki zasobów opisane w obszarze [zasoby XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md) i różne od osadzonych lub połączonych zasobów opisanych w temacie [Zarządzanie zasobami aplikacji (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ### <a name="configuring-resource-files"></a>Konfigurowanie plików zasobów  
- W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], plik zasobów jest plikiem, który jest zawarty w projekcie Microsoft Build Engine (MSBuild) jako element `Resource`.  
+ W WPF, plik zasobów jest plikiem, który jest zawarty w projekcie Microsoft Build Engine (MSBuild) jako element `Resource`.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -80,7 +80,7 @@ Aplikacje Microsoft Windows często zależą od plików, które zawierają dane 
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
- Podczas wywoływania <xref:System.Windows.Application.GetResourceStream%2A> zapewnia dostęp do <xref:System.IO.Stream>, należy wykonać dodatkową ilość pracy, aby przekonwertować ją na typ właściwości, za pomocą której zostanie on ustawiony. Zamiast tego można zezwolić [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] na otwieranie i konwertowanie <xref:System.IO.Stream> przez załadowanie pliku zasobów bezpośrednio do właściwości typu za pomocą kodu.  
+ Podczas wywoływania <xref:System.Windows.Application.GetResourceStream%2A> zapewnia dostęp do <xref:System.IO.Stream>, należy wykonać dodatkową ilość pracy, aby przekonwertować ją na typ właściwości, za pomocą której zostanie on ustawiony. Zamiast tego można zezwolić platformie WPF na otwieranie i konwertowanie <xref:System.IO.Stream> przez załadowanie pliku zasobów bezpośrednio do właściwości typu za pomocą kodu.  
   
  Poniższy przykład pokazuje, jak załadować <xref:System.Windows.Controls.Page> bezpośrednio do <xref:System.Windows.Controls.Frame> (`pageFrame`) przy użyciu kodu.  
   
@@ -92,7 +92,7 @@ Aplikacje Microsoft Windows często zależą od plików, które zawierają dane 
  [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
   
 ### <a name="application-code-files-as-resource-files"></a>Pliki kodu aplikacji jako pliki zasobów  
- Do specjalnego zestawu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plików kodu aplikacji można odwoływać się za pomocą identyfikatorów URI pakietów, takich jak Windows, strony, dokumenty przepływu i słowniki zasobów. Na przykład można ustawić właściwość <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> z identyfikatorem URI pakietu, który odwołuje się do okna lub strony, które chcesz załadować podczas uruchamiania aplikacji.  
+ Do specjalnego zestawu plików kodu aplikacji WPF można odwoływać się za pomocą identyfikatorów URI pakietów, takich jak Windows, strony, dokumenty przepływu i słowniki zasobów. Na przykład można ustawić właściwość <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> z identyfikatorem URI pakietu, który odwołuje się do okna lub strony, które chcesz załadować podczas uruchamiania aplikacji.  
   
  [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
   
@@ -160,7 +160,7 @@ Aplikacje Microsoft Windows często zależą od plików, które zawierają dane 
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
- Podczas wywoływania <xref:System.Windows.Application.GetContentStream%2A> zapewnia dostęp do <xref:System.IO.Stream>, należy wykonać dodatkową ilość pracy, aby przekonwertować ją na typ właściwości, za pomocą której zostanie on ustawiony. Zamiast tego można zezwolić [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] na otwieranie i konwertowanie <xref:System.IO.Stream> przez załadowanie pliku zasobów bezpośrednio do właściwości typu za pomocą kodu.  
+ Podczas wywoływania <xref:System.Windows.Application.GetContentStream%2A> zapewnia dostęp do <xref:System.IO.Stream>, należy wykonać dodatkową ilość pracy, aby przekonwertować ją na typ właściwości, za pomocą której zostanie on ustawiony. Zamiast tego można zezwolić platformie WPF na otwieranie i konwertowanie <xref:System.IO.Stream> przez załadowanie pliku zasobów bezpośrednio do właściwości typu za pomocą kodu.  
   
  Poniższy przykład pokazuje, jak załadować <xref:System.Windows.Controls.Page> bezpośrednio do <xref:System.Windows.Controls.Frame> (`pageFrame`) przy użyciu kodu.  
   
@@ -195,7 +195,7 @@ Aplikacje Microsoft Windows często zależą od plików, które zawierają dane 
 > Lokacja plików pochodzenia nie jest buforowana przez aplikację przeglądarki XAML (XBAP) na komputerze klienckim, natomiast pliki zawartości to. W związku z tym są pobierane tylko wtedy, gdy jest to wymagane. Jeśli aplikacja przeglądarki XAML (XBAP) ma duże pliki multimedialne, skonfigurowanie ich jako lokacji plików pochodzenia oznacza, że początkowe uruchomienie aplikacji jest znacznie szybsze i pliki są pobierane na żądanie.  
   
 ### <a name="configuring-site-of-origin-files"></a>Konfigurowanie lokacji plików pochodzenia  
- Jeśli witryna plików pochodzenia jest nieistniejąca lub nieznana w czasie kompilacji, należy użyć tradycyjnych mechanizmów wdrażania, aby upewnić się, że wymagane pliki są dostępne w czasie wykonywania, w tym przy użyciu narzędzia wiersza polecenia `XCopy` lub systemu Microsoft Windows Instalatora.  
+ Jeśli witryna plików pochodzenia jest nieistniejąca lub nieznana w czasie kompilacji, należy użyć tradycyjnych mechanizmów wdrażania, aby upewnić się, że wymagane pliki są dostępne w czasie wykonywania, w tym przy użyciu programu wiersza polecenia `XCopy` lub Instalator Windows firmy Microsoft.  
   
  Jeśli wiesz, jak w czasie kompilacji pliki, które mają znajdować się w lokacji pochodzenia, ale nadal chcesz uniknąć jawnej zależności, możesz dodać te pliki do projektu MSBuild jako element `None`. Podobnie jak w przypadku plików zawartości, należy ustawić atrybut `CopyToOutputDirectory` MSBuild, aby określić, że lokacja pliku pochodzenia jest kopiowana do lokalizacji, która jest względna w stosunku do skompilowanego zestawu, przez określenie wartości `Always` lub wartości `PreserveNewest`.  
   
@@ -222,7 +222,7 @@ Aplikacje Microsoft Windows często zależą od plików, które zawierają dane 
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
- Podczas wywoływania <xref:System.Windows.Application.GetRemoteStream%2A> zapewnia dostęp do <xref:System.IO.Stream>, należy wykonać dodatkową ilość pracy, aby przekonwertować ją na typ właściwości, za pomocą której zostanie on ustawiony. Zamiast tego można zezwolić [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] na otwieranie i konwertowanie <xref:System.IO.Stream> przez załadowanie pliku zasobów bezpośrednio do właściwości typu za pomocą kodu.  
+ Podczas wywoływania <xref:System.Windows.Application.GetRemoteStream%2A> zapewnia dostęp do <xref:System.IO.Stream>, należy wykonać dodatkową ilość pracy, aby przekonwertować ją na typ właściwości, za pomocą której zostanie on ustawiony. Zamiast tego można zezwolić platformie WPF na otwieranie i konwertowanie <xref:System.IO.Stream> przez załadowanie pliku zasobów bezpośrednio do właściwości typu za pomocą kodu.  
   
  Poniższy przykład pokazuje, jak załadować <xref:System.Windows.Controls.Page> bezpośrednio do <xref:System.Windows.Controls.Frame> (`pageFrame`) przy użyciu kodu.  
   

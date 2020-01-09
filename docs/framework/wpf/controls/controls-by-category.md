@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005692"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636214"
 ---
 # <a name="controls-by-category"></a>Kontrolki według kategorii
 Formanty Windows Presentation Foundation (WPF) można logicznie grupować w kilka kategorii. Te kategorie mogą służyć do wybrania odpowiedniej kontrolki dla danego scenariusza, pomagając zobaczyć, które kontrolki mają podobne wzorce użycia lub funkcje.  
@@ -140,7 +140,7 @@ Formanty Windows Presentation Foundation (WPF) można logicznie grupować w kilk
 - <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>Dokumenty  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera kilka wyspecjalizowanych formantów do wyświetlania dokumentów. Te kontrolki optymalizują środowisko czytania w oparciu o scenariusz użytkownika Target.  
+ WPF zawiera kilka wyspecjalizowanych formantów do wyświetlania dokumentów. Te kontrolki optymalizują środowisko czytania w oparciu o scenariusz użytkownika Target.  
   
 - <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -161,8 +161,8 @@ Formanty Windows Presentation Foundation (WPF) można logicznie grupować w kilk
   
 - <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="media"></a>Multimedialny  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] obejmuje zintegrowaną obsługę obsługiwania zawartości audio i wideo, a także [kodery-dekoder] dla najpopularniejszych formatów obrazów.  
+## <a name="media"></a>Nośnik  
+ WPF obejmuje zintegrowaną obsługę obsługiwania zawartości audio i wideo, a także [kodery-dekoder] dla najpopularniejszych formatów obrazów.  
   
 - <xref:System.Windows.Controls.Image>  
   

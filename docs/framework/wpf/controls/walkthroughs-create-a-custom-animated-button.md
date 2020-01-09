@@ -6,12 +6,12 @@ helpviewer_keywords:
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-ms.openlocfilehash: a3990a7dc446c264e0865e15dadcdaf3ba0a0ff6
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 0f881c19516eb42a71e6cd91d612caf8f5cf7b5e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460060"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636188"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Wskazówki: utwórz niestandardowy przycisk animowany
 Jak sugeruje nazwa, Windows Presentation Foundation (WPF) doskonale nadaje się do tworzenia bogatego środowiska prezentacji dla klientów. Te instruktaże pokazują, jak dostosować wygląd i zachowanie przycisku (w tym animacji). To dostosowanie odbywa się przy użyciu stylu i szablonu, dzięki czemu można łatwo zastosować ten niestandardowy przycisk do dowolnego przycisku w aplikacji. Na poniższej ilustracji przedstawiono dostosowany przycisk, który zostanie utworzony.
@@ -28,8 +28,8 @@ Jak sugeruje nazwa, Windows Presentation Foundation (WPF) doskonale nadaje się 
 ## <a name="related-sections"></a>Sekcje pokrewne
  [Style i tworzenia szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md) Opisuje, w jaki sposób można używać stylów i szablonów do określania wyglądu i zachowania kontrolek.
 
- [Przegląd animacji](../graphics-multimedia/animation-overview.md) Opisuje sposób animowania obiektów przy użyciu animacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] i systemu chronometrażu.
+ [Przegląd animacji](../graphics-multimedia/animation-overview.md) Opisuje sposób animowania obiektów przy użyciu animacji i systemu chronometrażu WPF.
 
  [Malowanie przy użyciu pełnych kolorów i gradientów — Omówienie](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md) Opisuje, jak używać obiektów pędzla do malowania przy użyciu pełnych kolorów, gradientów liniowych i gradientów promieniowych.
 
- [Efekty mapy bitowej — Omówienie](../graphics-multimedia/bitmap-effects-overview.md) Opisuje efekty mapy bitowej obsługiwane przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] i wyjaśnia, jak je zastosować.
+ [Efekty mapy bitowej — Omówienie](../graphics-multimedia/bitmap-effects-overview.md) Opisuje efekty mapy bitowej obsługiwane przez WPF i wyjaśnia, jak je zastosować.

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 8dd57a43f814d7e41ec74af3eeb6d797fef41c9c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 393e3bd24c4bc8b89064e01e1048b24254f5f83b
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418635"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635954"
 ---
 # <a name="data-transformations-with-linq-c"></a>Przekształcanie danych za pomocą LINQ (C#)
-[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] nie tylko na pobieranie danych. Jest to również zaawansowane narzędzie do przekształcania danych. Używając zapytania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], można użyć sekwencji źródłowej jako danych wejściowych i zmodyfikować ją na wiele sposobów, aby utworzyć nową sekwencję wyjściową. Można zmodyfikować samą sekwencję bez modyfikowania samych elementów przez sortowanie i grupowanie. Jednak prawdopodobnie najbardziej wydajną funkcją zapytań [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] jest możliwość tworzenia nowych typów. Jest to realizowane w klauzuli [SELECT](../../../language-reference/keywords/select-clause.md) . Na przykład można wykonać następujące zadania:  
+Zapytanie zintegrowane z językiem (LINQ) nie tylko pobiera dane. Jest to również zaawansowane narzędzie do przekształcania danych. Używając zapytania LINQ, można użyć sekwencji źródłowej jako danych wejściowych i zmodyfikować ją na wiele sposobów, aby utworzyć nową sekwencję wyjściową. Można zmodyfikować samą sekwencję bez modyfikowania samych elementów przez sortowanie i grupowanie. Jednak prawdopodobnie najbardziej wydajną funkcją zapytań LINQ jest możliwość tworzenia nowych typów. Jest to realizowane w klauzuli [SELECT](../../../language-reference/keywords/select-clause.md) . Na przykład należy wykonać następujące zadania:  
   
 - Scalanie wielu sekwencji wejściowych w jedną sekwencję wyjściową, która ma nowy typ.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "73418635"
  Poniżej przedstawiono kilka przykładów. Oczywiście te przekształcenia można łączyć na różne sposoby w tym samym zapytaniu. Ponadto sekwencja wyjściowa jednego zapytania może służyć jako sekwencja wejściowa dla nowej kwerendy.  
   
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>Łączenie wielu danych wejściowych w jedną sekwencję wyjściową  
- Za pomocą zapytania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] można utworzyć sekwencję wyjściową zawierającą elementy z więcej niż jednej sekwencji danych wejściowych. Poniższy przykład pokazuje, jak połączyć dwie struktury danych w pamięci, ale te same zasady można stosować do łączenia danych ze źródeł XML lub SQL lub zestawów danych. Założono następujące dwa typy klas:  
+ Za pomocą zapytania LINQ można utworzyć sekwencję wyjściową zawierającą elementy z więcej niż jednej sekwencji danych wejściowych. Poniższy przykład pokazuje, jak połączyć dwie struktury danych w pamięci, ale te same zasady można stosować do łączenia danych ze źródeł XML lub SQL lub zestawów danych. Założono następujące dwa typy klas:  
   
  [!code-csharp[CsLINQGettingStarted#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#7)]  
   
@@ -61,7 +61,7 @@ ms.locfileid: "73418635"
  Aby uzyskać więcej informacji, zobacz [Inicjatory obiektów i kolekcji](../../classes-and-structs/object-and-collection-initializers.md) oraz [Typy anonimowe](../../classes-and-structs/anonymous-types.md).  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>Przekształcanie obiektów w pamięci do formatu XML  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania ułatwiają Przekształcanie danych między strukturami danych w pamięci, bazami danych SQL, ADO.NETmi i strumieniami XML. Poniższy przykład przekształca obiekty w strukturze danych w pamięci na elementy XML.  
+ Zapytania LINQ ułatwiają Przekształcanie danych między strukturami danych w pamięci, bazami danych SQL, ADO.NETmi i strumieniami XML. Poniższy przykład przekształca obiekty w strukturze danych w pamięci na elementy XML.  
   
  [!code-csharp[CsLINQGettingStarted#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#9)]  
   

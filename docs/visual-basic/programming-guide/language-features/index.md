@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 8cb0b017410e991628bad59a6986ba37426c913f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0c8496d4e452da92e0ae994f0b246cc16723c06e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345066"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636578"
 ---
 # <a name="visual-basic-language-features"></a>Funkcje języka Visual Basic
 W poniższych tematach przedstawiono i omówiono podstawowe składniki Visual Basic, zorientowany obiektowo język programowania. Po utworzeniu interfejsu użytkownika dla aplikacji przy użyciu formularzy i kontrolek należy napisać kod, który definiuje zachowanie aplikacji. Podobnie jak w przypadku dowolnego nowoczesnego języka programowania, Visual Basic obsługuje wiele wspólnych konstrukcji programistycznych i elementów języka.  
@@ -54,7 +54,7 @@ W poniższych tematach przedstawiono i omówiono podstawowe składniki Visual Ba
  Opisuje interfejsy i sposoby ich używania w aplikacjach.  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Zawiera łącza do tematów, które wprowadzają [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] funkcje i programowanie.  
+ Zawiera łącza do tematów, które wprowadzają funkcje i programowanie programu Query Integrated Language (LINQ).  
   
  [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  Zawiera omówienie obiektów i klas, sposobu ich używania, ich relacji ze sobą oraz właściwości, metod i udostępnianych przez nie zdarzeń.  

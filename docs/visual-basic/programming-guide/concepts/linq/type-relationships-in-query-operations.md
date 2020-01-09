@@ -11,29 +11,29 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 8c201abef924766d52b1adb084970a24ebea2b50
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e839271ac254a5e96f8c99f59397016fb99540aa
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350570"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636916"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relacje typu w operacjach zapytań (Visual Basic)
 
-Zmienne używane w operacjach zapytania [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] są silnie wpisane i muszą być zgodne ze sobą. W źródle danych jest używane silne wpisywanie, w samej kwerendzie i w wykonaniu zapytania. Na poniższej ilustracji przedstawiono terminy używane do opisywania zapytania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Aby uzyskać więcej informacji na temat części zapytania, zobacz [podstawowe operacje zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
+Zmienne używane w operacjach zapytań programu Language-Integrated Query (LINQ) są silnie wpisywane i muszą być zgodne ze sobą. W źródle danych jest używane silne wpisywanie, w samej kwerendzie i w wykonaniu zapytania. Na poniższej ilustracji przedstawiono terminy używane do opisywania zapytania LINQ. Aby uzyskać więcej informacji na temat części zapytania, zobacz [podstawowe operacje zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
 
 ![Zrzut ekranu przedstawiający zapytanie pseudokodzie z wyróżnionymi elementami.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
 Typ zmiennej zakresu w zapytaniu musi być zgodny z typem elementów w źródle danych. Typ zmiennej zapytania musi być zgodny z elementem sekwencji zdefiniowanym w klauzuli `Select`. Na koniec typ elementów sekwencji musi być zgodny z typem zmiennej sterującej pętli, która jest używana w instrukcji `For Each`, która wykonuje zapytanie. To silne pisanie ułatwia identyfikację błędów typu w czasie kompilacji.
 
-Visual Basic sprawia, że silne wpisywanie jest wygodne przez implementację lokalnego wnioskowania o typie, znanego również jako *niejawne wpisywanie*. Ta funkcja jest używana w poprzednim przykładzie i zostanie wyświetlona w całym [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] przykłady i dokumentacja. W Visual Basic, wnioskowanie typu lokalnego jest wykonywane po prostu przy użyciu instrukcji `Dim` bez klauzuli `As`. W poniższym przykładzie `city` jest silnie wpisana jako ciąg.
+Visual Basic sprawia, że silne wpisywanie jest wygodne przez implementację lokalnego wnioskowania o typie, znanego również jako *niejawne wpisywanie*. Ta funkcja jest używana w poprzednim przykładzie i zostanie wyświetlona w całym dokumencie przykłady i dokumentacja LINQ. W Visual Basic, wnioskowanie typu lokalnego jest wykonywane po prostu przy użyciu instrukcji `Dim` bez klauzuli `As`. W poniższym przykładzie `city` jest silnie wpisana jako ciąg.
 
 [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]
 
 > [!NOTE]
 > Wnioskowanie o typie lokalnym działa tylko wtedy, gdy `Option Infer` jest ustawiony na `On`. Aby uzyskać więcej informacji, zobacz temat [opcja wnioskowanie](../../../../visual-basic/language-reference/statements/option-infer-statement.md).
 
-Jednak nawet jeśli używasz wnioskowania typu lokalnego w zapytaniu, te same relacje typu są obecne między zmiennymi w źródle danych, zmienną zapytania i pętlą wykonywania zapytania. Warto zapoznać się z podstawowymi informacjami o tych relacjach typu podczas pisania zapytań [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] lub pracy z przykładami i przykłady kodu w dokumentacji.
+Jednak nawet jeśli używasz wnioskowania typu lokalnego w zapytaniu, te same relacje typu są obecne między zmiennymi w źródle danych, zmienną zapytania i pętlą wykonywania zapytania. Warto zapoznać się z podstawowymi informacjami o tych relacjach typu podczas pisania zapytań LINQ lub pracy z przykładami i przykłady kodu w dokumentacji.
 
 Może być konieczne określenie typu jawnego dla zmiennej zakresu, która nie jest zgodna z typem zwracanym ze źródła danych. Możesz określić typ zmiennej zakresu przy użyciu klauzuli `As`. Powoduje to jednak błąd, jeśli konwersja jest [konwersją zawężania](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) , a `Option Strict` jest ustawiona na `On`. Dlatego zalecamy przeprowadzenie konwersji na wartości pobrane ze źródła danych. Możesz przekonwertować wartości ze źródła danych na jawny typ zmiennej zakresu przy użyciu metody <xref:System.Linq.Enumerable.Cast%2A>. Możesz również rzutować wartości wybrane w klauzuli `Select` na jawny typ, który jest inny niż typ zmiennej zakresu. Te punkty są zilustrowane w poniższym kodzie.
 
@@ -41,7 +41,7 @@ Może być konieczne określenie typu jawnego dla zmiennej zakresu, która nie j
 
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Zapytania, które zwracają wszystkie elementy danych źródłowych
 
-Poniższy przykład pokazuje [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operacji zapytania, która zwraca sekwencję elementów wybranych z danych źródłowych. Źródło, `names`, zawiera tablicę ciągów, a dane wyjściowe zapytania są sekwencją zawierającą ciągi, które zaczynają się literą M.
+Poniższy przykład pokazuje operację zapytania LINQ, która zwraca sekwencję elementów wybranych z danych źródłowych. Źródło, `names`, zawiera tablicę ciągów, a dane wyjściowe zapytania są sekwencją zawierającą ciągi, które zaczynają się literą M.
 
 [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]
 

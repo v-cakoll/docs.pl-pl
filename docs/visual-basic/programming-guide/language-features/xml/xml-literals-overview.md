@@ -1,5 +1,5 @@
 ---
-title: Literały XML — przegląd
+title: Literały XML - Przegląd
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], about XML literals
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: e5d2465d145f4059600121c6cef30bb2c74a8c1c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4eaa9399ca0038e3142886abf2161266f8c77782
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346201"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636084"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>Literały XML - Przegląd (Visual Basic)
 *Literał XML* umożliwia dołączenie kodu XML bezpośrednio do kodu Visual Basic. Składnia literału XML reprezentuje [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obiektów i jest podobna do składni XML 1,0. Ułatwia to tworzenie elementów i dokumentów XML, ponieważ kod ma taką samą strukturę jak końcowy kod XML.  
   
- Visual Basic kompiluje literały XML do obiektów [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] udostępnia prosty model obiektów do tworzenia i manipulowania XML, a ten model integruje się dobrze z [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.Linq.XElement>.  
+ Visual Basic kompiluje literały XML do obiektów [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] udostępnia prosty model obiektów do tworzenia i manipulowania XML, a ten model integruje się dobrze ze standardem Language-Integrated Query (LINQ). Aby uzyskać więcej informacji, zobacz temat <xref:System.Xml.Linq.XElement>.  
   
  Można osadzić wyrażenie Visual Basic w literale XML. W czasie wykonywania aplikacja tworzy obiekt [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dla każdego literału, włączając wartości osadzonych wyrażeń. Pozwala to określić zawartość dynamiczną wewnątrz literału XML. Aby uzyskać więcej informacji, zobacz [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   

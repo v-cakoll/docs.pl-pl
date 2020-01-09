@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: b60f2871062a12d3bee91a9c6d9883222b3034f4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a4151ff610c67ac762f0096c6a136f4475317782
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733567"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636643"
 ---
 # <a name="imaging-overview"></a>Przegląd Obrazowanie
 Ten temat zawiera wprowadzenie do składnika Microsoft Windows Presentation Foundation Imaging. Program WPF Imaging umożliwia deweloperom wyświetlanie, przekształcanie i formatowanie obrazów.  
@@ -48,7 +48,7 @@ Ten temat zawiera wprowadzenie do składnika Microsoft Windows Presentation Foun
   
 - Obsługa metadanych w pliku, które są zastrzeżone.  
   
-- Zarządzany składnik wykorzystuje niezarządzaną infrastrukturę, aby zapewnić bezproblemową integrację obrazów z innymi funkcjami [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], takimi jak [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animacje i grafiki. Składnik zarządzany również korzysta z modelu rozszerzalności kodera-dekodeka programu Windows Presentation Foundation (WPF), który umożliwia automatyczne rozpoznawanie nowych formatów obrazów w aplikacjach [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+- Zarządzany składnik wykorzystuje niezarządzaną infrastrukturę, aby zapewnić bezproblemową integrację obrazów z innymi funkcjami WPF, takimi jak [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animacje i grafiki. Składnik zarządzany również korzysta z modelu rozszerzalności kodera-dekodeka programu Windows Presentation Foundation (WPF), który umożliwia automatyczne rozpoznawanie nowych formatów obrazów w aplikacjach WPF.  
   
  Większość zarządzanych interfejsów API programu WPF Imaging znajduje się w przestrzeni nazw <xref:System.Windows.Media.Imaging?displayProperty=nameWithType>, chociaż kilka ważnych typów, takich jak <xref:System.Windows.Media.ImageBrush> i <xref:System.Windows.Media.ImageDrawing> znajdują się w przestrzeni nazw <xref:System.Windows.Media?displayProperty=nameWithType> i <xref:System.Windows.Controls.Image> znajdują się w przestrzeni nazw <xref:System.Windows.Controls?displayProperty=nameWithType>.  
   
@@ -59,7 +59,7 @@ Ten temat zawiera wprowadzenie do składnika Microsoft Windows Presentation Foun
 
  Koder-dekoder służy do dekodowania lub kodowania określonego formatu multimediów. Program WPF Imaging zawiera koder-dekoder dla formatów obrazów BMP, JPEG, PNG, TIFF, zdjęć, GIF i ikon. Każdy z tych kodeków pozwala aplikacjom dekodować i, z wyjątkiem ikony, zakodować odpowiednie formaty obrazu.  
   
- <xref:System.Windows.Media.Imaging.BitmapSource> jest ważną klasą używaną podczas dekodowania i kodowania obrazów. Jest to podstawowy blok konstrukcyjny potoku tworzenia obrazów WPF i reprezentuje pojedynczy, stały zestaw pikseli o określonym rozmiarze i rozdzielczości. <xref:System.Windows.Media.Imaging.BitmapSource> może być pojedynczą ramką obrazu z wieloma ramkami lub może być wynikiem transformacji wykonanej na <xref:System.Windows.Media.Imaging.BitmapSource>. Jest elementem nadrzędnym wielu klas podstawowych używanych w programie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Imaging, takich jak <xref:System.Windows.Media.Imaging.BitmapFrame>.  
+ <xref:System.Windows.Media.Imaging.BitmapSource> jest ważną klasą używaną podczas dekodowania i kodowania obrazów. Jest to podstawowy blok konstrukcyjny potoku tworzenia obrazów WPF i reprezentuje pojedynczy, stały zestaw pikseli o określonym rozmiarze i rozdzielczości. <xref:System.Windows.Media.Imaging.BitmapSource> może być pojedynczą ramką obrazu z wieloma ramkami lub może być wynikiem transformacji wykonanej na <xref:System.Windows.Media.Imaging.BitmapSource>. Jest elementem nadrzędnym wielu klas podstawowych używanych w programie WPF Imaging, takich jak <xref:System.Windows.Media.Imaging.BitmapFrame>.  
   
  <xref:System.Windows.Media.Imaging.BitmapFrame> jest używany do przechowywania rzeczywistych danych mapy bitowej w formacie obrazu. Wiele formatów obrazów obsługuje tylko pojedyncze <xref:System.Windows.Media.Imaging.BitmapFrame>, ale formaty takie jak GIF i TIFF obsługują wiele ramek na obraz. Ramki są używane przez dekodery jako dane wejściowe i są przesyłane do koderów w celu utworzenia plików obrazów.  
   
@@ -69,7 +69,7 @@ Ten temat zawiera wprowadzenie do składnika Microsoft Windows Presentation Foun
  [!code-vb[BitmapFrameExample#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
   
 ### <a name="image-format-decoding"></a>Dekodowanie formatu obrazu  
- Dekodowanie obrazu jest tłumaczeniem formatu obrazu na dane obrazu, które mogą być używane przez system. Dane obrazu mogą być następnie używane do wyświetlania, przetwarzania lub kodowania w innym formacie. Wybór dekodera jest oparty na formacie obrazu. Wybór kodera-dekoder jest automatyczny, chyba że określono określony dekoder. Przykłady w sekcji [Wyświetlanie obrazów w WPF](#_displayingimages) przedstawiają automatyczne dekodowanie. Dekodery formatu niestandardowego opracowane przy użyciu niezarządzanych interfejsów programu WPF Imaging i zarejestrowane w systemie automatycznie biorą udział w wyborze dekodera. Umożliwia to automatyczne wyświetlanie formatów niestandardowych w aplikacjach [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ Dekodowanie obrazu jest tłumaczeniem formatu obrazu na dane obrazu, które mogą być używane przez system. Dane obrazu mogą być następnie używane do wyświetlania, przetwarzania lub kodowania w innym formacie. Wybór dekodera jest oparty na formacie obrazu. Wybór kodera-dekoder jest automatyczny, chyba że określono określony dekoder. Przykłady w sekcji [Wyświetlanie obrazów w WPF](#_displayingimages) przedstawiają automatyczne dekodowanie. Dekodery formatu niestandardowego opracowane przy użyciu niezarządzanych interfejsów programu WPF Imaging i zarejestrowane w systemie automatycznie biorą udział w wyborze dekodera. Pozwala to na automatyczne wyświetlanie formatów niestandardowych w aplikacjach WPF.  
   
  Poniższy przykład ilustruje użycie dekodera mapy bitowej do zdekodowania obrazu formatu BMP.  
   
@@ -106,7 +106,7 @@ Ten temat zawiera wprowadzenie do składnika Microsoft Windows Presentation Foun
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 #### <a name="rotating-converting-and-cropping-images"></a>Obracanie, konwertowanie i przycinanie obrazów  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] umożliwia użytkownikom przekształcanie obrazów za pomocą właściwości <xref:System.Windows.Media.Imaging.BitmapImage> lub przy użyciu dodatkowych obiektów <xref:System.Windows.Media.Imaging.BitmapSource>, takich jak <xref:System.Windows.Media.Imaging.CroppedBitmap> lub <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>. Te przekształcenia obrazu umożliwiają skalowanie lub obracanie obrazu, Zmienianie formatu pikseli obrazu lub Kadrowanie obrazu.  
+ WPF umożliwia użytkownikom przekształcanie obrazów za pomocą właściwości <xref:System.Windows.Media.Imaging.BitmapImage> lub przy użyciu dodatkowych obiektów <xref:System.Windows.Media.Imaging.BitmapSource>, takich jak <xref:System.Windows.Media.Imaging.CroppedBitmap> lub <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>. Te przekształcenia obrazu umożliwiają skalowanie lub obracanie obrazu, Zmienianie formatu pikseli obrazu lub Kadrowanie obrazu.  
   
  Obracanie obrazów odbywa się przy użyciu właściwości <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> <xref:System.Windows.Media.Imaging.BitmapImage>. Obrót można wykonać tylko w przyrostach o 90 stopni. W poniższym przykładzie obraz jest obrócony o 90 stopni.  
   
@@ -181,7 +181,7 @@ Pędzle obrazu mogą wypełniać kształty, kontrolki, tekst i nie tylko
   
 <a name="_extensibility"></a>   
 ## <a name="codec-extensibility"></a>Rozszerzalność kodeka  
- Podstawowa funkcja programu WPF Imaging jest modelem rozszerzalności dla nowych koderów-dekoder obrazu. Te niezarządzane interfejsy umożliwiają deweloperom koderów-dekoderów z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], tak aby nowe formaty obrazów mogły być automatycznie używane przez aplikacje [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ Podstawowa funkcja programu WPF Imaging jest modelem rozszerzalności dla nowych koderów-dekoder obrazu. Te niezarządzane interfejsy umożliwiają deweloperom koderów-dekoderów za pomocą platformy WPF, dzięki czemu nowe formaty obrazu mogą być automatycznie używane przez aplikacje WPF.  
   
  Przykład interfejsu API rozszerzalności można znaleźć w [przykładowym kodeku Win32](https://go.microsoft.com/fwlink/?LinkID=160052). Ten przykład pokazuje, jak utworzyć dekoder i koder dla niestandardowego formatu obrazu.  
   

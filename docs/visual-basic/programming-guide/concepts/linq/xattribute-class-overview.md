@@ -2,18 +2,18 @@
 title: XAttribute, klasa — przegląd
 ms.date: 07/20/2015
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
-ms.openlocfilehash: 00aeeec3f251ecd1d21a313290326b3ba49d63d3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ceafe5478e41fb4c2038fd9300ef7b1ee6cb8411
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349323"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636656"
 ---
 # <a name="xattribute-class-overview-visual-basic"></a>Przegląd klasy XAttribute (Visual Basic)
 Atrybuty są parami nazw/wartości, które są skojarzone z elementem. Klasa <xref:System.Xml.Linq.XAttribute> reprezentuje atrybuty XML.  
   
-## <a name="overview"></a>Przegląd  
- Praca z atrybutami w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest podobna do pracy z elementami. Ich konstruktory są podobne. Metody używane do pobierania kolekcji są podobne. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażenie zapytania dla kolekcji atrybutów wygląda bardzo podobnie do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażenie zapytania dla kolekcji elementów.  
+## <a name="overview"></a>Omówienie  
+ Praca z atrybutami w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest podobna do pracy z elementami. Ich konstruktory są podobne. Metody używane do pobierania kolekcji są podobne. Wyrażenie zapytania LINQ dla kolekcji atrybutów wygląda bardzo podobnie do wyrażenia zapytania LINQ dla kolekcji elementów.  
   
  Kolejność, w jakiej atrybuty zostały dodane do elementu, jest zachowywana. Oznacza to, że podczas iteracji przez atrybuty są one widoczne w takiej samej kolejności, w jakiej zostały dodane.  
   

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: a1441f0cc3a7ac715a173be12e68c055ce36ff00
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d67919ba38c2e306672966ddc2f62140ef92b638
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460135"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636305"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Wdrażanie aplikacji WPF (WPF)
-Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zostać wdrożone. Systemy Windows i .NET Framework zawierają kilka technologii wdrażania. Technologia wdrażania, która jest używana do wdrażania aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], zależy od typu aplikacji. Ten temat zawiera krótkie omówienie poszczególnych technologii wdrażania oraz sposób ich użycia w połączeniu z wymaganiami dotyczącymi wdrożenia poszczególnych typów aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zostać wdrożone. Systemy Windows i .NET Framework zawierają kilka technologii wdrażania. Technologia wdrażania, która jest używana do wdrażania aplikacji WPF, zależy od typu aplikacji. Ten temat zawiera krótkie omówienie poszczególnych technologii wdrażania oraz sposób ich użycia w połączeniu z wymaganiami dotyczącymi wdrożenia poszczególnych typów aplikacji WPF.  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Technologie wdrażania  
@@ -63,7 +63,7 @@ Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zost
   
 <a name="Deploying_WPF_Applications"></a>   
 ## <a name="deploying-wpf-applications"></a>Wdrażanie aplikacji WPF  
- Opcje wdrażania dla aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zależą od typu aplikacji. W perspektywie wdrożenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ma trzy znaczące typy aplikacji:  
+ Opcje wdrażania aplikacji WPF zależą od typu aplikacji. W perspektywie wdrożenia WPF ma trzy znaczące typy aplikacji:  
   
 - Aplikacje autonomiczne.  
   
@@ -79,7 +79,7 @@ Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zost
 ### <a name="deploying-markup-only-xaml-applications"></a>Wdrażanie aplikacji XAML tylko do znaczników  
  Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony są zwykle publikowane na serwerach sieci Web, takich jak strony HTML, i można je przeglądać za pomocą programu Internet Explorer. Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony są uruchamiane w obszarze piaskownicy zabezpieczeń częściowej relacji zaufania z ograniczeniami, które są zdefiniowane przez zestaw uprawnień strefy internetowej. Zapewnia to równorzędną piaskownicę zabezpieczeń dla aplikacji sieci Web opartych na języku HTML.  
   
- Aby uzyskać więcej informacji na temat zabezpieczeń aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], zobacz [zabezpieczenia](../security-wpf.md).  
+ Aby uzyskać więcej informacji o zabezpieczeniach aplikacji WPF, zobacz [zabezpieczenia](../security-wpf.md).  
   
  Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony można zainstalować w lokalnym systemie plików przy użyciu polecenia XCopy lub Instalator Windows. Te strony można wyświetlać przy użyciu programu Internet Explorer lub Eksploratora Windows.  
   
@@ -112,7 +112,7 @@ Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zost
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>Instalowanie programu .NET Framework  
- Aby uruchomić aplikację [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], na kliencie musi być zainstalowana platforma Microsoft .NET. Program Internet Explorer automatycznie wykrywa, czy klienci są instalowani z .NET Framework podczas wyświetlania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji hostowanych w przeglądarce. Jeśli .NET Framework nie jest zainstalowana, program Internet Explorer poprosi użytkowników o ich zainstalowanie.  
+ Aby można było uruchomić aplikację WPF, na kliencie musi być zainstalowana platforma Microsoft .NET. Program Internet Explorer automatycznie wykrywa, czy klienci są instalowani z .NET Framework, gdy są wyświetlane aplikacje hostowane w przeglądarce WPF. Jeśli .NET Framework nie jest zainstalowana, program Internet Explorer poprosi użytkowników o ich zainstalowanie.  
   
  Aby wykryć, czy .NET Framework jest zainstalowana, program Internet Explorer zawiera aplikację programu inicjującego, która jest zarejestrowana jako rezerwowa procedura obsługi rozszerzeń MIME (Multipurpose Internet Mail Extensions) dla plików zawartości z następującymi rozszerzeniami: XAML, XPS,. XBAP i. Application. Jeśli przejdziesz do tych typów plików, a .NET Framework nie jest zainstalowana na kliencie, aplikacja inicjująca zażąda uprawnień do jej zainstalowania. Jeśli nie zostanie podane uprawnienie, ani .NET Framework ani aplikacja nie zostanie zainstalowana.  
   
@@ -123,4 +123,4 @@ Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zost
 ## <a name="see-also"></a>Zobacz także
 
 - [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)
-- [Security](../security-wpf.md)
+- [Zabezpieczenia](../security-wpf.md)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6a9f229697ce3d6328c6fb09d18d4cc2627eab10
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d2e472cc996c42aa091ed95c6954d0879c98372
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351015"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636760"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Wskazówki: Pisanie zapytań w Visual Basic
 
-W tym instruktażu pokazano, jak za pomocą funkcji języka Visual Basic pisać [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażenia zapytań. W tym przewodniku pokazano, jak tworzyć zapytania na liście obiektów uczniów, jak uruchamiać zapytania i jak je modyfikować. Zapytania obejmują kilka funkcji, w tym Inicjatory obiektów, wnioskowanie typu lokalnego i typy anonimowe.
+W tym instruktażu pokazano, w jaki sposób można użyć funkcji języka Visual Basic, aby napisać wyrażenia zapytania dotyczące języka LINQ. W tym przewodniku pokazano, jak tworzyć zapytania na liście obiektów uczniów, jak uruchamiać zapytania i jak je modyfikować. Zapytania obejmują kilka funkcji, w tym Inicjatory obiektów, wnioskowanie typu lokalnego i typy anonimowe.
 
-Po ukończeniu tego przewodnika będziesz mieć możliwość przejścia do przykładów i dokumentacji dotyczącej konkretnego dostawcy [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawcy obejmują [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].
+Po zakończeniu tego instruktażu będziesz mieć możliwość przejścia do przykładów i dokumentacji dla określonego dostawcy LINQ. Dostawcy LINQ obejmują [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].
 
 ## <a name="create-a-project"></a>Tworzenie projektu
 
@@ -133,13 +133,13 @@ Można łatwiej skanować wyniki zapytania, jeśli znajdują się one w określo
 
 ## <a name="additional-examples"></a>Dodatkowe przykłady
 
-Teraz, po zrozumieniu podstaw, poniżej przedstawiono listę dodatkowych przykładów demonstrujących elastyczność i możliwości zapytań [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Każdy przykład jest poprzedzony krótkim opisem jego działania. Umieść wskaźnik myszy nad zmienną wyników zapytania dla każdego zapytania, aby zobaczyć wnioskowany typ. Użyj pętli `For Each`, aby wygenerować wyniki.
+Teraz, po zrozumieniu podstaw, poniżej przedstawiono listę dodatkowych przykładów demonstrujących elastyczność i możliwości zapytań LINQ. Każdy przykład jest poprzedzony krótkim opisem jego działania. Umieść wskaźnik myszy nad zmienną wyników zapytania dla każdego zapytania, aby zobaczyć wnioskowany typ. Użyj pętli `For Each`, aby wygenerować wyniki.
 
 [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]
 
 ## <a name="additional-information"></a>Dodatkowe informacje
 
-Po zapoznaniu się z podstawowymi pojęciami dotyczącymi pracy z zapytaniami możesz zapoznać się z dokumentacją i przykładami dotyczącymi określonego typu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawcy:
+Po zapoznaniu się z podstawowymi pojęciami dotyczącymi pracy z zapytaniami możesz zapoznać się z dokumentacją i przykładami dotyczącymi określonego typu dostawcy LINQ:
 
 - [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 

@@ -1,17 +1,17 @@
 ---
-title: Function — Wyrażenie
+title: Function, wyrażenie
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Function expression [Visual Basic]
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: d14d7c9bc701b5e06c51202c07c3b79832aba7cc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 454c4e3d926640934a8edc4fcb16e4308a89dd50
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331080"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632340"
 ---
 # <a name="function-expression-visual-basic"></a>Function — Wyrażenie (Visual Basic)
 Deklaruje parametry i kod, który definiuje funkcję wyrażenia lambda.  
@@ -30,9 +30,9 @@ End Function
   
 |Termin|Definicja|  
 |---|---|  
-|`parameterlist`|Opcjonalna. Lista nazw zmiennych lokalnych, które reprezentują parametry tej procedury. Nawiasy muszą być obecne nawet wtedy, gdy lista jest pusta. Zobacz [listę parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`expression`|Wymagana. Pojedyncze wyrażenie. Typ wyrażenia jest zwracanym typem funkcji.|  
-|`statements`|Wymagana. Lista instrukcji zwracających wartość przy użyciu instrukcji `Return`. (Patrz [instrukcja return](../../../visual-basic/language-reference/statements/return-statement.md)). Typ zwracanej wartości jest zwracanym typem funkcji.|  
+|`parameterlist`|Opcjonalny. Lista nazw zmiennych lokalnych, które reprezentują parametry tej procedury. Nawiasy muszą być obecne nawet wtedy, gdy lista jest pusta. Zobacz [listę parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`expression`|Wymagany. Pojedyncze wyrażenie. Typ wyrażenia jest zwracanym typem funkcji.|  
+|`statements`|Wymagany. Lista instrukcji zwracających wartość przy użyciu instrukcji `Return`. (Patrz [instrukcja return](../../../visual-basic/language-reference/statements/return-statement.md)). Typ zwracanej wartości jest zwracanym typem funkcji.|  
   
 ## <a name="remarks"></a>Uwagi  
  *Wyrażenie lambda* jest funkcją bez nazwy, która oblicza i zwraca wartość. Możesz użyć wyrażenia lambda wszędzie tam, gdzie można użyć typu delegata, z wyjątkiem jako argumentu `RemoveHandler`. Aby uzyskać więcej informacji na temat delegatów i użycie wyrażeń lambda z delegatami, zobacz [instrukcja Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) i [Swobodna konwersja delegata](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
@@ -72,7 +72,7 @@ End Function
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Przykład  
- Wyrażenia lambda podstawą wiele operatorów zapytań w [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]i mogą być używane jawnie w zapytaniach opartych na metodzie. W poniższym przykładzie przedstawiono typowe zapytanie [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], po którym następuje tłumaczenie zapytania do formatu metody.  
+ Wyrażenia lambda podstawą wiele operatorów zapytań w zapytaniach zintegrowanych z językiem (LINQ) i mogą być używane jawnie w zapytaniach opartych na metodzie. W poniższym przykładzie przedstawiono typowe zapytanie LINQ, po którym następuje tłumaczenie zapytania do formatu metody.  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  

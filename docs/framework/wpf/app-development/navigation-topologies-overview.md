@@ -9,18 +9,18 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 5d9b09085ed8057f53cae9f9177682b01e698f6d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5679bac06b87b3c4e50cbc4a238d7daf3e33a564
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580707"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636279"
 ---
 # <a name="navigation-topologies-overview"></a>Przegląd Topologia nawigacji
-<a name="introduction"></a>To omówienie zawiera wprowadzenie do topologii nawigacji w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Trzy popularne topologie nawigacji wraz z przykładami zostały omówione w dalszej części.  
+<a name="introduction"></a>To omówienie zawiera wprowadzenie do topologii nawigacji w WPF. Trzy popularne topologie nawigacji wraz z przykładami zostały omówione w dalszej części.  
   
 > [!NOTE]
-> Przed przeczytaniem tego tematu należy zapoznać się z koncepcją nawigacyjną strukturalną w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] przy użyciu funkcji strony. Aby uzyskać więcej informacji na temat obu tych tematów, zobacz [Omówienie nawigacji strukturalnej](structured-navigation-overview.md).  
+> Przed przeczytaniem tego tematu należy zapoznać się z koncepcją strukturalnej nawigacji w WPF przy użyciu funkcji strony. Aby uzyskać więcej informacji na temat obu tych tematów, zobacz [Omówienie nawigacji strukturalnej](structured-navigation-overview.md).  
   
  Ten temat zawiera następujące sekcje:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "72580707"
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>Topologie nawigacji  
- W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Nawigacja zwykle składa się ze stron (<xref:System.Windows.Controls.Page>) z hiperłączami (<xref:System.Windows.Documents.Hyperlink>), które przejdą do innych stron po kliknięciu. Strony, które są przeznaczone do programu są identyfikowane przez identyfikatory URI (Uniform Resource Identifier) (zobacz [identyfikatory URI pakietów w WPF](pack-uris-in-wpf.md)). Rozważmy następujący prosty przykład pokazujący strony, hiperłącza i Uniform Resource Identifier (URI):  
+ W programie WPF Nawigacja zwykle składa się ze stron (<xref:System.Windows.Controls.Page>) za pomocą hiperlinków (<xref:System.Windows.Documents.Hyperlink>), które przechodzenia do innych stron po kliknięciu. Strony, które są przeznaczone do programu są identyfikowane przez identyfikatory URI (Uniform Resource Identifier) (zobacz [identyfikatory URI pakietów w WPF](pack-uris-in-wpf.md)). Rozważmy następujący prosty przykład pokazujący strony, hiperłącza i Uniform Resource Identifier (URI):  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
@@ -66,7 +66,7 @@ ms.locfileid: "72580707"
   
  Typowe zachowania w przypadku nawigowania po ustalonej topologii liniowej obejmują następujące elementy:  
   
-- Nawigowanie ze strony wywołującej do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania (<xref:System.Windows.Navigation.PageFunction%601> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nie jest wymagana), ponieważ strona wywołująca może bezpośrednio wywołać pierwszą stronę kreatora. Za pomocą strony uruchamiania można jednak uprościć inicjowanie kreatora, szczególnie jeśli Inicjalizacja jest złożona.  
+- Nawigowanie ze strony wywołującej do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania (<xref:System.Windows.Navigation.PageFunction%601>[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]nie jest wymagana), ponieważ strona wywołująca może bezpośrednio wywołać pierwszą stronę kreatora. Za pomocą strony uruchamiania można jednak uprościć inicjowanie kreatora, szczególnie jeśli Inicjalizacja jest złożona.  
   
 - Użytkownicy mogą przechodzić między stronami przy użyciu przycisków Wstecz i dalej (lub hiperlinków).  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72580707"
   
  Mimo że przechodzenie między stronami w stałej strukturze hierarchicznej jest określane w czasie wykonywania, środowisko użytkownika jest takie samo jak środowisko użytkownika dla stałej topologii liniowej:  
   
-- Nawigowanie ze strony wywołującej do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania (<xref:System.Windows.Navigation.PageFunction%601> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nie jest wymagana), ponieważ strona wywołująca może bezpośrednio wywołać pierwszą stronę kreatora. Za pomocą strony uruchamiania można jednak uprościć inicjowanie kreatora, szczególnie jeśli Inicjalizacja jest złożona.  
+- Nawigowanie ze strony wywołującej do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania (<xref:System.Windows.Navigation.PageFunction%601>[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]nie jest wymagana), ponieważ strona wywołująca może bezpośrednio wywołać pierwszą stronę kreatora. Za pomocą strony uruchamiania można jednak uprościć inicjowanie kreatora, szczególnie jeśli Inicjalizacja jest złożona.  
   
 - Użytkownicy mogą przechodzić między stronami przy użyciu przycisków Wstecz i dalej (lub hiperlinków).  
   
@@ -124,7 +124,7 @@ ms.locfileid: "72580707"
   
  Sekwencja nawigacji jest znana jako topologia generowana dynamicznie. Dla użytkownika, podobnie jak w przypadku innych topologii nawigacyjnej, środowisko użytkownika jest takie samo, jak w przypadku poprzednich topologii:  
   
-- Nawigowanie ze strony wywołującej do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania (<xref:System.Windows.Navigation.PageFunction%601> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nie jest wymagana), ponieważ strona wywołująca może bezpośrednio wywołać pierwszą stronę kreatora. Za pomocą strony uruchamiania można jednak uprościć inicjowanie kreatora, szczególnie jeśli Inicjalizacja jest złożona.  
+- Nawigowanie ze strony wywołującej do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania (<xref:System.Windows.Navigation.PageFunction%601>[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]nie jest wymagana), ponieważ strona wywołująca może bezpośrednio wywołać pierwszą stronę kreatora. Za pomocą strony uruchamiania można jednak uprościć inicjowanie kreatora, szczególnie jeśli Inicjalizacja jest złożona.  
   
 - Użytkownicy mogą przechodzić między stronami przy użyciu przycisków Wstecz i dalej (lub hiperlinków).  
   

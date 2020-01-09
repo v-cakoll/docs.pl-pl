@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 11a58ddf246c77cf4372e940b184413054b10778
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204592"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634927"
 ---
 # <a name="c-walkthroughs"></a>C# — wskazówki
 Instruktaże zawierają instrukcje krok po kroku dla typowych scenariuszy, co sprawia, że jest dobrym miejscem do rozpoczęcia uczenia się dotyczącej produktu lub określonego obszaru funkcji.  
@@ -48,7 +48,7 @@ Instruktaże zawierają instrukcje krok po kroku dla typowych scenariuszy, co sp
  Pokazuje niektóre z często wykonywanych zadań, takich jak dodawanie lub usuwanie karty na `TabControl`, dokowanie kontrolki do jej elementu nadrzędnego i zmiana orientacji kontrolki `SplitContainer`.  
   
  [Pisanie zapytań w C# (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Demonstruje funkcje C# języka, które są używane do pisania wyrażeń zapytania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+ Demonstruje funkcje C# języka, które są używane do pisania wyrażeń zapytań LINQ.  
   
  [Manipulowanie danymi (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  Opisuje scenariusz [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] na potrzeby dodawania, modyfikowania i usuwania danych w bazie danych.  

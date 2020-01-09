@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: ae4d7f23729f5bd39558902a58d33c6c45572d85
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a702456895cfdbd44a58059befefb69deee5afa3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977017"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636201"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Rozszerz szklaną klatkę na aplikację WPF
 
@@ -30,7 +30,7 @@ Na poniższej ilustracji przedstawiono szklaną ramkę rozszerzoną na pasku adr
 
 ![Zrzut ekranu przedstawiający ramkę szkła rozszerzoną za paskiem adresu przeglądarki IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Aby można było rozwinąć szklaną ramkę w aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], wymagany jest dostęp do niezarządzanego interfejsu API. Poniższy przykład kodu wykonuje wywołanie platformy (PInvoke) dla dwóch interfejsów API, które są konieczne do rozszerania ramki do obszaru klienckiego. Każdy z tych interfejsów API jest zadeklarowany w klasie o nazwie **NonClientRegionAPI**.
+Aby można było rozwinąć szklaną ramkę w aplikacji WPF, wymagany jest dostęp do niezarządzanego interfejsu API. Poniższy przykład kodu wykonuje wywołanie platformy (PInvoke) dla dwóch interfejsów API, które są konieczne do rozszerania ramki do obszaru klienckiego. Każdy z tych interfejsów API jest zadeklarowany w klasie o nazwie **NonClientRegionAPI**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -66,7 +66,7 @@ End Function
 
 ## <a name="example"></a>Przykład
 
-Aby można było użyć funkcji [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) , należy uzyskać uchwyt okna. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]można uzyskać uchwyt okna z właściwości <xref:System.Windows.Interop.HwndSource.Handle%2A> <xref:System.Windows.Interop.HwndSource>. W poniższym przykładzie ramka zostanie rozszerzona do obszaru klienckiego w <xref:System.Windows.FrameworkElement.Loaded> zdarzeniu okna.
+Aby można było użyć funkcji [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) , należy uzyskać uchwyt okna. W WPF, uchwyt okna można uzyskać z właściwości <xref:System.Windows.Interop.HwndSource.Handle%2A> <xref:System.Windows.Interop.HwndSource>. W poniższym przykładzie ramka zostanie rozszerzona do obszaru klienckiego w <xref:System.Windows.FrameworkElement.Loaded> zdarzeniu okna.
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -145,7 +145,7 @@ W poniższym przykładzie pokazano proste okno, w którym ramka zostanie rozszer
 </Window>
 ```
 
-Na poniższej ilustracji przedstawiono szklaną ramkę rozszerzoną do aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]:
+Na poniższej ilustracji przedstawiono szklaną ramkę rozszerzoną do aplikacji WPF:
 
 ![Zrzut ekranu przedstawiający ramkę szklaną rozszerzoną do aplikacji WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 

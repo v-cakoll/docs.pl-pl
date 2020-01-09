@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: d4a2562324259bda0bab523849449d584736b2ae
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6c27442cb5c0c4172f503c945849e47560c2b33d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423197"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635356"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Wskazówki: Programowanie Office (C# i Visual Basic)
 
@@ -38,7 +38,7 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany Microsoft Office Excel
 
 3. W okienku **zainstalowane szablony** rozwiń węzeł **Visual Basic** lub **Wizualizacja C#** , rozwiń węzeł **Office**, a następnie kliknij pozycję wersja roku produktu pakietu Office.
 
-4. W okienku **Szablony** kliknij pozycję **Excel \<version > dodatku**.
+4. W okienku **Szablony** kliknij pozycję **Excel \<wersja > dodatek**.
 
 5. Sprawdź górną część okienka **Szablony** , aby upewnić się, że w polu **platforma docelowa** zostanie wyświetlona **.NET Framework 4**lub nowsza wersja.
 
@@ -52,7 +52,7 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany Microsoft Office Excel
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy nazwę projektu, a następnie kliknij pozycję **Dodaj odwołanie**. Zostanie wyświetlone okno dialogowe **Dodawanie odwołania** .
 
-2. Na karcie **zestawy** wybierz pozycję **Microsoft. Office. Interop. Excel**, wersja `<version>.0.0.0` (Aby uzyskać klucz do numerów wersji produktu pakietu Office, zobacz [Microsoft Versions](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), na liście **Nazwa składnika** , a następnie naciśnij i przytrzymaj klawisz Ctrl. Wybierz **Microsoft. Office. Interop. Word**, `version <version>.0.0.0`. Jeśli zestawy nie są widoczne, może być konieczne zagwarantowanie, że są one zainstalowane i wyświetlone (zobacz [instrukcje: Instalowanie podstawowych zestawów międzyoperacyjnych pakietu Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).
+2. Na karcie **zestawy** wybierz pozycję **Microsoft. Office. Interop. Excel**, wersja `<version>.0.0.0` (Aby uzyskać klucz do numerów wersji produktu pakietu Office, zobacz [Microsoft Versions](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), na liście **Nazwa składnika** , a następnie naciśnij i przytrzymaj klawisz Ctrl i wybierz pozycję **Microsoft. Office. Interop. Word**, `version <version>.0.0.0`. Jeśli zestawy nie są widoczne, może być konieczne zagwarantowanie, że są one zainstalowane i wyświetlone (zobacz [instrukcje: Instalowanie podstawowych zestawów międzyoperacyjnych pakietu Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).
 
 3. Kliknij przycisk **OK**.
 
@@ -106,7 +106,7 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany Microsoft Office Excel
 
          Nie można tworzyć własnych właściwości indeksowanych. Funkcja obsługuje tylko użycie istniejących właściwości indeksowanych.
 
-         Aby uzyskać więcej informacji, zobacz [jak: korzystanie z właściwości indeksowanych w programowaniu międzyoperacyjnym modelu COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md).
+         Aby uzyskać więcej informacji, zobacz [jak używać właściwości indeksowanych w programowaniu międzyoperacyjnym modelu COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md).
 
 2. Dodaj następujący kod na końcu `DisplayInExcel`, aby dopasować szerokości kolumn w celu dopasowania do zawartości.
 
@@ -114,7 +114,7 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany Microsoft Office Excel
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     Te dodatki przedstawiają kolejną funkcję C#w: traktowanie wartości `Object` zwracanych z hostów com, takich jak pakiet Office, tak jakby były typu [dynamicznego](../../language-reference/builtin-types/reference-types.md). Dzieje się tak automatycznie, gdy **typy osadzania międzyoperacyjności** mają ustawioną wartość domyślną, `True` lub, równoważne, gdy do zestawu jest przywoływana opcja kompilatora [-link](../../language-reference/compiler-options/link-compiler-option.md) . Typ `dynamic` umożliwia późne wiązanie, już dostępne w Visual Basic i pozwala uniknąć jawnego rzutowania wymaganego w C# 3,0 i wcześniejszych wersjach języka.
+     Te dodatki przedstawiają kolejną funkcję C#w: traktowanie wartości `Object` zwracanych z hostów com, takich jak pakiet Office, tak jakby były typu [dynamicznego](../../language-reference/builtin-types/reference-types.md). Dzieje się tak automatycznie, gdy **typy osadzania międzyoperacyjności** mają ustawioną wartość domyślną, `True`lub, równoważne, gdy do zestawu jest przywoływana opcja kompilatora [-link](../../language-reference/compiler-options/link-compiler-option.md) . Typ `dynamic` umożliwia późne wiązanie, już dostępne w Visual Basic i pozwala uniknąć jawnego rzutowania wymaganego w C# 3,0 i wcześniejszych wersjach języka.
 
      Na przykład `excelApp.Columns[1]` zwraca `Object`, a `AutoFit` jest metodą [zakresu](<xref:Microsoft.Office.Interop.Excel.Range>) programu Excel. Bez `dynamic`należy rzutować obiekt zwrócony przez `excelApp.Columns[1]` jako wystąpienie `Range` przed wywołaniem metody `AutoFit`.
 
@@ -140,7 +140,7 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany Microsoft Office Excel
 
      [!code-vb[csOfficeWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#10)]
 
-     Ten kod ilustruje kilka nowych funkcji w C#: możliwość pomijania słowa kluczowego `ref` w programowaniu com, argumentach nazwanych i opcjonalnych argumentach. Te funkcje już istnieją w Visual Basic. Metoda [PasteSpecial](<xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>) ma siedem parametrów, spośród których wszystkie są zdefiniowane jako opcjonalne parametry odwołania. Argumenty nazwane i opcjonalne umożliwiają określenie parametrów, do których chcesz uzyskać dostęp według nazwy, i wysłanie argumentów tylko do tych parametrów. W tym przykładzie argumenty są wysyłane w celu wskazania, że należy utworzyć link do skoroszytu w schowku (parametr `Link`) i czy łącze ma być wyświetlane w dokumencie programu Word jako ikona (`DisplayAsIcon` parametrów). Wizualizacja C# umożliwia również Pominięcie słowa kluczowego `ref` dla tych argumentów.
+     Ten kod ilustruje kilka nowych funkcji w C#: możliwość pomijania słowa kluczowego `ref` w programowaniu com, argumentach nazwanych i opcjonalnych argumentach. Te funkcje już istnieją w Visual Basic. Metoda [PasteSpecial](<xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>) ma siedem parametrów, spośród których wszystkie są zdefiniowane jako opcjonalne parametry odwołania. Argumenty nazwane i opcjonalne umożliwiają określenie parametrów, do których chcesz uzyskać dostęp według nazwy, i wysłanie argumentów tylko do tych parametrów. W tym przykładzie argumenty są wysyłane w celu wskazania, że należy utworzyć link do skoroszytu w schowku (parametr `Link`) i czy łącze ma być wyświetlane w dokumencie programu Word jako ikona (`DisplayAsIcon`parametrów). Wizualizacja C# umożliwia również Pominięcie słowa kluczowego `ref` dla tych argumentów.
 
 ### <a name="to-run-the-application"></a>Aby uruchomić aplikację
 
@@ -154,11 +154,11 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany Microsoft Office Excel
 
 1. Uruchom aplikację ponownie, ale nie klikaj przycisku **Wyczyść rozwiązanie**.
 
-2. Wybierz pozycję **Rozpocznij**. Znajdź **Microsoft Visual Studio \<version >** i Otwórz wiersz polecenia dewelopera.
+2. Wybierz pozycję **Rozpocznij**. Znajdź **Microsoft Visual Studio \<wersji >** i Otwórz wiersz polecenia dewelopera.
 
 3. Wpisz `ildasm` w oknie wiersz polecenia dla deweloperów dla programu Visual Studio, a następnie naciśnij klawisz ENTER. Zostanie wyświetlone okno IL DASM.
 
-4. W menu **plik** w oknie Il DASM wybierz pozycję **plik**  > **Otwórz**. Kliknij dwukrotnie pozycję **Visual Studio \<version >** , a następnie kliknij dwukrotnie pozycję **projekty**. Otwórz folder dla projektu i sprawdź folder bin/debug dla *nazwy projektu*. dll. Kliknij dwukrotnie *nazwę projektu*. dll. Nowe okno wyświetla atrybuty projektu, oprócz odwołań do innych modułów i zestawów. Należy zauważyć, że przestrzenie nazw `Microsoft.Office.Interop.Excel` i `Microsoft.Office.Interop.Word` są zawarte w zestawie. Domyślnie w programie Visual Studio kompilator importuje wymagane typy z przywoływanego PIA do zestawu.
+4. W menu **plik** w oknie Il DASM wybierz pozycję **plik** > **Otwórz**. Kliknij dwukrotnie pozycję **Visual Studio \<wersja >** , a następnie kliknij dwukrotnie pozycję **projekty**. Otwórz folder dla projektu i sprawdź folder bin/debug dla *nazwy projektu*. dll. Kliknij dwukrotnie *nazwę projektu*. dll. Nowe okno wyświetla atrybuty projektu, oprócz odwołań do innych modułów i zestawów. Należy zauważyć, że przestrzenie nazw `Microsoft.Office.Interop.Excel` i `Microsoft.Office.Interop.Word` są zawarte w zestawie. Domyślnie w programie Visual Studio kompilator importuje wymagane typy z przywoływanego PIA do zestawu.
 
      Aby uzyskać więcej informacji, zobacz [jak: wyświetlić zawartość zestawu](../../../standard/assembly/view-contents.md).
 
@@ -202,8 +202,8 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany Microsoft Office Excel
 - [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Używanie typu dynamicznego](../types/using-type-dynamic.md)
 - [Wyrażenia lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Wyrażenia lambda (C#)](../statements-expressions-operators/lambda-expressions.md)
-- [Instrukcje: użycie właściwości indeksowanych w programowaniu usługi międzyoperacyjnej modelu COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [Lambda Expressions (C#)](../statements-expressions-operators/lambda-expressions.md)
+- [Jak używać właściwości indeksowanych w programowaniu międzyoperacyjnym modelu COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [Przewodnik: osadzanie informacji o typie z zestawów Microsoft Office w programie Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
 - [Przewodnik: osadzanie typów z zarządzanych zestawów](../../../standard/assembly/embed-types-visual-studio.md)
 - [Przewodnik: Tworzenie pierwszego dodatku VSTO dla programu Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)

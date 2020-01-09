@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: bf673195f06475daf8341fd17cd701b84a970b39
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 48536d8fba3f86c2883e48cd4e5cf9a3a8752fcd
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740668"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636318"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Kompilowanie aplikacji WPF (WPF)
 
-Aplikacje Windows Presentation Foundation (WPF) mogą być kompilowane jako .NET Framework pliki wykonywalne (. exe), biblioteki (. dll) lub kombinację obu typów zestawów. W tym temacie przedstawiono sposób kompilowania aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] i opisano kluczowe kroki procesu kompilacji.
+Aplikacje Windows Presentation Foundation (WPF) mogą być kompilowane jako .NET Framework pliki wykonywalne (. exe), biblioteki (. dll) lub kombinację obu typów zestawów. W tym temacie przedstawiono sposób kompilowania aplikacji WPF i opisano kluczowe kroki procesu kompilacji.
 
 <a name="Building_a_WPF_Application_using_Command_Line"></a>
 
@@ -34,7 +34,7 @@ Aplikację WPF można skompilować w następujący sposób:
 
 ## <a name="wpf-build-pipeline"></a>Potok kompilacji WPF
 
-Po skompilowaniu projektu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] są wywoływane kombinacje obiektów docelowych specyficznych dla języka i [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Proces wykonywania tych celów jest nazywany Potokiem kompilacji, a kluczowe kroki przedstawiono na poniższej ilustracji.
+Po skompilowaniu projektu WPF jest wywoływana kombinacja obiektów docelowych specyficznych dla języka i WPF. Proces wykonywania tych celów jest nazywany Potokiem kompilacji, a kluczowe kroki przedstawiono na poniższej ilustracji.
 
 ![Proces kompilacji WPF](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")
 
@@ -48,7 +48,7 @@ Przed skompilowaniem program MSBuild określa lokalizację ważnych narzędzi i 
 
 - Katalogi Windows SDK.
 
-- Lokalizacja zestawów odwołań [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+- Lokalizacja zestawów odwołań WPF.
 
 - Właściwość ścieżek wyszukiwania zestawu.
 
@@ -58,7 +58,7 @@ Pierwszą lokalizacją, w której program MSBuild wyszukuje zestawy, jest katalo
 
 ### <a name="resolving-references"></a>Rozpoznawanie odwołań
 
-Proces kompilacji lokalizuje i wiąże zestawy wymagane do skompilowania projektu aplikacji. Ta logika jest zawarta w zadaniu `ResolveAssemblyReference`. Wszystkie zestawy zadeklarowane jako `Reference` w pliku projektu są dostarczane do zadania wraz z informacjami na temat ścieżek wyszukiwania i metadanych w zestawach zainstalowanych już w systemie. Zadanie wyszukuje zestawy i używa metadanych zainstalowanego zestawu, aby odfiltrować te podstawowe zestawy [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], które nie muszą być wyświetlane w manifestach wyjściowych. Jest to gotowe do uniknięcia nadmiarowych informacji w manifestach ClickOnce. Na przykład, ponieważ platformie docelowej. dll może być uważany za reprezentatywną dla aplikacji, a dla [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], a także ponieważ wszystkie zestawy [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] istnieją w tej samej lokalizacji na każdym komputerze, na którym zainstalowano .NET Framework, istnieje nie trzeba uwzględniać wszystkich informacji na wszystkich zestawach odwołań .NET Framework w manifestach.
+Proces kompilacji lokalizuje i wiąże zestawy wymagane do skompilowania projektu aplikacji. Ta logika jest zawarta w zadaniu `ResolveAssemblyReference`. Wszystkie zestawy zadeklarowane jako `Reference` w pliku projektu są dostarczane do zadania wraz z informacjami na temat ścieżek wyszukiwania i metadanych w zestawach zainstalowanych już w systemie. Zadanie wyszukuje zestawy i korzysta z metadanych zainstalowanego zestawu, aby odfiltrować te podstawowe zestawy WPF, które nie muszą być wyświetlane w manifestach wyjściowych. Jest to gotowe do uniknięcia nadmiarowych informacji w manifestach ClickOnce. Na przykład, ponieważ platformie docelowej. dll może być uważany za reprezentatywną dla aplikacji wbudowanej i dla WPF, a wszystkie zestawy WPF istnieją w tej samej lokalizacji na każdej maszynie, na której zainstalowano .NET Framework, nie trzeba uwzględniać wszystkich informacje na temat wszystkich .NET Framework zestawów odwołań w manifestach.
 
 <a name="Markup_Compilation___Pass_1"></a>
 
@@ -118,7 +118,7 @@ Nie wszystkie strony [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-
 
 <a name="File_Classification"></a>
 
-### <a name="file-classification"></a>Klasyfikacja pliku
+### <a name="file-classification"></a>Klasyfikacja plików
 
 Proces kompilacji umieszcza pliki wyjściowe w różnych grupach zasobów na podstawie zestawu aplikacji, w którym zostaną umieszczone. W typowej aplikacji nielokalnej wszystkie pliki danych oznaczone jako `Resource` są umieszczane w zestawie głównym (plik wykonywalny lub biblioteka). Po ustawieniu `UICulture` w projekcie wszystkie skompilowane pliki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i te, które zostały oznaczone jako specyficzne dla języka, są umieszczane w zestawie zasobów satelity. Ponadto wszystkie zasoby niezależne od języka są umieszczane w zestawie głównym. W tym kroku procesu kompilacji to oznaczenie zostało wykonane.
 
@@ -142,13 +142,13 @@ Manifest aplikacji (plik. exe. manifest) opisuje zestawy aplikacji i biblioteki 
 
 Te pliki manifestu są zawsze tworzone dla aplikacji XBAP. W przypadku zainstalowanych aplikacji nie są one tworzone, o ile Właściwość `GenerateManifests` nie zostanie określona w pliku projektu z wartością `true`.
 
-Aplikacje XBAP uzyskują dwa dodatkowe uprawnienia powyżej i powyżej tych uprawnień przypisanych do typowych aplikacji strefy internetowej: <xref:System.Security.Permissions.WebBrowserPermission> i <xref:System.Security.Permissions.MediaPermission>. System kompilacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] deklaruje te uprawnienia w manifeście aplikacji.
+Aplikacje XBAP uzyskują dwa dodatkowe uprawnienia powyżej i powyżej tych uprawnień przypisanych do typowych aplikacji strefy internetowej: <xref:System.Security.Permissions.WebBrowserPermission> i <xref:System.Security.Permissions.MediaPermission>. System kompilacji WPF deklaruje te uprawnienia w manifeście aplikacji.
 
 <a name="Incremental_Build_Support"></a>
 
 ## <a name="incremental-build-support"></a>Obsługa kompilacji przyrostowej
 
-System kompilacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zapewnia obsługę kompilacji przyrostowych. Jest to dość inteligentne informacje o wykrywaniu zmian wprowadzonych w znacznikach lub kodzie, a także kompiluje tylko te artefakty, na które wpłynie zmiana. Mechanizm kompilacji przyrostowej używa następujących plików:
+System kompilacji WPF zapewnia obsługę kompilacji przyrostowych. Jest to dość inteligentne informacje o wykrywaniu zmian wprowadzonych w znacznikach lub kodzie, a także kompiluje tylko te artefakty, na które wpłynie zmiana. Mechanizm kompilacji przyrostowej używa następujących plików:
 
 - Plik $ (*AssemblyName*) _MarkupCompiler. cache do obsługi bieżącego stanu kompilatora.
 

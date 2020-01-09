@@ -2,17 +2,17 @@
 title: 'Instrukcje: strumieniowe fragmenty XML z dostępem do informacji nagłówka'
 ms.date: 07/20/2015
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-ms.openlocfilehash: 489e128e86a47e0e7f76c14a6cf1baf80fb0c406
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 325609b9f8cf1feebcb4be1fcfd0122e12100156
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332451"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636695"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Instrukcje: strumieniowe fragmenty XML z dostępem do informacji nagłówka (Visual Basic)
 Czasami konieczne jest odczytanie arbitralnie dużych plików XML i zapisanie aplikacji w celu przewidzenia rozmiaru pamięci aplikacji. W przypadku próby wypełnienia drzewa XML przy użyciu dużego pliku XML użycie pamięci będzie proporcjonalne do rozmiaru pliku, czyli nadmierne. W związku z tym należy zamiast tego użyć techniki przesyłania strumieniowego.  
   
- Jedną z opcji jest zapisanie aplikacji przy użyciu <xref:System.Xml.XmlReader>. Można jednak użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], aby zbadać drzewo XML. W takim przypadku można napisać własną metodę osi niestandardowej. Aby uzyskać więcej informacji, zobacz [How to: Write a LINQ to XML osi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Jedną z opcji jest zapisanie aplikacji przy użyciu <xref:System.Xml.XmlReader>. Można jednak użyć LINQ do wykonywania zapytań w drzewie XML. W takim przypadku można napisać własną metodę osi niestandardowej. Aby uzyskać więcej informacji, zobacz [How to: Write a LINQ to XML osi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
  Aby napisać własną metodę osi, napisz małą metodę, która używa <xref:System.Xml.XmlReader> do odczytywania węzłów do momentu osiągnięcia jednego z węzłów, w których interesują Cię zainteresowania. Metoda następnie wywołuje <xref:System.Xml.Linq.XNode.ReadFrom%2A>, który odczytuje z <xref:System.Xml.XmlReader> i tworzy wystąpienie fragmentu XML. Następnie można napisać zapytania LINQ na niestandardowej metodzie osi.  
   

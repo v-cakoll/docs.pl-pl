@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 35754d49bf223e7afcdec32e8b24cfb749f48aa6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25f22d5e8caacc69643f6d79e109ebaa94159d80
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446851"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632319"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera
 
@@ -20,7 +20,7 @@ ms.locfileid: "74446851"
 
 W tej sekcji opisano sposób implementacji dostawcy automatyzacji interfejsu użytkownika po stronie serwera dla kontrolki niestandardowej.
 
-Implementacja elementów Windows Presentation Foundation (WPF) i elementów nie[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (takich jak te zaprojektowane do [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) różni się zasadniczo. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elementy zapewniają obsługę [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] za pośrednictwem klasy pochodnej <xref:System.Windows.Automation.Peers.AutomationPeer>. Elementy inne niż[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] zapewniają obsługę za pomocą implementacji interfejsów dostawcy.
+Implementacja elementów Windows Presentation Foundation (WPF) i elementów innych niż WPF (takich jak te zaprojektowane dla [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) różni się zasadniczo. Elementy WPF zapewniają obsługę [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] za pośrednictwem klasy pochodnej z <xref:System.Windows.Automation.Peers.AutomationPeer>. Elementy inne niż WPF zapewniają obsługę za pomocą implementacji interfejsów dostawcy.
 
 <a name="Security_Considerations"></a>
 
@@ -40,7 +40,7 @@ Aby uzyskać więcej informacji na temat tego tematu, zobacz [Automatyzacja inte
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>Implementacja dostawcy przez elementy inne niż WPF
 
-Niestandardowe kontrolki, które nie są częścią [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Framework, ale są zapisywane w kodzie zarządzanym (najczęściej są to [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] formantów), zapewniają obsługę [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] przez implementację interfejsów. Każdy element musi implementować co najmniej jeden interfejs wymieniony w pierwszej tabeli w następnej sekcji. Ponadto, jeśli element obsługuje jeden lub więcej wzorców kontrolek, musi zaimplementować odpowiedni interfejs dla każdego wzorca kontroli.
+Niestandardowe kontrolki, które nie są częścią platformy WPF Framework, ale są zapisywane w kodzie zarządzanym (najczęściej są to [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] kontrolki), zapewniają obsługę [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] przez implementację interfejsów. Każdy element musi implementować co najmniej jeden interfejs wymieniony w pierwszej tabeli w następnej sekcji. Ponadto, jeśli element obsługuje jeden lub więcej wzorców kontrolek, musi zaimplementować odpowiedni interfejs dla każdego wzorca kontroli.
 
 Projekt dostawcy [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] musi odwoływać się do następujących zestawów:
 
@@ -56,7 +56,7 @@ Projekt dostawcy [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla
 
 Każdy dostawca [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] musi zaimplementować jeden z następujących interfejsów.
 
-|Interface|Opis|
+|Interfejs|Opis|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|Oferuje funkcje prostej kontrolki hostowanej w oknie, w tym obsługę wzorców i właściwości formantów.|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Dziedziczy po <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Dodaje funkcje dla elementu w kontrolce złożonej, w tym nawigację w obrębie fragmentu, ustawienie fokusu i zwrócenie obwiedni elementu.|
@@ -64,7 +64,7 @@ Każdy dostawca [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-
 
 Poniższe interfejsy oferują dodane funkcje, ale nie są wymagane do wdrożenia.
 
-|Interface|Opis|
+|Interfejs|Opis|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Umożliwia dostawcy śledzenie żądań zdarzeń.|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride>|Umożliwia zmianę położenia elementów opartych na oknach w drzewie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] fragmentu.|
@@ -115,7 +115,7 @@ Dostawcy formantów opartych na HWND nie muszą zazwyczaj podawać następujący
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>
 
 > [!NOTE]
-> W oknie zostanie uzyskana <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> prostego elementu lub głównego fragmentu hostowanego w oknie; jednak elementy fragmentów poniżej elementu głównego (takie jak elementy listy w polu listy) muszą podawać własne identyfikatory. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
+> W oknie zostanie uzyskana <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> prostego elementu lub głównego fragmentu hostowanego w oknie; jednak elementy fragmentów poniżej elementu głównego (takie jak elementy listy w polu listy) muszą podawać własne identyfikatory. Aby uzyskać więcej informacji, zobacz temat <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> powinna zostać zwrócona dla dostawców hostowanych w kontrolce [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]. W takim przypadku domyślny dostawca okna może nie być w stanie pobrać poprawnej wartości.
 >

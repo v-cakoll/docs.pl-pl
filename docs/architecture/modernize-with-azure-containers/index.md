@@ -2,18 +2,18 @@
 title: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows (wersja 2)
 description: Dowiedz się, jak Podnieś i przenieść istniejące aplikacje do chmury platformy Azure i kontenerów z tą książką elektroniczną.
 ms.date: 04/28/2018
-ms.openlocfilehash: 67b1c7743697832684e96225e3d365da625ce6a3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: fa20e606c9a1364fbdf8c9a58c8703420d9e65a9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73089771"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714569"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows (wersja 2)
 
 ![Obraz okładki przewodnika dotyczącego modernizacji aplikacji .NET.](./media/index/web-application-guide-cover-image.png)
 
-OPUBLIKOWANO PRZEZ  
+OPUBLIKOWANA PRZEZ  
 Microsoft Press i Microsoft DevDiv  
 Działy firmy Microsoft Corporation  
 One Microsoft Way  
@@ -25,15 +25,15 @@ Wszelkie prawa zastrzeżone. Żadna część zawartości tej księgi nie może z
 
 Książka ta jest dostępna bezpłatnie w formie książki elektronicznej (książka elektroniczna), która jest dostępna za pośrednictwem wielu kanałów w firmie Microsoft, takich jak <https://dot.net/architecture>.
 
-Jeśli masz pytania związane z tą książką, Wyślij wiadomość e-mail na adres [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
+Jeśli masz pytania związane z tą książką, Wyślij wiadomość e-mail na adres [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 Ta książka jest świadczona w postaci "AS-IS" i zawiera widoki i opinie autora. Widoki, opinie i informacje wyrażone w tej książce, w tym adresy URL i inne odwołania do witryn internetowych, mogą ulec zmianie bez powiadomienia.
 
-Niektóre przykłady opisane w niniejszym dokumencie są dostępne tylko dla ilustracji i są fikcyjne. Żadne prawdziwe skojarzenie lub połączenie nie jest zamierzone ani nie powinno zostać wywnioskowane.
+Niektóre przedstawione przykłady są fikcyjne i pełnią wyłącznie rolę ilustracyjną. Skojarzenie lub powiązanie z rzeczywistością nie jest zamierzone ani nie powinno być wnioskowane.
 
 Firma Microsoft i znaki towarowe wymienione w <https://www.microsoft.com> na stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft. Wszystkie inne znaczniki są własnością odpowiednich właścicieli.
 
-Tworzone
+Autor:
 > **Cesar de La Torre**, SR. PM, zespół produktu .NET, Microsoft Corp.
 
 Uczestnicy i recenzenci:
@@ -54,7 +54,7 @@ W przypadku podjęcia decyzji o modernizacji aplikacji lub usług sieci Web i pr
 
 - Aplikacje, które można "Unieś" i przenieść bezpośrednio do chmury.
 
-## <a name="about-this-guide"></a>Informacje o tym przewodniku
+## <a name="about-this-guide"></a>O tym przewodniku
 
 Ten przewodnik koncentruje się głównie na początkowej modernizacji istniejących aplikacji sieci Web lub zorientowanych na usługi Microsoft .NET Framework, co oznacza działania związane z przeniesieniem obciążenia do nowszego lub bardziej nowoczesnego środowiska bez znaczącego zmiany kodu aplikacji i podstawowa architektura.
 
@@ -81,7 +81,7 @@ Definicja i krótkie wyjaśnienie poszczególnych poziomów dojrzałości aplika
 **Poziom 1: aplikacje gotowe do infrastruktury chmurowej** : w ramach tego podejścia migracji można po prostu migrować lub przehostować bieżące aplikacje lokalne do platformy infrastruktury jako usługi ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)). Aplikacje mają prawie tę samą kompozycję co poprzednio, ale teraz wdrażamy je na maszynach wirtualnych w chmurze.
 Ten prosty typ migracji jest zwykle znany w branży jako "dźwig & Shift".
 
-**Poziom 2: aplikacje zoptymalizowane pod kątem chmury** : na tym poziomie i w dalszym ciągu bez zmiany architektury lub modyfikacji istotnego kodu możesz uzyskać dodatkowe korzyści z używania aplikacji w chmurze przy użyciu nowoczesnych technologii, takich jak kontenery i dodatkowe usługi zarządzane przez chmurę. Zwiększasz elastyczność aplikacji, aby szybciej dostarczać je przez udoskonalenie procesów operacji tworzenia przedsiębiorstw (DevOps). Można to osiągnąć za pomocą technologii, takich jak kontenery systemu Windows, opartych na aparacie platformy Docker. Kontenery usuwają tarcie spowodowane przez zależności aplikacji podczas wdrażania w wielu etapach. W tym modelu zapadalności można wdrożyć kontenery na IaaS lub PaaS przy użyciu dodatkowych usług zarządzanych w chmurze związanych z bazami danych, pamięci podręcznej jako usługi, monitorowania i ciągłej integracji/ciągłego wdrażania (CI/CD).
+**Poziom 2: aplikacje zoptymalizowane pod kątem chmury** : na tym poziomie i nadal bez konieczności ponownego tworzenia architektury lub zmiany istotnego kodu możesz uzyskać dodatkowe korzyści z używania aplikacji w chmurze przy użyciu nowoczesnych technologii, takich jak kontenery i dodatkowe usługi zarządzane przez chmurę. Zwiększasz elastyczność aplikacji, aby szybciej dostarczać je przez udoskonalenie procesów operacji tworzenia przedsiębiorstw (DevOps). Można to osiągnąć za pomocą technologii, takich jak kontenery systemu Windows, opartych na aparacie platformy Docker. Kontenery usuwają tarcie spowodowane przez zależności aplikacji podczas wdrażania w wielu etapach. W tym modelu zapadalności można wdrożyć kontenery na IaaS lub PaaS przy użyciu dodatkowych usług zarządzanych w chmurze związanych z bazami danych, pamięci podręcznej jako usługi, monitorowania i ciągłej integracji/ciągłego wdrażania (CI/CD).
 
 Trzeci poziom dojrzałości jest ostatecznym celem w chmurze, ale jest on opcjonalny w przypadku wielu aplikacji, a nie głównego punktu skupienia tego przewodnika:
 
@@ -89,7 +89,7 @@ Trzeci poziom dojrzałości jest ostatecznym celem w chmurze, ale jest on opcjon
 
 W tabeli 1-1 opisano główne zalety i przyczyny wyboru każdej metody migracji lub modernizacji.
 
-| **Infrastruktura chmury — gotowe** <br /> *Unieś i Przenieś* | **Zoptymalizowane pod kątem chmury** <br /> *Modernizowanie* | **Chmura — natywna** <br /> *Modernizacja, ponowne tworzenie architektury i ponowne zapisywanie* |
+| **Infrastruktura chmury — gotowe** <br /> *Unieś i Przenieś* | **Zoptymalizowane pod kątem chmury** <br /> *Modernizowanie* | **Cloud-Native** <br /> *Modernizacja, ponowne tworzenie architektury i ponowne zapisywanie* |
 |---|---|---|
 | **Obiekt docelowy obliczeń aplikacji** |
 | Aplikacje wdrożone na maszynach wirtualnych na platformie Azure | Aplikacje monolityczne lub N-warstwowe wdrożone w celu Azure App Service, Azure Container Instance (ACI), maszyn wirtualnych z kontenerami lub AKS (usługa Azure Kubernetes Service) | Mikrousługi z kontenerami w usłudze Azure Kubernetes Service (AKS) i/lub mikrousługi bezserwerowe oparte na Azure Functions. |
@@ -97,7 +97,7 @@ W tabeli 1-1 opisano główne zalety i przyczyny wyboru każdej metody migracji 
 | SQL lub dowolna relacyjna baza danych na maszynie wirtualnej | Azure SQL Database wystąpienie zarządzane lub inną zarządzaną bazę danych w chmurze. | Drobnoziarniste bazy danych na mikrousługi w oparciu o Azure SQL Database, Azure Cosmos DB lub inną zarządzaną bazę danych w chmurze |
 | **Zalety**|
 | <li>Bez ponownej architektury, brak nowego kodu <li> Najmniej wysiłku do szybkiej migracji <li> Najmniejszy typowy mianownik obsługiwany na platformie Azure <li> Podstawowe gwarancje dostępności <li> Po przejściu do chmury można łatwiej przeprowadzić modernizację jeszcze więcej | <li> Bez ponownej architektury <li> Minimalne zmiany kodu/konfiguracji <li> Udoskonalone wdrożenie i elastyczność DevOps do wydania ze względu na kontenery <li> Zwiększona gęstość i niższe koszty wdrożenia <li> Przenośność aplikacji i zależności <li> Elastyczność obiektów docelowych hosta: podejścia PaaS lub IaaS | <li> Architekt chmury pozwala uzyskać najlepsze korzyści z chmury, ale jest wymagany nowy kod <li> Obsługa mikrousług w chmurze — podejścia natywne <li> Nowoczesne aplikacje o znaczeniu strategicznym, odporne na błędy w chmurze — skalowalne <li> W pełni zarządzane usługi <li> Zoptymalizowane pod kątem skalowania <li> Optymalizacja pod kątem elastyczności w podsystemie <li> Kompilacja oparta na wdrożeniu i DevOps |
-| **Wyzwanie** |
+| **Wyzwania** |
 | <li> Mniejsza wartość w chmurze, inna niż przesunięcia w ramach kosztów operacyjnych lub zamykania centrów danych <li> Niewielki jest zarządzany: brak stosowania poprawek systemu operacyjnego lub oprogramowania pośredniczącego; może korzystać z rozwiązań infrastruktury, takich jak Terraform, Spinnaker lub Puppet | <li> Konteneryzowania to dodatkowy krok krzywej uczenia dla deweloperów i operacji IT <li> Potoki DevOps i ciągłej integracji/ciągłego wdrażania są zwykle "a". Jeśli obecnie nie ma w kulturze organizacji, może to być dodatkowe wyzwanie| <li> Wymaga ponownej architektury dla natywnych aplikacji w chmurze i architektury mikrousług, a zazwyczaj wymaga znacznego refaktoryzacji kodu lub ponownego zapisu podczas modernizacji (zwiększony czas i budżet)|
 > **Tabela 1-1.** Zalety i wyzwania związane z modernizacją ścieżek dla istniejących aplikacji i usług .NET
 
@@ -117,14 +117,14 @@ Rysunek 1-2 wyróżnia najpopularniejsze scenariusze, ale wiele hybrydowych i mi
 
 Każdy poziom dojrzałości w procesie modernizacji jest skojarzony z następującymi najważniejszymi technologiami i podejść:
 
-- **Infrastruktura chmury — gotowe** (rehostowanie lub podstawowe dźwigi & Shift): w pierwszym kroku wiele organizacji chce tylko szybko wykonać strategię migracji w chmurze. W takim przypadku aplikacje są przeszukane. Większość operacji hostowania można zautomatyzować za pomocą [Azure Migrate](https://aka.ms/azuremigrate), usługi, która zapewnia wskazówki, szczegółowe informacje i mechanizmy, które są potrzebne do ułatwienia migracji do platformy Azure w oparciu o narzędzia chmurowe, takie jak [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/) i [migracja bazy danych platformy Azure. Usługa](https://azure.microsoft.com/campaigns/database-migration/). Możesz również skonfigurować Ręczne Hostowanie, aby poznać szczegóły infrastruktury dotyczące zasobów w przypadku przenoszenia starszych aplikacji do chmury. Na przykład możesz przenieść aplikacje do maszyn wirtualnych na platformie Azure z małą modyfikacją — prawdopodobnie z uwzględnieniem tylko drobnych zmian konfiguracji. Sieć w tym przypadku jest podobna do środowiska lokalnego, szczególnie jeśli tworzysz sieci wirtualne na platformie Azure.
+- **Infrastruktura chmury — gotowe** (rehostowanie lub podstawowe dźwigi & Shift): w pierwszym kroku wiele organizacji chce tylko szybko wykonać strategię migracji w chmurze. W takim przypadku aplikacje są przeszukane. Większość operacji hostowania można zautomatyzować za pomocą [Azure Migrate](https://aka.ms/azuremigrate), usługi, która zapewnia wskazówki, szczegółowe informacje i mechanizmy potrzebne do przeprowadzenia migracji do platformy Azure w oparciu o narzędzia chmurowe, takie jak [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/) i [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/). Możesz również skonfigurować Ręczne Hostowanie, aby poznać szczegóły infrastruktury dotyczące zasobów w przypadku przenoszenia starszych aplikacji do chmury. Na przykład możesz przenieść aplikacje do maszyn wirtualnych na platformie Azure z małą modyfikacją — prawdopodobnie z uwzględnieniem tylko drobnych zmian konfiguracji. Sieć w tym przypadku jest podobna do środowiska lokalnego, szczególnie jeśli tworzysz sieci wirtualne na platformie Azure.
 
 - **Zoptymalizowane pod kątem chmury** (usługi zarządzane i kontenery systemu Windows): ten model polega na zapewnieniu kilku ważnych optymalizacji wdrożenia w celu uzyskania znaczących korzyści z chmury bez konieczności zmiany podstawowej architektury aplikacji. Podstawowym krokiem jest dodanie obsługi [kontenerów systemu Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/) do istniejących aplikacji .NET Framework. Ten ważny krok (kontenerach) nie wymaga dotknięcia kodu, więc jest jasne, że zostanie wysunięty ogólny skok i przesunięcia. Za pomocą narzędzi [platformy Docker](https://www.docker.com/)można używać narzędzi takich jak [Image2Docker](https://github.com/docker/communitytools-image2docker-win) lub Visual Studio. Program Visual Studio automatycznie wybiera inteligentne wartości domyślne dla aplikacji ASP.NET i obrazów kontenerów systemu Windows. Narzędzia te oferują zarówno szybką pętlę wewnętrzną, jak i szybką ścieżkę do uzyskiwania kontenerów na platformę Azure. Zwiększona elastyczność w przypadku wdrażania w wielu środowiskach.
 Następnie przejście do środowiska produkcyjnego pozwala wdrożyć kontenery systemu Windows na [platformie azure Web App for Containers](https://azure.microsoft.com/services/app-service/containers/), [Azure Container Instances (ACI)](https://azure.microsoft.com/services/container-instances/)i maszyn wirtualnych platformy Azure z systemem Windows Server 2016 i kontenerami, jeśli wolisz podejście IaaS. W przypadku bardziej złożonych aplikacji z wieloma kontenerami Rozważ użycie programu Orchestrator, takiego jak [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/).
 
 Podczas tej początkowej modernizacji można także dodawać zasoby z chmury, takie jak monitorowanie za pomocą narzędzi takich jak [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview); Potoki ciągłej integracji/ciągłego wdrażania dla cyklu życia aplikacji z [Azure DevOps Services](https://azure.microsoft.com/services/devops/); i wiele dodatkowych usług zasobów danych, które są dostępne na platformie Azure. Na przykład można zmodyfikować monolityczną aplikację sieci Web, która została pierwotnie opracowana przy użyciu tradycyjnych [ASP.NET Web Forms](https://www.asp.net/web-forms) lub [ASP.NET MVC](https://www.asp.net/mvc), ale teraz można ją wdrożyć za pomocą kontenerów systemu Windows. W przypadku korzystania z kontenerów systemu Windows należy również migrować dane do bazy danych w [Azure SQL Database wystąpieniu zarządzanym](https://docs.microsoft.com/azure/sql-database/), bez konieczności zmiany podstawowej architektury aplikacji.
 
-- **Natywne w chmurze**: jak zostało to wprowadzone, należy wziąć pod uwagę Tworzenie aplikacji [natywnych w chmurze](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) , jeśli są przeznaczone dla dużych i złożonych aplikacji z wieloma niezależnymi zespołami programistycznymi pracującymi nad różnymi mikrousługami, które mogą być opracowane i wdrożone autonomicznie. Ponadto ze względu na granulowaną i niezależną skalowalność na mikrousługach. Takie podejście podejścia do tych rozwiązań ma bardzo ważne wyzwania i złożoność, ale można je znacznie uprościć przy użyciu PaaS w chmurze i programów Orchestrator, takich jak [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (zarządzane Kubernetes) i [Azure Functions](https://azure.microsoft.com/services/functions/) dla podejście bezserwerowe. Wszystkie te podejścia (takie jak mikrousługi i bezserwerowe) wymagają zazwyczaj architektów w chmurze i zapisują nowy kod — kod dostosowany do określonych platform PaaS lub kod, który jest wyrównany do określonych architektur, takich jak mikrousługi.
+- **Natywne w chmurze**: jak zostało to wprowadzone, należy wziąć pod uwagę projektowanie aplikacji [natywnych w chmurze](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) , jeśli są przeznaczone dla dużych i złożonych aplikacji z wieloma niezależnymi zespołami programistycznymi pracującymi nad różnymi mikrousługami, które można opracować i wdrożyć autonomicznie. Ponadto ze względu na granulowaną i niezależną skalowalność na mikrousługach. Takie podejście podejścia do tych rozwiązań ma bardzo ważne wyzwania i złożoność, ale można je znacznie uprościć, korzystając z usług Cloud PaaS i Orchestrator, takich jak [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (zarządzane Kubernetes) i [Azure Functions](https://azure.microsoft.com/services/functions/) w przypadku podejścia bezserwerowego. Wszystkie te podejścia (takie jak mikrousługi i bezserwerowe) wymagają zazwyczaj architektów w chmurze i zapisują nowy kod — kod dostosowany do określonych platform PaaS lub kod, który jest wyrównany do określonych architektur, takich jak mikrousługi.
 
 Rysunek 1-3 pokazuje wewnętrzne technologie, których można użyć dla każdego poziomu dojrzałości:
 
@@ -199,7 +199,7 @@ Te przykładowe aplikacje mają drugą wersję, z nowoczesnym kodem i które są
 
 ## <a name="send-your-feedback"></a>Wyślij opinię
 
-Ten przewodnik został zapisany, aby ułatwić zrozumienie opcji ulepszania i modernizacji istniejących aplikacji sieci Web platformy .NET. Przewodnik i powiązane przykładowe aplikacje są rozwijane. Twoja opinia jest Witaj! Jeśli masz komentarze dotyczące tego, jak ten przewodnik może być bardziej przydatny, wyślij je do [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
+Ten przewodnik został zapisany, aby ułatwić zrozumienie opcji ulepszania i modernizacji istniejących aplikacji sieci Web platformy .NET. Przewodnik i powiązane przykładowe aplikacje są rozwijane. Chętnie poznamy Twoją opinię! Jeśli masz komentarze dotyczące tego, jak ten przewodnik może być bardziej przydatny, wyślij je do [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 >[!div class="step-by-step"]
 >[Next](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->

@@ -4,12 +4,12 @@ description: Dowiedz się, jak uruchomić aplikację .NET dla Apache Spark przy 
 ms.date: 11/04/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1b736e078eea40e399882c0df020062b6aa758ad
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 934b91a258937a976804109c71df232b8ce6d6d7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740529"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337588"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Samouczek: Rozpoczynanie pracy z platformą .NET dla Apache Spark
 
@@ -25,24 +25,24 @@ Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 ## <a name="prepare-your-environment"></a>Przygotowywanie środowiska
 
-Przed rozpoczęciem pisania aplikacji należy skonfigurować pewne zależności wymagane wstępnie. Jeśli można uruchomić `dotnet`, `java`, `mvn``spark-shell` ze środowiska wiersza polecenia, środowisko jest już przygotowane i można przejść do następnej sekcji. Jeśli nie można uruchomić żadnego lub wszystkich poleceń, wykonaj następujące czynności.
+Przed rozpoczęciem pisania aplikacji należy skonfigurować niektóre zależności wymagane wstępnie. Jeśli można uruchomić `dotnet`, `java`, `mvn``spark-shell` ze środowiska wiersza polecenia, środowisko jest już przygotowane i można przejść do następnej sekcji. Jeśli nie można uruchomić żadnego lub wszystkich poleceń, wykonaj następujące czynności.
 
 ### <a name="1-install-net"></a>1. Zainstaluj platformę .NET
 
 Aby rozpocząć tworzenie aplikacji platformy .NET, należy pobrać i zainstalować zestaw .NET SDK (Software Development Kit).
 
-Pobierz i zainstaluj [zestaw .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0). Zainstalowanie zestawu SDK dodaje `dotnet` łańcucha narzędzi do ścieżki. 
+Pobierz i zainstaluj [zestaw .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0). Zainstalowanie zestawu SDK dodaje `dotnet` łańcucha narzędzi do ścieżki.
 
 Po zainstalowaniu zestaw .NET Core SDK Otwórz nowy wiersz polecenia i uruchom `dotnet`.
 
-Jeśli polecenie jest uruchamiane i drukuje informacje o sposobach korzystania z programu dotnet, można przejść do następnego kroku. Jeśli wystąpi błąd `'dotnet' is not recognized as an internal or external command`, przed uruchomieniem polecenia upewnij się, że otwarto **Nowy** wiersz polecenia. 
+Jeśli polecenie jest uruchamiane i drukuje informacje o sposobach korzystania z programu dotnet, można przejść do następnego kroku. Jeśli wystąpi błąd `'dotnet' is not recognized as an internal or external command`, przed uruchomieniem polecenia upewnij się, że otwarto **Nowy** wiersz polecenia.
 
 ### <a name="2-install-java"></a>2. Zainstaluj środowisko Java
 
 Zainstaluj [środowisko Java 8,1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Wybierz odpowiednią wersję systemu operacyjnego. Na przykład wybierz **JDK-8u201-Windows-x64. exe** dla komputera z systemem Windows x64. Następnie użyj `java` polecenia, aby sprawdzić poprawność instalacji.
-   
+
 ![Pobieranie w języku Java](https://dotnet.microsoft.com/static/images/java-jdk-downloads-windows.png?v=6BbJHoNyDO-PyYVciImr5wzh2AW_YHNcyb3p093AwPA)
 
 ### <a name="3-install-7-zip"></a>3. Zainstaluj 7-zip
@@ -52,12 +52,12 @@ Apache Spark jest pobierany jako skompresowany plik TGZ. Użyj programu wyodręb
 * Odwiedź stronę [7 — pobieranie plików zip](https://www.7-zip.org/).
 * W pierwszej tabeli na stronie Wybierz pobieranie 32-bitowe x86 lub 64-bit x64, w zależności od używanego systemu operacyjnego.
 * Po zakończeniu pobierania uruchom Instalatora.
-   
+
 ![Pobieranie 7Zip](https://dotnet.microsoft.com/static/images/7-zip-downloads.png?v=W6qWtFC1tTMKv3YGXz7lBa9F3M22uWyTvkMmunyroNk)
 
 ### <a name="4-install-apache-spark"></a>4. Zainstaluj Apache Spark
 
-[Pobierz i zainstaluj Apache Spark](https://spark.apache.org/downloads.html). Należy wybrać jedną z wersji 2,3. * lub 2.4.0, 2.4.1, 2.4.3 lub 2.4.4 (.NET dla Apache Spark nie jest zgodna z innymi wersjami Apache Spark).  
+[Pobierz i zainstaluj Apache Spark](https://spark.apache.org/downloads.html). Należy wybrać jedną z wersji 2,3. * lub 2.4.0, 2.4.1, 2.4.3 lub 2.4.4 (.NET dla Apache Spark nie jest zgodna z innymi wersjami Apache Spark).
 
 W poniższych krokach przyjęto założenie, że [pobrano i zainstalowano Apache Spark 2.4.1](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz). Jeśli chcesz użyć innej wersji, Zastąp wartość **2.4.1** odpowiednim numerem wersji. Następnie wyodrębnij plik **. tar** i pliki Apache Spark.
 
@@ -72,11 +72,11 @@ Aby wyodrębnić pliki Apache Spark:
 * Kliknij prawym przyciskiem myszy **Spark-2.4.1-bin-Hadoop 2.7. tar** i wybierz **7-zip-> Wyodrębnianie plików...**
 * Wprowadź **C:\Bin** w polu **Wyodrębnij do** .
 * Usuń zaznaczenie pola wyboru pod polem **Wyodrębnij do** .
-* Wybierz **przycisk OK**.
+* Wybierz **OK**.
 * Pliki Apache Spark są wyodrębniane do C:\bin\spark-2.4.1-bin-hadoop2.7\
-      
+
 ![Zainstaluj platformę Spark](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
-    
+
 Uruchom następujące polecenia, aby ustawić zmienne środowiskowe używane do lokalizowania Apache Spark:
 
 ```console
@@ -102,8 +102,8 @@ Aby wyodrębnić pakiet Microsoft. Spark. Worker:
 * Kliknij prawym przyciskiem myszy i wybierz **7-zip-> Wyodrębnianie plików.** ...
 * Wprowadź **C:\Bin** w polu **Wyodrębnij do** .
 * Usuń zaznaczenie pola wyboru pod polem **Wyodrębnij do** .
-* Wybierz **przycisk OK**.
-  
+* Wybierz **OK**.
+
 ![Zainstaluj platformę .NET Spark](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
 
 ### <a name="6-install-winutils"></a>6. Zainstaluj WinUtils
@@ -111,7 +111,7 @@ Aby wyodrębnić pakiet Microsoft. Spark. Worker:
 Platforma .NET dla Apache Spark wymaga zainstalowania WinUtils razem z Apache Spark. [Pobierz winutils. exe](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe). Następnie skopiuj WinUtils do **C:\bin\spark-2.4.1-bin-hadoop2.7\bin**.
 
 > [!NOTE]
-> Jeśli używasz innej wersji usługi Hadoop, która ma adnotację na końcu nazwy folderu instalacji platformy Spark, [Wybierz wersję WinUtils](https://github.com/steveloughran/winutils) zgodną z wersją usługi Hadoop. 
+> Jeśli używasz innej wersji usługi Hadoop, która ma adnotację na końcu nazwy folderu instalacji platformy Spark, [Wybierz wersję WinUtils](https://github.com/steveloughran/winutils) zgodną z wersją usługi Hadoop.
 
 ### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a>7. Ustaw DOTNET_WORKER_DIR i sprawdź zależności
 
@@ -207,11 +207,11 @@ This .NET app counts words with Apache Spark
 
 3. Gdy aplikacja zostanie uruchomiona, dane zliczania plików *wejściowych. txt* są zapisywane w konsoli programu.
 
-Nabycia! Pomyślnie utworzono i uruchomiono aplikację .NET dla Apache Spark.
+Gratulacje! Pomyślnie utworzono i uruchomiono aplikację .NET dla Apache Spark.
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
+W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > * Przygotuj środowisko systemu Windows dla platformy .NET dla Apache Spark

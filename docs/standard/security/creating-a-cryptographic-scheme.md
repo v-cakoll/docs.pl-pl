@@ -6,32 +6,30 @@ helpviewer_keywords:
 - encryption [.NET Framework], creating cryptographic schemes
 - cryptography [.NET Framework], creating cryptographic schemes
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ef3741ef5cec720c2fb285c9aa60d610acc0be9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00fff5f346633a9682d75cf6a3be7e8e7d5db7e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909392"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706295"
 ---
-# <a name="creating-a-cryptographic-scheme"></a><span data-ttu-id="20e85-102">Tworzenie schematu kryptograficznego</span><span class="sxs-lookup"><span data-stu-id="20e85-102">Creating a Cryptographic Scheme</span></span>
-<span data-ttu-id="20e85-103">Można łączyć kryptograficznych składników .NET Framework do tworzenia różnych systemów do szyfrowania i odszyfrowywania danych.</span><span class="sxs-lookup"><span data-stu-id="20e85-103">The cryptographic components of the .NET Framework can be combined to create different schemes to encrypt and decrypt data.</span></span>  
+# <a name="creating-a-cryptographic-scheme"></a><span data-ttu-id="3f39b-102">Tworzenie schematu kryptograficznego</span><span class="sxs-lookup"><span data-stu-id="3f39b-102">Creating a Cryptographic Scheme</span></span>
+<span data-ttu-id="3f39b-103">Składniki kryptograficzne .NET Framework można łączyć w celu tworzenia różnych schematów do szyfrowania i odszyfrowywania danych.</span><span class="sxs-lookup"><span data-stu-id="3f39b-103">The cryptographic components of the .NET Framework can be combined to create different schemes to encrypt and decrypt data.</span></span>  
   
- <span data-ttu-id="20e85-104">Prosty schemat szyfrowania szyfrowanie i odszyfrowywanie danych może określić następujące czynności:</span><span class="sxs-lookup"><span data-stu-id="20e85-104">A simple cryptographic scheme for encrypting and decrypting data might specify the following steps:</span></span>  
+ <span data-ttu-id="3f39b-104">Prosty schemat kryptograficzny służący do szyfrowania i odszyfrowywania danych może zawierać następujące czynności:</span><span class="sxs-lookup"><span data-stu-id="3f39b-104">A simple cryptographic scheme for encrypting and decrypting data might specify the following steps:</span></span>  
   
-1. <span data-ttu-id="20e85-105">Każda ze stron generowana jest para kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="20e85-105">Each party generates a public/private key pair.</span></span>  
+1. <span data-ttu-id="3f39b-105">Każda ze stron generuje parę kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="3f39b-105">Each party generates a public/private key pair.</span></span>  
   
-2. <span data-ttu-id="20e85-106">Strony wymiany kluczy publicznych.</span><span class="sxs-lookup"><span data-stu-id="20e85-106">The parties exchange their public keys.</span></span>  
+2. <span data-ttu-id="3f39b-106">Strony wymieniają swoje klucze publiczne.</span><span class="sxs-lookup"><span data-stu-id="3f39b-106">The parties exchange their public keys.</span></span>  
   
-3. <span data-ttu-id="20e85-107">Każda ze stron generuje klucz tajny dla celów szyfrowania TripleDES, na przykład i szyfruje nowo utworzony klucz przy użyciu klucza publicznego drugiej strony.</span><span class="sxs-lookup"><span data-stu-id="20e85-107">Each party generates a secret key for TripleDES encryption, for example, and encrypts the newly created key using the other's public key.</span></span>  
+3. <span data-ttu-id="3f39b-107">Każda ze stron generuje klucz tajny na potrzeby szyfrowania TripleDES, na przykład i szyfruje nowo utworzony klucz przy użyciu klucza publicznego drugiego.</span><span class="sxs-lookup"><span data-stu-id="3f39b-107">Each party generates a secret key for TripleDES encryption, for example, and encrypts the newly created key using the other's public key.</span></span>  
   
-4. <span data-ttu-id="20e85-108">Każda strona wysyła dane do drugiego i łączy klucz tajny drugiej strony z własną, w szczególności kolejności, aby utworzyć nowy klucz tajny.</span><span class="sxs-lookup"><span data-stu-id="20e85-108">Each party sends the data to the other and combines the other's secret key with its own, in a particular order, to create a new secret key.</span></span>  
+4. <span data-ttu-id="3f39b-108">Każda ze stron wysyła dane do drugiej i łączy klucz tajny z własnym, w określonej kolejności, w celu utworzenia nowego klucza tajnego.</span><span class="sxs-lookup"><span data-stu-id="3f39b-108">Each party sends the data to the other and combines the other's secret key with its own, in a particular order, to create a new secret key.</span></span>  
   
-5. <span data-ttu-id="20e85-109">Strony następnie zainicjuj konwersacji za pomocą szyfrowania symetrycznego.</span><span class="sxs-lookup"><span data-stu-id="20e85-109">The parties then initiate a conversation using symmetric encryption.</span></span>  
+5. <span data-ttu-id="3f39b-109">Następnie strony inicjują konwersację przy użyciu szyfrowania symetrycznego.</span><span class="sxs-lookup"><span data-stu-id="3f39b-109">The parties then initiate a conversation using symmetric encryption.</span></span>  
   
- <span data-ttu-id="20e85-110">Tworzenie schematu kryptograficznego nie jest prostym zadaniem.</span><span class="sxs-lookup"><span data-stu-id="20e85-110">Creating a cryptographic scheme is not a trivial task.</span></span>
+ <span data-ttu-id="3f39b-110">Tworzenie schematu kryptograficznego nie jest zadaniem prostym.</span><span class="sxs-lookup"><span data-stu-id="3f39b-110">Creating a cryptographic scheme is not a trivial task.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="20e85-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="20e85-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f39b-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3f39b-111">See also</span></span>
 
-- [<span data-ttu-id="20e85-112">Usługi kryptograficzne</span><span class="sxs-lookup"><span data-stu-id="20e85-112">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="3f39b-112">Usługi kryptograficzne</span><span class="sxs-lookup"><span data-stu-id="3f39b-112">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)

@@ -2,24 +2,24 @@
 title: Projektowanie kodu XML w innym kształcie
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: dd8b95ca442c9f2f17940423dde22f627669cd0b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 400ceafe8ca219efbbb921d573126e0ca80bbb5e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347145"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344497"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a><span data-ttu-id="d64ce-102">Projekcja XML w innym kształcie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d64ce-102">Projecting XML in a Different Shape (Visual Basic)</span></span>
-<span data-ttu-id="d64ce-103">W tym temacie przedstawiono przykład projektu XML, który znajduje się w innym kształcie niż źródłowy kod XML.</span><span class="sxs-lookup"><span data-stu-id="d64ce-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a><span data-ttu-id="b30c6-102">Projekcja XML w innym kształcie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b30c6-102">Projecting XML in a Different Shape (Visual Basic)</span></span>
+<span data-ttu-id="b30c6-103">W tym temacie przedstawiono przykład projektu XML, który znajduje się w innym kształcie niż źródłowy kod XML.</span><span class="sxs-lookup"><span data-stu-id="b30c6-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
   
- <span data-ttu-id="d64ce-104">Wiele typowych transformacji XML składają się z kwerend łańcucha, jak w tym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="d64ce-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="d64ce-105">Często zaczynają się od pewnego formatu XML, wyniki pośredniego projektu jako kolekcje typów anonimowych lub nazwanych typów, a następnie na końcu projektuje wyniki z powrotem do pliku XML, który znajduje się w całkowicie innym kształcie niż źródłowy kod XML.</span><span class="sxs-lookup"><span data-stu-id="d64ce-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
+ <span data-ttu-id="b30c6-104">Wiele typowych transformacji XML składają się z kwerend łańcucha, jak w tym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="b30c6-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="b30c6-105">Często zaczynają się od pewnego formatu XML, wyniki pośredniego projektu jako kolekcje typów anonimowych lub nazwanych typów, a następnie na końcu projektuje wyniki z powrotem do pliku XML, który znajduje się w całkowicie innym kształcie niż źródłowy kod XML.</span><span class="sxs-lookup"><span data-stu-id="b30c6-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d64ce-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="d64ce-106">Example</span></span>  
- <span data-ttu-id="d64ce-107">Ten przykład przetwarza dokument WordprocessingML, pobierając węzły akapitu z dokumentu WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="d64ce-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="d64ce-108">Identyfikuje także styl i tekst każdego akapitu.</span><span class="sxs-lookup"><span data-stu-id="d64ce-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="d64ce-109">Na koniec przykładowe projekty XML z innym kształtem.</span><span class="sxs-lookup"><span data-stu-id="d64ce-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="d64ce-110">Ten przykład kompiluje się zgodnie z poprzednimi przykładami w tym samouczku.</span><span class="sxs-lookup"><span data-stu-id="d64ce-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="d64ce-111">Nowa instrukcja, która wykonuje projekcję, jest wywoływana w komentarzach w kodzie poniżej.</span><span class="sxs-lookup"><span data-stu-id="d64ce-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="b30c6-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="b30c6-106">Example</span></span>  
+ <span data-ttu-id="b30c6-107">Ten przykład przetwarza dokument WordprocessingML, pobierając węzły akapitu z dokumentu WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="b30c6-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="b30c6-108">Identyfikuje także styl i tekst każdego akapitu.</span><span class="sxs-lookup"><span data-stu-id="b30c6-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="b30c6-109">Na koniec przykładowe projekty XML z innym kształtem.</span><span class="sxs-lookup"><span data-stu-id="b30c6-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="b30c6-110">Ten przykład kompiluje się zgodnie z poprzednimi przykładami w tym samouczku.</span><span class="sxs-lookup"><span data-stu-id="b30c6-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="b30c6-111">Nowa instrukcja, która wykonuje projekcję, jest wywoływana w komentarzach w kodzie poniżej.</span><span class="sxs-lookup"><span data-stu-id="b30c6-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="d64ce-112">Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu, zobacz [Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="d64ce-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="b30c6-112">Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu, zobacz [Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="b30c6-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="d64ce-113">W tym przykładzie zastosowano klasy z zestawu 'Windowsbase.</span><span class="sxs-lookup"><span data-stu-id="d64ce-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="d64ce-114">Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d64ce-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="b30c6-113">W tym przykładzie zastosowano klasy z zestawu 'Windowsbase.</span><span class="sxs-lookup"><span data-stu-id="b30c6-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="b30c6-114">Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b30c6-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -69,7 +69,7 @@ Module Module1
         Return (e.<w:r>.<w:t>).StringConcatenate(Function(element) CStr(element))  
     End Function  
   
-    ' Following function is required because VB does not support short circuit evaluation  
+    ' Following function is required because Visual Basic does not support short circuit evaluation  
     Private Function GetStyleOfParagraph(ByVal styleNode As XElement, _  
                                          ByVal defaultStyle As String) As String  
         If (styleNode Is Nothing) Then  
@@ -160,7 +160,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="d64ce-115">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="d64ce-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="b30c6-115">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="b30c6-115">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -227,11 +227,11 @@ End Module
 </Root>  
 ```  
   
-## <a name="next-steps"></a><span data-ttu-id="d64ce-116">Następne kroki</span><span class="sxs-lookup"><span data-stu-id="d64ce-116">Next Steps</span></span>  
- <span data-ttu-id="d64ce-117">W następnym przykładzie utworzysz zapytanie, aby znaleźć cały tekst w dokumencie programu Word:</span><span class="sxs-lookup"><span data-stu-id="d64ce-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="b30c6-116">Następne kroki</span><span class="sxs-lookup"><span data-stu-id="b30c6-116">Next Steps</span></span>  
+ <span data-ttu-id="b30c6-117">W następnym przykładzie utworzysz zapytanie, aby znaleźć cały tekst w dokumencie programu Word:</span><span class="sxs-lookup"><span data-stu-id="b30c6-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
   
-- [<span data-ttu-id="d64ce-118">Znajdowanie tekstu w dokumentach programu Word (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d64ce-118">Finding Text in Word Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [<span data-ttu-id="b30c6-118">Znajdowanie tekstu w dokumentach programu Word (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b30c6-118">Finding Text in Word Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a><span data-ttu-id="d64ce-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d64ce-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b30c6-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b30c6-119">See also</span></span>
 
-- [<span data-ttu-id="d64ce-120">Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d64ce-120">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="b30c6-120">Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b30c6-120">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

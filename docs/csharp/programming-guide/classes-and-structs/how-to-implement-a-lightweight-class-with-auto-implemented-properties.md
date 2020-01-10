@@ -1,32 +1,31 @@
 ---
 title: Jak zaimplementować klasę uproszczoną przy użyciu właściwości, które są implementowane, przewodnik C# programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: b5bf2e84ffe47cd1eaf17e877a20a700e98339ff
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 170a36e2a10896d9e4d29af602694700fa122e69
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970911"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714912"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="da6d5-102">Jak zaimplementować klasę uproszczoną z zaimplementowanymi właściwościami (C# Przewodnik programowania)</span><span class="sxs-lookup"><span data-stu-id="da6d5-102">How to implement a lightweight class with auto-implemented properties (C# Programming Guide)</span></span>
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="4b568-102">Jak zaimplementować klasę uproszczoną z zaimplementowanymi właściwościami (C# Przewodnik programowania)</span><span class="sxs-lookup"><span data-stu-id="4b568-102">How to implement a lightweight class with auto-implemented properties (C# Programming Guide)</span></span>
 
-<span data-ttu-id="da6d5-103">Ten przykład przedstawia sposób tworzenia niezmiennej klasy lekkiej, która służy tylko do hermetyzacji zestawu właściwości, które są implementowane.</span><span class="sxs-lookup"><span data-stu-id="da6d5-103">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="da6d5-104">Użyj tego rodzaju konstrukcji zamiast struktury, gdy musisz użyć semantyki typu odwołania.</span><span class="sxs-lookup"><span data-stu-id="da6d5-104">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>
+<span data-ttu-id="4b568-103">Ten przykład przedstawia sposób tworzenia niezmiennej klasy lekkiej, która służy tylko do hermetyzacji zestawu właściwości, które są implementowane.</span><span class="sxs-lookup"><span data-stu-id="4b568-103">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="4b568-104">Użyj tego rodzaju konstrukcji zamiast struktury, gdy musisz użyć semantyki typu odwołania.</span><span class="sxs-lookup"><span data-stu-id="4b568-104">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>
 
-<span data-ttu-id="da6d5-105">Można wprowadzić niemodyfikowalną właściwość na dwa sposoby:</span><span class="sxs-lookup"><span data-stu-id="da6d5-105">You can make an immutable property in two ways:</span></span>
+<span data-ttu-id="4b568-105">Można wprowadzić niemodyfikowalną właściwość na dwa sposoby:</span><span class="sxs-lookup"><span data-stu-id="4b568-105">You can make an immutable property in two ways:</span></span>
 
-- <span data-ttu-id="da6d5-106">Można zadeklarować metodę dostępu [Set](../../language-reference/keywords/set.md) jako [prywatną](../../language-reference/keywords/private.md).</span><span class="sxs-lookup"><span data-stu-id="da6d5-106">You can declare the [set](../../language-reference/keywords/set.md) accessor to be [private](../../language-reference/keywords/private.md).</span></span>  <span data-ttu-id="da6d5-107">Właściwość jest tylko settable w obrębie typu, ale jest niezmienna dla odbiorców.</span><span class="sxs-lookup"><span data-stu-id="da6d5-107">The property is only settable within the type, but it is immutable to consumers.</span></span>
+- <span data-ttu-id="4b568-106">Można zadeklarować metodę dostępu [Set](../../language-reference/keywords/set.md) jako [prywatną](../../language-reference/keywords/private.md).</span><span class="sxs-lookup"><span data-stu-id="4b568-106">You can declare the [set](../../language-reference/keywords/set.md) accessor to be [private](../../language-reference/keywords/private.md).</span></span>  <span data-ttu-id="4b568-107">Właściwość jest tylko settable w obrębie typu, ale jest niezmienna dla odbiorców.</span><span class="sxs-lookup"><span data-stu-id="4b568-107">The property is only settable within the type, but it is immutable to consumers.</span></span>
 
-  <span data-ttu-id="da6d5-108">Po zadeklarowaniu metody dostępu prywatnego `set` nie można użyć inicjatora obiektów do zainicjowania właściwości.</span><span class="sxs-lookup"><span data-stu-id="da6d5-108">When you declare a private `set` accessor, you cannot use an object initializer to initialize the property.</span></span> <span data-ttu-id="da6d5-109">Musisz użyć konstruktora lub metody fabryki.</span><span class="sxs-lookup"><span data-stu-id="da6d5-109">You must use a constructor or a factory method.</span></span>
-- <span data-ttu-id="da6d5-110">Można zadeklarować tylko metodę dostępu [Get](../../language-reference/keywords/get.md) , która sprawia, że właściwość jest niezmienna wszędzie z wyjątkiem konstruktora typu.</span><span class="sxs-lookup"><span data-stu-id="da6d5-110">You can declare only the [get](../../language-reference/keywords/get.md) accessor, which makes the property immutable everywhere except in the type’s constructor.</span></span>
+  <span data-ttu-id="4b568-108">Po zadeklarowaniu metody dostępu prywatnego `set` nie można użyć inicjatora obiektów do zainicjowania właściwości.</span><span class="sxs-lookup"><span data-stu-id="4b568-108">When you declare a private `set` accessor, you cannot use an object initializer to initialize the property.</span></span> <span data-ttu-id="4b568-109">Musisz użyć konstruktora lub metody fabryki.</span><span class="sxs-lookup"><span data-stu-id="4b568-109">You must use a constructor or a factory method.</span></span>
+- <span data-ttu-id="4b568-110">Można zadeklarować tylko metodę dostępu [Get](../../language-reference/keywords/get.md) , która sprawia, że właściwość jest niezmienna wszędzie z wyjątkiem konstruktora typu.</span><span class="sxs-lookup"><span data-stu-id="4b568-110">You can declare only the [get](../../language-reference/keywords/get.md) accessor, which makes the property immutable everywhere except in the type’s constructor.</span></span>
 
-## <a name="example"></a><span data-ttu-id="da6d5-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="da6d5-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="4b568-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="4b568-111">Example</span></span>
 
-<span data-ttu-id="da6d5-112">Poniższy przykład przedstawia dwa sposoby implementacji niezmiennej klasy, która ma właściwości, które są implementowane.</span><span class="sxs-lookup"><span data-stu-id="da6d5-112">The following example shows two ways to implement an immutable class that has auto-implemented properties.</span></span> <span data-ttu-id="da6d5-113">Każdy sposób deklaruje jedną z właściwości z prywatnym `set` i jedną z właściwości tylko z `get`.</span><span class="sxs-lookup"><span data-stu-id="da6d5-113">Each way declares one of the properties with a private `set` and one of the properties with a `get` only.</span></span>  <span data-ttu-id="da6d5-114">Pierwsza klasa używa konstruktora tylko w celu zainicjowania właściwości, a druga Klasa używa metody fabryki statycznej, która wywołuje konstruktora.</span><span class="sxs-lookup"><span data-stu-id="da6d5-114">The first class uses a constructor only to initialize the properties, and the second class uses a static factory method that calls a constructor.</span></span>
+<span data-ttu-id="4b568-112">Poniższy przykład przedstawia dwa sposoby implementacji niezmiennej klasy, która ma właściwości, które są implementowane.</span><span class="sxs-lookup"><span data-stu-id="4b568-112">The following example shows two ways to implement an immutable class that has auto-implemented properties.</span></span> <span data-ttu-id="4b568-113">Każdy sposób deklaruje jedną z właściwości z prywatnym `set` i jedną z właściwości tylko z `get`.</span><span class="sxs-lookup"><span data-stu-id="4b568-113">Each way declares one of the properties with a private `set` and one of the properties with a `get` only.</span></span>  <span data-ttu-id="4b568-114">Pierwsza klasa używa konstruktora tylko w celu zainicjowania właściwości, a druga Klasa używa metody fabryki statycznej, która wywołuje konstruktora.</span><span class="sxs-lookup"><span data-stu-id="4b568-114">The first class uses a constructor only to initialize the properties, and the second class uses a static factory method that calls a constructor.</span></span>
 
 ```csharp
 // This class is immutable. After an object is created,
@@ -117,10 +116,10 @@ public class Program
 */
 ```
 
-<span data-ttu-id="da6d5-115">Kompilator tworzy pola kopii zapasowej dla każdej automatycznie zaimplementowanej właściwości.</span><span class="sxs-lookup"><span data-stu-id="da6d5-115">The compiler creates backing fields for each auto-implemented property.</span></span> <span data-ttu-id="da6d5-116">Pola są niedostępne bezpośrednio z kodu źródłowego.</span><span class="sxs-lookup"><span data-stu-id="da6d5-116">The fields are not accessible directly from source code.</span></span>
+<span data-ttu-id="4b568-115">Kompilator tworzy pola kopii zapasowej dla każdej automatycznie zaimplementowanej właściwości.</span><span class="sxs-lookup"><span data-stu-id="4b568-115">The compiler creates backing fields for each auto-implemented property.</span></span> <span data-ttu-id="4b568-116">Pola są niedostępne bezpośrednio z kodu źródłowego.</span><span class="sxs-lookup"><span data-stu-id="4b568-116">The fields are not accessible directly from source code.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="da6d5-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="da6d5-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4b568-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4b568-117">See also</span></span>
 
-- [<span data-ttu-id="da6d5-118">Właściwości</span><span class="sxs-lookup"><span data-stu-id="da6d5-118">Properties</span></span>](./properties.md)
-- [<span data-ttu-id="da6d5-119">struct</span><span class="sxs-lookup"><span data-stu-id="da6d5-119">struct</span></span>](../../language-reference/keywords/struct.md)
-- [<span data-ttu-id="da6d5-120">Inicjatory obiektów i kolekcji</span><span class="sxs-lookup"><span data-stu-id="da6d5-120">Object and Collection Initializers</span></span>](./object-and-collection-initializers.md)
+- [<span data-ttu-id="4b568-118">Właściwości</span><span class="sxs-lookup"><span data-stu-id="4b568-118">Properties</span></span>](./properties.md)
+- [<span data-ttu-id="4b568-119">struct</span><span class="sxs-lookup"><span data-stu-id="4b568-119">struct</span></span>](../../language-reference/keywords/struct.md)
+- [<span data-ttu-id="4b568-120">Inicjatory obiektów i kolekcji</span><span class="sxs-lookup"><span data-stu-id="4b568-120">Object and Collection Initializers</span></span>](./object-and-collection-initializers.md)

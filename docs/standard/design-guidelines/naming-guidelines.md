@@ -11,20 +11,19 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-author: KrzysztofCwalina
-ms.openlocfilehash: 4c7f411bdf538762de18873007c839f66911f96a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad98c0f3b02bdc81e6348493b4e0a02f9cb20ed4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757264"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709195"
 ---
 # <a name="naming-guidelines"></a>Wskazówki dotyczące nazewnictwa
-Następujące spójny zestaw konwencji nazewnictwa do tworzenia struktury może być duży wkład do kwestii użyteczności struktury. Umożliwia ona framework, który będzie używany przez wielu deweloperów na powszechnie oddzielnych projektów. Poza spójność formularza nazwy elementów w ramach łatwo zrozumiałe i musi przekazać funkcji każdego elementu.  
+Zgodnie ze spójnym zestawem konwencji nazewnictwa w rozwoju struktury może być istotnym udziałem w zakresie użyteczności platformy. Pozwala ona na użycie platformy przez wielu deweloperów w oddzielnym projekcie. Poza spójnością formy nazwy elementów struktury muszą być łatwo zrozumiałe i muszą przekazywać funkcję każdego elementu.  
   
- Celem tego rozdziału jest aby zapewnić spójny zestaw konwencji nazewnictwa, powstałego w nazwach, które mają sens natychmiastowego dla deweloperów.  
+ Celem tego rozdziału jest zapewnienie spójnego zestawu konwencji nazewnictwa, które są wynikiem nazw, które sprawiają, że deweloperzy.  
   
- Mimo że wdrażanie tych konwencji nazewnictwa jak wskazówki dotyczące programowania ogólnego kodu mogłyby spowodować bardziej spójne nazewnictwo w całym kodzie, musisz tylko zastosować je do interfejsów API, które są publicznie widoczne (publiczny lub chroniony typów i członków, i jawnie implementowane interfejsy).  
+ Chociaż stosowanie tych konwencji nazewnictwa jako ogólnych wytycznych dotyczących programowania kodu spowoduje bardziej spójne nazewnictwo w całym kodzie, wymagane jest tylko ich zastosowanie do interfejsów API, które są publicznie uwidocznione (typy publiczne lub chronione i składowe, i jawnie zaimplementowane interfejsy).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Konwencje dotyczące wielkości liter](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
@@ -35,9 +34,9 @@ Następujące spójny zestaw konwencji nazewnictwa do tworzenia struktury może 
  [Nazwy elementów członkowskich typu](../../../docs/standard/design-guidelines/names-of-type-members.md)  
  [Nazewnictwo parametrów](../../../docs/standard/design-guidelines/naming-parameters.md)  
  [Nazewnictwo zasobów](../../../docs/standard/design-guidelines/naming-resources.md)  
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

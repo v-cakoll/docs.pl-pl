@@ -3,18 +3,16 @@ title: Dyrektywy dotyczące arkusza stylów osadzone w dokumencie
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 65987c5e29d593758b21259d6367202c882df2de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19e25ab7262bb006144eea71e74bd7454066b3f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026942"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710157"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>Dyrektywy dotyczące arkusza stylów osadzone w dokumencie
 
-Od czasu do czasu istniejących XML zawiera dyrektywy arkusz stylów z `<?xml:stylesheet?>`. Program Microsoft Internet Explorer akceptuje to jako alternatywa `<?xml-stylesheet?>` składni. Gdy dane XML zawierają `<?xml:stylesheet?>` dyrektywy, jak pokazano w poniższym danych próby załadowania tych danych do XML Document Object Model (DOM) zgłasza wyjątek.
+Czasami istniejący kod XML zawiera dyrektywę arkusz stylów `<?xml:stylesheet?>`. Program Microsoft Internet Explorer akceptuje to jako alternatywę dla składni `<?xml-stylesheet?>`. Gdy dane XML zawierają dyrektywę `<?xml:stylesheet?>`, jak pokazano w poniższych danych, próba załadowania tych danych do Document Object Model XML (DOM) zgłasza wyjątek.
 
 ```xml
 <?xml version="1.0" ?>
@@ -25,17 +23,17 @@ Od czasu do czasu istniejących XML zawiera dyrektywy arkusz stylów z `<?xml:st
 </root>
 ```
 
-Dzieje się tak dlatego `<?xml:stylesheet?>` jest uznawany za nieprawidłową **ProcessingInstruction** do modelu DOM. Wszelkie **ProcessingInstruction**, zgodnie z przestrzeni nazw w specyfikacji XML może zawierać tylko nazwy nie dwukropka (NCNames), w przeciwieństwie kwalifikowanej nazwy (QNames).
+Dzieje się tak, ponieważ `<?xml:stylesheet?>` jest uznawany za nieprawidłową **ProcessingInstruction** do modelu DOM. Każdy **ProcessingInstruction**, zgodnie z przestrzeniami nazw w specyfikacji XML, może mieć tylko nazwy bez dwukropka (NCNames), w przeciwieństwie do nazw kwalifikowanych (QName).
 
-Od 6 sekcji przestrzeni nazw w specyfikacji XML, mających wpływ **obciążenia** i **działanie metody LoadXml** metody są zgodne ze specyfikacją jest to, że w dokumencie:
+Z sekcji 6 przestrzeni nazw w specyfikacji XML, efekt zastosowania metod **Load** i **LoadXml** jest zgodny ze specyfikacją w dokumencie:
 
-- Wszystkie typy elementu i nazwach atrybutów zawiera zero lub dwukropka.
+- Wszystkie typy elementów i nazwy atrybutów zawierają jeden dwukropek.
 
-- Nie nazwy jednostek, ProcessingInstruction elementów docelowych lub nazw w notacji zawierają wszystkie dwukropki.
+- Brak nazw jednostek, obiektów docelowych ProcessingInstruction ani nazw notacji zawierających dowolne dwukropki.
 
-Za pomocą `<?xml:stylesheet?>` zawierające dwukropek, możesz teraz naruszają reguły w drugim punktor.
+Gdy `<?xml:stylesheet?>` zawierający dwukropek, nastąpi naruszenie reguły w drugim wypunktowaniu.
 
-Zgodnie z World Wide Web Consortium (W3C) [kojarzenie arkusze stylów, za pomocą XML dokumenty, wersja 1.0 zalecenie](https://www.w3.org/TR/xml-stylesheet/), jest instrukcja przetwarzania, aby skojarzyć arkusz stylów XSLT z dokumentu XML `<?xml-stylesheet?>`, za pomocą kreska, zastępując z dwukropkiem.
+Zgodnie z zaleceniami organizacja World Wide Web Consortium (W3C) [kojarzenia arkuszy stylów z dokumentami XML w wersji 1,0 zalecenie](https://www.w3.org/TR/xml-stylesheet/), instrukcja przetwarzania służąca do kojarzenia arkusza stylów XSLT z dokumentem xml jest `<?xml-stylesheet?>`, z kreską zastępującą dwukropek.
 
 ## <a name="see-also"></a>Zobacz także
 

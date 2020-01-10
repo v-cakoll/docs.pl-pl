@@ -3,13 +3,12 @@ title: Testowanie C# jednostkowe za pomocą nunit i .NET Core
 description: Poznaj koncepcje testów jednostkowych w C# oprogramowaniu i .NET Core za pośrednictwem interaktywnego środowiska tworzenia przykładowego rozwiązania krok po kroku przy użyciu testu dotnet i NUnit.
 author: rprouse
 ms.date: 08/31/2018
-ms.custom: seodec18
-ms.openlocfilehash: 20f81981458b7e805a917202edce671ced69d89a
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 1ea17d9f830d8ac20e2bad79eebab5db767e0af8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117307"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714229"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Testowanie C# jednostkowe za pomocą nunit i .NET Core
 
@@ -20,7 +19,7 @@ Ten samouczek przeprowadzi Cię przez interaktywny proces tworzenia przykładowe
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 - [Zestaw .NET Core 2,1 SDK](https://dotnet.microsoft.com/download) lub jego nowsze wersje.
-- Edytor tekstu lub Edytor kodu.
+- Wybrany edytor tekstu lub edytor kodu.
 
 ## <a name="creating-the-source-project"></a>Tworzenie projektu źródłowego
 
@@ -44,7 +43,7 @@ Ustaw *PrimeService* w bieżącym katalogu i uruchom następujące polecenie, ab
 dotnet new classlib
 ```
 
-Zmień nazwę *Class1.cs* na *PrimeService.cs*. Tworzysz nieprawidłową implementację `PrimeService` klasy:
+Zmień nazwę *Class1.cs* na *PrimeService.cs*. Tworzysz nieprawidłową implementację klasy `PrimeService`:
 
 ```csharp
 using System;
@@ -90,7 +89,7 @@ Polecenie [dotnet New](../tools/dotnet-new.md) umożliwia utworzenie projektu te
 
 [!code-xml[Packages](~/samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
 
-Projekt testowy wymaga innych pakietów do tworzenia i uruchamiania testów jednostkowych. `dotnet new`w poprzednim kroku dodano zestaw Microsoft Test SDK, NUnit Test Framework oraz adapter testowy NUnit. Teraz Dodaj `PrimeService` bibliotekę klas jako inną zależność do projektu. [`dotnet add reference`](../tools/dotnet-add-reference.md) Użyj polecenia:
+Projekt testowy wymaga innych pakietów do tworzenia i uruchamiania testów jednostkowych. `dotnet new` w poprzednim kroku dodano zestaw Microsoft Test SDK, NUnit Test Framework i adapter testowy NUnit. Teraz dodaj bibliotekę klas `PrimeService` jako inną zależność do projektu. Użyj [`dotnet add reference`](../tools/dotnet-add-reference.md) polecenia:
 
 ```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
@@ -151,11 +150,11 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-Ten `[TestFixture]` atrybut oznacza klasę, która zawiera testy jednostkowe. `[Test]` Atrybut wskazuje, że metoda jest metodą testową.
+Atrybut `[TestFixture]` oznacza klasę, która zawiera testy jednostkowe. Atrybut `[Test]` wskazuje, że metoda jest metodą testową.
 
-Zapisz ten plik i wykonaj [`dotnet test`](../tools/dotnet-test.md) , aby skompilować testy i bibliotekę klas, a następnie uruchom testy. Program NUnit Test Runner zawiera punkt wejścia programu do uruchamiania testów. `dotnet test`uruchamia program Test Runner przy użyciu utworzonego projektu testu jednostkowego.
+Zapisz ten plik i wykonaj [`dotnet test`](../tools/dotnet-test.md) , aby skompilować testy i bibliotekę klas, a następnie uruchom testy. Program NUnit Test Runner zawiera punkt wejścia programu do uruchamiania testów. `dotnet test` uruchamia program Test Runner przy użyciu utworzonego projektu testu jednostkowego.
 
-Test zakończy się niepowodzeniem. Nie utworzono jeszcze implementacji. Wykonaj ten test, pisząc najprostszy kod w `PrimeService` klasie, która działa:
+Test zakończy się niepowodzeniem. Nie utworzono jeszcze implementacji. Wykonaj ten test, pisząc najprostszy kod w klasie `PrimeService`, która działa:
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -168,17 +167,17 @@ public bool IsPrime(int candidate)
 }
 ```
 
-W katalogu *testy jednostkowe-using-nunit* Uruchom `dotnet test` ponownie. Polecenie uruchamia kompilację `PrimeService` dla `PrimeService.Tests` projektu, a następnie dla projektu. `dotnet test` Po skompilowaniu obu projektów jest uruchamiany ten pojedynczy test. Przekazuje.
+W katalogu *testy jednostkowe-using-nunit* uruchom ponownie `dotnet test`. `dotnet test` polecenie uruchamia kompilację dla projektu `PrimeService`, a następnie dla projektu `PrimeService.Tests`. Po skompilowaniu obu projektów jest uruchamiany ten pojedynczy test. Przekazuje.
 
 ## <a name="adding-more-features"></a>Dodawanie większej liczby funkcji
 
-Teraz, po wykonaniu jednego przebiegu testowego, należy napisać więcej. Istnieje kilka innych prostych przypadków dla numerów pierwszych: 0, -1. Można dodać nowe testy z `[Test]` atrybutem, ale szybko żmudnym. Istnieją inne atrybuty NUnit, które umożliwiają pisanie zestawu podobnych testów.  `[TestCase]` Atrybut służy do tworzenia zestawu testów, które wykonują ten sam kod, ale mają różne argumenty wejściowe. Możesz użyć atrybutu, `[TestCase]` aby określić wartości dla tych danych wejściowych.
+Teraz, po wykonaniu jednego przebiegu testowego, należy napisać więcej. Istnieje kilka innych prostych przypadków dla numerów pierwszych: 0,-1. Można dodać nowe testy z atrybutem `[Test]`, ale szybko żmudnym. Istnieją inne atrybuty NUnit, które umożliwiają pisanie zestawu podobnych testów.  Atrybut `[TestCase]` jest używany do tworzenia zestawu testów, które wykonują ten sam kod, ale mają różne argumenty wejściowe. Możesz użyć atrybutu `[TestCase]`, aby określić wartości dla tych danych wejściowych.
 
 Zamiast tworzyć nowe testy, Zastosuj ten atrybut, aby utworzyć pojedynczy test oparty na danych. Test oparty na danych to metoda, która sprawdza kilka wartości mniejszej niż dwa, co jest najniższym numerem:
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-Uruchom `dotnet test`i dwa z tych testów zakończą się niepowodzeniem. Aby wszystkie testy zostały zakończone pomyślnie, należy zmienić `if` klauzulę na początku `Main` metody w pliku *PrimeService.cs* :
+Uruchom `dotnet test`i dwa z tych testów zakończą się niepowodzeniem. Aby wszystkie testy zostały zakończone pomyślnie, należy zmienić klauzulę `if` na początku metody `Main` w pliku *PrimeService.cs* :
 
 ```csharp
 if (candidate < 2)

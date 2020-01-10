@@ -4,18 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2bed01a74c5b3338df958a3e178c06602bd69866
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 602ee3c88237a902d48339836fbe25f636ae9705
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052115"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716507"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Jak debugować problemy dotyczące aktywacji środowiska CLR
 
-Jeśli wystąpią problemy z rozpoczęciem pracy aplikacji z poprawną wersją środowiska uruchomieniowego języka wspólnego (CLR), można wyświetlać i debugować dzienniki aktywacji środowiska CLR. Te dzienniki mogą być bardzo przydatne podczas określania głównej przyczyny problemu z aktywacją, gdy aplikacja ładuje inną wersję środowiska CLR niż oczekiwano lub nie ładuje środowiska CLR. Błędy [inicjowania .NET Framework: Zarządzanie środowiskiem](initialization-errors-managing-the-user-experience.md) użytkownika omawia środowisko, w którym nie znaleziono środowiska CLR dla aplikacji.
+Jeśli wystąpią problemy z rozpoczęciem pracy aplikacji z poprawną wersją środowiska uruchomieniowego języka wspólnego (CLR), można wyświetlać i debugować dzienniki aktywacji środowiska CLR. Te dzienniki mogą być bardzo przydatne podczas określania głównej przyczyny problemu z aktywacją, gdy aplikacja ładuje inną wersję środowiska CLR niż oczekiwano lub nie ładuje środowiska CLR. [Błędy inicjowania .NET Framework: Zarządzanie środowiskiem użytkownika](initialization-errors-managing-the-user-experience.md) omawia środowisko, w którym nie znaleziono środowiska CLR dla aplikacji.
 
 Rejestrowanie aktywacji środowiska CLR można włączyć na poziomie systemu przy użyciu klucza rejestru HKEY_LOCAL_MACHINE lub zmiennej środowiskowej system. Dziennik zostanie wygenerowany do momentu usunięcia wpisu rejestru lub zmiennej środowiskowej. Alternatywnie można użyć zmiennej środowiskowej użytkownika lub procesu lokalnego, aby włączyć rejestrowanie z innym zakresem i czasem trwania.
 
@@ -25,7 +23,7 @@ Dzienników aktywacji środowiska CLR nie należy mylić z [dziennikami powiąza
 
 ### <a name="using-the-registry"></a>Korzystanie z rejestru
 
-1. W Edytorze rejestru przejdź do HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework (na komputerze 32-bitowym) lub HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. Folder NETFramework (na komputerze 64-bitowym).
+1. W Edytorze rejestru przejdź do HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\\. NETFramework (na komputerze 32-bitowym) lub\\HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft. Folder NETFramework (na komputerze 64-bitowym).
 
 2. Dodaj wartość ciągu o nazwie `CLRLoadLogDir`i ustaw ją na pełną ścieżkę do istniejącego katalogu, w którym chcesz przechowywać dzienniki aktywacji środowiska CLR.
 
@@ -33,7 +31,7 @@ Rejestrowanie aktywacji pozostaje włączone do momentu usunięcia wartości ci�
 
 ### <a name="using-an-environment-variable"></a>Użycie zmiennej środowiskowej
 
-- Ustaw zmienną `COMPLUS_CLRLoadLogDir` środowiskową na ciąg, który reprezentuje pełną ścieżkę do istniejącego katalogu, w którym chcesz przechowywać dzienniki aktywacji środowiska CLR.
+- Ustaw zmienną środowiskową `COMPLUS_CLRLoadLogDir` na ciąg, który reprezentuje pełną ścieżkę do istniejącego katalogu, w którym chcesz przechowywać dzienniki aktywacji środowiska CLR.
 
     Sposób ustawiania zmiennej środowiskowej określa jej zakres:
 
@@ -112,7 +110,7 @@ W poniższym przykładzie dziennika aktywacji najbardziej przydatne informacje s
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
-- **Instalacja funkcji na żądanie** dotyczy .NET Framework 3,5 w systemie Windows 8. Zobacz [Błędy inicjowania .NET Framework: Zarządzanie czynnościami](initialization-errors-managing-the-user-experience.md) użytkownika w celu uzyskania dodatkowych informacji o tym scenariuszu.
+- **Instalacja funkcji na żądanie** dotyczy .NET Framework 3,5 w systemie Windows 8. Zobacz [Błędy inicjowania .NET Framework: Zarządzanie czynnościami użytkownika,](initialization-errors-managing-the-user-experience.md) Aby uzyskać więcej informacji na temat tego scenariusza.
 
     ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
@@ -121,4 +119,4 @@ W poniższym przykładzie dziennika aktywacji najbardziej przydatne informacje s
 ## <a name="see-also"></a>Zobacz także
 
 - [Wdrażanie](index.md)
-- [Instrukcje: Skonfiguruj aplikację do obsługi .NET Framework 4 lub nowszej wersji](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Instrukcje: Konfigurowanie aplikacji do obsługi .NET Framework 4 lub nowszej wersji](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

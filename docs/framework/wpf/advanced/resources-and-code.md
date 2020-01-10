@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: 3d504467c137c1e3f494e120217957661f4e75a3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 11903a9bae25b0646d944fb11038e07434996015
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458759"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559758"
 ---
 # <a name="resources-and-code"></a>Zasoby i kod
 Ten przegląd koncentruje się na sposobie uzyskiwania dostępu do zasobów [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] lub tworzenia ich przy użyciu kodu, a nie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] składni. Aby uzyskać więcej informacji na temat ogólnego użycia zasobów i zasobów z perspektywy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ej składni, zobacz [zasoby XAML](xaml-resources.md).  
@@ -42,7 +42,7 @@ Ten przegląd koncentruje się na sposobie uzyskiwania dostępu do zasobów [!IN
   
 <a name="objectaskey"></a>   
 ## <a name="using-objects-as-keys"></a>Używanie obiektów jako kluczy  
- Większość użycia zasobów ustawi klucz zasobu jako ciąg. Jednak różne funkcje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] celowo nie używają typu ciągu do określenia kluczy, zamiast tego ten parametr jest obiektem. Możliwość umieszczania zasobu przez obiekt jest używana przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stylu i obsługi motywów. Style w motywach, które stają się stylem domyślnym dla kontrolki nieposiadające stylu, są podżądane przez <xref:System.Type> kontrolki, do których mają zastosowanie. Ustalanie przez typ zapewnia niezawodny mechanizm wyszukiwania, który działa na wystąpieniach domyślnych każdego typu formantu, a typ może być wykrywany przez odbicie i używane do ustawiania stylów klas pochodnych, mimo że typ pochodny nie ma stylu domyślnego. Możesz określić klucz <xref:System.Type> dla zasobu zdefiniowanego w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] przy użyciu [rozszerzenia znacznika x:Type —](../../xaml-services/x-type-markup-extension.md). Podobne rozszerzenia istnieją dla innych nieciąguowych użycia kluczy, które obsługują funkcje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], takie jak [rozszerzenie znacznika ComponentResourceKey](componentresourcekey-markup-extension.md).  
+ Większość użycia zasobów ustawi klucz zasobu jako ciąg. Jednak różne funkcje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] celowo nie używają typu ciągu do określenia kluczy, zamiast tego ten parametr jest obiektem. Możliwość umieszczania zasobu przez obiekt jest używana przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stylu i obsługi motywów. Style w motywach, które stają się stylem domyślnym dla kontrolki nieposiadające stylu, są podżądane przez <xref:System.Type> kontrolki, do których mają zastosowanie. Ustalanie przez typ zapewnia niezawodny mechanizm wyszukiwania, który działa na wystąpieniach domyślnych każdego typu formantu, a typ może być wykrywany przez odbicie i używane do ustawiania stylów klas pochodnych, mimo że typ pochodny nie ma stylu domyślnego. Możesz określić klucz <xref:System.Type> dla zasobu zdefiniowanego w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] przy użyciu [rozszerzenia znacznika x:Type —](../../../desktop-wpf/xaml-services/xtype-markup-extension.md). Podobne rozszerzenia istnieją dla innych nieciąguowych użycia kluczy, które obsługują funkcje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], takie jak [rozszerzenie znacznika ComponentResourceKey](componentresourcekey-markup-extension.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,17 +1,16 @@
 ---
 title: Tablice wielowymiarowe — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-ms.openlocfilehash: 63b8729a14e4c309e85a588c5cddc692fb6a6fad
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: eb49f4386b6106328f1613b5ec70794ac26fc9b7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597409"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715038"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>Tablice wielowymiarowe (Przewodnik programowania w języku C#)
 
@@ -33,7 +32,7 @@ Tablice mogą mieć więcej niż jeden wymiar. Na przykład następująca deklar
   
  [!code-csharp[csProgGuideArrays#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#14)]  
   
- Jeśli zdecydujesz się zadeklarować zmienną tablicową bez inicjalizacji, musisz użyć operatora `new` , aby przypisać tablicę do zmiennej. Użycie `new` jest pokazane w poniższym przykładzie.  
+ Jeśli zdecydujesz się zadeklarować zmienną tablicową bez inicjalizacji, musisz użyć operatora `new`, aby przypisać tablicę do zmiennej. W poniższym przykładzie pokazano sposób użycia `new`.  
   
  [!code-csharp[csProgGuideArrays#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#15)]  
   

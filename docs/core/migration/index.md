@@ -2,13 +2,12 @@
 title: Migracja platformy .NET Core z pliku Project. JSON
 description: Dowiedz się, jak przeprowadzić migrację starszego projektu .NET Core przy użyciu pliku Project. JSON
 ms.date: 07/19/2017
-ms.custom: seodec18
-ms.openlocfilehash: 2912262d1191114d2314fed89e31c91c114f1935
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: f81d01c052c3632c48a5f961be86eab686c2074e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773903"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714358"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migrowanie projektów .NET Core z pliku Project. JSON
 
@@ -29,13 +28,13 @@ Migracja z pliku *Project. JSON* do *. csproj* można wykonać przy użyciu jedn
 
 Obie metody używają tego samego aparatu podstawowego do migrowania projektów, dlatego wyniki będą takie same dla obu tych metod. W większości przypadków użycie jednego z tych dwóch metod migracji pliku *Project. JSON* do *csproj* jest jedyną potrzebną operacją i nie jest konieczne dalsze ręczne edytowanie plików projektu. Utworzony plik *csproj* będzie taki sam jak nazwa katalogu zawierającego.
 
-### <a name="visual-studio"></a>Visual Studio
+### <a name="visual-studio"></a>{1&gt;Visual Studio&lt;1}
 
 Po otwarciu pliku *. xproj* lub pliku rozwiązania, który odwołuje się do plików *. Xproj* w programie Visual Studio 2017 lub Visual studio 2019 w wersji 16,2 i starszej, zostanie wyświetlone okno dialogowe **uaktualnianie jednokierunkowe** . W oknie dialogowym zostaną wyświetlone projekty do migracji. Jeśli otworzysz plik rozwiązania, zostaną wyświetlone wszystkie projekty określone w pliku rozwiązania. Przejrzyj listę projektów do migracji i wybierz **przycisk OK**.
 
 ![Jednokierunkowe okno dialogowe uaktualniania zawierające listę projektów do migracji](media/one-way-upgrade.jpg)
 
-Program Visual Studio automatycznie migruje wybrane projekty. W przypadku migrowania rozwiązania, jeśli nie wybrano wszystkich projektów, zostanie wyświetlone okno dialogowe z prośbą o uaktualnienie pozostałych projektów z tego rozwiązania. Po przeprowadzeniu migracji projektu można zobaczyć i zmodyfikować jego zawartość, klikając prawym przyciskiem myszy projekt w oknie **Eksplorator rozwiązań** i wybierając pozycję **edytuj \<project nazwa >. csproj**.
+Program Visual Studio automatycznie migruje wybrane projekty. W przypadku migrowania rozwiązania, jeśli nie wybrano wszystkich projektów, zostanie wyświetlone okno dialogowe z prośbą o uaktualnienie pozostałych projektów z tego rozwiązania. Po przeprowadzeniu migracji projektu można zobaczyć i zmodyfikować jego zawartość, klikając prawym przyciskiem myszy projekt w oknie **Eksplorator rozwiązań** i wybierając pozycję **Edytuj \<nazwa projektu >. csproj**.
 
 Pliki migrowane (*Project. JSON*, *Global. JSON*, *. xproj*i plik rozwiązania) są przenoszone do folderu *kopii zapasowej* . Migrowany plik rozwiązania jest uaktualniany do programu Visual Studio 2017 lub Visual Studio 2019 i nie będzie można otworzyć tego pliku rozwiązania w programie Visual Studio 2015 lub jego wcześniejszych wersjach. Plik o nazwie *UpgradeLog. htm* zawierający raport migracji również jest automatycznie zapisywany i otwierany.
 

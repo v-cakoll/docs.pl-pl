@@ -7,36 +7,34 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9a18876d8a5ba3067aa35c617b1e20fce0411f5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62027163"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710781"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Uwzględnianie lub importowanie schematów XML
-Schemat XML może zawierać `<xs:import />`, `<xs:include />`, i `<xs:redefine />` elementów. Te elementy schematu odnoszą się do innych schematów XML, które mogą służyć jako uzupełnienie strukturę schematu, który zawiera lub importuje je. <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> i <xref:System.Xml.Schema.XmlSchemaRedefine> klas, mapy do tych elementów w schemacie obiektu Model (model SOM) interfejsu API.  
+Schemat XML może zawierać elementy `<xs:import />`, `<xs:include />`i `<xs:redefine />`. Te elementy schematu odwołują się do innych schematów XML, które mogą służyć do uzupełniania struktury schematu, który zawiera lub importuje. Klasy <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> i <xref:System.Xml.Schema.XmlSchemaRedefine> mapują do tych elementów w interfejsie API modelu obiektów schematu (SOM).  
   
-## <a name="including-or-importing-an-xml-schema"></a>Uwzględnianie lub importowanie schematu XML  
- Poniższy kod stanowi uzupełnienie schematu klientów utworzonych w [tworzenie schematów XML](../../../../docs/standard/data/xml/building-xml-schemas.md) tematu przy użyciu schematów adresów. Uzupełniające schematu klienta ze schematem adres udostępnia typy adresów w schemacie klienta.  
+## <a name="including-or-importing-an-xml-schema"></a>Dołączanie lub importowanie schematu XML  
+ Poniższy przykład kodu uzupełnia schemat klienta utworzony w temacie [Tworzenie schematów XML](../../../../docs/standard/data/xml/building-xml-schemas.md) ze schematem adresu. Uzupełnienie schematu klienta przy użyciu schematu adresu sprawia, że typy adresów są dostępne w schemacie klienta.  
   
- Schemat adresu należy włączyć za pomocą `<xs:include />` lub `<xs:import />` elementy, aby używać składników schematu adresacji jako — jest lub przy użyciu `<xs:redefine />` element, aby zmodyfikować dowolne jego składniki do własnych potrzebę schematu klienta. Ponieważ schematu adresacji `targetNamespace` , różni się od schematu klienta `<xs:import />` element i w związku z tym semantyki importu jest używany.  
+ Schemat adresów może być dołączany przy użyciu `<xs:include />` lub `<xs:import />` elementów, aby użyć składników schematu adresu jako-is lub użyć elementu `<xs:redefine />` do zmodyfikowania dowolnego z jego składników, aby odpowiadał potrzebom schematu klienta. Ze względu na to, że schemat adresu ma `targetNamespace`, który różni się od schematu klienta, jest używany element `<xs:import />` i dlatego semantyka importu.  
   
- Przykładowy kod zawiera schemat adresu w poniższych krokach.  
+ Przykład kodu zawiera schemat adresu w poniższych krokach.  
   
-1. Dodaje nowy schemat klienta i schemat adresu <xref:System.Xml.Schema.XmlSchemaSet> obiektu, a następnie kompiluje je. Wszelkie ostrzeżenia sprawdzania poprawności schematu i błędów napotkanych odczytywania lub kompilowania schematów są obsługiwane przez <xref:System.Xml.Schema.ValidationEventHandler> delegować.  
+1. Dodaje schemat klienta i schemat adresu do nowego obiektu <xref:System.Xml.Schema.XmlSchemaSet>, a następnie kompiluje je. Wszystkie ostrzeżenia i błędy walidacji schematu napotkane podczas odczytywania lub kompilowania schematów są obsługiwane przez delegata <xref:System.Xml.Schema.ValidationEventHandler>.  
   
-2. Pobiera skompilowana klasa <xref:System.Xml.Schema.XmlSchema> obiektów dla klienta i adresem schematów z <xref:System.Xml.Schema.XmlSchemaSet> przez Iterowanie <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> właściwości. Ponieważ schematy są kompilowane, właściwości (PSCI) po-Schema-kompilacja-zestaw informacji są dostępne.  
+2. Pobiera skompilowane obiekty <xref:System.Xml.Schema.XmlSchema> zarówno dla schematów klienta, jak i adresów z <xref:System.Xml.Schema.XmlSchemaSet> przez iterację nad właściwością <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Ze względu na to, że schematy są kompilowane, właściwości po schemacie kompilacja-sprawdzonych (PSCI) są dostępne.  
   
-3. Tworzy <xref:System.Xml.Schema.XmlSchemaImport> obiektu, zestawy <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> ustawia właściwość importu obszaru nazw schematu adresacji <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> właściwość importu <xref:System.Xml.Schema.XmlSchema> obiektu schematu adresacji i dodaje importu <xref:System.Xml.Schema.XmlSchema.Includes%2A> Właściwość schematu klienta.  
+3. Tworzy obiekt <xref:System.Xml.Schema.XmlSchemaImport>, ustawia właściwość <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> importu na przestrzeń nazw schematu adresu, ustawia właściwość <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> importowania na obiekt <xref:System.Xml.Schema.XmlSchema> schematu adresu i dodaje do właściwości <xref:System.Xml.Schema.XmlSchema.Includes%2A> schematu klienta....  
   
-4. Ponownego przetwarzania oraz kompiluje zmodyfikowanego <xref:System.Xml.Schema.XmlSchema> obiektu przy użyciu schematu klienta <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> i <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> metody <xref:System.Xml.Schema.XmlSchemaSet> klasy i zapisuje go w konsoli.  
+4. Przetwarza i kompiluje zmodyfikowany obiekt <xref:System.Xml.Schema.XmlSchema> schematu klienta przy użyciu metod <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> i <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> klasy <xref:System.Xml.Schema.XmlSchemaSet> i zapisuje je w konsoli programu.  
   
-5. Na koniec rekursywnie zapisuje schematy zaimportowane do schematu klienta za pomocą konsoli <xref:System.Xml.Schema.XmlSchema.Includes%2A> właściwości schematu klienta. <xref:System.Xml.Schema.XmlSchema.Includes%2A> Właściwości zapewnia dostęp do wszystkich zawiera, imports lub ponownie zdefiniowanych wystąpień dodane do schematu.  
+5. Na koniec cyklicznie zapisuje wszystkie schematy zaimportowane do schematu klienta w konsoli programu przy użyciu właściwości <xref:System.Xml.Schema.XmlSchema.Includes%2A> schematu klienta. Właściwość <xref:System.Xml.Schema.XmlSchema.Includes%2A> zapewnia dostęp do wszystkich dołączonych, importowanych lub ponownie zdefiniowanych do schematu.  
   
- Poniżej znajduje się pełny przykład kodu i schematy klientów i adresu, wyświetlony w konsoli.  
+ Poniżej znajduje się kompletny przykład kodu oraz schemat klienta i adresu zapisany w konsoli programu.  
   
  [!code-cpp[XmlSchemaImportExample#1](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaImportExample/CPP/XmlSchemaImportExample.cpp#1)]
  [!code-csharp[XmlSchemaImportExample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaImportExample/CS/XmlSchemaImportExample.cs#1)]
@@ -97,7 +95,7 @@ Schemat XML może zawierać `<xs:import />`, `<xs:include />`, i `<xs:redefine /
 </schema>  
 ```  
   
- Aby uzyskać więcej informacji na temat `<xs:import />`, `<xs:include />`, i `<xs:redefine />` elementy i <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> i <xref:System.Xml.Schema.XmlSchemaRedefine> klas, zobacz [schematu XML W3C](https://www.w3.org/XML/Schema) i <xref:System.Xml.Schema?displayProperty=nameWithType> Dokumentacja referencyjna klasy w przestrzeni nazw.  
+ Aby uzyskać więcej informacji na temat elementów `<xs:import />`, `<xs:include />`i `<xs:redefine />` oraz klas <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> i <xref:System.Xml.Schema.XmlSchemaRedefine>, zobacz [schemat XML W3C](https://www.w3.org/XML/Schema) i dokumentacja klasy <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeń nazw.  
   
 ## <a name="see-also"></a>Zobacz także
 

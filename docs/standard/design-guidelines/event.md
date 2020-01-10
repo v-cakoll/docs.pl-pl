@@ -10,18 +10,17 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-author: KrzysztofCwalina
-ms.openlocfilehash: 530c68ea5342263acd07f8dc8a8c8ce889652503
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 78d765a7af77b1e6a6ecd483677cea2d4c6b0d5b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026448"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709429"
 ---
 # <a name="event-design"></a>Projekt zdarzenia
-Zdarzenia są najczęściej używane formularza wywołania zwrotne (konstrukcji, zezwalających na platformę, by mogą wywoływać kodu użytkownika). Inne mechanizmy wywołania zwrotnego dołączone elementy członkowskie, biorąc delegatów, wirtualne elementy członkowskie i oparte na interfejsie wtyczki. Dane z badań użyteczność wskazać, że większość deweloperów bardziej komfortowo, jednocześnie za pomocą zdarzeń, niż użytkownicy korzystają z innych mechanizmów wywołania zwrotnego. Zdarzenia są dobrze zintegrowane z Visual Studio i wielu języków.  
+Zdarzenia są najczęściej używane w formie wywołań zwrotnych (konstrukcje, które umożliwiają platformie Wywoływanie kodu użytkownika). Inne mechanizmy wywołania zwrotnego obejmują członków, którzy korzystają z delegatów, wirtualnych elementów członkowskich i wtyczek opartych na interfejsie. dane z badań użyteczności wskazują, że większość deweloperów jest bardziej wygodna przy użyciu zdarzeń, niż korzystają z innych mechanizmów wywołania zwrotnego . Zdarzenia są dobrze zintegrowane z programem Visual Studio i wieloma językami.  
   
- Ważne jest, aby zwrócić uwagę na dwie grupy zdarzeń: zdarzenia wywoływane przed wykonaniem stan zmiany systemu, nazywany zdarzeń poprzedzających i zdarzenia wywoływane po zmianie stanu, wywoływana po zdarzenia. Oto przykład zdarzenia poprzedzającego `Form.Closing`, które jest wywoływane przed zamknięciem formularza. Oto przykład zdarzenia po `Form.Closed`, które jest wywoływane po zamknięciu formularza.  
+ Należy pamiętać, że istnieją dwie grupy zdarzeń: zdarzenia wywoływane przed zmianą systemu, zwane przed zdarzeniami i zdarzenia zgłoszone po zmianie stanu, nazywanego po wprowadzeniu zdarzeń. Przykładem przedevent może być `Form.Closing`, który jest wywoływany przed zamknięciem formularza. Przykładem zdarzenia po zdarzeniu może być `Form.Closed`, które jest wywoływane po zamknięciu formularza.  
   
  **✓ DO** używany jest termin "raise" dla zdarzenia, a nie "fire" lub "wyzwolenia".  
   
@@ -29,17 +28,17 @@ Zdarzenia są najczęściej używane formularza wywołania zwrotne (konstrukcji,
   
  **✓ CONSIDER** przy użyciu podklasą <xref:System.EventArgs> jako argument zdarzenia, jeśli nie masz pewności absolutnie zdarzenie nie będzie trzeba do przenoszenia danych do obsługi metody zdarzeń w takim przypadku można zastosować `EventArgs` wpisać bezpośrednio.  
   
- Jeśli dostarczasz interfejsu API przy użyciu `EventArgs` bezpośrednio, nigdy nie będą mogli dodawać żadnych danych, które mają znajdować się ze zdarzeniem bez przerywania zgodność. Jeśli używasz podklasę, nawet jeśli początkowo całkowicie pusty, można dodać właściwości do podklasy w razie potrzeby.  
+ W przypadku dostarczania interfejsu API za pomocą `EventArgs` bezpośrednio nie będzie można dodawać żadnych danych, które mają być przenoszone ze zdarzeniem bez przerywania zgodności. Jeśli używasz podklasy, nawet jeśli początkowo całkowicie jest pusta, możesz w razie potrzeby dodać właściwości do podklasy.  
   
- **✓ DO** Użyj chronione metody wirtualnej, aby wywołać każdego zdarzenia. To ma zastosowanie tylko do niestatycznego zdarzenia niezapieczętowane klasy, aby nie struktury, zapieczętowane klasy lub zdarzenia statyczne.  
+ **✓ DO** Użyj chronione metody wirtualnej, aby wywołać każdego zdarzenia. Ma to zastosowanie tylko do zdarzeń niestatycznych dla niezapieczętowanych klas, nie do struktur, klas zapieczętowanych lub zdarzeń statycznych.  
   
- Przeznaczenie metody jest sposób dla klasy pochodnej do obsługi zdarzeń za pomocą zastąpienia. Zastępowanie jest bardziej elastyczna, szybsze i bardziej naturalny sposób obsługi zdarzeń klasy podstawowej w klasach pochodnych. Zgodnie z Konwencją Nazwa metody powinna rozpoczynać się "On" i występować z nazwą zdarzenia.  
+ Celem metody jest zapewnienie metodu do obsługi zdarzenia przy użyciu przesłonięcia klasy pochodnej. Zastępowanie jest bardziej elastyczne, szybsze i bardziej naturalne w przypadku obsługi zdarzeń klasy podstawowej w klasach pochodnych. Według Konwencji, nazwa metody powinna zaczynać się od "on" i następować nazwą zdarzenia.  
   
- Klasa pochodna może zrezygnować z wywoływać implementację podstawową metody w jego zastąpienie. Należy przygotować to przez nieumieszczenie jakiegokolwiek przetwarzania w metodzie, która jest wymagana dla klasy bazowej działać poprawnie.  
+ Klasa pochodna może zrezygnować z implementacji podstawowej metody w jej zastępowaniu. Przygotowuje się do tego przez nie uwzględniając żadnego przetwarzania w metodzie, która jest wymagana do poprawnego działania klasy bazowej.  
   
  **✓ DO** przyjmować jeden parametr do metody chronionych, która wywołuje zdarzenie.  
   
- Powinien zostać nazwany parametr `e` , należy wpisać jako klasa argumentów zdarzenia.  
+ Parametr powinien mieć nazwę `e` i powinien być typem klasy argumentu zdarzenia.  
   
  **X DO NOT** należy przekazać wartość null jako nadawcę podczas wywołaniem Niestatyczne zdarzenia.  
   
@@ -47,18 +46,18 @@ Zdarzenia są najczęściej używane formularza wywołania zwrotne (konstrukcji,
   
  **X DO NOT** przekazać wartości null jako parametr danych zdarzenia, gdy wywołanie zdarzenia.  
   
- Należy przekazać `EventArgs.Empty` Jeśli nie chcesz przekazywać żadnych danych do metody obsługi zdarzeń. Deweloperzy oczekiwać, że ten parametr nie mają one wartość null.  
+ Należy przekazać `EventArgs.Empty`, jeśli nie chcesz przekazać żadnych danych do metody obsługi zdarzeń. Deweloperzy oczekują, że ten parametr nie ma wartości null.  
   
- **✓ CONSIDER** wywoływanie zdarzeń, które użytkownik końcowy może anulować. Dotyczy to tylko zdarzeń poprzedzających.  
+ **✓ CONSIDER** wywoływanie zdarzeń, które użytkownik końcowy może anulować. Dotyczy to przede wszystkim zdarzeń.  
   
- Użyj <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> lub jego podklasy jako argumentu zdarzenia, aby zezwolić użytkownikom na anulowanie zdarzenia.  
+ Użyj <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> lub jej podklasy jako argumentu zdarzenia, aby umożliwić użytkownikowi końcowemu anulowanie zdarzeń.  
   
 ### <a name="custom-event-handler-design"></a>Projekt programu obsługi zdarzeń niestandardowych  
- Istnieją przypadki, w którym `EventHandler<T>` nie można użyć, np. gdy struktura potrzebuje do pracy z wcześniejszych wersji środowiska CLR, która nie obsługuje typów ogólnych. W takich przypadkach może być konieczne projektowania i tworzenia delegata obsługi zdarzeń niestandardowych.  
+ Istnieją przypadki, w których nie można użyć `EventHandler<T>`, na przykład gdy struktura musi działać we wcześniejszych wersjach środowiska CLR, które nie obsługują typów ogólnych. W takich przypadkach może być konieczne zaprojektowanie i opracowanie niestandardowego delegata obsługi zdarzeń.  
   
  **✓ DO** zwracany typ void na użytek obsługi zdarzeń.  
   
- Program obsługi zdarzeń można wywołać wiele obsługi metod, prawdopodobnie na wielu obiektach zdarzeń. Jeśli zezwolono na metody obsługi zdarzeń w celu zwrócenia wartości, może to być wiele wartości zwracane dla każdego wywołania zdarzenia.  
+ Procedura obsługi zdarzeń może wywoływać wiele metod obsługi zdarzeń, prawdopodobnie na wielu obiektach. Jeśli metody obsługi zdarzeń mogły zwrócić wartość, dla każdego wywołania zdarzenia może istnieć wiele wartości zwracanych.  
   
  **✓ DO** użyj `object` jako typ pierwszego parametru metody obsługi zdarzeń i nadaj mu `sender`.  
   
@@ -66,9 +65,9 @@ Zdarzenia są najczęściej używane formularza wywołania zwrotne (konstrukcji,
   
  **X DO NOT** ma więcej niż dwa parametry dotyczące programu obsługi zdarzeń.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

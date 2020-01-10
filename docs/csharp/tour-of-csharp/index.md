@@ -2,17 +2,18 @@
 title: C# C# poradniku
 description: Jesteś nowym C#? Poznaj podstawy języka.
 ms.date: 04/05/2019
-ms.custom: seoapril2019
-ms.openlocfilehash: b497ff05b29ce349fe2be3f8b9bc1a8697d6b30b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e2d7af3a35dc9d4fdeddf9eb742d155ab33094b4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774074"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711665"
 ---
 # <a name="a-tour-of-the-c-language"></a>Przewodnik po C# języku
 
-C#(wymawiane "Zobacz Sharp") to prosty, nowoczesny, zorientowany obiektowo i bezpieczny dla typu język programowania. C#ma swoje elementy główne w rodzinie C i będzie od razu znane programistom języków C, C++, Java i JavaScript. Ten przewodnik zawiera omówienie głównych składników języka. Jeśli chcesz poznać język za pomocą przykładów interaktywnych, wypróbuj nasze [wprowadzenie do C# ](../tutorials/intro-to-csharp/index.md) samouczków.
+C#(wymawiane "Zobacz Sharp") to prosty, nowoczesny, zorientowany obiektowo i bezpieczny dla typu język programowania. C#ma swoje elementy główne w rodzinie C i będzie od razu znane programistom języków C, C++, Java i JavaScript.
+
+Ten przewodnik zawiera omówienie głównych składników języka w C# 7 i nowszych. Jeśli chcesz poznać język za pomocą przykładów interaktywnych, wypróbuj [wprowadzenie do C# ](../tutorials/intro-to-csharp/index.md) samouczków.
 
 C#jest językiem zorientowanym na obiekt, ale C# dodatkowo obsługuje programowanie ***zorientowane na składniki*** . Współczesny projekt oprogramowania jest coraz bardziej oparty na składnikach oprogramowania w postaci samodzielnych i samodzielnych pakietów funkcji. Klucz do takich składników polega na tym, że stanowią one model programowania z właściwościami, metodami i zdarzeniami; mają one atrybuty, które dostarczają deklaracyjne informacje o składniku; i zawierają własną dokumentację. C#udostępnia konstrukcje języka do obsługi bezpośrednio tych koncepcji, co C# sprawia, że jest to bardzo naturalny język, w którym można tworzyć i używać składników oprogramowania.
 
@@ -49,30 +50,33 @@ Klasa `Hello` zadeklarowana przez program "Hello, World" ma jeden element człon
 
 Dane wyjściowe programu są tworzone przez metodę `WriteLine` klasy `Console` w przestrzeni nazw `System`. Ta klasa jest udostępniana przez standardowe biblioteki klas, które domyślnie są przywoływane przez kompilator.
 
-Dowiedz się więcej o tym, jak C#to zrobić. W poniższych tematach przedstawiono przegląd elementów C# języka. Te omówienia będą zawierać podstawowe informacje o wszystkich elementach języka oraz informacje niezbędne do szczegółowe bardziej szczegółowych elementów C# języka:
+## <a name="elements-of-the-c-language"></a>Elementy C# języka
+
+Dowiedz się więcej o tym, jak C#to zrobić. W poniższych tematach przedstawiono przegląd elementów C# języka. Te omówienia zapewniają podstawowe informacje o wszystkich elementach języka i udostępniają informacje niezbędne do szczegółowe się bardziej szczegółowo:
 
 - [Struktura programu](program-structure.md)
   - Poznaj kluczowe koncepcje organizacyjne w C# języku: ***programy***, ***przestrzenie nazw***, ***typy***, ***elementy członkowskie***i ***zestawy***.
 - [Typy i zmienne](types-and-variables.md)
-  - Dowiedz się więcej o ***typach wartości***, ***typach odwołań***i ***zmiennych*** w C# języku.
+  - Dowiedz się więcej o ***typach wartości***, ***typach referencyjnych***, i ***zmiennych*** w języku C#.
 - [Wyrażenia](expressions.md)
-  - ***Wyrażenia*** są zbudowane z ***argumentów operacji*** i ***operatorów***. Wyrażenia tworzą wartość.
+  - ***Wyrażenia*** są tworzone przy użyciu ***operandów*** (argumentów operacji) i ***operatorów***. Wyrażenia zwracają wartość.
 - [Instrukcje](statements.md)
-  - ***Instrukcje*** służą do wyrażenia działania programu.
+  - ***Instrukcje*** służą do przekazywania programowi informacji o tym, co ma on wykonać.
 - [Klasy i obiekty](classes-and-objects.md)
-  - ***Klasy*** są najbardziej zasadniczymi C#typami. ***Obiekty*** są wystąpieniami klasy. Klasy są kompilowane przy użyciu ***elementów członkowskich***, które również zostały omówione w tym temacie.
+  - ***Klasy*** są najbardziej podstawowym typem w języku C#. ***Obiekty*** są wystąpieniami klasy. Klasy są tworzone przy użyciu ***składowych***, które także opisano w tym temacie.
 - [Struktury](structs.md)
-  - ***Struktury*** są strukturami danych, które w przeciwieństwie do klas są typami wartości.
+  - ***Struktury*** to struktury danych, które (w przeciwieństwie do klas) są typami wartości.
 - [Tablice](arrays.md)
-  - ***Tablica*** to struktura danych zawierająca wiele zmiennych, do których można uzyskać dostęp za pomocą obliczanych indeksów.
+  - ***Tablica*** to struktura danych zawierająca pewną liczbę zmiennych, do których dostęp jest uzyskiwany za pomocą obliczonych indeksów.
 - [Interfejsy](interfaces.md)
   - ***Interfejs*** definiuje kontrakt, który może być zaimplementowany przez klasy i struktury. Interfejs może zawierać metody, właściwości, zdarzenia i indeksatory. Interfejs nie dostarcza implementacji elementów członkowskich, które definiuje — tylko określa elementy członkowskie, które muszą być dostarczone przez klasy lub struktury, które implementują interfejs.
-- [Wyliczenia](enums.md)
-  - ***Typ wyliczeniowy*** jest odrębnym typem wartości z zestawem nazwanych stałych.
 - [Delegaci](delegates.md)
   - ***Typ delegata*** reprezentuje odwołania do metod z określoną listą parametrów i zwracanym typem. Delegaty umożliwiają traktowanie metod jako jednostek, które mogą być przypisane do zmiennych i przekazane jako parametry. Delegaty są podobne do koncepcji wskaźników funkcji, które znajdują się w innych językach, ale w przeciwieństwie do wskaźników funkcji Delegaty są zorientowane obiektowo i są bezpieczne dla typów.
 - [Atrybuty](attributes.md)
   - ***Atrybuty*** umożliwiają programom określenie dodatkowych informacji deklaratywnych dotyczących typów, elementów członkowskich i innych jednostek.
+  
+> [!NOTE]
+> Te artykuły mają zastosowanie C# do 7,0 i nowszych. Niektóre funkcje mogą nie być dostępne we wcześniejszych wersjach.
 
 > [!div class="step-by-step"]
 > [Next](program-structure.md)

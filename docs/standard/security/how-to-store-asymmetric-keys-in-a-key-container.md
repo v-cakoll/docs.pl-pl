@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: przechowywanie kluczy asymetrycznych w kontenerze kluczy'
+title: 'Porady: przechowywanie kluczy asymetrycznych w kontenerze kluczy'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,17 +15,15 @@ helpviewer_keywords:
 - encryption [.NET Framework], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8edb88d13732650e00292d63ad4e1975a97ac704
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 8ca4c4c5b1257411ecdf86858040bf428a9e6ce0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291631"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706061"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Instrukcje: przechowywanie kluczy asymetrycznych w kontenerze kluczy
-Asymetryczne klucze prywatne nigdy nie powinny być przechowywane Verbatim ani w postaci zwykłego tekstu na komputerze lokalnym. Jeśli musisz przechowywać klucz prywatny, należy użyć kontenera kluczy. Aby uzyskać więcej informacji na temat kontenerów kluczy, zobacz temat [Omówienie kontenerów kluczy RSA na poziomie komputera i użytkownika](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).  
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Porady: przechowywanie kluczy asymetrycznych w kontenerze kluczy
+Asymetryczne klucze prywatne nigdy nie powinny być przechowywane Verbatim ani w postaci zwykłego tekstu na komputerze lokalnym. Jeśli musisz przechować klucz prywatny, należy użyć kontenera kluczy. Aby uzyskać więcej informacji na temat kontenerów kluczy, zobacz temat [Omówienie kontenerów kluczy RSA na poziomie komputera i użytkownika](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Aby utworzyć klucz asymetryczny i zapisać go w kontenerze kluczy  
   
@@ -37,7 +35,7 @@ Asymetryczne klucze prywatne nigdy nie powinny być przechowywane Verbatim ani w
   
 1. Utwórz nowe wystąpienie klasy **CspParameters** i przekaż nazwę, która ma być wywoływana z kontenera kluczy do pola **CspParameters. ContainerName** .  
   
-2. Utwórz nowe wystąpienie klasy, która dziedziczy z klasy **AsymmetricAlgorithm** (zazwyczaj **RSACryptoServiceProvider** lub **DSACryptoServiceProvider**) i przekaż wcześniej utworzony obiekt **CspParameters** do jego konstruktora .  
+2. Utwórz nowe wystąpienie klasy, która dziedziczy z klasy **AsymmetricAlgorithm** (zazwyczaj **RSACryptoServiceProvider** lub **DSACryptoServiceProvider**) i przekaż wcześniej utworzony obiekt **CspParameters** do jego konstruktora.  
   
 3. Ustaw właściwość **PersistKeyInCSP** klasy, która dziedziczy z **AsymmetricAlgorithm** na **false** (**false** w Visual Basic).  
   

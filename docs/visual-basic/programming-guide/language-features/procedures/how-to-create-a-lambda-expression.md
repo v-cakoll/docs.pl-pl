@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: bb0bdb3c10a7df2ca954fbdb9382a25bf805068d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1c65841e4c124252cfa41bcd4d0c305a426687ee
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349741"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632353"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Porady: tworzenie wyrażenia lambda (Visual Basic)
 *Wyrażenie lambda* jest funkcją lub podprocedurą, która nie ma nazwy. Wyrażenia lambda można użyć wszędzie tam, gdzie typ delegata jest prawidłowy.  
@@ -100,7 +100,7 @@ ms.locfileid: "74349741"
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
   
- Poprzedni przykład jest odpowiednikiem poniższego kodu, który jest pisany w składni [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]:  
+ Poprzedni przykład jest odpowiednikiem poniższego kodu, który jest zapisywana w składni języka (LINQ) zintegrowanego z językiem:  
   
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   

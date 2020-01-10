@@ -4,13 +4,12 @@ description: Zapoznaj się z najlepszymi rozwiązaniami dotyczącymi pisania tes
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.custom: seodec18
-ms.openlocfilehash: afd6e7e25573cbb571b225c263b9bcfccfca5647
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 387d66bfeaf48359a27a532247a799c319f38caa
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926387"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714285"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Najlepsze rozwiązania dotyczące testów jednostkowych przy użyciu platformy .NET Core i .NET Standard
 
@@ -33,7 +32,7 @@ Wady regresji to wady wprowadzane po wprowadzeniu zmian w aplikacji. Jest ona ws
 W przypadku testów jednostkowych możliwe jest ponowne uruchomienie całego pakietu testów po każdej kompilacji lub nawet po zmianie wiersza kodu. Zapewnianie pewności, że nowy kod nie przerywa istniejących funkcji.
 
 ### <a name="executable-documentation"></a>Dokumentacja pliku wykonywalnego
-Może to nie zawsze być oczywisty sposób działania określonej metody lub jej zachowania. Możesz się z Tobą zadawać: Jak działa ta metoda, jeśli przekażę pusty ciąg? Null?
+Może to nie zawsze być oczywisty sposób działania określonej metody lub jej zachowania. Użytkownik może zadawać sobie: jak działa ta metoda, jeśli przekażę pusty ciąg? Null?
 
 Jeśli masz zestaw dobrze wymienionych testów jednostkowych, każdy test powinien być w stanie jasno wyjaśnić oczekiwane dane wyjściowe dla danego danych wejściowych. Ponadto powinno być możliwe zweryfikowanie, czy faktycznie działa.
 
@@ -70,7 +69,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Może to być przykład klasy zastępczej, która jest nazywana makietą. W tym przypadku jest to element zastępczy. Nastąpi przekazanie w kolejności jako środek, aby można było utworzyć wystąpienie `Purchase` (system testowy). Nazwa `MockOrder` jest również bardzo myląca, ponieważ nie jest to makieta.
+Może to być przykład klasy zastępczej, która jest nazywana makietą. W tym przypadku jest to element zastępczy. Nastąpi przekazanie w kolejności jako sposób, aby można było utworzyć wystąpienie `Purchase` (system objęty testem). Nazwa `MockOrder` jest również bardzo myląca, ponieważ nie jest to makieta.
 
 Lepszym rozwiązaniem będzie
 
@@ -83,7 +82,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Zmieniając nazwę klasy na `FakeOrder`, została utworzona bardziej generyczna Klasa, Klasa może być używana jako imitacja lub element zastępczy. W zależności od tego do przypadku testowego. W powyższym przykładzie `FakeOrder` jest używany jako zastępczy. Nie `FakeOrder` używasz w żadnym kształcie ani formularzu podczas potwierdzeń. `FakeOrder`został po prostu przesłany `Purchase` do klasy w celu spełnienia wymagań konstruktora.
+Zmieniając nazwę klasy na `FakeOrder`, została utworzona bardziej ogólna Klasa, Klasa może być używana jako imitacja lub jako element zastępczy. W zależności od tego do przypadku testowego. W powyższym przykładzie `FakeOrder` jest używany jako element zastępczy. Nie używasz `FakeOrder` w żadnym kształcie ani formularzu podczas potwierdzeń. `FakeOrder` został właśnie przekazano do klasy `Purchase`, aby spełnić wymagania konstruktora.
 
 Aby użyć go jako makiety, możesz zrobić coś podobnego do tego
 
@@ -96,7 +95,7 @@ purchase.ValidateOrders();
 Assert.True(mockOrder.Validated);
 ```
 
-W tym przypadku sprawdzasz właściwość dla fałszywego (potwierdzania), więc w powyższym fragmencie `mockOrder` kodu jest to makieta.
+W tym przypadku sprawdzasz właściwość dla fałszywego (potwierdzania), więc w powyższym fragmencie kodu `mockOrder` jest to makieta.
 
 > [!IMPORTANT]
 > Ważne jest, aby zapewnić poprawną terminologię. Jeśli wywołujesz obiekty zastępcze "makiety", inni deweloperzy będą wprowadzać fałszywe założenia dotyczące zamiaru.
@@ -118,7 +117,7 @@ Nazwa testu powinna składać się z trzech części:
 
 Testy są większe niż tylko w celu upewnienia się, że kod działa, ale również zawiera dokumentację. Wystarczy, że szukasz zestawu testów jednostkowych, można wywnioskować zachowanie kodu bez konieczności przeglądania kodu. Ponadto, gdy testy zakończą się niepowodzeniem, można zobaczyć, które scenariusze nie spełniają oczekiwań.
 
-#### <a name="bad"></a>Ściągaln
+#### <a name="bad"></a>Źle:
 [!code-csharp[BeforeNaming](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeNaming)]
 
 #### <a name="better"></a>Bardziej
@@ -138,7 +137,7 @@ Testy są większe niż tylko w celu upewnienia się, że kod działa, ale równ
 
 Czytelność to jeden z najważniejszych aspektów związanych z pisaniem testu. Oddzielenie każdej z tych akcji w ramach testu wyraźnie podkreśla zależności wymagane do wywołania kodu, sposobu wywoływania kodu i tego, co próbujesz przedstawić. Chociaż może być możliwe połączenie niektórych kroków i zmniejszenie rozmiaru testu, głównym celem jest przeprowadzenie testu jako możliwego do odczytania.
 
-#### <a name="bad"></a>Ściągaln
+#### <a name="bad"></a>Źle:
 [!code-csharp[BeforeArranging](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeArranging)]
 
 #### <a name="better"></a>Bardziej
@@ -154,7 +153,7 @@ Dane wejściowe do użycia w teście jednostkowym powinny być najprostszym moż
 
 Testy, które zawierają więcej informacji, niż jest to wymagane do przekazania testu, mają większą szansę na wprowadzenie błędów do testu i mogą sprawić, że zamiar testu jest mniej oczywisty. Podczas pisania testów, które chcesz skupić na zachowaniu. Ustawienie dodatkowych właściwości dla modeli lub użycie niezerowych wartości, gdy nie jest to wymagane, powoduje tylko rozciąganie z tego, co próbujesz udowodnić.
 
-#### <a name="bad"></a>Ściągaln
+#### <a name="bad"></a>Źle:
 [!code-csharp[BeforeMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
 
 #### <a name="better"></a>Bardziej
@@ -173,14 +172,14 @@ Ciągi Magic mogą spowodować pomyłkę dla czytnika testów. Jeśli ciąg wyr�
 > [!TIP] 
 > Podczas pisania testów należy zamierzyć możliwie jak najwięcej założeń. W przypadku ciągów magicznych dobrym rozwiązaniem jest przypisanie tych wartości do stałych.
 
-#### <a name="bad"></a>Ściągaln
+#### <a name="bad"></a>Źle:
 [!code-csharp[BeforeMagicString](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMagicString)]
 
 #### <a name="better"></a>Bardziej
 [!code-csharp[AfterMagicString](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMagicString)]
 
 ### <a name="avoid-logic-in-tests"></a>Unikanie logiki w testach
-Podczas pisania testów jednostkowych należy unikać ręcznego łączenia ciągów i warunków `if`logicznych `for`, takich jak `while`, `switch`,, itd.
+Podczas pisania testów jednostkowych należy unikać ręcznego łączenia ciągów i warunków logicznych, takich jak `if`, `while`, `for`, `switch`itd.
 
 #### <a name="why"></a>Dlaczego?
 
@@ -192,7 +191,7 @@ Gdy wprowadzasz logikę do zestawu testów, szansa na ich zwiększenie znacznie 
 > [!TIP]
 > Jeśli logika w teście wydaje się nienieunikniona, rozważ podzielenie testu na dwa lub więcej różnych testów.
 
-#### <a name="bad"></a>Ściągaln
+#### <a name="bad"></a>Źle:
 [!code-csharp[LogicInTests](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#LogicInTests)]
 
 #### <a name="better"></a>Bardziej
@@ -207,12 +206,12 @@ Jeśli potrzebujesz podobnego obiektu lub stanu dla testów, Preferuj metodę po
 - Mniejsza szansa, że zbyt wiele lub zbyt mała dla danego testu.
 - Mniejsza szansa stanu udostępniania między testami, które tworzą niepożądane zależności między nimi.
 
-W strukturach `Setup` testów jednostkowych jest wywoływana przed każdym testem jednostkowym w ramach zestawu testów. Niektóre mogą być widoczne jako przydatne narzędzia, zazwyczaj kończą się wiodącym bloated i trudnym do odczytania testów. Każdy test ma zwykle różne wymagania, aby można było je uruchomić. Niestety, `Setup` wymusza użycie dokładnie tych samych wymagań dla każdego testu.
+W strukturach testów jednostkowych `Setup` jest wywoływana przed każdym testem jednostkowym w ramach zestawu testów. Niektóre mogą być widoczne jako przydatne narzędzia, zazwyczaj kończą się wiodącym bloated i trudnym do odczytania testów. Każdy test ma zwykle różne wymagania, aby można było je uruchomić. Niestety, `Setup` wymusza użycie dokładnie tych samych wymagań dla każdego testu.
 
 > [!NOTE] 
 > xUnit usunął zarówno Instalatora, jak i usuwania w wersji 2. x
 
-#### <a name="bad"></a>Ściągaln
+#### <a name="bad"></a>Źle:
 [!code-csharp[BeforeSetup](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeSetup)]
 
 ```csharp
@@ -247,7 +246,7 @@ W przypadku wprowadzenia wielu potwierdzeń do przypadku testowego nie ma gwaran
 > [!NOTE]
 > Typowym wyjątkiem od tej reguły jest potwierdzenie obiektu. W takim przypadku ogólnie akceptowalne jest posiadanie wielu potwierdzeń dla każdej właściwości, aby upewnić się, że obiekt znajduje się w stanie, w którym oczekujesz.
 
-#### <a name="bad"></a>Ściągaln
+#### <a name="bad"></a>Źle:
 [!code-csharp[BeforeMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
 
 #### <a name="better"></a>Bardziej
@@ -271,9 +270,9 @@ private string TrimInput(string input)
 }
 ```
 
-Pierwszą odpowiedzią może być rozpoczęcie pisania testu dla `TrimInput` , ponieważ chcesz upewnić się, że metoda działa zgodnie z oczekiwaniami. Jednak jest on `sanitizedInput` w pełni możliwy, `ParseLogLine` aby manipulować w taki sposób, że nie jest to oczekiwane, renderowanie testu `TrimInput` przed bezużyteczny. 
+Pierwszą odpowiedzią może być rozpoczęcie pisania testu dla `TrimInput`, ponieważ chcesz upewnić się, że metoda działa zgodnie z oczekiwaniami. Jednak jest on w pełni możliwy, aby `ParseLogLine` manipulować `sanitizedInput` w taki sposób, że nie jest to oczekiwane, renderowanie testu względem `TrimInput` bezużytecznych. 
 
-Rzeczywisty test powinien być wykonywany w oparciu o publiczną metodę `ParseLogLine` dodaną, ponieważ to to, co powinno być ostatecznie ważne. 
+Rzeczywisty test powinien być wykonywany w oparciu o publiczną metodę dodaną `ParseLogLine`, ponieważ to jest to, co powinno być ostatecznie ważne. 
 
 ```csharp
 public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
@@ -289,7 +288,7 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 Jeśli w tym obszarze widać, że jest wyświetlana Metoda prywatna, Znajdź metodę publiczną i napisz testy dla tej metody. Tylko dlatego, że Metoda prywatna zwraca oczekiwany wynik, nie oznacza, że system, który ostatecznie wywołuje metodę prywatną, użyje poprawnego wyniku.
 
 ### <a name="stub-static-references"></a>Zastępcze odwołania statyczne
-Jedną z zasad testów jednostkowych jest to, że musi ona mieć pełną kontrolę nad testowanym systemem. Może to być problematyczne, gdy kod produkcyjny zawiera wywołania do odwołań statycznych `DateTime.Now`(np.). Rozważmy następujący kod
+Jedną z zasad testów jednostkowych jest to, że musi ona mieć pełną kontrolę nad testowanym systemem. Może to być problematyczne, gdy kod produkcyjny zawiera wywołania do odwołań statycznych (np. `DateTime.Now`). Rozważmy następujący kod
 
 ```csharp
 public int GetDiscountedPrice(int price)

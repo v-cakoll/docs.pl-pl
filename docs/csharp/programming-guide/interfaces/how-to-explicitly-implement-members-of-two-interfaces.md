@@ -1,25 +1,24 @@
 ---
-title: 'Instrukcje: Jawne implementowanie elementów członkowskich dwóch interfejsów C# — Przewodnik programowania'
-ms.custom: seodec18
+title: Jak jawnie zaimplementować członków dwóch interfejsów — C# Przewodnik programowania
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [C#], explicitly implementing interface members
 - interfaces [C#], explicitly implementing with inheritance
 ms.assetid: 8b402ddc-dff9-4869-89cb-d718c764e68e
-ms.openlocfilehash: 1d4dd0485be1d859e3e9594ab1558a907b8f1f7a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c7adc08f62a7f8a14b8e10f8b5ecdd6e37db811d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589193"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75701241"
 ---
-# <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Instrukcje: Jawne implementowanie elementów członkowskich dwóch interfejsówC# (Przewodnik programowania)
+# <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Jak jawnie zaimplementować członków dwóch interfejsów (C# Przewodnik programowania)
 Implementacja [interfejsu](../../language-reference/keywords/interface.md) jawnego pozwala programistom zaimplementować dwa interfejsy, które mają te same nazwy elementów członkowskich i nadać każdemu elementowi członkowskiemu interfejsu oddzielną implementację. W tym przykładzie wyświetlane są wymiary pola zarówno w jednostkach metrycznych, jak i w języku angielskim. [Klasa](../../language-reference/keywords/class.md) Box implementuje dwa interfejsy IEnglishDimensions i IMetricDimensions, które reprezentują różne systemy pomiarowe. Oba interfejsy mają identyczne nazwy składowych, długość i szerokość.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideInheritance#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#9)]  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
+## <a name="robust-programming"></a>Skuteczne programowanie  
  Jeśli chcesz wprowadzić wartości domyślne w jednostkach w języku angielskim, zaimplementuj normalne wartości długości i szerokości, a następnie jawnie Zaimplementuj metody długości i szerokości z interfejsu IMetricDimensions:  
   
  [!code-csharp[csProgGuideInheritance#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#10)]  
@@ -33,4 +32,4 @@ Implementacja [interfejsu](../../language-reference/keywords/interface.md) jawne
 - [Przewodnik programowania w języku C#](../index.md)
 - [Klasy i struktury](../classes-and-structs/index.md)
 - [Interfejsy](./index.md)
-- [Instrukcje: Jawnie Implementuj składowe interfejsu](./how-to-explicitly-implement-interface-members.md)
+- [Jak jawnie zaimplementować elementy członkowskie interfejsu](./how-to-explicitly-implement-interface-members.md)

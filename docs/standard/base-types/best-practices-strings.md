@@ -18,13 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.custom: seodec18
-ms.openlocfilehash: cd6b24a6dd893f0c522573a0e19914164c15141f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973947"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711483"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Najlepsze rozwiązania dotyczące używania ciągów w programie .NET
 
@@ -75,7 +74,7 @@ Na przykład Metoda <xref:System.String.IndexOf%2A>, która zwraca indeks podci�
 Zalecamy wybranie przeciążenia, które nie używa wartości domyślnych, z następujących powodów:
 
 - Niektóre przeciążenia z domyślnymi parametrami (które wyszukują <xref:System.Char> w wystąpieniu ciągu) wykonują porównanie porządkowe, natomiast inne (te, które wyszukują ciąg w wystąpieniu ciągu) są zależne od kultury. Trudno jest pamiętać, która metoda używa tej wartości domyślnej i łatwej do odróżnienia przeciążenia.
-- Zamiar kodu, który opiera się na wartościach domyślnych dla wywołań metod, nie jest jasne. W poniższym przykładzie, który opiera się na wartościach domyślnych, trudno jest wiedzieć, czy deweloper rzeczywiście zamierzy liczbę porządkową lub językową, porównując dwa ciągi lub czy różnica wielkości liter między `protocol` i "http" może spowodować, że test ma równość Zwróć `false`.
+- Zamiar kodu, który opiera się na wartościach domyślnych dla wywołań metod, nie jest jasne. W poniższym przykładzie, który opiera się na wartościach domyślnych, trudno jest wiedzieć, czy deweloper rzeczywiście zamierzy liczbę porządkową lub językową, porównując dwa ciągi lub czy różnica wielkości liter między `protocol` i "http" może spowodować, że test równości zwróci `false`.
 
      [!code-csharp[Conceptual.Strings.BestPractices#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/explicitargs1.cs#1)]
      [!code-vb[Conceptual.Strings.BestPractices#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/explicitargs1.vb#1)]
@@ -90,7 +89,7 @@ Ogólnie rzecz biorąc zalecamy wywołanie metody, która nie polega na wartośc
 Porównanie ciągów jest sercem wielu operacji związanych z ciągami, szczególnie sortowania i testowania pod kątem równości. Ciągi są sortowane w określonej kolejności: Jeśli "my" pojawia się przed "String" na posortowanej liście ciągów, "my" musi być porównane lub równe "String". Ponadto porównanie niejawnie definiuje równość. Operacja porównywania zwraca wartość zero dla ciągów, które uzna za równe. Dobrą interpretacją jest to, że żaden ciąg nie jest mniejszy od drugiego. Większość znaczących operacji obejmujących ciągi zawierają jedną lub obie te procedury: porównanie z innym ciągiem i wykonywanie dobrze zdefiniowanej operacji sortowania.
 
 > [!NOTE]
-> Można pobrać [tabele wagi sortowania](https://www.microsoft.com/download/details.aspx?id=10921), zestaw plików tekstowych, które zawierają informacje o wagach znaków używanych w operacjach sortowania i porównywania dla systemów operacyjnych Windows, a także [domyślną tabelę elementów sortowania Unicode](https://www.unicode.org/Public/UCA/latest/allkeys.txt), Najnowsza wersja tabeli Sortuj wagi dla systemów Linux i macOS. Określona wersja tabeli posortowanych wag w systemie Linux i macOS zależy od wersji [międzynarodowych składników dla bibliotek Unicode](http://site.icu-project.org/) zainstalowanych w systemie. Aby uzyskać informacje na temat wersji ICU i wersji standardu Unicode, które implementują, zobacz [pobieranie ICU](http://site.icu-project.org/download).
+> Można pobrać [tabele wagi sortowania](https://www.microsoft.com/download/details.aspx?id=10921), zestaw plików tekstowych, które zawierają informacje o wagach znaków używanych w operacjach sortowania i porównywania dla systemów operacyjnych Windows, a także [domyślną tabelę elementów sortowania Unicode](https://www.unicode.org/Public/UCA/latest/allkeys.txt), najnowszą wersję tabeli Sortuj wagi dla systemu Linux i macOS. Określona wersja tabeli posortowanych wag w systemie Linux i macOS zależy od wersji [międzynarodowych składników dla bibliotek Unicode](http://site.icu-project.org/) zainstalowanych w systemie. Aby uzyskać informacje na temat wersji ICU i wersji standardu Unicode, które implementują, zobacz [pobieranie ICU](http://site.icu-project.org/download).
 
 Jednak Ocena dwóch ciągów dla równości lub kolejności sortowania nie daje pojedynczego prawidłowego wyniku; wyniki są zależne od kryteriów używanych do porównywania ciągów. W szczególności porównania ciągów, które są numerami porządkowymi lub które są oparte na konwencjach wielkości liter i sortowania bieżącej kultury lub [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture) (niezależny od kultury opartej na języku angielskim) mogą generować różne wyniki.
 
@@ -200,12 +199,12 @@ W przypadku niezmiennej kultura ma bardzo kilka właściwości, które ułatwiaj
 
 Poniższa tabela zawiera opis mapowania z kontekstu ciągu semantycznego do elementu członkowskiego wyliczenia <xref:System.StringComparison>:
 
-|Dane|Zachowanie|Odpowiadający system. StringComparison<br /><br /> value|
+|Dane|Zachowanie|Odpowiadający system. StringComparison<br /><br /> {1&gt;value&lt;1}|
 |----------|--------------|-----------------------------------------------------|
 |Identyfikatory wewnętrzne z uwzględnieniem wielkości liter.<br /><br /> Identyfikatory z uwzględnieniem wielkości liter w standardach, takich jak XML i HTTP.<br /><br /> Ustawienia związane z zabezpieczeniami z uwzględnieniem wielkości liter.|Identyfikator niebędący językiem, gdzie bajty są dokładnie zgodne.|<xref:System.StringComparison.Ordinal>|
 |Identyfikatory wewnętrzne bez uwzględniania wielkości liter.<br /><br /> Identyfikatory bez uwzględniania wielkości liter w standardach, takich jak XML i HTTP.<br /><br /> Ścieżki plików.<br /><br /> Klucze i wartości rejestru.<br /><br /> Zmienne środowiskowe.<br /><br /> Identyfikatory zasobów (na przykład nazwy uchwytów).<br /><br /> Ustawienia związane z zabezpieczeniami bez uwzględniania wielkości liter.|Identyfikator niebędący językiem, gdzie przypadek jest nieistotny; szczególnie dane przechowywane w większości usług systemu Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|
-|Pewne utrwalone, językowe dane.<br /><br /> Wyświetlanie danych lingwistycznych, które wymagają stałego porządku sortowania.|Kulturowo niezależny od dane, które nadal są istotne dla języka.|<xref:System.StringComparison.InvariantCulture><br /><br /> —lub—<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
-|Dane wyświetlane użytkownikowi.<br /><br /> Większość danych wejściowych użytkownika.|Dane wymagające lokalnego języka.|<xref:System.StringComparison.CurrentCulture><br /><br /> —lub—<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
+|Pewne utrwalone, językowe dane.<br /><br /> Wyświetlanie danych lingwistycznych, które wymagają stałego porządku sortowania.|Kulturowo niezależny od dane, które nadal są istotne dla języka.|<xref:System.StringComparison.InvariantCulture><br /><br /> lub<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
+|Dane wyświetlane użytkownikowi.<br /><br /> Większość danych wejściowych użytkownika.|Dane wymagające lokalnego języka.|<xref:System.StringComparison.CurrentCulture><br /><br /> lub<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
 
 ## <a name="common-string-comparison-methods-in-net"></a>Typowe metody porównywania ciągów w programie .NET
 

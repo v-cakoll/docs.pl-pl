@@ -6,30 +6,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0704e78a0e7fbf3987b3bc75bb46e135f00110e9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 91503ce0bffa1a9390432a51bff1ef10d80f563a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615349"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709780"
 ---
 # <a name="xpath-queries-and-namespaces"></a>Zapytania XPath i przestrzenie nazw
-Zapytania XPath zdawali sobie sprawę z przestrzeni nazw w dokumencie XML i użyć prefiksy przestrzeni nazw do kwalifikowania nazwy elementów i atrybutów. Kwalifikowanie nazw elementów i atrybutów z prefiksem nazw ogranicza węzłów zwróconych przez zapytanie XPath do tych węzłów, które należą do określonego obszaru nazw.  
+Zapytania XPath są świadome przestrzeni nazw w dokumencie XML i mogą używać prefiksów przestrzeni nazw do kwalifikowania nazw elementów i atrybutów. Kwalifikujące się nazwy elementów i atrybutów z prefiksem przestrzeni nazw ograniczają węzły zwracane przez zapytanie XPath tylko do tych węzłów, które należą do określonej przestrzeni nazw.  
   
- Na przykład jeśli prefiks `books` mapuje do przestrzeni nazw `http://www.contoso.com/books`, następnie następujące zapytanie XPath `/books:books/books:book` wybiera tylko te `book` elementów w przestrzeni nazw `http://www.contoso.com/books`.  
+ Na przykład jeśli prefiks `books` mapowany do przestrzeni nazw `http://www.contoso.com/books`, wówczas następujące zapytanie XPath `/books:books/books:book` wybiera tylko te elementy `book` w przestrzeni nazw `http://www.contoso.com/books`.  
   
-## <a name="the-xmlnamespacemanager"></a>XmlNamespaceManager  
- Aby użyć przestrzeni nazw w zapytaniu XPath, obiekt pochodzi od <xref:System.Xml.IXmlNamespaceResolver> interfejsu, takich jak <xref:System.Xml.XmlNamespaceManager> klasy jest konstruowany przy użyciu identyfikatora URI obszaru nazw i prefiks do uwzględnienia w zapytaniu XPath.  
+## <a name="the-xmlnamespacemanager"></a>Nazwa XmlNamespaceManager  
+ Aby używać przestrzeni nazw w zapytaniu XPath, obiekt pochodny interfejsu <xref:System.Xml.IXmlNamespaceResolver>, jak Klasa <xref:System.Xml.XmlNamespaceManager>, jest konstruowany przy użyciu identyfikatora URI przestrzeni nazw i prefiksu do uwzględnienia w zapytaniu XPath.  
   
- <xref:System.Xml.XmlNamespaceManager> Obiekt może być używany w zapytania w każdym z następujących sposobów.  
+ Obiekt <xref:System.Xml.XmlNamespaceManager> może być używany w zapytaniu w każdym z poniższych sposobów.  
   
-- <xref:System.Xml.XmlNamespaceManager> Obiekt jest skojarzony z istniejącym <xref:System.Xml.XPath.XPathExpression> obiektu za pomocą <xref:System.Xml.XPath.XPathExpression.SetContext%2A> metody <xref:System.Xml.XPath.XPathExpression> obiektu. Również skompilować nowego <xref:System.Xml.XPath.XPathExpression> przy użyciu statycznych <xref:System.Xml.XPath.XPathExpression.Compile%2A> metoda przyjmująca ciąg reprezentujący wyrażenie XPath i <xref:System.Xml.XmlNamespaceManager> obiektu jako parametrów i zwraca nowy <xref:System.Xml.XPath.XPathExpression> obiektu.  
+- Obiekt <xref:System.Xml.XmlNamespaceManager> jest skojarzony z istniejącym obiektem <xref:System.Xml.XPath.XPathExpression> za pomocą metody <xref:System.Xml.XPath.XPathExpression.SetContext%2A> obiektu <xref:System.Xml.XPath.XPathExpression>. Możesz również skompilować nowy obiekt <xref:System.Xml.XPath.XPathExpression> przy użyciu statycznej metody <xref:System.Xml.XPath.XPathExpression.Compile%2A>, która przyjmuje ciąg reprezentujący wyrażenie XPath i obiekt <xref:System.Xml.XmlNamespaceManager> jako parametry i zwraca nowy obiekt <xref:System.Xml.XPath.XPathExpression>.  
   
-- <xref:System.Xml.XmlNamespaceManager> Sam obiekt jest przekazywany jako parametr do akceptowania <xref:System.Xml.XPath.XPathNavigator> metody wraz z ciągiem reprezentującym wyrażenie XPath klasy.  
+- Sam obiekt <xref:System.Xml.XmlNamespaceManager> jest przenoszona jako parametr do metody akceptującej <xref:System.Xml.XPath.XPathNavigator> klasy wraz z ciągiem reprezentującym wyrażenie XPath.  
   
- Poniżej przedstawiono metody <xref:System.Xml.XPath.XPathNavigator> pochodną klasę, która akceptuje obiekt <xref:System.Xml.IXmlNamespaceResolver> interfejsu jako parametr.  
+ Poniżej przedstawiono metody klasy <xref:System.Xml.XPath.XPathNavigator>, które akceptują obiekt pochodny interfejsu <xref:System.Xml.IXmlNamespaceResolver> jako parametr.  
   
 - <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
   
@@ -37,8 +35,8 @@ Zapytania XPath zdawali sobie sprawę z przestrzeni nazw w dokumencie XML i uży
   
 - <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
-### <a name="the-default-namespace"></a>Namespace domyślne  
- W dokumencie XML, który następuje po, domyślny obszar nazw, przy użyciu pustego prefiksu jest używane do deklarowania `http://www.contoso.com/books` przestrzeni nazw.  
+### <a name="the-default-namespace"></a>Domyślna przestrzeń nazw  
+ W poniższym dokumencie XML, domyślna przestrzeń nazw z pustym prefiksem jest używana do deklarowania przestrzeni nazw `http://www.contoso.com/books`.  
   
 ```xml  
 <books xmlns="http://www.contoso.com/books">  
@@ -50,13 +48,13 @@ Zapytania XPath zdawali sobie sprawę z przestrzeni nazw w dokumencie XML i uży
 </books>  
 ```  
   
- Wyrażenie XPath traktuje pustego prefiksu jako `null` przestrzeni nazw. Innymi słowy tylko prefiksy mapowane do przestrzeni nazw może służyć w zapytaniach XPath. Oznacza to, jeśli chcesz się do wykonywania zapytań w przestrzeni nazw w dokumencie XML, nawet jeśli jest ona domyślny obszar nazw, należy określić prefiks dla niego.  
+ Wyrażenie XPath traktuje pusty prefiks jako przestrzeń nazw `null`. Innymi słowy, tylko prefiksy mapowane na przestrzenie nazw mogą być używane w zapytaniach XPath. Oznacza to, że jeśli chcesz wykonać zapytanie względem przestrzeni nazw w dokumencie XML, nawet jeśli jest to domyślna przestrzeń nazw, musisz zdefiniować dla niej prefiks.  
   
- Na przykład, bez zdefiniowania prefiksu dla dokumentu XML powyżej wyrażenie XPath kwerenda `/books/book` nie zwróci żadnych wyników.  
+ Na przykład, bez definiowania prefiksu dla dokumentu XML powyżej, zapytanie XPath `/books/book` nie zwróci żadnych wyników.  
   
- Prefiks, który musi być powiązana, aby uniknąć niejednoznaczności, podczas wykonywania zapytań dotyczących dokumentów za pomocą niektóre węzły nie w przestrzeni nazw, a niektóre w domyślnej przestrzeni nazw.  
+ Prefiks musi być powiązany, aby zapobiec niejednoznaczności podczas wykonywania zapytania o dokumenty z niektórymi węzłami, a niektóre w domyślnej przestrzeni nazw.  
   
- Poniższy kod definiuje prefiks dla domyślny obszar nazw i zaznacza wszystkie `book` elementy z `http://www.contoso.com/books` przestrzeni nazw.  
+ Poniższy kod definiuje prefiks domyślnej przestrzeni nazw i zaznacza wszystkie elementy `book` z przestrzeni nazw `http://www.contoso.com/books`.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  

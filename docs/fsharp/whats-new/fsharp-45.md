@@ -2,12 +2,12 @@
 title: Co nowego w F# 4,5 — F# Przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w F# 4,5.
 ms.date: 11/27/2019
-ms.openlocfilehash: 780b33a564432aae5ec99c70ff8620988b553fd1
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b699165125d345ad783b24da8a0a994cba72d4ba
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644111"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715687"
 ---
 # <a name="whats-new-in-f-45"></a>Co nowego w F# 4,5
 
@@ -77,7 +77,7 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-Uniemożliwia to zadeklarowanie modyfikowalnego elementu członkowskiego w strukturze i emituje metadane, które umożliwiają F# i C# traktuje je jako ReadOnly, gdy są używane z zestawu. Aby dowiedzieć się więcej, zobacz [struktury tylko do odczytu](../language-reference/structures.md#readonly-structs)
+Uniemożliwia to zadeklarowanie modyfikowalnego elementu członkowskiego w strukturze i emituje metadane, które umożliwiają F# i C# traktuje je jako ReadOnly, gdy są używane z zestawu. Aby dowiedzieć się więcej, zobacz [struktury tylko do odczytu](../language-reference/structures.md#readonly-structs).
 
 ## <a name="void-pointers"></a>Wskaźniki typu void
 

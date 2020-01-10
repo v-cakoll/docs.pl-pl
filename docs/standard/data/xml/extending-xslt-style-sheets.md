@@ -3,27 +3,25 @@ title: Rozszerzanie arkuszy stylów XSLT
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: df4ba2bf-a99e-4d22-bbf3-04fc67669dbc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ff952df59dc8291b12df2b238052d4c40c834e2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04f9788fe34ba74d0cf12fdd37adf46e85777192
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966494"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710872"
 ---
 # <a name="extending-xslt-style-sheets"></a>Rozszerzanie arkuszy stylów XSLT
-W tej sekcji opisano różne metody rozszerzania funkcji XSLT. Możesz dodać obiekty rozszerzeń lub parametrów przy użyciu <xref:System.Xml.Xsl.XsltArgumentList> klasy. Następnie można wywołać obiekty rozszerzeń lub parametrów z arkusza stylów. Ponadto można również osadzić Bloki skryptu do arkusza stylów za pomocą `msxsl:script` elementu.  
+W tej sekcji opisano różne metody rozszerzania funkcji XSLT. Można dodać obiekty lub parametry rozszerzenia przy użyciu klasy <xref:System.Xml.Xsl.XsltArgumentList>. Obiekty lub parametry rozszerzenia można następnie wywołać z arkusza stylów. Ponadto można osadzić Bloki skryptów w arkuszu stylów przy użyciu elementu `msxsl:script`.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Obiekty rozszerzeń XSLT](../../../../docs/standard/data/xml/xslt-extension-objects.md)  
- Omawia przy użyciu <xref:System.Xml.Xsl.XsltArgumentList> klasy obiekty rozszerzeń XSLT procesu.  
+ W tym artykule omówiono użycie klasy <xref:System.Xml.Xsl.XsltArgumentList> do przetwarzania obiektów rozszerzeń XSLT.  
   
  [Parametry XSLT](../../../../docs/standard/data/xml/xslt-parameters.md)  
- Omawia przy użyciu <xref:System.Xml.Xsl.XsltArgumentList> klas z parametrami XSLT procesu.  
+ W tym artykule omówiono użycie klasy <xref:System.Xml.Xsl.XsltArgumentList> do przetwarzania parametrów XSLT.  
   
  [Bloki skryptów i element msxsl:script](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md)  
- Omawia przy użyciu `msxsl:script` elementu.  
+ W tym artykule omówiono użycie elementu `msxsl:script`.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

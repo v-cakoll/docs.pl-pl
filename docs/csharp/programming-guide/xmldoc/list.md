@@ -1,6 +1,5 @@
 ---
 title: <list> — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - list
@@ -13,14 +12,14 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: 0df6653171aa0366f555c39e4644f13b2b7384f9
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 6e6f3a3399f2bffe84b5cec733833c974a0bb51b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523430"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711756"
 ---
-# <a name="list-c-programming-guide"></a>\<list > (C# Przewodnik programowania)
+# <a name="list-c-programming-guide"></a>> listy \<(C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -44,11 +43,11 @@ ms.locfileid: "72523430"
  Element na liście punktowanej lub numerowanej lub definicji `term`.  
   
 ## <a name="remarks"></a>Uwagi  
- Blok > \<listheader jest używany do definiowania wiersza nagłówka tabeli lub listy definicji. Podczas definiowania tabeli należy podać tylko wpis dla terminu w nagłówku.  
+ Blok \<listheader > służy do definiowania wiersza nagłówka tabeli lub listy definicji. Podczas definiowania tabeli należy podać tylko wpis dla terminu w nagłówku.  
   
- Każdy element na liście jest określany za pomocą bloku \<item >. Podczas tworzenia listy definicji należy określić zarówno `term`, jak i `description`. Jednak dla tabeli, listy punktowanej lub listy numerowanej należy podać tylko wpis dla `description`.  
+ Każdy element na liście jest określany za pomocą bloku \<elementu >. Podczas tworzenia listy definicji należy określić zarówno `term`, jak i `description`. Jednak dla tabeli, listy punktowanej lub listy numerowanej należy podać tylko wpis dla `description`.  
   
- Lista lub tabela może zawierać dowolną liczbę \<item > bloków.  
+ Lista lub tabela może zawierać tyle \<elementów > bloków, zgodnie z potrzebami.  
   
  Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   

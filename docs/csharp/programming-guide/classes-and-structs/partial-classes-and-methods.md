@@ -1,18 +1,17 @@
 ---
 title: Klasy częściowe i metody — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 2df3492274c2abceebf1d37b87be9cc9bb455b5f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ea8d95c41df236897761ace1062ec325a069d52b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419171"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714742"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Klasy częściowe i metody (Przewodnik programowania w języku C#)
 
@@ -71,7 +70,7 @@ Są one równoważne z następującymi deklaracjami:
 
 [!code-csharp[csProgGuideObjects#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#22)]
 
-### <a name="restrictions"></a>Ograniczenia
+### <a name="restrictions"></a>{1&gt;Ograniczenia&lt;1}
 
 Istnieje kilka reguł, które należy wykonać podczas pracy ze częściowymi definicjami klas:
 

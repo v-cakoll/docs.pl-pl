@@ -2,13 +2,13 @@
 title: Wprowadzenie do platformy Docker
 description: Ten artykuł zawiera wprowadzenie i Omówienie platformy Docker w kontekście aplikacji .NET Core.
 ms.date: 03/20/2019
-ms.custom: mvc, seodec18
-ms.openlocfilehash: 22c8fa4cda5cfd6564695d3b86072c64f22fa335
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.custom: mvc
+ms.openlocfilehash: 278c921de83282d61b25f4d44e91535981285e83
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087388"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715551"
 ---
 # <a name="introduction-to-net-and-docker"></a>Wprowadzenie do platform .NET i Docker
 
@@ -30,7 +30,7 @@ Ponieważ kontenery są tworzone na podstawie obrazów, obrazy mają zestaw para
 
 Kontener jest wystąpieniem możliwy do uruchomienia obrazu. Podczas kompilowania obrazu należy wdrożyć swoją aplikację i zależności. Następnie można utworzyć wystąpienie wielu kontenerów, każdy odizolowany od siebie nawzajem. Każde wystąpienie kontenera ma własny interfejs systemu plików, pamięci i interfejsu sieciowego.
 
-### <a name="registries"></a>wołuje
+### <a name="registries"></a>Rejestry
 
 Rejestry kontenerów to kolekcja repozytoriów obrazów. Obrazy można oprzeć na obrazie rejestru. Kontenery można tworzyć bezpośrednio z obrazu w rejestrze. [Relacja między kontenerami platformy Docker, obrazami i rejestrami](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md) jest ważnym pojęciem podczas [tworzenia i kompilowania kontenerów aplikacji lub mikrousług](../../architecture/microservices/architect-microservice-container-applications/index.md). Takie podejście znacznie skraca czas między programowaniem i wdrażaniem.
 
@@ -52,23 +52,23 @@ Firma Microsoft udostępnia obrazy dostosowane do konkretnych scenariuszy. Na pr
 
 Różne kontenery obsługują usługi platformy Azure. Tworzysz obraz platformy Docker dla aplikacji i Wdróż go w jednej z następujących usług:
 
-- [Usługa Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) \
+- [Usługa Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)\
 Skaluj i Organizuj kontenery systemu Linux przy użyciu Kubernetes.
 
-- [Azure App Service](https://azure.microsoft.com/services/app-service/containers/) \
+- [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
 Wdrażaj aplikacje sieci Web lub interfejsy API przy użyciu kontenerów systemu Linux w środowisku PaaS.
 
-- [Azure Container Instances](https://azure.microsoft.com/services/container-instances/) \
+- [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
 Hostowanie kontenera w chmurze bez żadnych usług zarządzania wyższego poziomu.
 
-- [Azure Batch](https://azure.microsoft.com/services/batch/) \
+- [Azure Batch](https://azure.microsoft.com/services/batch/)\
 Uruchamiaj powtarzające się zadania obliczeniowe przy użyciu kontenerów.
 
 - \ [Service Fabric platformy Azure](https://azure.microsoft.com/services/service-fabric/)
 Podnieś, Przenieś i unowocześnienie aplikacji .NET do mikrousług przy użyciu kontenerów systemu Windows Server.
 
-- [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) \
-Przechowuj obrazy kontenerów i zarządzaj nimi we wszystkich typach wdrożeń platformy Azure.
+- [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
+Przechowuj obrazy kontenerów i zarządzaj nimi w różnych typach wdrożeń platformy Azure.
 
 ## <a name="next-steps"></a>Następne kroki
 

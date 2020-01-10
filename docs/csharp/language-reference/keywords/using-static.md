@@ -1,16 +1,15 @@
 ---
 title: Używanie dyrektywy static- C# Reference
-ms.custom: seodec18
 ms.date: 03/10/2017
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
-ms.openlocfilehash: 1a0e26d8b0a14e0c77b724fc492588e08762e47f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 55847aceb9fdf032ba533b82ee59be53761fa2c2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099998"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712952"
 ---
 # <a name="using-static-directive-c-reference"></a>Używanie statycznej dyrektywyC# (odwołanie)
 
@@ -20,7 +19,7 @@ Dyrektywa `using static` wyznacza typ, którego statyczne składowe i zagnieżd�
 using static <fully-qualified-type-name>;
 ```
 
-gdzie w *pełni kwalifikowana nazwa* typu jest nazwą typu, którego statyczne składowe i zagnieżdżone typy mogą być wywoływane bez określenia nazwy typu. Jeśli nie podasz w pełni kwalifikowanej nazwy typu (pełna nazwa przestrzeni nazw wraz z nazwą typu), C# generuje błąd kompilatora [CS0246](../compiler-messages/cs0246.md): "nie można znaleźć nazwy typu lub przestrzeni nazw" typu/przestrzeni nazw "(czy nie brakuje dyrektywy using lub zestawu odwołanie?) ".
+gdzie w *pełni kwalifikowana nazwa* typu jest nazwą typu, którego statyczne składowe i zagnieżdżone typy mogą być wywoływane bez określenia nazwy typu. Jeśli nie podasz w pełni kwalifikowanej nazwy typu (pełna nazwa przestrzeni nazw wraz z nazwą typu), C# generuje błąd kompilatora [CS0246](../compiler-messages/cs0246.md): "nie można znaleźć nazwy typu lub przestrzeni nazw" typu/przestrzeni nazw "(czy nie brakuje dyrektywy using lub odwołania do zestawu?)".
 
 Dyrektywa `using static` ma zastosowanie do dowolnego typu, który ma statyczne elementy członkowskie (lub typy zagnieżdżone), nawet jeśli ma również elementy członkowskie wystąpienia. Jednak elementy członkowskie wystąpienia mogą być wywoływane tylko za pomocą wystąpienia typu.
 
@@ -53,7 +52,7 @@ W przykładzie można także zastosować dyrektywę `using static` do typu <xref
 ## <a name="see-also"></a>Zobacz także
 
 - [Using — dyrektywa](using-directive.md)
-- [C#Odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Używanie przestrzeni nazw](../../programming-guide/namespaces/using-namespaces.md)
 - [Przestrzenie nazw](../../programming-guide/namespaces/index.md)

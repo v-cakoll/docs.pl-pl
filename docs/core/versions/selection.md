@@ -4,13 +4,12 @@ description: Dowiedz się, jak platforma .NET Core automatycznie wyszukuje i wyb
 author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
-ms.custom: seodec18
-ms.openlocfilehash: 043b9b85633e81670783e7870f1be7726ab07e81
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 546725db907937dea6fe0739656fb585a8855644
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454623"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713970"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Wybierz wersję platformy .NET Core do użycia
 
@@ -79,7 +78,7 @@ Platformy docelowe .NET Standard są również ograniczone do docelowej struktur
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Aplikacje zależne od platformy przekazują
 
-Po uruchomieniu aplikacji ze źródła przy użyciu [`dotnet run`](../tools/dotnet-run.md)z [**wdrożenia zależnego od platformy**](../deploying/index.md#framework-dependent-deployments-fdd) z [`dotnet myapp.dll`](../tools/dotnet.md#description)lub z [**pliku wykonywalnego zależnego od platformy**](../deploying/index.md#framework-dependent-executables-fde) z `myapp.exe`m `dotnet` plik wykonywalny jest **hostem** dla aplikacji.
+Gdy uruchamiasz aplikację ze źródła z [`dotnet run`](../tools/dotnet-run.md), z [**wdrożenia zależnego od platformy**](../deploying/index.md#framework-dependent-deployments-fdd) z [`dotnet myapp.dll`](../tools/dotnet.md#description)lub z [**pliku wykonywalnego zależnego od platformy**](../deploying/index.md#framework-dependent-executables-fde) z `myapp.exe`, `dotnet` plik wykonywalny jest **hostem** aplikacji.
 
 Na hoście wybierana jest Najnowsza wersja poprawki zainstalowana na maszynie. Na przykład jeśli w pliku projektu określono `netcoreapp2.0`, a `2.0.4` to Najnowsza wersja środowiska uruchomieniowego platformy .NET, zostanie użyte środowisko uruchomieniowe `2.0.4`.
 

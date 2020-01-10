@@ -3,37 +3,35 @@ title: Przetwarzanie danych XML przy użyciu modelu danych XPath
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 67fbacd24b888b9c45072bcb34031f38adc118e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f964864577cf08eb074bdfb9af7f7daf3ffb37b9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703156"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710443"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>Przetwarzanie danych XML przy użyciu modelu danych XPath
-<xref:System.Xml?displayProperty=nameWithType> Przestrzeń nazw zawiera reprezentację programistyczne dokumenty XML, fragmenty, węzłów lub zestaw węzłów w pamięci, za pomocą <xref:System.Xml.XmlDocument> lub <xref:System.Xml.XPath.XPathDocument> klasy.  
+Przestrzeń nazw <xref:System.Xml?displayProperty=nameWithType> umożliwia programową reprezentację dokumentów XML, fragmentów, węzłów lub zestawów węzłów w pamięci przy użyciu klas <xref:System.Xml.XmlDocument> lub <xref:System.Xml.XPath.XPathDocument>.  
   
- <xref:System.Xml.XPath.XPathDocument> Klasa udostępnia reprezentację dokumentu XML przy użyciu modelu danych XPath, szybka i tylko do odczytu w pamięci. <xref:System.Xml.XmlDocument> Klasa udostępnia można edytować w pamięci reprezentację w postaci dokumentu XML, implementowanie W3C Document Object Model (DOM) poziom 1 Core i Core DOM poziomu 2. Zarówno klasy implementować <xref:System.Xml.XPath.IXPathNavigable> interfejsu i zwracają <xref:System.Xml.XPath.XPathNavigator> obiekt używany do Wybierz ocenę, przejdź i w niektórych przypadkach, Edytuj podstawowych danych XML.  
+ Klasa <xref:System.Xml.XPath.XPathDocument> zapewnia szybką, tylko do odczytu, reprezentację w pamięci dokumentu XML przy użyciu modelu danych XPath. Klasa <xref:System.Xml.XmlDocument> udostępnia edytowalną reprezentację w pamięci dokumentu XML implementującą W3C Document Object Model (DOM) Level 1 rdzeń i podstawowy poziom DOM 2. Obie klasy implementują interfejs <xref:System.Xml.XPath.IXPathNavigable> i zwracają obiekt <xref:System.Xml.XPath.XPathNavigator> używany do zaznaczania, obliczania, nawigowania i w niektórych przypadkach, edytowania źródłowych danych XML.  
   
- W poniższych sekcjach opisano funkcje <xref:System.Xml.XPath.XPathNavigator> klasy oparte na klasę, która zwraca go.  
+ W poniższych sekcjach opisano funkcjonalność klasy <xref:System.Xml.XPath.XPathNavigator> opartej na klasie, która ją zwraca.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wczytywanie danych XML przy użyciu klas XPathDocument i XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
- W tym artykule opisano sposób tworzenia tylko do odczytu <xref:System.Xml.XPath.XPathDocument> obiektu klasy do odczytu dokumentu XML oraz sposób tworzenia edytowalne <xref:System.Xml.XmlDocument> obiektu klasy na odczytywanie i edytowanie dokumentu XML. W tym temacie opisano sposób zwracany <xref:System.Xml.XPath.XPathNavigator> obiekt z każdej klasy do nawigowania po edycji dokumentu XML.  
+ Opisuje sposób tworzenia obiektu klasy <xref:System.Xml.XPath.XPathDocument> tylko do odczytu w celu odczytania dokumentu XML i utworzenia edytowalnego obiektu klasy <xref:System.Xml.XmlDocument> w celu odczytania i edytowania dokumentu XML. W tym temacie opisano również sposób zwrócenia obiektu <xref:System.Xml.XPath.XPathNavigator> z każdej klasy w celu nawigowania i edytowania dokumentu XML.  
   
  [Wybieranie, obliczanie i dopasowywanie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
- W tym artykule opisano metody <xref:System.Xml.XPath.XPathNavigator> klasę używaną do wybierania węzłów w <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> przy użyciu zapytania XPath, oceny i sprawdź wyniki wyrażenia XPath i ustalić, czy węzeł w dokumencie XML odpowiada danym XPath wyrażenie.  
+ Opisuje metody klasy <xref:System.Xml.XPath.XPathNavigator> używane do wybierania węzłów w obiekcie <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> przy użyciu zapytania XPath, oceniają i sprawdzają wyniki wyrażenia XPath i określają, czy węzeł w dokumencie XML odpowiada danemu wyrażeniu XPath.  
   
  [Uzyskiwanie dostępu do danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- W tym artykule opisano metody <xref:System.Xml.XPath.XPathNavigator> klasy, które umożliwiają przejście węzłów, wyodrębnianie danych XML i dostęp do silnie typizowanych danych XML w <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiektu.  
+ Opisuje metody klasy <xref:System.Xml.XPath.XPathNavigator> używane do nawigowania po węzłach, wyodrębniania danych XML i uzyskiwania dostępu do jednoznacznie wpisanych danych XML w obiekcie <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument>.  
   
  [Edytowanie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
- W tym artykule opisano metody <xref:System.Xml.XPath.XPathNavigator> klasa służy do wstawiania, modyfikowanie i usuwanie węzłów oraz wartości z dokumentu XML zawartych w <xref:System.Xml.XmlDocument> obiektu.  
+ Opisuje metody klasy <xref:System.Xml.XPath.XPathNavigator> używane do wstawiania, modyfikowania i usuwania węzłów oraz wartości z dokumentu XML zawartego w obiekcie <xref:System.Xml.XmlDocument>.  
   
  [Weryfikacja schematu przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
- W tym artykule opisano sposób, aby walidować zawartość XML zawartych w <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiektu.  
+ Opisuje sposoby sprawdzania poprawności zawartości XML zawartej w obiekcie <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument>.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -6,22 +6,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 56b5b51848858b7f1240059ca30eb48474650b73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0cdab8861ca50b40ce2b422fcc1acf16e2f2273
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669124"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711093"
 ---
 # <a name="conversion-of-xml-data-types"></a>Konwersja typów danych XML
-Większość metod znaleziony w **obiekt XmlConvert** klasy są używane do konwersji danych pomiędzy ciągami a silnie typizowane formatów. Metody są niezależnie od ustawień regionalnych. Oznacza to, że nie uwzględniają żadnych ustawień regionalnych podczas wykonywania konwersji.  
+Większość metod znalezionych w klasie **XmlConvert** służy do konwertowania danych między ciągami i formatami o jednoznacznie określonym typie. Metody są niezależne od ustawień regionalnych. Oznacza to, że nie uwzględniają żadnych ustawień regionalnych podczas konwersji.  
   
-## <a name="reading-string-as-types"></a>Parametry odczytu jako typy  
- Poniższy przykład odczytuje parametry i konwertuje ją na **daty/godziny** typu.  
+## <a name="reading-string-as-types"></a>Odczytywanie ciągu jako typów  
+ Poniższy przykład odczytuje ciąg i konwertuje go na typ **DateTime** .  
   
- Biorąc pod uwagę następujące dane wejściowe XML:  
+ Uwzględniając następujące dane wejściowe XML:  
   
  **Dane wejściowe**  
   
@@ -29,7 +27,7 @@ Większość metod znaleziony w **obiekt XmlConvert** klasy są używane do konw
 <Element>2001-02-27T11:13:23</Element>  
 ```  
   
- Ten kod konwertuje ciąg na **daty/godziny** formatu:  
+ Ten kod konwertuje ciąg na format **DateTime** :  
   
 ```vb  
 reader.ReadStartElement()  
@@ -43,10 +41,10 @@ DateTime vDateTime = XmlConvert.ToDateTime(reader.ReadString());
 Console.WriteLine(vDateTime);  
 ```  
   
-## <a name="writing-strings-as-types"></a>Zapisywanie ciągów jako typy  
- Następujące przykładowe odczyty **Int32** i konwertuje ją na ciąg.  
+## <a name="writing-strings-as-types"></a>Pisanie ciągów jako typów  
+ Poniższy przykład odczytuje wartość **Int32** i konwertuje ją na ciąg.  
   
- Biorąc pod uwagę następujące dane wejściowe XML:  
+ Uwzględniając następujące dane wejściowe XML:  
   
  **Dane wejściowe**  
   
@@ -54,7 +52,7 @@ Console.WriteLine(vDateTime);
 <TestInt32>-2147483648</TestInt32>  
 ```  
   
- Ten kod konwertuje **Int32** do **ciąg**:  
+ Ten kod konwertuje wartość **Int32** na **ciąg**:  
   
 ```vb  
 Dim vInt32 As Int32 = -2147483648  

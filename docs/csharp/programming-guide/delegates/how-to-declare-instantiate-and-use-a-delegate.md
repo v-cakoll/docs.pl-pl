@@ -1,18 +1,17 @@
 ---
-title: 'Instrukcje: deklarowanie, tworzenie wystąpienia i używanie przewodnika po C# programowaniu delegata'
-ms.custom: seodec18
+title: Jak zadeklarować, utworzyć wystąpienie i korzystać z przewodnika C# dotyczącego programowania delegatów
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: bd3d80023f6cb382f057e976dba01daf5e28db50
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7ac1d736e19c4dcf1c8408db944505c399762778
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423319"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712367"
 ---
-# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Porady: deklarowanie, tworzenie wystąpień i użycie delegowania (Przewodnik programowania w języku C#)
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Sposób deklarowania, tworzenia wystąpienia i używania delegata (C# Przewodnik programowania)
 W C# 1,0 i nowszych można zadeklarować delegatów, jak pokazano w poniższym przykładzie.  
   
  [!code-csharp[csProgGuideDelegates#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#13)]  
@@ -40,7 +39,7 @@ W C# 1,0 i nowszych można zadeklarować delegatów, jak pokazano w poniższym p
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideDelegates#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#12)]  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
+## <a name="robust-programming"></a>Skuteczne programowanie  
   
 - Deklarowanie delegata.  
   

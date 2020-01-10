@@ -1,6 +1,5 @@
 ---
 title: Typy wartości — C# odwołanie
-ms.custom: seodec18
 ms.date: 11/26/2018
 f1_keywords:
 - cs.valuetypes
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: c797b1e9a80030ce6a97fccb14da2c51d753a1dc
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 0ab9b6e089f5add9963ffae73e196643ad999763
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552335"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712913"
 ---
 # <a name="value-types-c-reference"></a>Typy wartości (C# odwołanie)
 
@@ -22,7 +21,7 @@ Istnieją dwa rodzaje typów wartości:
 
 - [Struktury](struct.md)
 
-- [Wyliczenia](enum.md)
+- [Wyliczenia](../builtin-types/enum.md)
 
 ## <a name="main-features-of-value-types"></a>Główne funkcje typów wartości
 

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fd29d07b6253cb8c177cc1e8854435ce0079b520
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4937afe8bb23be58b72d082cd5ba200b4948ab4d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974916"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715997"
 ---
 # <a name="method-etw-events"></a>Zdarzenia metod ETW
 
@@ -52,7 +50,7 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 |MethodSize|win: UInt32|Rozmiar metody.|
 |MethodToken|win: UInt32|0 w przypadku metod dynamicznych i pomocników JIT.|
 |MethodFlags|win: UInt32|0x1: metoda dynamiczna.<br /><br /> 0x2: Metoda ogólna.<br /><br /> 0x4: Metoda kodu skompilowana przez JIT (w przeciwnym razie kod natywnego obrazu NGEN).<br /><br /> 0x8: metoda pomocnika.|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
 ## <a name="clr-method-marker-events"></a>Zdarzenia znacznika metody CLR
 
@@ -79,7 +77,7 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 
 |Nazwa pola|Typ danych|Opis|
 |----------------|---------------|-----------------|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
 ## <a name="clr-method-verbose-events"></a>Zdarzenia verbose dla metody CLR
 
@@ -114,7 +112,7 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 |MethodNameSpace|win: UnicodeString|Pełna nazwa przestrzeni nazw skojarzona z metodą.|
 |MethodName|win: UnicodeString|Pełna nazwa klasy skojarzona z metodą.|
 |MethodSignature|win: UnicodeString|Sygnatura metody (rozdzielana przecinkami lista nazw typów).|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
 ## <a name="methodjittingstarted-event"></a>Zdarzenie MethodJittingStarted
 
@@ -144,7 +142,7 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 |MethodNameSpace|win: UnicodeString|Pełna nazwa klasy skojarzona z metodą.|
 |MethodName|win: UnicodeString|Nazwa metody.|
 |MethodSignature|win: UnicodeString|Sygnatura metody (rozdzielana przecinkami lista nazw typów).|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
 ## <a name="see-also"></a>Zobacz także
 

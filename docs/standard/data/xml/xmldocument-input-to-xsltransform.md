@@ -6,27 +6,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97115892-410a-4657-ab47-1e14dfba73f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 60b9b66ea9b1c74dc34e2e99dcf651f9dac1725e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c7819c3cb6b1430dcdb8a78c43f7138f64e691a8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915971"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709845"
 ---
 # <a name="xmldocument-input-to-xsltransform"></a>Dane wejściowe obiektu XmlDocument klasy XslTransform
-<xref:System.Xml.XmlDocument> Klasa udostępnia możliwości edycji dokumentu XML. Jeśli plik XML musi być edytowany lub zmodyfikowany przed wysłaniem do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody, Załaduj plik XML <xref:System.Xml.XmlDocument>do, edytuj go i <xref:System.Xml.Xsl.XslTransform>Wyślij do.  
+Klasa <xref:System.Xml.XmlDocument> zapewnia możliwości edycji dla dokumentu XML. Jeśli plik XML musi być edytowany lub zmodyfikowany przed wysłaniem do metody <xref:System.Xml.Xsl.XslTransform.Transform%2A>, Załaduj plik XML do <xref:System.Xml.XmlDocument>, edytuj go i Wyślij do <xref:System.Xml.Xsl.XslTransform>.  
   
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w .NET Framework 2,0. Można wykonać przekształcenia Extensible Stylesheet Language for Transformations (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
+> Klasa <xref:System.Xml.Xsl.XslTransform> jest przestarzała w .NET Framework 2,0. Można wykonywać przekształcenia Extensible Stylesheet Language for Transformations (XSLT) przy użyciu klasy <xref:System.Xml.Xsl.XslCompiledTransform>. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- Implementuje interfejs, dzięki czemu dokument <xref:System.Xml.Xsl.XslTransform.Transform%2A> może być przesłany do metody po edycji. <xref:System.Xml.XPath.IXPathNavigable> <xref:System.Xml.XmlDocument>  
+ <xref:System.Xml.XmlDocument> implementuje interfejs <xref:System.Xml.XPath.IXPathNavigable>, dzięki czemu dokument może zostać przesłany do metody <xref:System.Xml.Xsl.XslTransform.Transform%2A> po edycji.  
   
- <xref:System.Xml.XmlDocument>Ze względu na możliwość edycji, <xref:System.Xml.XmlDocument> użycie klasy jako wejścia do transformacji <xref:System.Xml.XPath.XPathDocument> jest wolniejsze niż użycie dla transformacji Extensible Stylesheet Language for <xref:System.Xml.XPath.XPathDocument> Transformations (XSLT), ponieważ jest to Optymalizacja pod kątem zapytań XML Path Language (XPath) z powodu wewnętrznego magazynu.  
+ Ze względu na możliwość edycji <xref:System.Xml.XmlDocument>przy użyciu klasy <xref:System.Xml.XmlDocument> jako danych wejściowych przekształcenia jest wolniejsza niż używanie <xref:System.Xml.XPath.XPathDocument> dla transformacji Extensible Stylesheet Language for Transformations (XSLT), ponieważ <xref:System.Xml.XPath.XPathDocument> jest zoptymalizowany pod kątem zapytań XML Path Language (XPath) z powodu wewnętrznego magazynu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje <xref:System.Xml.XmlDocument> <xref:System.Xml.Xsl.XslTransform>, jak można dostarczyć do, przy użyciu danych wyjściowych wysyłanych do <xref:System.Xml.XmlReader>.  
+ Poniższy przykład kodu pokazuje, jak <xref:System.Xml.XmlDocument> można dostarczyć do <xref:System.Xml.Xsl.XslTransform>, z danymi wyjściowymi wysyłanymi do <xref:System.Xml.XmlReader>.  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  

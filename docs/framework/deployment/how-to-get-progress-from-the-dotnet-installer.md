@@ -7,14 +7,12 @@ helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e07bb3443fb9461fa707d66e74350a39980c60c0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: cd81ad83aee80341d0334cfa8caa165b25ee0564
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975550"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716489"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Porady: pobieranie danych o postępie z Instalatora .NET Framework 4.5
 
@@ -110,7 +108,7 @@ W poniższych sekcjach opisano znaczące pliki w tym przykładzie: MMIOChainer. 
         };
     ```
 
-#### <a name="chainingdotnet45cpp"></a>ChainingdotNet 4.5. cpp
+#### <a name="chainingdotnet45cpp"></a>ChainingdotNet4.5.cpp
 
 - Plik [chainingdotnet 4.5. cpp](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1757268882) implementuje klasę `Server`, która pochodzi z klasy `MmioChainer` i zastępuje odpowiednie metody wyświetlania informacji o postępie. MmioChainer tworzy sekcję z określoną nazwą sekcji i inicjuje łańcuch z określoną nazwą zdarzenia. Nazwa zdarzenia jest zapisywana w mapowanej strukturze danych. Należy zmienić nazwy sekcji i zdarzeń na unikatowe. Klasa `Server` w poniższym kodzie uruchamia określony program instalacyjny, monitoruje postęp i zwraca kod zakończenia.
 

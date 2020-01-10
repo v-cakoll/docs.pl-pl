@@ -6,33 +6,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ab2dbe79e1b4b89070d07e0f2c966cb54f6e500
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 99b6b3b6959abf4c8adc313364ad641249bd9bc3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589993"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710170"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>Wybieranie danych XML przy użyciu klasy XPathNavigator
-<xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia zestaw metod, używany do wybierania zestaw węzłów w <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiekt, za pomocą wyrażenia XPath. Po wybraniu, można wykonać iterację przez wybrany zestaw węzłów.  
+Klasa <xref:System.Xml.XPath.XPathNavigator> udostępnia zestaw metod służących do wybierania zestawu węzłów w obiekcie <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> za pomocą wyrażenia XPath. Po wybraniu można wykonać iterację w wybranym zestawie węzłów.  
   
-## <a name="xpathnavigator-selection-methods"></a>Metody wyboru klasy XPathNavigator  
- <xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia zestaw metod, używany do wybierania zestaw węzłów w <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiekt, za pomocą wyrażenia XPath. <xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia także zestaw zoptymalizowanych metod szybciej niż przy użyciu wyrażenie XPath wybierania węzłów nadrzędnych i podrzędnych obiekt podrzędny. Wybrany zestaw węzłów jest zwracany w <xref:System.Xml.XPath.XPathNodeIterator> obiektu lub <xref:System.Xml.XPath.XPathNavigator> obiektu w przypadku jednego wybranego węzła.  
+## <a name="xpathnavigator-selection-methods"></a>Metody wyboru XPathNavigator  
+ Klasa <xref:System.Xml.XPath.XPathNavigator> udostępnia zestaw metod służących do wybierania zestawu węzłów w obiekcie <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> za pomocą wyrażenia XPath. Klasa <xref:System.Xml.XPath.XPathNavigator> udostępnia również zestaw zoptymalizowanych metod do wybierania obiektów nadrzędnych, podrzędnych i podrzędnych szybciej niż przy użyciu wyrażenia XPath. Wybrany zestaw węzłów jest zwracany w obiekcie <xref:System.Xml.XPath.XPathNodeIterator> lub obiekcie <xref:System.Xml.XPath.XPathNavigator> w przypadku pojedynczego wybranego węzła.  
   
-### <a name="selecting-nodes-using-xpath-expressions"></a>Wybieranie węzłów za pomocą wyrażenia XPath  
- Aby wybrać zestaw węzłów za pomocą wyrażenia XPath, użyj jednej z następujących metod zaznaczenia.  
+### <a name="selecting-nodes-using-xpath-expressions"></a>Wybieranie węzłów przy użyciu wyrażeń XPath  
+ Aby wybrać zestaw węzłów za pomocą wyrażenia XPath, należy użyć jednej z następujących metod wyboru.  
   
 - <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
 - <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
- Gdy zostanie wywołana, te metody zwracają zestaw węzłów, które możesz przejść za darmo przy użyciu <xref:System.Xml.XPath.XPathNodeIterator> obiektu lub <xref:System.Xml.XPath.XPathNavigator> obiektu w przypadku jednego wybranego węzła.  
+ Po wywołaniu te metody zwracają zestaw węzłów, za pomocą których można swobodnie poruszać się przy użyciu obiektu <xref:System.Xml.XPath.XPathNodeIterator> lub obiektu <xref:System.Xml.XPath.XPathNavigator> w przypadku jednego wybranego węzła.  
   
- Nawigacja przy <xref:System.Xml.XPath.XPathNodeIterator> obiekt nie ma wpływu na pozycję <xref:System.Xml.XPath.XPathNavigator> obiekt użyty do jego utworzenia. <xref:System.Xml.XPath.XPathNavigator> Obiekt zwracany z <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> metod znajduje się w pojedynczym węźle zwracane i również nie ma wpływu na pozycję <xref:System.Xml.XPath.XPathNavigator> obiekt użyty do jego utworzenia.  
+ Nawigowanie przy użyciu obiektu <xref:System.Xml.XPath.XPathNodeIterator> nie wpływa na pozycję obiektu <xref:System.Xml.XPath.XPathNavigator>, który został użyty do jego utworzenia. Obiekt <xref:System.Xml.XPath.XPathNavigator> zwrócony z metod <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> jest umieszczony w pojedynczym zwracanym węźle, a także nie ma wpływu na pozycję obiektu <xref:System.Xml.XPath.XPathNavigator> użytego do jego utworzenia.  
   
- W poniższym przykładzie pokazano tworzenie <xref:System.Xml.XPath.XPathNavigator> obiektu z <xref:System.Xml.XPath.XPathDocument> obiektu, korzystanie z <xref:System.Xml.XPath.XPathNavigator.Select%2A> metodę, aby wybrać węzły w <xref:System.Xml.XPath.XPathDocument> obiektu, a także korzystanie z <xref:System.Xml.XPath.XPathNodeIterator> obiektu do wykonywania iteracji wybranych węzłów.  
+ W poniższym przykładzie pokazano Tworzenie obiektu <xref:System.Xml.XPath.XPathNavigator> z obiektu <xref:System.Xml.XPath.XPathDocument>, użycie metody <xref:System.Xml.XPath.XPathNavigator.Select%2A> do wybrania węzłów w obiekcie <xref:System.Xml.XPath.XPathDocument> i użycie obiektu <xref:System.Xml.XPath.XPathNodeIterator> do iteracji w wybranych węzłach.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -55,12 +53,12 @@ while(nodes.MoveNext())
 }  
 ```  
   
- Przykład przyjmuje `books.xml` pliku jako dane wejściowe.  
+ Przykład pobiera `books.xml` plik jako dane wejściowe.  
   
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
-### <a name="optimized-selection-methods"></a>Zoptymalizowane metody  
- <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A>, I <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> metody <xref:System.Xml.XPath.XPathNavigator> klasy reprezentują wyrażenia XPath, które często używane do pobierania węzłów podrzędnych, obiekt podrzędny i nadrzędny. Te metody są zoptymalizowane pod kątem wydajności i są szybsze niż ich odpowiednich wyrażeń XPath. <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A>, I <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> metody wybiera elementu nadrzędnego, podrzędnego i węzłów podrzędnych, na podstawie <xref:System.Xml.XPath.XPathNodeType> wartość lub lokalna nazwa i identyfikator URI węzłów, aby wybrać przestrzeni nazw. Wybranego elementu nadrzędnego, podrzędnego i węzły podrzędne, które są zwracane w <xref:System.Xml.XPath.XPathNodeIterator> obiektu.  
+### <a name="optimized-selection-methods"></a>Zoptymalizowane metody zaznaczania  
+ Metody <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A>i <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> klasy <xref:System.Xml.XPath.XPathNavigator> reprezentują wyrażenia XPath często używane do pobierania węzłów podrzędnych, podrzędnych i nadrzędnych. Te metody są zoptymalizowane pod kątem wydajności i są szybsze niż odpowiednie wyrażenia XPath. Metody <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A>i <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> wybierają węzły nadrzędne, podrzędne i podrzędne na podstawie wartości <xref:System.Xml.XPath.XPathNodeType> lub nazwy lokalnej oraz identyfikatora URI przestrzeni nazw węzłów do wybrania. Wybrane węzły nadrzędne, podrzędne i podrzędne są zwracane w obiekcie <xref:System.Xml.XPath.XPathNodeIterator>.  
   
 ## <a name="see-also"></a>Zobacz także
 

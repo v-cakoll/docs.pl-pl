@@ -3,35 +3,33 @@ title: Przestrzenie nazw i definicje DTD w modelu DOM
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a3a3ec957a55ff23dec728ccd31fe9e1f52ce78f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 22762e3a7003d9b28a53c7b500829aaa41924c6d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590211"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710599"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>Przestrzenie nazw i definicje DTD w modelu DOM
-Obsługa complicate przestrzeni nazw definicje (pliki DTD) typu dokumentu. Na przykład następujący kod XML zawiera atrybuty domyślne zawierające dwukropki w nazwach.  
+Definicje typu dokumentu (DTD) komplikują obsługę przestrzeni nazw. Na przykład poniższy kod XML zawiera atrybuty domyślne zawierające dwukropki w nazwach.  
   
 ```xml  
 <!ATTLIST item x:id CDATA #IMPLIED>  
 ```  
   
- Poniżej przedstawiono możliwe rozwiązania, jeśli ta konstrukcja jest dozwolony:  
+ Poniżej przedstawiono możliwe rozwiązania, jeśli ta konstrukcja jest dozwolona:  
   
-- `x:` Jest traktowany jako prefiks przestrzeni nazw, ale ten prefiks musi być rozpoznawalna przy użyciu `xmlns:x` deklaracji przestrzeni nazw musi również istnieć gdzieś w DTD. Jest to błąd, aby zamapować tego prefiksu na coś innego w dokumencie wystąpienia.  
+- `x:` jest traktowany jako prefiks przestrzeni nazw, ale ten prefiks musi być rozpoznawalny przy użyciu deklaracji przestrzeni nazw `xmlns:x`, która również musi istnieć gdzieś w DTD. Wystąpił błąd podczas mapowania tego prefiksu na inny element w dokumencie wystąpienia.  
   
-- `x:` Jest traktowany jako prefiks przestrzeni nazw, ale ten prefiks jest zawsze rozwiązane w kontekście elementów wystąpienia. Oznacza to, że do innej przestrzeni nazw Uniform Resource Identifier (URI), w zależności od zakresu przestrzeni nazw, w którym faktycznie zamapować prefiksu `item` element jest wyświetlany. To zachowanie jest bardziej przewidywalna od rozdzielczości w starszych punktor, ale ma inne zagadnienia skomplikowane, ponieważ wymaga, aby być zmaterializowany atrybutów domyślnych.  
+- `x:` jest traktowany jako prefiks przestrzeni nazw, ale ten prefiks jest zawsze rozpoznawany w kontekście elementów wystąpienia. Oznacza to, że prefiks może być faktycznie mapowany na różne identyfikatory Uniform Resource Identifier (URI) obszaru nazw, w zależności od zakresu przestrzeni nazw, w którym pojawia się element `item`. To zachowanie jest bardziej przewidywalne niż rozdzielczość podaną we wcześniejszym punktorze, ale ma inne skomplikowane konsekwencje, ponieważ wymaga podania atrybutów domyślnych.  
   
-- Dwukropek jest ignorowana, ponieważ znajduje się w DTD, a nazwa atrybutu jest `x:y`, żadnego prefiksu i obszaru nazw URI.  
+- Dwukropek jest ignorowany, ponieważ znajduje się w DTD, a nazwa atrybutu jest `x:y`, brak prefiksu i brak identyfikatora URI przestrzeni nazw.  
   
-- Dwukropek w atrybucie domyślne zgłasza wyjątek, informujący o tym w dwukropki w nazwach w DTD są nieobsługiwane. Skutkuje to zachowanie przewidywalne, ale nie można załadować wiele World Wide Web Consortium (W3C) oznacza, że publikowane definicje DTD.  
+- Dwukropek w atrybucie domyślnym zgłasza wyjątek, co oznacza, że dwukropek w nazwach w DTD nie są obsługiwane. Powoduje to przewidywalną zachowanie, ale oznacza, że nie można załadować wielu organizacja World Wide Web Consortium (W3C) opublikowanych elementów DTD.  
   
-- Gdy użytkownik zażąda weryfikacji DTD, obsługa przestrzeni nazw dla całego dokumentu jest wyłączona. Dzięki temu można załadować definicji DTD W3C i powoduje zachowanie przewidywalne.  
+- Gdy użytkownik zażąda walidacji DTD, obsługa przestrzeni nazw dla całego dokumentu jest wyłączona. Dzięki temu można załadować definicje W3C i uzyskać przewidywalne zachowanie.  
   
- Kod XML w Microsoft .NET Framework implementuje drugą opcją Maksymalna zgodność W3C.  
+ KOD XML w Microsoft .NET Framework implementuje drugą opcję maksymalnej zgodności W3C.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,6 +1,5 @@
 ---
-title: 'Instrukcje: uzyskiwanie dostępu do obiektów międzyoperacyjności C# pakietu Office C# za pomocą funkcji wizualnych — Przewodnik programowania'
-ms.custom: seodec18
+title: Jak uzyskać dostęp do obiektów międzyoperacyjności pakietu Office — C# Przewodnik programowania
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -10,16 +9,16 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: b6e45858b64ea1bf87ca0e73001a5cf07ddfd58b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b5d2da011ec6318c8b07f1eb4d383a4d56488239
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417707"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700838"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Porady: uzyskiwanie dostępu do obiektów międzyoperacyjności pakietu Office za pomocą funkcji Visual C# (Przewodnik po programowaniu w języku C#)
+# <a name="how-to-access-office-interop-objects-c-programming-guide"></a>Jak uzyskać dostęp do obiektów międzyoperacyjności pakietu Office (C# Przewodnik programowania)
 
-Wizualizacja C# zawiera funkcje, które upraszczają dostęp do obiektów interfejsu API pakietu Office. Nowe funkcje obejmują argumenty nazwane i opcjonalne, nowy typ o nazwie `dynamic` i możliwość przekazywania argumentów do parametrów odwołań w metodach COM, tak jakby były parametrami wartości.
+C#zawiera funkcje, które upraszczają dostęp do obiektów interfejsu API pakietu Office. Nowe funkcje obejmują argumenty nazwane i opcjonalne, nowy typ o nazwie `dynamic`i możliwość przekazywania argumentów do parametrów odwołań w metodach COM, tak jakby były parametrami wartości.
 
 W tym temacie zostaną użyte nowe funkcje do napisania kodu, który tworzy i wyświetla Microsoft Office arkusz programu Excel. Następnie napiszesz kod, aby dodać dokument programu Office Word, który zawiera ikonę, która jest połączona z arkuszem programu Excel.
 
@@ -31,7 +30,7 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
 1. Uruchom program Visual Studio.
 
-2. W menu **plik** wskaż polecenie **Nowy**, a następnie kliknij pozycję **projekt**. Pojawi się okno dialogowe **Nowy projekt** .
+2. W menu **plik** wskaż polecenie **Nowy**, a następnie kliknij pozycję **projekt**. **Nowy projekt** pojawi się okno dialogowe.
 
 3. W okienku **zainstalowane szablony** rozwiń pozycję **Wizualizacja C#** , a następnie kliknij pozycję **Windows**.
 
@@ -103,7 +102,7 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
      [!code-csharp[csProgGuideOfficeHowTo#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#8)]
 
-2. Naciśnij klawisze CTRL + F5.
+2. Naciśnij kombinację klawiszy CTRL + F5.
 
      Zostanie wyświetlony arkusz programu Excel zawierający dane z dwóch kont.
 
@@ -131,7 +130,7 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
      [!code-csharp[csProgGuideOfficeHowTo#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#12)]
 
-4. Naciśnij klawisze CTRL + F5.
+4. Naciśnij kombinację klawiszy CTRL + F5.
 
      Zostanie wyświetlony dokument programu Word zawierający ikonę. Kliknij dwukrotnie ikonę, aby przenieść arkusz na pierwszy plan.
 
@@ -179,4 +178,4 @@ Poniższy kod przedstawia kompletny przykład.
 - [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Używanie typu dynamicznego](../types/using-type-dynamic.md)
 - [Argumenty nazwane i opcjonalne](../classes-and-structs/named-and-optional-arguments.md)
-- [Instrukcje: użycie argumentów nazwanych i opcjonalnych w programowaniu Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Jak używać argumentów nazwanych i opcjonalnych w programowaniu pakietu Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

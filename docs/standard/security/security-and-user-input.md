@@ -8,56 +8,54 @@ helpviewer_keywords:
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 832ea3c976a0a2e6bb3b4df8a2541248cfc56933
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0d34b06b44241feb7d6e3c8f76447b861563cfdc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663911"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705863"
 ---
 # <a name="security-and-user-input"></a>Zabezpieczenia i dane użytkownika
 
-Dane użytkownika, który jest dowolny rodzaj danych wejściowych z żądania sieci Web lub adresu URL, dane wejściowe do formantów w aplikacji Microsoft Windows Forms i tak dalej, mogą negatywnie wpłynąć na kod, ponieważ często używane dane bezpośrednio jako parametry, aby wywołać inny kod. Ta sytuacja jest odpowiednikiem złośliwego kodu, wywoływanie kodu z parametrami dziwne, a ten sam ostrożności. Dane wejściowe użytkownika jest faktycznie trudniejsze bezpieczne ponieważ nie ramek stosu śledzenia obecność potencjalnie niezaufanych danych.
+Dane użytkownika, czyli dowolny rodzaj danych wejściowych (dane z żądania sieci Web lub adresu URL, dane wejściowe do kontrolek aplikacji Microsoft Windows Forms itd.), mogą mieć negatywny wpływ na kod, ponieważ często dane są używane bezpośrednio jako parametry wywołania innego kodu. Ta sytuacja jest analogiczna do złośliwego kodu wywołującego kod przy użyciu dziwnych parametrów i należy podjąć te same środki ostrożności. Dane wejściowe użytkownika są naprawdę trudniejsze do zagwarantowania, ponieważ nie ma ramki stosu do śledzenia obecności potencjalnie niezaufanych danych.
 
-Są wśród błędy subtlest i najtrudniejsze zabezpieczeń, aby znaleźć, ponieważ istnieją w kodzie, który jest pozornie związana z zabezpieczeniami, są one bramy do przekazania złe dane za pośrednictwem do innego kodu. Aby znaleźć te błędy, postępuj zgodnie z dowolnego rodzaju danych wejściowych, Wyobraź sobie, co zakres możliwych wartości mogą być i należy wziąć pod uwagę, czy kod wyświetlania tych danych może obsługiwać wszystkich tych przypadkach. Można naprawić te błędy w zakresie sprawdzania i odrzuca wszelkie wprowadzane, kod nie może obsłużyć.
+Znajdują się one wśród delikatnych i najtrudniejszych usterek związanych z bezpieczeństwem, które mogą znajdować się w kodzie, który wydaje się niezwiązany z zabezpieczeniami, są bramą do przekazywania nieprawidłowych danych do innego kodu. Aby wyszukać te błędy, postępuj zgodnie z dowolnym rodzajem danych wejściowych, Wyobraź sobie, jakie może być zakres możliwych wartości, i rozważ, czy kod, który widzi te dane, może obsłużyć wszystkie te przypadki. Można naprawić te usterki poprzez sprawdzenie zakresu i odrzucenie wszelkich danych wejściowych, których kod nie może obsłużyć.
 
-Oto kilka istotnych kwestii dotyczących danych użytkownika:
+Poniżej wymieniono istotne zagadnienia dotyczące danych użytkownika:
 
-- Wszystkie dane użytkownika w odpowiedzi serwer działa w kontekście serwera lokacji na komputerze klienckim. Jeśli serwer sieci Web pobiera dane użytkownika i wstawia ją zwróconej stronie internetowej, na przykład może obejmować  **\<script >** tagu i uruchom tak, jakby z serwera.
+- Wszystkie dane użytkownika w odpowiedzi serwera są uruchamiane w kontekście lokacji serwera na kliencie programu. Jeśli serwer sieci Web pobiera dane użytkownika i wstawia je do zwróconej strony sieci Web, może na przykład uwzględnić tag **\<skryptu >** i uruchomić go z serwera.
 
-- Należy pamiętać, że klient może żądać dowolnego adresu URL.
+- Należy pamiętać, że klient może zażądać dowolnego adresu URL.
 
-- Należy wziąć pod uwagę trudne lub nieprawidłowe ścieżki:
+- Weź pod uwagę lewę lub nieprawidłowe ścieżki:
 
-  - .. \, bardzo długich ścieżek.
+  - .. \, bardzo długie ścieżki.
 
-  - Użycie symboli wieloznacznych (*).
+  - Użycie znaków wieloznacznych (*).
 
-  - Rozszerzenie token (token %).
+  - Rozszerzenie tokenu (% token%).
 
-  - Otrzymano nieoczekiwany rodzaje ścieżek przy użyciu specjalnego znaczenia.
+  - Nietypowe formy ścieżek o specjalnym znaczeniu.
 
-  - Alternatywne nazwy strumienia systemu plików, takich jak `filename::$DATA`.
+  - Alternatywne nazwy strumieni systemu plików, takie jak `filename::$DATA`.
 
-  - Krótki wersje nazw plików, takich jak `longfi~1` dla `longfilename`.
+  - Krótkie wersje plików, takie jak `longfi~1` `longfilename`.
 
-- Należy pamiętać, że Eval(userdata) można nic robić.
+- Pamiętaj, że w ramach oceny (UserData) można wykonać dowolną czynność.
 
-- Uważaj, późnego wiązania na nazwę, która zawiera dane użytkownika.
+- Uważaj na późne wiązanie do nazwy zawierającej pewne dane użytkownika.
 
-- Jeśli masz do czynienia z danych w sieci Web, należy wziąć pod uwagę różne rodzaje sekwencje ucieczki, które są dozwolone w tym:
+- W przypadku pracy z danymi w sieci Web należy wziąć pod uwagę różne formy ucieczki, takie jak:
 
-  - Szesnastkowe sekwencje ucieczki (% nn).
+  - Szesnastkowe znaki ucieczki (% nn).
 
-  - Sekwencje ucieczki Unicode (% nnn).
+  - Ucieczki Unicode (% NNN).
 
-  - Przedłużoną anuluje UTF-8 (% nn % nn).
+  - Nadlongowe sekwencje UTF-8 (% nn% nn).
 
-  - Anuluje Double (% nn staje się mmnn %, gdzie % mm jest znak ucieczki "%").
+  - Podwójne ucieczki (% nn staną się% mmnn, gdzie% mm jest ucieczką dla "%").
 
-- Uważaj, nazw użytkowników, które może mieć więcej niż jeden kanoniczny format. Na przykład często używają obu moja_domena\\*username* formularza lub *username* @mydomain.example.com formularza.
+- Należy ostrożnie wymusić nazwy użytkowników, które mogą mieć więcej niż jeden format kanoniczny. Można na przykład użyć formularza\\*nazwy użytkownika* lub *nazwy użytkownika*@mydomain.example.com.
 
 ## <a name="see-also"></a>Zobacz także
 

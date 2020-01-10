@@ -1,36 +1,35 @@
 ---
-title: Metoda częściowa - C# odwołania
-ms.custom: seodec18
+title: Metoda częściowa C# — odwołanie
 ms.date: 07/20/2015
 f1_keywords:
 - partialmethod_CSharpKeyword
 helpviewer_keywords:
 - partial methods [C#]
 ms.assetid: 43f40242-17e0-4452-8573-090503ad3137
-ms.openlocfilehash: 14bcd3329b6ca8e46f6c180c97174a561108d143
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 62efd8b47fb565316b417a65e1b0fe37e40786c8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633356"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713225"
 ---
-# <a name="partial-method-c-reference"></a>Metoda częściowa (odwołanie w C#)
+# <a name="partial-method-c-reference"></a>Metoda częściowaC# (odwołanie)
 
-Metoda częściowa ma jeho signatura zdefiniowane w jednej części typu częściowego, a jego implementacja zdefiniowane w innej części tego typu. Metody częściowe umożliwiają klasy projektantów zapewnić punkty zaczepienia metody, podobny do programów obsługi zdarzeń, które deweloperzy mogą zdecydować się na implementacji, czy nie. Jeśli deweloper nie dostarcza implementację, kompilator usuwa podpisu w czasie kompilacji. Do metod częściowych mają zastosowanie następujące warunki:
+Metoda częściowa ma swój podpis zdefiniowany w jednej części typu częściowego i jego implementacja zdefiniowana w innej części typu. Metody częściowe umożliwiają projektantom klas dostarczanie punktów zaczepienia metody, podobnie jak procedury obsługi zdarzeń, które deweloperzy mogą zdecydować się na wdrożenie lub nie. Jeśli deweloper nie poda implementacji, kompilator usuwa sygnaturę w czasie kompilacji. Poniższe warunki dotyczą metod częściowych:
 
-- Podpisy w obie części typu częściowego muszą być zgodne.
+- Sygnatury w obu częściach typu częściowego muszą być zgodne.
 
 - Metoda musi zwracać typ void.
 
-- Brak modyfikatorów dostępu są dozwolone. Metody częściowe są niejawnie prywatne.
+- Modyfikatory dostępu nie są dozwolone. Metody częściowe są niejawnie prywatne.
 
-Metoda częściowa definicja z dwóch części klasy częściowej można znaleźć w poniższym przykładzie:
+Poniższy przykład przedstawia metodę częściową zdefiniowaną w dwóch częściach klasy częściowej:
 
 [!code-csharp[csrefKeywordsContextual#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#9)]
 
-Aby uzyskać więcej informacji, zobacz [klasy częściowe i metody](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).
+Aby uzyskać więcej informacji, zobacz [częściowe klasy i metody](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka C#](../index.md)
-- [typu częściowego](partial-type.md)
+- [Typ częściowy](partial-type.md)

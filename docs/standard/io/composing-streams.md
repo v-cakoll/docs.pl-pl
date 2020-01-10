@@ -13,35 +13,33 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 452071e9726a95b4b3d9bb9cefe720d39bbc3e0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 689cc9537cd7a5fe6a677d42e5790bbcf1b3aefa
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950374"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708151"
 ---
 # <a name="compose-streams"></a>Tworzenie strumieni
-A *magazyn zapasowy* się na nośniku, na przykład dysk lub pamięć. Każdy magazyn zapasowy różnych implementuje własne strumienia jako implementacja <xref:System.IO.Stream> klasy. 
+*Magazyn zapasowy* jest nośnikiem magazynującym, takim jak dysk lub pamięć. Każdy inny magazyn zapasowy implementuje swój własny strumień jako implementację klasy <xref:System.IO.Stream>. 
 
-Każdy typ strumienia odczytuje i zapisuje bajty od i do jego podanej zapasowego magazynu. Strumienie, łączących się z magazynami kopii są nazywane *podstawowa strumieni*. Podstawowe strumienie mieć konstruktorów z parametrami, które są wymagane do nawiązania strumienia magazyn zapasowy. Na przykład <xref:System.IO.FileStream> ma konstruktorów, które określają parametr ścieżki, która określa, jak plik zostanie udostępniony przez procesy.  
+Każdy typ strumienia odczytuje i zapisuje bajty z i do danego magazynu zapasowego. Strumienie łączące się z magazynami zapasowymi są nazywane *strumieniami podstawowymi*. Strumienie podstawowe mają konstruktory z parametrami niezbędnymi do połączenia strumienia z magazynem zapasowym. Na przykład <xref:System.IO.FileStream> ma konstruktory, które określają parametr path, który określa sposób, w jaki plik będzie współużytkowany przez procesy.  
 
-Projekt <xref:System.IO> klasy oferuje uproszczone strumienia kompozycji. Podstawowe strumienie można dołączyć do co najmniej jeden strumień przekazujące, które zapewniają funkcjonalność, którą chcesz. Odczytywania lub zapisywania może dołączać do końca łańcucha, co typy preferowane może odczytać lub zapisywane w prosty sposób.  
+Projekt klas <xref:System.IO> zapewnia uproszczoną transkompozycję strumienia. Można dołączyć strumienie podstawowe do co najmniej jednego strumienia przekazującego, który zapewnia odpowiednie funkcje. Do końca łańcucha można dołączyć czytelnika lub moduł zapisujący, dzięki czemu preferowane typy mogą być łatwo odczytywane lub zapisywane.  
 
-Utwórz następujące przykłady kodu **FileStream** wokół istniejącego *mójplik.txt* w kolejności do buforu *mójplik.txt*. Należy pamiętać, że **FileStreams** są buforowane domyślnie.
+Poniższy przykład kodu tworzy obiekt **FILESTREAM** wokół istniejącego *pliku. txt* w celu buforowania *pliku. txt*. Należy pamiętać, że **FILESTREAM** domyślnie są buforowane.
 
 >[!IMPORTANT]
->W przykładach założono, że plik o nazwie *mójplik.txt* już istnieje w tym samym folderze co aplikacja.  
+>W przykładach założono, że plik o nazwie mój *plik. txt* już istnieje w tym samym folderze, w którym znajduje się aplikacja.  
 
 ## <a name="example-use-streamreader"></a>Przykład: Użyj StreamReader
-Poniższy przykład tworzy <xref:System.IO.StreamReader> na odczytywanie znaków z **FileStream**, która jest przekazywana do **StreamReader** jako argument konstruktora. <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType> następnie odczytuje aż <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType> znajdzie nie więcej znaków.  
+Poniższy przykład tworzy <xref:System.IO.StreamReader> do odczytywania znaków z **FILESTREAM**, który jest przesyłany do **StreamReader** jako argument konstruktora. <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType> następnie odczytuje do momentu, gdy <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType> nie znajdzie więcej znaków.  
   
  [!code-csharp[System.IO.StreamReader#20](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source2.cs#20)]
  [!code-vb[System.IO.StreamReader#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source2.vb#20)]  
   
 ## <a name="example-use-binaryreader"></a>Przykład: Użyj BinaryReader
-Poniższy przykład tworzy <xref:System.IO.BinaryReader> do odczytywania bajtów z **FileStream**, która jest przekazywana do **BinaryReader** jako argument konstruktora. <xref:System.IO.BinaryReader.ReadByte%2A> następnie odczytuje aż <xref:System.IO.BinaryReader.PeekChar%2A> znajdzie nie większą liczbę bajtów.  
+Poniższy przykład tworzy <xref:System.IO.BinaryReader> do odczytywania bajtów z **FILESTREAM**, który jest przesyłany do **BinaryReader** jako argument konstruktora. <xref:System.IO.BinaryReader.ReadByte%2A> następnie odczytuje do momentu, gdy <xref:System.IO.BinaryReader.PeekChar%2A> nie znajdzie więcej bajtów.  
   
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]
  [!code-vb[System.IO.StreamReader#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source3.vb#21)]  

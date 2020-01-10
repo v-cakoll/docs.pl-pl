@@ -7,46 +7,45 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-author: KrzysztofCwalina
-ms.openlocfilehash: c20430f9cdcd71cc2e178d38aeed48f9fa4e75c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 623391de63891c1695a63482a424bb76a861deba
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026383"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709312"
 ---
 # <a name="framework-design-guidelines"></a>Framework — zalecenia dotyczące projektowania
-Ta sekcja zawiera wskazówki dotyczące projektowania bibliotek, które rozszerzają i wchodzić w interakcje z programu .NET Framework. Celem jest pomoc projektantów Biblioteka zapewnia spójność interfejsu API i łatwość użycia, udostępniając ujednolicony model programowania, który jest niezależny od języka programowania, używany do tworzenia aplikacji. Zaleca się przestrzegać następujących wytycznych projektowania, podczas tworzenia klas i składników, które rozszerzają programu .NET Framework. Biblioteka niespójne projektu niekorzystnie wpływa na wydajność pracy deweloperskiej i zniechęca do przyjęcia.  
+Ta sekcja zawiera wskazówki dotyczące projektowania bibliotek, które zwiększają i współpracują z .NET Framework. Celem jest ułatwienie projektantom biblioteki zapewnienia spójności interfejsu API i prostoty użycia przez zapewnienie ujednoliconego modelu programowania, który jest niezależny od języka programowania używanego do programowania. Zalecamy przestrzeganie tych wytycznych dotyczących projektowania podczas tworzenia klas i składników, które zwiększają .NET Framework. Niespójny projekt biblioteki niekorzystnie wpływa na produktywność deweloperów i odradza wdrażanie.  
   
- Wytyczne są uporządkowane jako prosty zalecenia prefiksem warunki `Do`, `Consider`, `Avoid`, i `Do not`. Te wytyczne są celem projektantów biblioteki klasy zrozumieć wad i zalet różnych rozwiązań. Może to być sytuacje, w których projekt biblioteki w dobrej wymaga, że naruszają te wytyczne dotyczące projektowania. Takiej sytuacji należy rzadkich i jest ważne, czy masz czytelne i atrakcyjne przyczynę swojej decyzji.  
+ Wytyczne są zorganizowane jako proste zalecenia poprzedzone postanowieniami `Do`, `Consider`, `Avoid`i `Do not`. Te wytyczne mają na celu ułatwienie projektantom biblioteki klas zrozumienia zalet różnych rozwiązań. Mogą wystąpić sytuacje, w których dobry projekt biblioteki wymaga naruszenia tych wytycznych projektowych. Takie przypadki powinny być rzadkie i ważne jest, aby użytkownik miał jasno i atrakcyjny powód podjęcia decyzji.  
   
- Te wytyczne pochodzą z książki *wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla bibliotek .NET wielokrotnego użytku, wydanie 2*, Krzysztof Cwalina i Brad Abrams.  
+ Wytyczne te są przedstawione na podstawie *wytycznych dotyczących projektowania struktury książki: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, wydanie 2*, Krzysztof Cwalina i Brad Abrams.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)  
- Zawiera wskazówki dotyczące nazewnictwa zestawów, przestrzeni nazw, typów i członków w bibliotekach klas.  
+ Zawiera wskazówki dotyczące nazewnictwa zestawów, przestrzeni nazw, typów i elementów członkowskich w bibliotekach klas.  
   
  [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)  
- Wskazówki dotyczące używania klas statycznych i abstrakcyjny, interfejsy, wyliczenia, struktur i innych typów.  
+ Zawiera wytyczne dotyczące używania klas statycznych i abstrakcyjnych, interfejsów, wyliczeń, struktur i innych typów.  
   
  [Element członkowski — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/member.md)  
- Wskazówki dotyczące projektowania i używania właściwości, metody, konstruktory, pola, zdarzenia, operatorów i parametry.  
+ Zawiera wytyczne dotyczące projektowania i używania właściwości, metod, konstruktorów, pól, zdarzeń, operatorów i parametrów.  
   
  [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
- W tym artykule omówiono rozszerzalności mechanizmów, takich jak podklasy, za pomocą zdarzeń, wirtualne elementy członkowskie i wywołania zwrotne i wyjaśnia, jak wybrać mechanizmów, które najlepiej spełniają wymagania preferowanej struktury.  
+ Omawia mechanizmy rozszerzalności, takie jak podklasa, korzystanie z zdarzeń, wirtualne elementy członkowskie i wywołania zwrotne, oraz wyjaśnia, jak wybrać mechanizmy najlepiej spełniające wymagania platformy.  
   
  [Wyjątki — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/exceptions.md)  
- W tym artykule opisano wytyczne dotyczące projektowania dla projektowania, zgłaszanie i połowowe wyjątków.  
+ Zawiera opis wytycznych dotyczących projektowania, zgłaszania i przechwytywania wyjątków.  
   
  [Zalecenia dotyczące użytkowania](../../../docs/standard/design-guidelines/usage-guidelines.md)  
- W tym artykule opisano wskazówki dotyczące przy użyciu popularnych typów, takich jak tablice, atrybuty i kolekcje, obsługa serializacji i przeciążanie operatorów równości.  
+ Opisuje wskazówki dotyczące używania typów wspólnych, takich jak tablice, atrybuty i kolekcje, Obsługa serializacji i przeciążanie operatorów równości.  
   
  [Często używane wzorce projektowe](../../../docs/standard/design-guidelines/common-design-patterns.md)  
- Zawiera wskazówki dotyczące wybierania i implementowanie właściwości zależności.  
+ Zawiera wskazówki dotyczące wybierania i implementowania właściwości zależności.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

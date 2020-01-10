@@ -1,17 +1,16 @@
 ---
 title: Ciągi — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: c6e29781f566fac0fd1219ac842a4838d631afb6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: dd76450c2a6a1726d630285f652d252c5f66183f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969714"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711912"
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
 Ciąg jest obiektem typu <xref:System.String>, którego wartością jest Text. Wewnętrznie tekst jest przechowywany jako sekwencyjny zbiór danych tylko do odczytu dla <xref:System.Char> obiektów. Na końcu C# ciągu nie ma znaku zamykającego wartości null; w związku C# z tym ciąg może zawierać dowolną liczbę osadzonych znaków null (' \ 0 '). Właściwość <xref:System.String.Length%2A> ciągu reprezentuje liczbę obiektów `Char`, które zawiera, a nie liczbę znaków Unicode. Aby uzyskać dostęp do poszczególnych punktów kodu Unicode w ciągu, użyj obiektu <xref:System.Globalization.StringInfo>.  
@@ -52,19 +51,19 @@ Ciąg jest obiektem typu <xref:System.String>, którego wartością jest Text. W
   
 |Sekwencja ucieczki|Nazwa znaku|Kodowanie Unicode|  
 |---------------------|--------------------|----------------------|  
-|\\"|Pojedynczy cytat|0x0027|  
+|\\'|Pojedynczy cytat|0x0027|  
 |\\"|Podwójny cudzysłów|0x0022|  
-|\\\\ |Ukośnika odwrotnego|0x005C|  
-|\ 0|Null|0x0000|  
-|\a|Wiadom|0x0007|  
+|\\\\ |Ukośnik odwrotny|0x005C|  
+|\0|Null|0x0000|  
+|\a|Alert|0x0007|  
 |\b|Backspace|0x0008|  
 |\f|Kanał informacyjny formularza|0x000C|  
 |\n|Nowy wiersz|0x000A|  
 |\r|Znak powrotu karetki|0x000D|  
 |\t|Tabulator poziomy|0x0009|  
 |\v|Tabulator pionowy|0x000B|  
-|dany|Sekwencja unikowa Unicode (UTF-16)|`\uHHHH` (zakres: 0000-FFFF; przykład: `\u00E7` = "ç")|  
-|Dany|Sekwencja unikowa Unicode (UTF-32)|`\U00HHHHHH` (zakres: 000000-10FFFF; przykład: `\U0001F47D` = "&#x1F47D;")|  
+|\u|Sekwencja unikowa Unicode (UTF-16)|`\uHHHH` (zakres: 0000-FFFF; przykład: `\u00E7` = "ç")|  
+|\U|Sekwencja unikowa Unicode (UTF-32)|`\U00HHHHHH` (zakres: 000000-10FFFF; przykład: `\U0001F47D` = "&#x1F47D;")|  
 |\x|Sekwencja unikowa Unicode podobna do "\u" z wyjątkiem zmiennej długości|`\xH[H][H][H]` (zakres: 0-FFFF; przykład: `\x00E7` lub `\x0E7` lub `\xE7` = "ç")|  
   
 > [!WARNING]
@@ -100,7 +99,7 @@ Aby uzyskać więcej informacji na temat formatowania typów .NET, zobacz [Typy 
   
  [!code-csharp[csProgGuideStrings#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#8)]  
   
- Jeśli <xref:System.String> metody nie zapewniają funkcjonalności, która musi być wymagana do modyfikacji pojedynczych znaków w ciągu, można użyć obiektu <xref:System.Text.StringBuilder>, aby zmodyfikować pojedyncze znaki "w miejscu", a następnie utworzyć nowy ciąg w celu przechowywania wyników przy użyciu <xref:System.Text.StringBuilder> form. W poniższym przykładzie Załóżmy, że należy zmodyfikować oryginalny ciąg w określony sposób, a następnie zapisać wyniki do użycia w przyszłości:  
+ Jeśli <xref:System.String> metody nie zapewniają funkcjonalności, która musi być wymagana do modyfikacji pojedynczych znaków w ciągu, można użyć obiektu <xref:System.Text.StringBuilder>, aby zmodyfikować pojedyncze znaki "w miejscu", a następnie utworzyć nowy ciąg w celu przechowywania wyników przy użyciu metod <xref:System.Text.StringBuilder>. W poniższym przykładzie Załóżmy, że należy zmodyfikować oryginalny ciąg w określony sposób, a następnie zapisać wyniki do użycia w przyszłości:  
   
  [!code-csharp[csProgGuideStrings#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#27)]  
   
@@ -125,7 +124,7 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Ciągi, metody rozszerzające i LINQ  
- Ponieważ typ <xref:System.String> implementuje <xref:System.Collections.Generic.IEnumerable%601>, można użyć metod rozszerzających zdefiniowanych w klasie <xref:System.Linq.Enumerable> w ciągach. Aby uniknąć bałaganu wizualnego, te metody są wykluczone z funkcji IntelliSense dla typu <xref:System.String>, ale są one dostępne. Można również użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeń zapytania dla ciągów. Aby uzyskać więcej informacji, zobacz [LINQ i ciągi](../concepts/linq/linq-and-strings.md).  
+ Ponieważ typ <xref:System.String> implementuje <xref:System.Collections.Generic.IEnumerable%601>, można użyć metod rozszerzających zdefiniowanych w klasie <xref:System.Linq.Enumerable> w ciągach. Aby uniknąć bałaganu wizualnego, te metody są wykluczone z funkcji IntelliSense dla typu <xref:System.String>, ale są one dostępne. Można również używać wyrażeń zapytań LINQ w ciągach. Aby uzyskać więcej informacji, zobacz [LINQ i ciągi](../concepts/linq/linq-and-strings.md).  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   

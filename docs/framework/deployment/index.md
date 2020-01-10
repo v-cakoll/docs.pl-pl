@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 04cbfb8d41135b57c3e090959e041f95fcda2840
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975681"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716463"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Wdrażanie programu .NET Framework i aplikacji
 
@@ -60,11 +58,11 @@ Skorzystaj z poniższych linków do innych tematów MSDN, aby uzyskać szczegó�
 
 - Wdrażanie .NET Framework (dla producentów OEM i administratorów):
 
-  - [Zestaw do oceny i wdrażania systemu Windows (ADK)](https://go.microsoft.com/fwlink/p/?LinkId=254976)
+  - [Zestaw Windows Assessment and Deployment Kit (ADK)](https://go.microsoft.com/fwlink/p/?LinkId=254976)
 
   - [Podręcznik administratora](guide-for-administrators.md)
 
-**Obsługa techniczna**
+**Obsługa**
 
 - Aby uzyskać ogólne informacje, zobacz [blog .NET Framework](https://devblogs.microsoft.com/dotnet/).
 
@@ -136,7 +134,7 @@ Niektóre informacje dotyczące pakowania i wdrażania dla .NET Framework są op
 
      Za pomocą tej opcji można tworzyć pliki MSI do użycia w Instalator Windows lub spakować aplikację do użycia z innym instalatorem.
 
-### <a name="distribution"></a>Mieszczenie
+### <a name="distribution"></a>Dystrybucja
 
 .NET Framework udostępnia następujące opcje dystrybucji aplikacji:
 
@@ -152,7 +150,7 @@ Niektóre informacje dotyczące pakowania i wdrażania dla .NET Framework są op
 
      Instalator Windows 2,0 może instalować, naprawiać lub usuwać zestawy .NET Framework w globalnej pamięci podręcznej zestawów i w katalogach prywatnych.
 
-### <a name="installation-location"></a>Lokalizacja instalacji
+### <a name="installation-location"></a>Miejsce instalacji
 
 Aby określić, gdzie wdrożyć zestawy aplikacji, aby można je było znaleźć w środowisku uruchomieniowym, zobacz [jak środowisko uruchomieniowe lokalizuje zestawy](how-the-runtime-locates-assemblies.md).
 
@@ -165,7 +163,7 @@ Zagadnienia dotyczące zabezpieczeń mogą również mieć wpływ na sposób wdr
 |[Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](how-the-runtime-locates-assemblies.md)|Opisuje, jak środowisko uruchomieniowe języka wspólnego określa zestaw, który ma być używany do realizacji żądania powiązania.|
 |[Najlepsze praktyki dotyczące ładowania zestawu](best-practices-for-assembly-loading.md)|Omawia sposoby, aby uniknąć problemów z tożsamością typu, które mogą prowadzić do <xref:System.InvalidCastException>, <xref:System.MissingMethodException>i innych błędów.|
 |[Zmniejszenie liczby ponownych uruchomień systemu podczas instalowania programu .NET Framework 4.5](reducing-system-restarts.md)|Opisuje Menedżera ponownego uruchamiania, który uniemożliwia ponowne uruchomienie w miarę możliwości, i wyjaśnia, jak aplikacje instalujące .NET Framework mogą korzystać z tej funkcji.|
-|[Przewodnik wdrażania dla administratorów](guide-for-administrators.md)|Wyjaśnia, w jaki sposób administrator systemu może wdrożyć .NET Framework i zależności systemu w sieci przy użyciu System Center Configuration Manager (SCCM).|
+|[Przewodnik wdrażania dla administratorów](guide-for-administrators.md)|Wyjaśnia, w jaki sposób administrator systemu może wdrożyć .NET Framework i zależności systemu w sieci za pomocą usługi Microsoft Endpoint Configuration Manager.|
 |[Przewodnik wdrażania dla deweloperów](deployment-guide-for-developers.md)|Wyjaśnia, w jaki sposób deweloperzy mogą instalować .NET Framework na komputerach użytkowników przy użyciu ich aplikacji.|
 |[Wdrażanie aplikacji, usług i składników](/visualstudio/deployment/deploying-applications-services-and-components)|W tym artykule omówiono opcje wdrażania w programie Visual Studio, w tym instrukcje dotyczące publikowania aplikacji przy użyciu technologii ClickOnce i Instalator Windows.|
 |[Publikowanie aplikacji ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Opisuje sposób tworzenia pakietów aplikacji Windows Forms i wdrażania jej przy użyciu technologii ClickOnce na komputerach klienckich w sieci.|

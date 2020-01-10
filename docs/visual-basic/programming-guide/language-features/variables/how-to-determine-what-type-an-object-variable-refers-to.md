@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 9f9b89e2fea0bd69cba6d50fa1d1fb9cc3927685
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b3778a170759f685db78e7dcde219138196f9eca
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348616"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344196"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Porady: określanie, do jakiego typu odnosi się zmienna obiektu (Visual Basic)
 
@@ -50,7 +50,7 @@ Zmienna obiektu zawiera wskaźnik do danych, które są przechowywane w innym mi
 
     Kryterium zgodności zależy od tego, czy określony typ jest klasą, strukturą lub interfejsem. Ogólnie rzecz biorąc, typy są zgodne, jeśli obiekt jest tego samego typu co, dziedziczy po lub implementuje określony typ. Aby uzyskać więcej informacji, zobacz [operator typeof](../../../../visual-basic/language-reference/operators/typeof-operator.md).
 
-## <a name="compiling-the-code"></a>Kompilowanie kodu
+## <a name="compile-the-code"></a>Skompilować kod
 
 Należy zauważyć, że określony typ nie może być zmienną ani wyrażeniem. Musi to być nazwa typu zdefiniowanego, na przykład klasy, struktury lub interfejsu. Obejmuje to typy wewnętrzne, takie jak `Integer` i `String`.
 

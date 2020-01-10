@@ -2,12 +2,12 @@
 title: Bezpieczny dostęp do danych
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: c08f41be67f5d87635021e86ba5a5b33af9304cd
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ede8b1a2e840b56d6e7f45e6d26e09fa5e8bcc25
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735278"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337524"
 ---
 # <a name="secure-data-access"></a>Bezpieczny dostęp do danych
 Aby napisać bezpieczny kod ADO.NET, należy zapoznać się z mechanizmami zabezpieczeń dostępnymi w podstawowym magazynie danych lub w bazie danych. Należy również wziąć pod uwagę implikacje zabezpieczeń innych funkcji lub składników, które może zawierać aplikacja.  
@@ -19,7 +19,7 @@ Aby napisać bezpieczny kod ADO.NET, należy zapoznać się z mechanizmami zabez
   
  Po uwierzytelnieniu użytkowników zakres ich działań zależy od uprawnień, które zostały im przyznane. Zawsze stosuj zasadę najniższych uprawnień i przyznaj tylko uprawnienia, które są absolutnie niezbędne.  
   
- Aby uzyskać więcej informacji, zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji, zapoznaj się z następującymi zasobami.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
@@ -42,7 +42,7 @@ Aby napisać bezpieczny kod ADO.NET, należy zapoznać się z mechanizmami zabez
 ## <a name="script-exploits"></a>Luki w zabezpieczeniach skryptów  
  Wykorzystanie skryptów jest kolejną formą iniekcji, która używa złośliwych znaków wstawianych do strony sieci Web. Przeglądarka nie sprawdza poprawności wstawionych znaków i przetworzy je jako część strony.  
   
- Aby uzyskać więcej informacji, zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji, zapoznaj się z następującymi zasobami.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
@@ -51,7 +51,7 @@ Aby napisać bezpieczny kod ADO.NET, należy zapoznać się z mechanizmami zabez
 ## <a name="probing-attacks"></a>Ataki na sondowanie  
  Osoby atakujące często wykorzystują informacje z wyjątku, takie jak nazwa serwera, bazy danych lub tabeli, w celu zainstalowania ataku w systemie. Ponieważ wyjątki mogą zawierać określone informacje o aplikacji lub źródle danych, można pomóc zapewnić lepszą ochronę aplikacji i źródła danych przez ujawnienie do klienta najważniejszych informacji.  
   
- Aby uzyskać więcej informacji, zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji, zapoznaj się z następującymi zasobami.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
@@ -65,10 +65,9 @@ Aby napisać bezpieczny kod ADO.NET, należy zapoznać się z mechanizmami zabez
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Zagadnienia dotyczące zabezpieczeń i wskazówki dotyczące dostępu 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Opisuje techniki zabezpieczeń dotyczące dostępu 2007, takich jak szyfrowanie plików, administrowanie hasłami, konwertowanie baz danych do nowych formatów ACCDB i ACCDe oraz korzystanie z innych opcji zabezpieczeń.|  
-|[Informacje o roli plików informacyjnych grupy roboczej w zabezpieczeniach dostępu](https://support.microsoft.com/kb/305542)|Wyjaśnia rolę i relację pliku informacji o grupie roboczej w programie Access 2003 zabezpieczenia.|  
-|[Często zadawane pytania dotyczące zabezpieczeń programu Microsoft Access dla programu Microsoft Access w wersji 2,0 do 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Wersja do pobrania, często zadawane pytania dotyczące zabezpieczeń programu Microsoft Access.|  
-## <a name="enterprise-services"></a>Usługi dla przedsiębiorstw  
+|[Zagadnienia dotyczące zabezpieczeń i wskazówki dotyczące dostępu 2007](https://docs.microsoft.com/previous-versions/office/developer/office-2007/bb421308(v=office.12))|Opisuje techniki zabezpieczeń dotyczące dostępu 2007, takich jak szyfrowanie plików, administrowanie hasłami, konwertowanie baz danych do nowych formatów ACCDB i ACCDe oraz korzystanie z innych opcji zabezpieczeń.|  
+|[Wprowadzenie do zabezpieczeń 2010](https://support.office.com/article/Introduction-to-Access-2010-security-CAE6D764-0318-4622-955F-68D9F186D6CA)|Zawiera omówienie funkcji zabezpieczeń oferowanych przez program Access 2010.|  
+## <a name="enterprise-services"></a>Enterprise Services  
  COM+ zawiera własny model zabezpieczeń, który opiera się na kontach systemu Windows NT i personifikacji procesu/wątku. Przestrzeń nazw <xref:System.EnterpriseServices> zawiera otoki zezwalające aplikacjom .NET na integrację kodu zarządzanego z usługami zabezpieczeń modelu COM+ za pomocą klasy <xref:System.EnterpriseServices.ServicedComponent>.  
   
  Aby uzyskać więcej informacji, zobacz następujący zasób.  
@@ -80,7 +79,7 @@ Aby napisać bezpieczny kod ADO.NET, należy zapoznać się z mechanizmami zabez
 ## <a name="interoperating-with-unmanaged-code"></a>Współdziałanie z kodem niezarządzanym  
  .NET Framework zapewnia interakcję z niezarządzanym kodem, w tym składniki COM, usługi COM+, zewnętrzne biblioteki typów i wiele usług systemu operacyjnego. Praca z kodem niezarządzanym polega na przejściu poza obwód zabezpieczeń dla kodu zarządzanego. Zarówno kod, jak i kod, który je wywołuje, muszą mieć uprawnienia do kodu niezarządzanego (<xref:System.Security.Permissions.SecurityPermission> z określoną flagą <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>). Kod niezarządzany może wprowadzić niezamierzone luki w zabezpieczeniach do aplikacji. W związku z tym należy unikać współdziałania z kodem niezarządzanym, chyba że jest to absolutnie konieczne.  
   
- Aby uzyskać więcej informacji, zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji, zapoznaj się z następującymi zasobami.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  

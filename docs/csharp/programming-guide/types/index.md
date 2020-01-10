@@ -1,6 +1,5 @@
 ---
 title: Typy — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - value types [C#]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 27560449daa18741a53e3affa33e08afa40d006a
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 0b7c9fc0e9dd0f559c52f692c405a3f9e68814d0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552495"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711886"
 ---
 # <a name="types-c-programming-guide"></a>Typy (Przewodnik programowania w języku C#)
 
@@ -60,7 +59,7 @@ Typy parametrów metod i zwracanych wartości są określone w podpisie metody. 
 
 Po zadeklarowaniu zmiennej nie można jej ponownie zadeklarować przy użyciu nowego typu i nie można przypisać do niej wartości, która nie jest zgodna z zadeklarowanym typem. Na przykład nie można zadeklarować [int](../../language-reference/builtin-types/integral-numeric-types.md) , a następnie przypisać mu wartości logicznej `true`. Jednak wartości mogą być konwertowane na inne typy, na przykład wtedy, gdy są przypisane do nowych zmiennych lub przekazane jako argumenty metody. *Konwersja typu* , która nie powoduje utraty danych, jest wykonywana automatycznie przez kompilator. Konwersja, która może spowodować utratę danych, wymaga *rzutowania* w kodzie źródłowym.
 
-Aby uzyskać więcej informacji, zobacz [rzutowanie i konwersje typów](./casting-and-type-conversions.md).
+Aby uzyskać więcej informacji, zobacz [Rzutowanie i konwersje typów](./casting-and-type-conversions.md).
 
 ## <a name="built-in-types"></a>Typy wbudowane
 
@@ -68,7 +67,7 @@ C#zawiera standardowy zestaw wbudowanych typów liczbowych reprezentujących lic
 
 ## <a name="custom-types"></a>Typy niestandardowe
 
-Do tworzenia własnych typów niestandardowych służy konstrukcja [struct](../../language-reference/keywords/struct.md), [Class](../../language-reference/keywords/class.md), [Interface](../../language-reference/keywords/interface.md)i [enum](../../language-reference/keywords/enum.md) . Sama Biblioteka klas .NET jest kolekcją typów niestandardowych dostarczanych przez firmę Microsoft, których można używać w własnych aplikacjach. Domyślnie najczęściej używane typy w bibliotece klas są dostępne w dowolnym C# programie. Inne stają się dostępne tylko wtedy, gdy jawnie dodasz odwołanie do projektu do zestawu, w którym są zdefiniowane. Gdy kompilator ma odwołanie do zestawu, można zadeklarować zmienne (i stałe) typów zadeklarowanych w tym zestawie w kodzie źródłowym. Aby uzyskać więcej informacji, zobacz [Biblioteka klas .NET](../../../standard/class-library-overview.md).
+Do tworzenia własnych typów niestandardowych służy konstrukcja [struct](../../language-reference/keywords/struct.md), [Class](../../language-reference/keywords/class.md), [Interface](../../language-reference/keywords/interface.md)i [enum](../../language-reference/builtin-types/enum.md) . Sama Biblioteka klas .NET jest kolekcją typów niestandardowych dostarczanych przez firmę Microsoft, których można używać w własnych aplikacjach. Domyślnie najczęściej używane typy w bibliotece klas są dostępne w dowolnym C# programie. Inne stają się dostępne tylko wtedy, gdy jawnie dodasz odwołanie do projektu do zestawu, w którym są zdefiniowane. Gdy kompilator ma odwołanie do zestawu, można zadeklarować zmienne (i stałe) typów zadeklarowanych w tym zestawie w kodzie źródłowym. Aby uzyskać więcej informacji, zobacz [Biblioteka klas .NET](../../../standard/class-library-overview.md).
 
 ## <a name="the-common-type-system"></a>Wspólny system typów
 
@@ -91,7 +90,7 @@ Na poniższej ilustracji przedstawiono typy wartości i typy odwołań w CTS:
 
 Typy wartości pochodne od <xref:System.ValueType?displayProperty=nameWithType>, które pochodzą z <xref:System.Object?displayProperty=nameWithType>. Typy, które pochodzą od <xref:System.ValueType?displayProperty=nameWithType> mają specjalne zachowanie w środowisku CLR. Zmienne typu wartości bezpośrednio zawierają swoje wartości, co oznacza, że pamięć jest alokowana w dowolnym kontekście, w którym jest zadeklarowana zmienna. Nie ma oddzielnego przydziału sterty lub wyrzucania elementów bezużytecznych dla zmiennych typu wartości.
 
-Istnieją dwie kategorie typów wartości: [struct](../../language-reference/keywords/struct.md) i [enum](../../language-reference/keywords/enum.md).
+Istnieją dwie kategorie typów wartości: [struct](../../language-reference/keywords/struct.md) i [enum](../../language-reference/builtin-types/enum.md).
 
 Wbudowane typy liczbowe to struktury i mają właściwości i metody, do których można uzyskać dostęp:
 
@@ -116,17 +115,17 @@ Za pomocą słowa kluczowego [struct](../../language-reference/keywords/struct.m
 
 Aby uzyskać więcej informacji na temat struktur, zobacz [struktury](../classes-and-structs/structs.md). Aby uzyskać więcej informacji na temat typów wartości w programie .NET, zobacz [typy wartości](../../language-reference/keywords/value-types.md).
 
-Druga kategoria typów wartości to [enum](../../language-reference/keywords/enum.md). Wyliczenie definiuje zestaw nazwanych stałych całkowitych. Na przykład Wyliczenie <xref:System.IO.FileMode?displayProperty=nameWithType> w bibliotece klas .NET zawiera zestaw nazwanych stałych liczb całkowitych, które określają, jak plik powinien być otwarty. Jest on zdefiniowany, jak pokazano w następującym przykładzie:
+Druga kategoria typów wartości to [enum](../../language-reference/builtin-types/enum.md). Wyliczenie definiuje zestaw nazwanych stałych całkowitych. Na przykład Wyliczenie <xref:System.IO.FileMode?displayProperty=nameWithType> w bibliotece klas .NET zawiera zestaw nazwanych stałych liczb całkowitych, które określają, jak plik powinien być otwarty. Jest on zdefiniowany, jak pokazano w następującym przykładzie:
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
 Stała `System.IO.FileMode.Create` ma wartość 2. Jednak nazwa jest znacznie bardziej zrozumiała dla ludzi odczytujących kod źródłowy. z tego powodu lepiej jest używać wyliczeń zamiast stałych liczb literałów. Aby uzyskać więcej informacji, zobacz temat <xref:System.IO.FileMode?displayProperty=nameWithType>.
 
-Wszystkie wyliczenia dziedziczą z <xref:System.Enum?displayProperty=nameWithType>, który dziedziczy z <xref:System.ValueType?displayProperty=nameWithType>. Wszystkie reguły, które mają zastosowanie do struktur, mają zastosowanie również do typów wyliczeniowych. Aby uzyskać więcej informacji na temat typów wyliczeniowych, zobacz [typy](../enumeration-types.md)wyliczeniowe.
+Wszystkie wyliczenia dziedziczą z <xref:System.Enum?displayProperty=nameWithType>, który dziedziczy z <xref:System.ValueType?displayProperty=nameWithType>. Wszystkie reguły, które mają zastosowanie do struktur, mają zastosowanie również do typów wyliczeniowych. Aby uzyskać więcej informacji na temat typów wyliczeniowych, zobacz [typy](../../language-reference/builtin-types/enum.md)wyliczeniowe.
 
 ### <a name="reference-types"></a>Typy odwołań
 
-Typ, który jest zdefiniowany jako [Klasa](../../language-reference/keywords/class.md), [Delegat](../../language-reference/builtin-types/reference-types.md), tablica lub [interfejs](../../language-reference/keywords/interface.md) , jest *typem referencyjnym*. W czasie wykonywania, gdy deklarujesz zmienną typu referencyjnego, zmienna zawiera wartość [null](../../language-reference/keywords/null.md) do momentu, gdy jawnie utworzysz obiekt za pomocą operatora [New](../../language-reference/operators/new-operator.md) lub przypiszesz do niego obiekt, który został utworzony w innym miejscu przy użyciu `new`, jak pokazano w Poniższy przykład:
+Typ, który jest zdefiniowany jako [Klasa](../../language-reference/keywords/class.md), [Delegat](../../language-reference/builtin-types/reference-types.md), tablica lub [interfejs](../../language-reference/keywords/interface.md) , jest *typem referencyjnym*. W czasie wykonywania, gdy deklarujesz zmienną typu referencyjnego, zmienna zawiera wartość [null](../../language-reference/keywords/null.md) do momentu jawnego utworzenia obiektu za pomocą operatora [New](../../language-reference/operators/new-operator.md) lub przypisania go do obiektu, który został utworzony w innym miejscu przy użyciu `new`, jak pokazano w następującym przykładzie:
 
 ```csharp
 MyClass mc = new MyClass();
@@ -166,7 +165,7 @@ stringList.Add("String example");
 stringList.Add(4);
 ```
 
-Użycie parametru typu umożliwia ponowne użycie tej samej klasy do przechowywania dowolnego typu elementu, bez konieczności konwertowania każdego elementu na [obiekt](../../language-reference/builtin-types/reference-types.md). Klasy kolekcji generycznej są nazywane *kolekcjami silnie określonymi* , ponieważ kompilator zna określony typ elementów kolekcji i może zgłosić błąd w czasie kompilacji, jeśli na przykład próbujesz dodać liczbę całkowitą do obiektu `stringList` w Poprzedni przykład. Aby uzyskać więcej informacji, zobacz [Ogólne](../generics/index.md).
+Użycie parametru typu umożliwia ponowne użycie tej samej klasy do przechowywania dowolnego typu elementu, bez konieczności konwertowania każdego elementu na [obiekt](../../language-reference/builtin-types/reference-types.md). Klasy kolekcji generycznej są nazywane *kolekcjami z jednoznacznie* określonymi typami, ponieważ kompilator wie określony typ elementów kolekcji i może zgłosić błąd w czasie kompilacji, jeśli na przykład próbujesz dodać liczbę całkowitą do obiektu `stringList` w poprzednim przykładzie. Aby uzyskać więcej informacji, zobacz [Ogólne](../generics/index.md).
 
 ## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>Typy niejawne, typy anonimowe i typy wartości null
 
@@ -202,7 +201,7 @@ Więcej informacji znajduje się w następujących tematach:
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwoła](../../language-reference/index.md)
+- [Dokumentacja języka C#](../../language-reference/index.md)
 - [Przewodnik programowania w języku C#](../index.md)
 - [Konwersja typów danych XML](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [Typy całkowite](../../language-reference/builtin-types/integral-numeric-types.md)

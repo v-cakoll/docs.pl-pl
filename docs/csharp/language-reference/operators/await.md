@@ -1,6 +1,5 @@
 ---
 title: operator await — C# odwołanie
-ms.custom: seodec18
 ms.date: 11/08/2019
 f1_keywords:
 - await_CSharpKeyword
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 36cb4a5def6b75281edbe878d89af0c18ab226ec
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 6dc058f3850e30d8c424d4372c47b127c7d361b6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140658"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712744"
 ---
 # <a name="await-operator-c-reference"></a>await — operatorC# (odwołanie)
 
@@ -40,7 +39,7 @@ Słowa kluczowe `async` i `await` są dostępne w C# 5 i nowszych wersjach.
 
 ## <a name="await-operator-in-the-main-method"></a>operator await w metodzie Main
 
-Począwszy od C# 7,1, [Metoda`Main`](../../programming-guide/main-and-command-args/index.md), która jest punktem wejścia aplikacji, może zwracać`Task`lub`Task<int>`, umożliwiając jej asynchroniczne, aby można było użyć operatora`await`w swojej treści. W starszych C# wersjach, aby upewnić się, że metoda `Main` czeka na ukończenie operacji asynchronicznej, możesz pobrać wartość właściwości <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> wystąpienia <xref:System.Threading.Tasks.Task%601>, która jest zwracana przez odpowiadającą metodę asynchroniczną. W przypadku operacji asynchronicznych, które nie generują wartości, można wywołać metodę <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>. Aby uzyskać informacje o sposobach wybierania wersji językowej, zobacz [ C# przechowywanie wersji języka](../configure-language-version.md).
+Począwszy od C# 7,1, [Metoda`Main`](../../programming-guide/main-and-command-args/index.md), która jest punktem wejścia aplikacji, może zwracać `Task` lub `Task<int>`, umożliwiając jej asynchroniczne, aby można było użyć operatora `await` w swojej treści. W starszych C# wersjach, aby upewnić się, że metoda `Main` czeka na ukończenie operacji asynchronicznej, możesz pobrać wartość właściwości <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> wystąpienia <xref:System.Threading.Tasks.Task%601>, która jest zwracana przez odpowiadającą metodę asynchroniczną. W przypadku operacji asynchronicznych, które nie generują wartości, można wywołać metodę <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>. Aby uzyskać informacje o sposobach wybierania wersji językowej, zobacz [ C# przechowywanie wersji języka](../configure-language-version.md).
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 

@@ -1,18 +1,17 @@
 ---
-title: 'Instrukcje: Wyświetlanie argumentów wiersza polecenia — C# Przewodnik programowania'
-ms.custom: seodec18
+title: Jak wyświetlić argumenty wiersza polecenia — C# Przewodnik programowania
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: ba732930d08c74433d6ea7b38e7dc3a9fddf594c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 210dad71220572535a0325fac925b0453b0d4e03
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923864"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712029"
 ---
-# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Instrukcje: Wyświetlanie argumentów wiersza polecenia (C# Przewodnik programowania)
+# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Wyświetlanie argumentów wiersza polecenia (C# Przewodnik programowania)
 Argumenty dostarczone do pliku wykonywalnego w wierszu polecenia są dostępne za pomocą opcjonalnego parametru do `Main`. Argumenty są podane w postaci tablicy ciągów. Każdy element tablicy zawiera jeden argument. Odstęp między argumentami jest usuwany. Rozważmy na przykład następujące wywołania wiersza polecenia fikcyjnego pliku wykonywalnego:  
   
 |Dane wejściowe w wierszu polecenia|Tablica ciągów przeniesiona do głównej|  

@@ -1,21 +1,20 @@
 ---
 title: Poziomy ułatwień C# dostępu — odwołanie
-ms.custom: seodec18
 ms.date: 12/06/2017
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 2d6605a305e5003e19f4fe1dd260746302691215
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602391"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713819"
 ---
 # <a name="accessibility-levels-c-reference"></a>Poziomy ułatwień dostępu (odwołanie w C#)
 
-Użyj modyfikatorów dostępu, `public` `protected` `internal`,, lub `private`, aby określić jeden z następujących zadeklarowanych poziomów dostępności dla elementów członkowskich.  
+Użyj modyfikatorów dostępu, `public`, `protected`, `internal`lub `private`, aby określić jeden z następujących zadeklarowanych poziomów dostępności dla elementów członkowskich.  
   
 |Zadeklarowane ułatwienia dostępu|Znaczenie|  
 |----------------------------|-------------|  
@@ -26,13 +25,13 @@ Użyj modyfikatorów dostępu, `public` `protected` `internal`,, lub `private`, 
 |[`private`](private.md)|Dostęp jest ograniczony do typu zawierającego.|  
 |[`private protected`](private-protected.md)|Dostęp jest ograniczony do zawierającej klasy lub typów pochodzących od klasy zawierającej w bieżącym zestawie. Dostępne od C# 7,2. |  
   
- Tylko jeden modyfikator dostępu jest dozwolony dla elementu członkowskiego lub typu, z wyjątkiem tego, `protected internal` że `private protected` używane są kombinacje lub.  
+ Tylko jeden modyfikator dostępu jest dozwolony dla elementu członkowskiego lub typu, z wyjątkiem tego, że używane są kombinacje `protected internal` lub `private protected`.  
   
  Modyfikatory dostępu są niedozwolone w przestrzeniach nazw. Przestrzenie nazw nie mają ograniczeń dostępu.  
   
  W zależności od kontekstu, w którym występuje Deklaracja elementu członkowskiego, dozwolone są tylko niektóre zadeklarowane podano. Jeśli w deklaracji elementu członkowskiego nie określono modyfikatora dostępu, zostanie użyta domyślna dostępność.  
   
- Typy najwyższego poziomu, które nie są zagnieżdżone w innych typach, mogą mieć `internal` tylko `public` dostępność lub ułatwienia dostępu. Domyślną dostępnością dla tych typów jest `internal`.  
+ Typy najwyższego poziomu, które nie są zagnieżdżone w innych typach, mogą mieć tylko `internal` lub `public` ułatwienia dostępu. Domyślne ułatwienia dostępu dla tych typów są `internal`.  
   
  Zagnieżdżone typy, które są elementami członkowskimi innych typów, mogą mieć zadeklarowane podano, jak wskazano w poniższej tabeli.  
   

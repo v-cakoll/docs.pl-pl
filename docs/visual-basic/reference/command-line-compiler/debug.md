@@ -1,5 +1,5 @@
 ---
-title: /debug
+title: -debug
 ms.date: 03/10/2018
 helpviewer_keywords:
 - debug compiler switches
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: 3beb9ad3829c2f55120a9136e6e54185551bd20b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: df65d1c095f5a22d562d78e15baf750a20ec2556
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344782"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716776"
 ---
 # <a name="-debug-visual-basic"></a>-Debug (Visual Basic)
 
@@ -34,14 +34,14 @@ lub
 
 |Termin|Definicja|
 |---|---|
-|`+` &#124; `-`|Opcjonalna. Określenie `+` lub `/debug` powoduje, że kompilator generuje informacje o debugowaniu i umieszcza je w pliku. pdb. Określenie `-` ma ten sam skutek, co nie określa `/debug`.|
-|`full` &#124; `pdbonly`|Opcjonalna. Określa typ informacji o debugowaniu generowanych przez kompilator. Jeśli nie określisz `/debug:pdbonly`, wartość domyślna to `full`, co umożliwia dołączenie debugera do uruchomionego programu. Argument `pdbonly` umożliwia debugowanie kodu źródłowego, gdy program jest uruchamiany w debugerze, ale wyświetla kod języka asemblera tylko wtedy, gdy uruchomiony program jest dołączony do debugera.|
+|`+` &#124; `-`|Opcjonalny. Określenie `+` lub `-debug` powoduje, że kompilator generuje informacje o debugowaniu i umieszcza je w pliku. pdb. Określenie `-` ma ten sam skutek, co nie określa `-debug`.|
+|`full` &#124; `pdbonly`|Opcjonalny. Określa typ informacji o debugowaniu generowanych przez kompilator. Jeśli nie określisz `-debug:pdbonly`, wartość domyślna to `full`, co umożliwia dołączenie debugera do uruchomionego programu. Argument `pdbonly` umożliwia debugowanie kodu źródłowego, gdy program jest uruchamiany w debugerze, ale wyświetla kod języka asemblera tylko wtedy, gdy uruchomiony program jest dołączony do debugera.|
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj tej opcji, aby utworzyć kompilacje debugowania. Jeśli nie określisz `/debug`, `/debug+`lub `/debug:full`, nie będzie można debugować pliku wyjściowego programu.
+Użyj tej opcji, aby utworzyć kompilacje debugowania. Jeśli nie określisz `-debug`, `-debug+`lub `-debug:full`, nie będzie można debugować pliku wyjściowego programu.
 
-Domyślnie informacje debugowania nie są emitowane (`/debug-`). Aby emitować informacje o debugowaniu, określ `/debug` lub `/debug+`.
+Domyślnie informacje debugowania nie są emitowane (`-debug-`). Aby emitować informacje o debugowaniu, określ `-debug` lub `-debug+`.
 
 Informacje o sposobie konfigurowania wydajności debugowania aplikacji znajdują się w temacie [ułatwianie debugowania obrazu](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).
 

@@ -1,6 +1,5 @@
 ---
 title: <summary> — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <summary>
@@ -9,14 +8,14 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: f0e67ca248e5c94318032c8769410d4fd4c9d3a9
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 63c65e11a274779015cf99859b7fa67bb536529d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523297"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711691"
 ---
-# <a name="summary-c-programming-guide"></a>\<summary > (C# Przewodnik programowania)
+# <a name="summary-c-programming-guide"></a>> podsumowania \<C# (Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -28,9 +27,9 @@ ms.locfileid: "72523297"
  Podsumowanie obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Tag > \<summary powinien służyć do opisywania typu lub elementu członkowskiego typu. Użyj [> \<remarks](./remarks.md) , aby dodać informacje uzupełniające do opisu typu. Użyj [atrybutu cref](./cref-attribute.md) , aby włączyć narzędzia do dokumentacji, takie jak [DocFX](https://dotnet.github.io/docfx/) i [Sandcastle](https://github.com/EWSoftware/SHFB) , aby utworzyć wewnętrzne hiperłącza do stron dokumentacji dla elementów kodu.  
+ Aby opisać typ lub element członkowski typu, należy użyć tagu \<Summary >. Użyj [\<uwagi >](./remarks.md) , aby dodać informacje uzupełniające do opisu typu. Użyj [atrybutu cref](./cref-attribute.md) , aby włączyć narzędzia do dokumentacji, takie jak [DocFX](https://dotnet.github.io/docfx/) i [Sandcastle](https://github.com/EWSoftware/SHFB) , aby utworzyć wewnętrzne hiperłącza do stron dokumentacji dla elementów kodu.  
   
- Tekst dla tagu > \<summary jest jedynym źródłem informacji o typie w technologii IntelliSense i jest również wyświetlany w oknie Przeglądarka obiektów.  
+ Tekst dla tagu \<Summary > jest jedynym źródłem informacji o typie w technologii IntelliSense i jest również wyświetlany w oknie Przeglądarka obiektów.  
   
  Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku. Aby utworzyć ostateczną dokumentację opartą na pliku generowanym przez kompilator, można utworzyć niestandardowe narzędzie lub użyć narzędzia, takiego jak [DocFX](https://dotnet.github.io/docfx/) lub [Sandcastle](https://github.com/EWSoftware/SHFB).  
   

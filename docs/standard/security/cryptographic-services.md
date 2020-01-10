@@ -24,14 +24,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6f0e268995449bc27b93c92ac8654c09fca9cd14
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 66af8126ab61d37065b9a328d5e088ed7bf4cbef
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975823"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709208"
 ---
 # <a name="cryptographic-services"></a>Usługi kryptograficzne
 
@@ -90,17 +88,17 @@ Przy założeniu, że Alicja i Robert są dwiema stronami, którzy chcą komunik
 
 - <xref:System.Security.Cryptography.AesManaged> (wprowadzona w .NET Framework 3,5).
 
-- <xref:System.Security.Cryptography.DESCryptoServiceProvider>.,
+- <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
 
 - <xref:System.Security.Cryptography.HMACSHA1> (jest to technicznie algorytm klucza tajnego, ponieważ reprezentuje on kod uwierzytelniania wiadomości obliczany przy użyciu funkcji skrótu kryptograficznego połączonej z kluczem tajnym. Zobacz [wartości skrótu](#hash-values)w dalszej części tego tematu.)
 
-- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.,
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.
 
-- <xref:System.Security.Cryptography.RijndaelManaged>.,
+- <xref:System.Security.Cryptography.RijndaelManaged>.
 
-- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.,
+- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.
 
-## <a name="public-key-encryption"></a>Szyfrowanie klucza publicznego
+## <a name="public-key-encryption"></a>Public-Key Encryption
 
 Szyfrowanie klucza publicznego używa klucza prywatnego, który musi być tajny przez nieautoryzowanych użytkowników i klucz publiczny, który można udostępnić każdemu użytkownikowi. Klucz publiczny i klucz prywatny są powiązane matematycznie; dane zaszyfrowane za pomocą klucza publicznego mogą zostać odszyfrowane tylko przy użyciu klucza prywatnego, a dane podpisane przy użyciu klucza prywatnego mogą być weryfikowane tylko z kluczem publicznym. Klucz publiczny można udostępnić każdemu użytkownikowi; służy do szyfrowania danych wysyłanych do posiadacza klucza prywatnego. Algorytmy kryptograficzne klucza publicznego są również znane jako algorytmy asymetryczne, ponieważ jeden klucz jest wymagany do szyfrowania danych, a do odszyfrowania danych jest wymagany inny klucz. Podstawowa reguła kryptograficzna uniemożliwia ponowne użycie klucza, a oba klucze powinny być unikatowe dla każdej sesji komunikacji. Jednak w przypadku klucze asymetryczne są zwykle długotrwałe.
 
@@ -187,21 +185,21 @@ Dwie strony (Alicja i Robert) mogą używać funkcji skrótu, aby zapewnić inte
 
 .NET Framework udostępnia następujące klasy, które implementują algorytmy wyznaczania wartości skrótu:
 
-- <xref:System.Security.Cryptography.HMACSHA1>.,
+- <xref:System.Security.Cryptography.HMACSHA1>.
 
-- <xref:System.Security.Cryptography.MACTripleDES>.,
+- <xref:System.Security.Cryptography.MACTripleDES>.
 
-- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.,
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.
 
-- <xref:System.Security.Cryptography.RIPEMD160>.,
+- <xref:System.Security.Cryptography.RIPEMD160>.
 
-- <xref:System.Security.Cryptography.SHA1Managed>.,
+- <xref:System.Security.Cryptography.SHA1Managed>.
 
-- <xref:System.Security.Cryptography.SHA256Managed>.,
+- <xref:System.Security.Cryptography.SHA256Managed>.
 
-- <xref:System.Security.Cryptography.SHA384Managed>.,
+- <xref:System.Security.Cryptography.SHA384Managed>.
 
-- <xref:System.Security.Cryptography.SHA512Managed>.,
+- <xref:System.Security.Cryptography.SHA512Managed>.
 
 - Warianty HMAC dla wszystkich algorytmów Secure Hash Algorithm (SHA), Message Digest 5 (MD5) i RIPEMD-160.
 

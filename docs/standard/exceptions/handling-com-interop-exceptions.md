@@ -9,26 +9,24 @@ helpviewer_keywords:
 - exceptions, COM interop
 - COM interop, exceptions
 ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0a17752257589ea4ee4d9e58182d4448f02f6460
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17cd739ac40b43bdd4a93b83a4ab9d0d92400e2d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970940"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708935"
 ---
 # <a name="handling-com-interop-exceptions"></a>Obsługa wyjątków międzyoperacyjności COM
-Zarządzanego i niezarządzanego kodu mogą współpracować ze sobą, aby obsłużyć wyjątki. Jeśli metoda zgłasza wyjątek w kodzie zarządzanym, środowisko uruchomieniowe języka wspólnego może przekazywać wartość HRESULT do obiektu COM. Jeśli metoda nie powiedzie się w niezarządzanym kodzie, zwracając błąd HRESULT, środowisko wykonawcze zgłasza wyjątek, który może zostać przechwycony przez kod zarządzany.  
+Kod zarządzany i niezarządzany może współdziałać ze sobą w celu obsługi wyjątków. Jeśli metoda zgłasza wyjątek w kodzie zarządzanym, środowisko uruchomieniowe języka wspólnego może przekazać wynik HRESULT do obiektu COM. Jeśli metoda zakończy się niepowodzeniem w kodzie niezarządzanym przez zwrócenie błędu HRESULT, środowisko uruchomieniowe zgłasza wyjątek, który może zostać przechwycony przez kod zarządzany.  
   
- Środowisko wykonawcze automatycznie mapuje wynik HRESULT COM interop bardziej szczegółowe wyjątki. Na przykład staje się E_ACCESSDENIED <xref:System.UnauthorizedAccessException>, staje się E_OUTOFMEMORY <xref:System.OutOfMemoryException>i tak dalej.  
+ Środowisko uruchomieniowe automatycznie mapuje wynik HRESULT z międzyoperacyjności modelu COM do bardziej szczegółowych wyjątków. Na przykład E_ACCESSDENIED zostanie <xref:System.UnauthorizedAccessException>, E_OUTOFMEMORY <xref:System.OutOfMemoryException>i tak dalej.  
   
- Jeśli HRESULT znajduje się wynik niestandardowych lub jeśli jest nieznany do środowiska uruchomieniowego, środowisko uruchomieniowe przekazuje ogólnego <xref:System.Runtime.InteropServices.COMException> do klienta. **ErrorCode** właściwość **COMException** zawiera wartość HRESULT.  
+ Jeśli HRESULT jest wynikiem niestandardowym lub jeśli jest nieznany dla środowiska uruchomieniowego, środowisko uruchomieniowe przekazuje do klienta ogólne <xref:System.Runtime.InteropServices.COMException>. Właściwość **ErrorCode** elementu **COMEXCEPTION** zawiera wartość HRESULT.  
   
 ## <a name="working-with-ierrorinfo"></a>Praca z IErrorInfo  
- Gdy błąd jest przekazywany z modelu COM z kodem zarządzanym, środowisko uruchomieniowe wypełnia obiekt wyjątku przy użyciu informacji o błędzie. Obiekty COM, które obsługują IErrorInfo i zwracać wartości HRESULT przekazać tę informację do wyjątków w kodzie zarządzanym. Na przykład, środowisko uruchomieniowe mapuje opis błędu modelu COM, z wyjątkiem <xref:System.Exception.Message%2A> właściwości. Jeśli wynik HRESULT udostępniane nie dodatkowe informacje o błędzie, środowisko uruchomieniowe wypełnia wiele właściwości wyjątku z wartościami domyślnymi.  
+ Po przekazaniu błędu z modelu COM do kodu zarządzanego środowisko uruchomieniowe wypełnia obiekt wyjątku informacjami o błędzie. Obiekty COM obsługujące IErrorInfo i zwracają wartości HRESULT zawierają te informacje do wyjątków kodu zarządzanego. Na przykład środowisko uruchomieniowe mapuje opis z błędu COM na Właściwość <xref:System.Exception.Message%2A> wyjątku. Jeśli HRESULT nie zawiera żadnych dodatkowych informacji o błędzie, środowisko uruchomieniowe wypełnia wiele właściwości wyjątku z wartościami domyślnymi.  
   
- Jeśli metoda nie powiedzie się w niezarządzanym kodzie, wyjątek może być przekazywany do segmentu kodu zarządzanego. Temat [wyników HRESULT i wyjątków](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md) zawiera tabelę przedstawiającą sposób mapowania wartości HRESULT do obiektów wyjątków czasu wykonywania.  
+ Jeśli metoda zakończy się niepowodzeniem w kodzie niezarządzanym, można przekazywać wyjątek do segmentu kodu zarządzanego. Temat [HResults i Exceptions](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md) zawiera tabelę przedstawiającą sposób, w jaki HRESULT są mapowane na obiekty wyjątków czasu wykonywania.  
 
 ## <a name="see-also"></a>Zobacz także
 

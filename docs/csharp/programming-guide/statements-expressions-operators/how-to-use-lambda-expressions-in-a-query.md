@@ -1,18 +1,17 @@
 ---
-title: 'Instrukcje: użycie wyrażeń lambda w przewodniku C# programowania zapytań'
-ms.custom: seodec18
+title: Jak używać wyrażeń lambda w przewodniku C# programowania zapytań
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: e7e7da211599b5ce0263377ecaf25b404399ce9c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 92bdbf842c5c30b2f32e06f622f3e08f3c7a878f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423166"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711964"
 ---
-# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Porady: użycie wyrażeń lambda w kwerendzie (Przewodnik programowania w języku C#)
+# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Jak używać wyrażeń lambda w kwerendzie (C# Przewodnik programowania)
 Wyrażenia lambda nie są używane bezpośrednio w składni zapytania, ale są używane w wywołaniach metod, a wyrażenia zapytań mogą zawierać wywołania metody. W rzeczywistości niektóre operacje zapytań można wyrazić tylko w składni metody. Aby uzyskać więcej informacji o różnicach między składnią zapytania i składnią metody, zobacz [składnia zapytań i składnia metod w LINQ](../concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="example"></a>Przykład  
@@ -28,7 +27,7 @@ Wyrażenia lambda nie są używane bezpośrednio w składni zapytania, ale są u
  [!code-csharp[csProgGuideLINQ#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csrefLINQHowTos.cs#2)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Aby uruchomić ten kod, skopiuj i wklej metodę do `StudentClass`, która znajduje się w podanej w [instrukcje: zapytania kolekcji obiektów](../../linq/query-a-collection-of-objects.md) i Wywołaj ją z metody `Main`.  
+ Aby uruchomić ten kod, skopiuj i wklej metodę do `StudentClass`, która jest dostarczana w [kwerendzie kolekcji obiektów](../../linq/query-a-collection-of-objects.md) i Wywołaj ją z metody `Main`.
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -4,13 +4,12 @@ description: Poznaj koncepcje testów jednostkowych w oprogramowaniu .NET Core z
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.custom: seodec18
-ms.openlocfilehash: 1738aa805947fbe0c1b7c2c770947ce650692b5f
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c587aaa5c4c50ec66ac6cd8cd7aefd7b0ca1a80c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117049"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715424"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Testowanie jednostkowe Visual Basic biblioteki .NET Core przy użyciu testu dotnet i xUnit
 
@@ -21,7 +20,7 @@ Ten samouczek przeprowadzi Cię przez interaktywny proces tworzenia przykładowe
 ## <a name="creating-the-source-project"></a>Tworzenie projektu źródłowego
 
 Otwórz okno powłoki. Utwórz katalog o nazwie *Unit-Tests-VB-using-dotnet-test* w celu przechowania rozwiązania.
-W tym nowym katalogu Uruchom [`dotnet new sln`](../tools/dotnet-new.md) polecenie, aby utworzyć nowe rozwiązanie. To rozwiązanie ułatwia zarządzanie zarówno biblioteką klas, jak i projektem testów jednostkowych.
+W tym nowym katalogu Uruchom [`dotnet new sln`](../tools/dotnet-new.md) , aby utworzyć nowe rozwiązanie. To rozwiązanie ułatwia zarządzanie zarówno biblioteką klas, jak i projektem testów jednostkowych.
 W katalogu rozwiązania Utwórz katalog *PrimeService* . W tej chwili istnieje następujący katalog i struktura pliku:
 
 ```
@@ -30,7 +29,7 @@ W katalogu rozwiązania Utwórz katalog *PrimeService* . W tej chwili istnieje n
     /PrimeService
 ```
 
-Ustaw *PrimeService* w bieżącym katalogu i uruchom [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) , aby utworzyć projekt źródłowy. Zmień nazwę *Class1. vb* na *PrimeService. vb*. Tworzysz nieprawidłową implementację `PrimeService` klasy:
+Ustaw *PrimeService* w bieżącym katalogu i uruchom [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) , aby utworzyć projekt źródłowy. Zmień nazwę *Class1. vb* na *PrimeService. vb*. Tworzysz nieprawidłową implementację klasy `PrimeService`:
 
 ```vb
 Namespace Prime.Services
@@ -57,7 +56,7 @@ Następnie Utwórz katalog *PrimeService. Tests* . Poniższy konspekt przedstawi
     /PrimeService.Tests
 ```
 
-Utwórz katalog *PrimeService. Tests* jako bieżący katalog i Utwórz nowy projekt za pomocą [`dotnet new xunit -lang VB`](../tools/dotnet-new.md)polecenia. To polecenie tworzy projekt testowy, który używa xUnit jako biblioteki testowej. Wygenerowany szablon służy do konfigurowania modułu uruchamiającego testy w *PrimeServiceTests. vbproj*:
+Utwórz katalog *PrimeService. Tests* jako bieżący katalog i Utwórz nowy projekt przy użyciu [`dotnet new xunit -lang VB`](../tools/dotnet-new.md). To polecenie tworzy projekt testowy, który używa xUnit jako biblioteki testowej. Wygenerowany szablon służy do konfigurowania modułu uruchamiającego testy w *PrimeServiceTests. vbproj*:
 
 ```xml
 <ItemGroup>
@@ -67,7 +66,7 @@ Utwórz katalog *PrimeService. Tests* jako bieżący katalog i Utwórz nowy proj
 </ItemGroup>
 ```
 
-Projekt testowy wymaga innych pakietów do tworzenia i uruchamiania testów jednostkowych. `dotnet new`w poprzednim kroku dodano xUnit i moduł uruchamiający xUnit. Teraz Dodaj `PrimeService` bibliotekę klas jako inną zależność do projektu. [`dotnet add reference`](../tools/dotnet-add-reference.md) Użyj polecenia:
+Projekt testowy wymaga innych pakietów do tworzenia i uruchamiania testów jednostkowych. `dotnet new` w poprzednim kroku został dodany xUnit i moduł uruchamiający xUnit. Teraz dodaj bibliotekę klas `PrimeService` jako inną zależność do projektu. Użyj [`dotnet add reference`](../tools/dotnet-add-reference.md) polecenia:
 
 ```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.vbproj
@@ -88,7 +87,7 @@ Istnieje następujący końcowy układ folderu:
         PrimeServiceTests.vbproj
 ```
 
-Wykonaj [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) w katalogu *testy jednostkowe — VB-using-dotnet-test* . 
+Wykonaj [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) w katalogu *testowania jednostkowego — VB-using-dotnet-test* . 
 
 ## <a name="creating-the-first-test"></a>Tworzenie pierwszego testu
 
@@ -112,9 +111,9 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-Ten `<Fact>` atrybut oznacza metodę testową, która jest uruchamiana przez program Test Runner. W celu utworzenia testów i biblioteki klas, a następnie uruchomienia testów, [`dotnet test`](../tools/dotnet-test.md) należy wykonać testy *jednostkowo-badawcze-using-dotnet-test*. Program xUnit Test Runner zawiera punkt wejścia programu do uruchamiania testów. `dotnet test`uruchamia program Test Runner przy użyciu utworzonego projektu testu jednostkowego.
+Atrybut `<Fact>` oznacza metodę testową, która jest uruchamiana przez program Test Runner. Z poziomu *testu jednostkowego-using-dotnet-test*wykonaj [`dotnet test`](../tools/dotnet-test.md) , aby skompilować testy i bibliotekę klas, a następnie uruchomić testy. Program xUnit Test Runner zawiera punkt wejścia programu do uruchamiania testów. `dotnet test` uruchamia program Test Runner przy użyciu utworzonego projektu testu jednostkowego.
 
-Test zakończy się niepowodzeniem. Nie utworzono jeszcze implementacji. Wykonaj ten test, pisząc najprostszy kod w `PrimeService` klasie, która działa:
+Test zakończy się niepowodzeniem. Nie utworzono jeszcze implementacji. Wykonaj ten test, pisząc najprostszy kod w klasie `PrimeService`, która działa:
 
 ```vb
 Public Function IsPrime(candidate As Integer) As Boolean
@@ -125,17 +124,17 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-W katalogu *testy jednostkowe — VB-using-dotnet-test* Uruchom `dotnet test` ponownie. Polecenie uruchamia kompilację `PrimeService` dla `PrimeService.Tests` projektu, a następnie dla projektu. `dotnet test` Po skompilowaniu obu projektów jest uruchamiany ten pojedynczy test. Przekazuje.
+W katalogu *testy jednostkowe — VB-using-dotnet-test* uruchom ponownie `dotnet test`. `dotnet test` polecenie uruchamia kompilację dla projektu `PrimeService`, a następnie dla projektu `PrimeService.Tests`. Po skompilowaniu obu projektów jest uruchamiany ten pojedynczy test. Przekazuje.
 
 ## <a name="adding-more-features"></a>Dodawanie większej liczby funkcji
 
-Teraz, po wykonaniu jednego przebiegu testowego, należy napisać więcej. Istnieje kilka innych prostych przypadków dla numerów pierwszych: 0, -1. Te przypadki można dodać jako nowe testy z `<Fact>` atrybutem, ale szybko żmudnym. Istnieją inne atrybuty xUnit, które umożliwiają pisanie zestawu podobnych testów.  `<Theory>` Atrybut reprezentuje zestaw testów, które wykonują ten sam kod, ale mają różne argumenty wejściowe. Możesz użyć atrybutu, `<InlineData>` aby określić wartości dla tych danych wejściowych.
+Teraz, po wykonaniu jednego przebiegu testowego, należy napisać więcej. Istnieje kilka innych prostych przypadków dla numerów pierwszych: 0,-1. Te przypadki można dodać jako nowe testy z atrybutem `<Fact>`, ale szybko żmudnym. Istnieją inne atrybuty xUnit, które umożliwiają pisanie zestawu podobnych testów.  Atrybut `<Theory>` reprezentuje zestaw testów, które wykonują ten sam kod, ale mają różne argumenty wejściowe. Możesz użyć atrybutu `<InlineData>`, aby określić wartości dla tych danych wejściowych.
 
 Zamiast tworzyć nowe testy, Zastosuj te dwa atrybuty, aby utworzyć jedno teoretyczne. Teoretyczna jest metoda, która sprawdza kilka wartości mniejszej niż dwa, które jest najniższą liczbą:
 
 [!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
-Uruchom `dotnet test`i dwa z tych testów zakończą się niepowodzeniem. Aby wszystkie testy zostały zakończone pomyślnie, należy zmienić `if` klauzulę na początku metody:
+Uruchom `dotnet test`i dwa z tych testów zakończą się niepowodzeniem. Aby wszystkie testy zostały zakończone pomyślnie, należy zmienić klauzulę `if` na początku metody:
 
 ```vb
 if candidate < 2

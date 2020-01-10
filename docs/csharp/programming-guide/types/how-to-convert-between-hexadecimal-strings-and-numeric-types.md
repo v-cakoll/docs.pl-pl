@@ -1,6 +1,5 @@
 ---
-title: 'Instrukcje: konwertowanie między ciągami szesnastkowymi i typami liczbowymi — C# Przewodnik programowania'
-ms.custom: seodec18
+title: Jak przekonwertować ciągi szesnastkowe i typy liczbowe — C# Przewodnik programowania
 ms.date: 07/20/2015
 helpviewer_keywords:
 - hexadecimal strings [C#], converting to numeric type
@@ -8,14 +7,14 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 8b72734f9b617fed2ff65977c9a0e60f46424ae8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0e1f6ad2606b367d369c1c644c947831b2aa8289
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429442"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698524"
 ---
-# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Porady: konwertowanie ciągów szestnastkowych na typy liczbowe (Przewodnik programowania w języku C#)
+# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Jak przekonwertować ciągi szesnastkowe i typy liczbowe (C# Przewodnik programowania)
 W poniższych przykładach pokazano, jak wykonywać następujące zadania:  
   
 - Uzyskaj wartość szesnastkową każdego znaku w [ciągu](../../language-reference/builtin-types/reference-types.md).  
@@ -57,4 +56,4 @@ W poniższych przykładach pokazano, jak wykonywać następujące zadania:
 
 - [Standardowe ciągi formatujące liczby](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Typy](./index.md)
-- [Instrukcje: określanie, czy ciąg reprezentuje wartość liczbową](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [Jak ustalić, czy ciąg reprezentuje wartość liczbową](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

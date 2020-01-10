@@ -2,15 +2,13 @@
 title: Instalowanie .NET Framework w systemie Windows Vista
 description: Dowiedz się, jak zainstalować .NET Framework w systemie Windows Vista.
 ms.custom: updateeachrelease
-author: rlander
-ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 630ab717e44d72de248bb0f0b1abf3d781d26a93
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 95a536ea201844461d60bda0da2654e76de04787
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204727"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716317"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Instalowanie programu .NET Framework w systemach Windows Vista i Windows Server 2008
 
@@ -26,7 +24,7 @@ Te instrukcje ułatwią zainstalowanie potrzebnych wersji .NET Framework. [.NET 
 
 [.NET Framework 4,6](https://www.microsoft.com/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) obsługuje aplikacje skompilowane dla .NET Framework 4,0 do 4,6.
 
-## <a name="net-framework-35"></a>Program .NET Framework 3,5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 Możesz zainstalować [.NET Framework 3,5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) w systemie Windows Vista.
 

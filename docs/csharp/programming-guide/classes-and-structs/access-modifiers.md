@@ -1,17 +1,16 @@
 ---
 title: Modyfikatory dostępu — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: b415bf143e7da46b3ecd2c0828a3f8151878435a
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 0d8e536902317c1e5b00dadde069dd6242189088
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971678"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705668"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modyfikatory dostępu (Przewodnik programowania w języku C#)
 Wszystkie typy i elementy członkowskie typu mają poziom dostępności, który kontroluje, czy mogą być używane z innego kodu w zestawie lub w innych zestawach. Można użyć następujących modyfikatorów dostępu, aby określić dostępność typu lub elementu członkowskiego podczas deklarowania:  
@@ -42,7 +41,7 @@ Wszystkie typy i elementy członkowskie typu mają poziom dostępności, który 
   
  Elementy członkowskie struktury, w tym zagnieżdżone klasy i struktury, mogą być deklarowane jako publiczne, wewnętrzne lub prywatne. Elementy członkowskie klasy, w tym zagnieżdżone klasy i struktury, mogą być publiczne, chronione wewnętrznie, chronione, wewnętrzne, prywatne i prywatne. Poziom dostępu dla elementów członkowskich klasy i elementów członkowskich struktury, w tym zagnieżdżonych klas i struktur, jest domyślnie prywatny. Prywatne typy zagnieżdżone nie są dostępne spoza typu zawierającego.  
   
- Klasy pochodne nie mogą mieć większej dostępności niż ich typy podstawowe. Innymi słowy, nie można mieć klasy `B` publicznej, która pochodzi od klasy `A`wewnętrznej. Jeśli jest to dozwolone, miałoby to wpływ `A` na publiczną, ponieważ wszystkie chronione lub wewnętrzne `A` elementy członkowskie są dostępne z klasy pochodnej.  
+ Klasy pochodne nie mogą mieć większej dostępności niż ich typy podstawowe. Innymi słowy, nie można mieć klasy publicznej `B`, która pochodzi od wewnętrznej klasy `A`. Jeśli było to dozwolone, miałoby to wpływ na `A` publiczny, ponieważ wszystkie chronione lub wewnętrzne elementy członkowskie `A` są dostępne z klasy pochodnej.  
   
  Można włączyć określone inne zestawy, aby uzyskać dostęp do typów wewnętrznych przy użyciu InternalsVisibleToAttribute. Aby uzyskać więcej informacji, zobacz [zaprzyjaźnione zestawy](../../../standard/assembly/friend.md).  
   
@@ -51,9 +50,9 @@ Wszystkie typy i elementy członkowskie typu mają poziom dostępności, który 
   
  Zwykle dostępność elementu członkowskiego nie jest większa niż dostępność typu, który go zawiera. Jednak publiczna składowa klasy wewnętrznej może być dostępna spoza zestawu, jeśli element członkowski implementuje metody interfejsu lub przesłania metody wirtualne, które są zdefiniowane w publicznej klasie bazowej.  
   
- Typ dowolnego elementu członkowskiego, który jest polem, właściwością lub zdarzeniem, musi być co najmniej tak samo samo jak element członkowski. Analogicznie, typ zwracany i typy parametrów dowolnego elementu członkowskiego, który jest metody, indeksatora lub delegata, muszą być co najmniej tak samo samo jak element członkowski. Na przykład nie można mieć metody `M` publicznej, która zwraca klasę `C` , chyba że `C` jest również publiczna. Analogicznie, nie można mieć chronionej właściwości typu `A` , `A` jeśli jest zadeklarowana jako prywatna.  
+ Typ dowolnego elementu członkowskiego, który jest polem, właściwością lub zdarzeniem, musi być co najmniej tak samo samo jak element członkowski. Analogicznie, typ zwracany i typy parametrów dowolnego elementu członkowskiego, który jest metody, indeksatora lub delegata, muszą być co najmniej tak samo samo jak element członkowski. Na przykład nie można mieć metody publicznej `M` która zwraca klasę `C`, chyba że `C` jest również publiczna. Podobnie nie można mieć chronionej właściwości typu `A`, jeśli `A` jest zadeklarowana jako prywatna.  
   
- Operatory zdefiniowane przez użytkownika muszą być zawsze deklarowane jako publiczne i statyczne. Aby uzyskać więcej informacji, zobacz przeciążanie [operatora](../../language-reference/operators/operator-overloading.md).  
+ Operatory zdefiniowane przez użytkownika muszą być zawsze deklarowane jako publiczne i statyczne. Aby uzyskać więcej informacji, zobacz [przeciążanie operatora](../../language-reference/operators/operator-overloading.md).  
   
  Finalizatory nie mogą mieć modyfikatorów dostępności.  
   

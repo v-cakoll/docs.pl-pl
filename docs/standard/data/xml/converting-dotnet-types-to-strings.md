@@ -3,27 +3,25 @@ title: Konwertowanie typów programu .NET Framework na ciągi
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: dc2e2b65-f623-4dc3-938b-d2a054d6832c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 98ebc9248b0585295adf12e04dece0fef654c2e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a63e0175f6660967eb4aa678c6731d353e44e2d5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61953988"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711080"
 ---
 # <a name="converting-net-framework-types-to-strings"></a>Konwertowanie typów programu .NET Framework na ciągi
-Jeśli chcesz przekonwertować typ .NET Framework na ciąg, użyj **ToString** metody. **ToString** metoda zwraca reprezentację ciągu przekazany typ to. Poniższa tabela zawiera listę typów programu .NET Framework, które zwracają ciąg w formacie, który jest mapowany do specyfikacji schematu XML (XSD).  
+Jeśli chcesz skonwertować typ .NET Framework na ciąg, użyj metody **ToString** . Metoda **ToString** zwraca ciąg reprezentujący typ, który został przesłany. Poniższa tabela zawiera listę typów .NET Framework, które zwracają ciąg w formacie, który jest mapowany na specyfikacje schematu XML (XSD).  
   
-|Typ programu .NET Framework|Ciąg typ zwracany|  
+|Typ programu .NET Framework|Zwrócony typ ciągu|  
 |-------------------------|--------------------------|  
 |Boolean|"true", "false"|  
-|Single.PositiveInfinity|"INF"|  
-|Single.NegativeInfinity|"-INF"|  
-|Double.PositiveInfinity|"INF"|  
-|Double.NegativeInfinity|"-INF"|  
-|DataGodzina|Format to RRRR-MM-ddTHH:mm:sszzzzzz i jego podzbiory.|  
-|Przedział czasu|Format jest PnYnMnTnHnMnS, na przykład `P2Y10M15DT10H30M20S` jest wartość typu duration 10hours 2 lata, 10 miesięcy, 15 dni, 30 minut i 20 sekund.|  
+|Single. PositiveInfinity|INF|  
+|Single. NegativeInfinity|"-INF"|  
+|Double. PositiveInfinity|INF|  
+|Double. NegativeInfinity|"-INF"|  
+|DataGodzina|Format to RRRR-MM-DDTgg: mm: sszzzzzz i jego podzestawy.|  
+|Przedział czasu|Format to PnYnMnTnHnMnS, na przykład `P2Y10M15DT10H30M20S` to czas trwania wynoszący 2 lata, 10 miesięcy, 15 dni, 10hours, 30 minut i 20 sekund.|  
   
 ## <a name="see-also"></a>Zobacz także
 

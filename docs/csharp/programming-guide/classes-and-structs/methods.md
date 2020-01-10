@@ -1,28 +1,27 @@
 ---
 title: Metody — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 318f51afefd780ed7be0ab8c2a72acb5fcf9db15
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699971"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714771"
 ---
 # <a name="methods-c-programming-guide"></a>Metody (Przewodnik programowania w języku C#)
 
-Metoda jest blokiem kodu, który zawiera serie instrukcji. Program powoduje wykonanie instrukcji przez wywołanie metody i określenie wszelkich wymaganych argumentów metody. W C#programie Każda wykonana instrukcja jest wykonywana w kontekście metody. Metoda `Main` to punkt wejścia dla każdej C# aplikacji i jest wywoływany przez środowisko uruchomieniowe języka wspólnego (CLR), gdy program jest uruchomiony.
+Metoda jest blokiem kodu, który zawiera serie instrukcji. Program powoduje wykonanie instrukcji przez wywołanie metody i określenie wszelkich wymaganych argumentów metody. W C#programie Każda wykonana instrukcja jest wykonywana w kontekście metody. Metoda `Main` jest punktem wejścia dla każdej C# aplikacji i jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR), gdy program jest uruchomiony.
 
 > [!NOTE]
 > W tym artykule omówiono nazwane metody. Aby uzyskać informacje na temat funkcji anonimowych, zobacz [funkcje anonimowe](../statements-expressions-operators/anonymous-functions.md).
 
 ## <a name="method-signatures"></a>Sygnatury metod
 
-Metody są zadeklarowane w [klasie](../../language-reference/keywords/class.md) lub [strukturze](../../language-reference/keywords/struct.md) przez określenie poziomu dostępu, takiego jak `public` lub `private`, opcjonalne modyfikatory, takie jak `abstract` lub `sealed`, wartość zwracana, nazwa metody i wszelkie parametry metody. Te części razem są sygnaturą metody.
+Metody są zadeklarowane w [klasie](../../language-reference/keywords/class.md) lub [strukturze](../../language-reference/keywords/struct.md) przez określenie poziomu dostępu, takiego jak `public` lub `private`, Modyfikatory opcjonalne, takie jak `abstract` lub `sealed`, wartość zwracana, nazwa metody i wszystkie parametry metody. Te części razem są sygnaturą metody.
 
 > [!NOTE]
 > Zwracany typ metody nie jest częścią podpisu metody do celów przeciążania metody. Jednakże jest częścią podpisu metody podczas określania zgodności między delegatem a metodą, do której wskazuje.
@@ -33,7 +32,7 @@ Parametry metody są ujęte w nawiasy i są rozdzielone przecinkami. Puste nawia
 
 ## <a name="method-access"></a>Dostęp do metody
 
-Wywołanie metody na obiekcie jest podobne do uzyskiwania dostępu do pola. Po nazwie obiektu Dodaj kropkę, nazwę metody i nawiasów. Argumenty są wyświetlane w nawiasach i są oddzielone przecinkami. W związku z tym metody klasy `Motorcycle` mogą być wywoływane jak w poniższym przykładzie:
+Wywołanie metody na obiekcie jest podobne do uzyskiwania dostępu do pola. Po nazwie obiektu Dodaj kropkę, nazwę metody i nawiasów. Argumenty są wyświetlane w nawiasach i są oddzielone przecinkami. Metody klasy `Motorcycle` mogą więc być wywoływane jak w poniższym przykładzie:
 
 [!code-csharp[csProgGuideObjects#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#41)]
 
@@ -49,7 +48,7 @@ Domyślnie, gdy typ wartości jest przenoszona do metody, jest przenoszona kopia
 
 Gdy obiekt typu referencyjnego jest przenoszona do metody, odwołanie do obiektu jest przesyłane. Oznacza to, że metoda nie odbiera samego obiektu, ale argument, który wskazuje lokalizację obiektu. Jeśli zmienisz element członkowski obiektu za pomocą tego odwołania, zmiana zostanie odzwierciedlona w argumencie metody wywołującej, nawet jeśli przekażesz obiekt przez wartość.
 
-Typ referencyjny można utworzyć za pomocą słowa kluczowego `class`, jak pokazano na poniższym przykładzie:
+Można utworzyć typ referencyjny za pomocą słowa kluczowego `class`, jak pokazano w poniższym przykładzie:
 
 [!code-csharp[csProgGuideObjects#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#42)]
 
@@ -57,15 +56,15 @@ Teraz, Jeśli przekażesz obiekt, który jest oparty na tym typie metody, odwoł
 
 [!code-csharp[csProgGuideObjects#75](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#75)]
 
-Przykład zasadniczo działa tak samo jak w poprzednim przykładzie, że przekazuje argument przez wartość do metody. Jednak, ponieważ jest używany typ referencyjny, wynik jest różny. Modyfikacja wprowadzona w `ModifyObject` do pola `value` parametru `obj`, również zmienia pole `value` argumentu, `rt`, w metodzie `TestRefType`. Metoda `TestRefType` wyświetla 33 jako dane wyjściowe.
+Przykład zasadniczo działa tak samo jak w poprzednim przykładzie, że przekazuje argument przez wartość do metody. Jednak, ponieważ jest używany typ referencyjny, wynik jest różny. Modyfikacja wprowadzona w `ModifyObject` do pola `value` parametru `obj`, również zmienia pole `value` argumentu `rt`, w metodzie `TestRefType`. Metoda `TestRefType` wyświetla 33 jako dane wyjściowe.
 
 Aby uzyskać więcej informacji na temat przekazywania typów odwołań przez odwołanie i wartość, zobacz [przekazywanie parametrów typu odwołania](./passing-reference-type-parameters.md) i [typy odwołań](../../language-reference/keywords/reference-types.md).
 
 ## <a name="return-values"></a>Zwracane wartości
 
-Metody mogą zwracać wartość do obiektu wywołującego. Jeśli typ zwracany, typ wymieniony przed nazwą metody, nie jest `void`, Metoda może zwrócić wartość przy użyciu słowa kluczowego `return`. Instrukcja ze słowem kluczowym `return`, po której następuje wartość zgodna z typem zwracanym, zwróci tę wartość do obiektu wywołującego metodę.
+Metody mogą zwracać wartość do obiektu wywołującego. Jeśli zwracany typ, typ wymieniony przed nazwą metody, nie jest `void`, Metoda może zwrócić wartość za pomocą słowa kluczowego `return`. Instrukcja ze słowem kluczowym `return`, po której następuje wartość zgodna z typem zwracanym, zwróci tę wartość do obiektu wywołującego metodę.
 
-Wartość można zwrócić do elementu wywołującego przez wartość lub, zaczynając od C# 7,0, [według odwołania](ref-returns.md). Wartości są zwracane do obiektu wywołującego przez odwołanie, jeśli słowo kluczowe `ref` jest używane w sygnaturze metody i następuje po każdym słowie kluczowym `return`. Na przykład następująca sygnatura metody i instrukcja return wskazują, że metoda zwraca nazwy zmiennych `estDistance` przez odwołanie do obiektu wywołującego.
+Wartość można zwrócić do elementu wywołującego przez wartość lub, zaczynając od C# 7,0, [według odwołania](ref-returns.md). Wartości są zwracane do obiektu wywołującego przez odwołanie, jeśli słowo kluczowe `ref` jest używane w sygnaturze metody i następuje po każdym `return` słowa kluczowego. Na przykład następująca sygnatura metody i instrukcja return wskazują, że metoda zwraca nazwy zmiennych `estDistance` przez odwołanie do obiektu wywołującego.
 
 ```csharp
 public ref double GetEstimatedDistance()
@@ -74,7 +73,7 @@ public ref double GetEstimatedDistance()
 }
 ```
 
-Słowo kluczowe `return` przerywa również wykonywanie metody. Jeśli zwracanym typem jest `void`, instrukcja `return` nie jest jeszcze przydatna do zatrzymania wykonywania metody. Bez słowa kluczowego `return` metoda zostanie zatrzymana po osiągnięciu końca bloku kodu. Metody z typem zwracanym innym niż void są wymagane do zwrócenia wartości za pomocą słowa kluczowego `return`. Na przykład te dwie metody używają słowa kluczowego `return`, aby zwracać liczby całkowite:
+Słowo kluczowe `return` przerywa również wykonywanie metody. Jeśli zwracanym typem jest `void`, instrukcja `return` bez wartości jest nadal przydatna do zatrzymania wykonywania metody. Bez słowa kluczowego `return`, Metoda zostanie zatrzymana po osiągnięciu końca bloku kodu. Metody z typem zwracanym innym niż void są wymagane do zwrócenia wartości za pomocą słowa kluczowego `return`. Na przykład te dwie metody używają słowa kluczowego `return`, aby zwracać liczby całkowite:
 
 [!code-csharp[csProgGuideObjects#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#44)]
 
@@ -86,13 +85,13 @@ Aby użyć wartości zwracanej z metody, Metoda wywołująca może użyć wywoł
 
 Używając zmiennej lokalnej, w tym przypadku `result`, do przechowywania wartości jest opcjonalne. Może to pomóc w czytelności kodu lub może być konieczne, jeśli konieczne będzie przechowywanie pierwotnej wartości argumentu dla całego zakresu metody.
 
-Aby użyć wartości zwracanej przez odwołanie z metody, należy zadeklarować zmienną [lokalną ref](ref-returns.md#ref-locals) , jeśli zamierzasz zmodyfikować jej wartość. Na przykład jeśli metoda `Planet.GetEstimatedDistance` zwróci wartość <xref:System.Double> przez odwołanie, można zdefiniować ją jako zmienną lokalną ref z kodem podobnym do poniższego:
+Aby użyć wartości zwracanej przez odwołanie z metody, należy zadeklarować zmienną [lokalną ref](ref-returns.md#ref-locals) , jeśli zamierzasz zmodyfikować jej wartość. Na przykład jeśli metoda `Planet.GetEstimatedDistance` zwraca wartość <xref:System.Double> przez odwołanie, można zdefiniować ją jako zmienną lokalną ref z kodem podobnym do poniższego:
 
 ```csharp
 ref int distance = plant
 ```
 
-Zwracanie tablicy wielowymiarowej z metody, `M`, która modyfikuje zawartość tablicy, nie jest konieczne, jeśli wywoływana funkcja przekazała tablicę do `M`.  Wynikową tablicę można zwrócić z `M` dla dobrego stylu lub przepływu funkcjonalnego wartości, ale nie jest to konieczne, C# ponieważ przekazuje wszystkie typy odwołań według wartości, a wartość odwołania tablicy jest wskaźnikiem do tablicy. W metodzie `M` wszelkie zmiany zawartości tablicy są zauważalne przez dowolny kod, który ma odwołanie do tablicy, jak pokazano w następującym przykładzie:
+Zwracanie tablicy wielowymiarowej z metody, `M`, która modyfikuje zawartość tablicy, nie jest konieczna, jeśli wywoływana funkcja przekazała tablicę do `M`.  Wynikową tablicę można zwrócić z `M` dla dobrego stylu lub przepływu funkcjonalnego wartości, ale nie jest to konieczne, C# ponieważ przekazuje wszystkie typy odwołań według wartości, a wartość odwołania tablicy jest wskaźnikiem do tablicy. W metodzie `M`wszelkie zmiany zawartości tablicy są zauważalne przez dowolny kod, który ma odwołanie do tablicy, jak pokazano w następującym przykładzie:
 
 ```csharp
 static void Main(string[] args)
@@ -125,11 +124,11 @@ Jeśli oznaczesz metodę za pomocą modyfikatora [asynchronicznego](../../langua
 > [!NOTE]
 > Metoda asynchroniczna wraca do obiektu wywołującego, gdy napotka on pierwszy oczekujący obiekt, który nie został jeszcze ukończony lub otrzymuje koniec metody asynchronicznej, zależnie od tego, co się dzieje.
 
-Metoda asynchroniczna może mieć typ zwracany <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> lub void. Typ zwracany void jest używany głównie do definiowania programów obsługi zdarzeń, gdzie wymagany jest zwracany typ void. Metoda asynchroniczna zwracająca typ void nie może być oczekiwana, a obiekt wywołujący metodę void nie może przechwytywać wyjątków, które metoda zgłasza.
+Metoda asynchroniczna może mieć typ zwracany <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>lub void. Typ zwracany void jest używany głównie do definiowania programów obsługi zdarzeń, gdzie wymagany jest zwracany typ void. Metoda asynchroniczna zwracająca typ void nie może być oczekiwana, a obiekt wywołujący metodę void nie może przechwytywać wyjątków, które metoda zgłasza.
 
-W poniższym przykładzie `DelayAsync` to Metoda asynchroniczna z typem zwracanym <xref:System.Threading.Tasks.Task%601>. `DelayAsync` zawiera instrukcję `return`, która zwraca liczbę całkowitą. W związku z tym Deklaracja metody `DelayAsync` musi mieć typ zwracany `Task<int>`. Ponieważ zwracany typ jest `Task<int>`, Obliczanie wyrażenia `await` w `DoSomethingAsync` produkuje liczbę całkowitą, jak pokazano w poniższej instrukcji: `int result = await delayTask`.
+W poniższym przykładzie `DelayAsync` jest metodą asynchroniczną, która ma zwracany typ <xref:System.Threading.Tasks.Task%601>. `DelayAsync` zawiera instrukcję `return`, która zwraca liczbę całkowitą. W związku z tym Deklaracja metody `DelayAsync` musi mieć typ zwracany `Task<int>`. Ponieważ zwracany typ jest `Task<int>`, obliczenia `await` wyrażenia w `DoSomethingAsync` tworzą liczbę całkowitą, jak pokazano w poniższej instrukcji: `int result = await delayTask`.
 
-Metoda `startButton_Click` jest przykładem metody asynchronicznej, która ma zwracany typ void. Ponieważ `DoSomethingAsync` to Metoda asynchroniczna, zadanie wywołania do `DoSomethingAsync` musi być oczekiwane, jak pokazano w poniższej instrukcji: `await DoSomethingAsync();`. Metoda `startButton_Click` musi być zdefiniowana za pomocą modyfikatora `async`, ponieważ metoda ma wyrażenie `await`.
+Metoda `startButton_Click` jest przykładem metody asynchronicznej, która ma zwracany typ void. Ponieważ `DoSomethingAsync` jest metodą asynchroniczną, zadanie wywołania do `DoSomethingAsync` musi być oczekiwane, jak pokazano w poniższej instrukcji: `await DoSomethingAsync();`. Metoda `startButton_Click` musi być zdefiniowana za pomocą modyfikatora `async`, ponieważ metoda ma wyrażenie `await`.
 
 [!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]
 
@@ -139,7 +138,7 @@ Aby uzyskać więcej informacji na temat metod asynchronicznych, zobacz [program
 
 ## <a name="expression-body-definitions"></a>Definicje treści wyrażenia
 
-Często istnieją definicje metod, które po prostu zwracają bezpośrednio z wynikiem wyrażenia lub które mają pojedynczą instrukcję jako treść metody. Istnieje skrót do definiowania takich metod przy użyciu `=>`:
+Często istnieją definicje metod, które po prostu zwracają bezpośrednio z wynikiem wyrażenia lub które mają pojedynczą instrukcję jako treść metody. Istnieje skrót składni służący do definiowania takich metod przy użyciu `=>`:
 
 ```csharp
 public Point Move(int dx, int dy) => new Point(x + dx, y + dy);
@@ -150,7 +149,7 @@ public string Name => First + " " + Last;
 public Customer this[long id] => store.LookupCustomer(id);
 ```
 
-Jeśli metoda zwraca `void` lub jest metodą asynchroniczną, wówczas treść metody musi być wyrażeniem instrukcji (tak samo jak w przypadku wyrażeń lambda). W przypadku właściwości i indeksatorów muszą one być tylko do odczytu i nie można używać słowa kluczowego metody dostępu `get`.
+Jeśli metoda zwraca `void` lub jest metodą asynchroniczną, treść metody musi być wyrażeniem instrukcji (analogicznie jak w przypadku wyrażeń lambda). W przypadku właściwości i indeksatorów muszą one być tylko do odczytu i nie można używać słowa kluczowego metody dostępu `get`.
 
 ## <a name="iterators"></a>Iteratory
 
@@ -158,7 +157,7 @@ Iterator wykonuje niestandardową iterację w kolekcji, na przykład listę lub 
 
 Należy wywołać iterator z kodu klienta przy użyciu instrukcji [foreach](../../language-reference/keywords/foreach-in.md) .
 
-Zwracany typ iteratora może być <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> lub <xref:System.Collections.Generic.IEnumerator%601>.
+Zwracany typ iteratora może być <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>lub <xref:System.Collections.Generic.IEnumerator%601>.
 
 Aby uzyskać więcej informacji, zobacz [Iteratory](../concepts/iterators.md).
 

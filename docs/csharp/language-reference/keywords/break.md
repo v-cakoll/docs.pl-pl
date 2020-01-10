@@ -1,6 +1,5 @@
 ---
 title: instrukcja break- C# Reference
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - break
@@ -8,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 2628da73364cf94a52e2862d349243c100d4afaf
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: ef276fd9e8da0ea25695c5afdf06a300bbd2a123
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179936"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713750"
 ---
-# <a name="break-c-reference"></a>Break (C# odwołanie)
+# <a name="break-c-reference"></a>break (odwołanie w C#)
 
 Instrukcja `break` kończy najbliższą otaczającą pętlę lub instrukcję [Switch](./switch.md) , w której występuje. Kontrolka jest przenoszona do instrukcji, która następuje po instrukcji zakończony (jeśli istnieje).
 
@@ -27,11 +26,11 @@ W tym przykładzie Instrukcja warunkowa zawiera licznik, który powinien być li
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie pokazano sposób użycia `break` w instrukcji [Switch](./switch.md) .
+Ten przykład ilustruje użycie `break` w instrukcji [Switch](./switch.md) .
 
 [!code-csharp[csrefKeywordsJump#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#2)]
 
-W przypadku wprowadzenia `4` dane wyjściowe byłyby następujące:
+W przypadku wprowadzenia `4`dane wyjściowe byłyby następujące:
 
 ```console
 Enter your selection (1, 2, or 3): 4
@@ -46,17 +45,17 @@ W tym przykładzie instrukcja `break` jest używana do przerywania wewnętrznej 
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie instrukcja `break` jest używana tylko do rozbicia z bieżącej gałęzi podczas każdej iteracji pętli. Wystąpienia `break` nie wpływają na samą pętlę, która należy do zagnieżdżonej instrukcji [Switch](./switch.md) .
+W tym przykładzie instrukcja `break` jest używana tylko do rozbicia z bieżącej gałęzi podczas każdej iteracji pętli. W pętli nie ma wpływ wystąpienia `break` należące do zagnieżdżonej instrukcji [Switch](./switch.md) .
 
 [!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
 
-## <a name="c-language-specification"></a>C#Specyfikacja języka
+## <a name="c-language-specification"></a>specyfikacja języka C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwoła](../index.md)
-- [C#Przewodnik programowania](../../programming-guide/index.md)
-- [C#Służąc](./index.md)
-- [przełącznika](./switch.md)
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](./index.md)
+- [switch](./switch.md)

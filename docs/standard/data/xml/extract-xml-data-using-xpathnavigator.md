@@ -6,25 +6,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f789317defe3f4b44b37e6d94d37b974d003bcae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 627da3c8c45d007e677c4f92f4d5cd602d34ae84
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966996"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710859"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>Wyodrębnianie danych XML przy użyciu klasy XPathNavigator
-Istnieje kilka różnych sposobów reprezentowania dokumentu XML w strukturze Microsoft .NET. Obejmuje to korzystanie z <xref:System.String>, lub przy <xref:System.Xml.XmlReader>użyciu klas, <xref:System.Xml.XmlWriter> <xref:System.Xml.XmlDocument>, lub <xref:System.Xml.XPath.XPathDocument> . Aby ułatwić przechodzenie między różnymi reprezentacjami <xref:System.Xml.XPath.XPathNavigator> dokumentu XML, Klasa zawiera wiele metod i właściwości wyodrębniania XML <xref:System.String>jako <xref:System.Xml.XmlReader> obiekt lub <xref:System.Xml.XmlWriter> obiekt.  
+Istnieje kilka różnych sposobów reprezentowania dokumentu XML w strukturze Microsoft .NET. Obejmuje to użycie <xref:System.String>lub za pomocą klas <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument>i <xref:System.Xml.XPath.XPathDocument>. Aby ułatwić przechodzenie między różnymi reprezentacjami dokumentu XML, Klasa <xref:System.Xml.XPath.XPathNavigator> udostępnia wiele metod i właściwości wyodrębniania kodu XML jako <xref:System.String>, <xref:System.Xml.XmlReader> obiektu lub <xref:System.Xml.XmlWriter> obiektu.  
   
 ## <a name="convert-an-xpathnavigator-to-a-string"></a>Konwertuj Element XPathNavigator na ciąg  
- <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> Właściwość<xref:System.Xml.XPath.XPathNavigator> klasy służy do uzyskiwania adiustacji całego dokumentu XML lub tylko znaczników jednego węzła i jego węzłów podrzędnych.  
+ Właściwość <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> klasy <xref:System.Xml.XPath.XPathNavigator> służy do uzyskiwania adiustacji całego dokumentu XML lub tylko znaczników jednego węzła i jego węzłów podrzędnych.  
   
 > [!NOTE]
-> <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> Właściwość pobiera adiustację tylko węzłów podrzędnych węzła.  
+> Właściwość <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> pobiera adiustację tylko węzłów podrzędnych węzła.  
   
- Poniższy przykład kodu pokazuje <xref:System.Xml.XPath.XPathNavigator> <xref:System.String>, jak zapisać cały dokument XML zawarty w obiekcie jako, a także pojedynczy węzeł i jego węzły podrzędne.  
+ Poniższy przykład kodu pokazuje, jak zapisać cały dokument XML zawarty w obiekcie <xref:System.Xml.XPath.XPathNavigator> jako <xref:System.String>, a także pojedynczy węzeł i jego węzły podrzędne.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("input.xml")  
@@ -51,13 +49,13 @@ string root = navigator.OuterXml;
 ```  
   
 ## <a name="convert-an-xpathnavigator-to-an-xmlreader"></a>Konwertuj Element XPathNavigator na element XmlReader  
- Metoda jest używana do przesyłania strumieniowego całej zawartości dokumentu XML lub tylko jednego węzła i jego węzłów podrzędnych <xref:System.Xml.XmlReader> do obiektu. <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A>  
+ Metoda <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> służy do przesyłania strumieniowego całej zawartości dokumentu XML lub tylko jednego węzła i jego węzłów podrzędnych do obiektu <xref:System.Xml.XmlReader>.  
   
- Gdy obiekt zostanie utworzony z bieżącym węzłem i jego węzłami podrzędnymi <xref:System.Xml.XmlReader> , <xref:System.Xml.XmlReader.ReadState%2A> właściwość obiektu jest ustawiona na <xref:System.Xml.ReadState.Initial>. <xref:System.Xml.XmlReader> <xref:System.Xml.XmlReader> <xref:System.Xml.XPath.XPathNavigator>Gdy metoda <xref:System.Xml.XmlReader> <xref:System.Xml.XmlReader.Read%2A> obiektu jest wywoływana po raz pierwszy, jest przenoszona do bieżącego węzła. Nowy <xref:System.Xml.XmlReader> obiekt jest nadal odczytywany, dopóki nie zostanie osiągnięty koniec drzewa XML. W tym <xref:System.Xml.XmlReader.Read%2A> momencie Metoda zwraca <xref:System.Xml.XmlReader> `false` i <xref:System.Xml.XmlReader.ReadState%2A> właściwość obiektu jest ustawiona na <xref:System.Xml.ReadState.EndOfFile>.  
+ Gdy obiekt <xref:System.Xml.XmlReader> jest tworzony z bieżącym węzłem i jego węzłami podrzędnymi, właściwość <xref:System.Xml.XmlReader.ReadState%2A> obiektu <xref:System.Xml.XmlReader> zostanie ustawiona na <xref:System.Xml.ReadState.Initial>. Gdy metoda <xref:System.Xml.XmlReader.Read%2A> <xref:System.Xml.XmlReader> obiektu jest wywoływana po raz pierwszy, <xref:System.Xml.XmlReader> jest przenoszona do bieżącego węzła <xref:System.Xml.XPath.XPathNavigator>. Nowy obiekt <xref:System.Xml.XmlReader> będzie nadal odczytywany, dopóki nie zostanie osiągnięty koniec drzewa XML. W tym momencie Metoda <xref:System.Xml.XmlReader.Read%2A> zwraca `false`, a właściwość <xref:System.Xml.XmlReader.ReadState%2A> obiektu <xref:System.Xml.XmlReader> jest ustawiona na <xref:System.Xml.ReadState.EndOfFile>.  
   
- Położenie obiektu jest niezmienione przez utworzenie lub przemieszczenie <xref:System.Xml.XmlReader> obiektu. <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> Metoda jest prawidłowa tylko wtedy, gdy jest umieszczona w węźle elementu lub głównego.  
+ Położenie obiektu <xref:System.Xml.XPath.XPathNavigator> jest niezmienione przez utworzenie lub przemieszczenie <xref:System.Xml.XmlReader> obiektu. Metoda <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> jest prawidłowa tylko wtedy, gdy jest umieszczona w węźle elementu lub głównego.  
   
- Poniższy przykład pokazuje, jak uzyskać <xref:System.Xml.XmlReader> obiekt zawierający cały dokument XML <xref:System.Xml.XPath.XPathDocument> w obiekcie, a także pojedynczy węzeł i jego węzły podrzędne.  
+ Poniższy przykład pokazuje, jak uzyskać <xref:System.Xml.XmlReader> obiekt zawierający cały dokument XML w obiekcie <xref:System.Xml.XPath.XPathDocument>, a także pojedynczy węzeł i jego węzły podrzędne.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -118,11 +116,11 @@ book.Close();
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ## <a name="converting-an-xpathnavigator-to-an-xmlwriter"></a>Konwertowanie elementu XPathNavigator na element XmlWriter  
- Metoda jest używana do przesyłania strumieniowego całej zawartości dokumentu XML lub tylko jednego węzła i jego węzłów podrzędnych <xref:System.Xml.XmlWriter> do obiektu. <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A>  
+ Metoda <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A> służy do przesyłania strumieniowego całej zawartości dokumentu XML lub tylko jednego węzła i jego węzłów podrzędnych do obiektu <xref:System.Xml.XmlWriter>.  
   
- Położenie obiektu jest niezmienione przez utworzenie <xref:System.Xml.XmlWriter> obiektu. <xref:System.Xml.XPath.XPathNavigator>  
+ Położenie obiektu <xref:System.Xml.XPath.XPathNavigator> jest niezmienione przez utworzenie obiektu <xref:System.Xml.XmlWriter>.  
   
- Poniższy przykład pokazuje, jak uzyskać <xref:System.Xml.XmlWriter> obiekt zawierający cały dokument XML <xref:System.Xml.XPath.XPathDocument> w obiekcie, a także pojedynczy węzeł i jego węzły podrzędne.  
+ Poniższy przykład pokazuje, jak uzyskać <xref:System.Xml.XmlWriter> obiekt zawierający cały dokument XML w obiekcie <xref:System.Xml.XPath.XPathDocument>, a także pojedynczy węzeł i jego węzły podrzędne.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -160,7 +158,7 @@ navigator.WriteSubtree(book);
 book.Close();  
 ```  
   
- Przykład pobiera `books.xml` plik znaleziony wcześniej w tym temacie jako dane wejściowe.  
+ Przykład pobiera plik `books.xml` znajdujący się wcześniej w tym temacie jako dane wejściowe.  
   
 ## <a name="see-also"></a>Zobacz także
 

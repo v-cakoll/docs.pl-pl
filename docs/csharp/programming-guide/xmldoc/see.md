@@ -1,6 +1,5 @@
 ---
-title: <see>— C# Przewodnik programowania
-ms.custom: seodec18
+title: <see> — C# Przewodnik programowania
 ms.date: 07/20/2015
 f1_keywords:
 - <see>
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: e292e116ac468246bfe81e1eb5d5c5819a506701
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 995b67362bccbc3527f44e5a1d6b659f330e3afd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587688"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711717"
 ---
 # <a name="see-c-programming-guide"></a>\<Zobacz > (C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
@@ -26,15 +25,15 @@ ms.locfileid: "69587688"
 ```  
   
 ## <a name="parameters"></a>Parametry  
- cref = " `member`"  
+ cref = "`member`"  
  Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i przekazuje `member` do nazwy elementu w wyjściowym kodzie XML. Umieść *składową* w podwójnym cudzysłowie ("").  
   
 ## <a name="remarks"></a>Uwagi  
- Tag \<Zobacz > umożliwia określenie łącza z poziomu tekstu. [ Użyj\<seealso — >](./seealso.md) , aby wskazać, że tekst powinien być umieszczony w sekcji Zobacz też. Użyj [atrybutu cref](./cref-attribute.md) , aby utworzyć wewnętrzne hiperłącza do stron dokumentacji dla elementów kodu.  
+ \<Zobacz > tag pozwala określić łącze z poziomu tekstu. Użyj [\<seealso — >](./seealso.md) , aby wskazać, że tekst powinien być umieszczony w sekcji Zobacz też. Użyj [atrybutu cref](./cref-attribute.md) , aby utworzyć wewnętrzne hiperłącza do stron dokumentacji dla elementów kodu.  
   
  Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
- W poniższym przykładzie pokazano \<tag > w sekcji podsumowania.  
+ W poniższym przykładzie pokazano \<Zobacz tag > w sekcji podsumowania.  
   
  [!code-csharp[csProgGuideDocComments#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#12)]  
   

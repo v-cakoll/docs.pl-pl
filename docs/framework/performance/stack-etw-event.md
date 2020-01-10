@@ -5,14 +5,12 @@ helpviewer_keywords:
 - stack event [.NET Framework]
 - ETW, stack event (CLR)
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5dc23f5105b589d5b74c9ea6b7f40b84c2b04e6a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f3014a04ba7cacbe37b6706e2919ffd7de19aa65
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046159"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715909"
 ---
 # <a name="stack-etw-event"></a>Zdarzenie ETW stosu
 Zdarzenia stosu należy używać w połączeniu z innymi zdarzeniami w celu generowania śladów stosu po podniesieniu zdarzenia. Jest on rejestrowany po włączeniu dostawcy środowiska uruchomieniowego. Jest to zdarzenie o dużej częstotliwości, ponieważ jest zgłaszane przy każdym wywołaniu innego zdarzenia środowiska uruchomieniowego. Z tego powodu zaleca się użycie tego zdarzenia z zachowaniem ostrożności.  
@@ -21,7 +19,7 @@ Zdarzenia stosu należy używać w połączeniu z innymi zdarzeniami w celu gene
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`StackKeyword`0x40000000|LogAlways (0)|  
+|`StackKeyword` (0x40000000)|LogAlways (0)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   

@@ -1,22 +1,21 @@
 ---
 title: '#Jeśli dyrektywa preprocesora — C# odwołanie'
-ms.custom: seodec18
 ms.date: 10/27/2019
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: e467a890e971e6c6f2c681ee503d7c7ead19a1e4
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 656b8d9eb2bda2d01f001748c992958e95387744
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552444"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712510"
 ---
 # <a name="if-c-reference"></a>#if (odwołanie w C#)
 
-Gdy C# kompilator napotyka dyrektywę`#if`, po której nastąpi w końcu dyrektywą [#endif](preprocessor-endif.md) , kompiluje kod między dyrektywami tylko wtedy, gdy określony symbol jest zdefiniowany. W przeciwieństwie do C++języka C i nie można przypisać wartości liczbowej do symbolu. Instrukcja #if w C# jest wartością logiczną i tylko testuje, czy symbol został zdefiniowany. Na przykład:
+Gdy C# kompilator napotyka dyrektywę `#if`, po której nastąpi w końcu dyrektywą [#endif](preprocessor-endif.md) , kompiluje kod między dyrektywami tylko wtedy, gdy określony symbol jest zdefiniowany. W przeciwieństwie do C++języka C i nie można przypisać wartości liczbowej do symbolu. Instrukcja #if w C# jest wartością logiczną i tylko testuje, czy symbol został zdefiniowany. Na przykład:
 
 ```csharp
 #if DEBUG
@@ -34,7 +33,7 @@ Dyrektywa warunkowa rozpoczynająca się od dyrektywy `#if` musi być jawnie zak
 
 `#define` umożliwia zdefiniowanie symbolu. Używając symbolu jako wyrażenia przesłanego do dyrektywy `#if`, wyrażenie daje w wyniku `true`.
 
-Można również zdefiniować symbol z opcją [-define](../compiler-options/define-compiler-option.md) kompilatora. Możesz oddefiniować symbol z [#undef](preprocessor-undef.md).
+Można również zdefiniować symbol z opcją [-define](../compiler-options/define-compiler-option.md) kompilatora. Aby anulować definicję symbolu, użyj dyrektywy [#undef](preprocessor-undef.md).
 
 Symbol zdefiniowany za pomocą `-define` lub z `#define` nie powoduje konfliktu ze zmienną o tej samej nazwie. Oznacza to, że nazwa zmiennej nie powinna być przenoszona do dyrektywy preprocesora, a symbol może być oceniany tylko przez dyrektywę preprocesora.
 
@@ -92,7 +91,7 @@ public class MyClass
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Dyrektywy preprocesora C#](index.md)
 - [Instrukcje: Kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

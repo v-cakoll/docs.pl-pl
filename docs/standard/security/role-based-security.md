@@ -11,32 +11,30 @@ helpviewer_keywords:
 - authentication [.NET Framework], principals
 - role-based security, principals
 ms.assetid: 578cc32b-5654-4d8b-9d8c-ebcbc5c75390
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 596165bfac9c65898448714a4477b7f045bd87d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1dfb1f6246e86d6f565c9338fb09f34a1608e9b0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018583"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705928"
 ---
 # <a name="role-based-security"></a>Zabezpieczenia oparte na rolach
-Role są często używane w aplikacjach finansowe lub biznesowych do wymuszania zasad. Na przykład aplikacja może nałożyć limitów rozmiaru transakcji przetwarzanych w zależności od tego, czy użytkownika zgłaszającego żądanie jest członkiem określonej roli. Urzędników może mieć upoważnienie do przetwarzania transakcji, których wartość jest mniejsza niż określony próg, nadzorców może mieć wyższy limit i wiceprzewodniczący może być nadal wyższy limit (lub brak limitu w ogóle). Zabezpieczenia oparte na roli można także jeśli aplikacja wymaga wielu zatwierdzeń do zakończenia akcji. Takiej sytuacji może być systemu zakupów, w którym każdy pracownik może wygenerować żądanie zakupu, ale tylko zakupu agenta można przekształcić to żądanie w zamówienia zakupu, które mogą być wysyłane do dostawcy.  
+Role są często używane w aplikacjach finansowych lub firmowych w celu wymuszenia zasad. Na przykład aplikacja może nakładać limity rozmiaru przetwarzanej transakcji w zależności od tego, czy użytkownik wysyłający żądanie jest członkiem określonej roli. Urzędy mogą mieć autoryzację, aby przetwarzać transakcje, które są mniejsze od określonego progu, kierownicy mogą mieć wyższy limit, a wiceprezesowie mogą mieć jeszcze wyższy limit (lub bez ograniczeń). Zabezpieczeń opartych na rolach można także użyć, gdy aplikacja wymaga wielu zatwierdzeń do ukończenia akcji. Taki przypadek może być systemem zakupów, w którym każdy pracownik może wygenerować żądanie zakupu, ale tylko agent zakupów może przekonwertować to żądanie na zamówienie zakupu, które może zostać wysłane do dostawcy.  
   
- Zabezpieczenia oparte na roli platformy .NET framework obsługuje autoryzacji, wprowadzając informacje podmiotu zabezpieczeń, które są konstruowane na podstawie skojarzonego tożsamości, dostępne dla bieżącego wątku. Tożsamość (i jednostki, które warto zdefiniować) może być to oparte na konta Windows, lub być tożsamość niestandardowa niepowiązane z kontem Windows. Aplikacje programu .NET framework ułatwia oparte na tożsamości podmiotu zabezpieczeń, członkostwo w roli lub obu tych decyzji dotyczących autoryzacji. Rola to nazwany zestaw podmiotów zabezpieczeń, które mają takie same uprawnienia w odniesieniu do zabezpieczeń (na przykład dla kasjerów lub Menedżera). Podmiot zabezpieczeń może należeć do jednej lub większej liczby ról. W związku z tym aplikacje mogą używać członkostwo w rolach, aby ustalić, czy podmiot zabezpieczeń jest autoryzowany do wykonania żądanej akcji.  
+ .NET Framework zabezpieczenia oparte na rolach obsługują autoryzację, tworząc informacje o podmiotu zabezpieczeń, który jest zbudowany ze skojarzonej tożsamości, dostępnej dla bieżącego wątku. Tożsamość (oraz podmiot zabezpieczeń, które ułatwiają zdefiniowanie) mogą być oparte na koncie systemu Windows lub być niestandardową tożsamością niepowiązaną z kontem systemu Windows. Aplikacje .NET Framework mogą podejmować decyzje dotyczące autoryzacji na podstawie tożsamości podmiotu zabezpieczeń lub członkostwa w rolach lub obu tych metod. Rola to nazwany zestaw podmiotów zabezpieczeń, który ma takie same uprawnienia, w odniesieniu do zabezpieczeń (takich jak Kasjer lub kierownik). Podmiot zabezpieczeń może być członkiem jednej lub większej liczby ról. W związku z tym aplikacje mogą używać przynależności do roli, aby określić, czy podmiot zabezpieczeń jest autoryzowany do wykonywania żądanych akcji.  
   
- Aby zapewnić łatwość użycia i spójność zabezpieczenia dostępu kodu, zabezpieczenia oparte na roli platformy .NET Framework zapewnia <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType> obiekty, które umożliwiają środowiska uruchomieniowego języka wspólnego przeprowadzić autoryzację w sposób podobny do kodu dostępu sprawdzanie zabezpieczeń. <xref:System.Security.Permissions.PrincipalPermission> Klasa reprezentuje tożsamość lub roli, czy podmiot zabezpieczeń musi odpowiadać i jest zgodny z obydwu kontroli zabezpieczeń deklaratywnego i imperatywnego. Można także bezpośredni dostęp do informacji o tożsamości podmiotu zabezpieczeń i wykonywać roli i tożsamości sprawdza, czy w kodzie, gdy potrzebne.  
+ Aby zapewnić łatwość użycia i spójność z zabezpieczeniami dostępu kodu, .NET Framework zabezpieczenia oparte na rolach zapewniają <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType> obiektów, które umożliwiają środowisko uruchomieniowe języka wspólnego wykonywanie autoryzacji w sposób podobny do sprawdzania zabezpieczeń dostępu kodu. Klasa <xref:System.Security.Permissions.PrincipalPermission> reprezentuje tożsamość lub rolę, która musi być zgodna z podmiotem zabezpieczeń i jest zgodna z kontrolami bezpieczeństwa deklaracyjnego i bezwzględnego. Dostęp do informacji o tożsamości podmiotu zabezpieczeń można także uzyskać bezpośrednio, a w razie konieczności sprawdzać rolę i tożsamość w kodzie.  
   
- .NET Framework zapewnia obsługę opartej na rolach zabezpieczeń, który jest elastyczny i rozszerzalny, aby zaspokoić potrzeby szerokiego spektrum aplikacji. Można na potrzeby współdziałania z istniejącej infrastruktury uwierzytelniania, takich jak usług COM + 1.0, lub utworzyć niestandardowy system uwierzytelniania. Zabezpieczenia oparte na rolach jest przeznaczone szczególnie do użycia w aplikacji sieci Web platformy ASP.NET, które są przetwarzane przede wszystkim na serwerze. Zabezpieczenia oparte na roli platformy .NET Framework można jednak po stronie klienta lub serwera.  
+ .NET Framework zapewnia obsługę zabezpieczeń opartą na rolach, która jest elastyczna i rozszerzalna, aby zaspokoić potrzeby szerokiego spektrum aplikacji. Możesz zdecydować się na współdziałanie z istniejącymi infrastrukturami uwierzytelniania, takimi jak usługi COM+ 1,0, lub utworzyć niestandardowy system uwierzytelniania. Zabezpieczenia oparte na rolach są szczególnie odpowiednie do użycia w aplikacjach sieci Web ASP.NET, które są przetwarzane głównie na serwerze programu. Jednak zabezpieczenia oparte na rolach .NET Framework mogą być używane zarówno na kliencie, jak i na serwerze.  
   
- Przed przeczytaniem tej części, upewnij się, że rozumiesz materiał znajdujące się w [podstawowe pojęcia dotyczące zabezpieczeń](../../../docs/standard/security/key-security-concepts.md).  
+ Przed przeczytaniem tej sekcji należy zapoznać się z materiałami przedstawionymi w [najważniejszych pojęciach dotyczących zabezpieczeń](../../../docs/standard/security/key-security-concepts.md).  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Obiekty główne i obiekty tożsamości](../../../docs/standard/security/principal-and-identity-objects.md)|Wyjaśnia, jak skonfigurować i zarządzać nimi, Windows i ogólny tożsamości i nazwy główne.|  
-|[Główne pojęcia dotyczące zabezpieczeń](../../../docs/standard/security/key-security-concepts.md)|Wprowadzono podstawowe pojęcia, które należy zrozumieć przed rozpoczęciem korzystania z zabezpieczeń .NET Framework.|  
+|[Obiekty główne i obiekty tożsamości](../../../docs/standard/security/principal-and-identity-objects.md)|W tym artykule wyjaśniono, jak skonfigurować zarówno system Windows, jak i tożsamości ogólne oraz podmioty zabezpieczeń.|  
+|[Główne pojęcia dotyczące zabezpieczeń](../../../docs/standard/security/key-security-concepts.md)|Wprowadza podstawowe pojęcia, które należy zrozumieć przed użyciem .NET Framework zabezpieczenia.|  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType>

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: e562c0f5ec01380c792b4dc064554171cfb007e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: deac87ca4690990a4d00f63d0ea9b843c3f9a9c4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74339960"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344476"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Porady: zmienianie wartości argumentu procedury (Visual Basic)
 Po wywołaniu procedury każdy pożądany argument odpowiada jednemu z parametrów zdefiniowanych w procedurze. W niektórych przypadkach kod procedury może zmienić wartość odpowiadającą argumentowi w kodzie wywołującym. W innych przypadkach procedura może zmienić tylko jego lokalną kopię argumentu.  
@@ -48,7 +48,7 @@ Po wywołaniu procedury każdy pożądany argument odpowiada jednemu z parametr�
   
 1. W deklaracji procedury Określ [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) dla parametru odpowiadającego argumentowi.  
   
-     —lub—  
+     lub  
   
      W kodzie wywołującym Umieść argument w nawiasach na liście argumentów. Wymusza to Visual Basic przekazanie argumentu według wartości, nawet jeśli odpowiedni parametr określa `ByRef`.  
   
@@ -69,12 +69,12 @@ Po wywołaniu procedury każdy pożądany argument odpowiada jednemu z parametr�
   
  Można zapobiec modyfikowaniu przez procedurę samej zmiennej w kodzie wywołującym. Zobacz [jak: Ochrona argumentu procedury przed zmianami wartości](./how-to-protect-a-procedure-argument-against-value-changes.md).  
   
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
+## <a name="compile-the-code"></a>Skompilować kod  
  Gdy przekazujesz zmienną według odwołania, musisz użyć słowa kluczowego `ByRef`, aby określić ten mechanizm.  
   
  Wartością domyślną w Visual Basic jest przekazanie argumentów według wartości. Jednak dobrym sposobem programowania jest dołączenie albo słowa kluczowego [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) z każdym zadeklarowanym parametrem. Ułatwia to odczytywanie kodu.  
   
-## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
+## <a name="net-framework-security"></a>Zabezpieczenia programu .NET Framework  
  Zawsze istnieje potencjalne ryzyko w umożliwieniu procedury zmiany wartości bazowej argumentu w wywoływanym kodzie. Upewnij się, że ta wartość jest zmieniana, i przygotuj się do sprawdzenia jej pod kątem poprawności przed jej użyciem.  
   
 ## <a name="see-also"></a>Zobacz także

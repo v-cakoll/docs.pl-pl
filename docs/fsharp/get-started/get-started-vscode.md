@@ -2,12 +2,12 @@
 title: Rozpoczynanie pracy z językiem F# w programie Visual Studio Code
 description: Dowiedz się, F# jak używać programu z Visual Studio Code i pakietem wtyczek Ionide.
 ms.date: 12/23/2018
-ms.openlocfilehash: 2802438144eb2352c3abeeccfc126b16c6a87d8f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204912"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559667"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Rozpoczynanie pracy z językiem F# w programie Visual Studio Code
 
@@ -20,7 +20,7 @@ Aby rozpocząć, upewnij się, że [ F# poprawnie zainstalowano wtyczkę Ionide]
 Aby utworzyć nowy F# projekt, Otwórz wiersz polecenia i Utwórz nowy projekt z interfejs wiersza polecenia platformy .NET Core:
 
 ```dotnetcli
-dotnet new console -lang F# -o FirstIonideProject
+dotnet new console -lang "F#" -o FirstIonideProject
 ```
 
 Po jego zakończeniu Zmień katalog na projekt i otwórz Visual Studio Code:
@@ -74,7 +74,7 @@ Powinien zostać wyświetlony następujący wynik:
 val it : string = "ananabay"
 ```
 
-Teraz Wypróbujmy samogłosy jako pierwszą literę. Wprowadź następujące elementy:
+Teraz Wypróbujmy samogłosy jako pierwszą literę. Wprowadź następujące dane:
 
 ```fsharp
 toPigLatin "apple";;
@@ -133,7 +133,7 @@ Aby rozpocząć, Otwórz plik *program. FS* , który został utworzony wcześnie
 
 Następnie utwórz nową [`module`](../language-reference/modules.md) o nazwie `PigLatin` i skopiuj wcześniej utworzoną funkcję `toPigLatin` w taki sposób, aby:
 
-[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
+[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L3-L14)]
 
 Ten moduł powinien znajdować się powyżej funkcji `main` i poniżej deklaracji `open System`. Porządek deklaracji w F#, dlatego należy zdefiniować funkcję przed wywołaniem jej w pliku.
 
@@ -151,7 +151,7 @@ let main argv =
 
 Teraz możesz uruchomić aplikację konsolową z poziomu wiersza polecenia:
 
-```console
+```dotnetcli
 dotnet run apple banana
 ```
 
@@ -164,7 +164,7 @@ Poniżej przedstawiono kilka sposobów rozwiązywania niektórych problemów, kt
 1. Aby uzyskać funkcje edytowania kodu Ionide, należy zapisać F# pliki na dysku i w folderze, który jest otwarty w obszarze roboczym Visual Studio Code.
 1. Jeśli wprowadzono zmiany w systemie lub zainstalowano wymagania wstępne Ionide z Visual Studio Code Otwórz, uruchom ponownie Visual Studio Code.
 1. Jeśli w katalogach projektu znajdują się nieprawidłowe znaki, Ionide może nie zadziałał.  W takim przypadku Zmień nazwy katalogów projektu.
-1. Jeśli żaden z poleceń Ionide nie działa, sprawdź powiązania klawiszy [Visual Studio Code](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts) , aby sprawdzić, czy są one zastępowane przypadkowo.
+1. Jeśli żaden z poleceń Ionide nie działa, sprawdź [powiązania klucza Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization) , aby sprawdzić, czy są one zastępowane.
 1. Jeśli Ionide jest przerwany na komputerze, a żaden z powyższych elementów nie rozwiązał problemu, spróbuj usunąć katalog `ionide-fsharp` na maszynie i ponownie zainstalować pakiet wtyczek.
 1. Jeśli nie można załadować projektu ( F# Eksplorator rozwiązań będzie on widoczny), kliknij prawym przyciskiem myszy projekt i kliknij pozycję **Wyświetl szczegóły** , aby uzyskać więcej informacji diagnostycznych.
 
@@ -172,6 +172,6 @@ Ionide to projekt typu "open source" skompilowany i obsługiwany przez członkó
 
 Możesz również poszukać dalszej pomocy od deweloperów Ionide i F# społeczności w [kanale warunkom Ionide](https://gitter.im/ionide/ionide-project).
 
-## <a name="next-steps"></a>Kolejne kroki
+## <a name="next-steps"></a>Następne kroki
 
 Aby dowiedzieć się F# więcej na temat funkcji języka, zobacz [Przewodnik F# ](../tour.md)po stronie.

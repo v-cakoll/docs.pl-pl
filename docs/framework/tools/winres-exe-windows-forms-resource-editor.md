@@ -11,14 +11,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: df7ce0795daabdf34f46e20460bef23e7c486467
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043905"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715709"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres. exe (Edytor lokalizacji zasobów systemu Windows)
 
@@ -65,13 +63,13 @@ Jeśli Winres.exe nie może rozpoznać typu formantu, utworzy formant zastępczy
 
 Ogólnie rzecz biorąc, przed rozpoczęciem lokalizowania formularzy Windows Forms aplikacji należy zadecydować, czy jako narzędzia do lokalizacji używać programu Visual Studio czy Winres.exe. Zgodność wersji opisana poniżej może uniemożliwić przejście od jednego narzędzia do drugiego.
 
-Zaletą programu Visual Studio jest to, że można za jego pomocą tworzyć i lokalizować aplikacje. Aby zlokalizować formularz, po zakończeniu opracowywania ustaw wartość <xref:System.ComponentModel.LocalizableAttribute> formularza ( **lokalizowalną** właściwość w edytorze **Właściwości** ) `true` i zmień jej właściwość **Language** na pożądaną kulturę docelową. Następnie należy przeprowadzić edycję ciągów i dostosować położenie i rozmiar formantów, aby pomieściły ciągi dla kultury docelowej. Podczas zapisywania zlokalizowanego pliku resx Visual Studio zapisuje w pliku tylko lokalizowalne właściwości (właściwości zmienione w docelowej kulturze). Program Visual Studio automatycznie tworzy zestaw satelicki dla zlokalizowanego pliku resx w lokalizacji odpowiedniego katalogu.
+Zaletą programu Visual Studio jest to, że można za jego pomocą tworzyć i lokalizować aplikacje. Aby zlokalizować formularz, po zakończeniu opracowywania Ustaw <xref:System.ComponentModel.LocalizableAttribute> formularza ( **lokalizowalna** właściwość w edytorze **Właściwości** ), aby `true` i zmienić jego właściwość **Language** na pożądaną kulturę docelową. Następnie należy przeprowadzić edycję ciągów i dostosować położenie i rozmiar formantów, aby pomieściły ciągi dla kultury docelowej. Podczas zapisywania zlokalizowanego pliku resx Visual Studio zapisuje w pliku tylko lokalizowalne właściwości (właściwości zmienione w docelowej kulturze). Program Visual Studio automatycznie tworzy zestaw satelicki dla zlokalizowanego pliku resx w lokalizacji odpowiedniego katalogu.
 
 Chociaż program Visual Studio udostępnia zintegrowane środowisko deweloperskie i lokalizacyjne, program Winres. exe jest zalecanym narzędziem używanym w przypadku, gdy lokalizacja jest wykonywana przez lokalizatory innych firm. Ponieważ Winres.exe jest tylko narzędziem do lokalizacji, umożliwia jaśniejsze rozdzielenie kodu aplikacji od formularzy, które mają zostać zlokalizowane, co jest praktyczniejsze w przypadku zarządzania dużymi projektami.
 
 ## <a name="using-winresexe"></a>Korzystanie z Winres.exe
 
-Aby zlokalizować przy użyciu programu Winres. exe, należy najpierw opracować aplikację przy użyciu projektanta wizualnego, takiego jak **Projektant formularzy systemu Windows** w programie Visual Studio. <xref:System.ComponentModel.LocalizableAttribute> Po zakończeniu opracowywania ustaw wartość w formularzu ( **lokalizowalna** właściwość w edytorze **Właściwości** ) `true`, a następnie przejdź do pliku resx dla domyślnej kultury do lokalizatora innej firmy. Ten plik resx zawiera dodatkowe informacje, których Winres.exe używa do odtworzenia wersji oryginalnego formularza z czasu projektowania.
+Aby zlokalizować przy użyciu programu Winres. exe, należy najpierw opracować aplikację przy użyciu projektanta wizualnego, takiego jak **Projektant formularzy systemu Windows** w programie Visual Studio. Po zakończeniu opracowywania Ustaw <xref:System.ComponentModel.LocalizableAttribute> formularza ( **lokalizowalna** właściwość w edytorze **właściwości** ) na `true`, a następnie przejdź do pliku resx dla domyślnej kultury do lokalizatora innej firmy. Ten plik resx zawiera dodatkowe informacje, których Winres.exe używa do odtworzenia wersji oryginalnego formularza z czasu projektowania.
 
 > [!NOTE]
 > Programu Winres.exe nie można używać do edytowania domyślnego pliku zasobów. Winres.exe interpretuje wszystkie zmienione właściwości jako właściwości zlokalizowane i zapisuje je do pliku zasobów docelowej kultury.
@@ -90,7 +88,7 @@ Ostateczna wersja pliku zasobów kultury może zostać użyta do utworzenia zlok
 
 Należy użyć wersji środowiska Winres. exe wydanej z używanym .NET Framework. W poniższej tabeli wymieniono zgodne wersje:
 
-|Visual Studio|.NET Framework|Winres.exe|
+|{1&gt;Visual Studio&lt;1}|.NET Framework|Winres.exe|
 |-------------------|--------------------|----------------|
 |Visual Studio .NET 2002|1.0|1.0|
 |Visual Studio .NET 2003|1.1|1.1|
@@ -100,7 +98,7 @@ Należy użyć wersji środowiska Winres. exe wydanej z używanym .NET Framework
 |Visual Studio 2017|4.6|4.6|
 
 > [!NOTE]
-> Chociaż tryb VSFM ma tę zaletę, że jest zgodny z programem Visual Studio, ponieważ są w nim zapisywane tylko zmienione wartości, program Winres.exe wymaga, aby w tym samym katalogu znajdował się pierwotny plik zasobów. Na przykład Edycja `TestApp.de-DE.resources`, niemiecki plik zasobów w Niemczech, wymaga obecności domyślnego pliku zasobów, `TestApp.resx`i ewentualnie pliku zasobów neutralnych dla kultury, `TestApp.de.resources`.
+> Chociaż tryb VSFM ma tę zaletę, że jest zgodny z programem Visual Studio, ponieważ są w nim zapisywane tylko zmienione wartości, program Winres.exe wymaga, aby w tym samym katalogu znajdował się pierwotny plik zasobów. Na przykład edytowanie `TestApp.de-DE.resources`, niemieckiego w Niemczech pliku zasobów, wymaga obecności domyślnego pliku zasobów, `TestApp.resx`i prawdopodobnie pliku zasobów neutralnych kulturowo, `TestApp.de.resources`.
 
 ## <a name="examples"></a>Przykłady
 
@@ -110,17 +108,17 @@ Należy użyć wersji środowiska Winres. exe wydanej z używanym .NET Framework
 
 2. Aby otworzyć domyślne zasoby formularza do zlokalizowania, kliknij polecenie **Otwórz** w menu **plik** i przejdź do pliku, aby go otworzyć.
 
-     —lub—
+     lub
 
      Określ plik do otwarcia w wierszu polecenia podczas uruchamiania programu Winres.exe.
 
-     Następujące polecenie uruchamia środowiska Winres. exe i ładuje formularz skojarzony z programem `TestApp.resx` w projektancie formularzy.
+     Następujące polecenie uruchamia program Winres. exe i ładuje formularz skojarzony z `TestApp.resx` w projektancie formularzy.
 
     ```console
     winres TestApp.resx
     ```
 
-     Następujące polecenie uruchamia środowiska Winres. exe i ładuje formularz skojarzony z programem `TestApp.resources` w projektancie formularzy.
+     Następujące polecenie uruchamia program Winres. exe i ładuje formularz skojarzony z `TestApp.resources` w projektancie formularzy.
 
     ```console
     winres TestApp.resources
@@ -129,13 +127,13 @@ Należy użyć wersji środowiska Winres. exe wydanej z używanym .NET Framework
     > [!NOTE]
     > Jeśli formularz, którego zasoby są edytowane, jest odziedziczonym formularzem, zarówno zestaw zawierający formularz, po którym został odziedziczony edytowany formularz, jak i zestaw zawierający dziedziczący formularz muszą być albo zarejestrowane w globalnej pamięci podręcznej zestawów (GAC) lub znajdować się w tym samym katalogu co plik WinRes.exe. Aby uzyskać więcej informacji na temat instalowania składników .NET Framework w pamięci GAC, zobacz [Global Assembly Cache](../app-domains/gac.md).
 
-3. Wybierz kontrolki w formularzu i zmień ich <xref:System.Windows.Forms.Control.Text%2A> właściwości i inne, aby odzwierciedlały Lokalizowaną kulturę i jej język. Przenoszenie lub zmienianie rozmiaru formantów w celu dostosowania zlokalizowanego tekstu.
+3. Wybierz kontrolki w formularzu i zmień ich <xref:System.Windows.Forms.Control.Text%2A> i inne właściwości, aby odzwierciedlały zlokalizowaną kulturę i jej język. Przenoszenie lub zmienianie rozmiaru formantów w celu dostosowania zlokalizowanego tekstu.
 
 4. Aby zapisać zlokalizowaną wersję pliku resx lub Resources, kliknij ikonę **Zapisz** lub to samo polecenie w menu **plik** . Narzędzie wyświetli okno **Wybierz kulturę** .
 
 5. Wybierz odpowiednią kulturę i tryb plików, a następnie kliknij przycisk **OK**.
 
-   Narzędzie zapisuje plik przy użyciu konwencji nazewnictwa, która jest oczekiwana w czasie wykonywania dla zlokalizowanych plików zasobów. Na przykład w przypadku zlokalizowania `TestApp.resources` dla języka niemieckiego w Niemczech, narzędzie zapisuje plik jako. `TestApp.de-DE.resources` W przypadku zlokalizowania `TestApp.resx` dla języka niemieckiego w Niemczech narzędzie zapisuje plik jako. `TestApp.de-DE.resx` Aby uzyskać więcej informacji na temat konwencji nazewnictwa zasobów, zobacz [pakowanie i wdrażanie zasobów](../resources/packaging-and-deploying-resources-in-desktop-apps.md). Aby zapoznać się z listą wstępnie zdefiniowanych nazw kultur używanych w czasie wykonywania, zobacz <xref:System.Globalization.CultureInfo> Klasa.
+   Narzędzie zapisuje plik przy użyciu konwencji nazewnictwa, która jest oczekiwana w czasie wykonywania dla zlokalizowanych plików zasobów. Na przykład w przypadku zlokalizowania `TestApp.resources` dla języka niemieckiego w Niemczech narzędzie zapisuje plik jako `TestApp.de-DE.resources`. W przypadku zlokalizowania `TestApp.resx` dla języka niemieckiego w Niemczech narzędzie zapisuje plik jako `TestApp.de-DE.resx`. Aby uzyskać więcej informacji na temat konwencji nazewnictwa zasobów, zobacz [pakowanie i wdrażanie zasobów](../resources/packaging-and-deploying-resources-in-desktop-apps.md). Aby zapoznać się z listą wstępnie zdefiniowanych nazw kultur używanych w czasie wykonywania, zobacz Klasa <xref:System.Globalization.CultureInfo>.
 
 ## <a name="see-also"></a>Zobacz także
 

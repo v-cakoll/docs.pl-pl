@@ -1,6 +1,5 @@
 ---
 title: malejące kontekstowe C# słowo kluczowe-odwołanie
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - descending
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - descending keyword [C#]
 ms.assetid: 8d2cd1e5-9c1c-4dfc-b84c-60e2d3240927
-ms.openlocfilehash: d341f3ecc9fa3b95bd1559c03054bdadcd7bce56
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e17963e58abef2757594d0f6f3f7c5e805a1c966
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422857"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713582"
 ---
 # <a name="descending-c-reference"></a>descending (odwołanie w C#)
 
@@ -27,6 +26,6 @@ W poniższym przykładzie pokazano użycie `descending` w [klauzuli OrderBy](./o
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [LINQ w C#](../../linq/index.md)
 - [ascending](./ascending.md)

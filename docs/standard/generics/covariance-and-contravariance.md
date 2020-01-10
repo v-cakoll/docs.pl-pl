@@ -11,14 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee8cc1b677ad6f6c2718c155edbba632df38dbd3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 909b03588d2a41f667bfa117a5cecb420b125088
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974695"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708400"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kowariancja i kontrawariancja w typach ogólnych
 Kowariancja i kontrawariancja są terminami, które odwołują się do możliwości użycia bardziej pochodnej typu (bardziej szczegółowe) lub mniej pochodnego typu (mniej specyficznego) niż pierwotnie określony. Parametry typu ogólnego obsługują kowariancję i kontrawariancję, aby umożliwić większą elastyczność przypisywania i używania typów ogólnych. W kontekście systemu typów kowariancja, kontrawariancja i inwariancja mają następujące definicje. Przykłady zakładają klasę bazową o nazwie `Base` i klasę pochodną o nazwie `Derived`.  
@@ -148,11 +146,11 @@ Kowariancja i kontrawariancja są terminami, które odwołują się do możliwo�
   
 |Typ|Kowariantne parametry typu|Kontrawariantne parametry typu|  
 |----------|-------------------------------|-----------------------------------|  
-|<xref:System.Action%601> do <xref:System.Action%6016>||Tak|  
+|Od <xref:System.Action%601> do <xref:System.Action%6016>||Tak|  
 |<xref:System.Comparison%601>||Tak|  
 |<xref:System.Converter%602>|Tak|Tak|  
 |<xref:System.Func%601>|Tak||  
-|<xref:System.Func%602> do <xref:System.Func%6017>|Tak|Tak|  
+|Od <xref:System.Func%602> do <xref:System.Func%6017>|Tak|Tak|  
 |<xref:System.IComparable%601>||Tak|  
 |<xref:System.Predicate%601>||Tak|  
 |<xref:System.Collections.Generic.IComparer%601>||Tak|  

@@ -1,15 +1,13 @@
 ---
 title: Wskazówki dotyczące biblioteki .NET Open Source
 description: Zalecenia dotyczące najlepszych rozwiązań dla deweloperów do tworzenia bibliotek platformy .NET o wysokiej jakości.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: eff6c822757af6fb85622e88714accd40c32bcf5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c1e1c302eede86fd5555a8e84630e216e96f1ce7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928963"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706455"
 ---
 # <a name="open-source-library-guidance"></a>Wskazówki dotyczące biblioteki typu open-source
 
@@ -30,9 +28,9 @@ Aspekty wysokiej jakości bibliotek .NET typu open source:
 
 ## <a name="types-of-recommendations"></a>Typy zaleceń
 
-W każdym artykule przedstawiono cztery typy zaleceń: **Należy** **rozważyć**, **unikać**i **nie**. Typ zalecenia wskazuje, jak silnie należy postępować.
+W każdym artykule przedstawiono cztery typy zaleceń: **czy**należy **rozważyć**, **unikać**i **nie**. Typ zalecenia wskazuje, jak silnie należy postępować.
 
-Prawie zawsze należy **przestrzegać zalecenia.** Przykład:
+Prawie zawsze należy **przestrzegać zalecenia.** Na przykład:
 
 **✔️** Przeprowadź dystrybucję biblioteki przy użyciu pakietu NuGet.
 
@@ -42,11 +40,11 @@ Z drugiej strony należy **wziąć pod uwagę** zalecenia, które powinny być p
 
 **Należy unikać występowania** zaleceń, które zwykle nie są dobrym pomysłem, ale przerwanie reguły czasami ma sens:
 
-**❌ Unikać** Odwołania do pakietu NuGet, które wymagają dokładnej wersji.
+**❌ unikać** Odwołania do pakietu NuGet, które wymagają dokładnej wersji.
 
 A wreszcie **nie są** zalecenia wskazują coś, co należy prawie nigdy nie robić:
 
-**❌** Nie publikować wersji z silną nazwą i niesilną nazwą biblioteki. Na przykład `Contoso.Api` i `Contoso.Api.StrongNamed`.
+**❌** nie publikować wersji z silną nazwą i niesilną nazwą biblioteki. Na przykład `Contoso.Api` i `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
 >[Next](get-started.md)

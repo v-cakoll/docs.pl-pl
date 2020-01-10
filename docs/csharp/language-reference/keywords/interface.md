@@ -1,22 +1,21 @@
 ---
 title: C# informacje o interfejsie
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - interface_CSharpKeyword
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: 058d6b96e96a3237ebac2ca079807fd154715d68
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 19ca4b8a490dc85de0d0e2be6d3ca8fa7982fc14
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608650"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713439"
 ---
 # <a name="interface-c-reference"></a>interface (odwołanie w C#)
 
-Interfejs zawiera tylko sygnatury [metod](../../programming-guide/classes-and-structs/methods.md), [Właściwości](../../programming-guide/classes-and-structs/properties.md), [zdarzeń](../../programming-guide/events/index.md) i indeksatorów [](../../programming-guide/indexers/index.md). Klasa lub struktura implementująca interfejs musi implementować elementy członkowskie interfejsu, które są określone w definicji interfejsu. W poniższym przykładzie Klasa `ImplementationClass` musi implementować metodę o nazwie `SampleMethod` , która nie ma parametrów i zwraca `void`.
+Interfejs zawiera tylko sygnatury [metod](../../programming-guide/classes-and-structs/methods.md), [Właściwości](../../programming-guide/classes-and-structs/properties.md), [zdarzeń](../../programming-guide/events/index.md) i [indeksatorów](../../programming-guide/indexers/index.md). Klasa lub struktura implementująca interfejs musi implementować elementy członkowskie interfejsu, które są określone w definicji interfejsu. W poniższym przykładzie Klasa `ImplementationClass` musi implementować metodę o nazwie `SampleMethod`, która nie ma parametrów i zwraca `void`.
 
 Aby uzyskać więcej informacji i przykładów, zobacz [interfejsy](../../programming-guide/interfaces/index.md).
 
@@ -44,7 +43,7 @@ Aby uzyskać szczegółowe informacje i przykłady kodu w przypadku jawnej imple
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje implementację interfejsu. W tym przykładzie interfejs zawiera deklarację właściwości, a Klasa zawiera implementację. Każde wystąpienie klasy implementującej `IPoint` zawiera właściwości `x` całkowite i `y`.
+Poniższy przykład ilustruje implementację interfejsu. W tym przykładzie interfejs zawiera deklarację właściwości, a Klasa zawiera implementację. Każde wystąpienie klasy implementującej `IPoint` ma właściwości całkowite `x` i `y`.
 
 [!code-csharp[csrefKeywordsTypes#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#15)]
 

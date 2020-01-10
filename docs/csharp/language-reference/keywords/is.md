@@ -1,6 +1,5 @@
 ---
 title: '\- C# odwołanie'
-ms.custom: seodec18
 ms.date: 06/21/2019
 f1_keywords:
 - is_CSharpKeyword
@@ -8,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a04105137fad7cd3a25b869c3aa7fcbe91ed20ab
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 1a1f539e80f8d843f40640fa798cf6122f316a9f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566308"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715236"
 ---
 # <a name="is-c-reference"></a>is (odwołanie w C#)
 
-Operator sprawdza, czy wynik wyrażenia jest zgodny z danym typem, lub (Zaczynając od C# 7,0) testuje wyrażenie względem wzorca. `is` Aby uzyskać informacje o operatorze testowania `is` typu, zobacz sekcję [operator is](../operators/type-testing-and-cast.md#is-operator) w artykule operatorion [-Test and Cast](../operators/type-testing-and-cast.md) .
+Operator `is` sprawdza, czy wynik wyrażenia jest zgodny z danym typem, lub (Zaczynając od C# 7,0) testuje wyrażenie względem wzorca. Aby uzyskać informacje o operatorze `is` testowania typu, zobacz sekcję [operator is](../operators/type-testing-and-cast.md#is-operator) w artykule [test typu i Operatory rzutowania](../operators/type-testing-and-cast.md) .
 
-## <a name="pattern-matching-with-is"></a>Dopasowanie wzorca z`is`
+## <a name="pattern-matching-with-is"></a>Dopasowanie wzorca do `is`
 
-Począwszy od C# 7,0, `is` instrukcje i [przełącznik](switch.md) obsługują Dopasowywanie wzorców. `is` Słowo kluczowe obsługuje następujące wzorce:
+Począwszy od C# 7,0, instrukcje `is` i [Switch](switch.md) obsługują dopasowanie do wzorca. Słowo kluczowe `is` obsługuje następujące wzorce:
 
 - [Wzorzec typu](#type-pattern), który sprawdza, czy wyrażenie może być konwertowane do określonego typu i, jeśli może, przerzutuje go do zmiennej tego typu.
 
@@ -31,15 +30,15 @@ Począwszy od C# 7,0, `is` instrukcje i [przełącznik](switch.md) obsługują D
 
 ### <a name="type-pattern"></a>Wzorzec typu
 
-W przypadku używania wzorca typu do dopasowania do wzorca, `is` sprawdza, czy wyrażenie może być konwertowane do określonego typu i, jeśli może, rzutowania go na zmienną tego typu. Jest to proste rozszerzenie `is` instrukcji, która umożliwia obliczanie i konwersję typu zwięzłego. Ogólna forma `is` wzorca typu jest:
+W przypadku używania wzorca typu do dopasowania do wzorca, `is` sprawdza, czy wyrażenie może być konwertowane do określonego typu i, jeśli to możliwe, rzutuje go na zmienną tego typu. Jest to proste rozszerzenie instrukcji `is`, które umożliwia ocenę i konwersję typu zwięzłego. Ogólna forma wzorca typu `is`:
 
 ```csharp
    expr is type varname
 ```
 
-gdzie *Expr* jest wyrażeniem, którego wynikiem jest wystąpienie pewnego typu, *Type* jest nazwą typu, do którego zostanie przekonwertowany wynik *wyrażenia* , a *nazwa_zmiennej* jest obiektem, do którego jest konwertowany wynik *wyrażenia* , jeśli `is` test jest `true`. 
+gdzie *Expr* jest wyrażeniem, którego wynikiem jest wystąpienie pewnego typu, *Typ* jest nazwą typu, do którego zostanie przekonwertowany wynik *wyrażenia* , a *nazwa_zmiennej* jest obiektem, do którego jest konwertowany wynik *wyrażenia* , jeśli test `is` jest `true`. 
 
-Wyrażenie jest Jeśli `true` *wyrażenie* jest nieobsługiwane `null`, a którykolwiek z następujących warunków jest spełniony: `is`
+Wyrażenie `is` jest `true` Jeśli *wyrażenie* nie jest `null`i spełnione są wszystkie następujące warunki:
 
 - *wyrażenie* jest wystąpieniem tego samego typu co *Typ*.
 
@@ -51,17 +50,17 @@ Wyrażenie jest Jeśli `true` *wyrażenie* jest nieobsługiwane `null`, a który
 
 Począwszy od C# 7,1, *wyrażenie* może mieć typ czasu kompilacji zdefiniowany przez parametr typu ogólnego i jego ograniczenia.
 
-Jeśli *wyrażenie* jest `true` i `is` jest używane z `if` instrukcją, *nazwa_zmiennej* jest przypisywana tylko `if` wewnątrz instrukcji. Zakres elementu *nazwa_zmiennej* pochodzi z `is` wyrażenia na końcu `if` bloku otaczającego instrukcję. Użycie elementu *nazwa_zmiennej* w dowolnej innej lokalizacji generuje błąd czasu kompilacji do użycia zmiennej, która nie została przypisana.
+Jeśli *wyrażenie* jest `true` i `is` jest używany z instrukcją `if`, *nazwa_zmiennej* jest przypisywana tylko w instrukcji `if`. Zakres elementu *nazwa_zmiennej* pochodzi z wyrażenia `is` do końca bloku zawierającego instrukcję `if`. Użycie elementu *nazwa_zmiennej* w dowolnej innej lokalizacji generuje błąd czasu kompilacji do użycia zmiennej, która nie została przypisana.
 
-Poniższy przykład używa wzorca typu `is` , aby zapewnić implementację <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> metody typu.
+Poniższy przykład używa wzorca typu `is`, aby zapewnić implementację metody <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> typu.
 
 [!code-csharp[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
 
-Bez dopasowania do wzorca ten kod może być zapisany w następujący sposób. Użycie dopasowania wzorca typu daje bardziej zwarty, czytelny kod, eliminując konieczność sprawdzenia, czy wynik konwersji to `null`.  
+Bez dopasowania do wzorca ten kod może być zapisany w następujący sposób. Użycie dopasowania wzorca typu daje bardziej zwarty, czytelny kod, eliminując konieczność sprawdzenia, czy wynikiem konwersji jest `null`.  
 
 [!code-csharp[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
 
-Wzorzec `is` typu generuje również bardziej zwarty kod podczas określania typu wartości. W poniższym przykładzie używa się `is` wzorca typu, aby określić, czy obiekt `Person` jest `Dog` wystąpieniem, czy przed wyświetleniem wartości odpowiedniej właściwości.
+Wzorzec typu `is` generuje również bardziej zwarty kod podczas określania typu wartości. Poniższy przykład używa wzorca typu `is`, aby określić, czy obiekt jest wystąpieniem `Person` czy `Dog` przed wyświetleniem wartości odpowiedniej właściwości.
 
 [!code-csharp[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
 
@@ -71,7 +70,7 @@ Odpowiedni kod bez dopasowania do wzorca wymaga oddzielnego przypisania zawieraj
 
 ### <a name="constant-pattern"></a>Wzorzec stałej
 
-Podczas wykonywania dopasowania wzorca ze wzorcem stałej, `is` sprawdza, czy wyrażenie jest równe określonej stałej. W C# 6 i wcześniejszych wersjach wzorzec stałej jest obsługiwany przez instrukcję [Switch](switch.md) . Począwszy od C# 7,0, jest to również obsługiwane przez `is` instrukcję. Jego składnia to:
+Podczas dopasowywania wzorców do wzorca stałego `is` sprawdza, czy wyrażenie jest równe określonej stałej. W C# 6 i wcześniejszych wersjach wzorzec stałej jest obsługiwany przez instrukcję [Switch](switch.md) . Począwszy od C# 7,0, jest to również obsługiwane przez instrukcję `is`. Jego składnia to:
 
 ```csharp
    expr is constant
@@ -81,33 +80,33 @@ gdzie *Expr* jest wyrażeniem, które ma zostać obliczone, a *stała* jest wart
 
 - Wartość literału.
 
-- Nazwa zadeklarowanej `const` zmiennej.
+- Nazwa zadeklarowanej zmiennej `const`.
 
 - Stała wyliczenia.
 
 Wyrażenie stałe jest oceniane w następujący sposób:
 
-- Jeśli *wyrażenie* i *stała* są typami całkowitymi, C# operator równości określa, czy wyrażenie zwróci `true` wartość (to znaczy czy `expr == constant`).
+- Jeśli *wyrażenie* i *stała* są typami całkowitymi, C# operator równości określa, czy wyrażenie zwróci `true` (to znaczy czy `expr == constant`).
 
 - W przeciwnym razie wartość wyrażenia jest określana przez wywołanie metody static [obiektu. Equals (wyrażenie, stała)](xref:System.Object.Equals(System.Object,System.Object)) .  
 
-Poniższy przykład łączy typ i wzorce stałe, aby sprawdzić, czy obiekt jest `Dice` wystąpieniem i, jeśli to jest, aby określić, czy wartość rzutowania indeksu to 6.
+Poniższy przykład łączy typ i wzorce stałe, aby sprawdzić, czy obiekt jest wystąpieniem `Dice` i, jeśli jest, aby określić, czy wartość rzutowania indeksu to 6.
 
 [!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
 
-Sprawdzanie dla `null` można wykonać przy użyciu wzorca stałego. Słowo kluczowe jest obsługiwane `is` przez instrukcję. `null` Jego składnia to:
+Sprawdzanie `null` można wykonać przy użyciu wzorca stałego. Słowo kluczowe `null` jest obsługiwane przez instrukcję `is`. Jego składnia to:
 
 ```csharp
    expr is null
 ```
 
-W poniższym przykładzie przedstawiono porównanie `null` kontroli:
+Poniższy przykład przedstawia porównanie `null` sprawdzenia:
 
 [!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
 
 ### <a name="var-pattern"></a>wzorzec wariancji
 
-`var` Wzorzec jest wartością przechwycenia dla dowolnego typu lub wartości. Wartość *wyrażenia* jest zawsze przypisywana do zmiennej lokalnej tego samego typu co typ czasu kompilacji *wyrażenia*. Wynik `is` wyrażenia jest zawsze `true`. Jego składnia to:
+Wzorzec `var` jest wartością przechwycenia dla dowolnego typu lub wartości. Wartość *wyrażenia* jest zawsze przypisywana do zmiennej lokalnej tego samego typu co typ czasu kompilacji *wyrażenia*. Wynik wyrażenia `is` jest zawsze `true`. Jego składnia to:
 
 ```csharp
    expr is var varname

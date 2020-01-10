@@ -2,12 +2,12 @@
 title: Co nowego w C# 7,1
 description: Omówienie nowych funkcji w C# 7,1.
 ms.date: 04/09/2019
-ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105552"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714592"
 ---
 # <a name="whats-new-in-c-71"></a>Co nowego w C# 7,1
 
@@ -17,29 +17,29 @@ C#7,1 dodaje element konfiguracji [wyboru wersji języka](../language-reference/
 
 Nowe funkcje języka w tej wersji są następujące:
 
-- [`async``Main` Metoda](#async-main)
-  - Punkt wejścia dla aplikacji może mieć `async` modyfikator.
-- [`default`wyrażenia literału](#default-literal-expressions)
+- [`async` `Main` Metoda](#async-main)
+  - Punkt wejścia dla aplikacji może mieć Modyfikator `async`.
+- [wyrażenia literału `default`](#default-literal-expressions)
   - Można użyć domyślnych wyrażeń literałów w wyrażeniach wartości domyślnych, gdy można wywnioskować typ docelowy.
 - [Wywnioskowane nazwy elementów krotki](#inferred-tuple-element-names)
   - Nazwy elementów krotki można wywnioskować na podstawie inicjalizacji krotki w wielu przypadkach.
 - [Dopasowanie wzorca dla parametrów typu ogólnego](#pattern-matching-on-generic-type-parameters)
   - Wyrażeń dopasowania wzorców można używać w zmiennych, których typem jest parametr typu ogólnego.
 
-Na koniec kompilator ma dwie opcje `-refout` i `-refonly` umożliwia wygenerowanie [zestawu odwołań](#reference-assembly-generation).
+Na koniec kompilator ma dwie opcje `-refout` i `-refonly` tej [generacji](#reference-assembly-generation).
 
 Aby użyć najnowszych funkcji w wersji próbnej, należy [skonfigurować wersję języka kompilatora](../language-reference/configure-language-version.md) i wybrać wersję.
 
-Pozostała część tego artykułu zawiera omówienie każdej funkcji. Dla każdej funkcji znajdziesz jej uzasadnienie. Poznasz składnię. Te funkcje można eksplorować w środowisku za pomocą `dotnet try` narzędzia globalnego:
+Pozostała część tego artykułu zawiera omówienie każdej funkcji. Dla każdej funkcji znajdziesz jej uzasadnienie. Poznasz składnię. Te funkcje można eksplorować w środowisku za pomocą narzędzia globalnego `dotnet try`:
 
 1. Zainstaluj narzędzie [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) Global.
 1. Sklonuj repozytorium [dotnet/try-Samples](https://github.com/dotnet/try-samples) .
 1. Ustaw bieżący katalog na podkatalog *csharp7* dla repozytorium *try-Samples* .
-1. Uruchom `dotnet try`.
+1. Uruchom polecenie `dotnet try`.
 
 ## <a name="async-main"></a>Asynchroniczny, główny
 
-Metoda *Async Main* umożliwia korzystanie `await` z `Main` metody.
+Metoda *Async Main* umożliwia używanie `await` w metodzie `Main`.
 Wcześniej należy napisać:
 
 ```csharp
@@ -60,7 +60,7 @@ static async Task<int> Main()
 }
 ```
 
-Jeśli program nie zwraca kodu zakończenia, można zadeklarować `Main` metodę, która <xref:System.Threading.Tasks.Task>zwraca:
+Jeśli program nie zwraca kodu zakończenia, można zadeklarować metodę `Main`, która zwraca <xref:System.Threading.Tasks.Task>:
 
 ```csharp
 static async Task Main()
@@ -106,11 +106,11 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-Więcej informacji na temat tej funkcji można znaleźć w [](../tuples.md) artykule krotkis.
+Więcej informacji na temat tej funkcji można znaleźć w artykule [krotkis](../tuples.md) .
 
 ## <a name="pattern-matching-on-generic-type-parameters"></a>Dopasowanie wzorca dla parametrów typu ogólnego
 
-Począwszy od C# 7,1, wyrażenie wzorca dla `is` i `switch` wzorzec typu mogą mieć typ parametru typu ogólnego. Może to być najbardziej przydatne podczas sprawdzania typów, które mogą być `struct` albo `class` typu, i chcesz uniknąć pakowania.
+Począwszy od C# 7,1, wyrażenie wzorca dla `is` i wzorzec typu `switch` może mieć typ parametru typu ogólnego. Może to być najbardziej przydatne podczas sprawdzania typów, które mogą być `struct` lub `class` typy, i chcesz uniknąć pakowania.
 
 ## <a name="reference-assembly-generation"></a>Generowanie zestawu odwołań
 

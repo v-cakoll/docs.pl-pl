@@ -1,18 +1,17 @@
 ---
 title: Operatory przypisania — C# odwołanie
-ms.custom: seodec18
 ms.date: 09/10/2019
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 103bc823ab6a56d53a3f2ec05b8de9295f1de400
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 19f74e6835ae555a3a38aa6ca8679948c7f290dd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039078"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712757"
 ---
 # <a name="assignment-operators-c-reference"></a>Operatory przypisania (C# odwołanie)
 
@@ -24,7 +23,7 @@ Operator przypisania `=` jest prawym przyciskiem asocjacyjnym, czyli wyrażeniem
 a = b = c
 ```
 
-jest oceniane jako
+jest wykonywane jako
 
 ```csharp
 a = (b = c)
@@ -36,7 +35,7 @@ Poniższy przykład ilustruje użycie operatora przypisania ze zmienną lokalną
 
 ## <a name="ref-assignment-operator"></a>operator przypisania ref
 
-Począwszy od C# 7,3, można użyć operatora przypisania ref`= ref`do ponownego [przypisania lokalnej zmiennej lokalnej lub](../keywords/ref.md#ref-locals) [ref tylko do odczytu](../keywords/ref.md#ref-readonly-locals) . Poniższy przykład ilustruje użycie operatora przypisania odwołania:
+Począwszy od C# 7,3, można użyć operatora przypisania ref `= ref` do ponownego [przypisania lokalnej zmiennej lokalnej lub](../keywords/ref.md#ref-locals) [ref tylko do odczytu](../keywords/ref.md#ref-readonly-locals) . Poniższy przykład ilustruje użycie operatora przypisania odwołania:
 
 [!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#RefAssignment)]
 
@@ -44,7 +43,7 @@ W przypadku operatora przypisania odwołania, oba operandy muszą być tego same
 
 ## <a name="compound-assignment"></a>Przypisanie złożone
 
-Dla operatora binarnego `op` wyrażenie złożonego przypisania formularza
+Dla operatora binarnego `op`wyrażenie złożonego przypisania formularza
 
 ```csharp
 x op= y
@@ -56,13 +55,13 @@ jest równoważny
 x = x op y
 ```
 
-z tą różnicą, że `x` jest obliczana tylko raz.
+z tą różnicą, że `x` jest obliczone tylko raz.
 
 Przypisanie złożone jest obsługiwane przez [arytmetyczne](arithmetic-operators.md#compound-assignment)operatory [logiczne logiczne](boolean-logical-operators.md#compound-assignment) [i bitowe](bitwise-and-shift-operators.md#compound-assignment) .
 
 ## <a name="null-coalescing-assignment"></a>Przypisanie do łączenia o wartości null
 
-Począwszy od C# 8,0, można użyć operatora przypisania łączącego wartości null`??=`, aby przypisać wartość jego operandu po lewej stronie tylko wtedy, gdy argument operacji po lewej stronie jest obliczany do`null`. Aby uzyskać więcej informacji, zobacz [? =](null-coalescing-operator.md) — artykuł.
+Począwszy od C# 8,0, można użyć operatora przypisania łączącego wartości null `??=`, aby przypisać wartość jego operandu po lewej stronie tylko wtedy, gdy argument operacji po lewej stronie jest obliczany do `null`. Aby uzyskać więcej informacji, zobacz [? =](null-coalescing-operator.md) — artykuł.
 
 ## <a name="operator-overloadability"></a>Przeciążanie operatora
 
@@ -80,4 +79,4 @@ Aby uzyskać więcej informacji na temat `= ref`operatora przypisania odwołania
 
 - [C#odwoła](../index.md)
 - [Operatory języka C#](index.md)
-- [ref — słowo kluczowe](../keywords/ref.md)
+- [ref keyword](../keywords/ref.md)

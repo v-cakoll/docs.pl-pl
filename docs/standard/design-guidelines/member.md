@@ -8,20 +8,19 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-author: KrzysztofCwalina
-ms.openlocfilehash: d7023bbe59eb3590af47952a2fe24c5f40b3ca68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf4f1d2fee73e3e65dc4d92ea97a62f4a7e4c4e5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945525"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709273"
 ---
 # <a name="member-design-guidelines"></a>Składowa — zalecenia dotyczące projektowania
-Metody, właściwości, zdarzenia, konstruktory i pola są nazywane zbiorczo elementów członkowskich. Elementy członkowskie są ostatecznie oznacza, że za pomocą którego funkcja framework jest widoczna dla użytkowników końcowych RAM.  
+Metody, właściwości, zdarzenia, konstruktory i pola są zbiorczo nazywane elementami członkowskimi. Członkowie są ostatecznie sposobem, przez który funkcje platformy są udostępniane użytkownikom końcowym struktury.  
   
- Członkowie mogą być wirtualne lub niewirtualne, konkretny ani abstrakcyjne, statyczne lub wystąpienie i może mieć kilka różnych zakresów ułatwień dostępu. Takiej odmiany zapewnia niezwykłą wyrazistość, ale w tym samym czasie wymaga obsługi ze strony Projektant framework.  
+ Elementy członkowskie mogą być wirtualne lub niewirtualne, konkretne lub abstrakcyjne, statyczne lub wystąpienia oraz mogą mieć kilka różnych zakresów ułatwień dostępu. Cała ta odmiana zawiera niesamowitą wyrazistości, ale w tym samym czasie wymaga zaopieki nad częścią projektanta struktury.  
   
- W tym rozdziale oferuje podstawowe wytyczne, które należy stosować podczas projektowania składowe dowolnego typu.  
+ Ten rozdział zawiera podstawowe wytyczne, które należy stosować podczas projektowania członków dowolnego typu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Przeciążanie elementu członkowskiego](../../../docs/standard/design-guidelines/member-overloading.md)  
@@ -32,9 +31,9 @@ Metody, właściwości, zdarzenia, konstruktory i pola są nazywane zbiorczo ele
  [Metody rozszerzeń](../../../docs/standard/design-guidelines/extension-methods.md)  
  [Przeciążenia operatorów](../../../docs/standard/design-guidelines/operator-overloads.md)  
  [Projekt parametrów](../../../docs/standard/design-guidelines/parameter-design.md)  
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -3,59 +3,57 @@ title: Opcje danych wyjściowych klasy XslCompiledTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0f56e27b2ae9a32385aa9a44db631d2909023206
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 504057bd5e10498d39b2bce908742fc20b112c52
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647841"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710508"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Opcje danych wyjściowych klasy XslCompiledTransform
-W tym temacie opisano dostępne opcje wyjściowe XSLT. Możesz określić opcje danych wyjściowych w arkuszu stylów lub na <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
+W tym temacie omówiono dostępne opcje danych wyjściowych XSLT. Możesz określić opcje wyjściowe w arkuszu stylów lub w metodzie <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
-## <a name="xsloutput-element"></a>: Output — Element  
- `xsl:output` Element określa opcje dla danych wyjściowych. Typ danych wyjściowych, określony przez <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody określa zachowanie `xsl:output` opcje.  
+## <a name="xsloutput-element"></a>xsl: output — element  
+ Element `xsl:output` określa opcje dla danych wyjściowych. Typ wyjściowy określony przez metodę <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> określa zachowanie opcji `xsl:output`.  
   
- W poniższej tabeli przedstawiono zachowania dla każdego z atrybutów, które są dostępne na `xsl:output` elementu w przypadku typu danych wyjściowych jest strumień lub <xref:System.IO.TextWriter>.  
+ W poniższej tabeli opisano zachowanie każdego z atrybutów dostępnych dla elementu `xsl:output`, gdy typem danych wyjściowych jest strumień lub <xref:System.IO.TextWriter>.  
   
 |Nazwa atrybutu|Zachowanie|  
 |--------------------|--------------|  
-|— metoda|Obsługiwane.|  
-|version|Ignorowane. Wersja jest zawsze 1.0 dla formatu XML i 4.0 dla kodu HTML.|  
-|encoding|Ignorowane w przypadku podawania do <xref:System.IO.TextWriter>. <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType> Właściwość jest używana zamiast tego.|  
-|omit-xml-declaration|Obsługiwane.|  
-|niezależne|Obsługiwane.|  
-|doctype-public|Obsługiwane.|  
-|doctype-system|Obsługiwane.|  
-|cdata-section-elements|Obsługiwane.|  
-|Zwiększ wcięcie|Obsługiwane.|  
+|metoda|Obsługiwane.|  
+|Wersja programu|Ignorowane. Wersja jest zawsze 1,0 dla plików XML i 4,0 dla języka HTML.|  
+|{1&gt;encoding&lt;1}|Ignorowany podczas wyprowadzania do <xref:System.IO.TextWriter>. Zamiast tego zostanie użyta Właściwość <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType>.|  
+|Pomiń deklarację XML|Obsługiwane.|  
+|autonomiczne|Obsługiwane.|  
+|DOCTYPE — publiczny|Obsługiwane.|  
+|DOCTYPE — system|Obsługiwane.|  
+|CDATA-elementy sekcji|Obsługiwane.|  
+|wyświetlane|Obsługiwane.|  
 |Typ nośnika|Obsługiwane.|  
   
-#### <a name="sending-output-to-an-xmlwriter"></a>Wysyłanie danych wyjściowych do XmlWriter  
- Jeśli korzysta z arkusza stylów `xsl:output` elementu i typ danych wyjściowych jest <xref:System.Xml.XmlWriter> obiektu, należy użyć <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> właściwości po utworzeniu <xref:System.Xml.XmlWriter> obiektu. <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> Właściwość zwraca <xref:System.Xml.XmlWriterSettings> obiektu, który zawiera informacje pochodzące z `xsl:output` element arkusza stylów skompilowanego. To <xref:System.Xml.XmlWriterSettings> obiekt może być przekazywany do <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> metodę w celu utworzenia <xref:System.Xml.XmlWriter> obiektu z prawidłowymi ustawieniami.  
+#### <a name="sending-output-to-an-xmlwriter"></a>Wysyłanie danych wyjściowych do elementu XmlWriter  
+ Jeśli arkusz stylów używa elementu `xsl:output`, a typ danych wyjściowych jest obiektem <xref:System.Xml.XmlWriter>, należy użyć właściwości <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> podczas tworzenia obiektu <xref:System.Xml.XmlWriter>. Właściwość <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> zwraca obiekt <xref:System.Xml.XmlWriterSettings>, który zawiera informacje pochodzące z elementu `xsl:output` skompilowanego arkusza stylów. Ten obiekt <xref:System.Xml.XmlWriterSettings> można przesłać do metody <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType>, aby utworzyć obiekt <xref:System.Xml.XmlWriter> z prawidłowymi ustawieniami.  
   
-## <a name="output-types"></a>Typy danych wyjściowych  
- Poniższa lista zawiera opis typów danych wyjściowych, dostępne na <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> polecenia.  
+## <a name="output-types"></a>Typy wyjściowe  
+ Poniższa lista zawiera opis typów danych wyjściowych dostępnych w <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> polecenie.  
   
-#### <a name="xmlwriter"></a>XmlWriter  
- <xref:System.Xml.XmlWriter> Klasy zapisuje strumieni XML lub plików. Można określić funkcji do obsługi na <xref:System.Xml.XmlWriter> obiekt, w tym opcje danych wyjściowych za pomocą <xref:System.Xml.XmlWriterSettings> klasy. <xref:System.Xml.XmlWriter> Klasa jest integralną częścią <xref:System.Xml> framework. Użyj tego typu danych wyjściowych do potoku wyników danych wyjściowych do innego procesu XML.  
+#### <a name="xmlwriter"></a>Element  
+ Klasa <xref:System.Xml.XmlWriter> zapisuje strumienie lub pliki XML. Można określić funkcje do obsługi na obiekcie <xref:System.Xml.XmlWriter>, w tym opcje wyjściowe, przy użyciu klasy <xref:System.Xml.XmlWriterSettings>. Klasa <xref:System.Xml.XmlWriter> jest integralną częścią <xref:System.Xml> Framework. Użyj tego typu danych wyjściowych, aby przetworzyć wyniki wyjściowe w innym procesie XML.  
   
 #### <a name="string"></a>String  
  Użyj tego typu danych wyjściowych, aby określić identyfikator URI pliku wyjściowego.  
   
 #### <a name="stream"></a>Strumień  
- Strumień jest klasą abstrakcyjną sekwencji bajtów, takich jak plik, urządzenia z systemem wejścia/wyjścia, potok komunikacji między procesami lub gniazda TCP/IP. <xref:System.IO.Stream> Klasy i jej klasy pochodne oferują ogólny widok tych różnych typów danych wejściowych i wyjściowych, izolując programistę od specyficznych szczegółów systemu operacyjnego i podstawowych urządzeń.  
+ Strumień jest abstrakcją sekwencji bajtów, takich jak plik, urządzenie wejścia/wyjścia, potok komunikacji między procesami lub gniazdo TCP/IP. Klasa <xref:System.IO.Stream> i jej klasy pochodne zapewniają ogólny widok tych różnych typów danych wejściowych i wyjściowych, izolując programistę od określonych szczegółów systemu operacyjnego i podstawowych urządzeń.  
   
- Ten typ danych wyjściowych służy do wysyłania danych do <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>, lub strumień wyjściowy (`Response.OutputStream`).  
+ Użyj tego typu danych wyjściowych, aby wysyłać dane do <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>lub strumienia wyjściowego (`Response.OutputStream`).  
   
 #### <a name="textwriter"></a>TextWriter  
- <xref:System.IO.TextWriter> Zapisywać znaki sekwencyjne. Jest zaimplementowana w <xref:System.IO.StringWriter> i <xref:System.IO.StreamWriter> klasy, które zapisywanie znaków ciągów lub strumieni, odpowiednio. Użyj tego typu dane wyjściowe, gdy użytkownik chce przesyłać dane wyjściowe do ciągu.  
+ <xref:System.IO.TextWriter> zapisuje znaki sekwencyjne. Jest zaimplementowana w klasach <xref:System.IO.StringWriter> i <xref:System.IO.StreamWriter>, które zapisują znaki odpowiednio do ciągów lub strumieni. Użyj tego typu danych wyjściowych, jeśli chcesz, aby dane wyjściowe były przekazywane do ciągu.  
   
 ## <a name="notes"></a>Uwagi  
   
-- Podczas pisania się puste znaczniki, spacja jest zapisywany między ostatni znak nazwy elementu i ukośnik odwrotny, `<myElement />` na przykład. Dzięki temu starsze przeglądarki poprawnie wyświetlić wygenerowanych stron HTML.  
+- Podczas zapisywania pustych tagów spacja jest zapisywana od ostatniego znaku nazwy elementu i ukośnika odwrotnego, `<myElement />` na przykład. Dzięki temu starsze przeglądarki mogą poprawnie wyświetlać wygenerowane strony HTML.  
   
 ## <a name="see-also"></a>Zobacz także
 

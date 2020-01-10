@@ -6,14 +6,12 @@ helpviewer_keywords:
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cadcb5c2e85f046b5c1c561c17663b7c94829f4f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 73a0ffd4a39b144a61bf559ac424414728fb9a3f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802240"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716453"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Błędy inicjowania .NET Framework: Zarządzanie czynnościami użytkownika
 
@@ -82,7 +80,7 @@ Jednak w niektórych scenariuszach ważne jest zastępowanie ustawień SEM_FAILC
 
 System aktywacji środowiska CLR zapewnia takie samo zachowanie i interfejs użytkownika w systemie Windows 8, jak w przypadku innych wersji systemu operacyjnego Windows, z wyjątkiem sytuacji, w których występują problemy z ładowaniem środowiska CLR 2,0. System Windows 8 zawiera .NET Framework 4,5, który używa środowiska CLR 4,5. Jednak system Windows 8 nie zawiera .NET Framework 2,0, 3,0 lub 3,5, które są używane przez środowisko CLR 2,0. W związku z tym aplikacje, które są zależne od środowiska CLR 2,0, nie są domyślnie uruchamiane w systemie Windows 8. Zamiast tego wyświetlają następujące okno dialogowe umożliwiające użytkownikom instalowanie .NET Framework 3,5. Użytkownicy mogą również włączyć .NET Framework 3,5 w panelu sterowania. Obie opcje zostały omówione w artykule [instalowanie .NET Framework 3,5 w systemie Windows 10, Windows 8.1 i Windows 8](../install/dotnet-35-windows-10.md).
 
-![Okno dialogowe instalacji 3,5 w systemie Windows 8](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "Wyślij monit o zainstalowanie 3.5.NET Framework na żądanie")
+![Okno dialogowe instalacji 3,5 w systemie Windows 8](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "Monituj o zainstalowanie .NET Framework 3,5 na żądanie")
 
 > [!NOTE]
 > .NET Framework 4,5 zastępuje .NET Framework 4 (CLR 4) na komputerze użytkownika. W związku z tym .NET Framework 4 aplikacje działają bezproblemowo, bez wyświetlania tego okna dialogowego w systemie Windows 8.

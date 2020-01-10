@@ -1,6 +1,5 @@
 ---
-title: za pomocą słowa kluczowego - C# odwołania
-ms.custom: seoapril2019
+title: Używanie słowa kluczowego- C# Reference
 ms.date: 04/05/2019
 f1_keywords:
 - using_CSharpKeyword
@@ -8,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
-ms.openlocfilehash: 02dac1bfe3420abd474867dcc18f70aadc7aeff4
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: a1307acf331cec50b1dbbd0f6e908a0c3baaf7ac
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422135"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712939"
 ---
 # <a name="using-c-reference"></a>using (odwołanie w C#)
 
-`using` — Słowo kluczowe ma trzy główne zastosowań:
+Słowo kluczowe `using` ma trzy główne zastosowania:
 
-- [Za pomocą instrukcji](using-statement.md) definiuje zakres na końcu którego obiekt zostanie usunięty.
-- [Użycie dyrektywy](using-directive.md) tworzy alias dla przestrzeni nazw lub importuje typy zdefiniowane w innych przestrzeniach nazw.
-- [Using static, dyrektywa](using-static.md) importuje elementy członkowskie tej samej klasy.
+- [Instrukcja using](using-statement.md) definiuje zakres na końcu, który obiekt zostanie usunięty.
+- [Dyrektywa using](using-directive.md) tworzy alias dla przestrzeni nazw lub importuje typy zdefiniowane w innych przestrzeniach nazw.
+- [Dyrektywa static using](using-static.md) importuje elementy członkowskie pojedynczej klasy.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -3,23 +3,21 @@ title: Mapowanie typów danych XML na typy CLR
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 48ec3a5b719b05112b257871f64a34f2bc21eeab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 536c8dcd03d98879e24ae62d2b8a47e36564aaf6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650183"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710664"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>Mapowanie typów danych XML na typy CLR
 
-W poniższej tabeli opisano domyślne mapowanie między typami danych XML i popularnych typów środowiska uruchomieniowego (języka wspólnego CLR) języka.
+W poniższej tabeli opisano domyślne mapowanie między typami danych XML a typami środowiska uruchomieniowego języka wspólnego (CLR).
 
 > [!NOTE]
-> `xs` i `xdt` prefiksy są mapowane na <https://www.w3.org/2001/XMLSchema> i <https://www.w3.org/2003/05/xpath-datatypes> URI przestrzeni nazw odpowiednio.
+> `xs` i prefiksy `xdt` są mapowane odpowiednio do <https://www.w3.org/2001/XMLSchema> oraz identyfikatorów URI <https://www.w3.org/2003/05/xpath-datatypes> przestrzeni nazw.
 
-|Typ XML o NAZWIE|Typ CLR|
+|Typ XML|Typ CLR|
 |--------------|--------------|
 |`xs:anyURI`|<xref:System.Uri>|
 |`xs:base64Binary`|`Byte[]`|
@@ -70,13 +68,13 @@ W poniższej tabeli opisano domyślne mapowanie między typami danych XML i popu
 |`xdt:untypedAtomic`|<xref:System.String>|
 |`xdt:anyAtomicType`|<xref:System.Object>|
 |`xs:anySimpleType`|<xref:System.String>|
-|Węzłem dokumentu|<xref:System.Xml.XPath.XPathNavigator>|
+|Węzeł dokumentu|<xref:System.Xml.XPath.XPathNavigator>|
 |Węzeł elementu|<xref:System.Xml.XPath.XPathNavigator>|
 |Węzeł atrybutu|<xref:System.Xml.XPath.XPathNavigator>|
-|Węzeł Namespace|<xref:System.Xml.XPath.XPathNavigator>|
-|Węzeł tekstowy|<xref:System.Xml.XPath.XPathNavigator>|
-|Węzeł komentarzy|<xref:System.Xml.XPath.XPathNavigator>|
-|Węzeł przetwarzania instrukcji|<xref:System.Xml.XPath.XPathNavigator>|
+|Węzeł przestrzeni nazw|<xref:System.Xml.XPath.XPathNavigator>|
+|Węzeł tekstu|<xref:System.Xml.XPath.XPathNavigator>|
+|Węzeł komentarza|<xref:System.Xml.XPath.XPathNavigator>|
+|Przetwarzanie węzła instrukcji|<xref:System.Xml.XPath.XPathNavigator>|
 
 ## <a name="see-also"></a>Zobacz także
 

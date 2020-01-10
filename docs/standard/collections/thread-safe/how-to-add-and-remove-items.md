@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie elementów do kolekcji ConcurrentDictionary i ich usuwanie'
+title: 'Porady: dodawanie i usuwanie elementów ConcurrentDictionary'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,45 +8,43 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d8b1c63f10d1d79c3fec6cad87c9a82f03716c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc4d13e09a91633fac1fcf5bd8ab5b043473bd7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052654"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711314"
 ---
-# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Instrukcje: Dodawanie elementów do kolekcji ConcurrentDictionary i ich usuwanie
-W tym przykładzie pokazano, jak dodawanie, pobieranie, Aktualizuj i usuń elementy z <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Ta klasa kolekcji jest implementacja metodą o bezpiecznych wątkach. Zalecamy użycie go zawsze wtedy, gdy wiele wątków może próbować uzyskać dostęp do elementów jednocześnie.  
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Porady: dodawanie i usuwanie elementów ConcurrentDictionary
+Ten przykład pokazuje, jak dodawać, pobierać, aktualizować i usuwać elementy z <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Ta klasa kolekcji jest bezpieczną implementacją wątku. Zalecamy używanie go zawsze, gdy wiele wątków może próbować uzyskać dostęp do elementów współbieżnie.  
   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602> zapewnia kilka metod jako udogodnienie, które ułatwiają niepotrzebne dla kodu najpierw sprawdzić, czy klucz istnieje przed próbuje dodać lub usunąć dane. Poniższa tabela zawiera listę tych metod jako udogodnienie i opisuje, kiedy ich używać.  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602> udostępnia kilka wygodnych metod, które nie są potrzebne, aby kod mógł najpierw sprawdzić, czy klucz istnieje przed próbą dodania lub usunięcia danych. Poniższa tabela zawiera listę tych wygodnych metod i opisuje, kiedy ich używać.  
   
-|Metoda|Należy użyć, gdy...|  
+|Metoda|Użyj, gdy...|  
 |------------|---------------|  
-|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>|Aby dodać nową wartość dla określonego klucza i, jeśli klucz już istnieje, chcesz zastąpić jej wartość.|  
-|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>|Chcesz pobrać istniejącą wartość dla określonego klucza i, jeśli klucz nie istnieje, chcesz określić pary klucz/wartość.|  
-|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryAdd%2A>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryGetValue%2A> , <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryUpdate%2A> , <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryRemove%2A>|Chcesz dodać, pobieranie, aktualizowanie lub usuwanie pary klucz/wartość, a jeśli klucz już istnieje, lub próba nie powiedzie się z jakiegokolwiek innego powodu, chcesz wykonania określonego działania alternatywnego.|  
+|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>|Chcesz dodać nową wartość dla określonego klucza i, jeśli klucz już istnieje, chcesz zastąpić jego wartość.|  
+|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>|Chcesz pobrać istniejącą wartość dla określonego klucza i, jeśli klucz nie istnieje, chcesz określić parę klucz/wartość.|  
+|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryAdd%2A>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryGetValue%2A> , <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryUpdate%2A> , <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryRemove%2A>|Chcesz dodać, pobrać, zaktualizować lub usunąć parę klucz/wartość i, jeśli klucz już istnieje, lub próba nie powiedzie się z innego powodu, chcesz wykonać jakąś alternatywną akcję.|  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto dwóch <xref:System.Threading.Tasks.Task> wystąpienia, aby dodać niektóre elementy pod kątem <xref:System.Collections.Concurrent.ConcurrentDictionary%602> jednocześnie, a następnie generuje całą zawartość, aby pokazać, że elementy zostały pomyślnie dodane. W przykładzie pokazano również sposób użycia <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>, <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>, i <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> metody dodawania, aktualizacji i pobierania elementów z kolekcji.  
+ Poniższy przykład używa dwóch wystąpień <xref:System.Threading.Tasks.Task>, aby dodać elementy do <xref:System.Collections.Concurrent.ConcurrentDictionary%602> współbieżnie, a następnie wyprowadza całą zawartość, aby pokazać, że elementy zostały dodane pomyślnie. W przykładzie pokazano również, jak za pomocą metod <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>, <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>i <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> dodawać, aktualizować i pobierać elementy z kolekcji.  
   
  [!code-csharp[CDS#16](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds_dictionaryhowto.cs#16)]
  [!code-vb[CDS#16](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/cds_concdict.vb#16)]  
   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602> jest przeznaczona dla scenariuszy wielowątkowych. Nie trzeba stosować blokady w kodzie, aby dodać lub usunąć elementy z kolekcji. Jednak zawsze jest możliwe dla jednego wątku do pobierania wartości, a inny wątek można natychmiast zaktualizować kolekcji, zapewniając tym samym kluczem nową wartość.  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602> jest zaprojektowana dla scenariuszy wielowątkowych. Nie trzeba używać blokad w kodzie, aby dodawać lub usuwać elementy z kolekcji. Jest jednak zawsze możliwe, aby jeden wątek pobierał wartość, a drugi wątek natychmiast zaktualizować kolekcję, dając ten sam klucz nowej wartości.  
   
- Ponadto mimo że wszystkie metody <xref:System.Collections.Concurrent.ConcurrentDictionary%602> są wątkowo, nie wszystkie metody są niepodzielne, w szczególności <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> i <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>. Pełnomocnika użytkownika, który jest przekazywany do tych metod zostanie wywołana poza słownika blokady wewnętrzne (w ten sposób zapobiec blokuje wszystkie wątki w nieznanym kodzie). W związku z tym możliwe jest dla tej sekwencji zdarzenia:  
+ Ponadto mimo że wszystkie metody <xref:System.Collections.Concurrent.ConcurrentDictionary%602> są bezpieczne dla wątków, nie wszystkie metody są niepodzielne, w odróżnieniu od <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> i <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>. Delegat użytkownika, który jest przesyłany do tych metod, jest wywoływany poza wewnętrzną blokadą słownika (dzieje się tak, aby zapobiec blokowaniu wszystkich wątków w nieznanym kodzie). W związku z tym, istnieje możliwość, że ta sekwencja zdarzeń ma być wykonywana:  
   
- 1\) wywołania threadA <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>żadnego elementu znajduje i tworzy nowy element do dodania, wywołując delegata valueFactory.  
+ 1\) wywołań wątku <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>, nie znajduje żadnych elementów i tworzy nowy element do dodania przez wywołanie delegata obiekt valueFactory.  
   
- 2\) wywołania threadB <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> współbieżnie, jego valueFactory obiekt delegowany jest wywoływany dociera wewnętrznego blokady przed threadA i dlatego jego nową parę klucz wartość zostanie dodany do słownika.  
+ 2\) wywołania threadB <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> współbieżnie, jego delegat obiekt valueFactory jest wywoływany i dociera do blokady wewnętrznej przed wątkiem, a więc nowa para klucz-wartość zostanie dodana do słownika.  
   
- 3\) pełnomocnika użytkownika threadA firmy zostanie zakończone i wątku dociera blokady, ale teraz widzi, że element już istnieje.  
+ 3\) delegata użytkownika wątku, a wątek dociera do blokady, ale teraz widzi, że element już istnieje.  
   
- 4\) threadA wykonuje "Get" i zwraca dane, które zostało dodane wcześniej threadB.  
+ 4\) Thread a wykonuje "Get" i zwraca dane, które zostały wcześniej dodane przez threadB.  
   
- W związku z tym, nie jest masz gwarancję, że dane, który jest zwracany przez <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> to te same dane, które zostało utworzone przez valueFactory wątku. Podobne sekwencję zdarzeń mogą wystąpić podczas <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> jest wywoływana.  
+ W związku z tym nie ma gwarancji, że dane zwracane przez <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> są tymi samymi danymi, które zostały utworzone przez obiekt valueFactory wątku. Podobna sekwencja zdarzeń może wystąpić w przypadku wywołania <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>.  
   
 ## <a name="see-also"></a>Zobacz także
 

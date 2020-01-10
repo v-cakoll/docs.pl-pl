@@ -3,13 +3,13 @@ title: Dodaj odwołanie do usługi sieci Web WCF
 description: Przegląd narzędzia Microsoft WCF Web Service Reference Provider, które dodaje funkcje dla projektów .NET Core i ASP.NET Core, podobnie jak Dodaj odwołanie do usługi dla projektów .NET Framework.
 author: dasetser
 ms.date: 10/29/2019
-ms.custom: mvc, seodec18
-ms.openlocfilehash: feecf374e1af48f349495c13ea91b810c6b0a1c3
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.custom: mvc
+ms.openlocfilehash: cdd6b457d289dd7b752c97c5645f0797f24b72aa
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191897"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715685"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Korzystanie z narzędzia dostawcy odwołań usługi sieci Web programu WCF
 
@@ -27,9 +27,9 @@ W ciągu lat wiele deweloperów programu Visual Studio korzystało z wydajności
 > [!NOTE]
 > Opcja **odwołania do usługi sieci Web programu WCF** ma zastosowanie do projektów utworzonych przy użyciu następujących szablonów projektu:
 >
-> - **Visual C#**   >  **.NET Core**
-> - **Visual C#**   >  **.NET Standard**
-> - **Aplikacja internetowa**  **C# programu Visual**  > **Web**  >  ASP.NET Core
+> - **Visual C#**  >  **.NET Core**
+> - **Visual C#**  >  **.NET Standard**
+> - **Aplikacja internetowa**  **C# programu Visual** > **Web** > ASP.NET Core
 
 Korzystając z szablonu projektu **ASP.NET Core aplikacji sieci Web** , w tym artykule opisano sposób dodawania do projektu odwołania do usługi WCF:
 
@@ -45,7 +45,7 @@ Korzystając z szablonu projektu **ASP.NET Core aplikacji sieci Web** , w tym ar
 
 3. Wybierz usługę.
 
-    art. W kreatorze **konfiguracji odwołania usługi sieci Web programu WCF** dostępne są kilka opcji wyszukiwania usług:
+    3a. W kreatorze **konfiguracji odwołania usługi sieci Web programu WCF** dostępne są kilka opcji wyszukiwania usług:
 
      * Aby wyszukać usługi zdefiniowane w bieżącym rozwiązaniu, kliknij przycisk **odkryj** .
      * Aby wyszukać usługi hostowane w określonym adresie, wprowadź adres URL usługi w polu **adres** , a następnie kliknij przycisk **Przejdź** .
@@ -53,7 +53,7 @@ Korzystając z szablonu projektu **ASP.NET Core aplikacji sieci Web** , w tym ar
 
     3b. Wybierz usługę z listy wyników wyszukiwania w polu **usługi** . W razie potrzeby wprowadź przestrzeń nazw dla wygenerowanego kodu w polu tekstowym odpowiadające mu **przestrzeń nazw** .
 
-    3C. Kliknij przycisk **dalej** , aby otworzyć **Opcje typu danych** i strony **Opcje klienta** . Alternatywnie kliknij przycisk **Zakończ** , aby użyć opcji domyślnych.
+    3c. Kliknij przycisk **dalej** , aby otworzyć **Opcje typu danych** i strony **Opcje klienta** . Alternatywnie kliknij przycisk **Zakończ** , aby użyć opcji domyślnych.
 
 4. Formularz **Opcje typu danych** umożliwia uściślenie ustawień konfiguracji wygenerowanych odwołań do usługi:
 

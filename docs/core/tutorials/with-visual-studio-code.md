@@ -3,13 +3,12 @@ title: Wprowadzenie do języka C# i programu Visual Studio Code
 description: Dowiedz się, jak utworzyć i debugować pierwszą aplikację platformy .NET C# Core w programie przy użyciu Visual Studio Code.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.custom: seodec18
-ms.openlocfilehash: 4e283f631f463953185a37bf196a1a9b706eee2b
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: fdf26d67ca06ffb5ae9f8c12aa29819280770d5c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002320"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715321"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Wprowadzenie do języka C# i programu Visual Studio Code
 
@@ -17,7 +16,7 @@ Program .NET Core zapewnia szybką i modularną platformę do tworzenia aplikacj
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-1. Zainstaluj [Visual Studio Code](https://code.visualstudio.com/).
+1. Zainstalowanie programu [Visual Studio Code](https://code.visualstudio.com/).
 2. Zainstaluj [zestaw .NET Core SDK](https://dotnet.microsoft.com/download).
 3. Zainstaluj [ C# rozszerzenie](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) dla Visual Studio Code. Aby uzyskać więcej informacji na temat sposobu instalowania rozszerzeń na Visual Studio Code, zobacz [vs Code rozszerzenia Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).
 
@@ -27,7 +26,7 @@ Zacznijmy od prostego programu "Hello world" na platformie .NET Core:
 
 1. Otwórz projekt:
 
-    - Otwórz Visual Studio Code.
+    - Otwórz program Visual Studio Code.
     - Kliknij ikonę Eksploratora w menu po lewej stronie, a następnie kliknij polecenie **Otwórz folder**.
     - Wybierz pozycję **plik** > **Otwórz folder** z menu głównego, aby otworzyć folder, w którym C# ma się znajdować projekt, a następnie kliknij pozycję **Wybierz folder**. W naszym przykładzie tworzymy folder dla naszego projektu o nazwie *HelloWorld*.
 
@@ -43,7 +42,7 @@ Zacznijmy od prostego programu "Hello world" na platformie .NET Core:
 
 3. Rozpoznaj zasoby kompilacji:
 
-    - W przypadku **platformy .NET Core 1. x**wpisz `dotnet restore`. Uruchomienie `dotnet restore` daje dostęp do wymaganych pakietów .NET Core, które są potrzebne do skompilowania projektu.
+    - W przypadku **platformy .NET Core 1. x**wpisz `dotnet restore`. Uruchomienie `dotnet restore` zapewnia dostęp do wymaganych pakietów .NET Core, które są potrzebne do skompilowania projektu.
 
       ![dotnet restore polecenie](media/with-visual-studio-code/dotnet-restore-command.png)
 
@@ -63,7 +62,7 @@ Możesz również obejrzeć krótki samouczek wideo dotyczący dalszej instalacj
 
     ![Otwórz plik Program.cs](media/with-visual-studio-code/open-program-cs.png)
 
-2. Visual Studio Code powinien monitować o dodanie brakujących zasobów do kompilowania i debugowania aplikacji. Wybierz pozycję **tak**.
+2. Visual Studio Code powinien monitować o dodanie brakujących zasobów do kompilowania i debugowania aplikacji. Wybierz pozycję **Yes**.
 
     ![Monituj o brakujące zasoby](media/with-visual-studio-code/missing-assets.png)
 

@@ -3,13 +3,12 @@ title: Narzędzia globalne platformy .NET Core
 description: Omówienie narzędzi globalnych platformy .NET Core i dostępnych dla nich poleceń interfejs wiersza polecenia platformy .NET Core.
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.custom: seodec18
-ms.openlocfilehash: 116739f80d5157632a8e44a19cbef6ba7971d339
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 665cee64cb92efd16f5528feb656b377f9f3283c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318301"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714160"
 ---
 # <a name="net-core-global-tools-overview"></a>Globalne narzędzia platformy .NET Core — Omówienie
 
@@ -69,7 +68,7 @@ Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 
 Narzędzia globalne można zainstalować w katalogu domyślnym lub w określonej lokalizacji. Domyślne katalogi są następujące:
 
-| Macintosh          | Ścieżka                          |
+| System operacyjny          | Ścieżka                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -85,13 +84,13 @@ W takim przypadku interfejs wiersza polecenia platformy .NET Core nie dodaje aut
 
 Po zainstalowaniu narzędzia można wywołać je za pomocą polecenia. Należy pamiętać, że polecenie nie może być takie samo jak nazwa pakietu.
 
-Jeśli polecenie jest `dotnetsay`, nastąpi wywołanie z:
+Jeśli polecenie jest `dotnetsay`, nastąpi wywołanie:
 
 ```console
 dotnetsay
 ```
 
-Jeśli narzędzie ma być wyświetlane w kontekście monitu `dotnet`, być może zapisały je w taki sposób, że jest on wywoływany jako `dotnet <command>`, na przykład:
+Jeśli narzędzie ma być wyświetlane w kontekście monitu `dotnet`, nastąpiło zapisanie go w taki sposób, że jest on wywoływany jako `dotnet <command>`, na przykład:
 
 ```dotnetcli
 dotnet doc
@@ -108,9 +107,9 @@ dotnet <command> --help
 
 ## <a name="other-cli-commands"></a>Inne polecenia interfejsu CLI
 
-Zestaw .NET Core SDK zawiera inne polecenia, które obsługują narzędzia platformy .NET Core. Użyj dowolnego z poleceń `dotnet tool` z jedną z następujących opcji:
+Zestaw .NET Core SDK zawiera inne polecenia, które obsługują narzędzia platformy .NET Core. Użyj dowolnego z `dotnet tool` poleceń z jedną z następujących opcji:
 
-* `--global` lub `-g` określa, że polecenie ma zastosowanie do narzędzi globalnych na poziomie użytkownika.
+* `--global` lub `-g` określa, że polecenie ma zastosowanie do narzędzi globalnych dostępnych dla użytkownika.
 * `--tool-path` określa niestandardową lokalizację dla narzędzi globalnych.
 
 Aby dowiedzieć się, które polecenia są dostępne dla narzędzi globalnych:

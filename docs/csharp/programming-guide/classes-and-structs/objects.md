@@ -1,17 +1,16 @@
 ---
 title: Obiekty — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 1b3ceb2671a4c21f1df89599c9b8c0bc107a7435
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 95735d5032a8896570918b991f12b853af88fb68
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419269"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705486"
 ---
 # <a name="objects-c-programming-guide"></a>Obiekty (Przewodnik programowania w języku C#)
 Definicja klasy lub struktury jest taka sama jak w przypadku planu, który określa, jaki typ może być wykonywany. Obiekt jest w zasadzie blok pamięci, który został przydzielony i skonfigurowany zgodnie z planem. Program może utworzyć wiele obiektów tej samej klasy. Obiekty są również nazywane wystąpieniami i mogą być przechowywane w zmiennej nazwanej lub w tablicy lub kolekcji. Kod klienta to kod, który używa tych zmiennych do wywoływania metod i uzyskiwania dostępu do właściwości publicznych obiektu. W języku zorientowanym obiektowo, takim jak C#, typowy program składa się z wielu obiektów, które współpracują dynamicznie.  
@@ -46,7 +45,7 @@ Definicja klasy lub struktury jest taka sama jak w przypadku planu, który okre�
   
  <xref:System.ValueType?displayProperty=nameWithType> implementacja `Equals` używa odbicia, ponieważ musi być w stanie określić, jakie pola znajdują się w dowolnej strukturze. Podczas tworzenia własnych struktur Zastąp metodę `Equals`, aby zapewnić wydajny algorytm równości, który jest specyficzny dla danego typu.  
   
-- Aby określić, czy wartości pól w dwóch wystąpieniach klasy są równe, może być możliwe użycie metody <xref:System.Object.Equals%2A> lub [operatora = =](../../language-reference/operators/equality-operators.md#equality-operator-). Jednak należy ich używać tylko wtedy, gdy klasa została zastąpiona lub przeciążona, aby zapewnić niestandardową definicję "Równość" dla obiektów tego typu. Klasa może również zaimplementować interfejs <xref:System.IEquatable%601> lub interfejs <xref:System.Collections.Generic.IEqualityComparer%601>. Oba interfejsy zapewniają metody, których można użyć do testowania równości wartości. Podczas projektowania własnych klas, które zastępują `Equals`, należy postępować zgodnie z wytycznymi opisanymi w temacie [How to: define Value równość dla typu](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md) i <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
+- Aby określić, czy wartości pól w dwóch wystąpieniach klasy są równe, może być możliwe użycie metody <xref:System.Object.Equals%2A> lub [operatora = =](../../language-reference/operators/equality-operators.md#equality-operator-). Jednak należy ich używać tylko wtedy, gdy klasa została zastąpiona lub przeciążona, aby zapewnić niestandardową definicję "Równość" dla obiektów tego typu. Klasa może również zaimplementować interfejs <xref:System.IEquatable%601> lub interfejs <xref:System.Collections.Generic.IEqualityComparer%601>. Oba interfejsy zapewniają metody, których można użyć do testowania równości wartości. Podczas projektowania własnych klas, które zastępują `Equals`, należy postępować zgodnie z wytycznymi opisanymi w temacie [jak zdefiniować równość wartości dla typu](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md) i <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  Informacje dodatkowe:  
@@ -68,5 +67,5 @@ Definicja klasy lub struktury jest taka sama jak w przypadku planu, który okre�
 - [Dziedziczenie](./inheritance.md)
 - [class](../../language-reference/keywords/class.md)
 - [struct](../../language-reference/keywords/struct.md)
-- [Operator new](../../language-reference/operators/new-operator.md)
+- [new, operator](../../language-reference/operators/new-operator.md)
 - [System typu wspólnego](../../../standard/base-types/common-type-system.md)

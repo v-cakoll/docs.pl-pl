@@ -1,17 +1,16 @@
 ---
 title: Typy ogólne i atrybuty — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], attributes
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
-ms.openlocfilehash: 99a24a7069145dfad5ce6c9c91f2a8653eb9a224
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 47bf4e8f07a8b6778db8fa675d745d362dc10d7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589642"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75703029"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>Typy ogólne i atrybuty (Przewodnik programowania w języku C#)
 Atrybuty mogą być stosowane do typów ogólnych w taki sam sposób jak typy nieogólne. Aby uzyskać więcej informacji na temat stosowania atrybutów, zobacz [atrybuty](../concepts/attributes/index.md).  
@@ -38,7 +37,7 @@ Atrybuty mogą być stosowane do typów ogólnych w taki sam sposób jak typy ni
   
  [!code-csharp[csProgGuideGenerics#52](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#52)]  
   
- Typ ogólny nie może dziedziczyć <xref:System.Attribute>po elemencie:  
+ Typ ogólny nie może dziedziczyć po <xref:System.Attribute>:  
   
  [!code-csharp[csProgGuideGenerics#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#53)]  
   

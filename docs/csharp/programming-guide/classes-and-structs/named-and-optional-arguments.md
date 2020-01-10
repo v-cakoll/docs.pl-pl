@@ -1,6 +1,5 @@
 ---
 title: Argumenty nazwane i opcjonalne — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 30475b637202d3b614ac968897e467956bc78646
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6afa8a2bd2dfee8d7c36b58342036d18241317a8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970505"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714799"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumenty nazwane i opcjonalne (Przewodnik programowania w języku C#)
 C#4 wprowadza argumenty nazwane i opcjonalne. *Nazwane argumenty* umożliwiają określenie argumentu dla określonego parametru przez skojarzenie argumentu z nazwą parametru, a nie z pozycją parametru na liście parametrów. *Argumenty opcjonalne* umożliwiają pominięcie argumentów dla niektórych parametrów. Obie techniki mogą być używane z metodami, indeksatorami, konstruktorami i delegatami.  
@@ -70,7 +69,7 @@ C#4 wprowadza argumenty nazwane i opcjonalne. *Nazwane argumenty* umożliwiają 
   
 - wyrażenie stałe;  
   
-- wyrażenie `new ValType()`, gdzie `ValType` jest typem wartości, na przykład [wyliczeniem](../../language-reference/keywords/enum.md) lub [strukturą](./structs.md);  
+- wyrażenie `new ValType()`, gdzie `ValType` jest typem wartości, na przykład [wyliczeniem](../../language-reference/builtin-types/enum.md) lub [strukturą](structs.md);  
   
 - wyrażenie [domyślne (ValType)](../../language-reference/operators/default.md), gdzie `ValType` jest typem wartości.  
   
@@ -113,7 +112,7 @@ C#4 wprowadza argumenty nazwane i opcjonalne. *Nazwane argumenty* umożliwiają 
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- Aby uzyskać więcej informacji i przykładów, zobacz [jak używać argumentów nazwanych i opcjonalnych w programowaniu pakietu Office](./how-to-use-named-and-optional-arguments-in-office-programming.md) oraz [jak: uzyskiwać dostęp do obiektów międzyoperacyjności pakietu Office za pomocą funkcji wizualnych C# ](../interop/how-to-access-office-onterop-objects.md).  
+ Aby uzyskać więcej informacji i przykładów, zobacz [jak używać argumentów nazwanych i opcjonalnych w programowaniu pakietu Office](./how-to-use-named-and-optional-arguments-in-office-programming.md) oraz [jak uzyskiwać dostęp do obiektów C# międzyoperacyjności pakietu Office za pomocą funkcji](../interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Rozpoznanie przeciążenia  
  Użycie argumentów nazwanych i opcjonalnych wpływa na rozpoznawanie przeciążenia w następujący sposób:  
@@ -129,7 +128,7 @@ C#4 wprowadza argumenty nazwane i opcjonalne. *Nazwane argumenty* umożliwiają 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: użycie argumentów nazwanych i opcjonalnych w programowaniu pakietu Office](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Jak używać argumentów nazwanych i opcjonalnych w programowaniu pakietu Office](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [Używanie typu dynamicznego](../types/using-type-dynamic.md)
 - [Używanie konstruktorów](./using-constructors.md)
 - [Używanie indeksatorów](../indexers/using-indexers.md)

@@ -1,6 +1,5 @@
 ---
 title: C# odwołanie do
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - into_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
-ms.openlocfilehash: ccb1463db51510d275b7053955a0257bd4fe621e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f0f5ff1e56a65e83385f814df2fadd957f53561e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422712"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713625"
 ---
 # <a name="into-c-reference"></a>into (odwołanie w C#)
 
@@ -25,7 +24,7 @@ Poniższy przykład ilustruje użycie słowa kluczowego `into`, aby włączyć t
 
 [!code-csharp[cscsrefQueryKeywords#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Into.cs#18)]
 
-Użycie `into` w klauzuli `group` jest konieczne tylko wtedy, gdy chcesz wykonać dodatkowe operacje zapytań dla każdej grupy. Aby uzyskać więcej informacji, zobacz [klauzula](group-clause.md)Group.
+Użycie `into` w klauzuli `group` jest konieczne tylko wtedy, gdy chcesz wykonać dodatkowe operacje zapytań dla każdej grupy. Aby uzyskać więcej informacji, zobacz artykuł [kluzula group](group-clause.md).
 
 Aby zapoznać się z przykładem użycia `into` w klauzuli `join`, zobacz [Klauzula join](join-clause.md).
 

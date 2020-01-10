@@ -1,6 +1,5 @@
 ---
 title: <exception> — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - exception
@@ -9,14 +8,14 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: 4e4204996c006ce6e943c9a09661001b0e0c2a14
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 65c146684b7fd83a814f4b27d21efdd25c4da950
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523474"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711782"
 ---
-# <a name="exception-c-programming-guide"></a>\<exception > (C# Przewodnik programowania)
+# <a name="exception-c-programming-guide"></a>\<> wyjątków (C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -33,7 +32,7 @@ ms.locfileid: "72523474"
  Opis wyjątku.  
   
 ## <a name="remarks"></a>Uwagi  
- Tag \<exception > pozwala określić, które wyjątki mogą być zgłaszane. Ten tag można zastosować do definicji metod, właściwości, zdarzeń i indeksatorów.  
+ Tag \<Exception > pozwala określić, które wyjątki mogą być zgłaszane. Ten tag można zastosować do definicji metod, właściwości, zdarzeń i indeksatorów.  
   
  Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   

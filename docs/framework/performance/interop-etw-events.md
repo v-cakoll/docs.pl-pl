@@ -5,14 +5,12 @@ helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 80fd1f7487dbe3925b875e728eaeddac86927ad4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974929"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716015"
 ---
 # <a name="interop-etw-events"></a>Zdarzenia ETW międzyoperacyjności
 Zdarzenia międzyoperacyjności przechwytują informacje o generacji i buforowaniu klasy języka pośredniego firmy Microsoft (MSIL).  
@@ -35,7 +33,7 @@ W poniższej tabeli przedstawiono słowo kluczowe i poziom. (Aby uzyskać więce
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|ModuleID|win: UInt16|Identyfikator modułu.|  
+|ModuleID|Win: UInt16|Identyfikator modułu.|  
 |StubMethodID|win: UInt64|Identyfikator metody zastępczej.|  
 |StubFlags|win: UInt64|Flagi dla elementu zastępczego:<br /><br /> 0x1 — odwrotna współdziałanie.<br /><br /> 0x2 — międzyoperacyjność COM.<br /><br /> 0x4-stub wygenerowane przez program NGen. exe.<br /><br /> 0x8 — delegat.<br /><br /> 0x10 — argument zmiennej.<br /><br /> 0x20 — niezarządzany wywoływany.|  
 |ManagedInteropMethodToken|win: UInt32|Token dla zarządzanej metody międzyoperacyjnego.|  
@@ -45,9 +43,9 @@ W poniższej tabeli przedstawiono słowo kluczowe i poziom. (Aby uzyskać więce
 |NativeMethodSignature|win: UnicodeString|Podpis metody natywnej.|  
 |StubMethodSignature|win: UnicodeString|Sygnatura metody zastępczej.|  
 |StubMethodILCode|win: UnicodeString|Kod MSIL dla metody zastępczej.|  
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
-## <a name="ilstubcachehit-event"></a>Zdarzenie ILStubCacheHit  
+## <a name="ilstubcachehit-event"></a>ILStubCacheHit Event  
 
 W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
   
@@ -65,13 +63,13 @@ W poniższej tabeli przedstawiono słowo kluczowe i poziom.
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|ModuleID|win: UInt16|Identyfikator modułu.|  
+|ModuleID|Win: UInt16|Identyfikator modułu.|  
 |StubMethodID|win: UInt64|Identyfikator metody zastępczej.|  
 |ManagedInteropMethodToken|win: UInt32|Token dla zarządzanej metody międzyoperacyjnego.|  
 |ManagedInteropMethodNameSpace|win: UnicodeString|Przestrzeń nazw zarządzanej metody międzyoperacyjnego.|  
 |ManagedInteropMethodName|win: UnicodeString|Nazwa zarządzanej metody międzyoperacyjnego.|  
 |ManagedInteropMethodSignature|win: UnicodeString|Sygnatura zarządzanej metody międzyoperacyjnego.|  
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
 ## <a name="see-also"></a>Zobacz także
 

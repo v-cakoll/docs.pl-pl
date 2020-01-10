@@ -1,18 +1,17 @@
 ---
 title: Funkcje anonimowe C# — Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], as anonymous functions
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: 078596dcbfd907be53cae2ab3e7dcaa9e311c3f4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: cfb0190ee263e65e8130a8925f76357a382eafa3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588818"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712003"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Funkcje anonimoweC# (Przewodnik programowania)
 
@@ -36,5 +35,5 @@ Aby uzyskać więcej informacji, zobacz sekcję [wyrażenia funkcji anonimowej](
 
 - [Instrukcje, wyrażenia i operatory](./index.md)
 - [Wyrażenia lambda](./lambda-expressions.md)
-- [Delegaty](../delegates/index.md)
+- [Delegaci](../delegates/index.md)
 - [Drzewa wyrażeń (C#)](../concepts/expression-trees/index.md)

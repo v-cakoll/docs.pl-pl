@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Odczyt i zapis w plikach w izolowanym magazynie'
+title: 'Porady: odczyt i zapis w plikach w izolowanym magazynie'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,20 +16,18 @@ helpviewer_keywords:
 - data stores, reading and writing to files
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 59a89aa354941b7ff22a125a980c2d9c75ac37ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1ea65b0b8280faf51595b2fe9edcbf17eaabd8f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947202"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706689"
 ---
-# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Instrukcje: Odczyt i zapis w plikach w izolowanym magazynie
-Odczyt i zapis do pliku w izolowanym magazynie, użyj <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> obiektu z czytnik strumienia (<xref:System.IO.StreamReader> obiekt) lub zapisywania do strumienia (<xref:System.IO.StreamWriter> obiektu).  
+# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Porady: odczyt i zapis w plikach w izolowanym magazynie
+Aby odczytywać lub zapisywać dane w pliku w izolowanym magazynie, użyj obiektu <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> z czytnikiem strumienia (obiektem<xref:System.IO.StreamReader>) lub składnikiem zapisywania strumienia (<xref:System.IO.StreamWriter> Object).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod uzyskuje izolowanym magazynie i sprawdza, czy plik o nazwie TestStore.txt istnieje w magazynie. Jeśli nie istnieje, tworzy plik i zapisuje "Hello wydzielonej pamięci masowej" do pliku. Jeśli istnieje już TestStore.txt, przykładowy kod odczytuje z pliku.  
+ Poniższy przykład kodu uzyskuje izolowany magazyn i sprawdza, czy plik o nazwie TestStore. txt istnieje w sklepie. Jeśli nie istnieje, tworzy plik i zapisuje "Hello izolowany magazyn" do pliku. Jeśli TestStore. txt już istnieje, przykładowy kod odczytuje z pliku.  
   
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]
  [!code-vb[Conceptual.IsolatedStorage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source5.vb#5)]  

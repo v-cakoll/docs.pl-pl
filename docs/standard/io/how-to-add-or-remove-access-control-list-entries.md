@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie lub usuwanie pozycji listy kontroli dostępu (tylko program .NET Framework)'
+title: 'Instrukcje: Dodawanie lub usuwanie pozycji listy Access Control (tylko .NET Framework)'
 ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,36 +13,34 @@ helpviewer_keywords:
 - I/O [.NET Framework], access control list entries
 - access control lists [.NET Framework]
 ms.assetid: 53758b39-bd9b-4640-bb04-cad5ed8d0abf
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 351d8325cc0fc1a1b551b6d513cad02f1291daab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f41c518b8732adff95593cab29d7085adcc9ab3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752063"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708131"
 ---
-# <a name="how-to-add-or-remove-access-control-list-entries-net-framework-only"></a>Instrukcje: Dodawanie lub usuwanie pozycji listy kontroli dostępu (tylko program .NET Framework)
-Aby dodać lub usunąć wpisy listy kontroli dostępu (ACL) do lub z pliku lub katalogu, Uzyskaj <xref:System.Security.AccessControl.FileSecurity> lub <xref:System.Security.AccessControl.DirectorySecurity> obiekt z pliku lub katalogu. Zmodyfikuj obiekt, a następnie zastosować je do pliku lub katalogu.  
+# <a name="how-to-add-or-remove-access-control-list-entries-net-framework-only"></a>Instrukcje: Dodawanie lub usuwanie pozycji listy Access Control (tylko .NET Framework)
+Aby dodać lub usunąć wpisy listy Access Control (ACL) do lub z pliku lub katalogu, Pobierz obiekt <xref:System.Security.AccessControl.FileSecurity> lub <xref:System.Security.AccessControl.DirectorySecurity> z pliku lub katalogu. Zmodyfikuj obiekt, a następnie Zastosuj go z powrotem do pliku lub katalogu.  
   
-## <a name="add-or-remove-an-acl-entry-from-a-file"></a>Dodawanie lub usuwanie pozycji listy ACL z pliku  
+## <a name="add-or-remove-an-acl-entry-from-a-file"></a>Dodawanie lub usuwanie wpisu listy ACL z pliku  
   
-1. Wywołaj <xref:System.IO.File.GetAccessControl%2A?displayProperty=nameWithType> metodę, aby uzyskać <xref:System.Security.AccessControl.FileSecurity> obiekt, który zawiera bieżące wpisy listy ACL w pliku.  
+1. Wywołaj metodę <xref:System.IO.File.GetAccessControl%2A?displayProperty=nameWithType>, aby uzyskać obiekt <xref:System.Security.AccessControl.FileSecurity> zawierający bieżące wpisy listy ACL pliku.  
   
-2. Dodawanie lub usuwanie pozycji listy ACL z <xref:System.Security.AccessControl.FileSecurity> obiekt zwrócony z kroku 1.  
+2. Dodaj lub Usuń wpisy listy ACL z obiektu <xref:System.Security.AccessControl.FileSecurity> zwróconego z kroku 1.  
   
-3. Aby zastosować zmiany, należy przekazać <xref:System.Security.AccessControl.FileSecurity> obiekt <xref:System.IO.File.SetAccessControl%2A?displayProperty=nameWithType> metody.  
+3. Aby zastosować zmiany, przekaż obiekt <xref:System.Security.AccessControl.FileSecurity> do metody <xref:System.IO.File.SetAccessControl%2A?displayProperty=nameWithType>.  
   
-## <a name="add-or-remove-an-acl-entry-from-a-directory"></a>Dodawanie lub usuwanie pozycji listy ACL z katalogu  
+## <a name="add-or-remove-an-acl-entry-from-a-directory"></a>Dodawanie lub usuwanie wpisu listy ACL z katalogu  
   
-1. Wywołaj <xref:System.IO.Directory.GetAccessControl%2A?displayProperty=nameWithType> metodę, aby uzyskać <xref:System.Security.AccessControl.DirectorySecurity> obiekt, który zawiera bieżące wpisy listy ACL w katalogu.  
+1. Wywołaj metodę <xref:System.IO.Directory.GetAccessControl%2A?displayProperty=nameWithType>, aby uzyskać obiekt <xref:System.Security.AccessControl.DirectorySecurity> zawierający bieżące wpisy listy ACL katalogu.  
   
-2. Dodawanie lub usuwanie pozycji listy ACL z <xref:System.Security.AccessControl.DirectorySecurity> obiekt zwrócony z kroku 1.  
+2. Dodaj lub Usuń wpisy listy ACL z obiektu <xref:System.Security.AccessControl.DirectorySecurity> zwróconego z kroku 1.  
   
-3. Aby zastosować zmiany, należy przekazać <xref:System.Security.AccessControl.DirectorySecurity> obiekt <xref:System.IO.Directory.SetAccessControl%2A?displayProperty=nameWithType> metody.  
+3. Aby zastosować zmiany, przekaż obiekt <xref:System.Security.AccessControl.DirectorySecurity> do metody <xref:System.IO.Directory.SetAccessControl%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Przykład  
- Aby uruchomić ten przykład, należy użyć prawidłowe konto użytkownika lub grupy. W przykładzie użyto <xref:System.IO.File> obiektu. Użyj tej samej procedury, aby uzyskać <xref:System.IO.FileInfo>, <xref:System.IO.Directory>, i <xref:System.IO.DirectoryInfo> klasy.
+ Do uruchomienia tego przykładu należy użyć prawidłowego konta użytkownika lub grupy. W przykładzie zastosowano obiekt <xref:System.IO.File>. Użyj tej samej procedury dla klas <xref:System.IO.FileInfo>, <xref:System.IO.Directory>i <xref:System.IO.DirectoryInfo>.
 
  [!code-csharp[IO.File.GetAccessControl-SetAccessControl#1](../../../samples/snippets/csharp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/CS/sample.cs#1)]
  [!code-vb[IO.File.GetAccessControl-SetAccessControl#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/VB/sample.vb#1)]  

@@ -1,18 +1,17 @@
 ---
 title: '#undef — C# odwołanie'
-ms.custom: seodec18
 ms.date: 06/30/2018
 f1_keywords:
 - '#undef'
 helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
-ms.openlocfilehash: fdf22e90be766e87e823a7f8cc27ea00c17d2bb5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 21923412aa178c3b86e94a54bd911130e48e4deb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605589"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712445"
 ---
 # <a name="undef-c-reference"></a>#undef (odwołanie w C#)
 Dyrektywa `#undef` umożliwia anulowanie definicji symbolu w taki sposób, że w przypadku użycia symbolu jako wyrażenia w dyrektywie [#if](./preprocessor-if.md) zostanie zwrócona wartość `false`.  

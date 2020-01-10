@@ -1,28 +1,27 @@
 ---
-title: w - C# odwołania
-ms.custom: seodec18
+title: C# odwołanie w odwołaniu
 ms.date: 02/06/2018
 f1_keywords:
 - in
 - in_CSharpKeyword
 helpviewer_keywords:
 - in keyword [C#]
-ms.openlocfilehash: 812390554b460579305815147cf0aec14c07ecd9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 251a330ec327366ce458dd8066061365ab0e1dad
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661415"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713457"
 ---
 # <a name="in-c-reference"></a>in (odwołanie w C#)
 
-`in` — Słowo kluczowe jest używana w kontekstach cztery:  
+Słowo kluczowe `in` jest używane w czterech kontekstach:  
   
-- [Parametry typu ogólnego](in-generic-modifier.md) w interfejsach ogólnych i delegatach.
-- Jako [modyfikator parametru](in-parameter-modifier.md), pozwalającej można przekazać argument do metody przez odwołanie, a nie przez wartość.
-- [Instrukcja foreach](foreach-in.md) instrukcji.
-- [z klauzul](from-clause.md) wyrażeniach zapytań LINQ.
-- [Dołącz do klauzul](join-clause.md) wyrażeniach zapytań LINQ.
+- [parametry typu ogólnego](in-generic-modifier.md) w interfejsach ogólnych i delegatach.
+- Jako [modyfikator parametru](in-parameter-modifier.md), który umożliwia przekazywanie argumentu do metody przez odwołanie, a nie przez wartość.
+- instrukcja [foreach](foreach-in.md) .
+- [klauzule from](from-clause.md) w wyrażeniach zapytań LINQ.
+- [klauzule Join](join-clause.md) w wyrażeniach zapytań LINQ.
   
 ## <a name="see-also"></a>Zobacz także
 

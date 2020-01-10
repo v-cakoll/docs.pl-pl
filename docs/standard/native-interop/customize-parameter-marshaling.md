@@ -1,71 +1,69 @@
 ---
-title: Dostosowywanie parametr marshaling — .NET
-description: Dowiedz się, jak dostosować, jak .NET kieruje parametry do natywną reprezentację.
-author: jkoritzinsky
-ms.author: jekoritz
+title: Dostosowywanie organizowania parametrów — .NET
+description: Dowiedz się, jak dostosować sposób organizowania parametrów przez platformę .NET do natywnej reprezentacji.
 ms.date: 01/18/2019
-ms.openlocfilehash: 877eb00c18c9108fe6bcfb50104ff5ed813e85f3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 36fb8c105a8836d77b862095a616de3ba641073c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065469"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706364"
 ---
-# <a name="customizing-parameter-marshaling"></a>Dostosowywanie przekazywanie parametru
+# <a name="customizing-parameter-marshaling"></a>Dostosowywanie marshalingu parametrów
 
-Gdy zachowanie marshalingu parametru domyślne środowisko uruchomieniowe platformy .NET nie robi, co chcesz zrobić, użyj służy <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> atrybutu, aby dostosować, jak parametry są przekazywane.
+Gdy domyślne zachowanie podczas organizowania parametrów środowiska uruchomieniowego platformy .NET nie wykonuje tego zadania, można użyć atrybutu <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>, aby dostosować sposób organizowania parametrów.
 
-## <a name="customizing-string-parameters"></a>Dostosowywanie parametrów
+## <a name="customizing-string-parameters"></a>Dostosowywanie parametrów ciągu
 
-.NET zawiera różne formaty ciągów organizowania. Te metody są dzielone na różne sekcje na ciągi stylu C i skoncentrowane na Windows formaty ciągu.
+Platforma .NET ma różne formaty do organizowania ciągów. Te metody są podzielone na różne sekcje w ciągach w stylu C i w formatach ciągów skoncentrowanych na systemie Windows.
 
-### <a name="c-style-strings"></a>Ciągi stylu C
+### <a name="c-style-strings"></a>Ciągi w stylu języka C
 
-Każda z tych formatów przekazuje ciąg zakończony wartością null do kodu natywnego. Różnią się one kodowanie ciągu natywnych.
+Każdy z tych formatów przekazuje ciąg zakończony znakiem null do kodu natywnego. Różnią się one od kodowania ciągu macierzystego.
 
-| `System.Runtime.InteropServices.UnmanagedType` Wartość | Kodowanie |
+| wartość `System.Runtime.InteropServices.UnmanagedType` | Kodowanie |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
 | LPUTF8Str | UTF-8 | 
 | LPWStr | UTF-16 |
 | LPTStr | UTF-16 |
 
-<xref:System.Runtime.InteropServices.UnmanagedType.VBByRefStr?displayProperty=nameWithType> Format jest nieco inny. Podobnie jak `LPWStr`, kieruje go ciągu na ciąg stylu C natywnych zakodowane w formacie UTF-16. Jednak ma zarządzanego podpisu, należy przekazać w ciągu przez odwołanie i pasujący podpis natywnych przenosi ciąg przez wartość. Wykonywania tego rozróżnienia pozwala na używanie natywnych interfejsów API, przyjmuje ciąg przez wartość, która modyfikuje go w miejscu bez konieczności używania `StringBuilder`. Zaleca się ręcznie przy użyciu tego formatu, ponieważ jest podatny na dezorientację z niezgodną sygnaturami natywne i zarządzane.
+Format <xref:System.Runtime.InteropServices.UnmanagedType.VBByRefStr?displayProperty=nameWithType> jest nieco inny. Podobnie jak `LPWStr`, organizowane jest ciąg do natywnego ciągu w stylu C zakodowanego w UTF-16. Jednak sygnatura zarządzana przekazuje ciąg przez odwołanie, a pasujący podpis macierzysty przyjmuje ciąg przez wartość. To rozróżnienie umożliwia użycie natywnego interfejsu API, który przyjmuje ciąg przez wartość i modyfikuje go w miejscu bez konieczności używania `StringBuilder`. Zalecamy ręczne korzystanie z tego formatu, ponieważ jest podatny na pomyłkę w przypadku niezgodności z niezgodnymi z nimi i zarządzanymi podpisami.
 
-### <a name="windows-centric-string-formats"></a>Formaty ciągu skoncentrowane na Windows
+### <a name="windows-centric-string-formats"></a>Formaty ciągu skoncentrowane na systemie Windows
 
-Podczas interakcji z interfejsem COM lub OLE, prawdopodobnie okaże, funkcje natywne pobierają ciągi jako `BSTR` argumentów. Możesz użyć <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> niezarządzany typ, aby kierować ciąg w kodowaniu `BSTR`.
+W przypadku korzystania z interfejsów COM lub OLE prawdopodobnie okaże się, że funkcje natywne przyjmują ciągi jako argumenty `BSTR`. Możesz użyć niezarządzanego typu <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType>, aby zorganizować ciąg jako `BSTR`.
 
-Jeśli masz interakcje interfejsów API WinRT, możesz użyć <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> format, aby kierować ciąg w kodowaniu `HSTRING`.
+Jeśli korzystasz z interfejsów API WinRT, możesz użyć formatu <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType>, aby zorganizować ciąg jako `HSTRING`.
 
-## <a name="customizing-array-parameters"></a>Dostosowywanie tablicy parametrów
+## <a name="customizing-array-parameters"></a>Dostosowywanie parametrów tablicy
 
-.NET zawiera również wiele sposobów, aby marshal tablicy parametrów. Jeśli w przypadku wywoływania interfejsu API, który przyjmuje tablicy stylu C, należy użyć <xref:System.Runtime.InteropServices.UnmanagedType.LPArray?displayProperty=nameWithType> niezarządzanego typu. Jeśli wartości w tablicy jest konieczne przekazywanie niestandardowych, można użyć <xref:System.Runtime.InteropServices.MarshalAsAttribute.ArraySubType> na `[MarshalAs]` atrybutu dla tego.
+Platforma .NET udostępnia również wiele sposobów organizowania parametrów tablicowych. Jeśli wywołujesz interfejs API, który pobiera tablicę w stylu C, użyj <xref:System.Runtime.InteropServices.UnmanagedType.LPArray?displayProperty=nameWithType> typu niezarządzanego. Jeśli wartości w tablicy wymagają dostosowanego kierowania, można użyć pola <xref:System.Runtime.InteropServices.MarshalAsAttribute.ArraySubType> w atrybucie `[MarshalAs]` dla tego elementu.
 
-Jeśli używasz interfejsów API modelu COM, prawdopodobnie będziesz mieć do organizowania parametry tablicy jako `SAFEARRAY*`s. Aby to zrobić, można użyć <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> niezarządzanego typu. Domyślny typ elementów `SAFEARRAY` będą widoczne w tabeli na [dostosowywanie `object` pola](./customize-struct-marshaling.md#marshaling-systemobjects). Możesz użyć <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> i <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> typu pola, aby dostosować element dokładnie `SAFEARRAY`.
+Jeśli używasz interfejsów API modelu COM, prawdopodobnie trzeba będzie zorganizować parametry tablicy jako `SAFEARRAY*`s. W tym celu można użyć typu niezarządzanego <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>. Domyślny typ elementów `SAFEARRAY` można zobaczyć w tabeli na temat [dostosowywania pól `object`](./customize-struct-marshaling.md#marshaling-systemobjects). Można użyć pól <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> i <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> do dostosowania dokładnego typu elementu `SAFEARRAY`.
 
-## <a name="customizing-boolean-or-decimal-parameters"></a>Dostosowywanie parametrów logiczną lub dziesiętną
+## <a name="customizing-boolean-or-decimal-parameters"></a>Dostosowywanie parametrów logicznych lub dziesiętnych
 
-Instrukcje dotyczące marshaling logiczną lub dziesiętną parametrów, zobacz [Dostosowywanie struktury marshaling](customize-struct-marshaling.md).
+Aby uzyskać informacje na temat organizowania parametrów logicznych lub dziesiętnych, zobacz [Dostosowywanie organizowania struktury](customize-struct-marshaling.md).
 
-## <a name="customizing-object-parameters-windows-only"></a>Dostosowywanie parametrów obiektu (tylko Windows)
+## <a name="customizing-object-parameters-windows-only"></a>Dostosowywanie parametrów obiektu (tylko system Windows)
 
-W Windows środowisko uruchomieniowe platformy .NET udostępnia wiele różnych sposobów, aby zorganizować parametrów obiektu do kodu macierzystego.
+W systemie Windows środowisko uruchomieniowe platformy .NET udostępnia wiele różnych sposobów organizowania parametrów obiektów w kodzie natywnym.
 
-### <a name="marshaling-as-specific-com-interfaces"></a>Marshaling jako określonych interfejsów COM
+### <a name="marshaling-as-specific-com-interfaces"></a>Kierowanie jako określonych interfejsów COM
 
-Jeśli Twój interfejs API pobiera wskaźnik do obiektu COM, można użyć dowolnej z następujących `UnmanagedType` formatuje na `object`-wpisane parametru, aby poinformować .NET do organizowania jako tych określonych interfejsów:
+Jeśli Twój interfejs API przyjmuje wskaźnik do obiektu COM, można użyć dowolnego z poniższych `UnmanagedType` formatów na parametrze typu `object`, aby poinformować platformę .NET, aby mogli zorganizować się jako te określone interfejsy:
 
 - `IUnknown`
 - `IDispatch`
 - `IInspectable`
 
-Ponadto jeśli Twój typ jest oznaczony `[ComVisible(true)]` lub w przypadku kierowania `object` typu, można użyć <xref:System.Runtime.InteropServices.UnmanagedType.Interface?displayProperty=nameWithType> format marshalingu obiektu jako wywołalne opakowanie COM dla widoku COM tego typu.
+Ponadto, jeśli typ jest oznaczony `[ComVisible(true)]` lub organizowane jest typ `object`, można użyć formatu <xref:System.Runtime.InteropServices.UnmanagedType.Interface?displayProperty=nameWithType> do organizowania obiektu jako otoki COM dla widoku COM dla danego typu.
 
-### <a name="marshaling-to-a-variant"></a>Skierowanie do `VARIANT`
+### <a name="marshaling-to-a-variant"></a>Kierowanie do `VARIANT`
 
-Jeśli natywnego interfejsu API systemu Win32 `VARIANT`, możesz użyć <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> sformatować w swojej `object` parametru do organizowania obiektów jako `VARIANT`s. Zajrzyj do dokumentacji na [dostosowywanie `object` pola](customize-struct-marshaling.md#marshaling-systemobjects) mapowania między typami .NET i `VARIANT` typów.
+Jeśli natywny interfejs API przyjmuje `VARIANT`Win32, można użyć formatu <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> na `object` parametr, aby zorganizować obiekty jako `VARIANT`s. Zapoznaj się z dokumentacją dotyczącą [dostosowywania `object` pól](customize-struct-marshaling.md#marshaling-systemobjects) , aby uzyskać mapowanie między typami .net a typami `VARIANT`.
 
-### <a name="custom-marshalers"></a>Niestandardowi
+### <a name="custom-marshalers"></a>Organizatorzy niestandardowi
 
-Jeśli chcesz wyświetlić macierzysty interfejs COM do innego typu zarządzanego, możesz użyć `UnmanagedType.CustomMarshaler` format i implementację <xref:System.Runtime.InteropServices.ICustomMarshaler> zapewnienie własnego niestandardowego organizowania kodu.
+Jeśli chcesz utworzyć projekt natywnego interfejsu COM w innym typie zarządzanym, możesz użyć formatu `UnmanagedType.CustomMarshaler` i implementacji <xref:System.Runtime.InteropServices.ICustomMarshaler>, aby zapewnić własny, niestandardowy kod do organizowania.

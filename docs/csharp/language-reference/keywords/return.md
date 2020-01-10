@@ -1,6 +1,5 @@
 ---
-title: Return, instrukcja - C# odwołania
-ms.custom: seodec18
+title: Return — instrukcja C# -Reference
 ms.date: 07/20/2015
 f1_keywords:
 - return_CSharpKeyword
@@ -9,22 +8,22 @@ helpviewer_keywords:
 - return statement [C#]
 - return keyword [C#]
 ms.assetid: 6da6e152-5b58-4448-8f3f-470dd0617ecd
-ms.openlocfilehash: a845ce257bf7f0cf0e64d6815b2278f6cec946e7
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 116bad7a1f9f61311d287c575b52547d63c9e1c0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661612"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713134"
 ---
 # <a name="return-c-reference"></a>return (odwołanie w C#)
 
-`return` Kończy wykonywanie metody, w którym występuje i zwraca kontrolę do metody wywołującej. Może również zwracać wartość opcjonalna. Jeśli metoda jest `void` typu `return` instrukcji, można pominąć.
+Instrukcja `return` przerywa wykonywanie metody, w której występuje i zwraca kontrolę do metody wywołującej. Może również zwrócić wartość opcjonalną. Jeśli metoda jest typu `void`, instrukcja `return` może zostać pominięta.
 
- Jeśli znajduje się wewnątrz instrukcji return `try` bloku `finally` bloku, jeśli taki istnieje, zostanie wykonana zanim sterowanie powraca do wywoływania metody.
+ Jeśli instrukcja return znajduje się wewnątrz bloku `try`, blok `finally`, jeśli taki istnieje, zostanie wykonany przed powracaniem kontroli do metody wywołującej.
 
 ## <a name="example"></a>Przykład
 
- W poniższym przykładzie metoda `CalculateArea()` zwraca zmienna lokalna `area` jako `double` wartość.
+ W poniższym przykładzie metoda `CalculateArea()` zwraca zmienną lokalną `area` jako wartość `double`.
 
 [!code-csharp[csrefKeywordsJump#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#6)]  
 

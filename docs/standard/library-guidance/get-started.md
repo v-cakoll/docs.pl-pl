@@ -1,50 +1,48 @@
 ---
-title: Wprowadzenie do tworzenia bibliotek .NET wysokiej jakości
+title: Wprowadzenie do tworzenia bibliotek platformy .NET o wysokiej jakości
 description: Wprowadzenie do tworzenia bibliotek platformy .NET.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 980f0edcee07688935f6d08f3ce1ed812159695e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 10576219d8470a171ad0f1f347196999b2a2ee03
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640741"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706494"
 ---
 # <a name="get-started"></a>Wprowadzenie
 
 ## <a name="cross-platform-targetingcross-platform-targetingmd"></a>[Obsługiwane rozwiązania międzyplatformowe](./cross-platform-targeting.md)
 
-Jak używać .NET Standard i wielowersyjność kodu do tworzenia bibliotek dla wielu platform. .NET, który jest uruchamiany w wielu miejscach i dobre bibliotek .NET należy dążyć do obsługuje dowolną liczbę platform i deweloperów jak to możliwe.
+Jak używać .NET Standard i wielu elementów docelowych do tworzenia bibliotek dla wielu platform. Platforma .NET działa w wielu miejscach, a dobra Biblioteka .NET powinna dążyć do obsługi tylu platform i deweloperów, jak to możliwe.
 
 ## <a name="strong-namingstrong-namingmd"></a>[Silne nazewnictwo](./strong-naming.md)
 
-Więcej informacji na temat silnych nazw i jego zalety i wady. Silne nazewnictwo biblioteki .NET programiści mogą wykorzystać z niego korzystać i jest zalecanym najlepszym rozwiązaniem.
+Poznaj silne nazewnictwo oraz zalety i wady. Silne nazewnictwo biblioteki platformy .NET pozwala większości deweloperów korzystać z niej i jest zalecanym najlepszym rozwiązaniem.
 
-## <a name="nuget-and-open-source-librariesnugetmd"></a>[Biblioteki typu open source i NuGet](./nuget.md)
+## <a name="nuget-and-open-source-librariesnugetmd"></a>[Biblioteki NuGet i Open Source](./nuget.md)
 
-Najlepszym sposobem tworzenia pakietów NuGet dla bibliotek .NET typu open source, takie jak metadane zalecana dla wszystkich pakietów publicznie opublikowane w witrynie NuGet.org.
+Najlepszym sposobem tworzenia pakietów NuGet dla bibliotek .NET Open Source, w tym zalecanych metadanych dla wszystkich pakietów opublikowanych publicznie w witrynie NuGet.org.
 
 ### <a name="dependenciesdependenciesmd"></a>[Zależności](./dependencies.md)
 
-NuGet umożliwia łatwe w użyciu istniejących pakietów podczas tworzenia biblioteki .NET. Więcej informacji na temat zależności NuGet wspólnych źródeł Ogranicz liczbę problemów i jak ich unikać.
+Pakiet NuGet ułatwia korzystanie z istniejących pakietów podczas kompilowania biblioteki .NET. Dowiedz się więcej o zależnościach programu NuGet "Typowe źródła tarcia i sposobach ich unikania".
 
 ### <a name="source-linksourcelinkmd"></a>[Link do źródła](./sourcelink.md)
 
-Link źródłowy jest doskonałym narzędziem, który umożliwia użytkownikom biblioteki .NET wkroczyć do jego kod źródłowy podczas debugowania. W tym artykule przedstawiono omówienie Link źródłowy jest i dlaczego należy z niej korzystać.
+Link źródłowy to doskonałe narzędzie umożliwiające użytkownikom biblioteki .NET przechodzenie do kodu źródłowego podczas debugowania. Ten artykuł zawiera omówienie łącznego źródła i przyczyny jego użycia.
 
 ### <a name="publishingpublish-nuget-packagemd"></a>[Publikowanie](./publish-nuget-package.md)
 
-NuGet.org najczęściej jest znany i używane repozytorium, są dużo miejsca do publikowania pakietów NuGet. Informacje na temat różnych repozytoriach pakietów NuGet dostępne i najlepsze rozwiązania dotyczące publikowania biblioteki .NET.
+Chociaż NuGet.org jest najczęściej znanym i używanym repozytorium, istnieje wiele miejsc do publikowania pakietów NuGet. Poznaj różne dostępne repozytoria pakietów NuGet oraz najlepsze rozwiązania w zakresie zabezpieczeń dotyczące publikowania biblioteki .NET.
 
 ## <a name="versioningversioningmd"></a>[Przechowywanie wersji](./versioning.md)
 
-Dobre bibliotek .NET z czasem ewoluować, dodawanie funkcji, naprawianie błędów i poprawę wydajności w nowszych wersjach. Więcej informacji na temat różnych numerów wersji oraz sposób komunikowania się zmian powodujących niezgodność dla deweloperów.
+Dobre biblioteki .NET są rozwijane wraz z upływem czasu, dodawaniem funkcji, naprawianie usterek i Poprawianie wydajności w nowszych wersjach. Dowiedz się więcej o różnych numerach wersji i sposobach przekazywania istotnych zmian do deweloperów.
 
 ### <a name="breaking-changesbreaking-changesmd"></a>[Zmiany powodujące niezgodność](./breaking-changes.md)
 
-Jest ważne dla biblioteki .NET znaleźć równowagę między stabilności istniejących użytkowników i innowacji w przyszłości. Więcej informacji na temat różnych rodzajów przełomowe zmiany i strategie Dodawanie nowych funkcji, przy zachowaniu wstecznej zgodności.
+Ważne jest, aby w bibliotece .NET znaleźć równowagę między stabilnością dla istniejących użytkowników i innowacji w przyszłości. Poznaj różne rodzaje istotnych zmian i strategii dodawania nowych funkcji przy zachowaniu zgodności z poprzednimi wersjami.
 
 >[!div class="step-by-step"]
->[Poprzednie](index.md)
->[dalej](cross-platform-targeting.md)
+>[Poprzedni](index.md)
+>[Następny](cross-platform-targeting.md)

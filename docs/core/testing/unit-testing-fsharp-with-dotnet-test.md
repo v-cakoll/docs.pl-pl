@@ -4,13 +4,12 @@ description: Poznaj koncepcje testów jednostkowych dla F# platformy .NET Core z
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.custom: seodec18
-ms.openlocfilehash: b81f77032c2770cce9a1ed5b697859750ae10862
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
-ms.translationtype: HT
+ms.openlocfilehash: 9cf301533046951f8fd3f9829afabadf6bba3d64
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559529"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715428"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>Biblioteki testów F# jednostkowych w programie .NET Core przy użyciu testu dotnet i xUnit
 

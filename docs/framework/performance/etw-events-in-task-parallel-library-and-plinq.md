@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f1926d2699357163dbb8685b7ea875e369ca29b7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 93fcd3215bdcbb30960f19e23ae15f32bb9ddd84
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046662"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716095"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>Zdarzenia ETW w bibliotece równoległych zadań i PLINQ
 
@@ -19,7 +17,7 @@ Biblioteka zadań równoległych i PLINQ generują zdarzenia śledzenia zdarzeń
 
 ## <a name="task-parallel-library-etw-events"></a>Zdarzenia ETW biblioteki równoległej zadania
 
-W strukturze EVENT_HEADER identyfikator GUID identyfikatorem dla zdarzeń generowanych przez <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> :
+W strukturze EVENT_HEADER identyfikator GUID identyfikatorem dla zdarzeń generowanych przez <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType>:
 
 `0x2e5dba47, 0xa3d2, 0x4d16, 0x8e, 0xe0, 0x66, 0x71, 0xff, 0xdc, 0xd7, 0xb5`
 

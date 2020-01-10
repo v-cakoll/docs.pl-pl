@@ -14,25 +14,24 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-author: KrzysztofCwalina
-ms.openlocfilehash: ae1b7ce83f6698cef470aabf07a12d89042ab8a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1b01fac7368ffeceb554c6f12aecb8f8760fa1d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026396"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709338"
 ---
 # <a name="general-naming-conventions"></a>Ogólne konwencje nazewnictwa
-W tej sekcji opisano ogólne konwencje nazewnictwa, które odnoszą się do wybranego słowa wskazówki na temat używania skrótów i akronimów i zalecenia dotyczące sposobu uniknięcia używania nazw specyficzny dla języka.  
+W tej sekcji opisano ogólne konwencje nazewnictwa, które odnoszą się do wyboru wyrazu, wytyczne dotyczące używania skrótów i akronimów oraz Zalecenia dotyczące unikania używania nazw specyficznych dla języka.  
   
-## <a name="word-choice"></a>Word Choice  
+## <a name="word-choice"></a>Wybór wyrazów  
  **✓ DO** wybrać łatwo odczytać identyfikatora nazwy.  
   
- Na przykład właściwość o nazwie `HorizontalAlignment` jest angielski czytelność niż `AlignmentHorizontal`.  
+ Na przykład właściwość o nazwie `HorizontalAlignment` ma więcej możliwości odczytywania w języku angielskim niż `AlignmentHorizontal`.  
   
  **✓ DO** Preferuj czytelności za pośrednictwem skrócenia.  
   
- Nazwa właściwości `CanScrollHorizontally` jest lepsze niż `ScrollableX` (zasłoniętej odniesienie do osi x).  
+ Nazwa właściwości `CanScrollHorizontally` jest lepsza niż `ScrollableX` (przesłonięcie odwołania do osi X).  
   
  **X DO NOT** użyj podkreślenia, łączniki lub innych znaków innych niż alfanumeryczne.  
   
@@ -40,51 +39,51 @@ W tej sekcji opisano ogólne konwencje nazewnictwa, które odnoszą się do wybr
   
  **X AVOID** przy użyciu identyfikatorów, które powodują konflikt z słów kluczowych z powszechnie używane języki programowania.  
   
- Zgodnie z 4 reguły z Common Language Specification (CLS) wszystkie języki zgodne należy podać mechanizm, który umożliwia dostęp do nazwanych elementy, które korzystają odpowiadającej danemu językowi słowa kluczowego jako identyfikatora. C#, na przykład używa znaku jako mechanizm ucieczki w tym przypadku @. Jednak nadal jest dobry pomysł, aby uniknąć typowe słowa kluczowe, ponieważ jest dużo trudniejsze do korzystania z metody przy użyciu sekwencji unikowej niż jeden bez niego.  
+ Zgodnie z regułą 4 Common Language Specification (CLS) wszystkie zgodne Języki muszą zapewniać mechanizm, który umożliwia dostęp do nazwanych elementów, które używają słowa kluczowego tego języka jako identyfikatora. C#na przykład w tym przypadku używa znaku @ jako mechanizmu ucieczki. Jednak nadal dobrym pomysłem jest uniknięcie typowych słów kluczowych, ponieważ jest znacznie trudniejsze użycie metody z sekwencją ucieczki od jednej.  
   
-## <a name="using-abbreviations-and-acronyms"></a>Za pomocą skrótów i akronimów  
+## <a name="using-abbreviations-and-acronyms"></a>Używanie skrótów i akronimów  
  **X DO NOT** Użyj skrótów lub skrótów jako część nazwy identyfikatorów.  
   
- Na przykład użyć `GetWindow` zamiast `GetWin`.  
+ Na przykład użyj `GetWindow`, a nie `GetWin`.  
   
  **X DO NOT** używać żadnych skrótów, które nie są powszechnie zaakceptowany, a nawet wtedy, gdy są one, tylko wtedy, gdy jest to konieczne.  
   
-## <a name="avoiding-language-specific-names"></a>Unikanie specyficzny dla języka nazw  
+## <a name="avoiding-language-specific-names"></a>Unikanie nazw specyficznych dla języka  
  **✓ DO** użycie nazwy semantycznie interesujące zamiast słowa kluczowe specyficzne dla języka dla nazwy typu.  
   
- Na przykład `GetLength` jest nazwą lepsze niż `GetInt`.  
+ Na przykład `GetLength` jest lepszą nazwą niż `GetInt`.  
   
  **✓ DO** Użyj nazwy ogólnej typu CLR, a nie nazwę specyficzne dla języka w rzadkich przypadkach, gdy identyfikator nie ma znaczenia semantycznego poza jego typu.  
   
- Na przykład metoda konwersji <xref:System.Int64> powinno się nazywać `ToInt64`, a nie `ToLong` (ponieważ <xref:System.Int64> jest nazwą CLR dla języka C# — określonego aliasu `long`). W poniższej tabeli przedstawiono kilka podstawowych typów danych przy użyciu nazwy typów CLR (a także odpowiednie nazwy typów dla języka C#, Visual Basic i C++).  
+ Na przykład Metoda konwertowana na <xref:System.Int64> powinna mieć nazwę `ToInt64`, a nie `ToLong` (ponieważ <xref:System.Int64> jest nazwą środowiska CLR dla C#aliasu specyficznego `long`). W poniższej tabeli przedstawiono kilka podstawowych typów danych przy użyciu nazw typów CLR (a także odpowiednich nazw typów dla C#, Visual Basic i C++).  
   
-|C#|Visual Basic|C++|CLR|  
+|Język C#|Język Visual Basic|C++|CLR|  
 |---------|------------------|-----------|---------|  
 |**sbyte**|**SByte**|**char**|**SByte**|  
-|**byte**|**Byte**|**unsigned char**|**Byte**|  
+|**byte**|**Byte**|**znak bez znaku**|**Byte**|  
 |**short**|**Short**|**short**|**Int16**|  
-|**ushort**|**UInt16**|**short bez znaku**|**UInt16**|  
+|**ushort**|**UInt16**|**bez znaku Short**|**UInt16**|  
 |**int**|**Integer**|**int**|**Int32**|  
-|**uint**|**UInt32**|**unsigned int**|**UInt32**|  
+|**uint**|**Równ**|**niepodpisany int**|**Równ**|  
 |**long**|**Long**|**__int64**|**Int64**|  
-|**ulong**|**UInt64 —**|**__int64 bez znaku**|**UInt64 —**|  
+|**ulong**|**UInt64**|**__int64 bez znaku**|**UInt64**|  
 |**float**|**Single**|**float**|**Single**|  
 |**double**|**Double**|**double**|**Double**|  
-|**bool**|**Boolean**|**bool**|**Boolean**|  
-|**char**|**Char**|**wchar_t**|**Char**|  
+|**bool**|**Wartość logiczna**|**bool**|**Wartość logiczna**|  
+|**char**|**Delikatn**|**wchar_t**|**Delikatn**|  
 |**string**|**Ciąg**|**Ciąg**|**Ciąg**|  
 |**object**|**Obiekt**|**Obiekt**|**Obiekt**|  
   
  **✓ DO** Użyj nazwą pospolitą, takiego jak `value` lub `item`, zamiast powtarzające się nazwa typu w rzadkich przypadkach, gdy identyfikator nie ma znaczenia semantycznego i typ parametru nie jest ważna.  
   
-## <a name="naming-new-versions-of-existing-apis"></a>Nazwy nowych wersji istniejących interfejsów API  
+## <a name="naming-new-versions-of-existing-apis"></a>Nazywanie nowych wersji istniejących interfejsów API  
  **✓ DO** Użyj nazwy podobne do starego interfejsu API, podczas tworzenia nowych wersji istniejących interfejsu API.  
   
- Pozwala to wyróżnić relacja między interfejsami API.  
+ Dzięki temu można wyróżnić relacje między interfejsami API.  
   
  **✓ DO** preferowane jest dodanie sufiksu zamiast prefiksu wskazać nową wersję istniejącego interfejsu API.  
   
- To pomoże odnajdywania, przeglądając dokumentację, lub za pomocą funkcji IntelliSense. Stara wersja interfejsu API zostaną zorganizowane blisko nowe interfejsy API, ponieważ większość przeglądarek i technologii IntelliSense Pokaż identyfikatorów w kolejności alfabetycznej.  
+ Ułatwi to odnajdywanie podczas przeglądania dokumentacji lub korzystania z technologii IntelliSense. Stara wersja interfejsu API zostanie zorganizowana blisko nowych interfejsów API, ponieważ większość przeglądarek i IntelliSense pokazuje identyfikatory w kolejności alfabetycznej.  
   
  **✓ CONSIDER** przy użyciu całkowicie nowe, ale łatwy do rozpoznania identyfikator, zamiast dodawania sufiks lub prefiks.  
   
@@ -92,11 +91,11 @@ W tej sekcji opisano ogólne konwencje nazewnictwa, które odnoszą się do wybr
   
  **X DO NOT** "Ex" (lub podobny) sufiks identyfikatora odróżniający go od wcześniejszej wersji tego samego interfejsu API.  
   
- **✓ DO** Użyj sufiksu "64", wprowadzając wersje interfejsów API, które działają na 64-bitowa liczba całkowita (długich liczb całkowitych) zamiast 32-bitową liczbę całkowitą. Potrzebujesz takiego podejścia, gdy istnieje istniejących interfejsów API 32-bitowy; nie rób tego na zupełnie nowe interfejsy API w wersji 64-bitowych.  
+ **✓ DO** Użyj sufiksu "64", wprowadzając wersje interfejsów API, które działają na 64-bitowa liczba całkowita (długich liczb całkowitych) zamiast 32-bitową liczbę całkowitą. To podejście należy wykonać tylko wtedy, gdy istnieje istniejący 32-bitowy interfejs API; nie należy tego robić w przypadku nowych interfejsów API z tylko 64-bitową wersją.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

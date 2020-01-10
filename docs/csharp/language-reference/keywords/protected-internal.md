@@ -1,14 +1,13 @@
 ---
 title: chronione C# odwołanie wewnętrzne
-ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 6e5a4c6e63c2c05df54df6bed542eab3f43f9272
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 877df74b51fb859043171619f5687ecddb8409d1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422583"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713199"
 ---
 # <a name="protected-internal-c-reference"></a>chroniona wewnętrznieC# (odwołanie)
 
@@ -68,7 +67,7 @@ Elementy członkowskie struktury nie mogą być `protected internal`, ponieważ 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Modyfikatory dostępu](access-modifiers.md)

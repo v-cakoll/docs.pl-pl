@@ -12,13 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-author: KrzysztofCwalina
-ms.openlocfilehash: b4da14575d29582814d32a3050087b7acc0da802
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a9cd531100057fbad4884a20e6e7db6ef94e7956
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353708"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709221"
 ---
 # <a name="names-of-type-members"></a>Nazwy składowych typu
 Typy składowe są elementami członkowskimi: metodami, właściwościami, zdarzeniami, konstruktorami i polami. W poniższych sekcjach opisano wskazówki dotyczące nazewnictwa elementów członkowskich typu.  
@@ -48,9 +47,9 @@ public class String {
   
  Ten wzorzec zazwyczaj wskazuje, że właściwość powinna być w rzeczywistości metodą.  
   
- **✓ DO** nazwy właściwości kolekcji o liczbie mnogiej frazę opisujące elementy w kolekcji, zamiast korzystać z pojedynczej frazy, a następnie "List" lub "Collection".  
+ **✓** Nazwij właściwości kolekcji z frazą w liczbie mnogiej opisującą elementy w kolekcji, zamiast używać pojedynczej frazy, a po niej "list" lub "Collection".  
   
- **✓ DO** nazwy właściwości logiczne z frazą wyraził (`CanSeek` zamiast `CantSeek`). Opcjonalnie można również prefiksować właściwości logiczne z "is", "" lub "ma", ale tylko wtedy, gdy dodaje wartość.  
+ **✓ DO** nazwy właściwości logiczne z frazą wyraził (`CanSeek` zamiast `CantSeek`). Opcjonalnie można również prefiksować właściwości logiczne z "is", "może" lub "ma", ale tylko wtedy, gdy dodaje wartość.  
   
  **✓ CONSIDER** zapewnia taką samą nazwę jak jego typ właściwości.  
   

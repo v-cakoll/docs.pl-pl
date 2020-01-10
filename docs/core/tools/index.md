@@ -2,19 +2,18 @@
 title: Narzędzia interfejsu wiersza polecenia (CLI) platformy .NET Core
 description: Omówienie narzędzi i funkcji interfejsu wiersza polecenia (CLI) platformy .NET Core.
 ms.date: 08/14/2017
-ms.custom: seodec18
-ms.openlocfilehash: 4ff5cfd6c5a70c92387911ab87ddea5cee80275e
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: b3bffb47ff973bd0da90e3f943e817756e563138
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117388"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714148"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Narzędzia interfejsu wiersza polecenia (CLI) platformy .NET Core
 
 Interfejs wiersza polecenia platformy .NET Core (CLI) to nowe Międzyplatformowe łańcucha narzędzi do tworzenia aplikacji platformy .NET. Interfejs wiersza polecenia jest podstawą, na której można zawiesić narzędzia wyższego poziomu, takie jak zintegrowane środowiska deweloperskie (środowisk IDE), Edytory i koordynatorzy kompilacji.
 
-## <a name="installation"></a>Instalacja
+## <a name="installation"></a>Instalacja programu
 
 Użyj natywnych instalatorów lub użyj skryptów powłoki instalacji:
 
@@ -41,7 +40,7 @@ Następujące polecenia są instalowane domyślnie:
 - [badan](dotnet-test.md)
 - [VSTest](dotnet-vstest.md)
 - [pakiet](dotnet-pack.md)
-- [dokonać](dotnet-migrate.md)
+- [migrowanie](dotnet-migrate.md)
 - [czyst](dotnet-clean.md)
 - [sln](dotnet-sln.md)
 - [Pomoc](dotnet-help.md)
@@ -75,7 +74,7 @@ Następujące polecenia są instalowane domyślnie:
 - [badan](dotnet-test.md)
 - [VSTest](dotnet-vstest.md)
 - [pakiet](dotnet-pack.md)
-- [dokonać](dotnet-migrate.md)
+- [migrowanie](dotnet-migrate.md)
 - [czyst](dotnet-clean.md)
 - [sln](dotnet-sln.md)
 
@@ -126,9 +125,9 @@ dotnet /build_output/my_app.dll
 
 Sterownik nosi nazwę [dotnet](dotnet.md) i ma dwie obowiązki, uruchamiają [aplikację zależną od platformy](../deploying/index.md) lub wykonując polecenie. 
 
-Aby uruchomić aplikację zależną od platformy, należy określić aplikację po stronie sterownika, na przykład `dotnet /path/to/my_app.dll`. Gdy wykonujesz polecenie z folderu, w którym znajduje się biblioteka DLL aplikacji, po prostu wykonaj `dotnet my_app.dll`. Jeśli chcesz użyć określonej wersji środowiska uruchomieniowego platformy .NET Core, użyj `--fx-version <VERSION>` opcji (zobacz informacje dotyczące [polecenia dotnet](dotnet.md) ).
+Aby uruchomić aplikację zależną od platformy, należy określić aplikację po sterowniku, na przykład `dotnet /path/to/my_app.dll`. Podczas wykonywania polecenia z folderu, w którym znajduje się biblioteka DLL aplikacji, wystarczy wykonać `dotnet my_app.dll`. Jeśli chcesz użyć określonej wersji środowiska uruchomieniowego platformy .NET Core, użyj opcji `--fx-version <VERSION>` (zobacz informacje dotyczące [polecenia dotnet](dotnet.md) ).
 
-Po podaniu polecenia do sterownika program `dotnet.exe` uruchamia proces wykonywania poleceń interfejsu wiersza polecenia. Na przykład:
+Gdy podasz polecenie do sterownika, `dotnet.exe` uruchamia proces wykonywania polecenia interfejsu CLI. Na przykład:
 
 ```dotnetcli
 dotnet build
@@ -138,19 +137,19 @@ Najpierw sterownik Określa wersję zestawu SDK do użycia. Jeśli nie ma pliku 
 
 ### <a name="command"></a>Polecenie
 
-Polecenie wykonuje akcję. Na przykład `dotnet build` kompiluje kod. `dotnet publish`publikuje kod. Polecenia są implementowane jako Aplikacja konsolowa przy użyciu `dotnet {command}` Konwencji.
+Polecenie wykonuje akcję. Na przykład `dotnet build` kompiluje kod. `dotnet publish` publikuje kod. Polecenia są implementowane jako Aplikacja konsolowa przy użyciu konwencji `dotnet {command}`.
 
 ### <a name="arguments"></a>Argumenty
 
-Argumenty przekazywane do wiersza polecenia są argumentami wywoływanego polecenia. Na przykład podczas wykonywania `dotnet publish my_app.csproj` `my_app.csproj` argument wskazuje projekt do opublikowania `publish` i jest przesyłany do polecenia.
+Argumenty przekazywane do wiersza polecenia są argumentami wywoływanego polecenia. Na przykład podczas wykonywania `dotnet publish my_app.csproj`argument `my_app.csproj` wskazuje projekt do opublikowania i jest przesyłany do polecenia `publish`.
 
 ### <a name="options"></a>Opcje
 
-Opcje, które są przekazywane w wierszu polecenia są opcje wywoływanego polecenia. Na przykład podczas wykonywania `dotnet publish --output /build_output` `--output` , opcja i jej `publish` wartość są przesyłane do polecenia.
+Opcje, które są przekazywane w wierszu polecenia są opcje wywoływanego polecenia. Na przykład podczas wykonywania `dotnet publish --output /build_output`opcja `--output` i jej wartość są przesyłane do polecenia `publish`.
 
 ## <a name="migration-from-projectjson"></a>Migracja z pliku Project. JSON
 
-Jeśli użyto narzędzi w wersji zapoznawczej 2 do tworzenia projektów opartych na pliku *Project. JSON*, zapoznaj się z tematem Migrowanie środowiska [dotnet](dotnet-migrate.md) , aby uzyskać informacje na temat migrowania projektu do programu MSBuild/ *. csproj* do użytku z narzędziami Release. W przypadku projektów .NET Core utworzonych przed wydaniem narzędzia do wersji zapoznawczej 2 należy ręcznie zaktualizować projekt zgodnie ze wskazówkami zawartymi w sekcji [Migrowanie z środowiska DNX do interfejs wiersza polecenia platformy .NET Core (Project. JSON)](../migration/from-dnx.md) , a następnie użyć `dotnet migrate` lub bezpośrednio uaktualnić projekty.
+Jeśli użyto narzędzi w wersji zapoznawczej 2 do tworzenia projektów opartych na pliku *Project. JSON*, zapoznaj się z tematem Migrowanie środowiska [dotnet](dotnet-migrate.md) , aby uzyskać informacje na temat migrowania projektu do programu MSBuild/ *. csproj* do użytku z narzędziami Release. W przypadku projektów .NET Core utworzonych przed udostępnieniem narzędzi wersji zapoznawczej 2 należy ręcznie zaktualizować projekt zgodnie ze wskazówkami zawartymi w sekcji [Migrowanie z środowiska DNX do interfejs wiersza polecenia platformy .NET Core (Project. JSON)](../migration/from-dnx.md) , a następnie użyć `dotnet migrate` lub bezpośrednio uaktualnić projekty.
 
 ## <a name="see-also"></a>Zobacz także
 

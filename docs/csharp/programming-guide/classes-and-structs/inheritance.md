@@ -1,6 +1,5 @@
 ---
 title: Dziedziczenie C# — Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - abstract methods [C#]
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 3211a4741eb56ad9e138a848e52fabbc1d3daaeb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3c59741fa646111d27f6d1087a9275178c1a41a1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924470"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705551"
 ---
 # <a name="inheritance-c-programming-guide"></a>Dziedziczenie (Przewodnik programowania w języku C#)
 
@@ -24,15 +23,15 @@ Dziedziczenie, wraz z hermetyzacją i polimorfizmem, jest jedną z trzech podsta
 > [!NOTE]
 > Struktury nie obsługują dziedziczenia, ale mogą implementować interfejsy. Więcej informacji znajdziesz w artykule [Interfejsy](../interfaces/index.md).  
   
- Koncepcyjnie Klasa pochodna jest specjalizacją klasy bazowej. Na przykład jeśli masz klasę `Animal`bazową, może istnieć jedna klasa pochodna o nazwie `Mammal` i innej klasie pochodnej o nazwie `Reptile`. A to a, `Reptile` i jest `Animal`, ale każda klasa pochodna reprezentuje różne specjalizacje klasy bazowej. `Mammal` `Animal`  
+ Koncepcyjnie Klasa pochodna jest specjalizacją klasy bazowej. Na przykład jeśli masz klasę bazową `Animal`, może istnieć jedna klasa pochodna o nazwie `Mammal` i inna Klasa pochodna o nazwie `Reptile`. `Mammal` jest `Animal`, a `Reptile` jest `Animal`, ale każda klasa pochodna reprezentuje różne specjalizacje klasy bazowej.  
   
  Podczas definiowania klasy, która ma pochodzić z innej klasy, Klasa pochodna niejawnie uzyskuje wszystkie elementy członkowskie klasy bazowej, z wyjątkiem konstruktorów i finalizatorów. Klasa pochodna może w efekcie ponownie użyć kodu w klasie bazowej bez konieczności jego ponownego wdrożenia. W klasie pochodnej można dodać więcej elementów członkowskich. W ten sposób Klasa pochodna rozszerza funkcjonalność klasy bazowej.  
   
- Na poniższej ilustracji przedstawiono klasę `WorkItem` , która reprezentuje element pracy w pewnym procesie biznesowym. Podobnie jak w przypadku wszystkich klas, <xref:System.Object?displayProperty=nameWithType> pochodzi z i dziedziczy wszystkie metody. `WorkItem`dodaje pięciu członków. Należą do nich Konstruktor, ponieważ konstruktory nie są dziedziczone. Klasa `ChangeRequest` dziedziczy z `WorkItem` i reprezentuje konkretny rodzaj elementu pracy. `ChangeRequest`dodaje dwóch więcej członków do członków, z `WorkItem` <xref:System.Object>których dziedziczy. Musi dodać własnego konstruktora, a także dodaje `originalItemID`. Umożliwia skojarzenie wystąpienia z oryginałem `WorkItem` , do którego ma zastosowanie żądanie zmiany. `ChangeRequest` `originalItemID`  
+ Na poniższej ilustracji przedstawiono klasę `WorkItem`, która reprezentuje element pracy w pewnym procesie biznesowym. Podobnie jak w przypadku wszystkich klas, pochodzi ona z <xref:System.Object?displayProperty=nameWithType> i dziedziczy wszystkie jej metody. `WorkItem` dodaje pięciu członków. Należą do nich Konstruktor, ponieważ konstruktory nie są dziedziczone. Klasa `ChangeRequest` dziedziczy po `WorkItem` i reprezentuje konkretny rodzaj elementu pracy. `ChangeRequest` dodaje dwóch więcej członków do elementów członkowskich, które dziedziczy z `WorkItem` i <xref:System.Object>. Musi dodać własnego konstruktora i dodaje `originalItemID`. Właściwość `originalItemID` umożliwia skojarzenie wystąpienia `ChangeRequest` z oryginalnym `WorkItem`, do którego ma zastosowanie żądanie zmiany.  
   
  ![Diagram przedstawiający dziedziczenie klas](./media/inheritance/class-inheritance-diagram.png)  
   
- Poniższy przykład pokazuje, jak relacje klas pokazane na poprzedniej ilustracji są wyrażone w C#. W przykładzie pokazano również, `WorkItem` jak zastępuje metodę <xref:System.Object.ToString%2A?displayProperty=nameWithType>wirtualną oraz `WorkItem` sposób, w `ChangeRequest` jaki Klasa dziedziczy implementację metody.  
+ Poniższy przykład pokazuje, jak relacje klas pokazane na poprzedniej ilustracji są wyrażone w C#. W przykładzie pokazano również, jak `WorkItem` przesłania metodę wirtualną <xref:System.Object.ToString%2A?displayProperty=nameWithType>i jak Klasa `ChangeRequest` dziedziczy implementację `WorkItem` metody.  
   
  [!code-csharp[csProgGuideInheritance#49](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#49)]  
   
@@ -45,7 +44,7 @@ Dziedziczenie, wraz z hermetyzacją i polimorfizmem, jest jedną z trzech podsta
 ## <a name="interfaces"></a>Interfejsy  
  *Interfejs* jest typem referencyjnym, który jest nieco podobny do abstrakcyjnej klasy bazowej, która składa się tylko z abstrakcyjnych elementów członkowskich. Gdy klasa implementuje interfejs, musi dostarczyć implementację dla wszystkich elementów członkowskich interfejsu. Klasa może zaimplementować wiele interfejsów, chociaż może dziedziczyć tylko z pojedynczej bezpośredniej klasy bazowej.  
   
- Interfejsy służą do definiowania określonych funkcji dla klas, które nie muszą mieć relacji "is". Na przykład <xref:System.IEquatable%601?displayProperty=nameWithType> interfejs może być zaimplementowany przez dowolną klasę lub strukturę, która musi umożliwić kod klienta, aby określić, czy dwa obiekty typu są równoważne (jednak typ definiuje równoważność). <xref:System.IEquatable%601>nie implikuje tego samego rodzaju relacji "is", która istnieje między klasą bazową a klasą pochodną (na przykład a `Mammal` `Animal`). Więcej informacji znajdziesz w artykule [Interfejsy](../interfaces/index.md).  
+ Interfejsy służą do definiowania określonych funkcji dla klas, które nie muszą mieć relacji "is". Na przykład interfejs <xref:System.IEquatable%601?displayProperty=nameWithType> może być zaimplementowany przez dowolną klasę lub strukturę, która musi umożliwiać kod klienta, aby określić, czy dwa obiekty typu są równoważne (jednak typ definiuje równoważność). <xref:System.IEquatable%601> nie implikuje tego samego rodzaju relacji "is", która istnieje między klasą bazową a klasą pochodną (na przykład `Mammal` jest `Animal`). Więcej informacji znajdziesz w artykule [Interfejsy](../interfaces/index.md).  
   
 ## <a name="preventing-further-derivation"></a>Zapobieganie dalszemu wyprowadzaniu  
  Klasa może uniemożliwić innym klasom dziedziczenie z niego lub z dowolnego elementu członkowskiego, deklarując siebie lub element członkowski jako [zapieczętowany](../../language-reference/keywords/sealed.md). Aby uzyskać więcej informacji, zobacz [klasy abstrakcyjne i zapieczętowane oraz składowe klas](./abstract-and-sealed-classes-and-class-members.md).  

@@ -11,20 +11,18 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8980122acdd069bc840aa09129483a1cb9a379fd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933812"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705876"
 ---
 # <a name="security-and-race-conditions"></a>Zabezpieczenia i sytuacja wyścigu
-Kolejnym obszarem kwestią jest potencjalnych luk w zabezpieczeniach wykorzystana przez wyścigu. Istnieje kilka sposobów, w których może się to zdarzyć. Tematy podrzędne, które należy wykonać opisano niektóre z najważniejszych pułapek, których należy unikać dewelopera.  
+Innym obszarem zainteresowania jest potencjalna liczba luk w zabezpieczeniach wykorzystywanych przez sytuacje wyścigu. Może się to zdarzyć na kilka sposobów. Tematy podrzędne, które przestrzegają konspektu, niektórych głównych pułapek, które muszą być unikane przez dewelopera.  
   
 ## <a name="race-conditions-in-the-dispose-method"></a>Warunki wyścigu w metodzie Dispose  
- Jeśli klasa **Dispose** — metoda (Aby uzyskać więcej informacji, zobacz [wyrzucania elementów bezużytecznych](../../../docs/standard/garbage-collection/index.md)) jest nie jest zsynchronizowana, istnieje możliwość, ten kod porządkujący wewnątrz **Dispose** mogą być uruchamiane więcej niż jedno, jak pokazano w poniższym przykładzie.  
+ Jeśli metoda **Dispose** klasy (Aby uzyskać więcej informacji, zobacz [zbieranie elementów bezużytecznych](../../../docs/standard/garbage-collection/index.md)) nie jest zsynchronizowana, istnieje możliwość, że kod czyszczący wewnątrz elementu **Dispose** można uruchomić więcej niż jeden raz, jak pokazano w poniższym przykładzie.  
   
 ```vb  
 Sub Dispose()  
@@ -46,13 +44,13 @@ void Dispose()
 }  
 ```  
   
- Ponieważ to **Dispose** wdrożenia nie jest zsynchronizowana, możliwe jest `Cleanup` ma zostać wywołana przez najpierw jeden wątek, a następnie drugi wątek przed `_myObj` ustawiono **null**. Czy to jest kwestią zabezpieczeń zależy od tego, co się stanie, gdy `Cleanup` kod działa. Podstawowym problemem w niezsynchronizowane **Dispose** implementacje polega na użyciu tego dojścia zasobów, takich jak pliki. Niewłaściwy usuwania może spowodować nieprawidłowe dojście ma być używany, co często prowadzi do luk w zabezpieczeniach.  
+ Ponieważ ta implementacja **usuwania** nie jest zsynchronizowana, możliwe jest `Cleanup` wywoływany przez pierwszy wątek, a następnie drugi wątek przed ustawieniem `_myObj` na **wartość null**. To, czy jest to problem dotyczący zabezpieczeń, zależy od tego, co się dzieje w przypadku uruchamiania kodu `Cleanup`. Istotny problem z niezsynchronizowanymi implementacjami **Dispose** obejmuje użycie dojścia do zasobów, takich jak pliki. Niewłaściwe usunięcie może spowodować niewłaściwe użycie, które często prowadzi do luk w zabezpieczeniach.  
   
 ## <a name="race-conditions-in-constructors"></a>Warunki wyścigu w konstruktorach  
- W niektórych aplikacji może być możliwe dla innych wątków do dostępu do składowych klasy, przed ich Konstruktory klasy całkowicie zostały uruchomione. Należy przejrzeć wszystkie Konstruktory klasy, aby upewnić się, że nie występują żadne problemy zabezpieczeń, jeśli to powinno to być spowodowane lub synchronizacji wątków, jeśli to konieczne.  
+ W niektórych aplikacjach może być możliwe, aby inne wątki miały dostęp do elementów członkowskich klasy, zanim ich konstruktory klas zostały całkowicie uruchomione. Należy przejrzeć wszystkie konstruktory klas, aby upewnić się, że nie występują problemy z zabezpieczeniami, jeśli taka sytuacja powinna mieć miejsce lub zsynchronizować wątki w razie potrzeby.  
   
-## <a name="race-conditions-with-cached-objects"></a>Warunki wyścigu przy użyciu buforowanych obiektów  
- Kod, który buforuje informacje o zabezpieczeniach lub wykorzystuje zabezpieczenia dostępu kodu [Asercja](../../../docs/framework/misc/using-the-assert-method.md) operacji może również występować sytuacje wyścigu w przypadku innych części klasy nie są odpowiednio zsynchronizowane, jak pokazano w poniższym przykładzie.  
+## <a name="race-conditions-with-cached-objects"></a>Warunki wyścigu z buforowanymi obiektami  
+ Kod, który buforuje informacje o zabezpieczeniach lub używa operacji [potwierdzenia](../../../docs/framework/misc/using-the-assert-method.md) zabezpieczeń dostępu kodu może być również narażony na sytuacje wyścigu, jeśli inne części klasy nie są odpowiednio zsynchronizowane, jak pokazano w poniższym przykładzie.  
   
 ```vb  
 Sub SomeSecureFunction()  
@@ -97,12 +95,12 @@ void DoOtherWork()
 }  
 ```  
   
- W przypadku innych ścieżek do `DoOtherWork` którą można wywołać z innego wątku za pomocą tego samego obiektu, niezaufanych obiekt wywołujący poślizg wcześniejsze żądanie.  
+ Jeśli istnieją inne ścieżki do `DoOtherWork`, które mogą być wywoływane z innego wątku z tym samym obiektem, niezaufany obiekt wywołujący może wykasować poza zapotrzebowaniem.  
   
- Jeśli Twój kod buforuje informacje o zabezpieczeniach, upewnij się, przejrzyj luki w zabezpieczeniach.  
+ Jeśli kod buforuje informacje o zabezpieczeniach, należy zapoznać się z informacjami dotyczącymi tej luki w zabezpieczeniach.  
   
-## <a name="race-conditions-in-finalizers"></a>Warunki wyścigu w finalizatory  
- Warunki wyścigu może również wystąpić w obiekcie, który odwołuje się do statycznego lub niezarządzany zasób, który następnie zwalnia jego finalizator. Jeśli wiele obiektów dzielą jakiś zasób, który jest przetwarzany w finalizatory klasy, obiekty należy zsynchronizować wszelki dostęp do tego zasobu.  
+## <a name="race-conditions-in-finalizers"></a>Sytuacje wyścigu w finalizatorach  
+ Sytuacje wyścigu mogą również wystąpić w obiekcie, który odwołuje się do zasobu statycznego lub niezarządzanego, który następnie zwolni w jego finalizatorie. Jeśli wiele obiektów współużytkuje zasób, który jest manipulowany przez finalizator klasy, obiekty muszą zsynchronizować wszystkie dostęp do tego zasobu.  
   
 ## <a name="see-also"></a>Zobacz także
 

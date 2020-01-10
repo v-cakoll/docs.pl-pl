@@ -9,44 +9,43 @@ helpviewer_keywords:
 - Equals method
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
-author: KrzysztofCwalina
-ms.openlocfilehash: ef1a0aff1ac59434d9d9a6f0371bf236f637050e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31a5ce18f4526b5e3b8411365dff812601de87ad
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960339"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709442"
 ---
 # <a name="equality-operators"></a>Operatory równości
-W tej sekcji omówiono przeciążania operacji równości operatorów i odwołuje się do `operator==` i `operator!=` jako operatory równości.  
+W tej sekcji omówiono przeciążanie operatorów równości i odwołuje się do `operator==` i `operator!=` jako operatory równości.  
   
  **X DO NOT** jedną Operatory równości i nie inne przeciążenia.  
   
  **✓ DO** upewnij się, że <xref:System.Object.Equals%2A?displayProperty=nameWithType> i operatory porównania ma dokładnie tej samej semantyki i podobne charakterystyki wydajności.  
   
- Często oznacza to, że `Object.Equals` musi zostać zastąpiona, gdy są przeciążone operatory równości.  
+ Często oznacza to, że `Object.Equals` należy przesłonić, gdy operatory równości są przeciążone.  
   
  **X AVOID** zgłaszanie wyjątków z Operatory równości.  
   
- Na przykład, zwróci wartość false, jeśli jeden z argumentów ma wartość null, zamiast zgłaszać `NullReferenceException`.  
+ Na przykład Zwróć wartość false, jeśli jeden z argumentów ma wartość null zamiast zgłaszać `NullReferenceException`.  
   
-## <a name="equality-operators-on-value-types"></a>Operatory równości dla typów wartości  
+## <a name="equality-operators-on-value-types"></a>Operatory równości w typach wartości  
  **✓ DO** przeciążać Operatory równości w typach wartości, jeśli równości jest łatwy do rozpoznania.  
   
- W większości języków programowania, jest nie domyślną implementację elementu `operator==` dla typów wartości.  
+ W większości języków programowania nie istnieje domyślna implementacja `operator==` dla typów wartości.  
   
 ## <a name="equality-operators-on-reference-types"></a>Operatory równości w typach referencyjnych  
  **X AVOID** przeładowanie operatorów równości w typach referencyjnych.  
   
- Wiele języków mają wbudowane równości operatorów dla typów odwołań. Wbudowane operatory zwykle implementuje równości odwołań i wielu deweloperów są Zaskoczenie, w przypadku zmiany domyślnego zachowania na równość wartości.  
+ Wiele języków ma wbudowane operatory równości dla typów referencyjnych. Operatory wbudowane zwykle implementują równość odwołań, a wielu deweloperów jest przeważnie, gdy domyślne zachowanie zostanie zmienione na równość wartości.  
   
- Ten problem jest zmniejszany dla typów odwołań niezmienne, ponieważ niezmienności sprawia, że znacznie trudniejsze, zwróć uwagę na różnicę między równości odwołań i równości wartości.  
+ Ten problem został skorygowany dla niezmiennego typu referencyjnego, ponieważ niezmienności znacznie trudniejsze do zauważenia różnicy między równośćmi referencyjnymi i równość wartości.  
   
  **X AVOID** przeładowanie operatorów równości w typach referencyjnych, jeśli implementacja będzie znacznie mniejsza niż w przypadku równości odwołań.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

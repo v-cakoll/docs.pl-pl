@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie puli obiektów przy użyciu obiektu ConcurrentBag'
+title: 'Porady: tworzenie puli obiektów przy użyciu ConcurrentBag'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,19 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - object pool, in .NET Framework
 ms.assetid: 0480e7ff-b6f9-480e-a889-2ed4264d8372
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0bc0c6bebbab6e84c165f41300a4cb16c8746a07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 888521eb5c3c3169c4b39a26e82fef2e35c286d9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644426"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711275"
 ---
-# <a name="how-to-create-an-object-pool-by-using-a-concurrentbag"></a>Instrukcje: Tworzenie puli obiektów przy użyciu obiektu ConcurrentBag
-Ten przykład pokazuje, jak wdrożyć puli obiektów za pomocą współbieżnego zbioru. Pule obiektu może poprawić wydajność aplikacji w sytuacjach, w którym wymagają wielu wystąpień klasy i klasa jest kosztowne do utworzenia lub zniszczenia. Gdy program kliencki zażąda nowego obiektu, puli obiektów najpierw próbuje Podaj jeden, który został już utworzony i zwrócony do puli. Jeśli żaden nie jest dostępny, następnie jest tworzony nowy obiekt.  
+# <a name="how-to-create-an-object-pool-by-using-a-concurrentbag"></a>Porady: tworzenie puli obiektów przy użyciu ConcurrentBag
+Ten przykład pokazuje, jak używać współbieżnego zbioru do implementowania puli obiektów. Pule obiektów mogą zwiększyć wydajność aplikacji w sytuacjach, gdy wymagana jest wiele wystąpień klasy, a Klasa jest kosztowna do tworzenia lub niszczenia. Gdy program kliencki żąda nowego obiektu, Pula obiektów najpierw próbuje dostarczyć taką, która została już utworzona i zwrócona do puli. Jeśli żaden nie jest dostępny, tylko wtedy jest tworzony nowy obiekt.  
   
- <xref:System.Collections.Concurrent.ConcurrentBag%601> Służy do przechowywania obiektów, ponieważ obsługuje on ostatniego wstawienia i usunięcia, szczególnie w przypadku tego samego wątku jest dodawanie i usuwanie elementów. W tym przykładzie można dodatkowo rozszerzone na mają zostać zbudowane wokół <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>, który implementuje zbiór struktury danych, tak jak <xref:System.Collections.Concurrent.ConcurrentQueue%601> i <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
+ <xref:System.Collections.Concurrent.ConcurrentBag%601> jest używany do przechowywania obiektów, ponieważ obsługuje szybkie Wstawianie i usuwanie, szczególnie gdy ten sam wątek dodaje i usuwa elementy. Ten przykład może być dodatkowo rozszerzany, aby można było skompilować <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>, który jest implementowany przez strukturę danych zbioru, jak <xref:System.Collections.Concurrent.ConcurrentQueue%601> i <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[CDS#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/objectpool.cs#04)]

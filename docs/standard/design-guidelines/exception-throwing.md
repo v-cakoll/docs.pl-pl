@@ -7,22 +7,21 @@ helpviewer_keywords:
 - explicitly throwing exceptions
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
-author: KrzysztofCwalina
-ms.openlocfilehash: 74eee418a3c87b335cdf96557c4e17b95aff7b58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d1b63e5fde57cbe37a1250d16b6bf74a2d5dc8e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669072"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709403"
 ---
 # <a name="exception-throwing"></a>Zgłaszanie wyjątku
-Zgłaszanie wyjątku wytyczne opisane w tej sekcji wymaga dobrych definicji znaczenie błąd wykonania. Niepowodzenie wykonywania występuje zawsze, gdy członek nie, co zostało zaprojektowane w celu (co nazwa elementu członkowskiego oznacza). Na przykład jeśli `OpenFile` nie może zwracać dojście otwartego pliku do obiektu wywołującego, jego mogłoby być uważane za wystąpił błąd wykonania.  
+Zasady zgłaszania wyjątku opisane w tej sekcji wymagają odpowiedniej definicji znaczenia błędu wykonania. Niepowodzenie wykonywania występuje zawsze, gdy członek nie może wykonać czynności, do których został zaprojektowany (co oznacza nazwa elementu członkowskiego). Na przykład, jeśli metoda `OpenFile` nie może zwrócić otwartego dojścia do pliku wywołującego, będzie ona traktowana jako błąd wykonania.  
   
- Większość programistów stały się komfortowo, jednocześnie używania wyjątków do użycia błędy, takie jak dzielenie przez zero lub odwołania o wartości null. W ramach wyjątki są używane dla wszystkich warunków błędu, w tym błędy wykonania.  
+ Większość deweloperów była wygodna z użyciem wyjątków dla błędów użycia, takich jak dzielenie przez zero lub puste odwołania. W strukturze wyjątki są używane dla wszystkich warunków błędów, w tym błędów wykonania.  
   
  **X DO NOT** Zwróć kody błędów.  
   
- Wyjątki są podstawowym sposobem raportowania błędów w struktur.  
+ Wyjątkiem są podstawowe metody raportowania błędów w strukturach.  
   
  **✓ DO** Zgłoś błędy wykonania przez zgłaszanie wyjątków.  
   
@@ -30,39 +29,39 @@ Zgłaszanie wyjątku wytyczne opisane w tej sekcji wymaga dobrych definicji znac
   
  **X DO NOT** Użyj wyjątki dla przepływu sterowania, jeśli to możliwe.  
   
- Z wyjątkiem awarie systemu i operacji o potencjalnych sytuacji wyścigu projektantów framework należy projektować interfejsy API, dzięki czemu użytkownicy można napisać kod, który nie generuje wyjątków. Na przykład można podać sposób, aby sprawdzić warunki wstępne, przed wywołaniem członka, dzięki czemu użytkownicy można napisać kod, który nie generuje wyjątków.  
+ Z wyjątkiem awarii systemu i operacji z potencjalnymi warunkami wyścigu, projektanci struktury powinni projektować interfejsy API, aby użytkownicy mogli pisać kod, który nie zgłasza wyjątków. Na przykład można umożliwić sprawdzenie warunków wstępnych przed wywołaniem elementu członkowskiego, aby użytkownicy mogli pisać kod, który nie zgłasza wyjątków.  
   
- Należy używać do sprawdzania warunków wstępnych innego członka jest często nazywany tester i nosi nazwę składowej, która faktycznie działa doer.  
+ Element członkowski używany do sprawdzania warunków wstępnych innego elementu członkowskiego jest często nazywany testerem, a element członkowski, który faktycznie wykonuje prace, nosi nazwę DOER.  
   
- Istnieją przypadki, gdy wzorzec Tester Doer może mieć zmniejszenie wydajności nie do przyjęcia. W takiej sytuacji należy rozważyć tak zwane wzorzec analizy spróbuj (zobacz [wyjątki i wydajność](../../../docs/standard/design-guidelines/exceptions-and-performance.md) Aby uzyskać więcej informacji).  
+ Istnieją przypadki, w których wzorzec testera DOER może mieć nieakceptowalne obciążenie wydajności. W takich przypadkach należy wziąć pod uwagę ten wzór try-Parse (zobacz [wyjątki i wydajność](../../../docs/standard/design-guidelines/exceptions-and-performance.md) , aby uzyskać więcej informacji).  
   
- **✓ CONSIDER** skutki wydajności zgłaszanie wyjątków. Stawki throw powyżej 100 na sekundę mogą znacznie wpłynąć na wydajność większości aplikacji.  
+ **✓ CONSIDER** skutki wydajności zgłaszanie wyjątków. Stawki za 100 na sekundę mogą mieć zauważalny wpływ na wydajność większości aplikacji.  
   
  **✓ DO** dokumentu wszystkie wyjątki zgłaszane przez członków publicznie można wywołać z powodu naruszenia elementu członkowskiego kontraktu (zamiast awarii systemu) i je traktować jako część Umowy.  
   
- Wyjątki, które są częścią kontraktu nie należy zmieniać z jednej wersji do następnego (czyli nie należy zmieniać typ wyjątku i nie należy dodawać nowych wyjątków).  
+ Wyjątki, które są częścią kontraktu, nie powinny się zmieniać z jednej wersji na następną (tj. nie należy zmieniać typu wyjątku, a nowe wyjątki nie powinny być dodawane).  
   
  **X DO NOT** ma publicznych członków, których można albo throw lub nie na podstawie niektórych opcji.  
   
  **X DO NOT** ma publicznych elementów członkowskich, które zwracają wyjątki jako wartości zwracane lub `out` parametru.  
   
- Zwracanie wyjątków z publicznych interfejsów API, zamiast zgłaszać ich unieważnia wiele korzyści zapewnianych przez raportowanie błędów opartą na wyjątkach.  
+ Zwracanie wyjątków z publicznych interfejsów API zamiast zgłaszania ich przez wiele zalet raportowania błędów opartych na wyjątkach.  
   
  **✓ CONSIDER** za pomocą metody konstruktora wyjątku.  
   
- Jest wspólne dla tego samego wyjątku z różnych miejsc. Aby uniknąć rozrostu kodu, należy używać metod pomocników, tworzyć wyjątki, które inicjuje ich właściwości.  
+ Często należy zgłosić ten sam wyjątek z różnych miejsc. Aby uniknąć przeładowanie kodu, należy użyć metod pomocnika, które tworzą wyjątki i inicjują ich właściwości.  
   
- Ponadto nie pojawiają się elementy członkowskie, które zgłaszają wyjątki śródwierszowych. Przenoszenie instrukcji "throw" w Konstruktorze może umożliwić elementu członkowskiego był śródwierszowy.  
+ Ponadto elementy członkowskie, które generują wyjątki, nie są obsługiwane. Przeniesienie instrukcji throw wewnątrz konstruktora może pozwolić, aby element członkowski był wbudowany.  
   
  **X DO NOT** zgłaszanie wyjątków z bloki filtru wyjątków.  
   
- Gdy filtra wyjątku zgłasza wyjątek, wyjątek przez środowisko CLR i filtr zwraca wartość false. To zachowanie jest nie do odróżnienia od filtrowania, wykonywanie i zwrócenie wartości false jawnie i dlatego jest bardzo trudno debugować.  
+ Gdy filtr wyjątku zgłasza wyjątek, wyjątek jest przechwytywany przez środowisko CLR, a filtr zwraca wartość false. Takie zachowanie jest odróżnienie od wykonywanych przez filtr i zwraca wartość false, dlatego trudno jest debugować.  
   
- **X AVOID** jawne zgłaszanie wyjątków z bloki finally. Akceptowane są niejawnie zgłoszenia wyjątku, wynikające z wywołania metody, które generują.  
+ **X AVOID** jawne zgłaszanie wyjątków z bloki finally. Niejawnie zgłoszone wyjątki powstałe w wyniku wywoływania metod wywołujących są akceptowalne.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

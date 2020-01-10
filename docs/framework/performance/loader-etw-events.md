@@ -5,14 +5,12 @@ helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a6928b5ac41a6af36dc7d5e7f5bb02074ba742e5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 73665915a70225c2b1da47c7b60347b089564884
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974590"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716028"
 ---
 # <a name="loader-etw-events"></a>Zdarzenia ETW modułu ładującego
 Te zdarzenia zbierają informacje dotyczące ładowania i zwalniania domen aplikacji, zestawów i modułów.  
@@ -45,7 +43,7 @@ Te zdarzenia zbierają informacje dotyczące ładowania i zwalniania domen aplik
 |AppDomainFlags|win: UInt32|0x1: domena domyślna.<br /><br /> 0x2: plik wykonywalny.<br /><br /> 0x4: domena aplikacji, bit 28-31: zasady udostępniania tej domeny.<br /><br /> 0: domena udostępniona.|  
 |Element AppDomainname|win: UnicodeString|Przyjazna nazwa domeny aplikacji. Może ulec zmianie w okresie istnienia procesu.|  
 |AppDomainIndex|win: UInt32|Indeks domeny aplikacji.|  
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
 
 ## <a name="clr-loader-assembly-events"></a>Zdarzenia zestawu modułu ładującego CLR  
  W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
@@ -74,7 +72,7 @@ Te zdarzenia zbierają informacje dotyczące ładowania i zwalniania domen aplik
 |BindingID|win: UInt64|Identyfikator, który jednoznacznie identyfikuje powiązanie zestawu.|  
 |AssemblyFlags —|win: UInt32|0x1: zestaw neutralny dla domeny.<br /><br /> 0x2: zestaw dynamiczny.<br /><br /> 0x4: zestaw ma obraz natywny.<br /><br /> 0x8: zestaw kolekcjonowany.|  
 |AssemblyName|win: UnicodeString|W pełni kwalifikowana nazwa zestawu.|  
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|   
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|   
 
 ## <a name="module-events"></a>Zdarzenia modułu
  W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
@@ -105,7 +103,7 @@ Te zdarzenia zbierają informacje dotyczące ładowania i zwalniania domen aplik
 |Reserved1|win: UInt32|Pole zastrzeżone.|  
 |ModuleILPath|win: UnicodeString|Ścieżka obrazu języka pośredniego firmy Microsoft (MSIL) dla modułu lub nazwy modułu dynamicznego, jeśli jest to zestaw dynamiczny (zakończony zerem).|  
 |ModuleNativePath|win: UnicodeString|Ścieżka do obrazu natywnego modułu, jeśli jest obecny (zakończony zerem).|  
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
 |ManagedPdbSignature|win: identyfikator GUID|Sygnatura identyfikatora GUID programu Managed Database (PDB), która jest zgodna z tym modułem. (Zobacz uwagi).|  
 |ManagedPdbAge|win: UInt32|Numer wieku zapisany w zarządzanym pliku PDB, który jest zgodny z tym modułem. (Zobacz uwagi).|  
 |ManagedPdbBuildPath|win: UnicodeString|Ścieżka do lokalizacji, w której został skompilowany zarządzany plik PDB zgodny z tym modułem. W niektórych przypadkach może to być nazwa pliku. (Zobacz uwagi).|  
@@ -149,7 +147,7 @@ Te zdarzenia zbierają informacje dotyczące ładowania i zwalniania domen aplik
 |Reserved1|win: UInt32|Pole zastrzeżone.|  
 |ModuleILPath|win: UnicodeString|Ścieżka obrazu MSIL dla modułu lub nazwy modułu dynamicznego, jeśli jest to zestaw dynamiczny (zakończony zerem).|  
 |ModuleNativePath|win: UnicodeString|Ścieżka do obrazu natywnego modułu, jeśli jest obecny (zakończony zerem).|  
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
 
 ## <a name="module-range-events"></a>Zdarzenia zakresu modułu
  W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
@@ -172,7 +170,7 @@ Te zdarzenia zbierają informacje dotyczące ładowania i zwalniania domen aplik
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|win: UInt16|Jednoznacznie identyfikuje określone wystąpienie środowiska CLR w procesie w przypadku załadowania wielu wystąpień środowiska CLR.|  
+|ClrInstanceID|Win: UInt16|Jednoznacznie identyfikuje określone wystąpienie środowiska CLR w procesie w przypadku załadowania wielu wystąpień środowiska CLR.|  
 |ModuleID|win: UInt64|Identyfikuje zestaw, do którego należy ten moduł.|  
 |RangeBegin|win: UInt32|Przesunięcie w module reprezentujące początek zakresu dla określonego typu zakresu.|  
 |RangeSize|win: UInt32|Rozmiar określonego zakresu w bajtach.|  

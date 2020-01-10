@@ -1,23 +1,22 @@
 ---
 title: Metody rozszerzające C# — Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#], adding to existing types
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 5cce8eb3ad36208c3d376bc8c94da484e9f9181e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1ab831b10b4152e8713cdfba4962822042c15673
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971051"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714956"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metody rozszerzeń (Przewodnik programowania w języku C#)
 Metody rozszerzenia umożliwiają „dodawanie” metod do istniejących typów bez konieczności tworzenia nowego typu pochodnego, ponownej kompilacji lub modyfikowania oryginalnego typu w inny sposób. Metody rozszerzenia stanowią specjalny rodzaj metod statycznych, ale są wywoływane tak, jakby były metodami wystąpień w typie rozszerzonym. W przypadku kodu klienta pisanego C#w F# i Visual Basic nie ma żadnej widocznej różnicy między wywołaniem metody rozszerzającej a metodami, które są faktycznie zdefiniowane w typie.  
   
- Najbardziej typowe metody rozszerzające to [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] standardowe operatory zapytań, które dodają funkcje zapytania do istniejących <xref:System.Collections.IEnumerable?displayProperty=nameWithType> i <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> typów. Aby użyć standardowych operatorów zapytań, najpierw Przenieś je do zakresu za pomocą dyrektywy `using System.Linq`. Następnie dowolny typ, który implementuje <xref:System.Collections.Generic.IEnumerable%601> wydaje się mieć metody instancji, takie jak <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>i tak dalej. Te dodatkowe metody można zobaczyć w uzupełnianiu instrukcji IntelliSense po wpisaniu "kropki" po wystąpieniu typu <xref:System.Collections.Generic.IEnumerable%601>, na przykład <xref:System.Collections.Generic.List%601> lub <xref:System.Array>.  
+ Najbardziej typowymi metodami rozszerzenia są operatory standardowych zapytań LINQ, które dodają funkcje zapytania do istniejących <xref:System.Collections.IEnumerable?displayProperty=nameWithType> i typów <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Aby użyć standardowych operatorów zapytań, najpierw Przenieś je do zakresu za pomocą dyrektywy `using System.Linq`. Następnie dowolny typ, który implementuje <xref:System.Collections.Generic.IEnumerable%601> wydaje się mieć metody instancji, takie jak <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>i tak dalej. Te dodatkowe metody można zobaczyć w uzupełnianiu instrukcji IntelliSense po wpisaniu "kropki" po wystąpieniu typu <xref:System.Collections.Generic.IEnumerable%601>, na przykład <xref:System.Collections.Generic.List%601> lub <xref:System.Array>.  
   
  Poniższy przykład przedstawia sposób wywołania standardowego operatora zapytania `OrderBy` metody na tablicy liczb całkowitych. Wyrażenie w nawiasach to wyrażenie lambda. Wiele standardowych operatorów zapytań przyjmuje wyrażenia lambda jako parametry, ale nie jest to wymagane dla metod rozszerzenia. Aby uzyskać więcej informacji, zobacz [wyrażenia lambda](../statements-expressions-operators/lambda-expressions.md).  
   

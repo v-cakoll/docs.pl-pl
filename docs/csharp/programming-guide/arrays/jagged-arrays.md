@@ -1,17 +1,16 @@
 ---
 title: Tablice nieregularne — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 8d1be351e3aabea44138323d04c922dd1cccb78a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 56013f0143d5efcb31a476909cb6e92504ff0dbc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597327"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705707"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Tablice nieregularne (Przewodnik programowania w języku C#)
 
@@ -21,7 +20,7 @@ Nieregularna tablica to ta, której elementy są tablicami. Elementy tablicy nie
   
  [!code-csharp[csProgGuideArrays#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#19)]  
   
- Zanim będzie można użyć `jaggedArray`, jego elementy muszą zostać zainicjowane. Można inicjować następujące elementy:  
+ Aby można było używać `jaggedArray`, jego elementy muszą zostać zainicjowane. Można inicjować następujące elementy:  
   
  [!code-csharp[csProgGuideArrays#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#20)]  
   
@@ -35,7 +34,7 @@ Nieregularna tablica to ta, której elementy są tablicami. Elementy tablicy nie
   
  [!code-csharp[csProgGuideArrays#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#22)]  
   
- Możesz użyć następującej formy skróconej. Należy zauważyć, że nie można `new` pominąć operatora z inicjowania elementów, ponieważ nie ma domyślnego inicjowania dla elementów:  
+ Możesz użyć następującej formy skróconej. Należy zauważyć, że nie można pominąć operatora `new` z inicjowania elementów, ponieważ nie ma domyślnego inicjowania dla elementów:  
   
  [!code-csharp[csProgGuideArrays#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#23)]  
   
@@ -49,7 +48,7 @@ Nieregularna tablica to ta, której elementy są tablicami. Elementy tablicy nie
   
  [!code-csharp[csProgGuideArrays#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#25)]  
   
- Można uzyskać dostęp do poszczególnych elementów, jak pokazano w tym przykładzie, który wyświetla wartość elementu `[1,0]` pierwszej tablicy (wartość `5`):  
+ Można uzyskać dostęp do poszczególnych elementów, jak pokazano w tym przykładzie, który wyświetla wartość `[1,0]` elementu pierwszej tablicy (wartość `5`):  
   
  [!code-csharp[csProgGuideArrays#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#26)]  
   

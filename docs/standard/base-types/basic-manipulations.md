@@ -9,13 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - strings [.NET Framework], examples
 ms.assetid: 121d1eae-251b-44c0-8818-57da04b8215e
-ms.custom: seodec18
-ms.openlocfilehash: 9c5cdd15e189b8f0821f52d216c398299d44a5ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ff7abee460b4085fa9e039e678c975338ccb511a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105738"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711509"
 ---
 # <a name="how-to-perform-basic-string-manipulations-in-net"></a>Instrukcje: wykonywanie podstawowych operacji na ciągach w programie .NET
 W poniższym przykładzie zastosowano niektóre metody omówione w temacie [podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md) w celu skonstruowania klasy służącej do manipulowania ciągami w sposób, który może znajdować się w rzeczywistej aplikacji. Klasa `MailToData` przechowuje nazwę i adres osoby w osobnych właściwościach i zapewnia sposób łączenia pól `City`, `State`i `Zip` w jeden ciąg do wyświetlania użytkownikowi. Ponadto Klasa umożliwia użytkownikowi wprowadzanie informacji o miejscowości, stanie i kodzie POCZTOWYm jako jednego ciągu; Aplikacja automatycznie analizuje pojedynczy ciąg i wprowadza odpowiednie informacje do odpowiedniej właściwości.  

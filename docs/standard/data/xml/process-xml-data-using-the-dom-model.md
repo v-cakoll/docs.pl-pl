@@ -3,19 +3,17 @@ title: Przetwarzanie danych XML przy użyciu modelu DOM
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 56b6e9c7-ed82-4a65-a647-7be32c83bcc8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d34d22d8329f0bc26c1e29653137211bf300d324
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 01ef4bef57b8a2e3e13f28a98adb21b111f3f4ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647822"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710456"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>Przetwarzanie danych XML przy użyciu modelu DOM
-XML Document Object Model (DOM), dane XML są traktowane jako standardowy zestaw obiektów i służy do przetwarzania danych XML w pamięci. `System.Xml` Przestrzeń nazw zawiera reprezentację programistyczne dokumenty XML, fragmenty, węzłów lub zestaw węzłów. Jest on oparty na Core poziomu 1 DOM World Wide Web Consortium (W3C) i zalecenia dotyczące modelu DOM poziom 2 rdzeni.  
+Document Object Model XML (DOM) traktuje dane XML jako standardowy zestaw obiektów i służy do przetwarzania danych XML w pamięci. Przestrzeń nazw `System.Xml` zapewnia programistyczną reprezentację dokumentów XML, fragmentów, węzłów lub zestawów węzłów. Jest on oparty na organizacja World Wide Web Consortium (W3C) modelu DOM 1 rdzeń i na poziomie modelu DOM 2 rdzeni.  
   
- <xref:System.Xml.XmlDocument> Klasa reprezentuje dokumentu XML. Zawiera elementy członkowskie do pobierania i tworzenia wszystkich obiektów XML. Za pomocą <xref:System.Xml.XmlDocument>oraz ich powiązanymi klasami można konstruowania, dokumentów XML, obciążenia i uzyskiwać dostęp do danych i modyfikować dane i zapisać zmiany.  
+ Klasa <xref:System.Xml.XmlDocument> reprezentuje dokument XML. Obejmuje ona członków do pobierania i tworzenia wszystkich innych obiektów XML. Korzystając z <xref:System.Xml.XmlDocument>i związanych z nimi klas, można tworzyć dokumenty XML, ładować i uzyskiwać dostęp do danych, modyfikować dane i zapisywać zmiany.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
@@ -59,4 +57,4 @@ XML Document Object Model (DOM), dane XML są traktowane jako standardowy zestaw
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Przetwarzanie danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- Omawia przy użyciu przetwarzania XML <xref:System.Xml.XPath.XPathNavigator> klasy.
+ Omawia przetwarzanie XML przy użyciu klasy <xref:System.Xml.XPath.XPathNavigator>.

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - security events [.NET Framework]
 - ETW, security events (CLR)
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b1dad042595608a805f978673858acaa5c01130f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c443bda8cdc2c6b32760e9dcba8b81a29d81660b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974880"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715939"
 ---
 # <a name="security-etw-events"></a>Zabezpieczenia zdarzeń ETW
 
@@ -39,7 +37,7 @@ Zdarzenia zabezpieczeń są wywoływane podczas weryfikacji silnej nazwy i weryf
 |VerificationFlags|win: UInt32|Flagi weryfikacji.|  
 |ErrorCode|win: UInt32|Kod błędu HResult.|  
 |FullyQualifiedAssemblyName|win: UnicodeString|W pełni kwalifikowana nazwa zestawu.|  
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
 
 ## <a name="authenticodeverificationstart_v1-and-authenticodeverificationstop_v1-events"></a>Zdarzenia AuthenticodeVerificationStart_V1 i AuthenticodeVerificationStop_V1  
  W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
@@ -62,7 +60,7 @@ Zdarzenia zabezpieczeń są wywoływane podczas weryfikacji silnej nazwy i weryf
 |VerificationFlags|win: UInt32|Flagi weryfikacji.|  
 |ErrorCode|win: UInt32|Kod błędu HResult.|  
 |ModulePath|win: UnicodeString|Ścieżka modułu.|  
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
 ## <a name="see-also"></a>Zobacz także
 

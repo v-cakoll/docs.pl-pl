@@ -17,14 +17,12 @@ helpviewer_keywords:
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b39373239d6aefaa671afebbb85dc2156866358f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 66e7d01f37a1119b9d2076a9131aa40f26d15625
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204806"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708194"
 ---
 # <a name="asynchronous-file-io"></a>Asynchroniczne We/Wy pliku
 
@@ -36,11 +34,11 @@ W programie .NET Framework w wersji 4 i starszych do implementowania asynchronic
 
 C#i Visual Basic każdy z nich ma dwa słowa kluczowe do programowania asynchronicznego:
 
-- modyfikator `Async` (Visual Basic) lub `async`C#(), który jest używany do oznaczania metody, która zawiera operację asynchroniczną.
+- Modyfikator `Async` (Visual Basic) lub `async` (C#), który służy do oznaczania metody zawierającej operację asynchroniczną.
 
-- operator `Await` (Visual Basic) lub `await`C#(), który jest stosowany do wyniku metody asynchronicznej.
+- Operator `Await` (Visual Basic) lub `await` (C#), który jest stosowany do wyniku metody asynchronicznej.
 
-W celu implementowania asynchronicznych operacji We/Wy należy używać tych słów kluczowych w połączeniu z metodami asynchronicznymi, jak pokazano w przykładach poniżej. Aby uzyskać więcej informacji, zobacz [asynchroniczne programowanie z asynchroniczne i awaitC#()](../../csharp/programming-guide/concepts/async/index.md) lub [asynchroniczne programowanie z Async i Await (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md).
+W celu implementowania asynchronicznych operacji We/Wy należy używać tych słów kluczowych w połączeniu z metodami asynchronicznymi, jak pokazano w przykładach poniżej. Aby uzyskać więcej informacji, zobacz [programowanie asynchroniczne z async i await (C#)](../../csharp/programming-guide/concepts/async/index.md) lub [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md).
 
 W tym przykładzie pokazano, jak za pomocą dwóch obiektów <xref:System.IO.FileStream> skopiować pliki asynchronicznie z jednego katalogu do innego. Program obsługi zdarzeń <xref:System.Web.UI.WebControls.Button.Click> kontrolki <xref:System.Windows.Controls.Button> jest oznaczony modyfikatorem `async`, ponieważ wywołuje metodę asynchroniczną.
 

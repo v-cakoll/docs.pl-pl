@@ -3,17 +3,15 @@ title: Aktualizacja dynamiczna obiektów NodeLists i NamedNodeMaps
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 76c511fd-6704-4ca4-8078-860a68d898ad
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9f56ba8711988f2f7d743dc4ff7b69272e2642a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58dfde94c2f37b0a09ee795b9df20296c9f86da6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934475"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710976"
 ---
 # <a name="dynamic-updates-to-nodelists-and-namednodemaps"></a>Aktualizacja dynamiczna obiektów NodeLists i NamedNodeMaps
-Ponieważ **XmlNodeList** i **XmlNamedNodeMap** zawierają zestaw węzłów, jeszcze dokument XML jest ładowany do pamięci i jest modyfikowana, World Wide Web Consortium (W3C) stwierdza, że te obiekty które zawierają zestawy węzły muszą być dynamiczne. Oznacza to jeśli zmieni się dokumentu podstawowego, następnie dane w tych dwóch obiektów należy zmieniać również. W związku z tym jeśli masz **XmlNodeList** zawierający wszystkie elementy podrzędne danego elementu (na przykład element X), a następnie dodaj element dodatkowy element Q, do dokumentu w elemencie X. **XmlNodeList** powinien również zawierać tego nowego elementu w funkcji pytania i dodać do swojej kolekcji. Dotyczy to także w odwrotnej kolejności. Jeśli węzeł zostanie dodany do **XmlNodeList**, również zostanie zaktualizowany dokumentu podstawowego.  
+Ponieważ **XmlNodeList** i **XmlNamedNodeMap** zawierają zestaw węzłów, a dokument XML jest ładowany do pamięci i jest modyfikowany, organizacja World Wide Web Consortium (W3C) stwierdza, że te obiekty, które zawierają zestawy węzłów, muszą być dynamiczne. Oznacza to, że jeśli dokument źródłowy ulegnie zmianie, dane w tych dwóch obiektach powinny być również zmienione. W związku z tym, jeśli masz element **XmlNodeList** , który zawiera wszystkie elementy podrzędne określonego elementu (na przykład element x), następnie Dodaj dodatkowy element, element Q do dokumentu w obszarze element x. **XmlNodeList** powinien również mieć dodany nowy element Q do swojej kolekcji. Ta sama wartość dotyczy odwrócenia. Jeśli węzeł zostanie dodany do **XmlNodeList**, dokument źródłowy również zostanie zaktualizowany.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -9,21 +9,20 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-author: KrzysztofCwalina
-ms.openlocfilehash: e890ebbbeb04ca424b84c11791e5ce7fa55db72e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 130e9b4e7f8d7076d1dc3f21f51dc07a68799bbe
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663478"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709455"
 ---
 # <a name="enum-design"></a>Projekt wyliczeń
 
-Typy wyliczeniowe są specjalnym rodzajem typu wartości. Istnieją dwa rodzaje wyliczeń: prostych typów wyliczeniowych i flagi wyliczeń.
+Wyliczenia są specjalnym rodzajem typu wartości. Istnieją dwa rodzaje wyliczeń: proste wyliczenia i wyliczenia flag.
 
-Proste typy wyliczeniowe reprezentują małych zamknięte zestawów opcji. Typowym przykładem proste wyliczenia to zestaw kolorów.
+Proste wyliczenia reprezentują małe zamknięte zestawy wyborów. Typowym przykładem prostego wyliczenia jest zestaw kolorów.
 
-Typy wyliczeniowe flag są przeznaczone do wsparcia Operacje bitowe wartości wyliczenia. Typowym przykładem wyliczenia flag jest lista opcji.
+Typy wyliczeniowe flag są przeznaczone do obsługi operacji bitowych na wartościach wyliczeniowych. Typowym przykładem wyliczenia flag jest lista opcji.
 
 **✓ DO** silnie wpisz parametry, właściwości, za pomocą wyliczeniem i zwracać wartości, które reprezentują zestawy wartości.
 
@@ -33,73 +32,73 @@ Typy wyliczeniowe flag są przeznaczone do wsparcia Operacje bitowe wartości wy
 
 **X DO NOT** Podaj zastrzeżone wyliczenia wartości, które są przeznaczone do użytku w przyszłości.
 
-Na późniejszym etapie można zawsze po prostu dodać wartości do istniejącego typu wyliczeniowego. Zobacz [dodanie wartości do wyliczenia](#add_value) Aby uzyskać więcej informacji na temat dodawania wartości do wyliczenia. Zastrzeżone wartości po prostu charakteryzują się zestaw wartości rzeczywistych i powodowało błędy użytkowników.
+Zawsze możesz po prostu dodać wartości do istniejącego wyliczenia na późniejszym etapie. Aby uzyskać więcej informacji na temat dodawania wartości do typów wyliczeniowych, zobacz [Dodawanie wartości do wyliczeń](#add_value) . Wartości zarezerwowane powodują zanieczyszczenie zestawu rzeczywistych wartości i umożliwiają osiągnięcie błędów użytkownika.
 
 **X AVOID** publicznie udostępnianie wyliczenia z tylko jedną wartość.
 
-Powszechną praktyką zapewniających przyszłej rozszerzalności interfejsów API języka C jest dodać zastrzeżone parametry do podpisów metod. Takie zastrzeżone parametry mogą być wyrażone jako Typy wyliczeniowe atrybutem wartość domyślną pojedynczej. To nie należy wykonywać w zarządzanych interfejsów API. Przeciążenie metody umożliwia dodawanie parametrów w przyszłych wersjach.
+Typowym sposobem zapewnienia przyszłej rozszerzalności interfejsów API języka C jest dodanie zarezerwowanych parametrów do sygnatur metod. Takie zastrzeżone parametry można wyrazić jako wyliczenia z pojedynczą wartością domyślną. Nie należy tego robić w zarządzanych interfejsach API. Przeciążanie metod pozwala dodawać parametry w przyszłych wersjach.
 
 **X DO NOT** zawierają wartości wskaźnikowych w wyliczeniach.
 
-Chociaż czasami są przydatne dla deweloperów w ramach, wartownik wartości są mylące dla użytkowników Framework. Są one używane do śledzenia stanu typu wyliczeniowego, a nie jest jedną z wartości z zestawu, reprezentowany przez wyliczenie.
+Chociaż są czasami pomocne dla deweloperów platformy, wartości wskaźnikowe są mylące dla użytkowników struktury. Są one używane do śledzenia stanu wyliczenia, a nie jako jedna z wartości z zestawu reprezentowanego przez wyliczenie.
 
 **✓ DO** Podaj wartość zero w prosty wyliczenia.
 
-Należy wziąć pod uwagę podczas wywoływania wartość podobną "None". Jeśli wartość ta nie jest właściwa dla tego konkretnego wyliczenia, najbardziej typowe domyślna wartość wyliczenia powinny przypisany podstawową wartość zero.
+Rozważ wywołanie wartości podobnej do "none". Jeśli taka wartość nie jest odpowiednia dla danego wyliczenia, najbardziej typowa wartość domyślna dla wyliczenia powinna mieć przypisaną podstawową wartość równą zero.
 
 **✓ CONSIDER** przy użyciu <xref:System.Int32> (ustawienie domyślne w większości języków programowania) jako typu bazowego typu wyliczeniowego, chyba że jest spełniony jeden z następujących czynności:
 
-- Wyliczenia jest wyliczenie flag i masz więcej niż 32 flag lub chcą mieć w przyszłości.
+- Wyliczenie jest wyliczeniem flag i ma więcej niż 32 flag lub oczekuje więcej w przyszłości.
 
-- Typ podstawowy musi być inna niż <xref:System.Int32> dla ułatwia współdziałanie z kodem niezarządzanym Oczekiwano innego rozmiaru wyliczenia.
+- Typ podstawowy musi być inny niż <xref:System.Int32>, aby ułatwić współdziałanie z kodem niezarządzanym.
 
-- Mniejsze bazowego typu spowoduje znaczne oszczędności miejsca. Jeśli oczekujesz, wyliczenia, które ma być używany przede wszystkim jako argument dla przepływu sterowania, rozmiar sprawia, że niewielkie różnice. Oszczędności rozmiaru wynikające mogą być znaczące, jeśli:
+- Mniejszy typ podstawowy spowoduje znaczne oszczędności w miejscu. Jeśli spodziewasz się, że Wyliczenie ma być używane głównie jako argument dla przepływu sterowania, rozmiar powoduje niewielkie różnice. Oszczędność rozmiaru może być istotna, jeśli:
 
-  - Oczekujesz, że wyliczenie, które ma być używany jako pole w bardzo często skonkretyzowany struktury lub klasy.
+  - Oczekuje się, że Wyliczenie ma być używane jako pole w bardzo często skonkretyzowanyj strukturze lub klasie.
 
-  - Oczekujesz, że użytkownicy, aby utworzyć duże tablice i kolekcje wystąpieniami enum.
+  - Oczekujesz, że użytkownicy będą tworzyć duże tablice lub kolekcje wystąpień wyliczeniowych.
 
-  - Spodziewasz się dużej liczby wystąpień typu wyliczeniowego do zserializowania.
+  - Oczekuje się, że wiele wystąpień wyliczenia ma być serializowana.
 
-Do użycia w pamięci należy pamiętać, że zarządzane obiekty są zawsze `DWORD`-wyrównane, więc należy skutecznie wiele typów wyliczeniowych lub innych struktur małe w wystąpieniu umieszczenie mniejszych wyliczenia z celu reagować, ponieważ rozmiar wystąpienia całkowita jest zawsze Zamierzasz zaokrąglone do `DWORD`.
+W przypadku użycia w pamięci należy pamiętać, że obiekty zarządzane są zawsze `DWORD`wyrównane, dlatego w celu wprowadzenia różnic należy użyć wielu wyliczeń lub innych małych struktur w wystąpieniu do spakowania mniejszego wyliczenia z, ponieważ całkowity rozmiar wystąpienia zawsze będzie zaokrąglany do `DWORD`.
 
 **✓ DO** nazwa wyliczenia flagi rzeczowniki w liczbie mnogiej lub fraz rzeczownik i proste wyliczenia za pomocą pojedynczej rzeczowniki ani fraz rzeczownik.
 
 **X DO NOT** rozszerzyć <xref:System.Enum?displayProperty=nameWithType> bezpośrednio.
 
-<xref:System.Enum?displayProperty=nameWithType> jest specjalnym typem jest używana przez środowisko CLR do tworzenia wyliczenia zdefiniowanych przez użytkownika. Większość języków programowania, podaj element programowania, który umożliwia dostęp do tej funkcji. Na przykład w języku C# `enum` — słowo kluczowe jest używane do definiowania wyliczenia.
+<xref:System.Enum?displayProperty=nameWithType> jest specjalnym typem używanym przez środowisko CLR do tworzenia wyliczeń zdefiniowanych przez użytkownika. Większość języków programowania udostępnia element programistyczny, który zapewnia dostęp do tej funkcji. Na przykład, w C# `enum` słowo kluczowe jest używane do definiowania wyliczenia.
 
 <a name="design"></a>
 
-### <a name="designing-flag-enums"></a>Projektowanie flagi wyliczeń
+### <a name="designing-flag-enums"></a>Projektowanie typów wyliczeniowych flag
 
-**✓ DO** zastosować <xref:System.FlagsAttribute?displayProperty=nameWithType> do wyliczenia flagi. Nie dotyczą tego atrybutu prostych typów wyliczeniowych.
+**✓ DO** zastosować <xref:System.FlagsAttribute?displayProperty=nameWithType> do wyliczenia flagi. Nie stosuj tego atrybutu do prostych typów wyliczeniowych.
 
 **✓ DO** używać potęgami liczby dwa dla wartości wyliczenia flag, dlatego można je dowolnie łączyć przy użyciu operacji bitowej OR.
 
 **✓ CONSIDER** dostarczanie wartości wyliczenia specjalne powszechnie używane kombinacji flag.
 
-Operacje bitowe są zaawansowane pojęcia i nie powinno być wymagane dla prostych zadań. <xref:System.IO.FileAccess.ReadWrite> znajduje się przykład specjalna wartość.
+Operacje bitowe są zaawansowaną koncepcją i nie powinny być wymagane w przypadku prostych zadań. Przykładem takiej wartości jest <xref:System.IO.FileAccess.ReadWrite>.
 
 **X AVOID** tworzenia wyliczenia flag gdzie niektórych kombinacji wartości są nieprawidłowe.
 
 **X AVOID** przy użyciu flagi wyliczenia wartości zero, chyba że wartość reprezentuje "wszystkie flagi są czyszczone" i nazwie odpowiednio, zgodnie z wytycznymi dalej.
 
-**✓ DO** nazwę zerowej wartości wyliczenia flagi `None`. Dla wyliczenia flag wartość musi zawsze oznacza "wszystkie flagi są czyszczone."
+**✓ DO** nazwę zerowej wartości wyliczenia flagi `None`. W przypadku wyliczenia flag wartość musi zawsze oznaczać, że wszystkie flagi są wyczyszczone.
 
 <a name="add_value"></a>
 
-### <a name="adding-value-to-enums"></a>Dodanie wartości do wyliczenia
+### <a name="adding-value-to-enums"></a>Dodawanie wartości do typów wyliczeniowych
 
-Jest bardzo popularne jest potrzebna dodać wartości do wyliczenia, po już został wysłany. Istnieje potencjalny problem ze zgodnością aplikacji gdy nowo dodanych wartość jest zwracana z istniejących interfejsów API, ponieważ źle napisane aplikacje nie może obsługiwać nową wartość poprawnie.
+Bardzo typowym sposobem jest odnajdowanie, że należy dodać wartości do wyliczenia po jego już wysłaniu. Występuje potencjalny problem ze zgodnością aplikacji w przypadku zwrócenia nowo dodanej wartości z istniejącego interfejsu API, ponieważ źle zapisywane aplikacje mogą nieprawidłowo obsłużyć nową wartość.
 
 **✓ CONSIDER** dodawania wartości do wyliczenia, pomimo ryzyka małych zgodności.
 
-Jeśli masz rzeczywiste dane dotyczące problemów ze zgodnością aplikacji spowodowanych dodatki do wyliczenia, Rozważ dodanie nowego interfejsu API, które zwraca wartości nowym i starym i wycofana starego interfejsu API, który powinno być kontynuowane, zwracając starej wartości. Pozwoli to zagwarantować, że istniejące aplikacje są zgodne.
+Jeśli masz prawdziwe dane dotyczące niezgodności aplikacji spowodowanych przez dodatki do wyliczenia, rozważ dodanie nowego interfejsu API, który zwraca nowe i stare wartości, i Zastąp stary interfejs API, który powinien nadal zwracać tylko stare wartości. Dzięki temu istniejące aplikacje będą nadal zgodne.
 
-*Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
+*Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
 
-*Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*
+*Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*
 
 ## <a name="see-also"></a>Zobacz także
 

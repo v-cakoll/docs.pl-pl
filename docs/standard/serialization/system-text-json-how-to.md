@@ -1,19 +1,17 @@
 ---
 title: Jak serializować i deserializować kod JSON C# przy użyciu-.NET
-author: tdykstra
-ms.author: tdykstra
 ms.date: 09/16/2019
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3d3dc0011562e25854938aff857f2832a5978b49
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a9c690e736a08c729a4099d5e7a519ed17ec282c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283333"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705798"
 ---
 # <a name="how-to-serialize-and-deserialize-json-in-net"></a>Jak serializować i deserializować kod JSON w programie .NET
 
@@ -23,7 +21,7 @@ Instrukcje i przykładowy kod używają biblioteki bezpośrednio, a nie za pomoc
 
 Większość przykładowych kodów serializacji <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType>, aby `true` do "DB-Print" pliku JSON (z wcięciem i białym znakiem). Do użycia w środowisku produkcyjnym zwykle przyjmuje się wartość domyślną `false` dla tego ustawienia.
 
-## <a name="namespaces"></a>Namespaces
+## <a name="namespaces"></a>{1&gt;Przestrzenie nazw&lt;1}
 
 Przestrzeń nazw <xref:System.Text.Json> zawiera wszystkie punkty wejścia i typy główne. Przestrzeń nazw <xref:System.Text.Json.Serialization> zawiera atrybuty i interfejsy API dla zaawansowanych scenariuszy i dostosowań specyficznych dla serializacji i deserializacji. Przykłady kodu przedstawione w tym artykule wymagają `using` dyrektyw dla jednej lub obu tych przestrzeni nazw:
 
@@ -381,7 +379,7 @@ Oto przykład obiektu do serializacji i danych wyjściowych JSON:
 |---------|---------|
 | Data    | 8/1/2019 12:00:00 AM – 07:00|
 | TemperatureCelsius| 25 |
-| Podsumowanie| wartość null|
+| Podsumowanie| {1&gt;null&lt;1}|
 
 ```json
 {
@@ -460,7 +458,7 @@ Aby zminimalizować liczbę ucieczki, można użyć <xref:System.Text.Encodings.
 
 ## <a name="serialize-properties-of-derived-classes"></a>Serializowanie właściwości klas pochodnych
 
-Serializacja polimorficzna nie jest obsługiwana w przypadku określenia w czasie kompilacji typu, który ma być serializowany. Załóżmy na przykład, że masz klasę `WeatherForecast` i klasę pochodną `WeatherForecastWithWind`:
+Serializacja polimorficzna nie jest obsługiwana w przypadku określenia w czasie kompilacji typu, który ma być serializowany. Załóżmy na przykład, że masz klasę `WeatherForecast` i klasę pochodną `WeatherForecastDerived`:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -470,7 +468,7 @@ I Załóżmy, że argument typu metody `Serialize` w czasie kompilacji jest `Wea
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeDefault)]
 
-W tym scenariuszu Właściwość `WindSpeed` nie jest serializowana, nawet jeśli obiekt `weatherForecast` jest w rzeczywistości obiektem `WeatherForecastWithWind`. Tylko właściwości klasy bazowej są serializowane:
+W tym scenariuszu Właściwość `WindSpeed` nie jest serializowana, nawet jeśli obiekt `weatherForecast` jest w rzeczywistości obiektem `WeatherForecastDerived`. Tylko właściwości klasy bazowej są serializowane:
 
 ```json
 {
@@ -575,10 +573,10 @@ Podczas deserializacji kodu JSON pokazanego wcześniej w tym typie przykładowym
 |---------|---------|---------|
 | Data    | 8/1/2019 12:00:00 AM – 07:00||
 | TemperatureCelsius| 0 | Niezgodność z wielkością liter (`temperatureCelsius` w formacie JSON), więc właściwość nie jest ustawiona. |
-| Podsumowanie | Ręczne ||
+| Podsumowanie | Gorąca ||
 | ExtensionData — | temperatureCelsius: 25 |Ponieważ przypadek nie jest zgodny, ta właściwość JSON jest dodatkową i jest parą klucz-wartość w słowniku.|
 || DatesAvailable:<br>  8/1/2019 12:00:00 AM – 07:00<br>8/2/2019 12:00:00 AM – 07:00 |Dodatkowa Właściwość JSON zmieni się na parę klucz-wartość, z tablicą jako obiektem wartości.|
-| |SummaryWords:<br>Ochłodzenia<br>Wiatr<br>Humid |Dodatkowa Właściwość JSON zmieni się na parę klucz-wartość, z tablicą jako obiektem wartości.|
+| |SummaryWords:<br>Chłodna<br>Wiatr<br>Humid |Dodatkowa Właściwość JSON zmieni się na parę klucz-wartość, z tablicą jako obiektem wartości.|
 
 Gdy obiekt docelowy jest serializowany, pary wartości klucza danych rozszerzenia stają się właściwościami JSON tak samo jak w przychodzących danych JSON:
 

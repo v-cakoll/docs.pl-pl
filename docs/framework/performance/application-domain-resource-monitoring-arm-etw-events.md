@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, application domain monitoring events
 - application domain monitoring events [.NET Framework]
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e1c2a38be6f2c15a118b35925570119b474f096
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 0e453b2bafffd9e07a1bdddd97282c5b97f5483d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040564"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716215"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Zdarzenia ETW monitorowania zasobów domen aplikacji (ARM)
 
@@ -44,7 +42,7 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 |Flagi|win: UInt32|Flagi tworzenia wątku.|
 |ManagedThreadIndex|win: UInt32|Zarządzany indeks wątku, który został utworzony.|
 |OSThreadID|win: UInt32|Identyfikator systemu operacyjnego wątku, który został utworzony.|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
 ## <a name="appdomainmemallocated-event"></a>Zdarzenie AppDomainMemAllocated
 
@@ -66,7 +64,7 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 |----------------|---------------|-----------------|
 |AppDomainID|win: UInt64|Identyfikator domeny aplikacji, dla której zgłaszane jest użycie zasobów.|
 |Rozdziela|win: UInt64|Całkowita liczba bajtów przydzielono w tej domenie aplikacji od momentu utworzenia domeny aplikacji (ilość zwolnionej pamięci nie jest odejmowana).|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
 ## <a name="appdomainmemsurvived-event"></a>Zdarzenie AppDomainMemSurvived
 
@@ -89,7 +87,7 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 |AppDomainID|win: UInt64|Identyfikator domeny, dla której zgłaszane jest użycie zasobów.|
 |Ocalałe|win: UInt64|Liczba bajtów przeprowadzonych po ostatniej kolekcji i, które są znane przez tę domenę aplikacji. Ta liczba jest dokładna i kompletna po pełnej kolekcji, ale może być niekompletna po kolekcji tymczasowej.|
 |ProcessSurvived|win: UInt64|Całkowita liczba bajtów przeczytanych z ostatniej kolekcji. Po pełnej kolekcji ta liczba reprezentuje liczbę bajtów przechowywanych na żywo w zarządzanych stertach. Po zakończeniu zbierania danych tymczasowych ta liczba reprezentuje liczbę bajtów przechowywanych na żywo w generacjach tymczasowych.|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
 ## <a name="threadappdomainenter-event"></a>Zdarzenie ThreadAppDomainEnter
 
@@ -112,7 +110,7 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 |----------------|---------------|-----------------|
 |ThreadID|win: UInt64|Identyfikator wątku.|
 |AppDomainID|win: UInt64|Identyfikator domeny aplikacji.|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
 ## <a name="threadterminated-event"></a>Zdarzenie ThreadTerminated
 
@@ -135,7 +133,7 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 |----------------|---------------|-----------------|
 |ThreadID|win: UInt64|Identyfikator wątku.|
 |AppDomainID|win: UInt64|Identyfikator domeny aplikacji.|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
 ## <a name="see-also"></a>Zobacz także
 

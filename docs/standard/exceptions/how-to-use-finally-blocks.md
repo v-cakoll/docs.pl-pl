@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użycie bloków finally'
+title: 'Porady: użycie bloków finally'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,20 +13,18 @@ helpviewer_keywords:
 - finally blocks
 - ArgumentOutOfRangeException class
 ms.assetid: 4b9c0137-04af-4468-91d1-b9014df8ddd2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 213ab53c68a37ac0ba5f337a1d6fc32bfe6f8989
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44fbb53437c4c8f19a424227a167e2e268b77057
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970914"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708835"
 ---
-# <a name="how-to-use-finally-blocks"></a>Jak użycie bloków finally
+# <a name="how-to-use-finally-blocks"></a>Jak używać bloków finally
 
-Gdy wystąpi wyjątek, zatrzymuje wykonywanie i kontrola otrzymuje do obsługi odpowiednich wyjątków. Często oznacza to, że są pomijane wiersze kodu, których oczekujesz, że do wykonania. Niektóre czyszczenie zasobów, takich jak zamykania pliku musi odbywać się nawet wtedy, gdy wyjątek jest zgłaszany. Aby to zrobić, można użyć `finally` bloku. A `finally` blok zawsze jest wykonywany, niezależnie od tego, czy wyjątek jest zgłaszany.
+Gdy wystąpi wyjątek, wykonywanie zostaje zatrzymane i kontrola zostanie udzielona odpowiedniej procedurze obsługi wyjątków. Często oznacza to, że wiersze kodu, które należy wykonać, są pomijane. Niektóre Oczyszczanie zasobów, takie jak zamykanie pliku, należy wykonać nawet wtedy, gdy zostanie zgłoszony wyjątek. W tym celu można użyć bloku `finally`. Blok `finally` jest zawsze wykonywany, niezależnie od tego, czy wystąpił wyjątek.
 
-Poniższy przykład kodu wykorzystuje `try` / `catch` bloku catch <xref:System.ArgumentOutOfRangeException>. `Main` Metoda tworzy dwie tablice i próbuje skopiować jednego do drugiego. Akcja generuje <xref:System.ArgumentOutOfRangeException> i jest on zapisywany w konsoli. `finally` Blok jest wykonywany niezależnie od tego, w wyniku akcji kopiowania.
+Poniższy przykład kodu używa bloku `try`/`catch` do przechwytywania <xref:System.ArgumentOutOfRangeException>. Metoda `Main` tworzy dwie tablice i próbuje skopiować jeden do drugiego. Akcja generuje <xref:System.ArgumentOutOfRangeException> i błąd jest zapisywana w konsoli. Blok `finally` jest wykonywany niezależnie od wyniku akcji kopiowania.
 
 [!code-cpp[CodeTryCatchFinallyExample#3](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeTryCatchFinallyExample/CPP/source2.cpp#3)]
 [!code-csharp[CodeTryCatchFinallyExample#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeTryCatchFinallyExample/CS/source2.cs#3)]

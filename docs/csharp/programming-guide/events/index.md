@@ -1,23 +1,22 @@
 ---
 title: Zdarzenia — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [C#], events
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: d70ec5784d56bad60fbc33ae0b992de1bebfce38
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 183f53a579bdd9f70deb16ca9157c377fa3aff3f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417955"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712315"
 ---
 # <a name="events-c-programming-guide"></a>Zdarzenia (Przewodnik programowania w języku C#)
 Zdarzenia umożliwiają [klasie](../../language-reference/keywords/class.md) lub obiektowi powiadamianie innych klas lub obiektów w przypadku wystąpienia czegoś zainteresowania. Klasa, która wysyła (lub *podnosi*) zdarzenie, jest nazywana *wydawcą* i klasy, które odbierają (lub *obsługują*) zdarzenie są nazywane *subskrybentami*.  
   
- W typowej C# Windows Forms lub aplikacji sieci Web subskrybujesz zdarzenia wywoływane przez kontrolki, takie jak przyciski i pola listy. Przy użyciu C# zintegrowanego środowiska programistycznego (IDE) można przeglądać zdarzenia publikowane przez formant i wybierać te, które mają być obsługiwane. Środowisko IDE zapewnia łatwy sposób automatycznego dodawania pustej metody obsługi zdarzeń i kodu w celu subskrybowania zdarzenia. Aby uzyskać więcej informacji, zobacz [How to: subskrybowanie i anulowanie subskrypcji zdarzeń](./how-to-subscribe-to-and-unsubscribe-from-events.md).  
+W typowej C# Windows Forms lub aplikacji sieci Web subskrybujesz zdarzenia wywoływane przez kontrolki, takie jak przyciski i pola listy. Przy użyciu C# zintegrowanego środowiska programistycznego (IDE) można przeglądać zdarzenia publikowane przez formant i wybierać te, które mają być obsługiwane. Środowisko IDE zapewnia łatwy sposób automatycznego dodawania pustej metody obsługi zdarzeń i kodu w celu subskrybowania zdarzenia. Aby uzyskać więcej informacji, zobacz [subskrybowanie i anulowanie subskrypcji zdarzeń](./how-to-subscribe-to-and-unsubscribe-from-events.md).
   
 ## <a name="events-overview"></a>Przegląd zdarzeń  
  Zdarzenia mają następujące właściwości:  
@@ -37,16 +36,16 @@ Zdarzenia umożliwiają [klasie](../../language-reference/keywords/class.md) lub
 ## <a name="related-sections"></a>Sekcje pokrewne  
  Aby uzyskać więcej informacji, zobacz:  
   
-- [Instrukcje: subskrybowanie i anulowanie subskrypcji zdarzeń](./how-to-subscribe-to-and-unsubscribe-from-events.md)  
-  
-- [Instrukcje: publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi platformy .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
-  
-- [Instrukcje: wywoływanie zdarzeń klasy podstawowej w klasach pochodnych](./how-to-raise-base-class-events-in-derived-classes.md)  
-  
-- [Instrukcje: implementowanie zdarzeń interfejsu](./how-to-implement-interface-events.md)  
-  
-- [Instrukcje: implementowanie niestandardowych metod dostępu zdarzeń](./how-to-implement-custom-event-accessors.md)  
-  
+- [Subskrybowanie i anulowanie subskrypcji zdarzeń](./how-to-subscribe-to-and-unsubscribe-from-events.md)
+
+- [Jak opublikować zdarzenia zgodne z wytycznymi .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+
+- [Jak wywoływać zdarzenia klasy podstawowej w klasach pochodnych](./how-to-raise-base-class-events-in-derived-classes.md)
+
+- [Jak zaimplementować zdarzenia interfejsu](./how-to-implement-interface-events.md)
+
+- [Jak zaimplementować niestandardowe metody dostępu do zdarzeń](./how-to-implement-custom-event-accessors.md)
+
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
 
 Aby uzyskać więcej informacji, zobacz [zdarzenia](~/_csharplang/spec/classes.md#events) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.

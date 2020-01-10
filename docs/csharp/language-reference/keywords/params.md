@@ -1,6 +1,5 @@
 ---
-title: słowo kluczowe params — C# odwołania
-ms.custom: seodec18
+title: params — słowo C# kluczowe-Reference
 ms.date: 07/20/2015
 f1_keywords:
 - params_CSharpKeyword
@@ -9,26 +8,26 @@ helpviewer_keywords:
 - parameters [C#], params
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: 772c8da879eeccbe484c631a47de7fe8a32ec8d2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 90d224080f607cbac96514aaf5ac6d67affef9e0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633582"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713238"
 ---
 # <a name="params-c-reference"></a>params (odwołanie w C#)
 
-Za pomocą `params` — słowo kluczowe, można określić [parametru metody](method-parameters.md) która przyjmuje zmienną liczbę argumentów.
+Za pomocą słowa kluczowego `params` można określić [parametr metody](method-parameters.md) , który przyjmuje zmienną liczbę argumentów.
 
-Możesz wysłać rozdzielana przecinkami lista argumentów o typie określonym w deklaracji parametrów lub tablice argumentów określonego typu. Możesz również wysłać bez argumentów. Jeśli wyślesz żadnych argumentów, długość `params` listy wynosi zero.
+Można wysłać rozdzieloną przecinkami listę argumentów typu określonego w deklaracji parametru lub tablicy argumentów określonego typu. Nie można również wysyłać żadnych argumentów. Jeśli nie wyślesz żadnych argumentów, długość listy `params` wynosi zero.
 
-Żadne dodatkowe parametry są dozwolone po `params` — słowo kluczowe w deklaracji metody i tylko jeden `params` słowo kluczowe jest dozwolone w deklaracji metody.
+Żadne dodatkowe parametry nie są dozwolone po słowie kluczowym `params` w deklaracji metody, a w deklaracji metody dozwolony jest tylko jeden `params` słowo kluczowe.
 
-Deklarowany typ `params` parametr musi być tablicy jednowymiarowej, co ilustruje poniższy przykład. W przeciwnym razie błąd kompilatora [CS0225](../../misc/cs0225.md) występuje.
+Zadeklarowany typ parametru `params` musi być tablicą jednowymiarową, jak pokazano w poniższym przykładzie. W przeciwnym razie wystąpi błąd kompilatora [CS0225](../../misc/cs0225.md) .
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano różne sposoby, w których argumenty mogą być wysyłane do `params` parametru.
+Poniższy przykład ilustruje różne sposoby, w których argumenty mogą być wysyłane do parametru `params`.
 
 [!code-csharp[csrefKeywordsMethodParams#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsMethodParams/CS/csrefKeywordsMethodParams.cs#5)] 
 

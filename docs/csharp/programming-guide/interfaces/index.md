@@ -1,17 +1,16 @@
 ---
 title: Interfejsy — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 77326b37baebc3ade12336b1b3735ed1da497afc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3187b8b94c6e46ec13312fc31ac1ed9852199d6b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120155"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714611"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfejsy (Przewodnik programowania w języku C#)
 
@@ -54,7 +53,7 @@ Interfejs ma następujące właściwości:
 - Interfejs jest podobny do abstrakcyjnej klasy bazowej zawierającej tylko abstrakcyjne elementy członkowskie. Każda klasa lub struktura implementująca interfejs musi implementować wszystkie jego elementy członkowskie.
 - Nie można bezpośrednio utworzyć wystąpienia interfejsu. Jego składowe są implementowane przez dowolną klasę lub strukturę, która implementuje interfejs.
 - Interfejsy mogą zawierać zdarzenia, indeksatory, metody i właściwości.
-- Interfejsy nie zawierają implementacji metod.
+- Interfejsy nie zawierają implementacji metod (w C# 8,0 interfejsy mogą mieć [domyślną implementację metod](../../whats-new/csharp-8.md#default-interface-methods)).
 - Klasa lub struktura może zaimplementować wiele interfejsów. Klasa może dziedziczyć klasę bazową, a także zaimplementować jeden lub więcej interfejsów.
 
 ## <a name="in-this-section"></a>W tej sekcji
@@ -62,17 +61,17 @@ Interfejs ma następujące właściwości:
 [Implementacja interfejsu jawnego](explicit-interface-implementation.md)  
  Wyjaśnia, jak utworzyć element członkowski klasy, który jest specyficzny dla interfejsu.  
   
- [Instrukcje: jawne implementowanie elementów interfejsu](how-to-explicitly-implement-interface-members.md)  
+ [Jak jawnie zaimplementować elementy członkowskie interfejsu](how-to-explicitly-implement-interface-members.md)  
  Przedstawia przykład sposobu jawnego implementowania elementów członkowskich interfejsów.  
   
- [Instrukcje: jawne implementowanie elementów dwóch interfejsów](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [Jak jawnie zaimplementować członków dwóch interfejsów](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Przedstawia przykład sposobu jawnego implementowania elementów członkowskich interfejsów przy użyciu dziedziczenia.  
   
 ## <a name="BKMK_RelatedSections"></a>Sekcje pokrewne
 
 - [Właściwości interfejsu](../classes-and-structs/interface-properties.md)  
 - [Indeksatory w interfejsach](../indexers/indexers-in-interfaces.md)  
-- [Instrukcje: implementowanie zdarzeń interfejsu](../events/how-to-implement-interface-events.md)  
+- [Jak zaimplementować zdarzenia interfejsu](../events/how-to-implement-interface-events.md)
 - [Klasy i struktury](../classes-and-structs/index.md)  
 - [Dziedziczenie](../classes-and-structs/inheritance.md)  
 - [Metody](../classes-and-structs/methods.md)  
@@ -82,7 +81,7 @@ Interfejs ma następujące właściwości:
 - [Zdarzenia](../events/index.md)  
 - [Indeksatory](../indexers/index.md)  
   
-## <a name="featured-book-chapter"></a>polecany rozdział książki
+## <a name="featured-book-chapter"></a>Polecany rozdział książki
 
 [Interfejsy](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) w [uczeniu C# 3,0: główne C# podstawy 3,0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)
 

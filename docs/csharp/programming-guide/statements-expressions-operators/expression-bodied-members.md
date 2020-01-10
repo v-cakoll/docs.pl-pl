@@ -1,16 +1,15 @@
 ---
 title: Składowe w postaci wyrażeń — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 02/06/2019
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
-ms.openlocfilehash: 45dcc58b252963e80798ba86ca5c4f461d493fac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f212bb707d3dd2d4a7cc917d335a83cff01ed0cf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120146"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711990"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Elementy członkowskie z wyrażeniami (C# Przewodnik programowania)
 
@@ -26,12 +25,12 @@ Obsługa definicji treści wyrażenia została wprowadzona dla metod i właściw
 
 |Element członkowski  |Obsługiwane przez... |
 |---------|---------|
-|[Method](#methods)  |C# 6 |
+|[— Metoda](#methods)  |C# 6 |
 |[Właściwość tylko do odczytu](#read-only-properties)   |C# 6  |
-|[Wartość](#properties)  |C# 7.0 |
+|[Property](#properties)  |C# 7.0 |
 |[Konstruktora](#constructors)   |C# 7.0 |
 |[Finalizator](#finalizers)     |C# 7.0 |
-|[Indeksatora](#indexers)       |C# 7.0 |
+|[Indeksator](#indexers)       |C# 7.0 |
 
 ## <a name="methods"></a>Metody
 
@@ -59,13 +58,13 @@ Aby uzyskać więcej informacji na temat właściwości, zobacz [właściwości 
 
 ## <a name="properties"></a>Właściwości
 
-Począwszy od C# 7,0, można użyć definicji treści wyrażenia do implementowania właściwości`get`i`set`metod dostępu. Poniższy przykład ilustruje, jak to zrobić:
+Począwszy od C# 7,0, można użyć definicji treści wyrażenia do implementowania właściwości `get` i `set` metod dostępu. Poniższy przykład ilustruje, jak to zrobić:
 
 [!code-csharp[expression-bodied-property-get-set](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]
 
 Aby uzyskać więcej informacji na temat właściwości, zobacz [właściwości (C# Przewodnik programowania)](../classes-and-structs/properties.md).
 
-## <a name="constructors"></a>Konstruktorów
+## <a name="constructors"></a>Konstruktorzy
 
 Definicja treści wyrażenia dla konstruktora zwykle składa się z pojedynczego wyrażenia przypisania lub wywołania metody, które obsługuje argumenty konstruktora lub inicjuje stan wystąpienia.
 

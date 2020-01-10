@@ -1,17 +1,16 @@
 ---
 title: Inicjatory obiektów i kolekcji — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 12/19/2018
 helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: 837be04208d438f15b4cc7c7124a47ef6c038cb2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5565f37c9cfd8cb84c07f9ecc6f6c2edf8c66c61
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455442"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714753"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Inicjatory obiektów i kolekcji (Przewodnik programowania w języku C#)
 
@@ -58,13 +57,13 @@ public string this[char c, int i] {  set { ... }; }
 
 ## <a name="object-initializers-with-anonymous-types"></a>Inicjatory obiektów z typami anonimowymi
 
-Chociaż inicjatorów obiektów można używać w dowolnym kontekście, są one szczególnie przydatne w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeniach zapytań. Wyrażenia zapytania często używają [anonimowych typów](./anonymous-types.md), które mogą być inicjowane tylko przy użyciu inicjatora obiektów, jak pokazano w poniższej deklaracji.  
+Chociaż inicjatorów obiektów można używać w dowolnym kontekście, są one szczególnie przydatne w wyrażeniach zapytań LINQ. Wyrażenia zapytania często używają [anonimowych typów](./anonymous-types.md), które mogą być inicjowane tylko przy użyciu inicjatora obiektów, jak pokazano w poniższej deklaracji.  
 
 ```csharp
 var pet = new { Age = 10, Name = "Fluffy" };  
 ```
 
-Typy anonimowe umożliwiają klauzulę `select` w wyrażeniu zapytania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], aby przekształcić obiekty oryginalnej sekwencji do obiektów, których wartość i kształt mogą się różnić od oryginału. Jest to użyteczne, gdy chce się przechowywać tylko część informacji z każdego obiektu sekwencji. W poniższym przykładzie Załóżmy, że obiekt produktu (`p`) zawiera wiele pól i metod oraz że interesuje Cię tylko Tworzenie sekwencji obiektów zawierających nazwę produktu i cenę jednostkową.  
+Typy anonimowe umożliwiają klauzulę `select` w wyrażeniu zapytania LINQ do przekształcania obiektów oryginalnej sekwencji do obiektów, których wartość i kształt mogą się różnić od oryginału. Jest to użyteczne, gdy chce się przechowywać tylko część informacji z każdego obiektu sekwencji. W poniższym przykładzie Załóżmy, że obiekt produktu (`p`) zawiera wiele pól i metod oraz że interesuje Cię tylko Tworzenie sekwencji obiektów zawierających nazwę produktu i cenę jednostkową.  
   
 [!code-csharp[ObjectInitializer3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#AnonymousUse)]  
 

@@ -3,15 +3,14 @@ title: Tworzenie bibliotek za pomocą narzędzi międzyplatformowych
 description: Dowiedz się, jak tworzyć biblioteki platformy .NET Core przy użyciu narzędzi interfejs wiersza polecenia platformy .NET Core. Utworzysz bibliotekę, która obsługuje wiele platform.
 author: cartermp
 ms.date: 05/01/2017
-ms.custom: seodec18
-ms.openlocfilehash: 13c8541d1045f9130b3b5b260769a50fdc2316ba
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
-ms.translationtype: HT
+ms.openlocfilehash: 4132113037e6c5ec555d2d1859b8217a1a53d07f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559542"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714028"
 ---
-# <a name="developing-libraries-with-cross-platform-tools"></a>Tworzenie bibliotek za pomocą narzędzi międzyplatformowych
+# <a name="develop-libraries-with-cross-platform-tools"></a>Tworzenie bibliotek za pomocą narzędzi dla wielu platform
 
 W tym artykule opisano sposób pisania bibliotek dla platformy .NET przy użyciu międzyplatformowych narzędzi interfejsu wiersza polecenia. Interfejs wiersza polecenia zapewnia wydajne i niskie środowisko, które działa w ramach dowolnego obsługiwanego systemu operacyjnego. Nadal możesz tworzyć biblioteki za pomocą programu Visual Studio, a jeśli jest to preferowane środowisko, [zapoznaj się z przewodnikiem programu Visual Studio](library-with-visual-studio.md).
 
@@ -21,9 +20,9 @@ Na maszynie [jest wymagane zestaw .NET Core SDK i interfejs wiersza polecenia](h
 
 W przypadku sekcji tego dokumentu, w których znajdują się .NET Framework wersje, potrzebne są [.NET Framework](https://dotnet.microsoft.com) zainstalowane na komputerze z systemem Windows.
 
-Ponadto, jeśli chcesz obsługiwać starsze elementy docelowe .NET Framework, musisz zainstalować pakiety dla starszych wersji programu, korzystając ze [strony archiwa pobierania programu .NET](https://dotnet.microsoft.com/download/archives). Zapoznaj się z tą tabelą:
+Ponadto, jeśli chcesz obsługiwać starsze elementy docelowe .NET Framework, musisz zainstalować pakiety językowe lub pakiety deweloperskie ze [strony archiwa pobierania programu .NET](https://dotnet.microsoft.com/download/archives). Zapoznaj się z tą tabelą:
 
-| Wersja systemu .NET Framework | Co należy pobrać                                       |
+| Wersja programu .NET Framework | Co należy pobrać                                       |
 | ---------------------- | ------------------------------------------------------ |
 | 4.6.1                  | .NET Framework 4.6.1                    |
 | 4.6                    | Pakiet docelowy .NET Framework 4,6                      |
@@ -37,7 +36,7 @@ Ponadto, jeśli chcesz obsługiwać starsze elementy docelowe .NET Framework, mu
 
 Jeśli nie znasz .NET Standard, zapoznaj się z [.NET Standard](../../standard/net-standard.md) , aby dowiedzieć się więcej.
 
-W tym artykule znajduje się tabela, która mapuje .NET Standard wersje na różne implementacje:
+W tym artykule znajduje się tabela, która mapuje wersje .NET Standard na różne implementacje:
 
 [!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
 
@@ -45,9 +44,9 @@ W tej tabeli przedstawiono informacje na temat celów tworzenia biblioteki:
 
 Wybrana wersja .NET Standard będzie stanowić kompromis między dostępem do najnowszych interfejsów API i możliwością docelową do większej liczby implementacji platformy .NET i wersji .NET Standard. Zakres docelowych platform i wersji można kontrolować, wybierając wersję `netstandardX.X` (gdzie `X.X` jest numerem wersji) i dodając do pliku projektu (`.csproj` lub `.fsproj`).
 
-Podczas określania .NET Standard są dostępne trzy podstawowe opcje, w zależności od potrzeb.
+W przypadku .NET Standard, w zależności od potrzeb, są dostępne trzy podstawowe opcje.
 
-1. Możesz użyć domyślnej wersji .NET Standard dostarczonej przez szablony — `netstandard1.4`, która zapewnia dostęp do większości interfejsów API na .NET Standard przy zachowaniu zgodności z platformy UWP, .NET Framework 4.6.1 i nadchodzącą .NET Standard 2,0.
+1. Możesz użyć domyślnej wersji .NET Standard dostarczonej przez szablony `netstandard1.4`, która zapewnia dostęp do większości interfejsów API na .NET Standard przy zachowaniu zgodności z platformy UWP, .NET Framework 4.6.1 i .NET Standard 2,0.
 
     ```xml
     <Project Sdk="Microsoft.NET.Sdk">
@@ -59,18 +58,18 @@ Podczas określania .NET Standard są dostępne trzy podstawowe opcje, w zależn
 
 2. Możesz użyć mniejszej lub wyższej wersji .NET Standard, modyfikując wartość w węźle `TargetFramework` pliku projektu.
 
-    Wersje .NET Standard są zgodne z poprzednimi wersjami. Oznacza to, że biblioteki `netstandard1.0` działają na platformach `netstandard1.1` i wyższych. Nie istnieje jednak żadna zgodność z niższymi wersjami .NET Standard platformy nie mogą odwoływać się do wyższych. Oznacza to, że biblioteki `netstandard1.0` nie mogą odwoływać się do bibliotek docelowych `netstandard1.1` lub wyższych. Wybierz wersję standardową, która ma odpowiednie kombinacje interfejsów API i obsługi platformy dla Twoich potrzeb. Zalecamy teraz `netstandard1.4`.
+    Wersje .NET Standard są zgodne z poprzednimi wersjami. Oznacza to, że biblioteki `netstandard1.0` działają na platformach `netstandard1.1` i wyższych. Nie ma jednak żadnych zgodności do przodu. Niższe .NET Standard platformy nie mogą odwoływać się do wyższych. Oznacza to, że biblioteki `netstandard1.0` nie mogą odwoływać się do bibliotek docelowych `netstandard1.1` lub wyższych. Wybierz wersję standardową, która ma odpowiednie kombinacje interfejsów API i obsługi platformy dla Twoich potrzeb. Zalecamy teraz `netstandard1.4`.
 
-3. Jeśli chcesz dowiedzieć się, co .NET Framework w wersji 4,0 lub niższej, lub chcesz użyć interfejsu API dostępnego w .NET Framework, ale nie w .NET Standard (na przykład `System.Drawing`), przeczytaj następujące sekcje i Dowiedz się, jak utworzyć element.
+3. Jeśli chcesz dowiedzieć się, .NET Framework wersje 4,0 lub starsze, lub chcesz użyć interfejsu API dostępnego w .NET Framework, ale nie w .NET Standard (na przykład `System.Drawing`), przeczytaj następujące sekcje i Dowiedz się, jak utworzyć element.
 
-## <a name="how-to-target-the-net-framework"></a>Jak kierować .NET Framework
+## <a name="how-to-target-net-framework"></a>Jak kierować .NET Framework
 
 > [!NOTE]
-> W tych instrukcjach przyjęto założenie, że na maszynie zainstalowano .NET Framework. Zapoznaj się z [wymaganiami wstępnymi](#prerequisites) , aby uzyskać zainstalowane zależności.
+> W tych instrukcjach przyjęto założenie, że na komputerze zainstalowano .NET Framework. Zapoznaj się z [wymaganiami wstępnymi](#prerequisites) , aby uzyskać zainstalowane zależności.
 
 Należy pamiętać, że niektóre wersje .NET Framework używane w tym miejscu nie są już obsługiwane. Zapoznaj się z [zasadami cyklu pomocy technicznej .NET Framework — często zadawane pytania](https://support.microsoft.com/gp/framework_faq/en-us) dotyczące nieobsługiwanych wersji.
 
-Jeśli chcesz uzyskać dostęp do maksymalnej liczby deweloperów i projektów, użyj .NET Framework 4,0 jako celu punktu odniesienia. Aby docelowa .NET Framework, należy rozpocząć od poprawnej monikera platformy docelowej (TFM) odpowiadającej wersji .NET Framework, która ma być obsługiwana.
+Jeśli chcesz osiągnąć maksymalną liczbę deweloperów i projektów, użyj .NET Framework 4,0 jako celu punktu odniesienia. Aby docelowa .NET Framework, Zacznij od używania prawidłowej monikera platformy docelowej (TFM) odpowiadającej wersji .NET Framework, która ma być obsługiwana.
 
 | Wersja programu .NET Framework | TFM      |
 | ---------------------- | -------- |
@@ -269,7 +268,7 @@ Kod zostanie automatycznie odbudowany po wywołaniu polecenia `dotnet test`.
 
 Typowym potrzebą dla większych bibliotek jest umieszczenie funkcjonalności w różnych projektach.
 
-Wyobraź sobie, że chcesz skompilować bibliotekę, która może być używana w idiomatyczne C# i F#. Oznacza to, że konsumenci biblioteki używają ich w sposób naturalny C# lub. F# Na przykład w programie C# można użyć biblioteki podobnej do tej:
+Załóżmy, że chcesz skompilować bibliotekę, która może być używana w idiomatyczne C# i F#. Oznacza to, że konsumenci biblioteki wykorzystują ją w sposób naturalny C# lub. F# Na przykład w programie C# można użyć biblioteki podobnej do tej:
 
 ```csharp
 using AwesomeLibrary.CSharp;
@@ -315,7 +314,7 @@ dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj
 dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 ```
 
-Spowoduje to dodanie trzech projektów powyżej i pliku rozwiązania, który łączy je ze sobą. Tworzenie pliku rozwiązania i łączenie projektów umożliwi przywracanie i Kompilowanie projektów z poziomu najwyższego.
+Spowoduje to dodanie trzech projektów powyżej i pliku rozwiązania, który łączy je ze sobą. Tworzenie pliku rozwiązania i łączenie projektów umożliwi przywracanie i Kompilowanie projektów na poziomie najwyższego poziomu.
 
 ### <a name="project-to-project-referencing"></a>Odwołanie projektu do projektu
 

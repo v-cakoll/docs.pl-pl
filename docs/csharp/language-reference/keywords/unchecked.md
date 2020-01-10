@@ -1,6 +1,5 @@
 ---
 title: unchecked — C# odwołanie
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - unchecked_CSharpKeyword
@@ -8,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-ms.openlocfilehash: c31f1243b1394bfe826b02c14c73faf402640849
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6dad0dfd508fb390dd0a52d1b48d70b4c5725513
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608416"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713004"
 ---
 # <a name="unchecked-c-reference"></a>unchecked (odwołanie w C#)
 
-`unchecked` Słowo kluczowe jest używane do pomijania sprawdzania przepełnienia dla operacji arytmetycznych i konwersji typu całkowitego.
+Słowo kluczowe `unchecked` służy do pomijania sprawdzania przepełnienia dla operacji arytmetycznych i konwersji typu całkowitego.
 
-W niesprawdzonym kontekście, jeśli wyrażenie generuje wartość spoza zakresu typu docelowego, przepełnienie nie jest oflagowane. Na przykład, ponieważ obliczenia w poniższym przykładzie są wykonywane w `unchecked` bloku lub wyrażeniu, fakt, że wynik jest za duży dla liczby całkowitej, jest ignorowany i `int1` ma przypisaną wartość-2 147 483 639.
+W niesprawdzonym kontekście, jeśli wyrażenie generuje wartość spoza zakresu typu docelowego, przepełnienie nie jest oflagowane. Na przykład, ponieważ obliczenia w poniższym przykładzie są wykonywane w bloku `unchecked` lub wyrażeniu, fakt, że wynik jest za duży dla liczby całkowitej, jest ignorowany, a `int1` ma przypisaną wartość-2 147 483 639.
 
 [!code-csharp[csrefKeywordsChecked#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#5)]
 
-`unchecked` Jeśli środowisko zostanie usunięte, wystąpi błąd kompilacji. Przepełnienie można wykryć w czasie kompilacji, ponieważ wszystkie warunki wyrażenia są stałymi.
+Jeśli środowisko `unchecked` zostanie usunięte, wystąpi błąd kompilacji. Przepełnienie można wykryć w czasie kompilacji, ponieważ wszystkie warunki wyrażenia są stałymi.
 
 Wyrażenia zawierające warunki niestałe są domyślnie niezaznaczone w czasie kompilacji i w czasie wykonywania. Zobacz [zaewidencjonowano](checked.md) , aby uzyskać informacje na temat włączania sprawdzonego środowiska.
 
@@ -31,7 +30,7 @@ Ze względu na to, że sprawdzanie przepełnienia jest czasochłonne, użycie ni
 
 ## <a name="example"></a>Przykład
 
-Ten przykład pokazuje, `unchecked` jak używać słowa kluczowego.
+Ten przykład pokazuje, jak używać słowa kluczowego `unchecked`.
 
 [!code-csharp[csrefKeywordsChecked#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#2)]
 

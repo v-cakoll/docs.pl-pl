@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 28f3aa500014b768bd07723511613a42df8689aa
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 15fdc9d093bb3efb4ea4cef5d4cdfa8474042f12
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458772"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559750"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource MarkupExtension
 
@@ -40,7 +40,7 @@ Określa właściwości źródła powiązań <xref:System.Windows.Data.RelativeS
 </Binding>
 ```
 
-—lub—
+lub
 
 ```xml
 <Binding>
@@ -69,13 +69,13 @@ Użycie powiązań `{RelativeSource TemplatedParent}` jest kluczową techniką, 
 
 `{RelativeSource FindAncestor}` jest używany głównie w szablonach kontroli lub przewidywalnym samoobsługowym kompozycjom interfejsu użytkownika, w przypadkach, gdy kontrolka zawsze powinna znajdować się w drzewie wizualnym określonego typu nadrzędnego. Na przykład elementy formantu Items mogą używać `FindAncestor` użycia, aby powiązać z właściwościami ich elementów w nadrzędnym elemencie nadrzędnym. Lub elementy, które są częścią kompozycji formantu w szablonie, mogą używać powiązań `FindAncestor` do elementów nadrzędnych w tej samej strukturze kompozycji.
 
-W składni elementu obiektu dla `FindAncestor` trybu pokazanego w sekcjach składni języka XAML druga składnia elementu obiektu jest używana w trybie `FindAncestor`. Tryb `FindAncestor` wymaga wartości <xref:System.Windows.Data.RelativeSource.AncestorType%2A>. Należy ustawić <xref:System.Windows.Data.RelativeSource.AncestorType%2A> jako atrybut przy użyciu odwołania do [rozszerzenia znacznika x:Type —](../../xaml-services/x-type-markup-extension.md) do typu elementu nadrzędnego, który ma zostać wyszukany. Wartość <xref:System.Windows.Data.RelativeSource.AncestorType%2A> jest używana, gdy żądanie powiązania jest przetwarzane w czasie wykonywania.
+W składni elementu obiektu dla `FindAncestor` trybu pokazanego w sekcjach składni języka XAML druga składnia elementu obiektu jest używana w trybie `FindAncestor`. Tryb `FindAncestor` wymaga wartości <xref:System.Windows.Data.RelativeSource.AncestorType%2A>. Należy ustawić <xref:System.Windows.Data.RelativeSource.AncestorType%2A> jako atrybut przy użyciu odwołania do [rozszerzenia znacznika x:Type —](../../../desktop-wpf/xaml-services/xtype-markup-extension.md) do typu elementu nadrzędnego, który ma zostać wyszukany. Wartość <xref:System.Windows.Data.RelativeSource.AncestorType%2A> jest używana, gdy żądanie powiązania jest przetwarzane w czasie wykonywania.
 
 W trybie `FindAncestor` Właściwość opcjonalna <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> może pomóc w odróżnieniu wyszukiwania nadrzędnego w przypadkach, gdy istnieje więcej niż jeden element nadrzędny tego typu istniejący w drzewie elementów.
 
 Aby uzyskać więcej informacji na temat używania trybu `FindAncestor`, zobacz <xref:System.Windows.Data.RelativeSource>.
 
-`{RelativeSource Self}` jest przydatne w scenariuszach, w których jedna Właściwość wystąpienia powinna zależeć od wartości innej właściwości tego samego wystąpienia, a żadna relacja głównej właściwości zależności (na przykład przekształcenie) już istnieje między tymi dwiema właściwościami. Chociaż jest to rzadki, że dwie właściwości istnieją w obiekcie, tak że wartości są identyczne (i są identyczne), można również zastosować `Converter` parametru do powiązania, które ma `{RelativeSource Self}`, i użyć konwertera do konwersji między źródłem i docelowym Typ. Inny scenariusz dla `{RelativeSource Self}` jest częścią <xref:System.Windows.MultiDataTrigger>.
+`{RelativeSource Self}` jest przydatne w scenariuszach, w których jedna Właściwość wystąpienia powinna zależeć od wartości innej właściwości tego samego wystąpienia, a żadna relacja głównej właściwości zależności (na przykład przekształcenie) już istnieje między tymi dwiema właściwościami. Chociaż jest to rzadki, że dwie właściwości istnieją w obiekcie, tak że wartości są identyczne (i są identyczne), można również zastosować `Converter` parametru do powiązania, które ma `{RelativeSource Self}`, i użyć konwertera do konwersji między typami źródłowymi i docelowymi. Inny scenariusz dla `{RelativeSource Self}` jest częścią <xref:System.Windows.MultiDataTrigger>.
 
 Na przykład poniższy kod XAML definiuje <xref:System.Windows.Shapes.Rectangle> elementu, w taki sposób, aby niezależnie od wartości wprowadzonej dla <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.Shapes.Rectangle> jest zawsze kwadratem: `<Rectangle Width="200" Height="{Binding RelativeSource={RelativeSource Self}, Path=Width}" .../>`
 
@@ -117,4 +117,4 @@ W implementacji procesora [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
 - [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [Powiązanie danych — omówienie](../../../desktop-wpf/data/data-binding-overview.md)
 - [Powiązanie deklaracji — omówienie](../data/binding-declarations-overview.md)
-- [x:Type, rozszerzenie znaczników](../../xaml-services/x-type-markup-extension.md)
+- [x:Type, rozszerzenie znaczników](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)

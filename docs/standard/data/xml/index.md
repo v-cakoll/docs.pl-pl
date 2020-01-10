@@ -3,14 +3,12 @@ title: Dokumenty i dane XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 60614a95e4091b4d7bd9ae3a71e2ddeca53e29ba
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e0c3f3e99b06b65caf79d87a7831369f6fb33b08
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424865"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710794"
 ---
 # <a name="xml-documents-and-data"></a>Dokumenty i dane XML
 
@@ -46,7 +44,7 @@ Klasy XML w .NET Framework zapewniają następujące korzyści:
 
 - **Architektura podłączana.** .NET Framework zapewnia architekturę, w której składniki mogą korzystać ze sobą, a dane mogą być przesyłane strumieniowo między składnikami. Na przykład magazyn danych, taki jak <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument>, może być przekształcony z klasą <xref:System.Xml.Xsl.XslCompiledTransform>, a dane wyjściowe można następnie przesłać do innego magazynu lub zwrócić jako strumień z usługi sieci Web.
 
-- **Skuteczności.** W celu uzyskania lepszej wydajności aplikacji niektóre klasy XML w .NET Framework obsługują model oparty na strumieniu o następujących cechach:
+- **Wydajność.** W celu uzyskania lepszej wydajności aplikacji niektóre klasy XML w .NET Framework obsługują model oparty na strumieniu o następujących cechach:
 
   - Minimalne buforowanie na potrzeby analizy modelu ściągania (<xref:System.Xml.XmlReader>) tylko do przodu.
 
@@ -84,5 +82,5 @@ Opisuje, jak typy danych XML są mapowane na typy CLR, jak konwertować typy dan
 [ADO.NET](../../../../docs/framework/data/adonet/index.md)\
 Zawiera informacje na temat sposobu uzyskiwania dostępu do danych za pomocą ADO.NET.
 
-\ [zabezpieczeń](../../../../docs/standard/security/index.md)
+[Zabezpieczenia](../../../../docs/standard/security/index.md)\
 Zawiera omówienie systemu zabezpieczeń .NET Framework.

@@ -3,13 +3,12 @@ title: Dane telemetryczne zestaw .NET Core SDK
 description: Odkryj zestaw .NET Core SDK funkcje telemetrii, które zbierają informacje o użyciu analizy, zbierane dane i jak je wyłączyć.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.custom: seodec18
-ms.openlocfilehash: ecb8dbed036a04726867d004dbadf6205c1fa09f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8bde344ee393e113502a0895ee55c241cbf24c57
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281775"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714105"
 ---
 # <a name="net-core-sdk-telemetry"></a>Dane telemetryczne zestaw .NET Core SDK
 
@@ -17,7 +16,7 @@ ms.locfileid: "74281775"
 
 Zebrane dane są anonimowe i publikowane jako zagregowane w ramach [licencji Creative Commons Attribution](https://creativecommons.org/licenses/by/4.0/). 
 
-## <a name="scope"></a>Scope
+## <a name="scope"></a>Zakres
 
 `dotnet` ma dwie funkcje: do uruchamiania aplikacji i wykonywania poleceń interfejsu wiersza polecenia. Dane telemetryczne *nie są zbierane* w przypadku używania `dotnet` do uruchamiania aplikacji w następującym formacie:
 
@@ -57,13 +56,13 @@ Funkcja telemetrii zbiera następujące dane:
 
 | Wersje zestawu SDK | Dane |
 |--------------|------|
-| Wszyscy          | Sygnatura czasowa wywołania. |
-| Wszyscy          | Wywołano polecenie (na przykład "Kompilacja"), wartość skrótu rozpoczynająca się w 2,1. |
-| Wszyscy          | Trzy adresy IP używane do określenia lokalizacji geograficznej. |
-| Wszyscy          | System operacyjny i wersja. |
-| Wszyscy          | Identyfikator środowiska uruchomieniowego (RID), na którym jest uruchomiony zestaw SDK. |
-| Wszyscy          | Wersja zestaw .NET Core SDK. |
-| Wszyscy          | Profil telemetrii: opcjonalna wartość używana tylko z jawnym zapytaniem użytkownika i używana wewnętrznie w firmie Microsoft. |
+| Wszystkie          | Sygnatura czasowa wywołania. |
+| Wszystkie          | Wywołano polecenie (na przykład "Kompilacja"), wartość skrótu rozpoczynająca się w 2,1. |
+| Wszystkie          | Trzy adresy IP używane do określenia lokalizacji geograficznej. |
+| Wszystkie          | System operacyjny i wersja. |
+| Wszystkie          | Identyfikator środowiska uruchomieniowego (RID), na którym jest uruchomiony zestaw SDK. |
+| Wszystkie          | Wersja zestaw .NET Core SDK. |
+| Wszystkie          | Profil telemetrii: opcjonalna wartość używana tylko z jawnym zapytaniem użytkownika i używana wewnętrznie w firmie Microsoft. |
 | > = 2.0        | Argumenty polecenia i opcje: zbierane są kilka argumentów i opcji (nie dowolnych ciągów). Zobacz [zebrane opcje](#collected-options). Skrót po 2.1.300. |
 | > = 2.0         | Czy zestaw SDK działa w kontenerze. |
 | > = 2.0         | Platformy docelowe (ze zdarzenia `TargetFramework`), które są zmieszane, począwszy od 2,1. |
@@ -96,7 +95,7 @@ Podzbiór poleceń wysyła wybrane opcje, jeśli są używane, wraz z ich warto�
 | `--verbosity`           | Wszystkie polecenia                                                                                   |
 | `--language`            | `dotnet new`                                                                                   |
 | `--configuration`       | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`                  |
-| `--framework`           | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test``dotnet vstest` |
+| `--framework`           | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest` |
 | `--runtime`             | `dotnet build`, `dotnet publish`                                                              |
 | `--platform`            | `dotnet vstest`                                                                                |
 | `--logger`              | `dotnet vstest`                                                                                |

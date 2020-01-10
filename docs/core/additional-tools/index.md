@@ -1,27 +1,32 @@
 ---
-title: Dodatkowe narzędzia interfejsu wiersza polecenia platformy .NET Core
+title: Dodatkowe narzędzia interfejsu wiersza polecenia
 description: Omówienie dodatkowych narzędzi, które można zainstalować, które obsługują i poszerzają funkcje platformy .NET Core.
 author: mlacouture
-ms.date: 11/27/2018
-ms.custom: mvc, seodec18
-ms.openlocfilehash: c885d6f6b0417a80dd6e26afe9572766738c5b4b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.date: 12/02/2019
+ms.custom: mvc
+ms.openlocfilehash: 1f066523a24d4e1fd7aaaa5a19e8d6c9d72d35af
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771967"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714532"
 ---
 # <a name="net-core-additional-tools-overview"></a>Dodatkowe narzędzia platformy .NET Core — Omówienie
 
 Ta sekcja zawiera kompilację listy narzędzi, które obsługują i poszerzają funkcje platformy .NET Core, a także narzędzia [interfejsu wiersza polecenia (CLI) platformy .NET Core](../tools/index.md) .
 
+## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[Narzędzie do dezinstalacji programu .NET Core](uninstall-tool.md)
+
+[Narzędzie do dezinstalacji programu .NET Core](https://dotnet.microsoft.com/download/dotnet-core/uninstall-tool) (`dotnet-core-uninstall`) umożliwia wyczyszczenie zestawów .NET Core i środowiska uruchomieniowego w systemie, tak aby były nadal tylko określone wersje. Dostępna jest kolekcja opcji, aby określić, które wersje zostały odinstalowane.
+
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[Narzędzie referencyjne usługi sieci Web WCF](wcf-web-service-reference-guide.md)
 
-Odwołanie do usługi sieci Web WCF (Windows Communication Foundation) to Dostawca usługi połączonej z programu Visual Studio, który wykonał udostępnione w programie [Visual studio 2017 w wersji 15,5](/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools). To narzędzie umożliwia pobranie metadanych z usługi sieci Web w bieżącym rozwiązaniu, w lokalizacji sieciowej lub w pliku WSDL, a następnie wygenerowanie pliku źródłowego zgodnego z platformą .NET Core, zdefiniowanie klasy serwera proxy WCF przy użyciu metod, których można użyć w celu uzyskania dostępu do operacji usługi sieci Web.
+Odwołanie do usługi sieci Web WCF (Windows Communication Foundation) to Dostawca usługi połączonej z programu Visual Studio, który wykonał udostępnione w programie [Visual studio 2017 w wersji 15,5](/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools). To narzędzie pobiera metadane z usługi sieci Web w bieżącym rozwiązaniu, w lokalizacji sieciowej lub w pliku WSDL. Generuje plik źródłowy zgodny z platformą .NET Core, definiując klasę serwera proxy WCF przy użyciu metod, których można użyć w celu uzyskania dostępu do operacji usługi sieci Web.
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[WCF dotnet — narzędzie Svcutil](dotnet-svcutil-guide.md)
 
-Narzędzie WCF (Windows Communication Foundation) dotnet-Svcutil to narzędzie interfejs wiersza polecenia platformy .NET Core, które pobiera metadane z usługi sieci Web w lokalizacji sieciowej lub z pliku WSDL, i generuje plik źródłowy zgodny z platformą .NET Core, Definiowanie klasy serwera proxy WCF przy użyciu metod służy do uzyskiwania dostępu do operacji usługi sieci Web.
+Narzędzie WCF (Windows Communication Foundation) dotnet-Svcutil jest narzędziem interfejs wiersza polecenia platformy .NET Core, które pobiera metadane z usługi sieci Web w lokalizacji sieciowej lub z pliku WSDL. Generuje plik źródłowy zgodny z platformą .NET Core, definiując klasę serwera proxy WCF przy użyciu metod, których można użyć w celu uzyskania dostępu do operacji usługi sieci Web.
+
 Narzędzie **dotnet-Svcutil** jest alternatywną opcją dla [**referencyjnej usługi sieci Web programu WCF**](wcf-web-service-reference-guide.md) , która jest dostarczana z programem Visual studio 2017 w wersji 15,5. Narzędzie **dotnet-Svcutil** jako narzędzie interfejs wiersza polecenia platformy .NET Core jest dostępne dla wielu platform w systemach Linux, MacOS i Windows.
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[WCF dotnet — narzędzie Svcutil. XmlSerializer](dotnet-svcutil.xmlserializer-guide.md)

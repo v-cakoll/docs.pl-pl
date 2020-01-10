@@ -2,16 +2,15 @@
 title: Format pliku zestawu .NET
 description: Dowiedz się więcej o formacie pliku zestawu platformy .NET, który jest używany do opisywania i zawierania aplikacji i bibliotek platformy .NET.
 author: richlander
-ms.author: mairaw
 ms.date: 08/20/2019
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: c9396c45e3c6cdbc9360485f6286a1746bf81fdd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4cf6522d66d7a1efccde45078768a773db6e6cb0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970153"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711587"
 ---
 # <a name="net-assembly-file-format"></a>Format pliku zestawu .NET
 
@@ -35,4 +34,4 @@ Nagłówki zestawów z ECMA 335 II. 25.1, struktura formatu pliku środowiska ur
 
 ## <a name="process-the-assemblies"></a>Przetwarzanie zestawów
 
-Istnieje możliwość pisania narzędzi lub interfejsów API do przetwarzania zestawów. Informacje o zestawie umożliwiają podejmowanie decyzji programistycznych w czasie wykonywania, ponowne pisanie zestawów, dostarczanie interfejsu API IntelliSense w edytorze i generowanie dokumentacji. <xref:System.Reflection?displayProperty=nameWithType>, <xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType>, i [mono. Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) są dobrymi przykładami narzędzi, które są często używane do tego celu.
+Istnieje możliwość pisania narzędzi lub interfejsów API do przetwarzania zestawów. Informacje o zestawie umożliwiają podejmowanie decyzji programistycznych w czasie wykonywania, ponowne pisanie zestawów, dostarczanie interfejsu API IntelliSense w edytorze i generowanie dokumentacji. <xref:System.Reflection?displayProperty=nameWithType>, <xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType>i [mono. Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) są dobrymi przykładami narzędzi, które są często używane do tego celu.

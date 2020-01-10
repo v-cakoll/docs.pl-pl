@@ -11,20 +11,18 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eaa389f461e70aae41f2e09437fd725a3bcefa5e
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5a9218d394b76e897f4263708a10f1bc895ad4e1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696718"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708469"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Jak przechwytywać wyjątki przy użyciu bloku try/catch
 
 Umieść wszystkie instrukcje Code, które mogą podnieść lub zgłosić wyjątek w bloku `try` i umieścić instrukcje używane do obsługi wyjątku lub wyjątków w co najmniej jednym bloku `catch` poniżej bloku `try`. Każdy blok `catch` zawiera typ wyjątku i może zawierać dodatkowe instrukcje, które są konieczne do obsłużenia tego typu wyjątku.
 
-W poniższym przykładzie <xref:System.IO.StreamReader> otwiera plik o nazwie *Data. txt* i pobiera wiersz z pliku. Ponieważ kod może zgłosić którykolwiek z trzech wyjątków, zostanie umieszczony w bloku `try`. Trzy `catch` bloków przechwytują wyjątki i obsługują je, wyświetlając wyniki w konsoli.
+W poniższym przykładzie <xref:System.IO.StreamReader> otwiera plik o nazwie *Data. txt* i pobiera wiersz z pliku. Ponieważ kod może zgłosić którykolwiek z trzech wyjątków, zostanie umieszczony w bloku `try`. Trzy bloki `catch` przechwytują wyjątki i obsługują je, wyświetlając wyniki w konsoli.
 
 [!code-csharp[CatchException#3](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
 [!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]

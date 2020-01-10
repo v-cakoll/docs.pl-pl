@@ -6,59 +6,57 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2bc33d27d48267f5b74f1baf67a49bdf0b55c839
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ec08b668bf54c5460e078bbb27bfbc370aff4e4a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647976"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711184"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Uzyskiwanie dostępu do silnie typizowanych danych XML przy użyciu klasy XPathNavigator
-Jako wystąpienia w modelu danych XPath 2.0 <xref:System.Xml.XPath.XPathNavigator> klasy może zawierać silnie typizowane dane, który jest mapowany do typowych języka wspólnego (CLR). Zgodnie z modelu danych XPath 2.0 tylko elementów i atrybutów może zawierać silnie typizowane dane. <xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia mechanizmy do uzyskiwania dostępu do danych w ramach <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiektu jako silnie typizowane dane, a także mechanizmów do konwertowania z jednego typu danych.  
+Jako wystąpienie modelu danych XPath 2,0, Klasa <xref:System.Xml.XPath.XPathNavigator> może zawierać dane z jednoznacznie określonym typem, które są mapowane na typy środowiska uruchomieniowego języka wspólnego (CLR). Zgodnie z modelem danych XPath 2,0, tylko elementy i atrybuty mogą zawierać dane o jednoznacznie określonym typie. Klasa <xref:System.Xml.XPath.XPathNavigator> udostępnia mechanizmy do uzyskiwania dostępu do danych w <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiekt jako dane z jednoznacznie określonym typem oraz mechanizmy konwersji z jednego typu danych na inny.  
   
-## <a name="type-information-exposed-by-xpathnavigator"></a>Informacje o typie udostępnianych przez klasy XPathNavigator  
- Dane XML 1.0 jest technicznie bez typu, chyba że przetworzyć DTD, XML języka (XSD) definicji schematu lub inny mechanizm. Istnieje wiele kategorii informacji o typie, który może być skojarzony z elementu lub atrybutu XML.  
+## <a name="type-information-exposed-by-xpathnavigator"></a>Informacje o typie uwidocznione przez element XPathNavigator  
+ Dane XML 1,0 są technicznie bez typu, chyba że są przetwarzane ze schematem DTD, językiem definicji schematu XML (XSD) lub innym mechanizmem. Istnieje wiele kategorii informacji o typie, które mogą być skojarzone z elementem lub atrybutem XML.  
   
-- Typy proste CLR: Brak języki schematu XML bezpośrednio obsługują typy środowiska uruchomieniowego języka wspólnego (CLR). Ponieważ jest to przydatne można było wyświetlić prosty element i atrybut zawartość jako najbardziej odpowiednim typem CLR, cała zawartość prostą można wpisać jako <xref:System.String> w przypadku braku informacji o schemacie ze wszystkimi dodano potencjalnie rafinacja tę zawartość do informacji o schemacie Typ, bardziej odpowiednie. Możesz znaleźć najlepiej dopasowaną typ CLR prostej zawartości elementów i atrybutów przy użyciu <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> właściwości. Aby uzyskać więcej informacji o mapowaniu z wbudowanych typów schematu na typy CLR, zobacz [Obsługa typu w ramach klas zestawu System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+- Proste typy CLR: żaden z języków schematu XML nie obsługuje bezpośrednio typów środowiska uruchomieniowego języka wspólnego (CLR). Ponieważ przydatne jest, aby można było wyświetlać proste zawartości elementów i atrybutów jako najbardziej odpowiedni typ CLR, cała zawartość prosta może być wpisywany jako <xref:System.String> w przypadku braku informacji o schemacie z dowolnymi dodatkowymi informacjami o schemacie, aby potencjalnie udoskonalić tę zawartość do bardziej odpowiedniego typu. Najlepiej pasujący typ CLR elementu prostego i zawartości atrybutu można znaleźć za pomocą właściwości <xref:System.Xml.XPath.XPathNavigator.ValueType%2A>. Aby uzyskać więcej informacji na temat mapowania ze schematów wbudowanych typów do typów CLR, zobacz [Obsługa typów w klasach system. XML](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
   
-- Wyświetla typy proste (CLR): Element lub atrybut o zawartości prostej mogą zawierać listę wartości oddzielonych biały znak. Wartości są określone przez schemat XML jako "type listy". W przypadku braku schematu XML takie prostej zawartości będzie traktowane jako węzeł tekstowy jednego. Po udostępnieniu schematu XML jako szereg niepodzielnych wartości posiadającymi prosty typ, który jest mapowany do kolekcji obiektów CLR można ujawnić tej prostej zawartości. Aby uzyskać więcej informacji o mapowaniu z wbudowanych typów schematu na typy CLR, zobacz [Obsługa typu w ramach klas zestawu System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+- Listy typów prostych (CLR): element lub atrybut o prostej zawartości może zawierać listę wartości rozdzielonych znakami odstępu. Wartości są określane przez schemat XML jako "typ listy". W przypadku braku schematu XML taka zawartość prosta byłaby traktowana jak pojedynczy węzeł tekstowy. Gdy schemat XML jest dostępny, ta prosta zawartość może być ujawniona jako szereg wartości niepodzielnych, z których każdy ma typ prosty, który jest mapowany do kolekcji obiektów CLR. Aby uzyskać więcej informacji na temat mapowania ze schematów wbudowanych typów do typów CLR, zobacz [Obsługa typów w klasach system. XML](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
   
-- Wartość: Sprawdzania poprawności schematu atrybutu lub elementu z typu prostego ma wartość wpisane. Ta wartość jest typu podstawowego, takich jak numeryczne, ciągu lub typu Data. Wszystkie wbudowane typy proste w XSD mogą być mapowane na typy CLR, które zapewniają dostęp do wartości węzła jako typu bardziej odpowiednie, a nie tylko jako <xref:System.String>. Element o atrybuty i elementy podrzędne jest uważana za typ złożony. Wpisane wartości typu złożonego o zawartości prostej (tylko węzły tekstowe jako elementy podrzędne) jest taka sama jak w przypadku typu prostego jego zawartości. Wpisane wartość typ złożony z zawartością złożoną (jeden lub więcej elementów podrzędnych) jest wartość ciągu łączenia wszystkie jego podrzędne węzły tekstowe zwracane jako <xref:System.String>. Aby uzyskać więcej informacji o mapowaniu z wbudowanych typów schematu na typy CLR, zobacz [Obsługa typu w ramach klas zestawu System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+- Wpisana wartość: atrybut lub element, który został sprawdzony przez schemat z typem prostym, ma wpisaną wartość. Ta wartość to typ pierwotny, taki jak liczbowy, ciąg lub typ daty. Wszystkie wbudowane typy proste w XSD można zamapować na typy CLR, które zapewniają dostęp do wartości węzła jako bardziej odpowiedni typ, a nie tylko jako <xref:System.String>. Element z atrybutami lub elementami podrzędnymi jest traktowany jako typ złożony. Wpisana wartość typu złożonego z prostą zawartością (tylko węzły tekstowe jako elementy podrzędne) jest taka sama jak w przypadku typu prostego jego zawartości. Wpisana wartość typu złożonego z zawartością złożoną (co najmniej jeden element podrzędny) to wartość ciągu łącząca wszystkie podrzędne węzły tekstowe zwracane jako <xref:System.String>. Aby uzyskać więcej informacji na temat mapowania ze schematów wbudowanych typów do typów CLR, zobacz [Obsługa typów w klasach system. XML](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
   
-- Nazwa typu określonego schematu języka: W większości przypadków typy CLR, które są ustawione jako efekt uboczny stosowania zewnętrznych schematu, są używane do zapewnienia dostępu do wartości węzła. Jednakże mogą wystąpić sytuacje, w których możesz chcieć sprawdzić typ skojarzony z określonym schematem zastosowane do dokumentu XML. Na przykład możesz przeszukiwać dokumentu XML wyodrębniania wszystkie elementy, które są określane mieć zawartości typu "PurchaseOrder" zgodnie ze schematu. Takie informacje o typie można ustawić tylko w wyniku sprawdzania poprawności schematu i tych informacji jest dostępny za pośrednictwem <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> i <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> właściwości <xref:System.Xml.XPath.XPathNavigator> klasy. Aby uzyskać więcej informacji zobacz sekcję wpis zestaw informacji o weryfikacji schematu (PSVI) poniżej.  
+- Nazwa typu określonego dla języka: w większości przypadków typy CLR, które są ustawiane jako efekt uboczny zastosowania schematu zewnętrznego, są używane w celu zapewnienia dostępu do wartości węzła. Mogą jednak wystąpić sytuacje, w których można ocenić typ skojarzony z określonym schematem zastosowanym do dokumentu XML. Na przykład możesz chcieć przeszukać dokument XML, wyodrębniając wszystkie elementy, które są określone jako mają zawartość typu "PurchaseOrder" zgodnie z dołączonym schematem. Takie informacje o typie można ustawić tylko w wyniku walidacji schematu i dostęp do tych informacji za pomocą właściwości <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> i <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> klasy <xref:System.Xml.XPath.XPathNavigator>. Aby uzyskać więcej informacji, zobacz poniższą sekcję po sprawdzeniu poprawności schematu sprawdzonych (PSVI).  
   
-- Odbicie określonego typu język schematu: W innych przypadkach można uzyskać dodatkowe szczegóły dotyczące określonego schematu zastosowane do dokumentu XML. Na przykład podczas odczytywania pliku XML, które mogą mają zostać wyodrębnione `maxOccurs` atrybutu dla każdej prawidłowym węzłem w dokumencie XML w celu wykonywania niektórych obliczeń niestandardowych. Ponieważ te informacje jest ustawiona tylko za pośrednictwem weryfikacji schematu, jest dostępny za pośrednictwem <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> właściwość <xref:System.Xml.XPath.XPathNavigator> klasy. Aby uzyskać więcej informacji zobacz sekcję wpis zestaw informacji o weryfikacji schematu (PSVI) poniżej.  
+- Odbicie typu specyficznego dla języka schematu: w innych przypadkach może być konieczne uzyskanie dalszych szczegółowych informacji o typie specyficznym dla schematu zastosowanym w dokumencie XML. Na przykład podczas odczytywania pliku XML można wyodrębnić atrybut `maxOccurs` dla każdego prawidłowego węzła w dokumencie XML, aby wykonać niestandardowe obliczenia. Ponieważ te informacje są ustawiane tylko za pomocą walidacji schematu, można uzyskać do niej dostęp za pomocą właściwości <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> klasy <xref:System.Xml.XPath.XPathNavigator>. Aby uzyskać więcej informacji, zobacz poniższą sekcję po sprawdzeniu poprawności schematu sprawdzonych (PSVI).  
   
-## <a name="xpathnavigator-typed-accessors"></a>Klasy XPathNavigator Typizowane metody dostępu  
- W poniższej tabeli przedstawiono różne właściwości i metod <xref:System.Xml.XPath.XPathNavigator> klasę, która może służyć do dostępu do informacji o typie, informacje o węźle.  
+## <a name="xpathnavigator-typed-accessors"></a>Metody dostępu typu XPathNavigator  
+ W poniższej tabeli przedstawiono różne właściwości i metody klasy <xref:System.Xml.XPath.XPathNavigator>, których można użyć w celu uzyskania dostępu do informacji o typie węzła.  
   
 |Właściwość|Opis|  
 |--------------|-----------------|  
 |<xref:System.Xml.XPath.XPathNavigator.XmlType%2A>|Zawiera informacje o typie schematu XML dla węzła, jeśli jest on prawidłowy.|  
-|<xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>|Zawiera zestaw informacji sprawdzania poprawności schematu wpis węzła, który zostanie dodany po weryfikacji. W tym informacje o typie schematu XML, a także informacje o ważności.|  
-|<xref:System.Xml.XPath.XPathNavigator.ValueType%2A>|Typ CLR typizowaną wartość węzła.|  
-|<xref:System.Xml.XPath.XPathNavigator.TypedValue%2A>|Zawartość węzła CLR jeden lub więcej wartości o typie jest najlepiej dopasowany do typu schematu XML węzła.|  
-|<xref:System.Xml.XPath.XPathNavigator.ValueAsBoolean%2A>|<xref:System.String> Rzutować wartości bieżącego węzła <xref:System.Boolean> wartości z regułami rzutowania XPath 2.0 `xs:boolean`.|  
-|<xref:System.Xml.XPath.XPathNavigator.ValueAsDateTime%2A>|<xref:System.String> Rzutować wartości bieżącego węzła <xref:System.DateTime> wartości z regułami rzutowania XPath 2.0 `xs:datetime`.|  
-|<xref:System.Xml.XPath.XPathNavigator.ValueAsDouble%2A>|<xref:System.String> Rzutować wartości bieżącego węzła <xref:System.Double> wartości z regułami rzutowania XPath 2.0 `xsd:double`.|  
-|<xref:System.Xml.XPath.XPathNavigator.ValueAsInt%2A>|<xref:System.String> Rzutować wartości bieżącego węzła <xref:System.Int32> wartości z regułami rzutowania XPath 2.0 `xs:integer`.|  
-|<xref:System.Xml.XPath.XPathNavigator.ValueAsLong%2A>|<xref:System.String> Rzutować wartości bieżącego węzła <xref:System.Int64> wartości z regułami rzutowania XPath 2.0 `xs:integer`.|  
-|<xref:System.Xml.XPath.XPathNavigator.ValueAs%2A>|Zawartość węzła rzutowany na typ docelowy zgodnie z regułami rzutowania XPath 2.0.|  
+|<xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>|Zawiera sprawdzonych walidacji schematu w węźle, który jest dodawany po walidacji. Obejmuje to informacje o typie schematu XML, a także informacje o ważności.|  
+|<xref:System.Xml.XPath.XPathNavigator.ValueType%2A>|Typ CLR wartości w węźle.|  
+|<xref:System.Xml.XPath.XPathNavigator.TypedValue%2A>|Zawartość węzła jako co najmniej jedna wartość CLR, której typem jest najbliższe dopasowanie do typu schematu XML węzła.|  
+|<xref:System.Xml.XPath.XPathNavigator.ValueAsBoolean%2A>|Wartość <xref:System.String> bieżącego węzła jest rzutowana na wartość <xref:System.Boolean>, zgodnie z regułami rzutowania XPath 2,0 dla `xs:boolean`.|  
+|<xref:System.Xml.XPath.XPathNavigator.ValueAsDateTime%2A>|Wartość <xref:System.String> bieżącego węzła jest rzutowana na wartość <xref:System.DateTime>, zgodnie z regułami rzutowania XPath 2,0 dla `xs:datetime`.|  
+|<xref:System.Xml.XPath.XPathNavigator.ValueAsDouble%2A>|Wartość <xref:System.String> bieżącego węzła jest rzutowana na wartość <xref:System.Double>, zgodnie z regułami rzutowania XPath 2,0 dla `xsd:double`.|  
+|<xref:System.Xml.XPath.XPathNavigator.ValueAsInt%2A>|Wartość <xref:System.String> bieżącego węzła jest rzutowana na wartość <xref:System.Int32>, zgodnie z regułami rzutowania XPath 2,0 dla `xs:integer`.|  
+|<xref:System.Xml.XPath.XPathNavigator.ValueAsLong%2A>|Wartość <xref:System.String> bieżącego węzła jest rzutowana na wartość <xref:System.Int64>, zgodnie z regułami rzutowania XPath 2,0 dla `xs:integer`.|  
+|<xref:System.Xml.XPath.XPathNavigator.ValueAs%2A>|Zawartość węzła jest rzutowana na typ docelowy zgodnie z regułami rzutowania XPath 2,0.|  
   
- Aby uzyskać więcej informacji o mapowaniu z wbudowanych typów schematu na typy CLR, zobacz [Obsługa typu w ramach klas zestawu System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+ Aby uzyskać więcej informacji na temat mapowania ze schematów wbudowanych typów do typów CLR, zobacz [Obsługa typów w klasach system. XML](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
   
-## <a name="the-post-schema-validation-infoset-psvi"></a>Zestaw w informacji sprawdzania poprawności schematu Post (PSVI)  
- Procesor schematu XML akceptuje zestaw informacji XML, jako dane wejściowe i konwertuje ją na wpis schematu sprawdzania poprawności zestaw informacji (PSVI). PSVI jest oryginalnym danych wejściowych XML zestaw informacji z nowe elementy informacje dodane i nowy właściwości dodawane do istniejących elementów informacji. Istnieją trzy klasy szerokiego informacji dodawanych do zestaw informacji XML w PSVI, które są udostępniane przez <xref:System.Xml.XPath.XPathNavigator>.  
+## <a name="the-post-schema-validation-infoset-psvi"></a>Sprawdzanie poprawności po stronie sprawdzonych (PSVI)  
+ Procesor schematu XML akceptuje sprawdzonych XML jako dane wejściowe i konwertuje ją na wpis weryfikacji schematu sprawdzonych (PSVI). PSVI to oryginalny wejściowy kod XML sprawdzonych z nowymi dodawanymi elementami informacji i nowymi właściwościami dodawanymi do istniejących elementów informacji. Istnieją trzy szerokie klasy informacji dodanych do sprawdzonych XML w PSVI, które są udostępniane przez <xref:System.Xml.XPath.XPathNavigator>.  
   
-1. Wyniki sprawdzania poprawności: Informacje dotyczące tego, czy element lub atrybut został pomyślnie zweryfikowany czy nie. To jest uwidaczniany przez <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> właściwość <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> właściwość <xref:System.Xml.XPath.XPathNavigator> klasy.  
+1. Wyniki walidacji: informacje o tym, czy element lub atrybut został pomyślnie zweryfikowany. Jest to uwidaczniane przez właściwość <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> właściwości <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> klasy <xref:System.Xml.XPath.XPathNavigator>.  
   
-2. Domyślne informacje: Wskazanie, czy wartość elementu lub atrybutu uzyskano przy użyciu wartości domyślnych, określona w schemacie, czy nie. To jest uwidaczniany przez <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> właściwość <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> właściwość <xref:System.Xml.XPath.XPathNavigator> klasy.  
+2. Informacje domyślne: wskazanie, czy wartość elementu lub atrybutu została uzyskana za pośrednictwem wartości domyślnych określonych w schemacie, czy nie. Jest to uwidaczniane przez właściwość <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> właściwości <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> klasy <xref:System.Xml.XPath.XPathNavigator>.  
   
-3. Deklaracje typów: Odwołania do składników schematu, które mogą być definicje typów lub elementów i atrybutów deklaracji. <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> Właściwość <xref:System.Xml.XPath.XPathNavigator> zawiera informacje o określonym typie węzła, jeśli jest on prawidłowy. W przypadku ważności węzeł jest nieznany, takie jak kiedy została zweryfikowana następnie później edytować. a następnie <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> właściwość jest ustawiona na `null` , ale informacje o typie jest nadal dostępne z poziomu różnych właściwości obiektu <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> właściwość <xref:System.Xml.XPath.XPathNavigator> klasy.  
+3. Adnotacje typu: odwołania do składników schematu, które mogą być definicjami typów lub deklaracji elementów i atrybutów. Właściwość <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> <xref:System.Xml.XPath.XPathNavigator> zawiera informacje o określonym typie węzła, jeśli jest on prawidłowy. Jeśli ważność węzła jest nieznana, na przykład gdy została zweryfikowana, a następnie edytowana. następnie właściwość <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> jest ustawiona na `null`, ale informacje o typie są nadal dostępne z różnych właściwości właściwości <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> klasy <xref:System.Xml.XPath.XPathNavigator>.  
   
- W poniższym przykładzie pokazano, korzystając z informacji udostępnianych przez zestaw wpis schematu sprawdzania poprawności informacji <xref:System.Xml.XPath.XPathNavigator>.  
+ Poniższy przykład ilustruje użycie informacji w sprawdzonych walidacji schematu uwidocznionych przez <xref:System.Xml.XPath.XPathNavigator>.  
   
 ```vb  
 Dim settings As XmlReaderSettings = New XmlReaderSettings()  
@@ -98,7 +96,7 @@ Console.WriteLine(navigator.SchemaInfo.Validity);
 Console.WriteLine(navigator.SchemaInfo.SchemaElement.MinOccurs);  
 ```  
   
- Przykład przyjmuje `books.xml` pliku jako dane wejściowe.  
+ Przykład pobiera `books.xml` plik jako dane wejściowe.  
   
 ```xml  
 <books xmlns="http://www.contoso.com/books">  
@@ -110,7 +108,7 @@ Console.WriteLine(navigator.SchemaInfo.SchemaElement.MinOccurs);
 </books>  
 ```  
   
- Przykład pobiera również `books.xsd` schematu jako dane wejściowe.  
+ Przykład pobiera również schemat `books.xsd` jako dane wejściowe.  
   
 ```xml  
 <xs:schema xmlns="http://www.contoso.com/books"   
@@ -139,8 +137,8 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
 </xs:schema>  
 ```  
   
-## <a name="obtain-typed-values-using-valueas-properties"></a>Uzyskiwanie wartości Typizowane, za pomocą właściwości ValueAs  
- Wpisane wartości węzła mogą być pobierane, uzyskując dostęp do <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> właściwość <xref:System.Xml.XPath.XPathNavigator>. W niektórych przypadkach można przekonwertować wartości typizowane węzła do innego typu. Typowym przykładem jest można uzyskać wartość liczbową z węzła XML. Na przykład rozważmy następujący dokument XML niezweryfikowanych i bez typu.  
+## <a name="obtain-typed-values-using-valueas-properties"></a>Uzyskiwanie wpisanych wartości przy użyciu właściwości ValueAs  
+ Wartość wpisana w węźle można pobrać, uzyskując dostęp do właściwości <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> <xref:System.Xml.XPath.XPathNavigator>. W niektórych przypadkach możesz chcieć przekonwertować wpisaną wartość węzła na inny typ. Typowym przykładem jest uzyskanie wartości liczbowej z węzła XML. Rozważmy na przykład następujący niesprawdzony i niewpisany dokument XML.  
   
 ```xml  
 <books>  
@@ -152,9 +150,9 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
 </books>  
 ```  
   
- Jeśli <xref:System.Xml.XPath.XPathNavigator> jest ustawiony na `price` elementu <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> będzie właściwość `null`, <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> będzie właściwość <xref:System.String>i <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> właściwość może być ciągiem `10.00`.  
+ Jeśli <xref:System.Xml.XPath.XPathNavigator> jest umieszczona w `price` elemencie, właściwość <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> byłaby `null`, <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> właściwość będzie <xref:System.String>, a właściwość <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> będzie ciąg `10.00`.  
   
- Będzie jednak nadal możliwe do wyodrębnienia wartości jako wartość liczbową przy użyciu <xref:System.Xml.XPath.XPathItem.ValueAs%2A>, <xref:System.Xml.XPath.XPathNavigator.ValueAsDouble%2A>, <xref:System.Xml.XPath.XPathNavigator.ValueAsInt%2A>, lub <xref:System.Xml.XPath.XPathNavigator.ValueAsLong%2A> metody i właściwości. W poniższym przykładzie pokazano wykonywania takich rzutowanie za pomocą <xref:System.Xml.XPath.XPathItem.ValueAs%2A> metody.  
+ Jednak nadal jest możliwe wyodrębnienie wartości jako wartości liczbowej przy użyciu metody <xref:System.Xml.XPath.XPathItem.ValueAs%2A>, <xref:System.Xml.XPath.XPathNavigator.ValueAsDouble%2A>, <xref:System.Xml.XPath.XPathNavigator.ValueAsInt%2A>lub <xref:System.Xml.XPath.XPathNavigator.ValueAsLong%2A>. Poniższy przykład ilustruje wykonywanie takich rzutowania przy użyciu metody <xref:System.Xml.XPath.XPathItem.ValueAs%2A>.  
   
 ```vb  
 Dim document As New XmlDocument()  
@@ -183,7 +181,7 @@ Decimal price = (decimal)navigator.ValueAs(typeof(decimal));
 Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C}", navigator.Value, (price - price * (decimal)0.20));  
 ```  
   
- Aby uzyskać więcej informacji o mapowaniu z wbudowanych typów schematu na typy CLR, zobacz [Obsługa typu w ramach klas zestawu System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+ Aby uzyskać więcej informacji na temat mapowania ze schematów wbudowanych typów do typów CLR, zobacz [Obsługa typów w klasach system. XML](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

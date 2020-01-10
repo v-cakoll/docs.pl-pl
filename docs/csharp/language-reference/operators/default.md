@@ -1,16 +1,15 @@
 ---
 title: domyślny operator — C# odwołanie
-ms.custom: seodec18
 description: Użyj operatora domyślnego, aby utworzyć wartość domyślną typu
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 6503e82a42f116a7ba8461ae060592377579f255
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 744bdf1ec683ef32bba508c260590c0ed4c6e987
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039051"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712718"
 ---
 # <a name="default-operator-c-reference"></a>Default — operatorC# (odwołanie)
 
@@ -24,7 +23,7 @@ Możesz również użyć słowa kluczowego `default` jako domyślnej etykiety ca
 
 ## <a name="default-literal"></a>domyślny literał
 
-Począwszy od C# 7,1, można użyć literału`default`, aby utworzyć wartość domyślną typu, gdy kompilator może wywnioskować typ wyrażenia. Wyrażenie `default` literału zwraca tę samą wartość co wyrażenie `default(T)`, gdzie `T` jest typem wywnioskowanym. Literału `default` można użyć w dowolnym z następujących przypadków:
+Począwszy od C# 7,1, można użyć literału `default`, aby utworzyć wartość domyślną typu, gdy kompilator może wywnioskować typ wyrażenia. Wyrażenie `default` literału zwraca tę samą wartość co wyrażenie `default(T)`, gdzie `T` jest typem wywnioskowanym. Literału `default` można użyć w dowolnym z następujących przypadków:
 
 - W przypisaniu lub inicjacji zmiennej.
 - W deklaracji wartości domyślnej dla [opcjonalnego parametru metody](../../methods.md#optional-parameters-and-arguments).

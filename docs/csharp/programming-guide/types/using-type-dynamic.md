@@ -1,17 +1,16 @@
 ---
 title: Korzystanie z typu przewodnika dynamicznego i C# programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 248f0410aa8fc7c4aa92b844bda19f51fcf09c6d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c5ac5b3692266010f0be8672ef744baaa32e6a03
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417591"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711860"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Korzystanie z typu dynamicznegoC# (Przewodnik programowania)
 
@@ -54,7 +53,7 @@ Z kolei niejawna konwersja może być dynamicznie stosowana do dowolnego wyraże
 
 ## <a name="overload-resolution-with-arguments-of-type-dynamic"></a>Rozpoznanie przeciążenia z argumentami typu dynamicznego
 
-Rozwiązanie przeciążania występuje w czasie wykonywania, a nie w czasie kompilacji, jeśli co najmniej jeden z argumentów w wywołaniu metody ma typ `dynamic` lub jeśli odbiorca wywołania metody jest typu `dynamic`. W poniższym przykładzie, jeśli jedyną dostępną metodą `exampleMethod2` jest zdefiniowana do wykonania argumentu ciągu, wysłanie `d1` jako argumentu nie powoduje błędu kompilatora, ale powoduje wyjątek w czasie wykonywania. Rozpoznanie przeciążenia nie powiodło się w czasie wykonywania, ponieważ typ czasu wykonywania `d1` jest `int`, a `exampleMethod2` wymaga ciągu.
+Rozwiązanie przeciążania występuje w czasie wykonywania, a nie w czasie kompilacji, jeśli co najmniej jeden z argumentów w wywołaniu metody ma typ `dynamic`lub jeśli odbiorca wywołania metody jest typu `dynamic`. W poniższym przykładzie, jeśli jedyną dostępną metodą `exampleMethod2` jest zdefiniowana do wykonania argumentu ciągu, wysłanie `d1` jako argumentu nie powoduje błędu kompilatora, ale powoduje wyjątek w czasie wykonywania. Rozpoznanie przeciążenia nie powiodło się w czasie wykonywania, ponieważ typ czasu wykonywania `d1` jest `int`, a `exampleMethod2` wymaga ciągu.
 
 [!code-csharp[CsProgGuideTypes#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/usingdynamic.cs#55)]
 
@@ -79,4 +78,4 @@ Wiele metod COM pozwala na odchylenia typów argumentów i zwracanego typu przez
 |[dynamic](../../language-reference/builtin-types/reference-types.md)|Opisuje użycie słowa kluczowego `dynamic`.|
 |[Przegląd środowiska uruchomieniowego języka dynamicznego](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|Zawiera omówienie DLR, czyli środowisko uruchomieniowe, które dodaje zestaw usług dla języków dynamicznych do środowiska uruchomieniowego języka wspólnego (CLR).|
 |[Przewodnik: Tworzenie obiektów dynamicznych i korzystanie z nich](walkthrough-creating-and-using-dynamic-objects.md)|Zawiera instrukcje krok po kroku dotyczące tworzenia niestandardowego obiektu dynamicznego i tworzenia projektu, który uzyskuje dostęp do biblioteki `IronPython`.|
-|[Instrukcje: uzyskiwanie dostępu do obiektów międzyoperacyjności pakietu Office za pomocą funkcji Visual C#](../interop/how-to-access-office-onterop-objects.md)|Pokazuje, jak utworzyć projekt, który używa argumentów nazwanych i opcjonalnych, typu `dynamic` i innych ulepszeń, które upraszczają dostęp do obiektów interfejsu API pakietu Office.|
+|[Jak uzyskać dostęp do obiektów międzyoperacyjności C# pakietu Office za pomocą funkcji](../interop/how-to-access-office-onterop-objects.md)|Pokazuje, jak utworzyć projekt, który używa argumentów nazwanych i opcjonalnych, typu `dynamic` i innych ulepszeń, które upraszczają dostęp do obiektów interfejsu API pakietu Office.|

@@ -1,16 +1,14 @@
 ---
 title: Omówienie narzędzi diagnostycznych — .NET Core
 description: Przegląd narzędzi i technik dostępnych do diagnozowania aplikacji .NET Core.
-author: sdmaclea
-ms.author: stmaclea
-ms.date: 10/14/2019
+ms.date: 12/17/2019
 ms.topic: overview
-ms.openlocfilehash: c0a45a1bfe866ad42890db576b5dd5098b1dbc3d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0a78ec6c88f5323104277cddea4480a5e13b4e41
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318349"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715581"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>Jakie narzędzia diagnostyczne są dostępne w środowisku .NET Core?
 
@@ -32,14 +30,20 @@ Ten artykuł ułatwia znalezienie różnych potrzebnych narzędzi.
 
 ## <a name="net-core-dotnet-diagnostic-global-tools"></a>Narzędzia diagnostyczne programu .NET Core dotnet Diagnostic
 
-### <a name="dotnet-counters"></a>dotnet-liczniki
+### <a name="dotnet-counters"></a>dotnet-counters
 
 [dotnet-Counters](dotnet-counters.md) to narzędzie do monitorowania wydajności służące do monitorowania kondycji pierwszego poziomu i badania wydajności. Obserwuje wartości liczników wydajności publikowane za pośrednictwem interfejsu API <xref:System.Diagnostics.Tracing.EventCounter>. Można na przykład szybko monitorować elementy, takie jak użycie procesora CPU, lub częstotliwość zgłaszania wyjątków w aplikacji .NET Core.
 
-### <a name="dotnet-dump"></a>dotnet — zrzut
+### <a name="dotnet-dump"></a>dotnet-dump
 
 Narzędzie [dotnet-dump](dotnet-dump.md) to sposób zbierania i analizowania zrzutów podstawowych systemów Windows i Linux bez natywnego debugera.
 
-### <a name="dotnet-trace"></a>Śledzenie dotnet
+### <a name="dotnet-trace"></a>dotnet-trace
 
 Program .NET Core zawiera informacje o tym, co jest nazywane `EventPipe`, za pomocą którego są ujawniane dane diagnostyczne. Narzędzie do [śledzenia dotnet](dotnet-trace.md) umożliwia korzystanie z interesujących danych profilowania z poziomu aplikacji, które mogą pomóc w scenariuszach, w których konieczne jest powolne działanie aplikacji.
+
+## <a name="net-core-diagnostics-tutorials"></a>Samouczki dotyczące diagnostyki platformy .NET Core
+
+### <a name="debug-a-memory-leak"></a>Debugowanie przecieku pamięci
+
+[Samouczek: debugowanie przecieku pamięci](debug-memory-leak.md) przeprowadzi przez znalezienie przecieku pamięci. Narzędzie [dotnet-Counters](dotnet-counters.md) służy do potwierdzenia przecieku i narzędzia [dotnet-dump](dotnet-dump.md) służy do diagnozowania wycieku.

@@ -1,14 +1,13 @@
 ---
 title: ML.NET prowadnice
 description: Dowiedz się, jak wykonywać określone zadania, aby pomóc w tworzeniu niestandardowych rozwiązań AI i Machine Learning integrację z aplikacjami platformy .NET.
-ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: e2b4ff77c7f76282d70c06b5ef534306fe4e93a6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4ce2de77c35062aa19449e3ba6bb3d5abd003d60
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977109"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715669"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>Przewodnik po uczeniu maszynowym dla platformy .NET
 
@@ -32,7 +31,7 @@ W sekcji jak w przewodniku ML.NET można znaleźć szybkie odpowiedzi na często
 
 * [Oblicz metryki, aby oszacować jakość modelu.](verify-model-quality-ml-net.md)
 
-### <a name="model-explainability"></a>Wyjaśnienie modelu
+### <a name="model-explainability"></a>Explainability modelu
 
 * [Ustal znaczenie funkcji dla modeli o ważności funkcji permutacji.](explain-machine-learning-model-permutation-feature-importance-ml-net.md)
 

@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e919341130c6778207f324dd9eb3b3f54c8a9c68
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 670c4dd1ac9da496f59d12d2e880cf269d64f309
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74551845"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344966"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Samouczek: analizowanie tonacji komentarzy witryny internetowej w aplikacji sieci Web przy użyciu konstruktora modelu ML.NET
 
@@ -28,7 +28,7 @@ Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 > - Wybierz scenariusz
 > - Ładowanie danych
 > - Uczenie modelu
-> - Oceń model
+> - Ocenianie modelu
 > - Używanie modelu dla prognoz
 
 > [!NOTE]
@@ -49,7 +49,7 @@ Listę wymagań wstępnych i instrukcji instalacji można znaleźć w [podręczn
     1. Następnie wybierz szablon projektu **aplikacji sieci Web ASP.NET Core** .
     1. W polu tekstowym **Nazwa** wpisz "SentimentRazor".
     1. Upewnij się, że w tym samym katalogu nie jest **zaznaczone pole wyboru** **Umieść rozwiązanie i projekt** (vs 2019) lub pozycję **Utwórz katalog dla rozwiązania** jest **zaznaczone** (vs 2017).
-    1. Wybierz przycisk **OK** .
+    1. Wybierz przycisk **OK**.
     1. W oknie Wybierz **aplikację sieci Web** , która wyświetla różne typy projektów ASP.NET Core, a następnie wybierz przycisk **OK** .
 
 ## <a name="prepare-and-understand-the-data"></a>Przygotuj i poznanie danych
@@ -58,7 +58,7 @@ Pobierz [zestaw danych detox Wikipedia](https://raw.githubusercontent.com/dotnet
 
 Każdy wiersz w zestawie danych *Wikipedia-detox-250-line-Data. tsv* reprezentuje inny przegląd, który został pozostawiony przez użytkownika w witrynie Wikipedia. Pierwsza kolumna reprezentuje tonacji tekstu (0 to nietoksyczne, 1 jest toksyczny), a druga kolumna reprezentuje komentarz, który został pozostawiony przez użytkownika. Kolumny są oddzielane znakami tabulacji. Dane wyglądają następująco:
 
-| tonacji | SentimentText |
+| Opinia | SentimentText |
 | :---: | :---: |
 1 | = = Prosta = = informatyku, prosta to Carl Picture lub else.
 1 | = = OK! = = BŁYSKAWICZNE PRZECHODZENIE DO VANDALIZE DZIKICH WITRYN TYPU WIKI, A NASTĘPNIE!!!
@@ -101,7 +101,7 @@ Czas wymagany przez model do uczenia jest proporcjonalny do ilości danych. Kons
 
 1. Po zakończeniu szkolenia wybierz łącze **Oceń** , aby przejść do następnego kroku.
 
-## <a name="evaluate-the-model"></a>Oceń model
+## <a name="evaluate-the-model"></a>Ocenianie modelu
 
 Wynikiem kroku szkolenia będzie jeden model, który miał najlepszą wydajność. W kroku szacowania narzędzia model Builder sekcja Output zawiera algorytm używany przez model najlepiej działający w najlepszym wpisie **modelu** oraz metryki o **najwyższej dokładności modelu**. Ponadto tabela podsumowująca zawierająca pięć najważniejszych modeli i ich metryki.
 
@@ -275,7 +275,7 @@ Wyniki zwrócone przez `OnGetAnalyzeSentiment` będą dynamicznie wyświetlane n
 
         [!code-javascript [UpdateSentimentEvtHandler](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L36)]
 
-## <a name="run-the-application"></a>Uruchom aplikację
+## <a name="run-the-application"></a>Uruchamianie aplikacji
 
 Teraz, gdy aplikacja jest skonfigurowana, uruchom aplikację, która powinna być uruchamiana w przeglądarce.
 
@@ -287,7 +287,7 @@ Jeśli musisz odwołać się do projektów wygenerowanych przez konstruktora mod
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
+W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > - Tworzenie aplikacji Razor Pages ASP.NET Core
@@ -295,7 +295,7 @@ W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
 > - Wybierz scenariusz
 > - Ładowanie danych
 > - Uczenie modelu
-> - Oceń model
+> - Ocenianie modelu
 > - Używanie modelu dla prognoz
 
 ### <a name="additional-resources"></a>Dodatkowe materiały
@@ -304,4 +304,4 @@ Aby dowiedzieć się więcej na temat tematów wymienionych w tym samouczku, odw
 
 - [Scenariusze konstruktora modelu](../automate-training-with-model-builder.md#scenarios)
 - [Klasyfikacja binarna](../resources/glossary.md#binary-classification)
-- [Metryki binarnego modelu klasyfikacji](../resources/metrics.md#metrics-for-binary-classification)
+- [Metryki binarnego modelu klasyfikacji](../resources/metrics.md#evaluation-metrics-for-binary-classification)

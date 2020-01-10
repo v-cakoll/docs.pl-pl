@@ -7,24 +7,22 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0b4727ead8abb9b3618f8b9dda8f7a9eb4b2321f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c2d997d9006a3f1eb971eac20982b9dd5677ebf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968145"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710755"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Wnioskowanie schematów na podstawie dokumentów XML
-W tym temacie opisano sposób użycia <xref:System.Xml.Schema.XmlSchemaInference> klasy zostać wywnioskowany schemat języka (XSD) definicji schematu XML struktury dokumentu XML.  
+W tym temacie opisano sposób użycia klasy <xref:System.Xml.Schema.XmlSchemaInference> do wywnioskowania schematu języka definicji schematu XML (XSD) ze struktury dokumentu XML.  
   
-## <a name="the-schema-inference-process"></a>Procesu wnioskowania schematu  
- <xref:System.Xml.Schema.XmlSchemaInference> Klasy <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeń nazw jest używana do generowania co najmniej jednego schematu języka (XSD) definicji schematu XML ze struktury dokumentu XML. Wygenerowany schematów mogą służyć do zweryfikowania oryginalnego dokumentu XML.  
+## <a name="the-schema-inference-process"></a>Proces wnioskowania schematu  
+ Klasa <xref:System.Xml.Schema.XmlSchemaInference> przestrzeni nazw <xref:System.Xml.Schema?displayProperty=nameWithType> służy do generowania co najmniej jednego schematu języka definicji schematu XML (XSD) ze struktury dokumentu XML. Wygenerowane schematy mogą służyć do sprawdzania poprawności oryginalnego dokumentu XML.  
   
- Jako pliku XML dokumentu jest przetwarzany przez <xref:System.Xml.Schema.XmlSchemaInference> klasy <xref:System.Xml.Schema.XmlSchemaInference> klasy sprawia, że założenia dotyczące składników schematu, które opisują elementów i atrybutów w dokumencie XML. <xref:System.Xml.Schema.XmlSchemaInference> Klasy również wnioskuje składników schematu w sposób ograniczone przez wnioskowanie najbardziej restrykcyjny typ dla konkretnego elementu lub atrybutu. Jak dowiedzieć się więcej o dokumentu XML są zbierane, te ograniczenia są zmniejszyć przez wnioskowanie typów mniej restrykcyjne uprawnienia. Jest najmniej restrykcyjny typ, który można wywnioskować `xs:string`.  
+ Ponieważ dokument XML jest przetwarzany przez klasę <xref:System.Xml.Schema.XmlSchemaInference>, Klasa <xref:System.Xml.Schema.XmlSchemaInference> tworzy założenia dotyczące składników schematu, które opisują elementy i atrybuty w dokumencie XML. Klasa <xref:System.Xml.Schema.XmlSchemaInference> również wnioskuje składniki schematu w ograniczony sposób, wprowadzając najbardziej restrykcyjny typ dla określonego elementu lub atrybutu. Po zebraniu większej ilości informacji o dokumencie XML te ograniczenia są zmniejszane przez wnioskowanie mniej restrykcyjnych typów. Typ najmniej restrykcyjny, który można wywnioskować, jest `xs:string`.  
   
- Weźmy na przykład, następujące części dokumentu XML.  
+ Zrób na przykład poniższy fragment dokumentu XML.  
   
 ```xml  
 <parent attribute1="6">  
@@ -34,41 +32,41 @@ W tym temacie opisano sposób użycia <xref:System.Xml.Schema.XmlSchemaInference
 <parent attribute1="A">  
 ```  
   
- W przykładzie powyżej, kiedy `attribute1` napotkano atrybutu o wartości `6` przez <xref:System.Xml.Schema.XmlSchemaInference> procesu, zakłada się być typu `xs:unsignedByte`. Podczas drugiego `parent` napotkane elementu przez <xref:System.Xml.Schema.XmlSchemaInference> procesu ograniczenie się zmniejszyć, modyfikując typu, który ma `xs:string` ponieważ wartość `attribute1` atrybut jest teraz `A`. Podobnie `minOccurs` atrybutu dla wszystkich `child` wywnioskować w schemacie elementy są zmniejszyć do `minOccurs="0"` ponieważ drugi element nadrzędny nie ma elementów podrzędnych.  
+ W powyższym przykładzie, gdy atrybut `attribute1` zostanie napotkany z wartością `6` przez proces <xref:System.Xml.Schema.XmlSchemaInference>, przyjmuje się, że jest on typu `xs:unsignedByte`. Gdy drugi `parent` element zostanie napotkany przez proces <xref:System.Xml.Schema.XmlSchemaInference>, ograniczenie zostanie oddzielone przez zmodyfikowanie typu na `xs:string`, ponieważ wartość atrybutu `attribute1` jest teraz `A`. Analogicznie, atrybut `minOccurs` dla wszystkich elementów `child` wywnioskowanych w schemacie jest przyznany do `minOccurs="0"`, ponieważ drugi element nadrzędny nie ma elementów podrzędnych.  
   
 ## <a name="inferring-schemas-from-xml-documents"></a>Wnioskowanie schematów na podstawie dokumentów XML  
- <xref:System.Xml.Schema.XmlSchemaInference> Klasa używa dwóch przeciążone <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> metod, które można pobrać schematu z dokumentu XML.  
+ Klasa <xref:System.Xml.Schema.XmlSchemaInference> używa dwóch przeciążonych metod <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> do wywnioskowania schematu z dokumentu XML.  
   
- Pierwszy <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> metoda służy do tworzenia schemat, na podstawie dokumentu XML. Drugi <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> metoda jest używana do wnioskowania dotyczącego schematu, który opisuje wiele dokumentów XML. Na przykład można dostarczyć wiele dokumentów XML, aby <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> metodą w czasie, aby wygenerować schemat opisujący cały zestaw dokumentów XML.  
+ Pierwsza <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> Metoda jest używana do tworzenia schematu na podstawie dokumentu XML. Druga metoda <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> służy do wnioskowania schematu opisującego wiele dokumentów XML. Na przykład można utworzyć strumieniowo wiele dokumentów XML do metody <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> pojedynczo, aby wygenerować schemat, który opisuje cały zestaw dokumentów XML.  
   
- Pierwszy <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> metoda wnioskuje schemat z dokumentu XML zawartych w <xref:System.Xml.XmlReader> obiektu i zwraca <xref:System.Xml.Schema.XmlSchemaSet> obiektu zawierającego schemat wykrywany. Drugi <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> metoda wyszukuje <xref:System.Xml.Schema.XmlSchemaSet> obiekt do schematu z tej samej docelowego obszaru nazw w dokumencie XML znajdujący się w <xref:System.Xml.XmlReader> usprawniają istniejącego schematu obiektu i zwraca <xref:System.Xml.Schema.XmlSchemaSet> obiekt zawierający wywnioskowane schemat.  
+ Pierwsza <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> Metoda wnioskuje schemat z dokumentu XML zawartego w obiekcie <xref:System.Xml.XmlReader> i zwraca obiekt <xref:System.Xml.Schema.XmlSchemaSet> zawierający wywnioskowany schemat. Druga metoda <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> przeszukuje obiekt <xref:System.Xml.Schema.XmlSchemaSet> dla schematu z tą samą docelową przestrzenią nazw, co dokument XML zawarty w obiekcie <xref:System.Xml.XmlReader>, uściślije istniejący schemat i zwraca obiekt <xref:System.Xml.Schema.XmlSchemaSet> zawierający wywnioskowany schemat.  
   
- Zmiany wprowadzone w schemacie dostosowany opierają się na nowej struktury w dokumencie XML. Na przykład zgodnie z dokumentu XML, o ile, założenia składają się o znaleziono typów danych i schemat jest tworzony na podstawie tych założeń. Jednakże jeśli dane na drugi wnioskowania — dostęp próbny, różni się od oryginalnego założeń, schemat jest dostosowany. Poniższy przykład przedstawia proces uściślenia.  
+ Zmiany wprowadzone w rafinowanym schemacie są oparte na nowej strukturze, która znajduje się w dokumencie XML. Na przykład w przypadku przechodzenia dokumentu XML założono założenia dotyczące znalezionych typów danych, a schemat jest tworzony na podstawie tych założeń. Jednakże w przypadku wystąpienia danych w drugim przebiegu wnioskowania, który różni się od oryginalnego założeń, schemat zostanie rafinowany. Poniższy przykład ilustruje proces uściślania.  
   
  [!code-cpp[XmlSchemaInferenceExamples#4](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaInferenceExamples/CPP/XmlSchemaInferenceExamples.cpp#4)]
  [!code-csharp[XmlSchemaInferenceExamples#4](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaInferenceExamples/CS/XmlSchemaInferenceExamples.cs#4)]
  [!code-vb[XmlSchemaInferenceExamples#4](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaInferenceExamples/VB/XmlSchemaInferenceExamples.vb#4)]  
   
- Przykład przyjmuje następującego pliku `item1.xml`, jako pierwszy danych wejściowych.  
+ Przykład pobiera następujący plik, `item1.xml`, jako pierwsze dane wejściowe.  
   
  [!code-xml[XmlSchemaInferenceExamples#13](../../../../samples/snippets/xml/VS_Snippets_Data/XmlSchemaInferenceExamples/XML/item1.xml#13)]  
   
- Przykład następnie przyjmuje `item2.xml` pliku jako dane wejściowe drugiego:  
+ Przykład pobiera `item2.xml` plik jako drugi dane wejściowe:  
   
  [!code-xml[XmlSchemaInferenceExamples#14](../../../../samples/snippets/xml/VS_Snippets_Data/XmlSchemaInferenceExamples/XML/item2.xml#14)]  
   
- Gdy `productID` napotkano atrybutu w dokumencie XML z pierwszej wartości `123456789` zakłada się, że `xs:unsignedInt` typu. Kiedy drugi dokument XML jest jednak odczytu i wartość `A53-246` zostanie znaleziony, `xs:unsignedInt` typu nie będzie można również założyć. Schemat jest dostosowany i typu `productID` jest zmieniana na `xs:string`. Ponadto `minOccurs` atrybutu dla `supplierID` element jest ustawiony na `0`, ponieważ drugi dokument XML nie zawiera żadnych `supplierID` elementu.  
+ Gdy w pierwszym dokumencie XML zostanie napotkany atrybut `productID`, przyjmuje się, że wartość `123456789` jest typu `xs:unsignedInt`. Jednak po odczytaniu drugiego dokumentu XML i znalezieniu wartości `A53-246` nie można już przyjąć typu `xs:unsignedInt`. Schemat jest rafinowany i typ `productID` zostanie zmieniony na `xs:string`. Ponadto atrybut `minOccurs` dla elementu `supplierID` jest ustawiony na `0`, ponieważ drugi dokument XML nie zawiera elementu `supplierID`.  
   
- Poniżej znajduje się schemat wnioskowany z pierwszego dokumentu XML.  
+ Poniżej znajduje się schemat wnioskowany na podstawie pierwszego dokumentu XML.  
   
  [!code-xml[XmlSchemaInferenceExamples#15](../../../../samples/snippets/xml/VS_Snippets_Data/XmlSchemaInferenceExamples/XML/InferSchema1.xml#15)]  
   
- Poniżej znajduje się schemat wnioskowany z pierwszego dokumentu XML, przez drugi dokument XML.  
+ Poniżej znajduje się schemat wnioskowany na podstawie pierwszego dokumentu XML, rafinowany przez drugi dokument XML.  
   
  [!code-xml[XmlSchemaInferenceExamples#16](../../../../samples/snippets/xml/VS_Snippets_Data/XmlSchemaInferenceExamples/XML/InferSchema2.xml#16)]  
   
-## <a name="inline-schemas"></a>Wbudowane schematy  
- Jeśli wbudowanego schematu języka (XSD) definicji schematu XML jest napotkał podczas <xref:System.Xml.Schema.XmlSchemaInference> procesu <xref:System.Xml.Schema.XmlSchemaInferenceException> zgłaszany. Na przykład generuje następujące wbudowanego schematu <xref:System.Xml.Schema.XmlSchemaInferenceException>.  
+## <a name="inline-schemas"></a>Schematy wbudowane  
+ Jeśli w procesie <xref:System.Xml.Schema.XmlSchemaInference> zostanie napotkany wbudowany schemat języka definicji schematu XML (XSD), zostanie zgłoszony <xref:System.Xml.Schema.XmlSchemaInferenceException>. Na przykład poniższy schemat wbudowany zgłasza <xref:System.Xml.Schema.XmlSchemaInferenceException>.  
   
 ```xml  
 <root xmlns:ex="http://www.contoso.com" xmlns="http://www.tempuri.org">  
@@ -79,8 +77,8 @@ W tym temacie opisano sposób użycia <xref:System.Xml.Schema.XmlSchemaInference
 </root>  
 ```  
   
-## <a name="schemas-that-cannot-be-refined"></a>Schematy, które nie może być Refined  
- Brak schematu XML W3C konstrukcji, która schematu języka (XSD) definicji schematu XML <xref:System.Xml.Schema.XmlSchemaInference> procesu nie może obsłużyć, jeśli określony typ, aby dostosować i powodować zgłoszenie wyjątku. Takie jak typ złożony którego compositor najwyższego poziomu jest inna niż sekwencji. W modelu obiektów schematu (SOM) odpowiada <xref:System.Xml.Schema.XmlSchemaComplexType> którego <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> właściwość nie jest wystąpieniem <xref:System.Xml.Schema.XmlSchemaSequence>.  
+## <a name="schemas-that-cannot-be-refined"></a>Schematy, które nie mogą zostać ulepszone  
+ Istnieją konstrukcje schematu W3C XML, których proces <xref:System.Xml.Schema.XmlSchemaInference> schematu języka definicji schematu XML (XSD) nie może obsłużyć, jeśli podano typ do udoskonalenia i spowoduje zgłoszenie wyjątku. Takie jak typ złożony, którego compositor najwyższego poziomu jest coś innego niż sekwencja. W modelu obiektu schematu (SOM) odnosi się do <xref:System.Xml.Schema.XmlSchemaComplexType>, którego właściwość <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> nie jest wystąpieniem <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
 ## <a name="see-also"></a>Zobacz także
 

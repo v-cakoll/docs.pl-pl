@@ -5,14 +5,12 @@ helpviewer_keywords:
 - Windows 8, running .NET Framework 1.1 apps
 - .NET Framework 1.1, running on Windows 8
 ms.assetid: fb14e195-fea5-4561-b9a8-60a67283edb9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 178d951be8166c7541c9c19190727f6fa2f06c8f
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
-ms.translationtype: HT
+ms.openlocfilehash: 507de3ca635986d1f4e0e3ba7c607a4af774cdcf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544998"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716267"
 ---
 # <a name="run-net-framework-11-apps-on-windows-8-windows-81-or-windows-10"></a>Uruchamianie aplikacji programu .NET Framework 1.1 w systemie Windows 8, Windows 8.1 lub Windows 10
 

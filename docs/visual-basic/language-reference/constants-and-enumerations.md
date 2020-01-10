@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: e47fd1c606f7d4cd0cf2fa6398beaa183ed95076
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 5109bf42c9caa7528c5405bb1a5cff0cfb62a5ac
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838159"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705759"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Stałe i wyliczenia (Visual Basic)
 
@@ -27,7 +27,7 @@ Visual Basic dostarcza wiele wstępnie zdefiniowanych stałych i wyliczeń dla d
 |---|---|  
 |`CONFIG`|Ciąg, który odpowiada bieżącemu ustawieniu **aktywnej konfiguracji rozwiązania** w **Configuration Manager**.|  
 |`DEBUG`|Wartość `Boolean`, którą można ustawić w oknie dialogowym **właściwości projektu** . Domyślnie Konfiguracja debugowania dla projektu definiuje `DEBUG`. Gdy `DEBUG` jest zdefiniowany, <xref:System.Diagnostics.Debug> metody klasy generują dane wyjściowe do okna **danych wyjściowych** . Gdy nie jest zdefiniowany, metody klasy <xref:System.Diagnostics.Debug> nie są kompilowane i nie są generowane żadne dane wyjściowe debugowania.|  
-|`TARGET`|Ciąg reprezentujący typ danych wyjściowych dla projektu lub ustawienia opcji **/Target** w wierszu polecenia. Możliwe wartości `TARGET` są następujące:<br /><br /> -"winexe" dla aplikacji systemu Windows.<br />-"exe" dla aplikacji konsolowej.<br />-"Biblioteka" dla biblioteki klas.<br />-"module" dla modułu.<br />-Opcja **/Target** można ustawić w zintegrowanym środowisku programistycznym programu Visual Studio. Aby uzyskać więcej informacji, zobacz [-Target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
+|`TARGET`|Ciąg reprezentujący typ danych wyjściowych dla projektu lub ustawienie opcji wiersza polecenia **-Target** . Możliwe wartości `TARGET` są następujące:<br /><br /> -"winexe" dla aplikacji systemu Windows.<br />-"exe" dla aplikacji konsolowej.<br />-"Biblioteka" dla biblioteki klas.<br />-"module" dla modułu.<br />-Opcja **-Target** może być ustawiona w zintegrowanym środowisku programistycznym programu Visual Studio. Aby uzyskać więcej informacji, zobacz [-Target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`TRACE`|Wartość `Boolean`, którą można ustawić w oknie dialogowym **właściwości projektu** . Domyślnie wszystkie konfiguracje dla projektu definiują `TRACE`. Gdy `TRACE` jest zdefiniowany, <xref:System.Diagnostics.Trace> metody klasy generują dane wyjściowe do okna **danych wyjściowych** . Gdy nie jest on zdefiniowany, metody klasy <xref:System.Diagnostics.Trace> nie są kompilowane i nie są generowane żadne `Trace` dane wyjściowe.|  
 |`VBC_VER`|Liczba reprezentująca wersję Visual Basic w języku *głównym*. Format *pomocniczy* .|  
   

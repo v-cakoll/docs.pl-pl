@@ -1,6 +1,5 @@
 ---
-title: 'Instrukcje: konwertowanie ciągu na Przewodnik C# programowania w liczbie'
-ms.custom: seodec18
+title: Jak przekonwertować ciąg na Przewodnik C# programowania w liczbie
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -8,14 +7,14 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 8cd5a54bead2790d8e6e4c8e4a5649352f12869d
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 21732acd65eb4522b19ce84600fd8b333fb8a705
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552411"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711873"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Porady: konwertowanie ciągu na liczbę (Przewodnik programowania w języku C#)
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Konwertowanie ciągu na liczbę (C# Przewodnik programowania)
 
 Można przekonwertować [ciąg](../../language-reference/builtin-types/reference-types.md) na liczbę, wywołując metodę `Parse` lub `TryParse`, która znajduje się w różnych typach liczbowych (`int`, `long`, `double`itp.) lub przy użyciu metod w klasie <xref:System.Convert?displayProperty=nameWithType>.  
   
@@ -58,5 +57,5 @@ W poniższej tabeli wymieniono niektóre metody z klasy <xref:System.Convert>, k
 ## <a name="see-also"></a>Zobacz także
 
 - [Typy](./index.md)
-- [Instrukcje: określanie, czy ciąg reprezentuje wartość liczbową](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [Jak ustalić, czy ciąg reprezentuje wartość liczbową](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [Przykład: Narzędzie do formatowania narzędzi systemu .NET CoreC#()](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)

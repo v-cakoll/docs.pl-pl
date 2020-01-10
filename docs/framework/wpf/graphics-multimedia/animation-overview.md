@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 870fc1d1f02dca7d4488a27385fcfeaec8098ced
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039186"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559719"
 ---
 # <a name="animation-overview"></a>Przegląd Animacja
 
@@ -223,7 +223,7 @@ Ponieważ animacje generują wartości właściwości, istnieją różne typy an
 
 - *typ*\<> Podstawy animacji
 
-  Klasa abstrakcyjna, która podczas jej implementowania Animuj > wartość *typu*\<. Ta klasa służy jako klasa bazowa dla *typu*\<> Animacja i *typ*\<> klasy AnimationUsingKeyFrames. Musisz poradzić sobie bezpośrednio z tymi klasami tylko wtedy, gdy chcesz utworzyć własne animacje niestandardowe. W przeciwnym razie użyj *typu*\<> Animacja lub klatka *kluczowa\<>* animacji.
+  Klasa abstrakcyjna, która podczas jej implementowania Animuj > wartość *typu*\<. Ta klasa służy jako klasa bazowa dla *typu*\<> Animacja i *typ*\<> klasy AnimationUsingKeyFrames. Musisz poradzić sobie bezpośrednio z tymi klasami tylko wtedy, gdy chcesz utworzyć własne animacje niestandardowe. W przeciwnym razie użyj *typu*\<> Animacja lub klatka *kluczowa\<* animacji.
 
 W większości przypadków należy użyć \<*typu*> klas animacji, takich jak <xref:System.Windows.Media.Animation.DoubleAnimation> i <xref:System.Windows.Media.Animation.ColorAnimation>.
 
@@ -292,7 +292,7 @@ Przypisanie nazwy do <xref:System.Windows.FrameworkElement> różni się od przy
 
 - Aby utworzyć <xref:System.Windows.FrameworkElement> celu animacji, nadaj mu nazwę, ustawiając jej Właściwość <xref:System.Windows.FrameworkElement.Name%2A>. W kodzie, należy również użyć metody <xref:System.Windows.FrameworkElement.RegisterName%2A>, aby zarejestrować nazwę elementu ze stroną, do której należy.
 
-- Aby nadać obiektowi <xref:System.Windows.Freezable> element docelowy animacji w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], należy użyć [dyrektywy x:Name](../../xaml-services/x-name-directive.md) w celu przypisania jej nazwy. W kodzie, wystarczy użyć metody <xref:System.Windows.FrameworkElement.RegisterName%2A>, aby zarejestrować obiekt ze stroną, do której należy.
+- Aby nadać obiektowi <xref:System.Windows.Freezable> element docelowy animacji w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], należy użyć [dyrektywy x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) w celu przypisania jej nazwy. W kodzie, wystarczy użyć metody <xref:System.Windows.FrameworkElement.RegisterName%2A>, aby zarejestrować obiekt ze stroną, do której należy.
 
 Poniższe sekcje zawierają przykład nazewnictwa elementu w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i kodzie. Aby uzyskać bardziej szczegółowe informacje o nazewnictwie i określaniu elementów docelowych, zobacz [Omówienie scenorysów](storyboards-overview.md).
 
@@ -387,7 +387,7 @@ Poniższe przykłady ułatwiają rozpoczęcie dodawania animacji do aplikacji.
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Informacje ogólne
+## <a name="reference"></a>Tematy pomocy
 
 - <xref:System.Windows.Media.Animation.Timeline>
 

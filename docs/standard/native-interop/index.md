@@ -1,15 +1,13 @@
 ---
 title: Natywna współdziałanie — .NET
 description: Dowiedz się, jak interfejsować ze składnikami macierzystymi w programie .NET.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 3ca213bc7228d2e4337607df2d47b334c5bea14f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 330466d74cc268214f74c4f575e6a2961f678972
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106807"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706338"
 ---
 # <a name="native-interoperability"></a>Współdziałanie natywne
 

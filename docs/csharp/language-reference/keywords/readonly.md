@@ -1,6 +1,5 @@
 ---
 title: ReadOnly — słowo C# kluczowe-odwołanie
-ms.custom: seodec18
 ms.date: 06/21/2018
 f1_keywords:
 - readonly_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9fa6f893e7f999564c4dcb43d40755547d3c793
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454959"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713121"
 ---
 # <a name="readonly-c-reference"></a>readonly (odwołanie w C#)
 
@@ -103,7 +102,7 @@ Aby uzyskać dwie korzyści, należy zastosować modyfikator `readonly` do odpow
 
 Modyfikator `readonly` jest prawidłowy dla większości elementów członkowskich `struct`, w tym metod, które zastępują metody zadeklarowane w <xref:System.Object?displayProperty=nameWithType>. Istnieją pewne ograniczenia:
 
-- Nie można zadeklarować `readonly` statycznych elementów członkowskich.
+- Nie można zadeklarować `readonly` statycznych metod lub właściwości.
 - Nie można zadeklarować konstruktorów `readonly`.
 
 Modyfikator `readonly` można dodać do deklaracji właściwości lub indeksatora:
@@ -158,7 +157,7 @@ Możesz również zobaczyć propozycje specyfikacji języka:
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Modyfikatory](index.md)

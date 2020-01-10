@@ -11,14 +11,12 @@ helpviewer_keywords:
 - permissions [.NET Framework]
 - security [.NET Framework], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fe4c2e1775313039e8612ae7efbd3d22af710bab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7bcb7e56ca14d129eadcaeac19452d4a443713d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917254"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705975"
 ---
 # <a name="key-security-concepts"></a>Główne pojęcia dotyczące zabezpieczeń
 Microsoft .NET Framework oferuje zabezpieczenia oparte na rolach, które ułatwiają rozwiązywanie problemów związanych z bezpieczeństwem kodu mobilnego i zapewnianie pomocy technicznej umożliwiającej składnikom określenie, które użytkownicy mają uprawnienia do wykonywania.  
@@ -28,7 +26,7 @@ Microsoft .NET Framework oferuje zabezpieczenia oparte na rolach, które ułatwi
   
  Podczas kompilacji just-in-Time (JIT) opcjonalny proces weryfikacji sprawdza metadane i języka pośredniego firmy Microsoft (MSIL) metody, aby były kompilowane JIT w kodzie macierzystym, aby sprawdzić, czy są one bezpieczne. Ten proces jest pomijany, jeśli kod ma uprawnienia do pomijania weryfikacji. Aby uzyskać więcej informacji na temat weryfikacji, zobacz [proces wykonywania zarządzanego](../../../docs/standard/managed-execution-process.md).  
   
- Mimo że weryfikacja typu zabezpieczenia nie jest obowiązkowa do uruchamiania kodu zarządzanego, bezpieczeństwo typu odgrywa kluczową rolę w zakresie izolacji zestawów i wymuszania zabezpieczeń. Gdy kod jest bezpiecznym typem, środowisko uruchomieniowe języka wspólnego może całkowicie izolować zestawy od siebie. Ta izolacja pomaga upewnić się, że zestawy nie mogą niekorzystnie wpływać na siebie i zwiększa niezawodność aplikacji. Składniki bezpieczne dla typów mogą być wykonywane bezpiecznie w tym samym procesie, nawet jeśli są one zaufane na różnych poziomach. Gdy kod nie jest bezpiecznym typem, mogą wystąpić niepożądane skutki uboczne. Na przykład środowisko uruchomieniowe nie może zapobiec wywołaniu kodu natywnego (niezarządzanego) i wykonywaniu złośliwych operacji. Gdy kod jest bezpieczny, mechanizm wymuszania zabezpieczeń środowiska uruchomieniowego zapewnia, że nie uzyskuje dostępu do kodu natywnego, chyba że ma odpowiednie uprawnienia. Aby można było uruchomić cały kod, którego typ nie jest <xref:System.Security.Permissions.SecurityPermission> bezpieczny, musi zostać udzielony. <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A>  
+ Mimo że weryfikacja typu zabezpieczenia nie jest obowiązkowa do uruchamiania kodu zarządzanego, bezpieczeństwo typu odgrywa kluczową rolę w zakresie izolacji zestawów i wymuszania zabezpieczeń. Gdy kod jest bezpiecznym typem, środowisko uruchomieniowe języka wspólnego może całkowicie izolować zestawy od siebie. Ta izolacja pomaga upewnić się, że zestawy nie mogą niekorzystnie wpływać na siebie i zwiększa niezawodność aplikacji. Składniki bezpieczne dla typów mogą być wykonywane bezpiecznie w tym samym procesie, nawet jeśli są one zaufane na różnych poziomach. Gdy kod nie jest bezpiecznym typem, mogą wystąpić niepożądane skutki uboczne. Na przykład środowisko uruchomieniowe nie może zapobiec wywołaniu kodu natywnego (niezarządzanego) i wykonywaniu złośliwych operacji. Gdy kod jest bezpieczny, mechanizm wymuszania zabezpieczeń środowiska uruchomieniowego zapewnia, że nie uzyskuje dostępu do kodu natywnego, chyba że ma odpowiednie uprawnienia. W przypadku wszystkich typów, które nie są bezpieczne, należy przyznać <xref:System.Security.Permissions.SecurityPermission> z przekazaną <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A> członkowskim wyliczenia do uruchomienia.  
   
  Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../../docs/framework/misc/code-access-security-basics.md).  
   
@@ -44,12 +42,12 @@ Microsoft .NET Framework oferuje zabezpieczenia oparte na rolach, które ułatwi
  Aby uzyskać więcej informacji, zobacz [obiekty główne i tożsamości](../../../docs/standard/security/principal-and-identity-objects.md).  
   
 ## <a name="authentication"></a>Uwierzytelnianie  
- Uwierzytelnianie to proces odnajdywania i weryfikowania tożsamości podmiotu zabezpieczeń, sprawdzając poświadczenia użytkownika i sprawdzając poświadczenia dla niektórych urzędów. Informacje uzyskane podczas uwierzytelniania są bezpośrednio użyteczne w kodzie. Możesz również użyć .NET Framework zabezpieczenia oparte na rolach, aby uwierzytelnić bieżącego użytkownika i określić, czy zezwolić podmiotowi zabezpieczeń na dostęp do kodu. Zobacz przeciążania <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> metody, aby zapoznać się z przykładami sposobu uwierzytelniania podmiotu zabezpieczeń dla określonych ról. Można na przykład użyć <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> przeciążenia, aby określić, czy bieżący użytkownik jest członkiem grupy Administratorzy.  
+ Uwierzytelnianie to proces odnajdywania i weryfikowania tożsamości podmiotu zabezpieczeń, sprawdzając poświadczenia użytkownika i sprawdzając poświadczenia dla niektórych urzędów. Informacje uzyskane podczas uwierzytelniania są bezpośrednio użyteczne w kodzie. Możesz również użyć .NET Framework zabezpieczenia oparte na rolach, aby uwierzytelnić bieżącego użytkownika i określić, czy zezwolić podmiotowi zabezpieczeń na dostęp do kodu. Zobacz przeciążanie metody <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType>, aby zapoznać się z przykładami sposobu uwierzytelniania podmiotu zabezpieczeń dla określonych ról. Można na przykład użyć przeciążenia <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType>, aby określić, czy bieżący użytkownik jest członkiem grupy Administratorzy.  
   
  Obecnie używane są różne mechanizmy uwierzytelniania, z których wiele można korzystać w ramach zabezpieczeń opartych na rolach .NET Framework. Najczęściej używanymi mechanizmami są podstawowe, szyfrowane, paszporty, system operacyjny (na przykład NTLM lub Kerberos) lub mechanizmy zdefiniowane przez aplikację.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład wymaga, aby aktywny podmiot zabezpieczeń był administratorem. Parametr ma wartość `null`, która umożliwia każdemu użytkownikowi, który jest administratorem, przekazanie żądania. `name`  
+ Poniższy przykład wymaga, aby aktywny podmiot zabezpieczeń był administratorem. `name` parametr jest `null`, co umożliwia każdemu użytkownikowi, który jest administratorem, przekazanie żądania.  
   
 > [!NOTE]
 > W systemie Windows Vista Kontrola konta użytkownika (UAC) określa uprawnienia użytkownika. Jeśli jesteś członkiem wbudowanej grupy Administratorzy, masz przypisane dwa tokeny dostępu w czasie wykonywania: token dostępu użytkownika standardowego i token dostępu administratora. Domyślnie jesteś w roli użytkownika standardowego. Aby wykonać kod wymagający administratora, należy najpierw podnieść poziom uprawnień użytkownika standardowego do administratora. Można to zrobić podczas uruchamiania aplikacji przez kliknięcie prawym przyciskiem myszy ikony aplikacji i wskazanie, że chcesz uruchomić program jako administrator.  

@@ -6,20 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2913ccf3-f932-4363-8028-9e2d22ce6093
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b8666aa9cb9f0512c600a77891b16f439c46995a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a17aea66be7f9d35336434408c49bae8046b7e7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934423"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710911"
 ---
 # <a name="evaluate-xpath-expressions-using-xpathnavigator"></a>Obliczanie wyrażeń XPath przy użyciu klasy XPathNavigator
-<xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> metody ocena wyrażenia XPath. <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Metoda przyjmuje wyrażenia XPath, oblicza ona i zwraca typ W3C XPath atrybut typu wartość logiczna, liczba, ciąg lub zestaw węzłów na podstawie wyniku wyrażenia XPath.  
+Klasa <xref:System.Xml.XPath.XPathNavigator> udostępnia metodę <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> do obliczenia wyrażenia XPath. Metoda <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> przyjmuje wyrażenie XPath, oblicza go i zwraca typ W3C XPath o wartości logicznej, liczbowej, ciągu lub zestawu węzłów na podstawie wyniku wyrażenia XPath.  
   
-## <a name="the-evaluate-method"></a>Oceń — metoda  
- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Metoda przyjmuje wyrażenia XPath, oblicza ona i zwraca wynik typizowaną wartość logiczna (<xref:System.Boolean>), liczba (<xref:System.Double>), ciąg (<xref:System.String>), lub zestaw węzłów (<xref:System.Xml.XPath.XPathNodeIterator>). Na przykład <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> metoda może być użyta w metodzie matematyczne. Poniższy przykład kodu oblicza całkowita cena wszystkie książki w `books.xml` pliku.  
+## <a name="the-evaluate-method"></a>Metoda szacowania  
+ Metoda <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> przyjmuje wyrażenie XPath, oblicza je i zwraca typ wyniku logicznego (<xref:System.Boolean>), Number (<xref:System.Double>), ciąg (<xref:System.String>) lub zestaw węzłów (<xref:System.Xml.XPath.XPathNodeIterator>). Na przykład Metoda <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> może być użyta w metodzie matematycznej. Poniższy przykładowy kod oblicza łączną cenę wszystkich ksiąg w pliku `books.xml`.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -39,12 +37,12 @@ Double total = (Double)navigator.Evaluate(query);
 Console.WriteLine(total);  
 ```  
   
- Przykład przyjmuje `books.xml` pliku jako dane wejściowe.  
+ Przykład pobiera `books.xml` plik jako dane wejściowe.  
   
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
-### <a name="position-and-last-functions"></a>położenie i ostatniej funkcji  
- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Jest przeciążona metoda. Jedną z <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> metod przyjmuje <xref:System.Xml.XPath.XPathNodeIterator> obiektu jako parametr. Tej konkretnej <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> metody jest taka sama jak <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> metody, która przyjmuje tylko <xref:System.Xml.XPath.XPathExpression> obiektu jako parametru, z tą różnicą, że umożliwia argument do określania bieżącego kontekstu, aby wykonać obliczenie na zestaw węzłów. Ten kontekst jest wymagany dla wyrażenia XPath `position()` i `last()` funkcji, ponieważ są one względem bieżącego węzła kontekstu. O ile nie jest używana jako predykat w kroku lokalizacji `position()` i `last()` funkcje wymagają odwołania do węzła, ustaw umożliwia ocenienie w przeciwnym razie `position` i `last` funkcje zwracają `0`.  
+### <a name="position-and-last-functions"></a>Funkcja position i Last  
+ Metoda <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> jest przeciążona. Jedna z metod <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> przyjmuje obiekt <xref:System.Xml.XPath.XPathNodeIterator> jako parametr. Ta metoda <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> jest taka sama jak Metoda <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>, która pobiera tylko obiekt <xref:System.Xml.XPath.XPathExpression> jako parametr, z tą różnicą, że zezwala na argument zestawu węzłów, aby określić bieżący kontekst do przeprowadzenia oceny. Ten kontekst jest wymagany dla `position()` i `last()` funkcji XPath, ponieważ odnoszą się do bieżącego węzła kontekstu. O ile nie jest używany jako predykat w kroku lokalizacji, funkcje `position()` i `last()` wymagają odwołania do zestawu węzłów, aby można je było oszacować w przeciwnym razie funkcje `position` i `last` zwracają `0`.  
   
 ## <a name="see-also"></a>Zobacz także
 

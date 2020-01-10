@@ -1,6 +1,5 @@
 ---
 title: Private — słowo C# kluczowe — odwołanie
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - private_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-ms.openlocfilehash: 19e2925cd65cc9c68ff50d370398a4f401275940
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: a13e9ef18b0f6452c3ff1497dc97110bc21c433d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422591"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715200"
 ---
 # <a name="private-c-reference"></a>private (odwołanie w C#)
 
@@ -49,7 +48,7 @@ Aby uzyskać więcej informacji, zobacz [zadeklarowane ułatwienia dostępu](~/_
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Modyfikatory dostępu](access-modifiers.md)

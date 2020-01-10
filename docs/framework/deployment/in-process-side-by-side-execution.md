@@ -5,19 +5,17 @@ helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2a33d3c4216ed8c5d79aef4017c6b9256fc1ad7c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0c699f90143a87b7e7bee24c892efe2936a9399e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052102"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716477"
 ---
 # <a name="in-process-side-by-side-execution"></a>Wykonywanie równoczesne i wewnątrzprocesowe
 Począwszy od .NET Framework 4, można użyć w procesie równoczesnego hostowania do uruchamiania wielu wersji środowiska uruchomieniowego języka wspólnego (CLR) w ramach jednego procesu. Domyślnie zarządzane składniki COM są uruchamiane z .NET Framework wersją, z którą zostały skompilowane, niezależnie od wersji .NET Framework, która jest ładowana dla tego procesu.  
   
-## <a name="background"></a>Tło  
+## <a name="background"></a>Informacje dodatkowe  
  .NET Framework zawsze udostępnia hosting równoczesny dla aplikacji z kodem zarządzanym, ale przed .NET Framework 4, nie zapewniał on funkcji zarządzanych składników COM. W przeszłości zarządzane składniki COM, które zostały załadowane do procesu, działały z wersją środowiska uruchomieniowego, które zostało już załadowane lub z najnowszą zainstalowaną wersją .NET Framework. Jeśli ta wersja nie jest zgodna ze składnikiem COM, składnik ten nie powiedzie się.  
   
  .NET Framework 4 zawiera nowe podejście do hostingu równoczesnego, które zapewnia następujące działania:  
@@ -32,7 +30,7 @@ Począwszy od .NET Framework 4, można użyć w procesie równoczesnego hostowan
   
 - **Deweloperzy aplikacji**. Hosting równoległy nie ma prawie żadnego wpływu na deweloperów aplikacji. Domyślnie aplikacje są zawsze uruchamiane w porównaniu z wersją .NET Framework, w których zostały skompilowane; Ta zmiana nie została zmieniona. Deweloperzy mogą jednak zastąpić to zachowanie i skierować aplikację do uruchamiania w nowszej wersji .NET Framework (patrz [Scenariusz 2](#scenarios)).  
   
-- **Deweloperzy biblioteki i konsumenci**. Hosting równoległy nie rozwiązuje problemów ze zgodnością, które są używane przez deweloperów biblioteki. Biblioteka, która jest bezpośrednio ładowana przez aplikację — albo za pośrednictwem bezpośredniego odwołania lub <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> wywołania — kontynuuje używanie środowiska uruchomieniowego, <xref:System.AppDomain> który jest ładowany do. Należy przetestować biblioteki dla wszystkich wersji .NET Framework, które mają być obsługiwane. Jeśli aplikacja jest kompilowana przy użyciu środowiska uruchomieniowego .NET Framework 4, ale zawiera bibliotekę, która została skompilowana przy użyciu wcześniejszego środowiska uruchomieniowego, biblioteka będzie używać środowiska uruchomieniowego .NET Framework 4. Jeśli jednak masz aplikację, która została skompilowana przy użyciu wcześniejszego środowiska uruchomieniowego i biblioteki, która została skompilowana przy użyciu .NET Framework 4, musisz wymusić, aby aplikacja korzystała również z .NET Framework 4 (patrz [Scenariusz 3](#scenarios)).  
+- **Deweloperzy biblioteki i konsumenci**. Hosting równoległy nie rozwiązuje problemów ze zgodnością, które są używane przez deweloperów biblioteki. Biblioteka, która jest bezpośrednio ładowana przez aplikację — albo za pośrednictwem bezpośredniego odwołania lub za pośrednictwem wywołania <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> — kontynuuje używanie środowiska uruchomieniowego <xref:System.AppDomain>, do którego jest załadowana. Należy przetestować biblioteki dla wszystkich wersji .NET Framework, które mają być obsługiwane. Jeśli aplikacja jest kompilowana przy użyciu środowiska uruchomieniowego .NET Framework 4, ale zawiera bibliotekę, która została skompilowana przy użyciu wcześniejszego środowiska uruchomieniowego, biblioteka będzie używać środowiska uruchomieniowego .NET Framework 4. Jeśli jednak masz aplikację, która została skompilowana przy użyciu wcześniejszego środowiska uruchomieniowego i biblioteki, która została skompilowana przy użyciu .NET Framework 4, musisz wymusić, aby aplikacja korzystała również z .NET Framework 4 (patrz [Scenariusz 3](#scenarios)).  
   
 - **Zarządzani Deweloperzy składników modelu COM**. W przeszłości zarządzane składniki COM zostały automatycznie uruchomione przy użyciu najnowszej wersji środowiska uruchomieniowego zainstalowanej na komputerze. Teraz można wykonywać składniki COM względem wersji środowiska uruchomieniowego, które zostały skompilowane przy użyciu programu.  
   
@@ -54,13 +52,13 @@ Począwszy od .NET Framework 4, można użyć w procesie równoczesnego hostowan
   
      Zainstalowane wersje .NET Framework: .NET Framework 4 i wszystkie pozostałe wersje .NET Framework używane przez składniki COM.  
   
-     Co należy zrobić: W tym scenariuszu nic nie rób. Składniki COM będą działać z wersją .NET Framework, w których zostały zarejestrowane.  
+     Co należy zrobić: w tym scenariuszu nic nie rób. Składniki COM będą działać z wersją .NET Framework, w których zostały zarejestrowane.  
   
-- **Scenariusz 2**: Aplikacja zarządzana utworzona przy użyciu .NET Framework 2,0 SP1, która ma być uruchamiana z .NET Framework 2,0, ale chce działać na .NET Framework 4, jeśli wersja 2,0 nie jest obecna.  
+- **Scenariusz 2**: zarządzana aplikacja skompilowana z .NET Framework 2,0 SP1, którą wolisz uruchomić przy użyciu .NET Framework 2,0, ale chcemy działać na .NET Framework 4, jeśli wersja 2,0 nie jest obecna.  
   
-     Zainstalowane wersje .NET Framework: Starsza wersja .NET Framework i .NET Framework 4.  
+     Zainstalowane wersje .NET Framework: wcześniejsza wersja .NET Framework i .NET Framework 4.  
   
-     Co należy zrobić: W [pliku konfiguracji aplikacji](../configure-apps/index.md) w katalogu aplikacji użyj [ \<elementu >](../configure-apps/file-schema/startup/startup-element.md) [ \<Start i zestawu elementów > supportedRuntime](../configure-apps/file-schema/startup/supportedruntime-element.md) w następujący sposób:  
+     Co należy zrobić: w [pliku konfiguracyjnym aplikacji](../configure-apps/index.md) w katalogu aplikacji użyj [elementu\<Startup >](../configure-apps/file-schema/startup/startup-element.md) i zestawu [elementów\<supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) w następujący sposób:  
   
     ```xml  
     <configuration>  
@@ -75,7 +73,7 @@ Począwszy od .NET Framework 4, można użyć w procesie równoczesnego hostowan
   
      Zainstalowane wersje .NET Framework: .NET Framework 4.  
   
-     Co należy zrobić: W pliku `<startup>` konfiguracyjnym aplikacji w katalogu aplikacji użyj elementu `useLegacyV2RuntimeActivationPolicy` z `<supportedRuntime>` atrybutem ustawionym na `true` i element set w następujący sposób:  
+     Co należy zrobić: w pliku konfiguracyjnym aplikacji w katalogu aplikacji użyj `<startup>` elementu z atrybutem `useLegacyV2RuntimeActivationPolicy` ustawionym na `true`, a element `<supportedRuntime>` ustawia się w następujący sposób:  
   
     ```xml  
     <configuration>  
@@ -175,5 +173,5 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ## <a name="see-also"></a>Zobacz także
 
-- [\<> uruchomienia — element](../configure-apps/file-schema/startup/startup-element.md)
-- [\<supportedRuntime, element >](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<> uruchomienia elementu](../configure-apps/file-schema/startup/startup-element.md)
+- [\<element > supportedRuntime](../configure-apps/file-schema/startup/supportedruntime-element.md)

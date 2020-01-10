@@ -1,6 +1,5 @@
 ---
 title: + Operatory i + = — C# odwołanie
-ms.custom: seodec18
 ms.date: 05/24/2019
 f1_keywords:
 - +_CSharpKeyword
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: e6a190e3d6e283f2ce3b1690ec2bfd15d50dfc6e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 0c468f0fe56c68a16de660dbb3bd6356b4b6a00f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972635"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712770"
 ---
 # <a name="-and--operators-c-reference"></a>Operatory + i + = (C# odwołanie)
 
@@ -27,7 +26,7 @@ Operatory `+` i `+=` są obsługiwane przez wbudowane typy liczbowe [całkowite]
 
 Aby uzyskać informacje o operatorze arytmetycznej `+`, zobacz [operatory jednoargumentowe Plus i minus](arithmetic-operators.md#unary-plus-and-minus-operators) oraz [operator dodawania +](arithmetic-operators.md#addition-operator-) sekcje w artykule [Operatory arytmetyczne](arithmetic-operators.md) .
 
-## <a name="string-concatenation"></a>Łączenie ciągów
+## <a name="string-concatenation"></a>{1&gt;Łączenie ciągów&lt;1}
 
 Gdy jeden lub oba operandy są typu [String](../builtin-types/reference-types.md#the-string-type), operator `+` łączy reprezentacje ciągów argumentów operacji:
 
@@ -61,7 +60,7 @@ jest równoważny
 x = x + y
 ```
 
-z tą różnicą, że `x` są oceniane tylko raz.
+z tą różnicą, że `x` jest obliczone tylko raz.
 
 Poniższy przykład ilustruje użycie operatora `+=`:
 

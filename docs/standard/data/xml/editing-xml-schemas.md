@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bd40677b3b21a4ee1b237656ea2814badbbcd593
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d7d9f8e0d4ec2f343b50e68e942bf94e93576f25
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040768"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710950"
 ---
 # <a name="editing-xml-schemas"></a>Edytowanie schematów XML
 
@@ -24,25 +22,25 @@ Pierwszym krokiem podczas edytowania schematu załadowanego do modelu SOM jest p
 
 ## <a name="editing-an-xml-schema"></a>Edytowanie schematu XML
 
-W tej sekcji przedstawiono dwa przykłady kodu, z których każda edytuje schemat klienta utworzony w temacie [Tworzenie schematów XML](../../../../docs/standard/data/xml/building-xml-schemas.md) . Pierwszy przykład kodu dodaje `PhoneNumber` nowy element `Customer` do elementu, a drugi przykład kodu dodaje nowy `Title` atrybut do `FirstName` elementu. Pierwszy przykład używa również kolekcji po schemacie kompilacji <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> jako metody przechodzenia przez schemat klienta, podczas gdy drugi przykład kodu używa kolekcji przedprodukcyjnej kompilacji. <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>
+W tej sekcji przedstawiono dwa przykłady kodu, z których każda edytuje schemat klienta utworzony w temacie [Tworzenie schematów XML](../../../../docs/standard/data/xml/building-xml-schemas.md) . Pierwszy przykład kodu dodaje nowy element `PhoneNumber` do elementu `Customer`, a drugi przykład kodu dodaje nowy atrybut `Title` do elementu `FirstName`. Pierwszy przykład używa również kolekcji <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> kompilacji po schemacie jako metody przechodzenia przez schemat klienta, podczas gdy drugi przykład kodu używa kolekcji przed<xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>owej kompilacji.
 
 ### <a name="phonenumber-element-example"></a>Przykład elementu nr telefonu
 
-Ten pierwszy przykład kodu dodaje nowy `PhoneNumber` element `Customer` do elementu schematu klienta. Przykładowy kod edytuje schemat klienta w poniższych krokach.
+Ten pierwszy przykład kodu dodaje nowy element `PhoneNumber` do elementu `Customer` schematu klienta. Przykładowy kod edytuje schemat klienta w poniższych krokach.
 
-1. Dodaje schemat klienta do nowego <xref:System.Xml.Schema.XmlSchemaSet> obiektu, a następnie kompiluje go. Wszystkie ostrzeżenia i błędy walidacji schematu napotkane podczas odczytywania lub kompilowania schematu <xref:System.Xml.Schema.ValidationEventHandler> są obsługiwane przez delegata.
+1. Dodaje schemat klienta do nowego obiektu <xref:System.Xml.Schema.XmlSchemaSet>, a następnie kompiluje go. Wszystkie ostrzeżenia i błędy walidacji schematu napotkane podczas odczytywania lub kompilowania schematu są obsługiwane przez delegata <xref:System.Xml.Schema.ValidationEventHandler>.
 
-2. Pobiera skompilowany <xref:System.Xml.Schema.XmlSchema> obiekt <xref:System.Xml.Schema.XmlSchemaSet> z obiektu przez iterację <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> we właściwości. Ze względu na to, że schemat jest skompilowany, dostępne są właściwości po schemacie kompilacja-sprawdzonych (PSCI).
+2. Pobiera skompilowany obiekt <xref:System.Xml.Schema.XmlSchema> z <xref:System.Xml.Schema.XmlSchemaSet> przez iterację we właściwości <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Ze względu na to, że schemat jest skompilowany, dostępne są właściwości po schemacie kompilacja-sprawdzonych (PSCI).
 
-3. `xs:string` <xref:System.Xml.Schema.XmlSchemaSimpleType> <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> Tworzy element przy użyciu klasy,ograniczenietypuprostegoprzyużyciuklasi,dodajezestawregułwzorcówdowłaściwościograniczeniaidodaje<xref:System.Xml.Schema.XmlSchemaElement> `PhoneNumber` ograniczenie do <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> właściwości typu prostego i typu prostego <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> do `PhoneNumber` elementu.
+3. Tworzy element `PhoneNumber` przy użyciu klasy <xref:System.Xml.Schema.XmlSchemaElement>, `xs:string` ograniczenie typu prostego przy użyciu klas <xref:System.Xml.Schema.XmlSchemaSimpleType> i <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction>, dodaje aspekt wzorca do właściwości <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> ograniczenia i dodaje ograniczenie do właściwości <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> typu prostego i typu prostego do <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> elementu `PhoneNumber`.
 
-4. Wykonuje iterację na <xref:System.Xml.Schema.XmlSchemaElement> każdym <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> z kolekcji kolekcji po schemacie kompilacji <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> .
+4. Wykonuje iterację dla każdego <xref:System.Xml.Schema.XmlSchemaElement> w kolekcji <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> kolekcji po kompilacji schematu <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>.
 
-5. `"Customer"` `Customer` <xref:System.Xml.Schema.XmlSchemaComplexType> Jeśli element jest, pobiera typ złożony elementu przy użyciu <xref:System.Xml.Schema.XmlSchemaSequence> klasy i cząstki sekwencji typu złożonego przy użyciu klasy. <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A>
+5. Jeśli <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> elementu jest `"Customer"`, pobiera typ złożony elementu `Customer` przy użyciu klasy <xref:System.Xml.Schema.XmlSchemaComplexType> i cząstki sekwencji typu złożonego przy użyciu klasy <xref:System.Xml.Schema.XmlSchemaSequence>.
 
-6. Dodaje nowy `PhoneNumber` element do sekwencji zawierającej istniejące `FirstName` elementy i `LastName` przy użyciu kolekcji przedprodukcyjnej kompilacja <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> sekwencji.
+6. Dodaje nowy element `PhoneNumber` do sekwencji zawierającej istniejące `FirstName` i `LastName` elementy przy użyciu kolekcji sekwencji poprzedzającej <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> kompilację ze schematu.
 
-7. Na koniec przetwarza <xref:System.Xml.Schema.XmlSchema> i kompiluje zmodyfikowany obiekt <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> przy użyciu metod <xref:System.Xml.Schema.XmlSchemaSet> i <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> klasy i zapisuje je w konsoli programu.
+7. Na koniec przetwarza i kompiluje zmodyfikowany obiekt <xref:System.Xml.Schema.XmlSchema> przy użyciu metod <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> i <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> klasy <xref:System.Xml.Schema.XmlSchemaSet> i zapisuje je w konsoli programu.
 
 Poniżej znajduje się kompletny przykład kodu.
 
@@ -76,38 +74,38 @@ Poniżej przedstawiono zmodyfikowany schemat klienta utworzony w temacie [Tworze
 
 ### <a name="title-attribute-example"></a>Przykład atrybutu tytułu
 
-Ten drugi przykład kodu dodaje nowy `Title` atrybut `FirstName` do elementu schematu klienta. W pierwszym przykładzie kodu, typ `FirstName` elementu to. `xs:string` `FirstName` Aby element miał atrybut wraz z zawartością ciągu, jego typ musi być zmieniony na typ złożony z prostym modelem zawartości o rozszerzeniu zawartości.
+Ten drugi przykład kodu dodaje nowy atrybut `Title` do elementu `FirstName` schematu klienta. W pierwszym przykładzie kodu, typ elementu `FirstName` jest `xs:string`. Aby element `FirstName` miał atrybut wraz z zawartością ciągu, jego typ musi być zmieniony na typ złożony z prostym modelem zawartości o rozszerzeniu zawartości.
 
 Przykładowy kod edytuje schemat klienta w poniższych krokach.
 
-1. Dodaje schemat klienta do nowego <xref:System.Xml.Schema.XmlSchemaSet> obiektu, a następnie kompiluje go. Wszystkie ostrzeżenia i błędy walidacji schematu napotkane podczas odczytywania lub kompilowania schematu <xref:System.Xml.Schema.ValidationEventHandler> są obsługiwane przez delegata.
+1. Dodaje schemat klienta do nowego obiektu <xref:System.Xml.Schema.XmlSchemaSet>, a następnie kompiluje go. Wszystkie ostrzeżenia i błędy walidacji schematu napotkane podczas odczytywania lub kompilowania schematu są obsługiwane przez delegata <xref:System.Xml.Schema.ValidationEventHandler>.
 
-2. Pobiera skompilowany <xref:System.Xml.Schema.XmlSchema> obiekt <xref:System.Xml.Schema.XmlSchemaSet> z obiektu przez iterację <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> we właściwości. Ze względu na to, że schemat jest skompilowany, dostępne są właściwości po schemacie kompilacja-sprawdzonych (PSCI).
+2. Pobiera skompilowany obiekt <xref:System.Xml.Schema.XmlSchema> z <xref:System.Xml.Schema.XmlSchemaSet> przez iterację we właściwości <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Ze względu na to, że schemat jest skompilowany, dostępne są właściwości po schemacie kompilacja-sprawdzonych (PSCI).
 
-3. Tworzy nowy typ złożony dla `FirstName` elementu <xref:System.Xml.Schema.XmlSchemaComplexType> przy użyciu klasy.
+3. Tworzy nowy typ złożony dla elementu `FirstName` przy użyciu klasy <xref:System.Xml.Schema.XmlSchemaComplexType>.
 
-4. Tworzy nowe proste rozszerzenie zawartości z typem `xs:string`podstawowym, <xref:System.Xml.Schema.XmlSchemaSimpleContent> korzystając z klas i <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension> .
+4. Tworzy nowe proste rozszerzenie zawartości z typem podstawowym `xs:string`przy użyciu klas <xref:System.Xml.Schema.XmlSchemaSimpleContent> i <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension>.
 
-5. Tworzy nowy `Title` atrybut <xref:System.Xml.Schema.XmlSchemaAttribute> przy <xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> użyciu`xs:string` klasy, z i dodaje atrybut do prostego rozszerzenia zawartości.
+5. Tworzy nowy atrybut `Title` przy użyciu klasy <xref:System.Xml.Schema.XmlSchemaAttribute> z <xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> `xs:string` i dodaje atrybut do prostego rozszerzenia zawartości.
 
 6. Ustawia model zawartości prostej zawartości na proste rozszerzenie zawartości oraz model zawartości typu złożonego na zawartość prostą.
 
-7. Dodaje nowy typ złożony do kolekcji pre-Schema-compilation <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> .
+7. Dodaje nowy typ złożony do kolekcji <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> przedprodukcyjnej kompilacji.
 
-8. Wykonuje iterację dla <xref:System.Xml.Schema.XmlSchemaObject> każdego w kolekcji przedprodukcyjnej kompilacji <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> .
+8. Wykonuje iterację dla każdego <xref:System.Xml.Schema.XmlSchemaObject> w kolekcji przedprodukcyjnej kompilacja <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>.
 
 > [!NOTE]
-> Ponieważ element nie jest elementem globalnym w schemacie, nie jest dostępny <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> w kolekcjach ani <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>. `FirstName` Przykładowy kod lokalizuje `FirstName` element przez pierwsze lokalizowanie `Customer` elementu.
+> Ponieważ element `FirstName` nie jest elementem globalnym w schemacie, nie jest dostępny w kolekcjach <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> i <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>. Przykładowy kod lokalizuje element `FirstName`, najpierw lokalizowanie elementu `Customer`.
 >
-> Pierwszy przykładowy kod przechodzą przez schemat przy użyciu kolekcji po schemacie kompilacji <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> . W tym przykładzie kolekcja pre-Schema-compilation <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> jest używana do przechodzenia przez schemat. Chociaż obie kolekcje zapewniają dostęp do elementów globalnych w schemacie, Iterowanie przez <xref:System.Xml.Schema.XmlSchema.Items%2A> kolekcję jest bardziej czasochłonne, ponieważ należy wykonać iterację wszystkich elementów globalnych w schemacie i nie ma żadnych właściwości PSCI. Kolekcje PSCI (<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType>, itd.) zapewniają bezpośredni dostęp do swoich elementów globalnych, atrybutów i typów oraz ich właściwości PSCI.
+> Pierwszy przykładowy kod przechodzą przez schemat przy użyciu kolekcji po kompilacji schematu <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>. W tym przykładzie kolekcja <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> kompilacji przed schematem jest używana do przechodzenia przez schemat. Chociaż obie kolekcje zapewniają dostęp do elementów globalnych w schemacie, Iterowanie przez kolekcję <xref:System.Xml.Schema.XmlSchema.Items%2A> jest bardziej czasochłonne, ponieważ należy wykonać iterację wszystkich elementów globalnych w schemacie i nie ma żadnych właściwości PSCI. Kolekcje PSCI (<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType>itd.) zapewniają bezpośredni dostęp do swoich elementów globalnych, atrybutów i typów oraz ich właściwości PSCI.
 
-1. `"Customer"` <xref:System.Xml.Schema.XmlSchemaSequence> <xref:System.Xml.Schema.XmlSchemaComplexType> Jeśli jest elementem, którego <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> jest, pobiera typ `Customer` złożony elementu przy użyciu klasy i cząstki sekwencji typu złożonego przy użyciu klasy. <xref:System.Xml.Schema.XmlSchemaObject>
+1. Jeśli <xref:System.Xml.Schema.XmlSchemaObject> jest elementem, którego <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> jest `"Customer"`, pobiera typ złożony elementu `Customer` przy użyciu klasy <xref:System.Xml.Schema.XmlSchemaComplexType> i cząstki sekwencji typu złożonego przy użyciu klasy <xref:System.Xml.Schema.XmlSchemaSequence>.
 
-2. Wykonuje iterację dla <xref:System.Xml.Schema.XmlSchemaParticle> każdego w kolekcji przedprodukcyjnej kompilacji <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> .
+2. Wykonuje iterację dla każdego <xref:System.Xml.Schema.XmlSchemaParticle> w kolekcji przedprodukcyjnej kompilacja <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType>.
 
-3. <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> `"FirstName"` <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> Jeśli jest elementem, to jest, `FirstName` ustawia `FirstName` element na nowy typ złożony. <xref:System.Xml.Schema.XmlSchemaParticle>
+3. Jeśli <xref:System.Xml.Schema.XmlSchemaParticle> jest elementem, który jest <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> jest `"FirstName"`, ustawia <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> elementu `FirstName` do nowego `FirstName` typu złożonego.
 
-4. Na koniec przetwarza <xref:System.Xml.Schema.XmlSchema> i kompiluje zmodyfikowany obiekt <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> przy użyciu metod <xref:System.Xml.Schema.XmlSchemaSet> i <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> klasy i zapisuje je w konsoli programu.
+4. Na koniec przetwarza i kompiluje zmodyfikowany obiekt <xref:System.Xml.Schema.XmlSchema> przy użyciu metod <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> i <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> klasy <xref:System.Xml.Schema.XmlSchemaSet> i zapisuje je w konsoli programu.
 
 Poniżej znajduje się kompletny przykład kodu.
 

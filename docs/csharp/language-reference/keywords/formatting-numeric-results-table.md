@@ -1,6 +1,5 @@
 ---
 title: Formatowanie tabeli wyników liczbowych C# — odwołanie
-ms.custom: seodec18
 description: Więcej informacji C# na temat standardowych ciągów formatu liczbowego
 ms.date: 09/20/2018
 helpviewer_keywords:
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 2cba5e704787ae6368b2543c985babf2fde3b4dd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: eb93f0a4f3c66e9f7b295366a77b9fb099fc3a1e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422754"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713513"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Formatowanie tabeli wyników liczbowychC# (odwołanie)
 
@@ -21,14 +20,14 @@ W poniższej tabeli przedstawiono obsługiwane specyfikatory formatu do formatow
 
 |Specyfikator formatu|Opis|Przykłady|Wynik|  
 |----------------------|-----------------|--------------|------------|  
-|C lub c|Waluta|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2,50<br /><br /> ($2,50)|  
+|C lub c|Waluta|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|\\$2,50<br /><br /> (\\$2,50)|  
 |D lub d|Wartość dziesiętna|`string s = $"{25:D5}";`|00025|  
-|E lub e|Wykładniczego|`string s = $"{250000:E2}";`|2.50 e + 005|  
-|F lub f|Wartość stałoprzecinkowa|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2,50<br /><br /> 3|  
-|G lub g|Ogólne|`string s = $"{2.5:G}";`|2,5|  
-|N lub n|przypada|`string s = $"{2500000:N}";`|2 500 000,00|  
+|E lub e|Wykładniczy|`string s = $"{250000:E2}";`|2.50 e + 005|  
+|F lub f|Wartość stałoprzecinkowa|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  
+|G lub g|Ogólne|`string s = $"{2.5:G}";`|2.5|  
+|N lub n|Numeryczne|`string s = $"{2500000:N}";`|2,500,000.00|  
 |P lub p|Wartość procentowa|`string s = $"{0.25:P}";`|25,00%|  
-|R lub r|Wartość dwustronna|`string s = $"{2.5:R}";`|2,5|  
+|R lub r|Wartość dwustronna|`string s = $"{2.5:R}";`|2.5|  
 |X lub x|Wartość szesnastkowa|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
 
 ## <a name="remarks"></a>Uwagi
@@ -52,7 +51,7 @@ Aby uzyskać więcej informacji, zobacz [Standardowe ciągi formatujące](../../
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Formatowanie typów](../../../standard/base-types/formatting-types.md)
 - [Formatowanie złożone](../../../standard/base-types/composite-formatting.md)

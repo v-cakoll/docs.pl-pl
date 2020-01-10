@@ -1,6 +1,5 @@
 ---
 title: Interpolacja $-String- C# odwołanie
-ms.custom: seodec18
 description: Interpolacja ciągów zapewnia bardziej czytelną i wygodną składnię formatu ciągu wyjściowego niż tradycyjne formatowanie złożone ciągu.
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: cda8582da9ca8262ec2ce6bcfbb76e2e2f5f6006
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b32bbbb0bd99878822d7ca5abdba80b46539846a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421856"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715084"
 ---
 # <a name="---string-interpolation-c-reference"></a>Interpolacja $-String (C# odwołanie)
 
@@ -61,7 +60,7 @@ Poniższy przykład pokazuje, jak uwzględnić nawias klamrowy w ciągu wynikowy
 Interpolacja Verbatim ciąg rozpoczyna się od znaku `$`, po którym następuje znak `@`. Aby uzyskać więcej informacji na temat ciągów Verbatim, zobacz temat [identyfikatory](verbatim.md) [ciągów](../builtin-types/reference-types.md) i Verbatim.
 
 > [!NOTE]
-> Począwszy od C# 8,0, można użyć tokenów`$`i`@`w dowolnej kolejności: zarówno `$@"..."`, jak i`@$"..."`są prawidłowymi interpolowanymi ciągami Verbatim. We wcześniejszych C# wersjach token `$` musi znajdować się przed tokenem `@`.
+> Począwszy od C# 8,0, można użyć tokenów `$` i `@` w dowolnej kolejności: zarówno `$@"..."`, jak i `@$"..."` są prawidłowymi interpolowanymi ciągami Verbatim. We wcześniejszych C# wersjach token `$` musi znajdować się przed tokenem `@`.
 
 ## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>Niejawne konwersje i sposób określania implementacji `IFormatProvider`
 

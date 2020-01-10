@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 924d209cd1177ffc1702ebe958c58bfc29c22c38
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 180cce516a1209711430429a46cb5b718b29f1d9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447677"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716111"
 ---
 # <a name="controlling-net-framework-logging"></a>Kontrolowanie logowania w programie .NET Framework
 
@@ -47,7 +45,7 @@ Aby włączyć rejestrowanie, użytkownik musi określić trzy rzeczy:
 
 ### <a name="to-capture-clr-etw-events-using-logman"></a>Aby przechwytywać zdarzenia CLR ETW przy użyciu narzędzia Logman
 
-1. W wierszu polecenia wpisz polecenie:
+1. W wierszu polecenia wpisz:
 
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`
 
@@ -71,7 +69,7 @@ Aby włączyć rejestrowanie, użytkownik musi określić trzy rzeczy:
 
 ### <a name="to-capture-clr-etw-events-using-xperf"></a>Aby przechwytywać zdarzenia CLR ETW przy użyciu narzędzia Xperf
 
-1. W wierszu polecenia wpisz polecenie:
+1. W wierszu polecenia wpisz:
 
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`
 
@@ -89,7 +87,7 @@ Aby wyświetlić zdarzenia CLR ETW, należy użyć poleceń wymienionych poniże
 
 ### <a name="to-view-clr-etw-events-using-tracerpt"></a>Aby wyświetlić zdarzenia CLR ETW przy użyciu narzędzia Tracerpt
 
-- W wierszu polecenia wpisz polecenie:
+- W wierszu polecenia wpisz:
 
      `tracerpt clrevents.etl`
 
@@ -97,7 +95,7 @@ Aby wyświetlić zdarzenia CLR ETW, należy użyć poleceń wymienionych poniże
 
 ### <a name="to-view-clr-etw-events-using-xperf"></a>Aby wyświetlić zdarzenia CLR ETW przy użyciu narzędzia Xperf
 
-- W wierszu polecenia wpisz polecenie:
+- W wierszu polecenia wpisz:
 
      `xperf clrevents.etl`
 
@@ -105,7 +103,7 @@ Aby wyświetlić zdarzenia CLR ETW, należy użyć poleceń wymienionych poniże
 
 ### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>Aby przekonwertować plik etl na plik z wartościami rozdzielanymi przecinkami
 
-- W wierszu polecenia wpisz polecenie:
+- W wierszu polecenia wpisz:
 
      `xperf -i clrevents.etl -f clrevents.csv`
 

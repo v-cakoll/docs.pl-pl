@@ -5,14 +5,14 @@ author: mgroves
 ms.technology: csharp-fundamentals
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 54eb3038594e1d4becf8a1bddd58b1e0e6464d68
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9f08e362ada032e7193d83a73fbbf05259bd2259
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039287"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694559"
 ---
-# <a name="using-attributes-in-c"></a>Używanie atrybutów w C\#
+# <a name="use-attributes-in-c"></a>Używanie atrybutów w języku C\#
 
 Atrybuty umożliwiają kojarzenie informacji z kodem w sposób deklaratywny. Mogą również dostarczyć element wielokrotnego użytku, który można zastosować do różnych elementów docelowych.
 
@@ -22,7 +22,8 @@ W tym samouczku dowiesz się, jak dodawać atrybuty do kodu, jak tworzyć i uży
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 Musisz skonfigurować maszynę do uruchamiania programu .NET Core. Instrukcje instalacji można znaleźć na stronie [pliki do pobrania w programie .NET Core](https://dotnet.microsoft.com/download) .
-Możesz uruchomić tę aplikację w systemie Windows, Ubuntu Linux, macOS lub w kontenerze platformy Docker. Musisz zainstalować swój ulubiony Edytor kodu. Poniższe opisy wykorzystują [Visual Studio Code](https://code.visualstudio.com/) , czyli edytor Międzyplatformowy. Można jednak korzystać z dowolnych narzędzi, z którymi masz doświadczenie.
+Możesz uruchomić tę aplikację w systemie Windows, Ubuntu Linux, macOS lub w kontenerze platformy Docker.
+Musisz zainstalować swój ulubiony Edytor kodu. Poniższe opisy wykorzystują [Visual Studio Code](https://code.visualstudio.com/) , czyli edytor Międzyplatformowy. Można jednak korzystać z dowolnych narzędzi, z którymi masz doświadczenie.
 
 ## <a name="create-the-application"></a>Tworzenie aplikacji
 
@@ -30,7 +31,7 @@ Teraz, po zainstalowaniu wszystkich narzędzi, Utwórz nową aplikację platform
 
 `dotnet new console`
 
-To polecenie spowoduje utworzenie plików projektu programu podstawowe .NET Core. Należy wykonać `dotnet restore`, aby przywrócić zależności wymagane do skompilowania projektu.
+To polecenie spowoduje utworzenie plików projektu .NET Core bez systemu operacyjnego. Należy wykonać `dotnet restore`, aby przywrócić zależności wymagane do skompilowania projektu.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -38,10 +39,10 @@ Aby wykonać program, użyj `dotnet run`. Do konsoli powinny być widoczne dane 
 
 ## <a name="how-to-add-attributes-to-code"></a>Jak dodać atrybuty do kodu
 
-W C#programie atrybuty są klasy dziedziczące z klasy bazowej`Attribute`. Każda klasa, która dziedziczy po `Attribute` może być używana jako "tag" w innych fragmentach kodu.
+W C#programie atrybuty są klasy dziedziczące z klasy bazowej `Attribute`. Każda klasa, która dziedziczy po `Attribute` może być używana jako "tag" w innych fragmentach kodu.
 Na przykład istnieje atrybut o nazwie `ObsoleteAttribute`. Jest to używane do sygnalizowania, że kod jest przestarzały i nie powinien już być używany. Ten atrybut można umieścić w klasie, na przykład za pomocą nawiasów kwadratowych.
 
-[!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]  
+[!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]
 
 Należy pamiętać, że podczas gdy Klasa jest nazywana `ObsoleteAttribute`, w kodzie nie trzeba używać `[Obsolete]`. Jest to Konwencja C# następująca.
 Jeśli wybierzesz, możesz użyć pełnej nazwy `[ObsoleteAttribute]`.
@@ -82,16 +83,16 @@ Powyższe spowoduje wystąpienie błędu kompilatora, takiego jak `Attribute con
 Atrybuty mogą być używane dla wielu elementów "targets". Powyższe przykłady pokazują je na klasach, ale mogą być również używane w:
 
 * Zestaw
-* Class
+* Klasa
 * Konstruktor
 * Delegate
 * Wyliczenie
 * Zdarzenie
 * Pole
 * GenericParameter
-* Interface
+* Interfejs
 * Metoda
-* Moduł
+* Module
 * Parametr
 * Właściwość
 * ReturnValue
@@ -111,7 +112,7 @@ Atrybuty pełnią rolę metadanych. Bez żadnej siły biernej nie będą w rzecz
 
 Aby znaleźć i korzystać z atrybutów, [odbicie](../programming-guide/concepts/reflection.md) jest zwykle konieczne. W tym samouczku nie są pokryte szczegółowe dane dotyczące odbicia, ale podstawowym pomysłem jest to, że odbicie C# umożliwia pisanie kodu w programie, który sprawdza inny kod.
 
-Na przykład możesz użyć odbicia, aby uzyskać informacje o klasie (Dodaj `using System.Reflection;` w nagłówku kodu): 
+Na przykład możesz użyć odbicia, aby uzyskać informacje o klasie (Dodaj `using System.Reflection;` w nagłówku kodu):
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 
@@ -135,12 +136,12 @@ Atrybuty są używane przez wiele narzędzi i platform. NUnit używa atrybutów,
 
 Oto kilka istotnych atrybutów wbudowanych w podstawowe biblioteki klas platformy .NET Core:
 
-* `[Obsolete]`., Ta nazwa została użyta w powyższych przykładach i znajduje się w przestrzeni nazw `System`. Przydatne jest dostarczanie deklaratywnej dokumentacji dotyczącej zmiany bazy kodu. Komunikat można podać w postaci ciągu i można użyć innego parametru Boolean do eskalacji z ostrzeżenia kompilatora do błędu kompilatora.
+* `[Obsolete]`. Ta nazwa została użyta w powyższych przykładach i znajduje się w przestrzeni nazw `System`. Przydatne jest dostarczanie deklaratywnej dokumentacji dotyczącej zmiany bazy kodu. Komunikat można podać w postaci ciągu i można użyć innego parametru Boolean do eskalacji z ostrzeżenia kompilatora do błędu kompilatora.
 
-* `[Conditional]`., Ten atrybut znajduje się w przestrzeni nazw `System.Diagnostics`. Ten atrybut może być stosowany do metod (lub klas atrybutów). Należy przekazać ciąg do konstruktora.
+* `[Conditional]`. Ten atrybut znajduje się w przestrzeni nazw `System.Diagnostics`. Ten atrybut może być stosowany do metod (lub klas atrybutów). Należy przekazać ciąg do konstruktora.
 Jeśli ten ciąg nie pasuje do dyrektywy `#define`, wówczas wszystkie wywołania tej metody (ale nie sama metoda) zostaną usunięte przez C# kompilator. Zwykle jest to używane na potrzeby debugowania (Diagnostyka).
 
-* `[CallerMemberName]`., Ten atrybut może być używany dla parametrów, i mieszka w przestrzeni nazw `System.Runtime.CompilerServices`. Jest to atrybut, który jest używany do wstrzykiwania nazwy metody wywołującej inną metodę. Jest to zwykle używane w celu wyeliminowania "magicznych ciągów" podczas implementowania INotifyPropertyChanged w różnych strukturach interfejsu użytkownika. Przykład:
+* `[CallerMemberName]`. Ten atrybut może być używany dla parametrów, i mieszka w przestrzeni nazw `System.Runtime.CompilerServices`. Jest to atrybut, który jest używany do wstrzykiwania nazwy metody wywołującej inną metodę. Jest to zwykle używane w celu wyeliminowania "magicznych ciągów" podczas implementowania INotifyPropertyChanged w różnych strukturach interfejsu użytkownika. Na przykład:
 
 [!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 8b57affa05c77d8ed20bfead7de767a8dd994241
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 35e02d1ad4409e754c2466f7d0ae7e68214772e6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348583"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716702"
 ---
 # <a name="-reference-visual-basic"></a>-Reference (Visual Basic)
 Powoduje, że kompilator udostępnia informacje o typie w określonych zestawach, które są dostępne dla aktualnie kompilowanego projektu.  
@@ -35,7 +35,7 @@ lub
   
 |Termin|Definicja|  
 |---|---|  
-|`fileList`|Wymagana. Rozdzielana przecinkami lista nazw plików zestawu. Jeśli nazwa pliku zawiera spację, należy ująć ją w cudzysłów.|  
+|`fileList`|Wymagany. Rozdzielana przecinkami lista nazw plików zestawu. Jeśli nazwa pliku zawiera spację, należy ująć ją w cudzysłów.|  
   
 ## <a name="remarks"></a>Uwagi  
  Importowane pliki muszą zawierać metadane zestawu. Tylko typy publiczne są widoczne poza zestawem. Opcja [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) Importuje metadane z modułu.  
@@ -52,7 +52,7 @@ lub
   
  Plik odpowiedzi VBC. rsp, który odwołuje się do najczęściej używanych zestawów .NET Framework, jest używany domyślnie. Użyj `-noconfig`, jeśli nie chcesz, aby kompilator używał VBC. rsp.  
   
- Krótka forma `-reference` jest `/r`.  
+ Krótka forma `-reference` jest `-r`.  
   
 ## <a name="example"></a>Przykład  
  Poniższe polecenie kompiluje plik źródłowy `Input.vb` i zestawy referencyjne z `Metad1.dll` i `Metad2.dll`, aby utworzyć `Out.exe`.  

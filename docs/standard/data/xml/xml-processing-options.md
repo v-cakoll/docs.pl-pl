@@ -3,21 +3,19 @@ title: Opcje przetwarzania XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3fc7def48bff71935fce7c6ed914ad20c66e5182
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1707ed10d944a518872132dded40751026a4c8e7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425176"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709923"
 ---
 # <a name="xml-processing-options"></a>Opcje przetwarzania XML
 Zapoznaj się z poniższymi tabelami, aby zapoznać się z listą technologii firmy Microsoft, których można użyć do przetwarzania danych XML.  
   
 ## <a name="net-framework-options"></a>Opcje .NET Framework  
   
-|**Zaznaczyć**|**Typ przetwarzania**|**Opis**|  
+|**Option**|**Typ przetwarzania**|**Opis**|  
 |----------------|-------------------------|---------------------|  
 |[LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) <br/> [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) <br />(<xref:System.Xml.Linq> przestrzeń nazw)|W pamięci|— Oparta na technologii .NET Framework Language-Integrated Query (LINQ).<br />— Zapewnia środowisko zapytań podobne do SQL dla obiektów, danych relacyjnych i danych XML.<br />— Oferuje intuicyjne możliwości tworzenia i przekształcania dokumentów.<br />— Użyj tej opcji, jeśli piszesz nowy kod.|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|Oparte na strumieniu|— Zapewnia szybki, niebuforowany, w sposób umożliwiający dostęp do danych XML.<br />— Można tworzyć obiekty za pomocą metody <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> i określać zestaw funkcji do włączenia na obiekcie przy użyciu klasy <xref:System.Xml.XmlReaderSettings>.|  
@@ -28,7 +26,7 @@ Zapoznaj się z poniższymi tabelami, aby zapoznać się z listą technologii fi
   
 ## <a name="win32-and-com-based-options"></a>Opcje oparte na systemie Win32 i modelu COM  
   
-|**Zaznaczyć**|**Opis**|  
+|**Option**|**Opis**|  
 |----------------|---------------------|  
 |[XmlLite](https://docs.microsoft.com/previous-versions/windows/desktop/ms752872(v=vs.85))|-Szybki, bezpieczny, nieobsługujący buforowanie parser XML, który ułatwia tworzenie aplikacji XML o wysokiej wydajności.<br />-Działa z dowolnym językiem, który może korzystać z bibliotek dołączanych dynamicznie (dll); Zalecamy korzystanie z C++programu.|  
 |[PROGRAMU](https://docs.microsoft.com/previous-versions/windows/desktop/ms763742(v=vs.85))|— Technologia oparta na modelu COM służąca do przetwarzania kodu XML, który jest dołączony do systemu operacyjnego Windows.<br />— Zapewnia natywną implementację modelu DOM z obsługą języka XPath i XSLT.<br />-Zawiera parser oparty na zdarzeniach SAX2.|  

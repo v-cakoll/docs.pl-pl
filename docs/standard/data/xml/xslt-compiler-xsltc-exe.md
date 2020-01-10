@@ -3,14 +3,12 @@ title: Kompilator XSLT (xsltc.exe)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 729e6caa36ed8c2f6e77153f8d8ae356513b0603
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 83d880da65c2fc0730819f0a51c4e8b29deb4c8f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956993"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709728"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>Kompilator XSLT (xsltc.exe)
 Kompilator XSLT (xsltc. exe) kompiluje arkusze stylów XSLT i generuje zestaw. Skompilowany arkusz stylów można następnie przesłać bezpośrednio do metody <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. Nie można generować podpisanych zestawów za pomocą xsltc. exe.  
@@ -37,7 +35,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`/debug[`+&#124;-`]`|Określa, czy informacje o debugowaniu mają być generowane.<br /><br /> Określenie `+` lub `/debug`powoduje, że kompilator generuje informacje o debugowaniu i umieszcza je w pliku bazy danych programu (PDB). Nazwa wygenerowanego pliku PDB to `assemblyName`. pdb.<br /><br /> Określenie `-`, która obowiązuje, jeśli nie określono `/debug`, nie powoduje utworzenia informacji o debugowaniu. Zestaw detaliczny jest generowany. **Uwaga:**  Kompilowanie w trybie debugowania może znacząco wpłynąć na wydajność XSLT.|  
 |`/help`|Wyświetla składnię polecenia i opcje narzędzia.|  
 |`/nologo`|Pomija wyświetlanie komunikatu o prawach autorskich kompilatora.|  
-|`/platform:``string`|Określa platformy, na których można uruchomić zestaw. Poniżej opisano prawidłowe wartości platformy:<br /><br /> `x86` kompiluje zestaw do uruchomienia przez 32-bitowe, zgodne z architekturą x86 środowiska uruchomieniowego języka wspólnego<br /><br /> `x64` kompiluje zestaw do uruchomienia przez 64-bitowe środowisko uruchomieniowe języka wspólnego na komputerze, który obsługuje zestaw instrukcji AMD64 lub EM64T.<br /><br /> Procesor Itanium kompiluje zestaw do uruchomienia przez 64-bitowe środowisko uruchomieniowe języka wspólnego na komputerze z procesorem Itanium.<br /><br /> `anycpu` kompiluje zestaw do uruchamiania na dowolnej platformie. Domyślnie włączone.|  
+|`/platform:``string`|Określa platformy, na których można uruchomić zestaw. Poniżej opisano prawidłowe wartości platformy:<br /><br /> `x86` kompiluje zestaw do uruchomienia przez 32-bitowe, zgodne z architekturą x86 środowiska uruchomieniowego języka wspólnego<br /><br /> `x64` kompiluje zestaw do uruchomienia przez 64-bitowe środowisko uruchomieniowe języka wspólnego na komputerze, który obsługuje zestaw instrukcji AMD64 lub EM64T.<br /><br /> Procesor Itanium kompiluje zestaw do uruchomienia przez 64-bitowe środowisko uruchomieniowe języka wspólnego na komputerze z procesorem Itanium.<br /><br /> `anycpu` kompiluje zestaw do uruchamiania na dowolnej platformie. Jest to domyślne ustawienie.|  
 |`/out:``assemblyName`|Określa nazwę zestawu, który jest wynikiem. Nazwa zestawu jest domyślnie ustawiana na nazwę głównego arkusza stylów lub pierwszego arkusza stylów, jeśli istnieje wiele arkuszy stylów.<br /><br /> Jeśli arkusz stylów zawiera skrypty, skrypty są zapisywane w osobnym zestawie. Nazwy zestawów skryptów są generowane na podstawie głównej nazwy zestawu. Na przykład jeśli dla nazwy zestawu określono CustOrders. dll, pierwszy zestaw skryptu nosi nazwę CustOrders_Script1. dll.|  
 |`/settings:``document+-, script+-, DTD+-,`|Określa, czy zezwolić na `document()` funkcje, skrypt XSLT lub definicję typu dokumentu (DTD) w arkuszu stylów.<br /><br /> Zachowanie domyślne powoduje wyłączenie obsługi języka DTD, funkcji `document()` i skryptów.|  
 |`@``file`|Pozwala określić plik, który zawiera opcje kompilatora.|  

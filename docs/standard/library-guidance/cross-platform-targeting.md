@@ -1,77 +1,106 @@
 ---
-title: Dla wielu platform przeznaczonych dla bibliotek platformy .NET
-description: Zalecenia dotyczące najlepszych rozwiązań do tworzenia bibliotek .NET między platformami.
-author: jamesnk
-ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 6bd310f2e4b7a9bd7bb550ed9c7da9ebabdf64ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+title: Ukierunkowane na wiele platform dla bibliotek platformy .NET
+description: Zalecenia dotyczące najlepszych rozwiązań dotyczących tworzenia bibliotek platformy .NET dla wielu platform.
+ms.date: 08/12/2019
+ms.openlocfilehash: 45eb67837c924558ec51381dd924abf9fd0fa315
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947027"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706520"
 ---
 # <a name="cross-platform-targeting"></a>Obsługiwane rozwiązania międzyplatformowe
 
-Nowoczesne .NET obsługuje wiele systemów operacyjnych i urządzeń. Ważne jest dla platformy .NET bibliotek typu open source do obsługi tak wielu programistów, jak to możliwe, czy jest tworzone w witrynie sieci Web platformy ASP.NET hostowanej na platformie Azure lub gra .NET na platformie Unity.
+Nowoczesne środowisko .NET obsługuje wiele systemów operacyjnych i urządzeń. Jest to ważne w przypadku bibliotek typu open source programu .NET do obsługi możliwie największej liczby deweloperów, niezależnie od tego, czy tworzą one witrynę sieci Web ASP.NET hostowaną na platformie Azure, czy też grę z platformą .NET w środowisku Unity.
 
 ## <a name="net-standard"></a>.NET Standard
 
-.NET standard jest najlepszym sposobem dodania obsługi wielu platform w bibliotece platformy .NET. [.NET standard](../net-standard.md) to specyfikacja interfejsów API platformy .NET, które są dostępne na wszystkich implementacji .NET. Przeznaczonych dla platformy .NET Standard umożliwia tworzenie godnych bibliotek, które są ograniczone do użycia interfejsów API, które znajdują się w danej wersji programu .NET Standard, co oznacza, że jest użyteczne przez wszystkie platformy, które implementują tę wersję .NET Standard.
+.NET Standard to najlepszy sposób na dodanie obsługi wielu platform do biblioteki .NET. [.NET Standard](../net-standard.md) to specyfikacja interfejsów API platformy .NET, które są dostępne we wszystkich implementacjach platformy .NET. .NET Standard określania wartości docelowej umożliwia tworzenie bibliotek, które są ograniczone do używania interfejsów API w danej wersji .NET Standard, co oznacza, że są one używane przez wszystkie platformy, które implementują tę wersję .NET Standard.
 
 ![.NET Standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET Standard")
 
-Przeznaczonych dla platformy .NET Standard i pomyślnie Kompilowanie projektu, nie gwarantuje, że biblioteka zostanie pomyślnie uruchomiona na wszystkich platformach:
+Kierowanie .NET Standard i pomyślne skompilowanie projektu nie gwarantuje, że biblioteka zostanie uruchomiona pomyślnie na wszystkich platformach:
 
-1. Interfejsy API specyficzne dla platformy zakończy się niepowodzeniem na innych platformach. Na przykład <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> będą się powieść po Windows i generują <xref:System.PlatformNotSupportedException> stosowania w dowolnym systemie operacyjnym.
-2. Interfejsy API mogą zachowywać się inaczej. Na przykład za odbicia interfejsów API jest mają różną charakterystykę wydajności w aplikacji używane kompilację ahead of time w systemie iOS lub platformy uniwersalnej systemu Windows.
+1. Interfejsy API specyficzne dla platformy zakończą się niepowodzeniem na innych platformach. Na przykład <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> zakończy się pomyślnie w systemie Windows i zgłosi <xref:System.PlatformNotSupportedException>, gdy jest używany w innym systemie operacyjnym.
+2. Interfejsy API mogą zachowywać się inaczej. Na przykład interfejsy API odbicia mają różne charakterystyki wydajności, gdy aplikacja korzysta z kompilacji przed czasem w systemie iOS lub platformy UWP.
 
 > [!TIP]
-> Zespół .NET [oferuje analizatora Roslyn](../analyzers/api-analyzer.md) Państwu pomóc odkryć potencjalne problemy.
+> Zespół .NET [oferuje Analizator Roslyn](../analyzers/api-analyzer.md) , który ułatwia odnajdywanie potencjalnych problemów.
 
-**CZY ✔️** rozpoczynać się tym `netstandard2.0` docelowej.
+**✔️** Zacznij od dołączenia do `netstandard2.0` celu.
 
-> Najbardziej ogólnego przeznaczenia biblioteki nie powinni interfejsów API poza .NET Standard 2.0. .NET standard 2.0 jest obsługiwane przez wszystkie nowoczesne platformy i jest to zalecany sposób obsługi wielu platform w jeden element docelowy.
+> Większość bibliotek ogólnego przeznaczenia nie powinna potrzebować interfejsów API poza .NET Standard 2,0. .NET Standard 2,0 jest obsługiwane przez wszystkie nowoczesne platformy i jest zalecanym sposobem obsługi wielu platform z jednym obiektem docelowym.
 
-**Należy UNIKAĆ ❌** tym `netstandard1.x` docelowej.
+**❌ unikać** dołączenia do `netstandard1.x` celu.
 
-> .NET standard 1.x jest rozpowszechniany jako szczegółowego zestawu pakietów NuGet, tworzy wykres zależności duży pakiet, co skutkuje deweloperów pobierania partii pakietów podczas kompilacji. Nowoczesnych platform .NET, w tym .NET Framework 4.6.1, platformy uniwersalnej systemu Windows i Xamarin, wszystkie obsługują .NET Standard 2.0. Powinien dotyczyć tylko .NET Standard 1.x, jeśli jest wymagana do starszych platformą docelową.
+> .NET Standard 1. x jest dystrybuowany jako szczegółowy zestaw pakietów NuGet, co tworzy wykres zależności pakietu i umożliwia deweloperom pobieranie dużej liczby pakietów podczas kompilowania. Nowoczesne platformy .NET, w tym .NET Framework 4.6.1, platformy UWP i Xamarin, obsługują .NET Standard 2,0. Należy określić tylko .NET Standard 1. x, jeśli konieczne jest ukierunkowanie starszej platformy.
 
-**CZY ✔️** obejmują `netstandard2.0` docelowe w razie potrzeby `netstandard1.x` docelowej.
+**✔️ należy** uwzględnić docelowy `netstandard2.0`, jeśli jest wymagany element docelowy `netstandard1.x`.
 
-> Wszystkie platformy .NET Standard 2.0 obsługi użyje `netstandard2.0` docelową i korzyści z posiadania wykres mniejszych pakietów, gdy starszych platformach będą nadal działać i wrócić korzystania z `netstandard1.x` docelowej.
+> Wszystkie platformy obsługujące .NET Standard 2,0 będą używać elementu docelowego `netstandard2.0` i korzyści z posiadania mniejszego grafu pakietu, a starsze platformy będą nadal działały i powracają do korzystania z `netstandard1.x` celu.
 
-**❌ NIE** obejmują .NET Standard docelowy, jeśli biblioteka opiera się na modelu specyficznego dla platformy aplikacji.
+**❌ nie** uwzględniać elementu docelowego .NET Standard, jeśli biblioteka korzysta z modelu aplikacji specyficznego dla platformy.
 
-> Na przykład biblioteki zestawu narzędzi kontrolek platformy uniwersalnej systemu Windows jest zależny od modelu aplikacji, która jest dostępna tylko na platformy uniwersalnej systemu Windows. Specyficzne dla modelu aplikacji interfejsów API nie będą dostępne w programie .NET Standard.
+> Na przykład biblioteka zestawu narzędzi platformy UWP Control zależy od modelu aplikacji, który jest dostępny tylko w platformy UWP. Interfejsy API specyficzne dla modelu aplikacji nie będą dostępne w .NET Standard.
 
-## <a name="multi-targeting"></a>Wielowersyjność kodu
+## <a name="multi-targeting"></a>Wiele elementów docelowych
 
-Czasami zachodzi potrzeba dostęp do interfejsów API specyficznych dla framework z bibliotek. Najlepszym sposobem wywoływania interfejsów API specyficznych dla framework używa wielowersyjność kodu, który kompiluje projekt dla wielu [platform docelowych .NET](../frameworks.md) , a nie tylko jednego.
+Czasami trzeba uzyskać dostęp do interfejsów API specyficznych dla platformy z bibliotek. Najlepszym sposobem wywołania interfejsów API specyficznych dla platformy jest użycie wielu elementów docelowych, które kompilują projekt dla wielu platform [docelowych .NET](../frameworks.md) , a nie tylko dla jednego.
 
-Można włączyć osłony dla klientów z konieczności tworzenia dla poszczególnych platform, należy dążyć mieć .NET Standard danych wyjściowych, a także co najmniej jeden właściwa dla struktury danych wyjściowych. Przy użyciu wielowersyjności kodu wszystkie zestawy są spakowane w jednym pakiecie NuGet. Konsumenci następnie tworzyć odwołania do tego samego pakietu i NuGet wybierze odpowiednią implementacji. Biblioteki .NET Standard służy jako rezerwowej biblioteki, który jest używany wszędzie, z wyjątkiem przypadków, gdy pakiet NuGet oferuje wykonania określonej platformy. Wielowersyjność kodu pozwala użyć kompilacji warunkowej w kodzie i wywoływać interfejsy API specyficzne dla framework.
+Aby chronić odbiorców przed koniecznością kompilowania dla poszczególnych platform, należy dążyć do uzyskania .NET Standard danych wyjściowych i jednego lub kilku wyjść specyficznych dla platformy. W przypadku wiele elementów docelowych wszystkie zestawy są pakowane w ramach jednego pakietu NuGet. Następnie konsumenci mogą odwoływać się do tego samego pakietu, a pakiet NuGet wybierze odpowiednią implementację. Biblioteka .NET Standard służy jako biblioteka rezerwowa używana wszędzie, z wyjątkiem przypadków, w których pakiet NuGet oferuje implementację specyficzną dla platformy. Wiele elementów docelowych umożliwia użycie kompilacji warunkowej w kodzie i wywołań interfejsów API specyficznych dla platformy.
 
-![Pakiet NuGet za pomocą wielu zestawów](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "pakietu NuGet wraz z wielu zestawów")
+![Pakiet NuGet z wieloma zestawami](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "Pakiet NuGet z wieloma zestawami")
 
-**ROZWAŻ ✔️** obsługiwane implementacje platformy .NET, oprócz .NET Standard.
+**✔️ Rozważ uwzględnienie** implementacji platformy .net oprócz .NET Standard.
 
-> Obsługiwane implementacje platformy .NET umożliwia wywoływanie interfejsów API specyficznych dla platformy, które znajdują się poza .NET Standard.
+> Elementy docelowe implementacji platformy .NET umożliwiają wywoływanie interfejsów API specyficznych dla platformy, które znajdują się poza programem .NET Standard.
 >
-> Gdy to zrobisz, nie porzucić pomocy technicznej dla platformy .NET Standard. Zamiast tego należy zgłaszać z wdrożenia i oferuje możliwości interfejsów API. W ten sposób biblioteki mogą być używane w dowolnym miejscu i obsługuje środowisko uruchomieniowe światła w górę funkcji.
+> Nie porzucaj obsługi .NET Standard, gdy to zrobisz. Zamiast tego należy zgłosić z interfejsów API możliwości implementacji i oferty. Dzięki temu biblioteka może być używana w dowolnym miejscu i obsługuje środowisko uruchomieniowe funkcji.
 
-**Należy UNIKAĆ ❌** wielowersyjnością kodu — a także przeznaczonych dla platformy .NET Standard, jeśli kod źródłowy jest taka sama dla wszystkich obiektów docelowych.
+```csharp
+public static class GpsLocation
+{
+    // This project uses multi-targeting to expose device-specific APIs to .NET Standard.
+    public static async Task<(double latitude, double longitude)> GetCoordinatesAsync()
+    {
+#if NET461
+        return CallDotNetFramworkApi();
+#elif WINDOWS_UWP
+        return CallUwpApi();
+#else
+        throw new PlatformNotSupportedException();
+#endif
+    }
 
-> Zestaw .NET Standard automatycznie będą używane przez NuGet. Przeznaczone dla poszczególnych implementacji .NET zwiększa `*.nupkg` rozmiar bez żadnych korzyści.
+    // Allows callers to check without having to catch PlatformNotSupportedException
+    // or replicating the OS check.
+    public static bool IsSupported
+    {
+        get
+        {
+#if NET461 || WINDOWS_UWP
+            return true;
+#else
+            return false;
+#endif
+        }
+    }
+}
+```
 
-**✔️ ROZWAŻ** Dodawanie elementu docelowego dla `net461` po użytkownik oferowane `netstandard2.0` docelowej. 
+**❌ unikać** określania elementów docelowych i .NET Standard określania wartości docelowej, jeśli kod źródłowy jest taki sam dla wszystkich obiektów docelowych.
 
-> Przy użyciu platformy .NET Standard 2.0 z .NET Framework ma kilka problemów, które zostały rozwiązane w programie .NET Framework 4.7.2. Możesz poprawić środowisko dla deweloperów, którzy nadal korzystają z platformy .NET Framework 4.6.1 — 4.7.1, oferując im plik binarny, który jest przeznaczony dla platformy .NET Framework 4.6.1.
+> Zestaw .NET Standard będzie automatycznie używany przez pakiet NuGet. Kierowanie poszczególnych implementacji platformy .NET zwiększa rozmiar `*.nupkg` w przypadku braku korzyści.
 
-**CZY ✔️** dystrybucji przy użyciu pakietu NuGet biblioteki.
+**✔️ rozważyć** dodanie elementu docelowego dla `net461`, gdy oferujesz element docelowy `netstandard2.0`.
 
-> NuGet zaznaczy najlepsze docelowego dla deweloperów i zabezpieczyć je konieczności wyboru odpowiedniej implementacji.
+> Korzystanie z .NET Standard 2,0 z .NET Framework ma problemy, które zostały rozwiązane w .NET Framework 4.7.2. Możesz poprawić środowisko dla deweloperów, którzy nadal znajdują się w .NET Framework 4.6.1-4.7.1, oferując im plik binarny, który jest skompilowany dla .NET Framework 4.6.1.
 
-**CZY ✔️** przy użyciu pliku projektu `TargetFrameworks` właściwość równoczesną wielowersyjnością kodu.
+**✔️** Przeprowadź dystrybucję biblioteki przy użyciu pakietu NuGet.
+
+> Pakiet NuGet wybierze najlepszy cel dla dewelopera i osłonę, aby wybrać odpowiednią implementację.
+
+**✔️** użyj właściwości `TargetFrameworks` pliku projektu podczas wieloelementowego określania wartości docelowej.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -82,18 +111,18 @@ Można włączyć osłony dla klientów z konieczności tworzenia dla poszczegó
 </Project>
 ```
 
-**ROZWAŻ ✔️** przy użyciu [MSBuild.Sdk.Extras](https://github.com/onovotny/MSBuildSdkExtras) równoczesną wielowersyjnością kodu platformy uniwersalnej systemu Windows i Xamarin jak znacząco upraszcza pliku projektu.
+**✔️ rozważyć** użycie programu [MSBuild. Sdk. Extras](https://github.com/onovotny/MSBuildSdkExtras) , gdy wiele obiektów docelowych dla platformy UWP i Xamarin jest znacznie upraszcza plik projektu.
 
-## <a name="older-targets"></a>Starsze elementów docelowych
+## <a name="older-targets"></a>Starsze elementy docelowe
 
-.NET wspomaga określania wartości docelowej wersji systemu .NET Framework, które są długie poza pomocy technicznej, a także platformy, które są już powszechnie używane. Brak wartości w trakcie wprowadzania pracy biblioteki na jak wiele elementów docelowych jak to możliwe, konieczności obejść Brak interfejsów API można dodać znaczne obciążenie. My uważamy pewność, że platform nie są już warte docelowych, biorąc pod uwagę ich zasięgu i ograniczenia.
+Platforma .NET obsługuje docelowe wersje .NET Framework, które są nieobsługiwane, a także platformy, które nie są już powszechnie używane. Chociaż istnieje wartość w tym, że Twoja biblioteka działa jak największej liczbie obiektów docelowych, bez obejścia interfejsów API, można zwiększyć znaczący koszt. Uważamy, że pewne struktury nie są już ukierunkowane na to, biorąc pod uwagę ich zasięg i ograniczenia.
 
-**❌ NIE** obejmują docelowej biblioteki klas przenośnych (PCL). Na przykład `portable-net45+win8+wpa81+wp8`.
+**❌ nie** obejmują obiektu docelowego biblioteki klas przenośnych (PCL). Na przykład `portable-net45+win8+wpa81+wp8`.
 
-> .NET standard jest nowoczesny sposób obsługi bibliotek programu .NET dla wielu platform i zastępuje PCLs.
+> .NET Standard to nowoczesny sposób obsługi bibliotek platformy .NET dla wielu platform i zastępuje PCLs.
 
-**❌ NIE** obejmują elementy docelowe dla platform .NET, które nie są już obsługiwane. Na przykład `SL4`, `WP`.
+**❌** nie zawierają obiektów docelowych dla platform .NET, które nie są już obsługiwane. Na przykład `SL4`, `WP`.
 
 >[!div class="step-by-step"]
->[Poprzednie](get-started.md)
->[dalej](strong-naming.md)
+>[Poprzedni](get-started.md)
+>[Następny](strong-naming.md)

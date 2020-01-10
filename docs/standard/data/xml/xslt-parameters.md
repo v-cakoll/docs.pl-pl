@@ -6,46 +6,44 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e76e0f35dd95c34d3a6fc81c2f6f3504591387cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cc412042e69a43bbecec9dbe68618e2d307ca793
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026662"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709702"
 ---
 # <a name="xslt-parameters"></a>Parametry XSLT
-Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metody. Kwalifikowana nazwa i identyfikator URI przestrzeni nazw są skojarzone z obiektem parametrów w tym czasie.  
+Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> przy użyciu metody <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. Kwalifikowana nazwa i identyfikator URI przestrzeni nazw są skojarzone z obiektem parametru w tym czasie.  
   
 ### <a name="to-use-an-xslt-parameter"></a>Aby użyć parametru XSLT  
   
-1. Tworzenie <xref:System.Xml.Xsl.XsltArgumentList> obiektu i dodawanie przy użyciu parametru <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metody.  
+1. Utwórz obiekt <xref:System.Xml.Xsl.XsltArgumentList> i Dodaj parametr przy użyciu metody <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
   
-2. Wywołaj parametru z arkusza stylów.  
+2. Wywołaj parametr z arkusza stylów.  
   
-3. Przekaż <xref:System.Xml.Xsl.XsltArgumentList> obiekt <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
+3. Przekaż obiekt <xref:System.Xml.Xsl.XsltArgumentList> do metody <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="parameter-types"></a>Typy parametrów  
- Obiekt parametr powinien odpowiadać typowi W3C. W poniższej tabeli przedstawiono odpowiednie typy W3C równoważnymi klasami programu Microsoft .NET (typ) i czy typ W3C jest typu XPath lub XSLT.  
+ Obiekt parametru powinien odpowiadać typowi W3C. W poniższej tabeli przedstawiono odpowiednie typy W3C, równoważne klasy Microsoft .NET (typ) i określające, czy typ W3C jest typem XPath czy XSLT.  
   
-|Typ W3C|Odpowiednik klasy .NET (typ)|Typ XPath lub XSLT|  
+|Typ W3C|Równoważna Klasa platformy .NET (typ)|XPath lub typ XSLT|  
 |--------------|------------------------------------|------------------------|  
-|`String`|<xref:System.String?displayProperty=nameWithType>|XPath|  
-|`Boolean`|<xref:System.Boolean?displayProperty=nameWithType>|XPath|  
-|`Number`|<xref:System.Double?displayProperty=nameWithType>|XPath|  
+|`String`|<xref:System.String?displayProperty=nameWithType>|{1&gt;XPath&lt;1}|  
+|`Boolean`|<xref:System.Boolean?displayProperty=nameWithType>|{1&gt;XPath&lt;1}|  
+|`Number`|<xref:System.Double?displayProperty=nameWithType>|{1&gt;XPath&lt;1}|  
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XSLT|  
-|`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XPath|  
-|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator[]**|XPath|  
+|`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|{1&gt;XPath&lt;1}|  
+|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator[]**|{1&gt;XPath&lt;1}|  
   
- * Jest odpowiednikiem zestawu węzłów, który zawiera jeden węzeł.  
+ \* Jest to odpowiednik zestawu węzłów, który zawiera pojedynczy węzeł.  
   
- Jeśli obiekt parametr nie jest jedną z powyższych klas, jest konwertowany zgodnie z następującymi zasadami. Typowe typy liczbowe języka wspólnego (CLR) są konwertowane na <xref:System.Double>. <xref:System.DateTime> Typu jest konwertowany na <xref:System.String>. <xref:System.Xml.XPath.IXPathNavigable> typy są konwertowane na <xref:System.Xml.XPath.XPathNavigator>. **[] Klasy XPathNavigator** jest konwertowana na <xref:System.Xml.XPath.XPathNodeIterator>.  
+ Jeśli obiekt parametru nie jest jedną z powyższych klas, jest konwertowany zgodnie z poniższymi regułami. Typy liczbowe środowiska uruchomieniowego języka wspólnego (CLR) są konwertowane na <xref:System.Double>. Typ <xref:System.DateTime> jest konwertowany na <xref:System.String>. typy <xref:System.Xml.XPath.IXPathNavigable> są konwertowane na <xref:System.Xml.XPath.XPathNavigator>. Element **XPathNavigator []** został przekonwertowany na <xref:System.Xml.XPath.XPathNodeIterator>.  
   
- Wszystkie pozostałe typy zgłosić błąd.  
+ Wszystkie inne typy zgłaszają błąd.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metodę, aby utworzyć parametr do przechowywania obliczeniową z rabatami daty. Data rabatu jest obliczana za 20 dni od daty zamówienia.  
+ W poniższym przykładzie zastosowano metodę <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>, aby utworzyć parametr służący do przechowywania obliczonej daty rabatu. Data rabatu jest obliczana na 20 dni od daty zamówienia.  
   
  [!code-csharp[XSLT_Param#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Param/CS/xsltparam.cs#1)]
  [!code-vb[XSLT_Param#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Param/VB/xsltparam.vb#1)]  
@@ -55,7 +53,7 @@ Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> przy użyc
 ##### <a name="orderxml"></a>order.xml  
  [!code-xml[XSLT_Param#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/order.xml#2)]  
   
-##### <a name="discountxsl"></a>discount.xsl  
+##### <a name="discountxsl"></a>Discount. xsl  
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
 ### <a name="output"></a>Dane wyjściowe  

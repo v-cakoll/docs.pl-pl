@@ -1,6 +1,5 @@
 ---
 title: do- C# odwołanie
-ms.custom: seodec18
 ms.date: 05/28/2018
 f1_keywords:
 - do_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 5612cfb2462117ac431de9c702cd8137f495e5dc
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 38224ce70c19ff67ad80b99d3da52155849f1341
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74551813"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713599"
 ---
 # <a name="do-c-reference"></a>do (odwołanie w C#)
 
@@ -37,7 +36,7 @@ Aby uzyskać więcej informacji, zobacz sekcję do [instrukcji](~/_csharplang/sp
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [while, instrukcja](while.md)

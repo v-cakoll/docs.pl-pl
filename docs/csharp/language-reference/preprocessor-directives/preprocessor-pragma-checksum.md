@@ -1,18 +1,17 @@
 ---
 title: '#pragma — C# odwołanie'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma checksum'
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 4103b6262fc5085c1204f423a36c9c5c2053b497
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1bbb404e1183daa5e68e512e7439b6ae52abd605
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605648"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712484"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (odwołanie w C#)
 Generuje sumy kontrolne dla plików źródłowych, aby pomóc w debugowaniu stron ASP.NET.  
@@ -36,7 +35,7 @@ Generuje sumy kontrolne dla plików źródłowych, aby pomóc w debugowaniu stro
 ## <a name="remarks"></a>Uwagi  
  Debuger programu Visual Studio używa sumy kontrolnej do sprawdzania, czy użyte zostało prawidłowe źródło. Kompilator oblicza sumę kontrolną pliku źródłowego, a następnie przesyła dane wyjściowe do pliku bazy danych programu (PDB). Następnie debuger używa pliku PDB do porównania sumy kontrolnej obliczanej dla pliku źródłowego.  
   
- To rozwiązanie nie działa w przypadku projektów ASP.NET, ponieważ obliczona suma kontrolna jest dla wygenerowanego pliku źródłowego, a nie pliku. aspx. Aby rozwiązać ten problem, `#pragma checksum` program zapewnia obsługę sum kontrolnych dla stron ASP.NET.  
+ To rozwiązanie nie działa w przypadku projektów ASP.NET, ponieważ obliczona suma kontrolna jest dla wygenerowanego pliku źródłowego, a nie pliku. aspx. Aby rozwiązać ten problem, `#pragma checksum` zapewnia obsługę sum kontrolnych dla stron ASP.NET.  
   
  Podczas tworzenia projektu ASP.NET w wizualizacji C#wygenerowany plik źródłowy zawiera sumę kontrolną dla pliku. aspx, z którego jest generowane źródło. Następnie kompilator zapisuje te informacje w pliku PDB.  
   

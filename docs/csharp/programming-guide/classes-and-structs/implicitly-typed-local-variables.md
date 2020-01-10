@@ -1,17 +1,16 @@
 ---
 title: Niejawnie wpisane zmienne lokalne C# — Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: dab708bfbc33458bc2664c0d04757f0badcc2575
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 692a0f8ad933f3ba4bef50681cb3487fa0a7eea9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141599"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714834"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Niejawnie wpisane zmienne lokalneC# (Przewodnik programowania)
 
@@ -49,7 +48,7 @@ Aby uzyskać więcej informacji, zobacz [jak używać niejawnie wpisanych zmienn
 
 ## <a name="var-and-anonymous-types"></a>typy var i Anonymous
 
-W wielu przypadkach użycie `var` jest opcjonalne i jest tylko wygodą składni. Jeśli jednak zmienna jest inicjowana z typem anonimowym, należy zadeklarować zmienną jako `var`, jeśli chcesz uzyskać dostęp do właściwości obiektu w późniejszym momencie. Jest to typowy scenariusz w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeń zapytań. Aby uzyskać więcej informacji, zobacz [Typy anonimowe](anonymous-types.md).
+W wielu przypadkach użycie `var` jest opcjonalne i jest tylko wygodą składni. Jeśli jednak zmienna jest inicjowana z typem anonimowym, należy zadeklarować zmienną jako `var`, jeśli chcesz uzyskać dostęp do właściwości obiektu w późniejszym momencie. Jest to typowy scenariusz w wyrażeniach zapytań LINQ. Aby uzyskać więcej informacji, zobacz [Typy anonimowe](anonymous-types.md).
 
 Z perspektywy kodu źródłowego typ anonimowy nie ma nazwy. W związku z tym, jeśli zmienna zapytania została zainicjowana przy użyciu `var`, jedynym sposobem uzyskania dostępu do właściwości w zwracanej sekwencji obiektów jest użycie `var` jako typu zmiennej iteracji w instrukcji `foreach`.
 
@@ -69,7 +68,7 @@ Następujące ograniczenia dotyczą deklaracji zmiennej o typie określonym niej
 
 - Jeśli typ o nazwie `var` znajduje się w zakresie, wówczas słowo kluczowe `var` zostanie rozpoznane jako nazwa tego typu i nie będzie traktowane jako część niejawnie wpisanej deklaracji zmiennej lokalnej.
 
-Niejawne wpisywanie za pomocą słowa kluczowego `var` może być stosowane tylko do zmiennych w zakresie metody lokalnej. Niejawne wpisywanie nie jest dostępne dla pól C# klas, ponieważ kompilator napotyka logiczną Paradox w trakcie przetwarzania kodu: kompilator musi znać typ pola, ale nie może ustalić typu do momentu przeanalizowania wyrażenia przypisania i nie można oszacować wyrażenia bez znajomości typu. Rozważmy następujący kod:
+Niejawne wpisywanie za pomocą słowa kluczowego `var` może być stosowane tylko do zmiennych w zakresie metody lokalnej. Niejawne wpisywanie nie jest dostępne w przypadku C# pól klas, ponieważ kompilator napotyka logiczną Paradox w miarę przetwarzania kodu: kompilator musi znać typ pola, ale nie może ustalić typu do czasu przeanalizowania wyrażenia przypisania, a wyrażenia nie można ocenić bez znajomości typu. Spójrzmy na poniższy kod:
 
 ```csharp
 private var bookTitles;
@@ -93,7 +92,7 @@ Jednak użycie `var` ma co najmniej potencjał, aby kod był trudniejszy do zroz
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwoła](../../language-reference/index.md)
+- [Dokumentacja języka C#](../../language-reference/index.md)
 - [Niejawnie wpisane tablice](../arrays/implicitly-typed-arrays.md)
 - [Jak używać niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
 - [Typy anonimowe](anonymous-types.md)

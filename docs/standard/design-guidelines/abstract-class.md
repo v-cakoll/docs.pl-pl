@@ -10,32 +10,31 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
-author: KrzysztofCwalina
-ms.openlocfilehash: 6eec3bb4575b89c6476e6c3410050c705141777f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19482199648a8fb9c4b2c796fb1ab5d62c896abc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785557"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709598"
 ---
 # <a name="abstract-class-design"></a>Projekt klasy abstrakcyjnej
 **X DO NOT** zdefiniuj public lub protected wewnętrzny konstruktorów w typach abstrakcyjnych.  
   
- Konstruktory powinny być publiczne, tylko wtedy, gdy użytkownicy będą musieli tworzyć wystąpienia tego typu. Ponieważ nie można utworzyć wystąpienia typu abstrakcyjnego, typ ogólny z publicznym konstruktorem jest niepoprawnie zaprojektowany i może być mylące dla użytkowników.  
+ Konstruktory powinny być publiczne tylko wtedy, gdy użytkownicy będą musieli tworzyć wystąpienia typu. Ponieważ nie można tworzyć wystąpień typu abstrakcyjnego, typ abstrakcyjny z konstruktorem publicznym jest niepoprawnie zaprojektowany i mylący dla użytkowników.  
   
  **✓ DO** Definiowanie chronionych lub wewnętrzny konstruktora w klas abstrakcyjnych.  
   
- Konstruktor chroniony jest częściej używana i po prostu umożliwia klasy bazowej o postępowaniu swój własny inicjowania podtypów są tworzone.  
+ Chroniony Konstruktor jest bardziej powszechny, a po prostu pozwala klasie bazowej na wykonywanie własnej inicjalizacji podczas tworzenia podtypów.  
   
- Konstruktor wewnętrznej może służyć do ograniczenia konkretnych implementacji klasy abstrakcyjnej do zestawu, Definiowanie klasy.  
+ Wewnętrzny Konstruktor może służyć do ograniczania konkretnych implementacji klasy abstrakcyjnej do zestawu definiującego klasę.  
   
  **✓ DO** Podaj co najmniej jednego typu konkretnego, która dziedziczy po każdej klasy abstrakcyjnej, którą można wysłać.  
   
- Wykonując pozwala sprawdzić projekt klasy abstrakcyjnej. Na przykład <xref:System.IO.FileStream?displayProperty=nameWithType> jest implementacją <xref:System.IO.Stream?displayProperty=nameWithType> klasy abstrakcyjnej.  
+ Dzięki temu można sprawdzić poprawność projektu klasy abstrakcyjnej. Na przykład <xref:System.IO.FileStream?displayProperty=nameWithType> jest implementacją klasy abstrakcyjnej <xref:System.IO.Stream?displayProperty=nameWithType>.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

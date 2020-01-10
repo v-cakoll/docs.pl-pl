@@ -1,6 +1,5 @@
 ---
 title: <seealso> — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cref
@@ -13,14 +12,14 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: 430270c170f2829d9bf9b90d258c948176b9c086
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 600affdfd8cb524a7fba479d3a68ad8b3e40098c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523328"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694923"
 ---
-# <a name="seealso-c-programming-guide"></a>\<seealso > (C# Przewodnik programowania)
+# <a name="seealso-c-programming-guide"></a>\<seealso — > (C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -29,17 +28,17 @@ ms.locfileid: "72523328"
   
 ## <a name="parameters"></a>Parametry  
  cref = "`member`"  
- Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i przekazuje `member` do nazwy elementu w wyjściowym kodzie XML. `member` musi znajdować się w podwójnym cudzysłowie ("").  
+ Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i przekazuje `member` do nazwy elementu w wyjściowym kodzie XML.`member` musi znajdować się w podwójnym cudzysłowie ("").  
   
  Aby uzyskać informacje na temat sposobu tworzenia odwołania cref do typu ogólnego, zobacz [\<see >](./see.md).  
   
 ## <a name="remarks"></a>Uwagi  
- Tag \<seealso > pozwala określić tekst, który może być wyświetlany w sekcji Zobacz też. Użyj [> \<see](./see.md) , aby określić łącze z poziomu tekstu.  
+ Tag \<seealso — > umożliwia określenie tekstu, który ma być wyświetlany w sekcji Zobacz też. Użyj [\<zobacz >](./see.md) , aby określić łącze z tekstu.  
   
  Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- Zobacz [\<summary >](./summary.md) , aby zapoznać się z przykładem \<seealso >.  
+ Zobacz [\<podsumowanie >](./summary.md) , aby uzyskać przykład użycia \<seealso — >.  
   
 ## <a name="see-also"></a>Zobacz także
 

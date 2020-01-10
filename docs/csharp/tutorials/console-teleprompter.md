@@ -4,16 +4,16 @@ description: W tym samouczku przedstawiono szereg funkcji platformy .NET Core i 
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 2b9948ce22eb221d9d757fcec4c556d365469fdf
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 921c8fc7824bdb48f08e4d9f5a276bf2284f8a17
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039263"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714603"
 ---
-# <a name="console-application"></a>Aplikacja konsoli
+# <a name="console-app"></a>Aplikacja konsolowa
 
-W tym samouczku przedstawiono szereg funkcji platformy .NET Core i C# języka. Dowiesz się:
+W tym samouczku przedstawiono szereg funkcji platformy .NET Core i C# języka. W dokumencie omówiono następujące zagadnienia :
 
 - Podstawowe informacje o interfejsie wiersza polecenia platformy .NET Core (CLI)
 - Struktura aplikacji C# konsolowej
@@ -27,10 +27,11 @@ Ten samouczek zawiera wiele funkcji. Kompilujmy je po jednej.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Musisz skonfigurować maszynę do uruchamiania programu .NET Core. Instrukcje instalacji można znaleźć na stronie [pliki do pobrania w programie .NET Core](https://dotnet.microsoft.com/download) . Tę aplikację można uruchomić w systemie Windows, Linux, macOS lub w kontenerze platformy Docker.
-Musisz zainstalować swój ulubiony Edytor kodu.
+- Skonfiguruj maszynę do uruchamiania programu .NET Core. Instrukcje instalacji można znaleźć na stronie [pliki do pobrania w programie .NET Core](https://dotnet.microsoft.com/download) . Tę aplikację można uruchomić w systemie Windows, Linux, macOS lub w kontenerze platformy Docker.
 
-## <a name="create-the-application"></a>Tworzenie aplikacji
+- Zainstaluj swój ulubiony Edytor kodu.
+
+## <a name="create-the-app"></a>Tworzenie aplikacji
 
 Pierwszym krokiem jest utworzenie nowej aplikacji. Otwórz wiersz polecenia i Utwórz nowy katalog dla aplikacji. Upewnij się, że bieżący katalog. Wpisz `dotnet new console` polecenia w wierszu polecenia. Spowoduje to utworzenie plików początkowych dla podstawowej aplikacji "Hello world".
 
@@ -40,8 +41,7 @@ Przed rozpoczęciem wprowadzania zmian przejdź do kroku, aby uruchomić prostą
 
 Po przywróceniu pakietów Uruchom `dotnet build`. Spowoduje to uruchomienie aparatu kompilacji i utworzenie pliku wykonywalnego aplikacji. Na koniec należy wykonać `dotnet run`, aby uruchomić aplikację.
 
-Prosty kod aplikacji Hello world to wszystko w Program.cs. Otwórz ten plik za pomocą ulubionego edytora tekstu. Zamierzamy wprowadzić Twoje pierwsze zmiany.
-W górnej części pliku Zobacz instrukcję using:
+Prosty kod aplikacji Hello world to wszystko w Program.cs. Otwórz ten plik za pomocą ulubionego edytora tekstu. Zamierzamy wprowadzić Twoje pierwsze zmiany. W górnej części pliku Zobacz instrukcję using:
 
 ```csharp
 using System;
@@ -156,8 +156,7 @@ Uruchom próbkę i będzie można odczytywać na głos ze wstępnie skonfigurowa
 
 ## <a name="async-tasks"></a>Zadania asynchroniczne
 
-W tym ostatnim kroku dodasz kod, aby zapisać dane wyjściowe asynchronicznie w jednym zadaniu, a jednocześnie uruchomić inne zadanie odczytujące dane wejściowe od użytkownika, jeśli chcesz przyspieszyć lub spowolnić wyświetlanie tekstu lub zatrzymać wyświetlanie tekstu. Obejmuje to kilka kroków i zakończenie, które będą potrzebne do wszystkich niezbędnych aktualizacji.
-Pierwszym krokiem jest utworzenie asynchronicznej metody zwracającej <xref:System.Threading.Tasks.Task>, która reprezentuje kod, który został utworzony do odczytu i wyświetlenia pliku.
+W tym ostatnim kroku dodasz kod, aby zapisać dane wyjściowe asynchronicznie w jednym zadaniu, a jednocześnie uruchomić inne zadanie odczytujące dane wejściowe od użytkownika, jeśli chcesz przyspieszyć lub spowolnić wyświetlanie tekstu lub zatrzymać wyświetlanie tekstu. Obejmuje to kilka kroków i zakończenie, które będą potrzebne do wszystkich niezbędnych aktualizacji. Pierwszym krokiem jest utworzenie asynchronicznej metody zwracającej <xref:System.Threading.Tasks.Task>, która reprezentuje kod, który został utworzony do odczytu i wyświetlenia pliku.
 
 Dodaj tę metodę do klasy `Program` (jest ona pobierana z treści metody `Main`):
 
@@ -176,8 +175,7 @@ private static async Task ShowTeleprompter()
 }
 ```
 
-Zauważysz dwie zmiany. Najpierw w treści metody zamiast wywołania <xref:System.Threading.Tasks.Task.Wait> synchronicznie poczekaj na zakończenie zadania, ta wersja używa słowa kluczowego `await`. Aby to zrobić, należy dodać modyfikator `async` do sygnatury metody. Ta metoda zwraca `Task`. Zwróć uwagę, że nie istnieją żadne instrukcje Return zwracające obiekt `Task`. Zamiast tego ten obiekt `Task` jest tworzony przez kod wygenerowany przez kompilator podczas korzystania z operatora `await`. Można Wyobraź sobie, że ta metoda zwraca, gdy osiągnie `await`. Zwrócony `Task` wskazuje, że pracę nie została ukończona.
-Metoda zostaje wznowiona po zakończeniu oczekiwania na zadanie. Po wykonaniu tej operacji zwrócony `Task` wskazuje, że została ukończona.
+Zauważysz dwie zmiany. Najpierw w treści metody zamiast wywołania <xref:System.Threading.Tasks.Task.Wait> synchronicznie poczekaj na zakończenie zadania, ta wersja używa słowa kluczowego `await`. Aby to zrobić, należy dodać modyfikator `async` do sygnatury metody. Ta metoda zwraca `Task`. Zwróć uwagę, że nie istnieją żadne instrukcje Return zwracające obiekt `Task`. Zamiast tego ten obiekt `Task` jest tworzony przez kod wygenerowany przez kompilator podczas korzystania z operatora `await`. Można Wyobraź sobie, że ta metoda zwraca, gdy osiągnie `await`. Zwrócony `Task` wskazuje, że pracę nie została ukończona. Metoda zostaje wznowiona po zakończeniu oczekiwania na zadanie. Po wykonaniu tej operacji zwrócony `Task` wskazuje, że została ukończona.
 Kod wywołujący może monitorować, który zwrócił `Task`, aby określić, kiedy zakończył się.
 
 Tę nową metodę można wywołać w metodzie `Main`:
@@ -219,8 +217,7 @@ private static async Task GetInput()
 }
 ```
 
-Spowoduje to utworzenie wyrażenia lambda do reprezentowania delegata <xref:System.Action>, który odczytuje klucz z konsoli programu i modyfikuje zmienną lokalną reprezentującą opóźnienie, gdy użytkownik naciśnie klawisz "<" (mniejsze niż) lub ">" (większe niż). Metoda Delegate kończy się, gdy użytkownik naciśnie klawisze "X" lub "x", które umożliwiają użytkownikowi zatrzymanie wyświetlania tekstu w dowolnym momencie.
-Ta metoda używa <xref:System.Console.ReadKey> do blokowania i poczekania na naciśnięcie klawisza przez użytkownika.
+Spowoduje to utworzenie wyrażenia lambda do reprezentowania delegata <xref:System.Action>, który odczytuje klucz z konsoli programu i modyfikuje zmienną lokalną reprezentującą opóźnienie, gdy użytkownik naciśnie klawisz "<" (mniejsze niż) lub ">" (większe niż). Metoda Delegate kończy się, gdy użytkownik naciśnie klawisze "X" lub "x", które umożliwiają użytkownikowi zatrzymanie wyświetlania tekstu w dowolnym momencie. Ta metoda używa <xref:System.Console.ReadKey> do blokowania i poczekania na naciśnięcie klawisza przez użytkownika.
 
 Aby zakończyć tę funkcję, należy utworzyć nową metodę zwracającą `async Task`, która uruchamia oba te zadania (`GetInput` i `ShowTeleprompter`), a także zarządza danymi udostępnionymi między tymi dwoma zadaniami.
 
@@ -314,7 +311,6 @@ RunTeleprompter().Wait();
 
 ## <a name="conclusion"></a>Wniosek
 
-W tym samouczku przedstawiono szereg funkcji dotyczących C# języka i bibliotek .NET Core związanych z pracą w aplikacjach konsolowych.
-Możesz utworzyć tę wiedzę, aby dowiedzieć się więcej o języku i klasach wprowadzonych w tym miejscu. Przedstawiono podstawowe informacje na temat operacji we/wy plików i konsoli, blokowania i nieblokowania użycia programowania asynchronicznego opartego na zadaniach, samouczka dotyczącego C# języka i sposobu C# organizowania programów oraz interfejsu wiersza polecenia i narzędzi .NET Core.
+W tym samouczku przedstawiono szereg funkcji dotyczących C# języka i bibliotek .NET Core związanych z pracą w aplikacjach konsolowych. Możesz utworzyć tę wiedzę, aby dowiedzieć się więcej o języku i klasach wprowadzonych w tym miejscu. Przedstawiono podstawowe informacje na temat operacji we/wy plików i konsoli, blokowania i nieblokowania użycia programowania asynchronicznego opartego na zadaniach, samouczka dotyczącego C# języka i sposobu C# organizowania programów oraz interfejsu wiersza polecenia i narzędzi .NET Core.
 
 Aby uzyskać więcej informacji na temat operacji we/wy plików, zobacz temat [plik i strumień we/wy](../../standard/io/index.md) . Aby uzyskać więcej informacji o modelu programowania asynchronicznego używanym w tym samouczku, zapoznaj się z tematem [programowanie asynchroniczne oparte na zadaniach](../..//standard/parallel-programming/task-based-asynchronous-programming.md) i w temacie [programowanie asynchroniczne](../async.md) .

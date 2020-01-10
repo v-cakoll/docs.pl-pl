@@ -3,20 +3,20 @@ title: Cyfry w C# programie — wprowadzenie C# do samouczka
 description: Poznaj C# typy liczbowe, ich właściwości i metody.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: a06bc57e5c979b62e19407747cb2c8a2447ca114
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 7537bb597665461021946a792e342149f29c0e95
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739139"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694663"
 ---
-# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipuluj liczby całkowite i zmiennoprzecinkowe w C \#
+# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipuluj liczby całkowite i zmiennoprzecinkowe w C\#
 
-Ten samouczek zawiera informacje o typach liczbowych w C# sposób interaktywny. Zapiszesz małe ilości kodu, a następnie utworzysz i uruchomisz ten kod. Samouczek zawiera serię lekcji, które eksplorują liczby i operacje matematyczne C#w programie. Te lekcje uczyją się podstaw C# języka.
+Ten samouczek zawiera informacje o typach liczbowych w C# sposób interaktywny. Zapiszesz małe ilości kodu, a następnie utworzysz i uruchomisz ten kod. Samouczek zawiera serię lekcji, które eksplorują liczby i operacje matematyczne C#w programie. Te lekcje umożliwiają poznanie podstaw języka C#.
 
 Ten samouczek oczekuje, że masz maszynę, której możesz użyć do programowania. Samouczek platformy .NET [Hello World w ciągu 10 minut](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) zawiera instrukcje dotyczące konfigurowania lokalnego środowiska deweloperskiego w systemie Windows, Linux lub macOS. Krótkie omówienie poleceń, z których będziesz korzystać, znajduje się w zapoznanie [z narzędziami programistycznymi](local-environment.md) zawierającymi linki do dalszych szczegółów.
 
-## <a name="explore-integer-math"></a>Eksploruj liczbę całkowitą
+## <a name="explore-integer-math"></a>Poznawanie matematyki całkowitoliczbowej
 
 Utwórz katalog o nazwie *Numbers — szybki start*. Upewnij się, że bieżący katalog i uruchom następujące polecenie:
 
@@ -35,13 +35,13 @@ Console.WriteLine(c);
 
 Uruchom ten kod, wpisując `dotnet run` w oknie poleceń.
 
-Właśnie zaobserwowano jedną z podstawowych operacji matematycznych z liczbami całkowitymi. Typ `int` reprezentuje liczbę **całkowitą**, zero, dodatnią lub ujemną. Użyj symbolu `+` do dodania. Inne typowe operacje matematyczne na liczbach całkowitych obejmują:
+Właśnie została przedstawiona jedna z podstawowych operacji matematycznych na liczbach całkowitych. Typ `int` reprezentuje liczbę **całkowitą**, zero, dodatnią lub ujemną. Symbol `+` umożliwia dodawanie. Inne typowe operacje matematyczne na liczbach całkowitych obejmują:
 
-- `-` w przypadku odejmowania
-- `*` dla mnożenia
-- `/` dla dzielenia
+- odejmowanie — `-`
+- mnożenie — `*`
+- dzielenie — `/`
 
-Zacznij od eksplorowania tych różnych operacji. Dodaj te wiersze po wierszu, który zapisuje wartość `c`:
+Rozpocznij od wypróbowania różnych operacji. Dodaj te wiersze po wierszu, który zapisuje wartość `c`:
 
 ```csharp
 
@@ -60,11 +60,11 @@ Console.WriteLine(c);
 
 Uruchom ten kod, wpisując `dotnet run` w oknie poleceń.
 
-Możesz również eksperymentować, wykonując wiele operacji matematycznych w tym samym wierszu, jeśli chcesz. Spróbuj `c = a + b - 12 * 17;` na przykład. Mieszanie zmiennych i liczb stałych jest dozwolone.
+Jeśli chcesz, możesz także eksperymentować, wykonując wiele operacji matematycznych w jednym wierszu. Spróbuj `c = a + b - 12 * 17;` na przykład. Mieszanie zmiennych i liczb stałych jest dozwolone.
 
 > [!TIP]
-> Podczas eksplorowania C# (lub dowolnego języka programowania) nastąpi pomyłki podczas pisania kodu. **Kompilator** odnajdzie te błędy i zgłosi je do użytkownika. Gdy dane wyjściowe zawierają komunikaty o błędach, dokładnie zapoznaj się z przykładowym kodem i kodem w oknie, aby zobaczyć, co należy naprawić.
-> To ćwiczenie pomoże Ci poznać strukturę C# kodu.
+> Podczas nauki języka C# (lub dowolnego języka programowania) będziesz robić błędy przy pisaniu kodu. **Kompilator** znajdzie te błędy i zgłosi je. Gdy dane wyjściowe zawierają komunikaty o błędach, dokładnie zapoznaj się z przykładowym kodem i kodem w oknie, aby zobaczyć, co należy naprawić.
+> To ćwiczenie pomoże Ci poznać strukturę kodu w języku C#.
 
 Wykonano pierwszy krok. Przed rozpoczęciem następnej sekcji przechodźmy bieżący kod w oddzielną metodę. Ułatwia to rozpoczęcie pracy z nowym przykładem. Zmień nazwę metody `Main`, aby `WorkingWithIntegers` i napisać nową metodę `Main`, która wywoła `WorkingWithIntegers`. Po zakończeniu kod powinien wyglądać następująco:
 
@@ -105,7 +105,7 @@ namespace NumbersInCSharp
 }
 ```
 
-## <a name="explore-order-of-operations"></a>Eksploruj kolejność operacji
+## <a name="explore-order-of-operations"></a>Poznawanie kolejności operacji
 
 Dodaj komentarz do wywołania `WorkingWithIntegers()`. Dane wyjściowe będą mniej czytelne podczas pracy w tej sekcji:
 
@@ -115,8 +115,8 @@ Dodaj komentarz do wywołania `WorkingWithIntegers()`. Dane wyjściowe będą mn
 
 `//` uruchamia **komentarz** w C#. Komentarze są dowolnym tekstem, który chcesz zachować w kodzie źródłowym, ale nie można go wykonać jako kod. Kompilator nie generuje żadnego kodu wykonywalnego z komentarzy.
 
-C# Język definiuje kolejność różnych operacji matematycznych z regułami spójnymi z regułami, które zostały uzyskane w postaci matematyki.
-Mnożenie i dzielenie mają pierwszeństwo przed dodaniem i odejmowaniem.
+Język C# definiuje kolejność wykonywania różnych operacji matematycznych zgodnie z regułami spójnymi z regułami przedstawianymi na lekcjach matematyki.
+Mnożenie i dzielenie ma priorytet przed dodawaniem i odejmowaniem.
 Zbadaj, że dodając następujący kod do metody `Main` i wykonując `dotnet run`:
 
 ```csharp
@@ -127,7 +127,7 @@ int d = a + b * c;
 Console.WriteLine(d);
  ```
 
-Dane wyjściowe pokazują, że mnożenie jest wykonywane przed dodaniem.
+Dane wyjściowe świadczą, że mnożenie jest wykonywane przed dodawaniem.
 
 Można wymusić inną kolejność operacji, dodając nawiasy wokół operacji lub operacji, które chcesz wykonać jako pierwsze. Dodaj następujące wiersze i uruchom ponownie:
 
@@ -136,14 +136,14 @@ d = (a + b) * c;
 Console.WriteLine(d);
 ```
 
-Dowiedz się więcej, łącząc wiele różnych operacji. Dodaj coś przypominającego następujące wiersze w dolnej części metody `Main`. Spróbuj ponownie `dotnet run`.
+Dowiedz się więcej, łącząc wiele różnych operacji. Dodaj coś przypominającego następujące wiersze w dolnej części metody `Main`. Spróbuj ponownie użyć narzędzia `dotnet run`.
 
 ```csharp
 d = (a + b) - 6 * c + (12 * 4) / 3 + 12;
 Console.WriteLine(d);
 ```
 
-Być może zauważono interesujące zachowanie dla liczb całkowitych. Dzielenie liczb całkowitych zawsze generuje wynik w postaci liczby całkowitej, nawet gdy oczekuje się, że wynik będzie zawierać część dziesiętną lub ułamkową.
+Być może zwróciło Twoją uwagę interesujące zachowanie liczb całkowitych. Dzielenie całkowitoliczbowe zawsze daje w wyniku liczbę całkowitą, nawet jeśli oczekiwało się części dziesiętnej lub ułamkowej.
 
 Jeśli takie zachowanie nie zostało obserwowane, wypróbuj następujący kod na końcu metody `Main`:
 
@@ -221,9 +221,9 @@ namespace NumbersInCSharp
 }
 ```
 
-## <a name="explore-integer-precision-and-limits"></a>Eksploruj precyzję całkowitą i limity
+## <a name="explore-integer-precision-and-limits"></a>Poznawanie precyzji i limitów liczb całkowitych
 
-Ten ostatni przykład wskazuje, że dzielenie liczby całkowitej obcina wynik.
+Ostatni przykład pokazuje, że dzielenie całkowitoliczbowe obcina wynik.
 **Resztę** można uzyskać za pomocą operatora **modulo** , znaku `%`. Wypróbuj następujący kod w metodzie `Main`:
 
 ```csharp
@@ -236,7 +236,7 @@ Console.WriteLine($"quotient: {d}");
 Console.WriteLine($"remainder: {e}");
 ```
 
-Typ C# Integer różni się od matematycznych liczb całkowitych w jeden inny sposób: typ `int` ma limity minimalne i maksymalne. Dodaj ten kod do metody `Main`, aby zobaczyć te limity:
+Typ całkowitoliczbowy języka C# różni się od matematycznych liczb całkowitych jeszcze tym, że typ `int` ma limit maksimum i minimum. Dodaj ten kod do metody `Main`, aby zobaczyć te limity:
 
 ```csharp
 int max = int.MaxValue;
@@ -244,25 +244,25 @@ int min = int.MinValue;
 Console.WriteLine($"The range of integers is {min} to {max}");
 ```
 
-Jeśli obliczenie generuje wartość, która przekracza te limity, istnieje warunek **niedopełnienia** **lub** przeciążenia. Odpowiedź wydaje się być zawijana z jednego limitu do drugiego. Dodaj te dwa wiersze do metody `Main`, aby zobaczyć przykład:
+Jeśli obliczenia generują wartość, która przekracza te limity, występuje warunek **niedopełnienia** lub **przepełnienia**. Odpowiedź wydaje się zawijać między limitami. Dodaj te dwa wiersze do metody `Main`, aby zobaczyć przykład:
 
 ```csharp
 int what = max + 3;
 Console.WriteLine($"An example of overflow: {what}");
 ```
 
-Zwróć uwagę, że odpowiedź jest bardzo bliska minimalnej (ujemnej) liczbie całkowitej. Jest taka sama jak `min + 2`.
-Operacja dodawania **spowodowała przepełnienie** dozwolonych wartości liczb całkowitych.
-Odpowiedź to bardzo duża liczba ujemna, ponieważ przepełnienie "zawija" z największej możliwej wartości całkowitej do najmniejszej.
+Zwróć uwagę, że odpowiedź jest bardzo zbliżona do minimalnej (ujemnej) liczby całkowitej. Jej wartość jest równa `min + 2`.
+Operacja dodawania spowodowała **przepełnienie** wartości dozwolonych dla liczb całkowitych.
+Odpowiedź to bardzo duża liczba ujemna, ponieważ przepełnienie powoduje „zawinięcie” z największej możliwej liczby całkowitej do najmniejszej.
 
-Istnieją inne typy liczbowe z różnymi limitami i dokładnością, których można użyć, gdy typ `int` nie spełnia Twoich potrzeb. Eksplorujmy te informacje dalej.
+Istnieją inne typy liczbowe z innymi limitami i precyzją, których możesz użyć, jeśli typ `int` nie spełnia wymagań. Zapoznajmy się z nimi w następnej kolejności.
 
-Teraz Przenieśmy kod napisany w tej sekcji do oddzielnej metody. Nadaj mu nazwę `TestLimits`.
+Teraz Przenieśmy kod napisany w tej sekcji do oddzielnej metody. Nadaj jej nazwę `TestLimits`.
 
-## <a name="work-with-the-double-type"></a>Pracuj z typem Double
+## <a name="work-with-the-double-type"></a>Praca z typem double
 
-Typ liczbowy `double` reprezentuje liczbę zmiennoprzecinkową o podwójnej precyzji. Te warunki mogą być nowe dla Ciebie. Liczba **zmiennoprzecinkowa** jest przydatna do reprezentowania numerów niecałkowitych, które mogą być bardzo duże lub małe. **Podwójne precyzja** oznacza, że te liczby są przechowywane z większą dokładnością niż **Pojedyncza precyzja**. Na nowoczesnych komputerach, bardziej powszechne jest użycie podwójnej precyzji niż pojedyncze numery precyzji.
-Eksplorujmy. Dodaj następujący kod i zobacz wynik:
+Typ liczbowy `double` reprezentuje liczbę zmiennoprzecinkową o podwójnej precyzji. Te pojęcia mogą być dla Ciebie nowe. Liczby **zmiennoprzecinkowe** są przydatne do reprezentowania bardzo małych lub bardzo dużych liczb innych niż liczby całkowite. **Podwójna precyzja** oznacza, że liczby są przechowywane z większą dokładnością niż liczby **pojedynczej precyzji**. W przypadku współczesnych komputerów częściej są używane liczby podwójnej precyzji niż pojedynczej precyzji.
+Przyjrzyjmy się im. Dodaj następujący kod i zobacz wynik:
 
 ```csharp
 double a = 5;
@@ -272,7 +272,7 @@ double d = (a + b) / c;
 Console.WriteLine(d);
 ```
 
-Należy zauważyć, że odpowiedź zawiera część dziesiętną ilorazu. Wypróbuj nieco bardziej skomplikowane wyrażenie z podwajaniem:
+Zwróć uwagę, że odpowiedź obejmuje część dziesiętną ilorazu. Spróbuj nieco bardziej skomplikowanego wyrażenia z liczbami podwójnej precyzji:
 
 ```csharp
 double e = 19;
@@ -282,7 +282,7 @@ double h = (e + f) / g;
 Console.WriteLine(h);
 ```
 
-Zakres wartości podwójnej jest znacznie większy niż wartości całkowite. Wypróbuj Poniższy kod poniżej tego, co zostało wcześniej zrobione:
+Zakres wartości liczb podwójnej precyzji jest dużo większy niż liczb całkowitych. Wypróbuj Poniższy kod poniżej tego, co zostało wcześniej zrobione:
 
 ```csharp
 double max = double.MaxValue;
@@ -290,26 +290,26 @@ double min = double.MinValue;
 Console.WriteLine($"The range of double is {min} to {max}");
 ```
 
-Te wartości są drukowane w notacji wykładniczej. Liczba po lewej stronie `E` to mantysę. Liczba po prawej stronie jest wykładnikiem potęgi od 10.
+Wartości zostaną wyświetlone za pomocą notacji naukowej. Liczba po lewej stronie znaku `E` to mantysa. Liczba po jego prawej stronie to wykładnik jako potęga 10.
 
-Podobnie jak w przypadku liczb dziesiętnych w zapisie matematycznym, podwaja w C# może mieć błędy zaokrągleń. Wypróbuj następujący kod:
+Podobnie jak w przypadku liczb dziesiętnych w matematyce, przy używaniu liczb podwójnej precyzji w języku C# mogą wystąpić błędy zaokrąglania. Wypróbuj ten kod:
 
 ```csharp
 double third = 1.0 / 3.0;
 Console.WriteLine(third);
 ```
 
-Wiadomo, że powtarzające się `0.3` nie są dokładnie takie same, jak `1/3`.
+Wiesz, że ułamek okresowy `0.3` to nie dokładnie to samo co `1/3`.
 
-***Sprawdz***
+***Wyzwanie***
 
-Wypróbuj inne obliczenia z dużymi liczbami, małymi liczbami, mnożeniem i dzieleniem przy użyciu typu `double`. Wypróbuj bardziej skomplikowane obliczenia.
+Spróbuj innych obliczeń z dużymi liczbami, małymi liczbami, mnożeniem i dzieleniem za pomocą typu `double`. Spróbuj bardziej skomplikowanych obliczeń.
 
 Po pewnym czasie z wezwaniem Zrób wpisany kod i umieść go w nowej metodzie. Nadaj nazwę nowej metodzie `WorkWithDoubles`.
 
-## <a name="work-with-fixed-point-types"></a>Pracuj z stałymi typami punktów
+## <a name="work-with-fixed-point-types"></a>Praca ze stałoprzecinkowymi typami danych
 
-Wykorzystano podstawowe typy liczbowe w C#: liczby całkowite i podwaja.  Istnieje jeden inny typ do poznania: typ `decimal`. Typ `decimal` ma mniejszy zakres, ale większą precyzję niż `double`. Termin " **stała** " oznacza, że punkt dziesiętny (lub punkt binarny) nie jest przenoszony. Przyjrzyjmy się:
+Przedstawiono podstawowe typy danych liczbowych w języku C#: typ całkowitoliczbowy i typ podwójnej precyzji.  Istnieje jeszcze jeden typ, który należy poznać: typ `decimal`. Typ `decimal` ma mniejszy zakres, lecz większą precyzję niż typ `double`. Określenie **stałoprzecinkowy** oznacza, że przecinek dziesiętny (lub binarny) nie zmienia pozycji. Przyjrzyjmy się:
 
 ```csharp
 decimal min = decimal.MinValue;
@@ -317,7 +317,7 @@ decimal max = decimal.MaxValue;
 Console.WriteLine($"The range of the decimal type is {min} to {max}");
 ```
 
-Należy zauważyć, że zakres jest mniejszy niż typ `double`. Większą precyzję typu dziesiętnego można zobaczyć, próbując wykonać następujący kod:
+Zwróć uwagę, że zakres jest mniejszy niż w przypadku typu `double`. Większą precyzję typu dziesiętnego możesz zobaczyć, uruchamiając następujący kod:
 
 ```csharp
 double a = 1.0;
@@ -329,22 +329,22 @@ decimal d = 3.0M;
 Console.WriteLine(c / d);
 ```
 
-Sufiks `M` na liczbie wskazuje, że w przypadku stałej należy użyć typu `decimal`.
+Sufiks `M` liczb wskazuje, że stałe powinny używać typu `decimal`.
 
-Zauważ, że zapis matematyczny przy użyciu typu dziesiętnego ma więcej cyfr po prawej stronie przecinka dziesiętnego.
+Zwróć uwagę na to, że operacje matematyczne wykonywane na liczbach typu dziesiętnego mają więcej cyfr po prawej stronie przecinka dziesiętnego.
 
-***Sprawdz***
+***Wyzwanie***
 
-Teraz, gdy widzisz różne typy liczbowe, napisz kod, który oblicza obszar okręgu, którego promień to 2,50 cm. Należy pamiętać, że obszar okręgu to promień kwadratowy pomnożony przez PI. Jedna Wskazówka: .NET zawiera stałą dla liczby PI, <xref:System.Math.PI?displayProperty=nameWithType>, której można użyć dla tej wartości.
+Teraz, gdy różne typy liczbowe zostały już przedstawione, napisz kod obliczający pole koła o promieniu 2,5 cm. Pole koła to promień pomnożony przez liczbę pi do kwadratu. Wskazówka: platforma .NET zawiera stałą dla liczby pi — <xref:System.Math.PI?displayProperty=nameWithType> — której możesz użyć.
 
-Należy uzyskać odpowiedź między 19 a 20.
-Odpowiedź możesz sprawdzić, [przeglądając przykładowy kod w usłudze GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)
+Odpowiedź powinna należeć do zakresu 19-20.
+Odpowiedź możesz sprawdzić, [przeglądając przykładowy kod zakończono w witrynie GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106).
 
-Wypróbuj inne formuły, jeśli chcesz.
+Wypróbuj także inne wzory, jeśli chcesz.
 
 Ukończono Przewodnik Szybki Start dotyczący liczb C#. Możesz kontynuować pracę z [gałęziami i pętle](branches-and-loops-local.md) szybkiego startu w swoim środowisku programistycznym.
 
-Więcej informacji na temat numerów C# można znaleźć w następujących tematach:
+Następujące tematy zawierają więcej informacji na temat liczb w języku C#:
 
 - [Całkowite typy liczbowe](../../language-reference/builtin-types/integral-numeric-types.md)
 - [Zmiennoprzecinkowe typy liczbowe](../../language-reference/builtin-types/floating-point-numeric-types.md)

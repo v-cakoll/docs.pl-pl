@@ -1,21 +1,20 @@
 ---
 title: '#błąd — C# odwołanie'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#error'
 helpviewer_keywords:
 - '#error directive [C#]'
 ms.assetid: f2a7f3af-4cf9-4111-b369-70204d24b26b
-ms.openlocfilehash: f18dbd007e80397b815256231a1d56e5ca50010e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7203e1271da66e78bfbd70717b0f5e536a7ebd86
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608556"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712523"
 ---
 # <a name="error-c-reference"></a>#error (odwołanie w C#)
-`#error`umożliwia wygenerowanie [CS1029](../compiler-messages/cs1029.md) błędu zdefiniowanego przez użytkownika z określonej lokalizacji w kodzie. Przykład:  
+`#error` umożliwia wygenerowanie błędu zdefiniowanego przez użytkownika [CS1029](../compiler-messages/cs1029.md) z określonej lokalizacji w kodzie. Na przykład:  
   
 ```csharp
 #error Deprecated code in this method.  

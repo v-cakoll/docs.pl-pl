@@ -1,6 +1,5 @@
 ---
 title: Rzutowanie i konwersje typów C# — Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - type conversion [C#]
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 33195ef77e2f51e52cd9ed69a11b12bed8d9ead1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 252d509617ab5dbc53b282bac52e356396d82fab
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969615"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711899"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Rzutowanie i konwersje typówC# (Przewodnik programowania)
 
@@ -34,7 +33,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Konwersje zdefiniowane przez użytkownika**: konwersje zdefiniowane przez użytkownika są wykonywane przez specjalne metody, które można zdefiniować, aby włączyć jawne i niejawne konwersje między typami niestandardowymi, które nie mają relacji klasy podstawowej — pochodnej. Aby uzyskać więcej informacji, zobacz [Operatory konwersji zdefiniowane przez użytkownika](../../language-reference/operators/user-defined-conversion-operators.md).  
   
-- **Konwersje z klasami pomocniczymi**: aby konwertować między niezgodnymi typami, takimi jak liczby całkowite i obiekty <xref:System.DateTime?displayProperty=nameWithType>, lub ciągi szesnastkowe i tablice bajtowe, można użyć klasy <xref:System.BitConverter?displayProperty=nameWithType>, klasy <xref:System.Convert?displayProperty=nameWithType> oraz metod `Parse` wbudowanych typów liczbowych, takich jak <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [jak: konwertowanie tablicy bajtów na int](./how-to-convert-a-byte-array-to-an-int.md), [jak: konwertowanie ciągu na liczbę](./how-to-convert-a-string-to-a-number.md)i [instrukcje: konwertowanie między ciągami szesnastkowymi i typami liczbowymi](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
+- **Konwersje z klasami pomocniczymi**: aby konwertować między niezgodnymi typami, takimi jak liczby całkowite i obiekty <xref:System.DateTime?displayProperty=nameWithType>, lub ciągi szesnastkowe i tablice bajtowe, można użyć klasy <xref:System.BitConverter?displayProperty=nameWithType>, klasy <xref:System.Convert?displayProperty=nameWithType> oraz metod `Parse` wbudowanych typów liczbowych, takich jak <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [jak skonwertować tablicę bajtów na int](./how-to-convert-a-byte-array-to-an-int.md), [jak przekonwertować ciąg na liczbę](./how-to-convert-a-string-to-a-number.md)i [Jak konwertować między ciągi szesnastkowe i typy liczbowe](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).
   
 ## <a name="implicit-conversions"></a>Konwersje niejawne
 
@@ -96,4 +95,4 @@ Aby uzyskać więcej informacji, zobacz sekcję [konwersje](~/_csharplang/spec/c
 - [() — operator rzutowania](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
 - [Zdefiniowane przez użytkownika operatory konwersji](../../language-reference/operators/user-defined-conversion-operators.md)
 - [Konwersja uogólnionych typów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
-- [Instrukcje: konwertowanie ciągu na liczbę](./how-to-convert-a-string-to-a-number.md)
+- [Jak przekonwertować ciąg na liczbę](./how-to-convert-a-string-to-a-number.md)

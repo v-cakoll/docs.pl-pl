@@ -1,17 +1,16 @@
 ---
 title: Przestrzenie C# nazw — Przewodnik programowania
-ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: cf5a7f239cf7d3cd3a6e39f31d16adb830646afc
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: e3e9dc22186e5e319c63e34bd85e5e317effde88
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039492"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712016"
 ---
 # <a name="namespaces-c-programming-guide"></a>Przestrzenie nazw (Przewodnik programowania w języku C#)
 
@@ -19,7 +18,7 @@ Przestrzenie nazw są intensywnie używane w C# programowaniu na dwa sposoby. Na
   
  [!code-csharp[csProgGuide#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#22)]  
   
-`System`jest przestrzenią nazw `Console` i jest klasą w tej przestrzeni nazw. Można `using` użyć słowa kluczowego, tak aby pełna nazwa nie była wymagana, jak w poniższym przykładzie:  
+`System` jest przestrzenią nazw, a `Console` jest klasą w tej przestrzeni nazw. Za pomocą słowa kluczowego `using` można użyć, aby pełna nazwa nie była wymagana, jak w poniższym przykładzie:  
   
  [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]  
   
@@ -38,9 +37,9 @@ Nazwa przestrzeni nazw musi być prawidłową C# [nazwą identyfikatora](../insi
 Przestrzenie nazw mają następujące właściwości:  
   
 - Organizują one duże projekty kodu.  
-- Są one rozdzielane za pomocą `.` operatora.  
-- `using` Dyrektywa eliminuje konieczność określenia nazwy przestrzeni nazw dla każdej klasy.  
-- Przestrzeń nazw jest przestrzenią nazw "root" `global::System` : zawsze odwołuje się do przestrzeni nazw platformy .NET <xref:System>. `global`  
+- Są one rozdzielane za pomocą operatora `.`.  
+- Dyrektywa `using` eliminuje konieczność określenia nazwy przestrzeni nazw dla każdej klasy.  
+- Przestrzeń nazw `global` jest przestrzenią nazw "root": `global::System` zawsze będzie odwoływać się do przestrzeni nazw .NET <xref:System>.  
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
@@ -50,7 +49,7 @@ Aby uzyskać więcej informacji, zobacz sekcję [przestrzenie nazw](~/_csharplan
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Używanie przestrzeni nazw](using-namespaces.md)
-- [Instrukcje: Korzystanie z przestrzeni nazw my](how-to-use-the-my-namespace.md)
+- [Jak używać przestrzeni nazw](how-to-use-the-my-namespace.md)
 - [Nazwy identyfikatorów](../inside-a-program/identifier-names.md)
 - [using, dyrektywa](../../language-reference/keywords/using-directive.md)
-- [:: operator](../../language-reference/operators/namespace-alias-qualifier.md)
+- [::, operator](../../language-reference/operators/namespace-alias-qualifier.md)

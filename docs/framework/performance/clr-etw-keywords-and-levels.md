@@ -7,14 +7,12 @@ helpviewer_keywords:
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 56ecdc41c5b5a3f7ee272768d5c2a3745da26633
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 929ed00c44b52dd94fc9d15e564cce7eeff1619e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975516"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716189"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Słowa kluczowe i poziomy ETW CLR
 Zdarzenia śledzenia zdarzeń systemu Windows (ETW) mogą być filtrowane według kategorii i poziomu. Zdarzenia dotyczące [słów kluczowych funkcji ETW środowiska CLR](#clr-etw-keywords) umożliwiają filtrowanie zdarzeń według kategorii; są one używane w kombinacjach dla dostawców środowiska uruchomieniowego i uwalniania. [Poziomy zdarzeń](#etw-event-levels) są identyfikowane przez flagi.  

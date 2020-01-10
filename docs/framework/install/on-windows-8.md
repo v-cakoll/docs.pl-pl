@@ -2,15 +2,13 @@
 title: Instalowanie .NET Framework w systemie Windows 8
 ms.custom: updateeachrelease
 description: Dowiedz się, jak zainstalować .NET Framework w systemie Windows 8
-author: rlander
-ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: d0ee776fce94988478c8432e265c834ff2082ef0
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0d9afb30088256b6c5c1fd8c0b2c99e3a9760b89
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853890"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716730"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Instalowanie programu .NET Framework w systemach Windows 8 i Windows Server 2012
 
@@ -23,7 +21,7 @@ Te instrukcje ułatwią zainstalowanie potrzebnych wersji .NET Framework. [.NET 
 ## <a name="net-framework-48"></a>.NET Framework 4,8
 
 > [!div class="button"]
-> [Pobierz .NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [Pobierz program .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 .NET Framework 4,8 jest obsługiwane w systemie Windows Server 2012. Nie jest on obsługiwany w systemie Windows 8.
 
@@ -35,13 +33,13 @@ Te instrukcje ułatwią zainstalowanie potrzebnych wersji .NET Framework. [.NET 
 
 .NET Framework 4,6 obsługuje aplikacje skompilowane dla .NET Framework 4,0 do 4,6.
 
-## <a name="net-framework-35"></a>Program .NET Framework 3,5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 Postępuj zgodnie z instrukcjami, aby zainstalować [.NET Framework 3,5 w systemie Windows 8 i 10](dotnet-35-windows-10.md).
 
 .NET Framework 3,5 obsługuje aplikacje skompilowane dla .NET Framework 1,0 do 3,5.
 
-## <a name="help"></a>Help
+## <a name="help"></a>Pomoc
 
 Możesz [skontaktować się z firmą Microsoft, aby uzyskać pomoc](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help) , jeśli nie można uzyskać prawidłowej wersji zainstalowanej .NET Framework.
 

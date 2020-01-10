@@ -2,12 +2,12 @@
 title: C#Obsługa wersji języka — C# Przewodnik
 description: Dowiedz się, C# w jaki sposób wersja językowa jest określana na podstawie projektu, i różne wartości, które można dostosować ręcznie do programu.
 ms.date: 07/10/2019
-ms.openlocfilehash: aa4f16d91b38fec7f5d4cd0b2632e62552b64eb7
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 90624816a68de694cacd0017c6d3162f6a89431c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698809"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713876"
 ---
 # <a name="c-language-versioning"></a>C#przechowywanie wersji języka
 
@@ -19,11 +19,11 @@ Reguły w tym artykule mają zastosowanie do kompilatora dostarczonego z program
 
 Kompilator określa wartość domyślną na podstawie następujących reguł:
 
-|Platforma docelowa|version|C#domyślna wersja języka|
+|Platforma docelowa|Wersja programu|C#domyślna wersja języka|
 |----------------|-------|---------------------------|
 |.NET Core|wersji|C# 8.0|
 |.NET Core|2.x|C# 7.3|
-|.NET Standard|2,1|C# 8.0|
+|.NET Standard|2.1|C# 8.0|
 |.NET Standard|2.0|C# 7.3|
 |.NET Standard|1.x|C# 7.3|
 |.NET Framework|wszystkie|C# 7.3|
@@ -38,7 +38,7 @@ Jeśli musisz określić C# wersję jawnie, możesz to zrobić na kilka sposobó
 
 - Edytuj ręcznie [plik projektu](#edit-the-project-file).
 - Ustaw wersję językową [dla wielu projektów w podkatalogu](#configure-multiple-projects).
-- Konfigurowanie [opcji kompilatora `-langversion`](compiler-options/langversion-compiler-option.md)
+- Skonfiguruj [opcję kompilatora`-langversion`](compiler-options/langversion-compiler-option.md).
 
 ### <a name="edit-the-project-file"></a>Edytuj plik projektu
 
@@ -50,11 +50,11 @@ Możesz ustawić wersję językową w pliku projektu. Jeśli na przykład jawnie
 </PropertyGroup>
 ```
 
-Wartość `preview` używa najnowszej dostępnej wersji C# językowej, która obsługuje kompilator.
+Wartość `preview` używa najnowszej dostępnej wersji języka zapoznawczej C# obsługiwanej przez kompilator.
 
 ### <a name="configure-multiple-projects"></a>Konfigurowanie wielu projektów
 
-Można utworzyć plik **Directory. Build. props** , który zawiera element `<LangVersion>`, aby skonfigurować wiele katalogów. Zwykle jest to wykonywane w katalogu rozwiązania. Dodaj następujący element do pliku **Directory. Build. props** w katalogu rozwiązania:
+Można utworzyć plik **Directory. Build. props** zawierający element `<LangVersion>`, aby skonfigurować wiele katalogów. Zwykle jest to wykonywane w katalogu rozwiązania. Dodaj następujący element do pliku **Directory. Build. props** w katalogu rozwiązania:
 
 ```xml
 <Project>
@@ -72,13 +72,13 @@ W poniższej tabeli przedstawiono wszystkie bieżące C# wersje językowe. Kompi
 
 |Wartość|Znaczenie|
 |------------|-------------|
-|Przeglądania|Kompilator akceptuje całą poprawną składnię języka od najnowszej wersji zapoznawczej.|
-|Ostatnia|Kompilator akceptuje składnię z najnowszej wydanej wersji kompilatora (w tym wersji pomocniczej).|
+|wersja zapoznawcza|Kompilator akceptuje całą poprawną składnię języka od najnowszej wersji zapoznawczej.|
+|latest|Kompilator akceptuje składnię z najnowszej wydanej wersji kompilatora (w tym wersji pomocniczej).|
 |latestMajor|Kompilator akceptuje składnię z najnowszej wydanej wersji głównej kompilatora.|
 |8.0|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 8,0 lub niższej.|
-|7,3|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 7,3 lub niższej.|
-|7,2|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 7,2 lub niższej.|
-|7,1|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 7,1 lub niższej.|
+|7.3|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 7,3 lub niższej.|
+|7.2|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 7,2 lub niższej.|
+|7.1|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 7,1 lub niższej.|
 |7|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 7,0 lub niższej.|
 |6|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 6,0 lub niższej.|
 |5|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 5,0 lub niższej.|

@@ -1,21 +1,19 @@
 ---
 title: Kierowanie typów — .NET
 description: Dowiedz się, w jaki sposób platforma .NET umożliwia kierowanie typów do natywnej reprezentacji.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: bc44a2c63dfa3fde3e3c4197e5d1fe79857ea717
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 91b8f3d6cb53fd7a0adea7ea9669e7459e81445f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929067"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706269"
 ---
 # <a name="type-marshaling"></a>Marshaling typów
 
 **Kierowanie** jest procesem przekształcania typów, gdy muszą one przecinać się między kodem zarządzanym i natywnym.
 
-Organizowanie jest niezbędna, ponieważ typy w kodzie zarządzanym i niezarządzanym są różne. W kodzie zarządzanym, na przykład, posiadasz `String`, natomiast w niezarządzanych ciągach świata mogą być Unicode ("szerokie"), inne niż Unicode, zakończonych znakiem null, ASCII itd. Domyślnie podsystem P/Invoke próbuje wykonać właściwe czynności na podstawie domyślnego zachowania opisanego w tym artykule. Jednak dla tych sytuacji, gdy potrzebna jest dodatkowa kontrola, można użyć atrybutu [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) , aby określić, jaki jest oczekiwany typ na stronie niezarządzanej. Na przykład, jeśli chcesz, aby ciąg był wysyłany jako ciąg ANSI zakończony wartością null, można to zrobić w następujący sposób:
+Organizowanie jest niezbędna, ponieważ typy w kodzie zarządzanym i niezarządzanym są różne. W kodzie zarządzanym, na przykład, masz `String`, natomiast w niezarządzanych ciągach świata mogą być Unicode ("szerokie"), inne niż Unicode, zakończonych znakiem null, ASCII itd. Domyślnie podsystem P/Invoke próbuje wykonać właściwe czynności na podstawie domyślnego zachowania opisanego w tym artykule. Jednak dla tych sytuacji, gdy potrzebna jest dodatkowa kontrola, można użyć atrybutu [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) , aby określić, jaki jest oczekiwany typ na stronie niezarządzanej. Na przykład, jeśli chcesz, aby ciąg był wysyłany jako ciąg ANSI zakończony wartością null, można to zrobić w następujący sposób:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
@@ -38,15 +36,15 @@ W pierwszej tabeli opisano mapowania dla różnych typów, dla których kierowan
 | `uint`    | `uint32_t`              |
 | `long`    | `int64_t`               |
 | `ulong`   | `uint64_t`              |
-| `char`    | Albo w zależności`CharSet` od typu P/Invoke lub struktury. `char` `char16_t` Zobacz [dokumentację zestawu znaków](charset.md). |
-| `string`  | Albo w zależności`CharSet` od typu P/Invoke lub struktury. `char*` `char16_t*` Zobacz [dokumentację zestawu znaków](charset.md). |
+| `char`    | `char` lub `char16_t` w zależności od `CharSet` elementu P/Invoke lub struktury. Zobacz [dokumentację zestawu znaków](charset.md). |
+| `string`  | `char*` lub `char16_t*` w zależności od `CharSet` elementu P/Invoke lub struktury. Zobacz [dokumentację zestawu znaków](charset.md). |
 | `System.IntPtr` | `intptr_t`        |
 | `System.UIntPtr` | `uintptr_t`      |
 | Typy wskaźników .NET (np. `void*`)  | `void*` |
-| Typ pochodzący od`System.Runtime.InteropServices.SafeHandle` | `void*` |
-| Typ pochodzący od`System.Runtime.InteropServices.CriticalHandle` | `void*`          |
+| Typ pochodzący od `System.Runtime.InteropServices.SafeHandle` | `void*` |
+| Typ pochodzący od `System.Runtime.InteropServices.CriticalHandle` | `void*`          |
 | `bool`    | Typ `BOOL` Win32       |
-| `decimal` | Struktura `DECIMAL` com |
+| `decimal` | Struktura `DECIMAL` COM |
 | Delegat platformy .NET | Wskaźnik funkcji natywnej |
 | `System.DateTime` | Typ `DATE` Win32 |
 | `System.Guid` | Typ `GUID` Win32 |
@@ -55,26 +53,26 @@ Niektóre kategorie organizowania mają różne wartości domyślne, jeśli są 
 
 | Typ .NET | Typ natywny (parametr) | Typ natywny (pole) |
 |-----------|-------------------------|---------------------|
-| Tablica .NET | Wskaźnik do początku tablicy natywnych reprezentacji elementów tablicy. | Niedozwolone bez `[MarshalAs]` atrybutu|
-| Klasa z `LayoutKind`lub `Sequential``Explicit` | Wskaźnik do natywnej reprezentacji klasy | Natywna Reprezentacja klasy |
+| Tablica .NET | Wskaźnik do początku tablicy natywnych reprezentacji elementów tablicy. | Niedozwolone bez atrybutu `[MarshalAs]`|
+| Klasa z `LayoutKind` `Sequential` lub `Explicit` | Wskaźnik do natywnej reprezentacji klasy | Natywna Reprezentacja klasy |
 
 Poniższa tabela zawiera domyślne reguły organizowania, które są przeznaczone tylko dla systemu Windows. Na platformach innych niż Windows nie można zorganizować tych typów.
 
 | Typ .NET | Typ natywny (parametr) | Typ natywny (pole) |
 |-----------|-------------------------|---------------------|
 | `object`  | `VARIANT`               | `IUnknown*`         |
-| `System.Array` | Interfejs COM | Niedozwolone bez `[MarshalAs]` atrybutu |
+| `System.Array` | Interfejs COM | Niedozwolone bez atrybutu `[MarshalAs]` |
 | `System.ArgIterator` | `va_list` | Niedozwolone |
 | `System.Collections.IEnumerator` | `IEnumVARIANT*` | Niedozwolone |
 | `System.Collections.IEnumerable` | `IDispatch*` | Niedozwolone |
-| `System.DateTimeOffset` | `int64_t`reprezentująca liczbę taktów od północy 1 stycznia 1601 || `int64_t`reprezentująca liczbę taktów od północy 1 stycznia 1601 |
+| `System.DateTimeOffset` | `int64_t` reprezentujący liczbę taktów od północy 1 stycznia 1601 || `int64_t` reprezentujący liczbę taktów od północy 1 stycznia 1601 |
 
 Niektóre typy mogą być organizowane tylko jako parametry, a nie jako pola. Te typy są wymienione w poniższej tabeli:
 
 | Typ .NET | Typ natywny (tylko parametr) |
 |-----------|------------------------------|
-| `System.Text.StringBuilder` | Albo `char*`w zależności`CharSet` od parametru P/Invoke. `char16_t*`  Zobacz [dokumentację zestawu znaków](charset.md). |
-| `System.ArgIterator` | `va_list`(tylko w systemie Windows x86/x64/arm64) |
+| `System.Text.StringBuilder` | `char*` lub `char16_t*` w zależności od `CharSet` elementu P/Invoke.  Zobacz [dokumentację zestawu znaków](charset.md). |
+| `System.ArgIterator` | `va_list` (tylko w systemie Windows x86/x64/arm64) |
 | `System.Runtime.InteropServices.ArrayWithOffset` | `void*` |
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
 
@@ -89,14 +87,14 @@ Podczas wywoływania metod obiektów COM w programie .NET środowisko uruchomien
 | `bool`    | `VARIANT_BOOL`                 |
 | `StringBuilder` | `LPWSTR`                 |
 | `string`  | `BSTR`                         |
-| Typy delegatów | `_Delegate*`w .NET Framework. Niedozwolone w programie .NET Core. |
+| Typy delegatów | `_Delegate*` w .NET Framework. Niedozwolone w programie .NET Core. |
 | `System.Drawing.Color` | `OLECOLOR`        |
 | Tablica .NET | `SAFEARRAY`                   |
-| `string[]` | `SAFEARRAY`z `BSTR`s        |
+| `string[]` | `SAFEARRAY` `BSTR`s        |
 
 ## <a name="marshaling-classes-and-structs"></a>Kierowanie klas i struktur
 
-Innym aspektem organizowania typów jest sposób przekazywania struktury do niezarządzanej metody. Na przykład niektóre metody niezarządzane wymagają struktury jako parametru. W takich przypadkach należy utworzyć odpowiednią strukturę lub klasę w zarządzanej części świata, aby użyć jej jako parametru. Jednak tylko zdefiniowanie klasy jest niewystarczające, należy również poinstruować organizatora, jak mapować pola w klasie na niezarządzaną strukturę. W tym `StructLayout` miejscu atrybut jest przydatny.
+Innym aspektem organizowania typów jest sposób przekazywania struktury do niezarządzanej metody. Na przykład niektóre metody niezarządzane wymagają struktury jako parametru. W takich przypadkach należy utworzyć odpowiednią strukturę lub klasę w zarządzanej części świata, aby użyć jej jako parametru. Jednak tylko zdefiniowanie klasy jest niewystarczające, należy również poinstruować organizatora, jak mapować pola w klasie na niezarządzaną strukturę. W tym miejscu atrybut `StructLayout` jest przydatny.
 
 ```csharp
 [DllImport("kernel32.dll")]
@@ -121,7 +119,7 @@ public static void Main(string[] args) {
 }
 ```
 
-Poprzedni kod pokazuje prosty przykład wywołania `GetSystemTime()` funkcji. Interesujący bit jest w wierszu 4. Ten atrybut określa, że pola klasy powinny być mapowane sekwencyjnie do struktury na drugiej (niezarządzanej) stronie. Oznacza to, że nazwy pól nie są ważne, tylko ich kolejność jest ważna, ponieważ musi odpowiadać strukturze niezarządzanej, pokazanej w następującym przykładzie:
+Poprzedni kod pokazuje prosty przykład wywołania funkcji `GetSystemTime()`. Interesujący bit jest w wierszu 4. Ten atrybut określa, że pola klasy powinny być mapowane sekwencyjnie do struktury na drugiej (niezarządzanej) stronie. Oznacza to, że nazwy pól nie są ważne, tylko ich kolejność jest ważna, ponieważ musi odpowiadać strukturze niezarządzanej, pokazanej w następującym przykładzie:
 
 ```c
 typedef struct _SYSTEMTIME {

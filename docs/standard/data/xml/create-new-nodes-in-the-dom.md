@@ -3,17 +3,15 @@ title: Tworzenie nowych węzłów w modelu DOM
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 59ac88b2e7c6b3ecd4d06c0183a2f8a7f4a9e2d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f48990286405baee347becef87d0511cd42e9e77
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590251"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711002"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>Tworzenie nowych węzłów w modelu DOM
-<xref:System.Xml.XmlDocument> Ma metody create, dla wszystkich typów węzłów. Podaj metody o nazwie, gdy jest to wymagane, a zawartość lub inne parametry te węzły, które mają zawartość (na przykład węzeł tekstowy) i węzeł jest tworzony. Dostępne są następujące metody: te, które wymagają nazwy i kilka innych parametrów, wprowadzić, aby utworzyć odpowiedni węzeł.  
+<xref:System.Xml.XmlDocument> ma metodę Create dla wszystkich typów węzłów. Podaj metodę o nazwie, gdy jest to wymagane, oraz zawartość lub inne parametry dla tych węzłów, które mają zawartość (na przykład węzeł tekstowy) i węzeł jest tworzony. Poniższe metody to te, które wymagają nazwy i kilku innych parametrów wypełnionych w celu utworzenia odpowiedniego węzła.  
   
 - <xref:System.Xml.XmlDocument.CreateCDataSection%2A>  
   
@@ -37,19 +35,19 @@ ms.locfileid: "64590251"
   
 - <xref:System.Xml.XmlDocument.CreateXmlDeclaration%2A>  
   
- Inne typy węzłów mają wymagania więcej niż tylko dostarczanie danych do parametrów.  
+ Inne typy węzłów mają więcej wymagań niż tylko dostarczanie danych do parametrów.  
   
- Aby uzyskać informacji na temat atrybutów, zobacz [tworzenie nowych atrybutów dla elementów w modelu DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md). Aby uzyskać informacji na temat sprawdzania poprawności nazwy elementów i atrybutów, zobacz [— Element XML i weryfikacja nazwy atrybutu podczas tworzenia nowych węzłów](../../../../docs/standard/data/xml/xml-element-and-attribute-name-verification-when-creating-new-nodes.md). W celu tworzenia odwołań do jednostek, zobacz [odwołania do tworzenia nowych jednostek](../../../../docs/standard/data/xml/creating-new-entity-references.md). Aby uzyskać informacji na temat skutków rozszerzenie odwołań do jednostek w przestrzeni nazw, zobacz [Namespace wpływ na rozwijanie odwołań do jednostek dla nowych węzłów zawierających elementy i atrybuty](../../../../docs/standard/data/xml/namespace-affect-on-entity-ref-expansion-for-new-nodes.md).  
+ Aby uzyskać informacje na temat atrybutów, zobacz [Tworzenie nowych atrybutów dla elementów w modelu dom](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md). Aby uzyskać informacje na temat walidacji nazw elementów i atrybutów, zobacz [Weryfikacja nazwy elementu i atrybutu XML podczas tworzenia nowych węzłów](../../../../docs/standard/data/xml/xml-element-and-attribute-name-verification-when-creating-new-nodes.md). Aby uzyskać informacje na temat tworzenia odwołań do jednostek, zobacz [Tworzenie nowych odwołań do jednostek](../../../../docs/standard/data/xml/creating-new-entity-references.md). Aby uzyskać informacje na temat sposobu, w jaki przestrzenie nazw wpływają na rozszerzanie odwołań do jednostek, zobacz [przestrzeń nazw ma wpływ na rozszerzanie odwołania do jednostek dla nowych węzłów zawierających elementy i atrybuty](../../../../docs/standard/data/xml/namespace-affect-on-entity-ref-expansion-for-new-nodes.md).  
   
- Po utworzeniu nowych węzłów, istnieje kilka różnych metod wstawić je do drzewa. W tabeli wymieniono metody, gdzie nowy węzeł jest widoczny w XML Document Object Model (DOM) opis.  
+ Po utworzeniu nowych węzłów dostępne są kilka metod wstawienia ich do drzewa. W tabeli wymieniono metody z opisem, gdzie nowy węzeł pojawia się w Document Object Model XML (DOM).  
   
-|Metoda|Położenie węzłów|  
+|Metoda|Położenie węzła|  
 |------------|--------------------|  
-|<xref:System.Xml.XmlNode.InsertBefore%2A>|Wstawione przed węzłem odniesienia. Na przykład, aby wstawić nowy węzeł w pozycji 5:<br /><br /> `Dim refChild As XmlNode = node.ChildNodes(4) 'The reference is zero-based.node.InsertBefore(newChild, refChild);`<br /><br /> `XmlNode refChild = node.ChildNodes[4]; //The reference is zero-based. node.InsertBefore(newChild, refChild);`<br /><br /> Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNode.InsertBefore%2A> metody.|  
-|<xref:System.Xml.XmlNode.InsertAfter%2A>|Wstawiona po węzła odniesienia. Na przykład:<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNode.InsertAfter%2A> metody.|  
-|<xref:System.Xml.XmlNode.AppendChild%2A>|Dodaje węzeł do końca listy węzłów podrzędnych dla danego węzła. Jeśli węzeł dodawany jest <xref:System.Xml.XmlDocumentFragment>, cała zawartość fragment dokumentu zostaną przeniesione do listy podrzędny tego węzła. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNode.AppendChild%2A> metody.|  
-|<xref:System.Xml.XmlNode.PrependChild%2A>|Dodaje węzeł na początku listy węzłów podrzędnych danego węzła. Jeśli węzeł dodawany jest <xref:System.Xml.XmlDocumentFragment>, cała zawartość fragment dokumentu zostaną przeniesione do listy podrzędny tego węzła. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNode.PrependChild%2A> metody.|  
-|<xref:System.Xml.XmlAttributeCollection.Append%2A>|Dołącza <xref:System.Xml.XmlAttribute> węzła w końcu Kolekcja atrybutów skojarzona z elementem. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlAttributeCollection.Append%2A> metody.|  
+|<xref:System.Xml.XmlNode.InsertBefore%2A>|Wstawiono przed węzłem referencyjnym. Na przykład, aby wstawić nowy węzeł w pozycji 5:<br /><br /> `Dim refChild As XmlNode = node.ChildNodes(4) 'The reference is zero-based.node.InsertBefore(newChild, refChild);`<br /><br /> `XmlNode refChild = node.ChildNodes[4]; //The reference is zero-based. node.InsertBefore(newChild, refChild);`<br /><br /> Aby uzyskać więcej informacji, zobacz metodę <xref:System.Xml.XmlNode.InsertBefore%2A>.|  
+|<xref:System.Xml.XmlNode.InsertAfter%2A>|Wstawiono po węźle odwołania. Na przykład:<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> Aby uzyskać więcej informacji, zobacz metodę <xref:System.Xml.XmlNode.InsertAfter%2A>.|  
+|<xref:System.Xml.XmlNode.AppendChild%2A>|Dodaje węzeł na końcu listy węzłów podrzędnych dla danego węzła. Jeśli dodawany węzeł jest <xref:System.Xml.XmlDocumentFragment>, cała zawartość fragmentu dokumentu zostanie przeniesiona na listę podrzędną tego węzła. Aby uzyskać więcej informacji, zobacz metodę <xref:System.Xml.XmlNode.AppendChild%2A>.|  
+|<xref:System.Xml.XmlNode.PrependChild%2A>|Dodaje węzeł na początku listy węzłów podrzędnych danego węzła. Jeśli dodawany węzeł jest <xref:System.Xml.XmlDocumentFragment>, cała zawartość fragmentu dokumentu zostanie przeniesiona na listę podrzędną tego węzła. Aby uzyskać więcej informacji, zobacz metodę <xref:System.Xml.XmlNode.PrependChild%2A>.|  
+|<xref:System.Xml.XmlAttributeCollection.Append%2A>|Dołącza węzeł <xref:System.Xml.XmlAttribute> do końca kolekcji atrybutów skojarzonej z elementem. Aby uzyskać więcej informacji, zobacz metodę <xref:System.Xml.XmlAttributeCollection.Append%2A>.|  
   
 ## <a name="see-also"></a>Zobacz także
 

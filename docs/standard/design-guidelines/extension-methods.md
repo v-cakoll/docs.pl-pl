@@ -1,36 +1,35 @@
 ---
-title: Metody rozszerzeń
+title: Metody rozszerzenia
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
-author: KrzysztofCwalina
-ms.openlocfilehash: 1835f84a5126ef07adbe119089d2d943ffda18cd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2578fbacecd9fe790f72e828b455e8983b1298d3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615285"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709364"
 ---
-# <a name="extension-methods"></a>Metody rozszerzeń
-Metody rozszerzenia są funkcją języka, umożliwiająca metody statyczne, które można wywoływać za pomocą składni wywołania metody wystąpienia. Te metody musi mieć co najmniej jeden parametr, który reprezentuje wystąpienie, którego metoda jest używana w ramach operacji.  
+# <a name="extension-methods"></a>Metody rozszerzenia
+Metody rozszerzające są funkcją języka, która umożliwia wywoływanie metod statycznych przy użyciu składni wywołania metody wystąpienia. Te metody muszą przyjmować co najmniej jeden parametr, który reprezentuje wystąpienie, na którym ma działać Metoda.  
   
- Klasa, która definiuje takie metody rozszerzenia jest określany jako klasy "sponsora", a musi być zadeklarowana jako statyczna. Można użyć metod rozszerzających, jeden zaimportować Definiowanie klasy sponsora przestrzeni nazw.  
+ Klasa, która definiuje takie metody rozszerzenia, jest określana jako Klasa "sponsora" i musi być zadeklarowana jako statyczna. Aby można było użyć metod rozszerzających, należy zaimportować przestrzeń nazw definiującą klasę sponsora.  
   
  **X AVOID** frivolously definiowania metod rozszerzenia, szczególnie w przypadku typów nie jesteś właścicielem.  
   
- Jeśli jesteś właścicielem kodu źródłowego typu, metody regularnego wystąpienia zamiast tego Rozważ użycie. Jeśli nie jesteś właścicielem, i chcesz dodać metodę, należy zwrócić szczególną uwagę. Liberalne stosowanie metod rozszerzenia stwarza możliwość potencjalnego zaśmiecania interfejsów API, typów, które nie zostały zaprojektowane do mieć tych metod.  
+ Jeśli używasz kodu źródłowego typu, rozważ użycie zwykłych metod wystąpienia. Jeśli nie jesteś własnością, i chcesz dodać metodę, należy zachować ostrożność. Zliberalizowane korzystanie z metod rozszerzających ma możliwość bałaganu interfejsów API typów, które nie zostały zaprojektowane w taki sposób, aby miały te metody.  
   
  **✓ CONSIDER** przy użyciu metod rozszerzenia w jednym z następujących scenariuszy:  
   
-- Zapewnienie pomocy funkcji, które dotyczą każdej implementacji interfejsu, w przypadku funkcji mogą być napisane pod kątem interfejsu core. Jest to spowodowane konkretnych implementacji, w przeciwnym razie nie można przypisać do interfejsów. Na przykład `LINQ to Objects` operatory są implementowane jako metody rozszerzenia dla wszystkich <xref:System.Collections.Generic.IEnumerable%601> typów. W związku z dowolnego `IEnumerable<>` implementacja jest włączane automatycznie LINQ.  
+- Aby zapewnić funkcje pomocnika odpowiednie dla każdej implementacji interfejsu, jeśli powyższe funkcje mogą być zapisywane w postaci podstawowego interfejsu. Wynika to z tego, że w przeciwnym razie nie można przypisać konkretnych implementacji do interfejsów. Na przykład operatory `LINQ to Objects` są implementowane jako metody rozszerzające dla wszystkich typów <xref:System.Collections.Generic.IEnumerable%601>. W ten sposób wszystkie implementacje `IEnumerable<>` są automatycznie obsługiwane w języku LINQ.  
   
-- Gdy metoda wystąpienia spowodowałoby to powstanie zależności pewnego typu, ale takie zależności zaburzyłaby reguły zarządzania zależności. Na przykład zależność od <xref:System.String> do <xref:System.Uri?displayProperty=nameWithType> prawdopodobnie nie jest pożądane, a tym samym `String.ToUri()` metodę wystąpienia, zwracając `System.Uri` będzie niewłaściwy projekt z punktu widzenia zarządzania zależności. Metody statyczne rozszerzenie `Uri.ToUri(this string str)` zwracanie `System.Uri` będzie znacznie lepiej projektu.  
+- Gdy metoda wystąpienia wprowadzi zależność od pewnego typu, ale taka zależność spowoduje przerwanie reguł zarządzania zależnościami. Na przykład zależność od <xref:System.String> do <xref:System.Uri?displayProperty=nameWithType> prawdopodobnie nie jest pożądana, a więc `String.ToUri()` metoda wystąpienia zwraca `System.Uri` być niewłaściwym projektem z perspektywy zarządzania zależnościami. Statyczna metoda rozszerzająca `Uri.ToUri(this string str)` zwracać `System.Uri` byłoby znacznie lepszym projektem.  
   
  **X AVOID** definiowanie metody rozszerzenia na <xref:System.Object?displayProperty=nameWithType>.  
   
- Użytkownicy VB nie będzie wywoływać tych metod w odwołania do obiektu za pomocą składni metody rozszerzenia. VB nie obsługuje wywoływania takich metod, ponieważ w języku Visual Basic, deklaruje odwołanie, jako obiekt wymusza wszystkich wywołań metod w celu Spóźnię się powiązany (rzeczywistego elementu członkowskiego, wywoływana jest określana w czasie wykonywania), podczas gdy powiązania z metody rozszerzenia są określane w czasie kompilacji (wcześnie powiązany).  
+ Visual Basic użytkownicy nie będą mogli wywoływać takich metod w odwołaniach do obiektów przy użyciu składni metody rozszerzenia. Visual Basic nie obsługuje wywoływania takich metod, ponieważ, w Visual Basic, deklarując odwołanie jako obiekt wymusza, że wszystkie wywołania metody na nim mają być późne (rzeczywista nazwa elementu członkowskiego jest określana w czasie wykonywania), podczas gdy powiązania z metodami rozszerzenia są określane na czas kompilowania (Wczesna granica).  
   
- Należy pamiętać, że wytyczna ma zastosowanie do innych języków, w którym znajduje się takie samo zachowanie powiązania, lub gdy metody rozszerzenia nie są obsługiwane.  
+ Należy zauważyć, że wytyczne dotyczą innych języków, w których występuje takie samo zachowanie dotyczące powiązań lub których metody rozszerzające nie są obsługiwane.  
   
  **X DO NOT** umieszczenia metod rozszerzenia w tej samej przestrzeni nazw jako typ rozszerzony, chyba że jest dodanie metody interfejsów lub zarządzania zależności.  
   
@@ -38,13 +37,13 @@ Metody rozszerzenia są funkcją języka, umożliwiająca metody statyczne, któ
   
  **✓ CONSIDER** definiowanie metody rozszerzenia w tej samej przestrzeni nazw jako typ rozszerzonej, jeśli typ jest interfejsem i metody rozszerzenia są przeznaczone do użycia w przypadku większości lub wszystkim.  
   
- **X DO NOT** definiować metody rozszerzenia wdrożenie funkcją w przestrzeniach nazw zwykle skojarzone z innymi funkcjami. Zamiast tego zdefiniuj je w przestrzeni nazw skojarzonego z funkcją, które należą do.  
+ **X DO NOT** definiować metody rozszerzenia wdrożenie funkcją w przestrzeniach nazw zwykle skojarzone z innymi funkcjami. Zamiast tego należy je zdefiniować w przestrzeni nazw skojarzonej z funkcją, do której należą.  
   
- **X AVOID** ogólnego nazewnictwa przestrzeni nazw przeznaczona do metody rozszerzenia (np. "rozszerzenia"). Użyj nazwy opisowej (np. "Routing") zamiast tego.  
+ **X AVOID** ogólnego nazewnictwa przestrzeni nazw przeznaczona do metody rozszerzenia (np. "rozszerzenia"). Zamiast tego użyj nazwy opisowej (np. "routingu").  
   
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,20 +1,19 @@
 ---
-title: 'Instrukcje: korzystanie z właściwości indeksowanych w programowaniu międzyoperacyjnym modelu COM — C# Przewodnik programowania'
-ms.custom: seodec18
+title: Jak używać właściwości indeksowanych w programowaniu międzyoperacyjnym C# modelu com — Przewodnik programowania
 ms.date: 07/20/2015
 helpviewer_keywords:
 - indexed properties [C#]
 - Office programming [C#], indexed properties
 - properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
-ms.openlocfilehash: 0d4e85646a1e7f8c4ee9a73fbf7bf5a01b10b14b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 864e2274f0e0e79b4843e0bb67b5c4384eac8588
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423221"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712068"
 ---
-# <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>Porady: użycie właściwości indeksowanych w programowaniu usługi międzyoperacyjnej modelu COM (Przewodnik programowania w języku C#)
+# <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>Jak używać właściwości indeksowanych w programowaniu międzyoperacyjnymC# modelu COM (Przewodnik programowania)
 *Właściwości indeksowane* ulepszają sposób, w jaki właściwości com, które mają parametry są C# używane w programowaniu. Właściwości indeksowane współpracują z innymi funkcjami w C#wizualizacji, takimi jak [argumenty nazwane i opcjonalne](../classes-and-structs/named-and-optional-arguments.md), nowy typ ([dynamiczny](../../language-reference/builtin-types/reference-types.md)) i [Informacje o typie osadzonym](../../../standard/assembly/embed-types-visual-studio.md), aby usprawnić programowanie Microsoft Office.  
   
  We wcześniejszych wersjach programu C#metody są dostępne jako właściwości tylko wtedy, gdy metoda `get` nie ma parametrów, a metoda `set` ma jeden i tylko jeden parametr value. Jednak nie wszystkie właściwości COM spełniają te ograniczenia. Na przykład właściwość <xref:Microsoft.Office.Interop.Excel.Range.Range%2A> programu Excel ma metodę dostępu `get`, która wymaga parametru dla nazwy zakresu. W przeszłości, ponieważ nie można uzyskać dostępu do właściwości `Range` bezpośrednio, zamiast tego należy użyć metody `get_Range`, jak pokazano w poniższym przykładzie.  
@@ -39,7 +38,7 @@ ms.locfileid: "73423221"
  Nie można tworzyć własnych właściwości indeksowanych. Funkcja obsługuje tylko użycie istniejących właściwości indeksowanych.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia kompletny przykład. Aby uzyskać więcej informacji o konfigurowaniu projektu, który uzyskuje dostęp do interfejsu API pakietu Office, zobacz [How to: dostęp do obiektów międzyoperacyjności pakietu Office za pomocą funkcji wizualnych C# ](./how-to-access-office-onterop-objects.md).  
+ Poniższy kod przedstawia kompletny przykład. Aby uzyskać więcej informacji na temat sposobu konfigurowania projektu, który uzyskuje dostęp do interfejsu API pakietu Office, zobacz [jak uzyskać dostęp do obiektów C# międzyoperacyjności pakietu Office za pomocą funkcji](./how-to-access-office-onterop-objects.md).
   
  [!code-csharp[csProgGuideIndexedProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#5)]  
   
@@ -48,6 +47,6 @@ ms.locfileid: "73423221"
 - [Argumenty nazwane i opcjonalne](../classes-and-structs/named-and-optional-arguments.md)
 - [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Używanie typu dynamicznego](../types/using-type-dynamic.md)
-- [Instrukcje: użycie argumentów nazwanych i opcjonalnych w programowaniu Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [Instrukcje: uzyskiwanie dostępu do obiektów międzyoperacyjności pakietu Office za pomocą funkcji Visual C#](./how-to-access-office-onterop-objects.md)
+- [Jak używać argumentów nazwanych i opcjonalnych w programowaniu pakietu Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Jak uzyskać dostęp do obiektów międzyoperacyjności C# pakietu Office za pomocą funkcji](./how-to-access-office-onterop-objects.md)
 - [Przewodnik: Programowanie Office](./walkthrough-office-programming.md)

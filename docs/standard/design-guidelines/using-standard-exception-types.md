@@ -8,16 +8,15 @@ helpviewer_keywords:
 - exceptions, catching
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-author: KrzysztofCwalina
-ms.openlocfilehash: b947c7cce057c060b1ab5054d1227f5703ccbf89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b202d618d9d2216c8998181303250081de6781c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026344"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708987"
 ---
 # <a name="using-standard-exception-types"></a>Używanie standardowych typów wyjątków
-W tej sekcji opisano standardowych wyjątków, które są dostarczane przez platformę i szczegółowe informacje o ich użycia. Lista w żadnym wypadku nie jest wyczerpująca. Można znaleźć dokumentację referencyjną .NET Framework użycie innych typów wyjątków Framework.  
+W tej sekcji opisano standardowe wyjątki udostępniane przez środowisko oraz szczegóły ich użycia. Lista nie jest kompletna. Zapoznaj się z dokumentacją dotyczącą .NET Framework, aby uzyskać informacje na temat użycia innych typów wyjątków struktury.  
   
 ## <a name="exception-and-systemexception"></a>Wyjątek i SystemException  
  **X DO NOT** throw <xref:System.Exception?displayProperty=nameWithType> lub <xref:System.SystemException?displayProperty=nameWithType>.  
@@ -32,8 +31,8 @@ W tej sekcji opisano standardowych wyjątków, które są dostarczane przez plat
 ## <a name="invalidoperationexception"></a>InvalidOperationException  
  **✓ DO** throw <xref:System.InvalidOperationException> Jeśli obiekt jest w nieodpowiednim stanie.  
   
-## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException ArgumentNullException i Trwa wyjątku ArgumentOutOfRangeException  
- **✓ DO** throw <xref:System.ArgumentException> lub jednego z jego podtypach jeśli złe argumenty są przekazywane do elementu członkowskiego. Preferuj najbardziej pochodny typ wyjątku, jeśli ma to zastosowanie.  
+## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>Argumentyexception, ArgumentNullException i wyjątku ArgumentOutOfRangeException  
+ **✓ DO** throw <xref:System.ArgumentException> lub jednego z jego podtypach jeśli złe argumenty są przekazywane do elementu członkowskiego. Preferuj najbardziej pochodny typ wyjątku, jeśli ma zastosowanie.  
   
  **✓ DO** ustawić `ParamName` właściwości, gdy jeden podklasy zgłaszanie `ArgumentException`.  
   
@@ -41,27 +40,27 @@ W tej sekcji opisano standardowych wyjątków, które są dostarczane przez plat
   
  **✓ DO** użyj `value` dla nazwy parametru niejawne wartości metody ustawiające właściwości.  
   
-## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>Obiektu NullReferenceException IndexOutOfRangeException i AccessViolationException  
- **X DO NOT** Zezwalaj publicznie można wywołać interfejsów API, aby jawnie lub niejawnie throw <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, lub <xref:System.IndexOutOfRangeException>. Wyjątki te są zarezerwowane i generowane przez aparat wykonywania i w większości przypadków wskazania błędu.  
+## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException, IndexOutOfRangeException i AccessViolationException  
+ **X DO NOT** Zezwalaj publicznie można wywołać interfejsów API, aby jawnie lub niejawnie throw <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, lub <xref:System.IndexOutOfRangeException>. Te wyjątki są zastrzeżone i zgłaszane przez aparat wykonywania, a w większości przypadków wskazują usterkę.  
   
- Wykonaj sprawdzanie, aby uniknąć generowania wyjątków tych argumentów. Zgłaszanie tych wyjątków przedstawia szczegóły implementacji metody, która może spowodować zmianę wraz z upływem czasu.  
+ Wykonaj sprawdzanie argumentów, aby uniknąć zgłaszania tych wyjątków. Zgłaszanie tych wyjątków ujawnia szczegóły implementacji metody, która może ulec zmianie w czasie.  
   
 ## <a name="stackoverflowexception"></a>StackOverflowException  
- **X DO NOT** jawne zgłaszanie <xref:System.StackOverflowException>. Powinny być jawnie wyjątku tylko przez środowisko CLR.  
+ **X DO NOT** jawne zgłaszanie <xref:System.StackOverflowException>. Wyjątek powinien być jawnie wygenerowany tylko przez środowisko CLR.  
   
  **X DO NOT** catch `StackOverflowException`.  
   
- Jest prawie niemożliwe do pisania kodu zarządzanego, które pozostają spójne obecności przepełnienia stosu dowolnego. Niezarządzane części środowiska CLR pozostają spójne, za pomocą sondy na potrzeby przeniesienia przepełnienie stosu do miejsc dobrze zdefiniowane, a nie przez cofanie się z przepełnienia stosu dowolnego.  
+ Niemal niemożliwe jest zapisanie kodu zarządzanego, który pozostaje spójny w obecności dowolnego przepełnienia stosu. Niezarządzane części środowiska CLR pozostają spójne przy użyciu sond do przenoszenia nadprzepływów stosu do dobrze zdefiniowanych miejsc, a nie do tworzenia kopii zapasowych z dowolnego przepełnienia stosu.  
   
 ## <a name="outofmemoryexception"></a>OutOfMemoryException  
- **X DO NOT** jawne zgłaszanie <xref:System.OutOfMemoryException>. Ten wyjątek jest zostanie wygenerowany tylko przez infrastrukturę CLR.  
+ **X DO NOT** jawne zgłaszanie <xref:System.OutOfMemoryException>. Ten wyjątek jest zgłaszany tylko przez infrastrukturę środowiska CLR.  
   
-## <a name="comexception-sehexception-and-executionengineexception"></a>ComException, sehexception — i ExecutionEngineException  
- **X DO NOT** jawne zgłaszanie <xref:System.Runtime.InteropServices.COMException>, <xref:System.ExecutionEngineException>, i <xref:System.Runtime.InteropServices.SEHException>. Wyjątki te są zostanie wygenerowany tylko przez infrastrukturę CLR.  
+## <a name="comexception-sehexception-and-executionengineexception"></a>ComException, SEHException — i ExecutionEngineException  
+ **X DO NOT** jawne zgłaszanie <xref:System.Runtime.InteropServices.COMException>, <xref:System.ExecutionEngineException>, i <xref:System.Runtime.InteropServices.SEHException>. Te wyjątki są zgłaszane tylko przez infrastrukturę środowiska CLR.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

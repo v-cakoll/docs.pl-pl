@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dostęp do sprzętowych urządzeń szyfrujących'
+title: 'Porady: dostęp do sprzętowych urządzeń szyfrujących'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,40 +13,38 @@ helpviewer_keywords:
 - hardware encryption
 - CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9c16c994e3976fb3ee569799461db1d1789a6186
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6ee22fd9fb0c11e22ac01ff83b3269e37e37763
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654383"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706178"
 ---
-# <a name="how-to-access-hardware-encryption-devices"></a>Instrukcje: Dostęp do sprzętowych urządzeń szyfrujących
-Możesz użyć <xref:System.Security.Cryptography.CspParameters> klasy, aby dostęp do sprzętowych urządzeń szyfrujących. Na przykład można użyć tej klasy można zintegrować aplikację z karty inteligentnej, sprzęt generator liczb losowych lub z implementacją sprzętu określonego algorytmu kryptograficznego.  
+# <a name="how-to-access-hardware-encryption-devices"></a>Porady: dostęp do sprzętowych urządzeń szyfrujących
+Aby uzyskać dostęp do urządzeń do szyfrowania sprzętu, można użyć klasy <xref:System.Security.Cryptography.CspParameters>. Na przykład można użyć tej klasy do zintegrowania aplikacji z kartą inteligentną, generatorem losowych liczb sprzętowych lub sprzętową implementacją określonego algorytmu kryptograficznego.  
   
- <xref:System.Security.Cryptography.CspParameters> Klasy tworzy dostawcy usług kryptograficznych (CSP), który uzyskuje dostęp do urządzenia szyfrowania sprzętowego poprawnie zainstalowane.  Możesz sprawdzić dostępność dostawcy usług Kryptograficznych, sprawdzając następujący klucz rejestru za pomocą Edytora rejestru (Regedit.exe):  HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
+ Klasa <xref:System.Security.Cryptography.CspParameters> tworzy dostawcę usług kryptograficznych (CSP), który uzyskuje dostęp do prawidłowo zainstalowanego urządzenia szyfrującego sprzętowego.  Dostępność dostawcy CSP można sprawdzić, sprawdzając następujący klucz rejestru przy użyciu Edytora rejestru (regedit. exe): HKEY_LOCAL_MACHINE \Software\Microsoft\Cryptography\Defaults\Provider.  
   
-### <a name="to-sign-data-using-a-key-card"></a>Aby zarejestrować dane przy użyciu karta klucza  
+### <a name="to-sign-data-using-a-key-card"></a>Aby podpisać dane przy użyciu karty klucza  
   
-1. Utwórz nowe wystąpienie klasy <xref:System.Security.Cryptography.CspParameters> klasy, przekazując całkowitą typ dostawcy i nazwy dostawcy do konstruktora.  
+1. Utwórz nowe wystąpienie klasy <xref:System.Security.Cryptography.CspParameters>, przekazując typ dostawcy integer i nazwę dostawcy do konstruktora.  
   
-2. Przekaż odpowiednie flagi, aby <xref:System.Security.Cryptography.CspParameters.Flags%2A> właściwości nowo utworzonej <xref:System.Security.Cryptography.CspParameters> obiektu.  Na przykład przekazać <xref:System.Security.Cryptography.CspProviderFlags.UseDefaultKeyContainer> flagi.  
+2. Przekaż odpowiednie flagi do właściwości <xref:System.Security.Cryptography.CspParameters.Flags%2A> nowo utworzonego obiektu <xref:System.Security.Cryptography.CspParameters>.  Na przykład Przekaż flagę <xref:System.Security.Cryptography.CspProviderFlags.UseDefaultKeyContainer>.  
   
-3. Utwórz nowe wystąpienie klasy <xref:System.Security.Cryptography.AsymmetricAlgorithm> klasy (na przykład <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasy), przekazując <xref:System.Security.Cryptography.CspParameters> obiekt do konstruktora.  
+3. Utwórz nowe wystąpienie klasy <xref:System.Security.Cryptography.AsymmetricAlgorithm> (na przykład klasy <xref:System.Security.Cryptography.RSACryptoServiceProvider>), przekazując obiekt <xref:System.Security.Cryptography.CspParameters> do konstruktora.  
   
-4. Zaloguj się do danych przy użyciu jednej z `Sign` metod i sprawdź swoje dane przy użyciu jednej z `Verify` metody.  
+4. Podpisz swoje dane przy użyciu jednej z `Sign` metod i sprawdź swoje dane przy użyciu jednej z metod `Verify`.  
   
-### <a name="to-generate-a-random-number-using-a-hardware-random-number-generator"></a>Aby wygenerować losową liczbę za pomocą sprzętu generator liczb losowych  
+### <a name="to-generate-a-random-number-using-a-hardware-random-number-generator"></a>Aby wygenerować liczbę losową przy użyciu generatora liczb losowych sprzętowych  
   
-1. Utwórz nowe wystąpienie klasy <xref:System.Security.Cryptography.CspParameters> klasy, przekazując całkowitą typ dostawcy i nazwy dostawcy do konstruktora.  
+1. Utwórz nowe wystąpienie klasy <xref:System.Security.Cryptography.CspParameters>, przekazując typ dostawcy integer i nazwę dostawcy do konstruktora.  
   
-2. Utwórz nowe wystąpienie klasy <xref:System.Security.Cryptography.RNGCryptoServiceProvider>, przekazując <xref:System.Security.Cryptography.CspParameters> obiekt do konstruktora.  
+2. Utwórz nowe wystąpienie <xref:System.Security.Cryptography.RNGCryptoServiceProvider>, przekazując obiekt <xref:System.Security.Cryptography.CspParameters> do konstruktora.  
   
-3. Tworzenie przy użyciu wartości losowej <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A> lub <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes%2A> metody.  
+3. Utwórz wartość losową przy użyciu metody <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A> lub <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes%2A>.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu demonstruje sposób rejestrowania danych przy użyciu karty inteligentnej.  Przykład kodu tworzy <xref:System.Security.Cryptography.CspParameters> obiekt, który udostępnia kart inteligentnych, a następnie inicjuje <xref:System.Security.Cryptography.RSACryptoServiceProvider> przy użyciu dostawcy usług Kryptograficznych.  W przykładzie kodu, a następnie podpisuje i weryfikuje niektórych danych.  
+ Poniższy przykład kodu demonstruje sposób podpisywania danych przy użyciu karty inteligentnej.  Przykładowy kod tworzy obiekt <xref:System.Security.Cryptography.CspParameters>, który uwidacznia kartę inteligentną, a następnie inicjuje obiekt <xref:System.Security.Cryptography.RSACryptoServiceProvider> przy użyciu dostawcy CSP.  Przykład kodu następnie podpisuje i weryfikuje niektóre dane.  
   
  [!code-cpp[Cryptography.SmartCardCSP#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CPP/Cryptography.SmartCardCSP.cpp#1)]
  [!code-csharp[Cryptography.SmartCardCSP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CS/example.cs#1)]
@@ -54,8 +52,8 @@ Możesz użyć <xref:System.Security.Cryptography.CspParameters> klasy, aby dost
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
-- Obejmują <xref:System> i <xref:System.Security.Cryptography> przestrzeni nazw.  
+- Uwzględnij <xref:System> i <xref:System.Security.Cryptography> przestrzenie nazw.  
   
-- Konieczne jest posiadanie czytnik kart inteligentnych i sterowniki zainstalowane na tym komputerze.  
+- Na komputerze musi być zainstalowany czytnik kart inteligentnych i sterowniki.  
   
-- Należy zainicjować <xref:System.Security.Cryptography.CspParameters> przy użyciu informacji specyficznych dla czytnika kart.  Więcej informacji na ten temat można znaleźć w dokumentacji czytnika kart.
+- Należy zainicjować obiekt <xref:System.Security.Cryptography.CspParameters> przy użyciu informacji specyficznych dla czytnika kart.  Aby uzyskać więcej informacji, zobacz dokumentację czytnika kart.

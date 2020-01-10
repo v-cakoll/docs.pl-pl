@@ -1,16 +1,15 @@
 ---
 title: Typy wskaźnika — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: b9b9f145f8f2d945fa06d53efa89f5754766963f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: fe0eacbd67917826c88c5ef68bb8d8aeab9ba251
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423126"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711821"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Typy wskaźników (Przewodnik programowania w języku C#)
 
@@ -87,5 +86,6 @@ Aby uzyskać więcej informacji, zobacz sekcję [typy wskaźników](~/_csharplan
 - [Przewodnik programowania w języku C#](../index.md)
 - [Niebezpieczny kod i wskaźniki](index.md)
 - [Konwersje wskaźników](pointer-conversions.md)
-- [Typy](/dotnet/csharp/language-reference/keywords)
+- [Typy odwołań](../../language-reference/keywords/reference-types.md)
+- [Typy wartości](../../language-reference/keywords/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

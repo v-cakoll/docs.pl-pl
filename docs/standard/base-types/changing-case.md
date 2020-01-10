@@ -14,13 +14,12 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.custom: seodec18
-ms.openlocfilehash: a8eb45e45a905f0b366642050f4845460e14aaf8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 91fc0022eae3f036e0ec046ea12446871926ab27
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132905"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711470"
 ---
 # <a name="changing-case-in-net"></a>Zmiana wielkości liter w programie .NET
 Jeśli napiszesz aplikację, która akceptuje dane wejściowe od użytkownika, możesz nigdy nie mieć pewności, co ma być używane do wprowadzania danych. Często w przypadku ciągów ma być uwzględniana wielkość liter, szczególnie jeśli są one wyświetlane w interfejsie użytkownika. W poniższej tabeli opisano trzy metody zmiany wielkości liter. Dwie pierwsze metody zapewniają Przeciążenie, które akceptuje kulturę.  
@@ -42,13 +41,13 @@ Jeśli napiszesz aplikację, która akceptuje dane wejściowe od użytkownika, m
   
  Aby uzyskać więcej informacji, zobacz [najlepsze rozwiązania dotyczące używania ciągów](../../../docs/standard/base-types/best-practices-strings.md).  
   
-## <a name="toupper"></a>toUpper  
+## <a name="toupper"></a>ToUpper  
  Metoda <xref:System.String.ToUpper%2A?displayProperty=nameWithType> zmienia wszystkie znaki w ciągu na wielkie litery. Poniższy przykład konwertuje ciąg "Hello world!" od mieszanego przypadku na wielkie litery.  
   
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
  [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
   
- Poprzedni przykład jest domyślnie uwzględniany w kulturze; stosuje konwencje wielkości liter bieżącej kultury. Aby wykonać niezależną od kultury zmianę wielkości liter lub zastosować konwencje wielkości liter w danej kulturze, Użyj przeciążenia metody <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> i podaj wartość <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> lub obiektu <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>, który reprezentuje określoną kulturę do parametru *Culture* . Aby zapoznać się z przykładem, w którym pokazano, jak użyć metody <xref:System.String.ToUpper%2A>, aby wykonać niezależną od kultury zmianę wielkości liter, zobacz [wykonywanie zmian wielkości liter niewrażliwych na kulturę](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
+ Poprzedni przykład jest domyślnie uwzględniany w kulturze; stosuje konwencje wielkości liter bieżącej kultury. Aby wykonać niezależną od kultury zmianę wielkości liter lub zastosować konwencje wielkości liter w danej kulturze, Użyj przeciążenia metody <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> i podaj wartość <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> lub <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> obiektu, który reprezentuje określoną kulturę do parametru *kultury* . Aby zapoznać się z przykładem, w którym pokazano, jak użyć metody <xref:System.String.ToUpper%2A>, aby wykonać niezależną od kultury zmianę wielkości liter, zobacz [wykonywanie zmian wielkości liter niewrażliwych na kulturę](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="tolower"></a>toLower  
  Metoda <xref:System.String.ToLower%2A?displayProperty=nameWithType> jest podobna do poprzedniej metody, ale zamiast tego konwertuje wszystkie znaki w ciągu na małe litery. Poniższy przykład konwertuje ciąg "Hello world!" na małe litery.  
@@ -56,7 +55,7 @@ Jeśli napiszesz aplikację, która akceptuje dane wejściowe od użytkownika, m
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
  [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
   
- Poprzedni przykład jest domyślnie uwzględniany w kulturze; stosuje konwencje wielkości liter bieżącej kultury. Aby wykonać niezależną od kultury zmianę wielkości liter lub zastosować konwencje wielkości liter w danej kulturze, Użyj przeciążenia metody <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> i podaj wartość <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> lub obiektu <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>, który reprezentuje określoną kulturę do parametru *Culture* . Aby zapoznać się z przykładem, w którym pokazano, jak użyć metody <xref:System.String.ToLower%28System.Globalization.CultureInfo%29>, aby wykonać niezależną od kultury zmianę wielkości liter, zobacz [wykonywanie zmian wielkości liter niewrażliwych na kulturę](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
+ Poprzedni przykład jest domyślnie uwzględniany w kulturze; stosuje konwencje wielkości liter bieżącej kultury. Aby wykonać niezależną od kultury zmianę wielkości liter lub zastosować konwencje wielkości liter w danej kulturze, Użyj przeciążenia metody <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> i podaj wartość <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> lub <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> obiektu, który reprezentuje określoną kulturę do parametru *kultury* . Aby zapoznać się z przykładem, w którym pokazano, jak użyć metody <xref:System.String.ToLower%28System.Globalization.CultureInfo%29>, aby wykonać niezależną od kultury zmianę wielkości liter, zobacz [wykonywanie zmian wielkości liter niewrażliwych na kulturę](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="totitlecase"></a>ToTitleCase  
  <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> konwertuje pierwszy znak każdego wyrazu na wielkie litery i pozostałe znaki na małe litery. Jednak wyrazy, które są całkowicie pisane wielkimi literami, założono, że są akronimami i nie są konwertowane.  

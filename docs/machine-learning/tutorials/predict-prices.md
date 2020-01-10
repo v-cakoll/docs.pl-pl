@@ -3,13 +3,13 @@ title: 'Samouczek: prognozowanie cen przy użyciu regresji'
 description: W tym samouczku przedstawiono sposób tworzenia modelu regresji przy użyciu ML.NET do przewidywania cen, w oddziałach, w oddziałach, w oddziałach
 ms.date: 09/30/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: a7a7a246f3153889343589a7b32c183ca30df5a3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: e4014dbdfb81af65c35d2f7693ef2c57885303ff
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459159"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711626"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Samouczek: prognozowanie cen przy użyciu regresji z ML.NET
 
@@ -22,7 +22,7 @@ Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 > * Załaduj i Przekształć dane
 > * Wybierz algorytm uczenia
 > * Uczenie modelu
-> * Oceń model
+> * Ocenianie modelu
 > * Używanie modelu dla prognoz
 
 ## <a name="prerequisites"></a>Wymagania wstępne
@@ -54,7 +54,7 @@ Podany zestaw danych zawiera następujące kolumny:
 * **vendor_id:** Identyfikator dostawcy taksówki jest funkcją.
 * **rate_code:** Typ szybkości podróży z taksówką jest funkcją.
 * **passenger_count:** Liczba pasażerów w podróży to funkcja.
-* **trip_time_in_secs:** Czas trwania podróży. Chcesz przewidzieć przejazd podróży przed ukończeniem podróży. W tym momencie nie wiesz, jak długo trwa podróż. W ten sposób czas podróży nie jest funkcją, a ta kolumna zostanie wykluczona z modelu.
+* **trip_time_in_secs:** Czas trwania podróży. Chcesz przewidzieć przejazd podróży przed ukończeniem podróży. W tej chwili nie wiesz, jak długo trwa podróż. W ten sposób czas podróży nie jest funkcją, a ta kolumna zostanie wykluczona z modelu.
 * **trip_distance:** Odległość podróży to funkcja.
 * **payment_type:** Forma płatności (karta kasowa lub kredytowa) to funkcja.
 * **fare_amount:** Łączna liczba płatnych opłat za taksówkę to etykieta.
@@ -75,7 +75,7 @@ Usuń istniejącą definicję klasy i Dodaj następujący kod, który ma dwie kl
 
 `TaxiTrip` jest klasą danych wejściowych i zawiera definicje dla każdej z kolumn zestawu danych. Użyj atrybutu <xref:Microsoft.ML.Data.LoadColumnAttribute>, aby określić indeksy kolumn źródłowych w zestawie danych.
 
-Klasa `TaxiTripFarePrediction` reprezentuje przewidywane wyniki. Ma pojedyncze pole zmiennoprzecinkowe `FareAmount`z zastosowanym atrybutem `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute>. W przypadku zadania regresji kolumna **oceny** zawiera wartości przewidywanych etykiet.
+Klasa `TaxiTripFarePrediction` reprezentuje przewidywane wyniki. Ma pojedyncze pole zmiennoprzecinkowe `FareAmount`z zastosowanym atrybutem `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute>. W przypadku zadania regresji kolumna **Score** zawiera wartości przewidywanych etykiet.
 
 > [!NOTE]
 > Użyj typu `float`, aby reprezentować wartości zmiennoprzecinkowe w klasach danych wejściowych i prognoz.
@@ -130,7 +130,7 @@ ML.NET używa [klasy IDataView](xref:Microsoft.ML.IDataView) jako elastycznej, w
 
 [!code-csharp[LoadTrainData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "loading training dataset")]
 
-W miarę jak ma być przewidywana taryfa za podróż, kolumna `FareAmount` jest `Label`, który zostanie przewidywalny (dane wyjściowe modelu), użyj klasy transformacji `CopyColumnsEstimator` do kopiowania `FareAmount`i dodania następującego kodu:
+W miarę jak ma być przewidywana taryfa za podróż, kolumna `FareAmount` jest `Label`, który zostanie przewidywalny (dane wyjściowe modelu). Użyj klasy transformacji `CopyColumnsEstimator`, aby skopiować `FareAmount`, i Dodaj następujący kod:
 
 [!code-csharp[CopyColumnsEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Use the CopyColumnsEstimator")]
 
@@ -162,7 +162,7 @@ Zwróć przeszkolony model z następującym wierszem kodu w metodzie `Train()`:
 
 [!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#12 "Return the model")]
 
-## <a name="evaluate-the-model"></a>Oceń model
+## <a name="evaluate-the-model"></a>Ocenianie modelu
 
 Następnie Oceń wydajność modelu z danymi testowymi w celu zapewnienia jakości i weryfikacji. Utwórz metodę `Evaluate()`, zaraz po `Train()`, przy użyciu następującego kodu:
 
@@ -215,7 +215,7 @@ Console.WriteLine($"*------------------------------------------------");
 
 [!code-csharp[DisplayRSquared](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#18 "Display the RSquared metric.")]
 
-[RMS](../resources/glossary.md##root-of-mean-squared-error-rmse) jest jedną z metryk oceny modelu regresji. Im niższa wartość, tym lepszy jest model. Dodaj następujący kod do metody `Evaluate`, aby wyświetlić wartość RMS:
+[RMS](../resources/glossary.md#root-of-mean-squared-error-rmse) jest jedną z metryk oceny modelu regresji. Im niższa wartość, tym lepszy jest model. Dodaj następujący kod do metody `Evaluate`, aby wyświetlić wartość RMS:
 
 [!code-csharp[DisplayRMS](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#19 "Display the RMS metric.")]
 
@@ -245,7 +245,7 @@ Użyj `PredictionEngine` do przewidywania taryfy, dodając następujący kod do 
 
 [!code-csharp[MakePredictionEngine](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
 
-[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest WYGODNYm interfejsem API, który umożliwia prognozowanie jednego wystąpienia danych. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nie jest bezpieczny wątkowo. Jest to możliwe do użycia w środowiskach wielowątkowych lub prototypowych. Aby zwiększyć wydajność i bezpieczeństwo wątków w środowiskach produkcyjnych, Użyj usługi `PredictionEnginePool`, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) obiektów do użycia w całej aplikacji. Zapoznaj się z tym przewodnikiem dotyczącym [korzystania z `PredictionEnginePool` w ASP.NET Core Web API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest WYGODNYm interfejsem API, który umożliwia prognozowanie jednego wystąpienia danych. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nie jest bezpieczna wątkowo. Jest to możliwe do użycia w środowiskach wielowątkowych lub prototypowych. Aby zwiększyć wydajność i bezpieczeństwo wątków w środowiskach produkcyjnych, Użyj usługi `PredictionEnginePool`, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) obiektów do użycia w całej aplikacji. Zapoznaj się z tym przewodnikiem dotyczącym [korzystania z `PredictionEnginePool` w ASP.NET Core Web API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
 > [!NOTE]
 > rozszerzenie usługi `PredictionEnginePool` jest obecnie w wersji zapoznawczej.
@@ -266,11 +266,11 @@ Aby wyświetlić przewidywaną opłatę za określoną podróż, Dodaj następuj
 
 Uruchom program, aby zobaczyć przewidywalną opłatę za taksówkę w przypadku testowym.
 
-Nabycia! Pomyślnie skompilowano model uczenia maszynowego na potrzeby przewidywania opłat za podróż z użyciem taksówki, oceny jego dokładności i używania go do prognozowania. Kod źródłowy dla tego samouczka można znaleźć w repozytorium GitHub [/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) .
+Gratulacje! Pomyślnie skompilowano model uczenia maszynowego na potrzeby przewidywania opłat za podróż z użyciem taksówki, oceny jego dokładności i używania go do prognozowania. Kod źródłowy dla tego samouczka można znaleźć w repozytorium GitHub [/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) .
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
+W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
 >
@@ -279,7 +279,7 @@ W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
 > * Załaduj i Przekształć dane
 > * Wybierz algorytm uczenia
 > * Uczenie modelu
-> * Oceń model
+> * Ocenianie modelu
 > * Używanie modelu dla prognoz
 
 Przejdź do następnego samouczka, aby dowiedzieć się więcej.

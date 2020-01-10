@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie wyjątków zdefiniowanych przez użytkownika'
+title: 'Porady: tworzenie wyjątków zdefiniowanych przez użytkownika'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,20 +11,18 @@ helpviewer_keywords:
 - exceptions, examples
 - exceptions, user-defined
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 42860f549877436f43bfdc20fb3abde91d36101d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6de00490a17fff005dd50a7acc5247089c073f68
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783189"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708878"
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>Jak utworzyć wyjątki zdefiniowane przez użytkownika
 
 .NET dostarcza hierarchię klas wyjątków wywodzących się z klasy podstawowej <xref:System.Exception>. Jeśli żaden z wstępnie zdefiniowanych wyjątków nie spełnia Twoich potrzeb, możesz utworzyć własne klasy wyjątków wywodzące się z klasy <xref:System.Exception>.
 
-Podczas tworzenia własnych wyjątków, zakończenia Nazwa klasy wyjątków zdefiniowanych przez użytkownika z wyrazem "Wyjątek", a następnie wdrożyć trzech typowych konstruktorów, jak pokazano w poniższym przykładzie. W przykładzie zdefiniowano klasę wyjątku o nazwie `EmployeeListNotFoundException`. Klasa jest pochodną <xref:System.Exception> i zawiera trzy konstruktory.
+Podczas tworzenia własnych wyjątków, należy zakończyć nazwę klasy wyjątku zdefiniowanego przez użytkownika z wyrazem "Exception" i zaimplementować trzy typowe konstruktory, jak pokazano w poniższym przykładzie. W przykładzie zdefiniowano nową klasę wyjątku o nazwie `EmployeeListNotFoundException`. Klasa pochodzi od <xref:System.Exception> i zawiera trzy konstruktory.
 
 [!code-cpp[dg_exceptionDesign#14](../../../samples/snippets/cpp/VS_Snippets_CLR/dg_exceptionDesign/cpp/example2.cpp#14)]
 [!code-csharp[dg_exceptionDesign#14](../../../samples/snippets/csharp/VS_Snippets_CLR/dg_exceptionDesign/cs/example2.cs#14)]

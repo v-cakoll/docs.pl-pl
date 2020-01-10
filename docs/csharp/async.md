@@ -5,13 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.custom: seodec18
-ms.openlocfilehash: 86145e8971d9a59fba17368d9530f40d86bf2858
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 38d7c856e9a536db9ef26349175ad440a49f5fe2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037684"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713955"
 ---
 # <a name="asynchronous-programming"></a>Programowanie asynchroniczne
 
@@ -49,7 +48,7 @@ downloadButton.Clicked += async (o, e) =>
 };
 ```
 
-I to wszystko! Kod wyraża zamiar (trwa pobieranie danych asynchronicznie) bez pobierania ugrzęźnięcia z obiektów zadań.
+I to wszystko. Kod wyraża zamiar (trwa pobieranie danych asynchronicznie) bez pobierania ugrzęźnięcia z obiektów zadań.
 
 ### <a name="cpu-bound-example-performing-a-calculation-for-a-game"></a>Przykład związany z PROCESORem: wykonywanie obliczeń dla gry
 
@@ -75,13 +74,13 @@ calculateButton.Clicked += async (o, e) =>
 };
 ```
 
-I to wszystko!  Ten kod czyści przeznaczenie zdarzenia kliknięcia przycisku, nie wymaga ręcznego zarządzania wątkiem w tle i robi to w sposób nieblokowany.
+I to już wszystko!  Ten kod czyści przeznaczenie zdarzenia kliknięcia przycisku, nie wymaga ręcznego zarządzania wątkiem w tle i robi to w sposób nieblokowany.
 
 ### <a name="what-happens-under-the-covers"></a>Co się dzieje w obszarze okładek
 
 Istnieje wiele elementów, w których dane są wykonywane asynchronicznie.  Jeśli chcesz wiedzieć się o to `Task<T>``Task`, co się dzieje poniżej [, zapoznaj](../standard/async-in-depth.md) się z informacjami o tym, co się stało, aby uzyskać więcej informacji.
 
-Po C# stronie elementów kompilator przekształca kod na maszynę stanu, która śledzi elementy, takie jak wykonywanie operacji, gdy`await`zostanie osiągnięty, i wznowić wykonywanie po zakończeniu zadania w tle.
+Po C# stronie elementów kompilator przekształca kod na maszynę stanu, która śledzi elementy, takie jak wykonywanie operacji, gdy `await` zostanie osiągnięty, i wznowić wykonywanie po zakończeniu zadania w tle.
 
 Dla teoretycznie nachylonego elementu jest to implementacja [modelu Promise asynchroniczności](https://en.wikipedia.org/wiki/Futures_and_promises).
 
@@ -243,7 +242,7 @@ Wyrażenia lambda w składniku LINQ wykorzystują odroczone wykonywanie, co ozna
 
 Zablokowanie bieżącego wątku jako środka do oczekiwania na ukończenie zadania może spowodować zakleszczenie i zablokowane wątki kontekstu i może wymagać znacznie bardziej złożonej obsługi błędów. Poniższa tabela zawiera wskazówki dotyczące sposobu postępowania z oczekiwaniami w przypadku zadań w sposób nieblokowany:
 
-| Użyj tego... | Zamiast tego... | Jeśli chcesz to zrobić |
+| Użyj polecenia... | Zamiast tego... | Jeśli chcesz to zrobić |
 | --- | --- | --- |
 | `await` | `Task.Wait` lub `Task.Result` | Pobieranie wyniku zadania w tle |
 | `await Task.WhenAny` | `Task.WaitAny` | Oczekiwanie na zakończenie dowolnego zadania |

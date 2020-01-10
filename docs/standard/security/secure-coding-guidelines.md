@@ -1,5 +1,5 @@
 ---
-title: Wytyczne dotyczące bezpiecznego programowania dla platformy .NET
+title: Wytyczne dotyczące bezpiecznego kodowania dla platformy .NET
 ms.date: 06/28/2018
 helpviewer_keywords:
 - managed wrapper to native code implementation
@@ -14,77 +14,75 @@ helpviewer_keywords:
 - security-neutral code
 - security [.NET], coding guidelines
 ms.assetid: 4f882d94-262b-4494-b0a6-ba9ba1f5f177
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b3a8f0dfc1a2b5e09722876b73281ed1d8b6334e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 51f835803cc545e2a9982c1c8a90d0c998c2bcb8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018648"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705915"
 ---
-# <a name="secure-coding-guidelines"></a>Wytyczne dotyczące bezpiecznego programowania
+# <a name="secure-coding-guidelines"></a>Wytyczne dotyczące bezpiecznego kodowania
 
-Zabezpieczenia oparte na dowód i zabezpieczenia dostępu kodu zapewniają mechanizmy ogromne możliwości, jawnych, aby zaimplementować zabezpieczenia. Większość kodu aplikacji po prostu użyć infrastruktury implementowany przez platformy .NET. W niektórych przypadkach dodatkowe zabezpieczenia specyficzne dla aplikacji jest wymagany, utworzona przez rozszerzenie systemu zabezpieczeń lub za pomocą nowych metod ad-hoc.
+Zabezpieczenia oparte na potwierdzaniu i dostęp do kodu zapewniają bardzo zaawansowane, jawne mechanizmy implementowania zabezpieczeń. Większość kodu aplikacji może po prostu użyć infrastruktury zaimplementowanej przez platformę .NET. W niektórych przypadkach wymagane są dodatkowe zabezpieczenia specyficzne dla aplikacji, które zostały utworzone przez rozszerzenie systemu zabezpieczeń lub za pomocą nowych metod ad hoc.
 
-Przy użyciu platformy .NET wymuszane, uprawnienia i innych wymuszania w kodzie, należy ustawienie bariery, aby zapobiec złośliwego kodu na dostęp do informacji, że użytkownik nie chce mieć lub wykonywania innych akcji niepożądane. Ponadto należy zachować równowagę pomiędzy zabezpieczeń i użyteczności, we wszystkich scenariuszach oczekiwanego przy użyciu zaufanego kodu.
+Korzystając z wymuszanych przez platformę .NET uprawnień i innych wymuszania w kodzie, należy wzniesione przeszkody uniemożliwiające złośliwemu kodowi uzyskanie dostępu do informacji, które nie powinny mieć ani wykonywać innych niepożądanych akcji. Ponadto należy uzyskać równowagę między bezpieczeństwem i użytecznością we wszystkich oczekiwanych scenariuszach przy użyciu zaufanego kodu.
 
-W tym omówieniu opisano różne sposoby, w których kod może być przeznaczona do pracy z systemu zabezpieczeń.
+W tym omówieniu opisano różne sposoby, w których kod może być przeznaczony do pracy z systemem zabezpieczeń.
 
 ## <a name="securing-resource-access"></a>Zabezpieczanie dostępu do zasobów
 
-Podczas projektowania i tworzenia kodu, należy do ochrony i ograniczenie dostępu do zasobów, szczególnie w przypadku, gdy za pomocą lub wywoływania kodem nieznanego pochodzenia kodu. Dlatego należy przestrzegać następujących technik, aby upewnić się, że Twój kod jest bezpieczna:
+Podczas projektowania i pisania kodu, należy chronić i ograniczyć dostęp do tego kodu do zasobów, szczególnie w przypadku używania lub wywoływania kodu nieznanego źródła. Należy więc pamiętać o następujących technikach, aby upewnić się, że kod jest bezpieczny:
 
-- Nie należy używać zabezpieczeń dostępu kodu (CAS).
+- Nie używaj zabezpieczeń dostępu kodu (CAS).
 
-- Nie należy używać częściowej zaufanego kodu.
+- Nie używaj częściowo zaufanego kodu.
 
-- Nie używaj [AllowPartiallyTrustedCaller](xref:System.Security.AllowPartiallyTrustedCallersAttribute) atrybutu (APTCA).
+- Nie należy używać atrybutu [AllowPartiallyTrustedCaller](xref:System.Security.AllowPartiallyTrustedCallersAttribute) (APTCA).
 
-- Nie należy używać wywołaniem funkcji zdalnych .NET.
+- Nie używaj komunikacji zdalnej platformy .NET.
 
-- Nie należy używać Distributed Component Object Model (DCOM).
+- Nie używaj rozproszonej Component Object Model (DCOM).
 
-- Nie należy używać binarne elementy formatujące.
+- Nie używaj binarnych elementów formatujących.
 
-Zabezpieczenia dostępu kodu ani kod o przezroczystym poziomie bezpieczeństwa, nie są obsługiwane jako granice zabezpieczeń z częściowo zaufanego kodu. Odradzamy ładowanie i wykonywanie kodu z nieznanego źródła bez zapewnienia alternatywnych środków bezpieczeństwa. Dostępne są następujące alternatywnych środków bezpieczeństwa:
+Zabezpieczenia dostępu kodu i kod przezroczysty zabezpieczeń nie są obsługiwane jako granice zabezpieczeń z częściowo zaufanym kodem. Odradzamy ładowanie i wykonywanie kodu z nieznanego źródła bez zapewnienia alternatywnych środków bezpieczeństwa. Alternatywne miary zabezpieczeń są następujące:
 
 - Wirtualizacja
 
 - AppContainers
 
-- Użytkownicy systemu operacyjnego (OS) i uprawnienia
+- Użytkownicy i uprawnienia systemu operacyjnego
 
 - Kontenery funkcji Hyper-V
 
-## <a name="security-neutral-code"></a>Kod o neutralnym poziomie bezpieczeństwa
+## <a name="security-neutral-code"></a>Kod neutralny pod względem zabezpieczeń
 
-Kod o neutralnym poziomie bezpieczeństwa nie działają, które są jawnie system zabezpieczeń. Była uruchamiana z uprawnieniami niezależnie od jej odbiera. Mimo że aplikacje, których nie można przechwytywać wyjątki zabezpieczeń skojarzone z operacjami chroniony (na przykład przy użyciu plików, sieci i tak dalej) może spowodować nieobsługiwany wyjątek, kod o neutralnym poziomie bezpieczeństwa nadal korzysta z technologii zabezpieczeń na platformie .NET .
+Kod neutralny pod względem zabezpieczeń nie robi niczego jawnie w systemie zabezpieczeń. Jest ona uruchamiana z dowolnymi uprawnieniami, które odbiera. Chociaż aplikacje, które nie przechwytują wyjątków zabezpieczeń skojarzonych z chronionymi operacjami (na przykład używanie plików, sieci itp.), mogą spowodować nieobsługiwany wyjątek, kod neutralny przez zabezpieczenia nadal wykorzystuje technologie zabezpieczeń w programie .NET .
 
-Biblioteka neutralnym poziomie bezpieczeństwa ma specjalne właściwości, które należy zrozumieć. Załóżmy, że biblioteka zawiera elementy interfejsu API, które pliki lub wywoływać kod niezarządzany. Jeśli Twój kod nie ma odpowiednich uprawnień, nie będą uruchamiane, zgodnie z opisem. Jednak nawet wtedy, gdy kod ma uprawnienie, kod źródłowy aplikacji, który ją wywołuje musi mieć tego samego uprawnienia, aby móc pracować. Jeśli kod wywołujący nie ma odpowiednich uprawnień <xref:System.Security.SecurityException> pojawia się w wyniku przeszukiwania stosu zabezpieczeń dostępu kodu.
+Biblioteka neutralna pod względem zabezpieczeń ma specjalne cechy, które należy zrozumieć. Załóżmy, że biblioteka zawiera elementy interfejsu API, które używają plików lub wywołują kod niezarządzany. Jeśli kod nie ma odpowiednich uprawnień, nie zostanie uruchomiony zgodnie z opisem. Jednak nawet jeśli kod ma uprawnienie, każdy kod aplikacji, który je wywołuje, musi mieć to samo uprawnienie, aby działał. Jeśli wywoływany kod nie ma odpowiednich uprawnień, <xref:System.Security.SecurityException> pojawia się w wyniku przeszukiwania stosu zabezpieczeń dostępu kodu.
 
-## <a name="application-code-that-isnt-a-reusable-component"></a>Kod aplikacji, które nie są komponentów wielokrotnego użytku
+## <a name="application-code-that-isnt-a-reusable-component"></a>Kod aplikacji, który nie jest składnikiem wielokrotnego użytku
 
-Jeśli Twój kod jest częścią aplikacji, która nie będzie można wywoływać za pomocą innego kodu, zabezpieczeń jest prosty i specjalnych kodowania, nie mogą być wymagane. Należy jednak pamiętać, że złośliwy kod może wywołać kodu. Gdy zabezpieczenia dostępu kodu może zatrzymać złośliwego kodu, uzyskiwanie dostępu do zasobów, taki kod nadal można odczytać wartości pola lub właściwości, które mogą zawierać poufne informacje.
+Jeśli Twój kod jest częścią aplikacji, która nie zostanie wywołana przez inny kod, zabezpieczenia są proste, a specjalne kodowanie może nie być wymagane. Należy jednak pamiętać, że złośliwy kod może wywoływać swój kod. Chociaż zabezpieczenia dostępu kodu mogą uniemożliwić złośliwemu kodowi uzyskanie dostępu do zasobów, taki kod może nadal odczytywać wartości pól lub właściwości, które mogą zawierać poufne informacje.
 
-Ponadto jeśli kod akceptuje dane wejściowe użytkownika z Internetu lub zawodnej źródeł, musi być ostrożność złośliwych danych.
+Ponadto, jeśli kod akceptuje dane wprowadzane przez użytkownika z Internetu lub innych wiarygodnych źródeł, należy zachować ostrożność w przypadku złośliwych danych wejściowych.
 
-## <a name="managed-wrapper-to-native-code-implementation"></a>Zarządzany otok dla implementacji kodu natywnego
+## <a name="managed-wrapper-to-native-code-implementation"></a>Otoka zarządzana do implementacji kodu natywnego
 
-Zwykle w tym scenariuszu niektóre przydatne jest implementowana w kodzie natywnym, który ma być dostępne dla kodu zarządzanego. Zarządzanych otok są łatwe do zapisu przy użyciu jednej z tych platform wywołania lub współdziałania z modelem COM. Jednak jeśli to zrobisz, wywołań usługi otoki musi mieć prawa kodu niezarządzanego, aby można było pomyślnie. W obszarze domyślne zasady oznacza to, że kod pobrany z sieci intranet lub Internetem nie będzie działać z otoki.
+Zwykle w tym scenariuszu niektóre użyteczne funkcje są implementowane w kodzie natywnym, który ma zostać udostępniony w kodzie zarządzanym. Zarządzane otoki można łatwo pisać przy użyciu wywołania platformy lub międzyoperacyjności modelu COM. Jednak w takim przypadku obiekty wywołujące otok muszą mieć niezarządzane prawa do kodu w celu pomyślnego wykonania. W obszarze zasady domyślne oznacza to, że kod pobrany z intranetu lub Internetu nie będzie działał z otokami.
 
-Zamiast kodu niezarządzanego prawa do wszystkich aplikacji, które używają tych otoki, lepiej jest udzielić tych uprawnień tylko do kodu otoki. Jeśli podstawową funkcjonalność ujawnia żadnych zasobów i wdrożenia podobnie jest bezpieczne, otoki musi tylko do potwierdzenia swoich praw umożliwiająca jakiegokolwiek kodu do wywołania przez nią. W przypadku zasobów kodowania zabezpieczeń powinna być taka sama w przypadku kodu biblioteki, które są opisane w następnej sekcji. Ponieważ otoki potencjalnie jest ujawniany przez obiekty wywołujące do tych zasobów, dokładnej weryfikacji bezpieczeństwa kodu natywnego jest konieczne i odpowiada za otoki.
+Zamiast udzielać niezarządzanych praw kodu wszystkim aplikacjom, które używają tych otok, lepiej jest nadać te prawa tylko kodowi otoki. Jeśli podstawowe funkcje nie ujawniają żadnych zasobów, a implementacja jest w sposób bezpieczny, otoka musi posłużyć tylko do potwierdzenia jego uprawnień, co umożliwia dowolnemu kodowi wywoływanie. Gdy zasoby są wykorzystywane, kodowanie zabezpieczeń powinno być takie samo jak w przypadku kodu biblioteki opisanego w następnej sekcji. Ponieważ otoka może uwidaczniać wywołujących do tych zasobów, należy uważnie sprawdzić bezpieczeństwo kodu natywnego, a następnie ponosi odpowiedzialność otoki.
 
-## <a name="library-code-that-exposes-protected-resources"></a>Kod biblioteki udostępniający chronione zasoby
+## <a name="library-code-that-exposes-protected-resources"></a>Kod biblioteki, który uwidacznia chronione zasoby
 
-Następujące podejście jest najbardziej zaawansowane i dlatego potencjalnie niebezpiecznych (jeśli jest wykonywane niepoprawnie) zabezpieczeń kodowania: biblioteki służy jako interfejs dla innego kodu, dostęp do niektórych zasobów, które w przeciwnym razie są niedostępne, tak samo, jak wymusić klas platformy .NET uprawnienia do zasobów, których używają. Wszędzie tam, gdzie należy udostępnić zasób, kod musi najpierw wymagają uprawnień dla danego zasobu (czyli go wykonać sprawdzanie zabezpieczeń) i zazwyczaj potwierdzenia swoich praw do wykonania bieżącej operacji.
+Poniższe podejście jest najbardziej wydajne i dlatego potencjalnie niebezpieczne (jeśli zostało nieprawidłowo wykonane) do kodowania zabezpieczeń: Biblioteka służy jako interfejs dla innego kodu, aby uzyskać dostęp do niektórych zasobów, które nie są dostępne w inny sposób, podobnie jak klasy .NET wymuszają uprawnienia do zasobów, których używają. Wszędzie tam, gdzie ujawniasz zasób, kod musi najpierw zażądać uprawnień odpowiednich dla zasobu (to oznacza, że musi wykonać sprawdzanie zabezpieczeń), a następnie zazwyczaj potwierdzać prawa do wykonania rzeczywistej operacji.
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Zabezpieczanie danych o stanie](securing-state-data.md)|Opisuje sposób chronić prywatnych elementów członkowskich.|
-|[Zabezpieczenia i dane użytkownika](security-and-user-input.md)|W tym artykule opisano problemy dotyczące zabezpieczeń dla aplikacji, które akceptują dane wejściowe użytkownika.|
-|[Zabezpieczenia i sytuacja wyścigu](security-and-race-conditions.md)|Opisuje sposoby unikania wyścigu w kodzie.|
-|[Zabezpieczenia i generowanie kodu na bieżąco](security-and-on-the-fly-code-generation.md)|W tym artykule opisano problemy dotyczące zabezpieczeń dla aplikacji, które generują kod dynamicznych.|
-|[Zabezpieczenia oparte na rolach](role-based-security.md)|W tym artykule opisano zabezpieczenia oparte na roli platformy .NET szczegółowo i zawiera instrukcje dotyczące korzystania z niego w kodzie.|
+|[Zabezpieczanie danych o stanie](securing-state-data.md)|Opisuje sposób ochrony prywatnych członków.|
+|[Zabezpieczenia i dane użytkownika](security-and-user-input.md)|Opisuje zagadnienia dotyczące zabezpieczeń aplikacji, które akceptują dane wejściowe użytkownika.|
+|[Zabezpieczenia i sytuacja wyścigu](security-and-race-conditions.md)|Opisuje sposób unikania sytuacji wyścigu w kodzie.|
+|[Zabezpieczenia i generowanie kodu na bieżąco](security-and-on-the-fly-code-generation.md)|Opisuje zagadnienia dotyczące zabezpieczeń aplikacji generujących kod dynamiczny.|
+|[Zabezpieczenia oparte na rolach](role-based-security.md)|Opisuje szczegóły zabezpieczeń opartych na rolach w programie .NET i zawiera instrukcje dotyczące używania jej w kodzie.|

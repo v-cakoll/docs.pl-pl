@@ -8,23 +8,21 @@ helpviewer_keywords:
 - security [.NET Framework], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ffb1081c80c31353ad38080ae16ef9f8a74b5481
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64ddcc6a379e5719eb734eede13e576a707696fe
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61860545"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705889"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>Zabezpieczenia i generowanie kodu na bieżąco
-Niektóre biblioteki działają przez generowanie kodu i uruchomiania go do wykonania niektórych operacji do obiektu wywołującego. Podstawowy problem jest generowanie kodu w imieniu mniejszym zaufanemu kodowi i uruchamiając go na wyższe zaufania. Problem worsens, gdy obiekt wywołujący może mieć wpływ na generowanie kodu, więc należy upewnić się, którym generowany jest tylko kodu, które uważasz za bezpieczne.  
+Niektóre biblioteki działają przez generowanie kodu i uruchamianie go w celu wykonania niektórych operacji dla obiektu wywołującego. Podstawowy problem polega na wygenerowaniu kodu w imieniu kodu o niższym zaufaniu i uruchomieniu go na wyższym poziomie zaufania. Problem pogorszy się, gdy obiekt wywołujący może wpływać na generowanie kodu, dlatego należy się upewnić, że generowany jest tylko kod, który jest uważany za bezpieczny.  
   
- Musisz wiedzieć, dokładnie, jaki kod jest generowany przez cały czas. Oznacza to, że muszą mieć ścisłą kontrolą od żadnych wartości, które można uzyskać od użytkownika, są to ciągi ujęty w cudzysłów, (które powinny być wyjściowym, więc nie mogą zawierać elementy nieoczekiwany kod), identyfikatory, (które powinny być sprawdzane w celu sprawdzenia, czy są prawidłowe identyfikatory) lub cokolwiek innego. Identyfikatory może być niebezpieczne, ponieważ skompilowanego zestawu można zmodyfikować tak, aby jego identyfikatory zawierać otrzymano nieoczekiwany znaki, które prawdopodobnie będą tę kwestię nieco (chociaż rzadko jest to luka w zabezpieczeniach).  
+ Musisz dokładnie poznać kod, który jest generowany przez cały czas. Oznacza to, że musisz mieć ścisłe kontrolki dla wszystkich wartości, które otrzymujesz od użytkownika, czy są to ciągi ujęte w cudzysłów (które powinny zostać zmienione, aby nie zawierały nieoczekiwanych elementów kodu), identyfikatory (które należy sprawdzić, aby sprawdzić, czy są one prawidłowe identyfikatory) lub inne. Identyfikatory mogą być niebezpieczne, ponieważ skompilowany zestaw można zmodyfikować tak, aby jego identyfikatory zawierały nietypowe znaki, które prawdopodobnie spowodują jego przerwanie (chociaż jest to rzadko występująca Luka w zabezpieczeniach).  
   
- Zalecane jest, że generowanie kodu za pomocą odbicia emisji, co często pozwala uniknąć wielu z tych problemów.  
+ Zaleca się generowanie kodu przy użyciu emisji odbicia, co często pomaga uniknąć wielu z tych problemów.  
   
- Podczas kompilowania kodu, należy rozważyć, czy jest jakiś sposób złośliwy program, można zmodyfikować go. Czy istnieje niewielki przedział czasu, przez który złośliwy kod może zmienić kod źródłowy na dysku, zanim kompilator odczyta go lub przed kod ładuje plik dll? Jeśli tak, należy włączyć ochronę do katalogu zawierającego te pliki za pomocą listy kontroli dostępu w systemie plików, zgodnie z potrzebami.  
+ Podczas kompilowania kodu należy rozważyć, czy istnieje pewien sposób, w jaki złośliwy program mógłby go zmodyfikować. Czy istnieje niewielkie okno czasu, w którym złośliwy kod może zmienić kod źródłowy na dysku, zanim kompilator go odczyta lub zanim kod załaduje plik dll? W takim przypadku należy chronić katalog zawierający te pliki przy użyciu listy Access Control w systemie plików, zgodnie z potrzebami.  
   
 ## <a name="see-also"></a>Zobacz także
 

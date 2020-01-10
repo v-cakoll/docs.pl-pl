@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: bd79d95a18fb1935d97fff2d1b2c7767752b9765
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d186670489ada51fced67ff9adeb73b14909b664
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351715"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716688"
 ---
 # <a name="-target-visual-basic"></a>-Target (Visual Basic)
 
@@ -27,9 +27,9 @@ Określa format danych wyjściowych kompilatora.
 
 Poniższa tabela zawiera podsumowanie efektu opcji `-target`.
 
-|**Zaznaczyć**|**Domyślnie**|
+|**Option**|**Behavior**|
 |----------------|------------------|
-|`-target:exe`|Powoduje, że kompilator tworzy wykonywalną aplikację konsolową.<br /><br /> Jest to opcja domyślna, gdy nie określono opcji `-target`. Plik wykonywalny jest tworzony z rozszerzeniem. exe.<br /><br /> O ile nie określono inaczej z opcją `/out`, nazwa pliku wyjściowego przyjmuje nazwę pliku wejściowego, który zawiera procedurę `Sub Main`.<br /><br /> Tylko jedna procedura `Sub Main` jest wymagana w plikach kodu źródłowego, które są kompilowane w pliku. exe. Użyj opcji kompilatora `-main`, aby określić, która Klasa zawiera procedurę `Sub Main`.|
+|`-target:exe`|Powoduje, że kompilator tworzy wykonywalną aplikację konsolową.<br /><br /> Jest to opcja domyślna, gdy nie określono opcji `-target`. Plik wykonywalny jest tworzony z rozszerzeniem. exe.<br /><br /> O ile nie określono inaczej z opcją `-out`, nazwa pliku wyjściowego przyjmuje nazwę pliku wejściowego, który zawiera procedurę `Sub Main`.<br /><br /> Tylko jedna procedura `Sub Main` jest wymagana w plikach kodu źródłowego, które są kompilowane w pliku. exe. Użyj opcji kompilatora `-main`, aby określić, która Klasa zawiera procedurę `Sub Main`.|
 |`-target:library`|Powoduje, że kompilator tworzy bibliotekę dołączaną dynamicznie (DLL).<br /><br /> Plik biblioteki dołączanej dynamicznie jest tworzony z rozszerzeniem dll.<br /><br /> O ile nie określono inaczej z opcją `-out`, nazwa pliku wyjściowego przyjmuje nazwę pierwszego pliku wejściowego.<br /><br /> Podczas kompilowania biblioteki DLL procedura `Sub Main` nie jest wymagana.|
 |`-target:module`|Powoduje, że kompilator generuje moduł, który można dodać do zestawu.<br /><br /> Plik wyjściowy jest tworzony z rozszerzeniem modułu.<br /><br /> Środowisko uruchomieniowe języka wspólnego .NET nie może załadować pliku, który nie ma zestawu. Można jednak dołączyć taki plik do manifestu zestawu przy użyciu `-reference`.<br /><br /> Gdy kod w jednym module odwołuje się do typów wewnętrznych w innym module, oba moduły muszą być włączone do manifestu zestawu przy użyciu `-reference`.<br /><br /> Opcja [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) Importuje metadane z modułu.|
 |`-target:winexe`|Powoduje, że kompilator tworzy wykonywalną aplikację opartą na systemie Windows.<br /><br /> Plik wykonywalny jest tworzony z rozszerzeniem. exe. Aplikacja oparta na systemie Windows to taka, która udostępnia interfejs użytkownika z biblioteki klas .NET Framework lub interfejsów API systemu Windows.<br /><br /> O ile nie określono inaczej z opcją `-out`, nazwa pliku wyjściowego przyjmuje nazwę pliku wejściowego, który zawiera procedurę `Sub Main`.<br /><br /> Tylko jedna procedura `Sub Main` jest wymagana w plikach kodu źródłowego, które są kompilowane w pliku. exe. W przypadkach, gdy kod zawiera więcej niż jedną klasę, która ma procedurę `Sub Main`, użyj opcji kompilatora `-main`, aby określić, która Klasa zawiera procedurę `Sub Main`|

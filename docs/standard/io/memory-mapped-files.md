@@ -9,14 +9,12 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 80eb5fd8b6c3b9ca8473efd1cab23a406280f1fa
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: add109e285dfc435a3d4fd7753fb647e28a6a2fd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392902"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706572"
 ---
 # <a name="memory-mapped-files"></a>Pliki mapowane w pamięci
 Plik mapowany w pamięci zawiera zawartość pliku w pamięci wirtualnej. To mapowanie między plikiem a miejscem pamięci umożliwia aplikacji, w tym wiele procesów, zmodyfikowanie pliku przez odczyt i zapis bezpośrednio do pamięci. Począwszy od .NET Framework 4, można użyć kodu zarządzanego, aby uzyskać dostęp do plików mapowanych w pamięci w taki sam sposób, jak natywne funkcje systemu Windows uzyskują dostęp do plików mapowanych w pamięci, zgodnie z opisem w temacie [Zarządzanie plikami mapowanymi w pamięci](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
@@ -53,16 +51,16 @@ Plik mapowany w pamięci zawiera zawartość pliku w pamięci wirtualnej. To map
   
 |Zadanie|Metody lub właściwości do użycia|  
 |----------|----------------------------------|  
-|Aby uzyskać obiekt <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> reprezentujący utrwalony plik mapowany w pamięci z pliku na dysku.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>Method.|  
-|Aby uzyskać obiekt <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> reprezentujący nieutrwalony plik mapowany na pamięć (nieskojarzony z plikiem na dysku).|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>Method.<br /><br /> oraz<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>Method.|  
-|Aby uzyskać obiekt <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> istniejącego pliku mapowanego na pamięć (utrwalone lub nieutrwalone).|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A?displayProperty=nameWithType>Method.|  
-|Aby uzyskać obiekt <xref:System.IO.UnmanagedMemoryStream> dla widoku z sekwencyjnym dostępem do pliku mapowanego na pamięć.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=nameWithType>Method.|  
-|Uzyskanie obiektu <xref:System.IO.UnmanagedMemoryAccessor> dla widoku dostępu losowego do pole mapowanych na pamięć.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=nameWithType>Method.|  
-|Aby uzyskać obiekt <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> do użycia z niezarządzanym kodem.|Właściwość <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType>.<br /><br /> oraz<br /><br /> Właściwość <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.<br /><br /> oraz<br /><br /> Właściwość <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.|  
-|Aby opóźnić przydzielanie pamięci do momentu utworzenia widoku (tylko pliki nieutrwalone).<br /><br /> (Aby określić bieżący rozmiar strony systemowej, użyj właściwości <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType>).|Metoda <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> z wartością <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType>.<br /><br /> oraz<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> metod, które mają Wyliczenie <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> jako parametr.|  
+|Aby uzyskać <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> obiekt, który reprezentuje utrwalony plik mapowany w pamięci z pliku na dysku.|Metoda <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>.|  
+|Aby uzyskać <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> obiekt, który reprezentuje nieutrwalony plik mapowany na pamięć (nieskojarzony z plikiem na dysku).|Metoda <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>.<br /><br /> — lub —<br /><br /> Metoda <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>.|  
+|Aby uzyskać <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> obiekt istniejący plik mapowany w pamięci (utrwalony lub nieutrwalony).|Metoda <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A?displayProperty=nameWithType>.|  
+|Aby uzyskać <xref:System.IO.UnmanagedMemoryStream> obiektu do widoku z sekwencyjnym dostępem do pliku mapowanego na pamięć.|Metoda <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=nameWithType>.|  
+|Aby uzyskać <xref:System.IO.UnmanagedMemoryAccessor> obiektu na potrzeby widoku dostępu losowego do pole mapowanych na pamięć.|Metoda <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=nameWithType>.|  
+|Aby uzyskać <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> obiektu do użycia z niezarządzanym kodem.|Właściwość <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType>.<br /><br /> — lub —<br /><br /> Właściwość <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.<br /><br /> — lub —<br /><br /> Właściwość <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.|  
+|Aby opóźnić przydzielanie pamięci do momentu utworzenia widoku (tylko pliki nieutrwalone).<br /><br /> (Aby określić bieżący rozmiar strony systemowej, użyj właściwości <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType>).|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> metodę z wartością <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType>.<br /><br /> — lub —<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> metod, które mają <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> Wyliczenie jako parametr.|  
   
-### <a name="security"></a>Bezpieczeństwo  
- Prawa dostępu można stosować podczas tworzenia pliku mapowanego na pamięć przy użyciu następujących metod, które pobierają <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> Wyliczenie jako parametr:  
+### <a name="security"></a>Zabezpieczenia  
+ Prawa dostępu można stosować podczas tworzenia pliku mapowanego na pamięć przy użyciu następujących metod, które przyjmują <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> Wyliczenie jako parametr:  
   
 - <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
   
@@ -79,7 +77,7 @@ Plik mapowany w pamięci zawiera zawartość pliku w pamięci wirtualnej. To map
 ## <a name="examples"></a>Przykłady  
   
 ### <a name="persisted-memory-mapped-files"></a>Utrwalone pliki mapowane w pamięci  
- Metody <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> tworzą plik mapowany z pamięci na podstawie istniejącego pliku na dysku.  
+ Metody <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> tworzą plik mapowany w pamięci z istniejącego pliku na dysku.  
   
  Poniższy przykład tworzy widok mapowany w pamięci części bardzo dużego pliku i operuje na jego części.  
   
@@ -104,7 +102,7 @@ Plik mapowany w pamięci zawiera zawartość pliku w pamięci wirtualnej. To map
   
 4. `Process A` odczytuje i wyświetla wartości z pliku mapowanego w pamięci.  
   
-5. Po zakończeniu `Process A` zamapowanego na pamięć plik zostanie natychmiast odczytany przez wyrzucanie elementów bezużytecznych.  
+5. Po zakończeniu `Process A` z plikiem mapowanym w pamięci plik zostanie natychmiast odrzucony przez wyrzucanie elementów bezużytecznych.  
   
  Aby uruchomić ten przykład, wykonaj następujące czynności:  
   

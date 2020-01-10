@@ -8,28 +8,27 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], type design guidelines
 - types [.NET Framework], design guidelines
 ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
-author: KrzysztofCwalina
-ms.openlocfilehash: 16f2a095f461a406eedbd2b34b0c91d3ac43bbe5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e2fe7168bd0029d8f0e8f69a136c9089032973f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650105"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709026"
 ---
 # <a name="type-design-guidelines"></a>Typy — zalecenia dotyczące projektowania
-Z perspektywy CLR są tylko dwie kategorie typów — typy referencyjne i typy wartości — ale na potrzeby dyskusji na temat projektowania framework, możemy podzielić typy bardziej logiczne, grup, każda z regułach określonego projektu.  
+Z perspektywy środowiska CLR istnieją tylko dwie kategorie typów — typy referencyjne i typy wartości — ale na potrzeby dyskusji na temat projektu struktury dzielą typy na więcej grup logicznych, z których każda ma własne specyficzne reguły projektowania.  
   
- Klasy są generalnie w przypadku typów referencyjnych. Stanowią one większość typów w większości środowisk. Klasy zobowiązań ich popularność do zaawansowanych funkcji zorientowanych obiektowo, które obsługują zestaw i ich ogólnego zastosowania. Klas podstawowych i klasy abstrakcyjne są specjalne grupy logiczne, dotyczące rozszerzalności.  
+ Klasy są ogólną wielkością liter typów referencyjnych. Składają się na siebie zbiory typów w większości platform. Klasy są długoterminowe w rozbudowanym zestawie funkcji opartych na obiektach, które obsługują i do ich ogólnego zastosowania. Klasy bazowe i klasy abstrakcyjne są specjalnymi grupami logicznymi związanymi z rozszerzalnością.  
   
- Interfejsy są typy, które może być implementowany przez typy odwołań i typy wartości. Ten sposób mogą one służyć jako elementy główne w hierarchii polimorficzne typy odwołań i typów wartości. Ponadto interfejsów może służyć do symulacji wielokrotnego dziedziczenia, która nie jest natywnie obsługiwane przez środowisko CLR.  
+ Interfejsy to typy, które mogą być implementowane przez oba typy odwołań i typy wartości. Mogą to być jako elementy główne hierarchii polimorficznych typów referencyjnych i typów wartości. Ponadto interfejsy mogą służyć do symulowania wielokrotnego dziedziczenia, które nie jest natywnie obsługiwane przez środowisko CLR.  
   
- Struktury są generalnie w przypadku typów wartości i powinna być zarezerwowana dla małych, prostych typów, podobne do elementów podstawowych języka.  
+ Struktury są ogólną wielkością liter typów wartości i powinny być zarezerwowane dla małych, prostych typów, podobnie jak w przypadku elementów podstawowych języka.  
   
- Typy wyliczeniowe są w wyjątkowym przypadku okna typy wartości używane do definiowania krótkie zestawy wartości, takich jak dni tygodnia, kolory konsoli i tak dalej.  
+ Wyliczenia są szczególnym przypadkiem typów wartości używanych do definiowania krótkich zestawów wartości, takich jak dni tygodnia, kolory konsoli i tak dalej.  
   
- Klasy statyczne są typy, które mają być kontenery dla statycznych elementów członkowskich. Często służą one do zapewnienia skróty do innych operacji.  
+ Klasy statyczne są typami przeznaczonymi do kontenerów dla statycznych elementów członkowskich. Są one często używane do udostępniania skrótów do innych operacji.  
   
- Delegatów, wyjątki, atrybuty, tablice i kolekcje są wszystkie przypadki specjalne typy odwołań, przeznaczone dla konkretnych zastosowań i wytyczne dotyczące ich projektów i użycia są omówione w innym miejscu w tym podręczniku.  
+ Delegaty, wyjątki, atrybuty, tablice i kolekcje są szczególnymi przypadkami typów referencyjnych, które są przeznaczone do określonych zastosowań, oraz wskazówki dotyczące ich projektowania i użycia zostały omówione w innym miejscu w tej książce.  
   
  **✓ DO** upewnij się, że każdy typ jest dobrze zdefiniowany zestaw elementów członkowskich powiązane, nie tylko losowe kolekcji funkcji niepowiązanych.  
   
@@ -41,9 +40,9 @@ Z perspektywy CLR są tylko dwie kategorie typów — typy referencyjne i typy w
  [Projekt struktury](../../../docs/standard/design-guidelines/struct.md)  
  [Projekt wyliczeń](../../../docs/standard/design-guidelines/enum.md)  
  [Zagnieżdżone typy](../../../docs/standard/design-guidelines/nested-types.md)  
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

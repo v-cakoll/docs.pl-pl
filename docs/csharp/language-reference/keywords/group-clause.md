@@ -1,6 +1,5 @@
 ---
 title: Klauzula grupy — C# odwołanie
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - group
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: dd14a4baf9967f41690e7978b8b6cf57c9275e36
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 75a366ec24e4e48af7e87d3372950aad8d76435b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428504"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713470"
 ---
 # <a name="group-clause-c-reference"></a>group — Klauzula (odwołanie w C#)
 
@@ -54,7 +53,7 @@ W poniższym przykładzie pokazano użycie wartości logicznej dla klucza w celu
 
 ### <a name="grouping-by-numeric-range"></a>Grupowanie według zakresu liczbowego
 
-W następnym przykładzie używane jest wyrażenie do tworzenia liczbowych kluczy grup reprezentujących zakres percentylu. Zwróć uwagę na użycie metody [Let](let-clause.md) jako wygodnej lokalizacji do przechowywania wyniku wywołania metody, tak aby nie trzeba było wywoływać metodę dwa razy w klauzuli `group`. Aby uzyskać więcej informacji o sposobie bezpiecznego używania metod w wyrażeniach zapytań, zobacz [How to: Handle Exceptions in Expressions](../../linq/handle-exceptions-in-query-expressions.md).
+W następnym przykładzie używane jest wyrażenie do tworzenia liczbowych kluczy grup reprezentujących zakres percentylu. Zwróć uwagę na użycie metody [Let](let-clause.md) jako wygodnej lokalizacji do przechowywania wyniku wywołania metody, tak aby nie trzeba było wywoływać metodę dwa razy w klauzuli `group`. Aby uzyskać więcej informacji o sposobie bezpiecznego używania metod w wyrażeniach zapytań, zobacz temat [Obsługa wyjątków w wyrażeniach zapytań](../../linq/handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -66,7 +65,7 @@ Użyj klucza złożonego, gdy chcesz grupować elementy zgodnie z więcej niż j
 group person by new {name = person.surname, city = person.city};
 ```
 
-Użyj nazwanego typu, jeśli musisz przekazać zmienną zapytania do innej metody. Utwórz specjalną klasę przy użyciu wstępnie wdrożonych właściwości kluczy, a następnie zastąp metody <xref:System.Object.Equals%2A> i <xref:System.Object.GetHashCode%2A>. Można również użyć struktury, w tym przypadku nie trzeba przesłonić tych metod. Aby uzyskać więcej informacji, zobacz [jak zaimplementować uproszczoną klasę z właściwościami](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) , które są implementowane, i [instrukcje: zapytanie o zduplikowane pliki w drzewie katalogów](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Ten ostatni artykuł zawiera przykład kodu, który demonstruje sposób użycia klucza złożonego z nazwanym typem.
+Użyj nazwanego typu, jeśli musisz przekazać zmienną zapytania do innej metody. Utwórz specjalną klasę przy użyciu wstępnie wdrożonych właściwości kluczy, a następnie zastąp metody <xref:System.Object.Equals%2A> i <xref:System.Object.GetHashCode%2A>. Można również użyć struktury, w tym przypadku nie trzeba przesłonić tych metod. Aby uzyskać więcej informacji, zobacz [jak zaimplementować uproszczoną klasę z zaimplementowanymi właściwościami](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) i [jak wykonywać zapytania dotyczące zduplikowanych plików w drzewie katalogów](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Ten ostatni artykuł zawiera przykład kodu, który demonstruje sposób użycia klucza złożonego z nazwanym typem.
 
 ## <a name="example"></a>Przykład
 

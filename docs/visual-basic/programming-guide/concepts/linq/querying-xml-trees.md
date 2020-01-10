@@ -2,17 +2,17 @@
 title: Tworzenie zapytań dotyczących drzew XML
 ms.date: 07/20/2015
 ms.assetid: 2e35c1ab-08c8-4378-9ca8-8ff344756eda
-ms.openlocfilehash: c8103820a231ba0fb5e8e7c15b7a2b9e7c996e65
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 643b19a0cfcd2a81c6f685de65979f83ca32d918
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346578"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636903"
 ---
 # <a name="querying-xml-trees-visual-basic"></a>Wykonywanie zapytania dotyczącego drzew XML (Visual Basic)
 Ta sekcja zawiera przykłady zapytań [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
- Aby uzyskać więcej informacji na temat pisania zapytań [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], zobacz [wprowadzenie z LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
+ Aby uzyskać więcej informacji na temat pisania zapytań LINQ, zobacz [wprowadzenie with LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
   
  Po utworzeniu wystąpienia drzewa XML, Pisanie zapytań jest najbardziej skutecznym sposobem wyodrębnienia danych z drzewa. Ponadto zapytanie połączone z konstrukcją funkcjonalną umożliwia wygenerowanie nowego dokumentu XML, który ma inny kształt od oryginalnego dokumentu.  
   

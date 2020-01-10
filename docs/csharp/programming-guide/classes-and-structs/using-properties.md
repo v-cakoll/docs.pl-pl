@@ -1,18 +1,17 @@
 ---
 title: Korzystanie z właściwości C# — Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 3b10c24645dad842f498fb49c60b3272829cce29
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579164"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705408"
 ---
 # <a name="using-properties-c-programming-guide"></a>Używanie właściwości (Przewodnik programowania w języku C#)
 
@@ -22,7 +21,7 @@ W przeciwieństwie do pól, właściwości nie są klasyfikowane jako zmienne. W
 
 Właściwości mają wiele użycia: mogą sprawdzać poprawność danych przed zezwoleniem na zmianę; mogą w niewidoczny sposób ujawniać dane w klasie, w której dane są pobierane z innych źródeł, takich jak baza danych; mogą oni wykonać akcję, gdy dane są zmieniane, takie jak podnoszenie zdarzenia lub zmiana wartości innych pól.
 
-Właściwości są deklarowane w bloku klasy przez określenie poziomu dostępu pola, po którym następuje typ właściwości, a następnie nazwa właściwości, a następnie blok kodu, który deklaruje metodę dostępu `get` i/lub `set`. Na przykład:
+Właściwości są deklarowane w bloku klasy przez określenie poziomu dostępu pola, po którym następuje typ właściwości, a następnie nazwa właściwości, a następnie blok kodu, który deklaruje metodę dostępu `get`i/lub `set`. Na przykład:
 
 [!code-csharp[csProgGuideProperties#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#7)]
 
@@ -95,7 +94,7 @@ Poniżej przedstawiono ważne punkty w poprzednim przykładzie:
 
      [!code-csharp[csProgGuideProperties#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#4)]  
 
-- @No__t_0 Cast służy do uzyskiwania dostępu do właściwości Hidden w klasie bazowej:
+- `(Employee)` Cast służy do uzyskiwania dostępu do właściwości Hidden w klasie bazowej:
 
      [!code-csharp[csProgGuideProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#5)]
 
@@ -103,7 +102,7 @@ Poniżej przedstawiono ważne punkty w poprzednim przykładzie:
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie dwie klasy, `Cube` i `Square`, implementują klasę abstrakcyjną, `Shape` i przesłaniają jej abstrakcyjną Właściwość `Area`. Zwróć uwagę na użycie modyfikatora [override](../../language-reference/keywords/override.md) we właściwościach. Program akceptuje stronę jako dane wejściowe i oblicza obszary dla kwadratu i sześcianu. Akceptuje również obszar jako dane wejściowe i oblicza odpowiednią stronę dla kwadratu i sześcianu.
+W tym przykładzie dwie klasy, `Cube` i `Square`, implementują klasę abstrakcyjną, `Shape`i przesłaniają jej abstrakcyjną Właściwość `Area`. Zwróć uwagę na użycie modyfikatora [override](../../language-reference/keywords/override.md) we właściwościach. Program akceptuje stronę jako dane wejściowe i oblicza obszary dla kwadratu i sześcianu. Akceptuje również obszar jako dane wejściowe i oblicza odpowiednią stronę dla kwadratu i sześcianu.
 
 [!code-csharp[csProgGuideProperties#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#6)]
 

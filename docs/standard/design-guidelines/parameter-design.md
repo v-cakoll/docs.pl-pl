@@ -9,15 +9,15 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-author: KrzysztofCwalina
-ms.openlocfilehash: 28b00f5911bb47536ec44b96f284e47b6c671149
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: e3725cd11e170c64b6cbf7d77a7a6526603dfd95
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353742"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709117"
 ---
-# <a name="parameter-design"></a>Projekt parametrów
+# <a name="parameter-design"></a>Projekt parametru
+
 Ta sekcja zawiera szczegółowe wskazówki dotyczące projektowania parametrów, w tym sekcje z instrukcjami dotyczącymi sprawdzania argumentów. Ponadto należy zapoznać się z wytycznymi opisanymi w temacie [Parametry nazewnictwa](../../../docs/standard/design-guidelines/naming-parameters.md).  
   
  **✓ DO** używany najmniej pochodnej typ parametru, który udostępnia funkcje wymagane przez element członkowski.  
@@ -40,7 +40,7 @@ Ta sekcja zawiera szczegółowe wskazówki dotyczące projektowania parametrów,
   
  To lepiej komunikuje się relacją między metodami.  
   
-### <a name="choosing-between-enum-and-boolean-parameters"></a>Wybór między parametrami enum i Boolean  
+### <a name="choose-between-enum-and-boolean-parameters"></a>Wybór między parametrami enum i Boolean  
  **✓ DO** Użyj wyliczenia, jeśli element członkowski w przeciwnym razie byłyby dwóch lub więcej parametrów Boolean.  
   
  **X DO NOT** Użyj wartości logiczne, jeśli nie masz pewności absolutnie nigdy nie będą potrzeba więcej niż dwóch wartości.  
@@ -49,7 +49,7 @@ Ta sekcja zawiera szczegółowe wskazówki dotyczące projektowania parametrów,
   
  **✓ CONSIDER** przy użyciu wartości logiczne są naprawdę dwustanowy wartości, które są używane do zainicjowania właściwości logicznych parametrów konstruktora.  
   
-### <a name="validating-arguments"></a>Sprawdzanie poprawności argumentów  
+### <a name="validate-arguments"></a>Weryfikuj argumenty  
  **✓ DO** Waliduj Argumenty przekazane do publicznych, chronionych lub jawnie implementowane elementy członkowskie. Zgłoś <xref:System.ArgumentException?displayProperty=nameWithType>lub jedną z jej podklas, jeśli sprawdzanie poprawności zakończy się niepowodzeniem.  
   
  Należy zauważyć, że rzeczywista weryfikacja nie musi występować w publicznej lub chronionej składowej. Może się to zdarzyć na niższym poziomie w pewnej prywatnej lub wewnętrznej procedurze. Głównym punktem jest to, że cały obszar powierzchni, który jest widoczny dla użytkowników końcowych, sprawdza argumenty.  
@@ -66,10 +66,10 @@ Ta sekcja zawiera szczegółowe wskazówki dotyczące projektowania parametrów,
   
  Jeśli składowa jest wrażliwa na zabezpieczenia, zachęca się do tworzenia kopii, a następnie weryfikacji i przetwarzania argumentu.  
   
-### <a name="parameter-passing"></a>Przekazywanie parametru  
+### <a name="pass-parameters"></a>Przekazywanie parametrów  
  Z perspektywy projektanta struktury istnieją trzy główne grupy parametrów: według wartości parametrów, parametrów `ref` i parametrów `out`.  
   
- Gdy argument jest przenoszona przez parametr przez wartość, element członkowski otrzymuje kopię rzeczywistego argumentu przekazywane. Jeśli argument jest typem wartości, kopia argumentu jest umieszczana na stosie. Jeśli argument jest typem referencyjnym, kopia odwołania jest umieszczana na stosie. Najpopularniejsze języki CLR, takie jak C#VB.NET, i C++domyślne do przekazywania parametrów według wartości.  
+ Gdy argument jest przenoszona przez parametr przez wartość, element członkowski otrzymuje kopię rzeczywistego argumentu przekazywane. Jeśli argument jest typem wartości, kopia argumentu jest umieszczana na stosie. Jeśli argument jest typem referencyjnym, kopia odwołania jest umieszczana na stosie. Najpopularniejsze języki CLR, takie jak C#, Visual Basic i C++, domyślnie przekazywać parametry według wartości.  
   
  Gdy argument jest przekazywane za pomocą parametru `ref`, element członkowski otrzymuje odwołanie do rzeczywistego argumentu przekazywane. Jeśli argument jest typem wartości, odwołanie do argumentu jest umieszczane na stosie. Jeśli argument jest typem referencyjnym, odwołanie do odwołania jest umieszczane na stosie. parametrów `Ref` można użyć, aby zezwolić elementowi członkowskiemu na modyfikowanie argumentów przekazane przez wywołującego.  
   

@@ -1,92 +1,91 @@
 ---
-title: Wytyczne dotyczące kolekcji
+title: Wskazówki dotyczące kolekcji
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-author: KrzysztofCwalina
-ms.openlocfilehash: a8e8672d71500478dbbe28512e413e8ada501f45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 231d8b04c11f19c4440e184533e1eeaded72b70b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669053"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709325"
 ---
-# <a name="guidelines-for-collections"></a>Wytyczne dotyczące kolekcji
-Dowolny typ, zaprojektowany specjalnie w celu manipulowania grupy obiektów mających pewne cechy wspólne jest uznawana za kolekcji. Prawie zawsze jest odpowiednia dla tych typów do zaimplementowania <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601>, więc w tej sekcji możemy tylko należy wziąć pod uwagę typy Implementowanie jedno lub oba te interfejsy jako kolekcji.  
+# <a name="guidelines-for-collections"></a>Wskazówki dotyczące kolekcji
+Każdy typ przeznaczony specjalnie do manipulowania grupą obiektów, które mają pewną wspólną charakterystykę, może być traktowany jako kolekcja. Jest prawie zawsze odpowiednie dla takich typów, aby zaimplementować <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601>, dlatego w tej sekcji rozważamy tylko typy implementujące jeden lub oba te interfejsy, które mają być kolekcjami.  
   
  **X DO NOT** w publicznych interfejsach API za pomocą lekko typu kolekcji.  
   
- Typ wszystkich wartości zwracane i parametry przedstawiające elementów kolekcji powinien być typu dokładnie elementu, nie dowolny z jej typów podstawowych (dotyczy to tylko publiczne elementy członkowskie kolekcji).  
+ Typ wszystkich wartości zwracanych i parametrów reprezentujących elementy kolekcji musi być dokładnym typem elementu, a nie żadnym z jego typów podstawowych (dotyczy to tylko publicznych członków kolekcji).  
   
  **X DO NOT** użyj <xref:System.Collections.ArrayList> lub <xref:System.Collections.Generic.List%601> w publicznych interfejsach API.  
   
- Te typy są strukturami danych przeznaczone do użytku w wewnętrznych implementacji, nie znajduje się w publicznych interfejsów API. `List<T>` jest zoptymalizowany pod kątem wydajności i mocy kosztem czystości interfejsów API i elastyczność. Na przykład, jeśli wrócisz `List<T>`, nie nigdy nie będzie mogła odbierać powiadomienia, gdy kod klienta modyfikuje kolekcję. Ponadto `List<T>` udostępnia wiele elementów członkowskich, takich jak <xref:System.Collections.Generic.List%601.BinarySearch%2A>, które nie są przydatne ani nie ma to zastosowanie w wielu scenariuszach. Poniższych sekcjach opisano typy (abstrakcje), przeznaczone specjalnie do użycia w publicznych interfejsów API.  
+ Te typy są strukturami danych przeznaczonymi do użycia w wewnętrznej implementacji, a nie w publicznych interfejsach API. `List<T>` jest zoptymalizowany pod kątem wydajności i mocy na koszt czyszczenia interfejsów API i elastyczności. Na przykład jeśli powrócisz `List<T>`, nie będziesz mieć możliwości otrzymywania powiadomień, gdy kod klienta modyfikuje kolekcję. Ponadto `List<T>` uwidacznia wiele elementów członkowskich, takich jak <xref:System.Collections.Generic.List%601.BinarySearch%2A>, które nie są przydatne ani mają zastosowania w wielu scenariuszach. W poniższych dwóch sekcjach opisano typy (abstrakcje) przeznaczone specjalnie do użycia w publicznych interfejsach API.  
   
  **X DO NOT** użyj `Hashtable` lub `Dictionary<TKey,TValue>` w publicznych interfejsach API.  
   
- Te typy są strukturami danych przeznaczone do użytku w wewnętrznych implementacji. Należy użyć publicznych interfejsów API <xref:System.Collections.IDictionary>, `IDictionary <TKey, TValue>`, lub niestandardowy typ wdrażania jednego lub obu interfejsów.  
+ Te typy są strukturami danych przeznaczonymi do użycia w wewnętrznej implementacji. Publiczne interfejsy API powinny używać <xref:System.Collections.IDictionary>, `IDictionary <TKey, TValue>`lub typu niestandardowego implementującego jeden lub oba interfejsy.  
   
  **X DO NOT** użyj <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Collections.IEnumerator>, lub innego typu, który implementuje jednej z tych interfejsów, z wyjątkiem jako typ zwracany `GetEnumerator` metody.  
   
- Zwracanie moduły wyliczające z metod innych niż typy `GetEnumerator` nie można używać z `foreach` instrukcji.  
+ Typy zwracające moduły wyliczające z metod innych niż `GetEnumerator` nie mogą być używane z instrukcją `foreach`.  
   
- **X DO NOT** implementować jednocześnie `IEnumerator<T>` i `IEnumerable<T>` do tego samego typu. To samo dotyczy nierodzajowymi interfejsów `IEnumerator` i `IEnumerable`.  
+ **X DO NOT** implementować jednocześnie `IEnumerator<T>` i `IEnumerable<T>` do tego samego typu. To samo dotyczy interfejsów nieogólnych `IEnumerator` i `IEnumerable`.  
   
-## <a name="collection-parameters"></a>Kolekcja parametrów  
- **✓ DO** używać jak specjalizowany najmniej typu jako parametr typu. Większość elementów członkowskich, biorąc kolekcji, jak używać parametrów `IEnumerable<T>` interfejsu.  
+## <a name="collection-parameters"></a>Parametry kolekcji  
+ **✓ DO** używać jak specjalizowany najmniej typu jako parametr typu. Większość elementów członkowskich przyjmujących kolekcje jako parametry używają interfejsu `IEnumerable<T>`.  
   
  **X AVOID** przy użyciu <xref:System.Collections.Generic.ICollection%601> lub <xref:System.Collections.ICollection> jako parametr tylko w celu uzyskania dostępu `Count` właściwości.  
   
- Zamiast tego Rozważ użycie `IEnumerable<T>` lub `IEnumerable` i dynamicznie sprawdzanie, czy obiekt implementuje `ICollection<T>` lub `ICollection`.  
+ Zamiast tego należy rozważyć użycie `IEnumerable<T>` lub `IEnumerable` i dynamiczne sprawdzanie, czy obiekt implementuje `ICollection<T>` lub `ICollection`.  
   
-## <a name="collection-properties-and-return-values"></a>Kolekcja właściwości i wartości zwracane  
+## <a name="collection-properties-and-return-values"></a>Właściwości kolekcji i wartości zwracane  
  **X DO NOT** dostarczenie kolekcji można ustawić właściwości.  
   
- Użytkownicy mogą zastąpić zawartość kolekcji najpierw wyczyścić kolekcję, a następnie dodając nowej zawartości. W przypadku zastąpienia w całej kolekcji mimo to typowy scenariusz, należy wziąć pod uwagę zapewnienie `AddRange` metody w kolekcji.  
+ Użytkownicy mogą zastąpić zawartość kolekcji, czyszcząc najpierw kolekcję, a następnie dodając nową zawartość. Jeśli zastępowanie całej kolekcji jest typowym scenariuszem, rozważ dostarczenie metody `AddRange` w kolekcji.  
   
  **✓ DO** użyj `Collection<T>` lub podklasa klasy of `Collection<T>` dla właściwości lub return wartości reprezentujące kolekcje odczytu/zapisu.  
   
- Jeśli `Collection<T>` nie spełnia wymagań, niektóre (np. Kolekcja nie musi implementować <xref:System.Collections.IList>), użyj niestandardowej kolekcji przez zaimplementowanie `IEnumerable<T>`, `ICollection<T>`, lub <xref:System.Collections.Generic.IList%601>.  
+ Jeśli `Collection<T>` nie spełnia pewnego wymagania (np. kolekcja nie może implementować <xref:System.Collections.IList>), Użyj kolekcji niestandardowej przez implementację `IEnumerable<T>`, `ICollection<T>`lub <xref:System.Collections.Generic.IList%601>.  
   
  **✓ DO** użyj <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, podklasa klasy `ReadOnlyCollection<T>`, lub w rzadkich przypadkach `IEnumerable<T>` dla właściwości lub return wartości reprezentujące kolekcji tylko do odczytu.  
   
- Ogólnie rzecz biorąc, Preferuj `ReadOnlyCollection<T>`. Jeśli nie spełnia wymagań niektóre (np. Kolekcja nie musi implementować `IList`), użyj niestandardowej kolekcji przez zaimplementowanie `IEnumerable<T>`, `ICollection<T>`, lub `IList<T>`. W przypadku zastosowania niestandardowych kolekcji tylko do odczytu, należy zaimplementować `ICollection<T>.IsReadOnly` do zwrócenia `true`.  
+ Ogólnie rzecz biorąc, Preferuj `ReadOnlyCollection<T>`. Jeśli nie spełnia pewnej wymagania (np. kolekcja nie może implementować `IList`), Użyj kolekcji niestandardowej przez implementację `IEnumerable<T>`, `ICollection<T>`lub `IList<T>`. W przypadku implementowania niestandardowej kolekcji tylko do odczytu należy zaimplementować `ICollection<T>.IsReadOnly`, aby zwracały `true`.  
   
- W przypadkach, gdy masz pewność, że jedyny scenariusz, które kiedykolwiek chcesz obsługiwać jest tylko do przodu iteracji, można po prostu użyć `IEnumerable<T>`.  
+ W przypadkach, w których wiadomo, że jedynym scenariuszem, który będzie potrzebny do obsługi, jest iteracja tylko do przodu, można po prostu użyć `IEnumerable<T>`.  
   
  **✓ CONSIDER** za pomocą podklasy kolekcje podstawowej ogólne zamiast bezpośrednio przy użyciu kolekcji.  
   
- Dzięki temu nazwa lepiej i dodawania elementów członkowskich pomocnika, które nie są obecne w typach podstawowych kolekcji. Jest to szczególnie dotyczy to interfejsy API wysokiego poziomu.  
+ Pozwala to na lepszą nazwę i Dodawanie członków pomocników, których nie ma w typach kolekcji podstawowej. Jest to szczególnie przydatne w przypadku interfejsów API wysokiego poziomu.  
   
  **✓ CONSIDER** zwracanie podklasą `Collection<T>` lub `ReadOnlyCollection<T>` z bardzo często używanych metod i właściwości.  
   
- To umożliwi dodają metody pomocników lub zmień implementację kolekcji w przyszłości.  
+ Dzięki temu można dodać metody pomocnika lub zmienić implementację kolekcji w przyszłości.  
   
- **✓ CONSIDER** przy użyciu kolekcji kluczem, jeśli elementy przechowywane w kolekcji ma unikatowy kluczy (nazwy, identyfikatory itp.). Kolekcje zabezpieczone kluczami są kolekcjami, które mogą być indeksowane przez liczbę całkowitą i kluczem i są zazwyczaj implementowane przez dziedziczenie z `KeyedCollection<TKey,TItem>`.  
+ **✓ CONSIDER** przy użyciu kolekcji kluczem, jeśli elementy przechowywane w kolekcji ma unikatowy kluczy (nazwy, identyfikatory itp.). Kolekcje z kluczami są kolekcjami, które można indeksować za pomocą liczby całkowitej i klucza i są zwykle zaimplementowane przez dziedziczenie z `KeyedCollection<TKey,TItem>`.  
   
- Kolekcje zabezpieczone kluczami zazwyczaj ma większe udzielaniu pamięci i nie powinny być używane, jeśli obciążenie pamięci przewyższa korzyści z kluczami.  
+ Kolekcje z równoważeniem rozmiaru zazwyczaj mają większe rozmiary pamięci i nie powinny być używane, jeśli obciążenie pamięci zawiera zalety kluczy.  
   
- **X DO NOT** zwracać wartości null z kolekcji właściwości lub metody zwracających kolekcje. Zamiast tego zwracają pustą kolekcję lub pusta tablica.  
+ **X DO NOT** zwracać wartości null z kolekcji właściwości lub metody zwracających kolekcje. W zamian Zwróć pustą kolekcję lub pustą tablicę.  
   
- Ogólną zasadą jest, o wartości null i pustych kolekcji (0 elementów) lub tablic powinny być traktowane jako taki sam.  
+ Ogólna reguła to wartość null i puste (0 elementów) kolekcje lub tablice powinny być traktowane jako takie same.  
   
-### <a name="snapshots-versus-live-collections"></a>Migawki w porównaniu z kolekcji na żywo  
- Kolekcje reprezentujący stan w pewnym momencie w czasie są nazywane kolekcjami migawki. Na przykład kolekcja zawierająca wiersze zwrócone przez zapytanie bazy danych będzie migawki. Kolekcje, które zawsze reprezentują bieżący stan są nazywane kolekcjami na żywo. Na przykład zbiór `ComboBox` elementów jest kolekcją na żywo.  
+### <a name="snapshots-versus-live-collections"></a>Migawki a kolekcje na żywo  
+ Kolekcje reprezentujące stan w pewnym momencie są nazywane kolekcjami migawek. Na przykład Kolekcja zawierająca wiersze zwrócone z kwerendy bazy danych będzie migawką. Kolekcje, które zawsze reprezentują bieżący stan, są nazywane kolekcjami dynamicznymi. Na przykład Kolekcja elementów `ComboBox` jest kolekcją dynamiczną.  
   
- **X DO NOT** zwrócić migawki kolekcji z właściwości. Właściwości powinny zwracać kolekcji na żywo.  
+ **X DO NOT** zwrócić migawki kolekcji z właściwości. Właściwości powinny zwracać kolekcje dynamiczne.  
   
- Metody pobierające właściwości powinny być bardzo operacji. Zwracanie migawki wymaga, tworząc kopię wewnętrznej kolekcji w operacji O(n).  
+ Metody pobierające właściwości powinny być bardzo lekkimi operacjami. Zwracanie migawki wymaga utworzenia kopii kolekcji wewnętrznej w operacji O (n).  
   
  **✓ DO** za pomocą kolekcji migawki lub na żywo `IEnumerable<T>` (lub jej podtyp) do reprezentowania kolekcje, które są volatile (tj., które można zmienić bez jawnie modyfikowania kolekcji).  
   
- Ogólnie rzecz biorąc wszystkie kolekcje reprezentujący zasób udostępniony (np. pliki w katalogu) są nietrwałe. Takie kolekcje są bardzo trudne lub niemożliwe do zaimplementowania jako kolekcje na żywo, chyba że implementacji jest po prostu wyliczający tylko do przodu.  
+ Ogólnie rzecz biorąc, wszystkie kolekcje reprezentujące zasób udostępniony (np. pliki w katalogu) są nietrwałe. Takie kolekcje są bardzo trudne lub niemożliwe do wdrożenia jako kolekcje dynamiczne, chyba że implementacja to po prostu moduł wyliczający tylko do przodu.  
   
-## <a name="choosing-between-arrays-and-collections"></a>Wybieranie między tablice i kolekcje  
+## <a name="choosing-between-arrays-and-collections"></a>Wybór między tablicami a kolekcjami  
  **✓ DO** Preferuj kolekcji przed tablic.  
   
- Kolekcje zapewniają większą kontrolę nad zawartością, mogą z czasem ewoluować i są bardziej użyteczne. Ponadto przy użyciu tablic dla scenariuszy tylko do odczytu nie jest zalecane, ponieważ koszt klonowania tablicy jest wysokie. Użyteczność badania wykazały, że niektórzy deweloperzy bez obaw więcej przy użyciu interfejsów API opartych na kolekcji.  
+ Kolekcje zapewniają większą kontrolę nad zawartością, mogą być rozwijane z upływem czasu i są bardziej użyteczne. Ponadto nie zaleca się używania tablic dla scenariuszy tylko do odczytu, ponieważ koszt klonowania tablicy jest zabroniony. Badania użyteczności wykazały, że niektórzy deweloperzy są bardziej wygodni przy użyciu interfejsów API opartych na kolekcji.  
   
- Jednak jeśli tworzysz interfejsy API niskiego poziomu, może być lepiej używać tablic w scenariuszach odczytu i zapisu. Tablice mają mniejsze zużycie pamięci, która pomaga zmniejszyć zestaw roboczy, a dostęp do elementów w tablicy jest szybsze, ponieważ jest zoptymalizowany w czasie wykonywania.  
+ Jeśli jednak tworzysz interfejsy API niskiego poziomu, lepiej jest używać tablic do scenariuszy odczytu i zapisu. Tablice mają mniejsze rozmiary pamięci, co ułatwia zmniejszenie zestawu roboczego i dostęp do elementów w tablicy jest szybszy, ponieważ jest zoptymalizowany pod kątem środowiska uruchomieniowego.  
   
  **✓ CONSIDER** używanie tablic w niskiego poziomu interfejsów API do zminimalizowania zużycia pamięci i zmaksymalizować wydajność.  
   
@@ -97,18 +96,18 @@ Dowolny typ, zaprojektowany specjalnie w celu manipulowania grupy obiektów maj�
 ## <a name="implementing-custom-collections"></a>Implementowanie kolekcji niestandardowych  
  **✓ CONSIDER** dziedziczących `Collection<T>`, `ReadOnlyCollection<T>`, lub `KeyedCollection<TKey,TItem>` podczas projektowania nowej kolekcji.  
   
- **✓ DO** zaimplementować `IEnumerable<T>` podczas projektowania nowej kolekcji. Rozważ zaimplementowanie `ICollection<T>` lub nawet `IList<T>` gdzie dobrym pomysłem.  
+ **✓ DO** zaimplementować `IEnumerable<T>` podczas projektowania nowej kolekcji. Rozważ zaimplementowanie `ICollection<T>` lub nawet `IList<T>`, gdzie ma to sens.  
   
- Podczas implementowania takich niestandardowej kolekcji, oparte na wzorcu interfejsu API ustanowione przez `Collection<T>` i `ReadOnlyCollection<T>` możliwie najlepszy sposób. Oznacza to należy zaimplementować te same elementy członkowskie jawnie, nazwy parametrów, takich jak te dwie kolekcje, nazwij je i tak dalej.  
+ Podczas wdrażania takiej niestandardowej kolekcji postępuj zgodnie z wzorcem interfejsu API ustanowionym przez `Collection<T>` i `ReadOnlyCollection<T>` tak jak to możliwe. Oznacza to, że Zaimplementuj jawnie te same elementy członkowskie, nazwij te parametry, jak te dwie nazwy kolekcji i tak dalej.  
   
  **✓ CONSIDER** implementowanie interfejsów kolekcji nierodzajowe (`IList` i `ICollection`) Jeśli kolekcji będą często przekazywane do interfejsów API biorąc te interfejsy jako dane wejściowe.  
   
  **X AVOID** implementowanie interfejsów kolekcji na typach z złożonych interfejsów API niezwiązanych ze sobą koncepcji kolekcji.  
   
- **X DO NOT** dziedziczyć nierodzajowe kolekcje podstawowej takich jak `CollectionBase`. Użyj `Collection<T>`, `ReadOnlyCollection<T>`, i `KeyedCollection<TKey,TItem>` zamiast tego.  
+ **X DO NOT** dziedziczyć nierodzajowe kolekcje podstawowej takich jak `CollectionBase`. Zamiast tego użyj `Collection<T>`, `ReadOnlyCollection<T>`i `KeyedCollection<TKey,TItem>`.  
   
-### <a name="naming-custom-collections"></a>Nazewnictwo kolekcje niestandardowe  
- Kolekcje (typami, które implementują `IEnumerable`) są tworzone głównie dwóch powodów: (1) do utworzenia nowej struktury danych z operacjami określonej struktury i często z różną charakterystykę wydajności niż istniejącymi strukturami danych (np. <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) oraz (2) Utwórz kolekcję wyspecjalizowane dla zawierający określony zbiór elementów (np. <xref:System.Collections.Specialized.StringCollection>). Struktury danych są najczęściej używane w wewnętrznej implementacji aplikacji i bibliotek. Specjalne kolekcje są głównie ujawnianie w interfejsach API (jako typy właściwości i parametrów).  
+### <a name="naming-custom-collections"></a>Nazewnictwo kolekcji niestandardowych  
+ Kolekcje (typy implementujące `IEnumerable`) są tworzone głównie z dwóch powodów: (1) do tworzenia nowej struktury danych z operacjami specyficznymi dla określonej struktury i często różnymi cechami wydajności niż istniejące struktury danych (np., <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) i (2) do tworzenia wyspecjalizowanej kolekcji do przechowywania określonego zestawu elementów (np. <xref:System.Collections.Specialized.StringCollection>). Struktury danych są najczęściej używane w wewnętrznej implementacji aplikacji i bibliotek. Wyspecjalizowane kolekcje są głównie udostępniane w interfejsach API (jako typy właściwości i parametrów).  
   
  **✓ DO** Użyj sufiksu "Słownik" w nazwach obiektów abstrakcyjnych implementacja `IDictionary` lub `IDictionary<TKey,TValue>`.  
   
@@ -118,15 +117,15 @@ Dowolny typ, zaprojektowany specjalnie w celu manipulowania grupy obiektów maj�
   
  **X AVOID** przy użyciu wszelkie sufiksy podejrzeń konkretnej implementacji, takie jak "LinkedList" lub "Hashtable," w nazwach obiektów abstrakcyjnych kolekcji.  
   
- **✓ CONSIDER** prefiksu nazwy kolekcji o nazwie typu elementu. Na przykład przechowywanie elementów tego typu kolekcji `Address` (Implementowanie `IEnumerable<Address>`) powinno się nazywać `AddressCollection`. Jeśli typ elementu to interfejs, prefiks "I" elementu typu można pominąć. W związku z tym, zbiór <xref:System.IDisposable> elementy mogą być wywoływane `DisposableCollection`.  
+ **✓ CONSIDER** prefiksu nazwy kolekcji o nazwie typu elementu. Na przykład, kolekcja przechowująca elementy typu `Address` (implementujący `IEnumerable<Address>`) powinna być nazywana `AddressCollection`. Jeśli typ elementu to interfejs, prefiks "I" typu elementu można pominąć. W ten sposób Kolekcja elementów <xref:System.IDisposable> może być wywoływana `DisposableCollection`.  
   
  **✓ CONSIDER** przy użyciu prefiksu "ReadOnly" w nazwach kolekcji tylko do odczytu, jeśli odpowiedniej kolekcji zapisu mogą być dodane lub już istnieje w ramach.  
   
- Na przykład, można wywołać tylko do odczytu kolekcji ciągów `ReadOnlyStringCollection`.  
+ Na przykład Kolekcja ciągów tylko do odczytu powinna być nazywana `ReadOnlyStringCollection`.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

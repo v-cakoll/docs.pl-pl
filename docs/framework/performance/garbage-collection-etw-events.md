@@ -6,14 +6,12 @@ helpviewer_keywords:
 - garbage collection events [.NET Framework]
 - ETW, garbage collection events (CLR)
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cd4a4699f115c5b134ea60e703607ff36c229a78
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 5ff214314b92796f4a4a89ddd33a976d8b1f21d1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040585"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716069"
 ---
 # <a name="garbage-collection-etw-events"></a>Zdarzenia ETW odzyskiwania pamięci
 
@@ -54,11 +52,11 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 
 |Nazwa pola|Typ danych|Opis|
 |----------------|---------------|-----------------|
-|Liczbą|win: UInt32|*N*-ta kolekcja elementów bezużytecznych.|
+|Count|win: UInt32|*N*-ta kolekcja elementów bezużytecznych.|
 |Ścisł|win: UInt32|Generacja, która jest zbierana.|
 |Przyczyna|win: UInt32|Dlaczego wyzwolono wyrzucanie elementów bezużytecznych:<br /><br /> 0x0 — alokacja sterty dla małego obiektu.<br /><br /> Wywołano 0x1.<br /><br /> 0x2 — mało pamięci.<br /><br /> 0x3 — puste.<br /><br /> 0x4 — alokacja sterty dla dużego obiektu.<br /><br /> 0x5 — brak miejsca (dla sterty małego obiektu).<br /><br /> 0x6 — brak miejsca (dla sterty dużego obiektu).<br /><br /> 0x7 — wywołano, ale nie wymuszono blokowania.|
 |Typ|win: UInt32|0x0 — blokowanie odzyskiwania pamięci wystąpiło poza odzyskiwaniem pamięci w tle.<br /><br /> 0x1 — wyrzucanie elementów bezużytecznych w tle.<br /><br /> 0x2 — blokowanie wyrzucania elementów bezużytecznych wystąpiło podczas odzyskiwania pamięci w tle.|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
 ## <a name="gcend_v1-event"></a>Zdarzenie GCEnd_V1
 
@@ -78,9 +76,9 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 
 |Nazwa pola|Typ danych|Opis|
 |----------------|---------------|-----------------|
-|Liczbą|win: UInt32|*N*-ta kolekcja elementów bezużytecznych.|
+|Count|win: UInt32|*N*-ta kolekcja elementów bezużytecznych.|
 |Ścisł|win: UInt32|Generacja, która została zebrana.|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
 ## <a name="gcheapstats_v1-event"></a>Zdarzenie GCHeapStats_V1
 
@@ -113,7 +111,7 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 |PinnedObjectCount|win: UInt32|Liczba przypiętych (nieruchomych) obiektów.|
 |SinkBlockCount|win: UInt32|Liczba bloków synchronizacji w użyciu.|
 |GCHandleCount|win: UInt32|Liczba dojść do wyrzucania elementów bezużytecznych w użyciu.|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
   
 ## <a name="gccreatesegment_v1-event"></a>Zdarzenie GCCreateSegment_V1
 
@@ -133,10 +131,10 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 
 |Nazwa pola|Typ danych|Opis|
 |----------------|---------------|-----------------|
-|Ulica|win: UInt64|Adres segmentu.|
+|Adres|win: UInt64|Adres segmentu.|
 |Rozmiar|win: UInt64|Rozmiar segmentu.|
 |Typ|win: UInt32|0x0 — sterta małego obiektu.<br /><br /> 0x1 — sterta dużego obiektu.<br /><br /> 0x2 — sterta tylko do odczytu.|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
 Należy zauważyć, że rozmiar segmentów przydzielone przez moduł wyrzucania elementów bezużytecznych jest specyficzny dla implementacji i może ulec zmianie w dowolnym momencie, łącznie z okresowymi aktualizacjami. Aplikacja nigdy nie powinna mieć założeń lub zależeć od określonego rozmiaru segmentu ani nie powinna próbować skonfigurować ilości pamięci dostępnej dla alokacji segmentu.
 
@@ -158,8 +156,8 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 
 |Nazwa pola|Typ danych|Opis|
 |----------------|---------------|-----------------|
-|Ulica|win: UInt64|Adres segmentu.|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|Adres|win: UInt64|Adres segmentu.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
 ## <a name="gcrestarteebegin_v1-event"></a>Zdarzenie GCRestartEEBegin_V1
 
@@ -211,9 +209,9 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 
 |Nazwa pola|Typ danych|Opis|
 |----------------|---------------|-----------------|
-|Przyczyna|win: UInt16|0x0 — inne.<br /><br /> 0x1 — odzyskiwanie pamięci.<br /><br /> 0x2 — zamknięcie domeny aplikacji.<br /><br /> 0x3 — nachylenie kodu.<br /><br /> 0x4 — zamykanie.<br /><br /> 0x5 — debuger.<br /><br /> 0x6 — przygotowanie do wyrzucania elementów bezużytecznych.|
-|Liczbą|win: UInt32|Liczba GC w danym momencie. Zwykle po wykonaniu tej operacji zobaczysz kolejne zdarzenie uruchomienia GC, a jego liczba jest taka sama jak liczba + 1, ponieważ zwiększy indeks GC podczas wyrzucania elementów bezużytecznych.|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|Przyczyna|Win: UInt16|0x0 — inne.<br /><br /> 0x1 — odzyskiwanie pamięci.<br /><br /> 0x2 — zamknięcie domeny aplikacji.<br /><br /> 0x3 — nachylenie kodu.<br /><br /> 0x4 — zamykanie.<br /><br /> 0x5 — debuger.<br /><br /> 0x6 — przygotowanie do wyrzucania elementów bezużytecznych.|
+|Count|win: UInt32|Liczba GC w danym momencie. Zwykle po wykonaniu tej operacji zobaczysz kolejne zdarzenie uruchomienia GC, a jego liczba jest taka sama jak liczba + 1, ponieważ zwiększy indeks GC podczas wyrzucania elementów bezużytecznych.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
 ## <a name="gcsuspendeeend_v1-event"></a>Zdarzenie GCSuspendEEEnd_V1
 
@@ -251,9 +249,9 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 |----------------|---------------|-----------------|
 |AllocationAmount|win: UInt32|Rozmiar alokacji w bajtach. Ta wartość jest dokładna dla przydziałów, które są mniejsze niż długość ULONG (4 294 967 295 bajtów). Jeśli alokacja jest większa, to pole zawiera obciętą wartość. Użyj `AllocationAmount64` dla bardzo dużych alokacji.|
 |AllocationKind|win: UInt32|0x0 — alokacja małego obiektu (alokacja jest w ramach sterty małego obiektu).<br /><br /> 0x1 — alokacja dużego obiektu (alokacja jest w sterty dużego obiektu).|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 |AllocationAmount64|win: UInt64|Rozmiar alokacji w bajtach. Ta wartość jest dokładna dla bardzo dużych alokacji.|
-|Parametru|win: wskaźnik|Adres metody. Jeśli istnieje kilka typów obiektów, które zostały przydzieloną w trakcie tego zdarzenia, jest to adres metody, która odnosi się do ostatniego przydzielony obiekt (obiekt, który spowodował przekroczenie 100 KB progu).|
+|IdentyfikatorTypu|win: wskaźnik|Adres metody. Jeśli istnieje kilka typów obiektów, które zostały przydzieloną w trakcie tego zdarzenia, jest to adres metody, która odnosi się do ostatniego przydzielony obiekt (obiekt, który spowodował przekroczenie 100 KB progu).|
 |TypeName|win: UnicodeString|Nazwa przydzieloną typ. Jeśli istnieje kilka typów obiektów, które zostały przydzieloną w trakcie tego zdarzenia, jest to typ ostatniego przydzielono obiektu (obiektu, który spowodował przekroczenie 100 KB).|
 |HeapIndex|win: UInt32|Sterta, do której został przydzielony obiekt. Ta wartość jest równa 0 (zero) podczas uruchamiania z odzyskiwaniem pamięci stacji roboczej.|
 
@@ -269,7 +267,7 @@ W poniższej tabeli przedstawiono informacje o zdarzeniu:
 
 |Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|
 |-----------|--------------|-----------------|
-|`GCFinalizersBegin_V1`|14,5|Początek uruchamiania finalizatorów.|
+|`GCFinalizersBegin_V1`|14|Początek uruchamiania finalizatorów.|
 
 Brak danych zdarzenia.
 
@@ -291,8 +289,8 @@ W poniższej tabeli przedstawiono dane zdarzenia:
 
 |Nazwa pola|Typ danych|Opis|
 |----------------|---------------|-----------------|
-|Liczbą|win: UInt32|Liczba uruchomionych finalizatorów.|
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
+|Count|win: UInt32|Liczba uruchomionych finalizatorów.|
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|
 
 ## <a name="gccreateconcurrentthread_v1-event"></a>Zdarzenie GCCreateConcurrentThread_V1
 

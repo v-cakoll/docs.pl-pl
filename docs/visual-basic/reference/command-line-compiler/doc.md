@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: 3da049b912d791f26814bb4b6cbb70998803726a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: a818fd46bd93682f0bede1d22b8cbc2ca6467a40
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005650"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716742"
 ---
 # <a name="-doc"></a>-doc
 Przetwarza komentarze dokumentacji do pliku XML.  
@@ -32,11 +32,11 @@ lub
   
 |Termin|Definicja|  
 |---|---|  
-|`+` &#124; `-`|Opcjonalny. Określenie wartości + lub po prostu `-doc` powoduje, że kompilator generuje informacje dokumentacji i umieszcza je w pliku XML. Określenie `-` jest odpowiednikiem nieokreślenia `-doc`, co nie powoduje utworzenia informacji o dokumentacji.|  
+|`+` &#124; `-`|Opcjonalny. Określenie + lub po prostu `-doc`powoduje, że kompilator generuje informacje dokumentacji i umieszcza je w pliku XML. Określenie `-` jest odpowiednikiem nieokreślenia `-doc`, co nie powoduje utworzenia informacji o dokumentacji.|  
 |`file`|Wymagane, jeśli użyto `-doc:`. Określa wyjściowy plik XML, który jest wypełniany komentarzami z plików kodu źródłowego kompilacji. Jeśli nazwa pliku zawiera spację, należy ująć ją w cudzysłów ("").|  
   
 ## <a name="remarks"></a>Uwagi  
- Opcja `-doc` Określa, czy kompilator generuje plik XML zawierający komentarze dokumentacji. Jeśli używasz składni `-doc:file`, parametr `file` określa nazwę pliku XML. Jeśli używasz `-doc` lub `-doc+`, kompilator Pobiera nazwę pliku XML z pliku wykonywalnego lub biblioteki tworzonego przez kompilator. Jeśli używasz `-doc-` lub nie określisz opcji `-doc`, kompilator nie utworzy pliku XML.  
+ Opcja `-doc` określa, czy kompilator generuje plik XML zawierający komentarze dokumentacji. Jeśli używasz składni `-doc:file`, parametr `file` określa nazwę pliku XML. Jeśli używasz `-doc` lub `-doc+`, kompilator Pobiera nazwę pliku XML z pliku wykonywalnego lub biblioteki, którą tworzy kompilator. Jeśli używasz `-doc-` lub nie określisz opcji `-doc`, kompilator nie utworzy pliku XML.  
   
  W plikach kodu źródłowego Komentarze do dokumentacji mogą poprzedzać następujące definicje:  
   
@@ -46,7 +46,7 @@ lub
   
  Aby użyć wygenerowanego pliku XML z funkcją [IntelliSense](/visualstudio/ide/using-intellisense) programu Visual Studio, Zezwól, aby nazwa pliku XML była taka sama jak zestaw, który ma być obsługiwany. Upewnij się, że plik XML znajduje się w tym samym katalogu, co zestaw, aby w przypadku odwołania do zestawu w projekcie programu Visual Studio również znaleźć plik. XML. Pliki dokumentacji XML nie są wymagane, aby funkcja IntelliSense mogła korzystać z kodu w projekcie lub w obrębie projektów, do których odwołuje się projekt.  
   
- Chyba że kompilujesz z `/target:module`, plik XML zawiera Tagi `<assembly></assembly>`. Te znaczniki określają nazwę pliku zawierającego manifest zestawu dla pliku wyjściowego kompilacji.  
+ Chyba że kompilujesz za pomocą `-target:module`, plik XML zawiera Tagi `<assembly></assembly>`. Te znaczniki określają nazwę pliku zawierającego manifest zestawu dla pliku wyjściowego kompilacji.  
   
  Zobacz [Tagi komentarzy XML](../../../visual-basic/language-reference/xmldoc/index.md) , aby poznać sposoby generowania dokumentacji z komentarzy w kodzie.  
   

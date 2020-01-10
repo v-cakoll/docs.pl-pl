@@ -1,16 +1,14 @@
 ---
 title: Instalowanie .NET Framework w systemie Windows 10
 description: Dowiedz się, jak zainstalować .NET Framework w systemie Windows 10 lub Windows Server 2016.
-author: rlander
-ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0de48e14f11d3763ee239b28b40bdb809dbeb433
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: c2b274bb85b6d4c496e7b6b6b62f05aa932202dd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853941"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716381"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Instalowanie .NET Framework w systemach Windows 10 i Windows Server 2016 i nowszych
 
@@ -27,7 +25,7 @@ Na tej stronie może nastąpić próba uruchomienia aplikacji i wyświetlenia ok
 - [Aktualizacja systemu Windows 10 maja 2019](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 > [!div class="button"]
-> [Pobierz .NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [Pobierz program .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 [.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48) może służyć do uruchamiania aplikacji skompilowanych dla .NET Framework 4,0 za pomocą 4.7.2.
 
@@ -56,7 +54,7 @@ Jeśli używasz systemu Windows 10 1507 lub 1511 i chcesz zainstalować .NET Fra
 
 .NET Framework 4.6.2 obsługuje aplikacje skompilowane dla .NET Framework 4,0 do 4.6.2.
 
-## <a name="net-framework-35"></a>Program .NET Framework 3,5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 Postępuj zgodnie z instrukcjami, aby zainstalować [.NET Framework 3,5 w systemie Windows 10](dotnet-35-windows-10.md).
 
@@ -74,7 +72,7 @@ Wersje .NET Framework 4. x są aktualizacjami w miejscu do wcześniejszych wersj
 
 Aby uzyskać listę wszystkich wersji .NET Framework dostępnych do pobrania, zobacz stronę [pliki do pobrania platformy .NET](https://dotnet.microsoft.com/download) .
 
-## <a name="help"></a>Help
+## <a name="help"></a>Pomoc
 
 Jeśli nie możesz uzyskać zainstalowanej poprawnej wersji .NET Framework, możesz [skontaktować się z firmą Microsoft w celu uzyskania pomocy](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).
 

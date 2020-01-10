@@ -11,13 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.custom: seodec18
-ms.openlocfilehash: 3ac5602c32ce0dcfe21e913868faa7ab356e4194
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3cd461d8c56c3f31bf3ffe04acf239ecd32fe328
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120601"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711444"
 ---
 # <a name="character-encoding-in-net"></a>Kodowanie znaków w programie .NET
 
@@ -67,7 +66,7 @@ Wszystkie klasy kodowania znaków w programie .NET dziedziczą z klasy <xref:Sys
 
 Możesz pobrać informacje o wszystkich kodowaniach dostępnych w programie .NET, wywołując metodę <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType>. Platforma .NET obsługuje systemy kodowania znaków wymienione w poniższej tabeli.
 
-|Kody|Class|Opis|Zalety/wady|
+|Kodowanie|Klasa|Opis|Zalety/wady|
 |--------------|-----------|-----------------|-------------------------------|
 |ASCII|<xref:System.Text.ASCIIEncoding>|Koduje ograniczony zakres znaków przy użyciu krótszych siedmiu bitów bajtu.|Ponieważ to kodowanie obsługuje tylko wartości znakowe z U + 0000 za pośrednictwem U + 007F, w większości przypadków nie jest to wystarczające dla międzynarodowych aplikacji.|
 |UTF-7|<xref:System.Text.UTF7Encoding>|Reprezentuje znaki jako sekwencje 7-bitowego znaków ASCII. Znaki Unicode inne niż ASCII są reprezentowane przez sekwencję ucieczki znaków ASCII.|UTF-7 obsługuje protokoły, takie jak protokoły poczty e-mail i grupy dyskusyjne. Jednak kodowanie UTF-7 nie jest szczególnie bezpieczne ani niezawodne. W niektórych przypadkach zmiana jednego bitu może radykalnie zmienić interpretację całego ciągu UTF-7. W innych przypadkach, różne ciągi UTF-7 mogą kodować ten sam tekst. W przypadku sekwencji, które zawierają znaki inne niż ASCII, UTF-7 wymaga więcej miejsca niż UTF-8, a Kodowanie/dekodowanie jest wolniejsze. W związku z tym należy zamiast tego użyć formatu UTF-8, jeśli jest to możliwe.|
@@ -209,7 +208,7 @@ Zamiast podawania najlepszego dopasowania lub ciągu zamiennego, koder może zg�
 
 Obiekty <xref:System.Text.EncoderFallbackException> i <xref:System.Text.DecoderFallbackException> zawierają następujące informacje o stanie, który spowodował wyjątek:
 
-- Obiekt <xref:System.Text.EncoderFallbackException> zawiera metodę <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A>, która wskazuje, czy znak lub znaki, których nie można zakodować, reprezentują nieznaną parę surogatu (w tym przypadku metoda zwraca `true`) lub nieznany pojedynczy znak (w tym przypadku Metoda zwraca `false`). Znaki w parze dwuskładnikowej są dostępne we właściwościach <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> i <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType>. Nieznany pojedynczy znak jest dostępny z właściwości <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType>. Właściwość <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> wskazuje pozycję w ciągu, w którym znaleziono pierwszy znak, który nie może zostać zakodowany.
+- Obiekt <xref:System.Text.EncoderFallbackException> zawiera metodę <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A>, która wskazuje, czy znak lub znaki, których nie można zakodować, reprezentują nieznaną parę surogatu (w tym przypadku metoda zwraca `true`) lub nieznany pojedynczy znak (w takim przypadku metoda zwraca `false`). Znaki w parze dwuskładnikowej są dostępne we właściwościach <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> i <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType>. Nieznany pojedynczy znak jest dostępny z właściwości <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType>. Właściwość <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> wskazuje pozycję w ciągu, w którym znaleziono pierwszy znak, który nie może zostać zakodowany.
 
 - Obiekt <xref:System.Text.DecoderFallbackException> zawiera właściwość <xref:System.Text.DecoderFallbackException.BytesUnknown%2A>, która zwraca tablicę bajtów, których nie można zdekodować. Właściwość <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> wskazuje pozycję początkową nieznanych bajtów.
 

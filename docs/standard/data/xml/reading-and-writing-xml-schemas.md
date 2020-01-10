@@ -7,24 +7,22 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f80157ddf394fdd058793830bfe3052b41ad1e40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 889c5f85a2ea3fc08dadefda5509de0fcfab76ec
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698762"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710417"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>Odczytywanie i zapisywanie schematów XML
-Schematu Object Model (model SOM) interfejsu API może służyć do odczytu i zapisu schematów języka (XSD) definicji schematu XML z plików lub innych źródeł i tworzenie XML schematów w pamięci przy użyciu klas w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw, które są mapowane do struktur, zdefiniowanych na całym świecie Wide Web Consortium (W3C) XML schematu zalecenia.  
+Za pomocą interfejsu API modelu obiektów schematu (SOM) można odczytywać i zapisywać schematy języka definicji schematu XML (XSD) z plików lub innych źródeł oraz tworzyć schematy XML w pamięci przy użyciu klas w przestrzeni nazw <xref:System.Xml.Schema?displayProperty=nameWithType>, które są mapowane na struktury zdefiniowane w zaleceniu schematu XML organizacja World Wide Web Consortium (W3C).  
   
 ## <a name="reading-and-writing-xml-schemas"></a>Odczytywanie i zapisywanie schematów XML  
- <xref:System.Xml.Schema.XmlSchema> Klasa udostępnia <xref:System.Xml.Schema.XmlSchema.Read%2A> i <xref:System.Xml.Schema.XmlSchema.Write%2A> metody na odczytywanie i zapisywanie schematów XML. <xref:System.Xml.Schema.XmlSchema.Read%2A> Metoda zwraca <xref:System.Xml.Schema.XmlSchema> obiekt reprezentujący schemat XML i przyjmuje opcjonalny <xref:System.Xml.Schema.ValidationEventHandler> jako parametr do obsługi schematu Walidacja ostrzeżeń i błędów napotkanych podczas odczytywania schematu XML.  
+ Klasa <xref:System.Xml.Schema.XmlSchema> udostępnia metody <xref:System.Xml.Schema.XmlSchema.Read%2A> i <xref:System.Xml.Schema.XmlSchema.Write%2A> do odczytywania i zapisywania schematów XML. Metoda <xref:System.Xml.Schema.XmlSchema.Read%2A> zwraca obiekt <xref:System.Xml.Schema.XmlSchema> reprezentujący schemat XML i przyjmuje opcjonalny <xref:System.Xml.Schema.ValidationEventHandler> jako parametr obsługujący ostrzeżenia i błędy walidacji schematu podczas odczytywania schematu XML.  
   
- <xref:System.Xml.Schema.XmlSchema.Write%2A> Metoda zapisuje schematów XML do <xref:System.IO.Stream>, <xref:System.IO.TextWriter> i <xref:System.Xml.XmlWriter> obiektów i może opcjonalnie <xref:System.Xml.XmlNamespaceManager> obiektu jako parametr. <xref:System.Xml.XmlNamespaceManager> Jest używana do obsługi przestrzeni nazw w schematu XML. Aby uzyskać więcej informacji na temat <xref:System.Xml.XmlNamespaceManager> klasy, zobacz [Zarządzanie przestrzeni nazw w dokumencie XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md).  
+ Metoda <xref:System.Xml.Schema.XmlSchema.Write%2A> zapisuje schematy XML do <xref:System.IO.Stream>, <xref:System.IO.TextWriter> i <xref:System.Xml.XmlWriter> obiektów i może przyjmować opcjonalny obiekt <xref:System.Xml.XmlNamespaceManager> jako parametr. <xref:System.Xml.XmlNamespaceManager> jest używany do obsługi przestrzeni nazw napotkanych w schemacie XML. Aby uzyskać więcej informacji na temat klasy <xref:System.Xml.XmlNamespaceManager>, zobacz [Zarządzanie przestrzeniami nazw w dokumencie XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md).  
   
- Poniższy przykład kodu ilustruje odczytywanie i zapisywanie schematów XML z i do pliku. Przykładowy kod pobiera `example.xsd` pliku odczytuje go do <xref:System.Xml.Schema.XmlSchema> przy użyciu `static` <xref:System.Xml.Schema.XmlSchema.Read%2A> metody, a następnie zapisuje plik do konsoli jak i nową `new.xsd` pliku. Udostępnia również przykładowy kod <xref:System.Xml.Schema.ValidationEventHandler> jako parametr do `static` <xref:System.Xml.Schema.XmlSchema.Read%2A> metody, aby obsłużyć schematu sprawdzania poprawności ostrzeżeń i błędów napotkanych podczas odczytywania schematu XML. Jeśli <xref:System.Xml.Schema.ValidationEventHandler> nie jest określony (`null`), żadne ostrzeżenia ani błędy są zgłaszane.  
+ Poniższy przykład kodu ilustruje odczytywanie i zapisywanie schematów XML z i do pliku. Przykładowy kod pobiera `example.xsd` plik, odczytuje go do obiektu <xref:System.Xml.Schema.XmlSchema> przy użyciu metody `static`<xref:System.Xml.Schema.XmlSchema.Read%2A>, a następnie zapisuje plik w konsoli programu i w nowym pliku `new.xsd`. Przykład kodu udostępnia również <xref:System.Xml.Schema.ValidationEventHandler> jako parametr metody `static`<xref:System.Xml.Schema.XmlSchema.Read%2A> do obsługi wszelkich ostrzeżeń lub błędów walidacji schematu podczas odczytywania schematu XML. Jeśli nie określono <xref:System.Xml.Schema.ValidationEventHandler> (`null`), nie są zgłaszane żadne ostrzeżenia ani błędy.  
   
  [!code-cpp[XmlSchemaReadWriteExample#1](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaReadWriteExample/CPP/XmlSchemaReadWriteExample.cpp#1)]
  [!code-csharp[XmlSchemaReadWriteExample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaReadWriteExample/CS/XmlSchemaReadWriteExample.cs#1)]

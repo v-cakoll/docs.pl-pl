@@ -3,13 +3,12 @@ title: Ciągła integracja (CI) z zestaw .NET Core SDK i narzędziami
 description: Dowiedz się, jak używać zestaw .NET Core SDK i narzędzi na serwerze kompilacji z ciągłą integracją.
 author: mairaw
 ms.date: 05/18/2017
-ms.custom: seodec18
-ms.openlocfilehash: 0f6049d1f2868ff330fd59c4f40e6c02231c6f71
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 65d062fce2f364932ebf8091bd9c6cdef561b633
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343538"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714116"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Używanie zestaw .NET Core SDK i narzędzi w ciągłej integracji (CI)
 

@@ -8,24 +8,23 @@ helpviewer_keywords:
 - errors [.NET Framework], exceptions
 - reporting errors
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
-author: KrzysztofCwalina
-ms.openlocfilehash: 60c3d25138c224f5eabf44d06b6c9a8373eb5f96
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b64b6052aeb99c6e878c1a9aac50e67bca7f8d2a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669059"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709377"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Wyjątki — zalecenia dotyczące projektowania
-Obsługa wyjątków ma wiele zalet za pośrednictwem raportowania błędów na podstawie wartości powrotu. Dobre framework projektu pomaga Deweloper aplikacji korzystać z zalet wyjątków. W tej sekcji omówiono korzyści wynikające z wyjątków i przedstawiono wskazówki dotyczące skutecznego korzystania z nich.  
+Obsługa wyjątków ma wiele zalet w porównaniu z raportowaniem błędów zwracających wartość. Dobry projekt platformy ułatwia deweloperom aplikacji wykorzystanie korzyści z wyjątków. W tej sekcji omówiono zalety wyjątków i przedstawiono wskazówki dotyczące efektywnego korzystania z nich.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Zgłaszanie wyjątku](../../../docs/standard/design-guidelines/exception-throwing.md)  
  [Używanie standardowych typów wyjątków](../../../docs/standard/design-guidelines/using-standard-exception-types.md)  
  [Wyjątki i wydajność](../../../docs/standard/design-guidelines/exceptions-and-performance.md)  
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

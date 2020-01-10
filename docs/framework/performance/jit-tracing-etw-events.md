@@ -5,14 +5,12 @@ helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975496"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716007"
 ---
 # <a name="jit-tracing-etw-events"></a>Zdarzenia ETW śledzenia JIT
 Te zdarzenia zbierają informacje dotyczące sukcesu lub niepowodzenia wywołań wywołania "just-in-Time (JIT) i" JIT ".
@@ -75,7 +73,7 @@ Te zdarzenia zbierają informacje dotyczące sukcesu lub niepowodzenia wywołań
 |InlineeNamespace|win: UnicodeString|Przestrzeń nazw międzywierszowego elementu.|  
 |InlineeName|win: UnicodeString|Metoda, którą kompilator próbuje wykonać w wierszu (nie generuje wywołania do).|  
 |InlineeNameSignature|win: UnicodeString|Podpis dla elementu inline.|  
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
 
 ## <a name="jit-tail-call-events"></a>Zdarzenia wywołania tail w trybie JIT  
   
@@ -107,7 +105,7 @@ Te zdarzenia zbierają informacje dotyczące sukcesu lub niepowodzenia wywołań
 |CalleeNameSignature|win: UnicodeString|Podpis dla elementu wywoływanego.|  
 |TailPrefix|win: wartość logiczna|Prefiks wywołania tail.|  
 |FailReason|win: UnicodeString|Przyczyna wywołania tail nie powiodła się.|  
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
 ### <a name="methodjittailcallsucceeded-event"></a>Zdarzenie MethodJITTailCallSucceeded  
  W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
@@ -137,7 +135,7 @@ Te zdarzenia zbierają informacje dotyczące sukcesu lub niepowodzenia wywołań
 |CalleeNameSignature|win: UnicodeString|Podpis dla elementu wywoływanego.|  
 |TailPrefix|win: wartość logiczna|Prefiks wywołania tail.|  
 |TailCallType|win: UnicodeString|Typ wywołania tail.|  
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
 ## <a name="see-also"></a>Zobacz także
 

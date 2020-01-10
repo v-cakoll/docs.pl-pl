@@ -1,6 +1,5 @@
 ---
 title: C# odwołanie wewnętrzne
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - internal_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: f72866cafbf291310d88fc6f18a5a15dc77c621d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: db653d0ed7f4835348484242b03392a8955c6392
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422729"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713427"
 ---
 # <a name="internal-c-reference"></a>internal (odwołanie w C#)
 Słowo kluczowe `internal` jest [modyfikatorem dostępu](./access-modifiers.md) dla typów i elementów członkowskich typu. 
@@ -93,7 +92,7 @@ Aby uzyskać więcej informacji, zobacz [zadeklarowane ułatwienia dostępu](~/_
   
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](./index.md)
 - [Modyfikatory dostępu](./access-modifiers.md)

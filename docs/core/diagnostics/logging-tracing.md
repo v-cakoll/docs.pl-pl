@@ -1,15 +1,13 @@
 ---
 title: Rejestrowanie i śledzenie — .NET Core
 description: Wprowadzenie do rejestrowania i śledzenia w programie .NET Core.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 46e64a7f60b88c26ceef9ac817be885bfa180c8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926355"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714420"
 ---
 # <a name="net-core-logging-and-tracing"></a>Rejestrowanie i śledzenie w programie .NET Core
 
@@ -29,7 +27,7 @@ Ta prosta technika jest Surprisingly zaawansowana. Może być używana w sytuacj
 
 ### <a name="print-style-apis"></a>Interfejsy API stylu drukowania
 
-Klasy <xref:System.Console?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace?displayProperty=nameWithType> i<xref:System.Diagnostics.Debug?displayProperty=nameWithType> , każdy udostępniają podobne interfejsy API stylu drukowania wygodne do rejestrowania.
+Klasy <xref:System.Console?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace?displayProperty=nameWithType>i <xref:System.Diagnostics.Debug?displayProperty=nameWithType> każdy oferują podobne interfejsy API stylu drukowania wygodne do rejestrowania.
 
 Wybór interfejsu API drukowania stylu do użycia. Kluczowe różnice są następujące:
 
@@ -38,13 +36,13 @@ Wybór interfejsu API drukowania stylu do użycia. Kluczowe różnice są nastę
   - Przydatne w przypadku informacji, które mogą być wymagane przez klienta w wersji.
   - Ponieważ jest to najprostszy sposób, często jest używany do tymczasowego debugowania ad hoc. Ten kod debugowania często nigdy nie jest sprawdzany w kontroli źródła.
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
-  - Włączone tylko wtedy `TRACE` , gdy jest zdefiniowany.
-  - Domyślnie zapisy do załączenia <xref:System.Diagnostics.Trace.Listeners>. <xref:System.Diagnostics.DefaultTraceListener>
+  - Włączone tylko wtedy, gdy `TRACE` jest zdefiniowany.
+  - Domyślnie <xref:System.Diagnostics.DefaultTraceListener>zapisu do dołączonego <xref:System.Diagnostics.Trace.Listeners>.
   - Użyj tego interfejsu API podczas tworzenia dzienników, które będą włączone w większości kompilacji.
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
-  - Włączone tylko wtedy `DEBUG` , gdy jest zdefiniowany.
+  - Włączone tylko wtedy, gdy `DEBUG` jest zdefiniowany.
   - Zapisuje do dołączonego debugera.
-  - Przy `*nix` zapisie do stderr `COMPlus_DebugWriteToStdErr` , jeśli jest ustawiona.
+  - W przypadku `*nix` zapisów do stderr, jeśli `COMPlus_DebugWriteToStdErr` jest ustawiony.
   - Użyj tego interfejsu API podczas tworzenia dzienników, które będą włączone tylko w kompilacjach debugowania.
 
 ### <a name="logging-events"></a>Rejestrowanie zdarzeń
@@ -64,7 +62,7 @@ Poniższe interfejsy API są bardziej zorientowane na zdarzenia. Zamiast rejestr
 - <xref:System.Diagnostics.DiagnosticSource?displayProperty=nameWithType>
   - Zawarte w oprogramowaniu .NET Core i jako [pakiet NuGet](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource) dla .NET Framework.
   - Umożliwia śledzenie w procesie obiektów, które nie są możliwe do serializacji.
-  - Zawiera mostek umożliwiający Zapisywanie wybranych pól zarejestrowanych obiektów w <xref:System.Diagnostics.Tracing.EventSource>usłudze.
+  - Zawiera mostek umożliwiający Zapisywanie wybranych pól zarejestrowanych obiektów w <xref:System.Diagnostics.Tracing.EventSource>.
 
 - <xref:System.Diagnostics.Activity?displayProperty=nameWithType>
   - Przedstawia ostateczny sposób identyfikowania komunikatów dziennika pochodzących z określonego działania lub transakcji. Ten obiekt może służyć do skorelowania dzienników w różnych usługach.
@@ -78,16 +76,16 @@ Poniższe interfejsy API są bardziej zorientowane na zdarzenia. Zamiast rejestr
 
 Interfejsy API niskiego poziomu mogą nie być właściwym wyborem dla potrzeb rejestrowania. Warto rozważyć strukturę rejestrowania.
 
-<xref:Microsoft.Extensions.Logging.ILogger> Interfejs został użyty do utworzenia wspólnego interfejsu rejestrowania, w którym rejestratory mogą być wstawiane przez iniekcję zależności.
+Interfejs <xref:Microsoft.Extensions.Logging.ILogger> został użyty do utworzenia wspólnego interfejsu rejestrowania, w którym rejestratory mogą być wstawiane przez iniekcję zależności.
 
-Na przykład, aby umożliwić wybranie najlepszego wyboru dla aplikacji `ASP.NET` , oferuje obsługę wybranych platform wbudowanych i innych firm:
+Na przykład, aby umożliwić wybranie najlepszego wyboru dla aplikacji `ASP.NET` oferuje obsługę wybranych platform wbudowanych i innych firm:
 
 - [ASP.NET wbudowane dostawcy rejestrowania](/aspnet/core/fundamentals/logging/#built-in-logging-providers)
 - [ASP.NET dostawców rejestrowania innych firm](/aspnet/core/fundamentals/logging/#third-party-logging-providers)
 
 ## <a name="logging-related-references"></a>Rejestrowanie powiązanych odwołań
 
-- [Instrukcje: Kompiluj warunkowo z użyciem śledzenia i debugowania](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Instrukcje: Kompilowanie warunkowe ze śledzeniem i debugowaniem](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 
 - [Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 
@@ -95,9 +93,9 @@ Na przykład, aby umożliwić wybranie najlepszego wyboru dla aplikacji `ASP.NET
 
 - Interpolacja ciągów może uprościć pisanie kodu rejestrowania. [ C# ](../../csharp/language-reference/tokens/interpolated.md)
 
-- <xref:System.Exception.Message?displayProperty=nameWithType> Właściwość jest przydatna do rejestrowania wyjątków.
+- Właściwość <xref:System.Exception.Message?displayProperty=nameWithType> jest przydatna do rejestrowania wyjątków.
 
-- <xref:System.Diagnostics.StackTrace?displayProperty=nameWithType> Klasa może być przydatna do dostarczania informacji o stosie w dziennikach.
+- Klasa <xref:System.Diagnostics.StackTrace?displayProperty=nameWithType> może być przydatna do dostarczania informacji o stosie w dziennikach.
 
 ## <a name="performance-considerations"></a>Zagadnienia dotyczące wydajności
 

@@ -1,6 +1,5 @@
 ---
 title: klauzula Let- C# Reference
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - let_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - let keyword [C#]
 - let clause [C#]
 ms.assetid: 13c9c1a4-ce57-48ef-8e1b-4c2a59b99fb4
-ms.openlocfilehash: df3df279d2dbdb59a0a94d9afad37d1a7ddf7b57
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 32bb5d2138c0b86bf58d26015aa208f655229129
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422699"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715226"
 ---
 # <a name="let-clause-c-reference"></a>Klauzula Let (odwołanie w C#)
 
@@ -32,7 +31,7 @@ W poniższym przykładzie `let` jest używany na dwa sposoby:
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwoła](../../language-reference/index.md)
+- [Dokumentacja języka C#](../../language-reference/index.md)
 - [Słowa kluczowe zapytania (LINQ)](query-keywords.md)
 - [Language Integrated Query (LINQ)](../../linq/index.md)
 - [Wprowadzenie do korzystania z LINQ w C#](/dotnet/csharp/programming-guide/concepts/linq/)

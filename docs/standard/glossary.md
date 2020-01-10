@@ -3,12 +3,12 @@ title: Słownik platformy .NET
 description: Sprawdź znaczenie wybranych terminów używanych w dokumentacji programu .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9bca68753a93721e48d1ff90aa7baf3a147da0ee
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929079"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708207"
 ---
 # <a name="net-glossary"></a>Słownik platformy .NET
 
@@ -22,7 +22,7 @@ Podobnie jak w przypadku [JIT](#jit), ten kompilator tłumaczy również [Il](#i
 
 Zobacz [CoreRT](#corert) i [.NET Native](#net-native).
 
-## <a name="aspnet"></a>ASP.NET 
+## <a name="aspnet"></a>Platforma ASP.NET 
 
 Oryginalna implementacja ASP.NET, która jest dostarczana z .NET Framework.
 
@@ -58,7 +58,7 @@ To środowisko CLR jest zbudowane z tej samej bazy kodu, co środowisko CLR. Pie
 
 Podstawowa Biblioteka klas .NET Core (BCL)
 
-Przestrzenie nazw zestawu, biblioteki, które tworzą Microsoft. i System.* (a w ograniczonym zakresie Microsoft.*). BCL jest ogólnym celem, na niższym poziomie, które platformy aplikacji wyższego poziomu, takie jak ASP.NET Core, Kompiluj na. Kod źródłowy programu .NET Core BCL jest zawarty w [repozytorium CoreFX](https://github.com/dotnet/corefx). Jednak większość interfejsów API platformy .NET Core jest również dostępna w .NET Framework, więc można traktować CoreFX jako rozwidlenie .NET Framework BCL.
+Zestaw bibliotek, które składają się na system.\* (i do ograniczonego zakresu przestrzeni nazw Microsoft.\*). BCL jest ogólnym celem, na niższym poziomie, które platformy aplikacji wyższego poziomu, takie jak ASP.NET Core, Kompiluj na. Kod źródłowy programu .NET Core BCL jest zawarty w [repozytorium środowiska uruchomieniowego platformy .NET Core](https://github.com/dotnet/runtime). Jednak większość interfejsów API platformy .NET Core jest również dostępna w .NET Framework, więc można traktować CoreFX jako rozwidlenie .NET Framework BCL.
 
 ## <a name="corert"></a>CoreRT
 
@@ -66,13 +66,13 @@ Przestrzenie nazw zestawu, biblioteki, które tworzą Microsoft. i System.* (a w
 
 W przeciwieństwie do środowiska CLR/CoreCLR, CoreRT nie jest maszyną wirtualną, co oznacza, że nie obejmuje ona obiektów do generowania i uruchamiania kodu na bieżąco, ponieważ nie zawiera on [JIT](#jit). Zawiera on jednak funkcję [GC](#gc) i możliwość identyfikacji typu czasu wykonywania (RTTI) i odbicie. Jednak jego system typów został zaprojektowany tak, aby metadane odbicia nie były wymagane. Umożliwia to korzystanie z łańcucha narzędzi [AOT](#aot) , który może łączyć zbędne metadane i (dokładniej) identyfikować kod nieużywany przez aplikację. CoreRT jest w trakcie opracowywania.
 
-Zobacz [wprowadzenie do .NET Native i CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
+Zapoznaj [się z wprowadzeniem do .NET Native i CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md).
 
 ## <a name="cross-platform"></a>na wiele platform
 
 Możliwość tworzenia i uruchamiania aplikacji, która może być używana w wielu różnych systemach operacyjnych, takich jak Linux, Windows i iOS, bez konieczności ponownego pisania dla każdej z nich. Umożliwia to ponowne użycie kodu i spójność między aplikacjami na różnych platformach.
 
-## <a name="ecosystem"></a>Uwolnieni
+## <a name="ecosystem"></a>uwolnieni
 
 Wszystkie oprogramowanie środowiska uruchomieniowego, narzędzia programistyczne i zasoby społeczności, które są używane do kompilowania i uruchamiania aplikacji dla danej technologii.
 
@@ -118,7 +118,7 @@ Implementacja programu .NET obejmuje następujące elementy:
 
 - Co najmniej jedno środowisko uruchomieniowe. Przykłady: CLR, CoreCLR, CoreRT.
 - Biblioteka klas implementująca wersję .NET Standard i może zawierać dodatkowe interfejsy API. Przykłady: .NET Framework podstawowa Biblioteka klas, podstawowa Biblioteka klas .NET Core.
-- Opcjonalnie co najmniej jedna struktura aplikacji. Przykłady: W .NET Framework znajdują się ASP.NET, Windows Forms i WPF.
+- Opcjonalnie co najmniej jedna struktura aplikacji. Przykłady: ASP.NET, Windows Forms i WPF są zawarte w .NET Framework.
 - Opcjonalnie narzędzia programistyczne. Niektóre narzędzia programistyczne są współużytkowane przez wiele implementacji.
 
 Przykłady implementacji platformy .NET:
@@ -169,7 +169,7 @@ Międzyplatformowe łańcucha narzędzi do tworzenia aplikacji platformy .NET Co
 
 Zobacz [Narzędzia interfejsu wiersza polecenia platformy .NET Core](../core/tools/index.md).
 
-## <a name="net-core-sdk"></a>zestaw .NET Core SDK
+## <a name="net-core-sdk"></a>Zestaw .NET Core SDK
 
 Zestaw bibliotek i narzędzi umożliwiających deweloperom tworzenie aplikacji i bibliotek platformy .NET Core. Zawiera [interfejs wiersza polecenia platformy .NET Core](#net-core-cli) do kompilowania aplikacji, bibliotek .NET Core i środowiska uruchomieniowego na potrzeby kompilowania i uruchamiania aplikacji oraz plików wykonywalnych dotnet (*dotnet. exe*), które uruchamiają polecenia CLI i uruchamiają aplikacje.
 
@@ -205,9 +205,9 @@ Generowanie natywne (obraz).
 
 Tę technologię można traktować jako trwały kompilator JIT. Zwykle kompiluje kod na komputerze, na którym wykonywany jest kod, ale kompilacja zwykle występuje w czasie instalacji.
 
-## <a name="package"></a>Package
+## <a name="package"></a>Pakiet
 
-Pakiet &mdash; NuGet lub tylko pakiet &mdash; to plik *. zip* z co najmniej jednym zestawem o tej samej nazwie wraz z dodatkowymi metadanymi, takimi jak nazwa autora.
+Pakiet NuGet &mdash; lub tylko pakiet &mdash; to plik *. zip* z co najmniej jednym zestawem o tej samej nazwie wraz z dodatkowymi metadanymi, takimi jak nazwa autora.
 
 Plik *. zip* ma rozszerzenie *. nupkg* i może zawierać elementy zawartości, takie jak pliki *. dll* i pliki *. XML* , do użycia z wieloma platformami i wersjami docelowymi. Po zainstalowaniu w aplikacji lub bibliotece odpowiednie zasoby są wybierane na podstawie platformy docelowej określonej przez aplikację lub bibliotekę. Elementy zawartości definiujące interfejs znajdują się w folderze *ref* , a zasoby, które definiują implementację, znajdują się w folderze *lib* .
 
@@ -261,15 +261,15 @@ Zobacz [platformę docelową](frameworks.md).
 
 Moniker platformy docelowej.
 
-Standardowy format tokenu służący do określania docelowej platformy aplikacji lub biblioteki platformy .NET. Struktury docelowe są zwykle przywoływane przez krótką nazwę, na `net462`przykład. Long-form TFMs (na przykład. NETFramework, Version = 4.6.2) istnieje, ale nie są zwykle używane do określania platformy docelowej.
+Standardowy format tokenu służący do określania docelowej platformy aplikacji lub biblioteki platformy .NET. Struktury docelowe są zwykle przywoływane przez krótką nazwę, taką jak `net462`. Long-form TFMs (na przykład. NETFramework, Version = 4.6.2) istnieje, ale nie są zwykle używane do określania platformy docelowej.
 
 Zobacz [platformę docelową](frameworks.md).
 
 ## <a name="uwp"></a>Platforma UWP
 
-Platforma uniwersalna systemu Windows.
+platforma uniwersalna systemu Windows.
 
-Implementacja platformy .NET, która jest używana do tworzenia nowoczesnych aplikacji i oprogramowania systemu Windows z obsługą dotykową dla Internet rzeczy (IoT). Ma ona na celu ujednolicenie różnych typów urządzeń, które mogą być ukierunkowane, w tym komputerów, tabletów, phablets, telefonów, a nawet z konsoli Xbox. Usługa platformy UWP udostępnia wiele usług, takich jak scentralizowany magazyn aplikacji, środowisko wykonawcze i zestaw interfejsów API systemu Windows, które mają być używane zamiast Win32 (WinRT). Aplikacje mogą być zapisywane w C++, C#, VB.NET i JavaScript. W przypadku C# używania i VB.NET interfejsy API platformy .NET są udostępniane przez platformę .NET Core.
+Implementacja platformy .NET, która jest używana do tworzenia nowoczesnych aplikacji i oprogramowania systemu Windows z obsługą dotykową dla Internet rzeczy (IoT). Ma ona na celu ujednolicenie różnych typów urządzeń, które mogą być ukierunkowane, w tym komputerów, tabletów, phablets, telefonów, a nawet z konsoli Xbox. Usługa platformy UWP udostępnia wiele usług, takich jak scentralizowany magazyn aplikacji, środowisko wykonawcze i zestaw interfejsów API systemu Windows, które mają być używane zamiast Win32 (WinRT). Aplikacje mogą być zapisywane w C++, C#, Visual Basic i JavaScript. W przypadku C# korzystania z i Visual Basic interfejsy API platformy .NET są udostępniane przez platformę .NET Core.
 
 ## <a name="see-also"></a>Zobacz także
 

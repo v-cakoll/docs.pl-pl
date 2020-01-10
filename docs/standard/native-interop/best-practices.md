@@ -1,15 +1,13 @@
 ---
 title: Najlepsze praktyki dotyczące natywnego współdziałania — platforma .NET
 description: Poznaj najlepsze rozwiązania dotyczące współkorzystania ze składnikami macierzystymi w programie .NET.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 0405fd5aef9d89fc1f47123ed358e6358656d95b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7fe0dd0545f8ba800174f8be18bb2f11f39463f9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923769"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706403"
 ---
 # <a name="native-interoperability-best-practices"></a>Najlepsze rozwiązania w zakresie współdziałania natywnego
 
@@ -21,11 +19,11 @@ Wskazówki zawarte w tej sekcji dotyczą wszystkich scenariuszy międzyoperacyjn
 
 - **✔️** Użyj tej samej nazwy i wielkości liter dla metod i parametrów jako metody natywnej, którą chcesz wywołać.
 - **✔️ rozważyć** użycie tego samego nazewnictwa i wielkich liter w przypadku wartości stałych.
-- **✔️** Użyj typów .NET, które są mapowane bliżej typu natywnego. Na przykład, w C#, użyj `uint` , gdy typem natywnym `unsigned int`jest.
-- **✔️ są** używane `[In]` i `[Out]` atrybuty tylko wtedy, gdy zachowanie jest inne niż domyślne zachowanie.
-- **✔️ rozważyć** użycie <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> usługi do puli natywnych buforów tablicowych.
+- **✔️** Użyj typów .NET, które są mapowane bliżej typu natywnego. Na przykład, w C#, użyj `uint`, gdy typ natywny jest `unsigned int`.
+- **✔️** należy używać atrybutów `[In]` i `[Out]` tylko wtedy, gdy zachowanie ma być różne od zachowania domyślnego.
+- **✔️ rozważyć** użycie <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> do puli natywnych buforów tablicowych.
 - **✔️ Rozważ** zapakowanie deklaracji P/Invoke w klasie o tej samej nazwie i wielkości liter jako biblioteki natywnej.
-  - Dzięki `[DllImport]` temu atrybuty mogą C# `nameof` korzystać z funkcji języka w celu przekazania nazwy biblioteki natywnej i upewnienia się, że nie jest ona błędną nazwą biblioteki natywnej.
+  - Dzięki temu atrybuty `[DllImport]` mogą używać funkcji języka C# `nameof` do przekazywania nazwy biblioteki natywnej i upewnienia się, że nie jest ona błędną nazwą biblioteki natywnej.
 
 ## <a name="dllimport-attribute-settings"></a>Ustawienia atrybutów DllImport
 
@@ -33,58 +31,58 @@ Wskazówki zawarte w tej sekcji dotyczą wszystkich scenariuszy międzyoperacyjn
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Zachowaj domyślne  | Jeśli ta opcja jest jawnie ustawiona na false, Niepowodzenie zwracanych wartości HRESULT spowoduje włączenie wyjątków (a wartość zwracana w definicji zmieni się na wartość null).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | zależy od interfejsu API  | Ustaw tę wartość na true, jeśli interfejs API używa wartości GetLastError i użyj Marshal. metodę GetLastWin32Error, aby pobrać wartość. Jeśli interfejs API ustawi warunek informujący o błędzie, należy uzyskać błąd przed wywołaniem innych wywołań, aby uniknąć niezamierzonego nadpisania.|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`, która powraca do `CharSet.Ansi` zachowania  | Jawne użycie `CharSet.Unicode` lub `CharSet.Ansi` gdy ciągi lub znaki są obecne w definicji | Określa to kierowanie zachowania ciągów i to, `ExactSpelling` co `false`robi. Pamiętaj, `CharSet.Ansi` że jest to w rzeczywistości UTF8 w systemie UNIX. _Większość_ czasu Windows używa standardu Unicode, podczas gdy w systemie UNIX używa kodowania UTF8. Więcej informacji na temat zestawów [znaków](./charset.md)można znaleźć w dokumentacji. |
-| <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Ustaw tę wartość na true i uzyskaj niewielką korzyść w zakresie wydajności, ponieważ środowisko uruchomieniowe nie będzie szukać alternatywnych nazw funkcji z sufiksem "a" lub "w" w zależności od wartości `CharSet` ustawienia ("a" dla `CharSet.Ansi` i "w" dla `CharSet.Unicode`). |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`, które powracają do zachowania `CharSet.Ansi`  | Jawnie używaj `CharSet.Unicode` lub `CharSet.Ansi`, gdy ciągi lub znaki są obecne w definicji | Pozwala to na kierowanie zachowaniem ciągów i jakie `ExactSpelling` w przypadku `false`. Należy pamiętać, że `CharSet.Ansi` jest w rzeczywistości UTF8 w systemie UNIX. _Większość_ czasu Windows używa standardu Unicode, podczas gdy w systemie UNIX używa kodowania UTF8. Więcej informacji na temat zestawów [znaków](./charset.md)można znaleźć w dokumentacji. |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Ustaw tę wartość na true i uzyskaj niewielką korzyść w zakresie wydajności, ponieważ środowisko uruchomieniowe nie będzie szukać alternatywnych nazw funkcji z sufiksem "A" lub "W" w zależności od wartości ustawienia `CharSet` ("A" dla `CharSet.Ansi` i "W" dla `CharSet.Unicode`). |
 
 ## <a name="string-parameters"></a>Parametry ciągu
 
-Gdy zestaw znaków jest Unicode lub argument jest jawnie `[MarshalAs(UnmanagedType.LPWSTR)]` oznaczony jako _i_ ciąg jest przenoszona przez wartość (not `ref` lub `out`), ciąg zostanie przypięty i użyty bezpośrednio przez kod natywny (zamiast kopiować).
+Gdy zestaw znaków jest Unicode lub argument jest jawnie oznaczony jako `[MarshalAs(UnmanagedType.LPWSTR)]` _i_ ciąg jest przenoszona przez wartość (nie `ref` lub `out`), ciąg zostanie przypięty i użyty bezpośrednio przez kod natywny (a nie skopiowany).
 
-Pamiętaj, `[DllImport]` aby oznaczyć element `Charset.Unicode` jako, chyba że jawnie zachodzi konieczność traktowania ciągów znaków ANSI.
+Pamiętaj, aby oznaczyć `[DllImport]` jako `Charset.Unicode`, chyba że jawnie ma być to zgodne z ANSI.
 
-**❌ Nie** używać `[Out] string` parametrów. Parametry ciągu przesłane przez wartość z `[Out]` atrybutem mogą destabilizację środowiska uruchomieniowego, jeśli ciąg jest ciągiem z stażystami. Zobacz więcej informacji na temat sposobu informowania o ciągach w dokumentacji dotyczącej programu <xref:System.String.Intern%2A?displayProperty=nameWithType>.
+**❌ nie** używać `[Out] string` parametrów. Parametry ciągu przesłane przez wartość z atrybutem `[Out]` mogą destabilizację środowiska uruchomieniowego, jeśli ciąg jest ciągiem z stażystami. Zobacz więcej informacji na temat sposobu informowania o ciągach w dokumentacji dotyczącej <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-**❌ Unikać** `StringBuilder` parametry. `StringBuilder`kierowanie *zawsze* tworzy natywną kopię buforu. W związku z tym może być wyjątkowo niewydajne. Zapoznaj się z typowym scenariuszem wywoływania interfejsu API systemu Windows, który pobiera ciąg:
+**❌ uniknąć** `StringBuilder` parametrów. kierowanie `StringBuilder` *zawsze* tworzy natywną kopię buforu. W związku z tym może być wyjątkowo niewydajne. Zapoznaj się z typowym scenariuszem wywoływania interfejsu API systemu Windows, który pobiera ciąg:
 
 1. Utwórz SB o żądanej pojemności (przydzieli zarządzaną pojemność) **{1}**
-2. wywoływanie
-   1. Przydziela bufor natywny **{2}**  
-   2. Kopiuje zawartość, jeśli `[In]` _( `StringBuilder` wartość domyślna parametru)_  
-   3. Kopiuje bufor macierzysty do nowo przydzielonej tablicy zarządzanej, jeśli `[Out]` **{3}** _(również `StringBuilder`domyślnie dla)_  
-3. `ToString()`alokuje jeszcze inną zarządzaną tablicę **{4}**
+2. Wywołanie
+   1. Przypisuje natywny bufor **{2}**  
+   2. Kopiuje zawartość, jeśli `[In]` _(wartość domyślna dla parametru `StringBuilder`)_  
+   3. Kopiuje bufor macierzysty do nowo przydzielonej tablicy zarządzanej, jeśli `[Out]` **{3}** _(domyślnie `StringBuilder`)_  
+3. `ToString()` alokuje jeszcze inną zarządzaną tablicę **{4}**
 
-Jest to *{4}* alokacje w celu pobrania ciągu z kodu natywnego. Najlepszym rozwiązaniem jest to, aby ograniczyć to użycie w innym wywołaniu `StringBuilder` , ale nadal tylko *1* przydział. Znacznie lepiej jest używać bufora `ArrayPool`znaków i pamięci podręcznej, a następnie można przejść do przydziału `ToString()` dla kolejnych wywołań.
+Jest to *{4}* alokacji, aby uzyskać ciąg z kodu natywnego. Najlepszym rozwiązaniem jest to, aby ograniczyć to użycie `StringBuilder` w innym wywołaniu, ale nadal tylko *1* przydział. Znacznie lepiej jest używać pamięci podręcznej i bufora znaków z `ArrayPool`— możesz następnie uzyskać dostęp do przydziału dla `ToString()` przy kolejnych wywołaniach.
 
-Innym problemem `StringBuilder` jest to, że zawsze kopiuje kopię zapasową buforu powrotu do pierwszej wartości null. Jeśli przeszedł ciąg zakończony nieprzerwanie lub jest ciągiem o podwójnej wartości null, element P/Invoke jest niewłaściwy.
+Innym problemem związanym z `StringBuilder` jest to, że zawsze kopiuje kopię zapasową buforu powrotu do pierwszej wartości null. Jeśli przeszedł ciąg zakończony nieprzerwanie lub jest ciągiem o podwójnej wartości null, element P/Invoke jest niewłaściwy.
 
-W `StringBuilder`przypadku *korzystania z* programu Gotcha, że pojemność nie obejmuje ukrytych wartości null, które zawsze **są uwzględniane w** ramach międzyoperacyjności. Jest to często używane w przypadku, gdy większość interfejsów API ma rozmiar buforu, *łącznie* z wartością null. Może to spowodować marnowanie/niepotrzebne alokacje. Ponadto ta Gotcha uniemożliwia środowisko uruchomieniowe optymalizacji `StringBuilder` organizowania, aby zminimalizować kopie.
+Jeśli używasz *`StringBuilder`* , Gotcha, że pojemność nie obejmuje ukrytych wartości null, które zawsze **są uwzględniane w** przypadku współdziałania. Jest to często używane w przypadku, gdy większość interfejsów API ma rozmiar buforu, *łącznie* z wartością null. Może to spowodować marnowanie/niepotrzebne alokacje. Ponadto ta Gotcha uniemożliwia środowisko uruchomieniowe przed optymalizacją `StringBuilder` organizowania, aby zminimalizować kopie.
 
 **✔️ rozważyć** użycie `char[]`s z `ArrayPool`.
 
 Aby uzyskać więcej informacji na temat organizowania ciągów, zobacz [domyślne kierowanie dla ciągów](../../framework/interop/default-marshaling-for-strings.md) i [Dostosowywanie organizowania ciągów](customize-parameter-marshaling.md#customizing-string-parameters).
 
 > __Specyficzne dla systemu Windows__  
-> Dla `[Out]` ciągów, które domyślnie są `CoTaskMemFree` używane przez środowisko CLR do zwalniania ciągów lub `SysStringFree` ciągów, które `UnmanagedType.BSTR`są oznaczone jako.  
+> W przypadku ciągów `[Out]` CLR będzie używać `CoTaskMemFree` domyślnie do zwalniania ciągów lub `SysStringFree` dla ciągów, które są oznaczone jako `UnmanagedType.BSTR`.  
 **W przypadku większości interfejsów API z buforem ciągu wyjściowego:**  
 > Liczba przesłanych znaków musi zawierać wartość null. Jeśli zwracana wartość jest mniejsza niż przekazana liczba znaków, wywołanie zakończyło się pomyślnie, a wartość jest liczbą znaków *bez* końcowej wartości null. W przeciwnym razie liczba jest wymaganym rozmiarem bufora, w *tym* znakiem null.  
 >
-> - Przekaż 5, Pobierz 4: Ciąg zawiera 4 znaki o długości końcowej null.
-> - Przekaż 5, Pobierz 6: Ciąg ma długość 5 znaków, a potrzeba przechowania wartości null w buforze zawierającym 6 znaków.  
+> - Przekaż 5, Pobierz 4: ciąg zawiera 4 znaki o długości końcowej null.
+> - Przekaż 5, get 6: ciąg ma długość 5 znaków, do przechowywania wartości null potrzebny jest rozmiar buforu znaków.  
 > [Typy danych systemu Windows dla ciągów](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>Parametry i pola logiczne
 
-Wartości logiczne są łatwe w obsłudze. Domyślnie środowisko .NET `bool` jest organizowane w systemie Windows `BOOL`, gdzie jest wartością 4-bajtową. Jednak, i `bool` typy w C i C++ są *pojedynczym* bajtem. `_Bool` Może to prowadzić do trudnej śledzenia błędów w postaci połowy wartości zwracanej zostanie odrzucone, co *spowoduje jedynie zmianę* wyniku. Aby uzyskać więcej informacji o kierowaniu wartości `bool` .NET do języka C C++ `bool` lub typów, zobacz dokumentację dotyczącą [dostosowywania kierowania pól logicznych](customize-struct-marshaling.md#customizing-boolean-field-marshaling).
+Wartości logiczne są łatwe w obsłudze. Domyślnie program .NET `bool` jest kierowany do `BOOL`systemu Windows, gdzie jest wartością 4-bajtową. Jednak `_Bool`i typy `bool` w C i C++ są *pojedynczym* bajtem. Może to prowadzić do trudnej śledzenia błędów w postaci połowy wartości zwracanej zostanie odrzucone, co *spowoduje jedynie zmianę* wyniku. Aby uzyskać więcej informacji o kierowaniu wartości `bool` .NET do typów C C++ lub `bool`, zobacz dokumentację dotyczącą [dostosowywania kierowania pól logicznych](customize-struct-marshaling.md#customizing-boolean-field-marshaling).
 
 ## <a name="guids"></a>Identyfikatory GUID
 
-Identyfikatory GUID można używać bezpośrednio w sygnaturach. Wiele interfejsów API `GUID&` systemu Windows korzysta z `REFIID`aliasów typu, takich jak. Gdy są przesyłane przez odwołanie, mogą być przesyłane przez `ref` lub `[MarshalAs(UnmanagedType.LPStruct)]` z atrybutem.
+Identyfikatory GUID można używać bezpośrednio w sygnaturach. Wiele interfejsów API systemu Windows przyjmuje aliasy typu `GUID&`, takie jak `REFIID`. Gdy są przesyłane przez odwołanie, mogą być przesyłane przez `ref` lub z atrybutem `[MarshalAs(UnmanagedType.LPStruct)]`.
 
 | Identyfikator GUID | Według-ref — identyfikator GUID |
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-**❌ nie** Używać `[MarshalAs(UnmanagedType.LPStruct)]` dla elementów innych niż `ref` parametry GUID.
+**❌ nie** Użyj `[MarshalAs(UnmanagedType.LPStruct)]` dla wszystkich innych niż `ref` parametrów GUID.
 
 ## <a name="blittable-types"></a>Typy danych kopiowalnych
 
@@ -95,8 +93,8 @@ Typy danych kopiowalnych są typami, które mają taką samą reprezentację na 
 - `byte`, `sbyte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `single`, `double`
 - niezagnieżdżone tablice jednowymiarowe typów danych kopiowalnych (na przykład `int[]`)
 - struktury i klasy ze stałym układem, które mają tylko typy wartości danych kopiowalnych dla pól wystąpień
-  - układ stały wymaga `[StructLayout(LayoutKind.Sequential)]` lub`[StructLayout(LayoutKind.Explicit)]`
-  - struktury są `LayoutKind.Sequential` domyślnie, klasy są`LayoutKind.Auto`
+  - stały układ wymaga `[StructLayout(LayoutKind.Sequential)]` lub `[StructLayout(LayoutKind.Explicit)]`
+  - struktury są domyślnie `LayoutKind.Sequential`, klasy są `LayoutKind.Auto`
 
 **NIE danych kopiowalnych:**
 
@@ -106,9 +104,9 @@ Typy danych kopiowalnych są typami, które mają taką samą reprezentację na 
 
 - `char`, `string`
 
-Gdy typy danych kopiowalnych są przesyłane przez odwołanie, są one po prostu przypięte przez organizatora, zamiast kopiować do buforu pośredniego. (Klasy są z założenia przesyłane przez odwołanie, struktury są przesyłane przez odwołanie, gdy jest `ref` używany `out`z lub).
+Gdy typy danych kopiowalnych są przesyłane przez odwołanie, są one po prostu przypięte przez organizatora, zamiast kopiować do buforu pośredniego. (Klasy są z założenia przesyłane przez odwołanie, struktury są przesyłane przez odwołanie, gdy są używane z `ref` lub `out`.)
 
-`char`jest danych kopiowalnych w tablicy jednowymiarowej **lub** , jeśli jest częścią typu, który zawiera, jest jawnie oznaczona `[StructLayout]` przy użyciu. `CharSet = CharSet.Unicode`
+`char` jest danych kopiowalnych w tablicy jednowymiarowej **lub** , jeśli jest częścią typu, który zawiera go jawnie oznaczone `[StructLayout]` z `CharSet = CharSet.Unicode`.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
@@ -118,9 +116,9 @@ public struct UnicodeCharStruct
 }
 ```
 
-`string`jest danych kopiowalnych, jeśli nie jest zawarty w innym typie i jest przenoszona jako argument, który jest oznaczony za `[MarshalAs(UnmanagedType.LPWStr)]` pomocą `[DllImport]` lub ma `CharSet = CharSet.Unicode` ustawioną wartość.
+`string` jest danych kopiowalnych, jeśli nie jest zawarty w innym typie i jest przenoszona jako argument, który jest oznaczony za pomocą `[MarshalAs(UnmanagedType.LPWStr)]` lub `[DllImport]` ma `CharSet = CharSet.Unicode` ustawiony.
 
-Możesz sprawdzić, czy typ to danych kopiowalnych, próbując utworzyć przypięty `GCHandle`. Jeśli typ nie jest ciągiem lub jest traktowany jako `GCHandle.Alloc` danych kopiowalnych, zostanie `ArgumentException`zgłoszony.
+Możesz sprawdzić, czy typ to danych kopiowalnych, próbując utworzyć przypiętą `GCHandle`. Jeśli typ nie jest ciągiem lub jest traktowany jako danych kopiowalnych, `GCHandle.Alloc` generuje `ArgumentException`.
 
 **✔️** , gdy to możliwe, danych kopiowalnych struktury.
 
@@ -131,11 +129,11 @@ Aby uzyskać więcej informacji, zobacz:
 
 ## <a name="keeping-managed-objects-alive"></a>Utrzymywanie aktywności obiektów zarządzanych
 
-`GC.KeepAlive()`Upewnij się, że obiekt pozostaje w zakresie, dopóki nie zostanie osiągnięta Metoda utrzymywania aktywności.
+`GC.KeepAlive()` sprawdzi, czy obiekt pozostaje w zakresie, dopóki nie zostanie osiągnięta Metoda utrzymywania aktywności.
 
-[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef)umożliwia Organizatorowi utrzymywanie obiektu na czas trwania elementu P/Invoke. Może być używany zamiast `IntPtr` podpisów metod. `SafeHandle`efektywnie zastępuje tę klasę i powinny być używane zamiast tego.
+[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef) umożliwia Organizatorowi utrzymywanie obiektu na czas trwania elementu P/Invoke. Można go użyć zamiast `IntPtr` w sygnaturach metod. `SafeHandle` efektywnie zamienia tę klasę i powinna być używana zamiast tego.
 
-[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle)umożliwia Przypinanie obiektu zarządzanego i uzyskanie wskaźnika natywnego do niego. Wzorzec podstawowy to:  
+[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle) umożliwia Przypinanie obiektu zarządzanego i uzyskanie wskaźnika natywnego do niego. Wzorzec podstawowy to:  
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj, GCHandleType.Pinned);
@@ -143,7 +141,7 @@ IntPtr ptr = handle.AddrOfPinnedObject();
 handle.Free();
 ```
 
-Przypinanie nie jest domyślne `GCHandle`dla elementu. Inny wzorzec główny polega na przekazaniu odwołania do zarządzanego obiektu za pomocą kodu natywnego i z powrotem do kodu zarządzanego, zazwyczaj przy użyciu wywołania zwrotnego. Oto wzorzec:
+Przypinanie nie jest domyślne dla `GCHandle`. Inny wzorzec główny polega na przekazaniu odwołania do zarządzanego obiektu za pomocą kodu natywnego i z powrotem do kodu zarządzanego, zazwyczaj przy użyciu wywołania zwrotnego. Oto wzorzec:
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj);
@@ -157,7 +155,7 @@ object managedObject = handle.Target;
 handle.Free();
 ```
 
-Nie zapomnij `GCHandle` , że musi być jawnie zwolnione, aby uniknąć przecieków pamięci.
+Nie zapomnij, że `GCHandle` muszą być jawnie zwolnione, aby uniknąć przecieków pamięci.
 
 ## <a name="common-windows-data-types"></a>Typowe typy danych systemu Windows
 
@@ -165,7 +163,7 @@ Poniżej znajduje się lista typów danych używanych w interfejsach API systemu
 
 Następujące typy są takie same, jak w przypadku systemu Windows 32-bitowego i 64-bitowego, niezależnie od ich nazw.
 
-| Szerokość | Windows          | C (Windows)          | C#       | Różne                          |
+| Szerokość | Windows          | C (Windows)          | Język C#       | Różne                          |
 |:------|:-----------------|:---------------------|:---------|:-------------------------------------|
 | 32    | `BOOL`           | `int`                | `int`    | `bool`                               |
 | 8     | `BOOLEAN`        | `unsigned char`      | `byte`   | `[MarshalAs(UnmanagedType.U1)] bool` |
@@ -189,9 +187,9 @@ Następujące typy są takie same, jak w przypadku systemu Windows 32-bitowego i
 | 32    | `HRESULT`        | `long`               | `int`    |                                      |
 | 32    | `NTSTATUS`       | `long`               | `int`    |                                      |
 
-Następujące typy, które są wskaźnikami, są zgodne z szerokością platformy. Użyj `IntPtr` / tego elementu`UIntPtr` .
+Następujące typy, które są wskaźnikami, są zgodne z szerokością platformy. Użyj `IntPtr`/`UIntPtr`.
 
-| Typy wskaźników ze znakiem `IntPtr`(Użyj) | Niepodpisane typy wskaźnika ( `UIntPtr`Użyj) |
+| Typy wskaźników ze znakiem (Użyj `IntPtr`) | Niepodpisane typy wskaźnika (Użyj `UIntPtr`) |
 |:------------------------------------|:---------------------------------------|
 | `HANDLE`                            | `WPARAM`                               |
 | `HWND`                              | `UINT_PTR`                             |
@@ -201,7 +199,7 @@ Następujące typy, które są wskaźnikami, są zgodne z szerokością platform
 | `LONG_PTR`                          |                                        |
 | `INT_PTR`                           |                                        |
 
-System Windows `PVOID` , który jest C `void*` , może `IntPtr` być zorganizowany jako lub `UIntPtr`, ale preferowany `void*` , jeśli jest to możliwe.
+`PVOID` systemu Windows, który jest `void*` C może być zorganizowany jako `IntPtr` lub `UIntPtr`, ale preferowany `void*`, gdy jest to możliwe.
 
 [Typy danych systemu Windows](/windows/desktop/WinProg/windows-data-types)
 
@@ -213,15 +211,15 @@ Zarządzane struktury są tworzone na stosie i nie są usuwane, dopóki metoda n
 
 Struktury danych kopiowalnych są znacznie bardziej wydajne, ponieważ mogą być używane bezpośrednio przez warstwę kierującą. Spróbuj utworzyć struktury danych kopiowalnych (na przykład unikać `bool`). Aby uzyskać więcej informacji, zobacz sekcję [typy danych kopiowalnych](#blittable-types) .
 
-*Jeśli* struktura jest danych kopiowalnych, użyj `sizeof()` zamiast niej `Marshal.SizeOf<MyStruct>()` , aby uzyskać lepszą wydajność. Jak wspomniano powyżej, można sprawdzić, czy typ to danych kopiowalnych, próbując utworzyć przypięty `GCHandle`. Jeśli typ nie jest ciągiem lub uznano za danych kopiowalnych, `GCHandle.Alloc` spowoduje to `ArgumentException`zgłoszenie.
+*Jeśli* struktura jest danych kopiowalnych, użyj `sizeof()` zamiast `Marshal.SizeOf<MyStruct>()` w celu uzyskania lepszej wydajności. Jak wspomniano powyżej, można sprawdzić, czy typ to danych kopiowalnych, próbując utworzyć przypiętą `GCHandle`. Jeśli typ nie jest ciągiem lub uznano za danych kopiowalnych, `GCHandle.Alloc` generuje `ArgumentException`.
 
-Wskaźniki do struktur w definicjach muszą być przesyłane przez `ref` `unsafe` lub i `*`.
+Wskaźniki do struktur w definicjach muszą być przesyłane przez `ref` lub używać `unsafe` i `*`.
 
 **✔️** być zgodna z zarządzaną strukturą jak najbliżej kształtu i nazw, które są używane w oficjalnej dokumentacji lub nagłówku platformy.
 
-aby zwiększyć wydajność, C# `sizeof()` ✔️ używać `Marshal.SizeOf<MyStruct>()` danych kopiowalnych zamiast for for Structure.
+aby zwiększyć wydajność, C# ✔️ używać `sizeof()` zamiast `Marshal.SizeOf<MyStruct>()` dla struktur danych kopiowalnych.
 
-Tablica, taka `INT_PTR Reserved1[2]` jak musi być organizowana do dwóch `IntPtr` pól, `Reserved1a` i `Reserved1b`. Gdy natywna tablica jest typem pierwotnym, możemy użyć `fixed` słowa kluczowego, aby napisać je nieco bardziej czysty. Na przykład `SYSTEM_PROCESS_INFORMATION` wygląda to w postaci natywnego nagłówka:
+Tablica, taka jak `INT_PTR Reserved1[2]`, musi być organizowana do dwóch `IntPtr` pól, `Reserved1a` i `Reserved1b`. Gdy natywna tablica jest typem pierwotnym, możemy użyć słowa kluczowego `fixed`, aby napisać je nieco bardziej czysty. Na przykład `SYSTEM_PROCESS_INFORMATION` wygląda następująco w nagłówku natywnym:
 
 ```c
 typedef struct _SYSTEM_PROCESS_INFORMATION {

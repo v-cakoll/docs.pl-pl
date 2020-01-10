@@ -1,47 +1,45 @@
 ---
 title: Publikowanie pakietu NuGet
-description: Zalecenia dotyczące najlepszych rozwiązań do publikowania NuGet biblioteki .NET.
-author: jamesnk
-ms.author: mairaw
+description: Zalecenia dotyczące najlepszych rozwiązań dotyczących publikowania bibliotek .NET w programie NuGet.
 ms.date: 10/02/2018
-ms.openlocfilehash: 9c8442b52ed2c54d2fb3368a2e886c5fc2b19148
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e567fe3f7e00bf322cdd50786e50128961107469
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640767"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706468"
 ---
 # <a name="publishing-a-nuget-package"></a>Publikowanie pakietu NuGet
 
-Pakiety NuGet są publikowane i używane z repozytoriów pakietów. NuGet.org najczęściej jest znany i używane repozytorium, istnieje wiele miejsc, aby opublikować pakiety NuGet:
+Pakiety NuGet są publikowane i używane z repozytoriów pakietów. Chociaż NuGet.org jest najczęściej znanym i używanym repozytorium, istnieje wiele miejsc do publikowania pakietów NuGet:
 
-* **[NuGet.org](https://www.nuget.org/)**  głównej repozytorium online dla pakietów NuGet. Wszystkie pakiety w witrynie NuGet.org są publicznie dostępne dla wszystkich użytkowników. Domyślnie program Visual Studio zawiera NuGet.org jako źródło pakietów i wielu deweloperów NuGet.org znajduje się tylko repozytorium pakietów, który będzie interakcji z. NuGet.org to najlepsze miejsce do publikowania stabilne pakiety i pakiety w wersji wstępnej, które ma być opinii społeczności.
+* **[NuGet.org](https://www.nuget.org/)** to podstawowe repozytorium online dla pakietów NuGet. Wszystkie pakiety na NuGet.org są publicznie dostępne dla wszystkich użytkowników. Domyślnie program Visual Studio ma NuGet.org jako źródło pakietu, a dla wielu deweloperów NuGet.org jest jedynym repozytorium pakietu, z którym będą korzystać. NuGet.org to najlepsze miejsce do publikowania stabilnych pakietów i pakietów w wersji wstępnej, na które chcesz uzyskać opinię społecznościową.
 
-* **[MyGet](https://myget.org/)**  to usługa repozytorium, która obsługuje źródła danych pakiet niestandardowy w przypadku projektów typu open source. MyGet publiczne źródło niestandardowe to idealne miejsce do publikowania utworzone przez usługę CI pakiety w wersji wstępnej. MyGet także kanały prywatne dostępnym w sprzedaży.
+* **[MyGet](https://myget.org/)** to usługa repozytorium, która obsługuje niestandardowe źródła pakietów dla projektów typu open source. Publiczne niestandardowe źródło danych MyGet jest idealnym miejscem do publikowania pakietów w wersji wstępnej utworzonych przez usługę CI. MyGet również udostępnia prywatne źródła komercyjne.
 
-* A **[lokalne źródła danych](/nuget/hosting-packages/local-feeds)** umożliwia traktowanie folderem, takich jak repozytorium pakietów i sprawia, że `*.nupkg` pliki w folderze dostępne przez NuGet. Lokalne źródło danych jest przydatna przy testowaniu pakietu NuGet przed jego opublikowaniem NuGet.org.
+* **[Lokalne źródło danych](/nuget/hosting-packages/local-feeds)** umożliwia traktowanie folderu, takiego jak repozytorium pakietu, i udostępnia `*.nupkg` pliki w folderze dostępnym dla narzędzia NuGet. Lokalne źródło danych jest przydatne w przypadku testowania pakietu NuGet przed opublikowaniem go w usłudze NuGet.org.
 
 > [!NOTE]
-> NuGet.org [nie zezwala na pakiet do usunięcia](/nuget/policies/deleting-packages) po jego przekazaniu. Pakiet może być nieznajdujące się na liście, tak aby nie była widoczna publicznie w interfejsie użytkownika, ale `*.nupkg` nadal można pobrać podczas przywracania. Ponadto nuget.org nie zezwala na wersje zduplikowanych pakietów. Aby poprawić pakietu NuGet z powodu błędu konieczne wyrejestrowanie pakietu niepoprawne, zwiększ numer wersji, a następnie opublikować nową wersję pakietu.
+> NuGet.org nie [zezwala na usunięcie pakietu](/nuget/policies/deleting-packages) po jego przekazaniu. Pakiet może być wystawiony, aby nie był publicznie widoczny w interfejsie użytkownika, ale `*.nupkg` nadal można pobrać podczas przywracania. Ponadto nuget.org nie zezwala na duplikowanie wersji pakietu. Aby poprawić pakiet NuGet z błędem należy usunąć listę niepoprawnego pakietu, zwiększyć numer wersji i opublikować nową wersję pakietu.
 
-**CZY ✔️** [publikowania stabilne pakiety i pakiety w wersji wstępnej](/nuget/create-packages/publish-a-package) chcesz, aby opinia społeczności do NuGet.org.
+**✔️** [publikować pakiety stabilne i pakiety wersji wstępnej](/nuget/create-packages/publish-a-package) , na które chcesz, aby opinia społeczności była NuGet.org.
 
-**ROZWAŻ ✔️** publikowania pakiety w wersji wstępnej MyGet źródła danych z kompilacji ciągłej integracji.
+**✔️ rozważyć** opublikowanie pakietów w wersji wstępnej do źródła danych MyGet z kompilacji ciągłej integracji.
 
-**ROZWAŻ ✔️** testowania w środowisku deweloperskim za pomocą lokalnego źródła danych lub MyGet. Sprawdź działa pakiet, a następnie opublikuj go w witrynie NuGet.org.
+**✔️ rozważyć** testowanie pakietów w środowisku programistycznym przy użyciu lokalnego źródła danych lub MyGet. Sprawdź, czy pakiet działa, a następnie opublikuj go w NuGet.org.
 
-## <a name="nugetorg-security"></a>NuGet.org security
+## <a name="nugetorg-security"></a>Zabezpieczenia NuGet.org
 
-Jest ważne, nieupoważnione osoby nie można uzyskać dostępu do konta NuGet i przekazać złośliwego wersję biblioteki. NuGet.org oferuje two-Factor Authentication uwierzytelnianie i powiadomień e-mail po opublikowaniu pakietu. Włączyć te funkcje po zalogowaniu w witrynie NuGet.org **ustawienia konta** strony.
+Ważne jest, aby niektórym uczestnikom nie mógł uzyskać dostępu do konta NuGet i przekazać złośliwą wersję biblioteki. NuGet.org oferuje uwierzytelnianie dwuskładnikowe i powiadomienia e-mail w przypadku opublikowania pakietu. Te funkcje należy włączyć po zalogowaniu się do NuGet.org na stronie **Ustawienia konta** .
 
-![tekst alternatywny](./media/publish-nuget-package/nuget-2fa.png "zabezpieczenia konta NuGet")
+![tekst alternatywny](./media/publish-nuget-package/nuget-2fa.png "Zabezpieczenia konta NuGet")
 
-**CZY ✔️** Użyj konta Microsoft do logowania się na NuGet.
+**✔️** używać konto Microsoft do logowania się do narzędzia NuGet.
 
-**CZY ✔️** Włączanie uwierzytelniania dwuskładnikowego do uzyskiwania dostępu do NuGet.
+**✔️** włączyć uwierzytelnianie dwuskładnikowe w celu uzyskania dostępu do programu NuGet.
 
-**CZY ✔️** Włączanie powiadomień e-mail po opublikowaniu pakietu.
+**✔️** włączyć powiadomienia e-mail po opublikowaniu pakietu.
 
 >[!div class="step-by-step"]
->[Poprzednie](sourcelink.md)
->[dalej](versioning.md)
+>[Poprzedni](sourcelink.md)
+>[Następny](versioning.md)

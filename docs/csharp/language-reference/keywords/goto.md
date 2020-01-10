@@ -1,6 +1,5 @@
 ---
-title: goto — instrukcja - C# odwołania
-ms.custom: seodec18
+title: goto — instrukcja C# -Reference
 ms.date: 07/20/2015
 f1_keywords:
 - goto_CSharpKeyword
@@ -8,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - goto keyword [C#]
 ms.assetid: 2c03c9c1-8119-44ef-b740-fb3d287a42fe
-ms.openlocfilehash: 675893f02a0022b403d2afc018d24d6f826b8f75
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 076f793e880a7b4d1e8872d80e88c44cdf077541
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421805"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715273"
 ---
 # <a name="goto-c-reference"></a>goto (odwołanie w C#)
 
-`goto` Instrukcja przekazuje kontrolę nad programem bezpośrednio do instrukcji oznaczonej etykietą.
+Instrukcja `goto` przekazuje kontrolę programu bezpośrednio do instrukcji oznaczonej etykietą.
 
-Typowym zastosowaniem `goto` jest kontrola jest przekazywana do określoną etykietą przypadku switch lub etykieta domyślna w `switch` instrukcji.
+Typowym zastosowaniem `goto` jest przeniesienie kontroli do konkretnej etykiety przypadku przełącznika lub etykiety domyślnej w instrukcji `switch`.
 
-`goto` Instrukcji warto wykorzystać pętli głęboko zagnieżdżonych.
+Instrukcja `goto` jest również przydatna do uzyskiwania z głęboko zagnieżdżonych pętli.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład demonstruje użycie `goto` w [Przełącz](switch.md) instrukcji.
+Poniższy przykład ilustruje użycie `goto` w instrukcji [Switch](switch.md) .
 
 [!code-csharp[csrefKeywordsJump#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#4)]
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład demonstruje użycie `goto` umożliwiające rozbicie z zagnieżdżonej pętli.
+Poniższy przykład ilustruje użycie `goto` do dzielenia z zagnieżdżonych pętli.
 
 [!code-csharp[csrefKeywordsJump#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#5)]
 

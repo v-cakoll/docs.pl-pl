@@ -1,6 +1,5 @@
 ---
 title: podstawowe słowo kluczowe C# — odwołanie
-ms.custom: seodec18
 description: Dowiedz się więcej o słowie kluczowym Base, które służy do uzyskiwania dostępu do elementów członkowskich klasy bazowej z C#poziomu klasy pochodnej w.
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: b882a8d1e5979ac184d184be379dd76f7bf3600f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a4686fc5d4245a50de5d77dc0e71c231772f40ef
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602256"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713769"
 ---
 # <a name="base-c-reference"></a>base (odwołanie w C#)
 
-`base` Słowo kluczowe jest używane do uzyskiwania dostępu do składowych klasy bazowej z poziomu klasy pochodnej:
+Słowo kluczowe `base` służy do uzyskiwania dostępu do składowych klasy bazowej z poziomu klasy pochodnej:
 
 - Wywołaj metodę w klasie bazowej, która została zastąpiona przez inną metodę.
 
@@ -27,17 +26,17 @@ ms.locfileid: "69602256"
 
 Dostęp do klasy podstawowej jest dozwolony tylko w konstruktorze, metodzie wystąpienia lub akcesorze właściwości wystąpienia.
 
-Wystąpił błąd przy użyciu `base` słowa kluczowego z metody statycznej.
+Wystąpił błąd, aby użyć słowa kluczowego `base` z metody statycznej.
 
-Dostępną klasą bazową jest klasa bazowa określona w deklaracji klasy. Na przykład, jeśli określisz `class ClassB : ClassA`, członkowie ClassA są dostępni z ClassB, niezależnie od klasy bazowej ClassA.
+Dostępną klasą bazową jest klasa bazowa określona w deklaracji klasy. Na przykład jeśli określisz `class ClassB : ClassA`, członkowie ClassA są dostępni z ClassB, niezależnie od klasy bazowej ClassA.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie zarówno Klasa bazowa, `Person`, jak i `Employee`Klasa pochodna, mają metodę o nazwie `Getinfo`. Za pomocą `base` słowa kluczowego, można `Getinfo` wywołać metodę w klasie bazowej, z poziomu klasy pochodnej.
+W tym przykładzie zarówno Klasa bazowa, `Person`, jak i Klasa pochodna, `Employee`, mają metodę o nazwie `Getinfo`. Za pomocą słowa kluczowego `base` można wywołać metodę `Getinfo` w klasie bazowej z poziomu klasy pochodnej.
 
 [!code-csharp[csrefKeywordsAccess#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#1)]
 
-Aby uzyskać więcej przykładów, zobacz [nowe](new-modifier.md), [wirtualne](virtual.md)i [](override.md)przesłonięcie.
+Aby uzyskać więcej przykładów, zobacz [nowe](new-modifier.md), [wirtualne](virtual.md)i [przesłonięcie](override.md).
 
 ## <a name="example"></a>Przykład
 

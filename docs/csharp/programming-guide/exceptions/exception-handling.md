@@ -1,17 +1,16 @@
 ---
 title: Obsługa wyjątków — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 895f561c15941d851980ea9b392d2e86db2462f3
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ee1e5bd15183dad9ffe97824f9b194668e9d3b17
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423287"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705304"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Obsługa wyjątków (Przewodnik programowania w języku C#)
 Programista używa bloku try do partycjonowania kodu, który może mieć wpływ na wyjątek. [](../../language-reference/keywords/try-catch.md) C# Skojarzone bloki [catch](../../language-reference/keywords/try-catch.md) są używane do obsługi wszelkich wyjątków z wynikiem. Blok [finally](../../language-reference/keywords/try-finally.md) zawiera kod, który jest uruchamiany niezależnie od tego, czy wyjątek jest zgłaszany w bloku `try`, na przykład zwalniając zasoby, które są przydzieloną w bloku `try`. Blok `try` wymaga co najmniej jednego skojarzonego bloku `catch` lub bloku `finally` lub obu tych metod.  
@@ -58,7 +57,7 @@ Aby uzyskać więcej informacji, zobacz [wyjątki](~/_csharplang/spec/exceptions
   
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwoła](../../language-reference/index.md)
+- [Dokumentacja języka C#](../../language-reference/index.md)
 - [Przewodnik programowania w języku C#](../index.md)
 - [Wyjątki i obsługa wyjątków](./index.md)
 - [try-catch](../../language-reference/keywords/try-catch.md)

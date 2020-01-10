@@ -1,16 +1,15 @@
 ---
 title: Ogólna struktura przewodnika C# C# programowania programu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: 7e38181440dec17206563aeddc809810f5155b14
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: cdb739b585722ca5988192d288a7ef4fbcfe7d8c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417731"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75702580"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Ogólna struktura programu w języku C# (Przewodnik programowania w języku C#)
 C#programy mogą składać się z co najmniej jednego pliku. Każdy plik może zawierać zero lub więcej przestrzeni nazw. Przestrzeń nazw może zawierać typy takie jak klasy, struktury, interfejsy, wyliczenia i Delegaty, a także inne przestrzenie nazw. Poniżej przedstawiono szkielet C# programu zawierającego wszystkie te elementy.  
@@ -38,4 +37,4 @@ Aby uzyskać więcej informacji, zobacz [podstawowe pojęcia](~/_csharplang/spec
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Konstrukcja programu C#](./index.md)
-- [C#Odwoła](../../language-reference/index.md)
+- [Dokumentacja języka C#](../../language-reference/index.md)

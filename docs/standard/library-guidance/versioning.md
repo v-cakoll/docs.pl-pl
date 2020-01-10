@@ -1,15 +1,13 @@
 ---
 title: Przechowywanie wersji i biblioteki .NET
 description: Zalecenia dotyczące zgodności z wersjami bibliotek platformy .NET.
-author: jamesnk
-ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: 9250e48707c0ea72cdf8bef9663f5a3516309b86
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8ed3217e39b1fe0f330a650ec72cda224866e207
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969009"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706416"
 ---
 # <a name="versioning"></a>Przechowywanie wersji
 
@@ -31,7 +29,7 @@ Biblioteka .NET ma wiele sposobów na określenie wersji. Te wersje są najważn
 <PackageVersion>1.0.0-alpha1</PackageVersion>
 ```
 
-Identyfikator pakietu NuGet połączony z wersją pakietu NuGet jest używany do identyfikowania pakietu w pakiecie NuGet. Na przykład `Newtonsoft.Json` + `11.0.2`. Pakiet z sufiksem jest pakietem wersji wstępnej i ma specjalne zachowanie, które sprawia, że jest idealnym rozwiązaniem do testowania. Aby uzyskać więcej informacji, zobacz [pakiety wersji wstępnej](./nuget.md#pre-release-packages).
+Identyfikator pakietu NuGet połączony z wersją pakietu NuGet jest używany do identyfikowania pakietu w pakiecie NuGet. Przykładowy adres URL to `Newtonsoft.Json` + `11.0.2`. Pakiet z sufiksem jest pakietem wersji wstępnej i ma specjalne zachowanie, które sprawia, że jest idealnym rozwiązaniem do testowania. Aby uzyskać więcej informacji, zobacz [pakiety wersji wstępnej](./nuget.md#pre-release-packages).
 
 Ponieważ wersja pakietu NuGet jest najbardziej widoczną wersją dla deweloperów, dobrym pomysłem jest zaktualizowanie go przy użyciu [wersji semantycznej (SemVer)](https://semver.org/). SemVer wskazuje istotność zmian między wydaniem i pomaga deweloperom podejmować świadome decyzje podczas wybierania używanej wersji. Na przykład przechodzenie z `1.0` do `2.0` wskazuje, że istnieją potencjalne zmiany.
 
@@ -63,7 +61,7 @@ Silne nazewnictwo połączone z wersją zestawu umożliwia [ścisłe ładowanie 
 
 > AssemblyVersion jest dołączany do niektórych komunikatów informacyjnych wyświetlanych użytkownikowi, np. Nazwa zestawu i nazwy typów kwalifikowana zestawu w komunikatach o wyjątku. Utrzymywanie relacji między wersjami zapewnia deweloperom więcej informacji na temat używanej wersji.
 
-**❌ Nie** ma stałej AssemblyVersion.
+**❌ nie** ma stałej AssemblyVersion.
 
 > Podczas gdy AssemblyVersion nie zmienia się potrzeba przekierowania powiązań, oznacza to, że tylko jedna wersja zestawu może być zainstalowana w globalnej pamięci podręcznej zestawów (GAC). Ponadto aplikacje odwołujące się do zestawu w pamięci podręcznej GAC zostaną przerwane, jeśli inna aplikacja zaktualizuje zestaw GAC przy użyciu istotnych zmian.
 
@@ -75,7 +73,7 @@ Wersja pliku zestawu jest używana do wyświetlania wersji pliku w systemie Wind
 <FileVersion>11.0.2.21924</FileVersion>
 ```
 
-Eksplorator ![Windows Eksplorator](./media/versioning/win-properties.png "systemu") Windows
+![Eksplorator Windows](./media/versioning/win-properties.png "Windows Explorer")
 
 **✔️ rozważyć** uwzględnienie numeru kompilacji ciągłej integracji jako poprawki AssemblyFileVersion.
 
@@ -96,7 +94,7 @@ Informacje o wersji zestawu są używane do rejestrowania dodatkowych informacji
 > [!NOTE]
 > Starsze wersje programu Visual Studio zgłaszają ostrzeżenie kompilacji, jeśli ta wersja nie jest zgodna z formatem `Major.Minor.Build.Revision`. Ostrzeżenie można bezpiecznie zignorować.
 
-**❌ Nie należy** samodzielnie ustawić wersji informacyjnej zestawu.
+**❌ nie należy** samodzielnie ustawić wersji informacyjnej zestawu.
 
 > Zezwól programowi SourceLink na automatyczne generowanie wersji zawierającej metadane narzędzia NuGet i kontroli źródła.
 

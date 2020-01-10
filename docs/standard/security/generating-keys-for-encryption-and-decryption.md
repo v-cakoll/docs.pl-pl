@@ -14,24 +14,22 @@ helpviewer_keywords:
 - asymmetric keys [.NET Framework]
 - cryptography [.NET Framework], keys
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 52ec268df38a12dfe7dac469eed9901d7c0646a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88d8dac83c3d5bf267ed90ffb313cd9e24b42dea
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769605"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706191"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Generowanie kluczy szyfrowania i odszyfrowywania
-Tworzenie i zarządzanie kluczami jest ważną częścią procesu szyfrowania. Symetryczne algorytmy wymaga utworzenia klucza i wektor inicjowania (IV). Klucz musi trzymane w tajemnicy każdy, kto powinien nie odszyfrowania danych. IV nie muszą być wpisu tajnego, ale powinna zostać zmieniona dla każdej sesji. Asymetryczne algorytmy wymagają utworzenia klucza publicznego i prywatnego klucza. Klucz publiczny mogą być ujawniane dla każdego, kto, gdy klucz prywatny musi znane tylko przez strony, która spowoduje odszyfrowanie dane zaszyfrowane przy użyciu klucza publicznego. W tej sekcji opisano sposób generowania i zarządzania kluczami symetrycznego i asymetrycznych algorytmów.  
+Tworzenie kluczy i zarządzanie nimi jest ważną częścią procesu kryptograficznego. Algorytmy symetryczne wymagają utworzenia klucza i wektora inicjalizacji (IV). Klucz musi być poufny dla każdego, kto nie powinien odszyfrować danych. IV nie musi być tajny, ale powinien zostać zmieniony dla każdej sesji. Algorytmy asymetryczne wymagają utworzenia klucza publicznego i klucza prywatnego. Klucz publiczny może być publiczny dla każdej osoby, natomiast klucz prywatny musi być znany tylko przez osobę, która będzie odszyfrować dane zaszyfrowane za pomocą klucza publicznego. W tej sekcji opisano, jak generować klucze dla algorytmów symetrycznych i asymetrycznych oraz zarządzać nimi.  
   
 ## <a name="symmetric-keys"></a>Klucze symetryczne  
- Klasy szyfrowania symetrycznego, dostarczanych przez .NET Framework wymaga klucza i nowy wektor inicjowania (IV) do szyfrowania i odszyfrowywania danych. Zawsze, gdy tworzysz nowe wystąpienie jednego z zarządzanego symetrycznego klas kryptograficznych za pomocą konstruktora bez parametrów, nowy klucz i IV są tworzone automatycznie. Każda osoba, dzięki czemu można odszyfrować danych muszą posiadać ten sam klucz i IV i używać tego samego algorytmu. Ogólnie rzecz biorąc dla każdej sesji powinien zostać utworzony nowy klucz i IV, a klucz ani IV powinny być przechowywane do użytku w sesji nowsze.  
+ Klasy szyfrowania symetrycznego dostarczane przez .NET Framework wymagają klucza i nowego wektora inicjalizacji (IV) do szyfrowania i odszyfrowywania danych. Za każdym razem, gdy tworzysz nowe wystąpienie jednej z zarządzanych symetrycznych klas kryptograficznych przy użyciu konstruktora bez parametrów, nowy klucz i IV są tworzone automatycznie. Każda osoba, która zezwoli na odszyfrowanie danych, musi mieć ten sam klucz i IV i korzystać z tego samego algorytmu. Ogólnie rzecz biorąc, należy utworzyć nowy klucz i IV dla każdej sesji, a klucz i IV nie powinny być przechowywane do użytku w późniejszej sesji.  
   
- Do przekazywania klucza symetrycznego i IV zdalnego innych firm, będzie zazwyczaj szyfrowania klucza symetrycznego za pomocą asymetrycznych. Wysyłanie klucz za pośrednictwem niezabezpieczonej sieci bez szyfrowania stanowi zagrożenie, ponieważ każdy, kto przechwytuje klucz i IV odszyfrować danych. Aby uzyskać więcej informacji na temat wymiana danych przy użyciu szyfrowania, zobacz [tworzenie schematu kryptograficznego](../../../docs/standard/security/creating-a-cryptographic-scheme.md).  
+ Aby przekazać klucz symetryczny i IV do strony zdalnej, zazwyczaj należy zaszyfrować klucz symetryczny przy użyciu szyfrowania asymetrycznego. Wysyłanie klucza w niezabezpieczonej sieci bez szyfrowania jest niebezpieczne, ponieważ każdy z nich przechwytuje klucz i IV może odszyfrować dane. Aby uzyskać więcej informacji na temat wymiany danych przy użyciu szyfrowania, zobacz [Tworzenie schematu kryptograficznego](../../../docs/standard/security/creating-a-cryptographic-scheme.md).  
   
- W poniższym przykładzie pokazano tworzenie nowego wystąpienia <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider> klasę, która implementuje algorytm TripleDES.  
+ Poniższy przykład pokazuje, jak utworzyć nowe wystąpienie klasy <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider> implementującej algorytm TripleDES.  
   
 ```vb  
 Dim tdes As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
@@ -41,9 +39,9 @@ Dim tdes As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider(
 TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();  
 ```  
   
- Jeśli poprzedni kod jest wykonywany, nowy klucz i IV są generowane i umieszczane w **klucz** i **IV** właściwości, odpowiednio.  
+ Gdy poprzedni kod jest wykonywany, nowy klucz i IV są generowane i umieszczane odpowiednio w właściwościach **Key** i **IV** .  
   
- Czasami może być konieczne generowania wielu kluczy. W takiej sytuacji można utworzyć nowe wystąpienie klasy, która implementuje algorytm symetryczny i utworzyć nowy klucz i IV przez wywołanie metody **do generowania kluczy** i **GenerateIV** metody. Poniższy przykładowy kod przedstawia sposób tworzenia nowych kluczy i wektory, po dokonaniu nowe wystąpienie klasy szyfrowania symetrycznego.  
+ Czasami może być konieczne wygenerowanie wielu kluczy. W takiej sytuacji można utworzyć nowe wystąpienie klasy implementującej algorytm symetryczny, a następnie utworzyć nowy klucz i IV, wywołując metody **do generowania kluczy** i **GenerateIV** . Poniższy przykład kodu ilustruje sposób tworzenia nowych kluczy i użycie japońskich ideograficznych po wykonaniu nowego wystąpienia symetrycznej klasy kryptograficznej.  
   
 ```vb  
 Dim tdes As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
@@ -57,22 +55,22 @@ tdes.GenerateIV();
 tdes.GenerateKey();  
 ```  
   
- Po poprzednim kodzie jest wykonywana, klucza i IV są generowane podczas nowe wystąpienie klasy **TripleDESCryptoServiceProvider** wykonano. Inny klucz i IV są tworzone, gdy **do generowania kluczy** i **GenerateIV** metody są wywoływane.  
+ Gdy poprzedni kod jest wykonywany, klucz i IV są generowane, gdy tworzone jest nowe wystąpienie **TripleDESCryptoServiceProvider** . Po wywołaniu metod **do generowania kluczy** i **GenerateIV** są tworzone inne klucze i IV.  
   
 ## <a name="asymmetric-keys"></a>Klucze asymetryczne  
- Program .NET Framework oferuje <xref:System.Security.Cryptography.RSACryptoServiceProvider> i <xref:System.Security.Cryptography.DSACryptoServiceProvider> klasy dla szyfrowanie asymetryczne. W ramach tych zajęć tworzenie pary kluczy publiczny/prywatny, gdy używasz konstruktora bez parametrów do utworzenia nowego wystąpienia. Klucze asymetryczne może przechowywane do użytku w wielu sesjach lub generowane dla tylko jednej sesji. Podczas gdy klucz publiczny może być ogólnie dostępne, klucz prywatny powinny być ściśle chronione podobnie.  
+ .NET Framework zawiera klasy <xref:System.Security.Cryptography.RSACryptoServiceProvider> i <xref:System.Security.Cryptography.DSACryptoServiceProvider> na potrzeby szyfrowania asymetrycznego. Te klasy tworzą parę kluczy publiczny/prywatny, gdy do utworzenia nowego wystąpienia jest używany Konstruktor bez parametrów. Klucze asymetryczne mogą być przechowywane do użytku w wielu sesjach lub generowane tylko dla jednej sesji. Chociaż klucz publiczny można ogólnie udostępnić, klucz prywatny powinien być ściśle chroniony.  
   
- Pary kluczy publiczny/prywatny jest generowany, gdy tworzone jest nowe wystąpienie klasy algorytmu asymetrycznego. Po utworzeniu nowe wystąpienie klasy informacje o kluczu można wyodrębnić przy użyciu jednej z dwóch metod:  
+ Para kluczy publiczny/prywatny jest generowana za każdym razem, gdy tworzone jest nowe wystąpienie klasy algorytmu asymetrycznego. Po utworzeniu nowego wystąpienia klasy informacje o kluczach można wyodrębnić przy użyciu jednej z dwóch metod:  
   
-- <xref:System.Security.Cryptography.RSA.ToXmlString%2A> Metody, która zwraca informacje o kluczu Reprezentacja XML.  
+- Metoda <xref:System.Security.Cryptography.RSA.ToXmlString%2A>, która zwraca reprezentację XML informacji o kluczu.  
   
-- <xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A> Metody, która zwraca <xref:System.Security.Cryptography.RSAParameters> strukturę, która przechowuje informacje o kluczu.  
+- Metoda <xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A>, która zwraca strukturę <xref:System.Security.Cryptography.RSAParameters>, która zawiera informacje o kluczu.  
   
- Obie metody zaakceptuj wartość logiczna, która wskazuje, czy zwracać tylko informacje o kluczu publicznym lub w celu zwrócenia zarówno klucz publiczny, jak i informacje klucza prywatnego. **RSACryptoServiceProvider** klasy mogą być inicjowane na wartość **RSAParameters** struktury za pomocą <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A> metody.  
+ Obie metody akceptują wartość logiczną, która wskazuje, czy zwrócić tylko informacje o kluczu publicznym, czy zwrócić zarówno klucz publiczny, jak i informacje o kluczu prywatnym. Klasa **RSACryptoServiceProvider** może zostać zainicjowana do wartości struktury **RSAParameters** przy użyciu metody <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A>.  
   
- Klucze asymetryczne prywatnej nigdy nie powinny być przechowywane, verbatim lub w postaci zwykłego tekstu, na komputerze lokalnym. Jeśli musisz przechować klucz prywatny, należy użyć kontenera kluczy. Aby uzyskać więcej informacji na temat sposobu przechowywać klucz prywatny w kontenerze kluczy, zobacz [jak: Store kluczy asymetrycznych w kontenerze kluczy](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
+ Asymetryczne klucze prywatne nigdy nie powinny być przechowywane Verbatim ani w postaci zwykłego tekstu na komputerze lokalnym. Jeśli musisz przechować klucz prywatny, należy użyć kontenera kluczy. Aby uzyskać więcej informacji o tym, jak przechowywać klucz prywatny w kontenerze kluczy, zobacz [jak: przechowywanie kluczy asymetrycznych w kontenerze kluczy](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
   
- Poniższy przykład kodu tworzy nowe wystąpienie klasy **RSACryptoServiceProvider** klasy, tworząc parę kluczy publiczny/prywatny, a następnie zapisuje informacje o kluczu publicznym do **RSAParameters** struktury.  
+ Poniższy przykład kodu tworzy nowe wystąpienie klasy **RSACryptoServiceProvider** , tworząc parę kluczy publiczny/prywatny i zapisuje informacje o kluczu publicznym do struktury **RSAParameters** .  
   
 ```vb  
 'Generate a public/private key pair.  
@@ -93,4 +91,4 @@ RSAParameters rsaKeyInfo = rsa.ExportParameters(false);
 - [Szyfrowanie danych](../../../docs/standard/security/encrypting-data.md)
 - [Odszyfrowywanie danych](../../../docs/standard/security/decrypting-data.md)
 - [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)
-- [Instrukcje: Store kluczy asymetrycznych w kontenerze kluczy](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+- [Instrukcje: przechowywanie kluczy asymetrycznych w kontenerze kluczy](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

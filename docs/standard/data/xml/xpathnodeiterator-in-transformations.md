@@ -6,19 +6,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b191114731b63916d1bc9ecca4eee01f83c4fa48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63beeb3ca9d3f3cb6e6bde418e99ee2bd0a12e20
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615335"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709741"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>Klasa XPathNodeIterator w przekształceniach
-<xref:System.Xml.XPath.XPathNodeIterator> Zawiera metody do wykonywania iteracji zestaw węzłów utworzone w wyniku kwerendy XML Path Language (XPath) lub wynikowego fragmentu drzewa, konwertowana do węzła przy użyciu metody zestawu węzłów. <xref:System.Xml.XPath.XPathNodeIterator> Umożliwia iteracyjne przeglądanie węzłów w ramach tego zestawu węzłów. Po pobraniu zestawu węzłów <xref:System.Xml.XPath.XPathNodeIterator> klasa udostępnia tylko do odczytu, tylko do przodu kursor do wybranego zestawu węzłów. Zestaw węzłów jest tworzone w kolejności dokumentu, wywołanie tej metody przechodzi do następnego węzła w kolejności dokumentu. <xref:System.Xml.XPath.XPathNodeIterator> nie są kompilowane w węźle drzewa wszystkich węzłów w zestawie. Zamiast tego zapewnia okno z jednego węzła do danych, udostępnianie węzła podstawowego, który wskazuje on, ponieważ poruszanie się w drzewie. Metody i właściwości dostępne z <xref:System.Xml.XPath.XPathNodeIterator> klasy pozwalają użytkownikom czerpać informacje z bieżącego węzła. Aby uzyskać listę dostępnych metod i właściwości, zobacz <xref:System.Windows.Forms.ToolBar>.  
+<xref:System.Xml.XPath.XPathNodeIterator> zapewnia metody do iteracji w zestawie węzłów utworzonych w wyniku zapytania XML Path Language (XPath) lub fragmentu drzewa wynik przekonwertowany na węzeł ustawiony za pomocą metody zestawu węzłów. <xref:System.Xml.XPath.XPathNodeIterator> pozwala na iterację węzłów w zestawie węzłów. Po pobraniu zestawu węzłów Klasa <xref:System.Xml.XPath.XPathNodeIterator> zapewnia tylko do odczytu kursor, który tylko do przodu, do wybranego zestawu węzłów. Zestaw węzłów jest tworzony w kolejności dokumentu, dlatego wywołanie tej metody jest przenoszone do następnego węzła w kolejności dokumentu. <xref:System.Xml.XPath.XPathNodeIterator> nie kompiluje drzewa węzłów wszystkich węzłów w zestawie. Zamiast tego zapewnia ono pojedyncze okno węzła do danych, udostępniając węzeł podstawowy, który wskazuje, w miarę poruszania się w drzewie. Metody i właściwości dostępne z klasy <xref:System.Xml.XPath.XPathNodeIterator> umożliwiają uzyskanie informacji z bieżącego węzła. Listę dostępnych metod i właściwości można znaleźć w temacie <xref:System.Windows.Forms.ToolBar>.  
   
- Ponieważ <xref:System.Xml.XPath.XPathNodeIterator> przechodzi przez zestaw węzłów utworzone na podstawie zapytania XPath i przejście do tylko, umożliwiają przeniesienie znajduje się za pomocą <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> metody. Typ zwracany przez tę metodę jest `Boolean`, zwracanie `true` po przeniesieniu do następnego wybrany węzeł i `false` przypadku nie ma więcej wybranych węzłów. Jeśli zostanie zwrócona `true`, na poniższej liście przedstawiono dostępne właściwości:  
+ Ponieważ <xref:System.Xml.XPath.XPathNodeIterator> przechodzi przez zestaw węzłów utworzonych na podstawie zapytania XPath i poruszać się tylko w przód, Metoda przenoszenia odbywa się przy użyciu metody <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A>. Zwracany typ tej metody jest `Boolean`, zwracając `true`, jeśli przechodzi do następnego wybranego węzła i `false` Jeśli nie ma więcej wybranych węzłów. Jeśli zwróci `true`, na poniższej liście przedstawiono dostępne właściwości:  
   
 - <xref:System.Xml.XPath.XPathNodeIterator.Current%2A>  
   
@@ -26,9 +24,9 @@ ms.locfileid: "64615335"
   
 - <xref:System.Xml.XPath.XPathNodeIterator.Count%2A>  
   
- Kiedy przeglądasz węzła ustawić po raz pierwszy, po wywołaniu <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> muszą zostać wprowadzone pozycji <xref:System.Xml.XPath.XPathNodeIterator> w pierwszym węźle wybranego zestawu. Dzięki temu chwilę pętli do zapisania.  
+ Gdy przeglądasz węzeł zestaw po raz pierwszy, musisz nawiązać połączenie <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A>, aby umieścić <xref:System.Xml.XPath.XPathNodeIterator> na pierwszym węźle wybranego zestawu. Pozwala to na zapisanie pętli while.  
   
- Poniższy przykład kodu pokazuje sposób przekazywania <xref:System.Xml.XPath.XPathNodeIterator> do <xref:System.Xml.Xsl.XslTransform> jako parametr w <xref:System.Xml.Xsl.XsltArgumentList>. Dane wejściowe do kodu **books.xml**, i arkusz stylów jest **text.xsl**. Plik **test.xml** jest <xref:System.Xml.XPath.XPathDocument>.  
+ Poniższy przykład kodu pokazuje, jak przekazać <xref:System.Xml.XPath.XPathNodeIterator> do <xref:System.Xml.Xsl.XslTransform> jako parametr w <xref:System.Xml.Xsl.XsltArgumentList>. Dane wejściowe do kodu to **Books. XML**, a arkusz stylów to **Text. xsl**. Plik **test. XML** jest <xref:System.Xml.XPath.XPathDocument>.  
   
 ```vb  
 Imports System  
@@ -89,7 +87,7 @@ public class sample
 }  
 ```  
   
-## <a name="booksxml"></a>Books.XML  
+## <a name="booksxml"></a>{1&gt;Books.XML&lt;1}  
   
 ```xml  
 <?xml version='1.0'?>  
@@ -142,13 +140,13 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </xsl:stylesheet>  
 ```  
   
-## <a name="testxml"></a>test.xml  
+## <a name="testxml"></a>Test. XML  
   
 ```xml  
 <Title attr="Test">this is a test</Title>  
 ```  
   
-## <a name="output-outxml"></a>Dane wyjściowe (out.xml)  
+## <a name="output-outxml"></a>Wyjście (out. xml)  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

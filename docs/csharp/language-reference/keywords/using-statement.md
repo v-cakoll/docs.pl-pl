@@ -1,16 +1,15 @@
 ---
 title: using — C# odwołanie
-ms.custom: seodec18
 ms.date: 10/15/2019
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: f5ff78eaf9d565a9708c7a3a11754579389e79e8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 52cde99fd029ce50f159b2a87fbfbf47fc79dccc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422245"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712965"
 ---
 # <a name="using-statement-c-reference"></a>using — instrukcjaC# (Reference)
 
@@ -38,13 +37,13 @@ Instrukcja `using` zapewnia, że <xref:System.IDisposable.Dispose%2A> jest wywo�
 
 Nowsza składnia instrukcji `using` Wykonuje translację na bardzo podobny kod. Zostanie otwarty blok `try`, w którym jest zadeklarowana zmienna. Blok `finally` jest dodawany w pobliżu otaczającego bloku, na ogół na końcu metody.
 
-Aby uzyskać więcej informacji na temat instrukcji `try` - `finally`, zobacz temat [try-finally](try-finally.md) .
+Aby uzyskać więcej informacji na temat instrukcji `try`-`finally`, zobacz temat [try-finally](try-finally.md) .
 
 W instrukcji `using` można zadeklarować wiele wystąpień typu, jak pokazano w następującym przykładzie:
 
 [!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#6)]
 
-Można połączyć wiele deklaracji tego samego typu, używając nowej składni wprowadzonej przy użyciu C# również 8. Pokazano to w następującym przykładzie:
+Można połączyć wiele deklaracji tego samego typu, używając nowej składni wprowadzonej przy użyciu C# również 8. Jest to pokazane w poniższym przykładzie:
 
 [!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#MultipleUsing)]
 
@@ -60,7 +59,7 @@ Aby uzyskać więcej informacji, zobacz [instrukcja using](~/_csharplang/spec/st
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [using, dyrektywa](using-directive.md)

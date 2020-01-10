@@ -6,19 +6,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d26872fb97551e5392eb3f6a1a0825728046553
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ecbed7e57628b4e140e0f4dbcd600643617b075a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965894"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710898"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Obsługa zdarzeń w dokumencie XML przy użyciu klasy XmlNodeChangedEventArgs
-**XmlNodeChangedEventArgs** hermetyzuje argumenty przekazane do programów obsługi zdarzeń zarejestrowanych w obiekcie XmlDocument na potrzeby obsługi zdarzeń. Zdarzenia i opis po ich uruchomieniu podano w poniższej tabeli.  
+**XmlNodeChangedEventArgs** hermetyzuje argumenty przekazane do programów obsługi zdarzeń zarejestrowanych w obiekcie **XmlDocument** na potrzeby obsługi zdarzeń. Zdarzenia i opis po ich uruchomieniu podano w poniższej tabeli.  
   
-|Zdarzenie|Uruchamiany|  
+|Zdarzenie|Wyzwolono|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|Gdy węzeł należący do bieżącego dokumentu zostanie wstawiony do innego węzła.|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|Gdy węzeł należący do bieżącego dokumentu został wstawiony do innego węzła.|  

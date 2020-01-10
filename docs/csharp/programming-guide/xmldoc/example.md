@@ -1,6 +1,5 @@
 ---
 title: <example> — C# Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <example>
@@ -9,14 +8,14 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: 17956838c20a4342873478869c07c6382f037fcb
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 13f4a2bb9dcef5bd0359f7e5bd9cab60acde3719
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523512"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75697016"
 ---
-# <a name="example-c-programming-guide"></a>\<example > (C# Przewodnik programowania)
+# <a name="example-c-programming-guide"></a>> \<przykład (C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -28,7 +27,7 @@ ms.locfileid: "72523512"
  Opis przykładu kodu.  
   
 ## <a name="remarks"></a>Uwagi  
- Tag \<example > pozwala określić przykład użycia metody lub innego elementu członkowskiego biblioteki. Ten proces często obejmuje użycie tagu [> \<code](./code.md) .  
+ \<przykład > tag pozwala określić przykład użycia metody lub innego elementu członkowskiego biblioteki. Ten proces często obejmuje użycie tagu [> code\<](./code.md) .  
   
  Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   

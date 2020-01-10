@@ -2,13 +2,13 @@
 title: global.json — omówienie
 description: Dowiedz się, jak używać pliku Global. JSON do ustawiania wersji zestaw .NET Core SDK podczas uruchamiania poleceń interfejs wiersza polecenia platformy .NET Core.
 ms.date: 12/03/2018
-ms.custom: updateeachrelease, seodec18
-ms.openlocfilehash: 2c1fec102993b61e1eb699e8d3508b773302f569
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.custom: updateeachrelease
+ms.openlocfilehash: 4da703266e98b209cdd031f4ea856b4d7c83930c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117435"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714172"
 ---
 # <a name="globaljson-overview"></a>global.json — omówienie
 
@@ -24,13 +24,13 @@ Zestaw .NET Core SDK szuka pliku *Global. JSON* w bieżącym katalogu roboczym (
 
 ### <a name="sdk"></a>sdk
 
-Wpisz: Obiekt
+Typ: obiekt
 
 Określa informacje o zestaw .NET Core SDK do wybrania.
 
-#### <a name="version"></a>version
+#### <a name="version"></a>Wersja programu
 
-Wpisz: String
+Typ: ciąg
 
 Wersja zestaw .NET Core SDK do użycia.
 
@@ -83,25 +83,25 @@ Wersja zestawu SDK składa się obecnie z następujących części:
 
 `[.NET Core major version].[.NET Core minor version].[xyz][-optional preview name]`
 
-**Wersja funkcji** zestaw .NET Core SDK jest reprezentowana przez pierwszą cyfrę (`x`) w ostatniej części cyfry (`xyz`) dla wersji zestawu SDK 2.1.100 i wyższych. Ogólnie rzecz biorąc zestaw .NET Core SDK ma szybszy cykl wydawniczy niż .NET Core.
+**Wersja funkcji** zestaw .NET Core SDK jest reprezentowana przez pierwszą cyfrę (`x`) w ostatniej części liczby (`xyz`) dla wersji zestawu SDK 2.1.100 i wyższych. Ogólnie rzecz biorąc zestaw .NET Core SDK ma szybszy cykl wydawniczy niż .NET Core.
 
-**Wersja poprawki** jest definiowana przez ostatnie dwie cyfry (`yz`) w ostatniej części cyfry (`xyz`) dla wersji zestawu SDK 2.1.100 i wyższych. `2.1.300` Na przykład jeśli określisz jako wersję zestawu SDK, wybór zestawu SDK znajdzie się do `2.1.399` , ale `2.1.400` nie jest traktowany jako `2.1.300`wersja poprawki dla programu.
+**Wersja poprawki** jest definiowana przez ostatnie dwie cyfry (`yz`) w ostatniej części liczby (`xyz`) dla wersji zestawu SDK 2.1.100 i wyższych. Na przykład jeśli określisz `2.1.300` jako wersję zestawu SDK, wybranie zestawu SDK znajdzie do `2.1.399`, ale `2.1.400` nie jest traktowane jako wersja poprawki dla `2.1.300`.
 
-Wersje `2.1.100` zestaw .NET Core SDK za `2.1.201` pomocą zostały wydane podczas przejścia między schematami numerów wersji `xyz` i nie obsługują poprawnie notacji. Zdecydowanie zalecamy, aby określić te wersje w pliku *Global. JSON* , że określone wersje znajdują się na komputerach docelowych.
+Zestaw .NET Core SDK wersje `2.1.100` przez `2.1.201` zostały wydane podczas przejścia między schematami numerów wersji i nie obsługują poprawnie notacji `xyz`. Zdecydowanie zalecamy, aby określić te wersje w pliku *Global. JSON* , że określone wersje znajdują się na komputerach docelowych.
 
 W przypadku wybrania wersji zestaw .NET Core SDK 1. x, jeśli określono wersję i nie znaleziono dokładnego dopasowania, użyto najnowszej zainstalowanej wersji zestawu SDK. Najnowsza wersja zestawu SDK może być wydaniem lub wersjami wstępnymi — numer najwyższej wersji usługi WINS.
 
 ## <a name="troubleshooting-build-warnings"></a>Rozwiązywanie problemów z ostrzeżeniami kompilacji
 
 > [!WARNING]
-> Pracujesz z wersją zapoznawczą zestaw .NET Core SDK. Możesz zdefiniować wersję zestawu SDK za pośrednictwem pliku Global. JSON w bieżącym projekcie. Więcej o<https://go.microsoft.com/fwlink/?linkid=869452>
+> Pracujesz z wersją zapoznawczą zestaw .NET Core SDK. Możesz zdefiniować wersję zestawu SDK za pośrednictwem pliku Global. JSON w bieżącym projekcie. Więcej o <https://go.microsoft.com/fwlink/?linkid=869452>
 
-To ostrzeżenie wskazuje, że projekt jest kompilowany przy użyciu wersji zapoznawczej zestaw .NET Core SDK, zgodnie z opisem w sekcji [reguły dopasowywania](#matching-rules) . Wersje zestaw .NET Core SDK mają historię i zobowiązanie o wysokiej jakości. Jeśli jednak nie chcesz korzystać z wersji zapoznawczej, Dodaj plik *Global. JSON* do struktury hierarchii projektu, aby określić wersję zestawu SDK, która ma być używana, i `dotnet --list-sdks` potwierdzić, że wersja jest zainstalowana na maszynie. Po wydaniu nowej wersji, aby użyć nowej wersji, należy usunąć plik *Global. JSON* lub zaktualizować go tak, aby korzystał z nowszej wersji.
+To ostrzeżenie wskazuje, że projekt jest kompilowany przy użyciu wersji zapoznawczej zestaw .NET Core SDK, zgodnie z opisem w sekcji [reguły dopasowywania](#matching-rules) . Wersje zestaw .NET Core SDK mają historię i zobowiązanie o wysokiej jakości. Jeśli jednak nie chcesz używać wersji zapoznawczej, Dodaj plik *Global. JSON* do struktury hierarchii projektu, aby określić, która wersja zestawu SDK ma być używana, i użyj `dotnet --list-sdks`, aby potwierdzić, że wersja została zainstalowana na maszynie. Po wydaniu nowej wersji, aby użyć nowej wersji, należy usunąć plik *Global. JSON* lub zaktualizować go tak, aby korzystał z nowszej wersji.
 
 > [!WARNING]
-> Projekt startowy "{startupProject}" wskazuje platformę ". NETCoreApp "wersja" {targetFrameworkVersion} ". Ta wersja narzędzi wiersza polecenia Entity Framework Core .NET obsługuje tylko wersję 2,0 lub nowszą. Aby uzyskać informacje na temat używania starszych wersji narzędzi, zobacz.<https://go.microsoft.com/fwlink/?linkid=871254>
+> Projekt startowy "{startupProject}" wskazuje platformę ". NETCoreApp "wersja" {targetFrameworkVersion} ". Ta wersja narzędzi wiersza polecenia Entity Framework Core .NET obsługuje tylko wersję 2,0 lub nowszą. Aby uzyskać informacje na temat używania starszych wersji narzędzi, zobacz <https://go.microsoft.com/fwlink/?linkid=871254>
 
-Począwszy od zestawu SDK programu .NET Core 2,1 (wersja 2.1.300) `dotnet ef` , polecenie znajduje się w zestawie SDK. To ostrzeżenie wskazuje, że projekt jest ukierunkowany na EF Core 1,0 lub 1,1, co nie jest zgodne z zestawem SDK .NET Core 2,1 i nowszymi wersjami. Aby skompilować projekt, zainstaluj program .NET Core 2,0 SDK (wersja 2.1.201) i jego wcześniejszą wersję na maszynie i zdefiniuj żądaną wersja zestawu SDK przy użyciu pliku *Global. JSON* . Aby uzyskać więcej informacji na `dotnet ef` temat tego polecenia, zobacz [EF Core narzędzia wiersza polecenia programu .NET](/ef/core/miscellaneous/cli/dotnet).
+Począwszy od zestawu .NET Core 2,1 SDK (wersja 2.1.300), polecenie `dotnet ef` znajduje się w zestawie SDK. To ostrzeżenie wskazuje, że projekt jest ukierunkowany na EF Core 1,0 lub 1,1, co nie jest zgodne z zestawem SDK .NET Core 2,1 i nowszymi wersjami. Aby skompilować projekt, zainstaluj program .NET Core 2,0 SDK (wersja 2.1.201) i jego wcześniejszą wersję na maszynie i zdefiniuj żądaną wersja zestawu SDK przy użyciu pliku *Global. JSON* . Aby uzyskać więcej informacji na temat polecenia `dotnet ef`, zobacz [EF Core narzędzia wiersza polecenia platformy .NET](/ef/core/miscellaneous/cli/dotnet).
 
 ## <a name="see-also"></a>Zobacz także
 

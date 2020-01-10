@@ -6,23 +6,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57290af1df8d370c928a97aba1622e41a6a33589
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 240f9ca7a887a4a146437fdef46de776b299705a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026743"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709754"
 ---
 # <a name="xpathnavigator-in-transformations"></a>Klasa XPathNavigator w przekształceniach
-<xref:System.Xml.XPath.XPathNavigator> Klasy zapewnia dostęp losowy tylko do odczytu do danych i jest przeznaczony do użytku jako dane wejściowe rozszerzalny język arkusza stylów przekształcenia (XSLT). Jest wdrażana w <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, i <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathNavigator> Opartą na modelu danych w sieci World Wide Web Consortium (W3C) zgodnie z opisem w sekcji 5 z zaleceniem XML Path Language (XPath).  
+Klasa <xref:System.Xml.XPath.XPathNavigator> zapewnia losowy dostęp tylko do odczytu do danych i jest przeznaczona do użycia jako dane wejściowe Extensible Stylesheet Language for Transformations (XSLT). Jest ona zaimplementowana w <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>i <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathNavigator> jest oparty na modelu danych organizacja World Wide Web Consortium (W3C) zgodnie z opisem w sekcji 5 zalecenia języka ścieżki XML (XPath).  
   
- <xref:System.Xml.XPath.XPathNavigator> Definiuje model zarządzanego przez kursor nad dowolnym magazynu i udostępnia szybką, tylko do odczytu kwerendy XPath w porównaniu z dowolnego magazynu danych. <xref:System.Xml.XPath.XPathNavigator> Jest również klasą, na potrzeby Iterowanie fragmenty drzewa wynik.  
+ <xref:System.Xml.XPath.XPathNavigator> definiuje model kursorów na dowolnym sklepie i zapewnia szybkie, tylko do odczytu zapytania XPath dla każdego magazynu danych. <xref:System.Xml.XPath.XPathNavigator> jest również klasą używaną do iteracji względem fragmentów drzewa wyników.  
   
- Interfejs API umożliwia pobieranie informacji z bieżącego węzła w magazynie i przejść do połączonych węzłów. <xref:System.Xml.XPath.XPathNavigator> Model styl kursor, który wykonuje przechodzenie magazynu, korzystając z zestawu **przenieść** metody. <xref:System.Xml.XPath.XPathNavigator> Zawsze znajduje się w węźle. Wszelkie **przenieść** metodę, która kończy się niepowodzeniem pozostawia <xref:System.Xml.XPath.XPathNavigator> bez zmian.  
+ Interfejs API umożliwia uzyskanie informacji z bieżącego węzła w sklepie i przejście do podłączonych węzłów. <xref:System.Xml.XPath.XPathNavigator> to model stylu kursora, który przeprowadza przechodzenie przez magazyn przy użyciu zestawu metod **przenoszenia** . <xref:System.Xml.XPath.XPathNavigator> jest zawsze umieszczana w węźle. Jakakolwiek metoda **przenoszenia** , która kończy się niepowodzeniem, pozostawia <xref:System.Xml.XPath.XPathNavigator> bez zmian.  
   
- <xref:System.Xml.XPath.XPathNavigator> Jest klasa na potrzeby Iterowanie fragmenty drzewa wynik. Poniższy przykład kodu tworzy wynikowego fragmentu drzewa w arkuszu stylów, wywołując funkcję z parametrem `fragment`, który zawiera kod XML.  
+ <xref:System.Xml.XPath.XPathNavigator> jest klasą, która ma być używana do iterowania fragmentów drzewa wyników. Poniższy przykład kodu tworzy fragment drzewa wyników w arkuszu stylów, wywołując funkcję z parametrem `fragment`, który zawiera kod XML.  
   
 ## <a name="testxsl"></a>test.xsl  
   
@@ -57,13 +55,13 @@ ms.locfileid: "62026743"
 </xsl:stylesheet>  
 ```  
   
-## <a name="testxml"></a>test.xml  
+## <a name="testxml"></a>Test. XML  
   
 ```xml  
 <root>Some text</root>  
 ```  
   
- Poniższy kod używa **test.xsl** arkusza stylów i **test.xml** dane wejściowe.  
+ Poniższy kod używa arkusza stylów **test. xsl** i danych wejściowych **test. XML** .  
   
 ```vb  
 Imports System  
@@ -110,7 +108,7 @@ public class sample
 ```  
   
 ## <a name="output"></a>Dane wyjściowe  
- Wynik transformacji znajduje się w pliku **out.xml**:  
+ Wynik transformacji zostanie znaleziony w pliku **out. XML**:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>Joe  

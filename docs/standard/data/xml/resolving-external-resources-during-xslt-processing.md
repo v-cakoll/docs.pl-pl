@@ -6,40 +6,38 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0bcd45a97ab0f0b0ac462d50c18fb68f9d7bd386
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 58407d5f0c6e602af15f5b19b9a19cc6379b9af7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590029"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710287"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>Rozpoznawanie zewnętrznych zasobów podczas przetwarzania XSLT
-Istnieje kilka razy podczas transformacji XSLT, gdy trzeba rozwiązać zasobów zewnętrznych.  
+Podczas transformacji XSLT występuje kilka razy, gdy konieczne jest rozwiązanie zasobów zewnętrznych.  
   
-## <a name="using-the-xmlresolver-class"></a>Używanie klasy element XmlResolver  
- <xref:System.Xml.XmlResolver> Klasy jest używany do rozpoznawania zasobów zewnętrznych. Poniższa tabela opisuje, kiedy <xref:System.Xml.XmlResolver> staje się zaangażowane podczas przetwarzania XSLT.  
+## <a name="using-the-xmlresolver-class"></a>Korzystanie z klasy XmlResolver  
+ Klasa <xref:System.Xml.XmlResolver> jest używana do rozpoznawania zasobów zewnętrznych. W poniższej tabeli opisano, kiedy <xref:System.Xml.XmlResolver> jest uwzględniana podczas przetwarzania XSLT.  
   
-|Zadanie XSLT|Element XmlResolver do czego służy|  
+|Zadanie XSLT|Do czego służy element XmlResolver|  
 |---------------|--------------------------------------|  
-|Skompiluj arkusza stylów.|Rozwiązany identyfikator URI w arkusza stylów.<br /><br /> - i -<br /><br /> Rozpoznać identyfikatora URI odwołania w żadnym `xsl:import` lub `xsl:include` elementów.|  
-|Wykonaj arkusza stylów.|Rozwiązany identyfikator URI dokumentu kontekstu.<br /><br /> - i -<br /><br /> Rozwiązać odwołania do identyfikatora URI w dowolnym XSLT `document()` funkcji.|  
+|Kompiluj arkusz stylów.|Rozpoznanie identyfikatora URI arkusza stylów.<br /><br /> \- i -<br /><br /> Rozpoznaj odwołania do identyfikatorów URI w dowolnych `xsl:import` lub `xsl:include` elementów.|  
+|Wykonaj arkusz stylów.|Rozpoznanie identyfikatora URI dokumentu kontekstowego.<br /><br /> \- i -<br /><br /> Rozwiąż odwołania do identyfikatorów URI w dowolnych funkcjach `document()` XSLT.|  
   
- <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> i <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody obejmują przeciążeń, które przyjmują <xref:System.Xml.XmlResolver> obiektu jako jeden z jej argumentów. Jeśli <xref:System.Xml.XmlResolver> nie zostanie określony, domyślnie <xref:System.Xml.XmlUrlResolver> bez poświadczeń jest używany.  
+ Metody <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> i <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> obejmują przeciążenia przyjmujące obiekt <xref:System.Xml.XmlResolver> jako jeden z argumentów. Jeśli nie określono <xref:System.Xml.XmlResolver>, zostanie użyta domyślna <xref:System.Xml.XmlUrlResolver> bez poświadczeń.  
   
- Na poniższej liście opisano, kiedy warto określić <xref:System.Xml.XmlResolver> obiektu:  
+ Na poniższej liście opisano, kiedy warto określić obiekt <xref:System.Xml.XmlResolver>:  
   
-- Jeśli proces XSLT musi uzyskać dostęp do zasobów sieciowych, która wymaga uwierzytelnienia, można użyć <xref:System.Xml.XmlResolver> niezbędne poświadczenia.  
+- Jeśli proces XSLT musi uzyskać dostęp do zasobu sieciowego, który wymaga uwierzytelnienia, można użyć <xref:System.Xml.XmlResolver> z niezbędnymi poświadczeniami.  
   
-- Jeśli chcesz ograniczyć zasoby, które proces XSLT można uzyskać dostępu, możesz użyć <xref:System.Xml.XmlSecureResolver> with odpowiednie uprawnienie jest ustawiona. Użyj <xref:System.Xml.XmlSecureResolver> klasy, jeśli trzeba otworzyć zasób, które nie mają kontroli nad lub które nie jest zaufany.  
+- Jeśli chcesz ograniczyć zasoby, do których proces XSLT może uzyskać dostęp, możesz użyć <xref:System.Xml.XmlSecureResolver> z prawidłowym zestawem uprawnień. Użyj klasy <xref:System.Xml.XmlSecureResolver>, jeśli konieczne jest otwarcie zasobu, który nie jest kontrolowany lub że nie jest zaufany.  
   
-- Jeśli chcesz dostosować zachowanie, możesz zaimplementować własną <xref:System.Xml.XmlResolver> klasy i używane w celu rozwiązania zasobów.  
+- Aby dostosować zachowanie, można zaimplementować własną klasę <xref:System.Xml.XmlResolver> i używać jej do rozwiązywania zasobów.  
   
-- Jeśli chcesz upewnić się, że są dostępne nie zasoby zewnętrzne, można określić `null` dla <xref:System.Xml.XmlResolver> argumentu.  
+- Jeśli chcesz się upewnić, że nie ma dostępu do zasobów zewnętrznych, możesz określić `null` dla argumentu <xref:System.Xml.XmlResolver>.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kompiluje arkusza stylów, który jest przechowywany w zasobie sieciowym. <xref:System.Xml.XmlUrlResolver> Obiekt Określa poświadczenia niezbędne do uzyskania dostępu arkusza stylów.  
+ Poniższy przykład kompiluje arkusz stylów, który jest przechowywany w zasobów sieciowych. Obiekt <xref:System.Xml.XmlUrlResolver> określa poświadczenia niezbędne do uzyskania dostępu do arkusza stylów.  
   
  [!code-csharp[XslCompiledTransform.Load#11](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#11)]
  [!code-vb[XslCompiledTransform.Load#11](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Load/VB/Xslt_Load_v2.vb#11)]  

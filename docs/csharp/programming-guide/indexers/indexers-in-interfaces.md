@@ -1,17 +1,16 @@
 ---
 title: Indeksatory w interfejsach C# — Przewodnik programowania
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: 7f52df0283cf057c1cd6cc4fa87c0086da7e61d2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4ac51589ed1680f8484fde797c045d15beed3af9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253004"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712120"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Indeksatory w interfejsach (Przewodnik programowania w języku C#)
 Indeksatory mogą być deklarowane w [interfejsie](../../language-reference/keywords/interface.md). Metody dostępu indeksatorów interfejsów różnią się od metod dostępu indeksatorów [klas](../../language-reference/keywords/class.md) w następujący sposób:  
@@ -41,7 +40,7 @@ string ISomeInterface.this[int index]
 }   
 ```  
   
- Jednak w pełni kwalifikowana nazwa jest wymagana tylko wtedy, gdy klasa implementuje więcej niż jeden interfejs o tej samej sygnaturze indeksatora. Na przykład jeśli `Employee` Klasa implementuje dwa interfejsy `IEmployee`, `ICitizen` a oba interfejsy mają tę samą sygnaturę indeksatora, wymagana jest Jawna implementacja elementu członkowskiego interfejsu. Oznacza to, że następująca deklaracja indeksatora:  
+ Jednak w pełni kwalifikowana nazwa jest wymagana tylko wtedy, gdy klasa implementuje więcej niż jeden interfejs o tej samej sygnaturze indeksatora. Na przykład jeśli Klasa `Employee` implementuje dwa interfejsy, `ICitizen` i `IEmployee`, a oba interfejsy mają ten sam podpis indeksatora, wymagana jest Jawna implementacja elementu członkowskiego interfejsu. Oznacza to, że następująca deklaracja indeksatora:  
   
 ```csharp  
 string IEmployee.this[int index]   
@@ -49,7 +48,7 @@ string IEmployee.this[int index]
 }   
 ```  
   
- implementuje indeksator w `IEmployee` interfejsie, podczas gdy następująca deklaracja:  
+ implementuje indeksator w interfejsie `IEmployee`, podczas gdy następująca deklaracja:  
   
 ```csharp  
 string ICitizen.this[int index]
@@ -57,7 +56,7 @@ string ICitizen.this[int index]
 }   
 ```  
   
- implementuje indeksator w `ICitizen` interfejsie.  
+ implementuje indeksator w interfejsie `ICitizen`.  
   
 ## <a name="see-also"></a>Zobacz także
 

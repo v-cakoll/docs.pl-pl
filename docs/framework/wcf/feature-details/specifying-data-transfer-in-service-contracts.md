@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: 47544cf74b4fa09fd8ee868ea940ef24a453840e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 50f2444764ddb212513550ff0a62fcfecab2c45a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834645"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347997"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Określanie transferu danych w kontraktach usług
 Windows Communication Foundation (WCF) można traktować jako infrastrukturę obsługi komunikatów. Operacje usługi mogą odbierać komunikaty, przetwarzać je i wysyłać do nich komunikaty. Komunikaty są opisane przy użyciu kontraktów operacji. Rozważmy na przykład następujący kontrakt.  
@@ -147,7 +147,7 @@ public float GetAirfare(
   
  `public int GetCurrentTemperature();`  
   
- Na przykład w języku VB:  
+ Na przykład w Visual Basic:  
   
  `<OperationContract()>`  
   

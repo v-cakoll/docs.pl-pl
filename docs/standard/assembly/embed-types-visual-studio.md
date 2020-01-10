@@ -5,12 +5,12 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 47a339de60301e01b52a4b8a3a85945624daf940
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f11fbedad766753ee462c5f597b823493cdaf7cf
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733202"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338558"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>Przewodnik: osadzanie typów z zarządzanych zestawów w programie Visual Studio
 
@@ -51,9 +51,9 @@ Ponieważ podstawową funkcją osadzania typu jest obsługa zestawów międzyope
 
 Pierwszym krokiem jest utworzenie zestawu interfejsu równoważność typu.
 
-1. W programie Visual Studio wybierz pozycję **plik**  > **Nowy**  > **projekt**.
+1. W programie Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt**.
 
-1. W oknie dialogowym **Utwórz nowy projekt** wpisz *Biblioteka klas* w polu **Wyszukaj szablony** . Wybierz z listy C# szablon lub **bibliotekę klas vb (.NET Framework)** , a następnie wybierz przycisk **dalej**.
+1. W oknie dialogowym **Utwórz nowy projekt** wpisz *Biblioteka klas* w polu **Wyszukaj szablony** . Wybierz z listy C# szablon lub Visual Basic **klas (.NET Framework)** , a następnie wybierz przycisk **dalej**.
 
 1. W oknie dialogowym **Konfigurowanie nowego projektu** w obszarze **Nazwa projektu**wpisz *TypeEquivalenceInterface*, a następnie wybierz pozycję **Utwórz**. Nowy projekt zostanie utworzony.
 
@@ -110,7 +110,7 @@ Pierwszym krokiem jest utworzenie zestawu interfejsu równoważność typu.
    <Assembly: ImportedFromTypeLib("")>
    ```
 
-1. Wybierz pozycję **plik**  > **Zapisz wszystko** lub naciśnij **klawisze CTRL** +**SHIFT** +**S** , aby zapisać pliki i projekt.
+1. Wybierz pozycję **plik** > **Zapisz wszystko** lub naciśnij **klawisze CTRL**+**SHIFT**+**S** , aby zapisać pliki i projekt.
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceInterface** i wybierz polecenie **Kompiluj**. Plik DLL biblioteki klas jest kompilowany i zapisywany w określonej ścieżce danych wyjściowych kompilacji, na przykład *C:\TypeEquivalenceSample*.
 
@@ -118,9 +118,9 @@ Pierwszym krokiem jest utworzenie zestawu interfejsu równoważność typu.
 
 Następnie Utwórz klasę środowiska uruchomieniowego typu równoważność.
 
-1. W programie Visual Studio wybierz pozycję **plik**  > **Nowy**  > **projekt**.
+1. W programie Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt**.
 
-1. W oknie dialogowym **Utwórz nowy projekt** wpisz *Biblioteka klas* w polu **Wyszukaj szablony** . Wybierz z listy C# szablon lub **bibliotekę klas vb (.NET Framework)** , a następnie wybierz przycisk **dalej**.
+1. W oknie dialogowym **Utwórz nowy projekt** wpisz *Biblioteka klas* w polu **Wyszukaj szablony** . Wybierz z listy C# szablon lub Visual Basic **klas (.NET Framework)** , a następnie wybierz przycisk **dalej**.
 
 1. W oknie dialogowym **Konfigurowanie nowego projektu** w obszarze **Nazwa projektu**wpisz *TypeEquivalenceRuntime*, a następnie wybierz pozycję **Utwórz**. Nowy projekt zostanie utworzony.
 
@@ -134,7 +134,7 @@ Następnie Utwórz klasę środowiska uruchomieniowego typu równoważność.
 
 1. W oknie dialogowym **Tworzenie klucza o silnej nazwie** w obszarze **Nazwa pliku klucza**wpisz polecenie *Key. snk*. Usuń zaznaczenie pola wyboru **Chroń mój klucz plik hasłem** , a następnie wybierz przycisk **OK**.
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceRuntime** i wybierz polecenie **Dodaj**  > **odwołanie**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceRuntime** i wybierz polecenie **Dodaj** > **odwołanie**.
 
 1. W oknie dialogowym **Menedżer odwołań** wybierz **Przeglądaj** i przejdź do folderu Ścieżka wyjściowa. Wybierz plik *TypeEquivalenceInterface. dll* , wybierz pozycję **Dodaj**, a następnie wybierz przycisk **OK**.
 
@@ -182,7 +182,7 @@ Następnie Utwórz klasę środowiska uruchomieniowego typu równoważność.
    End Class
    ```
 
-1. Wybierz pozycję **plik**  > **Zapisz wszystko** lub naciśnij **klawisze CTRL** +**SHIFT** +**S** , aby zapisać pliki i projekt.
+1. Wybierz pozycję **plik** > **Zapisz wszystko** lub naciśnij **klawisze CTRL**+**SHIFT**+**S** , aby zapisać pliki i projekt.
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceRuntime** i wybierz polecenie **Kompiluj**. Plik DLL biblioteki klas zostanie skompilowany i zapisany w określonej ścieżce danych wyjściowych kompilacji.
 
@@ -190,9 +190,9 @@ Następnie Utwórz klasę środowiska uruchomieniowego typu równoważność.
 
 Na koniec Utwórz program kliencki typu równoważność, który odwołuje się do zestawu interfejsu.
 
-1. W programie Visual Studio wybierz pozycję **plik**  > **Nowy**  > **projekt**.
+1. W programie Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt**.
 
-1. W oknie dialogowym **Utwórz nowy projekt** wpisz *Console* w polu **Wyszukaj szablony** . Wybierz z listy C# szablon lub **aplikację konsolową vb (.NET Framework)** , a następnie wybierz przycisk **dalej**.
+1. W oknie dialogowym **Utwórz nowy projekt** wpisz *Console* w polu **Wyszukaj szablony** . Wybierz z listy C# szablon lub Visual Basic **aplikację konsoli (.NET Framework)** , a następnie wybierz przycisk **dalej**.
 
 1. W oknie dialogowym **Konfigurowanie nowego projektu** w obszarze **Nazwa projektu**wpisz *TypeEquivalenceClient*, a następnie wybierz pozycję **Utwórz**. Nowy projekt zostanie utworzony.
 
@@ -200,7 +200,7 @@ Na koniec Utwórz program kliencki typu równoważność, który odwołuje się 
 
 1. Wybierz opcję **Kompiluj** w lewym okienku ekranu **Właściwości** , a następnie ustaw **ścieżkę wyjściową** do tej samej lokalizacji, która została użyta dla projektu TypeEquivalenceInterface, na przykład *C:\TypeEquivalenceSample*.
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceClient** i wybierz polecenie **Dodaj**  > **odwołanie**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceClient** i wybierz polecenie **Dodaj** > **odwołanie**.
 
 1. W oknie dialogowym **Menedżer odwołań** , jeśli plik **TypeEquivalenceInterface. dll** jest już wymieniony, zaznacz go. W przeciwnym razie wybierz pozycję **Przeglądaj**, przejdź do folderu Ścieżka wyjściowa, wybierz plik *TypeEquivalenceInterface. dll* (nie *TypeEquivalenceRuntime. dll*), a następnie wybierz pozycję **Dodaj**. Wybierz **przycisk OK**.
 
@@ -250,15 +250,15 @@ Na koniec Utwórz program kliencki typu równoważność, który odwołuje się 
    End Module
    ```
 
-1. Wybierz pozycję **plik**  > **Zapisz wszystko** lub naciśnij **klawisze CTRL** +**SHIFT** +**S** , aby zapisać pliki i projekt.
+1. Wybierz pozycję **plik** > **Zapisz wszystko** lub naciśnij **klawisze CTRL**+**SHIFT**+**S** , aby zapisać pliki i projekt.
 
-1. Naciśnij klawisz **Ctrl** +**F5** , aby skompilować i uruchomić program. Zwróć uwagę, że dane wyjściowe konsoli zwracają zestaw w wersji **1.0.0.0**.
+1. Naciśnij klawisz **Ctrl**+**F5** , aby skompilować i uruchomić program. Zwróć uwagę, że dane wyjściowe konsoli zwracają zestaw w wersji **1.0.0.0**.
 
 ## <a name="modify-the-interface"></a>Modyfikowanie interfejsu
 
 Teraz zmodyfikuj zestaw interfejsów i zmień jego wersję.
 
-1. W programie Visual Studio wybierz pozycję **plik**  > **Otwórz**  > **projekt/rozwiązanie**, a następnie otwórz projekt **TypeEquivalenceInterface** .
+1. W programie Visual Studio wybierz pozycję **plik** > **Otwórz** > **projekt/rozwiązanie**, a następnie otwórz projekt **TypeEquivalenceInterface** .
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceInterface** i wybierz polecenie **Właściwości**.
 
@@ -276,7 +276,7 @@ Teraz zmodyfikuj zestaw interfejsów i zmień jego wersję.
    Function GetDate() As Date
    ```
 
-1. Wybierz pozycję **plik**  > **Zapisz wszystko** lub naciśnij **klawisze CTRL** +**SHIFT** +**S** , aby zapisać pliki i projekt.
+1. Wybierz pozycję **plik** > **Zapisz wszystko** lub naciśnij **klawisze CTRL**+**SHIFT**+**S** , aby zapisać pliki i projekt.
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceInterface** i wybierz polecenie **Kompiluj**. Nowa wersja pliku DLL biblioteki klas jest kompilowana i zapisywana w ścieżce danych wyjściowych kompilacji.
 
@@ -284,7 +284,7 @@ Teraz zmodyfikuj zestaw interfejsów i zmień jego wersję.
 
 Należy również zmodyfikować klasę środowiska uruchomieniowego i zaktualizować jej wersję.
 
-1. W programie Visual Studio wybierz pozycję **plik**  > **Otwórz**  > **projekt/rozwiązanie**, a następnie otwórz projekt **TypeEquivalenceRuntime** .
+1. W programie Visual Studio wybierz pozycję **plik** > **Otwórz** > **projekt/rozwiązanie**, a następnie otwórz projekt **TypeEquivalenceRuntime** .
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceRuntime** i wybierz polecenie **Właściwości**.
 
@@ -307,7 +307,7 @@ Należy również zmodyfikować klasę środowiska uruchomieniowego i zaktualizo
    End Function
    ```
 
-1. Wybierz pozycję **plik**  > **Zapisz wszystko** lub naciśnij **klawisze CTRL** +**SHIFT** +**S** , aby zapisać pliki i projekt.
+1. Wybierz pozycję **plik** > **Zapisz wszystko** lub naciśnij **klawisze CTRL**+**SHIFT**+**S** , aby zapisać pliki i projekt.
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceRuntime** i wybierz polecenie **Kompiluj**. Nowa wersja pliku DLL biblioteki klas jest kompilowana i zapisywana w ścieżce danych wyjściowych kompilacji.
 

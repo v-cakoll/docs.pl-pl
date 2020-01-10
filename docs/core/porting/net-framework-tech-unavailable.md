@@ -3,24 +3,24 @@ title: Technologie .NET Framework niedostępne w programie .NET Core
 description: Informacje na temat technologii .NET Framework, które są niedostępne w programie .NET Core
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: 6c457812f04b8e6503e5162b9f1f6497e7ef83b1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d474b694b80b2f0e74dd2916106016802f7e0c68
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343555"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777310"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Technologie .NET Framework niedostępne w programie .NET Core
 
 Niektóre technologie dostępne dla bibliotek .NET Framework nie są dostępne do użycia z platformą .NET Core, takich jak AppDomains, komunikacja zdalna, zabezpieczenia dostępu kodu (CAS), przezroczystość zabezpieczeń i system. EnterpriseServices. Jeśli biblioteki są zależne od co najmniej jednej z tych technologii, weź pod uwagę alternatywne podejścia opisane poniżej. Aby uzyskać więcej informacji na temat zgodności interfejsów API, zobacz [podstawowe zmiany w programie .NET Core](../compatibility/breaking-changes.md).
 
-Tylko ponieważ interfejs API lub technologia nie jest obecnie zaimplementowana, nie oznacza to, że jest celowo nieobsługiwana. Najpierw należy przeszukać repozytoria GitHub dla platformy .NET Core, aby sprawdzić, czy konkretny problem występuje w drodze projektu. Jeśli nie możesz znaleźć takiego wskaźnika, zgłoś problem w przypadku [problemów z repozytorium dotnet/corefx](https://github.com/dotnet/corefx/issues) w witrynie GitHub, aby uzyskać szczegółowe informacje o interfejsach API i technologiach. [Żądania przenoszenia w ramach problemów](https://github.com/dotnet/corefx/labels/port-to-core) są oznaczane etykietą `port-to-core`.
+Tylko ponieważ interfejs API lub technologia nie jest obecnie zaimplementowana, nie oznacza to, że jest celowo nieobsługiwana. Przeszukaj repozytoria GitHub dla platformy .NET Core, aby sprawdzić, czy konkretny problem występuje w drodze projektu. Jeśli nie znajdziesz takiego wskaźnika, zgłoś problem w [repozytorium dotnet/Runtime](https://github.com/dotnet/runtime/issues) , aby uzyskać szczegółowe informacje o interfejsach API i technologiach. Problemy z portami są oznaczane za pomocą etykiety [Port-to-Core](https://github.com/dotnet/runtime/labels/port-to-core) .
 
 ## <a name="appdomains"></a>AppDomains
 
-Domeny aplikacji (AppDomains) izolują aplikacje od siebie. Domeny aplikacji wymagają obsługi środowiska uruchomieniowego i są zwykle dość kosztowne. Tworzenie dodatkowych domen aplikacji nie jest obsługiwane i nie ma żadnych planów, aby dodać tę możliwość w przyszłości. W przypadku izolacji kodu Użyj oddzielnych procesów lub kontenerów jako alternatywy. Do dynamicznego ładowania zestawów Użyj klasy <xref:System.Runtime.Loader.AssemblyLoadContext>.
+Domeny aplikacji (AppDomains) izolują aplikacje od siebie. Domeny aplikacji wymagają obsługi środowiska uruchomieniowego i są zwykle dość kosztowne. Tworzenie dodatkowych domen aplikacji nie jest obsługiwane i nie ma żadnych planów, aby dodać tę możliwość w przyszłości. W przypadku izolacji kodu Użyj oddzielnych procesów lub kontenerów jako alternatywy. Aby dynamicznie ładować zestawy, użyj klasy <xref:System.Runtime.Loader.AssemblyLoadContext>.
 
-Aby ułatwić migrację kodu z .NET Framework, platforma .NET Core uwidacznia część <xref:System.AppDomain>j powierzchni interfejsu API. Niektóre z funkcji API działają normalnie (na przykład <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), niektórzy członkowie nie wykonują żadnych operacji (na przykład <xref:System.AppDomain.SetCachePath%2A>), a niektóre z nich zgłaszają <xref:System.PlatformNotSupportedException> (na przykład <xref:System.AppDomain.CreateDomain%2A>). Sprawdź typy, które są używane w odniesieniu do [`System.AppDomain`go źródła odwołania](https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/AppDomain.cs) w [repozytorium GitHub/corefx](https://github.com/dotnet/corefx)w serwisie, a następnie wybierz gałąź zgodną z zaimplementowaną wersją.
+Aby ułatwić migrację kodu z .NET Framework, platforma .NET Core uwidacznia część <xref:System.AppDomain>j powierzchni interfejsu API. Niektóre z funkcji API działają normalnie (na przykład <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), niektórzy członkowie nie wykonują żadnych operacji (na przykład <xref:System.AppDomain.SetCachePath%2A>), a niektóre z nich zgłaszają <xref:System.PlatformNotSupportedException> (na przykład <xref:System.AppDomain.CreateDomain%2A>). Sprawdź typy, które są używane w odniesieniu do [`System.AppDomain` źródle odwołania](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs) w [repozytorium GitHub/Runtime](https://github.com/dotnet/runtime). Upewnij się, że wybrano gałąź zgodną z zaimplementowaną wersją.
 
 ## <a name="remoting"></a>Komunikacji zdalnej
 
@@ -34,17 +34,19 @@ Na wielu maszynach Użyj rozwiązania sieciowego jako alternatywy. Najlepiej uż
 
 W przypadku korzystania z trybu piaskownicy, który polega na środowisku uruchomieniowym lub środowisku, aby ograniczyć zasoby, których zarządzana aplikacja lub biblioteka jest uruchomiona, [nie jest obsługiwane w .NET Framework](../../framework/misc/code-access-security.md) i dlatego nie jest również obsługiwane w programie .NET Core. W .NET Framework jest zbyt wiele przypadków i środowisko uruchomieniowe, w którym występuje podniesienie uprawnień, aby kontynuować traktowanie urzędów certyfikacji jako granic zabezpieczeń. Ponadto urzędy certyfikacji czynią implementację bardziej skomplikowaną i często mają prawidłowy wpływ na wydajność aplikacji, które nie będą używane.
 
-Użyj granic zabezpieczeń zapewnianych przez system operacyjny, takich jak wirtualizacja, kontenery lub konta użytkowników do uruchamiania procesów z minimalnym zestawem uprawnień.
+Aby uruchamiać procesy z minimalnym zestawem uprawnień, należy używać granic zabezpieczeń zapewnianych przez system operacyjny, takich jak wirtualizacja, kontenery lub konta użytkowników.
 
 ## <a name="security-transparency"></a>Przejrzystość zabezpieczeń
 
 Podobnie jak w przypadku urzędów certyfikacji, przezroczystość zabezpieczeń oddziela kod w trybie piaskownicy od krytycznego kodu zabezpieczeń w sposób deklaratywny, ale [nie jest już obsługiwany jako granica zabezpieczeń](../../framework/misc/security-transparent-code.md). Ta funkcja jest intensywnie używana przez program Silverlight.
 
-Użyj granic zabezpieczeń zapewnianych przez system operacyjny, takich jak wirtualizacja, kontenery lub konta użytkowników do uruchamiania procesów z najmniej określonym zestawem uprawnień.
+Aby uruchamiać procesy z najmniej zestawem uprawnień, należy używać granic zabezpieczeń udostępnianych przez system operacyjny, takich jak wirtualizacja, kontenery lub konta użytkowników.
 
 ## <a name="systementerpriseservices"></a>System.EnterpriseServices
 
 System. EnterpriseServices (COM+) nie jest obsługiwany przez platformę .NET Core.
 
->[!div class="step-by-step"]
->[Next](third-party-deps.md)
+## <a name="next-steps"></a>Następne kroki
+
+>[!div class="nextstepaction"]
+>[Analizowanie zależności](third-party-deps.md)

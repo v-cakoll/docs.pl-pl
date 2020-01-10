@@ -1,15 +1,13 @@
 ---
 title: Jak działa wersja środowiska uruchomieniowego .NET Core i zestawu SDK
 description: W tym artykule omówiono sposób wersji zestaw .NET Core SDK i środowiska uruchomieniowego (podobnie jak w przypadku wersji semantycznych).
-author: bleroy
 ms.date: 07/26/2018
-ms.custom: seodec18
-ms.openlocfilehash: cc3a834fdb6347f2cfd93b2c8daeae5bcc222575
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342920"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777317"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Omówienie wersji platformy .NET Core
 
@@ -25,7 +23,7 @@ Zestaw .NET Core SDK nie jest zgodna z wersją semantyczną. Zestaw .NET Core SD
 
 Trzecia pozycja numeru wersji zestawu SDK komunikuje się zarówno z literą, jak i numerem poprawki. Wersja pomocnicza jest mnożona przez 100. Wersja pomocnicza 1, Poprawka wersja 2 byłaby reprezentowana jako 102. Ostatnie dwie cyfry reprezentują numer poprawki. Na przykład wydanie programu .NET Core 2,2 może tworzyć wersje, takie jak Następująca tabela:
 
-| Zmiana                | Środowisko uruchomieniowe platformy .NET Core | Zestaw .NET Core SDK (*) |
+| Zmiana                | Środowisko uruchomieniowe platformy .NET Core | Zestaw .NET Core SDK (\*) |
 |-----------------------|-------------------|-------------------|
 | Wersja początkowa       | 2.2.0             | 2.2.100           |
 | Poprawka zestawu SDK             | 2.2.0             | 2.2.101           |

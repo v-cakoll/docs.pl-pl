@@ -4,39 +4,39 @@ description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe w syst
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 38568b31bf9cd02a19a15addfe4926e8857a87b5
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a8e92cab30302c5636d23f098eb60637141545ca
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959801"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740622"
 ---
-# <a name="ubuntu-1804-package-manager---install-net-core"></a><span data-ttu-id="ac660-103">Menedżer pakietów Ubuntu 18,04 — Instalowanie programu .NET Core</span><span class="sxs-lookup"><span data-stu-id="ac660-103">Ubuntu 18.04 Package Manager - Install .NET Core</span></span>
+# <a name="ubuntu-1804-package-manager---install-net-core"></a><span data-ttu-id="c3acb-103">Menedżer pakietów Ubuntu 18,04 — Instalowanie programu .NET Core</span><span class="sxs-lookup"><span data-stu-id="c3acb-103">Ubuntu 18.04 Package Manager - Install .NET Core</span></span>
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-<span data-ttu-id="ac660-104">W tym artykule opisano sposób użycia Menedżera pakietów do zainstalowania programu .NET Core w systemie Ubuntu 18,04.</span><span class="sxs-lookup"><span data-stu-id="ac660-104">This article describes how to use a package manager to install .NET Core on Ubuntu 18.04.</span></span> <span data-ttu-id="ac660-105">Jeśli instalujesz środowisko uruchomieniowe, zalecamy zainstalowanie [ASP.NET Core środowiska uruchomieniowego](#install-the-aspnet-core-runtime), ponieważ zawiera on zarówno środowisko uruchomieniowe programu .NET Core, jak i ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="ac660-105">If you're installing the runtime, we suggest you install the [ASP.NET Core runtime](#install-the-aspnet-core-runtime), as it includes both .NET Core and ASP.NET Core runtimes.</span></span>
+<span data-ttu-id="c3acb-104">W tym artykule opisano sposób użycia Menedżera pakietów do zainstalowania programu .NET Core w systemie Ubuntu 18,04.</span><span class="sxs-lookup"><span data-stu-id="c3acb-104">This article describes how to use a package manager to install .NET Core on Ubuntu 18.04.</span></span> <span data-ttu-id="c3acb-105">Jeśli instalujesz środowisko uruchomieniowe, zalecamy zainstalowanie [ASP.NET Core środowiska uruchomieniowego](#install-the-aspnet-core-runtime), ponieważ zawiera on zarówno środowisko uruchomieniowe programu .NET Core, jak i ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="c3acb-105">If you're installing the runtime, we suggest you install the [ASP.NET Core runtime](#install-the-aspnet-core-runtime), as it includes both .NET Core and ASP.NET Core runtimes.</span></span>
 
-## <a name="register-microsoft-key-and-feed"></a><span data-ttu-id="ac660-106">Rejestrowanie klucza firmy Microsoft i kanału informacyjnego</span><span class="sxs-lookup"><span data-stu-id="ac660-106">Register Microsoft key and feed</span></span>
+## <a name="register-microsoft-key-and-feed"></a><span data-ttu-id="c3acb-106">Rejestrowanie klucza firmy Microsoft i źródła danych</span><span class="sxs-lookup"><span data-stu-id="c3acb-106">Register Microsoft key and feed</span></span>
 
-<span data-ttu-id="ac660-107">Przed zainstalowaniem programu .NET należy:</span><span class="sxs-lookup"><span data-stu-id="ac660-107">Before installing .NET, you'll need to:</span></span>
+<span data-ttu-id="c3acb-107">Przed zainstalowaniem programu .NET należy:</span><span class="sxs-lookup"><span data-stu-id="c3acb-107">Before installing .NET, you'll need to:</span></span>
 
-- <span data-ttu-id="ac660-108">Rejestrowanie klucza firmy Microsoft</span><span class="sxs-lookup"><span data-stu-id="ac660-108">Register the Microsoft key</span></span>
-- <span data-ttu-id="ac660-109">Rejestrowanie repozytorium produktu</span><span class="sxs-lookup"><span data-stu-id="ac660-109">register the product repository</span></span>
-- <span data-ttu-id="ac660-110">Instalowanie wymaganych zależności</span><span class="sxs-lookup"><span data-stu-id="ac660-110">Install required dependencies</span></span>
+- <span data-ttu-id="c3acb-108">Zarejestruj klucz Microsoft.</span><span class="sxs-lookup"><span data-stu-id="c3acb-108">Register the Microsoft key.</span></span>
+- <span data-ttu-id="c3acb-109">Zarejestruj repozytorium produktów.</span><span class="sxs-lookup"><span data-stu-id="c3acb-109">Register the product repository.</span></span>
+- <span data-ttu-id="c3acb-110">Zainstaluj wymagane zależności.</span><span class="sxs-lookup"><span data-stu-id="c3acb-110">Install required dependencies.</span></span>
 
-<span data-ttu-id="ac660-111">Te operacje należy wykonać tylko jeden raz na każdej maszynie.</span><span class="sxs-lookup"><span data-stu-id="ac660-111">This only needs to be done once per machine.</span></span>
+<span data-ttu-id="c3acb-111">Te operacje należy wykonać tylko jeden raz na każdej maszynie.</span><span class="sxs-lookup"><span data-stu-id="c3acb-111">This only needs to be done once per machine.</span></span>
 
-<span data-ttu-id="ac660-112">Otwórz Terminal i uruchom następujące polecenia.</span><span class="sxs-lookup"><span data-stu-id="ac660-112">Open a terminal and run the following commands.</span></span>
+<span data-ttu-id="c3acb-112">Otwórz Terminal i uruchom następujące polecenia.</span><span class="sxs-lookup"><span data-stu-id="c3acb-112">Open a terminal and run the following commands.</span></span>
 
 ```bash
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-## <a name="install-the-net-core-sdk"></a><span data-ttu-id="ac660-113">Zainstaluj zestaw .NET Core SDK</span><span class="sxs-lookup"><span data-stu-id="ac660-113">Install the .NET Core SDK</span></span>
+## <a name="install-the-net-core-sdk"></a><span data-ttu-id="c3acb-113">Zainstaluj zestaw .NET Core SDK</span><span class="sxs-lookup"><span data-stu-id="c3acb-113">Install the .NET Core SDK</span></span>
 
-<span data-ttu-id="ac660-114">Zaktualizuj produkty dostępne do zainstalowania, a następnie Zainstaluj zestaw .NET Core SDK.</span><span class="sxs-lookup"><span data-stu-id="ac660-114">Update the products available for installation, then install the .NET Core SDK.</span></span> <span data-ttu-id="ac660-115">W terminalu uruchom następujące polecenia.</span><span class="sxs-lookup"><span data-stu-id="ac660-115">In your terminal, run the following commands.</span></span>
+<span data-ttu-id="c3acb-114">Zaktualizuj produkty dostępne do zainstalowania, a następnie Zainstaluj zestaw .NET Core SDK.</span><span class="sxs-lookup"><span data-stu-id="c3acb-114">Update the products available for installation, then install the .NET Core SDK.</span></span> <span data-ttu-id="c3acb-115">W terminalu uruchom następujące polecenia.</span><span class="sxs-lookup"><span data-stu-id="c3acb-115">In your terminal, run the following commands.</span></span>
 
 ```bash
 sudo add-apt-repository universe
@@ -47,11 +47,11 @@ sudo apt-get install dotnet-sdk-3.1
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="ac660-116">Jeśli zostanie wyświetlony komunikat o błędzie podobny do **nie można zlokalizować pakietu dotnet-SDK-3,1**, zobacz sekcję [Rozwiązywanie problemów z menedżerem pakietów](#troubleshoot-the-package-manager) .</span><span class="sxs-lookup"><span data-stu-id="ac660-116">If you receive an error message similar to **Unable to locate package dotnet-sdk-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
+> <span data-ttu-id="c3acb-116">Jeśli zostanie wyświetlony komunikat o błędzie podobny do **nie można zlokalizować pakietu dotnet-SDK-3,1**, zobacz sekcję [Rozwiązywanie problemów z menedżerem pakietów](#troubleshoot-the-package-manager) .</span><span class="sxs-lookup"><span data-stu-id="c3acb-116">If you receive an error message similar to **Unable to locate package dotnet-sdk-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
 
-## <a name="install-the-aspnet-core-runtime"></a><span data-ttu-id="ac660-117">Zainstaluj środowisko uruchomieniowe ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="ac660-117">Install the ASP.NET Core runtime</span></span>
+## <a name="install-the-aspnet-core-runtime"></a><span data-ttu-id="c3acb-117">Zainstaluj środowisko uruchomieniowe ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="c3acb-117">Install the ASP.NET Core runtime</span></span>
 
-<span data-ttu-id="ac660-118">Zaktualizuj produkty dostępne do instalacji, a następnie zainstaluj środowisko uruchomieniowe ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="ac660-118">Update the products available for installation, then install the ASP.NET Core runtime.</span></span> <span data-ttu-id="ac660-119">W terminalu uruchom następujące polecenia.</span><span class="sxs-lookup"><span data-stu-id="ac660-119">In your terminal, run the following commands.</span></span>
+<span data-ttu-id="c3acb-118">Zaktualizuj produkty dostępne do instalacji, a następnie zainstaluj środowisko uruchomieniowe ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="c3acb-118">Update the products available for installation, then install the ASP.NET Core runtime.</span></span> <span data-ttu-id="c3acb-119">W terminalu uruchom następujące polecenia.</span><span class="sxs-lookup"><span data-stu-id="c3acb-119">In your terminal, run the following commands.</span></span>
 
 ```bash
 sudo add-apt-repository universe
@@ -62,11 +62,11 @@ sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="ac660-120">Jeśli zostanie wyświetlony komunikat o błędzie podobny do sytuacji, w której **nie można znaleźć pakietu aspnetcore-Runtime-3,1**, zobacz sekcję [Rozwiązywanie problemów z menedżerem pakietów](#troubleshoot-the-package-manager) .</span><span class="sxs-lookup"><span data-stu-id="ac660-120">If you receive an error message similar to **Unable to locate package aspnetcore-runtime-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
+> <span data-ttu-id="c3acb-120">Jeśli zostanie wyświetlony komunikat o błędzie podobny do sytuacji, w której **nie można znaleźć pakietu aspnetcore-Runtime-3,1**, zobacz sekcję [Rozwiązywanie problemów z menedżerem pakietów](#troubleshoot-the-package-manager) .</span><span class="sxs-lookup"><span data-stu-id="c3acb-120">If you receive an error message similar to **Unable to locate package aspnetcore-runtime-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
 
-## <a name="install-the-net-core-runtime"></a><span data-ttu-id="ac660-121">Instalowanie środowiska uruchomieniowego platformy .NET Core</span><span class="sxs-lookup"><span data-stu-id="ac660-121">Install the .NET Core runtime</span></span>
+## <a name="install-the-net-core-runtime"></a><span data-ttu-id="c3acb-121">Instalowanie środowiska uruchomieniowego platformy .NET Core</span><span class="sxs-lookup"><span data-stu-id="c3acb-121">Install the .NET Core runtime</span></span>
 
-<span data-ttu-id="ac660-122">Zaktualizuj produkty dostępne do zainstalowania, a następnie zainstaluj środowisko uruchomieniowe programu .NET Core.</span><span class="sxs-lookup"><span data-stu-id="ac660-122">Update the products available for installation, then install the .NET Core runtime.</span></span> <span data-ttu-id="ac660-123">W terminalu uruchom następujące polecenia.</span><span class="sxs-lookup"><span data-stu-id="ac660-123">In your terminal, run the following commands.</span></span>
+<span data-ttu-id="c3acb-122">Zaktualizuj produkty dostępne do zainstalowania, a następnie zainstaluj środowisko uruchomieniowe programu .NET Core.</span><span class="sxs-lookup"><span data-stu-id="c3acb-122">Update the products available for installation, then install the .NET Core runtime.</span></span> <span data-ttu-id="c3acb-123">W terminalu uruchom następujące polecenia.</span><span class="sxs-lookup"><span data-stu-id="c3acb-123">In your terminal, run the following commands.</span></span>
 
 ```bash
 sudo add-apt-repository universe
@@ -77,15 +77,15 @@ sudo apt-get install dotnet-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="ac660-124">Jeśli zostanie wyświetlony komunikat o błędzie podobny do sytuacji, w której **nie można znaleźć pakietu dotnet-Runtime-3,1**, zobacz sekcję [Rozwiązywanie problemów z menedżerem pakietów](#troubleshoot-the-package-manager) .</span><span class="sxs-lookup"><span data-stu-id="ac660-124">If you receive an error message similar to **Unable to locate package dotnet-runtime-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
+> <span data-ttu-id="c3acb-124">Jeśli zostanie wyświetlony komunikat o błędzie podobny do sytuacji, w której **nie można znaleźć pakietu dotnet-Runtime-3,1**, zobacz sekcję [Rozwiązywanie problemów z menedżerem pakietów](#troubleshoot-the-package-manager) .</span><span class="sxs-lookup"><span data-stu-id="c3acb-124">If you receive an error message similar to **Unable to locate package dotnet-runtime-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
 
-## <a name="how-to-install-other-versions"></a><span data-ttu-id="ac660-125">Jak zainstalować inne wersje</span><span class="sxs-lookup"><span data-stu-id="ac660-125">How to install other versions</span></span>
+## <a name="how-to-install-other-versions"></a><span data-ttu-id="c3acb-125">Jak zainstalować inne wersje</span><span class="sxs-lookup"><span data-stu-id="c3acb-125">How to install other versions</span></span>
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="troubleshoot-the-package-manager"></a><span data-ttu-id="ac660-126">Rozwiązywanie problemów z menedżerem pakietów</span><span class="sxs-lookup"><span data-stu-id="ac660-126">Troubleshoot the package manager</span></span>
+## <a name="troubleshoot-the-package-manager"></a><span data-ttu-id="c3acb-126">Rozwiązywanie problemów z menedżerem pakietów</span><span class="sxs-lookup"><span data-stu-id="c3acb-126">Troubleshoot the package manager</span></span>
 
-<span data-ttu-id="ac660-127">Jeśli zostanie wyświetlony komunikat o błędzie podobny do następującego: **nie można zlokalizować pakietu {pakiet .NET Core}** , uruchom następujące polecenia.</span><span class="sxs-lookup"><span data-stu-id="ac660-127">If you receive an error message similar to **Unable to locate package {the .NET Core package}**, run the following commands.</span></span>
+<span data-ttu-id="c3acb-127">Jeśli zostanie wyświetlony komunikat o błędzie podobny do następującego: **nie można zlokalizować pakietu {pakiet .NET Core}** , uruchom następujące polecenia.</span><span class="sxs-lookup"><span data-stu-id="c3acb-127">If you receive an error message similar to **Unable to locate package {the .NET Core package}**, run the following commands.</span></span>
 
 ```bash
 sudo dpkg --purge packages-microsoft-prod && sudo dpkg -i packages-microsoft-prod.deb
@@ -93,7 +93,7 @@ sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
 
-<span data-ttu-id="ac660-128">Jeśli to nie zadziała, można uruchomić instalację ręczną przy użyciu następujących poleceń.</span><span class="sxs-lookup"><span data-stu-id="ac660-128">If that doesn't work, you can run a manual install with the following commands.</span></span>
+<span data-ttu-id="c3acb-128">Jeśli to nie zadziała, można uruchomić instalację ręczną przy użyciu następujących poleceń.</span><span class="sxs-lookup"><span data-stu-id="c3acb-128">If that doesn't work, you can run a manual install with the following commands.</span></span>
 
 ```bash
 sudo apt-get install -y gpg

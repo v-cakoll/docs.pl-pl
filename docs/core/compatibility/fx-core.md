@@ -2,18 +2,21 @@
 title: Istotne zmiany — .NET Framework do platformy .NET Core
 description: Wyświetla listę istotnych zmian z .NET Framework do programu .NET Core.
 ms.date: 12/18/2019
-ms.openlocfilehash: 6ec20388e89e59238be3f2d68949059453af216d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e01ca522b7ec29e2f6db8a5a0c2fcdfc30a38168
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75443520"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740901"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Istotne zmiany dotyczące migracji z .NET Framework do platformy .NET Core
 
 W przypadku migrowania aplikacji z programu .NET Framework do programu .NET Core, istotne zmiany wymienione w tym artykule mogą mieć wpływ na użytkownika. Ponadto [technologie .NET Framework niedostępne w artykule .NET Core](../porting/net-framework-tech-unavailable.md) zawierają informacje o technologiach, które nie są obsługiwane przez platformę .NET Core, na przykład domeny aplikacji i komunikacja zdalna platformy .NET.
 
 Istotne zmiany są pogrupowane według kategorii.
+
+> [!NOTE]
+> Ten artykuł nie jest pełną listą istotnych zmian między .NET Framework i .NET Core. Najważniejsze zmiany zostaną dodane w tym miejscu w miarę ich istnienia.
 
 ## <a name="corefx"></a>CoreFx
 

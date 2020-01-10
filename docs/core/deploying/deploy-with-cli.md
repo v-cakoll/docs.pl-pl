@@ -7,13 +7,12 @@ ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.custom: seodec18
-ms.openlocfilehash: 0c175d8ba8e4011213265a6cfa2e5e8fea0303b2
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 98f1e96ac087727e711f9ebf3d3eaf86c4d4eec9
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343571"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740859"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publikowanie aplikacji platformy .NET Core za pomocą interfejsu wiersza polecenia
 
@@ -135,7 +134,7 @@ Za każdym razem, gdy używasz przełącznika `-r`, ścieżka folderu wyjściowe
 Jeśli używasz [przykładowej aplikacji](#sample-app), uruchom `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`. To polecenie tworzy następujący plik wykonywalny: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
-> Możesz zmniejszyć łączny rozmiar wdrożenia, włączając **tryb niezmienny globalizacji**. Ten tryb jest przydatny w przypadku aplikacji, które nie są ogólnie obsługiwane i mogą korzystać z Konwencji formatowania, konwencji dotyczących wielkości liter i porównywania ciągów oraz kolejności sortowania [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture). Aby uzyskać więcej informacji o **trybie niezmiennym globalizacji** i sposobie jego włączania, zobacz [tryb niezmienny globalizacji platformy .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+> Możesz zmniejszyć łączny rozmiar wdrożenia, włączając **tryb niezmienny globalizacji**. Ten tryb jest przydatny w przypadku aplikacji, które nie są ogólnie obsługiwane i mogą korzystać z Konwencji formatowania, konwencji dotyczących wielkości liter i porównywania ciągów oraz kolejności sortowania [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture). Aby uzyskać więcej informacji o **trybie niezmiennym globalizacji** i sposobie jego włączania, zobacz [tryb niezmienny globalizacji platformy .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
 ## <a name="self-contained-deployment"></a>Niezależne wdrożenia
 
@@ -150,7 +149,7 @@ Aby opublikować SCD, należy użyć następujących przełączników z poleceni
 - `--self-contained true` ten przełącznik nakazuje zestaw .NET Core SDK do utworzenia pliku wykonywalnego jako SCD.
 
 > [!NOTE]
-> Możesz zmniejszyć łączny rozmiar wdrożenia, włączając **tryb niezmienny globalizacji**. Ten tryb jest przydatny w przypadku aplikacji, które nie są ogólnie obsługiwane i mogą korzystać z Konwencji formatowania, konwencji dotyczących wielkości liter i porównywania ciągów oraz kolejności sortowania [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture). Aby uzyskać więcej informacji o **trybie niezmiennym globalizacji** i sposobie jego włączania, zobacz [tryb niezmienny globalizacji platformy .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+> Możesz zmniejszyć łączny rozmiar wdrożenia, włączając **tryb niezmienny globalizacji**. Ten tryb jest przydatny w przypadku aplikacji, które nie są ogólnie obsługiwane i mogą korzystać z Konwencji formatowania, konwencji dotyczących wielkości liter i porównywania ciągów oraz kolejności sortowania [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture). Aby uzyskać więcej informacji o **trybie niezmiennym globalizacji** i sposobie jego włączania, zobacz [tryb niezmienny globalizacji platformy .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,21 +1,21 @@
 ---
-title: Projektowanie przy użyciu typów referencyjnych dopuszczających wartość null
-description: Ten zaawansowany samouczek zawiera wprowadzenie do typów referencyjnych dopuszczających wartość null. Dowiesz się, w jaki sposób projekt zostanie zastosowany, gdy wartości odniesienia mogą mieć wartość null, i że kompilator wymusi, gdy nie mogą mieć wartości null.
+title: Uaktualnij do typów referencyjnych dopuszczających wartość null
+description: W tym zaawansowanym samouczku pokazano, jak migrować istniejący kod z typami referencyjnymi nullable.
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969347"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740465"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Samouczek: Migrowanie istniejącego kodu z typami referencyjnymi Nullable
 
 C#8 wprowadza **typy odwołań do wartości null**, które uzupełniają typy odwołań w taki sam sposób, jak typy wartości null uzupełniają typy wartości. Należy zadeklarować zmienną jako **typ referencyjny dopuszczający wartość null** poprzez dołączenie `?` do typu. Na przykład `string?` reprezentuje `string`dopuszczające wartość null. Możesz użyć tych nowych typów, aby dokładniej wyznaczać intencje projektowania: niektóre zmienne *muszą zawsze mieć wartość*, inne *mogą nie mieć wartości*. Wszystkie istniejące zmienne typu referencyjnego byłyby interpretowane jako typ referencyjny, który nie dopuszcza wartości null. 
 
-W tym samouczku dowiesz się, jak:
+Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 > [!div class="checklist"]
 >
@@ -36,7 +36,7 @@ Przeprowadzona Przykładowa aplikacja jest aplikacją internetową czytnika kana
 
 Przykładowa aplikacja zawiera bibliotekę testów jednostkowych, która sprawdza poprawność głównych funkcji aplikacji. Ten projekt ułatwi bezpieczne uaktualnienie, jeśli zmienisz dowolną implementację w oparciu o wygenerowane ostrzeżenia. Możesz pobrać kod początkowy z repozytorium usługi GitHub [/przykłady](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/start) .
 
-Celem migrowania projektu powinna być skorzystanie z nowych funkcji języka, aby wyraźnie wyrażać intencję do wartości null zmiennych i zrobić to w taki sposób, aby kompilator nie generował ostrzeżeń w przypadku braku kontekstu adnotacji z dopuszczaniem wartości null i kontekst ostrzegawczy dopuszczający wartość null jest ustawiany na `enabled`.
+Celem migrowania projektu powinna być skorzystanie z nowych funkcji języka, aby wyraźnie wyrażać intencję do wartości null zmiennych, a tym samym w taki sposób, aby kompilator nie generował ostrzeżeń w przypadku, gdy użytkownik ma kontekst adnotacji z wartością null i `enabled`kontekst ostrzeżenia dopuszczający wartość null.
 
 ## <a name="upgrade-the-projects-to-c-8"></a>Uaktualnij projekty do C# 8
 
@@ -163,8 +163,8 @@ Wprowadzono zmiany w klasie `NewsService`, więc Włącz `#nullable enable` adno
 
 Parametr `IMapper` jest typem odwołania, które nie ma wartości null. Jest on wywoływany przez ASP.NET Core kod infrastruktury, więc kompilator nie wie, że `IMapper` nigdy nie będzie mieć wartości null. ASP.NET Core domyślny kontener iniekcji zależności (DI) zgłasza wyjątek, jeśli nie może rozpoznać wymaganej usługi, więc kod jest poprawny. Kompilator nie może sprawdzić poprawności wszystkich wywołań publicznych interfejsów API, nawet jeśli kod jest kompilowany z włączonym kontekstem adnotacji dopuszczający wartość null. Ponadto biblioteki mogą być używane przez projekty, które nie wybrały jeszcze użycia typów referencyjnych dopuszczających wartość null. Sprawdź poprawność danych wejściowych do publicznych interfejsów API, mimo że zostały zadeklarowane jako typy niemające wartości null.
 
-## <a name="get-the-code"></a>Pobierz kod
+## <a name="get-the-code"></a>Uzyskaj kod
 
 Zostały naprawione ostrzeżenia, które zostały zidentyfikowane podczas wstępnego kompilowania testów, dlatego teraz można włączyć kontekst adnotacji dopuszczający wartości null dla obu projektów. Kompiluj ponownie projekty; Kompilator zgłasza Brak ostrzeżeń. Możesz uzyskać kod dla gotowego projektu w repozytorium GitHub [/Samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished)
 
-Nowe funkcje, które obsługują typy referencyjne dopuszczające wartość null, ułatwiają znajdowanie i rozwiązywanie potencjalnych błędów w sposobie obsługi `null` wartości w kodzie. Włączenie kontekstu adnotacji z dopuszczaniem wartości null pozwala na wyrażenie zamiaru projektu: niektóre zmienne nigdy nie powinny mieć wartości null, inne zmienne mogą zawierać wartości null. Te funkcje ułatwiają deklarowanie zamiaru projektowania. Podobnie, kontekst ostrzegawczy wartości null instruuje kompilator, aby wydawał ostrzeżenia w przypadku naruszenia tego celu. Te ostrzeżenia przeprowadzą Cię przez proces aktualizacji, które sprawiają, że kod będzie bardziej odporny na błędy i mniej, co może spowodować wygenerowanie `NullReferenceException` podczas wykonywania. Można kontrolować zakres tych kontekstów, aby można było skupić się na lokalnych obszarach kodu do migracji, gdy pozostała baza kodu jest nienaruszona. W tym celu zadanie migracji jest częścią regularnej konserwacji klas. W tym samouczku przedstawiono proces migrowania aplikacji w celu używania typów referencyjnych dopuszczających wartość null. Możesz zapoznać się z większym rzeczywistym przykładem tego procesu, sprawdzając, czy element PR [Jan Skeet](https://github.com/jskeet) miał zostać uwzględniony w [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits).
+Nowe funkcje, które obsługują typy referencyjne dopuszczające wartość null, ułatwiają znajdowanie i rozwiązywanie potencjalnych błędów w sposobie obsługi `null` wartości w kodzie. Włączenie kontekstu adnotacji z dopuszczaniem wartości null pozwala na wyrażenie zamiaru projektu: niektóre zmienne nigdy nie powinny mieć wartości null, inne zmienne mogą zawierać wartości null. Te funkcje ułatwiają deklarowanie zamiaru projektowania. Podobnie, kontekst ostrzegawczy wartości null instruuje kompilator, aby wydawał ostrzeżenia w przypadku naruszenia tego celu. Te ostrzeżenia przeprowadzą Cię przez proces aktualizacji, które sprawiają, że kod będzie bardziej odporny na błędy i mniej, co może spowodować wygenerowanie `NullReferenceException` podczas wykonywania. Można kontrolować zakres tych kontekstów, aby można było skupić się na lokalnych obszarach kodu do migracji, gdy pozostała baza kodu jest nienaruszona. W tym celu zadanie migracji jest częścią regularnej konserwacji klas. W tym samouczku przedstawiono proces migrowania aplikacji w celu używania typów referencyjnych dopuszczających wartość null. Możesz zapoznać się z większym rzeczywistym przykładem tego procesu, sprawdzając, czy element PR [Jan Skeet](https://github.com/jskeet) miał zostać uwzględniony w [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits). Możesz też dowiedzieć się więcej na temat technik używania typów referencyjnych dopuszczających wartości null, Entity Framework Core w [Entity Framework Core — pracy z typami referencyjnymi nullable](/ef/core/miscellaneous/nullable-reference-types).

@@ -1,15 +1,14 @@
 ---
 title: Jak wybrać algorytm ML.NET
 description: Dowiedz się, jak wybrać algorytm ML.NET dla modelu uczenia maszynowego
-author: natke
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 0721418d8b0b3c9ab645eb9885b0f4951c37762e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976695"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739998"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Jak wybrać algorytm ML.NET
 
@@ -43,7 +42,7 @@ Algorytmy liniowe czynią wiele przebiegów przez dane szkoleniowe. Jeśli zesta
 |---------|----------|--------|
 |Średnia Perceptron|Najlepsza dla klasyfikacji tekstu|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
 |Stochastycznego Dual coordinateal|Dostrajanie nie jest wymagane dla dobrej wydajności domyślnej|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
-|L — BFGS|Użyj, gdy liczba funkcji jest duża. Tworzy statystykę szkoleniową z zakresu regresji logistycznej, ale nie skaluje się, a także AveragedPerceptronTrainer|<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>|
+|L-BFGS|Użyj, gdy liczba funkcji jest duża. Tworzy statystykę szkoleniową z zakresu regresji logistycznej, ale nie skaluje się, a także AveragedPerceptronTrainer|<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>|
 |Stochastycznego symboliczny gradient|Najszybsze i najbardziej precyzyjne Trainer klasyfikacji liniowej. Skaluj z liczbą procesorów|<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>|
 
 ## <a name="decision-tree-algorithms"></a>Algorytmy drzewa decyzyjnego
@@ -82,7 +81,7 @@ Ci instruktorzy tworzą wieloklasowe Trainer z Trainer binarnych. Użyj z <xref:
 |Algorytm|Właściwości|Instruktorów|
 |---------|----------|--------|
 |Jeden a wszystko|Ten klasyfikator wieloklasowy pociąga za sobą jeden klasyfikator binarny dla każdej klasy, co odróżnia tę klasę od wszystkich innych klas. Jest ograniczone w skali przez liczbę klas do kategoryzacji|[OneVersusAllTrainer\<BinaryClassificationTrainer >](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
-|Sprzęganie parowania|Ten klasyfikator wieloklasowy pociąga za sobą binarny algorytm klasyfikacji dla każdej pary klas. Jest ograniczone w skali przez liczbę klas, ponieważ każda kombinacja dwóch klas musi być przeszkolone.|[PairwiseCouplingTrainer\<BinaryClassificationTrainer >](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
+|Sprzęganie parowania|Ten klasyfikator wieloklasowy pociąga za sobą binarny algorytm klasyfikacji dla każdej pary klas. Jest ograniczone w skali przez liczbę klas, ponieważ każda kombinacja dwóch klas musi być przeszkolone.|[PairwiseCouplingTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
 
 ## <a name="k-means"></a>K — oznacza
 
@@ -96,7 +95,7 @@ Ci instruktorzy tworzą wieloklasowe Trainer z Trainer binarnych. Użyj z <xref:
 |----------|--------|
 |Użyj na potrzeby wykrywania anomalii|<xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>|
 
-## <a name="naive-bayes"></a>Algorytm Bayesa Bayesa
+## <a name="naive-bayes"></a>Prosty algorytm Bayesa
 
 |Właściwości|Instruktorów|
 |----------|--------|

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Radio Button control type
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
-ms.openlocfilehash: b5a64c987fd8d7816e2327e048b90ce20fa61c53
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 416d6d6b9d8e7fbd3b3bb5483ddd8dc22380166c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800315"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741559"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu RadioButton
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74800315"
   
  Przycisk radiowy składa się z przycisku zaokrąglonego i tekstu zdefiniowanego przez aplikację (etykiety), ikony lub mapy bitowej, która wskazuje wybór przez użytkownika, wybierając przycisk. Aplikacja zwykle używa przycisków radiowych w polu grupy, aby zezwolić użytkownikowi na wybór z zestawu powiązanych, ale wzajemnie wykluczających się opcji. Na przykład aplikacja może przedstawić grupę przycisków radiowych, z których użytkownik może wybrać preferencję formatu dla tekstu wybranego w obszarze klienta. Użytkownik może wybrać format wyrównany do lewej, wyrównany do prawej lub wyorodkowany, zaznaczając odpowiedni przycisk radiowy. Zazwyczaj użytkownik może wybrać tylko jedną opcję z zestawu przycisków radiowych.  
   
- Poniższe sekcje definiują wymaganą strukturę drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], właściwości, wzorce formantów i zdarzenia dla typu formantu RadioButton. Wymagania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] są stosowane do wszystkich kontrolek listy, czy [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]lub [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ Poniższe sekcje definiują wymaganą strukturę drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], właściwości, wzorce formantów i zdarzenia dla typu formantu RadioButton. Wymagania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] są stosowane do wszystkich kontrolek listy, czy [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 czy [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Wymagana struktura drzewa automatyzacji interfejsu użytkownika  
@@ -57,7 +57,7 @@ ms.locfileid: "74800315"
 |Właściwość wzorca kontrolki/wzorca kontrolki|Obsługa/wartość|Uwagi|  
 |-----------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Tak|Wszystkie kontrolki przycisków radiowych muszą obsługiwać wzorzec elementu zaznaczenia, aby można było wybrać opcję.|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|Zobacz uwagi.|`SelectionContainerProperty` musi być zawsze zakończona, aby klient automatyzacji interfejsu użytkownika mógł określić, jakie inne przyciski radiowe w określonym kontekście odnoszą się do siebie.  W przypadku [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] wersji przycisku radiowego ta właściwość nie będzie obsługiwana, ponieważ nie jest możliwe uzyskanie tych informacji z tej starszej struktury.|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|Zobacz uwagi.|`SelectionContainerProperty` musi być zawsze zakończona, aby klient automatyzacji interfejsu użytkownika mógł określić, jakie inne przyciski radiowe w określonym kontekście odnoszą się do siebie.  W przypadku wersji systemu Win32 przycisku radiowego ta właściwość nie będzie obsługiwana, ponieważ nie jest możliwe uzyskanie tych informacji z tej starszej struktury.|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|nigdy nie|Przycisk radiowy nie może przechodzić przez jego stan po jego ustawieniu.  Ten wzorzec nigdy nie może być obsługiwany na przycisku radiowym.|  
   
 <a name="Required_UI_Automation_Events"></a>   

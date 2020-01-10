@@ -1,15 +1,14 @@
 ---
 title: Glosariusz uczenia maszynowego
 description: Słownik ważnych warunków uczenia maszynowego, które są przydatne podczas tworzenia niestandardowych modeli w programie ML.NET.
-ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: bd4f2db701f537d5c87529115a6bd44035432534
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977284"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739875"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Słownik uczenia maszynowego ważnych warunków
 
@@ -23,7 +22,7 @@ W [klasyfikacji](#classification)dokładność jest liczbą poprawnie sklasyfiko
 
 W [klasyfikacji binarnej](#binary-classification), Metryka oceny, która jest wartością obszaru pod krzywą, która przedstawia prawdziwą stawkę dodatnią (na osi y) względem pozytywnej szybkości dodatniej (na osi x). Zakresy od 0,5 (najgorzej) do 1 (najlepiej). Znany również jako obszar pod krzywą ROC, tj. z krzywą charakterystyczną dla odbiornika. Aby uzyskać więcej informacji, zobacz artykuł dotyczący [obsługi odbiornika](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) w witrynie Wikipedia.
 
-## <a name="binary-classification"></a>klasyfikacja binarna
+## <a name="binary-classification"></a>Klasyfikacja binarna
 
 Przypadek [klasyfikacji](#classification) , gdzie [etykieta](#label) jest tylko jedną z dwóch klas. Aby uzyskać więcej informacji, zobacz sekcję [klasyfikacja binarna](tasks.md#binary-classification) tematu [zadania usługi Machine Learning](tasks.md) .
 
@@ -37,7 +36,7 @@ W ML.NET katalog jest kolekcją funkcji rozszerzeń pogrupowanych według wspól
 
 Na przykład każde zadanie uczenia maszynowego (klasyfikacja binarna, regresja, klasyfikacja itp.) ma katalog dostępnych algorytmów uczenia maszynowego (instruktorzy). Wykaz dla instruktorów klasyfikacji binarnej to: <xref:Microsoft.ML.BinaryClassificationCatalog.BinaryClassificationTrainers>.
 
-## <a name="classification"></a>Zmianę
+## <a name="classification"></a>Klasyfikacja
 
 Gdy dane są używane do przewidywania kategorii, zadanie [uczenia maszynowego](#supervised-machine-learning) jest nazywane klasyfikacją. [Klasyfikacja binarna](#binary-classification) odnosi się do przewidywania tylko dwóch kategorii (na przykład klasyfikowanie obrazu jako obrazu "Cat" lub "Dog"). [Klasyfikacja wieloklasowa](#multiclass-classification) odnosi się do przewidywania wielu kategorii (na przykład podczas klasyfikowania obrazu jako obrazu konkretnej rasy Dog).
 
@@ -57,7 +56,7 @@ Dane są centralne dla każdej aplikacji uczenia maszynowego. W danych ML.NET s�
 
 Klasa w ML.NET implementująca interfejs <xref:Microsoft.ML.IEstimator%601>.
 
-Szacowania to specyfikacja transformacji (transformacja przygotowywania danych i transformacja szkoleń modelu uczenia maszynowego). Szacowania można łączyć razem z potokiem transformacji. Parametry szacowania lub potoku szacowania są uzyskiwane w przypadku wywołania <xref:Microsoft.ML.IEstimator`1.Fit*>. Wynik <xref:Microsoft.ML.IEstimator`1.Fit*> jest [transformatorem](#transformer).
+Szacowania to specyfikacja transformacji (transformacja przygotowywania danych i transformacja szkoleń modelu uczenia maszynowego). Szacowania można łączyć razem z potokiem transformacji. Parametry szacowania lub potoku szacowania są uzyskiwane w przypadku wywołania <xref:Microsoft.ML.IEstimator%601.Fit%2A>. Wynik <xref:Microsoft.ML.IEstimator%601.Fit%2A> jest [transformatorem](#transformer).
 
 ## <a name="extension-method"></a>Metoda rozszerzenia
 
@@ -119,7 +118,7 @@ Normalizacja to proces skalowania danych zmiennoprzecinkowych do wartości z zak
 
 Wektor [funkcji](#feature) składający się tylko z wartości liczbowych. Jest to podobne do `double[]`.
 
-## <a name="pipeline"></a>Proces
+## <a name="pipeline"></a>Potok
 
 Wszystkie operacje, które są konieczne do dopasowania modelu do zestawu danych. Potok składa się z kroków importowania, przekształcania, cechowania i uczenia danych. Po przeszkoleniu potoku zostanie on przekształcony w model.
 
@@ -127,7 +126,7 @@ Wszystkie operacje, które są konieczne do dopasowania modelu do zestawu danych
 
 W [klasyfikacji](#classification)precyzja dla klasy jest liczbą elementów prawidłowo przewidywanych jako należące do tej klasy podzielona przez łączną liczbę elementów przewidywanych jako należące do klasy.
 
-## <a name="recall"></a>Wycofaniu
+## <a name="recall"></a>Odwołaj
 
 W [klasyfikacji](#classification)odwołanie dla klasy jest liczbą elementów prawidłowo przewidywanych jako należące do tej klasy podzielona przez łączną liczbę elementów, które faktycznie należą do klasy.
 
@@ -138,7 +137,7 @@ W [klasyfikacji](#classification)odwołanie dla klasy jest liczbą elementów pr
 - $L _1 $ uregulowania zerowej wagi dla nieznaczących funkcji. Rozmiar zapisanego modelu może być mniejszy po tym typie uregulowania.
 - $L _2 $ uregulowanie ogranicza zakres wagi dla nieznaczących funkcji. Jest to bardziej ogólny proces i jest mniej wrażliwy na wartości odstające.
 
-## <a name="regression"></a>ubytk
+## <a name="regression"></a>Regresji
 
 [Nadzorowane zadanie uczenia maszynowego](#supervised-machine-learning) , gdzie wyjście jest wartością rzeczywistą, na przykład Double. Przykłady obejmują przewidywanie cen giełdowych. Aby uzyskać więcej informacji, zobacz sekcję [regresja](tasks.md#regression) w temacie [zadań uczenia maszynowego](tasks.md) .
 
@@ -162,7 +161,7 @@ Ocenianie to proces stosowania nowych danych do przeszkolonego modelu uczenia ma
 
 Podklasa uczenia maszynowego, w której żądany model przewiduje etykietę dla jeszcze niewidocznych danych. Przykłady obejmują klasyfikację, regresję i prognozowanie strukturalne. Aby uzyskać więcej informacji, zapoznaj się z artykułem [nadzorowane uczenie](https://en.wikipedia.org/wiki/Supervised_learning) w witrynie Wikipedia.
 
-## <a name="training"></a>Szkolącej
+## <a name="training"></a>Szkolenia
 
 Proces identyfikacji [modelu](#model) dla danego zestawu danych szkoleniowych. W przypadku modelu liniowego oznacza to znalezienie wag. Dla drzewa obejmuje identyfikację punktów podziału.
 

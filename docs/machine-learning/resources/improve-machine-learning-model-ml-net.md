@@ -1,51 +1,51 @@
 ---
-title: 'Instrukcje: Zwiększanie dokładności modelu'
-description: Dowiedz się, jak zwiększyć dokładność modelu
+title: 'Instrukcje: poprawianie dokładności modelu'
+description: Dowiedz się, jak poprawić dokładność modelu
 ms.date: 04/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc
-ms.openlocfilehash: 8bb47102ede8e135090b1381eb815dccd512e03d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 8f3b283de378a37bfe429688207ea9fb52f9ca7f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557810"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739576"
 ---
-# <a name="improve-mlnet-model-accuracy"></a>Zwiększ dokładność modelu strukturze ML.NET
+# <a name="improve-mlnet-model-accuracy"></a>Popraw dokładność modelu ML.NET
 
-Dowiedz się, jak w celu zwiększenia dokładności modelu.
+Dowiedz się, jak poprawić dokładność modelu.
 
-## <a name="reframe-the-problem"></a>Reframe problem
+## <a name="reframe-the-problem"></a>Przeszkieletowanie problemu
 
-Czasami ulepszanie modelu może być nic wspólnego z danymi lub techniki do nauczenia modelu. Zamiast tego po prostu może być niewłaściwy pytanie jest pytany. Należy wziąć pod uwagę spojrzenie na problem pod różnymi kątami i wykorzystywanie danych do wyodrębniania ukrytego wskaźników i ukryte relacje, aby uściślić pytanie.
+Czasami poprawa modelu może nie mieć nic do wykonania z danymi lub technikami używanymi do uczenia modelu. Zamiast tego może być, że prośba o niewłaściwe pytanie. Weź pod uwagę problemy związane z różnymi kątami i wykorzystaniem danych do wyodrębnienia ukrytych wskaźników i ukrytych relacji, aby uściślić pytanie.
 
-## <a name="provide-more-data-samples"></a>Podaj więcej przykładów danych
+## <a name="provide-more-data-samples"></a>Podaj więcej próbek danych
 
-Jak ludzi więcej algorytmy szkolenia uzyskać, prawdopodobieństwo wzrostu wydajności lepiej danych. Jednym ze sposobów poprawy wydajności modelu jest zapewnienie większej liczby próbek danych szkoleniowych do algorytmów. Im więcej danych dowie się, więcej przypadków jest w stanie poprawnie zidentyfikować.
+Podobnie jak ludzie, coraz więcej algorytmy szkoleniowe uzyskują, prawdopodobieństwo zwiększenia wydajności. Jednym ze sposobów poprawy wydajności modelu jest zapewnienie większej ilości danych szkoleniowych do algorytmów. Im więcej danych, z których uczy się, tym bardziej mogą one identyfikować.
 
 ## <a name="add-context-to-the-data"></a>Dodawanie kontekstu do danych
 
-Znaczenie pojedynczego punktu danych może być trudne do interpretacji. Tworzenie kontekstu wokół punktów danych pomaga algorytmów, a także ekspertów z danej dziedziny lepsze podejmowanie decyzji. Na przykład fakt, że domu ma trzy i nie samodzielnie zapewniają dobrym wskaźnikiem jej miesięczna cena. Jednak jeśli dodać kontekstowego, teraz już wiesz, że jest on podmiejskie otoczenie poza główne obszarze metropolitarnym, gdzie średni wiek to 38 średni dochód gospodarstwa domowego jest $ 80 000 operacji i szkoły są w górny percentyl 20, a następnie algorytm ma więcej informacji na temat podstawowej jego decyzje dotyczące. Wszystkie tego kontekstu może zostać dodana jako dane wejściowe dla modelu usługi machine learning jako funkcje.
+Znaczenie pojedynczego punktu danych może być trudne do zinterpretowania. Kontekst kompilowania wokół punktów danych ułatwia stosowanie algorytmów, a także lepszych decyzji ekspertów. Na przykład fakt, że siedziba domu ma trzy sypialniamiy, nie jest w stanie właściwym wskazaniem jego ceny. Jeśli jednak dodasz kontekst i teraz wiesz, że znajduje się w okolicy w regionie geomiejskim poza głównym obszarem metropolitalnychu, w którym średni wiek to 38, Przeciętny dochód gospodarstwa domowego to $80 000, a szkoły są w największej 20 percentylu, algorytm ma więcej informacji na podstawie jego decyzje w dniu. Wszystkie te kontekstu można dodać jako dane wejściowe do modelu uczenia maszynowego jako funkcje.
 
-## <a name="use-meaningful-data-and-features"></a>Za pomocą zrozumiałej danych i funkcji
+## <a name="use-meaningful-data-and-features"></a>Korzystanie z znaczących danych i funkcji
 
-Mimo że liczby próbek danych i funkcji może zwiększyć dokładność modelu, również mogą wprowadzać szumu ponieważ nie wszystkie dane i funkcje mają znaczenie. W związku z tym ważne jest zrozumienie, jakie funkcje są tymi, które najczęściej wykonywane wpływ na decyzje przez algorytm. Przy użyciu technik, takich jak znaczenie funkcji permutacji (PFI) może pomóc w zidentyfikowaniu tych najważniejsze funkcje i nie tylko ułatwia zrozumienie modelu, ale również użyć danych wyjściowych jako metoda wyboru funkcji, aby zmniejszyć ilość funkcje generujące dużo alertów, przechodząc do procesu uczenia.
+Mimo że więcej próbek i funkcji danych może pomóc poprawić dokładność modelu, mogą także spowodować zakłócenia, ponieważ nie wszystkie dane i funkcje są istotne. W związku z tym ważne jest, aby zrozumieć, które funkcje są tymi, które mają największe wpływ na decyzje podejmowane przez algorytm. Używanie technik, takich jak ważność funkcji permutacji (PFI), może pomóc w identyfikacji tych funkcji najważniejsze i nie tylko pomóc w wyjaśnieniu modelu, ale także użyć danych wyjściowych jako metody wyboru funkcji, aby zmniejszyć ilość szumów przeprowadzonych do procesu szkoleniowego.
 
-Dowiedz się, jak używać PFI w następującej [łącza](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)
+Aby uzyskać więcej informacji o korzystaniu z programu PFI, zobacz [wyjaśnienie modelowania modelu przy użyciu funkcji permutacji](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md).
 
-## <a name="cross-validation"></a>krzyżowa Weryfikacja
+## <a name="cross-validation"></a>Krzyżowe sprawdzanie poprawności
 
-Krzyżowa Weryfikacja jest szkolenia i model oceny technika, która dzieli dane na wiele partycji, a następnie szkolenie modeli wielu algorytmów na te partycje. Ta technika zwiększa niezawodność modelu, zawierający dane z procesu uczenia. Oprócz poprawianie wydajności niewidzianych uwagi, w środowiskach ograniczonego danych może być skutecznym narzędziem do szkolenia modele z mniejszych zestawu danych.
+Wzajemne sprawdzanie poprawności to technika szkoleń i oceny modelu, która dzieli dane na kilka partycji i pociąga za siebie wiele algorytmów na tych partycjach. Ta technika podnosi niezawodność modelu przez wyprowadzenie danych z procesu szkolenia. Oprócz poprawy wydajności niewidocznych obserwacji w środowiskach z ograniczonymi danymi może być skutecznym narzędziem dla modeli szkoleniowych z mniejszym zestawem danych.
 
-Skorzystaj z następującego linku, aby dowiedzieć się więcej [sposób użycia krzyżowego sprawdzania poprawności w strukturze ML.NET](../how-to-guides/train-machine-learning-model-cross-validation-ml-net.md)
+Skorzystaj z następującego linku, aby dowiedzieć się, [jak używać sprawdzania krzyżowego w ml.NET](../how-to-guides/train-machine-learning-model-cross-validation-ml-net.md)
 
-## <a name="hyperparameter-tuning"></a>do strojenia hiperparametrycznego
+## <a name="hyperparameter-tuning"></a>Dostrajanie hiperparametrów
 
-Modele uczenia maszynowego szkolenia to proces iteracyjny i poznawczych. Na przykład co to jest optymalną liczbę klastrów, podczas uczenia modelu przy użyciu algorytmu K-średnich? Odpowiedź zależy od wielu czynników, takich jak struktury danych. Znajdowanie, że liczba wymaga eksperymentowania z różnymi wartościami dla k i ocenę wydajności, aby określić, która wartość jest najlepsze. Praktyka dostosowywania tych parametrów można znaleźć optymalne modelu jest określany jako dostrajanie parametrów.
+Uczenie modeli uczenia maszynowego jest procesem iteracyjnym i badawczym. Na przykład jaka jest Optymalna liczba klastrów podczas uczenia modelu przy użyciu algorytmu K-oznacza? Odpowiedź zależy od wielu czynników, takich jak struktura danych. Znalezienie tego numeru wymaga eksperymentowania z różnymi wartościami dla k, a następnie oceny wydajności w celu określenia, która wartość jest Najlepsza. Sposób dostrajania tych parametrów w celu znalezienia optymalnego modelu jest znany jako dostrajanie parametrów funkcji Hyper-Parameter.
 
-## <a name="choose-a-different-algorithm"></a>Wybierz innego algorytmu
+## <a name="choose-a-different-algorithm"></a>Wybierz inny algorytm
 
-Zadania uczenia maszynowego, takich jak regresji i klasyfikacji zawierają różne implementacje algorytmu. Może to być problem, który próbujesz rozwiązać i sposób, w jaki dane są skonstruowane nie pasują do algorytmu bieżącego przypadku. W takim przypadku należy wziąć pod uwagę przy użyciu innego algorytmu zadania, aby zobaczyć, jeśli dowie się lepiej z Twoich danych.
+Zadania uczenia maszynowego, takie jak regresja i klasyfikacja, zawierają różne implementacje algorytmów. Może tak być w przypadku, gdy problem, który próbujesz rozwiązać, i sposób, w jaki dane są strukturalne, nie mieszczą się w bieżącym algorytmie. W takim przypadku Rozważ użycie innego algorytmu dla zadania, aby sprawdzić, czy uczy się lepiej od danych.
 
-Kliknięcie następującego łącza zawiera więcej [wskazówki, na który algorytm wyboru](../how-to-choose-an-ml-net-algorithm.md).
+Poniższy link zawiera więcej [wskazówek dotyczących wybranego algorytmu](../how-to-choose-an-ml-net-algorithm.md).

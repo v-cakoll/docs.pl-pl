@@ -11,62 +11,60 @@ helpviewer_keywords:
 - exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a417e964c2f44c291892f9ddec6e32438fbff9a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e78b2a8d7a815637e143eeb88bcfb51ded33771
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945434"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741353"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Obsługa i zgłaszanie wyjątków na platformie .NET
 
-Aplikacje muszą mieć możliwość obsługi błędów występujących podczas wykonywania w spójny sposób. .NET udostępnia model dotyczące powiadamiania aplikacji o błędach w jednolity sposób: operacje .NET wskazać błąd przez zgłaszanie wyjątków.
+Aplikacje muszą być w stanie obsługiwać błędy występujące podczas wykonywania w spójny sposób. Platforma .NET udostępnia model do powiadamiania aplikacji o błędach w jednolity sposób: operacje platformy .NET wskazują na awarię przez wyrzucanie wyjątków.
 
 ## <a name="exceptions"></a>Wyjątki
 
-Wyjątek to każdy warunek błędu i nieoczekiwane zachowanie, które zostanie osiągnięty, wykonywania programu. Wyjątki mogą zostać wygenerowane z powodu błędów w kodzie lub kod, który można wywoływać (np. biblioteki udostępnionej), zasobów niedostępny systemu operacyjnego, nieoczekiwane warunki, które środowisko uruchomieniowe napotka (na przykład kod, którego nie można zweryfikować) i tak dalej. Aplikację można odzyskać z niektórych z tych warunków, ale nie od innych użytkowników. Mimo że można odzyskać z większości aplikacji wyjątki, nie można odzyskać z większości wyjątki środowiska uruchomieniowego.
+Wyjątek jest dowolnym warunkiem błędu lub nieoczekiwanym zachowaniem napotkanym przez program wykonujący. Wyjątki mogą być zgłaszane z powodu błędu w kodzie lub kodu, który jest wywoływany (na przykład biblioteki udostępnionej), niedostępnych zasobów systemu operacyjnego, nieoczekiwanych warunków napotkanych przez środowisko uruchomieniowe (takich jak kod, którego nie można zweryfikować) itd. Aplikacja może wykonać odzyskiwanie z niektórych z tych warunków, ale nie od innych. Chociaż można wykonać odzyskiwanie z większości wyjątków aplikacji, nie można odzyskać sprawności z większości wyjątków czasu wykonywania.
 
-Na platformie .NET, wyjątek jest obiektem, który dziedziczy z <xref:System.Exception?displayProperty=nameWithType> klasy. Wyjątek jest generowany przy użyciu obszaru kodu, w którym wystąpił problem. Wyjątek jest przekazywany w górę stosu, dopóki aplikacja obsługuje ją lub program zakończy.
+W programie .NET wyjątek jest obiektem, który dziedziczy z klasy <xref:System.Exception?displayProperty=nameWithType>. Wyjątek jest generowany z obszaru kodu, w którym wystąpił problem. Wyjątek jest przenoszona do momentu, aż aplikacja obsłuży go lub zakończy działanie programu.
 
-## <a name="exceptions-vs-traditional-error-handling-methods"></a>Wyjątki a tradycyjnych metod obsługi błędów
+## <a name="exceptions-vs-traditional-error-handling-methods"></a>Wyjątki a tradycyjne metody obsługi błędów
 
-Tradycyjnie modelu obsługi błędów języka skorzystała w unikatowy sposób wykrywania błędów i lokalizowania programy obsługi dla nich zarówno w języku lub na mechanizmu obsługi błędów, dostarczone przez system operacyjny. Sposób .NET implementuje obsługę wyjątków zapewnia następujące korzyści:
+Tradycyjnie model obsługi błędów języka opiera się na unikatowym sposobie wykrywania błędów i lokalizowania programów obsługi albo w mechanizmie obsługi błędów dostarczonym przez system operacyjny. Sposób, w jaki program .NET implementuje obsługę wyjątków, zapewnia następujące korzyści:
 
-- Wyjątek zostanie zgłoszony i obsługa działa tak samo, dla języków programowania .NET.
+- Przerzucanie i obsługa wyjątków działa tak samo dla języków programowania .NET.
 
-- Nie wymaga żadnych składni konkretnego języka dla obsługi wyjątków, ale pozwala zdefiniować własną składnię dla każdego języka.
+- Nie wymaga żadnej określonej składni języka do obsługi wyjątków, ale umożliwia każdemu językowi zdefiniowanie własnej składni.
 
-- Wyjątki mogą zostać wygenerowane w procesie i nawet granic.
+- Wyjątki mogą być zgłaszane między procesami, a nawet granicami maszyn.
 
-- Kod obsługi wyjątków, można dodać do aplikacji w celu zwiększenia niezawodności programu.
+- Kod obsługi wyjątków można dodać do aplikacji w celu zwiększenia niezawodności programu.
 
-Wyjątki oferują przewagę nad innymi metodami powiadomienia o błędzie, takich jak kody powrotne. Błędy nie niezauważone, ponieważ jeśli wyjątek jest generowany i nie można go obsłużyć, środowisko uruchomieniowe kończy działanie aplikacji. Nieprawidłowe wartości nie w dalszym ciągu propagować przez system w wyniku kod, który zakończy się niepowodzeniem, aby sprawdzić, czy zwracany kod błędu.
+Wyjątki oferują zalety w porównaniu z innymi metodami powiadamiania o błędach, takich jak kody powrotne. Niepowodzenia nie są wyrzucane, ponieważ jeśli wystąpi wyjątek, a jego nie obsłużysz, środowisko uruchomieniowe zakończy działanie aplikacji. Nieprawidłowe wartości nie są nadal propagowane przez system w wyniku kodu, który nie może sprawdzić kodu powrotu błędu.
 
 ## <a name="common-exceptions"></a>Typowe wyjątki
 
-W poniższej tabeli wymieniono niektóre typowe wyjątki z przykładami co mogą być ich przyczyną.
+W poniższej tabeli wymieniono niektóre typowe wyjątki z przykładami, które mogą je spowodować.
 
 | Typ wyjątku | Opis | Przykład |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | Klasa bazowa dla wszystkich wyjątków. | Brak (Użyj klasy pochodnej tego wyjątku). |
-| <xref:System.IndexOutOfRangeException> | Element zgłaszany przez środowisko uruchomieniowe, tylko wtedy, gdy tablica jest indeksowana nieprawidłowo. | Indeksowanie tablicy poza prawidłowym zakresem: <br /> `arr[arr.Length+1]` |
-| <xref:System.NullReferenceException> | Element zgłaszany przez środowisko uruchomieniowe, tylko wtedy, gdy odwołuje się do obiektu o wartości null. | `object o = null;` <br /> `o.ToString();` |
-| <xref:System.InvalidOperationException> | Zgłoszony przez metody, gdy jest w nieprawidłowym stanie. | Wywoływanie `Enumerator.MoveNext()` po usunięciu elementu z kolekcji źródłowej. |
+| <xref:System.IndexOutOfRangeException> | Zgłoszone przez środowisko uruchomieniowe tylko wtedy, gdy tablica jest indeksowana nieprawidłowo. | Indeksowanie tablicy poza prawidłowym zakresem: <br /> `arr[arr.Length+1]` |
+| <xref:System.NullReferenceException> | Zgłoszone przez środowisko uruchomieniowe tylko wtedy, gdy istnieje odwołanie do obiektu o wartości null. | `object o = null;` <br /> `o.ToString();` |
+| <xref:System.InvalidOperationException> | Zgłoszone przez metody w nieprawidłowym stanie. | Wywoływanie `Enumerator.MoveNext()` po usunięciu elementu z kolekcji źródłowej. |
 | <xref:System.ArgumentException> | Klasa bazowa dla wszystkich wyjątków argumentów. | Brak (Użyj klasy pochodnej tego wyjątku). |
-| <xref:System.ArgumentNullException> | Zgłoszony przez metody, które nie zezwalają na argument mieć wartości null. | `String s = null;` <br /> `"Calculate".IndexOf(s);`|
-| <xref:System.ArgumentOutOfRangeException> | Zgłoszony przez metody, które Sprawdź, czy argumenty są w danym zakresie. | `String s = "string";` <br /> `s.Substring(s.Length+1);` |
+| <xref:System.ArgumentNullException> | Zgłoszone przez metody, które nie zezwalają argumentu na wartość null. | `String s = null;` <br /> `"Calculate".IndexOf(s);`|
+| <xref:System.ArgumentOutOfRangeException> | Zgłoszone przez metody, które weryfikują, że argumenty znajdują się w danym zakresie. | `String s = "string";` <br /> `s.Substring(s.Length+1);` |
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Właściwości i klasy wyjątków](exception-class-and-properties.md)
-- [Instrukcje: Użyj bloku Try / Catch do przechwytywania wyjątków](how-to-use-the-try-catch-block-to-catch-exceptions.md)
-- [Instrukcje: Używanie określonych wyjątków w bloku Catch](how-to-use-specific-exceptions-in-a-catch-block.md)
+- [Instrukcje: Używanie bloku try/catch do przechwytywania wyjątków](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+- [Instrukcje: Używanie określonych wyjątków w bloku catch](how-to-use-specific-exceptions-in-a-catch-block.md)
 - [Instrukcje: Jawne zgłaszanie wyjątków](how-to-explicitly-throw-exceptions.md)
 - [Instrukcje: Tworzenie wyjątków zdefiniowanych przez użytkownika](how-to-create-user-defined-exceptions.md)
 - [Używanie obsługi wyjątków filtrowanych przez użytkownika](using-user-filtered-exception-handlers.md)
-- [Instrukcje: Używanie bloków Finally](how-to-use-finally-blocks.md)
+- [Instrukcje: Używanie bloków finally](how-to-use-finally-blocks.md)
 - [Obsługa wyjątków międzyoperacyjności COM](handling-com-interop-exceptions.md)
 - [Najlepsze rozwiązania dotyczące wyjątków](best-practices-for-exceptions.md)
-- [Co każdy deweloper musi wiedzieć o wyjątków w środowisku uruchomieniowym](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)
+- [Co każdy Deweloper musi wiedzieć o wyjątkach w środowisku uruchomieniowym](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/exceptions.md)

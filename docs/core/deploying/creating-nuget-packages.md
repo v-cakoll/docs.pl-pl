@@ -4,13 +4,12 @@ description: Dowiedz się, jak utworzyć pakiet NuGet za pomocą polecenia "dotn
 author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.custom: seodec18
-ms.openlocfilehash: 4927e3796be42d70d25a1947d4519312aef7e289
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: ddc19faa7547637036686146f8600f40713541a8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343615"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740863"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>Jak utworzyć pakiet NuGet przy użyciu narzędzi interfejsu wiersza polecenia (CLI) platformy .NET Core
 
@@ -19,9 +18,9 @@ ms.locfileid: "75343615"
 
 Biblioteki .NET Standard i .NET Core są dystrybuowane jako pakiety NuGet. Jest to fakt, że wszystkie .NET Standard biblioteki są dystrybuowane i używane. Jest to najłatwiej wykonane za pomocą polecenia `dotnet pack`.
 
-Załóżmy, że właśnie Zapisano nową bibliotekę, którą chcesz dystrybuować za pośrednictwem narzędzia NuGet. Pakiet NuGet można utworzyć przy użyciu narzędzi międzyplatformowych, aby dokładnie wykonać te czynności. W poniższym przykładzie przyjęto, że biblioteka o nazwie **SuperAwesomeLibrary** , której elementy docelowe `netstandard1.0`.
+Załóżmy, że właśnie Zapisano nową bibliotekę, którą chcesz dystrybuować za pośrednictwem narzędzia NuGet. Pakiet NuGet można utworzyć przy użyciu narzędzi międzyplatformowych, aby dokładnie wykonać te czynności. W poniższym przykładzie przyjęto, że biblioteka o nazwie **SuperAwesomeLibrary** , która jest przeznaczona dla `netstandard1.0`.
 
-Jeśli istnieją zależności przechodnie; oznacza to, że projekt, który zależy od innego pakietu, należy upewnić się, że pakiety dla całego rozwiązania zostały przywrócone za pomocą polecenia `dotnet restore` przed utworzeniem pakietu NuGet. W przeciwnym razie polecenie `dotnet pack` nie będzie działać prawidłowo.
+Jeśli istnieją zależności przechodnie, czyli projekt zależny od innego pakietu, należy przywrócić pakiety dla całego rozwiązania przy użyciu polecenia `dotnet restore` przed utworzeniem pakietu NuGet. W przeciwnym razie polecenie `dotnet pack` nie będzie działać prawidłowo.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -46,7 +45,7 @@ SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ```
 
-Należy pamiętać, że spowoduje to utworzenie pakietu, który jest w stanie debugować. Jeśli chcesz skompilować pakiet NuGet przy użyciu plików binarnych wydania, wystarczy dodać przełącznik `--configuration` (lub `-c`) i użyć `release` jako argumentu.
+Spowoduje to utworzenie pakietu, który może być debugowany. Jeśli chcesz skompilować pakiet NuGet przy użyciu plików binarnych wydania, wystarczy dodać przełącznik `--configuration` (lub `-c`) i użyć `release` jako argumentu.
 
 ```dotnetcli
 dotnet pack --configuration release

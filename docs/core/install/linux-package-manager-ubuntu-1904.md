@@ -4,12 +4,12 @@ description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe w syst
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 69bfc3395f5cd92ed54850e5ea8b76eba7f27d83
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a229369b9252d08fe5fc83add98c694214ce5ba5
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959747"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740609"
 ---
 # <a name="ubuntu-1904-package-manager---install-net-core"></a>Menedżer pakietów Ubuntu 19,04 — Instalowanie programu .NET Core
 
@@ -17,13 +17,13 @@ ms.locfileid: "74959747"
 
 W tym artykule opisano sposób użycia Menedżera pakietów do zainstalowania programu .NET Core w systemie Ubuntu 19,04. Jeśli instalujesz środowisko uruchomieniowe, zalecamy zainstalowanie [ASP.NET Core środowiska uruchomieniowego](#install-the-aspnet-core-runtime), ponieważ zawiera on zarówno środowisko uruchomieniowe programu .NET Core, jak i ASP.NET Core.
 
-## <a name="register-microsoft-key-and-feed"></a>Rejestrowanie klucza firmy Microsoft i kanału informacyjnego
+## <a name="register-microsoft-key-and-feed"></a>Rejestrowanie klucza firmy Microsoft i źródła danych
 
 Przed zainstalowaniem programu .NET należy:
 
-- Rejestrowanie klucza firmy Microsoft
-- Rejestrowanie repozytorium produktu
-- Instalowanie wymaganych zależności
+- Zarejestruj klucz Microsoft.
+- Zarejestruj repozytorium produktów.
+- Zainstaluj wymagane zależności.
 
 Te operacje należy wykonać tylko jeden raz na każdej maszynie.
 

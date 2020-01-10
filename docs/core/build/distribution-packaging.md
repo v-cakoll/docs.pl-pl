@@ -3,13 +3,12 @@ title: Tworzenie pakietów dystrybucji platformy .NET Core
 description: Dowiedz się, jak spakować, nazwać i wersja .NET Core do dystrybucji.
 author: tmds
 ms.date: 10/09/2019
-ms.custom: seodec18
-ms.openlocfilehash: 715eb944c3e7626696f64e63b874e2f77595cf46
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cfd6003cfac5c00fc06ebc6195eccd55a0d7afe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393583"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740936"
 ---
 # <a name="net-core-distribution-packaging"></a>Tworzenie pakietów dystrybucji platformy .NET Core
 
@@ -126,7 +125,7 @@ Poniżej przedstawiono listę zalecanych pakietów:
 - `dotnet-runtime-deps-[major].[minor]` _(opcjonalnie)_ — instaluje zależności do uruchamiania aplikacji samodzielnych
   - **Wersja:** \<wersja środowiska uruchomieniowego >
   - **Przykład:** dotnet-Runtime-deps-2,1
-  - **Zależności:** _dystrybucji określonych zależności_
+  - **Zależności:** _zależności dotyczące dystrybucji_
 
 - `dotnet-runtime-[major].[minor]` — instaluje określone środowisko uruchomieniowe
   - **Wersja:** \<wersja środowiska uruchomieniowego >
@@ -158,11 +157,11 @@ Poniżej przedstawiono listę zalecanych pakietów:
   - **Zawiera:** (11)
 
 - `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]` — umożliwia kierowanie do wersji standardowej
-  - **Wersja:** wersja zestawu sdk \<>
+  - **Wersja:** wersja zestawu sdk \<
   - **Zawiera:** (15)
 
 - `dotnet-templates-[major].[minor]`
-  - **Wersja:** wersja zestawu sdk \<>
+  - **Wersja:** wersja zestawu sdk \<
   - **Zawiera:** (15)
 
 `dotnet-runtime-deps-[major].[minor]` wymaga interpretacji _zależności specyficznych dla dystrybucji_. Ponieważ system kompilacji dystrybucji może być w stanie automatycznie dziedziczyć, pakiet jest opcjonalny, w takim przypadku te zależności są dodawane bezpośrednio do pakietu `dotnet-runtime-[major].[minor]`.

@@ -1,15 +1,13 @@
 ---
 title: dotnet-dump-.NET Core
 description: Instalowanie i używanie narzędzia wiersza polecenia dotnet-dump.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: dcd5dd42620010c1a9b6dffd3365fc1b777c0eeb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973453"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740773"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Narzędzie do zbierania i analizy zrzutów (`dotnet-dump`)
 
@@ -18,9 +16,9 @@ ms.locfileid: "73973453"
 > [!NOTE]
 > `dotnet-dump` nie jest obsługiwana w macOS.
 
-## <a name="installing-dotnet-dump"></a>Instalowanie `dotnet-dump`
+## <a name="installing-dotnet-dump"></a>Instalowanie programu `dotnet-dump`
 
-Aby zainstalować najnowszą wersję [pakietu NuGet](https://www.nuget.org/packages/dotnet-dump)`dotnet-dump`, należy użyć polecenia [Install narzędzia dotnet](../tools/dotnet-tool-install.md) :
+Aby zainstalować najnowszą wersję wydania [pakietu NuGet](https://www.nuget.org/packages/dotnet-dump)`dotnet-dump`, użyj [Narzędzia dotnet Install](../tools/dotnet-tool-install.md) Command:
 
 ```dotnetcli
 dotnet tool install -g dotnet-dump
@@ -34,7 +32,7 @@ dotnet-dump [-h|--help] [--version] <command>
 
 ## <a name="description"></a>Opis
 
-Narzędzie globalne `dotnet-dump` umożliwia zbieranie i analizowanie zrzutów systemów Windows i Linux bez żadnego natywnego debugera, takiego jak `lldb` w systemie Linux. To narzędzie jest ważne na platformach, takich jak Alpine Linux, gdzie w pełni działa `lldb` nie jest dostępna. Narzędzie `dotnet-dump` umożliwia uruchamianie poleceń SOS, aby analizować awarie i moduł wyrzucania elementów bezużytecznych (GC), ale nie jest to debuger natywny, więc nie są obsługiwane elementy, takie jak wyświetlanie natywnych ramek stosu.
+`dotnet-dump` narzędzie globalne to sposób zbierania i analizowania zrzutów systemów Windows i Linux bez żadnego natywnego debugera, który jest taki sam jak `lldb` w systemie Linux. To narzędzie jest ważne na platformach, takich jak Alpine Linux, gdzie w pełni robocze `lldb` nie jest dostępny. Narzędzie `dotnet-dump` pozwala uruchamiać polecenia SOS w celu analizowania awarii i modułu wyrzucania elementów bezużytecznych (GC), ale nie jest to debuger natywny, dlatego nie są obsługiwane elementy, takie jak wyświetlanie natywnych ramek stosu.
 
 ## <a name="options"></a>Opcje
 
@@ -77,8 +75,8 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
   Określa typ zrzutu, który określa rodzaje informacji zbieranych z procesu. Istnieją dwa typy:
 
-  - `Heap`-duże i stosunkowo kompleksowe zrzuty zawierające listy modułów, listy wątków, wszystkie stosy, informacje o wyjątkach, informacje o obsłudze i wszystkie pamięci z wyjątkiem zamapowanych obrazów.
-  - `Mini`-Mały zrzut zawierający listy modułów, listy wątków, informacje o wyjątku i wszystkie stosy.
+  - `Heap` — duże i stosunkowo kompleksowe zrzuty zawierające listy modułów, listy wątków, wszystkie stosy, informacje o wyjątkach, informacje o obsłudze i wszystkie pamięci z wyjątkiem zamapowanych obrazów.
+  - `Mini` — Mały zrzut zawierający listy modułów, listy wątków, informacje o wyjątku i wszystkie stosy.
 
   Jeśli nie zostanie określony, `Heap` jest wartością domyślną.
 
@@ -148,7 +146,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 | `ip2md <arguments>`                 | Wyświetla strukturę MethodDesc o określonym adresie w kodzie JIT.                       |
 | `histclear <arguments>`             | Zwalnia wszystkie zasoby używane przez rodzinę poleceń `hist*`.                                |
 | `histinit <arguments>`              | Inicjuje struktury SOS z dziennika obciążenia zapisanego w obiekcie debugowanym.                     |
-| `histobj <arguments>`               | Wyświetla przemieszczenie dzienników obciążeniowych wyrzucania elementów bezużytecznych związanych z `<arguments>`.              |
+| `histobj <arguments>`               | Przedstawia relokacje dziennika obciążeniowego wyrzucania elementów bezużytecznych powiązane z `<arguments>`.              |
 | `histobjfind <arguments>`           | Wyświetla wszystkie wpisy dziennika, które odwołują się do obiektu pod podanym adresem.               |
 | `histroot <arguments>`              | Wyświetla informacje powiązane zarówno z promocjami, jak i przeniesieniami określonego korzenia.        |
 | `lm|modules`                        | Wyświetla moduły macierzyste w procesie.                                                   |
@@ -158,9 +156,9 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 | `syncblk <arguments>`               | Wyświetla informacje o posiadaczu SyncBlock.                                                           |
 | `threads|setthread <threadid>`      | Ustawia lub wyświetla bieżący identyfikator wątku dla poleceń SOS.                                  |
 
-## <a name="using-dotnet-dump"></a>Używanie `dotnet-dump`
+## <a name="using-dotnet-dump"></a>Używanie elementu `dotnet-dump`
 
-Pierwszym krokiem jest zebranie zrzutu. Ten krok można pominąć, jeśli zrzut podstawowy został już wygenerowany. System operacyjny lub wbudowana [Funkcja generowania zrzutów](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/xplat-minidump-generation.md#configurationpolicy) środowiska uruchomieniowego platformy .NET Core może tworzyć zrzuty rdzeni.
+Pierwszym krokiem jest zebranie zrzutu. Ten krok można pominąć, jeśli zrzut podstawowy został już wygenerowany. System operacyjny lub wbudowana [Funkcja generowania zrzutów](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) środowiska uruchomieniowego platformy .NET Core może tworzyć zrzuty rdzeni.
 
 ```console
 $ dotnet-dump collect --process-id 1902
@@ -220,7 +218,7 @@ HResult: 80131604
 
 Jeśli używasz programu Docker, kolekcja zrzutów wymaga `SYS_PTRACE` możliwości (`--cap-add=SYS_PTRACE` lub `--privileged`).
 
-W przypadku obrazów platformy Docker w systemie Microsoft .NET Core SDK Linux niektóre polecenia `dotnet-dump` mogą zgłosić następujący wyjątek:
+W przypadku obrazów platformy Docker zestawu SDK systemu Linux Microsoft .NET Core, niektóre polecenia `dotnet-dump` mogą zgłosić następujący wyjątek:
 
 > Nieobsługiwany wyjątek: System. DllNotFoundException —: nie można załadować biblioteki udostępnionej "libdl.so" ani jednego z jej wyjątków zależności.
 

@@ -18,19 +18,19 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: e6c4baae854e5997b153e1363ca8ed4204e10e2b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 297bc3f9182e76523eda4d4be3112f4d1d7e3fee
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085207"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741793"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generator obrazu natywnego)
 
 Generator obrazów natywnych (Ngen.exe) jest narzędziem, które poprawia wydajność zarządzanych aplikacji. Program Ngen.exe tworzy obrazy natywne, które są plikami zawierającymi skompilowany kod maszynowy specyficzny dla procesora, i instaluje je w pamięci podręcznej obrazów natywnych na komputerze lokalnym. Środowisko uruchomieniowe może używać obrazów natywnych z tej pamięci podręcznej, zamiast używać kompilatora JIT (Just-In-Time) w celu skompilowania oryginalnego zestawu.
 
 > [!NOTE]
-> Ngen. exe kompiluje obrazy natywne dla zestawów, które są przeznaczone tylko dla .NET Framework. Równoważny Generator obrazu natywnego dla platformy .NET Core to [CrossGen](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md). 
+> Ngen. exe kompiluje obrazy natywne dla zestawów, które są przeznaczone tylko dla .NET Framework. Równoważny Generator obrazu natywnego dla platformy .NET Core to [CrossGen](https://github.com/dotnet/runtime/blob/master/docs/workflow/building/coreclr/crossgen.md).
 
 Zmiany w programie Ngen. exe w .NET Framework 4:
 
@@ -81,7 +81,7 @@ W poniższej tabeli przedstawiono składnię poszczególnych `action`. Aby uzysk
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Usuwa obrazy natywne zestawu i jego zależności z pamięci podręcznej obrazów natywnych.<br /><br /> Aby odinstalować pojedynczy obraz i jego zależności, należy użyć tych samych argumentów wiersza polecenia, które zostały użyte podczas instalacji obrazu. **Uwaga:**  Począwszy od .NET Framework 4, Akcja `uninstall` * nie jest już obsługiwana.|
 |`update` [`/queue`]|Aktualizuje obrazy natywne, które stały się nieprawidłowe.<br /><br /> Jeśli określono `/queue`, aktualizacje są umieszczane w kolejce dla usługi obrazów natywnych. Aktualizacje są zawsze planowane z priorytetem 3, więc są uruchamiane, gdy komputer znajduje się w stanie bezczynności.|
 |`display` [`assemblyName` &#124; `assemblyPath`]|Wyświetla stan obrazów natywnych dla zestawu i jego zależności.<br /><br /> Jeśli nie zostaną dostarczone argumenty, będą wyświetlane wszystkie dane z pamięci podręcznej obrazów natywnych.|
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> —lub—<br /><br /> `eqi` [1&#124;2&#124;3]|Wykonuje umieszczone w kolejce zadania kompilacji.<br /><br /> Jeśli określono priorytet, wykonywane są zadania kompilacji z większym lub równym priorytetem. Jeśli nie określono priorytetu, wykonywane są wszystkie skolejkowane zadania kompilacji.|
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> lub<br /><br /> `eqi` [1&#124;2&#124;3]|Wykonuje umieszczone w kolejce zadania kompilacji.<br /><br /> Jeśli określono priorytet, wykonywane są zadania kompilacji z większym lub równym priorytetem. Jeśli nie określono priorytetu, wykonywane są wszystkie skolejkowane zadania kompilacji.|
 |`queue` {`pause` &#124; `continue` &#124; `status`}|Wstrzymuje usługę obrazów natywnych, zezwala wstrzymanej usłudze na kontynuowanie działania lub bada stan usługi.|
 
 <a name="ArgumentTable"></a>
@@ -586,7 +586,7 @@ Zwykle usługa obrazów natywnych jest inicjowana przez program instalacyjny (In
 Usługa również współdziała z ręcznym poleceniem Ngen. exe. Polecenia ręczne mają pierwszeństwo przed działaniami w tle.
 
 > [!NOTE]
-> W systemie Windows Vista Nazwa wyświetlana dla usługi obrazów natywnych to "Microsoft.NET Framework NGEN v 2.0.50727 _X86" lub "Microsoft.NET Framework NGEN v 2.0.50727 _X64". We wszystkich wcześniejszych wersjach systemu Microsoft Windows nazwa to "Optymalizacja środowiska uruchomieniowego platformy .NET w usłudze 2.0.50727 _X86" lub "środowisko optymalizacji środowiska uruchomieniowego platformy .NET w 2.0.50727 _X64".
+> W systemie Windows Vista Nazwa wyświetlana dla usługi obrazów natywnych to "Microsoft.NET Framework NGEN v 2.0.50727_X86" lub "Microsoft.NET Framework NGEN v 2.0.50727_X64". We wszystkich wcześniejszych wersjach systemu Microsoft Windows nazwa to "Usługa optymalizacji środowiska uruchomieniowego .NET w wersji 2.0.50727_X86" lub "Optymalizacja środowiska uruchomieniowego .NET w wersji 2.0.50727_X64".
 
 ### <a name="launching-deferred-operations"></a>Uruchamianie odroczonych operacji
 

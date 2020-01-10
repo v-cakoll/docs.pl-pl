@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ae120311e7e58b34437de987e9f9a18e917043c0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974074"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740266"
 ---
 # <a name="threading-model"></a>Model wątkowości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zaprojektowano w celu zaoszczędzenia deweloperom trudności związanych z wątkami. W związku z tym większość deweloperów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie będzie musiała pisać interfejsu, który używa więcej niż jednego wątku. Ponieważ programy wielowątkowe są skomplikowane i trudne do debugowania, należy je unikać, gdy istnieją rozwiązania jednowątkowe.
@@ -203,7 +203,7 @@ ms.locfileid: "73974074"
  Istnieje możliwość, że `handler2` będzie bardzo czasochłonne przetwarzanie tego zdarzenia. `handler2` może użyć <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>, aby rozpocząć zagnieżdżoną pętlę komunikatów, która nie jest zwracana przez godziny. Jeśli `handler2` nie oznacza zdarzenia jako obsługiwanego po zakończeniu tej pętli komunikatu, zdarzenie jest przenoszone w górę drzewa, mimo że jest bardzo stare.
 
 ### <a name="reentrancy-and-locking"></a>Współużytkowania wątkowości i blokowanie
- Mechanizm blokowania aparatu plików wykonywalnych języka wspólnego (CLR) nie zachowuje się dokładnie tak, jak to możliwe. może oczekiwać, że wątek zaprzestanie operacji w całości podczas żądania blokady. W rzeczywistości wątek nadal otrzymuje i przetwarza komunikaty o wysokim priorytecie. Pomaga to zapobiegać zakleszczeniom i sprawiać, że interfejsy w minimalnym stopniu odpowiadają, ale wprowadzają możliwość delikatnych usterek.  Ogromna większość czasu nie musi wiedzieć o tym, ale w rzadkich przypadkach (zwykle dotyczy to komunikatów okien [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] lub komponentów STA COM). może to być świadome.
+ Mechanizm blokowania aparatu plików wykonywalnych języka wspólnego (CLR) nie zachowuje się dokładnie tak, jak to możliwe. może oczekiwać, że wątek zaprzestanie operacji w całości podczas żądania blokady. W rzeczywistości wątek nadal otrzymuje i przetwarza komunikaty o wysokim priorytecie. Pomaga to zapobiegać zakleszczeniom i sprawiać, że interfejsy w minimalnym stopniu odpowiadają, ale wprowadzają możliwość delikatnych usterek.  Ogromna większość czasu nie musi wiedzieć o tym, ale w rzadkich przypadkach (zazwyczaj obejmuje komunikaty okna Win32 lub składniki STA COM), co może być bardziej świadome.
 
  Większość interfejsów nie jest zbudowana z myślą o bezpieczeństwie wątków, ponieważ deweloperzy pracują w założeniu, że [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nigdy nie uzyskuje dostępu do więcej niż jednego wątku. W takim przypadku ten pojedynczy wątek może wprowadzać zmiany w środowisku w nieoczekiwanym czasie, powodując niekorzystne skutki, że <xref:System.Windows.Threading.DispatcherObject> mechanizm wzajemnego wykluczania ma zostać rozwiązany. Weź pod uwagę następujące pseudokodzie:
 

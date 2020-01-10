@@ -4,14 +4,12 @@ description: ML.NET umożliwia dodawanie uczenia maszynowego do aplikacji .NET, 
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.author: nakersha
-author: natke
-ms.openlocfilehash: 5d8093c77799a55f4bc13e82c06c856dbb8d85cd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976736"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740080"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Co to jest ML.NET i jak to działa?
 
@@ -21,7 +19,7 @@ Central do ML.NET to **model**uczenia maszynowego. Model określa kroki niezbęd
 
 Po utworzeniu modelu możesz dodać go do swojej aplikacji, aby dokonać prognoz.
 
-ML.NET działa w systemach Windows, Linux i macOS przy użyciu platformy .NET Core lub systemu Windows przy użyciu .NET Framework. 64 bit jest obsługiwany na wszystkich platformach. 32 bit jest obsługiwany w systemie Windows, z wyjątkiem funkcji związanych z TensorFlow, LightGBM i ONNX.
+ML.NET działa w systemach Windows, Linux i macOS przy użyciu platformy .NET Core lub systemu Windows przy użyciu .NET Framework. 64 bit jest obsługiwany na wszystkich platformach. 32 bit jest obsługiwany w systemie Windows, z wyjątkiem funkcji TensorFlow, LightGBM i ONNX.
 
 Przykłady typu przewidywania, które można wprowadzić przy użyciu ML.NET:
 
@@ -30,9 +28,9 @@ Przykłady typu przewidywania, które można wprowadzić przy użyciu ML.NET:
 |Klasyfikacja/Kategoryzacja|Automatycznie Podziel Opinie klientów na kategorie dodatnie i ujemne|
 |Wartości ciągłe regresji/przewidywania|Przewidywanie ceny domów na podstawie rozmiaru i lokalizacji|
 |Wykrywanie anomalii|Wykrywanie fałszywych transakcji bankowych |
-|Mając|Sugeruj produkty, które kupujący online może chcieć kupić, w oparciu o ich poprzednie zakupy|
+|Zalecenia|Sugeruj produkty, które kupujący online może chcieć kupić, w oparciu o ich poprzednie zakupy|
 |Szeregi czasowe/dane sekwencyjne|Prognoza pogody/sprzedaż produktu|
-|Klasyfikacja obrazu|Kategoryzacja pathologies w obrazach medycznych|
+|Klasyfikacja obrazów|Kategoryzacja pathologies w obrazach medycznych|
 
 ## <a name="hello-mlnet-world"></a>Witaj w świecie ML.NET
 
@@ -131,7 +129,7 @@ W większości przypadków dostępne dane nie są odpowiednie do użycia bezpoś
 
 W [samouczkach ml.NET](./tutorials/index.md) przedstawiono różne potoki przetwarzania danych dotyczące tekstu, obrazów, liczb i danych szeregów czasowych używanych do określonych zadań uczenia maszynowego.
 
-[Sposób przygotowania danych](./how-to-guides/prepare-data-ml-net.md) pokazuje, jak zwykle zastosować Przygotowywanie danych.
+[Sposób przygotowania danych](./how-to-guides/prepare-data-ml-net.md) pokazuje, jak bardziej ogólnie stosować Przygotowywanie danych.
 
 Dodatek wszystkich [dostępnych transformacji](./resources/transforms.md) można znaleźć w sekcji Resources (zasoby).
 
@@ -176,14 +174,14 @@ Aplikacja ML.NET rozpoczyna się od obiektu <xref:Microsoft.ML.MLContext>. Ten o
 |-|-|-|-|
 |Ładowanie i zapisywanie danych||<xref:Microsoft.ML.DataOperationsCatalog>||
 |Przygotowywanie danych||<xref:Microsoft.ML.TransformsCatalog>||
-|Algorytmy szkoleniowe|klasyfikacja binarna|<xref:Microsoft.ML.BinaryClassificationCatalog>||
+|Algorytmy szkoleniowe|Klasyfikacja binarna|<xref:Microsoft.ML.BinaryClassificationCatalog>||
 ||Klasyfikacja wieloklasowa|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||Wykrywanie anomalii|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
-||Usługę|<xref:Microsoft.ML.ClusteringCatalog>||
-||Prognozowania|<xref:Microsoft.ML.ForecastingCatalog>||
-||Określania|<xref:Microsoft.ML.RankingCatalog>||
-||ubytk|<xref:Microsoft.ML.RegressionCatalog>||
-||Zaleca|<xref:Microsoft.ML.RecommendationCatalog>|Dodaj `Microsoft.ML.Recommender` pakiet NuGet|
+||Obsługa klastrów|<xref:Microsoft.ML.ClusteringCatalog>||
+||Prognozowanie|<xref:Microsoft.ML.ForecastingCatalog>||
+||Klasyfikacja|<xref:Microsoft.ML.RankingCatalog>||
+||Regresji|<xref:Microsoft.ML.RegressionCatalog>||
+||Zalecenie|<xref:Microsoft.ML.RecommendationCatalog>|Dodaj `Microsoft.ML.Recommender` pakiet NuGet|
 ||Szeregów czasowych|<xref:Microsoft.ML.TimeSeriesCatalog>|Dodaj `Microsoft.ML.TimeSeries` pakiet NuGet|
 |Użycie modelu ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
@@ -214,7 +212,7 @@ Po utworzeniu obiektów w potoku, dane mogą być używane do uczenia modelu.
 
 Wywołanie `Fit()` używa danych szkoleniowych wejściowych do oszacowania parametrów modelu. Jest to nazywane uczeniem modelu. Należy pamiętać, że model regresji liniowej powyżej ma dwa parametry modelu: **bias** i **waga**. Po wywołaniu `Fit()` są znane wartości parametrów. Większość modeli będzie zawierać wiele innych parametrów niż to.
 
-Możesz dowiedzieć się więcej na temat szkolenia modeli w temacie [Jak szkolić model](./how-to-guides/train-machine-learning-model-ml-net.md)
+Więcej informacji na temat szkolenia modeli można znaleźć w temacie [Jak szkolić model](./how-to-guides/train-machine-learning-model-ml-net.md).
 
 Obiekt modelu powstającego implementuje interfejs <xref:Microsoft.ML.ITransformer>. Oznacza to, że model przekształca dane wejściowe w przewidywania.
 
@@ -242,7 +240,7 @@ Każda transformacja w potoku ma schemat wejściowy (nazwy danych, typy i rozmia
 
 Jeśli schemat danych wyjściowych z jednego przekształcenia w potoku nie jest zgodny ze schematem wejściowym kolejnej transformacji, ML.NET zgłosi wyjątek.
 
-Obiekt widoku danych ma kolumny i wiersze. Każda kolumna ma nazwę i typ i długość. Na przykład: kolumny wejściowe w podanej cenie domu mają **rozmiar** i **cenę**. Są one zarówno typu, jak i są liczbami skalarnymi, a nie wektorami.
+Obiekt widoku danych ma kolumny i wiersze. Każda kolumna ma nazwę i typ i długość. Na przykład kolumny wejściowe z przykładu ceny domu mają **rozmiar** i **cenę**. Są one zarówno typu, jak i są liczbami skalarnymi, a nie wektorami.
 
    ![Przykład widoku danych ML.NET z danymi prognozowania cen domu](./media/ml-net-dataview.png)
 

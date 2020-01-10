@@ -1,16 +1,14 @@
 ---
 title: Zasoby ML.NET
 description: Dowiedz się więcej o usłudze Machine Learning i ML.NET
-author: natke
 ms.topic: reference
-ms.author: nakersha
 ms.date: 11/07/2019
-ms.openlocfilehash: 67300c13f8cedd40d6239a5513c3025ca23fbbf2
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1bd35c2de807417cd81f2734191f06ccae413b74
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977278"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739866"
 ---
 # <a name="mlnet-resources"></a>Zasoby ML.NET
 

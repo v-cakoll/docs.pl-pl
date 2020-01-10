@@ -4,12 +4,12 @@ description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe w prog
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: b8b6a3039efcc2fbd15e0c3948984086c619bd44
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7a9d4524661e1230af7d1d50a4d8a60ad7774a68
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74836935"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740708"
 ---
 # <a name="debian-9-package-manager---install-net-core"></a>Menedżer pakietów Debian 9 — Instalowanie programu .NET Core
 
@@ -17,13 +17,13 @@ ms.locfileid: "74836935"
 
 W tym artykule opisano, jak za pomocą Menedżera pakietów zainstalować platformę .NET Core w systemie Debian 9. Jeśli instalujesz środowisko uruchomieniowe, zalecamy zainstalowanie [ASP.NET Core środowiska uruchomieniowego](#install-the-aspnet-core-runtime), ponieważ zawiera on zarówno środowisko uruchomieniowe programu .NET Core, jak i ASP.NET Core.
 
-## <a name="register-microsoft-key-and-feed"></a>Rejestrowanie klucza firmy Microsoft i kanału informacyjnego
+## <a name="register-microsoft-key-and-feed"></a>Rejestrowanie klucza firmy Microsoft i źródła danych
 
 Przed zainstalowaniem programu .NET należy:
 
-- Rejestrowanie klucza firmy Microsoft
-- Rejestrowanie repozytorium produktu
-- Instalowanie wymaganych zależności
+- Zarejestruj klucz Microsoft.
+- Zarejestruj repozytorium produktów.
+- Zainstaluj wymagane zależności.
 
 Te operacje należy wykonać tylko jeden raz na każdej maszynie.
 

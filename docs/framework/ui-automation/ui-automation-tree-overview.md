@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: d1edbb82e0d5d6a6275c09646fbf8e54b4ff90df
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: f541aab7ed5aae48b943ba5699366fe6a3f21a4c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800295"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741391"
 ---
 # <a name="ui-automation-tree-overview"></a>Przegląd drzewa automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "74800295"
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>Widok nieprzetworzony  
- Nieprzetworzony widok drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] jest pełnym drzewem obiektów <xref:System.Windows.Automation.AutomationElement>, dla których pulpit jest katalogiem głównym. Nieprzetworzony widok jest ściśle zgodny z natywną strukturą programistyczną aplikacji i dlatego jest najbardziej szczegółowym widokiem dostępnym. Jest to również podstawa, w której są kompilowane inne widoki drzewa. Ponieważ ten widok zależy od bazowej [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Framework, nieprzetworzony widok przycisku [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] będzie miał inny widok pierwotny niż przycisk [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)].  
+ Nieprzetworzony widok drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] jest pełnym drzewem obiektów <xref:System.Windows.Automation.AutomationElement>, dla których pulpit jest katalogiem głównym. Nieprzetworzony widok jest ściśle zgodny z natywną strukturą programistyczną aplikacji i dlatego jest najbardziej szczegółowym widokiem dostępnym. Jest to również podstawa, w której są kompilowane inne widoki drzewa. Ponieważ ten widok zależy od bazowej [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Framework, nieprzetworzony widok przycisku [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] będzie miał inny widok pierwotny niż przycisk Win32.  
   
  Nieprzetworzony widok jest uzyskiwany przez wyszukiwanie elementów bez określania właściwości lub przy użyciu <xref:System.Windows.Automation.TreeWalker.RawViewWalker> do nawigowania po drzewie.  
   

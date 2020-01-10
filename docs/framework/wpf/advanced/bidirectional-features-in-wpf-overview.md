@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 385ce8d263991361512371dcacff52fcf0bbe738
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 19fb15a6310eba19792d7bd0744c2ae87f47c6fa
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740937"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740426"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Przegląd Dwukierunkowe funkcje WPF
 
@@ -54,7 +54,7 @@ Na poniższej ilustracji przedstawiono dane wyjściowe poprzedniego przykładu:
 
 ## <a name="flowdocument"></a>FlowDocument
 
-Wiele platform programistycznych, takich jak HTML, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] i Java, zapewnia specjalną obsługę tworzenia zawartości dwukierunkowej. Języki znaczników, takie jak HTML, dają autorom zawartości niezbędne znaczniki do wyświetlania tekstu w dowolnym wymaganym kierunku, na przykład tag HTML 4,0, "dir", który pobiera "RTL" lub "ltr" jako wartości. Ten tag jest podobny do właściwości <xref:System.Windows.FrameworkElement.FlowDirection%2A>, ale Właściwość <xref:System.Windows.FrameworkElement.FlowDirection%2A> działa w bardziej zaawansowany sposób do układu zawartości tekstowej i może być używana w przypadku zawartości innej niż tekst.
+Wiele platform programistycznych, takich jak HTML, Win32 i Java, zapewnia specjalną obsługę tworzenia zawartości dwukierunkowej. Języki znaczników, takie jak HTML, dają autorom zawartości niezbędne znaczniki do wyświetlania tekstu w dowolnym wymaganym kierunku, na przykład tag HTML 4,0, "dir", który pobiera "RTL" lub "ltr" jako wartości. Ten tag jest podobny do właściwości <xref:System.Windows.FrameworkElement.FlowDirection%2A>, ale Właściwość <xref:System.Windows.FrameworkElement.FlowDirection%2A> działa w bardziej zaawansowany sposób do układu zawartości tekstowej i może być używana w przypadku zawartości innej niż tekst.
 
 W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Documents.FlowDocument> jest uniwersalnym [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementu, który może obsługiwać kombinację tekstu, tabel, obrazów i innych elementów. Przykłady w poniższych sekcjach używają tego elementu.
 
@@ -64,7 +64,7 @@ Pierwszy przykład dokumentu zawiera dokument zawierający wiele nazw udziałów
 
 ![Ilustracja, która ilustruje użycie elementu span.](./media/bidirectional-features-in-wpf-overview/flow-direction-span-element.png "FlowDocument")
 
-Ponieważ tekst jest <xref:System.Windows.FlowDirection.RightToLeft>, wszystkie znaki specjalne, takie jak "\\", oddzielają tekst w kolejności od prawej do lewej. Powoduje to, że link nie jest wyświetlany w prawidłowej kolejności, dlatego w celu rozwiązania problemu tekst musi być osadzony, aby zachować osobne <xref:System.Windows.Documents.Run> przepływające <xref:System.Windows.FlowDirection.LeftToRight>. Zamiast oddzielnego <xref:System.Windows.Documents.Run> dla każdego języka, lepszym sposobem rozwiązania problemu jest osadzenie rzadziej używanych tekstów w języku angielskim do większych <xref:System.Windows.Documents.Span> arabskich.
+Ponieważ tekst jest <xref:System.Windows.FlowDirection.RightToLeft>, wszystkie znaki specjalne, takie jak "\\", oddzielają tekst w kolejności od prawej do lewej. Powoduje to, że link nie jest wyświetlany w prawidłowej kolejności, dlatego w celu rozwiązania problemu tekst musi być osadzony, aby zachować osobne <xref:System.Windows.Documents.Run> przepływające <xref:System.Windows.FlowDirection.LeftToRight>. Zamiast oddzielnego <xref:System.Windows.Documents.Run> dla każdego języka, lepszym sposobem rozwiązania problemu jest osadzenie rzadziej używanych tekstów w języku angielskim do większych <xref:System.Windows.Documents.Span>arabskich.
 
 Poniższy rysunek ilustruje to przy użyciu elementu Run osadzonego w elemencie span:
 
@@ -78,7 +78,7 @@ Poniższy przykład ilustruje użycie <xref:System.Windows.Documents.Run> i <xre
 
 ## <a name="span-elements"></a>Span elementy
 
-Element <xref:System.Windows.Documents.Span> działa jako separator graniczny między tekstami z różnymi kierunkami przepływu.  Nawet <xref:System.Windows.Documents.Span> elementy o tym samym kierunku przepływu są uważane za mające różne zakresy dwukierunkowe, co oznacza, że elementy <xref:System.Windows.Documents.Span> są uporządkowane w <xref:System.Windows.FlowDirection> kontenera, tylko zawartość w elemencie <xref:System.Windows.Documents.Span> jest zgodna z <xref:System.Windows.FlowDirection> @no__ t_5.
+Element <xref:System.Windows.Documents.Span> działa jako separator graniczny między tekstami z różnymi kierunkami przepływu.  Nawet <xref:System.Windows.Documents.Span> elementy o tym samym kierunku przepływu są uważane za mające różne zakresy dwukierunkowe, co oznacza, że elementy <xref:System.Windows.Documents.Span> są uporządkowane w <xref:System.Windows.FlowDirection>kontenera, tylko zawartość w elemencie <xref:System.Windows.Documents.Span> jest zgodna z <xref:System.Windows.FlowDirection> <xref:System.Windows.Documents.Span>.
 
 Na poniższej ilustracji przedstawiono kierunek przepływu kilku elementów <xref:System.Windows.Controls.TextBlock>.
 
@@ -124,7 +124,7 @@ Poniższa ilustracja przedstawia zmianę wyrównania <xref:System.Windows.Media.
 
 ![Grafika pokazująca pasek narzędzi z lewej strony gradientu.](./media/bidirectional-features-in-wpf-overview/toolbar-right-left-gradient.png)
 
-Poniższy przykład rysuje <xref:System.Windows.Controls.ToolBar> <xref:System.Windows.FlowDirection.RightToLeft>. (Aby narysować ją od lewej do prawej, Usuń atrybut <xref:System.Windows.FlowDirection> w <xref:System.Windows.Controls.ToolBar>.
+Poniższy przykład rysuje <xref:System.Windows.Controls.ToolBar><xref:System.Windows.FlowDirection.RightToLeft>. (Aby narysować ją od lewej do prawej, Usuń atrybut <xref:System.Windows.FlowDirection> w <xref:System.Windows.Controls.ToolBar>.
 
 [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]
 
@@ -147,18 +147,18 @@ Na poniższej ilustracji przedstawiono <xref:System.Windows.Controls.Image>przer
 Poniższy przykład pokazuje, że <xref:System.Windows.Controls.Image> nie dziedziczy <xref:System.Windows.FlowDirection> z <xref:System.Windows.Controls.StackPanel>, który go zawiera.
 
 > [!NOTE]
-> W C:\ musi znajdować się plik o nazwie **ms_logo. jpg.** dysk do uruchomienia tego przykładu.
+> W C:\ musi znajdować się plik o nazwie **ms_logo. jpg** dysk do uruchomienia tego przykładu.
 
 [!code-xaml[Image#Image](~/samples/snippets/csharp/VS_Snippets_Wpf/Image/CS/Window1.xaml#image)]
 
 > [!NOTE]
-> Pliki do pobrania to plik **ms_logo. jpg** . Kod założono, że plik. jpg nie znajduje się w projekcie, ale gdzieś na C:\ litera. Należy skopiować plik jpg z plików projektu do C:\ dysk lub Zmień kod w celu wyszukania pliku w projekcie. Aby wykonać tę zmianę `Source="file://c:/ms_logo.jpg"` w `Source="ms_logo.jpg"`.
+> Pliki do pobrania to plik **jpg ms_logo** . Kod założono, że plik. jpg nie znajduje się w projekcie, ale gdzieś na C:\ litera. Należy skopiować plik jpg z plików projektu do C:\ dysk lub Zmień kod w celu wyszukania pliku w projekcie. Aby wykonać tę zmianę `Source="file://c:/ms_logo.jpg"` w `Source="ms_logo.jpg"`.
 
 **Ścieżki**
 
-Oprócz <xref:System.Windows.Controls.Image>inny interesujący element jest <xref:System.Windows.Shapes.Path>. Ścieżka jest obiektem, który może rysować serię połączonych linii i krzywych. Działa w sposób podobny do <xref:System.Windows.Controls.Image> w odniesieniu do jego <xref:System.Windows.FlowDirection>; na przykład <xref:System.Windows.FlowDirection> <xref:System.Windows.FlowDirection.RightToLeft> to pozioma kopia <xref:System.Windows.FlowDirection.LeftToRight> jednego. Jednak, w przeciwieństwie do <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> dziedziczy <xref:System.Windows.FlowDirection> z kontenera, a jeden nie musi jawnie określać go.
+Oprócz <xref:System.Windows.Controls.Image>inny interesujący element jest <xref:System.Windows.Shapes.Path>. Ścieżka jest obiektem, który może rysować serię połączonych linii i krzywych. Działa w sposób podobny do <xref:System.Windows.Controls.Image> w odniesieniu do jego <xref:System.Windows.FlowDirection>; na przykład <xref:System.Windows.FlowDirection> <xref:System.Windows.FlowDirection.RightToLeft>to pozioma kopia <xref:System.Windows.FlowDirection.LeftToRight> jednego. Jednak, w przeciwieństwie do <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> dziedziczy <xref:System.Windows.FlowDirection> z kontenera, a jeden nie musi jawnie określać go.
 
-Poniższy przykład rysuje prostą strzałkę przy użyciu 3 wierszy. Pierwsza strzałka dziedziczy kierunek przepływu <xref:System.Windows.FlowDirection.RightToLeft> z <xref:System.Windows.Controls.StackPanel>, tak aby jego punkty początkowe i końcowe były mierzone z poziomu korzenia po prawej stronie. Druga strzałka, która ma jawną <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> również zaczyna się po prawej stronie. Jednak trzecia strzałka ma swój Start główny po lewej stronie. Aby uzyskać więcej informacji na temat rysowania, zobacz <xref:System.Windows.Media.LineGeometry> i <xref:System.Windows.Media.GeometryGroup>.
+Poniższy przykład rysuje prostą strzałkę przy użyciu 3 wierszy. Pierwsza strzałka dziedziczy kierunek przepływu <xref:System.Windows.FlowDirection.RightToLeft> z <xref:System.Windows.Controls.StackPanel>, tak aby jego punkty początkowe i końcowe były mierzone z poziomu korzenia po prawej stronie. Druga strzałka, która ma jawną <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> również zaczyna się po prawej stronie. Jednak trzecia strzałka ma swój Start główny po lewej stronie. Aby uzyskać więcej informacji na temat rysowania, zobacz <xref:System.Windows.Media.LineGeometry> i <xref:System.Windows.Media.GeometryGroup>.
 
 [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]
 
@@ -198,7 +198,7 @@ Właściwość <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>
 
 Ta właściwość określa typ podstawiania numerów do wykonania. Przyjmuje jedną z następujących <xref:System.Windows.Media.NumberSubstitutionMethod> wartości wyliczenia:
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Metoda podstawienia jest określana na podstawie właściwości <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> kultury liczbowej. Domyślnie włączone.
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Metoda podstawienia jest określana na podstawie właściwości <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> kultury liczbowej. Jest to domyślne ustawienie.
 
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Jeśli kultura liczbowa jest kulturą arabską lub perski, określa, że cyfry są zależne od kontekstu.
 
@@ -224,7 +224,7 @@ W prawdziwej aplikacji może być konieczne ustawienie języka programowo. Na pr
 
 Jeśli chcesz wprowadzić zmiany na podstawie stanu aplikacji, Skorzystaj z innych funkcji udostępnianych przez [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].
 
-Najpierw ustaw `NumberSubstitution.CultureSource="Text"` składnika aplikacji. Korzystając z tego ustawienia, należy upewnić się, że ustawienia nie pochodzą z [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dla elementów tekstowych, które mają wartość domyślną, np. <xref:System.Windows.Controls.TextBlock>.
+Najpierw ustaw `NumberSubstitution.CultureSource="Text"`składnika aplikacji. Korzystając z tego ustawienia, należy upewnić się, że ustawienia nie pochodzą z [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dla elementów tekstowych, które mają wartość domyślną, np. <xref:System.Windows.Controls.TextBlock>.
 
 Na przykład:
 
@@ -267,6 +267,6 @@ Sposób, w jaki podstawianie numerów działa w [!INCLUDE[TLA#tla_winclient](../
 
 Jednak w niektórych przypadkach możesz chcieć utworzyć ujednoliconą aplikację, na przykład cyfry europejskie dla wszystkich użytkowników. Lub cyfry arabskie w <xref:System.Windows.Documents.Table> komórkach z określonym <xref:System.Windows.Style>. Jeden prosty sposób to użycie właściwości <xref:System.Windows.Media.NumberSubstitution.Substitution%2A>.
 
-W poniższym przykładzie pierwszy <xref:System.Windows.Controls.TextBlock> nie ma ustawionej właściwości <xref:System.Windows.Media.NumberSubstitution.Substitution%2A>, dlatego algorytm wyświetla cyfry arabskie zgodnie z oczekiwaniami. Jednak w drugim <xref:System.Windows.Controls.TextBlock> podstawienia jest ustawiona na Europejski zastępowanie domyślnego podstawienia dla numerów arabskich i są wyświetlane cyfry europejskie.
+W poniższym przykładzie pierwszy <xref:System.Windows.Controls.TextBlock> nie ma ustawionej właściwości <xref:System.Windows.Media.NumberSubstitution.Substitution%2A>, dlatego algorytm wyświetla cyfry arabskie zgodnie z oczekiwaniami. Jednak w drugim <xref:System.Windows.Controls.TextBlock>podstawienia jest ustawiona na Europejski zastępowanie domyślnego podstawienia dla numerów arabskich i są wyświetlane cyfry europejskie.
 
 [!code-xaml[Numbers3#Numbers3](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers3/CS/Window1.xaml#numbers3)]

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-ms.openlocfilehash: 91a29233d12a842a64b7d3dd497312f6dc6742ca
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4855fae2954e5650d8c9bbb81153ebe64249a867
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423651"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740191"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 Aplikacje, które hostuje [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zawartość za pomocą PresentationHost. exe implementują ten interfejs, aby zapewnić punkt integracji między hostem a PresentationHost. exe.  
   
 ## <a name="remarks"></a>Uwagi  
- [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] aplikacje, takie jak przeglądarki sieci Web, mogą hostować zawartość WPF, w tym aplikacje przeglądarki XAML (XBAP) i luźny kod XAML. Aby hostować zawartość WPF, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] aplikacje tworzą wystąpienie [kontrolki WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911). Aby można było hostować, WPF tworzy wystąpienie programu PresentationHost. exe, które udostępnia hostowaną zawartość WPF do hosta na potrzeby wyświetlania w [kontrolce WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911).  
+ Aplikacje systemu Win32, takie jak przeglądarki sieci Web, mogą obsługiwać zawartość WPF, w tym aplikacje przeglądarki XAML (XBAP) i luźny kod XAML. Aby hostować zawartość WPF, aplikacje Win32 tworzą wystąpienie [kontrolki WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911). Aby można było hostować, WPF tworzy wystąpienie programu PresentationHost. exe, które udostępnia hostowaną zawartość WPF do hosta na potrzeby wyświetlania w [kontrolce WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911).  
   
  Integracja włączona przez `IWpfHostSupport` umożliwia programowi PresentationHost. exe:  
   
@@ -33,5 +33,5 @@ Aplikacje, które hostuje [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |[GetRawInputDevices](getrawinputdevices.md)|Zezwala programowi PresentationHost. exe na odnajdywanie nieprzetworzonych urządzeń wejściowych (urządzeń z interfejsem ludzkim), których aplikacja hosta interesuje.|  
-|[FilterInputMessage](filterinputmessage.md)|Wywoływana przez PresentationHost. exe za każdym razem, gdy wiadomość zostanie odebrana, chyba że zostanie zwrócona wartość E_NOTIMPL.|  
+|[FilterInputMessage](filterinputmessage.md)|Wywoływana przez PresentationHost. exe za każdym razem, gdy komunikat zostanie odebrany, chyba że E_NOTIMPL jest zwracana.|  
 |[GetCustomUI](getcustomui.md)|Domyślnie program PresentationHost. exe udostępnia swój własny postęp wdrażania i interfejsy użytkownika błędów wdrażania, które są wyświetlane podczas wdrażania zawartości WPF.|

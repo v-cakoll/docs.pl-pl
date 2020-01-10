@@ -9,12 +9,12 @@ helpviewer_keywords:
 - elements, moving
 - UI Automation, moving elements
 ms.assetid: 4042cb44-e27e-4a03-ac36-9be1eed65b47
-ms.openlocfilehash: a23280c38da55b8d5f0bd8011f9c172b0e173744
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 72454e355fb9b673a4adafb39ad60c8414573d0e
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438549"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741319"
 ---
 # <a name="move-a-ui-automation-element"></a>Przenoszenie elementu automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "74438549"
  W tym przykładzie pokazano, jak przenieść element [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] do określonej lokalizacji ekranu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład używa wzorców formantów <xref:System.Windows.Automation.WindowPattern> i <xref:System.Windows.Automation.TransformPattern> do programistycznego przenoszenia [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] aplikacji docelowej do lokalizacji dyskretnych ekranu i śledzenia <xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> <xref:System.Windows.Automation.AutomationElement.AutomationPropertyChangedEvent>.  
+ Poniższy przykład używa wzorców formantów <xref:System.Windows.Automation.WindowPattern> i <xref:System.Windows.Automation.TransformPattern> do programistycznego przenoszenia aplikacji docelowej Win32 do lokalizacji dyskretnych ekranu i śledzenia <xref:System.Windows.Automation.AutomationElement.AutomationPropertyChangedEvent><xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>.  
   
  [!code-csharp[WindowMove#1301](../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowMove/CSharp/WindowMove.cs#1301)]
  [!code-vb[WindowMove#1301](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowMove/VisualBasic/windowmove.vb#1301)]  

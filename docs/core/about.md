@@ -2,12 +2,12 @@
 title: Informacje o platformie .NET Core
 description: Dowiedz się więcej o programie .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: ed153e817746a88277c191dfb14c465ff2d8bfa1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: c6d120445bc6625b37c461c1bf2686b10833dc13
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344905"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740939"
 ---
 # <a name="about-net-core"></a>Informacje o platformie .NET Core
 
@@ -113,7 +113,7 @@ Ponieważ .NET Core obsługuje instalację równoczesną, a jej środowisko uruc
 
 ### <a name="comparison-with-mono"></a>Porównanie z mono
 
-[Mono](https://www.mono-project.com/) to oryginalna implementacja na wielu platformach platformy .NET. Jest ona uruchamiana jako alternatywa dla programu .NET Framework i przeniesiona na urządzenia przenośne jako wersja [niestandardowa](https://github.com/mono/mono) . Można to traktować jako klony społeczności .NET Framework. Zespół projektu mono opierał się na otwartych [standardach .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (zwłaszcza ECMA 335) opublikowanych przez firmę Microsoft w celu zapewnienia zgodnej implementacji.
+[Mono](https://www.mono-project.com/) to oryginalna implementacja na wielu platformach platformy .NET. Jest ona uruchamiana jako alternatywa dla programu .NET Framework i przeniesiona na urządzenia przenośne jako wersja [niestandardowa](https://github.com/mono/mono) . Można to traktować jako klony społeczności .NET Framework. Zespół projektu mono opierał się na otwartych [standardach .NET](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) (zwłaszcza ECMA 335) opublikowanych przez firmę Microsoft w celu zapewnienia zgodnej implementacji.
 
 Główne różnice między programami .NET Core i mono:
 

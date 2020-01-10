@@ -6,26 +6,26 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 03df282022c39673a7e160dd5d79bdadd0c7adda
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9002b508602a219fac80770a27f628bb24150a6b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433991"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741763"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie klienta
 > [!NOTE]
 > Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
- Niektóre różne struktury [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] są używane w systemach operacyjnych firmy Microsoft, w tym [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]i [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ujawnia informacje o elementach interfejsu użytkownika dla klientów programu. Niemniej jednak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] nie ma świadomość różnych typów formantów, które istnieją w tych strukturach, oraz technik, które są potrzebne do wyodrębnienia z nich informacji. Zamiast tego pozostawi to zadanie w obiektach o nazwie Providers. Dostawca wyodrębnia informacje z konkretnej kontrolki i udostępnia te informacje [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], co następnie przedstawia go klientowi w spójny sposób.  
+ Niektóre różne struktury [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] są używane w systemach operacyjnych firmy Microsoft, w tym Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]i [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ujawnia informacje o elementach interfejsu użytkownika dla klientów programu. Niemniej jednak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] nie ma świadomość różnych typów formantów, które istnieją w tych strukturach, oraz technik, które są potrzebne do wyodrębnienia z nich informacji. Zamiast tego pozostawi to zadanie w obiektach o nazwie Providers. Dostawca wyodrębnia informacje z konkretnej kontrolki i udostępnia te informacje [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], co następnie przedstawia go klientowi w spójny sposób.  
   
  Dostawcy mogą istnieć zarówno po stronie serwera, jak i po stronie klienta. Dostawca po stronie serwera jest implementowany przez sam formant. elementy [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] implementują dostawców, ponieważ mogą one mieć jakiekolwiek kontrolki innych firm, w których zawarto [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
- Jednak starsze kontrolki, takie jak te w [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], nie obsługują bezpośrednio [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Te kontrolki są obsługiwane zamiast dostawców, którzy istnieją w procesie klienta i uzyskują informacje o kontrolkach korzystających z komunikacji między procesami; na przykład przez monitorowanie komunikatów systemu Windows do i z kontrolek. Tacy dostawcy po stronie klienta są czasami nazywane serwerami proxy.  
+ Jednak starsze kontrolki, takie jak te w Win32 i [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], nie obsługują bezpośrednio [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Te kontrolki są obsługiwane zamiast dostawców, którzy istnieją w procesie klienta i uzyskują informacje o kontrolkach korzystających z komunikacji między procesami; na przykład przez monitorowanie komunikatów systemu Windows do i z kontrolek. Tacy dostawcy po stronie klienta są czasami nazywane serwerami proxy.  
   
- System Windows Vista dostarcza dostawcom standardowe [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] i Windows Forms kontrolek. Dodatkowo dostawca rezerwowy zapewnia częściową pomoc techniczną [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wszystkim kontrolkom, które nie są obsługiwane przez innego dostawcę po stronie serwera lub serwer proxy, ale ma implementację Microsoft Active Accessibility. Wszyscy dostawcy są automatycznie załadowana i dostępni dla aplikacji klienckich.  
+ Systemy Windows Vista dostarczają dostawców dla standardowych formantów Win32 i Windows Forms. Dodatkowo dostawca rezerwowy zapewnia częściową pomoc techniczną [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wszystkim kontrolkom, które nie są obsługiwane przez innego dostawcę po stronie serwera lub serwer proxy, ale ma implementację Microsoft Active Accessibility. Wszyscy dostawcy są automatycznie załadowana i dostępni dla aplikacji klienckich.  
   
- Aby uzyskać więcej informacji na temat obsługi formantów [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] i Windows Forms, zobacz [Obsługa automatyzacji interfejsu użytkownika dla standardowych kontrolek](ui-automation-support-for-standard-controls.md).  
+ Aby uzyskać więcej informacji na temat obsługi formantów Win32 i Windows Forms, zobacz [Obsługa automatyzacji interfejsu użytkownika dla standardowych kontrolek](ui-automation-support-for-standard-controls.md).  
   
  Aplikacje mogą także rejestrować innych dostawców po stronie klienta.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "74433991"
   
 - Flagi określające sposób dopasowania nazwy klasy do klas okien znalezionych w aplikacji docelowej.  
   
- Ostatnie dwa parametry są opcjonalne. Klient może określić nazwę obrazu aplikacji docelowej, gdy chce używać różnych dostawców dla różnych aplikacji. Na przykład klient może używać jednego dostawcy dla kontrolki widok listy [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] w znanej aplikacji, która obsługuje wzorzec wielu widoków, i drugi dla podobnej kontroli w innej znanej aplikacji, która nie.  
+ Ostatnie dwa parametry są opcjonalne. Klient może określić nazwę obrazu aplikacji docelowej, gdy chce używać różnych dostawców dla różnych aplikacji. Na przykład klient może użyć jednego dostawcy dla kontrolki widok listy Win32 w znanej aplikacji, która obsługuje wzorzec wielu widoków i drugi dla podobnej kontroli w innej znanej aplikacji, która nie.  
   
 ## <a name="see-also"></a>Zobacz także
 

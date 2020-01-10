@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 417cc17986fa1481505a88d778dcaa747860efbe
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f41fc102dfbe24d47e194da7477791a46f8d712d
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447975"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741747"
 ---
 # <a name="ui-automation-providers-overview"></a>Przegląd dostawców automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -18,9 +18,9 @@ ms.locfileid: "74447975"
   
  Dostawcy automatyzacji interfejsu użytkownika umożliwiają kontrolowanie komunikacji z aplikacjami klienckimi automatyzacji interfejsu użytkownika. Ogólnie rzecz biorąc każda kontrolka lub inny odrębny element w [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] jest reprezentowany przez dostawcę. Dostawca ujawnia informacje o elemencie i opcjonalnie implementuje wzorce kontroli, które umożliwiają aplikacji klienckiej współpracującie z kontrolką.  
   
- Aplikacje klienckie zazwyczaj nie muszą bezpośrednio współpracować z dostawcami. Większość standardowych kontrolek w aplikacjach korzystających z [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]lub [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] platformy są automatycznie uwidaczniane w systemie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Aplikacje implementujące niestandardowe kontrolki mogą również implementować [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawców dla tych kontrolek, a aplikacje klienckie nie muszą podejmować żadnych specjalnych kroków w celu uzyskania dostępu do nich.  
+ Aplikacje klienckie zazwyczaj nie muszą bezpośrednio współpracować z dostawcami. Większość standardowych kontrolek w aplikacjach korzystających z Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]lub [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Framework są automatycznie uwidaczniane dla systemu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Aplikacje implementujące niestandardowe kontrolki mogą również implementować [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawców dla tych kontrolek, a aplikacje klienckie nie muszą podejmować żadnych specjalnych kroków w celu uzyskania dostępu do nich.  
   
- Ten temat zawiera omówienie sposobu, w jaki deweloperzy kontroli implementują [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawców, szczególnie w przypadku formantów w [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] i [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] Windows.  
+ Ten temat zawiera omówienie sposobu, w jaki deweloperzy kontroli implementują [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawców, szczególnie w przypadku formantów w [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] i Windows Win32.  
   
 <a name="Types_of_Providers"></a>   
 ## <a name="types-of-providers"></a>Typy dostawców  
@@ -29,10 +29,10 @@ ms.locfileid: "74447975"
 ### <a name="client-side-providers"></a>Dostawcy po stronie klienta  
  Dostawcy po stronie klienta są implementowani przez klientów automatyzacji interfejsu użytkownika do komunikowania się z aplikacją, która nie obsługuje lub nie obsługuje w pełni [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Dostawcy po stronie klienta zazwyczaj komunikują się z serwerem przez granicę procesu przez wysyłanie i otrzymywanie komunikatów systemu Windows.  
   
- Ponieważ dostawcy automatyzacji interfejsu użytkownika dla kontrolek w aplikacjach [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms lub [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] są dostarczane jako część systemu operacyjnego, aplikacje klienckie rzadko muszą implementować swoich własnych dostawców, a tym samym przeglądem nie są one jeszcze bardziej omówione.  
+ Ponieważ dostawcy automatyzacji interfejsu użytkownika dla formantów w Win32, Windows Forms lub aplikacje [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] są dostarczane jako część systemu operacyjnego, aplikacje klienckie rzadko muszą implementować swoich własnych dostawców i nie obejmują ich jeszcze więcej.  
   
 ### <a name="server-side-providers"></a>Dostawcy po stronie serwera  
- Dostawcy po stronie serwera są implementowani przez niestandardowe kontrolki lub aplikacje oparte na środowisku interfejsu użytkownika innym niż [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms lub [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ Dostawcy po stronie serwera są implementowani przez niestandardowe kontrolki lub aplikacje oparte na środowisku interfejsu użytkownika innym niż Win32, Windows Forms lub [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
  Dostawcy po stronie serwera komunikują się z aplikacjami klienckimi na granicy procesu przez udostępnienie interfejsów do systemu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Core, który z kolei obsługuje żądania od klientów.  
   
@@ -62,17 +62,17 @@ ms.locfileid: "74447975"
  Jest odpowiedzialna za implementację dostawcy, aby zdefiniować element jako element zawartości lub element kontrolny. Elementy kontrolne mogą być również elementami zawartości, ale wszystkie elementy zawartości są elementami kontrolnymi.  
   
 ### <a name="frameworks"></a>Struktury  
- Platforma jest składnikiem, który zarządza kontrolkami podrzędnymi, testowaniem trafień i renderowaniem w obszarze ekranu. Na przykład okno [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], często określane jako właściwość HWND, może stanowić strukturę, która zawiera wiele elementów [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], takich jak pasek menu, pasek stanu i przyciski.  
+ Platforma jest składnikiem, który zarządza kontrolkami podrzędnymi, testowaniem trafień i renderowaniem w obszarze ekranu. Na przykład okno Win32, często określane jako HWND, może stanowić strukturę, która zawiera wiele [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elementów, takich jak pasek menu, pasek stanu i przyciski.  
   
- [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] kontrolki kontenera, takie jak pola listy i widoki drzewa, są uznawane za struktury, ponieważ zawierają własny kod do renderowania elementów podrzędnych i wykonujących na nich Testy trafień. Z kolei pole listy [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] nie jest strukturą, ponieważ renderowanie i testowanie trafień jest obsługiwane przez okno zawierające [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ Formanty kontenera Win32, takie jak pola list i widoki drzewa, są uznawane za struktury, ponieważ zawierają własny kod do renderowania elementów podrzędnych i wykonujących na nich Testy trafień. Z kolei pole listy [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] nie jest strukturą, ponieważ renderowanie i testowanie trafień jest obsługiwane przez okno zawierające [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
  [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] w aplikacji może składać się z różnych platform. Na przykład okno aplikacji HWND może zawierać dynamiczny kod HTML (DHTML), który z kolei zawiera składnik, taki jak pole kombi w elemencie HWND.  
   
 ### <a name="fragments"></a>Fragmenty  
- Fragment to kompletny poddrzewo elementów z określonej struktury. Element w węźle głównym poddrzewa jest nazywany korzeniem fragmentu. Katalog główny fragmentu nie ma elementu nadrzędnego, ale jest hostowany w obrębie innej struktury, zazwyczaj okna [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] (HWND).  
+ Fragment to kompletny poddrzewo elementów z określonej struktury. Element w węźle głównym poddrzewa jest nazywany korzeniem fragmentu. Katalog główny fragmentu nie ma elementu nadrzędnego, ale jest hostowany w obrębie innej struktury, zazwyczaj okna Win32 (HWND).  
   
 ### <a name="hosts"></a>Hosty  
- Węzeł główny każdego fragmentu musi być hostowany w elemencie, zazwyczaj w [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] oknie (HWND). Wyjątkiem są komputery stacjonarne, które nie są hostowane w żadnym innym elemencie. Host kontrolki niestandardowej jest elementem HWND samego formantu, a nie oknem aplikacji ani innym oknem, które może zawierać grupy formantów najwyższego poziomu.  
+ Węzeł główny każdego fragmentu musi być hostowany w elemencie, zazwyczaj okno Win32 (HWND). Wyjątkiem są komputery stacjonarne, które nie są hostowane w żadnym innym elemencie. Host kontrolki niestandardowej jest elementem HWND samego formantu, a nie oknem aplikacji ani innym oknem, które może zawierać grupy formantów najwyższego poziomu.  
   
  Host fragmentu odgrywa ważną rolę w dostarczaniu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] usług. Umożliwia nawigowanie do głównego fragmentu i udostępnia niektóre właściwości domyślne, aby nie zaimplementował dostawcy niestandardowego.  
   

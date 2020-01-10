@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 640a925c3aec86b4743b1b2b62eb3793af1cc0bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd0ffb982c22b0a8b6cb5dd677faafb9921bf5d9
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675419"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741020"
 ---
 # <a name="coreresponsedata-class"></a>CoreResponseData, klasa
 
-`CoreResponseData` Klasa reprezentuje podczas analizowania nagłówków HTTP i treści odpowiedzi.
+Klasa `CoreResponseData` reprezentuje analizę nagłówków HTTP i treść odpowiedzi.
 
 ## <a name="syntax"></a>Składnia
   
@@ -28,14 +28,14 @@ internal class CoreResponseData
 ```
 
 > [!WARNING]
-> Ten interfejs API jest wewnętrzna i nie jest przeznaczona do użycia bezpośrednio w kodzie. Zamiast tego należy używać <xref:System.Diagnostics.DiagnosticSource> można dołączyć kod sieci. Zobacz [Podręcznik użytkownika DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Ten interfejs API jest wewnętrzny i nie jest przeznaczony do użycia bezpośrednio w kodzie. Zamiast tego należy użyć <xref:System.Diagnostics.DiagnosticSource>, aby podłączyć kod sieciowy. Zobacz [Podręcznik użytkownika DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
-> Firma Microsoft nie obsługuje użycia tej klasy w aplikacji produkcyjnej w żadnym wypadku.
+> Firma Microsoft nie obsługuje korzystania z tej klasy w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.Net>
+**Przestrzeń nazw:** <xref:System.Net>
 
-**Zestaw:** System (System.dll)
+**Zestaw:** System (w pliku System. dll)
 
-**Wersje programu .NET framework:** Dostępne od wersji 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

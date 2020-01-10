@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 53338c75d31cef3ab89879632710dba3e52091ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8abe619a57cc61fc3502807f60deccbbd578f382
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675406"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740990"
 ---
-# <a name="coreresponsedatamstatuscode-field"></a>CoreResponseData.m\_StatusCode Field
+# <a name="coreresponsedatam_statuscode-field"></a>CoreResponseData. m\_pole StatusCode
 
-`CoreResponseData.m_StatusCode` jest <xref:System.Net.HttpStatusCode> zawierający stanu odpowiedzi.
+`CoreResponseData.m_StatusCode` to <xref:System.Net.HttpStatusCode> zawierający stan odpowiedzi.
 
 ## <a name="syntax"></a>Składnia
   
@@ -28,14 +28,14 @@ public HttpStatusCode m_StatusCode
 ```
 
 > [!WARNING]
-> Ten interfejs API nie jest przeznaczona do użycia bezpośrednio w kodzie. Zamiast tego należy używać <xref:System.Diagnostics.DiagnosticSource> można dołączyć kod sieci. Zobacz [Podręcznik użytkownika DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Ten interfejs API nie jest przeznaczony do użycia bezpośrednio w kodzie. Zamiast tego należy użyć <xref:System.Diagnostics.DiagnosticSource>, aby podłączyć kod sieciowy. Zobacz [Podręcznik użytkownika DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
-> Firma Microsoft nie obsługuje użycia tej klasy w aplikacji produkcyjnej w żadnym wypadku.
+> Firma Microsoft nie obsługuje korzystania z tej klasy w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.Net>
+**Przestrzeń nazw:** <xref:System.Net>
 
-**Zestaw:** System (System.dll)
+**Zestaw:** System (w pliku System. dll)
 
-**Wersje programu .NET framework:** Dostępne od wersji 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

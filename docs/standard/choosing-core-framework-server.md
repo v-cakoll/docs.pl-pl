@@ -4,12 +4,12 @@ description: Przewodnik dotyczący implementacji platformy .NET, którą należy
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b2b9e15cfdfd63d070ae94c29a9f2d1a5b5c87b2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799253"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738672"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych
 
@@ -46,7 +46,7 @@ Architektura mikrousług umożliwia łączenie różnych technologii między gra
 
 Dostępnych jest wiele platform infrastruktury. [Usługa Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) jest przeznaczona dla dużych i złożonych systemów mikrousług. [Azure App Service](https://azure.microsoft.com/services/app-service/) to dobry wybór w przypadku mikrousług bezstanowych. Alternatywy mikrousług oparte na platformie Docker pasują do dowolnego rodzaju podejścia mikrousług, jak wyjaśniono w sekcji [Containers](#containers) . Wszystkie te platformy obsługują platformę .NET Core i sprawiają, że są one idealne do obsługi mikrousług.
 
-Aby uzyskać więcej informacji o architekturze mikrousług, [Zobacz .NET mikrousługi. Architektura dla kontenerów aplikacji](../architecture/microservices/index.md).NET.
+Aby uzyskać więcej informacji o architekturze mikrousług, zobacz [.NET mikrousługi. Architektura dla kontenerów aplikacji .NET](../architecture/microservices/index.md).
 
 ### <a name="containers"></a>Kontenery
 
@@ -85,17 +85,17 @@ Tak więc w przypadku, gdy biblioteki lub pakiety NuGet używają technologii, k
 
 Niektóre technologie .NET Framework nie są dostępne w programie .NET Core. Niektóre z nich mogą być dostępne w nowszych wersjach platformy .NET Core. Inne nie mają zastosowania do nowych wzorców aplikacji przeznaczonych dla platformy .NET Core i mogą być nigdy niedostępne. Na poniższej liście przedstawiono najpopularniejsze technologie, które nie są dostępne w programie .NET Core:
 
-- Aplikacje ASP.NET Web Forms: ASP.NET Web Forms są dostępne tylko w .NET Framework. Nie można używać ASP.NET Core dla formularzy sieci Web ASP.NET. Nie istnieją plany dotyczące przenoszenia formularzy sieci Web ASP.NET do platformy .NET Core.
+- Aplikacje ASP.NET Web Forms: formularze sieci Web ASP.NET są dostępne tylko w .NET Framework. Nie można używać ASP.NET Core dla formularzy sieci Web ASP.NET. Nie istnieją plany dotyczące przenoszenia formularzy sieci Web ASP.NET do platformy .NET Core.
 
-- Aplikacje ASP.NET Web Pages: ASP.NET strony sieci Web nie są uwzględnione w ASP.NET Core. 
+- Aplikacje ASP.NET Web Pages: ASP.NET Web Pages nie są uwzględnione w ASP.NET Core. 
 
 - Implementacja usług WCF. Nawet jeśli istnieje [Biblioteka klienta WCF](https://github.com/dotnet/wcf) , która umożliwia korzystanie z usług WCF z platformy .NET Core, implementacja serwera WCF jest obecnie dostępna tylko w .NET Framework. Ten scenariusz nie jest częścią bieżącego planu dla platformy .NET Core, ale jest brany pod uwagę w przyszłości.
 
-- Usługi związane z przepływem pracy: Program Windows Workflow Foundation (WF), usługi Workflow Services (WCF + WF w ramach jednej usługi) i Usługi danych programu WCF (wcześniej znany jako "ADO.NET Data Services") są dostępne tylko w .NET Framework.  Nie ma żadnych planów, aby przenieść WF/WCF + WF/Usługi danych programu WCF do programu .NET Core.
+- Usługi związane z przepływem pracy: Windows Workflow Foundation (WF), usługi Workflow Services (WCF + WF w jednej usłudze) i Usługi danych programu WCF (wcześniej znane jako "ADO.NET Data Services") są dostępne tylko w .NET Framework.  Nie ma żadnych planów, aby przenieść WF/WCF + WF/Usługi danych programu WCF do programu .NET Core.
 
-- Obsługa języka: Visual Basic i F# są obecnie obsługiwane w programie .NET Core, ale nie dla wszystkich typów projektów. Aby zapoznać się z listą obsługiwanych szablonów projektu, zobacz [Opcje szablonu dla programu dotnet New](../core/tools/dotnet-new.md#arguments).
+- Obsługa języków: Visual Basic i F# są obecnie obsługiwane w programie .NET Core, ale nie dla wszystkich typów projektów. Aby zapoznać się z listą obsługiwanych szablonów projektu, zobacz [Opcje szablonu dla programu dotnet New](../core/tools/dotnet-new.md#arguments).
 
-Oprócz oficjalnych planów istnieją inne struktury, które można przenieść do programu .NET Core. Aby uzyskać pełną listę, zobacz CoreFX problemy oznaczone jako [Port-to-Core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Ta lista nie reprezentuje zobowiązania firmy Microsoft do przenoszenia tych składników do programu .NET Core. Są one po prostu przechwytywać pragnienie z społeczności, aby to zrobić. Jeśli zamierzasz dowiedzieć się więcej o składnikach `port-to-core`oznaczonych jako, weź udział w dyskusjach w witrynie GitHub. Jeśli uważasz, że coś nie ma, zastanów się nad nowym problemem w [repozytorium CoreFX](https://github.com/dotnet/corefx/issues/new).
+Oprócz oficjalnych planów istnieją inne struktury, które można przenieść do programu .NET Core. Aby uzyskać pełną listę, zobacz CoreFX problemy oznaczone jako [Port-to-Core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Ta lista nie reprezentuje zobowiązania firmy Microsoft do przenoszenia tych składników do programu .NET Core. Są one po prostu przechwytywać pragnienie z społeczności, aby to zrobić. Jeśli zamierzasz dowiedzieć się więcej o składnikach oznaczonych jako `port-to-core`, weź udział w dyskusjach w witrynie GitHub. Jeśli uważasz, że coś nie ma, zastanów się w nim nowy problem w [repozytorium .NET](https://github.com/dotnet/runtime/issues/new).
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>Konieczność korzystania z platformy, która nie obsługuje programu .NET Core
 
@@ -110,4 +110,4 @@ Niektóre platformy firmy Microsoft lub innych firm nie obsługują platformy .N
 - [Przenoszenie z .NET Framework do platformy .NET Core](../core/porting/index.md)
 - [Wprowadzenie do platform .NET i Docker](../core/docker/introduction.md)
 - [Przegląd składników platformy .NET](components.md)
-- [Mikrousługi platformy .NET. architektura konteneryzowanych aplikacji .NET](../architecture/microservices/index.md)
+- [Mikrousługi platformy .NET. Architektura dla kontenerów aplikacji .NET](../architecture/microservices/index.md)

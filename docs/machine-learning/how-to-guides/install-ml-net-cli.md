@@ -1,18 +1,19 @@
 ---
 title: Jak zainstalować narzędzie ML.NET interfejsu wiersza polecenia (CLI)
-description: Omówienie i instalacja narzędzia ML.NET interfejsu wiersza polecenia (CLI).
-ms.date: 04/16/2019
-ms.custom: ''
-ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+description: Dowiedz się, jak zainstalować, uaktualnić, obniżyć i odinstalować narzędzie ML.NET interfejsu wiersza polecenia (CLI).
+ms.date: 12/18/2019
+ms.openlocfilehash: 350122f2d2d2f03484ab6e272b482adf2094495c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977082"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739965"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Jak zainstalować narzędzie ML.NET interfejsu wiersza polecenia (CLI)
 
-Interfejs wiersza polecenia ML.NET — narzędzie, które można uruchomić w dowolnym wierszu polecenia (Windows, Mac lub Linux) w celu wygenerowania dobrej jakości modeli ML.NET i kodu źródłowego na podstawie podanych szkoleń.
+Dowiedz się, jak zainstalować interfejs wiersza polecenia ML.NET w systemie Windows, Mac lub Linux.
+
+Interfejs wiersza polecenia ML.NET generuje dobrą jakość modeli ML.NET i kod źródłowy przy użyciu zautomatyzowanego uczenia maszynowego (AutoML) i zestawu danych szkoleniowych.
 
 > [!NOTE]
 > Ten temat dotyczy ML.NET interfejsu wiersza polecenia i ML.NET AutoML, które są obecnie dostępne w wersji zapoznawczej, a materiał może ulec zmianie.
@@ -23,11 +24,11 @@ Interfejs wiersza polecenia ML.NET — narzędzie, które można uruchomić w do
 
 - Obowiązkowe [Visual Studio 2017 lub 2019](https://visualstudio.microsoft.com/vs/)
 
-Można uruchomić wygenerowane C# projekty kodu za pomocą programu Visual Studio F5 lub `dotnet run` (interfejs wiersza polecenia platformy .NET Core).
+Możesz uruchomić wygenerowane C# projekty kodu w programie Visual Studio, naciskając klawisz `F5` lub `dotnet run` (interfejs wiersza polecenia platformy .NET Core).
 
 Uwaga: Jeśli po zainstalowaniu [zestawu .NET Core 2,2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) polecenie `dotnet tool` nie działa, Wyloguj się z systemu Windows i zaloguj się ponownie.
 
-## <a name="install"></a>Zainstaluj
+## <a name="install"></a>Instalacja programu
 
 Interfejs wiersza polecenia ML.NET jest instalowany jak każdy inny narzędzie globalne dotnet. Używasz interfejs wiersza polecenia platformy .NET Core `dotnet tool install` polecenia.
 
@@ -120,7 +121,7 @@ Na komputerze, na którym chcesz włączyć uzupełnianie, musisz wykonać dwie 
 
 Interfejs wiersza polecenia ML.NET można zainstalować w katalogu domyślnym lub w określonej lokalizacji. Domyślne katalogi są następujące:
 
-| Macintosh          | Ścieżka                          |
+| System operacyjny          | Ścieżka                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -134,7 +135,7 @@ W takim przypadku interfejs wiersza polecenia platformy .NET Core nie dodaje aut
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Samouczek dotyczący "Wprowadzenie za pomocą narzędzia interfejsu wiersza polecenia ML.NET"](../tutorials/mlnet-cli.md)
-- [Jak automatycznie uczenie modeli za pomocą narzędzia interfejsu wiersza polecenia ML.NET](../automate-training-with-cli.md)
+- [Przegląd interfejsu wiersza polecenia ML.NET](../automate-training-with-cli.md)
+- [Samouczek: analizowanie tonacji za pomocą interfejsu wiersza polecenia ML.NET](../tutorials/sentiment-analysis-cli.md)
 - [Przewodnik dotyczący poleceń autouczenia interfejsu wiersza polecenia ML.NET](../reference/ml-net-cli-reference.md)
 - [Dane telemetryczne w interfejsie wiersza polecenia ML.NET](../resources/ml-net-cli-telemetry.md)

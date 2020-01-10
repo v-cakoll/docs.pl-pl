@@ -1,23 +1,25 @@
 ---
 title: Zadania uczenia maszynowego
 description: Poznaj różne zadania uczenia maszynowego i powiązane zadania, które są obsługiwane w programie ML.NET.
-ms.custom: seodec18
-ms.date: 04/23/2019
-author: natke
-ms.openlocfilehash: d0634ce8a0559ab3cdb5bf27fc5406ab02af8df6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.date: 12/23/2019
+ms.openlocfilehash: badb096ab3e7fbd575d8594b4fbd0e2ebaf63820
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977253"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739629"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Zadania uczenia maszynowego w ML.NET
 
-Podczas kompilowania modelu uczenia maszynowego należy najpierw zdefiniować, co zostaje się z danymi. Dzięki temu można wybrać odpowiednie zadanie uczenia maszynowego w danej sytuacji. Poniższa lista zawiera opis różnych zadań uczenia maszynowego, spośród których można wybierać i niektórych typowych przypadków użycia. Aby uzyskać więcej informacji na temat wybierania zadania, które jest odpowiednie dla danego scenariusza, zobacz [algorytmy](../how-to-choose-an-ml-net-algorithm.md).
+Zadanie uczenia maszynowego jest typem przewidywanych lub zgłaszanych wnioskami na podstawie problemu lub pytania, które jest zadawane, oraz dostępnych danych. Na przykład zadanie klasyfikacji przypisuje dane do kategorii, a zadanie klastrowania grupuje dane zgodnie z podobieństwem.
+
+Zadania uczenia maszynowego polegają na wzorcach danych, a nie w sposób jawny.
+
+W tym artykule opisano różne zadania uczenia maszynowego, które można wybrać w ML.NET i niektóre typowe przypadki użycia.
 
 Po ustaleniu, które zadanie działa w danym scenariuszu, należy wybrać najlepszy algorytm do uczenia modelu. Dostępne algorytmy są wymienione w sekcji dla każdego zadania.
 
-## <a name="binary-classification"></a>klasyfikacja binarna
+## <a name="binary-classification"></a>Klasyfikacja binarna
 
 [Nadzorowane zadanie uczenia maszynowego](glossary.md#supervised-machine-learning) , które jest używane do przewidywania, do których dwóch klas (kategorii) należy wystąpienie danych. Wejściem algorytmu klasyfikacji jest zestaw przykładowych etykiet, gdzie każda etykieta jest liczbą całkowitą równą 0 lub 1. Dane wyjściowe algorytmu klasyfikacji binarnej to klasyfikator, którego można użyć do przewidywania klasy nowych wystąpień bez etykiet. Przykłady scenariuszy klasyfikacji binarnej obejmują:
 
@@ -93,10 +95,10 @@ Ta Trainer wyprowadza następujące dane:
 
 | Nazwa wyjściowa | Typ | Opis|
 | -- | -- | -- |
-| `Score` | wektor <xref:System.Single> | Wyniki wszystkich klas. Wyższa wartość oznacza wyższe prawdopodobieństwo podzielenia się z klasą skojarzoną. Jeśli element i-ty ma największą wartość, przewidywany indeks etykiet będzie. Zwróć uwagę, że jest indeksem opartym na wartości zero. |
+| `Score` | Wektor <xref:System.Single> | Wyniki wszystkich klas. Wyższa wartość oznacza wyższe prawdopodobieństwo podzielenia się z klasą skojarzoną. Jeśli element i-ty ma największą wartość, przewidywany indeks etykiet będzie. Zwróć uwagę, że jest indeksem opartym na wartości zero. |
 | `PredictedLabel` | Typ [klucza](xref:Microsoft.ML.Data.KeyDataViewType) | Indeks przewidywanej etykiety. Jeśli wartość jest równa i, rzeczywista etykieta będzie kategorią i, w typie etykiety wejściowej z wartościami klucza. |
 
-## <a name="regression"></a>ubytk
+## <a name="regression"></a>Regresji
 
 [Nadzorowane zadanie uczenia maszynowego](glossary.md#supervised-machine-learning) , które jest używane do przewidywania wartości etykiety z zestawu pokrewnych funkcji. Etykieta może być dowolną wartością rzeczywistą i nie pochodzi z skończonego zestawu wartości jako zadań klasyfikacji. Algorytmy regresji modelują zależność etykiety na jej powiązanych funkcjach, aby określić, w jaki sposób etykieta zostanie zmieniona, ponieważ wartości funkcji są różne. Wejście algorytmu regresji jest zestawem przykładów z etykietami znanych wartości. Wynikiem algorytmu regresji jest funkcja, której można użyć do przewidywania wartości etykiety dla każdego nowego zestawu funkcji wejściowych. Przykłady scenariuszy regresji obejmują:
 
@@ -128,7 +130,7 @@ Instruktorzy dla tego zadania wyprowadzają następujące dane wyjściowe:
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Nieprzetworzony wynik, który został przewidywalny przez model |
 
-## <a name="clustering"></a>Usługę
+## <a name="clustering"></a>Obsługa klastrów
 
 Nienadzorowane zadanie [uczenia maszynowego](glossary.md#unsupervised-machine-learning) , które jest używane do grupowania wystąpień danych w klastry zawierające podobne właściwości. Klastrowanie może również służyć do identyfikowania relacji w zestawie danych, które mogą nie być logicznie wyprowadzane przez przeglądanie lub prostą obserwację. Dane wejściowe i wyjściowe algorytmu klastrowania zależą od wybranej metodologii. Możesz skorzystać z metody dystrybucji, centroida, łączności lub opartej na gęstość. ML.NET obecnie obsługuje podejście oparte na centroida przy użyciu K-oznacza klastrowanie. Przykłady scenariuszy klastrowania obejmują:
 
@@ -183,8 +185,9 @@ Ta Trainer wyprowadza następujące dane:
 | Nazwa wyjściowa | Typ | Opis|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Nieujemny wynik niezwiązany, który został obliczony przez model wykrywania anomalii |
+| `PredictedLabel` | <xref:System.Boolean> | Wartość true/false określająca, czy dane wejściowe są anomalią (PredictedLabel = true) czy nie (PredictedLabel = false) |
 
-## <a name="ranking"></a>Określania
+## <a name="ranking"></a>Klasyfikacja
 
 Zadanie klasyfikacji konstruuje rangę z zestawu przykładowych etykiet. Ten przykładowy zestaw składa się z grup wystąpień, które mogą być oceniane przy użyciu danego kryterium. Etykiety klasyfikacji są {0, 1, 2, 3, 4} dla każdego wystąpienia.  Ranga jest przeszkolony, aby zaklasyfikować nowe grupy wystąpień z nieznanymi wynikami dla każdego wystąpienia. ML.NET oceniające ranking są [uczeniem maszynowym](https://en.wikipedia.org/wiki/Learning_to_rank) opartym na klasyfikacji.
 
@@ -207,7 +210,7 @@ Ta Trainer wyprowadza następujące dane:
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Niezwiązany wynik, który został obliczony przez model w celu określenia przewidywania |
 
-## <a name="recommendation"></a>Zaleca
+## <a name="recommendation"></a>Zalecenie
 
 Zadanie rekomendacji umożliwia tworzenie listy zalecanych produktów lub usług. ML.NET używa [klasy Matrix factorization (MF)](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29), [współpracującego algorytmu filtrowania](https://en.wikipedia.org/wiki/Collaborative_filtering) dla zaleceń w przypadku historycznych danych oceny produktu w katalogu. Na przykład masz historyczne dane klasyfikacji filmów dla użytkowników i chcesz, aby zalecać inne filmy, które mogą być obserwowane dalej.
 

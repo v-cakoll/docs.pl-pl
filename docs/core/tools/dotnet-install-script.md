@@ -2,22 +2,22 @@
 title: dotnet-install scripts
 description: Dowiedz się więcej na temat skryptów programu dotnet-install, aby zainstalować narzędzia interfejs wiersza polecenia platformy .NET Core i udostępnione środowisko uruchomieniowe.
 ms.date: 01/16/2019
-ms.openlocfilehash: 867be93b5a4c66258df438ce718dabbd4ef2891c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f72e12fc415824a9c69eba6f52e3c01717cf654c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849579"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740531"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet — informacje o skryptach instalacji
 
 ## <a name="name"></a>Nazwa
 
-`dotnet-install.ps1` | `dotnet-install.sh`-Skrypt służący do instalowania narzędzi interfejs wiersza polecenia platformy .NET Core i udostępnionego środowiska uruchomieniowego.
+`dotnet-install.ps1` | `dotnet-install.sh` — skrypt służący do instalowania narzędzi interfejs wiersza polecenia platformy .NET Core i udostępnionego środowiska uruchomieniowego.
 
 ## <a name="synopsis"></a>Streszczenie
 
-W systemie Windows:
+System Windows:
 
 `dotnet-install.ps1 [-Channel] [-Version] [-InstallDir] [-Architecture] [-SharedRuntime] [-Runtime] [-DryRun] [-NoPath] [-Verbose] [-AzureFeed] [-UncachedFeed] [-NoCdn] [-FeedCredential] [-ProxyAddress] [-ProxyUseDefaultCredentials] [-SkipNonVersionedFiles] [-Help]`
 
@@ -27,22 +27,22 @@ macOS/Linux:
 
 ## <a name="description"></a>Opis
 
-`dotnet-install` Skrypty są używane do przeprowadzania instalacji nieadministratora zestaw .NET Core SDK, która obejmuje narzędzia interfejs wiersza polecenia platformy .NET Core i udostępnione środowisko uruchomieniowe.
+Skrypty `dotnet-install` są używane do przeprowadzania instalacji nieadministratora zestaw .NET Core SDK, która obejmuje narzędzia interfejs wiersza polecenia platformy .NET Core i udostępnione środowisko uruchomieniowe.
 
 Zalecamy korzystanie z stabilnej wersji hostowanej w [głównej witrynie sieci Web platformy .NET Core](https://dot.net). Bezpośrednie ścieżki do skryptów są następujące:
 
-- <https://dot.net/v1/dotnet-install.sh>(bash, UNIX)
-- <https://dot.net/v1/dotnet-install.ps1>(Program PowerShell, system Windows)
+- <https://dot.net/v1/dotnet-install.sh> (bash, UNIX)
+- <https://dot.net/v1/dotnet-install.ps1> (program PowerShell, system Windows)
 
 Główna użyteczność tych skryptów jest w scenariuszach automatyzacji i instalacjach nienależących do administratora. Istnieją dwa skrypty: jeden to skrypt programu PowerShell, który działa w systemie Windows, a drugi to skrypt bash, który działa w systemie Linux/macOS. Oba skrypty mają takie samo zachowanie. Skrypt bash odczytuje również przełączniki programu PowerShell, dzięki czemu można użyć przełączników programu PowerShell z skryptem w systemach Linux/macOS.
 
-Skrypty instalacyjne pobierają plik ZIP/plik tar z kompilacji interfejsu wiersza polecenia, a następnie instalują go w lokalizacji domyślnej lub w lokalizacji określonej przez `-InstallDir|--install-dir`. Domyślnie skrypty instalacyjne pobierają zestaw SDK i instalują go. Jeśli chcesz uzyskać tylko udostępnione środowisko uruchomieniowe, określ `--runtime` argument.
+Skrypty instalacyjne pobierają plik ZIP/plik tar z kompilacji interfejsu wiersza polecenia, a następnie instalują go w lokalizacji domyślnej lub w lokalizacji określonej przez `-InstallDir|--install-dir`. Domyślnie skrypty instalacyjne pobierają zestaw SDK i instalują go. Jeśli chcesz uzyskać tylko udostępnione środowisko uruchomieniowe, określ argument `--runtime`.
 
-Domyślnie skrypt dodaje lokalizację instalacji do $PATH bieżącej sesji. Zastąp to zachowanie domyślne, określając `--no-path` argument.
+Domyślnie skrypt dodaje lokalizację instalacji do $PATH bieżącej sesji. Zastąp to zachowanie domyślne, określając argument `--no-path`.
 
 Przed uruchomieniem skryptu Zainstaluj wymagane [zależności](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md).
 
-Można zainstalować określoną wersję przy użyciu `--version` argumentu. Wersja musi być określona jako wersja z trzema częściami (na przykład 1.0.0-13232). Jeśli nie zostanie podany, zostanie użyta `latest` wersja.
+Określoną wersję można zainstalować przy użyciu argumentu `--version`. Wersja musi być określona jako wersja z trzema częściami (na przykład 1.0.0-13232). Jeśli nie zostanie podany, zostanie użyta wersja `latest`.
 
 ## <a name="options"></a>Opcje
 
@@ -50,10 +50,10 @@ Można zainstalować określoną wersję przy użyciu `--version` argumentu. Wer
 
   Określa kanał źródłowy instalacji. Możliwe wartości to:
 
-  - `Current`-Najnowsza wersja.
-  - `LTS`-Długoterminowy kanał pomocy technicznej (większość aktualnie obsługiwanych wersji).
+  - `Current` — Najnowsza wersja.
+  - `LTS`-długoterminowy kanał pomocy technicznej (większość aktualnie obsługiwanych wersji).
   - Dwuczęściowa wersja w formacie X. Y reprezentującym określoną wersję (na przykład `2.0` lub `1.0`).
-  - Nazwa rozgałęzienia. Na przykład `release/2.0.0` `release/2.0.0-preview2`,, lub `master` (dla nocnych wydań).
+  - Nazwa rozgałęzienia. Na przykład `release/2.0.0`, `release/2.0.0-preview2`lub `master` (w przypadku wersji nocnych).
 
   Wartość domyślna to `LTS`. Aby uzyskać więcej informacji na temat kanałów pomocy technicznej platformy .NET, zobacz stronę [zasady pomocy technicznej platformy .NET](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) .
 
@@ -61,11 +61,11 @@ Można zainstalować określoną wersję przy użyciu `--version` argumentu. Wer
 
   Reprezentuje konkretną wersję kompilacji. Możliwe wartości to:
 
-  - `latest`-Najnowsza kompilacja w kanale (używana z `-Channel` opcją).
-  - `coherent`-Najnowsza spójna kompilacja na kanale; używa najnowszej stabilnej kombinacji pakietów (używanej z opcjami nazw `-Channel` gałęzi).
-  - Wersja z trzech części w formacie X. Y. Z, reprezentująca konkretną wersję kompilacji; `-Channel` zastępuje opcję. Na przykład: `2.0.0-preview2-006120`.
+  - `latest` — Najnowsza kompilacja w kanale (używana z opcją `-Channel`).
+  - `coherent`-Najnowsza spójna kompilacja na kanale; używa najnowszej stabilnej kombinacji pakietów (używanej z nazwą gałęzi `-Channel` opcjami).
+  - Wersja z trzech części w formacie X. Y. Z, reprezentująca konkretną wersję kompilacji; zastępuje opcję `-Channel`. Na przykład: `2.0.0-preview2-006120`.
 
-  Jeśli nie zostanie określony `-Version` , `latest`wartością domyślną jest.
+  Jeśli nie zostanie określony, `-Version` domyślnie `latest`.
 
 - **`-InstallDir <DIRECTORY>`**
 
@@ -73,21 +73,21 @@ Można zainstalować określoną wersję przy użyciu `--version` argumentu. Wer
 
 - **`-Architecture <ARCHITECTURE>`**
 
-  Architektura plików binarnych platformy .NET Core do zainstalowania. Możliwe wartości to `<auto>`, `amd64`, `x64`, `x86` ,i`arm`. `arm64` Wartość domyślna to `<auto>`, która reprezentuje aktualnie uruchomioną architekturę systemu operacyjnego.
+  Architektura plików binarnych platformy .NET Core do zainstalowania. Możliwe wartości to `<auto>`, `amd64`, `x64`, `x86`, `arm64`i `arm`. Wartość domyślna to `<auto>`, która reprezentuje aktualnie uruchomioną architekturę systemu operacyjnego.
 
 - **`-SharedRuntime`**
 
   > [!NOTE]
-  > Ten parametr jest przestarzały i może zostać usunięty w przyszłej wersji skryptu. Zalecaną alternatywą jest `Runtime` opcja.
+  > Ten parametr jest przestarzały i może zostać usunięty w przyszłej wersji skryptu. Zalecaną alternatywą jest opcja `Runtime`.
 
-  Instaluje tylko udostępnione bity środowiska uruchomieniowego, a nie cały zestaw SDK. Jest to równoważne określeniu `-Runtime dotnet`.
+  Instaluje tylko udostępnione bity środowiska uruchomieniowego, a nie cały zestaw SDK. Jest to równoznaczne z określeniem `-Runtime dotnet`.
 
 - **`-Runtime <RUNTIME>`**
 
   Instaluje tylko udostępnione środowisko uruchomieniowe, a nie cały zestaw SDK. Możliwe wartości to:
 
-  - `dotnet``Microsoft.NETCore.App` — udostępnione środowisko uruchomieniowe.
-  - `aspnetcore``Microsoft.AspNetCore.App` — udostępnione środowisko uruchomieniowe.
+  - `dotnet` — `Microsoft.NETCore.App` udostępnionego środowiska uruchomieniowego.
+  - `aspnetcore` — `Microsoft.AspNetCore.App` udostępnionego środowiska uruchomieniowego.
 
 - **`-DryRun`**
 
@@ -137,7 +137,7 @@ Można zainstalować określoną wersję przy użyciu `--version` argumentu. Wer
 
 - Zainstaluj najnowszą wersję długoterminową (LTS) w lokalizacji domyślnej:
 
-  W systemie Windows:
+  System Windows:
 
   ```powershell
   ./dotnet-install.ps1 -Channel LTS
@@ -151,7 +151,7 @@ Można zainstalować określoną wersję przy użyciu `--version` argumentu. Wer
 
 - Zainstaluj najnowszą wersję z kanału 2,0 do określonej lokalizacji:
 
-  W systemie Windows:
+  System Windows:
 
   ```powershell
   ./dotnet-install.ps1 -Channel 2.0 -InstallDir C:\cli
@@ -165,7 +165,7 @@ Można zainstalować określoną wersję przy użyciu `--version` argumentu. Wer
 
 - Zainstaluj wersję 1.1.0 udostępnionego środowiska uruchomieniowego:
 
-  W systemie Windows:
+  System Windows:
 
   ```powershell
   ./dotnet-install.ps1 -Runtime dotnet -Version 1.1.0
@@ -186,7 +186,7 @@ Można zainstalować określoną wersję przy użyciu `--version` argumentu. Wer
 
 - Uzyskaj skrypt i zainstaluj interfejs wiersza polecenia platformy .NET Core przykłady jednoliniowe:
 
-  W systemie Windows:
+  System Windows:
 
   ```powershell
   @powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"
@@ -195,7 +195,7 @@ Można zainstalować określoną wersję przy użyciu `--version` argumentu. Wer
   macOS/Linux:
 
   ```bash
-  curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
+  curl -ssl https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
 ## <a name="see-also"></a>Zobacz także

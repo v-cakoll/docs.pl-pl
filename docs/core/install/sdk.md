@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 004ef2a768f4a5415942d405e4a8292928c89f94
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340656"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740565"
 ---
 # <a name="install-the-net-core-sdk"></a>Zainstaluj zestaw .NET Core SDK
 
@@ -96,7 +96,7 @@ Program Visual Studio może zainstalować najnowsze zestaw .NET Core SDK i środ
 
 ### <a name="select-a-workload"></a>Wybierz obciążenie
 
-Podczas instalowania lub modyfikowania programu Visual Studio wybierz jedno z następujących obciążeń, w zależności od rodzaju kompilowanej aplikacji:
+Podczas instalowania lub modyfikowania programu Visual Studio wybierz co najmniej jedno z następujących obciążeń, w zależności od rodzaju kompilowanej aplikacji:
 
 - Obciążenie **Międzyplatformowe dla platformy .NET Core** w sekcji **inne zestawy narzędzi** .
 - **ASP.NET i programowanie w sieci Web** w sekcji **chmury & sieci Web** .
@@ -133,7 +133,7 @@ Mimo że Visual Studio Code nie jest dołączony do zautomatyzowanego Instalator
 
 [Skrypty programu dotnet-Install](../tools/dotnet-install-script.md) są używane na potrzeby automatyzacji i instalacji nienależących do administratora zestawu SDK. Skrypt można pobrać ze [strony odniesienia do skryptu dotnet-Install](../tools/dotnet-install-script.md).
 
-Skrypt domyślnie instaluje najnowszą [LTS](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) wersję, która jest platformą .net Core 2,1. Aby zainstalować bieżącą wersję programu .NET Core, uruchom skrypt z następującym przełącznikiem.
+Skrypt domyślnie instaluje najnowszą [LTS](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) wersję, która jest platformą .net Core 3,1. Aby zainstalować bieżącą wersję programu .NET Core, uruchom skrypt z następującym przełącznikiem.
 
 ```powershell
 dotnet-install.ps1 -Channel Current
@@ -147,7 +147,7 @@ dotnet-install.ps1 -Channel Current
 
 [Skrypty programu dotnet-Install](../tools/dotnet-install-script.md) są używane na potrzeby automatyzacji i instalacji nienależących do administratora zestawu SDK. Skrypt można pobrać ze [strony odniesienia do skryptu dotnet-Install](../tools/dotnet-install-script.md).
 
-Skrypt domyślnie instaluje najnowszą [LTS](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) wersję, która jest platformą .net Core 2,1. Aby zainstalować bieżącą wersję programu .NET Core, uruchom skrypt z następującym przełącznikiem.
+Skrypt domyślnie instaluje najnowszą [LTS](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) wersję, która jest platformą .net Core 3,1. Aby zainstalować bieżącą wersję programu .NET Core, uruchom skrypt z następującym przełącznikiem.
 
 ```bash
 ./dotnet-install.sh -c Current

@@ -3,12 +3,12 @@ title: Użyj modelu składni .NET Compiler Platform SDK
 description: To omówienie zawiera opis typów używanych do zrozumienia i manipulowania węzłami składni.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 2cfd3c8bc8f47421c7992f7fea28c7b156450147
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fc1b1f5ae5ec985425c8d6aec49ef7f830ea9162
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346927"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740477"
 ---
 # <a name="work-with-syntax"></a>Korzystanie ze składni
 
@@ -65,11 +65,11 @@ W przeciwieństwie do węzłów składni i tokenów składnia kwizy nie ma eleme
 
 Każdy węzeł, token lub kwizy wie swoją pozycję w tekście źródłowym oraz liczbę znaków, które zawiera. Pozycja tekstowa jest reprezentowana jako 32-bitowa liczba całkowita, która jest indeksem `char` liczonym od zera. Obiekt <xref:Microsoft.CodeAnalysis.Text.TextSpan> jest pozycją początkową i liczbą znaków, reprezentowanych jako liczby całkowite. Jeśli <xref:Microsoft.CodeAnalysis.Text.TextSpan> ma zerową długość, odnosi się do lokalizacji między dwoma znakami.
 
-Każdy węzeł ma dwie <xref:Microsoft.CodeAnalysis.Text.TextSpan> właściwości: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> i <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>.
+Każdy węzeł ma dwie <xref:Microsoft.CodeAnalysis.Text.TextSpan> właściwości: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> i <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A>.
 
-Właściwość <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> jest zakresem tekstu od początku pierwszego tokenu w poddrzewie węzła do końca ostatniego tokenu. Ten zakres nie obejmuje żadnych kwizy wiodących ani końcowych.
+Właściwość <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> jest zakresem tekstu od początku pierwszego tokenu w poddrzewie węzła do końca ostatniego tokenu. Ten zakres nie obejmuje żadnych kwizy wiodących ani końcowych.
 
-Właściwość <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> jest zakresem tekstu, który obejmuje normalny zakres węzła oraz zakres wszystkich wiodących lub końcowych kwizy.
+Właściwość <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> jest zakresem tekstu, który obejmuje normalny zakres węzła oraz zakres wszystkich wiodących lub końcowych kwizy.
 
 Na przykład:
 
@@ -85,11 +85,11 @@ Węzeł instrukcji wewnątrz bloku ma zakres wskazany przez pojedyncze pionowe s
 
 ## <a name="kinds"></a>Rodzaje
 
-Każdy węzeł, token lub kwizy ma właściwość <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> typu <xref:System.Int32?displayProperty=nameWithType>, która identyfikuje dokładnie przedstawiony element składni. Ta wartość może być rzutowana na Wyliczenie specyficzne dla języka. Każdy język C# lub Visual Basic ma jeden `SyntaxKind` Wyliczenie (odpowiednio<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> i <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>), które wyświetla listę wszystkich możliwych węzłów, tokenów i elementów kwizy w gramatyce. Tę konwersję można wykonać automatycznie, uzyskując dostęp do metod rozszerzenia <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> lub <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
+Każdy węzeł, token lub kwizy ma właściwość <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> typu <xref:System.Int32?displayProperty=nameWithType>, która identyfikuje dokładnie przedstawiony element składni. Ta wartość może być rzutowana na Wyliczenie specyficzne dla języka. Każdy język C# lub Visual Basic ma jeden `SyntaxKind` Wyliczenie (odpowiednio<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> i <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>), które wyświetla listę wszystkich możliwych węzłów, tokenów i elementów kwizy w gramatyce. Tę konwersję można wykonać automatycznie, uzyskując dostęp do metod rozszerzenia <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A?displayProperty=nameWithType> lub <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind%2A?displayProperty=nameWithType>.
 
 Właściwość <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> umożliwia łatwe Uściślanie typów węzłów składni, które współużytkują tę samą klasę węzła. W przypadku tokenów i kwizy ta właściwość jest jedynym sposobem odróżnienia jednego typu elementu od innego.
 
-Na przykład pojedyncza Klasa <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> ma <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken>i <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> jako elementy podrzędne. Właściwość <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> odróżnia, czy jest to <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression>lub <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> rodzaj węzła składni.
+Na przykład pojedyncza Klasa <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> ma <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken>i <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> jako elementy podrzędne. Właściwość <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A> odróżnia, czy jest to <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression>lub <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> rodzaj węzła składni.
 
 ## <a name="errors"></a>błędy
 

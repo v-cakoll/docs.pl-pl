@@ -5,19 +5,19 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: ab6ff2ba6e0f3f1ea9e34de80b67276a990bc83b
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 6143cf835cc44a6c6cc50372b2ac1a4d24d65311
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151848"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740386"
 ---
 # <a name="cleartype-registry-settings"></a>Ustawienia rejestru ClearType
 Ten temat zawiera omówienie ustawień rejestru Microsoft ClearType, które są używane przez aplikacje WPF.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Omówienie technologii  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]aplikacje, które renderują tekst do urządzenia wyświetlającego, używają funkcji ClearType w celu zapewnienia ulepszonego środowiska odczytywania. Technologia ClearType jest technologią oprogramowania opracowaną przez firmę Microsoft, która zwiększa czytelność tekstu w istniejących LCDs (w przypadku wyświetlaczy Liquid Crystal), takich jak ekrany laptopów, urządzenia Pocket PC i monitory płaskoekranowe. Technologia ClearType działa przez uzyskanie dostępu do poszczególnych elementów pasków kolorów w pionie w każdym piksel ekranu LCD. Aby uzyskać więcej informacji na temat technologii ClearType, zobacz [Omówienie technologii ClearType](cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, które renderują tekst do urządzenia wyświetlającego, użyj funkcji ClearType w celu zapewnienia ulepszonego środowiska odczytywania. Technologia ClearType jest technologią oprogramowania opracowaną przez firmę Microsoft, która zwiększa czytelność tekstu w istniejących LCDs (w przypadku wyświetlaczy Liquid Crystal), takich jak ekrany laptopów, urządzenia Pocket PC i monitory płaskoekranowe. Technologia ClearType działa przez uzyskanie dostępu do poszczególnych elementów pasków kolorów w pionie w każdym piksel ekranu LCD. Aby uzyskać więcej informacji na temat technologii ClearType, zobacz [Omówienie technologii ClearType](cleartype-overview.md).  
   
  Tekst renderowany przy użyciu technologii ClearType może wyglądać znacznie inaczej podczas wyświetlania na różnych urządzeniach wyświetlających. Na przykład niewielka liczba monitorów implementuje elementy pasków koloru w kolorze niebieskim, zielonym, czerwonym, a nie na bardziej typowym porządku czerwonym, zielonym, niebieskim (RGB).  
   
@@ -27,7 +27,7 @@ Ten temat zawiera omówienie ustawień rejestru Microsoft ClearType, które są 
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Ustawienia rejestru  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]określa cztery ustawienia rejestru do kontrolowania funkcji technologii ClearType:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] określa cztery ustawienia rejestru do kontrolowania funkcji technologii ClearType:  
   
 |Ustawienie|Opis|  
 |-------------|-----------------|  
@@ -38,10 +38,10 @@ Ten temat zawiera omówienie ustawień rejestru Microsoft ClearType, które są 
   
  Dostęp do tych ustawień można uzyskać za pomocą narzędzia konfiguracji zewnętrznej, które wie, jak odwoływać się do zidentyfikowanych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ustawień rejestru ClearType. Te ustawienia można również utworzyć lub zmodyfikować, uzyskując dostęp do wartości bezpośrednio przy użyciu Edytora rejestru systemu Windows.  
   
- Jeśli ustawienia rejestru [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearTypeniesąustawione(czylistandomyślny),aplikacjazażądainformacjioparametrachsystemuWindowswceluustawienia[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]wygładzania czcionek.  
+ Jeśli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ustawienia rejestru ClearType nie są ustawione (czyli stan domyślny), aplikacja [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wysyła zapytanie o informacje o parametrach systemu Windows w celu ustawienia wygładzania czcionek.  
   
 > [!NOTE]
-> Aby uzyskać informacje na temat wyliczania nazw urządzeń wyświetlających `SystemParametersInfo` , zobacz [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funkcję.  
+> Aby uzyskać informacje na temat wyliczania nazw urządzeń wyświetlających, zobacz `SystemParametersInfo`funkcji Win32.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>Poziom ClearType  
@@ -54,12 +54,12 @@ Ten temat zawiera omówienie ustawień rejestru Microsoft ClearType, które są 
   
  `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Dla każdej nazwy urządzenia wyświetlanego użytkownika `ClearTypeLevel` zdefiniowana jest wartość DWORD. Poniższy zrzut ekranu przedstawia ustawienia edytora rejestru dla poziomu technologii ClearType.  
+ Dla każdej nazwy urządzenia wyświetlanego użytkownika jest definiowana wartość `ClearTypeLevel` DWORD. Poniższy zrzut ekranu przedstawia ustawienia edytora rejestru dla poziomu technologii ClearType.  
   
  ![Ustawienia technologii ClearType w Edytorze rejestru.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]aplikacje renderują tekst w jednym z dwóch trybów z i bez technologii ClearType. Gdy tekst jest renderowany bez technologii ClearType, jest określany jako szare renderowanie skali.  
+> aplikacje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderują tekst w jednym z dwóch trybów z i bez technologii ClearType. Gdy tekst jest renderowany bez technologii ClearType, jest określany jako szare renderowanie skali.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Poziom gamma  
@@ -72,7 +72,7 @@ Ten temat zawiera omówienie ustawień rejestru Microsoft ClearType, które są 
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Dla każdej nazwy urządzenia wyświetlanego użytkownika `GammaLevel` zdefiniowana jest wartość DWORD. Poniższy zrzut ekranu przedstawia ustawienia edytora rejestru dla poziomu gamma.  
+ Dla każdej nazwy urządzenia wyświetlanego użytkownika jest definiowana wartość `GammaLevel` DWORD. Poniższy zrzut ekranu przedstawia ustawienia edytora rejestru dla poziomu gamma.  
   
  ![Ustawienia poziomu gamma ClearType w Edytorze rejestru](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
@@ -89,14 +89,14 @@ Ten temat zawiera omówienie ustawień rejestru Microsoft ClearType, które są 
  Struktura pikseli odpowiada wartości całkowitej, która mieści się w zakresie od 0 do 2. Poziom domyślny to 0, który reprezentuje strukturę pikseli prostych.  
   
 > [!NOTE]
-> Aby uzyskać informacje na temat wyliczania nazw urządzeń wyświetlających `EnumDisplayDevices` , zobacz [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funkcję.  
+> Aby uzyskać informacje na temat wyliczania nazw urządzeń wyświetlających, zobacz `EnumDisplayDevices`funkcji Win32.  
   
 ### <a name="registry-setting"></a>Ustawienie rejestru  
  Lokalizacja ustawienia rejestru dla struktury pikseli to ustawienie komputera lokalnego odpowiadające określonej nazwie urządzenia wyświetlanego:  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Dla każdej nazwy urządzenia wyświetlanego użytkownika `PixelStructure` zdefiniowana jest wartość DWORD. Poniższy zrzut ekranu przedstawia ustawienia edytora rejestru dla struktury pikseli.  
+ Dla każdej nazwy urządzenia wyświetlanego użytkownika jest definiowana wartość `PixelStructure` DWORD. Poniższy zrzut ekranu przedstawia ustawienia edytora rejestru dla struktury pikseli.  
   
  ![Ustawienia poziomu gamma ClearType w Edytorze rejestru](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
@@ -109,7 +109,7 @@ Ten temat zawiera omówienie ustawień rejestru Microsoft ClearType, które są 
   
  `HKEY_CURRENT_USER\Software\Microsoft\Avalon.Graphics\<displayName>`  
   
- Dla każdej nazwy urządzenia wyświetlanego użytkownika `TextContrastLevel` zdefiniowana jest wartość DWORD. Poniższy zrzut ekranu przedstawia ustawienia edytora rejestru dla poziomu kontrastu tekstu.  
+ Dla każdej nazwy urządzenia wyświetlanego użytkownika jest definiowana wartość `TextContrastLevel` DWORD. Poniższy zrzut ekranu przedstawia ustawienia edytora rejestru dla poziomu kontrastu tekstu.  
   
  ![Ustawienia technologii ClearType w Edytorze rejestru.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   

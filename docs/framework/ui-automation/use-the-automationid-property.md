@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 43a67a8dd73931172a6fa729c054ad494b29134e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: a07a9c9bf6b0bf1e2f8ce56653a90a3aad3c4b2f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800298"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741376"
 ---
 # <a name="use-the-automationid-property"></a>Użyj właściwości AutomationID
 > [!NOTE]
@@ -31,7 +31,7 @@ ms.locfileid: "74800298"
  Zidentyfikowano trzy scenariusze aplikacji klienckiej automatyzacji interfejsu użytkownika, które wymagają użycia <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>, aby uzyskać dokładne i spójne wyniki podczas wyszukiwania elementów.  
   
 > [!NOTE]
-> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> jest obsługiwany przez wszystkie elementy automatyzacji interfejsu użytkownika w widoku sterowania z wyjątkiem okien aplikacji najwyższego poziomu, elementów automatyzacji interfejsu użytkownika pochodzących z formantów [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], które nie mają identyfikatora lub X:UID — oraz elementów automatyzacji interfejsu użytkownika pochodzących od formantów [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], które nie mają identyfikatora kontrolki.  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> jest obsługiwany przez wszystkie elementy automatyzacji interfejsu użytkownika w widoku sterowania z wyjątkiem okien aplikacji najwyższego poziomu, elementów automatyzacji interfejsu użytkownika pochodzących z formantów [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], które nie mają identyfikatora lub X:UID — oraz elementów automatyzacji interfejsu użytkownika pochodzących od formantów Win32, które nie mają identyfikatora formantu.  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Użyj unikatowego i wykrywalnego AutomationID do zlokalizowania określonego elementu w drzewie automatyzacji interfejsu użytkownika  
   

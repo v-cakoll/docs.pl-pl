@@ -1,5 +1,5 @@
 ---
-title: Co nowego w .NET Framework
+title: Co nowego w programie .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 82a2c1780c6e0e1d94a206b9b959d8e1944fd0a9
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 4c5c7ffcab118978baf1b2f7602f39291452d1e6
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802322"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740414"
 ---
-# <a name="whats-new-in-the-net-framework"></a>Co nowego w .NET Framework
+# <a name="whats-new-in-the-net-framework"></a>Co nowego w programie .NET Framework
 
 Ten artykuł podsumowuje najważniejsze nowe funkcje i ulepszenia w następujących wersjach .NET Framework:
 
@@ -30,7 +30,7 @@ Ten artykuł podsumowuje najważniejsze nowe funkcje i ulepszenia w następując
 - [.NET Framework 4.5.1](#v451)
 - [.NET Framework 4.5](#v45)
 
-Ten artykuł nie zawiera wyczerpujących informacji odnośnie każdej nowej funkcji i może ulec zmianie. Aby uzyskać ogólne informacje na temat .NET Framework, zobacz [wprowadzenie](../get-started/index.md). W przypadku obsługiwanych platform zobacz [wymagania systemowe](../get-started/system-requirements.md). Aby uzyskać linki do pobrania i instrukcje instalacji, zobacz [Przewodnik instalacji](../install/guide-for-developers.md).
+Ten artykuł nie zawiera wyczerpujących informacji o każdej nowej funkcji i może ulec zmianie. Aby uzyskać ogólne informacje na temat .NET Framework, zobacz [wprowadzenie](../get-started/index.md). W przypadku obsługiwanych platform zobacz [wymagania systemowe](../get-started/system-requirements.md). Aby uzyskać linki do pobrania i instrukcje instalacji, zobacz [Przewodnik instalacji](../install/guide-for-developers.md).
 
 > [!NOTE]
 > Zespół .NET Framework również zwalnia funkcje poza pasmem z pakietem NuGet, aby rozwinąć obsługę platformy i wprowadzić nowe funkcje, takie jak Niezmienne kolekcje i typy wektorów z włączonym SIMD. Aby uzyskać więcej informacji, zobacz [dodatkowe biblioteki klas i interfejsy API](../additional-apis/index.md) oraz [.NET Framework i wersje poza pasmem](../get-started/the-net-framework-and-out-of-band-releases.md).
@@ -1755,7 +1755,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
 - **Pakiety .NET Framework Open Source**
 
-  Pakiety .NET Core, takie jak Niezmienne kolekcje, [interfejsy API SIMD](https://www.nuget.org/packages/Microsoft.Bcl.Simd)i interfejsy API sieci, takie jak te, które znajdują się w przestrzeni nazw <xref:System.Net.Http>, są teraz dostępne jako pakiety Open Source w serwisie [GitHub](https://github.com/). Aby uzyskać dostęp do kodu, zobacz [CoreFx w witrynie GitHub](https://github.com/dotnet/corefx). Aby uzyskać więcej informacji i dowiedzieć się, jak współtworzyć te pakiety, zobacz stronę główną platformy .NET [Core i Open Source](../get-started/net-core-and-open-source.md) [w witrynie GitHub](https://github.com/dotnet/home).
+  Pakiety .NET Core, takie jak Niezmienne kolekcje, [interfejsy API SIMD](https://www.nuget.org/packages/Microsoft.Bcl.Simd)i interfejsy API sieci, takie jak te, które znajdują się w przestrzeni nazw <xref:System.Net.Http>, są teraz dostępne jako pakiety Open Source w serwisie [GitHub](https://github.com/). Aby uzyskać dostęp do kodu, zobacz [.NET w witrynie GitHub](https://github.com/dotnet/runtime). Aby uzyskać więcej informacji i dowiedzieć się, jak współtworzyć te pakiety, zobacz stronę główną platformy .NET [Core i Open Source](../get-started/net-core-and-open-source.md) [w witrynie GitHub](https://github.com/dotnet/home).
 
 <a name="v452" />
 
@@ -1860,13 +1860,13 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
 Nowe funkcje i ulepszenia w klasach bazowych w .NET Framework 4.5.1 obejmują:
 
-- Powiązanie automatyczne przekierowanie dla zespołów. Począwszy od Visual Studio 2013, podczas kompilowania aplikacji przeznaczonej dla .NET Framework 4.5.1 można dodać przekierowania powiązań do pliku konfiguracyjnego aplikacji, jeśli aplikacja lub jej składniki odwołują się do wielu wersji tego samego zestawu. Możesz również włączyć tę funkcję dla projektów, dla których docelowe są starsze wersje .NET Framework. Aby uzyskać więcej informacji, zobacz [jak: Włączanie i wyłączanie automatycznego przekierowywania powiązań](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Automatyczne przekierowywanie powiązań dla zestawów. Począwszy od Visual Studio 2013, podczas kompilowania aplikacji przeznaczonej dla .NET Framework 4.5.1 można dodać przekierowania powiązań do pliku konfiguracyjnego aplikacji, jeśli aplikacja lub jej składniki odwołują się do wielu wersji tego samego zestawu. Tę funkcję można również włączyć dla projektów przeznaczonych dla starszych wersji .NET Framework. Aby uzyskać więcej informacji, zobacz [jak: Włączanie i wyłączanie automatycznego przekierowywania powiązań](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
-- Możliwość zbierania informacji diagnostycznych, aby pomóc deweloperom ulepszyć wydajność aplikacji serwera i chmury. Aby uzyskać więcej informacji, zobacz omówienie metod <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> i <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> w klasie <xref:System.Diagnostics.Tracing.EventSource>.
+- Możliwość zbierania informacji diagnostycznych, aby pomóc deweloperom w ulepszaniu wydajności serwerów i aplikacji w chmurze. Aby uzyskać więcej informacji, zobacz Metody <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> i <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> w klasie <xref:System.Diagnostics.Tracing.EventSource>.
 
-- Zdolność do jawnego kompaktowania sterty dużych obiektów (LOH) podczas wyrzucania elementów bezużytecznych. Aby uzyskać więcej informacji, zobacz Właściwość <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType>.
+- Możliwość jawnego kompaktowania sterty dużego obiektu (LOH) podczas wyrzucania elementów bezużytecznych. Aby uzyskać więcej informacji, zobacz Właściwość <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType>.
 
-- Dodatkowe ulepszenia wydajności, takie jak zawieszenie aplikacji ASP.NET, wielordzeniowe ulepszenia JIT i szybsze uruchamiani aplikacji po aktualizacji .NET Framework. Aby uzyskać szczegółowe informacje, zapoznaj się z wpisem w blogu [.NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/) i [zawieszania aplikacji ASP.NET](https://devblogs.microsoft.com/dotnet/asp-net-app-suspend-responsive-shared-net-web-hosting/) .
+- Dodatkowe ulepszenia wydajności, takie jak zawieszenie aplikacji ASP.NET, wielordzeniowe udoskonalenia JIT i szybsze uruchamianie aplikacji po aktualizacji .NET Framework. Aby uzyskać szczegółowe informacje, zapoznaj się z wpisem w blogu [.NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/) i [zawieszania aplikacji ASP.NET](https://devblogs.microsoft.com/dotnet/asp-net-app-suspend-responsive-shared-net-web-hosting/) .
 
 Ulepszenia Windows Forms obejmują:
 
@@ -1886,13 +1886,13 @@ Ulepszenia Windows Forms obejmują:
 
 Ulepszenia podczas debugowania aplikacji .NET Framework w Visual Studio 2013 obejmują:
 
-- Wartości zwracane w programie do usuwania błędów Visual Studio. Gdy debugujesz zarządzaną aplikację w Visual Studio 2013, w oknie samochody są wyświetlane typy zwracane i wartości dla metod. Ta informacja jest dostępna dla pulpitu, Windows Store i aplikacji Windows Phone. Aby uzyskać więcej informacji, zobacz [badanie wartości zwracanych wywołań metod](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120)).
+- Zwraca wartości w debugerze programu Visual Studio. Gdy debugujesz zarządzaną aplikację w Visual Studio 2013, w oknie samochody są wyświetlane typy zwracane i wartości dla metod. Te informacje są dostępne dla aplikacji klasycznych, sklepu Windows i Windows Phone. Aby uzyskać więcej informacji, zobacz [badanie wartości zwracanych wywołań metod](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120)).
 
-- Edytuj i kontynuuj dla 64-bitowych aplikacji. Visual Studio 2013 obsługuje funkcję Edytuj i Kontynuuj dla 64-bitowych aplikacji zarządzanych dla komputerów stacjonarnych, sklepu Windows i Windows Phone. Istniejące ograniczenia nadal obowiązują dla aplikacji 32-bitowych i 64-bitowych (zobacz ostatnią sekcję [obsługiwane zmiany koduC#()](/visualstudio/debugger/supported-code-changes-csharp) artykułu).
+- Edytuj i Kontynuuj dla aplikacji 64-bitowych. Visual Studio 2013 obsługuje funkcję Edytuj i Kontynuuj dla 64-bitowych aplikacji zarządzanych dla komputerów stacjonarnych, sklepu Windows i Windows Phone. Istniejące ograniczenia nadal obowiązują dla aplikacji 32-bitowych i 64-bitowych (zobacz ostatnią sekcję [obsługiwane zmiany koduC#()](/visualstudio/debugger/supported-code-changes-csharp) artykułu).
 
-- Debugowanie Async-aware. Aby ułatwić debugowanie asynchronicznych aplikacji w Visual Studio 2013, stos wywołań ukrywa kod infrastruktury dostarczony przez kompilatory do obsługi asynchronicznego programowania, a także łańcuchuje w logicznych klatkach nadrzędnych, dzięki czemu można wykonać więcej czynności po wykonaniu programu logicznego zrozumiał. Okno zadań zastępuje okno zadań równoległych i wyświetla zadania, które odnoszą się do określonego punktu przerwania i wyświetla również inne zadania, które są aktualnie aktywne lub zaplanowane w aplikacji. Informacje o tej funkcji można znaleźć w sekcji "debugowanie z obsługą asynchroniczną" [anonsu .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
+- Debugowanie z obsługą asynchroniczną. Aby ułatwić debugowanie asynchronicznych aplikacji w Visual Studio 2013, stos wywołań ukrywa kod infrastruktury dostarczony przez kompilatory do obsługi asynchronicznego programowania, a także łańcuchuje w logicznych klatkach nadrzędnych, dzięki czemu można wykonać więcej czynności po wykonaniu programu logicznego zrozumiał. Okno zadań zastępuje okno zadania równoległe i wyświetla zadania, które odnoszą się do określonego punktu przerwania, a także wyświetla wszystkie inne zadania, które są aktualnie aktywne lub zaplanowane w aplikacji. Informacje o tej funkcji można znaleźć w sekcji "debugowanie z obsługą asynchroniczną" [anonsu .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
-- Lepsza obsługa wyjątków dla składników środowiska wykonawczego systemu Windows. W Windows 8.1 wyjątki, które powstają w aplikacjach ze sklepu Windows, zachowują informacje o błędzie, który spowodował wyjątek, nawet między granicami języka. Informacje o tej funkcji można znaleźć w sekcji "Programowanie aplikacji ze sklepu Windows" w [ogłoszeniu .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
+- Lepsza obsługa wyjątków dla składników środowisko wykonawcze systemu Windows. W Windows 8.1 wyjątki, które powstają w aplikacjach ze sklepu Windows, zachowują informacje o błędzie, który spowodował wyjątek, nawet między granicami języka. Informacje o tej funkcji można znaleźć w sekcji "Programowanie aplikacji ze sklepu Windows" w [ogłoszeniu .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
 Począwszy od Visual Studio 2013, można użyć [narzędzia optymalizacji zarządzanego profilu (Mpgo. exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) w celu zoptymalizowania aplikacji do sklepu Windows 8. x, a także aplikacji klasycznych.
 
@@ -1904,35 +1904,35 @@ Nowe funkcje w programie ASP.NET 4.5.1 można znaleźć w temacie [ASP.NET and W
 
 ### <a name="base-classes"></a>Klas podstawowych
 
-- Możliwość ograniczenia ponownych uruchomień systemu przez wykrywanie i zamykanie aplikacji środowiska .NET Framework 4 podczas wdrażania. Zobacz [zmniejszanie liczby ponownych uruchomień systemu podczas instalacji .NET Framework 4,5](../deployment/reducing-system-restarts.md).
+- Możliwość zmniejszenia liczby ponownych uruchomień systemu przez wykrywanie i zamykanie aplikacji .NET Framework 4 podczas wdrażania. Zobacz [zmniejszanie liczby ponownych uruchomień systemu podczas instalacji .NET Framework 4,5](../deployment/reducing-system-restarts.md).
 
-- Wsparcie dla tablic, które są większe niż 2 gigabajty (GB) na platformach 64-bitowych. Funkcja ta może być włączona w pliku konfiguracyjnym aplikacji. Zobacz [\<gcAllowVeryLargeObjects >](../configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md), który zawiera również inne ograniczenia dotyczące rozmiaru obiektu i rozmiaru tablicy.
+- Obsługa tablic o rozmiarze większym niż 2 gigabajty (GB) na platformach 64-bitowych. Tę funkcję można włączyć w pliku konfiguracji aplikacji. Zobacz [\<gcAllowVeryLargeObjects >](../configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md), który zawiera również inne ograniczenia dotyczące rozmiaru obiektu i rozmiaru tablicy.
 
 - Lepsza wydajność dzięki wyrzucaniu elementów bezużytecznych w tle dla serwerów. W przypadku używania wyrzucania elementów bezużytecznych serwera w .NET Framework 4,5, wyrzucanie elementów bezużytecznych w tle jest automatycznie włączone. Zobacz sekcję odzyskiwanie pamięci w tle w temacie Podstawowe informacje dotyczące [wyrzucania elementów bezużytecznych](../../standard/garbage-collection/fundamentals.md) .
 
-- Kompilacja just-in-time (JIT) w tle, która jest opcjonalnie dostępna na wielordzeniowych procesorach, aby zwiększyć wydajność aplikacji. Zobacz <xref:System.Runtime.ProfileOptimization>.
+- Kompilacja just-in-Time (JIT) w tle, która jest opcjonalnie dostępna na wielordzeniowych procesorach, aby zwiększyć wydajność aplikacji. Zobacz <xref:System.Runtime.ProfileOptimization>.
 
 - Możliwość ograniczenia czasu, przez który aparat wyrażeń regularnych podejmie próbę rozpoznania wyrażenia regularnego przed przekroczeniem limitu czasu. Zobacz Właściwość <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=nameWithType>.
 
-- Możliwość definiowania domyślnej kultury domeny aplikacji. Zapoznaj się z klasą <xref:System.Globalization.CultureInfo>.
+- Możliwość zdefiniowania domyślnej kultury dla domeny aplikacji. Zapoznaj się z klasą <xref:System.Globalization.CultureInfo>.
 
-- Obsługa kodowania Unicode (UTF-16) w konsolach. Zapoznaj się z klasą <xref:System.Console>.
+- Obsługa kodowania Unicode (UTF-16) w konsoli. Zapoznaj się z klasą <xref:System.Console>.
 
-- Obsługa wersjonowania kolejności ciągów kultury i danych porównawczych. Zapoznaj się z klasą <xref:System.Globalization.SortVersion>.
+- Obsługa wersji uporządkowania ciągów i danych porównawczych. Zapoznaj się z klasą <xref:System.Globalization.SortVersion>.
 
 - Lepsza wydajność podczas pobierania zasobów. Zobacz [pakowanie i wdrażanie zasobów](../resources/packaging-and-deploying-resources-in-desktop-apps.md).
 
-- Ulepszenia kompresji ZIP mające na celu zmniejszenie rozmiaru skompresowanego pliku. Zobacz obszar nazw <xref:System.IO.Compression?displayProperty=nameWithType>.
+- Udoskonalenia kompresji ZIP w celu zmniejszenia rozmiaru skompresowanego pliku. Zapoznaj się z przestrzenią nazw <xref:System.IO.Compression?displayProperty=nameWithType>.
 
-- Możliwość dostosowywania kontekstu odbicia, aby zastąpić domyślne zachowanie odbicia poprzez klasę <xref:System.Reflection.Context.CustomReflectionContext>.
+- Możliwość dostosowania kontekstu odbicia w celu przesłania domyślnego zachowania odbicia za pomocą klasy <xref:System.Reflection.Context.CustomReflectionContext>.
 
 - Obsługa wersji 2008 międzynarodowych nazw domen w programie Applications (IDNA) standard, gdy Klasa <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> jest używana w systemie Windows 8.
 
-- Delegowanie porównania ciągów do systemu operacyjnego, który implementuje standard Unicode 6,0, gdy .NET Framework jest używany w systemie Windows 8. Podczas uruchamiania na innych platformach program .NET Framework uwzględnia swoje własne dane porównania ciągu, implementując standard Unicode 5.x. Zobacz omówienie klasy <xref:System.String> oraz sekcję Uwagi klasy <xref:System.Globalization.SortVersion>.
+- Delegowanie porównania ciągów do systemu operacyjnego, który implementuje standard Unicode 6,0, gdy .NET Framework jest używany w systemie Windows 8. W przypadku uruchamiania na innych platformach .NET Framework obejmuje własne dane porównania ciągów, które implementują standard Unicode 5. x. Zobacz klasę <xref:System.String> i sekcję Uwagi klasy <xref:System.Globalization.SortVersion>.
 
-- Możliwość obliczenia kodów skrótów ciągów dla poszczególnych domen aplikacji. Zobacz [\<UseRandomizedStringHashAlgorithm > elementu](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md).
+- Możliwość obliczania kodów skrótów dla ciągów na podstawie poszczególnych domen aplikacji. Zobacz [\<UseRandomizedStringHashAlgorithm > elementu](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md).
 
-- Wsparcie typu reflection podzielone między klasy <xref:System.Type> i <xref:System.Reflection.TypeInfo>. Zobacz [odbicie w .NET Framework dla aplikacji ze sklepu Windows](../reflection-and-codedom/reflection-for-windows-store-apps.md).
+- Obsługa odbicia typu jest dzielona między <xref:System.Type> i <xref:System.Reflection.TypeInfo> klas. Zobacz [odbicie w .NET Framework dla aplikacji ze sklepu Windows](../reflection-and-codedom/reflection-for-windows-store-apps.md).
 
 ### <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -1940,7 +1940,7 @@ W .NET Framework 4,5 Managed Extensibility Framework (MEF) udostępnia następuj
 
 - Obsługa typów ogólnych.
 
-- Model programowania oparty na konwencjach, który umożliwia tworzenie części opartych na konwencjach nazewnictwa, a nie na atrybutach.
+- Model programowania oparty na Konwencji, który umożliwia tworzenie części na podstawie konwencji nazewnictwa, a nie atrybutów.
 
 - Wiele zakresów.
 
@@ -1950,7 +1950,7 @@ Aby uzyskać więcej informacji, zobacz [Managed Extensibility Framework (MEF)](
 
 ### <a name="asynchronous-file-operations"></a>Asynchroniczne operacje na plikach
 
-W .NET Framework 4,5 nowe funkcje asynchroniczne zostały dodane do języków C# i Visual Basic. Te funkcje używają modelu opartego na zadaniach do wykonywania operacji asynchronicznych. Aby użyć tego nowego modelu, należy użyć metody asynchronicznej klas we/wy. Zobacz [asynchroniczne operacje we/wy pliku](../../standard/io/asynchronous-file-i-o.md).
+W .NET Framework 4,5 nowe funkcje asynchroniczne zostały dodane do języków C# i Visual Basic. Te funkcje dodają model oparty na zadaniach służący do wykonywania operacji asynchronicznych. Aby użyć tego nowego modelu, należy użyć metod asynchronicznych w klasach we/wy. Zobacz [asynchroniczne operacje we/wy pliku](../../standard/io/asynchronous-file-i-o.md).
 
 <a name="tools" />
 
@@ -1958,19 +1958,19 @@ W .NET Framework 4,5 nowe funkcje asynchroniczne zostały dodane do języków C#
 
 W .NET Framework 4,5, Generator plików zasobów (Resgen. exe) umożliwia utworzenie pliku. resw do użycia w aplikacjach do sklepu Windows 8. x z pliku Resources osadzonego w .NET Framework zestawie. Aby uzyskać więcej informacji, zobacz [Resgen. exe (Generator plików zasobów)](../tools/resgen-exe-resource-file-generator.md).
 
-Optymalizacja z przewodnikiem po zarządzaniu profilem (Mpgo.exe) pozwala na poprawę czas uruchamiania aplikacji, wykorzystanie pamięci (rozmiar zestawu roboczego) i przepustowości poprzez optymalizację zestawów obrazu macierzystego. Narzędzie wiersza polecenia generuje dane profilów dla zestawów natywnych obrazów aplikacji. Zobacz [Mpgo. exe (Narzędzie optymalizacji zarządzanego profilu)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Począwszy od Visual Studio 2013, można użyć programu Mpgo. exe do optymalizowania aplikacji ze sklepu Windows 8. x, a także aplikacji klasycznych.
+Optymalizacja z przewodnikiem zarządzanym profilem (Mpgo. exe) umożliwia skrócenie czasu uruchamiania aplikacji, wykorzystanie pamięci (rozmiar zestawu roboczego) i przepływność przez optymalizację zestawów obrazów natywnych. Narzędzie wiersza polecenia generuje dane profilowe dla zestawów aplikacji obrazu natywnego. Zobacz [Mpgo. exe (Narzędzie optymalizacji zarządzanego profilu)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Począwszy od Visual Studio 2013, można użyć programu Mpgo. exe do optymalizowania aplikacji ze sklepu Windows 8. x, a także aplikacji klasycznych.
 
 <a name="parallel" />
 
 ### <a name="parallel-computing"></a>Przetwarzanie równoległe
 
-.NET Framework 4,5 zawiera kilka nowych funkcji i ulepszeń obliczeń równoległych. Obejmują one ulepszoną wydajność, zwiększoną kontrolę, udoskonaloną obsługę programowania asynchronicznego, nową bibliotekę przepływu danych i lepszą obsługę równoległych analiz debugowania i wydajności. Zapoznaj się z wpisem nowości [w programie .net 4,5](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/) na blogu programowanie równoległe przy użyciu platformy .NET.
+.NET Framework 4,5 zawiera kilka nowych funkcji i ulepszeń obliczeń równoległych. Obejmują one ulepszoną wydajność, zwiększoną kontrolę, ulepszoną obsługę programowania asynchronicznego, nową bibliotekę przepływu danych oraz ulepszoną obsługę debugowania równoległego i wydajności. Zapoznaj się z wpisem nowości [w programie .net 4,5](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/) na blogu programowanie równoległe przy użyciu platformy .NET.
 
 <a name="web" />
 
 ### <a name="web"></a>sieć Web
 
-Program ASP.NET 4.5 i 4.5.1 dodaje powiązanie modelu dla formularzy sieci Web, wsparcie WebSocket, obsługę asynchroniczną, ulepszenia wydajności i wiele innych funkcji. Więcej informacji można znaleźć w następujących zasobach:
+ASP.NET 4,5 i 4.5.1 Dodawanie powiązania modelu dla formularzy sieci Web, obsługi protokołu WebSocket, obsługi asynchronicznych, ulepszeń wydajności i wielu innych funkcji. Więcej informacji można znaleźć w następujących zasobach:
 
 - [ASP.NET 4,5 i Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 
@@ -1978,21 +1978,21 @@ Program ASP.NET 4.5 i 4.5.1 dodaje powiązanie modelu dla formularzy sieci Web, 
 
 ### <a name="networking-a-namenetworking-"></a><a name="networking" /> sieci
 
-.NET Framework 4,5 udostępnia nowy interfejs programowania dla aplikacji HTTP. Aby uzyskać więcej informacji, zobacz omówienie nowych przestrzeni nazw <xref:System.Net.Http?displayProperty=nameWithType> i <xref:System.Net.Http.Headers?displayProperty=nameWithType>.
+.NET Framework 4,5 udostępnia nowy interfejs programowania dla aplikacji HTTP. Aby uzyskać więcej informacji, zobacz przestrzenie nazw New <xref:System.Net.Http?displayProperty=nameWithType> i <xref:System.Net.Http.Headers?displayProperty=nameWithType>.
 
-Obsługiwany jest również nowy interfejs programowania dla akceptowania i interakcji z połączeniem WebSocket przy użyciu istniejących <xref:System.Net.HttpListener> i powiązanych klas. Aby uzyskać więcej informacji, zobacz omówienie nowej przestrzeni nazw <xref:System.Net.WebSockets> i klasy <xref:System.Net.HttpListener>.
+Pomoc techniczna jest również dostępna dla nowego interfejsu programowania do akceptowania i korzystania z połączenia WebSocket przy użyciu istniejących <xref:System.Net.HttpListener> i powiązanych klas. Aby uzyskać więcej informacji, zobacz Przestrzeń nazw New <xref:System.Net.WebSockets> i klasy <xref:System.Net.HttpListener>.
 
 Ponadto .NET Framework 4,5 obejmuje następujące udoskonalenia sieci:
 
-- Obsługa URI zgodna ze specyfikacjami RFC. Aby uzyskać więcej informacji, zobacz opis klasy <xref:System.Uri> i pokrewnych.
+- Obsługa identyfikatorów URI zgodnych ze standardem RFC. Aby uzyskać więcej informacji, zobacz <xref:System.Uri> i powiązane klasy.
 
-- Wspieranie analizy Zinternacjonalizowanych nazw domen (IDN). Aby uzyskać więcej informacji, zobacz opis klasy <xref:System.Uri> i pokrewnych.
+- Obsługa analizy międzynarodowej nazwy domeny (IDN). Aby uzyskać więcej informacji, zobacz <xref:System.Uri> i powiązane klasy.
 
-- Obsługa Internacjonalizacji adresów e-mail (EAI). Aby uzyskać więcej informacji, zobacz Przestrzeń nazw <xref:System.Net.Mail>.
+- Obsługa funkcji wielojęzycznych dla adresów E-mail (EAI). Aby uzyskać więcej informacji, zobacz Przestrzeń nazw <xref:System.Net.Mail>.
 
 - Ulepszona obsługa protokołu IPv6. Aby uzyskać więcej informacji, zobacz Przestrzeń nazw <xref:System.Net.NetworkInformation>.
 
-- Obsługa podwójnych gniazd. Aby uzyskać więcej informacji, zobacz klasy <xref:System.Net.Sockets.Socket> i <xref:System.Net.Sockets.TcpListener>.
+- Obsługa gniazd Dual-Mode. Aby uzyskać więcej informacji, zobacz klasy <xref:System.Net.Sockets.Socket> i <xref:System.Net.Sockets.TcpListener>.
 
 <a name="client" />
 
@@ -2000,23 +2000,23 @@ Ponadto .NET Framework 4,5 obejmuje następujące udoskonalenia sieci:
 
 W .NET Framework 4,5 Windows Presentation Foundation (WPF) zawiera zmiany i usprawnienia w następujących obszarach:
 
-- Nowy formant <xref:System.Windows.Controls.Ribbon.Ribbon>, który umożliwia implementację interfejsu użytkownika ze wstęgą i obsługą paska narzędzi szybkiego dostępu, menu aplikacji i kart.
+- Nowy formant <xref:System.Windows.Controls.Ribbon.Ribbon>, który umożliwia implementację interfejsu użytkownika wstążki, który hostuje pasek narzędzi Szybki dostęp, menu aplikacji i karty.
 
-- Nowy interfejs <xref:System.ComponentModel.INotifyDataErrorInfo>, który obsługuje sprawdzanie synchroniczne i asynchroniczne sprawdzanie poprawności danych.
+- Nowy interfejs <xref:System.ComponentModel.INotifyDataErrorInfo> obsługujący synchroniczną i asynchroniczną weryfikację danych.
 
 - Nowe funkcje dla klas <xref:System.Windows.Controls.VirtualizingPanel> i <xref:System.Windows.Threading.Dispatcher>.
 
-- Zwiększona wydajność podczas wyświetlania dużych zestawów zgrupowanych danych oraz dzięki uzyskaniu dostępu do kolekcji w wątkach poza interfejsem użytkownika.
+- Zwiększona wydajność podczas wyświetlania dużych zestawów pogrupowanych danych i uzyskiwania dostępu do kolekcji w wątkach innych niż interfejs użytkownika.
 
-- Wiązanie danych z właściwościami statycznymi, wiązanie danych z niestandardowymi typami, które implementują interfejs <xref:System.Reflection.ICustomTypeProvider>, i pobieranie informacji o wiązaniach danych z wyrażenia wiązania.
+- Powiązanie danych z właściwościami statycznymi, powiązanie danych z typami niestandardowymi, które implementują interfejs <xref:System.Reflection.ICustomTypeProvider> i pobierają informacje o powiązaniu danych z wyrażenia powiązania.
 
-- Zmiana położenia danych podczas zmiany wartości (kształtowanie na bieżąco).
+- Zmiana położenia danych jako zmiany wartości (kształtowanie na żywo).
 
-- Możliwość sprawdzenia, czy kontekst danych dla kontenera elementu jest odłączony.
+- Możliwość sprawdzenia, czy kontekst danych kontenera elementów jest odłączony.
 
-- Możliwość ustawiania ilości czasu, który powinien upłynąć między zmianami właściwość i aktualizacjami źródła danych.
+- Możliwość ustawienia czasu, który powinien upłynąć między zmianami właściwości i aktualizacjami źródła danych.
 
-- Ulepszona obsługa implementowania wzorców zdarzeń słabych. Ponadto zdarzenia mogą teraz akceptować rozszerzenia znaczników.
+- Ulepszona obsługa implementowania słabych wzorców zdarzeń. Ponadto zdarzenia mogą teraz akceptować rozszerzenia znaczników.
 
 <a name="windows_communication_foundation" />
 
@@ -2024,39 +2024,39 @@ W .NET Framework 4,5 Windows Presentation Foundation (WPF) zawiera zmiany i uspr
 
 W .NET Framework 4,5 dodano następujące funkcje, które ułatwiają zapisywanie i konserwowanie aplikacji Windows Communication Foundation (WCF):
 
-- Uproszczenie wygenerowanych plików konfiguracyjnych.
+- Uproszczenie wygenerowanych plików konfiguracji.
 
-- Wsparcie dla programowania z wymogiem wcześniejszego zawarcia kontraktu.
+- Obsługa pierwszego rozwoju kontraktu.
 
-- Możliwość łatwiejszego skonfigurowania trybu zgodności z platformą ASP.NET.
+- Możliwość łatwiejszego konfigurowania trybu zgodności ASP.NET.
 
-- Zmiany w domyślnych wartości właściwości transportu, aby zmniejszyć prawdopodobieństwo, że trzeba będzie je ustawić.
+- Zmiany wartości właściwości domyślnych transportu w celu zmniejszenia prawdopodobieństwa, że będzie konieczne ich ustawienie.
 
-- Aktualizacja do klasy <xref:System.Xml.XmlDictionaryReaderQuotas>, aby zmniejszyć prawdopodobieństwo, że trzeba będzie ręcznie skonfigurować przydziały dla czytelników słownika XML.
+- Aktualizuje klasę <xref:System.Xml.XmlDictionaryReaderQuotas>, aby zmniejszyć prawdopodobieństwo, że konieczne będzie ręczne skonfigurowanie przydziałów dla czytników słownika XML.
 
-- Sprawdzanie poprawności plików konfiguracyjnych WCF przez program Visual Studio jest częścią procesu tworzenia, więc przed uruchomieniem aplikacji można wykrywać błędy konfiguracji.
+- Sprawdzanie poprawności plików konfiguracji WCF przez program Visual Studio w ramach procesu kompilacji, dzięki czemu można wykryć błędy konfiguracji przed uruchomieniem aplikacji.
 
-- Nowa obsługa asynchronicznego przesyłania strumieniowego.
+- Nowe asynchroniczne obsłudze przesyłania strumieniowego.
 
-- Nowe mapowanie protokołu HTTPS, aby ułatwić udostępnianie punktu końcowego przez protokół HTTPS w Internetowych usługach informacyjnych (IIS).
+- Nowe mapowanie protokołu HTTPS, aby ułatwić udostępnianie punktu końcowego za pośrednictwem protokołu HTTPS za pomocą Internet Information Services (IIS).
 
-- Możliwość generowania metadanych w pojedynczym dokumencie WSDL przez dołączenie fragmentu `?singleWSDL` do adresu URL usługi.
+- Możliwość generowania metadanych w jednym dokumencie WSDL przez dołączenie `?singleWSDL` do adresu URL usługi.
 
-- Obsługa protokółu WebSocket włącza komunikację dwukierunkową przez porty 80 i 443, o wydajności transportu podobnej do protokółu TCP.
+- Obsługa obiektów WebSockets w celu umożliwienia prawdziwej komunikacji dwukierunkowej za pośrednictwem portów 80 i 443 z charakterystykami wydajności podobnymi do transportu TCP.
 
 - Obsługa konfigurowania usług w kodzie.
 
 - Etykietki narzędzi edytora XML.
 
-- Wsparcie buforowania <xref:System.ServiceModel.ChannelFactory> .
+- Obsługa buforowania <xref:System.ServiceModel.ChannelFactory>.
 
-- Obsługa kompresji kodera binarnego.
+- Obsługa kompresji koderów binarnych.
 
-- Wsparcie dla transportu UDP, który umożliwia programistom pisanie usług korzystających z komunikatów „fire and forget”. Klient wysyła komunikat do usługi i nie oczekuje od niej odpowiedzi.
+- Obsługa transportu UDP, który umożliwia deweloperom pisanie usług korzystających z komunikatów "Fire i zapomnij". Klient wysyła komunikat do usługi i oczekuje braku odpowiedzi z usługi.
 
-- Możliwość obsługi wielu trybów uwierzytelniania w jednym punkcie końcowym WCF przy użyciu funkcji transportu HTTP i zabezpieczeń transportu.
+- Możliwość obsługi wielu trybów uwierzytelniania w jednym punkcie końcowym WCF podczas korzystania z transportu HTTP i zabezpieczeń transportu.
 
-- Obsługa usług WCF, które używają zinternacjonalizowanych nazw domen (IDN).
+- Obsługa usług WCF korzystających z międzynarodowych nazw domen (IDN).
 
 Aby uzyskać więcej informacji, zobacz [co nowego w Windows Communication Foundation](../wcf/whats-new.md).
 
@@ -2066,51 +2066,51 @@ Aby uzyskać więcej informacji, zobacz [co nowego w Windows Communication Found
 
 W .NET Framework 4,5 dodano kilka nowych funkcji do Windows Workflow Foundation (WF), w tym:
 
-- Przepływy pracy automatu Stanów, które zostały po raz pierwszy wprowadzone w ramach .NET Framework 4.0.1 ([aktualizacja .NET Framework 4 platformy 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)). Ta aktualizacja zawierała kilka nowych klas i działań, które umożliwiły deweloperom tworzenie przepływów pracy automatu stanów. Te klasy i działania zostały zaktualizowane dla .NET Framework 4,5, aby uwzględnić:
+- Przepływy pracy automatu Stanów, które zostały po raz pierwszy wprowadzone w ramach .NET Framework 4.0.1 ([aktualizacja .NET Framework 4 platformy 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)). Ta aktualizacja zawiera kilka nowych klas i działań, które umożliwiają deweloperom tworzenie przepływów pracy automatu Stanów. Te klasy i działania zostały zaktualizowane dla .NET Framework 4,5, aby uwzględnić:
 
-  - Możliwość ustawienia punktów przerwania na stanach.
+  - Możliwość ustawiania punktów przerwania w Stanach.
 
-  - Możliwość kopiowania i wklejania przejść w projektancie przepływów pracy.
+  - Możliwość kopiowania i wklejania przejść w Projektancie przepływu pracy.
 
-  - Wsparcie tworzenia udostępnionych przejść wyzwalaczy.
+  - Obsługa tworzenia przejść między udostępnionymi wyzwalaczami przez projektanta.
 
-  - Działania tworzenia przepływów pracy automatu stanów, w tym: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> i <xref:System.Activities.Statements.Transition>.
+  - Działania służące do tworzenia przepływów pracy automatu Stanów, w tym: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>i <xref:System.Activities.Statements.Transition>.
 
-- Ulepszone funkcje projektanta przepływów pracy, takie jak:
+- Ulepszone Projektant przepływu pracy funkcje, takie jak następujące:
 
   - Ulepszone możliwości wyszukiwania przepływu pracy w programie Visual Studio, w tym **szybkie znajdowanie** i **Znajdowanie plików**.
 
-  - Możliwość automatycznego tworzenia działania Sequence po dodaniu drugiego działania podrzędnego do działania kontenera oraz umieszczenia obu działań w działaniu Sequence.
+  - Możliwość automatycznego tworzenia działania sekwencji po dodaniu drugiego działania podrzędnego do działania kontenera oraz w celu uwzględnienia obu działań w działaniu sekwencji.
 
-  - Wsparcie panoramowania, które umożliwia zmianę widocznej części przepływu pracy bez używania pasków przewijania.
+  - Obsługa panoramowania, która umożliwia zmianę widocznej części przepływu pracy bez używania pasków przewijania.
 
   - Nowy widok **konspektu dokumentu** , który pokazuje składniki przepływu pracy w widoku konspektu w stylu drzewa i umożliwia wybranie składnika w widoku **konspektu dokumentu** .
 
   - Możliwość dodawania adnotacji do działań.
 
-  - Możliwość definiowania i zużywania delegowanych obiektów działań za pomocą projektanta przepływów pracy.
+  - Możliwość definiowania delegatów działań i korzystania z nich przy użyciu projektanta przepływu pracy.
 
-  - Automatyczne łączenie i wstawianie dla działań i przejść w automacie stanów i schematach blokowych przepływów pracy.
+  - Funkcja AutoConnect i funkcja autoinsert dla działań i przejść w przepływie pracy automatu stanów i schematu blokowego.
 
-- Magazyn informacji o stanie widoku dla przepływu pracy w pojedynczym elemencie w pliku XAML, więc można łatwo zlokalizować i edytować informacje o stanie widoku.
+- Przechowywanie informacji o stanie widoku dla przepływu pracy w pojedynczym elemencie w pliku XAML, dzięki czemu można łatwo lokalizować i edytować informacje o stanie widoku.
 
-- Działanie na kontenerze NoPersistScope zapobiegające utrwalaniu działań podrzędnych.
+- Działanie kontenera NoPersistScope zapobiegające utrwalaniu działań podrzędnych.
 
-- Obsługa wyrażeń języka C#:
+- Obsługa C# wyrażeń:
 
-  - Projekty przepływu pracy, które używają języka Visual Basic będą używać wyrażeń języka Visual Basic, a projekty przepływu pracy C# będą używać wyrażeń języka C#.
+  - Projekty przepływu pracy używające Visual Basic będą używać wyrażeń Visual Basic, C# a projekty przepływu pracy C# będą używać wyrażeń.
 
-  - Projekty przepływu pracy dla języka C# utworzone w programie Visual Studio 2010 i mające wyrażenia języka Visual Basic są zgodne z projektami przepływu pracy dla języka C#, które używają wyrażeń języka C#.
+  - C#projekty przepływu pracy utworzone w programie Visual Studio 2010 i zawierające wyrażenia Visual Basic są zgodne z C# projektami przepływu pracy, które C# używają wyrażeń.
 
-- Ulepszenia przechowywania wersji:
+- Udoskonalenia wersji:
 
-  - Nowa klasa <xref:System.Activities.WorkflowIdentity>, która zapewnia mapowanie między istniejącym wystąpieniem przepływu pracy i jej definicją przepływu pracy.
+  - Nowa Klasa <xref:System.Activities.WorkflowIdentity>, która zapewnia mapowanie między utrwalonym wystąpieniem przepływu pracy i jego definicją przepływu pracy.
 
-  - Równoczesne wykonywanie różnych wersji przepływu pracy na tym samym hoście, w tym <xref:System.ServiceModel.Activities.WorkflowServiceHost>.
+  - Wykonywanie równoczesne wielu wersji przepływu pracy na tym samym hoście, w tym <xref:System.ServiceModel.Activities.WorkflowServiceHost>.
 
-  - Tryb aktualizacji dynamicznej oferuje możliwość modyfikowania definicji utrwalonego wystąpienia przepływu pracy.
+  - W obszarze aktualizacja dynamiczna można modyfikować definicję utrwalonego wystąpienia przepływu pracy.
 
-- Tworzenie usług przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu, co zapewnia obsługę automatycznego generowania działań pasujących do istniejącej umowy serwisowej.
+- Opracowywanie usługi przepływu pracy w pierwszej kolejności, która zapewnia obsługę automatycznego generowania działań w celu dopasowania do istniejącego kontraktu usługi.
 
 Aby uzyskać więcej informacji, zobacz [co nowego w Windows Workflow Foundation](../windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).
 
@@ -2122,7 +2122,7 @@ Aplikacje ze sklepu Windows 8. x są przeznaczone do określonych współczynnik
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Przenośne biblioteki klas <a name="portable" />
 
-Przenośna biblioteka klas w programie Visual Studio 2012 (i nowszych wersjach) umożliwia pisanie i kompilowanie zestawów zarządzanych, które działają na wielu platformach .NET Framework. Korzystając z projektu biblioteki klas przenośnych, należy wybrać platformy (takie jak Windows Phone i .NET dla systemu Windows 8. x aplikacji do sklepu). Grupa dostępnych typów i członków projektu jest automatycznie ograniczana do typowych typów i członków na tych platformach. Aby uzyskać więcej informacji, zobacz [Przenośna biblioteka klas](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+Przenośna biblioteka klas w programie Visual Studio 2012 (i nowszych wersjach) umożliwia pisanie i kompilowanie zestawów zarządzanych, które działają na wielu platformach .NET Framework. Korzystając z projektu biblioteki klas przenośnych, należy wybrać platformy (takie jak Windows Phone i .NET dla systemu Windows 8. x aplikacji do sklepu). Dostępne typy i elementy członkowskie w projekcie są automatycznie ograniczone do wspólnych typów i elementów członkowskich na tych platformach. Aby uzyskać więcej informacji, zobacz [Przenośna biblioteka klas](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
 ## <a name="see-also"></a>Zobacz także
 

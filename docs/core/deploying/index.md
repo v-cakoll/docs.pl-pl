@@ -2,13 +2,12 @@
 title: Wdrażanie aplikacji .NET Core
 description: Dowiedz się więcej na temat sposobów wdrażania aplikacji .NET Core.
 ms.date: 12/03/2018
-ms.custom: seodec18
-ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089194"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740808"
 ---
 # <a name="net-core-application-deployment"></a>Wdrażanie aplikacji .NET Core
 
@@ -16,7 +15,7 @@ Można utworzyć trzy typy wdrożeń dla aplikacji platformy .NET Core:
 
 - Wdrożenie zależne od platformy. Jak nazywa się, wdrożenie zależne od platformy (FDD) zależy od obecności udostępnionej systemowej wersji platformy .NET Core w systemie docelowym. Ponieważ platforma .NET Core już istnieje, aplikacja jest również przenośna między instalacjami programu .NET Core. Aplikacja zawiera tylko własny kod i wszystkie zależności innych firm, które znajdują się poza bibliotekami programu .NET Core. FDDs zawierają pliki *dll* , które można uruchomić za pomocą [Narzędzia dotnet](../tools/dotnet.md) z wiersza polecenia. Na przykład `dotnet app.dll` uruchamia aplikację o nazwie `app`.
 
-- Wdrażanie samodzielne. W przeciwieństwie do FDD, wdrożenie samodzielne (SCD) nie polega na obecności składników udostępnionych w systemie docelowym. Wszystkie składniki, w tym biblioteki .NET Core i środowisko uruchomieniowe platformy .NET Core, są dołączone do aplikacji i są odizolowane od innych aplikacji platformy .NET Core. SCDs obejmują plik wykonywalny (na przykład *App. exe* na platformach systemu Windows dla aplikacji o nazwie `app`), która jest nazwą o zmienionej nazwie hosta .NET Core i plikiem *dll* (na przykład *App. dll*), która jest rzeczywista Aplikacja.
+- Wdrażanie samodzielne. W przeciwieństwie do FDD, wdrożenie samodzielne (SCD) nie polega na obecności składników udostępnionych w systemie docelowym. Wszystkie składniki, w tym biblioteki .NET Core i środowisko uruchomieniowe platformy .NET Core, są dołączone do aplikacji i są odizolowane od innych aplikacji platformy .NET Core. SCDs obejmują plik wykonywalny (na przykład *App. exe* na platformach systemu Windows dla aplikacji o nazwie `app`), która jest nazwą o zmienionej nazwie hosta .NET Core i plikiem *dll* (na przykład *App. dll*), która jest rzeczywistą aplikacją.
 
 - Pliki wykonywalne zależne od struktury. Tworzy plik wykonywalny, który działa na platformie docelowej. Podobnie jak w przypadku FDDs, pliki wykonywalne zależne od struktury (całego) są specyficzne dla platformy i nie są samodzielne. Te wdrożenia nadal polegają na obecności udostępnionej wersji systemu .NET Core do uruchomienia. W przeciwieństwie do SCD, aplikacja zawiera tylko kod i wszystkie zależności innych firm, które są poza bibliotekami programu .NET Core. FDEs tworzy plik wykonywalny, który działa na platformie docelowej.
 
@@ -64,7 +63,7 @@ Ma również różne wady:
 
 - Rozmiar pakietu wdrożeniowego jest stosunkowo duży, ponieważ trzeba uwzględnić platformę .NET Core oraz swoją aplikację i jej zależności.
 
-  Począwszy od platformy .NET Core 2,0, można zmniejszyć rozmiar wdrożenia w systemach Linux o około 28 MB przy użyciu [*trybu niezmiennej globalizacji*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)platformy .NET Core. Zwykle platforma .NET Core w systemie Linux opiera się na [bibliotekach ICU](http://icu-project.org) na potrzeby obsługi globalizacji. W trybie niezmiennym biblioteki nie są uwzględniane we wdrożeniu, a wszystkie kultury zachowują się jak [Niezmienna kultura](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
+  Począwszy od platformy .NET Core 2,0, można zmniejszyć rozmiar wdrożenia w systemach Linux o około 28 MB przy użyciu [*trybu niezmiennej globalizacji*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)platformy .NET Core. Zwykle platforma .NET Core w systemie Linux opiera się na [bibliotekach ICU](http://icu-project.org) na potrzeby obsługi globalizacji. W trybie niezmiennym biblioteki nie są uwzględniane we wdrożeniu, a wszystkie kultury zachowują się jak [Niezmienna kultura](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - Wdrożenie wielu samodzielnych aplikacji platformy .NET Core w systemie może zużywać znaczną ilość miejsca na dysku, ponieważ każda aplikacja duplikuje pliki .NET Core.
 

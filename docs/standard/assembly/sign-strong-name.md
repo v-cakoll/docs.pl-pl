@@ -11,17 +11,17 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: c9ddbcf8f7b6307ab2d89b819aee4809f753a0fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64f3a51b29a7116c736fea0e76465a4a73c640c2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138611"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738769"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Instrukcje: podpisywanie zestawu za pomocą silnej nazwy
 
 > [!NOTE]
-> Chociaż platforma .NET Core obsługuje zestawy o silnych nazwach, a wszystkie zestawy w bibliotece .NET Core są podpisane, większość zestawów innych firm nie potrzebuje silnych nazw. Aby uzyskać więcej informacji, zobacz [Logowanie silnej nazwy](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md) w serwisie GitHub.
+> Chociaż platforma .NET Core obsługuje zestawy o silnych nazwach, a wszystkie zestawy w bibliotece .NET Core są podpisane, większość zestawów innych firm nie potrzebuje silnych nazw. Aby uzyskać więcej informacji, zobacz [Logowanie silnej nazwy](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md) w serwisie GitHub.
 
 Istnieje kilka metod podpisywania zestawu za pomocą silnej nazwy:  
   

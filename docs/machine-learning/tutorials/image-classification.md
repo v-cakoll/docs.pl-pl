@@ -4,14 +4,12 @@ description: Dowiedz się, jak przenieść wiedzę z istniejącego modelu Tensor
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-author: natke
-ms.author: nakersha
-ms.openlocfilehash: 952ce5c52bcd09b8c4e4e40d5ddf85835a26478d
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 5fe47c42d0cf24ebfdc33a937e1afbd11a976680
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204989"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738951"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Samouczek: Generowanie modelu klasyfikacji obrazów ML.NET na podstawie wstępnie nauczonego modelu TensorFlow
 
@@ -63,12 +61,12 @@ Klasyfikacja obrazu to typowe zadanie Machine Learning, które pozwala nam na au
 
 ![obraz Pizza](./media/image-classification/220px-Pepperoni_pizza.jpg)
 ![Teddy](./media/image-classification/119px-Nalle_-_a_small_brown_teddy_bear.jpg)
-obrazu ![](./media/image-classification/193px-Broodrooster.jpg)
+obrazu ![
 
 >[!Note]
 > Powyższe obrazy należą do Wikimedia Commons Attribution i są przypisywane w następujący sposób:
 >
-> * Domena publiczna "220px-Pepperoni_pizza. jpg", https://commons.wikimedia.org/w/index.php?curid=79505,
+> * "220px-Pepperoni_pizza.jpg" Public Domain, https://commons.wikimedia.org/w/index.php?curid=79505,
 > * "119px-Nalle_-_a_small_brown_teddy_bear. jpg" przez [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) -własne grafy, CC przez-sa 2,0, https://commons.wikimedia.org/w/index.php?curid=48166.
 > * "193px-Broodrooster. jpg" według [M. Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) — działania własne, CC według-sa 3,0, https://commons.wikimedia.org/w/index.php?curid=27403
 
@@ -336,13 +334,13 @@ Potok modelu ML.NET jest łańcuchem szacowania. Należy pamiętać, że podczas
     Następujące metryki są oceniane pod kątem klasyfikacji obrazów:
 
     * `Log-loss` — zobacz [Dziennik strat](../resources/glossary.md#log-loss). Utrata dziennika powinna być jak najbliżej zera.
-    * `Per class Log-loss`., Dla każdej klasy Dziennik ma być zbliżony do zera, jak to możliwe.
+    * `Per class Log-loss`. Dla każdej klasy Dziennik ma być zbliżony do zera, jak to możliwe.
 
 1. Dodaj następujący kod, aby zwrócić przeszkolony model jako następny wiersz:
 
     [!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReturnModel)]
 
-## <a name="run-the-application"></a>Uruchom aplikację.
+## <a name="run-the-application"></a>Uruchom aplikację!
 
 1. Dodaj wywołanie do `GenerateModel` w metodzie `Main` po utworzeniu klasy MLContext:
 

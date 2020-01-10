@@ -1,47 +1,46 @@
 ---
-title: Zmniejszenie zależności pakietów przy użyciu pliku project.json
-description: Ogranicz zależności pakietów, podczas tworzenia bibliotek opartych na pliku project.json.
+title: Zmniejszanie zależności pakietu przy użyciu pliku Project. JSON
+description: Zmniejszenie zależności pakietu podczas tworzenia bibliotek opartych na pliku Project. JSON.
 author: cartermp
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 9d4f9d7f6e7a736b7d07062f3cd31d6f45176cb1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48ba3ef578388fd98fe7cb830df313512d359483
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61615344"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740829"
 ---
-# <a name="reducing-package-dependencies-with-projectjson"></a>Zmniejszenie zależności pakietów przy użyciu pliku project.json
+# <a name="reducing-package-dependencies-with-projectjson"></a>Zmniejszanie zależności pakietu przy użyciu pliku Project. JSON
 
-W tym artykule opisano, co musisz wiedzieć o zmniejszenie zależności pakietu, podczas tworzenia `project.json` bibliotek. Przy końcu tego artykułu dowiesz się, jak tworzyć biblioteki w taki sposób, że używa tylko zależności, których potrzebuje.
+W tym artykule opisano, co należy wiedzieć o zmniejszeniu zależności pakietu podczas tworzenia bibliotek `project.json`. Na końcu tego artykułu dowiesz się, jak utworzyć bibliotekę w taki sposób, aby korzystała tylko z potrzeb.
 
 ## <a name="why-its-important"></a>Dlaczego jest ważne
 
-.NET core jest produktem składają się z pakietów NuGet.  Pakiet niezbędne jest [. Meta Microsoft.aspnetcore.all NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library), ponieważ pakiet NuGet składa się z innymi pakietami.  Udostępnia zestaw pakietów, które mogą działać na wiele implementacji .NET, takich jak .NET Framework i .NET Core i Xamarin/Mono.
+.NET Core to produkt składający się z pakietów NuGet.  Istotnym pakietem jest [. Pakiet servicepackage. Library](https://www.nuget.org/packages/NETStandard.Library), który jest pakietem NuGet składającym się z innych pakietów. Zawiera zestaw pakietów, które są gwarantowane do pracy w wielu implementacjach platformy .NET, takich jak .NET Framework, .NET Core i Xamarin/mono.
 
-Jednakże istnieje szansa, że Twoja biblioteka nie będzie używać każdego pojedynczego pakietu, zawartych w nim.  Podczas tworzenia biblioteki i ich dystrybucję za pośrednictwem NuGet, jest najlepszym rozwiązaniem "Przycinanie" zależności do tylko pakiety rzeczywiście używane.  Skutkuje to mniejszą całkowitego rozmiaru pakietów NuGet.
+Istnieje jednak dobry szansa, że biblioteka nie będzie używać każdego z nich.  W przypadku tworzenia biblioteki i dystrybucji jej za pośrednictwem programu NuGet najlepszym rozwiązaniem jest "przycinanie" zależności do tylko pakietów, których faktycznie używasz.  Powoduje to mniejsze ogólne rozmiary pakietów NuGet.
 
 ## <a name="how-to-do-it"></a>Jak to zrobić
 
-Obecnie nie ma żadnych official będzie przydatna `dotnet` polecenie, które usuwa odwołania do pakietu.  Zamiast tego musisz to zrobić ręcznie.  Ogólny proces wygląda podobnie do poniższego:
+Obecnie nie istnieje oficjalne polecenie `dotnet`, które przycina odwołania do pakietów.  Zamiast tego należy to zrobić ręcznie.  Ogólny proces wygląda następująco:
 
-1. Odwołanie `NETStandard.Library` wersji `1.6.0` w `dependencies` części Twojej `project.json`.
-2. Przywróć pakiety za pomocą `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) z wiersza polecenia.
-3. Sprawdzanie `project.lock.json` plików i Znajdź `NETStandard.Library` sekcji.  Jest na początku pliku.
-4. Skopiuj wszystkie pakiety wymienione w obszarze `dependencies`.
-5. Usuń `.NETStandard.Library` odwołania i zastąp go skopiowane pakiety.
+1. Informacje o wersji `NETStandard.Library` `1.6.0` w sekcji `dependencies` `project.json`.
+2. Przywróć pakiety z `dotnet restore` ([Zobacz Uwaga](#dotnet-restore-note)) w wierszu polecenia.
+3. Sprawdź plik `project.lock.json` i Znajdź sekcję `NETStandard.Library`.  Znajduje się blisko początku pliku.
+4. Skopiuj wszystkie pakiety z listy w obszarze `dependencies`.
+5. Usuń odwołanie `.NETStandard.Library` i zastąp je skopiowanymi pakietami.
 6. Usuń odwołania do pakietów, które nie są potrzebne.
 
-Możesz dowiedzieć się które pakiety, nie musisz za pomocą jednej z następujących sposobów:
+Możesz dowiedzieć się, które pakiety nie są potrzebne, wykonując jedną z następujących czynności:
 
-1. Prób i błędów.  Obejmuje to usunięcie pakietu, przywracanie, wyświetlanie, jeśli Twoja Biblioteka nadal będzie się kompilować i powtórzyć ten proces.
-2. Za pomocą narzędzia, takie jak [użyciu narzędzia do dekompilacji](https://github.com/icsharpcode/ILSpy#ilspy-------) lub [odblaskowego .NET](https://www.red-gate.com/products/dotnet-development/reflector) wglądu odwołania, aby zobaczyć, co Twój kod faktycznie używa.  Następnie można usunąć pakiety, które nie odnoszą się do typów, których używasz.
+1. Wersja próbna i błąd. Obejmuje to usuwanie pakietu, przywracanie, wyświetlanie, czy biblioteka jest nadal skompilowana, i powtarzanie tego procesu.
+2. Za pomocą narzędzia, takiego jak [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) lub [reflektor .NET](https://www.red-gate.com/products/dotnet-development/reflector) , można uzyskać wgląd w odwołania, aby zobaczyć, do czego służy Twój kod. Następnie można usunąć pakiety, które nie odpowiadają typom, z którego korzystasz.
 
 ## <a name="example"></a>Przykład
 
-Wyobraź sobie, autorem biblioteki, które podano dodatkowe funkcje do typów ogólnych kolekcji.  Takie biblioteki konieczne są zależne od pakietów, takich jak `System.Collections`, ale może być w ogóle nie zależy od pakietów takich jak `System.Net.Http`.  W efekcie byłoby dobrze trim zależności pakietów w dół, co ta biblioteka wymagane tylko!
+Załóżmy, że Zapisano bibliotekę, która udostępnia dodatkowe funkcje dla typów kolekcji rodzajowych. Taka Biblioteka musi zależeć od pakietów, takich jak `System.Collections`, ale może nie zależeć od pakietów, takich jak `System.Net.Http`. W związku z tym dobrym sposobem jest przycinanie zależności pakietów do tylko potrzeb tej biblioteki.
 
-Można przycięcia tej biblioteki, możesz zaczynać `project.json` pliku i Dodaj odwołanie do `NETStandard.Library` wersji `1.6.0`.
+Aby przyciąć tę bibliotekę, Zacznij od pliku `project.json` i Dodaj odwołanie do `NETStandard.Library` wersji `1.6.0`.
 
 ```json
 {
@@ -55,9 +54,9 @@ Można przycięcia tej biblioteki, możesz zaczynać `project.json` pliku i Doda
 }
 ```
 
-Następnie przywróć pakiety za pomocą `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)), sprawdź `project.lock.json` plików i Znajdź wszystkie pakiety, które są przywracane dla `NETStandard.Library`.
+Następnie Przywróć pakiety z `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)), sprawdź plik `project.lock.json` i Znajdź wszystkie pakiety przywrócone dla `NETStandard.Library`.
 
-Oto jakie odpowiedniej sekcji w `project.lock.json` pliku wygląda podobnie, gdy `netstandard1.0`:
+Poniżej przedstawiono informacje o tym, co znajduje się w odpowiedniej sekcji w pliku `project.lock.json` podczas określania celu `netstandard1.0`:
 
 ```json
 "NETStandard.Library/1.6.0":{
@@ -90,7 +89,7 @@ Oto jakie odpowiedniej sekcji w `project.lock.json` pliku wygląda podobnie, gdy
 }
 ```
 
-Następnie skopiuj odwołania do pakietu do `dependencies` części biblioteki `project.json` pliku, zastępując `NETStandard.Library` odwołania:
+Następnie skopiuj odwołania do pakietu do sekcji `dependencies` pliku `project.json` biblioteki, zastępując `NETStandard.Library` odwołanie:
 
 ```json
 {
@@ -126,9 +125,9 @@ Następnie skopiuj odwołania do pakietu do `dependencies` części biblioteki `
 }
 ```
 
-To bardzo wiele pakietów, wiele z nich na pewno nie są niezbędne do rozszerzania typy kolekcji.  Można ręcznie usunąć pakiety lub użyj narzędzia takiego jak [użyciu narzędzia do dekompilacji](https://github.com/icsharpcode/ILSpy#ilspy-------) lub [odblaskowego .NET](https://www.red-gate.com/products/dotnet-development/reflector/) do identyfikowania, która faktycznie pakiety kodu używa.
+Jest to dość wiele pakietów, z których wiele nie jest koniecznych do rozszerzania typów kolekcji.  Pakiety można usuwać ręcznie lub za pomocą narzędzia, takiego jak [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) lub [reflektor .NET](https://www.red-gate.com/products/dotnet-development/reflector/) , aby identyfikować, które pakiety rzeczywiście są używane w kodzie.
 
-Poniżej przedstawiono, jak może wyglądać przycięty pakietu:
+Oto, jak może wyglądać przycięty pakiet:
 
 ```json
 {
@@ -150,7 +149,7 @@ Poniżej przedstawiono, jak może wyglądać przycięty pakietu:
 }
 ```
 
-Teraz ma mniejszy wyświetlacz niż jeśli było ono zależy na `NETStandard.Library` meta Microsoft.aspnetcore.all.
+Teraz ma mniejsze rozmiary niż w przypadku, gdy zależą od pakietu `NETStandard.Library`.
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: ceab7db1f9eeb47ec020e220ec702af8181855e2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 645c44998812453008fc91d5cf4b8463c51bef9a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442479"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741724"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automatyzacja interfejsu użytkownika a skalowanie ekranu
 > [!NOTE]
@@ -58,14 +58,14 @@ Począwszy od systemu Windows Vista, system Windows umożliwia użytkownikom zmi
   
  Rozwiązanie znajduje się w dwóch częściach.  
   
-1. Najpierw należy pamiętać o rozdzielczości DPI aplikacji klienta. W tym celu wywołaj funkcję [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `SetProcessDPIAware` podczas uruchamiania. W kodzie zarządzanym następująca deklaracja udostępnia tę funkcję.  
+1. Najpierw należy pamiętać o rozdzielczości DPI aplikacji klienta. W tym celu należy wywołać funkcję Win32 `SetProcessDPIAware` przy uruchamianiu. W kodzie zarządzanym następująca deklaracja udostępnia tę funkcję.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      Ta funkcja wykonuje cały proces z uwzględnieniem rozdzielczości DPI, co oznacza, że wszystkie okna, które należą do procesu, nie są skalowane. W [przykładzie wyróżnienia](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), na przykład cztery okna, które tworzą prostokąt wyróżnienia, znajdują się na współrzędnych fizycznych uzyskanych z automatyzacji interfejsu użytkownika, a nie na współrzędnych logicznych. Jeśli próbka nie była uwzględniana przy użyciu rozdzielczości DPI, wyróżnienie zostanie narysowane na współrzędne logiczne na pulpicie, co spowoduje nieprawidłowe umieszczenie w środowisku innym niż 96 dpi.  
   
-2. Aby uzyskać współrzędne kursora, wywołaj funkcję [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. Poniższy przykład pokazuje, jak zadeklarować tę funkcję i korzystać z niej.  
+2. Aby uzyskać współrzędne kursora, wywołaj funkcję Win32 `GetPhysicalCursorPos`. Poniższy przykład pokazuje, jak zadeklarować tę funkcję i korzystać z niej.  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
@@ -73,7 +73,7 @@ Począwszy od systemu Windows Vista, system Windows umożliwia użytkownikom zmi
 > [!CAUTION]
 > Nie należy używać <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. Zachowanie tej właściwości poza oknami klienckimi w środowisku skalowanym jest niezdefiniowane.  
   
- Jeśli aplikacja wykonuje bezpośrednią komunikację międzyprocesową z aplikacjami nieobsługującymi rozdzielczości DPI, można skonwertować między logicznymi i fizycznymi współrzędnymi przy użyciu funkcji [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `PhysicalToLogicalPoint` i `LogicalToPhysicalPoint`.  
+ Jeśli aplikacja wykonuje bezpośrednią komunikację międzyprocesową z aplikacjami nieobsługującymi rozdzielczości DPI, można skonwertować między logicznymi i fizycznymi współrzędnymi przy użyciu funkcji Win32 `PhysicalToLogicalPoint` i `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>Zobacz także
 

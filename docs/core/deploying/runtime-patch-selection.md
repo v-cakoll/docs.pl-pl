@@ -3,13 +3,12 @@ title: Przewinięcie środowiska uruchomieniowego do funkcji samodzielnego wdra�
 description: Dowiedz się więcej na temat dotnet publish zmian w przypadku wdrożeń samodzielnych.
 author: KathleenDollard
 ms.date: 05/31/2018
-ms.custom: seodec18
-ms.openlocfilehash: 6a0cdfb34973822c2f40cdb37d4038d3b7ad8e2a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 22385c7b5d2bf87755fd51cd6268d21fe3431c74
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522088"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740784"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Przenoszenie do przodu w czasie samodzielnego środowiska uruchomieniowego wdrożenia
 
@@ -17,7 +16,7 @@ ms.locfileid: "72522088"
 
 ## <a name="patch-version-roll-forward-overview"></a>Omówienie przekazujące wersje poprawek
 
-[`restore`](../tools/dotnet-restore.md), [`build`](../tools/dotnet-build.md) i [`publish`](../tools/dotnet-publish.md) są poleceniami `dotnet`, które mogą być uruchamiane oddzielnie. Wybór środowiska uruchomieniowego jest częścią operacji `restore`, a nie `publish` lub `build`. W przypadku wywołania `publish` zostanie wybrana Najnowsza wersja poprawki. Jeśli wywołasz `publish` z argumentem `--no-restore`, możesz nie uzyskać odpowiedniej wersji poprawki, ponieważ wcześniejsze `restore` mogły nie zostać wykonane przy użyciu nowych zasad publikowania samodzielnych aplikacji. W takim przypadku generowany jest błąd kompilacji z tekstem podobnym do poniższego:
+[`restore`](../tools/dotnet-restore.md), [`build`](../tools/dotnet-build.md) i [`publish`](../tools/dotnet-publish.md) są poleceniami `dotnet`, które mogą być uruchamiane oddzielnie. Wybór środowiska uruchomieniowego jest częścią operacji `restore`, a nie `publish` lub `build`. W przypadku wywołania `publish`zostanie wybrana Najnowsza wersja poprawki. Jeśli wywołasz `publish` z argumentem `--no-restore`, możesz nie uzyskać odpowiedniej wersji poprawki, ponieważ wcześniejsze `restore` mogły nie zostać wykonane przy użyciu nowych zasad publikowania samodzielnych aplikacji. W takim przypadku generowany jest błąd kompilacji z tekstem podobnym do poniższego:
 
   "Projekt został przywrócony przy użyciu programu Microsoft. servicecore. App w wersji 2.0.0, ale z bieżącymi ustawieniami w zamian zostanie użyta wersja 2.0.6. Aby rozwiązać ten problem, upewnij się, że te same ustawienia są używane do przywracania i dla kolejnych operacji, takich jak Kompilowanie lub publikowanie. Zazwyczaj ten problem może wystąpić, jeśli właściwość RuntimeIdentifier jest ustawiona podczas kompilowania lub publikowania, ale nie podczas przywracania.
 
@@ -29,7 +28,7 @@ ms.locfileid: "72522088"
 Uruchamianie `restore` w ramach operacji `publish` może być niepożądane dla Twojego scenariusza. Aby uniknąć `restore` `publish` podczas tworzenia aplikacji samodzielnych, należy wykonać następujące czynności:
 
 - Ustaw właściwość `RuntimeIdentifiers` na listę oddzielonych średnikami wszystkich [identyfikatorów RID](../rid-catalog.md) do opublikowania.
-- Ustaw właściwość `TargetLatestRuntimePatch` na `true`.
+- Ustaw `TargetLatestRuntimePatch` właściwość `true`.
 
 ## <a name="no-restore-argument-with-dotnet-publish-options"></a>Nie przywracaj argumentu z opcjami dotnet publish
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Menu Item control type
 - UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
-ms.openlocfilehash: c65e30ffea64a9b577cfee7535fd92e489bc7632
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6e8755292d97e88ff97e039fa2fbafc60ebc4eae
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446701"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741577"
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu MenuItem
 
@@ -22,7 +22,7 @@ Ten temat zawiera informacje na temat obsługi [!INCLUDE[TLA#tla_uiautomation](.
 
 Kontrolka menu umożliwia hierarchiczna organizacji elementów skojarzonych z poleceniami i programami obsługi zdarzeń. W typowej aplikacji systemu Microsoft Windows pasek menu zawiera kilka elementów menu (takich jak **plik**, **Edycja**i **okno**), a każdy element menu wyświetla menu. Menu zawiera kolekcję elementów menu (takich jak **New**, **Open**i **Close**), które można rozszerzyć, aby wyświetlić dodatkowe elementy menu, lub wykonać określoną akcję po kliknięciu. Element menu może być hostowany w menu, pasku menu lub pasku narzędzi.
 
-Poniższe sekcje definiują wymaganą strukturę drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], właściwości, wzorce formantów i zdarzenia dla typu formantu MenuItem. Wymagania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] są stosowane do wszystkich kontrolek listy, czy [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]lub [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].
+Poniższe sekcje definiują wymaganą strukturę drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], właściwości, wzorce formantów i zdarzenia dla typu formantu MenuItem. Wymagania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] są stosowane do wszystkich kontrolek listy, czy [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 czy [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].
 
 <a name="Required_UI_Automation_Tree_Structure"></a>
 
@@ -76,7 +76,7 @@ Poniższa tabela zawiera listę wzorców formantów [!INCLUDE[TLA2#tla_uiautomat
 
 Poniższa tabela zawiera listę zdarzeń [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] skojarzonych z formantem elementu menu.
 
-|Wydarzenie|Obsługa|Wyjaśnienie|
+|Zdarzenie|Obsługa|Wyjaśnienie|
 |-----------|-------------|-----------------|
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Zależy od|Musi być zgłaszane, jeśli formant obsługuje wywoływanie wzorca kontrolki.|
 |<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> zdarzenie zmiany właściwości.|Zależy od|Musi być zgłaszane, Jeśli kontrolka obsługuje przełącznik wzorzec kontrolki.|
@@ -107,7 +107,7 @@ Poniższa tabela zawiera listę zdarzeń [!INCLUDE[TLA2#tla_uiautomation](../../
 
 ## <a name="legacy-issues"></a>Starsze problemy
 
-Przełączenie wzorca będzie obsługiwane tylko wtedy, gdy zaznaczono element menu [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] i będzie można programowo określić go do obsługi wzorca przełączania. Ponieważ element menu [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] nie ujawnia, czy ma możliwość sprawdzenia, funkcja Invoke wzorzec będzie obsługiwana, gdy element menu nie zostanie zaznaczony. Zostanie wykonany wyjątek, aby zawsze obsługiwał wzorzec Invoke nawet dla elementów menu, które powinny obsługiwać tylko wzorzec przełączania. Wynika to z tego, że klienci nie stają się mylić, ponieważ element, który obsługiwał wzorzec Invoke (gdy element menu nie został zaznaczony), nie obsługuje już wzorca, gdy zostanie on sprawdzony.
+Przełączenie wzorca będzie obsługiwane tylko wtedy, gdy element menu Win32 zostanie sprawdzony i może być programistycznie określony jako niezbędny do obsługi wzorca przełączania. Ponieważ element menu Win32 nie ujawnia, czy ma możliwość sprawdzenia, funkcja Invoke wzorzec będzie obsługiwana, gdy element menu nie zostanie zaznaczony. Zostanie wykonany wyjątek, aby zawsze obsługiwał wzorzec Invoke nawet dla elementów menu, które powinny obsługiwać tylko wzorzec przełączania. Wynika to z tego, że klienci nie stają się mylić, ponieważ element, który obsługiwał wzorzec Invoke (gdy element menu nie został zaznaczony), nie obsługuje już wzorca, gdy zostanie on sprawdzony.
 
 ## <a name="see-also"></a>Zobacz także
 

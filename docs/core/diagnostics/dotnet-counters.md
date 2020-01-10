@@ -1,23 +1,21 @@
 ---
 title: dotnet-Counters — .NET Core
 description: Dowiedz się, jak zainstalować i użyć narzędzia wiersza polecenia programu dotnet-Counter.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: b2fab239713d9d19c580580496e73a91ceafcc52
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 10af451a8b1b4d8b27da1490b99b19a4359c860f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321590"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740804"
 ---
-# <a name="dotnet-counters"></a>dotnet-liczniki
+# <a name="dotnet-counters"></a>dotnet-counters
 
 **Ten artykuł dotyczy: ✓** .net Core 3,0 SDK i nowszych wersji
 
 ## <a name="install-dotnet-counters"></a>Zainstaluj dotnet-Counters
 
-Aby zainstalować najnowszą wersję [pakietu NuGet](https://www.nuget.org/packages/dotnet-counters)`dotnet-counters`, należy użyć polecenia [Install narzędzia dotnet](../tools/dotnet-tool-install.md) :
+Aby zainstalować najnowszą wersję wydania [pakietu NuGet](https://www.nuget.org/packages/dotnet-counters)`dotnet-counters`, użyj [Narzędzia dotnet Install](../tools/dotnet-tool-install.md) Command:
 
 ```dotnetcli
 dotnet tool install --global dotnet-counters
@@ -98,11 +96,11 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 - **`counter_list <COUNTERS>`**
 
-  Rozdzielana spacjami lista liczników. Liczniki można określić `provider_name[:counter_name]`. Jeśli `provider_name` jest używany bez kwalifikacji `counter_name`, zostaną wyświetlone wszystkie liczniki. Aby odnaleźć nazwy dostawcy i licznika, użyj polecenia [dotnet-Counters](#dotnet-counters-list) .
+  Rozdzielana spacjami lista liczników. Liczniki można określić `provider_name[:counter_name]`. Jeśli `provider_name` jest używany bez kwalifikowania `counter_name`, zostaną wyświetlone wszystkie liczniki. Aby odnaleźć nazwy dostawcy i licznika, użyj polecenia [dotnet-Counters](#dotnet-counters-list) .
 
 ### <a name="examples"></a>Przykłady
 
-- Monitoruj wszystkie liczniki z `System.Runtime` w przedziale czasu odświeżania równym 3 sekund:
+- Monitoruj wszystkie liczniki z `System.Runtime` w interwałie odświeżania równym 3 sekund:
 
   ```console
   > dotnet-counters monitor --process-id 1902  --refresh-interval 3 System.Runtime
@@ -118,7 +116,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       Number of Exceptions / sec                     4
   ```
 
-- Monitoruj tylko użycie procesora CPU i rozmiar sterty GC z `System.Runtime`:
+- Monitoruj tylko użycie procesora CPU i rozmiar sterty GC na podstawie `System.Runtime`:
 
   ```console
   > dotnet-counters monitor --process-id 1902 System.Runtime[cpu-usage,gc-heap-size]
@@ -129,7 +127,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       GC Heap Size (MB)                            811
   ```
 
-- Monitoruj wartości `EventCounter` ze zdefiniowanej przez użytkownika `EventSource`. Aby uzyskać więcej informacji, zobacz [Samouczek: jak mierzyć wydajność dla bardzo częstych zdarzeń przy użyciu EventCounters](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
+- Monitoruj wartości `EventCounter` z `EventSource`zdefiniowanych przez użytkownika. Aby uzyskać więcej informacji, zobacz [Samouczek: jak mierzyć wydajność dla bardzo częstych zdarzeń przy użyciu EventCounters](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
 
   ```console
   > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal

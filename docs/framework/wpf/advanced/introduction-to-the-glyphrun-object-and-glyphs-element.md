@@ -9,15 +9,15 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-ms.openlocfilehash: 2f7bb3fb4f28b063c78dde9f9f354b38a5e707f3
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9af07d48877fee0e94f8e5fa2556c4361795df6a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581889"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740358"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>Wprowadzenie do obiektu GlyphRun i elementu glifu
-W tym temacie opisano obiekt <xref:System.Windows.Media.GlyphRun> i element <xref:System.Windows.Documents.Glyphs>.  
+W tym temacie opisano obiekt <xref:System.Windows.Media.GlyphRun> i <xref:System.Windows.Documents.Glyphs> elementu.  
 
 <a name="text_glyphrunovw_intro"></a>   
 ## <a name="introduction-to-glyphrun"></a>Wprowadzenie do GlyphRun  
@@ -31,14 +31,14 @@ W tym temacie opisano obiekt <xref:System.Windows.Media.GlyphRun> i element <xre
   
     - Moduł zapisywania dokumentów XPS firmy Microsoft.  
   
-    - Poprzednie sterowniki drukarek wychodzące z [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] aplikacji do ustalonego formatu.  
+    - Poprzednie sterowniki drukarek wyprowadzają dane wyjściowe z aplikacji Win32 do ustalonego formatu.  
   
     - Format buforu wydruku.  
   
 3. Reprezentacja dokumentów o stałym formacie, w tym klientów z poprzednimi wersjami systemu Windows i innymi urządzeniami obliczeniowymi.  
   
 > [!NOTE]
-> <xref:System.Windows.Documents.Glyphs> i <xref:System.Windows.Media.GlyphRun> są przeznaczone dla scenariuszy drukowania i prezentacji dokumentów o stałym formacie. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia kilka elementów dla ogólnego układu i [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] scenariuszy, takich jak <xref:System.Windows.Controls.Label> i <xref:System.Windows.Controls.TextBlock>. Aby uzyskać więcej informacji na temat scenariuszy dotyczących układu i [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], zobacz [Typografia w WPF](typography-in-wpf.md).  
+> <xref:System.Windows.Documents.Glyphs> i <xref:System.Windows.Media.GlyphRun> są przeznaczone do celów prezentacji dokumentów o stałym formacie i scenariuszy drukowania. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia kilka elementów dla ogólnego układu i [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] scenariuszy, takich jak <xref:System.Windows.Controls.Label> i <xref:System.Windows.Controls.TextBlock>. Aby uzyskać więcej informacji na temat scenariuszy dotyczących układu i [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], zobacz [Typografia w WPF](typography-in-wpf.md).  
   
 <a name="text_glyphrunovw_glyphrunobject"></a>   
 ## <a name="the-glyphrun-object"></a>Obiekt GlyphRun  
@@ -46,7 +46,7 @@ W tym temacie opisano obiekt <xref:System.Windows.Media.GlyphRun> i element <xre
   
  <xref:System.Windows.Media.GlyphRun> obejmuje obydwa Szczegóły czcionki, takie jak glify <xref:System.Windows.Documents.Glyphs.Indices%2A> i poszczególne położenia symboli. Zawiera również oryginalne punkty kodu Unicode, które zostały wygenerowane z, informacje o mapowaniu między znakami i symbolami, a także flagi dla poszczególnych znaków i poszczególnych glifów.  
   
- <xref:System.Windows.Media.GlyphRun> ma odpowiadający wysoki poziom <xref:System.Windows.FrameworkElement>, <xref:System.Windows.Documents.Glyphs>. <xref:System.Windows.Documents.Glyphs> można użyć w drzewie elementów i w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników do reprezentowania <xref:System.Windows.Media.GlyphRun> danych wyjściowych.  
+ <xref:System.Windows.Media.GlyphRun> ma odpowiednie <xref:System.Windows.FrameworkElement>wysokiego poziomu, <xref:System.Windows.Documents.Glyphs>. <xref:System.Windows.Documents.Glyphs> można użyć w drzewie elementów i w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników do reprezentowania <xref:System.Windows.Media.GlyphRun> danych wyjściowych.  
   
 <a name="text_glyphrunovw_glyphselement"></a>   
 ## <a name="the-glyphs-element"></a>Elementy glifów  

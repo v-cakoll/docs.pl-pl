@@ -1,15 +1,13 @@
 ---
 title: Istotne zmiany i biblioteki .NET
 description: Zalecenia dotyczące najlepszych rozwiązań dotyczących nawigowania po zmianach podczas tworzenia bibliotek .NET.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6881b8737d9dd3fa7fa71f099fa1dc97b747033d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 8536662ae1cd9733efbcc0c6526bd69d34a13177
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104658"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740984"
 ---
 # <a name="breaking-changes"></a>Fundamentalne zmiany
 
@@ -56,27 +54,27 @@ Zmiany zachowania są najczęściej spotykanym typem zmiany: prawie każda zmian
 
 Dodawanie funkcji i ulepszanie nieprawidłowych zachowań jest dobrym sposobem, ale bez poważnego, aby użytkownicy mogli je uaktualnić. Jednym z rozwiązań ułatwiających deweloperom Rozwiązywanie istotnych zmian w zachowaniu zachowania jest ukrycie ich za pomocą ustawień. Ustawienia umożliwiają deweloperom aktualizację do najnowszej wersji biblioteki, jednocześnie wybierając opcję rezygnacji lub zrezygnowanie z istotnych zmian. Ta strategia umożliwia deweloperom zachowanie aktualności, a jednocześnie pozwala na dostosowanie kodu do swoich potrzeb.
 
-Na przykład ASP.NET Core MVC ma koncepcję [wersji zgodności](/aspnet/core/mvc/compatibility-version) , która modyfikuje funkcje włączone i wyłączone `MvcOptions`.
+Na przykład ASP.NET Core MVC ma koncepcję [wersji zgodności](/aspnet/core/mvc/compatibility-version) , która modyfikuje funkcje włączone i wyłączone w `MvcOptions`.
 
 **✔️ rozważyć** pozostawienie nowych funkcji domyślnie, jeśli wpływają one na istniejących użytkowników, i pozwól deweloperom na dostęp do funkcji przy użyciu ustawienia.
 
 ### <a name="binary-breaking-change"></a>Zmiana podziału binarnego
 
-Zmiana publicznego interfejsu API biblioteki jest spowodowana zmianą w postaci binarnej, więc zestawy skompilowane pod kątem starszych wersji biblioteki nie będą już mogły wywoływania interfejsu API. Na przykład zmiana sygnatury metody przez dodanie nowego parametru spowoduje, <xref:System.MissingMethodException>że zestawy skompilowane dla starszej wersji biblioteki w celu wygenerowania.
+Zmiana publicznego interfejsu API biblioteki jest spowodowana zmianą w postaci binarnej, więc zestawy skompilowane pod kątem starszych wersji biblioteki nie będą już mogły wywoływania interfejsu API. Na przykład zmiana sygnatury metody przez dodanie nowego parametru spowoduje, że zestawy skompilowane dla starszej wersji biblioteki w celu wygenerowania <xref:System.MissingMethodException>.
 
-Zmiana podziału binarnego może również spowodować przerwanie **całego zestawu**. Zmiana nazwy zestawu za pomocą `AssemblyName` spowoduje zmianę tożsamości zestawu, ponieważ spowoduje to dodanie, usunięcie lub zmianę klucza silnego nazewnictwa zestawu. Zmiana tożsamości zestawu spowoduje przerwanie całego skompilowanego kodu, który go używa.
+Zmiana podziału binarnego może również spowodować przerwanie **całego zestawu**. Zmiana nazwy zestawu z `AssemblyName` spowoduje zmianę tożsamości zestawu, ponieważ spowoduje to dodanie, usunięcie lub zmianę klucza silnego nazewnictwa zestawu. Zmiana tożsamości zestawu spowoduje przerwanie całego skompilowanego kodu, który go używa.
 
-**❌ Nie** zmieniać nazwy zestawu.
+**❌ nie** zmieniać nazwy zestawu.
 
-**❌ Nie** dodawaj, usuwaj ani nie zmieniaj silnego klucza nazewnictwa.
+**❌ nie** dodawaj, usuwaj ani nie zmieniaj silnego klucza nazewnictwa.
 
 **✔️ rozważyć** użycie abstrakcyjnych klas podstawowych zamiast interfejsów.
 
 > Dodanie niczego do interfejsu spowoduje niepowodzenie istniejących typów, które implementują go. Abstrakcyjna klasa bazowa umożliwia dodanie domyślnej implementacji wirtualnej.
 
-**✔️ Rozważ** umieszczenie <xref:System.ObsoleteAttribute> typów i członków, które zamierzasz usunąć. Atrybut powinien zawierać instrukcje dotyczące aktualizowania kodu, aby nie używał już przestarzałego interfejsu API.
+**✔️ Rozważ** umieszczenie <xref:System.ObsoleteAttribute> na typach i elementach członkowskich, które mają zostać usunięte. Atrybut powinien zawierać instrukcje dotyczące aktualizowania kodu, aby nie używał już przestarzałego interfejsu API.
 
-> Kod, który wywołuje typy i metody z <xref:System.ObsoleteAttribute> wygenerowaniem ostrzeżenia kompilacji z komunikatem dostarczonym do atrybutu. Ostrzeżenia umożliwiają osobom korzystającym z przestarzałego czasu powierzchni interfejsu API na Migrowanie w celu usunięcia przestarzałego interfejsu API, który nie będzie już używany.
+> Kod, który wywołuje typy i metody z <xref:System.ObsoleteAttribute> będzie generować ostrzeżenie kompilacji z komunikatem dostarczonym do atrybutu. Ostrzeżenia umożliwiają osobom korzystającym z przestarzałego czasu powierzchni interfejsu API na Migrowanie w celu usunięcia przestarzałego interfejsu API, który nie będzie już używany.
 
 ```csharp
 public class Document
@@ -94,7 +92,7 @@ public class Document
 }
 ```
 
-**✔️ rozważyć** utrzymywanie typów i metod <xref:System.ObsoleteAttribute> w nieokreślony sposób w przypadku bibliotek niskie i średnie.
+**✔️ rozważyć** utrzymywanie typów i metod z <xref:System.ObsoleteAttribute> nieokreślonymi w bibliotekach niskiego i średniego.
 
 > Usuwanie interfejsów API jest uszkodzeniem binarnym. Biorąc pod uwagę przechowywanie przestarzałych typów i metod, jeśli ich utrzymanie jest niskiego kosztu i nie dodaje do biblioteki dużej liczby długów technicznych. Nieusunięcie typów i metod może pomóc w uniknięciu najgorszych przypadków wymienionych powyżej.
 
@@ -102,7 +100,7 @@ public class Document
 
 - [Zagadnienia dotyczące wersji i C# aktualizacji dla deweloperów](../../csharp/whats-new/version-update-considerations.md)
 - [Ostateczny Przewodnik po wprowadzeniu zmian w interfejsie API w programie .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-- [CoreFX reguły zmiany reguł](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
+- [Reguły istotnej zmiany w programie .NET](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[Poprzednie](versioning.md)

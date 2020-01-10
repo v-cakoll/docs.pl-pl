@@ -1,13 +1,13 @@
 ---
 title: polecenie migracji dotnet
 description: Polecenie Migruj z programu dotnet migruje projekt i wszystkie jego zależności.
-ms.date: 08/08/2019
-ms.openlocfilehash: afc16161761d151e743e53a8572a6564add43517
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 01/07/2020
+ms.openlocfilehash: d746069b897a7458e0262663e96cc8743a586aa9
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117692"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740515"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
@@ -15,7 +15,7 @@ ms.locfileid: "71117692"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet migrate`— Migruje projekt programu .NET Core w wersji zapoznawczej 2 do projektu w stylu zestaw .NET Core SDK.
+`dotnet migrate` — migruje projekt programu .NET Core w wersji zapoznawczej 2 do projektu w stylu zestaw .NET Core SDK.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -26,9 +26,9 @@ dotnet migrate [-h|--help]
 
 ## <a name="description"></a>Opis
 
-Polecenie migruje prawidłowy projekt w wersji zapoznawczej 2 projekt *. JSON*do zestaw .NET Core SDK prawidłowego projektu csproj w stylu. `dotnet migrate`
+To polecenie jest przestarzałe. Polecenie `dotnet migrate` nie jest już dostępne począwszy od zestawu SDK programu .NET Core 3,0. Może jedynie migrować projekt .NET Core w wersji zapoznawczej 2 do projektu 1. x platformy .NET Core, który nie jest obsługiwany.
 
-Domyślnie polecenie migruje projekt główny i wszystkie odwołania do projektu, które zawiera projekt główny. To zachowanie jest wyłączone przy użyciu `--skip-project-references` opcji w czasie wykonywania.
+Domyślnie polecenie migruje projekt główny i wszystkie odwołania do projektu, które zawiera projekt główny. To zachowanie jest wyłączone przy użyciu opcji `--skip-project-references` w czasie wykonywania.
 
 Można przeprowadzić migrację na następujących zasobach:
 
@@ -37,13 +37,11 @@ Można przeprowadzić migrację na następujących zasobach:
 * Plik *. sln rozwiązania* , w którym migruje projekty, do których odwołuje się rozwiązanie.
 * Wszystkie podkatalogi danego katalogu cyklicznie.
 
-Polecenie zachowuje zmigrowany plik *Project. JSON* w `backup` katalogu, który tworzy, jeśli katalog nie istnieje. `dotnet migrate` To zachowanie jest zastępowane przy `--skip-backup` użyciu opcji.
+`dotnet migrate` polecenie zachowuje zmigrowany plik *Project. JSON* w katalogu `backup`, który tworzy, jeśli katalog nie istnieje. To zachowanie jest zastępowane przy użyciu opcji `--skip-backup`.
 
-Domyślnie operacja migracji wyprowadza stan procesu migracji do wyjścia standardowego (STDOUT). Jeśli używasz `--report-file <REPORT_FILE>` opcji, dane wyjściowe są zapisywane w pliku Określ.
+Domyślnie operacja migracji wyprowadza stan procesu migracji do wyjścia standardowego (STDOUT). Jeśli używasz opcji `--report-file <REPORT_FILE>`, dane wyjściowe są zapisywane w pliku Określ.
 
-Polecenie obsługuje tylko prawidłowe projekty w wersji zapoznawczej 2 dla *projektu.* `dotnet migrate` Oznacza to, że nie można używać go do migrowania środowiska DNX lub podglądu 1 projektów opartych na formacie *JSON*bezpośrednio do projektów MSBuild/csproj. Najpierw należy ręcznie zmigrować projekt do projektu w wersji zapoznawczej 2 *projektu. JSON*, a następnie użyć `dotnet migrate` polecenia w celu przeprowadzenia migracji projektu.
-
-`dotnet migrate` Polecenie nie jest już dostępne począwszy od zestawu SDK programu .NET Core 3,0.
+Polecenie `dotnet migrate` obsługuje tylko prawidłowe projekty w formacie *JSON*(wersja zapoznawcza 2). Oznacza to, że nie można używać go do migrowania środowiska DNX lub podglądu 1 projektów opartych na formacie *JSON*bezpośrednio do projektów MSBuild/csproj. Najpierw należy ręcznie zmigrować projekt do projektu w wersji zapoznawczej 2 *projektu. JSON*, a następnie użyć polecenia `dotnet migrate`, aby przeprowadzić migrację projektu.
 
 ## <a name="arguments"></a>Argumenty
 
@@ -78,15 +76,15 @@ Pomiń Migrowanie odwołań do projektu. Domyślnie odwołania do projektu są m
 
 `--skip-backup`
 
-Pomiń przenoszenie pliku`backup` *Project. JSON*, *Global. JSON*i  *\*. xproj* do katalogu po pomyślnej migracji.
+Pomiń przenoszenie pliku *Project. JSON*, *Global. JSON*i *\*. xproj* do katalogu `backup` po pomyślnej migracji.
 
 `-t|--template-file <TEMPLATE_FILE>`
 
-Plik CSPROJ szablonu do użycia na potrzeby migracji. Domyślnie używany jest ten sam szablon, który został usunięty przez `dotnet new console` .
+Plik CSPROJ szablonu do użycia na potrzeby migracji. Domyślnie używany jest ten sam szablon, który został porzucony przez `dotnet new console`.
 
 `-v|--sdk-package-version <VERSION>`
 
-Wersja pakietu SDK, do którego odwołuje się migrowana aplikacja. Wartość domyślna to wersja zestawu SDK w programie `dotnet new`.
+Wersja pakietu SDK, do którego odwołuje się migrowana aplikacja. Wartość domyślna to wersja zestawu SDK w `dotnet new`.
 
 `-x|--xproj-file <FILE>`
 

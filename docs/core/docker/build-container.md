@@ -3,13 +3,13 @@ title: Konteneryzowanie aplikacji przy użyciu samouczka platformy Docker
 description: W tym samouczku dowiesz się, jak konteneryzowanie aplikację .NET Core z platformą Docker.
 ms.date: 06/26/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: b344731c7d356f3705d9909b6901234f91ec7d6d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.custom: mvc
+ms.openlocfilehash: e012fcf78c88e7f64f6ee205cd69b69683bed9c3
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521887"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740758"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Samouczek: Konteneryzowanie aplikacji .NET Core
 
@@ -30,7 +30,7 @@ Zapoznaj się z tematem tworzenie i wdrażanie kontenerów platformy Docker dla 
 
 Zainstaluj następujące wymagania wstępne:
 
-- [Zestaw SDK platformy .NET Core 2,2](https://dotnet.microsoft.com/download) \
+- [Zestaw SDK platformy .NET Core 2,2](https://dotnet.microsoft.com/download)\
 Jeśli masz zainstalowany program .NET Core, użyj polecenia `dotnet --info`, aby określić, którego zestawu SDK używasz.
 
 - [Platforma Docker Community Edition](https://www.docker.com/products/docker-desktop)
@@ -51,7 +51,7 @@ Jeśli używasz zestawu SDK, który jest nowszy, na przykład 3,0, upewnij się,
 
 Zapisz ten plik. Obecność pliku spowoduje wymuszenie użycia przez program .NET Core wersji 2,2 dla każdego polecenia `dotnet` wywołana z tego folderu i poniżej.
 
-## <a name="create-net-core-app"></a>Tworzenie aplikacji platformy .NET Core
+## <a name="create-net-core-app"></a>Tworzenie aplikacji .NET Core
 
 Potrzebna jest aplikacja .NET Core, którą zostanie uruchomiony kontener platformy Docker. Otwórz Terminal, Utwórz folder roboczy, jeśli jeszcze tego nie zrobiono, a następnie wprowadź go. W folderze roboczym Uruchom następujące polecenie, aby utworzyć nowy projekt w podkatalogu o nazwie *App*:
 
@@ -76,7 +76,7 @@ docker-working
             project.assets.json
 ```
 
-@No__t_0 polecenie tworzy nowy folder o nazwie *App* i generuje aplikację "Hello World". Wprowadź folder *App* i uruchom polecenie `dotnet run`. Zobaczysz następujące dane wyjściowe:
+`dotnet new` polecenie tworzy nowy folder o nazwie *App* i generuje aplikację "Hello World". Wprowadź folder *App* i uruchom polecenie `dotnet run`. Zobaczysz następujące dane wyjściowe:
 
 ```console
 > dotnet run
@@ -124,7 +124,7 @@ namespace myapp
 }
 ```
 
-Zapisz plik i ponownie przetestuj program przy użyciu `dotnet run`. Należy pamiętać, że ta aplikacja jest uruchamiana w nieskończoność. Użyj polecenia Cancel <kbd>CTRL</kbd> +<kbd>C</kbd> , aby go zatrzymać. Zobaczysz następujące dane wyjściowe:
+Zapisz plik i ponownie przetestuj program przy użyciu `dotnet run`. Należy pamiętać, że ta aplikacja jest uruchamiana w nieskończoność. Użyj polecenia Cancel <kbd>CTRL</kbd>+<kbd>C</kbd> , aby go zatrzymać. Zobaczysz następujące dane wyjściowe:
 
 ```console
 > dotnet run
@@ -212,7 +212,7 @@ W terminalu uruchom następujące polecenie:
 docker build -t myimage -f Dockerfile .
 ```
 
-Platforma Docker będzie przetwarzać każdy wiersz w *pliku dockerfile*. @No__t_0 w poleceniu `docker build` instruuje platformę Docker, aby użyć bieżącego folderu do znalezienia *pliku dockerfile*. To polecenie kompiluje obraz i tworzy lokalne repozytorium o nazwie **obraz** , który wskazuje na ten obraz. Po zakończeniu tego polecenia Uruchom `docker images`, aby wyświetlić listę zainstalowanych obrazów:
+Platforma Docker będzie przetwarzać każdy wiersz w *pliku dockerfile*. `.` w poleceniu `docker build` instruuje platformę Docker, aby użyć bieżącego folderu do znalezienia *pliku dockerfile*. To polecenie kompiluje obraz i tworzy lokalne repozytorium o nazwie **obraz** , który wskazuje na ten obraz. Po zakończeniu tego polecenia Uruchom `docker images`, aby wyświetlić listę zainstalowanych obrazów:
 
 ```console
 > docker images
@@ -276,7 +276,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### <a name="manage-the-container"></a>Zarządzanie kontenerem
 
-Do każdego kontenera jest przypisywana nazwa Losowa, której można użyć do odwoływania się do tego wystąpienia kontenera. Na przykład kontener, który został utworzony automatycznie wybiera nazwę **boring_matsumoto** (będzie się różnić) i tej nazwy można użyć do uruchomienia kontenera. Automatyczna nazwa zostanie zastąpiona określonym przez użycie parametru `docker create --name`.
+Do każdego kontenera jest przypisywana nazwa Losowa, której można użyć do odwoływania się do tego wystąpienia kontenera. Na przykład kontener, który został utworzony automatycznie wybiera nazwę **boring_matsumoto** (będzie się różnić), a ta nazwa może być używana do uruchamiania kontenera. Automatyczna nazwa zostanie zastąpiona określonym przez użycie parametru `docker create --name`.
 
 Poniższy przykład używa polecenia `docker start`, aby uruchomić kontener, a następnie używa polecenia `docker ps` do wyświetlania tylko kontenerów z systemem:
 
@@ -301,7 +301,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 ### <a name="connect-to-a-container"></a>Nawiązywanie połączenia z kontenerem
 
-Po uruchomieniu kontenera można nawiązać z nim połączenie, aby wyświetlić dane wyjściowe. Użyj poleceń `docker start` i `docker attach`, aby uruchomić kontener i uzyskać wgląd w strumieniu danych wyjściowych. W tym przykładzie polecenie <kbd>Ctrl + C</kbd> służy do odłączenia od uruchomionego kontenera. Może to ostatecznie zakończyć proces w kontenerze, co spowoduje zatrzymanie kontenera. @No__t_0 parametr gwarantuje, że <kbd>naciśnięcie klawiszy CTRL + C</kbd> nie zatrzyma procesu w kontenerze.
+Po uruchomieniu kontenera można nawiązać z nim połączenie, aby wyświetlić dane wyjściowe. Użyj poleceń `docker start` i `docker attach`, aby uruchomić kontener i uzyskać wgląd w strumieniu danych wyjściowych. W tym przykładzie polecenie <kbd>Ctrl + C</kbd> służy do odłączenia od uruchomionego kontenera. Może to ostatecznie zakończyć proces w kontenerze, co spowoduje zatrzymanie kontenera. `--sig-proxy=false` parametr gwarantuje, że <kbd>naciśnięcie klawiszy CTRL + C</kbd> nie zatrzyma procesu w kontenerze.
 
 Po odłączeniu od kontenera ponownie Dołącz, aby upewnić się, że nadal działa i zlicza.
 
@@ -358,7 +358,7 @@ Counter: 5
 ^C
 ```
 
-Za pomocą `docker run -it` polecenie <kbd>Ctrl + C</kbd> przestanie działać w kontenerze, który z kolei zatrzymuje kontener. Ponieważ podano parametr `--rm`, kontener jest automatycznie usuwany, gdy proces zostanie zatrzymany. Sprawdź, czy nie istnieje:
+Za pomocą `docker run -it`polecenie <kbd>Ctrl + C</kbd> przestanie działać w kontenerze, który z kolei zatrzymuje kontener. Ponieważ podano parametr `--rm`, kontener jest automatycznie usuwany, gdy proces zostanie zatrzymany. Sprawdź, czy nie istnieje:
 
 ```console
 > docker ps -a
@@ -367,11 +367,11 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### <a name="change-the-entrypoint"></a>Zmień punkt wejścia
 
-@No__t_0 polecenie umożliwia również modyfikowanie polecenia `ENTRYPOINT` z *pliku dockerfile* i uruchamianie czegoś innego, ale tylko dla tego kontenera. Na przykład użyj następującego polecenia, aby uruchomić `bash` lub `cmd.exe`. W razie potrzeby zmodyfikuj polecenie.
+`docker run` polecenie umożliwia również modyfikowanie polecenia `ENTRYPOINT` z *pliku dockerfile* i uruchamianie czegoś innego, ale tylko dla tego kontenera. Na przykład użyj następującego polecenia, aby uruchomić `bash` lub `cmd.exe`. W razie potrzeby zmodyfikuj polecenie.
 
 #### <a name="windows"></a>Windows
 
-W tym przykładzie `ENTRYPOINT` został zmieniony na `cmd.exe`. <kbd>Naciśnij klawisz CTRL</kbd> +<kbd>C</kbd> , aby zakończyć proces i zatrzymać kontener.
+W tym przykładzie `ENTRYPOINT` został zmieniony na `cmd.exe`. <kbd>Naciśnij klawisz CTRL</kbd>+<kbd>C</kbd> , aby zakończyć proces i zatrzymać kontener.
 
 ```console
 > docker run -it --rm --entrypoint "cmd.exe" myimage
@@ -398,7 +398,7 @@ C:\>^C
 
 #### <a name="linux"></a>Linux
 
-W tym przykładzie `ENTRYPOINT` został zmieniony na `bash`. @No__t_0 polecenie jest uruchamiane, które zakończy proces i Zatrzymaj kontener.
+W tym przykładzie `ENTRYPOINT` został zmieniony na `bash`. `quit` polecenie jest uruchamiane, które zakończy proces i Zatrzymaj kontener.
 
 ```bash
 root@user:~# docker run -it --rm --entrypoint "bash" myimage
@@ -420,7 +420,7 @@ Platforma Docker ma wiele różnych poleceń, które obejmują, co chcesz zrobi�
 - [Docker RMI](https://docs.docker.com/engine/reference/commandline/rmi/)
 - [obraz platformy Docker](https://docs.docker.com/engine/reference/commandline/image/)
 
-## <a name="clean-up-resources"></a>Czyszczenie zasobów
+## <a name="clean-up-resources"></a>Oczyszczanie zasobów
 
 W tym samouczku utworzono kontenery i obrazy. Jeśli chcesz, usuń te zasoby. Użyj następujących poleceń, aby
 
@@ -430,13 +430,13 @@ W tym samouczku utworzono kontenery i obrazy. Jeśli chcesz, usuń te zasoby. U�
     > docker ps -a
     ```
 
-02. Zatrzymaj uruchomione kontenery. @No__t_0 reprezentuje nazwę, która jest automatycznie przypisywana do kontenera.
+02. Zatrzymaj uruchomione kontenery. `CONTAINER_NAME` reprezentuje nazwę, która jest automatycznie przypisywana do kontenera.
 
     ```console
     > docker stop CONTAINER_NAME
     ```
 
-03. Usuń kontener
+03. Usuwanie kontenera
 
     ```console
     > docker rm CONTAINER_NAME

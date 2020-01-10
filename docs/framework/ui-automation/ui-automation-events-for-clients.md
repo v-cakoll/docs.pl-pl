@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 4193f92223cb9c9f924c1021b2f3e58a5e8b988d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6d4525aeea458e1ec810efa659f373a2b5f21f57
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441503"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741305"
 ---
 # <a name="ui-automation-events-for-clients"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika dla klientów
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "74441503"
  Ulepszona wydajność dzięki możliwości nasłuchiwania zdarzeń tylko w określonym zakresie. Na przykład klient może nasłuchiwać zdarzeń zmiany fokusu na wszystkich [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elementach drzewa lub tylko jeden element i jego elementy podrzędne.  
   
 > [!NOTE]
-> Nie należy zakładać, że wszystkie możliwe zdarzenia są zgłaszane przez dostawcę [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Na przykład nie wszystkie zmiany właściwości powodują, że zdarzenia mają być zgłaszane przez standardowych dostawców proxy dla [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] i [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] kontrolek.  
+> Nie należy zakładać, że wszystkie możliwe zdarzenia są zgłaszane przez dostawcę [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Na przykład nie wszystkie zmiany właściwości powodują, że zdarzenia mają być zgłaszane przez standardowych dostawców proxy dla [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] i formantów Win32.  
   
  Aby uzyskać szerszy widok zdarzeń [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Omówienie zdarzeń automatyzacji interfejsu użytkownika](ui-automation-events-overview.md).  
   

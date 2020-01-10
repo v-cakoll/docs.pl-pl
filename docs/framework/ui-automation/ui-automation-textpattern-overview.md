@@ -6,19 +6,19 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: b7e378d79109d33859a38ea398cffd2193044abd
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 22966c8ed80be99497e7d05b56455c3057fdd81a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800201"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741416"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Przegląd automatyzacji interfejsu użytkownika — TextPattern
 
 > [!NOTE]
 > Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).
 
-W tym omówieniu opisano, jak używać [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] do uwidaczniania zawartości tekstowej, w tym atrybutów formatowania i stylu, formantów tekstowych na platformach obsługiwanych przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Te kontrolki obejmują, ale nie są ograniczone do, Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> i <xref:System.Windows.Controls.RichTextBox> oraz ich odpowiedniki [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)].
+W tym omówieniu opisano, jak używać [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] do uwidaczniania zawartości tekstowej, w tym atrybutów formatowania i stylu, formantów tekstowych na platformach obsługiwanych przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Te kontrolki obejmują, ale nie są ograniczone do, Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> i <xref:System.Windows.Controls.RichTextBox> oraz ich odpowiedników w systemie Win32.
 
 Uwidacznianie zawartości tekstowej kontrolki odbywa się przy użyciu wzorca kontrolki <xref:System.Windows.Automation.TextPattern>, który reprezentuje zawartość kontenera tekstowego jako strumień tekstowy. Z kolei <xref:System.Windows.Automation.TextPattern> wymaga obsługi klasy <xref:System.Windows.Automation.Text.TextPatternRange> do udostępniania atrybutów formatowania i stylu. <xref:System.Windows.Automation.Text.TextPatternRange> obsługuje <xref:System.Windows.Automation.TextPattern> przez reprezentowanie ciągłego lub wielokrotnego, rozłączonych tekstu rozmieszczonych w kontenerze tekstu z kolekcją <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> i <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> punktów końcowych. <xref:System.Windows.Automation.Text.TextPatternRange> obsługuje funkcje, takie jak wybór, porównanie, pobieranie i przechodzenie.
 

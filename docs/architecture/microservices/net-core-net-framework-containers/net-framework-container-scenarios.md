@@ -2,12 +2,12 @@
 title: Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Kiedy należy wybrać .NET Framework kontenerów platformy Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: 579e1a475b1ce96d98d7a2c521c1296e17b9f42e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: e60572f33bda93663080b9d2e3504f0987b8483e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740955"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899703"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
 
@@ -39,7 +39,7 @@ Na poniższej liście przedstawiono większość technologii, które nie są dos
 
 - Usługi związane z przepływem pracy. Windows Workflow Foundation (WF), usługi Workflow Services (WCF + WF w ramach jednej usługi) i Usługi danych programu WCF (dawniej znany jako ADO.NET Data Services) są dostępne tylko na .NET Framework. Obecnie nie ma żadnych planów, aby przenieść je do programu .NET Core.
 
-Oprócz technologii wymienionych w oficjalnym [planie .NET Core](https://github.com/aspnet/Home/wiki/Roadmap), inne funkcje mogą być przemieszczone w programie .NET Core. Aby zapoznać się z pełną listą, należy zapoznać się z elementami oznaczonymi jako [Port-to-Core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) w witrynie CoreFX GitHub. Należy zauważyć, że ta lista nie reprezentuje zobowiązania firmy Microsoft do przenoszenia tych składników do programu .NET Core — elementy po prostu przechwytują żądania ze społeczności. Jeśli postanowisz o każdym z wymienionych powyżej składników, rozważ uczestnictwo w dyskusjach w witrynie GitHub, aby umożliwić wysłuchanie głosu. Jeśli uważasz, że coś nie ma, Utwórz [nowy problem w repozytorium środowiska uruchomieniowego](https://github.com/dotnet/runtime/issues/new).
+Oprócz technologii wymienionych w oficjalnym [planie .NET Core](https://github.com/dotnet/aspnetcore/wiki/Roadmap), inne funkcje mogą być przemieszczone w programie .NET Core. Aby zapoznać się z pełną listą, należy zapoznać się z elementami oznaczonymi jako [Port-to-Core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) w witrynie CoreFX GitHub. Należy zauważyć, że ta lista nie reprezentuje zobowiązania firmy Microsoft do przenoszenia tych składników do programu .NET Core — elementy po prostu przechwytują żądania ze społeczności. Jeśli postanowisz o każdym z wymienionych powyżej składników, rozważ uczestnictwo w dyskusjach w witrynie GitHub, aby umożliwić wysłuchanie głosu. Jeśli uważasz, że coś nie ma, Utwórz [nowy problem w repozytorium środowiska uruchomieniowego](https://github.com/dotnet/runtime/issues/new).
 
 Mimo że program .NET Core 3 (w czasie tego pisania jest w programie Works) będzie obejmował obsługę wielu istniejących .NET Framework interfejsów API, są one zorientowane na komputery stacjonarne, a obecnie nie są one używane w świecie kontenerów.
 

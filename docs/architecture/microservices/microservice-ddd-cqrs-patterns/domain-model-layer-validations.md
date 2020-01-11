@@ -2,12 +2,12 @@
 title: Projektowanie reguł weryfikacji w warstwie modelu domeny
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Poznaj kluczowe pojęcia związane z walidacją modelu domeny.
 ms.date: 10/08/2018
-ms.openlocfilehash: 1d3196d2130df33969ed231bccfe0fc6f0af2ad8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 98ccc5df84c9f6f402ecbee83b077c806d6a76fc
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295963"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899666"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Walidacje projektu w warstwie modelu domeny
 
@@ -53,7 +53,7 @@ Podobne podejście można użyć w konstruktorze jednostki, wywołując wyjątek
 
 ### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>Używanie atrybutów walidacji w modelu na podstawie adnotacji danych
 
-Adnotacje danych, takie jak atrybuty wymagane lub MaxLength, mogą służyć do konfigurowania właściwości pola EF Core bazy danych, jak wyjaśniono szczegółowo w sekcji [Mapowanie tabeli](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) , ale [nie będą już działać do sprawdzania poprawności jednostek w EF Core](https://github.com/aspnet/EntityFrameworkCore/issues/3680) (żadna z metod <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType>), ponieważ zostały one wykonane od Ef 4. x w .NET Framework.
+Adnotacje danych, takie jak atrybuty wymagane lub MaxLength, mogą służyć do konfigurowania właściwości pola EF Core bazy danych, jak wyjaśniono szczegółowo w sekcji [Mapowanie tabeli](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) , ale [nie będą już działać do sprawdzania poprawności jednostek w EF Core](https://github.com/dotnet/efcore/issues/3680) (żadna z metod <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType>), ponieważ zostały one wykonane od Ef 4. x w .NET Framework.
 
 Adnotacje danych i interfejs <xref:System.ComponentModel.DataAnnotations.IValidatableObject> nadal mogą być używane do walidacji modelu podczas powiązania modelu, przed wywołaniem akcji kontrolera w zwykły sposób, ale ten model ma być ViewModel lub DTO, a to nie jest problemem z modelem MVC lub INTERFEJSem domeny.
 
@@ -61,7 +61,7 @@ Po wyczyszczeniu różnicy pojęciowej można nadal używać adnotacji danych i 
 
 Nadal można zaimplementować niestandardowe sprawdzanie poprawności w klasie Entity przy użyciu adnotacji danych i metody `IValidatableObject.Validate`, zastępując metodę metody SaveChanges DbContext.
 
-Możesz zobaczyć przykładową implementację sprawdzania poprawności jednostek `IValidatableObject` w [tym komentarzu w serwisie GitHub](https://github.com/aspnet/EntityFrameworkCore/issues/3680#issuecomment-155502539). Ten przykład nie wykonuje walidacji opartych na atrybutach, ale powinien być łatwy do wdrożenia przy użyciu odbicia w tym samym przesłonięciu.
+Możesz zobaczyć przykładową implementację sprawdzania poprawności jednostek `IValidatableObject` w [tym komentarzu w serwisie GitHub](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539). Ten przykład nie wykonuje walidacji opartych na atrybutach, ale powinien być łatwy do wdrożenia przy użyciu odbicia w tym samym przesłonięciu.
 
 Jednak z punktu widzenia, model domeny najlepiej utrzymuje się oszczędne przy użyciu wyjątków w metodach zachowań jednostki lub implementując wzorce specyfikacji i powiadomień w celu wymuszenia reguł walidacji.
 

@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: b57741ed68b3481ad2c85b1c3d62717f09c7570e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: efb57b4290825be9f21c61c8dee5af073d264d3a
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971586"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899692"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Opracowywanie aplikacji ASP.NET Core MVC
 
@@ -239,7 +239,7 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 ASP.NET Core MVC używa również Konwencji do lokalizowania widoków. Można zastąpić go Konwencją niestandardową, aby widoki znajdowały się w folderach funkcji (przy użyciu nazwy funkcji dostarczonej przez FeatureConvention). Aby dowiedzieć się więcej na temat tego podejścia i pobrać przykład roboczy z artykułu MSDN, [wycinki funkcji dla ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
 
-### <a name="cross-cutting-concerns"></a>Zagadnienia dotyczące wycinania
+### <a name="cross-cutting-concerns"></a>Zagadnienia ogólne
 
 Po rozbudowywaniu aplikacji coraz bardziej ważne jest, aby wyeliminować problemy związane z wycinaniem i zachować spójność. Niektóre przykłady zagadnień związanych z obcinaniem w aplikacjach ASP.NET Core to uwierzytelnianie, reguły walidacji modelu, buforowanie danych wyjściowych i obsługa błędów, chociaż istnieje wiele innych. ASP.NET Core [filtry](/aspnet/core/mvc/controllers/filters) MVC umożliwiają uruchamianie kodu przed określonymi krokami w potoku przetwarzania żądań lub po nich. Na przykład filtr może zostać uruchomiony przed i po powiązaniu modelu, przed i po akcji lub przed i po wyniku akcji. Można również użyć filtru autoryzacji, aby kontrolować dostęp do reszty potoku. Ilustracje 7-2 pokazuje, w jaki sposób przepływają żądania wykonania przez filtry, jeśli są skonfigurowane.
 
@@ -395,7 +395,7 @@ public IActionResult ExecutiveSalaryReport()
 
 Korzystając z zasad w ten sposób, można oddzielić rodzaje akcji, które są ograniczone z określonych ról lub reguł, które mają zastosowanie. Później, jeśli utworzysz nową rolę, która musi mieć dostęp do określonych zasobów, można po prostu zaktualizować zasady, zamiast aktualizować każdą listę ról na każdej \[Autoryzuj atrybut\].
 
-#### <a name="claims"></a>oświadczeń
+#### <a name="claims"></a>Oświadczenia
 
 Oświadczenia są parami wartości nazw, które reprezentują właściwości uwierzytelnionego użytkownika. Na przykład użytkownik może przechowywać numer pracownika jako roszczeń. Oświadczenia mogą być następnie używane jako część zasad autoryzacji. Można utworzyć zasady o nazwie "EmployeeOnly", które wymagają istnienia żądania o nazwie "EmployeeNumber", jak pokazano w poniższym przykładzie:
 
@@ -436,7 +436,7 @@ Należy zwrócić szczególną uwagę na "wycofywanie własnych" implementacji k
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **Wprowadzenie do autoryzacji**  
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
-> - **Uwierzytelnianie i autoryzacja API Apps w Azure App Service**  
+> - **Uwierzytelnianie i autoryzacja dla usługi API Apps w usłudze Azure App Service**  
 >   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 > - **Serwer tożsamości**  
 >   <https://github.com/IdentityServer>
@@ -500,7 +500,7 @@ Rozważ sposoby, w których aplikacje komunikują się bezpośrednio z aplikacja
 > ### <a name="references--client-communication"></a>Odwołania — komunikacja z klientem
 >
 > - **ASP.NET Core sygnalizujący**  
->   <https://github.com/aspnet/SignalR>
+>   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
 > - **Menedżer obiektów WebSocket**  
 >   https://github.com/radu-matei/websocket-manager
 
@@ -553,7 +553,7 @@ Podejście hybrydowe będzie używać DDD tylko dla transakcyjnych lub bardziej 
 > - **DDD w zwykłym języku angielskim (odpowiedź StackOverflow)**  
 >   <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
-## <a name="deployment"></a>wdrażania
+## <a name="deployment"></a>Wdrażanie
 
 W procesie wdrażania aplikacji ASP.NET Core należy wykonać kilka kroków, bez względu na to, gdzie będzie ona hostowana. Pierwszym krokiem jest opublikowanie aplikacji, którą można wykonać przy użyciu dotnet publish interfejsu wiersza polecenia. Spowoduje to skompilowanie aplikacji i umieszczenie wszystkich plików wymaganych do uruchomienia aplikacji w wydzielonym folderze. W przypadku wdrażania z programu Visual Studio ten krok jest wykonywany automatycznie. Folder publikowania zawiera pliki. exe i. dll dla aplikacji i jej zależności. Aplikacja samodzielna zawiera również wersję środowiska uruchomieniowego .NET. Aplikacje ASP.NET Core zawierają również pliki konfiguracji, statyczne zasoby klienta i widoki MVC.
 
@@ -583,7 +583,7 @@ Jeśli aplikacja jest obsługiwana na platformie Azure, można użyć Applicatio
 
 - Routing między lokacjami (konsolidowanie do 20 lokacji na jednym Application Gateway)
 
-- Zapora aplikacji sieci Web
+- Zapora aplikacji internetowej
 
 - Obsługa protokołu WebSocket
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c6ff45fc-905d-4c6e-b00c-97c6c7c55d99
 topic_type:
 - apiref
-ms.openlocfilehash: 553acc178bc5805b5afef5931fefc8ad74cbac39
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e5821abed4d6c7f7595bad3240ab86d5a128d794
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135171"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901147"
 ---
 # <a name="iclrstrongnamegethashfromfilew-method"></a>ICLRStrongName::GetHashFromFileW — Metoda
 Generuje skrót do zawartości pliku określonego przez ciąg Unicode.  
@@ -42,7 +42,7 @@ HRESULT GetHashFromFileW (
  podczas Nazwa Unicode pliku do skrótu.  
   
  `piHashAlg`  
- [in. out] Algorytm, który ma być używany podczas generowania skrótu. Prawidłowymi algorytmami są te zdefiniowane przez interfejs CryptoAPI Win32. Jeśli `piHashAlg` jest ustawiona na 0, zostanie użyty domyślny algorytm CALG_SHA-1.  
+ [in. out] Algorytm, który ma być używany podczas generowania skrótu. Prawidłowymi algorytmami są te zdefiniowane przez interfejs CryptoAPI Win32. Jeśli wartość `piHashAlg` jest równa 0, używany jest algorytm domyślny CALG_SHA-1.  
   
  `pbHash`  
  określoną Tablica bajtowa zawierająca wygenerowany skrót.  
@@ -53,8 +53,8 @@ HRESULT GetHashFromFileW (
  `pchHash`  
  określoną Rozmiar w bajtach `pbHash`.  
   
-## <a name="return-value"></a>Wartość zwracana  
- `S_OK`, jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
+## <a name="return-value"></a>Wartość zwrócona  
+ `S_OK`, jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
   
 ## <a name="remarks"></a>Uwagi  
  Ta metoda jest taka sama jak Metoda [ICLRStrongName:: GetHashFromFile —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) , z tą różnicą, że Specyfikacja nazwy pliku jest Unicode zamiast ANSI.  

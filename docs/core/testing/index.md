@@ -4,12 +4,12 @@ description: Ten artykuł zawiera krótkie omówienie testów jednostkowych dla 
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 776a430868c7a4829e11a2958fb998c11315c43d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 41f4457e636ca495b78109803ca66680e72d007e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714295"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899888"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Testy jednostkowe w .NET Core i .NET Standard
 
@@ -28,7 +28,7 @@ Posiadanie zautomatyzowanych testów to doskonały sposób, aby upewnić się, �
 Należy również pamiętać o najlepszych rozwiązaniach dotyczących pisania testów. Na przykład [programowanie sterowane testami (TDD)](https://deviq.com/test-driven-development/) to gdy test jednostkowy jest zapisywana przed kodem, który ma zostać sprawdzona. TDD przypomina Tworzenie konspektu dla książki, zanim zapiszemy ją. Jest to pomocne, aby deweloperzy mogli pisać łatwiejszy, czytelny i wydajny kod. 
 
 > [!NOTE]
-> Zespół ASP.NET stosuje [te konwencje](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests) , aby ułatwić deweloperom tworzenie dobrych nazw dla klas i metod testowych.
+> Zespół ASP.NET stosuje [te konwencje](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests) , aby ułatwić deweloperom tworzenie dobrych nazw dla klas i metod testowych.
 
 Nie należy wprowadzać zależności od infrastruktury podczas pisania testów jednostkowych. Te testy są powolne i kruchy i powinny być zarezerwowane dla testów integracji. Można uniknąć tych zależności w aplikacji, postępując zgodnie z [zasadami jawnych zależności](https://deviq.com/explicit-dependencies-principle/) i przy użyciu [iniekcji zależności](/aspnet/core/fundamentals/dependency-injection). Możesz również utrzymać testy jednostkowe w osobnym projekcie od testów integracji. Gwarantuje to, że projekt testu jednostkowego nie zawiera odwołań do pakietów infrastruktury ani ich zależności.
 

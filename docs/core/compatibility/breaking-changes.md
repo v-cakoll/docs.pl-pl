@@ -2,12 +2,12 @@
 title: Podstawowe zmiany w programie .NET Core
 description: Dowiedz się więcej o istotnych zmianach w każdej wersji platformy .NET Core.
 ms.date: 11/27/2019
-ms.openlocfilehash: 3e1b2a7d0edea1c06af340711182e533aa007c61
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8bd8ebc803a80069530fe1cf6adc66769f7d6c85
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343723"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900157"
 ---
 # <a name="breaking-change-selectors"></a>Selektory zmiany przerywania
 
@@ -34,7 +34,7 @@ Można również wyświetlić poszczególne problemy, które opisują istotne zm
 
 - W przypadku platformy .NET Core, repozytorium [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change) .
 - Dla ASP.NET Core, repozytorium [ASPNET/anonsów](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) .
-- W przypadku Entity Framework Core repozytorium [ASPNET/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) .
+- W przypadku Entity Framework Core, repozytorium [dotnet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) .
 
 ## <a name="see-also"></a>Zobacz także
 

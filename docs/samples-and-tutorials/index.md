@@ -4,12 +4,12 @@ description: Informacje na temat przykładów i samouczków dotyczących platfor
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 5132415a6be03787111aaed8d027d436bb6820fe
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.openlocfilehash: e64d0fdd02b28a1c9f21f06305f5ef278fb2827b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884439"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901036"
 ---
 # <a name="net-samples-and-tutorials"></a>Przykłady i samouczki dotyczące platformy .NET
 
@@ -107,7 +107,7 @@ Wiele tematów pokazuje kod źródłowy i przykłady, które są dostępne do wy
 
 1. Pobierz repozytorium zawierające przykładowy kod, wykonując jedną z następujących procedur:
    * Pobierz plik ZIP repozytorium do systemu lokalnego. Cofnij kod ZIP skompresowanego archiwum.
-   * [Rozwidlenie](https://help.github.com/articles/fork-a-repo/) repozytorium i [klonowanie](https://help.github.com/articles/cloning-a-repository/) rozwidlenia do systemu lokalnego. Rozwidlenie i klonowanie pozwala na wprowadzanie wkładu do dokumentacji przez zatwierdzanie zmian w rozwidleniu, a następnie Tworzenie żądania ściągnięcia dla oficjalnego repozytorium dokumentów. Aby uzyskać więcej informacji, zobacz [Przewodnik dotyczący dokumentacji platformy .NET](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) i podręcznika [ASP.NET docs](https://github.com/aspnet/Docs/blob/master/CONTRIBUTING.md).
+   * [Rozwidlenie](https://help.github.com/articles/fork-a-repo/) repozytorium i [klonowanie](https://help.github.com/articles/cloning-a-repository/) rozwidlenia do systemu lokalnego. Rozwidlenie i klonowanie pozwala na wprowadzanie wkładu do dokumentacji przez zatwierdzanie zmian w rozwidleniu, a następnie Tworzenie żądania ściągnięcia dla oficjalnego repozytorium dokumentów. Aby uzyskać więcej informacji, zobacz Przewodnik dotyczący [dokumentacji programu .NET](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) i Podręcznik dotyczący [ASP.NET Core dokumentów](https://github.com/aspnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md).
    * Sklonuj repozytorium lokalnie. W przypadku sklonowania repozytorium dokumentów bezpośrednio do systemu lokalnego nie będzie można wprowadzać zatwierdzeń bezpośrednio do oficjalnego repozytorium, więc nie będzie można później wprowadzać wkładów do dokumentacji. Użyj opisanej wcześniej procedury rozwidlenia i klonowania, jeśli chcesz zachować możliwość późniejszego współtworzenia do dokumentacji.
 1. Nawigowanie w folderach repozytorium do lokalizacji przykładowej. Ścieżka względna do lokalizacji przykładu pojawia się na pasku adresu przeglądarki, gdy użyjesz linku do przykładu.
 1. Aby uruchomić przykład, masz kilka opcji:

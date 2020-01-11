@@ -5,14 +5,14 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 5b4541b527559ee05c9b97d84324e9e70599a014
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 382683f8b8500a2235a2d610a67119cf9a7fc301
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977377"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900700"
 ---
-# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Samouczek: Tworzenie zalecenia dotyczącego filmu przy użyciu factorizaton macierzy z ML.NET
+# <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>Samouczek: Tworzenie zalecenia dotyczącego filmu przy użyciu factorization macierzy z ML.NET
 
 W tym samouczku przedstawiono sposób tworzenia zalecenia dotyczącego filmu z ML.NET w aplikacji konsolowej .NET Core. Kroki używają C# i programu Visual Studio 2019.
 
@@ -52,7 +52,7 @@ Istnieje kilka sposobów podejścia do problemów z zaleceniami, takich jak zale
 
 2. Utwórz katalog o nazwie *dane* w projekcie w celu zapisania zestawu danych:
 
-    W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt, a następnie wybierz pozycję **Dodaj**  > **Nowy folder**. Wpisz "Data" i naciśnij klawisz ENTER.
+    W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt, a następnie wybierz pozycję **Dodaj** > **Nowy folder**. Wpisz "Data" i naciśnij klawisz ENTER.
 
 3. Zainstaluj pakiety NuGet **Microsoft.ml** i **Microsoft. ml. zalecenia** :
 
@@ -62,7 +62,7 @@ Istnieje kilka sposobów podejścia do problemów z zaleceniami, takich jak zale
 
     [!code-csharp[UsingStatements](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#UsingStatements "Add necessary usings")]
 
-### <a name="download-your-data"></a>Pobieranie danych
+### <a name="download-your-data"></a>Pobierz swoje dane
 
 1. Pobierz dwa zestawy danych i Zapisz je w utworzonym wcześniej folderze *danych* :
 
@@ -94,7 +94,7 @@ W plikach \*. csv znajdują się cztery kolumny:
 
 W obszarze Uczenie maszynowe kolumny, które są używane do prognozowania, są nazywane [funkcjami](../resources/glossary.md#feature), a kolumna z zwróconym przewidywaniam nazywa się [etykietą](../resources/glossary.md#label).
 
-Chcesz przewidzieć klasyfikację filmów, aby kolumna Rating była `Label`. Pozostałe trzy kolumny, `userId`, `movieId` i `timestamp` są `Features` używane do przewidywania `Label`.
+Chcesz przewidzieć klasyfikację filmów, aby kolumna Rating była `Label`. Pozostałe trzy kolumny, `userId`, `movieId`i `timestamp` są `Features` używane do przewidywania `Label`.
 
 | Funkcje      | Etykieta         |
 | ------------- |:-------------:|
@@ -141,7 +141,7 @@ W *program.cs*zastąp `Console.WriteLine("Hello World!")` następującym kodem w
 
 [Klasa MLContext](xref:Microsoft.ML.MLContext) jest punktem początkowym dla wszystkich operacji ml.NET, a inicjowanie `mlContext` tworzy nowe środowisko ml.NET, które może być współużytkowane przez obiekty przepływu pracy tworzenia modelu. Jest to podobne, pojęciowo, aby `DBContext` w Entity Framework.
 
-Po `Main()` Utwórz metodę o nazwie `LoadData()`:
+Po `Main()`Utwórz metodę o nazwie `LoadData()`:
 
 ```csharp
 public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
@@ -197,9 +197,9 @@ Zdefiniuj przekształcenia danych, dodając następujący kod do `BuildAndTrainM
 
 [!code-csharp[DataTransformations](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#DataTransformations "Define data transformations")]
 
-Ponieważ `userId` i `movieId` reprezentują użytkowników i tytuły filmów, a nie wartości rzeczywiste, należy użyć metody [MapValueToKey ()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) do przekształcenia poszczególnych `userId` i poszczególnych `movieId` w typ klucza numerycznego `Feature` kolumny (format akceptowany przez algorytmy rekomendacji) i Dodaj je jako nowe kolumny zestawu danych:
+Ponieważ `userId` i `movieId` reprezentują użytkowników i tytuły filmów, a nie wartości rzeczywiste, należy użyć metody [MapValueToKey ()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) do przekształcenia poszczególnych `userId` i poszczególnych `movieId` w typ klucza numerycznego `Feature` kolumny (format akceptowany przez algorytmy rekomendacji) i dodać je jako nowe kolumny zestawu danych:
 
-| Nazwa | movieId | Etykieta | userIdEncoded | movieIdEncoded |
+| userId | movieId | Etykieta | userIdEncoded | movieIdEncoded |
 | ------------- |:-------------:| -----:|-----:|-----:|
 | 1 | 1 | 4 | userKey1 | movieKey1 |
 | 1 | 3 | 4 | userKey1 | movieKey2 |
@@ -220,7 +220,7 @@ Na przykład jeśli użytkownik 1 i użytkownik 2 oceniają szybkość filmów w
 | Użytkownik 1 | Film obserwowany i Niemnie | Film obserwowany i Niemnie | Film obserwowany i Niemnie |
 | Użytkownik 2 | Film obserwowany i Niemnie | Film obserwowany i Niemnie | Nie został obserwowany — ZALECAnym filmem |
 
-`Matrix Factorization` Trainer ma kilka [opcji](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options), które można dowiedzieć się więcej na temat w sekcji Moje [parametry algorytmu](#algorithm-hyperparameters) poniżej.
+Trainer ma kilka [opcji](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options), które można dowiedzieć się więcej o w poniższej sekcji [preparameters Algorithm](#algorithm-hyperparameters). `Matrix Factorization`
 
 Dopasuj model do danych `Train` i zwróć przeszkolony model, dodając następujący kod jako następny wiersz kodu w metodzie `BuildAndTrainModel()`:
 
@@ -232,7 +232,7 @@ Dodaj następujący kod jako następny wiersz kodu w metodzie `Main()`, aby wywo
 
 [!code-csharp[BuildTrainModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#BuildTrainModelMain "Add BuildAndTrainModel method in Main")]
 
-## <a name="evaluate-your-model"></a>Oceń model
+## <a name="evaluate-your-model"></a>Ocenianie modelu
 
 Po przeprowadzeniu szkolenia modelu Użyj danych testowych, aby oszacować, jak działa model.
 
@@ -331,7 +331,7 @@ Utwórz wystąpienie `MovieRating` o nazwie `testInput` i przekaż je do aparatu
 
 Funkcja [przewidywania ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) dokonuje prognozowania dla pojedynczej kolumny danych.
 
-Następnie można użyć `Score` lub klasyfikacji przewidywanej, aby określić, czy chcesz zalecić film z movieId 10 do użytkownika 6. Im wyższa wartość `Score`, tym większe prawdopodobieństwo, że użytkownik przydzieli określony film. W tym przypadku Załóżmy, że zaleca się używanie filmów z przewidywaną klasyfikacją > 3,5.
+Następnie można użyć `Score`lub klasyfikacji przewidywanej, aby określić, czy chcesz zalecić film z movieId 10 do użytkownika 6. Im wyższa wartość `Score`, tym większe prawdopodobieństwo, że użytkownik przydzieli określony film. W tym przypadku Załóżmy, że zaleca się używanie filmów z przewidywaną klasyfikacją > 3,5.
 
 Aby wydrukować wyniki, Dodaj następujący kod jako następny wiersz kodu w metodzie `UseModelForSinglePrediction()`:
 
@@ -410,7 +410,7 @@ Movie 10 is recommended for user 6
 =============== Saving the model to a file ===============
 ```
 
-Nabycia! Pomyślnie skompilowano model uczenia maszynowego na potrzeby zalecanych filmów. Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) .
+Gratulacje! Pomyślnie skompilowano model uczenia maszynowego na potrzeby zalecanych filmów. Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) .
 
 ## <a name="improve-your-model"></a>Ulepszanie modelu
 
@@ -424,7 +424,7 @@ Dodanie więcej danych szkoleniowych, które mają wystarczającą ilość prób
 
 ### <a name="features"></a>Funkcje
 
-W tym samouczku używane są tylko trzy `Features` (`user id`, `movie id` i `rating`), które są udostępniane przez zestaw danych.
+W tym samouczku używane są tylko trzy `Features` (`user id`, `movie id`i `rating`), które są udostępniane przez zestaw danych.
 
 Chociaż jest to dobry początek, w rzeczywistości warto dodać inne atrybuty lub `Features` (na przykład wiek, płeć, lokalizację geograficzną itp.), jeśli są one zawarte w zestawie danych. Dodanie bardziej odpowiednich `Features` może pomóc w ulepszaniu wydajności modelu rekomendacji.
 
@@ -434,7 +434,7 @@ Jeśli nie masz pewności, które `Features` mogą być najbardziej odpowiednie 
 
 Chociaż ML.NET zapewnia dobre domyślne algorytmy szkoleniowe, można dokładniej dostosować wydajność przez zmianę [parametrów](../resources/glossary.md#hyperparameter)algorytmu.
 
-W przypadku `Matrix Factorization` można eksperymentować z parametrami, takimi jak [NumberOfIterations](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options.NumberOfIterations) i [ApproximationRank](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options.ApproximationRank) , aby sprawdzić, czy daje on lepsze wyniki.
+W przypadku `Matrix Factorization`można eksperymentować z parametrami, takimi jak [NumberOfIterations](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options.NumberOfIterations) i [ApproximationRank](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options.ApproximationRank) , aby sprawdzić, czy daje on lepsze wyniki.
 
 Na przykład w tym samouczku są dostępne następujące opcje algorytmu:
 
@@ -468,7 +468,7 @@ Dane używane w tym samouczku pochodzą z [zestawu danych MovieLens](http://file
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
+W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
 >
@@ -480,4 +480,4 @@ W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
 
 Przejdź do następnego samouczka, aby dowiedzieć się więcej
 > [!div class="nextstepaction"]
-> [analiza tonacji](sentiment-analysis.md)
+> [Analiza tonacji](sentiment-analysis.md)

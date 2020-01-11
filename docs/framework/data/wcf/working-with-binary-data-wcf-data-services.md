@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 9a09908a2a998d5da739b28aefda3d5aecdc08e0
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: aa3e58d559121aaca401e7b851a4b4fd8e7753cd
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568737"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900842"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Praca z danymi binarnymi (Usługi danych programu WCF)
 
@@ -26,7 +26,7 @@ Biblioteka klienta Usługi danych programu WCF umożliwia pobieranie i aktualizo
 Usługi danych programu WCF implementuje przesyłanie strumieniowe danych binarnych przy użyciu protokołu HTTP zgodnie z definicją w protokole OData. W tym mechanizmie dane binarne są traktowane jako zasób multimedialny, który jest oddzielony od, ale związany z jednostką, która jest nazywana wpisem multimediów. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](streaming-provider-wcf-data-services.md).
 
 > [!TIP]
-> Aby zapoznać się z przykładem krok po kroku, jak utworzyć aplikację kliencką Windows Presentation Foundation (WPF), która pobiera pliki obrazów binarnych z usługi OData, która przechowuje zdjęcia, zobacz wpis [Data Services dostawcy przesyłania strumieniowego — część 2: uzyskiwanie dostępu do strumienia zasobów multimediów z klienta](https://go.microsoft.com/fwlink/?LinkId=201637)programu. Aby pobrać przykładowy kod dla oferty usługi przesyłania strumieniowego strumienia w blogu, zobacz [przykład przesyłania strumieniowego usługi danych zdjęć](https://go.microsoft.com/fwlink/?LinkId=198988) w witrynie MSDN Gallery.
+> Aby zapoznać się z przykładem krok po kroku, jak utworzyć aplikację kliencką Windows Presentation Foundation (WPF), która pobiera pliki obrazów binarnych z usługi OData, która przechowuje zdjęcia, zobacz wpis [Data Services dostawcy przesyłania strumieniowego — część 2: uzyskiwanie dostępu do strumienia zasobów multimediów z klienta](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)programu. Aby pobrać przykładowy kod dla usługi Stream Data Service polecanej w blogu, zobacz [przykład usługi przesyłania strumieniowego Streaming](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample) w witrynie GitHub.
 
 ## <a name="entity-metadata"></a>Metadane jednostki
 
@@ -34,14 +34,14 @@ Jednostka, która ma powiązany strumień zasobów multimediów, jest wskazywany
 
 [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]
 
-Pozostałe przykłady w tym temacie pokazują, jak uzyskać dostęp do strumienia zasobów multimediów i zmienić go. Aby zapoznać się z kompletnym przykładem użycia strumienia zasobów multimediów w .NET Framework aplikacji klienckiej przy użyciu biblioteki klienta Usługi danych programu WCF, zobacz temat Wysyłanie [dostępu do strumienia zasobów multimediów z klienta](https://go.microsoft.com/fwlink/?LinkID=201637).
+Pozostałe przykłady w tym temacie pokazują, jak uzyskać dostęp do strumienia zasobów multimediów i zmienić go. Aby zapoznać się z kompletnym przykładem użycia strumienia zasobów multimediów w .NET Framework aplikacji klienckiej przy użyciu biblioteki klienta Usługi danych programu WCF, zobacz temat Wysyłanie [dostępu do strumienia zasobów multimediów z klienta](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client).
 
 ## <a name="accessing-the-binary-resource-stream"></a>Uzyskiwanie dostępu do strumienia zasobów binarnych
 
 Biblioteka klienta Usługi danych programu WCF zapewnia metody uzyskiwania dostępu do strumieni zasobów binarnych z usługi danych opartych na protokole OData. Podczas pobierania zasobu multimedialnego można użyć identyfikatora URI zasobu multimedialnego lub uzyskać strumień binarny, który zawiera same dane zasobów multimedialnych. Możesz również przekazać dane zasobów multimedialnych jako strumień binarny.
 
 > [!TIP]
-> Aby zapoznać się z przykładem krok po kroku, jak utworzyć aplikację kliencką Windows Presentation Foundation (WPF), która pobiera pliki obrazów binarnych z usługi OData, która przechowuje zdjęcia, zobacz wpis [Data Services dostawcy przesyłania strumieniowego — część 2: uzyskiwanie dostępu do strumienia zasobów multimediów z klienta](https://go.microsoft.com/fwlink/?LinkId=201637)programu. Aby pobrać przykładowy kod dla oferty usługi przesyłania strumieniowego strumienia w blogu, zobacz [przykład przesyłania strumieniowego usługi danych zdjęć](https://go.microsoft.com/fwlink/?LinkId=198988) w witrynie MSDN Gallery.
+> Aby zapoznać się z przykładem krok po kroku, jak utworzyć aplikację kliencką Windows Presentation Foundation (WPF), która pobiera pliki obrazów binarnych z usługi OData, która przechowuje zdjęcia, zobacz wpis [Data Services dostawcy przesyłania strumieniowego — część 2: uzyskiwanie dostępu do strumienia zasobów multimediów z klienta](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)programu. Aby pobrać przykładowy kod dla usługi Stream Data Service polecanej w blogu, zobacz [przykład usługi przesyłania strumieniowego Streaming](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample) w witrynie GitHub.
 
 ### <a name="getting-the-uri-of-the-binary-stream"></a>Pobieranie identyfikatora URI strumienia binarnego
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4f2ace670884d154b219d2146a242d2cee098831
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f6fd75c5b49156f44d31c650ea452eb549f13b0e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344315"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901743"
 ---
 ### <a name="mvc-jsonresult-moved-to-microsoftaspnetcoremvccore"></a>MVC: JsonResult przeniesiony do Microsoft. AspNetCore. MVC. Core
 
@@ -26,7 +26,7 @@ Kompilacja nie powiedzie się w aplikacji korzystającej z biblioteki opartej na
 The type 'JsonResult' exists in both 'Microsoft.AspNetCore.Mvc.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' and 'Microsoft.AspNetCore.Mvc.Formatters.Json, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
 ```
 
-Przykład takiego problemu można znaleźć w temacie [ASPNET/AspNetCore # 7220](https://github.com/aspnet/AspNetCore/issues/7220).
+Przykład takiego problemu można znaleźć w temacie [dotnet/aspnetcore # 7220](https://github.com/dotnet/aspnetcore/issues/7220).
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 89af89d3580fd1396335a0cd8964b46c13d7637e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0c88d40e34d2d6458bb463a09d716dea42b711fe
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344286"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901662"
 ---
 ### <a name="authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters"></a>Autoryzacja: Usunięto IAllowAnonymous z AuthorizationFilterContext. filters
 
@@ -37,7 +37,7 @@ if (endpoint?.Metadata?.GetMetadata<IAllowAnonymous>() != null)
 }
 ```
 
-Przykład tej techniki jest widoczny w [tej metodzie HasAllowAnonymous](https://github.com/aspnet/AspNetCore/blob/bd65275148abc9b07a3b59797a88d485341152bf/src/Mvc/Mvc.Core/src/Authorization/AuthorizeFilter.cs#L236).
+Przykład tej techniki jest widoczny w [tej metodzie HasAllowAnonymous](https://github.com/dotnet/aspnetcore/blob/bd65275148abc9b07a3b59797a88d485341152bf/src/Mvc/Mvc.Core/src/Authorization/AuthorizeFilter.cs#L236).
 
 #### <a name="category"></a>Kategoria
 

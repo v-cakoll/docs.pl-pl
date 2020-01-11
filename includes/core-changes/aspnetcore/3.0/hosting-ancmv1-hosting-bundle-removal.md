@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 04e5ca41374fc333a31f0422bc2e89f54b3cb049
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 82103d82a6f68c62f3532608718bc71b0ba126bf
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394295"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901582"
 ---
 ### <a name="hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle"></a>Hosting: AspNetCoreModule V1 został usunięty z pakietu hostingu systemu Windows
 
@@ -12,7 +12,7 @@ Począwszy od ASP.NET Core 3,0, pakiet hostingu systemu Windows nie będzie zawi
 
 ANCM v2 jest zgodna z poprzednimi wersjami ANCM OutOfProcess i jest zalecane do użycia z aplikacjami ASP.NET Core 3,0.
 
-W przypadku dyskusji zobacz [ASPNET/AspNetCore # 7095](https://github.com/aspnet/AspNetCore/issues/7095).
+Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 7095](https://github.com/dotnet/aspnetcore/issues/7095).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -30,7 +30,7 @@ ANCM V1 nie jest uwzględniony w pakiecie hostingu systemu Windows.
 
 ANCM v2 jest zgodna z poprzednimi wersjami ANCM OutOfProcess i jest zalecane do użycia z aplikacjami ASP.NET Core 3,0.
 
-#### <a name="recommended-action"></a>Zalecana akcja
+#### <a name="recommended-action"></a>Zalecane działanie
 
 Używaj ANCM v2 z aplikacjami ASP.NET Core 3,0.
 
@@ -38,7 +38,7 @@ Jeśli ANCM v1 jest wymagany, można go zainstalować przy użyciu pakietu hosti
 
 Ta zmiana spowoduje przerwanie ASP.NET Core aplikacji 3,0, które:
 
-- Jawnie wybrane do użycia ANCM V1 z `<AspNetCoreModuleName>AspNetCoreModule</AspNetCoreModuleName>`.
+- Jawnie wybrana opcja korzystania z ANCM V1 z `<AspNetCoreModuleName>AspNetCoreModule</AspNetCoreModuleName>`.
 - Mieć niestandardowy plik *Web. config* z `<add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModule" resourceType="Unspecified" />`.
 
 #### <a name="category"></a>Kategoria

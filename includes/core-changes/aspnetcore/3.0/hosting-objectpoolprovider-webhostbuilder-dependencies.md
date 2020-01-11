@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 16b9fde49f513643a37f65f3e926a34fc991c55a
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 4d99d0b6e99a7a9b976cf11832b33ad3bdc6d299
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393928"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901616"
 ---
 ### <a name="hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies"></a>Hosting: ObjectPoolProvider usunięte z zależności WebHostBuilder
 
-W ramach wprowadzania ASP.NET Core więcej opłat za odtwarzanie, `ObjectPoolProvider` został usunięty z głównego zestawu zależności. Określone składniki polegające na `ObjectPoolProvider` teraz dodają go.
+W ramach wprowadzania ASP.NET Core więcej opłat za odtwarzanie, `ObjectPoolProvider` został usunięty z głównego zestawu zależności. Poszczególne składniki opierają się na `ObjectPoolProvider` teraz dodają sam siebie.
 
-W przypadku dyskusji zobacz [ASPNET/AspNetCore # 5944](https://github.com/aspnet/AspNetCore/issues/5944).
+Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 5944](https://github.com/dotnet/aspnetcore/issues/5944).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -18,19 +18,19 @@ W przypadku dyskusji zobacz [ASPNET/AspNetCore # 5944](https://github.com/aspnet
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-`WebHostBuilder` domyślnie zapewnia `ObjectPoolProvider` w kontenerze DI.
+`WebHostBuilder` zapewnia `ObjectPoolProvider` domyślnie w kontenerze DI.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-`WebHostBuilder` nie zapewnia już domyślnie `ObjectPoolProvider` w kontenerze DI.
+`WebHostBuilder` nie zapewnia już `ObjectPoolProvider` domyślnie w kontenerze DI.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
 Ta zmiana została wprowadzona, aby ASP.NET Core więcej opłat za odtwarzanie.
 
-#### <a name="recommended-action"></a>Zalecana akcja
+#### <a name="recommended-action"></a>Zalecane działanie
 
-Jeśli składnik wymaga `ObjectPoolProvider`, należy go dodać do zależności za pośrednictwem `IServiceCollection`.
+Jeśli składnik wymaga `ObjectPoolProvider`, należy dodać go do swoich zależności za pośrednictwem `IServiceCollection`.
 
 #### <a name="category"></a>Kategoria
 

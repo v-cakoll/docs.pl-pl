@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: b0d093cc30a09b3248cc57a521b386bf581b5451
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 02602c70689a6d2729e03d3d7230cda5ae7a4994
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552159"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901698"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: zmiana SameSite w przeglądarce wpływa na uwierzytelnianie
 
 Niektóre przeglądarki, takie jak Chrome i Firefox, wprowadzają istotne zmiany w implementacjach `SameSite` plików cookie. Zmiany mają wpływ na scenariusze uwierzytelniania zdalnego, takie jak OpenID Connect Connect i WS-Federation, które muszą zrezygnować z wysyłania `SameSite=None`. Jednak `SameSite=None` przerwy w systemie iOS 12 i starszych wersjach innych przeglądarek. Aplikacja musi wyrównać te wersje i pominąć `SameSite`.
 
-Aby zapoznać się z omówieniem tego problemu, zobacz [ASPNET/AspNetCore # 14996](https://github.com/aspnet/AspNetCore/issues/14996).
+Aby zapoznać się z omówieniem tego problemu, zobacz [dotnet/aspnetcore # 14996](https://github.com/dotnet/aspnetcore/issues/14996).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 

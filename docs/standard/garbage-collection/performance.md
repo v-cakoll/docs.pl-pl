@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974761"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900582"
 ---
 # <a name="garbage-collection-and-performance"></a>Odzyskiwanie pamięci i wydajność
 
@@ -133,7 +133,7 @@ Fragmentacja zawsze występuje w stercie dużego obiektu, ponieważ nie jest kom
 
 Fragmentacja może stać się problemem w przypadku generacji 1 i generacji 2. Jeśli te generacje mają dużą ilość wolnego miejsca po wyrzucaniu elementów bezużytecznych, użycie obiektu aplikacji może wymagać modyfikacji i należy rozważyć ponowne obliczenie okresu istnienia długoterminowych obiektów.
 
-Nadmierne Przypinanie obiektów może zwiększyć fragmentację. Jeśli fragmentacja jest wysoka, zbyt wiele obiektów może być przypiętych.
+Nadmierne Przypinanie obiektów może zwiększyć fragmentację. Jeśli fragmentacja jest wysoka, zbyt wiele obiektów mogło być przypięty.
 
 Jeśli fragmentacja pamięci wirtualnej uniemożliwia dodanie segmentów przez moduł wyrzucania elementów bezużytecznych, przyczyny mogą być następujące:
 
@@ -209,7 +209,7 @@ Jeśli nie korzystasz z profilera, konieczne będzie ustanowienie spójnego wzor
 
 - Jeśli miara jest mierzona bezpośrednio przed wyrzucaniem elementów bezużytecznych, po rozpoczęciu wyrzucania elementów bezużytecznych należy mierzyć możliwie tyle przydziału.
 
-- Pomiar podczas wyrzucania elementów bezużytecznych jest problematyczny, ponieważ struktury danych modułu wyrzucania elementów bezużytecznych są w nieprawidłowym stanie do przechodzenia i mogą nie być w stanie uzyskać pełnych wyników. Jest to zaprojektowane.
+- Pomiar podczas wyrzucania elementów bezużytecznych jest problematyczny, ponieważ struktury danych modułu wyrzucania elementów bezużytecznych są w nieprawidłowym stanie do przechodzenia i mogą nie być w stanie uzyskać pełnych wyników. To jest celowe.
 
 - W przypadku korzystania z wyrzucania elementów bezużytecznych stacji roboczej z współbieżnym wyrzucaniem elementów bezużytecznych obiekty odzyskiwane nie są kompaktne, dzięki czemu rozmiar sterty może być taki sam lub większy (fragmentacja może sprawiać, że jest większa).
 
@@ -297,7 +297,7 @@ W tej sekcji opisano następujące procedury umożliwiające odizolowanie przycz
 
 2. Jeśli dane wyjściowe nie określają wyjątku, należy określić, z którego wątku jest wykonywany wyjątek braku pamięci. Wpisz następujące polecenie w debugerze, aby pokazać wszystkie wątki ze stosami wywołań:
 
-    **~\*KB**
+    **~\*kb**
 
     Wątek ze stosem, który zawiera wywołania wyjątku jest wskazywany przez argument `RaiseTheException`. Jest to obiekt wyjątku zarządzanego.
 
@@ -327,7 +327,7 @@ W tej sekcji opisano następujące procedury umożliwiające odizolowanie przycz
 
   W tym przykładzie rozmiar największego wolnego regionu wynosi około 24000 KB (3A980 w formacie szesnastkowym). Ten region jest znacznie mniejszy niż to, co wymagają Moduł wyrzucania elementów bezużytecznych dla segmentu.
 
-  —lub—
+  lub
 
 - Użyj **vmstat** polecenia:
 
@@ -713,7 +713,7 @@ W tej sekcji opisano następujące procedury umożliwiające odizolowanie przycz
 
 - W debugerze WinDbg lub Visual Studio z załadowanym rozszerzeniem debuggera SOS wpisz następujące polecenie, aby wyświetlić wszystkie wątki z stosami wywołań:
 
-  **~\*KB**
+  **~\*kb**
 
   To polecenie wyświetla dane wyjściowe podobne do poniższego.
 

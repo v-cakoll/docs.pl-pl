@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 8e68d2dbb13d226ba738bdf8455418c9e771d6a6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733152"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900592"
 ---
 # <a name="assemblies-in-net"></a>Zestawy w środowisku .NET
 
@@ -43,7 +43,7 @@ Zestawy zapewniają środowisko uruchomieniowe języka wspólnego z informacjami
 
 Zestaw definiuje następujące informacje:
 
-- Kod wykonywany przez środowisko uruchomieniowe języka wspólnego. Należy pamiętać, że każdy zestaw może mieć tylko jeden punkt wejścia: `DllMain`, `WinMain` lub `Main`.
+- Kod wykonywany przez środowisko uruchomieniowe języka wspólnego. Należy pamiętać, że każdy zestaw może mieć tylko jeden punkt wejścia: `DllMain`, `WinMain`lub `Main`.
 
 - Granica zabezpieczeń. Zestaw jest jednostką, w której uprawnienia są żądane i udzielane. Aby uzyskać więcej informacji na temat granic zabezpieczeń w zestawach, zobacz [zagadnienia dotyczące zabezpieczeń zestawów](security-considerations.md).
 
@@ -85,7 +85,7 @@ Ponieważ zestawy zawierają informacje o zawartości, wersji i zależnościach,
 Aby użyć zestawu w aplikacji, należy dodać do niego odwołanie. Po przywoływaniu zestawu wszystkie dostępne typy, właściwości, metody i inne elementy członkowskie jego przestrzeni nazw są dostępne dla aplikacji, tak jakby ich kod był częścią pliku źródłowego.
 
 > [!NOTE]
-> Większość zestawów z biblioteki klas .NET jest przywoływana automatycznie. Jeśli zestaw systemowy nie jest automatycznie przywoływany, w przypadku platformy .NET Core można dodać odwołanie do pakietu NuGet, który zawiera zestaw. Użyj Menedżera pakietów NuGet w programie Visual Studio lub Dodaj [\<PackageReference element >](../../core/tools/dependencies.md#the-new-packagereference-element) dla zestawu do projektu *. csproj* lub *. vbproj* . W .NET Framework można dodać odwołanie do zestawu przy użyciu okna dialogowego **Dodawanie odwołania** w programie Visual Studio lub za pomocą `-reference` opcji wiersza polecenia dla kompilatorów [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) lub [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) .
+> Większość zestawów z biblioteki klas .NET jest przywoływana automatycznie. Jeśli zestaw systemowy nie jest automatycznie przywoływany, w przypadku platformy .NET Core można dodać odwołanie do pakietu NuGet, który zawiera zestaw. Użyj Menedżera pakietów NuGet w programie Visual Studio lub Dodaj element [\<PackageReference >](../../core/tools/dependencies.md#the-new-packagereference-element) dla zestawu do projektu *. csproj* lub *. vbproj* . W .NET Framework można dodać odwołanie do zestawu przy użyciu okna dialogowego **Dodawanie odwołania** w programie Visual Studio lub za pomocą `-reference` opcji wiersza polecenia dla kompilatorów [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) lub [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) .
 
 W C#programie można użyć dwóch wersji tego samego zestawu w pojedynczej aplikacji. Aby uzyskać więcej informacji, zobacz [alias zewnętrzny](../../csharp/language-reference/keywords/extern-alias.md).
 
@@ -111,7 +111,6 @@ W C#programie można użyć dwóch wersji tego samego zestawu w pojedynczej apli
 ## <a name="see-also"></a>Zobacz także
 
 - [Format pliku zestawu .NET](file-format.md)
-- [Zestawy w środowisku .NET](index.md)
 - [Zaprzyjaźnione zestawy](friend.md)
 - [Zestawy odwołań](reference-assemblies.md)
 - [Instrukcje: ładowanie i zwalnianie zestawów](load-unload.md)

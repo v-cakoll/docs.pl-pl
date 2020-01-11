@@ -10,16 +10,16 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 03fa40a895d322a8b5ad543f75424ef5b379672b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 764ea6a77ba267e691d48bc72d17c02f6b3c18ca
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568901"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900972"
 ---
 # <a name="query-projections-wcf-data-services"></a>Projekcje zapytań (Usługi danych programu WCF)
 
-Projekcja zapewnia mechanizm w protokole Open Data Protocol (OData), aby zmniejszyć ilość danych w kanale informacyjnym zwracanym przez zapytanie, określając, że tylko niektóre właściwości jednostki są zwracane w odpowiedzi. Aby uzyskać więcej informacji, zobacz Usługa [OData: SELECT system Query Option ($Select)](https://go.microsoft.com/fwlink/?LinkId=186076).
+Projekcja zapewnia mechanizm w protokole Open Data Protocol (OData), aby zmniejszyć ilość danych w kanale informacyjnym zwracanym przez zapytanie, określając, że tylko niektóre właściwości jednostki są zwracane w odpowiedzi. Aby uzyskać więcej informacji, zobacz sekcję 4,8. Wybierz opcję kwerendy systemowej ($select) w [konwencjach identyfikatorów URI (OData w wersji 2,0)](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
 
 W tym temacie opisano, jak zdefiniować projekcję zapytania, jakie są wymagania dotyczące jednostek i typów niezwiązanych z jednostkami, wprowadzać aktualizacje przewidywanych wyników, tworzyć projekcje typy i wymieniać niektóre zagadnienia dotyczące projekcji.
 

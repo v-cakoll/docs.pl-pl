@@ -9,12 +9,12 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 41f1d1f0ca04dff0faa9eb070882f845ef4827d2
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: f6ff9cf732e11bbf61eeb7e5cff3f1cba2b744e6
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568960"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900986"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Uwagi dotyczące LINQ (Usługi danych programu WCF)
 Ten temat zawiera informacje na temat sposobu tworzenia i wykonywania zapytań LINQ, gdy używasz klienta Usługi danych programu WCF i ograniczenia przy użyciu LINQ do wysyłania zapytań do usługi danych implementującej protokół Open Data Protocol (OData). Aby uzyskać więcej informacji o tworzeniu i wykonywaniu zapytań dotyczących usługi danych opartych na protokole OData, zobacz [wykonywanie zapytań do usługi danych](querying-the-data-service-wcf-data-services.md).  
@@ -156,7 +156,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 ## <a name="unsupported-linq-methods"></a>Nieobsługiwane metody LINQ  
  Poniższa tabela zawiera klasy metod LINQ, które nie są obsługiwane i nie mogą być uwzględniane w zapytaniach wykonywanych względem usługi OData:  
   
-|Typ operacji|Nieobsługiwana Metoda|  
+|Typ operacji|Nieobsługiwanej metody|  
 |--------------------|------------------------|  
 |Ustaw operatory|Wszystkie operatory zestawów są nieobsługiwane w przypadku <xref:System.Data.Services.Client.DataServiceQuery%601>, które obejmują następujące elementy:<br /><br /> -   <xref:System.Linq.Enumerable.All%2A><br />-   <xref:System.Linq.Enumerable.Any%2A><br />-   <xref:System.Linq.Enumerable.Concat%2A><br />-   <xref:System.Linq.Enumerable.DefaultIfEmpty%2A><br />-   <xref:System.Linq.Enumerable.Distinct%2A><br />-   <xref:System.Linq.Enumerable.Except%2A><br />-   <xref:System.Linq.Enumerable.Intersect%2A><br />-   <xref:System.Linq.Enumerable.Union%2A><br />-   <xref:System.Linq.Enumerable.Zip%2A>|  
 |Operatory porządkowania|Następujące operatory porządkowania, które wymagają <xref:System.Collections.Generic.IComparer%601> są nieobsługiwane w przypadku <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> -   <xref:System.Linq.Enumerable.OrderBy%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%2CSystem.Collections.Generic.IComparer%7B%60%601%7D%29><br />-   <xref:System.Linq.Enumerable.OrderByDescending%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%2CSystem.Collections.Generic.IComparer%7B%60%601%7D%29><br />-   <xref:System.Linq.Enumerable.ThenBy%60%602%28System.Linq.IOrderedEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%2CSystem.Collections.Generic.IComparer%7B%60%601%7D%29><br />-   <xref:System.Linq.Enumerable.ThenByDescending%60%602%28System.Linq.IOrderedEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%2CSystem.Collections.Generic.IComparer%7B%60%601%7D%29>|  
@@ -164,7 +164,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |Operatory grupowania|Wszystkie operatory grupowania nie są obsługiwane w przypadku <xref:System.Data.Services.Client.DataServiceQuery%601>, w tym następujących:<br /><br /> -   <xref:System.Linq.Enumerable.GroupBy%2A><br />-   <xref:System.Linq.Enumerable.GroupJoin%2A><br /><br /> Na kliencie należy wykonać operacje grupowania.|  
 |Operatory agregujące|Wszystkie operacje agregujące nie są obsługiwane w odniesieniu do <xref:System.Data.Services.Client.DataServiceQuery%601>, w tym następujących:<br /><br /> -   <xref:System.Linq.Enumerable.Aggregate%2A><br />-   <xref:System.Linq.Enumerable.Average%2A><br />-   <xref:System.Linq.Enumerable.Count%2A><br />-   <xref:System.Linq.Enumerable.LongCount%2A><br />-   <xref:System.Linq.Enumerable.Max%2A><br />-   <xref:System.Linq.Enumerable.Min%2A><br />-   <xref:System.Linq.Enumerable.Sum%2A><br /><br /> Operacje agregujące muszą być wykonywane na kliencie lub być hermetyzowane przez operację usługi.|  
 |Operatory stronicowania|Następujące operatory stronicowania nie są obsługiwane w przypadku <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A> **Uwaga:** operatory stronicowania wykonywane na pustej sekwencji zwracają wartość null.|  
-|Inne operatory|Następujące inne operatory nie są obsługiwane w odniesieniu do <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> 1. <xref:System.Linq.Enumerable.Empty%2A><br />2. <xref:System.Linq.Enumerable.Range%2A><br />3. <xref:System.Linq.Enumerable.Repeat%2A><br />4. <xref:System.Linq.Enumerable.ToDictionary%2A><br />5. <xref:System.Linq.Enumerable.ToLookup%2A>|  
+|Inne operatory|Następujące inne operatory nie są obsługiwane w odniesieniu do <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> 1.  <xref:System.Linq.Enumerable.Empty%2A><br />2.  <xref:System.Linq.Enumerable.Range%2A><br />3.  <xref:System.Linq.Enumerable.Repeat%2A><br />4.  <xref:System.Linq.Enumerable.ToDictionary%2A><br />5.  <xref:System.Linq.Enumerable.ToLookup%2A>|  
   
 <a name="supportedExpressions"></a>   
 ## <a name="supported-expression-functions"></a>Obsługiwane funkcje wyrażeń  
@@ -215,4 +215,4 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 - [Wykonywanie zapytań do usługi danych](querying-the-data-service-wcf-data-services.md)
 - [Projekcje zapytania](query-projections-wcf-data-services.md)
 - [Materializacja obiektu](object-materialization-wcf-data-services.md)
-- [OData: konwencje URI](https://go.microsoft.com/fwlink/?LinkID=185564)
+- [OData: konwencje URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)

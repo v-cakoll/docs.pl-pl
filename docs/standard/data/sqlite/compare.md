@@ -2,12 +2,12 @@
 title: Porównanie z System. Data. SQLite
 ms.date: 12/13/2019
 description: W tym artykule opisano niektóre różnice między bibliotekami Microsoft. Data. sqlite i system. Data. SQLite.
-ms.openlocfilehash: dee90c132b108f2c876c0d8becc1b02035a47b61
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 076bbc6f746cf9296c96ec73047397a21a3b2558
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447021"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900713"
 ---
 # <a name="comparison-to-systemdatasqlite"></a>Porównanie z System. Data. SQLite
 
@@ -57,21 +57,21 @@ Microsoft. Data. sqlite zawiera wiele słów kluczowych [parametrów połączeni
 | Maksymalna liczba stron   | Wyślij `PRAGMA max_page_count = <pages>`              |
 | Rozmiar strony        | Wyślij `PRAGMA page_size = <bytes>`                   |
 | Tylko do odczytu        | Użyj `Mode=ReadOnly`                                 |
-| Synchroniczne      | Wyślij `PRAGMA synchronous = <mode>`                  |
+| Synchroniczny      | Wyślij `PRAGMA synchronous = <mode>`                  |
 | URI              | Użyj słowa kluczowego źródła danych                         |
 | UseUTF16Encoding | Wyślij `PRAGMA encoding = 'UTF-16'`                   |
 
 ## <a name="authorization"></a>Autoryzacja
 
-Microsoft. Data. sqlite nie ma interfejsu API uwidaczniania wywołania zwrotnego autoryzacji oprogramowania SQLite. Użyj [#13835](https://github.com/aspnet/EntityFrameworkCore/issues/13835) problemu, aby przekazać opinię na temat tej funkcji.
+Microsoft. Data. sqlite nie ma interfejsu API uwidaczniania wywołania zwrotnego autoryzacji oprogramowania SQLite. Użyj [#13835](https://github.com/dotnet/efcore/issues/13835) problemu, aby przekazać opinię na temat tej funkcji.
 
 ## <a name="data-change-notifications"></a>Powiadomienia o zmianach danych
 
-Microsoft. Data. sqlite nie ma interfejsu API uwidaczniania powiadomień o zmianach danych oprogramowania SQLite. Użyj [#13827](https://github.com/aspnet/EntityFrameworkCore/issues/13827) problemu, aby przekazać opinię na temat tej funkcji.
+Microsoft. Data. sqlite nie ma interfejsu API uwidaczniania powiadomień o zmianach danych oprogramowania SQLite. Użyj [#13827](https://github.com/dotnet/efcore/issues/13827) problemu, aby przekazać opinię na temat tej funkcji.
 
 ## <a name="virtual-table-modules"></a>Moduły tabeli wirtualnej
 
-Microsoft. Data. sqlite nie ma żadnego interfejsu API do tworzenia modułów tabeli wirtualnej. Użyj [#13823](https://github.com/aspnet/EntityFrameworkCore/issues/13823) problemu, aby przekazać opinię na temat tej funkcji.
+Microsoft. Data. sqlite nie ma żadnego interfejsu API do tworzenia modułów tabeli wirtualnej. Użyj [#13823](https://github.com/dotnet/efcore/issues/13823) problemu, aby przekazać opinię na temat tej funkcji.
 
 ## <a name="see-also"></a>Zobacz także
 

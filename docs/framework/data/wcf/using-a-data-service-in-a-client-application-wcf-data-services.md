@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: 26fd25a268204ad2644a07b6a56967cc5d2df95e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 41d3af831ff3c99e7f3000593db52d307d37ac38
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568831"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900908"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Korzystanie z usługi danych w aplikacji klienckiej (Usługi danych programu WCF)
 Możesz uzyskać dostęp do usługi, która udostępnia kanał informacyjny protokołu Open Data Protocol (OData), dostarczając identyfikator URI do przeglądarki sieci Web. Identyfikator URI zapewnia adres zasobu, a komunikaty żądań są wysyłane na te adresy w celu uzyskania dostępu lub zmiany danych źródłowych, które reprezentuje zasób. Przeglądarka wysyła polecenie HTTP GET i zwraca żądany zasób jako źródło danych OData. Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do usługi z przeglądarki sieci Web](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -33,23 +33,23 @@ Możesz uzyskać dostęp do usługi, która udostępnia kanał informacyjny prot
   
 - **Scalanie http** — ze względu na nieefektywność wykonywania operacji usuwania, po której następuje wstawienie w źródle danych, aby zmienić dane jednostki, usługa OData wprowadza nową akcję scalania http. Ładunek komunikatu żądania zawiera właściwości, które należy zmienić w założonym zasobie jednostki. Ponieważ SCALAnie HTTP nie jest zdefiniowane w specyfikacji protokołu HTTP, może wymagać dodatkowego przetwarzania do kierowania żądania scalania HTTP za pośrednictwem serwerów nieobsługujących protokołu OData.  
   
- Aby uzyskać więcej informacji, zobacz [OData: Operations](https://go.microsoft.com/fwlink/?LinkId=185792).  
+ Aby uzyskać więcej informacji, zobacz [OData: Operations](https://www.odata.org/documentation/odata-version-2-0/operations/).
   
 ### <a name="payload-formats"></a>Formaty ładunku  
  W przypadku żądania HTTP PUT, POST HTTP lub HTTP, ładunek komunikatu żądania zawiera dane jednostki wysyłane do usługi danych. Zawartość ładunku zależy od formatu danych wiadomości. Odpowiedzi HTTP na wszystkie akcje z wyjątkiem usuwania również zawierają takie ładunki. Usługa OData obsługuje następujące formaty ładunków do uzyskiwania dostępu do danych i zmiany ich w usłudze:  
   
-- **Atom** — kodowanie komunikatów opartych na języku XML zdefiniowane przez funkcję OData jako rozszerzenie protokołu publikowania Atom (AtomPub) w celu umożliwienia wymiany danych za pośrednictwem protokołu HTTP dla kanałów informacyjnych sieci Web, podkastów, stron typu wiki i funkcji internetowych opartych na języku XML. Aby uzyskać więcej informacji, zobacz [Format OData: Atom](https://go.microsoft.com/fwlink/?LinkId=185794).  
+- **Atom** — kodowanie komunikatów opartych na języku XML zdefiniowane przez funkcję OData jako rozszerzenie protokołu publikowania Atom (AtomPub) w celu umożliwienia wymiany danych za pośrednictwem protokołu HTTP dla kanałów informacyjnych sieci Web, podkastów, stron typu wiki i funkcji internetowych opartych na języku XML. Aby uzyskać więcej informacji, zobacz [Format OData: Atom](https://www.odata.org/documentation/odata-version-2-0/atom-format/).
   
-- **JSON** -JavaScript Object Notation (JSON) jest lekkim formatem wymiany danych opartym na podzbiorze języka programowania JavaScript. Aby uzyskać więcej informacji, zobacz [Format OData: JSON](https://go.microsoft.com/fwlink/?LinkId=185795).  
+- **JSON** -JavaScript Object Notation (JSON) jest lekkim formatem wymiany danych opartym na podzbiorze języka programowania JavaScript. Aby uzyskać więcej informacji, zobacz [Format OData: JSON](https://www.odata.org/documentation/odata-version-2-0/json-format/).
   
- W nagłówku komunikatu żądania HTTP jest żądany format komunikatu ładunku. Aby uzyskać więcej informacji, zobacz [OData: Operations](https://go.microsoft.com/fwlink/?LinkID=185792).  
+ W nagłówku komunikatu żądania HTTP jest żądany format komunikatu ładunku. Aby uzyskać więcej informacji, zobacz [OData: Operations](https://www.odata.org/documentation/odata-version-2-0/operations/).
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>Uzyskiwanie dostępu do danych i zmiana ich przy użyciu bibliotek klienckich  
  Usługi danych programu WCF obejmuje biblioteki klienckie, które umożliwiają łatwiejsze korzystanie z kanału informacyjnego OData z .NET Framework i aplikacji klienckich opartych na technologii Silverlight. Te biblioteki upraszczają wysyłanie i otrzymywanie komunikatów HTTP. Tłumaczą one również ładunek komunikatów na obiekty CLR, które reprezentują dane jednostki. Biblioteki klienckie oferują dwie klasy podstawowe <xref:System.Data.Services.Client.DataServiceContext> i <xref:System.Data.Services.Client.DataServiceQuery%601>. Te klasy umożliwiają wykonywanie zapytań do usługi danych, a następnie współpracują z zwróconymi danymi jednostki jako obiektami CLR. Aby uzyskać więcej informacji, zobacz [usługi danych programu WCF biblioteki klienta](wcf-data-services-client-library.md) i [usługi danych programu WCF (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)).  
   
  Możesz użyć okna dialogowego **Dodaj odwołanie do usługi** w programie Visual Studio, aby dodać odwołanie do usługi danych. To narzędzie żąda metadanych usługi z usługi danych, której dotyczy odwołanie, i generuje <xref:System.Data.Services.Client.DataServiceContext>, która reprezentuje usługę danych, a także generuje klasy usługi danych klienta reprezentujące jednostki. Aby uzyskać więcej informacji, zobacz [generowanie biblioteki klienta usługi danych](generating-the-data-service-client-library-wcf-data-services.md).  
   
- Dostępne są biblioteki programistyczne, których można użyć do użycia źródła danych OData w innych rodzajach aplikacji klienckich. Aby uzyskać więcej informacji, zobacz [zestaw SDK OData](https://go.microsoft.com/fwlink/?LinkId=185796).  
+ Dostępne są biblioteki programistyczne, których można użyć do użycia źródła danych OData w innych rodzajach aplikacji klienckich. Aby uzyskać więcej informacji na temat zestawu OData SDK, zobacz [kod przykładowy usługi OData SDK](https://www.odata.org/ecosystem/#sdk).
   
 ## <a name="see-also"></a>Zobacz także
 

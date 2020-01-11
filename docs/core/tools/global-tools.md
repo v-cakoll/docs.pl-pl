@@ -3,12 +3,12 @@ title: Narzędzia globalne platformy .NET Core
 description: Omówienie narzędzi globalnych platformy .NET Core i dostępnych dla nich poleceń interfejs wiersza polecenia platformy .NET Core.
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.openlocfilehash: 665cee64cb92efd16f5528feb656b377f9f3283c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0df3c1b615adfeaaf41542dc8252a8f14f49f6f9
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714160"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899864"
 ---
 # <a name="net-core-global-tools-overview"></a>Globalne narzędzia platformy .NET Core — Omówienie
 
@@ -34,7 +34,7 @@ Obecnie nie istnieje funkcja globalnego wyszukiwania narzędzi w interfejsie wie
 
 * Narzędzia platformy .NET Core można znaleźć na platformie [NuGet](https://www.nuget.org). Jednak pakiet NuGet nie zezwala jeszcze na wyszukiwanie dla narzędzi globalnych platformy .NET Core.
 * Zalecenia dotyczące narzędzi można znaleźć w wpisach w blogu lub w repozytorium GitHub [natemcmaster/dotnet-Tools](https://github.com/natemcmaster/dotnet-tools) .
-* Kod źródłowy narzędzi globalnych utworzonych przez zespół ASP.NET można zobaczyć w repozytorium GitHub [/DotNetTools](https://github.com/aspnet/DotNetTools/) .
+* Kod źródłowy dla narzędzi globalnych utworzonych przez zespół ASP.NET można zobaczyć w repozytorium GitHub [/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) w programie dotnet.
 * Informacje o narzędziach diagnostycznych można znaleźć w [narzędziach diagnostycznych diagnostyki dotnet programu .NET Core](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).
 
 ## <a name="check-the-author-and-statistics"></a>Sprawdź autora i statystyki

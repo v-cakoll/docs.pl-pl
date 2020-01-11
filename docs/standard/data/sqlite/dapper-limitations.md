@@ -2,12 +2,12 @@
 title: Ograniczenia Dapper
 ms.date: 12/13/2019
 description: W tym artykule opisano niektóre z ograniczeń, które można napotkać podczas korzystania z programu Dapper.
-ms.openlocfilehash: 90c7fb24f068d663081390bdba9b1b222b4be56e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 396507f25f591a9ab5c3bb07c0af6fd8d175e4ea
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447280"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901210"
 ---
 # <a name="dapper-limitations"></a>Ograniczenia Dapper
 
@@ -15,7 +15,7 @@ Istnieje kilka ograniczeń, które należy wziąć pod uwagę podczas korzystani
 
 ## <a name="parameters"></a>Parametry
 
-W nazwach parametrów SQLite jest rozróżniana wielkość liter. Upewnij się, że nazwy parametrów używane w programie SQL pasują do wielkości liter we właściwościach obiektu anonimowego. Problem [#18861](https://github.com/aspnet/EntityFrameworkCore/issues/18861) poprawi to środowisko.
+W nazwach parametrów SQLite jest rozróżniana wielkość liter. Upewnij się, że nazwy parametrów używane w programie SQL pasują do wielkości liter we właściwościach obiektu anonimowego. Problem [#18861](https://github.com/dotnet/efcore/issues/18861) poprawi to środowisko.
 
 Dapper oczekuje również parametrów do użycia prefiksu `@`. Inne prefiksy nie będą działały.
 

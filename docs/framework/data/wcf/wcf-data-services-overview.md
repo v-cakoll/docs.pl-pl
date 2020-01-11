@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: b3feb2a22fc38c6a2d13d6802b94386d6f7841ac
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: a4121bb10de7bfe51c5fec6bc14a40ad4bdcdaf7
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568793"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900890"
 ---
 # <a name="wcf-data-services-overview"></a>Przegląd Usługi danych programu WCF
 Usługi danych programu WCF umożliwia tworzenie i użycie usług danych dla sieci Web lub intranet przy użyciu protokołu Open Data Protocol (OData). Usługa OData umożliwia Uwidacznianie danych jako zasobów, które są adresowane przez identyfikatory URI. Dzięki temu można uzyskać dostęp do danych i zmienić je przy użyciu semantyki przenoszonego transferu stanu (REST), w tym standardowych czasowników HTTP funkcji GET, PUT, POST i DELETE. Ten temat zawiera omówienie wzorców i praktyk zdefiniowanych przez usługi OData, a także funkcje zapewniane przez Usługi danych programu WCF, aby korzystać z protokołu OData w aplikacjach opartych na .NET Framework.  
@@ -25,7 +25,7 @@ Usługi danych programu WCF umożliwia tworzenie i użycie usług danych dla sie
 ## <a name="interoperable-data-access"></a>Dostęp do danych międzyoperacyjnych  
  Usługa OData kompiluje się w standardowych protokołach internetowych, aby zapewnić współdziałanie usług danych z aplikacjami, które nie używają .NET Framework. Ze względu na to, że można używać standardowych identyfikatorów URI do adresowania danych, aplikacja może uzyskiwać dostęp do danych i zmieniać je przy użyciu semantyki przenoszonego transferu Stanów (REST), w tym standardowych zleceń HTTP funkcji GET, PUT, POST i DELETE. Dzięki temu można uzyskać dostęp do tych usług z dowolnego klienta, który może analizować dane przesyłane za pośrednictwem standardowych protokołów HTTP i uzyskiwać do nich dostęp.  
   
- Usługa OData definiuje zestaw rozszerzeń protokołu publikowania Atom (AtomPub). Obsługuje żądania HTTP i odpowiedzi w więcej niż jednym formacie danych w celu uwzględnienia różnych aplikacji klienckich i platform. Źródło danych OData może reprezentować dane w formacie Atom, JavaScript Object Notation (JSON) i jako zwykły kod XML. Gdy Atom jest formatem domyślnym, format kanału informacyjnego jest określony w nagłówku żądania HTTP. Aby uzyskać więcej informacji, zobacz Format [OData: Atom](https://go.microsoft.com/fwlink/?LinkID=185794) i [OData: JSON](https://go.microsoft.com/fwlink/?LinkID=185795).  
+Usługa OData definiuje zestaw rozszerzeń protokołu publikowania Atom (AtomPub). Obsługuje żądania HTTP i odpowiedzi w więcej niż jednym formacie danych w celu uwzględnienia różnych aplikacji klienckich i platform. Źródło danych OData może reprezentować dane w formacie Atom, JavaScript Object Notation (JSON) i jako zwykły kod XML. Gdy Atom jest formatem domyślnym, format kanału informacyjnego jest określony w nagłówku żądania HTTP. Aby uzyskać więcej informacji, zobacz Format [OData: Atom](https://www.odata.org/documentation/odata-version-2-0/atom-format/) i [OData: JSON](https://www.odata.org/documentation/odata-version-2-0/json-format/).  
   
  Gdy dane są publikowane jako źródło danych OData, Usługi danych programu WCF opiera się na innych istniejących obiektach internetowych na potrzeby takich operacji jak buforowanie i uwierzytelnianie. Aby to osiągnąć, Usługi danych programu WCF integruje się z istniejącymi aplikacjami hostingu i usługami, takimi jak ASP.NET, Windows Communication Foundation (WCF) i Internet Information Services (IIS).  
   
@@ -48,7 +48,7 @@ Usługi danych programu WCF umożliwia tworzenie i użycie usług danych dla sie
   
  Usługi danych programu WCF obejmuje biblioteki klienckie zarówno dla aplikacji klienckich opartych na .NET Framework, jak i Silverlight. Te biblioteki klienckie umożliwiają współpracę z usługami danych przy użyciu obiektów .NET Framework. Obsługują one również zapytania oparte na obiektach i zapytania LINQ, ładujące powiązane obiekty, śledzenie zmian i rozpoznawanie tożsamości. Aby uzyskać więcej informacji, zobacz [usługi danych programu WCF Biblioteka kliencka](wcf-data-services-client-library.md).  
   
- Oprócz bibliotek klienckich OData zawartych w .NET Framework i z technologią Silverlight istnieją inne biblioteki klienckie umożliwiające korzystanie z kanału informacyjnego OData w aplikacjach klienckich, takich jak aplikacje PHP, AJAX i Java. Aby uzyskać więcej informacji, zobacz [zestaw SDK OData](https://go.microsoft.com/fwlink/?LinkID=185796).  
+ Oprócz bibliotek klienckich OData zawartych w .NET Framework i z technologią Silverlight istnieją inne biblioteki klienckie umożliwiające korzystanie z kanału informacyjnego OData w aplikacjach klienckich, takich jak aplikacje PHP, AJAX i Java. Aby uzyskać więcej informacji na temat zestawu OData SDK, zobacz [kod przykładowy usługi OData SDK](https://www.odata.org/ecosystem/#sdk).
   
 ## <a name="architecture-overview"></a>Omówienie architektury  
  Na poniższym diagramie przedstawiono architekturę Usługi danych programu WCF do udostępniania źródeł danych OData i korzystania z tych źródeł w bibliotekach klienta z obsługą protokołu OData:  
@@ -62,4 +62,4 @@ Usługi danych programu WCF umożliwia tworzenie i użycie usług danych dla sie
 - [Definiowanie usług danych WCF](defining-wcf-data-services.md)
 - [Uzyskiwanie dostępu do zasobów usługi danych (Usługi danych programu WCF)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
 - [Biblioteka klienta usług danych WCF](wcf-data-services-client-library.md)
-- [Przenoszenie stanu reprezentacji (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)
+- [Przenoszenie stanu reprezentacji (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)

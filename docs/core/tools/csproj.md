@@ -2,12 +2,12 @@
 title: Dodatki do formatu csproj dla platformy .NET Core
 description: Dowiedz się więcej o różnicach między istniejącymi a plikami csproj programu .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 4ce9227839a610308071c36185b63db8b1ee86ed
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 4a05709da63c4f6a200039ba5dd59358c700130e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739293"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899880"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -15,7 +15,7 @@ Ten dokument zawiera opis zmian, które zostały dodane do plików projektu w ra
 
 ## <a name="implicit-package-references"></a>Odwołania do pakietów niejawnych
 
-Elementy pakietu są niejawnie przywoływane na podstawie platform docelowych określonych we właściwości `<TargetFramework>` lub `<TargetFrameworks>` pliku projektu. `<TargetFrameworks>` jest ignorowany, jeśli określono `<TargetFramework>` niezależnie od kolejności. Aby uzyskać więcej informacji, zobacz [pakiety, aplikacje i struktury](../packages.md). 
+Elementy pakietu są niejawnie przywoływane na podstawie platform docelowych określonych we właściwości `<TargetFramework>` lub `<TargetFrameworks>` pliku projektu. `<TargetFrameworks>` jest ignorowany, jeśli określono `<TargetFramework>`, niezależnie od kolejności. Aby uzyskać więcej informacji, zobacz [pakiety, aplikacje i struktury](../packages.md). 
 
 ```xml
  <PropertyGroup>
@@ -29,23 +29,23 @@ Elementy pakietu są niejawnie przywoływane na podstawie platform docelowych ok
  </PropertyGroup>
  ```
 
-### <a name="recommendations"></a>Mając
+### <a name="recommendations"></a>Zalecenia
 
-Ponieważ do `Microsoft.NETCore.App` lub `NETStandard.Library` pakiety są niejawnie przywoływane, zalecane są następujące najlepsze rozwiązania:
+Ponieważ `Microsoft.NETCore.App` lub `NETStandard.Library` są niejawnie przywoływane, zalecane są następujące najlepsze rozwiązania:
 
 - W przypadku określania wartości docelowej .NET Core lub .NET Standard nigdy nie ma jawnego odwołania do `Microsoft.NETCore.App` lub `NETStandard.Library` `<PackageReference>` pakietów w pliku projektu.
 - Jeśli potrzebna jest określona wersja środowiska uruchomieniowego w przypadku określania wartości docelowej .NET Core, należy użyć właściwości `<RuntimeFrameworkVersion>` w projekcie (na przykład `1.0.4`) zamiast odwoływać się do pakietu.
   - Taka sytuacja może wystąpić, jeśli używasz [własnych wdrożeń](../deploying/index.md#self-contained-deployments-scd) i potrzebujesz określonej wersji poprawki środowiska uruchomieniowego 1.0.0 LTS, na przykład.
-- Jeśli potrzebujesz określonej wersji `NETStandard.Library` pakietu dla elementu docelowego .NET Standard, możesz użyć właściwości `<NetStandardImplicitPackageVersion>` i ustawić wymaganą wersję.
-- Nie należy jawnie dodawać ani aktualizować odwołań do pakietu "`Microsoft.NETCore.App`" lub `NETStandard.Library` w projektach .NET Framework. Jeśli dowolna wersja `NETStandard.Library` jest wymagana podczas korzystania z pakietu NuGet opartego na .NET Standard, pakiet NuGet automatycznie zainstaluje tę wersję.
+- Jeśli potrzebujesz konkretnej wersji `NETStandard.Library` pakietu .NET Standard, możesz użyć właściwości `<NetStandardImplicitPackageVersion>` i ustawić potrzebną wersję.
+- Nie należy jawnie dodawać ani aktualizować odwołań do `Microsoft.NETCore.App` lub `NETStandard.Library` pakietu w projektach .NET Framework. Jeśli dowolna wersja `NETStandard.Library` jest wymagana podczas korzystania z pakietu NuGet opartego na .NET Standard, pakiet NuGet automatycznie zainstaluje tę wersję.
 
 ## <a name="implicit-version-for-some-package-references"></a>Niejawna wersja dla niektórych odwołań do pakietów
 
-Większość użycia [`<PackageReference>`](#packagereference) wymaga ustawienia atrybutu `Version`, aby określić wersję pakietu NuGet do użycia. W przypadku korzystania z platformy .NET Core 2,1 lub 2,2 i odwoływania się do [Microsoft. AspNetCore. app](/aspnet/core/fundamentals/metapackage-app) lub [Microsoft. AspNetCore. All](/aspnet/core/fundamentals/metapackage), jednak atrybut jest zbędny. Zestaw .NET Core SDK może automatycznie wybrać wersję tych pakietów, które mają być używane.
+Większość zastosowań [`<PackageReference>`](#packagereference) wymaga ustawienia atrybutu `Version`, aby określić wersję pakietu NuGet do użycia. W przypadku korzystania z platformy .NET Core 2,1 lub 2,2 i odwoływania się do [Microsoft. AspNetCore. app](/aspnet/core/fundamentals/metapackage-app) lub [Microsoft. AspNetCore. All](/aspnet/core/fundamentals/metapackage), jednak atrybut jest zbędny. Zestaw .NET Core SDK może automatycznie wybrać wersję tych pakietów, które mają być używane.
 
-### <a name="recommendation"></a>Zaleca
+### <a name="recommendation"></a>Zalecenie
 
-W przypadku odwoływania się do pakietów `Microsoft.AspNetCore.App` lub `Microsoft.AspNetCore.All` nie należy określać ich wersji. Jeśli określona jest wersja, zestaw SDK może generować ostrzeżenie NETSDK1071. Aby usunąć to ostrzeżenie, Usuń wersję pakietu, taką jak w poniższym przykładzie:
+W przypadku odwoływania się do `Microsoft.AspNetCore.App` lub `Microsoft.AspNetCore.All`, nie należy określać ich wersji. Jeśli określona jest wersja, zestaw SDK może generować ostrzeżenie NETSDK1071. Aby usunąć to ostrzeżenie, Usuń wersję pakietu, taką jak w poniższym przykładzie:
 
 ```xml
 <ItemGroup>
@@ -72,9 +72,9 @@ W poniższej tabeli przedstawiono, który element i które [elementy globalne](h
 
 | Element           | Uwzględnij globalizowania                              | Wyklucz globalizowania                                                  | Usuń globalizowania              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
-| Opracowania           | \* \* / \*. cs (lub inne rozszerzenia językowe) | \* \* / \*. User;   \* \* / \*. \*proj;   \* 0 1 2. sln;   3 4 5 6. VSSSCC  | Brak                      |
-| EmbeddedResource  | \* \* / \*. resx                              | \* \* / \*. User;  \* \* / \*. \*proj;  \* 0 1 2. sln;  3 4 5 6. VSSSCC     | Brak                      |
-| Brak              | \*\*/\*                                   | \* \* / \*. User;  \* \* / \*. \*proj;  \* 0 1 2. sln;  3 4 5 6. VSSSCC     | \* \* / \*. cs;  \* \* / \*. resx   |
+| Kompilacji           | \*\*/\*. cs (lub inne rozszerzenia językowe) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/D                      |
+| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/D                      |
+| Brak              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*. cs; \*\*/\*. resx   |
 
 > [!NOTE]
 > Właściwość **exclude globalizowania** zawsze wyklucza foldery `./bin` i `./obj`, które są reprezentowane odpowiednio przez `$(BaseOutputPath)` i `$(BaseIntermediateOutputPath)` właściwości programu MSBuild. Jako całość wszystkie wykluczenia są reprezentowane przez `$(DefaultItemExcludes)`.
@@ -83,7 +83,7 @@ Jeśli masz elementy globalne w projekcie i spróbujesz skompilować go przy uż
 
 > Uwzględniono zduplikowane elementy kompilacji. Zestaw SDK platformy .NET domyślnie zawiera elementy kompilacji z katalogu projektu. Możesz usunąć te elementy z pliku projektu lub ustawić właściwość "EnableDefaultCompileItems" na wartość "false", jeśli chcesz jawnie uwzględnić je w pliku projektu.
 
-Aby obejść ten błąd, można usunąć jawne elementy `Compile`, które pasują do tych wymienionych w poprzedniej tabeli, lub ustawić właściwość `<EnableDefaultCompileItems>` na `false` w następujący sposób:
+Aby obejść ten błąd, można usunąć jawne `Compile` elementy, które pasują do tych wymienionych w poprzedniej tabeli, lub ustawić właściwość `<EnableDefaultCompileItems>` na `false`w następujący sposób:
 
 ```xml
 <PropertyGroup>
@@ -93,9 +93,9 @@ Aby obejść ten błąd, można usunąć jawne elementy `Compile`, które pasuj�
 
 Ustawienie tej właściwości na `false` spowoduje wyłączenie niejawnego dołączania, przywrócenie do zachowania poprzednich zestawów SDK, gdzie należy określić domyślny elementy globalne w projekcie.
 
-Ta zmiana nie modyfikuje głównej Mechanics innych dołączeń. Jeśli jednak chcesz określić, na przykład niektóre pliki do opublikowania w aplikacji, możesz nadal używać znanych mechanizmów w *csproj* dla tego (na przykład elementu `<Content>`).
+Ta zmiana nie modyfikuje głównej Mechanics innych dołączeń. Jeśli jednak chcesz określić, na przykład niektóre pliki do opublikowania w aplikacji, możesz nadal używać znanych mechanizmów w *csproj* dla tego (na przykład `<Content>` elementu).
 
-`<EnableDefaultCompileItems>` wyłącza tylko `Compile` elementy globalne, ale nie wpływa na inne elementy globalne, takie jak niejawne `None` globalizowania, które również dotyczy elementów \*.cs. Z tego powodu **Eksplorator rozwiązań** będzie kontynuować wyświetlanie elementów \*.cs jako części projektu, zawartych jako elementy `None`. W podobny sposób można ustawić `<EnableDefaultNoneItems>` na wartość false, aby wyłączyć niejawne `None` globalizowania, takie jak:
+`<EnableDefaultCompileItems>` wyłącza tylko `Compile` elementy globalne, ale nie wpływa na inne elementy globalne, takie jak niejawne `None` globalizowania, które także dotyczą elementów \*. cs. Z tego powodu **Eksplorator rozwiązań** będzie kontynuować wyświetlanie elementów \*. cs jako części projektu, zawartych jako elementy `None`. W podobny sposób można ustawić `<EnableDefaultNoneItems>` na wartość false, aby wyłączyć niejawne `None` globalizowania, takie jak:
 
 ```xml
 <PropertyGroup>
@@ -103,7 +103,7 @@ Ta zmiana nie modyfikuje głównej Mechanics innych dołączeń. Jeśli jednak c
 </PropertyGroup>
 ```
 
-Aby wyłączyć **wszystkie niejawne elementy globalne**, można ustawić właściwość `<EnableDefaultItems>` na `false`, jak w poniższym przykładzie:
+Aby wyłączyć **wszystkie niejawne elementy globalne**, można ustawić właściwość `<EnableDefaultItems>` na `false` tak jak w poniższym przykładzie:
 
 ```xml
 <PropertyGroup>
@@ -113,7 +113,7 @@ Aby wyłączyć **wszystkie niejawne elementy globalne**, można ustawić właś
 
 ## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a>Jak wyświetlić cały projekt, gdy jest on widoczny dla MSBuild
 
-Chociaż te csproj zmieniają znacznie uproszczenie plików projektu, warto zobaczyć w pełni rozwinięty projekt, ponieważ program MSBuild zobaczy go po dołączeniu zestawu SDK i jego obiektów docelowych. Przetwórz wstępnie projekt przy użyciu [przełącznika `/pp`](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) polecenia [`dotnet msbuild`](dotnet-msbuild.md) , które pokazuje, które pliki są importowane, ich źródła i ich wkłady do kompilacji bez faktycznego kompilowania projektu:
+Chociaż te csproj zmieniają znacznie uproszczenie plików projektu, warto zobaczyć w pełni rozwinięty projekt, ponieważ program MSBuild zobaczy go po dołączeniu zestawu SDK i jego obiektów docelowych. Przetwórz wstępnie projekt przy użyciu [przełącznika `/pp`](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) polecenia [`dotnet msbuild`](dotnet-msbuild.md) , który pokazuje, które pliki są importowane, ich źródła i ich wkłady do kompilacji bez faktycznego kompilowania projektu:
 
 `dotnet msbuild -pp:fullproject.xml`
 
@@ -125,19 +125,19 @@ Jeśli projekt ma wiele platform docelowych, wyniki polecenia powinny być skonc
 
 ### <a name="sdk-attribute"></a>Atrybut zestawu SDK
 
-Element główny `<Project>` pliku *. csproj* ma nowy atrybut o nazwie `Sdk`. `Sdk` Określa, który zestaw SDK będzie używany przez projekt. Zestaw SDK, zgodnie z opisem w dokumencie zawierającym [warstwy](cli-msbuild-architecture.md) , to zestaw [zadań](/visualstudio/msbuild/msbuild-tasks) i [elementów docelowych](/visualstudio/msbuild/msbuild-targets) programu MSBuild, które mogą kompilować kod platformy .NET Core. Dostępne są następujące zestawy SDK dla platformy .NET Core:
+Element główny `<Project>` pliku *. csproj* ma nowy atrybut o nazwie `Sdk`. `Sdk` określa, który zestaw SDK będzie używany przez projekt. Zestaw SDK, zgodnie z opisem w dokumencie zawierającym [warstwy](cli-msbuild-architecture.md) , to zestaw [zadań](/visualstudio/msbuild/msbuild-tasks) i [elementów docelowych](/visualstudio/msbuild/msbuild-targets) programu MSBuild, które mogą kompilować kod platformy .NET Core. Dostępne są następujące zestawy SDK dla platformy .NET Core:
 
-1. Zestaw .NET Core SDK o IDENTYFIKATORze `Microsoft.NET.Sdk`
-2. Zestaw SDK sieci Web platformy .NET Core o IDENTYFIKATORze `Microsoft.NET.Sdk.Web`
+1. Zestaw .NET Core SDK z IDENTYFIKATORem `Microsoft.NET.Sdk`
+2. Zestaw SDK sieci Web platformy .NET Core z IDENTYFIKATORem `Microsoft.NET.Sdk.Web`
 3. Zestaw SDK biblioteki klas programu .NET Core z IDENTYFIKATORem `Microsoft.NET.Sdk.Razor`
-4. Usługa programu .NET Core Worker o IDENTYFIKATORze `Microsoft.NET.Sdk.Worker` (od platformy .NET Core 3,0)
-5. Podstawowe WinForms i WPF platformy .NET o IDENTYFIKATORze `Microsoft.NET.Sdk.WindowsDesktop` (od platformy .NET Core 3,0)
+4. Usługa programu .NET Core Worker o IDENTYFIKATORze `Microsoft.NET.Sdk.Worker` (od programu .NET Core 3,0)
+5. Kontrolki WinForms i WPF platformy .NET Core z IDENTYFIKATORem `Microsoft.NET.Sdk.WindowsDesktop` (od platformy .NET Core 3,0)
 
 Aby można było użyć narzędzi .NET Core i skompilować kod, należy mieć atrybut `Sdk` ustawiony na jeden z tych `<Project>` identyfikatorów.
 
 ### <a name="packagereference"></a>PackageReference
 
-Element `<PackageReference>` Określa [zależność NuGet w projekcie](/nuget/consume-packages/package-references-in-project-files). Atrybut `Include` Określa identyfikator pakietu.
+Element `<PackageReference>` Item określa [zależność NuGet w projekcie](/nuget/consume-packages/package-references-in-project-files). Atrybut `Include` określa identyfikator pakietu.
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
@@ -149,23 +149,23 @@ Wymagany atrybut `Version` określa wersję pakietu do przywrócenia. Ten atrybu
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets i PrivateAssets
 
-atrybut `IncludeAssets` Określa, które zasoby należące do pakietu określonego przez `<PackageReference>` powinny być używane. Domyślnie są uwzględniane wszystkie zasoby pakietu.
+atrybut `IncludeAssets` określa, które zasoby należące do pakietu określonego przez `<PackageReference>` powinny być używane. Domyślnie są uwzględniane wszystkie zasoby pakietu.
 
-atrybut `ExcludeAssets` Określa, które zasoby należące do pakietu określonego przez `<PackageReference>` nie powinny być używane.
+atrybut `ExcludeAssets` określa, które zasoby należące do pakietu określonego przez `<PackageReference>` nie powinny być używane.
 
-atrybut `PrivateAssets` Określa, które zasoby należące do pakietu określonego przez `<PackageReference>` powinny być używane, ale nie można ich przepływać do następnego projektu. Elementy `Analyzers`, `Build` i `ContentFiles` są domyślnie prywatne, gdy ten atrybut nie jest obecny.
+atrybut `PrivateAssets` określa, które zasoby należące do pakietu określonego przez `<PackageReference>` powinny być używane, ale nie można ich przepływać do następnego projektu. Elementy `Analyzers`, `Build` i `ContentFiles` są domyślnie prywatne, gdy ten atrybut nie jest obecny.
 
 > [!NOTE]
-> `PrivateAssets` jest odpowiednikiem elementu *Project. json*/*xproj* `SuppressParent`.
+> `PrivateAssets` jest odpowiednikiem elementu `SuppressParent` *Project. json*/*xproj* .
 
-Te atrybuty mogą zawierać co najmniej jeden z następujących elementów, oddzielonych średnikami `;` znak, jeśli jest wyświetlany więcej niż jeden:
+Te atrybuty mogą zawierać co najmniej jeden z następujących elementów rozdzielonych średnikami `;` znak, jeśli jest wyświetlany więcej niż jeden:
 
 - `Compile` — zawartość folderu *lib* jest dostępna do skompilowania.
 - `Runtime` — zawartość folderu *środowiska uruchomieniowego* jest dystrybuowana.
-- `ContentFiles` — zawartość folderu *contentfiles* jest używana.
+- `ContentFiles` — zostanie użyta zawartość folderu *contentfiles* .
 - `Build` — używane są elementy props/targets w folderze *Build* .
 - `Native` — zawartość z zasobów natywnych jest kopiowana do folderu *wyjściowego* dla środowiska uruchomieniowego.
-- `Analyzers` — analizatory są używane.
+- `Analyzers` — używane są analizatory.
 
 Alternatywnie, atrybut może zawierać:
 
@@ -174,11 +174,13 @@ Alternatywnie, atrybut może zawierać:
 
 ### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
 
-Element `<DotNetCliToolReference>` określa narzędzie interfejsu wiersza polecenia, które użytkownik chce przywrócić w kontekście projektu. Jest to zamiennik dla węzła `tools` w pliku *Project. JSON*.
+Element `<DotNetCliToolReference>` Item określa narzędzie interfejsu wiersza polecenia, które użytkownik chce przywrócić w kontekście projektu. Jest to zamiennik dla węzła `tools` w pliku *Project. JSON*.
 
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
+
+Należy pamiętać, że `DotNetCliToolReference` jest [teraz przestarzałe](https://github.com/dotnet/announcements/issues/107) na rzecz [lokalnych narzędzi .NET Core](https://aka.ms/local-tools).
 
 #### <a name="version"></a>Wersja
 
@@ -258,7 +260,7 @@ Wartość logiczna określająca, czy projekt może być spakowany. Wartość do
 
 ### <a name="packageversion"></a>PackageVersion
 
-Określa wersję, która będzie miała pakiet otrzymany. Akceptuje wszystkie formy ciągu wersji NuGet. Wartość domyślna to `$(Version)`, czyli Właściwość `Version` w projekcie.
+Określa wersję, która będzie miała pakiet otrzymany. Akceptuje wszystkie formy ciągu wersji NuGet. Wartość domyślna to `$(Version)`, czyli właściwości `Version` w projekcie.
 
 ### <a name="packageid"></a>PackageId
 
@@ -268,7 +270,7 @@ Określa nazwę pakietu, który ma zostać utworzony. Jeśli nie zostanie okreś
 
 Przyjazny dla człowieka tytuł pakietu, zazwyczaj używany w interfejsie użytkownika jako nuget.org i Menedżer pakietów w programie Visual Studio. Jeśli nie zostanie określony, zamiast niego zostanie użyty identyfikator pakietu.
 
-### <a name="authors"></a>Autorów
+### <a name="authors"></a>Autorzy
 
 Rozdzielana średnikami lista autorów pakietów pasujących do nazw profilów w nuget.org. Są one wyświetlane w galerii NuGet w witrynie nuget.org i służą do krzyżowego odwoływania się do pakietów przez tych samych autorów.
 
@@ -280,7 +282,7 @@ Długi opis pakietu do wyświetlania interfejsu użytkownika.
 
 Długi opis zestawu. Jeśli nie określono `PackageDescription`, ta właściwość jest również używana jako Opis pakietu.
 
-### <a name="copyright"></a>Prawo
+### <a name="copyright"></a>Prawa autorskie
 
 Szczegóły dotyczące praw autorskich pakietu.
 
@@ -319,7 +321,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 Ścieżka do pliku licencji w pakiecie, jeśli używasz licencji, która nie ma przypisanego identyfikatora SPDX lub jest licencją niestandardową (w przeciwnym razie `PackageLicenseExpression` jest preferowana)
 
-Zastępuje `PackageLicenseUrl`, nie można łączyć z `PackageLicenseExpression` i wymaga programu Visual Studio 15.9.4, zestawu .NET SDK 2.1.502 lub nowszego.
+Zastępuje `PackageLicenseUrl`, nie można go łączyć z `PackageLicenseExpression` i wymaga programu Visual Studio 15.9.4, zestawu .NET SDK 2.1.502 lub nowszego.
 
 Należy upewnić się, że plik licencji jest spakowany przez dodanie go jawnie do projektu, przykładowe użycie:
 
@@ -360,11 +362,11 @@ Określa format pakietu symboli. W przypadku wystąpienia "Symbols. nupkg" zosta
 
 ### <a name="includesource"></a>IncludeSource
 
-Ta wartość logiczna wskazuje, czy proces pakietu powinien utworzyć pakiet źródłowy. Pakiet źródłowy zawiera kod źródłowy biblioteki, a także pliki PDB. Pliki źródłowe są umieszczane w katalogu `src/ProjectName` w pliku pakietu.
+Ta wartość logiczna wskazuje, czy proces pakietu powinien utworzyć pakiet źródłowy. Pakiet źródłowy zawiera kod źródłowy biblioteki, a także pliki PDB. Pliki źródłowe są umieszczane w katalogu `src/ProjectName` w pliku pakietu, który został utworzony.
 
 ### <a name="istool"></a>Istool
 
-Określa, czy wszystkie pliki wyjściowe są kopiowane do folderu *Tools* zamiast folderu *lib* . Należy zauważyć, że różni się od `DotNetCliTool`, który jest określony przez ustawienie `PackageType` w pliku *. csproj* .
+Określa, czy wszystkie pliki wyjściowe są kopiowane do folderu *Tools* zamiast folderu *lib* . Należy zauważyć, że różni się to od `DotNetCliTool`, który jest określony przez ustawienie `PackageType` w pliku *. csproj* .
 
 ### <a name="repositoryurl"></a>RepositoryUrl
 
@@ -378,7 +380,7 @@ Określa typ repozytorium. Wartość domyślna to "Git".
 Określa nazwę gałęzi źródłowej w repozytorium. Gdy projekt jest spakowany w pakiecie NuGet, jest dodawany do metadanych pakietu.
 
 ### <a name="repositorycommit"></a>RepositoryCommit
-Opcjonalne zatwierdzenie lub zestaw zmian repozytorium, aby wskazać, z którym źródłem został skompilowany pakiet. Aby ta właściwość została uwzględniona, należy również określić `RepositoryUrl`. Gdy projekt jest spakowany w pakiecie NuGet, to zatwierdzenie lub zestaw zmian zostanie dodany do metadanych pakietu.
+Opcjonalne zatwierdzenie lub zestaw zmian repozytorium, aby wskazać, z którym źródłem został skompilowany pakiet. Aby można było uwzględnić tę właściwość, należy również określić `RepositoryUrl`. Gdy projekt jest spakowany w pakiecie NuGet, to zatwierdzenie lub zestaw zmian zostanie dodany do metadanych pakietu.
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
 
@@ -394,7 +396,7 @@ Te wartości logiczne określają, czy zestawy danych wyjściowych kompilacji po
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
 
-Ta wartość logiczna określa, czy jakiekolwiek elementy, które mają typ `Content` zostaną uwzględnione w pakiecie wynikającym automatycznie. Wartość domyślna to `true`.
+Ta wartość logiczna określa, czy dowolne elementy, które mają typ `Content`, zostaną uwzględnione w pakiecie, który zostanie automatycznie dołączony. Wartość domyślna to `true`.
 
 ### <a name="buildoutputtargetfolder"></a>BuildOutputTargetFolder
 
@@ -442,11 +444,11 @@ Każdy atrybut ma właściwość, która kontroluje jej zawartość i drugą do 
 
 Uwagi:
 
-- `AssemblyVersion` i `FileVersion` domyślnie przyjmuje wartość `$(Version)` bez sufiksu. Na przykład jeśli `$(Version)` jest `1.2.3-beta.4`, wartość będzie `1.2.3`.
-- wartość domyślna `InformationalVersion` jest równa `$(Version)`.
-- Jeśli właściwość jest obecna, `InformationalVersion` ma `$(SourceRevisionId)`. Można go wyłączyć przy użyciu `IncludeSourceRevisionInInformationalVersion`.
+- `AssemblyVersion` i `FileVersion` domyślnie przyjmuje wartość `$(Version)` bez sufiksu. Na przykład jeśli `$(Version)` jest `1.2.3-beta.4`, wartość zostanie `1.2.3`.
+- `InformationalVersion` wartością domyślną `$(Version)`.
+- Jeśli właściwość jest obecna, `InformationalVersion` `$(SourceRevisionId)` dołączona. Można go wyłączyć przy użyciu `IncludeSourceRevisionInInformationalVersion`.
 - Właściwości `Copyright` i `Description` są również używane dla metadanych narzędzia NuGet.
-- `Configuration` jest współużytkowany ze wszystkimi procesami kompilacji i ustawiany przez parametr `--configuration` poleceń `dotnet`.
+- `Configuration` jest współużytkowany ze wszystkimi procesami kompilacji i ustawiany za pośrednictwem `--configuration` parametru poleceń `dotnet`.
 
 ### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo
 

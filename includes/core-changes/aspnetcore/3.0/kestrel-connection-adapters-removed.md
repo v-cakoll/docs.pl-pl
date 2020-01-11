@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: a916af91670dc9c5ceb2ff759cd8ae308fb2c2dc
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 06d5f48566c239e37355496c3f27163d952602c6
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394187"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75902038"
 ---
 ### <a name="kestrel-connection-adapters-removed"></a>Kestrel: Usunięto karty połączeń
 
-W ramach przenoszenia do przenoszenia interfejsów API "pubternal" do `public` koncepcji `IConnectionAdapter` zostały usunięte z Kestrel. Karty połączeń są zastępowane przez oprogramowanie pośredniczące połączenia (podobne do oprogramowania pośredniczącego HTTP w potoku ASP.NET Core, ale w przypadku połączeń niższego poziomu). Rejestrowanie protokołu HTTPS i połączeń zostało przeniesione z kart połączeń do oprogramowania pośredniczącego połączenia. Te metody rozszerzające powinny nadal bezproblemowo współpracować, ale szczegóły implementacji zostały zmienione.
+W ramach przenoszenia, aby przenieść interfejsy API "pubternal" do `public`, koncepcja `IConnectionAdapter` została usunięta z Kestrel. Karty połączeń są zastępowane przez oprogramowanie pośredniczące połączenia (podobne do oprogramowania pośredniczącego HTTP w potoku ASP.NET Core, ale w przypadku połączeń niższego poziomu). Rejestrowanie protokołu HTTPS i połączeń zostało przeniesione z kart połączeń do oprogramowania pośredniczącego połączenia. Te metody rozszerzające powinny nadal bezproblemowo współpracować, ale szczegóły implementacji zostały zmienione.
 
-Aby uzyskać więcej informacji, zobacz [ASPNET/AspNetCore # 11412](https://github.com/aspnet/AspNetCore/pull/11412). W przypadku dyskusji zobacz [ASPNET/AspNetCore # 11475](https://github.com/aspnet/AspNetCore/issues/11475).
+Aby uzyskać więcej informacji, zobacz [dotnet/aspnetcore # 11412](https://github.com/dotnet/aspnetcore/pull/11412). Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 11475](https://github.com/dotnet/aspnetcore/issues/11475).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -22,15 +22,15 @@ Składniki rozszerzalności Kestrel zostały utworzone przy użyciu `IConnection
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Składniki rozszerzalności Kestrel są tworzone jako [oprogramowanie pośredniczące](https://github.com/aspnet/AspNetCore/pull/11412/files#diff-89acc06acf1b2e96bbdb811ce523619f).
+Składniki rozszerzalności Kestrel są tworzone jako [oprogramowanie pośredniczące](https://github.com/dotnet/aspnetcore/pull/11412/files#diff-89acc06acf1b2e96bbdb811ce523619f).
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
 Ta zmiana ma na celu zapewnienie bardziej elastycznej architektury rozszerzalności.
 
-#### <a name="recommended-action"></a>Zalecana akcja
+#### <a name="recommended-action"></a>Zalecane działanie
 
-Przekonwertuj wszelkie implementacje `IConnectionAdapter`, aby użyć nowego wzorca pośredniczącego, jak pokazano [poniżej](https://github.com/aspnet/AspNetCore/pull/11412/files#diff-89acc06acf1b2e96bbdb811ce523619f).
+Przekonwertuj wszelkie implementacje `IConnectionAdapter`, aby użyć nowego wzorca pośredniczącego, jak pokazano [poniżej](https://github.com/dotnet/aspnetcore/pull/11412/files#diff-89acc06acf1b2e96bbdb811ce523619f).
 
 #### <a name="category"></a>Kategoria
 

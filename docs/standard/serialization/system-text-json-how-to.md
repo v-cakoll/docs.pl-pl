@@ -1,19 +1,19 @@
 ---
 title: Jak serializować i deserializować kod JSON C# przy użyciu-.NET
-ms.date: 09/16/2019
+ms.date: 01/10/2020
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: a9c690e736a08c729a4099d5e7a519ed17ec282c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 047d5b5c6fa339089d2054eb6bfe8b3066c1d00c
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705798"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904658"
 ---
-# <a name="how-to-serialize-and-deserialize-json-in-net"></a>Jak serializować i deserializować kod JSON w programie .NET
+# <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Jak serializować i deserializować (Marshaling and unmarshaling) JSON w programie .NET
 
 W tym artykule pokazano, jak używać przestrzeni nazw <xref:System.Text.Json> do serializacji i deserializacji do i z JavaScript Object Notation (JSON).
 
@@ -109,7 +109,7 @@ Serializacja do UTF-8 jest szybsza o 5-10% niż przy użyciu metod opartych na c
 * [Domyślny koder](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default) wyprowadza znaki nienależące do zestawu znaków ASCII, znaki z uwzględnieniem języka HTML w zakresie ASCII i znaków, które muszą zostać zmienione zgodnie z [specyfikacją JSON RFC 8259](https://tools.ietf.org/html/rfc8259#section-7).
 * Domyślnie JSON jest zminimalizowanego. Można tu [wydrukować kod JSON](#serialize-to-formatted-json).
 * Domyślnie wielkość liter w nazwach JSON jest zgodna z nazwami .NET. Można [dostosować wielkość liter w nazwach JSON](#customize-json-names-and-values).
-* Wykryto odwołania cykliczne i zostały zgłoszone wyjątki. Aby uzyskać więcej informacji, zobacz [problem 38579 dotyczący odwołań cyklicznych](https://github.com/dotnet/corefx/issues/38579) w repozytorium dotnet/corefx w witrynie GitHub.
+* Wykryto odwołania cykliczne i zostały zgłoszone wyjątki.
 * Obecnie pola są wykluczone.
 
 Obsługiwane typy to:
@@ -118,7 +118,7 @@ Obsługiwane typy to:
 * Obiekty CLR zdefiniowane przez użytkownika [(POCOs)](https://stackoverflow.com/questions/250001/poco-definition).
 * Tablice jednowymiarowe i nieregularne (`ArrayName[][]`).
 * `Dictionary<string,TValue>`, gdzie `TValue` jest `object`, `JsonElement`lub POCO.
-* Kolekcje z następujących przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [problem związany z obsługą kolekcji](https://github.com/dotnet/corefx/issues/36643) w repozytorium dotnet/corefx w witrynie GitHub.
+* Kolekcje z następujących przestrzeni nazw.
   * <xref:System.Collections>
   * <xref:System.Collections.Generic>
   * <xref:System.Collections.Immutable>
@@ -154,7 +154,7 @@ Aby zdeserializować z UTF-8, wywołaj Przeciążenie <xref:System.Text.Json.Jso
 * Domyślnie w dopasowaniu nazw właściwości rozróżniana jest wielkość liter. Można [określić wielkość liter](#case-insensitive-property-matching).
 * Jeśli kod JSON zawiera wartość właściwości tylko do odczytu, wartość jest ignorowana i nie jest zgłaszany żaden wyjątek.
 * Deserializacja do typów referencyjnych bez bezparametrowego konstruktora nie jest obsługiwana.
-* Deserializacja z niezmiennymi obiektami lub właściwościami tylko do odczytu nie jest obsługiwana. Aby uzyskać więcej informacji, zobacz artykuł [dotyczący usługi GitHub 38569 w przypadku niemodyfikowalnej obsługi obiektów](https://github.com/dotnet/corefx/issues/38569) i [problem 38163 w przypadku obsługi właściwości tylko do odczytu](https://github.com/dotnet/corefx/issues/38163) w repozytorium dotnet/corefx w witrynie GitHub.
+* Deserializacja z niezmiennymi obiektami lub właściwościami tylko do odczytu nie jest obsługiwana.
 * Domyślnie wyliczenia są obsługiwane jako liczby. [Nazwy wyliczenia można serializować jako ciągi](#enums-as-strings).
 * Pola nie są obsługiwane.
 * Domyślnie komentarze lub końcowe przecinki w wyjątkach throw JSON. Można [zezwolić na komentarze i końcowe przecinki](#allow-comments-and-trailing-commas).
@@ -458,7 +458,9 @@ Aby zminimalizować liczbę ucieczki, można użyć <xref:System.Text.Encodings.
 
 ## <a name="serialize-properties-of-derived-classes"></a>Serializowanie właściwości klas pochodnych
 
-Serializacja polimorficzna nie jest obsługiwana w przypadku określenia w czasie kompilacji typu, który ma być serializowany. Załóżmy na przykład, że masz klasę `WeatherForecast` i klasę pochodną `WeatherForecastDerived`:
+Serializacja hierarchii typów polimorficznych nie jest obsługiwana. Na przykład, jeśli właściwość jest zdefiniowana jako interfejs lub Klasa abstrakcyjna, tylko właściwości zdefiniowane w interfejsie lub klasie abstrakcyjnej są serializowane, nawet jeśli typ środowiska uruchomieniowego ma dodatkowe właściwości. Wyjątki dotyczące tego zachowania zostały omówione w tej sekcji.
+
+Załóżmy na przykład, że masz klasę `WeatherForecast` i klasę pochodną `WeatherForecastDerived`:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -480,7 +482,7 @@ W tym scenariuszu Właściwość `WindSpeed` nie jest serializowana, nawet jeśl
 
 Takie zachowanie ma na celu zapobieganie przypadkowemu narażeniu danych w pochodnym typie tworzonym przez środowisko uruchomieniowe.
 
-Aby serializować właściwości typu pochodnego, należy użyć jednej z następujących metod:
+Aby serializować właściwości typu pochodnego w poprzednim przykładzie, należy użyć jednej z następujących metod:
 
 * Wywołaj Przeciążenie <xref:System.Text.Json.JsonSerializer.Serialize%2A>, które pozwala określić typ w czasie wykonywania:
 
@@ -494,14 +496,74 @@ W poprzednim przykładowym scenariuszu oba podejścia powodują, że właściwo�
 
 ```json
 {
+  "WindSpeed": 35,
   "Date": "2019-08-01T00:00:00-07:00",
   "TemperatureCelsius": 25,
-  "Summary": "Hot",
-  "WindSpeed": 35
+  "Summary": "Hot"
 }
 ```
 
-Aby uzyskać informacje na temat deserializacji polimorficznej, zobacz [Obsługa deserializacji polimorficznej](system-text-json-converters-how-to.md#support-polymorphic-deserialization).
+> [!IMPORTANT]
+> Te podejścia zapewniają serializację polimorficzne tylko dla obiektu głównego, który ma być serializowany, a nie dla właściwości tego obiektu głównego. 
+
+Można uzyskać serializację polimorficzny dla obiektów niższego poziomu, jeśli zdefiniujesz je jako typ `object`. Załóżmy na przykład, że Klasa `WeatherForecast` ma właściwość o nazwie `PreviousForecast`, która może być zdefiniowana jako typ `WeatherForecast` lub `object`:
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPrevious)]
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPreviousAsObject)]
+
+Jeśli właściwość `PreviousForecast` zawiera wystąpienie `WeatherForecastDerived`:
+
+* Dane wyjściowe JSON serializacji `WeatherForecastWithPrevious` **nie obejmują** `WindSpeed`.
+* Dane wyjściowe JSON serializacji `WeatherForecastWithPreviousAsObject` **zawierają** `WindSpeed`.
+
+Aby serializować `WeatherForecastWithPreviousAsObject`, nie jest konieczne wywołanie `Serialize<object>` lub `GetType`, ponieważ obiekt główny nie jest tym, który może znajdować się w typie pochodnym. Poniższy przykład kodu nie wywołuje `Serialize<object>` ani `GetType`:
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeSecondLevel)]
+
+Powyższy kod poprawnie serializować `WeatherForecastWithPreviousAsObject`:
+
+```json
+{
+  "Date": "2019-08-01T00:00:00-07:00",
+  "TemperatureCelsius": 25,
+  "Summary": "Hot",
+  "PreviousForecast": {
+    "WindSpeed": 35,
+    "Date": "2019-08-01T00:00:00-07:00",
+    "TemperatureCelsius": 25,
+    "Summary": "Hot"
+  }
+}
+```
+
+Takie samo podejście do definiowania właściwości jako `object` współpracuje z interfejsami. Załóżmy, że masz następujący interfejs i implementacja, i chcesz serializować klasę o właściwościach zawierających wystąpienia implementacji:
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/IForecast.cs)]
+
+Podczas serializacji wystąpienia `Forecasts`tylko `Tuesday` pokazuje Właściwość `WindSpeed`, ponieważ `Tuesday` jest zdefiniowana jako `object`:
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeInterface)]
+
+Poniższy przykład pokazuje kod JSON, który wynika z poprzedniego kodu:
+
+```json
+{
+  "Monday": {
+    "Date": "2020-01-06T00:00:00-08:00",
+    "TemperatureCelsius": 10,
+    "Summary": "Cool"
+  },
+  "Tuesday": {
+    "Date": "2020-01-07T00:00:00-08:00",
+    "TemperatureCelsius": 11,
+    "Summary": "Rainy",
+    "WindSpeed": 10
+  }
+}
+```
+
+Aby uzyskać więcej informacji na temat **serializacji**polimorficznej i informacje o **deserializacji**, zobacz [Migrowanie z Newtonsoft. JSON do System. Text. JSON](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
 
 ## <a name="allow-comments-and-trailing-commas"></a>Zezwalaj na komentarze i końcowe przecinki
 
@@ -626,11 +688,11 @@ Aby zmienić to zachowanie, ustaw <xref:System.Text.Json.JsonSerializerOptions.I
 
 W przypadku tej opcji Właściwość `Summary` obiektu `WeatherForecastWithDefault` jest wartością domyślną "Brak podsumowania" po deserializacji.
 
-Wartości null w formacie JSON są ignorowane tylko wtedy, gdy są prawidłowe. Wartości null dla typów wartości, które nie dopuszczają wartości null, powodują wyjątki. Aby uzyskać więcej informacji, zobacz artykuł [dotyczący problemu 40922 w przypadku typów wartości niedopuszczających wartości null](https://github.com/dotnet/corefx/issues/40922) w repozytorium dotnet/corefx w witrynie GitHub.
+Wartości null w formacie JSON są ignorowane tylko wtedy, gdy są prawidłowe. Wartości null dla typów wartości, które nie dopuszczają wartości null, powodują wyjątki.
 
 ## <a name="utf8jsonreader-utf8jsonwriter-and-jsondocument"></a>Utf8JsonReader, Utf8JsonWriter i JsonDocument
 
-<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> jest wysoce wydajnym, niskim alokacją, czytnikiem tylko do przodu dla tekstu JSON zakodowanego w formacie UTF-8, Odczytaj z `ReadOnlySpan<byte>`. `Utf8JsonReader` jest typem niskiego poziomu, który może służyć do tworzenia niestandardowych analizatorów i deserializacji. Metoda <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> używa `Utf8JsonReader` w obszarze okładek.
+<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> jest wysoce wydajnym, niskim alokacją, czytnikiem tylko do przodu dla tekstu JSON zakodowanego w formacie UTF-8, Odczytaj `ReadOnlySpan<byte>` lub `ReadOnlySequence<byte>`. `Utf8JsonReader` jest typem niskiego poziomu, który może służyć do tworzenia niestandardowych analizatorów i deserializacji. Metoda <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> używa `Utf8JsonReader` w obszarze okładek.
 
 <xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName> to wysoce wydajny sposób pisania zakodowanego tekstu JSON w formacie UTF-8 ze wspólnych typów platformy .NET, takich jak `String`, `Int32`i `DateTime`. Składnik zapisywania jest typu niskiego poziomu, który może służyć do tworzenia serializatorów niestandardowych. Metoda <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> używa `Utf8JsonWriter` w obszarze okładek.
 
@@ -699,14 +761,15 @@ Poniższy przykład pokazuje, jak odczytywać plik synchronicznie i wyszukiwać 
 
 Powyższy kod:
 
+* Przyjęto, że kod JSON zawiera tablicę obiektów, a każdy obiekt może zawierać właściwość "name" typu String.
+* Zlicza obiekty i wartości właściwości "name", które kończą się znakiem "University".
 * Przyjęto założenie, że plik jest zakodowany jako UTF-16 i transkoduje go do UTF-8. Plik zakodowany jako UTF-8 można odczytać bezpośrednio w `ReadOnlySpan<byte>`, używając następującego kodu:
 
   ```csharp
   ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName); 
   ```
 
-* Przyjęto, że kod JSON zawiera tablicę obiektów, a każdy obiekt może zawierać właściwość "name" typu String.
-* Zlicza obiekty i `name` wartości właściwości, które kończą się na Uniwersytecie.
+  Jeśli plik zawiera znacznik kolejności bajtów UTF-8, usuń go przed przekazaniem bajtów do `Utf8JsonReader`, ponieważ czytnik oczekuje tekstu. W przeciwnym razie BOM jest traktowany jako nieprawidłowy kod JSON, a czytelnik zgłasza wyjątek.
 
 Oto przykład JSON, który może odczytać poprzedzający kod. Otrzymany komunikat podsumowujący to "2 z 4 mają nazwy kończące się na" University ":
 
@@ -715,7 +778,8 @@ Oto przykład JSON, który może odczytać poprzedzający kod. Otrzymany komunik
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 * [System. Text. JSON — Omówienie](system-text-json-overview.md)
-* [Dokumentacja interfejsu API System. Text. JSON](xref:System.Text.Json)
-* [Zapisuj niestandardowe konwertery dla elementu System. Text. JSON](system-text-json-converters-how-to.md)
+* [Jak pisać konwertery niestandardowe](system-text-json-converters-how-to.md)
+* [Jak przeprowadzić migrację z pliku Newtonsoft. JSON](system-text-json-migrate-from-newtonsoft-how-to.md)
 * [Obsługa DateTime i DateTimeOffset w pliku System. Text. JSON](../datetime/system-text-json-support.md)
-* [Problemy z usługą GitHub w repozytorium dotnet/corefx z etykietą JSON-funkcja-doc](https://github.com/dotnet/corefx/labels/json-functionality-doc) 
+* [Dokumentacja interfejsu API System. Text. JSON](xref:System.Text.Json)
+<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

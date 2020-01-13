@@ -2,17 +2,17 @@
 title: Autonomiczna Serializacja kodu JSON przy użyciu Klasa DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 412da71617a8627c47e877a75770271d9a3cf180
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 39d3c0acd75ffd9a54c5e62a15487a2cd8c465cb
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976073"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904607"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>Autonomiczna Serializacja kodu JSON przy użyciu Klasa DataContractJsonSerializer
 
 > [!NOTE]
-> Ten artykuł dotyczy <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. W przypadku większości scenariuszy, które obejmują Serializowanie i deserializacja kodu JSON, zalecamy korzystanie z narzędzi w [przestrzeni nazw System. Text. JSON](../../../standard/serialization/system-text-json-overview.md). 
+> Ten artykuł dotyczy <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. W przypadku większości scenariuszy obejmujących serializację i deserializacja kodu JSON zalecamy używanie interfejsów API w [przestrzeni nazw System. Text. JSON](../../../standard/serialization/system-text-json-overview.md). 
 
 JSON (JavaScript Object Notation) to format danych przeznaczony specjalnie do użycia przez kod JavaScript uruchomiony na stronach sieci Web w przeglądarce. Jest to domyślny format danych używany przez usługi ASP.NET AJAX utworzone w Windows Communication Foundation (WCF).
 
@@ -37,9 +37,9 @@ W poniższej tabeli przedstawiono zgodność między typami .NET a typami JSON/J
 |<xref:System.Array> typu <xref:System.Byte>|Tablica liczb|Każda liczba reprezentuje wartość jednego bajtu.|
 |<xref:System.DateTime>|DateTime lub String|Zobacz daty/godziny i kod JSON w dalszej części tego tematu.|
 |<xref:System.DateTimeOffset>|Typ złożony|Zobacz daty/godziny i kod JSON w dalszej części tego tematu.|
-|Typy XML i ADO.NET (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>., Tablice <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|String|Zobacz sekcję Typy XML i kod JSON w tym temacie.|
+|Typy XML i ADO.NET (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. Tablice <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|String|Zobacz sekcję Typy XML i kod JSON w tym temacie.|
 |<xref:System.DBNull>|Pusty typ złożony|--|
-|Kolekcje, słowniki i tablice|Macierzy|Zapoznaj się z sekcją kolekcje, słowniki i tablice w tym temacie.|
+|Kolekcje, słowniki i tablice|Tablica|Zapoznaj się z sekcją kolekcje, słowniki i tablice w tym temacie.|
 |Typy złożone (z zastosowanymi <xref:System.Runtime.Serialization.DataContractAttribute> lub <xref:System.SerializableAttribute>)|Typ złożony|Elementy członkowskie danych stają się elementami członkowskimi typu złożonego JavaScript.|
 |Typy złożone implementujące interfejs <xref:System.Runtime.Serialization.ISerializable>)|Typ złożony|Analogicznie jak inne typy złożone, ale niektóre typy <xref:System.Runtime.Serialization.ISerializable> nie są obsługiwane — zobacz część obsługa ISerializable w sekcji Informacje zaawansowane w tym temacie.|
 |wartość `Null` dla dowolnego typu|Null|Typy dopuszczające wartości null są również obsługiwane i mapowane na dane JSON w taki sam sposób jak typy niedopuszczające wartości null.|

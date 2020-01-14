@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-ms.openlocfilehash: 95e71e1fdd0ded145025316a5d6597b27a6cc970
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8383d8cb3e5819c46a0716c59323e492bb9add8e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710651"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937992"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrowanie z klasy XslTransform
 
@@ -26,7 +26,7 @@ Klasa <xref:System.Xml.Xsl.XslCompiledTransform> obejmuje wiele ulepszeń wydajn
 Klasa <xref:System.Xml.Xsl.XslCompiledTransform> obejmuje również inne optymalizacje, które znacznie przyspieszają od klasy <xref:System.Xml.Xsl.XslTransform>.
 
 > [!NOTE]
-> Chociaż ogólna wydajność klasy <xref:System.Xml.Xsl.XslCompiledTransform> jest lepsza niż Klasa <xref:System.Xml.Xsl.XslTransform>, Metoda <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> klasy <xref:System.Xml.Xsl.XslCompiledTransform> może działać wolniej niż Metoda <xref:System.Xml.Xsl.XslTransform.Load%2A> klasy <xref:System.Xml.Xsl.XslTransform> przy pierwszym wywołaniu dla transformacji. Jest to spowodowane tym, że plik XSLT musi być skompilowany przed załadowaniem. Aby uzyskać więcej informacji, zobacz następujący wpis w blogu: [XslCompiledTransform wolniej niż XslTransform?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)
+> Chociaż ogólna wydajność klasy <xref:System.Xml.Xsl.XslCompiledTransform> jest lepsza niż Klasa <xref:System.Xml.Xsl.XslTransform>, Metoda <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> klasy <xref:System.Xml.Xsl.XslCompiledTransform> może działać wolniej niż Metoda <xref:System.Xml.Xsl.XslTransform.Load%2A> klasy <xref:System.Xml.Xsl.XslTransform> przy pierwszym wywołaniu dla transformacji. Jest to spowodowane tym, że plik XSLT musi być skompilowany przed załadowaniem. Aby uzyskać więcej informacji, zobacz następujący wpis w blogu: [XslCompiledTransform wolniej niż XslTransform?](https://docs.microsoft.com/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform)
 
 ## <a name="security"></a>Zabezpieczenia
 

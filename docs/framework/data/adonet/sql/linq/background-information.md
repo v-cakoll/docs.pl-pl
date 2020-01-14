@@ -2,12 +2,12 @@
 title: Informacje uzupełniające
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: deb4d59dc2fb40b63e0362a9a4ee4b84c08dce49
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: d7d00a0c64c6b25219403e8fd15eae85c09eafa0
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634732"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937549"
 ---
 # <a name="background-information"></a>Informacje uzupełniające
 Tematy w tej sekcji odnoszą się do pojęć i procedur, które wykraczają poza podstawowe informacje dotyczące korzystania z [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -18,7 +18,7 @@ Tematy w tej sekcji odnoszą się do pojęć i procedur, które wykraczają poza
   
 - Weź udział w [forum LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), w którym możesz szczegółowo omówić bardziej złożone tematy z ekspertami.  
   
-- Zapoznaj się z oficjalnym dokumentem zawierającym szczegóły [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] C# technologii, zapoznaj się z Visual Basic i przykładami kodu. Aby uzyskać więcej informacji, zobacz [LINQ to SQL: zapytanie zintegrowane z językiem .NET dla danych relacyjnych](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Zapoznaj się z oficjalnym dokumentem zawierającym szczegóły [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologii C# , a następnie zapoznaj się z Visual Basic i przykładami kodu. Aby uzyskać więcej informacji, zobacz [LINQ to SQL: zapytanie zintegrowane z językiem .NET dla danych relacyjnych](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [ADO.NET i LINQ to SQL](ado-net-and-linq-to-sql.md)  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 863fa565f7c107214273912a6d110b7664bffe6b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131499"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936842"
 ---
 # <a name="using-threads-and-threading"></a>Używanie wątków i wątkowości
 
@@ -20,7 +20,7 @@ Za pomocą platformy .NET można pisać aplikacje, które wykonują wiele operac
 Aplikacje używające wielowątkowości są wydajniejsze do wprowadzania danych przez użytkownika, ponieważ interfejs użytkownika pozostaje aktywny jako zadania intensywnie korzystające z procesora wykonywane w oddzielnym wątku. Wielowątkowość jest również przydatna podczas tworzenia skalowalnych aplikacji, ponieważ można dodać wątki w miarę wzrostu obciążenia.
 
 > [!NOTE]
-> Jeśli potrzebujesz większej kontroli nad zachowaniem wątków aplikacji, możesz samodzielnie zarządzać wątkami. Jednak począwszy od .NET Framework 4, programowanie wielowątkowe jest znacznie uproszczone przy użyciu klas <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), nowych klas kolekcji współbieżnych w przestrzeni nazw <xref:System.Collections.Concurrent?displayProperty=nameWithType> i nowego modelu programowania jest to oparte na koncepcji zadań, a nie w wątkach. Aby uzyskać więcej informacji, zobacz [programowanie równoległe](../parallel-programming/index.md) i [Biblioteka zadań równoległych (TPL)](../parallel-programming/task-parallel-library-tpl.md).
+> Jeśli potrzebujesz większej kontroli nad zachowaniem wątków aplikacji, możesz samodzielnie zarządzać wątkami. Jednak począwszy od .NET Framework 4, programowanie wielowątkowe jest znacznie uproszczone z klasami <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), nowe klasy kolekcji współbieżnych w przestrzeni nazw <xref:System.Collections.Concurrent?displayProperty=nameWithType> oraz nowy model programowania oparty na koncepcji zadań, a nie w wątkach. Aby uzyskać więcej informacji, zobacz [programowanie równoległe](../parallel-programming/index.md) i [Biblioteka zadań równoległych (TPL)](../parallel-programming/task-parallel-library-tpl.md).
 
 ## <a name="how-to-create-and-start-a-new-thread"></a>Instrukcje: Tworzenie i uruchamianie nowego wątku
 
@@ -28,11 +28,13 @@ Tworzysz nowy wątek, tworząc nowe wystąpienie klasy <xref:System.Threading.Th
 
 ## <a name="how-to-stop-a-thread"></a>Instrukcje: zatrzymywanie wątku
 
-Aby zakończyć wykonywanie wątku, użyj metody <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Ta metoda podnosi <xref:System.Threading.ThreadAbortException> w wątku, w którym jest wywoływana. Aby uzyskać więcej informacji, zobacz [niszczenie wątków](destroying-threads.md).
+Aby zakończyć wykonywanie wątku, użyj <xref:System.Threading.CancellationToken?displayProperty=nameWithType>. Zapewnia jednolity sposób, aby zatrzymać wątki wspólnie. Aby uzyskać więcej informacji, zobacz [Anulowanie w zarządzanych wątkach](cancellation-in-managed-threads.md).
 
-Począwszy od .NET Framework 4, można użyć <xref:System.Threading.CancellationToken?displayProperty=nameWithType>, aby anulować wątki wspólnie. Aby uzyskać więcej informacji, zobacz [Anulowanie w zarządzanych wątkach](cancellation-in-managed-threads.md).
+Czasami nie jest możliwe zatrzymywanie wątku wspólnie, ponieważ uruchamia kod innej firmy, który nie został zaprojektowany w celu uzyskania spółdzielni. W takim przypadku możesz chcieć przerwać jego wykonywanie. Aby przerwać wykonanie wymuszonego wątku, w .NET Framework można użyć metody <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Ta metoda podnosi <xref:System.Threading.ThreadAbortException> w wątku, w którym jest wywoływana. Aby uzyskać więcej informacji, zobacz [niszczenie wątków](destroying-threads.md). Metoda <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> nie jest obsługiwana w programie .NET Core. Jeśli konieczne jest zakończenie wykonywania kodu innej firmy w programie .NET Core, należy uruchomić go w osobnym procesie i użyć <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.
 
-Użyj metody <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, aby wątek wywołujący oczekiwał na zakończenie wątku, w którym wywoływana jest metoda.
+<xref:System.Threading.CancellationToken?displayProperty=nameWithType> nie jest dostępna przed .NET Framework 4. Aby zatrzymać wątek w starszych wersjach .NET Framework, należy ręcznie zaimplementować z pomocą technik synchronizacji wątków. Można na przykład utworzyć nietrwałą wartość pola Boolean `shouldStop` i użyć jej do żądania kodu wykonywanego przez wątek w celu zatrzymania. Aby uzyskać więcej informacji, zobacz [nietrwałe](../../csharp/language-reference/keywords/volatile.md) w C# odwołaniach i <xref:System.Threading.Volatile?displayProperty=nameWithType>.
+
+Użyj metody <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, aby wątek wywołujący oczekiwał na zakończenie zatrzymania wątku.
 
 ## <a name="how-to-pause-or-interrupt-a-thread"></a>Instrukcje: Wstrzymywanie lub przerywanie wątku
 

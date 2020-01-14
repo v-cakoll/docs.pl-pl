@@ -9,16 +9,17 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET Framework], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: 1852135e9b7f48d6556e27f16819ddd48805af21
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: efd4c596f67d5eabace8ecafb48f2d350df6a18e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138093"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938048"
 ---
 # <a name="destroying-threads"></a>Niszczenie wątków
-Metoda <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> służy do trwałego zatrzymania wątku zarządzanego. Gdy wywołasz <xref:System.Threading.Thread.Abort%2A>, środowisko uruchomieniowe języka wspólnego generuje <xref:System.Threading.ThreadAbortException> w wątku docelowym, który może zostać przechwycony przez wątek docelowy. Aby uzyskać więcej informacji, zobacz <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
-  
+
+Aby zakończyć wykonywanie wątku, zazwyczaj używany jest [wspólny model anulowania](cancellation-in-managed-threads.md). Czasami nie jest możliwe zatrzymywanie wątku wspólnie, ponieważ uruchamia kod innej firmy, który nie został zaprojektowany w celu uzyskania spółdzielni. Metoda <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> w .NET Framework może służyć do kończenia wymuszania wątku zarządzanego. Gdy wywołasz <xref:System.Threading.Thread.Abort%2A>, środowisko uruchomieniowe języka wspólnego generuje <xref:System.Threading.ThreadAbortException> w wątku docelowym, który może zostać przechwycony przez wątek docelowy. Aby uzyskać więcej informacji, zobacz temat <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Metoda <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> nie jest obsługiwana w programie .NET Core. Jeśli konieczne jest zakończenie wykonywania kodu innej firmy w programie .NET Core, należy uruchomić go w osobnym procesie i użyć <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.
+
 > [!NOTE]
 > Jeśli wątek wykonuje kod niezarządzany, gdy jego Metoda <xref:System.Threading.Thread.Abort%2A> jest wywoływana, środowisko uruchomieniowe go oznaczy <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>. Wyjątek jest zgłaszany, gdy wątek zwraca kod zarządzany.  
   
@@ -29,7 +30,7 @@ Metoda <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> słu
  Wątki, które oczekują na wywołanie metody <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> mogą zostać przerwane przez inne wątki, które wywołują <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>.  
   
 ## <a name="handling-threadabortexception"></a>Obsługa ThreadAbortException  
- Jeśli oczekujesz, że wątek zostanie przerwany, w wyniku wywołania <xref:System.Threading.Thread.Abort%2A> z własnego kodu lub w wyniku rozładowania domeny aplikacji, w której jest uruchomiony wątek (<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> używa <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> do kończenia wątków) , wątek musi obsłużyć <xref:System.Threading.ThreadAbortException> i wykonać wszelkie końcowe przetwarzanie w klauzuli `finally`, jak pokazano w poniższym kodzie.  
+ Jeśli oczekujesz, że wątek zostanie przerwany, w wyniku wywołania <xref:System.Threading.Thread.Abort%2A> z własnego kodu lub w wyniku rozładowania domeny aplikacji, w której działa wątek (<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> używa <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> do zakończenia wątków), wątek musi obsłużyć <xref:System.Threading.ThreadAbortException> i wykonać wszelkie końcowe przetwarzanie w klauzuli `finally`, jak pokazano w poniższym kodzie.  
   
 ```vb  
 Try  

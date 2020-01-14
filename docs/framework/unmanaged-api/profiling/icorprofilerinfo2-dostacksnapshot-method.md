@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: 64bcf6ee58d743a26e31c49a425f36cc808b5080
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5d90f414a945d346ca7721745ea7d86cb24a085c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426830"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936853"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot — Metoda
 Przegląda zarządzane ramki na stosie dla określonego wątku i wysyła informacje do profilera za pomocą wywołania zwrotnego.  
@@ -71,7 +71,7 @@ HRESULT DoStackSnapshot(
   
  Kolejność, w której jest przeszukiwany stos, to odwracanie do sposobu wypychania ramek do stosu: liścia (ostatnio wypchnięcia), pierwsza klatka główna (pierwsza-wypchnięci) Ostatnia.  
   
- Aby uzyskać więcej informacji o tym, jak programować Profiler w celu przechodzenia do zarządzanych stosów, zobacz Samouczek dotyczący [stosu profilera w .NET Framework 2,0: podstawowe i poza](https://go.microsoft.com/fwlink/?LinkId=73638)nimi.  
+ Aby uzyskać więcej informacji o tym, jak programować Profiler w celu przechodzenia do zarządzanych stosów, zobacz Samouczek dotyczący [stosu profilera w .NET Framework 2,0: podstawowe i poza](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10))nimi.  
   
  Przeszukiwanie stosu może być synchroniczne lub asynchroniczne, jak wyjaśniono w poniższych sekcjach.  
   

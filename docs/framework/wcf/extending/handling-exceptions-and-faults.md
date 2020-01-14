@@ -2,12 +2,12 @@
 title: Obsługa wyjątków i błędów
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: c28b4420be82562a30873b65113811da06cee761
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2886463510a2237834529e1ec61c73ec7251e621
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975474"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937715"
 ---
 # <a name="handling-exceptions-and-faults"></a>Obsługa wyjątków i błędów
 Wyjątki są używane do komunikacji błędów lokalnie w ramach usługi lub implementacji klienta. Z drugiej strony są używane do przekazywania błędów między granicami usług, na przykład z serwera do klienta lub na odwrót. Oprócz błędów, kanały transportu często używają mechanizmów specyficznych dla transportu do przekazywania błędów na poziomie transportu. Na przykład transport HTTP używa kodów stanu, takich jak 404 do przekazywania nieistniejącego adresu URL punktu końcowego (nie istnieje punkt końcowy do wysłania błędu). Ten dokument składa się z trzech sekcji, które zawierają wskazówki dotyczące niestandardowych autorów kanałów. W pierwszej sekcji znajdują się wskazówki dotyczące tego, kiedy i jak definiować i generować wyjątki. Druga sekcja zawiera wskazówki dotyczące generowania i zużywania błędów. Trzecia sekcja wyjaśnia, jak podać informacje o śledzeniu, aby ułatwić użytkownikowi niestandardowego kanału Rozwiązywanie problemów z uruchamianiem aplikacji.  
@@ -34,7 +34,7 @@ Wyjątki są używane do komunikacji błędów lokalnie w ramach usługi lub imp
 ### <a name="exception-messages"></a>Komunikaty o wyjątkach  
  Komunikaty o wyjątkach są wskazywane przez użytkownika, który nie jest programem, dlatego powinny udostępnić wystarczające informacje, aby pomóc użytkownikom zrozumieć i rozwiązać problem. Trzy podstawowe części dobrego komunikatu o wyjątku:  
   
- Co się stało. Podaj jasny opis problemu przy użyciu terminów związanych ze środowiskami użytkownika. Na przykład komunikat o nieprawidłowym wyjątku to "Nieprawidłowa sekcja konfiguracji". Spowoduje to pozostawienie użytkownika, którego sekcja konfiguracji jest nieprawidłowa i dlaczego jest niepoprawna. Ulepszony komunikat to "Nieprawidłowa sekcja konfiguracji \<CustomBinding >". Jeszcze lepszym komunikatem może być "nie można dodać transportu o nazwie" Moje Transporting "do powiązania o nazwie Moje powiązanie, ponieważ powiązanie ma już transport o nazwie" transport ". Jest to bardzo konkretny komunikat z użyciem warunków i nazw, które użytkownik może łatwo zidentyfikować w pliku konfiguracji aplikacji. Jednak nadal brakuje kilku kluczowych składników.  
+ co miało miejsce. Podaj jasny opis problemu przy użyciu terminów związanych ze środowiskami użytkownika. Na przykład komunikat o nieprawidłowym wyjątku to "Nieprawidłowa sekcja konfiguracji". Spowoduje to pozostawienie użytkownika, którego sekcja konfiguracji jest nieprawidłowa i dlaczego jest niepoprawna. Ulepszony komunikat to "Nieprawidłowa sekcja konfiguracji \<CustomBinding >". Jeszcze lepszym komunikatem może być "nie można dodać transportu o nazwie" Moje Transporting "do powiązania o nazwie Moje powiązanie, ponieważ powiązanie ma już transport o nazwie" transport ". Jest to bardzo konkretny komunikat z użyciem warunków i nazw, które użytkownik może łatwo zidentyfikować w pliku konfiguracji aplikacji. Jednak nadal brakuje kilku kluczowych składników.  
   
  Istotność błędu. Chyba że komunikat wskazuje, że błąd oznacza, użytkownik może się zastanawiać, czy jest to błąd krytyczny czy można go zignorować. Ogólnie rzecz biorąc komunikaty powinny prowadzić do znaczenia lub znaczenia błędu. Aby ulepszyć poprzedni przykład, może to być komunikat "nie można otworzyć ServiceHost z powodu błędu konfiguracji: nie można dodać transportu o nazwie" Moje Transporting "do powiązania o nazwie Moje powiązanie, ponieważ powiązanie ma już transport o nazwie" transport ".  
   
@@ -68,11 +68,11 @@ public abstract class MessageFault
 }  
 ```  
   
- Właściwość `Code` odpowiada `env:Code` (lub `faultCode` w SOAP 1,1) i identyfikuje typ błędu. Protokół SOAP 1,2 definiuje pięć dozwolonych wartości dla `faultCode` (na przykład nadawcy i odbiorca) i definiuje element `Subcode`, który może zawierać dowolną wartość kodu. (Patrz [Specyfikacja protokołu SOAP 1,2](https://go.microsoft.com/fwlink/?LinkId=95176) , aby uzyskać listę dozwolonych kodów błędów i ich znaczenie). Protokół SOAP 1,1 ma nieco inny mechanizm: definiuje cztery `faultCode` wartości (na przykład klienta i serwera), które można rozszerzyć przez zdefiniowanie zupełnie nowych lub przy użyciu notacji kropkowej w celu utworzenia bardziej szczegółowych `faultCodes`, na przykład Client. Authentication.  
+ Właściwość `Code` odpowiada `env:Code` (lub `faultCode` w SOAP 1,1) i identyfikuje typ błędu. Protokół SOAP 1,2 definiuje pięć dozwolonych wartości dla `faultCode` (na przykład nadawcy i odbiorca) i definiuje element `Subcode`, który może zawierać dowolną wartość kodu. (Patrz [Specyfikacja protokołu SOAP 1,2](https://www.w3.org/TR/soap12-part1/#tabsoapfaultcodes) , aby uzyskać listę dozwolonych kodów błędów i ich znaczenie). Protokół SOAP 1,1 ma nieco inny mechanizm: definiuje cztery `faultCode` wartości (na przykład klienta i serwera), które można rozszerzyć przez zdefiniowanie zupełnie nowych lub przy użyciu notacji kropkowej w celu utworzenia bardziej szczegółowych `faultCodes`, na przykład Client. Authentication.  
   
  W przypadku używania MessageFault z błędami programu, FaultCode.Name i FaultCode. Namespace mapuje do nazwy i przestrzeni nazw `env:Code` SOAP 1,2 lub `faultCode`SOAP 1,1. FaultCode. Subcode mapuje `env:Subcode` dla protokołu SOAP 1,2 i ma wartość null w przypadku protokołu SOAP 1,1.  
   
- Należy utworzyć nowe podkody błędów (lub nowe kody błędów w przypadku korzystania z protokołu SOAP 1,1), jeśli jest to interesujące do programistycznego odróżnienia błędu. Jest to analogiczne do tworzenia nowego typu wyjątku. Należy unikać używania notacji kropki z kodami błędów SOAP 1,1. ( [Profil usługi WS-I Basic](https://go.microsoft.com/fwlink/?LinkId=95177) odradza również korzystanie z notacji kropki kodu błędu).  
+ Należy utworzyć nowe podkody błędów (lub nowe kody błędów w przypadku korzystania z protokołu SOAP 1,1), jeśli jest to interesujące do programistycznego odróżnienia błędu. Jest to analogiczne do tworzenia nowego typu wyjątku. Należy unikać używania notacji kropki z kodami błędów SOAP 1,1. ( [Profil usługi WS-I Basic](http://www.ws-i.org/Profiles/BasicProfile-1.1-2004-08-24.html#SOAP_Custom_Fault_Codes) odradza również korzystanie z notacji kropki kodu błędu).  
   
 ```csharp
 public class FaultCode  

@@ -4,12 +4,12 @@ description: Naucz się, w jaki sposób portować .NET Framework aplikację Wind
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.openlocfilehash: 959b506fe23691e160d7e88e0ae61cc71c1f3421
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b1048c2d725a2bcf8398af1d2d53f40efc36c82e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567274"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936965"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Jak przenieść aplikację klasyczną Windows Forms na platformę .NET Core
 
@@ -19,10 +19,10 @@ W tym artykule różne nazwy są używane do identyfikowania typów plików uży
 
 | Plik | Opis |
 | ---- | ----------- |
-| **Moje Apps. sln** | Nazwa pliku rozwiązania. |
-| **Moje formy. csproj** | Nazwa .NET Framework Windows Forms projektu do portów. |
-| **MyFormsCore. csproj** | Nazwa nowego projektu .NET Core, który tworzysz. |
-| **MyAppCore. exe** | Plik wykonywalny aplikacji .NET Core Windows Forms. |
+| **MyApps.sln** | Nazwa pliku rozwiązania. |
+| **MyForms.csproj** | Nazwa .NET Framework Windows Forms projektu do portów. |
+| **MyFormsCore.csproj** | Nazwa nowego projektu .NET Core, który tworzysz. |
+| **MyAppCore.exe** | Plik wykonywalny aplikacji .NET Core Windows Forms. |
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -30,7 +30,7 @@ W tym artykule różne nazwy są używane do identyfikowania typów plików uży
 
   Zainstaluj następujące obciążenia programu Visual Studio:
   - Programowanie aplikacji klasycznych dla platformy .NET
-  - Programowanie dla wielu platform w środowisku .NET Core
+  - Programowanie dla wielu platform .NET core
 
 - Projekt działającego Windows Forms w rozwiązaniu, które kompiluje i uruchamia bez problemu.
 - Projekt zakodowany w C#.
@@ -106,7 +106,7 @@ SolutionFolder
     └───MyFormsCore.csproj
 ```
 
-Należy dodać projekt **MyFormsCore. csproj** do elementu **webapps. sln** z programem Visual Studio lub interfejs wiersza polecenia platformy .NET Core z katalogu **SolutionFolder** :
+Dodaj projekt **MyFormsCore. csproj** do elementu **webapps. sln** z programem Visual Studio lub interfejs wiersza polecenia platformy .NET Core z katalogu **SolutionFolder** :
 
 ```dotnetcli
 dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
@@ -190,10 +190,10 @@ Korzystając z przykładu poprzedniego kroku, program umożliwia rozwinięcie pr
 
 | Plik | Opis |
 | ---- | ----------- |
-| **Moje Apps. sln** | Nazwa pliku rozwiązania. |
-| **Kontrolki. csproj** | Nazwa .NET Framework Windows Forms kontroluje projekt do portu. |
-| **MyControlsCore. csproj** | Nazwa nowego projektu biblioteki .NET Core, który tworzysz. |
-| **MyCoreControls. dll** | Biblioteka formantów Windows Forms .NET Core. |
+| **MyApps.sln** | Nazwa pliku rozwiązania. |
+| **MyControls.csproj** | Nazwa .NET Framework Windows Forms kontroluje projekt do portu. |
+| **MyControlsCore.csproj** | Nazwa nowego projektu biblioteki .NET Core, który tworzysz. |
+| **MyCoreControls.dll** | Biblioteka formantów Windows Forms .NET Core. |
 
 ```
 SolutionFolder
@@ -287,7 +287,7 @@ Poprzednie polecenie dodaje następujący do projektu **MyFormsCore. csproj** :
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.1.0" />
   </ItemGroup>
 ```
 
@@ -299,6 +299,7 @@ Gdy program Visual Studio 2019 obsługuje Projektant formularzy systemu Windows,
 
 ## <a name="next-steps"></a>Następne kroki
 
+- Informacje o istotnych [zmianach z .NET Framework na platformę .NET Core](../compatibility/fx-core.md).
 - Przeczytaj więcej na temat [pakietu zgodności systemu Windows][compat-pack].
 - Obejrzyj [film wideo podczas przenoszenia](https://www.youtube.com/watch?v=upVQEUc_KwU) projektu Windows Forms .NET Framework do programu .NET Core.
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-ms.openlocfilehash: 3256f6f64e2ee4678b2627eea81e12cb4a02fd1e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 226f24ad8f1636101b283c3cb6662905cbf7eebe
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449620"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938207"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach — Metoda
 Nakazuje programowi uruchomieniowemu odłączenie profilera.  
@@ -36,13 +36,13 @@ HRESULT RequestProfilerDetach(
  `dwExpectedCompletionMilliseconds`  
  podczas Czas (w milisekundach), przez który środowisko uruchomieniowe języka wspólnego (CLR) powinien czekać przed sprawdzeniem, czy można bezpiecznie zwolnić Profiler.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Żądanie odłączenia jest prawidłowe i Procedura odłączania jest teraz kontynuowana w innym wątku. Gdy odłączenie jest w pełni kompletne, zostanie wygenerowane zdarzenie `ProfilerDetachSucceeded`.|  
-|E_ CORPROF_E_CALLBACK3_REQUIRED|Profiler nie może wykonać operacji [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) dla interfejsu [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) , który musi zostać zaimplementowany, aby obsługiwał operację odłączania. Nie podjęto próby odłączenia.|  
+|E_ CORPROF_E_CALLBACK3_REQUIRED|Profiler nie może wykonać operacji [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) dla interfejsu [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) , który musi zostać zaimplementowany, aby obsługiwał operację odłączania. Nie podjęto próby odłączenia.|  
 |CORPROF_E_IMMUTABLE_FLAGS_SET|Odłączenie jest niemożliwe, ponieważ Profiler ustawił niezmienne flagi podczas uruchamiania. Nie podjęto próby odłączenia; Profiler jest nadal w pełni dołączony.|  
 |CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Odłączenie jest niemożliwe, ponieważ Profiler użył kodu pośredniego języka Microsoft (MSIL) lub wstawiono `enter`/`leave` Hook. Nie podjęto próby odłączenia; Profiler jest nadal w pełni dołączony.<br /><br /> **Uwaga** Instrumentacja MSIL to kod, który jest dostarczany przez profiler przy użyciu metody [SetILFunctionBody —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) .|  
 |CORPROF_E_RUNTIME_UNINITIALIZED|Środowisko uruchomieniowe nie zostało jeszcze zainicjowane w aplikacji zarządzanej. (Oznacza to, że środowisko uruchomieniowe nie zostało w pełni załadowane). Ten kod błędu może zostać zwrócony w przypadku zażądania odłączenia wewnątrz metody [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) wywołania zwrotnego profilera.|  

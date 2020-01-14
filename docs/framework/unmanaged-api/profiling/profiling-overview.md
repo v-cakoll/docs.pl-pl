@@ -27,12 +27,12 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: 08015e2e5918ca64f601ec912a906cfb6319ed6c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a13470b970b35a2f6f088fd305ba455167c8e107
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427100"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937817"
 ---
 # <a name="profiling-overview"></a>Omówienie profilowania
 
@@ -131,7 +131,7 @@ W większości przypadków wątek generujący zdarzenie również wykonuje powia
 
 Należy zauważyć, że te wywołania zwrotne nie są serializowane. Użytkownicy muszą chronić swój kod, tworząc bezpieczne dla wątków struktury danych i blokując kod profilera, gdy jest to konieczne, aby uniemożliwić dostęp równoległy z wielu wątków. Z tego względu w niektórych przypadkach można uzyskać nietypową sekwencję wywołań zwrotnych. Załóżmy na przykład, że aplikacja zarządzana duplikuje dwa wątki wykonujące identyczny kod. W takim przypadku możliwe jest odbieranie zdarzenia [ICorProfilerCallback:: JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) dla niektórych funkcji z jednego wątku i wywołania zwrotnego `FunctionEnter` z innego wątku przed odebraniem wywołania zwrotnego [ICorProfilerCallback:: JITCompilationFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) . W takim przypadku użytkownik otrzyma `FunctionEnter` wywołanie zwrotne dla funkcji, która może nie być jeszcze w pełni skompilowana (JIT).
 
-## <a name="security"></a>Bezpieczeństwo
+## <a name="security"></a>Zabezpieczenia
 
 Profiler DLL jest niezarządzaną biblioteką DLL, która działa w ramach aparatu wykonywania środowiska uruchomieniowego języka wspólnego. W związku z tym kod w pliku DLL profilera nie podlega ograniczeniom zabezpieczeń dostępu do kodu zarządzanego. Jedyne ograniczenia dotyczące programu Profiler DLL są nakładane przez system operacyjny na użytkownika, który korzysta z profilowanej aplikacji.
 
@@ -175,7 +175,7 @@ Profilowanie interfejsu API zapewnia dwa sposoby uzyskiwania stosów wywołań: 
 
 Migawka stosu jest śladem stosu wątku na chwilę. Profiling API obsługuje śledzenie funkcji zarządzanych na stosie, ale pozostawia śledzenie niezarządzanych funkcji do analizatora stosu modułu profilera.
 
-Aby uzyskać więcej informacji na temat sposobu programowania profilera w celu przechodzenia do zarządzanych stosów, zobacz metodę [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) w tym zestawie dokumentacji i [stosu profilera w .NET Framework 2,0: podstawy i więcej](https://go.microsoft.com/fwlink/?LinkId=73638).
+Aby uzyskać więcej informacji na temat sposobu programowania profilera w celu przechodzenia do zarządzanych stosów, zobacz metodę [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) w tym zestawie dokumentacji i [stosu profilera w .NET Framework 2,0: podstawy i więcej](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).
 
 ### <a name="shadow-stack"></a>Stos cieni
 
@@ -189,7 +189,7 @@ Wywołania zwrotne profilera mogą być emitowane w bardzo ograniczonych warunka
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
-|Stanowisko|Opis|
+|Tytuł|Opis|
 |-----------|-----------------|
 |[Konfigurowanie środowiska profilowania](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|Wyjaśnia, jak zainicjować profiler, ustawić powiadomienia o zdarzeniach i profilować usługę systemu Windows.|
 |[Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|Opisuje interfejsy niezarządzane używane przez interfejs API profilowania.|

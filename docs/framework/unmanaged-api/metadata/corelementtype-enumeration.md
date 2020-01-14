@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-ms.openlocfilehash: 0ce84e1545523302cd47e60b9f047bc470e6bf0f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4e9268d292004f447b30c82f1db4d0fe58404fe
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443628"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937950"
 ---
 # <a name="corelementtype-enumeration"></a>CorElementType — Wyliczenie
 
@@ -75,7 +75,7 @@ typedef enum CorElementType {
 } CorElementType;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 |Element członkowski|Opis|
 |------------|-----------------|
@@ -121,7 +121,7 @@ typedef enum CorElementType {
 Modyfikatory typu stanowią podstawę do reprezentowania bardziej złożonych typów. Wartość modyfikatora typu `CorElementType` jest stosowana do wartości, która bezpośrednio następuje w sygnaturze typu. Wartość, która następuje po wartości modyfikatora typu `CorElementType`, może być `CorElementType` wartością typu prostego, tokenem metadanych lub inną wartością, jak określono w poniższej tabeli.
 
 > [!NOTE]
-> Wszystkie liczby (*Liczba*, liczba *argumentów*, *token metadanych*, *ranga*, *Liczba*i *powiązana*) są przechowywane jako skompresowane liczby całkowite. Aby uzyskać szczegółowe informacje, zobacz [Standard ECMA-335-Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) w witrynie sieci Web ECMA.
+> Wszystkie liczby (*Liczba*, liczba *argumentów*, *token metadanych*, *ranga*, *Liczba*i *powiązana*) są przechowywane jako skompresowane liczby całkowite. Aby uzyskać szczegółowe informacje, zobacz [Standard ECMA-335-Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm) w witrynie sieci Web ECMA.
 
 |Modyfikator typu|Format|
 |-------------------|------------|

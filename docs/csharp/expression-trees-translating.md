@@ -4,12 +4,12 @@ description: Dowiedz się, jak odwiedzać każdy węzeł w drzewie wyrażenia po
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 5c55ef2141e63462c91f84efab09828fafbff142
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a4cb40e439726e5fff60fe697da70d61bb24cb68
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036621"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937221"
 ---
 # <a name="translating-expression-trees"></a>Tłumaczenie drzew wyrażeń
 
@@ -190,9 +190,9 @@ Computed sum: 10
 
 Gdy ostateczna odpowiedź jest taka sama, przechodzenie drzewa jest zupełnie inne. Węzły są przesyłane w innej kolejności, ponieważ drzewo zostało skonstruowane z różnymi operacjami wykonywanymi jako pierwsze.
 
-## <a name="learning-more"></a>Więcej informacji
+## <a name="learning-more"></a>Dodatkowe informacje
 
-Ten przykład pokazuje mały podzbiór kodu, który będzie przepływał i interpretuje algorytmy reprezentowane przez drzewo wyrażenia. Aby uzyskać kompletną dyskusję na temat wszystkich zadań niezbędnych do utworzenia biblioteki ogólnego przeznaczenia, która tłumaczy drzewa wyrażeń na inny język, Przeczytaj [tę serię](https://blogs.msdn.microsoft.com/mattwar/2008/11/18/linq-building-an-iqueryable-provider-series/) przez otoczkę Warren. Szczegółowe informacje na temat sposobu tłumaczenia dowolnego kodu, który może znajdować się w drzewie wyrażenia.
+Ten przykład pokazuje mały podzbiór kodu, który będzie przepływał i interpretuje algorytmy reprezentowane przez drzewo wyrażenia. Aby uzyskać kompletną dyskusję na temat wszystkich zadań niezbędnych do utworzenia biblioteki ogólnego przeznaczenia, która tłumaczy drzewa wyrażeń na inny język, Przeczytaj [tę serię](https://docs.microsoft.com/archive/blogs/mattwar/linq-building-an-iqueryable-provider-series) przez otoczkę Warren. Szczegółowe informacje na temat sposobu tłumaczenia dowolnego kodu, który może znajdować się w drzewie wyrażenia.
 
 Mam nadzieję, że już widzisz prawdziwą moc drzew wyrażeń.
 Możesz sprawdzić zestaw kodu, wprowadzić wszelkie zmiany w tym kodzie i wykonać zmienioną wersję. Ponieważ drzewa wyrażeń są niezmienne, można utworzyć nowe drzewa przy użyciu składników istniejących drzew. Minimalizuje to ilość pamięci wymaganej do utworzenia zmodyfikowanych drzew wyrażeń.

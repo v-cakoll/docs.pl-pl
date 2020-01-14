@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: a3e60f715c4c61e671980e4f36813e864469d28e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1a839c4cd99e21bc2a3ebd90cf3302a475c02e17
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344770"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938130"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Profilery CLR i aplikacje sklepu Windows Store
 
@@ -76,7 +76,7 @@ Urządzenia z systemem Windows RT są całkowicie zablokowane. Do takich urządz
 
 W kilku scenariuszach omówionych w poniższych sekcjach aplikacja klasyczna interfejsu użytkownika profilera musi korzystać z nowych interfejsów API środowisko wykonawcze systemu Windows. Zapoznaj się z dokumentacją, aby dowiedzieć się, które środowisko wykonawcze systemu Windows interfejsy API mogą być używane z aplikacji klasycznych, oraz czy ich zachowanie jest różne w przypadku wywołania z aplikacji klasycznych i aplikacji ze sklepu Windows.
 
-Jeśli interfejs użytkownika profilera jest zapisywana w kodzie zarządzanym, należy wykonać kilka kroków, aby ułatwić korzystanie z tych środowisko wykonawcze systemu Windows interfejsów API. Aby uzyskać więcej informacji, zobacz artykuł dotyczący [zarządzanych aplikacji klasycznych i środowisko wykonawcze systemu Windows](https://go.microsoft.com/fwlink/?LinkID=271858) .
+Jeśli interfejs użytkownika profilera jest zapisywana w kodzie zarządzanym, należy wykonać kilka kroków, aby ułatwić korzystanie z tych środowisko wykonawcze systemu Windows interfejsów API. Aby uzyskać więcej informacji, zobacz artykuł [aplikacje klasyczne i środowisko wykonawcze systemu Windows](https://docs.microsoft.com/previous-versions/windows/apps/jj856306(v=win.10)) .
 
 ## <a name="loading-the-profiler-dll"></a>Ładowanie pliku DLL profilera
 
@@ -378,11 +378,11 @@ Moduł wyrzucania elementów bezużytecznych i zarządzanej sterty różni się 
 
 Podczas profilowania pamięci Biblioteka DLL programu Profiler zazwyczaj tworzy oddzielny wątek, z którego można wywołać metodę [metody ForceGC —](icorprofilerinfo-forcegc-method.md) . Nic nie dotyczy. Jednak może być zaskakujące, że wykonywanie operacji wyrzucania elementów bezużytecznych w aplikacji ze sklepu Windows może przetworzyć wątek w zarządzanym wątku (na przykład dla tego wątku zostanie utworzony ThreadID API profilowania).
 
-Aby zrozumieć konsekwencje tego działania, ważne jest zrozumienie różnic między wywołań synchronicznych i asynchronicznych zgodnie z definicją w interfejsie API profilowania CLR. Należy zauważyć, że jest to bardzo różne od koncepcji wywołań asynchronicznych w aplikacjach ze sklepu Windows. Zapoznaj się z wpisem w blogu [dlaczego CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) , aby uzyskać więcej informacji.
+Aby zrozumieć konsekwencje tego działania, ważne jest zrozumienie różnic między wywołań synchronicznych i asynchronicznych zgodnie z definicją w interfejsie API profilowania CLR. Należy zauważyć, że jest to bardzo różne od koncepcji wywołań asynchronicznych w aplikacjach ze sklepu Windows. Zapoznaj się z wpisem w blogu [dlaczego CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) , aby uzyskać więcej informacji.
 
 Odpowiednim punktem jest to, że wywołania wykonane w wątkach utworzonych przez profiler są zawsze uznawane za synchroniczne, nawet jeśli te wywołania pochodzą z zewnątrz implementacji jednej z metod [ICORPROFILERCALLBACK](icorprofilercallback-interface.md) biblioteki profilera. Co najmniej, które były używane w przypadku. Teraz, gdy środowisko CLR przełączyło wątek profilera do zarządzanego wątku ze względu na wywołanie [metody ForceGC —](icorprofilerinfo-forcegc-method.md), ten wątek nie jest już traktowany jako wątek profilera. W związku z tym środowisko CLR wymusza bardziej rygorystyczną definicję, która jest zgodna z elementem synchronicznym dla tego wątku — w związku z tym, że wywołanie musi pochodzić od jednej z metod [ICorProfilerCallback](icorprofilercallback-interface.md) biblioteki DLL profilera, aby kwalifikować się jako synchroniczne.
 
-Co to znaczy? Większość metod [ICorProfilerInfo](icorprofilerinfo-interface.md) jest bezpieczna wyłącznie do wywołania synchronicznego i natychmiast się nie powiedzie. Dlatego jeśli biblioteka DLL programu Profiler ponownie używa wątku [metody ForceGC —](icorprofilerinfo-forcegc-method.md) dla innych wywołań zwykle wykonywanych w wątkach utworzonych przez profiler (na przykład do [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT —](icorprofilerinfo4-requestrejit-method.md)lub [RequestRevert —](icorprofilerinfo4-requestrevert-method.md)), nastąpi problem. Nawet bezpieczna asynchronicznie funkcja, taka jak [DoStackSnapshot —](icorprofilerinfo2-dostacksnapshot-method.md) , ma specjalne reguły w przypadku wywołania z zarządzanych wątków. (Zobacz wpis w blogu szczegółowe informacje o [stosie: podstawowe i poza nim,](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) Aby uzyskać więcej informacji).
+Co to znaczy? Większość metod [ICorProfilerInfo](icorprofilerinfo-interface.md) jest bezpieczna wyłącznie do wywołania synchronicznego i natychmiast się nie powiedzie. Dlatego jeśli biblioteka DLL programu Profiler ponownie używa wątku [metody ForceGC —](icorprofilerinfo-forcegc-method.md) dla innych wywołań zwykle wykonywanych w wątkach utworzonych przez profiler (na przykład do [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT —](icorprofilerinfo4-requestrejit-method.md)lub [RequestRevert —](icorprofilerinfo4-requestrevert-method.md)), nastąpi problem. Nawet bezpieczna asynchronicznie funkcja, taka jak [DoStackSnapshot —](icorprofilerinfo2-dostacksnapshot-method.md) , ma specjalne reguły w przypadku wywołania z zarządzanych wątków. (Zobacz wpis w blogu szczegółowe informacje o [stosie: podstawowe i poza nim,](https://docs.microsoft.com/archive/blogs/davbr/profiler-stack-walking-basics-and-beyond) Aby uzyskać więcej informacji).
 
 W związku z tym zaleca się, aby każdy wątek utworzony przez program Profiler DLL do wywoływania [metody ForceGC —](icorprofilerinfo-forcegc-method.md) powinien być używany *tylko* na potrzeby wyzwalania operacje odzyskiwania pamięci, a następnie odpowiadania na wywołania zwrotne GC. Nie należy wywoływać interfejsu API profilowania, aby wykonywać inne zadania, takie jak próbkowanie stosu lub odłączanie.
 

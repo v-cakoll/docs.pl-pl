@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 30931874-4d0e-4df1-b3d1-e425b50655d1
 topic_type:
 - apiref
-ms.openlocfilehash: 1759ee2ecf08322b745a4f80a62b24596c4504cb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11bb220068e978dc130701e3b28ab3f421be7337
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123250"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937652"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim — Funkcja
 Ładuje określoną wersję biblioteki DLL dołączoną do pakietu redystrybucyjnego .NET Framework.  
@@ -43,15 +43,15 @@ HRESULT LoadLibraryShim (
  podczas Ciąg zakończony zerem, który reprezentuje nazwę biblioteki DLL, która ma zostać załadowana z biblioteki .NET Framework.  
   
  `szVersion`  
- podczas Ciąg zakończony zerem, który reprezentuje wersję biblioteki DLL, która ma zostać załadowana. Jeśli `szVersion` ma wartość null, wybrana wersja do załadowania to Najnowsza wersja określonej biblioteki DLL, która jest starsza niż wersja 4. Oznacza to, że wszystkie wersje równe lub większe niż wersja 4 są ignorowane, jeśli `szVersion` ma wartość null, a w przypadku braku zainstalowanej wersji programu w wersji 4 nie można załadować biblioteki DLL. Ma to na celu zapewnienie, że instalacja .NET Framework 4 nie ma wpływu na istniejące aplikacje lub składniki. Zapoznaj się z wpisem [w procesie SxS i szybki start migracji](https://go.microsoft.com/fwlink/?LinkId=200329) w blogu zespołu CLR.  
+ podczas Ciąg zakończony zerem, który reprezentuje wersję biblioteki DLL, która ma zostać załadowana. Jeśli `szVersion` ma wartość null, wybrana wersja do załadowania to Najnowsza wersja określonej biblioteki DLL, która jest starsza niż wersja 4. Oznacza to, że wszystkie wersje równe lub większe niż wersja 4 są ignorowane, jeśli `szVersion` ma wartość null, a w przypadku braku zainstalowanej wersji programu w wersji 4 nie można załadować biblioteki DLL. Ma to na celu zapewnienie, że instalacja .NET Framework 4 nie ma wpływu na istniejące aplikacje lub składniki. Zapoznaj się z wpisem [w procesie SxS i szybki start migracji](https://devblogs.microsoft.com/dotnet/in-proc-sxs-and-migration-quick-start/) w blogu zespołu CLR.  
   
  `pvReserved`  
- Zarezerwowane do użytku w przyszłości.  
+ Zarezerwowany do użytku w przyszłości.  
   
  `phModDll`  
  określoną Wskaźnik do uchwytu modułu.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  Ta metoda zwraca kody błędów standardowego Component Object Model (COM), jak zdefiniowano w WinError. h, oprócz następujących wartości.  
   
 |Kod powrotu|Opis|  

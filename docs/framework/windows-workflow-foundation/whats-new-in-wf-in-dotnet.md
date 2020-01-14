@@ -2,12 +2,12 @@
 title: Co nowego w programie Windows Workflow Foundation na platformie .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: 80919dd7a726cbac5fa13680e0c79292745a7bca
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: b14f18dce64bc5738f3d3c6af11d6d6224764486
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837587"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937889"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Co nowego w programie Windows Workflow Foundation na platformie .NET 4.5
 
@@ -220,7 +220,7 @@ Poza schematem blokowym i modelami programowania sekwencyjnego przepływu pracy 
 
 ### <a name="BKMK_StateMachine"></a>Przepływy pracy automatu Stanów
 
-Przepływy pracy automatu Stanów zostały wprowadzone w ramach .NET Framework 4 w wersji 4.0.1 na [platformie Microsoft .NET Framework 4 Update 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/). Ta aktualizacja zawiera kilka nowych klas i działań, które pozwalają deweloperom tworzyć przepływy pracy automatu Stanów. Te klasy i działania zostały zaktualizowane dla .NET Framework 4,5. Aktualizacje obejmują:
+Przepływy pracy automatu Stanów zostały wprowadzone w ramach .NET Framework 4 w wersji 4.0.1 na [platformie Microsoft .NET Framework 4 Update 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1). Ta aktualizacja zawiera kilka nowych klas i działań, które pozwalają deweloperom tworzyć przepływy pracy automatu Stanów. Te klasy i działania zostały zaktualizowane dla .NET Framework 4,5. Aktualizacje obejmują:
 
 1. Możliwość ustawiania punktów przerwania na Stanach
 

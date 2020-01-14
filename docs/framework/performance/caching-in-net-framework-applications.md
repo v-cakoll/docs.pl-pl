@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 2a0d138151722a76133da45c166c51d7f3bb0a31
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8fe2a386da8cdb4bb075b67a5e52c840a7b66c77
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428188"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935285"
 ---
 # <a name="caching-in-net-framework-applications"></a>Buforowanie w aplikacjach .NET Framework
 Buforowanie umożliwia przechowywanie danych w pamięci w celu szybkiego dostępu. Po ponownym uzyskaniu dostępu do danych aplikacje mogą pobrać dane z pamięci podręcznej, zamiast pobierać je z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowanie sprawia, że dane są dostępne, gdy źródło danych jest tymczasowo niedostępne.  
@@ -69,7 +69,7 @@ Buforowanie umożliwia przechowywanie danych w pamięci w celu szybkiego dostęp
   
 - Utwórz klasę niestandardową, która dziedziczy z klasy <xref:System.Runtime.Caching.ObjectCache>, a następnie podaj implementację niestandardowej pamięci podręcznej w klasie pochodnej.  
   
-- Utwórz klasę pochodzącą z klasy <xref:System.Runtime.Caching.MemoryCache> i Dostosuj lub rozwiń klasę pochodną. Aby zapoznać się z przykładem, zobacz [buforowanie danych aplikacji przy użyciu wielu obiektów pamięci podręcznej w aplikacji ASP.NET](https://blogs.msdn.microsoft.com/aspnetue/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application/).  
+- Utwórz klasę pochodzącą z klasy <xref:System.Runtime.Caching.MemoryCache> i Dostosuj lub rozwiń klasę pochodną. Aby zapoznać się z przykładem, zobacz [buforowanie danych aplikacji przy użyciu wielu obiektów pamięci podręcznej w aplikacji ASP.NET](https://docs.microsoft.com/archive/blogs/aspnetue/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application).  
   
 - Utwórz klasę pochodzącą z klasy <xref:System.Web.Caching.OutputCacheProvider> i skonfiguruj aplikację tak, aby korzystała z niestandardowego dostawcy wyjściowej pamięci podręcznej.  
   

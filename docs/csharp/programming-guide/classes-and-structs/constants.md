@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 0abb728c58d50e3d7709d680dd91794c4be6afef
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: fc3dc534756c462fdc368d997da40277e5dc2869
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705746"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937576"
 ---
 # <a name="constants-c-programming-guide"></a>Stałe (Przewodnik programowania w języku C#)
 Stałe są niezmienne wartości, które są znane w czasie kompilacji i nie zmieniają się w okresie istnienia programu. Stałe są zadeklarowane za pomocą modyfikatora [const](../../language-reference/keywords/const.md) . Tylko typy C# wbudowane (z wyłączeniem <xref:System.Object?displayProperty=nameWithType>) mogą być zadeklarowane jako `const`. Aby uzyskać listę typów wbudowanych, zobacz [tabela typy wbudowane](../../language-reference/keywords/built-in-types-table.md). Typy zdefiniowane przez użytkownika, w tym klasy, struktury i tablice, nie mogą być `const`. Użyj modyfikatora [tylko do odczytu](../../language-reference/keywords/readonly.md) , aby utworzyć klasę, strukturę lub tablicę, która jest inicjowana jednokrotnie w czasie wykonywania (na przykład w konstruktorze) i nie można jej zmienić.  
@@ -52,4 +52,4 @@ Stałe są niezmienne wartości, które są znane w czasie kompilacji i nie zmie
 - [Właściwości](./properties.md)
 - [Typy](../types/index.md)
 - [readonly](../../language-reference/keywords/readonly.md)
-- [Niezmienności w C# części pierwszej: rodzaje niezmienności](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability)
+- [Niezmienności w C# części pierwszej: rodzaje niezmienności](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)

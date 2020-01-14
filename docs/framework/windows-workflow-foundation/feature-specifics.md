@@ -2,12 +2,12 @@
 title: Charakterystyka funkcji programu Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: c534575fcf70035bc728642dbb65b05db1fd4686
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 197b2e0d6586e001a4970cf8cb3f8e6b2a372af2
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345107"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936796"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Charakterystyka funkcji programu Windows Workflow Foundation
 
@@ -101,9 +101,9 @@ Schemat konfiguracji programu WCF jest skomplikowany i oferuje użytkownikom wie
 
 - [Standardowy element punktu końcowego](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [Ulepszenia konfiguracji usługi w .NET Framework 4](https://blogs.msdn.microsoft.com/endpoint/2009/06/30/service-configuration-improvements-in-net-4/)
+- [Ulepszenia konfiguracji usługi w .NET Framework 4](https://docs.microsoft.com/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
 
-- [Typowy błąd użytkownika w programie .NET 4: wpisywanie nazwy konfiguracji WF/WCF usługi](https://blogs.msdn.microsoft.com/endpoint/2009/11/09/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name/)
+- [Typowy błąd użytkownika w programie .NET 4: wpisywanie nazwy konfiguracji WF/WCF usługi](https://docs.microsoft.com/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
 
 ### <a name="simplified-configuration-scenarios"></a>Uproszczone scenariusze konfiguracji
 
@@ -127,7 +127,7 @@ W programie .NET 3,5 istniały pewne ograniczenia dotyczące projektowania znany
 
 - [Dokumentacja interfejsu API programu rozpoznawania kontraktów danych](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [Wprowadzenie do programu rozpoznawania kontraktu danych](https://blogs.msdn.microsoft.com/youssefm/2009/06/05/configuring-known-types-dynamically-introducing-the-datacontractresolver/)
+- [Wprowadzenie do programu rozpoznawania kontraktu danych](https://docs.microsoft.com/archive/blogs/youssefm/configuring-known-types-dynamically-introducing-the-datacontractresolver)
 
 - Badan
 
@@ -287,7 +287,7 @@ Usługa routingu w programie .NET 4 została zaprojektowana tak, aby ułatwić r
 
 2. Przykłady: [usługi &#91;routingu — przykłady&#93; WCF](../wcf/samples/routing-services.md)
 
-3. Blog: [reguły routingu!](https://blogs.msdn.microsoft.com/RoutingRules/)
+3. Blog: [reguły routingu!](https://docs.microsoft.com/archive/blogs/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>Scenariusze routingu
 

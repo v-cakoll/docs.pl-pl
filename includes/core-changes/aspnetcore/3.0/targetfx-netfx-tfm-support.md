@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 4c676a185ff4a7a825acb059bf0a5842ca3922fc
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b60f74947a537c602c7bd1a89587b76bd847c82a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394021"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937286"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>Platforma docelowa: porzucona obsługa .NET Framework
 
 Począwszy od ASP.NET Core 3,0, .NET Framework jest nieobsługiwaną strukturą docelową.
 
-#### <a name="change-description"></a>Zmień opis
+#### <a name="change-description"></a>Opis zmiany
 
 .NET Framework 4,8 to Ostatnia wersja główna .NET Framework. Nowe aplikacje ASP.NET Core powinny być oparte na platformie .NET Core. Począwszy od wersji programu .NET Core 3,0, można traktować ASP.NET Core 3,0 jako część platformy .NET Core.
 
@@ -20,7 +20,7 @@ Aby uzyskać więcej informacji na temat przenoszenia z .NET Framework do progra
 
 nie ma to wpływu na pakiety `Microsoft.Extensions` (takie jak rejestrowanie, iniekcja zależności i konfiguracja Entity Framework Core). Będą oni nadal obsługiwać .NET Standard.
 
-Aby uzyskać więcej informacji na temat motywacji tej zmiany, zobacz [oryginalny wpis w blogu](https://blogs.msdn.microsoft.com/webdev/2018/10/29/a-first-look-at-changes-coming-in-asp-net-core-3-0).
+Aby uzyskać więcej informacji na temat motywacji tej zmiany, zobacz [oryginalny wpis w blogu](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -34,7 +34,7 @@ Aplikacje ASP.NET Core mogą działać na platformie .NET Core lub .NET Framewor
 
 Aplikacje ASP.NET Core można uruchamiać tylko na platformie .NET Core.
 
-#### <a name="recommended-action"></a>Zalecana akcja
+#### <a name="recommended-action"></a>Zalecane działanie
 
 Wykonaj jedną z następujących czynności:
 

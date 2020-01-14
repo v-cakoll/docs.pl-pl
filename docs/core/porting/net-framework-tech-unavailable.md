@@ -3,12 +3,12 @@ title: Technologie .NET Framework niedostępne w programie .NET Core
 description: Informacje na temat technologii .NET Framework, które są niedostępne w programie .NET Core
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: d474b694b80b2f0e74dd2916106016802f7e0c68
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 89871753fef92a30bf2151a618207a73b40bb402
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777310"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936946"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Technologie .NET Framework niedostępne w programie .NET Core
 
@@ -46,7 +46,6 @@ Aby uruchamiać procesy z najmniej zestawem uprawnień, należy używać granic 
 
 System. EnterpriseServices (COM+) nie jest obsługiwany przez platformę .NET Core.
 
-## <a name="next-steps"></a>Następne kroki
+## <a name="see-also"></a>Zobacz także
 
->[!div class="nextstepaction"]
->[Analizowanie zależności](third-party-deps.md)
+- [Przegląd portów z .NET Framework do platformy .NET Core](../porting/index.md)

@@ -2,12 +2,12 @@
 title: Podstawowe zmiany w programie .NET Core
 description: Dowiedz się więcej o istotnych zmianach w każdej wersji platformy .NET Core.
 ms.date: 11/27/2019
-ms.openlocfilehash: 8bd8ebc803a80069530fe1cf6adc66769f7d6c85
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: c03054972a5e1cd427e069c65fa8e8b601af5894
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900157"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937336"
 ---
 # <a name="breaking-change-selectors"></a>Selektory zmiany przerywania
 
@@ -18,9 +18,6 @@ Poniższe wersje i selektory obszarów zapewniają przefiltrowaną listę mając
 Wybierz aktualnie docelową wersję platformy .NET, a następnie wersję platformy .NET Core, do której chcesz przeprowadzić migrację:
 
 [!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
-
-> [!TIP]
-> Jeśli migrujesz aplikację Windows Forms z .NET Framework do programu .NET Core, zobacz artykuł dotyczący [zmiany w Windows Forms (.NET Framework do platformy .NET Core)](../porting/winforms-breaking-changes.md) zamiast używania selektora wersji.
 
 ## <a name="by-area"></a>Według obszaru
 

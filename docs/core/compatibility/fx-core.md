@@ -2,27 +2,119 @@
 title: Istotne zmiany — .NET Framework do platformy .NET Core
 description: Wyświetla listę istotnych zmian z .NET Framework do programu .NET Core.
 ms.date: 12/18/2019
-ms.openlocfilehash: 5c29636664632e80e4235e922a3296c34fdbef36
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9f4ecc8a9de7279bb4b222b3df77e1eb17b33f0a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900122"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937393"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Istotne zmiany dotyczące migracji z .NET Framework do platformy .NET Core
 
-W przypadku migrowania aplikacji z programu .NET Framework do programu .NET Core, istotne zmiany wymienione w tym artykule mogą mieć wpływ na użytkownika. Istotne zmiany są pogrupowane według kategorii.
+W przypadku migrowania aplikacji z programu .NET Framework do programu .NET Core, istotne zmiany wymienione w tym artykule mogą mieć wpływ na użytkownika. Istotne zmiany są pogrupowane według kategorii i w ramach tych kategorii według wersji programu .NET Core, która została wprowadzona w systemie.
 
 > [!NOTE]
 > Ten artykuł nie jest pełną listą istotnych zmian między .NET Framework i .NET Core. Najważniejsze zmiany zostaną dodane w tym miejscu w miarę ich istnienia.
 
 ## <a name="corefx"></a>CoreFx
 
+Zmiany powodujące niezgodność:
+
+- [Zmień wartość domyślną UseShellExecute](#change-in-default-value-of-useshellexecute)
+
+***
+
+### <a name="net-core-21"></a>.NET Core 2.1
+
 [!INCLUDE[Process.Start changes](~/includes/core-changes/corefx/2.1/process-start-changes.md)]
+
+***
 
 ## <a name="windows-forms"></a>Windows Forms
 
-Aby uzyskać informacje o istotnych zmianach podczas migrowania aplikacji Windows Forms z .NET Framework do platformy .NET Core 3,0 lub nowszej, zobacz artykuł dotyczący [zmiany w Windows Forms (.NET Framework do platformy .NET Core)](../porting/winforms-breaking-changes.md).
+Obsługa Windows Forms została dodana do programu .NET Core w wersji 3,0. W przypadku migrowania aplikacji Windows Forms z .NET Framework do platformy .NET Core zmiany wymienione w tym miejscu mogą mieć wpływ na aplikację.
+
+Zmiany powodujące niezgodność:
+
+- [Usunięte kontrolki](#removed-controls)
+- [Zdarzenie CellFormatting nie zostało zgłoszone, jeśli jest wyświetlana etykietka narzędzia](#cellformatting-event-not-raised-if-tooltip-is-shown)
+- [Formant. DefaultFont został zmieniony na Segoe UI 9 pt](#default-control-font-changed-to-segoe-ui-9-pt)
+- [Modernizacja FolderBrowserDialog](#modernization-of-the-folderbrowserdialog)
+- [SerializableAttribute usunięte z niektórych typów Windows Forms](#serializableattribute-removed-from-some-windows-forms-types)
+- [Nieobsługiwany przełącznik zgodności AllowUpdateChildControlIndexForTabControls](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
+- [Przełącznik zgodności DomainUpDown. UseLegacyScrolling nie jest obsługiwany](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
+- [Nieobsługiwany przełącznik zgodności DoNotLoadLatestRichEditControl](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
+- [Nieobsługiwany przełącznik zgodności DoNotSupportSelectAllShortcutInMultilineTextBox](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
+- [Nieobsługiwany przełącznik zgodności DontSupportReentrantFilterMessage](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
+- [Nieobsługiwany przełącznik zgodności EnableVisualStyleValidation](#enablevisualstylevalidation-compatibility-switch-not-supported)
+- [Nieobsługiwany przełącznik zgodności UseLegacyContextMenuStripSourceControlValue](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
+- [Nieobsługiwany przełącznik zgodności UseLegacyImages](#uselegacyimages-compatibility-switch-not-supported)
+- [Zmiana dostępu do elementu AccessibleObject. RuntimeIDFirstItem](#change-of-access-for-accessibleobjectruntimeidfirstitem)
+- [Zduplikowane interfejsy API zostały usunięte z Windows Forms](#duplicated-apis-removed-from-windows-forms)
+
+### <a name="net-core-31"></a>.NET Core 3,1
+
+[!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
+
+***
+
+[!INCLUDE[CellFormatting event](~/includes/core-changes/windowsforms/3.1/cellformatting-event-not-raised.md)]
+
+***
+
+### <a name="net-core-30"></a>.NET Core 3.0
+
+[!INCLUDE[Control.DefaultFont changed to Segoe UI 9 pt](~/includes/core-changes/windowsforms/3.0/control-defaultfont-changed.md)]
+
+***
+
+[!INCLUDE[Modernization of the FolderBrowserDialog](~/includes/core-changes/windowsforms/3.0/modernized-folderbrowserdialog.md)]
+
+***
+
+[!INCLUDE[SerializableAttribute removed from some Windows Forms types](~/includes/core-changes/windowsforms/3.0/remove-serializationattribute.md)]
+
+***
+
+[!INCLUDE[AllowUpdateChildControlIndexForTabControls compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-allowupdatechildcontrolindexfortabcontrols.md)]
+
+***
+
+[!INCLUDE[DomainUpDown.UseLegacyScrolling compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-uselegacyscrolling.md)]
+
+***
+
+[!INCLUDE[DoNotLoadLatestRichEditControl compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-donotloadlatestricheditcontrol.md)]
+
+***
+
+[!INCLUDE[DoNotSupportSelectAllShortcutInMultilineTextBox compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-donotsupportselectallshortcutinmultilinetextbox.md)]
+
+***
+
+[!INCLUDE[DontSupportReentrantFilterMessage compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-dontsupportreentrantfiltermessage.md)]
+
+***
+
+[!INCLUDE[EnableVisualStyleValidation compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-enablevisualstylevalidation.md)]
+
+***
+
+[!INCLUDE[UseLegacyContextMenuStripSourceControlValue compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-uselegacycontextmenustripsourcecontrolvalue.md)]
+
+***
+
+[!INCLUDE[UseLegacyImages compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-uselegacyimages.md)]
+
+***
+
+[!INCLUDE[Change of access for AccessibleObject.RuntimeIDFirstItem](~/includes/core-changes/windowsforms/3.0/changed-access-for-runtimeidfirstitem.md)]
+
+***
+
+[!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/3.0/remove-duplicated-apis.md)]
+
+***
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -4,19 +4,19 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: c529c03fd3856bbd3d3b26371415907c94ca8d30
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 85fb07f46c2d885491db7358f24b3b50836c2ca8
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343516"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937755"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Opcje kompilatora Visual Basic w porządku alfabetycznym
 Kompilator Visual Basic wiersza polecenia jest dostępny jako alternatywa dla kompilowania programów z zintegrowanego środowiska programistycznego (IDE) programu Visual Studio. Poniżej znajduje się lista opcji kompilatora wiersza polecenia Visual Basic sortowanych alfabetycznie.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-|Opcja|Przeznaczenie|  
+|Opcja|Cel|  
 |------------|-------------|  
 |[@ (określenie pliku odpowiedzi)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Określa plik odpowiedzi.|  
 |[-?](../../../visual-basic/reference/command-line-compiler/help.md)|Wyświetla opcje kompilatora. To polecenie jest takie samo jak określenie opcji `-help`. Nie wystąpi kompilacja.|  
@@ -34,7 +34,7 @@ Kompilator Visual Basic wiersza polecenia jest dostępny jako alternatywa dla ko
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Przetwarza komentarze dokumentacji do pliku XML.|  
 |[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Określa sposób, w jaki kompilator Visual Basic powinien raportować wewnętrzne błędy kompilatora.|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Określa, gdzie mają być wyrównane sekcje pliku wyjściowego.|  
-|[-Pomoc](../../../visual-basic/reference/command-line-compiler/help.md)|Wyświetla opcje kompilatora. To polecenie jest takie samo jak określenie opcji `-?`. Nie wystąpi kompilacja.|  
+|[-help](../../../visual-basic/reference/command-line-compiler/help.md)|Wyświetla opcje kompilatora. To polecenie jest takie samo jak określenie opcji `-?`. Nie wystąpi kompilacja.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Wskazuje, czy określony plik wykonywalny obsługuje generowanie losowe układu przestrzeni adresowej o wysokiej entropii (ASLR).|  
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Importuje przestrzeń nazw z określonego zestawu.|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Określa nazwę kontenera kluczy, aby nadać zestawowi silną nazwę.|  
@@ -57,7 +57,7 @@ Kompilator Visual Basic wiersza polecenia jest dostępny jako alternatywa dla ko
 |[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|Umożliwia korzystanie z wnioskowania o typie lokalnym w deklaracjach zmiennych.|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Wymusza ścisłą semantykę języka.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Określa plik wyjściowy.|  
-|`-parallel[+&#124;-]`|Określa, czy ma być używana współbieżna kompilacja (+).|  
+|<code>-parallel[+&#124;-]</code>|Określa, czy ma być używana współbieżna kompilacja (+).|  
 |[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|Określa platformę procesora, która jest elementem docelowym kompilatora dla pliku wyjściowego.|  
 |`-preferreduilang`|Określ nazwę preferowanego języka wyjściowego.|  
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|Zapobiega wyświetlaniu przez kompilator kodu dla błędów i ostrzeżeń związanych z składnią.|  

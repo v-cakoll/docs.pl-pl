@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2067ea2a70277d188950c449d3990f4426f69beb
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: a8146db1fb54d63d4716b879ce793f7d817cef59
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901943"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937283"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Udostępnione środowisko: zestawy usunięte z Microsoft. AspNetCore. App
 
@@ -46,7 +46,7 @@ Aby uzyskać więcej informacji, zobacz [przyszłość JSON w programie .NET Cor
 
 Ta zmiana upraszcza użycie `Microsoft.AspNetCore.App` i zmniejsza duplikowanie między pakietami NuGet i współdzielonymi strukturami.
 
-Aby uzyskać więcej informacji na temat motywacji tej zmiany, zobacz [ten wpis w blogu](https://blogs.msdn.microsoft.com/webdev/2018/10/29/a-first-look-at-changes-coming-in-asp-net-core-3-0).
+Aby uzyskać więcej informacji na temat motywacji tej zmiany, zobacz [ten wpis w blogu](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/).
 
 #### <a name="recommended-action"></a>Zalecane działanie
 

@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 65990c699bafa8eec1ba7dcbce624c88316cbb72
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0764ca29fc959092e77629ff3888e65f0d68d70c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283286"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938052"
 ---
 # <a name="working-with-certificates"></a>Praca z certyfikatami
 
 W przypadku zabezpieczeń programu Windows Communication Foundation (WCF), certyfikaty cyfrowe X. 509 są często używane do uwierzytelniania klientów i serwerów, szyfrowania i cyfrowego podpisywania wiadomości. W tym temacie krótko opisano funkcje certyfikatu cyfrowego X. 509 oraz sposób ich używania w programie WCF oraz linki do tematów, które wyjaśniają te koncepcje w dalszej części lub pokazują, jak wykonywać typowe zadania przy użyciu usług WCF i certyfikatów.
 
-W skrócie certyfikat cyfrowy jest częścią *infrastruktury kluczy publicznych* (PKI), która jest systemem certyfikatów cyfrowych, urzędów certyfikacji i innych urzędów rejestrowania, którzy weryfikują i uwierzytelniają okres ważności każdej ze stron w ramach transakcji elektronicznej przy użyciu kryptografii klucza publicznego. Urząd certyfikacji wystawia certyfikaty, a każdy certyfikat zawiera zestaw pól zawierających dane, takich jak *podmiot* (podmiot, dla którego wystawiony jest certyfikat), daty ważności (gdy certyfikat jest ważny), wystawca (jednostka, która wystawił certyfikat) i klucz publiczny. W programie WCF każda z tych właściwości jest przetwarzana jako <xref:System.IdentityModel.Claims.Claim>, a każde z nich jest dalej podzielone na dwa typy: tożsamość i prawo. Aby uzyskać więcej informacji na temat certyfikatów X. 509, zobacz [Certyfikaty klucza publicznego x. 509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Aby uzyskać więcej informacji o oświadczeniach i autoryzacji w programie WCF, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](managing-claims-and-authorization-with-the-identity-model.md). Aby uzyskać więcej informacji o implementowaniu infrastruktury kluczy publicznych, zobacz [infrastruktura PKI przedsiębiorstwa z systemem Windows Server 2012 R2 Active Directory usług certyfikatów](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/).
+W skrócie certyfikat cyfrowy jest częścią *infrastruktury kluczy publicznych* (PKI), która jest systemem certyfikatów cyfrowych, urzędów certyfikacji i innych urzędów rejestrowania, którzy weryfikują i uwierzytelniają okres ważności każdej ze stron w ramach transakcji elektronicznej przy użyciu kryptografii klucza publicznego. Urząd certyfikacji wystawia certyfikaty, a każdy certyfikat zawiera zestaw pól zawierających dane, takich jak *podmiot* (podmiot, dla którego wystawiony jest certyfikat), daty ważności (gdy certyfikat jest ważny), wystawca (jednostka, która wystawił certyfikat) i klucz publiczny. W programie WCF każda z tych właściwości jest przetwarzana jako <xref:System.IdentityModel.Claims.Claim>, a każde z nich jest dalej podzielone na dwa typy: tożsamość i prawo. Aby uzyskać więcej informacji na temat certyfikatów X. 509, zobacz [Certyfikaty klucza publicznego x. 509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Aby uzyskać więcej informacji o oświadczeniach i autoryzacji w programie WCF, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](managing-claims-and-authorization-with-the-identity-model.md). Aby uzyskać więcej informacji o implementowaniu infrastruktury kluczy publicznych, zobacz [infrastruktura PKI przedsiębiorstwa z systemem Windows Server 2012 R2 Active Directory usług certyfikatów](https://docs.microsoft.com/archive/blogs/yungchou/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2).
 
 Podstawową funkcją certyfikatu jest uwierzytelnianie tożsamości właściciela certyfikatu dla innych osób. Certyfikat zawiera *klucz publiczny* właściciela, podczas gdy właściciel zachowuje klucz prywatny. Klucz publiczny może służyć do szyfrowania wiadomości wysyłanych do właściciela certyfikatu. Tylko właściciel ma dostęp do klucza prywatnego, więc tylko właściciel może odszyfrować te komunikaty.
 
@@ -72,7 +72,7 @@ Certyfikaty cyfrowe są używane do uwierzytelniania jednostki przy użyciu tej 
 
 Podczas tworzenia nowej usługi może być używany certyfikat, który nie jest wystawiony przez zaufany certyfikat główny, lub sam certyfikat wystawiający może nie znajdować się w magazynie zaufanych głównych urzędów certyfikacji. Tylko do celów programistycznych można tymczasowo wyłączyć mechanizm, który sprawdza łańcuch zaufania dla certyfikatu. W tym celu należy ustawić właściwość `CertificateValidationMode` na `PeerTrust` lub `PeerOrChainTrust`. Każdy tryb określa, że certyfikat może być wystawiony samodzielnie (relacja równorzędna) lub część łańcucha zaufania. Właściwość można ustawić dla dowolnej z następujących klas.
 
-|Class|Właściwość|
+|Klasa|Właściwość|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -85,7 +85,7 @@ Możesz również ustawić właściwość za pomocą konfiguracji. Następujące
 
 - [\<peerAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)
 
-- [\<messageSenderAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)
+- [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)
 
 ## <a name="custom-authentication"></a>Uwierzytelnianie niestandardowe
 
@@ -141,7 +141,7 @@ Można również ustawić tryb konfiguracji przy użyciu `revocationMode` atrybu
 
 W programie WCF należy często określić certyfikat lub zestaw certyfikatów, których usługa lub klient ma używać do uwierzytelniania, szyfrowania lub cyfrowego podpisywania wiadomości. Można to zrobić programowo przy użyciu metody `SetCertificate` różnych klas, które reprezentują certyfikaty X. 509. Poniższe klasy wykorzystują metodę `SetCertificate`, aby określić certyfikat.
 
-|Class|Metoda|
+|Klasa|Metoda|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|
@@ -160,7 +160,7 @@ Magazyn może zawierać wiele certyfikatów o tej samej nazwie podmiotu. Oznacza
 
 ## <a name="certificates-in-configuration"></a>Certyfikaty w konfiguracji
 
-Można również ustawić certyfikaty przy użyciu opcji konfiguracja. Jeśli tworzysz usługę, poświadczenia, w tym certyfikaty, są określone w [>\<serviceBehaviors](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md). Podczas programowania klienta certyfikaty są określane w [\<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md).
+Można również ustawić certyfikaty przy użyciu opcji konfiguracja. Jeśli tworzysz usługę, poświadczenia, w tym certyfikaty, są określone w [\<serviceBehaviors](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md). Podczas programowania klienta certyfikaty są określane w [\<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md).
 
 ## <a name="mapping-a-certificate-to-a-user-account"></a>Mapowanie certyfikatu na konto użytkownika
 

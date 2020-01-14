@@ -3,28 +3,28 @@ title: Rozpoczynanie pracy z usługą Azure Table Storage przy użyciu języka F
 description: Przechowuj dane strukturalne w chmurze przy użyciu usługi Azure Table Storage lub Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 6833e2264f7543f50b94892b6980140e4bf1cdd1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 23f5e40e1d9b3d5a0ee27d675362930ef86e90c5
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424608"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935585"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Rozpoczynanie pracy z usługą Azure Table Storage i interfejs API tabel Azure Cosmos DB przy użyciu języka F\#
 
-Azure Table Storage to usługa, która przechowuje strukturalne dane NoSQL w chmurze. Magazyn tabel jest magazynem kluczy/atrybutów z projektem bez schematu. Ponieważ magazyn tabel jest bezschematowy, można łatwo dostosować dane w miarę rozwoju aplikacji. Dostęp do danych jest szybki i opłacalny dla wszystkich rodzajów aplikacji. Magazyn tabel jest zwykle znacząco niższy niż tradycyjny kod SQL dla podobnych ilości danych.
+Magazyn tabel Azure to usługa, która przechowuje dane strukturalne NoSQL w chmurze. Magazyn tabel jest magazynem kluczy/atrybutów bez schematu. Ponieważ Magazyn tabel nie ma schematu, łatwo zaadaptować dane do rozwijających się potrzeb aplikacji. Dostęp do danych jest szybki i ekonomiczny dla wszystkich rodzajów aplikacji. Magazyn tabel jest zwykle znacznie tańszy niż tradycyjne bazy SQL dla podobnych ilości danych.
 
-Usługa Table Storage umożliwia przechowywanie elastycznych zestawów danych, takich jak dane użytkowników dla aplikacji sieci Web, książek adresowych, informacji o urządzeniach i innych typów metadanych wymaganych przez usługę. Można przechowywać dowolną liczbę jednostek w tabeli, a konto magazynu może zawierać dowolną liczbę tabel, aż do limitu pojemności konta magazynu.
+Magazyn tabel umożliwia przechowywanie elastycznych zestawów danych, takich jak dane użytkownika dla aplikacji internetowych, książki adresowe, informacje o urządzeniach i wszelkie inne metadane, których wymaga Twoja usługa. W tabeli można przechowywać dowolną liczbę jednostek, a konto magazynu może zawierać dowolną liczbę tabel w granicach pojemności konta magazynu.
 
 Azure Cosmos DB zapewnia interfejs API tabel dla aplikacji, które są przeznaczone dla usługi Azure Table Storage, które wymagają funkcji premium, takich jak:
 
-- Gotowe globalna.
+- Gotową do użytku dystrybucję globalną.
 - Dedykowana przepływność na całym świecie.
-- Opóźnienia o pojedynczej liczbie milisekund w 99 percentylu.
+- Opóźnienie rzędu kilku milisekund na poziomie 99. percentyla.
 - Gwarantowana wysoka dostępność.
 - Automatyczne indeksowanie pomocnicze.
 
-Aplikacje przeznaczone dla usługi Azure Table Storage można migrować do Azure Cosmos DB przy użyciu interfejs API tabel bez zmian w kodzie i korzystać z funkcji Premium. Interfejs API tabel udostępnia zestawy SDK klienta dostępne dla platform .NET, Java, Python i Node. js.
+Aplikacje korzystające z usługi Azure Table Storage mogą być migrowane do usługi Azure Cosmos DB przy użyciu interfejsu API tabel bez zmian kodu i mogą korzystać z funkcji warstwy Premium. Interfejs API tabel ma zestawy SDK klienta dostępne dla platform .NET, Java, Python i Node.js.
 
 Aby uzyskać więcej informacji, zobacz [wprowadzenie do Azure Cosmos DB interfejs API tabel](https://docs.microsoft.com/azure/cosmos-db/table-introduction).
 
@@ -38,9 +38,9 @@ Aby skorzystać z tego przewodnika, musisz najpierw [utworzyć konto usługi Azu
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Utwórz F# skrypt i uruchom F# interaktywny
 
-Przykłady w tym artykule mogą być używane w F# aplikacji lub F# skrypcie. Aby utworzyć F# skrypt, Utwórz plik z rozszerzeniem `.fsx`, na przykład `tables.fsx` w środowisku F# deweloperskim.
+Przykłady w tym artykule mogą być używane w F# aplikacji lub F# skrypcie. Aby utworzyć F# skrypt, Utwórz plik z rozszerzeniem `.fsx`, na przykład `tables.fsx`, w środowisku F# deweloperskim.
 
-Następnie należy użyć [Menedżera pakietów](package-management.md) , takiego jak [Paket](https://fsprojects.github.io/Paket/) lub [NuGet](https://www.nuget.org/) , aby zainstalować pakiet `WindowsAzure.Storage` i odwołanie `WindowsAzure.Storage.dll` w skrypcie przy użyciu dyrektywy `#r`. Zrób to ponownie dla `Microsoft.WindowsAzure.ConfigurationManager` w celu uzyskania przestrzeni nazw Microsoft. Azure.
+Następnie należy użyć [Menedżera pakietów](package-management.md) , takiego jak [Paket](https://fsprojects.github.io/Paket/) lub [NuGet](https://www.nuget.org/) , aby zainstalować pakiet `WindowsAzure.Storage` i informacje referencyjne `WindowsAzure.Storage.dll` w skrypcie przy użyciu dyrektywy `#r`. Zrób to ponownie w celu `Microsoft.WindowsAzure.ConfigurationManager`, aby uzyskać przestrzeń nazw Microsoft. Azure.
 
 ### <a name="add-namespace-declarations"></a>Dodawanie deklaracji przestrzeni nazw
 
@@ -60,13 +60,13 @@ Dla samouczka wprowadź parametry połączenia w skrypcie, jak w poniższym przy
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L11-L11)]
 
-Nie jest to jednak **zalecane** w przypadku rzeczywistych projektów. Klucz konta magazynu jest podobny do hasła głównego dla konta magazynu. Zawsze należy zachować ostrożność, aby chronić klucz konta magazynu. Należy unikać dystrybuowania go do innych użytkowników, ich trwałego kodowania lub zapisywania w pliku w formacie zwykłego tekstu, który jest dostępny dla innych. Możesz ponownie wygenerować klucz za pomocą witryny Azure Portal, jeśli uważasz, że jego zabezpieczenia mogły zostać naruszone.
+Nie jest to jednak **zalecane** w przypadku rzeczywistych projektów. Klucz konta magazynu jest podobny do hasła głównego konta magazynu. Zawsze chroń klucz konta magazynu. Nie udostępniaj go innym użytkownikom, nie koduj go trwale ani nie zapisuj w zwykłym pliku tekstowym, do którego mają dostęp inne osoby. Możesz ponownie wygenerować klucz za pomocą witryny Azure Portal, jeśli uważasz, że jego zabezpieczenia mogły zostać naruszone.
 
 W przypadku prawdziwych aplikacji najlepszym sposobem obsługi parametrów połączenia magazynu jest w pliku konfiguracji. Aby pobrać parametry połączenia z pliku konfiguracji, można to zrobić:
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L13-L15)]
 
-Korzystanie z usługi Azure Configuration Manager jest opcjonalne. Można również użyć interfejsu API, takiego jak typ `ConfigurationManager` .NET Framework.
+Użycie programu Azure Configuration Manager jest opcjonalne. Można również użyć interfejsu API, takiego jak typ `ConfigurationManager` .NET Framework.
 
 ### <a name="parse-the-connection-string"></a>Analizowanie parametrów połączenia
 
@@ -74,37 +74,37 @@ Aby przeanalizować parametry połączenia, użyj:
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L21-L22)]
 
-Zwraca `CloudStorageAccount`.
+Spowoduje to zwrócenie `CloudStorageAccount`.
 
-### <a name="create-the-table-service-client"></a>Tworzenie klienta Table service
+### <a name="create-the-table-service-client"></a>Tworzenie klienta usługi tabel
 
 Klasa `CloudTableClient` umożliwia pobieranie tabel i jednostek w magazynie tabel. Oto jeden ze sposobów tworzenia klienta usługi:
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
 
-Teraz możesz przystąpić do pisania kodu, który odczytuje dane z magazynu tabel i zapisuje je.
+Teraz możesz przystąpić do pisania kodu, który będzie odczytywać dane z Magazynu tabel i zapisywać je w nim.
 
 ### <a name="create-a-table"></a>Tworzenie tabeli
 
-Ten przykład pokazuje, jak utworzyć tabelę, jeśli jeszcze nie istnieje:
+W tym przykładzie pokazano, jak utworzyć tabelę, jeśli jeszcze nie istnieje:
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L35-L39)]
 
 ### <a name="add-an-entity-to-a-table"></a>Dodawanie jednostki do tabeli
 
-Jednostka musi mieć typ, który dziedziczy po `TableEntity`. Możesz w dowolny sposób rozciągnąć `TableEntity`, ale typ *musi* mieć konstruktora bez parametrów. W tabeli platformy Azure są przechowywane tylko właściwości `get` i `set`.
+Jednostka musi mieć typ, który dziedziczy po `TableEntity`. Możesz w dowolny sposób rozciągnąć `TableEntity`, ale typ *musi* mieć konstruktora bez parametrów. W tabeli platformy Azure są przechowywane tylko właściwości, które mają zarówno `get`, jak i `set`.
 
-Partycja i klucz wiersza jednostki jednoznacznie identyfikują jednostkę w tabeli. Jednostki z tym samym kluczem partycji mogą być przeszukiwane szybciej niż te z różnymi kluczami partycji, ale użycie różnych kluczy partycji umożliwia zwiększenie skalowalności operacji równoległych.
+Partycja i klucz wiersza jednostki jednoznacznie identyfikują jednostkę w tabeli. Jednostki z tym samym kluczem partycji mogą być przeszukiwane szybciej niż jednostki o różnych kluczach partycji, niemniej użycie różnych kluczy partycji umożliwia zwiększenie skalowalności operacji równoległych.
 
 Oto przykład `Customer`, który używa `lastName` jako klucza partycji i `firstName` jako klucza wiersza.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L45-L52)]
 
-Teraz Dodaj `Customer` do tabeli. W tym celu należy utworzyć `TableOperation`, która jest wykonywana na tabeli. W takim przypadku należy utworzyć operację `Insert`.
+Teraz Dodaj `Customer` do tabeli. W tym celu należy utworzyć `TableOperation`, który jest wykonywany na tabeli. W tym przypadku utworzysz operację `Insert`.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L54-L55)]
 
-### <a name="insert-a-batch-of-entities"></a>Wstawianie partii jednostek
+### <a name="insert-a-batch-of-entities"></a>Zbiorcze wstawianie jednostek
 
 Można wstawić partię jednostek do tabeli przy użyciu jednej operacji zapisu. Operacje wsadowe umożliwiają łączenie operacji w pojedynczym wykonaniu, ale mają pewne ograniczenia:
 
@@ -139,7 +139,7 @@ Wyniki są teraz drukowane:
 
 ### <a name="retrieve-a-single-entity"></a>Pobieranie pojedynczej jednostki
 
-Można napisać zapytanie w celu pobrania pojedynczej określonej jednostki. W tym miejscu należy użyć `TableOperation`, aby określić klienta "Ben Kowalski". Zamiast kolekcji można wrócić `Customer`. Określenie zarówno klucza partycji, jak i klucza wiersza w zapytaniu jest najszybszym sposobem na pobranie pojedynczej jednostki z Table service.
+Można napisać zapytanie do pobrania jednej, określonej jednostki. W tym miejscu należy użyć `TableOperation`, aby określić klienta "Ben Kowalski". Zamiast kolekcji można wrócić `Customer`. Określenie zarówno klucza partycji, jak i klucza wiersza w zapytaniu jest najszybszym sposobem na pobranie pojedynczej jednostki z Table service.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L109-L111)]
 
@@ -159,13 +159,13 @@ Czasami nie wiadomo, czy jednostka istnieje w tabeli. A jeśli tak, bieżące wa
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L134-L141)]
 
-### <a name="query-a-subset-of-entity-properties"></a>Wykonywanie zapytania dotyczącego podzbioru właściwości jednostki
+### <a name="query-a-subset-of-entity-properties"></a>Tworzenie zapytania do podzbioru właściwości jednostki
 
-Zapytanie tabeli może pobrać tylko kilka właściwości z jednostki zamiast wszystkich z nich. Ta technika, nazywana projekcją, może poprawić wydajność zapytań, szczególnie w przypadku dużych jednostek. Tutaj zwracasz tylko adresy e-mail przy użyciu `DynamicTableEntity` i `EntityResolver`. Należy zauważyć, że projekcja nie jest obsługiwana w lokalnym emulatorze magazynu, więc ten kod jest uruchamiany tylko wtedy, gdy używasz konta w Table service.
+Zapytanie tabeli może pobrać tylko kilka właściwości z jednostki zamiast wszystkich z nich. Ta technika, nazywana projekcją, może poprawić wydajność zapytań, szczególnie w przypadku dużych jednostek. Tutaj zwracasz tylko adresy e-mail przy użyciu `DynamicTableEntity` i `EntityResolver`. Należy zauważyć, że funkcja projekcji nie jest obsługiwana w lokalnym emulatorze magazynu, dlatego ten kod zadziała tylko w przypadku użycia konta w usłudze tabel.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
 
-### <a name="retrieve-entities-in-pages-asynchronously"></a>Odzyskiwanie jednostek na stronach asynchronicznie
+### <a name="retrieve-entities-in-pages-asynchronously"></a>Pobieranie asynchroniczne jednostek na stronach
 
 Jeśli czytasz dużą liczbę jednostek i chcesz przetworzyć je w miarę ich pobierania, zamiast czekać, aż wszystkie mają być zwracane, możesz użyć zapytania z segmentami. Tutaj zwracasz wyniki na stronach przy użyciu asynchronicznego przepływu pracy, tak aby wykonywanie nie było blokowane podczas oczekiwania na zwrócenie dużych zestawów wyników.
 
@@ -181,9 +181,9 @@ Możesz usunąć jednostkę po jej pobraniu. Podobnie jak w przypadku aktualizow
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L186-L187)]
 
-### <a name="delete-a-table"></a>Usuń tabelę
+### <a name="delete-a-table"></a>Usuwanie tabeli
 
-Tabelę można usunąć z konta magazynu. Usunięta tabela będzie niedostępna do ponownego utworzenia przez pewien czas po usunięciu.
+Tabelę można usunąć z konta magazynu. Tabeli, która została usunięta, nie będzie można ponownie utworzyć przez dany okres czasu po jej usunięciu.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L193-L193)]
 
@@ -191,8 +191,8 @@ Tabelę można usunąć z konta magazynu. Usunięta tabela będzie niedostępna 
 
 Teraz, gdy znasz już podstawowe informacje o usłudze Table Storage, Skorzystaj z poniższych linków, aby dowiedzieć się więcej na temat bardziej złożonych zadań magazynu i interfejs API tabel Azure Cosmos DB.
 
-- [Wprowadzenie do Azure Cosmos DB interfejs API tabel](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [Dokumentacja biblioteki klienta usługi Storage dla platformy .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
+- [Wprowadzenie do interfejsu Table API usługi Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
+- [Dokumentacja biblioteki klienta usługi Storage dla programu .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
 - [Dostawca typów usługi Azure Storage](https://fsprojects.github.io/AzureStorageTypeProvider/)
-- [Blog zespołu usługi Azure Storage](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [Blog zespołu odpowiedzialnego za usługę Azure Storage](https://docs.microsoft.com/archive/blogs/windowsazurestorage/)
 - [Konfigurowanie parametrów połączenia](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)

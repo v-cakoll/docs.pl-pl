@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 07527c247e6ccd53d2a77793946ffc796c3e1cbb
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3eab49acd3eaa5b6d5802af5f4e6f0fe2699ee97
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644034"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937120"
 ---
-### <a name="switchsystemwindowsformsuselegacyimages-compatibility-switch-not-supported"></a>Przełącznik. System. Windows. Forms. UseLegacyImages nie jest obsługiwany.
+### <a name="uselegacyimages-compatibility-switch-not-supported"></a>Nieobsługiwany przełącznik zgodności UseLegacyImages
 
 Przełącznik zgodności `Switch.System.Windows.Forms.UseLegacyImages`, który został wprowadzony w .NET Framework 4,8, nie jest obsługiwany w Windows Forms na platformie .NET Core 3,0.
 
-#### <a name="change-description"></a>Zmień opis
+#### <a name="change-description"></a>Opis zmiany
 
 Począwszy od .NET Framework 4,8, przełącznik zgodności `Switch.System.Windows.Forms.UseLegacyImages` zapoznajł możliwe problemy z skalowaniem obrazu w scenariuszach ClickOnce w środowiskach o wysokiej rozdzielczości DPI. Gdy ustawiona na `true`, przełącznik zezwala użytkownikowi na przywracanie starszego skalowania obrazów na wyświetlaczach o wysokiej rozdzielczości DPI, których Skala jest ustawiona na wartość większą niż 100%. Aby uzyskać więcej informacji, zobacz [Informacje o wersji .NET Framework 4,8](https://github.com/microsoft/dotnet/blob/master/releases/net48/dotnet48-changes.md#clickonce) w witrynie GitHub.
 

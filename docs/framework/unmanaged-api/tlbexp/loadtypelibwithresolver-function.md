@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: 82fa0903474ee04b767fd9c68812efe7f0cc4fa0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adbb5eca3b7ffa36d0c963d0dacc3b2afdb664d4
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124157"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935563"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver — Funkcja
 Ładuje bibliotekę typów i używa dostarczonego [interfejsu ITypeLibResolver](itypelibresolver-interface.md) do rozpoznawania wszelkich wewnętrznie przywoływanych bibliotek typów.  
@@ -39,7 +39,7 @@ HRESULT LoadTypeLibWithResolver(
  podczas Ścieżka pliku biblioteki typów.  
   
  `regkind`  
- podczas Flaga [wyliczenia REGKIND](https://docs.microsoft.com/windows/win32/api/oleauto/ne-oleauto-regkind) , która kontroluje sposób rejestrowania biblioteki typów. Możliwe wartości to:  
+ podczas Flaga [wyliczenia REGKIND](/windows/win32/api/oleauto/ne-oleauto-regkind) , która kontroluje sposób rejestrowania biblioteki typów. Możliwe wartości to:  
   
 - `REGKIND_DEFAULT`: Użyj domyślnego zachowania rejestrowania.  
   
@@ -53,12 +53,12 @@ HRESULT LoadTypeLibWithResolver(
  `pptlib`  
  określoną Odwołanie do biblioteki typów, która jest ładowana.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  Jedna z wartości HRESULT wymienionych w poniższej tabeli.  
   
 |Wartość zwracana|Znaczenie|  
 |------------------|-------------|  
-|`S_OK`|Prawnego.|  
+|`S_OK`|Powodzenie.|  
 |`E_OUTOFMEMORY`|Za mało pamięci.|  
 |`E_POINTER`|Co najmniej jeden wskaźnik jest nieprawidłowy.|  
 |`E_INVALIDARG`|Co najmniej jeden z argumentów jest nieprawidłowy.|  

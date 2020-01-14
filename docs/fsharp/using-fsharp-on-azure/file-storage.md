@@ -1,18 +1,18 @@
 ---
 title: Rozpoczynanie pracy z usługą Azure File Storage przy użyciu języka F#
-description: Przechowuj dane plików w chmurze za pomocą usługi Azure File Storage i instaluj udział plików w chmurze z maszyny wirtualnej platformy Azure lub z aplikacji lokalnej z systemem Windows.
+description: Usługa Magazyn plików Azure umożliwia przechowywanie plików danych w chmurze oraz instalowanie udziału plików w chmurze z maszyny wirtualnej platformy Azure lub z aplikacji lokalnych działających w systemie Windows.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 9c25ab930abcbe7b358ae63c709aba4e97aed3be
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: d58417e1e3161b958754e01423136a9cdd6a08a6
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423861"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935630"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>Rozpoczynanie pracy z usługą Azure File Storage przy użyciu programu F\#
 
-Azure File Storage to usługa, która oferuje udziały plików w chmurze przy użyciu standardowego [protokołu bloku komunikatów serwera (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Obsługiwane są zarówno protokoły SMB 2,1, jak i SMB 3,0. Za pomocą usługi Azure File Storage można migrować starsze aplikacje korzystające z udziałów plików na platformę Azure szybko i bez kosztownych ponownych prób. Aplikacje działające na maszynach wirtualnych platformy Azure lub w usługach w chmurze lub na klientach lokalnych mogą instalować udziały plików w chmurze, podobnie jak aplikacja klasyczna instaluje typowy udział SMB. Dowolna liczba składników aplikacji może następnie zainstalować i uzyskać dostęp do udziału magazynu plików jednocześnie.
+Azure File Storage to usługa, która umożliwia korzystanie z udziałów plików w chmurze przy użyciu standardowego [protokołu bloku komunikatów serwera (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Obsługiwane są wersje 2.1 i 3.0 protokołu SMB. W usłudze Magazyn plików Azure można migrować starsze aplikacje korzystające z udziałów plików na platformę Azure szybko i bez kosztownych modyfikacji oprogramowania. Aplikacje uruchomione na maszynach wirtualnych lub w ramach usług w chmurze platformy Azure, a także na klientach lokalnych mogą instalować udziały plików w chmurze tak samo jak aplikacja na komputerze instalująca typowy udział SMB. Dowolna liczba składników aplikacji może następnie równocześnie zainstalować udział Magazynu plików i uzyskiwać do niego dostęp.
 
 Aby zapoznać się z omówieniem koncepcyjnym usługi File Storage, zobacz [Przewodnik po platformie .NET dotyczący usługi File Storage](/azure/storage/storage-dotnet-how-to-use-files).
 
@@ -25,7 +25,7 @@ Wymagany jest również klucz dostępu do magazynu dla tego konta.
 
 Przykłady w tym artykule mogą być używane w F# aplikacji lub F# skrypcie. Aby utworzyć F# skrypt, Utwórz plik z rozszerzeniem `.fsx`, na przykład `files.fsx`, w środowisku F# deweloperskim.
 
-Następnie należy użyć [Menedżera pakietów](package-management.md) , takiego jak [Paket](https://fsprojects.github.io/Paket/) lub [NuGet](https://www.nuget.org/) , aby zainstalować pakiet `WindowsAzure.Storage` i odwołanie `WindowsAzure.Storage.dll` w skrypcie przy użyciu dyrektywy `#r`.
+Następnie należy użyć [Menedżera pakietów](package-management.md) , takiego jak [Paket](https://fsprojects.github.io/Paket/) lub [NuGet](https://www.nuget.org/) , aby zainstalować pakiet `WindowsAzure.Storage` i informacje referencyjne `WindowsAzure.Storage.dll` w skrypcie przy użyciu dyrektywy `#r`.
 
 ### <a name="add-namespace-declarations"></a>Dodawanie deklaracji przestrzeni nazw
 
@@ -33,7 +33,7 @@ Dodaj następujące instrukcje `open` na początku pliku `files.fsx`:
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L1-L5)]
 
-### <a name="get-your-connection-string"></a>Pobierz parametry połączenia
+### <a name="get-your-connection-string"></a>Uzyskiwanie parametrów połączenia
 
 W tym samouczku będą potrzebne parametry połączenia usługi Azure Storage. Aby uzyskać więcej informacji dotyczących parametrów połączenia, zobacz [Konfigurowanie parametrów połączenia magazynu](/azure/storage/storage-configure-connection-string).
 
@@ -41,13 +41,13 @@ Na potrzeby samouczka wprowadzisz w skrypcie parametry połączenia, takie jak:
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L11-L11)]
 
-Nie jest to jednak **zalecane** w przypadku rzeczywistych projektów. Klucz konta magazynu jest podobny do hasła głównego dla konta magazynu. Zawsze należy zachować ostrożność, aby chronić klucz konta magazynu. Należy unikać dystrybuowania go do innych użytkowników, ich trwałego kodowania lub zapisywania w pliku w formacie zwykłego tekstu, który jest dostępny dla innych. Możesz ponownie wygenerować klucz za pomocą witryny Azure Portal, jeśli uważasz, że jego zabezpieczenia mogły zostać naruszone.
+Nie jest to jednak **zalecane** w przypadku rzeczywistych projektów. Klucz konta magazynu jest podobny do hasła głównego konta magazynu. Zawsze chroń klucz konta magazynu. Nie udostępniaj go innym użytkownikom, nie koduj go trwale ani nie zapisuj w zwykłym pliku tekstowym, do którego mają dostęp inne osoby. Możesz ponownie wygenerować klucz za pomocą witryny Azure Portal, jeśli uważasz, że jego zabezpieczenia mogły zostać naruszone.
 
 W przypadku prawdziwych aplikacji najlepszym sposobem obsługi parametrów połączenia magazynu jest w pliku konfiguracji. Aby pobrać parametry połączenia z pliku konfiguracji, można to zrobić:
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L13-L15)]
 
-Korzystanie z usługi Azure Configuration Manager jest opcjonalne. Można również użyć interfejsu API, takiego jak typ `ConfigurationManager` .NET Framework.
+Użycie programu Azure Configuration Manager jest opcjonalne. Można również użyć interfejsu API, takiego jak typ `ConfigurationManager` .NET Framework.
 
 ### <a name="parse-the-connection-string"></a>Analizowanie parametrów połączenia
 
@@ -89,41 +89,41 @@ W tym miejscu pobierasz utworzony plik, dołączając zawartość do pliku lokal
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L56-L56)]
 
-### <a name="set-the-maximum-size-for-a-file-share"></a>Ustaw maksymalny rozmiar udziału plików
+### <a name="set-the-maximum-size-for-a-file-share"></a>Ustawianie maksymalnego rozmiaru udziału plików
 
-W poniższym przykładzie pokazano, jak sprawdzić bieżące użycie udziału i jak ustawić limit przydziału dla udziału. należy wywołać `FetchAttributes`, aby wypełnić `Properties`udziału, i `SetProperties` propagowanie lokalnych zmian do usługi Azure File Storage.
+W poniższym przykładzie pokazano, jak sprawdzić bieżące użycie udziału oraz jak ustawić limit przydziału w udziale. należy wywołać `FetchAttributes`, aby wypełnić `Properties`udziału, i `SetProperties` propagowanie lokalnych zmian do usługi Azure File Storage.
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
 ### <a name="generate-a-shared-access-signature-for-a-file-or-file-share"></a>Generowanie sygnatury dostępu współdzielonego dla pliku lub udziału plików
 
-Można wygenerować sygnaturę dostępu współdzielonego (SAS) dla udziału plików lub dla pojedynczego pliku. Możesz również utworzyć zasady dostępu współdzielonego w udziale plików, aby zarządzać sygnaturami dostępu współdzielonego. Zaleca się utworzenie zasad dostępu współdzielonego, ponieważ zapewnia to możliwość odwoływania SAS, jeśli powinien zostać naruszony.
+Można wygenerować sygnaturę dostępu współdzielonego (SAS) dla udziału plików lub dla pojedynczego pliku. Można też utworzyć zasady dostępu współdzielonego w udziale plików na potrzeby zarządzania sygnaturami dostępu współdzielonego. Utworzenie zasad dostępu współdzielonego jest zalecane, ponieważ umożliwia cofnięcie sygnatur w przypadku zagrożenia bezpieczeństwa.
 
 W tym miejscu można utworzyć zasady dostępu współdzielonego w udziale, a następnie użyć tych zasad w celu zapewnienia ograniczeń dla SAS dla pliku w udziale.
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L78-L94)]
 
-Aby uzyskać więcej informacji na temat tworzenia sygnatur dostępu współdzielonego i korzystania z nich, zobacz [Używanie sygnatur dostępu współdzielonego (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1) i [Tworzenie i używanie SAS z magazynem obiektów BLOB](/azure/storage/storage-dotnet-shared-access-signature-part-2).
+Aby uzyskać więcej informacji na temat tworzenia i używania sygnatur dostępu współdzielonego, zobacz [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1) (Używanie sygnatur dostępu współdzielonego (SAS)) oraz [Create and use a SAS with Blob storage](/azure/storage/storage-dotnet-shared-access-signature-part-2) (Tworzenie i używanie sygnatury dostępu współdzielonego w Magazynie obiektów Blob).
 
-### <a name="copy-files"></a>Kopiuj pliki
+### <a name="copy-files"></a>Kopiowanie plików
 
 Plik można skopiować do innego pliku lub do obiektu BLOB lub do pliku. Jeśli kopiujesz obiekt BLOB do pliku lub pliku do obiektu BLOB, *musisz* użyć sygnatury dostępu współdzielonego do uwierzytelnienia obiektu źródłowego, nawet jeśli kopiujesz w ramach tego samego konta magazynu.
 
 ### <a name="copy-a-file-to-another-file"></a>Kopiowanie pliku do innego pliku
 
-W tym miejscu skopiujesz plik do innego pliku w tym samym udziale. Ponieważ ta operacja kopiowania Kopiuje między plikami na tym samym koncie magazynu, można użyć uwierzytelniania klucza współużytkowanego do wykonania kopii.
+W tym miejscu skopiujesz plik do innego pliku w tym samym udziale. Ponieważ ta operacja kopiowania jest wykonywana w ramach tego samego konta magazynu, można użyć uwierzytelniania przy użyciu klucza wspólnego.
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L100-L101)]
 
-### <a name="copy-a-file-to-a-blob"></a>Kopiowanie pliku do obiektu BLOB
+### <a name="copy-a-file-to-a-blob"></a>Kopiowanie pliku do obiektu blob
 
 Tutaj utworzysz plik i skopiujesz go do obiektu BLOB w ramach tego samego konta magazynu. Tworzysz sygnaturę dostępu współdzielonego dla pliku źródłowego, którego usługa używa do uwierzytelniania w pliku źródłowym podczas operacji kopiowania.
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L107-L120)]
 
-Obiekt BLOB można skopiować do pliku w taki sam sposób. Jeśli obiekt źródłowy to obiekt BLOB, Utwórz sygnaturę dostępu współdzielonego, aby uwierzytelnić dostęp do tego obiektu BLOB podczas operacji kopiowania.
+W ten sam sposób można skopiować obiekt blob do pliku. Jeśli obiekt źródłowy jest obiektem blob, utwórz sygnaturę dostępu współdzielonego w celu uwierzytelniania dostępu do tego obiektu blob podczas operacji kopiowania.
 
-## <a name="troubleshooting-file-storage-using-metrics"></a>Rozwiązywanie problemów z magazynem plików przy użyciu metryk
+## <a name="troubleshooting-file-storage-using-metrics"></a>Rozwiązywanie problemów z usługą Magazyn plików przy użyciu metryk
 
 Analityka magazynu platformy Azure obsługuje metryki dla usługi File Storage. Dane metryk umożliwiają śledzenie żądań i diagnozowanie problemów.
 
@@ -133,27 +133,27 @@ Metryki dla usługi File Storage można włączyć w [witrynie Azure Portal](htt
 
 ## <a name="next-steps"></a>Następne kroki
 
-Zobacz te linki, aby uzyskać więcej informacji na temat usługi Azure File Storage.
+Poniższe linki umożliwiają uzyskanie dodatkowych informacji na temat usługi Magazyn plików Azure.
 
-### <a name="conceptual-articles-and-videos"></a>Artykuły koncepcyjne i wideo
+### <a name="conceptual-articles-and-videos"></a>Artykuły koncepcyjne i filmy
 
-- [Azure Files Storage: system plików SMB w chmurze bezproblemowych dla systemów Windows i Linux](https://azure.microsoft.com/resources/videos/azurecon-2015-azure-files-storage-a-frictionless-cloud-smb-file-system-for-windows-and-linux/)
-- [Jak korzystać z usługi Azure File Storage z systemem Linux](/azure/storage/storage-how-to-use-files-linux)
+- [Azure Files Storage: a frictionless cloud SMB file system for Windows and Linux](https://azure.microsoft.com/resources/videos/azurecon-2015-azure-files-storage-a-frictionless-cloud-smb-file-system-for-windows-and-linux/) (Azure File Storage: płynnie działający system plików SMB w chmurze dla systemów Windows i Linux)
+- [How to use Azure File Storage with Linux](/azure/storage/storage-how-to-use-files-linux) (Jak używać usługi Azure File Storage z systemem Linux)
 
-### <a name="tooling-support-for-file-storage"></a>Narzędzia obsługujące magazyn plików
+### <a name="tooling-support-for-file-storage"></a>Narzędzia dostępne dla usługi Magazyn plików
 
-- [Używanie Azure PowerShell z usługą Azure Storage](/azure/storage/storage-powershell-guide-full)
-- [Jak używać AzCopy z Microsoft Azure Storage](/azure/storage/storage-use-azcopy)
-- [Korzystanie z interfejsu wiersza polecenia platformy Azure z usługą Azure Storage](/azure/storage/storage-azure-cli#create-and-manage-file-shares)
+- [Używanie programu Azure PowerShell z usługą Azure Storage](/azure/storage/storage-powershell-guide-full)
+- [How to use AzCopy with Microsoft Azure Storage](/azure/storage/storage-use-azcopy) (Jak używać narzędzia AzCopy z usługą Microsoft Azure Storage)
+- [Używanie interfejsu wiersza polecenia platformy Azure z usługą Azure Storage](/azure/storage/storage-azure-cli#create-and-manage-file-shares)
 
 ### <a name="reference"></a>Tematy pomocy
 
-- [Dokumentacja biblioteki klienta usługi Storage dla platformy .NET](https://msdn.microsoft.com/library/azure/mt347887.aspx)
+- [Dokumentacja biblioteki klienta usługi Storage dla programu .NET](https://msdn.microsoft.com/library/azure/mt347887.aspx)
 - [Dokumentacja interfejsu API REST usługi plików](/rest/api/storageservices/fileservices/File-Service-REST-API)
 
 ### <a name="blog-posts"></a>Wpisy w blogu
 
-- [Usługa Azure File Storage jest teraz ogólnie dostępna](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
-- [Wewnątrz File Storage platformy Azure](https://azure.microsoft.com/blog/inside-azure-file-storage/)
-- [Wprowadzenie do usługi plików Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
-- [Utrwalanie połączeń z plikami Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)
+- [Azure File storage is now generally available](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/) (Usługa Azure File Storage została udostępniona publicznie)
+- [Inside Azure File Storage](https://azure.microsoft.com/blog/inside-azure-file-storage/) (Za kulisami usługi Azure File Storage)
+- [Introducing Microsoft Azure File Service](https://docs.microsoft.com/archive/blogs/windowsazurestorage/introducing-microsoft-azure-file-service) (Wprowadzenie do usługi plików platformy Microsoft Azure)
+- [Persisting connections to Microsoft Azure Files](https://docs.microsoft.com/archive/blogs/windowsazurestorage/persisting-connections-to-microsoft-azure-files) (Utrwalanie połączeń z plikami platformy Microsoft Azure)

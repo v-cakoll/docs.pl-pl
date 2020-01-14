@@ -3,12 +3,12 @@ title: Port z .NET Framework do platformy .NET Core
 description: Poznaj proces przenoszenia i odnajdywanie narzędzi, które mogą okazać się przydatne podczas przenoszenia projektu .NET Framework do programu .NET Core.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: b5b010acbccf134afe800aa5bb98a0ae6e9ffa25
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: e483bb6e48dad6c3bf71bfa81e704a137fc02094
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777359"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937318"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Przegląd portów z .NET Framework do platformy .NET Core
 
@@ -29,9 +29,9 @@ Zalecamy użycie następującego procesu podczas przenoszenia projektu do progra
 
    Narzędzie analizatora przenośności API analizuje skompilowane zestawy i generuje raport. Ten raport przedstawia podsumowanie wysokiego poziomu dotyczące przenoszenia i podział wszystkich używanych interfejsów API, które nie są dostępne w systemie NET Core.
 
-3. Zainstaluj [Analizator interfejsów API platformy .NET](../../standard/analyzers/api-analyzer.md) w swoich projektach, aby identyfikować interfejsy API zgłaszające <xref:System.PlatformNotSupportedException> na niektórych platformach oraz inne potencjalne problemy ze zgodnością.
+3. Zainstaluj [Analizator interfejsów API platformy .NET](../../standard/analyzers/api-analyzer.md) w swoich projektach, aby identyfikować interfejsy API, które zwracają <xref:System.PlatformNotSupportedException> na niektórych platformach i inne potencjalne problemy ze zgodnością.
 
-   To narzędzie jest podobne do analizatora przenośności, ale zamiast analizowania, jeśli elementy mogą być kompilowane na platformie .NET Core, są analizowane, jeśli używasz interfejsu API w sposób, który będzie generować <xref:System.PlatformNotSupportedException> w czasie wykonywania. Chociaż nie jest to typowe w przypadku przechodzenia z .NET Framework 4.7.2 lub wyższym, warto sprawdzić.
+   To narzędzie jest podobne do analizatora przenośności, ale zamiast analizowania, czy kod może kompilować na platformie .NET Core, analizuje, czy używasz interfejsu API w sposób, który będzie zgłaszał <xref:System.PlatformNotSupportedException> w czasie wykonywania. Chociaż nie jest to typowe w przypadku przechodzenia z .NET Framework 4.7.2 lub wyższym, warto sprawdzić. Aby uzyskać więcej informacji na temat interfejsów API, które generują wyjątki w programie .NET Core, zobacz [interfejsy API, które zawsze generują wyjątki w programie .NET Core](../compatibility/unsupported-apis.md).
 
 4. Przekonwertuj wszystkie zależności `packages.config` na format [PackageReference](/nuget/consume-packages/package-references-in-project-files) za pomocą [narzędzia konwersji w programie Visual Studio](/nuget/consume-packages/migrate-packages-config-to-package-reference).
 
@@ -50,4 +50,4 @@ Ponadto możesz próbować przenieść mniejsze rozwiązania lub pojedyncze proj
 ## <a name="next-steps"></a>Następne kroki
 
 >[!div class="nextstepaction"]
->[Niedostępne technologie w programie .NET Core](net-framework-tech-unavailable.md)
+>[Analizowanie zależności](third-party-deps.md)

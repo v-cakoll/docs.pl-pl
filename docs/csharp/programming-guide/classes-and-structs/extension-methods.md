@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 1ab831b10b4152e8713cdfba4962822042c15673
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ce35ef4d4286310aa6c8b6e40c3a448b0d91ea7d
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714956"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937524"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metody rozszerzeń (Przewodnik programowania w języku C#)
 Metody rozszerzenia umożliwiają „dodawanie” metod do istniejących typów bez konieczności tworzenia nowego typu pochodnego, ponownej kompilacji lub modyfikowania oryginalnego typu w inny sposób. Metody rozszerzenia stanowią specjalny rodzaj metod statycznych, ale są wywoływane tak, jakby były metodami wystąpień w typie rozszerzonym. W przypadku kodu klienta pisanego C#w F# i Visual Basic nie ma żadnej widocznej różnicy między wywołaniem metody rozszerzającej a metodami, które są faktycznie zdefiniowane w typie.  
@@ -84,7 +84,7 @@ using System.Linq;
 - [Równoległe przykłady programowania (zawierają wiele przykładowych metod rozszerzających)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
 - [Wyrażenia lambda](../statements-expressions-operators/lambda-expressions.md)
 - [Standardowe operatory zapytań — przegląd](../concepts/linq/standard-query-operators-overview.md)
-- [Reguły konwersji dla parametrów wystąpienia i ich wpływu](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)
-- [Metody rozszerzające współdziałanie między językami](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)
-- [Metody rozszerzające i Delegaty rozwinięte](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)
-- [Powiązanie metody rozszerzenia i raportowanie błędów](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)
+- [Reguły konwersji dla parametrów wystąpienia i ich wpływu](https://docs.microsoft.com/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact)
+- [Metody rozszerzające współdziałanie między językami](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-interoperability-between-languages)
+- [Metody rozszerzające i Delegaty rozwinięte](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-and-curried-delegates)
+- [Powiązanie metody rozszerzenia i raportowanie błędów](https://docs.microsoft.com/archive/blogs/sreekarc/extension-method-binding-and-error-reporting)

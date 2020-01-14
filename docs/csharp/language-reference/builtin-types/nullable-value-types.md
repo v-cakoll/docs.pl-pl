@@ -4,12 +4,12 @@ description: Dowiedz C# się więcej o typach wartości null i sposobach ich uż
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: b9400cd76eb0430dbe9c278e835a3cec7f9f131e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 661b5e8502cba42588a07d757f056c715c1c82e8
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73741166"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936900"
 ---
 # <a name="nullable-value-types-c-reference"></a>Typy wartości null (C# odwołanie)
 
@@ -133,7 +133,7 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 ## <a name="see-also"></a>Zobacz także
 
 - [C#odwoła](../index.md)
-- [Co dokładnie ma znaczenie "zniesione"?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+- [Co dokładnie ma znaczenie "zniesione"?](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean)
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>

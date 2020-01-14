@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 668bb08526a6eeb1cf640c9ecdac3b8f2c850a99
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c549b9fcc91401aed846afd39e656b60e16afb74
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711951"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937601"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Wyrażenia lambda (C# Przewodnik programowania)
 
@@ -233,4 +233,4 @@ Aby uzyskać więcej informacji, zobacz sekcję [wyrażenia funkcji anonimowej](
 - [Funkcje lokalne w porównaniu z wyrażeniami lambda](../../local-functions-vs-lambdas.md)
 - [Niejawnie wpisane wyrażenia lambda](../../implicitly-typed-lambda-expressions.md)
 - [Przykłady dla programu C# Visual Studio 2008 (Zobacz pliki przykładowe zapytania LINQ i program XQuery)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
-- [Cykliczne wyrażenia lambda](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)
+- [Cykliczne wyrażenia lambda](https://docs.microsoft.com/archive/blogs/madst/recursive-lambda-expressions)

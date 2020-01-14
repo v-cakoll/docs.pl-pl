@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 681328af3f3624a8398d5125b952593f2c0510c7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6f17cb0fb6e5b0457af745ea0d089f3e51d4706c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427575"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938147"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Co nowego w ułatwieniach dostępu w .NET Framework
 
@@ -136,7 +136,7 @@ namespace WindowsFormsApplication
 
 **UIA zdarzenia powiadomień**
 
-Zdarzenie powiadamiania UIA wprowadzone w ramach aktualizacji systemu Windows 10 z aktualizacją dla twórców pozwala aplikacji na zgłaszanie zdarzenia UIA, które prowadzi do Narratora w oparciu o tekst dostarczany wraz ze zdarzeniem, bez konieczności posiadania odpowiedniej kontrolki w interfejsie użytkownika. W niektórych scenariuszach jest to prosty sposób znacznie zwiększyć dostępność aplikacji. W programie może być również przydatne powiadamianie o postępie niektórych procesów, które mogą zająć dużo czasu. Aby uzyskać więcej informacji na temat zdarzeń powiadomień UIA, zobacz [czy aplikacja klasyczna korzysta z nowego zdarzenia powiadamiania o interfejsie użytkownika?](https://blogs.msdn.microsoft.com/winuiautomation/2017/11/08/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need/).
+Zdarzenie powiadamiania UIA wprowadzone w ramach aktualizacji systemu Windows 10 z aktualizacją dla twórców pozwala aplikacji na zgłaszanie zdarzenia UIA, które prowadzi do Narratora w oparciu o tekst dostarczany wraz ze zdarzeniem, bez konieczności posiadania odpowiedniej kontrolki w interfejsie użytkownika. W niektórych scenariuszach jest to prosty sposób znacznie zwiększyć dostępność aplikacji. W programie może być również przydatne powiadamianie o postępie niektórych procesów, które mogą zająć dużo czasu. Aby uzyskać więcej informacji na temat zdarzeń powiadomień UIA, zobacz [czy aplikacja klasyczna korzysta z nowego zdarzenia powiadamiania o interfejsie użytkownika?](https://docs.microsoft.com/archive/blogs/winuiautomation/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need).
 
 Poniższy przykład podnosi [zdarzenie powiadomienia](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A):
 
@@ -445,10 +445,10 @@ Do obsługi regionów na żywo dodano następujące interfejsy API do platformy 
 
 - Wyliczenie <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType>, które definiuje następujące możliwe wartości **LiveSetting** :
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>., Element nie wysyła powiadomień, jeśli zawartość regionu aktywnego zmieniła się.
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>., Element wysyła powiadomienia nieprzerwane, jeśli zawartość regionu aktywnego uległa zmianie.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. Element nie wysyła powiadomień, jeśli zawartość regionu aktywnego zmieniła się.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. Element wysyła powiadomienia nieprzerwane, jeśli zawartość regionu aktywnego uległa zmianie.
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>., Element wysyła powiadomienia o przerwie, jeśli zawartość regionu aktywnego uległa zmianie.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. Element wysyła powiadomienia o przerwie, jeśli zawartość regionu aktywnego uległa zmianie.
 
 Można utworzyć LiveRegion przez ustawienie właściwości **AutomationProperties. LiveSetting** dla elementu zainteresowania, jak pokazano w następującym przykładzie:
 
@@ -470,9 +470,9 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ```
 
-**Duży kontrast**
+**High contrast** (Wysoki kontrast)
 
-Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolkach WPF. Są one teraz widoczne po ustawieniu motywu <xref:System.Windows.SystemParameters.HighContrast%2A>. Należą do nich:
+Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolkach WPF. Są one teraz widoczne po ustawieniu motywu <xref:System.Windows.SystemParameters.HighContrast%2A>. Należą do nich następujące elementy:
 
 - Kontrolka <xref:System.Windows.Controls.Expander>
 
@@ -482,7 +482,7 @@ Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolka
 
   ![Zrzut ekranu kontrolki ekspandera z fokusem i wizualizacja fokusu.](./media/whats-new-in-accessibility/expander-control-before.png)
 
-  Otrzyma 
+  Po: 
 
   ![Zrzut ekranu kontrolki ekspandera z fokusem pokazującą kropkowaną linię wokół tekstu kontrolki.](./media/whats-new-in-accessibility/expander-control-after.png)
 
@@ -494,7 +494,7 @@ Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolka
 
   ![Zrzut ekranu przycisków radiowych i kontrolek z niską widocznością tekstu w motywach o wysokim kontraście.](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
 
-  Otrzyma 
+  Po: 
 
   ![Zrzut ekranu przycisków radiowych i kontrolek z lepszą widocznością tekstu w motywach o wysokim kontraście.](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
 
@@ -506,7 +506,7 @@ Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolka
 
   ![Zrzut ekranu wyłączonego ComboBox z obramowaniem i tekstem kontrolki w różnych kolorach.](./media/whats-new-in-accessibility/combo-disabled-before.png)
 
-  Otrzyma   
+  Po:   
 
   ![Zrzut ekranu wyłączonego ComboBox z obramowaniem o taki sam kolor jak tekst kontrolki.](./media/whats-new-in-accessibility/combo-disabled-after.png)
 
@@ -516,7 +516,7 @@ Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolka
 
   ![Zrzut ekranu czarnego przycisku z szarym tekstem mówiący, aby skoncentrować się.](./media/whats-new-in-accessibility/button-theme-colors-before.png) 
 
-  Otrzyma 
+  Po: 
 
   ![Zrzut ekranu przedstawiający niebieski przycisk z czarnym tekstem, który mówi mnie.](./media/whats-new-in-accessibility/button-theme-colors-after.png) 
 
@@ -526,7 +526,7 @@ Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolka
 
   ![Zrzut ekranu kontrolki ComboBox z niewidoczną strzałką listy rozwijanej.](./media/whats-new-in-accessibility/combo-box-style-key-before.png) 
 
-  Otrzyma 
+  Po: 
 
   ![Zrzut ekranu przedstawiający formant ComboBox wyświetlający strzałkę listy rozwijanej.](./media/whats-new-in-accessibility/combo-box-style-key-after.png) 
 
@@ -538,7 +538,7 @@ Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolka
 
   ![Zrzut ekranu przedstawiający strzałkę wskaźnika sortowania przed ulepszeniami.](./media/whats-new-in-accessibility/sort-indicator-before.png) 
 
-  Otrzyma   
+  Po:   
 
   ![Zrzut ekranu przedstawiający strzałkę wskaźnika sortowania po ulepszeniach.](./media/whats-new-in-accessibility/sort-indicator-after.png) 
 
@@ -548,7 +548,7 @@ Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolka
 
   ![Zrzut ekranu przedstawiający link mówiący o kliknięciu mnie! na czerwono.](./media/whats-new-in-accessibility/default-link-style-before.png) 
 
-  Otrzyma    
+  Po:    
 
   ![Zrzut ekranu przedstawiający link mówiący o kliknięciu mnie! na żółto.](./media/whats-new-in-accessibility/default-link-style-after.png) 
 
@@ -583,7 +583,7 @@ Niektóre przykłady zmian wysokiego kontrastu obejmują:
 
   ![Zrzut ekranu aplikacji korzystającej z różnych kontrolek działających w trybie dużego kontrastu przed udoskonaleniami ułatwień dostępu.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png) 
 
-  Otrzyma
+  Po:
 
   ![Zrzut ekranu aplikacji korzystającej z różnych kontrolek uruchomionych w trybie dużego kontrastu po udoskonaleniu ułatwień dostępu.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png) 
 

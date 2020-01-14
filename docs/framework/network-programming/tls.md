@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 2433d8b8563cace4415fb8fcd2d110f75d7d4304
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196368"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937697"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Transport Layer Security (TLS) — najlepsze rozwiązania dotyczące .NET Framework
 
@@ -31,7 +31,7 @@ Ten dokument jest przeznaczony dla deweloperów, którzy są:
 - Bezpośrednio przy użyciu klientów i usług WCF przy użyciu przestrzeni nazw <xref:System.ServiceModel?displayProperty=nameWithType>.
 - Używanie ról sieci Web i procesu roboczego [platformy Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) do hostowania i uruchamiania aplikacji. Zapoznaj się z sekcją [Cloud Services platformy Azure](#azure-cloud-services) .
 
-Zalecamy:
+Zalecamy wykonanie następujących czynności:
 
 - Docelowa wersja .NET Framework 4,7 lub nowsza w aplikacjach. Docelowa .NET Framework 4.7.1 lub nowsza wersja w aplikacjach WCF.
 - Nie określaj wersji protokołu TLS. Skonfiguruj kod, aby umożliwić systemowi operacyjnemu podjęcie decyzji dotyczącej wersji protokołu TLS.
@@ -46,7 +46,7 @@ Sekcja [inspekcji kodu i wprowadzania zmian w kodzie](#audit-your-code-and-make-
 
 W tym artykule wyjaśniono, jak włączyć najwyższe zabezpieczenia dostępne dla wersji .NET Framework, w której aplikacja jest przeznaczona do działania. Gdy aplikacja jawnie ustawia protokół zabezpieczeń i wersję, nie jest ona zależna od żadnej innej alternatywy i powoduje, że .NET Framework i domyślne zachowanie systemu operacyjnego. Jeśli chcesz, aby aplikacja mogła negocjować połączenie TLS 1,2, jawnie ustawienie niższej wersji protokołu TLS uniemożliwia połączenie TLS 1,2.
 
-Jeśli nie możesz uniknąć zakodowana wersji protokołu, zdecydowanie zalecamy określenie protokołu TLS 1,2. Aby uzyskać wskazówki dotyczące identyfikowania i usuwania zależności TLS 1,0, Pobierz oficjalny dokument [dotyczący problemów z protokołem tls 1,0](https://www.microsoft.com/download/details.aspx?id=55266) .
+Jeśli nie możesz uniknąć zakodowana wersji protokołu, zdecydowanie zalecamy określenie protokołu TLS 1,2. Aby uzyskać wskazówki dotyczące identyfikowania i usuwania zależności TLS 1,0, Pobierz oficjalny dokument [dotyczący problemu z protokołem tls 1,0](https://www.microsoft.com/download/details.aspx?id=55266) .
 
 Program WCF obsługuje protokoły TLS 1.0, 1,1 i 1,2 jako domyślne w .NET Framework 4,7. Począwszy od .NET Framework 4.7.1, program WCF domyślnie używa skonfigurowanej wersji systemu operacyjnego. Jeśli aplikacja jest jawnie skonfigurowana przy użyciu `SslProtocols.None`, WCF używa domyślnego ustawienia systemu operacyjnego w przypadku korzystania z transportu NetTcp.
 
@@ -150,7 +150,7 @@ Przełączniki [AppContext](../configure-apps/file-schema/runtime/appcontextswit
 
 Przełączniki mają ten sam efekt, niezależnie od tego, czy są używane sieci HTTP (<xref:System.Net.ServicePointManager>) czy sieci TCP Sockets (<xref:System.Net.Security.SslStream>).
 
-### <a name="switchsystemnetdontenableschusestrongcrypto"></a>Switch. System .NET. DontEnableSchUseStrongCrypto
+### <a name="switchsystemnetdontenableschusestrongcrypto"></a>Switch.System.Net.DontEnableSchUseStrongCrypto
 
 Wartość `false` dla `Switch.System.Net.DontEnableSchUseStrongCrypto` powoduje, że aplikacja korzysta z mocnej kryptografii. Wartość `false` dla `DontEnableSchUseStrongCrypto` używa bezpieczniejszych protokołów sieciowych (TLS 1,2, TLS 1,1 i TLS 1,0) i blokuje protokoły, które nie są bezpieczne. Aby uzyskać więcej informacji, zobacz [flagę SCH_USE_STRONG_CRYPTO](#the-sch_use_strong_crypto-flag). Wartość `true` powoduje wyłączenie mocnej kryptografii dla aplikacji.
 
@@ -158,19 +158,19 @@ Jeśli aplikacja jest przeznaczona dla .NET Framework 4,6 lub nowszej wersji, te
 
 `DontEnableSchUseStrongCrypto` powinna mieć wartość `true`, jeśli konieczne jest połączenie ze starszymi usługami, które nie obsługują silnej kryptografii i nie można ich uaktualnić.
 
-### <a name="switchsystemnetdontenablesystemdefaulttlsversions"></a>Switch. System .NET. DontEnableSystemDefaultTlsVersions
+### <a name="switchsystemnetdontenablesystemdefaulttlsversions"></a>Switch.System.Net.DontEnableSystemDefaultTlsVersions
 
 Wartość `false` dla `Switch.System.Net.DontEnableSystemDefaultTlsVersions` powoduje, że aplikacja zezwala na wybór protokołu przez system operacyjny. Wartość `true` powoduje, że aplikacja korzysta z protokołów pobranych przez .NET Framework.
 
 Jeśli aplikacja jest przeznaczona dla .NET Framework 4,7 lub nowszej wersji, ten przełącznik jest domyślnie `false`. Jest to bezpieczne domyślne zalecane przez nas. Jeśli aplikacja działa w .NET Framework 4,7 lub w nowszej wersji, ale jest przeznaczona dla starszej wersji, przełącznik domyślnie jest `true`. W takim przypadku należy jawnie ustawić ją na `false`.
 
-### <a name="switchsystemservicemodeldisableusingservicepointmanagersecurityprotocols"></a>Switch. System. ServiceModel. DisableUsingServicePointManagerSecurityProtocols
+### <a name="switchsystemservicemodeldisableusingservicepointmanagersecurityprotocols"></a>Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols
 
 Wartość `false` dla `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` powoduje, że aplikacja używa wartości zdefiniowanej w `ServicePointManager.SecurityProtocols` do zabezpieczenia komunikatów przy użyciu poświadczeń certyfikatu. Wartość `true` używa najwyższego dostępnego protokołu, do TLS 1.0
 
 Dla aplikacji przeznaczonych dla .NET Framework 4,7 i nowszych wersji ta wartość jest domyślnie `false`. Dla aplikacji przeznaczonych dla .NET Framework 4.6.2 i starszych wartość domyślna to `true`.
 
-### <a name="switchsystemservicemodeldontenablesystemdefaulttlsversions"></a>Switch. System. ServiceModel. DontEnableSystemDefaultTlsVersions
+### <a name="switchsystemservicemodeldontenablesystemdefaulttlsversions"></a>Switch.System.ServiceModel.DontEnableSystemDefaultTlsVersions
 
 Wartość `false` dla `Switch.System.ServiceModel.DontEnableSystemDefaultTlsVersions` ustawia konfigurację domyślną zezwalającą systemowi operacyjnemu na wybór protokołu. Wartość `true` ustawia domyślny dostęp do najwyższego dostępnego protokołu do protokołu TLS 1.2.
 
@@ -191,7 +191,7 @@ Te klucze są dostępne we wszystkich wersjach .NET Framework, dla których istn
 
 Wszystkie klucze rejestru opisane poniżej mają taki sam skutek, niezależnie od tego, czy używasz sieci HTTP (<xref:System.Net.ServicePointManager>) czy sieci TCP Sockets (<xref:System.Net.Security.SslStream>).
 
-### <a name="schusestrongcrypto"></a>Schusestrongcrypto we
+### <a name="schusestrongcrypto"></a>SchUseStrongCrypto
 
 Klucz rejestru `HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` ma wartość typu DWORD. Wartość 1 powoduje, że aplikacja korzysta z mocnej kryptografii. Silne Kryptografia korzysta z bezpieczniejszych protokołów sieciowych (TLS 1,2, TLS 1,1 i TLS 1,0) i blokuje protokoły, które nie są bezpieczne. Wartość 0 powoduje wyłączenie silnej kryptografii. Aby uzyskać więcej informacji, zobacz [flagę SCH_USE_STRONG_CRYPTO](#the-sch_use_strong_crypto-flag).
 
@@ -207,7 +207,7 @@ Klucz rejestru `HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramewor
 
 Jeśli aplikacja jest przeznaczona dla .NET Framework 4,7 lub nowszej wersji, ten klucz domyślnie przyjmuje wartość 1. Jest to bezpieczne domyślne zalecane przez nas. Jeśli aplikacja działa w .NET Framework 4,7 lub w nowszej wersji, ale jest przeznaczona dla starszej wersji, klucz domyślnie przyjmuje wartość 0. W takim przypadku należy jawnie ustawić jego wartość na 1.
 
-Aby uzyskać więcej informacji, zobacz [Aktualizacja zbiorcza dla systemu Windows 10 w wersji 1511 i Windows Server 2016 Technical Preview 4:10 maja 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016).
+Aby uzyskać więcej informacji, zobacz [zbiorczej aktualizacji dla systemu Windows 10 w wersji 1511 i systemu Windows Server 2016 Technical Preview 4: 10 maja 2016 r.](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016)
 
 Aby uzyskać więcej informacji na temat programu .NET Framework 3.5.1, zobacz [obsługiwane wersje systemu TLS .NET Framework w systemie Windows 7 z dodatkiem SP1 i Server 2008 R2 z dodatkiem SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework).
 
@@ -244,7 +244,7 @@ Zacznij od `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProvider
 Jeśli jest włączona (domyślnie przez przełącznik `AppContext` lub przez rejestr systemu Windows), .NET Framework używa flagi `SCH_USE_STRONG_CRYPTO`, gdy aplikacja zażąda protokołu zabezpieczeń TLS. Flaga `SCH_USE_STRONG_CRYPTO` może być domyślnie włączona z przełącznikiem `AppContext` lub z rejestrem. System operacyjny przekazuje flagę do `Schannel`w celu wyłączania znanych niesłabych algorytmów kryptograficznych, mechanizmów szyfrowania i protokołów TLS/SSL, które mogą być włączone w taki sposób, aby zapewnić lepszą współdziałanie. Aby uzyskać więcej informacji, zobacz:
 
 - [Bezpieczny kanał](/windows/desktop/SecAuthN/secure-channel)
-- [SCHANNEL_CRED, struktura](/windows/win32/api/schannel/ns-schannel-schannel_cred)
+- [Struktura SCHANNEL_CRED](/windows/win32/api/schannel/ns-schannel-schannel_cred)
 
 Flaga `SCH_USE_STRONG_CRYPTO` jest również przenoszona do `Schannel`, gdy jawnie używasz `Tls` (TLS 1,0), `Tls11`lub `Tls12` wyliczonych wartości <xref:System.Net.SecurityProtocolType> lub <xref:System.Security.Authentication.SslProtocols>.
 
@@ -257,12 +257,12 @@ Aby zaktualizować .NET Framework, aby umożliwić systemowi operacyjnemu wybran
 - [Wersja Zapoznawcza .NET Framework sierpnia 2017](https://devblogs.microsoft.com/dotnet/net-framework-august-2017-preview-of-quality-rollup/).
 - **Lub** [.NET Framework wrzesień 2017](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/).
 
-Zobacz również:
+Patrz również:
 
 - [Wersje i zależności platformy .NET Framework](../migration-guide/versions-and-dependencies.md)
 - [Instrukcje: Określanie, które wersje .NET Framework są zainstalowane](../migration-guide/how-to-determine-which-versions-are-installed.md).
 
-## <a name="support-for-tls-12"></a>Obsługa protokołu TLS 1,2
+## <a name="support-for-tls-12"></a>Obsługa protokołu TLS 1.2
 
 Aby aplikacja negocjowała protokół TLS 1,2, system operacyjny i wersja .NET Framework muszą obsługiwać protokół TLS 1,2.
 
@@ -270,12 +270,12 @@ Aby aplikacja negocjowała protokół TLS 1,2, system operacyjny i wersja .NET F
 
 Aby włączyć lub ponownie włączyć protokół TLS 1,2 i/lub TLS 1,1 w systemie, który je obsługuje, zobacz [Ustawienia rejestru Transport Layer Security (TLS)](/windows-server/security/tls/tls-registry-settings).
 
-| **Macintosh** | **Obsługa protokołu TLS 1,2** |
+| **OS** | **Obsługa protokołu TLS 1,2** |
 | --- | --- |
-| Windows 10<br>Windows Server 2016 | Obsługiwane i domyślnie włączone. |
-| Windows 8.1<br>Windows Server 2012 z dodatkiem R2 | Obsługiwane i domyślnie włączone. |
-| System Windows 8,0<br>Windows Server 2012 | Obsługiwane i domyślnie włączone. |
-| Windows 7 z dodatkiem SP1<br>Windows Server 2008 R2 SP1 | Obsługiwane, ale nie włączone domyślnie. Aby uzyskać szczegółowe informacje na temat włączania protokołu TLS 1,2, zobacz stronę internetową [Ustawienia rejestru Transport Layer Security (TLS)](/windows-server/security/tls/tls-registry-settings) . |
+| Windows 10<br>Windows Server 2016 | Obsługiwane i domyślnie włączona. |
+| Windows 8.1<br>Windows Server 2012 z dodatkiem R2 | Obsługiwane i domyślnie włączona. |
+| Windows 8.0<br>Windows Server 2012 | Obsługiwane i domyślnie włączona. |
+| Dodatek SP1 dla systemu Windows 7<br>Windows Server 2008 R2 SP1 | Obsługiwane, ale nie jest włączony domyślnie. Aby uzyskać szczegółowe informacje na temat włączania protokołu TLS 1,2, zobacz stronę internetową [Ustawienia rejestru Transport Layer Security (TLS)](/windows-server/security/tls/tls-registry-settings) . |
 | Windows Server 2008 | Obsługa protokołu TLS 1,2 i TLS 1,1 wymaga aktualizacji. Zobacz [Aktualizacja, aby dodać obsługę protokołów tls 1,1 i tls 1,2 w systemie Windows Server 2008 SP2](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
 | Windows Vista | Nieobsługiwane. |
 
@@ -285,16 +285,16 @@ Aby uzyskać informacje o tym, które protokoły TLS/SSL są domyślnie włączo
 
 W tej tabeli przedstawiono aktualizację systemu operacyjnego, która będzie potrzebna do obsługi protokołu TLS 1,2 z .NET Framework 3,5. Zalecamy stosowanie wszystkich aktualizacji systemu operacyjnego.
 
-| **Macintosh** | **Minimalna aktualizacja wymagana do obsługi protokołu TLS 1,2 z .NET Framework 3,5** |
+| **OS** | **Minimalna aktualizacja wymagana do obsługi protokołu TLS 1,2 z .NET Framework 3,5** |
 | --- | --- |
 | Windows 10<br>Windows Server 2016 | [Aktualizacja zbiorcza dla systemu Windows 10 w wersji 1511 i Windows Server 2016 Technical Preview 4: maj 10, 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
 | Windows 8.1<br>Windows Server 2012 z dodatkiem R2 | [Obsługa domyślnych wersji systemu TLS uwzględnionych w .NET Framework 3,5 w systemach Windows 8.1 i Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
-| System Windows 8,0<br>Windows Server 2012 | [Obsługa domyślnych wersji systemu TLS uwzględnionych w .NET Framework 3,5 w systemie Windows Server 2012](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
-| Windows 7 z dodatkiem SP1<br>Windows Server 2008 R2 SP1 | [Obsługa domyślnych wersji systemu TLS uwzględnionych w .NET Framework 3.5.1 w systemach Windows 7 z dodatkiem SP1 i Server 2008 R2 z dodatkiem SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 8.0<br>Windows Server 2012 | [Obsługa domyślnych wersji systemu TLS uwzględnionych w .NET Framework 3,5 w systemie Windows Server 2012](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Dodatek SP1 dla systemu Windows 7<br>Windows Server 2008 R2 SP1 | [Obsługa domyślnych wersji systemu TLS uwzględnionych w .NET Framework 3.5.1 w systemach Windows 7 z dodatkiem SP1 i Server 2008 R2 z dodatkiem SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Server 2008 | [Obsługa domyślnych wersji systemu TLS uwzględnionych w .NET Framework 2,0 SP2 w systemie Windows Vista z dodatkiem SP2 i Server 2008 z dodatkiem SP2](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Vista | Nieobsługiwane |
 
-## <a name="azure-cloud-services"></a>Cloud Services platformy Azure
+## <a name="azure-cloud-services"></a>Usługi w chmurze platformy Azure
 
 Jeśli używasz ról Sieć Web i proces roboczy [platformy Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) , aby hostować i uruchamiać aplikację, należy wziąć pod uwagę pewne kwestie dotyczące obsługi protokołu TLS 1,2.
 

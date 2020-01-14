@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3bb4b526-0118-42e2-ba59-c95648528ce9
 topic_type:
 - apiref
-ms.openlocfilehash: a028d2a8116de4df79f662ee8b2768e6e070428a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 048286fb9e1af34cd964fb5b21892778f9575d2c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141402"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938203"
 ---
 # <a name="metahost_policy_flags-enumeration"></a>METAHOST_POLICY_FLAGS — Wyliczenie
 Program udostępnia zasady powiązań, które są wspólne dla większości hostów środowiska uruchomieniowego. To wyliczenie jest używane przez metodę [ICLRMetaHostPolicy:: GetRequestedRuntime —](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) .  
@@ -44,12 +44,12 @@ typedef enum {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`METAHOST_POLICY_HIGHCOMPAT`|Definiuje zasady wysokiej zgodności, które nie uwzględnia żadnego środowiska uruchomieniowego języka wspólnego (CLR), który jest ładowany do bieżącego procesu. Zamiast tego uwzględnia tylko zainstalowaną CLRs i preferencje składnika, jak wynika z samego pliku zestawu, zadeklarowanej wbudowanej wersji lub pliku konfiguracji.|  
-|`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|Stosuje zasady uaktualniania do wyniku powiązania wersji, gdy nie znaleziono dokładnego dopasowania, na podstawie zawartości HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\Policy\Upgrades. Ma to taki sam efekt jak [RUNTIME_INFO_UPGRADE_VERSION](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md).|  
+|`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|Stosuje zasady uaktualniania do wyniku powiązania wersji, gdy nie znaleziono dokładnego dopasowania, na podstawie zawartości HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\\. NETFramework\Policy\Upgrades. Ma to taki sam efekt jak [RUNTIME_INFO_UPGRADE_VERSION](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md).|  
 |`METAHOST_POLICY_EMULATE_EXE_LAUNCH`|Wyniki powiązań są zwracane, jeśli obraz dostarczony do wywołania został uruchomiony w nowym procesie. Obecnie `GetRequestedRuntime` ignoruje zestaw plików wykonywalnych do załadowania i tworzy powiązania z zestawem zainstalowanych środowisk uruchomieniowych. Ta flaga umożliwia hostowi określenie, które środowisko uruchomieniowe zostanie powiązane z tym, gdy zostanie uruchomiony.|  
 |`METAHOST_POLICY_SHOW_ERROR_DIALOG`|Gdy `GetRequestedRuntime` nie może znaleźć środowiska uruchomieniowego zgodnego z parametrami wejściowymi, zostanie wyświetlone okno dialogowe błędu. Począwszy od .NET Framework 4,5, to okno dialogowe błędu może przyjmować formę okna dialogowego funkcji systemu Windows z pytaniem, czy użytkownik chce włączyć odpowiednią funkcję.|  
 |`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime` używa obrazu procesu (i dowolnego odpowiedniego pliku konfiguracji) jako dodatkowego wejścia do procesu powiązania. Domyślnie `GetRequestedRuntime` nie wraca do ścieżki obrazu procesu (zazwyczaj jest to plik EXE używany do uruchomienia procesu) podczas określania środowiska uruchomieniowego, z którym ma zostać utworzone powiązanie.|  
 |`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` musi sprawdzić, czy odpowiednia jednostka SKU jest zainstalowana, gdy w pliku konfiguracji nie ma dostępnych informacji. Dzięki temu aplikacje, które nie mają plików konfiguracyjnych, mogą bezpiecznie kończyć się niepowodzeniem w mniejszych jednostkach SKU niż domyślna instalacja .NET Framework. Domyślnie `GetRequestedRuntime` nie sprawdza, czy odpowiednia jednostka SKU jest zainstalowana, chyba że atrybut SKU jest określony w pliku konfiguracji `<supportedRuntime />` elemencie.|  
-|`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime` powinien ignorować SEM_FAILCRITICALERRORS (ustawiany przez wywołanie funkcji [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) ) i wyświetlić okno dialogowe błędu. Domyślnie SEM_FAILCRITICALERRORS pomija okno dialogowe błędu. Być może został on odziedziczony z innego procesu, a błąd dyskretny może być niepożądany w Twoim scenariuszu.|  
+|`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime` powinien ignorować SEM_FAILCRITICALERRORS (ustawiane przez wywołanie funkcji [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) ) i wyświetlać okno dialogowe błędu. Domyślnie SEM_FAILCRITICALERRORS pomija okno dialogowe błędu. Być może został on odziedziczony z innego procesu, a błąd dyskretny może być niepożądany w Twoim scenariuszu.|  
   
 ## <a name="remarks"></a>Uwagi  
   

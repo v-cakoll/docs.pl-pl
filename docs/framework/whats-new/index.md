@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 4c5c7ffcab118978baf1b2f7602f39291452d1e6
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ab14e6cb7d9bd4c1571040280dc35233e9b89d43
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740414"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937976"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Co nowego w programie .NET Framework
 
@@ -1196,7 +1196,7 @@ W .NET Framework 4.6.2 Windows Workflow Foundation został ulepszony w następuj
 
 **Obsługa C# wyrażeń i technologii IntelliSense w rehostowanym projektancie WF**
 
-Począwszy od .NET Framework 4,5, WF obsługuje C# wyrażenia zarówno w projektancie programu Visual Studio, jak i w przepływach pracy w kodzie. Rehostowana Projektant przepływu pracy to kluczowa funkcja WF, która umożliwia Projektant przepływu pracy do aplikacji poza programem Visual Studio (na przykład w WPF).  Windows Workflow Foundation oferuje możliwość obsługi C# wyrażeń i technologii IntelliSense w przypadku ponownego hostowanej Projektant przepływu pracy. Aby uzyskać więcej informacji, zapoznaj się z [blogiem Windows Workflow Foundation](https://blogs.msdn.microsoft.com/workflowteam/2016/07/20/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer/).
+Począwszy od .NET Framework 4,5, WF obsługuje C# wyrażenia zarówno w projektancie programu Visual Studio, jak i w przepływach pracy w kodzie. Rehostowana Projektant przepływu pracy to kluczowa funkcja WF, która umożliwia Projektant przepływu pracy do aplikacji poza programem Visual Studio (na przykład w WPF).  Windows Workflow Foundation oferuje możliwość obsługi C# wyrażeń i technologii IntelliSense w przypadku ponownego hostowanej Projektant przepływu pracy. Aby uzyskać więcej informacji, zapoznaj się z [blogiem Windows Workflow Foundation](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer).
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` w wersjach .NET Framework przed .NET Framework 4.6.2, funkcja IntelliSense projektanta WF jest uszkodzona, gdy klient odbudowuje projekt przepływu pracy z programu Visual Studio. Gdy kompilacja projektu zakończy się pomyślnie, typy przepływu pracy nie są dostępne w projektancie, a w oknie **Lista błędów** są wyświetlane ostrzeżenia z funkcji IntelliSense dotyczące brakujących typów przepływów pracy. .NET Framework 4.6.2 rozwiązuje ten problem i udostępnia funkcję IntelliSense.
 
@@ -2066,7 +2066,7 @@ Aby uzyskać więcej informacji, zobacz [co nowego w Windows Communication Found
 
 W .NET Framework 4,5 dodano kilka nowych funkcji do Windows Workflow Foundation (WF), w tym:
 
-- Przepływy pracy automatu Stanów, które zostały po raz pierwszy wprowadzone w ramach .NET Framework 4.0.1 ([aktualizacja .NET Framework 4 platformy 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)). Ta aktualizacja zawiera kilka nowych klas i działań, które umożliwiają deweloperom tworzenie przepływów pracy automatu Stanów. Te klasy i działania zostały zaktualizowane dla .NET Framework 4,5, aby uwzględnić:
+- Przepływy pracy automatu Stanów, które zostały po raz pierwszy wprowadzone w ramach .NET Framework 4.0.1 ([aktualizacja .NET Framework 4 platformy 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)). Ta aktualizacja zawiera kilka nowych klas i działań, które umożliwiają deweloperom tworzenie przepływów pracy automatu Stanów. Te klasy i działania zostały zaktualizowane dla .NET Framework 4,5, aby uwzględnić:
 
   - Możliwość ustawiania punktów przerwania w Stanach.
 

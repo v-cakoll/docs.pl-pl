@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63d8260c-fb32-4f8f-a357-768afd570f68
 topic_type:
 - apiref
-ms.openlocfilehash: 700bcc5b818c452d3642d325fb6fe19cbb162474
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 834292192aa447a113372bc8807041954b39a115
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141444"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937774"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx — Metoda
 Pobiera klucz publiczny z pary kluczy publiczny/prywatny i określa algorytm skrótu i algorytm podpisu.  
@@ -65,8 +65,8 @@ HRESULT StrongNameGetPublicKey (
  `uReserved`  
  podczas Zarezerwowane do użytku w przyszłości; Wartością domyślną jest null.  
   
-## <a name="return-value"></a>Wartość zwracana  
- `S_OK`, jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
+## <a name="return-value"></a>Wartość zwrócona  
+ `S_OK`, jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
   
 ## <a name="remarks"></a>Uwagi  
  Klucz publiczny jest zawarty w strukturze [PublicKeyBlob —](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) .  

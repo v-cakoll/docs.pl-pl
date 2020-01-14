@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 90e57c3d332155d42a38b8a01aba7dbb2c812d62
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c320d004b05e58fc7c239cd8c1f3bcec84ad8f78
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458034"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937911"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework
 
@@ -281,7 +281,7 @@ W połączeniu z wyrażeniami lambda jest przykładem funkcji produktywności (L
   
  **Przykład 5: wyrażenia lambda, lista\<T > i interfejs IEnumerable\<T >**  
   
- W tym przykładzie używa [kodu LINQ i języka stylu funkcjonalności](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/) , aby znaleźć symbol w modelu kompilatora, przy użyciu ciągu nazwy:  
+ W tym przykładzie używa [kodu LINQ i języka stylu funkcjonalności](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming) , aby znaleźć symbol w modelu kompilatora, przy użyciu ciągu nazwy:  
   
 ```csharp  
 class Symbol {  
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- W pierwszym wierszu [wyrażenie lambda](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [zamykane](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/) na zmiennej lokalnej `name`. Oznacza to, że oprócz przydzielenia obiektu dla [delegata](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) , który `predicate` przechowuje, kod przydziela klasę statyczną do przechowywania środowiska, które przechwytuje wartość `name`. Kompilator generuje kod podobny do następującego:  
+ W pierwszym wierszu [wyrażenie lambda](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [zamykane](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures) na zmiennej lokalnej `name`. Oznacza to, że oprócz przydzielenia obiektu dla [delegata](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) , który `predicate` przechowuje, kod przydziela klasę statyczną do przechowywania środowiska, które przechwytuje wartość `name`. Kompilator generuje kod podobny do następującego:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -437,7 +437,7 @@ class Compilation { /*...*/
   
  Ten kod zmienia typ `cachedResult` do `Task<SyntaxTree>` i wykorzystuje `async` funkcję pomocnika, która przechowuje oryginalny kod z `GetSyntaxTreeAsync()`. `GetSyntaxTreeAsync()` teraz używa [operatora łączenia wartości null](../../csharp/language-reference/operators/null-coalescing-operator.md) , aby zwrócić `cachedResult`, jeśli nie ma wartości null. Jeśli `cachedResult` ma wartość null, `GetSyntaxTreeAsync()` wywołuje `GetSyntaxTreeUncachedAsync()` i buforuje wynik. Zwróć uwagę, że `GetSyntaxTreeAsync()` nie czeka na wywołanie `GetSyntaxTreeUncachedAsync()`, ponieważ normalnie kod. Brak użycia oczekiwania oznacza, że gdy `GetSyntaxTreeUncachedAsync()` zwraca swój obiekt <xref:System.Threading.Tasks.Task>, `GetSyntaxTreeAsync()` natychmiast zwraca <xref:System.Threading.Tasks.Task>. Teraz buforowany wynik to <xref:System.Threading.Tasks.Task>, więc nie ma żadnych alokacji, które zwracają buforowany wynik. 
   
-### <a name="additional-considerations"></a>Dodatkowe zagadnienia  
+### <a name="additional-considerations"></a>Dodatkowe kwestie do uwzględnienia  
  Poniżej przedstawiono kilka dodatkowych kwestii dotyczących potencjalnych problemów z dużymi aplikacjami lub aplikacjami, które przetwarzają wiele danych. 
   
  **Słownik**  
@@ -448,7 +448,7 @@ class Compilation { /*...*/
   
  W ten sposób klasy i struktury zapewniają klasyczną przestrzeń czasową/kompromis do dostrajania aplikacji. Klasy składają się z 12 bajtów na komputerze z procesorem x86, nawet jeśli nie mają żadnych pól, ale są niedrogi do obejścia, ponieważ przyjmuje tylko wskaźnik odwołujący się do wystąpienia klasy. Struktury nie ponoszą żadnych alokacji sterty, jeśli nie są opakowane, ale w przypadku przekazywania dużych struktur jako argumentów funkcji lub wartości zwracanych przez procesor czas procesora w celu niepodzielnego kopiowania wszystkich elementów członkowskich danych struktur. Obejrzyj powtarzające się wywołania właściwości, które zwracają struktury, i Buforuj wartość właściwości w zmiennej lokalnej, aby uniknąć nadmiernego kopiowania danych. 
   
- **Pamięci podręcznych**  
+ **Pamięci podręczne**  
   
  Częstą lewę z wydajnością jest buforowanie wyników. Jednak pamięć podręczna bez zasad limitu rozmiaru lub usuwania może być przeciekiem pamięci. W przypadku przetwarzania dużych ilości danych, jeśli w pamięci podręcznej znajduje się dużo pamięci, można spowodować wyrzucanie elementów bezużytecznych w celu zastąpienia korzyści z buforowanych wyszukiwań. 
   

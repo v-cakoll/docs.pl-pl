@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: a9f47c2909375251460b45792822e491d56fb242
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: eba3d21cfc787c5d388de31f988b835522118151
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342863"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936927"
 ---
 # <a name="whats-new-in-net-core-31"></a>Co nowego w programie .NET Core 3.1
 
@@ -72,4 +72,4 @@ Aby dodać obsługę C++/CLI w programie Visual Studio 2019 16,4, zainstaluj [Pr
 ## <a name="next-steps"></a>Następne kroki
 
 - [Zapoznaj się z istotnymi zmianami między programem .NET Core 3,0 i 3,1.](../compatibility/3.0-3.1.md)
-- [Zapoznaj się z istotnymi zmianami między .NET Framework i .NET Core 3,0 dla aplikacji Windows Forms.](../porting/winforms-breaking-changes.md)
+- [Zapoznaj się z istotnymi zmianami między programem .NET Core 3,1 dla aplikacji Windows Forms.](../compatibility/winforms.md#net-core-31)

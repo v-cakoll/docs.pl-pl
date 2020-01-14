@@ -2,12 +2,12 @@
 title: Dostęp do usług WCF za pomocą aplikacji klienckiej ze Sklepu Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: f5cc18973231f327ee161946a235cb8b8b2ea5a7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 77dc5d19bc40dc09148a8d2368c56e522bfafc1a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978180"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938173"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Dostęp do usług WCF za pomocą aplikacji klienckiej ze Sklepu Windows
 System Windows 8 wprowadza nowy typ aplikacji o nazwie aplikacje ze sklepu Windows. Te aplikacje są projektowane wokół interfejsu ekranu dotykowego. .NET Framework 4,5 umożliwia aplikacjom ze sklepu Windows wywoływanie usług WCF.  
@@ -16,7 +16,7 @@ System Windows 8 wprowadza nowy typ aplikacji o nazwie aplikacje ze sklepu Windo
  Podzestaw funkcji WCF jest dostępny w aplikacji ze sklepu Windows. więcej informacji znajduje się w poniższych sekcjach.  
   
 > [!IMPORTANT]
-> Użyj interfejsów API zespalania zamiast tych, które są udostępniane przez platformę WCF. Aby uzyskać więcej informacji, zobacz [interfejs API zespalania programu WinRT](https://go.microsoft.com/fwlink/?LinkId=236265)  
+> Użyj interfejsów API zespalania zamiast tych, które są udostępniane przez platformę WCF. Aby uzyskać więcej informacji, zobacz [interfejs API zespalania programu WinRT](xref:Windows.Web.Syndication)  
   
 > [!WARNING]
 > Dodawanie odwołania do usługi sieci Web do składnika środowisko wykonawcze systemu Windows przy użyciu Dodaj odwołanie do usługi nie jest obsługiwane.  
@@ -99,7 +99,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 1. DataContractSerializer  
   
-2. Klasa DataContractJsonSerializer  
+2. DataContractJsonSerializer  
   
 3. XmlSerializer  
   
@@ -124,9 +124,9 @@ Następujące typy poświadczeń klienta są obsługiwane w aplikacjach ze sklep
   
 2. Podstawowy  
   
-3. szyfrowane  
+3. Szyfrowane  
   
-4. Negocjować  
+4. Negotiate  
   
 5. NTLM  
   
@@ -176,9 +176,9 @@ void async SomeMethod()
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Blog usługi WCF w Sklepie Windows](https://blogs.msdn.microsoft.com/piyushjo/2011/09/21/wcf-in-windows-8-metro-styled-apps-absolutely-supported/)
-- [Klienci i zabezpieczenia sklepu Windows WCF](https://blogs.msdn.microsoft.com/piyushjo/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security/)
-- [Aplikacje ze sklepu Windows i wywołania między maszynami](https://blogs.msdn.microsoft.com/piyushjo/2011/10/21/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario/)
-- [Wywoływanie usługi WCF wdrożonej na platformie Azure z aplikacji ze sklepu Windows](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Blog usługi WCF w Sklepie Windows](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
+- [Klienci i zabezpieczenia sklepu Windows WCF](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
+- [Aplikacje ze sklepu Windows i wywołania między maszynami](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
+- [Wywoływanie usługi WCF wdrożonej na platformie Azure z aplikacji ze sklepu Windows](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [Programowanie zabezpieczeń WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Powiązania](../../../../docs/framework/wcf/bindings.md)

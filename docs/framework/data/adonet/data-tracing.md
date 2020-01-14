@@ -2,12 +2,12 @@
 title: Śledzenie danych w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: be82500920ce9d5f8bc7ee979cf8ec5006f4f12b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f92a17374cf3df1281e51d54bae1a1dcf9e5ea03
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347800"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937626"
 ---
 # <a name="data-tracing-in-adonet"></a>Śledzenie danych w ADO.NET
 
@@ -33,7 +33,7 @@ Aby uzyskać więcej informacji na temat ustawiania i konfigurowania zarządzane
 
 W .NET Framework Dostawca danych na potrzeby SQL Server funkcja śledzenia dostępu do danych ([Śledzenie dostępu do danych](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) została zaktualizowana w celu ułatwienia skorelowania zdarzeń klienta z informacjami diagnostycznymi, takimi jak błędy połączeń, z buforu i informacji o wydajności aplikacji serwera w dzienniku zdarzeń rozszerzonych. Informacje dotyczące odczytywania dziennika zdarzeń rozszerzonych znajdują się w temacie [Wyświetlanie danych sesji zdarzeń](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
 
-W przypadku operacji połączenia ADO.NET wyśle identyfikator połączenia klienta. Jeśli połączenie nie powiedzie się, można uzyskać dostęp do buforu pierścienia łączności ([Rozwiązywanie problemów z łącznością w SQL Server 2008 z buforem pierścieni łączności](https://blogs.msdn.microsoft.com/sql_protocols/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer/)) i znaleźć pole `ClientConnectionID` i uzyskać informacje diagnostyczne dotyczące błędu połączenia. Identyfikatory połączeń klientów są rejestrowane w buforze pierścieni tylko w przypadku wystąpienia błędu. (Jeśli połączenie nie powiedzie się przed wysłaniem pakietu przed zalogowaniem, identyfikator połączenia klienta nie zostanie wygenerowany). Identyfikator połączenia klienta jest 16-bajtowym identyfikatorem GUID. Identyfikator połączenia klienta można również znaleźć w danych wyjściowych obiektów docelowych zdarzeń rozszerzonych, jeśli akcja `client_connection_id` zostanie dodana do zdarzeń w sesji zdarzeń rozszerzonych. Można włączyć śledzenie dostępu do danych i ponownie uruchomić polecenie połączenia i obserwować pole `ClientConnectionID` w śladie dostępu do danych, jeśli potrzebujesz dalszej pomocy diagnostycznej sterownika klienta.
+W przypadku operacji połączenia ADO.NET wyśle identyfikator połączenia klienta. Jeśli połączenie nie powiedzie się, można uzyskać dostęp do buforu pierścienia łączności ([Rozwiązywanie problemów z łącznością w SQL Server 2008 z buforem pierścieni łączności](https://docs.microsoft.com/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) i znaleźć pole `ClientConnectionID` i uzyskać informacje diagnostyczne dotyczące błędu połączenia. Identyfikatory połączeń klientów są rejestrowane w buforze pierścieni tylko w przypadku wystąpienia błędu. (Jeśli połączenie nie powiedzie się przed wysłaniem pakietu przed zalogowaniem, identyfikator połączenia klienta nie zostanie wygenerowany). Identyfikator połączenia klienta jest 16-bajtowym identyfikatorem GUID. Identyfikator połączenia klienta można również znaleźć w danych wyjściowych obiektów docelowych zdarzeń rozszerzonych, jeśli akcja `client_connection_id` zostanie dodana do zdarzeń w sesji zdarzeń rozszerzonych. Można włączyć śledzenie dostępu do danych i ponownie uruchomić polecenie połączenia i obserwować pole `ClientConnectionID` w śladie dostępu do danych, jeśli potrzebujesz dalszej pomocy diagnostycznej sterownika klienta.
 
 Identyfikator połączenia klienta można uzyskać programowo przy użyciu właściwości `SqlConnection.ClientConnectionID`.
 

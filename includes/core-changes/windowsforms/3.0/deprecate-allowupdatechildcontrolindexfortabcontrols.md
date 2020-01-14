@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 1d01de4b978309e05a6036953f2a6909628a2480
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 7e76c32ddeb50eaf1ee93d7cf3cac7469187cc41
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643999"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937112"
 ---
-### <a name="switchsystemwindowsformsallowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>Przełącznik. System. Windows. Forms. AllowUpdateChildControlIndexForTabControls nie jest obsługiwany.
+### <a name="allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>Nieobsługiwany przełącznik zgodności AllowUpdateChildControlIndexForTabControls
 
 Przełącznik zgodności `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` jest obsługiwany w Windows Forms w .NET Framework 4,6 i nowszych wersjach, ale nie jest obsługiwany w Windows Forms począwszy od platformy .NET Core 3,0.
 
-#### <a name="change-description"></a>Zmień opis
+#### <a name="change-description"></a>Opis zmiany
 
 W .NET Framework 4,6 i nowszych wersjach, wybranie karty zmienia kolejność kolekcji kontrolek. Przełącznik zgodności `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` pozwala aplikacji pominąć tę zmianę kolejności, jeśli to zachowanie jest niepożądane.
 

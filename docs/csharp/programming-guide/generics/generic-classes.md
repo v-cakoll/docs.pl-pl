@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 13a1ca2d85be0c61b9d0f09c0c5cb670b49f5625
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1fdfaa833ad32428d341b6f3a61cc7f638036183
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75703224"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937503"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Klasy ogólne (Przewodnik programowania w języku C#)
 Klasy ogólne hermetyzują operacje, które nie są specyficzne dla określonego typu danych. Najbardziej typowym zastosowaniem klas ogólnych jest kolekcje, takie jak listy połączone, tabele skrótów, stosy, kolejki, drzewa i tak dalej. Operacje, takie jak dodawanie i usuwanie elementów z kolekcji, są wykonywane w taki sam sposób, niezależnie od typu przechowywanych danych.  
@@ -70,5 +70,5 @@ Klasy ogólne hermetyzują operacje, które nie są specyficzne dla określonego
 - <xref:System.Collections.Generic>
 - [Przewodnik programowania w języku C#](../index.md)
 - [Typy ogólne](./index.md)
-- [Zapisywanie stanu modułów wyliczających](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)
-- [Dziedziczenie, część jedna](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)
+- [Zapisywanie stanu modułów wyliczających](https://docs.microsoft.com/archive/blogs/wesdyer/saving-the-state-of-enumerators)
+- [Dziedziczenie, część jedna](https://docs.microsoft.com/archive/blogs/ericlippert/an-inheritance-puzzle-part-one)

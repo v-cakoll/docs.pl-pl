@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a1c4d165-9bdc-4ca8-940e-292d4ffcc338
 topic_type:
 - apiref
-ms.openlocfilehash: e64a0512e05965b3da2e7486e986ee34ca8a20d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4f05eb2e6ef31cf1993a623c38bb177f7e3c297e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104300"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935648"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo — Funkcja
-Zwraca informacje o określonej bibliotece typów, badając jej strukturę [TLIBATTR](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr) .  
+Zwraca informacje o określonej bibliotece typów, badając jej strukturę [TLIBATTR](/windows/win32/api/oaidl/ns-oaidl-tlibattr) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,7 +48,7 @@ HRESULT GetTypeLibInfo(
  określoną Identyfikator lokalizacji biblioteki typów.  
   
  `pTypeLibPlatform`  
- określoną Flaga [SYSKIND](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind) , która identyfikuje docelowy system operacyjny dla biblioteki typów. Wspólne wartości to SYS_WIN32 i SYS_WIN64.  
+ określoną Flaga [SYSKIND](/windows/win32/api/oaidl/ne-oaidl-syskind) , która identyfikuje docelowy system operacyjny dla biblioteki typów. Typowe wartości to SYS_WIN32 i SYS_WIN64.  
   
  `pTypeLibMajorVer`  
  określoną Numer wersji głównej biblioteki typów. Na przykład w przypadku wersji *x. y*główny numer wersji to *x*.  

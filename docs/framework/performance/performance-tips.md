@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 48b62990abf85eac4d4ab30c9a4b891de0875cd7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 12e8d9398a1cf76267f4e8441845007da17949cd
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444536"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937901"
 ---
 # <a name="net-performance-tips"></a>Wskazówki dotyczące wydajności .NET
 Termin *wydajność* zwykle odnosi się do szybkości wykonywania programu. Czasami można zwiększyć szybkość wykonywania, wykonując pewne podstawowe reguły w kodzie źródłowym. W niektórych programach ważne jest dokładne badanie kodu i używanie narzędzi do uruchamiania, aby upewnić się, że działa tak szybko, jak to możliwe. W innych programach nie trzeba wykonywać takich optymalizacji, ponieważ kod jest uruchamiany zadowalająco szybko, gdy zostanie zapisany. W tym artykule wymieniono niektóre typowe obszary, w których wydajność może pogorszyć się, a także linki do dodatkowych tematów dotyczących wydajności. Aby uzyskać więcej informacji na temat planowania i mierzenia wydajności, zobacz [wydajność](index.md)  
@@ -38,9 +38,9 @@ Termin *wydajność* zwykle odnosi się do szybkości wykonywania programu. Czas
   
 - [Porady i wskazówki dotyczące wydajności w aplikacjach .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
 
-- [Mariani wydajność smakowite kąski](https://blogs.msdn.microsoft.com/ricom/)  
+- [Mariani wydajność smakowite kąski](https://docs.microsoft.com/archive/blogs/ricom/)  
 
-- [Blog Vance Morrison](https://blogs.msdn.microsoft.com/vancem/)
+- [Blog Vance Morrison](https://docs.microsoft.com/archive/blogs/vancem/)
   
 ## <a name="see-also"></a>Zobacz także
 

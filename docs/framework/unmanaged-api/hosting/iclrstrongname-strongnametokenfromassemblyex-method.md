@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 648ea90e-5e60-40a0-a56a-3e61bf2fba7c
 topic_type:
 - apiref
-ms.openlocfilehash: 71fda266c22c4beb1e1f9c81c84d6c56a0a6110e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f08006c532d2778de67a4bab09623d248362535c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092584"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937426"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a>ICLRStrongName::StrongNameTokenFromAssemblyEx — Metoda
 Tworzy token silnej nazwy z określonego pliku zestawu i zwraca klucz publiczny, który reprezentuje token.  
@@ -53,8 +53,8 @@ HRESULT StrongNameTokenFromAssemblyEx (
  `pcbPublicKeyBlob`  
  określoną Rozmiar (w bajtach) klucza publicznego.  
   
-## <a name="return-value"></a>Wartość zwracana  
- `S_OK`, jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
+## <a name="return-value"></a>Wartość zwrócona  
+ `S_OK`, jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
   
 ## <a name="remarks"></a>Uwagi  
  Token silnej nazwy to skrócona postać klucza publicznego. Token jest 64-bitowym skrótem, który jest tworzony na podstawie klucza publicznego używanego do podpisywania zestawu. Token jest częścią silnej nazwy zestawu i można go odczytać z metadanych zestawu.  

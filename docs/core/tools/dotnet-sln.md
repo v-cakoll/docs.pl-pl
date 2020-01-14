@@ -2,12 +2,12 @@
 title: dotnet sln — polecenie
 description: Polecenie dotnet-sln udostępnia wygodną opcję dodawania, usuwania i wyświetlania listy projektów w pliku rozwiązania.
 ms.date: 10/29/2019
-ms.openlocfilehash: 18702c7638798117bd04d5c6a829d64cc6bf18a8
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: c0badfeba1438a795106691a86c09a8b1675829b
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191821"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937251"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -137,38 +137,38 @@ dotnet sln list [-h|--help]
 
 ## <a name="examples"></a>Przykłady
 
-Dodaj C# projekt do rozwiązania:
+- Dodaj C# projekt do rozwiązania:
 
-```dotnetcli
-dotnet sln todo.sln add todo-app/todo-app.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj
+  ```
 
-Usuń C# projekt z rozwiązania:
+- Usuń C# projekt z rozwiązania:
 
-```dotnetcli
-dotnet sln todo.sln remove todo-app/todo-app.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove todo-app/todo-app.csproj
+  ```
 
-Dodaj wiele C# projektów do rozwiązania:
+- Dodaj wiele C# projektów do rozwiązania:
 
-```dotnetcli
-dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
+  ```
 
-Usuń wiele C# projektów z rozwiązania:
+- Usuń wiele C# projektów z rozwiązania:
 
-```dotnetcli
-dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
+  ```
 
-Dodawanie wielu C# projektów do rozwiązania przy użyciu wzorca obsługi symboli wieloznacznych (tylko w systemie UNIX/Linux):
+- Dodawanie wielu C# projektów do rozwiązania przy użyciu wzorca obsługi symboli wieloznacznych (tylko w systemie UNIX/Linux):
 
-```dotnetcli
-dotnet sln todo.sln add **/*.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add **/*.csproj
+  ```
 
-Usuwanie wielu C# projektów z rozwiązania przy użyciu wzorca obsługi symboli wieloznacznych (tylko w systemie UNIX/Linux):
+- Usuwanie wielu C# projektów z rozwiązania przy użyciu wzorca obsługi symboli wieloznacznych (tylko w systemie UNIX/Linux):
 
-```dotnetcli
-dotnet sln todo.sln remove **/*.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove **/*.csproj
+  ```

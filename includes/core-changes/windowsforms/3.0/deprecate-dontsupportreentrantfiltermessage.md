@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: cb72e1b92172b8989ce99b47181c13561a7ccd76
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3272dc562981269b868df4ca9d3a5806918aba5f
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644006"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937032"
 ---
-### <a name="switchsystemwindowsformsdontsupportreentrantfiltermessage-compatibility-switch-not-supported"></a>Przełącznik. System. Windows. Forms. DontSupportReentrantFilterMessage nie jest obsługiwany.
+### <a name="dontsupportreentrantfiltermessage-compatibility-switch-not-supported"></a>Nieobsługiwany przełącznik zgodności DontSupportReentrantFilterMessage
 
 Przełącznik zgodności `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage`, który został wprowadzony w .NET Framework 4.6.1, nie jest obsługiwany w Windows Forms na platformie .NET Core 3,0.
 
-#### <a name="change-description"></a>Zmień opis
+#### <a name="change-description"></a>Opis zmiany
 
 Począwszy od .NET Framework 4.6.1, `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` <xref:System.IndexOutOfRangeException> wyjątki, gdy komunikat <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> jest wywoływany przy użyciu niestandardowej implementacji <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz Rozwiązywanie [problemów z niestandardowymi implementacjami IMessageFilter. PreFilterMessage](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md).
 

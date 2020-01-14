@@ -10,13 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.custom: seodec18
-ms.openlocfilehash: 56014469f14280deae5f220da6d786f4363ea98f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 158964d1e04091faaa9b3acf82bf4ce2b5aba797
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105719"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711496"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Najlepsze rozwiązania dotyczące wyrażeń regularnych w programie .NET
 
@@ -60,7 +59,7 @@ Aby rozwiązać ten problem, można wykonać następujące czynności:
 
 ## <a name="handle-object-instantiation-appropriately"></a>Odpowiednio Obsługuj Tworzenie wystąpienia obiektu
 
-W serca. Model obiektów wyrażeń regularnych sieci jest klasą <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>, która reprezentuje aparat wyrażeń regularnych. Często jeden największy czynnik wpływający na wydajność wyrażeń regularnych jest sposobem, w jaki używany jest aparat <xref:System.Text.RegularExpressions.Regex>. Definiowanie wyrażenia regularnego polega na ścisłym sprzęganiu aparatu wyrażeń regularnych z wzorcem wyrażenia regularnego. Ten proces sprzęgania, niezależnie od tego, czy obejmuje tworzenie wystąpienia obiektu <xref:System.Text.RegularExpressions.Regex> przez przekazanie jego konstruktora wzorca wyrażenia regularnego, czy wywoływanie statycznej metody przez przekazanie jej wzorca wyrażenia regularnego wraz z ciągiem do analizy, jest z konieczności kosztowna.
+W serca. Model obiektów wyrażeń regularnych sieci jest klasą <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>, która reprezentuje aparat wyrażeń regularnych. Często jeden największy czynnik wpływający na wydajność wyrażeń regularnych jest sposobem, w jaki używany jest aparat <xref:System.Text.RegularExpressions.Regex>. Definiowanie wyrażenia regularnego polega na ścisłym sprzęganiu aparatu wyrażeń regularnych z wzorcem wyrażenia regularnego. Ten proces sprzęgania, niezależnie od tego, czy wiąże się z wystąpieniem obiektu <xref:System.Text.RegularExpressions.Regex> przez przekazanie jego konstruktora wzorcem wyrażenia regularnego, czy wywoływanie statycznej metody przez przekazanie jej wzorca wyrażenia regularnego wraz z ciągiem, który ma być analizowany, jest zgodnie z koniecznością kosztowną.
 
 > [!NOTE]
 > Aby zapoznać się z bardziej szczegółowym omówieniem implikacji wydajności przy użyciu interpretowanych i skompilowanych wyrażeń regularnych, zobacz [Optymalizowanie wydajności wyrażeń regularnych, część II: Przejmowanie opłaty za wycofywanie](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) w blogu zespołu BCL.
@@ -159,7 +158,7 @@ Gdy przykład jest kompilowany do pliku wykonywalnego i uruchamiany, tworzy zest
 
 ## <a name="take-charge-of-backtracking"></a>Przejmowanie opłaty za wycofywanie
 
-Zazwyczaj aparat wyrażeń regularnych używa progresji liniowej do przechodzenia przez ciąg wejściowy i porównywania go ze wzorcem wyrażenia regularnego. Jednakże, gdy w wzorcu wyrażenia regularnego są używane nieokreślone Kwantyfikatory, takie jak `*`, `+` i `?`, aparat wyrażeń regularnych może pokazywać część udanych częściowych dopasowań i powrócić do wcześniej zapisanego stanu w celu wyszukania pomyślne dopasowanie dla całego wzorca. Proces ten jest znany pod nazwą wycofywania.
+Zazwyczaj aparat wyrażeń regularnych używa progresji liniowej do przechodzenia przez ciąg wejściowy i porównywania go ze wzorcem wyrażenia regularnego. Jednakże, gdy w wzorcu wyrażenia regularnego są używane nieokreślone Kwantyfikatory, takie jak `*`, `+`i `?`, aparat wyrażeń regularnych może pokazywać część udanych częściowych dopasowań i powrócić do wcześniej zapisanego stanu, aby wyszukać pomyślne dopasowanie dla całego wzorca. Proces ten jest znany pod nazwą wycofywania.
 
 > [!NOTE]
 > Aby uzyskać więcej informacji na temat wycofywania, zobacz [Szczegóły zachowania wyrażenia regularnego](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) [i](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)wycofywania. Aby zapoznać się ze szczegółową omówieniem wycofywania, zobacz [Optymalizowanie wydajności wyrażeń regularnych, część II: Przejmowanie opłaty za wycofywanie](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) w blogu zespołu BCL.
@@ -235,9 +234,9 @@ W poniższym przykładzie zdefiniowano metodę `GetWordData`, która tworzy wyst
 
 ## <a name="capture-only-when-necessary"></a>Przechwyć tylko w razie potrzeby
 
-Wyrażenia regularne w programie .NET obsługują szereg konstrukcji grupujących, które pozwalają grupować wzorzec wyrażenia regularnego w jedno lub więcej podwyrażeń. Najczęściej używane konstrukcje grupujące w języku wyrażeń regularnych programu .NET są `(`*podwyrażeniem* `)`, które definiuje numerowaną grupę przechwytywania, i `(?<`*nazwę* `>`*Podwyrażenie* `)`, które definiuje nazwana grupa przechwytywania. Konstrukcje grupujące są niezbędne do tworzenia odwołań wstecznych i do definiowania podwyrażeń, do których jest stosowany kwantyfikator.
+Wyrażenia regularne w programie .NET obsługują szereg konstrukcji grupujących, które pozwalają grupować wzorzec wyrażenia regularnego w jedno lub więcej podwyrażeń. Najczęściej używane konstrukcje grupujące w *języku wyrażeń regularnych* programu .net są `(`pod`)`, które definiuje numerowaną grupę przechwytywania, i `(?<`*nazwę*`>`*Podwyrażenie*`)`, która definiuje nazwaną grupę przechwytywania. Konstrukcje grupujące są niezbędne do tworzenia odwołań wstecznych i do definiowania podwyrażeń, do których jest stosowany kwantyfikator.
 
-Jednak zastosowanie tych elementów języka jest kosztowne. Powodują, że obiekt <xref:System.Text.RegularExpressions.GroupCollection> zwracany przez właściwość <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> zostanie wypełniony najnowszymi nienazwanymi lub nazwanymi przechwycenimi, a jeśli jedna konstrukcja grupowania przechwyciła wiele podciągów w ciągu wejściowym, wypełnia również obiekt <xref:System.Text.RegularExpressions.CaptureCollection> zwracane przez właściwość <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> określonej grupy przechwytywania z wieloma obiektami <xref:System.Text.RegularExpressions.Capture>.
+Jednak zastosowanie tych elementów języka jest kosztowne. Powodują, że obiekt <xref:System.Text.RegularExpressions.GroupCollection> zwracany przez właściwość <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> zostanie wypełniony najnowszymi nienazwanymi lub nazwanymi przechwycenimi, a jeśli jedna konstrukcja grupowania przechwyciła wiele podciągów w ciągu wejściowym, wypełnia również obiekt <xref:System.Text.RegularExpressions.CaptureCollection> zwracany przez właściwość <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> określonej grupy przechwytywania z wieloma obiektami <xref:System.Text.RegularExpressions.Capture>.
 
 Często konstrukcje grupujące są używane w wyrażeniach regularnych tylko po to, aby można było zastosować do nich kwantyfikatory, i grupy przechwytywane przez te podwyrażenia nie są następnie używane. Na przykład wyrażenie regularne `\b(\w+[;,]?\s?)+[.?!]` jest przeznaczone do przechwytywania całego zdania. W poniższej tabeli opisano elementy języka w tym wzorcu wyrażenia regularnego i ich wpływ na <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Match> obiektu i kolekcje <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.
 

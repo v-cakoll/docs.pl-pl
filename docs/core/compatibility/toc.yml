@@ -16,7 +16,11 @@
     - name: Z wersji 2.0 do 2.1
       href: 2.0-2.1.md
     - name: Z platformy .NET Framework do platformy .NET Core
-      href: fx-core.md
+      items:
+        - name: Fundamentalne zmiany
+          href: fx-core.md
+        - name: 'Interfejsy API, które zgłaszają wyjątki'
+          href: unsupported-apis.md
 - name: Według obszaru
   expanded: true
   items:

@@ -185,7 +185,7 @@
       items:
         - name: Debugowanie przecieku pamięci
           href: diagnostics/debug-memory-leak.md
-- name: Testowanie jednostkowe
+- name: Testowanie jednostek
   href: testing/index.md
   items:
     - name: Najlepsze rozwiązania dotyczące testów jednostkowych
@@ -339,8 +339,9 @@
     - name: Generator serializatora XML
       href: additional-tools/xml-serializer-generator.md
 - name: Przenoszenie z programu .NET Framework
-  href: porting/index.md
   items:
+    - name: Omówienie
+      href: porting/index.md
     - name: Technologie .NET Framework niedostępne na platformie .NET Core
       href: porting/net-framework-tech-unavailable.md
     - name: Analizowanie zależności innych firm

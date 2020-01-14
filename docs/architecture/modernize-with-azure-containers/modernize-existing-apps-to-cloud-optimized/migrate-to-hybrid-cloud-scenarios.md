@@ -2,12 +2,12 @@
 title: Scenariusze migracji do chmury hybrydowej
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Migrowanie do scenariuszy chmury hybrydowej
 ms.date: 04/30/2018
-ms.openlocfilehash: 4348a9b538042fee7ebd9c08f480491f17425937
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: dcbb799a45609f8bb811866c4041951abf1fda8b
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72394545"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937362"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Scenariusze migracji do chmury hybrydowej
 
@@ -59,7 +59,7 @@ Microsoft Azure Stack Development Kit to wdrożenie z jednym węzłem Azure Stac
 
 - **Tworzenie kontenera z obsługą Active Directory**
 
-    <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
+    <https://docs.microsoft.com/archive/blogs/containerstuff/create-a-container-with-active-directory-support>
 
 - **Licencjonowanie Korzyść użycia hybrydowego platformy Azure**
 

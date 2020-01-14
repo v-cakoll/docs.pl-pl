@@ -2,12 +2,12 @@
 title: Kroki przepływu pracy DevOps w zewnętrznej pętli dla aplikacji platformy Docker
 description: Informacje na temat instrukcji "pętla zewnętrzna" przepływu pracy DevOps
 ms.date: 02/15/2019
-ms.openlocfilehash: 7c465ab380770441005f7365f53bc585236c31bd
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 735f92c00cd6279649ec3b0c35cfb00543f21a8c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738234"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936781"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Kroki przepływu pracy DevOps w zewnętrznej pętli dla aplikacji platformy Docker
 
@@ -67,7 +67,7 @@ Oto podstawowe kroki przepływu pracy elementu konfiguracji z rozwiązaniami Doc
 
 ### <a name="implementing-the-ci-pipeline-with-azure-devops-services-and-the-docker-extension-for-azure-devops-services"></a>Implementowanie potoku CI przy użyciu Azure DevOps Services i rozszerzenia Docker dla Azure DevOps Services
 
-Program Visual Studio Azure DevOps Services zawiera szablony wydań & kompilacji, których można użyć w potoku ciągłej integracji/ciągłego wdrażania, za pomocą którego można tworzyć obrazy platformy Docker, wypychania obrazów platformy Docker do uwierzytelnionego rejestru platformy Docker, uruchamiania obrazów platformy Docker lub uruchamiania innych operacji oferowanych przez program Interfejs wiersza polecenia platformy Docker. Dodaje także zadanie Docker Compose, którego można użyć do kompilowania, wypychania i uruchamiania aplikacji platformy Docker obejmujących wiele kontenerów lub uruchamiania innych operacji oferowanych przez interfejs wiersza polecenia Docker Compose, jak pokazano na rysunku 5-3.
+Program Visual Studio Azure DevOps Services zawiera szablony wydań & kompilacji, których można użyć w potoku ciągłej integracji/ciągłego wdrażania, za pomocą którego można tworzyć obrazy platformy Docker, wypchnięcia obrazów platformy Docker do uwierzytelnionego rejestru platformy Docker, uruchamiania obrazów platformy Docker lub uruchamiania innych operacji oferowanych przez interfejs wiersza polecenia platformy Docker. Dodaje także zadanie Docker Compose, którego można użyć do kompilowania, wypychania i uruchamiania aplikacji platformy Docker obejmujących wiele kontenerów lub uruchamiania innych operacji oferowanych przez interfejs wiersza polecenia Docker Compose, jak pokazano na rysunku 5-3.
 
 ![Zrzut ekranu przedstawiający potok elementu konfiguracji platformy Docker w usłudze Azure DevOps.](./media/docker-application-outer-loop-devops-workflow/docker-ci-pipeline-azure-devops.png)
 
@@ -75,7 +75,7 @@ Program Visual Studio Azure DevOps Services zawiera szablony wydań & kompilacji
 
 Za pomocą tych szablonów i zadań można tworzyć artefakty ciągłej integracji/ciągłego tworzenia i testowania i wdrażania w usłudze Azure Service Fabric, usłudze Azure Kubernetes Service i podobnych ofertach.
 
-Za pomocą tych Visual Studio Team Servicesych zadań kompilacja systemu Linux — Host platformy Docker/maszyna wirtualna, która została zainicjowana na platformie Azure i preferowany rejestr platformy Docker (Azure Container Registry, Hub Docker, prywatny moduł Docker DTR lub dowolny inny rejestr platformy Docker), można utworzyć potok elementu konfiguracji platformy Docker w bardzo spójny sposób.
+Za pomocą tych Visual Studio Team Servicesych zadań kompilacja systemu Linux — Host platformy Docker/maszyna wirtualna, która została zainicjowana na platformie Azure i preferowany rejestr platformy Docker (Azure Container Registry, usługa Docker Hub, prywatny moduł Docker DTR lub inny rejestr platformy Docker), można utworzyć potok usługi Docker w bardzo spójny sposób.
 
 ***Wymagania:***
 
@@ -91,7 +91,7 @@ Za pomocą tych Visual Studio Team Servicesych zadań kompilacja systemu Linux �
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
 > - Kompilowanie obrazów platformy Docker .NET Core Linux przy użyciu Azure DevOps Services: \
->   <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
+>   <https://docs.microsoft.com/archive/blogs/stevelasker/building-net-core-linux-docker-images-with-visual-studio-team-services>
 >
 > - Kompilowanie maszyny kompilacji usługi Visual Studio Team Service opartej na systemie Linux z obsługą platformy Docker: \
 >   <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>

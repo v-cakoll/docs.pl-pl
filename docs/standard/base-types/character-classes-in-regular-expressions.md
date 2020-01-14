@@ -12,13 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.custom: seodec18
-ms.openlocfilehash: dbfa61077cbfdd7da104dc12f304a4096b3c032d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd9d3f69f8135b608ced91c34f747600352bafe1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120610"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711457"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Klasy znaków w wyrażeniach regularnych
 
@@ -59,7 +58,7 @@ Klasa znaków definiuje zestaw znaków, z którego każdy jeden znak może wyst�
 
 `[*character_group*]`
 
- gdzie *character_group* jest listą pojedynczych znaków, które mogą być wyświetlane w ciągu wejściowym, aby dopasowanie zakończyło się pomyślnie. *character_group* może składać się z dowolnej kombinacji jednego lub większej liczby znaków literału, [znaków ucieczki](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)lub klasy znaków.  
+ gdzie *character_group* jest listą pojedynczych znaków, które mogą być wyświetlane w ciągu wejściowym, aby dopasowanie zakończyło się pomyślnie. *character_group* może składać się z dowolnej kombinacji jednego lub większej liczby znaków literału, [znaków ucieczki](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)lub klas znaków.  
   
  Składnia służąca do określania zakresu znaków jest następująca:  
   
@@ -115,7 +114,7 @@ Składnia służąca do określenia listy indywidualnych znaków jest następuj�
 
 `[*^character_group*]`
 
- gdzie *character_group* jest listą pojedynczych znaków, które nie mogą być wyświetlane w ciągu wejściowym, aby dopasowanie zakończyło się pomyślnie. *character_group* może składać się z dowolnej kombinacji jednego lub większej liczby znaków literału, [znaków ucieczki](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)lub klasy znaków.  
+ gdzie *character_group* jest listą pojedynczych znaków, które nie mogą być wyświetlane w ciągu wejściowym, aby dopasowanie zakończyło się pomyślnie. *character_group* może składać się z dowolnej kombinacji jednego lub większej liczby znaków literału, [znaków ucieczki](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)lub klas znaków.  
   
  Składnia służąca do określania zakresu znaków jest następująca:  
 
@@ -248,7 +247,7 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
 |Element|Opis|  
 |-------------|-----------------|  
 |(\w)|Dopasowuje znak słowa. Jest to pierwsza grupa przechwytywania.|  
-|\ 1|Dopasowuje wartość pierwszego przechwycenia.|  
+|\1|Dopasowuje wartość pierwszego przechwycenia.|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/wordchar1.cs#8)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/wordchar1.vb#8)]  
@@ -440,7 +439,7 @@ Platforma .NET udostępnia nazwane bloki wymienione w poniższej tabeli. Zestaw 
 |0250–02AF|`IsIPAExtensions`|  
 |02B0–02FF|`IsSpacingModifierLetters`|  
 |0300–036F|`IsCombiningDiacriticalMarks`|  
-|0370–03FF|`IsGreek`<br /><br /> —lub—<br /><br /> `IsGreekandCoptic`|  
+|0370–03FF|`IsGreek`<br /><br /> lub<br /><br /> `IsGreekandCoptic`|  
 |0400–04FF|`IsCyrillic`|  
 |0500–052F|`IsCyrillicSupplement`|  
 |0530–058F|`IsArmenian`|  
@@ -484,7 +483,7 @@ Platforma .NET udostępnia nazwane bloki wymienione w poniższej tabeli. Zestaw 
 |2000–206F|`IsGeneralPunctuation`|  
 |2070–209F|`IsSuperscriptsandSubscripts`|  
 |20A0–20CF|`IsCurrencySymbols`|  
-|20D0–20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> —lub—<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0–20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> lub<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100–214F|`IsLetterlikeSymbols`|  
 |2150–218F|`IsNumberForms`|  
 |2190–21FF|`IsArrows`|  
@@ -540,7 +539,7 @@ Platforma .NET udostępnia nazwane bloki wymienione w poniższej tabeli. Zestaw 
 |FFF0–FFFF|`IsSpecials`|  
   
 <a name="CharacterClassSubtraction"></a>   
-## <a name="character-class-subtraction-base_group---excluded_group"></a>Odejmowanie klasy znaków: [Base_group-[Excluded_group]]  
+## <a name="character-class-subtraction-base_group---excluded_group"></a>Odejmowanie klasy znaków: [base_group-[excluded_group]]  
  Klasy znaków definiuje zestaw znaków. Wynikiem odejmowania klas znaków jest zestaw znaków będący wynikiem wykluczenia znaków jednej klasy znaków z innej klasy znaków.  
   
  Wyrażenie odejmowania klas znaków ma następującą formę:  
@@ -553,7 +552,7 @@ Platforma .NET udostępnia nazwane bloki wymienione w poniższej tabeli. Zestaw 
   
  Rozważ wyrażenie odejmowania klasy znaków zagnieżdżonych, `[a-z-[d-w-[m-o]]]`. To wyrażenie jest wykonywane począwszy od najbardziej wewnętrznego zakresu znaków na zewnątrz. Najpierw zakres znaków od „m” do „o” jest odejmowany od zakresu znaków od „d” do „w”, wynikiem czego jest zestaw znaków od „d” do „l” oraz od „p” do „w”. Ten zestaw jest następnie odejmowany od zakresu znaków od "a" do "z", który daje zestaw znaków `[abcmnoxyz]`.  
   
- Można odejmować dowolne klasy znaków. Aby zdefiniować zestaw znaków, który składa się ze wszystkich znaków Unicode od \u0000 do \uFFFF, z wyjątkiem białych znaków (`\s`), znaków w ogólnej kategorii (`\p{P}`), znaki w `IsGreek` nazwanym bloku (`\p{IsGreek}`) i znak kontrolny następnej linii Unicode (\x85), użyj `[\u0000-\uFFFF-[\s\p{P}\p{IsGreek}\x85]]`.  
+ Można odejmować dowolne klasy znaków. Aby zdefiniować zestaw znaków, który składa się ze wszystkich znaków Unicode od \u0000 do \uFFFF, z wyjątkiem białych znaków (`\s`), znaków w ogólnej kategorii (`\p{P}`), znaków w `IsGreek` nazwanym bloku (`\p{IsGreek}`) i znaku kontrolnego Unicode NEXT LINE (\x85), użyj `[\u0000-\uFFFF-[\s\p{P}\p{IsGreek}\x85]]`.  
   
  W wyrażeniach odejmowania klas znaków należy używać klas znaków umożliwiających zwrócenie przydatnych wyników. Należy unikać wyrażeń, które zwracają puste zestawy znaków, które nie mogą nic dopasować, oraz wyrażeń, które są równoważne oryginalnej grupie podstawowej. Na przykład, pusty zestaw jest wynikiem wyrażenia `[\p{IsBasicLatin}-[\x00-\x7F]]`, co odejmuje wszystkie znaki w zakresie znaków `IsBasicLatin` z ogólnej kategorii `IsBasicLatin`. Analogicznie, oryginalna Grupa podstawowa jest wynikiem wyrażenia `[a-z-[0-9]]`.  Dzieje się tak, ponieważ grupa podstawowa, czyli zakres znaków od „a” do „z”, nie zawiera żadnych znaków z grupy wykluczanej, która jest zakresem cyfr dziesiętnych od „0” do „9”.  
   

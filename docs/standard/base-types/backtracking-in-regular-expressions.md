@@ -17,13 +17,12 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.custom: seodec18
-ms.openlocfilehash: 6504430f94f800bb9f41761ad64c65fefecb68d6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a11e3501aa57fc81a28d27d1280d299f99e1dea1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968258"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711522"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Śledzenie wsteczne w wyrażeniach regularnych
 Wycofywanie występuje, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) lub [konstrukcje warunkowe](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), a aparat wyrażeń regularnych powraca do poprzedniego zapisanego stanu, aby kontynuować wyszukiwanie zgodności. Wycofywanie stanowi podstawę dużych możliwości wyrażeń regularnych, ponieważ dzięki niemu wyrażenia oferują duże możliwości i są elastyczne, a także umożliwiają dopasowywanie bardzo złożonych wzorców. Jednocześnie te możliwości są obciążone kosztami. Wycofywanie często jest najważniejszym czynnikiem wpływającym na wydajność aparatu wyrażeń regularnych. Na szczęście deweloper ma kontrolę nad zachowaniem aparatu wyrażeń regularnych i sposobem użycia wycofywania. W tym temacie opisano zasadę działania wycofywania i możliwości sterowania nim.  
@@ -45,22 +44,22 @@ Wycofywanie występuje, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [K
 |---------------|-------------------------|------------------------|------------|  
 |1|e|„needing a reed” (indeks 0)|Brak dopasowania.|  
 |2|e|„eeding a reed” (indeks 1)|Możliwe dopasowanie.|  
-|3|{2} e|„eding a reed” (indeks 2)|Możliwe dopasowanie.|  
+|3|e{2}|„eding a reed” (indeks 2)|Możliwe dopasowanie.|  
 |4|\w|„ding a reed” (indeks 3)|Możliwe dopasowanie.|  
 |5|\b|„ing a reed” (indeks 4)|Możliwe dopasowanie nie powiodło się.|  
 |6|e|„eding a reed” (indeks 2)|Możliwe dopasowanie.|  
-|7|{2} e|„ding a reed” (indeks 3)|Możliwe dopasowanie nie powiodło się.|  
+|7|e{2}|„ding a reed” (indeks 3)|Możliwe dopasowanie nie powiodło się.|  
 |8|e|„ding a reed” (indeks 3)|Dopasowanie nie powiodło się.|  
 |9|e|„ing a reed” (indeks 4)|Brak dopasowania.|  
 |10|e|„ng a reed” (indeks 5)|Brak dopasowania.|  
 |11|e|„g a reed” (indeks 6)|Brak dopasowania.|  
 |12|e|"a Reed" (indeks 7)|Brak dopasowania.|  
 |13|e|"a Reed" (indeks 8)|Brak dopasowania.|  
-|14,5|e|"Reed" (indeks 9)|Brak dopasowania.|  
-|15000|e|"Reed" (indeks 10)|Brak dopasowania.|  
+|14|e|"Reed" (indeks 9)|Brak dopasowania.|  
+|15|e|"Reed" (indeks 10)|Brak dopasowania.|  
 |16|e|„eed” (indeks 11)|Możliwe dopasowanie.|  
-|7|{2} e|„ed” (indeks 12)|Możliwe dopasowanie.|  
-|postanowienia|\w|„d” (indeks 13)|Możliwe dopasowanie.|  
+|17|e{2}|„ed” (indeks 12)|Możliwe dopasowanie.|  
+|18|\w|„d” (indeks 13)|Możliwe dopasowanie.|  
 |19|\b|„” (indeks 14)|Dopasowanie.|  
   
  Jeśli wzorzec wyrażenia regularnego nie zawiera opcjonalnych kwantyfikatorów ani konstrukcji zmiany, maksymalna liczba porównań niezbędna do wykonania dopasowania wzorca wyrażenia regularnego do ciągu wejściowego jest w przybliżeniu równa liczbie znaków w ciągu wejściowym. W tym przypadku aparat wyrażeń regularnych wykonuje 19 porównań w celu zidentyfikowania możliwych dopasowań w 13-znakowy ciągu.  Innymi słowy, aparat wyrażeń regularnych działa prawie liniowo, jeśli nie zawiera opcjonalnych kwantyfikatorów ani konstrukcji zmiany.   
@@ -104,7 +103,7 @@ Wycofywanie występuje, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [K
  Porównywanie ciągu wejściowego z wyrażeniem regularnym w ten sposób będzie kontynuowane, dopóki aparat wyrażeń regularnych nie wypróbuje wszystkich możliwych kombinacji dopasowań, a następnie uzna, że nie istnieje dopasowanie. Ze względu na zagnieżdżone kwantyfikatory to porównanie jest operacją O (2<sup>n</sup>) lub wykładniczą, gdzie *n* to liczba znaków w ciągu wejściowym. Oznacza to, że w najgorszym przypadku ciąg wejściowy o długości 30 znaków będzie wymagał wykonania ok. 1 073 741 824 porównań, a ciąg wejściowy o długości 40 znaków będzie wymagał wykonania ok. 1 099 511 627 776 porównań. Gdy są używane ciągi o takiej lub większej długości, wykonanie metod opartych na wyrażeniach regularnych może trwać niezwykle długo, jeśli w przetwarzanych ciągach nie będą znajdować się dopasowania do wzorca wyrażenia regularnego. 
 
 ## <a name="controlling-backtracking"></a>Sterowanie wycofywaniem  
- Wycofywanie umożliwia tworzenie zaawansowanych, elastycznych wyrażeń regularnych. Jednak, tak jak pokazano w poprzedniej sekcji, ich zalety może przesłonić nieakceptowalnie niska wydajność. Aby zapobiec nadmiernemu śledzeniu, należy zdefiniować interwał limitu czasu podczas tworzenia wystąpienia obiektu <xref:System.Text.RegularExpressions.Regex> lub wywołania statycznej metody dopasowania wyrażenia regularnego. Ta czynność została omówiona w następnej sekcji. Ponadto platforma .NET obsługuje trzy elementy języka wyrażeń regularnych, które ograniczają lub pomijają funkcję wycofywania oraz obsługują złożone wyrażenia regularne z małą ilością lub brakiem wydajności: [Podwyrażenie subexpressions](#nonbacktracking-subexpression), [asercja wsteczna potwierdzenia](#lookbehind-assertions)i [potwierdzenia naprzód](#lookahead-assertions). Aby uzyskać więcej informacji na temat każdego elementu języka, zobacz [Grouping konstrukcjes](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ Wycofywanie umożliwia tworzenie zaawansowanych, elastycznych wyrażeń regularnych. Jednak, tak jak pokazano w poprzedniej sekcji, ich zalety może przesłonić nieakceptowalnie niska wydajność. Aby zapobiec nadmiernemu śledzeniu, należy zdefiniować interwał limitu czasu podczas tworzenia wystąpienia obiektu <xref:System.Text.RegularExpressions.Regex> lub wywołania statycznej metody dopasowania wyrażenia regularnego. Ta czynność została omówiona w następnej sekcji. Ponadto platforma .NET obsługuje trzy elementy języka wyrażeń regularnych, które ograniczają lub pomijają funkcję wycofywania oraz obsługują złożone wyrażenia regularne z małą ilością lub brakiem wydajności: [podwyrażenia Podwyrażenie](#nonbacktracking-subexpression), [potwierdzenia asercja wsteczna](#lookbehind-assertions)i [potwierdzenia naprzód](#lookahead-assertions). Aby uzyskać więcej informacji na temat każdego elementu języka, zobacz [Grouping konstrukcjes](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
 
 ### <a name="defining-a-time-out-interval"></a>Definiowanie interwału limitu czasu  
  Począwszy od .NET Framework 4,5, można ustawić wartość limitu czasu reprezentującą najdłuższy interwał, przez który aparat wyrażeń regularnych będzie wyszukiwać pojedyncze dopasowanie, zanim porzuca próbę i zgłosi wyjątek <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>. Należy określić interwał limitu czasu, dostarczając wartość <xref:System.TimeSpan> do konstruktora <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> dla wyrażeń regularnych wystąpienia. Ponadto każda statyczna metoda dopasowywania do wzorca ma Przeciążenie z parametrem <xref:System.TimeSpan>, który pozwala określić wartość limitu czasu. Domyślnie interwał limitu czasu jest ustawiony na <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> i aparat wyrażeń regularnych nie przekroczy limitu czasu.  

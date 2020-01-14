@@ -451,12 +451,6 @@
             - name: Co nowego?
               tocHref: /dotnet/csharp/whats-new/
               topicHref: /dotnet/csharp/whats-new/index
-            - name: Interaktywne
-              tocHref: /dotnet/csharp/interactive/
-              topicHref: /dotnet/csharp/interactive/index
-            - name: Pojęcia
-              tocHref: /dotnet/csharp/concepts/
-              topicHref: /dotnet/csharp/concepts/index
             - name: Zestaw SDK platformy kompilatora .NET
               tocHref: /dotnet/csharp/roslyn-sdk/
               topicHref: /dotnet/csharp/roslyn-sdk/index
@@ -497,9 +491,6 @@
                 - name: Współdziałanie
                   tocHref: /dotnet/csharp/programming-guide/interop/
                   topicHref: /dotnet/csharp/programming-guide/interop/index
-                - name: LINQ
-                  tocHref: /dotnet/csharp/programming-guide/linq/
-                  topicHref: /dotnet/csharp/programming-guide/linq/index
                 - name: Main() i argumenty wiersza polecenia
                   tocHref: /dotnet/csharp/programming-guide/main-and-command-args/
                   topicHref: /dotnet/csharp/programming-guide/main-and-command-args/index

@@ -1,14 +1,16 @@
 - name: 'Dokumentacja języka C#'
   href: index.yml
-- name: Rozpocznij
+- name: Wprowadzenie
   items:
     - name: Omówienie
+      displayName: get started
       href: getting-started/index.md
     - name: 'Wprowadzenie do języka C# i systemu .NET Framework'
       href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
 - name: Samouczki
   items:
     - name: Omówienie
+      displayName: tutorials
       href: tutorials/index.md
     - name: 'Wprowadzenie do programowania w języku C#'
       items:
@@ -93,6 +95,7 @@
 - name: 'Co nowego w języku C#'
   items:
     - name: 'C# 8.0'
+      displayName: what's new
       href: whats-new/csharp-8.md
     - name: 'C# 7.3'
       href: whats-new/csharp-7-3.md
@@ -238,9 +241,10 @@
       href: codedoc.md
     - name: Przechowywanie wersji
       href: versioning.md
-- name: 'Tematy z instrukcjami dotyczącymi języka C#'
+- name: 'Artykuły z instrukcjami dotyczące języka C#'
   items:
-    - name: Indeks tematów
+    - name: Indeks artykułów
+      displayName: how to's
       href: how-to/index.md
     - name: Analizowanie ciągów za pomocą polecenia `String.Split`
       href: how-to/parse-strings-using-split.md
@@ -270,7 +274,7 @@
       href: roslyn-sdk/work-with-workspace.md
     - name: Eksplorowanie kodu za pomocą wizualizatora składni
       href: roslyn-sdk/syntax-visualizer.md
-    - name: Szybki start
+    - name: Przewodniki Szybki start
       items:
         - name: Analiza składni
           href: roslyn-sdk/get-started/syntax-analysis.md
@@ -285,6 +289,7 @@
 - name: 'Przewodnik programowania w języku C#'
   items:
     - name: Omówienie
+      displayName: programming guide
       href: programming-guide/index.md
     - name: 'Konstrukcja programu C#'
       items:
@@ -298,9 +303,10 @@
           href: programming-guide/inside-a-program/identifier-names.md
         - name: 'Konwencje kodowania C#'
           href: programming-guide/inside-a-program/coding-conventions.md
-    - name: Main() i argumenty wiersza poleceń
+    - name: Main() i argumenty wiersza polecenia
       items:
         - name: Omówienie
+          displayName: main method
           href: programming-guide/main-and-command-args/index.md
         - name: Argumenty wiersza poleceń
           href: programming-guide/main-and-command-args/command-line-arguments.md
@@ -308,13 +314,15 @@
           href: programming-guide/main-and-command-args/how-to-display-command-line-arguments.md
         - name: Main() — Zwracane wartości
           href: programming-guide/main-and-command-args/main-return-values.md
-    - name: Koncepcje programowania
+    - name: Pojęcia związane z programowaniem
       items:
         - name: Omówienie
+          displayName: programming concepts
           href: programming-guide/concepts/index.md
         - name: Programowanie asynchroniczne przy użyciu elementów async i await
           items:
             - name: Omówienie
+              displayName: asynchronous programming
               href: programming-guide/concepts/async/index.md
             - name: Model programowania asynchronicznego zadań (APM)
               href: programming-guide/concepts/async/task-asynchronous-programming-model.md
@@ -347,6 +355,7 @@
         - name: Atrybuty
           items:
             - name: Omówienie
+              displayName: attributes
               href: programming-guide/concepts/attributes/index.md
             - name: Tworzenie atrybutów niestandardowych
               href: programming-guide/concepts/attributes/creating-custom-attributes.md
@@ -365,6 +374,7 @@
         - name: Kowariancja i kontrawariancja
           items:
             - name: Omówienie
+              displayName: covariance and contravariance
               href: programming-guide/concepts/covariance-contravariance/index.md
             - name: Wariancje w interfejsach
               href: programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md
@@ -378,11 +388,12 @@
               items:
                 - name: Korzystanie z wariancji w delegatach
                   href: programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md
-                - name: Korzystanie z wariancji dla delegatów Func i Action
+                - name: Korzystanie z wariancji dla delegatów ogólnych Func i Action
                   href: programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md
         - name: Drzewa wyrażeń
           items:
             - name: Omówienie
+              displayName: expression trees
               href: programming-guide/concepts/expression-trees/index.md
             - name: 'Porada: wykonywanie drzew wyrażeń'
               href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
@@ -399,6 +410,7 @@
         - name: Zapytanie o języku zintegrowanym (LINQ)
           items:
             - name: Omówienie
+              displayName: LINQ overview
               href: programming-guide/concepts/linq/index.md
             - name: 'Wprowadzenie do korzystania z LINQ w C#'
               items:
@@ -873,6 +885,7 @@
         - name: 'Serializacja (C#)'
           items:
             - name: Omówienie
+              displayName: serialization
               href: programming-guide/concepts/serialization/index.md
             - name: Zapisywanie danych o obiektach do pliku XML
               href: programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md
@@ -883,6 +896,7 @@
     - name: 'Instrukcje, wyrażenia i operatory'
       items:
         - name: Omówienie
+          displayName: 'statements, expressions, operators'
           href: programming-guide/statements-expressions-operators/index.md
         - name: Instrukcje
           href: programming-guide/statements-expressions-operators/statements.md
@@ -927,6 +941,7 @@
     - name: Klasy i struktury
       items:
         - name: Omówienie
+          displayName: classes structs
           href: programming-guide/classes-and-structs/index.md
         - name: Klasy
           href: programming-guide/classes-and-structs/classes.md
@@ -935,14 +950,16 @@
         - name: Struktury
           items:
             - name: Omówienie
+              displayName: structs
               href: programming-guide/classes-and-structs/structs.md
-            - name: Używanie struktur
+            - name: Korzystanie ze struktur
               href: programming-guide/classes-and-structs/using-structs.md
         - name: Dziedziczenie
           href: programming-guide/classes-and-structs/inheritance.md
         - name: Polimorfizm
           items:
             - name: Omówienie
+              displayName: polymorphism
               href: programming-guide/classes-and-structs/polymorphism.md
             - name: Przechowywanie wersji przesłonięć i nowych słów kluczowych
               href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
@@ -1049,6 +1066,7 @@
     - name: Interfejsy
       items:
         - name: Omówienie
+          displayName: interfaces
           href: programming-guide/interfaces/index.md
         - name: Implementacja interfejsu jawnego
           href: programming-guide/interfaces/explicit-interface-implementation.md
@@ -1059,6 +1077,7 @@
     - name: Delegaty
       items:
         - name: Omówienie
+          displayName: delegates
           href: programming-guide/delegates/index.md
         - name: Używanie delegatów
           href: programming-guide/delegates/using-delegates.md
@@ -1071,6 +1090,7 @@
     - name: Tablice
       items:
         - name: Omówienie
+          displayName: arrays
           href: programming-guide/arrays/index.md
         - name: Użycie tablic jako obiektów
           href: programming-guide/arrays/arrays-as-objects.md
@@ -1095,6 +1115,7 @@
     - name: Indeksatory
       items:
         - name: Omówienie
+          displayName: indexers
           href: programming-guide/indexers/index.md
         - name: Używanie indeksatorów
           href: programming-guide/indexers/using-indexers.md
@@ -1105,6 +1126,7 @@
     - name: Zdarzenia
       items:
         - name: Omówienie
+          displayName: events
           href: programming-guide/events/index.md
         - name: Subskrybowanie i anulowanie subskrypcji zdarzeń
           href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
@@ -1119,6 +1141,7 @@
     - name: Typy ogólne
       items:
         - name: Omówienie
+          displayName: generics
           href: programming-guide/generics/index.md
         - name: Parametry typu ogólnego
           href: programming-guide/generics/generic-type-parameters.md
@@ -1145,6 +1168,7 @@
     - name: Namespaces
       items:
         - name: Omówienie
+          displayName: namespaces
           href: programming-guide/namespaces/index.md
         - name: Korzystanie z przestrzeni nazw
           href: programming-guide/namespaces/using-namespaces.md
@@ -1153,12 +1177,14 @@
     - name: Niebezpieczny kod i wskaźniki
       items:
         - name: Omówienie i ograniczenia
+          displayName: unsafe code pointers
           href: programming-guide/unsafe-code-pointers/index.md
         - name: Bufory o ustalonym rozmiarze
           href: programming-guide/unsafe-code-pointers/fixed-size-buffers.md
         - name: Typy wskaźnika
           items:
             - name: Omówienie
+              displayName: pointer types
               href: programming-guide/unsafe-code-pointers/pointer-types.md
             - name: Konwersje wskaźników
               href: programming-guide/unsafe-code-pointers/pointer-conversions.md
@@ -1167,6 +1193,7 @@
     - name: Komentarze dokumentacji XML
       items:
         - name: Omówienie
+          displayName: xml documentation comments
           href: programming-guide/xmldoc/index.md
         - name: Zalecane tagi przeznaczone do komentarzy dokumentacji
           href: programming-guide/xmldoc/recommended-tags-for-documentation-comments.md
@@ -1219,6 +1246,7 @@
     - name: Wyjątki i obsługa wyjątków
       items:
         - name: Omówienie
+          displayName: exceptions
           href: programming-guide/exceptions/index.md
         - name: Używanie wyjątków
           href: programming-guide/exceptions/using-exceptions.md
@@ -1237,6 +1265,7 @@
     - name: System plików i rejestr
       items:
         - name: Omówienie
+          displayName: file system registry
           href: programming-guide/file-system/index.md
         - name: Iterowanie drzewa katalogów
           href: programming-guide/file-system/how-to-iterate-through-a-directory-tree.md
@@ -1275,12 +1304,14 @@
 - name: Dokumentacja języka
   items:
     - name: Omówienie
+      displayName: language reference
       href: language-reference/index.md
     - name: Konfigurowanie wersji języka
       href: language-reference/configure-language-version.md
     - name: 'Słowa kluczowe języka C#'
       items:
         - name: Omówienie
+          displayName: keywords
           href: language-reference/keywords/index.md
         - name: Typy wbudowane
           items:
@@ -1435,6 +1466,7 @@
             - name: checked i unchecked
               items:
                 - name: Omówienie
+                  displayName: checked unchecked
                   href: language-reference/keywords/checked-and-unchecked.md
                 - name: checked
                   href: language-reference/keywords/checked.md
@@ -1499,6 +1531,7 @@
         - name: Kontekstowe słowa kluczowe
           items:
             - name: Krótki przewodnik
+              displayName: contextual keywords
               href: language-reference/keywords/contextual-keywords.md
             - name: add
               href: language-reference/keywords/add.md
@@ -1521,6 +1554,7 @@
         - name: Słowa kluczowe zapytania
           items:
             - name: Krótki przewodnik
+              displayName: query keywords
               href: language-reference/keywords/query-keywords.md
             - name: Klauzula From
               href: language-reference/keywords/from-clause.md
@@ -1631,6 +1665,7 @@
     - name: 'Znaki specjalne języka C#'
       items:
         - name: Omówienie
+          displayName: special characters
           href: language-reference/tokens/index.md
         - name: $ — interpolacja ciągów
           href: language-reference/tokens/interpolated.md
@@ -1639,6 +1674,7 @@
     - name: 'Dyrektywy preprocesora języka C#'
       items:
         - name: Omówienie
+          displayName: preprocessor directives
           href: language-reference/preprocessor-directives/index.md
         - name: '#if'
           href: language-reference/preprocessor-directives/preprocessor-if.md
@@ -1671,6 +1707,7 @@
     - name: 'Opcje kompilatora C#'
       items:
         - name: Omówienie
+          displayName: compiler options
           href: language-reference/compiler-options/index.md
         - name: Kompilacja za pomocą wiersza polecenia przy użyciu csc.exe
           href: language-reference/compiler-options/command-line-building-with-csc-exe.md

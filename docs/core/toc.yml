@@ -342,24 +342,20 @@
   items:
     - name: Omówienie
       href: porting/index.md
-    - name: Technologie .NET Framework niedostępne na platformie .NET Core
-      href: porting/net-framework-tech-unavailable.md
     - name: Analizowanie zależności innych firm
       href: porting/third-party-deps.md
     - name: Przenoszenie bibliotek
       href: porting/libraries.md
     - name: Organizowanie projektów dla platformy .NET Core
       href: porting/project-structure.md
+    - name: Niedostępne technologie
+      href: porting/net-framework-tech-unavailable.md
     - name: Narzędzia
       href: porting/tools.md
     - name: Korzystanie z pakietu zgodności systemu Windows
       href: porting/windows-compat-pack.md
     - name: Przenoszenie projektów aplikacji Windows Forms
-      items:
-        - name: Jak przenieść projekt
-          href: porting/winforms.md
-        - name: Fundamentalne zmiany
-          href: porting/winforms-breaking-changes.md
+      href: porting/winforms.md
     - name: Przenoszenie projektów WPF
       href: porting/wpf.md
 - name: Ładowanie zależności

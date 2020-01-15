@@ -1358,14 +1358,14 @@
               href: language-reference/keywords/var.md
             - name: Typy niezarządzane
               href: language-reference/builtin-types/unmanaged-types.md
+            - name: Wartości domyślne
+              href: language-reference/builtin-types/default-values.md
             - name: Tabele odwołań dla typów
               items:
                 - name: Tabela typów wbudowanych
                   href: language-reference/keywords/built-in-types-table.md
                 - name: Tabela typów wartości
                   href: language-reference/keywords/value-types-table.md
-                - name: Tabela wartości domyślnych
-                  href: language-reference/keywords/default-values-table.md
                 - name: Formatowanie tabeli wyników liczbowych
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Modyfikatory

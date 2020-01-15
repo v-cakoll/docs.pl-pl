@@ -38,10 +38,6 @@
               href: how-to-define-and-use-custom-numeric-format-providers.md
             - name: 'Instrukcje: Obustronne wartości daty i godziny'
               href: how-to-round-trip-date-and-time-values.md
-            - name: 'Instrukcje: Konwertowanie liczbowych danych wejściowych użytkownika na liczby w kontrolkach internetowych'
-              href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
-            - name: 'Instrukcje: Wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników Internetu'
-              href: how-to-display-localized-date-and-time-information-to-web-users.md
             - name: 'Instrukcje: Wyświetlanie liczby milisekund w wartościach daty i godziny'
               href: how-to-display-milliseconds-in-date-and-time-values.md
             - name: 'Instrukcje: Wyświetlanie dat w kalendarzach innych niż gregoriański'

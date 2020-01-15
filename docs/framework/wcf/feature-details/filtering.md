@@ -2,86 +2,86 @@
 title: Filtrowanie
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 46716d1a96da6ddc729992b546be56c2aec0bf5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: efbedc16fe48d83cdc4223862bc691e9cbe15c10
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593503"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964293"
 ---
 # <a name="filtering"></a>Filtrowanie
-Windows Communication Foundation (WCF) systemu filtrowania umożliwia deklaratywne filtry dopasowanie wiadomości i podejmowania decyzji operacyjne. Filtry można użyć, aby określić, co należy zrobić z komunikatem, sprawdzając część komunikatu. Proces kolejkowania, na przykład, można użyć zapytania XPath 1.0 do sprawdzenia elementu priority znanych nagłówka w celu ustalenia, czy można przenieść komunikatu z przodu kolejki.  
+System filtrowania Windows Communication Foundation (WCF) może używać filtrów deklaratywnych do dopasowywania komunikatów i podejmowania decyzji operacyjnych. Można użyć filtrów, aby określić, co zrobić z komunikatem, sprawdzając część komunikatu. Proces kolejkowania, na przykład, może użyć zapytania XPath 1,0 do sprawdzenia elementu priorytet znanego nagłówka, aby określić, czy przenieść komunikat na pierwszy plan kolejki.  
   
- System filtrowania składa się z zestawu klas, które mogą efektywnie ustalić, które zestaw filtrów są `true` dla danego komunikatu WCF.  
+ System filtrowania składa się z zestawu klas, które mogą efektywnie ustalić, który zestaw filtrów jest `true` dla konkretnego komunikatu WCF.  
   
- Filtrowanie system jest podstawowym składnikiem obsługi wiadomości WCF; jest ona przeznaczona do bardzo szybkiego działania. Każda implementacja filtru został zoptymalizowany dla określonego rodzaju dopasowywanie względem komunikatów WCF.  
+ System filtrowania jest głównym składnikiem obsługi komunikatów WCF; jest ona zaprojektowana tak, aby była niezwykle szybka. Każda implementacja filtru została zoptymalizowana pod kątem określonego rodzaju dopasowania do komunikatów WCF.  
   
- Filtrowanie system nie jest bezpieczny dla wątków. Aplikacja musi obsługiwać żadnych semantyką blokowania. Jednak obsługuje ona wiele czytnika, pojedynczy składnik zapisywania.  
+ System filtrowania nie jest bezpieczny wątkowo. Aplikacja musi obsługiwać jakąkolwiek semantykę blokującą. Obsługuje ona jednak wiele czytników, ale tylko jeden składnik zapisywania.  
   
-## <a name="where-filtering-fits"></a>Gdzie znajdzie filtrowania  
- Filtrowanie odbywa się po komunikat jest odbierany i jest częścią procesu wysyłania komunikatu do składnika aplikacji odpowiednie. Projekt systemu filtrowania adresów wymagania kilka podsystemów WCF, w tym obsługi komunikatów, routingu, zabezpieczeń, obsługi zdarzeń i zarządzanie systemem.  
+## <a name="where-filtering-fits"></a>Gdzie filtrowanie pasuje  
+ Filtrowanie jest wykonywane po odebraniu komunikatu i jest częścią procesu wysyłania komunikatu do odpowiedniego składnika aplikacji. Projekt systemu filtrowania dotyczy wymagań kilku podsystemów WCF, w tym komunikatów, routingu, zabezpieczeń, obsługi zdarzeń i zarządzania systemem.  
   
 ## <a name="filters"></a>Filtry  
- Aparat filtr ma dwa podstawowe składniki, filtry i filtrowania tabel. Filtr sprawia, że logiczna decyzje dotyczące wiadomości na podstawie określonych przez użytkownika warunków logicznych. Implementuje filtry <xref:System.ServiceModel.Dispatcher.MessageFilter> klasy.  
+ Aparat filtrów ma dwa podstawowe składniki, filtry i tabele filtrów. Filtr podejmuje decyzje logiczne dotyczące wiadomości w oparciu o warunki logiczne określone przez użytkownika. Filtry implementują klasę <xref:System.ServiceModel.Dispatcher.MessageFilter>.  
   
- <xref:System.ServiceModel.Dispatcher.MessageFilter.Match%2A> Metody są używane do ustalenia, jeśli wiadomość spełnia filtru. Jedną z metod testów nagłówka komunikatu, ale nie można dokonać inspekcji treść komunikatu. Inna metoda pobiera *buforu komunikatu* jako parametr wejściowy i sprawdzić, czy treść komunikatu.  
+ Metody <xref:System.ServiceModel.Dispatcher.MessageFilter.Match%2A> są używane do określenia, czy komunikat spełnia kryteria filtru. Jedna z metod testuje nagłówek wiadomości, ale nie może zbadać treści komunikatu. Druga metoda przyjmuje *bufor komunikatów* jako parametr wejściowy i może zbadać treść wiadomości.  
   
- Filtry nie jest zazwyczaj sprawdzana osobno, ale jako część tabelę filtru, który jest ogólnej klasy, która <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.CreateFilterTable%2A> metoda tworzy.  
+ Filtry nie są zwykle testowane pojedynczo, ale w ramach tabeli filtrów, która jest klasą rodzajową, którą tworzy Metoda <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.CreateFilterTable%2A>.  
   
- Kilka rodzajów filtry każdego specjalizują się w dopasowywanie na określonego rodzaju warunek logiczny. Gdy konstruowania filtru nie można zmienić kryteria, które używa filtru; Aby zmodyfikować kryteria filtrowania, utworzyć nową, a następnie usuń istniejący filtr.  
+ Kilka rodzajów filtrów, w których każda specjalizacja jest zgodna z określonym rodzajem warunku logicznego. Po skonstruowaniu filtru nie można zmienić kryteriów, których używa filtr; Aby zmodyfikować kryteria filtru, Utwórz nowe i usuń istniejący filtr.  
   
 ### <a name="action-filters"></a>Filtry akcji  
- <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> Zawiera listę parametrów akcji. Jeśli wszystkie akcje, na liście filtru zgodny nagłówek akcji w wiadomości lub buforu komunikatów `Match` metoda zwraca `true`. Jeśli lista jest pusta, filtr jest uznawany za dopasowuje wszystkie dopasowania buforu filtru i komunikatów lub komunikatów i `Match` zwraca `true`. Jeśli żadna z tych akcji, na liście filtru zgodny nagłówek akcji w wiadomości lub buforu komunikatów `Match` zwraca `false`. Jeśli nie ma akcji w wiadomości, a lista filtrów jest pusta, następnie `Match` zwraca `false`.  
+ <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> zawiera listę ciągów akcji. Jeśli którakolwiek z akcji z listy filtrów pasuje do nagłówka akcji w buforze komunikatów lub komunikatów, Metoda `Match` zwraca `true`. Jeśli lista jest pusta, filtr jest traktowany jako dopasowany filtr i wszystkie komunikaty lub bufory komunikatów, a `Match` zwraca `true`. Jeśli żadna z akcji na liście filtru nie jest zgodna z nagłówkiem akcji w buforze komunikatów lub komunikatów, `Match` zwraca `false`. Jeśli komunikat nie zawiera żadnej akcji, a lista filtrów nie jest pusta, `Match` zwraca `false`.  
   
-### <a name="endpoint-address-filters"></a>Filtry adresu punktu końcowego  
- <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> Filtry wiadomości oraz buforów komunikatów, na podstawie adresu punktu końcowego reprezentowane w ich kolekcję nagłówków. Wiadomości do przekazania filtr muszą być spełnione następujące warunki:  
+### <a name="endpoint-address-filters"></a>Filtry adresów punktu końcowego  
+ <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtruje komunikaty i bufory komunikatów na podstawie adresu punktu końcowego reprezentowanego w kolekcji nagłówków. Aby komunikat przeszedł do tego filtru, muszą zostać spełnione następujące warunki:  
   
-- Filtru adresu identyfikator (URI) musi być taka sama jak w wiadomości do nagłówka.  
+- Uniform Resource Identifier adresu filtru (URI) musi być taka sama jak wartość w polu wiadomość do nagłówka.  
   
-- Każdy parametr punkt końcowy adres filtru (`address.Headers` kolekcji) musi odnaleźć nagłówka komunikatu do mapowania na. Dodatkowe nagłówki wiadomości lub buforu komunikatów są akceptowalne dla dopasowanie, aby pozostać `true`.  
+- Każdy parametr punktu końcowego w adresie filtru (`address.Headers` Collection) musi znaleźć nagłówek w komunikacie, aby zamapować. Dodatkowe nagłówki w wiadomości lub buforze komunikatów są akceptowane, aby dopasowanie pozostało `true`.  
   
-### <a name="prefix-endpoint-address-filters"></a>Prefiks filtry adres punktu końcowego  
+### <a name="prefix-endpoint-address-filters"></a>Filtry adresów punktu końcowego prefiksu  
   
-1. <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> Podobnie jak funkcje <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtrowania, z tą różnicą, że dopasowanie może to być prefiksem komunikat o identyfikatorze URI. Na przykład filtr, określając adres `http://www.adatum.com` odpowiada na komunikaty adresowane do `http://www.adatum.com/userA`.  
+1. <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> działa podobnie jak filtr <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>, z tą różnicą, że dopasowanie może być na prefiksie identyfikatora URI wiadomości. Na przykład filtr określający adres `http://www.adatum.com` jest zgodny z wiadomościami zaadresowanymi do `http://www.adatum.com/userA`.  
   
 ### <a name="xpath-message-filters"></a>Filtry komunikatów XPath  
- <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> Używa wyrażenia XPath do określenia, czy dokument XML zawiera określone elementy, atrybuty, tekst lub inne składni XML tworzy. Filtr jest zoptymalizowany do być bardzo wydajny podzbiór XPath. Język ścieżki XML jest opisana w [specyfikacji W3C XML ścieżka język 1.0](https://go.microsoft.com/fwlink/?LinkId=94779).  
+ <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> używa wyrażenia XPath, aby określić, czy dokument XML zawiera konkretne elementy, atrybuty, tekst lub inne konstrukcje składni XML. Filtr jest zoptymalizowany pod kątem niezwykle wydajnego podzbioru wyrażenia XPath. Język ścieżki XML został opisany w [specyfikacji języka XML Path w formacie W3C 1,0](https://www.w3.org/TR/xpath/all/).  
   
- Zazwyczaj aplikacja używa <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> w punkcie końcowym, aby zapytanie o zawartość komunikatu protokołu SOAP, a następnie pobiera odpowiednie działania na podstawie wyników tej kwerendy. Aby sprawdzić priorytet elementu znany nagłówek zdecydować, czy można przenieść komunikatu z przodu kolejki proces kolejkowania, na przykład, może używać zapytania XPath.  
+ Zazwyczaj aplikacja używa <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> w punkcie końcowym do wysyłania zapytań do zawartości komunikatu protokołu SOAP, a następnie pobiera odpowiednią akcję na podstawie wyników zapytania. Proces kolejkowania, na przykład, może użyć zapytania XPath do sprawdzenia elementu priorytet znanego nagłówka, aby zdecydować, czy przenieść komunikat na pierwszy plan kolejki.  
   
-## <a name="filter-tables"></a>Filtrowanie tabel  
- Filtr tabele są używane do przechowywania par klucz wartość, gdy filtr jest kluczem, a niektóre powiązane dane jest wartością. Filtrowanie danych może służyć do wskazania, jakie działania należy podjąć, jeśli komunikat jest zgodny z filtrem i typu danych filtru jest parametru ogólnego dla klasy tabeli filtru. Filtrowanie danych może składać się z reguł routingu, stanu zabezpieczeń sesji, odbiorniki kanałów i tak dalej. Dane mogą być używane, gdy sterowanie przepływem danych jest konieczne.  
+## <a name="filter-tables"></a>Filtruj tabele  
+ Tabele filtrów są używane do przechowywania par klucz-wartość, gdzie filtr jest kluczem, a niektóre skojarzone dane są wartościami. Dane filtru mogą służyć do wskazywania, jakie akcje należy wykonać, jeśli komunikat pasuje do filtru i typ danych filtru jest parametrem ogólnym klasy filtru tabeli. Dane filtru mogą zawierać reguły routingu, stan zabezpieczeń sesji, odbiorniki w kanale itd. Dane mogą być używane, gdy wymagane jest sterowanie przepływem danych.  
   
- Tabele filtr implementować interfejs ogólny <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601>.  
+ Tabele filtrów implementują <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601>interfejsu ogólnego.  
   
- Filtr tabele zawierają kilka metod, które odpowiada wiadomość ze wszystkimi filtrami w tabeli i zwracają nieuporządkowanej kolekcji odpowiadającą jej instrukcją filtry lub danych. Niektóre metody dopasowania wielu spełniają i zwracać wszystkie zgodne elementy. Inne są jednym match, zwracając tylko jeden element i zgłosić <xref:System.ServiceModel.Dispatcher.MultipleFilterMatchesException> Jeśli pasuje do więcej niż jeden filtr.  
+ Tabele filtrów mają kilka metod, które pasują do komunikatów względem wszystkich filtrów w tabeli i zwracają nieuporządkowaną kolekcję pasujących filtrów lub danych. Niektóre metody dopasowania są wielokrotnością dopasowania i zwracają wszystkie zgodne elementy. Inne są pojedynczymi dopasowaniami, zwracają tylko jeden element i generują <xref:System.ServiceModel.Dispatcher.MultipleFilterMatchesException>, jeśli więcej niż jeden filtr jest zgodny.  
   
-### <a name="message-filter-table"></a>Tabela filtr komunikatów  
- <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> Jest najbardziej ogólnym implementacją <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601>. Filtry dla wszystkich typów można przechowywać w tabeli.  
+### <a name="message-filter-table"></a>Tabela filtru komunikatów  
+ <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> to najbardziej ogólna implementacja <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601>. Można przechowywać filtry wszystkich typów w tabeli.  
   
- Możesz przypisać priorytety liczbowe filtrów, gdzie najwyższym priorytetem jest oznaczony do największej liczby. Wiele typów filtrów może mieć ten sam priorytet. Określony typ filtru może znajdować się w więcej niż jeden poziom priorytetu.  
+ Można przypisać priorytety liczbowe do filtrów, gdzie najwyższy priorytet jest oznaczony największą liczbą. Wiele typów filtrów może mieć ten sam priorytet. Określony typ filtru może być wyświetlany na więcej niż jeden poziom priorytetu.  
   
- Dopasowanie jest wykonywane począwszy najwyższy priorytet, a po pasujące do filtrów o danym priorytecie, znajdują się żadnych filtrów o niższych priorytetach są sprawdzane. W związku z tym Jeśli jesteś przy użyciu pojedynczego filtru match — metoda i więcej niż jeden filtr dopasowuje wartość do wiadomości, ale każdego pasującego filtr ma inny priorytet, a następnie jest zgłaszany żaden wyjątek i filtr z najwyższym priorytetem jest zwracana. Podobnie filtr wielu odpowiadają metoda zwraca tylko pasujące do filtrów o najwyższym priorytecie.  
+ Dopasowanie jest wykonywane począwszy od najwyższego priorytetu, a po znalezieniu pasujących filtrów o danym priorytecie nie są badane żadne filtry o niższych priorytetach. W związku z tym, jeśli używasz metody dopasowania pojedynczego filtru i więcej niż jeden filtr dopasowuje komunikat, ale każdy pasujący filtr ma inny priorytet, nie zostanie zgłoszony żaden wyjątek i zostanie zwrócony filtr o najwyższym priorytecie. Podobnie Metoda dopasowywania wielu filtrów zwraca tylko te filtry zgodne z najwyższym priorytetem.  
   
-### <a name="xpath-message-filter-table"></a>Tabela Filtr komunikatu XPath  
- <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> Została zoptymalizowana pod kątem filtrach XPath deklaracyjne, dzięki czemu klucza tabeli <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.  
+### <a name="xpath-message-filter-table"></a>Tabela filtru komunikatów XPath  
+ <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> jest zoptymalizowany pod kątem deklaratywnych filtrów XPath, więc klucz tabeli jest <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.  
   
- <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> Klasy optymalizuje dopasowania dla podzbioru XPath, który obejmuje większość scenariuszy obsługi wiadomości i obsługuje także pełne gramatyki języka XPath 1.0. Wydajne dopasowania równoległych algorytmów optymalizacji.  
+ Klasa <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> optymalizuje dopasowanie dla podzbioru XPath, który obejmuje większość scenariuszy obsługi komunikatów, a także obsługuje pełną gramatykę XPath 1,0. Ma zoptymalizowane algorytmy do wydajnego dopasowywania równoległego.  
   
- Ta tabela ma kilka specjalistycznych `Match` metod, które pracują nad <xref:System.Xml.XPath.XPathNavigator> i <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>. A <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> rozszerza <xref:System.Xml.XPath.XPathNavigator> klasy, dodając <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> właściwości. Ta właściwość umożliwia położenie dokumentu XML na zapisywanie i szybko załadowane bez konieczności sklonować Nawigatora alokacji pamięci kosztowne, <xref:System.Xml.XPath.XPathNavigator> wymaga takich operacji. Aparat WCF XPath często należy zarejestrować pozycję kursora w trakcie wykonywania zapytań w dokumentach XML, więc <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> udostępnia ważne optymalizacji do przetwarzania komunikatów.  
+ Ta tabela ma kilka wyspecjalizowanych metod `Match`, które działają na <xref:System.Xml.XPath.XPathNavigator> i <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>. <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> rozszerza klasę <xref:System.Xml.XPath.XPathNavigator> przez dodanie właściwości <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A>. Ta właściwość umożliwia szybkie zapisywanie i ładowanie pozycji w dokumencie XML bez konieczności klonowania nawigatora, czyli alokacji pamięci wymaganej przez <xref:System.Xml.XPath.XPathNavigator> dla takiej operacji. Aparat języka XPath WCF musi często rejestrować położenie kursora w trakcie wykonywania zapytań w dokumentach XML, dlatego <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> zapewnia ważną optymalizację przetwarzania komunikatów.  
   
-## <a name="customer-scenarios"></a>Scenariusze klienta  
- Możesz użyć filtrowania w dowolnym momencie, aby wysłać komunikat do modułów przetwarzania różne w zależności od danych zawartych w wiadomości. Dwa typowe scenariusze są routing komunikatów na podstawie jego działania kodu i cofnąć Multipleksowanie strumienia komunikatów na podstawie adresu punktu końcowego wiadomości.  
+## <a name="customer-scenarios"></a>Scenariusze klientów  
+ Filtrowania można użyć w dowolnym momencie, w którym chcesz wysłać komunikat do różnych modułów przetwarzania w zależności od danych zawartych w komunikacie. Dwa typowe scenariusze umożliwiają kierowanie komunikatów na podstawie kodu akcji i demultipleksowanie strumienia komunikatów na podstawie adresu punktu końcowego komunikatów.  
   
 ### <a name="routing"></a>Routing  
- Odbiornik punktu końcowego odbiera komunikaty, które mają co najmniej jeden kod akcji w wiadomości SOAP nagłówka. Implementowanie to przez utworzenie <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> , przekazując tablicę, która zawiera kody akcji dla jego konstruktora. Używa ona z filtrem, aby zarejestrować się w `ListenerFactory`, więc tylko komunikaty, w której działanie pasuje do jednej z nich w filtrze uzyskać dostęp do tego punktu końcowego.  
+ Odbiornik punktu końcowego nasłuchuje komunikatów, które mają co najmniej jeden kod akcji w nagłówku protokołu SOAP komunikatu. W tym celu należy utworzyć <xref:System.ServiceModel.Dispatcher.ActionMessageFilter>, przekazując tablicę zawierającą kody akcji do konstruktora. Używa tego filtru do zarejestrowania się w `ListenerFactory`, więc tylko komunikaty, których akcja pasuje do jednego z tych w filtrach, odnoszą się do danego punktu końcowego.  
   
-### <a name="de-multiplexing"></a>Usuń zaznaczenie pola Multipleksowanie  
- Jeśli wiele punktów końcowych rozdysponować z tej samej `ServiceListener` wyłączyć sieć, jedynym sposobem, aby cofnąć multipleksować wiadomości i ustalić, czy należą one do pewnych adres punktu końcowego, jest użycie <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>s, która wybierz wiadomości kierunku zarejestrowanych punkty końcowe według wykonywane jest wyszukiwanie informacji przechowywanych w nagłówkach. Te filtry te komunikaty, które przekazują mają wszystkie niezbędne nagłówki, które odnoszą się do obu:  
+### <a name="de-multiplexing"></a>Demultipleksowanie  
+ Gdy wiele punktów końcowych jest z tego samego `ServiceListener` poza przewodem, jedynym sposobem na demultiplekserowanie komunikatów i wiedzą, czy należą one do określonego adresu punktu końcowego, jest użycie <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>s, które wybierają komunikaty do zarejestrowanych punktów końcowych, wykonując wyszukiwanie informacji przechowywanych w nagłówkach. W tych filtrach tylko komunikaty, które zostały przekazane, mają wszystkie niezbędne nagłówki, które odpowiadają obu:  
   
 - Identyfikator URI w `EndpointAddress`.  
   
-- Pozostałe parametry punktu końcowego w `EndpointAddress` określonej <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
+- Pozostałe parametry punktu końcowego w `EndpointAddress`, jak określono w <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
   
 ## <a name="see-also"></a>Zobacz także
 

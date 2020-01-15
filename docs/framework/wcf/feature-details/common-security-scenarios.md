@@ -4,58 +4,58 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: af58d6b529fba32380bedb9a892a2b1fd4807d96
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 578ec2d7d5abe1285007ad22d8bacd69e695b1d3
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857574"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964284"
 ---
 # <a name="common-security-scenarios"></a>Typowe scenariusze zabezpieczeń
-Tematy w tej sekcji wykazu pewną liczbę możliwych klienta i konfiguracje zabezpieczeń usługi. Konfiguracje różnić w zależności od szeregu czynników. Na przykład czy usługi lub klienta jest w sieci intranet lub tego, czy zabezpieczenia są dostarczane przez Windows lub transportu (np. HTTPS).  
+Tematy w tej sekcji wykazują wiele możliwych konfiguracji zabezpieczeń klientów i usług. Konfiguracje różnią się w zależności od liczby czynników. Na przykład, czy usługa lub klient znajduje się w intranecie, czy też zabezpieczenia są dostarczane przez system Windows lub transport (na przykład HTTPS).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Niezabezpieczony klient internetowy i usługa](../../../../docs/framework/wcf/feature-details/internet-unsecured-client-and-service.md)  
- Przykład publicznych, niezabezpieczony klient i usługa.  
+ Przykład publicznego, niezabezpieczonego klienta i usługi.  
   
  [Niezabezpieczony klient i usługa w intranecie](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
- Opracowana podstawowej usługi Windows Communication Foundation (WCF) zawiera informacje na temat bezpiecznego sieci prywatnej dla aplikacji WCF.  
+ Podstawowa usługa Windows Communication Foundation (WCF) opracowana w celu zapewnienia informacji o bezpiecznej sieci prywatnej do aplikacji WCF.  
   
  [Zabezpieczenia transportu z uwierzytelnianiem podstawowym](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
- Aplikacja umożliwia klientom zalogować się przy użyciu uwierzytelniania niestandardowego.  
+ Aplikacja umożliwia klientom logowanie się przy użyciu uwierzytelniania niestandardowego.  
   
  [Zabezpieczenia transportu z uwierzytelnianiem systemu Windows](../../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)  
- Pokazuje, klient i usługa zabezpieczane na Windows.  
+ Pokazuje klienta i usługę zabezpieczone przez zabezpieczenia systemu Windows.  
   
  [Zabezpieczanie transportu za pomocą anonimowego klienta](../../../../docs/framework/wcf/feature-details/transport-security-with-an-anonymous-client.md)  
- W tym scenariuszu zabezpieczenia transportu (np. HTTPS) w celu zapewnienia poufności i integralności.  
+ W tym scenariuszu są stosowane zabezpieczenia transportu (takie jak HTTPS), aby zapewnić poufność i integralność.  
   
  [Zabezpieczanie transportu przy użyciu uwierzytelniania certyfikatów](../../../../docs/framework/wcf/feature-details/transport-security-with-certificate-authentication.md)  
- Pokazuje klientów i usług zabezpieczonych za pomocą certyfikatu.  
+ Pokazuje klienta i usługę zabezpieczone przez certyfikat.  
   
  [Zabezpieczenia komunikatów z anonimowym klientem](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- Przedstawia klientów i usług zabezpieczonych przez zabezpieczeń komunikatów WCF.  
+ Pokazuje klienta i usługę zabezpieczone przez zabezpieczenia komunikatów WCF.  
   
  [Zabezpieczenia na poziomie komunikatu z użyciem klienta nazwy użytkownika](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
- Klient jest aplikacji Windows Forms, która umożliwia klientom zalogować się przy użyciu nazwy użytkownika domeny i hasła.  
+ Klient jest aplikacją Windows Forms, która umożliwia klientom logowanie się przy użyciu nazwy użytkownika domeny i hasła.  
   
  [Zabezpieczenia komunikatów z klientem dysponującym certyfikatem](../../../../docs/framework/wcf/feature-details/message-security-with-a-certificate-client.md)  
- Serwery mają certyfikaty, a każdy klient ma certyfikat. Kontekst zabezpieczeń jest ustanawiany za pośrednictwem negocjowanie zabezpieczeń TLS (Transport Layer).  
+ Serwery mają certyfikaty, a każdy klient ma certyfikat. Kontekst zabezpieczeń jest ustanawiany za pomocą negocjacji Transport Layer Security (TLS).  
   
  [Zabezpieczanie komunikatów za pomocą klienta systemu Windows](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md)  
- Odmiana certyfikatu klienta. Serwery mają certyfikaty, a każdy klient ma certyfikat. Kontekst zabezpieczeń jest ustanawiane przy użyciu negocjacji protokołu TLS.  
+ Odmiana klienta certyfikatu. Serwery mają certyfikaty, a każdy klient ma certyfikat. Kontekst zabezpieczeń jest ustanawiany za pomocą negocjacji TLS.  
   
  [Zabezpieczanie komunikatów za pomocą klienta systemu Windows bez negocjowania poświadczeń](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client-without-credential-negotiation.md)  
- Przedstawia klientów i usług zabezpieczonych przez domenę protokołu Kerberos.  
+ Pokazuje klienta i usługę zabezpieczone przez domenę protokołu Kerberos.  
   
  [Zabezpieczenia komunikatów ze wzajemnymi certyfikatami](../../../../docs/framework/wcf/feature-details/message-security-with-mutual-certificates.md)  
- Serwery mają certyfikaty, a każdy klient ma certyfikat. Certyfikat serwera jest rozpowszechniana z aplikacją i znajduje się poza pasmem.  
+ Serwery mają certyfikaty, a każdy klient ma certyfikat. Certyfikat serwera jest dystrybuowany z aplikacją i jest dostępny poza pasmem.  
   
  [Zabezpieczenia komunikatów z wystawionymi tokenami](../../../../docs/framework/wcf/feature-details/message-security-with-issued-tokens.md)  
- Federacyjnego zabezpieczenia, która umożliwia ustanowienie relacji zaufania między domenami niezależnie od.  
+ Zabezpieczenia federacyjne, które umożliwiają ustanowienie zaufania między domenami niezależnymi.  
   
  [Zaufany podsystem](../../../../docs/framework/wcf/feature-details/trusted-subsystem.md)  
- Klient uzyskuje dostęp do usług sieci Web, które są rozpowszechniane w sieci. Usługi sieci Web dostęp do dodatkowych zasobów (np. baz danych lub inne usługi sieci Web), które muszą być chronione.  
+ Klient uzyskuje dostęp do co najmniej jednej usługi sieci Web, która jest dystrybuowana przez sieć. Usługi sieci Web uzyskują dostęp do dodatkowych zasobów (np. baz danych lub innych usług sieci Web), które muszą być zabezpieczone.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel>  
@@ -82,4 +82,4 @@ Tematy w tej sekcji wykazu pewną liczbę możliwych klienta i konfiguracje zabe
 ## <a name="see-also"></a>Zobacz także
 
 - [Wytyczne dotyczące zabezpieczeń i najlepsze rozwiązania](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
-- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

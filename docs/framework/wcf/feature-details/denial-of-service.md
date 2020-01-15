@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 4a9f3a3b7e69d33a8707a4bed5b9bc369c75f601
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 55120430a9aaafe7d8bbf2b26f07806e4f1aa44a
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346693"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964424"
 ---
 # <a name="denial-of-service"></a>Odmowa usługi
 Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że komunikaty nie mogą być przetwarzane lub są przetwarzane bardzo wolno.  
@@ -44,7 +44,7 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że kom
 ## <a name="auditing-event-log-can-be-filled"></a>Dziennik zdarzeń inspekcji może być wypełniony  
  Jeśli złośliwy użytkownik rozumie, że inspekcja jest włączona, osoba atakująca może wysłać nieprawidłowe komunikaty, które powodują zapisanie wpisów inspekcji. Jeśli dziennik inspekcji zostanie wypełniony w ten sposób, system inspekcji zakończy się niepowodzeniem.  
   
- Aby rozwiązać ten problem, ustaw właściwość <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> na `true` i Użyj właściwości Podgląd zdarzeń, aby kontrolować zachowanie inspekcji. Aby uzyskać więcej informacji na temat używania Podgląd zdarzeń do wyświetlania dzienników zdarzeń i zarządzania nimi, zobacz [Podgląd zdarzeń](https://go.microsoft.com/fwlink/?LinkId=186123). Aby uzyskać więcej informacji, zobacz [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Aby rozwiązać ten problem, ustaw właściwość <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> na `true` i Użyj właściwości Podgląd zdarzeń, aby kontrolować zachowanie inspekcji. Aby uzyskać więcej informacji na temat używania Podgląd zdarzeń do wyświetlania dzienników zdarzeń i zarządzania nimi, zobacz [Podgląd zdarzeń](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11)). Aby uzyskać więcej informacji, zobacz [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Nieprawidłowe implementacje interfejsu IAuthorizationPolicy mogą spowodować, że usługa przestanie odpowiadać  
  Wywołanie metody <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> w przypadku wadliwej implementacji interfejsu <xref:System.IdentityModel.Policy.IAuthorizationPolicy> może spowodować, że usługa przestanie odpowiadać.  
@@ -52,7 +52,7 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że kom
  Środki zaradcze: Używaj tylko zaufanego kodu. Oznacza to, że należy używać tylko kodu, który został zapisany i przetestowany lub który pochodzi od zaufanego dostawcy. Nie Zezwalaj na Podłączanie niezaufanych rozszerzeń <xref:System.IdentityModel.Policy.IAuthorizationPolicy>, które mają być podłączane do kodu bez poszanowania. Dotyczy to wszystkich rozszerzeń używanych w implementacji usługi. W programie WCF nie są wprowadzane żadne różnice między kodem aplikacji a kodem obcym, który jest podłączony przy użyciu punktów rozszerzalności.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Maksymalny rozmiar tokenu protokołu Kerberos może wymagać zmiany rozmiaru  
- Jeśli klient należy do dużej liczby grup (około 900, chociaż rzeczywista liczba różni się w zależności od grup), problem może wystąpić, gdy blok nagłówka komunikatu przekracza 64 kilobajty. W takim przypadku można zwiększyć maksymalny rozmiar tokenu Kerberos, zgodnie z opisem w artykule pomoc techniczna firmy Microsoft "[uwierzytelnianie Kerberos w programie Internet Explorer nie działa z powodu niewystarczającego buforu łączącego się z usługami IIS](https://go.microsoft.com/fwlink/?LinkId=89176)". Może być również konieczne zwiększenie maksymalnego rozmiaru komunikatów WCF w celu uwzględnienia większego tokenu Kerberos.  
+ Jeśli klient należy do dużej liczby grup (około 900, chociaż rzeczywista liczba różni się w zależności od grup), problem może wystąpić, gdy blok nagłówka komunikatu przekracza 64 kilobajty. W takim przypadku można zwiększyć maksymalny rozmiar tokenu Kerberos. Może być również konieczne zwiększenie maksymalnego rozmiaru komunikatów WCF w celu uwzględnienia większego tokenu Kerberos.  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>Autorejestrowanie powoduje, że wiele certyfikatów ma tę samą nazwę podmiotu dla komputera  
  Funkcja *autorejestrowania* jest funkcją systemu Windows Server 2003, aby automatycznie rejestrować użytkowników i komputery dla certyfikatów. Gdy komputer znajduje się w domenie z włączoną funkcją, certyfikat X. 509 z zamierzonym celem uwierzytelniania klienta zostanie automatycznie utworzony i wstawiony do magazynu certyfikatów osobistych komputera lokalnego za każdym razem, gdy nowy komputer jest przyłączony do NFS. Jednak funkcja autorejestrowania używa tej samej nazwy podmiotu dla wszystkich certyfikatów tworzonych w pamięci podręcznej.  
@@ -61,7 +61,7 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że kom
   
  Aby rozwiązać ten problem, należy odwołać się do dokładnego certyfikatu do użycia przy użyciu dokładniejszego kryterium wyszukiwania [\<> ServiceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Na przykład użyj opcji <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> i Określ certyfikat przy użyciu unikatowego odcisku palca (hash).  
   
- Aby uzyskać więcej informacji na temat funkcji autorejestrowania, zobacz [autorejestrowanie certyfikatów w systemie Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=95166).  
+ Aby uzyskać więcej informacji na temat funkcji autorejestrowania, zobacz [autorejestrowanie certyfikatów w systemie Windows Server 2003](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10)).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Ostatnia z wielu alternatywnych nazw podmiotów używanych do autoryzacji  
  W rzadkich przypadkach, gdy certyfikat X. 509 zawiera wiele alternatywnych nazw podmiotu i Użytkownik autoryzuje przy użyciu alternatywnej nazwy podmiotu, autoryzacja może zakończyć się niepowodzeniem.  

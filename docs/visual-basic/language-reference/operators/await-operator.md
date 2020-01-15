@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: e0c617ce32f80bdde1bcfda31da40ae610e07452
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b5943e509bb850abc6c74e1b97ccd5fb0038f1e0
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712350"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964334"
 ---
 # <a name="await-operator-visual-basic"></a>Await — Operator (Visual Basic)
 
@@ -58,7 +58,7 @@ Await AsyncMethodThatReturnsTask()
 
 Wyrażenie `Await` lub instrukcja nie blokuje wątku, w którym jest wykonywane. Zamiast tego powoduje, że kompilator rejestruje resztę metody asynchronicznej, po wyrażeniu `Await`, jako kontynuację dla oczekującego zadania. Następnie formant wraca do obiektu wywołującego metody asynchronicznej. Po zakończeniu zadania wywołuje jego kontynuację i wykonywanie metody asynchronicznej zostaje wznowione w miejscu, w którym została przerwana.
 
-Wyrażenie `Await` może wystąpić tylko w treści bezpośrednio otaczającej metody lub wyrażenia lambda, które jest oznaczone za pomocą modyfikatora `Async`. Termin *await* służy jako słowo kluczowe tylko w tym kontekście. W innym miejscu jest interpretowana jako identyfikator. W metodzie asynchronicznej lub wyrażeniu lambda wyrażenie `Await` nie może wystąpić w wyrażeniu zapytania w bloku `catch` lub `finally` [try... Catch... Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) , w wyrażeniu zmiennej sterującej pętli `For` lub `For Each` lub w treści instrukcji [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) .
+Wyrażenie `Await` może wystąpić tylko w treści bezpośrednio otaczającej metody lub wyrażenia lambda, które jest oznaczone za pomocą modyfikatora `Async`. Termin *await* służy jako słowo kluczowe tylko w tym kontekście. W innym miejscu jest interpretowana jako identyfikator. W metodzie `Async` lub wyrażeniu lambda wyrażenie `Await` nie może wystąpić w wyrażeniu zapytania w bloku `Catch` lub `Finally` [try... Catch... Finally](../statements/try-catch-finally-statement.md), w wyrażeniu zmiennej sterującej pętli `For` lub `For Each` lub w treści instrukcji [SyncLock](../statements/synclock-statement.md) .
 
 ## <a name="exceptions"></a>Wyjątki
 

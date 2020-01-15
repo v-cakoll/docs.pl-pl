@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 1344b29a8751722e36eae58ece5242a2bcdb8a69
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1836458972c453b733287e58e783f32892d27fde
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713744"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964387"
 ---
 # <a name="built-in-types-table-c-reference"></a>Tabela typów wbudowanych (C# odwołanie)
 
@@ -67,5 +67,5 @@ Console.WriteLine(doubleType.FullName);
 - [Słowa kluczowe języka C#](index.md)
 - [Typy wartości](value-types.md)
 - [Typy odwołań](reference-types.md)
-- [Tabela wartości domyślnych](default-values-table.md)
-- [dynamic](../builtin-types/reference-types.md)
+- [Wartości domyślne C# typów](../builtin-types/default-values.md)
+- [dynamic](../builtin-types/reference-types.md#the-dynamic-type)

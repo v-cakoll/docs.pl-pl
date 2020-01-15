@@ -4,12 +4,12 @@ description: Dowiedz C# się więcej o typach wartości null i sposobach ich uż
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 661b5e8502cba42588a07d757f056c715c1c82e8
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936900"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964314"
 ---
 # <a name="nullable-value-types-c-reference"></a>Typy wartości null (C# odwołanie)
 
@@ -56,7 +56,7 @@ Jeśli chcesz przypisać wartość typu wartości null do zmiennej typu wartośc
 
 [!code-csharp-interactive[?? operator](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
 
-Jeśli chcesz użyć [domyślnej](../keywords/default-values-table.md) wartości bazowego typu wartości zamiast `null`, użyj metody <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>.
+Jeśli chcesz użyć [domyślnej](default-values.md) wartości bazowego typu wartości zamiast `null`, użyj metody <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>.
 
 Można również jawnie rzutować typ wartości null na typ niedopuszczający wartości null, co ilustruje poniższy przykład:
 

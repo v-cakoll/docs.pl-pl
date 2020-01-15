@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4e4dbe085b11751416f69c9fa7f790f18a68f5d7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345342"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964372"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Operatory bitowe i przesunięciaC# (odwołanie)
 
@@ -60,7 +60,7 @@ Można również użyć symbolu `~`, aby zadeklarować finalizatory. Aby uzyska�
 
 ## <a name="left-shift-operator-"></a>Operator przesunięcia w lewo \<\<
 
-Operator `<<` przesuwa swój lewy argument operacji w lewo o liczbę bitów określoną przez jego operand po prawej stronie.
+Operator `<<` przesuwa swój lewy argument operacji w lewo o [liczbę bitów określoną przez jego operand po prawej stronie](#shift-count-of-the-shift-operators).
 
 Operacja przesunięcia w lewo odrzuca bity o wysokim stopniu, które znajdują się poza zakresem wyników, i ustawia puste pozycje bitu w porządku o wartości zero, jak pokazano w poniższym przykładzie:
 
@@ -74,7 +74,7 @@ Aby uzyskać informacje o tym, jak argument operacji po prawej stronie operatora
 
 ## <a name="right-shift-operator-"></a>Operator przesunięcia w prawo > >
 
-Operator `>>` przesuwa swój lewy argument operacji bezpośrednio przez liczbę bitów zdefiniowanych przez swój operand z prawej strony.
+Operator `>>` przesuwa swój lewy argument operacji bezpośrednio przez [liczbę bitów zdefiniowanych przez swój operand z prawej strony](#shift-count-of-the-shift-operators).
 
 Operacja przesunięcia w prawo powoduje odrzucenie bitów o niskiej kolejności, jak pokazano w poniższym przykładzie:
 
@@ -169,6 +169,9 @@ W przypadku wyrażeń `x << count` i `x >> count` rzeczywista liczba przesunię�
 Poniższy przykład ilustruje takie zachowanie:
 
 [!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
+
+> [!NOTE]
+> Jak pokazano w powyższym przykładzie, wynik operacji przesunięcia może być różny od zera nawet wtedy, gdy wartość operandu po prawej stronie jest większa niż liczba bitów w operandzie po lewej stronie.
 
 ## <a name="enumeration-logical-operators"></a>Wyliczanie operatorów logicznych
 

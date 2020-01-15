@@ -4,54 +4,54 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: af40660d1af0a88710c4b53009474847cece6deb
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: aa782c46d6530bb30055c536dd10d78f9ab9f79f
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486640"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963776"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosting w Usłudze aktywacji procesów systemu Windows
-Windows Process Activation Service (WAS) zarządza aktywacji i okresem istnienia procesów roboczych, które zawierają aplikacji zawierających usługi Windows Communication Foundation (WCF). Model procesów WAS stanowi uogólnienie modelu procesów usług IIS 6.0 serwera HTTP przez usunięcie zależności od protokołu HTTP. Dzięki temu usługi WCF do użycia protokołów HTTP i protokołów innych niż HTTP, np. Net.TCP, w środowisku macierzystym, który obsługuje aktywację w oparciu o wiadomości i oferuje możliwość hostowania wielu aplikacji na danym komputerze.  
+Usługa aktywacji procesów systemu Windows (WAS) zarządza aktywacją i okresem istnienia procesów roboczych, które zawierają aplikacje obsługujące usługi Windows Communication Foundation (WCF). Proces WAS przetwarza model procesów usług IIS 6,0 dla serwera HTTP, usuwając zależność od protokołu HTTP. Dzięki temu usługi WCF mogą korzystać zarówno z protokołu HTTP, jak i protokołów innych niż HTTP, takich jak net. TCP, w środowisku hostingu obsługującym aktywację opartą na komunikatach i oferują możliwość hostowania dużej liczby aplikacji na danym komputerze.  
   
- Aby uzyskać więcej informacji na temat tworzenia usługi WCF, który jest uruchamiany w środowisku hostingu WAS, zobacz [jak: Hostowanie usługi WCF w WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Aby uzyskać więcej informacji na temat tworzenia usługi WCF działającej w środowisku hostingu, zobacz [How to: hosting a usługi WCF w usłudze was](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
- Model procesów WAS udostępnia kilka funkcji, które umożliwiają aplikacjom hostowane w sposób, to bardziej niezawodne, łatwiejsze w obsłudze i efektywnie, używa zasobów:  
+ Model WAS ma wiele funkcji, które umożliwiają hostowanie aplikacji w sposób bardziej niezawodny, bardziej zarządzany i wykorzystujący zasoby efektywnie:  
   
-- Aktywacja oparta na komunikat, aplikacji i proces roboczy procesu aplikacji uruchamiają i zatrzymują dynamicznie, w odpowiedzi na przychodzące elementów roboczych, pojawiające się przy użyciu protokołu HTTP i protokołów sieciowych protokołu HTTP.  
+- Oparta na komunikatach aktywacja aplikacji i aplikacji procesów roboczych uruchamia i zatrzymuje się dynamicznie w odpowiedzi na przychodzące elementy robocze, które docierają przy użyciu protokołów sieciowych HTTP i innych niż HTTP.  
   
-- Niezawodna aplikacja i odtwarzanie procesów roboczych do utrzymania kondycji uruchomionych aplikacji.  
+- Niezawodne odtwarzanie aplikacji i procesów roboczych, aby zachować kondycję uruchomionych aplikacji.  
   
-- Konfiguracja aplikacji scentralizowane i zarządzanie.  
+- Scentralizowana konfiguracja aplikacji i zarządzanie nimi.  
   
-- Umożliwia aplikacjom móc korzystać z modelu procesów usług IIS bez konieczności wdrażania śladu pełnej instalacji usług IIS.  
-[Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) współpracuje z usług IIS 7.0 i usługa Windows Process Activation Service (WAS) w celu zapewnienia zaawansowanych aplikacji, środowisko dla usług NET4 WCF i WF hostingu. Te korzyści to m.in. Zarządzanie cyklem życia procesu, odtwarzanie procesów, dostawców usług hostingu, ochrona przed seriami błędów, oddzielanie procesu, aktywacji na żądanie i monitorowania kondycji. Aby uzyskać szczegółowe informacje, zobacz [funkcje hostingu programu AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494) i [pojęcia hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495).  
+- Zezwala aplikacjom na korzystanie z modelu procesów usług IIS bez konieczności wdrażania pełnej instalacji usług IIS.  
+[System Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)) współpracuje z usługami IIS 7,0 i usługą aktywacji procesów systemu Windows (was), aby zapewnić rozbudowane środowisko hostingu aplikacji dla usług NET4 WCF i WF. Te korzyści obejmują proces zarządzania cyklem życia procesów, odtwarzania procesów, hostingu udostępnionego, szybkiej ochrony przed awariami, oddzielania procesów, aktywacji na żądanie i monitorowania kondycji. Aby uzyskać szczegółowe informacje, zobacz temat [funkcje hostingu platformy AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10)) i [pojęcia hostingu platformy AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10)).  
   
-## <a name="elements-of-the-was-addressing-model"></a>Elementy WAS adresowania modelu  
- Aplikacje mają adresy identyfikator (URI), które są jednostkami kod, którego okres istnienia i wykonywania środowisko są zarządzane przez serwer. Pojedyncze wystąpienie serwera WAS może być macierzystego do wielu różnych aplikacji. Serwery Organizuj aplikacje w grupy o nazwie *witryn*. W ramach lokacji aplikacje są rozmieszczone w hierarchiczny sposób, który odzwierciedla strukturę identyfikatory URI, które służą jako ich zewnętrzne adresy.  
+## <a name="elements-of-the-was-addressing-model"></a>Elementy modelu adresu  
+ Aplikacje mają adresy Uniform Resource Identifier (URI), które są jednostkami kodu, których okres istnienia i środowisko wykonawcze są zarządzane przez serwer. Pojedyncze wystąpienie serwera może być w domu z wieloma różnymi aplikacjami. Serwery organizują aplikacje w grupy o nazwie *Lokacje*. W obrębie lokacji aplikacje są uporządkowane w sposób hierarchiczny, który odzwierciedla strukturę identyfikatorów URI, które pełnią rolę adresów zewnętrznych.  
   
- Adresy aplikacji mają dwie części: podstawowy prefiks identyfikatora URI oraz adres specyficzne dla aplikacji, względna (ścieżka), które zawierają zewnętrzny adres dla aplikacji i połączone. Podstawowy prefiks identyfikatora URI jest tworzony z powiązania witryny i jest używany dla wszystkich aplikacji w witrynie. Adresy aplikacji następnie są tworzone, wykonując fragmenty ścieżki specyficzne dla aplikacji (takich jak "/ applicationOne") i dołączanie ich do podstawowej prefiks identyfikatora URI (na przykład, "NET.TCP://localhost") na pełny identyfikator URI aplikacji.  
+ Adresy aplikacji mają dwie części: podstawowy prefiks identyfikatora URI i specyficzny dla aplikacji adres względny (Path), który udostępnia adres zewnętrzny dla aplikacji po połączeniu ze sobą. Podstawowy prefiks identyfikatora URI jest konstruowany z powiązania witryny i jest używany dla wszystkich aplikacji w lokacji. Następnie adresy aplikacji są tworzone przez pobranie fragmentów ścieżek specyficznych dla aplikacji (takich jak "/applicationOne") i dołączenie ich do podstawowego prefiksu URI (na przykład "net. TCP://localhost"), aby dotrzeć do pełnego identyfikatora URI aplikacji.  
   
- W poniższej tabeli przedstawiono kilka możliwych scenariuszy adresowania dla WAS lokacji przy użyciu protokołów HTTP i powiązania witryny protokołu HTTP.  
+ W poniższej tabeli przedstawiono kilka możliwych scenariuszy dotyczących adresów dla lokacji z powiązaniami witryn HTTP i innych niż HTTP.  
   
-|Scenariusz|Powiązania witryny|Ścieżka aplikacji|Podstawowa aplikacja identyfikatory URI|  
+|Scenariusz|Powiązania witryny|Ścieżka aplikacji|Podstawowe identyfikatory URI aplikacji|  
 |--------------|-------------------|----------------------|---------------------------|  
-|Tylko HTTP|http: *:80:\*|/appTwo|http://localhost/appTwo/|  
-|HTTP i innych niż HTTP|http: *:80:\*<br /><br /> net.tcp: 808:\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
-|Innych niż HTTP tylko|NET.pipe: *|/appThree|net.pipe://appThree/|  
+|Tylko HTTP|http: *: 80:\*|/appTwo|http://localhost/appTwo/|  
+|HTTP i inne niż HTTP|http: *: 80:\*<br /><br /> NET. TCP: 808:\*|/appTwo|http://localhost/appTwo/<br />NET. TCP://localhost/appTwo/|  
+|Tylko inne niż HTTP|NET. pipe: *|/appThree|net.pipe://appThree/|  
   
- Maszyny wirtualne i zasoby w ramach aplikacji również może zostać zlikwidowane. W ramach aplikacji zasobów aplikacji są adresowane względem ścieżki podstawowej aplikacji. Na przykład załóżmy, że witryna w contoso.com Nazwa maszyny zawiera powiązania witryny dla protokołów HTTP i Net.TCP. Również założono, że witryna zawiera jedną aplikację znajdujący się w /Billing, która udostępnia usługę GetOrders.svc. Następnie, jeśli usługa GetOrders.svc uwidaczniany punkt końcowy z adresem względnym SecureEndpoint, punkt końcowy usługi będą widoczne w następujących dwóch identyfikatorów URI:  
+ Można również rozwiązać usługi i zasoby w aplikacji. W aplikacji zasoby aplikacji są rozkierowane względem podstawowej ścieżki aplikacji. Załóżmy na przykład, że lokacja w nazwie komputera contoso.com ma powiązania lokacji dla protokołów HTTP i net. TCP. Załóżmy również, że lokacja zawiera jedną aplikację znajdującą się w/Billing, która uwidacznia usługę w usłudze GetOrders. svc. Następnie, jeśli usługa GetOrders. svc uwidocznia punkt końcowy z względnym adresem SecureEndpoint, punkt końcowy usługi zostałby ujawniony przy użyciu następujących dwóch identyfikatorów URI:  
   
 - `http://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
 - `net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
   
-## <a name="the-was-runtime"></a>WAS środowiska uruchomieniowego  
- Aplikacje są zorganizowane w witrynach na potrzeby adresowania i zarządzania. W czasie wykonywania aplikacje są również grupowane w pulach aplikacji. Pula aplikacji mogą znajdować się wiele różnych aplikacji pochodzących od wielu witryn. Wszystkie aplikacje w puli aplikacji korzystają ze wspólnego zestawu, właściwości środowiska wykonawczego. Na przykład wszystkie działają w ramach tej samej wersji środowiska uruchomieniowego języka wspólnego (CLR), a wszystkie mają wspólną tożsamość procesu. Każda pula aplikacji odnosi się do wystąpienia procesu roboczego (w3wp.exe). Każdej zarządzanej aplikacji, które działają w ramach puli aplikacji udostępnionej jest odizolowana od innych aplikacji za pomocą CLR AppDomain.  
+## <a name="the-was-runtime"></a>Środowisko uruchomieniowe zostało uruchomione  
+ Aplikacje są zorganizowane w lokacjach na potrzeby adresowania i zarządzania. W czasie wykonywania aplikacje są również pogrupowane w pule aplikacji. Pula aplikacji może mieć wiele różnych aplikacji z wielu różnych lokacji programu. Wszystkie aplikacje wewnątrz puli aplikacji korzystają ze wspólnego zestawu właściwości czasu wykonywania. Na przykład wszystkie są uruchamiane w tej samej wersji środowiska uruchomieniowego języka wspólnego (CLR) i wszystkie mają wspólną tożsamość procesu. Każda pula aplikacji odpowiada wystąpieniu procesu roboczego (w3wp. exe). Każda aplikacja zarządzana działająca w ramach udostępnionej puli aplikacji jest odizolowana od innych aplikacji za pomocą elementu AppDomain środowiska CLR.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Architektura aktywacji WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
 - [Konfigurowanie usługi WAS do użycia z programem WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Instrukcje: Instalowanie i konfigurowanie składników aktywacji programu WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [Instrukcje: Hostowanie usługi WCF w WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
-- [Windows Server AppFabric funkcje hostingu](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Instrukcje: instalowanie i konfigurowanie składników aktywacji programu WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [Instrukcje: hostowanie usługi WCF w usłudze WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Funkcje hostingu sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

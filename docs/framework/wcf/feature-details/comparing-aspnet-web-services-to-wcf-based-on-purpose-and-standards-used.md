@@ -2,19 +2,19 @@
 title: Porównanie usług sieci Web platformy ASP.NET i architektury WCF na podstawie przeznaczenia oraz stosowanych standardów
 ms.date: 03/30/2017
 ms.assetid: d3890278-fa9b-4902-91ea-8da73b7143cc
-ms.openlocfilehash: f57e895680b5cc043dad365b9f25f32477f42e72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1600a398ac250f015f2a1d9aa4ae2d808c593b95
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048065"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963564"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used"></a>Porównanie usług sieci Web platformy ASP.NET i architektury WCF na podstawie przeznaczenia oraz stosowanych standardów
-Usługi sieci Web programu ASP.NET został opracowany do tworzenia aplikacji, których wysyłanie i odbieranie komunikatów za pomocą proste obiektu dostępu protokołu (SOAP) przy użyciu protokołu HTTP. Struktura komunikatów można zdefiniować przy użyciu schematu XML, a narzędzie jest dostarczany w celu ułatwienia serializacji wiadomości do i z obiektów .NET Framework. Ta technologia może automatycznie generować metadane do opisu usługi sieci Web w sieci Web Services Description Language (WSDL), a drugie narzędzie towarzyszy Generowanie klientów dla usług sieci Web na podstawie pliku WSDL.  
+Usługi sieci Web ASP.NET zostały opracowane do tworzenia aplikacji wysyłających i odbierających komunikaty przy użyciu Simple Object Access Protocol (SOAP) za pośrednictwem protokołu HTTP. Strukturę komunikatów można zdefiniować za pomocą schematu XML, a narzędzie jest udostępniane, aby ułatwić Serializowanie komunikatów do i z obiektów .NET Framework. Technologia może automatycznie generować metadane opisujące usługi sieci Web w Web Services Description Language (WSDL), a drugie narzędzie do generowania klientów dla usług sieci Web z poziomu języka WSDL.  
   
- Usługi WCF jest dotyczące włączania aplikacji .NET Framework do wymiany wiadomości z innymi jednostkami oprogramowania. Domyślnie używany jest protokół SOAP, ale komunikaty mogą znajdować się w dowolnym formacie i przekazywany przy użyciu dowolnego protokołu transportu. Struktura komunikatów można zdefiniować przy użyciu schematu XML, a istnieją różne opcje dla serializacji wiadomości do i z obiektów .NET Framework. WCF może automatycznie generować metadane do opisania aplikacje utworzone przy użyciu technologii w języku WSDL. Ponadto zapewnia także narzędzie generowania klientów dla tych aplikacji na podstawie pliku WSDL.  
+ Usługa WCF służy do włączania .NET Framework aplikacji do wymiany komunikatów z innymi jednostkami oprogramowania. Protokół SOAP jest używany domyślnie, ale komunikaty mogą być w dowolnym formacie i przekazywane przy użyciu dowolnego protokołu transportowego. Strukturę komunikatów można zdefiniować przy użyciu schematu XML, a istnieją różne opcje serializowania komunikatów do i z obiektów .NET Framework. Funkcja WCF może automatycznie generować metadane, aby opisywać Aplikacje skompilowane przy użyciu technologii w języku WSDL, a także udostępnia narzędzie do generowania klientów dla tych aplikacji z poziomu języka WSDL.  
   
- Standardy obsługiwane przez usługi sieci Web platformy ASP.NET są udokumentowane w artykule [XML sieci Web usług utworzone za pomocą programu ASP.NET](https://go.microsoft.com/fwlink/?LinkId=94872). Bardziej rozległe lista normach obsługiwanych przez architekturę WCF znajduje się w [Web Services protokoły obsługiwane przez wiązania współdziałania System-Provided](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
+ Standardy obsługiwane przez usługi sieci Web ASP.NET są udokumentowane w [zalety usług sieci Web XML utworzonych przy użyciu ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0859ebft(v=vs.100)). Bardziej obszerna lista standardów obsługiwanych przez usługę WCF znajduje się w [protokołach usług sieci Web obsługiwanych przez powiązania współdziałania dostarczone przez system](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

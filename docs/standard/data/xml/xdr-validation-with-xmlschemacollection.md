@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ce0777ba71e5433b42b51ef1530e7a1a46905b25
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: c1383dbb5419eadbfb7c07f288ee46b1ca11cf5c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957015"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710001"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>Weryfikacja XDR przy użyciu klasy XmlSchemaCollection
 
@@ -22,7 +20,7 @@ Jeśli sprawdzany schemat danych XML (XDR) jest przechowywany w elemencie **XmlS
 > [!IMPORTANT]
 > Klasa <xref:System.Xml.Schema.XmlSchemaCollection> jest obecnie przestarzała i została zastąpiona klasą <xref:System.Xml.Schema.XmlSchemaSet>. Aby uzyskać więcej informacji na temat klasy <xref:System.Xml.Schema.XmlSchemaSet>, zobacz zestaw [XmlSchemaSet dla kompilacji schematu](xmlschemaset-for-schema-compilation.md).
 
-Na przykład, jeśli element główny dokumentu XML jest `<bookstore xmlns="urn:newbooks-schema">`, gdy schemat zostanie dodany do obiektu **XmlSchemaCollection** , odwołuje się do tej samej przestrzeni nazw, co następuje:
+Na przykład, jeśli element główny dokumentu XML jest `<bookstore>`, gdy schemat zostanie dodany do obiektu **XmlSchemaCollection** , odwołuje się do tej samej przestrzeni nazw, co następuje:
 
 ```vb
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")

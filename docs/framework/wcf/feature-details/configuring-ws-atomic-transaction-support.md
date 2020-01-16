@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 804e22c79c328a2ae96d8f1cb817d0aea2b0c25d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 068ddcab5cfb7bfb5f37a1858820195a5a05269f
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544729"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964577"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>Konfigurowanie obsługi transakcji WS-AT
 
@@ -59,7 +59,7 @@ W poniższym przykładzie przedstawiono kroki, aby ustanowić relację zaufania 
 
 Ta procedura wymaga przystawki Certyfikaty programu MMC. Dostęp do przystawki można uzyskać, otwierając menu Start/Run, wpisując "MMC" w polu wejściowym i naciskając przycisk OK. Następnie w oknie **Console1** przejdź do **pliku/Dodaj/Usuń** przystawkę, kliknij przycisk Dodaj, a następnie wybierz pozycję **Certyfikaty** z listy **dostępne autonomiczne przystawki** . Na koniec wybierz pozycję **konto komputera** , aby zarządzać, a następnie kliknij przycisk **OK**. W konsoli przystawki zostanie wyświetlony węzeł **Certyfikaty** .
 
-Musisz mieć już wymagane certyfikaty, aby ustanowić relację zaufania. Aby dowiedzieć się, jak tworzyć i instalować nowe certyfikaty przed wykonaniem poniższych kroków, zobacz [How to: Create i Install Temporary Client Certificates in WCF podczas tworzenia](https://go.microsoft.com/fwlink/?LinkId=158925).
+Musisz mieć już wymagane certyfikaty, aby ustanowić relację zaufania. Aby dowiedzieć się, jak tworzyć i instalować nowe certyfikaty przed wykonaniem poniższych kroków, zobacz [How to: Create i Install Temporary Client Certificates in WCF podczas tworzenia](https://docs.microsoft.com/previous-versions/msp-n-p/ff650751(v=pandp.10)).
 
 1. Na maszynie A, za pomocą przystawki Certyfikaty programu MMC, zaimportuj istniejący certyfikat (certyfikat) do LocalMachine\MY (węzeł prywatny) i magazyn LocalMachine\ROOT (węzeł zaufanego głównego urzędu certyfikacji). Aby zaimportować certyfikat do określonego węzła, kliknij prawym przyciskiem myszy węzeł i wybierz polecenie **wszystkie zadania/Importuj**.
 

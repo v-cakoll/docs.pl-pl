@@ -4,16 +4,16 @@ description: Użyj operatora domyślnego, aby utworzyć wartość domyślną typ
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 744bdf1ec683ef32bba508c260590c0ed4c6e987
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 651c4698514aee8cf4dab75ea32c98493e19a30b
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712718"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964622"
 ---
 # <a name="default-operator-c-reference"></a>Default — operatorC# (odwołanie)
 
-Operator `default` generuje [wartość domyślną](../keywords/default-values-table.md) typu. Argument operatora `default` musi być nazwą typu lub parametrem typu.
+Operator `default` generuje [wartość domyślną](../builtin-types/default-values.md) typu. Argument operatora `default` musi być nazwą typu lub parametrem typu.
 
 Poniższy przykład pokazuje użycie operatora `default`:
 
@@ -44,5 +44,5 @@ Aby uzyskać więcej informacji na temat literału `default`, zobacz [Uwaga doty
 
 - [C#odwoła](../index.md)
 - [Operatory języka C#](index.md)
-- [Tabela wartości domyślnych](../keywords/default-values-table.md)
+- [Wartości domyślne C# typów](../builtin-types/default-values.md)
 - [Typy ogólne w .NET](../../../standard/generics/index.md)

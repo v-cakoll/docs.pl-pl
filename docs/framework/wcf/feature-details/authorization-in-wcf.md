@@ -5,34 +5,34 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: 8c605b310f19a05f994296d8f4268b91b408fb18
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 0097adc3d9677d9ce5595a3ac632b51d94d53f6f
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881197"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964685"
 ---
 # <a name="authorization-in-wcf"></a>Autoryzacja w programie WCF
-Autoryzacja to proces nadzoru nad dostępu i uprawnień do zasobów, takich jak usługi lub plików. Tematy w tej sekcji pokazano, jak wykonać to zadanie podstawowe w Windows Communication Foundation (WCF) na różne sposoby.  
+Autoryzacja to proces kontroli dostępu i praw do zasobów, takich jak usługi lub pliki. W tematach w tej sekcji pokazano, jak wykonać to podstawowe zadanie w programie Windows Communication Foundation (WCF) na wiele sposobów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Mechanizmy kontroli dostępu](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
- Zawiera krótki zarys mechanizmów autoryzacji usługi WCF i sugerowane używa.  
+ Zawiera krótki zarys mechanizmów autoryzacji w programie WCF oraz Sugerowane zastosowania.  
   
- [Instrukcje: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- Przedstawia proces ograniczanie dostępu do usługi za pomocą <xref:System.Security.Permissions.PrincipalPermissionAttribute>.  
+ [Instrukcje: ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
+ Pokazuje proces ograniczania dostępu do usługi przy użyciu <xref:System.Security.Permissions.PrincipalPermissionAttribute>.  
   
- [Instrukcje: Używanie dostawcy ról ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- Przeprowadzi konfigurację usługi, aby włączyć go do użycia funkcję dostawcy ról ASP.NET.  
+ [Instrukcje: używanie dostawcy ról ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
+ Przeprowadzi procedurę konfigurowania usługi, aby umożliwić jej korzystanie z funkcji dostawcy roli programu ASP.NET.  
   
- [Instrukcje: Używanie dostawcy roli Menedżera autoryzacji platformy ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
- ASP.NET umożliwia zarządzanie autoryzacji dla witryny sieci Web Menedżera autoryzacji. Kombinacja ASP.NET/Authorization Menedżera autoryzacji klientów podobnie mogą korzystać z usługi WCF.  
+ [Instrukcje: używanie dostawcy roli menedżera autoryzacji platformy ASP.NET za pomocą usługi](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
+ ASP.NET może używać Menedżera autoryzacji do zarządzania autoryzacją witryny sieci Web. Usługa WCF może w podobny sposób korzystać z kombinacji ASP.NET/Authorization Manager na potrzeby autoryzacji klientów.  
   
  [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- Objaśnia podstawy przy użyciu infrastruktury modelu tożsamości do autoryzacji opartej na oświadczeniach.  
+ Wyjaśnia podstawowe informacje dotyczące korzystania z infrastruktury modelu tożsamości na potrzeby autoryzacji opartej na oświadczeniach.  
   
  [Delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- Wyjaśnia różnicę pomiędzy delegowanie i personifikacja.  
+ Wyjaśnia różnicę między delegowaniem a personifikacją.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel.Security>  
@@ -49,4 +49,4 @@ Autoryzacja to proces nadzoru nad dostępu i uprawnień do zasobów, takich jak 
 ## <a name="see-also"></a>Zobacz także
 
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

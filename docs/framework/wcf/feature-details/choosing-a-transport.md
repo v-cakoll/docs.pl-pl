@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 69f2724182f83d507f749a150a8d006a4e0f2192
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: bf1bda5f1a2e1f0dfa0cc034c293f448cca2bd32
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838068"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964474"
 ---
 # <a name="choosing-a-transport"></a>Wybieranie transportu
 W tym temacie omówiono kryteria wyboru trzech głównych transportów, które znajdują się w Windows Communication Foundation (WCF): HTTP, TCP i nazwanych potoków. Funkcja WCF obejmuje również transport usługi kolejkowania komunikatów (MSMQ), ale ten dokument nie obejmuje usługi kolejkowania komunikatów.  
@@ -26,7 +26,7 @@ W tym temacie omówiono kryteria wyboru trzech głównych transportów, które z
  W tej sekcji opisano główne przyczyny wyboru jednego z trzech głównych transportów, łącznie z szczegółowym wykresem decyzyjnym do wyboru między nimi.  
   
 ### <a name="when-to-use-http-transport"></a>Kiedy używać transportu HTTP  
- HTTP to protokół żądania/odpowiedzi między klientami a serwerami. Najbardziej Typowa aplikacja składa się z klientów przeglądarek sieci Web komunikujących się z serwerem sieci Web. Klient wysyła żądanie do serwera, który nasłuchuje komunikatów żądań klientów. Gdy serwer odbiera żądanie, zwraca odpowiedź, która zawiera stan żądania. Jeśli zakończono pomyślnie, opcjonalne dane, takie jak strona sieci Web, komunikat o błędzie lub inne informacje są zwracane. Aby uzyskać więcej informacji na temat protokołu HTTP, zobacz [http-Hypertext Transfer Protocol](https://go.microsoft.com/fwlink/?LinkId=94858).  
+ HTTP to protokół żądania/odpowiedzi między klientami a serwerami. Najbardziej Typowa aplikacja składa się z klientów przeglądarek sieci Web komunikujących się z serwerem sieci Web. Klient wysyła żądanie do serwera, który nasłuchuje komunikatów żądań klientów. Gdy serwer odbiera żądanie, zwraca odpowiedź, która zawiera stan żądania. Jeśli zakończono pomyślnie, opcjonalne dane, takie jak strona sieci Web, komunikat o błędzie lub inne informacje są zwracane. Aby uzyskać więcej informacji na temat protokołu HTTP, zobacz [http-Hypertext Transfer Protocol](https://www.w3.org/Protocols/).  
   
  Protokół HTTP nie jest oparty na połączeniu — po wysłaniu odpowiedzi żaden stan nie jest obsługiwany. Aby obsłużyć transakcje wielostronicowe, aplikacja musi utrzymywać wszelkie niezbędne Stany.  
   

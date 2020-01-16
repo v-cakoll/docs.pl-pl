@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: f435c149f7ec2768ee6c954c1f0ae12a95cc326f
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 465dbb9120e6e81e5ef216c34dc6a92283956033
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937539"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964675"
 ---
 # <a name="constructors-c-programming-guide"></a>Konstruktorzy (Przewodnik programowania w języku C#)
 
@@ -19,7 +19,7 @@ Za każdym razem, gdy tworzona jest [Klasa](../../language-reference/keywords/cl
 
 ## <a name="parameterless-constructors"></a>Konstruktory bez parametrów
   
-Jeśli nie podano konstruktora dla klasy, program C# tworzy jedną, domyślnie, tworząc wystąpienie obiektu i ustawia zmienne Członkowskie na wartości domyślne, jak wymieniono w [tabeli wartości domyślnych](../../language-reference/keywords/default-values-table.md). Jeśli nie podano konstruktora dla struktury, zależy on C# od *niejawnego konstruktora bez parametrów* , aby automatycznie inicjować każde pole typu wartości jako wartość domyślną, jak wymieniono w [tabeli wartości domyślnych](../../language-reference/keywords/default-values-table.md). Aby uzyskać więcej informacji i przykładów, zobacz [konstruktory wystąpień](./instance-constructors.md).  
+Jeśli nie podano konstruktora dla klasy, program C# tworzy jedną z nich domyślnie, tworząc wystąpienie obiektu i ustawia zmienne Członkowskie na wartości domyślne, jak wymieniono w [wartości domyślne C# typów](../../language-reference/builtin-types/default-values.md) artykułu. Jeśli nie podano konstruktora dla struktury, zależy on C# od *niejawnego konstruktora bez parametrów* , aby automatycznie inicjować każde pole do wartości domyślnej. Aby uzyskać więcej informacji i przykładów, zobacz [konstruktory wystąpień](instance-constructors.md).  
 
 ## <a name="constructor-syntax"></a>Składnia konstruktora
 
@@ -33,13 +33,13 @@ Jeśli Konstruktor można zaimplementować jako pojedynczą instrukcję, można 
 
 ## <a name="static-constructors"></a>Konstruktory statyczne
 
-W poprzednich przykładach są wyświetlane konstruktory wystąpień, które tworzą nowy obiekt. Klasa lub struktura może również mieć Konstruktor statyczny, który inicjuje statyczne elementy członkowskie typu.  Konstruktory statyczne są bezparametryczne. Jeśli nie podano statycznego konstruktora do zainicjowania pól statycznych, C# kompilator inicjuje statyczne pola do ich wartości domyślnej, jak wymieniono w [tabeli wartości domyślnych](../../language-reference/keywords/default-values-table.md).
+W poprzednich przykładach są wyświetlane konstruktory wystąpień, które tworzą nowy obiekt. Klasa lub struktura może również mieć Konstruktor statyczny, który inicjuje statyczne elementy członkowskie typu.  Konstruktory statyczne są bezparametryczne. Jeśli nie postanowisz statycznego konstruktora do zainicjowania pól statycznych C# , kompilator inicjuje statyczne pola do ich wartości domyślnej, jak wymieniono w [wartości C# domyślne typów](../../language-reference/builtin-types/default-values.md) artykułu.
 
 Poniższy przykład używa konstruktora statycznego, aby zainicjować pole statyczne.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
 
-Można również zdefiniować statyczny Konstruktor z definicją treści wyrażenia, jak pokazano w poniższym przykładzie. 
+Można również zdefiniować statyczny Konstruktor z definicją treści wyrażenia, jak pokazano w poniższym przykładzie.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
 

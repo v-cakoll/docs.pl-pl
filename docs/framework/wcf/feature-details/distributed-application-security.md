@@ -1,102 +1,102 @@
 ---
-title: Rozproszone zabezpieczenia aplikacji
+title: Zabezpieczenia aplikacji rozproszonej
 ms.date: 03/30/2017
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: c4feb52cbefe7e3f8bab7f90568b231302b77372
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: cb271bcf8fb27bae4c8ef6b60df0f8d2940ecb9a
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486862"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964828"
 ---
-# <a name="distributed-application-security"></a>Rozproszone zabezpieczenia aplikacji
-Zabezpieczenia usług Windows Communication Foundation (WCF) jest dzielony na trzy główne obszary funkcjonalne: transfer zabezpieczeń, kontroli dostępu i inspekcji. Bezpieczeństwie transferu zapewnia integralność, poufności i uwierzytelniania. Zabezpieczenia transferu za pomocą jednej z następujących czynności: zabezpieczenia, zabezpieczenia komunikatów transportu lub `TransportWithMessageCredential`.  
+# <a name="distributed-application-security"></a>Zabezpieczenia aplikacji rozproszonej
+Zabezpieczenia Windows Communication Foundation (WCF) są podzielone na trzy główne obszary funkcjonalne: zabezpieczenia transferu, kontrola dostępu i inspekcja. Zabezpieczenia transferu zapewniają integralność, poufność i uwierzytelnianie. Zabezpieczenia transferu są udostępniane przez jedną z następujących czynności: zabezpieczenia transportu, zabezpieczenia komunikatów lub `TransportWithMessageCredential`.  
   
- Aby uzyskać omówienie zabezpieczeń komunikatów WCF, zobacz [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). Aby uzyskać więcej informacji na temat dwie części zabezpieczeń WCF zobacz [autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) i [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Aby zapoznać się z omówieniem zabezpieczeń komunikatów WCF, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). Aby uzyskać więcej informacji na temat pozostałych dwóch elementów zabezpieczeń WCF, zobacz [autoryzacja](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) i [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
-## <a name="transfer-security-scenarios"></a>Scenariusze zabezpieczeń transferu  
- Typowe scenariusze, korzystających z usługi WCF bezpieczeństwie transferu obejmują:  
+## <a name="transfer-security-scenarios"></a>Przenieś scenariusze zabezpieczeń  
+ Typowe scenariusze wykorzystujące zabezpieczenia transferu WCF obejmują następujące elementy:  
   
-- Bezpiecznego transferu za pomocą Windows. Klient WCF i usługi są wdrażane w Windows (lub w domenie w lesie Windows). Komunikaty zawierają dane osobowe, więc wymagane jest miedzy innymi wzajemnego uwierzytelniania klienta i usługi, integralność komunikatów i poufność komunikatów. Ponadto wymagany jest dowód, określonej transakcji wystąpił, na przykład odbiorcy wiadomości powinien rejestrować informacje o podpisie.  
+- Bezpieczny transfer przy użyciu systemu Windows. Klient i usługa WCF są wdrażane w domenie systemu Windows (lub w lesie systemu Windows). Komunikaty zawierają dane osobowe, dlatego wymagania obejmują wzajemne uwierzytelnianie klienta i usługi, integralność komunikatów i poufność komunikatów. Ponadto należy sprawdzić, czy dana transakcja wystąpiła, na przykład, odbiorca wiadomości powinien zarejestrować informacje o podpisie.  
   
-- Bezpiecznego transferu za pomocą `UserName` i HTTPS. Klient WCF i usługi muszą zostać opracowany, aby działały w Internecie. Poświadczenia klienta uwierzytelniania względem bazy danych par nazwa/hasło użytkownika. Usługa jest wdrażana na adres HTTPS, przy użyciu zaufanego certyfikatu Secure Sockets Layer (SSL). Ponieważ komunikaty przesyłane za pośrednictwem Internetu, klienta i usługi potrzebne uwierzytelniali się wzajemnie i poufności i integralności wiadomości muszą zostać zachowane podczas transferu.  
+- Bezpieczny transfer przy użyciu `UserName` i protokołu HTTPS. Aby pracować przez Internet, należy opracować klienta i usługę programu WCF. Poświadczenia klienta są uwierzytelniane względem bazy danych par nazwa/hasło użytkownika. Usługa jest wdrażana pod adresem HTTPS przy użyciu zaufanego certyfikatu SSL (SSL). Ze względu na to, że komunikaty są przesyłane przez Internet, klient i usługa muszą być uwierzytelniane wzajemnie, a podczas przesyłania należy zachować poufność i integralność komunikatów.  
   
-- Bezpiecznego transferu za pomocą certyfikatów. Klienta WCF i usługi muszą być tworzone do pracy za pośrednictwem publicznej sieci internet. Klienta i usługi mają certyfikaty, które mogą służyć do zabezpieczenia wiadomości. Klient i usługa używać Internetu komunikują się ze sobą i wykonywanie transakcji o wysokiej wartości, które wymagają integralność wiadomości, poufności i wzajemnego uwierzytelniania.  
+- Bezpieczny transfer przy użyciu certyfikatów. Aby pracować nad publicznym Internetem, należy opracować klienta i usługę programu WCF. Klient i usługa mają certyfikaty, których można użyć do zabezpieczenia komunikatów. Klient i usługa używają Internetu do komunikowania się ze sobą i wykonywania transakcji wysokiej wartości, które wymagają integralności komunikatów, poufności i wzajemnego uwierzytelniania.  
   
-## <a name="integrity-confidentiality-and-authentication"></a>Integralność, poufności i uwierzytelniania  
- Trzy funkcje — integralności, poufność i uwierzytelnianie — są ze sobą nazywane bezpieczeństwie transferu. Bezpieczeństwie transferu zawiera funkcje, które pomogą zminimalizować zagrożenia aplikacji rozproszonej. W poniższej tabeli krótko opisano trzy funkcje, które składają się na bezpieczeństwie transferu.  
+## <a name="integrity-confidentiality-and-authentication"></a>Integralność, poufność i uwierzytelnianie  
+ Trzy funkcje — integralność, poufność i uwierzytelnianie — są razem nazywane zabezpieczeniami transferu. Zabezpieczenia transferu udostępniają funkcje, które pomagają w ograniczeniu zagrożeń do aplikacji rozproszonej. W poniższej tabeli krótko opisano trzy funkcje, które składają się na zabezpieczenia transferu.  
   
 |Funkcja|Opis|  
 |--------------|-----------------|  
-|Integralność|*Integralność* gwarancji, że dane są kompletne i dokładne, szczególnie po-przenoszone z jednego miejsca do drugiego i prawdopodobnie została przeczytana przy wielu uczestników. Integralność musi zostać zachowany w celu uniknięcia niepowołanych manipulacji danymi i zwykle odbywa się cyfrowego podpisywania wiadomości.|  
-|Poufność|*Poufność* gwarancji, że komunikat nie został odczytany przez nikogo innego niż zamierzony czytnika. Na przykład numer karty kredytowej muszą być przechowywane zawierających poufne dane podczas ich przesyłania przez Internet. Poufność często jest zapewniana przez szyfrowanie danych przy użyciu publicznego klucza i prywatnego klucza systemu.|  
-|Uwierzytelnianie|*Uwierzytelnianie* jest weryfikacja tożsamości. Na przykład korzystając z konta bankowego, należy bezwzględnie możliwość rzeczywiste właściciela konta do wycofania środków. Za pomocą różnych oznacza, że można podać uwierzytelniania. Jednej wspólnej metody to system użytkownika i hasło. Drugi polega na użyciu certyfikatu X.509, dostarczone przez stronę trzecią.|  
+|Integralność|*Integralność* stanowi gwarancję, że dane są kompletne i dokładne, zwłaszcza wtedy, gdy przechodzą z jednego punktu do drugiego i prawdopodobnie zostały odczytane przez wiele aktorów. Należy zachować integralność, aby uniemożliwić manipulowanie danymi i jest zazwyczaj osiągane przez cyfrowe podpisywanie wiadomości.|  
+|Poufność|*Poufność* stanowi gwarancję, że wiadomość nie została odczytana przez żadną osobę inną niż zamierzony czytnik. Na przykład numer karty kredytowej musi być poufny, ponieważ jest wysyłany przez Internet. Poufność jest często zapewniana przez szyfrowanie danych przy użyciu klucza publicznego/schematu klucza prywatnego.|  
+|Uwierzytelnianie|*Uwierzytelnianie* jest weryfikacją tożsamości, której dotyczy żądanie. Na przykład w przypadku korzystania z konta bankowego konieczne jest, aby tylko rzeczywisty właściciel konta mógł wycofać fundusze. Uwierzytelnianie może być zapewniane przez różne sposoby. Jedną z typowych metod jest system użytkownika/hasła. Drugi to użycie certyfikatu X. 509, który jest dostarczany przez inną firmę.|  
   
 ## <a name="security-modes"></a>Tryby zabezpieczeń  
- Usługi WCF ma kilka trybów bezpieczeństwie transferu, które są opisane w poniższej tabeli.  
+ Funkcja WCF ma kilka trybów zabezpieczeń transferu, które opisano w poniższej tabeli.  
   
 |Tryb|Opis|  
 |----------|-----------------|  
-|Brak|Bez zabezpieczeń znajduje się w warstwie transportowej lub warstwie wiadomości. Brak wstępnie zdefiniowanych powiązań Użyj tego trybu domyślnie z wyjątkiem [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) element lub, w przypadku korzystania z kodu, <xref:System.ServiceModel.BasicHttpBinding> klasy.|  
-|Transport|Używa bezpiecznym transportem, taki jak HTTPS integralności, poufności i wzajemnego uwierzytelniania.|  
-|Message|Używa zabezpieczeń komunikatu protokołu SOAP integralności, poufność i wzajemnego uwierzytelniania. Komunikaty protokołu SOAP są zabezpieczone zgodnie ze standardami WS-Security.|  
-|W trybie mieszanym|Zastosowań transportu zabezpieczeń uwierzytelniania integralności, poufności i serwera. Używa komunikatu zabezpieczenia (WS-Security i innych standardów) do uwierzytelniania klientów.<br /><br /> (Jest to wyliczenie, w tym trybie `TransportWithMessageCredential`.)|  
-|Oba|Wykonuje ochrony i uwierzytelnianie na obu poziomach. Ten tryb jest dostępna tylko w [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) elementu.|  
+|Brak|W warstwie transportowej lub w warstwie wiadomości nie są dostępne żadne zabezpieczenia. Żadne ze wstępnie zdefiniowanych powiązań domyślnie nie korzysta z tego trybu, z wyjątkiem [\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elementu lub, w przypadku użycia kodu, klasy <xref:System.ServiceModel.BasicHttpBinding>.|  
+|Transport|Używa bezpiecznego transportu, takiego jak HTTPS w celu zapewnienia integralności, poufności i uwierzytelniania wzajemnego.|  
+|Komunikat|Używa zabezpieczeń protokołu SOAP w celu zapewnienia integralności, poufności i uwierzytelniania wzajemnego. Komunikaty protokołu SOAP są zabezpieczone zgodnie ze standardami WS-Security.|  
+|Tryb mieszany|Stosuje zabezpieczenia transportu w celu zapewnienia integralności, poufności i uwierzytelniania serwera. Używa zabezpieczeń komunikatów (WS-Security i innych standardów) do uwierzytelniania klientów.<br /><br /> (To Wyliczenie dla tego trybu jest `TransportWithMessageCredential`.)|  
+|Oba|Wykonuje ochronę i uwierzytelnianie na obu poziomach. Ten tryb jest dostępny tylko w [> elementu\<ow msmqbinding](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) .|  
   
-## <a name="credentials-and-transfer-security"></a>Poświadczenia i bezpieczeństwie transferu  
- A *poświadczeń* to dane, które są prezentowane w celu ustalenia tożsamości lub funkcji. Umożliwienie korzystania z poświadczeń obejmuje prezentowanie danych i dowodu posiadania danych. Usługi WCF obsługuje różne typy poświadczeń na poziomach zabezpieczeń transportu i komunikatu. Można określić typ poświadczeń dla wiązania WCF.  
+## <a name="credentials-and-transfer-security"></a>Poświadczenia i zabezpieczenia transferu  
+ *Poświadczenie* to dane, które są prezentowane w celu ustalenia tożsamości lub możliwości. Przedstawienie poświadczeń obejmuje przedstawienie danych i potwierdzenie posiadania danych. Usługa WCF obsługuje różne typy poświadczeń zarówno na poziomie zabezpieczeń transportu, jak i komunikatów. Możesz określić typ poświadczenia dla powiązania WCF.  
   
- W wielu krajach lub regionach prawa jazdy jest przykładem poświadczenia. Licencja zawiera reprezentujący tożsamości i możliwości swoich danych. Zawiera ono dowód przesyłany w postaci obrazu inicjator. Licencja jest wystawiony przez zaufany urząd, zwykle rządowych działu licencjonowania. Licencja jest zapieczętowany i może zawierać hologram, pokazujący, że nie został zmodyfikowany lub podrobić.  
+ W wielu krajach lub regionach licencja sterownika jest przykładem poświadczenia. Licencja zawiera dane reprezentujące tożsamość i możliwości. Zawiera dowód posiadania w postaci obrazu posiadacza. Licencja jest wystawiana przez zaufany urząd, zazwyczaj dział licencjonowania dla instytucji rządowych. Licencja jest zapieczętowana i może zawierać hologram, co oznacza, że nie została naruszona ani sfałszowana.  
   
- Na przykład należy wziąć pod uwagę dwa typy obsługiwanych w programie WCF poświadczeń: nazwa użytkownika oraz (X.509) certyfikatu poświadczeń.  
+ Przykładowo Rozważmy dwa typy poświadczeń obsługiwane w programie WCF: nazwy użytkownika i (X. 509) poświadczenia certyfikatu.  
   
- Poświadczenie nazwy użytkownika, aby uzyskać nazwę użytkownika reprezentuje tożsamości, a hasło przedstawia dowodu posiadania. Zaufany urząd w tym przypadku to system, który sprawdza poprawność nazwy użytkownika i hasła.  
+ W przypadku poświadczenia nazwy użytkownika nazwa użytkownika reprezentuje zażądaną tożsamość, a hasło przedstawia potwierdzenie posiadania. W tym przypadku zaufany urząd sprawdza poprawność nazwy użytkownika i hasła.  
   
- W poświadczenie certyfikatu nazwa podmiotu, alternatywna nazwa podmiotu lub określonych pól w ramach certyfikatu może służyć do reprezentowania tożsamości i/lub funkcji. Dowód przesyłany danych w poświadczeniu została ustanowiona przy użyciu skojarzony klucz prywatny do generowania podpisu.  
+ W poświadczeniu o certyfikatach nazwa podmiotu, alternatywna nazwa podmiotu lub określone pola w ramach certyfikatu mogą służyć do reprezentowania zatwierdzono tożsamości i/lub możliwości. Potwierdzenie posiadania danych w poświadczeniem jest ustanawiane przy użyciu skojarzonego klucza prywatnego w celu wygenerowania podpisu.  
   
- Więcej informacji na temat programowania transferu zabezpieczeń i określania poświadczeń można zobaczyć [powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) i [zachowania zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
+ Aby uzyskać więcej informacji na temat programowania zabezpieczeń transferu i określania poświadczeń, zobacz [powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) i [zachowania zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
 ### <a name="transport-client-credential-types"></a>Typy poświadczeń klienta transportu  
- W poniższej tabeli przedstawiono możliwe wartości, które są używane podczas tworzenia aplikacji, która korzysta z transferu zabezpieczeń. Można użyć tych wartości za pomocą kodu lub ustawienia powiązania.  
+ W poniższej tabeli przedstawiono możliwe wartości używane podczas tworzenia aplikacji, która korzysta z zabezpieczeń transferu. Możesz użyć tych wartości w ustawieniach kodu lub powiązania.  
   
 |Ustawienie|Opis|  
 |-------------|-----------------|  
-|Brak|Określa, klient musi przedstawić żadnych poświadczeń. Przekłada się to anonimowym klientem.|  
-|Podstawowy|Określa uwierzytelnianie podstawowe.  Aby uzyskać więcej informacji, zobacz RFC2617, "[uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
-|Podsumowanie|Określa uwierzytelnianie szyfrowane.  Aby uzyskać więcej informacji, zobacz RFC2617, "[uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
-|Ntlm|Określa uwierzytelnianie Windows do domeny Windows przy użyciu negocjacji interfejsu SSPI.<br /><br /> Negocjacji interfejsu SSPI powoduje przy użyciu protokołu Kerberos lub NT LanMan (NTLM).|  
-|Windows|Określa uwierzytelnianie Windows do domeny Windows przy użyciu interfejsu SSPI. Interfejs SSPI wybiera z protokołu Kerberos lub NTLM jako usługi uwierzytelniania.<br /><br /> Najpierw; próbuje interfejsu SSPI protokołu Kerberos Jeśli ono zawiedzie, następnie używa protokołu NTLM.|  
-|Certyfikat|Wykonuje uwierzytelnianie klientów przy użyciu certyfikatu X.509 zwykle.|  
+|Brak|Określa, że klient nie musi zaprezentować żadnego poświadczenia. Powoduje to przetłumaczenie na klienta anonimowego.|  
+|Podstawowy|Określa podstawowe uwierzytelnianie. Aby uzyskać więcej informacji, zobacz RFC2617, "[uwierzytelnianie http: uwierzytelnianie podstawowe i szyfrowane](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)".|  
+|Szyfrowane|Określa uwierzytelnianie szyfrowane. Aby uzyskać więcej informacji, zobacz RFC2617, "[uwierzytelnianie http: uwierzytelnianie podstawowe i szyfrowane](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)".|  
+|NTLM|Określa uwierzytelnianie systemu Windows przy użyciu negocjacji interfejsu SSPI w domenie systemu Windows.<br /><br /> W wyniku negocjacji interfejsu SSPI jest używany protokół Kerberos lub serwer NT LanMan (NTLM).|  
+|Windows|Określa uwierzytelnianie systemu Windows przy użyciu interfejsu SSPI w domenie systemu Windows. Interfejs SSPI wybiera z protokołu Kerberos lub NTLM jako usługę uwierzytelniania.<br /><br /> Interfejs SSPI najpierw próbuje protokół Kerberos; Jeśli to się nie powiedzie, użyje protokołu NTLM.|  
+|Certyfikat|Wykonuje uwierzytelnianie klienta przy użyciu certyfikatu, zazwyczaj X. 509.|  
   
 ### <a name="message-client-credential-types"></a>Typy poświadczeń klienta wiadomości  
- W poniższej tabeli przedstawiono możliwe wartości, które są używane podczas tworzenia aplikacji, która używa zabezpieczenia wiadomości. Można użyć tych wartości za pomocą kodu lub ustawienia powiązania.  
+ W poniższej tabeli przedstawiono możliwe wartości używane podczas tworzenia aplikacji, która korzysta z zabezpieczeń komunikatów. Możesz użyć tych wartości w ustawieniach kodu lub powiązania.  
   
 |Ustawienie|Opis|  
 |-------------|-----------------|  
-|Brak|Umożliwia usłudze na współdziałanie z anonimowych klientów.|  
-|Windows|Umożliwia wymianę komunikatów SOAP występuje w kontekście uwierzytelnionych poświadczeń Windows. Używa mechanizmu negocjacji interfejsu SSPI, do wyboru protokołu Kerberos lub NTLM jako usługi uwierzytelniania.|  
-|Nazwa użytkownika|Umożliwia usłudze wymagają uwierzytelnienia klienta za pomocą poświadczenie nazwy użytkownika. Należy pamiętać, usługi WCF nie zezwala na wszystkie operacje kryptograficzne przy użyciu nazwy użytkownika, np. generowania podpisu i szyfrowania danych. W efekcie WCF wymusza, czy transport jest zabezpieczony przy użyciu poświadczeń nazwy użytkownika.|  
-|Certyfikat|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą certyfikatu.|  
-|CardSpace|Umożliwia usłudze wymagają, za pomocą CardSpace uwierzytelnienia klienta.|  
+|Brak|Umożliwia usłudze współpracującie z klientami anonimowymi.|  
+|Windows|Zezwala wymianie komunikatów protokołu SOAP w ramach uwierzytelnionego kontekstu poświadczeń systemu Windows. Używa mechanizmu negocjacji interfejsu SSPI do wybrania z protokołu Kerberos lub NTLM jako usługi uwierzytelniania.|  
+|Nazwa użytkownika|Zezwala usłudze na wymaganie uwierzytelniania klienta przy użyciu poświadczeń nazwy użytkownika. Należy pamiętać, że WCF nie zezwala na wykonywanie operacji kryptograficznych o nazwie użytkownika, takich jak generowanie podpisu lub szyfrowanie danych. W związku z tym WCF wymusza, aby transport był zabezpieczony przy użyciu poświadczeń nazwy użytkownika.|  
+|Certyfikat|Zezwala usłudze na wymaganie uwierzytelniania klienta przy użyciu certyfikatu.|  
+|CardSpace|Zezwala usłudze na wymaganie uwierzytelniania klienta przy użyciu programu CardSpace.|  
   
-### <a name="programming-credentials"></a>Programowanie poświadczeń  
- Dla każdego typu poświadczeń klienta model programowania WCF umożliwia określanie wartości poświadczeń i poświadczeń moduły weryfikacji za pomocą zachowań usługi i zachowania kanału.  
+### <a name="programming-credentials"></a>Poświadczenia programowania  
+ Dla każdego z typów poświadczeń klienta model programowania WCF pozwala określić wartości poświadczeń i walidacji poświadczeń przy użyciu zachowań usługi i zachowań kanału.  
   
- Zabezpieczenia WCF ma dwa typy poświadczeń: zachowania poświadczeń i zachowania poświadczeń kanału usługi. Poświadczenie zachowań w programie WCF Określ rzeczywistych danych, to znaczy, poświadczenia używane do spełniają wymogi bezpieczeństwa wyrażona za pomocą powiązania. W programie WCF Klasa klienta jest składnik czasu wykonywania, który wykonuje konwersję między wywołania operacji i komunikatów. Wszyscy klienci dziedziczyć <xref:System.ServiceModel.ClientBase%601> klasy. <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Właściwości w klasie bazowej można określić różne wartości poświadczeń klienta.  
+ Zabezpieczenia WCF mają dwa typy poświadczeń: zachowania poświadczeń usługi i zachowania poświadczeń kanału. Zachowania poświadczeń w programie WCF określają rzeczywiste dane, czyli poświadczenia używane do spełnienia wymagań dotyczących zabezpieczeń wyrażonych przez powiązania. W programie WCF Klasa klienta to składnik czasu wykonywania, który konwertuje między wywołaniem i komunikatami operacji. Wszyscy klienci dziedziczą z klasy <xref:System.ServiceModel.ClientBase%601>. Właściwość <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> w klasie bazowej pozwala określić różne wartości poświadczeń klienta.  
   
- W programie WCF zachowania usługi są atrybuty stosowane do klasy Implementowanie kontraktu usługi (interfejs), aby programistycznie sterować usługi. <xref:System.ServiceModel.Description.ServiceCredentials> Klasy można określić certyfikaty dla ustawienia usługi poświadczenia i klienta sprawdzania poprawności dla różnych typów poświadczeń klienta.  
+ W programie WCF zachowania usługi są atrybutami stosowanymi do klasy implementującej kontrakt usługi (interfejs) do programowego sterowania usługą. Klasa <xref:System.ServiceModel.Description.ServiceCredentials> pozwala określić certyfikaty dla poświadczeń usługi i ustawień weryfikacji klienta dla różnych typów poświadczeń klienta.  
   
-### <a name="negotiation-model-for-message-security"></a>Model negocjowanie zabezpieczeń komunikatów  
- Tryb zabezpieczeń wiadomości umożliwia wykonywanie bezpieczeństwie transferu, dzięki czemu poświadczenia usługi jest skonfigurowana na klientem poza pasmem. Na przykład jeśli używasz certyfikatu przechowywanego w magazynie certyfikatów Windows, należy użyć narzędzia, takiego jak przystawka programu Microsoft Management Console (MMC).  
+### <a name="negotiation-model-for-message-security"></a>Model negocjacji dla zabezpieczeń komunikatów  
+ Tryb zabezpieczeń wiadomości umożliwia przeprowadzenie zabezpieczenia transferu w taki sposób, aby poświadczenia usługi zostały skonfigurowane na kliencie poza pasmem. Na przykład jeśli używasz certyfikatu przechowywanego w magazynie certyfikatów systemu Windows, musisz użyć narzędzia, takiego jak przystawka programu Microsoft Management Console (MMC).  
   
- Tryb zabezpieczeń wiadomości umożliwia wykonywanie bezpieczeństwie transferu, dzięki czemu poświadczenia usługi są wymieniane przy użyciu klienta w ramach początkowego negocjowania. Aby włączyć negocjacji, ustaw <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> właściwość `true`.  
+ Tryb zabezpieczeń wiadomości umożliwia również przeprowadzenie zabezpieczenia transferu, dzięki czemu poświadczenia usługi są wymieniane z klientem w ramach początkowej negocjacji. Aby włączyć negocjowanie, ustaw właściwość <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> na `true`.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Przegląd tworzenia punktów końcowych](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

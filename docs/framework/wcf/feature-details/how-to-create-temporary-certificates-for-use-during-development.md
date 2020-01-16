@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania'
+title: 'Instrukcje: Tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: e2df35959f9821c65d694079aefa0ae6ba01897f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9e01ccb29ad017a2657ab08b54d7f01ef4564481
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053297"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964539"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Instrukcje: tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Instrukcje: Tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania
 
 Podczas tworzenia bezpiecznej usługi lub klienta przy użyciu programu Windows Communication Foundation (WCF) często konieczne jest podanie certyfikatu X. 509, który będzie używany jako poświadczenie. Certyfikat jest zwykle częścią łańcucha certyfikatów z urzędem głównym, które znajdują się w magazynie zaufanych głównych urzędów certyfikacji komputera. Łańcuch certyfikatów umożliwia określanie zakresu certyfikatów, w przypadku których zazwyczaj urząd główny pochodzi z organizacji lub jednostki biznesowej. Aby emulować ten czas podczas opracowywania, można utworzyć dwa certyfikaty spełniające wymagania dotyczące zabezpieczeń. Pierwszy to certyfikat z podpisem własnym, który znajduje się w magazynie zaufanych głównych urzędów certyfikacji, a drugi certyfikat jest tworzony od pierwszego i jest umieszczany w osobistym magazynie lokalizacji komputera lokalnego lub w osobistym magazynie Bieżąca lokalizacja użytkownika. W tym temacie przedstawiono procedurę tworzenia tych dwóch certyfikatów przy użyciu polecenia cmdlet programu PowerShell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) .
 
@@ -21,7 +21,7 @@ Podczas tworzenia bezpiecznej usługi lub klienta przy użyciu programu Windows 
 >
 > Domyślnie polecenie cmdlet [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) tworzy certyfikaty z podpisem własnym i te certyfikaty są niezabezpieczone. Umieszczenie certyfikatów z podpisem własnym w magazynie zaufanych głównych urzędów certyfikacji pozwala utworzyć środowisko programistyczne, które bardziej przypomina środowisko wdrażania.
 
- Aby uzyskać więcej informacji na temat tworzenia i używania certyfikatów, zobacz [Praca z certyfikatami](working-with-certificates.md). Aby uzyskać więcej informacji na temat korzystania z certyfikatu jako poświadczenia, zobacz [Zabezpieczanie usług i klientów](securing-services-and-clients.md). Aby zapoznać się z samouczkiem dotyczącym korzystania z technologii Microsoft Authenticode, zobacz Omówienie [i samouczki Authenticode](https://go.microsoft.com/fwlink/?LinkId=88919).
+ Aby uzyskać więcej informacji na temat tworzenia i używania certyfikatów, zobacz [Praca z certyfikatami](working-with-certificates.md). Aby uzyskać więcej informacji na temat korzystania z certyfikatu jako poświadczenia, zobacz [Zabezpieczanie usług i klientów](securing-services-and-clients.md). Aby zapoznać się z samouczkiem dotyczącym korzystania z technologii Microsoft Authenticode, zobacz Omówienie [i samouczki Authenticode](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537360(v=vs.85)).
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Aby utworzyć certyfikat głównego urzędu certyfikacji z podpisem własnym i wyeksportować klucz prywatny
 
@@ -31,7 +31,7 @@ Następujące polecenie tworzy certyfikat z podpisem własnym z nazwą podmiotu 
 $rootcert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
 ```
 
-Musimy wyeksportować certyfikat do pliku PFX, aby można go było zaimportować do miejsca, w którym jest potrzebny w późniejszym kroku. W przypadku eksportowania certyfikatu z kluczem prywatnym do jego ochrony jest niezbędne hasło. Hasło jest `SecureString` zapisywane w i należy użyć polecenia cmdlet [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) do wyeksportowania certyfikatu ze skojarzonym kluczem prywatnym do pliku PFX. Zapiszemy również tylko certyfikat publiczny w pliku CRT przy użyciu polecenia cmdlet [Export-Certificate](/powershell/module/pkiclient/export-certificate) .
+Musimy wyeksportować certyfikat do pliku PFX, aby można go było zaimportować do miejsca, w którym jest potrzebny w późniejszym kroku. W przypadku eksportowania certyfikatu z kluczem prywatnym do jego ochrony jest niezbędne hasło. Zapiszemy hasło w `SecureString` i użyj polecenia cmdlet [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) , aby wyeksportować certyfikat ze skojarzonym kluczem prywatnym do pliku PFX. Zapiszemy również tylko certyfikat publiczny w pliku CRT przy użyciu polecenia cmdlet [Export-Certificate](/powershell/module/pkiclient/export-certificate) .
 
 ```powershell
 [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
@@ -42,7 +42,7 @@ Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 
 ## <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>Aby utworzyć nowy certyfikat podpisany przez certyfikat głównego urzędu certyfikacji
 
-Następujące polecenie tworzy certyfikat podpisany przez `RootCA` obiekt z nazwą podmiotu "SignedByRootCA" przy użyciu klucza prywatnego wystawcy.
+Następujące polecenie tworzy certyfikat podpisany przez `RootCA` z nazwą podmiotu "SignedByRootCA" przy użyciu klucza prywatnego wystawcy.
 
 ```powershell
 $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
@@ -62,7 +62,7 @@ Po utworzeniu certyfikatu z podpisem własnym można go zainstalować w magazyni
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Aby zainstalować certyfikat z podpisem własnym w zaufanych głównych urzędach certyfikacji
 
-1. Otwórz przystawkę Certyfikaty. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie certyfikatów z przystawką](how-to-view-certificates-with-the-mmc-snap-in.md)programu MMC.
+1. Otwórz przystawkę Certyfikaty. Aby uzyskać więcej informacji, zobacz [How to: View Certificates za pomocą przystawki MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 2. Otwórz folder do przechowywania certyfikatu, **komputera lokalnego** lub **bieżącego użytkownika**.
 
@@ -115,5 +115,5 @@ Pamiętaj o usunięciu wszelkich tymczasowych certyfikatów głównych urzędów
 ## <a name="see-also"></a>Zobacz także
 
 - [Praca z certyfikatami](working-with-certificates.md)
-- [Instrukcje: Wyświetlanie certyfikatów z przystawką programu MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Instrukcje: wyświetlanie certyfikatów w przystawce programu MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Zabezpieczanie usług i klientów](securing-services-and-clients.md)

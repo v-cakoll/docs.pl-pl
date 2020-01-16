@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 0ab9b6e089f5add9963ffae73e196643ad999763
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cfa92923ff5c7d5e7e4e2a9a965dc1562c183b74
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712913"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964647"
 ---
 # <a name="value-types-c-reference"></a>Typy wartości (C# odwołanie)
 
@@ -33,7 +33,7 @@ W przeciwieństwie do typów referencyjnych nie można utworzyć nowego typu z t
 
 Zmienne typu wartości domyślnie nie mogą być `null`. Jednak zmienne odpowiednich [typów wartości dopuszczających wartość null](../builtin-types/nullable-value-types.md) mogą być `null`.
 
-Każdy typ wartości ma niejawny Konstruktor bez parametrów, który inicjuje wartość domyślną tego typu. Aby uzyskać informacje o domyślnych wartościach typów wartości, zobacz [tabela wartości domyślnych](default-values-table.md).
+Każdy typ wartości ma niejawny Konstruktor bez parametrów, który inicjuje wartość domyślną tego typu. Aby uzyskać informacje o domyślnych wartościach typów wartości, zobacz [domyślne wartości C# typów](../builtin-types/default-values.md).
 
 ## <a name="simple-types"></a>Typy proste
 
@@ -87,7 +87,7 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-Użycie operatora [New](../operators/new-operator.md) wywołuje konstruktora bez parametrów określonego typu i przypisuje wartość domyślną zmiennej. W poprzednim przykładzie Konstruktor bez parametrów przypisał wartość `0`, aby `myInt`. Aby uzyskać więcej informacji na temat wartości przypisanych przez wywoływanie konstruktorów bez parametrów, zobacz [tabela wartości domyślnych](default-values-table.md).
+Użycie operatora [New](../operators/new-operator.md) wywołuje konstruktora bez parametrów określonego typu i przypisuje wartość domyślną zmiennej. W poprzednim przykładzie Konstruktor bez parametrów przypisał wartość `0`, aby `myInt`. Aby uzyskać więcej informacji na temat wartości przypisanych przez wywoływanie konstruktorów bez parametrów, zobacz [domyślne wartości C# typów](../builtin-types/default-values.md).
 
 W przypadku typów zdefiniowanych przez użytkownika Użyj metody [New](../operators/new-operator.md) , aby wywołać Konstruktor bez parametrów. Na przykład poniższa instrukcja wywołuje konstruktora bez parametrów `Point` struct:
 

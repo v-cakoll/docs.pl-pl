@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: d85b11204eb1f1de3a95efc67054cdffc4c219e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714660"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964746"
 ---
 # <a name="using-structs-c-programming-guide"></a>Używanie struktur (C# Przewodnik programowania)
 
@@ -21,7 +21,7 @@ Wystąpił błąd podczas definiowania konstruktora bez parametrów dla struktur
 
 Podczas tworzenia obiektu struktury przy użyciu operatora [New](../../language-reference/operators/new-operator.md) , zostanie on utworzony, a odpowiedni Konstruktor jest wywoływany zgodnie z [podpisem konstruktora](constructors.md#constructor-syntax). W przeciwieństwie do klas, struktury mogą być tworzone bez użycia operatora `new`. W takim przypadku nie istnieje wywołanie konstruktora, które zwiększa efektywność przydziału. Jednak pola pozostaną nieprzypisane i nie będzie można użyć obiektu, dopóki nie zostaną zainicjowane wszystkie pola. Obejmuje to brak możliwości pobrania lub ustawienia wartości za pomocą właściwości.
 
-W przypadku wystąpienia obiektu struktury przy użyciu konstruktora bez parametrów wszystkie elementy członkowskie są przypisywane zgodnie z ich [wartościami domyślnymi](../../language-reference/keywords/default-values-table.md).
+W przypadku wystąpienia obiektu struktury przy użyciu konstruktora bez parametrów wszystkie elementy członkowskie są przypisywane zgodnie z ich [wartościami domyślnymi](../../language-reference/builtin-types/default-values.md).
 
 Podczas pisania konstruktora z parametrami struktury należy jawnie zainicjować wszystkie elementy członkowskie; w przeciwnym razie co najmniej jeden element członkowski pozostaje nieprzypisany i nie można użyć struktury, generując błąd kompilatora [CS0171](../../misc/cs0171.md).
 

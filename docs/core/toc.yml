@@ -358,6 +358,8 @@
       href: porting/winforms.md
     - name: Przenoszenie projektów WPF
       href: porting/wpf.md
+    - name: Przenoszenie projektów C++/CLI
+      href: porting/cpp-cli.md
 - name: Ładowanie zależności
   items:
     - name: Omówienie

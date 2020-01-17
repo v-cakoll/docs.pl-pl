@@ -2,12 +2,12 @@
 title: Seedwork (klasy bazowe wielokrotnego użytku i interfejsy na potrzeby modelu domeny)
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Użyj koncepcji seedwork jako punktu wyjścia, aby rozpocząć implementację modelu domeny zorientowanego na DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 491ff39f493a8f5ab192dc4a8376f560a8a7624b
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: ab0aadc28dbd1175c75b04dadca29b7b0947f29b
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937176"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116569"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (klasy bazowe wielokrotnego użytku i interfejsy na potrzeby modelu domeny)
 

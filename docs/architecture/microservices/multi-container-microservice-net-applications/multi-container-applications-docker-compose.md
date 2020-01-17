@@ -2,12 +2,12 @@
 title: Definiowanie aplikacji z wieloma kontenerami za pomocą pliku docker-compose.yml
 description: Jak określić kompozycję mikrousług dla aplikacji wielokontenera z Docker-Compose. yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: fa863495c785d89a0b244162e58948ff622e139a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937153"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116544"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definiowanie aplikacji z wieloma kontenerami za pomocą pliku docker-compose.yml
 
@@ -141,7 +141,7 @@ W związku z tym przy użyciu polecenia Docker-Zredaguj można wskazać następu
 
 #### <a name="development-environments"></a>Środowiska deweloperskie
 
-Podczas tworzenia aplikacji należy mieć możliwość uruchamiania aplikacji w izolowanym środowisku programistycznym. Aby utworzyć to środowisko lub użyć programu Visual Studio, który jest używany przez platformę Docker, można użyć polecenia platformy Docker-Zredaguj.
+Podczas tworzenia aplikacji należy mieć możliwość uruchamiania aplikacji w izolowanym środowisku programistycznym. Aby utworzyć środowisko lub program Visual Studio, w którym jest używana funkcja Docker-Zredaguj w obszarze okładek, można użyć polecenia CLI-Create.
 
 Plik Docker-Compose. yml umożliwia skonfigurowanie i udokumentowanie wszystkich zależności usług aplikacji (innych usług, pamięci podręcznej, baz danych, kolejek itp.). Używając interfejsu wiersza polecenia platformy Docker — tworzenie, można utworzyć i uruchomić jeden lub więcej kontenerów dla każdej zależności za pomocą jednego polecenia (platforma Docker — tworzenie).
 
@@ -151,7 +151,7 @@ Pliki Docker-Compose. yml są plikami konfiguracji interpretowanymi przez aparat
 
 Ważnym elementem procesu ciągłego wdrażania (CD) lub ciągłej integracji są testy jednostkowe i testy integracji. Te zautomatyzowane testy wymagają środowiska izolowanego, przez co użytkownicy nie mają wpływu ani żadnej innej zmiany w danych aplikacji.
 
-Za pomocą Docker Compose można łatwo utworzyć i zniszczyć środowisko izolowane w kilku poleceniach z poziomu wiersza polecenia lub skryptów, takich jak następujące polecenia:
+Za pomocą Docker Compose można utworzyć i zniszczyć środowisko izolowane bardzo łatwo w kilku poleceniach z poziomu wiersza polecenia lub skryptów, takich jak następujące polecenia:
 
 ```console
 docker-compose -f docker-compose.yml -f docker-compose-test.override.yml up -d
@@ -201,7 +201,7 @@ Typowym przypadkiem użycia jest definiowanie wielu plików redagowania, aby mo�
 
 **Rysunek 6-12**. Wiele plików programu Docker — tworzenie przesłania wartości w podstawowym pliku Docker-Compose. yml
 
-Można połączyć wiele plików Docker-Compose*. yml, aby obsługiwać różne środowiska. Zaczynasz od podstawowego pliku Docker-Compose. yml. Ten plik podstawowy musi zawierać podstawowe lub statyczne ustawienia konfiguracji, które nie zmieniają się w zależności od środowiska. Na przykład eShopOnContainers ma następujący plik Docker-Compose. yml (uproszczony z mniejszą ilością usług) jako plik podstawowy.
+Można połączyć wiele plików Docker-Compose*. yml, aby obsługiwać różne środowiska. Zaczynasz od podstawowego pliku Docker-Compose. yml. Ten plik podstawowy musi zawierać podstawowe lub statyczne ustawienia konfiguracji, które nie zmieniają się w zależności od środowiska. Na przykład eShopOnContainers ma następujący plik Docker-Compose. yml (uproszczony z mniejszą liczbą usług) jako plik podstawowy.
 
 ```yml
 #docker-compose.yml (Base)
@@ -390,7 +390,7 @@ W tym przykładzie konfiguracja przesłonięcia rozwoju uwidacznia niektóre por
 
 Gdy uruchamiasz `docker-compose up` (lub uruchamiasz ją z programu Visual Studio), polecenie odczytuje przesłonięcia automatycznie tak, jakby były scalane oba pliki.
 
-Załóżmy, że chcesz, aby inny plik redagowania był używany w środowisku produkcyjnym z innymi wartościami konfiguracji, portami lub parametrami połączenia. Można utworzyć inny plik zastąpienia, taki jak plik o nazwie `docker-compose.prod.yml` z różnymi ustawieniami i zmiennymi środowiskowymi. Ten plik może być przechowywany w innym repozytorium Git lub zarządzany i zabezpieczony przez inny zespół.
+Załóżmy, że chcesz, aby inny plik redagowania był używany w środowisku produkcyjnym, z innymi wartościami konfiguracji, portami lub parametrami połączenia. Można utworzyć inny plik zastąpienia, taki jak plik o nazwie `docker-compose.prod.yml` z różnymi ustawieniami i zmiennymi środowiskowymi. Ten plik może być przechowywany w innym repozytorium Git lub zarządzany i zabezpieczony przez inny zespół.
 
 #### <a name="how-to-deploy-with-a-specific-override-file"></a>Jak wdrożyć z określonym plikiem przesłonięcia
 
@@ -422,7 +422,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 
 Platforma Docker — tworzenie oczekuje, że każdy wiersz w pliku ENV ma mieć format \<zmienna\>=\<wartość\>.
 
-Należy pamiętać, że wartości ustawione w środowisku uruchomieniowym zawsze przesłaniają wartości zdefiniowane wewnątrz pliku ENV. W podobny sposób wartości przekazane za pośrednictwem argumentów wiersza polecenia również przesłaniają wartości domyślne ustawione w pliku ENV.
+Wartości ustawione w środowisku wykonawczym zawsze przesłonią wartości zdefiniowane wewnątrz pliku ENV. W podobny sposób wartości przekazane za pośrednictwem argumentów wiersza polecenia również przesłaniają wartości domyślne ustawione w pliku ENV.
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 

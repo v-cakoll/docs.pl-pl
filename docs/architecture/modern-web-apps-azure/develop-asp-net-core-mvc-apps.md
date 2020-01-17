@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: efb57b4290825be9f21c61c8dee5af073d264d3a
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 7bc30db084f361e6c4654b89e69230b379b0136c
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899692"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116530"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Opracowywanie aplikacji ASP.NET Core MVC
 
@@ -26,15 +26,15 @@ Podczas tworzenia nowej aplikacji ASP.NET Core należy mieć plan na uwadze dla 
 
 ### <a name="why-razor-pages"></a>Dlaczego Razor Pages?
 
-Razor Pages to domyślne podejście do nowych aplikacji sieci Web w programie Visual Studio. Razor Pages oferuje prostszy sposób tworzenia funkcji aplikacji opartych na stronach, takich jak formularze niespa. Korzystanie z kontrolerów i widoków było powszechne dla aplikacji, które mają bardzo duże kontrolery, które pracowały z wieloma różnymi zależnościami, i wyświetlają wiele różnych widoków. Spowodowało to wiele złożoności i często wynika z kontrolerów, które nie były zgodne z pojedynczą zasadą odpowiedzialności lub zasad otwartych/zamkniętych. Razor Pages rozwiązuje ten problem przez hermetyzację logiki po stronie serwera dla danej logicznej "strony" w aplikacji sieci Web z oznaczeniem Razor. Strona Razor, która nie ma logiki po stronie serwera, może po prostu składać się z pliku Razor (na przykład "index. cshtml"). Jednak większość nieuproszczonych Razor Pages będzie miała skojarzoną klasę modelu strony, która jest taka sama jak nazwa pliku Razor z rozszerzeniem ". cs" (na przykład "Index.cshtml.cs").
+Razor Pages to domyślne podejście do nowych aplikacji sieci Web w programie Visual Studio. Razor Pages oferuje prostszy sposób tworzenia funkcji aplikacji opartych na stronach, takich jak formularze niespa. Korzystanie z kontrolerów i widoków było powszechne dla aplikacji, które mają bardzo duże kontrolery, które pracowały z wieloma różnymi zależnościami, i wyświetlają wiele różnych widoków. Wynika to z dużej złożoności i często wynika z kontrolerów, które nie były zgodne z pojedynczą zasadą odpowiedzialności lub zasad otwartych/zamkniętych. Razor Pages rozwiązuje ten problem przez hermetyzację logiki po stronie serwera dla danej logicznej "strony" w aplikacji sieci Web z oznaczeniem Razor. Strona Razor, która nie ma logiki po stronie serwera, może po prostu składać się z pliku Razor (na przykład "index. cshtml"). Jednak większość nieuproszczonych Razor Pages będzie miała skojarzoną klasę modelu strony, która jest taka sama jak nazwa pliku Razor z rozszerzeniem ". cs" (na przykład "Index.cshtml.cs").
 
 Model strony strony Razor łączy obowiązki kontrolera MVC i ViewModel. Zamiast obsługi żądań z metodami akcji kontrolera, programy obsługi modelu strony, takie jak "OnGet ()", są wykonywane, domyślnie renderuje ich skojarzone strony. Razor Pages upraszcza proces kompilowania poszczególnych stron w aplikacji ASP.NET Core, zapewniając jednocześnie wszystkie funkcje architektury ASP.NET Core MVC. Są to dobry wybór domyślny dla nowych funkcji opartych na stronach.
 
 ### <a name="when-to-use-mvc"></a>Kiedy używać MVC
 
-Jeśli tworzysz interfejsy API sieci Web, wzorzec MVC staje się bardziej zrozumiały niż próba użycia Razor Pages. Jeśli projekt będzie uwidaczniał wyłącznie punkty końcowe interfejsu API sieci Web, należy najlepiej zacząć od szablonu projektu interfejsu API sieci Web, ale w przeciwnym razie można łatwo dodać kontrolery i skojarzone punkty końcowe interfejsu API do dowolnej aplikacji ASP.NET Core. Należy również użyć podejścia MVC opartego na widoku, Jeśli migrujesz istniejącą aplikację z ASP.NET MVC 5 lub starszego do ASP.NET Core MVC i chcesz to zrobić z mniejszą ilością nakładu pracy. Po przeprowadzeniu migracji wstępnej można sprawdzić, czy ma to na celu przyjęcie Razor Pages nowych funkcji, a nawet w przypadku migracji hurtowej.
+Jeśli tworzysz interfejsy API sieci Web, wzorzec MVC staje się bardziej zrozumiały niż próba użycia Razor Pages. Jeśli projekt będzie uwidaczniał wyłącznie punkty końcowe interfejsu API sieci Web, należy najlepiej zacząć od szablonu projektu interfejsu API sieci Web. W przeciwnym razie można łatwo dodać kontrolery i skojarzone punkty końcowe interfejsu API do dowolnej aplikacji ASP.NET Core. Użyj podejścia MVC opartego na widokach w przypadku migrowania istniejącej aplikacji z ASP.NET MVC 5 lub starszej do ASP.NET Core MVC i chcesz to zrobić z mniejszą ilością nakładu pracy. Po przeprowadzeniu migracji wstępnej można sprawdzić, czy ma to na celu przyjęcie Razor Pages nowych funkcji, a nawet w przypadku migracji hurtowej.
 
-Niezależnie od tego, czy wybierzesz kompilację aplikacji sieci Web przy użyciu widoków Razor Pages lub MVC, aplikacja będzie miała podobną wydajność i obejmuje obsługę iniekcji zależności, filtrów, powiązań modelu i walidacji itp.
+Niezależnie od tego, czy wybierzesz kompilację aplikacji sieci Web przy użyciu widoków Razor Pages lub MVC, aplikacja będzie miała podobną wydajność i będzie obejmować obsługę iniekcji zależności, filtrów, powiązań modelu, walidacji itd.
 
 ## <a name="mapping-requests-to-responses"></a>Mapowanie żądań na odpowiedzi
 
@@ -420,7 +420,7 @@ Większość interfejsów API sieci Web powinna implementować system uwierzytel
 
 **Rysunek 7-4.** Uwierzytelnianie oparte na tokenach dla interfejsów API sieci Web.
 
-Można utworzyć własną usługę uwierzytelniania, zintegrować ją z usługą Azure AD i uwierzytelnianiem OAuth lub wdrożyć usługę przy użyciu narzędzia typu open source, takiego jak [IdentityServer](https://github.com/IdentityServer).
+Możesz utworzyć własną usługę uwierzytelniania, zintegrować ją z usługą Azure AD i uwierzytelnianiem OAuth lub wdrożyć usługę przy użyciu narzędzia typu open source, takiego jak [IdentityServer](https://github.com/IdentityServer).
 
 #### <a name="custom-security"></a>Zabezpieczenia niestandardowe
 
@@ -540,7 +540,7 @@ DDD również zaleca użycie czystej architektury omówionej wcześniej, co pozw
 
 ### <a name="when-should-you-apply-ddd"></a>Kiedy należy zastosować DDD
 
-DDD jest dobrze dostosowany do dużych aplikacji z znaczącą złożonością biznesową (nie tylko techniczną). Aplikacja powinna wymagać znajomości ekspertów domeny. Istnieje duże zachowanie w modelu domeny, reprezentujące reguły biznesowe i interakcje wykraczające poza zwykłe przechowywanie i pobieranie bieżącego stanu różnych rekordów z magazynów danych.
+DDD jest dobrze dostosowany do dużych aplikacji z znaczącą złożonością firmy (nie tylko technicznie). Aplikacja powinna wymagać znajomości ekspertów domeny. Istnieje duże zachowanie w modelu domeny, reprezentujące reguły biznesowe i interakcje wykraczające poza zwykłe przechowywanie i pobieranie bieżącego stanu różnych rekordów z magazynów danych.
 
 ### <a name="when-shouldnt-you-apply-ddd"></a>Kiedy nie należy stosować DDD
 

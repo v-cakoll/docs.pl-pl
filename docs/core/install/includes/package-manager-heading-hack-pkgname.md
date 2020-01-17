@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7a55641b3673dc4d8d9b328f0de99b7247ca51d4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 47e8e15a64236d8ade2febb1add81fa4e5c030d9
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450885"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116149"
 ---
 
 Pakiety dodane do kanałów informacyjnych Menedżera pakietów są nazywane w formacie włamywania: `{product}-{type}-{version}`.
@@ -31,7 +31,7 @@ Wersja zestawu SDK lub środowiska uruchomieniowego do zainstalowania. Ten artyk
 ### <a name="examples"></a>Przykłady
 
 - Zainstaluj zestaw SDK platformy .NET Core 2,2: `dotnet-sdk-2.2`
-- Zainstaluj środowisko uruchomieniowe ASP.NET Core 3,0: `aspnetcore-runtime-3.0`
+- Zainstaluj środowisko uruchomieniowe ASP.NET Core 3,1: `aspnetcore-runtime-3.1`
 - Zainstaluj środowisko uruchomieniowe programu .NET Core 2,1: `dotnet-runtime-2.1`
 
 ### <a name="troubleshoot"></a>Rozwiązywanie problemów

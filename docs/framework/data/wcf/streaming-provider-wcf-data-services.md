@@ -10,18 +10,18 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 83f28c50c53281692e1c3c6d55cc55e8d9304ad9
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900921"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116599"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Dostawca przesyłania strumieniowego (Usługi danych programu WCF)
 
 Usługa danych może uwidaczniać dane binarne dużych obiektów. Te dane binarne mogą reprezentować strumienie wideo i audio, obrazy, pliki dokumentów lub inne typy multimediów binarnych. Gdy jednostka w modelu danych zawiera jedną lub więcej właściwości binarnych, usługa danych zwraca te dane binarne zakodowane jako Base-64 wewnątrz wpisu w kanale informacyjnym odpowiedzi. Ponieważ ładowanie i Serializowanie dużych danych binarnych w ten sposób może wpłynąć na wydajność, protokół Open Data Protocol (OData) definiuje mechanizm pobierania danych binarnych niezależnie od jednostki, do której należy. Jest to realizowane przez oddzielenie danych binarnych od jednostki do co najmniej jednego strumienia danych.
 
-- Zasób multimedialny — dane binarne należące do jednostki, takie jak wideo, audio, obraz lub inny typ strumienia zasobów multimediów.
+- Zasób multimedialny — dane binarne należące do jednostki, takie jak wideo, audio, obrazy lub inny typ strumienia zasobów multimediów.
 
 - Wpis multimediów — jednostka, która ma odwołanie do powiązanego strumienia zasobów multimediów.
 
@@ -88,14 +88,14 @@ Aby uzyskać ogólne informacje na temat tworzenia usługi danych, zobacz [Konfi
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Włączanie dużych strumieni binarnych w środowisku hostingu
 
-Podczas tworzenia usługi danych w aplikacji sieci Web ASP.NET w celu zapewnienia implementacji protokołu HTTP jest używana Windows Communication Foundation (WCF). Domyślnie WCF ogranicza rozmiar komunikatów HTTP tylko do 65 000 dla bajtów. Aby można było przesyłać strumieniowo duże dane binarne do i z usługi danych, należy również skonfigurować aplikację sieci Web do włączania dużych plików binarnych i używania strumieni do transferu. W tym celu Dodaj następujące elementy w `<configuration />` elemencie pliku Web. config aplikacji:
+Podczas tworzenia usługi danych w aplikacji sieci Web ASP.NET w celu zapewnienia implementacji protokołu HTTP jest używana Windows Communication Foundation (WCF). Domyślnie WCF ogranicza rozmiar komunikatów HTTP tylko do 65 KB. Aby można było przesyłać strumieniowo duże dane binarne do i z usługi danych, należy również skonfigurować aplikację sieci Web do włączania dużych plików binarnych i używania strumieni do transferu. W tym celu Dodaj następujące elementy w `<configuration />` elemencie pliku Web. config aplikacji:
 
 > [!NOTE]
 > Musisz użyć trybu transferu <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType>, aby upewnić się, że dane binarne w żądaniach i komunikatach odpowiedzi są przesyłane strumieniowo i nie są buforowane przez WCF.
 
 Aby uzyskać więcej informacji, zobacz [transfer komunikatów przesyłania strumieniowego](../../wcf/feature-details/streaming-message-transfer.md) i [przydziały transportowe](../../wcf/feature-details/transport-quotas.md).
 
-Domyślnie program Internet Information Services (IIS) ogranicza także rozmiar żądań do 4 MB. Aby umożliwić usłudze danych otrzymywanie strumieni większych niż 4 MB w przypadku uruchamiania w usługach IIS, należy również ustawić atrybut `maxRequestLength` [elementu httpRuntime (Schemat ustawień ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) w sekcji Konfiguracja `<system.web />`, jak pokazano w następującym przykładzie:
+Domyślnie program Internet Information Services (IIS) ogranicza także rozmiar żądań do 4 MB. Aby umożliwić usłudze danych otrzymywanie strumieni o rozmiarze większym niż 4 MB podczas uruchamiania w usługach IIS, należy również ustawić atrybut `maxRequestLength` [elementu httpRuntime (Schemat ustawień ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) w sekcji Konfiguracja `<system.web />`, jak pokazano w następującym przykładzie:
 
 ## <a name="using-data-streams-in-a-client-application"></a>Używanie strumieni danych w aplikacji klienckiej
 

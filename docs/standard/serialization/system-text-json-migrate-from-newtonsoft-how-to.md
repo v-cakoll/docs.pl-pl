@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 8b3ffc885691264548a19f694d159ce07aba7550
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: 01f94bcfce97da8c71b1b709baa34c2b7509a5e5
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904685"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116690"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Jak przeprowadzić migrację z Newtonsoft. JSON do System. Text. JSON
 
@@ -136,17 +136,6 @@ Aby zaimplementować wnioskowanie o właściwościach `object`, Utwórz konwerte
 ### <a name="maximum-depth"></a>Maksymalna głębokość
 
 `Newtonsoft.Json` domyślnie nie ma maksymalnego limitu głębokości. W przypadku <xref:System.Text.Json> istnieje domyślny limit 64 i można go skonfigurować przez ustawienie <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>.
-
-### <a name="stack-type-handling"></a>Obsługa typów stosu
-
-W <xref:System.Text.Json>kolejność zawartości stosu jest odwrócona, gdy jest serializowana. To zachowanie dotyczy następujących typów i typów i zdefiniowanych przez użytkownika rodzajów, które pochodzą od nich:
-
-* <xref:System.Collections.Stack>
-* <xref:System.Collections.Generic.Stack%601>
-* <xref:System.Collections.Immutable.ImmutableStack%601>
-* <xref:System.Collections.Immutable.IImmutableStack%601>
-
-Konwerter niestandardowy można zaimplementować, aby zachować zawartość stosu w tej samej kolejności.
 
 ### <a name="omit-null-value-properties"></a>Pomiń właściwości o wartości null
 

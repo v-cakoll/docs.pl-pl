@@ -6,30 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT [.NET Framework profiling]
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
-ms.openlocfilehash: a0b117949190bcaffc334c208fff6e04a6a2c5bf
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 0cf3e05a0353a17541ee890f0871d694acac09fd
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964498"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116556"
 ---
 # <a name="corprof_e_unsupported_call_sequence-hresult"></a>Wynik CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
+
 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT wprowadzono w .NET Framework wersji 2,0. .NET Framework 4 zwraca wynik HRESULT w dwóch scenariuszach:  
   
 - Gdy profiler przejęcia zostanie wymuszony resetuje kontekst rejestracji wątku w dowolnym momencie, aby wątek próbował uzyskać dostęp do struktur, które znajdują się w stanie niespójnym.  
   
 - Gdy profiler próbuje wywołać metodę informacyjną, która wyzwala wyrzucanie elementów bezużytecznych z metody wywołania zwrotnego, która zabrania wyrzucania elementów bezużytecznych.  
   
- Te dwa scenariusze zostały omówione w poniższych sekcjach.  
+Te dwa scenariusze zostały omówione w poniższych sekcjach.  
   
 ## <a name="hijacking-profilers"></a>Przejmowanie plików  
- (W tym scenariuszu występuje przede wszystkim problem z przejmowaniem plików, chociaż istnieją przypadki, w których w przypadku nieprzejętych plików można zobaczyć ten wynik HRESULT).  
+
+  (W tym scenariuszu występuje przede wszystkim problem z przejmowaniem plików, chociaż istnieją przypadki, w których w przypadku nieprzejętych plików można zobaczyć ten wynik HRESULT).  
   
- W tym scenariuszu przez profiler przejęcia, który wymusi resetuje kontekst rejestracji wątku w dowolnym momencie, aby wątek mógł wprowadzić kod profilera lub ponownie wprowadzić środowisko uruchomieniowe języka wspólnego (CLR) za pomocą metody [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) .  
+ W tym scenariuszu, w którym Profiler przejęcia, resetuje kontekst rejestracji wątku w dowolnym momencie, aby wątek mógł wprowadzić kod profilera lub ponownie wprowadzić środowisko uruchomieniowe języka wspólnego (CLR) za pomocą metody [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) .  
   
- Wiele identyfikatorów, które obsługuje interfejs API profilowania, wskazuje struktury danych w środowisku CLR. Wiele `ICorProfilerInfo` wywołuje tylko informacje z tych struktur danych i przekazuje je ponownie. Jednak środowisko CLR może zmienić elementy w tych strukturach w miarę ich działania i może użyć blokad, aby to zrobić. Załóżmy, że środowisko CLR już utrzymuje (lub próbuje uzyskać) blokadę w czasie, gdy profiler przekazano wątek. Jeśli wątek ponownie przejdzie do środowiska CLR i podejmie próbę wykonania większej liczby blokad lub Przeprowadź inspekcję struktur, które były w trakcie modyfikacji, te struktury mogą być w stanie niespójnym. Zakleszczenia i naruszenia dostępu mogą w takich sytuacjach łatwo wystąpić.  
+ Wiele identyfikatorów, które obsługuje interfejs API profilowania, wskazuje struktury danych w środowisku CLR. Wiele `ICorProfilerInfo` wywołuje tylko informacje z tych struktur danych i przekazuje je ponownie. Jednak środowisko CLR może zmienić elementy w tych strukturach w miarę ich działania i może użyć blokad, aby to zrobić. Załóżmy, że środowisko CLR już utrzymuje (lub próbuje uzyskać) blokadę w czasie, gdy profiler przekazano wątek. Jeśli wątek ponownie wprowadzi środowisko CLR i podejmie próbę wykonania większej liczby blokad lub Przeprowadź inspekcję struktur, które były w trakcie modyfikacji, te struktury mogą być w stanie niespójnym. Zakleszczenia i naruszenia dostępu mogą w takich sytuacjach łatwo wystąpić.  
   
- Ogólnie rzecz biorąc, gdy profiler nieprzeprzejmujący wykonuje kod wewnątrz metody [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) i wywołuje metodę `ICorProfilerInfo` z prawidłowymi parametrami, nie powinien zakleszczony ani odebrać naruszenia dostępu. Na przykład kod profilera, który działa w metodzie [ICorProfilerCallback:: ClassLoadFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) , może podawać informacje o klasie przez wywołanie metody [ICorProfilerInfo2:: GetClassIDInfo2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) . Kod może otrzymać CORPROF_E_DATAINCOMPLETE HRESULT, aby wskazać, że informacje są niedostępne; nie spowoduje to jednak zakleszczenia ani uzyskania naruszenia dostępu. Ta klasa wywołań do `ICorProfilerInfo` jest nazywana synchronicznie, ponieważ zostały wykonane z metody `ICorProfilerCallback`.  
+ Ogólnie rzecz biorąc, gdy profiler nieprzeprzejmujący wykonuje kod wewnątrz metody [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) i wywołuje metodę `ICorProfilerInfo` z prawidłowymi parametrami, nie powinien zakleszczony ani odebrać naruszenia dostępu. Na przykład kod profilera, który działa w metodzie [ICorProfilerCallback:: ClassLoadFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) , może podawać informacje o klasie przez wywołanie metody [ICorProfilerInfo2:: GetClassIDInfo2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) . Kod może otrzymać CORPROF_E_DATAINCOMPLETE HRESULT, aby wskazać, że informacje są niedostępne. Nie spowoduje to jednak zakleszczenia ani uzyskania naruszenia dostępu. Te wywołania do `ICorProfilerInfo` są uważane za synchroniczne, ponieważ zostały wykonane z metody `ICorProfilerCallback`.  
   
  Jednak zarządzany wątek, który wykonuje kod, który nie znajduje się w metodzie `ICorProfilerCallback` jest traktowany jako wywołujący wywołanie asynchroniczne. W .NET Framework wersji 1 trudno było określić, co może się zdarzyć w wywołaniu asynchronicznym. Wywołanie może prowadzić do zakleszczenia, awarii lub udzielenia nieprawidłowej odpowiedzi. W .NET Framework w wersji 2,0 wprowadzono kilka prostych testów, które pomagają uniknąć tego problemu. W .NET Framework 2,0, jeśli wywołasz niebezpieczną funkcję `ICorProfilerInfo` asynchronicznie, zakończy się niepowodzeniem z CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT.  
   
@@ -67,7 +69,7 @@ CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT wprowadzono w .NET Framework wersji 
   
 - [DoStackSnapshot —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
   
- Aby uzyskać dodatkowe informacje, zobacz wpis [dlaczego CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) w blogu interfejsu API profilowania CLR.  
+ Aby uzyskać więcej informacji, zobacz wpis [dlaczego CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) w blogu interfejsu API profilowania CLR.  
   
 ## <a name="triggering-garbage-collections"></a>Wyzwalanie wyrzucania elementów bezużytecznych  
  Ten scenariusz obejmuje Profiler, który działa wewnątrz metody wywołania zwrotnego (na przykład jedną z `ICorProfilerCallback` metod), która zabrania wyrzucania elementów bezużytecznych. Jeśli profiler próbuje wywołać metodę informacyjną (na przykład metodę w interfejsie `ICorProfilerInfo`), która może wyzwolić wyrzucanie elementów bezużytecznych, Metoda informacyjna kończy się niepowodzeniem z CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT.  

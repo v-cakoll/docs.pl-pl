@@ -4,14 +4,14 @@ description: Dowiedz się, jak odwiedzać każdy węzeł w drzewie wyrażenia po
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: a4cb40e439726e5fff60fe697da70d61bb24cb68
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: f60c447d5c89aa83f85073e642e621608131ed8d
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937221"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115775"
 ---
-# <a name="translating-expression-trees"></a>Tłumaczenie drzew wyrażeń
+# <a name="translate-expression-trees"></a>Tłumaczenie drzew wyrażeń
 
 [Poprzednie — Kompilowanie wyrażeń](expression-trees-building.md)
 
@@ -61,7 +61,7 @@ Console.WriteLine(answer);
 Tworzenie nowego drzewa jest kombinacją odwiedzanych węzłów w istniejącym drzewie i tworzenie nowych węzłów i wstawianie ich do drzewa.
 
 Ten przykład pokazuje ważność drzew wyrażeń, które są niezmienne. Należy zauważyć, że nowe drzewo utworzone powyżej zawiera kombinację nowo utworzonych węzłów i węzłów z istniejącego drzewa. Jest to bezpieczne, ponieważ nie można modyfikować węzłów w istniejącym drzewie. Może to spowodować znaczne zwiększenie wydajności pamięci.
-Te same węzły można używać w całym drzewie lub w wielu drzewach wyrażeń. Ponieważ węzły nie mogą być modyfikowane, ten sam węzeł może być ponownie używany w dowolnym momencie.
+Te same węzły można używać w całym drzewie lub w wielu drzewach wyrażeń. Ponieważ węzły nie mogą być modyfikowane, ten sam węzeł może być ponownie używany w każdym przypadku, gdy jest to konieczne.
 
 ## <a name="traversing-and-executing-an-addition"></a>Przechodzenie i wykonywanie dodawania
 
@@ -91,7 +91,7 @@ Console.WriteLine(theSum);
 ```
 
 W tym miejscu jest dość dużo kodu, ale koncepcje są bardzo podejścia.
-Ten kod wizytuje elementy podrzędne na głębokości pierwszego wyszukiwania. Gdy napotka węzeł stały, odwiedzający zwraca wartość stałej. Po odwiedzeniu obu elementów podrzędnych osoby odwiedzające będą obliczać sumę obliczoną dla tego poddrzewa. Węzeł dodawania może teraz obliczyć jego sumę.
+Ten kod wizytuje elementy podrzędne na głębokości pierwszego wyszukiwania. Gdy napotka węzeł stały, odwiedzający zwraca wartość stałej. Po odwiedzeniu obu elementów podrzędnych osoba odwiedzająca będzie obliczać sumę obliczoną dla tego poddrzewa. Węzeł dodawania może teraz obliczyć jego sumę.
 Po odwiedzeniu wszystkich węzłów w drzewie wyrażenia suma zostanie obliczona. Wykonanie można śledzić przez uruchomienie przykładu w debugerze i śledzenie wykonania.
 
 Ułatwiamy śledzenie sposobu analizowania węzłów i sposobu obliczania sumy przez przechodzenie przez drzewo. Oto zaktualizowana wersja metody agregującej, która zawiera dość kilka informacji o śledzeniu:

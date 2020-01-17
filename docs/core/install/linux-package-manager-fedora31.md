@@ -1,21 +1,21 @@
 ---
-title: Instalowanie programu .NET Core w systemie openSUSE 15 — Menedżer pakietów — .NET Core
-description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe na openSUSE 15 przy użyciu Menedżera pakietów.
+title: Instalowanie programu .NET Core w systemie Fedora 31 — Menedżer pakietów — .NET Core
+description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe w systemie Fedora 31 przy użyciu Menedżera pakietów.
 author: thraka
 ms.author: adegeo
-ms.date: 12/26/2019
-ms.openlocfilehash: ae0f6664c0545ceb047cd9b110fe3f26740e5816
+ms.date: 12/17/2019
+ms.openlocfilehash: 25c670694ed2d9e89fe37cedf0b06efd8bc93293
 ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116165"
+ms.locfileid: "76116967"
 ---
-# <a name="opensuse-15-package-manager---install-net-core"></a>openSUSE 15 Package Manager — Instalowanie programu .NET Core
+# <a name="fedora-31-package-manager---install-net-core"></a>Menedżer pakietów Fedora 31 — Instalowanie programu .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-W tym artykule opisano, jak za pomocą Menedżera pakietów zainstalować platformę .NET Core w systemie openSUSE 15. Jeśli instalujesz środowisko uruchomieniowe, zalecamy zainstalowanie [ASP.NET Core środowiska uruchomieniowego](#install-the-aspnet-core-runtime), ponieważ zawiera on zarówno środowisko uruchomieniowe programu .NET Core, jak i ASP.NET Core.
+W tym artykule opisano sposób użycia Menedżera pakietów do zainstalowania platformy .NET Core w systemie Fedora 31. Jeśli instalujesz środowisko uruchomieniowe, zalecamy zainstalowanie [ASP.NET Core środowiska uruchomieniowego](#install-the-aspnet-core-runtime), ponieważ zawiera on zarówno środowisko uruchomieniowe programu .NET Core, jak i ASP.NET Core.
 
 ## <a name="register-microsoft-key-and-feed"></a>Rejestrowanie klucza firmy Microsoft i źródła danych
 
@@ -30,11 +30,8 @@ Te operacje należy wykonać tylko jeden raz na każdej maszynie.
 Otwórz Terminal i uruchom następujące polecenia.
 
 ```bash
-sudo zypper install libicu
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-wget -q https://packages.microsoft.com/config/opensuse/15/prod.repo
-sudo mv prod.repo /etc/zypp/repos.d/microsoft-prod.repo
-sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
+sudo wget -q -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/31/prod.repo
 ```
 
 ## <a name="install-the-net-core-sdk"></a>Zainstaluj zestaw .NET Core SDK
@@ -42,7 +39,7 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 Zaktualizuj produkty dostępne do zainstalowania, a następnie Zainstaluj zestaw .NET Core SDK. W terminalu uruchom następujące polecenie.
 
 ```bash
-sudo zypper install dotnet-sdk-3.1
+sudo dnf install dotnet-sdk-3.1
 ```
 
 ## <a name="install-the-aspnet-core-runtime"></a>Zainstaluj środowisko uruchomieniowe ASP.NET Core
@@ -50,7 +47,7 @@ sudo zypper install dotnet-sdk-3.1
 Zaktualizuj produkty dostępne do zainstalowania, a następnie zainstaluj środowisko uruchomieniowe ASP.NET. W terminalu uruchom następujące polecenie.
 
 ```bash
-sudo zypper install aspnetcore-runtime-3.1
+sudo dnf install aspnetcore-runtime-3.1
 ```
 
 ## <a name="install-the-net-core-runtime"></a>Instalowanie środowiska uruchomieniowego platformy .NET Core
@@ -58,7 +55,7 @@ sudo zypper install aspnetcore-runtime-3.1
 Zaktualizuj produkty dostępne do zainstalowania, a następnie zainstaluj środowisko uruchomieniowe programu .NET Core. W terminalu uruchom następujące polecenie.
 
 ```bash
-sudo zypper install dotnet-runtime-3.1
+sudo dnf install dotnet-runtime-3.1
 ```
 
 ## <a name="how-to-install-other-versions"></a>Jak zainstalować inne wersje

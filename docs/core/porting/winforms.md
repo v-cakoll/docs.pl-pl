@@ -4,12 +4,12 @@ description: Naucz się, w jaki sposób portować .NET Framework aplikację Wind
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.openlocfilehash: b1048c2d725a2bcf8398af1d2d53f40efc36c82e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936965"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116024"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Jak przenieść aplikację klasyczną Windows Forms na platformę .NET Core
 

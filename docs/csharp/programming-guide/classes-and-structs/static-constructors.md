@@ -5,12 +5,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 27a7cbb1490f42811c79778382063980f3828395
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 7b8171e75bbd27a1079f2c6cc1b7aef6400d7419
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964091"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115765"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Konstruktory statyczne (Przewodnik programowania w języku C#)
 Statyczny Konstruktor jest używany do inicjowania wszelkich danych [statycznych](../../language-reference/keywords/static.md) lub wykonywania określonej akcji, która musi zostać wykonana tylko raz. Jest wywoływana automatycznie przed utworzeniem pierwszego wystąpienia lub odwołaniem do jakiegokolwiek statycznego członka.  
@@ -30,7 +30,7 @@ Konstruktory statyczne mają następujące właściwości:
 
 - Użytkownik nie ma kontroli nad tym, kiedy Konstruktor statyczny jest wykonywany w programie.
   
-- Statyczny Konstruktor jest automatycznie wywoływany w celu zainicjowania [klasy](../../language-reference/keywords/class.md) przed utworzeniem pierwszego wystąpienia lub odwołania do jakichkolwiek statycznych elementów członkowskich. Statyczny Konstruktor zostanie uruchomiony przed konstruktorem wystąpienia. Należy zauważyć, że statyczny Konstruktor typu jest wywoływany, gdy metoda statyczna przypisana do zdarzenia lub delegata jest wywoływana, a nie w momencie przypisania. Jeśli inicjatory zmiennych pól statycznych są obecne w klasie konstruktora statycznego, zostaną one wykonane w kolejności tekstowej, w której pojawiają się w deklaracji klasy bezpośrednio przed wykonaniem konstruktora statycznego.
+- Statyczny Konstruktor jest automatycznie wywoływany w celu zainicjowania [klasy](../../language-reference/keywords/class.md) przed utworzeniem pierwszego wystąpienia lub odwołania do jakichkolwiek statycznych elementów członkowskich. Statyczny Konstruktor zostanie uruchomiony przed konstruktorem wystąpienia. Statyczny Konstruktor typu jest wywoływany, gdy metoda statyczna przypisana do zdarzenia lub delegata jest wywoływana, a nie podczas przypisywania. Jeśli inicjatory zmiennych pól statycznych są obecne w klasie konstruktora statycznego, zostaną one wykonane w kolejności tekstowej, w której pojawiają się w deklaracji klasy bezpośrednio przed wykonaniem konstruktora statycznego.
 
 - Jeśli nie postanowisz statycznego konstruktora do zainicjowania pól statycznych, wszystkie pola statyczne są inicjowane do ich wartości domyślnej, jak wymieniono w [domyślnych wartości C# typów](../../language-reference/builtin-types/default-values.md).
   

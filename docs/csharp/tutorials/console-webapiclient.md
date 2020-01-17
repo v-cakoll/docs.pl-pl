@@ -3,12 +3,12 @@ title: Tworzenie klienta REST przy użyciu platformy .NET Core
 description: W tym samouczku przedstawiono szereg funkcji platformy .NET Core i C# języka.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 9478966598a9aaa1e9f592b72afce8f878a38abf
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 85a3c8e17e14db86786950380ba745ae286dccca
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964410"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115875"
 ---
 # <a name="rest-client"></a>Klient REST
 
@@ -42,7 +42,7 @@ Pierwszym krokiem jest utworzenie nowej aplikacji. Otwórz wiersz polecenia i Ut
 dotnet new console --name WebApiClient
 ```
 
-Spowoduje to utworzenie plików początkowych dla podstawowej aplikacji "Hello world". Nazwa projektu to "WebApiClient". Ponieważ jest to nowy projekt, nie są stosowane żadne zależności, więc pierwsze uruchomienie spowoduje pobranie platformy .NET Core, zainstalowanie certyfikatu deweloperskiego i uruchomienie Menedżera pakietów NuGet w celu przywrócenia brakujących zależności.
+Spowoduje to utworzenie plików początkowych dla podstawowej aplikacji "Hello world". Nazwa projektu to "WebApiClient". Ponieważ jest to nowy projekt, żadne zależności nie są stosowane. Pierwsze uruchomienie spowoduje pobranie platformy .NET Core, zainstalowanie certyfikatu deweloperskiego i uruchomienie Menedżera pakietów NuGet w celu przywrócenia brakujących zależności.
 
 Przed rozpoczęciem wprowadzania modyfikacji wpisz `dotnet run` ([Zobacz Uwaga](#dotnet-restore-note)) w wierszu polecenia, aby uruchomić aplikację. `dotnet run` automatycznie wykonuje `dotnet restore`, jeśli w środowisku nie ma zależności. Wykonuje również `dotnet build`, jeśli aplikacja musi zostać odbudowana.
 Po wstępnej konfiguracji wystarczy uruchomić `dotnet restore` lub `dotnet build`, gdy ma to sens dla projektu.

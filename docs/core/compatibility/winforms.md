@@ -2,16 +2,34 @@
 title: Windows Forms istotne zmiany — .NET Core
 description: Wyświetla listę istotnych zmian w Windows Forms dla platformy .NET Core.
 ms.date: 01/08/2020
-ms.openlocfilehash: cde76369bcb65a87fde1437c8bf8fd3b3c19a0c7
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 44bcde60f9e08d2e06a69c55e4ebe904bf5c449b
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937122"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116456"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Istotne zmiany w Windows Forms
 
 Obsługa Windows Forms została dodana do programu .NET Core w wersji 3,0. W tym artykule wymieniono istotne zmiany Windows Forms przez wersję programu .NET Core, w której zostały wprowadzone. W przypadku uaktualniania aplikacji Windows Forms z .NET Framework lub poprzedniej wersji platformy .NET Core (3,0 lub nowszej) ten artykuł dotyczy Ciebie.
+
+Następujące istotne zmiany zostały udokumentowane na tej stronie:
+
+- [Usunięte kontrolki](#removed-controls)
+- [Zdarzenie CellFormatting nie zostało zgłoszone, jeśli jest wyświetlana etykietka narzędzia](#cellformatting-event-not-raised-if-tooltip-is-shown)
+- [Formant. DefaultFont został zmieniony na Segoe UI 9 pt](#default-control-font-changed-to-segoe-ui-9-pt)
+- [Modernizacja FolderBrowserDialog](#modernization-of-the-folderbrowserdialog)
+- [SerializableAttribute usunięte z niektórych typów Windows Forms](#serializableattribute-removed-from-some-windows-forms-types)
+- [Nieobsługiwany przełącznik zgodności AllowUpdateChildControlIndexForTabControls](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
+- [Przełącznik zgodności DomainUpDown. UseLegacyScrolling nie jest obsługiwany](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
+- [Nieobsługiwany przełącznik zgodności DoNotLoadLatestRichEditControl](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
+- [Nieobsługiwany przełącznik zgodności DoNotSupportSelectAllShortcutInMultilineTextBox](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
+- [Nieobsługiwany przełącznik zgodności DontSupportReentrantFilterMessage](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
+- [Nieobsługiwany przełącznik zgodności EnableVisualStyleValidation](#enablevisualstylevalidation-compatibility-switch-not-supported)
+- [Nieobsługiwany przełącznik zgodności UseLegacyContextMenuStripSourceControlValue](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
+- [Nieobsługiwany przełącznik zgodności UseLegacyImages](#uselegacyimages-compatibility-switch-not-supported)
+- [Zmiana dostępu do elementu AccessibleObject. RuntimeIDFirstItem](#change-of-access-for-accessibleobjectruntimeidfirstitem)
+- [Zduplikowane interfejsy API zostały usunięte z Windows Forms](#duplicated-apis-removed-from-windows-forms)
 
 ## <a name="net-core-31"></a>.NET Core 3,1
 
@@ -20,6 +38,8 @@ Obsługa Windows Forms została dodana do programu .NET Core w wersji 3,0. W tym
 ***
 
 [!INCLUDE[CellFormatting event](~/includes/core-changes/windowsforms/3.1/cellformatting-event-not-raised.md)]
+
+***
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
@@ -72,6 +92,8 @@ Obsługa Windows Forms została dodana do programu .NET Core w wersji 3,0. W tym
 ***
 
 [!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/3.0/remove-duplicated-apis.md)]
+
+***
 
 ## <a name="see-also"></a>Zobacz także
 

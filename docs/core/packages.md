@@ -3,14 +3,14 @@ title: Pakiety, aplikacje i struktury — .NET Core
 description: Poznaj terminologię dotyczącą pakietów, pakietów i struktur.
 author: richlander
 ms.date: 06/20/2016
-ms.openlocfilehash: bd40ca603aaa9685fca9934368895bf7e945d962
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6a8e257ebf493365518dd9663fbd2a9cadc83875
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715505"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116068"
 ---
-# <a name="packages-metapackages-and-frameworks"></a>Pakiety, aplikacje i struktury
+# <a name="packages-metapackages-and-frameworks"></a>Pakiety, metapakiety i struktury
 
 .NET Core to platforma przeprowadzona przez pakiety NuGet. Niektóre z nich korzystają z szczegółowej definicji pakietów, a inne z nich są bardzo duże. Aby zapewnić tę podwójność, produkt jest dystrybuowany jako szczegółowy zestaw pakietów i w grubszych fragmentach z typem pakietu nieformalnie nazywanym [pakietem](#metapackages).
 
@@ -18,7 +18,7 @@ Każdy pakiet .NET Core obsługuje uruchamianie w wielu implementacjach platform
 
 ## <a name="packages"></a>Pakiety
 
-Platforma .NET Core jest podzielona na zestaw pakietów, które zapewniają elementy pierwotne, typy danych wyższego poziomu, typy kompozycji aplikacji i typowe narzędzia. Każdy z tych pakietów reprezentuje pojedynczy zestaw o tej samej nazwie. Na przykład [System. Runtime](https://www.nuget.org/packages/System.Runtime) zawiera system. Runtime. dll. 
+Platforma .NET Core jest podzielona na zestaw pakietów, które udostępniają elementy pierwotne, typy danych wyższego poziomu, typy kompozycji aplikacji i typowe narzędzia. Każdy z tych pakietów reprezentuje pojedynczy zestaw o tej samej nazwie. Na przykład [pakiet System. Runtime](https://www.nuget.org/packages/System.Runtime) zawiera system. Runtime. dll. 
 
 Istnieją zalety definiowania pakietów w sposób szczegółowy:
 
@@ -108,7 +108,7 @@ Dwie podstawowe struktury oparte na pakietach używane z platformą .NET Core to
 
 ### <a name="net-standard"></a>.NET Standard
 
-.NET Standard ([moniker struktury docelowej](../standard/frameworks.md): `netstandard`) reprezentuje interfejsy API zdefiniowane przez i utworzone na podstawie [.NET Standard](../standard/net-standard.md). Biblioteki przeznaczone do uruchamiania w wielu środowiskach uruchomieniowych powinny wskazywać tę strukturę. Będą one obsługiwane we wszystkich .NET Standard zgodnych środowiska uruchomieniowego, takich jak .NET Core, .NET Framework i mono/Xamarin. Każdy z tych środowisk uruchomieniowych obsługuje zestaw wersji .NET Standard, w zależności od tego, które interfejsy API implementują.
+.NET Standard ([moniker struktury docelowej](../standard/frameworks.md): `netstandard`) reprezentuje interfejsy API zdefiniowane przez i utworzone na podstawie [.NET Standard](../standard/net-standard.md). Biblioteki przeznaczone do uruchamiania w wielu środowiskach uruchomieniowych powinny wskazywać tę strukturę. Będą one obsługiwane w przypadku środowiska uruchomieniowego zgodnego z .NET Standard, takiego jak .NET Core, .NET Framework i mono/Xamarin. Każdy z tych środowisk uruchomieniowych obsługuje zestaw wersji .NET Standard, w zależności od tego, które interfejsy API implementują.
 
 Platforma `netstandard` niejawnie odwołuje się do [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) pakietu. Na przykład następujący plik projektu MSBuild wskazuje, że projekt jest przeznaczony `netstandard1.6`, który odwołuje się do pakietu [`NETStandard.Library` w wersji 1,6](https://www.nuget.org/packages/NETStandard.Library/1.6.0) .
 

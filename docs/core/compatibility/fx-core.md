@@ -2,12 +2,12 @@
 title: Istotne zmiany — .NET Framework do platformy .NET Core
 description: Wyświetla listę istotnych zmian z .NET Framework do programu .NET Core.
 ms.date: 12/18/2019
-ms.openlocfilehash: 9f4ecc8a9de7279bb4b222b3df77e1eb17b33f0a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 6959bffab62cabc524062231db989de45c8c1498
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937393"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116491"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Istotne zmiany dotyczące migracji z .NET Framework do platformy .NET Core
 
@@ -18,11 +18,7 @@ W przypadku migrowania aplikacji z programu .NET Framework do programu .NET Core
 
 ## <a name="corefx"></a>CoreFx
 
-Zmiany powodujące niezgodność:
-
 - [Zmień wartość domyślną UseShellExecute](#change-in-default-value-of-useshellexecute)
-
-***
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -33,8 +29,6 @@ Zmiany powodujące niezgodność:
 ## <a name="windows-forms"></a>Windows Forms
 
 Obsługa Windows Forms została dodana do programu .NET Core w wersji 3,0. W przypadku migrowania aplikacji Windows Forms z .NET Framework do platformy .NET Core zmiany wymienione w tym miejscu mogą mieć wpływ na aplikację.
-
-Zmiany powodujące niezgodność:
 
 - [Usunięte kontrolki](#removed-controls)
 - [Zdarzenie CellFormatting nie zostało zgłoszone, jeśli jest wyświetlana etykietka narzędzia](#cellformatting-event-not-raised-if-tooltip-is-shown)

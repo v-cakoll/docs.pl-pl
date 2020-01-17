@@ -2,12 +2,12 @@
 title: Dodatki do formatu csproj dla platformy .NET Core
 description: Dowiedz się więcej o różnicach między istniejącymi a plikami csproj programu .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 4a05709da63c4f6a200039ba5dd59358c700130e
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: da066625b445eca9186acedf06a941564921a6dd
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899880"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115841"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -366,7 +366,7 @@ Ta wartość logiczna wskazuje, czy proces pakietu powinien utworzyć pakiet źr
 
 ### <a name="istool"></a>Istool
 
-Określa, czy wszystkie pliki wyjściowe są kopiowane do folderu *Tools* zamiast folderu *lib* . Należy zauważyć, że różni się to od `DotNetCliTool`, który jest określony przez ustawienie `PackageType` w pliku *. csproj* .
+Określa, czy wszystkie pliki wyjściowe są kopiowane do folderu *Tools* zamiast folderu *lib* . Różni się to od `DotNetCliTool`, który jest określany przez ustawienie `PackageType` w pliku *. csproj* .
 
 ### <a name="repositoryurl"></a>RepositoryUrl
 
@@ -392,7 +392,7 @@ Określa minimalną wersję klienta NuGet, który może zainstalować ten pakiet
 
 ### <a name="includebuildoutput"></a>IncludeBuildOutput
 
-Te wartości logiczne określają, czy zestawy danych wyjściowych kompilacji powinny być pakowane do pliku *. nupkg* , czy nie.
+Ta wartość logiczna określa, czy zestawy danych wyjściowych kompilacji powinny być pakowane do pliku *. nupkg* , czy nie.
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
 

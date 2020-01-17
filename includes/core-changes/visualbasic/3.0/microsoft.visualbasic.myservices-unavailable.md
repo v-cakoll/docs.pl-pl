@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 58e65bae1593f23945a971b896a1db4a929b4587
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: d207a937917da78f6b902ad8ca4f02fa9a46c2e1
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567411"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116371"
 ---
 ### <a name="types-in-microsoftvisualbasicmyservices-namespace-not-available"></a>Typy w przestrzeni nazw Microsoft. VisualBasic. WebServices są niedostępne
 
@@ -14,7 +14,7 @@ Typy w przestrzeni nazw <xref:Microsoft.VisualBasic.MyServices?displayProperty=f
 
 .NET Core 3,0 (wersja zapoznawcza 8)
 
-#### <a name="change-description"></a>Zmień opis
+#### <a name="change-description"></a>Opis zmiany
 
 Typy w przestrzeni nazw <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> były dostępne w niektórych wersjach programu .NET Core 3,0 Preview. Nie są już dostępne począwszy od programu .NET Core 3,0 w wersji zapoznawczej 9.
 
@@ -45,5 +45,4 @@ Język Visual Basic
 
 - `N:Microsoft.VisualBasic.MyServices`
 
--- >
-
+-->

@@ -2,19 +2,19 @@
 title: Wystąpienia na sekundę
 ms.date: 03/30/2017
 ms.assetid: 74579397-1058-4278-80cf-2d00854a480f
-ms.openlocfilehash: f0797c38a5eb7399817eaf6aad9fb5b6ecbfab89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ae0b83066b22187ce062596a62e9d17aa2acd45
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916500"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163803"
 ---
 # <a name="instances-per-second"></a>Wystąpienia na sekundę
-Nazwa komputera: Wystąpienia utworzone w ciągu sekundy.  
+Nazwa licznika: wystąpienia tworzone na sekundę.  
   
 ## <a name="description"></a>Opis  
- Łączna liczba wystąpień usługi utworzone w ciągu sekundy.  
+ Łączna liczba wystąpień usługi utworzonych w drugim.  
   
- Ten licznik jest typ licznika wydajności [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), którego wartość jest obliczana przy użyciu następującej formuły.  
+ Ten licznik jest typem licznika wydajności [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10)), którego wartość jest obliczana przy użyciu następującej formuły.  
   
- (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)
+ (N 1-N 0)/((D 1-D 0)/F)

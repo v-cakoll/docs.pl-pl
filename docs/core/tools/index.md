@@ -2,16 +2,16 @@
 title: Narzędzia interfejsu wiersza polecenia (CLI) platformy .NET Core
 description: Omówienie narzędzi i funkcji interfejsu wiersza polecenia (CLI) platformy .NET Core.
 ms.date: 08/14/2017
-ms.openlocfilehash: b3bffb47ff973bd0da90e3f943e817756e563138
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f19dcb19fb9d0203b3d3795c3fdc0b026c4c60e3
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714148"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163218"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Narzędzia interfejsu wiersza polecenia (CLI) platformy .NET Core
 
-Interfejs wiersza polecenia platformy .NET Core (CLI) to nowe Międzyplatformowe łańcucha narzędzi do tworzenia aplikacji platformy .NET. Interfejs wiersza polecenia jest podstawą, na której można zawiesić narzędzia wyższego poziomu, takie jak zintegrowane środowiska deweloperskie (środowisk IDE), Edytory i koordynatorzy kompilacji.
+Interfejs wiersza polecenia (CLI) platformy .NET Core to Międzyplatformowy łańcucha narzędzi służący do tworzenia aplikacji platformy .NET. Interfejs wiersza polecenia jest podstawą, na której można zawiesić narzędzia wyższego poziomu, takie jak zintegrowane środowiska deweloperskie (środowisk IDE), Edytory i koordynatorzy kompilacji.
 
 ## <a name="installation"></a>Instalacja programu
 
@@ -28,7 +28,7 @@ Następujące polecenia są instalowane domyślnie:
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
 **Polecenia podstawowe**
 
@@ -36,7 +36,7 @@ Następujące polecenia są instalowane domyślnie:
 - [restore](dotnet-restore.md)
 - [utworzenia](dotnet-build.md)
 - [publish](dotnet-publish.md)
-- [run](dotnet-run.md)
+- [wykonane](dotnet-run.md)
 - [badan](dotnet-test.md)
 - [VSTest](dotnet-vstest.md)
 - [pakiet](dotnet-pack.md)
@@ -59,10 +59,10 @@ Następujące polecenia są instalowane domyślnie:
 - [Usuwanie NuGet](dotnet-nuget-delete.md)
 - [Ustawienia regionalne NuGet](dotnet-nuget-locals.md)
 - [wypychanie NuGet](dotnet-nuget-push.md)
-- [msbuild](dotnet-msbuild.md)
+- [MSBuild](dotnet-msbuild.md)
 - [skrypt instalacji dotnet](dotnet-install-script.md)
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 **Polecenia podstawowe**
 
@@ -70,7 +70,7 @@ Następujące polecenia są instalowane domyślnie:
 - [restore](dotnet-restore.md)
 - [utworzenia](dotnet-build.md)
 - [publish](dotnet-publish.md)
-- [run](dotnet-run.md)
+- [wykonane](dotnet-run.md)
 - [badan](dotnet-test.md)
 - [VSTest](dotnet-vstest.md)
 - [pakiet](dotnet-pack.md)
@@ -91,7 +91,7 @@ Następujące polecenia są instalowane domyślnie:
 - [Usuwanie NuGet](dotnet-nuget-delete.md)
 - [Ustawienia regionalne NuGet](dotnet-nuget-locals.md)
 - [wypychanie NuGet](dotnet-nuget-push.md)
-- [msbuild](dotnet-msbuild.md)
+- [MSBuild](dotnet-msbuild.md)
 - [skrypt instalacji dotnet](dotnet-install-script.md)
 
 ---
@@ -102,7 +102,7 @@ Interfejs wiersza polecenia przyjmuje model rozszerzalności, który pozwala okr
 
 Struktura poleceń interfejsu wiersza polecenia składa się ze [sterownika ("dotnet")](#driver), [polecenia](#command)oraz możliwych [argumentów](#arguments) i [opcji](#options)polecenia. Ten wzorzec jest widoczny w większości operacji interfejsu wiersza polecenia, takich jak tworzenie nowej aplikacji konsolowej i uruchamianie jej z poziomu wiersza poleceń, ponieważ następujące polecenia pokazują, że są wykonywane z katalogu o nazwie *my_app*:
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
 ```dotnetcli
 dotnet new console
@@ -110,7 +110,7 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet new console

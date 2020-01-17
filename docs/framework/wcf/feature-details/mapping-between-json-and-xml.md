@@ -2,31 +2,31 @@
 title: Mapowanie między formatami JSON i XML
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: 9049e622803396126890d4c88b9fee2a100f17c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0dbe37a07024ae70e574b92582715d2d2ef52e5c
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747742"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212089"
 ---
 # <a name="mapping-between-json-and-xml"></a>Mapowanie między formatami JSON i XML
-Czytniki i moduły zapisujące są produkowane przez <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> dostarczać interfejs API XML nad zawartością JavaScript Object Notation (JSON). JSON koduje dane za pomocą podzestawu literałów obiektu języka JavaScript. Czytniki i moduły zapisujące, generowane przez tę fabrykę są również używane podczas zawartość JSON jest wysyłane lub odbierane przez Windows Communication Foundation (WCF) aplikacji przy użyciu <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> lub <xref:System.ServiceModel.WebHttpBinding>.
+Czytelnicy i autorzy wytwarzani przez <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> udostępniają zawartość XML API over JavaScript Object Notation (JSON). KOD JSON koduje dane przy użyciu podzestawu literałów obiektów JavaScript. Czytelnicy i autorzy wytwarzani przez tę fabrykę są również używani, gdy zawartość JSON jest wysyłana lub odbierana przez aplikacje Windows Communication Foundation (WCF) przy użyciu <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> lub <xref:System.ServiceModel.WebHttpBinding>.
 
-Po zainicjowaniu z zawartością JSON, Czytelnik JSON zachowuje się w taki sam sposób, jak tekstową odczytującego XML obsługuje za pośrednictwem wystąpienia XML. Moduł zapisujący JSON, gdy podano sekwencję wywołań tworzącego na tekstowy odczytującego XML określone wystąpienie kodu XML, zapisuje zawartość JSON. Mapowanie między to wystąpienie XML i zawartość JSON jest opisane w tym temacie do użycia w zaawansowanych scenariuszach.
+Po zainicjowaniu z zawartością JSON, czytnik JSON zachowuje się tak samo, jak czytnik tekstowy XML w przypadku wystąpienia XML. Składnik zapisywania JSON, gdy dana sekwencja wywołań, które w czytniku tekstowym XML tworzy pewne wystąpienie XML, zapisuje zawartość JSON. Mapowanie między tym wystąpieniem XML a zawartością JSON zostało opisane w tym temacie do użycia w zaawansowanych scenariuszach.
 
-Wewnętrznie JSON jest reprezentowany jako zestaw informacji XML podczas przetwarzania przez architekturę WCF. Zwykle nie trzeba dotyczą tego wewnętrznej reprezentacji mapowanie jest tylko jeden logiczne: JSON jest zwykle nie fizycznie przekonwertować na format XML w pamięci lub konwersji do formatu JSON z pliku XML. Mapowanie oznacza, że interfejsów API XML są używane do uzyskiwania dostępu do zawartości w formacie JSON.
+Wewnętrznie, JSON jest reprezentowane jako sprawdzonych XML podczas przetwarzania przez WCF. Zwykle nie trzeba się omawiać w tej wewnętrznej reprezentacji, ponieważ mapowanie jest tylko logicznym: JSON zwykle nie jest fizycznie konwertowane na XML w pamięci lub konwertowane na notację JSON z pliku XML. Mapowanie oznacza, że interfejsy API XML są używane w celu uzyskania dostępu do zawartości JSON.
 
-Gdy WCF używa formatu JSON, zwykle scenariusza jest to, że <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> jest automatycznie zasilane z sieci przez <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> zachowanie, lub <xref:System.ServiceModel.Description.WebHttpBehavior> zachowanie, gdy jest to konieczne. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Rozumie mapowanie między formatami JSON i zestaw informacji XML i działa tak, jakby on bezpośrednio zajmuje się JSON. (Można użyć <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> z dowolnym odczytującego XML lub moduł zapisujący przy założeniu, że kod XML jest zgodny ze następującego mapowania.)
+Gdy WCF korzysta z JSON, typowym scenariuszem jest to, że <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> jest automatycznie podłączany przez zachowanie <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> lub przez zachowanie <xref:System.ServiceModel.Description.WebHttpBehavior>, gdy jest to konieczne. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> rozumie mapowanie między formatem JSON i sprawdzonych XML i działa tak, jakby dotyczyć bezpośrednio kodu JSON. (Możliwe jest użycie <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> z dowolnym czytelnikem lub modułem zapisu XML, co oznacza, że kod XML jest zgodny z poniższym mapowaniem).
 
-W zaawansowanych scenariuszach może być konieczne uzyskiwania bezpośredniego dostępu do następującego mapowania. Tych scenariuszy wystąpić, gdy użytkownik chce serializacji i deserializacji JSON w niestandardowy sposób, bez konieczności polegania na <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, lub podczas pracy z <xref:System.ServiceModel.Channels.Message> typu bezpośrednio dla wiadomości zawierające JSON. Mapowanie JSON XML służy do rejestrowania komunikatów. Korzystając z funkcji rejestrowania wiadomości w usłudze WCF, komunikatów JSON jest rejestrowane jako XML zgodnie z mapowania opisane w następnej sekcji.
+W zaawansowanych scenariuszach może być konieczne uzyskanie bezpośredniego dostępu do poniższego mapowania. Te scenariusze występują, gdy chcesz serializować i deserializować kod JSON w sposób niestandardowy, bez polegania na <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>lub w przypadku <xref:System.ServiceModel.Channels.Message> typu bezpośrednio dla komunikatów zawierających kod JSON. Mapowanie JSON-XML jest również używane do rejestrowania komunikatów. W przypadku korzystania z funkcji rejestrowania komunikatów w programie WCF komunikaty JSON są rejestrowane jako XML zgodnie z mapowaniem opisanym w następnej sekcji.
 
-Wyjaśnienie pojęcia mapowania, poniższy przykład jest dokumentu JSON.
+Aby wyjaśnić koncepcję mapowania, Poniższy przykład jest dokumentem JSON.
 
 ```json
 {"product":"pencil","price":12}
 ```
 
-Aby odczytać dokument JSON przy użyciu jednej z czytników wcześniej wspomniano, należy użyć taką samą sekwencję <xref:System.Xml.XmlDictionaryReader> wywołuje się, jak w przypadku przeczytaj następujący dokument XML.
+Aby odczytać ten dokument JSON przy użyciu jednego z wymienionych wcześniej czytników, Użyj tej samej sekwencji <xref:System.Xml.XmlDictionaryReader> wywołań, co pozwoli odczytać następujący dokument XML.
 
 ```xml
 <root type="object">
@@ -35,45 +35,46 @@ Aby odczytać dokument JSON przy użyciu jednej z czytników wcześniej wspomnia
 </root>
 ```
 
-Ponadto jeśli komunikat JSON w przykładzie jest odbierany przez architekturę WCF i rejestrowany, zobacz fragment XML w poprzednim dziennika.
+Ponadto, jeśli komunikat JSON w przykładzie jest odbierany przez WCF i rejestrowany, w poprzednim dzienniku zobaczysz fragment kodu XML.
 
-## <a name="mapping-between-json-and-the-xml-infoset"></a>Mapowanie między formatami JSON i zestaw informacji XML
-Formalnie, mapowanie jest między JSON, zgodnie z opisem w [RFC 4627](https://go.microsoft.com/fwlink/?LinkId=98808) (z wyjątkiem z pewnymi ograniczeniami swobodna i niektóre inne ograniczenia, które dodano) oraz XML zestaw informacji (i nie tekstowych XML) jako opisanych w [informacji XML Ustaw](https://go.microsoft.com/fwlink/?LinkId=98809). Zobacz ten temat, aby uzyskać definicje *elementy informacji* i pól w [kwadratowych].
+## <a name="mapping-between-json-and-the-xml-infoset"></a>Mapowanie między elementami JSON i sprawdzonych XML
 
-Pusty dokument JSON mapowany na pusty dokument XML, a pusty dokument XML jest mapowany na pusty dokument JSON. W pliku XML do mapowania JSON poprzedzających biały znak i końcowe biały znak po dokumentu nie są dozwolone.
+Od tego momentu mapowanie ma postać między kodem JSON opisanym w [dokumencie RFC 4627](https://www.ietf.org/rfc/rfc4627.txt) (z wyjątkiem pewnych ograniczeń, które są ograniczone i niektóre inne ograniczenia) oraz XML sprawdzonych (i nie tekst XML) zgodnie z opisem w [zestawie informacji XML](https://www.w3.org/TR/2004/REC-xml-infoset-20040204/). Zapoznaj się z tym tematem definicje elementów i pól *informacji* w [nawiasy kwadratowe].
 
-Mapowanie jest zdefiniowane między albo element informacji dokumentu (DII) lub Element informacji elementu (EII) i JSON. EII lub właściwości [element dokumentu] DII, nazywa się głównym elementem JSON. Należy pamiętać, że fragmenty dokumentu (XML z wieloma elementami katalogu głównego) nie są obsługiwane w to mapowanie.
+Pusty dokument JSON jest mapowany do pustego dokumentu XML, a pusty dokument XML jest mapowany do pustego dokumentu JSON. W przypadku mapowania XML do formatu JSON poprzedzający biały znak i końcowe białe znaki po dokumencie są niedozwolone.
 
-Przykład: Następujący dokument:
+Mapowanie jest zdefiniowane między elementem informacji o dokumencie (DII) lub elementem informacji o elemencie (EII) i JSON. EII lub właściwość DII [Document element] jest określana mianem głównego elementu JSON. Należy zauważyć, że fragmenty dokumentu (XML z wieloma elementami głównymi) nie są obsługiwane w ramach tego mapowania.
+
+Przykład: następujący dokument:
 
 ```xml
 <?xml version="1.0"?>
 <root type="number">42</root>
 ```
 
-I następującego elementu:
+I następujący element:
 
 ```xml
 <root type="number">42</root>
 ```
 
-Zarówno ma mapowania do formatu JSON. <`root`> Element jest elementem głównym JSON w obu przypadkach.
+Oba mają mapowanie na format JSON. Element <`root`> jest głównym elementem JSON w obu przypadkach.
 
-Ponadto w przypadku DII, należy rozważyć:
+Ponadto w przypadku DII należy wziąć pod uwagę następujące kwestie:
 
-- Niektóre elementy na liście [dzieci] nie może być obecny. Nie należy polegać na ten fakt, odczytując XML mapowania z formatu JSON.
+- Niektóre elementy na liście [Children] nie mogą być obecne. Nie należy polegać na tym fakcie podczas odczytywania kodu XML zamapowanego z formatu JSON.
 
-- Listy [dzieci] zawiera Brak komentarza elementy informacji.
+- Lista [Children] nie zawiera żadnych elementów informacji o komentarzach.
 
-- Listy [dzieci] przechowuje informacje elementów DTD.
+- Lista [Children] nie zawiera żadnych elementów informacji DTD.
 
-- Listy [dzieci] nie zawiera żadnych elementów informacji osobistych (PI) ( `<?xml…>` deklaracja nie jest uważany za element informacji PI)
+- Lista [Children] nie zawiera żadnych elementów informacji osobistych (PI) (Deklaracja `<?xml…>` nie jest uważana za element informacji o liczbie PI)
 
-- Zestaw [notacji] jest pusty.
+- Zestaw [Notations] jest pusty.
 
-- Zestaw [nieanalizowanych jednostek] jest pusty.
+- Zestaw [nieanalizowane jednostki] jest pusty.
 
-Przykład: Ten dokument ma nie mapowania na format JSON ponieważ przechowuje [dzieci] PI i komentarz.
+Przykład: następujący dokument nie ma mapowania na kod JSON, ponieważ element [Children] zawiera znak PI i komentarz.
 
 ```xml
 <?xml version="1.0"?>
@@ -81,74 +82,74 @@ Przykład: Ten dokument ma nie mapowania na format JSON ponieważ przechowuje [d
 <root type="number">42</root>
 ```
 
-EII dla elementu JSON głównego ma następującą charakterystykę:
+EII dla głównego elementu JSON ma następującą charakterystykę:
 
-- [Nazwa lokalnego] ma wartość "root".
+- [nazwa lokalna] ma wartość "root".
 
 - [nazwa przestrzeni nazw] nie ma wartości.
 
 - [prefix] nie ma wartości.
 
-- [dzieci] może zawierać EIIs, (które reprezentują elementy wewnętrzne, zgodnie z opisem w dalszej) lub CIIs (znak informacji elementów zgodnie z opisem w dalszej) lub żadna z tych, ale nie oba.
+- [elementy podrzędne] mogą zawierać EIIs (reprezentujący elementy wewnętrzne zgodnie z opisem) lub CIIs (elementy informacji o znakach, jak opisano w dalszej części) lub żadne z nich, ale nie oba.
 
-- [atrybuty] może zawierać następujące elementy informacji opcjonalnego atrybutu (AIIs)
+- [atrybuty] mogą zawierać następujące opcjonalne elementy informacji o atrybucie (AIIs)
 
-- Atrybut typu JSON ("type") zgodnie z opisem w dalszej. Ten atrybut służy do zachowania typu JSON (ciąg, liczba, wartość logiczna, obiektu, tablicy lub wartość null) zamapowanego pliku XML.
+- Atrybut typu JSON ("Type"), zgodnie z opisem w dalszej postaci. Ten atrybut służy do zachowania typu JSON (ciąg, liczba, wartość logiczna, obiekt, tablica lub wartość null) w mapowanym kodzie XML.
 
-- Atrybut Name kontraktu danych ("\_\_typu") zgodnie z opisem w dalszej. Ten atrybut jest tylko mogą być obecne [znormalizowaną wartość] to "obiekt", jeśli jest również obecny atrybut typu JSON. Ten atrybut jest używany przez `DataContractJsonSerializer` zachować kontraktu danych informacji o typie — na przykład w przypadku polimorficznych gdzie typem pochodnym jest serializowana, a oczekiwano typu podstawowego. Jeśli nie pracujesz z `DataContractJsonSerializer`, w większości przypadków, ten atrybut jest ignorowany.
+- Atrybut nazwy kontraktu danych ("\_\_typ"), zgodnie z opisem w dalszej postaci. Ten atrybut jest dostępny tylko wtedy, gdy atrybut typu JSON jest również obecny i jego [znormalizowana wartość] to "Object". Ten atrybut jest używany przez `DataContractJsonSerializer` do zachowania informacji o typie kontraktu danych — na przykład w przypadkach polimorficznych, w których typ pochodny jest serializowany i gdy oczekiwany jest typ podstawowy. Jeśli nie pracujesz z `DataContractJsonSerializer`, w większości przypadków ten atrybut jest ignorowany.
 
-- [w zakresie namespaces] zawiera powiązania "xml" do `http://www.w3.org/XML/1998/namespace` nieużywanie przez specyfikację zestaw informacji.
+- [przestrzenie nazw w zakresie] zawierają powiązanie "XML" do `http://www.w3.org/XML/1998/namespace` zgodnie z zaleceniami specyfikacji sprawdzonych.
 
-- [dzieci], [atrybuty] i [w zakresie namespaces] nie może mieć żadnych elementów innych niż określony wcześniej i [atrybuty z przestrzeni nazw] musi mieć żadnych elementów członkowskich, ale nie należy polegać na następujące fakty, podczas odczytywania pliku XML mapowane z formatu JSON.
+- [elementy podrzędne], [atrybuty] i [przestrzenie nazw w zakresie] nie mogą zawierać elementów innych niż określone wcześniej, a [atrybuty przestrzeni nazw] nie mogą mieć żadnych elementów członkowskich, ale nie należy polegać na tych faktach podczas odczytywania danych XML mapowanych z formatu JSON.
 
-Przykład: Ten dokument ma nie mapowania na format JSON ponieważ [atrybuty z przestrzeni nazw] nie jest pusty.
+Przykład: następujący dokument nie ma mapowania na kod JSON, ponieważ atrybuty [Namespace] nie są puste.
 
 ```xml
 <?xml version="1.0"?>
 <root xmlns:a="myattributevalue">42</root>
 ```
 
-Wszystko dla atrybutu typu JSON ma następującą charakterystykę:
+WSZYSTKO dla atrybutu typu JSON ma następującą charakterystykę:
 
 - [nazwa przestrzeni nazw] nie ma wartości.
 - [prefix] nie ma wartości.
-- [Nazwa lokalnego] jest "type".
-- [wartość znormalizowana] to jedna z wartości możliwych typów, opisanych w poniższej sekcji.
-- [] jest `true`.
-- [atrybutu type] nie ma wartości.
-- [odwołania] nie ma wartości.
+- [nazwa lokalna] to "typ".
+- [znormalizowana wartość] to jedno z możliwych wartości typu opisanych w poniższej sekcji.
+- [określony] jest `true`.
+- [typ atrybutu] nie ma wartości.
+- [References] nie ma wartości.
 
-Wszystko dla atrybutu Name kontraktu danych ma następującą charakterystykę:
+WSZYSTKO dla atrybutu nazwy kontraktu danych ma następującą charakterystykę:
 
 - [nazwa przestrzeni nazw] nie ma wartości.
 - [prefix] nie ma wartości.
-- [Nazwa lokalna] "\_\_typu" (dwóch znaków podkreślenia i następnie "type").
-- [wartość znormalizowana] to dowolny prawidłowy ciąg Unicode — mapowanie tego ciągu do ciągu JSON jest opisane w poniższej sekcji.
-- [] jest `true`.
-- [atrybutu type] nie ma wartości.
-- [odwołania] nie ma wartości.
+- [nazwa lokalna] to "\_\_typ" (dwie podkreślenia, a następnie "Type").
+- [znormalizowana wartość] jest dowolnym prawidłowym ciągiem Unicode — mapowanie tego ciągu na format JSON jest opisane w poniższej sekcji.
+- [określony] jest `true`.
+- [typ atrybutu] nie ma wartości.
+- [References] nie ma wartości.
 
-Wewnętrzny zawartym w elemencie głównym elementem JSON lub inne elementy wewnętrzny mają następującą charakterystykę:
+Elementy wewnętrzne zawarte w głównym elemencie JSON lub inne elementy wewnętrzne mają następującą charakterystykę:
 
-- zgodnie z opisem w dalszej, [Nazwa lokalnego] może mieć dowolną wartość.
-- [nazwa przestrzeni nazw], [prefix], [dzieci], [atrybuty], [przestrzeń nazw atrybutów], i podlegają one te same reguły jako elementu JSON głównego [w zakresie namespaces].
+- [nazwa lokalna] może mieć dowolną wartość, zgodnie z opisem.
+- [nazwa przestrzeni nazw], [prefiks], [elementy podrzędne], [atrybuty], [atrybuty przestrzeni nazw] i [przestrzenie nazw w zakresie] są objęte tymi samymi regułami, co główny element JSON.
 
-W głównym elementem JSON i elementy wewnętrzne atrybut typu JSON definiuje mapowanie na format JSON i możliwe [dzieci] i ich interpretację. [Wartość znormalizowana] atrybutu jest uwzględniana wielkość liter i musi zawierać tylko litery i nie może zawierać białego.
+Zarówno w głównym elemencie JSON, jak i elementach wewnętrznych, atrybut typu JSON definiuje mapowanie do formatu JSON oraz możliwe [elementy podrzędne] i ich interpretację. Atrybut [znormalizowana wartość] ma wielkość liter i musi być pisany małymi literami i nie może zawierać białych znaków.
 
-|[znormalizowane wartości] dla atrybutu typu JSON wszystko|Dozwolone [] elementów podrzędnych odpowiedniego EII|Mapowanie do formatu JSON|
+|[znormalizowana wartość] wszystko atrybutu typu JSON|Dozwolone elementy [Children] odpowiadającego EII|Mapowanie do formatu JSON|
 |---------------------------------------------------------|---------------------------------------------------|---------------------|
-|`string` (lub Brak typu JSON wszystko)<br /><br /> A `string` i braku typu JSON wszystko to sprawia, że ten sam `string` domyślnie.<br /><br /> Dlatego `<root> string1</root>` mapuje dane JSON `string` "ciąg1".|0 lub więcej CIIs|JSON `string` (RFC JSON sekcję 2.5). Każdy `char` jest znak, który odnosi się do [kod znaku] z CII. W przypadku CIIs nie jest on mapowany pusty kod JSON `string`.<br /><br /> Przykład: Następujący element mapuje fragment kodu JSON:<br /><br /> `<root type="string">42</root>`<br /><br /> Fragment kodu JSON to "42".<br /><br /> W pliku XML do JSON mapowania znaków, które muszą być poprzedzone znakiem zmiany znaczenia mapy na znaki ucieczki przestają być, mapowania wszystkie inne znaki, które nie miały zmienione znaczenie. Znak "/" jest szczególna — została zmieniona, mimo że nie musi on być (pisemne się jako "\\/").<br /><br /> Przykład: Następujący element mapuje fragment kodu JSON.<br /><br /> `<root type="string">the "da/ta"</root>`<br /><br /> Fragment kodu JSON to " \\" da\\/ta\\"".<br /><br /> W formacie JSON do pliku XML wszelkie znaki ucieczki przestają być i znaków, które nie są poprzedzone znakiem zmiany znaczenia mapy poprawnie do odpowiedniego [kod znaku].<br /><br /> Przykład: Fragment kodu JSON "\u0041BC" mapuje do następujących elementów XML.<br /><br /> `<root type="string">ABC</root>`<br /><br /> Ciąg może być otoczona biały ("ws" w sekcji 2 JSON RFC), które nie są mapowane do pliku XML.<br /><br /> Przykład: Za pomocą pliku JSON fragmentu "ABC", (ma spacji przed pierwszym podwójnego cudzysłowu), mapuje do następujących elementów XML.<br /><br /> `<root type="string">ABC</root>`<br /><br /> Dowolny biały obszar w pliku XML jest mapowany na biały znak w formacie JSON.<br /><br /> Przykład: Następujący element XML mapuje fragment kodu JSON.<br /><br /> `<root type="string">  A BC      </root>`<br /><br /> Fragment kodu JSON to "BC".|
-|`number`|co najmniej 1 CIIs|JSON `number` (RFC JSON, sekcji 2.4), prawdopodobnie otoczony biały znak. Każdy znak w połączeniu numer/biały znak jest znakiem, który odnosi się do [kod znaku] z CII.<br /><br /> Przykład: Następujący element mapuje fragment kodu JSON.<br /><br /> `<root type="number">    42</root>`<br /><br /> Fragment kodu JSON jest 42<br /><br /> (Biały znak jest zachowane).|
-|`boolean`|CIIs 4 lub 5 (co odpowiada `true` lub `false`), prawdopodobnie otoczone dodatkowe CIIs odstępu.|Sekwencję CII, która odnosi się do ciągu "true" jest mapowana na literału `true`, i sekwencji CII, który odpowiada ciągowi "false" jest mapowany do literału `false`. Otaczającego biały znak są zachowywane.<br /><br /> Przykład: Następujący element mapuje fragment kodu JSON.<br /><br /> `<root type="boolean"> false</root>`<br /><br /> Fragment kodu JSON jest `false`.|
-|`null`|Zezwalaj na Brak.|Literał `null`. Na ciąg JSON do mapowania XML `null` otoczony biały ("ws" w sekcji 2), które nie są mapowane do pliku XML.<br /><br /> Przykład: Następujący element mapuje fragment kodu JSON.<br /><br /> `<root type="null"/>`<br /><br /> lub<br /><br /> `<root type="null"></root>`<br /><br /> :<br /><br /> Fragment kodu JSON w obu przypadkach jest `Null`.|
-|`object`|0 lub więcej EIIs.|Element `begin-object` (od lewej nawias klamrowy) tak jak w sekcji 2.2 JSON RFC, a następnie rekord elementu członkowskiego dla każdego EII zgodnie z opisem w dalszej. W przypadku więcej niż jeden EII między rekordów elementów członkowskich są wartości separatorów (przecinkami). To wszystko następuje koniec — obiekt (prawy nawias klamrowy).<br /><br /> Przykład: Następujący element mapuje fragment kodu JSON.<br /><br /> `<root type="object">`<br /><br /> `<type1 type="string">aaa\</type1>`<br /><br /> `<type2 type="string">bbb\</type2>`<br /><br /> `</root >`<br /><br /> Fragment kodu JSON jest `{"type1":"aaa","type2":"bbb"}`.<br /><br /> Jeśli atrybut typu kontraktu danych ma na języku XML do mapowania JSON, dodatkowy rekord elementu członkowskiego jest wstawiany na początku. Jego nazwa jest [Nazwa lokalnego] atrybutu typu kontraktu danych ("\_\_typu"), a jego wartość to atrybut [Znormalizowana wartość]. Z drugiej strony, w formacie JSON do pliku XML, jeśli nazwa pierwszego elementu członkowskiego rekordu jest [Nazwa lokalnego] atrybutu typu kontraktu danych (czyli "\_\_typu"), odpowiedniego atrybutu typu kontraktu danych znajduje się w mapowanych XML, ale nie ma odpowiedniego EII. Należy pamiętać, że ten rekord elementu członkowskiego musi wystąpić najpierw w obiekcie JSON dla tego mapowania specjalne do zastosowania. To oznacza odejście od zwykle przetwarzania JSON, w którym kolejność rekordów elementów członkowskich nie jest znaczący.<br /><br /> Przykład:<br /><br /> Poniższy fragment kodu JSON mapowany do pliku XML.<br /><br /> `{"__type":"Person","name":"John"}`<br /><br /> Kod XML ma następujący kod.<br /><br /> `<root type="object" __type="Person">   <name type="string">John</name> </root>`<br /><br /> Należy zauważyć, że \_ \_typu wszystko jest obecny, ale ma nie \_ \_wpisz EII.<br /><br /> Jednak jeśli kolejność, w formacie JSON zostanie odwrócony jako pokazano w poniższym przykładzie.<br /><br /> `{"name":"John","\_\_type":"Person"}`<br /><br /> Odpowiedni kod XML jest wyświetlany.<br /><br /> `<root type="object">   <name type="string">John</name>   <__type type="string">Person</__type> </root>`<br /><br /> Oznacza to, że \__typ przestaje w zwykły sposób, mają specjalne znaczenie i mapuje do EII nie wszystko.<br /><br /> Anulowanie unescaping zasady wszystko [Znormalizowana wartość] mapowane na wartości JSON są takie same jak dla ciągów JSON, określone w wierszu "string" w tej tabeli.<br /><br /> Przykład:<br /><br /> `<root type="object" __type="\abc" />`<br /><br /> do poprzedniego przykładu można zamapować następujące dane JSON.<br /><br /> `{"__type":"\\abc"}`<br /><br /> W pliku XML do mapowania JSON, nie może być pierwszym EII firmy [Nazwa lokalnego] "\_\_typu".<br /><br /> Biały znak (`ws`) nigdy nie jest generowany na języku XML do mapowania JSON dla obiektów i jest ignorowany w formacie JSON do pliku XML.<br /><br /> Przykład: Poniższy fragment kodu JSON mapowany na XML element.<br /><br /> `{ "ccc" : "aaa", "ddd" :"bbb"}`<br /><br /> XML element przedstawiono w poniższym kodzie.<br /><br /> `<root type="object">    <ccc type="string">aaa</ccc>    <ddd type="string">bbb</bar> </root >`|
-|tablica|0 lub więcej EIIs|Begin — tablica (lewy nawias kwadratowy) tak jak w sekcji 2.3 JSON RFC, następuje rekord tablicy do każdego EII zgodnie z opisem w dalszej. Jeśli istnieje więcej niż jeden EII, istnieją wartości separatorów (przecinkami) między rekordami tablicy. Następuje to tablica zakończenia.<br /><br /> Przykład: Następujący element XML mapuje fragment kodu JSON.<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`<br /><br /> Fragment kodu JSON jest `["aaa","bbb"]`<br /><br /> Biały znak (`ws`) nigdy nie jest generowany na języku XML do mapowania JSON dla tablic i jest ignorowany w formacie JSON do pliku XML.<br /><br /> Przykład: Fragment kodu JSON.<br /><br />`["aaa", "bbb"]`<br /><br /> Element XML, który jest on mapowany.<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`|
+|`string` (lub brak typu JSON wszystko)<br /><br /> `string` i brak typu JSON wszystko są takie same, `string` wartością domyślną.<br /><br /> Dlatego `<root> string1</root>` są mapowane na kod JSON `string` "ciąg1".|0 lub więcej CIIs|`string` JSON (kod JSON RFC, sekcja 2,5). Każdy `char` jest znakiem, który odnosi się do [kod znaku] z CII. Jeśli nie ma żadnych CIIs, mapuje do pustego `string`JSON.<br /><br /> Przykład: następujący element mapuje do fragmentu JSON:<br /><br /> `<root type="string">42</root>`<br /><br /> Fragment JSON to "42".<br /><br /> W przypadku mapowania XML do formatu JSON znaki, które muszą mieć sekwencję ucieczki do znaków ucieczki, wszystkie inne są mapowane na znaki, które nie są wyprowadzane. Znak "/" jest specjalny — oznacza, że jest on zmieniony, mimo że nie musi być (zapisany jako "\\/").<br /><br /> Przykład: Poniższy element mapuje do fragmentu JSON.<br /><br /> `<root type="string">the "da/ta"</root>`<br /><br /> Fragment JSON to "\\" da\\/ta\\"".<br /><br /> W mapowaniu JSON na XML, wszelkie znaki ucieczki i znaki, które nie są poprawnie mapowane na mapę, do odpowiadającego [znakowego kodu].<br /><br /> Przykład: fragment JSON "\u0041BC" mapuje do następującego elementu XML.<br /><br /> `<root type="string">ABC</root>`<br /><br /> Ciąg może być otoczony białym znakiem ("ws" w sekcji 2 dokumentu JSON RFC), który nie jest mapowany do formatu XML.<br /><br /> Przykład: fragment JSON "ABC" (zawiera spacje przed pierwszym cudzysłowem), mapuje do następującego elementu XML.<br /><br /> `<root type="string">ABC</root>`<br /><br /> Dowolny biały znak w programie XML mapuje do białego miejsca w formacie JSON.<br /><br /> Przykład: Poniższy element XML mapuje do fragmentu JSON.<br /><br /> `<root type="string">  A BC      </root>`<br /><br /> Fragment JSON to "A BC".|
+|`number`|1 lub więcej CIIs|`number` JSON (kod JSON RFC, sekcja 2,4), prawdopodobnie ujęty w białe znaki. Każdy znak w kombinacji liczby/odstępu jest znakiem, który odnosi się do [kod znaku] z CII.<br /><br /> Przykład: Poniższy element mapuje do fragmentu JSON.<br /><br /> `<root type="number">    42</root>`<br /><br /> Fragment JSON to 42<br /><br /> (Biały znak jest zachowywany).|
+|`boolean`|4 lub 5 CIIs (który odnosi się do `true` lub `false`), prawdopodobnie otoczony dodatkowymi białymi miejscami CIIs.|Sekwencja CII odpowiadająca ciągowi "true" jest mapowana na literał `true`, a sekwencja CII, która odpowiada ciągowi "false", jest mapowana na `false`literału. Zachowywany jest biały znak.<br /><br /> Przykład: Poniższy element mapuje do fragmentu JSON.<br /><br /> `<root type="boolean"> false</root>`<br /><br /> Fragment JSON jest `false`.|
+|`null`|Brak dozwolonych.|Literał `null`. W mapowaniu JSON na XML, `null` może być otoczona białym znakiem ("ws" w sekcji 2), który nie jest mapowany do formatu XML.<br /><br /> Przykład: Poniższy element mapuje do fragmentu JSON.<br /><br /> `<root type="null"/>`<br /><br /> lub<br /><br /> `<root type="null"></root>`<br /><br /> :<br /><br /> Fragment kodu JSON w obu przypadkach jest `Null`.|
+|`object`|0 lub więcej EIIs.|`begin-object` (lewy nawias klamrowy) jak w sekcji 2,2 specyfikacji RFC JSON, a następnie rekord elementu członkowskiego dla każdego EIIu, zgodnie z opisem. Jeśli istnieje więcej niż jeden EII, istnieją separatory wartości (przecinki) między rekordami elementu członkowskiego. Po nim następuje obiekt końcowy (prawy nawias klamrowy).<br /><br /> Przykład: Poniższy element jest mapowany do fragmentu JSON.<br /><br /> `<root type="object">`<br /><br /> `<type1 type="string">aaa\</type1>`<br /><br /> `<type2 type="string">bbb\</type2>`<br /><br /> `</root >`<br /><br /> Fragment JSON jest `{"type1":"aaa","type2":"bbb"}`.<br /><br /> Jeśli atrybut typu kontraktu danych jest obecny w mapowaniu XML do formatu JSON, na początku zostanie wstawiony dodatkowy rekord elementu członkowskiego. Jego nazwą jest [local name] atrybutu typu kontraktu danych ("\_\_Type"), a jego wartością jest [znormalizowana wartość]. Z kolei w przypadku mapowania JSON na XML, jeśli nazwa pierwszego elementu członkowskiego rekordu to [lokalna nazwa] atrybutu typu kontraktu danych (czyli "\_\_typ"), odpowiedni atrybut typu kontraktu danych jest obecny w mapowanym kodzie XML, ale nie ma odpowiedniego EII. Należy zauważyć, że ten rekord elementu członkowskiego musi wystąpić najpierw w obiekcie JSON dla tego mapowania specjalnego do zastosowania. Reprezentuje to wyjście z normalnego przetwarzania JSON, w którym kolejność rekordów elementów członkowskich nie jest istotna.<br /><br /> Przykład:<br /><br /> Poniższy fragment kodu JSON jest mapowany na format XML.<br /><br /> `{"__type":"Person","name":"John"}`<br /><br /> Kod XML jest poniższym kodem.<br /><br /> `<root type="object" __type="Person">   <name type="string">John</name> </root>`<br /><br /> Zauważ, że \_\_typu wszystko jest obecny, ale nie ma \_\_typu EII.<br /><br /> Jeśli jednak porządek w kodzie JSON zostanie odwrócony, jak pokazano w poniższym przykładzie.<br /><br /> `{"name":"John","\_\_type":"Person"}`<br /><br /> Wyświetlany jest odpowiedni kod XML.<br /><br /> `<root type="object">   <name type="string">John</name>   <__type type="string">Person</__type> </root>`<br /><br /> Oznacza to, że \__type przestaje mieć specjalne znaczenie i jest mapowany na EII w zwykły sposób, a nie wszystko.<br /><br /> Reguły ucieczki/anulowania ucieczki dla [znormalizowanej wartości] wszystko są takie same jak w przypadku ciągów JSON określonych w wierszu "String" tej tabeli.<br /><br /> Przykład:<br /><br /> `<root type="object" __type="\abc" />`<br /><br /> do poprzedniego przykładu można zamapować do poniższego kodu JSON.<br /><br /> `{"__type":"\\abc"}`<br /><br /> W przypadku mapowania XML do formatu JSON pierwszy EII [nazwa lokalna] nie może być "\_\_typu".<br /><br /> Białe znaki (`ws`) nigdy nie są generowane w mapowaniu XML na notację JSON dla obiektów i są ignorowane w mapowaniu JSON na XML.<br /><br /> Przykład: Poniższy fragment kodu JSON jest mapowany na element XML.<br /><br /> `{ "ccc" : "aaa", "ddd" :"bbb"}`<br /><br /> Element XML jest pokazany w poniższym kodzie.<br /><br /> `<root type="object">    <ccc type="string">aaa</ccc>    <ddd type="string">bbb</bar> </root >`|
+|tablica|0 lub więcej EIIs|Tablica BEGIN-Array (lewy nawias kwadratowy), jak w sekcji 2,3 w formacie JSON, a następnie rekord tablicy dla każdego EIIu, zgodnie z opisem w dalszej części. Jeśli istnieje więcej niż jeden EII, istnieją separatory wartości (przecinki) między rekordami tablicy. Jest to po nim tablica końcowa.<br /><br /> Przykład: Poniższy element XML mapuje do fragmentu JSON.<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`<br /><br /> Fragment JSON jest `["aaa","bbb"]`<br /><br /> Białe znaki (`ws`) nigdy nie są generowane w mapowaniu XML do formatu JSON dla tablic i są ignorowane w mapowaniu JSON na XML.<br /><br /> Przykład: fragment JSON.<br /><br />`["aaa", "bbb"]`<br /><br /> Element XML, który jest mapowany na.<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`|
 
-Rekordy elementów roboczych w następujący sposób:
+Rekordy elementów członkowskich działają w następujący sposób:
 
-- Mapuje element wewnętrzny firmy [Nazwa lokalnego] `string` wchodzi w skład `member` zgodnie z definicją w sekcji 2.2 JSON RFC.
+- Element wewnętrzny [local name] mapuje do `string`ej części `member` zgodnie z definicją w sekcji 2,2 specyfikacji RFC JSON.
 
-Przykład: Następujący element mapuje fragment kodu JSON.
+Przykład: Poniższy element mapuje do fragmentu JSON.
 
 ```xml
 <root type="object"/>
@@ -156,19 +157,19 @@ Przykład: Następujący element mapuje fragment kodu JSON.
 </root >
 ```
 
-Poniższy fragment kodu JSON jest wyświetlana.
+Zostanie wyświetlony następujący fragment kodu JSON.
 
 ```json
 {"myLocalName":"aaa"}
 ```
 
-- Na XML do mapowania JSON będą miały zmienione znaczenie znaków, które muszą być wyjściowym w formacie JSON, a pozostałe są nie zawiera wyjścia. Znak "/", mimo że nie jest znakiem, który musi być poprzedzone znakiem zmiany znaczenia, jest poprzedzone znakiem zmiany znaczenia mimo wszystko (nie musi być poprzedzone znakiem zmiany znaczenia w formacie JSON do pliku XML). Jest to wymagane do obsługi formatu ASP.NET AJAX `DateTime` dane w formacie JSON.
+- W przypadku mapowania XML do formatu JSON znaki, które muszą zostać zmienione w formacie JSON, są wyprowadzane, a inne nie są wyprowadzane. Znak "/", mimo że nie jest znakiem, który musi zostać zmieniony, jest Niemniej niezbędny (w przypadku mapowania JSON to XML). Jest to wymagane do obsługi formatu ASP.NET AJAX dla danych `DateTime` w formacie JSON.
 
-- W formacie JSON do pliku XML, wszystkie znaki (w tym znaki ucieczki nie, jeśli to konieczne) są pobierane do formularza `string` daje [Nazwa lokalnej].
+- W przypadku mapowania JSON na XML wszystkie znaki (w tym znaki nieucieczki, w razie potrzeby) są podejmowane w celu utworzenia `string`, który tworzy [local name].
 
-- Elementy wewnętrzne [dzieci] mapy do wartości w sekcji 2.2, zgodnie z opisem w `JSON Type Attribute` podobnie jak w przypadku dla `Root JSON Element`. Wiele poziomów zagnieżdżenia EIIs (w tym zagnieżdżenia w macierzy) są dozwolone.
+- Elementy wewnętrzne [Children] mapują do wartości w sekcji 2,2, zgodnie z `JSON Type Attribute`, tak jak w przypadku `Root JSON Element`. Dozwolone jest użycie wielu poziomów zagnieżdżenia EIIs (w tym zagnieżdżania w tablicach).
 
-Przykład: Następujący element mapuje fragment kodu JSON.
+Przykład: Poniższy element mapuje do fragmentu JSON.
 
 ```xml
 <root type="object">
@@ -181,24 +182,24 @@ Przykład: Następujący element mapuje fragment kodu JSON.
 </root >
 ```
 
-Poniższy fragment kodu JSON to, co to jest on mapowany.
+Poniższy fragment kodu JSON jest mapowany do programu.
 
 ```json
 {"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}
 ```
 
 > [!NOTE]
-> W poprzednim mapowanie jest bez kroku kodowania XML. W związku z tym usługi WCF obsługuje tylko dokumenty JSON, w którym wszystkie znaki nazwy kluczy są prawidłowych znaków w nazwach elementów XML. Na przykład dokument JSON {"<": ""} nie jest obsługiwana, ponieważ < nie jest prawidłową nazwą elementu XML.
+> W poprzednim mapowaniu nie ma kroku kodowania XML. W związku z tym WCF obsługuje tylko dokumenty JSON, w których wszystkie znaki w nazwach kluczy są prawidłowymi znakami w nazwach elementów XML. Na przykład dokument JSON {"<": "a"} nie jest obsługiwany, ponieważ < nie jest prawidłową nazwą elementu XML.
 
-Sytuacja odwrotna (znaki dozwolone w XML, ale nie w formacie JSON) nie powoduje żadnych problemów, ponieważ mapowanie poprzedniego zawiera kroki anulowania zapewnianego element unescaping JSON.
+Odwrócona sytuacja (znaki prawidłowe w kodzie XML, ale nie w formacie JSON) nie powoduje żadnych problemów, ponieważ poprzednie mapowanie obejmuje ucieczki kodu JSON/etapy anulowania ucieczki.
 
-Rekordy tablicy pracować w następujący sposób:
+Rekordy tablic działają w następujący sposób:
 
-- Wewnętrzny elementu [Nazwa lokalnego] jest "elementu".
+- Element wewnętrzny [local name] to "Item".
 
-- Wewnętrzny elementu [dzieci] mapy do wartości w sekcji 2.3, zgodnie z atrybutu typu JSON to dla elementu głównego w formacie JSON. Wiele poziomów zagnieżdżenia EIIs (w tym zagnieżdżenia w obiektach) są dozwolone.
+- Element wewnętrzny [Children] mapuje do wartości w sekcji 2,3, zgodnie z atrybutem typu JSON dla elementu głównego JSON. Dozwolone są wiele poziomów zagnieżdżenia elementu EIIs (w tym zagnieżdżanie w obrębie obiektów).
 
-Przykład: Następujący element mapuje fragment kodu JSON.
+Przykład: Poniższy element mapuje do fragmentu JSON.
 
 ```xml
 <root type="array"/>

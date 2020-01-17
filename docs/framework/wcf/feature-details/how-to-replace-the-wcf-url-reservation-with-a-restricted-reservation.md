@@ -2,15 +2,16 @@
 title: 'Instrukcje: Zastępowanie rezerwacji adresu URL programu WCF ograniczoną rezerwacją'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 3d14d76334b15bdb490184a48da11ba48b84deea
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: fc50a0e31a0c323b695ada6565743fa19c1d4c2a
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544648"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212190"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Instrukcje: Zastępowanie rezerwacji adresu URL programu WCF ograniczoną rezerwacją
-Rezerwacja adresu URL umożliwia ograniczenie użytkowników, którzy mogą odbierać wiadomości z adresu URL lub zestawu adresów URL. Rezerwacja składa się z szablonu adresu URL, listy kontroli dostępu (ACL) i zestawu flag. Szablon adresu URL określa adresy URL, na które ma wpływ rezerwacja. Aby uzyskać więcej informacji na temat sposobu przetwarzania szablonów adresów URL, zobacz [Routing przychodzących żądań](https://go.microsoft.com/fwlink/?LinkId=136764). Lista ACL kontroluje, jakiemu użytkownikowi lub grupie użytkowników można odbierać wiadomości z określonych adresów URL. Flagi wskazują, czy rezerwacja ma dać użytkownikowi lub grupie uprawnienie do nasłuchiwania bezpośrednio na adresie URL lub delegowania uprawnień do nasłuchiwania w innym procesie.  
+
+Rezerwacja adresu URL umożliwia ograniczenie użytkowników, którzy mogą odbierać wiadomości z adresu URL lub zestawu adresów URL. Rezerwacja składa się z szablonu adresu URL, listy kontroli dostępu (ACL) i zestawu flag. Szablon adresu URL określa adresy URL, na które ma wpływ rezerwacja. Aby uzyskać więcej informacji na temat sposobu przetwarzania szablonów adresów URL, zobacz [Routing przychodzących żądań](/windows/win32/http/routing-incoming-requests). Lista ACL kontroluje, jakiemu użytkownikowi lub grupie użytkowników można odbierać wiadomości z określonych adresów URL. Flagi wskazują, czy rezerwacja ma dać użytkownikowi lub grupie uprawnienie do nasłuchiwania bezpośrednio na adresie URL lub delegowania uprawnień do nasłuchiwania w innym procesie.  
   
  W ramach domyślnej konfiguracji systemu operacyjnego program Windows Communication Foundation (WCF) tworzy globalnie dostępną rezerwację dla portu 80, aby umożliwić wszystkim użytkownikom uruchamianie aplikacji korzystających z podwójnego powiązania protokołu HTTP na potrzeby komunikacji dwukierunkowej. Ponieważ lista kontroli dostępu dla tej rezerwacji jest dla wszystkich, Administratorzy nie mogą jawnie zezwolić na nasłuchiwanie adresu URL lub zestawu adresów URL ani nie zezwalać na nie. W tym temacie opisano sposób usuwania tej rezerwacji i ponownego tworzenia rezerwacji z ograniczoną listą ACL.  
   
@@ -24,7 +25,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
             SDDL: D:(A;;GX;;;WD)  
 ```
 
- Rezerwacja składa się z szablonu adresu URL używanego, gdy aplikacja WCF używa podwójnego powiązania protokołu HTTP na potrzeby komunikacji dwukierunkowej. Adresy URL tego formularza są używane przez usługę WCF do wysyłania komunikatów z powrotem do klienta WCF podczas komunikacji przy użyciu podwójnego powiązania protokołu HTTP. Wszyscy uzyskują uprawnienia do nasłuchiwania na adresie URL, ale nie do delegowania nasłuchiwania w innym procesie. Na koniec lista ACL jest opisana w temacie Security Descriptor Definition Language (SSDL). Aby uzyskać więcej informacji na temat SSDL, zobacz [SSDL](https://go.microsoft.com/fwlink/?LinkId=136789)  
+ Rezerwacja składa się z szablonu adresu URL używanego, gdy aplikacja WCF używa podwójnego powiązania protokołu HTTP na potrzeby komunikacji dwukierunkowej. Adresy URL tego formularza są używane przez usługę WCF do wysyłania komunikatów z powrotem do klienta WCF podczas komunikacji przy użyciu podwójnego powiązania protokołu HTTP. Wszyscy uzyskują uprawnienia do nasłuchiwania na adresie URL, ale nie do delegowania nasłuchiwania w innym procesie. Na koniec lista ACL jest opisana w temacie Security Descriptor Definition Language (SSDL). Aby uzyskać więcej informacji na temat SSDL, zobacz [SSDL](/windows/win32/secauthz/security-descriptor-definition-language)  
   
 ## <a name="to-delete-the-wcf-url-reservation"></a>Aby usunąć rezerwację adresu URL programu WCF  
   

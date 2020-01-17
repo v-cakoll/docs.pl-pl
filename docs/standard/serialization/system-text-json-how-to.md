@@ -1,17 +1,20 @@
 ---
 title: Jak serializować i deserializować kod JSON C# przy użyciu-.NET
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 047d5b5c6fa339089d2054eb6bfe8b3066c1d00c
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: fdca8d957bb2453e90652af1dfe5ef99b33b1b2c
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904658"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163205"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Jak serializować i deserializować (Marshaling and unmarshaling) JSON w programie .NET
 
@@ -563,7 +566,7 @@ Poniższy przykład pokazuje kod JSON, który wynika z poprzedniego kodu:
 }
 ```
 
-Aby uzyskać więcej informacji na temat **serializacji**polimorficznej i informacje o **deserializacji**, zobacz [Migrowanie z Newtonsoft. JSON do System. Text. JSON](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
+Aby uzyskać więcej informacji na temat **serializacji**polimorficznej i informacje o **deserializacji**, zobacz [jak przeprowadzić migrację z Newtonsoft.Json do System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
 
 ## <a name="allow-comments-and-trailing-commas"></a>Zezwalaj na komentarze i końcowe przecinki
 
@@ -706,7 +709,7 @@ Poniższy przykład pokazuje, jak używać klasy <xref:System.Text.Json.JsonDocu
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/JsonDocumentDataAccess.cs?name=SnippetAverageGrades1)]
 
-Powyższy kod:
+Powyższy kod ma następujące działanie:
 
 * Przyjęto, że kod JSON do analizy znajduje się w ciągu o nazwie `jsonString`.
 * Oblicza średnią ocenę dla obiektów w tablicy `Students`, która ma właściwość `Grade`. 
@@ -725,7 +728,7 @@ Poniższy przykład pokazuje, jak napisać kod JSON z <xref:System.Text.Json.Jso
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/JsonDocumentWriteJson.cs?name=SnippetSerialize)]
 
-Powyższy kod:
+Powyższy kod ma następujące działanie:
 
 * Odczytuje plik JSON, ładuje dane do `JsonDocument`i zapisuje sformatowany plik JSON w formacie.
 * Używa <xref:System.Text.Json.JsonDocumentOptions>, aby określić, że komentarze w wejściowym formacie JSON są dozwolone, ale ignorowane.
@@ -759,7 +762,7 @@ Poniższy przykład pokazuje, jak odczytywać plik synchronicznie i wyszukiwać 
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/Utf8ReaderFromFile.cs)]
 
-Powyższy kod:
+Powyższy kod ma następujące działanie:
 
 * Przyjęto, że kod JSON zawiera tablicę obiektów, a każdy obiekt może zawierać właściwość "name" typu String.
 * Zlicza obiekty i wartości właściwości "name", które kończą się znakiem "University".
@@ -777,9 +780,9 @@ Oto przykład JSON, który może odczytać poprzedzający kod. Otrzymany komunik
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-* [System. Text. JSON — Omówienie](system-text-json-overview.md)
+* [Przegląd System.Text.Json](system-text-json-overview.md)
 * [Jak pisać konwertery niestandardowe](system-text-json-converters-how-to.md)
-* [Jak przeprowadzić migrację z pliku Newtonsoft. JSON](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [Obsługa DateTime i DateTimeOffset w pliku System. Text. JSON](../datetime/system-text-json-support.md)
-* [Dokumentacja interfejsu API System. Text. JSON](xref:System.Text.Json)
+* [Jak przeprowadzić migrację z Newtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Obsługa DateTime i DateTimeOffset w System.Text.Json](../datetime/system-text-json-support.md)
+* [Dokumentacja interfejsu API System.Text.Json](xref:System.Text.Json)
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

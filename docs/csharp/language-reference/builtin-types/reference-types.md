@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: d8858acb2743b26cc3a5172edf4765976d81adf4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d5ca0593d802d331d980cf35c701e0a79d54abee
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973011"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163101"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Wbudowane typy odwołań (C# odwołanie)
 
@@ -33,7 +33,7 @@ C#ma wiele wbudowanych typów odwołań. Mają słowa kluczowe lub operatory, kt
 
 ## <a name="the-object-type"></a>Typ obiektu
 
-Typ `object` jest aliasem dla <xref:System.Object?displayProperty=nameWithType> w programie .NET. W ujednoliconym systemie typów systemu C#, wszystkie typy, wstępnie zdefiniowane i zdefiniowane przez użytkownika, typy odwołań i typy wartości, dziedziczą bezpośrednio lub pośrednio z <xref:System.Object?displayProperty=nameWithType>. Wartości dowolnego typu można przypisać do zmiennych typu `object`. Dowolna zmienna `object` może być przypisana do jej wartości domyślnej przy użyciu `null`literału. Gdy zmienna typu wartości jest konwertowana na obiekt, jest określana jako *opakowana*. Gdy zmienna typu Object jest konwertowana na typ wartości, jest ona określana jako *nieopakowana*. Aby uzyskać więcej informacji, zobacz [opakowanie i rozpakowywanie](../../programming-guide/types/boxing-and-unboxing.md). 
+Typ `object` jest aliasem dla <xref:System.Object?displayProperty=nameWithType> w programie .NET. W ujednoliconym systemie typów systemu C#, wszystkie typy, wstępnie zdefiniowane i zdefiniowane przez użytkownika, typy odwołań i typy wartości, dziedziczą bezpośrednio lub pośrednio z <xref:System.Object?displayProperty=nameWithType>. Wartości dowolnego typu można przypisać do zmiennych typu `object`. Dowolna zmienna `object` może być przypisana do jej wartości domyślnej przy użyciu `null`literału. Gdy zmienna typu wartości jest konwertowana na obiekt, jest określana jako *opakowana*. Gdy zmienna typu `object` jest konwertowana na typ wartości, jest ona określana jako *nieopakowana*. Aby uzyskać więcej informacji, zobacz [opakowanie i rozpakowywanie](../../programming-guide/types/boxing-and-unboxing.md). 
 
 ## <a name="the-string-type"></a>Typ ciągu
 
@@ -67,14 +67,14 @@ string b = "h";
 b += "ello";
 ```
 
-[Operatora](../operators/member-access-operators.md#indexer-operator-) `[]` można używać do dostępu tylko do odczytu do poszczególnych znaków `string`. Prawidłowe wartości zaczynają się o `0` i muszą być mniejsze niż długość `string`:
+[Operatora](../operators/member-access-operators.md#indexer-operator-) `[]` można używać do dostępu tylko do odczytu do poszczególnych znaków ciągu. Prawidłowe wartości indeksu zaczynają się o `0` i muszą być mniejsze niż długość ciągu:
 
 ```csharp
 string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-W podobny sposób operator `[]` może być również używany do iteracji dla każdego znaku w `string`:
+W podobny sposób operator `[]` może być również używany do iteracji dla każdego znaku w ciągu:
 
 ```csharp-interactive
 string str = "test";
@@ -148,7 +148,7 @@ Poniższy przykład kontrastuje zmienną typu `dynamic` do zmiennej typu `object
 
 [!code-csharp[csrefKeywordsTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#21)]
 
-Instrukcje <xref:System.Console.WriteLine%2A> wyświetlają typy czasu wykonywania `dyn` i `obj`. W tym momencie oba mają ten sam typ, liczba całkowita. Generowane są następujące dane wyjściowe:
+Instrukcje <xref:System.Console.WriteLine%2A> wyświetlają typy czasu wykonywania `dyn` i `obj`. W tym momencie oba mają ten sam typ, liczba całkowita. Zostaną wyświetlone następujące dane wyjściowe:
 
 ```console
 System.Int32

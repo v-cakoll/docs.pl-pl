@@ -5,43 +5,43 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 65b8597727da256e832351792b9d5d9bd016eb28
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ffd0421195b0339ad966b661c229e5a5ebb94ec
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587010"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212099"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Niezabezpieczony klient i usługa w intranecie
-Poniższa ilustracja przedstawia prostą usługę Windows Communication Foundation (WCF) opracowany, aby udostępniać informacje o bezpiecznej sieci prywatnej dla aplikacji WCF. Zabezpieczeń nie jest wymagany, dane o niskiej ważności, powinien być założenia bezpieczne sieci, ponieważ zabezpieczenia przez warstwę poniżej infrastruktury usług WCF.  
+Na poniższej ilustracji przedstawiono prostą usługę Windows Communication Foundation (WCF) opracowaną w celu zapewnienia informacji o bezpiecznej sieci prywatnej do aplikacji WCF. Zabezpieczenia nie są wymagane, ponieważ dane mają niską ważność, Sieć powinna być zabezpieczona w sposób niebezpieczny lub zabezpieczenia są udostępniane przez warstwę poniżej infrastruktury WCF.  
   
- ![Niezabezpieczony klient i intranecie scenariusz obsługi.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
+ ![Scenariusz niezabezpieczonego klienta i usługi w intranecie.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |Cechy|Opis|  
 |--------------------|-----------------|  
 |Tryb zabezpieczeń|Brak|  
 |Transport|TCP|  
 |Wiązanie|<xref:System.ServiceModel.NetTcpBinding>|  
-|Współdziałanie|Tylko usługi WCF|  
+|Współdziałanie|Tylko WCF|  
 |Uwierzytelnianie|Brak|  
 |Integralność|Brak|  
 |Poufność|Brak|  
   
-## <a name="service"></a>Usługa  
- Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
+## <a name="service"></a>NDES  
+ Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wykonaj jedną z następujących czynności:  
   
-- Tworzenie autonomicznego usługi przy użyciu kodu bez konfiguracji.  
+- Tworzenie usługi autonomicznej przy użyciu kodu bez konfiguracji.  
   
-- Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.  
+- Utwórz usługę przy użyciu podanej konfiguracji, ale nie Definiuj żadnych punktów końcowych.  
   
 ### <a name="code"></a>Kod  
- Poniższy kod przedstawia sposób tworzenia punktu końcowego z żadnych zabezpieczeń:  
+ Poniższy kod pokazuje, jak utworzyć punkt końcowy bez zabezpieczeń:  
   
  [!code-csharp[C_UnsecuredService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#2)]
  [!code-vb[C_UnsecuredService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>Konfiguracja  
- Poniższy kod ustawia ten sam punkt końcowy, za pomocą konfiguracji:  
+ Poniższy kod konfiguruje ten sam punkt końcowy przy użyciu konfiguracji:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -71,23 +71,23 @@ Poniższa ilustracja przedstawia prostą usługę Windows Communication Foundati
 ```  
   
 ## <a name="client"></a>Klient  
- Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
+ Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wykonaj jedną z następujących czynności:  
   
-- Tworzenie klienta autonomicznego przy użyciu kodu (i kodu klienta).  
+- Utwórz klienta autonomicznego przy użyciu kodu (i kodu klienta).  
   
-- Tworzenie klienta, który nie definiuje żadnych adresy punktów końcowych. Zamiast tego należy użyć konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument. Na przykład:  
+- Utwórz klienta, który nie definiuje żadnych adresów punktów końcowych. Zamiast tego należy użyć konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument. Na przykład:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Kod  
- Poniższy kod przedstawia podstawowe klienta WCF, który uzyskuje dostęp do niezabezpieczonych punkt końcowy korzystający z protokołu TCP.  
+ Poniższy kod przedstawia podstawowy klient WCF, który uzyskuje dostęp do niezabezpieczonego punktu końcowego przy użyciu protokołu TCP.  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>Konfiguracja  
- Poniższy kod konfiguracji ma zastosowanie do klienta:  
+ Następujący kod konfiguracji ma zastosowanie do klienta programu:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -116,4 +116,4 @@ Poniższa ilustracja przedstawia prostą usługę Windows Communication Foundati
 
 - <xref:System.ServiceModel.NetTcpBinding>
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

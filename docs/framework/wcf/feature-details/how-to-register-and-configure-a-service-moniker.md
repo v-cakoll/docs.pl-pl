@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: a73f6333a91cd8018fe8e0c34d44db87938b8058
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: c68ca0f7c95515a0552b7003454dd87804176d3d
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347095"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212213"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Instrukcje: rejestrowanie i Konfigurowanie monikera usługi
 Przed użyciem monikera usługi Windows Communication Foundation (WCF) w ramach aplikacji COM z umową z określonym typem, należy zarejestrować wymagane typy z atrybutami COM i skonfigurować aplikację COM oraz moniker z wymaganym powiązaniem skonfigurować.  
@@ -25,7 +25,7 @@ Przed użyciem monikera usługi Windows Communication Foundation (WCF) w ramach 
     [assembly: ComVisible(true)]  
     ```  
   
-3. Kompiluj zarządzany klient WCF jako zestaw o silnej nazwie. Wymaga to podpisania za pomocą pary kluczy kryptograficznych. Aby uzyskać więcej informacji, zobacz [podpisywanie zestawu za pomocą silnej nazwy](https://go.microsoft.com/fwlink/?LinkId=94874) w przewodniku dewelopera platformy .NET.  
+3. Kompiluj zarządzany klient WCF jako zestaw o silnej nazwie. Wymaga to podpisania za pomocą pary kluczy kryptograficznych. Aby uzyskać więcej informacji, zobacz [podpisywanie zestawu za pomocą silnej nazwy](../../../standard/assembly/sign-strong-name.md).  
   
 4. Użyj narzędzia rejestracji zestawu (Regasm. exe) z opcją `/tlb`, aby zarejestrować typy w zestawie przy użyciu modelu COM.  
   

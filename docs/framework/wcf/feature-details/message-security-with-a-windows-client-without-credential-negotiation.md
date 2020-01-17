@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 724e7792e09bea23d95d32f86c2241de473d3876
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d3b05a1786131a119d516edeba0d6e8e24289f87
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045872"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212029"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Zabezpieczanie komunikatów za pomocą klienta systemu Windows bez negocjowania poświadczeń
 
@@ -23,18 +23,18 @@ Zarówno usługa, jak i klient znajdują się w tej samej domenie lub domenach z
 
 ![Zabezpieczenia komunikatów bez negocjowania poświadczeń](../../../../docs/framework/wcf/feature-details/media/0c9f9baa-2439-4ef9-92f4-43c242d85d0d.gif "0c9f9baa-2439-4ef9-92f4-43c242d85d0d")
 
-|Charakterystyk|Opis|
+|Cechy|Opis|
 |--------------------|-----------------|
-|Tryb zabezpieczeń|Message|
+|Tryb zabezpieczeń|Komunikat|
 |Współdziałanie|Tak, WS-Security z klientami zgodnymi z profilem tokenu Kerberos|
 |Uwierzytelnianie (serwer)|Wzajemne uwierzytelnianie serwera i klienta|
 |Uwierzytelnianie (klient)|Wzajemne uwierzytelnianie serwera i klienta|
-|Spójn|Tak|
-|Poufne|Tak|
-|Transportu|HTTP|
+|Integralność|Tak|
+|Poufność|Tak|
+|Transport|HTTP|
 |Wiązanie|<xref:System.ServiceModel.WSHttpBinding>|
 
-## <a name="service"></a>Usługa
+## <a name="service"></a>NDES
 
 Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wykonaj jedną z następujących czynności:
 
@@ -47,13 +47,13 @@ Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wyk
 Poniższy kod tworzy punkt końcowy usługi, który korzysta z zabezpieczeń komunikatów. Kod wyłącza negocjowanie poświadczeń usługi i ustanawia token kontekstu zabezpieczeń (SCT).
 
 > [!NOTE]
-> Aby użyć typu poświadczeń systemu Windows bez negocjowania, konto użytkownika usługi musi mieć dostęp do głównej nazwy usługi (SPN), która jest zarejestrowana w domenie Active Directory. Można to zrobić na dwa sposoby:
+> Aby użyć typu poświadczeń systemu Windows bez negocjowania, konto użytkownika usługi musi mieć dostęp do głównej nazwy usługi (SPN), która jest zarejestrowana w domenie Active Directory. Możesz to zrobić na dwa sposoby:
 
-1. Użyj konta `LocalSystem` lub, aby uruchomić usługę. `NetworkService` Ponieważ te konta mają dostęp do nazwy SPN maszyny, która została ustanowiona, gdy komputer jest przyłączony do domeny Active Directory, funkcja WCF automatycznie generuje prawidłowy element SPN w ramach punktu końcowego usługi w metadanych usługi (Opis usług sieci Web Język lub WSDL).
+1. Użyj konta `NetworkService` lub `LocalSystem`, aby uruchomić usługę. Ponieważ te konta mają dostęp do nazwy SPN maszyny, która została ustanowiona, gdy komputer jest przyłączony do domeny Active Directory, funkcja WCF automatycznie generuje prawidłowy element SPN w ramach punktu końcowego usługi w metadanych usługi (Opis usług sieci Web Język lub WSDL).
 
 2. Użyj dowolnego konta domeny Active Directory, aby uruchomić usługę. W takim przypadku należy ustanowić nazwę SPN dla tego konta domeny. Jednym z nich jest użycie narzędzia narzędzia Setspn. exe. Po utworzeniu nazwy SPN dla konta usługi Skonfiguruj funkcję WCF do publikowania tej nazwy SPN na klientach usługi za pomocą metadanych (WSDL). W tym celu należy ustawić tożsamość punktu końcowego dla uwidocznionego punktu końcowego, chociaż plik lub kod konfiguracyjny aplikacji. Poniższy przykład umożliwia programistyczne publikowanie tożsamości.
 
-Aby uzyskać więcej informacji na temat nazw SPN, protokołu Kerberos i Active Directory, zobacz [dodatek dotyczący protokołu Kerberos dla systemu Windows](https://go.microsoft.com/fwlink/?LinkId=88330). Aby uzyskać więcej informacji na temat tożsamości punktów końcowych, zobacz [elementu SecurityBindingElement Authentication Modes](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).
+Aby uzyskać więcej informacji na temat nazw SPN, protokołu Kerberos i Active Directory, zobacz [dodatek dotyczący protokołu Kerberos dla systemu Windows](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10)). Aby uzyskać więcej informacji na temat tożsamości punktów końcowych, zobacz [elementu SecurityBindingElement Authentication Modes](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).
 
 [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
 [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]
@@ -102,26 +102,26 @@ Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wyk
 
 - Utwórz klienta autonomicznego przy użyciu kodu (i kodu klienta).
 
-- Utwórz klienta, który nie definiuje żadnych adresów punktów końcowych. Zamiast tego należy użyć konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument. Przykład:
+- Utwórz klienta, który nie definiuje żadnych adresów punktów końcowych. Zamiast tego należy użyć konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument. Na przykład:
 
   [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
   [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
 
 ### <a name="code"></a>Kod
 
-Poniższy kod konfiguruje klienta. Tryb zabezpieczeń jest ustawiony na wartość komunikat, a typ poświadczeń klienta to Windows. Należy pamiętać, <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> że <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> właściwości i są ustawione `false`na.
+Poniższy kod konfiguruje klienta. Tryb zabezpieczeń jest ustawiony na wartość komunikat, a typ poświadczeń klienta to Windows. Należy zauważyć, że właściwości <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> i <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> są ustawione na `false`.
 
 > [!NOTE]
 > Aby użyć typu poświadczeń systemu Windows bez negocjowania, przed rozpoczęciem komunikacji z usługą należy skonfigurować klienta przy użyciu nazwy SPN konta usługi. Klient używa nazwy SPN, aby uzyskać token Kerberos do uwierzytelniania i zabezpieczania komunikacji z usługą. Poniższy przykład pokazuje, jak skonfigurować klienta przy użyciu nazwy SPN usługi. Jeśli używasz narzędzia do obsługi [metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) w celu wygenerowania klienta, Nazwa SPN usługi zostanie automatycznie rozpropagowana do klienta z metadanych usługi (WSDL), jeśli metadane usługi zawierają te informacje. Więcej informacji o sposobie konfigurowania usługi w celu uwzględnienia jej nazwy SPN w metadanych usługi znajduje się w sekcji "usługa" w dalszej części tego tematu.
 >
-> Aby uzyskać więcej informacji na temat nazw SPN, Kerberos i Active Directory, zobacz [dodatek dotyczący protokołu Kerberos dla systemu Windows](https://go.microsoft.com/fwlink/?LinkId=88330). Aby uzyskać więcej informacji na temat tożsamości punktów końcowych, zobacz temat [tryby uwierzytelniania elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) .
+> Aby uzyskać więcej informacji na temat nazw SPN, Kerberos i Active Directory, zobacz [dodatek dotyczący protokołu Kerberos dla systemu Windows](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10)). Aby uzyskać więcej informacji na temat tożsamości punktów końcowych, zobacz temat [tryby uwierzytelniania elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) .
 
 [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
 [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]
 
 ### <a name="configuration"></a>Konfiguracja
 
-Poniższy kod konfiguruje klienta. Należy pamiętać, [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) że element ServicePrincipalName > musi być ustawiony na wartość zgodną z nazwą SPN usługi zarejestrowanej dla konta usługi w domenie Active Directory.
+Poniższy kod konfiguruje klienta. Należy pamiętać, że element [\<Serviceprincipalname >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) musi być ustawiony na wartość zgodną z nazwą SPN usługi zarejestrowanej dla konta usługi w domenie Active Directory.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -157,4 +157,4 @@ Poniższy kod konfiguruje klienta. Należy pamiętać, [ \<](../../../../docs/fr
 
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

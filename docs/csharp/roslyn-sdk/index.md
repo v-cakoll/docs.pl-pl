@@ -3,12 +3,12 @@ title: Zestaw SDK platformy kompilatora .NET (interfejsy API Roslyn)
 description: Dowiedz się, jak używać zestawu SDK .NET Compiler Platform (zwanego również interfejsami API Roslyn) w celu zrozumienia kodu platformy .NET, błędów w programie i naprawienia tych błędów.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 3a202d977237ce716e3f8c0cf906894efd02196d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 98984edad3a25daa8b0ea13b903c4e6447b8a22a
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346953"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163140"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>Zestaw SDK .NET Compiler Platform
 
@@ -21,7 +21,7 @@ Zestaw .NET Compiler Platform SDK znacząco obniży barierę do wprowadzenia do 
 
 Zestaw .NET Compiler Platform SDK umożliwia tworzenie ***analizatorów*** i ***poprawek kodu*** , które wyszukują i poprawiają błędy kodowania. ***Analizatory*** wiedzą składnię i strukturę kodu oraz wykrywają praktyki, które należy skorygować. ***Poprawki kodu*** zawierają jedną lub więcej sugerowanych poprawek do obsługi błędów kodowania znalezionych przez analizatory. Zwykle Analizator i powiązane poprawki kodu są pakowane razem w jednym projekcie.
 
-Analizatory i poprawki kodu używają statycznej analizy do zrozumienia kodu. Nie uruchamiają kodu ani nie zapewniają innych korzyści z testowania. Mogą jednak wskazywać praktyki, które często prowadzą do błędów, nieobsługiwanego kodu lub standardowej weryfikacji podstawowej.
+Analizatory i poprawki kodu używają statycznej analizy do zrozumienia kodu. Nie uruchamiają kodu ani nie zapewniają innych korzyści z testowania. Mogą jednak wskazywać praktyki, które często prowadzą do usterek, nieobsługiwanego kodu lub naruszenia zasad Standard.
 
 Zestaw SDK .NET Compiler Platform zawiera pojedynczy zestaw interfejsów API, które umożliwiają badanie i zrozumienie kodu bazowej C# lub Visual Basic. Ze względu na to, że można użyć tej pojedynczej bazy kodu, można łatwiej pisać analizatory i poprawki kodu, wykorzystując składnię i interfejsy API analizy semantyki dostarczone przez zestaw SDK .NET Compiler Platform. Zwolniony z dużego zadania replikowania analizy wykonanej przez kompilator, można skoncentrować się na bardziej skoncentrowanym zadaniu wyszukiwania i rozwiązywania typowych błędów kodowania dla projektu lub biblioteki.
 

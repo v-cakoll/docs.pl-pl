@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: bd64531116b1588683c2f5c8964e78e41e371ecf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e784e254fb9314e69457d81a70400f7be30d9c13
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955339"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211998"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Zabezpieczenia komunikatów ze wzajemnymi certyfikatami
 W poniższym scenariuszu przedstawiono usługę Windows Communication Foundation (WCF) i klient zabezpieczony przy użyciu trybu zabezpieczeń wiadomości. Klient i usługa są uwierzytelniani przy użyciu certyfikatów.  
@@ -22,17 +22,17 @@ W poniższym scenariuszu przedstawiono usługę Windows Communication Foundation
   
  ![Zabezpieczenia komunikatów przy użyciu certyfikatów wzajemnych](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
-|Charakterystyk|Opis|  
+|Cechy|Opis|  
 |--------------------|-----------------|  
-|Tryb zabezpieczeń|Message|  
+|Tryb zabezpieczeń|Komunikat|  
 |Współdziałanie|Tak, przy użyciu protokołu WS-Security i X. 509, zgodne z profilem tokeny certyfikatu i usługi.|  
 |Uwierzytelnianie|Wzajemne uwierzytelnianie serwera i klienta.|  
-|Spójn|Tak|  
-|Poufne|Tak|  
-|Transportu|HTTP|  
+|Integralność|Tak|  
+|Poufność|Tak|  
+|Transport|HTTP|  
 |Wiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Usługa  
+## <a name="service"></a>NDES  
  Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wykonaj jedną z następujących czynności:  
   
 - Tworzenie usługi autonomicznej przy użyciu kodu bez konfiguracji.  
@@ -107,7 +107,7 @@ W poniższym scenariuszu przedstawiono usługę Windows Communication Foundation
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>Konfiguracja  
- Poniżej konfiguruje klienta. Certyfikat klienta musi być określony przy użyciu [ \<> ClientCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Ponadto certyfikat usługi jest określany przy użyciu [ \<> defaultCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
+ Poniżej konfiguruje klienta. Certyfikat klienta należy określić przy użyciu [\<ClientCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Ponadto certyfikat usługi jest określany przy użyciu [\<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -161,5 +161,5 @@ W poniższym scenariuszu przedstawiono usługę Windows Communication Foundation
 ## <a name="see-also"></a>Zobacz także
 
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
-- [Instrukcje: Tworzenie i instalowanie certyfikatów tymczasowych w programie WCF na potrzeby zabezpieczeń transportu podczas opracowywania](https://go.microsoft.com/fwlink/?LinkId=244264)
+- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Instrukcje: Tworzenie i instalowanie certyfikatów tymczasowych w programie WCF na potrzeby zabezpieczeń transportu podczas opracowywania](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))

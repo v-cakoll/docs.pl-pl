@@ -2,72 +2,72 @@
 title: Ograniczanie dystrybucji komunikatów
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 113244e6c7eb356d70e9ffb7b85367e9feb34c54
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36d9d43760e68f6bcf0099ac17dec5a8278d0e49
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750653"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211907"
 ---
 # <a name="limiting-message-distribution"></a>Ograniczanie dystrybucji komunikatów
 
-Kanał elementu równorzędnego jest celowe emisji siatki. Jego podstawowy model powodziom obejmuje dystrybucja każdy komunikat wysyłany przez dowolnego członka siatki dla wszystkich członków tej siatki. Jest to idealne rozwiązanie w sytuacjach, w którym każdy komunikat generowany przez element członkowski ma zastosowanie i jest przydatne do wszystkich innych elementów członkowskich (na przykład pokoju rozmów). Jednak wiele aplikacji mają sporadyczne potrzebę ograniczanie dystrybucji komunikatów. Na przykład jeśli nowy element członkowski sprzężenia siatki i chce, aby pobrać ostatnią wiadomością wysłaną za pośrednictwem sieci, to żądanie nie trzeba propagowane do każdego członka siatkę. Żądanie może być ograniczona do umieszczonej blisko sąsiadów lub odfiltrowane wiadomości wygenerowaną lokalnie. Komunikaty mogą być również wysyłane do jednego węzła na siatkę. W tym temacie omówiono użycie liczba przeskoków, filtr Propagacja komunikatów, Filtr lokalny lub bezpośrednie połączenie do kontrolowania, jak wiadomości są przekazywane w całej sieci i zapewnia ogólne wskazówki dotyczące wybierania podejście.
+Kanałem równorzędnym jest zaprojektowanie siatki emisji. Jego podstawowy model zalewania obejmuje dystrybuowanie każdej wiadomości wysyłanej przez dowolnego członka siatki do wszystkich innych członków tej siatki. Jest to idealne rozwiązanie w sytuacjach, gdy każdy komunikat generowany przez członka jest istotny i przydatny dla wszystkich innych członków (na przykład pokoju rozmów). Jednak wiele aplikacji ma sporadyczną potrzebę do ograniczania dystrybucji komunikatów. Na przykład jeśli nowy element członkowski łączy siatkę i chce pobrać ostatnią wiadomość wysłaną przez siatkę, to żądanie nie musi być zalewana do każdego elementu członkowskiego siatki. Żądanie może być ograniczone do bliskich sąsiadów lub można odfiltrować lokalnie wygenerowane komunikaty. Komunikaty mogą być również wysyłane do poszczególnych węzłów siatki. W tym temacie omówiono użycie liczby przeskoków, filtru propagacji komunikatów, lokalnego filtru lub bezpośredniego połączenia w celu kontrolowania sposobu przekazywania komunikatów w całej sieci i przedstawiono ogólne wytyczne dotyczące wybierania podejścia.
 
 ## <a name="hop-counts"></a>Liczba przeskoków
 
-Pojęcie `PeerHopCount` jest podobny do czasu wygaśnięcia (Time-To-Live) używane w protokole IP. Wartość `PeerHopCount` jest powiązany z wystąpienia wiadomości i określa, ile razy komunikat powinien zostać przekazany pakiet przed porzucana. Każdorazowo, wiadomość zostaje odebrana przez kanał elementu równorzędnego klienta, klient sprawdza, czy komunikat, aby sprawdzić, czy `PeerHopCount` jest określony. Jeśli zostanie określony, następnie zmniejsza klienta przeskok wartości liczby za pomocą jednej przed przekazaniem wiadomości do sąsiedniego węzłów. Kiedy klient otrzymuje komunikat, liczba przeskoków wartość zero, klient przetworzy komunikat, ale nie przekazuje komunikat do sąsiadów.
+Koncepcja `PeerHopCount` jest podobna do czasu wygaśnięcia (Time-to-Live) używanego w protokole IP. Wartość `PeerHopCount` jest powiązana z wystąpieniem komunikatu i określa, ile razy wiadomość powinna być przekazywana przed porzuceniem. Za każdym razem, gdy komunikat jest odbierany przez klienta kanału równorzędnego, klient analizuje komunikat, aby zobaczyć, czy `PeerHopCount` jest określony. Jeśli jest określona, klient zmniejsza wartość liczby przeskoków o jeden przed przekazaniem komunikatu do sąsiednich węzłów. Gdy klient otrzymuje komunikat z wartością liczby przeskoków równą zero, Klient przetwarza komunikat, ale nie przekazuje komunikatu do sąsiadów.
 
-Liczba przeskoków mogą być dodawane do wiadomości, dodając `PeerHopCount` jako atrybut do odpowiednich właściwości lub pól w implementacji klasy wiadomości. Możesz ustawić określoną wartość przed wysłaniem wiadomości do siatki. W ten sposób można użyć liczby przeskoków ograniczyć rozłożenia komunikatów w całej sieci, gdy jest to konieczne, potencjalnie unikanie duplikowania zbędnych komunikatów. Jest to przydatne w przypadkach, w którym siatkę znajduje wysokiej ilość nadmiarowych danych lub wysyłania komunikatu do natychmiastowego sąsiadów lub sąsiadów w obrębie kilka przeskoków.
+Licznik przeskoków może zostać dodany do komunikatu przez dodanie `PeerHopCount` jako atrybutu do odpowiedniej właściwości lub pola w implementacji klasy komunikatów. Można ją ustawić na określoną wartość przed wysłaniem komunikatu do siatki. W ten sposób można użyć liczby przeskoków, aby ograniczyć dystrybucję komunikatów w sieci w razie potrzeby, potencjalnie unikając niepotrzebne duplikowanie komunikatów. Jest to przydatne w przypadkach, gdy siatka zawiera dużą ilość danych nadmiarowych lub do wysyłania komunikatów do bezpośrednich sąsiadów lub sąsiadów w ciągu kilku przeskoków.
 
-- Fragmenty kodu i powiązane informacje, zobacz [blogu kanał elementu równorzędnego](https://go.microsoft.com/fwlink/?LinkID=114531).
+- Fragmenty kodu i powiązane informacje można znaleźć w [atrybucie PeerHopCount: kontrolowanie wpisu dystrybucji komunikatów](https://docs.microsoft.com/archive/blogs/peerchan/the-peerhopcount-attribute-controlling-message-distribution) na blogu kanału równorzędnego.
 
-## <a name="message-propagation-filter"></a>Filtr Propagacja komunikatów
+## <a name="message-propagation-filter"></a>Filtr propagacji komunikatów
 
-`MessagePropagationFilter` może służyć do niestandardowych kontroli komunikat o przepełnieniu, szczególnie w przypadku, gdy treść komunikatu lub innych określonych scenariuszy określają propagacji. Filtr podejmuje decyzje propagacji dla każdego komunikatu, który przechodzi przez węzeł. Ta zasada obowiązuje dla komunikatów pochodzących gdzie indziej w siatce, Twój węzeł otrzymał oraz komunikaty tworzone przez testowaną aplikację. Filtr ma dostęp do wiadomości i jego pochodzenia, więc decyzji dotyczących przekazywania lub porzuca wiadomość może bazować na pełne informacje dostępne.
+`MessagePropagationFilter` może służyć do dostosowanej kontroli zalewania komunikatów, szczególnie w przypadku, gdy zawartość wiadomości lub innych określonych scenariuszy decyduje o propagacji. Filtr wykonuje decyzje propagacji dla każdego komunikatu, który przechodzi przez węzeł. Jest to prawdziwe w przypadku komunikatów, które pochodzą z innych miejsc w siatce, które zostały odebrane przez ten węzeł, a także wiadomości utworzonych przez aplikację. Filtr ma dostęp zarówno do wiadomości, jak i jej pochodzenia, dlatego decyzje dotyczące przekazywania lub porzucania wiadomości mogą opierać się na pełnych dostępnych informacjach.
 
-<xref:System.ServiceModel.PeerMessagePropagationFilter> jest abstrakcyjna klasa bazowa przy użyciu funkcji pojedynczego, <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. Pierwszy argument wywołania metody które przekazuje pełną kopię wiadomości. Wszelkie zmiany wprowadzone do wiadomości nie wpływają na komunikat rzeczywiste. Ostatni argument wywołania metody które określa źródło wiadomości (`PeerMessageOrigination.Local` lub `PeerMessageOrigination.Remote`). Konkretne implementacje tej metody musi zwracać stałej z <xref:System.ServiceModel.PeerMessagePropagation> wyliczenie co oznacza, że wiadomości były przekazywane do aplikacji lokalnej (`Local`), są przekazywane z klientami zdalnymi (`Remote`), zarówno (`LocalAndRemote`), żaden z tych (`None`). Ten filtr można zastosować, uzyskując dostęp do odpowiednich `PeerNode` obiektu i określając wystąpienia pochodne propagacji filtrowania klasy w `PeerNode.MessagePropagationFilter` właściwości. Upewnij się, że filtr propagacji jest dołączony przed otwarciem kanał elementu równorzędnego.
+<xref:System.ServiceModel.PeerMessagePropagationFilter> jest podstawową klasą abstrakcyjną z pojedynczą funkcją, <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. Pierwszy argument wywołania metody przekazuje pełną kopię wiadomości. Wszelkie zmiany wprowadzone w komunikacie nie wpływają na rzeczywistą wiadomość. Ostatni argument wywołania metody Określa początek komunikatu (`PeerMessageOrigination.Local` lub `PeerMessageOrigination.Remote`). Konkretne implementacje tej metody muszą zwracać stałą z wyliczenia <xref:System.ServiceModel.PeerMessagePropagation> wskazujący, że wiadomość ma być przekazywana do lokalnej aplikacji (`Local`), przesyłana dalej do klientów zdalnych (`Remote`), obu (`LocalAndRemote`) lub żadnego (`None`). Ten filtr można zastosować, uzyskując dostęp do odpowiedniego obiektu `PeerNode` i określając wystąpienie klasy filtru propagacji pochodnej we właściwości `PeerNode.MessagePropagationFilter`. Przed otwarciem kanału równorzędnego upewnij się, że jest dołączony filtr propagacji.
 
-- Fragmenty kodu i powiązane informacje, zobacz [blogu kanał elementu równorzędnego](https://go.microsoft.com/fwlink/?LinkID=114532).
+- Fragmenty kodu i powiązane informacje znajdują się w witrynie [peer Channel i MessagePropagationFilter](https://docs.microsoft.com/archive/blogs/peerchan/peer-channel-and-messagepropagationfilter) post na blogu kanału równorzędnego.
 
-## <a name="contacting-an-individual-node-in-the-mesh"></a>Nawiązywanie kontaktu z poszczególnych węzłów w siatce
+## <a name="contacting-an-individual-node-in-the-mesh"></a>Kontaktowanie się z pojedynczym węzłem w sieci
 
-Można się skontaktować poszczególnych węzeł w siatce, konfigurując Filtr lokalny lub przez ustawienie bezpośredniego połączenia z programem.
+Można skontaktować się z pojedynczym węzłem w siatce przez skonfigurowanie lokalnego filtru lub przez skonfigurowanie połączenia bezpośredniego.
 
-Jeśli węzły w siatce każdego Identyfikatora poszczególnych, można określić identyfikator docelowego w implementacji wiadomości. Filtr lokalny można skonfigurować pod kątem przez pisanie funkcji w swojej kontraktu komunikatu, które będą wyświetlane tylko wiadomości do bieżącego węzła, jeśli określony identyfikator docelowy pasuje do Identyfikatora. Siatkę służy do transportu komunikatów, dzięki czemu obciążenie Konfigurowanie nowego połączenia nie musi być naliczane. Jednak istnieje utraty wydajności, ponieważ komunikat jest wysyłany wiele razy w całej sieci. Działa to dobrze w przypadku wysyłania wiadomości do poszczególnych elementów siatki, tak długo, jak długo komunikaty nie są zbyt duże ani zbyt często.
+Jeśli węzły w siatce mają poszczególne identyfikatory, w implementacji wiadomości można określić identyfikator docelowy. Filtr lokalny można skonfigurować przez napisanie funkcji w kontrakcie wiadomości, która będzie wyświetlać komunikat tylko do bieżącego węzła, jeśli jego identyfikator jest zgodny z określonym IDENTYFIKATORem docelowym. Siatka transportuje komunikat, dzięki czemu obciążenie związane z konfigurowaniem nowego połączenia nie musi być naliczane. Istnieje jednak utrata wydajności, ponieważ wiadomość jest wysyłana wiele razy w całej sieci. Jest to dobre rozwiązanie w przypadku wysyłania komunikatów do poszczególnych elementów członkowskich siatki, o ile komunikaty nie są zbyt duże ani zbyt częste.
 
-W przypadku długotrwałych i dużej przepustowości połączeń bezpośrednich połączeń są preferowane w porównaniu. Możesz wysłać informacje dotyczące połączenia za pośrednictwem sieci i następnie skonfigurować połączenie bezpośrednie Wybieranie funkcję wysyłania i odbierania komunikatów.
+W przypadku długotrwałych połączeń o dużej przepustowości preferowane są bezpośrednie połączenia. Informacje o połączeniu można wysłać przez siatkę, a następnie skonfigurować bezpośrednie połączenie z wybieraniem do wysyłania/odbierania wiadomości.
 
-## <a name="choosing-an-approach-for-limiting-message-distribution"></a>Wybieranie podejścia do ograniczanie dystrybucji komunikatów
+## <a name="choosing-an-approach-for-limiting-message-distribution"></a>Wybieranie podejścia do ograniczania dystrybucji komunikatów
 
-Po odnalezieniu scenariusz, w której chcesz ograniczyć dystrybucji komunikatów odpowiedzieć sobie na następujące pytania:
+Po znalezieniu scenariusza, w którym należy ograniczyć dystrybucję wiadomości, należy zadać sobie następujące pytania:
 
-- **Kto** musi otrzymać wiadomość? Sąsiadujące tylko jeden węzeł? Węzeł gdzieś w sieci? Połowa siatki?
+- **Kto** musi odebrać komunikat? Tylko jeden węzeł sąsiada? Węzeł w innym miejscu siatki? Połowa siatki?
 
-- **Jak często** będzie można wysłać tej wiadomości?
+- **Jak często** będzie wysyłany ten komunikat?
 
-- Jakiego rodzaju elementu **przepustowości** użyje tej wiadomości?
+- Jakiego rodzaju **przepustowość** będzie używać ten komunikat?
 
-Odpowiedzi na te pytania mogą pomóc w określeniu, czy ma być używany, liczba przeskoków, filtr Propagacja komunikatów, Filtr lokalny lub bezpośrednie połączenie. Należy rozważyć następujące ogólne wytyczne:
+Odpowiedzi na te pytania mogą pomóc w ustaleniu, czy użyć liczby przeskoków, filtru propagacji komunikatów, lokalnego filtru czy połączenia bezpośredniego. Należy wziąć pod uwagę następujące ogólne wytyczne:
 
-- **Kto**
+- **Którzy**
 
-  - *Pojedynczych węzłów*:  Filtr lokalny lub bezpośrednie połączenie.
+  - *Pojedynczy węzeł*: filtr lokalny lub bezpośrednie połączenie.
 
-  - *Sąsiadów w niektórych sąsiedztwa*:  PeerHopCount.
+  - *Sąsiedzi w określonym sąsiedztwie*: PeerHopCount.
 
-  - *Złożone podzbiór siatkę*:  MessagePropagationFilter.
+  - *Złożony podzestaw siatki*: MessagePropagationFilter.
 
 - **Jak często**
 
-  - *Bardzo często*:  Bezpośrednie połączenie, PeerHopCount, MessagePropagationFilter.
+  - *Bardzo częste*: połączenie bezpośrednie, PeerHopCount, MessagePropagationFilter.
 
-  - *Sporadyczne*:  Filtr lokalny.
+  - *Sporadycznie*: filtr lokalny.
 
 - **Wykorzystanie przepustowości**
 
-  - *Wysoka*:  Bezpośrednie połączenie, mniej wskazane zastosowanie MessagePropagationFilter lub lokalnego filtru.
+  - *Wysoki*: bezpośrednie połączenie, mniej zalecane do użycia MessagePropagationFilter lub filtru lokalnego.
 
-  - *Niska*:  Istnieje bezpośrednie połączenie prawdopodobnie nie jest wymagane.
+  - *Niska*: dowolne, bezpośrednie połączenie prawdopodobnie nie jest potrzebne.
 
 ## <a name="see-also"></a>Zobacz także
 

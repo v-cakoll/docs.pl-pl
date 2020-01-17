@@ -2,20 +2,21 @@
 title: Duże ilości danych i przesyłanie strumieniowe
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 70e43eaf4dc77e07af8ec65faf9cf0fa9a7a0fe4
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 5719f941c71867699960c6029f9cc512021986f3
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991517"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212206"
 ---
 # <a name="large-data-and-streaming"></a>Duże ilości danych i przesyłanie strumieniowe
-Windows Communication Foundation (WCF) to infrastruktura komunikacji oparta na języku XML. Ponieważ dane XML są powszechnie zakodowane w standardowym formacie tekstowym zdefiniowanym w [specyfikacji XML 1,0](https://go.microsoft.com/fwlink/?LinkId=94838), połączone systemy deweloperzy i architektów zwykle są zaangażowane w informacje o sieci (lub rozmiarze) komunikatów wysyłanych przez sieć i Kodowanie za pomocą tekstu XML stanowi specjalne wyzwania dotyczące wydajnego transferu danych binarnych.  
+
+Windows Communication Foundation (WCF) to infrastruktura komunikacji oparta na języku XML. Ponieważ dane XML są powszechnie zakodowane w standardowym formacie tekstowym zdefiniowanym w [specyfikacji XML 1,0](https://www.w3.org/TR/REC-xml/), połączone systemy deweloperzy i architektów zazwyczaj dotyczą sieci (lub rozmiaru) komunikatów wysyłanych przez sieć, a kodowanie tekstu XML stanowi specjalne wyzwania dotyczące wydajnego transferu danych binarnych.  
   
 ## <a name="basic-considerations"></a>Podstawowe zagadnienia  
  Aby podać informacje w tle dotyczące następujących informacji dotyczących programu WCF, w tej sekcji przedstawiono niektóre ogólne zagadnienia i zagadnienia dotyczące kodowania, danych binarnych i przesyłania strumieniowego, które są ogólnie stosowane do infrastruktury podłączonych systemów.  
   
-### <a name="encoding-data-text-vs-binary"></a>Dane kodowania: Tekst a plików binarnych  
+### <a name="encoding-data-text-vs-binary"></a>Kodowanie danych: tekst a binarny  
  Często wyrażane problemy dla deweloperów obejmują postrzeganie, że kod XML ma znaczne obciążenie w porównaniu z formatami binarnymi ze względu na powtarzalny charakter tagów początkowych i tagów końcowych, że kodowanie wartości liczbowych jest uznawane za znacznie większe ponieważ są one wyrażone w wartościach tekstowych, a dane binarne nie mogą być wyrażone efektywnie, ponieważ muszą być specjalnie zakodowane w formacie tekstowym.  
   
  Chociaż wiele z tych i podobnych problemów jest prawidłowych, rzeczywista różnica między komunikatami szyfrowanymi w formacie XML w środowisku usług sieci Web XML i kodowanymi binarnie komunikatami w starszym środowisku zdalnego wywołania procedury (RPC) jest często znacznie mniej znacząca niż możliwe jest zaproponowanie pierwszego zagadnienia.  
@@ -56,27 +57,27 @@ Windows Communication Foundation (WCF) to infrastruktura komunikacji oparta na j
   
  W przypadku danych, które nie mają tych ograniczeń, zazwyczaj lepiej jest wysyłać sekwencje komunikatów w zakresie sesji niż w przypadku jednej dużej wiadomości. Aby uzyskać więcej informacji, zobacz sekcję "dane przesyłane strumieniowo" w dalszej części tego tematu.  
   
- Podczas wysyłania dużych ilości danych należy ustawić `maxAllowedContentLength` ustawienie usług IIS (Aby uzyskać więcej informacji, zobacz [Konfigurowanie limitów żądań usług IIS](https://go.microsoft.com/fwlink/?LinkId=253165)) i `maxReceivedMessageSize` ustawienie powiązania (na przykład [ System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) lub <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). Właściwość domyślna to 28,6 M `maxReceivedMessageSize` , a właściwość domyślna to 64 KB. `maxAllowedContentLength`  
+ Podczas wysyłania dużych ilości danych należy ustawić ustawienie `maxAllowedContentLength` IIS (Aby uzyskać więcej informacji, zobacz [Konfigurowanie limitów żądań usług IIS](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)) i ustawienie powiązania `maxReceivedMessageSize` (na przykład [System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) lub <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). Właściwość `maxAllowedContentLength` ma wartość domyślną 28,6 MB, a właściwość `maxReceivedMessageSize` ma wartość domyślną 64 KB.  
   
 ## <a name="encodings"></a>Kodowanie  
- *Kodowanie* definiuje zestaw reguł dotyczących sposobu prezentowania wiadomości w sieci przewodowej. *Koder* implementuje takie kodowanie i jest odpowiedzialny na stronie nadawcy w celu wyłączania pamięci <xref:System.ServiceModel.Channels.Message> do strumienia bajtów lub buforu bajtów, który można wysłać w sieci. Po stronie odbiornika koder zamienia sekwencję bajtów na komunikat w pamięci.  
+ *Kodowanie* definiuje zestaw reguł dotyczących sposobu prezentowania wiadomości w sieci przewodowej. *Koder* implementuje takie kodowanie i jest odpowiedzialny na stronie nadawcy w celu wyłączania <xref:System.ServiceModel.Channels.Message> w pamięci do strumienia bajtów lub buforu bajtów, który można wysłać w sieci. Po stronie odbiornika koder zamienia sekwencję bajtów na komunikat w pamięci.  
   
  Program WCF zawiera trzy kodery i umożliwia pisanie i podłączenie własnych koderów, w razie potrzeby.  
   
- Każde ze standardowych powiązań zawiera wstępnie skonfigurowany koder, według którego powiązania z prefiksem Net * używają kodera binarnego (poprzez dołączenie <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> klasy), <xref:System.ServiceModel.BasicHttpBinding> podczas gdy klasy <xref:System.ServiceModel.WSHttpBinding> i używają kodera wiadomości tekstowych (za pomocą Domyślnie <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> Klasa).  
+ Każde ze standardowych powiązań zawiera wstępnie skonfigurowany koder, według którego powiązania z prefiksem Net * używają kodera binarnego (poprzez dołączenie klasy <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>), podczas gdy klasy <xref:System.ServiceModel.BasicHttpBinding> i <xref:System.ServiceModel.WSHttpBinding> używają domyślnie kodera wiadomości tekstowych (przy użyciu klasy <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>).  
   
 |Element powiązania kodera|Opis|  
 |-----------------------------|-----------------|  
-|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|Koder wiadomości tekstowych to domyślny koder dla wszystkich powiązań opartych na protokole HTTP i odpowiedni wybór dla wszystkich powiązań niestandardowych, w których współdziałanie jest najwyższej istotności. Ten koder odczytuje i zapisuje standardowe komunikaty tekstowe SOAP 1.1/SOAP 1,2 bez specjalnej obsługi danych binarnych. Jeśli właściwość komunikatu jest ustawiona na <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>, otoka koperty protokołu SOAP zostanie pominięta z danych wyjściowych i tylko zawartość treści komunikatu jest serializowana. <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType>|  
+|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|Koder wiadomości tekstowych to domyślny koder dla wszystkich powiązań opartych na protokole HTTP i odpowiedni wybór dla wszystkich powiązań niestandardowych, w których współdziałanie jest najwyższej istotności. Ten koder odczytuje i zapisuje standardowe komunikaty tekstowe SOAP 1.1/SOAP 1,2 bez specjalnej obsługi danych binarnych. Jeśli właściwość <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> komunikatu jest ustawiona na <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>, otoka koperty protokołu SOAP zostanie pominięta z danych wyjściowych i zostanie zserializowana tylko zawartość treści komunikatu.|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|Koder komunikatów MTOM jest koderem tekstowym, który implementuje specjalną obsługę danych binarnych i nie jest domyślnie używany w żadnym ze standardowych powiązań, ponieważ jest to wyłącznie narzędzie do optymalizacji wielkości liter. Jeśli komunikat zawiera dane binarne, które przekraczają próg, w którym Kodowanie MTOM zwraca korzyść, dane są zewnętrzne do części MIME po kopercie komunikatu. Zobacz Włączanie mechanizmu MTOM w dalszej części tej sekcji.|  
 |<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|Koder komunikatów binarnych to domyślny koder powiązań NET * i odpowiedni wybór, gdy obie strony komunikują się na podstawie WCF. Koder komunikatów binarnych używa formatu binarny programu .NET, czyli reprezentacji binarnych dla określonych firmy Microsoft dla zestawów informacyjnych XML (Infosets), która zazwyczaj daje mniejszy wpływ niż odpowiednik reprezentacji XML 1,0 i koduje dane binarne jako bajt produkcyjne.|  
   
  Kodowanie wiadomości tekstowych jest zazwyczaj najlepszym wyborem dla każdej ścieżki komunikacji wymagającej współdziałania, podczas gdy kodowanie komunikatów binarnych jest najlepszym wyborem dla każdej innej ścieżki komunikacyjnej. Kodowanie wiadomości binarnych zazwyczaj daje mniejsze rozmiary komunikatów w porównaniu do tekstu w przypadku pojedynczego komunikatu i stopniowo zmniejsza mniejsze rozmiary komunikatów w czasie trwania sesji komunikacji. W przeciwieństwie do kodowania tekstu, kodowanie binarne nie musi używać specjalnej obsługi danych binarnych, takich jak użycie Base64, ale reprezentuje bajty jako bajty.  
   
- Jeśli rozwiązanie nie wymaga współdziałania, ale nadal chcesz używać transportu HTTP, możesz złożyć <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> do niestandardowego powiązania, które <xref:System.ServiceModel.Channels.HttpTransportBindingElement> używa klasy do transportu. Jeśli liczba klientów w usłudze wymaga współdziałania, zaleca się uwidocznienie równoległych punktów końcowych, z których każdy ma odpowiednie opcje transportu i kodowania dla odpowiednich klientów.  
+ Jeśli rozwiązanie nie wymaga współdziałania, ale nadal chcesz korzystać z transportu HTTP, możesz złożyć <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> do niestandardowego powiązania, które używa klasy <xref:System.ServiceModel.Channels.HttpTransportBindingElement> do transportu. Jeśli liczba klientów w usłudze wymaga współdziałania, zaleca się uwidocznienie równoległych punktów końcowych, z których każdy ma odpowiednie opcje transportu i kodowania dla odpowiednich klientów.  
   
 ### <a name="enabling-mtom"></a>Włączanie mechanizmu MTOM  
- Gdy współdziałanie jest wymaganiem i należy wysłać duże dane binarne, kodowanie komunikatów mechanizmu MTOM jest alternatywną strategią kodowania, którą można włączyć na <xref:System.ServiceModel.BasicHttpBinding> podstawie <xref:System.ServiceModel.WSHttpBinding> standardu lub powiązań przez `MessageEncoding` ustawienie odpowiednich Właściwość do <xref:System.ServiceModel.WSMessageEncoding.Mtom> lub przez złożenie <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> <xref:System.ServiceModel.Channels.CustomBinding>do. W poniższym przykładowym kodzie wyodrębnionym z przykładu [kodowania MTOM](../../../../docs/framework/wcf/samples/mtom-encoding.md) pokazano, jak włączyć MTOM w konfiguracji.  
+ Gdy współdziałanie jest wymaganiem i należy wysłać duże dane binarne, kodowanie komunikatów mechanizmu MTOM jest alternatywną strategią kodowania, którą można włączyć dla standardowego <xref:System.ServiceModel.BasicHttpBinding> lub <xref:System.ServiceModel.WSHttpBinding> powiązań przez ustawienie odpowiedniej właściwości `MessageEncoding` na <xref:System.ServiceModel.WSMessageEncoding.Mtom> lub poprzez złożenie <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> w <xref:System.ServiceModel.Channels.CustomBinding>. W poniższym przykładowym kodzie wyodrębnionym z przykładu [kodowania MTOM](../../../../docs/framework/wcf/samples/mtom-encoding.md) pokazano, jak włączyć MTOM w konfiguracji.  
   
 ```xml  
 <system.serviceModel>  
@@ -112,7 +113,7 @@ class MyData
   
  W przypadku korzystania z mechanizmu MTOM poprzedni kontrakt danych jest serializowany zgodnie z następującymi regułami:  
   
-- Jeśli `binaryBuffer` nie`null` jest i pojedynczo zawiera wystarczającą ilość danych, aby uzasadnić obciążenie externalization MTOM (nagłówki MIME itd.) w porównaniu z kodowaniem Base64, dane są zewnętrzne i przenoszone wraz z komunikatem jako binarną część MIME. Jeśli próg nie zostanie przekroczony, dane są kodowane jako Base64.  
+- Jeśli `binaryBuffer` nie `null` i pojedynczo zawiera wystarczającą ilość danych, aby uzasadnić obciążenie externalization MTOM (nagłówki MIME itd.) w porównaniu z kodowaniem Base64, dane są zewnętrzne i przenoszone wraz z komunikatem jako binarną część MIME. Jeśli próg nie zostanie przekroczony, dane są kodowane jako Base64.  
   
 - Ciąg (i wszystkie inne typy, które nie są binarne) są zawsze reprezentowane jako ciąg wewnątrz treści komunikatu, bez względu na rozmiar.  
   
@@ -126,7 +127,7 @@ class MyData
   
  Jak wspomniano wcześniej, Włącz przesyłanie strumieniowe tylko dla dużych komunikatów (z zawartością tekstową lub binarną), jeśli nie można podzielić danych na segmenty, jeśli wiadomość musi zostać dostarczona w odpowiednim czasie lub jeśli dane nie są jeszcze w pełni dostępne podczas inicjowania transferu.  
   
-### <a name="restrictions"></a>Ograniczenia  
+### <a name="restrictions"></a>{1&gt;Ograniczenia&lt;1}  
  W przypadku włączenia przesyłania strumieniowego nie można użyć dużej liczby funkcji WCF:  
   
 - Podpisy cyfrowe dla treści wiadomości nie mogą zostać wykonane, ponieważ wymagają przetwarzania skrótu przez całą zawartość wiadomości. W przypadku przesyłania strumieniowego zawartość nie jest w pełni dostępna, gdy nagłówki wiadomości są konstruowane i wysyłane i w związku z tym nie można obliczyć podpisu cyfrowego.  
@@ -145,11 +146,11 @@ class MyData
   
 - <xref:System.ServiceModel.WebHttpBinding>  
   
- Ze względu na to, że <xref:System.ServiceModel.NetTcpBinding> podstawowe <xref:System.ServiceModel.NetNamedPipeBinding> transporty i obsługują niezawodne dostarczanie i sesję opartą na połączeniach, w przeciwieństwie do protokołu HTTP, te dwa powiązania mają minimalny wpływ na te ograniczenia.  
+ Ponieważ podstawowe transporty <xref:System.ServiceModel.NetTcpBinding> i <xref:System.ServiceModel.NetNamedPipeBinding> mają niezawodną niezawodne dostarczanie i obsługę sesji opartej na połączeniach, w przeciwieństwie do protokołu HTTP, te dwa powiązania mają minimalny wpływ na te ograniczenia.  
   
- Transmisja strumieniowa nie jest dostępna w przypadku transportu usługi kolejkowania komunikatów (MSMQ) i dlatego nie można jej używać <xref:System.ServiceModel.NetMsmqBinding> z <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> ani klasą. Transport kolejkowania komunikatów obsługuje tylko buforowane transfery danych z ograniczonym rozmiarem komunikatu, podczas gdy wszystkie inne transporty nie mają praktycznego limitu rozmiaru komunikatów dla większości scenariuszy.  
+ Transmisja strumieniowa nie jest dostępna w przypadku transportu usługi kolejkowania komunikatów (MSMQ) i dlatego nie można jej używać z klasą <xref:System.ServiceModel.NetMsmqBinding> ani <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Transport kolejkowania komunikatów obsługuje tylko buforowane transfery danych z ograniczonym rozmiarem komunikatu, podczas gdy wszystkie inne transporty nie mają praktycznego limitu rozmiaru komunikatów dla większości scenariuszy.  
   
- Przesyłanie strumieniowe jest również niedostępne w przypadku korzystania z transportu kanału równorzędnego, więc nie jest <xref:System.ServiceModel.NetPeerTcpBinding>dostępne w programie.  
+ Przesyłanie strumieniowe jest również niedostępne w przypadku korzystania z transportu kanału równorzędnego, więc nie jest dostępne w <xref:System.ServiceModel.NetPeerTcpBinding>.  
   
 #### <a name="streaming-and-sessions"></a>Przesyłanie strumieniowe i sesje  
  Podczas przesyłania strumieniowego do wywołań opartych na sesji może wystąpić nieoczekiwane zachowanie. Wszystkie wywołania przesyłania strumieniowego są realizowane za pośrednictwem pojedynczego kanału (kanału datagramu), który nie obsługuje sesji, nawet jeśli używane powiązanie jest skonfigurowane do korzystania z sesji. Jeśli wielu klientów przesyła strumieniowo wywołania do tego samego obiektu usługi za pośrednictwem powiązań opartych na sesji, a tryb współbieżności obiektu usługi jest ustawiony na wartość Single, a jego tryb kontekstu wystąpienia jest ustawiony na PerSession, wszystkie wywołania muszą przechodzić przez kanał datagramu i tylko jeden wywołanie jest przetwarzane w czasie. Co najmniej jeden klient może przekroczyć limit czasu. Ten problem można obejść, konfigurując tryb kontekstu wystąpienia obiektu usługi do PerCall lub współbieżności do wielu.  
@@ -160,9 +161,9 @@ class MyData
 ### <a name="enabling-streaming"></a>Włączanie przesyłania strumieniowego  
  Przesyłanie strumieniowe można włączyć w następujący sposób:  
   
-- Wysyłanie i akceptowanie żądań w trybie przesyłania strumieniowego oraz akceptowanie i zwracanie odpowiedzi w<xref:System.ServiceModel.TransferMode.StreamedRequest>trybie buforowanym ().  
+- Wysyłanie i akceptowanie żądań w trybie przesyłania strumieniowego oraz akceptowanie i zwracanie odpowiedzi w trybie buforowanym (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
   
-- Wysyłanie i akceptowanie żądań w trybie buforowanym oraz akceptowanie i zwracanie odpowiedzi w trybie przesyłania<xref:System.ServiceModel.TransferMode.StreamedResponse>strumieniowego ().  
+- Wysyłanie i akceptowanie żądań w trybie buforowanym oraz akceptowanie i zwracanie odpowiedzi w trybie przesyłania strumieniowego (<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
   
 - Wysyłanie i odbieranie żądań i odpowiedzi w trybie przesyłania strumieniowego w obu kierunkach. (<xref:System.ServiceModel.TransferMode.Streamed>).  
   
@@ -180,15 +181,15 @@ class MyData
 <system.serviceModel>  
 ```  
   
- Podczas tworzenia wystąpienia powiązania w kodzie, należy ustawić odpowiednią `TransferMode` właściwość powiązania (lub element powiązania transportu, jeśli tworzysz niestandardowe powiązanie) do jednej z wcześniej wymienionych wartości.  
+ Podczas tworzenia wystąpienia powiązania w kodzie, należy ustawić odpowiednią właściwość `TransferMode` powiązania (lub element powiązania transportu, jeśli tworzysz niestandardowe powiązanie) do jednej z wcześniej wymienionych wartości.  
   
  Można włączyć przesyłanie strumieniowe żądań i odpowiedzi albo w obu kierunkach, niezależnie od ich strony, bez wywierania wpływu na funkcjonalność. Należy jednak zawsze założyć, że transferowany rozmiar danych jest tak duży, że włączenie przesyłania strumieniowego jest uzasadnione na obu punktach końcowych łącza komunikacyjnego. W przypadku komunikacji między platformami, w której jeden z punktów końcowych nie jest zaimplementowany przy użyciu programu WCF, możliwość korzystania z przesyłania strumieniowego zależy od możliwości przesyłania strumieniowego na platformie. Innym rzadkim wyjątkiem może być Scenariusz oparty na zużyciu pamięci, w którym klient lub usługa musi zminimalizować swój zestaw roboczy i może zapewnić tylko małe rozmiary buforów.  
   
 ### <a name="enabling-asynchronous-streaming"></a>Włączanie przesyłania strumieniowego asynchronicznego  
- Aby włączyć asynchroniczne przesyłanie strumieniowe, <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> Dodaj zachowanie punktu końcowego do hosta usługi i ustaw <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> jego właściwość `true`na. Dodaliśmy także możliwość wysyłania strumieniowo asynchronicznych danych przesyłanych po stronie wysyłającej. Poprawia to skalowalność usługi w scenariuszach, w których przesyła strumieniowo komunikaty do wielu klientów, z których może się zająć wolne odczytywanie z powodu przeciążenia sieci lub nie są w ogóle odczytywane. W tych scenariuszach nie blokujemy poszczególnych wątków w usłudze na klienta. Dzięki temu usługa może przetwarzać wielu kolejnych klientów w taki sposób, aby zwiększyć skalowalność usługi.  
+ Aby włączyć asynchroniczne przesyłanie strumieniowe, Dodaj zachowanie punktu końcowego <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> do hosta usługi i ustaw jego właściwość <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> na `true`. Dodaliśmy także możliwość wysyłania strumieniowo asynchronicznych danych przesyłanych po stronie wysyłającej. Poprawia to skalowalność usługi w scenariuszach, w których przesyła strumieniowo komunikaty do wielu klientów, z których może się zająć wolne odczytywanie z powodu przeciążenia sieci lub nie są w ogóle odczytywane. W tych scenariuszach nie blokujemy poszczególnych wątków w usłudze na klienta. Dzięki temu usługa może przetwarzać wielu kolejnych klientów w taki sposób, aby zwiększyć skalowalność usługi.  
   
 ### <a name="programming-model-for-streamed-transfers"></a>Model programowania dla transferów przesyłanych strumieniowo  
- Model programowania dla przesyłania strumieniowego jest prosty. W przypadku otrzymywania przesyłanych strumieniowo danych należy określić kontrakt operacji, <xref:System.IO.Stream> który ma parametr wejściowy z jednym typem. Aby można było zwracać dane przesyłane strumieniowo <xref:System.IO.Stream> , zwróć odwołanie.  
+ Model programowania dla przesyłania strumieniowego jest prosty. W przypadku otrzymywania przesyłanych strumieniowo danych należy określić kontrakt operacji, który ma jeden parametr wejściowy typu <xref:System.IO.Stream>. Aby można było zwracać dane przesyłane strumieniowo, zwróć <xref:System.IO.Stream> odwołanie.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -203,9 +204,9 @@ public interface IStreamedService
 }  
 ```  
   
- Operacja `Echo` w powyższym przykładzie odbiera i zwraca strumień i dlatego powinna być używana w powiązaniu z <xref:System.ServiceModel.TransferMode.Streamed>. Dla operacji `RequestInfo` <xref:System.ServiceModel.TransferMode.StreamedResponse> jest najlepiej dopasowany, <xref:System.IO.Stream>ponieważ zwraca tylko wartość. Operacja jednokierunkowa najlepiej nadaje się do <xref:System.ServiceModel.TransferMode.StreamedRequest>.  
+ Operacja `Echo` w poprzednim przykładzie odbiera i zwraca strumień i dlatego powinna być używana w powiązaniu z <xref:System.ServiceModel.TransferMode.Streamed>. Dla operacji `RequestInfo`<xref:System.ServiceModel.TransferMode.StreamedResponse> jest najlepiej dopasowany, ponieważ zwraca tylko <xref:System.IO.Stream>. Operacja jednokierunkowa najlepiej nadaje się do <xref:System.ServiceModel.TransferMode.StreamedRequest>.  
   
- Należy zauważyć, że dodanie drugiego parametru do poniższych `Echo` lub `ProvideInfo` operacji powoduje, że model usługi przywraca z powrotem do buforowanej strategii i używa reprezentacji serializacji w czasie wykonywania strumienia. Tylko operacje z pojedynczym parametrem strumienia wejściowego są zgodne z żądaniami kompleksowego przesyłania strumieniowego.  
+ Należy zauważyć, że dodanie drugiego parametru do następujących `Echo` lub operacji `ProvideInfo` powoduje, że model usługi przywraca z powrotem do buforowanej strategii i używa reprezentacji serializacji w czasie wykonywania strumienia. Tylko operacje z pojedynczym parametrem strumienia wejściowego są zgodne z żądaniami kompleksowego przesyłania strumieniowego.  
   
  Ta reguła w podobny sposób dotyczy kontraktów komunikatów. Zgodnie z poniższą umową dotyczącą komunikatu można mieć tylko jeden element członkowski treści w ramach kontraktu, który jest strumieniem. Jeśli chcesz przekazać dodatkowe informacje ze strumieniem, te informacje muszą być przenoszone w nagłówkach wiadomości. Treść komunikatu jest zarezerwowana wyłącznie dla zawartości strumienia.  
   
@@ -220,18 +221,18 @@ public class UploadStreamMessage
 }   
 ```  
   
- Transfer przesyłanych strumieniowo kończy się, a komunikat jest zamykany, gdy strumień osiągnie koniec pliku (EOF). W przypadku wysyłania komunikatu (zwracającego wartość lub wywołania operacji) można przekazać <xref:System.IO.FileStream> infrastrukturę usługi WCF, a następnie pobrać wszystkie dane z tego strumienia do momentu całkowitego odczytania strumienia i osiągnięcia EOF. Aby przesłać dane przesyłane strumieniowo dla źródła, które nie istnieje wcześniej utworzona <xref:System.IO.Stream> Klasa pochodna, konstrukcja takiej klasy, nałóż ją na źródło strumienia i Użyj tego jako argumentu lub wartości zwracanej.  
+ Transfer przesyłanych strumieniowo kończy się, a komunikat jest zamykany, gdy strumień osiągnie koniec pliku (EOF). Podczas wysyłania komunikatu (zwracającego wartość lub wywołania operacji) można przekazać <xref:System.IO.FileStream>, a infrastruktura WCF pobiera wszystkie dane z tego strumienia, dopóki strumień nie zostanie całkowicie odczytany i osiągnie znacznik EOF. Aby przetransferować dane przesyłane strumieniowo dla źródła, które nie istnieje wcześniej utworzona klasa pochodna <xref:System.IO.Stream>, konstrukcja takiej klasy, nałóż ją przez źródło strumienia i Użyj tego jako argumentu lub wartości zwracanej.  
   
  W przypadku otrzymania komunikatu Funkcja WCF konstruuje strumień za pośrednictwem zawartości treści komunikatu kodowanej algorytmem Base64 (lub odpowiedniej części MIME, jeśli jest używany), a strumień osiągnie wartość EOF, gdy zawartość została odczytana.  
   
  Przesyłanie strumieniowe na poziomie transportu działa również z dowolnym innym typem kontraktu komunikatu (listami parametrów, argumentami kontraktu danych i umową z jawnym komunikatem), ale ponieważ Serializacja i deserializacja takich komunikatów o określonym typie wymaga buforowania przez serializator nie zaleca się używania takich wariantów kontraktu.  
   
 ### <a name="special-security-considerations-for-large-data"></a>Specjalne zagadnienia dotyczące zabezpieczeń w przypadku dużych ilości danych  
- Wszystkie powiązania umożliwiają ograniczenie rozmiaru komunikatów przychodzących, aby zapobiec atakom typu "odmowa usługi". Na przykład uwidacznia Właściwość [System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) , która wiąże się z rozmiarem komunikatu przychodzącego, a także wiąże się z maksymalną ilością pamięci, do której uzyskuje się dostęp podczas przetwarzania <xref:System.ServiceModel.BasicHttpBinding> Komunikat. Ta jednostka jest ustawiona w bajtach z wartością domyślną 65 536 bajtów.  
+ Wszystkie powiązania umożliwiają ograniczenie rozmiaru komunikatów przychodzących, aby zapobiec atakom typu "odmowa usługi". Na przykład <xref:System.ServiceModel.BasicHttpBinding>uwidacznia Właściwość [System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) , która wiąże się z rozmiarem komunikatu przychodzącego, a także wiąże się z maksymalną ilością pamięci, do której uzyskuje się dostęp podczas przetwarzania komunikatu. Ta jednostka jest ustawiona w bajtach z wartością domyślną 65 536 bajtów.  
   
- Zagrożenie bezpieczeństwa specyficzne dla scenariusza dużego przesyłania strumieniowego danych wywołuje odmowę usługi, powodując, że dane są buforowane, gdy odbiornik oczekuje na przesłanie strumieniowo. Na przykład usługa WCF zawsze buforuje nagłówki protokołu SOAP, a więc osoba atakująca może utworzyć dużą złośliwą wiadomość, która składa się w całości z nagłówków, aby wymusić, że dane mają być buforowane. Gdy funkcja przesyłania strumieniowego jest `MaxReceivedMessageSize` włączona, można ustawić niezwykle dużą wartość, ponieważ odbiornik nigdy nie oczekuje, że cały komunikat jest buforowany w pamięci jednocześnie. Jeśli funkcja WCF jest zmuszona do buforowania komunikatu, wystąpi przepełnienie pamięci.  
+ Zagrożenie bezpieczeństwa specyficzne dla scenariusza dużego przesyłania strumieniowego danych wywołuje odmowę usługi, powodując, że dane są buforowane, gdy odbiornik oczekuje na przesłanie strumieniowo. Na przykład usługa WCF zawsze buforuje nagłówki protokołu SOAP, a więc osoba atakująca może utworzyć dużą złośliwą wiadomość, która składa się w całości z nagłówków, aby wymusić, że dane mają być buforowane. Po włączeniu przesyłania strumieniowego `MaxReceivedMessageSize` może być ustawiona na bardzo dużą wartość, ponieważ odbiornik nigdy nie oczekuje, że cały komunikat jest buforowany w pamięci jednocześnie. Jeśli funkcja WCF jest zmuszona do buforowania komunikatu, wystąpi przepełnienie pamięci.  
   
- W związku z tym ograniczenie maksymalnego rozmiaru komunikatu przychodzącego nie jest wystarczające w tym przypadku. `MaxBufferSize` Właściwość jest wymagana, aby ograniczyć ilość pamięci buforów WCF. Należy pamiętać, aby ustawić wartość bezpieczną (lub zachować wartość domyślną) podczas przesyłania strumieniowego. Załóżmy na przykład, że usługa musi odbierać pliki o rozmiarze do 4 GB i przechowywać je na dysku lokalnym. Załóżmy również, że pamięć jest ograniczona w taki sposób, że w danym momencie można buforować tylko 64 KB danych. Następnie ustaw `MaxReceivedMessageSize` wartość 4 GB i `MaxBufferSize` na 64 KB. Ponadto w implementacji usługi należy upewnić się, że użytkownik ma uprawnienia tylko do odczytu ze strumienia przychodzącego w fragmentach 64-KB i nie odczytuje następnego fragmentu, zanim poprzedni zostanie zapisany na dysku i odrzucony z pamięci.  
+ W związku z tym ograniczenie maksymalnego rozmiaru komunikatu przychodzącego nie jest wystarczające w tym przypadku. Właściwość `MaxBufferSize` jest wymagana, aby ograniczyć pamięć buforów WCF. Należy pamiętać, aby ustawić wartość bezpieczną (lub zachować wartość domyślną) podczas przesyłania strumieniowego. Załóżmy na przykład, że usługa musi odbierać pliki o rozmiarze do 4 GB i przechowywać je na dysku lokalnym. Załóżmy również, że pamięć jest ograniczona w taki sposób, że w danym momencie można buforować tylko 64 KB danych. Następnie ustaw wartość `MaxReceivedMessageSize` na 4 GB i `MaxBufferSize` na 64 KB. Ponadto w implementacji usługi należy upewnić się, że użytkownik ma uprawnienia tylko do odczytu ze strumienia przychodzącego w fragmentach 64-KB i nie odczytuje następnego fragmentu, zanim poprzedni zostanie zapisany na dysku i odrzucony z pamięci.  
   
  Ważne jest również, aby zrozumieć, że ten limit przydziału ogranicza buforowanie wykonywane przez WCF i nie może chronić użytkownika przed żadnym buforowaniem wykonywanym we własnej implementacji usługi lub klienta. Aby uzyskać więcej informacji o dodatkowych kwestiach dotyczących zabezpieczeń, zobacz [zagadnienia dotyczące zabezpieczeń danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
@@ -240,4 +241,4 @@ public class UploadStreamMessage
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Włącz przesyłanie strumieniowe](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [Instrukcje: włączanie przesyłania strumieniowego](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

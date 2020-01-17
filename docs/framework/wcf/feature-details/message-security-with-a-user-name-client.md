@@ -5,46 +5,46 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: a5e3e96ce8c8bb3304c8abcc93a881998382c6ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 547c23509096b66c1fdbd46117a10f4de1692387
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638008"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212047"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Zabezpieczenia na poziomie komunikatu z użyciem klienta nazwy użytkownika
-Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation (WCF) i klient zabezpieczone przy użyciu zabezpieczeń na poziomie komunikatu. Usługa jest uwierzytelniana przy użyciu certyfikatu X.509. Klient jest uwierzytelniany przy użyciu nazwy użytkownika i hasła.  
+Na poniższej ilustracji przedstawiono usługę Windows Communication Foundation (WCF) i klienta zabezpieczoną przy użyciu zabezpieczeń na poziomie komunikatów. Usługa jest uwierzytelniana przy użyciu certyfikatu X. 509. Klient jest uwierzytelniany przy użyciu nazwy użytkownika i hasła.  
   
- Dla przykładowej aplikacji, zobacz [nazwa użytkownika zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
+ Aby zapoznać się z przykładową aplikacją, zobacz [Nazwa użytkownika zabezpieczeń wiadomości](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
   
  ![Zabezpieczenia komunikatów przy użyciu uwierzytelniania nazwy użytkownika](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
 |Cechy|Opis|  
 |--------------------|-----------------|  
-|Tryb zabezpieczeń|Message|  
-|Współdziałanie|Windows Communication Foundation (WCF) tylko|  
-|Uwierzytelnianie (serwer)|Początkowego negocjowania wymaga uwierzytelniania przez serwer|  
+|Tryb zabezpieczeń|Komunikat|  
+|Współdziałanie|Tylko Windows Communication Foundation (WCF)|  
+|Uwierzytelnianie (serwer)|Początkowe negocjowanie wymaga uwierzytelniania serwera|  
 |Uwierzytelnianie (klient)|Nazwa użytkownika/hasło|  
-|Integralność|Tak, za pomocą kontekstu zabezpieczeń udostępnionego|  
-|Poufność|Tak, za pomocą kontekstu zabezpieczeń udostępnionego|  
+|Integralność|Tak, przy użyciu kontekstu zabezpieczeń udostępnionych|  
+|Poufność|Tak, przy użyciu kontekstu zabezpieczeń udostępnionych|  
 |Transport|HTTP|  
 |Wiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Usługa  
- Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
+## <a name="service"></a>NDES  
+ Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wykonaj jedną z następujących czynności:  
   
-- Tworzenie autonomicznego usługi przy użyciu kodu bez konfiguracji.  
+- Tworzenie usługi autonomicznej przy użyciu kodu bez konfiguracji.  
   
-- Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.  
+- Utwórz usługę przy użyciu podanej konfiguracji, ale nie Definiuj żadnych punktów końcowych.  
   
 ### <a name="code"></a>Kod  
- Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, która używa zabezpieczenia wiadomości.  
+ Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, który korzysta z zabezpieczeń komunikatów.  
   
  [!code-csharp[C_SecurityScenarios#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#9)]
  [!code-vb[C_SecurityScenarios#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#9)]  
   
 ### <a name="configuration"></a>Konfiguracja  
- Następująca konfiguracja można używać zamiast kodu:  
+ Zamiast kodu można użyć następującej konfiguracji:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -89,13 +89,13 @@ Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation 
 ## <a name="client"></a>Klient  
   
 ### <a name="code"></a>Kod  
- Poniższy kod tworzy klienta. Powiązanie jest komunikat tryb zabezpieczeń, oraz typu poświadczeń klienta jest ustawiona na `UserName`. Nazwa użytkownika i hasło można określić tylko przy użyciu kodu (nie jest konfigurowalne). Kod, aby zwrócić nazwę użytkownika i hasło nie został tutaj pokazany, ponieważ muszą być wykonane na poziomie aplikacji. Na przykład okno formularzy Windows do wykonywania zapytań użytkownika na potrzeby danych.  
+ Poniższy kod tworzy klienta. Powiązanie jest zabezpieczeniami trybu komunikatów, a typ poświadczeń klienta ma wartość `UserName`. Nazwę użytkownika i hasło można określić tylko przy użyciu kodu (nie można go konfigurować). Kod, który ma zwrócić nazwę użytkownika i hasło, nie jest tutaj wyświetlany, ponieważ należy go wykonać na poziomie aplikacji. Na przykład użyj okna dialogowego Windows Forms, aby wysłać zapytanie do użytkownika o dane.  
   
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
   
 ### <a name="configuration"></a>Konfiguracja  
- Poniższy kod konfiguruje klienta. Powiązanie jest komunikat tryb zabezpieczeń, oraz typu poświadczeń klienta jest ustawiona na `UserName`. Nazwa użytkownika i hasło można określić tylko przy użyciu kodu (nie jest konfigurowalne).  
+ Poniższy kod konfiguruje klienta. Powiązanie jest zabezpieczeniami trybu komunikatów, a typ poświadczeń klienta ma wartość `UserName`. Nazwę użytkownika i hasło można określić tylko przy użyciu kodu (nie można go konfigurować).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -131,4 +131,4 @@ Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation 
 - [Nazwa użytkownika zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-user-name.md)
 - [Uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [\<tożsamość >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
-- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

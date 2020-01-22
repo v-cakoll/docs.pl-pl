@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: c73d1d5f4695ed2fa62dd9271b08cb93eff3fb01
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 371b79eb0d52c57145c3156745614a6f3598bae5
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70997681"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76508642"
 ---
-<span data-ttu-id="6c4f6-101">**Ten artykuł dotyczy: ✓** .net Core 2,2 SDK i nowszych wersji</span><span class="sxs-lookup"><span data-stu-id="6c4f6-101">**This article applies to: ✓** .NET Core 2.2 SDK and later versions</span></span>
+<span data-ttu-id="66120-101">**Ten artykuł ma zastosowanie do:** ✔️ .net Core 2,2 SDK i nowszych wersjach</span><span class="sxs-lookup"><span data-stu-id="66120-101">**This article applies to:** ✔️ .NET Core 2.2 SDK and later versions</span></span>

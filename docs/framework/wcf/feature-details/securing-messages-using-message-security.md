@@ -2,12 +2,12 @@
 title: Korzystanie z zabezpieczeń komunikatów
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 1098057042c0842161258fd081d3ee63e82b4c5f
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: a6b062d0d6a74ce2a2ff9afa7e8a0a18853dbd22
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395714"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746447"
 ---
 # <a name="securing-messages-using-message-security"></a>Korzystanie z zabezpieczeń komunikatów
 W tej części omówiono zabezpieczenia komunikatów WCF podczas korzystania z <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -28,20 +28,20 @@ W tej części omówiono zabezpieczenia komunikatów WCF podczas korzystania z <
  Funkcja zabezpieczenia komunikatów WCF dodaje nagłówki zabezpieczeń do wiadomości WCF, która integruje się z istniejącymi infrastrukturami zabezpieczeń, takimi jak certyfikat lub protokół Kerberos.  
   
 ## <a name="message-credential-type"></a>Typ poświadczeń wiadomości  
- Korzystając z zabezpieczeń komunikatów, usługa i klient mogą przedstawić poświadczenia do wzajemnego uwierzytelniania. Aby wybrać opcję Zabezpieczenia komunikatów, należy ustawić tryb <xref:System.ServiceModel.NetMsmqBinding.Security%2A> na `Message` lub `Both` (to jest użycie zabezpieczeń transport i zabezpieczenia komunikatów).  
+ Korzystając z zabezpieczeń komunikatów, usługa i klient mogą przedstawić poświadczenia do wzajemnego uwierzytelniania. Aby wybrać opcję Zabezpieczenia komunikatów, należy ustawić tryb <xref:System.ServiceModel.NetMsmqBinding.Security%2A> na `Message` lub `Both` (czyli użyć zabezpieczeń transportu i zabezpieczeń komunikatów).  
   
- Usługa może użyć właściwości <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> do sprawdzenia poświadczeń używanych do uwierzytelniania klienta. Można go również użyć do dalszej kontroli autoryzacji, którą usługa wybiera do wdrożenia.  
+ Usługa może użyć właściwości <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>, aby sprawdzić poświadczenia używane do uwierzytelniania klienta. Można go również użyć do dalszej kontroli autoryzacji, którą usługa wybiera do wdrożenia.  
   
  W tej sekcji objaśniono różne typy poświadczeń i sposoby ich używania z kolejkami.  
   
-### <a name="certificate"></a>Certyfikatu  
+### <a name="certificate"></a>Certyfikat  
  Typ poświadczeń certyfikatu używa certyfikatu X. 509, aby zidentyfikować usługę i klienta.  
   
  W typowym scenariuszu klient i usługa otrzymują prawidłowy certyfikat przez zaufany urząd certyfikacji. Następnie połączenie zostanie nawiązane, a klient uwierzytelnia ważność usługi przy użyciu certyfikatu usługi, aby zdecydować, czy może ufać usłudze. Podobnie usługa używa certyfikatu klienta do sprawdzania poprawności zaufania klienta.  
   
  Ze względu na rozłączoną naturę kolejek, klient i usługa nie mogą być w trybie online w tym samym czasie. W związku z tym klient i usługa muszą wymieniać certyfikaty poza pasmem. W szczególności klient z tytułu posiadania certyfikatu usługi (który może być łańcuchem do urzędu certyfikacji) w swoim zaufanym magazynie, musi ufać, że komunikuje się z poprawną usługą. Aby można było uwierzytelniać klienta, usługa używa certyfikatu X. 509 dołączonego do wiadomości w celu dopasowania go do certyfikatu w magazynie w celu zweryfikowania autentyczności klienta. Ponownie certyfikat musi być łańcuchem do urzędu certyfikacji.  
   
- Na komputerze z systemem Windows certyfikaty są przechowywane w kilku rodzajach magazynów. Aby uzyskać więcej informacji na temat różnych magazynów, zobacz [magazyny certyfikatów](https://go.microsoft.com/fwlink/?LinkId=87787).  
+ Na komputerze z systemem Windows certyfikaty są przechowywane w kilku rodzajach magazynów. Aby uzyskać więcej informacji na temat różnych magazynów, zobacz [magazyny certyfikatów](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
 ### <a name="windows"></a>Windows  
  Typ poświadczeń komunikatu systemu Windows używa protokołu Kerberos.  

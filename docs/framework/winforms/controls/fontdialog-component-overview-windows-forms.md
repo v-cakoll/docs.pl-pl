@@ -1,5 +1,5 @@
 ---
-title: FontDialog — Informacje o składniku (Formularze systemu Windows)
+title: FontDialog — Informacje o składniku
 ms.date: 03/30/2017
 f1_keywords:
 - FontDialog
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - Font dialog box
 - FontDialog component [Windows Forms], about FontDialog component
 ms.assetid: daf46e57-1b4b-4b7a-bad0-b50ca7ba75dc
-ms.openlocfilehash: 7f140807bf4b42e530302190042e729c59248e7f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 664b756dc068ca283e4f43edbdd0f3266f5d1142
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789314"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745707"
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>FontDialog — Informacje o składniku (Formularze systemu Windows)
-Formularze Windows <xref:System.Windows.Forms.FontDialog> składnik to wstępnie skonfigurowane okno dialogowe, które jest standardowa Windows **czcionki** okno dialogowe, używany do udostępnienia czcionek, które są aktualnie zainstalowane w systemie. Użycie go w aplikacji opartych na Windows proste rozwiązanie dla wybór czcionki audytów Konfigurowanie własnego okno dialogowe.  
+Składnik <xref:System.Windows.Forms.FontDialog> Windows Forms jest wstępnie skonfigurowanym oknem dialogowym, które jest oknem dialogowym standardowe **czcionki** systemu Windows, które służy do udostępnienia czcionek aktualnie zainstalowanych w systemie. Użyj go w aplikacji opartej na systemie Windows jako proste rozwiązanie do wyboru czcionki zamiast konfigurowania własnego okna dialogowego.  
   
- Domyślnie okno dialogowe zawiera pola listy czcionki, styl czcionki i rozmiar. pola wyboru dla efektów, jak przekreślenie i podkreślenie; listy rozwijanej, aby skrypt; i przykładowy wygląd czcionki. (Skryptu lub odwołuje się do skryptów inny znak, które są dostępne dla danej czcionki, na przykład, hebrajski japoński.) Aby wyświetlić okno dialogowe czcionki, należy wywołać <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metody.  
+ Domyślnie okno dialogowe zawiera pola listy dla czcionki, stylu i rozmiaru czcionki; pola wyboru dla efektów takich jak przekreolenie i podkreolenie; Lista rozwijana dla skryptu; i przykład sposobu wyświetlania czcionki. (Skrypt odnosi się do różnych skryptów znaków, które są dostępne dla danej czcionki, na przykład hebrajski lub japoński). Aby wyświetlić okno dialogowe Czcionka, wywołaj metodę <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>.  
   
 ## <a name="key-properties"></a>Właściwości klucza  
- Składnik ma wiele właściwości, które skonfigurować jego wygląd. Ustaw opcje Okno dialogowe właściwości są <xref:System.Windows.Forms.FontDialog.Font%2A> i <xref:System.Windows.Forms.FontDialog.Color%2A>. <xref:System.Windows.Forms.FontDialog.Font%2A> Właściwość ustawia czcionkę, style, rozmiar, skrypt i efektów; na przykład `Arial, 10pt, style=Italic, Strikeout`.  
+ Składnik ma wiele właściwości, które konfigurują jego wygląd. Właściwości ustawiające wybory okna dialogowego są <xref:System.Windows.Forms.FontDialog.Font%2A> i <xref:System.Windows.Forms.FontDialog.Color%2A>. Właściwość <xref:System.Windows.Forms.FontDialog.Font%2A> ustawia czcionkę, styl, rozmiar, skrypt i efekty; na przykład `Arial, 10pt, style=Italic, Strikeout`.  
   
 ## <a name="see-also"></a>Zobacz także
 

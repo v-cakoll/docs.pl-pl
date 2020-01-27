@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 0764ca29fc959092e77629ff3888e65f0d68d70c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: e38ead0d378092af086218277fd2e85b4a6396c3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938052"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746889"
 ---
 # <a name="working-with-certificates"></a>Praca z certyfikatami
 
@@ -164,9 +164,9 @@ Można również ustawić certyfikaty przy użyciu opcji konfiguracja. Jeśli tw
 
 ## <a name="mapping-a-certificate-to-a-user-account"></a>Mapowanie certyfikatu na konto użytkownika
 
-Funkcją usług IIS i Active Directory jest możliwość mapowania certyfikatu na konto użytkownika systemu Windows. Aby uzyskać więcej informacji na temat tej funkcji, zobacz [Mapowanie certyfikatów na konta użytkowników](https://go.microsoft.com/fwlink/?LinkId=88917).
+Funkcją usług IIS i Active Directory jest możliwość mapowania certyfikatu na konto użytkownika systemu Windows. Aby uzyskać więcej informacji na temat tej funkcji, zobacz [Mapowanie certyfikatów na konta użytkowników](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736706(v=ws.10)).
 
-Aby uzyskać więcej informacji o korzystaniu z mapowania Active Directory, zobacz [Mapowanie certyfikatów klienta przy użyciu mapowania usługi katalogowej](https://go.microsoft.com/fwlink/?LinkId=88918).
+Aby uzyskać więcej informacji o korzystaniu z mapowania Active Directory, zobacz [Mapowanie certyfikatów klienta przy użyciu mapowania usługi katalogowej](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10)).
 
 Korzystając z tej możliwości, można ustawić właściwość <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> klasy <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> na `true`. W obszarze Konfiguracja można ustawić atrybut `mapClientCertificateToWindowsAccount` elementu [\<authentication >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) na `true`, jak pokazano w poniższym kodzie.
 

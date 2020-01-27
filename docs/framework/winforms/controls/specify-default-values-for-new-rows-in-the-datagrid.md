@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: określanie wartości domyślnych dla nowych wierszy w kontrolce DataGridView formularzy systemu Windows'
+title: Określ wartości domyślne dla nowych wierszy w formancie DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - rows [Windows Forms], specifying default values
 - DataGridView control [Windows Forms], default values for new rows
 ms.assetid: 8d127963-d9f8-4e4e-9f7f-beb66688f1f2
-ms.openlocfilehash: 879c035366c4686ceff3250a63c6ae8d8d3cfec4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 364f922aefc10e57f2ed7f3a0c2a5b25c922d87a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651960"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742929"
 ---
-# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>Instrukcje: określanie wartości domyślnych dla nowych wierszy w kontrolce DataGridView formularzy systemu Windows
-Wprowadzanie danych można wprowadzić bardziej wygodne, gdy aplikacja domyślnie wypełnia wartości dla nowo dodanych wierszy. Za pomocą <xref:System.Windows.Forms.DataGridView> klasy, możesz wpisać w domyślnych wartości za pomocą <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> zdarzeń. To zdarzenie jest wywoływane, gdy użytkownik wprowadzi wiersza dla nowych rekordów. Kod, obsługując to zdarzenie, możesz wypełnić żądane komórki o wartości wybrane.  
+# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>Porady: określanie wartości domyślnych dla nowych wierszy w formancie DataGridView formularzy systemu Windows
+Wprowadzanie danych może być wygodniejsze, gdy aplikacja wypełnia wartości domyślne dla nowo dodanych wierszy. Za pomocą klasy <xref:System.Windows.Forms.DataGridView> można wypełnić wartości domyślne za pomocą zdarzenia <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>. To zdarzenie jest zgłaszane, gdy użytkownik wprowadzi wiersz dla nowych rekordów. Gdy kod obsługuje to zdarzenie, można wypełniać odpowiednie komórki wybranymi wartościami.  
   
- Poniższy przykład kodu demonstruje sposób określania wartości domyślne dla nowych wierszy przy użyciu <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> zdarzeń.  
+ Poniższy przykład kodu demonstruje sposób określania wartości domyślnych dla nowych wierszy przy użyciu zdarzenia <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#120)]
@@ -29,11 +29,11 @@ Wprowadzanie danych można wprowadzić bardziej wygodne, gdy aplikacja domyślni
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1`.  
+- Kontrolka <xref:System.Windows.Forms.DataGridView> o nazwie `dataGridView1`.  
   
-- A `NewCustomerId` funkcji do generowania unikatowych `CustomerID` wartości.  
+- Funkcja `NewCustomerId` do generowania unikatowych wartości `CustomerID`.  
   
-- Odwołuje się do <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
+- Odwołania do zestawów <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: wyświetlanie strony sieci Web za pomocą kontrolki LinkLabel formularzy systemu Windows (Visual Basic)'
+title: Wyświetl stronę internetową z formantu LinkLabel (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: f36f5bbaaf28963fc95440a4f3a174b8b48f6276
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75373d55b7bc5ef11e39d5b9546996cb1c4f6f7c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651801"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745924"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Instrukcje: wyświetlanie strony sieci Web za pomocą kontrolki LinkLabel formularzy systemu Windows (Visual Basic)
-W tym przykładzie wyświetla stronę sieci Web w domyślnej przeglądarce, gdy użytkownik kliknie formularze Windows <xref:System.Windows.Forms.LinkLabel> kontroli.  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Porady: wyświetlanie strony sieci Web za pomocą formantu LinkLabel formularzy systemu Windows (Visual Basic)
+Ten przykład wyświetla stronę sieci Web w domyślnej przeglądarce, gdy użytkownik kliknie kontrolkę <xref:System.Windows.Forms.LinkLabel> Windows Forms.  
   
 ## <a name="example"></a>Przykład  
   
@@ -40,14 +40,14 @@ End Sub
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Formularz Windows o nazwie `Form1`.  
+- Formularz systemu Windows o nazwie `Form1`.  
   
-- A <xref:System.Windows.Forms.LinkLabel> formantu o nazwie `LinkLabel1`.  
+- Kontrolka <xref:System.Windows.Forms.LinkLabel> o nazwie `LinkLabel1`.  
   
-- Aktywne połączenie z Internetem.  
+- Aktywne połączenie internetowe.  
   
-## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Wywołanie <xref:System.Diagnostics.Process.Start%2A> metoda wymaga pełnego zaufania. Aby uzyskać więcej informacji, zobacz <xref:System.Security.SecurityException>.  
+## <a name="net-framework-security"></a>Zabezpieczenia programu .NET Framework  
+ Wywołanie metody <xref:System.Diagnostics.Process.Start%2A> wymaga pełnego zaufania. Aby uzyskać więcej informacji, zobacz temat <xref:System.Security.SecurityException>.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: ukrywanie nagłówków kolumn w kontrolce DataGridView formularzy systemu Windows'
+title: Ukryj nagłówki kolumn w formancie DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - column headers [Windows Forms], hiding
 - DataGridView control [Windows Forms], column headers
 ms.assetid: e4ad5f68-50d2-4b9e-93ee-9d622423a8ab
-ms.openlocfilehash: 888ff59d42f44db652d3188e016b9e10a9590139
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d84c93b0ad1c9ef456c73dd29af1de4857778999
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651671"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736585"
 ---
-# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Instrukcje: ukrywanie nagłówków kolumn w kontrolce DataGridView formularzy systemu Windows
-Czasami warto wyświetlić <xref:System.Windows.Forms.DataGridView> bez nagłówków kolumn. W <xref:System.Windows.Forms.DataGridView> kontroli <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> wartość właściwości określa, czy nagłówki kolumn są wyświetlane.  
+# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Porady: ukrywanie nagłówków kolumn w formancie DataGridView formularzy systemu Windows
+Czasami chcesz wyświetlić <xref:System.Windows.Forms.DataGridView> bez nagłówków kolumn. W kontrolce <xref:System.Windows.Forms.DataGridView> wartość właściwości <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> określa, czy nagłówki kolumn są wyświetlane.  
   
 ### <a name="to-hide-the-column-headers"></a>Aby ukryć nagłówki kolumn  
   
@@ -29,9 +29,9 @@ Czasami warto wyświetlić <xref:System.Windows.Forms.DataGridView> bez nagłów
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1`.  
+- Kontrolka <xref:System.Windows.Forms.DataGridView> o nazwie `dataGridView1`.  
   
-- Odwołuje się do <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
+- Odwołania do zestawów <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
 

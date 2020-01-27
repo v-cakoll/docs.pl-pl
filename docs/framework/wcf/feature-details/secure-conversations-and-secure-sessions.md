@@ -2,21 +2,21 @@
 title: Bezpieczne konwersacje i bezpieczne sesje
 ms.date: 03/30/2017
 ms.assetid: 48cb104a-532d-40ae-aa57-769dae103fda
-ms.openlocfilehash: 9b2c22d6db5a773bfb3f3a41e458b530fc889d71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 887b2e6e6553a910de046950514869907519cf35
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991006"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746452"
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>Bezpieczne konwersacje i bezpieczne sesje
-Funkcja Windows Communication Foundation (WCF) jest możliwość ustanowienia bezpiecznej sesji między dwa punkty końcowe, które wzajemne uwierzytelnianie i uzgodnić proces podpisów cyfrowych i szyfrowania. Na przykład punktu końcowego usługi może wymagać punkt końcowy klienta, aby wysłać token zabezpieczający, na podstawie certyfikatu X.509 do uwierzytelniania. Po uwierzytelnieniu klienta punktu końcowego usługi zwraca token kontekstu zabezpieczeń (SCT) do klienta, który jest następnie używany do zabezpieczenia wszystkich kolejnych komunikatów w ramach sesji. Ustanowienie tego bezpiecznej sesji umożliwia zestaw komunikatów, które są wymieniane między dwoma punktami końcowymi być bardziej efektywne, ponieważ SCT ma klucz symetryczny. Klucze asymetryczne, o certyfikatach X.509, które są oparte na, wymaga znacznie więcej moc obliczeniową niż klucze symetryczne, podczas generowania podpisu cyfrowego lub szyfrowania zestawu danych.  
+Funkcja Windows Communication Foundation (WCF) to możliwość ustanowienia bezpiecznych sesji między dwoma punktami końcowymi, które uwierzytelniają się nawzajem i zgadzają się na proces szyfrowania i podpisu cyfrowego. Na przykład punkt końcowy usługi może wymagać, aby punkt końcowy klienta wysyłał token zabezpieczający oparty na certyfikacie X. 509 na potrzeby uwierzytelniania. Po uwierzytelnieniu klienta punkt końcowy usługi zwraca token kontekstu zabezpieczeń (SCT) z powrotem do klienta, który jest następnie używany do zabezpieczenia wszystkich kolejnych komunikatów w ramach sesji. Ustanowienie tej bezpiecznej sesji powoduje, że zestaw komunikatów, które są wymieniane między dwoma punktami końcowymi, będzie bardziej wydajny, ponieważ SCT ma klucz symetryczny. Klucze asymetryczne, na których oparto certyfikaty X. 509, wymagają znacznie większej mocy obliczeniowej niż klucze symetryczne podczas generowania podpisu cyfrowego lub szyfrowania zestawu danych.  
   
- Zasady uruchamiania (zdefiniowane w sekcji pkt 6.2.7 [WS SecurityPolicy](https://go.microsoft.com/fwlink/?LinkId=99817) standardowe) zawiera komunikat potwierdzenia zabezpieczeń używany do bezpiecznego kanału i uwierzytelnić klienta wymianę RST/SCT i RSTR/SCT. Masz niektóre standardowe powiązania WCF `Security.Message.EstablishSecurityContext` które kontrolki czy secure konwersacji jest używana. Podczas korzystania z powiązań niestandardowych ładowania początkowego jest wskazywany przez zagnieżdżanie elementów powiązania zabezpieczeń, za pośrednictwem [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) w pliku konfiguracji lub przez wywołanie <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%2A> w kodzie.  
+ Zasady ładowania początkowego (zdefiniowane w sekcji 6.2.7 standardu [WS-SecurityPolicy](https://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/ws-securitypolicy-1.2-spec-os.html) ) zawierają potwierdzenia zabezpieczeń komunikatów używane do zabezpieczenia kanału i uwierzytelniania klienta przed parametrem RST/SCT i RSTR/SCT Exchange. Niektóre standardowe powiązania WCF mają właściwość `Security.Message.EstablishSecurityContext`, która kontroluje, czy jest używana bezpieczna konwersacja. W przypadku korzystania z niestandardowych powiązań Bootstrap jest wskazywany przez zagnieżdżanie elementów powiązań zabezpieczeń za pośrednictwem [\<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) w pliku konfiguracyjnym lub przez wywoływanie <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%2A> w kodzie.  
   
- Aby uzyskać więcej informacji o sesjach, zobacz [przy użyciu sesji](../../../../docs/framework/wcf/using-sessions.md).  
+ Aby uzyskać więcej informacji na temat sesji, zobacz [using Sessions](../../../../docs/framework/wcf/using-sessions.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Sesje, tworzenie wystąpień i współbieżność](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
-- [Instrukcje: Tworzenie usługi wymagającej użycia sesji](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [Instrukcje: tworzenie usługi wymagającej użycia sesji](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

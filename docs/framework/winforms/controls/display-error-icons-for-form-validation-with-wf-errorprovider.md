@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: wyświetlanie ikon błędów dotyczących weryfikacji formularza za pomocą składnika ErrorProvider formularzy systemu Windows'
+title: Wyświetlanie ikon błędów dla walidacji formularza za pomocą składnika ErrorProvider
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: 2af8d3b9ea97b678c493de8a58d439b62f448387
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: a1e346e332db489351f59c9a0c03ae731baf3dc3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053708"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745906"
 ---
-# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Instrukcje: wyświetlanie ikon błędów dotyczących weryfikacji formularza za pomocą składnika ErrorProvider formularzy systemu Windows
-Można używać formularzy Windows <xref:System.Windows.Forms.ErrorProvider> składnika, aby wyświetlić ikona błędu, gdy użytkownik wprowadzi nieprawidłowe dane. Musi mieć co najmniej dwa formanty w formularzu w celu karcie między nimi i tym samym wywoływać kod sprawdzania poprawności.  
+# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Porady: wyświetlanie ikon błędów dotyczących weryfikacji formularza za pomocą składnika ErrorProvider formularzy systemu Windows
+Możesz użyć składnika <xref:System.Windows.Forms.ErrorProvider> Windows Forms, aby wyświetlić ikonę błędu, gdy użytkownik wprowadzi nieprawidłowe dane. Musisz mieć co najmniej dwie kontrolki na formularzu, aby można było przełączać się między nimi i w ten sposób wywoływać kod weryfikacyjny.  
   
-### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>Aby wyświetlić ikona błędu, gdy wartość kontrolki jest nieprawidłowa.  
+### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>Aby wyświetlić ikonę błędu, gdy wartość kontrolki jest nieprawidłowa  
   
-1. Dodaj dwie kontrolki — na przykład, pola tekstowe — do formularza Windows.  
+1. Dodaj dwie kontrolki — na przykład pola tekstowe — do formularza systemu Windows.  
   
-2. Dodaj <xref:System.Windows.Forms.ErrorProvider> składnika do formularza.  
+2. Dodaj składnik <xref:System.Windows.Forms.ErrorProvider> do formularza.  
   
-3. Wybierz pierwszy formant i dodać kod do jego <xref:System.Windows.Forms.Control.Validating> programu obsługi zdarzeń. Aby ten kod działał prawidłowo procedury muszą być podłączone do zdarzenia. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie procedur obsługi zdarzeń w czasie wykonywania dla formularzy Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+3. Wybierz pierwszą kontrolkę i Dodaj kod do jej obsługi zdarzeń <xref:System.Windows.Forms.Control.Validating>. Aby ten kod działał prawidłowo, procedura musi być połączona ze zdarzeniem. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie obsługi zdarzeń w czasie wykonywania dla Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
-     Poniższy kod sprawdza poprawność danych, które użytkownik wprowadził; Jeśli dane są nieprawidłowe, <xref:System.Windows.Forms.ErrorProvider.SetError%2A> metoda jest wywoływana. Pierwszy argument <xref:System.Windows.Forms.ErrorProvider.SetError%2A> Metoda określa, które kontrolują, aby wyświetlić ikonę obok pozycji. Drugi argument jest tekst błędu, aby wyświetlić.  
+     Poniższy kod sprawdza poprawność danych wprowadzonych przez użytkownika; Jeśli dane są nieprawidłowe, wywoływana jest metoda <xref:System.Windows.Forms.ErrorProvider.SetError%2A>. Pierwszy argument metody <xref:System.Windows.Forms.ErrorProvider.SetError%2A> określa, który formant ma wyświetlać ikonę obok. Drugi argument jest tekstem błędu do wyświetlenia.  
   
     ```vb  
     Private Sub TextBox1_Validating(ByVal Sender As Object, _  
@@ -77,7 +77,7 @@ Można używać formularzy Windows <xref:System.Windows.Forms.ErrorProvider> sk�
        }  
     ```  
   
-     (Visual C#, Visual C++) Umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Wizualizacja C#, C++wizualizacja) Umieść poniższy kod w Konstruktorze formularza, aby zarejestrować procedurę obsługi zdarzeń.  
   
     ```csharp  
     this.textBox1.Validating += new  
@@ -90,10 +90,10 @@ Można używać formularzy Windows <xref:System.Windows.Forms.ErrorProvider> sk�
        (this, &Form1::textBox1_Validating);  
     ```  
   
-4. Uruchom projekt. Wpisz nieprawidłowe (w tym przykładzie nieliczbową) dane na pierwszą kontrolkę, a następnie kartę do drugiego. Gdy jest wyświetlana ikona błędu, wskaż go za pomocą wskaźnika myszy, aby wyświetlić tekst błędu.  
+4. Uruchom projekt. Nieprawidłowy typ (w tym przykładzie dane nieliczbowe) do pierwszej kontrolki, a następnie tabulator do drugiego. Gdy zostanie wyświetlona ikona błędu, wskaż ją wskaźnikiem myszy, aby zobaczyć tekst błędu.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
 - [ErrorProvider, składnik — omówienie](errorprovider-component-overview-windows-forms.md)
-- [Instrukcje: Wyświetl błędy w zestawie danych za pomocą składnika ErrorProvider formularzy Windows](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [Instrukcje: wyświetlanie błędów w elemencie DataSet za pomocą składnika ErrorProvider formularzy Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

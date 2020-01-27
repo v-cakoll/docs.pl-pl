@@ -1,5 +1,5 @@
 ---
-title: Dwukierunkowa obsługa aplikacji Windows Forms
+title: Obsługa dwukierunkowa
 ms.date: 09/30/2017
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - localization [Windows Forms], bi-directional support in Windows
 - bi-directional language support [Windows Forms], Windows applications
 - Windows Forms, bi-directional support
-ms.openlocfilehash: 0b99dcdb9549a2319efe8a78eb4bca33f40f2cb0
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 8b2e842fc08be78b74cede85927352fafca7bc8f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197487"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742081"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Dwukierunkowa obsługa aplikacji Windows Forms
 Program Visual Studio umożliwia tworzenie aplikacji opartych na systemie Windows, które obsługują dwukierunkowe języki (od prawej do lewej), takie jak arabski i hebrajski. Obejmuje to standardowe formularze, okna dialogowe, formularze MDI i wszystkie kontrolki, z którymi można korzystać w tych formularzach — czyli wszystkie obiekty w przestrzeni nazw <xref:System.Windows.Forms.Control>.
@@ -76,7 +76,7 @@ Program Visual Studio umożliwia tworzenie aplikacji opartych na systemie Window
 |<xref:System.Windows.Forms.UserControl>|Pionowy pasek przewijania pojawia się po lewej stronie; pasek przewijania w poziomie po prawej stronie|Brak bezpośredniej pomocy technicznej; Użyj <xref:System.Windows.Forms.TableLayoutPanel>|Nie|
 |<xref:System.Windows.Forms.VScrollBar>|Wyświetlane po lewej stronie zamiast po prawej stronie formantów przewijalnych|Brak efektu|Nie|
 
-## <a name="encoding"></a>Kody
+## <a name="encoding"></a>Kodowanie
  Windows Forms obsługiwać kod Unicode, dlatego można uwzględnić dowolny zestaw znaków podczas tworzenia aplikacji dwukierunkowych. Jednak nie wszystkie formanty Windows Forms obsługują standard Unicode na wszystkich platformach.
 
 ## <a name="gdi"></a>GDI+

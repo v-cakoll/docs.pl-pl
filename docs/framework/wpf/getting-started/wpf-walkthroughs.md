@@ -1,16 +1,16 @@
 ---
-title: Wskazówki dotyczące WPF
+title: Wskazówki
 ms.date: 03/30/2017
 helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: fbd5006611a0a8e0d90b589df7b2cb6a34101457
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d7853019b109fa7be97f83134be223b1c65375ac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977033"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746908"
 ---
 # <a name="wpf-walkthroughs"></a>Wskazówki dotyczące WPF
 Instruktaże zawierają instrukcje krok po kroku dla typowych scenariuszy. Dzięki temu można zacząć uczenie się o produkcie lub w konkretnym obszarze funkcji.
@@ -50,4 +50,4 @@ Instruktaże zawierają instrukcje krok po kroku dla typowych scenariuszy. Dzię
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Przewodniki dotyczące programu Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/szatc41e(v=vs.100))|Zawiera powiązaną listę instruktażów dla wszystkich obszarów programowania w programie Visual Studio.|
+|[Visual Studio Walkthroughs](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/szatc41e(v=vs.100))|Zawiera powiązaną listę instruktażów dla wszystkich obszarów programowania w programie Visual Studio.|

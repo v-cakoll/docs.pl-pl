@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: automatyczne generowanie kolumn w powiązaną z danymi kontrolką DataGridView formularzy systemu Windows'
+title: Automatyczne generowanie kolumn w formancie DataGridView powiązanym z danymi
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - columns [Windows Forms], autogenerating
 - DataGridView control [Windows Forms], data-bound columns
 ms.assetid: 699f6f9e-6aa5-4811-902b-6a2c57dec7d6
-ms.openlocfilehash: eb74c1ef1661fc8bd7a57f079f10d24a7eef8187
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 860e640e095537358d2f8778c810aa577e9d7ff0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639767"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746233"
 ---
-# <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>Instrukcje: automatyczne generowanie kolumn w powiązaną z danymi kontrolką DataGridView formularzy systemu Windows
-Poniższy przykład kodu demonstruje sposób wyświetlania kolumn ze źródła danych powiązanych w <xref:System.Windows.Forms.DataGridView> kontroli. Gdy <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> wartość właściwości jest `true` (ustawienie domyślne), <xref:System.Windows.Forms.DataGridViewColumn> jest tworzony dla każdej kolumny w tabeli źródła danych.  
+# <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>Porady: automatyczne generowanie kolumn w powiązanym z danymi formancie DataGridView formularzy systemu Windows
+Poniższy przykład kodu demonstruje sposób wyświetlania kolumn z powiązanego źródła danych w kontrolce <xref:System.Windows.Forms.DataGridView>. Gdy <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> wartość właściwości jest `true` (domyślnie), <xref:System.Windows.Forms.DataGridViewColumn> jest tworzony dla każdej kolumny w tabeli źródła danych.  
   
- Jeśli <xref:System.Windows.Forms.DataGridView> kontroli ma już kolumny po ustawieniu <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> właściwość, istniejące powiązane z kolumny są w porównaniu do kolumn w źródle danych i zachowane w każdym przypadku, gdy są zgodne. Niepowiązanych kolumn są zawsze zachowywane. Powiązane kolumny, dla których nie ma dopasowania w źródle danych są usuwane. Kolumny w źródle danych, dla którego nie ma dopasowania w kontrolce Generuj nowy <xref:System.Windows.Forms.DataGridViewColumn> obiektów, które są dodawane na końcu <xref:System.Windows.Forms.DataGridView.Columns%2A> kolekcji.  
+ Jeśli kontrolka <xref:System.Windows.Forms.DataGridView> ma już kolumny podczas ustawiania właściwości <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, istniejące powiązane kolumny są porównywane z kolumnami w źródle danych i zachowywane za każdym razem, gdy istnieje dopasowanie. Kolumny niepowiązane są zawsze zachowywane. Powiązane kolumny, dla których nie ma dopasowania w źródle danych. Kolumny w źródle danych, dla których nie ma dopasowania w formancie, generują nowe <xref:System.Windows.Forms.DataGridViewColumn> obiekty, które są dodawane na końcu kolekcji <xref:System.Windows.Forms.DataGridView.Columns%2A>.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#020](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#020)]
@@ -28,15 +28,15 @@ Poniższy przykład kodu demonstruje sposób wyświetlania kolumn ze źródła d
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `customersDataGridView`.  
+- Kontrolka <xref:System.Windows.Forms.DataGridView> o nazwie `customersDataGridView`.  
   
-- A <xref:System.Data.DataSet> obiektu o nazwie `customersDataSet` zawierającej tabelę o nazwie `Customers`.  
+- Obiekt <xref:System.Data.DataSet> o nazwie `customersDataSet`, który ma tabelę o nazwie `Customers`.  
   
-- Odwołuje się do <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType>, i <xref:System.Xml?displayProperty=nameWithType> zestawów.  
+- Odwołania do zestawów <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType>i <xref:System.Xml?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A?displayProperty=nameWithType>
 - [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Usuwanie utworzonych automatycznie kolumn w kontrolce DataGridView formularzy Windows Forms](remove-autogenerated-columns-from-a-wf-datagridview-control.md)
+- [Instrukcje: usuwanie utworzonych automatycznie kolumn z kontrolki DataGridView formularzy Windows Forms](remove-autogenerated-columns-from-a-wf-datagridview-control.md)

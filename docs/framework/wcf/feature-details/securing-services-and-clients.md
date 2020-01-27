@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
-ms.openlocfilehash: e455c7a48e1484d5acdcc5f6cdc9098997a3ba83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 719ab26198bd7b83310025e03e541fa11b109612
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990941"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746413"
 ---
 # <a name="securing-services-and-clients"></a>Zabezpieczanie usług i klientów
-Informacje przedstawione w tej sekcji skupiono się na programowaniu zabezpieczeń w Windows Communication Foundation (WCF). Ogólnie rzecz biorąc w tym wybranie odpowiedniego powiązania dostarczane przez system, ustawienie właściwości elementu zabezpieczeń, a następnie ustawić właściwości zachowania usług, które określają sposób, jak pobrać poświadczenia do użycia przez usługę lub klienta. Techniki te obejmują wymagania dotyczące zabezpieczeń większości użytkowników w przypadku większości scenariuszy, jak pokazano na [typowe scenariusze zabezpieczeń](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Jeśli dany scenariusz wymaga więcej funkcji, należy najpierw sprawdzić [możliwości zabezpieczeń powiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); Jeśli rozwiązanie nie jest widoczny, zobacz [rozszerzanie zabezpieczeń](../../../../docs/framework/wcf/extending/extending-security.md). Jeśli tworzysz (lub współdziałanie z) system, który korzysta z zaawansowanych oświadczeń, zobacz Tematy w [autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+Informacje przedstawione w tej sekcji koncentrują się na zabezpieczeniach programistycznych w programie Windows Communication Foundation (WCF). Ogólnie rzecz biorąc, obejmuje to wybranie odpowiedniego powiązania dostarczonego przez system, ustawienie właściwości elementu zabezpieczeń, a następnie ustawienie właściwości zachowań usługi, które określają sposób pobierania poświadczeń do użycia przez usługę lub klienta. Te techniki obejmują wymagania dotyczące zabezpieczeń większości użytkowników w większości scenariuszy, jak pokazano w [typowych scenariuszach zabezpieczeń](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Jeśli scenariusz wymaga większej liczby możliwości, należy najpierw zapoznać [się z funkcjami zabezpieczeń i powiązaniami niestandardowymi](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); Jeśli rozwiązanie nie jest widoczne, zobacz [rozszerzanie zabezpieczeń](../../../../docs/framework/wcf/extending/extending-security.md). W przypadku tworzenia (lub współpracy z programem) systemu, który używa rozbudowanych oświadczeń, zapoznaj się z tematami w temacie [autoryzacja](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Programowanie zabezpieczeń WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- Omówienie modelu programowania, używany do zabezpieczenia wiadomości.  
+ Omówienie modelu programowania używanego do zabezpieczania wiadomości.  
   
  [Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- Omówienie sposobu Zabezpieczanie komunikatów za pośrednictwem warstwy transportowej.  
+ Omówienie sposobów zabezpieczania komunikatów za pomocą warstwy transportowej.  
   
  [Zabezpieczenia komunikatów](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
- Zawiera podsumowanie powody do korzystania z zabezpieczeń na poziomie komunikatu w Windows Communication Foundation (WCF).  
+ Podsumowuje przyczyny używania zabezpieczeń na poziomie komunikatów w Windows Communication Foundation (WCF).  
   
  [Bezpieczne sesje](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
- Omówienie zagadnień, wymagany, gdy zabezpieczania sesji programu WCF.  
+ Omówienie zagadnień wymaganych podczas zabezpieczania sesji programu WCF.  
   
  [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- Wyjaśnienie niektórych typowych zadań, które są wymagane podczas korzystania z certyfikatów X.509.  
+ Wyjaśnienie niektórych typowych zadań wymaganych w przypadku używania certyfikatów X. 509.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel>  
@@ -55,4 +55,4 @@ Informacje przedstawione w tej sekcji skupiono się na programowaniu zabezpiecze
 ## <a name="see-also"></a>Zobacz także
 
 - [Podstawy programowania przy użyciu programu WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

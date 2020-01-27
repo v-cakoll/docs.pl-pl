@@ -2,25 +2,25 @@
 title: Pojęcia dotyczące zabezpieczeń
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
-ms.openlocfilehash: d23ef86c2ccf315300a9290c3055388469df2e0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8da822c6a4d55ee916bc1e0243bc8b2f9a5742fb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990902"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76730835"
 ---
 # <a name="security-concepts"></a>Pojęcia dotyczące zabezpieczeń
-Ta sekcja zawiera krótkie opisy pojęć związanych z zabezpieczeniami usługi Windows Communication Foundation (WCF).  
+W tej sekcji omówiono koncepcje związane z zabezpieczeniami Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Pojęcia zabezpieczeń użyte dla programu WCF](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
- Ogólne omówienie pojęć używanych w implementacji zabezpieczeń.  
+ Ogólne omówienie pojęć używanych w implementacjach zabezpieczeń.  
   
  [Rozproszone zabezpieczenia aplikacji](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- Omówienie sposobu WCF zapewnia bezpieczeństwo i topografii aplikacji rozproszonej.  
+ Omówienie sposobu, w jaki usługa WCF zapewnia zabezpieczenia w przypadku topografii aplikacji rozproszonej.  
   
  [Terminologia dotycząca zabezpieczeń](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
- Słownik terminów używanych podczas omawiania zabezpieczeń programu WCF.  
+ Słownik terminów używanych podczas omawiania zabezpieczeń WCF.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel>  
@@ -40,4 +40,4 @@ Ta sekcja zawiera krótkie opisy pojęć związanych z zabezpieczeniami usługi 
 
 - [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

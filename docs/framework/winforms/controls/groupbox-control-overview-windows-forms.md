@@ -1,5 +1,5 @@
 ---
-title: GroupBox — Informacje o formancie [Formularze systemu Windows]
+title: GroupBox — Informacje o formancie
 ms.date: 03/30/2017
 f1_keywords:
 - GroupBox
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - GroupBox control [Windows Forms], about GroupBox control
 - grouping controls [Windows Forms], Windows Forms
 ms.assetid: 03bd8ff9-c905-4f01-9bc6-8438b11d0881
-ms.openlocfilehash: ba3361c8477cf72031296651af022bac3ac90281
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b73207d4c8709407fb1f90eab4e439f5d401f2e4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971291"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745637"
 ---
 # <a name="groupbox-control-overview-windows-forms"></a>GroupBox — Informacje o formancie [Formularze systemu Windows]
-Windows Forms <xref:System.Windows.Forms.GroupBox> formantów służą do zapewniania do zidentyfikowania grupowanie dla innych kontrolek. Zwykle Użyj pola grupy pozwalające na dalszy podział formularza za pomocą funkcji. Na przykład masz formularza zamówienia, określający korespondencyjny opcje, takie jak które przelewy operatora do użycia. Grupowanie wszystkie opcje w polu grupy zapewnia logiczną wizualnie, a w czasie projektowania wszystkie formanty można przenieść łatwo — przy przenoszeniu pojedynczej precyzji <xref:System.Windows.Forms.GroupBox> kontrolować, wszystkie jego zawartych w nim formantów, Przenieś zbyt.  
+Kontrolki <xref:System.Windows.Forms.GroupBox> Windows Forms są używane do zapewniania możliwej do zidentyfikowania grupowania dla innych formantów. Zwykle pola grup służą do podzielenia formularza przez funkcję. Na przykład możesz mieć formularz zamówienia, który określa opcje wysyłania, takie jak używany przez przewoźnik nocny. Grupowanie wszystkich opcji w polu grupy daje użytkownikowi logiczną wizualną wizualizację i w czasie projektowania wszystkie formanty mogą być łatwo przenoszone. po przeniesieniu pojedynczej kontrolki <xref:System.Windows.Forms.GroupBox>, wszystkie zawarte w niej formanty są również przenoszone.  
   
- Pole grupy podpis jest zdefiniowany przez <xref:System.Windows.Forms.GroupBox.Text%2A> właściwości. Aby uzyskać więcej informacji, zobacz [jak: Ustawianie tekstu wyświetlanego przez formant formularzy Windows](how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
+ Podpis pola grupy jest definiowany przez właściwość <xref:System.Windows.Forms.GroupBox.Text%2A>. Aby uzyskać więcej informacji, zobacz [jak to zrobić: Ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
   
-## <a name="groupbox-and-panel"></a>GroupBox — i panelu  
- <xref:System.Windows.Forms.GroupBox> Kontroli jest podobny do <xref:System.Windows.Forms.Panel> kontrolować; jednak tylko <xref:System.Windows.Forms.GroupBox> kontrolka Wyświetla podpis i tylko <xref:System.Windows.Forms.Panel> formant może mieć paski przewijania.  
+## <a name="groupbox-and-panel"></a>Grupy i Panel  
+ Kontrolka <xref:System.Windows.Forms.GroupBox> jest podobna do kontrolki <xref:System.Windows.Forms.Panel>; jednak tylko formant <xref:System.Windows.Forms.GroupBox> wyświetla podpis, a tylko kontrolka <xref:System.Windows.Forms.Panel> może mieć paski przewijania.  
   
 ## <a name="see-also"></a>Zobacz także
 

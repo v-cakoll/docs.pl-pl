@@ -2,12 +2,12 @@
 title: Zadania uczenia maszynowego
 description: Poznaj różne zadania uczenia maszynowego i powiązane zadania, które są obsługiwane w programie ML.NET.
 ms.date: 12/23/2019
-ms.openlocfilehash: badb096ab3e7fbd575d8594b4fbd0e2ebaf63820
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 6cd41065e668375537b9816ef7a208a65e0a523b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739629"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745100"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Zadania uczenia maszynowego w ML.NET
 
@@ -85,6 +85,7 @@ Można przeszkolić model klasyfikacji wieloklasowej przy użyciu następującyc
 * <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Vision.ImageClassificationTrainer>
 
 ### <a name="multiclass-classification-inputs-and-outputs"></a>Dane wejściowe i wyjściowe klasyfikacji wieloklasowej
 
@@ -152,7 +153,7 @@ Ta Trainer wyprowadza następujące dane:
 
 | Nazwa wyjściowa | Typ | Opis|
 | -- | -- | -- |
-| `Score` | wektor <xref:System.Single> | Odległość danego punktu danych do wszystkich klastrów centriods |
+| `Score` | Wektor <xref:System.Single> | Odległość danego punktu danych do wszystkich klastrów centriods |
 | `PredictedLabel` | Typ [klucza](xref:Microsoft.ML.Data.KeyDataViewType) | Indeks najbliższego klastra przewidziany przez model. |
 
 ## <a name="anomaly-detection"></a>Wykrywanie anomalii
@@ -187,7 +188,7 @@ Ta Trainer wyprowadza następujące dane:
 | `Score` | <xref:System.Single> | Nieujemny wynik niezwiązany, który został obliczony przez model wykrywania anomalii |
 | `PredictedLabel` | <xref:System.Boolean> | Wartość true/false określająca, czy dane wejściowe są anomalią (PredictedLabel = true) czy nie (PredictedLabel = false) |
 
-## <a name="ranking"></a>Klasyfikacja
+## <a name="ranking"></a>Określania
 
 Zadanie klasyfikacji konstruuje rangę z zestawu przykładowych etykiet. Ten przykładowy zestaw składa się z grup wystąpień, które mogą być oceniane przy użyciu danego kryterium. Etykiety klasyfikacji są {0, 1, 2, 3, 4} dla każdego wystąpienia.  Ranga jest przeszkolony, aby zaklasyfikować nowe grupy wystąpień z nieznanymi wynikami dla każdego wystąpienia. ML.NET oceniające ranking są [uczeniem maszynowym](https://en.wikipedia.org/wiki/Learning_to_rank) opartym na klasyfikacji.
 
@@ -219,3 +220,13 @@ Zadanie rekomendacji umożliwia tworzenie listy zalecanych produktów lub usług
 Możesz nauczyć model rekomendacji z następującym algorytmem:
 
 * <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>
+
+## <a name="forecasting"></a>Prognozowanie
+
+Zadanie prognozowania używa ostatnich danych szeregów czasowych do prognozowania w przyszłości. Scenariusze mające zastosowanie do prognozowania obejmują Prognozowanie pogody, sezonowe przewidywania sprzedaży i konserwację predykcyjną,
+
+### <a name="forecasting-trainers"></a>Instruktorzy prognoz
+
+Model prognozowania można przeszkolić przy użyciu następującego algorytmu:
+
+<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*>

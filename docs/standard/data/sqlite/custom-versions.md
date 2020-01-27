@@ -2,12 +2,12 @@
 title: Niestandardowe wersje programu SQLite
 ms.date: 12/13/2019
 description: Dowiedz się, jak używać niestandardowej wersji natywnej biblioteki programu SQLite.
-ms.openlocfilehash: 8a2646138ea9dbecf412a2e8e0e347e2d71a5b0b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dd27278c1dbe17b12e5067d04d19043bf259b1e8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447147"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746992"
 ---
 # <a name="custom-sqlite-versions"></a>Niestandardowe wersje programu SQLite
 
@@ -21,9 +21,9 @@ Główny pakiet Microsoft. Data. sqlite domyślnie znajduje się w SQLitePCLRaw.
 
 Aby użyć innego pakietu, zainstaluj pakiet `Microsoft.Data.Sqlite.Core` zamiast niego wraz z pakietem pakietu, którego chcesz użyć. Pakiety są automatycznie inicjowane przez firmę Microsoft. Data. sqlite.
 
-| Pakiet | Opis |
+| Powiązane | Opis |
 | --- | --- |
-| SQLitePCLRaw. bundle_e_sqlite3 | Zapewnia spójną wersję oprogramowania SQLite na wszystkich platformach. Obejmuje FTS4, FTS5, JSON1 i | Rozszerzenia drzewa R *. Jest to domyślne ustawienie. |
+| SQLitePCLRaw. bundle_e_sqlite3 | Zapewnia spójną wersję oprogramowania SQLite na wszystkich platformach. Obejmuje rozszerzenia drzewa FTS4, FTS5, JSON1 i R *. Jest to domyślne ustawienie. |
 | SQLitePCLRaw. bundle_green | Analogicznie jak bundle_e_sqlite3, z wyjątkiem systemu iOS, gdzie używa biblioteki oprogramowania SQLite. |
 | SQLitePCLRaw. bundle_zetetic | Używa oficjalnych kompilacji SQLCIPHER z Zetetic (nieuwzględnione). |
 | SQLitePCLRaw. bundle_winsqlite3 | Używa winsqlite3. dll, systemowej biblioteki oprogramowania SQLite w systemie Windows 10. |

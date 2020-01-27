@@ -1,5 +1,6 @@
 ---
-title: Struktura wejścia ze zdolnością do współpracy Windows Forms i WPF
+title: Architektura danych wejściowych Windows Forms i WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - input architecture [WPF interoperability]
@@ -13,120 +14,120 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: 10c3ced3bc69f12c107b8d49139f829fab4e312a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f79971ba13691ccc36420e39696b7b8a46e5ce0e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662222"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745046"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Struktura wejścia ze zdolnością do współpracy Windows Forms i WPF
-Współdziałanie między [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] wymaga, że obie technologie mają odpowiednie skróty przetwarzania danych wejściowych. W tym temacie opisano sposób implementacji tych technologii, klawiatury i przetwarzania, aby umożliwić bezproblemowe współdziałanie w aplikacjach hybrydowych komunikatów.  
+Współdziałanie między [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] wymaga, aby obie technologie miały odpowiednie przetwarzanie danych wejściowych z klawiatury. W tym temacie opisano, w jaki sposób te technologie implementują przetwarzanie za pomocą klawiatury i komunikatów, aby umożliwić bezproblemowe współdziałanie w aplikacjach hybrydowych.  
   
  Ten temat zawiera następujące podsekcje:  
   
-- Niemodalne formularze i okna dialogowe  
+- Formularze niemodalne i okna dialogowe  
   
-- Windowsformshost — klawiatura i przetwarzanie komunikatów  
+- Przetwarzanie komunikatów i klawiatury WindowsFormsHost  
   
-- Elementhost — klawiatura i przetwarzanie komunikatów  
+- Przetwarzanie komunikatów i klawiatury ElementHost  
   
-## <a name="modeless-forms-and-dialog-boxes"></a>Niemodalne formularze i okna dialogowe  
- Wywołanie <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> metody w <xref:System.Windows.Forms.Integration.WindowsFormsHost> element, aby otworzyć niemodalne okno formularza lub okna dialogowego z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]— na podstawie aplikacji.  
+## <a name="modeless-forms-and-dialog-boxes"></a>Formularze niemodalne i okna dialogowe  
+ Wywołaj metodę <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> w elemencie <xref:System.Windows.Forms.Integration.WindowsFormsHost>, aby otworzyć niemodalny formularz lub okno dialogowe z aplikacji opartej na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- Wywołania <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> metody <xref:System.Windows.Forms.Integration.ElementHost> control, aby otworzyć niemodalne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] strony w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]— na podstawie aplikacji.  
+ Wywołaj metodę <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> w kontrolce <xref:System.Windows.Forms.Integration.ElementHost>, aby otworzyć niemodalną stronę [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w aplikacji opartej na [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
   
-## <a name="windowsformshost-keyboard-and-message-processing"></a>Windowsformshost — klawiatura i przetwarzanie komunikatów  
- W przypadku hostowania za [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-aplikacji opartej na [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] klawiatury i przetwarzania składa się z następujących komunikatów:  
+## <a name="windowsformshost-keyboard-and-message-processing"></a>Przetwarzanie komunikatów i klawiatury WindowsFormsHost  
+ W przypadku obsługi aplikacji opartej na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] z klawiatury i przetwarzania komunikatów składa się z następujących elementów:  
   
-- <xref:System.Windows.Forms.Integration.WindowsFormsHost> Klasy uzyskuje wiadomości z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pętli komunikatów, który jest implementowany przez <xref:System.Windows.Interop.ComponentDispatcher> klasy.  
+- Klasa <xref:System.Windows.Forms.Integration.WindowsFormsHost> uzyskuje komunikaty z pętli komunikatów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], która jest implementowana przez klasę <xref:System.Windows.Interop.ComponentDispatcher>.  
   
-- <xref:System.Windows.Forms.Integration.WindowsFormsHost> Klasy tworzy zastępczy [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] pętli komunikatów, aby upewnić się, że zwykłych [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] przetwarzania klawiatury.  
+- Klasa <xref:System.Windows.Forms.Integration.WindowsFormsHost> tworzy wieloczęściową pętlę komunikatu [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], aby upewnić się, że nastąpi normalne przetwarzanie klawiatury [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
   
-- <xref:System.Windows.Forms.Integration.WindowsFormsHost> Klasy implementuje <xref:System.Windows.Interop.IKeyboardInputSink> interfejsu do zapewnienia koordynacji zarządzania fokus przy użyciu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+- Klasa <xref:System.Windows.Forms.Integration.WindowsFormsHost> implementuje interfejs <xref:System.Windows.Interop.IKeyboardInputSink>, aby koordynować zarządzanie fokusem przy użyciu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-- <xref:System.Windows.Forms.Integration.WindowsFormsHost> Kontrolki rejestrują się i rozpocząć ich pętli komunikatów.  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost> kontroluje siebie i uruchamiają pętle komunikatów.  
   
  W poniższych sekcjach opisano te części procesu bardziej szczegółowo.  
   
-### <a name="acquiring-messages-from-the-wpf-message-loop"></a>Pobieranie wiadomości z pętli komunikatów dla WPF  
- <xref:System.Windows.Interop.ComponentDispatcher> Klasa implementuje Menedżera pętli komunikatów dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. <xref:System.Windows.Interop.ComponentDispatcher> Klasa udostępnia punkty zaczepienia umożliwiające klientów zewnętrznych, by przefiltrować komunikaty zanim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przetwarza je.  
+### <a name="acquiring-messages-from-the-wpf-message-loop"></a>Pobieranie komunikatów z pętli komunikatów WPF  
+ Klasa <xref:System.Windows.Interop.ComponentDispatcher> implementuje Menedżera pętli komunikatów dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Klasa <xref:System.Windows.Interop.ComponentDispatcher> udostępnia punkty zaczepienia umożliwiające klientom zewnętrznym filtrowanie komunikatów przed ich przetworzeniem przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- Obsługuje współdziałanie implementacji <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> zdarzenie, które umożliwia [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] służy do przetwarzania komunikatów przed [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolki.  
+ Implementacja międzyoperacyjna obsługuje zdarzenie <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType>, co umożliwia kontrolowanie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] do przetwarzania komunikatów przed [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolkami.  
   
-### <a name="surrogate-windows-forms-message-loop"></a>Pętli komunikatów dla zastępczy Windows Forms  
- Domyślnie <xref:System.Windows.Forms.Application?displayProperty=nameWithType> klasa zawiera pętli komunikatów głównej dla [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji. Podczas współdziałanie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] komunikat pętli nie przetwarza komunikatów. W związku z tym można odtworzyć tę logikę. Obsługa <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> zdarzeń wykonuje następujące czynności:  
+### <a name="surrogate-windows-forms-message-loop"></a>Wieloskładnikowa pętla komunikatu Windows Forms  
+ Domyślnie Klasa <xref:System.Windows.Forms.Application?displayProperty=nameWithType> zawiera podstawową pętlę komunikatów dla aplikacji [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Podczas pracy, pętla komunikatów [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] nie przetwarza komunikatów. W związku z tym należy odtworzyć tę logikę. Procedura obsługi dla zdarzenia <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> wykonuje następujące czynności:  
   
-1. Filtry wiadomości przy użyciu <xref:System.Windows.Forms.IMessageFilter> interfejsu.  
+1. Filtruje komunikat przy użyciu interfejsu <xref:System.Windows.Forms.IMessageFilter>.  
   
-2. Wywołania <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> metody.  
+2. Wywołuje metodę <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType>.  
   
 3. Tłumaczy i wysyła komunikat, jeśli jest to wymagane.  
   
-4. Przekazuje komunikat do hostowania kontrolki, jeśli brak innych kontrolek przetworzyć komunikatu.  
+4. Przekazuje komunikat do kontrolki hostingu, jeśli żaden inny formant nie przetwarza komunikatu.  
   
 ### <a name="ikeyboardinputsink-implementation"></a>Implementacja IKeyboardInputSink  
- Zastępczy pętli komunikatów obsługuje zarządzanie klawiatury. W związku z tym <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> metody jest jedyną <xref:System.Windows.Interop.IKeyboardInputSink> elementu członkowskiego, który wymaga implementacji w <xref:System.Windows.Forms.Integration.WindowsFormsHost> klasy.  
+ Pętla komunikatów zastępczych obsługuje zarządzanie klawiaturą. W związku z tym Metoda <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> jest jedynym członkiem <xref:System.Windows.Interop.IKeyboardInputSink>, który wymaga implementacji w klasie <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  
   
- Domyślnie <xref:System.Windows.Interop.HwndHost> klasy zwraca `false` dla jego <xref:System.Windows.Interop.HwndHost.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> implementacji. Zapobiega to klawiszem TAB z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolę [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontroli.  
+ Domyślnie Klasa <xref:System.Windows.Interop.HwndHost> zwraca `false` dla implementacji <xref:System.Windows.Interop.HwndHost.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A>. Uniemożliwia to przejęcie tabulacji z formantu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] do kontrolki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost> Implementacji <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> metoda wykonuje następujące czynności:  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> implementacja metody <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> wykonuje następujące czynności:  
   
-1. Wyszukuje pierwszy lub ostatni [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formant, który jest zawarty w <xref:System.Windows.Forms.Integration.WindowsFormsHost> kontroli i który może odebrać fokus. Wybór kontroli zależy od informacji przechodzenia.  
+1. Znajduje pierwszy lub ostatni formant [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], który jest zawarty w kontrolce <xref:System.Windows.Forms.Integration.WindowsFormsHost> i może odebrać fokus. Wybór kontrolki zależy od informacji przechodzenia.  
   
-2. Ustawia fokus do formantu i zwraca `true`.  
+2. Ustawia fokus na kontrolkę i zwraca `true`.  
   
-3. Jeśli formant nie może odebrać fokus, zwraca `false`.  
+3. Jeśli żaden formant nie może odbierać fokusu, zwraca `false`.  
   
-### <a name="windowsformshost-registration"></a>WindowsFormsHost rejestracji  
- Jeśli okna obsługi do <xref:System.Windows.Forms.Integration.WindowsFormsHost> formant zostanie utworzony, <xref:System.Windows.Forms.Integration.WindowsFormsHost> kontrolki wywołuje wewnętrznego statyczna metoda, która rejestruje jego obecność dla pętli komunikatów.  
+### <a name="windowsformshost-registration"></a>Rejestracja WindowsFormsHost  
+ Po utworzeniu uchwytu okna do kontrolki <xref:System.Windows.Forms.Integration.WindowsFormsHost>, kontrolka <xref:System.Windows.Forms.Integration.WindowsFormsHost> wywołuje wewnętrzną metodę statyczną, która rejestruje swoją obecność dla pętli komunikatów.  
   
- Podczas rejestracji <xref:System.Windows.Forms.Integration.WindowsFormsHost> kontroli sprawdza pętli komunikatów. Jeśli nie uruchomiono pętli komunikatów, <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> program obsługi zdarzeń jest tworzone. Pętla komunikatów jest uważany za uruchomione podczas <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> programu obsługi zdarzeń jest dołączony.  
+ Podczas rejestracji formant <xref:System.Windows.Forms.Integration.WindowsFormsHost> analizuje pętlę komunikatów. Jeśli pętla komunikatów nie została uruchomiona, zostanie utworzona procedura obsługi zdarzeń <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType>. Pętla komunikatów jest uważana za działającą po dołączeniu programu obsługi zdarzeń <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType>.  
   
- Kiedy niszczony jest uchwyt okna, <xref:System.Windows.Forms.Integration.WindowsFormsHost> kontroli usuwa z rejestracji.  
+ Gdy uchwyt okna zostanie zniszczony, formant <xref:System.Windows.Forms.Integration.WindowsFormsHost> usuwa samego siebie z rejestracji.  
   
-## <a name="elementhost-keyboard-and-message-processing"></a>Elementhost — klawiatura i przetwarzanie komunikatów  
- W przypadku hostowania za [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klawiatury i przetwarzania składa się z następujących komunikatów:  
+## <a name="elementhost-keyboard-and-message-processing"></a>Przetwarzanie komunikatów i klawiatury ElementHost  
+ W przypadku obsługi aplikacji [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klawiatury i przetwarzania komunikatów obejmują następujące elementy:  
   
-- <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.IKeyboardInputSink>, i <xref:System.Windows.Interop.IKeyboardInputSite> implementacji interfejsu.  
+- implementacje interfejsu <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.IKeyboardInputSink>i <xref:System.Windows.Interop.IKeyboardInputSite>.  
   
-- Klawisze strzałki i klawiszem TAB.  
+- Tabulacja i klawisze strzałek.  
   
-- Polecenie klucze i klucze okno dialogowe.  
+- Klucze poleceń i okna dialogowe.  
   
-- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Przetwarzanie akceleratora.  
+- przetwarzanie akceleratora [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
   
  W poniższych sekcjach opisano te części bardziej szczegółowo.  
   
 ### <a name="interface-implementations"></a>Implementacje interfejsu  
- W [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], komunikaty klawiatury są kierowane do uchwyt okna formantu, który jest ustawiony fokus. W <xref:System.Windows.Forms.Integration.ElementHost> kontrolki, te komunikaty są kierowane do element hostowany. Aby to osiągnąć, <xref:System.Windows.Forms.Integration.ElementHost> control oferuje <xref:System.Windows.Interop.HwndSource> wystąpienia. Jeśli <xref:System.Windows.Forms.Integration.ElementHost> kontrolka ma fokus, <xref:System.Windows.Interop.HwndSource> wystąpienia kieruje większość klawiatury, aby mogą być przetwarzane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> klasy.  
+ W [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], komunikaty klawiatury są kierowane do uchwytu okna kontrolki, która ma fokus. W kontrolce <xref:System.Windows.Forms.Integration.ElementHost> te komunikaty są kierowane do hostowanego elementu. W tym celu formant <xref:System.Windows.Forms.Integration.ElementHost> dostarcza wystąpienia <xref:System.Windows.Interop.HwndSource>. Jeśli formant <xref:System.Windows.Forms.Integration.ElementHost> ma fokus, wystąpienie <xref:System.Windows.Interop.HwndSource> kieruje dane wejściowe z klawiatury, aby można było je przetworzyć przez klasę [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager>.  
   
- <xref:System.Windows.Interop.HwndSource> Klasy implementuje <xref:System.Windows.Interop.IKeyboardInputSink> i <xref:System.Windows.Interop.IKeyboardInputSite> interfejsów.  
+ Klasa <xref:System.Windows.Interop.HwndSource> implementuje interfejsy <xref:System.Windows.Interop.IKeyboardInputSink> i <xref:System.Windows.Interop.IKeyboardInputSite>.  
   
- Współdziałanie klawiatury opiera się na implementowaniu <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> metodą klawisza TAB dojścia i strzałki klucza dane wejściowe, które powoduje przeniesienie fokusu poza hostowanej elementów.  
+ Funkcja oparta na klawiaturze polega na zaimplementowaniu metody <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> w celu obsłużenia klawisza TAB i wejścia klawisza Strzałka, które przenosi fokus z elementów hostowanych.  
   
-### <a name="tabbing-and-arrow-keys"></a>Tabbing i klawisze strzałek  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Logikę wyboru jest mapowany na <xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> i <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> metody służące do implementacji kartę i Strzałka klucza nawigacji. Zastępowanie <xref:System.Windows.Forms.Integration.ElementHost.Select%2A> metody w ramach tego mapowania.  
+### <a name="tabbing-and-arrow-keys"></a>Tabulacja i klawisze strzałek  
+ Logika wyboru [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] jest mapowana na metody <xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> i <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> w celu zaimplementowania nawigacji na karcie i klawiszy strzałek. Zastępowanie metody <xref:System.Windows.Forms.Integration.ElementHost.Select%2A> wykonuje to mapowanie.  
   
-### <a name="command-keys-and-dialog-box-keys"></a>Polecenie klucze i klucze okno dialogowe  
- Aby zapewnić [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pierwsza okazja do przetwarzania polecenia klucze i klucze okna dialogowego [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] poleceń przetwarzania wstępnego jest podłączony do <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> metody. Zastępowanie <xref:System.Windows.Forms.Control.ProcessCmdKey%2A?displayProperty=nameWithType> metoda łączy dwie technologie.  
+### <a name="command-keys-and-dialog-box-keys"></a>Klucze poleceń i klucze okna dialogowego  
+ Aby dać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pierwszą okazję do przetworzenia kluczy poleceń i kluczy okna dialogowego, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] wstępnego przetwarzania poleceń jest połączona z metodą <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A>. Zastępowanie metody <xref:System.Windows.Forms.Control.ProcessCmdKey%2A?displayProperty=nameWithType> łączy dwie technologie.  
   
- Za pomocą <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> metody hostowanej elementów może obsługiwać żadnych kluczy wiadomości, takich jak przetłumaczyła, WM_KEYUP, WM_SYSKEYDOWN lub WM_SYSKEYUP, w tym kluczy polecenia, takie jak klucze TAB, ENTER, ESC i strzałki. Jeśli komunikat klucza nie jest obsługiwane, są wysyłane [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hierarchii nadrzędny obsługi.  
+ Za pomocą metody <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> elementy hostowane mogą obsługiwać dowolny komunikat o kluczu, taki jak WM_KEYDOWN, WM_KEYUP, WM_SYSKEYDOWN lub WM_SYSKEYUP, w tym klucze poleceń, takie jak TAB, ENTER, ESC i klawisze strzałek. Jeśli komunikat klucza nie jest obsługiwany, zostanie on wysłany do obsługi [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hierarchii nadrzędnej.  
   
-### <a name="accelerator-processing"></a>Przetwarzanie klawiszy skrótów  
- Poprawnie przetworzyć akceleratorów [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] akceleratora przetwarzania musi być podłączony do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> klasy. Ponadto wszystkie komunikaty WM_CHAR muszą być prawidłowo kierowane do hostowanych elementów.  
+### <a name="accelerator-processing"></a>Przetwarzanie akceleratora  
+ Aby prawidłowo przetwarzać akceleratory, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] przetwarzanie akceleratora musi być połączone z klasą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager>. Ponadto wszystkie komunikaty WM_CHAR muszą być poprawnie kierowane do elementów hostowanych.  
   
- Ponieważ wartość domyślna <xref:System.Windows.Interop.HwndSource> implementacji <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A> metoda zwraca `false`, WM_CHAR komunikaty są przetwarzane przy użyciu logiki poniższym:  
+ Ponieważ domyślna implementacja <xref:System.Windows.Interop.HwndSource> metody <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A> zwraca `false`, WM_CHAR komunikaty są przetwarzane przy użyciu następującej logiki:  
   
-- <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> Metoda zostanie przesłonięta, aby upewnić się, że wszystkie komunikaty WM_CHAR są przekazywane do hostowanej elementów.  
+- Metoda <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> jest zastępowana, aby upewnić się, że wszystkie komunikaty WM_CHAR są przekazywane do elementów hostowanych.  
   
-- W przypadku naciśnięcia klawisza ALT, komunikat jest WM_SYSCHAR. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Nie przetwarzaj wstępnie tego komunikatu za pośrednictwem <xref:System.Windows.Forms.Control.IsInputChar%2A> metody. W związku z tym <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> metoda zostanie przesłonięta zapytania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> dla zarejestrowanego akceleratora. Jeśli zostanie znaleziony zarejestrowanych akceleratora, <xref:System.Windows.Input.AccessKeyManager> przetwarza je.  
+- Po naciśnięciu klawisza ALT komunikat jest WM_SYSCHAR. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] nie przetwarza wstępnie tego komunikatu za pomocą metody <xref:System.Windows.Forms.Control.IsInputChar%2A>. W związku z tym Metoda <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> jest zastępowana, aby zbadać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> dla zarejestrowanego akceleratora. Jeśli zostanie znaleziony zarejestrowany akcelerator, <xref:System.Windows.Input.AccessKeyManager> przetwarza go.  
   
-- Jeśli nie jest wciśnięty klawisz ALT, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> klasy przetwarza nieobsługiwany dane wejściowe. Jeśli dane wejściowe to akcelerator <xref:System.Windows.Input.AccessKeyManager> przetwarza je. <xref:System.Windows.Input.InputManager.PostProcessInput> Zdarzenie jest obsługiwane dla WM_CHAR wiadomości, które nie zostały przetworzone.  
+- Jeśli klawisz ALT nie zostanie wciśnięty, Klasa <xref:System.Windows.Input.InputManager> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przetwarza nieobsłużone dane wejściowe. Jeśli dane wejściowe są akceleratorem, <xref:System.Windows.Input.AccessKeyManager> je przetwarza. Zdarzenie <xref:System.Windows.Input.InputManager.PostProcessInput> jest obsługiwane dla WM_CHAR komunikatów, które nie zostały przetworzone.  
   
- Gdy użytkownik naciśnie klawisz ALT, akcelerator podpowiedzi wizualne są wyświetlane na cały formularz. Do obsługi tego zachowania wszystkich <xref:System.Windows.Forms.Integration.ElementHost> kontrolek w formularzu aktywne komunikaty WM_SYSKEYDOWN, niezależnie od tego, które kontrolki jest ustawiony fokus.  
+ Gdy użytkownik naciśnie klawisz ALT, podpowiedzi wizualizacji akceleratora są wyświetlane w całym formularzu. Aby obsłużyć to zachowanie, wszystkie kontrolki <xref:System.Windows.Forms.Integration.ElementHost> w aktywnym formularzu odbierają komunikaty WM_SYSKEYDOWN, niezależnie od tego, który formant ma fokus.  
   
- Komunikaty są wysyłane tylko do <xref:System.Windows.Forms.Integration.ElementHost> formantów w formularzu active.  
+ Komunikaty są wysyłane tylko do kontrolek <xref:System.Windows.Forms.Integration.ElementHost> w aktywnym formularzu.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -134,6 +135,6 @@ Współdziałanie między [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
 - <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Przewodnik: Hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Przewodnik: hosting złożonej kontrolki Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Przewodnik: hosting złożonej kontrolki WPF w Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [WPF i Win32 — współdziałanie](wpf-and-win32-interoperation.md)

@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 485d62ce67f284fe1bbe931dcaa00671be154f35
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a82934fd2ea9568681a3bec82c3b15513decc926
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715372"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741569"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Publikowanie aplikacji Hello world .NET Core przy użyciu programu Visual Studio
 
@@ -68,7 +68,7 @@ W poniższych krokach zawarto Podgląd plików utworzonych przez proces publikow
 
       * *HelloWorld.runtimeconfig.json*
 
-         Jest to plik konfiguracji środowiska uruchomieniowego aplikacji. Identyfikuje wersję platformy .NET Core, w której aplikacja została skompilowana. Aby uzyskać więcej informacji, zobacz [pliki konfiguracji środowiska uruchomieniowego](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+         To jest plik konfiguracji czasu wykonywania aplikacji. Identyfikuje wersję platformy .NET Core, w której aplikacja została skompilowana. Możesz również dodać do niej opcje konfiguracji. Aby uzyskać więcej informacji, zobacz [Ustawienia konfiguracji środowiska uruchomieniowego .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 

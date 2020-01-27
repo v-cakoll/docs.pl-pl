@@ -1,35 +1,35 @@
 ---
-title: ErrorProvider — Składnik (Formularze systemu Windows)
+title: ErrorProvider, składnik
 ms.date: 03/30/2017
 helpviewer_keywords:
 - error messages [Windows Forms], displaying
 - errors [Windows Forms]
 - ErrorProvider component [Windows Forms]
 ms.assetid: c0f2e231-c5c9-413d-a507-75af2db499b6
-ms.openlocfilehash: 314d386ed69c8c14d90b4fa8abb61f19b0465890
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70d830dab9e34523d08293e9bf761451bea2c7be
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971981"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745773"
 ---
 # <a name="errorprovider-component-windows-forms"></a>ErrorProvider — Składnik (Formularze systemu Windows)
-Formularze Windows `ErrorProvider` składnika służy do pokazania użytkownika w nienachalny sposób, że coś jest nie tak. Jest ona zwykle używana w połączeniu z sprawdzania poprawności danych wejściowych użytkownika na formularzu lub wyświetlanie błędów w zestawie danych.  
+Składnik `ErrorProvider` Windows Forms jest używany do wyświetlania użytkownika w nieinwazyjny sposób, gdy coś się nie stało. Jest zazwyczaj używany w połączeniu z walidacją danych wejściowych użytkownika w formularzu lub wyświetlaniem błędów w ramach zestawu danych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [ErrorProvider, składnik — omówienie](errorprovider-component-overview-windows-forms.md)  
- Wyjaśnia, co to jest ten składnik i jego kluczowych funkcji i właściwości.  
+ Wyjaśnia, czym jest ten składnik i jego najważniejsze funkcje i właściwości.  
   
- [Instrukcje: Wyświetlanie ikon błędów weryfikacji formularza za pomocą składnika ErrorProvider formularzy Windows](display-error-icons-for-form-validation-with-wf-errorprovider.md)  
- Zawiera wskazówki dotyczące sprawdzania poprawności danych wejściowych użytkownika za pomocą składnika błędu dostawcy.  
+ [Instrukcje: wyświetlanie ikon błędów dotyczących weryfikacji formularza za pomocą składnika ErrorProvider formularzy Windows Forms](display-error-icons-for-form-validation-with-wf-errorprovider.md)  
+ Wyświetla wskazówki dotyczące sprawdzania poprawności danych wejściowych użytkownika za pomocą składnika dostawcy błędów.  
   
- [Instrukcje: Wyświetl błędy w zestawie danych za pomocą składnika ErrorProvider formularzy Windows](view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
- Zawiera wskazówki dotyczące używania składnika dostawcy błąd do wyświetlania błędów danych.  
+ [Instrukcje: wyświetlanie błędów w elemencie DataSet za pomocą składnika ErrorProvider formularzy Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
+ Wyświetla wskazówki dotyczące użycia składnika dostawcy błędów w celu wyświetlenia błędów danych.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.ErrorProvider>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.
+ Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.

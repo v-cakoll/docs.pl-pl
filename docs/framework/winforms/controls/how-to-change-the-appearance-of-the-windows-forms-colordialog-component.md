@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: zmienianie wyglądu składnika ColorDialog formularzy systemu Windows'
+title: Zmień wygląd składnika ColorDialog
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-ms.openlocfilehash: d2bb9e06d9d84a9b61c67510e9c012066f69d55e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0402d7f3c03a0771512a03ac54e1b093c9fe6e9b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595456"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746638"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Instrukcje: zmienianie wyglądu składnika ColorDialog formularzy systemu Windows
-Możesz skonfigurować wygląd interfejsu Windows Forms <xref:System.Windows.Forms.ColorDialog> składnika z liczbą jego właściwości. Okno dialogowe ma dwie sekcje — taki, który przedstawia kolory podstawowe i jedną, która pozwala użytkownikowi na definiowanie kolorów niestandardowych.  
+# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Porady: zmienianie wyglądu składnika ColorDialog formularzy systemu Windows
+Można skonfigurować wygląd składnika <xref:System.Windows.Forms.ColorDialog> Windows Forms z liczbą jego właściwości. Okno dialogowe ma dwie sekcje — jedną, która zawiera podstawowe kolory i jeden, który umożliwia użytkownikowi Definiowanie kolorów niestandardowych.  
   
- Większość właściwości ograniczyć kolorów, które użytkownik może wybrać w oknie dialogowym. Jeśli <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> właściwość jest ustawiona na `true`, użytkownik może definiowanie kolorów niestandardowych. <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> Właściwość `true` Jeśli okno dialogowe jest rozwinięty, definiowanie kolorów niestandardowych; w przeciwnym razie użytkownik musi kliknąć przycisk "Definiowanie kolorów niestandardowych". Gdy <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> właściwość jest ustawiona na `true`, okno dialogowe wyświetla wszystkie dostępne kolory w zestawie kolory podstawowe. Jeśli <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> właściwość jest ustawiona na `true`, użytkownik może wybrać kolory szarych; tylko jednolitymi kolorami są dostępne do wybrania.  
+ Większość właściwości ogranicza kolory, które użytkownik może wybrać z okna dialogowego. Jeśli właściwość <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> jest ustawiona na `true`, użytkownik może definiować kolory niestandardowe. Właściwość <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> jest `true`, jeśli okno dialogowe jest rozwinięte w celu zdefiniowania kolorów niestandardowych; w przeciwnym razie użytkownik musi kliknąć przycisk "Definiuj kolory niestandardowe". Gdy właściwość <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> jest ustawiona na `true`, w oknie dialogowym są wyświetlane wszystkie dostępne kolory z zestawu kolorów podstawowych. Jeśli właściwość <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> jest ustawiona na `true`, użytkownik nie może wybrać kolorami. tylko pełne kolory są dostępne do wybrania.  
   
- Jeśli <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> właściwość jest ustawiona na `true`, pojawia się w oknie dialogowym przycisk pomocy. Gdy użytkownik kliknie przycisk Pomoc <xref:System.Windows.Forms.ColorDialog> składnika <xref:System.Windows.Forms.CommonDialog.HelpRequest> zdarzenie jest wywoływane.  
+ Jeśli właściwość <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> jest ustawiona na `true`, w oknie dialogowym pojawi się przycisk Pomoc. Gdy użytkownik kliknie przycisk Pomoc, zostanie zgłoszone zdarzenie <xref:System.Windows.Forms.CommonDialog.HelpRequest> składnika <xref:System.Windows.Forms.ColorDialog>.  
   
-### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a>Aby skonfigurować wygląd okno dialogowe kolorów  
+### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a>Aby skonfigurować wygląd okna dialogowego koloru  
   
-1. Ustaw <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>, <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>, <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>, i <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> właściwości, aby odpowiednie wartości.  
+1. Ustaw odpowiednie wartości właściwości <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>, <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>, <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>i <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A>.  
   
     ```vb  
     ColorDialog1.AllowFullOpen = True  

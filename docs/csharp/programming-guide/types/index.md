@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 0b7c9fc0e9dd0f559c52f692c405a3f9e68814d0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: be2af77f9680ab3285720525638bba8ef2041999
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711886"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745379"
 ---
 # <a name="types-c-programming-guide"></a>Typy (Przewodnik programowania w języku C#)
 
@@ -113,7 +113,7 @@ Za pomocą słowa kluczowego [struct](../../language-reference/keywords/struct.m
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-Aby uzyskać więcej informacji na temat struktur, zobacz [struktury](../classes-and-structs/structs.md). Aby uzyskać więcej informacji na temat typów wartości w programie .NET, zobacz [typy wartości](../../language-reference/keywords/value-types.md).
+Aby uzyskać więcej informacji na temat struktur, zobacz [struktury](../classes-and-structs/structs.md). Aby uzyskać więcej informacji na temat typów wartości, zobacz [typy wartości](../../language-reference/builtin-types/value-types.md).
 
 Druga kategoria typów wartości to [enum](../../language-reference/builtin-types/enum.md). Wyliczenie definiuje zestaw nazwanych stałych całkowitych. Na przykład Wyliczenie <xref:System.IO.FileMode?displayProperty=nameWithType> w bibliotece klas .NET zawiera zestaw nazwanych stałych liczb całkowitych, które określają, jak plik powinien być otwarty. Jest on zdefiniowany, jak pokazano w następującym przykładzie:
 
@@ -148,7 +148,7 @@ Typy odwołań w pełni obsługują dziedziczenie. Podczas tworzenia klasy możn
 
 ## <a name="types-of-literal-values"></a>Typy wartości literału
 
-W C#programie wartości literałów otrzymują typ z kompilatora. Możesz określić sposób wpisywania literału liczbowego, dołączając literę do końca liczby. Na przykład, aby określić, że wartość 4,56 powinna być traktowana jako zmiennoprzecinkowa, należy dołączyć "f" lub "F" po liczbie: `4.56f`. Jeśli nie zostanie dołączona żadna litera, kompilator wykryje typ dla literału. Aby uzyskać więcej informacji na temat typów, które można określić za pomocą sufiksów liter, zobacz strony referencyjne dla poszczególnych typów w [typach wartości](../../language-reference/keywords/value-types.md).
+W C#programie wartości literałów otrzymują typ z kompilatora. Możesz określić sposób wpisywania literału liczbowego, dołączając literę do końca liczby. Na przykład, aby określić, że wartość 4,56 powinna być traktowana jako zmiennoprzecinkowa, należy dołączyć "f" lub "F" po liczbie: `4.56f`. Jeśli nie zostanie dołączona żadna litera, kompilator wykryje typ dla literału. Aby uzyskać więcej informacji na temat typów, które można określić za pomocą sufiksów liter, zobacz [całkowite typy liczbowe](../../language-reference/builtin-types/integral-numeric-types.md) i [zmiennoprzecinkowe typy liczbowe](../../language-reference/builtin-types/floating-point-numeric-types.md).
 
 Ponieważ wpisywane są literały, a wszystkie typy są ostatecznie z <xref:System.Object?displayProperty=nameWithType>, można napisać i skompilować kod, taki jak następujące:
 
@@ -185,7 +185,7 @@ Więcej informacji znajduje się w następujących tematach:
 
 - [Używanie typu dynamicznego](./using-type-dynamic.md)
 
-- [Typy wartości](../../language-reference/keywords/value-types.md)
+- [Typy wartości](../../language-reference/builtin-types/value-types.md)
 
 - [Typy odwołań](../../language-reference/keywords/reference-types.md)
 

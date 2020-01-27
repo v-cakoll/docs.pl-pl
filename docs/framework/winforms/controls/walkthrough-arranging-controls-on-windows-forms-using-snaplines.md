@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: rozmieszczanie formantów w formularzach systemu Windows za pomocą linii przyciągania'
+title: Rozmieszczanie formantów przy użyciu linii wyrównania
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 04bef7162662f4fbefdaa151de13468d88530914
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460637"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740216"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>Przewodnik: porządkowanie formantów na Windows Forms przy użyciu linii wyrównania
 

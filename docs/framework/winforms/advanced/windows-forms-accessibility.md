@@ -1,34 +1,34 @@
 ---
-title: Dostępność formularzy systemu Windows
+title: Ułatwienia dostępu
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, accessibility
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 23a3f168-ebc0-4f23-9efc-799109aa4a2d
-ms.openlocfilehash: 0a01a0456dfef6e89f0cf1b3608a07cb359d4497
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab497976b67bea4418b92706c7d74a69fb33f58f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748060"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746378"
 ---
 # <a name="windows-forms-accessibility"></a>Dostępność formularzy systemu Windows
-Funkcje ułatwień dostępu programu Windows Forms umożliwia udostępnić szeroką gamę użytkowników aplikacji.  
+Funkcja ułatwień dostępu Windows Forms umożliwia udostępnianie aplikacji różnym użytkownikom.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przewodnik: Tworzenie dostępnej aplikacji z systemem Windows](walkthrough-creating-an-accessible-windows-based-application.md)  
- W tym artykule opisano wszystkie funkcje powinien obsługiwać do zwiększenia dostępności.  
+ [Przewodnik: tworzenie dostępnej aplikacji bazującej na systemie Windows](walkthrough-creating-an-accessible-windows-based-application.md)  
+ Opisuje wszystkie funkcje, które należy obsługiwać, aby zwiększyć dostępność.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:Accessibility>  
- Przestrzeń nazw, zawierającą liczbę klasy powiązane z ułatwień dostępu.  
+ Przestrzeń nazw zawierająca wiele klas związanych z dostępnością.  
   
  <xref:System.Windows.Forms.AccessibleObject>  
- Dostarcza informacje o aplikacji ułatwień dostępu umożliwia dostosowanie aplikacji interfejsu użytkownika (UI) dla użytkowników z niedosłyszące.  
+ Zawiera informacje, które są używane przez aplikacje ułatwień dostępu do dostosowywania interfejsu użytkownika aplikacji dla użytkowników z upośledzeniem.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Podawanie informacji o ułatwieniach dostępu dotyczących kontrolek w formularzu systemu Windows](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
- W tym artykule opisano jak Podaj informacje, które umożliwia pomagają użytkownikom z wzroku kontrolek formularzy Windows Forms.  
+ Zawiera opis sposobu dostarczania informacji, które Windows Forms formanty mogą pomóc użytkownikom z upośledzeniem.  
   
  [Automatyczne skalowanie w formularzach Windows Forms](../automatic-scaling-in-windows-forms.md)  
- Opisuje sposób formularzy Windows aplikacji reagowanie na zmiany w rozmiar czcionki systemowej.
+ Opisuje sposób, w jaki aplikacja Windows Forms reaguje na zmiany rozmiaru czcionki systemowej.

@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: eb1815f965e86a6f8f709b32f84f879eb03de447
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115801"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742591"
 ---
 # <a name="whats-new-in-net-core-30"></a>Co nowego w programie .NET Core 3.0
 
@@ -112,20 +112,20 @@ Aby uzyskać więcej informacji na temat narzędzia konsolidatora IL, zapoznaj s
 
 ### <a name="tiered-compilation"></a>Kompilacja warstwowa
 
-[Kompilacja warstwowa](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC) jest domyślnie włączona z platformą .NET Core 3.0. Ta funkcja umożliwia środowisku uruchomieniowemu wydajniejsze używanie kompilatora just-in-Time (JIT) w celu uzyskania lepszej wydajności.
+[Kompilacja warstwowa](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) (TC) jest domyślnie włączona z platformą .NET Core 3.0. Ta funkcja umożliwia środowisku uruchomieniowemu wydajniejsze używanie kompilatora just-in-Time (JIT) w celu uzyskania lepszej wydajności.
 
-Główną zaletą TC jest włączenie (re-) metod jitting z niską jakością, ale szybszym lub wyższą warstwą. Pozwala to zwiększyć wydajność aplikacji, która przechodzi przez różne etapy wykonywania, od uruchamiania do stanu stałego. Jest to kontrast z podejściem innym niż TC, gdzie każda metoda jest skompilowana w jeden sposób (taka sama jak warstwa wysokiej jakości), która jest obciążona niestabilnym stanem w porównaniu z wydajnością uruchamiania.
+Główną zaletą kompilacji warstwowej jest zapewnienie dwóch sposobów jitting metod: w warstwach o niższej jakości lub szybszych lub wyższych warstwach. Jakość odnosi się do tego, jak dobrze jest zoptymalizowana Metoda. TC ułatwia zwiększenie wydajności aplikacji w miarę przechodzenia przez różne etapy wykonywania — od uruchomienia do stanu stałego. Gdy kompilacja warstwowa jest wyłączona, każda metoda jest kompilowana w jednym ze sposobów, która jest obciążona wydajnością o stałej kondycji w porównaniu z wydajnością uruchamiania.
 
-Gdy TC jest włączona, podczas uruchamiania dla metody, która jest wywoływana:
+Po włączeniu TC następujące zachowanie ma zastosowanie do kompilacji metody podczas uruchamiania aplikacji:
 
-- Jeśli metoda zawiera kod skompilowany przez drzewo obiektów (ReadyToRun), zostanie użyty wygenerowany kod.
-- W przeciwnym razie metoda zostanie trybie JIT. Zazwyczaj te metody są obecnie ogólne względem typów wartościowych.
-  - Szybkie JIT umożliwia szybsze generowanie kodu o niższej jakości. Szybka JIT jest domyślnie włączona w programie .NET Core 3,0 dla metod, które nie zawierają pętli i są preferowane podczas uruchamiania.
-  - W pełni Optymalizacja JIT powoduje szybsze generowanie kodu o wyższej jakości. Dla metod, w których nie można użyć metody szybkiej JIT (na przykład jeśli metoda ma atrybut `[MethodImpl(MethodImplOptions.AggressiveOptimization)]`), używana jest pełna optymalizacja JIT.
+- Jeśli metoda zawiera kod skompilowany z wyprzedzeniem lub [ReadyToRun](#readytorun-images), używany jest wygenerowany kod.
+- W przeciwnym razie metoda jest trybie JIT. Zazwyczaj te metody są ogólne względem typów wartościowych.
+  - *Szybkie kompilatory* umożliwiają szybsze generowanie kodu o niższej jakości (lub mniej zoptymalizowanym). W przypadku programu .NET Core 3,0, szybkie JIT jest domyślnie włączone dla metod, które nie zawierają pętli i są preferowane podczas uruchamiania.
+  - W pełni Optymalizacja JIT powoduje szybsze generowanie kodu o wyższej jakości (lub bardziej zoptymalizowany). Dla metod, w których nie można użyć metody szybkiej JIT (na przykład jeśli metoda ma atrybut <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>), używana jest pełna optymalizacja JIT.
 
-Na koniec po wywołaniu metod są one trybie JIT z pełnym optymalizacją JIT w tle.
+W przypadku często wywoływanych metod kompilator just in Time w końcu tworzy w tle w pełni zoptymalizowany kod. Zoptymalizowany kod zastępuje wstępnie skompilowany kod dla tej metody.
 
-Kod wygenerowany przez szybką JIT może działać wolniej, przydzielać więcej pamięci lub używać większej ilości miejsca na stosie. Jeśli występują problemy, szybkie JIT można wyłączyć przy użyciu tego ustawienia w pliku projektu:
+Kod wygenerowany przez szybką JIT może działać wolniej, przydzielać więcej pamięci lub używać większej ilości miejsca na stosie. Jeśli występują problemy, można wyłączyć szybkie JIT przy użyciu tej właściwości programu MSBuild w pliku projektu:
 
 ```xml
 <PropertyGroup>
@@ -133,7 +133,7 @@ Kod wygenerowany przez szybką JIT może działać wolniej, przydzielać więcej
 </PropertyGroup>
 ```
 
-Aby całkowicie wyłączyć TC, użyj tego ustawienia w pliku projektu:
+Aby całkowicie wyłączyć TC, Użyj tej właściwości programu MSBuild w pliku projektu:
 
 ```xml
 <PropertyGroup>
@@ -141,7 +141,10 @@ Aby całkowicie wyłączyć TC, użyj tego ustawienia w pliku projektu:
 </PropertyGroup>
 ```
 
-Wszystkie zmiany powyższych ustawień w pliku projektu mogą wymagać odtworzenia czystej kompilacji w celu odzwierciedlenia (usunięcie `obj` i `bin` katalogów i przebudowywanie).
+> [!TIP]
+> Jeśli zmienisz te ustawienia w pliku projektu, może być konieczne wykonanie czystej kompilacji w celu odzwierciedlenia nowych ustawień (Usuń `obj` i `bin` katalogi i Skompiluj ponownie).
+
+Aby uzyskać więcej informacji o konfigurowaniu kompilacji w czasie wykonywania, zobacz [Opcje konfiguracji czasu wykonywania dla kompilacji](../run-time-config/compilation.md).
 
 ### <a name="readytorun-images"></a>Obrazy ReadyToRun
 
@@ -182,7 +185,7 @@ Wyjątki dla wielu elementów docelowych:
 W programie .NET Core 3.0 wprowadzono funkcję wyboru, która pozwala aplikacji na przewinięcie do najnowszej wersji programu .NET Core. Ponadto zostało dodane nowe ustawienie służące do kontrolowania sposobu, w jaki przenoszone do przodu jest stosowane do aplikacji. Tę konfigurację można skonfigurować w następujący sposób:
 
 - Właściwość pliku projektu: `RollForward`
-- Właściwość pliku konfiguracji środowiska uruchomieniowego: `rollForward`
+- Właściwość pliku konfiguracji czasu wykonywania: `rollForward`
 - Zmienna środowiskowa: `DOTNET_ROLL_FORWARD`
 - Argument wiersza polecenia: `--roll-forward`
 

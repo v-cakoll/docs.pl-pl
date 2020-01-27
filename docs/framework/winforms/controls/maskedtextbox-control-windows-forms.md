@@ -1,5 +1,5 @@
 ---
-title: MaskedTextBox — Formant (Formularze systemu Windows)
+title: MaskedTextBox, kontrolka
 ms.date: 03/30/2017
 f1_keywords:
 - MaskedTextBox
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 - text boxes [Windows Forms], validating user input
 ms.assetid: 235d6121-027d-481d-8d59-4f6794d15d0c
-ms.openlocfilehash: af699875f6f3dea2f384574c85d85bd77a4507af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e46c5b5ec670a58b571703e9920cb3ee90a13aa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780643"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744959"
 ---
 # <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox — Formant (Formularze systemu Windows)
-Ten temat zawiera łącza do innych osób o `MaskedTextBox` kontroli.  
+Ten temat łączy się z innymi informacjami o kontrolce `MaskedTextBox`.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przewodnik: Praca z formantem MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)  
- Pokazuje kluczowe funkcje `MaskedTextBox` kontroli.  
+ [Przewodnik: praca z kontrolką MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)  
+ Demonstruje najważniejsze funkcje formantu `MaskedTextBox`.  
   
- [Instrukcje: Powiąż dane z formantem MaskedTextBox](how-to-bind-data-to-the-maskedtextbox-control.md)  
- Pokazuje, jak sformatować dane, gdy dane z bazy danych jest niezgodny z formatu oczekiwanego przez definicję maska sieci.  
+ [Instrukcje: powiązanie danych z kontrolką MaskedTextBox](how-to-bind-data-to-the-maskedtextbox-control.md)  
+ Pokazuje, jak ponownie sformatować dane, gdy dane w bazie danych nie są zgodne z formatem oczekiwanym przez definicję maski.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.MaskedTextBox>  
- Klasa podstawowe do wykonania kontrolkę pola tekstowego maskowanego.  
+ Klasa podstawowa dla implementacji kontrolki pola tekstowego maskowanego.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.
+ Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.

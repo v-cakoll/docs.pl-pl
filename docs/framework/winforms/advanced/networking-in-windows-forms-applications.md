@@ -1,36 +1,36 @@
 ---
-title: Sieć w aplikacjach formularzy systemu Windows
+title: Obsługa sieci
 ms.date: 03/30/2017
 helpviewer_keywords:
 - networking [Windows Forms], Windows Forms
 - Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
-ms.openlocfilehash: 2432fbd0a2c769efb126e4b9c1dc19e35fbe4c31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a339792e716e9c23a0c178dc08410aa66988d7c6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641505"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745011"
 ---
 # <a name="networking-in-windows-forms-applications"></a>Sieć w aplikacjach formularzy systemu Windows
-.NET Framework zawiera klasy służące do wyświetlania stron sieci Web, pobierania zawartości sieci Web, interakcji z pliku transfer protocol (FTP) witryn i korzystanie z usług internetowych, co ułatwia tworzenie funkcjonalności sieci w aplikacji. Następujące zasoby pomoże zrozumieć technologii sieciowych w .NET Framework i jak można zintegrować je Windows Forms.  
+.NET Framework zawiera klasy służące do wyświetlania stron sieci Web, pobierania zawartości sieci Web, współdziałania z witrynami protokołu transferu plików (FTP) i używania usług sieci Web, co ułatwia tworzenie funkcji sieciowych w aplikacji. Poniższe zasoby pomogą zrozumieć technologie sieciowe .NET Framework i sposób integrowania ich z Windows Forms.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Net>  
- Przestrzeń nazw korzenia dla klasy w .NET Framework czy łączność sieciowa dojście.  
+ Główna przestrzeń nazw dla klas w .NET Framework, które obsługują łączność sieciową.  
   
  <xref:System.Net.WebClient>  
- Klasa wygodne programowo pobierania sieci Web lub zawartości oparty na protokole HTTP.  
+ Wygodna Klasa służąca do samodzielnego pobierania zawartości sieci Web lub opartej na protokole HTTP.  
   
  <xref:System.Net.FtpWebRequest>  
- Klasa podczas pobierania i wysyłania plików przy użyciu protokołu FTP.  
+ Klasa do pobierania i wysyłania plików przy użyciu protokołu FTP.  
   
  <xref:System.Windows.Forms.WebBrowser>  
- Klasa zarządzana otoka do `WebBrowser` formant, który jest dołączony do Windows.  
+ Zarządzana Klasa otoki dla kontrolki `WebBrowser`, która jest dołączona do systemu Windows.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Programowanie dla sieci w programie .NET Framework](../../network-programming/index.md)  
- Wprowadzenie do obsługi sieci w programie .NET Framework.  
+ Wprowadzenie do sieci w .NET Framework.  
   
  [Wiązanie danych formularzy Windows Forms](../windows-forms-data-binding.md)  
- W tym artykule opisano sposób wyświetlania zawartości bazy danych w aplikacji z lokalnym magazynem danych lub bazy danych znajdują się w sieci.
+ Opisuje sposób wyświetlania zawartości bazy danych w aplikacji, z lokalnego magazynu danych lub bazy danych znajdującej się w sieci.

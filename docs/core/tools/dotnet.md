@@ -2,12 +2,12 @@
 title: dotnet — polecenie
 description: Dowiedz się więcej na temat polecenia dotnet (sterownika generycznego dla narzędzi interfejs wiersza polecenia platformy .NET Core) i jego użycia.
 ms.date: 06/04/2018
-ms.openlocfilehash: a22340c26ca2e483e43857e2ecb31f2ab53b60f4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: fe90968560b58471c279fcd2097741ea476cef0b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117514"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734069"
 ---
 # <a name="dotnet-command"></a>dotnet — polecenie
 
@@ -15,7 +15,7 @@ ms.locfileid: "71117514"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet`-Narzędzie do zarządzania kodem źródłowym i plikami binarnymi platformy .NET.
+`dotnet` — narzędzie do zarządzania kodem źródłowym i plikami binarnymi platformy .NET.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -47,9 +47,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ## <a name="description"></a>Opis
 
-`dotnet`jest narzędziem do zarządzania kodem źródłowym i plikami binarnymi platformy .NET. Udostępnia polecenia wykonujące określone zadania, takie jak [`dotnet build`](dotnet-build.md) i. [`dotnet run`](dotnet-run.md) Każde polecenie definiuje własne argumenty. Wpisz `--help` po każdym poleceniu, aby uzyskać dostęp do krótkiej dokumentacji pomocy.
+`dotnet` jest narzędziem do zarządzania kodem źródłowym i plikami binarnymi programu .NET. Udostępnia polecenia wykonujące określone zadania, takie jak [`dotnet build`](dotnet-build.md) i [`dotnet run`](dotnet-run.md). Każde polecenie definiuje własne argumenty. Wpisz `--help` po każdym poleceniu, aby uzyskać dostęp do krótkiej dokumentacji pomocy.
 
-`dotnet`może służyć do uruchamiania aplikacji przez określenie biblioteki DLL aplikacji, takiej jak `dotnet myapp.dll`. Zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md) w celu uzyskania informacji na temat opcji wdrażania.
+`dotnet` można używać do uruchamiania aplikacji przez określenie biblioteki DLL aplikacji, takiej jak `dotnet myapp.dll`. Zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md) w celu uzyskania informacji na temat opcji wdrażania.
 
 ## <a name="options"></a>Opcje
 
@@ -79,7 +79,7 @@ Wersja środowiska uruchomieniowego platformy .NET Core do użycia w celu urucho
 
 `-h|--help`
 
-Drukuje dokumentację dla danego polecenia, na przykład `dotnet build --help`. `dotnet --help`Drukuje listę dostępnych poleceń.
+Drukuje dokumentację dla danego polecenia, taką jak `dotnet build --help`. `dotnet --help` drukuje listę dostępnych poleceń.
 
 `--info`
 
@@ -97,9 +97,9 @@ Wyświetla zainstalowane zestawy SDK platformy .NET Core.
 
 Definiuje zachowanie, gdy wymagana architektura udostępniona jest niedostępna. `N` może być:
 
-- `0`-Wyłącz parzystą wersję pomocniczą do przodu.
-- `1`— Przewinięcie do wersji pomocniczej, ale nie w wersji głównej. Jest to zachowanie domyślne.
-- `2`— Przewinięcie do przodu w wersjach pomocniczych i głównych.
+- `0` — Wyłącz nawet dodatkową wersję pomocniczą.
+- `1` — przewinięcie do wersji pomocniczej, ale nie w wersji głównej. Jest to zachowanie domyślne.
+- `2` — przewinięcie w przód do wersji pomocniczych i głównych.
 
  Aby uzyskać więcej informacji, zobacz [przewinięcie do przodu](../whats-new/dotnet-core-2-1.md#roll-forward).
 
@@ -107,11 +107,11 @@ Definiuje zachowanie, gdy wymagana architektura udostępniona jest niedostępna.
 
 Ścieżka do pliku *runtimeconfig. JSON* .
 
-Plik *runtimeconfig. JSON* to plik konfiguracji zawierający ustawienia konfiguracji środowiska uruchomieniowego. Aby uzyskać więcej informacji, zobacz [pliki konfiguracji środowiska uruchomieniowego](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) w serwisie GitHub.
+Plik *runtimeconfig. JSON* to plik konfiguracji zawierający ustawienia czasu wykonywania. Aby uzyskać więcej informacji, zobacz [Ustawienia konfiguracji środowiska uruchomieniowego .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
-Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]` Nieobsługiwane w każdym poleceniu; Aby określić, czy ta opcja jest dostępna, zobacz określoną stronę poleceń.
+Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`. Nieobsługiwane w każdym poleceniu; Aby określić, czy ta opcja jest dostępna, zobacz określoną stronę poleceń.
 
 `--version`
 
@@ -143,7 +143,7 @@ Wersja środowiska uruchomieniowego platformy .NET Core do użycia w celu urucho
 
 `-h|--help`
 
-Drukuje dokumentację dla danego polecenia, na przykład `dotnet build --help`. `dotnet --help`Drukuje listę dostępnych poleceń.
+Drukuje dokumentację dla danego polecenia, taką jak `dotnet build --help`. `dotnet --help` drukuje listę dostępnych poleceń.
 
 `--info`
 
@@ -151,17 +151,17 @@ Drukuje szczegółowe informacje na temat instalacji programu .NET Core i środo
 
 `--roll-forward-on-no-candidate-fx`
 
- Wyłącza dodatkową wersję do przodu, jeśli jest ustawiona `0`na. Aby uzyskać więcej informacji, zobacz [przewinięcie do przodu](../whats-new/dotnet-core-2-1.md#roll-forward).
+ Wyłącza opcję wycofywania wersji pomocniczej, jeśli jest ustawiona na `0`. Aby uzyskać więcej informacji, zobacz [przewinięcie do przodu](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 `--runtimeconfig`
 
 Ścieżka do pliku *runtimeconfig. JSON* .
 
-Plik *runtimeconfig. JSON* to plik konfiguracji zawierający ustawienia konfiguracji środowiska uruchomieniowego. Aby uzyskać więcej informacji, zobacz [pliki konfiguracji środowiska uruchomieniowego w serwisie GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
+Plik *runtimeconfig. JSON* to plik konfiguracji zawierający ustawienia czasu wykonywania. Aby uzyskać więcej informacji, zobacz [Ustawienia konfiguracji środowiska uruchomieniowego .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
-Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]` Nieobsługiwane w każdym poleceniu; Aby określić, czy ta opcja jest dostępna, zobacz określoną stronę poleceń.
+Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`. Nieobsługiwane w każdym poleceniu; Aby określić, czy ta opcja jest dostępna, zobacz określoną stronę poleceń.
 
 `--version`
 
@@ -189,7 +189,7 @@ Wersja środowiska uruchomieniowego platformy .NET Core do użycia w celu urucho
 
 `-h|--help`
 
-Drukuje dokumentację dla danego polecenia, na przykład `dotnet build --help`. `dotnet --help`Drukuje listę dostępnych poleceń.
+Drukuje dokumentację dla danego polecenia, taką jak `dotnet build --help`. `dotnet --help` drukuje listę dostępnych poleceń.
 
 `--info`
 
@@ -199,11 +199,11 @@ Drukuje szczegółowe informacje na temat instalacji programu .NET Core i środo
 
 Ścieżka do pliku *runtimeconfig. JSON* .
 
-Plik *runtimeconfig. JSON* to plik konfiguracji zawierający ustawienia konfiguracji środowiska uruchomieniowego. Aby uzyskać więcej informacji, zobacz [pliki konfiguracji środowiska uruchomieniowego w serwisie GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
+Plik *runtimeconfig. JSON* to plik konfiguracji zawierający ustawienia czasu wykonywania. Aby uzyskać więcej informacji, zobacz [Ustawienia konfiguracji środowiska uruchomieniowego .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
-Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]` Nieobsługiwane w każdym poleceniu; Aby określić, czy ta opcja jest dostępna, zobacz określoną stronę poleceń.
+Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`. Nieobsługiwane w każdym poleceniu; Aby określić, czy ta opcja jest dostępna, zobacz określoną stronę poleceń.
 
 `--version`
 
@@ -306,7 +306,7 @@ Polecenie | Funkcja
 
 ### <a name="additional-tools"></a>Dodatkowe narzędzia
 
-Począwszy od zestaw .NET Core SDK 2.1.300, wiele narzędzi, które były dostępne tylko dla każdego projektu, przy użyciu `DotnetCliToolReference` , jest teraz dostępne jako część zestaw .NET Core SDK. Te narzędzia są wymienione w poniższej tabeli:
+Począwszy od zestaw .NET Core SDK 2.1.300, wiele narzędzi, które były dostępne tylko dla poszczególnych projektów, przy użyciu `DotnetCliToolReference`, są teraz dostępne jako część zestaw .NET Core SDK. Te narzędzia są wymienione w poniższej tabeli:
 
 | Narzędzie                                              | Funkcja                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
@@ -316,7 +316,7 @@ Począwszy od zestaw .NET Core SDK 2.1.300, wiele narzędzi, które były dostę
 | [wpisy tajne użytkownika](/aspnet/core/security/app-secrets) | Zarządza kluczami tajnymi użytkowników deweloperskich.                            |
 | [Obejrzyj](/aspnet/core/tutorials/dotnet-watch)      | Uruchamia obserwatora plików, który uruchamia polecenie, gdy pliki zmienią się. |
 
-Aby uzyskać więcej informacji na temat każdego narzędzia `dotnet <tool-name> --help`, wpisz.
+Aby uzyskać więcej informacji na temat każdego narzędzia, wpisz `dotnet <tool-name> --help`.
 
 ## <a name="examples"></a>Przykłady
 
@@ -334,7 +334,7 @@ Kompiluj projekt i jego zależności w danym katalogu:
 
 `dotnet build`
 
-Uruchom bibliotekę DLL aplikacji, na `myapp.dll`przykład:
+Uruchom bibliotekę DLL aplikacji, taką jak `myapp.dll`:
 
 `dotnet myapp.dll`
 
@@ -344,7 +344,7 @@ Uruchom bibliotekę DLL aplikacji, na `myapp.dll`przykład:
 
 `DOTNET_PACKAGES`
 
-Folder pakiety globalne. Jeśli nie jest ustawiona, zostanie ona `~/.nuget/packages` domyślnie włączona w `%userprofile%\.nuget\packages` systemie UNIX lub w systemie Windows.
+Folder pakiety globalne. Jeśli nie zostanie ustawiona, domyślnie jest `~/.nuget/packages` w systemie UNIX lub `%userprofile%\.nuget\packages` na komputerze z systemem Windows.
 
 `DOTNET_SERVICING`
 
@@ -352,21 +352,21 @@ Określa lokalizację indeksu obsługi, który ma być używany przez host udost
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-Określa, czy dane dotyczące użycia narzędzi .NET Core są zbierane i wysyłane do firmy Microsoft. Ustaw, `true` aby zrezygnować z funkcji telemetrii (wartości `true`, `1`lub `yes` zaakceptować). W przeciwnym razie ustaw `false` opcję, aby można było wybrać funkcje telemetrii ( `no` wartości `false`, `0`lub zaakceptowane). Jeśli nie zostanie ustawiona, wartość domyślna `false` to i aktywna funkcja telemetrii.
+Określa, czy dane dotyczące użycia narzędzi .NET Core są zbierane i wysyłane do firmy Microsoft. Ustaw `true`, aby zrezygnować z funkcji telemetrii (wartości `true`, `1`lub `yes` zaakceptowane). W przeciwnym razie ustaw wartość `false`, aby zrezygnować z funkcji telemetrii (wartości `false`, `0`lub `no` zaakceptowane). Jeśli nie zostanie ustawiona, wartość domyślna to `false` i aktywna jest funkcja telemetrii.
 
 `DOTNET_MULTILEVEL_LOOKUP`
 
-Określa, czy środowisko uruchomieniowe programu .NET Core, udostępnione środowisko lub zestaw SDK są rozpoznawane z lokalizacji globalnej. Jeśli nie zostanie ustawiona, domyślnie `true`jest to. Ustawiona na `false` wartość nie jest rozpoznawana z lokalizacji globalnej i ma wyizolowane instalacje .NET `0` Core `false` (wartości lub są akceptowane). Aby uzyskać więcej informacji o wyszukiwaniu wielu poziomów, zobacz [SharedFX wyszukiwanie na wielu poziomach](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+Określa, czy środowisko uruchomieniowe programu .NET Core, udostępnione środowisko lub zestaw SDK są rozpoznawane z lokalizacji globalnej. Jeśli nie zostanie ustawiona, domyślnie `true`. Ustaw `false`, aby nie rozwiązany z lokalizacji globalnej i mieć izolowane instalacje platformy .NET Core (wartości `0` lub `false` są akceptowane). Aby uzyskać więcej informacji o wyszukiwaniu wielu poziomów, zobacz [SharedFX wyszukiwanie na wielu poziomach](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
 
-Wyłącza dodatkową wersję do przodu, jeśli jest ustawiona `0`na. Aby uzyskać więcej informacji, zobacz [przewinięcie do przodu](../whats-new/dotnet-core-2-1.md#roll-forward).
+Wyłącza opcję wycofywania wersji pomocniczej, jeśli jest ustawiona na `0`. Aby uzyskać więcej informacji, zobacz [przewinięcie do przodu](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `DOTNET_PACKAGES`
 
-Podstawowa pamięć podręczna pakietu. Jeśli nie jest ustawiona, zostanie ona `$HOME/.nuget/packages` domyślnie włączona w `%userprofile%\.nuget\packages` systemie UNIX lub w systemie Windows.
+Podstawowa pamięć podręczna pakietu. Jeśli nie zostanie ustawiona, domyślnie jest `$HOME/.nuget/packages` w systemie UNIX lub `%userprofile%\.nuget\packages` na komputerze z systemem Windows.
 
 `DOTNET_SERVICING`
 
@@ -374,17 +374,17 @@ Określa lokalizację indeksu obsługi, który ma być używany przez host udost
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-Określa, czy dane dotyczące użycia narzędzi .NET Core są zbierane i wysyłane do firmy Microsoft. Ustaw, `true` aby zrezygnować z funkcji telemetrii (wartości `true`, `1`lub `yes` zaakceptować). W przeciwnym razie ustaw `false` opcję, aby można było wybrać funkcje telemetrii ( `no` wartości `false`, `0`lub zaakceptowane). Jeśli nie zostanie ustawiona, wartość domyślna `false` to i aktywna funkcja telemetrii.
+Określa, czy dane dotyczące użycia narzędzi .NET Core są zbierane i wysyłane do firmy Microsoft. Ustaw `true`, aby zrezygnować z funkcji telemetrii (wartości `true`, `1`lub `yes` zaakceptowane). W przeciwnym razie ustaw wartość `false`, aby zrezygnować z funkcji telemetrii (wartości `false`, `0`lub `no` zaakceptowane). Jeśli nie zostanie ustawiona, wartość domyślna to `false` i aktywna jest funkcja telemetrii.
 
 `DOTNET_MULTILEVEL_LOOKUP`
 
-Określa, czy środowisko uruchomieniowe programu .NET Core, udostępnione środowisko lub zestaw SDK są rozpoznawane z lokalizacji globalnej. Jeśli nie zostanie ustawiona, domyślnie `true`jest to. Ustawiona na `false` wartość nie jest rozpoznawana z lokalizacji globalnej i ma wyizolowane instalacje .NET `0` Core `false` (wartości lub są akceptowane). Aby uzyskać więcej informacji o wyszukiwaniu wielu poziomów, zobacz [SharedFX wyszukiwanie na wielu poziomach](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+Określa, czy środowisko uruchomieniowe programu .NET Core, udostępnione środowisko lub zestaw SDK są rozpoznawane z lokalizacji globalnej. Jeśli nie zostanie ustawiona, domyślnie `true`. Ustaw `false`, aby nie rozwiązany z lokalizacji globalnej i mieć izolowane instalacje platformy .NET Core (wartości `0` lub `false` są akceptowane). Aby uzyskać więcej informacji o wyszukiwaniu wielu poziomów, zobacz [SharedFX wyszukiwanie na wielu poziomach](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `DOTNET_PACKAGES`
 
-Podstawowa pamięć podręczna pakietu. Jeśli nie jest ustawiona, zostanie ona `$HOME/.nuget/packages` domyślnie włączona w `%userprofile%\.nuget\packages` systemie UNIX lub w systemie Windows.
+Podstawowa pamięć podręczna pakietu. Jeśli nie zostanie ustawiona, domyślnie jest `$HOME/.nuget/packages` w systemie UNIX lub `%userprofile%\.nuget\packages` na komputerze z systemem Windows.
 
 `DOTNET_SERVICING`
 
@@ -392,10 +392,11 @@ Określa lokalizację indeksu obsługi, który ma być używany przez host udost
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-Określa, czy dane dotyczące użycia narzędzi .NET Core są zbierane i wysyłane do firmy Microsoft. Ustaw, `true` aby zrezygnować z funkcji telemetrii (wartości `true`, `1`lub `yes` zaakceptować). W przeciwnym razie ustaw `false` opcję, aby można było wybrać funkcje telemetrii ( `no` wartości `false`, `0`lub zaakceptowane). Jeśli nie zostanie ustawiona, wartość domyślna `false` to i aktywna funkcja telemetrii.
+Określa, czy dane dotyczące użycia narzędzi .NET Core są zbierane i wysyłane do firmy Microsoft. Ustaw `true`, aby zrezygnować z funkcji telemetrii (wartości `true`, `1`lub `yes` zaakceptowane). W przeciwnym razie ustaw wartość `false`, aby zrezygnować z funkcji telemetrii (wartości `false`, `0`lub `no` zaakceptowane). Jeśli nie zostanie ustawiona, wartość domyślna to `false` i aktywna jest funkcja telemetrii.
 
 ---
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Pliki konfiguracji środowiska uruchomieniowego](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [Ustawienia konfiguracji środowiska uruchomieniowego .NET Core](../run-time-config/index.md)

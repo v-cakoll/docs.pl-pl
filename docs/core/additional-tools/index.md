@@ -4,12 +4,12 @@ description: Omówienie dodatkowych narzędzi, które można zainstalować, któ
 author: mlacouture
 ms.date: 12/02/2019
 ms.custom: mvc
-ms.openlocfilehash: 1f066523a24d4e1fd7aaaa5a19e8d6c9d72d35af
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 853633f5ef159eee39ed1a8682372d4291a752f5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714532"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740710"
 ---
 # <a name="net-core-additional-tools-overview"></a>Dodatkowe narzędzia platformy .NET Core — Omówienie
 
@@ -17,7 +17,7 @@ Ta sekcja zawiera kompilację listy narzędzi, które obsługują i poszerzają 
 
 ## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[Narzędzie do dezinstalacji programu .NET Core](uninstall-tool.md)
 
-[Narzędzie do dezinstalacji programu .NET Core](https://dotnet.microsoft.com/download/dotnet-core/uninstall-tool) (`dotnet-core-uninstall`) umożliwia wyczyszczenie zestawów .NET Core i środowiska uruchomieniowego w systemie, tak aby były nadal tylko określone wersje. Dostępna jest kolekcja opcji, aby określić, które wersje zostały odinstalowane.
+[Narzędzie do dezinstalacji programu .NET Core](https://github.com/dotnet/cli-lab/releases) (`dotnet-core-uninstall`) umożliwia wyczyszczenie zestawów .NET Core i środowiska uruchomieniowego w systemie, tak aby były nadal tylko określone wersje. Dostępna jest kolekcja opcji, aby określić, które wersje zostały odinstalowane.
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[Narzędzie referencyjne usługi sieci Web WCF](wcf-web-service-reference-guide.md)
 

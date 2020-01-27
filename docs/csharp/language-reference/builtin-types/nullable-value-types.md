@@ -4,16 +4,16 @@ description: Dowiedz C# się więcej o typach wartości null i sposobach ich uż
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964314"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740950"
 ---
 # <a name="nullable-value-types-c-reference"></a>Typy wartości null (C# odwołanie)
 
-Typ wartości null `T?` reprezentuje wszystkie wartości jego bazowego [typu wartości](../keywords/value-types.md) `T` i dodatkową wartość [null](../keywords/null.md) . Na przykład można przypisać jedną z następujących trzech wartości do zmiennej `bool?`: `true`, `false`lub `null`. Podstawowy typ wartości `T` nie może być samym typem wartości null.
+Typ wartości null `T?` reprezentuje wszystkie wartości jego bazowego [typu wartości](value-types.md) `T` i dodatkową wartość [null](../keywords/null.md) . Na przykład można przypisać jedną z następujących trzech wartości do zmiennej `bool?`: `true`, `false`lub `null`. Podstawowy typ wartości `T` nie może być samym typem wartości null.
 
 > [!NOTE]
 > C#8,0 wprowadza funkcję typów odwołań do wartości null. Aby uzyskać więcej informacji, zobacz [typy referencyjne dopuszczające wartość null](../../nullable-references.md). Typy wartości null są dostępne od C# 2.

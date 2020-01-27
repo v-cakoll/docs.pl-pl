@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: ustalenie, kiedy zmieniono atrybuty formatowania w kontrolce RichTextBox formularzy systemu Windows'
+title: Ustalanie, kiedy atrybuty formatowania zmieniają się w kontrolce RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: a90affde9de36f1c83d5b7c21b40580cdf53402e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9b2a1028f79059ec7d4d6bf3683100455bb5dea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972292"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746034"
 ---
-# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Instrukcje: ustalenie, kiedy zmieniono atrybuty formatowania w kontrolce RichTextBox formularzy systemu Windows
-Typowym zastosowaniem formularzy Windows Forms <xref:System.Windows.Forms.RichTextBox> kontroli jest formatowanie tekstu za pomocą atrybutów, takich jak opcje czcionki lub style. Twoja aplikacja może potrzebować śledzić wszystkie zmiany wprowadzone w tekst na potrzeby wyświetlania paska narzędzi, tak jak w wielu aplikacjach edytora tekstów.  
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Porady: ustalenie, kiedy zmieniono atrybuty formatowania w formancie RichTextBox formularzy systemu Windows
+Typowym zastosowaniem kontrolki <xref:System.Windows.Forms.RichTextBox> Windows Forms jest formatowanie tekstu z atrybutami, takimi jak opcje czcionki lub Style akapitu. Aplikacja może wymagać śledzenia wszelkich zmian w formatowaniu tekstu na potrzeby wyświetlania paska narzędzi, jak w wielu aplikacjach do przetwarzania tekstu.  
   
-### <a name="to-respond-to-changes-in-formatting-attributes"></a>Aby odpowiadanie na zmiany w formatowaniu atrybutów  
+### <a name="to-respond-to-changes-in-formatting-attributes"></a>Aby odpowiedzieć na zmiany atrybutów formatowania  
   
-1. Pisanie kodu w <xref:System.Windows.Forms.RichTextBox.SelectionChanged> programu obsługi zdarzeń, aby wykonać odpowiednią akcję, zależnie od wartości atrybutu. Poniższy przykład umożliwia zmianę wyglądu przycisku paska narzędzi w zależności od wartości <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> właściwości. Przycisk paska narzędzi będą aktualizowane po przeniesieniu punktu wstawiania w formancie.  
+1. Napisz kod w programie obsługi zdarzeń <xref:System.Windows.Forms.RichTextBox.SelectionChanged>, aby wykonać odpowiednią akcję w zależności od wartości atrybutu. Poniższy przykład zmienia wygląd przycisku paska narzędzi w zależności od wartości właściwości <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>. Przycisk paska narzędzi zostanie zaktualizowany tylko wtedy, gdy punkt wstawiania zostanie przeniesiony do kontrolki.  
   
-     W poniższym przykładzie przyjęto założenie, formularz z <xref:System.Windows.Forms.RichTextBox> kontroli i <xref:System.Windows.Forms.ToolBar> kontrolki, która zawiera przycisk paska narzędzi. Aby uzyskać więcej informacji na temat pasków narzędzi i przyciski paska narzędzi, zobacz [jak: Dodawanie przycisków do formantu ToolBar](how-to-add-buttons-to-a-toolbar-control.md).  
+     W poniższym przykładzie przyjęto, że formularz z kontrolką <xref:System.Windows.Forms.RichTextBox> i formantem <xref:System.Windows.Forms.ToolBar> zawierającym przycisk paska narzędzi. Aby uzyskać więcej informacji o paskach narzędzi i przyciskach paska narzędzi, zobacz [jak: dodać przyciski do kontrolki paska narzędzi](how-to-add-buttons-to-a-toolbar-control.md).  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  

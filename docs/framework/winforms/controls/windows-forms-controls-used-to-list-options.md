@@ -1,58 +1,58 @@
 ---
-title: Formanty formularzy systemu Windows używane do obsługi opcji list
+title: Kontrolki używane do wyświetlania listy opcji
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, listing options
 - option lists in Windows Forms
 ms.assetid: 5bc064c7-bc1f-4b62-8f4b-252f864b118e
-ms.openlocfilehash: 92d5f330fbd5269e15bf52dc11ad998939aa18e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52e8f2fcae3cbb4dae495cad3b29b647732ad5b7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009074"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742354"
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>Formanty formularzy systemu Windows używane do obsługi opcji list
-Można dodać różne formanty do formularza Windows, jeśli chcesz zapewnić użytkownikom listę opcji do wyboru. Zależności od tego, ile chcesz ograniczyć użytkowników do wprowadzania, można dodać <xref:System.Windows.Forms.ListBox> kontroli <xref:System.Windows.Forms.ComboBox> kontroli, lub <xref:System.Windows.Forms.CheckedListBox> kontroli. Użyj następujących linków, aby określić, które określają, które najlepiej odpowiada Twoim potrzebom.  
+Możesz dodać różne kontrolki do formularza systemu Windows, jeśli chcesz udostępnić użytkownikom listę opcji do wyboru. W zależności od ilości danych wejściowych użytkowników można dodać kontrolkę <xref:System.Windows.Forms.ListBox>, kontrolkę <xref:System.Windows.Forms.ComboBox> lub kontrolkę <xref:System.Windows.Forms.CheckedListBox>. Skorzystaj z poniższych linków, aby określić, która kontrola najlepiej odpowiada Twoim potrzebom.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Kiedy należy używać kontrolki ComboBox formularzy Windows Forms zamiast ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
- Zaleca się właściwej kontroli oparte na liście, w zależności od potrzeb i ograniczenia formularza Windows.  
+ Zaleca odpowiednią kontrolę opartą na listach w zależności od potrzeb i ograniczeń w formularzu systemu Windows.  
   
- [Instrukcje: Uzyskiwanie dostępu do określonych elementów w Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
- Zawiera instrukcje dotyczące programowe Określanie, który element na liście pojawi się w określonej pozycji.  
+ [Instrukcje: uzyskiwanie dostępu do określonych elementów w kontrolkach ComboBox, ListBox lub CheckedListBox formularzy Windows Forms](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
+ Zwraca instrukcje dotyczące programistycznego określania, który element na liście pojawia się w danym położeniu.  
   
- [Instrukcje: Dodawanie i usuwanie elementów z Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka](add-and-remove-items-from-a-wf-combobox.md)  
- Zapewnia instrukcje dotyczące dodawania i usuwania elementów z kontrolki listy elementów.  
+ [Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ComboBox, ListBox lub CheckedListBox formularzy Windows Forms](add-and-remove-items-from-a-wf-combobox.md)  
+ Zawiera instrukcje dotyczące dodawania lub usuwania elementów z listy elementów formantu.  
   
- [Instrukcje: Tworzenie tabeli wyszukiwania dla Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka](create-a-lookup-table-for-a-wf-combobox-listbox.md)  
- Zapewnia wskazówki, wyświetlanie i przechowywanie danych formularza w formatach przydatne.  
+ [Instrukcje: tworzenie tabeli wyszukiwania dla kontrolek ComboBox, ListBox i CheckedListBox formularzy Windows Forms](create-a-lookup-table-for-a-wf-combobox-listbox.md)  
+ Oferuje instrukcje dotyczące wyświetlania i przechowywania danych formularza w przydatnych formatach.  
   
- [Instrukcje: Powiąż Windows Forms kontrolki ComboBox lub ListBox z danymi](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
- Zawiera wskazówki dotyczące powiązania kontrolki oparte na liście ze źródłem danych.  
+ [Instrukcje: wiązanie kontrolki ComboBox lub ListBox (Windows Forms) z danymi](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
+ Zawiera wskazówki dotyczące wiązania kontrolki opartej na listach ze źródłem danych.  
   
- [Instrukcje: Sortowanie zawartości Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
- Wyjaśnia, jak mają być sortowane dane listy w ich źródle danych.  
+ [Instrukcje: sortowanie zawartości kontrolki ComboBox, ListBox lub CheckedListBox formularzy Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ Wyjaśnia, jak sortować dane listy w źródle danych.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.CheckedListBox>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
  <xref:System.Windows.Forms.ComboBox>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
  <xref:System.Windows.Forms.ListBox>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [CheckedListBox, kontrolka — omówienie](checkedlistbox-control-overview-windows-forms.md)  
- Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
+ Wyjaśnia, czym jest ta kontrolka i jej najważniejsze funkcje i właściwości.  
   
  [ComboBox, kontrolka — omówienie](combobox-control-overview-windows-forms.md)  
- Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
+ Wyjaśnia, czym jest ta kontrolka i jej najważniejsze funkcje i właściwości.  
   
  [ListBox, kontrolka — omówienie](listbox-control-overview-windows-forms.md)  
- Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
+ Wyjaśnia, czym jest ta kontrolka i jej najważniejsze funkcje i właściwości.  
   
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.
+ Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.

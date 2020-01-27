@@ -1,22 +1,22 @@
 ---
-title: Skróty klawiaturowe dla formantu DataGrid formularzy systemu Windows
+title: Skróty klawiaturowe dla kontrolki DataGrid
 ms.date: 03/30/2017
 helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: 6b4d566d377a3cda73bf8422caa798134d356f63
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6693531b8d0e820a68d75bf5da40f4169fd244f2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962568"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745039"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Skróty klawiaturowe dla formantu DataGrid formularzy systemu Windows
 > [!NOTE]
-> Formant zastępuje i dodaje funkcję <xref:System.Windows.Forms.DataGrid> do <xref:System.Windows.Forms.DataGrid> kontrolki; jednak kontrolka jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości, jeśli wybierzesz opcję. <xref:System.Windows.Forms.DataGridView> Aby uzyskać więcej informacji, zobacz [różnice między kontrolkami DataGridView i DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Formant <xref:System.Windows.Forms.DataGridView> zamienia i dodaje funkcje do kontrolki <xref:System.Windows.Forms.DataGrid>; Niemniej jednak kontrolka <xref:System.Windows.Forms.DataGrid> jest zachowywana na potrzeby zgodności z poprzednimi wersjami i w przyszłości. Aby uzyskać więcej informacji, zobacz [różnice między kontrolkami DataGridView i DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- W poniższej tabeli przedstawiono skróty klawiaturowe, które mogą być używane do nawigacji w kontrolce Windows Forms <xref:System.Windows.Forms.DataGrid> :  
+ W poniższej tabeli przedstawiono skróty klawiaturowe, które mogą być używane do nawigacji w kontrolce <xref:System.Windows.Forms.DataGrid> Windows Forms:  
   
 |Akcja|Skrót|  
 |------------|--------------|  
@@ -47,8 +47,8 @@ ms.locfileid: "69962568"
 |Ukryj wiersz nadrzędny w tabeli podrzędnej.|CTRL + PAGE UP|  
 |Rozciągnij zaznaczenie w dół o jeden ekran (z wyjątkiem linków tabeli podrzędnej).|SHIFT + PAGE W DÓŁ|  
 |Rozciągnij zaznaczenie w górę o jeden ekran (z wyłączeniem linków tabeli podrzędnej).|SHIFT + PAGE UP|  
-|Wywołaj <xref:System.Windows.Forms.DataGrid.EndEdit%2A> metodę dla bieżącego wiersza.|CTRL+ENTER|  
-|<xref:System.DBNull.Value?displayProperty=nameWithType> Wprowadź wartość do komórki w trybie edycji.|CTRL+0|  
+|Wywołaj metodę <xref:System.Windows.Forms.DataGrid.EndEdit%2A> dla bieżącego wiersza.|CTRL+ENTER|  
+|Wprowadź wartość <xref:System.DBNull.Value?displayProperty=nameWithType> w komórce w trybie edycji.|CTRL+0|  
   
 ## <a name="see-also"></a>Zobacz także
 

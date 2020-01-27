@@ -1,43 +1,43 @@
 ---
-title: 'Instrukcje: wyświetlanie pasków przewijania w komórkach kontrolki RichTextBox formularzy systemu Windows'
+title: Wyświetlanie pasków przewijania w kontrolce RichTextBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes [Windows Forms], displaying scroll bars
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-ms.openlocfilehash: 152706cee511e4bca1dd324a652e8077b1f8548a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2185b572ef20765043d3df3dbfd8bf5b21cfac28
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650482"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745563"
 ---
-# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Instrukcje: wyświetlanie pasków przewijania w komórkach kontrolki RichTextBox formularzy systemu Windows
-Domyślnie w formularzach Windows <xref:System.Windows.Forms.RichTextBox> kontrolka Wyświetla poziome i pionowe paski przewijania, zgodnie z potrzebami. Istnieje siedem możliwych wartości dla <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> właściwość <xref:System.Windows.Forms.RichTextBox> kontrolki, które są opisane w poniższej tabeli.  
+# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Porady: wyświetlanie pasków przewijania w komórkach formantu RichTextBox formularzy systemu Windows
+Domyślnie formant Windows Forms <xref:System.Windows.Forms.RichTextBox> Wyświetla poziomy i pionowy pasek przewijania odpowiednio do potrzeb. Istnieje siedem możliwych wartości właściwości <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> kontrolki <xref:System.Windows.Forms.RichTextBox>, które opisano w poniższej tabeli.  
   
-### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>Wyświetlanie pasków przewijania w formancie RichTextBox  
+### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>Aby wyświetlić paski przewijania w kontrolce RichTextBox  
   
-1. Ustaw <xref:System.Windows.Forms.RichTextBox.Multiline%2A> właściwość `true`. Nie typu paska, w tym przewijania poziomo, zostaną wyświetlone, jeśli <xref:System.Windows.Forms.RichTextBox.Multiline%2A> właściwość jest ustawiona na `false`.  
+1. Ustaw <xref:System.Windows.Forms.RichTextBox.Multiline%2A> właściwość `true`. Jeśli właściwość <xref:System.Windows.Forms.RichTextBox.Multiline%2A> jest ustawiona na `false`, nie ma żadnego typu paska przewijania, w tym w poziomie.  
   
-2. Ustaw <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> właściwość do odpowiedniej wartości <xref:System.Windows.Forms.RichTextBoxScrollBars> wyliczenia.  
-  
-    |Wartość|Opis|  
-    |-----------|-----------------|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (ustawienie domyślne)|Wyświetla poziomy lub pionowy pasek przewijania i/lub tylko wtedy, gdy tekst przekracza szerokość i długość kontrolki.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|Nigdy nie wyświetla dowolnego typu paska przewijania.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|Wyświetla przewijania poziomego paska tylko wtedy, gdy tekst przekracza szerokość formantu. (W tym celu, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> właściwość musi być równa `false`.)|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|Wyświetla przewijania pionowego paska tylko wtedy, gdy tekst przekracza wysokość formantu.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedHorizontal>|Wyświetla paska podczas przewijania w poziomie <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> właściwość jest ustawiona na `false`. Pasek przewijania jest wyszarzony, gdy tekst nie przekracza szerokość formantu.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical>|Zawsze wyświetla pionowy pasek przewijania. Pasek przewijania jest wyszarzony, gdy tekst nie przekracza długość kontrolki.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth>|Zawsze wyświetla pionowy pasek przewijania. Wyświetla paska podczas przewijania w poziomie <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> właściwość jest ustawiona na `false`. Paski przewijania są wyświetlane wygaszone, gdy tekst nie przekracza szerokość i długość kontrolki.|  
-  
-3. Ustaw <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> właściwość do odpowiedniej wartości.  
+2. Ustaw właściwość <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> na odpowiednią wartość wyliczenia <xref:System.Windows.Forms.RichTextBoxScrollBars>.  
   
     |Wartość|Opis|  
     |-----------|-----------------|  
-    |`false`|Tekst w kontrolce nie jest automatycznie dopasowana do szerokość kontrolki, dzięki czemu będzie ona przewiń w prawo aż do osiągnięcia końca wiersza. Użyj tej wartości w przypadku wybrania poziomych pasków przewijania i/lub powyżej.|  
-    |`true` (ustawienie domyślne)|Tekst w kontrolce zostanie automatycznie dopasowana do szerokość formantu. Poziomy pasek przewijania nie będzie widoczna. Użyj tej wartości, jeśli została wybrana opcja pionowe paski przewijania lub Brak, powyżej, aby wyświetlić jeden lub więcej akapitów.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (wartość domyślna)|Wyświetla poziomy lub pionowy pasek przewijania lub oba, tylko wtedy, gdy tekst przekracza szerokość lub długość kontrolki.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|Nigdy nie wyświetla żadnego typu paska przewijania.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|Wyświetla poziomy pasek przewijania tylko wtedy, gdy tekst przekracza szerokość kontrolki. (W takim przypadku Właściwość <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> musi być ustawiona na `false`.)|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|Wyświetla pionowy pasek przewijania tylko wtedy, gdy tekst przekracza wysokość kontrolki.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedHorizontal>|Wyświetla poziomy pasek przewijania, gdy właściwość <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> jest ustawiona na `false`. Pasek przewijania jest wyszarzony, gdy tekst nie przekracza szerokości kontrolki.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical>|Zawsze wyświetla pionowy pasek przewijania. Pasek przewijania jest wyszarzony, gdy tekst nie przekracza długości kontrolki.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth>|Zawsze wyświetla pionowy pasek przewijania. Wyświetla poziomy pasek przewijania, gdy właściwość <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> jest ustawiona na `false`. Paski przewijania są wyświetlane jako wygaszone, gdy tekst nie przekracza szerokości lub długości kontrolki.|  
+  
+3. Ustaw właściwość <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> na odpowiednią wartość.  
+  
+    |Wartość|Opis|  
+    |-----------|-----------------|  
+    |`false`|Tekst w kontrolce nie jest automatycznie dostosowywany, aby dopasować szerokość kontrolki, aby przewinąć ją w prawo do momentu osiągnięcia końca wiersza. Użyj tej wartości, jeśli wybrano poziome paski przewijania lub oba powyższe elementy.|  
+    |`true` (wartość domyślna)|Tekst w kontrolce jest automatycznie dopasowywany do szerokości kontrolki. Poziomy pasek przewijania nie zostanie wyświetlony. Użyj tej wartości, jeśli wybrano opcję paski przewijania w pionie lub brak, powyżej, aby wyświetlić jeden lub więcej akapitów.|  
   
 ## <a name="see-also"></a>Zobacz także
 

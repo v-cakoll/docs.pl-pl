@@ -2,12 +2,12 @@
 title: Przechowywanie wersji i biblioteki .NET
 description: Zalecenia dotyczące zgodności z wersjami bibliotek platformy .NET.
 ms.date: 12/10/2018
-ms.openlocfilehash: 8ed3217e39b1fe0f330a650ec72cda224866e207
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a274410714791e2790da0e3deb2a595390ee9389
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706416"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745031"
 ---
 # <a name="versioning"></a>Przechowywanie wersji
 
@@ -29,15 +29,15 @@ Biblioteka .NET ma wiele sposobów na określenie wersji. Te wersje są najważn
 <PackageVersion>1.0.0-alpha1</PackageVersion>
 ```
 
-Identyfikator pakietu NuGet połączony z wersją pakietu NuGet jest używany do identyfikowania pakietu w pakiecie NuGet. Przykładowy adres URL to `Newtonsoft.Json` + `11.0.2`. Pakiet z sufiksem jest pakietem wersji wstępnej i ma specjalne zachowanie, które sprawia, że jest idealnym rozwiązaniem do testowania. Aby uzyskać więcej informacji, zobacz [pakiety wersji wstępnej](./nuget.md#pre-release-packages).
+Identyfikator pakietu NuGet połączony z wersją pakietu NuGet jest używany do identyfikowania pakietu w pakiecie NuGet. Na przykład `Newtonsoft.Json` + `11.0.2`. Pakiet z sufiksem jest pakietem wersji wstępnej i ma specjalne zachowanie, które sprawia, że jest idealnym rozwiązaniem do testowania. Aby uzyskać więcej informacji, zobacz [pakiety wersji wstępnej](./nuget.md#pre-release-packages).
 
 Ponieważ wersja pakietu NuGet jest najbardziej widoczną wersją dla deweloperów, dobrym pomysłem jest zaktualizowanie go przy użyciu [wersji semantycznej (SemVer)](https://semver.org/). SemVer wskazuje istotność zmian między wydaniem i pomaga deweloperom podejmować świadome decyzje podczas wybierania używanej wersji. Na przykład przechodzenie z `1.0` do `2.0` wskazuje, że istnieją potencjalne zmiany.
 
-**✔️ rozważyć** użycie programu [SemVer 2.0.0](https://semver.org/) w celu uzyskania wersji pakietu NuGet.
+✔️ ROZWAŻYĆ użycie programu [SemVer 2.0.0](https://semver.org/) w celu uzyskania wersji pakietu NuGet.
 
-**✔️** używać wersji pakietu NuGet w publicznej dokumentacji, ponieważ jest to numer wersji, który użytkownicy często zobaczą.
+✔️ używać wersji pakietu NuGet w publicznej dokumentacji, ponieważ jest to numer wersji, który użytkownicy często zobaczą.
 
-**✔️** uwzględnić sufiks wstępnej wersji podczas zwalniania niestabilnego pakietu.
+✔️ uwzględnić sufiks wstępnej wersji podczas zwalniania niestabilnego pakietu.
 
 > Użytkownicy muszą wyrazić zgodę na pobranie pakietów w wersji wstępnej, aby zrozumieć, że pakiet nie został ukończony.
 
@@ -53,15 +53,15 @@ Wersja zestawu jest używany przez środowisko CLR w czasie wykonywania, aby wyb
 
 Silne nazewnictwo połączone z wersją zestawu umożliwia [ścisłe ładowanie wersji zestawu](../assembly/versioning.md). Chociaż silne nazewnictwo biblioteki ma wiele korzyści, często są to wyjątki w czasie wykonywania, których nie można odnaleźć zestawu i [wymaga nawiązania powiązań](../../framework/configure-apps/redirect-assembly-versions.md) w `app.config`/`web.config` zostać naprawiony. Ładowanie zestawu .NET Core jest swobodne i program .NET Core CLR automatycznie ładuje zestawy w środowisku uruchomieniowym o wyższej wersji.
 
-**✔️ rozważyć** tylko wersję główną w AssemblyVersion.
+✔️ ROZWAŻYĆ tylko wersję główną w AssemblyVersion.
 
 > na przykład biblioteka 1,0 i Biblioteka 1.0.1 mają AssemblyVersion `1.0.0.0`, podczas gdy biblioteka 2,0 ma AssemblyVersion `2.0.0.0`. Gdy wersja zestawu zmienia się rzadziej, zmniejsza przekierowania powiązań.
 
-**✔️ rozważyć** utrzymywanie głównego numeru wersji AssemblyVersion i wersji pakietu NuGet w synchronizacji.
+✔️ ROZWAŻYĆ utrzymywanie głównego numeru wersji AssemblyVersion i wersji pakietu NuGet w synchronizacji.
 
 > AssemblyVersion jest dołączany do niektórych komunikatów informacyjnych wyświetlanych użytkownikowi, np. Nazwa zestawu i nazwy typów kwalifikowana zestawu w komunikatach o wyjątku. Utrzymywanie relacji między wersjami zapewnia deweloperom więcej informacji na temat używanej wersji.
 
-**❌ nie** ma stałej AssemblyVersion.
+❌ nie ma stałej AssemblyVersion.
 
 > Podczas gdy AssemblyVersion nie zmienia się potrzeba przekierowania powiązań, oznacza to, że tylko jedna wersja zestawu może być zainstalowana w globalnej pamięci podręcznej zestawów (GAC). Ponadto aplikacje odwołujące się do zestawu w pamięci podręcznej GAC zostaną przerwane, jeśli inna aplikacja zaktualizuje zestaw GAC przy użyciu istotnych zmian.
 
@@ -75,11 +75,11 @@ Wersja pliku zestawu jest używana do wyświetlania wersji pliku w systemie Wind
 
 ![Eksplorator Windows](./media/versioning/win-properties.png "Windows Explorer")
 
-**✔️ rozważyć** uwzględnienie numeru kompilacji ciągłej integracji jako poprawki AssemblyFileVersion.
+✔️ ROZWAŻYĆ uwzględnienie numeru kompilacji ciągłej integracji jako poprawki AssemblyFileVersion.
 
 > Załóżmy na przykład, że tworzysz wersję 1.0.0 projektu, a numer kompilacji ciągłej integracji to 99, a AssemblyFileVersion to 1.0.0.99.
 
-**✔️** użyj formatu `Major.Minor.Build.Revision` dla wersji pliku.
+✔️ Użyj formatu `Major.Minor.Build.Revision` dla wersji pliku.
 
 > Mimo że wersja pliku nigdy nie jest używana przez platformę .NET, [system Windows oczekuje, że wersja pliku](/windows/desktop/menurc/versioninfo-resource) będzie w formacie `Major.Minor.Build.Revision`. Ostrzeżenie jest zgłaszane, jeśli wersja nie jest zgodna z tym formatem.
 
@@ -94,7 +94,7 @@ Informacje o wersji zestawu są używane do rejestrowania dodatkowych informacji
 > [!NOTE]
 > Starsze wersje programu Visual Studio zgłaszają ostrzeżenie kompilacji, jeśli ta wersja nie jest zgodna z formatem `Major.Minor.Build.Revision`. Ostrzeżenie można bezpiecznie zignorować.
 
-**❌ nie należy** samodzielnie ustawić wersji informacyjnej zestawu.
+❌ nie należy samodzielnie ustawić wersji informacyjnej zestawu.
 
 > Zezwól programowi SourceLink na automatyczne generowanie wersji zawierającej metadane narzędzia NuGet i kontroli źródła.
 

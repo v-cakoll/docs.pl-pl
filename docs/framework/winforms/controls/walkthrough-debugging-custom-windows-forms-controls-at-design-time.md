@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: debugowanie niestandardowych formantów formularzy systemu Windows w czasie projektowania'
+title: Debuguj niestandardowe kontrolki w czasie projektowania
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a8572c1e70e36faf3a179de7a69e88e9cf1e781b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d9e292a1219c24571bcb35db2fe357b0197c8812
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460613"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740186"
 ---
 # <a name="walkthrough-debug-custom-windows-forms-controls-at-design-time"></a>Przewodnik: debugowanie niestandardowych kontrolek Windows Forms w czasie projektowania
 
@@ -47,7 +47,7 @@ W programie Visual Studio Utwórz projekt aplikacji systemu Windows, a następni
 
 4. Skompiluj rozwiązanie.
 
-## <a name="checkpoint"></a>Elementu
+## <a name="checkpoint"></a>Punkt kontrolny
 
 W tym momencie będzie można zobaczyć kontrolkę niestandardową w **przyborniku**.
 

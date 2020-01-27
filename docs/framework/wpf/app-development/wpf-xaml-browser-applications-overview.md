@@ -1,5 +1,5 @@
 ---
-title: Przegląd Aplikacje przeglądarek WPF XAML
+title: Omówienie aplikacji przeglądarki XAML
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: a4d3b808aee14d5d2f29053b0c60798f9f626e8c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: bec7e14ceed867e89c3117efbc245938356b9d78
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636331"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742280"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Przegląd Aplikacje przeglądarek WPF XAML
 <a name="introduction"></a>Aplikacje przeglądarki XAML (XBAP) łączą funkcje aplikacji sieci Web i aplikacji z rozbudowanymi aplikacjami klienckimi. Na przykład aplikacje sieci Web XBAP mogą być wdrażane na serwerze sieci Web i uruchamiane z przeglądarki Internet Explorer lub Firefox. Podobnie jak w przypadku aplikacji z rozbudowanymi aplikacjami klienckimi, aplikacje XBAP mogą korzystać z możliwości platformy WPF. Tworzenie aplikacji XBAP jest również podobne do rozbudowanych wdrożeń klientów. Ten temat zawiera proste, górne wprowadzenie do programowania aplikacji XBAP i opisuje, gdzie Programowanie aplikacji XBAP różni się od standardowego rozbudowanego środowiska programistycznego.
@@ -101,7 +101,7 @@ ms.locfileid: "75636331"
 
 1. W programie Visual Studio Otwórz właściwości projektu.
 
-2. Na **zabezpieczeń** kliknij pozycję **Zaawansowane**.
+2. Na karcie **zabezpieczenia** kliknij przycisk **Zaawansowane**.
 
      Zostanie wyświetlone okno dialogowe Zaawansowane ustawienia zabezpieczeń.
 

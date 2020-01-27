@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Włączanie zmiany kolejności elementów ToolStrip w czasie wykonywania w formularzach Windows Forms'
+title: 'Porady: włączenie zmiany kolejności elementów ToolStrip w czasie wykonywania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - toolbars [Windows Forms], rearranging controls
 - ToolStrip control [Windows Forms], reordering items
 ms.assetid: 8480b69a-379f-4dc2-8dcf-365ed93692b2
-ms.openlocfilehash: 46a5a70206e7620341a484912c7fada82d64747a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 44b52bf997819f090569d08eb395d8af18f61370
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609849"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745476"
 ---
-# <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a>Instrukcje: Włączanie zmiany kolejności elementów ToolStrip w czasie wykonywania w formularzach Windows Forms
-Można włączyć użytkownika do zmiany rozmieszczenia <xref:System.Windows.Forms.ToolStripItem> formantów na <xref:System.Windows.Forms.ToolStrip>.  
+# <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a>Porady: włączenie zmiany kolejności elementów ToolStrip w czasie wykonywania w formularzach systemu Windows
+Można umożliwić użytkownikowi zmianę rozmieszczenia formantów <xref:System.Windows.Forms.ToolStripItem> w <xref:System.Windows.Forms.ToolStrip>.  
   
-### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>Aby włączyć rozmieszczania ToolStripItem w czasie wykonywania  
+### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>Aby włączyć ponowne rozmieszczanie elementu ToolStripItem w czasie wykonywania  
   
 - Ustaw <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> właściwość `true`. Domyślnie <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> jest `false`.  
   
-     W czasie wykonywania, użytkownik posiada naciśnięty klawisz ALT i lewego przycisku myszy przeciągnij <xref:System.Windows.Forms.ToolStripItem> do innej lokalizacji na <xref:System.Windows.Forms.ToolStrip>.  
+     W czasie wykonywania użytkownik ma wciśnięty klawisz ALT i lewy przycisk myszy, aby przeciągnąć <xref:System.Windows.Forms.ToolStripItem> do innej lokalizacji na <xref:System.Windows.Forms.ToolStrip>.  
   
     ```vb  
     toolStrip1.AllowItemReorder = True  

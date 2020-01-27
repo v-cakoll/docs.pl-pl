@@ -1,5 +1,5 @@
 ---
-title: Układ w formantach formularzy systemu Windows
+title: Układ formantów
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [Windows Forms]
@@ -7,45 +7,45 @@ helpviewer_keywords:
 - Margin property [Windows Forms]
 - Padding property [Windows Forms]
 ms.assetid: 99400e3a-720e-4f56-b68f-89df911a251c
-ms.openlocfilehash: d1a3954c8eda87bdda9fa17df1bd2b3858c43619
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed8603e997e7d0c1ed7a2ebda6dc960726d32f45
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012831"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745244"
 ---
 # <a name="layout-in-windows-forms-controls"></a>Układ w formantach formularzy systemu Windows
 
-Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji. <xref:System.Windows.Forms?displayProperty=nameWithType> Przestrzeń nazw udostępnia wiele narzędzi układu, w tym celu.
+Precyzyjne rozmieszczenie kontrolek w formularzu jest wysokim priorytetem dla wielu aplikacji. Przestrzeń nazw <xref:System.Windows.Forms?displayProperty=nameWithType> zawiera wiele narzędzi do układu.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[AutoSize — Przegląd właściwości](autosize-property-overview.md)\
-W tym artykule opisano <xref:System.Windows.Forms.Control.AutoSize%2A> właściwość i swojej roli w układzie.
+\ [Przegląd właściwości AutoSize](autosize-property-overview.md)
+Opisuje właściwość <xref:System.Windows.Forms.Control.AutoSize%2A> i jej rolę w układzie.
 
-[Margines i wypełnienie w formularzach Windows Forms, formanty](margin-and-padding-in-windows-forms-controls.md)\
-W tym artykule opisano <xref:System.Windows.Forms.Control.Margin%2A> i <xref:System.Windows.Forms.Control.Padding%2A> właściwości i ich ról w układzie.
+[Margines i uzupełnienie w kontrolkach Windows Forms](margin-and-padding-in-windows-forms-controls.md)\
+Opisuje właściwości <xref:System.Windows.Forms.Control.Margin%2A> i <xref:System.Windows.Forms.Control.Padding%2A> i ich role w układzie.
 
-[Instrukcje: Wyrównywanie formantu z krawędziami formularzy](how-to-align-a-control-to-the-edges-of-forms.md)\
-Pokazuje sposób użycia <xref:System.Windows.Forms.Control.Dock%2A> właściwość wyrównywanie formantu do krawędzi formularza zajmuje.
+[Instrukcje: wyrównywanie kontrolki do krawędzi formularzy](how-to-align-a-control-to-the-edges-of-forms.md)\
+Pokazuje, jak użyć właściwości <xref:System.Windows.Forms.Control.Dock%2A>, aby wyrównać formant do krawędzi formularza, który on zajmowan.
 
-[Instrukcje: Tworzenie obramowania Wokoło formularze Windows kontrolować za pomocą wypełnienia](how-to-create-a-border-around-a-windows-forms-control-using-padding.md)\
-Pokazuje sposób użycia <xref:System.Windows.Forms.Control.Padding%2A> właściwości opisują formantu.
+[Instrukcje: Tworzenie obramowania wokół formantu Windows Forms przy użyciu Dopełnienia](how-to-create-a-border-around-a-windows-forms-control-using-padding.md)\
+Pokazuje, jak używać właściwości <xref:System.Windows.Forms.Control.Padding%2A> do tworzenia konspektu formantu.
 
-[Instrukcje: Implementowanie aparatu niestandardowego układu](how-to-implement-a-custom-layout-engine.md)\
-Demonstruje sposób implementacji <xref:System.Windows.Forms.Layout.LayoutEngine> rozmieszczania kontrolek formularzy Windows Forms.
+[Instrukcje: implementowanie niestandardowego aparatu układu](how-to-implement-a-custom-layout-engine.md)\
+Pokazuje, jak zaimplementować <xref:System.Windows.Forms.Layout.LayoutEngine> do rozmieszczania Windows Forms formantów.
 
 ## <a name="reference"></a>Tematy pomocy
 
 <xref:System.Windows.Forms.TableLayoutPanel>\
-Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.TableLayoutPanel> kontroli.
+Zawiera dokumentację referencyjną dla kontrolki <xref:System.Windows.Forms.TableLayoutPanel>.
 
 <xref:System.Windows.Forms.FlowLayoutPanel>\
-Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.FlowLayoutPanel> kontroli.
+Zawiera dokumentację referencyjną dla kontrolki <xref:System.Windows.Forms.FlowLayoutPanel>.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Instrukcje: Projektowanie układu formularzy Windows dobrze reagującego na lokalizację](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
+- [Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Instrukcje: projektowanie układu formularzy Windows Forms dobrze reagującego na lokalizację](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
 - [Zachowanie AutoSize w kontrolce TableLayoutPanel](autosize-behavior-in-the-tablelayoutpanel-control.md)

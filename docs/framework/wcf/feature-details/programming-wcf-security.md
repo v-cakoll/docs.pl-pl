@@ -7,35 +7,35 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 18942c2d486038c3ebfbe11d21b41d0ba9412500
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e19f858818866f16b8af44abe462ddb826d43b69
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909861"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741483"
 ---
 # <a name="programming-wcf-security"></a>Programowanie zabezpieczeń WCF
-W tym temacie opisano podstawowe zadania programistyczne służące do tworzenia aplikacji Secure Windows Communication Foundation (WCF). W tym temacie omówiono jedynie uwierzytelnianie, poufność i integralność, nazywane zbiorczo *zabezpieczeniami transferu*. Ten temat nie obejmuje autoryzacji (kontrola dostępu do zasobów lub usług); Aby uzyskać informacje na temat autoryzacji [](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md), zobacz Autoryzacja.  
+W tym temacie opisano podstawowe zadania programistyczne służące do tworzenia aplikacji Secure Windows Communication Foundation (WCF). W tym temacie omówiono jedynie uwierzytelnianie, poufność i integralność, nazywane zbiorczo *zabezpieczeniami transferu*. Ten temat nie obejmuje autoryzacji (kontrola dostępu do zasobów lub usług); Aby uzyskać informacje na temat autoryzacji, zobacz [autoryzacja](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 > [!NOTE]
-> Aby dowiedzieć się więcej na temat pojęć związanych z zabezpieczeniami, szczególnie w odniesieniu do usługi WCF, zobacz zestaw samouczków i rozwiązań w witrynie MSDN w oparciu o [scenariusze, wzorce i wskazówki dotyczące implementacji dla ulepszeń usług sieci Web (WSE) 3,0](https://go.microsoft.com/fwlink/?LinkID=88250).  
+> Aby dowiedzieć się więcej na temat pojęć związanych z zabezpieczeniami, szczególnie w odniesieniu do usługi WCF, zobacz zestaw samouczków i rozwiązań w witrynie MSDN w oparciu o [scenariusze, wzorce i wskazówki dotyczące implementacji dla ulepszeń usług sieci Web (WSE) 3,0](https://docs.microsoft.com/previous-versions/msp-n-p/ff648183(v=pandp.10)).  
   
  Programowanie zabezpieczeń WCF opiera się na trzech krokach: tryb zabezpieczeń, typ poświadczeń klienta oraz wartości poświadczeń. Kroki te można wykonać za pomocą kodu lub konfiguracji.  
   
 ## <a name="setting-the-security-mode"></a>Ustawianie trybu zabezpieczeń  
  Poniżej objaśniono ogólne kroki programowania z trybem zabezpieczeń w programie WCF:  
   
-1. Wybierz jedno ze wstępnie zdefiniowanych powiązań odpowiednie dla wymagań aplikacji. Aby uzyskać listę opcji powiązań, zobacz [powiązania dostarczone przez system](../../../../docs/framework/wcf/system-provided-bindings.md). Domyślnie niemal każde powiązanie ma włączone zabezpieczenia. Jedynym wyjątkiem jest <xref:System.ServiceModel.BasicHttpBinding> Klasa (przy użyciu konfiguracji [ \<, BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
+1. Wybierz jedno ze wstępnie zdefiniowanych powiązań odpowiednie dla wymagań aplikacji. Aby uzyskać listę opcji powiązań, zobacz [powiązania dostarczone przez system](../../../../docs/framework/wcf/system-provided-bindings.md). Domyślnie niemal każde powiązanie ma włączone zabezpieczenia. Jedynym wyjątkiem jest Klasa <xref:System.ServiceModel.BasicHttpBinding> (przy użyciu konfiguracji, [\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
   
      Wybrane powiązanie określa transport. Na przykład <xref:System.ServiceModel.WSHttpBinding> używa protokołu HTTP jako transportu; <xref:System.ServiceModel.NetTcpBinding> używa protokołu TCP.  
   
-2. Wybierz jeden z trybów zabezpieczeń dla powiązania. Należy zauważyć, że wybrane powiązanie określa dostępne opcje trybu. Na przykład <xref:System.ServiceModel.WSDualHttpBinding> nie zezwala na zabezpieczenia transportu (nie jest to opcja). Analogicznie, <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> <xref:System.ServiceModel.NetNamedPipeBinding> ani zabezpieczenia komunikatów.  
+2. Wybierz jeden z trybów zabezpieczeń dla powiązania. Należy zauważyć, że wybrane powiązanie określa dostępne opcje trybu. Na przykład <xref:System.ServiceModel.WSDualHttpBinding> nie zezwala na zabezpieczenia transportu (nie jest to opcja). Podobnie nie <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> ani <xref:System.ServiceModel.NetNamedPipeBinding> umożliwia zabezpieczenia komunikatów.  
   
      Dostępne są trzy opcje:  
   
     1. `Transport`  
   
-         Zabezpieczenia transportu są zależne od mechanizmu wybranego przez Ciebie powiązania. Na przykład, jeśli używasz `WSHttpBinding` , mechanizm zabezpieczeń jest SSL (SSL) (również mechanizm protokołu HTTPS). Ogólnie mówiąc, główną zaletą zabezpieczeń transportu jest to, że zapewnia ona dobrą przepływność niezależnie od używanego transportu. Jednak ma dwa ograniczenia: Pierwszy polega na tym, że mechanizm transportu wymusza typ poświadczeń używany do uwierzytelniania użytkownika. Jest to wadą tylko wtedy, gdy usługa musi współpracować z innymi usługami, które wymagają różnych typów poświadczeń. Drugim jest to, że ze względu na to, że zabezpieczenia nie są stosowane na poziomie komunikatu, zabezpieczenia są implementowane w sposób przeskokowy, a nie na kompletny. Ten ostatni problem występuje tylko wtedy, gdy ścieżka komunikatu między klientem a usługą obejmuje pośredników. Aby uzyskać więcej informacji o tym, który transport ma być używany, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Aby uzyskać więcej informacji o korzystaniu z zabezpieczeń transportu, zobacz [Omówienie zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+         Zabezpieczenia transportu są zależne od mechanizmu wybranego przez Ciebie powiązania. Na przykład jeśli używasz `WSHttpBinding`, mechanizm zabezpieczeń jest SSL (SSL) (również mechanizm protokołu HTTPS). Ogólnie mówiąc, główną zaletą zabezpieczeń transportu jest to, że zapewnia ona dobrą przepływność niezależnie od używanego transportu. Jednak ma dwa ograniczenia: Pierwszy polega na tym, że mechanizm transportu wymusza typ poświadczeń używany do uwierzytelniania użytkownika. Jest to wadą tylko wtedy, gdy usługa musi współpracować z innymi usługami, które wymagają różnych typów poświadczeń. Drugim jest to, że ze względu na to, że zabezpieczenia nie są stosowane na poziomie komunikatu, zabezpieczenia są implementowane w sposób przeskokowy, a nie na kompletny. Ten ostatni problem występuje tylko wtedy, gdy ścieżka komunikatu między klientem a usługą obejmuje pośredników. Aby uzyskać więcej informacji o tym, który transport ma być używany, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Aby uzyskać więcej informacji o korzystaniu z zabezpieczeń transportu, zobacz [Omówienie zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
     2. `Message`  
   
@@ -49,7 +49,7 @@ W tym temacie opisano podstawowe zadania programistyczne służące do tworzenia
   
 3. Jeśli zdecydujesz się korzystać z zabezpieczeń transportu dla protokołu HTTP (innymi słowy, HTTPS), należy również skonfigurować hosta z certyfikatem SSL i włączyć protokół SSL na porcie. Aby uzyskać więcej informacji, zobacz [zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
-4. Jeśli używasz <xref:System.ServiceModel.WSHttpBinding> usługi i nie musisz ustanawiać bezpiecznej sesji, <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> ustaw właściwość na `false`wartość.  
+4. Jeśli używasz <xref:System.ServiceModel.WSHttpBinding> i nie musisz ustanawiać bezpiecznej sesji, ustaw właściwość <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> na `false`.  
   
      Bezpieczna sesja odbywa się, gdy klient i usługa tworzą kanał przy użyciu klucza symetrycznego (zarówno klient, jak i serwer używają tego samego klucza dla długości konwersacji, dopóki okno dialogowe nie zostanie zamknięte).  
   
@@ -70,7 +70,7 @@ W tym temacie opisano podstawowe zadania programistyczne służące do tworzenia
   
 - `IssuedToken`  
   
- W zależności od sposobu ustawienia trybu należy ustawić typ poświadczenia. Na przykład jeśli wybrano `wsHttpBinding`i ustawisz tryb na "Message", można również `clientCredentialType` ustawić atrybut elementu Message na jedną z następujących wartości: `None`, `Windows`,, `Certificate` `UserName` i `IssuedToken`, jak pokazano w poniższym przykładzie konfiguracyjnym.  
+ W zależności od sposobu ustawienia trybu należy ustawić typ poświadczenia. Na przykład jeśli wybrano `wsHttpBinding`i ustawisz tryb na "Message", można również ustawić atrybut `clientCredentialType` elementu Message na jedną z następujących wartości: `None`, `Windows`, `UserName`, `Certificate`i `IssuedToken`, jak pokazano w poniższym przykładzie konfiguracji.  
   
 ```xml  
 <system.serviceModel>  
@@ -90,13 +90,13 @@ W tym temacie opisano podstawowe zadania programistyczne służące do tworzenia
  [!code-vb[c_WsHttpService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#1)]  
   
 ## <a name="setting-service-credential-values"></a>Ustawianie wartości poświadczeń usługi  
- Po wybraniu typu poświadczeń klienta należy ustawić rzeczywiste poświadczenia usługi i klienta, które mają być używane. W usłudze poświadczenia są ustawiane za pomocą <xref:System.ServiceModel.Description.ServiceCredentials> klasy i zwracane <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> przez właściwość <xref:System.ServiceModel.ServiceHostBase> klasy. Powiązanie w użyciu sugeruje typ poświadczeń usługi, wybrany tryb zabezpieczeń i typ poświadczenia klienta. Poniższy kod ustawia certyfikat dla poświadczenia usługi.  
+ Po wybraniu typu poświadczeń klienta należy ustawić rzeczywiste poświadczenia usługi i klienta, które mają być używane. W usłudze poświadczenia są ustawiane przy użyciu klasy <xref:System.ServiceModel.Description.ServiceCredentials> i zwracane przez właściwość <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> klasy <xref:System.ServiceModel.ServiceHostBase>. Powiązanie w użyciu sugeruje typ poświadczeń usługi, wybrany tryb zabezpieczeń i typ poświadczenia klienta. Poniższy kod ustawia certyfikat dla poświadczenia usługi.  
   
  [!code-csharp[c_tcpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpservice/cs/source.cs#3)]
  [!code-vb[c_tcpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpservice/vb/source.vb#3)]  
   
 ## <a name="setting-client-credential-values"></a>Ustawianie wartości poświadczeń klienta  
- Na kliencie Ustaw wartości poświadczeń klienta przy użyciu <xref:System.ServiceModel.Description.ClientCredentials> klasy i zwrócone <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> przez właściwość <xref:System.ServiceModel.ClientBase%601> klasy. Poniższy kod służy do ustawiania certyfikatu jako poświadczenia na kliencie przy użyciu protokołu TCP.  
+ Na kliencie Ustaw wartości poświadczeń klienta przy użyciu klasy <xref:System.ServiceModel.Description.ClientCredentials> i zwrócone przez właściwość <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> klasy <xref:System.ServiceModel.ClientBase%601>. Poniższy kod służy do ustawiania certyfikatu jako poświadczenia na kliencie przy użyciu protokołu TCP.  
   
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  

@@ -1,5 +1,6 @@
 ---
-title: 'Instrukcje: Reagowanie na zmiany schematu czcionek w aplikacji Windows Forms'
+title: Reagowanie na zmiany schematu czcionek w aplikacji Windows Forms
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,62 +8,62 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 9fd7f99b35730cf867bfad5da24bc3f223e9a0f8
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e3b96139a7cfd4b268d81b1da58229527e2beb87
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425332"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739230"
 ---
-# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Instrukcje: Reagowanie na zmiany schematu czcionek w aplikacji Windows Forms
-W systemach operacyjnych Windows użytkownik może zmienić ustawień czcionki systemowe, aby były domyślną czcionkę, są wyświetlane, większy lub mniejszy. Zmiana tych ustawień Czcionka jest krytyczny dla użytkowników, którzy niedowidzących i wymagają większej typu do odczytywania tekstu na swoich ekranach. Można dostosować aplikację Windows Forms, aby reagować na te zmiany przez zwiększenie lub zmniejszenie rozmiaru formularza i wszystkie zawarte tekstu, zawsze wtedy, gdy zmiany schematu czcionek. Jeśli chcesz, aby formularza w taki sposób, aby uwzględnić zmiany w rozmiary czcionek dynamicznie, można dodać kod do formularza.  
+# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Porady: reagowanie na zmiany schematu czcionek w aplikacji Windows Forms
+W systemach operacyjnych Windows, użytkownik może zmienić ustawienia czcionek dla całego systemu, aby czcionka domyślna była większa lub mniejsza. Zmiana tych ustawień czcionki jest niezwykle ważna dla użytkowników, którzy są wizualnie niepełnosprawni i wymagają większego typu w celu odczytania tekstu na ekranie. Możesz dostosować aplikację Windows Forms, aby reagować na te zmiany, zwiększając lub zmniejszając rozmiar formularza i cały tekst zawarty po każdym zmianie schematu czcionek. Jeśli chcesz, aby formularz dynamicznie mieścił zmiany rozmiarów czcionek, możesz dodać kod do formularza.  
   
- Zazwyczaj domyślna czcionka używanych przez formularze Windows jest czcionki zwrócony przez <xref:Microsoft.Win32> wywołanie przestrzeni nazw `GetStockObject(DEFAULT_GUI_FONT)`. Czcionka zwróconych przez to wywołanie zmienia tylko po zmianie rozdzielczość ekranu. Jak pokazano w poniższej procedurze, kod musi zmienić domyślną czcionkę do <xref:System.Drawing.SystemFonts.IconTitleFont%2A> do reagowania na zmiany rozmiaru czcionki.  
+ Zazwyczaj domyślną czcionką używaną przez Windows Forms jest czcionka zwrócona przez wywołanie przestrzeni nazw <xref:Microsoft.Win32> do `GetStockObject(DEFAULT_GUI_FONT)`. Czcionka zwracana przez to wywołanie zmienia się tylko wtedy, gdy zmienia się rozdzielczość ekranu. Jak pokazano w poniższej procedurze, kod musi zmienić czcionkę domyślną, aby <xref:System.Drawing.SystemFonts.IconTitleFont%2A>, aby odpowiadały na zmiany rozmiaru czcionki.  
   
-### <a name="to-use-the-desktop-font-and-respond-to-font-scheme-changes"></a>Użyj czcionki pulpitu i reagować na zmiany schematu czcionek  
+### <a name="to-use-the-desktop-font-and-respond-to-font-scheme-changes"></a>Aby używać czcionki pulpitu i odpowiadać na zmiany schematu czcionek  
   
-1. Tworzenie formularza i dodać kontrolki, które mają do niego. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie aplikacji programu Windows Forms z wiersza polecenia](how-to-create-a-windows-forms-application-from-the-command-line.md) i [kontrolki do użycia w formularzach Windows Forms](./controls/controls-to-use-on-windows-forms.md).  
+1. Utwórz formularz i Dodaj do niego formanty. Aby uzyskać więcej informacji, zobacz [How to: Create a Windows Forms Application z wiersza polecenia](how-to-create-a-windows-forms-application-from-the-command-line.md) i [formantów, które mają być używane w Windows Forms](./controls/controls-to-use-on-windows-forms.md).  
   
-2. Dodaj odwołanie do <xref:Microsoft.Win32> przestrzeni nazw w kodzie.  
+2. Dodaj odwołanie do przestrzeni nazw <xref:Microsoft.Win32> do kodu.  
   
      [!code-csharp[WinFormsAutoScaling#2](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#2)]
      [!code-vb[WinFormsAutoScaling#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#2)]  
   
-3. Dodaj następujący kod do konstruktora formularza można dołączyć procedury obsługi zdarzeń wymagane i zmieniać domyślną czcionkę używaną do formularza.  
+3. Dodaj następujący kod do konstruktora formularza, aby podłączyć wymagane programy obsługi zdarzeń i zmienić domyślną czcionkę używaną dla formularza.  
   
      [!code-csharp[WinFormsAutoScaling#3](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#3)]
      [!code-vb[WinFormsAutoScaling#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#3)]  
   
-4. Implementowanie obsługi dla <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> zdarzeń, który powoduje, że formularza w celu automatycznego skalowania podczas <xref:Microsoft.Win32.UserPreferenceCategory.Window> zmian kategorii.  
+4. Zaimplementuj procedurę obsługi dla zdarzenia <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>, które powoduje automatyczne skalowanie formularza po zmianie kategorii <xref:Microsoft.Win32.UserPreferenceCategory.Window>.  
   
      [!code-csharp[WinFormsAutoScaling#4](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#4)]
      [!code-vb[WinFormsAutoScaling#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#4)]  
   
-5. Na koniec zaimplementować funkcję obsługi <xref:System.Windows.Forms.Form.FormClosing> zdarzenia, które powoduje odłączenie <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> programu obsługi zdarzeń.  
+5. Na koniec Zaimplementuj procedurę obsługi dla zdarzenia <xref:System.Windows.Forms.Form.FormClosing>, które odłącza procedurę obsługi zdarzeń <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>.  
   
      > [!IMPORTANT]
-     > Niepodanie tego kodu spowoduje, że aplikacja do wycieku pamięci.  
+     > Niepowodzenie dołączenia tego kodu spowoduje przeciek pamięci przez aplikację.  
   
      [!code-csharp[WinFormsAutoScaling#5](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
      [!code-vb[WinFormsAutoScaling#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
-6. Skompiluj i uruchom kod.  
+6. Kompiluj i uruchamiaj kod.  
   
-### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>Aby ręcznie zmienić schematu czcionek w Windows XP  
+### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>Aby ręcznie zmienić schemat czcionek w systemie Windows XP  
   
-1. Po uruchomieniu aplikacji Windows Forms kliknij prawym przyciskiem myszy na pulpit Windows i wybierz polecenie **właściwości** z menu skrótów.  
+1. Gdy aplikacja Windows Forms jest uruchomiona, kliknij prawym przyciskiem myszy pulpit systemu Windows i wybierz polecenie **Właściwości** z menu skrótów.  
   
-2. W **właściwości wyświetlania** okno dialogowe, kliknij przycisk **wygląd** kartę.  
+2. W oknie dialogowym **właściwości wyświetlania** kliknij kartę **wygląd** .  
   
-3. Z **rozmiar czcionki** listy rozwijanej wybierz nowy rozmiar czcionki.  
+3. W polu listy rozwijanej **rozmiar czcionki** wybierz nowy rozmiar czcionki.  
   
-     Można zauważyć, że formularz teraz w przypadku środowiska wykonawczego zmiany schematu czcionek pulpitu. Gdy użytkownik zmieni się między **normalny**, **duży rozmiar czcionki**, i **dodatkowe duży rozmiar czcionki**, formularz zmieni się czcionka i skaluje się poprawnie.  
+     Zobaczysz, że formularz teraz reaguje na zmiany w czasie wykonywania w schemacie czcionek pulpitu. Gdy użytkownik zmieni się między **normalną**, **dużą czcionką**i **bardzo dużą**czcionką, formularz zmienia czcionkę i skaluje się poprawnie.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[WinFormsAutoScaling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
  [!code-vb[WinFormsAutoScaling#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   
- Konstruktor, w tym przykładzie kod zawiera wywołanie `InitializeComponent`, który jest zdefiniowany, tworząc nowy projekt Windows Forms w programie Visual Studio. Usuń ten wiersz kodu, jeśli tworzysz aplikację w wierszu polecenia.  
+ Konstruktor w tym przykładzie kodu zawiera wywołanie do `InitializeComponent`, który jest definiowany podczas tworzenia nowego projektu Windows Forms w programie Visual Studio. Usuń ten wiersz kodu, jeśli tworzysz aplikację w wierszu polecenia.  
   
 ## <a name="see-also"></a>Zobacz także
 

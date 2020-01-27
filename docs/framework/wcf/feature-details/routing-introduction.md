@@ -2,12 +2,12 @@
 title: Wprowadzenie do routingu
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: bb021f9f90f3dd54106abf12d8274d192dea1076
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8ce98aab2ed14401fa7c2cbf43eb92a633fa96b0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045265"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746469"
 ---
 # <a name="routing-introduction"></a>Wprowadzenie do routingu
 
@@ -17,13 +17,13 @@ Ten temat jest przeznaczony dla nowych usługi routingu i obejmuje podstawową k
 
 ## <a name="configuration"></a>Konfiguracja
 
-Usługa routingu jest zaimplementowana jako usługa WCF, która udostępnia jeden lub więcej punktów końcowych usługi, które odbierają komunikaty z aplikacji klienckich i kierują komunikaty do co najmniej jednego docelowego punktu końcowego. Usługa udostępnia <xref:System.ServiceModel.Routing.RoutingBehavior>, która jest stosowana do punktów końcowych usługi udostępnianych przez usługę. To zachowanie służy do konfigurowania różnych aspektów działania usługi. Aby ułatwić konfigurację podczas korzystania z pliku konfiguracji, parametry są określone w **RoutingBehavior**. W scenariuszach opartych na kodzie te parametry byłyby określone jako część <xref:System.ServiceModel.Routing.RoutingConfiguration> obiektu, który można następnie przesłać do **RoutingBehavior**.
+Usługa routingu jest zaimplementowana jako usługa WCF, która udostępnia jeden lub więcej punktów końcowych usługi, które odbierają komunikaty z aplikacji klienckich i kierują komunikaty do co najmniej jednego docelowego punktu końcowego. Usługa udostępnia <xref:System.ServiceModel.Routing.RoutingBehavior>, która jest stosowana do punktów końcowych usługi udostępnianych przez usługę. To zachowanie służy do konfigurowania różnych aspektów działania usługi. Aby ułatwić konfigurację podczas korzystania z pliku konfiguracji, parametry są określone w **RoutingBehavior**. W scenariuszach opartych na kodzie te parametry byłyby określone jako część obiektu <xref:System.ServiceModel.Routing.RoutingConfiguration>, który następnie można przesłać do **RoutingBehavior**.
 
-Po uruchomieniu to zachowanie dodaje <xref:System.ServiceModel.Routing.SoapProcessingBehavior>, który jest używany do przeprowadzenia przetwarzania komunikatów przez protokół SOAP, do punktów końcowych klienta. Dzięki temu usługa routingu może przesyłać wiadomości do punktów końcowych, które wymagają innego elementu **MessageVersion** niż punkt końcowy, w którym wiadomość została odebrana. **RoutingBehavior** rejestruje także rozszerzenie usługi, <xref:System.ServiceModel.Routing.RoutingExtension>która zapewnia punkt dostępności do modyfikowania konfiguracji usługi routingu w czasie wykonywania.
+Podczas uruchamiania to zachowanie dodaje <xref:System.ServiceModel.Routing.SoapProcessingBehavior>, który jest używany do przetwarzania komunikatów przez protokół SOAP, do punktów końcowych klienta. Dzięki temu usługa routingu może przesyłać wiadomości do punktów końcowych, które wymagają innego elementu **MessageVersion** niż punkt końcowy, w którym wiadomość została odebrana. **RoutingBehavior** rejestruje także rozszerzenie usługi, <xref:System.ServiceModel.Routing.RoutingExtension>, która zapewnia punkt dostępności do modyfikowania konfiguracji usługi routingu w czasie wykonywania.
 
 Klasa **zastosowano** zapewnia spójny sposób konfigurowania i aktualizowania konfiguracji usługi routingu.  Zawiera parametry, które działają jako ustawienia usługi routingu i służy do konfigurowania **RoutingBehavior** podczas uruchamiania usługi lub są przesyłane do **RoutingExtension** w celu zmodyfikowania konfiguracji routingu w czasie wykonywania.
 
-Logika routingu używana do przeprowadzania routingu komunikatów opartych na zawartości jest definiowana przez grupowanie <xref:System.ServiceModel.Dispatcher.MessageFilter> wielu obiektów w tabele filtrów (<xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> obiekty). Komunikaty przychodzące są oceniane względem filtrów komunikatów zawartych w tabeli filtrów i dla każdego **MessageFilter** , który odpowiada komunikatowi, przekazywany do docelowego punktu końcowego. Tabela filtrów, która powinna być używana do routowania komunikatów, jest określana za pomocą **RoutingBehavior** w konfiguracji lub za pośrednictwem kodu przy użyciu obiektu **zastosowano** .
+Logika routingu używana do przeprowadzania routingu komunikatów opartych na zawartości jest definiowana przez Grupowanie wielu <xref:System.ServiceModel.Dispatcher.MessageFilter> obiektów w tabele filtrów (obiekty<xref:System.ServiceModel.Dispatcher.MessageFilterTable%601>). Komunikaty przychodzące są oceniane względem filtrów komunikatów zawartych w tabeli filtrów i dla każdego **MessageFilter** , który odpowiada komunikatowi, przekazywany do docelowego punktu końcowego. Tabela filtrów, która powinna być używana do routowania komunikatów, jest określana za pomocą **RoutingBehavior** w konfiguracji lub za pośrednictwem kodu przy użyciu obiektu **zastosowano** .
 
 ### <a name="defining-endpoints"></a>Definiowanie punktów końcowych
 
@@ -101,7 +101,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));
 ```
 
-Ten przykład umożliwia skonfigurowanie usługi routingu w celu uwidocznienia pojedynczego punktu końcowego przy użyciu `http://localhost:8000/routingservice/router`adresu, który jest używany do odbierania komunikatów do rozesłania. Ponieważ komunikaty są kierowane do punktów końcowych żądania-odpowiedź, punkt końcowy usługi używa <xref:System.ServiceModel.Routing.IRequestReplyRouter> kontraktu. Ta konfiguracja definiuje także jeden punkt końcowy `http://localhost:8000/servicemodelsample/service` klienta, do którego są kierowane komunikaty. Tabela filtrów (niepokazywana) o nazwie "routingTable1" zawiera logikę routingu służącą do przesyłania komunikatów i jest skojarzona z punktem końcowym usługi przy użyciu **RoutingBehavior** (dla pliku konfiguracji) lub **zastosowano** (dla Konfiguracja programowa).
+Ten przykład umożliwia skonfigurowanie usługi routingu w celu uwidocznienia pojedynczego punktu końcowego z adresem `http://localhost:8000/routingservice/router`, który jest używany do odbierania komunikatów do rozesłania. Ponieważ komunikaty są kierowane do punktów końcowych żądania-odpowiedź, punkt końcowy usługi używa kontraktu <xref:System.ServiceModel.Routing.IRequestReplyRouter>. Ta konfiguracja definiuje także jeden punkt końcowy klienta `http://localhost:8000/servicemodelsample/service`, do którego są kierowane komunikaty. Tabela filtrów (niepokazywana) o nazwie "routingTable1" zawiera logikę routingu służącą do przesyłania komunikatów i jest skojarzona z punktem końcowym usługi przy użyciu **RoutingBehavior** (dla pliku konfiguracji) lub **zastosowano** (do konfiguracji programowej).
 
 ### <a name="routing-logic"></a>Logika routingu
 
@@ -111,9 +111,9 @@ Usługa routingu udostępnia kilka implementacji **MessageFilter** , które spra
 
 Wiele filtrów komunikatów jest zorganizowanych w tabelach filtru, które kojarzą poszczególne **MessageFilter** z docelowym punktem końcowym. Opcjonalnie można również użyć tabeli filtrów, aby określić listę punktów końcowych kopii zapasowych, które usługa routingu podejmie próbę wysłania komunikatu w przypadku niepowodzenia transmisji.
 
-Domyślnie wszystkie filtry komunikatów w tabeli filtrów są oceniane jednocześnie; można jednak określić <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A> , że filtry komunikatów mają być oceniane w określonej kolejności. Wszystkie wpisy o najwyższym priorytecie są oceniane jako pierwsze, a filtry komunikatów o niższych priorytetach nie są oceniane, jeśli dopasowanie zostanie znalezione na wyższym poziomie priorytetu. Aby uzyskać więcej informacji na temat tabel filtrów, zobacz [filtry komunikatów](message-filters.md).
+Domyślnie wszystkie filtry komunikatów w tabeli filtrów są oceniane jednocześnie; można jednak określić <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A>, która powoduje, że filtry komunikatów mają być oceniane w określonej kolejności. Wszystkie wpisy o najwyższym priorytecie są oceniane jako pierwsze, a filtry komunikatów o niższych priorytetach nie są oceniane, jeśli dopasowanie zostanie znalezione na wyższym poziomie priorytetu. Aby uzyskać więcej informacji na temat tabel filtrów, zobacz [filtry komunikatów](message-filters.md).
 
-W poniższych przykładach użyto <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> `true` elementu, który jest przeznaczony dla wszystkich komunikatów. Ten **MessageFilter** jest dodawany do tabeli filtrów "routingTable1", która kojarzy **MessageFilter** z punktem końcowym klienta o nazwie "CalculatorService". **RoutingBehavior** następnie określa, że ta tabela powinna być używana do przesyłania komunikatów przetwarzanych przez punkt końcowy usługi.
+W poniższych przykładach użyto <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>, które oblicza `true` dla wszystkich komunikatów. Ten **MessageFilter** jest dodawany do tabeli filtrów "routingTable1", która kojarzy **MessageFilter** z punktem końcowym klienta o nazwie "CalculatorService". **RoutingBehavior** następnie określa, że ta tabela powinna być używana do przesyłania komunikatów przetwarzanych przez punkt końcowy usługi.
 
 ```xml
 <behaviors>
@@ -154,7 +154,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 ```
 
 > [!NOTE]
-> Domyślnie usługa routingu szacuje tylko nagłówki wiadomości. Aby zezwolić filtrom na dostęp do treści wiadomości, należy ustawić <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> na. `false`
+> Domyślnie usługa routingu szacuje tylko nagłówki wiadomości. Aby zezwolić filtrom na dostęp do treści wiadomości, należy ustawić <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> na `false`.
 
 **Multicast**
 
@@ -162,9 +162,9 @@ Chociaż wiele konfiguracji usługi routingu korzysta z logiki filtru wyłączne
 
 - Kształt kanału nie może być odpowiedzią na żądanie (choć może być jednokierunkowa lub dwustronna), ponieważ aplikacja kliencka może odebrać tylko jedną odpowiedź w odpowiedzi na żądanie.
 
-- Podczas oceny komunikatu należy `true` zwrócić wiele filtrów.
+- Podczas oceny komunikatu wiele filtrów musi zwrócić `true`.
 
-Jeśli te warunki są spełnione, komunikat jest kierowany do wszystkich punktów końcowych wszystkich filtrów, które podlegają `true`ocenie. Poniższy przykład definiuje konfigurację routingu, która powoduje, że komunikaty są przesyłane do obu punktów końcowych, jeśli adres punktu końcowego w `http://localhost:8000/routingservice/router/rounding`komunikacie jest.
+Jeśli te warunki są spełnione, komunikat jest kierowany do wszystkich punktów końcowych wszystkich filtrów, które mają być `true`. Poniższy przykład definiuje konfigurację routingu, która powoduje, że komunikaty są przesyłane do obu punktów końcowych, jeśli adres punktu końcowego w komunikacie jest `http://localhost:8000/routingservice/router/rounding`.
 
 ```xml
 <!--ROUTING SECTION -->
@@ -206,7 +206,7 @@ Kroki wykonywane w celu utworzenia nowego elementu **MessageVersion** dla wiadom
 
 - Utwórz nową wiadomość z tą samą akcją, czytelnikem treści i nową wartość **MessageVersion**.
 
-- Jeśli <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing. None**, skopiuj nagłówki do, from, FaultTo i RelatesTo do nowej wiadomości.
+- Jeśli <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>! = **Addressing. None**, skopiuj nagłówki do, from, FaultTo i RelatesTo do nowej wiadomości.
 
 - Skopiuj wszystkie właściwości wiadomości do nowej wiadomości.
 
@@ -222,13 +222,13 @@ Kroki wykonywane w celu utworzenia nowego elementu **MessageVersion** dla wiadom
 
 - Utwórz nowy komunikat odpowiedzi z tą samą akcją, czytelnikem treści i elementem **MessageVersion** oryginalnego komunikatu żądania.
 
-- Jeśli <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing. None**, skopiuj nagłówki do, from, FaultTo i RelatesTo do nowej wiadomości.
+- Jeśli <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>! = **Addressing. None**, skopiuj nagłówki do, from, FaultTo i RelatesTo do nowej wiadomości.
 
 - Skopiuj właściwości wiadomości do nowej wiadomości.
 
 - Zwróć nowy komunikat odpowiedzi.
 
-Domyślnie **SoapProcessingBehavior** jest automatycznie dodawany do punktów końcowych klienta przez <xref:System.ServiceModel.Routing.RoutingBehavior> uruchomienie usługi, jednak można kontrolować, czy przetwarzanie protokołu SOAP jest dodawane do wszystkich <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> punktów końcowych klienta przy użyciu właściwości . Możesz również dodać zachowanie bezpośrednio do określonego punktu końcowego i włączać lub wyłączać to zachowanie na poziomie punktu końcowego, jeśli jest wymagany bardziej szczegółowy formant przetwarzania protokołu SOAP.
+Domyślnie **SoapProcessingBehavior** jest automatycznie dodawany do punktów końcowych klienta przez <xref:System.ServiceModel.Routing.RoutingBehavior> podczas uruchamiania usługi; można jednak kontrolować, czy przetwarzanie protokołu SOAP jest dodawane do wszystkich punktów końcowych klienta przy użyciu właściwości <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A>. Możesz również dodać zachowanie bezpośrednio do określonego punktu końcowego i włączać lub wyłączać to zachowanie na poziomie punktu końcowego, jeśli jest wymagany bardziej szczegółowy formant przetwarzania protokołu SOAP.
 
 > [!NOTE]
 > Jeśli przetwarzanie protokołu SOAP jest wyłączone dla punktu końcowego, który wymaga innego elementu MessageVersion niż oryginalny komunikat żądania, należy podać niestandardowy mechanizm wykonywania wszelkich modyfikacji protokołu SOAP, które są wymagane przed wysłaniem komunikatu do docelowy punkt końcowy.
@@ -256,7 +256,7 @@ rc.SoapProcessingEnabled = false;
 
 Po dodaniu kolejnych punktów końcowych klienta lub konieczności zmodyfikowania filtrów używanych do przesyłania komunikatów należy mieć możliwość dynamicznego aktualizowania konfiguracji w czasie wykonywania, aby zapobiec przerywaniu usługi do punktów końcowych, w których obecnie są wysyłane komunikaty Usługa routingu. Modyfikowanie pliku konfiguracji lub kodu aplikacji hosta nie zawsze jest wystarczające, ponieważ każda metoda wymaga odzyskania aplikacji, co może prowadzić do potencjalnej utraty wszelkich komunikatów, które są obecnie przesyłane i potencjalną przyczyną przestoju oczekiwanie na ponowne uruchomienie usługi.
 
-**Zastosowano** można modyfikować tylko programowo. Podczas początkowego konfigurowania usługi za pomocą pliku konfiguracji można zmienić tylko konfigurację w czasie wykonywania, tworząc nową **zastosowano** i przekazując ją jako parametr do <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> metody uwidocznionej przez <xref:System.ServiceModel.Routing.RoutingExtension>rozszerzenie usługi. Wszystkie komunikaty w trakcie przesyłania są nadal kierowane przy użyciu poprzedniej konfiguracji, a komunikaty odebrane po wywołaniu **ApplyConfiguration** używają nowej konfiguracji. Poniższy przykład ilustruje tworzenie wystąpienia usługi routingu, a następnie modyfikowanie konfiguracji.
+**Zastosowano** można modyfikować tylko programowo. Podczas początkowego konfigurowania usługi za pomocą pliku konfiguracji można zmodyfikować konfigurację w czasie wykonywania przez skonstruowanie nowego **zastosowano** i przekazanie go jako parametru do metody <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> udostępnionej przez rozszerzenie usługi <xref:System.ServiceModel.Routing.RoutingExtension>. Wszystkie komunikaty w trakcie przesyłania są nadal kierowane przy użyciu poprzedniej konfiguracji, a komunikaty odebrane po wywołaniu **ApplyConfiguration** używają nowej konfiguracji. Poniższy przykład ilustruje tworzenie wystąpienia usługi routingu, a następnie modyfikowanie konfiguracji.
 
 ```csharp
 RoutingConfiguration routingConfig = new RoutingConfiguration();
@@ -287,18 +287,18 @@ routerHost.routerHost.Extensions.Find<RoutingExtension>().ApplyConfiguration(rc2
 
 ## <a name="error-handling"></a>Obsługa błędów
 
-Jeśli wystąpił błąd podczas próby wysłania komunikatu, zostanieprzeprowadzonaobsługabłędów.<xref:System.ServiceModel.CommunicationException> Te wyjątki zwykle wskazują, że wystąpił problem podczas próby komunikowania się ze zdefiniowanym punktem końcowym klienta, <xref:System.ServiceModel.EndpointNotFoundException>na przykład, <xref:System.ServiceModel.ServerTooBusyException>lub <xref:System.ServiceModel.CommunicationObjectFaultedException>. Obsługa błędów — kod również będzie przechwytywać i próbować ponowić próbę wysłania <xref:System.TimeoutException> , który jest innym typowym wyjątkiem, który nie pochodzi od **CommunicationException**.
+Jeśli podczas próby wysłania komunikatu wystąpił <xref:System.ServiceModel.CommunicationException>, zostanie przeprowadzona obsługa błędów. Te wyjątki zwykle wskazują, że wystąpił problem podczas próby komunikacji ze zdefiniowanym punktem końcowym klienta, takim jak <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException>lub <xref:System.ServiceModel.CommunicationObjectFaultedException>. Obsługa błędów — kod również będzie przechwytywać i próbować ponowić próbę wysłania, gdy wystąpi <xref:System.TimeoutException>, który jest innym wspólnym wyjątkiem, który nie pochodzi od **CommunicationException**.
 
 Po wystąpieniu jednego z powyższych wyjątków usługa routingu zostaje przełączona w tryb failover do listy punktów końcowych kopii zapasowych. Jeśli wszystkie punkty końcowe kopii zapasowej zakończą się niepowodzeniem z błędem komunikacji lub jeśli punkt końcowy zwróci wyjątek wskazujący awarię w ramach usługi docelowej, usługa routingu zwróci błąd do aplikacji klienckiej.
 
 > [!NOTE]
-> Funkcja obsługi błędów przechwytuje i obsługuje wyjątki występujące podczas próby wysłania komunikatu i próby zamknięcia kanału. Kod obsługi błędu nie jest przeznaczony do wykrywania lub obsługi wyjątków utworzonych przez punkty końcowe aplikacji, z którymi się komunikują. zgłoszone przez usługę pojawia się w usłudze routingu jako FaultMessage i jest przepływa z powrotem do klienta. <xref:System.ServiceModel.FaultException>
+> Funkcja obsługi błędów przechwytuje i obsługuje wyjątki występujące podczas próby wysłania komunikatu i próby zamknięcia kanału. Kod obsługi błędu nie jest przeznaczony do wykrywania lub obsługi wyjątków utworzonych przez punkty końcowe aplikacji, z którymi się komunikują. <xref:System.ServiceModel.FaultException> zgłoszone przez usługę pojawia się w usłudze routingu jako **FaultMessage** i jest przepływa z powrotem do klienta.
 >
-> Jeśli wystąpi błąd, gdy usługa routingu próbuje przekazać komunikat, może się pojawić <xref:System.ServiceModel.FaultException> po stronie klienta, a nie <xref:System.ServiceModel.EndpointNotFoundException> w przypadku braku usługi routingu. Usługa routingu może w ten sposób maskować wyjątki i nie zapewniać pełnej przejrzystości, chyba że zostanie sprawdzona zagnieżdżonych wyjątków.
+> Jeśli wystąpi błąd, gdy usługa routingu próbuje przekazać komunikat, może zostać wyświetlony <xref:System.ServiceModel.FaultException> po stronie klienta, a nie <xref:System.ServiceModel.EndpointNotFoundException>, zwykle w przypadku braku usługi routingu. Usługa routingu może w ten sposób maskować wyjątki i nie zapewniać pełnej przejrzystości, chyba że zostanie sprawdzona zagnieżdżonych wyjątków.
 
 ### <a name="tracing-exceptions"></a>Śledzenie wyjątków
 
-Gdy wysyłanie komunikatu do punktu końcowego na liście kończy się niepowodzeniem, usługa routingu śledzi otrzymane dane wyjątku i dołącza szczegóły wyjątku jako właściwość komunikatu o nazwie Exceptions. Pozwala to zachować dane wyjątku i umożliwia użytkownikom dostęp programistyczny za pomocą Inspektora komunikatów.  Dane wyjątku są przechowywane na komunikat w słowniku, który mapuje nazwę punktu końcowego na szczegóły wyjątku napotkane podczas próby wysłania do niego komunikatu.
+Gdy wysyłanie komunikatu do punktu końcowego na liście kończy się niepowodzeniem, usługa routingu śledzi otrzymane dane wyjątku i dołącza szczegóły wyjątku jako właściwość komunikatu o nazwie **Exceptions**. Pozwala to zachować dane wyjątku i umożliwia użytkownikom dostęp programistyczny za pomocą Inspektora komunikatów.  Dane wyjątku są przechowywane na komunikat w słowniku, który mapuje nazwę punktu końcowego na szczegóły wyjątku napotkane podczas próby wysłania do niego komunikatu.
 
 ### <a name="backup-endpoints"></a>Punkty końcowe kopii zapasowej
 
@@ -367,19 +367,19 @@ W poniższej tabeli opisano wzorce zgodne z użyciem list punktów końcowych ko
 |Wzorzec|Sesja|Transakcja|Odbieranie kontekstu|Lista kopii zapasowych jest obsługiwana|Uwagi|
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|
 |Komunikacja jednokierunkowa||||Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Jeśli ten komunikat jest multiemisją, tylko komunikat w kanale zakończonym niepowodzeniem jest przenoszony do jego miejsca docelowego kopii zapasowej.|
-|Komunikacja jednokierunkowa||✓||Nie|Wyjątek jest zgłaszany, a transakcja jest wycofywana.|
-|Komunikacja jednokierunkowa|||✓|Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Po pomyślnym odebraniu komunikatu Ukończ wszystkie konteksty odbierania. Jeśli komunikat nie został pomyślnie odebrany przez żaden punkt końcowy, nie należy kończyć kontekstu odbierania.<br /><br /> Gdy ten komunikat jest multiemisją, kontekst odbierania jest wykonywany tylko wtedy, gdy komunikat zostanie pomyślnie odebrany przez co najmniej jeden punkt końcowy (podstawowy lub zapasowy). Jeśli żaden z punktów końcowych we wszystkich ścieżkach multiemisji nie otrzyma komunikatu, nie wypełniaj kontekstu odbierania.|
-|Komunikacja jednokierunkowa||✓|✓|Tak|Przerwij poprzednią transakcję, Utwórz nową transakcję i ponownie Wyślij wszystkie komunikaty. Komunikaty, które napotkały błąd, są przesyłane do miejsca docelowego kopii zapasowej.<br /><br /> Po utworzeniu transakcji, w której wszystkie operacje kończą się powodzeniem, Wypełnij konteksty odbierania i zatwierdź transakcję.|
-|Komunikacja jednokierunkowa|✓|||Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. W scenariuszu multiemisji tylko komunikaty w sesji, które napotkały błąd lub w sesji, której zamknięcie nie powiodło się, są ponownie wysyłane do miejsc docelowych kopii zapasowych.|
-|Komunikacja jednokierunkowa|✓|✓||Nie|Wyjątek jest zgłaszany, a transakcja jest wycofywana.|
-|Komunikacja jednokierunkowa|✓||✓|Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Gdy wszystkie komunikaty zostaną zakończone bez błędu, sesja wskazuje, że nie ma więcej komunikatów, a usługa routingu pomyślnie zamknie wszystkie wychodzące kanały sesji, wszystkie konteksty odbioru są wykonywane i zamknięto kanał sesji przychodzącej.|
-|Komunikacja jednokierunkowa|✓|✓|✓|Tak|Przerwij bieżącą transakcję i Utwórz nową. Wyślij ponownie wszystkie poprzednie wiadomości w sesji. Po utworzeniu transakcji, w której wszystkie komunikaty zostały pomyślnie wysłane, a sesja wskazuje, że nie ma więcej komunikatów, wszystkie kanały sesji wychodzącej są zamknięte, a wszystkie, konteksty odbierania zostały zakończone z transakcją, kanał sesji przychodzącej to zamknięte, a transakcja jest zatwierdzona.<br /><br /> Gdy sesje są multiemisją, komunikaty, które nie miały błędu, są ponownie wysyłane do tego samego miejsca docelowego, co wcześniej, a komunikaty, które napotkały błąd, są wysyłane do miejsc docelowych kopii zapasowych.|
+|Komunikacja jednokierunkowa||✔️||Nie|Wyjątek jest zgłaszany, a transakcja jest wycofywana.|
+|Komunikacja jednokierunkowa|||✔️|Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Po pomyślnym odebraniu komunikatu Ukończ wszystkie konteksty odbierania. Jeśli komunikat nie został pomyślnie odebrany przez żaden punkt końcowy, nie należy kończyć kontekstu odbierania.<br /><br /> Gdy ten komunikat jest multiemisją, kontekst odbierania jest wykonywany tylko wtedy, gdy komunikat zostanie pomyślnie odebrany przez co najmniej jeden punkt końcowy (podstawowy lub zapasowy). Jeśli żaden z punktów końcowych we wszystkich ścieżkach multiemisji nie otrzyma komunikatu, nie wypełniaj kontekstu odbierania.|
+|Komunikacja jednokierunkowa||✔️|✔️|Tak|Przerwij poprzednią transakcję, Utwórz nową transakcję i ponownie Wyślij wszystkie komunikaty. Komunikaty, które napotkały błąd, są przesyłane do miejsca docelowego kopii zapasowej.<br /><br /> Po utworzeniu transakcji, w której wszystkie operacje kończą się powodzeniem, Wypełnij konteksty odbierania i zatwierdź transakcję.|
+|Komunikacja jednokierunkowa|✔️|||Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. W scenariuszu multiemisji tylko komunikaty w sesji, które napotkały błąd lub w sesji, której zamknięcie nie powiodło się, są ponownie wysyłane do miejsc docelowych kopii zapasowych.|
+|Komunikacja jednokierunkowa|✔️|✔️||Nie|Wyjątek jest zgłaszany, a transakcja jest wycofywana.|
+|Komunikacja jednokierunkowa|✔️||✔️|Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Gdy wszystkie komunikaty zostaną zakończone bez błędu, sesja wskazuje, że nie ma więcej komunikatów, a usługa routingu pomyślnie zamknie wszystkie wychodzące kanały sesji, wszystkie konteksty odbioru są wykonywane i zamknięto kanał sesji przychodzącej.|
+|Komunikacja jednokierunkowa|✔️|✔️|✔️|Tak|Przerwij bieżącą transakcję i Utwórz nową. Wyślij ponownie wszystkie poprzednie wiadomości w sesji. Po utworzeniu transakcji, w której wszystkie komunikaty zostały pomyślnie wysłane, a sesja wskazuje, że nie ma więcej komunikatów, wszystkie kanały sesji wychodzącej są zamknięte, a wszystkie, konteksty odbierania zostały zakończone z transakcją, kanał sesji przychodzącej to zamknięte, a transakcja jest zatwierdzona.<br /><br /> Gdy sesje są multiemisją, komunikaty, które nie miały błędu, są ponownie wysyłane do tego samego miejsca docelowego, co wcześniej, a komunikaty, które napotkały błąd, są wysyłane do miejsc docelowych kopii zapasowych.|
 |Dwukierunkowa||||Tak|Wyślij do miejsca docelowego kopii zapasowej.  Gdy kanał zwróci komunikat odpowiedzi, zwróć odpowiedź do oryginalnego klienta.|
-|Dwukierunkowa|✓|||Tak|Wyślij wszystkie komunikaty z kanału do miejsca docelowego kopii zapasowej.  Gdy kanał zwróci komunikat odpowiedzi, zwróć odpowiedź do oryginalnego klienta.|
-|Dwukierunkowa||✓||Nie|Wyjątek jest zgłaszany, a transakcja jest wycofywana.|
-|Dwukierunkowa|✓|✓||Nie|Wyjątek jest zgłaszany, a transakcja jest wycofywana.|
+|Dwukierunkowa|✔️|||Tak|Wyślij wszystkie komunikaty z kanału do miejsca docelowego kopii zapasowej.  Gdy kanał zwróci komunikat odpowiedzi, zwróć odpowiedź do oryginalnego klienta.|
+|Dwukierunkowa||✔️||Nie|Wyjątek jest zgłaszany, a transakcja jest wycofywana.|
+|Dwukierunkowa|✔️|✔️||Nie|Wyjątek jest zgłaszany, a transakcja jest wycofywana.|
 |Dupleks||||Nie|Komunikacja niezgodna z dupleksem nie jest obecnie obsługiwana.|
-|Dupleks|✓|||Tak|Wyślij do miejsca docelowego kopii zapasowej.|
+|Dupleks|✔️|||Tak|Wyślij do miejsca docelowego kopii zapasowej.|
 
 ## <a name="hosting"></a>Hosting
 
@@ -392,7 +392,7 @@ using (ServiceHost serviceHost =
                 new ServiceHost(typeof(RoutingService)))
 ```
 
-Aby hostować usługę routingu w ramach usług IIS lub WAS, należy utworzyć plik usługi (. svc) lub użyć aktywacji usługi opartej na konfiguracji. W <xref:System.ServiceModel.Routing.RoutingService> przypadku korzystania z pliku usługi należy określić parametr using usługi. Poniższy przykład zawiera przykładowy plik usługi, który może służyć do hostowania usługi routingu w usługach IIS lub WAS.
+Aby hostować usługę routingu w ramach usług IIS lub WAS, należy utworzyć plik usługi (. svc) lub użyć aktywacji usługi opartej na konfiguracji. W przypadku korzystania z pliku usługi należy określić <xref:System.ServiceModel.Routing.RoutingService> przy użyciu parametru usługi. Poniższy przykład zawiera przykładowy plik usługi, który może służyć do hostowania usługi routingu w usługach IIS lub WAS.
 
 ```aspx-csharp
 <%@ ServiceHost Language="C#" Debug="true" Service="System.ServiceModel.Routing.RoutingService,
@@ -411,7 +411,7 @@ Personifikacja w usłudze routingu wymaga użycia personifikacji ASP.NET w trybi
 
 Aby użyć personifikacji ASP.NET w usłudze routingu, Włącz tryb zgodności ASP.NET w środowisku hostingu usługi. Usługa routingu została już oznaczona jako zezwalająca na tryb zgodności ASP.NET, a personifikacja zostanie automatycznie włączona. Personifikacja jest jedynym obsługiwanym wykorzystaniem integracji ASP.NET z usługą routingu.
 
-Aby użyć personifikacji poświadczeń systemu Windows przy użyciu usługi routingu, należy skonfigurować zarówno poświadczenia, jak i usługę. Obiekt poświadczeń klienta (<xref:System.ServiceModel.Security.WindowsClientCredential>, do którego można uzyskać dostęp <xref:System.ServiceModel.ChannelFactory>z) definiuje <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> właściwość, która musi być ustawiona, aby zezwalać na personifikację. Na koniec należy skonfigurować <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> zachowanie `true`ustawione na wartość `ImpersonateCallerForAllOperations` . Usługa routingu używa tej flagi, aby zdecydować, czy należy utworzyć klientów do przekazywania komunikatów z włączoną personifikacją.
+Aby użyć personifikacji poświadczeń systemu Windows przy użyciu usługi routingu, należy skonfigurować zarówno poświadczenia, jak i usługę. Obiekt poświadczeń klienta (<xref:System.ServiceModel.Security.WindowsClientCredential>, do którego można uzyskać dostęp z <xref:System.ServiceModel.ChannelFactory>) definiuje Właściwość <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>, która musi być ustawiona, aby zezwalać na personifikację. Na koniec usługi należy skonfigurować zachowanie <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>, aby ustawić `ImpersonateCallerForAllOperations` `true`. Usługa routingu używa tej flagi, aby zdecydować, czy należy utworzyć klientów do przekazywania komunikatów z włączoną personifikacją.
 
 ## <a name="see-also"></a>Zobacz także
 

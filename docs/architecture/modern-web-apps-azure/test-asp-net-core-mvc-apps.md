@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 6096bd3aa35a27c97862089d09d537bdc5b1fff0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 82c9815abdd5140340f9a8ea39be23496d433889
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971540"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738380"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testowanie aplikacji ASP.NET Core MVC
 
@@ -28,7 +28,7 @@ Test jednostkowy testów pojedynczej części logiki aplikacji. Jeden z nich mo�
 
 Testy jednostkowe, na mocy których testuje tylko jedną jednostkę kodu bez zależności zewnętrznych, powinny być wykonywane bardzo szybko. Z tego względu powinno być możliwe uruchamianie zestawów testów dla setek testów jednostkowych w ciągu kilku sekund. Uruchamiaj je często, najlepiej przed każdym wypchnięciem do udostępnionego repozytorium kontroli źródła i z pewnością przy każdej zautomatyzowanej kompilacji na serwerze kompilacji.
 
-### <a name="integration-tests"></a>Testy integracyjne
+### <a name="integration-tests"></a>Testy integracji
 
 Chociaż dobrym pomysłem jest Hermetyzowanie kodu, który współdziała z infrastrukturą, taką jak bazy danych i systemy plików, nadal będziesz mieć część tego kodu i prawdopodobnie chcesz go przetestować. Ponadto należy sprawdzić, czy warstwy kodu działają w oczekiwany sposób, gdy zależności aplikacji są w pełni rozwiązane. Jest to odpowiedzialność za testy integracji. Testy integracji są znacznie wolniejsze i trudniejsze do skonfigurowania niż testy jednostkowe, ponieważ często zależą od zewnętrznych zależności i infrastruktury. W tym celu należy unikać testowania, które mogą być testowane przy użyciu testów jednostkowych w testach integracji. Jeśli można testować dany scenariusz z testem jednostkowym, należy przetestować go z testem jednostkowym. Jeśli nie jest to możliwe, rozważ użycie testu integracji.
 

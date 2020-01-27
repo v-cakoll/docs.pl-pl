@@ -2,35 +2,35 @@
 title: Modele transakcji
 ms.date: 03/30/2017
 ms.assetid: 48a8bc1b-128b-4cf1-a421-8cc73223c340
-ms.openlocfilehash: 8731b72d0657aa420dbb020e216c3af059916ce9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6c78a5342bf19d19308352cddc241f436bfcb3a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050782"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745323"
 ---
 # <a name="transaction-models"></a>Modele transakcji
-W tym temacie opisano relację między modele programowania transakcji i składników infrastruktury, zawierane z firmą Microsoft.  
+W tym temacie opisano relację między modelami programowania transakcji i składnikami infrastruktury dostarczanymi przez firmę Microsoft.  
   
- Za pomocą transakcji w Windows Communication Foundation (WCF), jest ważne dowiedzieć się, że są nie wybierzesz różnych modelach transakcyjnych, ale raczej działające w różnych warstwach zintegrowane i spójny model.  
+ W przypadku korzystania z transakcji w programie Windows Communication Foundation (WCF) ważne jest, aby zrozumieć, że nie są wybierane między różnymi modelami transakcyjnymi, ale raczej działają na różnych warstwach zintegrowanego i spójnego modelu.  
   
- W poniższych sekcjach opisano trzy składniki podstawowe transakcji.  
+ W poniższych sekcjach opisano trzy podstawowe składniki transakcji.  
   
 ## <a name="windows-communication-foundation-transactions"></a>Windows Communication Foundation transakcji  
- Obsługa transakcji w programie WCF umożliwia pisanie transakcyjnych usług. Ponadto obsługa protokołu WS-AtomicTransaction (WS-AT), aplikacje może przepływać transakcji usługi sieci Web utworzone przy użyciu usługi WCF i technologia firm.  
+ Obsługa transakcji w programie WCF umożliwia zapisywanie usług transakcyjnych. Ponadto wraz z obsługą protokołu WS-AtomicTransaction (WS-AT) aplikacje mogą przepływać transakcje do usług sieci Web zbudowanych przy użyciu technologii WCF i innych firm.  
   
- Usługa WCF lub aplikacji funkcje transakcji programu WCF zawiera atrybuty i konfiguracja deklaratywne określenie sposobem i czasem infrastruktury należy utworzyć, flow i zsynchronizować transakcji.  
+ W usłudze lub aplikacji WCF funkcje transakcji WCF zapewniają atrybuty i konfigurację, aby deklaratywnie określić, jak i kiedy infrastruktura ma tworzyć, przepływać i synchronizować transakcje.  
   
-## <a name="systemtransactions-transactions"></a>Transakcje System.Transactions  
- <xref:System.Transactions> Przestrzeń nazw zawiera zarówno wyraźne programowania model na podstawie <xref:System.Transactions.Transaction> klasy, a także niejawne programowania modelu przy użyciu <xref:System.Transactions.TransactionScope> klasy, w którym infrastruktury automatycznie zarządza transakcji.  
+## <a name="systemtransactions-transactions"></a>Transakcje system. Transactions  
+ Przestrzeń nazw <xref:System.Transactions> zapewnia jawny model programowania oparty na klasie <xref:System.Transactions.Transaction>, a także niejawny model programowania korzystający z klasy <xref:System.Transactions.TransactionScope>, w której infrastruktura automatycznie zarządza transakcjami.  
   
- Aby uzyskać więcej informacji na temat sposobu tworzenia transakcyjnych aplikacji za pomocą tych dwóch modeli, zobacz [zapisywanie aplikacji transakcyjnej](https://go.microsoft.com/fwlink/?LinkId=94947).  
+ Aby uzyskać więcej informacji na temat tworzenia transakcyjnej aplikacji przy użyciu tych dwóch modeli, zobacz [pisanie aplikacji transakcyjnej](https://go.microsoft.com/fwlink/?LinkId=94947).  
   
- W aplikacji lub usługi WCF <xref:System.Transactions> zapewnia model programowania do tworzenia transakcji w ramach aplikacji klienta i do jawnie wchodzenie w interakcje z transakcji, gdy jest to wymagane w ramach usługi.  
+ W usłudze lub aplikacji WCF <xref:System.Transactions> zapewnia model programowania do tworzenia transakcji w aplikacji klienckiej i w celu jawnego korzystania z transakcji, w razie potrzeby w ramach usługi.  
   
-## <a name="msdtc-transactions"></a>Usługa MSDTC transakcji  
- Koordynator transakcji rozproszonych (MSDTC) firmy Microsoft jest Menedżer transakcji, który zapewnia obsługę transakcji rozproszonych.  
+## <a name="msdtc-transactions"></a>Transakcje usługi MSDTC  
+ Microsoft Distributed Transaction Coordinator (MSDTC) to Menedżer transakcji, który zapewnia obsługę transakcji rozproszonych.  
   
- Aby uzyskać więcej informacji, zobacz [Podręcznik programisty usługi DTC](https://go.microsoft.com/fwlink/?LinkId=94948).  
+ Aby uzyskać więcej informacji, zobacz [Dokumentacja programisty usługi DTC](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108(v=vs.85)).  
   
- W usłudze WCF lub aplikacji usługi MSDTC udostępnia infrastrukturę koordynacji transakcji utworzone w ramach klienta lub usługę.
+ W usłudze lub aplikacji WCF usługa MSDTC udostępnia infrastrukturę do koordynacji transakcji utworzonych w ramach klienta lub usługi.

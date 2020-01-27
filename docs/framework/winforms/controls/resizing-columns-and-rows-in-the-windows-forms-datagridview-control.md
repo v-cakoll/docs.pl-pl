@@ -1,44 +1,44 @@
 ---
-title: Zmiana rozmiaru wierszy i kolumn w formancie DataGridView formularzy systemu Windows
+title: Zmień rozmiar kolumn i wierszy w formancie DataGridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], sizing rows and columns
 - columns [Windows Forms], resizing in grids
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
-ms.openlocfilehash: e1fa2d57cfb2cd374d691fe03a0e0bdbd3ad7141
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f8394a837ccc11c469f9ad4feeb60464d0014fe
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903191"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742414"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Zmiana rozmiaru wierszy i kolumn w formancie DataGridView formularzy systemu Windows
-`DataGridView` Control oferuje wiele opcji dostosowywania zachowania zmiany rozmiaru wierszy i kolumn. Zazwyczaj `DataGridView` komórki nie można zmieniać rozmiaru na podstawie ich zawartości. Zamiast tego one Przytnij wszystkie wartości wyświetlania, która jest większa niż komórki. Jeśli zawartość mogą być wyświetlane w postaci ciągu, komórki wyświetla je w etykietce narzędzia.  
+Kontrolka `DataGridView` udostępnia wiele opcji dostosowywania zachowania rozmiarów kolumn i wierszy. Zwykle komórki `DataGridView` nie są zmieniane na podstawie ich zawartości. Zamiast tego obcinają wartość wyświetlaną, która jest większa niż komórka. Jeśli zawartość może być wyświetlana jako ciąg, komórka wyświetla ją w etykietce narzędzia.  
   
- Domyślnie użytkownicy można przeciągnąć wierszy, kolumny i separatorów nagłówka myszą, aby wyświetlić więcej informacji. Użytkownicy mogą także kliknąć dwukrotnie separator automatycznie Zmień rozmiar skojarzone grupy wierszy, kolumny lub nagłówek, na podstawie jego zawartości.  
+ Domyślnie użytkownicy mogą przeciągać podziały wierszy, kolumn i nagłówków za pomocą myszy, aby wyświetlić więcej informacji. Użytkownicy mogą również dwukrotnie kliknąć dzielnik, aby automatycznie zmienić rozmiar skojarzonego wiersza, kolumny lub pasma nagłówka na podstawie jego zawartości.  
   
- `DataGridView` Kontrola udostępnia właściwości, metody i zdarzenia, które pozwalają dostosować lub wyłączyć wszystkie te zachowania przekierowanie użytkownika. Ponadto możesz programowo zmienić rozmiar wiersze, kolumny i nagłówki, aby zmieścić ich zawartość lub można skonfigurować je, aby automatycznie zmieniać wielkość po każdym wprowadzeniu zmiany ich zawartość. Można również skonfigurować kolumny do automatycznego dzielenia dostępne szerokość formantu w proporcjach, które określisz.  
+ Kontrolka `DataGridView` zawiera właściwości, metody i zdarzenia umożliwiające dostosowanie lub wyłączenie wszystkich zachowań ukierunkowanych na użytkownika. Ponadto można programistycznie zmienić rozmiar wierszy, kolumn i nagłówków, aby dopasować ich zawartość, lub można je skonfigurować tak, aby zmieniały się automatycznie po zmianie ich zawartości. Możesz również skonfigurować kolumny, aby automatycznie dzielić dostępną szerokość formantu w proporcjach, które określisz.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Opcje ustalania rozmiaru w kontrolce DataGridView formularzy Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md)  
- W tym artykule opisano opcje ustalania rozmiaru wiersze, kolumny i nagłówki. Ponadto zawiera szczegółowe informacje dotyczące ustalania rozmiaru właściwości i metody i w tym artykule opisano typowe scenariusze użycia.  
+ Opisuje opcje ustalania rozmiarów wierszy, kolumn i nagłówków. Ponadto zawiera szczegółowe informacje dotyczące właściwości i metod związanych z wymiarami oraz opisuje typowe scenariusze użycia.  
   
  [Tryb wypełniania kolumn w kontrolce DataGridView formularzy Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)  
- W tym artykule opisano tryb wypełniania kolumny szczegółowo i zawiera kod demonstracji, który służy do eksperymentowania z innych trybach i tryb wypełniania kolumny.  
+ Opisuje tryb wypełniania kolumn szczegółowo i zawiera kod demonstracyjny, którego można użyć do eksperymentowania z trybem wypełniania kolumn i innymi trybami.  
   
- [Instrukcje: Ustawianie trybów zmieniania rozmiaru kontrolki DataGridView formularzy Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
- W tym artykule opisano sposób konfigurowania trybów zmieniania rozmiaru dla wspólnych celów.  
+ [Instrukcje: ustawianie trybów zmieniania rozmiaru kontrolki DataGridView formularzy Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
+ Opisuje sposób konfigurowania trybów ustalania rozmiarów w typowych celach.  
   
- [Instrukcje: Programowe zmienianie rozmiaru komórek w celu dopasowania do zawartości w kontrolce DataGridView formularzy Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
- Zawiera kod demonstracji, który służy do eksperymentowania z programowe Zmienianie rozmiaru.  
+ [Instrukcje: zmienianie w sposób programowy rozmiaru komórek w celu dopasowania do zawartości w kontrolce DataGridView formularzy Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+ Zawiera kod demonstracyjny, którego można użyć do eksperymentowania z programistyczną zmianą rozmiarów.  
   
- [Instrukcje: Automatycznie zmienia rozmiar komórek, gdy zmienia się zawartość w kontrolce DataGridView formularzy Windows Forms](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
- Zawiera kod demonstracji, który służy do eksperymentowania z trybów automatycznej zmiany rozmiaru.  
+ [Instrukcje: automatyczne zmienianie rozmiaru komórek przy zmianie zawartości w kontrolce DataGridView formularzy Windows Forms](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+ Zawiera kod demonstracyjny, którego można użyć do eksperymentowania z trybami automatycznego ustalania rozmiarów.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.DataGridView>  
- Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridView> kontroli.  
+ Zawiera dokumentację referencyjną dla kontrolki <xref:System.Windows.Forms.DataGridView>.  
   
 ## <a name="see-also"></a>Zobacz także
 

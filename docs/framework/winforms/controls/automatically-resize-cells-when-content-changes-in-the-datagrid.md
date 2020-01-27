@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: automatyczne zmienianie rozmiaru komórek przy zmianie zawartości w kontrolce DataGridView formularzy systemu Windows'
+title: Automatycznie zmieniaj rozmiar komórek, gdy zmienia się zawartość w formancie DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - cells [Windows Forms], resizing automatically
 - DataGridView control [Windows Forms], resizing cells
 ms.assetid: 1d68934d-a04c-4b12-9e66-c856c6828131
-ms.openlocfilehash: 3411b68b4dcc64dba86cd9fa8804e0a487cec76d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 86e3bce993aa06546e301c6d7a7e03a31013c337
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586631"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732065"
 ---
-# <a name="how-to-automatically-resize-cells-when-content-changes-in-the-windows-forms-datagridview-control"></a>Instrukcje: automatyczne zmienianie rozmiaru komórek przy zmianie zawartości w kontrolce DataGridView formularzy systemu Windows
-Można skonfigurować <xref:System.Windows.Forms.DataGridView> kontrolować zmiany rozmiaru jego wiersze, kolumny i nagłówki automatycznie zawsze, gdy zmian zawartości, tak aby komórek są zawsze wystarczająco duży, aby wyświetlić ich wartości bez przycinania.  
+# <a name="how-to-automatically-resize-cells-when-content-changes-in-the-windows-forms-datagridview-control"></a>Porady: automatyczne zmienianie rozmiaru komórek przy zmianie zawartości w formancie DataGridView formularzy systemu Windows
+Można skonfigurować kontrolkę <xref:System.Windows.Forms.DataGridView>, aby zmienić rozmiar swoich wierszy, kolumn i nagłówków automatycznie przy każdej zmianie zawartości, dzięki czemu komórki są zawsze wystarczająco duże, aby wyświetlić ich wartości bez obcinania.  
   
- Masz wiele opcji, aby ograniczyć komórki, które są używane do określania nowe rozmiary. Na przykład można skonfigurować formant Aby automatycznie zmieniać rozmiar szerokość kolumn tylko na podstawie wartości w wierszach, które są obecnie wyświetlane. Dzięki temu można uniknąć dotyczące nieefektywności podczas pracy z dużą liczbę wierszy, mimo że w tym przypadku warto użyć metod zmiany rozmiaru, takich jak <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> dostosowania rozmiarów czasami wybrane.  
+ Istnieje wiele opcji ograniczających, które komórki są używane do określania nowych rozmiarów. Na przykład można skonfigurować kontrolkę tak, aby automatycznie zmieniała szerokość kolumn na podstawie wartości w wierszach, które są aktualnie wyświetlane. Dzięki temu można uniknąć nieefektywności podczas pracy z dużymi liczbami wierszy, chociaż w tym przypadku można użyć metod ustalania rozmiaru, takich jak <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>, aby dostosować rozmiary w miarę dokonania wyboru.  
   
- Aby uzyskać więcej informacji na temat automatycznej zmiany rozmiaru, zobacz [opcje ustalania rozmiaru w formancie DataGridView formularzy Windows](sizing-options-in-the-windows-forms-datagridview-control.md).  
+ Aby uzyskać więcej informacji na temat automatycznej zmiany rozmiarów, zobacz [Opcje ustalania rozmiarów w kontrolce DataGridView Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md).  
   
- Poniższy przykład kodu demonstruje opcjami dostępnymi na potrzeby automatycznej zmiany rozmiaru.  
+ Poniższy przykład kodu demonstruje opcje dostępne dla automatycznej zmiany rozmiarów.  
   
 ## <a name="example"></a>Przykład  
  [!code-cpp[System.Windows.Forms.DataGridView.AutoSizing#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/CPP/autosizing.cpp#0)]
@@ -34,7 +34,7 @@ Można skonfigurować <xref:System.Windows.Forms.DataGridView> kontrolować zmia
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów system, system. Drawing i system. Windows. Forms.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -52,4 +52,4 @@ Można skonfigurować <xref:System.Windows.Forms.DataGridView> kontrolować zmia
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
 - [Zmiana rozmiaru wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
 - [Opcje ustalania rozmiaru w kontrolce DataGridView formularzy Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Programowe zmienianie rozmiaru komórek w celu dopasowania do zawartości w kontrolce DataGridView formularzy Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)
+- [Instrukcje: zmienianie w sposób programowy rozmiaru komórek w celu dopasowania do zawartości w kontrolce DataGridView formularzy Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)

@@ -1,5 +1,5 @@
 ---
-title: Wybór i używanie schowka za pomocą składnika DataGridView formularzy systemu Windows
+title: Wybór i używanie schowka za pomocą kontrolki DataGridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], Clipboard use
@@ -9,47 +9,47 @@ helpviewer_keywords:
 - data grids [Windows Forms], selecting cells
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
-ms.openlocfilehash: 1836fbc1887082ca685c49bef2bc42bdb167578f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6993f77e8ce532d8df1bdc7e6b6abc1cc3268e49
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902255"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743063"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Wybór i używanie schowka za pomocą składnika DataGridView formularzy systemu Windows
-`DataGridView` Kontroli udostępnia szereg opcji dotyczących konfigurowania, jak użytkownicy mogą wybrać komórek, wierszy i kolumn. Na przykład można włączyć wybór jednego lub wielu, wybranych całych wierszy lub kolumn, gdy użytkownik kliknie komórki lub wybór całych wierszy lub kolumn tylko wtedy, gdy użytkownik kliknie ich nagłówki, co umożliwia także zaznaczenie komórki. Jeśli chcesz udostępnić interfejs użytkownika do wyboru, można wyłączyć zwykłych wybór i obsługiwać wszystkie zaznaczenia programowo. Ponadto można umożliwić użytkownikom skopiuj wybrane wartości do Schowka.  
+Formant `DataGridView` zapewnia różne opcje konfigurowania, w jaki sposób użytkownicy mogą wybierać komórki, wiersze i kolumny. Na przykład można włączyć zaznaczanie pojedyncze lub wielokrotne, wybór całych wierszy lub kolumn, gdy użytkownicy będą klikać komórki lub zaznaczać całe wiersze lub kolumny tylko wtedy, gdy użytkownicy klikają nagłówki, co umożliwia również wybór komórek. Jeśli chcesz podać własny interfejs użytkownika do wyboru, możesz wyłączyć zwykły wybór i programowo obsłużyć wszystkie wybrane opcje. Ponadto można umożliwić użytkownikom kopiowanie wybranych wartości do Schowka.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Tryby wyboru w kontrolce DataGridView formularzy Windows Forms](selection-modes-in-the-windows-forms-datagridview-control.md)  
- W tym artykule opisano opcje użytkownika i programowe zaznaczenie w kontrolce.  
+ W tym artykule opisano opcje dla użytkownika i wybór programistyczny w formancie.  
   
- [Instrukcje: Ustawianie trybu zaznaczania kontrolki DataGridView formularzy Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
- W tym artykule opisano sposób konfigurowania kontroli do wyboru pojedynczy wiersz tabeli, gdy użytkownik kliknie komórki.  
+ [Instrukcje: ustawianie trybu zaznaczania kontrolki DataGridView formularzy Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
+ Opisuje sposób skonfigurowania kontrolki wyboru pojedynczego wiersza, gdy użytkownik kliknie komórkę.  
   
- [Instrukcje: Pobieranie wybranych komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](selected-cells-rows-and-columns-datagridview.md)  
- W tym artykule opisano sposób pracy z wybranymi kolekcjami komórek, wierszy i kolumn.  
+ [Instrukcje: pobieranie wybranych komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](selected-cells-rows-and-columns-datagridview.md)  
+ Opisuje sposób pracy z zaznaczonymi komórkami, wierszami i kolekcjami kolumn.  
   
- [Instrukcje: Umożliwianie użytkownikom kopiowania wielu komórek do Schowka z kontrolki DataGridView formularzy Windows Forms](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
- W tym artykule opisano sposób włączania Obsługa schowka w formancie.  
+ [Instrukcje: umożliwianie użytkownikom kopiowania wielu komórek do schowka z kontrolki DataGridView formularzy Windows Forms](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+ Opisuje sposób włączania obsługi Schowka w formancie.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.DataGridView>  
- Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridView> kontroli.  
+ Zawiera dokumentację referencyjną dla kontrolki <xref:System.Windows.Forms.DataGridView>.  
   
  <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType>  
- Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> właściwości.  
+ Zawiera dokumentację referencyjną dla właściwości <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>.  
   
  <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A>  
- Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A> właściwości.  
+ Zawiera dokumentację referencyjną dla właściwości <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A>.  
   
  <xref:System.Windows.Forms.DataGridViewSelectedCellCollection>  
- Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridViewSelectedCellCollection> klasy.  
+ Zawiera dokumentację referencyjną dla klasy <xref:System.Windows.Forms.DataGridViewSelectedCellCollection>.  
   
  <xref:System.Windows.Forms.DataGridViewSelectedRowCollection>  
- Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridViewSelectedRowCollection> klasy.  
+ Zawiera dokumentację referencyjną dla klasy <xref:System.Windows.Forms.DataGridViewSelectedRowCollection>.  
   
  <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>  
- Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection> klasy.  
+ Zawiera dokumentację referencyjną dla klasy <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>.  
   
 ## <a name="see-also"></a>Zobacz także
 

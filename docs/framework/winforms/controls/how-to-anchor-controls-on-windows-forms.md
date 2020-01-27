@@ -1,5 +1,5 @@
 ---
-title: 'Porady: kotwiczenie formantów na formularzach systemu Windows'
+title: Kotwiczenie kontrolek
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Anchor property [Windows Forms], enabling resizable forms
@@ -15,12 +15,12 @@ ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 15f12cb0d389344351c4ddf97ee9db37882de460
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7c307d8c5b3bc32e15e6de048c434854ef1bbc65
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459682"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747181"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Instrukcje: kontrolki kotwicowe na Windows Forms
 

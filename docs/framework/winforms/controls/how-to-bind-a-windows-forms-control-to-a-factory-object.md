@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: powiązanie kontrolki formularzy systemu Windows z obiektem fabryki'
+title: Powiązywanie kontroli z obiektem fabryki
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,34 +11,34 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a factory object
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
-ms.openlocfilehash: b64545528746e50d00f88d626a07ac98839e926c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2b4d9aca3345a0cb1e7e995f66a8982dee983ca8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589739"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745094"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a><span data-ttu-id="9b7b9-102">Instrukcje: powiązanie kontrolki formularzy systemu Windows z obiektem fabryki</span><span class="sxs-lookup"><span data-stu-id="9b7b9-102">How to: Bind a Windows Forms Control to a Factory Object</span></span>
-<span data-ttu-id="9b7b9-103">Podczas tworzenia formantów, które współdziałają z danymi będą czasami jest konieczne powiązać formant z obiektem lub metodę, która generuje innych obiektów.</span><span class="sxs-lookup"><span data-stu-id="9b7b9-103">When you are building controls that interact with data, you will sometimes find it necessary to bind a control to an object or method that generates other objects.</span></span> <span data-ttu-id="9b7b9-104">Obiekt lub metoda jest wywoływana fabrykę.</span><span class="sxs-lookup"><span data-stu-id="9b7b9-104">Such an object or method is called a factory.</span></span> <span data-ttu-id="9b7b9-105">Źródło danych może być na przykład, wartość zwracana z wywołania metody, zamiast obiektu w pamięci lub typu.</span><span class="sxs-lookup"><span data-stu-id="9b7b9-105">Your data source might be, for example, the return value from a method call, instead of an object in memory or a type.</span></span> <span data-ttu-id="9b7b9-106">Kontrolki można powiązać z tym rodzajem źródła danych, tak długo, jak źródło zwraca kolekcję.</span><span class="sxs-lookup"><span data-stu-id="9b7b9-106">You can bind a control to this kind of data source as long as the source returns a collection.</span></span>  
+# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a><span data-ttu-id="3cb95-102">Porady: powiązanie formantu formularzy systemu Windows z obiektem fabryki</span><span class="sxs-lookup"><span data-stu-id="3cb95-102">How to: Bind a Windows Forms Control to a Factory Object</span></span>
+<span data-ttu-id="3cb95-103">Podczas kompilowania formantów, które współpracują z danymi, czasami trzeba będzie powiązać formant z obiektem lub metodą, która generuje inne obiekty.</span><span class="sxs-lookup"><span data-stu-id="3cb95-103">When you are building controls that interact with data, you will sometimes find it necessary to bind a control to an object or method that generates other objects.</span></span> <span data-ttu-id="3cb95-104">Taki obiekt lub metoda nazywa się fabryką.</span><span class="sxs-lookup"><span data-stu-id="3cb95-104">Such an object or method is called a factory.</span></span> <span data-ttu-id="3cb95-105">Źródło danych może być na przykład wartością zwracaną z wywołania metody zamiast obiektu w pamięci lub typu.</span><span class="sxs-lookup"><span data-stu-id="3cb95-105">Your data source might be, for example, the return value from a method call, instead of an object in memory or a type.</span></span> <span data-ttu-id="3cb95-106">Można powiązać kontrolkę z tym rodzajem źródła danych, o ile Źródło zwraca kolekcję.</span><span class="sxs-lookup"><span data-stu-id="3cb95-106">You can bind a control to this kind of data source as long as the source returns a collection.</span></span>  
   
- <span data-ttu-id="9b7b9-107">Można łatwo powiązać formant z obiektem fabryki, korzystając z <xref:System.Windows.Forms.BindingSource> kontroli.</span><span class="sxs-lookup"><span data-stu-id="9b7b9-107">You can easily bind a control to a factory object by using the <xref:System.Windows.Forms.BindingSource> control.</span></span>  
+ <span data-ttu-id="3cb95-107">Można łatwo powiązać formant z obiektem fabryki przy użyciu kontrolki <xref:System.Windows.Forms.BindingSource>.</span><span class="sxs-lookup"><span data-stu-id="3cb95-107">You can easily bind a control to a factory object by using the <xref:System.Windows.Forms.BindingSource> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9b7b9-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="9b7b9-108">Example</span></span>  
- <span data-ttu-id="9b7b9-109">Poniższy przykład pokazuje jak powiązać <xref:System.Windows.Forms.DataGridView> kontrolki metoda fabryki, korzystając z <xref:System.Windows.Forms.BindingSource> kontroli.</span><span class="sxs-lookup"><span data-stu-id="9b7b9-109">The following example demonstrates how to bind a <xref:System.Windows.Forms.DataGridView> control to a factory method by using a <xref:System.Windows.Forms.BindingSource> control.</span></span> <span data-ttu-id="9b7b9-110">Metoda fabryki nosi nazwę `GetOrdersByCustomerId`, i zwraca wszystkie zamówienia dla danego klienta w bazie danych Northwind.</span><span class="sxs-lookup"><span data-stu-id="9b7b9-110">The factory method is named `GetOrdersByCustomerId`, and it returns all the orders for a given customer in the Northwind database.</span></span>  
+## <a name="example"></a><span data-ttu-id="3cb95-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="3cb95-108">Example</span></span>  
+ <span data-ttu-id="3cb95-109">Poniższy przykład ilustruje sposób powiązania formantu <xref:System.Windows.Forms.DataGridView> z metodą fabryki przy użyciu kontrolki <xref:System.Windows.Forms.BindingSource>.</span><span class="sxs-lookup"><span data-stu-id="3cb95-109">The following example demonstrates how to bind a <xref:System.Windows.Forms.DataGridView> control to a factory method by using a <xref:System.Windows.Forms.BindingSource> control.</span></span> <span data-ttu-id="3cb95-110">Metoda Factory ma nazwę `GetOrdersByCustomerId`i zwraca wszystkie zamówienia dla danego klienta w bazie danych Northwind.</span><span class="sxs-lookup"><span data-stu-id="3cb95-110">The factory method is named `GetOrdersByCustomerId`, and it returns all the orders for a given customer in the Northwind database.</span></span>  
   
  [!code-cpp[System.Windows.Forms.DataConnector.BindToFactory#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.BindToFactory/CPP/form1.cpp#1)]
  [!code-csharp[System.Windows.Forms.DataConnector.BindToFactory#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.BindToFactory/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnector.BindToFactory#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.BindToFactory/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="9b7b9-111">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="9b7b9-111">Compiling the Code</span></span>  
- <span data-ttu-id="9b7b9-112">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="9b7b9-112">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="3cb95-111">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="3cb95-111">Compiling the Code</span></span>  
+ <span data-ttu-id="3cb95-112">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="3cb95-112">This example requires:</span></span>  
   
-- <span data-ttu-id="9b7b9-113">Odwołania do zestawów systemu, dane systemowe i System.Drawing oraz przestrzeń nazw System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="9b7b9-113">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="3cb95-113">Odwołania do zestawów system, system. Data, system. Drawing i system. Windows. Forms.</span><span class="sxs-lookup"><span data-stu-id="3cb95-113">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9b7b9-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9b7b9-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3cb95-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3cb95-114">See also</span></span>
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [<span data-ttu-id="9b7b9-115">BindingSource, składnik</span><span class="sxs-lookup"><span data-stu-id="9b7b9-115">BindingSource Component</span></span>](bindingsource-component.md)
-- [<span data-ttu-id="9b7b9-116">Instrukcje: Powiązanie z typem formantu Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9b7b9-116">How to: Bind a Windows Forms Control to a Type</span></span>](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [<span data-ttu-id="3cb95-115">BindingSource, składnik</span><span class="sxs-lookup"><span data-stu-id="3cb95-115">BindingSource Component</span></span>](bindingsource-component.md)
+- [<span data-ttu-id="3cb95-116">Instrukcje: powiązanie kontrolki Windows Forms z typem</span><span class="sxs-lookup"><span data-stu-id="3cb95-116">How to: Bind a Windows Forms Control to a Type</span></span>](how-to-bind-a-windows-forms-control-to-a-type.md)

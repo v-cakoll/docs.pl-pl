@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: ustalenie, kiedy zmieniono atrybuty formatowania w kontrolce RichTextBox formularzy systemu Windows'
+title: Ustalanie, kiedy atrybuty formatowania zmieniają się w kontrolce RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: a90affde9de36f1c83d5b7c21b40580cdf53402e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9b2a1028f79059ec7d4d6bf3683100455bb5dea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972292"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746034"
 ---
-# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a><span data-ttu-id="a4872-102">Instrukcje: ustalenie, kiedy zmieniono atrybuty formatowania w kontrolce RichTextBox formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="a4872-102">How to: Determine When Formatting Attributes Change in the Windows Forms RichTextBox Control</span></span>
-<span data-ttu-id="a4872-103">Typowym zastosowaniem formularzy Windows Forms <xref:System.Windows.Forms.RichTextBox> kontroli jest formatowanie tekstu za pomocą atrybutów, takich jak opcje czcionki lub style.</span><span class="sxs-lookup"><span data-stu-id="a4872-103">A common use of the Windows Forms <xref:System.Windows.Forms.RichTextBox> control is formatting text with attributes such as font options or paragraph styles.</span></span> <span data-ttu-id="a4872-104">Twoja aplikacja może potrzebować śledzić wszystkie zmiany wprowadzone w tekst na potrzeby wyświetlania paska narzędzi, tak jak w wielu aplikacjach edytora tekstów.</span><span class="sxs-lookup"><span data-stu-id="a4872-104">Your application may need to keep track of any changes in text formatting for the purpose of displaying a toolbar, as in many word-processing applications.</span></span>  
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a><span data-ttu-id="c787b-102">Porady: ustalenie, kiedy zmieniono atrybuty formatowania w formancie RichTextBox formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="c787b-102">How to: Determine When Formatting Attributes Change in the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="c787b-103">Typowym zastosowaniem kontrolki <xref:System.Windows.Forms.RichTextBox> Windows Forms jest formatowanie tekstu z atrybutami, takimi jak opcje czcionki lub Style akapitu.</span><span class="sxs-lookup"><span data-stu-id="c787b-103">A common use of the Windows Forms <xref:System.Windows.Forms.RichTextBox> control is formatting text with attributes such as font options or paragraph styles.</span></span> <span data-ttu-id="c787b-104">Aplikacja może wymagać śledzenia wszelkich zmian w formatowaniu tekstu na potrzeby wyświetlania paska narzędzi, jak w wielu aplikacjach do przetwarzania tekstu.</span><span class="sxs-lookup"><span data-stu-id="c787b-104">Your application may need to keep track of any changes in text formatting for the purpose of displaying a toolbar, as in many word-processing applications.</span></span>  
   
-### <a name="to-respond-to-changes-in-formatting-attributes"></a><span data-ttu-id="a4872-105">Aby odpowiadanie na zmiany w formatowaniu atrybutów</span><span class="sxs-lookup"><span data-stu-id="a4872-105">To respond to changes in formatting attributes</span></span>  
+### <a name="to-respond-to-changes-in-formatting-attributes"></a><span data-ttu-id="c787b-105">Aby odpowiedzieć na zmiany atrybutów formatowania</span><span class="sxs-lookup"><span data-stu-id="c787b-105">To respond to changes in formatting attributes</span></span>  
   
-1. <span data-ttu-id="a4872-106">Pisanie kodu w <xref:System.Windows.Forms.RichTextBox.SelectionChanged> programu obsługi zdarzeń, aby wykonać odpowiednią akcję, zależnie od wartości atrybutu.</span><span class="sxs-lookup"><span data-stu-id="a4872-106">Write code in the <xref:System.Windows.Forms.RichTextBox.SelectionChanged> event handler to perform an appropriate action depending on the value of the attribute.</span></span> <span data-ttu-id="a4872-107">Poniższy przykład umożliwia zmianę wyglądu przycisku paska narzędzi w zależności od wartości <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="a4872-107">The following example changes the appearance of a toolbar button depending on the value of the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="a4872-108">Przycisk paska narzędzi będą aktualizowane po przeniesieniu punktu wstawiania w formancie.</span><span class="sxs-lookup"><span data-stu-id="a4872-108">The toolbar button will only be updated when the insertion point is moved in the control.</span></span>  
+1. <span data-ttu-id="c787b-106">Napisz kod w programie obsługi zdarzeń <xref:System.Windows.Forms.RichTextBox.SelectionChanged>, aby wykonać odpowiednią akcję w zależności od wartości atrybutu.</span><span class="sxs-lookup"><span data-stu-id="c787b-106">Write code in the <xref:System.Windows.Forms.RichTextBox.SelectionChanged> event handler to perform an appropriate action depending on the value of the attribute.</span></span> <span data-ttu-id="c787b-107">Poniższy przykład zmienia wygląd przycisku paska narzędzi w zależności od wartości właściwości <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>.</span><span class="sxs-lookup"><span data-stu-id="c787b-107">The following example changes the appearance of a toolbar button depending on the value of the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="c787b-108">Przycisk paska narzędzi zostanie zaktualizowany tylko wtedy, gdy punkt wstawiania zostanie przeniesiony do kontrolki.</span><span class="sxs-lookup"><span data-stu-id="c787b-108">The toolbar button will only be updated when the insertion point is moved in the control.</span></span>  
   
-     <span data-ttu-id="a4872-109">W poniższym przykładzie przyjęto założenie, formularz z <xref:System.Windows.Forms.RichTextBox> kontroli i <xref:System.Windows.Forms.ToolBar> kontrolki, która zawiera przycisk paska narzędzi.</span><span class="sxs-lookup"><span data-stu-id="a4872-109">The example below assumes a form with a <xref:System.Windows.Forms.RichTextBox> control and a <xref:System.Windows.Forms.ToolBar> control that contains a toolbar button.</span></span> <span data-ttu-id="a4872-110">Aby uzyskać więcej informacji na temat pasków narzędzi i przyciski paska narzędzi, zobacz [jak: Dodawanie przycisków do formantu ToolBar](how-to-add-buttons-to-a-toolbar-control.md).</span><span class="sxs-lookup"><span data-stu-id="a4872-110">For more information about toolbars and toolbar buttons, see [How to: Add Buttons to a ToolBar Control](how-to-add-buttons-to-a-toolbar-control.md).</span></span>  
+     <span data-ttu-id="c787b-109">W poniższym przykładzie przyjęto, że formularz z kontrolką <xref:System.Windows.Forms.RichTextBox> i formantem <xref:System.Windows.Forms.ToolBar> zawierającym przycisk paska narzędzi.</span><span class="sxs-lookup"><span data-stu-id="c787b-109">The example below assumes a form with a <xref:System.Windows.Forms.RichTextBox> control and a <xref:System.Windows.Forms.ToolBar> control that contains a toolbar button.</span></span> <span data-ttu-id="c787b-110">Aby uzyskać więcej informacji o paskach narzędzi i przyciskach paska narzędzi, zobacz [jak: dodać przyciski do kontrolki paska narzędzi](how-to-add-buttons-to-a-toolbar-control.md).</span><span class="sxs-lookup"><span data-stu-id="c787b-110">For more information about toolbars and toolbar buttons, see [How to: Add Buttons to a ToolBar Control](how-to-add-buttons-to-a-toolbar-control.md).</span></span>  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  
@@ -80,9 +80,9 @@ ms.locfileid: "61972292"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="a4872-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a4872-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c787b-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c787b-111">See also</span></span>
 
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>
-- [<span data-ttu-id="a4872-112">RichTextBox, kontrolka</span><span class="sxs-lookup"><span data-stu-id="a4872-112">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
-- [<span data-ttu-id="a4872-113">Kontrolki do użycia w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a4872-113">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="c787b-112">RichTextBox, kontrolka</span><span class="sxs-lookup"><span data-stu-id="c787b-112">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
+- [<span data-ttu-id="c787b-113">Kontrolki do użycia w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c787b-113">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)

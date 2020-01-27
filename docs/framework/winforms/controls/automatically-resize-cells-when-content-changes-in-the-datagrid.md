@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: automatyczne zmienianie rozmiaru komórek przy zmianie zawartości w kontrolce DataGridView formularzy systemu Windows'
+title: Automatycznie zmieniaj rozmiar komórek, gdy zmienia się zawartość w formancie DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,33 +10,33 @@ helpviewer_keywords:
 - cells [Windows Forms], resizing automatically
 - DataGridView control [Windows Forms], resizing cells
 ms.assetid: 1d68934d-a04c-4b12-9e66-c856c6828131
-ms.openlocfilehash: 3411b68b4dcc64dba86cd9fa8804e0a487cec76d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 86e3bce993aa06546e301c6d7a7e03a31013c337
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586631"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732065"
 ---
-# <a name="how-to-automatically-resize-cells-when-content-changes-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="f34b6-102">Instrukcje: automatyczne zmienianie rozmiaru komórek przy zmianie zawartości w kontrolce DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="f34b6-102">How to: Automatically Resize Cells When Content Changes in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="f34b6-103">Można skonfigurować <xref:System.Windows.Forms.DataGridView> kontrolować zmiany rozmiaru jego wiersze, kolumny i nagłówki automatycznie zawsze, gdy zmian zawartości, tak aby komórek są zawsze wystarczająco duży, aby wyświetlić ich wartości bez przycinania.</span><span class="sxs-lookup"><span data-stu-id="f34b6-103">You can configure the <xref:System.Windows.Forms.DataGridView> control to resize its rows, columns, and headers automatically whenever content changes, so that cells are always large enough to display their values without clipping.</span></span>  
+# <a name="how-to-automatically-resize-cells-when-content-changes-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="40120-102">Porady: automatyczne zmienianie rozmiaru komórek przy zmianie zawartości w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="40120-102">How to: Automatically Resize Cells When Content Changes in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="40120-103">Można skonfigurować kontrolkę <xref:System.Windows.Forms.DataGridView>, aby zmienić rozmiar swoich wierszy, kolumn i nagłówków automatycznie przy każdej zmianie zawartości, dzięki czemu komórki są zawsze wystarczająco duże, aby wyświetlić ich wartości bez obcinania.</span><span class="sxs-lookup"><span data-stu-id="40120-103">You can configure the <xref:System.Windows.Forms.DataGridView> control to resize its rows, columns, and headers automatically whenever content changes, so that cells are always large enough to display their values without clipping.</span></span>  
   
- <span data-ttu-id="f34b6-104">Masz wiele opcji, aby ograniczyć komórki, które są używane do określania nowe rozmiary.</span><span class="sxs-lookup"><span data-stu-id="f34b6-104">You have many options to restrict which cells are used to determine the new sizes.</span></span> <span data-ttu-id="f34b6-105">Na przykład można skonfigurować formant Aby automatycznie zmieniać rozmiar szerokość kolumn tylko na podstawie wartości w wierszach, które są obecnie wyświetlane.</span><span class="sxs-lookup"><span data-stu-id="f34b6-105">For example, you can configure the control to automatically resize the width of its columns based only on the values in rows that are currently displayed.</span></span> <span data-ttu-id="f34b6-106">Dzięki temu można uniknąć dotyczące nieefektywności podczas pracy z dużą liczbę wierszy, mimo że w tym przypadku warto użyć metod zmiany rozmiaru, takich jak <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> dostosowania rozmiarów czasami wybrane.</span><span class="sxs-lookup"><span data-stu-id="f34b6-106">With this, you can avoid inefficiency when working with large numbers of rows, although in this case, you might want to use sizing methods such as <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> to adjust sizes at times of your choosing.</span></span>  
+ <span data-ttu-id="40120-104">Istnieje wiele opcji ograniczających, które komórki są używane do określania nowych rozmiarów.</span><span class="sxs-lookup"><span data-stu-id="40120-104">You have many options to restrict which cells are used to determine the new sizes.</span></span> <span data-ttu-id="40120-105">Na przykład można skonfigurować kontrolkę tak, aby automatycznie zmieniała szerokość kolumn na podstawie wartości w wierszach, które są aktualnie wyświetlane.</span><span class="sxs-lookup"><span data-stu-id="40120-105">For example, you can configure the control to automatically resize the width of its columns based only on the values in rows that are currently displayed.</span></span> <span data-ttu-id="40120-106">Dzięki temu można uniknąć nieefektywności podczas pracy z dużymi liczbami wierszy, chociaż w tym przypadku można użyć metod ustalania rozmiaru, takich jak <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>, aby dostosować rozmiary w miarę dokonania wyboru.</span><span class="sxs-lookup"><span data-stu-id="40120-106">With this, you can avoid inefficiency when working with large numbers of rows, although in this case, you might want to use sizing methods such as <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> to adjust sizes at times of your choosing.</span></span>  
   
- <span data-ttu-id="f34b6-107">Aby uzyskać więcej informacji na temat automatycznej zmiany rozmiaru, zobacz [opcje ustalania rozmiaru w formancie DataGridView formularzy Windows](sizing-options-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="f34b6-107">For more information about automatic resizing, see [Sizing Options in the Windows Forms DataGridView Control](sizing-options-in-the-windows-forms-datagridview-control.md).</span></span>  
+ <span data-ttu-id="40120-107">Aby uzyskać więcej informacji na temat automatycznej zmiany rozmiarów, zobacz [Opcje ustalania rozmiarów w kontrolce DataGridView Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="40120-107">For more information about automatic resizing, see [Sizing Options in the Windows Forms DataGridView Control](sizing-options-in-the-windows-forms-datagridview-control.md).</span></span>  
   
- <span data-ttu-id="f34b6-108">Poniższy przykład kodu demonstruje opcjami dostępnymi na potrzeby automatycznej zmiany rozmiaru.</span><span class="sxs-lookup"><span data-stu-id="f34b6-108">The following code example demonstrates the options available for automatic resizing.</span></span>  
+ <span data-ttu-id="40120-108">Poniższy przykład kodu demonstruje opcje dostępne dla automatycznej zmiany rozmiarów.</span><span class="sxs-lookup"><span data-stu-id="40120-108">The following code example demonstrates the options available for automatic resizing.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f34b6-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="f34b6-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="40120-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="40120-109">Example</span></span>  
  [!code-cpp[System.Windows.Forms.DataGridView.AutoSizing#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/CPP/autosizing.cpp#0)]
  [!code-csharp[System.Windows.Forms.DataGridView.AutoSizing#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/CS/autosizing.cs#0)]
  [!code-vb[System.Windows.Forms.DataGridView.AutoSizing#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/VB/autosizing.vb#0)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f34b6-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="f34b6-110">Compiling the Code</span></span>  
- <span data-ttu-id="f34b6-111">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="f34b6-111">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="40120-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="40120-110">Compiling the Code</span></span>  
+ <span data-ttu-id="40120-111">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="40120-111">This example requires:</span></span>  
   
-- <span data-ttu-id="f34b6-112">Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="f34b6-112">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="40120-112">Odwołania do zestawów system, system. Drawing i system. Windows. Forms.</span><span class="sxs-lookup"><span data-stu-id="40120-112">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f34b6-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f34b6-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="40120-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="40120-113">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A?displayProperty=nameWithType>
@@ -50,6 +50,6 @@ ms.locfileid: "65586631"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [<span data-ttu-id="f34b6-114">Zmiana rozmiaru wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f34b6-114">Resizing Columns and Rows in the Windows Forms DataGridView Control</span></span>](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [<span data-ttu-id="f34b6-115">Opcje ustalania rozmiaru w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f34b6-115">Sizing Options in the Windows Forms DataGridView Control</span></span>](sizing-options-in-the-windows-forms-datagridview-control.md)
-- [<span data-ttu-id="f34b6-116">Instrukcje: Programowe zmienianie rozmiaru komórek w celu dopasowania do zawartości w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f34b6-116">How to: Programmatically Resize Cells to Fit Content in the Windows Forms DataGridView Control</span></span>](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)
+- [<span data-ttu-id="40120-114">Zmiana rozmiaru wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="40120-114">Resizing Columns and Rows in the Windows Forms DataGridView Control</span></span>](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="40120-115">Opcje ustalania rozmiaru w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="40120-115">Sizing Options in the Windows Forms DataGridView Control</span></span>](sizing-options-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="40120-116">Instrukcje: zmienianie w sposób programowy rozmiaru komórek w celu dopasowania do zawartości w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="40120-116">How to: Programmatically Resize Cells to Fit Content in the Windows Forms DataGridView Control</span></span>](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)

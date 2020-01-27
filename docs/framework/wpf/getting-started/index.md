@@ -1,17 +1,17 @@
 ---
-title: Wprowadzenie (WPF)
+title: Wprowadzenie
 ms.date: 01/26/2018
 helpviewer_keywords:
 - getting started [WPF]
 - introduction [WPF]
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
-ms.openlocfilehash: 8744f5d18e3c05d19c455754921fd16a8b88ae3d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 0c23fd3c2e0af53005e1c2c1cec6b44c09158bd6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459626"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733759"
 ---
 # <a name="getting-started-wpf"></a>Wprowadzenie (WPF)
 Windows Presentation Foundation (WPF) to struktura interfejsu użytkownika, która tworzy aplikacje klienckie dla komputerów stacjonarnych. Platforma programistyczna WPF obsługuje szeroką gamę funkcji tworzenia aplikacji, takich jak model aplikacji, zasoby, formanty, grafika, układ, powiązanie danych, dokumenty i zabezpieczenia. Jest to podzestaw .NET Framework, więc jeśli wcześniej skompilowano aplikacje z .NET Framework przy użyciu ASP.NET lub Windows Forms, środowisko programistyczne powinno być znane. WPF używa Extensible Application Markup Language (XAML), aby zapewnić deklaratywny model dla programowania aplikacji. Ta sekcja zawiera tematy, które wprowadzają i ułatwiają rozpoczęcie pracy z programem WPF.  

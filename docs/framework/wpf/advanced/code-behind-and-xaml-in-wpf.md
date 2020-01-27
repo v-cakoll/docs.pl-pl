@@ -1,16 +1,16 @@
 ---
-title: Związane z kodem i XAML w WPF
+title: Kod w tle i XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 00427004448997aa234b335b397390f9fabe1bd5
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 212a37fb7fbcb7e66a669d96671333be793956df
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559914"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738093"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Związane z kodem i XAML w WPF
 <a name="introduction"></a>Kod jest terminem używanym do opisania kodu, który jest dołączany do obiektów zdefiniowanych przez znaczników, gdy strona [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest skompilowana przy użyciu znaczników. W tym temacie opisano wymagania dotyczące kodu, a także alternatywny mechanizm kodu wbudowanego dla kodu w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  

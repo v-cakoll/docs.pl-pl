@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: wyświetlanie błędów w elemencie DataSet za pomocą składnika ErrorProvider formularzy systemu Windows'
+title: Wyświetlanie błędów w ramach zestawu danych za pomocą składnika ErrorProvider
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 3dbd2ccca607869a6f28bc5b3bd1c9f0769db9f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8c2155bf288db89b5d53567738fd399b915d50b6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950079"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745454"
 ---
-# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Instrukcje: wyświetlanie błędów w elemencie DataSet za pomocą składnika ErrorProvider formularzy systemu Windows
-Można użyć składnika Windows Forms <xref:System.Windows.Forms.ErrorProvider> , aby wyświetlić błędy kolumn w zestawie danych lub innym źródle danych. <xref:System.Windows.Forms.ErrorProvider> Aby składnik wyświetlał błędy danych w formularzu, nie musi być bezpośrednio skojarzony z kontrolką. Gdy jest on powiązany ze źródłem danych, może wyświetlić ikonę błędu obok każdej kontrolki, która jest powiązana z tym samym źródłem danych.  
+# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Porady: wyświetlanie błędów w elemencie DataSet za pomocą składnika ErrorProvider formularzy systemu Windows
+Można użyć składnika <xref:System.Windows.Forms.ErrorProvider> Windows Forms, aby wyświetlić błędy kolumn w zestawie danych lub innym źródle danych. Aby składnik <xref:System.Windows.Forms.ErrorProvider> wyświetlał błędy danych w formularzu, nie musi być bezpośrednio skojarzony z kontrolką. Gdy jest on powiązany ze źródłem danych, może wyświetlić ikonę błędu obok każdej kontrolki, która jest powiązana z tym samym źródłem danych.  
   
 > [!NOTE]
-> Jeśli zmienisz dostawcę <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> błędów i <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> właściwości w czasie wykonywania, należy użyć metody, <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> aby uniknąć konfliktów.  
+> W przypadku zmiany właściwości <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> i <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> dostawcy błędów w czasie wykonywania należy użyć metody <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A>, aby uniknąć konfliktów.  
   
 ### <a name="to-display-data-errors"></a>Aby wyświetlić błędy danych  
   
@@ -40,7 +40,7 @@ Można użyć składnika Windows Forms <xref:System.Windows.Forms.ErrorProvider>
     errorProvider1.DataMember = "Customers";  
     ```  
   
-2. <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> Ustaw właściwość na formularz.  
+2. Ustaw właściwość <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> na formularz.  
   
     ```vb  
     ErrorProvider1.ContainerControl = Me  
@@ -65,4 +65,4 @@ Można użyć składnika Windows Forms <xref:System.Windows.Forms.ErrorProvider>
 ## <a name="see-also"></a>Zobacz także
 
 - [ErrorProvider, składnik — omówienie](errorprovider-component-overview-windows-forms.md)
-- [Instrukcje: Wyświetlanie ikon błędów dotyczących walidacji formularza za pomocą składnika Windows Forms ErrorProvider](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [Instrukcje: wyświetlanie ikon błędów dotyczących weryfikacji formularza za pomocą składnika ErrorProvider formularzy Windows Forms](display-error-icons-for-form-validation-with-wf-errorprovider.md)

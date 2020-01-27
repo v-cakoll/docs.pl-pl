@@ -1,5 +1,6 @@
 ---
-title: 'Wskazówki: hosting złożonego formantu Windows Forms w WPF'
+title: Hostowanie złożonego formantu Windows Forms w WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: e42737b9fccd3b91dee2c446dfb0653e57f9dd1b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 16c09b4bb393fa830412385b4b405dd1fae9878b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197948"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744995"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Wskazówki: hosting złożonego formantu Windows Forms w WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia rozbudowane środowisko do tworzenia aplikacji. Jeśli jednak masz znaczną inwestycję w kod [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], może być bardziej efektywne ponowne użycie co najmniej jednego kodu w aplikacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], a nie zapisanie go od podstaw. Najczęstszym scenariuszem jest to, że masz istniejące kontrolki Windows Forms. W niektórych przypadkach może nie mieć nawet dostępu do kodu źródłowego dla tych formantów. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapewnia prostą procedurę hostingu takich kontrolek w aplikacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Na przykład można użyć [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w większości programowania, jednocześnie udostępniając wyspecjalizowane kontrolki <xref:System.Windows.Forms.DataGridView>.  
@@ -62,9 +63,9 @@ Aby ukończyć ten przewodnik, potrzebujesz programu Visual Studio.
   
 - System.Data  
   
-- System. Drawing  
+- System.Drawing  
   
-- System. Windows. Forms  
+- System.Windows.Forms  
   
 - System.Xml  
   

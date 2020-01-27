@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 308d5e0646eeb94012dbe18d46d6d33f67dfeaf5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 517166331d2bcf73132269ce2adcf68d5f60b4fe
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75698368"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745364"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Konwersje wskaźników (Przewodnik programowania w języku C#)
 W poniższej tabeli przedstawiono wstępnie zdefiniowane konwersje niejawnych wskaźników. Konwersje niejawne mogą wystąpić w wielu sytuacjach, w tym wywoływanie metod i instrukcje przypisania.  
@@ -43,7 +43,7 @@ W poniższej tabeli przedstawiono wstępnie zdefiniowane konwersje niejawnych ws
 - [Przewodnik programowania w języku C#](../index.md)
 - [Typy wskaźników](pointer-types.md)
 - [Typy odwołań](../../language-reference/keywords/reference-types.md)
-- [Typy wartości](../../language-reference/keywords/value-types.md)
+- [Typy wartości](../../language-reference/builtin-types/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
 - [fixed, instrukcja](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)

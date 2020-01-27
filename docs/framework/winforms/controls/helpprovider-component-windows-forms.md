@@ -1,36 +1,36 @@
 ---
-title: HelpProvider — Składnik (Formularze systemu Windows)
+title: HelpProvider, składnik
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], Help
 - Help [Windows Forms], displaying on Windows Forms
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
-ms.openlocfilehash: b5da5895b39412052f83cb0a89c3852d28f264bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 058a90a6d868d051e36523ae93bb1f3f810fc3b2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011310"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745598"
 ---
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider — Składnik (Formularze systemu Windows)
-Formularze Windows `HelpProvider` składnika służy do kojarzenia pomocy HTML 1.x pliku pomocy (plik chm z HTML Help Workshop, lub do pliku .htm) z aplikacją z systemem Windows.  
+Składnik `HelpProvider` Windows Forms jest używany do kojarzenia pliku pomocy HTML pomocy 1. x (plik. chm, utworzony za pomocą programu HTML Help Workshop lub pliku. htm) z aplikacją opartą na systemie Windows.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [HelpProvider, składnik — omówienie](helpprovider-component-overview-windows-forms.md)  
- Ogólne pojęcia związane z `HelpProvider` składnik, który umożliwia skojarzenie pliku Pomocy HTML przy użyciu aplikacji Windows.  
+ Wprowadza ogólne koncepcje składnika `HelpProvider`, który umożliwia skojarzenie pliku pomocy HTML z aplikacją opartą na systemie Windows.  
   
- Zobacz [systemy pomocy w aplikacjach formularzy Windows](../advanced/help-systems-in-windows-forms-applications.md).  
+ Zobacz [systemy pomocy w aplikacjach Windows Forms](../advanced/help-systems-in-windows-forms-applications.md).  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.HelpProvider>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
  <xref:System.Windows.Forms.Help>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.  
+ Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.  
   
- Zobacz też [systemy pomocy w aplikacjach programu Windows Forms](../advanced/help-systems-in-windows-forms-applications.md).
+ Zobacz również [systemy pomocy w aplikacjach Windows Forms](../advanced/help-systems-in-windows-forms-applications.md).

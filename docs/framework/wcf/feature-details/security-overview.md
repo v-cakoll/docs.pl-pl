@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 58057709e2d5c5e34d0aa37158ea9b033840f840
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1e551572fa6d94e9fd1170eb7e3b258f2e8fb926
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344704"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728890"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Omówienie zabezpieczeń Windows Communication Foundation
 Windows Communication Foundation (WCF) to platforma programowania oparta na komunikatach protokołu SOAP, a zabezpieczenia komunikatów między klientami i usługami są niezbędne do ochrony danych. Funkcja WCF zapewnia uniwersalną i międzyplatformową platforma do wymiany bezpiecznych komunikatów opartych na istniejącej infrastrukturze zabezpieczeń i uznanych standardach zabezpieczeń dla komunikatów protokołu SOAP.  
   
 > [!NOTE]
-> Aby uzyskać kompleksowy przewodnik dotyczący zabezpieczeń WCF, zobacz [wskazówki dotyczące zabezpieczeń WCF](https://go.microsoft.com/fwlink/?LinkID=158912).  
+> Aby uzyskać kompleksowy przewodnik dotyczący zabezpieczeń WCF, zobacz [wskazówki dotyczące zabezpieczeń WCF](https://archive.codeplex.com/?p=WCFSecurity).  
   
  W programie WCF są używane koncepcje, które są znane, jeśli masz wbudowane bezpieczne, rozproszone aplikacje z istniejącymi technologiami, takimi jak HTTPS, zintegrowane zabezpieczenia systemu Windows lub nazwy użytkowników i hasła do uwierzytelniania użytkowników. WCF nie tylko integruje się z istniejącymi infrastrukturami zabezpieczeń, ale również rozszerza zabezpieczenia rozproszone poza domeny systemu Windows przy użyciu bezpiecznych komunikatów protokołu SOAP. Należy rozważyć implementację istniejących mechanizmów zabezpieczeń w programie WCF przy użyciu funkcji SOAP jako protokołu oprócz istniejących protokołów. Na przykład poświadczenia identyfikujące klienta lub usługę, takie jak nazwa użytkownika i hasło lub certyfikaty X. 509, mają międzyoperacyjnych profilów protokołu SOAP opartych na języku XML. Korzystając z tych profilów, wiadomości są bezpiecznie wymieniane przez skorzystanie z zalet otwartych specyfikacji, takich jak podpisy cyfrowe XML i szyfrowanie XML. Aby zapoznać się z listą specyfikacji, zobacz [Protokoły usług sieci Web obsługiwane przez powiązania współdziałania dostarczone przez system](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
   
@@ -113,4 +113,4 @@ Windows Communication Foundation (WCF) to platforma programowania oparta na komu
 - [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [Przegląd tworzenia punktów końcowych](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Rozszerzanie zabezpieczeń](../../../../docs/framework/wcf/extending/extending-security.md)
-- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

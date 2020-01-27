@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: zawijanie kontrolki formularzy systemu Windows za pomocą elementu ToolStripControlHost'
+title: Zawijaj formant z elementu ToolStripControlHost
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - toolbars [Windows Forms], wrapping controls
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
-ms.openlocfilehash: 6335d09a89225ae1e202a781a73bfd149608f5fc
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c7dbe042623006ed9501016669d6451ba0667cbc
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364190"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728177"
 ---
-# <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Instrukcje: zawijanie kontrolki formularzy systemu Windows za pomocą elementu ToolStripControlHost
-<xref:System.Windows.Forms.ToolStripControlHost>zaprojektowano w celu umożliwienia hostowania arbitralnych formantów Windows Forms <xref:System.Windows.Forms.ToolStripControlHost> przy użyciu konstruktora lub <xref:System.Windows.Forms.ToolStripControlHost> rozszerzając siebie. Łatwiej jest otoczyć formant, rozszerzając <xref:System.Windows.Forms.ToolStripControlHost> i implementując właściwości i metody, które uwidaczniają często używane właściwości i metody formantu. Możesz również uwidocznić zdarzenia dla formantu na <xref:System.Windows.Forms.ToolStripControlHost> poziomie.  
+# <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Porady: zawijanie formantu formularzy systemu Windows za pomocą elementu ToolStripControlHost
+<xref:System.Windows.Forms.ToolStripControlHost> jest zaprojektowana w celu umożliwienia hostowania dowolnych kontrolek Windows Forms przy użyciu konstruktora <xref:System.Windows.Forms.ToolStripControlHost> lub poprzez rozszerzanie <xref:System.Windows.Forms.ToolStripControlHost> siebie. Łatwiej jest otoczyć formant, rozszerzając <xref:System.Windows.Forms.ToolStripControlHost> i implementując właściwości i metody, które uwidaczniają często używane właściwości i metody formantu. Możesz również uwidocznić zdarzenia dla formantu na poziomie <xref:System.Windows.Forms.ToolStripControlHost>.  
   
 ### <a name="to-host-a-control-in-a-toolstripcontrolhost-by-derivation"></a>Aby hostować formant w elementu ToolStripControlHost przez wyprowadzenie  
   
-1. Rozszerzona <xref:System.Windows.Forms.ToolStripControlHost>. Zaimplementuj Konstruktor bez parametrów, który wywołuje konstruktora klasy bazowej przekazującej w żądanym formancie.  
+1. Rozwiń <xref:System.Windows.Forms.ToolStripControlHost>. Zaimplementuj Konstruktor bez parametrów, który wywołuje konstruktora klasy bazowej przekazującej w żądanym formancie.  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#10)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#10)]
      [!code-vb[System.Windows.Forms.ToolStripControlHost#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#10)]  
   
-2. Zadeklaruj Właściwość tego samego typu co zawinięty formant i Return `Control` jako poprawny typ formantu w metodzie dostępu właściwości.  
+2. Zadeklaruj Właściwość tego samego typu co zawinięty formant i zwróć `Control` jako poprawny typ kontrolki w metodzie dostępu właściwości.  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#11](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#11)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#11)]
@@ -40,7 +40,7 @@ ms.locfileid: "68364190"
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#12)]
      [!code-vb[System.Windows.Forms.ToolStripControlHost#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#12)]  
   
-4. Opcjonalnie Zastąp <xref:System.Windows.Forms.ToolStripControlHost.OnSubscribeControlEvents%2A> <xref:System.Windows.Forms.ToolStripControlHost.OnUnsubscribeControlEvents%2A> metody i i Dodaj zdarzenia kontroli, które chcesz uwidocznić.  
+4. Opcjonalnie Zastąp <xref:System.Windows.Forms.ToolStripControlHost.OnSubscribeControlEvents%2A>i <xref:System.Windows.Forms.ToolStripControlHost.OnUnsubscribeControlEvents%2A> metody i Dodaj zdarzenia kontroli, które chcesz uwidocznić.  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#16](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#16)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#16)]

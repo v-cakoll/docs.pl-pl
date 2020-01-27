@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF'
+title: Buforuj dane aplikacji
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b7d999f94e2f2ae410a16e537d51c0f890def4e1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715891"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728062"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Wskazówki: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF
 Buforowanie umożliwia przechowywanie danych w pamięci w celu szybkiego dostępu. Po ponownym uzyskaniu dostępu do danych aplikacje mogą pobrać dane z pamięci podręcznej, zamiast pobierać je z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowanie sprawia, że dane są dostępne, gdy źródło danych jest tymczasowo niedostępne.
@@ -43,7 +43,7 @@ Buforowanie umożliwia przechowywanie danych w pamięci w celu szybkiego dostęp
 ## <a name="prerequisites"></a>Wymagania wstępne
  Aby ukończyć ten Instruktaż, potrzebne są:
 
-- Program Visual Studio 2010.
+- Visual Studio 2010.
 
 - Plik tekstowy, który zawiera niewielką ilość tekstu. (Zawartość pliku tekstowego zostanie wyświetlona w oknie komunikatu). Kod przedstawiony w instruktażu założono, że pracujesz z następującym plikiem:
 
@@ -60,7 +60,7 @@ Buforowanie umożliwia przechowywanie danych w pamięci w celu szybkiego dostęp
 
 2. W menu **plik** kliknij pozycję **Nowy**, a następnie kliknij pozycję **Nowy projekt**.
 
-     Zostanie wyświetlone okno dialogowe **Nowy projekt** .
+     **Nowy projekt** zostanie wyświetlone okno dialogowe.
 
 3. W obszarze **zainstalowane szablony**wybierz język programowania, który ma być używany (**Visual Basic** lub **Wizualizacja C#** ).
 
@@ -101,7 +101,7 @@ Buforowanie umożliwia przechowywanie danych w pamięci w celu szybkiego dostęp
 
 5. Kliknij przycisk **OK**.
 
-     Zostanie wyświetlone okno dialogowe **zmiana platformy docelowej** .
+     **Zmiana platformy docelowej** zostanie wyświetlone okno dialogowe.
 
 6. W oknie dialogowym **zmiana platformy docelowej** kliknij przycisk **tak**.
 

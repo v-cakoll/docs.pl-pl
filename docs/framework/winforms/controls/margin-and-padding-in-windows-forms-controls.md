@@ -1,5 +1,5 @@
 ---
-title: Margines i wypełnienie w formantach formularzy systemu Windows
+title: Margines i uzupełnienie w kontrolkach
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Padding property [Windows Forms]
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Windows Forms, layout
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
-ms.openlocfilehash: bf1f88f6efcedd740bff92dda391470391f16ce5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02cabccd0d51a3501a8aafb8733a5273deef6c49
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752512"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728570"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Margines i wypełnienie w formantach formularzy systemu Windows
-Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji. <xref:System.Windows.Forms?displayProperty=nameWithType> Przestrzeń nazw zapewnia wiele funkcji układu, w tym celu. Dwie najważniejsze to <xref:System.Windows.Forms.Control.Margin%2A> i <xref:System.Windows.Forms.Control.Padding%2A> właściwości.  
+Precyzyjne rozmieszczenie kontrolek w formularzu jest wysokim priorytetem dla wielu aplikacji. Przestrzeń nazw <xref:System.Windows.Forms?displayProperty=nameWithType> zapewnia wiele funkcji układu do wykonania. Dwie najważniejsze są właściwościami <xref:System.Windows.Forms.Control.Margin%2A> i <xref:System.Windows.Forms.Control.Padding%2A>.  
   
- <xref:System.Windows.Forms.Control.Margin%2A> Właściwość definiuje miejsca wokół formantu, że przechowuje inne kontrolki w określonej odległości od obramowania formantu.  
+ Właściwość <xref:System.Windows.Forms.Control.Margin%2A> definiuje odstęp wokół formantu, który utrzymuje inne kontrolki o określonej odległości od obramowań kontrolek.  
   
- <xref:System.Windows.Forms.Control.Padding%2A> Właściwość definiuje miejsce wewnątrz kontrolki, która zachowuje zawartość formantu (na przykład, wartość jego <xref:System.Windows.Forms.Control.Text%2A> właściwości) w określonej odległości od obramowania formantu.  
+ Właściwość <xref:System.Windows.Forms.Control.Padding%2A> definiuje miejsce wewnątrz kontrolki, która utrzymuje zawartość kontrolki (na przykład wartość właściwości <xref:System.Windows.Forms.Control.Text%2A>) określoną odległość od obramowań kontrolek.  
   
- Poniższa ilustracja przedstawia <xref:System.Windows.Forms.Control.Padding%2A> i <xref:System.Windows.Forms.Control.Margin%2A> właściwości formantu.  
+ Na poniższej ilustracji przedstawiono <xref:System.Windows.Forms.Control.Padding%2A> i <xref:System.Windows.Forms.Control.Margin%2A> właściwości formantu.  
   
- ![Wypełnienie i margines Windows formantów formularzy](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
+ ![Uzupełnienie i margines dla kontrolek Windows Forms](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
- Brak obsługi w czasie projektowania dla tej funkcji w programie Visual Studio. Zobacz też [instruktażu: Układania Windows Forms kontrolek z dopełnienie, marginesy oraz właściwościami AutoSize](windows-forms-controls-padding-autosize.md).  
+ Dla tej funkcji w programie Visual Studio jest obsługiwana obsługa czasu projektowania. Zobacz również [Przewodnik: układowanie formantów Windows Forms z dopełnieniem, marginesami i właściwością AutoSize](windows-forms-controls-padding-autosize.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

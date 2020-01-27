@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: sprawdzanie poprawności danych wejściowych w kontrolce DataGrid formularzy systemu Windows'
+title: Sprawdzanie poprawności danych wejściowych za pomocą kontrolki DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-ms.openlocfilehash: dc8c8f157e6673c1bddc68bfb511683e6d2b99be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3958089007401d2e977c9c96f07c9196e6216596
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796477"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728301"
 ---
-# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Instrukcje: sprawdzanie poprawności danych wejściowych w kontrolce DataGrid formularzy systemu Windows
+# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Porady: sprawdzanie poprawności danych wejściowych w formancie DataGrid formularzy systemu Windows
 
 > [!NOTE]
-> <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
+> Formant <xref:System.Windows.Forms.DataGridView> zamienia i dodaje funkcje do kontrolki <xref:System.Windows.Forms.DataGrid>; Niemniej jednak kontrolka <xref:System.Windows.Forms.DataGrid> jest zachowywana na potrzeby zgodności z poprzednimi wersjami i w przyszłości. Aby uzyskać więcej informacji, zobacz [różnice między kontrolkami DataGridView i DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
 
-Istnieją dwa typy walidacji danych wejściowych w dostępnych dla formularzy Windows Forms <xref:System.Windows.Forms.DataGrid> kontroli. Jeśli użytkownik próbuje wprowadzić wartość jest typu danych nieodpowiednia dla komórki, na przykład ciąg na liczbę całkowitą, nowa wartość nieprawidłowa jest zastępowany starej wartości. Tego rodzaju Walidacja danych wejściowych odbywa się automatycznie i nie można dostosować.
+Dostępne są dwa typy walidacji danych wejściowych dla kontrolki <xref:System.Windows.Forms.DataGrid> Windows Forms. Jeśli użytkownik spróbuje wprowadzić wartość, która ma nieakceptowalny typ danych dla komórki, na przykład ciąg do liczby całkowitej, Nowa nieprawidłowa wartość zostanie zastąpiona starą wartością. Ten rodzaj walidacji danych wejściowych jest wykonywany automatycznie i nie można go dostosować.
 
-Typ sprawdzania poprawności danych wejściowych może służyć do odrzucenia nie do przyjęcia danych, na przykład wartość 0 w polu, które musi być większa lub równa 1 lub nieodpowiednie ciąg. Odbywa się w zestawie danych, pisząc program obsługi zdarzeń dla <xref:System.Data.DataTable.ColumnChanging> lub <xref:System.Data.DataTable.RowChanging> zdarzeń. W poniższym przykładzie użyto <xref:System.Data.DataTable.ColumnChanging> zdarzenie, ponieważ wartość można zaakceptować jest niedozwolone w szczególności dla kolumny "Product". Można na przykład <xref:System.Data.DataTable.RowChanging> zdarzeń do sprawdzania, czy wartość kolumny "Data zakończenia" jest nowsza niż kolumna "Data rozpoczęcia", w tym samym wierszu.
+Inny typ walidacji danych wejściowych może służyć do odrzucania wszelkich nieakceptowalnych danych, na przykład 0 wartość w polu, które musi być większe lub równe 1 lub nieodpowiedniemu ciągowi. W tym celu należy napisać program obsługi zdarzeń dla zdarzenia <xref:System.Data.DataTable.ColumnChanging> lub <xref:System.Data.DataTable.RowChanging>. Poniższy przykład używa zdarzenia <xref:System.Data.DataTable.ColumnChanging>, ponieważ nieakceptowalna wartość jest niedozwolona dla kolumny "Product" w szczególności. Możesz użyć zdarzenia <xref:System.Data.DataTable.RowChanging>, aby sprawdzić, czy wartość kolumny "Data końcowa" jest późniejsza niż kolumna "Data rozpoczęcia" w tym samym wierszu.
 
 ## <a name="to-validate-user-input"></a>Aby sprawdzić poprawność danych wejściowych użytkownika
 
-1. Napisz kod obsługujący <xref:System.Data.DataTable.ColumnChanging> zdarzenia dla odpowiedniej tabeli. Po wykryciu nieodpowiednie dane wejściowe, wywołaj <xref:System.Data.DataRow.SetColumnError%2A> metody <xref:System.Data.DataRow> obiektu.
+1. Napisz kod, aby obsłużyć zdarzenie <xref:System.Data.DataTable.ColumnChanging> dla odpowiedniej tabeli. Gdy wykryto Nieodpowiedni dane wejściowe, wywołaj metodę <xref:System.Data.DataRow.SetColumnError%2A> obiektu <xref:System.Data.DataRow>.
 
     ```vb
     Private Sub Customers_ColumnChanging(ByVal sender As Object, _
@@ -66,9 +66,9 @@ Typ sprawdzania poprawności danych wejściowych może służyć do odrzucenia n
     }
     ```
 
-2. Połącz program obsługi zdarzeń do zdarzenia.
+2. Połącz procedurę obsługi zdarzeń ze zdarzeniem.
 
-    Formularz miejsce poniżej kod w ramach jednej <xref:System.Windows.Forms.Form.Load> zdarzenia lub jego konstruktora.
+    Umieść poniższy kod w ramach zdarzenia <xref:System.Windows.Forms.Form.Load> lub jego konstruktora.
 
     ```vb
     ' Assumes the grid is bound to a dataset called customersDataSet1

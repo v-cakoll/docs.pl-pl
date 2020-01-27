@@ -2,15 +2,16 @@
 title: Zabezpieczenia odnajdywania — przykład
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 8469b69baabcd2ba9185956c276554b4bb929d85
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: cfee226f52bc5f001b2952b76b40ce0eb8aebceb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712054"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728852"
 ---
 # <a name="discovery-security-sample"></a>Zabezpieczenia odnajdywania — przykład
-Specyfikacja odnajdywania nie wymaga, aby punkty końcowe, które uczestniczą w procesie odnajdywania, były bezpieczne. Udoskonalenie komunikatów odnajdowania z zabezpieczeniami zmniejszają różne rodzaje ataków (zmiana komunikatów, odmowa usługi, powtarzanie, fałszowanie). Ten przykład implementuje niestandardowe kanały, które obliczają i weryfikują sygnatury komunikatów przy użyciu formatu podpisu kompaktowego (opisanego w sekcji 8,2 specyfikacji WS-Discovery). Przykład obsługuje [specyfikację odnajdywania 2005](https://go.microsoft.com/fwlink/?LinkId=177912) i [wersję 1,1](https://go.microsoft.com/fwlink/?LinkId=179677).  
+
+Specyfikacja odnajdywania nie wymaga, aby punkty końcowe, które uczestniczą w procesie odnajdywania, były bezpieczne. Udoskonalenie komunikatów odnajdowania z zabezpieczeniami zmniejszają różne rodzaje ataków (zmiana komunikatów, odmowa usługi, powtarzanie, fałszowanie). Ten przykład implementuje niestandardowe kanały, które obliczają i weryfikują sygnatury komunikatów przy użyciu formatu podpisu kompaktowego (opisanego w sekcji 8,2 specyfikacji WS-Discovery). Przykład obsługuje [specyfikację odnajdywania 2005](http://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf) i [wersję 1,1](http://docs.oasis-open.org/ws-dd/discovery/1.1/cs-01/wsdd-discovery-1.1-spec-cs-01.pdf).  
   
  Niestandardowy kanał jest stosowany na podstawie istniejącego stosu kanału w celu odnajdywania i punktów końcowych anonsów. W ten sposób nagłówek podpisu jest stosowany dla każdej wysyłanej wiadomości. Podpis jest weryfikowany dla odebranych komunikatów i niezgodnych lub gdy komunikaty nie mają podpisu, komunikaty są usuwane. Aby podpisać i zweryfikować komunikaty, przykład używa certyfikatów.  
   

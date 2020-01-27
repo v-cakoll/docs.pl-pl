@@ -2,12 +2,12 @@
 title: 'Wzorce projektowe: publikowanie/subskrybowanie oparte na liście'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 831e6947c0919e8112627ff0a0697592f598561b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3a62b09a29ec0b7e241bf2fdc09df6eaba5420c7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716342"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728826"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Wzorce projektowe: publikowanie/subskrybowanie oparte na liście
 Ten przykład ilustruje wzorzec publikowania/subskrybowania opartego na liście wdrożony jako program Windows Communication Foundation (WCF).  
@@ -15,7 +15,7 @@ Ten przykład ilustruje wzorzec publikowania/subskrybowania opartego na liście 
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Wzorzec projektowy publikowania/subskrybowania opartego na liście jest opisany w artykule wzorce firmy Microsoft dotyczące publikacji & praktyk, [wzorców integracji](https://go.microsoft.com/fwlink/?LinkId=95894). Wzorzec publikowania/subskrybowania przekazuje informacje do kolekcji adresatów, którzy subskrybują temat informacji. Publikowanie/subskrybowanie oparte na liście zachowuje listę subskrybentów. Gdy są informacje do udostępnienia, kopia jest wysyłana do każdego subskrybenta na liście. Ten przykład ilustruje dynamiczny wzorzec publikowania/subskrybowania opartego na listach, w którym klienci mogą subskrybować lub anulować subskrypcję, tak często, jak jest to wymagane.  
+ Wzorzec projektowy publikowania/subskrybowania opartego na liście jest opisany w artykule wzorce firmy Microsoft dotyczące publikacji & praktyk, [wzorców integracji](https://docs.microsoft.com/previous-versions/msp-n-p/ff647309(v=pandp.10)). Wzorzec publikowania/subskrybowania przekazuje informacje do kolekcji adresatów, którzy subskrybują temat informacji. Publikowanie/subskrybowanie oparte na liście zachowuje listę subskrybentów. Gdy są informacje do udostępnienia, kopia jest wysyłana do każdego subskrybenta na liście. Ten przykład ilustruje dynamiczny wzorzec publikowania/subskrybowania opartego na listach, w którym klienci mogą subskrybować lub anulować subskrypcję, tak często, jak jest to wymagane.  
   
  Przykład publikowania/subskrybowania opartego na liście składa się z klienta, usługi i programu źródła danych. Może istnieć więcej niż jeden klient i więcej niż jeden uruchomiony program źródła danych. Klienci subskrybują usługę, odbierają powiadomienia i anulują subskrypcję. Programy ze źródeł danych wysyłają do usługi informacje, które mają być współużytkowane z bieżącymi subskrybentami.  
   

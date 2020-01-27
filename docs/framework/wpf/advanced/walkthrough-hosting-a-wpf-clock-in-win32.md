@@ -1,19 +1,20 @@
 ---
-title: 'Wskazówki: Hosting zegara WPF w Win32'
+title: 'Przewodnik: hostowanie zegara WPF w Win32'
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 8d1f376a2c5b3f31407af0100d9a4417f7cff34e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 79f79e42652ca51c409fabb12a572485ad734b35
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740239"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744898"
 ---
-# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Wskazówki: Hosting zegara WPF w Win32
+# <a name="walkthrough-host-a-wpf-clock-in-win32"></a>Przewodnik: hostowanie zegara WPF w Win32
 
 Aby umieścić [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wewnątrz aplikacji Win32, użyj <xref:System.Windows.Interop.HwndSource>, która zapewnia Właściwość HWND, która zawiera [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość. Najpierw utwórz <xref:System.Windows.Interop.HwndSource>, podając parametry IT podobne do okna. Następnie poinformuj <xref:System.Windows.Interop.HwndSource> o zawartości [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]j, która ma być wewnątrz niej. Na koniec można uzyskać wartość parametru HWND z <xref:System.Windows.Interop.HwndSource>. W tym instruktażu pokazano, jak utworzyć mieszany [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wewnątrz aplikacji Win32, która ponownie implementuje okno dialogowe **Właściwości daty i godziny** systemu operacyjnego.
 

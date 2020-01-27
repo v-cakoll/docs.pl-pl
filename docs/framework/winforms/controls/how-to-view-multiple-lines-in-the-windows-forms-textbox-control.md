@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: wyświetlanie wielu wierszy w kontrolce TextBox formularzy systemu Windows'
+title: Wyświetl wiele wierszy w kontrolce TextBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - newline
@@ -11,48 +11,48 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: 893782e041b1397fe0598394b69575a5c9e53806
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 61ea671c1e86fa8254bfc1b043a46f3b7aa6af1d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625399"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728283"
 ---
-# <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Instrukcje: wyświetlanie wielu wierszy w kontrolce TextBox formularzy systemu Windows
-Domyślnie w formularzach Windows <xref:System.Windows.Forms.TextBox> kontrolka Wyświetla pojedynczą linie tekstu i nie są wyświetlane paski przewijania. Jeśli tekst jest dłuższy niż dostępna ilość miejsca, tylko część tekstu jest widoczna. To zachowanie domyślne można zmienić, ustawiając <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, i <xref:System.Windows.Forms.TextBox.ScrollBars%2A> właściwości odpowiednie wartości.  
+# <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Porady: wyświetlanie wielu wierszy w formancie TextBox formularzy systemu Windows
+Domyślnie formant Windows Forms <xref:System.Windows.Forms.TextBox> wyświetla pojedynczy wiersz tekstu i nie wyświetla pasków przewijania. Jeśli tekst jest dłuższy niż dostępne miejsce, widoczna jest tylko część tekstu. To zachowanie domyślne można zmienić, ustawiając właściwości <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>i <xref:System.Windows.Forms.TextBox.ScrollBars%2A> na odpowiednie wartości.  
   
-### <a name="to-display-a-carriage-return-in-the-textbox-control"></a>Aby wyświetlić znak powrotu karetki w formancie TextBox  
+### <a name="to-display-a-carriage-return-in-the-textbox-control"></a>Aby wyświetlić znak powrotu karetki w kontrolce TextBox  
   
-- Aby wyświetlić znak powrotu karetki w wielowierszowym <xref:System.Windows.Forms.TextBox>, użyj <xref:System.Environment.NewLine%2A> właściwości.  
+- Aby wyświetlić znak powrotu karetki w <xref:System.Windows.Forms.TextBox>wielowierszowym, należy użyć właściwości <xref:System.Environment.NewLine%2A>.  
   
-     Należy pamiętać, że interpretacji znaków ucieczki (\\) jest specyficzny dla języka. Visual Basic stosuje `Chr$(13) & Chr$(10)` przy użyciu kombinacji znak powrotu karetki, jak powrotu i wysuwu wiersza.  
+     Należy pamiętać, że interpretacja znaków ucieczki (\\) jest specyficzna dla języka. Visual Basic używa `Chr$(13) & Chr$(10)` kombinacji znaków powrotu karetki i znaku wysuwu wiersza.  
   
-### <a name="to-view-multiple-lines-in-the-textbox-control"></a>Aby wyświetlić wiele wierszy w formancie TextBox  
+### <a name="to-view-multiple-lines-in-the-textbox-control"></a>Aby wyświetlić wiele wierszy w kontrolce TextBox  
   
-1. Ustaw <xref:System.Windows.Forms.TextBox.Multiline%2A> właściwość `true`. Jeśli <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> jest `true` (ustawienie domyślne), następnie pojawi się jako jeden lub więcej akapitów tekstu w kontrolce; w przeciwnym razie zostanie wyświetlony jako listy, w której niektóre linie mogą zostać obcięte na brzegu kontrolki.  
+1. Ustaw <xref:System.Windows.Forms.TextBox.Multiline%2A> właściwość `true`. Jeśli <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> jest `true` (domyślnie), tekst w kontrolce będzie wyświetlany jako jeden lub więcej akapitów; w przeciwnym razie pojawi się jako lista, w której niektóre wiersze mogą być przycinane na krawędzi formantu.  
   
-2. Ustaw <xref:System.Windows.Forms.TextBox.ScrollBars%2A> właściwość do odpowiedniej wartości.  
+2. Ustaw właściwość <xref:System.Windows.Forms.TextBox.ScrollBars%2A> na odpowiednią wartość.  
   
     |Wartość|Opis|  
     |-----------|-----------------|  
-    |<xref:System.Windows.Forms.ScrollBars.None>|Użyj tej wartości, jeśli tekst będzie akapitu, prawie zawsze pasuje do formantu. Użytkownik może użyć wskaźnika myszy, aby poruszać się wewnątrz formantu, jeśli tekst jest zbyt długa, aby wyświetlić wszystkie na raz.|  
-    |<xref:System.Windows.Forms.ScrollBars.Horizontal>|Użyj tej wartości, jeśli chcesz wyświetlić listę wierszy, z których część może być dłuższy niż szerokość <xref:System.Windows.Forms.TextBox> kontroli.|  
+    |<xref:System.Windows.Forms.ScrollBars.None>|Użyj tej wartości, jeśli tekst będzie akapitem, który prawie zawsze pasuje do formantu. Użytkownik może użyć wskaźnika myszy, aby poruszać się wewnątrz kontrolki, jeśli tekst jest zbyt długi, aby wyświetlić go jednocześnie.|  
+    |<xref:System.Windows.Forms.ScrollBars.Horizontal>|Użyj tej wartości, jeśli chcesz wyświetlić listę linii, a niektóre z nich mogą być dłuższe niż szerokość kontrolki <xref:System.Windows.Forms.TextBox>.|  
     |<xref:System.Windows.Forms.ScrollBars.Both>|Użyj tej wartości, jeśli lista może być dłuższa niż wysokość formantu.|  
   
-3. Ustaw <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> właściwość do odpowiedniej wartości.  
+3. Ustaw właściwość <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> na odpowiednią wartość.  
   
     |Wartość|Opis|  
     |-----------|-----------------|  
-    |`false`|Tekst w kontrolce nie będzie automatycznie zawijany, dzięki czemu będzie ona przewiń w prawo aż do osiągnięcia końca wiersza. Użyj tej wartości, jeśli została wybrana opcja <xref:System.Windows.Forms.ScrollBars.Horizontal> paski przewijania lub <xref:System.Windows.Forms.ScrollBars.Both>powyżej.|  
-    |`true` (ustawienie domyślne)|Poziomy pasek przewijania nie będzie widoczna. Użyj tej wartości, jeśli została wybrana opcja <xref:System.Windows.Forms.ScrollBars.Vertical> paski przewijania lub <xref:System.Windows.Forms.ScrollBars.None>powyżej, aby wyświetlić jeden lub więcej akapitów.|  
+    |`false`|Tekst w kontrolce nie zostanie automatycznie opakowany, więc przewinięcie w prawo do momentu osiągnięcia końca wiersza. Użyj tej wartości, jeśli wybrano <xref:System.Windows.Forms.ScrollBars.Horizontal> paski przewijania lub <xref:System.Windows.Forms.ScrollBars.Both>, powyżej.|  
+    |`true` (wartość domyślna)|Poziomy pasek przewijania nie zostanie wyświetlony. Użyj tej wartości, jeśli wybrano <xref:System.Windows.Forms.ScrollBars.Vertical> paski przewijania lub <xref:System.Windows.Forms.ScrollBars.None>, aby wyświetlić jeden lub więcej akapitów.|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox, kontrolka — omówienie](textbox-control-overview-windows-forms.md)
-- [Instrukcje: Kontrolowanie punktu wstawiania w formancie TextBox formularzy Windows](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Instrukcje: Tworzenie pola tekstowego hasła za pomocą kontrolki TextBox formularzy Windows](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Instrukcje: Tworzenie pola tekstowego tylko do odczytu](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Instrukcje: Umieszczanie cudzysłowu w ciągu](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Instrukcje: Zaznaczanie tekstu w formancie TextBox formularzy Windows](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Instrukcje: kontrolowanie punktu wstawiania w kontrolce TextBox formularzy Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Instrukcje: tworzenie pola tekstowego hasła za pomocą kontrolki TextBox formularzy Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Instrukcje: tworzenie pola tekstowego tylko do odczytu](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Instrukcje: umieszczanie cudzysłowu w ciągu](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Instrukcje: zaznaczanie tekstu w kontrolce TextBox formularzy Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
 - [TextBox, kontrolka](textbox-control-windows-forms.md)

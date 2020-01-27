@@ -1,5 +1,5 @@
 ---
-title: Rozszerzenia znacznikowania i WPF XAML
+title: Rozszerzenia znaczników i XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - brace character [WPF]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: a9e0657aa9f9dd4de0ff3f8788c686bf1535b1ad
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: f4134e9d0b26135d1bd6058ac9ed8941a9c6be34
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559797"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727898"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Rozszerzenia znacznikowania i WPF XAML
 W tym temacie przedstawiono koncepcję rozszerzeń znaczników dla języka XAML, w tym ich reguły składni, przeznaczenie i model obiektów klasy, które są na siebie zależne. Rozszerzenia znaczników są ogólną cechą języka XAML i implementacją platformy .NET usług XAML. W tym temacie szczegółowo opisano rozszerzenia znaczników do użycia w języku XAML WPF.  

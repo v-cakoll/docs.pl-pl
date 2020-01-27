@@ -2,12 +2,12 @@
 title: Przykład odnajdywania z zakresami
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: 23991002a5236c491a9f74c7efe71ceb2bf51a37
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8ba5618f472fc8a6e1751776060f99103a67a073
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712064"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728753"
 ---
 # <a name="discovery-with-scopes-sample"></a>Przykład odnajdywania z zakresami
 
@@ -23,7 +23,7 @@ Metoda `FindCalculatorServiceAddress()` pokazuje, jak używać <xref:System.Serv
 
 ### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1. Ten przykład korzysta z punktów końcowych HTTP i do uruchomienia tego przykładu należy dodać prawidłowe listy ACL adresów URL. Aby uzyskać szczegółowe informacje [, zobacz Konfigurowanie protokołów HTTP i https](https://go.microsoft.com/fwlink/?LinkId=70353) . Wykonanie następującego polecenia z podwyższonym poziomem uprawnień powinno spowodować dodanie odpowiednich list ACL. Możesz chcieć zastąpić domenę i nazwę użytkownika dla następujących argumentów, jeśli polecenie nie działa w następujący sposób: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
+1. Ten przykład korzysta z punktów końcowych HTTP i do uruchomienia tego przykładu należy dodać prawidłowe listy ACL adresów URL. Aby uzyskać więcej informacji, zobacz [Konfigurowanie protokołów HTTP i https](../feature-details/configuring-http-and-https.md). Wykonanie następującego polecenia z podwyższonym poziomem uprawnień powinno spowodować dodanie odpowiednich list ACL. Możesz chcieć zastąpić domenę i nazwę użytkownika dla następujących argumentów, jeśli polecenie nie działa w następujący sposób: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
 
 2. Skompiluj rozwiązanie.
 

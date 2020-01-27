@@ -1,5 +1,5 @@
 ---
-title: Przegląd Dodatki WPF
+title: Omówienie dodatków
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add-ins and XAML browser applications [WPF]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 93904e308932ea41c736ca849ce0efb200502a7e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421099"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738940"
 ---
 # <a name="wpf-add-ins-overview"></a>Przegląd Dodatki WPF
 
@@ -252,7 +252,7 @@ Z natury <xref:System.Windows.Interop.HwndHost> ma pewne ograniczenia, które ma
 
 ## <a name="wpf-add-in-benefits"></a>Zalety dodatków WPF
 
-Ponieważ interfejsy użytkownika dodatku WPF są wyświetlane z aplikacji hosta przy użyciu wewnętrznej klasy, która pochodzi od <xref:System.Windows.Interop.HwndHost>, te interfejsy użytkownika są ograniczone przez możliwości <xref:System.Windows.Interop.HwndHost> w odniesieniu do usług interfejsu użytkownika WPF, takich jak układ, renderowanie, dane powiązanie, style, szablony i zasoby. Jednak WPF rozszerza swoją wewnętrzną podklasę <xref:System.Windows.Interop.HwndHost> z dodatkowymi możliwościami, które obejmują następujące elementy:
+Ponieważ interfejsy użytkownika dodatku WPF są wyświetlane z aplikacji hosta przy użyciu wewnętrznej klasy, która pochodzi od <xref:System.Windows.Interop.HwndHost>, te interfejsy użytkownika są ograniczone przez możliwości <xref:System.Windows.Interop.HwndHost> w odniesieniu do usług interfejsu użytkownika WPF, takich jak układ, renderowanie, powiązanie danych, style, szablony i zasoby. Jednak WPF rozszerza swoją wewnętrzną podklasę <xref:System.Windows.Interop.HwndHost> z dodatkowymi możliwościami, które obejmują następujące elementy:
 
 - Tabulacja między interfejsem użytkownika aplikacji hosta i interfejsem użytkownika dodatku. Należy pamiętać, że model programowania "dodatek jest interfejsem użytkownika" wymaga adaptera dodatku, aby przesłonić <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>, aby włączyć funkcję tabulacji, niezależnie od tego, czy dodatek jest w pełni zaufany, czy częściowo zaufany.
 

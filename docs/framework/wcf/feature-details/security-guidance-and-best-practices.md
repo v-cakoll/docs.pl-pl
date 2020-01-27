@@ -4,27 +4,28 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - secure applications [WCF]
 ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
-ms.openlocfilehash: dbe460888400735e0950e7a34372d8540e236303
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db637b2e44b17e2c36843ffc3ec396fd70862757
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749543"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728916"
 ---
-# <a name="security-guidance-and-best-practices"></a><span data-ttu-id="9094c-102">Wytyczne dotyczące zabezpieczeń i najlepsze rozwiązania</span><span class="sxs-lookup"><span data-stu-id="9094c-102">Security Guidance and Best Practices</span></span>
-<span data-ttu-id="9094c-103">Tematy w tej sekcji przedstawiają wskazówek dotyczących oraz elementów do uwzględnienia podczas tworzenia bezpiecznych aplikacji Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="9094c-103">The topics in this section present guidance for and items to consider when creating secure Windows Communication Foundation (WCF) applications.</span></span> <span data-ttu-id="9094c-104">Aby uzyskać więcej informacji na temat systemu Windows Server AppFabric i zabezpieczeń, zobacz [zabezpieczeń modelu dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span><span class="sxs-lookup"><span data-stu-id="9094c-104">For more information about Windows Server AppFabric and security see, [Security Model for Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="9094c-105">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="9094c-105">In this Section</span></span>  
- [<span data-ttu-id="9094c-106">Najlepsze rozwiązania dotyczące zabezpieczeń</span><span class="sxs-lookup"><span data-stu-id="9094c-106">Best Practices for Security</span></span>](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
- <span data-ttu-id="9094c-107">Zalecenia, aby pomóc w zabezpieczaniu aplikacji.</span><span class="sxs-lookup"><span data-stu-id="9094c-107">Recommendations to help you secure your applications.</span></span>  
-  
- [<span data-ttu-id="9094c-108">Zagadnienia dotyczące bezpieczeństwa</span><span class="sxs-lookup"><span data-stu-id="9094c-108">Security Considerations</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- <span data-ttu-id="9094c-109">Elementy, aby wziąć pod uwagę podczas tworzenia aplikacji WCF.</span><span class="sxs-lookup"><span data-stu-id="9094c-109">Items to consider when creating a WCF application.</span></span>  
-  
- [<span data-ttu-id="9094c-110">Zagadnienia dotyczące wydajności</span><span class="sxs-lookup"><span data-stu-id="9094c-110">Performance Considerations</span></span>](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
- <span data-ttu-id="9094c-111">Zawiera wpisy związane z wydajnością i bezpieczeństwem.</span><span class="sxs-lookup"><span data-stu-id="9094c-111">Contains entries related to performance and security.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="9094c-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9094c-112">See also</span></span>
+# <a name="security-guidance-and-best-practices"></a><span data-ttu-id="117cc-102">Wytyczne dotyczące zabezpieczeń i najlepsze rozwiązania</span><span class="sxs-lookup"><span data-stu-id="117cc-102">Security Guidance and Best Practices</span></span>
 
-- [<span data-ttu-id="9094c-113">Podstawy programowania przy użyciu programu WCF</span><span class="sxs-lookup"><span data-stu-id="9094c-113">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [<span data-ttu-id="9094c-114">Model zabezpieczeń dla systemu Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="9094c-114">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+<span data-ttu-id="117cc-103">W artykułach w tej sekcji znajdują się wskazówki dotyczące i elementów, które należy wziąć pod uwagę podczas tworzenia bezpiecznych aplikacji Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="117cc-103">The articles in this section present guidance for and items to consider when creating secure Windows Communication Foundation (WCF) applications.</span></span> <span data-ttu-id="117cc-104">Aby uzyskać więcej informacji na temat systemu Windows Server AppFabric i zabezpieczeń, zobacz [model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span><span class="sxs-lookup"><span data-stu-id="117cc-104">For more information about Windows Server AppFabric and security, see [Security Model for Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span></span>  
+  
+## <a name="in-this-section"></a><span data-ttu-id="117cc-105">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="117cc-105">In this Section</span></span>  
+ [<span data-ttu-id="117cc-106">Najlepsze rozwiązania dotyczące zabezpieczeń</span><span class="sxs-lookup"><span data-stu-id="117cc-106">Best Practices for Security</span></span>](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
+ <span data-ttu-id="117cc-107">Zalecenia ułatwiające zabezpieczanie aplikacji.</span><span class="sxs-lookup"><span data-stu-id="117cc-107">Recommendations to help you secure your applications.</span></span>  
+  
+ [<span data-ttu-id="117cc-108">Zagadnienia dotyczące bezpieczeństwa</span><span class="sxs-lookup"><span data-stu-id="117cc-108">Security Considerations</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ <span data-ttu-id="117cc-109">Elementy, które należy wziąć pod uwagę podczas tworzenia aplikacji WCF.</span><span class="sxs-lookup"><span data-stu-id="117cc-109">Items to consider when creating a WCF application.</span></span>  
+  
+ [<span data-ttu-id="117cc-110">Zagadnienia dotyczące wydajności</span><span class="sxs-lookup"><span data-stu-id="117cc-110">Performance Considerations</span></span>](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
+ <span data-ttu-id="117cc-111">Zawiera wpisy związane z wydajnością i zabezpieczeniami.</span><span class="sxs-lookup"><span data-stu-id="117cc-111">Contains entries related to performance and security.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="117cc-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="117cc-112">See also</span></span>
+
+- [<span data-ttu-id="117cc-113">Podstawy programowania przy użyciu programu WCF</span><span class="sxs-lookup"><span data-stu-id="117cc-113">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- <span data-ttu-id="117cc-114">[Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span><span class="sxs-lookup"><span data-stu-id="117cc-114">[Security Model for Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span></span>

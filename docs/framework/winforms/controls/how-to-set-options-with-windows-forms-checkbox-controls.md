@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: ustawianie opcji za pomocą kontrolek CheckBox formularzy systemu Windows'
+title: Ustawianie opcji za pomocą kontrolek CheckBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: 881996563acef36a1981ca6236c155b8fc56ef0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84198eab42aa02b1bb37fa16a3c4247a37f58a10
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013208"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746765"
 ---
-# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Instrukcje: ustawianie opcji za pomocą kontrolek CheckBox formularzy systemu Windows
-Formularze Windows <xref:System.Windows.Forms.CheckBox> formantu umożliwia użytkownikom True/False lub opcji Yes/No. Kontrolka wyświetla znacznik wyboru, gdy jest wybrana.  
+# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Porady: ustawianie opcji za pomocą formantów CheckBox formularzy systemu Windows
+Kontrolka <xref:System.Windows.Forms.CheckBox> Windows Forms służy do nadawania użytkownikom wartości PRAWDA/FAŁSZ lub tak/nie. Kontrolka Wyświetla znacznik wyboru, gdy jest zaznaczone.  
   
-### <a name="to-set-options-with-checkbox-controls"></a>Aby ustawić opcje za pomocą formantów CheckBox  
+### <a name="to-set-options-with-checkbox-controls"></a>Aby ustawić opcje z kontrolkami CheckBox  
   
-1. Sprawdź wartość <xref:System.Windows.Forms.CheckBox.Checked%2A> właściwości, aby ustalić jego stan, a następnie użyj tej wartości, aby ustawić opcję.  
+1. Sprawdź wartość właściwości <xref:System.Windows.Forms.CheckBox.Checked%2A>, aby określić jej stan, i Użyj tej wartości, aby ustawić opcję.  
   
-     W przykładowym kodzie poniżej, kiedy <xref:System.Windows.Forms.CheckBox> kontrolki <xref:System.Windows.Forms.CheckBox.CheckedChanged> zdarzenie jest zgłaszane, formularza <xref:System.Windows.Forms.Control.AllowDrop%2A> właściwość jest ustawiona na `false` Jeśli zaznaczono pole wyboru. Jest to przydatne w sytuacjach, w której chcesz ograniczyć interakcji z użytkownikiem.  
+     W poniższym przykładzie kodu, gdy zostanie wywołane zdarzenie <xref:System.Windows.Forms.CheckBox.CheckedChanged> formantu <xref:System.Windows.Forms.CheckBox>, właściwość <xref:System.Windows.Forms.Control.AllowDrop%2A> formularza jest ustawiona na `false`, jeśli pole wyboru jest zaznaczone. Jest to przydatne w sytuacjach, w których chcesz ograniczyć interakcję z użytkownikiem.  
   
     ```vb  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, _  
@@ -69,5 +69,5 @@ Formularze Windows <xref:System.Windows.Forms.CheckBox> formantu umożliwia uży
 
 - <xref:System.Windows.Forms.CheckBox>
 - [CheckBox, kontrolka — omówienie](checkbox-control-overview-windows-forms.md)
-- [Instrukcje: Odpowiadanie do formularzy Windows Forms kliknięcia kontrolki CheckBox](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [Instrukcje: odpowiadanie na kliknięcia kontrolki CheckBox formularzy Windows Forms](how-to-respond-to-windows-forms-checkbox-clicks.md)
 - [CheckBox, kontrolka](checkbox-control-windows-forms.md)

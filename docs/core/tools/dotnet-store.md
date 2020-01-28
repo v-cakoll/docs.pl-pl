@@ -1,14 +1,13 @@
 ---
 title: polecenie magazynu dotnet
 description: Polecenie "Sklep dotnet" przechowuje określone zestawy w magazynie pakietów środowiska uruchomieniowego.
-author: bleroy
 ms.date: 05/29/2018
-ms.openlocfilehash: 3a81e06f36ffbed68b7cc35de47aa5dca32bab6e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cc5b4b6160ba296e1529f006c15e238746d9e08a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714198"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733055"
 ---
 # <a name="dotnet-store"></a>dotnet store
 

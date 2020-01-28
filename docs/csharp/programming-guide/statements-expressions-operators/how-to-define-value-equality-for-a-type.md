@@ -8,16 +8,18 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 5eb1aaf96097d2c00cb04e24e65e01464f5f00c6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c911dc1d0aa36ab8e57fb8a77a52d9cec20743c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711977"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745393"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Jak zdefiniować równość wartości dla typu (C# Przewodnik programowania)
 
-Podczas definiowania klasy lub struktury należy zdecydować, czy warto utworzyć niestandardową definicję równości (lub równoważności) dla typu. Zazwyczaj należy zaimplementować równość wartości, gdy obiekty typu powinny być dodawane do kolekcji niektórych rodzajów sortowania, lub gdy ich głównym celem jest przechowywanie zestawu pól lub właściwości. Można oprzeć swoją definicję równości wartości na porównaniu wszystkich pól i właściwości w typie lub oprzeć definicję w podzbiorze. Jednak w obu przypadkach i w obu klasach i strukturach implementacja powinna być zgodna z pięcioma gwarancjami równoważności:  
+Podczas definiowania klasy lub struktury należy zdecydować, czy warto utworzyć niestandardową definicję równości (lub równoważności) dla typu. Zazwyczaj należy zaimplementować równość wartości, gdy obiekty typu powinny być dodawane do kolekcji niektórych rodzajów sortowania, lub gdy ich głównym celem jest przechowywanie zestawu pól lub właściwości. Można oprzeć swoją definicję równości wartości na porównaniu wszystkich pól i właściwości w typie lub oprzeć definicję w podzbiorze. 
+
+W obu przypadkach i w obu klasach i strukturach implementacja powinna być zgodna z pięcioma gwarancjami równoważności (w przypadku następujących zasad Załóżmy, że `x`, `y` i `z` nie są puste):  
   
 1. `x.Equals(x)` zwraca `true`. Jest to nazywane właściwością zwrotną.  
   
@@ -27,8 +29,8 @@ Podczas definiowania klasy lub struktury należy zdecydować, czy warto utworzy�
   
 4. Kolejne wywołania `x.Equals(y)` zwracają tę samą wartość, o ile obiekty, do których odwołuje się x i y, nie są modyfikowane.  
   
-5. `x.Equals(null)` zwraca `false`. Jednak `null.Equals(null)` zgłasza wyjątek; nie przestrzega powyższego numeru reguły.  
-  
+5. Wartość inna niż null nie jest równa null. Jednak środowisko CLR sprawdza obecność wartości null we wszystkich wywołaniach metod i zgłasza `NullReferenceException`, jeśli odwołanie `this` będzie miało wartość null. W związku z tym, `x.Equals(y)` zgłasza wyjątek, gdy `x` ma wartość null. Powoduje to przerwanie reguł 1 lub 2, w zależności od argumentu `Equals`.
+ 
  Każda zdefiniowana struktura ma już domyślną implementację wartości równość, którą dziedziczy z <xref:System.ValueType?displayProperty=nameWithType> przesłonięcia metody <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. Ta implementacja używa odbicia w celu sprawdzenia wszystkich pól i właściwości w typie. Mimo że ta implementacja daje poprawne wyniki, jest stosunkowo mała w porównaniu z implementacją niestandardową, która jest przeznaczona dla danego typu.  
   
  Szczegóły implementacji dotyczące równości wartości są różne dla klas i struktur. Jednak obie klasy i struktury wymagają tych samych podstawowych kroków w celu wdrożenia równości:  
@@ -68,4 +70,4 @@ Podczas definiowania klasy lub struktury należy zdecydować, czy warto utworzy�
 ## <a name="see-also"></a>Zobacz także
 
 - [Porównania równości](equality-comparisons.md)
-- [Przewodnik programowania w języku C#](../index.md)
+- [C#Przewodnik programowania](../index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: zmienianie opóźnienia składnika ToolTip formularzy systemu Windows'
+title: Zmień opóźnienie składnika ToolTip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - tooltips [Windows Forms], delay values
 - examples [Windows Forms], tooltips
 ms.assetid: 08979ba7-dd84-477b-ab17-8d06e759be99
-ms.openlocfilehash: cf257cccd272c16c3d7c3d403456265444fc8ac8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ab0b0760e8c82d752eaada19f14cae57fa63fdc
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781241"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746590"
 ---
-# <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>Instrukcje: zmienianie opóźnienia składnika ToolTip formularzy systemu Windows
-Istnieje wiele wartości opóźnienia, które można ustawić dla formularzy Windows <xref:System.Windows.Forms.ToolTip> składnika. Jednostka miary dla tych właściwości jest milisekund. <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> Właściwość określa, jak długo użytkownik musi wskazywać na jest skojarzony formant ciąg etykietki narzędzi są wyświetlane. <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> Właściwość ustawia liczbę milisekund zajmuje kolejne parametry etykietki narzędzia wyświetlany jako myszy przesuwa się z jednego formantu skojarzone ToolTip do innego. <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> Właściwość określa długość czasu, jest wyświetlany ciąg etykietki narzędzia. Wartości te można ustawić indywidualnie lub przez ustawienie wartości <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> właściwości; opóźnienie, właściwości jest ustawiona na podstawie wartości przypisanej do <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> właściwości. Na przykład, gdy <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> jest ustawiona na wartość N, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> jest równa się N, <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> jest ustawiona na wartość <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> podzielona przez pięć (lub N na dobę, 5) i <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> jest ustawiona na wartość, która jest pięciokrotnie wartość <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> właściwości (lub 5 n).  
+# <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>Porady: zmienianie opóźnienia składnika ToolTip formularzy systemu Windows
+Istnieje wiele wartości opóźnienia, które można ustawić dla składnika <xref:System.Windows.Forms.ToolTip> Windows Forms. Jednostką miary dla wszystkich tych właściwości jest milisekund. Właściwość <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> określa, jak długo użytkownik musi wskazywać w skojarzonym formancie ciąg etykietki narzędzia do wyświetlenia. Właściwość <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> ustawia liczbę milisekund, jaką zajmie kolejny ciąg etykietki narzędzia, gdy wskaźnik myszy zostanie przeniesiony z jednej etykietki narzędzia do innej. Właściwość <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> określa długość czasu wyświetlania ciągu etykietki narzędzia. Można ustawić te wartości pojedynczo lub przez ustawienie wartości właściwości <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>; inne właściwości opóźnienia są ustawiane na podstawie wartości przypisanej do właściwości <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>. Na przykład, gdy <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> jest ustawiona na wartość N, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> jest ustawiona na N, <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> jest ustawiona na wartość <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> podzielona przez pięć (lub N/5), a <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> jest ustawiona na wartość, która jest pięć razy większa niż wartość właściwości <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> (lub 5N).  
   
 ### <a name="to-set-the-delay"></a>Aby ustawić opóźnienie  
   
-1. Ustaw następujące właściwości, jak pokazano w poniższym przykładzie.  
+1. Ustaw następujące właściwości, jak pokazano w tym przykładzie.  
   
     ```vb  
     ToolTip1.InitialDelay = 500  
@@ -45,5 +45,5 @@ Istnieje wiele wartości opóźnienia, które można ustawić dla formularzy Win
 ## <a name="see-also"></a>Zobacz także
 
 - [ToolTip, składnik — omówienie](tooltip-component-overview-windows-forms.md)
-- [Instrukcje: Ustawienie elementu ToolTips dla formantów w formularzu Windows w czasie projektowania](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
+- [Instrukcje: ustawienie elementu ToolTips dla kontrolek w formularzu systemu Windows w czasie projektowania](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
 - [ToolTip, składnik](tooltip-component-windows-forms.md)

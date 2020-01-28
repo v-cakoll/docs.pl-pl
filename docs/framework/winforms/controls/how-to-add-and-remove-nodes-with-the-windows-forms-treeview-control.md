@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: dodawanie i usuwanie węzłów za pomocą kontrolki TreeView formularzy systemu Windows'
+title: Dodawanie i usuwanie węzłów z kontrolką TreeView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: de1b82db-4905-449a-9f59-af271a6b6673
-ms.openlocfilehash: 4cbb5fbdb24790a7ddbce5c38060703c7ba7024a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 02b3a7286798c6f2a6426e09c8fc6c18b74a6bf0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326895"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731958"
 ---
-# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>Instrukcje: dodawanie i usuwanie węzłów za pomocą kontrolki TreeView formularzy systemu Windows
-Formularze Windows <xref:System.Windows.Forms.TreeView> formant przechowuje węzłów najwyższego poziomu w jego <xref:System.Windows.Forms.TreeView.Nodes%2A> kolekcji. Każdy <xref:System.Windows.Forms.TreeNode> ma również swój własny <xref:System.Windows.Forms.TreeNode.Nodes%2A> kolekcji do przechowywania jego węzłów podrzędnych. Obie te właściwości kolekcji mają wartości typu <xref:System.Windows.Forms.TreeNodeCollection>, udostępniającej elementy członkowskie kolekcji standardowych, które pozwalają na dodawanie, usuwanie i rozmieszczanie węzłów o jeden poziom w hierarchii węzła.  
+# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>Porady: dodawanie i usuwanie węzłów za pomocą formantu TreeView formularzy systemu Windows
+Formant Windows Forms <xref:System.Windows.Forms.TreeView> przechowuje węzły najwyższego poziomu w swojej kolekcji <xref:System.Windows.Forms.TreeView.Nodes%2A>. Każdy <xref:System.Windows.Forms.TreeNode> również ma własną kolekcję <xref:System.Windows.Forms.TreeNode.Nodes%2A> do przechowywania węzłów podrzędnych. Obie właściwości kolekcji są typu <xref:System.Windows.Forms.TreeNodeCollection>, który zawiera standardowe elementy kolekcji, które umożliwiają dodawanie, usuwanie i zmienianie układu węzłów na jednym poziomie hierarchii węzłów.  
   
 ### <a name="to-add-nodes-programmatically"></a>Aby programowo dodać węzły  
   
-1. Użyj <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> metoda widok drzewa <xref:System.Windows.Forms.TreeView.Nodes%2A> właściwości.  
+1. Użyj metody <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> właściwości <xref:System.Windows.Forms.TreeView.Nodes%2A> widoku drzewa.  
   
     ```vb  
     ' Adds new node as a child node of the currently selected node.  
@@ -45,7 +45,7 @@ Formularze Windows <xref:System.Windows.Forms.TreeView> formant przechowuje węz
   
 ### <a name="to-remove-nodes-programmatically"></a>Aby programowo usunąć węzły  
   
-1. Użyj <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> metoda widok drzewa <xref:System.Windows.Forms.TreeView.Nodes%2A> właściwości do usunięcia jeden węzeł lub <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> metodę, aby wyczyścić wszystkie węzły.  
+1. Użyj metody <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> właściwości <xref:System.Windows.Forms.TreeView.Nodes%2A> widoku drzewa, aby usunąć pojedynczy węzeł, lub metodę <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A>, aby wyczyścić wszystkie węzły.  
   
     ```vb  
     ' Removes currently selected node, or root if nothing is selected.  
@@ -74,7 +74,7 @@ Formularze Windows <xref:System.Windows.Forms.TreeView> formant przechowuje węz
 
 - [TreeView, kontrolka](treeview-control-windows-forms.md)
 - [TreeView, kontrolka — omówienie](treeview-control-overview-windows-forms.md)
-- [Instrukcje: Ustawienie ikon dla kontrolki TreeView formularzy Windows](how-to-set-icons-for-the-windows-forms-treeview-control.md)
-- [Instrukcje: Iterowanie wszystkich węzłów kontrolki TreeView formularzy Windows](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [Instrukcje: Określanie, który węzeł TreeView został kliknięty](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [Instrukcje: Dodawanie niestandardowych informacji do TreeView lub ListView — formant (formularze Windows)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Instrukcje: ustawienie ikon dla kontrolki TreeView formularzy Windows Forms](how-to-set-icons-for-the-windows-forms-treeview-control.md)
+- [Instrukcje: iterowanie po wszystkich węzłach kontrolki TreeView formularzy Windows Forms](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [Instrukcje: określanie, który węzeł TreeView został kliknięty](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [Instrukcje: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

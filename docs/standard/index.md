@@ -1,30 +1,30 @@
 ---
 title: .NET — przewodnik
-description: Dowiedz się więcej na temat platformy .NET.
+description: Dowiedz się więcej na temat platformy .NET i .NET Standard.
 author: cartermp
-ms.date: 05/02/2017
+ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 8a989ed4ff0d670296fc255733d01ddd5b5a8f1e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ce76448b69a002216125192f75d24b38e7582260
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838107"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76730774"
 ---
 # <a name="net-guide"></a>.NET — przewodnik
 
-Przewodnik .NET zawiera dużą ilość informacji na temat platformy .NET.  W zależności od znajomości platformy .NET możesz zapoznać się z różnymi sekcjami tego przewodnika i innymi sekcjami dokumentacji programu .NET.
+Przewodnik .NET zawiera informacje na temat platformy .NET. W zależności od znajomości platformy .NET możesz zapoznać się z różnymi sekcjami tego przewodnika i innymi przewodnikami, takimi jak [.NET Core](../core/index.md) lub [.NET Framework](../framework/index.md).
 
 ## <a name="new-to-net"></a>Nowość w programie .NET
 
-Aby zapoznać się z ogólnym omówieniem platformy .NET, zobacz [co to jest .NET?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet).
+Jeśli chcesz uzyskać ogólne omówienie platformy .NET, zobacz [co to jest .NET?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet).
 
-Jeśli dopiero zaczynasz [korzystać](get-started.md) z platformy .NET, zapoznaj się z artykułem wprowadzenie.
+Jeśli dopiero zaczynasz korzystać z platformy .NET, zobacz [wprowadzenie](get-started.md).
 
-Jeśli wolisz korzystać z przewodnika po najważniejszych funkcjach platformy .NET, zapoznaj się [z przewodnikiem po platformie .NET](tour.md).
+Jeśli wolisz korzystać z przewodnika po najważniejszych funkcjach platformy .NET, zobacz [Przewodnik po platformie .NET](tour.md).
 
-Możesz również przeczytać o [składnikach architektury .NET](components.md) , aby zapoznać się z różnymi elementami "fragmentów" platformy .NET i sposobami ich dopasowania.
+Aby zapoznać się z omówieniem różnych elementów platformy .NET i ich dopasowania, zobacz [składniki architektury .NET](components.md).
 
 ## <a name="new-to-net-core"></a>Nowość w programie .NET Core
 
@@ -34,17 +34,13 @@ Jeśli dopiero zaczynasz korzystać z platformy .NET Core, zapoznaj się z temat
 
 Jeśli dopiero zaczynasz .NET Standard, zapoznaj się z [.NET Standard](net-standard.md).
 
-## <a name="porting-net-framework-code-to-net-core"></a>Przenoszenie kodu .NET Framework do programu .NET Core
+## <a name="port-net-framework-code-to-net-standard-or-net-core"></a>Port .NET Framework kod .NET Standard lub .NET Core
 
-Jeśli chcesz przenieść aplikację, usługę lub jakiś składnik systemu do programu .NET Core, zapoznaj [się z tematem przenoszenie do platformy .NET Core z .NET Framework](../core/porting/index.md).
+Aby przeportować aplikację, usługę, składnik lub pakiet NuGet do .NET Standard lub .NET Core, zobacz [port do .NET Core z .NET Framework](../core/porting/index.md). Narzędzia dla .NET Standard i .NET Core są udostępniane, więc zawartość jest odpowiednia do przenoszenia do obu platform.
 
-## <a name="porting-a-nuget-package-from-net-framework-to-net-standard-or-net-core"></a>Przenoszenie pakietu NuGet z .NET Framework do .NET Standard lub .NET Core
+## <a name="net-concepts"></a>Pojęcia związane z platformą .NET
 
-Jeśli chcesz przenieść pakiet NuGet do .NET Standard, zapoznaj się z tematem [przenoszenie do platformy .NET Core z .NET Framework](../core/porting/index.md).  Narzędzia dla .NET Standard i .NET Core są udostępniane, więc zawartość będzie istotna dla portów .NET Standard oraz .NET Core.
-
-## <a name="interested-in-major-net-concepts"></a>Interesuje Cię podstawowe koncepcje programu .NET
-
-Jeśli interesuje Cię niektóre główne koncepcje platformy .NET, zapoznaj się z tematem:
+Aby uzyskać więcej informacji na temat najważniejszych pojęć związanych z platformą .NET, zobacz:
 
 * [Składniki architektury .NET](components.md)
 * [.NET Standard](net-standard.md)
@@ -55,12 +51,12 @@ Jeśli interesuje Cię niektóre główne koncepcje platformy .NET, zapoznaj si�
 * [Daty, godziny i strefy czasowe](datetime/index.md)
 * [Programowanie asynchroniczne](async.md)
 
-Ponadto zapoznaj się z każdym przewodnikiem dotyczącym języka, aby dowiedzieć się więcej o trzech głównych językach .NET:
+Aby uzyskać informacje o trzech głównych językach .NET, zobacz:
 
-* [Przewodnik dla języka C#](../csharp/index.yml)
-* [Podręcznik języka F#](../fsharp/index.yml)
-* [Przewodnik po Visual Basic](../visual-basic/index.yml)
+* [C#prowadzą](../csharp/index.yml)
+* [F#prowadzą](../fsharp/index.yml)
+* [Przewodnik Visual Basic](../visual-basic/index.yml)
 
-## <a name="api-reference"></a>Odwołanie do biblioteki API
+## <a name="api-reference"></a>Odwołanie API
 
-Zapoznaj się z dokumentacją [interfejsu API platformy .NET](../../api/index.md) , aby zobaczyć dostępność dostępnych interfejsów API.
+Aby uzyskać szczegółowe informacje na temat wszystkich interfejsów API, które są dostępne w programie .NET, zobacz [Dokumentacja interfejsu API platformy .NET](../../api/index.md).

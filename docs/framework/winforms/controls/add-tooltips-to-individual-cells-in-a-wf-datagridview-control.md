@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: dodawanie elementu ToolTips do pojedynczych komórek w kontrolce DataGridView formularzy systemu Windows'
+title: Dodaj etykietki narzędzi do poszczególnych komórek w formancie DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding tooltips
 - data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
-ms.openlocfilehash: d0e9b3ad742633b135a2fe1c00af3fa72af7b44a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac86db5fa27a95adb20888cd59b5e236941d9177
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663456"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732183"
 ---
-# <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Instrukcje: dodawanie elementu ToolTips do pojedynczych komórek w kontrolce DataGridView formularzy systemu Windows
-Domyślnie, etykietki narzędzi są używane do wyświetlania wartości <xref:System.Windows.Forms.DataGridView> komórki, które są zbyt małe, aby wyświetlić jego całą zawartość. Można jednak zmienić to zachowanie, można ustawić wartości tekst etykietki narzędzia dla poszczególnych komórek. Jest to przydatne, mają być wyświetlane użytkownikom dodatkowe informacje na temat komórki lub w celu zapewnienia użytkownikom alternatywny opis zawartości komórki. Na przykład w przypadku wiersza, który wyświetla ikony stanu może być zapewnienie tekst wyjaśnienia przy użyciu etykietek narzędzi.  
+# <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Porady: dodawanie elementu ToolTips do pojedynczych komórek w formancie DataGridView formularzy systemu Windows
+Domyślnie etykietki narzędzi są używane do wyświetlania wartości <xref:System.Windows.Forms.DataGridView> komórek, które są zbyt małe, aby wyświetlić całą zawartość. Można jednak zastąpić to zachowanie, aby ustawić wartości tekstowe etykietki narzędzia dla poszczególnych komórek. Jest to przydatne w przypadku wyświetlania użytkownikom dodatkowych informacji o komórce lub zapewnienia użytkownikom alternatywnego opisu zawartości komórki. Na przykład jeśli masz wiersz, w którym są wyświetlane ikony stanu, możesz podać wyjaśnienie tekstu przy użyciu etykietek narzędzi.  
   
- Wyświetlanie etykietek narzędzi w komórce poziomu można również wyłączyć, ustawiając <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType> właściwość `false`.  
+ Możesz również wyłączyć wyświetlanie etykietek na poziomie komórki, ustawiając właściwość <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType> na `false`.  
   
-### <a name="to-add-a-tooltip-to-a-cell"></a>Aby dodać etykietka narzędzia komórki  
+### <a name="to-add-a-tooltip-to-a-cell"></a>Aby dodać etykietkę narzędzia do komórki  
   
-- Ustaw <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType> właściwości.  
+- Ustaw właściwość <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType>.  
   
      [!code-cpp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/cpp/datagridviewcell.tooltiptext.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/CS/datagridviewcell.tooltiptext.cs#1)]
@@ -34,12 +34,12 @@ Domyślnie, etykietki narzędzi są używane do wyświetlania wartości <xref:Sy
   
 - Ten przykład wymaga:  
   
-- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1` zawierającą kolumnę o nazwie `Rating` do wyświetlania wartości ciągu o jeden przez cztery gwiazdki ("*") symboli. <xref:System.Windows.Forms.DataGridView.CellFormatting> Zdarzeń formantu musi być skojarzony z metody obsługi zdarzeń, jak pokazano w przykładzie.  
+- Kontrolka <xref:System.Windows.Forms.DataGridView> o nazwie `dataGridView1`, która zawiera kolumnę o nazwie `Rating` do wyświetlania wartości ciągów jednego z czterech gwiazdek ("*"). Zdarzenie <xref:System.Windows.Forms.DataGridView.CellFormatting> formantu musi być skojarzone z metodą obsługi zdarzeń pokazaną w przykładzie.  
   
-- Odwołuje się do <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
+- Odwołania do zestawów <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
- Po powiązaniu <xref:System.Windows.Forms.DataGridView> sterowania do zewnętrznego źródła danych lub zapewnić źródła danych, implementowanie trybu wirtualnego, mogą wystąpić problemy z wydajnością. Aby uniknąć spadek wydajności, podczas pracy z dużymi ilościami danych, obsługa <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> zdarzeń, a nie ustawienie <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> właściwości wielu komórek. Podczas obsługi tego zdarzenia pobierania wartości komórki <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> właściwość wywołuje zdarzenie i zwraca wartość <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> właściwość jako określonych w zdarzeniu programu obsługi.  
+## <a name="robust-programming"></a>Skuteczne programowanie  
+ Po powiązaniu formantu <xref:System.Windows.Forms.DataGridView> z zewnętrznym źródłem danych lub udostępnieniu własnego źródła danych przez implementację trybu wirtualnego mogą wystąpić problemy z wydajnością. Aby uniknąć pogorszenia wydajności podczas pracy z dużymi ilościami danych, należy obsłużyć <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> zdarzenia zamiast ustawiania właściwości <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> wielu komórek. Podczas obsługi tego zdarzenia pobieranie wartości właściwości <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> komórki wywołuje zdarzenie i zwraca wartość właściwości <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType>, jak określono w obsłudze zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
 

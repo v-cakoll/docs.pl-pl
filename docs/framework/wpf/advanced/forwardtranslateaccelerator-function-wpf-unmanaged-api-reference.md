@@ -1,5 +1,6 @@
 ---
-title: ForwardTranslateAccelerator, funkcja (niezarządzany wykaz interfejsów API WPF.)
+title: Funkcja ForwardTranslateAccelerator — dokumentacja interfejsu API Unmanaged WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +9,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: 4bb7e665bb836dc5f95b14f39179f1d4b9f8173d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6e8208ffe2c186234f30f31e346ca6b1d0be4c0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960917"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747035"
 ---
-# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator, funkcja (niezarządzany wykaz interfejsów API WPF.)
-Ten interfejs API obsługuje infrastrukturę programu Windows Presentation Foundation (WPF) i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
+# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator — funkcja (odwołanie do niezarządzanego interfejsu API platformy WPF)
+Ten interfejs API obsługuje infrastrukturę Windows Presentation Foundation (WPF) i nie jest przeznaczony do użycia bezpośrednio w kodzie.  
   
- Używane przez infrastrukturę Windows Presentation Foundation (WPF) do zarządzania systemem windows.  
+ Używany przez infrastrukturę Windows Presentation Foundation (WPF) do zarządzania systemem Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,21 +32,21 @@ HRESULT ForwardTranslateAccelerator(
   
 ## <a name="parameters"></a>Parametry  
  pMsg  
- Wskaźnik do wiadomości.  
+ Wskaźnik do komunikatu.  
   
  appUnhandled  
- `true` gdy aplikacja został już podany Państwo, by obsłużyć komunikat wejściowy, ale nie został obsłużony w przeciwnym razie `false`.  
+ `true`, gdy aplikacja uzyskała już szansę obsługi wiadomości wejściowej, ale jej nie została obsłużona; w przeciwnym razie `false`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [.NET Framework System Requirements](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe .NET Framework](../../get-started/system-requirements.md).  
   
  **DLL:**  
   
- W programie .NET Framework 3.0 i 3.5: PresentationHostDLL.dll  
+ W .NET Framework 3,0 i 3,5: PresentationHostDLL. dll  
   
- W programie .NET Framework 4 i nowszych wersji: PresentationHost_v0400.dll  
+ W .NET Framework 4 i nowszych: PresentationHost_v0400. dll  
   
- **Wersja programu .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **Wersja .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

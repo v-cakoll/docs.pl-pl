@@ -1,36 +1,36 @@
 ---
-title: Powiadomienie o zmianie w powiązaniu danych w formularzach systemu Windows
+title: Powiadomienie o zmianie w powiązaniu danych
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, data binding
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-ms.openlocfilehash: b4a70f96ad256b22ce0d933a633475161160e5a4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2dffea46bf0db54d28ef55e507767d88bd29ebc2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665862"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746348"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Powiadomienie o zmianie w powiązaniu danych w formularzach systemu Windows
-Jednym z najważniejszych pojęć powiązanie danych formularzy Windows jest *powiadomienie o zmianie*. Aby upewnij się, że źródło danych i formanty powiązane zawsze najnowsze dane, należy dodać powiadomienia o zmianie dla powiązania danych. Aby mieć pewność, że formanty powiązane są powiadamiani o zmianach wprowadzonych do swojego źródła danych i źródła danych jest powiadamiany o zmianach wprowadzonych do powiązanych właściwości kontrolki.  
+Jednym z najważniejszych koncepcji powiązania danych Windows Forms jest *powiadomienie o zmianie*. Aby upewnić się, że źródło danych i kontrolki powiązane zawsze mają najnowsze dane, musisz dodać powiadomienie o zmianie dla powiązania danych. W celu upewnienia się, że kontrolki powiązane są powiadamiane o zmianach wprowadzonych w źródle danych, a źródło danych jest powiadamiane o zmianach wprowadzonych w powiązanych właściwościach formantu.  
   
- Istnieją różne rodzaje powiadomienie o zmianie w zależności od rodzaju powiązania danych:  
+ Istnieją różne rodzaje powiadomień o zmianach, w zależności od rodzaju powiązania danych:  
   
-- Proste powiązanie danych, w którym właściwość jeden formant jest powiązany z pojedynczym wystąpieniem obiektu.  
+- Proste powiązanie, w którym jedna właściwość kontrolki jest powiązana z pojedynczym wystąpieniem obiektu.  
   
-- Oparte na liście powiązania, który może zawierać właściwości jeden formant powiązany z właściwości elementu na liście lub właściwości kontrolki powiązane z listy obiektów.  
+- Powiązanie oparte na liście, które może zawierać pojedyncze właściwości kontrolki powiązane z właściwością elementu na liście lub właściwością kontrolki powiązaną z listą obiektów.  
   
- Ponadto w przypadku tworzenia formantów Windows Forms, które chcesz użyć dla powiązania danych, należy najpierw zastosować *PropertyName*zmienione wzorca dla formantów, aby zmiany właściwości powiązanej kontrolki są propagowane do źródło danych.  
+ Ponadto w przypadku tworzenia formantów Windows Forms, które mają być używane do wiązania danych, należy zastosować wzorzec zmiany *PropertyName*do kontrolek, tak aby zmiany właściwości powiązanej kontrolki zostały przekazane do źródła danych.  
   
-## <a name="change-notification-for-simple-binding"></a>Powiadomienia o zmianach dotyczącego proste powiązanie  
- Proste powiązanie obiektów biznesowych trzeba podać powiadomienie o zmianie po zmianie wartości właściwości powiązanej. Można to zrobić, zapewniając *PropertyName*zmieniono zdarzenia dla każdej właściwości obiektu biznesowych i powiązanie kontrolek z obiektem biznesowym <xref:System.Windows.Forms.BindingSource> lub preferowaną metodę, w którym implementuje obiekt biznesowy <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu i zgłasza <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> zdarzenie po zmianie wartości właściwości. Aby uzyskać więcej informacji, zobacz [jak: Implementowanie interfejsu INotifyPropertyChanged](how-to-implement-the-inotifypropertychanged-interface.md). Kiedy używać obiektów, które implementują <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu, nie trzeba używać <xref:System.Windows.Forms.BindingSource> można powiązać obiektu do formantu, ale przy użyciu <xref:System.Windows.Forms.BindingSource> jest zalecane.  
+## <a name="change-notification-for-simple-binding"></a>Powiadomienie o zmianie dla prostego powiązania  
+ W przypadku prostego powiązania obiekty biznesowe muszą udostępniać powiadomienia o zmianach, gdy wartość właściwości powiązanej ulegnie zmianie. Można to zrobić przez ujawnienie zdarzenia zmiany *PropertyName*dla każdej właściwości obiektu biznesowego i powiązanie obiektu biznesowego z kontrolkami z <xref:System.Windows.Forms.BindingSource> lub preferowaną metodą, w której obiekt biznesowy implementuje interfejs <xref:System.ComponentModel.INotifyPropertyChanged> i wywołuje zdarzenie <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged>, gdy wartość właściwości zostanie zmieniona. Aby uzyskać więcej informacji, zobacz [jak: implementowanie interfejsu INotifyPropertyChanged](how-to-implement-the-inotifypropertychanged-interface.md). Gdy używasz obiektów implementujących interfejs <xref:System.ComponentModel.INotifyPropertyChanged>, nie musisz używać <xref:System.Windows.Forms.BindingSource>, aby powiązać obiekt z kontrolką, ale zaleca się używanie <xref:System.Windows.Forms.BindingSource>.  
   
-## <a name="change-notification-for-list-based-binding"></a>Powiadomienie o zmianie dla powiązania oparte na liście  
- Windows Forms zależy od powiązana lista umożliwia zmienianie właściwości (zmiany wartości właściwości elementu listy) i zmienić listę (element jest usunięty lub dodane do listy) informacji do kontrolki powiązania. W związku z tym, używany do wiązania danych listy musi implementować <xref:System.ComponentModel.IBindingList>, który zawiera oba rodzaje powiadomienie o zmianie. <xref:System.ComponentModel.BindingList%601> Jest ogólną implementację <xref:System.ComponentModel.IBindingList> i jest przeznaczony do użytku z powiązanie danych formularzy Windows. Możesz utworzyć <xref:System.ComponentModel.BindingList%601> zawierający firm typ obiektu, który implementuje <xref:System.ComponentModel.INotifyPropertyChanged> i listy zostanie automatycznie przekonwertowana <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> zdarzenia <xref:System.ComponentModel.IBindingList.ListChanged> zdarzenia. Jeśli nie jest powiązana lista <xref:System.ComponentModel.IBindingList>, trzeba będzie powiązać z listy obiektów przeznaczonych do kontrolek formularzy Windows Forms przy użyciu <xref:System.Windows.Forms.BindingSource> składnika. <xref:System.Windows.Forms.BindingSource> Składnika zapewni podobny do konwersji listy właściwości <xref:System.ComponentModel.BindingList%601>. Aby uzyskać więcej informacji, zobacz [jak: Wywoływanie powiadomień o zmianie za pomocą składnika BindingSource i interfejsu INotifyPropertyChanged](./controls/raise-change-notifications--bindingsource.md).  
+## <a name="change-notification-for-list-based-binding"></a>Powiadomienie o zmianie dla powiązania opartego na liście  
+ Windows Forms zależy od powiązanej listy, aby zapewnić zmianę właściwości (zmiana wartości właściwości elementu listy), a lista została zmieniona (element jest usuwany lub dodawany do listy) do kontrolek powiązanych. W związku z tym listy używane do powiązania danych muszą implementować <xref:System.ComponentModel.IBindingList>, która zapewnia oba typy powiadomień o zmianach. <xref:System.ComponentModel.BindingList%601> to ogólna implementacja <xref:System.ComponentModel.IBindingList> i została zaprojektowana do użycia z powiązaniem danych Windows Forms. Można utworzyć <xref:System.ComponentModel.BindingList%601>, który zawiera typ obiektu biznesowego implementującego <xref:System.ComponentModel.INotifyPropertyChanged>, a lista automatycznie przekonwertuje zdarzenia <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> na zdarzenia <xref:System.ComponentModel.IBindingList.ListChanged>. Jeśli lista powiązania nie jest <xref:System.ComponentModel.IBindingList>, należy powiązać listę obiektów do Windows Forms formantów przy użyciu składnika <xref:System.Windows.Forms.BindingSource>. Składnik <xref:System.Windows.Forms.BindingSource> udostępnia konwersję typu właściwość na listę podobną do tej <xref:System.ComponentModel.BindingList%601>. Aby uzyskać więcej informacji, zobacz [How to: Wywołaj powiadomienia o zmianach za pomocą elementu BindingSource i interfejsu INotifyPropertyChanged](./controls/raise-change-notifications--bindingsource.md).  
   
-## <a name="change-notification-for-custom-controls"></a>Powiadomienie o zmianie w przypadku kontrolek niestandardowych  
- Na koniec po stronie sterowania należy ujawnić *PropertyName*zmieniono zdarzenia dla każdej właściwości, które mają być powiązane z danymi. Zmiany właściwości kontrolki, następnie są propagowane do źródła powiązane dane. Aby uzyskać więcej informacji, zobacz [jak: Stosowanie wzorca PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)  
+## <a name="change-notification-for-custom-controls"></a>Powiadomienie o zmianie dla kontrolek niestandardowych  
+ Na koniec po stronie kontroli należy uwidocznić zdarzenie zmiany *PropertyName*dla każdej właściwości zaprojektowanej do powiązania z danymi. Zmiany właściwości kontrolki są następnie propagowane do powiązanego źródła danych. Aby uzyskać więcej informacji, zobacz [How to: Apply The PropertyNameChanged wzorzec](how-to-apply-the-propertynamechanged-pattern.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

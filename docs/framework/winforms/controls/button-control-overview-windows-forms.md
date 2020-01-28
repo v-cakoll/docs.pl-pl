@@ -1,5 +1,5 @@
 ---
-title: Button — Informacje o formancie (Formularze systemu Windows)
+title: Informacje o kontrolce przycisku
 ms.date: 03/30/2017
 f1_keywords:
 - Button
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Button control [Windows Forms], about Button control
 - buttons [Windows Forms], about buttons
 ms.assetid: 255b291b-51a9-4a92-a1a4-2400cd82443f
-ms.openlocfilehash: 1ded871fdfab83407d8022ca0c4ce6b2c8a6c67c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ba7b333e5414efb4814d64ce50c55e08b27f859
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938986"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747074"
 ---
 # <a name="button-control-overview-windows-forms"></a>Button — Informacje o formancie (Formularze systemu Windows)
-Formularze Windows <xref:System.Windows.Forms.Button> kontrolki pozwala użytkownikowi na kliknij go, aby wykonać akcję. Po kliknięciu przycisku wygląda, jakby on wypychania i wydania. Zawsze, gdy użytkownik kliknie przycisk <xref:System.Windows.Forms.Control.Click> zostanie wywołana procedura obsługi zdarzeń. Umieść kod w <xref:System.Windows.Forms.Control.Click> programu obsługi zdarzeń do wykonywania dowolnych akcji wybierzesz.  
+Kontrolka <xref:System.Windows.Forms.Button> Windows Forms umożliwia użytkownikowi kliknięcie go w celu wykonania akcji. Gdy przycisk zostanie kliknięty, wygląda tak, jakby został wypchnięte i wydzierżawiony. Za każdym razem, gdy użytkownik kliknie przycisk, zostanie wywołana procedura obsługi zdarzeń <xref:System.Windows.Forms.Control.Click>. Aby wykonać dowolną akcję, należy umieścić kod w obsłudze zdarzeń <xref:System.Windows.Forms.Control.Click>.  
   
- Tekst wyświetlany na przycisku znajduje się w <xref:System.Windows.Forms.Control.Text%2A> właściwości. Jeśli tekst jest większa niż szerokość przycisku, wartość będzie zawijany do następnego wiersza. Jednak zostaną przycięte, jeśli formant nie może obsłużyć całkowita wysokość. Aby uzyskać więcej informacji, zobacz [jak: Ustawianie tekstu wyświetlanego przez formant formularzy Windows](how-to-set-the-text-displayed-by-a-windows-forms-control.md). <xref:System.Windows.Forms.Control.Text%2A> Właściwość może zawierać klucz dostępu, który umożliwia użytkownikowi "kliknij" kontrolki, naciskając klawisz ALT, przy użyciu klucza dostępu. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md). Wygląd tekstu jest kontrolowany przez <xref:System.Windows.Forms.Control.Font%2A> właściwości i <xref:System.Windows.Forms.ButtonBase.TextAlign%2A> właściwości.  
+ Tekst wyświetlany na przycisku jest zawarty we właściwości <xref:System.Windows.Forms.Control.Text%2A>. Jeśli tekst przekracza szerokość przycisku, zostanie zawinięty do następnego wiersza. Jednak zostanie przycięty, Jeśli kontrolka nie będzie mogła obsłużyć jej ogólnej wysokości. Aby uzyskać więcej informacji, zobacz [jak to zrobić: Ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md). Właściwość <xref:System.Windows.Forms.Control.Text%2A> może zawierać klucz dostępu, który umożliwia użytkownikowi "kliknięcie" kontrolki przez naciśnięcie klawisza ALT z klawiszem dostępu. Aby uzyskać szczegółowe informacje, zobacz [How to: Create Access Keys for Windows Forms Controls](how-to-create-access-keys-for-windows-forms-controls.md). Wygląd tekstu jest kontrolowany przez właściwość <xref:System.Windows.Forms.Control.Font%2A> i Właściwość <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>.  
   
- <xref:System.Windows.Forms.Button> Kontrolki można także wyświetlać obrazy za pomocą <xref:System.Windows.Forms.ButtonBase.Image%2A> i <xref:System.Windows.Forms.ButtonBase.ImageList%2A> właściwości. Aby uzyskać więcej informacji, zobacz [jak: Ustawianie obrazu wyświetlanego przez formant formularzy Windows](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
+ Kontrolka <xref:System.Windows.Forms.Button> może również wyświetlać obrazy przy użyciu właściwości <xref:System.Windows.Forms.ButtonBase.Image%2A> i <xref:System.Windows.Forms.ButtonBase.ImageList%2A>. Aby uzyskać więcej informacji, zobacz [jak to zrobić: Ustawianie obrazu wyświetlanego przez kontrolkę Windows Forms](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.Button>
-- [Instrukcje: Odpowiadanie na kliknięcia przycisków formularzy Windows](how-to-respond-to-windows-forms-button-clicks.md)
+- [Instrukcje: odpowiadanie na kliknięcia przycisków Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
 - [Sposoby wyboru kontrolki przycisku Windows Forms](ways-to-select-a-windows-forms-button-control.md)
-- [Instrukcje: Wyznaczanie przycisku Windows Forms na przycisk Akceptuj przy użyciu narzędzia Projektant](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
-- [Instrukcje: Wyznaczanie przycisku Windows Forms na przycisk Anuluj, przy użyciu narzędzia Projektant](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [Instrukcje: wyznaczanie przycisku Windows Forms na przycisk Akceptuj przy użyciu narzędzia Projektant](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [Instrukcje: wyznaczanie przycisku Windows Forms na przycisk Anuluj przy użyciu narzędzia Projektant](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
 - [Button, kontrolka](button-control-windows-forms.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 32156ad0fe4b3dce4371fe757d15f5b8040aaf19
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 62df08bf4ae3580e9b8d5b3aab0697d396674ca1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115851"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745414"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Konwersja boxing i konwersja unboxing (Przewodnik programowania w języku C#)
 
-Opakowanie to proces konwersji [typu wartości](../../language-reference/keywords/value-types.md) na typ `object` lub na dowolny typ interfejsu implementowany przez ten typ wartości. Gdy typ wartości pola środowiska uruchomieniowego języka wspólnego (CLR), zawija wartość wewnątrz instancji <xref:System.Object?displayProperty=nameWithType> i zapisuje ją na zarządzanym stosie. Rozpakowywanie wyodrębnia typ wartości z obiektu. Opakowanie jest niejawne; Rozpakowywanie jest jawne. Pojęcie opakowania i rozpakowywanie opiera się na C# ujednoliconym widoku systemu typów, w którym wartość dowolnego typu może być traktowana jako obiekt.
+Opakowanie to proces konwersji [typu wartości](../../language-reference/builtin-types/value-types.md) na typ `object` lub na dowolny typ interfejsu implementowany przez ten typ wartości. Gdy typ wartości pola środowiska uruchomieniowego języka wspólnego (CLR), zawija wartość wewnątrz instancji <xref:System.Object?displayProperty=nameWithType> i zapisuje ją na zarządzanym stosie. Rozpakowywanie wyodrębnia typ wartości z obiektu. Opakowanie jest niejawne; Rozpakowywanie jest jawne. Pojęcie opakowania i rozpakowywanie opiera się na C# ujednoliconym widoku systemu typów, w którym wartość dowolnego typu może być traktowana jako obiekt.
 
 W poniższym przykładzie zmienna Integer `i` jest *opakowana* i przypisana do `o`obiektu.
 
@@ -38,7 +38,7 @@ W odniesieniu do prostych przydziałów, opakowanie i rozpakowywanie są w spos�
 
 ## <a name="boxing"></a>Boxing
 
-Opakowanie jest używane do przechowywania typów wartości w stosie zebranych elementów bezużytecznych. Opakowanie jest niejawną konwersją [typu wartości](../../language-reference/keywords/value-types.md) na typ `object` lub do dowolnego typu interfejsu zaimplementowanego przez ten typ wartości. Opakowanie typu wartości przydziela wystąpienie obiektu na stercie i kopiuje wartość do nowego obiektu.
+Opakowanie jest używane do przechowywania typów wartości w stosie zebranych elementów bezużytecznych. Opakowanie jest niejawną konwersją [typu wartości](../../language-reference/builtin-types/value-types.md) na typ `object` lub do dowolnego typu interfejsu zaimplementowanego przez ten typ wartości. Opakowanie typu wartości przydziela wystąpienie obiektu na stercie i kopiuje wartość do nowego obiektu.
 
 Rozważmy następującą deklarację zmiennej typu wartości:
 
@@ -66,7 +66,7 @@ Ten przykład konwertuje zmienną typu Integer `i` do obiektu `o` przy użyciu o
 
 ## <a name="unboxing"></a>Rozpakowywanie
 
-Rozpakowywanie jest jawną konwersją z typu `object` do [typu wartości](../../language-reference/keywords/value-types.md) lub z typu interfejsu na typ wartości implementującej interfejs. Odpakowywanie operacji składa się z:
+Rozpakowywanie jest jawną konwersją z typu `object` do [typu wartości](../../language-reference/builtin-types/value-types.md) lub z typu interfejsu na typ wartości implementującej interfejs. Odpakowywanie operacji składa się z:
 
 - Sprawdzanie wystąpienia obiektu, aby upewnić się, że jest to opakowana wartość danego typu wartości.
 
@@ -112,14 +112,8 @@ Konwersja zostanie wykonana i otrzymasz dane wyjściowe:
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="related-sections"></a>Sekcje pokrewne
-
-Informacje dodatkowe:
-
-- [Typy odwołań](../../language-reference/keywords/reference-types.md)
-
-- [Typy wartości](../../language-reference/keywords/value-types.md)
-
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../index.md)
+- [C#Przewodnik programowania](../index.md)
+- [Typy odwołań](../../language-reference/keywords/reference-types.md)
+- [Typy wartości](../../language-reference/builtin-types/value-types.md)

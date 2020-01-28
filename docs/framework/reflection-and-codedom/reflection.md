@@ -21,16 +21,16 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 1768acd65b738af068cf98a8b8340c3179e9b885
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 42944d8267d2e99fd9eb1a2cb28c0c81d3e9af75
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130054"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744570"
 ---
 # <a name="reflection-in-net"></a>Odbicie w programie .NET
 
-Klasy w przestrzeni nazw <xref:System.Reflection>, w połączeniu z <xref:System.Type?displayProperty=nameWithType>, umożliwiają uzyskanie informacji o załadowanych [zestawach](../../standard/assembly/index.md) i typach zdefiniowanych w nich, takich jak [klasy](../../standard/base-types/common-type-system.md#classes), [interfejsy](../../standard/base-types/common-type-system.md#interfaces)i [typy wartości](../../csharp/language-reference/keywords/value-types.md). Można również użyć odbicia do tworzenia wystąpień typów w czasie wykonywania oraz do wywoływania i uzyskiwania dostępu do nich. Aby zapoznać się z tematami dotyczącymi konkretnych aspektów odbicia, zobacz [Tematy pokrewne](#related_topics) na końcu tego omówienia.
+Klasy w przestrzeni nazw <xref:System.Reflection>, w połączeniu z <xref:System.Type?displayProperty=nameWithType>, umożliwiają uzyskanie informacji o załadowanych [zestawach](../../standard/assembly/index.md) i typach zdefiniowanych w nich, takich jak [klasy](../../standard/base-types/common-type-system.md#classes), [interfejsy](../../standard/base-types/common-type-system.md#interfaces)i typy wartości (czyli [struktury](../../standard/base-types/common-type-system.md#structures) i [wyliczenia](../../standard/base-types/common-type-system.md#enumerations)). Można również użyć odbicia do tworzenia wystąpień typów w czasie wykonywania oraz do wywoływania i uzyskiwania dostępu do nich. Aby zapoznać się z tematami dotyczącymi konkretnych aspektów odbicia, zobacz [Tematy pokrewne](#related_topics) na końcu tego omówienia.
   
 Moduł ładujący [środowiska uruchomieniowego języka wspólnego](../../standard/clr.md) zarządza [domenami aplikacji](../app-domains/application-domains.md), które stanowią zdefiniowane granice wokół obiektów, które mają ten sam zakres aplikacji. Zarządzanie obejmuje ładowanie każdego zestawu do odpowiedniej domeny aplikacji i sterowanie układem pamięci hierarchii typów w ramach każdego zestawu.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: 89f1d89ea397794e366b53205ac23b94d7892869
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 6601417f0b80f623b7698c4b072c35eca44343b7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699754"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732887"
 ---
 # <a name="cryptoclasses-element"></a>\<cryptoClasses> Element
 Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazwy w [\<nameEntry >](nameentry-element.md) elementu.  
@@ -34,7 +34,7 @@ Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazw
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
  W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
-### <a name="attributes"></a>Atrybuty  
+### <a name="attributes"></a>{1&gt;{2&gt;Atrybuty&lt;2}&lt;1}  
  Brak.  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -82,5 +82,5 @@ Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazw
 - [Schemat pliku konfiguracji](../index.md)
 - [Schemat ustawień kryptografii](index.md)
 - [Usługi kryptograficzne](../../../../standard/security/cryptographic-services.md)
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
+- [System.Security.Cryptography.CryptoConfig.CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [Konfigurowanie klas kryptografii](../../configure-cryptography-classes.md)

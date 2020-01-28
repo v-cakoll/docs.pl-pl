@@ -2,12 +2,12 @@
 title: Zarządzanie zależnościami w narzędziu .NET Core
 description: Wyjaśnia, jak zarządzać zależnościami przy użyciu narzędzi programu .NET Core.
 ms.date: 03/06/2017
-ms.openlocfilehash: 9c088829ce3d5197198b7ff22a1331b8baba41d7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.openlocfilehash: e14fa42534d807e2a0fcce1dabe747c18c5166b7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714211"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733376"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>Zarządzanie zależnościami przy użyciu zestaw .NET Core SDK 1,0
 

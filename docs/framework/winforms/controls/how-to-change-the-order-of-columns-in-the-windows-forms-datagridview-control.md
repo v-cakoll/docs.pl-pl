@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: zmienianie kolejności kolumn w kontrolce DataGridView formularzy systemu Windows'
+title: Zmiana kolejności kolumn w formancie DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column order
 - data grids [Windows Forms], changing column order
 ms.assetid: 5e9ac3bc-b0f0-48cb-a3d5-b005af905395
-ms.openlocfilehash: 4b3859579814f4a10f38fd47df6fe933e2722cb2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2aef196e9544a81f42a563783ce6c357869aa247
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643350"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746545"
 ---
-# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>Instrukcje: zmienianie kolejności kolumn w kontrolce DataGridView formularzy systemu Windows
-Kiedy używasz <xref:System.Windows.Forms.DataGridView> do wyświetlania danych ze źródła danych, w kolumnach czasami schematu źródła danych nie są wyświetlane w kolejności, aby je wyświetlić. Można zmienić kolejność wyświetlanych kolumn, używając <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> właściwość <xref:System.Windows.Forms.DataGridViewColumn> klasy.  
+# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>Porady: zmienianie kolejności kolumn w formancie DataGridView formularzy systemu Windows
+Gdy używasz <xref:System.Windows.Forms.DataGridView> do wyświetlania danych ze źródła danych, kolumny w schemacie źródła danych czasami nie są wyświetlane w kolejności, w jakiej chcesz je wyświetlić. Można zmienić kolejność wyświetlania kolumn za pomocą właściwości <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> klasy <xref:System.Windows.Forms.DataGridViewColumn>.  
   
- Poniższy przykładowy kod powoduje przeniesienie niektórych kolumn generowane automatycznie podczas tworzenia wiązania do tabeli Klienci w bazie danych Northwind. Aby uzyskać więcej informacji o tym, jak powiązać <xref:System.Windows.Forms.DataGridView> sterowania do tabeli bazy danych, zobacz [jak: Powiązywanie danych Windows formantu DataGridView formularzy](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+ Poniższy przykład kodu zmienia położenie niektórych kolumn generowanych automatycznie podczas tworzenia powiązania z tabelą Customers w przykładowej bazie danych Northwind. Aby uzyskać więcej informacji o sposobie powiązania formantu <xref:System.Windows.Forms.DataGridView> z tabelą bazy danych, zobacz [How to: bind Data to the Windows Forms DataGridView Control](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   
- Są obsługiwane dla tego zadania w programie Visual Studio.  Zobacz też [jak: Zmienianie kolejności kolumn w formancie DataGridView formularzy Windows za pomocą projektanta](change-the-order-of-columns-in-the-datagrid-using-the-designer.md).  
+ To zadanie jest obsługiwane w programie Visual Studio.  Zapoznaj się również z tematem [: zmiana kolejności kolumn w kontrolce DataGridView Windows Forms przy użyciu narzędzia Projektant](change-the-order-of-columns-in-the-datagrid-using-the-designer.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#040](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#040)]
@@ -30,9 +30,9 @@ Kiedy używasz <xref:System.Windows.Forms.DataGridView> do wyświetlania danych 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `customersDataGridView` , jest powiązana z tabelą z nazwami wskazanej kolumny, takie jak `Customers` tabeli w bazie danych Northwind.  
+- Kontrolka <xref:System.Windows.Forms.DataGridView> o nazwie `customersDataGridView`, która jest powiązana z tabelą ze wskazanymi nazwami kolumn, takimi jak tabela `Customers` w przykładowej bazie danych Northwind.  
   
-- Odwołuje się do <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType>, i <xref:System.Xml?displayProperty=nameWithType> zestawów.  
+- Odwołania do zestawów <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType>i <xref:System.Xml?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -41,4 +41,4 @@ Kiedy używasz <xref:System.Windows.Forms.DataGridView> do wyświetlania danych 
 - <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>
 - [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Powiązanie danych w kontrolce DataGridView formularzy Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [Instrukcje: wiązanie danych z kontrolką DataGridView formularzy Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)

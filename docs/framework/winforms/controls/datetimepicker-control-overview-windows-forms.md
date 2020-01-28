@@ -1,5 +1,5 @@
 ---
-title: DateTimePicker — Informacje o formancie [Formularze systemu Windows]
+title: DateTimePicker — Informacje o formancie
 ms.date: 03/30/2017
 f1_keywords:
 - DateTimePicker
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], about
 - date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
-ms.openlocfilehash: 451172b51427e4932470c53737c7bc276920271c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63271dd91116c1f68d426f3ed5aa710644ded928
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909171"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746938"
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>DateTimePicker — Informacje o formancie [Formularze systemu Windows]
-Formularze Windows <xref:System.Windows.Forms.DateTimePicker> kontrolka zezwala użytkownikowi na wybranie jednego elementu z listy daty lub godziny. Gdy jest używana do reprezentowania daty, pojawi się z dwóch części: listy rozwijanej, za pomocą Data jest reprezentowana w tekst i siatki, która pojawia się po kliknięciu strzałki w dół obok listy. Siatka wygląda <xref:System.Windows.Forms.MonthCalendar> formant, który może służyć do wybierania wielu daty. Aby uzyskać więcej informacji na temat <xref:System.Windows.Forms.MonthCalendar> sterowania, zobacz [— informacje o formancie MonthCalendar](monthcalendar-control-overview-windows-forms.md).  
+Kontrolka <xref:System.Windows.Forms.DateTimePicker> Windows Forms umożliwia użytkownikowi wybranie jednego elementu z listy dat lub godzin. Gdy jest używany do reprezentowania daty, pojawia się w dwóch częściach: Lista rozwijana z datą reprezentowaną w tekście i siatką wyświetlaną po kliknięciu strzałki w dół obok listy. Siatka wygląda jak kontrolka <xref:System.Windows.Forms.MonthCalendar>, która może być używana do wybierania wielu dat. Aby uzyskać więcej informacji na temat formantu <xref:System.Windows.Forms.MonthCalendar>, zobacz [MonthCalendar Control — Omówienie](monthcalendar-control-overview-windows-forms.md).  
   
 ## <a name="key-properties"></a>Właściwości klucza  
- Jeśli chcesz, aby <xref:System.Windows.Forms.DateTimePicker> do wyświetlania jako kontrolkę do pobrania lub edytowanie czasów zamiast daty, ustaw <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> właściwości `true` i <xref:System.Windows.Forms.DateTimePicker.Format%2A> właściwość <xref:System.Windows.Forms.DateTimePickerFormat.Time>. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie godziny za pomocą formantu DateTimePicker](how-to-display-time-with-the-datetimepicker-control.md).  
+ Jeśli chcesz, aby <xref:System.Windows.Forms.DateTimePicker> pojawił się jako kontrolka do pobrania lub edycji razy zamiast dat, ustaw właściwość <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> na `true` i Właściwość <xref:System.Windows.Forms.DateTimePicker.Format%2A> na <xref:System.Windows.Forms.DateTimePickerFormat.Time>. Aby uzyskać więcej informacji [, zobacz How to: Display Time with the DateTimePicker Control](how-to-display-time-with-the-datetimepicker-control.md).  
   
- Gdy <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> właściwość jest ustawiona na `true`, pole wyboru jest wyświetlane obok wybranej daty w formancie. Gdy pole wyboru jest zaznaczone, można zaktualizować wybranej wartości daty / godziny. Gdy pole wyboru jest pusta, wartość pojawia się niedostępne.  
+ Gdy właściwość <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> jest ustawiona na `true`, obok wybranej daty w kontrolce zostanie wyświetlone pole wyboru. Gdy to pole wyboru jest zaznaczone, można zaktualizować wybraną wartość daty i godziny. Gdy pole wyboru jest puste, wartość jest niedostępna.  
   
- Kontrolki <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> i <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> właściwości określają zakres dat i godzin. <xref:System.Windows.Forms.DateTimePicker.Value%2A> Właściwość zawiera bieżącą datę i czas kontrolki jest ustawiona na. Aby uzyskać więcej informacji, zobacz [jak: Ustawianie i zwracanie dat za pomocą Windows formantu DateTimePicker formularzy](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md). Wartości mogą być wyświetlane w czterech formatach, które są ustawiane przez <xref:System.Windows.Forms.DateTimePicker.Format%2A> właściwości: <xref:System.Windows.Forms.DateTimePickerFormat.Long>, <xref:System.Windows.Forms.DateTimePickerFormat.Short>, <xref:System.Windows.Forms.DateTimePickerFormat.Time>, lub <xref:System.Windows.Forms.DateTimePickerFormat.Custom>. Jeśli wybrano opcję formatu niestandardowego, musisz ustawić <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> właściwość odpowiedni ciąg. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie daty w niestandardowym formacie za pomocą formantu DateTimePicker formularzy Windows](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md).  
+ Właściwości <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> i <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> kontrolki określają zakres dat i godzin. Właściwość <xref:System.Windows.Forms.DateTimePicker.Value%2A> zawiera bieżącą datę i godzinę ustawioną dla kontrolki. Aby uzyskać szczegółowe informacje, zobacz [How to: Set and Return Data with the Windows Forms DateTimePicker Control](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md). Wartości mogą być wyświetlane w czterech formatach, które są ustawiane przez właściwość <xref:System.Windows.Forms.DateTimePicker.Format%2A>: <xref:System.Windows.Forms.DateTimePickerFormat.Long>, <xref:System.Windows.Forms.DateTimePickerFormat.Short>, <xref:System.Windows.Forms.DateTimePickerFormat.Time>lub <xref:System.Windows.Forms.DateTimePickerFormat.Custom>. Jeśli wybrano format niestandardowy, należy ustawić właściwość <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> na odpowiedni ciąg. Aby uzyskać szczegółowe informacje, zobacz [jak: wyświetlić datę w formacie niestandardowym za pomocą formantu Windows Forms DateTimePicker](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Wyświetlanie daty w niestandardowym formacie za pomocą formantu DateTimePicker formularzy Windows](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
-- [Instrukcje: Ustaw i zwracają dat za pomocą formantu DateTimePicker formularzy Windows](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+- [Instrukcje: wyświetlanie daty w niestandardowym formacie za pomocą kontrolki DateTimePicker formularzy Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [Instrukcje: ustawianie i zwracanie dat za pomocą kontrolki DateTimePicker formularzy Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

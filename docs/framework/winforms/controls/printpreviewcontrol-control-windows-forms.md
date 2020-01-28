@@ -1,5 +1,5 @@
 ---
-title: PrintPreviewControl — Formant (Formularze systemu Windows)
+title: PrintPreviewControl, kontrolka
 ms.date: 03/30/2017
 helpviewer_keywords:
 - printing [Windows Forms], print preview
@@ -7,27 +7,27 @@ helpviewer_keywords:
 - PrintPreview control (using designer)
 - print preview [Windows Forms], custom interface (using designer)
 ms.assetid: 3fdb2e46-92a3-4e26-bb8d-63a89087b337
-ms.openlocfilehash: 28e85efa7d929bb6305bf2a22d71e2a1d986e216
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e159651388759b77ad832717b46ad705e0e39f1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012571"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741430"
 ---
 # <a name="printpreviewcontrol-control-windows-forms"></a>PrintPreviewControl — Formant (Formularze systemu Windows)
-Formularze Windows `PrintPreviewControl` służy do wyświetlania dokumentu, która będzie wyświetlana po wydrukowaniu. Ten formant ma żadnych przycisków lub inne elementy interfejsu użytkownika, dlatego zazwyczaj używasz `PrintPreviewControl` tylko wtedy, gdy chcesz napisać własny interfejs użytkownika Podgląd wydruku. Standardowy interfejs użytkownika, użyć <xref:System.Windows.Forms.PrintPreviewDialog> kontroli.  
+`PrintPreviewControl` Windows Forms służy do wyświetlania dokumentu, gdy zostanie on wyświetlony po wydrukowaniu. Ta kontrolka nie ma przycisków ani innych elementów interfejsu użytkownika, więc zazwyczaj używasz `PrintPreviewControl` tylko wtedy, gdy chcesz napisać własny interfejs użytkownika w wersji zapoznawczej. Jeśli potrzebujesz standardowego interfejsu użytkownika, użyj kontrolki <xref:System.Windows.Forms.PrintPreviewDialog>.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [PrintPreviewControl, kontrolka — omówienie](printpreviewcontrol-control-overview-windows-forms.md)  
- Ogólne pojęcia związane z `PrintPreviewControl`, którym można projektować własne okno dialogowe podglądu wydruku lub składnika.  
+ Wprowadza ogólne koncepcje `PrintPreviewControl`, których można użyć do zaprojektowania własnego okna dialogowego lub składnika podglądu wydruku.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.PrintPreviewControl>  
- Zawiera dodatkowe informacje na temat klasy i jej elementów członkowskich.  
+ Zawiera informacje referencyjne dotyczące klasy i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [PrintPreviewDialog, kontrolka](printpreviewdialog-control-windows-forms.md)  
- W tym artykule opisano alternatywny sposób w celu utworzenia funkcji podglądu wydruku.  
+ Opisuje alternatywny sposób tworzenia funkcji w wersji zapoznawczej.  
   
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.
+ Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.

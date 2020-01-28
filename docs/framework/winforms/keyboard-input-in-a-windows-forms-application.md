@@ -1,33 +1,33 @@
 ---
-title: Wprowadzanie z klawiatury w aplikacjach formularzy systemu Windows
+title: Dane wejściowe z klawiatury
 ms.date: 03/30/2017
 helpviewer_keywords:
 - keyboard input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 68f5bc70-14d5-45c9-b288-7d7b1493ee79
-ms.openlocfilehash: eaeee45e2c7856012b4ff20eefea3fca53679467
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5febf40825192dc6a34290643145cd04c90181d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800844"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739146"
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Wprowadzanie z klawiatury w aplikacjach formularzy systemu Windows
-Windows Forms zawiera zdarzenia standardowy interfejs użytkownika, które umożliwiają reagowanie na określonych naciśnięcia klawiszy, a także oferuje możliwości przechwycenia, zmodyfikować i używanie naciśnięć klawiszy w aplikacji formularza, i kontrolować poziom.  
+Windows Forms zawiera standardowe zdarzenia klawiatury, które umożliwiają reagowanie na określone naciśnięcia klawiszy, a także umożliwiają przechwycenie, zmodyfikowanie i użycie klawiszy na poziomie aplikacji, formularza i kontroli.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Działanie wprowadzania z klawiatury](how-keyboard-input-works.md)  
- W tym artykule opisano, jak komunikaty klawiatury są przetwarzane i przekształcone na zdarzenia klawiatury.  
+ Opisuje sposób przetwarzania i przekształcania komunikatów klawiatury w zdarzenia klawiatury.  
   
  [Używanie zdarzeń klawiatury](using-keyboard-events.md)  
- Zawiera informacje na temat typów zdarzeń klawiatury i informacje, które jest odbierany przez programy obsługi zdarzeń klawiatury.  
+ Zawiera informacje na temat typów zdarzeń klawiatury i informacje, które są odbierane przez programy obsługi zdarzeń klawiatury.  
   
- [Instrukcje: Modyfikowanie danych wprowadzonych z klawiatury do kontrolki standardowej](how-to-modify-keyboard-input-to-a-standard-control.md)  
- Przedstawia informacje o przykładu kodu, który pokazuje, jak zmodyfikować wartości klucza, zanim dotrą formantu.  
+ [Instrukcje: modyfikowanie sygnału z klawiatury do kontrolki standardowej](how-to-modify-keyboard-input-to-a-standard-control.md)  
+ Przedstawia przykładowy kod, który pokazuje, jak zmodyfikować wartości klucza przed osiągnięciem kontroli.  
   
- [Instrukcje: Określanie, który klawisz modyfikujący został naciśnięty](how-to-determine-which-modifier-key-was-pressed.md)  
- Pokazuje, jak sprawdzić, czy SHIFT, ALT i CTRL został naciśnięty oprócz inny klucz.  
+ [Instrukcje: określanie, który klawisz modyfikujący został naciśnięty](how-to-determine-which-modifier-key-was-pressed.md)  
+ Pokazuje, w jaki sposób dowiedzieć się, czy naciśnięto klawisze SHIFT, ALT lub CTRL jako uzupełnienie innego klucza.  
   
- [Instrukcje: Obsługa wprowadzania z klawiatury na poziomie formularza](how-to-handle-keyboard-input-at-the-form-level.md)  
- Przedstawia informacje o przykładu kodu, który pokazuje, jak przechwycić kluczy, zanim dotrą formantu.
+ [Instrukcje: obsługa wprowadzania z klawiatury na poziomie formularza](how-to-handle-keyboard-input-at-the-form-level.md)  
+ Przedstawia przykładowy kod, który pokazuje, jak przechwycić klucze przed osiągnięciem kontroli.

@@ -1,5 +1,5 @@
 ---
-title: Pakuj URI w WPF
+title: Identyfikatory URI pakietów
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pack URI scheme [WPF]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: e20053c451d12c6a8493d5d7fcfc72fe3d3d764e
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 0fec72bdedbcc2c84d8bc65e72391366e42d82be
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636383"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739161"
 ---
 # <a name="pack-uris-in-wpf"></a>Pakuj URI w WPF
 
@@ -184,7 +184,7 @@ Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xa
 
 <a name="Page_Files"></a>
 
-## <a name="page-files"></a>Pliki stron
+## <a name="page-files"></a>Pliki stronicowania
 
 Pliki XAML, które są skonfigurowane jako elementy `Page` MSBuild, są kompilowane do zestawów w taki sam sposób jak pliki zasobów. W związku z tym elementy `Page` MSBuild można zidentyfikować przy użyciu identyfikatorów URI pakietów dla plików zasobów.
 

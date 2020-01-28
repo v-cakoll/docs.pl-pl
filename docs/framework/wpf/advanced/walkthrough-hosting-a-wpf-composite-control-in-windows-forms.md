@@ -1,15 +1,16 @@
 ---
-title: 'Wskazówki: Hosting złożonego formantu WPF w Windows Forms'
+title: Hostowanie złożonego formantu WPF w Windows Forms
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: MT
+ms.openlocfilehash: 59243e1810757ff0ff58a60ac3eb007bbc227be0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458924"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742683"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Wskazówki: Hosting złożonego formantu WPF w Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia rozbudowane środowisko do tworzenia aplikacji. Jeśli jednak masz znaczną inwestycję w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodzie, może być bardziej efektywne, aby zwiększyć swoją istniejącą aplikację [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] przy użyciu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], a nie od początku. Typowym scenariuszem jest osadzenie co najmniej jednej kontrolki zaimplementowanej przy użyciu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w aplikacji Windows Forms. Aby uzyskać więcej informacji na temat dostosowywania formantów WPF, zobacz [Dostosowywanie kontroli](../controls/control-customization.md).  
@@ -60,7 +61,7 @@ Aby ukończyć ten przewodnik, potrzebujesz programu Visual Studio.
   
 - System  
   
-- 'Windowsbase  
+- WindowsBase  
   
 ### <a name="creating-the-user-interface"></a>Tworzenie interfejsu użytkownika  
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] dla formantu złożonego jest implementowany z [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] sterowania złożonego składa się z pięciu <xref:System.Windows.Controls.TextBox> elementów. Każdy element <xref:System.Windows.Controls.TextBox> ma skojarzony <xref:System.Windows.Controls.TextBlock> element, który służy jako etykieta. Na dole znajdują się dwa <xref:System.Windows.Controls.Button> elementy, **OK** i **Anuluj**. Gdy użytkownik kliknie jeden z przycisków, formant wywołuje zdarzenie niestandardowe, aby zwrócić informacje do hosta.  
@@ -132,7 +133,7 @@ namespace MyControls
   
  Pierwsza klasa, `MyControl1`, jest klasą częściową zawierającą kod implementujący funkcje [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zdefiniowanej w MyControl1. XAML. Gdy MyControl1. XAML jest analizowany, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest konwertowana na tę samą klasę częściową, a dwie klasy częściowe są scalane w celu utworzenia skompilowanej kontrolki. Z tego powodu nazwa klasy w pliku związanym z kodem musi być zgodna z nazwą klasy przypisaną do MyControl1. XAML i musi dziedziczyć po elemencie głównym formantu. Druga klasa, `MyControlEventArgs`, jest klasą argumentów zdarzeń, która jest używana do wysyłania danych z powrotem do hosta.  
   
- Otwórz MyControl1.xaml.cs. Zmień istniejącą deklarację klasy tak, aby miała następującą nazwę i dziedziczy po <xref:System.Windows.Controls.Grid>.  
+ Open MyControl1.xaml.cs. Zmień istniejącą deklarację klasy tak, aby miała następującą nazwę i dziedziczy po <xref:System.Windows.Controls.Grid>.  
   
  [!code-csharp[WindowsFormsHostingWpfControl#21](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#21)]  
   
@@ -213,9 +214,9 @@ Na poniższej ilustracji przedstawiono formant złożony WPF hostowany w aplikac
   
     - Platformie docelowej  
   
-    - System. XAML  
+    - System.Xaml  
   
-    - 'Windowsbase  
+    - WindowsBase  
   
     - WindowsFormsIntegration  
   
@@ -248,15 +249,15 @@ Na poniższej ilustracji przedstawiono formant złożony WPF hostowany w aplikac
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
     |groupBox1|radioBackgroundLightSalmon|LightSalmon|  
     |groupBox2|radioForegroundOriginal|Oryginał|  
-    |groupBox2|radioForegroundRed|wyświetlany|  
-    |groupBox2|radioForegroundYellow|kryje|  
+    |groupBox2|radioForegroundRed|Czerwony|  
+    |groupBox2|radioForegroundYellow|Kryje|  
     |groupBox3|radioSizeOriginal|Oryginał|  
     |groupBox3|radioSizeTen|10|  
     |groupBox3|radioSizeTwelve|12|  
     |groupBox4|radioFamilyOriginal|Oryginał|  
     |groupBox4|radioFamilyTimes|Times New Roman|  
     |groupBox4|radioFamilyWingDings|WingDings|  
-    |groupBox5|radioStyleOriginal|Typow|  
+    |groupBox5|radioStyleOriginal|Normalny|  
     |groupBox5|radioStyleItalic|Wyowietla|  
     |groupBox6|radioWeightOriginal|Oryginał|  
     |groupBox6|radioWeightBold|Zapis|  
@@ -265,10 +266,10 @@ Na poniższej ilustracji przedstawiono formant złożony WPF hostowany w aplikac
   
     |GroupBox|Nazwa|Tekst|  
     |--------------|----------|----------|  
-    |groupBox7|lblName|Nazwij|  
+    |groupBox7|lblName|Nazwa:|  
     |groupBox7|lblAddress|Ulica:|  
     |groupBox7|lblCity|—|  
-    |groupBox7|lblState|Państwu|  
+    |groupBox7|lblState|Stan:|  
     |groupBox7|lblZip|Kodu|  
   
 ### <a name="initializing-the-form"></a>Inicjowanie formularza  

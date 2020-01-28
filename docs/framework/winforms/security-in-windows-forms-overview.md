@@ -1,5 +1,5 @@
 ---
-title: Przegląd zabezpieczeń w formularzach systemu Windows
+title: Omówienie zabezpieczeń
 ms.date: 03/30/2017
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 08c80eccee395d9141978a7d4594205af1a51ed9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9010b45383f856079661359fdf82180526d96dde
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972131"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734841"
 ---
 # <a name="security-in-windows-forms-overview"></a>Przegląd zabezpieczeń w formularzach systemu Windows
 
@@ -46,7 +46,7 @@ Następnie zdecyduj, czy aplikacja musi działać w trybie pełnego zaufania, cz
 
 W przypadku wybrania opcji częściowej relacji zaufania (czyli Internetu lub lokalnych zestawów uprawnień) Zdecyduj, jak aplikacja ma działać w tym środowisku. Windows Forms oferuje alternatywne, bardziej bezpieczne sposoby implementowania funkcji w środowisku częściowo zaufanym. Niektóre części aplikacji, takie jak dostęp do danych, można zaprojektować i napisać inaczej w przypadku środowisk częściowej relacji zaufania i pełnego zaufania. Niektóre funkcje Windows Forms, takie jak ustawienia aplikacji, są przeznaczone do pracy w częściowej relacji zaufania. Aby uzyskać więcej informacji, zobacz [Omówienie ustawień aplikacji](./advanced/application-settings-overview.md).
 
-Jeśli aplikacja wymaga więcej uprawnień niż zezwala częściowa relacja zaufania, ale nie chcesz uruchamiać w trybie pełnego zaufania, możesz uruchomić w częściowej relacji zaufania przy zapewnieniu tylko potrzebnych dodatkowych uprawnień. Na przykład, jeśli chcesz uruchomić w częściowej relacji zaufania, ale musisz udzielić aplikacji dostępu tylko do odczytu do katalogu w systemie plików użytkownika, możesz poprosić <xref:System.Security.Permissions.FileIOPermission> tylko o ten katalog. Ta metoda jest używana prawidłowo, ale takie podejście może zwiększyć funkcjonalność aplikacji i zminimalizować zagrożenie bezpieczeństwa dla użytkowników.
+Jeśli aplikacja wymaga więcej uprawnień niż zezwala częściowa relacja zaufania, ale nie chcesz uruchamiać w trybie pełnego zaufania, możesz uruchomić w częściowej relacji zaufania przy zapewnieniu tylko potrzebnych dodatkowych uprawnień. Na przykład jeśli chcesz uruchomić program w częściowej relacji zaufania, ale musisz udzielić aplikacji dostępu tylko do odczytu do katalogu w systemie plików użytkownika, możesz zażądać <xref:System.Security.Permissions.FileIOPermission> tylko do tego katalogu. Ta metoda jest używana prawidłowo, ale takie podejście może zwiększyć funkcjonalność aplikacji i zminimalizować zagrożenie bezpieczeństwa dla użytkowników.
 
 Podczas tworzenia aplikacji, która będzie uruchamiana w częściowej relacji zaufania, śledź uprawnienia, które aplikacja musi uruchomić, oraz uprawnienia, które mogą być używane przez aplikację. Jeśli wszystkie uprawnienia są znane, należy wykonać żądanie deklaratywne dla uprawnienia na poziomie aplikacji. Żądanie uprawnień informuje .NET Framework czasie uruchamiania o tym, które uprawnienia są wymagane przez aplikację i które z nich nie ma. Aby uzyskać więcej informacji na temat żądania uprawnień, zobacz [żądanie uprawnień](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100)).
 
@@ -58,9 +58,9 @@ W poniższych tematach opisano dodatkowe funkcje zabezpieczeń Windows Forms.
 
 |Temat|Opis|
 |-----------|-----------------|
-|- [Bezpieczniejszy dostęp do plików i danych w Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)|Opisuje sposób uzyskiwania dostępu do plików i danych w środowisku częściowej relacji zaufania.|
-|- [Bezpieczniejsze drukowanie w Windows Forms](more-secure-printing-in-windows-forms.md)|Opisuje sposób uzyskiwania dostępu do funkcji drukowania w środowisku częściowej relacji zaufania.|
-|- [Dodatkowe zagadnienia dotyczące zabezpieczeń w Windows Forms](additional-security-considerations-in-windows-forms.md)|Opisuje wykonywanie manipulowania oknem przy użyciu Schowka i wykonywanie wywołań do kodu niezarządzanego w środowisku częściowej relacji zaufania.|
+|- bezpieczniejszy [dostęp do plików i danych w Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)|Opisuje sposób uzyskiwania dostępu do plików i danych w środowisku częściowej relacji zaufania.|
+|- bezpieczniejsze [Drukowanie w programie Windows Forms](more-secure-printing-in-windows-forms.md)|Opisuje sposób uzyskiwania dostępu do funkcji drukowania w środowisku częściowej relacji zaufania.|
+|- [dodatkowe zagadnienia dotyczące zabezpieczeń w programie Windows Forms](additional-security-considerations-in-windows-forms.md)|Opisuje wykonywanie manipulowania oknem przy użyciu Schowka i wykonywanie wywołań do kodu niezarządzanego w środowisku częściowej relacji zaufania.|
 
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>Wdrażanie aplikacji z odpowiednimi uprawnieniami
 
@@ -77,13 +77,13 @@ W poniższej tabeli opisano te technologie.
 
 Wybrana Technologia będzie zależeć od środowiska wdrażania. Aby uzyskać więcej informacji, zobacz [Wybieranie strategii wdrażania ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-Domyślnie aplikacje ClickOnce wdrożone przy użyciu programu Visual Studio lub narzędzi zestawu .NET Framework SDK (Mage. exe i MageUI. exe) są skonfigurowane do uruchamiania na komputerze klienckim, który ma pełne zaufanie. W przypadku wdrażania aplikacji przy użyciu częściowej relacji zaufania lub korzystania tylko z dodatkowych uprawnień należy zmienić to ustawienie domyślne. Można to zrobić za pomocą programu Visual Studio lub narzędzia .NET Framework SDK MageUI. exe podczas konfigurowania wdrożenia. Aby uzyskać więcej informacji o sposobach korzystania z programu MageUI. [exe, zobacz Przewodnik: Ręczne wdrażanie aplikacji](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)ClickOnce.  Zapoznaj [się również z tematem: Ustawianie uprawnień niestandardowych dla aplikacji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) ClickOnce lub [instrukcje: Ustawianie uprawnień niestandardowych dla aplikacji](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)ClickOnce.
+Domyślnie aplikacje ClickOnce wdrożone przy użyciu programu Visual Studio lub narzędzi zestawu .NET Framework SDK (Mage. exe i MageUI. exe) są skonfigurowane do uruchamiania na komputerze klienckim, który ma pełne zaufanie. W przypadku wdrażania aplikacji przy użyciu częściowej relacji zaufania lub korzystania tylko z dodatkowych uprawnień należy zmienić to ustawienie domyślne. Można to zrobić za pomocą programu Visual Studio lub narzędzia .NET Framework SDK MageUI. exe podczas konfigurowania wdrożenia. Aby uzyskać więcej informacji o sposobach korzystania z programu MageUI. exe, zobacz [Przewodnik: ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  Zobacz również [instrukcje: Ustawianie uprawnień niestandardowych dla aplikacji ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) lub [instrukcje: Ustawianie uprawnień niestandardowych dla aplikacji ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 Aby uzyskać więcej informacji na temat aspektów zabezpieczeń ClickOnce i podniesienia uprawnień, zobacz [Zabezpieczanie aplikacji ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Aby uzyskać więcej informacji na temat wdrażania zaufanych aplikacji, zobacz [Omówienie wdrażania zaufanych aplikacji](/visualstudio/deployment/trusted-application-deployment-overview).
 
 ### <a name="testing-the-application"></a>Testowanie aplikacji
 
-Jeśli aplikacja Windows Forms została wdrożona za pomocą programu Visual Studio, można włączyć debugowanie w częściowej relacji zaufania lub z ograniczonym zestawem uprawnień ze środowiska deweloperskiego.  Zapoznaj [się również z tematem: Debuguj aplikację ClickOnce z ograniczonymi uprawnieniami](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
+Jeśli aplikacja Windows Forms została wdrożona za pomocą programu Visual Studio, można włączyć debugowanie w częściowej relacji zaufania lub z ograniczonym zestawem uprawnień ze środowiska deweloperskiego.  Zobacz również [instrukcje: debugowanie aplikacji ClickOnce z ograniczonymi uprawnieniami](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
 
 ## <a name="see-also"></a>Zobacz także
 

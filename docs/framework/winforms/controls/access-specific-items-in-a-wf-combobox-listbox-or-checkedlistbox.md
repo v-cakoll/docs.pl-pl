@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: uzyskiwanie dostępu do określonych elementów w kontrolkach ComboBox, ListBox lub CheckedListBox formularzy systemu Windows'
+title: Dostęp do określonych elementów w kontrolce ComboBox, ListBox lub CheckedListBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-ms.openlocfilehash: fbdd9168fe286823db7cf066ae0f821b8db88ecb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67673ec7f136f1466d4fd091e691324c53e7de06
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011830"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746325"
 ---
-# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Instrukcje: uzyskiwanie dostępu do określonych elementów w kontrolkach ComboBox, ListBox lub CheckedListBox formularzy systemu Windows
-Uzyskiwanie dostępu do określonych elementów w pole kombi Windows Forms, pole listy lub pole listy zaznaczone jest zadaniem podstawowych. Umożliwia programowe wyznaczanie, co to jest na liście w poszczególnych pozycji.  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Porady: uzyskiwanie dostępu do określonych elementów w formantach ComboBox, ListBox lub CheckedListBox formularzy systemu Windows
+Uzyskiwanie dostępu do określonych elementów w polu kombi Windows Forms, pole listy lub pole listy zaznaczonej jest istotnym zadaniem. Pozwala on programowo określić, co znajduje się na liście, w każdej podanej pozycji.  
   
-### <a name="to-access-a-specific-item"></a>Aby dostęp do określonego elementu  
+### <a name="to-access-a-specific-item"></a>Aby uzyskać dostęp do określonego elementu  
   
-1. Zapytanie `Items` kolekcji przy użyciu indeksu konkretny element:  
+1. Wykonaj zapytanie dotyczące kolekcji `Items` przy użyciu indeksu określonego elementu:  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  

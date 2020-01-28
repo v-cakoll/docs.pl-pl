@@ -2,12 +2,12 @@
 title: Dodatki do formatu csproj dla platformy .NET Core
 description: Dowiedz się więcej o różnicach między istniejącymi a plikami csproj programu .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: da066625b445eca9186acedf06a941564921a6dd
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
-ms.translationtype: MT
+ms.openlocfilehash: 9d6a7a388cb51bf08996adc654db5722a5ef1303
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115841"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733341"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -55,7 +55,7 @@ W przypadku odwoływania się do `Microsoft.AspNetCore.App` lub `Microsoft.AspNe
 
 > Znany problem: zestaw SDK platformy .NET Core 2,1 obsługuje tę składnię tylko wtedy, gdy projekt używa także Microsoft. NET. Sdk. Web. Ten problem został rozwiązany w zestawie SDK platformy .NET Core 2,2.
 
-Te odwołania do ASP.NET Core pakietu są nieco inne niż w przypadku większości normalnych pakietów NuGet. Wdrożenia aplikacji korzystających z tych pakietów w [ramach platformy](../deploying/index.md#framework-dependent-deployments-fdd) są automatycznie wykorzystywane w ramach platformy udostępnionej ASP.NET Core. W przypadku korzystania z pakietów trwałych nie są wdrażane **żadne** zasoby z przywoływanych ASP.NET Core pakietów NuGet w aplikacji — ASP.NET Core współdzielona architektura zawiera te zasoby. Zasoby w strukturze udostępnionej są zoptymalizowane pod kątem platformy docelowej w celu poprawienia czasu uruchamiania aplikacji. Aby uzyskać więcej informacji na temat platformy udostępnionej, zobacz [pakiet dystrybucji .NET Core](../build/distribution-packaging.md).
+Te odwołania do ASP.NET Core pakietu są nieco inne niż w przypadku większości normalnych pakietów NuGet. Wdrożenia aplikacji korzystających z tych pakietów w [ramach platformy](../deploying/index.md#framework-dependent-deployments-fdd) są automatycznie wykorzystywane w ramach platformy udostępnionej ASP.NET Core. W przypadku korzystania z pakietów trwałych nie są wdrażane **żadne** zasoby z przywoływanych ASP.NET Core pakietów NuGet w aplikacji — ASP.NET Core współdzielona architektura zawiera te zasoby. Zasoby w strukturze udostępnionej są zoptymalizowane pod kątem platformy docelowej w celu poprawienia czasu uruchamiania aplikacji. Aby uzyskać więcej informacji na temat platformy udostępnionej, zobacz [pakiet dystrybucji .NET Core](../distribution-packaging.md).
 
 Jeśli określona *jest* wersja, jest ona traktowana jako *minimalna* wersja ASP.NET Core udostępnionej platformy dla wdrożeń zależnych od platformy i jako *dokładna* wersja wdrożeń samodzielnych. Może to mieć następujące konsekwencje:
 
@@ -282,7 +282,7 @@ Długi opis pakietu do wyświetlania interfejsu użytkownika.
 
 Długi opis zestawu. Jeśli nie określono `PackageDescription`, ta właściwość jest również używana jako Opis pakietu.
 
-### <a name="copyright"></a>Prawa autorskie
+### <a name="copyright"></a>Prawo
 
 Szczegóły dotyczące praw autorskich pakietu.
 

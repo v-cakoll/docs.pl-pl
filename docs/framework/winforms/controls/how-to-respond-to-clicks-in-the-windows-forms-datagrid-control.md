@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: odpowiadanie na kliknięcia w kontrolce DataGrid formularzy systemu Windows'
+title: Odpowiadanie na kliknięcia w formancie DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 54e41c6960c24f68cb27a6f6fb859b4b9223ed27
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9aa1331116cd3f2f8050ff9f8cc8cc52d25726d1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914995"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735754"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Instrukcje: odpowiadanie na kliknięcia w kontrolce DataGrid formularzy systemu Windows
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Porady: odpowiadanie na kliknięcia w formancie DataGrid formularzy systemu Windows
 > [!NOTE]
-> Formant zastępuje i dodaje funkcję <xref:System.Windows.Forms.DataGrid> do <xref:System.Windows.Forms.DataGrid> kontrolki; jednak kontrolka jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości, jeśli wybierzesz opcję. <xref:System.Windows.Forms.DataGridView> Aby uzyskać więcej informacji, zobacz [różnice między kontrolkami DataGridView i DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Formant <xref:System.Windows.Forms.DataGridView> zamienia i dodaje funkcje do kontrolki <xref:System.Windows.Forms.DataGrid>; Niemniej jednak kontrolka <xref:System.Windows.Forms.DataGrid> jest zachowywana na potrzeby zgodności z poprzednimi wersjami i w przyszłości. Aby uzyskać więcej informacji, zobacz [różnice między kontrolkami DataGridView i DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Po powiązaniu <xref:System.Windows.Forms.DataGrid> Windows Forms z bazą danych możesz monitorować klikniętą komórkę.  
+ Po powiązaniu Windows Forms <xref:System.Windows.Forms.DataGrid> z bazą danych możesz monitorować klikniętą komórkę.  
   
 ### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Aby wykryć, kiedy użytkownik elementu DataGrid wybierze inną komórkę  
   
-- W programie obsługi zdarzeń Napisz kod, aby odpowiednio odpowiedzieć. <xref:System.Windows.Forms.DataGrid.CurrentCellChanged>  
+- W obsłudze zdarzeń <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> Napisz kod, aby odpowiednio odpowiedzieć.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -56,9 +56,9 @@ ms.locfileid: "69914995"
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Aby określić, która część elementu DataGrid kliknięta przez użytkownika  
   
-- Wywołaj <xref:System.Windows.Forms.Control.MouseDown> <xref:System.Windows.Forms.Control.Click> metodę w odpowiedniej procedurze obsługi zdarzeń, na przykład dla zdarzenia or. <xref:System.Windows.Forms.DataGrid.HitTest%2A>  
+- Wywołaj metodę <xref:System.Windows.Forms.DataGrid.HitTest%2A> w odpowiedniej procedurze obsługi zdarzeń, na przykład dla zdarzenia <xref:System.Windows.Forms.Control.MouseDown> lub <xref:System.Windows.Forms.Control.Click>.  
   
-     <xref:System.Windows.Forms.DataGrid.HitTest%2A> Metoda<xref:System.Windows.Forms.DataGrid.HitTestInfo> zwraca obiekt, który zawiera wiersz i kolumnę klikniętego obszaru.  
+     Metoda <xref:System.Windows.Forms.DataGrid.HitTest%2A> zwraca obiekt <xref:System.Windows.Forms.DataGrid.HitTestInfo>, który zawiera wiersz i kolumnę klikniętego obszaru.  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -143,4 +143,4 @@ ms.locfileid: "69914995"
 ## <a name="see-also"></a>Zobacz także
 
 - [DataGrid, kontrolka](datagrid-control-windows-forms.md)
-- [Instrukcje: Zmień wyświetlane dane w czasie wykonywania w kontrolce DataGrid Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Instrukcje: zmienianie wyświetlanych danych w czasie wykonywania w kontrolce DataGrid formularzy Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)

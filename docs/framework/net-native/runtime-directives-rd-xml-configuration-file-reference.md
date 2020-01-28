@@ -2,12 +2,12 @@
 title: Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-ms.openlocfilehash: f4c51dc269775d14d395cb464b3787cc987e086d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e74d34693446cca645003a9f93bc1777849e3182
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128128"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738408"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)
 
@@ -39,27 +39,69 @@ Elementem głównym jest element [dyrektywy](directives-element-net-native.md) .
 
 Aby uzyskać informacje referencyjne, wybierz elementy z następującej struktury lub zobacz [elementy dyrektywy środowiska uruchomieniowego](runtime-directive-elements.md). W poniższej hierarchii wielokropek oznacza strukturę cykliczną. Informacje w nawiasach wskazują, czy ten element jest opcjonalny, czy wymagany, a jeśli jest używany, ile wystąpień (jeden lub wiele) jest dozwolonych.
 
-[Dyrektywy](directives-element-net-native.md) [1:1] [aplikacja](application-element-net-native.md) [0:1] [zestaw](assembly-element-net-native.md) [0: m] [przestrzeń nazw](namespace-element-net-native.md) [0: m]. . .
-[Typ](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
-[Przestrzeń nazw [0](namespace-element-net-native.md) : m] [przestrzeń nazw](namespace-element-net-native.md) [0: m]. . .
-[Typ](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
-[Typ](type-element-net-native.md) [0: M] [podtypów](subtypes-element-net-native.md) (podklasy zawierającego typ) [O:1] [Typ](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
-[AttributeImplies](attributeimplies-element-net-native.md) (zawierający typ to atrybut) [O:1] [GenericParameter](genericparameter-element-net-native.md) [0: m] [Metoda](method-element-net-native.md) [0: M] [parametr](parameter-element-net-native.md) [0: m] [TypeParameter](typeparameter-element-net-native.md) [0: m] [GenericParameter](genericparameter-element-net-native.md) [0: m] [MethodInstantiation](methodinstantiation-element-net-native.md) ( konstruowana Metoda ogólna) [0: M] [Właściwość](property-element-net-native.md) [0: m] [pole](field-element-net-native.md) [0: m] [zdarzenie](event-element-net-native.md) [0: m] [TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: m] [Typ](type-element-net-native.md) [0: m]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
-[Metoda](method-element-net-native.md) [0: m] [parametr](parameter-element-net-native.md) [0: m] [TypeParameter](typeparameter-element-net-native.md) [0: M] [GenericParameter](genericparameter-element-net-native.md) [0: m] [MethodInstantiation](methodinstantiation-element-net-native.md) (konstruowana Metoda ogólna) [0: m] [Właściwość](property-element-net-native.md) [0: M] [pole](field-element-net-native.md) [0: m] [zdarzenie](event-element-net-native.md) [0: m] [ Biblioteka](library-element-net-native.md) [0: m] [zestaw](assembly-element-net-native.md) [0: m], [przestrzeń nazw](namespace-element-net-native.md) [0: m]. . .
-[Typ](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
-[Przestrzeń nazw [0](namespace-element-net-native.md) : m] [przestrzeń nazw](namespace-element-net-native.md) [0: m]. . .
-[Typ](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
-[Typ](type-element-net-native.md) [0: M] [podtypów](subtypes-element-net-native.md) (podklasy zawierającego typ) [O:1] [Typ](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
-[AttributeImplies](attributeimplies-element-net-native.md) (zawierający typ to atrybut) [O:1] [GenericParameter](genericparameter-element-net-native.md) [0: m] [Metoda](method-element-net-native.md) [0: m] [MethodInstantiation](methodinstantiation-element-net-native.md) (skonstruowana Metoda ogólna) [0: m] [Właściwość](property-element-net-native.md) [0: m] [pole](field-element-net-native.md) [0: m] [zdarzenie](event-element-net-native.md) [0 : M] [TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: m] [typ](type-element-net-native.md) [0: m]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
-[Metoda](method-element-net-native.md) [0: m] [MethodInstantiation](methodinstantiation-element-net-native.md) (konstrukcja metody ogólnej) [0: m] [Właściwość](property-element-net-native.md) [0: M] [pole](field-element-net-native.md) [0: m] [zdarzenie](event-element-net-native.md) [0: m]
+- [Dyrektywy](directives-element-net-native.md) [1:1]
+  - [Aplikacja](application-element-net-native.md) [0:1]
+    - [Zestaw](assembly-element-net-native.md) [0: M]
+      - [Przestrzeń nazw](namespace-element-net-native.md) [0: M]. . .
+      - [Typ](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
+    - [Przestrzeń nazw](namespace-element-net-native.md) [0: M]
+      - [Przestrzeń nazw](namespace-element-net-native.md) [0: M]. . .
+      - [Typ](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
+    - [Typ](type-element-net-native.md) [0: M]
+      - [Podtypy](subtypes-element-net-native.md) (podklasy typu zawierającego) [O:1]
+      - [Typ](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
+      - [AttributeImplies](attributeimplies-element-net-native.md) (zawierający typ jest atrybutem) [O:1]
+      - [GenericParameter](genericparameter-element-net-native.md) [0: M]
+      - [Metoda](method-element-net-native.md) [0: M]
+        - [Parametr](parameter-element-net-native.md) [0: M]
+        - [TypeParameter](typeparameter-element-net-native.md) [0: M]
+        - [GenericParameter](genericparameter-element-net-native.md) [0: M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (konstrukcja metody ogólnej) [0: M]
+      - [Właściwość](property-element-net-native.md) [0: M]
+      - [Pole](field-element-net-native.md) [0: M]
+      - [Zdarzenie](event-element-net-native.md) [0: M]
+    - [TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]
+      - [Typ](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
+      - [Metoda](method-element-net-native.md) [0: M]
+        - [Parametr](parameter-element-net-native.md) [0: M]
+        - [TypeParameter](typeparameter-element-net-native.md) [0: M]
+        - [GenericParameter](genericparameter-element-net-native.md) [0: M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (konstrukcja metody ogólnej) [0: M]
+      - [Właściwość](property-element-net-native.md) [0: M]
+      - [Pole](field-element-net-native.md) [0: M]
+      - [Zdarzenie](event-element-net-native.md) [0: M]
+  - [Biblioteka](library-element-net-native.md) [0: M]
+    - [Zestaw](assembly-element-net-native.md) [0: M]
+      - [Przestrzeń nazw](namespace-element-net-native.md) [0: M]. . .
+      - [Typ](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
+    - [Przestrzeń nazw](namespace-element-net-native.md) [0: M]
+      - [Przestrzeń nazw](namespace-element-net-native.md) [0: M]. . .
+      - [Typ](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
+    - [Typ](type-element-net-native.md) [0: M]
+      - [Podtypy](subtypes-element-net-native.md) (podklasy typu zawierającego) [O:1]
+      - [Typ](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
+      - [AttributeImplies](attributeimplies-element-net-native.md) (zawierający typ jest atrybutem) [O:1]
+      - [GenericParameter](genericparameter-element-net-native.md) [0: M]
+      - [Metoda](method-element-net-native.md) [0: M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (konstrukcja metody ogólnej) [0: M]
+      - [Właściwość](property-element-net-native.md) [0: M]
+      - [Pole](field-element-net-native.md) [0: M]
+      - [Zdarzenie](event-element-net-native.md) [0: M]
+    - [TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]
+      - [Typ](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (skonstruowany typ ogólny) [0: M]. . .
+      - [Metoda](method-element-net-native.md) [0: M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (konstrukcja metody ogólnej) [0: M]
+      - [Właściwość](property-element-net-native.md) [0: M]
+      - [Pole](field-element-net-native.md) [0: M]
+      - [Zdarzenie](event-element-net-native.md) [0: M]
 
 Element [aplikacji](application-element-net-native.md) nie może mieć żadnych atrybutów lub atrybuty zasad mogą być omówione w [sekcji dyrektywy i zasad środowiska uruchomieniowego](#Directives).
 
@@ -84,49 +126,49 @@ Sam element [aplikacji](application-element-net-native.md) i elementy podrzędne
 
 Wszelkie zasady określone przez atrybut elementu mają zastosowanie do wszystkich elementów podrzędnych, które nie określają wartości dla tych zasad. Na przykład jeśli zasady są określone przez element [typu](type-element-net-native.md) , te zasady mają zastosowanie do wszystkich typów i elementów członkowskich, dla których zasady nie są jawnie określone.
 
-Zasady, które mogą być wyrażone przez [aplikację](application-element-net-native.md), [zestaw](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [przestrzeń nazw](namespace-element-net-native.md), [podtypy](subtypes-element-net-native.md)i elementy [typu](type-element-net-native.md) , różnią się od zasad, które mogą być wyrażone dla poszczególnych członków (przez [Metoda](method-element-net-native.md), [Właściwość](property-element-net-native.md), [pole](field-element-net-native.md)i elementy [zdarzenia](event-element-net-native.md) ).
+Zasady, które mogą być wyrażone przez [aplikację](application-element-net-native.md), [zestaw](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [przestrzeń nazw](namespace-element-net-native.md), [podtypy](subtypes-element-net-native.md)i elementy [typu](type-element-net-native.md) , różnią się od zasad, które mogą być wyrażone dla poszczególnych członków (przez [metodę](method-element-net-native.md), [Właściwość](property-element-net-native.md), [pole](field-element-net-native.md)i elementy [zdarzenia](event-element-net-native.md) ).
 
 ### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>Określanie zasad dla zestawów, przestrzeni nazw i typów
 
 Elementy [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [podtyp](subtypes-element-net-native.md)i [Type](type-element-net-native.md) obsługują następujące typy zasad:
 
-- `Activate`., Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, aby umożliwić aktywację wystąpień.
+- `Activate`. Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, aby umożliwić aktywację wystąpień.
 
-- `Browse`., Steruje wykonywaniem zapytań dotyczących informacji o elementach programu, ale nie umożliwia dostępu do środowiska uruchomieniowego.
+- `Browse`. Steruje wykonywaniem zapytań dotyczących informacji o elementach programu, ale nie umożliwia dostępu do środowiska uruchomieniowego.
 
-- `Dynamic`., Kontroluje dostęp środowiska uruchomieniowego do wszystkich elementów członkowskich typu, takich jak konstruktory, metody, pola, właściwości i zdarzenia, aby umożliwić programowanie dynamiczne.
+- `Dynamic`. Kontroluje dostęp środowiska uruchomieniowego do wszystkich elementów członkowskich typu, takich jak konstruktory, metody, pola, właściwości i zdarzenia, aby umożliwić programowanie dynamiczne.
 
-- `Serialize`., Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, pól i właściwości, aby umożliwić Serializowanie i Serializowanie wystąpień typu przez biblioteki innych firm, takie jak serializator JSON Newtonsoft.
+- `Serialize`. Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, pól i właściwości, aby umożliwić Serializowanie i Serializowanie wystąpień typu przez biblioteki innych firm, takie jak serializator JSON Newtonsoft.
 
-- `DataContractSerializer`., Kontroluje zasady dla serializacji korzystającej z klasy <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
+- `DataContractSerializer`. Kontroluje zasady dla serializacji korzystającej z klasy <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
-- `DataContractJsonSerializer`., Kontroluje zasady dla serializacji JSON korzystającej z klasy <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
+- `DataContractJsonSerializer`. Kontroluje zasady dla serializacji JSON korzystającej z klasy <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
-- `XmlSerializer`., Kontroluje zasady dla serializacji XML, która używa klasy <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
+- `XmlSerializer`. Kontroluje zasady dla serializacji XML, która używa klasy <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
 
-- `MarshalObject`., Kontroluje zasady dotyczące organizowania typów odwołań do WinRT i COM.
+- `MarshalObject`. Kontroluje zasady dotyczące organizowania typów odwołań do WinRT i COM.
 
-- `MarshalDelegate`., Steruje zasadami organizowania typów delegatów jako wskaźników funkcji do kodu natywnego.
+- `MarshalDelegate`. Steruje zasadami organizowania typów delegatów jako wskaźników funkcji do kodu natywnego.
 
-- `MarshalStructure`. Steruje zasadami organizowania struktur w kodzie natywnym.
+- `MarshalStructure` . Steruje zasadami organizowania struktur w kodzie natywnym.
 
 Ustawienia skojarzone z tymi typami zasad są następujące:
 
-- `All`., Włącz zasady dla wszystkich typów i elementów członkowskich, które nie są usuwane przez łańcuch narzędzi.
+- `All`. Włącz zasady dla wszystkich typów i elementów członkowskich, które nie są usuwane przez łańcuch narzędzi.
 
-- `Auto`., Użyj zachowania domyślnego. (Nieokreślanie zasad jest równoznaczne z ustawieniem zasad do `Auto`, chyba że te zasady zostaną zastąpione, na przykład przez element nadrzędny).
+- `Auto`. Użyj zachowania domyślnego. (Nieokreślanie zasad jest równoznaczne z ustawieniem zasad do `Auto`, chyba że te zasady zostaną zastąpione, na przykład przez element nadrzędny).
 
-- `Excluded`., Wyłącz zasady dla elementu program.
+- `Excluded`. Wyłącz zasady dla elementu program.
 
-- `Public`., Włącz zasady dla typów publicznych lub członków, chyba że łańcuch narzędzi nie ustali, że element członkowski jest niepotrzebny i usuwa go. (W tym drugim przypadku należy użyć `Required Public`, aby upewnić się, że element członkowski jest przechowywany i ma możliwości odbicia).
+- `Public`. Włącz zasady dla typów publicznych lub członków, chyba że łańcuch narzędzi nie ustali, że element członkowski jest niepotrzebny i usuwa go. (W tym drugim przypadku należy użyć `Required Public`, aby upewnić się, że element członkowski jest przechowywany i ma możliwości odbicia).
 
-- `PublicAndInternal`., Włącz zasady dla typów publicznych i wewnętrznych lub członków, jeśli łańcuch narzędzi nie zostanie usunięty.
+- `PublicAndInternal`. Włącz zasady dla typów publicznych i wewnętrznych lub członków, jeśli łańcuch narzędzi nie zostanie usunięty.
 
-- `Required Public`., Należy wymagać łańcucha narzędzi, aby zachować publiczne typy i członków, niezależnie od tego, czy są one używane, i włączyć dla nich zasady.
+- `Required Public`. Należy wymagać łańcucha narzędzi, aby zachować publiczne typy i członków, niezależnie od tego, czy są one używane, i włączyć dla nich zasady.
 
-- `Required PublicAndInternal`., Wymagaj, aby łańcuch narzędzi zachował typy publiczne i wewnętrzne oraz członków, niezależnie od tego, czy są one używane, i Włącz dla nich zasady.
+- `Required PublicAndInternal`. Wymagaj, aby łańcuch narzędzi zachował typy publiczne i wewnętrzne oraz członków, niezależnie od tego, czy są one używane, i Włącz dla nich zasady.
 
-- `Required All`., Wymagaj łańcucha narzędzi, aby zachować wszystkie typy i członków, niezależnie od tego, czy są one używane, i Włącz dla nich zasady.
+- `Required All`. Wymagaj łańcucha narzędzi, aby zachować wszystkie typy i członków, niezależnie od tego, czy są one używane, i Włącz dla nich zasady.
 
 Na przykład następujące pliki dyrektywy środowiska uruchomieniowego definiują zasady dla wszystkich typów i elementów członkowskich w zestawie DataClasses. dll. Umożliwia odbicie dla serializacji wszystkich właściwości publicznych, umożliwia przeglądanie dla wszystkich typów i elementów członkowskich typu, umożliwia aktywację dla wszystkich typów (z powodu `Dynamic` atrybutu) i umożliwia odbicie dla wszystkich typów i członków publicznych.
 

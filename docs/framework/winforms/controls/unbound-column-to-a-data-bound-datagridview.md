@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: dodawanie niepowiązanych kolumn do powiązanej z danymi kontrolki DataGridView formularzy systemu Windows'
+title: Dodawanie niepowiązanej kolumny do kontrolki DataGridView powiązanej z danymi
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], adding unbound columns
 - DataGridView control [Windows Forms], unbound data
 ms.assetid: f7bdc4d8-ba8e-421b-ad62-82d936f01372
-ms.openlocfilehash: d40eea54d908f17fc2fe893d5bc15a073a066ba1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 807bbc121f33c35d70068571e76637c078ecb3da
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651578"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747063"
 ---
-# <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a>Instrukcje: dodawanie niepowiązanych kolumn do powiązanej z danymi kontrolki DataGridView formularzy systemu Windows
-Dane wyświetlane w <xref:System.Windows.Forms.DataGridView> kontroli zwykle będą pochodzić z określonego rodzaju źródła danych, ale możesz chcieć wyświetlić kolumny danych, która nie pochodzi ze źródła danych. Tego rodzaju kolumny jest nazywany niepowiązanych kolumn. Niepowiązanych kolumn może mieć wiele form. Służą one często, aby zapewnić dostęp do szczegółów wiersza danych.  
+# <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a>Porady: dodawanie niepowiązanych kolumn do powiązanego z danymi formantu DataGridView formularzy systemu Windows
+Dane wyświetlane w formancie <xref:System.Windows.Forms.DataGridView> zwykle pochodzą ze źródła danych pewnego rodzaju, ale może być konieczne wyświetlenie kolumny danych, które nie pochodzą ze źródła danych. Ten rodzaj kolumny nosi nazwę kolumny niepowiązanej. Kolumny niepowiązane mogą przyjmować wiele form. Często są one używane do zapewnienia dostępu do szczegółów wiersza danych.  
   
- Poniższy przykład kodu demonstruje sposób tworzenia niepowiązanych kolumn z **szczegóły** przycisków, aby wyświetlić tabeli podrzędnej związane z określonego wiersza w tabeli nadrzędnej, gdy implementować scenariusza wzorzec/szczegół. Aby reagować na kliknięcia przycisku, zaimplementować <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> program obsługi zdarzeń, który wyświetla formularz zawierający tabeli podrzędnej.  
+ Poniższy przykład kodu demonstruje sposób tworzenia niepowiązanej kolumny **szczegółów** , aby wyświetlić tabelę podrzędną powiązaną z określonym wierszem w tabeli nadrzędnej podczas implementowania scenariusza wzorzec/szczegóły. Aby reagować na kliknięcia przycisku, zaimplementuj procedurę obsługi zdarzeń <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType>, która wyświetla formularz zawierający tabelę podrzędną.  
   
- Są obsługiwane dla tego zadania w programie Visual Studio.  Zobacz też [jak: Dodawanie i usuwanie kolumn w Windows Forms formantu DataGridView za pomocą projektanta](add-and-remove-columns-in-the-datagrid-using-the-designer.md).  
+ To zadanie jest obsługiwane w programie Visual Studio.  Zobacz również [instrukcje: Dodawanie i usuwanie kolumn w kontrolce DataGridView Windows Forms przy użyciu narzędzia Projektant](add-and-remove-columns-in-the-datagrid-using-the-designer.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#010](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#010)]
@@ -30,9 +30,9 @@ Dane wyświetlane w <xref:System.Windows.Forms.DataGridView> kontroli zwykle bę
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1`.  
+- Kontrolka <xref:System.Windows.Forms.DataGridView> o nazwie `dataGridView1`.  
   
-- Odwołuje się do <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
+- Odwołania do zestawów <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
 

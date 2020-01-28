@@ -3,12 +3,12 @@ title: Ustawienia konfiguracji globalizacji
 description: Dowiedz się więcej o ustawieniach czasu wykonywania, które konfigurują aspekty globalizacji aplikacji .NET Core, na przykład analizując daty w języku japońskim.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 76cd4a0a0f93f4df3ff243c6024b952576e8e6cb
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3764d0eb714c094b44ae843a1e626073ff8d82e4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740542"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733453"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>Opcje konfiguracji czasu wykonywania dla globalizacji
 
@@ -21,7 +21,34 @@ ms.locfileid: "75740542"
 | | Nazwa ustawienia | Wartości |
 | - | - | - |
 | **runtimeconfig. JSON** | `System.Globalization.Invariant` | `false` dostęp do danych kultury<br/>`true` — uruchamianie w trybie niezmiennym |
+| **Właściwość programu MSBuild** | `InvariantGlobalization` | `false` dostęp do danych kultury<br/>`true` — uruchamianie w trybie niezmiennym |
 | **Zmienna środowiskowa** | `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` | `0` dostęp do danych kultury<br/>`1` — uruchamianie w trybie niezmiennym |
+
+### <a name="examples"></a>Przykłady
+
+plik *runtimeconfig. JSON* :
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.Globalization.Invariant": true
+      }
+   }
+}
+```
+
+Plik projektu:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+</Project>
+```
 
 ## <a name="era-year-ranges"></a>Zakresy lat era
 

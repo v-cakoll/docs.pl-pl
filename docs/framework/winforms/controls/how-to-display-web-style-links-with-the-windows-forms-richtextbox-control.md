@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: wyświetlanie łączy stylu sieci Web za pomocą kontrolki RichTextBox formularzy systemu Windows'
+title: Wyświetlanie łączy w stylu sieci Web z kontrolką RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: ce71981f7b233d3e168689c766128646eed3e981
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 78a07a250744018f121b03f2973b1661ed6bf764
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046183"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745530"
 ---
-# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Instrukcje: wyświetlanie łączy stylu sieci Web za pomocą kontrolki RichTextBox formularzy systemu Windows
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Porady: wyświetlanie łączy stylu sieci Web za pomocą formantu RichTextBox formularzy systemu Windows
 
-Kontrolka <xref:System.Windows.Forms.RichTextBox> Windows Forms może wyświetlać linki sieci Web jako kolorowe i podkreślane. Można napisać kod, który otwiera okno przeglądarki pokazujące witrynę sieci Web określoną w polu tekst linku po kliknięciu linku.
+Kontrolka <xref:System.Windows.Forms.RichTextBox> Windows Forms może wyświetlać linki sieci Web jako kolorowe i podkreślone. Można napisać kod, który otwiera okno przeglądarki pokazujące witrynę sieci Web określoną w polu tekst linku po kliknięciu linku.
 
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>Aby utworzyć link do strony sieci Web z kontrolką RichTextBox
 
-1. Ustaw właściwość na ciąg, który zawiera prawidłowy adres URL (na przykład "http://www.microsoft.com/"). <xref:System.Windows.Forms.RichTextBox.Text%2A>
+1. Ustaw właściwość <xref:System.Windows.Forms.RichTextBox.Text%2A> na ciąg zawierający prawidłowy adres URL (na przykład "http://www.microsoft.com/").
 
-2. Upewnij się, <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> że właściwość jest ustawiona `true` na (wartość domyślna).
+2. Upewnij się, że właściwość <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> jest ustawiona na `true` (wartość domyślna).
 
-3. Utwórz nowe wystąpienie <xref:System.Diagnostics.Process> globalne obiektu.
+3. Utwórz nowe wystąpienie globalne obiektu <xref:System.Diagnostics.Process>.
 
-4. Napisz procedurę obsługi <xref:System.Windows.Forms.RichTextBox.LinkClicked> zdarzeń, która wysyła do przeglądarki żądany tekst.
+4. Napisz procedurę obsługi zdarzeń dla zdarzenia <xref:System.Windows.Forms.RichTextBox.LinkClicked>, które wysyła przeglądarkę do żądanego tekstu.
 
-    W poniższym <xref:System.Windows.Forms.RichTextBox.LinkClicked> przykładzie zdarzenie otwiera wystąpienie programu Internet Explorer na adres URL określony <xref:System.Windows.Forms.RichTextBox.Text%2A> we właściwości <xref:System.Windows.Forms.RichTextBox> formantu. W tym przykładzie założono formularz z <xref:System.Windows.Forms.RichTextBox> kontrolką.
+    W poniższym przykładzie zdarzenie <xref:System.Windows.Forms.RichTextBox.LinkClicked> otwiera wystąpienie programu Internet Explorer na adres URL określony we właściwości <xref:System.Windows.Forms.RichTextBox.Text%2A> kontrolki <xref:System.Windows.Forms.RichTextBox>. W tym przykładzie przyjęto, że formularz z kontrolką <xref:System.Windows.Forms.RichTextBox>.
 
     > [!IMPORTANT]
-    > W wywołaniu <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> metody, <xref:System.Security.SecurityException> wystąpi wyjątek, jeśli używasz kodu w kontekście częściowego zaufania z powodu niewystarczających uprawnień. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../misc/code-access-security-basics.md).
+    > W wywołaniu metody <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> wystąpi wyjątek <xref:System.Security.SecurityException>, jeśli używasz kodu w kontekście częściowego zaufania z powodu niewystarczających uprawnień. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../misc/code-access-security-basics.md).
 
     ```vb
     Public p As New System.Diagnostics.Process
@@ -75,7 +75,7 @@ Kontrolka <xref:System.Windows.Forms.RichTextBox> Windows Forms może wyświetla
        }
     ```
 
-    (Wizualizacja C++) Należy zainicjować proces `p`, który można wykonać, dołączając następujące instrukcje w Konstruktorze formularza:
+    (Wizualizacja C++) Należy zainicjować `p`procesu, który można wykonać, dołączając następujące instrukcje w Konstruktorze formularza:
 
     ```cpp
     p = gcnew System::Diagnostics::Process();

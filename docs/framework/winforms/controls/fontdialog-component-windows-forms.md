@@ -1,35 +1,35 @@
 ---
-title: FontDialog — Składnik (Formularze systemu Windows)
+title: FontDialog, składnik
 ms.date: 03/30/2017
 helpviewer_keywords:
 - fonts [Windows Forms], dialog box
 - FontDialog component [Windows Forms]
 - Font dialog box [Windows Forms], Windows Forms
 ms.assetid: 54015df3-aab2-4338-84e5-ba78cedbfdfc
-ms.openlocfilehash: de3a6b8f59d5ae83d55ea408f70d54d37761f693
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c150db1d6833babd3dd53923fb11a2ab98a4b5c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971356"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745687"
 ---
 # <a name="fontdialog-component-windows-forms"></a>FontDialog — Składnik (Formularze systemu Windows)
-Formularze Windows <xref:System.Windows.Forms.FontDialog> składnik to wstępnie skonfigurowane okno dialogowe. Jest to ta sama **czcionki** okno dialogowe ujawnione przez system operacyjny Windows. Składnik dziedziczy <xref:System.Windows.Forms.CommonDialog> klasy.  
+Składnik <xref:System.Windows.Forms.FontDialog> Windows Forms jest wstępnie skonfigurowanym oknem dialogowym. Jest to samo okno dialogowe **czcionki** uwidocznione przez system operacyjny Windows. Składnik dziedziczy z klasy <xref:System.Windows.Forms.CommonDialog>.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [FontDialog, składnik — omówienie](fontdialog-component-overview-windows-forms.md)  
- Ogólne pojęcia związane z <xref:System.Windows.Forms.FontDialog> składnik, który umożliwia wyświetlenie okna dialogowego wstępnie skonfigurowane. Użytkownicy, można użyć okna dialogowego do manipulowania czcionek i ich ustawienia.  
+ Wprowadza ogólne koncepcje składnika <xref:System.Windows.Forms.FontDialog>, którego używasz do wyświetlania wstępnie skonfigurowanego okna dialogowego. Użytkownicy mogą używać okna dialogowego do manipulowania czcionkami i ich ustawieniami.  
   
- [Instrukcje: Pokazywanie listy czcionek przy użyciu składnika FontDialog](how-to-show-a-font-list-with-the-fontdialog-component.md)  
- Wyjaśnia, jak można wybrać czcionkę w czasie wykonywania za pośrednictwem wystąpienia <xref:System.Windows.Forms.FontDialog> składnika.  
+ [Instrukcje: pokazywanie listy czcionek przy użyciu składnika FontDialog](how-to-show-a-font-list-with-the-fontdialog-component.md)  
+ Wyjaśnia, jak wybrać czcionkę w czasie wykonywania za pomocą wystąpienia składnika <xref:System.Windows.Forms.FontDialog>.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.FontDialog>  
- Zawiera informacje na temat <xref:System.Windows.Forms.FontDialog> klasy i jej elementów członkowskich.  
+ Zawiera informacje referencyjne dotyczące klasy <xref:System.Windows.Forms.FontDialog> i jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki i składniki okien dialogowych](dialog-box-controls-and-components-windows-forms.md)  
- W tym artykule opisano zestaw kontrolek i składników, które umożliwiają użytkownikom do wykonywania standardowych interakcji z aplikacji lub systemu.  
+ Opisuje zestaw kontrolek i składników, które umożliwiają użytkownikom wykonywanie standardowych interakcji z aplikacją lub systemem.  
   
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.
+ Zawiera pełną listę kontrolek Windows Forms, z linkami do informacji o ich użyciu.

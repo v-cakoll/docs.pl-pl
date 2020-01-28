@@ -2,12 +2,12 @@
 title: Zużywanie strumieniowych danych OData z przepływu pracy — WF
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: c9780200d9b7c7bc89797b3c16b22bc38440fccc
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ceac2c2d07351fcb79e2345068f07fa22f356411
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802664"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743791"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Zużywanie źródeł danych OData z przepływu pracy
 
@@ -15,7 +15,7 @@ Usługi danych programu WCF jest składnikiem .NET Framework, który umożliwia 
 
 ## <a name="using-the-sample-northwind-odata-service"></a>Korzystanie z przykładowej usługi OData Northwind
 
-Przykłady w tym temacie wykorzystują przykładową usługę danych Northwind znajdującą się w <https://services.odata.org/Northwind/Northwind.svc/>. Ta usługa jest świadczona jako część [zestawu SDK OData](https://www.odata.org/wp-content/uploads/sites/21/odatasdkcodesamples.zip) i zapewnia dostęp tylko do odczytu do przykładowej bazy danych Northwind. Jeśli wymagana jest funkcja dostępu do zapisu lub jeśli jest wymagana lokalna usługa danych programu WCF, można wykonać kroki przedstawione w [usługi danych programu WCF przewodniku szybki start](../data/wcf/quickstart-wcf-data-services.md) , aby utworzyć lokalną usługę OData, która zapewnia dostęp do bazy danych Northwind. W przypadku skorzystania z przewodnika Szybki Start należy zastąpić lokalny identyfikator URI dla tego, który został podany w przykładowym kodzie w tym temacie.
+Przykłady w tym temacie wykorzystują przykładową usługę danych Northwind znajdującą się w <https://services.odata.org/Northwind/Northwind.svc/>. Ta usługa jest świadczona jako część [zestawu SDK OData](https://www.odata.org/ecosystem/#sdk) i zapewnia dostęp tylko do odczytu do przykładowej bazy danych Northwind. Jeśli wymagana jest funkcja dostępu do zapisu lub jeśli jest wymagana lokalna usługa danych programu WCF, można wykonać kroki przedstawione w [usługi danych programu WCF przewodniku szybki start](../data/wcf/quickstart-wcf-data-services.md) , aby utworzyć lokalną usługę OData, która zapewnia dostęp do bazy danych Northwind. W przypadku skorzystania z przewodnika Szybki Start należy zastąpić lokalny identyfikator URI dla tego, który został podany w przykładowym kodzie w tym temacie.
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>Zużywanie źródła danych OData przy użyciu bibliotek klienckich
 

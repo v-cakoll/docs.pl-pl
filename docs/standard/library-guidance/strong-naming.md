@@ -2,12 +2,12 @@
 title: Silne nazewnictwo i biblioteki platformy .NET
 description: Zalecenia dotyczące najlepszych rozwiązań dotyczących silnych nazw bibliotek platformy .NET.
 ms.date: 10/16/2018
-ms.openlocfilehash: 0c2dba06413bc6435e3350bf6cc48f1b5882a261
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: db268093b07a2ece7cdb8329fd789b52da9c5c32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706429"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744538"
 ---
 # <a name="strong-naming"></a>Silne nazewnictwo
 
@@ -45,26 +45,26 @@ Należy silnej nazwy bibliotek .NET Open Source. Silne nazewnictwo zestawu zapew
 > [!NOTE]
 > Te wskazówki dotyczą publicznie dystrybuowanych bibliotek platformy .NET, takich jak biblioteki .NET opublikowane w witrynie NuGet.org. Silne nazewnictwo nie jest wymagane przez większość aplikacji .NET i nie powinno być wykonywane domyślnie.
 
-**✔️ rozważyć** silne nazewnictwo zestawów biblioteki.
+✔️ ROZWAŻYĆ silne nazewnictwo zestawów biblioteki.
 
-**✔️ Rozważ** dodanie klucza silnego nazewnictwa do systemu kontroli źródła.
+✔️ Rozważ dodanie klucza silnego nazewnictwa do systemu kontroli źródła.
 
 > Publicznie dostępny klucz umożliwia deweloperom modyfikowanie i ponowne kompilowanie kodu źródłowego biblioteki z tym samym kluczem.
-> 
+>
 > Klucz silnego nazewnictwa nie powinien być publiczny, jeśli został użyty w przeszłości w celu udzielenia specjalnych uprawnień w [scenariuszach częściowej relacji zaufania](../../framework/misc/using-libraries-from-partially-trusted-code.md). W przeciwnym razie mogą naruszać istniejące środowiska.
 
 > [!IMPORTANT]
 > Gdy wymagana jest tożsamość wydawcy kodu, zalecane jest [podpisywanie pakietów](/nuget/create-packages/sign-a-package) [Authenticode](/windows-hardware/drivers/install/authenticode) i NuGet. Zabezpieczeń dostępu kodu (CAS) nie należy używać jako środków zaradczych.
 
-**✔️ rozważyć** zwiększenie wersji zestawu tylko dla głównych zmian wersji, aby ułatwić użytkownikom zredukowanie przekierowań powiązań oraz częstotliwość ich aktualizowania.
+✔️ ROZWAŻYĆ zwiększenie wersji zestawu tylko dla głównych zmian wersji, aby ułatwić użytkownikom zredukowanie przekierowań powiązań oraz częstotliwość ich aktualizowania.
 
 > Przeczytaj więcej [na temat przechowywania wersji i wersji zestawu](./versioning.md#assembly-version).
 
-**❌ nie** dodawaj, usuwaj ani nie zmieniaj silnego klucza nazewnictwa.
+❌ nie dodawaj, usuwaj ani nie zmieniaj silnego klucza nazewnictwa.
 
 > Modyfikacja klucza silnego nazewnictwa zestawu zmienia tożsamość zestawu i dzieli skompilowany kod, który go używa. Aby uzyskać więcej informacji, zobacz [binarne zmiany](./breaking-changes.md#binary-breaking-change).
 
-**❌** nie publikować wersji z silną nazwą i niesilną nazwą biblioteki. Na przykład `Contoso.Api` i `Contoso.Api.StrongNamed`.
+❌ nie publikować wersji z silną nazwą i niesilną nazwą biblioteki. Na przykład `Contoso.Api` i `Contoso.Api.StrongNamed`.
 
 > Publikowanie dwóch pakietów rozwidlenia systemu dla deweloperów. Ponadto, jeśli aplikacja zostanie zakończona w zależności od obu pakietów, deweloper może napotkać konflikty nazw typów. W odniesieniu do platformy .NET są zainteresowane różne typy w różnych zestawach.
 

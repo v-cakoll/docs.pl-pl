@@ -3,12 +3,12 @@ title: Zestaw SDK platformy kompilatora .NET (interfejsy API Roslyn)
 description: Dowiedz się, jak używać zestawu SDK .NET Compiler Platform (zwanego również interfejsami API Roslyn) w celu zrozumienia kodu platformy .NET, błędów w programie i naprawienia tych błędów.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 98984edad3a25daa8b0ea13b903c4e6447b8a22a
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: a1ceb1d11cf846e67be2c6558978e01133e591da
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163140"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742735"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>Zestaw SDK .NET Compiler Platform
 
@@ -43,7 +43,7 @@ Zespoły mogą tworzyć analizatory i poprawki kodu, które szukają najbardziej
 
 ## <a name="provide-guidance-with-library-packages"></a>Zapewnianie wskazówek dotyczących pakietów bibliotecznych
 
-Istnieją wiele bibliotek dostępnych dla deweloperów platformy .NET w oprogramowaniu NuGet.
+Istnieje wiele dostępnych bibliotek dla deweloperów platformy .NET na platformie NuGet.
 Niektóre z nich pochodzą od firmy Microsoft, niektórych od innych firm i od członków społeczności. Te biblioteki uzyskają więcej rozwiązań i wyższe oceny, gdy deweloperzy mogą pomyślnie korzystać z tych bibliotek.
 
 Oprócz dostarczania dokumentacji można udostępniać analizatory i poprawki kodu, które wyszukują i poprawiają typowe źle używane biblioteki. Te natychmiastowe poprawki ułatwią deweloperom szybsze przechodzenie.
@@ -58,7 +58,7 @@ Te analizatory mogą być przekazywane do [Visual Studio Marketplace](https://ma
 
 ## <a name="next-steps"></a>Następne kroki
 
-Zestaw SDK .NET Compiler Platform zawiera najnowsze modele obiektów języka do generowania, analizy i refaktoryzacji kodu. Ta sekcja zawiera omówienie pojęć związanych z zestawem SDK .NET Compiler Platform. Więcej informacji można znaleźć w sekcjach przewodników Szybki Start, przykłady i samouczki.
+Zestaw SDK .NET Compiler Platform zawiera najnowsze modele obiektów języka do generowania, analizy i refaktoryzacji kodu. Ta sekcja zawiera omówienie pojęć związanych z zestawem SDK .NET Compiler Platform. Więcej informacji można znaleźć w sekcjach przewodników Szybki Start, przykłady i samouczków.
 
 Więcej informacji o pojęciach dotyczących zestawu SDK .NET Compiler Platform można znaleźć w następujących pięciu tematach:
 

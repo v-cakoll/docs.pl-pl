@@ -1,5 +1,5 @@
 ---
-title: ListBox — Informacje o formancie [Formularze systemu Windows]
+title: ListBox — Informacje o formancie
 ms.date: 03/30/2017
 f1_keywords:
 - ListBox
@@ -7,28 +7,28 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
-ms.openlocfilehash: f70246d4a4d158815ee9662036eca8edeb891d85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1abf8bea5c786f2ce326631370fa294ada09a92c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012896"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745183"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>ListBox — Informacje o formancie [Formularze systemu Windows]
-Formularze Windows <xref:System.Windows.Forms.ListBox> kontrolka Wyświetla listę, z którego użytkownik może wybrać co najmniej jeden element. Jeśli łączna liczba elementów przekracza liczbę, która może być wyświetlana, pasek przewijania jest automatycznie dodawany do <xref:System.Windows.Forms.ListBox> kontroli. Gdy <xref:System.Windows.Forms.ListBox.MultiColumn%2A> właściwość jest ustawiona na `true`, elementy w polu listy są wyświetlane w wielu kolumnach i zostanie wyświetlony pasek przewijania poziomego. Gdy <xref:System.Windows.Forms.ListBox.MultiColumn%2A> właściwość jest ustawiona na `false`, elementy w polu listy są wyświetlane w jednej kolumnie, i zostanie wyświetlony pasek przewijania pionowego. Gdy <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> ustawiono `true`, niezależnie od liczby elementów zostanie wyświetlony pasek przewijania. <xref:System.Windows.Forms.ListBox.SelectionMode%2A> Właściwość określa, ile elementów listy można wybrać w danym momencie.  
+Kontrolka <xref:System.Windows.Forms.ListBox> Windows Forms wyświetla listę, z której użytkownik może wybrać jeden lub więcej elementów. Jeśli całkowita liczba elementów przekracza liczbę, która może być wyświetlana, pasek przewijania jest automatycznie dodawany do kontrolki <xref:System.Windows.Forms.ListBox>. Gdy właściwość <xref:System.Windows.Forms.ListBox.MultiColumn%2A> jest ustawiona na `true`, w polu listy są wyświetlane elementy z wielu kolumn i zostanie wyświetlony poziomy pasek przewijania. Gdy właściwość <xref:System.Windows.Forms.ListBox.MultiColumn%2A> jest ustawiona na `false`, pole listy wyświetla elementy w jednej kolumnie, a widoczny jest pionowy pasek przewijania. Gdy <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> jest ustawiona na `true`, pasek przewijania pojawia się niezależnie od liczby elementów. Właściwość <xref:System.Windows.Forms.ListBox.SelectionMode%2A> określa, ile elementów listy można wybrać w danym momencie.  
   
-## <a name="ways-to-change-the-listbox-control"></a>Sposoby zmiany ListBox, kontrolka  
- <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> Właściwość zwraca wartość całkowitą, która odnosi się do pierwszego elementu wybranego w polu listy. Wybrany element można programowo zmienić, zmieniając <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> wartość w kodzie; zostanie wyróżniony odpowiedni element na liście w formularzu Windows. Jeśli żaden element nie jest zaznaczone, <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> wartość -1. Jeśli pierwszy element na liście jest zaznaczone, <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> wartość jest równa 0. Po wybraniu wielu elementów <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> wartość odzwierciedla wybranego elementu, który znajduje się na liście. <xref:System.Windows.Forms.ListBox.SelectedItem%2A> Właściwości jest podobny do <xref:System.Windows.Forms.ListBox.SelectedIndex%2A>, ale zwraca element, zazwyczaj wartość ciągu. <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> Właściwość odzwierciedla liczbę elementów na liście, a wartość <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> właściwości jest zawsze jeden więcej niż największa możliwa <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> wartości, ponieważ <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> jest liczony od zera.  
+## <a name="ways-to-change-the-listbox-control"></a>Sposoby zmiany formantu ListBox  
+ Właściwość <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> zwraca liczbę całkowitą, która odnosi się do pierwszego wybranego elementu w polu listy. Można programowo zmienić wybrany element, zmieniając wartość <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> w kodzie; odpowiadający element na liście zostanie wyróżniony w formularzu systemu Windows. Jeśli nie wybrano żadnego elementu, <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> wartość-1. W przypadku wybrania pierwszego elementu na liście wartość <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> wynosi 0. W przypadku wybrania wielu elementów <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> wartość odzwierciedla wybrany element, który pojawia się jako pierwszy na liście. Właściwość <xref:System.Windows.Forms.ListBox.SelectedItem%2A> jest podobna do <xref:System.Windows.Forms.ListBox.SelectedIndex%2A>, ale zwraca sam element, zazwyczaj wartość ciągu. Właściwość <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> odzwierciedla liczbę elementów na liście, a wartość właściwości <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> jest zawsze większa od największej możliwej <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> wartości, ponieważ <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> jest oparta na zero.  
   
- Aby dodać lub usunąć elementy w <xref:System.Windows.Forms.ListBox> kontrolować, należy użyć <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> lub <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> metody. Alternatywnie, można dodać elementy do listy przy użyciu <xref:System.Windows.Forms.ListBox.Items%2A> właściwości w czasie projektowania.  
+ Aby dodać lub usunąć elementy w kontrolce <xref:System.Windows.Forms.ListBox>, użyj metody <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> lub <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A>. Alternatywnie możesz dodać elementy do listy przy użyciu właściwości <xref:System.Windows.Forms.ListBox.Items%2A> w czasie projektowania.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.ListBox>
-- [Instrukcje: Dodawanie i usuwanie elementów z Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka](add-and-remove-items-from-a-wf-combobox.md)
-- [Instrukcje: Sortowanie zawartości Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [Instrukcje: Powiąż Windows Forms kontrolki ComboBox lub ListBox z danymi](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
+- [Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ComboBox, ListBox lub CheckedListBox formularzy Windows Forms](add-and-remove-items-from-a-wf-combobox.md)
+- [Instrukcje: sortowanie zawartości kontrolki ComboBox, ListBox lub CheckedListBox formularzy Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Instrukcje: wiązanie kontrolki ComboBox lub ListBox (Windows Forms) z danymi](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
 - [ComboBox, kontrolka — omówienie](combobox-control-overview-windows-forms.md)
 - [CheckedListBox, kontrolka — omówienie](checkedlistbox-control-overview-windows-forms.md)
 - [Kontrolki formularzy Windows Forms używane do obsługi opcji list](windows-forms-controls-used-to-list-options.md)
-- [Instrukcje: Tworzenie tabeli wyszukiwania dla Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [Instrukcje: tworzenie tabeli wyszukiwania dla kontrolek ComboBox, ListBox i CheckedListBox formularzy Windows Forms](create-a-lookup-table-for-a-wf-combobox-listbox.md)

@@ -1,5 +1,5 @@
 ---
-title: Strategia zabezpieczeń WPF - projekt zabezpieczeń
+title: Strategia zabezpieczeń i inżynieria
 ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WPF], testing techniques
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 5dd80cff7675a7d3236c7409fd882ebf3a3cd7b1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 57ee0c8242c0bca1b2c76e7751ed25f6a889c264
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424916"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741839"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Strategia zabezpieczeń WPF - projekt zabezpieczeń
 Wiarygodne technologie obliczeniowe to inicjatywa firmy Microsoft do zapewnienia produkcji bezpiecznego kodu. Kluczowym elementem wiarygodnej inicjatywy komputerowej jest Microsoft Security Development Lifecycle (SDL). SDL to metoda inżynieryjna, która jest używana w połączeniu ze standardowymi procesami inżynieryjnymi w celu ułatwienia dostarczania bezpiecznego kodu. SDL składa się z dziesięciu faz, które łączą najlepsze rozwiązania z formalization, mierzalną i dodatkową strukturą, w tym:  
@@ -87,11 +87,11 @@ Wiarygodne technologie obliczeniowe to inicjatywa firmy Microsoft do zapewnienia
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>Krytyczne Zarządzanie kodem  
- W przypadku aplikacji przeglądarki XAML (XBAP) [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] kompiluje piaskownicę zabezpieczeń przy użyciu funkcji .NET Framework do oznaczania i śledzenia kodu o krytycznym poziomie zabezpieczeń, który podnosi uprawnienia (patrz **metodologia krytyczna** dla zabezpieczeń w ramach [strategii zabezpieczeń WPF — Zabezpieczenia platformy](wpf-security-strategy-platform-security.md)). Zgodnie z wymaganiami dotyczącymi wysokiej jakości zabezpieczeń w kodzie krytycznym zabezpieczeń, taki kod otrzymuje dodatkowy poziom kontroli zarządzania źródła i inspekcji zabezpieczeń. Około 5% do 10% [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] składa się z kodu krytycznego pod względem zabezpieczeń, który jest przeglądany przez dedykowanego zespołu ds. recenzji. Kod źródłowy i proces ewidencjonowania są zarządzane przez śledzenie kodu krytycznego zabezpieczeń i mapowanie każdej krytycznej jednostki (tj. metody zawierającej kod krytyczny) do jej stanu rejestracji. Stan wylogowywania obejmuje nazwy jednego lub kilku recenzentów. Każda codzienna kompilacja [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] porównuje kod krytyczny z tym w poprzednich kompilacjach, aby sprawdzić Niezatwierdzone zmiany. Jeśli inżynier modyfikuje kod krytyczny bez zgody zespołu recenzowania, zostanie on zidentyfikowany i rozwiązany od razu. Ten proces umożliwia stosowanie i konserwację szczególnie wysokiego poziomu kontroli nad kodem piaskownicy [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ W przypadku aplikacji przeglądarki XAML (XBAP) program [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] kompiluje piaskownicę zabezpieczeń przy użyciu funkcji .NET Framework do oznaczania i śledzenia kodu o krytycznym znaczeniu dla zabezpieczeń, który podnosi uprawnienia (patrz **metodologia krytyczna** dotycząca zabezpieczeń w ramach [strategii zabezpieczeń WPF — zabezpieczenia platformy](wpf-security-strategy-platform-security.md)). Zgodnie z wymaganiami dotyczącymi wysokiej jakości zabezpieczeń w kodzie krytycznym zabezpieczeń, taki kod otrzymuje dodatkowy poziom kontroli zarządzania źródła i inspekcji zabezpieczeń. Około 5% do 10% [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] składa się z kodu krytycznego pod względem zabezpieczeń, który jest przeglądany przez dedykowanego zespołu ds. recenzji. Kod źródłowy i proces ewidencjonowania są zarządzane przez śledzenie kodu krytycznego zabezpieczeń i mapowanie każdej krytycznej jednostki (tj. metody zawierającej kod krytyczny) do jej stanu rejestracji. Stan wylogowywania obejmuje nazwy jednego lub kilku recenzentów. Każda codzienna kompilacja [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] porównuje kod krytyczny z tym w poprzednich kompilacjach, aby sprawdzić Niezatwierdzone zmiany. Jeśli inżynier modyfikuje kod krytyczny bez zgody zespołu recenzowania, zostanie on zidentyfikowany i rozwiązany od razu. Ten proces umożliwia stosowanie i konserwację szczególnie wysokiego poziomu kontroli nad kodem piaskownicy [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Security](security-wpf.md)
+- [Zabezpieczenia](security-wpf.md)
 - [Zabezpieczenie częściowej relacji zaufania WPF](wpf-partial-trust-security.md)
 - [Strategia zabezpieczeń WPF — zabezpieczenia platformy](wpf-security-strategy-platform-security.md)
 - [Wiarygodne przetwarzanie](https://www.microsoft.com/mscorp/twc/default.mspx)

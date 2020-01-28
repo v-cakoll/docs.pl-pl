@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: wybieranie folderów za pomocą składnika FolderBrowserDialog formularzy systemu Windows'
+title: Wybieranie folderów ze składnikiem FolderBrowserDialog
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: fc19ea466f535f783d3b0537a973ce41c223902d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 313388442101f341cfed366143f3c9669fb45cbd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046137"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742232"
 ---
-# <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Instrukcje: wybieranie folderów za pomocą składnika FolderBrowserDialog formularzy systemu Windows
+# <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Porady: wybieranie folderów za pomocą składnika FolderBrowserDialog formularzy systemu Windows
 
 Często w aplikacjach systemu Windows tworzone są monity użytkowników o wybranie folderu, najczęściej w celu zapisania zestawu plików. Składnik Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> pozwala łatwo wykonać to zadanie.
 
 ### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>Aby wybrać foldery ze składnikiem FolderBrowserDialog
 
-1. W <xref:System.Windows.Forms.FolderBrowserDialog> procedurze Sprawdź <xref:System.Windows.Forms.Form.DialogResult%2A> Właściwość składnika, aby zobaczyć, jak okno dialogowe zostało zamknięte i <xref:System.Windows.Forms.FolderBrowserDialog> pobrać <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> wartość właściwości składnika.
+1. W procedurze Sprawdź Właściwość <xref:System.Windows.Forms.Form.DialogResult%2A> składnika <xref:System.Windows.Forms.FolderBrowserDialog>, aby zobaczyć, jak okno dialogowe zostało zamknięte, i Pobierz wartość właściwości <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> składnika <xref:System.Windows.Forms.FolderBrowserDialog>.
 
-2. Jeśli musisz ustawić górny folder, który będzie wyświetlany w widoku drzewa okna dialogowego, ustaw <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> właściwość, która przyjmuje element członkowski <xref:System.Environment.SpecialFolder> wyliczenia.
+2. Jeśli musisz ustawić górny folder, który będzie wyświetlany w widoku drzewa okna dialogowego, ustaw właściwość <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>, która pobiera element członkowski <xref:System.Environment.SpecialFolder> wyliczenia.
 
-3. Ponadto można ustawić <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> właściwość, która określa ciąg tekstowy, który pojawia się w górnej części widoku drzewa folderów.
+3. Ponadto można ustawić właściwość <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A>, która określa ciąg tekstowy, który pojawia się w górnej części widoku drzewa folderów.
 
-    W poniższym <xref:System.Windows.Forms.FolderBrowserDialog> przykładzie składnik jest używany do wybrania folderu, podobnie jak podczas tworzenia projektu w programie Visual Studio i zostanie wyświetlony monit o wybranie folderu w celu zapisania go w programie. W tym przykładzie nazwa folderu jest następnie wyświetlana w <xref:System.Windows.Forms.TextBox> kontrolce formularza. Dobrym pomysłem jest umieszczenie lokalizacji w obszarze edytowalnym, takim jak <xref:System.Windows.Forms.TextBox> kontrolka, dzięki czemu użytkownicy mogą edytować wybór w przypadku wystąpienia błędu lub innych problemów. W tym przykładzie przyjęto, że <xref:System.Windows.Forms.FolderBrowserDialog> formularz ze składnikiem <xref:System.Windows.Forms.TextBox> i kontrolką.
+    W poniższym przykładzie składnik <xref:System.Windows.Forms.FolderBrowserDialog> jest używany do wybierania folderu, podobnie jak podczas tworzenia projektu w programie Visual Studio i zostanie wyświetlony monit o wybranie folderu w celu zapisania go w programie. W tym przykładzie nazwa folderu jest następnie wyświetlana w kontrolce <xref:System.Windows.Forms.TextBox> w formularzu. Dobrym pomysłem jest umieszczenie lokalizacji w obszarze edytowalnym, takim jak kontrolka <xref:System.Windows.Forms.TextBox>, dzięki czemu użytkownicy mogą edytować wybór w przypadku wystąpienia błędu lub innych problemów. W tym przykładzie założono, że formularz ze składnikiem <xref:System.Windows.Forms.FolderBrowserDialog> i formantem <xref:System.Windows.Forms.TextBox>.
 
     ```vb
     Public Sub ChooseFolder()
@@ -63,9 +63,9 @@ Często w aplikacjach systemu Windows tworzone są monity użytkowników o wybra
     ```
 
     > [!IMPORTANT]
-    > Aby użyć tej klasy, zestaw wymaga poziomu uprawnień przyznanych przez <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> właściwość, która jest częścią <xref:System.Security.Permissions.FileIOPermissionAccess> wyliczenia. Jeśli używasz w kontekście częściowego zaufania, proces może zgłosić wyjątek z powodu niewystarczających uprawnień. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../misc/code-access-security-basics.md).
+    > Aby użyć tej klasy, zestaw wymaga poziomu uprawnień przyznanych przez właściwość <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>, która jest częścią wyliczenia <xref:System.Security.Permissions.FileIOPermissionAccess>. Jeśli używasz w kontekście częściowego zaufania, proces może zgłosić wyjątek z powodu niewystarczających uprawnień. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../misc/code-access-security-basics.md).
 
-Aby uzyskać informacje na temat sposobu zapisywania plików, [zobacz How to: Zapisz pliki przy użyciu składnika](how-to-save-files-using-the-savefiledialog-component.md)SaveFileDialog.
+Informacje o sposobach zapisywania plików znajdują się w temacie [How to: Save files using the SaveFileDialog](how-to-save-files-using-the-savefiledialog-component.md).
 
 ## <a name="see-also"></a>Zobacz także
 

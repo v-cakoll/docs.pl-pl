@@ -1,5 +1,5 @@
 ---
-title: Przegląd grafiki (formularze systemu Windows)
+title: Grafika — omówienie
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, graphics
@@ -8,41 +8,41 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-ms.openlocfilehash: e14d60e5b77fab8490c373ad76ee2d829aad7c74
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: cc99f0fda4625b278b2bea56e7d8642edb0a63d9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505393"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742264"
 ---
 # <a name="graphics-overview-windows-forms"></a>Przegląd grafiki (formularze systemu Windows)
-GDI + to graficzny interfejs urządzenia, która umożliwia programistom pisanie aplikacji niezależnych od urządzenia. Usługi z użyciem interfejsu GDI + są udostępniane za pośrednictwem zestaw klas zarządzanych.  
+GDI+ to GDI, które umożliwiają programistom pisanie aplikacji niezależnych od urządzenia. Usługi GDI+ są udostępniane za pomocą zestawu zarządzanych klas.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Omówienie grafiki](overview-of-graphics.md)  
- Zawiera ogólne wprowadzenie do interfejsu GDI +.  
+ Zawiera ogólne wprowadzenie do interfejsu GDI+.  
   
  [Trzy kategorie usług grafiki](three-categories-of-graphics-services.md)  
- W tym artykule opisano trzy kategorie, które składają się programowania za pomocą GDI +.  
+ Opisuje trzy kategorie, które tworzą Programowanie przy użyciu interfejsu GDI+.  
   
  [Struktura interfejsu grafiki](structure-of-the-graphics-interface.md)  
- W tym artykule opisano interfejs klasy zarządzanej z użyciem interfejsu GDI +.  
+ Opisuje interfejs klasy zarządzanej GDI+.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Drawing>  
- Zapewnia dostęp do funkcji podstawowych grafiki w GDI +.  
+ Zapewnia dostęp do podstawowych funkcji graficznych interfejsu GDI+.  
   
  <xref:System.Drawing.Drawing2D>  
- Zapewnia zaawansowane dwuwymiarowej i wektorowej funkcje graficzne.  
+ Zapewnia zaawansowane funkcje grafiki dwuwymiarowej i wektorowej.  
   
  <xref:System.Drawing.Imaging>  
- Zapewnia zaawansowane GDI + funkcje obsługi obrazów.  
+ Zapewnia zaawansowane funkcje obrazu GDI+.  
   
  <xref:System.Drawing.Text>  
- Zapewnia zaawansowane funkcje typografii interfejsu GDI +.  
+ Zapewnia zaawansowane funkcje typografii interfejsu GDI+.  
   
  <xref:System.Drawing.Printing>  
  Zapewnia usługi związane z drukowaniem.  
   
  <xref:System.Windows.Forms.TextRenderer>  
- Udostępnia Rysowanie tekstu GDI i dokonywania pomiarów funkcji.
+ Udostępnia funkcje rysowania i mierzenia tekstu w usłudze GDI.

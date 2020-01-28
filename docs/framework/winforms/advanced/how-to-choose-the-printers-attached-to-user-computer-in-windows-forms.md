@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wybieranie w formularzach systemu Windows drukarek podłączonych do komputera użytkownika'
+title: 'Instrukcje: wybieranie drukarek podłączonych do komputera użytkownika'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: e81ef8b563afff6dd57a9fbb7674d17c0eb80916
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 7fc2427468540ac0a1480f6140cbb34c3a0f1ab3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053072"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746514"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Instrukcje: Wybieranie w formularzach systemu Windows drukarek podłączonych do komputera użytkownika
-Często chcą wybierz drukarek innych niż drukarki domyślnej wydrukowany do użytkowników. Można udostępnić użytkownikom wybór drukarek spośród aktualnie zainstalowane za pomocą <xref:System.Windows.Forms.PrintDialog> składnika. Za pomocą <xref:System.Windows.Forms.PrintDialog> składnika <xref:System.Windows.Forms.DialogResult> z <xref:System.Windows.Forms.PrintDialog> składnik jest przechwytywane i umożliwia wybranie drukarki.  
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Porady: wybieranie w formularzach systemu Windows drukarek podłączonych do komputera użytkownika
+Często użytkownicy chcą wybrać drukarkę inną niż domyślna drukarki do drukowania. Można umożliwić użytkownikom wybranie drukarki spośród zainstalowanych obecnie przy użyciu składnika <xref:System.Windows.Forms.PrintDialog>. Za pomocą składnika <xref:System.Windows.Forms.PrintDialog>, <xref:System.Windows.Forms.DialogResult> składnik <xref:System.Windows.Forms.PrintDialog> jest przechwytywany i używany do wybierania drukarki.  
   
- W poniższej procedurze wybrano plik tekstowy, ma zostać wydrukowany zostanie użyta drukarka domyślna. <xref:System.Windows.Forms.PrintDialog> Następnie utworzyć wystąpienia klasy.  
+ W poniższej procedurze jest wybrany plik tekstowy do wydrukowania na drukarce domyślnej. Następnie zostanie utworzona instancja klasy <xref:System.Windows.Forms.PrintDialog>.  
   
 ### <a name="to-choose-a-printer-and-then-print-a-file"></a>Aby wybrać drukarkę, a następnie wydrukować plik  
   
-1. Wybierz urządzenie, które można użyć za pomocą <xref:System.Windows.Forms.PrintDialog> składnika.  
+1. Wybierz drukarkę, która ma być używana przy użyciu składnika <xref:System.Windows.Forms.PrintDialog>.  
   
-     W poniższym przykładzie kodu istnieją dwa zdarzenia, które są obsługiwane. W pierwszym <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Click> zdarzenia <xref:System.Windows.Forms.PrintDialog> tworzenia wystąpienia klasy i drukarki wybrane przez użytkownika są przechwytywane w <xref:System.Windows.Forms.DialogResult> właściwości.  
+     W poniższym przykładzie kodu są obsługiwane dwa zdarzenia. W pierwszym zdarzeniu <xref:System.Windows.Forms.Control.Click> kontrolce <xref:System.Windows.Forms.Button> jest tworzona Klasa <xref:System.Windows.Forms.PrintDialog>, a drukarka wybrana przez użytkownika jest przechwytywana we właściwości <xref:System.Windows.Forms.DialogResult>.  
   
-     W drugim przypadku <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzenia <xref:System.Drawing.Printing.PrintDocument> przykładowy dokument drukowania na drukarce określony składnik.  
+     W drugim zdarzeniu <xref:System.Drawing.Printing.PrintDocument.PrintPage>m zdarzeniu składnika <xref:System.Drawing.Printing.PrintDocument> zostanie wydrukowany przykładowy dokument do określonej drukarki.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -89,7 +89,7 @@ Często chcą wybierz drukarek innych niż drukarki domyślnej wydrukowany do u�
        }  
     ```  
   
-     (Visual C# i wizualna C++) Umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Wizualizacje C# i C++wizualizacje) Umieść poniższy kod w Konstruktorze formularza, aby zarejestrować procedurę obsługi zdarzeń.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

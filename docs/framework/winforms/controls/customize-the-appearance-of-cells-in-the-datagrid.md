@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: dostosowywanie wyglądu komórek w kontrolce DataGridView formularzy systemu Windows'
+title: Dostosowywanie wyglądu komórek w formancie DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], customizing cells
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 478b20c9-625c-4116-9c5c-5a16e6f4ec67
-ms.openlocfilehash: 9b07c139689a9776f6f901c0f9fbe9d2d0303d56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 754932427a365a7b032c1ac9627d3237d1f7d0c6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648146"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744051"
 ---
-# <a name="how-to-customize-the-appearance-of-cells-in-the-windows-forms-datagridview-control"></a>Instrukcje: dostosowywanie wyglądu komórek w kontrolce DataGridView formularzy systemu Windows
-Można dostosować wygląd dowolną komórkę, obsługując <xref:System.Windows.Forms.DataGridView> kontrolki <xref:System.Windows.Forms.DataGridView.CellPainting> zdarzeń. Można wyodrębnić <xref:System.Windows.Forms.DataGridView> kontrolki <xref:System.Drawing.Graphics> z <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.Graphics%2A> właściwość <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs>. Dzięki temu <xref:System.Drawing.Graphics>, może mieć wpływ na wygląd całą <xref:System.Windows.Forms.DataGridView> kontroli, ale zazwyczaj można wpłynąć na wygląd komórkę, która jest obecnie malowany. <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.ClipBounds%2A> Właściwość <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs> umożliwiają ograniczenie do komórki, która jest obecnie malowany operacji malowania.  
+# <a name="how-to-customize-the-appearance-of-cells-in-the-windows-forms-datagridview-control"></a>Porady: dostosowywanie wyglądu komórek w formancie DataGridView formularzy systemu Windows
+Możesz dostosować wygląd dowolnej komórki, obsługując zdarzenie <xref:System.Windows.Forms.DataGridView.CellPainting> formantu <xref:System.Windows.Forms.DataGridView>. <xref:System.Drawing.Graphics> formantu <xref:System.Windows.Forms.DataGridView> można wyodrębnić z właściwości <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.Graphics%2A> <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs>. Dzięki temu <xref:System.Drawing.Graphics>można mieć wpływ na wygląd całej kontrolki <xref:System.Windows.Forms.DataGridView>, ale zazwyczaj chcesz mieć wpływ tylko na wygląd komórki, która jest aktualnie namalowana. Właściwość <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.ClipBounds%2A> <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs> umożliwia ograniczenie operacji malowania do komórki, która jest aktualnie namalowana.  
   
- W poniższym przykładzie kodu namaluje wszystkie komórki w `ContactName` przy użyciu kolumny <xref:System.Windows.Forms.DataGridView> schemat kolorów formantu. Zawartość tekstowa każda komórka jest malowane w <xref:System.Drawing.Color.Crimson%2A>, i prostokąt wstawki jest rysowana w taki sam jak kolor <xref:System.Windows.Forms.DataGridView> kontrolki <xref:System.Windows.Forms.DataGridView.GridColor%2A> właściwości.  
+ W poniższym przykładzie kodu zobaczysz wszystkie komórki w `ContactName` kolumnie przy użyciu schematu kolorów kontrolki <xref:System.Windows.Forms.DataGridView>. Zawartość tekstowa każdej komórki jest malowana w <xref:System.Drawing.Color.Crimson%2A>, a prostokąt marginesu jest rysowany w tym samym kolorze co Właściwość <xref:System.Windows.Forms.DataGridView.GridColor%2A> kontrolki <xref:System.Windows.Forms.DataGridView>.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.Windows.Forms.DataGridViewCellPainting#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCellPainting/CS/form1.cs#10)]
@@ -28,9 +28,9 @@ Można dostosować wygląd dowolną komórkę, obsługując <xref:System.Windows
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1` z `ContactName` kolumny, takiego jak w tabeli Klienci w bazie danych Northwind.  
+- Kontrolka <xref:System.Windows.Forms.DataGridView> o nazwie `dataGridView1` z kolumną `ContactName` taką jak jedna w tabeli Customers w przykładowej bazie danych Northwind.  
   
-- Odwołania do zestawów systemu, przestrzeń nazw System.Windows.Forms i System.Drawing.  
+- Odwołania do zestawów system, system. Windows. Forms i system. Drawing.  
   
 ## <a name="see-also"></a>Zobacz także
 

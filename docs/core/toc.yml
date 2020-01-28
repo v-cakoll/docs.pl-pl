@@ -386,10 +386,7 @@
           href: tutorials/creating-app-with-plugin-support.md
         - name: Sposób używania i debugowania funkcji zwolnienia zestawu w programie .NET Core
           href: ../standard/assembly/unloadability-howto.md
-- name: Kompilacja platformy .NET Core ze źródła
-  href: build/index.md
+- name: Tworzenie pakietów dystrybucji platformy .NET Core
   items:
-    - name: Tworzenie pakietów dystrybucji platformy .NET Core
-      href: build/distribution-packaging.md
-- name: Dokumentacja dla programu VS 2015 i pliku project.json
-  href: ../project-json.md
+    - name: Omówienie
+      href: distribution-packaging.md

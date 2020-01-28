@@ -1,5 +1,5 @@
 ---
-title: Przestrzeń nazw XAML i mapowanie przestrzeni nazw dla WPF XAML
+title: Przestrzenie nazw XAML i mapowanie przestrzeni nazw
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 5cce8ff04dbf163aba95346447f0557da14197da
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 85f35c29cdd1d9e4ea9776b756245a75af58e912
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976778"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741827"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Przestrzeń nazw XAML i mapowanie przestrzeni nazw dla WPF XAML
 W tym temacie wyjaśniono również obecność i cel dwóch mapowań przestrzeni nazw XAML, jak często znajdują się w tagu głównym pliku XAML WPF. Opisano w nim również, jak generować podobne mapowania dla elementów, które są zdefiniowane w własnym kodzie i/lub w różnych zestawach.  

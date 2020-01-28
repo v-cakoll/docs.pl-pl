@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie list wzorzec-szczegół za pomocą kontrolki DataGrid Windows Forms'
+title: Tworzenie list wzorzec-szczegóły przy użyciu kontrolki DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: f0fd95cf0cd66e9a5105c0b8ff77d8c536a5822d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e8ab63d52d97a8a6e6f60da741186e3937350e1e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914765"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76730982"
 ---
-# <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Instrukcje: tworzenie list wzorzec/szczegół za pomocą kontrolki DataGrid formularzy systemu Windows
+# <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Porady: tworzenie list wzorzec/szczegół za pomocą formantu DataGrid formularzy systemu Windows
 > [!NOTE]
-> Formant zastępuje i dodaje funkcję <xref:System.Windows.Forms.DataGrid> do <xref:System.Windows.Forms.DataGrid> kontrolki; jednak kontrolka jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości, jeśli wybierzesz opcję. <xref:System.Windows.Forms.DataGridView> Aby uzyskać więcej informacji, zobacz [różnice między kontrolkami DataGridView i DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Formant <xref:System.Windows.Forms.DataGridView> zamienia i dodaje funkcje do kontrolki <xref:System.Windows.Forms.DataGrid>; Niemniej jednak kontrolka <xref:System.Windows.Forms.DataGrid> jest zachowywana na potrzeby zgodności z poprzednimi wersjami i w przyszłości. Aby uzyskać więcej informacji, zobacz [różnice między kontrolkami DataGridView i DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Jeśli zawiera serię powiązanych tabel, można użyć dwóch <xref:System.Windows.Forms.DataGrid> kontrolek do wyświetlania danych w formacie wzorzec/szczegóły. <xref:System.Data.DataSet> <xref:System.Windows.Forms.DataGrid> Wyznaczono ją jako siatkę główną, a druga wyznaczono jako siatkę szczegółów. Po wybraniu wpisu na liście głównej wszystkie powiązane wpisy podrzędne zostaną wyświetlone na liście szczegóły. Na przykład, jeśli <xref:System.Data.DataSet> zawiera tabelę Customers i powiązanej tabeli Orders, należy określić tabelę Customers jako siatkę główną oraz tabelę Orders, która będzie siatką szczegółów. Po wybraniu klienta z siatki głównej wszystkie zamówienia powiązane z tym klientem w tabeli Orders będą wyświetlane w siatce szczegółów.  
+ Jeśli <xref:System.Data.DataSet> zawiera serię powiązanych tabel, można użyć dwóch kontrolek <xref:System.Windows.Forms.DataGrid> do wyświetlania danych w formacie głównym/szczegółowym. Jeden <xref:System.Windows.Forms.DataGrid> wyznaczono jako siatkę główną, a druga jest oznaczona jako siatka szczegółów. Po wybraniu wpisu na liście głównej wszystkie powiązane wpisy podrzędne zostaną wyświetlone na liście szczegóły. Na przykład jeśli <xref:System.Data.DataSet> zawiera tabelę Customers i powiązanej tabeli Orders, należy określić tabelę Customers jako siatkę główną oraz tabelę Orders, która będzie siatką szczegółów. Po wybraniu klienta z siatki głównej wszystkie zamówienia powiązane z tym klientem w tabeli Orders będą wyświetlane w siatce szczegółów.  
   
 ### <a name="to-set-a-masterdetail-relationship-programmatically"></a>Aby programowo ustawić relację wzorzec/szczegóły  
   
@@ -33,11 +33,11 @@ ms.locfileid: "69914765"
   
 4. Utwórz wystąpienie relacji przez określenie nazwy relacji i określenie tabeli, kolumny i elementu, który będzie łączyć dwie tabele.  
   
-5. Dodaj relację do <xref:System.Data.DataSet> <xref:System.Data.DataSet.Relations%2A> kolekcji obiektów.  
+5. Dodaj relację do kolekcji <xref:System.Data.DataSet.Relations%2A> obiektu <xref:System.Data.DataSet>.  
   
-6. Użyj metody, <xref:System.Windows.Forms.DataGrid> aby powiązać wszystkie siatki z <xref:System.Data.DataSet>. <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>  
+6. Użyj metody <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> <xref:System.Windows.Forms.DataGrid>, aby powiązać wszystkie siatki z <xref:System.Data.DataSet>.  
   
-     Poniższy przykład pokazuje, jak ustawić relację wzorzec/szczegóły między tabelami Customers i Orders w wcześniej <xref:System.Data.DataSet> wygenerowanym`ds`().  
+     Poniższy przykład pokazuje, jak ustawić relację wzorzec/szczegóły między tabelami Customers i Orders w wcześniej wygenerowanym <xref:System.Data.DataSet> (`ds`).  
   
     ```vb  
     Dim myDataRelation As DataRelation  
@@ -74,4 +74,4 @@ ms.locfileid: "69914765"
 
 - [DataGrid, kontrolka](datagrid-control-windows-forms.md)
 - [DataGrid, kontrolka — omówienie](datagrid-control-overview-windows-forms.md)
-- [Instrukcje: Powiązywanie kontrolki DataGrid Windows Forms ze źródłem danych](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Instrukcje: powiązywanie kontrolki DataGrid formularzy Windows Forms ze źródłem danych](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

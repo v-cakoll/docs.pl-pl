@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: ładowanie plików do kontrolki RichTextBox formularzy systemu Windows'
+title: Załaduj pliki do kontrolki RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,24 +15,24 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-ms.openlocfilehash: 0f52b4ff869d7a2220dd2d40e0ab90bbfb7d24ae
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c31e004ea4cd0821b5f18f0ab0fe2708e6ac4b59
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046168"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736288"
 ---
-# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Instrukcje: ładowanie plików do kontrolki RichTextBox formularzy systemu Windows
+# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Porady: ładowanie plików do formantu RichTextBox formularzy systemu Windows
 
-Kontrolka <xref:System.Windows.Forms.RichTextBox> Windows Forms może wyświetlić plik w formacie zwykłego tekstu (RTF) Unicode lub RTF. Aby to zrobić, wywołaj <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> metodę. Można również użyć <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> metody do ładowania danych ze strumienia. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
+Kontrolka <xref:System.Windows.Forms.RichTextBox> Windows Forms może wyświetlić plik w formacie zwykłego tekstu (RTF) Unicode lub RTF. Aby to zrobić, wywołaj metodę <xref:System.Windows.Forms.RichTextBox.LoadFile%2A>. Za pomocą metody <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> można również ładować dane ze strumienia. Aby uzyskać więcej informacji, zobacz temat <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
 
 ### <a name="to-load-a-file-into-the-richtextbox-control"></a>Aby załadować plik do kontrolki RichTextBox
 
-1. Określ ścieżkę pliku, który ma zostać otwarty za pomocą <xref:System.Windows.Forms.OpenFileDialog> składnika. Aby zapoznać się z omówieniem, zobacz [Omówienie składnika OpenFileDialog](openfiledialog-component-overview-windows-forms.md).
+1. Określ ścieżkę pliku, który ma zostać otwarty za pomocą składnika <xref:System.Windows.Forms.OpenFileDialog>. Aby zapoznać się z omówieniem, zobacz [Omówienie składnika OpenFileDialog](openfiledialog-component-overview-windows-forms.md).
 
-2. Wywołaj <xref:System.Windows.Forms.RichTextBox> metodę kontrolki, określając plik do załadowania i opcjonalnie typ pliku. <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> W poniższym przykładzie plik do załadowania jest pobierany ze <xref:System.Windows.Forms.OpenFileDialog> <xref:System.Windows.Forms.FileDialog.FileName%2A> właściwości składnika. W przypadku wywołania metody z nazwą pliku jako jedynego argumentu, przyjmuje się, że zostanie on RTF. Aby określić inny typ pliku, wywołaj metodę z wartością <xref:System.Windows.Forms.RichTextBoxStreamType> wyliczenia jako jej drugi argument.
+2. Wywołaj metodę <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> kontrolki <xref:System.Windows.Forms.RichTextBox>, określając plik do załadowania i opcjonalnego typu pliku. W poniższym przykładzie plik do załadowania jest pobierany ze właściwości <xref:System.Windows.Forms.FileDialog.FileName%2A> składnika <xref:System.Windows.Forms.OpenFileDialog>. W przypadku wywołania metody z nazwą pliku jako jedynego argumentu, przyjmuje się, że zostanie on RTF. Aby określić inny typ pliku, należy wywołać metodę z wartością wyliczenia <xref:System.Windows.Forms.RichTextBoxStreamType> jako drugi argument.
 
-    W poniższym <xref:System.Windows.Forms.OpenFileDialog> przykładzie składnik jest wyświetlany po kliknięciu przycisku. Wybrany plik jest następnie otwierany i wyświetlany w <xref:System.Windows.Forms.RichTextBox> kontrolce. W tym przykładzie założono, że formularz ma`btnOpenFile`przycisk,.
+    W poniższym przykładzie składnik <xref:System.Windows.Forms.OpenFileDialog> jest wyświetlany po kliknięciu przycisku. Wybrany plik jest następnie otwierany i wyświetlany w kontrolce <xref:System.Windows.Forms.RichTextBox>. W tym przykładzie założono, że formularz ma przycisk`btnOpenFile`.
 
     ```vb
     Private Sub btnOpenFile_Click(ByVal sender As System.Object, _
@@ -79,7 +79,7 @@ Kontrolka <xref:System.Windows.Forms.RichTextBox> Windows Forms może wyświetli
     ```
 
     > [!IMPORTANT]
-    > Aby można było uruchomić ten proces, zestaw może wymagać poziomu uprawnień przyznany przez <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> klasę. Jeśli używasz w kontekście częściowego zaufania, proces może zgłosić wyjątek z powodu niewystarczających uprawnień. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../misc/code-access-security-basics.md).
+    > Aby można było uruchomić ten proces, zestaw może wymagać poziomu uprawnień przyznanych przez klasę <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>. Jeśli używasz w kontekście częściowego zaufania, proces może zgłosić wyjątek z powodu niewystarczających uprawnień. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../misc/code-access-security-basics.md).
 
 ## <a name="see-also"></a>Zobacz także
 

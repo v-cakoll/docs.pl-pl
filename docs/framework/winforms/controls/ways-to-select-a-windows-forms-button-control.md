@@ -1,35 +1,35 @@
 ---
-title: Sposoby wyboru kontrolki przycisku formularzy systemu Windows
+title: Sposoby zaznaczania kontrolki przycisku
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], selecting
 ms.assetid: fe2fc058-5118-4f70-b264-6147d64a7a8d
-ms.openlocfilehash: e511b0d7bcac725ed477678ab4c865f5337e658d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 145166d182f1ec51068ab3e0c23c12b471b69231
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584958"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740007"
 ---
 # <a name="ways-to-select-a-windows-forms-button-control"></a>Sposoby wyboru kontrolki przycisku formularzy systemu Windows
-Można wybrać przycisk Windows Forms w następujący sposób:  
+Przycisk Windows Forms można wybrać w następujący sposób:  
   
-- Kliknij przycisk za pomocą myszy.  
+- Za pomocą myszy kliknij przycisk.  
   
-- Wywoływanie przycisku <xref:System.Windows.Forms.Control.Click> zdarzenia w kodzie.  
+- Wywołaj zdarzenie <xref:System.Windows.Forms.Control.Click> przycisku w kodzie.  
   
-- Przenieś fokus do przycisku, naciskając klawisz TAB, a następnie wybierz przycisk, naciskając klawisz spacji lub ENTER.  
+- Przenieś fokus na przycisk, naciskając klawisz TAB, a następnie wybierz przycisk, naciskając klawisz spacji lub ENTER.  
   
-- Naciśnij klawisz dostępu (ALT + podkreślona litera) dla przycisku. Aby uzyskać więcej informacji na temat kluczy dostępu, zobacz [jak: Tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md).  
+- Naciśnij klawisz dostępu (ALT + podkreślona litera) dla przycisku. Aby uzyskać więcej informacji o kluczach dostępu, zobacz [How to: Create Access Keys for Windows Forms Controls](how-to-create-access-keys-for-windows-forms-controls.md).  
   
-- Jeśli przycisk znajduje się przycisk "Zaakceptuj" formularza, naciskając klawisz ENTER wybierze przycisk, nawet wtedy, gdy inna kontrolka ma fokus, chyba że inne kontrola jest inny przycisk, pole tekstu wielowierszowego lub formant niestandardowy, który traps klawisz enter.  
+- Jeśli przycisk jest przyciskiem "Akceptuj" formularza, naciśnięcie klawisza ENTER wybiera przycisk, nawet jeśli inny formant ma fokus — chyba że inny formant jest innym przyciskiem, wielowierszowym polem tekstowym lub kontrolką niestandardową, która Zalewka klawisza ENTER.  
   
-- Jeśli przycisk znajduje się przycisk "Anuluj" formularza, naciskając klawisz ESC wybierze przycisk, nawet wtedy, gdy inna kontrolka ma fokus.  
+- Jeśli przycisk jest przycisk "Anuluj" w formularzu, naciśnięcie klawisza ESC wybiera przycisk, nawet jeśli inny formant ma fokus.  
   
-- Wywołaj <xref:System.Windows.Forms.Button.PerformClick%2A> metodę, aby wybrać przycisk programowo.  
+- Wywołaj metodę <xref:System.Windows.Forms.Button.PerformClick%2A>, aby wybrać przycisk programowo.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Button, kontrolka — omówienie](button-control-overview-windows-forms.md)
-- [Instrukcje: Odpowiadanie na kliknięcia przycisków formularzy Windows](how-to-respond-to-windows-forms-button-clicks.md)
+- [Instrukcje: odpowiadanie na kliknięcia przycisków Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
 - [Button, kontrolka](button-control-windows-forms.md)

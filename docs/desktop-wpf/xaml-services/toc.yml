@@ -76,7 +76,7 @@
           href: service-contexts-with-type-converters-and-markup-extensions.md
     - name: Typy ogólne w XAML
       href: generics.md
-    - name: Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML
+    - name: Definiowanie typów niestandardowych do użytku z usługami .NET XAML
       href: define-custom-types.md
       items:
         - name: Atrybuty CLR związane z XAML dla niestandardowych typów i bibliotek

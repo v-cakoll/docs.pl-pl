@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy systemu Windows'
+title: Implementowanie trybu wirtualnego w formancie DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - virtual mode
 - DataGridView control [Windows Forms], large data sets
 ms.assetid: 98236267-f08e-4918-bcf9-77acf050a3ca
-ms.openlocfilehash: 064b58b64e0a9f55e3ef7d15b4962cfec514eff3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f8612a808ac5c9facee55d820529945f481a2cea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592394"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736512"
 ---
-# <a name="how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control"></a>Instrukcje: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy systemu Windows
-Poniższy przykład kodu demonstruje sposób zarządzania dużych zestawów danych przy użyciu <xref:System.Windows.Forms.DataGridView> sterować za pomocą jego <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> właściwością `true`.  
+# <a name="how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control"></a>Porady: implementowanie trybu wirtualnego w formancie DataGridView formularzy systemu Windows
+Poniższy przykład kodu demonstruje sposób zarządzania dużymi zestawami danych przy użyciu kontrolki <xref:System.Windows.Forms.DataGridView> z właściwością <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> ustawioną na `true`.  
   
- Aby uzyskać pełne wyjaśnienie ten przykład kodu, zobacz [instruktażu: Implementowanie trybu wirtualnego w Windows formantu DataGridView formularzy](implementing-virtual-mode-wf-datagridview-control.md).  
+ Aby uzyskać kompletny opis tego przykładu kodu, zobacz [Przewodnik: implementowanie trybu wirtualnego w kontrolce DataGridView Windows Forms](implementing-virtual-mode-wf-datagridview-control.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#000](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#000)]
@@ -31,7 +31,7 @@ Poniższy przykład kodu demonstruje sposób zarządzania dużych zestawów dany
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów System i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów system i system. Windows. Forms.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -44,6 +44,6 @@ Poniższy przykład kodu demonstruje sposób zarządzania dużych zestawów dany
 - <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>
 - <xref:System.Windows.Forms.DataGridView.CancelRowEdit>
 - <xref:System.Windows.Forms.DataGridView.UserDeletingRow>
-- [Przewodnik: Implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
+- [Przewodnik: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
 - [Dostrajanie wydajności w kontrolce DataGridView formularzy Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Tryb wirtualny w kontrolce DataGridView formularzy Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)

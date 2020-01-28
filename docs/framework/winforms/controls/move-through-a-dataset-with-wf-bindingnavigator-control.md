@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: przechodzenie między elementami DataSet za pomocą BindingNavigator formularzy systemu Windows'
+title: Przechodzenie przez zestaw danych przy użyciu kontrolki BindingNavigator
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], moving through datasets
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 146d97be-3d97-400e-accb-860bbf47729d
-ms.openlocfilehash: d33cad4d0a60aa29d8c9f5e2217532963e8358c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 73a102da74a3a2a00b5042331cffcaf3d858ea5b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952692"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742151"
 ---
-# <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>Instrukcje: przechodzenie między elementami DataSet za pomocą BindingNavigator formularzy systemu Windows
-Podczas kompilowania aplikacji opartych na danych często konieczne jest wyświetlenie kolekcji danych dla użytkowników. Kontrolka, w połączeniu <xref:System.Windows.Forms.BindingSource> z składnikiem, oferuje wygodne i rozszerzalne rozwiązanie do poruszania się po kolekcji i wyświetlania elementów sekwencyjnie. <xref:System.Windows.Forms.BindingNavigator>  
+# <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>Porady: przechodzenie między elementami DataSet za pomocą BindingNavigator formularzy systemu Windows
+Podczas kompilowania aplikacji opartych na danych często konieczne jest wyświetlenie kolekcji danych dla użytkowników. Kontrolka <xref:System.Windows.Forms.BindingNavigator>, w połączeniu ze składnikiem <xref:System.Windows.Forms.BindingSource>, oferuje wygodne i rozszerzalne rozwiązanie do poruszania się po kolekcji i wyświetlania elementów sekwencyjnie.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu demonstruje, jak używać <xref:System.Windows.Forms.BindingNavigator> kontrolki do przenoszenia danych. Zestaw jest zawarty w <xref:System.Data.DataView>, który jest powiązany <xref:System.Windows.Forms.TextBox> z kontrolką ze <xref:System.Windows.Forms.BindingSource> składnikiem.  
+ Poniższy przykład kodu ilustruje sposób używania kontrolki <xref:System.Windows.Forms.BindingNavigator> do przenoszenia danych. Zestaw jest zawarty w <xref:System.Data.DataView>, który jest powiązany z kontrolką <xref:System.Windows.Forms.TextBox> ze składnikiem <xref:System.Windows.Forms.BindingSource>.  
   
 > [!NOTE]
 > Przechowywanie poufnych informacji, takich jak hasło, w ciągu połączenia może wpłynąć na bezpieczeństwo aplikacji. Korzystanie z uwierzytelniania systemu Windows (znanego również jako zabezpieczenia zintegrowane) jest bezpieczniejszym sposobem na kontrolowanie dostępu do bazy danych. Aby uzyskać więcej informacji, zobacz [Ochrona informacji o połączeniu](../../data/adonet/protecting-connection-information.md).  
@@ -40,4 +40,4 @@ Podczas kompilowania aplikacji opartych na danych często konieczne jest wyświe
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingNavigator, kontrolka](bindingnavigator-control-windows-forms.md)
 - [BindingSource, składnik](bindingsource-component.md)
-- [Instrukcje: Powiąż formant Windows Forms z typem](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Instrukcje: powiązanie kontrolki Windows Forms z typem](how-to-bind-a-windows-forms-control-to-a-type.md)

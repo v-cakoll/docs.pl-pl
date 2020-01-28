@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 47a1da4982d22c63cb762a27313590c8ec0c5dd4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964746"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743978"
 ---
 # <a name="using-structs-c-programming-guide"></a>Używanie struktur (C# Przewodnik programowania)
 
@@ -27,7 +27,7 @@ Podczas pisania konstruktora z parametrami struktury należy jawnie zainicjować
 
 Nie ma dziedziczenia struktur, ponieważ istnieją klasy. Struktura nie może dziedziczyć z innej struktury lub klasy i nie może być podstawą klasy. Struktury są jednak dziedziczone z klasy bazowej <xref:System.Object>. Struktura może implementować interfejsy i robi dokładnie jako klasy.
 
-Nie można zadeklarować klasy przy użyciu słowa kluczowego `struct`. W C#, klasy i struktury są semantycznie różne. Struktura jest typem wartości, podczas gdy Klasa jest typem referencyjnym. Aby uzyskać więcej informacji, zobacz [typy wartości](../../language-reference/keywords/value-types.md) i [typy odwołań](../../language-reference/keywords/reference-types.md).
+Nie można zadeklarować klasy przy użyciu słowa kluczowego `struct`. W C#, klasy i struktury są semantycznie różne. Struktura jest typem wartości, podczas gdy Klasa jest typem referencyjnym. Aby uzyskać więcej informacji, zobacz [typy wartości](../../language-reference/builtin-types/value-types.md) i [typy odwołań](../../language-reference/keywords/reference-types.md).
 
 O ile nie jest wymagana semantyka typu odwołania, niewielka Klasa może być bardziej wydajnie obsługiwana przez system, Jeśli zadeklarujesz ją jako strukturę.
 

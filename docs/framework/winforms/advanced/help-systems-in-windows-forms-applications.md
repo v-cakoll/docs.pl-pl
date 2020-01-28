@@ -1,5 +1,5 @@
 ---
-title: Systemy Pomocy w aplikacjach formularzy systemu Windows
+title: Systemy pomocy
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Help [Windows Forms], adding to Windows applications
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - Help [Windows Forms], Windows Forms
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
-ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c97a22dbdbdcc0eb282b52e16c4ef40914b1d9e7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937946"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742248"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Systemy Pomocy w aplikacjach formularzy systemu Windows
-Jeden najważniejszych courtesies, zgodnie z deweloperem aplikacji, mogą dostarczyć użytkownikom jest właściwy system pomocy. Jest to, gdzie spowoduje wyłączenie, gdy stają się mylić lub disoriented. Zapewnianie system pomocy w aplikacji z systemem Windows można łatwo przeprowadzić za pomocą [HelpProvider, składnik](../controls/helpprovider-component-windows-forms.md).  
+Jednym z najważniejszych courtesies, jako programista aplikacji, może postanowić użytkowników, że jest to właściwy system pomocy. Jest to miejsce, w którym zostaną one zamylone lub odzorientowane. Udostępnianie systemu pomocy w aplikacji opartej na systemie Windows jest łatwo wykonywane przy użyciu [składnika HelpProvider —](../controls/helpprovider-component-windows-forms.md).  
   
-## <a name="different-types-of-help"></a>Rodzajów bezpłatnej pomocy  
- Formularze Windows <xref:System.Windows.Forms.HelpProvider> składnika służy do kojarzenia pomocy HTML 1.x pliku pomocy (plik chm z HTML Help Workshop, lub do pliku .htm) z aplikacją z systemem Windows. <xref:System.Windows.Forms.HelpProvider> Składnika może służyć do zapewnienia pomocy kontekstowej dla kontrolek na formularzach Windows Forms lub określonych kontrolek. Ponadto <xref:System.Windows.Forms.HelpProvider> składnika można otworzyć pliku pomocy na określonych obszarach, takich jak strony głównej tabeli treści, indeksu lub funkcję wyszukiwania. Aby uzyskać ogólne informacje o <xref:System.Windows.Forms.HelpProvider> składników, zobacz [— informacje o składniku HelpProvider](../controls/helpprovider-component-overview-windows-forms.md). Aby uzyskać informacje dotyczące sposobu używania <xref:System.Windows.Forms.HelpProvider> składnika, aby wyświetlić Pomoc podręczną na formularzach Windows Forms, zobacz [jak: Wyświetlanie pomocy podręcznej](how-to-display-pop-up-help.md). Aby uzyskać informacje na temat korzystania z <xref:System.Windows.Forms.ToolTip> Zobacz składnik, aby wyświetlić pomocy specyficznej dla kontroli [pomocy kontroli przy użyciu etykietek narzędzi](control-help-using-tooltips.md).  
+## <a name="different-types-of-help"></a>Różne typy pomocy  
+ Składnik <xref:System.Windows.Forms.HelpProvider> Windows Forms jest używany do kojarzenia pliku pomocy HTML pomocy 1. x (plik. chm, utworzony za pomocą programu HTML Help Workshop lub pliku. htm) z aplikacją opartą na systemie Windows. Składnik <xref:System.Windows.Forms.HelpProvider> może służyć do zapewnienia pomocy kontekstowej dla kontrolek Windows Forms lub określonych kontrolek. Ponadto składnik <xref:System.Windows.Forms.HelpProvider> może otworzyć plik pomocy do określonych obszarów, takich jak Strona główna spisu treści, indeks lub funkcja wyszukiwania. Aby uzyskać ogólne informacje o składniku <xref:System.Windows.Forms.HelpProvider>, zobacz [Omówienie składnika HelpProvider —](../controls/helpprovider-component-overview-windows-forms.md). Aby uzyskać informacje na temat sposobu użycia składnika <xref:System.Windows.Forms.HelpProvider> w celu wyświetlenia pomocy podręcznej na Windows Forms, zobacz [How to: Display podręczny help-up](how-to-display-pop-up-help.md). Aby uzyskać informacje na temat używania składnika <xref:System.Windows.Forms.ToolTip> do wyświetlania pomocy dotyczącej kontroli, zobacz [Pomoc dotycząca kontroli przy użyciu etykietek narzędzi](control-help-using-tooltips.md).  
   
- Można wygenerować plików 1.x pomocy HTML za pomocą HTML Help Workshop. Aby uzyskać więcej informacji na temat Pomocy HTML zobacz "HTML Help Workshop" lub w innych tematach "HTML Help" w bibliotece MSDN.  
+ Za pomocą programu HTML Help Workshop można generować pliki pomocy HTML 1. x. Aby uzyskać więcej informacji na temat pomocy HTML, zobacz tematy "HTML Help Workshop" lub inne "Pomoc HTML" w witrynie MSDN.  
   
 ## <a name="see-also"></a>Zobacz także
 

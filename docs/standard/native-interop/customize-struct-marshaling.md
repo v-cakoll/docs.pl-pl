@@ -5,12 +5,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: e69746e03cefa2444d4c34b582730824ff357858
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706351"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741535"
 ---
 # <a name="customizing-structure-marshaling"></a>Dostosowywanie marshalingu struktur
 
@@ -20,11 +20,11 @@ Czasami domyślne reguły organizowania dla struktur nie są dokładnie tym, cze
 
 Platforma .NET udostępnia atrybut <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> i Wyliczenie <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType>, aby umożliwić dostosowywanie sposobu umieszczania pól w pamięci. Poniższe wskazówki pomogą uniknąć typowych problemów.
 
-**✔️ rozważyć** użycie `LayoutKind.Sequential`, gdy jest to możliwe.
+✔️ ROZWAŻYĆ użycie `LayoutKind.Sequential`, gdy jest to możliwe.
 
-**✔️** używać `LayoutKind.Explicit` podczas organizowania, gdy struktura natywna również ma jawny układ, taki jak Unia.
+✔️ używać `LayoutKind.Explicit` podczas organizowania, gdy struktura natywna również ma jawny układ, taki jak Unia.
 
-**❌ Unikaj** używania `LayoutKind.Explicit` podczas organizowania struktur na platformach innych niż Windows, jeśli chcesz, aby docelowe środowiska uruchomieniowe przed platformą .net Core 3,0. Środowisko uruchomieniowe platformy .NET Core przed 3,0 nie obsługuje przekazywania jawnych struktur przez wartość do funkcji natywnych w systemach Intel lub AMD 64-bitowym z systemem innym niż Windows. Jednak środowisko uruchomieniowe obsługuje przekazywanie jawnych struktur przez odwołanie na wszystkich platformach.
+❌ UNIKAj używania `LayoutKind.Explicit` podczas organizowania struktur na platformach innych niż Windows, jeśli chcesz, aby docelowe środowiska uruchomieniowe przed platformą .NET Core 3,0. Środowisko uruchomieniowe platformy .NET Core przed 3,0 nie obsługuje przekazywania jawnych struktur przez wartość do funkcji natywnych w systemach Intel lub AMD 64-bitowym z systemem innym niż Windows. Jednak środowisko uruchomieniowe obsługuje przekazywanie jawnych struktur przez odwołanie na wszystkich platformach.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Dostosowywanie kierowania pola logicznego
 

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: dostosowywanie formatowania danych w kontrolce DataGridView formularzy systemu Windows'
+title: Dostosowywanie formatowania danych w formancie DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], substituting cell values for display
 - data grids [Windows Forms], formatting data
 ms.assetid: a6e72c70-ce18-425f-828d-d57be6f96ab6
-ms.openlocfilehash: 948e9bf485b42b445491a4da9f8de7ae7974075c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6bc1a65b876df842df322db165dc08fcc0c931dc
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592826"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746776"
 ---
-# <a name="how-to-customize-data-formatting-in-the-windows-forms-datagridview-control"></a>Instrukcje: dostosowywanie formatowania danych w kontrolce DataGridView formularzy systemu Windows
-Poniższy przykład kodu demonstruje sposób implementacji programu obsługi dla <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> zdarzenia, które zmieniają się, jak komórki są wyświetlane w zależności od ich kolumny i wartości.  
+# <a name="how-to-customize-data-formatting-in-the-windows-forms-datagridview-control"></a>Porady: dostosowywanie formatowania danych w formancie DataGridView formularzy systemu Windows
+Poniższy przykład kodu demonstruje sposób implementacji procedury obsługi dla zdarzenia <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>, które zmienia sposób wyświetlania komórek w zależności od ich kolumn i wartości.  
   
- Komórek w `Balance` kolumny, która zawiera wartości ujemne są podane czerwone tło. Możesz również sformatować te komórki jako walutę, aby wyświetlić nawiasów wokół wartości ujemnych. Aby uzyskać więcej informacji, zobacz [jak: Formatowanie danych w Windows formantu DataGridView formularzy](how-to-format-data-in-the-windows-forms-datagridview-control.md).  
+ Komórki w `Balance` kolumnie zawierające liczby ujemne otrzymują czerwone tło. Możesz również sformatować te komórki jako walutę, aby wyświetlić nawiasy wokół wartości ujemnych. Aby uzyskać więcej informacji, zobacz [How to: format data w kontrolce DataGridView Windows Forms](how-to-format-data-in-the-windows-forms-datagridview-control.md).  
   
- Komórek w `Priority` kolumny wyświetlanie obrazów zamiast odpowiadających tekstowej komórek wartości. <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> Właściwość <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> jest używana do uzyskania wartości tekstowej komórki i ustaw odpowiednie wartości wyświetlania obrazu.  
+ W komórkach w kolumnie `Priority` są wyświetlane obrazy zamiast odpowiednich wartości komórek tekstowych. Właściwość <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> służy do pobierania wartości komórki tekstowej i ustawiania odpowiedniej wartości wyświetlania obrazu.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/cs/customFormatting.cs#00)]
@@ -37,9 +37,9 @@ Poniższy przykład kodu demonstruje sposób implementacji programu obsługi dla
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów system, system. Drawing i system. Windows. Forms.  
   
-- <xref:System.Drawing.Bitmap> obrazy o nazwie `highPri.bmp`, `mediumPri.bmp`, i `lowPri.bmp` znajdujących się w tym samym katalogu co plik wykonywalny.  
+- <xref:System.Drawing.Bitmap> obrazy o nazwach `highPri.bmp`, `mediumPri.bmp`i `lowPri.bmp` znajdujące się w tym samym katalogu co plik wykonywalny.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -49,6 +49,6 @@ Poniższy przykład kodu demonstruje sposób implementacji programu obsługi dla
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Drawing.Bitmap>
 - [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Formatowanie danych w Windows formantu DataGridView formularzy](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: formatowanie danych w kontrolce DataGridView formularzy Windows Forms](how-to-format-data-in-the-windows-forms-datagridview-control.md)
 - [Style komórki w kontrolce DataGridView formularzy Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Formatowanie danych w kontrolce DataGridView formularzy Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)

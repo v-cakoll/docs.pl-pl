@@ -1,16 +1,16 @@
 ---
-title: Niezarządzane interfejsy API WPF — informacje
+title: Niezarządzany wykaz interfejsów API
 ms.date: 03/30/2017
 ms.assetid: 2a2e8274-6556-46a2-80d3-a1812903cbcf
-ms.openlocfilehash: 5a9a122f8df9786b457291b955c15bddb39696a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 33f6624b68e7d3a4c2365eb7326089e97c03c471
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780630"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744439"
 ---
 # <a name="wpf-unmanaged-api-reference"></a>Niezarządzane interfejsy API WPF — informacje
-Windows Presentation Foundation (WPF) biblioteki ujawnić szereg funkcji niezarządzanych, które są przeznaczone wyłącznie do użytku wewnętrznego. One nie należy wywoływać z kodu użytkownika.  
+Biblioteki Windows Presentation Foundation (WPF) uwidaczniają wiele niezarządzanych funkcji, które są przeznaczone tylko do użytku wewnętrznego. Nie powinny być wywoływane z kodu użytkownika.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Aktywowanie funkcji](activate-function-wpf-unmanaged-api-reference.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Kończenie zadań drukowania formularzy systemu Windows'
+title: Ukończ zadania drukowania
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: a95e07596a10e67d32fdd0af036a14e8d66390c7
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: b8ef4fa05b2107247181e82b72389f9503507135
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053037"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746491"
 ---
-# <a name="how-to-complete-windows-forms-print-jobs"></a>Instrukcje: Kończenie zadań drukowania formularzy systemu Windows
-Często edytorów tekstów i inne aplikacje, które obejmują drukowanie zapewni opcji, aby wyświetlić komunikat do użytkowników o ukończeniu zadania drukowania. Możesz podać tę funkcję w formularzach Windows, obsługując <xref:System.Drawing.Printing.PrintDocument.EndPrint> zdarzenia <xref:System.Drawing.Printing.PrintDocument> składnika.  
+# <a name="how-to-complete-windows-forms-print-jobs"></a>Porady: kończenie zadań drukowania formularzy systemu Windows
+Często procesory tekstów i inne aplikacje, które obejmują drukowanie, udostępniają opcję wyświetlania komunikatu dla użytkowników, że zadanie drukowania zostało ukończone. Tę funkcję można podać w Windows Forms przez obsługę zdarzenia <xref:System.Drawing.Printing.PrintDocument.EndPrint> składnika <xref:System.Drawing.Printing.PrintDocument>.  
   
- Poniższa procedura wymaga, że utworzono aplikację systemem Windows przy użyciu <xref:System.Drawing.Printing.PrintDocument> składnika na ich temat, który jest standardowy sposób włączania drukowaniem z aplikacji z systemem Windows. Aby uzyskać więcej informacji na temat drukowania z Windows Forms przy użyciu <xref:System.Drawing.Printing.PrintDocument> składników, zobacz [jak: Tworzenie zadań drukowania formularzy Windows Standard](how-to-create-standard-windows-forms-print-jobs.md).  
+ Poniższa procedura wymaga utworzenia aplikacji opartej na systemie Windows ze składnikiem <xref:System.Drawing.Printing.PrintDocument> na tym komputerze, który jest standardowym sposobem włączania drukowania z aplikacji opartej na systemie Windows. Aby uzyskać więcej informacji o drukowaniu z Windows Forms przy użyciu składnika <xref:System.Drawing.Printing.PrintDocument>, zobacz [How to: Create Standard Windows Forms Job Jobs](how-to-create-standard-windows-forms-print-jobs.md).  
   
 ### <a name="to-complete-a-print-job"></a>Aby ukończyć zadanie drukowania  
   
-1. Ustaw <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> właściwość <xref:System.Drawing.Printing.PrintDocument> składnika.  
+1. Ustaw właściwość <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> składnika <xref:System.Drawing.Printing.PrintDocument>.  
   
     ```vb  
     PrintDocument1.DocumentName = "MyTextFile"  
@@ -37,9 +37,9 @@ Często edytorów tekstów i inne aplikacje, które obejmują drukowanie zapewni
     printDocument1->DocumentName = "MyTextFile";  
     ```  
   
-2. Napisz kod obsługujący <xref:System.Drawing.Printing.PrintDocument.EndPrint> zdarzeń.  
+2. Napisz kod, aby obsłużyć zdarzenie <xref:System.Drawing.Printing.PrintDocument.EndPrint>.  
   
-     W poniższym przykładzie kodu zostanie wyświetlone okno komunikatu, wskazujący, że zakończone drukowania.  
+     W poniższym przykładzie kodu zostanie wyświetlone okno komunikatu z informacją, że dokument zakończył drukowanie.  
   
     ```vb  
     Private Sub PrintDocument1_EndPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles PrintDocument1.EndPrint  
@@ -66,7 +66,7 @@ Często edytorów tekstów i inne aplikacje, które obejmują drukowanie zapewni
        }  
     ```  
   
-     (Visual C# i wizualna C++) Umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Wizualizacje C# i C++wizualizacje) Umieść poniższy kod w Konstruktorze formularza, aby zarejestrować procedurę obsługi zdarzeń.  
   
     ```csharp  
     this.printDocument1.EndPrint += new  

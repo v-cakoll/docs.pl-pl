@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: dodawanie ikon aplikacji do elementu TaskBar za pomocą składnika NotifyIcon formularzy systemu Windows'
+title: Dodawanie ikon aplikacji do paska zadań ze składnikiem NotifyIcon
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,29 +13,29 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 05b6f300afea4671c1a847b116b378514ecb8b56
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 46b50ecaabe75dba08fea922d7b5639031692269
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959503"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746247"
 ---
-# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Instrukcje: dodawanie ikon aplikacji do elementu TaskBar za pomocą składnika NotifyIcon formularzy systemu Windows
+# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Porady: dodawanie ikon aplikacji do elementu TaskBar za pomocą składnika NotifyIcon formularzy systemu Windows
 
-Formularze Windows <xref:System.Windows.Forms.NotifyIcon> składnik Wyświetla pojedynczą ikonę w obszarze stanu powiadomień paska zadań. Aby wyświetlić wiele ikony w obszarze stanu, konieczne jest posiadanie wielu <xref:System.Windows.Forms.NotifyIcon> składników w formularzu. Aby ustawić ikony wyświetlanej dla formantu, użyj <xref:System.Windows.Forms.NotifyIcon.Icon%2A> właściwości. Można także napisać kod <xref:System.Windows.Forms.NotifyIcon.DoubleClick> programu obsługi zdarzeń, tak że coś się stanie, gdy użytkownik kliknie dwukrotnie ikonę. Na przykład można wprowadzić okno dialogowe, są wyświetlane dla użytkownika skonfigurować proces w tle reprezentowany przez ikonę.
+Składnik <xref:System.Windows.Forms.NotifyIcon> Windows Forms wyświetla pojedynczą ikonę w obszarze powiadomień o stanie na pasku zadań. Aby wyświetlić wiele ikon w obszarze stan, musisz mieć wiele składników <xref:System.Windows.Forms.NotifyIcon> w formularzu. Aby ustawić ikonę wyświetlaną dla kontrolki, użyj właściwości <xref:System.Windows.Forms.NotifyIcon.Icon%2A>. Możesz również napisać kod w programie obsługi zdarzeń <xref:System.Windows.Forms.NotifyIcon.DoubleClick>, tak że coś się stanie, gdy użytkownik kliknie dwukrotnie ikonę. Na przykład może zostać wyświetlone okno dialogowe umożliwiające użytkownikowi skonfigurowanie procesu w tle reprezentowanego przez ikonę.
 
 > [!NOTE]
-> <xref:System.Windows.Forms.NotifyIcon> Składnik jest używany powiadomienie tylko do celów, w celu monitowania użytkowników o Akcja lub zdarzenie wystąpiło lub nastąpiła zmiana stanu pewnego rodzaju. Należy użyć menu, paski narzędzi i inne elementy interfejsu użytkownika dla standardowych interakcji z aplikacjami.
+> Składnik <xref:System.Windows.Forms.NotifyIcon> jest używany tylko do celów powiadamiania, aby ostrzec użytkowników, że wystąpiły akcje lub zdarzenia lub wprowadzono zmiany w stanie określonego sortowania. Do interakcji standardowej z aplikacjami należy używać menu, pasków narzędzi i innych elementów interfejsu użytkownika.
 
 ### <a name="to-set-the-icon"></a>Aby ustawić ikonę
 
-1. Przypisanie wartości do <xref:System.Windows.Forms.NotifyIcon.Icon%2A> właściwości. Wartość musi być typu `System.Drawing.Icon` i można go załadować z pliku .ico. Plik ikony można określić w kodzie lub klikając przycisk wielokropka (![przycisk wielokropka (...) w oknie dialogowym właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) obok pozycji <xref:System.Windows.Forms.NotifyIcon.Icon%2A> właściwość **właściwości** okna, a następnie wybierając plik w **Otwórz** zostanie wyświetlone okno dialogowe.
+1. Przypisz wartość do właściwości <xref:System.Windows.Forms.NotifyIcon.Icon%2A>. Wartość musi być typu `System.Drawing.Icon` i może zostać załadowana z pliku ICO. Możesz określić plik ikony w kodzie lub klikając przycisk wielokropka (![przycisk wielokropka (...) w okno Właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) obok właściwości <xref:System.Windows.Forms.NotifyIcon.Icon%2A> w oknie **Właściwości** , a następnie wybierając plik w **otwartym** oknie dialogowym.
 
 2. Ustaw <xref:System.Windows.Forms.NotifyIcon.Visible%2A> właściwość `true`.
 
-3. Ustaw <xref:System.Windows.Forms.NotifyIcon.Text%2A> właściwość odpowiedni ciąg etykietki narzędzia.
+3. Ustaw właściwość <xref:System.Windows.Forms.NotifyIcon.Text%2A> na odpowiedni ciąg etykietki narzędzia.
 
-     W poniższym przykładzie kodu ścieżkę zestawu dla lokalizacji ikony jest **Moje dokumenty** folderu. Ta lokalizacja jest używana, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać tego folderu. Wybranie tej lokalizacji umożliwia również użytkownikom z poziomami dostępu minimalny system bezpiecznego uruchamiania aplikacji. Poniższy przykład wymaga formularza z <xref:System.Windows.Forms.NotifyIcon> formant został już dodany. Wymaga to również pliku ikony o nazwie `Icon.ico`.
+     W poniższym przykładzie kodu ścieżką ustawioną dla lokalizacji ikony jest folder **Moje dokumenty** . Ta lokalizacja jest używana, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać ten folder. Wybranie tej lokalizacji pozwala również użytkownikom z minimalnymi poziomami dostępu do systemu w celu bezpiecznego uruchomienia aplikacji. Poniższy przykład wymaga, aby formularz z kontrolką <xref:System.Windows.Forms.NotifyIcon> został już dodany. Wymaga również pliku ikony o nazwie `Icon.ico`.
 
     ```vb
     ' You should replace the bold icon in the sample below
@@ -76,6 +76,6 @@ Formularze Windows <xref:System.Windows.Forms.NotifyIcon> składnik Wyświetla p
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Instrukcje: Kojarzenie Menu skrótów za pomocą składnika NotifyIcon formularzy Windows](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
+- [Instrukcje: kojarzenie menu skrótów za pomocą składnika NotifyIcon formularzy Windows Forms](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
 - [NotifyIcon, składnik](notifyicon-component-windows-forms.md)
 - [NotifyIcon, składnik — omówienie](notifyicon-component-overview-windows-forms.md)

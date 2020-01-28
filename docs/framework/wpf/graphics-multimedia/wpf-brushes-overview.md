@@ -1,5 +1,5 @@
 ---
-title: Przegląd Pędzle WPF
+title: Omówienie pędzli
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 8a1d05ad48ce75ce67d21d5a4d508015fea879b2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 18ca9b79a6ee801638a54fcb227c44e9aea21fd0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458627"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746207"
 ---
 # <a name="wpf-brushes-overview"></a>Przegląd Pędzle WPF
 Wszystko widoczne na ekranie jest widoczne, ponieważ zostało narysowane przez pędzel. Na przykład Pędzel służy do opisywania tła przycisku, pierwszego planu tekstu i wypełnienia kształtu. W tym temacie przedstawiono koncepcje rysowania przy użyciu pędzli [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] i przedstawiono przykłady. Pędzle umożliwiają malowanie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] obiektów ze wszystkimi elementami od prostych, pełnych kolorów do złożonych zestawów wzorców i obrazów.  
@@ -26,7 +26,7 @@ Przykłady pędzla
   
  Większość obiektów wizualnych umożliwia określenie sposobu, w jaki są rysowane. W poniższej tabeli wymieniono niektóre typowe obiekty i właściwości, których można użyć <xref:System.Windows.Media.Brush>.  
   
-|Class|Właściwości pędzla|  
+|Klasa|Właściwości pędzla|  
 |-----------|----------------------|  
 |<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
 |<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  

@@ -1,5 +1,6 @@
 ---
-title: 'Wskazówki: hosting formantu Win32 w WPF'
+title: Hostowanie kontrolki Win32 w WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 56f096dd7ba4feb677394cd26be9858a33842018
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: eb497a88c119dece85d61d6a32e7b86fb03b44b5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040816"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744933"
 ---
-# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Wskazówki: hosting formantu Win32 w WPF
+# <a name="walkthrough-host-a-win32-control-in-wpf"></a>Przewodnik: hostowanie kontrolki Win32 w WPF
 Windows Presentation Foundation (WPF) oferuje bogate środowisko do tworzenia aplikacji. Jeśli jednak masz znaczną inwestycję w kod Win32, może być bardziej efektywne ponowne użycie co najmniej jednego z tych kodów w aplikacji WPF, a nie wielokrotne pisanie. WPF udostępnia prosty mechanizm hostingu okna Win32 na stronie WPF.  
   
  Ten temat przeprowadzi Cię przez aplikację, która [obsługuje formant ListBox elementu Win32 w przykładzie WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control), który hostuje kontrolkę pole listy Win32. Ta ogólna procedura może zostać rozszerzona o obsługę dowolnego okna Win32.  
@@ -61,7 +62,7 @@ Windows Presentation Foundation (WPF) oferuje bogate środowisko do tworzenia ap
 ## <a name="implement-the-page-layout"></a>Implementowanie układu strony  
  Układ strony WPF, która hostuje formant ListBox, składa się z dwóch regionów. Lewa strona zawiera kilka formantów WPF, które udostępniają [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], które umożliwiają manipulowanie formantem Win32. Prawy górny róg strony ma kwadratowy region dla hostowanej kontrolki ListBox.  
   
- Kod do zaimplementowania tego układu jest bardzo prosty. Element główny to <xref:System.Windows.Controls.DockPanel>, który ma dwa elementy podrzędne. Pierwszy jest elementem <xref:System.Windows.Controls.Border>, który hostuje formant ListBox. W prawym górnym rogu strony zajmuje się 200x200 kwadrat. Drugi to <xref:System.Windows.Controls.StackPanel> element, który zawiera zestaw formantów WPF, które wyświetlają informacje i umożliwiają manipulowanie formantem ListBox przez ustawienie uwidocznionych właściwości operacji międzyoperacyjnych. Dla każdego elementu, który jest elementem podrzędnym <xref:System.Windows.Controls.StackPanel>, Zobacz materiał referencyjny dla różnych elementów używanych do szczegółowych informacji na temat tego, czym są te elementy lub co robią, są one wymienione w poniższym przykładowym kodzie, ale nie zostaną wyjaśnione w tym miejscu (podstawowa Model międzyoperacyjny nie wymaga żadnej z nich, dlatego można dodać część interaktywną do przykładu).  
+ Kod do zaimplementowania tego układu jest bardzo prosty. Element główny to <xref:System.Windows.Controls.DockPanel>, który ma dwa elementy podrzędne. Pierwszy jest elementem <xref:System.Windows.Controls.Border>, który hostuje formant ListBox. W prawym górnym rogu strony zajmuje się 200x200 kwadrat. Drugi to <xref:System.Windows.Controls.StackPanel> element, który zawiera zestaw formantów WPF, które wyświetlają informacje i umożliwiają manipulowanie formantem ListBox przez ustawienie uwidocznionych właściwości operacji międzyoperacyjnych. Dla każdego elementu, który jest elementem podrzędnym <xref:System.Windows.Controls.StackPanel>, Zobacz materiał referencyjny dla różnych elementów używanych w celu uzyskania szczegółowych informacji na temat tego, czym są te elementy lub co robią, są one wymienione w poniższym przykładowym kodzie, ale nie zostaną wyjaśnione w tym miejscu (podstawowy model międzyoperacyjny nie wymaga żadnej z nich, są one dostarczane w celu dodania niektórych interakcji do przykładu).  
   
  [!code-xaml[WPFHostingWin32Control#WPFUI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   

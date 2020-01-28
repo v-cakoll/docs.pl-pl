@@ -2,16 +2,16 @@
 title: polecenie "isclean" dotnet
 description: Polecenie "Wyczyść" programu dotnet czyści bieżący katalog.
 ms.date: 06/26/2019
-ms.openlocfilehash: 982232833b460b4ea4181acebee74dcef54d3131
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117738"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734255"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**Ten temat dotyczy: ✓** .NET Core 1. x SDK i nowszych wersji
+**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 1. x SDK i nowszych wersji
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -19,19 +19,19 @@ ms.locfileid: "71117738"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet clean`-Czyści dane wyjściowe projektu.
+`dotnet clean` — czyści dane wyjściowe projektu.
 
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive]
     [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
 ## <a name="description"></a>Opis
 
-`dotnet clean` Polecenie czyści dane wyjściowe poprzedniej kompilacji. Jest ona zaimplementowana jako [obiekt docelowy MSBuild](/visualstudio/msbuild/msbuild-targets), dlatego projekt jest oceniany, gdy polecenie jest uruchamiane. Oczyszczone zostaną tylko dane wyjściowe utworzone podczas kompilacji. Są czyszczone zarówno pośrednie (*obj*), jak i końcowe (*bin*) foldery wyjściowe.
+Polecenie `dotnet clean` czyści dane wyjściowe poprzedniej kompilacji. Jest ona zaimplementowana jako [obiekt docelowy MSBuild](/visualstudio/msbuild/msbuild-targets), dlatego projekt jest oceniany, gdy polecenie jest uruchamiane. Oczyszczone zostaną tylko dane wyjściowe utworzone podczas kompilacji. Są czyszczone zarówno pośrednie (*obj*), jak i końcowe (*bin*) foldery wyjściowe.
 
 ## <a name="arguments"></a>Argumenty
 
@@ -63,7 +63,7 @@ Projekt programu MSBuild lub rozwiązanie do czyszczenia. Jeśli plik projektu l
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Katalog, który zawiera artefakty kompilacji do oczyszczenia. `-f|--framework <FRAMEWORK>` Określ przełącznik z przełącznikiem katalogu wyjściowego, jeśli określono strukturę podczas kompilowania projektu.
+  Katalog, który zawiera artefakty kompilacji do oczyszczenia. Określ przełącznik `-f|--framework <FRAMEWORK>` z przełącznikiem katalogu wyjściowego, jeśli określono strukturę podczas kompilowania projektu.
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -71,7 +71,7 @@ Projekt programu MSBuild lub rozwiązanie do czyszczenia. Jeśli plik projektu l
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości programu MSBuild. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i .`diag[nostic]` Wartość domyślna to `normal`.
+  Ustawia poziom szczegółowości programu MSBuild. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`. Wartość domyślna to `normal`.
 
 ## <a name="examples"></a>Przykłady
 

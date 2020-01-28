@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: projektowanie układu formularzy systemu Windows dobrze reagującego na lokalizację'
+title: Projektowanie układu przyjazny dla lokalizacji
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,41 +10,41 @@ helpviewer_keywords:
 - Windows Forms, localization
 - localization [Windows Forms], Windows Forms layout
 ms.assetid: d13eff2d-701c-4b6e-8838-3885cbfb7223
-ms.openlocfilehash: c1aa62413e1c9cc29507b7b0ed5cbf1c5fcea26a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 36ffd532b9f539107307144d25c8d9d5f8ba634a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928568"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743284"
 ---
-# <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>Instrukcje: projektowanie układu formularzy systemu Windows dobrze reagującego na lokalizację
-Tworzenie formularzy, które są gotowe do zlokalizowania znacznie przyspiesza rozwój dla rynków międzynarodowych. Można użyć <xref:System.Windows.Forms.TableLayoutPanel> kontrolki do implementacji układów, które reagują bezproblemowo w miarę zmieniania rozmiaru, <xref:System.Windows.Forms.Control.Text%2A> ze względu na zmiany wartości właściwości.  
+# <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>Porady: projektowanie układu formularzy systemu Windows dobrze reagującego na lokalizację
+Tworzenie formularzy, które są gotowe do zlokalizowania znacznie przyspiesza rozwój dla rynków międzynarodowych. Za pomocą kontrolki <xref:System.Windows.Forms.TableLayoutPanel> można zaimplementować układy, które reagują bezproblemowo w miarę zmieniania rozmiaru formantów ze względu na zmiany wartości właściwości <xref:System.Windows.Forms.Control.Text%2A>.  
   
 ## <a name="example"></a>Przykład  
  Ten formularz pokazuje, jak utworzyć układ, który zmienia się proporcjonalnie w przypadku tłumaczenia wyświetlanych wartości ciągu na inne języki. Ten proces tłumaczenia nazywa się *lokalizacją*. Aby uzyskać więcej informacji, zobacz [Lokalizacja](../../../standard/globalization-localization/localization.md).  
   
- W programie Visual Studio jest dostępna szeroka pomoc techniczna dla tego zadania.  Zobacz również [Przewodnik: Tworzenie układu dostosowującego proporcję lokalizacji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100)).  
+ W programie Visual Studio jest dostępna szeroka pomoc techniczna dla tego zadania.  Zobacz również [Przewodnik: tworzenie układu, który dostosowuje proporcje dla lokalizacji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100)).  
   
  [!code-csharp[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/CS/localizableform.cs#1)]
  [!code-vb[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/VB/localizableform.vb#1)]  
   
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-1. [Instrukcje: Wyrównywanie i rozciąganie kontrolki w kontrolce TableLayoutPanel](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
+1. [Instrukcje: wyrównywanie i rozciąganie kontrolki w kontrolce TableLayoutPanel](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2. [Przewodnik: Rozmieszczanie kontrolek na Windows Forms przy użyciu FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+2. [Przewodnik: rozmieszczanie kontrolek w formularzach Windows Forms za pomocą kontrolki FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
 
-3. [Instrukcje: Rozciągaj wiersze i kolumny w kontrolce TableLayoutPanel](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
+3. [Instrukcje: obejmowanie rzędów i kolumn w kontrolce TableLayoutPanel](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-4. [Instrukcje: Edytowanie kolumn i wierszy w kontrolce TableLayoutPanel](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
+4. [Instrukcje: edytowanie rzędów i kolumn w kontrolce TableLayoutPanel](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-5. [Przewodnik: Wykonywanie typowych zadań przy użyciu tagów inteligentnych w kontrolkach Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+5. [Przewodnik: przeprowadzanie typowych zadań z tagami inteligentnymi na kontrolkach formularzy Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
   
-6. [Przewodnik: Rozmieszczanie kontrolek na Windows Forms przy użyciu TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+6. [Przewodnik: rozmieszczanie kontrolek w aplikacji Windows Forms za pomocą kontrolki TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
 
-7. [Przewodnik: Określanie układu formantów Windows Forms z dopełnieniem, marginesami i właściwością AutoSize](windows-forms-controls-padding-autosize.md)  
+7. [Przewodnik: tworzenie kontrolek formularzy Windows Forms z uzupełnieniem, marginesami oraz właściwościami AutoSize](windows-forms-controls-padding-autosize.md)  
   
-8. [Instrukcje: Obsługa lokalizacji na Windows Forms przy użyciu funkcji AutoSize i kontrolki TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))  
+8. [Instrukcje: obsługa lokalizacji na Windows Forms przy użyciu funkcji Autodopasowanie rozmiaru i formantu TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))  
   
 9. [Przewodnik: Tworzenie formularza systemu Windows o zmiennym rozmiarze na potrzeby wprowadzania danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))  
   

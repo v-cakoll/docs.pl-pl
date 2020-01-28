@@ -1,27 +1,27 @@
 ---
-title: DataGridView — Architektura formantu (Formularze systemu Windows)
+title: DataGridView, kontrolka — architektura
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-ms.openlocfilehash: 15d10ed2ec0bc78acfe887fe583d4850425eeab9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2e1884383cca87f8d4ff84f486e2b29761a0c55d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648111"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742529"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView — Architektura formantu (Formularze systemu Windows)
-<xref:System.Windows.Forms.DataGridView> Kontroli oraz ich powiązanymi klasami, które są przeznaczone do elastyczny i rozszerzalny system do wyświetlania i edytowania danych tabelarycznych. Te klasy są zawarte w <xref:System.Windows.Forms?displayProperty=nameWithType> przestrzeni nazw, dlatego są nazywane z prefiksem "DataGridView".  
+Formant <xref:System.Windows.Forms.DataGridView> i powiązane z nim klasy zostały zaprojektowane jako elastyczny, rozszerzalny system do wyświetlania i edytowania danych tabelarycznych. Wszystkie te klasy są zawarte w przestrzeni nazw <xref:System.Windows.Forms?displayProperty=nameWithType> i są wszystkie nazwane z prefiksem "DataGridView".  
   
 ## <a name="architecture-elements"></a>Elementy architektury  
- Podstawowy <xref:System.Windows.Forms.DataGridView> klasy pomocnika pochodzić od <xref:System.Windows.Forms.DataGridViewElement>. Ilustruje następujące modelu obiektów <xref:System.Windows.Forms.DataGridViewElement> hierarchii dziedziczenia.  
+ Klasy pomocnika podstawowego <xref:System.Windows.Forms.DataGridView> pochodzą z <xref:System.Windows.Forms.DataGridViewElement>. Poniższy model obiektów ilustruje hierarchię dziedziczenia <xref:System.Windows.Forms.DataGridViewElement>.  
   
- ![Diagram przedstawiający hierarchii DataGridViewElement obiektu modelu.](./media/datagridview-control-architecture-windows-forms/datagridviewelement-object-model.gif)  
+ ![Diagram przedstawiający hierarchię modeli obiektów DataGridViewelement.](./media/datagridview-control-architecture-windows-forms/datagridviewelement-object-model.gif)  
   
- <xref:System.Windows.Forms.DataGridViewElement> Klasy zawiera odwołanie do elementu nadrzędnego <xref:System.Windows.Forms.DataGridView> kontroli i ma <xref:System.Windows.Forms.DataGridViewElement.State%2A> właściwość, która przechowuje wartość, która reprezentuje kombinację wartości z <xref:System.Windows.Forms.DataGridViewElementStates> wyliczenia.  
+ Klasa <xref:System.Windows.Forms.DataGridViewElement> zawiera odwołanie do kontrolki nadrzędnej <xref:System.Windows.Forms.DataGridView> i ma właściwość <xref:System.Windows.Forms.DataGridViewElement.State%2A>, która przechowuje wartość, która reprezentuje kombinację wartości z wyliczenia <xref:System.Windows.Forms.DataGridViewElementStates>.  
   
- W poniższych sekcjach opisano <xref:System.Windows.Forms.DataGridView> pomocnika klasy bardziej szczegółowo.  
+ W poniższych sekcjach opisano klasy pomocnika <xref:System.Windows.Forms.DataGridView> bardziej szczegółowo.  
   
 ### <a name="datagridviewelementstates"></a>DataGridViewElementStates  
  <xref:System.Windows.Forms.DataGridViewElementStates> Wyliczenie zawiera następujące wartości:  
@@ -40,23 +40,23 @@ ms.locfileid: "64648111"
   
 - <xref:System.Windows.Forms.DataGridViewElementStates.Visible>  
   
- Wartości tego wyliczenia można łączyć z operatory logiczne bitowe, więc <xref:System.Windows.Forms.DataGridViewElement.State%2A> właściwości można wyrazić jednocześnie więcej niż jednego stanu. Na przykład <xref:System.Windows.Forms.DataGridViewElement> mogą być jednocześnie <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>, <xref:System.Windows.Forms.DataGridViewElementStates.Selected>, i <xref:System.Windows.Forms.DataGridViewElementStates.Visible>.  
+ Wartości tego wyliczenia można łączyć z bitowymi operatorami logicznymi, więc Właściwość <xref:System.Windows.Forms.DataGridViewElement.State%2A> może jawnie wyznaczać więcej niż jeden stan. Na przykład <xref:System.Windows.Forms.DataGridViewElement> może być jednocześnie <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>, <xref:System.Windows.Forms.DataGridViewElementStates.Selected>i <xref:System.Windows.Forms.DataGridViewElementStates.Visible>.  
   
 ### <a name="cells-and-bands"></a>Komórki i paski  
- <xref:System.Windows.Forms.DataGridView> Obejmuje dwa podstawowe rodzaje obiektów: komórek i grup. Dziedziczyć wszystkie komórki <xref:System.Windows.Forms.DataGridViewCell> klasy bazowej. Dwa rodzaje grup, <xref:System.Windows.Forms.DataGridViewColumn> i <xref:System.Windows.Forms.DataGridViewRow>, zarówno dziedziczyć <xref:System.Windows.Forms.DataGridViewBand> klasy bazowej.  
+ Formant <xref:System.Windows.Forms.DataGridView> składa się z dwóch podstawowych rodzajów obiektów: komórek i grup. Wszystkie komórki pochodzą z klasy bazowej <xref:System.Windows.Forms.DataGridViewCell>. Dwa rodzaje grup, <xref:System.Windows.Forms.DataGridViewColumn> i <xref:System.Windows.Forms.DataGridViewRow>, są pochodną od klasy bazowej <xref:System.Windows.Forms.DataGridViewBand>.  
   
- <xref:System.Windows.Forms.DataGridView> Kontroli współdziała z kilku klas, ale są najczęściej spotykanych <xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewColumn>, i <xref:System.Windows.Forms.DataGridViewRow>.  
+ Formant <xref:System.Windows.Forms.DataGridView> współdziała z kilkoma klasami, ale najczęściej spotykane są <xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewColumn>i <xref:System.Windows.Forms.DataGridViewRow>.  
   
 ### <a name="datagridviewcell"></a>DataGridViewCell  
- Komórka jest podstawową jednostką interakcji dla <xref:System.Windows.Forms.DataGridView>. Wyświetlanie skupia się na komórki i wprowadzania danych często odbywa się za pośrednictwem komórek. Dostęp do komórki za pomocą <xref:System.Windows.Forms.DataGridViewRow.Cells%2A> zbiór <xref:System.Windows.Forms.DataGridViewRow> klasy, a dostęp zaznaczonych komórek przy użyciu <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> zbiór <xref:System.Windows.Forms.DataGridView> kontroli. Poniższy model obiektów ilustruje użycie tych i pokazuje <xref:System.Windows.Forms.DataGridViewCell> hierarchii dziedziczenia.  
+ Komórka jest podstawową jednostką interakcji dla <xref:System.Windows.Forms.DataGridView>. Wyświetlacz jest wyśrodkowany w komórkach, a wpis danych jest często wykonywany za poorednictwem komórek. Możesz uzyskać dostęp do komórek przy użyciu kolekcji <xref:System.Windows.Forms.DataGridViewRow.Cells%2A> klasy <xref:System.Windows.Forms.DataGridViewRow> i można uzyskać dostęp do wybranych komórek przy użyciu kolekcji <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> kontrolki <xref:System.Windows.Forms.DataGridView>. Poniższy model obiektów ilustruje to użycie i pokazuje hierarchię dziedziczenia <xref:System.Windows.Forms.DataGridViewCell>.  
   
- ![Diagram przedstawiający hierarchii DataGridViewCell obiektu modelu.](./media/datagridview-control-architecture-windows-forms/datagridviewcell-object-model.gif)  
+ ![Diagram przedstawiający hierarchię modeli obiektów DataGridViewCell.](./media/datagridview-control-architecture-windows-forms/datagridviewcell-object-model.gif)  
   
- <xref:System.Windows.Forms.DataGridViewCell> Typ jest abstrakcyjna klasa bazowa, z której pochodzą wszystkie typy komórki. <xref:System.Windows.Forms.DataGridViewCell> i jego typów pochodnych nie kontrolek formularzy Windows Forms, ale niektóre formanty Windows Forms hosta. Żadnych funkcji dotyczących edytowania objęte komórki jest zazwyczaj obsługiwana przez kontrolkę hostowanej.  
+ Typ <xref:System.Windows.Forms.DataGridViewCell> jest abstrakcyjną klasą bazową, z której są wyprowadzane wszystkie typy komórek. <xref:System.Windows.Forms.DataGridViewCell> i jego typy pochodne nie są Windows Forms kontrolkami, ale niektóre kontrolki Windows Forms hosta. Wszystkie funkcje edycji obsługiwane przez komórkę są zwykle obsługiwane przez obsługiwaną kontrolę.  
   
- <xref:System.Windows.Forms.DataGridViewCell> obiekty nie mają kontroli nad ich wygląd i funkcje malowania w taki sam sposób jak kontrolek formularzy Windows. Zamiast tego <xref:System.Windows.Forms.DataGridView> jest odpowiedzialny za wyglądu jego <xref:System.Windows.Forms.DataGridViewCell> obiektów. Użytkownik może znacząco wpłynąć na wygląd i zachowanie komórek przez interakcję z <xref:System.Windows.Forms.DataGridView> właściwości i zdarzenia formantu. Jeśli masz specjalne wymagania dotyczące dostosowań, które wykraczają poza możliwości <xref:System.Windows.Forms.DataGridView> kontrolki, można zaimplementować własną klasę pochodzącą od <xref:System.Windows.Forms.DataGridViewCell> lub jednej z jej klas podrzędnych.  
+ obiekty <xref:System.Windows.Forms.DataGridViewCell> nie kontrolują własnych funkcji wyglądu i malowania w taki sam sposób jak kontrolki Windows Forms. Zamiast tego <xref:System.Windows.Forms.DataGridView> jest odpowiedzialny za wygląd obiektów <xref:System.Windows.Forms.DataGridViewCell>. Możesz znacząco wpłynąć na wygląd i zachowanie komórek, współpracując z właściwościami i zdarzeniami kontrolki <xref:System.Windows.Forms.DataGridView>. Jeśli istnieją specjalne wymagania dotyczące dostosowań, które wykraczają poza możliwości formantu <xref:System.Windows.Forms.DataGridView>, można zaimplementować własną klasę, która pochodzi od <xref:System.Windows.Forms.DataGridViewCell> lub jednej z jej klas podrzędnych.  
   
- Na poniższej liście przedstawiono klasy pochodne od elementu <xref:System.Windows.Forms.DataGridViewCell>:  
+ Na poniższej liście przedstawiono klasy pochodne <xref:System.Windows.Forms.DataGridViewCell>:  
   
 - <xref:System.Windows.Forms.DataGridViewTextBoxCell>  
   
@@ -78,16 +78,16 @@ ms.locfileid: "64648111"
   
 - <xref:System.Windows.Forms.DataGridViewTopLeftHeaderCell>  
   
-- Komórka niestandardowych typów  
+- Niestandardowe typy komórek  
   
 ### <a name="datagridviewcolumn"></a>DataGridViewColumn  
- Schemat <xref:System.Windows.Forms.DataGridView> kontrolki dołączonych danych magazynu danych jest wyrażona w <xref:System.Windows.Forms.DataGridView> kolumn formantu. Możesz uzyskać dostęp <xref:System.Windows.Forms.DataGridView> kolumn do formantu za pomocą <xref:System.Windows.Forms.DataGridView.Columns%2A> kolekcji. Dostęp do wybranych kolumn przy użyciu <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> kolekcji. Poniższy model obiektów ilustruje użycie tych i pokazuje <xref:System.Windows.Forms.DataGridViewColumn> hierarchii dziedziczenia.  
+ Schemat dołączonego magazynu danych kontrolki <xref:System.Windows.Forms.DataGridView> jest wyrażony w kolumnach kontrolki <xref:System.Windows.Forms.DataGridView>. Dostęp do kolumn kontrolki <xref:System.Windows.Forms.DataGridView> można uzyskać przy użyciu kolekcji <xref:System.Windows.Forms.DataGridView.Columns%2A>. Dostęp do wybranych kolumn można uzyskać przy użyciu kolekcji <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>. Poniższy model obiektów ilustruje to użycie i pokazuje hierarchię dziedziczenia <xref:System.Windows.Forms.DataGridViewColumn>.  
   
- ![Diagram przedstawiający hierarchia modeli obiektów DataGridViewColumn.](./media/datagridview-control-architecture-windows-forms/datagridviewcolumn-object-model.gif)  
+ ![Diagram przedstawiający hierarchię modeli obiektów DataGridViewColumn.](./media/datagridview-control-architecture-windows-forms/datagridviewcolumn-object-model.gif)  
   
- Niektóre typy kluczy komórki mają odpowiednie typy kolumn. Te są uzyskiwane z <xref:System.Windows.Forms.DataGridViewColumn> klasy bazowej.  
+ Niektóre typy komórek klucza mają odpowiednie typy kolumn. Są one uzyskiwane z klasy bazowej <xref:System.Windows.Forms.DataGridViewColumn>.  
   
- Na poniższej liście przedstawiono klasy pochodne od elementu <xref:System.Windows.Forms.DataGridViewColumn>:  
+ Na poniższej liście przedstawiono klasy pochodne <xref:System.Windows.Forms.DataGridViewColumn>:  
   
 - <xref:System.Windows.Forms.DataGridViewButtonColumn>  
   
@@ -101,24 +101,24 @@ ms.locfileid: "64648111"
   
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>  
   
-- Typów kolumny niestandardowej  
+- Niestandardowe typy kolumn  
   
-### <a name="datagridview-editing-controls"></a>Formanty edycji DataGridView  
- Komórki, które zazwyczaj obsługują zaawansowane funkcje edycji, użyj obsługiwanego formantu, który pochodzi z kontrolki formularzy Windows Forms. Te kontrolki także implementować <xref:System.Windows.Forms.IDataGridViewEditingControl> interfejsu. Poniższy model obiektów ilustruje użycie tych kontrolek.  
+### <a name="datagridview-editing-controls"></a>Kontrolki edycji DataGridView  
+ Komórki obsługujące zaawansowane funkcje edycji zwykle korzystają z hostowanej kontrolki, która jest pochodną formantu Windows Forms. Te formanty również implementują interfejs <xref:System.Windows.Forms.IDataGridViewEditingControl>. Poniższy model obiektów ilustruje użycie tych kontrolek.  
   
- ![Diagram przedstawiający hierarchii DataGridView Model obiektu.](./media/datagridview-control-architecture-windows-forms/datagridviewediting-object-model.gif)  
+ ![Diagram przedstawiający hierarchię modelu obiektów sterujących kontrolki DataGridView.](./media/datagridview-control-architecture-windows-forms/datagridviewediting-object-model.gif)  
   
- Następujące elementy sterujące edycji są dostarczane z <xref:System.Windows.Forms.DataGridView> sterowania:  
+ Następujące kontrolki edycji są dostępne z kontrolką <xref:System.Windows.Forms.DataGridView>:  
   
 - <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>  
   
 - <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>  
   
- Aby uzyskać informacje dotyczące tworzenia własnych do edycji kontrolek, zobacz [jak: Kontrolki hosta w formularzach Windows Forms komórkach DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+ Aby uzyskać informacje na temat tworzenia własnych kontrolek edycji, zobacz [How to: Host Controls in Windows Forms Cells](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
- W poniższej tabeli przedstawiono relację między komórki typy, typy kolumn i formanty edycji.  
+ W poniższej tabeli przedstawiono relacje między typami komórek, typami kolumn i kontrolkami edycji.  
   
-|Typ komórki|Obsługiwanego formantu|Typ kolumny|  
+|Typ komórki|Formant hostowany|Typ kolumny|  
 |---------------|--------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewButtonCell>|n/d|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
 |<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|n/d|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
@@ -128,13 +128,13 @@ ms.locfileid: "64648111"
 |<xref:System.Windows.Forms.DataGridViewTextBoxCell>|<xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|  
   
 ### <a name="datagridviewrow"></a>DataGridViewRow  
- <xref:System.Windows.Forms.DataGridViewRow> Klasy wyświetla rekord danych pola z danych przechowywania, do której <xref:System.Windows.Forms.DataGridView> związana jest kontrola. Możesz uzyskać dostęp <xref:System.Windows.Forms.DataGridView> wierszy formantu za pomocą <xref:System.Windows.Forms.DataGridView.Rows%2A> kolekcji. Dostęp do wybranych wierszy przy użyciu <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> kolekcji. Poniższy model obiektów ilustruje użycie tych i pokazuje <xref:System.Windows.Forms.DataGridViewRow> hierarchii dziedziczenia.  
+ Klasa <xref:System.Windows.Forms.DataGridViewRow> wyświetla pola danych rekordu z magazynu danych, do którego jest dołączona kontrolka <xref:System.Windows.Forms.DataGridView>. Możesz uzyskać dostęp do wierszy kontrolki <xref:System.Windows.Forms.DataGridView> przy użyciu kolekcji <xref:System.Windows.Forms.DataGridView.Rows%2A>. Możesz uzyskać dostęp do wybranych wierszy przy użyciu kolekcji <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>. Poniższy model obiektów ilustruje to użycie i pokazuje hierarchię dziedziczenia <xref:System.Windows.Forms.DataGridViewRow>.  
   
- ![Diagram przedstawiający hierarchii DataGridViewRow obiektu modelu.](./media/datagridview-control-architecture-windows-forms/datagridviewrow-object-model.gif)
+ ![Diagram przedstawiający hierarchię modeli obiektów DataGridViewRow.](./media/datagridview-control-architecture-windows-forms/datagridviewrow-object-model.gif)
   
- Uzyskujesz własnych typów z <xref:System.Windows.Forms.DataGridViewRow> klasy, chociaż zazwyczaj nie będzie to konieczne. <xref:System.Windows.Forms.DataGridView> Kontrolka ma kilka zdarzeń związanych z wierszy, jak i właściwości dostosowywania zachowania jego <xref:System.Windows.Forms.DataGridViewRow> obiektów.  
+ Można utworzyć własne typy z klasy <xref:System.Windows.Forms.DataGridViewRow>, chociaż zwykle nie jest to konieczne. Kontrolka <xref:System.Windows.Forms.DataGridView> ma kilka zdarzeń związanych z wierszami i właściwości służące do dostosowywania zachowania obiektów <xref:System.Windows.Forms.DataGridViewRow>.  
   
- Po włączeniu <xref:System.Windows.Forms.DataGridView> kontrolki <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> właściwości specjalne wiersz awanie nowych wierszy jest wyświetlany jako ostatni wiersz. Ten wiersz jest częścią <xref:System.Windows.Forms.DataGridView.Rows%2A> kolekcji, ale ma specjalne funkcje, które mogą wymagać Twojej uwagi. Aby uzyskać więcej informacji, zobacz [używanie wiersza dla nowych rekordów w formancie DataGridView formularzy Windows](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
+ Jeśli włączysz Właściwość <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> kontrolki <xref:System.Windows.Forms.DataGridView>, w ostatnim wierszu zostanie wyświetlony specjalny wiersz służący do dodawania nowych wierszy. Ten wiersz jest częścią kolekcji <xref:System.Windows.Forms.DataGridView.Rows%2A>, ale ma specjalne funkcje, które mogą wymagać Twojej uwagi. Aby uzyskać więcej informacji, zobacz [używanie wiersza dla nowych rekordów w kontrolce DataGridView Windows Forms](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

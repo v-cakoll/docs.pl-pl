@@ -2,12 +2,12 @@
 title: Program Hello World z usługą routingu
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 7a41a1b552e220dcb6367ae59876da4570bab909
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ae0615c8cf2fa33f3bb363f77c0d06440b6afc13
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716915"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743709"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Program Hello World z usługą routingu
 Ten przykład pokazuje usługę routingu Windows Communication Foundation (WCF). Usługa routingu to składnik WCF, który ułatwia dołączanie routera opartego na zawartości w aplikacji. Ten przykład dostosowuje standardowy przykład kalkulatora WCF do komunikowania się przy użyciu usługi routingu. W tym przykładzie klient kalkulatora jest skonfigurowany do wysyłania komunikatów do punktu końcowego uwidocznionego przez router. Usługa routingu jest skonfigurowana do akceptowania wszystkich wysyłanych do nich komunikatów i przekazywania ich do punktu końcowego, który odpowiada usłudze Kalkulator. W ten sposób komunikaty wysyłane z klienta są odbierane przez router i ponownie kierowane do rzeczywistej usługi kalkulatora. Komunikaty z usługi kalkulatora są odsyłane do routera, co z kolei przekazuje je do klienta kalkulatora.
@@ -59,4 +59,4 @@ Ten przykład pokazuje usługę routingu Windows Communication Foundation (WCF).
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykłady hostingu i trwałości usługi AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Przykłady hostingu i trwałości usługi AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

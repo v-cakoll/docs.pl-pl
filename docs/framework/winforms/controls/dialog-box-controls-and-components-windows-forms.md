@@ -1,5 +1,5 @@
 ---
-title: Formanty i składniki okien dialogowych (Formularze systemu Windows)
+title: Kontrolki i składniki okien dialogowych
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CommonDialog control
@@ -7,64 +7,64 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], Windows Forms
 - Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
-ms.openlocfilehash: 9beacc84001aa1a5d505b8563794c49f3287cbc1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f90384eff092e9198787e08e19ffc59bbe9d761
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972279"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745977"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>Formanty i składniki okien dialogowych (Formularze systemu Windows)
-Następujące kontrolek formularzy Windows Forms i składnikami przedstawiają standardowych oknach dialogowych. Skorzystaj z linków, aby uzyskać więcej informacji na temat funkcji dostępnych w każdym polu okna dialogowego.  
+Następujące Windows Forms formantów i składników są obecne w standardowych oknach dialogowych. Skorzystaj z linków, aby uzyskać więcej informacji na temat funkcji dostępnych w poszczególnych oknach dialogowych.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.ColorDialog>  
- Zawiera informacje na temat <xref:System.Windows.Forms.ColorDialog> klasy i jej elementów członkowskich.  
+ Zawiera informacje referencyjne dotyczące klasy <xref:System.Windows.Forms.ColorDialog> i jej członków.  
   
  <xref:System.Windows.Forms.FontDialog>  
- Zawiera informacje na temat <xref:System.Windows.Forms.FontDialog> klasy i jej elementów członkowskich.  
+ Zawiera informacje referencyjne dotyczące klasy <xref:System.Windows.Forms.FontDialog> i jej członków.  
   
  <xref:System.Windows.Forms.OpenFileDialog>  
- Zawiera informacje na temat <xref:System.Windows.Forms.OpenFileDialog> klasy i jej elementów członkowskich.  
+ Zawiera informacje referencyjne dotyczące klasy <xref:System.Windows.Forms.OpenFileDialog> i jej członków.  
   
  <xref:System.Windows.Forms.PageSetupDialog>  
- Zawiera informacje na temat <xref:System.Windows.Forms.PageSetupDialog> klasy i jej elementów członkowskich.  
+ Zawiera informacje referencyjne dotyczące klasy <xref:System.Windows.Forms.PageSetupDialog> i jej członków.  
   
  <xref:System.Windows.Forms.PrintDialog>  
- Zawiera informacje na temat <xref:System.Windows.Forms.PrintDialog> klasy i jej elementów członkowskich.  
+ Zawiera informacje referencyjne dotyczące klasy <xref:System.Windows.Forms.PrintDialog> i jej członków.  
   
  <xref:System.Windows.Forms.PrintPreviewDialog>  
- Zawiera informacje na temat <xref:System.Windows.Forms.PrintPreviewDialog> klasy i jej elementów członkowskich.  
+ Zawiera informacje referencyjne dotyczące klasy <xref:System.Windows.Forms.PrintPreviewDialog> i jej członków.  
   
  <xref:System.Windows.Forms.SaveFileDialog>  
- Zawiera informacje na temat <xref:System.Windows.Forms.SaveFileDialog> klasy i jej elementów członkowskich.  
+ Zawiera informacje referencyjne dotyczące klasy <xref:System.Windows.Forms.SaveFileDialog> i jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Okna dialogowe w formularzach Windows Forms](../dialog-boxes-in-windows-forms.md)  
- W tym artykule opisano, jak utworzyć okno dialogowe formularza Windows.  
+ Opisuje sposób tworzenia okna dialogowego dla formularza systemu Windows.  
   
  [ColorDialog, składnik — omówienie](colordialog-component-overview-windows-forms.md)  
- Umożliwia użytkownikowi wybrać kolor z palety w oknie dialogowym wstępnie skonfigurowanych i dodać kolorów niestandardowych do tej palety.  
+ Umożliwia użytkownikowi wybranie koloru z palety w wstępnie skonfigurowanym oknie dialogowym i dodanie niestandardowych kolorów do tej palety.  
   
  [FolderBrowserDialog, składnik — omówienie (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)  
- Umożliwia użytkownikom wyszukiwanie i Wybieranie folderów.  
+ Umożliwia użytkownikom przeglądanie i wybieranie folderów.  
   
  [FontDialog, składnik — omówienie](fontdialog-component-overview-windows-forms.md)  
- Przedstawia czcionek, które są aktualnie zainstalowane w systemie.  
+ Udostępnia czcionki, które są obecnie zainstalowane w systemie.  
   
  [OpenFileDialog, składnik — omówienie](openfiledialog-component-overview-windows-forms.md)  
- Umożliwia użytkownikom otwieranie plików za pomocą wstępnie skonfigurowanych okno dialogowe.  
+ Umożliwia użytkownikom otwieranie plików przy użyciu wstępnie skonfigurowanego okna dialogowego.  
   
  [PageSetupDialog, składnik — omówienie](pagesetupdialog-component-overview-windows-forms.md)  
- Ustawia strony szczegółowe informacje związane z drukowaniem, za pomocą wstępnie skonfigurowanych okno dialogowe.  
+ Ustawia szczegóły strony do drukowania za pośrednictwem wstępnie skonfigurowanego okna dialogowego.  
   
  [PrintDialog, składnik — omówienie](printdialog-component-overview-windows-forms.md)  
- Wybiera drukarkę, wybiera strony do drukowania i określa inne ustawienia związane z drukowaniem.  
+ Wybiera drukarkę, wybiera strony do wydrukowania i określa inne ustawienia związane z drukowaniem.  
   
  [PrintPreviewDialog, kontrolka — omówienie](printpreviewdialog-control-overview-windows-forms.md)  
- Wyświetla dokument, która będzie wyświetlana po wydrukowaniu.  
+ Wyświetla dokument, gdy zostanie on wyświetlony po wydrukowaniu.  
   
  [SaveFileDialog, składnik — omówienie](savefiledialog-component-overview-windows-forms.md)  
- Wybiera pliki, aby zapisać i gdzie je zapisać.  
+ Wybiera pliki do zapisania oraz miejsce ich zapisania.  
   
- Zobacz też [okna dialogowe w formularzach Windows Forms](../dialog-boxes-in-windows-forms.md).
+ Zobacz również [okna dialogowe w Windows Forms](../dialog-boxes-in-windows-forms.md).

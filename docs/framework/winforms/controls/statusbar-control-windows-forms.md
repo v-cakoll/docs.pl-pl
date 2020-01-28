@@ -1,37 +1,37 @@
 ---
-title: StatusBar — Formant (Formularze systemu Windows)
+title: StatusBar, kontrolka
 ms.date: 03/30/2017
 helpviewer_keywords:
 - StatusBar control [Windows Forms]
 - status bars [Windows Forms], creating
 ms.assetid: 6f543e27-cf78-4b7f-b4d0-6a8030155d48
-ms.openlocfilehash: 72a93fc32715596efc7fb0f8b941e62f7019d06c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4d48cf497eeedcff6290dfa8ddecf38ce8ff7c63
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964420"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742853"
 ---
 # <a name="statusbar-control-windows-forms"></a>StatusBar — Formant (Formularze systemu Windows)
 > [!NOTE]
-> Formant zastępuje i dodaje funkcję <xref:System.Windows.Forms.StatusBar> do <xref:System.Windows.Forms.StatusBar> kontrolki; jednak kontrolka jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości, jeśli wybierzesz opcję. <xref:System.Windows.Forms.ToolStripStatusLabel>  
+> Formant <xref:System.Windows.Forms.ToolStripStatusLabel> zamienia i dodaje funkcje do kontrolki <xref:System.Windows.Forms.StatusBar>; Niemniej jednak kontrolka <xref:System.Windows.Forms.StatusBar> jest zachowywana na potrzeby zgodności z poprzednimi wersjami i w przyszłości.  
   
- Formant Windows Forms <xref:System.Windows.Forms.StatusBar> jest używany w formularzach jako obszar, zwykle wyświetlany u dołu okna, w którym aplikacja może wyświetlać różne rodzaje informacji o stanie. <xref:System.Windows.Forms.StatusBar>formanty mogą mieć na nich panele paska stanu, które wyświetlają ikony wskazujące stan, lub serię ikon w animacji wskazującej, że proces działa. na przykład program Microsoft Word wskazuje, że dokument jest zapisywany.  
+ Kontrolka <xref:System.Windows.Forms.StatusBar> Windows Forms jest używana w formularzach jako obszar, zwykle wyświetlany u dołu okna, w którym aplikacja może wyświetlać różne rodzaje informacji o stanie. formanty <xref:System.Windows.Forms.StatusBar> mogą mieć na nich panele pasek stanu, które wyświetlają ikony wskazujące stan, lub serię ikon w animacji wskazującej, że proces działa. na przykład program Microsoft Word wskazuje, że dokument jest zapisywany.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [StatusBar, kontrolka — omówienie](statusbar-control-overview-windows-forms.md)  
- Wprowadza ogólne koncepcje <xref:System.Windows.Forms.StatusBar> kontrolki, co pozwala użytkownikom na wyświetlanie istotnych informacji dla kontrolki, która ma fokus.  
+ Wprowadza ogólne koncepcje <xref:System.Windows.Forms.StatusBar> kontroli, co pozwala użytkownikom na wyświetlanie istotnych informacji dla kontrolki, która ma fokus.  
   
- [Instrukcje: Dodawanie paneli do kontrolki StatusBar](how-to-add-panels-to-a-statusbar-control.md)  
- Wyjaśnia, <xref:System.Windows.Forms.StatusBar> jak dodać panele programowalne do kontrolki.  
+ [Instrukcje: dodawanie paneli do kontrolki StatusBar](how-to-add-panels-to-a-statusbar-control.md)  
+ Wyjaśnia, jak dodać panele programowalne do kontrolki <xref:System.Windows.Forms.StatusBar>.  
   
- [Instrukcje: Określ, który panel w Windows Forms kontrolce StatusBar został kliknięty](determine-which-panel-wf-statusbar-control-was-clicked.md)  
- Wyjaśnia, <xref:System.Windows.Forms.Control.Click> <xref:System.Windows.Forms.StatusBar> jak obsługiwać zdarzenia wywoływane z formantu.  
+ [Instrukcje: ustalanie, który panel został kliknięty w kontrolce StatusBar formularzy Windows Forms](determine-which-panel-wf-statusbar-control-was-clicked.md)  
+ Wyjaśnia, jak obsłużyć zdarzenia <xref:System.Windows.Forms.Control.Click> wywoływane przez formant <xref:System.Windows.Forms.StatusBar>.  
   
- [Instrukcje: Ustawianie rozmiaru paneli paska stanu](how-to-set-the-size-of-status-bar-panels.md)  
+ [Instrukcje: ustawianie rozmiaru paneli paska stanu](how-to-set-the-size-of-status-bar-panels.md)  
  Zawiera szczegółowe informacje na temat właściwości kontrolujących szerokość i zachowanie rozmiaru paneli paska stanu w czasie wykonywania.  
   
- [Przewodnik: Aktualizowanie informacji o pasku stanu w czasie wykonywania](walkthrough-updating-status-bar-information-at-run-time.md)  
+ [Przewodnik: aktualizowanie informacji na pasku stanu w czasie wykonywania](walkthrough-updating-status-bar-information-at-run-time.md)  
  Wyjaśnia, jak programowo kontrolować dane w panelach paska stanu.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -39,7 +39,7 @@ ms.locfileid: "69964420"
  Zawiera informacje referencyjne dotyczące klasy i jej elementów członkowskich.  
   
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
- Zamienia i dodaje funkcje do <xref:System.Windows.Forms.StatusBar> kontrolki.  
+ Zamienia i dodaje funkcje do kontrolki <xref:System.Windows.Forms.StatusBar>.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  

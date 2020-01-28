@@ -1,64 +1,64 @@
 ---
-title: Podsumowanie informacji o technologii formantów DataGridView (Formularze systemu Windows)
+title: DataGridView, kontrolka — podsumowanie technologii
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: f8898f76971b6088fa8ca831961ea7f12e1ab4e6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 18eebd067df9768e14cc81258184551d00dd1402
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588826"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742477"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Podsumowanie informacji o technologii formantów DataGridView (Formularze systemu Windows)
-Ten temat zawiera podsumowanie informacji o `DataGridView` kontroli i klas, które obsługują jego użycia.  
+Ten temat zawiera podsumowanie informacji o kontrolce `DataGridView` i klasach, które obsługują jej użycie.  
   
- Wyświetlanie danych w formacie tabelarycznym jest zadaniem, które najprawdopodobniej będzie wykonywać często. `DataGridView` Kontrolki została zaprojektowana jako kompletne rozwiązanie do prezentowania danych w siatce.  
+ Wyświetlanie danych w formacie tabelarycznym to zadanie, które jest często wykonywane. Formant `DataGridView` zaprojektowano jako kompletne rozwiązanie do prezentowania danych w siatce.  
   
-## <a name="keywords"></a>słowa kluczowe  
- DataGridView, BindingSource, tabeli, komórki, powiązań danych, tryb wirtualny  
+## <a name="keywords"></a>Słowa kluczowe  
+ DataGridView, BindingSource, tabela, komórka, powiązanie danych, tryb wirtualny  
   
-## <a name="namespaces"></a>Namespaces  
+## <a name="namespaces"></a>{1&gt;Przestrzenie nazw&lt;1}  
  <xref:System.Windows.Forms?displayProperty=nameWithType>  
   
  <xref:System.Data?displayProperty=nameWithType>  
   
-## <a name="related-technologies"></a>Powiązane technologie  
+## <a name="related-technologies"></a>Technologie pokrewne  
  `BindingSource`  
   
-## <a name="background"></a>Tło  
- Projektowanie interfejsu użytkownika często okazać się konieczne do wyświetlenia użytkownikom dane tabelaryczne. .NET Framework oferuje kilka sposobów, aby wyświetlić dane w tabeli lub siatki. `DataGridView` Kontrolka reprezentuje najnowszy rozwój tej technologii dla aplikacji Windows Forms.  
+## <a name="background"></a>Informacje dodatkowe  
+ Projektanci interfejsu użytkownika często szukają niezbędnych do wyświetlenia danych tabelarycznych dla użytkowników. .NET Framework zapewnia kilka sposobów wyświetlania danych w tabeli lub siatce. Formant `DataGridView` reprezentuje najnowszy rozwój tej technologii dla aplikacji Windows Forms.  
   
- `DataGridView` Formant może wyświetlić wiersze danych z magazynu danych. Wiele typów magazynów danych są obsługiwane. Magazyn danych może zawierać proste, bez typu danych, takich jak jednowymiarowej tablicy, lub może on przechowywać typizowane dane, takie jak <xref:System.Data.DataSet>. Aby uzyskać więcej informacji, zobacz [jak: Powiązywanie danych Windows formantu DataGridView formularzy](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+ Kontrolka `DataGridView` może wyświetlać wiersze danych z magazynu danych. Obsługiwane są wiele typów magazynów danych. Magazyn danych może przechowywać proste, nietypu dane, na przykład tablicę jednowymiarową, lub może przechowywać dane wpisane, takie jak <xref:System.Data.DataSet>. Aby uzyskać więcej informacji, zobacz [How to: bind Data w formancie DataGridView Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   
- `DataGridView` Kontrola zapewnia wydajny i elastyczny sposób wyświetlania danych w formacie tabelarycznym. Można użyć formantu, aby pokazać tylko do odczytu lub edycji widoków niewielkich do bardzo dużych zestawów danych.  
+ Formant `DataGridView` zapewnia zaawansowany i elastyczny sposób wyświetlania danych w formacie tabelarycznym. Możesz użyć kontrolki, aby wyświetlić widoki tylko do odczytu lub do edycji dla małych i bardzo dużych zestawów danych.  
   
- Możesz rozszerzyć `DataGridView` kontroli na kilka sposobów, aby tworzyć niestandardowe zachowanie w swoich aplikacjach. Na przykład można programowo określić własny algorytmy sortujące i swój własny typ komórki. Można łatwo dostosować wygląd `DataGridView` kontroli, wybierając między kilka właściwości. Wiele typów magazynów danych może służyć jako źródła danych lub `DataGridView` kontroli może działać bez źródła danych, w którym jest powiązana.  
+ Formant `DataGridView` można rozbudować na kilka sposobów, aby tworzyć niestandardowe zachowania w aplikacjach. Można na przykład programowo określić własne algorytmy sortowania i można utworzyć własne typy komórek. Wygląd formantu `DataGridView` można łatwo dostosować, wybierając spośród kilku właściwości. Wiele typów magazynów danych może służyć jako źródło danych lub formant `DataGridView` może działać bez powiązanego ze źródłem danych.  
   
 ## <a name="implementing-datagridview-classes"></a>Implementowanie klas DataGridView  
- Istnieją różne sposoby umożliwiające korzystanie z zalet `DataGridView` funkcji rozszerzeń kontrolki. Można dostosować wiele aspektów kontroli za pośrednictwem właściwości i zdarzenia, ale niektóre dostosowania konieczne do tworzenia nowych klas pochodzących od istniejącego `DataGridView` klasy.  
+ Istnieje kilka sposobów na skorzystanie z zalet funkcji rozszerzalności formantu `DataGridView`. Można dostosować wiele aspektów kontrolki za pośrednictwem zdarzeń i właściwości, ale niektóre dostosowania wymagają utworzenia nowych klas pochodnych dla istniejących klas `DataGridView`.  
   
- Najczęściej używanych klas bazowych są `DataGridViewCell` i `DataGridViewColumn`. Uzyskujesz własne klasy komórki z `DataGridViewCell` lub dowolny z jej klas podrzędnych. Chociaż możesz dodać dowolny typ komórki do dowolnej kolumny, będzie zazwyczaj także klasa wyprowadzona z Pomocnika kolumny z `DataGridViewColumn` obsługujący komórek tego typu niestandardowego komórki domyślnie.  
+ Najczęściej używane klasy podstawowe są `DataGridViewCell` i `DataGridViewColumn`. Można utworzyć własną klasę komórek z `DataGridViewCell` lub dowolnej z jej klas podrzędnych. Mimo że można dodać dowolny typ komórki do dowolnej kolumny, zazwyczaj będzie również pochodna Klasa kolumny pomocniczej z `DataGridViewColumn`, która domyślnie hostuje komórki niestandardowego typu komórki.  
   
- Możesz zaimplementować `IDataGridViewEditingCell` interfejsu w klasie pochodnej komórki do utworzenia typ komórki, która ma, funkcji edycji, ale nie obsługuje formant w trybie edycji. Aby utworzyć formant, który może obsługiwać w komórce w trybie edycji, możesz zaimplementować `IDataGridViewEditingControl` interfejsu w klasie pochodnej od <xref:System.Windows.Forms.Control>.  
+ Można zaimplementować interfejs `IDataGridViewEditingCell` w klasie komórki pochodnej, aby utworzyć typ komórki, która ma funkcje edycji, ale nie obsługuje kontrolki w trybie edycji. Aby utworzyć kontrolkę, którą można hostować w komórce w trybie edycji, można zaimplementować interfejs `IDataGridViewEditingControl` w klasie pochodnej z <xref:System.Windows.Forms.Control>.  
   
- Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie komórek i kolumn w Windows formantu DataGridView formularzy przez rozszerzanie ich zachowania i wyglądu](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) i [jak: Kontrolki hosta w formularzach Windows Forms komórkach DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+ Aby uzyskać więcej informacji, zobacz [How to: dostosowywanie komórek i kolumn w kontrolce datagridview Windows Forms, rozszerzając ich zachowanie i wygląd](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) oraz [sposób: kontrolki hosta w Windows Forms komórkach DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
 ## <a name="datagridview-classes-at-a-glance"></a>Klasy DataGridView w skrócie  
  <xref:System.Windows.Forms>  
   
-|Obszar technologiczny|Elementy klas/interfejsów/konfiguracji|  
+|Obszar technologii|Klasy/interfejsy/elementy konfiguracji|  
 |---------------------|-------------------------------------------------|  
 |Powiązanie danych|<xref:System.Windows.Forms.BindingSource>|  
 |Prezentacja danych|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> i klasy pochodne<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> i klasy pochodne<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> i klasy pochodne<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
-|<xref:System.Windows.Forms.DataGridView> Rozszerzalność|<xref:System.Windows.Forms.DataGridViewCell> i klasy pochodne<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> i klasy pochodne<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
+|Rozszerzalność <xref:System.Windows.Forms.DataGridView>|<xref:System.Windows.Forms.DataGridViewCell> i klasy pochodne<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> i klasy pochodne<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
 ## <a name="whats-new"></a>Nowości  
- <xref:System.Windows.Forms.DataGridView> Kontrolki została zaprojektowana jako kompletne rozwiązanie do wyświetlania danych tabelarycznych za pomocą interfejsu Windows Forms. Należy rozważyć użycie <xref:System.Windows.Forms.DataGridView> kontrolować przed innych rozwiązań, takich jak <xref:System.Windows.Forms.DataGrid>, podczas tworzenia nowej aplikacji. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+ Formant <xref:System.Windows.Forms.DataGridView> zaprojektowano jako kompletne rozwiązanie do wyświetlania danych tabelarycznych z Windows Forms. Należy rozważyć użycie kontrolki <xref:System.Windows.Forms.DataGridView> przed innymi rozwiązaniami, takimi jak <xref:System.Windows.Forms.DataGrid>, podczas tworzenia nowej aplikacji. Aby uzyskać więcej informacji, zobacz [różnice między kontrolkami DataGridView i DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- <xref:System.Windows.Forms.DataGridView> Kontroli może współpracować Zamknij z <xref:System.Windows.Forms.BindingSource> składnika. Ten składnik jest zaprojektowane jako podstawowego źródła danych formularza. Może zarządzać interakcji między <xref:System.Windows.Forms.DataGridView> kontroli i źródłem danych, niezależnie od tego, dane typu źródła.  
+ Kontrolka <xref:System.Windows.Forms.DataGridView> może współpracować w bliskiej współpracy ze składnikiem <xref:System.Windows.Forms.BindingSource>. Ten składnik jest przeznaczony do podstawowego źródła danych formularza. Może ona zarządzać interakcją między kontrolką <xref:System.Windows.Forms.DataGridView> i jej źródłem danych, niezależnie od typu źródła danych.  
   
 ## <a name="see-also"></a>Zobacz także
 

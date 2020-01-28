@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: dodawanie funkcji przeglądarki sieci Web do aplikacji Windows Forms'
+title: Dodawanie funkcji przeglądarki sieci Web do aplikacji
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 - Windows Forms, adding Web browser functionality
 ms.assetid: 3871f072-b57a-435b-9976-e5da28df04a7
-ms.openlocfilehash: 60b544c630fc5c7c876293b27a5c5e159e57a797
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5feecd975700745541103e81fd09bfc5e788c729
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588891"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747227"
 ---
-# <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Instrukcje: dodawanie funkcji przeglądarki sieci Web do aplikacji Windows Forms
-Za pomocą <xref:System.Windows.Forms.WebBrowser> kontrolki, można dodać funkcji przeglądarki sieci Web do aplikacji. Kontrolka działa jak przeglądarki sieci Web domyślnie. Po załadowaniu początkowy adres URL, ustawiając <xref:System.Windows.Forms.WebBrowser.Url%2A> właściwości, można przejść, klikając hiperłącza lub za pomocą skrótów klawiaturowych do tyłu i do przodu w historii nawigacji. Domyślnie możesz uzyskać dostęp przeglądarki dodatkowe funkcje, za pomocą menu skrótów kliknij prawym przyciskiem myszy. Można również otworzyć nowe dokumenty przez ich upuszczenie na formant. <xref:System.Windows.Forms.WebBrowser> Kontrolka ma również kilka właściwości, metody i zdarzenia, które można użyć, aby zaimplementować funkcje interfejsu użytkownika jest podobne do tych dostępnych w programie Internet Explorer.  
+# <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Porady: dodawanie funkcji przeglądarki sieci Web do aplikacji Windows Forms
+Za pomocą kontrolki <xref:System.Windows.Forms.WebBrowser> można dodać do aplikacji funkcje przeglądarki sieci Web. Domyślnie formant działa jak przeglądarka sieci Web. Po załadowaniu początkowego adresu URL przez ustawienie właściwości <xref:System.Windows.Forms.WebBrowser.Url%2A> można nawigować przez kliknięcie hiperłączy lub za pomocą skrótów klawiaturowych, aby przejść do tyłu i do przodu przez historię przeglądania. Domyślnie można uzyskać dostęp do dodatkowych funkcji przeglądarki za pomocą menu skrótów kliknij prawym przyciskiem myszy. Możesz również otworzyć nowe dokumenty, upuszczając je na kontrolkę. Kontrolka <xref:System.Windows.Forms.WebBrowser> ma także kilka właściwości, metod i zdarzeń, których można użyć do implementowania funkcji interfejsu użytkownika podobnych do tych, które znajdują się w programie Internet Explorer.  
   
- Poniższy przykładowy kod implementuje paska adresu, przyciski przeglądarki typowe **pliku** menu, pasek stanu i pasek tytułu, który wyświetla bieżący tytuł strony.  
+ Poniższy przykład kodu implementuje pasek adresu, typowe przyciski przeglądarki, menu **plik** , pasek stanu i pasek tytułu, który wyświetla bieżący tytuł strony.  
   
 ## <a name="example"></a>Przykład  
  [!code-cpp[System.Windows.Forms.WebBrowser#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser/CPP/form1.cpp#0)]
@@ -32,7 +32,7 @@ Za pomocą <xref:System.Windows.Forms.WebBrowser> kontrolki, można dodać funkc
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołuje się do `System`, `System.Drawing`, i `System.Windows.Forms` zestawów.  
+- Odwołania do zestawów `System`, `System.Drawing`i `System.Windows.Forms`.  
   
 ## <a name="see-also"></a>Zobacz także
 

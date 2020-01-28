@@ -2,12 +2,12 @@
 title: Biblioteki NuGet i .NET
 description: Zalecenia dotyczące najlepszych rozwiązań związanych z pakietem NuGet dla bibliotek programu .NET.
 ms.date: 01/15/2019
-ms.openlocfilehash: 71c380f6062c09a8951769009b29b567fddfddfc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f1e8d39fe2988f11ce7fd351a4d6bee6d322f2b5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706481"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731375"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -34,7 +34,7 @@ Istnieją dwa podstawowe sposoby tworzenia pakietu NuGet. Nowszym i zalecanym sp
 
 Starszym sposobem tworzenia pakietu NuGet jest plik `*.nuspec` i narzędzie wiersza polecenia `nuget.exe`. Plik NUSPEC daje doskonałą kontrolę, ale należy starannie określić, które zestawy i elementy docelowe mają być uwzględnione w końcowym pakiecie NuGet. W przypadku wprowadzania zmian łatwo jest wprowadzić błąd lub ktoś zapomni, aby zaktualizować nuspec. Zaletą nuspec jest możliwość tworzenia pakietów NuGet dla struktur, które nie obsługują jeszcze pliku projektu w stylu zestawu SDK.
 
-**✔️ rozważyć** użycie pliku projektu w stylu zestawu SDK, aby utworzyć pakiet NuGet.
+✔️ ROZWAŻYĆ użycie pliku projektu w stylu zestawu SDK, aby utworzyć pakiet NuGet.
 
 ## <a name="package-dependencies"></a>Zależności pakietów
 
@@ -59,15 +59,15 @@ Pakiet NuGet obsługuje wiele [właściwości metadanych](/nuget/reference/nuspe
 > [!IMPORTANT]
 > Projekt bez licencji jest domyślnie nieuprawniony do korzystania z [praw autorskich](https://choosealicense.com/no-permission/).
 
-**✔️ rozważyć** wybranie nazwy pakietu NuGet z prefiksem spełniającym [kryteria](/nuget/reference/id-prefix-reservation)rezerwacji prefiksu NuGet.
+✔️ ROZWAŻYĆ wybranie nazwy pakietu NuGet z prefiksem spełniającym [kryteria](/nuget/reference/id-prefix-reservation)rezerwacji prefiksu NuGet.
 
-**✔️** Użyj odwołania https href do ikony pakietu.
+✔️ Użyj odwołania HTTPS href do ikony pakietu.
 
 > Lokacje, takie jak NuGet.org, działają z włączonym protokołem HTTPS i wyświetlanie obrazu innego niż HTTPS spowoduje utworzenie ostrzeżenia o zawartości mieszanej.
 
-**✔️** używać obrazu ikony pakietu 64x64 i ma przezroczyste tło w celu uzyskania najlepszych wyników wyświetlania.
+✔️ używać obrazu ikony pakietu 64x64 i ma przezroczyste tło w celu uzyskania najlepszych wyników wyświetlania.
 
-**✔️ rozważyć** skonfigurowanie [linku źródłowego](./sourcelink.md) w celu dodania metadanych kontroli źródła do zestawów i pakietu NuGet.
+✔️ ROZWAŻYĆ skonfigurowanie [linku źródłowego](./sourcelink.md) w celu dodania metadanych kontroli źródła do zestawów i pakietu NuGet.
 
 > Link źródłowy automatycznie dodaje `RepositoryUrl` i `RepositoryType` metadanych do pakietu NuGet. Link źródłowy dodaje również informacje o dokładnym kodzie źródłowym, z którego został skompilowany pakiet. Na przykład pakiet utworzony na podstawie repozytorium Git będzie miał skrót Zatwierdź dodany jako metadane.
 
@@ -84,9 +84,9 @@ Pakiety NuGet z sufiksem wersji są uważane za [wersję wstępną](/nuget/creat
 
 ![Zależność pakietu NuGet w wersji wstępnej](./media/nuget/nuget-prerelease-package.png "Zależność pakietu NuGet w wersji wstępnej")
 
-**✔️** opublikować pakiet w wersji wstępnej podczas testowania, podglądu lub eksperymentowania.
+✔️ opublikować pakiet w wersji wstępnej podczas testowania, podglądu lub eksperymentowania.
 
-**✔️** opublikować pakiet stabilny, gdy gotowe do niego inne pakiety stabilne.
+✔️ opublikować pakiet stabilny, gdy gotowe do niego inne pakiety stabilne.
 
 ## <a name="symbol-packages"></a>Pakiety symboli
 
@@ -112,7 +112,7 @@ Alternatywą dla tworzenia pakietu symboli jest osadzanie plików symboli w gł�
 
 Minusem osadzania plików symboli polega na tym, że zwiększają rozmiar pakietu o około 30% dla bibliotek .NET skompilowanych za pomocą projektów w stylu zestawu SDK. Jeśli rozmiar pakietu jest istotny, należy zamiast tego opublikować symbole w pakiecie symboli.
 
-**✔️ należy rozważyć** opublikowanie symboli jako pakietu symboli (`*.snupkg`) do NuGet.org
+✔️ NALEŻY rozważyć opublikowanie symboli jako pakietu symboli (`*.snupkg`) do NuGet.org
 
 > Pakiety symboli (`*.snupkg`) zapewniają deweloperom dobry komfort debugowania na żądanie, bez przeładowania głównego rozmiaru pakietu i wpływającego na wydajność przywracania dla tych, którzy nie zamierzają debugować pakietu NuGet.
 >

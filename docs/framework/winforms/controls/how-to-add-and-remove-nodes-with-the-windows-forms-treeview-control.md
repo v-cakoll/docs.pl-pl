@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: dodawanie i usuwanie węzłów za pomocą kontrolki TreeView formularzy systemu Windows'
+title: Dodawanie i usuwanie węzłów z kontrolką TreeView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: de1b82db-4905-449a-9f59-af271a6b6673
-ms.openlocfilehash: 4cbb5fbdb24790a7ddbce5c38060703c7ba7024a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 02b3a7286798c6f2a6426e09c8fc6c18b74a6bf0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326895"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731958"
 ---
-# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a><span data-ttu-id="06b48-102">Instrukcje: dodawanie i usuwanie węzłów za pomocą kontrolki TreeView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="06b48-102">How to: Add and Remove Nodes with the Windows Forms TreeView Control</span></span>
-<span data-ttu-id="06b48-103">Formularze Windows <xref:System.Windows.Forms.TreeView> formant przechowuje węzłów najwyższego poziomu w jego <xref:System.Windows.Forms.TreeView.Nodes%2A> kolekcji.</span><span class="sxs-lookup"><span data-stu-id="06b48-103">The Windows Forms <xref:System.Windows.Forms.TreeView> control stores the top-level nodes in its <xref:System.Windows.Forms.TreeView.Nodes%2A> collection.</span></span> <span data-ttu-id="06b48-104">Każdy <xref:System.Windows.Forms.TreeNode> ma również swój własny <xref:System.Windows.Forms.TreeNode.Nodes%2A> kolekcji do przechowywania jego węzłów podrzędnych.</span><span class="sxs-lookup"><span data-stu-id="06b48-104">Each <xref:System.Windows.Forms.TreeNode> also has its own <xref:System.Windows.Forms.TreeNode.Nodes%2A> collection to store its child nodes.</span></span> <span data-ttu-id="06b48-105">Obie te właściwości kolekcji mają wartości typu <xref:System.Windows.Forms.TreeNodeCollection>, udostępniającej elementy członkowskie kolekcji standardowych, które pozwalają na dodawanie, usuwanie i rozmieszczanie węzłów o jeden poziom w hierarchii węzła.</span><span class="sxs-lookup"><span data-stu-id="06b48-105">Both collection properties are of type <xref:System.Windows.Forms.TreeNodeCollection>, which provides standard collection members that enable you to add, remove, and rearrange the nodes at a single level of the node hierarchy.</span></span>  
+# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a><span data-ttu-id="7f07e-102">Porady: dodawanie i usuwanie węzłów za pomocą formantu TreeView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="7f07e-102">How to: Add and Remove Nodes with the Windows Forms TreeView Control</span></span>
+<span data-ttu-id="7f07e-103">Formant Windows Forms <xref:System.Windows.Forms.TreeView> przechowuje węzły najwyższego poziomu w swojej kolekcji <xref:System.Windows.Forms.TreeView.Nodes%2A>.</span><span class="sxs-lookup"><span data-stu-id="7f07e-103">The Windows Forms <xref:System.Windows.Forms.TreeView> control stores the top-level nodes in its <xref:System.Windows.Forms.TreeView.Nodes%2A> collection.</span></span> <span data-ttu-id="7f07e-104">Każdy <xref:System.Windows.Forms.TreeNode> również ma własną kolekcję <xref:System.Windows.Forms.TreeNode.Nodes%2A> do przechowywania węzłów podrzędnych.</span><span class="sxs-lookup"><span data-stu-id="7f07e-104">Each <xref:System.Windows.Forms.TreeNode> also has its own <xref:System.Windows.Forms.TreeNode.Nodes%2A> collection to store its child nodes.</span></span> <span data-ttu-id="7f07e-105">Obie właściwości kolekcji są typu <xref:System.Windows.Forms.TreeNodeCollection>, który zawiera standardowe elementy kolekcji, które umożliwiają dodawanie, usuwanie i zmienianie układu węzłów na jednym poziomie hierarchii węzłów.</span><span class="sxs-lookup"><span data-stu-id="7f07e-105">Both collection properties are of type <xref:System.Windows.Forms.TreeNodeCollection>, which provides standard collection members that enable you to add, remove, and rearrange the nodes at a single level of the node hierarchy.</span></span>  
   
-### <a name="to-add-nodes-programmatically"></a><span data-ttu-id="06b48-106">Aby programowo dodać węzły</span><span class="sxs-lookup"><span data-stu-id="06b48-106">To add nodes programmatically</span></span>  
+### <a name="to-add-nodes-programmatically"></a><span data-ttu-id="7f07e-106">Aby programowo dodać węzły</span><span class="sxs-lookup"><span data-stu-id="7f07e-106">To add nodes programmatically</span></span>  
   
-1. <span data-ttu-id="06b48-107">Użyj <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> metoda widok drzewa <xref:System.Windows.Forms.TreeView.Nodes%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="06b48-107">Use the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> method of the tree view's <xref:System.Windows.Forms.TreeView.Nodes%2A> property.</span></span>  
+1. <span data-ttu-id="7f07e-107">Użyj metody <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> właściwości <xref:System.Windows.Forms.TreeView.Nodes%2A> widoku drzewa.</span><span class="sxs-lookup"><span data-stu-id="7f07e-107">Use the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> method of the tree view's <xref:System.Windows.Forms.TreeView.Nodes%2A> property.</span></span>  
   
     ```vb  
     ' Adds new node as a child node of the currently selected node.  
@@ -43,9 +43,9 @@ ms.locfileid: "59326895"
     treeView1->SelectedNode->Nodes->Add(newNode);  
     ```  
   
-### <a name="to-remove-nodes-programmatically"></a><span data-ttu-id="06b48-108">Aby programowo usunąć węzły</span><span class="sxs-lookup"><span data-stu-id="06b48-108">To remove nodes programmatically</span></span>  
+### <a name="to-remove-nodes-programmatically"></a><span data-ttu-id="7f07e-108">Aby programowo usunąć węzły</span><span class="sxs-lookup"><span data-stu-id="7f07e-108">To remove nodes programmatically</span></span>  
   
-1. <span data-ttu-id="06b48-109">Użyj <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> metoda widok drzewa <xref:System.Windows.Forms.TreeView.Nodes%2A> właściwości do usunięcia jeden węzeł lub <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> metodę, aby wyczyścić wszystkie węzły.</span><span class="sxs-lookup"><span data-stu-id="06b48-109">Use the <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> method of the tree view's <xref:System.Windows.Forms.TreeView.Nodes%2A> property to remove a single node, or the <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> method to clear all nodes.</span></span>  
+1. <span data-ttu-id="7f07e-109">Użyj metody <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> właściwości <xref:System.Windows.Forms.TreeView.Nodes%2A> widoku drzewa, aby usunąć pojedynczy węzeł, lub metodę <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A>, aby wyczyścić wszystkie węzły.</span><span class="sxs-lookup"><span data-stu-id="7f07e-109">Use the <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> method of the tree view's <xref:System.Windows.Forms.TreeView.Nodes%2A> property to remove a single node, or the <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> method to clear all nodes.</span></span>  
   
     ```vb  
     ' Removes currently selected node, or root if nothing is selected.  
@@ -70,11 +70,11 @@ ms.locfileid: "59326895"
     treeView1->Nodes->Clear();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="06b48-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="06b48-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7f07e-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7f07e-110">See also</span></span>
 
-- [<span data-ttu-id="06b48-111">TreeView, kontrolka</span><span class="sxs-lookup"><span data-stu-id="06b48-111">TreeView Control</span></span>](treeview-control-windows-forms.md)
-- [<span data-ttu-id="06b48-112">TreeView, kontrolka — omówienie</span><span class="sxs-lookup"><span data-stu-id="06b48-112">TreeView Control Overview</span></span>](treeview-control-overview-windows-forms.md)
-- [<span data-ttu-id="06b48-113">Instrukcje: Ustawienie ikon dla kontrolki TreeView formularzy Windows</span><span class="sxs-lookup"><span data-stu-id="06b48-113">How to: Set Icons for the Windows Forms TreeView Control</span></span>](how-to-set-icons-for-the-windows-forms-treeview-control.md)
-- [<span data-ttu-id="06b48-114">Instrukcje: Iterowanie wszystkich węzłów kontrolki TreeView formularzy Windows</span><span class="sxs-lookup"><span data-stu-id="06b48-114">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [<span data-ttu-id="06b48-115">Instrukcje: Określanie, który węzeł TreeView został kliknięty</span><span class="sxs-lookup"><span data-stu-id="06b48-115">How to: Determine Which TreeView Node Was Clicked</span></span>](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [<span data-ttu-id="06b48-116">Instrukcje: Dodawanie niestandardowych informacji do TreeView lub ListView — formant (formularze Windows)</span><span class="sxs-lookup"><span data-stu-id="06b48-116">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [<span data-ttu-id="7f07e-111">TreeView, kontrolka</span><span class="sxs-lookup"><span data-stu-id="7f07e-111">TreeView Control</span></span>](treeview-control-windows-forms.md)
+- [<span data-ttu-id="7f07e-112">TreeView, kontrolka — omówienie</span><span class="sxs-lookup"><span data-stu-id="7f07e-112">TreeView Control Overview</span></span>](treeview-control-overview-windows-forms.md)
+- [<span data-ttu-id="7f07e-113">Instrukcje: ustawienie ikon dla kontrolki TreeView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7f07e-113">How to: Set Icons for the Windows Forms TreeView Control</span></span>](how-to-set-icons-for-the-windows-forms-treeview-control.md)
+- [<span data-ttu-id="7f07e-114">Instrukcje: iterowanie po wszystkich węzłach kontrolki TreeView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7f07e-114">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [<span data-ttu-id="7f07e-115">Instrukcje: określanie, który węzeł TreeView został kliknięty</span><span class="sxs-lookup"><span data-stu-id="7f07e-115">How to: Determine Which TreeView Node Was Clicked</span></span>](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [<span data-ttu-id="7f07e-116">Instrukcje: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="7f07e-116">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](add-custom-information-to-a-treeview-or-listview-control-wf.md)

@@ -1,41 +1,41 @@
 ---
-title: Panel — Formant (Formularze systemu Windows)
+title: Panel — Formant
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - grouping controls
 - Panel control [Windows Forms]
 ms.assetid: 37c69803-5084-4347-b035-54cfbabdc310
-ms.openlocfilehash: 752f64b2430c1fc7df4f3fd724fc12fe535ecb70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ebf058383296db82a5451d743abd9e9fdc76085
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012662"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744297"
 ---
-# <a name="panel-control-windows-forms"></a><span data-ttu-id="4e797-102">Panel — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="4e797-102">Panel Control (Windows Forms)</span></span>
-<span data-ttu-id="4e797-103">Windows Forms `Panel` formantów służą do zapewniania do zidentyfikowania grupowanie dla innych kontrolek.</span><span class="sxs-lookup"><span data-stu-id="4e797-103">Windows Forms `Panel` controls are used to provide an identifiable grouping for other controls.</span></span> <span data-ttu-id="4e797-104">Zazwyczaj używasz paneli, pozwalające na dalszy podział formularza za pomocą funkcji.</span><span class="sxs-lookup"><span data-stu-id="4e797-104">Typically, you use panels to subdivide a form by function.</span></span> <span data-ttu-id="4e797-105">`Panel` Kontroli jest podobny do <xref:System.Windows.Forms.GroupBox> kontroli jednak tylko `Panel` formant może mieć paski przewijania i tylko <xref:System.Windows.Forms.GroupBox> kontrolka Wyświetla podpis.</span><span class="sxs-lookup"><span data-stu-id="4e797-105">The `Panel` control is similar to the <xref:System.Windows.Forms.GroupBox> control; however, only the `Panel` control can have scroll bars, and only the <xref:System.Windows.Forms.GroupBox> control displays a caption.</span></span>  
+# <a name="panel-control-windows-forms"></a><span data-ttu-id="058bf-102">Panel — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="058bf-102">Panel Control (Windows Forms)</span></span>
+<span data-ttu-id="058bf-103">Kontrolki `Panel` Windows Forms są używane do zapewniania możliwej do zidentyfikowania grupowania dla innych formantów.</span><span class="sxs-lookup"><span data-stu-id="058bf-103">Windows Forms `Panel` controls are used to provide an identifiable grouping for other controls.</span></span> <span data-ttu-id="058bf-104">Zazwyczaj można używać paneli do podzielenia formularza przez funkcję.</span><span class="sxs-lookup"><span data-stu-id="058bf-104">Typically, you use panels to subdivide a form by function.</span></span> <span data-ttu-id="058bf-105">Kontrolka `Panel` jest podobna do kontrolki <xref:System.Windows.Forms.GroupBox>; jednak tylko formant `Panel` może mieć paski przewijania i tylko formant <xref:System.Windows.Forms.GroupBox> wyświetla podpis.</span><span class="sxs-lookup"><span data-stu-id="058bf-105">The `Panel` control is similar to the <xref:System.Windows.Forms.GroupBox> control; however, only the `Panel` control can have scroll bars, and only the <xref:System.Windows.Forms.GroupBox> control displays a caption.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4e797-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="4e797-106">In This Section</span></span>  
- [<span data-ttu-id="4e797-107">Panel, kontrolka — omówienie</span><span class="sxs-lookup"><span data-stu-id="4e797-107">Panel Control Overview</span></span>](panel-control-overview-windows-forms.md)  
- <span data-ttu-id="4e797-108">Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.</span><span class="sxs-lookup"><span data-stu-id="4e797-108">Explains what this control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="058bf-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="058bf-106">In This Section</span></span>  
+ [<span data-ttu-id="058bf-107">Panel, kontrolka — omówienie</span><span class="sxs-lookup"><span data-stu-id="058bf-107">Panel Control Overview</span></span>](panel-control-overview-windows-forms.md)  
+ <span data-ttu-id="058bf-108">Wyjaśnia, czym jest ta kontrolka i jej najważniejsze funkcje i właściwości.</span><span class="sxs-lookup"><span data-stu-id="058bf-108">Explains what this control is and its key features and properties.</span></span>  
   
- [<span data-ttu-id="4e797-109">Instrukcje: Grupowanie formantów z formantem panelu formularzy Windows przy użyciu narzędzia Projektant</span><span class="sxs-lookup"><span data-stu-id="4e797-109">How to: Group Controls with the Windows Forms Panel Control Using the Designer</span></span>](group-controls-with-wf-panel-control-using-the-designer.md)  
- <span data-ttu-id="4e797-110">Opisuje sposób grupowanie kontrolek za pomocą panelu za pomocą projektanta.</span><span class="sxs-lookup"><span data-stu-id="4e797-110">Describes how to group controls with a panel using the designer.</span></span>  
+ [<span data-ttu-id="058bf-109">Instrukcje: grupowanie kontrolek za pomocą kontrolki Panel formularzy Windows Forms przy użyciu narzędzia Projektant</span><span class="sxs-lookup"><span data-stu-id="058bf-109">How to: Group Controls with the Windows Forms Panel Control Using the Designer</span></span>](group-controls-with-wf-panel-control-using-the-designer.md)  
+ <span data-ttu-id="058bf-110">Opisuje sposób grupowania formantów z panelem za pomocą narzędzia Projektant.</span><span class="sxs-lookup"><span data-stu-id="058bf-110">Describes how to group controls with a panel using the designer.</span></span>  
   
- [<span data-ttu-id="4e797-111">Instrukcje: Ustawianie tła panelu formularzy Windows przy użyciu narzędzia Projektant</span><span class="sxs-lookup"><span data-stu-id="4e797-111">How to: Set the Background of a Windows Forms Panel Using the Designer</span></span>](how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)  
- <span data-ttu-id="4e797-112">W tym artykule opisano sposób wyświetlania kolor tła i obraz tła na panelu przy użyciu projektanta.</span><span class="sxs-lookup"><span data-stu-id="4e797-112">Describes how to display a background color and a background image on a panel using the designer.</span></span>  
+ [<span data-ttu-id="058bf-111">Instrukcje: ustawianie tła panelu formularzy Windows Forms przy użyciu narzędzia Projektant</span><span class="sxs-lookup"><span data-stu-id="058bf-111">How to: Set the Background of a Windows Forms Panel Using the Designer</span></span>](how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)  
+ <span data-ttu-id="058bf-112">Opisuje sposób wyświetlania koloru tła i obrazu tła na panelu przy użyciu narzędzia Projektant.</span><span class="sxs-lookup"><span data-stu-id="058bf-112">Describes how to display a background color and a background image on a panel using the designer.</span></span>  
   
- [<span data-ttu-id="4e797-113">Instrukcje: Ustawianie tła panelu</span><span class="sxs-lookup"><span data-stu-id="4e797-113">How to: Set the Background of a Panel</span></span>](how-to-set-the-background-of-a-windows-forms-panel.md)  
- <span data-ttu-id="4e797-114">W tym artykule opisano sposób wyświetlania kolor tła i obraz tła na panelu.</span><span class="sxs-lookup"><span data-stu-id="4e797-114">Describes how to display a background color and a background image on a panel.</span></span>  
+ [<span data-ttu-id="058bf-113">Instrukcje: ustawianie tła panelu</span><span class="sxs-lookup"><span data-stu-id="058bf-113">How to: Set the Background of a Panel</span></span>](how-to-set-the-background-of-a-windows-forms-panel.md)  
+ <span data-ttu-id="058bf-114">Opisuje sposób wyświetlania koloru tła i obrazu tła na panelu.</span><span class="sxs-lookup"><span data-stu-id="058bf-114">Describes how to display a background color and a background image on a panel.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="4e797-115">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="4e797-115">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="058bf-115">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="058bf-115">Reference</span></span>  
  <xref:System.Windows.Forms.Panel>  
- <span data-ttu-id="4e797-116">Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.</span><span class="sxs-lookup"><span data-stu-id="4e797-116">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="058bf-116">Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="058bf-116">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="4e797-117">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="4e797-117">Related Sections</span></span>  
- [<span data-ttu-id="4e797-118">Kontrolki do użycia w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4e797-118">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="4e797-119">Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.</span><span class="sxs-lookup"><span data-stu-id="4e797-119">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="058bf-117">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="058bf-117">Related Sections</span></span>  
+ [<span data-ttu-id="058bf-118">Kontrolki do użycia w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="058bf-118">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="058bf-119">Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.</span><span class="sxs-lookup"><span data-stu-id="058bf-119">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- [<span data-ttu-id="4e797-120">Instrukcje: Dodawanie do lub usuwanie z kolekcji kontrolek w czasie wykonywania</span><span class="sxs-lookup"><span data-stu-id="4e797-120">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>](how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  
- <span data-ttu-id="4e797-121">W tym artykule opisano sposób dodawania formantów i usunąć formanty z dowolną kontrolkę kontenera na formularzach.</span><span class="sxs-lookup"><span data-stu-id="4e797-121">Describes how to add controls to and remove controls from any container control on your forms.</span></span>
+ [<span data-ttu-id="058bf-120">Instrukcje: dodawanie do lub usuwanie z kolekcji kontrolek w czasie wykonywania</span><span class="sxs-lookup"><span data-stu-id="058bf-120">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>](how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  
+ <span data-ttu-id="058bf-121">Opisuje sposób dodawania kontrolek do i usuwania kontrolek z dowolnych kontrolek kontenera w formularzach.</span><span class="sxs-lookup"><span data-stu-id="058bf-121">Describes how to add controls to and remove controls from any container control on your forms.</span></span>

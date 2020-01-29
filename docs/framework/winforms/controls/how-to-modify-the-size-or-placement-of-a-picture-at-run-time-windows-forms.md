@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Modyfikowanie rozmiaru lub położenia obrazu w czasie wykonywania (formularze Windows)'
+title: 'Porady: modyfikowanie rozmiaru lub położenia obrazu w czasie wykonywania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 695abf51870ef9164e4543a91b3183e801eee55f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9bb094ce0b7945f23a2e9b8614e56c9492d5f832
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649254"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736027"
 ---
-# <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Instrukcje: Modyfikowanie rozmiaru lub położenia obrazu w czasie wykonywania (formularze Windows)
-Jeśli używasz formularzy Windows <xref:System.Windows.Forms.PictureBox> formantu w formularzu, można ustawić <xref:System.Windows.Forms.PictureBox.SizeMode%2A> właściwości na niej w celu:  
+# <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Porady: modyfikowanie rozmiaru lub położenia obrazu w czasie wykonywania (Formularze systemu Windows)
+Jeśli używasz kontrolki <xref:System.Windows.Forms.PictureBox> Windows Forms w formularzu, możesz ustawić właściwość <xref:System.Windows.Forms.PictureBox.SizeMode%2A> na:  
   
-- Wyrównanie obrazu lewy górny róg za pomocą lewego górnego rogu kontrolki  
+- Wyrównaj górny lewy róg obrazu za pomocą lewego górnego rogu kontrolki  
   
 - Wyśrodkuj obraz w kontrolce  
   
-- Dopasuj rozmiar formantu, aby dopasować go do jego wyświetlania  
+- Dostosuj rozmiar kontrolki do obrazu wyświetlanego  
   
-- Rozciąganie dowolnego obrazu wyświetla do rozmiaru formantu  
+- Rozciągnij wszystkie wyświetlane obrazy, aby dopasować je do formantu  
   
- Rozciąganie obrazu (szczególnie jeden format mapy bitowej) może spowodować utratę jakości obrazu. Metapliki, które listy instrukcji grafiki rysowanie obrazów w czasie wykonywania, są lepiej dostosowane do rozciągania niż Mapy bitowe mają rozmiar.  
+ Rozciąganie obrazu (szczególnie jednego w formacie mapy bitowej) może spowodować utratę jakości obrazu. Pliki, które są listami instrukcji graficznych służących do rysowania obrazów w czasie wykonywania, są lepiej dopasowane do rozciągania niż mapy bitowe.  
   
 ### <a name="to-set-the-sizemode-property-at-run-time"></a>Aby ustawić właściwość SizeMode w czasie wykonywania  
   
-1. Ustaw <xref:System.Windows.Forms.PictureBox.SizeMode%2A> do <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (ustawienie domyślne), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, lub <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> oznacza, że obraz jest umieszczany w formantu lewego górnego rogu; obraz, który jest większy niż formant, powoduje jej dolnej i prawej krawędzi. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> oznacza, że obraz jest wyśrodkowywana względem kontroli. obraz, który jest większy niż formant, powoduje zewnętrznymi krawędziami obrazu. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> oznacza to, że rozmiar formantu jest dostosowywana do rozmiaru obrazu. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> jest odwrotna i oznacza, że rozmiar obrazu jest dostosowywana do rozmiaru formantu.  
+1. Ustaw <xref:System.Windows.Forms.PictureBox.SizeMode%2A> na <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (wartość domyślna), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>lub <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> oznacza, że obraz jest umieszczany w lewym górnym rogu kontrolki. Jeśli obraz jest większy niż kontrolka, jego dolna i prawa krawędź są przycinane. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> oznacza, że obraz jest wyśrodkowany w formancie; Jeśli obraz jest większy niż kontrolka, obramowania na zewnątrz obrazu są obcinane. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> oznacza, że rozmiar kontrolki jest dopasowywany do rozmiaru obrazu. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> jest odwrotna i oznacza, że rozmiar obrazu jest dopasowywany do rozmiaru formantu.  
   
-     W poniższym przykładzie ścieżka lokalizacji obrazu jest folder Moje dokumenty. Jest to wykonywane, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać tego katalogu. Ponadto pozwala to użytkownikom z poziomami dostępu minimalny system bezpiecznego uruchamiania aplikacji. W poniższym przykładzie przyjęto założenie, formularz z <xref:System.Windows.Forms.PictureBox> formant został już dodany.  
+     W poniższym przykładzie ścieżką ustawioną dla lokalizacji obrazu jest folder Moje dokumenty. Dzieje się tak, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać ten katalog. Pozwala to również użytkownikom z minimalnymi poziomami dostępu do systemu w celu bezpiecznego uruchomienia aplikacji. W poniższym przykładzie założono, że formularz z kontrolką <xref:System.Windows.Forms.PictureBox> został już dodany.  
   
     ```vb  
     Private Sub StretchPic()  
@@ -85,7 +85,7 @@ Jeśli używasz formularzy Windows <xref:System.Windows.Forms.PictureBox> forman
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.PictureBox>
-- [Instrukcje: Zdjęcia przy użyciu narzędzia Projektant](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Instrukcje: dodawanie zdjęcia przy użyciu narzędzia Projektant](how-to-load-a-picture-using-the-designer-windows-forms.md)
 - [PictureBox, kontrolka — omówienie](picturebox-control-overview-windows-forms.md)
-- [Instrukcje: Ustawienie obrazów w czasie wykonywania](how-to-set-pictures-at-run-time-windows-forms.md)
+- [Instrukcje: ustawienie obrazów w czasie wykonywania](how-to-set-pictures-at-run-time-windows-forms.md)
 - [PictureBox, kontrolka](picturebox-control-windows-forms.md)

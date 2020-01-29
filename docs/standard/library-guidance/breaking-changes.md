@@ -2,12 +2,12 @@
 title: Istotne zmiany i biblioteki .NET
 description: Zalecenia dotyczące najlepszych rozwiązań dotyczących nawigowania po zmianach podczas tworzenia bibliotek .NET.
 ms.date: 10/02/2018
-ms.openlocfilehash: 8536662ae1cd9733efbcc0c6526bd69d34a13177
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740984"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731462"
 ---
 # <a name="breaking-changes"></a>Fundamentalne zmiany
 
@@ -25,11 +25,11 @@ Sposób, w jaki biblioteka jest używana przez społeczność programu .NET, zmi
 
   Biblioteki wysokiego poziomu są bezpośrednio przywoływane w aplikacji użytkownika końcowego. Jeśli wystąpią istotne zmiany, deweloper może zdecydować się na zaktualizowanie do najnowszej wersji lub zmodyfikować swoją aplikację, aby działała ze zmianą.
 
-**✔️ należy** zastanowić się, jak zostanie użyta Biblioteka. Jakie skutki spowodują uszkodzenie zmian w aplikacjach i bibliotekach, które go używają?
+✔️ NALEŻY zastanowić się, jak zostanie użyta Biblioteka. Jakie skutki spowodują uszkodzenie zmian w aplikacjach i bibliotekach, które go używają?
 
-**✔️** zminimalizować zmiany podczas tworzenia biblioteki .NET niskiego poziomu.
+✔️ zminimalizować zmiany podczas tworzenia biblioteki .NET niskiego poziomu.
 
-**✔️ rozważyć** opublikowanie poważnego ponownego zapisania biblioteki jako nowego pakietu NuGet.
+✔️ ROZWAŻYĆ opublikowanie poważnego ponownego zapisania biblioteki jako nowego pakietu NuGet.
 
 ## <a name="types-of-breaking-changes"></a>Typy istotnych zmian
 
@@ -56,7 +56,7 @@ Dodawanie funkcji i ulepszanie nieprawidłowych zachowań jest dobrym sposobem, 
 
 Na przykład ASP.NET Core MVC ma koncepcję [wersji zgodności](/aspnet/core/mvc/compatibility-version) , która modyfikuje funkcje włączone i wyłączone w `MvcOptions`.
 
-**✔️ rozważyć** pozostawienie nowych funkcji domyślnie, jeśli wpływają one na istniejących użytkowników, i pozwól deweloperom na dostęp do funkcji przy użyciu ustawienia.
+✔️ ROZWAŻYĆ pozostawienie nowych funkcji domyślnie, jeśli wpływają one na istniejących użytkowników, i pozwól deweloperom na dostęp do funkcji przy użyciu ustawienia.
 
 ### <a name="binary-breaking-change"></a>Zmiana podziału binarnego
 
@@ -64,15 +64,15 @@ Zmiana publicznego interfejsu API biblioteki jest spowodowana zmianą w postaci 
 
 Zmiana podziału binarnego może również spowodować przerwanie **całego zestawu**. Zmiana nazwy zestawu z `AssemblyName` spowoduje zmianę tożsamości zestawu, ponieważ spowoduje to dodanie, usunięcie lub zmianę klucza silnego nazewnictwa zestawu. Zmiana tożsamości zestawu spowoduje przerwanie całego skompilowanego kodu, który go używa.
 
-**❌ nie** zmieniać nazwy zestawu.
+❌ nie zmieniać nazwy zestawu.
 
-**❌ nie** dodawaj, usuwaj ani nie zmieniaj silnego klucza nazewnictwa.
+❌ nie dodawaj, usuwaj ani nie zmieniaj silnego klucza nazewnictwa.
 
-**✔️ rozważyć** użycie abstrakcyjnych klas podstawowych zamiast interfejsów.
+✔️ ROZWAŻYĆ użycie abstrakcyjnych klas podstawowych zamiast interfejsów.
 
 > Dodanie niczego do interfejsu spowoduje niepowodzenie istniejących typów, które implementują go. Abstrakcyjna klasa bazowa umożliwia dodanie domyślnej implementacji wirtualnej.
 
-**✔️ Rozważ** umieszczenie <xref:System.ObsoleteAttribute> na typach i elementach członkowskich, które mają zostać usunięte. Atrybut powinien zawierać instrukcje dotyczące aktualizowania kodu, aby nie używał już przestarzałego interfejsu API.
+✔️ Rozważ umieszczenie <xref:System.ObsoleteAttribute> na typach i elementach członkowskich, które mają zostać usunięte. Atrybut powinien zawierać instrukcje dotyczące aktualizowania kodu, aby nie używał już przestarzałego interfejsu API.
 
 > Kod, który wywołuje typy i metody z <xref:System.ObsoleteAttribute> będzie generować ostrzeżenie kompilacji z komunikatem dostarczonym do atrybutu. Ostrzeżenia umożliwiają osobom korzystającym z przestarzałego czasu powierzchni interfejsu API na Migrowanie w celu usunięcia przestarzałego interfejsu API, który nie będzie już używany.
 
@@ -92,7 +92,7 @@ public class Document
 }
 ```
 
-**✔️ rozważyć** utrzymywanie typów i metod z <xref:System.ObsoleteAttribute> nieokreślonymi w bibliotekach niskiego i średniego.
+✔️ ROZWAŻYĆ utrzymywanie typów i metod z <xref:System.ObsoleteAttribute> nieokreślonymi w bibliotekach niskiego i średniego.
 
 > Usuwanie interfejsów API jest uszkodzeniem binarnym. Biorąc pod uwagę przechowywanie przestarzałych typów i metod, jeśli ich utrzymanie jest niskiego kosztu i nie dodaje do biblioteki dużej liczby długów technicznych. Nieusunięcie typów i metod może pomóc w uniknięciu najgorszych przypadków wymienionych powyżej.
 

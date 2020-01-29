@@ -2,16 +2,16 @@
 title: polecenie kompilacji dotnet
 description: Polecenie kompilacji dotnet kompiluje projekt i wszystkie jego zależności.
 ms.date: 10/14/2019
-ms.openlocfilehash: b85ef06aa445e4708487deed9ec6bfeffeab3657
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454213"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734316"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**Ten artykuł dotyczy: ✓** .NET Core 1. x SDK i nowszych wersji
+**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 1. x SDK i nowszych wersji
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "73454213"
 
 ```dotnetcli
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force]
-    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo] 
+    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo]
     [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
@@ -33,7 +33,7 @@ dotnet build [-h|--help]
 
 ## <a name="description"></a>Opis
 
-Polecenie `dotnet build` kompiluje projekt i jego zależności do zestawu plików binarnych. Pliki binarne zawierają kod projektu w plikach języka pośredniego (IL) z rozszerzeniem *. dll* .  W zależności od typu projektu i ustawień można uwzględnić inne pliki, takie jak:
+`dotnet build` polecenie kompiluje projekt i jego zależności do zestawu plików binarnych. Pliki binarne zawierają kod projektu w plikach języka pośredniego (IL) z rozszerzeniem *. dll* .  W zależności od typu projektu i ustawień można uwzględnić inne pliki, takie jak:
 
 - Plik wykonywalny, który może służyć do uruchamiania aplikacji, jeśli typem projektu jest plik wykonywalny przeznaczony dla platformy .NET Core 3,0 lub nowszego.
 - Pliki symboli używane do debugowania z rozszerzeniem *. pdb* .
@@ -45,7 +45,7 @@ W przypadku projektów wykonywalnych przeznaczonych dla wersji wcześniejszej ni
 
 W przypadku projektów wykonywalnych przeznaczonych dla platformy .NET Core 3,0 i nowszych zależności biblioteki są kopiowane do folderu wyjściowego. Oznacza to, że jeśli nie ma żadnej innej logiki specyficznej dla publikacji (takiej jak projekty sieci Web), dane wyjściowe kompilacji powinny być możliwe do wdrożenia.
 
-Kompilowanie wymaga pliku *Project. assets. JSON* , który zawiera listę zależności aplikacji. Plik jest tworzony, gdy zostanie wykonane [`dotnet restore`](dotnet-restore.md) . Bez pliku zasobów na miejscu narzędzia nie mogą rozpoznać zestawów referencyjnych, które powodują błędy. Przy użyciu zestawu SDK platformy .NET Core 1. x musisz jawnie uruchomić `dotnet restore` przed uruchomieniem `dotnet build`. Począwszy od zestawu SDK platformy .NET Core 2,0, `dotnet restore` przebiega niejawnie podczas uruchamiania `dotnet build`. Aby wyłączyć niejawne przywracanie podczas wykonywania polecenia Build, można przekazać opcję `--no-restore`.
+Kompilowanie wymaga pliku *Project. assets. JSON* , który zawiera listę zależności aplikacji. Plik jest tworzony podczas wykonywania [`dotnet restore`](dotnet-restore.md) . Bez pliku zasobów na miejscu narzędzia nie mogą rozpoznać zestawów referencyjnych, które powodują błędy. Przy użyciu zestawu SDK platformy .NET Core 1. x musisz jawnie uruchomić `dotnet restore` przed uruchomieniem `dotnet build`. Począwszy od zestawu SDK programu .NET Core 2,0, `dotnet restore` uruchamiane niejawnie podczas uruchamiania `dotnet build`. Aby wyłączyć niejawne przywracanie podczas wykonywania polecenia Build, można przekazać opcję `--no-restore`.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -61,9 +61,9 @@ Aby utworzyć bibliotekę, Pomiń Właściwość `<OutputType>` lub zmień jej w
 
 ### <a name="msbuild"></a>MSBuild
 
-`dotnet build` używa programu MSBuild do skompilowania projektu, aby obsługiwał kompilacje równoległe i przyrostowe. Aby uzyskać więcej informacji, zobacz [Kompilacje przyrostowe](/visualstudio/msbuild/incremental-builds).
+`dotnet build` używa programu MSBuild do kompilowania projektu, aby obsługiwał kompilacje równoległe i przyrostowe. Aby uzyskać więcej informacji, Zobacz [Kompilacje przyrostowe](/visualstudio/msbuild/incremental-builds).
 
-Oprócz opcji, `dotnet build` polecenie akceptuje Opcje programu MSBuild, takie jak `-p` do ustawiania właściwości lub `-l` w celu zdefiniowania rejestratora. Aby uzyskać więcej informacji na temat tych opcji, zobacz [informacje dotyczące wiersza polecenia programu MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). Lub można również użyć polecenia programu [dotnet MSBuild](dotnet-msbuild.md) .
+Oprócz opcji, polecenie `dotnet build` akceptuje Opcje programu MSBuild, takie jak `-p` do ustawiania właściwości lub `-l` w celu zdefiniowania rejestratora. Aby uzyskać więcej informacji na temat tych opcji, zobacz [informacje dotyczące wiersza polecenia programu MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). Lub można również użyć polecenia programu [dotnet MSBuild](dotnet-msbuild.md) .
 
 Uruchamianie `dotnet build` jest równoważne działaniu `dotnet msbuild -restore`; jednak domyślny poziom szczegółowości danych wyjściowych jest inny.
 
@@ -77,7 +77,7 @@ Plik projektu lub rozwiązania do skompilowania. Jeśli plik projektu lub rozwi�
 
 - **`-c|--configuration {Debug|Release}`**
 
-  Definiuje konfigurację kompilacji. Wartość domyślna dla większości projektów to `Debug`, ale można zastąpić ustawienia konfiguracji kompilacji w projekcie.
+  Definiuje konfigurację kompilacji. Wartość domyślna dla większości projektów jest `Debug`, ale można zastąpić ustawienia konfiguracji kompilacji w projekcie.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -125,7 +125,7 @@ Plik projektu lub rozwiązania do skompilowania. Jeśli plik projektu lub rozwi�
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
-  Ustawia wartość właściwości `$(VersionSuffix)`, która ma być używana podczas kompilowania projektu. Działa to tylko wtedy, gdy właściwość `$(Version)` nie jest ustawiona. Następnie `$(Version)` jest ustawiona na `$(VersionPrefix)` połączone z `$(VersionSuffix)`, oddzielone kreską.
+  Ustawia wartość właściwości `$(VersionSuffix)`, która ma być używana podczas kompilowania projektu. Działa to tylko wtedy, gdy właściwość `$(Version)` nie jest ustawiona. Następnie `$(Version)` jest ustawiony na `$(VersionPrefix)` połączony z `$(VersionSuffix)`rozdzielony kreską.
 
 ## <a name="examples"></a>Przykłady
 
@@ -153,7 +153,7 @@ Plik projektu lub rozwiązania do skompilowania. Jeśli plik projektu lub rozwi�
   dotnet build --source c:\packages\mypackages
   ```
 
-- Skompiluj projekt i ustaw wersję 1.2.3.4 jako parametr kompilacji przy użyciu [opcji programu MSBuild](#msbuild)`-p`:
+- Skompiluj projekt i ustaw wersję 1.2.3.4 jako parametr kompilacji przy użyciu [opcji `-p` MSBuild](#msbuild):
 
   ```dotnetcli
   dotnet build -p:Version=1.2.3.4

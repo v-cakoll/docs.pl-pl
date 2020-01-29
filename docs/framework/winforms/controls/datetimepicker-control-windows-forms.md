@@ -1,5 +1,5 @@
 ---
-title: DateTimePicker — Formant (Formularze systemu Windows)
+title: DateTimePicker, kontrolka
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dates [Windows Forms], choosing from a list
@@ -7,39 +7,39 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms]
 - date and time picker controls
 ms.assetid: 1dac1fbd-8f67-4910-9ccb-2c5462d0d855
-ms.openlocfilehash: 236017834f3a965ee0ddfc1a74121679f086050b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22883da5dec58a6272e611b50671a8b1341d92e4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971343"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731976"
 ---
 # <a name="datetimepicker-control-windows-forms"></a>DateTimePicker — Formant (Formularze systemu Windows)
-Formularze Windows `DateTimePicker` kontrolka zezwala użytkownikowi na wybranie jednego elementu z listy daty lub godziny. Gdy jest używana do reprezentowania daty, pojawi się z dwóch części: listy rozwijanej, za pomocą Data jest reprezentowana w tekst i siatki, która pojawia się po kliknięciu strzałki w dół obok listy.  
+Kontrolka `DateTimePicker` Windows Forms umożliwia użytkownikowi wybranie jednego elementu z listy dat lub godzin. Gdy jest używany do reprezentowania daty, pojawia się w dwóch częściach: Lista rozwijana z datą reprezentowaną w tekście i siatką wyświetlaną po kliknięciu strzałki w dół obok listy.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [DateTimePicker, kontrolka — omówienie](datetimepicker-control-overview-windows-forms.md)  
- Ogólne pojęcia związane z `DateTimePicker` formant, który umożliwia użytkownikom wybranie jednego elementu z listy daty lub godziny.  
+ Wprowadza ogólne koncepcje `DateTimePicker` kontroli, co umożliwia użytkownikom wybranie jednego elementu z listy dat lub godzin.  
   
- [Instrukcje: Wyświetlanie daty w niestandardowym formacie za pomocą formantu DateTimePicker formularzy Windows](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)  
- Wyjaśnia, jak używać ciągów formatów na potrzeby wyświetlania dat w preferowanym formacie.  
+ [Instrukcje: wyświetlanie daty w niestandardowym formacie za pomocą kontrolki DateTimePicker formularzy Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)  
+ Wyjaśnia, jak używać ciągów formatu do wyświetlania dat w preferowanym formacie.  
   
- [Instrukcje: Ustaw i zwracają dat za pomocą formantu DateTimePicker formularzy Windows](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)  
- Udostępnia procedurę umożliwiającą Ustaw datę w kontrolce oraz dostęp do daty, wybranej przez użytkownika.  
+ [Instrukcje: ustawianie i zwracanie dat za pomocą kontrolki DateTimePicker formularzy Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)  
+ Zawiera instrukcje dotyczące ustawiania daty w kontrolce i uzyskiwania dostępu do daty wybranej przez użytkownika.  
   
- [Instrukcje: Wyświetlanie godziny za pomocą formantu DateTimePicker](how-to-display-time-with-the-datetimepicker-control.md)  
- Przedstawia kroki, aby uzyskać `DateTimePicker` do wyświetlenia tylko razy.  
+ [Instrukcje: wyświetlanie godziny za pomocą kontrolki DateTimePicker](how-to-display-time-with-the-datetimepicker-control.md)  
+ Przedstawia kroki do `DateTimePicker` wyświetlania tylko godzin.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.DateTimePicker>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
  <xref:System.Windows.Forms.MonthCalendar>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.  
+ Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.  
   
  [MonthCalendar, kontrolka](monthcalendar-control-windows-forms.md)  
- Przedstawia informacje o intuicyjny interfejs graficzny służący do wyświetlania i ustawiania informacji o dacie.
+ Przedstawia intuicyjny interfejs graficzny umożliwiający użytkownikom wyświetlanie i Ustawianie informacji o dacie.

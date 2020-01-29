@@ -2,16 +2,16 @@
 title: polecenie odwołania do listy dotnet
 description: Polecenie odwołania do listy dotnet udostępnia wygodną opcję wyświetlania listy odwołań do projektu.
 ms.date: 06/26/2019
-ms.openlocfilehash: b4b82ca1e7aeb2b73d9f99aff1c97452b2166770
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 496cbcd8fa4d921e30b363904ad0273bd5ebacd5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117681"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733225"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
-**Ten temat dotyczy: ✓** .NET Core 1. x SDK i nowszych wersji
+**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 1. x SDK i nowszych wersji
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -19,7 +19,7 @@ ms.locfileid: "71117681"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet list reference`-Wyświetla odwołania projektu do projektu.
+`dotnet list reference` — wyświetla odwołania projektu do projektu.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -27,7 +27,7 @@ ms.locfileid: "71117681"
 
 ## <a name="description"></a>Opis
 
-`dotnet list reference` Polecenie udostępnia wygodną opcję wyświetlania listy odwołań projektu dla danego projektu lub rozwiązania.
+Polecenie `dotnet list reference` udostępnia wygodną opcję wyświetlania listy odwołań projektu dla danego projektu lub rozwiązania.
 
 ## <a name="arguments"></a>Argumenty
 

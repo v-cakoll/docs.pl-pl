@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: formatowanie danych w kontrolce DataGridView formularzy systemu Windows'
+title: Formatowanie danych w formancie DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,40 +15,40 @@ helpviewer_keywords:
 - data grids [Windows Forms], date values
 - cells [Windows Forms], text alignment
 ms.assetid: 8c33543c-9c08-4636-a65a-fdf714a529b7
-ms.openlocfilehash: 0f295b44bf1dfffc7f4b6c52b54705bba1d82a81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ee2869cf4085b5acfdf1f8c440151be506dbe3e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609764"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736786"
 ---
-# <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>Instrukcje: formatowanie danych w kontrolce DataGridView formularzy systemu Windows
-Poniższe procedury przedstawiają podstawowe formatowanie wartości komórki za pomocą <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> właściwość <xref:System.Windows.Forms.DataGridView> kontroli i określonych kolumn w formancie. Informacje na temat zaawansowanych danych formatowania, zobacz [jak: Dostosowywanie formatowania danych w formancie DataGridView formularzy Windows](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
+# <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>Porady: formatowanie danych w formancie DataGridView formularzy systemu Windows
+W poniższych procedurach przedstawiono podstawowe formatowanie wartości komórek przy użyciu właściwości <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> kontrolki <xref:System.Windows.Forms.DataGridView> i określonych kolumn w kontrolce. Aby uzyskać informacje o zaawansowanym formatowaniu danych, zobacz [How to: Dostosowywanie formatowania danych w kontrolce DataGridView Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
   
-### <a name="to-format-currency-and-date-values"></a>Formatowanie waluty i wartości daty  
+### <a name="to-format-currency-and-date-values"></a>Aby sformatować wartości walutowe i daty  
   
-- Ustaw <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> właściwość <xref:System.Windows.Forms.DataGridViewCellStyle>. Poniższy przykład kodu ustawia format dla określonych kolumn przy użyciu <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> właściwości kolumn. Wartości w `UnitPrice` kolumna jest wyświetlana w bieżącym formacie waluty specyficzny dla kultury za pomocą wartości ujemnych, ujęte w nawiasy. Wartości w `ShipDate` kolumna jest wyświetlana w formacie bieżącej daty krótkiej dla kultury. Aby uzyskać więcej informacji na temat <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> wartości, zobacz [typy formatowania](../../../standard/base-types/formatting-types.md).  
+- Ustaw właściwość <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> <xref:System.Windows.Forms.DataGridViewCellStyle>. Poniższy przykład kodu ustawia format dla konkretnych kolumn przy użyciu właściwości <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> kolumn. Wartości w kolumnie `UnitPrice` są wyświetlane w bieżącym formacie waluty specyficznym dla kultury, z wartościami ujemnymi otoczonymi nawiasami. Wartości w kolumnie `ShipDate` są wyświetlane w bieżącym formacie daty określonej dla kultury. Aby uzyskać więcej informacji o <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> wartościach, zobacz [Typy formatowania](../../../standard/base-types/formatting-types.md).  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#071](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#071)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#071](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#071)]  
   
 ### <a name="to-customize-the-display-of-null-database-values"></a>Aby dostosować wyświetlanie wartości null bazy danych  
   
-- Ustaw <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> właściwość <xref:System.Windows.Forms.DataGridViewCellStyle>. Poniższy przykład kodu wykorzystuje <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> właściwość, aby wyświetlić "puste" we wszystkich komórkach zawiera wartości równą <xref:System.DBNull.Value?displayProperty=nameWithType>.  
+- Ustaw właściwość <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> <xref:System.Windows.Forms.DataGridViewCellStyle>. Poniższy przykład kodu używa właściwości <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> do wyświetlania "No entry" we wszystkich komórkach zawierających wartości równe <xref:System.DBNull.Value?displayProperty=nameWithType>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#073](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#073)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#073](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#073)]  
   
-### <a name="to-enable-wordwrap-in-text-based-cells"></a>Aby włączyć wordwrap komórek na podstawie tekstu  
+### <a name="to-enable-wordwrap-in-text-based-cells"></a>Aby włączyć WordWrap w komórkach tekstowych  
   
-- Ustaw <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> właściwość <xref:System.Windows.Forms.DataGridViewCellStyle> do jednego z <xref:System.Windows.Forms.DataGridViewTriState> wartości wyliczenia. Poniższy przykład kodu wykorzystuje <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> właściwości, aby ustawić tryb zawijania dla całego formantu.  
+- Ustaw właściwość <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> <xref:System.Windows.Forms.DataGridViewCellStyle> na jedną z wartości wyliczenia <xref:System.Windows.Forms.DataGridViewTriState>. Poniższy przykład kodu używa właściwości <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>, aby ustawić tryb zawijania dla całej kontrolki.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#074](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#074)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#074](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#074)]  
   
-### <a name="to-specify-the-text-alignment-of-datagridview-cells"></a>Aby określić wyrównanie tekstu w komórkach kontrolki DataGridView  
+### <a name="to-specify-the-text-alignment-of-datagridview-cells"></a>Aby określić wyrównanie tekstu dla komórek DataGridView  
   
-- Ustaw <xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A> właściwość <xref:System.Windows.Forms.DataGridViewCellStyle> do jednego z <xref:System.Windows.Forms.DataGridViewContentAlignment> wartości wyliczenia. Poniższy przykład kodu Ustawia wyrównanie dla określonej kolumny za pomocą <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> właściwości kolumny.  
+- Ustaw właściwość <xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A> <xref:System.Windows.Forms.DataGridViewCellStyle> na jedną z wartości wyliczenia <xref:System.Windows.Forms.DataGridViewContentAlignment>. Poniższy przykład kodu ustawia wyrównanie dla określonej kolumny przy użyciu właściwości <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> kolumny.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#072](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#072)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#072](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#072)]  
@@ -58,14 +58,14 @@ Poniższe procedury przedstawiają podstawowe formatowanie wartości komórki za
  [!code-vb[System.Windows.Forms.DataGridViewMisc#070](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#070)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Wymagaj tych przykładach:  
+ Te przykłady wymagają:  
   
-- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1` zawierającą kolumnę o nazwie `UnitPrice`, kolumna o nazwie `ShipDate`, a kolumna o nazwie `CustomerName`.  
+- Kontrolka <xref:System.Windows.Forms.DataGridView> o nazwie `dataGridView1`, która zawiera kolumnę o nazwie `UnitPrice`, kolumnę o nazwie `ShipDate`i kolumnę o nazwie `CustomerName`.  
   
-- Odwołuje się do <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
+- Odwołania do zestawów <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>i <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="robust-programming"></a>Niezawodne programowanie  
- W przypadku maksymalnej skalowalności powinny współużytkować <xref:System.Windows.Forms.DataGridViewCellStyle> obiektów między wiele wierszy, kolumny lub komórki, które używają tego samego style, zamiast oddzielnie ustawienie ponownego obliczenia właściwości stylu dla każdego elementu. Aby uzyskać więcej informacji, zobacz [najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy Windows](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+## <a name="robust-programming"></a>Skuteczne programowanie  
+ W celu uzyskania maksymalnej skalowalności należy udostępniać <xref:System.Windows.Forms.DataGridViewCellStyle> obiektów w wielu wierszach, kolumnach lub komórkach, które używają tych samych stylów zamiast ustawiania właściwości stylu dla każdego elementu osobno. Aby uzyskać więcej informacji, zobacz [najlepsze rozwiązania dotyczące skalowania Windows Forms formantu DataGridView](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -75,5 +75,5 @@ Poniższe procedury przedstawiają podstawowe formatowanie wartości komórki za
 - [Podstawowe formatowanie i style w kontrolce DataGridView formularzy Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
 - [Style komórki w kontrolce DataGridView formularzy Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Formatowanie danych w kontrolce DataGridView formularzy Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Dostosowywanie formatowania danych w kontrolce DataGridView formularzy Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: dostosowywanie formatowania danych w kontrolce DataGridView formularzy Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
 - [Formatowanie typów](../../../standard/base-types/formatting-types.md)

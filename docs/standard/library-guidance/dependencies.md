@@ -2,12 +2,12 @@
 title: Zależności i biblioteki .NET
 description: Zalecenia dotyczące najlepszych rozwiązań związanych z zarządzaniem zależnościami NuGet w bibliotekach platformy .NET.
 ms.date: 10/02/2018
-ms.openlocfilehash: b5742bf4724c4aff4beb4ca40a543bd096528a00
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6a260b54c45a0cd231059ab3bc6f2707ef7fb20e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706507"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731482"
 ---
 # <a name="dependencies"></a>Zależności
 
@@ -29,7 +29,7 @@ Większość zależności diamentów jest łatwo rozwiązywana; mogą jednak two
 
 Nie jest możliwe, aby wiedzieć, które pakiety będą używane razem ze swoimi zadaniami. Dobrym sposobem na zmniejszenie prawdopodobieństwa, że oddzielenie zależności od rombu w bibliotece polega na zminimalizowaniu liczby pakietów, od których zależą.
 
-**✔️ przeprowadzić** przegląd niepotrzebnych zależności w bibliotece platformy .NET.
+✔️ PRZEPROWADZIĆ przegląd niepotrzebnych zależności w bibliotece platformy .NET.
 
 ## <a name="nuget-dependency-version-ranges"></a>Zakresy wersji zależności NuGet
 
@@ -56,11 +56,11 @@ Górne ograniczenia wersji spowodują niepowodzenie NuGet w przypadku wystąpien
 
 ![Konflikt zależności rombu](./media/dependencies/diamond-dependency-conflict.png "Konflikt zależności rombu")
 
-**❌ nie** mają odwołań do pakietów NuGet bez minimalnej wersji.
+❌ nie mają odwołań do pakietów NuGet bez minimalnej wersji.
 
-**❌ unikać** Odwołania do pakietu NuGet, które wymagają dokładnej wersji.
+❌ UNIKAj odwołań do pakietów NuGet, które wymagają dokładnej wersji.
 
-**❌ unikać** Pakiet NuGet zawiera odwołania do górnego limitu wersji.
+❌ uniknąć odwołań pakietów NuGet z górnym limitem wersji.
 
 ## <a name="nuget-shared-source-packages"></a>Pakiety udostępnione dla narzędzia NuGet
 
@@ -78,19 +78,19 @@ Udostępnione pakiety źródłowe doskonale nadaje się do uwzględnienia małyc
 
 Udostępnione pakiety źródłowe mają pewne ograniczenia. Można do nich odwoływać się tylko `PackageReference`, więc starsze projekty `packages.config` są wykluczone. Współużytkowane pakiety źródłowe są również używane tylko przez projekty o tym samym typie języka. Ze względu na to, że udostępnione pakiety źródłowe najlepiej wykorzystać do udostępniania funkcjonalności w ramach projektu typu open source.
 
-**✔️ rozważyć** odwołujące się do udostępnionych pakietów źródłowych dla małych, wewnętrznych fragmentów funkcjonalności.
+✔️ ROZWAŻYĆ odwołujące się do udostępnionych pakietów źródłowych dla małych, wewnętrznych fragmentów funkcjonalności.
 
-**✔️ Rozważ** , aby pakiet był udostępnionym pakietem źródłowym, jeśli udostępnia małe, wewnętrzne elementy funkcjonalności.
+✔️ Rozważ, aby pakiet był udostępnionym pakietem źródłowym, jeśli udostępnia małe, wewnętrzne elementy funkcjonalności.
 
-**✔️ należy** odwoływać się do udostępnionych pakietów źródłowych z `PrivateAssets="All"`.
+✔️ NALEŻY odwoływać się do udostępnionych pakietów źródłowych z `PrivateAssets="All"`.
 
 > To ustawienie informuje program NuGet, że pakiet jest używany tylko w czasie projektowania i nie powinien być ujawniony jako zależność publiczna.
 
-w publicznym interfejsie API **❌ nie** mają udostępnionych typów pakietów źródłowych.
+w publicznym interfejsie API ❌ nie mają udostępnionych typów pakietów źródłowych.
 
 > Współużytkowane typy źródeł są kompilowane do zestawu, do którego się odwołuje, i nie mogą być wymieniane między granicami zestawu. Na przykład typ `IRepository` udostępnionego źródła w jednym projekcie jest osobnym typem z tego samego udostępnionego źródła `IRepository` w innym projekcie. Typy we współużytkowanych pakietach źródłowych powinny mieć widoczność `internal`.
 
-**❌ nie** publikować udostępnionych pakietów źródłowych do NuGet.org.
+❌ nie publikować udostępnionych pakietów źródłowych do NuGet.org.
 
 > Udostępnione pakiety źródłowe zawierają kod źródłowy i mogą być używane tylko przez projekty o tym samym typie języka. Na przykład C# udostępniony pakiet źródłowy nie może być używany przez F# aplikację.
 >

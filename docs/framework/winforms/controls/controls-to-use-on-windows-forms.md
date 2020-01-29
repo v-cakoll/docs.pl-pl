@@ -1,16 +1,16 @@
 ---
-title: Formanty do użycia w formularzach systemu Windows
+title: Kontrolki do użycia
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: bedfaef9a3d0cc81641006d254926f7bf9861c10
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2bcefd2ee2c9533d9f0afa2d12cd2e7437fc3d37
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930210"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737445"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Formanty do użycia w formularzach systemu Windows
 Poniżej znajduje się alfabetyczna lista formantów i składników, które mogą być używane w Windows Forms. Oprócz formantów Windows Forms pokrytych w tej sekcji, można dodać kontrolki ActiveX i niestandardowe do Windows Forms. Jeśli nie znajdziesz potrzebnej kontrolki w tym miejscu, możesz również utworzyć własne. Aby uzyskać szczegółowe informacje, zobacz [Opracowywanie formantów Windows Forms w czasie projektowania](developing-windows-forms-controls-at-design-time.md). Aby uzyskać więcej informacji na temat wybierania potrzebnej kontrolki, zobacz [Windows Forms formantów według funkcji](windows-forms-controls-by-function.md).  
@@ -50,10 +50,10 @@ Poniżej znajduje się alfabetyczna lista formantów i składników, które mog�
  Wyświetla dane w rozwijanym polu kombi.  
   
  [ContextMenu, składnik](contextmenu-component-windows-forms.md)  
- Zapewnia użytkownikom łatwo dostępne menu często używanych poleceń, które są skojarzone z wybranym obiektem. Mimo <xref:System.Windows.Forms.ContextMenuStrip> że program zamienia i dodaje funkcje <xref:System.Windows.Forms.ContextMenu> kontroli nad poprzednimi wersjami, <xref:System.Windows.Forms.ContextMenu> jest zachowywany w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości w razie potrzeby.  
+ Zapewnia użytkownikom łatwo dostępne menu często używanych poleceń, które są skojarzone z wybranym obiektem. Mimo że <xref:System.Windows.Forms.ContextMenuStrip> zamienia i dodaje funkcje do kontroli <xref:System.Windows.Forms.ContextMenu> poprzednich wersji, <xref:System.Windows.Forms.ContextMenu> jest zachowywane w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości, jeśli tak się to pożądane.  
   
  [ContextMenuStrip, kontrolka](contextmenustrip-control.md)  
- Reprezentuje menu skrótów. Mimo <xref:System.Windows.Forms.ContextMenuStrip> że program zamienia i dodaje funkcje <xref:System.Windows.Forms.ContextMenu> kontroli nad poprzednimi wersjami, <xref:System.Windows.Forms.ContextMenu> jest zachowywany w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości w razie potrzeby.  
+ Reprezentuje menu skrótów. Mimo że <xref:System.Windows.Forms.ContextMenuStrip> zamienia i dodaje funkcje do kontroli <xref:System.Windows.Forms.ContextMenu> poprzednich wersji, <xref:System.Windows.Forms.ContextMenu> jest zachowywane w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości, jeśli tak się to pożądane.  
   
  [DataGrid, kontrolka](datagrid-control-windows-forms.md)  
  Wyświetla dane tabelaryczne z zestawu danych i zezwala na aktualizacje źródła danych.  
@@ -105,17 +105,17 @@ Poniżej znajduje się alfabetyczna lista formantów i składników, które mog�
  [ListBox, kontrolka](listbox-control-windows-forms.md)  
  Zezwala użytkownikowi na wybranie co najmniej jednego elementu ze wstępnie zdefiniowanej listy.  
   
- [Kontrolka ListView](listview-control-windows-forms.md)  
+ [ListView, kontrolka](listview-control-windows-forms.md)  
  Wyświetla listę elementów z ikonami w programie Windows Explorer.  
   
  [MainMenu, składnik](mainmenu-component-windows-forms.md)  
- Wyświetla menu w czasie wykonywania. Mimo <xref:System.Windows.Forms.MenuStrip> że program zamienia i dodaje funkcje <xref:System.Windows.Forms.MainMenu> kontroli nad poprzednimi wersjami, <xref:System.Windows.Forms.MainMenu> jest zachowywany w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości.  
+ Wyświetla menu w czasie wykonywania. Mimo że <xref:System.Windows.Forms.MenuStrip> zamienia i dodaje funkcje do kontroli <xref:System.Windows.Forms.MainMenu> poprzednich wersji, <xref:System.Windows.Forms.MainMenu> jest zachowywane w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości w przypadku wybrania tej opcji.  
   
  [MaskedTextBox, kontrolka](maskedtextbox-control-windows-forms.md)  
  Ogranicza format danych wejściowych użytkownika w formularzu.  
   
  [MenuStrip, kontrolka](menustrip-control-windows-forms.md)  
- Udostępnia system menu dla formularza. Mimo <xref:System.Windows.Forms.MenuStrip> że program zamienia i dodaje funkcje <xref:System.Windows.Forms.MainMenu> kontroli nad poprzednimi wersjami, <xref:System.Windows.Forms.MainMenu> jest zachowywany w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości.  
+ Udostępnia system menu dla formularza. Mimo że <xref:System.Windows.Forms.MenuStrip> zamienia i dodaje funkcje do kontroli <xref:System.Windows.Forms.MainMenu> poprzednich wersji, <xref:System.Windows.Forms.MainMenu> jest zachowywane w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości w przypadku wybrania tej opcji.  
   
  [MonthCalendar, kontrolka](monthcalendar-control-windows-forms.md)  
  Przedstawia intuicyjny interfejs graficzny umożliwiający użytkownikom wyświetlanie i Ustawianie informacji o dacie.  
@@ -145,7 +145,7 @@ Poniżej znajduje się alfabetyczna lista formantów i składników, które mog�
  Ustawia właściwości opisujące, co należy wydrukować, i drukuje dokument w aplikacjach opartych na systemie Windows.  
   
  [PrintPreviewControl, kontrolka](printpreviewcontrol-control-windows-forms.md)  
- Umożliwia utworzenie własnego `PrintPreview` składnika lub okna dialogowego zamiast używania wstępnie skonfigurowanej wersji.  
+ Umożliwia utworzenie własnego składnika `PrintPreview` lub okna dialogowego zamiast używania wstępnie skonfigurowanej wersji.  
   
  [PrintPreviewDialog, kontrolka](printpreviewdialog-control-windows-forms.md)  
  Wyświetla dokument, gdy zostanie on wyświetlony po wydrukowaniu.  
@@ -171,10 +171,10 @@ Poniżej znajduje się alfabetyczna lista formantów i składników, które mog�
  Zezwala użytkownikowi na zmianę rozmiaru kontrolki zadokowanej (.NET Framework wersja 1. x).  
   
  [StatusBar, kontrolka](statusbar-control-windows-forms.md)  
- Wyświetla informacje o stanie związane z formantem, który ma fokus. Mimo <xref:System.Windows.Forms.StatusStrip> że program zamienia i <xref:System.Windows.Forms.StatusBar> rozszerza kontrolę nad poprzednimi <xref:System.Windows.Forms.StatusBar> wersjami, jest zachowywany w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości.  
+ Wyświetla informacje o stanie związane z formantem, który ma fokus. Mimo że <xref:System.Windows.Forms.StatusStrip> zamienia i rozszerza kontrolę <xref:System.Windows.Forms.StatusBar> poprzednich wersji, <xref:System.Windows.Forms.StatusBar> jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości w przypadku wybrania tej opcji.  
   
  [StatusStrip, kontrolka](statusstrip-control.md)  
- Reprezentuje kontrolkę pasek stanu systemu Windows. Mimo <xref:System.Windows.Forms.StatusStrip> że program zamienia i <xref:System.Windows.Forms.StatusBar> rozszerza kontrolę nad poprzednimi <xref:System.Windows.Forms.StatusBar> wersjami, jest zachowywany w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości.  
+ Reprezentuje kontrolkę pasek stanu systemu Windows. Mimo że <xref:System.Windows.Forms.StatusStrip> zamienia i rozszerza kontrolę <xref:System.Windows.Forms.StatusBar> poprzednich wersji, <xref:System.Windows.Forms.StatusBar> jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości w przypadku wybrania tej opcji.  
   
  [TabControl, kontrolka](tabcontrol-control-windows-forms.md)  
  Wyświetla wiele kart, które mogą zawierać obrazy lub inne kontrolki.  
@@ -189,22 +189,22 @@ Poniżej znajduje się alfabetyczna lista formantów i składników, które mog�
  Podnosi zdarzenie w regularnych odstępach czasu.  
   
  [ToolBar, kontrolka](toolbar-control-windows-forms.md)  
- Wyświetla menu i przyciski mapy bitowej, które uaktywniają polecenia. Można zwiększyć funkcjonalność kontrolki i zmodyfikować jej wygląd i zachowanie. Mimo <xref:System.Windows.Forms.ToolStrip> że program zamienia i dodaje funkcje <xref:System.Windows.Forms.ToolBar> kontroli nad poprzednimi wersjami, <xref:System.Windows.Forms.ToolBar> jest zachowywany w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości.  
+ Wyświetla menu i przyciski mapy bitowej, które uaktywniają polecenia. Można zwiększyć funkcjonalność kontrolki i zmodyfikować jej wygląd i zachowanie. Mimo że <xref:System.Windows.Forms.ToolStrip> zamienia i dodaje funkcje do kontroli <xref:System.Windows.Forms.ToolBar> poprzednich wersji, <xref:System.Windows.Forms.ToolBar> jest zachowywane w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości w przypadku wybrania tej opcji.  
   
  [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)  
- Tworzy niestandardowe paski narzędzi i menu w aplikacjach Windows Forms. Mimo <xref:System.Windows.Forms.ToolStrip> że program zamienia i dodaje funkcje <xref:System.Windows.Forms.ToolBar> kontroli nad poprzednimi wersjami, <xref:System.Windows.Forms.ToolBar> jest zachowywany w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości.  
+ Tworzy niestandardowe paski narzędzi i menu w aplikacjach Windows Forms. Mimo że <xref:System.Windows.Forms.ToolStrip> zamienia i dodaje funkcje do kontroli <xref:System.Windows.Forms.ToolBar> poprzednich wersji, <xref:System.Windows.Forms.ToolBar> jest zachowywane w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości w przypadku wybrania tej opcji.  
   
  [ToolStripContainer, kontrolka](toolstripcontainer-control.md)  
- Udostępnia panele na każdej stronie formularza do dokowania, spływania i rozmieszczania <xref:System.Windows.Forms.ToolStrip> formantów oraz centralne <xref:System.Windows.Forms.ToolStripContentPanel> dla tradycyjnych kontrolek.  
+ Udostępnia panele na każdej stronie formularza do dokowania, spływania i rozmieszczania <xref:System.Windows.Forms.ToolStrip> formantów oraz centralny <xref:System.Windows.Forms.ToolStripContentPanel> dla tradycyjnych kontrolek.  
   
  [ToolStripPanel, kontrolka](toolstrippanel-control.md)  
- Program udostępnia jeden panel służący do dokowania, spływania <xref:System.Windows.Forms.ToolStrip> i rozmieszczania kontrolek.  
+ Oferuje jeden panel służący do dokowania, spływania i rozmieszczania <xref:System.Windows.Forms.ToolStrip>.  
   
  [ToolStripProgressBar, kontrolka — omówienie](toolstripprogressbar-control-overview.md)  
- Graficznie wskazuje postęp akcji w kierunku ukończenia. Jest zazwyczaj zawarty <xref:System.Windows.Forms.StatusStrip>w. <xref:System.Windows.Forms.ToolStripProgressBar>  
+ Graficznie wskazuje postęp akcji w kierunku ukończenia. <xref:System.Windows.Forms.ToolStripProgressBar> jest zwykle zawarty w <xref:System.Windows.Forms.StatusStrip>.  
   
  [ToolStripStatusLabel, kontrolka](toolstripstatuslabel-control.md)  
- Reprezentuje Panel w <xref:System.Windows.Forms.StatusStrip> kontrolce.  
+ Reprezentuje Panel w kontrolce <xref:System.Windows.Forms.StatusStrip>.  
   
  [ToolTip, składnik](tooltip-component-windows-forms.md)  
  Wyświetla tekst, gdy użytkownik wskazuje inne kontrolki.  
@@ -231,5 +231,5 @@ Poniżej znajduje się alfabetyczna lista formantów i składników, które mog�
  [Formanty i obiekty programowalne porównane w różnych językach i bibliotekach](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
  Zawiera tabelę, która mapuje kontrolki w Visual Basic 6,0 do odpowiedniej kontrolki w Visual Basic .NET. Należy zauważyć, że formanty są teraz klasami w .NET Framework.  
   
- [Instrukcje: Dodaj kontrolki ActiveX do Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
+ [Instrukcje: dodawanie kontrolek ActiveX do formularzy Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
  Opisuje sposób używania formantów ActiveX w Windows Forms.

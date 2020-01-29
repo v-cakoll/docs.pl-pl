@@ -1,5 +1,5 @@
 ---
-title: Opinie społeczności WPF
+title: Zasoby społeczności
 ms.date: 03/01/2018
 helpviewer_keywords:
 - community resources [WPF]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ebeae3e51cedd3add2de4062c8914693ac94f7b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a9e903045195d6f464659876334f7fedc5c695e9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196995"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733807"
 ---
 # <a name="wpf-community-feedback"></a>Opinie społeczności WPF
 
@@ -51,7 +51,7 @@ Zwięzłe, zrozumiałe tytuły poprawiają wykrywalność wpisów. Ułatwiają o
 
 Opisz problem i sposób, w jaki podjęto próbę wykonania tej czynności. Jeśli to możliwe, Dołącz fragmenty kodu pomocniczego lub najprostszy przykład, który pokazuje swój problem. Wszystkie te szczegóły pomagają zwiększyć szansę szybkiego udzielenia odpowiedzi na pytanie.
 
-## <a name="visual-studio-developer-community"></a>Społeczność deweloperów programu Visual Studio
+## <a name="visual-studio-developer-community"></a>Visual Studio Developer Community
 
 Czasami trudno jest rozwiązać problemy lub nierozwiązywalny. Takie sytuacje powstają ze względu na błędy w technologii, jednak trudności z zastosowaniem technologii do określonych scenariuszy lub brakiem pomocy technicznej dla konkretnych scenariuszy. Te informacje są ważne dla firmy Microsoft i mogą być udostępniane za pośrednictwem witryny [społeczności deweloperów programu Visual Studio](https://developercommunity.visualstudio.com/) .
 
@@ -80,7 +80,7 @@ Po ogłoszeniu o błędzie ważne jest, aby uwzględnić następujące informacj
 - Należy określić, czy usterka jest spójnie powtarzalna, czy nie.
 - Dołącz odpowiednie informacje o wyjątku.
 
- Jeśli usterka dotyczy instalacji lub instalacji, Dołącz odpowiednie dzienniki instalacji i migawki (pliki poprzedzone prefiksem "dd_", które znajdują się w folderze% Temp%).
+ Jeśli usterka jest instalacją lub instalacją powiązaną, należy dołączyć odpowiednie dzienniki instalacji i migawki (pliki poprzedzone prefiksem "dd_", które znajdują się w folderze% Temp%).
 
  W przypadku problemów z kompilacją lub kompilacją Dołącz dzienniki kompilacji. System MSBuild można skonfigurować tak, aby obsługiwał rejestrowanie z różnymi poziomami szczegółowości przy użyciu/v: przełącznika z wiersza polecenia lub konfigurując odpowiedni poziom z zintegrowanego środowiska programistycznego (IDE), takiego jak Visual Studio.
 
@@ -104,7 +104,7 @@ Usterki mogą dotyczyć narzędzi używanych do tworzenia i kompilowania aplikac
   - MSBuild
   - Projektant grafiki wyrażenia
   - Expression interactive — Projektant
-  - Visual Studio
+  - {1&gt;Visual Studio&lt;1}
 - Konfiguracja rozwiązania, taka jak:
   - Rozwiązanie
   - Pojedynczy projekt

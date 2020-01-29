@@ -2,16 +2,16 @@
 title: polecenie dotnet Add Package
 description: Polecenie "dotnet Add Package" udostępnia wygodną opcję dodawania odwołania do pakietu NuGet do projektu.
 ms.date: 06/26/2019
-ms.openlocfilehash: 9445cf686ec1733f5a8b3403b7efea3a544fbc99
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 210dcf0efe06672264ebfa297589bdb387591a42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117797"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733332"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
-**Ten artykuł dotyczy: ✓** .NET Core 1. x SDK i nowszych wersji
+**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 1. x SDK i nowszych wersji
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -19,7 +19,7 @@ ms.locfileid: "71117797"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet add package`-Dodaje odwołanie do pakietu do pliku projektu.
+`dotnet add package` — dodaje odwołanie do pakietu do pliku projektu.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -27,11 +27,11 @@ ms.locfileid: "71117797"
 
 ## <a name="description"></a>Opis
 
-`dotnet add package` Polecenie udostępnia wygodną opcję dodawania odwołania do pakietu do pliku projektu. Po uruchomieniu polecenia jest sprawdzanie zgodności, aby upewnić się, że pakiet jest zgodny z strukturami w projekcie. Jeśli sprawdzanie przebiega, `<PackageReference>` element jest dodawany do pliku projektu i [dotnet Restore](dotnet-restore.md) jest uruchamiany.
+Polecenie `dotnet add package` udostępnia wygodną opcję dodania odwołania do pakietu do pliku projektu. Po uruchomieniu polecenia jest sprawdzanie zgodności, aby upewnić się, że pakiet jest zgodny z strukturami w projekcie. Jeśli sprawdzanie przebiega pomyślnie, element `<PackageReference>` jest dodawany do pliku projektu i [dotnet Restore](dotnet-restore.md) jest uruchamiany.
 
 [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
-Na przykład dodanie `Newtonsoft.Json` do zadania do *zrobienia. csproj* generuje dane wyjściowe podobne do następującego przykładu:
+Na przykład dodanie `Newtonsoft.Json` do zadania *. csproj* generuje dane wyjściowe podobne do następującego przykładu:
 
 ```console
   Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
@@ -46,7 +46,7 @@ info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks
 info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to file 'C:\projects\ToDo\ToDo.csproj'.
 ```
 
-Plik do *zrobienia. csproj* zawiera [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) teraz element dla przywoływanego pakietu.
+Plik do *zrobienia. csproj* zawiera teraz element [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) dla przywoływanego pakietu.
 
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
@@ -82,7 +82,7 @@ Plik do *zrobienia. csproj* zawiera [`<PackageReference>`](/nuget/consume-packag
 
 - **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  Katalog, w którym mają zostać przywrócone pakiety. Domyślna lokalizacja przywracania pakietu znajduje się `%userprofile%\.nuget\packages` w systemach Windows `~/.nuget/packages` i Linux. Aby uzyskać więcej informacji, zobacz [Zarządzanie pakietami globalnymi, pamięcią podręczną i folderami tymczasowymi w pakiecie NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
+  Katalog, w którym mają zostać przywrócone pakiety. Domyślna lokalizacja przywracania pakietu jest `%userprofile%\.nuget\packages` w systemie Windows i `~/.nuget/packages` w systemach macOS i Linux. Aby uzyskać więcej informacji, zobacz [Zarządzanie pakietami globalnymi, pamięcią podręczną i folderami tymczasowymi w pakiecie NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
 
 - **`-s|--source <SOURCE>`**
 

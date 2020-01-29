@@ -2,16 +2,16 @@
 title: dotnet-dump-.NET Core
 description: Instalowanie i używanie narzędzia wiersza polecenia dotnet-dump.
 ms.date: 10/14/2019
-ms.openlocfilehash: dcd5dd42620010c1a9b6dffd3365fc1b777c0eeb
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3c0e28d4efc96ae53ec7dfae243725ab400e6b8f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740773"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737674"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Narzędzie do zbierania i analizy zrzutów (`dotnet-dump`)
 
-**Ten artykuł dotyczy: ✓** .net Core 3,0 SDK i nowszych wersji
+**Ten artykuł ma zastosowanie do:** ✔️ .net Core 3,0 SDK i nowszych wersjach
 
 > [!NOTE]
 > `dotnet-dump` nie jest obsługiwana w macOS.
@@ -156,7 +156,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 | `syncblk <arguments>`               | Wyświetla informacje o posiadaczu SyncBlock.                                                           |
 | `threads|setthread <threadid>`      | Ustawia lub wyświetla bieżący identyfikator wątku dla poleceń SOS.                                  |
 
-## <a name="using-dotnet-dump"></a>Używanie elementu `dotnet-dump`
+## <a name="using-dotnet-dump"></a>Używanie `dotnet-dump`
 
 Pierwszym krokiem jest zebranie zrzutu. Ten krok można pominąć, jeśli zrzut podstawowy został już wygenerowany. System operacyjny lub wbudowana [Funkcja generowania zrzutów](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) środowiska uruchomieniowego platformy .NET Core może tworzyć zrzuty rdzeni.
 

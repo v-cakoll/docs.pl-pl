@@ -3,16 +3,16 @@ title: polecenia wypychania NuGet dotnet
 description: Polecenie polecenia push NuGet narzędzia dotnet wypycha pakiet do serwera i opublikuje go.
 author: karann-msft
 ms.date: 12/04/2019
-ms.openlocfilehash: 5e80295a570adc30a06d86b6735cb0387e39d5a3
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
-ms.translationtype: MT
+ms.openlocfilehash: a483c559dee8b4a82cc2c792f5c2c5e4a8ff3f87
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835522"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733110"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**Ten temat dotyczy: ✓** .NET Core 1. x SDK i nowszych wersji
+**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 1. x SDK i nowszych wersji
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -77,7 +77,7 @@ dotnet nuget push [-h|--help]
 * **`--skip-duplicate`**
 
   Podczas wypychania wielu pakietów do serwera HTTP (S) program traktuje wszystkie 409 odpowiedzi w konflikcie jako ostrzeżenie, aby można było kontynuować wypychanie. Dostępne od wersji .NET Core 3,1 SDK.
-                                 
+
 * **`-sk|--symbol-api-key <API_KEY>`**
 
   Klucz interfejsu API dla serwera symboli.
@@ -127,11 +127,11 @@ dotnet nuget push [-h|--help]
   ```dotnetcli
   dotnet nuget push *.nupkg
   ```
-  
+
   > [!NOTE]
   > Jeśli to polecenie nie działa, może to być spowodowane usterką, która istniała we wcześniejszych wersjach zestawu SDK (zestaw SDK programu .NET Core 2,1 i wcześniejsze wersje).
   > Aby rozwiązać ten problem, Uaktualnij wersję zestawu SDK lub zamiast tego Uruchom następujące polecenie: `dotnet nuget push **/*.nupkg`
-  
+
 * Wypychanie wszystkich plików *. nupkg* , nawet jeśli odpowiedź na 409 jest zwracana przez serwer http (S):
 
   ```dotnetcli

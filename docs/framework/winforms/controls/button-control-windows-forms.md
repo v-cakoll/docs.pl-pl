@@ -1,44 +1,44 @@
 ---
-title: Kontrolka przycisku (Formularze systemu Windows)
+title: Kontrolka przycisku
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
-ms.openlocfilehash: a71079b45259aab54480a5b97c09844b73be1661
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20ef3126cd2234bc8daa42ceaca91223794f3522
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961593"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738017"
 ---
 # <a name="button-control-windows-forms"></a>Kontrolka przycisku (Formularze systemu Windows)
-Formularze Windows `Button` kontrolki pozwala użytkownikowi na kliknij go, aby wykonać akcję. `Button` Formant może wyświetlić tekst i obrazy. Po kliknięciu przycisku wygląda, jakby on wypychania i wydania.  
+Kontrolka `Button` Windows Forms umożliwia użytkownikowi kliknięcie go w celu wykonania akcji. Kontrolka `Button` może wyświetlać zarówno tekst, jak i obrazy. Gdy przycisk zostanie kliknięty, wygląda tak, jakby został wypchnięte i wydzierżawiony.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Button, kontrolka — omówienie](button-control-overview-windows-forms.md)  
- Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
+ Wyjaśnia, czym jest ta kontrolka i jej najważniejsze funkcje i właściwości.  
   
- [Instrukcje: Odpowiadanie na kliknięcia przycisków formularzy Windows](how-to-respond-to-windows-forms-button-clicks.md)  
- W tym artykule wyjaśniono podstawowe użycie przycisku w formularzu Windows.  
+ [Instrukcje: odpowiadanie na kliknięcia przycisków Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)  
+ Wyjaśnia najbardziej podstawowe użycie przycisku w formularzu systemu Windows.  
   
- [Instrukcje: Wyznaczanie przycisku Windows Forms na przycisk Akceptuj](how-to-designate-a-windows-forms-button-as-the-accept-button.md)  
- Wyjaśnia, jak wyznaczyć `Button` formantu na przycisk Akceptuj, znany także jako przycisk domyślny.  
+ [Instrukcje: wyznaczanie przycisku Windows Forms na przycisk Akceptuj](how-to-designate-a-windows-forms-button-as-the-accept-button.md)  
+ Wyjaśnia, jak wyznaczyć formant `Button` być przyciskiem Akceptuj, znanym również jako przycisk domyślny.  
   
- [Instrukcje: Wyznaczanie przycisku Windows Forms na przycisk Anuluj](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)  
- Wyjaśnia, jak wyznaczyć `Button` formantu przycisku anulowania, który zostanie kliknięty zawsze wtedy, gdy użytkownik naciśnie klawisz ESC.  
+ [Instrukcje: wyznaczanie przycisku Windows Forms na przycisk Anuluj](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)  
+ Wyjaśniono, jak wyznaczyć formant `Button` być przyciskiem Anuluj, który jest klikany za każdym razem, gdy użytkownik naciśnie klawisz ESC.  
   
  [Sposoby wyboru kontrolki przycisku Windows Forms](ways-to-select-a-windows-forms-button-control.md)  
- Zawiera listę metod naciśnięcie przycisku.  
+ Wyświetla listę metod wybierania przycisku.  
   
- Zobacz też [jak: Wyznaczanie przycisku Windows Forms na przycisk Akceptuj przy użyciu narzędzia Projektant](designate-a-wf-button-as-the-accept-button-using-the-designer.md) i [jak: Wyznaczanie przycisku Windows Forms na przycisk Anuluj, za pomocą projektanta](designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
+ Zobacz również [instrukcje: Wyznaczanie Windows Forms przycisku jako przycisku Akceptuj przy użyciu narzędzia Projektant](designate-a-wf-button-as-the-accept-button-using-the-designer.md) i [instrukcje: wyznaczanie przycisku Windows Forms jako przycisku Anuluj przy użyciu narzędzia Projektant](designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.Button> Klasa  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Klasa <xref:System.Windows.Forms.Button>  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.  
+ Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.  
   
- Zobacz też [danych wejściowych użytkownika do okien dialogowych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1s9ws53w(v=vs.100)) i [jak: Zamykanie okien dialogowych i zachowywanie danych wejściowych użytkownika](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/65ad5907(v=vs.100)).
+ Zobacz również [dane wejściowe użytkownika w oknach](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1s9ws53w(v=vs.100)) dialogowych i [instrukcje: zamykanie okien dialogowych i zachowywanie danych wejściowych użytkownika](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/65ad5907(v=vs.100)).

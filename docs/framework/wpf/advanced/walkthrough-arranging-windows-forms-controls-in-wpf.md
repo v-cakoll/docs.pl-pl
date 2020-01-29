@@ -1,5 +1,6 @@
 ---
-title: 'Wskazówki: rozmieszczanie formantów Windows Forms w WPF'
+title: Rozmieszczanie formantów Windows Forms w WPF
+titleSuffix: ''
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 484895db539b288bf388ff6c2ce3c29db55080b1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
-ms.translationtype: MT
+ms.openlocfilehash: 5e7544dfdbee234bb968c9a7f39814e8749ece15
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197842"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735285"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Wskazówki: rozmieszczanie formantów Windows Forms w WPF
 
@@ -53,8 +54,8 @@ Aby utworzyć i skonfigurować projekt, wykonaj następujące kroki:
 2. W Eksplorator rozwiązań Dodaj odwołania do następujących zestawów:
 
     - WindowsFormsIntegration
-    - System. Windows. Forms
-    - System. Drawing
+    - System.Windows.Forms
+    - System.Drawing
 
 3. Kliknij dwukrotnie plik *MainWindow. XAML* , aby otworzyć go w widoku XAML.
 
@@ -94,7 +95,7 @@ Aby zmienić rozmiar na zawartość, wykonaj następujące kroki:
 
 ## <a name="using-absolute-positioning"></a>Używanie pozycjonowania bezwzględnego
 
-Możesz użyć pozycjonowania bezwzględnego, aby umieścić element <xref:System.Windows.Forms.Integration.WindowsFormsHost> w dowolnym miejscu w interfejsie użytkownika (UI).
+Możesz użyć pozycjonowania bezwzględnego, aby umieścić element <xref:System.Windows.Forms.Integration.WindowsFormsHost> w dowolnym miejscu w interfejsie użytkownika.
 
 Aby użyć pozycjonowania bezwzględnego, wykonaj następujące kroki:
 
@@ -102,7 +103,7 @@ Aby użyć pozycjonowania bezwzględnego, wykonaj następujące kroki:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]
 
-2. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację. Element <xref:System.Windows.Forms.Integration.WindowsFormsHost> jest umieszczany 20 pikseli od górnej krawędzi komórki siatki i 20 pikseli od lewej.
+2. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację. Element <xref:System.Windows.Forms.Integration.WindowsFormsHost> jest umieszczony 20 pikseli od górnej krawędzi komórki siatki i 20 pikseli od lewej.
 
 ## <a name="specifying-size-explicitly"></a>Określanie rozmiaru jawnie
 
@@ -137,7 +138,7 @@ Aby wyświetlić efekty ustawiania właściwości kontrolki hostowanej, wykonaj 
 
 4. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację.
 
-5. Kliknij przycisk **kliknij mnie** . Obsługa zdarzeń `button1_Click` ustawia właściwości <xref:System.Windows.Forms.Control.Top%2A> i <xref:System.Windows.Forms.Control.Left%2A> dla hostowanej kontrolki. Powoduje to zmianę położenia hostowanej kontrolki w obrębie elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost>. Host utrzymuje ten sam obszar ekranu, ale hostowana kontrolka jest obcinana. Zamiast tego, formant hostowany powinien zawsze wypełnić element <xref:System.Windows.Forms.Integration.WindowsFormsHost>.
+5. Kliknij przycisk **kliknij mnie** . Obsługa zdarzeń `button1_Click` ustawia właściwości <xref:System.Windows.Forms.Control.Top%2A> i <xref:System.Windows.Forms.Control.Left%2A> dla hostowanej kontrolki. Powoduje to zmianę położenia hostowanej kontrolki w ramach elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost>. Host utrzymuje ten sam obszar ekranu, ale hostowana kontrolka jest obcinana. Zamiast tego, formant hostowany powinien zawsze wypełnić element <xref:System.Windows.Forms.Integration.WindowsFormsHost>.
 
 ## <a name="understanding-z-order-limitations"></a>Informacje o ograniczeniach porządku osi Z
 
@@ -184,7 +185,7 @@ Aby ustawić widoczność hostowanej kontrolki, wykonaj następujące kroki:
 
 ## <a name="hosting-a-control-that-does-not-stretch"></a>Hostowanie formantu, który nie rozciąga się
 
-Niektóre kontrolki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] mają stały rozmiar i nie rozciągają się w celu wypełnienia dostępnego miejsca w układzie. Na przykład kontrolka <xref:System.Windows.Forms.MonthCalendar> wyświetla miesiąc w stałym obszarze.
+Niektóre kontrolki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] mają stały rozmiar i nie rozciągają się w celu wypełnienia dostępnego miejsca w układzie. Na przykład kontrolka <xref:System.Windows.Forms.MonthCalendar> wyświetla miesiąc w stałym miejscu.
 
 Aby hostować formant, który nie rozciąga się, wykonaj następujące czynności:
 
@@ -192,9 +193,9 @@ Aby hostować formant, który nie rozciąga się, wykonaj następujące czynnoś
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]
 
-2. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację. Element <xref:System.Windows.Forms.Integration.WindowsFormsHost> jest wyśrodkowany w wierszu siatki, ale nie jest rozciągany w celu wypełnienia dostępnego miejsca. Jeśli okno jest wystarczająco duże, może pojawić się co najmniej dwa miesiące wyświetlane przez obsługiwaną kontrolę <xref:System.Windows.Forms.MonthCalendar>, ale są one wyśrodkowane w wierszu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] układu aparatu aparat centrów elementów, których nie można zmieniać, aby wypełnić dostępne miejsce.
+2. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację. Element <xref:System.Windows.Forms.Integration.WindowsFormsHost> jest wyśrodkowany w wierszu siatki, ale nie jest rozciągany w celu wypełnienia dostępnego miejsca. Jeśli okno jest wystarczająco duże, może pojawić się co najmniej dwa miesiące wyświetlane przez hostowaną kontrolkę <xref:System.Windows.Forms.MonthCalendar>, ale są one wyśrodkowane w wierszu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] układu aparatu aparat centrów elementów, których nie można zmieniać, aby wypełnić dostępne miejsce.
 
-## <a name="scaling"></a>Ponowne
+## <a name="scaling"></a>Skalowanie
 
 W przeciwieństwie do elementów WPF większość formantów Windows Forms nie jest ciągle skalowalna. Aby zapewnić niestandardowe skalowanie, Zastąp metodę <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A?displayProperty=nameWithType>.
 
@@ -248,7 +249,7 @@ Aby użyć dynamicznego kontenera układu, wykonaj następujące kroki:
      [!code-csharp[WpfLayoutHostingWfWithXaml#103](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#103)]
      [!code-vb[WpfLayoutHostingWfWithXaml#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#103)]
 
-3. Dodaj wywołanie metody `InitializeFlowLayoutPanel` w konstruktorze:
+3. Dodaj wywołanie do metody `InitializeFlowLayoutPanel` w konstruktorze:
 
      [!code-csharp[WpfLayoutHostingWfWithXaml#104](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#104)]
      [!code-vb[WpfLayoutHostingWfWithXaml#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#104)]

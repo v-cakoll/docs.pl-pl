@@ -1,48 +1,48 @@
 ---
-title: Zmienianie wyglądu formularzy systemu Windows
+title: Dostosowywanie wyglądu
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, changing the appearance of
 ms.assetid: 12f35d5b-1587-49cc-ada3-47eec1ff1738
-ms.openlocfilehash: 0582ad4c8e18d0f0419f0463ba260226839f7f42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c75fb1849ab9f9a07fcbbe5dd915b965f5aea05d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640424"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732366"
 ---
 # <a name="changing-the-appearance-of-windows-forms"></a>Zmienianie wyglądu formularzy systemu Windows
-Można dostosować wygląd aplikacji Windows Forms na wiele różnych sposobów, takich jak zmiana obramowania, nieprzezroczystość kształtu, styl lub ustawienie obrazu tła dla aplikacji Windows Forms.  
+Możesz dostosować wygląd aplikacji Windows Forms na wiele różnych sposobów, takich jak zmiana obramowania, nieprzezroczystości, kształtu, stylu lub ustawienia obrazu tła dla aplikacji Windows Forms.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Zmienianie granic formularzy Windows Forms](how-to-change-the-borders-of-windows-forms.md)  
+ [Instrukcje: zmienianie granic formularzy Windows Forms](how-to-change-the-borders-of-windows-forms.md)  
  Pokazuje, jak zmienić styl obramowania formularza.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.Form>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
  <xref:System.Windows.Forms.FormBorderStyle>  
- W tym artykule opisano to wyliczenie i zawiera opisy wszystkich jej członków.  
+ Opisuje to wyliczenie i zawiera opisy wszystkich członków.  
   
  <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
  <xref:System.Drawing.Image>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
  <xref:System.Drawing.Region>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
  <xref:System.Drawing.Color>  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Dostosowywanie rozmiaru i skali formularzy Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)  
- Zawiera łącza do tematów, które pokazują jak zmienić rozmiar i skalę formularza.  
+ Zawiera łącza do tematów, w których pokazano, jak zmienić rozmiar i skalę formularza.  
   
  [Grafika i rysowanie w formularzach Windows Forms](./advanced/graphics-and-drawing-in-windows-forms.md)  
- Zawiera łącza do tematów opisujących sposób do niestandardowego rysowania na formularzach Windows Forms.  
+ Zawiera łącza do tematów opisujących sposób wykonywania niestandardowego rysowania na Windows Forms.  
   
  [Kontrolki z wbudowaną obsługą rysowania przez właściciela](./controls/controls-with-built-in-owner-drawing-support.md)  
- Obsługa rysowania przez właściciela listy w kontrolkach formularzy Windows Forms.
+ Wyświetl listę obsługiwanych przez właściciela w kontrolkach Windows Forms.

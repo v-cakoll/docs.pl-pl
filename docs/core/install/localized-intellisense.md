@@ -1,15 +1,13 @@
 ---
 title: Instalowanie zlokalizowanych plików IntelliSense
 description: Dowiedz się, jak skonfigurować komputer deweloperski do korzystania z zlokalizowanych plików IntelliSense dla projektów .NET Core w programie Visual Studio.
-author: mairaw
-ms.author: mairaw
-ms.date: 12/18/2019
-ms.openlocfilehash: 98d75544ab853e75c175dd2919991b250cfaa3b0
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.date: 01/23/2020
+ms.openlocfilehash: 58b462507edf953a6c28aadbb9e3239a5cbe05b2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75443478"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733647"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>Jak zainstalować zlokalizowane pliki IntelliSense dla platformy .NET Core
 
@@ -34,9 +32,10 @@ ms.locfileid: "75443478"
 
 1. Wyodrębnij zawartość pliku zip.
 
-1. Przejdź do folderu instalacji programu .NET Core. Domyślnie jest to w obszarze *%ProgramFiles%\dotnet\packs*.
+1. Przejdź do folderu IntelliSense platformy .NET Core.
 
-   - Wybierz zestaw SDK, dla którego chcesz zainstalować funkcję IntelliSense, i przejdź do skojarzonej ścieżki. Do wyboru są następujące opcje:
+   1. Przejdź do folderu instalacji programu .NET Core. Domyślnie jest to w obszarze *%ProgramFiles%\dotnet\packs*.
+   1. Wybierz zestaw SDK, dla którego chcesz zainstalować funkcję IntelliSense, i przejdź do skojarzonej ścieżki. Do wyboru są następujące opcje:
 
       | Typ zestawu SDK        | Ścieżka                               |
       | --------------- | ---------------------------------- |
@@ -44,9 +43,9 @@ ms.locfileid: "75443478"
       | System Windows Desktop | *Microsoft. WindowsDesktop. app. ref* |
       | .NET Standard   | *Standard. Library. ref*          |
    
-   - Przejdź do wersji, w której chcesz zainstalować zlokalizowaną funkcję IntelliSense. Na przykład *3.1.0*.
-   - Otwórz folder *ref* .
-   - Otwórz folder moniker. Na przykład *netcoreapp 3.1*.
+   1. Przejdź do wersji, w której chcesz zainstalować zlokalizowaną funkcję IntelliSense. Na przykład *3.1.0*.
+   1. Otwórz folder *ref* .
+   1. Otwórz folder moniker. Na przykład *netcoreapp 3.1*.
 
    Dlatego pełna ścieżka, która będzie wyglądała, wygląda podobnie do *C:\Program Files\dotnet\packs\Microsoft.NETCore.app.Ref\3.1.0\ref\netcoreapp3.1*.
 
@@ -76,7 +75,7 @@ Aby program Visual Studio używał innego języka dla technologii IntelliSense, 
 Jeśli podczas instalacji nie został zainstalowany odpowiedni pakiet językowy, zaktualizuj program Visual Studio w następujący sposób, aby zainstalować pakiet językowy:
 
 > [!IMPORTANT]
-> Aby zainstalować, zaktualizować lub zmodyfikuj program Visual Studio, musisz zalogować się przy użyciu konta z uprawnieniami administracyjnymi. Aby uzyskać więcej informacji, zobacz [uprawnienia użytkownika i program Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio).
+> Aby zainstalować, zaktualizować lub zmodyfikować program Visual Studio, należy zalogować się przy użyciu konta z uprawnieniami administratora. Aby uzyskać więcej informacji, zobacz [uprawnienia użytkownika i program Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio).
 
 1. Znajdowanie Instalatora programu Visual Studio na komputerze.
 
@@ -113,9 +112,9 @@ Po zainstalowaniu żądanych pakietów językowych zmodyfikuj ustawienia program
 
 1. W oknie uruchamiania wybierz pozycję **Kontynuuj bez kodu**.
 
-1. W menu głównym wybierz pozycję **narzędzia** > **Opcje**. Zostanie otwarte okno dialogowe Opcje.
+1. Na pasku menu wybierz pozycję **narzędzia** > **Opcje**. Zostanie otwarte okno dialogowe Opcje.
 
-1. W obszarze folder **środowiska** wybierz pozycję **Ustawienia międzynarodowe**.
+1. W węźle **środowisko** wybierz pozycję **Ustawienia międzynarodowe**.
 
 1. Z listy rozwijanej **Język** wybierz odpowiedni język. Wybierz **OK**. 
 

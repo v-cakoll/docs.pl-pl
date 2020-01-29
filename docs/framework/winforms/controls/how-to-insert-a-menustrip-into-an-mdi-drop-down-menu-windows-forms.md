@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wstawianie elementu MenuStrip do Menu rozwijanego MDI (formularze Windows)'
+title: 'Porady: wstawianie elementu MenuStrip do menu rozwijanego MDI'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,49 +9,49 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], merging
 - MDI [Windows Forms], merging menu items
 ms.assetid: 0fad444e-26d9-49af-8860-044d9c10d608
-ms.openlocfilehash: febe5347ed305dc85e67d992fac8aefa18a02cff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e189dd159c48b5779679d0563fab85e9b848992
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651643"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736406"
 ---
-# <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Instrukcje: Wstawianie elementu MenuStrip do Menu rozwijanego MDI (formularze Windows)
-W niektórych aplikacjach rodzaj okna podrzędnego interfejsu wielu dokumentów (MDI) może różnić się od nadrzędnego okna MDI. Na przykład element nadrzędny MDI może być arkusza kalkulacyjnego i elementu podrzędnego MDI może być wykres. W takim przypadku chcesz zaktualizować zawartość menu nadrzędny MDI zawartość elementu podrzędnego MDI menu, zgodnie z oknami podrzędnymi MDI różnego rodzaju zostaną aktywowane.  
+# <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Porady: wstawianie elementu MenuStrip do menu rozwijanego MDI (Formularze systemu Windows)
+W niektórych aplikacjach rodzaj okna podrzędnego interfejsu wielu dokumentów (MDI) może różnić się od okna nadrzędnego MDI. Na przykład element nadrzędny MDI może być arkuszem kalkulacyjnym, a obiekt podrzędny MDI może być wykresem. W takim przypadku należy zaktualizować zawartość menu elementu nadrzędnego MDI z zawartością menu elementu podrzędnego MDI, ponieważ aktywowane są okna podrzędne MDI różnych rodzajów.  
   
- W poniższej procedurze użyto <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, i <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> właściwości można wstawić grupy elementów menu w menu podrzędne MDI do części rozwijanego menu nadrzędnego MDI. Zamyka okno podrzędne MDI usuwa elementy menu wstawiony z nadrzędnego MDI.  
+ Poniższa procedura używa właściwości <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>i <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>, aby wstawić grupę elementów menu z menu podrzędnego MDI do części listy rozwijanej menu nadrzędnego MDI. Zamknięcie okna podrzędnego MDI usuwa wstawione elementy menu z elementu nadrzędnego MDI.  
   
-### <a name="to-insert-a-menustrip-into-an-mdi-drop-down-menu"></a>Aby Wstawianie elementu MenuStrip do menu rozwijanego MDI  
+### <a name="to-insert-a-menustrip-into-an-mdi-drop-down-menu"></a>Aby wstawić element MenuStrip do menu rozwijanego MDI  
   
-1. Tworzenie formularza i ustaw jego <xref:System.Windows.Forms.Form.IsMdiContainer%2A> właściwość `true`.  
+1. Utwórz formularz i ustaw jego właściwość <xref:System.Windows.Forms.Form.IsMdiContainer%2A> na `true`.  
   
-2. Dodaj <xref:System.Windows.Forms.MenuStrip> do `Form1` i ustaw <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> właściwość <xref:System.Windows.Forms.MenuStrip> do `true`.  
+2. Dodaj <xref:System.Windows.Forms.MenuStrip> do `Form1` i ustaw właściwość <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> <xref:System.Windows.Forms.MenuStrip> na `true`.  
   
-3. Dodawanie pozycji menu najwyższego poziomu do `Form1` <xref:System.Windows.Forms.MenuStrip> i ustaw jego <xref:System.Windows.Forms.Control.Text%2A> właściwość `&File`.  
+3. Dodaj element menu najwyższego poziomu do <xref:System.Windows.Forms.MenuStrip> `Form1`i ustaw jego właściwość <xref:System.Windows.Forms.Control.Text%2A> na `&File`.  
   
-4. Dodaj trzy elementy podmenu do `&File` element menu i ustaw ich <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwości `&Open`, `&Import from`, i `E&xit`.  
+4. Dodaj trzy elementy podmenu do elementu menu `&File` i ustaw ich <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwości na `&Open`, `&Import from`i `E&xit`.  
   
-5. Dodaj dwa elementy podmenu do `&Import from` elementu podmenu i ustaw ich <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwości `&Word` i `&Excel`.  
+5. Dodaj dwa elementy podmenu do elementu podmenu `&Import from` i ustaw ich <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwości na `&Word` i `&Excel`.  
   
-6. Dodawanie formularza do projektu, Dodaj <xref:System.Windows.Forms.MenuStrip> do formularza, a następnie ustaw <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> właściwość `Form2` <xref:System.Windows.Forms.MenuStrip> do `true`.  
+6. Dodaj formularz do projektu, Dodaj <xref:System.Windows.Forms.MenuStrip> do formularza i ustaw właściwość <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> `Form2`<xref:System.Windows.Forms.MenuStrip> na `true`.  
   
-7. Dodawanie pozycji menu najwyższego poziomu do `Form2` <xref:System.Windows.Forms.MenuStrip> i ustaw jego <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwość `&File`.  
+7. Dodaj element menu najwyższego poziomu do <xref:System.Windows.Forms.MenuStrip> `Form2`i ustaw jego właściwość <xref:System.Windows.Forms.ToolStripItem.Text%2A> na `&File`.  
   
-8. Dodawanie podmenu do `&File` menu `Form2` w następującej kolejności: <xref:System.Windows.Forms.ToolStripSeparator>, `&Save`, `Save and &Close`, a inny <xref:System.Windows.Forms.ToolStripSeparator>.  
+8. Dodaj elementy podmenu do `&File` menu `Form2` w następującej kolejności: <xref:System.Windows.Forms.ToolStripSeparator>, `&Save`, `Save and &Close`i innych <xref:System.Windows.Forms.ToolStripSeparator>.  
   
-9. Ustaw <xref:System.Windows.Forms.MergeAction> i <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> właściwości `Form2` elementy menu, jak pokazano w poniższej tabeli.  
+9. Ustaw właściwości <xref:System.Windows.Forms.MergeAction> i <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> elementów menu `Form2`, jak pokazano w poniższej tabeli.  
   
-    |Element menu formularz2|Wartość MergeAction|Wartość MergeIndex|  
+    |Element menu Form2|MergeAction wartość|MergeIndex wartość|  
     |---------------------|-----------------------|----------------------|  
     |Plik|MatchOnly|-1|  
-    |Separator|Insert|2|  
-    |Zapisanie|Insert|3|  
-    |Zapisz i zamknij|Insert|4|  
-    |Separator|Insert|5|  
+    |Separator|Wstaw|2|  
+    |Zapisz|Wstaw|3|  
+    |Zapisz i Zamknij|Wstaw|4|  
+    |Separator|Wstaw|5|  
   
-10. Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Forms.Control.Click> zdarzenia `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. Utwórz procedurę obsługi zdarzeń dla zdarzenia <xref:System.Windows.Forms.Control.Click> <xref:System.Windows.Forms.ToolStripMenuItem>`&Open`.  
   
-11. W ramach programu obsługi zdarzeń, Wstaw kod, podobnie jak poniższy przykład kodu, aby utworzyć i wyświetlić nowe wystąpienia `Form2` jako elementy podrzędne MDI `Form1`.  
+11. W ramach procedury obsługi zdarzeń Wstaw kod podobny do następującego przykładu kodu, aby utworzyć i wyświetlić nowe wystąpienia `Form2` jako elementy podrzędne MDI `Form1`.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As System.Object, _  
@@ -75,7 +75,7 @@ W niektórych aplikacjach rodzaj okna podrzędnego interfejsu wielu dokumentów 
     }  
     ```  
   
-12. Umieść kod podobny do poniższego przykładu kodu w `&Open` <xref:System.Windows.Forms.ToolStripMenuItem> zarejestrować program obsługi zdarzeń.  
+12. Umieść kod podobny do następującego przykładu kodu w <xref:System.Windows.Forms.ToolStripMenuItem> `&Open`, aby zarejestrować procedurę obsługi zdarzeń.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  
@@ -89,14 +89,14 @@ W niektórych aplikacjach rodzaj okna podrzędnego interfejsu wielu dokumentów 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Dwa <xref:System.Windows.Forms.Form> kontrolki o nazwie `Form1` i `Form2`.  
+- Dwie <xref:System.Windows.Forms.Form> kontrolki o nazwach `Form1` i `Form2`.  
   
-- A <xref:System.Windows.Forms.MenuStrip> kontrolować na `Form1` o nazwie `menuStrip1`, a <xref:System.Windows.Forms.MenuStrip> kontrolować na `Form2` o nazwie `menuStrip2`.  
+- Kontrolka <xref:System.Windows.Forms.MenuStrip> na `Form1` o nazwie `menuStrip1`oraz kontrolce <xref:System.Windows.Forms.MenuStrip> na `Form2` o nazwie `menuStrip2`.  
   
-- Odwołuje się do <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
+- Odwołania do zestawów <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Tworzenie formularzy nadrzędnych MDI](../advanced/how-to-create-mdi-parent-forms.md)
-- [Instrukcje: Tworzenie formularzy podrzędnych MDI](../advanced/how-to-create-mdi-child-forms.md)
+- [Instrukcje: tworzenie formularzy nadrzędnych MDI](../advanced/how-to-create-mdi-parent-forms.md)
+- [Instrukcje: tworzenie formularzy podrzędnych MDI](../advanced/how-to-create-mdi-child-forms.md)
 - [MenuStrip, kontrolka — omówienie](menustrip-control-overview-windows-forms.md)

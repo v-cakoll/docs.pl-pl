@@ -2,16 +2,16 @@
 title: dotnet-Trace Tool-.NET Core
 description: Instalowanie i używanie narzędzia wiersza polecenia do śledzenia dotnet.
 ms.date: 11/21/2019
-ms.openlocfilehash: 64c931db5a18659707e832aaca910cfbbd6823c0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b19b159636fbf57fa2d461b398fcf9234aab491c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714436"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737647"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>Narzędzie do analizy wydajności śledzenia dotnet
 
-**Ten artykuł dotyczy:** ✓ .net Core 3,0 SDK i nowszych wersji
+**Ten artykuł ma zastosowanie do:** ✔️ .net Core 3,0 SDK i nowszych wersjach
 
 ## <a name="install-dotnet-trace"></a>Zainstaluj program dotnet-Trace
 
@@ -38,7 +38,7 @@ Narzędzie `dotnet-trace`:
 
 ## <a name="options"></a>Opcje
 
-- **`--version`**  
+- **`--version`**
 
   Wyświetla wersję narzędzia dotnet-Counters.
 

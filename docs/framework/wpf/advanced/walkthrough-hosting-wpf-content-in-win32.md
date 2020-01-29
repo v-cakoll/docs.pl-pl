@@ -1,17 +1,18 @@
 ---
-title: 'Wskazówki: Hosting zawartości WPF w Win32'
+title: Hostowanie zawartości WPF w Win32
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 4ac1690e7b11d908af9354e9d72097ab7db7fc61
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ff95b330ff67e916a4d27ef841e757998d847c8b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740255"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735309"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>Wskazówki: Hosting zawartości WPF w Win32
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia rozbudowane środowisko do tworzenia aplikacji. Jeśli jednak masz znaczną inwestycję w kod Win32, może być bardziej efektywne Dodawanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcji do aplikacji zamiast ponownego zapisywania oryginalnego kodu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapewnia bezpośredni mechanizm hostingu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości w oknie Win32.  

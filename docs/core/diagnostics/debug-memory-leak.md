@@ -3,16 +3,16 @@ title: Debuguj samouczek przecieku pamięci
 description: Informacje o debugowaniu przecieku pamięci w programie .NET Core.
 ms.topic: tutorial
 ms.date: 12/17/2019
-ms.openlocfilehash: cb137503cbc81f5ab9438dadcf1dc1c6750a1ca8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715607"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737730"
 ---
 # <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Samouczek: debugowanie przecieku pamięci w programie .NET Core
 
-**Ten artykuł dotyczy: ✓** .net Core 3,0 SDK i nowszych wersji
+**Ten artykuł ma zastosowanie do:** ✔️ .net Core 3,0 SDK i nowszych wersjach
 
 W tym samouczku przedstawiono narzędzia służące do analizowania przecieków pamięci w środowisku .NET Core.
 

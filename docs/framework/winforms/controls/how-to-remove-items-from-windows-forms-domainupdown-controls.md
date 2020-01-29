@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki DomainUpDown'
+title: Usuń elementy z kontrolek DomainUpDown
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - DomainUpDown control [Windows Forms], removing items from
 - spin button control [Windows Forms], removing items
 ms.assetid: e70f5cbc-b497-41a9-975a-344c00e56ed2
-ms.openlocfilehash: f56bc2b7b7b8a783ac298b220c83281f38da29da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e52af5c5add4fda93e2b51c8afdb90c92e8d2f62
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662349"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735772"
 ---
-# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki DomainUpDown
-Możesz usunąć elementy z formularzy Windows <xref:System.Windows.Forms.DomainUpDown> kontroli przez wywołanie metody <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> lub <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> metody <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> klasy. <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> Metoda usuwa określony element, podczas gdy <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> metoda usuwa element według ich pozycji.  
+# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Porady: dodawanie i usuwanie elementów za pomocą formantu DomainUpDown
+Elementy można usunąć z kontrolki <xref:System.Windows.Forms.DomainUpDown> Windows Forms, wywołując metodę <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> lub <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> klasy <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection>. Metoda <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> usuwa określony element, podczas gdy metoda <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> usuwa element według jego położenia.  
   
 ### <a name="to-remove-an-item"></a>Aby usunąć element  
   
-- Użyj <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> metody <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> klasy, aby usunąć element według nazwy.  
+- Użyj metody <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> klasy <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection>, aby usunąć element według nazwy.  
   
     ```vb  
     DomainUpDown1.Items.Remove("noodles")  
@@ -35,9 +35,9 @@ Możesz usunąć elementy z formularzy Windows <xref:System.Windows.Forms.Domain
     domainUpDown1->Items->Remove("noodles");  
     ```  
   
-     —lub—  
+     lub  
   
-- Użyj <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> metodę, aby usunąć element według ich pozycji.  
+- Użyj metody <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A>, aby usunąć element według jego położenia.  
   
     ```vb  
     ' Removes the first item in the list.  

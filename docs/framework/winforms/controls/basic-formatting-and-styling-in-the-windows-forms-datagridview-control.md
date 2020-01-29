@@ -1,61 +1,61 @@
 ---
-title: Podstawowe formatowanie i style w formancie DataGridView formularzy systemu Windows
+title: Podstawowe formatowanie i style w formancie DataGridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], formatting and styling
 - data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
-ms.openlocfilehash: 5e967c1bbe54095cc11e48b014600158da7fe6a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d295718b7bd4f3bc4c5f63b6e6cb911f733525fe
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011687"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731999"
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Podstawowe formatowanie i style w formancie DataGridView formularzy systemu Windows
-`DataGridView` Kontroli można łatwo zdefiniować podstawowego wyglądu komórek i formatowania wyświetlania wartości komórek. Można zdefiniować wygląd i formatowanie style pojedyncze komórki, komórki w określonych kolumn i wierszy lub wszystkie komórki w formancie przez ustawienie właściwości `DataGridViewCellStyle` obiekty dostępne za pośrednictwem różnych `DataGridView` właściwości formantu. Ponadto można modyfikować te style dynamicznie na podstawie czynników, takich jak wartość komórki obsługi `CellFormatting` zdarzeń.  
+Formant `DataGridView` ułatwia Definiowanie podstawowego wyglądu komórek i formatowanie wyświetlania wartości komórek. Można definiować wygląd i style formatowania dla poszczególnych komórek, dla komórek w określonych kolumnach i wierszach lub dla wszystkich komórek w kontrolce przez ustawienie właściwości obiektów `DataGridViewCellStyle`, do których dostęp odbywa się za pomocą różnych właściwości kontrolki `DataGridView`. Ponadto można modyfikować te style dynamicznie na podstawie takich czynników, jak wartość komórki przez obsługę zdarzenia `CellFormatting`.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Zmiana obramowania i style linii siatki w kontrolce DataGridView formularzy Windows Forms](change-the-border-and-gridline-styles-in-the-datagrid.md)  
- W tym artykule opisano sposób ustawiania `DataGridView` właściwości, które definiują wygląd obramowania formantu oraz linie granic między komórkami.  
+ [Instrukcje: zmienianie stylów obramowania i linii siatki w kontrolce DataGridView formularzy Windows Forms](change-the-border-and-gridline-styles-in-the-datagrid.md)  
+ Opisuje sposób ustawiania właściwości `DataGridView`, które definiują wygląd obramowania kontrolki i linie granicy między komórkami.  
   
  [Style komórki w kontrolce DataGridView formularzy Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)  
- W tym artykule opisano `DataGridViewCellStyle` klasy i interakcje właściwości tego typu, aby zdefiniować sposób wyświetlania komórek w formancie.  
+ Opisuje klasę `DataGridViewCellStyle` i sposób, w jaki właściwości tego typu są używane do definiowania sposobu wyświetlania komórek w kontrolce.  
   
- [Instrukcje: Ustawianie domyślnych stylów komórki dla kontrolki DataGridView formularzy Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
- Opisuje sposób używania `DataGridViewCellStyle` właściwości, aby zdefiniować domyślny wygląd komórki w określonych wierszy i kolumn i w całej kontrolce.  
+ [Instrukcje: ustawianie domyślnych stylów komórki dla kontrolki DataGridView formularzy Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+ Opisuje sposób użycia właściwości `DataGridViewCellStyle` do definiowania domyślnego wyglądu komórek w określonych wierszach i kolumnach oraz w całej kontrolce.  
   
- [Instrukcje: Formatowanie danych w Windows formantu DataGridView formularzy](how-to-format-data-in-the-windows-forms-datagridview-control.md)  
- W tym artykule opisano sposób formatowania wartości wyświetlane komórki za pomocą `DataGridViewCellStyle` właściwości.  
+ [Instrukcje: formatowanie danych w kontrolce DataGridView formularzy Windows Forms](how-to-format-data-in-the-windows-forms-datagridview-control.md)  
+ Opisuje sposób formatowania wartości wyświetlania komórki przy użyciu właściwości `DataGridViewCellStyle`.  
   
- [Instrukcje: Ustawianie stylów czcionek i koloru w kontrolce DataGridView formularzy Windows Forms](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
- Opisuje sposób używania `DefaultCellStyle` właściwości do ustawienia podstawowe wyświetlić właściwości dla wszystkich komórek w formancie.  
+ [Instrukcje: ustawianie stylów czcionek i koloru w kontrolce DataGridView formularzy Windows Forms](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
+ Opisuje sposób użycia właściwości `DefaultCellStyle` do ustawiania podstawowych właściwości wyświetlania dla wszystkich komórek w kontrolce.  
   
- [Instrukcje: Ustawianie przemiennych wierszy dla kontrolki DataGridView formularzy Windows Forms](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
- Opisuje sposób tworzenia efekt jak rejestr w kontroli przy użyciu przemienne wiersze, które są wyświetlane inaczej.  
+ [Instrukcje: ustawianie alternatywnych stylów wierszy dla kontrolki DataGridView formularzy Windows Forms](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
+ Opisuje sposób tworzenia efektu przypominającego finanse w formancie przy użyciu przemiennych wierszy, które są wyświetlane inaczej.  
   
- [Instrukcje: Użycie szablonu wiersza do dostosowania wierszy w kontrolce DataGridView formularzy Windows Forms](use-the-row-template-to-customize-rows-in-the-datagrid.md)  
- Opisuje sposób używania `RowTemplate` właściwości do ustawienia właściwości wiersza, które będą używane dla wszystkich wierszy w formancie.  
+ [Instrukcje: użycie szablonu wiersza do dostosowania wierszy w kontrolce DataGridView formularzy Windows Forms](use-the-row-template-to-customize-rows-in-the-datagrid.md)  
+ Opisuje sposób użycia właściwości `RowTemplate` do ustawiania właściwości wiersza, które będą używane dla wszystkich wierszy w formancie.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.DataGridView>  
- Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridView> kontroli.  
+ Zawiera dokumentację referencyjną dla kontrolki <xref:System.Windows.Forms.DataGridView>.  
   
  <xref:System.Windows.Forms.DataGridViewCellStyle>  
- Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridViewCellStyle> klasy.  
+ Zawiera dokumentację referencyjną dla klasy <xref:System.Windows.Forms.DataGridViewCellStyle>.  
   
  <xref:System.Windows.Forms.DataGridView.CellFormatting>  
- Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridView.CellFormatting> zdarzeń.  
+ Zawiera dokumentację referencyjną dla zdarzenia <xref:System.Windows.Forms.DataGridView.CellFormatting>.  
   
  <xref:System.Windows.Forms.DataGridView.RowTemplate%2A>  
- Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> właściwości.  
+ Zawiera dokumentację referencyjną dla właściwości <xref:System.Windows.Forms.DataGridView.RowTemplate%2A>.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Dostosowywanie kontrolki DataGridView formularzy Windows Forms](customizing-the-windows-forms-datagridview-control.md)  
- Zawiera tematy, które opisują niestandardowego rysowania <xref:System.Windows.Forms.DataGridView> komórek i wierszy oraz tworzenie pochodnych komórki, kolumny i typy wierszy.  
+ Zawiera tematy opisujące niestandardowe malowanie <xref:System.Windows.Forms.DataGridView> komórek i wierszy oraz tworzenie pochodnej komórki, kolumny i typów wierszy.  
   
  [Podstawowe funkcje komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)  
- Zawiera tematy, które opisują często używanych właściwości komórek, wierszy i kolumn.  
+ Zawiera tematy opisujące często używane właściwości komórek, wierszy i kolumn.  
   
 ## <a name="see-also"></a>Zobacz także
 

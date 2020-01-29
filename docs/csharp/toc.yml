@@ -1317,14 +1317,15 @@
           items:
             - name: Typy wartości
               items:
-                - name: Funkcje typów wartości
-                  href: language-reference/keywords/value-types.md
+                - name: Omówienie
+                  href: language-reference/builtin-types/value-types.md
+                  displayName: 'value types, simple types'
                 - name: Typy liczb całkowitych
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                   href: language-reference/builtin-types/integral-numeric-types.md
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                 - name: Zmiennoprzecinkowe rodzaje wartości numerycznych
-                  displayName: 'float, decimal, double, rational, real, literal'
                   href: language-reference/builtin-types/floating-point-numeric-types.md
+                  displayName: 'float, decimal, double, rational, real, literal'
                 - name: Wbudowane konwersje liczbowe
                   href: language-reference/builtin-types/numeric-conversions.md
                 - name: bool
@@ -1364,8 +1365,6 @@
               items:
                 - name: Tabela typów wbudowanych
                   href: language-reference/keywords/built-in-types-table.md
-                - name: Tabela typów wartości
-                  href: language-reference/keywords/value-types-table.md
                 - name: Formatowanie tabeli wyników liczbowych
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Modyfikatory

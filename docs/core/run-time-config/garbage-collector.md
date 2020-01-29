@@ -3,12 +3,12 @@ title: Ustawienia konfiguracji modułu wyrzucania elementów bezużytecznych
 description: Informacje o ustawieniach czasu wykonywania w celu skonfigurowania sposobu, w jaki moduł zbierający elementy bezużyteczne zarządza pamięcią dla aplikacji platformy .NET Core.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 24e5c47de781e7eed5f76d2c551cac2dce1e8f05
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900093"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733518"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opcje konfiguracji czasu wykonywania dla wyrzucania elementów bezużytecznych
 
@@ -38,10 +38,13 @@ Użyj następujących ustawień, aby wybrać typy wyrzucania elementów bezużyt
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.Server` | `false` — stacja robocza<br/>`true` — serwer | .NET Core 1.0 |
+| **Właściwość programu MSBuild** | `ServerGarbageCollection` | `false` — stacja robocza<br/>`true` — serwer | .NET Core 1.0 |
 | **Zmienna środowiskowa** | `COMPlus_gcServer` | `0` — stacja robocza<br/>`1` — serwer | .NET Core 1.0 |
 | **App. config dla .NET Framework** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false` — stacja robocza<br/>`true` — serwer |  |
 
-Przykład:
+### <a name="examples"></a>Przykłady
+
+plik *runtimeconfig. JSON* :
 
 ```json
 {
@@ -53,6 +56,18 @@ Przykład:
 }
 ```
 
+Plik projektu:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+  </PropertyGroup>
+
+</Project>
+```
+
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System. GC. współbieżne/COMPlus_gcConcurrent
 
 - Określa, czy jest włączone wyrzucanie elementów bezużytecznych w tle.
@@ -62,10 +77,13 @@ Przykład:
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.Concurrent` | `true` — w tle GC<br/>`false` — niewspółbieżne GC | .NET Core 1.0 |
+| **Właściwość programu MSBuild** | `ConcurrentGarbageCollection` | `true` — w tle GC<br/>`false` — niewspółbieżne GC | .NET Core 1.0 |
 | **Zmienna środowiskowa** | `COMPlus_gcConcurrent` | `true` — w tle GC<br/>`false` — niewspółbieżne GC | .NET Core 1.0 |
 | **App. config dla .NET Framework** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true` — w tle GC<br/>`false` — niewspółbieżne GC |  |
 
-Przykład:
+### <a name="examples"></a>Przykłady
+
+plik *runtimeconfig. JSON* :
 
 ```json
 {
@@ -75,6 +93,18 @@ Przykład:
       }
    }
 }
+```
+
+Plik projektu:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="manage-resource-usage"></a>Zarządzanie użyciem zasobów
@@ -261,10 +291,13 @@ Przykład:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.RetainVM` | `false` — wydanie do systemu operacyjnego<br/>`true` — Umieść w stanie wstrzymania| .NET Core 1.0 |
+| **runtimeconfig. JSON** | `System.GC.RetainVM` | `false` — wydanie do systemu operacyjnego<br/>`true` — Umieść w stanie wstrzymania | .NET Core 1.0 |
+| **Właściwość programu MSBuild** | `RetainVMGarbageCollection` | `false` — wydanie do systemu operacyjnego<br/>`true` — Umieść w stanie wstrzymania | .NET Core 1.0 |
 | **Zmienna środowiskowa** | `COMPlus_GCRetainVM` | `0` — wydanie do systemu operacyjnego<br/>`1` — Umieść w stanie wstrzymania | .NET Core 1.0 |
 
-Przykład:
+### <a name="examples"></a>Przykłady
+
+plik *runtimeconfig. JSON* :
 
 ```json
 {
@@ -274,6 +307,18 @@ Przykład:
       }
    }
 }
+```
+
+Plik projektu:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="large-pages"></a>Duże strony

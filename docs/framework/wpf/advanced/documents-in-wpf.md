@@ -1,5 +1,5 @@
 ---
-title: Dokumenty w WPF
+title: Dokumenty
 ms.date: 03/30/2017
 helpviewer_keywords:
 - documents [WPF], packaging
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 36704d56b66de977ac7f63fd7e766c925ef9023b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: eccb333b8e9a71ea30454f8bdf9fd2bf6dc90b9b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974682"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737972"
 ---
 # <a name="documents-in-wpf"></a>Dokumenty w WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje szeroką gamę funkcji dokumentu, które umożliwiają tworzenie zawartości o wysokiej wierności, która została zaprojektowana tak, aby była łatwiej dostępna i odczytywana niż w poprzednich generacjach systemu Windows. Oprócz ulepszonych możliwości i jakości, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia również zintegrowane usługi do wyświetlania, pakowania i zabezpieczania dokumentów. Ten temat zawiera wprowadzenie do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] typów dokumentów i pakowania dokumentów.  
@@ -46,7 +46,7 @@ ms.locfileid: "73974682"
  Wyświetlanie zawartości dokumentu przepływu jest obsługiwane przez trzy kontrolki: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>i <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader> obejmuje funkcje, które umożliwiają użytkownikowi dynamiczne wybieranie różnych trybów wyświetlania, w tym tryb wyświetlania pojedynczej strony (strona w czasie), tryb wyświetlania dwustronicowego (do odczytu książki) i przewijanie ciągłe (w dół) Tryb wyświetlania.  Aby uzyskać więcej informacji na temat tych trybów wyświetlania, zobacz <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  Jeśli nie potrzebujesz możliwości dynamicznego przełączania między różnymi trybami wyświetlania, <xref:System.Windows.Controls.FlowDocumentPageViewer> i <xref:System.Windows.Controls.FlowDocumentScrollViewer> zapewniają jaśniejszą, wyglądającą zawartość przepływów, które są rozwiązane w określonym trybie wyświetlania.  
+ <xref:System.Windows.Controls.FlowDocumentReader> obejmuje funkcje, które umożliwiają użytkownikowi dynamiczne wybieranie różnych trybów wyświetlania, w tym tryb wyświetlania pojedynczej strony (strona w czasie), tryb wyświetlania dwustronicowego (do odczytu książki) i przewijanie ciągłego (w dół).  Aby uzyskać więcej informacji na temat tych trybów wyświetlania, zobacz <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  Jeśli nie potrzebujesz możliwości dynamicznego przełączania między różnymi trybami wyświetlania, <xref:System.Windows.Controls.FlowDocumentPageViewer> i <xref:System.Windows.Controls.FlowDocumentScrollViewer> zapewniają jaśniejszą, wyglądającą zawartość przepływów, które są rozwiązane w określonym trybie wyświetlania.  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer i FlowDocumentScrollViewer  
  <xref:System.Windows.Controls.FlowDocumentPageViewer> wyświetla zawartość w trybie wyświetlania strony w czasie, podczas gdy <xref:System.Windows.Controls.FlowDocumentScrollViewer> wyświetla zawartość w trybie przewijania ciągłego.  Oba <xref:System.Windows.Controls.FlowDocumentPageViewer> i <xref:System.Windows.Controls.FlowDocumentScrollViewer> są naprawione do określonego trybu wyświetlania. Należy porównać do <xref:System.Windows.Controls.FlowDocumentReader>, która obejmuje funkcje, które umożliwiają użytkownikowi dynamiczne wybieranie różnych trybów wyświetlania (zgodnie z wyliczeniem <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>), przy kosztach większej ilości zasobów niż <xref:System.Windows.Controls.FlowDocumentPageViewer> lub <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  

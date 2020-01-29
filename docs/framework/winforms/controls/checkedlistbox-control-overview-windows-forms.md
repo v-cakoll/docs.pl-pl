@@ -1,5 +1,5 @@
 ---
-title: CheckedListBox — Informacje o formancie [Formularze systemu Windows]
+title: CheckedListBox, kontrolka — omówienie
 ms.date: 03/30/2017
 f1_keywords:
 - CheckedListBox
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - check marks
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
-ms.openlocfilehash: 8ff23ff449bc3b90fbd51bab1d73f8a7268bee05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3825fccbd881a3081d0f9954c81d18df5183325
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956367"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736976"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox — Informacje o formancie [Formularze systemu Windows]
-Formularze Windows <xref:System.Windows.Forms.CheckedListBox> rozszerza formant <xref:System.Windows.Forms.ListBox> kontroli. Odbywa się prawie wszystko, że pole listy, a także można wyświetlić znacznik wyboru obok elementów na liście. Inne różnice między dwoma formantami są, że zaznaczone listy pola tylko do obsługi <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; i że zaznaczone pole wyboru pól listy może mieć tylko jeden element zaznaczone żadne. Pamiętaj, że wybrany element zostanie wyróżniona na formularzu, a nie jest taka sama jak zaznaczony element.  
+Formant Windows Forms <xref:System.Windows.Forms.CheckedListBox> rozszerza formant <xref:System.Windows.Forms.ListBox>. Wykonuje niemal wszystko, że pole listy działa i może również wyświetlać znacznik wyboru obok pozycji elementy na liście. Inne różnice między tymi dwoma kontrolkami to zaznaczone pola listy obsługujące tylko <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>. zaznaczone pola listy mogą mieć tylko jeden element lub nie wybrano żadnego elementu. Należy zauważyć, że wybrany element zostanie wyróżniony w formularzu i nie jest taki sam jak zaznaczony element.  
   
- Zaznaczone pola listy może mieć elementy dodane przy użyciu czasu projektowania **Edytor kolekcji ciągów** lub może ich elementy dodane dynamicznie z kolekcji w czasie wykonywania za pomocą <xref:System.Windows.Forms.CheckedListBox.Items%2A> właściwości. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie i usuwanie elementów z Windows Forms formantu ComboBox, ListBox lub CheckedListBox](add-and-remove-items-from-a-wf-combobox.md).  
+ Zaznaczone pola listy mogą mieć elementy dodawane w czasie projektowania przy użyciu **edytora kolekcji ciągów** lub ich elementy mogą być dodawane dynamicznie z kolekcji w czasie wykonywania przy użyciu właściwości <xref:System.Windows.Forms.CheckedListBox.Items%2A>. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie i usuwanie elementów z Windows Forms ComboBox, ListBox lub formant CheckedListBox](add-and-remove-items-from-a-wf-combobox.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -27,4 +27,4 @@ Formularze Windows <xref:System.Windows.Forms.CheckedListBox> rozszerza formant 
 - <xref:System.Windows.Forms.ListControl.DataSource%2A?displayProperty=nameWithType>
 - [ListBox, kontrolka — omówienie](listbox-control-overview-windows-forms.md)
 - [Kontrolki formularzy Windows Forms używane do obsługi opcji list](windows-forms-controls-used-to-list-options.md)
-- [Instrukcje: Określić elementów jako zaznaczone w formancie CheckedListBox formularzy Windows](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)
+- [Instrukcje: określanie zaznaczonych elementów w kontrolce CheckedListBox formularzy Windows Forms](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)

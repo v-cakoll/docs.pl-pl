@@ -2,12 +2,12 @@
 title: Zaimplementuj odporne Entity Framework Core połączenia SQL
 description: Dowiedz się, jak zaimplementować odporne Entity Framework Core połączenia SQL. Ta technika jest szczególnie ważna w przypadku korzystania z Azure SQL Database w chmurze.
 ms.date: 10/16/2018
-ms.openlocfilehash: 3128cf1be7f2dc8804a002556db232f4e0fc8c33
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: 7899fc263ab3cde6ac2410ca614a7e5fa285576b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094051"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732727"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>Zaimplementuj odporne Entity Framework Core połączenia SQL
 
@@ -88,7 +88,7 @@ public async Task<IActionResult> UpdateProduct(
 }
 ```
 
-Pierwszy <xref:Microsoft.EntityFrameworkCore.DbContext> jest `_catalogContext`, a drugi `DbContext` znajduje się w obrębie obiektu `_integrationEventLogService`. Akcja zatwierdzania jest wykonywana dla wszystkich `DbContext` obiektów przy użyciu strategii wykonywania EF.
+Pierwszy <xref:Microsoft.EntityFrameworkCore.DbContext> jest `_catalogContext`, a drugi `DbContext` znajduje się w obrębie obiektu `_catalogIntegrationEventService`. Akcja zatwierdzania jest wykonywana dla wszystkich `DbContext` obiektów przy użyciu strategii wykonywania EF.
 
 Aby osiągnąć tę wiele `DbContext` zatwierdzenia, `SaveEventAndCatalogContextChangesAsync` używa klasy `ResilientTransaction`, jak pokazano w poniższym kodzie:
 

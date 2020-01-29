@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: manipulowanie paskami w kontrolce DataGridView formularzy systemu Windows'
+title: Manipulowanie paskami w formancie DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - bands [Windows Forms], manipulating in Windows Forms
 - DataGridView control [Windows Forms], manipulating bands
 ms.assetid: 1ea3470e-480f-4edc-bcbd-51373eca3856
-ms.openlocfilehash: 5e62f5d31b9d24469455ab31f9771ebc81f74967
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 89fdf41a592ef241935f1f71157588a392320df3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592343"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736117"
 ---
-# <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>Instrukcje: manipulowanie paskami w kontrolce DataGridView formularzy systemu Windows
-Poniższy przykład kodu pokazuje różne sposoby manipulowania <xref:System.Windows.Forms.DataGridView> wierszy i kolumn przy użyciu właściwości <xref:System.Windows.Forms.DataGridViewBand> klasa, z której <xref:System.Windows.Forms.DataGridViewRow> i <xref:System.Windows.Forms.DataGridViewColumn> klas pochodnych.  
+# <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>Porady: manipulowanie paskami w formancie DataGridView formularzy systemu Windows
+Poniższy przykład kodu przedstawia różne sposoby manipulowania <xref:System.Windows.Forms.DataGridView> wierszami i kolumnami przy użyciu właściwości klasy <xref:System.Windows.Forms.DataGridViewBand>, z której pochodzą klasy <xref:System.Windows.Forms.DataGridViewRow> i <xref:System.Windows.Forms.DataGridViewColumn>.  
   
 ## <a name="example"></a>Przykład  
  [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#0)]
@@ -28,7 +28,7 @@ Poniższy przykład kodu pokazuje różne sposoby manipulowania <xref:System.Win
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów system, system. Drawing i system. Windows. Forms.  
   
 ## <a name="see-also"></a>Zobacz także
 

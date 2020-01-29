@@ -1,5 +1,5 @@
 ---
-title: ColorDialog — Informacje o składniku (Formularze systemu Windows)
+title: ColorDialog — Informacje o składniku
 ms.date: 03/30/2017
 f1_keywords:
 - ColorDialog
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - color dialog box [Windows Forms], about color dialog box
 - ColorDialog component [Windows Forms], about ColorDialog
 ms.assetid: 6dbdd8f0-f697-4728-bb09-7ea156f6d800
-ms.openlocfilehash: 284d42218fb4fbce873325b1e45c883d51eefab8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48d9d5072335908f85e65933dadafb1b69f28528
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956341"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736963"
 ---
 # <a name="colordialog-component-overview-windows-forms"></a>ColorDialog — Informacje o składniku (Formularze systemu Windows)
-Formularze Windows <xref:System.Windows.Forms.ColorDialog> składnik to wstępnie skonfigurowane okno dialogowe, które pozwala użytkownikowi wybrać kolor z palety i dodać kolorów niestandardowych do tej palety. Jest to ten sam okno dialogowe, które pojawi się w innych aplikacji opartych na Windows do wybierania kolorów. Użyj go w ramach aplikacji opartych na Windows jako proste rozwiązanie audytów Konfigurowanie własnego okno dialogowe.  
+Składnik <xref:System.Windows.Forms.ColorDialog> Windows Forms to wstępnie skonfigurowane okno dialogowe, które umożliwia użytkownikowi wybranie koloru z palety i dodanie niestandardowych kolorów do tej palety. To samo okno dialogowe, które jest wyświetlane w innych aplikacjach opartych na systemie Windows, aby wybrać kolory. Użyj go w aplikacji opartej na systemie Windows jako proste rozwiązanie zamiast konfigurować własne okno dialogowe.  
   
- Kolor wybrany w oknie dialogowym są zwracane w <xref:System.Windows.Forms.ColorDialog.Color%2A> właściwości. Jeśli <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> właściwość jest ustawiona na `false`, przycisk "Definiowanie kolorów niestandardowych" jest wyłączona, a użytkownik jest ograniczone do wstępnie zdefiniowanych kolorów palety. Jeśli <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> właściwość jest ustawiona na `true`, użytkownik może wybrać kolory szarych. Aby wyświetlić okno dialogowe, należy wywołać jej <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metody.  
+ Kolor wybrany w oknie dialogowym jest zwracany we właściwości <xref:System.Windows.Forms.ColorDialog.Color%2A>. Jeśli właściwość <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> jest ustawiona na `false`, przycisk "Definiuj kolory niestandardowe" jest wyłączony, a użytkownik jest ograniczony do wstępnie zdefiniowanych kolorów w palecie. Jeśli właściwość <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> jest ustawiona na `true`, użytkownik nie może wybrać kolorami. Aby wyświetlić okno dialogowe, należy wywołać jego metodę <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog, składnik](colordialog-component-windows-forms.md)
 - [Kontrolki i składniki okien dialogowych](dialog-box-controls-and-components-windows-forms.md)
-- [Instrukcje: Zmienianie wyglądu składnika ColorDialog formularzy Windows](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)
+- [Instrukcje: zmienianie wyglądu składnika ColorDialog formularzy Windows Forms](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: manipulowanie kolumnami w kontrolce DataGridView formularzy systemu Windows'
+title: Manipulowanie kolumnami w formancie DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - columns [Windows Forms], manipulating
 - data grids [Windows Forms], manipulating columns
 ms.assetid: d8cfe6b3-bbab-4182-bec2-0517d9f1eaf6
-ms.openlocfilehash: 1f964314b9fe2f4b1ca235f9e74ca80391a58105
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 485df2594b8f07df784ebbefd9011ca562556eb8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592332"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736096"
 ---
-# <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>Instrukcje: manipulowanie kolumnami w kontrolce DataGridView formularzy systemu Windows
+# <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>Porady: manipulowanie kolumnami w formancie DataGridView formularzy systemu Windows
 
-Poniższy przykład kodu pokazuje różne sposoby manipulowania <xref:System.Windows.Forms.DataGridView> kolumn przy użyciu właściwości <xref:System.Windows.Forms.DataGridViewColumn> klasy.
+Poniższy przykład kodu przedstawia różne sposoby manipulowania <xref:System.Windows.Forms.DataGridView> kolumnami przy użyciu właściwości klasy <xref:System.Windows.Forms.DataGridViewColumn>.
 
 ## <a name="example"></a>Przykład
 
@@ -31,7 +31,7 @@ Poniższy przykład kodu pokazuje różne sposoby manipulowania <xref:System.Win
 
 Ten przykład wymaga:
 
-- Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.
+- Odwołania do zestawów system, system. Drawing i system. Windows. Forms.
 
 ## <a name="see-also"></a>Zobacz także
 

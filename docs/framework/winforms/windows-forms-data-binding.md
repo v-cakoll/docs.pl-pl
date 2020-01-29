@@ -1,5 +1,5 @@
 ---
-title: Powiązywanie danych formularzy systemu Windows
+title: Powiązanie danych
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms]
@@ -7,64 +7,64 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: ed456807137e8cf7594bc50eb0eebb67b88e6b40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68871db848ab46b88865e668f27f09972e8debcf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800116"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734610"
 ---
 # <a name="windows-forms-data-binding"></a>Powiązywanie danych formularzy systemu Windows
-Powiązanie danych w formularzach Windows Forms zapewnia sposób wyświetlania i zmiany informacji ze źródła danych w kontrolkach w formularzu. Możesz powiązać zarówno źródeł danych tradycyjnych, jak i praktycznie dowolne strukturę, która zawiera dane.  
+Powiązanie danych w Windows Forms umożliwia wyświetlanie i wprowadzanie zmian w informacjach ze źródła danych w kontrolkach w formularzu. Można powiązać zarówno tradycyjne źródła danych, jak i prawie wszystkie struktury zawierające dane.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wiązanie danych i formularzy Windows Forms](data-binding-and-windows-forms.md)  
- Zawiera omówienie powiązanie danych w formularzach Windows Forms.  
+ Zawiera omówienie powiązań danych w Windows Forms.  
   
  [Źródła danych obsługiwane przez formularze Windows Forms](data-sources-supported-by-windows-forms.md)  
- W tym artykule opisano źródeł danych, które mogą służyć za pomocą interfejsu Windows Forms.  
+ Opisuje źródła danych, które mogą być używane z Windows Forms.  
   
  [Interfejsy dotyczące wiązania danych](interfaces-related-to-data-binding.md)  
- Opisano kilka interfejsów używane dla wiązania danych Windows Forms.  
+ Opisuje kilka interfejsów używanych z Windows Forms powiązania danych.  
   
- [Instrukcje: Nawigowanie po danych w formularzach Windows Forms](how-to-navigate-data-in-windows-forms.md)  
- Pokazuje, jak przechodzenie przez elementy w źródle danych.  
+ [Instrukcje: nawigowanie po danych w formularzach Windows Forms](how-to-navigate-data-in-windows-forms.md)  
+ Pokazuje, w jaki sposób nawigować przez elementy w źródle danych.  
   
  [Powiadomienie o zmianie w powiązaniu danych w formularzach Windows Forms](change-notification-in-windows-forms-data-binding.md)  
- W tym artykule opisano różne rodzaje powiadomienia o zmianie dla powiązania danych Windows Forms.  
+ Opisuje różne typy powiadomień o zmianach dla Windows Forms powiązania danych.  
   
- [Instrukcje: Implementowanie interfejsu INotifyPropertyChanged](how-to-implement-the-inotifypropertychanged-interface.md)  
- Pokazuje, jak zaimplementować <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu. Interfejs komunikuje się kontrolki powiązane zmiany właściwości w obiekcie firmy  
+ [Instrukcje: implementowanie interfejsu INotifyPropertyChanged](how-to-implement-the-inotifypropertychanged-interface.md)  
+ Pokazuje, jak zaimplementować interfejs <xref:System.ComponentModel.INotifyPropertyChanged>. Interfejs komunikuje się z kontrolką powiązaną ze zmianą właściwości w obiekcie biznesowym  
   
- [Instrukcje: Stosowanie wzorca PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)  
- Przedstawia sposób zastosowania *PropertyName*wzorzec zmieniono właściwości formant użytkownika interfejsu Windows Forms.  
+ [Instrukcje: stosowanie wzorca PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)  
+ Pokazuje, jak zastosować wzorzec zmiany *PropertyName*do właściwości kontrolki użytkownika Windows Forms.  
   
- [Instrukcje: Implementowanie interfejsu ITypedList](how-to-implement-the-itypedlist-interface.md)  
- Pokazuje, jak włączyć funkcję odnajdywania schematu, który może być powiązana lista implementując <xref:System.ComponentModel.ITypedList> interfejsu.  
+ [Instrukcje: implementowanie interfejsu ITypedList](how-to-implement-the-itypedlist-interface.md)  
+ Pokazuje, jak włączyć odnajdywanie schematu dla listy możliwej do powiązania przez implementację interfejsu <xref:System.ComponentModel.ITypedList>.  
   
- [Instrukcje: Implementowanie interfejsu IListSource](how-to-implement-the-ilistsource-interface.md)  
- Pokazuje, jak zaimplementować <xref:System.ComponentModel.IListSource> nie implementuje interfejsu, aby utworzyć klasę, które można powiązać <xref:System.Collections.IList>, ale zawiera listę z innej lokalizacji.  
+ [Instrukcje: implementowanie interfejsu IListSource](how-to-implement-the-ilistsource-interface.md)  
+ Pokazuje, w jaki sposób zaimplementować interfejs <xref:System.ComponentModel.IListSource> w celu utworzenia klasy możliwej do powiązania nie implementuje <xref:System.Collections.IList>, ale zawiera listę z innej lokalizacji.  
   
- [Instrukcje: Upewnij się, wiele formantów powiązanych z tym samym źródłem danych pozostają zsynchronizowane](multiple-controls-bound-to-data-source-synchronized.md)  
- Pokazuje, jak obsługiwać <xref:System.Windows.Forms.BindingSource.BindingComplete> zdarzeń, aby upewnić się, wszystkie formanty związany ze źródłem danych pozostają zsynchronizowane.  
+ [Instrukcje: zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych](multiple-controls-bound-to-data-source-synchronized.md)  
+ Pokazuje, jak obsłużyć zdarzenie <xref:System.Windows.Forms.BindingSource.BindingComplete>, aby upewnić się, że wszystkie kontrolki powiązane ze źródłem danych pozostaną zsynchronizowane.  
   
- [Instrukcje: Upewnij się, że zaznaczony wiersz w tabeli podrzędnej pozostaje w prawidłowym położeniu](ensure-the-selected-row-in-a-child-table-correct.md)  
- Pokazuje, jak zapewnić wybranego wiersza w tabeli podrzędnej nie zmienia się, w przypadku zmian z polem tabeli nadrzędnej.  
+ [Instrukcje: zapewnienie pozostawania wybranego wiersza w tabeli podrzędnej w prawidłowym położeniu](ensure-the-selected-row-in-a-child-table-correct.md)  
+ Pokazuje, jak upewnić się, że wybrany wiersz tabeli podrzędnej nie zmienia się, gdy zostanie wprowadzona zmiana w polu tabeli nadrzędnej.  
   
- Zobacz też [interfejsy powiązane z wiązaniem danych](interfaces-related-to-data-binding.md), [jak: Nawigowanie po danych w formularzach Windows Forms](how-to-navigate-data-in-windows-forms.md), i [jak: Tworzenie prostego formantu powiązanego na formularzu Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md).  
+ Zobacz również [interfejsy powiązane z powiązaniem danych](interfaces-related-to-data-binding.md), [instrukcje: nawigowanie po danych w Windows Forms](how-to-navigate-data-in-windows-forms.md)i [instrukcje: tworzenie prostej kontroli powiązanej w formularzu systemu Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md).  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
- W tym artykule opisano klasy, która reprezentuje powiązanie między składnikiem możliwej do wiązania i źródła danych.  
+ Opisuje klasę, która reprezentuje powiązanie między składnikiem możliwym do powiązania a źródłem danych.  
   
  <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType>  
- W tym artykule opisano klasy, która hermetyzuje źródła danych dla powiązania kontrolki.  
+ Opisuje klasę, która hermetyzuje źródło danych dla powiązania z kontrolkami.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [BindingSource, składnik](./controls/bindingsource-component.md)  
- Zawiera listę tematów, które pokazują, jak używać <xref:System.Windows.Forms.BindingSource> składnika.  
+ Zawiera listę tematów, w których pokazano, jak używać składnika <xref:System.Windows.Forms.BindingSource>.  
   
  [DataGridView, kontrolka](./controls/datagridview-control-windows-forms.md)  
- Zawiera listę tematów, które prezentują sposób użycia formantu datagrid możliwej do wiązania.  
+ Zawiera listę tematów, które pokazują, jak używać kontrolki DataGrid możliwej do powiązania.  
   
- Zobacz też [uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).
+ Zobacz też [dostęp do danych w programie Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).

@@ -1,5 +1,5 @@
 ---
-title: Tworzenie InkCanvas w aplikacji WPF w programie Visual Studio
+title: Tworzenie InkCanvas w programie Visual Studio
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: ebbf25037921e7802b2bfcb6ffa562d16a849ffa
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: b8087d6db04f7024b9ee48f28002bee04045a14b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920248"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737892"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Wprowadzenie do pisma odręcznego w WPF
 

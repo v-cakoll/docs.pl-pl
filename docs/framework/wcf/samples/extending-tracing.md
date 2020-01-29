@@ -2,12 +2,12 @@
 title: Rozszerzanie śledzenia
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 64f9d18b68e5f2604631a72579eb45bf7f7b8372
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c6d62f6c334261b0dc897a1c1a2cd71d40ee4f51
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716401"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734925"
 ---
 # <a name="extending-tracing"></a>Rozszerzanie śledzenia
 Ten przykład pokazuje, jak zwiększyć funkcję śledzenia Windows Communication Foundation (WCF), pisząc ślady aktywności zdefiniowane przez użytkownika w kodzie klienta i usługi. Dzięki temu użytkownik może tworzyć działania śledzenia i grupować ślady w logiczne jednostki pracy. Istnieje również możliwość skorelowania działań przez transfery (w tym samym punkcie końcowym) i propagacji (między punktami końcowymi). W tym przykładzie śledzenie jest włączone zarówno dla klienta, jak i dla usługi. Aby uzyskać więcej informacji na temat włączania śledzenia w plikach konfiguracji klienta i usługi, zobacz [śledzenie i rejestrowanie komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
@@ -98,4 +98,4 @@ Ten przykład pokazuje, jak zwiększyć funkcję śledzenia Windows Communicatio
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykłady monitorowania oprogramowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Przykłady monitorowania oprogramowania AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

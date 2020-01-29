@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: f5d709a35e160a8b03ac59e52f7bcb46196a3ce4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b883012cf8f72247ff4e0b47a46eee1854e2d534
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705291"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735649"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Wyjątki i obsługa wyjątków (Przewodnik programowania w języku C#)
 
@@ -25,7 +25,7 @@ W tym przykładzie metoda testów dla dzielenia przez zero i przechwytywania bł
 
 ## <a name="exceptions-overview"></a>Przegląd wyjątków
 
-Wyjątki mają następujące właściwości:  
+Wyjątki mają następujące właściwości:
 
 - Wyjątki są typami, które ostatecznie uzyskują od `System.Exception`.
 - Użyj bloku `try` wokół instrukcji, które mogą zgłaszać wyjątki.
@@ -36,7 +36,7 @@ Wyjątki mają następujące właściwości:
 - Wyjątki mogą być jawnie generowane przez program za pomocą słowa kluczowego `throw`.
 - Obiekty wyjątków zawierają szczegółowe informacje o błędzie, takie jak stan stosu wywołań i opis tekstowy błędu.
 - Kod w bloku `finally` jest wykonywany nawet wtedy, gdy zostanie zgłoszony wyjątek. Użyj bloku `finally`, aby zwolnić zasoby, na przykład aby zamknąć wszystkie strumienie lub pliki, które zostały otwarte w bloku `try`.
-- Wyjątki zarządzane w .NET Framework są implementowane na podstawie mechanizmu obsługi wyjątków strukturalnych Win32. Aby uzyskać więcej informacji, zobacz [strukturalna obsługa wyjątków (C++C/)](/cpp/cpp/structured-exception-handling-c-cpp) i [kurs awarii na głębokości obsługi wyjątków strukturalnych Win32](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm).
+- Wyjątki zarządzane w .NET Framework są implementowane na podstawie mechanizmu obsługi wyjątków strukturalnych Win32. Aby uzyskać więcej informacji, zobacz [strukturalna obsługa wyjątków (C++C/)](/cpp/cpp/structured-exception-handling-c-cpp) i [kurs awarii na głębokości obsługi wyjątków strukturalnych Win32](http://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm).
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 

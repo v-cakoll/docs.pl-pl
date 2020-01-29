@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: manipulowanie wierszami w kontrolce DataGridView formularzy systemu Windows'
+title: Manipulowanie wierszami w formancie DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data grids [Windows Forms], manipulating rows
 - rows [Windows Forms], manipulating on Windows Forms
 ms.assetid: 522d8944-e073-4488-9673-923f0a8d7214
-ms.openlocfilehash: ebf434b7ab813c729b48075107cdd3b2a20fcd24
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f6942c4d74269348e7758b335a6fd93bed3ffa53
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592317"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736046"
 ---
-# <a name="how-to-manipulate-rows-in-the-windows-forms-datagridview-control"></a>Instrukcje: manipulowanie wierszami w kontrolce DataGridView formularzy systemu Windows
-Poniższy przykład kodu pokazuje różne sposoby manipulowania <xref:System.Windows.Forms.DataGridView> wiersze, używając właściwości <xref:System.Windows.Forms.DataGridViewRow> klasy.  
+# <a name="how-to-manipulate-rows-in-the-windows-forms-datagridview-control"></a>Porady: manipulowanie wierszami w formancie DataGridView formularzy systemu Windows
+Poniższy przykład kodu przedstawia różne sposoby manipulowania <xref:System.Windows.Forms.DataGridView> wierszy przy użyciu właściwości klasy <xref:System.Windows.Forms.DataGridViewRow>.  
   
 ## <a name="example"></a>Przykład  
  [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#200](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewRowDemo.cpp#200)]
@@ -28,7 +28,7 @@ Poniższy przykład kodu pokazuje różne sposoby manipulowania <xref:System.Win
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów system, system. Drawing i system. Windows. Forms.  
   
 ## <a name="see-also"></a>Zobacz także
 

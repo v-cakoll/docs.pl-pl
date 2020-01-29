@@ -2,12 +2,12 @@
 title: Kształt dokumentów WordprocessingML (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 84d893267c37ecf99a457ebb683d0451e2b4b68f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 58c028fed465f45fdcf8f63f2119eb8e8b201e32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591057"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732671"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>Kształt dokumentów WordprocessingML (C#)
 Ten temat zawiera wprowadzenie do kształtu XML dokumentu WordprocessingML.  
@@ -18,7 +18,7 @@ Ten temat zawiera wprowadzenie do kształtu XML dokumentu WordprocessingML.
  Jeśli używasz Microsoft Office 2003, możesz zapisać dokumenty w formacie Office Open XML, jeśli zainstalowano pakiet zgodności Microsoft Office dla formatów plików programów Word, Excel i PowerPoint 2007.  
   
 ## <a name="the-shape-of-wordprocessingml-documents"></a>Kształt dokumentów WordprocessingML  
- Pierwszą rzeczą, którą należy zrozumieć, jest kształt dokumentów WordprocessingML. Dokument WordprocessingML zawiera element Body (o nazwie `w:body`) zawierający akapity dokumentu. Każdy akapit zawiera jeden lub więcej uruchomień tekstu ( `w:r`o nazwie). Każdy przebieg tekstowy zawiera jedną lub więcej fragmentów tekstu ( `w:t`o nazwie).  
+ Pierwszą rzeczą, którą należy zrozumieć, jest kształt dokumentów WordprocessingML. Dokument WordprocessingML zawiera element Body (o nazwie `w:body`) zawierający akapity dokumentu. Każdy akapit zawiera jeden lub więcej uruchomień tekstu (o nazwie `w:r`). Każdy przebieg tekstowy zawiera jedną lub więcej fragmentów tekstu (o nazwie `w:t`).  
   
  Oto bardzo prosty dokument WordprocessingML:  
   
@@ -55,7 +55,7 @@ xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
   
  Najprostszym sposobem wyświetlenia zawartości dokumentu WordprocessingML w formularzu XML jest utworzenie go przy użyciu programu Microsoft Word, zapisanie go, a następnie uruchomienie następującego programu, który drukuje plik XML do konsoli programu.  
   
- Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
+ Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```csharp  
 const string documentRelationshipType =  
@@ -87,13 +87,13 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
 }  
 ```  
   
-## <a name="external-resources"></a>Zasoby zewnętrzne  
- [Wprowadzenie do pakietu Office (2007) otwartych formatów plików XML](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29)  
- [Przegląd WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)  
- [Anatomia pliku WordProcessingML](http://officeopenxml.com/anatomyofOOXML.php)  
- [Wprowadzenie do WordprocessingML](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)  
- [Office 2003: Strona pobierania schematów odwołań XML](https://www.microsoft.com/download/details.aspx?id=101)  
-  
+## <a name="external-resources"></a>Zasoby zewnętrzne
+
+- [Wprowadzenie do pakietu Office (2007) otwartych formatów plików XML](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29)
+- [Przegląd WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)
+- [Anatomia pliku WordProcessingML](http://officeopenxml.com/anatomyofOOXML.php)
+- [Wprowadzenie do WordprocessingML](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)
+
 ## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
+- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)

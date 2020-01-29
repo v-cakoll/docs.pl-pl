@@ -1,5 +1,5 @@
 ---
-title: CheckBox — Formant (Formularze systemu Windows)
+title: CheckBox, kontrolka
 ms.date: 03/30/2017
 helpviewer_keywords:
 - checked list items [Windows Forms], Windows Forms controls
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - checked list items
 - check boxes
 ms.assetid: 0719d798-c307-40d3-9040-72a62679c227
-ms.openlocfilehash: 207f8f884e8382614bf7d6cbc4a628d98fb3542b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e0a1b2aa16db2ad78f7f16d9bf4819e24c04fa86
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956328"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737066"
 ---
 # <a name="checkbox-control-windows-forms"></a>CheckBox — Formant (Formularze systemu Windows)
-Formularze Windows `CheckBox` formant wskazuje, czy określony warunek jest włączone czy wyłączone. Często są one wykorzystywane do przedstawienia tak/nie lub zaznaczenie PRAWDA/FAŁSZ dla użytkownika. Formanty pól wyboru w grupach umożliwia wyświetlanie wielu opcji, z których użytkownik może wybrać co najmniej jeden. Jest on podobny do <xref:System.Windows.Forms.RadioButton> kontroli, ale dowolną liczbę pogrupowane `CheckBox` kontrolki można zaznaczyć.  
+Kontrolka `CheckBox` Windows Forms wskazuje, czy określony warunek jest włączony, czy wyłączony. Jest on często używany do prezentowania użytkownikowi wyboru opcji tak/nie lub prawda/fałsz. Możesz użyć kontrolek pola wyboru w grupach, aby wyświetlić wiele opcji, z których użytkownik może wybrać jeden lub więcej. Jest podobna do kontrolki <xref:System.Windows.Forms.RadioButton>, ale można wybrać dowolną liczbę zgrupowanych `CheckBox` kontrolek.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [CheckBox, kontrolka — omówienie](checkbox-control-overview-windows-forms.md)  
- Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
+ Wyjaśnia, czym jest ta kontrolka i jej najważniejsze funkcje i właściwości.  
   
- [Instrukcje: Odpowiadanie do formularzy Windows Forms kliknięcia kontrolki CheckBox](how-to-respond-to-windows-forms-checkbox-clicks.md)  
- Wyjaśnia, jak i użyj pola wyboru, aby określić akcje aplikacji.  
+ [Instrukcje: odpowiadanie na kliknięcia kontrolki CheckBox formularzy Windows Forms](how-to-respond-to-windows-forms-checkbox-clicks.md)  
+ Wyjaśnia, jak używać pola wyboru, aby określić działania aplikacji.  
   
- [Instrukcje: Ustawianie opcji za pomocą formantów CheckBox formularzy Windows](how-to-set-options-with-windows-forms-checkbox-controls.md)  
- Opisuje sposób używania pola wyboru, aby ustawić opcje, takie jak właściwości obiektu.  
+ [Instrukcje: ustawianie opcji za pomocą kontrolek CheckBox formularzy Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)  
+ Opisuje, jak używać pola wyboru do ustawiania opcji, takich jak właściwości obiektu.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.CheckBox> Klasa  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Klasa <xref:System.Windows.Forms.CheckBox>  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.
+ Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.

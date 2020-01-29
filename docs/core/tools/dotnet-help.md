@@ -2,16 +2,16 @@
 title: polecenie pomocy dotnet
 description: Polecenie pomocy dotnet zawiera bardziej szczegółową dokumentację w trybie online dla określonego polecenia.
 ms.date: 08/08/2019
-ms.openlocfilehash: 533f2c47fa7ec14d31368538092fec2490234820
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 9bb4e54d2634c000707752edf53b38af43c4344e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117719"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734232"
 ---
 # <a name="dotnet-help-reference"></a>informacje pomocy dotyczące dotnet
 
-**Ten artykuł dotyczy: ✓** .net Core 2,0 SDK i nowszych wersji
+**Ten artykuł ma zastosowanie do:** ✔️ .net Core 2,0 SDK i nowszych wersjach
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
@@ -19,7 +19,7 @@ ms.locfileid: "71117719"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet help`-Wyświetla bardziej szczegółową dokumentację w trybie online dla określonego polecenia.
+`dotnet help` — zawiera bardziej szczegółową dokumentację w trybie online dla określonego polecenia.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -27,7 +27,7 @@ ms.locfileid: "71117719"
 
 ## <a name="description"></a>Opis
 
-`dotnet help` Polecenie otwiera stronę referencyjną, aby uzyskać bardziej szczegółowe informacje na temat określonego polecenia w docs.Microsoft.com.
+`dotnet help` polecenie otwiera stronę referencyjną, aby uzyskać bardziej szczegółowe informacje na temat określonego polecenia w docs.microsoft.com.
 
 ## <a name="arguments"></a>Argumenty
 

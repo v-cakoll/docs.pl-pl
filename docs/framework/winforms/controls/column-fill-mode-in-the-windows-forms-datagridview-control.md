@@ -1,5 +1,5 @@
 ---
-title: Tryb wypełniania kolumn w formancie DataGridView formularzy systemu Windows
+title: Tryb wypełniania kolumn w formancie DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,56 +9,56 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: f9eb45e9b96ccb97938c7396d177ccedbea329e6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 43b8915efe303b6f56cd4adf5fdbd69f51b0b754
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590370"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736877"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Tryb wypełniania kolumn w formancie DataGridView formularzy systemu Windows
-W tryb wypełniania kolumny <xref:System.Windows.Forms.DataGridView> kontroli zmienia rozmiar kolumn automatycznie, tak aby zajmowały szerokość obszaru dostępny ekran. Kontrolka nie wyświetla poziomy pasek przewijania z wyjątkiem sytuacji, gdy jest konieczne zapewnienie szerokość każdej kolumny równa lub większa niż jego <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> wartości właściwości.  
+W trybie wypełniania kolumn formant <xref:System.Windows.Forms.DataGridView> automatycznie zmienia rozmiar swoich kolumn, aby wypełnić szerokość dostępnego obszaru wyświetlania. Kontrolka nie wyświetla poziomego paska przewijania, z wyjątkiem sytuacji, gdy jest to konieczne, aby szerokość każdej kolumny była równa lub większa niż jej wartość właściwości <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
   
- Zachowanie zmiany rozmiaru kolumn zależy od jego <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> właściwości. Wartość tej właściwości jest dziedziczony z kolumny <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> właściwości lub jej kontrolkę <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> właściwość, jeśli wartość kolumny jest <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet> (wartość domyślna).  
+ Zachowanie ustalania wielkości dla każdej kolumny zależy od jego właściwości <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A>. Wartość tej właściwości jest dziedziczona z właściwości <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> kolumny lub właściwości <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> kontrolki, jeśli wartość kolumny jest <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet> (wartość domyślna).  
   
- Każda kolumna może mieć tryb użycia innego rozmiaru, ale żadnych kolumn z trybem rozmiar <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill> współużytkują szerokości obszaru wyświetlania, która nie jest używany przez inne kolumny. Szerokość ta jest podzielony między tryb wypełniania kolumn w proporcjach względem ich <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> wartości właściwości. Na przykład, jeśli dwie kolumny mają <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> wartości od 100 do 200, pierwszej kolumny będą połowę jako szerokość całego drugiej kolumny.  
+ Każda kolumna może mieć inny tryb rozmiaru, ale wszystkie kolumny z trybem rozmiaru <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill> będą współużytkować szerokość obszaru wyświetlania, która nie jest używana przez inne kolumny. Ta szerokość jest dzielona między kolumny trybu wypełniania w proporcjach względem ich wartości właściwości <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>. Na przykład jeśli dwie kolumny mają <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> wartości 100 i 200, pierwsza kolumna będzie miała połowę jako druga kolumna.  
   
-## <a name="user-resizing-in-fill-mode"></a>Zmiana rozmiaru w trybie do wypełnienia użytkownika  
- W przeciwieństwie do ustalania rozmiaru tryby, które zmiany rozmiaru na podstawie zawartości komórki, tryb wypełniania nie uniemożliwia użytkownikom zmiana rozmiaru kolumn, które mają <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> wartości właściwości `true`. Gdy użytkownik zmienia rozmiar tryb wypełniania kolumny, tryb wypełniania kolumn po zmianie rozmiaru kolumny (do prawej strony, jeśli <xref:System.Windows.Forms.Control.RightToLeft%2A> jest `false`; w przeciwnym razie po lewej stronie) również rozmiar kompensuje zmianę szerokości dostępne. W przypadku żadne tryb wypełniania kolumny po kolumnie o zmienionym rozmiarze, następnie wszystkie pozostałe kolumny trybu wypełnienia w kontrolce zmieniany jest rozmiar do wyrównania. W przypadku nie tryb wypełniania kolumn w formancie, zmianę rozmiaru jest ignorowany. Zmiany rozmiaru kolumny, która nie jest w trybie do wypełnienia dnia wszystkich tryb wypełniania kolumn w formancie zmiana rozmiaru w celu kompensacji.  
+## <a name="user-resizing-in-fill-mode"></a>Zmienianie rozmiarów użytkownika w trybie wypełniania  
+ W przeciwieństwie do trybów ustalania rozmiaru, które są zmieniane na podstawie zawartości komórki, tryb wypełnienia nie uniemożliwia użytkownikom zmiany rozmiaru kolumn, które mają <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> wartości właściwości `true`. Gdy użytkownik zmienia rozmiar kolumny trybu wypełniania, wszystkie kolumny trybu wypełnienia po zmianie rozmiaru kolumny (z prawej strony, jeśli <xref:System.Windows.Forms.Control.RightToLeft%2A> jest `false`; w przeciwnym razie po lewej stronie) również są zmieniane, aby skompensować zmiany w dostępnej szerokości. Jeśli po kolumnie o zmienionym rozmiarze nie ma kolumn trybu wypełniania, wszystkie inne kolumny trybu wypełniania w kontrolce są zmieniane w celu zrekompensowania. Jeśli w formancie nie ma innych kolumn trybu wypełniania, zmiana rozmiaru jest ignorowana. Jeśli zmieniany jest rozmiar kolumny, która nie jest w trybie Fill, wszystkie kolumny trybu wypełniania w kontrolce zmieniają rozmiary do zrekompensowania.  
   
- Po zmianie rozmiaru kolumny tryb wypełniania <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> wartości dla wszystkich kolumn, które zmieniane są dostosowywane proporcjonalnie. Na przykład, jeśli ma cztery kolumny tryb wypełniania <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> wartości 100, druga kolumna w wysokości równej połowie oryginalną szerokość rozmiaru spowoduje <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> wartości 100, 50, 125 i 125. Zmiana rozmiaru kolumny, która nie jest w trybie do wypełnienia nie zmieni się dowolne <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> wartości, ponieważ tryb wypełniania kolumn wystarczy zmienić rozmiar celu kompensacji przy zachowaniu tych samych proporcji.  
+ Po zmianie rozmiarów kolumny trybu wypełniania wartości <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> dla wszystkich zmienionych kolumn są dostosowywane proporcjonalnie. Na przykład, jeśli cztery kolumny trybu wypełniania mają <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> wartości 100, zmianę rozmiarów drugiej kolumny na połowę jej oryginalnej szerokości spowoduje <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> wartości 100, 50, 125 i 125. Zmiana rozmiaru kolumny, która nie jest w trybie Fill, nie spowoduje zmiany wartości <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, ponieważ kolumny trybu wypełnienia będą po prostu zmieniane w celu zrekompensowania, zachowując te same proporcje.  
   
-## <a name="content-based-fillweight-adjustment"></a>Dostosowanie FillWeight na podstawie zawartości  
- Można zainicjować <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> wartości dla tryb wypełniania kolumn przy użyciu <xref:System.Windows.Forms.DataGridView> automatycznej zmiany rozmiaru metod, takich jak <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> metody. Metoda ta najpierw oblicza szerokości wymagane według kolumn, aby wyświetlić ich zawartość. Następnie dopasowuje kontrolki <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> wartości dla wszystkich tryb wypełniania kolumn, aby ich proporcje odpowiadały proporcji szerokości obliczeniowych. Na koniec kontrolki zmienia rozmiar tryb wypełniania kolumn za pomocą nowego <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> proporcjach tak, aby wszystkie kolumny w kontrolce wypełnienia dostępnego miejsca na poziomie.  
+## <a name="content-based-fillweight-adjustment"></a>Korekta FillWeight oparta na zawartości  
+ Można inicjować wartości <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> dla kolumn trybu wypełniania przy użyciu <xref:System.Windows.Forms.DataGridView> automatycznych metod zmieniania rozmiarów, takich jak Metoda <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>. Ta metoda najpierw oblicza szerokości wymagane przez kolumny, aby wyświetlić ich zawartość. Następnie formant dostosowuje wartości <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> dla wszystkich kolumn trybu wypełniania, tak aby ich proporcje odpowiadały proporcjom obliczonych szerokości. Na koniec formant zmienia rozmiar kolumn trybu wypełniania przy użyciu nowych <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> proporcji, tak aby wszystkie kolumny w formancie wypełniają dostępne miejsce w poziomie.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Korzystając z odpowiednimi wartościami dla <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, i <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> właściwości, można dostosować zachowania ustawianie rozmiaru kolumn w wielu różnych scenariuszach.  
+ Korzystając z odpowiednich wartości właściwości <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>i <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A>, można dostosować zachowania ustalania szerokości kolumn dla wielu różnych scenariuszy.  
   
- Poniższy kod pokaz pozwala na eksperymentowanie z różnymi wartościami dla <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, i <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> właściwości różnych kolumn. W tym przykładzie <xref:System.Windows.Forms.DataGridView> kontrolka jest powiązana z własną <xref:System.Windows.Forms.DataGridView.Columns%2A> kolekcji i jedną kolumnę jest powiązana ze wszystkimi <xref:System.Windows.Forms.DataGridViewColumn.HeaderText%2A>, <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>, i <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> właściwości. Każdej z kolumn jest również jest reprezentowanych przez wiersz w kontrolce, a zmiana wartości w wierszu spowoduje zaktualizowanie właściwości odpowiadającej jej kolumny, dzięki czemu można zobaczyć, jak wartości wchodzić w interakcje.  
+ Poniższy kod demonstracyjny umożliwia eksperymentowanie z różnymi wartościami dla właściwości <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>i <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> różnych kolumn. W tym przykładzie formant <xref:System.Windows.Forms.DataGridView> jest powiązany z własną kolekcją <xref:System.Windows.Forms.DataGridView.Columns%2A>, a jedna kolumna jest powiązana z każdą z właściwości <xref:System.Windows.Forms.DataGridViewColumn.HeaderText%2A>, <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>i <xref:System.Windows.Forms.DataGridViewColumn.Width%2A>. Każda kolumna jest również reprezentowana przez wiersz w kontrolce, a zmiana wartości w wierszu spowoduje zaktualizowanie właściwości odpowiedniej kolumny, aby zobaczyć, w jaki sposób są one używane.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[System.Windows.Forms.DataGridViewFillColumnsDemo#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/CS/fillcolumns.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewFillColumnsDemo#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/vb/fillcolumns.vb#00)]  
   
 ### <a name="comments"></a>Komentarze  
- Aby użyć tej aplikacji demonstracyjnych:  
+ Aby użyć tej aplikacji demonstracyjnej:  
   
-- Zmień rozmiar formularza. Sprawdź, jak kolumny zmienić ich szerokości, gdy zachowanie proporcji wskazywanym przez <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> wartości właściwości.  
+- Zmień rozmiar formularza. Obserwuj, jak kolumny zmieniają swoje szerokości, zachowując proporcje wskazywane przez wartości właściwości <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
   
-- Zmień rozmiary kolumn, przeciągając separator kolumn za pomocą myszy. Sprawdź sposób, w jaki <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> zmiany wartości.  
+- Zmień rozmiary kolumn, przeciągając rozdzielacze kolumn za pomocą myszy. Obserwuj, jak zmieniają się wartości <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
   
-- Zmiana <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> wartości dla jednej kolumny, a następnie przeciągnij, aby zmienić rozmiar formularza. Sprawdź jak to zrobić, po dokonaniu małym, formularz <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> wartości nie odbywają się poniżej <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> wartości.  
+- Zmień wartość <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> jednej kolumny, a następnie przeciągnij, aby zmienić rozmiar formularza. Obserwuj, w jaki sposób, gdy formularz jest wystarczająco mały, wartości <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> nie są zgodne z wartościami <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
   
-- Zmiana <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> wartości dla wszystkich kolumn dużą, tak, aby wartości połączone przekracza szerokość formantu. Sprawdź sposób wyświetlania poziomego paska przewijania.  
+- Zmień wartości <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> dla wszystkich kolumn na duże liczby, tak aby połączone wartości przekroczą szerokość kontrolki. Obserwuj, jak pojawia się poziomy pasek przewijania.  
   
-- Zmiana <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> wartości dla niektórych kolumn. Obserwuj wpływ podczas zmiany rozmiaru kolumn lub w formularzu.  
+- Zmień wartości <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> dla niektórych kolumn. Zwróć uwagę na efekt zmiany rozmiaru kolumn lub formularza.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów system, system. Drawing i system. Windows. Forms.  
   
 ## <a name="see-also"></a>Zobacz także
 

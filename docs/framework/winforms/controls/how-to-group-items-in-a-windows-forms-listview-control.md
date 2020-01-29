@@ -1,5 +1,5 @@
 ---
-title: 'Porady: grupowanie elementów w formancie ListView formularzy systemu Windows'
+title: Grupuj elementy w formancie ListView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - groups
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-ms.openlocfilehash: 1b716498ec5a45fbde499a1f53b2bdccd28a7176
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 45846751780f433c29b186fe8b9a908f5d295ab3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960163"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736626"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>Porady: grupowanie elementów w formancie ListView formularzy systemu Windows
 Za pomocą funkcji grupowania kontrolki <xref:System.Windows.Forms.ListView> można wyświetlić powiązane zestawy elementów w grupach. Te grupy są rozdzielane na ekranie przez nagłówki grup poziomych, które zawierają tytuły grup. Korzystając z grup <xref:System.Windows.Forms.ListView>, można ułatwić nawigację dużych list, grupując elementy alfabetycznie według daty lub przez inne grupowanie logiczne. Na poniższej ilustracji przedstawiono niektóre zgrupowane elementy.  

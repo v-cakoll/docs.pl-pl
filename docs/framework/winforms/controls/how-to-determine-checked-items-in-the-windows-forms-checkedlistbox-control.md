@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: określanie elementów jako zaznaczone w kontrolce CheckedListBox formularzy systemu Windows'
+title: Określanie elementów zaewidencjonowanych w kontrolce CheckedListBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 10793053934dce0bb83113004a79f1c265f5f267
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5854f7e6be759daeb604458ea8554d3c98ed39c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010920"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743239"
 ---
-# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Instrukcje: określanie elementów jako zaznaczone w kontrolce CheckedListBox formularzy systemu Windows
-Podczas wyświetlania danych w formularzach Windows <xref:System.Windows.Forms.CheckedListBox> kontrolki, można albo wykonać iterację kolekcji, przechowywane w <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> właściwości lub krok po kroku używając listy <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> metodę pozwala ustalić, które elementy są zaznaczone. <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Metoda pobiera element o indeksie jako argument i zwraca `true` lub `false`. Sprzecznie może oczekiwań <xref:System.Windows.Forms.ListBox.SelectedItems%2A> i <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> właściwości nie może określić elementy, które są sprawdzane; ustalają one, elementy, które są wyróżnione.  
+# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Porady: określanie elementów jako zaznaczone w formancie CheckedListBox formularzy systemu Windows
+Podczas prezentowania danych w kontrolce <xref:System.Windows.Forms.CheckedListBox> Windows Forms można wykonać iterację kolekcji przechowywanej we właściwości <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> lub przejść przez listę przy użyciu metody <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>, aby określić, które elementy są zaznaczone. Metoda <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> przyjmuje jako argument numer indeksu elementu i zwraca `true` lub `false`. W przeciwieństwie do tego, czego można oczekiwać, właściwości <xref:System.Windows.Forms.ListBox.SelectedItems%2A> i <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> nie określają, które elementy są zaznaczone; określają, które elementy są wyróżnione.  
   
-### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>Aby określić elementów jako zaznaczone w formancie CheckedListBox  
+### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>Aby określić elementy zaznaczone w kontrolce CheckedListBox  
   
-1. Iteracyjne przeglądanie <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> kolekcji, począwszy od 0, ponieważ kolekcja jest liczony od zera. Należy pamiętać, że ta metoda zapewni numer na liście elementów jako zaznaczone, listy ogólnej. Więc jeśli pierwszy element na liście nie jest zaznaczone, a drugi element jest wyewidencjonowany, poniższy kod będzie wyświetlany tekst, takich jak "zaznaczony element 1 = MyListItem2".  
+1. Wykonaj iterację w kolekcji <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>, zaczynając od 0, ponieważ kolekcja nie jest zależna od zera. Należy zauważyć, że ta metoda spowoduje udostępnienie numeru elementu na liście zaznaczonych elementów, a nie listy ogólnej. Jeśli więc pierwszy element na liście nie jest zaznaczony, a drugi element jest zaznaczone, poniższy kod wyświetli tekst, taki jak "Checked Item 1 = MyListItem2".  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -68,7 +68,7 @@ Podczas wyświetlania danych w formularzach Windows <xref:System.Windows.Forms.C
   
      - lub —  
   
-2. Krok po kroku <xref:System.Windows.Forms.CheckedListBox.Items%2A> kolekcji, począwszy od 0, ponieważ kolekcja jest liczony od zera, a wywołanie <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> metody dla każdego elementu. Należy pamiętać, że ta metoda zapewni numer na liście ogólne, jeśli pierwszy element w liście nie jest zaznaczone i drugi element jest wyewidencjonowany wyświetli podobny do "element 2 = MyListItem2".  
+2. Przejdź do kolekcji <xref:System.Windows.Forms.CheckedListBox.Items%2A>, zaczynając od 0, ponieważ kolekcja jest oparta na zero, i Wywołaj metodę <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> dla każdego elementu. Należy zauważyć, że ta metoda spowoduje udostępnienie numeru elementu na liście ogólnej, więc jeśli pierwszy element na liście nie zostanie zaznaczony i zostanie sprawdzony drugi element, będzie on wyświetlany podobnie jak "Item 2 = MyListItem2".  
   
     ```vb  
     Dim i As Integer  

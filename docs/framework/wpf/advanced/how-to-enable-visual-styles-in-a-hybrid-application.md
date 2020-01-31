@@ -8,17 +8,17 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 251c53a8665d2eae7c3b5bb23b0a388009362dcc
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: dd52313e9100f9c6a1141b53ccc5a23a4b54410a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960115"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789917"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>Jak włączyć style Visual w aplikacji hybrydowej
-W tym temacie przedstawiono sposób włączania stylów wizualnych w formancie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hostowanym w aplikacji opartej na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+W tym temacie przedstawiono sposób włączania stylów wizualnych w formancie Windows Forms hostowanym w aplikacji opartej na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- Jeśli aplikacja wywołuje metodę <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>, większość kontrolek [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] będzie automatycznie używać stylów wizualnych. Aby uzyskać więcej informacji, zobacz [renderowanie formantów przy użyciu stylów wizualnych](../../winforms/controls/rendering-controls-with-visual-styles.md).  
+ Jeśli aplikacja wywołuje metodę <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>, większość kontrolek Windows Forms będzie automatycznie używać stylów wizualnych. Aby uzyskać więcej informacji, zobacz [renderowanie formantów przy użyciu stylów wizualnych](../../winforms/controls/rendering-controls-with-visual-styles.md).  
   
  Aby uzyskać pełną listę kodów zadań przedstawionych w tym temacie, zobacz [Włączanie stylów wizualnych w przykładowej aplikacji hybrydowej](https://go.microsoft.com/fwlink/?LinkID=159986).  
   
@@ -51,7 +51,7 @@ W tym temacie przedstawiono sposób włączania stylów wizualnych w formancie [
   
 9. Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.  
   
-     Formant [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] jest malowany przy użyciu stylów wizualnych.  
+     Formant Windows Forms jest malowany przy użyciu stylów wizualnych.  
   
 ## <a name="disabling-windows-forms-visual-styles"></a>Wyłączanie Windows Forms stylów wizualnych  
  Aby wyłączyć style wizualne, po prostu usuń wywołanie metody <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>.  
@@ -64,7 +64,7 @@ W tym temacie przedstawiono sposób włączania stylów wizualnych w formancie [
   
 3. Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.  
   
-     Formant [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] jest malowany przy użyciu domyślnego stylu systemowego.  
+     Formant Windows Forms jest malowany przy użyciu domyślnego stylu systemowego.  
   
 ## <a name="see-also"></a>Zobacz także
 

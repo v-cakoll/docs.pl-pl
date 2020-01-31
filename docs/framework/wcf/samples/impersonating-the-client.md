@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 0c262d8b5460f236ef0429154ae337c7adf96714
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e9e85729b10d1c992a22f6c0bea65dfd1e21e7e4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338711"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742553"
 ---
 # <a name="impersonating-the-client"></a>Personifikowanie klienta
 Przykład personifikacji demonstruje sposób personifikacji aplikacji wywołującej w usłudze, aby usługa mogła uzyskać dostęp do zasobów systemowych w imieniu obiektu wywołującego.  
@@ -102,7 +102,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane zarówno w systemie, jak i w oknach konsoli klienta. Naciśnij klawisz ENTER w każdym oknie konsoli, aby zamknąć usługę i klienta.  
   
 > [!NOTE]
-> Usługa musi być uruchomiona w ramach konta administracyjnego lub konto, na którym jest uruchamiane, musi mieć przyznane prawa do rejestrowania identyfikatora URI `http://localhost:8000/ServiceModelSamples` za pomocą warstwy HTTP. Takie prawa można udzielić przez skonfigurowanie [rezerwacji przestrzeni nazw](https://go.microsoft.com/fwlink/?LinkId=95012) za pomocą [narzędzia HttpCfg. exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
+> Usługa musi być uruchomiona w ramach konta administracyjnego lub konto, na którym jest uruchamiane, musi mieć przyznane prawa do rejestrowania identyfikatora URI `http://localhost:8000/ServiceModelSamples` za pomocą warstwy HTTP. Takie prawa można udzielić przez skonfigurowanie [rezerwacji przestrzeni nazw](/windows/win32/http/namespace-reservations-registrations-and-routing) za pomocą [narzędzia HttpCfg. exe](/windows/win32/http/httpcfg-exe).  
   
 > [!NOTE]
 > Na komputerach z systemem Windows Server 2003 Personifikacja jest obsługiwana tylko wtedy, gdy aplikacja host. exe ma uprawnienie personifikacji. (Domyślnie tylko Administratorzy mają to uprawnienie). Aby dodać to uprawnienie do konta, na którym działa usługa, przejdź do pozycji **Narzędzia administracyjne**, Otwórz **pozycję Zasady zabezpieczeń lokalnych**, Otwórz **Zasady lokalne**, kliknij pozycję **Przypisywanie praw użytkownika**, a następnie wybierz opcję **Personifikuj klienta po uwierzytelnieniu** , a następnie kliknij dwukrotnie pozycję **Właściwości** , aby dodać użytkownika lub grupę.  

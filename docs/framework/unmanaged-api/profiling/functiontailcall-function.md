@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-ms.openlocfilehash: c83a55a74542d94559b50b89ef784de0bd55d0db
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bd03eccc923049c4a49062d18bd11659f3316e8a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427348"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866826"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall — Funkcja
 Powiadamia profiler, że aktualnie wykonywana funkcja ma wykonać wywołanie tail do innej funkcji.  
   
 > [!NOTE]
-> Funkcja `FunctionTailcall` jest przestarzała w .NET Framework wersji 2,0. Będzie ona nadal działała, ale nastąpi spadek wydajności. Zamiast tego użyj funkcji [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) .  
+> Funkcja `FunctionTailcall` jest przestarzała w .NET Framework wersji 2,0. Będzie ona nadal działała, ale nastąpi spadek wydajności. Zamiast tego użyj funkcji [FunctionTailcall2](functiontailcall2-function.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,12 +35,14 @@ void __stdcall FunctionTailcall (
 );  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `funcID`  
- podczas Identyfikator aktualnie wykonywanej funkcji, która ma na celu wykonanie wywołania tail.  
-  
+## <a name="parameters"></a>Parametry
+
+- `funcID`
+
+  \[in) identyfikator aktualnie wykonywanej funkcji, która ma na celu wykonanie wywołania tail.
+
 ## <a name="remarks"></a>Uwagi  
- Funkcja Target wywołania tail będzie używać bieżącej ramki stosu i zwróci się bezpośrednio do obiektu wywołującego funkcji, która wykonał wywołanie tail. Oznacza to, że wywołanie zwrotne [FunctionLeave —](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) nie zostanie wygenerowane dla funkcji, która jest elementem docelowym wywołania tail.  
+ Funkcja Target wywołania tail będzie używać bieżącej ramki stosu i zwróci się bezpośrednio do obiektu wywołującego funkcji, która wykonał wywołanie tail. Oznacza to, że wywołanie zwrotne [FunctionLeave —](functionleave-function.md) nie zostanie wygenerowane dla funkcji, która jest elementem docelowym wywołania tail.  
   
  Funkcja `FunctionTailcall` jest wywołaniem zwrotnym; należy zaimplementować go. Implementacja musi używać atrybutu klasy magazynu `__declspec`(`naked`).  
   
@@ -65,7 +67,7 @@ void __stdcall FunctionTailcall (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [FunctionEnter2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [SetEnterLeaveFunctionHooks2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2, funkcja](functionenter2-function.md)
+- [FunctionLeave2, funkcja](functionleave2-function.md)
+- [SetEnterLeaveFunctionHooks2, metoda](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Profilowanie statycznych funkcji globalnych](profiling-global-static-functions.md)

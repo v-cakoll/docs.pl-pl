@@ -6,54 +6,54 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f79ac28af45e8c05922373955c5317095d2c682
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748470"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744633"
 ---
 # <a name="windows-communication-foundation-security"></a>Zabezpieczenia programu WCF (Windows Communication Foundation)
-Tematy w tej sekcji opisano funkcje zabezpieczeń usługi Windows Communication Foundation (WCF) i jak z nich korzystać, aby ułatwić zabezpieczonych wiadomości.  
+W tematach w tej sekcji opisano funkcje zabezpieczeń Windows Communication Foundation (WCF) i sposoby ich używania w celu zabezpieczania komunikatów.  
   
- Aby uzyskać więcej informacji na temat systemu Windows Server AppFabric i zabezpieczeń, zobacz [modelu zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ Aby uzyskać więcej informacji na temat systemu Windows Server AppFabric i zabezpieczeń, zobacz [model zabezpieczeń dla systemu Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10)) .  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- W tym artykule opisano funkcje zabezpieczeń programu WCF.  
+ Opisuje funkcje zabezpieczeń w programie WCF.  
   
  [Pojęcia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- Zawiera opis podstawowej terminologii i pojęć używanych w zabezpieczeniach WCF.  
+ Opisuje podstawową terminologię i koncepcje używane w zabezpieczeniach WCF.  
   
  [Typowe scenariusze zabezpieczeń](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- W tym artykule opisano scenariuszach i topologiach, które można skonfigurować przy użyciu usługi WCF.  
+ Opisuje scenariusze i topologie, które można skonfigurować za pomocą programu WCF.  
   
  [Zachowania zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- Zawiera omówienie zachowania usługi WCF, które mają wpływ na zabezpieczenia, takie jak Ustawianie poświadczeń.  
+ Zawiera omówienie zachowań WCF wpływających na bezpieczeństwo, takich jak Ustawianie poświadczeń.  
   
  [Powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- Widok związanych z zabezpieczeniami powiązania, łącznie z tematów, które pokazują, jak utworzyć niestandardowe zabezpieczeń powiązania.  
+ Widok zorientowany na zabezpieczenia powiązań, w tym tematy pokazujące sposób tworzenia niestandardowych powiązań zabezpieczeń.  
   
  [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- Opisuje sposób Zabezpieczanie komunikatów za pomocą funkcji zabezpieczeń programu WCF.  
+ Opisuje sposób zabezpieczania komunikatów przy użyciu funkcji zabezpieczeń WCF.  
   
  [Uwierzytelnianie](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
- Przedstawia typowe zadania związane z uwierzytelniania.  
+ Demonstruje typowe zadania związane z uwierzytelnianiem.  
   
  [Autoryzacja](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- W tym artykule opisano typowe scenariusze autoryzacji za pomocą implementacji zabezpieczeń.  
+ Opisuje typowe scenariusze autoryzacji z implementacjami zabezpieczeń.  
   
  [Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- W tym artykule opisano podstawy federation oraz sposób tworzenia klientów, które komunikują się przy użyciu serwerów federacyjnych.  
+ Opisuje podstawy Federacji oraz sposób tworzenia klientów komunikujących się z serwerami federacyjnymi.  
   
  [Zaufanie częściowe](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- Opisano sposób uruchamiania częściowo zaufanych scenariuszach i ograniczeniach usługi WCF, podczas uruchamiania częściowo zaufany.  
+ Opisuje, jak uruchamiać częściowo zaufane scenariusze i ograniczenia programu WCF w przypadku uruchamiania częściowo zaufanych.  
   
  [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- Opisuje sposób Inspekcja zdarzeń zabezpieczeń.  
+ Opisuje sposób inspekcji zdarzeń zabezpieczeń.  
   
  [Wytyczne dotyczące zabezpieczeń i najlepsze rozwiązania](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- Wytyczne dotyczące tworzenia bezpiecznych aplikacji WCF.  
+ Wskazówki dotyczące tworzenia bezpiecznych aplikacji WCF.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel>  

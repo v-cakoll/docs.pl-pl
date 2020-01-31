@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: ad34592223433f0bf541c390674bcf96839b6ca8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: caea1d3d526017c0118f95bb138ee4ac45d2c137
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440816"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866999"
 ---
 # <a name="functionenter-function"></a>FunctionEnter — Funkcja
 Powiadamia profiler, że sterowanie jest przesyłane do funkcji.  
   
 > [!NOTE]
-> Funkcja `FunctionEnter` jest przestarzała w .NET Framework wersji 2,0, a jej użycie spowoduje spadek wydajności. Zamiast tego użyj funkcji [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) .  
+> Funkcja `FunctionEnter` jest przestarzała w .NET Framework wersji 2,0, a jej użycie spowoduje spadek wydajności. Zamiast tego użyj funkcji [FunctionEnter2](functionenter2-function.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,10 +35,12 @@ void __stdcall FunctionEnter (
 );  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `funcID`  
- podczas Identyfikator funkcji, do której jest przenoszona kontrola.  
-  
+## <a name="parameters"></a>Parametry
+
+- `funcID`
+
+  \[in) identyfikator funkcji, do której jest przenoszona kontrola.
+
 ## <a name="remarks"></a>Uwagi  
  Funkcja `FunctionEnter` jest wywołaniem zwrotnym; należy zaimplementować go. Implementacja musi używać atrybutu klasy magazynu `__declspec`(`naked`).  
   
@@ -63,8 +65,8 @@ void __stdcall FunctionEnter (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [FunctionEnter2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [FunctionTailcall2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2, funkcja](functionenter2-function.md)
+- [FunctionLeave2, funkcja](functionleave2-function.md)
+- [FunctionTailcall2, funkcja](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2, metoda](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Profilowanie statycznych funkcji globalnych](profiling-global-static-functions.md)

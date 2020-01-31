@@ -12,12 +12,12 @@ api_type:
 ms.assetid: cf7a0e00-06ae-47a5-8037-598b26196802
 topic_type:
 - apiref
-ms.openlocfilehash: df9859f33b4146486a046253cf4705cd19c66adf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ac9a4e4b54b302afeae4ede1dd574c15ded3ff12
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131093"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788601"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>Metoda ICorDebugILCode::GetEHClauses
 [Obsługiwane w .NET Framework 4.5.2 i nowszych wersjach]  
@@ -41,7 +41,7 @@ HRESULT GetEHClauses(
  określoną Liczba klauzul, na których informacje są zapisywane w tablicy `clauses`.  
   
  warunki  
- określoną Tablica obiektów [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) , które zawierają informacje na temat klauzul obsługi wyjątków zdefiniowane dla tego Il.  
+ określoną Tablica obiektów [CorDebugEHClause](cordebugehclause-structure.md) , które zawierają informacje na temat klauzul obsługi wyjątków zdefiniowane dla tego Il.  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli `cClauses` ma wartość 0, a `pcClauses` ma**wartość**różną od null, `pcClauses` jest ustawiona na liczbę dostępnych klauzul obsługi wyjątków. Jeśli `cClauses` jest różna od zera, reprezentuje pojemność magazynu `clauses` tablicy. Gdy metoda zwraca, `clauses` zawiera maksymalnie `cClauses` elementów, a `pcClauses` jest ustawiona na liczbę klauzul, które faktycznie Zapisano do tablicy `clauses`.  
@@ -57,6 +57,6 @@ HRESULT GetEHClauses(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugILCode, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
-- [CorDebugEHClause, struktura](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugILCode, interfejs](icordebugilcode-interface.md)
+- [CorDebugEHClause, struktura](cordebugehclause-structure.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

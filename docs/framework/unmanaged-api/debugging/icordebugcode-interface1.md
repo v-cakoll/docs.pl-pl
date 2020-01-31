@@ -1,5 +1,5 @@
 ---
-title: ICorDebugCode — Interfejs
+title: ICorDebugCode, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCode
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7bd14fb6-8b54-4484-a891-e3c21859c019
 topic_type:
 - apiref
-ms.openlocfilehash: 8cb95fad4394e2ce9b7f922e720071d8c4434edb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4b24b3dfe6a931866acd7eba966811071ff39ea5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125591"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788928"
 ---
-# <a name="icordebugcode-interface"></a>ICorDebugCode — Interfejs
+# <a name="icordebugcode-interface"></a>ICorDebugCode, interfejs
 
 Reprezentuje segment kodu języka pośredniego firmy Microsoft (MSIL) lub kodu natywnego.  
   
@@ -29,15 +29,15 @@ Reprezentuje segment kodu języka pośredniego firmy Microsoft (MSIL) lub kodu n
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[CreateBreakpoint, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-createbreakpoint-method.md)|Tworzy punkt przerwania w określonym przesunięciu.|  
-|[GetAddress, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getaddress-method.md)|Pobiera względny adres wirtualny (RVA) segmentu kodu, który reprezentuje ten `ICorDebugCode`.|  
-|[GetCode, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md)|Pobiera cały kod dla określonej funkcji, sformatowany pod kątem demontażu. Ta metoda jest przestarzała; Zamiast tego użyj [ICorDebugCode2:: GetCodeChunks —](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) .|  
-|[GetEnCRemapSequencePoints, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getencremapsequencepoints-method.md)|Nie zaimplementowane.|  
-|[GetFunction, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getfunction-method.md)|Pobiera wartość "ICorDebugFunction" skojarzoną z tym `ICorDebugCode`.|  
-|[GetILToNativeMapping, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)|Pobiera tablicę wystąpień "COR_DEBUG_IL_TO_NATIVE_MAP", które reprezentują mapowania z przesunięć MSIL do natywnych przesunięć.|  
-|[GetSize, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getsize-method.md)|Pobiera rozmiar (w bajtach) kodu binarnego reprezentowanego przez ten `ICorDebugCode`.|  
-|[GetVersionNumber, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md)|Pobiera jednostronicowy numer identyfikujący wersję kodu, który reprezentuje ten `ICorDebugCode`.|  
-|[IsIL, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-isil-method.md)|Pobiera wartość wskazującą, czy ten `ICorDebugCode` jest kompilowany w języku MSIL.|  
+|[CreateBreakpoint, metoda](icordebugcode-createbreakpoint-method.md)|Tworzy punkt przerwania w określonym przesunięciu.|  
+|[GetAddress, metoda](icordebugcode-getaddress-method.md)|Pobiera względny adres wirtualny (RVA) segmentu kodu, który reprezentuje ten `ICorDebugCode`.|  
+|[GetCode, metoda](icordebugcode-getcode-method.md)|Pobiera cały kod dla określonej funkcji, sformatowany pod kątem demontażu. Ta metoda jest przestarzała; Zamiast tego użyj [ICorDebugCode2:: GetCodeChunks —](icordebugcode2-getcodechunks-method.md) .|  
+|[GetEnCRemapSequencePoints, metoda](icordebugcode-getencremapsequencepoints-method.md)|Nie zaimplementowane.|  
+|[GetFunction, metoda](icordebugcode-getfunction-method.md)|Pobiera wartość "ICorDebugFunction" skojarzoną z tym `ICorDebugCode`.|  
+|[GetILToNativeMapping, metoda](icordebugcode-getiltonativemapping-method.md)|Pobiera tablicę wystąpień "COR_DEBUG_IL_TO_NATIVE_MAP", które reprezentują mapowania z przesunięć MSIL do natywnych przesunięć.|  
+|[GetSize, metoda](icordebugcode-getsize-method.md)|Pobiera rozmiar (w bajtach) kodu binarnego reprezentowanego przez ten `ICorDebugCode`.|  
+|[GetVersionNumber, metoda](icordebugcode-getversionnumber-method.md)|Pobiera jednostronicowy numer identyfikujący wersję kodu, który reprezentuje ten `ICorDebugCode`.|  
+|[IsIL, metoda](icordebugcode-isil-method.md)|Pobiera wartość wskazującą, czy ten `ICorDebugCode` jest kompilowany w języku MSIL.|  
   
 ## <a name="remarks"></a>Uwagi  
  `ICorDebugCode` może reprezentować kod MSIL lub natywny. Obiekt "ICorDebugFunction", który reprezentuje kod MSIL, może mieć skojarzone z nim zero lub jeden `ICorDebugCode` obiektów. Obiekt "ICorDebugFunction" reprezentujący kod natywny może zawierać dowolną liczbę obiektów `ICorDebugCode` skojarzonych z nim.  
@@ -56,5 +56,5 @@ Reprezentuje segment kodu języka pośredniego firmy Microsoft (MSIL) lub kodu n
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugCode3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugCode3, interfejs](icordebugcode3-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

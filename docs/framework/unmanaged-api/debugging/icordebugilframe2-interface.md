@@ -1,5 +1,5 @@
 ---
-title: ICorDebugILFrame2 — Interfejs
+title: ICorDebugILFrame2, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugILFrame2
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: f94b9d53-d8f8-4424-a95e-53a1bfd26e4a
 topic_type:
 - apiref
-ms.openlocfilehash: 08c2946a9bd6251f377ea594c0c3ca5d1bd98c67
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c5fa0a67309e23c02393b70d849af3884dfd0adf
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095092"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788542"
 ---
-# <a name="icordebugilframe2-interface"></a>ICorDebugILFrame2 — Interfejs
+# <a name="icordebugilframe2-interface"></a>ICorDebugILFrame2, interfejs
 
 Logiczne rozszerzenie interfejsu ICorDebugILFrame.  
   
@@ -29,8 +29,8 @@ Logiczne rozszerzenie interfejsu ICorDebugILFrame.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[EnumerateTypeParameters, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Pobiera obiekt ICorDebugTypeEnum, który zawiera <xref:System.Type> parametry w tej ramce.|  
-|[RemapFunction, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|Ponownie mapuje edytowaną funkcję przez określenie nowego przesunięcia MSIL.|  
+|[EnumerateTypeParameters, metoda](icordebugilframe2-enumeratetypeparameters-method.md)|Pobiera obiekt ICorDebugTypeEnum, który zawiera <xref:System.Type> parametry w tej ramce.|  
+|[RemapFunction, metoda](icordebugilframe2-remapfunction-method.md)|Ponownie mapuje edytowaną funkcję przez określenie nowego przesunięcia MSIL.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -48,4 +48,4 @@ Logiczne rozszerzenie interfejsu ICorDebugILFrame.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

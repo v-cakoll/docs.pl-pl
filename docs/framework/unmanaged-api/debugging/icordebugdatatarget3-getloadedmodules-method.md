@@ -2,12 +2,12 @@
 title: ICorDebugDataTarget3::GetLoadedModules — metoda
 ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
-ms.openlocfilehash: 6ee2215e2b3e3bd911158b3fc801361fc4e22db1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d4c22146422085daa4dc9d90ae5b3735a12500c2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136685"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793557"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>ICorDebugDataTarget3::GetLoadedModules — metoda
 Pobiera listę modułów, które zostały wcześniej załadowane.  
@@ -30,7 +30,7 @@ HRESULT GetLoadedModules(
  określoną Wskaźnik do liczby modułów, na których zwrócono informacje.  
   
  `pLoadedModules`  
- określoną Wskaźnik do tablicy obiektów [ICorDebugLoadedModule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md) , które zawierają informacje o załadowanych modułach.  
+ określoną Wskaźnik do tablicy obiektów [ICorDebugLoadedModule](icordebugloadedmodule-interface.md) , które zawierają informacje o załadowanych modułach.  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -48,5 +48,5 @@ HRESULT GetLoadedModules(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugDataTarget3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget3-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugDataTarget3, interfejs](icordebugdatatarget3-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: SaveFileDialog — Informacje o składniku (Formularze systemu Windows)
+title: SaveFileDialog, składnik — omówienie
 ms.date: 03/30/2017
 f1_keywords:
 - SaveFileDialog
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - Save File dialog box [Windows Forms], displaying
 - SaveFileDialog component [Windows Forms], about SaveFileDialog
 ms.assetid: be7a625f-46fd-4d06-9985-b613dcbf9bd2
-ms.openlocfilehash: 1e4269129f17c10056af2765c7a0e74537918ae5
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 7609c29b7e932ecee7dc8a289617094bd8d480e2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211611"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743100"
 ---
-# <a name="savefiledialog-component-overview-windows-forms"></a><span data-ttu-id="89067-102">SaveFileDialog — Informacje o składniku (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="89067-102">SaveFileDialog Component Overview (Windows Forms)</span></span>
+# <a name="savefiledialog-component-overview-windows-forms"></a><span data-ttu-id="78379-102">SaveFileDialog — Informacje o składniku (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="78379-102">SaveFileDialog Component Overview (Windows Forms)</span></span>
 
-<span data-ttu-id="89067-103">Formularze Windows <xref:System.Windows.Forms.SaveFileDialog> składnik to wstępnie skonfigurowane okno dialogowe.</span><span class="sxs-lookup"><span data-stu-id="89067-103">The Windows Forms <xref:System.Windows.Forms.SaveFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="89067-104">Jest taka sama jak standardowy **Zapisz plik** okno dialogowe używane przez Windows.</span><span class="sxs-lookup"><span data-stu-id="89067-104">It is the same as the standard **Save File** dialog box used by Windows.</span></span> <span data-ttu-id="89067-105">Dziedziczy <xref:System.Windows.Forms.CommonDialog> klasy.</span><span class="sxs-lookup"><span data-stu-id="89067-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>
+<span data-ttu-id="78379-103">Składnik <xref:System.Windows.Forms.SaveFileDialog> Windows Forms jest wstępnie skonfigurowanym oknem dialogowym.</span><span class="sxs-lookup"><span data-stu-id="78379-103">The Windows Forms <xref:System.Windows.Forms.SaveFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="78379-104">Jest to takie samo, jak okno dialogowe **plik zapisywania** standardowego używany przez system Windows.</span><span class="sxs-lookup"><span data-stu-id="78379-104">It is the same as the standard **Save File** dialog box used by Windows.</span></span> <span data-ttu-id="78379-105">Dziedziczy z klasy <xref:System.Windows.Forms.CommonDialog>.</span><span class="sxs-lookup"><span data-stu-id="78379-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>
 
-## <a name="working-with-the-savefiledialog-component"></a><span data-ttu-id="89067-106">Praca ze składnikiem SaveFileDialog</span><span class="sxs-lookup"><span data-stu-id="89067-106">Working with the SaveFileDialog Component</span></span>
+## <a name="working-with-the-savefiledialog-component"></a><span data-ttu-id="78379-106">Praca ze składnikiem SaveFileDialog</span><span class="sxs-lookup"><span data-stu-id="78379-106">Working with the SaveFileDialog Component</span></span>
 
-<span data-ttu-id="89067-107">Używać go jako proste rozwiązanie umożliwiające użytkownikom zapisywanie plików, zamiast konfigurować własne okno dialogowe.</span><span class="sxs-lookup"><span data-stu-id="89067-107">Use it as a simple solution for enabling users to save files instead of configuring your own dialog box.</span></span> <span data-ttu-id="89067-108">Opierając się na standardowych okien dialogowych Windows, natychmiast dobrze znanym użytkownikom jest podstawową funkcjonalność aplikacji, które tworzysz.</span><span class="sxs-lookup"><span data-stu-id="89067-108">By relying on standard Windows dialog boxes, the basic functionality of applications you create is immediately familiar to users.</span></span> <span data-ttu-id="89067-109">Należy jednak pamiętać, że w przypadku przy użyciu <xref:System.Windows.Forms.SaveFileDialog> składnik, należy napisać własną logiką zapisywania pliku.</span><span class="sxs-lookup"><span data-stu-id="89067-109">Be aware, however, that when using the <xref:System.Windows.Forms.SaveFileDialog> component, you must write your own file-saving logic.</span></span>
+<span data-ttu-id="78379-107">Użyj jej jako prostego rozwiązania umożliwiającego użytkownikom zapisywanie plików zamiast konfigurować własne okno dialogowe.</span><span class="sxs-lookup"><span data-stu-id="78379-107">Use it as a simple solution for enabling users to save files instead of configuring your own dialog box.</span></span> <span data-ttu-id="78379-108">Opierając się na standardowych oknach dialogowych systemu Windows, podstawowe funkcje aplikacji tworzonych przez Ciebie są od razu znane użytkownikom.</span><span class="sxs-lookup"><span data-stu-id="78379-108">By relying on standard Windows dialog boxes, the basic functionality of applications you create is immediately familiar to users.</span></span> <span data-ttu-id="78379-109">Należy jednak pamiętać, że w przypadku korzystania ze składnika <xref:System.Windows.Forms.SaveFileDialog> należy napisać własną logikę zapisywania plików.</span><span class="sxs-lookup"><span data-stu-id="78379-109">Be aware, however, that when using the <xref:System.Windows.Forms.SaveFileDialog> component, you must write your own file-saving logic.</span></span>
 
-<span data-ttu-id="89067-110">Możesz użyć <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metodę, aby wyświetlić okno dialogowe w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="89067-110">You can use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog box at run time.</span></span> <span data-ttu-id="89067-111">Możesz otworzyć plik w trybie odczytu i zapisu za pomocą <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="89067-111">You can open a file in read/write mode using the <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> method.</span></span>
+<span data-ttu-id="78379-110">Możesz użyć metody <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>, aby wyświetlić okno dialogowe w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="78379-110">You can use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog box at run time.</span></span> <span data-ttu-id="78379-111">Plik można otworzyć w trybie odczytu/zapisu przy użyciu metody <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>.</span><span class="sxs-lookup"><span data-stu-id="78379-111">You can open a file in read/write mode using the <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> method.</span></span>
 
-<span data-ttu-id="89067-112">Gdy zostanie dodany do formularza, <xref:System.Windows.Forms.SaveFileDialog> składnika, który pojawia się na pasku w dolnej części projektanta Windows Forms w programie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="89067-112">When it is added to a form, the <xref:System.Windows.Forms.SaveFileDialog> component appears in the tray at the bottom of the Windows Forms Designer in Visual Studio.</span></span>
+<span data-ttu-id="78379-112">Po dodaniu do formularza składnik <xref:System.Windows.Forms.SaveFileDialog> pojawia się w zasobniku u dołu Projektant formularzy systemu Windows w programie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="78379-112">When it is added to a form, the <xref:System.Windows.Forms.SaveFileDialog> component appears in the tray at the bottom of the Windows Forms Designer in Visual Studio.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="89067-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="89067-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="78379-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="78379-113">See also</span></span>
 
 - <xref:System.Windows.Forms.SaveFileDialog>
-- [<span data-ttu-id="89067-114">SaveFileDialog, składnik</span><span class="sxs-lookup"><span data-stu-id="89067-114">SaveFileDialog Component</span></span>](savefiledialog-component-windows-forms.md)
+- [<span data-ttu-id="78379-114">SaveFileDialog, składnik</span><span class="sxs-lookup"><span data-stu-id="78379-114">SaveFileDialog Component</span></span>](savefiledialog-component-windows-forms.md)

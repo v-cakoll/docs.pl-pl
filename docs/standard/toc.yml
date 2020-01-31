@@ -111,6 +111,8 @@
           href: native-interop/qualify-net-types-for-interoperation.md
     - name: Stosowanie atrybutów międzyoperacyjności
       href: native-interop/apply-interop-attributes.md
+    - name: Wyjątki
+      href: native-interop/exceptions-interoperability.md
 - name: Kolekcje i struktury danych
   href: collections/
 - name: Wartości numeryczne na platformie .NET

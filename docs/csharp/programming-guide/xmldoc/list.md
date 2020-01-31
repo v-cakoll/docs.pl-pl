@@ -12,49 +12,55 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: 6e6f3a3399f2bffe84b5cec733833c974a0bb51b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cb289b26e9bc12d561892c421fb40da18d8c3513
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711756"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789752"
 ---
-# <a name="list-c-programming-guide"></a><span data-ttu-id="fad63-102">> listy \<(C# Przewodnik programowania)</span><span class="sxs-lookup"><span data-stu-id="fad63-102">\<list> (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="fad63-103">Składnia</span><span class="sxs-lookup"><span data-stu-id="fad63-103">Syntax</span></span>  
-  
-```xml  
-<list type="bullet" | "number" | "table">  
-    <listheader>  
-        <term>term</term>  
-        <description>description</description>  
-    </listheader>  
-    <item>  
-        <term>term</term>  
-        <description>description</description>  
-    </item>  
-</list>  
-```  
-  
-## <a name="parameters"></a><span data-ttu-id="fad63-104">Parametry</span><span class="sxs-lookup"><span data-stu-id="fad63-104">Parameters</span></span>  
- `term`  
- <span data-ttu-id="fad63-105">Termin do zdefiniowania, który zostanie zdefiniowany w `description`.</span><span class="sxs-lookup"><span data-stu-id="fad63-105">A term to define, which will be defined in `description`.</span></span>  
-  
- `description`  
- <span data-ttu-id="fad63-106">Element na liście punktowanej lub numerowanej lub definicji `term`.</span><span class="sxs-lookup"><span data-stu-id="fad63-106">Either an item in a bullet or numbered list or the definition of a `term`.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="fad63-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="fad63-107">Remarks</span></span>  
- <span data-ttu-id="fad63-108">Blok \<listheader > służy do definiowania wiersza nagłówka tabeli lub listy definicji.</span><span class="sxs-lookup"><span data-stu-id="fad63-108">The \<listheader> block is used to define the heading row of either a table or definition list.</span></span> <span data-ttu-id="fad63-109">Podczas definiowania tabeli należy podać tylko wpis dla terminu w nagłówku.</span><span class="sxs-lookup"><span data-stu-id="fad63-109">When defining a table, you only need to supply an entry for term in the heading.</span></span>  
-  
- <span data-ttu-id="fad63-110">Każdy element na liście jest określany za pomocą bloku \<elementu >.</span><span class="sxs-lookup"><span data-stu-id="fad63-110">Each item in the list is specified with an \<item> block.</span></span> <span data-ttu-id="fad63-111">Podczas tworzenia listy definicji należy określić zarówno `term`, jak i `description`.</span><span class="sxs-lookup"><span data-stu-id="fad63-111">When creating a definition list, you will need to specify both `term` and `description`.</span></span> <span data-ttu-id="fad63-112">Jednak dla tabeli, listy punktowanej lub listy numerowanej należy podać tylko wpis dla `description`.</span><span class="sxs-lookup"><span data-stu-id="fad63-112">However, for a table, bulleted list, or numbered list, you only need to supply an entry for `description`.</span></span>  
-  
- <span data-ttu-id="fad63-113">Lista lub tabela może zawierać tyle \<elementów > bloków, zgodnie z potrzebami.</span><span class="sxs-lookup"><span data-stu-id="fad63-113">A list or table can have as many \<item> blocks as needed.</span></span>  
-  
- <span data-ttu-id="fad63-114">Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.</span><span class="sxs-lookup"><span data-stu-id="fad63-114">Compile with [-doc](../../language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="fad63-115">Przykład</span><span class="sxs-lookup"><span data-stu-id="fad63-115">Example</span></span>  
- [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]  
-  
-## <a name="see-also"></a><span data-ttu-id="fad63-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fad63-116">See also</span></span>
+# <a name="list-c-programming-guide"></a><span data-ttu-id="5786c-102">> listy \<(C# Przewodnik programowania)</span><span class="sxs-lookup"><span data-stu-id="5786c-102">\<list> (C# programming guide)</span></span>
 
-- [<span data-ttu-id="fad63-117">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="fad63-117">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="fad63-118">Zalecane tagi przeznaczone do komentarzy dokumentacji</span><span class="sxs-lookup"><span data-stu-id="fad63-118">Recommended Tags for Documentation Comments</span></span>](./recommended-tags-for-documentation-comments.md)
+## <a name="syntax"></a><span data-ttu-id="5786c-103">Składnia</span><span class="sxs-lookup"><span data-stu-id="5786c-103">Syntax</span></span>
+
+```xml
+<list type="bullet|number|table">
+    <listheader>
+        <term>term</term>
+        <description>description</description>
+    </listheader>
+    <item>
+        <term>term</term>
+        <description>description</description>
+    </item>
+</list>
+```
+
+## <a name="parameters"></a><span data-ttu-id="5786c-104">Parametry</span><span class="sxs-lookup"><span data-stu-id="5786c-104">Parameters</span></span>
+
+- `term`
+
+  <span data-ttu-id="5786c-105">Termin do zdefiniowania, który zostanie zdefiniowany w `description`.</span><span class="sxs-lookup"><span data-stu-id="5786c-105">A term to define, which will be defined in `description`.</span></span>
+
+- `description`
+
+  <span data-ttu-id="5786c-106">Element na liście punktowanej lub numerowanej lub definicji `term`.</span><span class="sxs-lookup"><span data-stu-id="5786c-106">Either an item in a bullet or numbered list or the definition of a `term`.</span></span>
+  
+## <a name="remarks"></a><span data-ttu-id="5786c-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="5786c-107">Remarks</span></span>
+
+<span data-ttu-id="5786c-108">Blok \<listheader > służy do definiowania wiersza nagłówka tabeli lub listy definicji.</span><span class="sxs-lookup"><span data-stu-id="5786c-108">The \<listheader> block is used to define the heading row of either a table or definition list.</span></span> <span data-ttu-id="5786c-109">Podczas definiowania tabeli należy podać tylko wpis dla terminu w nagłówku.</span><span class="sxs-lookup"><span data-stu-id="5786c-109">When defining a table, you only need to supply an entry for term in the heading.</span></span>
+
+<span data-ttu-id="5786c-110">Każdy element na liście jest określany za pomocą bloku \<elementu >.</span><span class="sxs-lookup"><span data-stu-id="5786c-110">Each item in the list is specified with an \<item> block.</span></span> <span data-ttu-id="5786c-111">Podczas tworzenia listy definicji należy określić zarówno `term`, jak i `description`.</span><span class="sxs-lookup"><span data-stu-id="5786c-111">When creating a definition list, you will need to specify both `term` and `description`.</span></span> <span data-ttu-id="5786c-112">Jednak dla tabeli, listy punktowanej lub listy numerowanej należy podać tylko wpis dla `description`.</span><span class="sxs-lookup"><span data-stu-id="5786c-112">However, for a table, bulleted list, or numbered list, you only need to supply an entry for `description`.</span></span>
+
+<span data-ttu-id="5786c-113">Lista lub tabela może zawierać tyle \<elementów > bloków, zgodnie z potrzebami.</span><span class="sxs-lookup"><span data-stu-id="5786c-113">A list or table can have as many \<item> blocks as needed.</span></span>
+
+<span data-ttu-id="5786c-114">Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.</span><span class="sxs-lookup"><span data-stu-id="5786c-114">Compile with [-doc](../../language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>
+
+## <a name="example"></a><span data-ttu-id="5786c-115">Przykład</span><span class="sxs-lookup"><span data-stu-id="5786c-115">Example</span></span>
+
+[!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]
+
+## <a name="see-also"></a><span data-ttu-id="5786c-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5786c-116">See also</span></span>
+
+- [<span data-ttu-id="5786c-117">C#Przewodnik programowania</span><span class="sxs-lookup"><span data-stu-id="5786c-117">C# programming guide</span></span>](../index.md)
+- [<span data-ttu-id="5786c-118">Zalecane Tagi dla komentarzy dokumentacji</span><span class="sxs-lookup"><span data-stu-id="5786c-118">Recommended tags for documentation comments</span></span>](./recommended-tags-for-documentation-comments.md)

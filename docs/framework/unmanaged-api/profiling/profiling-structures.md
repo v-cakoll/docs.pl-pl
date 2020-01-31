@@ -6,47 +6,47 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], profiling
 - structures [.NET Framework profiling]
 ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
-ms.openlocfilehash: 2f3e8cedcc498230311c0b52f7ecc1c2c4fc8ff1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c3bbc66079e05abf494ad112b8aa0ac68e3c3e2f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447697"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868112"
 ---
-# <a name="profiling-structures"></a><span data-ttu-id="465de-102">Profiling — Struktury</span><span class="sxs-lookup"><span data-stu-id="465de-102">Profiling Structures</span></span>
-<span data-ttu-id="465de-103">W tej sekcji opisano niezarządzane struktury używane przez interfejs API profilowania.</span><span class="sxs-lookup"><span data-stu-id="465de-103">This section describes the unmanaged structures that the profiling API uses.</span></span>  
+# <a name="profiling-structures"></a><span data-ttu-id="50174-102">Profiling — Struktury</span><span class="sxs-lookup"><span data-stu-id="50174-102">Profiling Structures</span></span>
+<span data-ttu-id="50174-103">W tej sekcji opisano niezarządzane struktury używane przez interfejs API profilowania.</span><span class="sxs-lookup"><span data-stu-id="50174-103">This section describes the unmanaged structures that the profiling API uses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="465de-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="465de-104">In This Section</span></span>  
- [<span data-ttu-id="465de-105">COR_PRF_ASSEMBLY_REFERENCE_INFO, struktura</span><span class="sxs-lookup"><span data-stu-id="465de-105">COR_PRF_ASSEMBLY_REFERENCE_INFO Structure</span></span>](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)  
- <span data-ttu-id="465de-106">Zapewnia środowisko uruchomieniowe języka wspólnego z informacjami o zestawie referencyjnym, które należy wziąć pod uwagę podczas przeprowadzania przeszukiwania odwołań do zestawu.</span><span class="sxs-lookup"><span data-stu-id="465de-106">Provides the common language runtime with information about a reference assembly that it should consider when performing an assembly reference closure walk.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="50174-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="50174-104">In This Section</span></span>  
+ [<span data-ttu-id="50174-105">COR_PRF_ASSEMBLY_REFERENCE_INFO, struktura</span><span class="sxs-lookup"><span data-stu-id="50174-105">COR_PRF_ASSEMBLY_REFERENCE_INFO Structure</span></span>](cor-prf-assembly-reference-info-structure.md)  
+ <span data-ttu-id="50174-106">Zapewnia środowisko uruchomieniowe języka wspólnego z informacjami o zestawie referencyjnym, które należy wziąć pod uwagę podczas przeprowadzania przeszukiwania odwołań do zestawu.</span><span class="sxs-lookup"><span data-stu-id="50174-106">Provides the common language runtime with information about a reference assembly that it should consider when performing an assembly reference closure walk.</span></span>  
   
- [<span data-ttu-id="465de-107">COR_PRF_CODE_INFO, struktura</span><span class="sxs-lookup"><span data-stu-id="465de-107">COR_PRF_CODE_INFO Structure</span></span>](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md)  
- <span data-ttu-id="465de-108">Reprezentuje jeden ciągły blok kodu natywnego przechowywanego w pamięci.</span><span class="sxs-lookup"><span data-stu-id="465de-108">Represents one contiguous block of native code stored in memory.</span></span>  
+ [<span data-ttu-id="50174-107">COR_PRF_CODE_INFO, struktura</span><span class="sxs-lookup"><span data-stu-id="50174-107">COR_PRF_CODE_INFO Structure</span></span>](cor-prf-code-info-structure.md)  
+ <span data-ttu-id="50174-108">Reprezentuje jeden ciągły blok kodu natywnego przechowywanego w pamięci.</span><span class="sxs-lookup"><span data-stu-id="50174-108">Represents one contiguous block of native code stored in memory.</span></span>  
   
- [<span data-ttu-id="465de-109">COR_PRF_EX_CLAUSE_INFO, struktura</span><span class="sxs-lookup"><span data-stu-id="465de-109">COR_PRF_EX_CLAUSE_INFO Structure</span></span>](../../../../docs/framework/unmanaged-api/profiling/cor-prf-ex-clause-info-structure.md)  
- <span data-ttu-id="465de-110">Przechowuje informacje o konkretnym wystąpieniu klauzuli wyjątku i skojarzonej z nią ramce.</span><span class="sxs-lookup"><span data-stu-id="465de-110">Stores information about a specific exception clause instance and its associated frame.</span></span>  
+ [<span data-ttu-id="50174-109">COR_PRF_EX_CLAUSE_INFO, struktura</span><span class="sxs-lookup"><span data-stu-id="50174-109">COR_PRF_EX_CLAUSE_INFO Structure</span></span>](cor-prf-ex-clause-info-structure.md)  
+ <span data-ttu-id="50174-110">Przechowuje informacje o konkretnym wystąpieniu klauzuli wyjątku i skojarzonej z nią ramce.</span><span class="sxs-lookup"><span data-stu-id="50174-110">Stores information about a specific exception clause instance and its associated frame.</span></span>  
   
- [<span data-ttu-id="465de-111">COR_PRF_FUNCTION, struktura</span><span class="sxs-lookup"><span data-stu-id="465de-111">COR_PRF_FUNCTION Structure</span></span>](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-structure.md)  
- <span data-ttu-id="465de-112">Zapewnia unikatową reprezentację funkcji przez połączenie jej identyfikatora z IDENTYFIKATORem jego ponownie skompilowanej wersji.</span><span class="sxs-lookup"><span data-stu-id="465de-112">Provides a unique representation of a function by combining its ID with the ID of its recompiled version.</span></span>  
+ [<span data-ttu-id="50174-111">COR_PRF_FUNCTION, struktura</span><span class="sxs-lookup"><span data-stu-id="50174-111">COR_PRF_FUNCTION Structure</span></span>](cor-prf-function-structure.md)  
+ <span data-ttu-id="50174-112">Zapewnia unikatową reprezentację funkcji przez połączenie jej identyfikatora z IDENTYFIKATORem jego ponownie skompilowanej wersji.</span><span class="sxs-lookup"><span data-stu-id="50174-112">Provides a unique representation of a function by combining its ID with the ID of its recompiled version.</span></span>  
   
- [<span data-ttu-id="465de-113">COR_PRF_FUNCTION_ARGUMENT_INFO, struktura</span><span class="sxs-lookup"><span data-stu-id="465de-113">COR_PRF_FUNCTION_ARGUMENT_INFO Structure</span></span>](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md)  
- <span data-ttu-id="465de-114">Reprezentuje argumenty funkcji w kolejności od lewej do prawej.</span><span class="sxs-lookup"><span data-stu-id="465de-114">Represents a function's arguments, in left-to-right order.</span></span>  
+ [<span data-ttu-id="50174-113">COR_PRF_FUNCTION_ARGUMENT_INFO, struktura</span><span class="sxs-lookup"><span data-stu-id="50174-113">COR_PRF_FUNCTION_ARGUMENT_INFO Structure</span></span>](cor-prf-function-argument-info-structure.md)  
+ <span data-ttu-id="50174-114">Reprezentuje argumenty funkcji w kolejności od lewej do prawej.</span><span class="sxs-lookup"><span data-stu-id="50174-114">Represents a function's arguments, in left-to-right order.</span></span>  
   
- [<span data-ttu-id="465de-115">COR_PRF_FUNCTION_ARGUMENT_RANGE, struktura</span><span class="sxs-lookup"><span data-stu-id="465de-115">COR_PRF_FUNCTION_ARGUMENT_RANGE Structure</span></span>](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)  
- <span data-ttu-id="465de-116">Reprezentuje blok argumentów funkcji przechowywanych w sposób ciągły w kolejności od lewej do prawej w pamięci.</span><span class="sxs-lookup"><span data-stu-id="465de-116">Represents a block of function arguments stored contiguously in left-to-right order in memory.</span></span>  
+ [<span data-ttu-id="50174-115">COR_PRF_FUNCTION_ARGUMENT_RANGE, struktura</span><span class="sxs-lookup"><span data-stu-id="50174-115">COR_PRF_FUNCTION_ARGUMENT_RANGE Structure</span></span>](cor-prf-function-argument-range-structure.md)  
+ <span data-ttu-id="50174-116">Reprezentuje blok argumentów funkcji przechowywanych w sposób ciągły w kolejności od lewej do prawej w pamięci.</span><span class="sxs-lookup"><span data-stu-id="50174-116">Represents a block of function arguments stored contiguously in left-to-right order in memory.</span></span>  
   
- [<span data-ttu-id="465de-117">COR_PRF_GC_GENERATION_RANGE, struktura</span><span class="sxs-lookup"><span data-stu-id="465de-117">COR_PRF_GC_GENERATION_RANGE Structure</span></span>](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)  
- <span data-ttu-id="465de-118">Opisuje zakres (czyli blok) pamięci, która jest niedo wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="465de-118">Describes a range (that is, block) of memory that is undergoing garbage collection.</span></span>  
+ [<span data-ttu-id="50174-117">COR_PRF_GC_GENERATION_RANGE, struktura</span><span class="sxs-lookup"><span data-stu-id="50174-117">COR_PRF_GC_GENERATION_RANGE Structure</span></span>](cor-prf-gc-generation-range-structure.md)  
+ <span data-ttu-id="50174-118">Opisuje zakres (czyli blok) pamięci, która jest niedo wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="50174-118">Describes a range (that is, block) of memory that is undergoing garbage collection.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="465de-119">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="465de-119">Related Sections</span></span>  
- <span data-ttu-id="465de-120">COR_DEBUG_IL_TO_NATIVE_MAP</span><span class="sxs-lookup"><span data-stu-id="465de-120">COR_DEBUG_IL_TO_NATIVE_MAP</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="50174-119">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="50174-119">Related Sections</span></span>  
+ <span data-ttu-id="50174-120">COR_DEBUG_IL_TO_NATIVE_MAP</span><span class="sxs-lookup"><span data-stu-id="50174-120">COR_DEBUG_IL_TO_NATIVE_MAP</span></span>  
   
- <span data-ttu-id="465de-121">COR_IL_MAP</span><span class="sxs-lookup"><span data-stu-id="465de-121">COR_IL_MAP</span></span>  
+ <span data-ttu-id="50174-121">COR_IL_MAP</span><span class="sxs-lookup"><span data-stu-id="50174-121">COR_IL_MAP</span></span>  
   
- [<span data-ttu-id="465de-122">Omówienie profilowania</span><span class="sxs-lookup"><span data-stu-id="465de-122">Profiling Overview</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
+ [<span data-ttu-id="50174-122">Omówienie profilowania</span><span class="sxs-lookup"><span data-stu-id="50174-122">Profiling Overview</span></span>](profiling-overview.md)  
   
- [<span data-ttu-id="465de-123">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="465de-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [<span data-ttu-id="50174-123">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="50174-123">Profiling Interfaces</span></span>](profiling-interfaces.md)  
   
- [<span data-ttu-id="465de-124">Profilowanie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="465de-124">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
+ [<span data-ttu-id="50174-124">Profilowanie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="50174-124">Profiling Global Static Functions</span></span>](profiling-global-static-functions.md)  
   
- [<span data-ttu-id="465de-125">Profilowanie — wyliczenia</span><span class="sxs-lookup"><span data-stu-id="465de-125">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+ [<span data-ttu-id="50174-125">Profilowanie — wyliczenia</span><span class="sxs-lookup"><span data-stu-id="50174-125">Profiling Enumerations</span></span>](profiling-enumerations.md)

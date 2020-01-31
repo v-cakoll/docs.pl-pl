@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: 376fb03f-f1ef-4107-baa4-4d9d55884862
 topic_type:
 - apiref
-ms.openlocfilehash: 7b56f0f3ba62efb48ac8d79aad4480b5f22771ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e90952a92c408762a98a2bfcb91b6aeb72052df1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110213"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791220"
 ---
-# <a name="icordebugtype2-interface"></a><span data-ttu-id="807e5-102">ICorDebugType2, interfejs</span><span class="sxs-lookup"><span data-stu-id="807e5-102">ICorDebugType2 Interface</span></span>
-<span data-ttu-id="807e5-103">Rozszerza interfejs ICorDebugType w celu pobrania identyfikatora typu podstawowego lub złożonego (zdefiniowanego przez użytkownika).</span><span class="sxs-lookup"><span data-stu-id="807e5-103">Extends the ICorDebugType interface to retrieve the type identifier  of a base type or complex (user-defined) type.</span></span>  
+# <a name="icordebugtype2-interface"></a><span data-ttu-id="25464-102">ICorDebugType2, interfejs</span><span class="sxs-lookup"><span data-stu-id="25464-102">ICorDebugType2 Interface</span></span>
+<span data-ttu-id="25464-103">Rozszerza interfejs ICorDebugType w celu pobrania identyfikatora typu podstawowego lub złożonego (zdefiniowanego przez użytkownika).</span><span class="sxs-lookup"><span data-stu-id="25464-103">Extends the ICorDebugType interface to retrieve the type identifier  of a base type or complex (user-defined) type.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="807e5-104">Metody</span><span class="sxs-lookup"><span data-stu-id="807e5-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="25464-104">Metody</span><span class="sxs-lookup"><span data-stu-id="25464-104">Methods</span></span>  
   
-|<span data-ttu-id="807e5-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="807e5-105">Method</span></span>||  
+|<span data-ttu-id="25464-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="25464-105">Method</span></span>||  
 |------------|-|  
-|[<span data-ttu-id="807e5-106">GetTypeID, metoda</span><span class="sxs-lookup"><span data-stu-id="807e5-106">GetTypeID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|<span data-ttu-id="807e5-107">Pobiera [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) dla tego typu.</span><span class="sxs-lookup"><span data-stu-id="807e5-107">Gets a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this type.</span></span>|  
+|[<span data-ttu-id="25464-106">GetTypeID, metoda</span><span class="sxs-lookup"><span data-stu-id="25464-106">GetTypeID Method</span></span>](icordebugtype2-gettypeid-method.md)|<span data-ttu-id="25464-107">Pobiera [COR_TYPEID](cor-typeid-structure.md) dla tego typu.</span><span class="sxs-lookup"><span data-stu-id="25464-107">Gets a [COR_TYPEID](cor-typeid-structure.md) for this type.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="807e5-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="807e5-108">Remarks</span></span>  
- <span data-ttu-id="807e5-109">Ten interfejs jest logicznym rozszerzeniem interfejsu ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="807e5-109">This interface is a logical extension of the ICorDebugType interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="25464-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="25464-108">Remarks</span></span>  
+ <span data-ttu-id="25464-109">Ten interfejs jest logicznym rozszerzeniem interfejsu ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="25464-109">This interface is a logical extension of the ICorDebugType interface.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="807e5-110">Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.</span><span class="sxs-lookup"><span data-stu-id="807e5-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="25464-110">Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.</span><span class="sxs-lookup"><span data-stu-id="25464-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="807e5-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="807e5-111">Example</span></span>  
- <span data-ttu-id="807e5-112">Poniższy fragment kodu ilustruje użycie metody [ICorDebugType2:: GetTypeId](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) .</span><span class="sxs-lookup"><span data-stu-id="807e5-112">The following code fragment illustrates the use of the [ICorDebugType2::GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) method.</span></span>  
+## <a name="example"></a><span data-ttu-id="25464-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="25464-111">Example</span></span>  
+ <span data-ttu-id="25464-112">Poniższy fragment kodu ilustruje użycie metody [ICorDebugType2:: GetTypeId](icordebugtype2-gettypeid-method.md) .</span><span class="sxs-lookup"><span data-stu-id="25464-112">The following code fragment illustrates the use of the [ICorDebugType2::GetTypeID](icordebugtype2-gettypeid-method.md) method.</span></span>  
   
 ```cpp  
 // (error checking omitted for brevity)  
@@ -52,15 +52,15 @@ pType2->GetTypeID(&id);
 // now we can use existing APIs to get information about this COR_TYPEID  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="807e5-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="807e5-113">Requirements</span></span>  
- <span data-ttu-id="807e5-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="807e5-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="25464-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="25464-113">Requirements</span></span>  
+ <span data-ttu-id="25464-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="25464-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="807e5-115">**Nagłówek:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="807e5-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="25464-115">**Nagłówek:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="25464-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="807e5-116">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="807e5-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="25464-116">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="25464-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="807e5-117">**Wersje .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="807e5-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="25464-117">**Wersje .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="25464-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="807e5-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="807e5-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="25464-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="25464-118">See also</span></span>
 
-- [<span data-ttu-id="807e5-119">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="807e5-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="25464-119">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="25464-119">Debugging Interfaces</span></span>](debugging-interfaces.md)

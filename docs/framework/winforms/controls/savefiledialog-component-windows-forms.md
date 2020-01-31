@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Save File dialog box
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
-ms.openlocfilehash: 920816c648f5dbdd50f869e58769655e8be8e1a1
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8490261068684385678ccb830ee179015a0644f4
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743095"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867402"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>SaveFileDialog — Składnik (Formularze systemu Windows)
 Składnik <xref:System.Windows.Forms.SaveFileDialog> Windows Forms jest wstępnie skonfigurowanym oknem dialogowym. Jest to takie samo, jak okno dialogowe plik zapisywania standardowego używany przez system Windows. Dziedziczy z klasy <xref:System.Windows.Forms.CommonDialog>.  
@@ -31,7 +31,4 @@ Składnik <xref:System.Windows.Forms.SaveFileDialog> Windows Forms jest wstępni
  Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.  
   
  [Kontrolki i składniki okien dialogowych](dialog-box-controls-and-components-windows-forms.md)  
- Opisuje zestaw kontrolek i składników, które umożliwiają użytkownikom wykonywanie standardowych interakcji z aplikacją lub systemem.  
-  
- [Zasadniczy kod dla okien dialogowych Windows Forms](https://go.microsoft.com/fwlink/?LinkID=102575)  
- W tym artykule omówiono kontrolki okna dialogowego Windows Forms i składniki oraz kod niezbędny do wykonywania ich podstawowych funkcji. (Artykuł techniczny biblioteki MSDN Online Library)
+ Opisuje zestaw kontrolek i składników, które umożliwiają użytkownikom wykonywanie standardowych interakcji z aplikacją lub systemem.

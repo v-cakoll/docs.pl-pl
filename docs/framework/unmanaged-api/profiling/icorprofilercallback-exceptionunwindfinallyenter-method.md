@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7fab986-b69f-4ec8-b7b7-91dcfc239cd0
 topic_type:
 - apiref
-ms.openlocfilehash: 1f16add7b5a9d18e0c1eb33209b609e9bf7e18b0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ab7c8cbc41967af04c4c9a8813f32b9b1f01c6a1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445313"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866354"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a>ICorProfilerCallback::ExceptionUnwindFinallyEnter — Metoda
 Powiadamia program profilujący, że faza unwind dla obsługi wyjątków wprowadza klauzulę `finally`ą zawartą w określonej funkcji.  
@@ -32,10 +32,12 @@ HRESULT ExceptionUnwindFinallyEnter(
     [in] FunctionID functionId);  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `functionId`  
- podczas Identyfikator funkcji, która zawiera klauzulę `finally`.  
-  
+## <a name="parameters"></a>Parametry
+
+- `functionId`
+
+  \[in) identyfikator funkcji, która zawiera klauzulę `finally`.
+
 ## <a name="remarks"></a>Uwagi  
  Profiler nie powinien blokować swojej implementacji tej metody, ponieważ stos może nie znajdować się w stanie, który zezwala na wyrzucanie elementów bezużytecznych i dlatego nie można włączyć zastępujący elementów bezużytecznych. Jeśli profiler blokuje tutaj i zostanie podjęta próba wyrzucania elementów bezużytecznych, środowisko uruchomieniowe zostanie zablokowane do momentu wywołania zwrotnego.  
   
@@ -52,6 +54,6 @@ HRESULT ExceptionUnwindFinallyEnter(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [GetNotifiedExceptionClauseInfo, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)
-- [ExceptionUnwindFinallyLeave, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [GetNotifiedExceptionClauseInfo, metoda](icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)
+- [ExceptionUnwindFinallyLeave, metoda](icorprofilercallback-exceptionunwindfinallyleave-method.md)

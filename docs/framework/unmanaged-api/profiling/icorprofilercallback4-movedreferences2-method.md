@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d17a065b-5bc6-4817-b3e1-1e413fcb33a8
 topic_type:
 - apiref
-ms.openlocfilehash: 37d5f5e8294bb87a8796d6dcae046864904b096b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2f305852ae218417aa1f4d4fe9d2076c0163fd60
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439372"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865275"
 ---
 # <a name="icorprofilercallback4movedreferences2-method"></a>ICorProfilerCallback4::MovedReferences2 — Metoda
-Wywołuje się, by zgłosić nowy układ obiektów w stercie w wyniku kompaktowania wyrzucania elementów bezużytecznych. Ta metoda jest wywoływana, jeśli Profiler zaimplementuje Interfejs [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) . To wywołanie zwrotne zastępuje metodę [ICorProfilerCallback:: MovedReferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) , ponieważ umożliwia raportowanie większych zakresów obiektów, których długość przekracza, co może być wyrażone w ulong.  
+Wywołuje się, by zgłosić nowy układ obiektów w stercie w wyniku kompaktowania wyrzucania elementów bezużytecznych. Ta metoda jest wywoływana, jeśli Profiler zaimplementuje Interfejs [ICorProfilerCallback4](icorprofilercallback4-interface.md) . To wywołanie zwrotne zastępuje metodę [ICorProfilerCallback:: MovedReferences —](icorprofilercallback-movedreferences-method.md) , ponieważ umożliwia raportowanie większych zakresów obiektów, których długość przekracza, co może być wyrażone w ulong.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -65,15 +65,15 @@ HRESULT MovedReferences2(
   
  Dla dowolnej wartości `i`, która znajduje się w następującym zakresie:  
   
- 0 < = `i` < `cMovedObjectIDRanges`  
+ 0 <= `i` < `cMovedObjectIDRanges`  
   
  nowe `ObjectID` można obliczyć w następujący sposób:  
   
  `newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)  
   
- Żadna z wartości `ObjectID` przesłanych przez `MovedReferences2` nie jest prawidłowa podczas wywołania zwrotnego, ponieważ moduł wyrzucania elementów bezużytecznych może być w trakcie przesuwania obiektów ze starych lokalizacji do nowych lokalizacji. W związku z tym nie należy próbować kontrolować obiektów podczas wywołania `MovedReferences2`. Wywołanie zwrotne [ICorProfilerCallback2:: GarbageCollectionFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) wskazuje, że wszystkie obiekty zostały przeniesione do nowej lokalizacji i można przeprowadzić inspekcję.  
+ Żadna z wartości `ObjectID` przesłanych przez `MovedReferences2` nie jest prawidłowa podczas wywołania zwrotnego, ponieważ moduł wyrzucania elementów bezużytecznych może być w trakcie przesuwania obiektów ze starych lokalizacji do nowych lokalizacji. W związku z tym nie należy próbować kontrolować obiektów podczas wywołania `MovedReferences2`. Wywołanie zwrotne [ICorProfilerCallback2:: GarbageCollectionFinished —](icorprofilercallback2-garbagecollectionfinished-method.md) wskazuje, że wszystkie obiekty zostały przeniesione do nowej lokalizacji i można przeprowadzić inspekcję.  
   
- Jeśli profiler implementuje zarówno interfejsy [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) , jak i [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) , Metoda `MovedReferences2` jest wywoływana przed metodą [ICorProfilerCallback:: MovedReferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) , ale tylko wtedy, gdy metoda `MovedReferences2` zwróci się pomyślnie. Program do tworzenia plików może zwrócić wynik HRESULT wskazujący niepowodzenie z metody `MovedReferences2`, aby uniknąć wywoływania drugiej metody.  
+ Jeśli profiler implementuje zarówno interfejsy [ICorProfilerCallback](icorprofilercallback-interface.md) , jak i [ICorProfilerCallback4](icorprofilercallback4-interface.md) , Metoda `MovedReferences2` jest wywoływana przed metodą [ICorProfilerCallback:: MovedReferences —](icorprofilercallback-movedreferences-method.md) , ale tylko wtedy, gdy metoda `MovedReferences2` zwróci się pomyślnie. Program do tworzenia plików może zwrócić wynik HRESULT wskazujący niepowodzenie z metody `MovedReferences2`, aby uniknąć wywoływania drugiej metody.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -86,8 +86,8 @@ HRESULT MovedReferences2(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [MovedReferences, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)
-- [ICorProfilerCallback4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
-- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [MovedReferences, metoda](icorprofilercallback-movedreferences-method.md)
+- [ICorProfilerCallback4, interfejs](icorprofilercallback4-interface.md)
+- [Interfejsy profilowania](profiling-interfaces.md)
+- [Profilowanie](index.md)

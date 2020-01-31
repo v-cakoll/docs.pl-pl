@@ -9,12 +9,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
-ms.openlocfilehash: 299a7495d9ca9215ad21301a3ac525fa6e49a01b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a675cc301d2dd32f87e3864a3123e2044761ef91
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130343"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868359"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7:: GetInMemorySymbolsLength, Metoda
 [Obsługiwane w .NET Framework 4.6.1 i nowszych wersjach]  
@@ -37,7 +37,7 @@ HRESULT GetInMemorySymbolsLength(
  pCountSymbolBytes  
  określoną Wskaźnik do wartości `DWORD`, która, gdy zwraca metodę, zawiera długość strumienia w bajtach.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  Metoda zwraca `S_OK`, jeśli długość strumienia pamięci można ustalić, nawet jeśli jest równa zero (0).  
   
  Metoda zwraca `CORPROF_E_MODULE_IS_DYNAMIC`, jeśli metoda została utworzona przy użyciu <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
@@ -59,4 +59,4 @@ HRESULT GetInMemorySymbolsLength(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo7, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+- [ICorProfilerInfo7, interfejs](icorprofilerinfo7-interface.md)

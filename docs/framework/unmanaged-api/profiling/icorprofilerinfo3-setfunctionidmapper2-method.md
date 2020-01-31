@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8cdb1188-952a-4ba8-9f05-bfebc18cdd29
 topic_type:
 - apiref
-ms.openlocfilehash: 2c06b9b7933245dc0e69e430a3fe4a515f8a50f1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 107f596801832809e64088c85540c441e66189cf
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449580"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868476"
 ---
 # <a name="icorprofilerinfo3setfunctionidmapper2-method"></a>ICorProfilerInfo3::SetFunctionIDMapper2 — Metoda
-Określa funkcję zaimplementowaną przez profiler, która zostanie wywołana w celu mapowania wartości `FunctionID` na wartości alternatywne, które są przesyłane do punktów zaczepienia wejścia/wyjścia profilera. Ta metoda rozszerza metodę [ICorProfilerInfo:: SetFunctionIDMapper —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md) z dodatkowym parametrem danych, którego mogą używać pliki do rozróżniania między środowiskami uruchomieniowymi.  
+Określa funkcję zaimplementowaną przez profiler, która zostanie wywołana w celu mapowania wartości `FunctionID` na wartości alternatywne, które są przesyłane do punktów zaczepienia wejścia/wyjścia profilera. Ta metoda rozszerza metodę [ICorProfilerInfo:: SetFunctionIDMapper —](icorprofilerinfo-setfunctionidmapper-method.md) z dodatkowym parametrem danych, którego mogą używać pliki do rozróżniania między środowiskami uruchomieniowymi.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,17 +35,17 @@ HRESULT SetFunctionIDMapper2(
   
 ## <a name="parameters"></a>Parametry  
  `pFunc`  
- podczas Wskaźnik do implementacji [FunctionIDMapper2 —](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md) , który zostanie wywołany w celu mapowania wartości `FunctionID` na ich wartości alternatywne.  
+ podczas Wskaźnik do implementacji [FunctionIDMapper2 —](functionidmapper2-function.md) , który zostanie wywołany w celu mapowania wartości `FunctionID` na ich wartości alternatywne.  
   
  `clientData`  
- podczas Wskaźnik, który jest przesyłany do każdego wywołania funkcji [FunctionIDMapper2 —](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md) wykonanego przez bieżące środowisko uruchomieniowe. Profiler może używać tych informacji do rozróżnienia między środowiskami uruchomieniowymi.  
+ podczas Wskaźnik, który jest przesyłany do każdego wywołania funkcji [FunctionIDMapper2 —](functionidmapper2-function.md) wykonanego przez bieżące środowisko uruchomieniowe. Profiler może używać tych informacji do rozróżnienia między środowiskami uruchomieniowymi.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
   
 ## <a name="remarks"></a>Uwagi  
- Alternatywy dla wartości FunctionID zostaną przesłane do punktów zaczepienia wejścia/wyjścia profilera ([FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), and [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md);, [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)i [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)), które są określone przez metodę [SetEnterLeaveFunctionHooks3 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) lub [SetEnterLeaveFunctionHooks3WithInfo —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) .  
+ Alternatywy dla wartości FunctionID zostaną przesłane do punktów zaczepienia wejścia/wyjścia profilera ([FunctionEnter3](functionenter3-function.md), [FunctionLeave3](functionleave3-function.md), and [FunctionTailcall3](functiontailcall3-function.md);, [FunctionEnter3WithInfo](functionenter3withinfo-function.md), [FunctionLeave3WithInfo](functionleave3withinfo-function.md)i [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)), które są określone przez metodę [SetEnterLeaveFunctionHooks3 —](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) lub [SetEnterLeaveFunctionHooks3WithInfo —](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) .  
   
- Metodę `FunctionIDMapper2` można ustawić tylko raz; zalecamy ustawienie go w [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) wywołania zwrotnego.  
+ Metodę `FunctionIDMapper2` można ustawić tylko raz; zalecamy ustawienie go w [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) wywołania zwrotnego.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -58,7 +58,7 @@ HRESULT SetFunctionIDMapper2(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [SetFunctionIDMapper —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
-- [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md)
+- [ICorProfilerInfo3, interfejs](icorprofilerinfo3-interface.md)
+- [Interfejsy profilowania](profiling-interfaces.md)
+- [Profilowanie](index.md)

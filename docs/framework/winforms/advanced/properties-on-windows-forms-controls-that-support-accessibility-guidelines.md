@@ -1,35 +1,35 @@
 ---
-title: Właściwości formantów formularzy systemu Windows obsługujące dostęp — Wytyczne
+title: Właściwości ułatwień dostępu w kontrolkach
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, accessibility properties of controls
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-ms.openlocfilehash: b3f10fe472e449d39385facdbc716cba9b3f7382
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73d81f5b5f656ed5ef90bdd9b6fe1b3293123f97
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640498"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743424"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Właściwości formantów formularzy systemu Windows obsługujące dostęp — Wytyczne
-Formanty standardowe przyborniku dla formularzy Windows Forms obsługują wiele wytyczne dotyczące ułatwień dostępu, w tym udostępnianie fokus klawiatury i udostępnianie elementów na ekranie.  
+Kontrolki standardowego zestawu narzędzi dla Windows Forms obsługują wiele wytycznych dotyczących ułatwień dostępu, w tym Uwidacznianie fokusu klawiatury i Uwidacznianie elementów ekranu.  
   
-## <a name="planning-ahead-for-accessibility"></a>Planowanie z uwzględnieniem ułatwień dostępu  
- Właściwości kontrolek może służyć do obsługi innych wytyczne dotyczące ułatwień dostępu, jak pokazano w poniższej tabeli. Ponadto należy używać menu, aby zapewnić dostęp do funkcji programu.  
+## <a name="planning-ahead-for-accessibility"></a>Planowanie przed ułatwieniami dostępu  
+ Właściwości formantów mogą służyć do obsługi innych wytycznych dotyczących ułatwień dostępu, jak pokazano w poniższej tabeli. Ponadto należy użyć menu, aby zapewnić dostęp do funkcji programu.  
   
-|Właściwości kontrolki|Zagadnienia dotyczące ułatwień dostępu|  
+|Właściwość kontrolki|Zagadnienia dotyczące ułatwień dostępu|  
 |----------------------|--------------------------------------|  
-|AccessibleDescription|Opis jest zgłaszany do narzędzi ułatwień dostępu, takich jak czytniki zawartości ekranu. Narzędzi ułatwień dostępu są programy specjalistyczne i urządzenia, które pomagają osobom niepełnosprawnym bardziej efektywne wykorzystanie komputerów.|  
-|AccessibleName|Nazwa, która będzie zgłaszana w odniesieniu do ułatwień dostępu pomocy.|  
-|AccessibleRole|Opisuje elementu w interfejsie użytkownika.|  
-|TabIndex|Tworzy rozsądne ścieżkę nawigacyjną, za pomocą formularza. Jest to ważne w przypadku kontrolek bez użycia etykiet wewnętrzne, takie jak pola tekstowe, aby ich etykiety skojarzone bezpośrednio poprzedzać je w kolejności tabulacji.|  
-|Tekst|Użyj znaku "&", aby utworzyć klucze dostępu. Za pomocą kluczy dostępu jest częścią udostępniające udokumentowanego klawiatury do funkcji.|  
-|Rozmiar czcionki|Jeśli rozmiar czcionki nie jest zmieniane, następnie należy ją ustawić do 10 punktów i większych. Po ustawieniu rozmiar czcionki wszystkich kontrolek, które są dodawane do formularza po tej dacie będą mieć taki sam rozmiar.|  
-|ForeColor|Jeśli ta właściwość jest ustawiona na domyślną, preferencji koloru użytkownika będą używane w formularzu.|  
-|Backcolor|Jeśli ta właściwość jest ustawiona na domyślną, preferencji koloru użytkownika będą używane w formularzu.|  
-|BackgroundImage|Ta właściwość pozostaw pustą wartość, aby zwiększyć czytelność tekstu.|  
+|AccessibleDescription|Opis jest raportowany do pomocy ułatwień dostępu, takich jak czytniki zawartości ekranu. Ułatwienia dostępu są wyspecjalizowanymi programami i urządzeniami, które ułatwiają osobom niepełnosprawnym korzystanie z komputerów.|  
+|AccessibleName|Nazwa, która będzie raportowana do pomocy ułatwień dostępu.|  
+|AccessibleRole|Opisuje użycie elementu w interfejsie użytkownika.|  
+|TabIndex|Tworzy rozsądną ścieżkę nawigacyjną w formularzu. Należy pamiętać o kontrolkach bez etykiet wewnętrznych, takich jak pola tekstowe, aby skojarzyć ich etykiety bezpośrednio z kolejnością tabulacji.|  
+|Tekst|Użyj znaku "&", aby utworzyć klucze dostępu. Korzystanie z kluczy dostępu jest częścią udostępniania udokumentowanego dostępu klawiaturowego do funkcji.|  
+|Rozmiar czcionki|Jeśli rozmiar czcionki nie jest zmieniany, należy ustawić na 10 punktów lub większą. Po ustawieniu rozmiaru czcionki formularza wszystkie kontrolki dodane do formularza będą miały ten sam rozmiar.|  
+|ForeColor|Jeśli ta właściwość jest ustawiona na wartość domyślną, preferencje koloru użytkownika będą używane w formularzu.|  
+|BackColor|Jeśli ta właściwość jest ustawiona na wartość domyślną, preferencje koloru użytkownika będą używane w formularzu.|  
+|BackgroundImage|Pozostaw tę właściwość pustą, aby zwiększyć czytelność tekstu.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik: Tworzenie dostępnej aplikacji z systemem Windows](walkthrough-creating-an-accessible-windows-based-application.md)
+- [Przewodnik: tworzenie dostępnej aplikacji bazującej na systemie Windows](walkthrough-creating-an-accessible-windows-based-application.md)

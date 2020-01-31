@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92d76893-683c-475d-9996-5bff03cdb10f
 topic_type:
 - apiref
-ms.openlocfilehash: ade0ba0517e47e9500683836b87d7a8ac1dfcfdb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b9093f920a8c14247bc51471da3682c7e500afa4
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439860"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865808"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>ICorProfilerCallback2::FinalizeableObjectQueued — Metoda
 Powiadamia profiler kodu o tym, że obiekt z finalizatorem został umieszczony w kolejce finalizatora na potrzeby wykonywania `Finalize` metodzie.  
@@ -35,7 +35,7 @@ HRESULT FinalizeableObjectQueued(
   
 ## <a name="parameters"></a>Parametry  
  `finalizerFlags`  
- podczas Wartość wyliczenia [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) opisująca aspekty finalizatora.  
+ podczas Wartość wyliczenia [COR_PRF_FINALIZER_FLAGS](cor-prf-finalizer-flags-enumeration.md) opisująca aspekty finalizatora.  
   
  `objectID`  
  podczas Identyfikator obiektu, który został umieszczony w kolejce.  
@@ -51,5 +51,5 @@ HRESULT FinalizeableObjectQueued(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2, interfejs](icorprofilercallback2-interface.md)

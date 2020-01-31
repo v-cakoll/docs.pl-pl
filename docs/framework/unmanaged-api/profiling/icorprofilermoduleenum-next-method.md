@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3cea59d-7622-4323-897a-0a464c40f77f
 topic_type:
 - apiref
-ms.openlocfilehash: 361f08f8c787ad4c1288c56fb1bdb4d5136933e7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 695a4386d9399a079df41f11f52a3185083784ed
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442691"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861388"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>ICorProfilerModuleEnum::Next — Metoda
 Pobiera określoną liczbę modułów ciągłych z sekwencyjnego zbioru modułów, rozpoczynając od bieżącej pozycji modułu wyliczającego w sekwencji.  
@@ -63,5 +63,5 @@ HRESULT Next([in]  ULONG      celt,
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerModuleEnum, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerModuleEnum, interfejs](icorprofilermoduleenum-interface.md)
+- [Interfejsy profilowania](profiling-interfaces.md)

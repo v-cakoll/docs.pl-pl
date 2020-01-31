@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-ms.openlocfilehash: 0b0683d43778c4733b476e9feef459207b9d1ee6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 98d5dcf3b691f16f63390851e207f518bf26ab11
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445031"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866523"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed — Metoda
 Powiadamia profiler o zniszczeniu międzyoperacyjności modelu COM Interop.  
@@ -37,16 +37,20 @@ HRESULT COMClassicVTableDestroyed(
     [in] void    *pVTable);  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `wrappedClassId`  
- podczas Identyfikator klasy, dla której utworzono tę tablicę.  
-  
- `implementedIID`  
- podczas Identyfikator interfejsu zaimplementowanego przez klasę. Ta wartość może być RÓWNa NULL, jeśli interfejs jest tylko wewnętrzny.  
-  
- `pVTable`  
- podczas Wskaźnik do początku elementu tablicowego.  
-  
+## <a name="parameters"></a>Parametry
+
+- `wrappedClassId`
+
+  \[in) identyfikator klasy, dla której utworzono tę tablicę.
+
+- `implementedIID`
+
+  \[in) identyfikator interfejsu zaimplementowanego przez klasę. Ta wartość może być RÓWNa NULL, jeśli interfejs jest tylko wewnętrzny.
+
+- `pVTable`
+
+  \[w] wskaźnik do początku elementu tablicowego.
+
 ## <a name="remarks"></a>Uwagi  
  Profiler nie powinien blokować swojej implementacji tej metody, ponieważ stos może nie znajdować się w stanie, który zezwala na wyrzucanie elementów bezużytecznych i dlatego nie można włączyć zastępujący elementów bezużytecznych. Jeśli profiler blokuje tutaj i zostanie podjęta próba wyrzucania elementów bezużytecznych, środowisko uruchomieniowe zostanie zablokowane do momentu wywołania zwrotnego.  
   
@@ -63,5 +67,5 @@ HRESULT COMClassicVTableDestroyed(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [COMClassicVTableCreated, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [COMClassicVTableCreated, metoda](icorprofilercallback-comclassicvtablecreated-method.md)

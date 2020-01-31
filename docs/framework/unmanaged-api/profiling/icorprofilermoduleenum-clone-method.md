@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7dec7e36-8d88-416d-b437-abf98b76c1df
 topic_type:
 - apiref
-ms.openlocfilehash: 395340d497294c89c59216ab5f294070690b74a9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a6b36883ec0914426b4f4c937390c1622faead25
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444671"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868294"
 ---
 # <a name="icorprofilermoduleenumclone-method"></a>ICorProfilerModuleEnum::Clone — Metoda
-Pobiera wskaźnik interfejsu do kopii tego interfejsu [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) .  
+Pobiera wskaźnik interfejsu do kopii tego interfejsu [ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,7 +33,7 @@ HRESULT Clone([out] ICorProfilerObjectEnum **ppEnum);
   
 ## <a name="parameters"></a>Parametry  
  `ppEnum`  
- określoną Wskaźnik do wskaźnika interfejsu, który z kolei wskazuje na kopię tego interfejsu [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) . Kopia modułu wyliczającego utrzymuje swój własny stan wyliczenia niezależnie od tego modułu wyliczającego. Jednak początkowa pozycja kursora kopii jest taka sama jak pozycja bieżącego kursora tego modułu wyliczającego.  
+ określoną Wskaźnik do wskaźnika interfejsu, który z kolei wskazuje na kopię tego interfejsu [ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md) . Kopia modułu wyliczającego utrzymuje swój własny stan wyliczenia niezależnie od tego modułu wyliczającego. Jednak początkowa pozycja kursora kopii jest taka sama jak pozycja bieżącego kursora tego modułu wyliczającego.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -46,5 +46,5 @@ HRESULT Clone([out] ICorProfilerObjectEnum **ppEnum);
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerModuleEnum, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerModuleEnum, interfejs](icorprofilermoduleenum-interface.md)
+- [Interfejsy profilowania](profiling-interfaces.md)

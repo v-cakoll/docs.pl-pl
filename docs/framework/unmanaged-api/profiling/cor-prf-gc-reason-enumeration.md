@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72822b95-a7fb-485e-9d55-1cb016d9a458
 topic_type:
 - apiref
-ms.openlocfilehash: f10ec279e67b86448298745a488f5b3e833e8c39
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ec33e55f840fe735091364ebc35cb7b7c165c10a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447369"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867191"
 ---
 # <a name="cor_prf_gc_reason-enumeration"></a>COR_PRF_GC_REASON — Wyliczenie
 Wskazuje przyczynę wyrzucania elementów bezużytecznych.  
@@ -33,7 +33,7 @@ typedef enum {
 } COR_PRF_GC_REASON;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
@@ -51,4 +51,4 @@ typedef enum {
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Profilowanie — wyliczenia](profiling-enumerations.md)

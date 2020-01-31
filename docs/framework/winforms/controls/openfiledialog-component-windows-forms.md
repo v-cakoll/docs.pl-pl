@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Open File dialog box
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
-ms.openlocfilehash: ef6b69a90a048caf7924b00ddd0b79a0a7efaeb9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1f831297ec9d34cbf0c3c55390abd8be0f5013ee
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744360"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868099"
 ---
 # <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog — Składnik (Formularze systemu Windows)
 Składnik <xref:System.Windows.Forms.OpenFileDialog> Windows Forms jest wstępnie skonfigurowanym oknem dialogowym. Jest to to samo okno dialogowe **Otwórz plik** uwidocznione przez system operacyjny Windows. Dziedziczy z klasy <xref:System.Windows.Forms.CommonDialog>.  
@@ -31,7 +31,4 @@ Składnik <xref:System.Windows.Forms.OpenFileDialog> Windows Forms jest wstępni
  Opisuje zestaw kontrolek i składników, które umożliwiają użytkownikom wykonywanie standardowych interakcji z aplikacją lub systemem.  
   
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
- Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.  
-  
- [Zasadniczy kod dla okien dialogowych Windows Forms](https://go.microsoft.com/fwlink/?LinkID=102575)  
- W tym artykule omówiono kontrolki okna dialogowego Windows Forms i składniki oraz kod niezbędny do wykonywania ich podstawowych funkcji. (Artykuł techniczny biblioteki MSDN Online Library)
+ Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.

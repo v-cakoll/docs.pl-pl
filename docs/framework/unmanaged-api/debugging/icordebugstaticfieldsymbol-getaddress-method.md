@@ -2,12 +2,12 @@
 title: 'ICorDebugStaticFieldSymbol:: GetAddress — Metoda'
 ms.date: 03/30/2017
 ms.assetid: 5a6c9a5a-ec72-4c40-a9c3-cee7baa63687
-ms.openlocfilehash: 65761e48491b2a4c81ccd05b17d8723f71f52e5c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: be4d59fe668026c4b40be4c6d0afcf718c8157bd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131798"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791846"
 ---
 # <a name="icordebugstaticfieldsymbolgetaddress-method"></a>ICorDebugStaticFieldSymbol:: GetAddress — Metoda
 Pobiera adres pola statycznego.  
@@ -40,5 +40,5 @@ HRESULT GetAddress(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugStaticFieldSymbol, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugStaticFieldSymbol, interfejs](icordebugstaticfieldsymbol-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

@@ -2,12 +2,12 @@
 title: ICorDebugLoadedModule — interfejs
 ms.date: 03/30/2017
 ms.assetid: 34be6369-2e75-4a95-a538-3b29ac97cf6d
-ms.openlocfilehash: 9fe36497844b9c33cefcf8c63711941196847525
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d3bdcec9e90dab337b595294d114de4bd3d531f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122619"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782001"
 ---
 # <a name="icordebugloadedmodule-interface"></a>ICorDebugLoadedModule — interfejs
 Zawiera informacje o załadowanym module.  
@@ -16,9 +16,9 @@ Zawiera informacje o załadowanym module.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetBaseAddress, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getbaseaddress-method.md)|Pobiera adres podstawowy załadowanego modułu.|  
-|[GetName, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getname-method.md)|Pobiera nazwę załadowanego modułu.|  
-|[GetSize, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getsize-method.md)|Pobiera rozmiar w bajtach załadowanego modułu.|  
+|[GetBaseAddress, metoda](icordebugloadedmodule-getbaseaddress-method.md)|Pobiera adres podstawowy załadowanego modułu.|  
+|[GetName, metoda](icordebugloadedmodule-getname-method.md)|Pobiera nazwę załadowanego modułu.|  
+|[GetSize, metoda](icordebugloadedmodule-getsize-method.md)|Pobiera rozmiar w bajtach załadowanego modułu.|  
   
 ## <a name="remarks"></a>Uwagi  
  Interfejs `ICorDebugLoadedModule` jest implementowany przez debuger i jest używany przez interfejsy debugowania CLR do uzyskiwania informacji o załadowanym module z debugera.  
@@ -37,5 +37,5 @@ Zawiera informacje o załadowanym module.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

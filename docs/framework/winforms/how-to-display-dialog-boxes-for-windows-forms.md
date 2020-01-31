@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyświetlanie okien dialogowych formularzy Windows Forms'
+title: 'Instrukcje: wyświetlanie okien dialogowych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - Windows Forms, calling one form from another
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
-ms.openlocfilehash: b99f2273dae88faf86448da6e1d2986a83803abf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd04a06eaa0dd7583ef2f72edb4cffa99aaaa60c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802586"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739465"
 ---
-# <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Instrukcje: Wyświetlanie okien dialogowych formularzy Windows Forms
-Okno dialogowe jest wyświetlane w taki sam sposób, jak wyświetlać jakąkolwiek inną formę w aplikacji. Formularz początkowy ładuje się automatycznie, gdy aplikacja jest uruchomiona. Aby wprowadzić drugi formularz lub okno dialogowe, które są wyświetlane w aplikacji, należy napisać kod, ładowania i wyświetlania ich. Podobnie aby formularza lub okna dialogowego pole znikną, napisz kod, aby zwolnić lub je ukryć.  
+# <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Porady: wyświetlanie okien dialogowych formularzy systemu Windows
+Wyświetla się okno dialogowe w taki sam sposób, jak w przypadku innych formularzy w aplikacji. Formularz startowy jest ładowany automatycznie podczas uruchamiania aplikacji. Aby w aplikacji pojawił się drugi formularz lub okno dialogowe, napisz kod w celu załadowania i wyświetlenia go. Podobnie, aby formularz lub okno dialogowe znikły, napisz kod w celu zwolnienia lub ukrycia go.  
   
 ### <a name="to-display-a-dialog-box"></a>Aby wyświetlić okno dialogowe  
   
-1. Przejdź do narzędzia obsługi zdarzeń, z którą chcesz otworzyć okno dialogowe. Można to zrobić, po wybraniu polecenia menu, po kliknięciu przycisku lub inne zdarzenia.  
+1. Przejdź do programu obsługi zdarzeń, za pomocą którego chcesz otworzyć okno dialogowe. Może się tak zdarzyć, gdy wybrane zostanie polecenie menu, gdy zostanie kliknięty przycisk lub gdy wystąpi jakiekolwiek inne zdarzenie.  
   
-2. W procedurze obsługi zdarzeń Dodaj kod, aby otworzyć okno dialogowe. W tym przykładzie zdarzenie kliknięcia przycisku służy do wyświetlenia w oknie dialogowym:  
+2. W programie obsługi zdarzeń Dodaj kod, aby otworzyć okno dialogowe. W tym przykładzie zdarzenie kliknięcia przycisku służy do wyświetlania okna dialogowego:  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

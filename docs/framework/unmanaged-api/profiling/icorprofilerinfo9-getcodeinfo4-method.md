@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: ce29703a181106353695414e8b291b14c697fc56
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3e3e3afc221d153ff3573126ff10014d39af761a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444791"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868307"
 ---
 # <a name="icorprofilerinfo9getcodeinfo4-method"></a>ICorProfilerInfo9:: GetCodeInfo4, Metoda
 
@@ -31,32 +31,36 @@ HRESULT GetCodeInfo4( [in]  UINT_PTR pNativeCodeStartAddress,
                       [out] COR_PRF_CODE_INFO codeInfos[]);
 ```
 
-#### <a name="parameters"></a>Parametry
+## <a name="parameters"></a>Parametry
 
-`pNativeCodeStartAddress` \
-podczas Wskaźnik do początku funkcji natywnej.
+- `pNativeCodeStartAddress`
 
-`cCodeInfos` \
-podczas Rozmiar tablicy `codeInfos`.
+  \[w] wskaźnik do początku funkcji natywnej.
 
-`pcCodeInfos` \
-określoną Wskaźnik do łącznej liczby dostępnych struktur [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) .
+- `cCodeInfos`
 
-`codeInfos` \
-określoną Bufor dostarczony przez wywołującego. Po powrocie metody zawiera tablicę struktur `COR_PRF_CODE_INFO`, z których każdy opisuje blok kodu natywnego.
+  \[w] rozmiar tablicy `codeInfos`.
+
+- `pcCodeInfos`
+
+  \[out] wskaźnik do łącznej liczby dostępnych struktur [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) .
+
+- `codeInfos`
+
+  \[out] bufor dostarczony przez wywołującego. Po powrocie metody zawiera tablicę struktur `COR_PRF_CODE_INFO`, z których każdy opisuje blok kodu natywnego.
 
 ## <a name="remarks"></a>Uwagi
 
-Metoda `GetCodeInfo4` jest podobna do [GetCodeInfo3 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md), z tą różnicą, że może wyszukiwać informacje o kodzie dla różnych natywnych wersji metody.
+Metoda `GetCodeInfo4` jest podobna do [GetCodeInfo3 —](icorprofilerinfo4-getcodeinfo3-method.md), z tą różnicą, że może wyszukiwać informacje o kodzie dla różnych natywnych wersji metody.
 
 > [!NOTE]
 > `GetCodeInfo4` może wyzwolić wyrzucanie elementów bezużytecznych.
 
 Zakresy są sortowane w kolejności rosnącego, typowego przesunięcia języka pośredniego (CIL).
 
-Po powrocie `GetCodeInfo4` należy sprawdzić, czy bufor `codeInfos` był wystarczająco duży, aby zawierał wszystkie struktury [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) . W tym celu należy porównać wartość `cCodeInfos` z wartością parametru `cchName`. Jeśli `cCodeInfos` podzielona przez rozmiar struktury [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) jest mniejsza niż `pcCodeInfos`, Przydziel większy bufor `codeInfos`, zaktualizuj `cCodeInfos` z nowym, większym rozmiarem i ponownie wywołaj `GetCodeInfo4`.
+Po powrocie `GetCodeInfo4` należy sprawdzić, czy bufor `codeInfos` był wystarczająco duży, aby zawierał wszystkie struktury [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) . W tym celu należy porównać wartość `cCodeInfos` z wartością parametru `cchName`. Jeśli `cCodeInfos` podzielona przez rozmiar struktury [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) jest mniejsza niż `pcCodeInfos`, Przydziel większy bufor `codeInfos`, zaktualizuj `cCodeInfos` z nowym, większym rozmiarem i ponownie wywołaj `GetCodeInfo4`.
 
-Alternatywnie można najpierw wywołać `GetCodeInfo4` z buforem `codeInfos` o zerowej długości, aby uzyskać prawidłowy rozmiar buforu. Następnie można ustawić `codeInfos` rozmiar buforu na wartość zwróconą w `pcCodeInfos`, pomnożoną przez rozmiar struktury [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) i ponownie wywołać `GetCodeInfo4`.
+Alternatywnie można najpierw wywołać `GetCodeInfo4` z buforem `codeInfos` o zerowej długości, aby uzyskać prawidłowy rozmiar buforu. Następnie można ustawić `codeInfos` rozmiar buforu na wartość zwróconą w `pcCodeInfos`, pomnożoną przez rozmiar struktury [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) i ponownie wywołać `GetCodeInfo4`.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -70,4 +74,4 @@ Alternatywnie można najpierw wywołać `GetCodeInfo4` z buforem `codeInfos` o z
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo9, interfejs](../../../../docs/framework/unmanaged-api/profiling/ICorProfilerInfo9-interface.md)
+- [ICorProfilerInfo9, interfejs](ICorProfilerInfo9-interface.md)

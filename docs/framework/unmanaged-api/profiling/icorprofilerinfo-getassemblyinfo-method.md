@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a3c97c3-1e31-47b1-bf23-386785c509c4
 topic_type:
 - apiref
-ms.openlocfilehash: 4f3d9bc94d25ca70e0589e1beb86b8ef96807a71
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1e08d246136b33ffaaea91367d428e0bf2db99c1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448163"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864131"
 ---
 # <a name="icorprofilerinfogetassemblyinfo-method"></a>ICorProfilerInfo::GetAssemblyInfo — Metoda
 Akceptuje identyfikator zestawu i zwraca nazwę zestawu oraz identyfikator modułu manifestu.  
@@ -73,6 +73,6 @@ HRESULT GetAssemblyInfo(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo, interfejs](icorprofilerinfo-interface.md)
+- [Interfejsy profilowania](profiling-interfaces.md)
+- [Profilowanie](index.md)

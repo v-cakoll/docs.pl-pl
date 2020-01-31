@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 665f3cfc-cd6f-4880-906c-ea65ad384783
 topic_type:
 - apiref
-ms.openlocfilehash: a3394820f673e35777e1749229d4f8319841ca58
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1b85c48859ac29738347d112dd0466a76bfdfd2c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439389"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865340"
 ---
 # <a name="icorprofilercallback4-interface"></a>ICorProfilerCallback4 — Interfejs
 Zapewnia metody wywołania zwrotnego, które są używane przez środowisko uruchomieniowe języka wspólnego (CLR) do przekazywania informacji do profilera.  
@@ -28,12 +28,12 @@ Zapewnia metody wywołania zwrotnego, które są używane przez środowisko uruc
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetReJITParameters, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md)|Umożliwia programowi Code Profiler Ustawianie alternatywnych flag generowania kodu dla nowej rekompilowanej treści metody.|  
-|[MovedReferences2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)|Raportuje nowy układ obiektów w stercie w wyniku kompaktowania wyrzucania elementów bezużytecznych.|  
-|[ReJITCompilationFinished, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)|Powiadamia profiler, że kompilator just-in-Time (JIT) zakończył ponowną kompilację funkcji.|  
-|[ReJITCompilationStarted, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)|Powiadamia profiler, że został uruchomiony kompilator just-in-Time (JIT), aby ponownie skompilować funkcję.|  
-|[ReJITError, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejiterror-method.md)|Zgłasza błąd podczas przetwarzania żądania ponownego kompilowania.|  
-|[SurvivingReferences2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md)|Raportuje układ obiektów w stercie w wyniku niekompaktowego wyrzucania elementów bezużytecznych.|  
+|[GetReJITParameters, metoda](icorprofilercallback4-getrejitparameters-method.md)|Umożliwia programowi Code Profiler Ustawianie alternatywnych flag generowania kodu dla nowej rekompilowanej treści metody.|  
+|[MovedReferences2, metoda](icorprofilercallback4-movedreferences2-method.md)|Raportuje nowy układ obiektów w stercie w wyniku kompaktowania wyrzucania elementów bezużytecznych.|  
+|[ReJITCompilationFinished, metoda](icorprofilercallback4-rejitcompilationfinished-method.md)|Powiadamia profiler, że kompilator just-in-Time (JIT) zakończył ponowną kompilację funkcji.|  
+|[ReJITCompilationStarted, metoda](icorprofilercallback4-rejitcompilationstarted-method.md)|Powiadamia profiler, że został uruchomiony kompilator just-in-Time (JIT), aby ponownie skompilować funkcję.|  
+|[ReJITError, metoda](icorprofilercallback4-rejiterror-method.md)|Zgłasza błąd podczas przetwarzania żądania ponownego kompilowania.|  
+|[SurvivingReferences2, metoda](icorprofilercallback4-survivingreferences2-method.md)|Raportuje układ obiektów w stercie w wyniku niekompaktowego wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -48,6 +48,6 @@ Zapewnia metody wywołania zwrotnego, które są używane przez środowisko uruc
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
-- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerCallback2, interfejs](icorprofilercallback2-interface.md)
+- [Interfejsy profilowania](profiling-interfaces.md)
+- [ICorProfilerInfo, interfejs](icorprofilerinfo-interface.md)

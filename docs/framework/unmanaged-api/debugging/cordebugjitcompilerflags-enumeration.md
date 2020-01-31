@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0774f70-5bed-45e8-9922-fdad778c4c33
 topic_type:
 - apiref
-ms.openlocfilehash: 739b491d343c0eba76160c15719069ffae385f46
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 65d7e830b82cc1780826517fe8cff1da0a7d6188
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097975"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793895"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>CorDebugJITCompilerFlags — Wyliczenie
 Zawiera wartości wpływające na zachowanie kompilatora zarządzanego (just-in-Time).  
@@ -55,4 +55,4 @@ typedef enum CorDebugJITCompilerFlags {
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debugowanie, wyliczenia](debugging-enumerations.md)

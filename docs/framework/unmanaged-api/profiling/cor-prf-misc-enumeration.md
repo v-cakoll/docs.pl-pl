@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 619bb5de-e309-48b6-a3af-32d935a0ff46
 topic_type:
 - apiref
-ms.openlocfilehash: 8105ba34ca400771fbc4273630f20941a4a9557d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fe27c0fca6d38b4cff6cac2b9778cf2be68903a3
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432276"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867129"
 ---
 # <a name="cor_prf_misc-enumeration"></a>COR_PRF_MISC — Wyliczenie
 Zawiera wartości stałe, które określają identyfikatory specjalne.  
@@ -34,11 +34,11 @@ typedef enum {
 } COR_PRF_MISC;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|Domyślny identyfikator używany przez [ICorProfilerInfo:: GetModuleInfo —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) dla modułu, który nie został jeszcze dołączony do zestawu.|  
+|`PROFILER_PARENT_UNKNOWN`|Domyślny identyfikator używany przez [ICorProfilerInfo:: GetModuleInfo —](icorprofilerinfo-getmoduleinfo-method.md) dla modułu, który nie został jeszcze dołączony do zestawu.|  
 |`PROFILER_GLOBAL_CLASS`|Domyślny identyfikator klasy dla stałych globalnych, które nie należą do klasy.|  
 |`PROFILER_GLOBAL_MODULE`|Domyślny identyfikator modułu dla obiektów globalnych, które nie należą do modułu.|  
   
@@ -53,4 +53,4 @@ typedef enum {
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Profilowanie — wyliczenia](profiling-enumerations.md)

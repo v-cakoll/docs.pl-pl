@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80046b2e-55b7-40a2-9adf-cf2763ee59c8
 topic_type:
 - apiref
-ms.openlocfilehash: fd3a848e5c9ac04f7c52db8d6c70e3028fe8ead6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 17580b55e7990b3f3f92c6f7658c98e9f778c7ba
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447774"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864456"
 ---
 # <a name="icorprofilerfunctionenumreset-method"></a>ICorProfilerFunctionEnum::Reset — Metoda
 Przenosi kursor modułu wyliczającego do początkowego położenia sekwencji.  
@@ -42,5 +42,5 @@ HRESULT Reset();
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerFunctionEnum, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerFunctionEnum, interfejs](icorprofilerfunctionenum-interface.md)
+- [Interfejsy profilowania](profiling-interfaces.md)

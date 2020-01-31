@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-ms.openlocfilehash: c6b4303163140c9c5553d02855c64dd2a3f5b134
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4382d3c9f69df2808f8cd0aaf7f8eaf19bc9891e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73112738"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793678"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual — Metoda
 Zapisuje dane z określonego buforu na określonym adresie pamięci wirtualnej.  
@@ -39,7 +39,7 @@ HRESULT WriteVirtual (
   
 ## <a name="parameters"></a>Parametry  
  `address`  
- podczas CLRDATA_ADDRESS, który przechowuje adres pamięci wirtualnej.  
+ podczas CLRDATA_ADDRESS, w którym jest przechowywany adres pamięci wirtualnej.  
   
  `buffer`  
  podczas Wskaźnik do buforu, który przechowuje dane do zapisania.  
@@ -61,4 +61,4 @@ HRESULT WriteVirtual (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget, interfejs](iclrdatatarget-interface.md)

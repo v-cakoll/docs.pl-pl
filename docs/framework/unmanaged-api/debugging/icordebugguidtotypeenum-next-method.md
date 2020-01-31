@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9937666-8e18-484d-9fe0-b9ac95199530
 topic_type:
 - apiref
-ms.openlocfilehash: f6f190cd5b2f208df5a4ed88b650af671f2e6c5c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 76cab0b8b5f16f24c62e31be2707c95c7e557034
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138520"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777644"
 ---
 # <a name="icordebugguidtotypeenumnext-method"></a>ICorDebugGuidToTypeEnum::Next — Metoda
-Pobiera określoną liczbę wystąpień [CorDebugGuidToTypeMapping —](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) , które MAPUJĄ identyfikatory GUID na informacje o typie.  
+Pobiera określoną liczbę wystąpień [CorDebugGuidToTypeMapping —](cordebugguidtotypemapping-structure.md) , które MAPUJĄ identyfikatory GUID na informacje o typie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,10 +40,10 @@ HRESULT Next(
  podczas Liczba obiektów mapowania GUID-to-Type do pobrania.  
   
  `values`  
- określoną Tablica wskaźników, z których każdy wskazuje obiekt [CorDebugGuidToTypeMapping —](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) , który MAPUJE identyfikator GUID środowisko wykonawcze systemu Windows do odpowiadającego mu obiektu ICorDebugType.  
+ określoną Tablica wskaźników, z których każdy wskazuje obiekt [CorDebugGuidToTypeMapping —](cordebugguidtotypemapping-structure.md) , który MAPUJE identyfikator GUID środowisko wykonawcze systemu Windows do odpowiadającego mu obiektu ICorDebugType.  
   
  `pceltFetched`  
- określoną Wskaźnik do liczby obiektów [CorDebugGuidToTypeMapping —](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) faktycznie zwróconych w `values`.  
+ określoną Wskaźnik do liczby obiektów [CorDebugGuidToTypeMapping —](cordebugguidtotypemapping-structure.md) faktycznie zwróconych w `values`.  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -58,5 +58,5 @@ HRESULT Next(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugGuidToTypeEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugGuidToTypeEnum, interfejs](icordebugguidtotypeenum-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

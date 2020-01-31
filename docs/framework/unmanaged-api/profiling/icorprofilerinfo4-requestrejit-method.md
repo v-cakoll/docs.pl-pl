@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 781ed736-f30c-4816-920e-3552e36542c6
 topic_type:
 - apiref
-ms.openlocfilehash: eb4d5e1c4efd67914df95868b67ec5cc3fe6139a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d2f8d538adb965864915fb1195bf9f2b8488aac8
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444817"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868411"
 ---
 # <a name="icorprofilerinfo4requestrejit-method"></a>ICorProfilerInfo4::RequestReJIT — Metoda
 Żąda ponownej kompilacji JIT wszystkich wystąpień określonych funkcji.  
@@ -44,20 +44,20 @@ HRESULT RequestReJIT (
  `methodIds`  
  podczas Określa `methodId` część par (`module`, `methodDef`), które identyfikują funkcje, które mają być ponownie skompilowane.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Podjęto próbę oznaczenia wszystkich metod ponownej kompilacji JIT. Profiler musi zaimplementować metodę [ICorProfilerCallback4:: ReJITError —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejiterror-method.md) , aby określić, które metody zostały pomyślnie oznaczone do ponownej kompilacji JIT.|  
-|CORPROF_E_CALLBACK4_REQUIRED|Profiler musi zaimplementować interfejs [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) , aby można było obsługiwać to wywołanie.|  
-|CORPROF_E_REJIT_NOT_ENABLED|Ponowna kompilacja JIT nie została włączona. Należy włączyć ponowną kompilację JIT podczas inicjowania przy użyciu metody [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) w celu ustawienia flagi `COR_PRF_ENABLE_REJIT`.|  
+|S_OK|Podjęto próbę oznaczenia wszystkich metod ponownej kompilacji JIT. Profiler musi zaimplementować metodę [ICorProfilerCallback4:: ReJITError —](icorprofilercallback4-rejiterror-method.md) , aby określić, które metody zostały pomyślnie oznaczone do ponownej kompilacji JIT.|  
+|CORPROF_E_CALLBACK4_REQUIRED|Profiler musi zaimplementować interfejs [ICorProfilerCallback4](icorprofilercallback4-interface.md) , aby można było obsługiwać to wywołanie.|  
+|CORPROF_E_REJIT_NOT_ENABLED|Ponowna kompilacja JIT nie została włączona. Należy włączyć ponowną kompilację JIT podczas inicjowania przy użyciu metody [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) w celu ustawienia flagi `COR_PRF_ENABLE_REJIT`.|  
 |E_INVALIDARG|`cFunctions` jest równa 0 lub `moduleIds` lub `methodIds` jest `NULL`.|  
 |||  
 |E_OUTOFMEMORY|Środowisko CLR nie mogło wykonać żądania, ponieważ zabrakło pamięci.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołaj `RequestReJIT`, aby środowisko uruchomieniowe ponownie skompiluje określony zestaw funkcji. Profiler kodu może następnie użyć interfejsu [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) , aby dostosować kod generowany podczas ponownego kompilowania funkcji. Nie ma to wpływu na aktualnie wykonywane funkcje, tylko w przyszłości wywołania funkcji. Jeśli którekolwiek z określonych funkcji zostało wcześniej ponownie skompilowane w trybie JIT, żądanie ponownej kompilacji jest równoznaczne z przywróceniem i ponownym kompilacją funkcji. Aby zachować odwracalność, gdy kompilator JIT kompiluje oryginalną wersję funkcji, bierze pod uwagę tylko oryginalne wersje wywoływane na potrzeby podejmowania decyzji dotyczących podkreślenia. Gdy kompilator JIT ponownie kompiluje funkcję, traktuje bieżące wersje (ponownie skompilowane lub oryginalnie) jego wywoływane do tworzenia konspektu.  
+ Wywołaj `RequestReJIT`, aby środowisko uruchomieniowe ponownie skompiluje określony zestaw funkcji. Profiler kodu może następnie użyć interfejsu [ICorProfilerFunctionControl](icorprofilerfunctioncontrol-interface.md) , aby dostosować kod generowany podczas ponownego kompilowania funkcji. Nie ma to wpływu na aktualnie wykonywane funkcje, tylko w przyszłości wywołania funkcji. Jeśli którekolwiek z określonych funkcji zostało wcześniej ponownie skompilowane w trybie JIT, żądanie ponownej kompilacji jest równoznaczne z przywróceniem i ponownym kompilacją funkcji. Aby zachować odwracalność, gdy kompilator JIT kompiluje oryginalną wersję funkcji, bierze pod uwagę tylko oryginalne wersje wywoływane na potrzeby podejmowania decyzji dotyczących podkreślenia. Gdy kompilator JIT ponownie kompiluje funkcję, traktuje bieżące wersje (ponownie skompilowane lub oryginalnie) jego wywoływane do tworzenia konspektu.  
   
  Profiler zazwyczaj wywołuje `RequestReJIT` w odpowiedzi na dane wejściowe użytkownika z żądaniem, że instrument profilera ma jedną lub więcej metod. `RequestReJIT` zazwyczaj wstrzymuje środowisko uruchomieniowe, aby wykonać część jego pracy i może potencjalnie wyzwolić wyrzucanie elementów bezużytecznych. W związku z tym Profiler powinien wywołać `RequestReJIT` z wcześniej utworzonego wątku, a nie z wątku utworzonego przez środowisko CLR, który aktualnie wykonuje wywołanie zwrotne profilera.  
   
@@ -72,6 +72,6 @@ HRESULT RequestReJIT (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo4, interfejs](icorprofilerinfo4-interface.md)
+- [Interfejsy profilowania](profiling-interfaces.md)
+- [Profilowanie](index.md)

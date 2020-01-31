@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 45a40d49cea2dd5f881fbd47cc2fb4bd96e8f9ff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9b5059d9e4bf9b79dc67664c7a7971041d1cf35b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243985"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861687"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8:: GetDynamicFunctionInfo, Metoda
 
@@ -34,28 +34,35 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
                                 [out] WCHAR                   wszName[]);
 ```
 
-#### <a name="parameters"></a>Parametry
+## <a name="parameters"></a>Parametry
 
-`functionId` \
-podczas Identyfikator funkcji, dla której mają zostać pobrane informacje.
+- `functionId`
 
-`moduleId` \
-podczas Wskaźnik do modułu, w którym zdefiniowana jest Klasa nadrzędna funkcji.
+  \[in) identyfikator funkcji, dla której mają zostać pobrane informacje.
 
-`ppvSig` \
-określoną Wskaźnik do podpisu dla funkcji.
+- `moduleId`
 
-`pbSig` \
-określoną Wskaźnik do liczby bajtów dla sygnatury funkcji.
+  \[w] wskaźnik do modułu, w którym zdefiniowana jest Klasa nadrzędna funkcji.
 
-`cchName` \
-podczas Maksymalny rozmiar `wszName` tablicy.
+- `ppvSig`
 
-`pcchName` \
-określoną Liczba znaków w `wszName` tablicy.
+  \[out] wskaźnik do podpisu dla funkcji.
 
-`wszName` \
-określoną Tablica `WCHAR` , która jest nazwą funkcji (jeśli taka istnieje).
+- `pbSig`
+
+  \[out] wskaźnik do liczby bajtów dla sygnatury funkcji.
+
+- `cchName`
+
+  \[] maksymalny rozmiar tablicy `wszName`.
+
+- `pcchName`
+
+  \[out] liczba znaków w tablicy `wszName`.
+
+- `wszName`
+
+  \[out] tablica `WCHAR`, która jest nazwą funkcji (jeśli taka istnieje).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -65,14 +72,14 @@ Ten interfejs API może służyć do pobierania informacji o metodach dynamiczny
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
-**Nagłówki** CorProf. idl, CorProf. h
+**Nagłówek:** CorProf. idl, CorProf. h
 
-**Biblioteki** CorGuids.lib
+**Biblioteka:** CorGuids. lib
 
-**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo8, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md)
+- [ICorProfilerInfo8, interfejs](icorprofilerinfo8-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5ed4aa83-ce56-4b9f-9237-5da7587787fe
 topic_type:
 - apiref
-ms.openlocfilehash: 2ad4494cf3a429020099b4bd9d961341437fcd1e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9c7fa25712858d1119b45fc742a5d23454b55273
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447787"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864470"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>ICorProfilerFunctionEnum::Next — Metoda
 Pobiera określoną liczbę funkcji ciągłych z sekwencyjnego zbioru funkcji, rozpoczynając od bieżącej pozycji modułu wyliczającego w sekwencji.  
@@ -44,7 +44,7 @@ HRESULT Next([in]  ULONG      celt,
  `pceltFetched`  
  określoną Wskaźnik do liczby funkcji faktycznie zwracanych w tablicy `ids`.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
@@ -63,5 +63,5 @@ HRESULT Next([in]  ULONG      celt,
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerFunctionEnum, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerFunctionEnum, interfejs](icorprofilerfunctionenum-interface.md)
+- [Interfejsy profilowania](profiling-interfaces.md)

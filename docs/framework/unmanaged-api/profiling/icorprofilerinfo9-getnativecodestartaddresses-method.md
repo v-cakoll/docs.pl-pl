@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7593e8873c2714df85146903c0052a9909a95ccd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8412020fb98fde245b873a2f0c6a355f6436f712
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444717"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868281"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: GetNativeCodeStartAddresses, Metoda
 
@@ -32,22 +32,27 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
                                      [out] UINT_PTR codeStartAddresses[]);
 ```
 
-#### <a name="parameters"></a>Parametry
+## <a name="parameters"></a>Parametry
 
-`functionId` \
-podczas Identyfikator funkcji, której powinny zostać zwrócone adresy początkowe kodu natywnego.
+- `functionId`
 
-`reJitId` \
-podczas Tożsamość funkcji ponownie skompilowanej JIT.
+  \[in) identyfikator funkcji, której powinny zostać zwrócone adresy początkowe kodu natywnego.
 
-`cCodeStartAddresses` \
-podczas Maksymalny rozmiar tablicy `codeStartAddresses`.
+- `reJitId`
 
-`pcCodeStartAddresses` \
-określoną Liczba dostępnych adresów.
+  \[] tożsamość funkcji ponownie skompilowanej JIT.
 
-`codeStartAddresses` \
-określoną Tablica `UINT_PTR`, z których każdy jest adresem początkowym dla określonej funkcji.
+- `cCodeStartAddresses`
+
+  \[] maksymalny rozmiar tablicy `codeStartAddresses`.
+
+- `pcCodeStartAddresses`
+
+  \[out] Liczba dostępnych adresów.
+
+- `codeStartAddresses`
+
+  \[out] tablica `UINT_PTR`, z których każdy jest adresem początkowym dla określonej funkcji.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -65,4 +70,4 @@ Gdy kompilacja warstwowa jest włączona, funkcja może mieć więcej niż jedn�
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo9, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9, interfejs](icorprofilerinfo9-interface.md)

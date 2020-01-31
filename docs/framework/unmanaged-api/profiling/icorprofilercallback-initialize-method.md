@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc5fab2a-4b45-4b12-8727-b89c9915f23e
 topic_type:
 - apiref
-ms.openlocfilehash: 64df6a81eb23c20537238c702fd0c204d64d14bc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e4a003b30c495852a3a68d44d92bef35c3ed7812
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434551"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866302"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>ICorProfilerCallback::Initialize — Metoda
 Wywołuje się, by zainicjować profiler kodu za każdym razem, gdy jest uruchomiona nowa aplikacja środowiska uruchomieniowego języka wspólnego (CLR).  
@@ -32,12 +32,14 @@ HRESULT Initialize(
     [in] IUnknown     *pICorProfilerInfoUnk);  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `pICorProfilerInfoUnk`  
- [w](/cpp/atl/iunknown) interfejsie, który profiler musi zbadać wskaźnik interfejsu [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) .  
-  
+## <a name="parameters"></a>Parametry
+
+- `pICorProfilerInfoUnk`
+
+  \[in] wskaźnik do interfejsu [IUnknown](/cpp/atl/iunknown) , który profiler musi wykonać zapytanie o wskaźnik interfejsu [ICorProfilerInfo](icorprofilerinfo-interface.md) .  
+
 ## <a name="remarks"></a>Uwagi  
- Wywołanie `Initialize` jest jedyną możliwością, aby włączyć (lub wyłączyć) wywołania zwrotne, które są niezmienne. Po włączeniu wywołania zwrotnego przez wywołanie `Initialize` nie można go wyłączyć później za pomocą [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md). COR_PRF_MONITOR_IMMUTABLE wartość wyliczenia [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) wskazuje, które zdarzenia są niezmienne.  
+ Wywołanie `Initialize` jest jedyną możliwością, aby włączyć (lub wyłączyć) wywołania zwrotne, które są niezmienne. Po włączeniu wywołania zwrotnego przez wywołanie `Initialize` nie można go wyłączyć później za pomocą [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md). COR_PRF_MONITOR_IMMUTABLE wartość wyliczenia [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md) wskazuje, które zdarzenia są niezmienne.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -50,5 +52,5 @@ HRESULT Initialize(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Shutdown, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-shutdown-method.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [Shutdown, metoda](icorprofilercallback-shutdown-method.md)

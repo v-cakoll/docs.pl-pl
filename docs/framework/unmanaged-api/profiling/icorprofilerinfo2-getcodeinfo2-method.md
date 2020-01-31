@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 532da6ee-7f0a-401b-a61e-fc47ec235d2e
 topic_type:
 - apiref
-ms.openlocfilehash: 5149e3fab023de42d03673ec5d3e5ae888a9ed5a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9295ea8b22f72529f55cbe13f6a79a0aa34d2fa0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433288"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868799"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a>ICorProfilerInfo2::GetCodeInfo2 — Metoda
 Pobiera zakresy kodu natywnego powiązane z określonym `FunctionID`.  
@@ -44,7 +44,7 @@ HRESULT GetCodeInfo2(
  podczas Rozmiar tablicy `codeInfos`.  
   
  `pcCodeInfos`  
- określoną Wskaźnik do łącznej liczby dostępnych struktur [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) .  
+ określoną Wskaźnik do łącznej liczby dostępnych struktur [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) .  
   
  `codeInfos`  
  określoną Bufor dostarczony przez wywołującego. Po powrocie metody zawiera tablicę struktur `COR_PRF_CODE_INFO`, z których każdy opisuje blok kodu natywnego.  
@@ -67,7 +67,7 @@ HRESULT GetCodeInfo2(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [GetCodeInfo3, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md)
-- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [GetCodeInfo3, metoda](icorprofilerinfo4-getcodeinfo3-method.md)
+- [ICorProfilerInfo2, interfejs](icorprofilerinfo2-interface.md)
+- [Interfejsy profilowania](profiling-interfaces.md)
+- [Profilowanie](index.md)

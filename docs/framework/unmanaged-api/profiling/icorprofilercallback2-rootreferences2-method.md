@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55a2f907-d216-42eb-8f2f-e5d59c2eebd6
 topic_type:
 - apiref
-ms.openlocfilehash: dffd4365669da61f7b321110ad663c131ce591e6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a9ce9a7a56847efcadf09924ffc56c41f20a1c58
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439668"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865730"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2 — Metoda
-Powiadamia profiler o odwołaniach głównych po wystąpieniu wyrzucania elementów bezużytecznych. Ta metoda jest rozszerzeniem metody [ICorProfilerCallback:: RootReferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) .  
+Powiadamia profiler o odwołaniach głównych po wystąpieniu wyrzucania elementów bezużytecznych. Ta metoda jest rozszerzeniem metody [ICorProfilerCallback:: RootReferences —](icorprofilercallback-rootreferences-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,10 +44,10 @@ HRESULT RootReferences2(
  podczas Tablica identyfikatorów obiektów, z których każdy odwołuje się do obiektu statycznego lub obiektu na stosie. Elementy w tablicy `rootKinds` zawierają informacje do klasyfikowania odpowiadających im elementów w tablicy `rootRefIds`.  
   
  `rootKinds`  
- podczas Tablica wartości [COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) , które wskazują typ elementu głównego wyrzucania elementów bezużytecznych.  
+ podczas Tablica wartości [COR_PRF_GC_ROOT_KIND](cor-prf-gc-root-kind-enumeration.md) , które wskazują typ elementu głównego wyrzucania elementów bezużytecznych.  
   
  `rootFlags`  
- podczas Tablica wartości [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) , które opisują właściwości katalogu głównego wyrzucania elementów bezużytecznych.  
+ podczas Tablica wartości [COR_PRF_GC_ROOT_FLAGS](cor-prf-gc-root-flags-enumeration.md) , które opisują właściwości katalogu głównego wyrzucania elementów bezużytecznych.  
   
  `rootIds`  
  podczas Tablica wartości UINT_PTR, która wskazuje liczbę całkowitą, która zawiera dodatkowe informacje o katalogu głównym wyrzucania elementów bezużytecznych, w zależności od wartości parametru `rootKinds`.  
@@ -61,7 +61,7 @@ HRESULT RootReferences2(
   
  Możliwe jest, aby wpisy w `rootRefIds` miały wartość zero, co oznacza, że odpowiadające mu odwołanie główne ma wartość null i nie odwołuje się do obiektu na stercie zarządzanym.  
   
- Identyfikatory obiektów zwrócone przez `RootReferences2` są nieprawidłowe podczas wywołania zwrotnego, ponieważ wyrzucanie elementów bezużytecznych może być w trakcie przeniesienia obiektów ze starych adresów na nowe adresy. W związku z tym nie należy próbować kontrolować obiektów podczas wywołania `RootReferences2`. Gdy wywoływana jest [ICorProfilerCallback2:: GarbageCollectionFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) , wszystkie obiekty zostały przeniesione do nowych lokalizacji i można je bezpiecznie sprawdzić.  
+ Identyfikatory obiektów zwrócone przez `RootReferences2` są nieprawidłowe podczas wywołania zwrotnego, ponieważ wyrzucanie elementów bezużytecznych może być w trakcie przeniesienia obiektów ze starych adresów na nowe adresy. W związku z tym nie należy próbować kontrolować obiektów podczas wywołania `RootReferences2`. Gdy wywoływana jest [ICorProfilerCallback2:: GarbageCollectionFinished —](icorprofilercallback2-garbagecollectionfinished-method.md) , wszystkie obiekty zostały przeniesione do nowych lokalizacji i można je bezpiecznie sprawdzić.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -74,5 +74,5 @@ HRESULT RootReferences2(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2, interfejs](icorprofilercallback2-interface.md)

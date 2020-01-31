@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: f4deec3e2b49b5cd6a924af8024e775c5c549f97
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6cd35c180b8a322b3402b050c6d6840073010b1f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440862"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866986"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 — Funkcja
-Powiadamia profiler, że sterowanie jest przesyłane do funkcji i zawiera informacje na temat ramki stosu i argumentów funkcji. Ta funkcja zastępuje funkcję [FunctionEnter —](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) .  
+Powiadamia profiler, że sterowanie jest przesyłane do funkcji i zawiera informacje na temat ramki stosu i argumentów funkcji. Ta funkcja zastępuje funkcję [FunctionEnter —](functionenter-function.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,23 +35,28 @@ void __stdcall FunctionEnter2 (
 );  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `funcId`  
- podczas Identyfikator funkcji, do której jest przenoszona kontrola.  
+## <a name="parameters"></a>Parametry
+
+- `funcId`
+
+  \[in) identyfikator funkcji, do której jest przenoszona kontrola.
+
+- `clientData`
+
+  \[w] ponownie mapowany identyfikator funkcji, który został wcześniej określony przez profiler przy użyciu funkcji [FunctionIDMapper](functionidmapper-function.md) .
   
- `clientData`  
- podczas Identyfikator funkcji ponownie mapowanej, który profiler został poprzednio określony przy użyciu funkcji [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) .  
+- `func`
+
+  \[w] `COR_PRF_FRAME_INFO` wartość, która wskazuje na informacje o ramce stosu.
   
- `func`  
- podczas Wartość `COR_PRF_FRAME_INFO`, która wskazuje na informacje o ramce stosu.  
+  Profiler powinien być traktowany jako nieprzezroczysty uchwyt, który można przesłać z powrotem do aparatu wykonywania w metodzie [ICorProfilerInfo2:: GetFunctionInfo2 —](icorprofilerinfo2-getfunctioninfo2-method.md) .  
   
- Profiler powinien być traktowany jako nieprzezroczysty uchwyt, który można przesłać z powrotem do aparatu wykonywania w metodzie [ICorProfilerInfo2:: GetFunctionInfo2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) .  
-  
- `argumentInfo`  
- podczas Wskaźnik do struktury [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) , który określa lokalizacje w pamięci argumentów funkcji.  
-  
- Aby można było uzyskać dostęp do informacji o argumencie, należy ustawić flagę `COR_PRF_ENABLE_FUNCTION_ARGS`. Profiler może użyć metody [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) , aby ustawić flagi zdarzeń.  
-  
+- `argumentInfo`
+
+  \[w] wskaźnik do struktury [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) , która określa lokalizacje w pamięci argumentów funkcji.
+
+  Aby można było uzyskać dostęp do informacji o argumencie, należy ustawić flagę `COR_PRF_ENABLE_FUNCTION_ARGS`. Profiler może użyć metody [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) , aby ustawić flagi zdarzeń.
+
 ## <a name="remarks"></a>Uwagi  
  Wartości parametrów `func` i `argumentInfo` są nieprawidłowe po powrocie funkcji `FunctionEnter2`, ponieważ wartości mogą ulec zmianie lub zostać zniszczone.  
   
@@ -78,7 +83,7 @@ void __stdcall FunctionEnter2 (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [FunctionLeave2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [FunctionTailcall2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionLeave2, funkcja](functionleave2-function.md)
+- [FunctionTailcall2, funkcja](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2, metoda](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Profilowanie statycznych funkcji globalnych](profiling-global-static-functions.md)

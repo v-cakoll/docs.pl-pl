@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f64c325a-ed3a-4aaf-b847-a88edbc4fefc
 topic_type:
 - apiref
-ms.openlocfilehash: 94230cbad95ff0a5d4234c27aa5d1d56ac5be9bb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: edf5d61baae28a82aff0d0bd32d1d900085ac375
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428399"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867324"
 ---
 # <a name="cor_prf_clause_type-enumeration"></a>COR_PRF_CLAUSE_TYPE — Wyliczenie
 Wskazuje typ klauzuli wyjątku, który został właśnie wprowadzony lub pozostawiony w kodzie.  
@@ -35,7 +35,7 @@ typedef enum {
 } COR_PRF_CLAUSE_TYPE;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
@@ -55,4 +55,4 @@ typedef enum {
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Profilowanie — wyliczenia](profiling-enumerations.md)

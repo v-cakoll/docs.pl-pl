@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: df9ecc9bc355c12f993763820eb5065ba8bcc36b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6d50a5d74eccff6fe39aca111f768bac4d8f2e2e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855917"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868333"
 ---
 # <a name="icorprofilerinfo8getfunctionfromip3-method"></a>ICorProfilerInfo8:: GetFunctionFromIP3, Metoda
 
@@ -30,16 +30,19 @@ HRESULT GetFunctionFromIP3([in] LPCBYTE ip,
                            [out] ReJITID * pReJitId);
 ```
 
-#### <a name="parameters"></a>Parametry
+## <a name="parameters"></a>Parametry
 
-`ip` \
-podczas Wskaźnik instrukcji w kodzie zarządzanym.
+- `ip`
 
-`pFunctionId` \
-określoną Identyfikator funkcji.
+  \[w] wskaźnik instrukcji w kodzie zarządzanym.
 
-`pReJitId` \
-określoną Tożsamość funkcji ponownie skompilowanej w trybie JIT.
+- `pFunctionId`
+
+  \[out] identyfikator funkcji.
+
+- `pReJitId`
+
+  \[out] tożsamość funkcji ponownie skompilowanej w trybie JIT.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -47,14 +50,14 @@ Ta metoda działa w przypadku metod dynamicznych i niedynamicznych. Jest to nadz
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
-**Nagłówki** CorProf. idl, CorProf. h
+**Nagłówek:** CorProf. idl, CorProf. h
 
-**Biblioteki** CorGuids.lib
+**Biblioteka:** CorGuids. lib
 
-**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo8, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md)
+- [ICorProfilerInfo8, interfejs](icorprofilerinfo8-interface.md)

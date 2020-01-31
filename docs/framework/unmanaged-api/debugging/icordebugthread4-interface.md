@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8c7719a-322b-4133-8566-4c27218dc104
 topic_type:
 - apiref
-ms.openlocfilehash: 8779dbc95a8bef13d45605295bd68b1d3f16851d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0bb25d060853abb20316a344bae3755b2f8b4dc7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122430"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791338"
 ---
 # <a name="icordebugthread4-interface"></a>ICorDebugThread4 — Interfejs
 Dostarcza informacje o blokowaniu wątku.  
@@ -28,12 +28,12 @@ Dostarcza informacje o blokowaniu wątku.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetBlockingObjects, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getblockingobjects-method.md)|Udostępnia uporządkowane Wyliczenie struktur [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) , które dostarczają informacje o blokowaniu wątku.|  
-|[HadUnhandledException, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-hadunhandledexception-method.md)|Wskazuje, czy wątek kiedykolwiek miał nieobsługiwany wyjątek.|  
-|[GetCurrentCustomDebuggerNotification, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md)|Pobiera bieżący obiekt [ICorDebugManagedCallback3:: CustomNotification —](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) w bieżącym wątku.|  
+|[GetBlockingObjects, metoda](icordebugthread4-getblockingobjects-method.md)|Udostępnia uporządkowane Wyliczenie struktur [CorDebugBlockingObject](cordebugblockingobject-structure.md) , które dostarczają informacje o blokowaniu wątku.|  
+|[HadUnhandledException, metoda](icordebugthread4-hadunhandledexception-method.md)|Wskazuje, czy wątek kiedykolwiek miał nieobsługiwany wyjątek.|  
+|[GetCurrentCustomDebuggerNotification, metoda](icordebugthread4-getcurrentcustomdebuggernotification-method.md)|Pobiera bieżący obiekt [ICorDebugManagedCallback3:: CustomNotification —](icordebugmanagedcallback3-customnotification-method.md) w bieżącym wątku.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten interfejs jest logicznym rozszerzeniem interfejsów ICorDebugThread, ICorDebugThread2 i [ICorDebugThread3](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-interface.md) .  
+ Ten interfejs jest logicznym rozszerzeniem interfejsów ICorDebugThread, ICorDebugThread2 i [ICorDebugThread3](icordebugthread3-interface.md) .  
   
 > [!NOTE]
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
@@ -49,5 +49,5 @@ Dostarcza informacje o blokowaniu wątku.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

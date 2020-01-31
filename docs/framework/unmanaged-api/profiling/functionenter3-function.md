@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef782c53-dae7-4990-b4ad-fddb1e690d4e
 topic_type:
 - apiref
-ms.openlocfilehash: fd224279b3df6c9e8e55cd81ebfbf2e5ea2428d5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3ba014cbae4a71713f29968f0137ac053033c661
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440779"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866960"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 — Funkcja
 Powiadamia profiler, że sterowanie jest przesyłane do funkcji.  
@@ -30,12 +30,14 @@ Powiadamia profiler, że sterowanie jest przesyłane do funkcji.
 void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `functionOrRemappedID`  
- podczas Identyfikator funkcji, do której jest przenoszona kontrola.  
-  
+## <a name="parameters"></a>Parametry
+
+- `functionOrRemappedID`
+
+  \[in) identyfikator funkcji, do której jest przenoszona kontrola.
+
 ## <a name="remarks"></a>Uwagi  
- Funkcja wywołania zwrotnego `FunctionEnter3` powiadamia profiler w miarę wywoływania funkcji, ale nie obsługuje inspekcji argumentów. Użyj [metody ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) , aby zarejestrować implementację tej funkcji.  
+ Funkcja wywołania zwrotnego `FunctionEnter3` powiadamia profiler w miarę wywoływania funkcji, ale nie obsługuje inspekcji argumentów. Użyj [metody ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 —](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) , aby zarejestrować implementację tej funkcji.  
   
  Funkcja `FunctionEnter3` jest wywołaniem zwrotnym; należy zaimplementować go. Implementacja musi używać atrybutu klasy magazynu `__declspec(naked)`.  
   
@@ -56,13 +58,13 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="see-also"></a>Zobacz także
 
-- [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
-- [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
-- [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
-- [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
-- [Setenterleavefunctionhooks3 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
-- [Setenterleavefunctionhooks3withinfo —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
-- [SetFunctionIDMapper —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
-- [Setfunctionidmapper2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setfunctionidmapper2-method.md)
-- [Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionLeave3](functionleave3-function.md)
+- [FunctionTailcall3](functiontailcall3-function.md)
+- [FunctionEnter3WithInfo](functionenter3withinfo-function.md)
+- [FunctionLeave3WithInfo](functionleave3withinfo-function.md)
+- [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)
+- [SetEnterLeaveFunctionHooks3](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
+- [SetEnterLeaveFunctionHooks3WithInfo](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
+- [SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md)
+- [Setfunctionidmapper2 —](icorprofilerinfo3-setfunctionidmapper2-method.md)
+- [Profilowanie statycznych funkcji globalnych](profiling-global-static-functions.md)

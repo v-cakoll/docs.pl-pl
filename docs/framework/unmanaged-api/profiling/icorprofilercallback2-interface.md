@@ -14,38 +14,38 @@ helpviewer_keywords:
 ms.assetid: 4a261dba-450d-4f1f-8d98-865b58bfc992
 topic_type:
 - apiref
-ms.openlocfilehash: a7867c63f76db38a16784c03fadd9fc917ecc4e7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c565d0fe37a091095b18a6d59308f159fe7b4554
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439686"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865747"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 — Interfejs
-Dostarcza metody, które są używane przez środowisko uruchomieniowe języka wspólnego (CLR) do powiadamiania profilera kodu o wystąpieniu zdarzeń subskrybowanych przez profiler. Interfejs `ICorProfilerCallback2` jest rozszerzeniem interfejsu [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) . Oznacza to, że udostępnia nowe wywołania zwrotne wprowadzone w .NET Framework w wersji 2,0.  
+Dostarcza metody, które są używane przez środowisko uruchomieniowe języka wspólnego (CLR) do powiadamiania profilera kodu o wystąpieniu zdarzeń subskrybowanych przez profiler. Interfejs `ICorProfilerCallback2` jest rozszerzeniem interfejsu [ICorProfilerCallback](icorprofilercallback-interface.md) . Oznacza to, że udostępnia nowe wywołania zwrotne wprowadzone w .NET Framework w wersji 2,0.  
   
 > [!NOTE]
-> Każda implementacja metody musi zwrócić wynik HRESULT mający wartość S_OK w przypadku powodzenia lub E_FAIL w przypadku niepowodzenia. Obecnie środowisko CLR ignoruje wartość HRESULT zwracaną przez poszczególne wywołania zwrotne, z wyjątkiem [ICorProfilerCallback:: ObjectReferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md).  
+> Każda implementacja metody musi zwrócić wynik HRESULT mający wartość S_OK w przypadku powodzenia lub E_FAIL w przypadku niepowodzenia. Obecnie środowisko CLR ignoruje wartość HRESULT zwracaną przez poszczególne wywołania zwrotne, z wyjątkiem [ICorProfilerCallback:: ObjectReferences —](icorprofilercallback-objectreferences-method.md).  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[FinalizeableObjectQueued, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)|Powiadamia profiler kodu o tym, że obiekt z finalizatorem został umieszczony w kolejce finalizatora na potrzeby wykonywania `Finalize` metodzie.|  
-|[GarbageCollectionFinished, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|Powiadamia program profilujący, że wyrzucanie elementów bezużytecznych zostało ukończone i wydano wszystkie wywołania zwrotne odzyskiwania pamięci.|  
-|[GarbageCollectionStarted, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)|Powiadamia profiler kodu o rozpoczęciu wyrzucania elementów bezużytecznych.|  
-|[HandleCreated, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)|Powiadamia profiler kodu o utworzeniu dojścia do wyrzucania elementów bezużytecznych.|  
-|[HandleDestroyed, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)|Powiadamia profiler kodu, że dojście do wyrzucania elementów bezużytecznych zostało zniszczone.|  
-|[RootReferences2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)|Powiadamia profiler o odwołaniach głównych po wystąpieniu wyrzucania elementów bezużytecznych. Ta metoda jest rozszerzeniem metody [ICorProfilerCallback:: RootReferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) .|  
-|[SurvivingReferences, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)|Powiadamia profiler o odwołaniach do obiektów, które przeżyły wyrzucanie elementów bezużytecznych.|  
-|[ThreadNameChanged, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md)|Powiadamia profiler kodu o zmianie nazwy wątku.|  
+|[FinalizeableObjectQueued, metoda](icorprofilercallback2-finalizeableobjectqueued-method.md)|Powiadamia profiler kodu o tym, że obiekt z finalizatorem został umieszczony w kolejce finalizatora na potrzeby wykonywania `Finalize` metodzie.|  
+|[GarbageCollectionFinished, metoda](icorprofilercallback2-garbagecollectionfinished-method.md)|Powiadamia program profilujący, że wyrzucanie elementów bezużytecznych zostało ukończone i wydano wszystkie wywołania zwrotne odzyskiwania pamięci.|  
+|[GarbageCollectionStarted, metoda](icorprofilercallback2-garbagecollectionstarted-method.md)|Powiadamia profiler kodu o rozpoczęciu wyrzucania elementów bezużytecznych.|  
+|[HandleCreated, metoda](icorprofilercallback2-handlecreated-method.md)|Powiadamia profiler kodu o utworzeniu dojścia do wyrzucania elementów bezużytecznych.|  
+|[HandleDestroyed, metoda](icorprofilercallback2-handledestroyed-method.md)|Powiadamia profiler kodu, że dojście do wyrzucania elementów bezużytecznych zostało zniszczone.|  
+|[RootReferences2, metoda](icorprofilercallback2-rootreferences2-method.md)|Powiadamia profiler o odwołaniach głównych po wystąpieniu wyrzucania elementów bezużytecznych. Ta metoda jest rozszerzeniem metody [ICorProfilerCallback:: RootReferences —](icorprofilercallback-rootreferences-method.md) .|  
+|[SurvivingReferences, metoda](icorprofilercallback2-survivingreferences-method.md)|Powiadamia profiler o odwołaniach do obiektów, które przeżyły wyrzucanie elementów bezużytecznych.|  
+|[ThreadNameChanged, metoda](icorprofilercallback2-threadnamechanged-method.md)|Powiadamia profiler kodu o zmianie nazwy wątku.|  
   
 ## <a name="remarks"></a>Uwagi  
  Środowisko CLR wywołuje metodę w interfejsie `ICorProfilerCallback` (lub `ICorProfilerCallback2`) w celu powiadomienia profilera o wystąpieniu zdarzenia subskrybowanego przez profiler. Jest to podstawowy interfejs wywołania zwrotnego, za pomocą którego środowisko CLR komunikuje się z profilerem kodu.  
   
- Profiler kodu musi implementować metody interfejsu `ICorProfilerCallback`. W przypadku .NET Framework 2,0 i nowszych wersji profiler musi również zaimplementować metody `ICorProfilerCallback2`. Każda implementacja metody musi zwrócić wynik HRESULT mający wartość S_OK w przypadku powodzenia lub E_FAIL w przypadku niepowodzenia. Obecnie środowisko CLR ignoruje wartość HRESULT zwracaną przez poszczególne wywołania zwrotne, z wyjątkiem [ICorProfilerCallback:: ObjectReferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md).  
+ Profiler kodu musi implementować metody interfejsu `ICorProfilerCallback`. W przypadku .NET Framework 2,0 i nowszych wersji profiler musi również zaimplementować metody `ICorProfilerCallback2`. Każda implementacja metody musi zwrócić wynik HRESULT mający wartość S_OK w przypadku powodzenia lub E_FAIL w przypadku niepowodzenia. Obecnie środowisko CLR ignoruje wartość HRESULT zwracaną przez poszczególne wywołania zwrotne, z wyjątkiem [ICorProfilerCallback:: ObjectReferences —](icorprofilercallback-objectreferences-method.md).  
   
- Profiler kodu musi być zarejestrowany w rejestrze systemu Microsoft Windows, jego obiekt COM implementujący interfejsy `ICorProfilerCallback` i `ICorProfilerCallback2`. Profiler kodu subskrybuje zdarzenia, dla których chce otrzymywać powiadomienie przez wywołanie [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md). Zwykle jest to wykonywane w implementacji profilera [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md). Profiler jest w stanie odebrać powiadomienie z środowiska uruchomieniowego, gdy zdarzenie ma miejsce lub właśnie wystąpiło w trakcie wykonywania procesu.  
+ Profiler kodu musi być zarejestrowany w rejestrze systemu Microsoft Windows, jego obiekt COM implementujący interfejsy `ICorProfilerCallback` i `ICorProfilerCallback2`. Profiler kodu subskrybuje zdarzenia, dla których chce otrzymywać powiadomienie przez wywołanie [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md). Zwykle jest to wykonywane w implementacji profilera [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md). Profiler jest w stanie odebrać powiadomienie z środowiska uruchomieniowego, gdy zdarzenie ma miejsce lub właśnie wystąpiło w trakcie wykonywania procesu.  
   
 > [!NOTE]
 > Profiler rejestruje pojedynczy obiekt COM. Jeśli profiler jest przeznaczony dla .NET Framework wersji 1,0 lub 1,1, ten obiekt COM musi implementować tylko metody `ICorProfilerCallback`. Jeśli jest to element docelowy .NET Framework w wersji 2,0 lub nowszej, obiekt COM musi również zaimplementować metody `ICorProfilerCallback2`.  
@@ -61,7 +61,7 @@ Dostarcza metody, które są używane przez środowisko uruchomieniowe języka w
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)
-- [ICorProfilerCallback4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [Interfejsy profilowania](profiling-interfaces.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ICorProfilerCallback3, interfejs](icorprofilercallback3-interface.md)
+- [ICorProfilerCallback4, interfejs](icorprofilercallback4-interface.md)

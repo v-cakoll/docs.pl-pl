@@ -27,12 +27,12 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: a13470b970b35a2f6f088fd305ba455167c8e107
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: aa8bff374e9698d4b7e032428ec1bdc66901e05d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937817"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860918"
 ---
 # <a name="profiling-overview"></a>Omówienie profilowania
 
@@ -48,7 +48,7 @@ Kompilacja JIT w czasie wykonywania zapewnia dobrą możliwość profilowania. P
 
 Zwykle Profiling API jest używany do pisania *profilera kodu*, który jest programem monitorującym wykonywanie zarządzanej aplikacji.
 
-Profilowania API jest używany przez profiler DLL, który jest ładowany do tego samego procesu co aplikacja, która jest profilowana. Biblioteka DLL profilera implementuje interfejs wywołania zwrotnego ([ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) w .NET Framework w wersji 1,0 i 1,1 [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) w wersji 2,0 i nowszych). Środowisko CLR wywołuje metody z tego interfejsu w celu powiadomienia profilera zdarzeń w profilowanym procesie. Profiler może odwoływać się do środowiska uruchomieniowego przy użyciu metod w interfejsach [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) i [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) w celu uzyskania informacji o stanie profilowanej aplikacji.
+Profilowania API jest używany przez profiler DLL, który jest ładowany do tego samego procesu co aplikacja, która jest profilowana. Biblioteka DLL profilera implementuje interfejs wywołania zwrotnego ([ICorProfilerCallback](icorprofilercallback-interface.md) w .NET Framework w wersji 1,0 i 1,1 [ICorProfilerCallback2](icorprofilercallback2-interface.md) w wersji 2,0 i nowszych). Środowisko CLR wywołuje metody z tego interfejsu w celu powiadomienia profilera zdarzeń w profilowanym procesie. Profiler może odwoływać się do środowiska uruchomieniowego przy użyciu metod w interfejsach [ICorProfilerInfo](icorprofilerinfo-interface.md) i [ICorProfilerInfo2](icorprofilerinfo2-interface.md) w celu uzyskania informacji o stanie profilowanej aplikacji.
 
 > [!NOTE]
 > Tylko część zbierania danych w ramach rozwiązania profilera powinna być uruchomiona w tym samym procesie co profilowana aplikacja. Wszystkie interfejsy użytkownika i analizy danych należy wykonać w osobnym procesie.
@@ -59,13 +59,13 @@ Na poniższej ilustracji pokazano, jak Profiler DLL współdziała z aplikacją,
 
 ### <a name="the-notification-interfaces"></a>Interfejsy powiadomień
 
-[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) i [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) mogą być uznawane za Interfejsy powiadomień. Te interfejsy składają się z metod takich jak [ClassLoadStarted —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)i [JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md). Za każdym razem, gdy środowisko CLR ładuje lub zwalnia klasę, kompiluje funkcję i tak dalej, wywołuje odpowiednią metodę w interfejsie `ICorProfilerCallback` lub `ICorProfilerCallback2`.
+[ICorProfilerCallback](icorprofilercallback-interface.md) i [ICorProfilerCallback2](icorprofilercallback2-interface.md) mogą być uznawane za Interfejsy powiadomień. Te interfejsy składają się z metod takich jak [ClassLoadStarted —](icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished —](icorprofilercallback-classloadfinished-method.md)i [JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md). Za każdym razem, gdy środowisko CLR ładuje lub zwalnia klasę, kompiluje funkcję i tak dalej, wywołuje odpowiednią metodę w interfejsie `ICorProfilerCallback` lub `ICorProfilerCallback2`.
 
-Na przykład profiler może mierzyć wydajność kodu przez dwie funkcje powiadomień: [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) i [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md). Tylko sygnatura czasowa oznacza każde powiadomienie, sumuje wyniki i wyprowadza listę, która wskazuje, które funkcje zużywają najwięcej czasu procesora lub zegarka podczas wykonywania aplikacji.
+Na przykład profiler może mierzyć wydajność kodu przez dwie funkcje powiadomień: [FunctionEnter2](functionenter2-function.md) i [FunctionLeave2](functionleave2-function.md). Tylko sygnatura czasowa oznacza każde powiadomienie, sumuje wyniki i wyprowadza listę, która wskazuje, które funkcje zużywają najwięcej czasu procesora lub zegarka podczas wykonywania aplikacji.
 
 ### <a name="the-information-retrieval-interfaces"></a>Interfejsy pobierania informacji
 
-Inne główne interfejsy, które są wykorzystywane do profilowania, to [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) i [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md). Profiler wywołuje te interfejsy zgodnie z potrzebami, aby uzyskać więcej informacji ułatwiających jego analizę. Na przykład za każdym razem, gdy środowisko CLR wywołuje funkcję [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) , dostarcza identyfikator funkcji. Profiler może uzyskać więcej informacji na temat tej funkcji, wywołując metodę [ICorProfilerInfo2:: GetFunctionInfo2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) w celu odnalezienia klasy nadrzędnej funkcji, jej nazwy i tak dalej.
+Inne główne interfejsy, które są wykorzystywane do profilowania, to [ICorProfilerInfo](icorprofilerinfo-interface.md) i [ICorProfilerInfo2](icorprofilerinfo2-interface.md). Profiler wywołuje te interfejsy zgodnie z potrzebami, aby uzyskać więcej informacji ułatwiających jego analizę. Na przykład za każdym razem, gdy środowisko CLR wywołuje funkcję [FunctionEnter2](functionenter2-function.md) , dostarcza identyfikator funkcji. Profiler może uzyskać więcej informacji na temat tej funkcji, wywołując metodę [ICorProfilerInfo2:: GetFunctionInfo2 —](icorprofilerinfo2-getfunctioninfo2-method.md) w celu odnalezienia klasy nadrzędnej funkcji, jej nazwy i tak dalej.
 
 ## <a name="supported-features"></a>Obsługiwane funkcje
 
@@ -127,9 +127,9 @@ Profilowanie API nie obsługuje następujących funkcji:
 
 ## <a name="notification-threads"></a>Wątki powiadomień
 
-W większości przypadków wątek generujący zdarzenie również wykonuje powiadomienia. Takie powiadomienia (na przykład [FunctionEnter —](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) i [FunctionLeave —](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)) nie muszą podawać jawnych `ThreadID`. Profiler może również zdecydować się na użycie magazynu lokalnego wątków do przechowywania i aktualizowania bloków analizy zamiast indeksowania bloków analizy w magazynie globalnym na podstawie `ThreadID` wątku, którego to dotyczy.
+W większości przypadków wątek generujący zdarzenie również wykonuje powiadomienia. Takie powiadomienia (na przykład [FunctionEnter —](functionenter-function.md) i [FunctionLeave —](functionleave-function.md)) nie muszą podawać jawnych `ThreadID`. Profiler może również zdecydować się na użycie magazynu lokalnego wątków do przechowywania i aktualizowania bloków analizy zamiast indeksowania bloków analizy w magazynie globalnym na podstawie `ThreadID` wątku, którego to dotyczy.
 
-Należy zauważyć, że te wywołania zwrotne nie są serializowane. Użytkownicy muszą chronić swój kod, tworząc bezpieczne dla wątków struktury danych i blokując kod profilera, gdy jest to konieczne, aby uniemożliwić dostęp równoległy z wielu wątków. Z tego względu w niektórych przypadkach można uzyskać nietypową sekwencję wywołań zwrotnych. Załóżmy na przykład, że aplikacja zarządzana duplikuje dwa wątki wykonujące identyczny kod. W takim przypadku możliwe jest odbieranie zdarzenia [ICorProfilerCallback:: JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) dla niektórych funkcji z jednego wątku i wywołania zwrotnego `FunctionEnter` z innego wątku przed odebraniem wywołania zwrotnego [ICorProfilerCallback:: JITCompilationFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) . W takim przypadku użytkownik otrzyma `FunctionEnter` wywołanie zwrotne dla funkcji, która może nie być jeszcze w pełni skompilowana (JIT).
+Należy zauważyć, że te wywołania zwrotne nie są serializowane. Użytkownicy muszą chronić swój kod, tworząc bezpieczne dla wątków struktury danych i blokując kod profilera, gdy jest to konieczne, aby uniemożliwić dostęp równoległy z wielu wątków. Z tego względu w niektórych przypadkach można uzyskać nietypową sekwencję wywołań zwrotnych. Załóżmy na przykład, że aplikacja zarządzana duplikuje dwa wątki wykonujące identyczny kod. W takim przypadku możliwe jest odbieranie zdarzenia [ICorProfilerCallback:: JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md) dla niektórych funkcji z jednego wątku i wywołania zwrotnego `FunctionEnter` z innego wątku przed odebraniem wywołania zwrotnego [ICorProfilerCallback:: JITCompilationFinished —](icorprofilercallback-jitcompilationfinished-method.md) . W takim przypadku użytkownik otrzyma `FunctionEnter` wywołanie zwrotne dla funkcji, która może nie być jeszcze w pełni skompilowana (JIT).
 
 ## <a name="security"></a>Zabezpieczenia
 
@@ -145,9 +145,9 @@ Przegląd interfejsu API profilowania środowiska CLR może stworzyć wrażenie,
 
 Chociaż jest to możliwe z perspektywy projektowania, interfejs API profilowania nie obsługuje składników zarządzanych. Profiler CLR musi być całkowicie niezarządzany. Próby połączenia kodu zarządzanego i niezarządzanego w profilerze CLR mogą spowodować naruszenie zasad dostępu, niepowodzenia programu lub zakleszczenia. Zarządzane składniki profilera będą wyzwalać zdarzenia z powrotem do niezarządzanych składników, które następnie ponownie wywołają zarządzane składniki, co spowoduje powstanie odwołań cyklicznych.
 
-Jedyna lokalizacja, w której Profiler CLR może bezpiecznie wywoływać kod zarządzany, jest w treści języka pośredniego (MSIL) firmy Microsoft. Zalecanym sposobem modyfikacji treści MSIL jest użycie metod ponownej kompilacji JIT w interfejsie [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) .
+Jedyna lokalizacja, w której Profiler CLR może bezpiecznie wywoływać kod zarządzany, jest w treści języka pośredniego (MSIL) firmy Microsoft. Zalecanym sposobem modyfikacji treści MSIL jest użycie metod ponownej kompilacji JIT w interfejsie [ICorProfilerCallback4](icorprofilercallback4-interface.md) .
 
-Aby zmodyfikować MSIL, można również użyć starszych metod Instrumentacji. Przed ukończeniem kompilacji funkcji just-in-Time (JIT) dla programu profiler może wstawiać wywołania zarządzane w treści MSIL metody, a następnie kompilować ją w trybie JIT (patrz metoda [ICorProfilerInfo:: GetILFunctionBody —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbody-method.md) ). Ta technika może zostać pomyślnie użyta w przypadku selektywnego oprzyrządowania kodu zarządzanego lub zbierania danych statystycznych i wydajności dotyczących JIT.
+Aby zmodyfikować MSIL, można również użyć starszych metod Instrumentacji. Przed ukończeniem kompilacji funkcji just-in-Time (JIT) dla programu profiler może wstawiać wywołania zarządzane w treści MSIL metody, a następnie kompilować ją w trybie JIT (patrz metoda [ICorProfilerInfo:: GetILFunctionBody —](icorprofilerinfo-getilfunctionbody-method.md) ). Ta technika może zostać pomyślnie użyta w przypadku selektywnego oprzyrządowania kodu zarządzanego lub zbierania danych statystycznych i wydajności dotyczących JIT.
 
 Alternatywnie Profiler kodu może wstawiać natywne haki w treści MSIL każdej funkcji zarządzanej, która wywołuje kod niezarządzany. Ta technika może służyć do Instrumentacji i pokrycia. Na przykład Profiler kodu może wstawić punkty zaczepienia Instrumentacji po każdym bloku MSIL, aby upewnić się, że blok został wykonany. Modyfikacja treści MSIL metody jest bardzo delikatną operacją i istnieje wiele czynników, które należy wziąć pod uwagę.
 
@@ -161,7 +161,7 @@ Interfejs API profilowania środowiska uruchomieniowego języka wspólnego (CLR)
 
 W .NET Framework wersje 1,0 i 1,1 te metody są dostępne za pomocą podzestawu w procesie interfejsu API debugowania środowiska CLR. Są one zdefiniowane w pliku CorDebug. idl.
 
-W .NET Framework 2,0 i nowszych można użyć metody [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) dla tej funkcji.
+W .NET Framework 2,0 i nowszych można użyć metody [ICorProfilerInfo2::D ostacksnapshot](icorprofilerinfo2-dostacksnapshot-method.md) dla tej funkcji.
 
 ## <a name="using-com"></a>Przy użyciu modelu COM
 
@@ -175,11 +175,11 @@ Profilowanie interfejsu API zapewnia dwa sposoby uzyskiwania stosów wywołań: 
 
 Migawka stosu jest śladem stosu wątku na chwilę. Profiling API obsługuje śledzenie funkcji zarządzanych na stosie, ale pozostawia śledzenie niezarządzanych funkcji do analizatora stosu modułu profilera.
 
-Aby uzyskać więcej informacji na temat sposobu programowania profilera w celu przechodzenia do zarządzanych stosów, zobacz metodę [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) w tym zestawie dokumentacji i [stosu profilera w .NET Framework 2,0: podstawy i więcej](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).
+Aby uzyskać więcej informacji na temat sposobu programowania profilera w celu przechodzenia do zarządzanych stosów, zobacz metodę [ICorProfilerInfo2::D ostacksnapshot](icorprofilerinfo2-dostacksnapshot-method.md) w tym zestawie dokumentacji i [stosu profilera w .NET Framework 2,0: podstawy i więcej](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).
 
 ### <a name="shadow-stack"></a>Stos cieni
 
-Użycie metody Snapshot jest zbyt często możliwe, aby szybko utworzyć problem z wydajnością. Jeśli chcesz, aby ślady stosu były często wykonywane, profiler powinien zamiast tego kompilować stos w tle za pomocą wywołań zwrotnych wyjątków [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)i [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) . Stos cieni jest zawsze aktualny i może być szybko kopiowany do magazynu, gdy wymagana jest migawka stosu.
+Użycie metody Snapshot jest zbyt często możliwe, aby szybko utworzyć problem z wydajnością. Jeśli chcesz, aby ślady stosu były często wykonywane, profiler powinien zamiast tego kompilować stos w tle za pomocą wywołań zwrotnych wyjątków [FunctionEnter2](functionenter2-function.md), [FunctionLeave2](functionleave2-function.md), [FunctionTailcall2](functiontailcall2-function.md)i [ICorProfilerCallback2](icorprofilercallback2-interface.md) . Stos cieni jest zawsze aktualny i może być szybko kopiowany do magazynu, gdy wymagana jest migawka stosu.
 
 Stos cienia może uzyskać argumenty funkcji, wartości zwracane i informacje o ogólnych wystąpieniach. Te informacje są dostępne tylko za pomocą stosu w tle i mogą być uzyskiwane, gdy sterowanie jest przekazywane do funkcji. Jednak te informacje mogą być niedostępne w przyszłości podczas uruchamiania funkcji.
 
@@ -191,8 +191,8 @@ Wywołania zwrotne profilera mogą być emitowane w bardzo ograniczonych warunka
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Konfigurowanie środowiska profilowania](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|Wyjaśnia, jak zainicjować profiler, ustawić powiadomienia o zdarzeniach i profilować usługę systemu Windows.|
-|[Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|Opisuje interfejsy niezarządzane używane przez interfejs API profilowania.|
-|[Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|Opisuje niezarządzane globalne funkcje statyczne, które są używane przez interfejs API profilowania.|
-|[Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|Opisuje niezarządzane wyliczenia, które są używane przez interfejs API profilowania.|
-|[Profiling — struktury](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)|Opisuje struktury niezarządzane używane przez interfejs API profilowania.|
+|[Konfigurowanie środowiska profilowania](setting-up-a-profiling-environment.md)|Wyjaśnia, jak zainicjować profiler, ustawić powiadomienia o zdarzeniach i profilować usługę systemu Windows.|
+|[Interfejsy profilowania](profiling-interfaces.md)|Opisuje interfejsy niezarządzane używane przez interfejs API profilowania.|
+|[Profilowanie statycznych funkcji globalnych](profiling-global-static-functions.md)|Opisuje niezarządzane globalne funkcje statyczne, które są używane przez interfejs API profilowania.|
+|[Profilowanie — wyliczenia](profiling-enumerations.md)|Opisuje niezarządzane wyliczenia, które są używane przez interfejs API profilowania.|
+|[Profiling — struktury](profiling-structures.md)|Opisuje struktury niezarządzane używane przez interfejs API profilowania.|

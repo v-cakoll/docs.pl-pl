@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: c0bf92c9b6046d531e75771a9205e6dffe0fd367
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9f61a5a60b2ba1305158d1ab570079fe6aac19ac
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458483"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870743"
 ---
 # <a name="weak-event-patterns"></a>Słabe wzorce zdarzeń
 W aplikacjach jest możliwe, że programy obsługi dołączone do źródeł zdarzeń nie zostaną zniszczone w koordynacji z obiektem odbiornika, który dołączył program obsługi do źródła. Ta sytuacja może prowadzić do przecieków pamięci. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wprowadza Wzorzec projektowy, który może służyć do rozwiązywania tego problemu, dostarczając dedykowaną klasę Menedżera dla określonych zdarzeń i implementując interfejs w detektorach dla tego zdarzenia. Ten Wzorzec projektowy jest znany jako *słaby wzorzec zdarzeń*.  
@@ -31,12 +31,12 @@ W aplikacjach jest możliwe, że programy obsługi dołączone do źródeł zdar
 ## <a name="how-to-implement-the-weak-event-pattern"></a>Jak zaimplementować wzorzec słabych zdarzeń  
  Istnieją trzy sposoby implementacji słabego wzorca zdarzeń. W poniższej tabeli wymieniono trzy podejścia i przedstawiono wskazówki dotyczące sytuacji, w których należy użyć każdego z nich.  
   
-|Wynosi|Kiedy należy zaimplementować|  
+|Podejście|Kiedy należy zaimplementować|  
 |--------------|-----------------------|  
 |Użyj istniejącej klasy słabego Menedżera zdarzeń|Jeśli zdarzenie, które chcesz subskrybować, ma odpowiednie <xref:System.Windows.WeakEventManager>, użyj istniejącego słabego Menedżera zdarzeń. Aby zapoznać się z listą słabych menedżerów zdarzeń, które są dołączone do platformy WPF, zobacz Hierarchia dziedziczenia w klasie <xref:System.Windows.WeakEventManager>. Ze względu na to, że wliczone Menedżery zdarzeń słabych są ograniczone, prawdopodobnie trzeba będzie wybrać jedną z innych metod.|  
 |Użyj generycznej słabej klasy Menedżera zdarzeń|Użyj ogólnego <xref:System.Windows.WeakEventManager%602>, gdy istniejąca <xref:System.Windows.WeakEventManager> jest niedostępna, chcesz ułatwić wdrożenie i nie ma żadnych działań w zakresie wydajności. Ogólny <xref:System.Windows.WeakEventManager%602> jest mniej wydajny niż istniejący lub niestandardowy słaby Menedżer zdarzeń. Na przykład Klasa generyczna wykonuje więcej odbicia w celu odnalezienia zdarzenia uwzględniającego nazwę zdarzenia. Ponadto kod, aby zarejestrować zdarzenie przy użyciu ogólnego <xref:System.Windows.WeakEventManager%602>, jest bardziej pełny niż przy użyciu istniejącego lub niestandardowego <xref:System.Windows.WeakEventManager>.|  
 |Utwórz niestandardową klasę słabego Menedżera zdarzeń|Utwórz niestandardową <xref:System.Windows.WeakEventManager>, gdy istniejąca <xref:System.Windows.WeakEventManager> będzie niedostępna, a chcesz uzyskać najlepszą wydajność. Użycie <xref:System.Windows.WeakEventManager> niestandardowego do subskrybowania zdarzenia będzie bardziej wydajne, ale powiąże się to z kosztem napisania większej ilości kodu na początku.|  
-|Korzystanie z niesłabego Menedżera zdarzeń innej firmy|Pakiet NuGet ma [kilku słabych menedżerów zdarzeń](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) , a wiele struktur WPF obsługuje również wzorzec (na przykład zobacz [dokumentację biblioteki Prism na temat luźno powiązanej subskrypcji zdarzeń](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/Communication.md#subscribing-to-events)).|
+|Korzystanie z niesłabego Menedżera zdarzeń innej firmy|Pakiet NuGet ma [kilku słabych menedżerów zdarzeń](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) , a wiele struktur WPF obsługuje również wzorzec (na przykład zobacz [dokumentację biblioteki Prism na temat luźno powiązanej subskrypcji zdarzeń](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/legacy/Communication.md#subscribing-to-events)).|
 
  W poniższych sekcjach opisano sposób implementacji słabego wzorca zdarzeń.  Na potrzeby tej dyskusji wydarzenie subskrybowane ma następujące cechy.  
   

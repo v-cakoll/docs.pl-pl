@@ -5,18 +5,18 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: ed5e4f6ab23fe9ae77c94616a668da8accb46d4b
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 49277073706444fd611ae41e762442388ac50b71
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741700"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789603"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Obsługa automatyzacji interfejsu użytkownika dla standardowych formantów
 > [!NOTE]
 > Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
- Ten temat zawiera informacje dotyczące [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] obsługi standardowych formantów w aplikacjach opracowanych dla platform [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], Win32 i [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ Ten temat zawiera informacje dotyczące [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] obsługi standardowych formantów w aplikacjach opracowanych dla platform [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], Win32 i Windows Forms.  
   
 <a name="Windows_Presentation_Foundation_Controls"></a>   
 ## <a name="windows-presentation-foundation-controls"></a>Kontrolki Windows Presentation Foundation  
@@ -46,7 +46,7 @@ ms.locfileid: "75741700"
 |SysLink|Hyperlink|  
 |Static|Tekst|  
 |Static|Obraz|  
-|SysIPAddress32|Niestandardowe|  
+|SysIPAddress32|Celnej|  
 |SysHeader32|Nagłówek/HeaderItem|  
 |SysListView32|DataGrid|  
 |SysListView32|Lista|  
@@ -81,16 +81,16 @@ ms.locfileid: "75741700"
   
  Następujące kontrolki nie są obsługiwane.  
   
-|Nazwa klasy|Typ kontrolki|  
+|Nazwa klasy|Typ formantu|  
 |----------------|------------------|  
 |SysAnimate32|Obraz|  
 |SysPager|pokrętło|  
-|SysDateTimePick32|Niestandardowe|  
+|SysDateTimePick32|Celnej|  
 |SysMonthCal32|Kalendarz|  
-|MS_WINNOTE|Etykietka narzędzia|  
-|VBBubble|Etykietka narzędzia|  
+|MS_WINNOTE|wyowietlon|  
+|VBBubble|wyowietlon|  
 |Pasek przewijania (używany jako formant autonomiczny)|Suwak|  
-|Podsiatka|Niestandardowe|  
+|Podsiatka|Celnej|  
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Formanty formularzy systemu Windows  
@@ -163,7 +163,7 @@ ms.locfileid: "75741700"
 |ToolStrip|  
 |TableLayoutPanel|  
 |SplitContainer/SplitterPanel|  
-|Rozdzielacz|  
+|Dzielnik|  
 |Elemencie RaftingContainer|  
 |StatusStrip|  
   

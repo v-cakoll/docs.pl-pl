@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Obsługa zdarzeń związanych z danymi użytkownika w kontrolkach Windows Forms'
+title: Obsługa zdarzeń wejściowych użytkownika w kontrolkach
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Windows Forms controls, user input
 - user input [Windows Forms], Windows Forms controls
 ms.assetid: 3de74dcf-fae3-42d0-92b5-bc04a61a6888
-ms.openlocfilehash: ae230f22c929be39ea00eafe378c6910c4a9d35f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 19adeb6c803c76cba4139841f58087487d523a50
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592084"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739420"
 ---
-# <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Instrukcje: Obsługa zdarzeń związanych z danymi użytkownika w kontrolkach Windows Forms
-W tym przykładzie pokazano, jak obsługiwać większość klawiatury, myszy, fokus i zdarzenia sprawdzania poprawności, które mogą wystąpić w kontrolce Windows Forms. Pole tekstowe o nazwie `TextBoxInput` odbiera zdarzenia, gdy ma ona fokus, a informacje dotyczące każdego zdarzenia są zapisywane w polu tekstowym o nazwie `TextBoxOutput` w kolejności, w której zdarzenia są wywoływane. Aplikacja zawiera także zestaw pól wyboru, które mogą służyć do filtrowania zdarzeń do raportu.  
+# <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Porady: obsługa zdarzeń związanych z danymi użytkownika w kontrolkach formularzy systemu Windows
+W tym przykładzie pokazano, jak obsłużyć większość zdarzeń klawiatury, myszy, fokusu i walidacji, które mogą wystąpić w kontrolce Windows Forms. Pole tekstowe o nazwie `TextBoxInput` otrzymuje zdarzenia, gdy ma fokus, a informacje o każdym zdarzeniu są zapisywane w polu tekstowym o nazwie `TextBoxOutput` w kolejności, w jakiej zdarzenia zostały zgłoszone. Aplikacja zawiera również zestaw pól wyboru, których można użyć do filtrowania zdarzeń do raportowania.  
   
 ## <a name="example"></a>Przykład  
  [!code-cpp[System.Windows.Forms.UserInputWalkthrough#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.UserInputWalkthrough/cpp/form1.cpp#0)]
@@ -27,7 +27,7 @@ W tym przykładzie pokazano, jak obsługiwać większość klawiatury, myszy, fo
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów system, system. Drawing i system. Windows. Forms.  
   
 ## <a name="see-also"></a>Zobacz także
 

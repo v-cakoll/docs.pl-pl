@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5143805-2eb7-45b8-85ed-c8fb34df1084
 topic_type:
 - apiref
-ms.openlocfilehash: a9d28243e9907fcc6320b2e09a49312bf35a70b4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0368349e6c6a566cb569738bf3bda40eb9f5de96
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121777"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790733"
 ---
 # <a name="icorpublishgetprocess-method"></a>ICorPublish::GetProcess — Metoda
-Pobiera wystąpienie [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) , które reprezentuje proces o określonym identyfikatorze.  
+Pobiera wystąpienie [ICorPublishProcess](icorpublishprocess-interface.md) , które reprezentuje proces o określonym identyfikatorze.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -55,4 +55,4 @@ HRESULT GetProcess(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorPublish, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)
+- [ICorPublish, interfejs](icorpublish-interface.md)

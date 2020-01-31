@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a453f75a-c37b-4013-8f0e-35771fa5d792
 topic_type:
 - apiref
-ms.openlocfilehash: 7d8b3151c8effcf16b2a371010b84d06ce60a703
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cea5439dc5ad50a2d833fcda103488d5a0f8b517
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122922"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789102"
 ---
 # <a name="iclrdataenummemoryregions-interface"></a>ICLRDataEnumMemoryRegions — Interfejs
 Zapewnia metodę pozwalającą wyliczyć obszary pamięci, które są określone przez obiekty wywołujące.  
@@ -28,7 +28,7 @@ Zapewnia metodę pozwalającą wyliczyć obszary pamięci, które są określone
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[EnumMemoryRegions, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)|Wylicza określone obszary pamięci.|  
+|[EnumMemoryRegions, metoda](iclrdataenummemoryregions-enummemoryregions-method.md)|Wylicza określone obszary pamięci.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -41,4 +41,4 @@ Zapewnia metodę pozwalającą wyliczyć obszary pamięci, które są określone
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

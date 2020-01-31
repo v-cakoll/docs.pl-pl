@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 56e718b4-fabd-418b-a5b3-3cc33c745683
 topic_type:
 - apiref
-ms.openlocfilehash: 867db3325f9b18b31f66429d01ea02be3603c0f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 873dd5a1eb2c9356049d2d0c0cb495b963c2ae46
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125760"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784192"
 ---
 # <a name="icordebugclassgetstaticfieldvalue-method"></a>ICorDebugClass::GetStaticFieldValue — Metoda
 Pobiera wartość określonego pola statycznego.  
@@ -48,7 +48,7 @@ HRESULT GetStaticFieldValue (
  określoną Wskaźnik do adresu obiektu ICorDebugValue, który reprezentuje wartość pola statycznego.  
   
 ## <a name="remarks"></a>Uwagi  
- W przypadku typów sparametryzowanych wartość pola statycznego jest określana względem konkretnego wystąpienia. W związku z tym, jeśli Konstruktor klasy przyjmuje parametry typu <xref:System.Type>, należy wywołać [ICorDebugType:: GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md) , a nie `ICorDebugClass::GetStaticFieldValue`.  
+ W przypadku typów sparametryzowanych wartość pola statycznego jest określana względem konkretnego wystąpienia. W związku z tym, jeśli Konstruktor klasy przyjmuje parametry typu <xref:System.Type>, należy wywołać [ICorDebugType:: GetStaticFieldValue](icordebugtype-getstaticfieldvalue-method.md) , a nie `ICorDebugClass::GetStaticFieldValue`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

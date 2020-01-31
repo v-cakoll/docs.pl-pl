@@ -1,5 +1,5 @@
 ---
-title: Omówienie używania formantów w formularzach systemu Windows
+title: Omówienie używania kontrolek
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 16a28db6477ea86a8bc853fbf506cf6d6d4fa5e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca8b9fab3c53e256792faf0969b5066d5e35f6c7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654589"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744348"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Omówienie używania formantów w formularzach systemu Windows
-W tym temacie opisano podstawowe elementy aplikacji Windows Forms i stanowi prosty przykład są używane kontrolki, która obsługuje zdarzenia w aplikacji Windows Forms.  
+W tym temacie opisano podstawowe elementy aplikacji Windows Forms i przedstawiono prosty przykład, który używa formantów i obsługuje zdarzenia w aplikacji Windows Forms.  
   
-## <a name="simple-windows-forms-applications"></a>Proste Windows Forms aplikacji  
- Co najmniej aplikacji Windows Forms składa się z następujących elementów:  
+## <a name="simple-windows-forms-applications"></a>Proste aplikacje Windows Forms  
+ Co najmniej Windows Forms aplikacja składa się z następujących elementów:  
   
-- Co najmniej jedną klasę, które wynikają z <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
+- Co najmniej jedna klasa, która pochodzi od <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
   
-- A `Main` metodę, która wywołuje `static` (`shared` w języku Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> metody i przekazuje <xref:System.Windows.Forms.Form> wystąpienia do niego. <xref:System.Windows.Forms.Application.Run%2A> Metoda przetwarza komunikaty z systemu operacyjnego do aplikacji.  
+- Metoda `Main`, która wywołuje `static` (`shared` w Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> metodę i przekazuje do niej wystąpienie <xref:System.Windows.Forms.Form>. Metoda <xref:System.Windows.Forms.Application.Run%2A> przetwarza komunikaty z systemu operacyjnego do aplikacji.  
   
- Poniższy przykład kodu pokazuje podstawowe elementy aplikacji Windows Forms.  
+ Poniższy przykład kodu przedstawia podstawowe elementy aplikacji Windows Forms.  
   
 ```vb  
 Option Explicit  
@@ -75,7 +75,7 @@ public class MyForm : Form {
 ```  
   
 ## <a name="using-controls-in-a-windows-forms-application"></a>Korzystanie z kontrolek w aplikacji Windows Forms  
- Poniższy przykład kodu pokazuje prostej aplikacji, który ilustruje, jak aplikacje Windows Forms, formanty i obsługiwać zdarzenia. Przykład składa się z trzech przycisków w formularzu; Każdy przycisk zmienia kolor tła, po kliknięciu.  
+ Poniższy przykład kodu pokazuje prostą aplikację, która ilustruje, jak aplikacje Windows Forms korzystają z formantów i obsługi zdarzeń. Przykład składa się z trzech przycisków w formularzu; Każdy przycisk zmienia kolor tła po kliknięciu.  
   
 ```vb  
 Option Explicit  

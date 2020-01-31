@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: opracowywanie prostej kontrolki formularzy systemu Windows'
+title: Opracowywanie prostej kontrolki
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: a190d86f5ebe258427ac4a73c16c7f271462b69c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5383cee5358dbd260fc6c023d3db607da6b10ea4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753227"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742255"
 ---
-# <a name="how-to-develop-a-simple-windows-forms-control"></a>Instrukcje: opracowywanie prostej kontrolki formularzy systemu Windows
+# <a name="how-to-develop-a-simple-windows-forms-control"></a>Porady: opracowywanie prostego formantu formularzy systemu Windows
 
-W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu Windows Forms. Prosty formant opracowanych w tym przewodniku umożliwia wyrównanie jego <xref:System.Windows.Forms.Control.Text%2A> właściwości, które mają być zmienione. Nie podnieść lub obsługi zdarzeń.
+Ta sekcja przeprowadzi Cię przez kluczowe kroki tworzenia niestandardowej kontrolki Windows Forms. Prosta kontrolka opracowana w tym instruktażu umożliwia zmianę wyrównania właściwości <xref:System.Windows.Forms.Control.Text%2A>. Nie zgłasza ani nie obsługuje zdarzeń.
 
-### <a name="to-create-a-simple-custom-control"></a>Aby utworzyć prosty formant niestandardowy
+### <a name="to-create-a-simple-custom-control"></a>Aby utworzyć prostą kontrolkę niestandardową
 
-1. Definiowanie klasy, która jest pochodną <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.
+1. Zdefiniuj klasę, która pochodzi od <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.
 
     ```vb
     Public Class FirstControl
@@ -35,30 +35,30 @@ W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu 
     public class FirstControl:Control {}
     ```
 
-2. Zdefiniuj właściwości. (Nie wymagane do zdefiniowania właściwości, ponieważ formant dziedziczy wiele właściwości z <xref:System.Windows.Forms.Control> klasy, ale większość niestandardowe formanty ogólnie zdefiniować dodatkowe właściwości.) Poniższy fragment kodu definiuje właściwość o nazwie `TextAlignment` , `FirstControl` jest używany do formatowania wyświetlania <xref:System.Windows.Forms.Control.Text%2A> właściwość dziedziczona z <xref:System.Windows.Forms.Control>. Aby uzyskać więcej informacji na temat definiowania właściwości, zobacz [Przegląd właściwości](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120)).
+2. Zdefiniuj właściwości. (Nie trzeba definiować właściwości, ponieważ kontrolka dziedziczy wiele właściwości z klasy <xref:System.Windows.Forms.Control>, ale większość formantów niestandardowych zwykle definiuje dodatkowe właściwości.) Poniższy fragment kodu definiuje właściwość o nazwie `TextAlignment`, która `FirstControl` używa do formatowania wyświetlania właściwości <xref:System.Windows.Forms.Control.Text%2A> dziedziczonej z <xref:System.Windows.Forms.Control>. Aby uzyskać więcej informacji na temat definiowania właściwości, zobacz [Omówienie właściwości](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120)).
 
      [!code-csharp[System.Windows.Forms.FirstControl#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]
 
-     Po ustawieniu właściwości, która zmienia wyświetlania kontrolki, należy wywołać <xref:System.Windows.Forms.Control.Invalidate%2A> metodę, aby odświeżyć formantu. <xref:System.Windows.Forms.Control.Invalidate%2A> jest zdefiniowany w klasie bazowej <xref:System.Windows.Forms.Control>.
+     Po ustawieniu właściwości, która zmienia wizualizację wyświetlania kontrolki, należy wywołać metodę <xref:System.Windows.Forms.Control.Invalidate%2A>, aby ponownie narysować formant. <xref:System.Windows.Forms.Control.Invalidate%2A> jest zdefiniowany w klasie bazowej <xref:System.Windows.Forms.Control>.
 
-3. Zastąp chronionego <xref:System.Windows.Forms.Control.OnPaint%2A> metody dziedziczone z <xref:System.Windows.Forms.Control> zapewnienie logikę renderowania formantu. Jeśli nie zastąpisz <xref:System.Windows.Forms.Control.OnPaint%2A>, formant nie będzie można narysować sam. W poniższy fragment kodu <xref:System.Windows.Forms.Control.OnPaint%2A> metoda Wyświetla <xref:System.Windows.Forms.Control.Text%2A> właściwość dziedziczona z <xref:System.Windows.Forms.Control> z wyrównaniem, określony przez `alignmentValue` pola.
+3. Przesłoń metodę chronioną <xref:System.Windows.Forms.Control.OnPaint%2A> dziedziczoną z <xref:System.Windows.Forms.Control>, aby zapewnić logikę renderowania dla kontrolki. Jeśli nie zastąpisz <xref:System.Windows.Forms.Control.OnPaint%2A>, formant nie będzie mógł narysować siebie. W poniższym fragmencie kodu Metoda <xref:System.Windows.Forms.Control.OnPaint%2A> wyświetla Właściwość <xref:System.Windows.Forms.Control.Text%2A> dziedziczoną z <xref:System.Windows.Forms.Control> z wyrównaniem określonym przez pole `alignmentValue`.
 
      [!code-csharp[System.Windows.Forms.FirstControl#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]
 
-4. Podaj atrybuty kontrolki. Atrybuty Włącz projektanta wizualnego wyświetlić kontrolki i ich właściwości i zdarzenia odpowiednio w czasie projektowania. Poniższy fragment kodu, ma zastosowanie atrybutów, które mają `TextAlignment` właściwości. W projektancie, takich jak Visual Studio <xref:System.ComponentModel.CategoryAttribute.Category%2A> atrybutu (pokazano we fragmencie kodu) powoduje, że właściwości, które mają być wyświetlane w obszarze kategoria logiczna. <xref:System.ComponentModel.DescriptionAttribute.Description%2A> Atrybutu powoduje, że opisowy ciąg, który będzie wyświetlany w dolnej części **właściwości** okna po `TextAlignment` właściwości jest zaznaczone. Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty czasu projektowania dla składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).
+4. Podaj atrybuty dla kontrolki. Atrybuty umożliwiają projektantowi wizualnemu wyświetlanie kontrolki i jej właściwości i zdarzeń odpowiednio w czasie projektowania. Poniższy fragment kodu stosuje atrybuty do właściwości `TextAlignment`. W projektancie, takim jak Visual Studio, atrybut <xref:System.ComponentModel.CategoryAttribute.Category%2A> (pokazany w fragmencie kodu) powoduje, że właściwość jest wyświetlana w kategorii logicznej. Atrybut <xref:System.ComponentModel.DescriptionAttribute.Description%2A> powoduje wyświetlenie ciągu opisowego w dolnej części okna **Właściwości** po wybraniu właściwości `TextAlignment`. Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty czasu projektowania dla składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).
 
      [!code-csharp[System.Windows.Forms.FirstControl#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]
 
-5. (opcjonalnie) Zawierają zasoby dla kontrolki. Możesz podać zasobu, takie jak mapy bitowej kontrolki przy użyciu opcji kompilatora (`/res` dla języka C#) do zasobów pakietu przy użyciu kontrolki. W czasie wykonywania, można pobrać zasobu za pomocą metody <xref:System.Resources.ResourceManager> klasy. Aby uzyskać więcej informacji na temat tworzenia i używania zasobów, zobacz [zasoby w aplikacjach pulpitu](../../resources/index.md).
+5. obowiązkowe Zapewnianie zasobów dla kontrolki. Możesz dostarczyć zasób, taki jak mapa bitowa, dla kontrolki przy użyciu opcji kompilatora (`/res` for C#), aby spakować zasoby z kontrolką. W czasie wykonywania zasób można pobrać przy użyciu metod klasy <xref:System.Resources.ResourceManager>. Aby uzyskać więcej informacji na temat tworzenia i używania zasobów, zobacz [zasoby w aplikacjach klasycznych](../../resources/index.md).
 
-6. Skompiluj i wdróż formantu. Aby skompilować i wdrożyć `FirstControl,` wykonaj następujące czynności:
+6. Kompiluj i Wdróż swój formant. Aby skompilować i wdrożyć `FirstControl,` wykonaj następujące czynności:
 
-    1. Zapisz kod w następującym przykładzie do pliku źródłowego (na przykład FirstControl.cs lub FirstControl.vb).
+    1. Zapisz kod w następującym przykładzie do pliku źródłowego (na przykład FirstControl.cs lub FirstControl. vb).
 
-    2. Skompilować kod źródłowy do zestawu i zapisz go w katalogu aplikacji. W tym celu wykonaj następujące polecenie z katalogu, który zawiera plik źródłowy.
+    2. Skompiluj kod źródłowy do zestawu i Zapisz go w katalogu aplikacji. Aby to osiągnąć, wykonaj następujące polecenie w katalogu, który zawiera plik źródłowy.
 
         ```console
         vbc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.vb
@@ -68,22 +68,22 @@ W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu 
         csc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.cs
         ```
 
-         `/t:library` — Opcja kompilatora informuje kompilator, to zestaw tworzysz bibliotekę (i nie plik wykonywalny). `/out` Opcja określa ścieżkę i nazwę zestawu. `/r` Opcja zawiera nazwę zestawów, które są przywoływane przez kod. W tym przykładzie utworzysz zestaw prywatny, można użyć tylko w Twojej aplikacji. W związku z tym należy zapisać go w katalogu aplikacji. Aby uzyskać więcej informacji na temat pakowania i wdrażania kontrolkę do dystrybucji, zobacz [wdrożenia](../../deployment/index.md).
+         Opcja kompilatora `/t:library` informuje kompilator, że tworzony zestaw jest biblioteką (a nie plikiem wykonywalnym). Opcja `/out` określa ścieżkę i nazwę zestawu. Opcja`/r` zawiera nazwę zestawów, do których odwołuje się kod. W tym przykładzie utworzysz prywatny zestaw, którego mogą używać tylko Twoje aplikacje. W związku z tym należy zapisać go w katalogu aplikacji. Aby uzyskać więcej informacji o pakowaniu i wdrażaniu kontrolki do dystrybucji, zobacz [wdrażanie](../../deployment/index.md).
 
-Poniższy przykład przedstawia kod dla `FirstControl`. Kontrolka jest ujęty w przestrzeni nazw `CustomWinControls`. Przestrzeń nazw zapewnia powodują ustawienie logicznego grupowania powiązanych typów. Można utworzyć kontrolki w nowej lub istniejącej przestrzeni nazw. W języku C# `using` deklaracji (w języku Visual Basic `Imports`) zezwala na typy, które były dostępne z przestrzeni nazw bez korzystania z w pełni kwalifikowana nazwa typu. W poniższym przykładzie `using` deklaracja umożliwia kodu dostępu do tej klasy <xref:System.Windows.Forms.Control> z <xref:System.Windows.Forms?displayProperty=nameWithType> tylko <xref:System.Windows.Forms.Control> zamiast konieczności używania w pełni kwalifikowana nazwa <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.
+Poniższy przykład pokazuje kod dla `FirstControl`. Kontrolka jest zawarta w przestrzeni nazw `CustomWinControls`. Przestrzeń nazw zawiera logiczne grupowanie typów pokrewnych. Formant można utworzyć w nowej lub istniejącej przestrzeni nazw. W C#programie deklaracja `using` (w Visual Basic, `Imports`) umożliwia dostęp do typów z przestrzeni nazw bez używania w pełni kwalifikowanej nazwy typu. W poniższym przykładzie deklaracja `using` pozwala kodowi uzyskać dostęp do klasy <xref:System.Windows.Forms.Control> z <xref:System.Windows.Forms?displayProperty=nameWithType> jako <xref:System.Windows.Forms.Control>, zamiast używać w pełni kwalifikowanej nazwy <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.
 
 [!code-csharp[System.Windows.Forms.FirstControl#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#1)]
 [!code-vb[System.Windows.Forms.FirstControl#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#1)]
 
-## <a name="using-the-custom-control-on-a-form"></a>Za pomocą niestandardowej kontrolki na formularzu
+## <a name="using-the-custom-control-on-a-form"></a>Używanie kontrolki niestandardowej w formularzu
 
-W poniższym przykładzie przedstawiono prosty formularz, który używa `FirstControl`. Tworzy trzy wystąpienia `FirstControl`, każdy z inną wartością `TextAlignment` właściwości.
+Poniższy przykład pokazuje prosty formularz, który używa `FirstControl`. Tworzy trzy wystąpienia `FirstControl`, z których każda ma inną wartość właściwości `TextAlignment`.
 
 #### <a name="to-compile-and-run-this-sample"></a>Aby skompilować i uruchomić ten przykład
 
-1. Zapisz kod w przykładzie poniżej do pliku źródłowego (SimpleForm.cs lub SimpleForms.vb).
+1. Zapisz kod w poniższym przykładzie do pliku źródłowego (SimpleForm.cs lub SimpleForms. vb).
 
-2. Skompilować kod źródłowy do zestawu pliku wykonywalnego, wykonując następujące polecenie z katalogu, który zawiera plik źródłowy.
+2. Skompiluj kod źródłowy do zestawu wykonywalnego, wykonując następujące polecenie z katalogu, który zawiera plik źródłowy.
 
     ```console
     vbc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.vb
@@ -93,9 +93,9 @@ W poniższym przykładzie przedstawiono prosty formularz, który używa `FirstCo
     csc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.cs
     ```
 
-     CustomWinControls.dll jest zestawem, który zawiera klasę `FirstControl`. Ten zestaw musi być w tym samym katalogu co plik źródłowy do formularza, który uzyskuje dostęp do niego (SimpleForm.cs lub SimpleForms.vb).
+     CustomWinControls. dll jest zestawem zawierającym klasę `FirstControl`. Ten zestaw musi znajdować się w tym samym katalogu, co plik źródłowy dla formularza, który uzyskuje do niego dostęp (SimpleForm.cs lub SimpleForms. vb).
 
-3. Wykonaj SimpleForm.exe przy użyciu następującego polecenia.
+3. Wykonaj SimpleForm. exe przy użyciu następującego polecenia.
 
     ```console
     SimpleForm

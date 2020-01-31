@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 71aee5f3-5e10-44fa-be69-6d8a475f2c14
 topic_type:
 - apiref
-ms.openlocfilehash: 732e07e15b3ddd535bf781e6c297383150e40e94
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 76aaeef93028b2ff9526601450d7e11f918e063d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123405"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792191"
 ---
 # <a name="icordebugprocess7-interface"></a>Interfejs ICorDebugProcess7
 [Obsługiwane w .NET Framework 4.5.2 i nowszych wersjach]  
@@ -26,7 +26,7 @@ ms.locfileid: "73123405"
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[SetWriteableMetadataUpdateMode, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)|Ustawia wartość określającą, jak Debuger obsługuje aktualizacje w pamięci do metadanych w procesie docelowym.|  
+|[SetWriteableMetadataUpdateMode, metoda](icordebugprocess7-setwriteablemetadataupdatemode-method.md)|Ustawia wartość określającą, jak Debuger obsługuje aktualizacje w pamięci do metadanych w procesie docelowym.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -41,5 +41,5 @@ ms.locfileid: "73123405"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

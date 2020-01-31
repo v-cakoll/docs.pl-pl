@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-ms.openlocfilehash: 90156152a2c133446dedbe22426785ab63f8dfb9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 23ad8882ad97e5ceaeb690dfae08a6be55b85f64
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131811"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791856"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>ICorDebugStackWalk::SetContext — Metoda
-Ustawia bieżący kontekst obiektu [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) na prawidłowy kontekst dla wątku.  
+Ustawia bieżący kontekst obiektu [ICorDebugStackWalk](icordebugstackwalk-interface.md) na prawidłowy kontekst dla wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,7 +35,7 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
 ## <a name="parameters"></a>Parametry  
  `flag`  
- podczas Flaga [CorDebugSetContextFlag —](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) , która wskazuje, czy kontekst pochodzi z aktywnej ramki na stosie, czy kontekst uzyskany przez odmieszczenie stosu.  
+ podczas Flaga [CorDebugSetContextFlag —](cordebugsetcontextflag-enumeration.md) , która wskazuje, czy kontekst pochodzi z aktywnej ramki na stosie, czy kontekst uzyskany przez odmieszczenie stosu.  
   
  `contextSize`  
  podczas Przydzielony rozmiar buforu `CONTEXT`.  
@@ -43,7 +43,7 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
  `context`  
  podczas Bufor `CONTEXT`.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
@@ -51,7 +51,7 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
 |S_OK|Kontekst obiektu `ICorDebugStackWalk` został pomyślnie ustawiony.|  
 |E_FAIL|Nie ustawiono kontekstu obiektu `ICorDebugStackWalk`.|  
 |E_INVALIDARG|Kontekst ma wartość null.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|Bufor kontekstu jest za mały.|  
+|HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT_BUFFER)|Bufor kontekstu jest za mały.|  
   
 ## <a name="exceptions"></a>Wyjątki  
   
@@ -60,7 +60,7 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
  Ustawienie bieżącego kontekstu na nieprawidłowy kontekst może spowodować nieprzewidywalne wyniki z analizatora stosu.  
   
- Możesz pobrać dokładną kopię bitową tego kontekstu, natychmiast wywołując metodę [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) .  
+ Możesz pobrać dokładną kopię bitową tego kontekstu, natychmiast wywołując metodę [ICorDebugStackWalk:: GetContext](icordebugstackwalk-getcontext-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -73,5 +73,5 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

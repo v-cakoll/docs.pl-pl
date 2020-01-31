@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFrame — Interfejs
+title: ICorDebugFrame, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFrame
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 0c48f764-3c64-4602-b2f4-4ffc60eb2c65
 topic_type:
 - apiref
-ms.openlocfilehash: 5aeea11b7e61869968aafe3425e27d6004f495ea
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ba138e79e0d6fb6f9c5e9c3efe3466f3c88cccae
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124071"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782623"
 ---
-# <a name="icordebugframe-interface"></a>ICorDebugFrame — Interfejs
+# <a name="icordebugframe-interface"></a>ICorDebugFrame, interfejs
 
 Reprezentuje ramkę na bieżącym stosie.  
   
@@ -29,14 +29,14 @@ Reprezentuje ramkę na bieżącym stosie.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[CreateStepper, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-createstepper-method.md)|Pobiera ICorDebugStepper do wykonania operacji wykonywania krokowego względem tego `ICorDebugFrame`.|  
-|[GetCallee, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcallee-method.md)|Pobiera wskaźnik do `ICorDebugFrame` w bieżącym łańcuchu, który ta ramka nazywa lub zwraca wartość null, jeśli jest to wewnętrzna ramka w łańcuchu.|  
-|[GetCaller, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcaller-method.md)|Pobiera wskaźnik do `ICorDebugFrame` w bieżącym łańcuchu, który wywołał tę ramkę, lub zwraca wartość null, jeśli jest to najbardziej skrajna ramka w łańcuchu.|  
-|[GetChain, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getchain-method.md)|Pobiera wskaźnik do ICorDebugChain, do którego należy ten `ICorDebugFrame` jest częścią.|  
-|[GetCode, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)|Pobiera wskaźnik do ICorDebugCode skojarzonego z tą ramką stosu.|  
-|[GetFunction, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getfunction-method.md)|Pobiera wskaźnik do ICorDebugFunction, który zawiera kod skojarzony z tą ramką stosu.|  
-|[GetFunctionToken, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getfunctiontoken-method.md)|Pobiera token metadanych dla funkcji, która zawiera kod skojarzony z tą ramką stosu.|  
-|[GetStackRange, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getstackrange-method.md)|Pobiera bezwzględny zakres adresów ramki stosu reprezentowanej przez ten `ICorDebugFrame`.|  
+|[CreateStepper, metoda](icordebugframe-createstepper-method.md)|Pobiera ICorDebugStepper do wykonania operacji wykonywania krokowego względem tego `ICorDebugFrame`.|  
+|[GetCallee, metoda](icordebugframe-getcallee-method.md)|Pobiera wskaźnik do `ICorDebugFrame` w bieżącym łańcuchu, który ta ramka nazywa lub zwraca wartość null, jeśli jest to wewnętrzna ramka w łańcuchu.|  
+|[GetCaller, metoda](icordebugframe-getcaller-method.md)|Pobiera wskaźnik do `ICorDebugFrame` w bieżącym łańcuchu, który wywołał tę ramkę, lub zwraca wartość null, jeśli jest to najbardziej skrajna ramka w łańcuchu.|  
+|[GetChain, metoda](icordebugframe-getchain-method.md)|Pobiera wskaźnik do ICorDebugChain, do którego należy ten `ICorDebugFrame` jest częścią.|  
+|[GetCode, metoda](icordebugframe-getcode-method.md)|Pobiera wskaźnik do ICorDebugCode skojarzonego z tą ramką stosu.|  
+|[GetFunction, metoda](icordebugframe-getfunction-method.md)|Pobiera wskaźnik do ICorDebugFunction, który zawiera kod skojarzony z tą ramką stosu.|  
+|[GetFunctionToken, metoda](icordebugframe-getfunctiontoken-method.md)|Pobiera token metadanych dla funkcji, która zawiera kod skojarzony z tą ramką stosu.|  
+|[GetStackRange, metoda](icordebugframe-getstackrange-method.md)|Pobiera bezwzględny zakres adresów ramki stosu reprezentowanej przez ten `ICorDebugFrame`.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -54,4 +54,4 @@ Reprezentuje ramkę na bieżącym stosie.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

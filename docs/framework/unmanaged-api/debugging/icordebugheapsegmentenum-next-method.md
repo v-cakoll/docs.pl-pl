@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: 897fb56cacb51e98cf8f1778c3529617decb5ecb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 89ce4eafa46be3e9ba7cdb06884034a521e43bca
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138444"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777535"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>ICorDebugHeapSegmentEnum::Next — Metoda
-Pobiera określoną liczbę wystąpień [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) , które zawierają informacje o regionach pamięci zarządzanej sterty.  
+Pobiera określoną liczbę wystąpień [COR_HEAPOBJECT](cor-heapobject-structure.md) zawierających informacje o regionach pamięci zarządzanej sterty.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,10 +39,10 @@ HRESULT Next(
  podczas Liczba segmentów, które mają zostać pobrane.  
   
  segmenty  
- określoną Tablica wskaźników, z których każdy wskazuje obiekt [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) , który zawiera informacje o regionie pamięci w zarządzanym stosie.  
+ określoną Tablica wskaźników, z których każdy wskazuje obiekt [COR_HEAPOBJECT](cor-heapobject-structure.md) , który zawiera informacje o regionie pamięci w zarządzanym stosie.  
   
  pceltFetched  
- określoną Wskaźnik do liczby obiektów [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) faktycznie zwróconych w `segments`. Ta wartość może być `null`, jeśli `celt` wynosi 1.  
+ określoną Wskaźnik do liczby obiektów [COR_HEAPOBJECT](cor-heapobject-structure.md) faktycznie zwróconych w `segments`. Ta wartość może być `null`, jeśli `celt` wynosi 1.  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -57,5 +57,5 @@ HRESULT Next(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugHeapSegmentEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugHeapSegmentEnum, interfejs](icordebugheapsegmentenum-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

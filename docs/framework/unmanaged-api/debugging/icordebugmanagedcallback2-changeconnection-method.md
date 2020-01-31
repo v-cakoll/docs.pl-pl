@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7263f9a9-4c0b-4d82-a181-288873fb2b18
 topic_type:
 - apiref
-ms.openlocfilehash: 4558074bc23334bd697461a00ccb31db3e3fe397
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d60644d54373dfb3d1d191900df71d3e5f6547a6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130597"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788291"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>ICorDebugManagedCallback2::ChangeConnection — Metoda
 Powiadamia debuger o zmianie zestawu zadań skojarzonych z określonym połączeniem.  
@@ -44,7 +44,7 @@ HRESULT ChangeConnection (
 ## <a name="remarks"></a>Uwagi  
  Wywołanie zwrotne `ChangeConnection` zostanie wyzwolone w jednej z następujących sytuacji:  
   
-- Gdy debuger dołącza do procesu, który zawiera połączenia. W takim przypadku środowisko uruchomieniowe generuje i wyśle zdarzenie [ICorDebugManagedCallback2::](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) CreateProcess oraz zdarzenie `ChangeConnection` dla każdego połączenia w procesie. Dla każdego istniejącego połączenia jest generowane zdarzenie `ChangeConnection` niezależnie od tego, czy zestaw zadań tego połączenia został zmieniony od czasu jego utworzenia.  
+- Gdy debuger dołącza do procesu, który zawiera połączenia. W takim przypadku środowisko uruchomieniowe generuje i wyśle zdarzenie [ICorDebugManagedCallback2::](icordebugmanagedcallback2-createconnection-method.md) CreateProcess oraz zdarzenie `ChangeConnection` dla każdego połączenia w procesie. Dla każdego istniejącego połączenia jest generowane zdarzenie `ChangeConnection` niezależnie od tego, czy zestaw zadań tego połączenia został zmieniony od czasu jego utworzenia.  
   
 - Gdy host wywołuje [ICLRDebugManager:: SetConnectionTasks —](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) w [interfejsie API hostingu](../../../../docs/framework/unmanaged-api/hosting/index.md).  
   
@@ -61,5 +61,5 @@ HRESULT ChangeConnection (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugManagedCallback2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2, interfejs](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback, interfejs](icordebugmanagedcallback-interface.md)

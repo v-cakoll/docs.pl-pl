@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Dziedziczenie formularzy systemu Windows'
+title: Dziedziczenie formularza
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 402386e16687162e25e16e5c30c787f7e721fbba
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: cc3a4cc75fd13e8f193a6920ed5b4a9bc8fd5d74
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306372"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743323"
 ---
-# <a name="how-to-inherit-windows-forms"></a>Porady: Dziedziczenie formularzy systemu Windows
+# <a name="how-to-inherit-windows-forms"></a>Porady: dziedziczenie formularzy systemu Windows
 
 Tworzenie nowych Windows Forms przez dziedziczenie z formularzy podstawowych jest wygodnym sposobem duplikowania najlepszych starań bez przechodzenia przez proces całkowitego odtwarzania formularza za każdym razem, gdy jest to wymagane.
 
-Aby uzyskać więcej informacji na temat dziedziczenia formularzy w czasie projektowania przy użyciu okna dialogowego **selektora dziedziczenia** oraz wizualnego rozróżniania poziomów zabezpieczeń dziedziczonych [kontrolek, zobacz How to: Dziedzicz formularze przy użyciu okna dialogowego](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)selektora dziedziczenia.
+Aby uzyskać więcej informacji na temat dziedziczenia formularzy w czasie projektowania przy użyciu okna dialogowego **selektora dziedziczenia** oraz wizualnego rozróżniania poziomów zabezpieczeń dziedziczonych kontrolek, zobacz [How to: inherit Forms przy użyciu selektora dziedziczenia](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).
 
 > [!NOTE]
 > Aby można było dziedziczyć z formularza, plik lub przestrzeń nazw zawierające ten formularz muszą być wbudowane w plik wykonywalny lub DLL. Aby skompilować projekt, wybierz opcję **Kompiluj** z menu **kompilacja** . Ponadto odwołanie do przestrzeni nazw należy dodać do klasy dziedziczonej w formularzu.

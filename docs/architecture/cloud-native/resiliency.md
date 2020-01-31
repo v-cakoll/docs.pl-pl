@@ -2,12 +2,12 @@
 title: Odporność rozwiązań natywnych dla chmury
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Natywna odporność w chmurze
 ms.date: 06/30/2019
-ms.openlocfilehash: 680542abc5d8c43c577321d5ae834f0a13290da3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 427405d95534c4467ab519c2188fe88e2f18e2b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184842"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781083"
 ---
 # <a name="cloud-native-resiliency"></a>Odporność rozwiązań natywnych dla chmury
 
@@ -41,5 +41,5 @@ W systemie rozproszonym w niewielkim stopniu awaria nie będzie mniejsza, ale w 
 W związku z tym aplikacja i infrastruktura muszą być odporne na błędy. W poniższych sekcjach opisano techniki obronne, które można dodać do aplikacji, oraz wbudowane funkcje w chmurze, których można użyć, aby pomóc w wykorzystaniu punktorów przez użytkownika.
 
 >[!div class="step-by-step"]
->[Poprzedni](azure-data-storage.md)
+>[Poprzedni](elastic-search-in-azure.md)
 >[Następny](application-resiliency-patterns.md)

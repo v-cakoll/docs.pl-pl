@@ -1,52 +1,53 @@
 ---
 title: Windows Forms
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms
 - user interface
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: 00e359e7c2440b6d88f2c42fd0267fc1f12b7bb7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cdd3a71b406f1f0ae2afa1e1b3982c27f4db21a4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583427"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739187"
 ---
 # <a name="windows-forms"></a>Windows Forms
-Ponieważ formularze są jednostki podstawowej aplikacji, istotne jest, nadaj rozwagą do swoich funkcji i projektowania. Formularz jest ostatecznie bazie pustego czy, jako programista, zwiększanie za pomocą kontrolek, aby utworzyć interfejs użytkownika i kod służący do manipulowania danymi. W tym celu program Visual Studio zapewnia zintegrowanym środowisku programistycznym (IDE) do pomocy w pisaniu kodu, a także zaawansowane kontrolki Ustaw napisane przy użyciu programu .NET Framework. W uzupełnieniu funkcji te kontrolki w kodzie, można łatwo i szybkie opracowywanie rozwiązań, które są potrzebne.  
+Jako że formularze są podstawową jednostką swojej aplikacji, ważne jest, aby przedstawić pewne zagadnienia dotyczące ich funkcji i projektowania. Formularz jest ostatecznie pustym elementem, który jest programistą, ulepsza z kontrolkami w celu utworzenia interfejsu użytkownika i z kodem do manipulowania danymi. W tym celu program Visual Studio udostępnia zintegrowane środowisko programistyczne (IDE), które ułatwia pisanie kodu, a także bogaty zestaw kontrolek napisany przy użyciu .NET Framework. Dzięki uzupełnieniu funkcjonalności tych formantów do kodu można łatwo i szybko opracowywać potrzebne rozwiązania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wprowadzenie do formularzy Windows Forms](getting-started-with-windows-forms.md)  
- Zawiera łącza do tematów dotyczących sposobu mocy formularzy Windows w celu wyświetlania danych, Obsługa danych wejściowych użytkownika i wdrażać aplikacje, łatwe i bardziej niezawodne zabezpieczenia.  
+ Zawiera łącza do tematów dotyczących sposobu, w jaki można wykorzystać możliwości Windows Forms do wyświetlania danych, obsłużyć dane wejściowe użytkownika oraz łatwo wdrażać aplikacje i zapewniać bardziej niezawodne zabezpieczenia.  
   
  [Rozszerzanie aplikacji Windows Forms](./advanced/index.md)  
- Zawiera łącza do tematów dotyczących sposobu zwiększenia formularze Windows przy użyciu różnych funkcji.  
+ Zawiera łącza do tematów dotyczących ulepszania Windows Forms przy użyciu różnych funkcji.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki formularzy Windows Forms](./controls/index.md)  
- Zawiera łącza do tematów, które opisują kontrolek formularzy Windows Forms, a następnie pokazano, jak ich implementacji.  
+ Zawiera łącza do tematów opisujących Windows Forms kontrolki i pokazujące sposób ich implementacji.  
   
  [Wiązanie danych formularzy Windows Forms](windows-forms-data-binding.md)  
- Zawiera łącza do tematów, które opisują architekturę powiązanie danych formularzy Windows.  
+ Zawiera łącza do tematów opisujących architekturę powiązań danych Windows Forms.  
   
  [Grafika — omówienie](./advanced/graphics-overview-windows-forms.md)  
- W tym artykule omówiono sposób tworzenia grafiki, rysowanie tekstu i manipulowania obrazy graficzne jako obiekty przy użyciu zaawansowanych implementacji interfejsu projektu Windows graphics.  
+ W tym artykule omówiono sposób tworzenia grafiki, rysowania tekstu i manipulowania obrazami graficznymi w postaci obiektów przy użyciu zaawansowanej implementacji interfejsu projektowania grafiki systemu Windows.  
   
  [Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)  
- W tym artykule omówiono zasady wdrażania technologii ClickOnce.  
+ Omówienie zasad wdrażania technologii ClickOnce.  
   
- [Różnice w programie Windows Forms/MFC programowania](/cpp/dotnet/windows-forms-mfc-programming-differences)  
- W tym artykule omówiono różnice w aplikacjach MFC i Windows Forms.  
+ [Różnice w programowaniu Windows Forms/MFC](/cpp/dotnet/windows-forms-mfc-programming-differences)  
+ W tym artykule omówiono różnice między aplikacjami MFC i Windows Forms.  
   
  [Uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- W tym artykule omówiono włączanie funkcji dostępu do danych w aplikacjach.  
+ W tym artykule omówiono sposób włączania funkcji dostępu do danych w aplikacjach.  
   
  [Aplikacje Windows Forms](/visualstudio/debugger/debugging-preparation-windows-forms-applications)  
- W tym artykule omówiono proces debugowania aplikacji utworzonych za pomocą szablonu projektu aplikacji Windows, a także sposób zmiany konfiguracji Debug i Release.  
+ Omawia proces debugowania aplikacji utworzonych za pomocą szablonu projektu aplikacji systemu Windows, a także sposobu zmiany konfiguracji debugowania i wersji.  
   
- [Pierwsze spojrzenie na wdrażanie w programie Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components)  
- W tym artykule opisano proces, za pomocą którego można dystrybuować ukończonej aplikacji lub składnika można zainstalować na innych komputerach.  
+ [Pierwsze spojrzenie na wdrożenie w programie Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components)  
+ Opisuje proces dystrybucji ukończonej aplikacji lub składnika, który ma zostać zainstalowany na innych komputerach.  
   
  [Tworzenie aplikacji konsoli](../../standard/building-console-apps.md)  
- W tym artykule opisano podstawowe informacje dotyczące tworzenia aplikacji konsoli za pomocą <xref:System.Console> klasy.
+ Opisuje podstawowe informacje na temat tworzenia aplikacji konsolowej przy użyciu klasy <xref:System.Console>.

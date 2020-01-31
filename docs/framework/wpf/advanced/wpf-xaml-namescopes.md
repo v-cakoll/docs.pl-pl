@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: 97889b302aac06e118c93f2d000b0eeeed8b71bb
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 4383492157191f61cf04a2fdd6ce27e9183bda8b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559940"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744418"
 ---
 # <a name="wpf-xaml-namescopes"></a>Zakresy nazw WPF XAML
 XAML Zakresy nazw WPF to koncepcja, która identyfikuje obiekty zdefiniowane w języku XAML. Nazwy w namescope języka XAML mogą służyć do ustanawiania relacji między nazwami obiektów zdefiniowanymi w języku XAML a ich odpowiednikami wystąpień w drzewie obiektów. Zazwyczaj Zakresy nazw WPF języka XAML w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kodzie zarządzanym są tworzone podczas ładowania pojedynczych katalogów głównych stron XAML dla aplikacji XAML. KOD XAML Zakresy nazw WPF jako obiekt programistyczny jest definiowany przez interfejs <xref:System.Windows.Markup.INameScope> i są również implementowane przez praktyczne klasy <xref:System.Windows.NameScope>.  

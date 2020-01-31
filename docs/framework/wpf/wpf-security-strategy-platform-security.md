@@ -1,5 +1,5 @@
 ---
-title: Strategia zabezpieczeń WPF - zabezpieczenia platformy
+title: Strategia zabezpieczeń platformy
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: b2fd923de165c0926e6f812764c71127b7c27691
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 1ef705fcf046af1f4136ddcf1b29f417c0d72c83
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636240"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741849"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia zabezpieczeń WPF - zabezpieczenia platformy
 Chociaż Windows Presentation Foundation (WPF) oferuje różne usługi zabezpieczeń, wykorzystuje również funkcje zabezpieczeń podstawowej platformy, w tym system operacyjny, środowisko CLR i program Internet Explorer. Te warstwy są łączone w celu zapewnienia mocnego, kompleksowego modelu zabezpieczeń, który podejmuje próbę uniknięcia wszelkich single point of failure, jak pokazano na poniższej ilustracji:  
@@ -53,7 +53,7 @@ Rdzeń systemu Windows zawiera kilka funkcji zabezpieczeń, które tworzą podst
 ### <a name="windows-vista"></a>Windows Vista  
 Użytkownicy WPF w systemie Windows Vista będą korzystać z dodatkowych ulepszeń zabezpieczeń systemu operacyjnego, takich jak "dostęp użytkownika z najwyższymi uprawnieniami", sprawdzanie integralności kodu i izolacja uprawnień.  
   
-#### <a name="user-account-control-uac"></a>Kontrola konta użytkownika  
+#### <a name="user-account-control-uac"></a>Kontrola konta użytkownika (UAC)  
  Obecnie użytkownicy systemu Windows mogą uruchamiać się z uprawnieniami administratora, ponieważ wiele aplikacji wymaga ich do instalacji lub wykonania albo obu tych metod. Przykładem może być zapisanie domyślnych ustawień aplikacji do rejestru.  
   
  Uruchamianie z uprawnieniami administratora naprawdę oznacza, że aplikacje są wykonywane z procesów, które mają uprawnienia administratora. Wpływem bezpieczeństwa tego jest to, że dowolny złośliwy kod, który przejmuje proces z uprawnieniami administratora, będzie automatycznie dziedziczyć te uprawnienia, w tym dostęp do krytycznych zasobów systemu.  

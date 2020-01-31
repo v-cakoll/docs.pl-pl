@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFunctionBreakpoint — Interfejs
+title: ICorDebugFunctionBreakpoint, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunctionBreakpoint
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9c149303-14b1-4138-83d7-e8c3e0fcd332
 topic_type:
 - apiref
-ms.openlocfilehash: a7876cd932558ad95dab7adac3c91a6f23ca647c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e3804335bacefad61c4f521ea1ef1444b7b1fed
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134655"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777705"
 ---
-# <a name="icordebugfunctionbreakpoint-interface"></a>ICorDebugFunctionBreakpoint — Interfejs
+# <a name="icordebugfunctionbreakpoint-interface"></a>ICorDebugFunctionBreakpoint, interfejs
 
 Rozszerza interfejs ICorDebugBreakpoint w celu obsługi punktów przerwania w funkcjach.  
   
@@ -29,8 +29,8 @@ Rozszerza interfejs ICorDebugBreakpoint w celu obsługi punktów przerwania w fu
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetFunction, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|Pobiera wskaźnik interfejsu do elementu ICorDebugFunction, który odwołuje się do funkcji, w której jest ustawiony punkt przerwania.|  
-|[GetOffset, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|Pobiera przesunięcie punktu przerwania w funkcji.|  
+|[GetFunction, metoda](icordebugfunctionbreakpoint-getfunction-method.md)|Pobiera wskaźnik interfejsu do elementu ICorDebugFunction, który odwołuje się do funkcji, w której jest ustawiony punkt przerwania.|  
+|[GetOffset, metoda](icordebugfunctionbreakpoint-getoffset-method.md)|Pobiera przesunięcie punktu przerwania w funkcji.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -48,4 +48,4 @@ Rozszerza interfejs ICorDebugBreakpoint w celu obsługi punktów przerwania w fu
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

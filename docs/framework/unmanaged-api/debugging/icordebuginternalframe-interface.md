@@ -1,5 +1,5 @@
 ---
-title: ICorDebugInternalFrame — Interfejs
+title: ICorDebugInternalFrame, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugInternalFrame
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: bb4772ca-0d54-4185-b738-7a6ffe9ea85a
 topic_type:
 - apiref
-ms.openlocfilehash: b1ee5a155afa4e33340108e7295adef2309986cf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6bc24450cdda2e3ed324256b53b2d137d1eb90e4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122709"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788488"
 ---
-# <a name="icordebuginternalframe-interface"></a>ICorDebugInternalFrame — Interfejs
+# <a name="icordebuginternalframe-interface"></a>ICorDebugInternalFrame, interfejs
 
 Reprezentuje wewnętrzną ramkę środowiska uruchomieniowego na stosie. Ten interfejs jest podklasą interfejsu ICorDebugFrame.  
   
@@ -29,7 +29,7 @@ Reprezentuje wewnętrzną ramkę środowiska uruchomieniowego na stosie. Ten int
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetFrameType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|Pobiera typ tej wewnętrznej ramki.|  
+|[GetFrameType, metoda](icordebuginternalframe-getframetype-method.md)|Pobiera typ tej wewnętrznej ramki.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -47,4 +47,4 @@ Reprezentuje wewnętrzną ramkę środowiska uruchomieniowego na stosie. Ten int
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

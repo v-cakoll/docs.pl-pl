@@ -1,5 +1,5 @@
 ---
-title: RadioButton — Informacje o formancie [Formularze systemu Windows]
+title: RadioButton — Informacje o formancie
 ms.date: 03/30/2017
 f1_keywords:
 - RadioButton
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], determining state
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
-ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbc93046b69d39caadde4986ff56f067fc206a9e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755951"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741138"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>RadioButton — Informacje o formancie [Formularze systemu Windows]
-Windows Forms <xref:System.Windows.Forms.RadioButton> formanty wyświetlania zestawu co najmniej dwóch wzajemnie wykluczających się opcji do użytkownika. Chociaż pola wyboru i przyciski opcji może wydawać się działają podobnie, ma jedną istotną różnicą: gdy użytkownik wybierze przycisk radiowy, inne przyciski radiowe w tej samej grupy nie można również wybrać. Z kolei można wybrać dowolną liczbę pól wyboru. Definiowanie Grupa przycisków radiowych informuje użytkownika, "W tym miejscu jest zestaw opcji, z których można wybrać jeden i tylko jeden."  
+Windows Forms <xref:System.Windows.Forms.RadioButton> kontrolki zawierają zestaw dwóch lub kilku wzajemnie wykluczających się opcji dla użytkownika. Chociaż przyciski radiowe i pola wyboru mogą wyglądać podobnie do działania, istnieje ważna różnica: gdy użytkownik wybierze przycisk radiowy, inne przyciski radiowe w tej samej grupie nie mogą być również zaznaczone. W przeciwieństwie można wybrać dowolną liczbę pól wyboru. Zdefiniowanie grupy przycisków radiowych oznacza, że użytkownik jest zestawem opcji, spośród których można wybrać jeden i tylko jeden ".  
   
-## <a name="using-the-control"></a>Używanie formantu  
- Gdy <xref:System.Windows.Forms.RadioButton> kliknięciu formantu jego <xref:System.Windows.Forms.RadioButton.Checked%2A> właściwość jest ustawiona na `true` i <xref:System.Windows.Forms.Control.Click> program obsługi zdarzeń jest wywoływany. <xref:System.Windows.Forms.RadioButton.CheckedChanged> Zdarzenie jest zgłaszane w przypadku wartości <xref:System.Windows.Forms.RadioButton.Checked%2A> zmiany właściwości. Jeśli <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> właściwość jest ustawiona na `true` (ustawienie domyślne), gdy przycisk radiowy zostanie wybrany wszystkich innych użytkowników w grupie są automatycznie czyszczone. Ta właściwość jest zwykle tylko równa `false` kiedy kod sprawdzania poprawności służy do upewnij się, że zaznaczony przycisk radiowy jest opcją dozwolony. Tekst wyświetlany w kontrolce została ustawiona za pomocą <xref:System.Windows.Forms.Control.Text%2A> właściwość, która może zawierać dostępu do skróty klawiaturowe. Klucz dostępu umożliwia użytkownikowi "kliknij" kontrolki, naciskając klawisz ALT, przy użyciu klucza dostępu. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md) i [jak: Ustawianie tekstu wyświetlanego przez formant formularzy Windows](how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
+## <a name="using-the-control"></a>Korzystanie z kontrolki  
+ Po kliknięciu kontrolki <xref:System.Windows.Forms.RadioButton> jej Właściwość <xref:System.Windows.Forms.RadioButton.Checked%2A> jest ustawiona na `true` i zostanie wywołana procedura obsługi zdarzeń <xref:System.Windows.Forms.Control.Click>. Zdarzenie <xref:System.Windows.Forms.RadioButton.CheckedChanged> jest zgłaszane, gdy wartość właściwości <xref:System.Windows.Forms.RadioButton.Checked%2A> zostanie zmieniona. Jeśli właściwość <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> jest ustawiona na `true` (wartość domyślna), po wybraniu przycisku radiowego wszystkie pozostałe w grupie są automatycznie wyczyszczone. Ta właściwość jest zazwyczaj ustawiana tylko na `false`, gdy kod weryfikacyjny jest używany, aby upewnić się, że wybrany przycisk radiowy jest dozwolony. Tekst wyświetlany w kontrolce jest ustawiany przy użyciu właściwości <xref:System.Windows.Forms.Control.Text%2A>, która może zawierać skróty klucza dostępu. Klucz dostępu umożliwia użytkownikowi "kliknięcie" kontrolki przez naciśnięcie klawisza ALT z klawiszem dostępu. Aby uzyskać więcej informacji, zobacz [jak: tworzenie klawiszy dostępu dla formantów Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md) i [instrukcje: Ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
   
- <xref:System.Windows.Forms.RadioButton> Kontroli może znajdować się jak przycisk polecenia wydaje się być wciśnięte, wybranie tej opcji, jeśli <xref:System.Windows.Forms.RadioButton.Appearance%2A> właściwość jest ustawiona na <xref:System.Windows.Forms.Appearance.Button>. Przyciski radiowe można także wyświetlać obrazy za pomocą <xref:System.Windows.Forms.ButtonBase.Image%2A> i <xref:System.Windows.Forms.ButtonBase.ImageList%2A> właściwości. Aby uzyskać więcej informacji, zobacz [jak: Ustawianie obrazu wyświetlanego przez formant formularzy Windows](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
+ Kontrolka <xref:System.Windows.Forms.RadioButton> może być wyświetlana jak przycisk polecenia, który pojawia się w przypadku wybrania, jeśli jest zaznaczone, jeśli właściwość <xref:System.Windows.Forms.RadioButton.Appearance%2A> jest ustawiona na <xref:System.Windows.Forms.Appearance.Button>. Przyciski radiowe mogą również wyświetlać obrazy przy użyciu właściwości <xref:System.Windows.Forms.ButtonBase.Image%2A> i <xref:System.Windows.Forms.ButtonBase.ImageList%2A>. Aby uzyskać więcej informacji, zobacz [jak to zrobić: Ustawianie obrazu wyświetlanego przez kontrolkę Windows Forms](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -30,7 +30,7 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> formanty wyświetlania zes
 - [Panel, kontrolka — omówienie](panel-control-overview-windows-forms.md)
 - [GroupBox, kontrolka — omówienie](groupbox-control-overview-windows-forms.md)
 - [CheckBox, kontrolka — omówienie](checkbox-control-overview-windows-forms.md)
-- [Instrukcje: Tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Instrukcje: Ustawianie tekstu wyświetlanego przez kontrolki formularzy Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Instrukcje: Grupa formantów RadioButton formularzy Windows aby działały jak zestaw](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [Instrukcje: tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Instrukcje: grupowanie kontrolek RadioButton formularzy Windows Forms, aby działały jak zestaw](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [RadioButton, kontrolka](radiobutton-control-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: ustawianie trybu zaznaczania kontrolki DataGridView formularzy systemu Windows'
+title: Ustawianie trybu zaznaczania kontrolki DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selection mode
 - data grids [Windows Forms], selection mode
 ms.assetid: 2f241643-7f82-4583-8757-03494f63b465
-ms.openlocfilehash: 22db5c1438405fc830202ec7baac6b6fcd631b41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: da866aac3ac5b08a06ec71744aadb4260bd0cfc4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620796"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743506"
 ---
-# <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>Instrukcje: ustawianie trybu zaznaczania kontrolki DataGridView formularzy systemu Windows
-Poniższy przykład kodu demonstruje sposób konfigurowania <xref:System.Windows.Forms.DataGridView> kontroli tak, aby kliknięcie dowolnym miejscu w wierszu automatycznie wybiera cały wiersz, i tak aby tylko jeden wiersz jednocześnie można wybrać.  
+# <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>Porady: ustawianie trybu zaznaczania formantu DataGridView formularzy systemu Windows
+Poniższy przykład kodu demonstruje, jak skonfigurować kontrolkę <xref:System.Windows.Forms.DataGridView> tak, aby kliknięcie w dowolnym miejscu w wierszu automatycznie zaznacza cały wiersz i tak, aby można było wybrać tylko jeden wiersz naraz.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#065](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#065)]
@@ -26,9 +26,9 @@ Poniższy przykład kodu demonstruje sposób konfigurowania <xref:System.Windows
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1`.  
+- Kontrolka <xref:System.Windows.Forms.DataGridView> o nazwie `dataGridView1`.  
   
-- Odwołuje się do <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
+- Odwołania do zestawów <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
 

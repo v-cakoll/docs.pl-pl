@@ -1,5 +1,6 @@
 ---
 title: Jak skonfigurować IS 5.0 oraz IIS 6.0, aby wdrożyć aplikacje WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MIME types [WPF], registering
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: a731dc49556a73c585c6201a80ea3ea77c15cb11
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d557ac6cd380edcbc93b5315f6356697817274bf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124419"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740408"
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Jak skonfigurować IS 5.0 oraz IIS 6.0, aby wdrożyć aplikacje WPF
 
@@ -51,14 +52,14 @@ Ustawienie wygaśnięcia zawartości należy dostosować do 1 minuty. Poniższa 
 
 Należy zarejestrować kilka typów MIME i rozszerzeń plików, dzięki czemu przeglądarka w systemie klienta może załadować poprawną procedurę obsługi. Należy dodać następujące typy:
 
-|rozszerzenia|Typ MIME|
+|Rozszerzenie|Typ MIME|
 |---------------|---------------|
 |. manifest|Aplikacja/manifest|
 |. XAML|Application/XAML + XML|
 |. aplikacja|aplikacja/x-MS-Application|
 |. XBAP|aplikacja/x-MS-XBAP|
 |. deploy|Aplikacja/oktet — strumień|
-|. XPS|application/vnd. MS-XpsDocument|
+|. XPS|application/vnd.ms-xpsdocument|
 
 > [!NOTE]
 > Nie trzeba rejestrować typów MIME ani rozszerzeń plików w systemach klienckich. Są one rejestrowane automatycznie podczas instalowania Microsoft .NET Framework.

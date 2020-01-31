@@ -1,5 +1,5 @@
 ---
-title: TrackBar — Informacje o formancie [Formularze systemu Windows]
+title: TrackBar — Informacje o formancie
 ms.date: 03/30/2017
 f1_keywords:
 - TrackBar
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - TrackBar control [Windows Forms], about TrackBar control
 - slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
-ms.openlocfilehash: 1606db73485944f3dfa8b9c084bffda817520c7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6901405100df4633c84850757f55b756bc9a0199
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009269"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741467"
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>TrackBar — Informacje o formancie [Formularze systemu Windows]
-Formularze Windows <xref:System.Windows.Forms.TrackBar> kontroli (czasami nazywane "suwaka") jest używany do przechodzenia między dużymi ilościami informacji lub wizualnie dostosowywania liczbowych ustawienie. <xref:System.Windows.Forms.TrackBar> Kontrolka ma dwie części: mówi, znany także jako suwaka i znaczników. Przycisku suwaka jest częścią, którą można dostosować. Jego pozycja odpowiada <xref:System.Windows.Forms.TrackBar.Value%2A> właściwości. Znaczniki są wskaźniki wizualne, które są rozmieszczone w regularnych odstępach czasu. Przenosi pasek śledzenia w przyrostach, które określają i być wyrównane w poziomie lub pionie. Pasek śledzenia może na przykład użyć, aby kontrolować częstotliwość lub myszy migania kursora dla systemu.  
+Kontrolka <xref:System.Windows.Forms.TrackBar> Windows Forms (niekiedy nazywana również kontrolką "Slider") służy do nawigowania w dużej ilości informacji lub wizualnego dostosowywania ustawienia liczbowego. Kontrolka <xref:System.Windows.Forms.TrackBar> ma dwie części: pasek przewijania, znany również jako suwak i znaczniki. Kciuk jest częścią, którą można dostosować. Jego pozycja odpowiada właściwości <xref:System.Windows.Forms.TrackBar.Value%2A>. Znaczniki są wskaźnikami wizualizacji, które są odstępie w regularnych odstępach czasu. TrackBar przenosi w przyrostach, które określisz, i mogą być wyrównane w poziomie lub w pionie. Na przykład możesz użyć paska śledzenia, aby kontrolować częstotliwość migania kursora lub szybkość myszy dla systemu.  
   
 ## <a name="key-properties"></a>Właściwości klucza  
- Właściwości klucza obiektu <xref:System.Windows.Forms.TrackBar> sterowania stanowią <xref:System.Windows.Forms.TrackBar.Value%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.Minimum%2A>, i <xref:System.Windows.Forms.TrackBar.Maximum%2A>. <xref:System.Windows.Forms.TrackBar.TickFrequency%2A> jest odstępy między taktami. <xref:System.Windows.Forms.TrackBar.Minimum%2A> i <xref:System.Windows.Forms.TrackBar.Maximum%2A> najmniejszy i największy wartości, które mogą być przedstawione na pasek śledzenia.  
+ Właściwości klucza kontrolki <xref:System.Windows.Forms.TrackBar> są <xref:System.Windows.Forms.TrackBar.Value%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.Minimum%2A>i <xref:System.Windows.Forms.TrackBar.Maximum%2A>. <xref:System.Windows.Forms.TrackBar.TickFrequency%2A> jest odstępy między taktami. <xref:System.Windows.Forms.TrackBar.Minimum%2A> i <xref:System.Windows.Forms.TrackBar.Maximum%2A> to najmniejsza i największa wartość, którą można przedstawić na pasku śledzenia.  
   
- Są dwa inne ważne właściwości <xref:System.Windows.Forms.TrackBar.SmallChange%2A> i <xref:System.Windows.Forms.TrackBar.LargeChange%2A>. Wartość <xref:System.Windows.Forms.TrackBar.SmallChange%2A> właściwość jest liczba pozycji przycisku suwaka przenoszone w odpowiedzi na potrzeby naciśniętego klawisza lewo lub Strzałka w prawo. Wartość <xref:System.Windows.Forms.TrackBar.LargeChange%2A> właściwość jest liczba pozycji przycisku suwaka do przenoszenia w odpowiedzi na potrzeby naciśnięto klawisz PAGE UP lub PAGE DOWN, lub w odpowiedzi na myszy kliknie pasek śledzenia na każdej stronie przycisku suwaka.  
+ Dwie inne ważne właściwości to <xref:System.Windows.Forms.TrackBar.SmallChange%2A> i <xref:System.Windows.Forms.TrackBar.LargeChange%2A>. Wartość właściwości <xref:System.Windows.Forms.TrackBar.SmallChange%2A> to liczba pozycji, jaką przesuwa się kciuk w odpowiedzi na naciśnięcie klawisza Strzałka w lewo lub w prawo. Wartość właściwości <xref:System.Windows.Forms.TrackBar.LargeChange%2A> to liczba pozycji, jaką przesuwa się kciuk w odpowiedzi na naciśnięcie klawisza PAGE UP lub PAGE DOWN lub w odpowiedzi na kliknięcie myszy na pasku śledzenia po obu stronach przycisku przewijania.  
   
 ## <a name="see-also"></a>Zobacz także
 

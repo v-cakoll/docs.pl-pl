@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9a7393b9-9735-43c6-8616-afb103c432fd
 topic_type:
 - apiref
-ms.openlocfilehash: 5a415c8f3124c08984f8101e1f4dbcae6bf96fbf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ea7630efedb7b667dc58174eda0cb98d9f382cfc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129610"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792387"
 ---
 # <a name="icordebugprocess5getarraylayout-method"></a>ICorDebugProcess5::GetArrayLayout — Metoda
 Zawiera informacje na temat układu typów tablicowych.  
@@ -33,10 +33,10 @@ HRESULT GetArrayLayout(    [in] COR_TYPEID id,     [out] COR_ARRAY_LAYOUT *pLayo
   
 ## <a name="parameters"></a>Parametry  
  `id`  
- podczas Token [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) , który określa tablicę, której układ jest żądany.  
+ podczas Token [COR_TYPEID](cor-typeid-structure.md) , który określa tablicę, której układ jest żądany.  
   
  `pLayout`  
- określoną Wskaźnik do struktury [COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md) , który zawiera informacje o układzie tablicy w pamięci.  
+ określoną Wskaźnik do struktury [COR_ARRAY_LAYOUT](cor-array-layout-structure.md) , która zawiera informacje o układzie tablicy w pamięci.  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -51,5 +51,5 @@ HRESULT GetArrayLayout(    [in] COR_TYPEID id,     [out] COR_ARRAY_LAYOUT *pLayo
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugProcess5, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess5, interfejs](icordebugprocess5-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

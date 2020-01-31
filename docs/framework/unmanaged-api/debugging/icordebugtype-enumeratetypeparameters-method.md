@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ee1f6e6-1bd7-4ebb-83b8-ff9a08ca03de
 topic_type:
 - apiref
-ms.openlocfilehash: 57a82e4ec106fead105cc7f200e7e56026004328
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b2c381d093069f5ee86be1b19d75f5c2d69ad9fa
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122382"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791309"
 ---
 # <a name="icordebugtypeenumeratetypeparameters-method"></a>ICorDebugType::EnumerateTypeParameters — Metoda
 Pobiera wskaźnik interfejsu do ICorDebugTypeEnum, który zawiera <xref:System.Type> parametry klasy, do których odwołuje się ten ICorDebugType.  
@@ -38,7 +38,7 @@ HRESULT EnumerateTypeParameters (
  określoną Wskaźnik do adresu `ICorDebugTypeEnum`, który zawiera parametry typu.  
   
 ## <a name="remarks"></a>Uwagi  
- `EnumerateTypeParameters` można użyć, jeśli wartość CorElementType — zwrócona przez [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) to ELEMENT_TYPE_CLASS, ELEMENT_TYPE_VALUETYPE, ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF, ELEMENT_TYPE_PTR lub ELEMENT_TYPE_FNPTR. Liczba parametrów i ich kolejność zależy od typu:  
+ Można użyć `EnumerateTypeParameters`, jeśli wartość CorElementType — zwracana przez [ICorDebugType:: GetType](icordebugtype-gettype-method.md) to ELEMENT_TYPE_CLASS, ELEMENT_TYPE_VALUETYPE, ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF, ELEMENT_TYPE_PTR lub ELEMENT_TYPE_FNPTR. Liczba parametrów i ich kolejność zależy od typu:  
   
 - ELEMENT_TYPE_CLASS lub ELEMENT_TYPE_VALUETYPE: liczba parametrów typu zawartych w `ICorDebugTypeEnum`, które ta metoda zwraca, będzie zależeć od liczby parametrów typu formalnego dla odpowiadającej klasy. Na przykład, jeśli typ to `class Dict<String,int32>`, wówczas `EnumerateTypeParameters` zwróci `ICorDebugTypeEnum`, który zawiera obiekty reprezentujące `String` i `int32` w sekwencji.  
   

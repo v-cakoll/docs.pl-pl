@@ -4,12 +4,12 @@ description: Zabezpieczenia w mikrousługach .NET i aplikacjach sieci Web — Uz
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 6d318f4efc6958610947f164d6ca63634f3d7db5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736964"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777216"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Tworzenie bezpiecznych mikrousług i aplikacji sieci Web platformy .NET
 
@@ -121,7 +121,7 @@ else
 }
 ```
 
-W przypadku wybrania opcji uwierzytelniania **indywidualnego konta użytkownika** podczas tworzenia projektu aplikacji sieci Web ASP.NET Code w programie Visual Studio cały kod niezbędny do zalogowania się za pomocą zewnętrznego dostawcy jest już w projekcie, jak pokazano na rysunku 9-3.
+Jeśli wybierzesz opcję uwierzytelniania **poszczególnych kont użytkowników** podczas tworzenia projektu aplikacji sieci Web ASP.NET Core w programie Visual Studio, wszystkie kody niezbędne do zalogowania się z dostawcą zewnętrznym są już w projekcie, jak pokazano na rysunku 9-3.
 
 ![Zrzut ekranu przedstawiający okno dialogowe Nowa aplikacja sieci Web ASP.NET Core.](./media/index/select-external-authentication-option.png)
 

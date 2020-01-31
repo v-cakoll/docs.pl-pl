@@ -1,5 +1,5 @@
 ---
-title: ICorDebugController — Interfejs
+title: ICorDebugController, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugController
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: dbb1c4dc-269a-459b-ab1d-6c70788782ce
 topic_type:
 - apiref
-ms.openlocfilehash: 27f991c12ea7786d6146b5731848ca5ad3a37e21
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d6c923f03309da3ad8092ea6119e7d850120ee2c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125371"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783802"
 ---
-# <a name="icordebugcontroller-interface"></a>ICorDebugController — Interfejs
+# <a name="icordebugcontroller-interface"></a>ICorDebugController, interfejs
 
 Reprezentuje zakres, <xref:System.Diagnostics.Process> lub <xref:System.AppDomain>, w którym można kontrolować kontekst wykonywania kodu.  
   
@@ -31,14 +31,14 @@ Reprezentuje zakres, <xref:System.Diagnostics.Process> lub <xref:System.AppDomai
 |------------|-----------------|  
 |`ICorDebugController::CanCommitChanges`|Ta metoda jest przestarzała.|  
 |`ICorDebugController::CommitChanges`|Ta metoda jest przestarzała.|  
-|[Continue, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)|Wznawia wykonywanie zarządzanych wątków po wywołaniu [ICorDebugController:: Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md).|  
-|[Detach, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-detach-method.md)|Odłącza debuger od domeny procesu lub aplikacji.|  
-|[EnumerateThreads, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md)|Pobiera moduł wyliczający dla aktywnych wątków zarządzanych w procesie.|  
-|[HasQueuedCallbacks, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)|Pobiera wartość wskazującą, czy wszystkie zarządzane wywołania zwrotne są obecnie umieszczane w kolejce dla określonego wątku.|  
-|[IsRunning, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-isrunning-method.md)|Pobiera wartość wskazującą, czy wątki w procesie są obecnie uruchomione swobodnie.|  
-|[SetAllThreadsDebugState, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md)|Ustawia stan debugowania wszystkich zarządzanych wątków w procesie.|  
-|[Stop, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)|Wykonuje przerwanie w ramach wszystkich wątków, które uruchamiają kod zarządzany w procesie.|  
-|[Terminate, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-terminate-method.md)|Kończy proces z określonym kodem zakończenia.|  
+|[Continue, metoda](icordebugcontroller-continue-method.md)|Wznawia wykonywanie zarządzanych wątków po wywołaniu [ICorDebugController:: Stop](icordebugcontroller-stop-method.md).|  
+|[Detach, metoda](icordebugcontroller-detach-method.md)|Odłącza debuger od domeny procesu lub aplikacji.|  
+|[EnumerateThreads, metoda](icordebugcontroller-enumeratethreads-method.md)|Pobiera moduł wyliczający dla aktywnych wątków zarządzanych w procesie.|  
+|[HasQueuedCallbacks, metoda](icordebugcontroller-hasqueuedcallbacks-method.md)|Pobiera wartość wskazującą, czy wszystkie zarządzane wywołania zwrotne są obecnie umieszczane w kolejce dla określonego wątku.|  
+|[IsRunning, metoda](icordebugcontroller-isrunning-method.md)|Pobiera wartość wskazującą, czy wątki w procesie są obecnie uruchomione swobodnie.|  
+|[SetAllThreadsDebugState, metoda](icordebugcontroller-setallthreadsdebugstate-method.md)|Ustawia stan debugowania wszystkich zarządzanych wątków w procesie.|  
+|[Stop, metoda](icordebugcontroller-stop-method.md)|Wykonuje przerwanie w ramach wszystkich wątków, które uruchamiają kod zarządzany w procesie.|  
+|[Terminate, metoda](icordebugcontroller-terminate-method.md)|Kończy proces z określonym kodem zakończenia.|  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli `ICorDebugController` kontroluje proces, zakres obejmuje wszystkie wątki procesu. Jeśli `ICorDebugController` kontroluje domenę aplikacji, zakres obejmuje tylko wątki tej konkretnej domeny aplikacji.  
@@ -57,4 +57,4 @@ Reprezentuje zakres, <xref:System.Diagnostics.Process> lub <xref:System.AppDomai
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

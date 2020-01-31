@@ -1,5 +1,5 @@
 ---
-title: BindingNavigator — Informacje o formancie [Formularze systemu Windows]
+title: BindingNavigator, kontrolka — omówienie
 ms.date: 03/30/2017
 f1_keywords:
 - DataNavigator
@@ -9,38 +9,38 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
-ms.openlocfilehash: ad63f622aae55cb4175eddc93ab5e086965a8fe8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2747a6801d4aa9cfde4227ffd5c29ca1de78d48
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011787"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744103"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>BindingNavigator — Informacje o formancie [Formularze systemu Windows]
-Możesz użyć <xref:System.Windows.Forms.BindingNavigator> formantu, aby utworzyć standardowe oznacza, że dla użytkowników wyszukać i zmiany danych w formularzu Windows. Często używane <xref:System.Windows.Forms.BindingNavigator> z <xref:System.Windows.Forms.BindingSource> składnika, aby umożliwić użytkownikom przechodzenie między rekordów danych na formularzu i interakcję z rekordami.  
+Za pomocą kontrolki <xref:System.Windows.Forms.BindingNavigator> można utworzyć ustandaryzowaną metodę, aby użytkownicy mogli przeszukiwać i zmieniać dane w formularzu systemu Windows. Często używasz <xref:System.Windows.Forms.BindingNavigator> ze składnikiem <xref:System.Windows.Forms.BindingSource>, aby umożliwić użytkownikom przechodzenie między rekordami danych w formularzu i korzystanie z tych rekordów.  
   
-## <a name="how-the-bindingnavigator-works"></a>Jak działa BindingNavigator  
+## <a name="how-the-bindingnavigator-works"></a>Jak działa parametr BindingNavigator  
 
- <xref:System.Windows.Forms.BindingNavigator> Kontroli składa się z <xref:System.Windows.Forms.ToolStrip> z serią <xref:System.Windows.Forms.ToolStripItem> obiektów dla najbardziej typowych akcji związanych z danymi: Dodawanie danych, usuwanie danych ani nawigować przez dane. Domyślnie <xref:System.Windows.Forms.BindingNavigator> kontrolka zawiera następujące przyciski standardowe. Poniższy zrzut ekranu przedstawia <xref:System.Windows.Forms.BindingNavigator> kontrolki na formularzu:
+ Formant <xref:System.Windows.Forms.BindingNavigator> składa się z <xref:System.Windows.Forms.ToolStrip> z serią obiektów <xref:System.Windows.Forms.ToolStripItem> dla większości typowych akcji związanych z danymi: Dodawanie danych, usuwanie danych i nawigowanie po danych. Domyślnie formant <xref:System.Windows.Forms.BindingNavigator> zawiera te standardowe przyciski. Poniższy zrzut ekranu przedstawia kontrolkę <xref:System.Windows.Forms.BindingNavigator> w formularzu:
   
- ![Zrzut ekranu przedstawiający BindingNavigator — kontrolka.](./media/bindingnavigator-control-overview-windows-forms/bindingnavigator-control-form.gif)  
+ ![Zrzut ekranu przedstawiający formant BindingNavigator.](./media/bindingnavigator-control-overview-windows-forms/bindingnavigator-control-form.gif)  
   
- Poniższej tabeli wymieniono kontrolek i opisano ich funkcje.  
+ Poniższa tabela zawiera listę formantów i opis ich funkcji.  
   
-|formant|Funkcja|  
+|Kontrolka|Funkcja|  
 |-------------|--------------|  
-|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> Przycisk|Wstawia nowy wiersz do bazowego źródła danych.|  
-|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> Przycisk|Usuwa bieżący wiersz z bazowego źródła danych.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> Przycisk|Przenosi do pierwszego elementu w źródle danych.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> Przycisk|Przenosi do ostatniego elementu w źródle danych.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A> Przycisk|Przechodzi do następnego elementu w źródle danych.|  
-|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> Przycisk|Przenosi do poprzedniego elementu w źródle danych.|  
-|<xref:System.Windows.Forms.BindingNavigator.PositionItem%2A> pole tekstowe|Zwraca bieżącą pozycję w źródle danych.|  
-|<xref:System.Windows.Forms.BindingNavigator.CountItem%2A> pole tekstowe|Zwraca całkowitą liczbę elementów w źródle danych.|  
+|przycisk <xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A>|Wstawia nowy wiersz do bazowego źródła danych.|  
+|przycisk <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A>|Usuwa bieżący wiersz z bazowego źródła danych.|  
+|przycisk <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A>|Przenosi do pierwszego elementu w bazowym źródle danych.|  
+|przycisk <xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A>|Przenosi do ostatniego elementu w źródłowym źródle danych.|  
+|przycisk <xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A>|Przechodzi do następnego elementu w bazowym źródle danych.|  
+|przycisk <xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A>|Przenosi do poprzedniego elementu w źródłowym źródle danych.|  
+|pole tekstowe <xref:System.Windows.Forms.BindingNavigator.PositionItem%2A>|Zwraca bieżącą pozycję w źródłowym źródle danych.|  
+|pole tekstowe <xref:System.Windows.Forms.BindingNavigator.CountItem%2A>|Zwraca łączną liczbę elementów w źródłowym źródle danych.|  
   
- Dla każdej kontrolki w tej kolekcji jest elementem członkowskim odpowiednie <xref:System.Windows.Forms.BindingSource> składnika, który programowo udostępnia taką samą funkcjonalność. Na przykład <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> przycisk odnosi się do <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> metody <xref:System.Windows.Forms.BindingSource> składnika <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> przycisk odnosi się do <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> metoda i tak dalej.  
+ Dla każdej kontrolki w tej kolekcji istnieje odpowiedni element członkowski składnika <xref:System.Windows.Forms.BindingSource>, który programowo udostępnia te same funkcje. Na przykład przycisk <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> odpowiada metodzie <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> składnika <xref:System.Windows.Forms.BindingSource>, przycisk <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> odpowiada metodzie <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> i tak dalej.  
   
- Jeśli przyciski domyślne nie są odpowiednie dla aplikacji lub jeśli potrzebujesz dodatkowych przycisków, aby obsłużyć inne typy funkcji, możesz podać własne <xref:System.Windows.Forms.ToolStrip> przycisków. Zobacz też [jak: Dodaj obciążenia, Zapisz i Anuluj przycisków Windows kontrolki BindingNavigator formularzy](load-save-and-cancel-bindingnavigator.md).  
+ Jeśli przyciski domyślne nie są odpowiednie dla aplikacji lub jeśli potrzebujesz dodatkowych przycisków do obsługi innych typów funkcjonalności, możesz podać własne przyciski <xref:System.Windows.Forms.ToolStrip>. Zapoznaj się również z tematem [: Dodawanie przycisków Załaduj, Zapisz i Anuluj do kontrolki Windows Forms BindingNavigator](load-save-and-cancel-bindingnavigator.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

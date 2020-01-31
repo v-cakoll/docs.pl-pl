@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6c394ad2721bcdd91fb750fe93c03f16ca9f799f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4285ed3c0488ea615ca89b0b771bf09c8c29b318
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714077"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739127"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Rozpoczynanie pracy z platformą .NET Core w systemie Windows/Linux/macOS przy użyciu wiersza polecenia
 
@@ -22,7 +22,7 @@ Jeśli nie znasz zestawu narzędzi interfejs wiersza polecenia platformy .NET Co
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 - [Zestaw .NET Core SDK 3,1](https://dotnet.microsoft.com/download) lub nowszymi wersjami.
-- Wybrany edytor tekstu lub edytor kodu.
+- Edytor tekstu lub Edytor kodu.
 
 ## <a name="hello-console-app"></a>Witaj, Aplikacja konsolowa!
 
@@ -56,7 +56,7 @@ Wykonajmy szybkie wskazówki:
     
     Program jest uruchamiany przez `using System`, co oznacza, że w zakresie dla tego pliku można przenieść wszystko w przestrzeni nazw `System`. Przestrzeń nazw `System` zawiera klasę `Console`.
     
-    Następnie zdefiniujemy przestrzeń nazw o nazwie `Hello`. Możesz to zmienić w dowolny sposób. Klasa o nazwie `Program` jest zdefiniowana w tej przestrzeni nazw, z metodą `Main`, która pobiera tablicę ciągów o nazwie `args`. Ta tablica zawiera listę argumentów przekazaną podczas uruchamiania programu. W takim przypadku tablica nie jest używana, a program po prostu zapisuje tekst "Hello world!" w konsoli. Później wprowadzimy zmiany w kodzie, który będzie korzystał z tego argumentu.
+    Następnie zdefiniujemy przestrzeń nazw o nazwie `Hello`. Możesz to zmienić w dowolny sposób. Klasa o nazwie `Program` jest zdefiniowana w tej przestrzeni nazw, z metodą `Main`, która pobiera tablicę ciągów o nazwie `args`. Ta tablica zawiera listę argumentów przekazaną podczas uruchamiania programu. W takim przypadku tablica nie jest używana, a program po prostu zapisuje tekst "Hello world!" do konsoli programu. Później wprowadzimy zmiany w kodzie, który będzie korzystał z tego argumentu.
     
     wywołania `dotnet new` [dotnet Restore](../tools/dotnet-restore.md) niejawnie. `dotnet restore` wywołania [NuGet](https://www.nuget.org/) (Menedżer pakietów .NET) w celu przywrócenia drzewa zależności. Pakiet NuGet analizuje plik *Hello. csproj* , pobiera zależności zdefiniowane w pliku (lub zbiera je z pamięci podręcznej na maszynie) i zapisuje plik *obj/Project. assets. JSON* , który jest niezbędny do skompilowania i uruchomienia przykładu.
 
@@ -119,7 +119,7 @@ Zmieńmy program na bit. Liczby Fibonacci są przyjemne, więc Dodajmy ten argum
     15: 377
     ```
 
-I to już wszystko! Możesz zmodyfikować *program.cs* w dowolny sposób.
+I to wszystko! Możesz zmodyfikować *program.cs* w dowolny sposób.
 
 ## <a name="working-with-multiple-files"></a>Praca z wieloma plikami
 
@@ -183,14 +183,14 @@ Hello World!
 Jak wspomniano na początku tego artykułu, tworzony jest plik wykonywalny specyficzny dla systemu operacyjnego wraz z `Hello.dll`. W systemie Windows `Hello.exe`; w systemie Linux lub macOS `hello`. W powyższym przykładzie plik ma nazwę z `Hello.exe` lub `Hello`. Można uruchomić bezpośrednio ten opublikowany plik wykonywalny.
 
 ```console
-.\bin\Debug\netcoreapp3.1\Hello.exe
+.\bin\Debug\netcoreapp3.1\publish\Hello.exe
 
 Hello World!
 ```
 
 ## <a name="conclusion"></a>Wniosek
 
-I to już wszystko! Teraz możesz zacząć korzystać z podstawowych pojęć zamieszczonych w tym miejscu, aby utworzyć własne programy.
+I to wszystko! Teraz możesz zacząć korzystać z podstawowych pojęć zamieszczonych w tym miejscu, aby utworzyć własne programy.
 
 ## <a name="see-also"></a>Zobacz także
 

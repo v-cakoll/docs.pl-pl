@@ -2,12 +2,12 @@
 title: Rozwiązywanie problemów obsługi komunikatów kolejek
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3d2d48076fafe44687546ca27e4d8670b81ce433
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345591"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742671"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Rozwiązywanie problemów obsługi komunikatów kolejek
 
@@ -91,7 +91,7 @@ Jeśli program Assurances nie ma (<xref:System.ServiceModel.MsmqBindingBase.Exac
 
 A. Sprawdź kontrakt usługi. Być może zapomniano umieścić "IsOneWay =`true`" we wszystkich operacjach usługi. Kolejki obsługują tylko jednokierunkowe operacje usługi.
 
-**P:** W kolejce znajdują się komunikaty, ale nie jest wywoływana żadna operacja usługi. Na czym polega problem?
+**P:** W kolejce znajdują się komunikaty, ale nie jest wywoływana żadna operacja usługi. Jaki jest problem?
 
 Odp **.:** Ustal, czy wystąpił błąd hosta usługi. Możesz sprawdzić, patrząc na ślad lub implementując `IErrorHandler`. Błędy hosta usługi domyślnie, jeśli zostanie wykryty Trująca wiadomość.
 
@@ -112,10 +112,6 @@ W przypadku problemów z hostem sieci Web niezwiązanych z zabezpieczeniami odno
 **P:** Co to jest najprostszy sposób uzyskiwania dostępu do sesji?
 
 Odp **.:** Ustaw Autouzupełnianie =`true` operacji, która odnosi się do ostatniej wiadomości w sesji, i ustaw Autouzupełnianie =`false` dla wszystkich pozostałych operacji usługi.
-
-**P:** Gdzie mogę znaleźć odpowiedzi na często zadawane pytania dotyczące usługi MSMQ?
-
-Odp **.:** Aby uzyskać więcej informacji na temat usługi MSMQ, zobacz [Usługa kolejkowania komunikatów firmy Microsoft](https://go.microsoft.com/fwlink/?LinkId=87810).
 
 **P:** Dlaczego moja usługa zgłasza `ProtocolException` podczas odczytywania z kolejki zawierającej zarówno komunikaty sesji w kolejce, jak i komunikaty datagramu w kolejce?
 
@@ -154,11 +150,11 @@ Innym obejściem jest uzyskanie <xref:System.ServiceModel.MsmqTransportSecurity>
 
 Jeszcze inne obejście polega na zainstalowaniu usługi MSMQ z integracją Active Directory.
 
-**P:** Gdy wysyłam komunikat z domyślnym powiązaniem (włączone zabezpieczenia transportu) w Active Directory do kolejki, otrzymuję komunikat "nie znaleziono certyfikatu wewnętrznego". W jaki sposób rozwiązać ten problem?
+**P:** Gdy wysyłam komunikat z domyślnym powiązaniem (włączone zabezpieczenia transportu) w Active Directory do kolejki, otrzymuję komunikat "nie znaleziono certyfikatu wewnętrznego". Jak mogę rozwiązać ten problem?
 
 Odp **.:** Oznacza to, że należy odnowić certyfikat w Active Directory dla nadawcy. W tym celu Otwórz **Panel sterowania**, **Narzędzia administracyjne**, **Zarządzanie komputerem**, kliknij prawym przyciskiem myszy pozycję **MSMQ**i wybierz pozycję **Właściwości**. Wybierz kartę **certyfikat użytkownika** , a następnie kliknij przycisk **Odnów** .
 
-**P:** Gdy wyślę komunikat przy użyciu <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> i określisz certyfikat do użycia, otrzymuję komunikat o nieprawidłowym certyfikacie. W jaki sposób rozwiązać ten problem?
+**P:** Gdy wyślę komunikat przy użyciu <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> i określisz certyfikat do użycia, otrzymuję komunikat o nieprawidłowym certyfikacie. Jak mogę rozwiązać ten problem?
 
 Odp **.:** Nie można użyć magazynu certyfikatów komputera lokalnego z trybem certyfikatu. Należy skopiować certyfikat z magazynu certyfikatów komputera do bieżącego magazynu użytkowników przy użyciu przystawki certyfikat. Aby uzyskać przystawkę certyfikatu:
 
@@ -180,7 +176,7 @@ Odp **.:** Nie można użyć magazynu certyfikatów komputera lokalnego z trybem
 
 Odp **.:** W trybie grupy roboczej dla aplikacji zdalnej, aby uzyskać dostęp do kolejki, aplikacja musi mieć uprawnienia dostępu do kolejki. Dodaj "Logowanie anonimowe" do listy kontroli dostępu (ACL) kolejki i nadaj im uprawnienie do odczytu.
 
-**P:** Gdy klient usługi sieciowej (lub dowolny klient, który nie ma konta domeny) wysyła komunikat w kolejce, wysyłanie kończy się niepowodzeniem z nieprawidłowym certyfikatem. W jaki sposób rozwiązać ten problem?
+**P:** Gdy klient usługi sieciowej (lub dowolny klient, który nie ma konta domeny) wysyła komunikat w kolejce, wysyłanie kończy się niepowodzeniem z nieprawidłowym certyfikatem. Jak mogę rozwiązać ten problem?
 
 Odp **.:** Sprawdź konfigurację powiązania. Domyślne powiązanie ma włączone zabezpieczenia transportu usługi MSMQ w celu podpisania wiadomości. Go wyłączyć.
 

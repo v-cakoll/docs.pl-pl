@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAssemblyEnum — Interfejs
+title: ICorDebugAssemblyEnum, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAssemblyEnum
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 891ceb43-5161-421e-a0bf-299962fd7efd
 topic_type:
 - apiref
-ms.openlocfilehash: aa0bc34c3cb3ac330582cee0843022e913376fc2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1893f1f08d727606fecda7669719760179bb76f9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192156"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778061"
 ---
-# <a name="icordebugassemblyenum-interface"></a>ICorDebugAssemblyEnum — Interfejs
+# <a name="icordebugassemblyenum-interface"></a>ICorDebugAssemblyEnum, interfejs
 
 Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugAssembly.  
   
@@ -29,7 +29,7 @@ Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugAssembly.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|Pobiera określoną liczbę wystąpień `ICorDebugAssembly` w wyliczeniu, rozpoczynając od bieżącego położenia.|  
+|[Next, metoda](icordebugassemblyenum-next-method.md)|Pobiera określoną liczbę wystąpień `ICorDebugAssembly` w wyliczeniu, rozpoczynając od bieżącego położenia.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -47,4 +47,4 @@ Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugAssembly.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

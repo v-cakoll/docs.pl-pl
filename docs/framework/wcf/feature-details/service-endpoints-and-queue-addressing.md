@@ -2,12 +2,12 @@
 title: Punkty końcowe usługi i adresowanie kolejki
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 6bdd3b0966f85ff456e0e2ed0b6da773046201dc
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ec932e83a2b37330f54be545a45358a5ab055423
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837990"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744618"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Punkty końcowe usługi i adresowanie kolejki
 W tym temacie omówiono sposób, w jaki klienci adresów odczytywać z kolejek i jak punkty końcowe usługi mapują na kolejki. Na poniższej ilustracji przedstawiono wdrożenie klasycznej aplikacji Windows Communication Foundation (WCF) w kolejce.  
@@ -21,7 +21,7 @@ W tym temacie omówiono sposób, w jaki klienci adresów odczytywać z kolejek i
   
  Nazwy ścieżek są mapowane na "FormatNames" w celu określenia dodatkowych aspektów adresu, w tym routingu i protokołu transferu Menedżera kolejki. Menedżer kolejki obsługuje dwa protokoły transferu: natywny protokół MSMQ i protokół komunikacyjny protokołu SOAP (SRMP).  
   
- Aby uzyskać więcej informacji na temat nazwy ścieżki i formatu usługi MSMQ, zobacz [Informacje o kolejkach komunikatów](https://go.microsoft.com/fwlink/?LinkId=94837).  
+ Aby uzyskać więcej informacji na temat nazwy ścieżki i formatu usługi MSMQ, zobacz [Informacje o kolejkach komunikatów](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>Usługi Msmqbinding i adresowanie usługi  
  Podczas adresowania wiadomości do usługi, schemat w identyfikatorze URI jest wybierany w oparciu o transport używany do komunikacji. Każdy transport w usłudze WCF ma unikatowy schemat. Schemat musi odzwierciedlać charakter transportu używany do komunikacji. Na przykład net. TCP, net. pipe, HTTP i tak dalej.  
@@ -96,7 +96,7 @@ W tym temacie omówiono sposób, w jaki klienci adresów odczytywać z kolejek i
   
  msmq.formatname:\<*MSMQ-format-name*>>  
   
- Nazwa MSMQ-format-name ma postać określoną przez usługę MSMQ w [temacie Informacje o kolejkach komunikatów](https://go.microsoft.com/fwlink/?LinkId=94837).  
+ Nazwa MSMQ-format-name ma postać określoną przez usługę MSMQ w [temacie Informacje o kolejkach komunikatów](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
  Należy pamiętać, że w przypadku otrzymywania wiadomości z kolejki przy użyciu `MsmqIntegrationBinding`można używać tylko bezpośrednich nazw formatu i nazw formatu publicznego i prywatnego (wymaga integracji Active Directory). Zaleca się jednak używanie bezpośrednich nazw formatu. Na przykład w systemie Windows Vista użycie dowolnej innej nazwy formatu powoduje błąd, ponieważ system próbuje otworzyć podkolejkę, która może być otwierana tylko z bezpośrednimi nazwami formatu.  
   

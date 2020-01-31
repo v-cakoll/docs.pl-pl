@@ -1,5 +1,5 @@
 ---
-title: PageSetupDialog — Informacje o składniku (Formularze systemu Windows)
+title: PageSetupDialog — Informacje o składniku
 ms.date: 03/30/2017
 f1_keywords:
 - PageSetupDialog
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Page Setup dialog box [Windows Forms], displaying
 - PageSetupDialog component
 ms.assetid: 791caacb-a5ca-4fca-bad9-1a5721ad697c
-ms.openlocfilehash: 989183b6152dfccb6167d89433317cea596d83c5
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: a891cb8cc77007d7591d41461c94f61c077eb300
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211742"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744341"
 ---
 # <a name="pagesetupdialog-component-overview-windows-forms"></a>PageSetupDialog — Informacje o składniku (Formularze systemu Windows)
 
-Formularze Windows <xref:System.Windows.Forms.PageSetupDialog> składnik to wstępnie skonfigurowane okno dialogowe umożliwia określanie szczegółów strony do drukowania w aplikacji systemu Windows. Użycie go w aplikacji opartych na Windows jako proste rozwiązanie dla użytkowników, aby ustawić preferencje strony audytów Konfigurowanie własnego okno dialogowe. Umożliwia użytkownikom ustawienie dopasowania obramowanie i marża, nagłówki i stopki i orientacji pionowej lub poziomej. Opierając się na standardowych okien dialogowych Windows, możesz tworzyć aplikacje, w których podstawowych funkcji jest natychmiast dobrze znanym użytkownikom.
+Składnik <xref:System.Windows.Forms.PageSetupDialog> Windows Forms jest wstępnie skonfigurowanym oknem dialogowym używanym do ustawiania szczegółów strony do drukowania w aplikacjach opartych na systemie Windows. Użyj go w aplikacji opartej na systemie Windows jako proste rozwiązanie dla użytkowników, aby ustawić preferencje strony zamiast konfigurowania własnego okna dialogowego. Można umożliwić użytkownikom ustawianie korekt obramowania, nagłówków i stopek oraz orientacji pionowej lub poziomej. Polegając na standardowych oknach dialogowych systemu Windows, można tworzyć aplikacje, których podstawowe funkcje są bezpośrednio znane użytkownikom.
 
-## <a name="key-properties-and-methods"></a>Kluczowe właściwości i metody
+## <a name="key-properties-and-methods"></a>Właściwości i metody klucza
 
-Użyj <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metodę, aby wyświetlić okno dialogowe w czasie wykonywania. Ten składnik zgłosił można ustawić właściwości, które odnoszą się do albo jednej strony (<xref:System.Drawing.Printing.PrintDocument> klasy) lub dowolny dokument (<xref:System.Drawing.Printing.PageSettings> klasy). Ponadto <xref:System.Windows.Forms.PageSetupDialog> składnika może służyć do określenia ustawień określonej drukarki, które są przechowywane w <xref:System.Drawing.Printing.PrinterSettings> klasy.
+Użyj metody <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>, aby wyświetlić okno dialogowe w czasie wykonywania. Ten składnik ma właściwości, które można ustawić, odnoszące się do jednej strony (<xref:System.Drawing.Printing.PrintDocument> Class) lub dowolnego dokumentu (klasy<xref:System.Drawing.Printing.PageSettings>). Ponadto składnik <xref:System.Windows.Forms.PageSetupDialog> może służyć do określenia określonych ustawień drukarki, które są przechowywane w klasie <xref:System.Drawing.Printing.PrinterSettings>.
 
-Gdy zostanie dodany do formularza, <xref:System.Windows.Forms.PageSetupDialog> składnika, który pojawia się na pasku w dolnej części projektanta Windows Forms w programie Visual Studio.
+Po dodaniu do formularza składnik <xref:System.Windows.Forms.PageSetupDialog> pojawia się w zasobniku u dołu Projektant formularzy systemu Windows w programie Visual Studio.
 
 ## <a name="see-also"></a>Zobacz także
 

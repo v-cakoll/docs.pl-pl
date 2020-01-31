@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d815486e-b3bd-4fe8-ba28-02abdb4d67ba
 topic_type:
 - apiref
-ms.openlocfilehash: 5ba6ce4e59057442a9f17338ec7bfff787bd5d05
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7bfa71ccff4a65e72a6b548a09d27648b67c0ae5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130794"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781855"
 ---
 # <a name="icordebugmanagedcallbackexitappdomain-method"></a>ICorDebugManagedCallback::ExitAppDomain — Metoda
 Powiadamia debuger o zakończeniu domeny aplikacji.  
@@ -52,4 +52,4 @@ HRESULT ExitAppDomain (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback, interfejs](icordebugmanagedcallback-interface.md)

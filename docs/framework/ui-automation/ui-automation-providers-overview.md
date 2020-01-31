@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: f41fc102dfbe24d47e194da7477791a46f8d712d
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 98208f1e1fa1b540bf3880e33478854128505233
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741747"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778787"
 ---
 # <a name="ui-automation-providers-overview"></a>Przegląd dostawców automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -18,9 +18,9 @@ ms.locfileid: "75741747"
   
  Dostawcy automatyzacji interfejsu użytkownika umożliwiają kontrolowanie komunikacji z aplikacjami klienckimi automatyzacji interfejsu użytkownika. Ogólnie rzecz biorąc każda kontrolka lub inny odrębny element w [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] jest reprezentowany przez dostawcę. Dostawca ujawnia informacje o elemencie i opcjonalnie implementuje wzorce kontroli, które umożliwiają aplikacji klienckiej współpracującie z kontrolką.  
   
- Aplikacje klienckie zazwyczaj nie muszą bezpośrednio współpracować z dostawcami. Większość standardowych kontrolek w aplikacjach korzystających z Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]lub [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Framework są automatycznie uwidaczniane dla systemu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Aplikacje implementujące niestandardowe kontrolki mogą również implementować [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawców dla tych kontrolek, a aplikacje klienckie nie muszą podejmować żadnych specjalnych kroków w celu uzyskania dostępu do nich.  
+ Aplikacje klienckie zazwyczaj nie muszą bezpośrednio współpracować z dostawcami. Większość standardowych kontrolek w aplikacjach korzystających z Win32, Windows Forms lub [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Framework są automatycznie uwidaczniane dla systemu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Aplikacje implementujące niestandardowe kontrolki mogą również implementować [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawców dla tych kontrolek, a aplikacje klienckie nie muszą podejmować żadnych specjalnych kroków w celu uzyskania dostępu do nich.  
   
- Ten temat zawiera omówienie sposobu, w jaki deweloperzy kontroli implementują [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawców, szczególnie w przypadku formantów w [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] i Windows Win32.  
+ Ten temat zawiera omówienie sposobu, w jaki deweloperzy kontroli implementują [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawców, szczególnie w przypadku formantów w Windows Forms i Windows Win32.  
   
 <a name="Types_of_Providers"></a>   
 ## <a name="types-of-providers"></a>Typy dostawców  

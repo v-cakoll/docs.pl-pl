@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2221fd06-9e27-4113-972e-2530db8c3594
 topic_type:
 - apiref
-ms.openlocfilehash: 1beb69bfaad9acb9c269ad8becb81bea64edb6a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2c84112984e9cb7dec2a492ac16af00e14770806
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138468"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782492"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next — Metoda
-Pobiera określoną liczbę wystąpień [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) , które zawierają informacje o obiektach na zarządzanym stosie.  
+Pobiera określoną liczbę wystąpień [COR_HEAPOBJECT](cor-heapobject-structure.md) , które zawierają informacje o obiektach na zarządzanym stosie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,10 +39,10 @@ HRESULT Next(
  podczas Liczba obiektów do pobrania.  
   
  — obiekty  
- określoną Tablica wskaźników, z których każdy wskazuje obiekt [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) , który zawiera informacje o obiekcie na zarządzanym stosie.  
+ określoną Tablica wskaźników, z których każdy wskazuje obiekt [COR_HEAPOBJECT](cor-heapobject-structure.md) , który zawiera informacje na temat obiektu na zarządzanym stosie.  
   
  pceltFetched  
- określoną Wskaźnik do liczby obiektów [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) faktycznie zwróconych w `objects`. Ta wartość może być `null`, jeśli `celt` wynosi 1.  
+ określoną Wskaźnik do liczby obiektów [COR_HEAPOBJECT](cor-heapobject-structure.md) faktycznie zwróconych w `objects`. Ta wartość może być `null`, jeśli `celt` wynosi 1.  
   
 ## <a name="remarks"></a>Uwagi  
  Pole `COR_HEAPOBJECT.type` jest identyfikatorem zagnieżdżonego, odwołującego się interfejsu COM. To odwołanie musi zostać wydane przez obiekt wywołujący `ICorDebugHeapEnum::Next`.  
@@ -58,5 +58,5 @@ HRESULT Next(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugHeapEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugHeapEnum, interfejs](icordebugheapenum-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

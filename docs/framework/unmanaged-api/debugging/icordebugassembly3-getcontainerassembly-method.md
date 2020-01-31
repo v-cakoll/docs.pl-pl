@@ -2,12 +2,12 @@
 title: Metoda ICorDebugAssembly3::GetContainerAssembly
 ms.date: 03/30/2017
 ms.assetid: f5fddeb6-b82e-4ebb-b432-849ce8513c77
-ms.openlocfilehash: 39f8dd042ea785258dfe5c048ebc348852be6892
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 969cca6d5613670fc4b26fc973785b4874c3684c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095392"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778071"
 ---
 # <a name="icordebugassembly3getcontainerassembly-method"></a>Metoda ICorDebugAssembly3::GetContainerAssembly
 Zwraca zestaw kontenerów tego obiektu `ICorDebugAssembly3`.  
@@ -24,11 +24,11 @@ HRESULT GetContainerAssembly(
  `ppAssembly`  
  Wskaźnik do adresu obiektu ICorDebugAssembly, który reprezentuje zestaw kontenerów, lub **wartość null** , jeśli wywołanie metody nie powiedzie się.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  `S_OK`, jeśli wywołanie metody powiodło się; w przeciwnym razie `S_FALSE`i `ppAssembly` ma **wartość null**.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli ten zestaw został scalony z innymi wewnątrz jednego zestawu kontenerów, Metoda ta zwraca zestaw kontenerów. Aby uzyskać więcej informacji i terminologii, zobacz temat [Metoda ICorDebugProcess6:: EnableVirtualModuleSplitting](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-enablevirtualmodulesplitting-method.md) .  
+ Jeśli ten zestaw został scalony z innymi wewnątrz jednego zestawu kontenerów, Metoda ta zwraca zestaw kontenerów. Aby uzyskać więcej informacji i terminologii, zobacz temat [Metoda ICorDebugProcess6:: EnableVirtualModuleSplitting](icordebugprocess6-enablevirtualmodulesplitting-method.md) .  
   
 > [!NOTE]
 > Ta metoda jest dostępna tylko z .NET Native.  
@@ -44,5 +44,5 @@ HRESULT GetContainerAssembly(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugAssembly3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugAssembly3, interfejs](icordebugassembly3-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

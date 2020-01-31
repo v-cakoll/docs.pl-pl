@@ -2,12 +2,12 @@
 title: Link źródłowy i biblioteki .NET
 description: Zalecenia dotyczące najlepszych rozwiązań dotyczących używania linku źródłowego w celu usprawnienia debugowania bibliotek platformy .NET.
 ms.date: 01/15/2019
-ms.openlocfilehash: 0ebc7601f1ad92b0fc6ab4c7599b010cb42feb5d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706442"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744542"
 ---
 # <a name="source-link"></a>Link do źródła
 
@@ -25,7 +25,7 @@ Możesz użyć [Eksploratora pakietów NuGet](https://github.com/NuGetPackageExp
 
 ![Link źródłowy w Eksploratorze pakietów NuGet](./media/sourcelink/nuget-package-explorer-sourcelink.png "Link źródłowy w Eksploratorze pakietów NuGet")
 
-**✔️ rozważyć** użycie linku źródłowego w celu dodania metadanych kontroli źródła do zestawów i pakietów NuGet.
+✔️ ROZWAŻYĆ użycie linku źródłowego w celu dodania metadanych kontroli źródła do zestawów i pakietów NuGet.
 
 > [!TIP]
 > Możesz bardziej usprawnić środowisko debugowania dewelopera, dodając do swoich typów atrybuty debugera.
@@ -34,7 +34,7 @@ Możesz użyć [Eksploratora pakietów NuGet](https://github.com/NuGetPackageExp
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> nakazuje debugerowi przechodzenie przez kod, a nie krokowe przechodzenie do kodu.
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> kontroluje, czy element członkowski jest wyświetlany w oknach zmiennych debugera.
 
-**✔️ Rozważ** opublikowanie plików symboli (`*.pdb`).
+✔️ Rozważ opublikowanie plików symboli (`*.pdb`).
 
 > W celu uzyskania najlepszego środowiska debugowania biblioteka powinna publikować pliki symboli, a także używać linku źródłowego. Aby uzyskać więcej informacji na temat plików symboli i pakietów symboli, zobacz [pakiety symboli](./nuget.md#symbol-packages).
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72f54a45-dbe6-4bb4-8c99-e879a27368e5
 topic_type:
 - apiref
-ms.openlocfilehash: b521c96d26202119dad6fedb61cbd9da8b3c2e52
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ab31ab8f83a71372c8e12b460458a26996f65ff5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137637"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782988"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction — Metoda
 Konfiguruje wywołanie do określonego ICorDebugFunction, które może być zagnieżdżone wewnątrz klasy, której Konstruktor przyjmuje <xref:System.Type> parametry, lub sama może przyjmować <xref:System.Type> parametry.  
@@ -54,7 +54,7 @@ HRESULT CallParameterizedFunction (
  podczas Tablica wskaźników, z których każdy wskazuje obiekt ICorDebugValue, który reprezentuje wartość przekazaną w argumencie funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `CallParameterizedFunction` przypomina [ICorDebugEval:: CallFunction —](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) , z tą różnicą, że funkcja może znajdować się wewnątrz klasy z parametrami typu, może same przyjmować parametry typu lub oba te metody. Argumenty typu powinny być określone jako pierwsze dla klasy, a następnie dla funkcji.  
+ `CallParameterizedFunction` przypomina [ICorDebugEval:: CallFunction —](icordebugeval-callfunction-method.md) , z tą różnicą, że funkcja może znajdować się wewnątrz klasy z parametrami typu, może same przyjmować parametry typu lub oba te metody. Argumenty typu powinny być określone jako pierwsze dla klasy, a następnie dla funkcji.  
   
  Jeśli funkcja znajduje się w innej domenie aplikacji, nastąpi przejście. Jednak wszystkie argumenty typu i wartości muszą znajdować się w domenie aplikacji docelowej.  
   

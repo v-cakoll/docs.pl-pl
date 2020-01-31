@@ -1,5 +1,5 @@
 ---
-title: Przegląd obsługi zdarzeń (formularze systemu Windows)
+title: Przegląd programów obsługi zdarzeń
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - event handling [Windows Forms], Windows Forms
 - event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
-ms.openlocfilehash: 05acbfaf427060d015c2445360a7d73ebe97d070
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10ba458197973ede35849a86fec35003f139b8d2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966838"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743496"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>Przegląd obsługi zdarzeń (formularze systemu Windows)
-Program obsługi zdarzeń jest metodą, która jest powiązana ze zdarzeniem. Gdy zdarzenie jest wywoływane, kod wewnątrz procedury obsługi zdarzeń jest wykonywany. Każdy program obsługi zdarzeń zawiera dwa parametry, które pozwalają na poprawnie obsłużyć zdarzenie. W poniższym przykładzie pokazano program obsługi zdarzeń dla <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Click> zdarzeń.  
+Program obsługi zdarzeń to metoda, która jest powiązana ze zdarzeniem. Po wywołaniu zdarzenia kod w ramach programu obsługi zdarzeń jest wykonywany. Każdy program obsługi zdarzeń zawiera dwa parametry, które umożliwiają prawidłowe obsłużenie zdarzenia. Poniższy przykład pokazuje procedurę obsługi zdarzeń dla zdarzenia <xref:System.Windows.Forms.Control.Click> formantu <xref:System.Windows.Forms.Button>.  
   
 ```vb  
 Private Sub button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button1.Click  
@@ -42,11 +42,11 @@ private:
   }  
 ```  
   
- Pierwszy parametr`sender`, zawiera odwołanie do obiektu, który spowodował zdarzenie. Drugi parametr `e`, w powyższym przykładzie przekazuje obiekt określone zdarzenie, które jest obsługiwane. Odwołując się do właściwości obiektu (a czasami jego metod), można uzyskać informacje, takie jak lokalizacja myszy dla zdarzenia myszy lub danych przesyłanych w zdarzeniach przeciągania i upuszczania.  
+ Pierwszy parametr,`sender`, zawiera odwołanie do obiektu, który wywołał zdarzenie. Drugi parametr, `e`w powyższym przykładzie przekazuje obiekt specyficzny dla zdarzenia, które jest obsługiwane. Odwołując się do właściwości obiektu (i, czasami, jego metody), można uzyskać informacje takie jak lokalizacja myszy dla zdarzeń myszy lub danych transferowanych w zdarzeniach przeciągania i upuszczania.  
   
- Zazwyczaj każde zdarzenie tworzy program obsługi zdarzeń z typem obiektu innego zdarzenia dla drugiego parametru. Niektóre procedury obsługi zdarzeń, takich jak te dotyczące <xref:System.Windows.Forms.Control.MouseDown> i <xref:System.Windows.Forms.Control.MouseUp> zdarzenia, mają ten sam typ obiektu, ich drugi parametr. Dla tych typów zdarzeń można użyć tego samego programu obsługi zdarzeń do obsługi zarówno zdarzeń.  
+ Zwykle każde zdarzenie generuje procedurę obsługi zdarzeń z innym typem obiektu zdarzenia dla drugiego parametru. Niektóre programy obsługi zdarzeń, takie jak te dla zdarzeń <xref:System.Windows.Forms.Control.MouseDown> i <xref:System.Windows.Forms.Control.MouseUp>, mają ten sam typ obiektu dla drugiego parametru. W przypadku tych typów zdarzeń można użyć tego samego programu obsługi zdarzeń do obsługi obu zdarzeń.  
   
- Umożliwia także tę samą procedurę obsługi zdarzeń do obsługi tego samego zdarzenia dla różnych kontrolkach. Na przykład, jeśli istnieje grupa <xref:System.Windows.Forms.RadioButton> kontrolek w formularzu, można utworzyć jedną procedurą obsługi zdarzeń dla <xref:System.Windows.Forms.Control.Click> zdarzeń i mieć każdy formant <xref:System.Windows.Forms.Control.Click> zdarzenia powiązane z jedną procedurą obsługi zdarzeń. Aby uzyskać więcej informacji, zobacz [jak: Łączenie wielu zdarzeń jedną procedurą obsługi zdarzeń w formularzach Windows Forms](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
+ Można również użyć tego samego programu obsługi zdarzeń, aby obsłużyć to samo zdarzenie dla różnych kontrolek. Na przykład jeśli masz grupę formantów <xref:System.Windows.Forms.RadioButton> na formularzu, można utworzyć pojedynczy program obsługi zdarzeń dla zdarzenia <xref:System.Windows.Forms.Control.Click> i mieć zdarzenie <xref:System.Windows.Forms.Control.Click> poszczególnych kontrolek powiązane z obsługą pojedynczego zdarzenia. Aby uzyskać więcej informacji, zobacz [jak: łączenie wielu zdarzeń z obsługą pojedynczego zdarzenia w Windows Forms](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

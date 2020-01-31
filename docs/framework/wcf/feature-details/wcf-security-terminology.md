@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: e1194a8e340504ce02c0a5daec7074fc34d962f3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6751513b72f732bd7392de11a203467a9ead1bce
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951639"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743345"
 ---
 # <a name="wcf-security-terminology"></a>Terminologia dotycząca zabezpieczeń programu WCF
 Niektóre terminologii używane podczas omawiania zabezpieczeń mogą być nieznane. Ten temat zawiera krótkie objaśnienia niektórych warunków zabezpieczeń, ale nie stanowi wyczerpującej dokumentacji dla każdego elementu.  
@@ -28,7 +28,7 @@ Niektóre terminologii używane podczas omawiania zabezpieczeń mogą być niezn
  Czynność kontrolowania dostępu i praw do zasobu. Na przykład umożliwienie członkom jednej grupy odczytanie pliku, ale zezwolenie tylko członkom innej grupy na zmianę pliku.  
   
  certyfikat urzędu certyfikacji  
- Identyfikuje urząd certyfikacji, który wystawia certyfikaty uwierzytelniania serwera i klienta do serwerów i klientów żądających tych certyfikatów. Ponieważ zawiera klucz publiczny używany w podpisach cyfrowych, jest również określany jako *certyfikat sygnatury*. Jeśli urząd certyfikacji jest urzędem głównym, certyfikat urzędu certyfikacji może być określany jako *certyfikat główny*. Czasami nazywane także certyfikatem *lokacji*.  
+ Identyfikuje urząd certyfikacji, który wystawia certyfikaty uwierzytelniania serwera i klienta do serwerów i klientów żądających tych certyfikatów. Ponieważ zawiera klucz publiczny używany w podpisach cyfrowych, jest również określany jako *certyfikat sygnatury*. Jeśli urząd certyfikacji jest urzędem głównym, certyfikat urzędu certyfikacji może być określany jako *certyfikat główny*. Czasami nazywane także *certyfikatem lokacji*.  
   
  Hierarchia urzędu certyfikacji  
  Hierarchia urzędu certyfikacji zawiera wiele urzędów certyfikacji. Jest on zorganizowany tak, aby każdy urząd certyfikacji był certyfikowany przez inny urząd certyfikacji na wyższym poziomie hierarchii do momentu osiągnięcia górnej części hierarchii, znanej również jako *urząd główny*.  
@@ -56,7 +56,7 @@ Niektóre terminologii używane podczas omawiania zabezpieczeń mogą być niezn
  podpis cyfrowy  
  Dane wiążące tożsamość nadawcy z wysyłanymi informacjami. Podpis cyfrowy może być powiązany z dowolnym komunikatem, plikiem lub innymi informacjami zakodowanymi cyfrowo lub przesyłane osobno. Podpisy cyfrowe są używane w środowiskach kluczy publicznych i zapewniają usługi uwierzytelniania i integralności.  
   
- encoding  
+ {1&gt;encoding&lt;1}  
  Proces przekształcania danych do strumienia bitów. Kodowanie jest częścią procesu serializacji, który konwertuje dane na strumień tych i zer.  
   
  para kluczy wymiany  
@@ -75,7 +75,7 @@ Niektóre terminologii używane podczas omawiania zabezpieczeń mogą być niezn
  Chroniony podsystem służący do uwierzytelniania i rejestrowania użytkowników w systemie lokalnym. Urząd LSA utrzymuje również informacje o wszystkich aspektach zabezpieczeń lokalnych w systemie, które są określane zbiorczo jako zasady zabezpieczeń lokalnych systemu.  
   
  Negotiate  
- Dostawca obsługi zabezpieczeń (SSP), który działa jako warstwa aplikacji między interfejsem dostawcy obsługi zabezpieczeń (SSPI) a innym dostawców SSP. Gdy aplikacja wywołuje interfejs SSPI w celu zalogowania się do sieci, może określić dostawcę SSP, aby przetworzyć żądanie. Jeśli aplikacja jest `Negotiate`określana `Negotiate` , analizuje żądanie i wybiera najlepszą dostawcę SSP do obsługi żądania zgodnie z zasadami zabezpieczeń skonfigurowanymi przez klienta.  
+ Dostawca obsługi zabezpieczeń (SSP), który działa jako warstwa aplikacji między interfejsem dostawcy obsługi zabezpieczeń (SSPI) a innym dostawców SSP. Gdy aplikacja wywołuje interfejs SSPI w celu zalogowania się do sieci, może określić dostawcę SSP, aby przetworzyć żądanie. Jeśli aplikacja określi `Negotiate`, `Negotiate` analizuje żądanie i wybiera najlepszą dostawcę SSP do obsługi żądania zgodnie z zasadami zabezpieczeń skonfigurowanymi przez klienta.  
   
  nonce  
  Generowana losowo wartość służąca do pokonania ataków "Replay".  
@@ -120,7 +120,7 @@ Niektóre terminologii używane podczas omawiania zabezpieczeń mogą być niezn
  Urząd certyfikacji w górnej części hierarchii urzędu certyfikacji. Urząd główny poświadcza urzędy certyfikacji na następnym poziomie hierarchii.  
   
  Algorytm bezpiecznego wyznaczania wartości skrótu (SHA)  
- Algorytm wyznaczania wartości skrótu, który generuje skrót wiadomości. SHA jest używany z algorytmem podpisu cyfrowego (DSA) w standardzie sygnatury cyfrowej (DSS) w innych miejscach. Istnieją cztery odmiany SHA: SHA-1, SHA-256, SHA-384 i SHA-512. Algorytm SHA-1 generuje 160-bitowy skrót wiadomości. Algorytm SHA-256, SHA-384 i SHA-512 generują odpowiednio skróty 256-bitowe, 384 i 512. Algorytm SHA został opracowany przez Narodowy Instytut standardów i technologii (NIST) oraz przez Agencję Bezpieczeństwa Narodowego.  
+ Algorytm wyznaczania wartości skrótu, który generuje skrót wiadomości. SHA jest używany z algorytmem podpisu cyfrowego (DSA) w standardzie sygnatury cyfrowej (DSS) w innych miejscach. Istnieją cztery odmiany SHA-1, SHA-256, SHA-384 i SHA-512. Algorytm SHA-1 generuje 160-bitowy skrót wiadomości. Algorytm SHA-256, SHA-384 i SHA-512 generują odpowiednio skróty 256-bitowe, 384 i 512. Algorytm SHA został opracowany przez Narodowy Instytut standardów i technologii (NIST) oraz przez Agencję Bezpieczeństwa Narodowego.  
   
  SSL (SSL)  
  Protokół zabezpieczania komunikacji sieciowej przy użyciu kombinacji technologii publicznego i tajnego klucza.  
@@ -185,4 +185,4 @@ Niektóre terminologii używane podczas omawiania zabezpieczeń mogą być niezn
 
 - [Podstawowe pojęcia programu Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [Pojęcia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

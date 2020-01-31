@@ -2,12 +2,12 @@
 title: Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: b0f452ba7aabcaa5ea995acba1873029c67f0f5d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: b75dd523d4c88eae70f8d21ac8b3c9f72ae055ed
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544665"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744773"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation
 
@@ -24,7 +24,7 @@ Katalog wirtualny **servicemodelsamples** służy do kompilowania i uruchamiania
 
 2. Upewnij się, że zainstalowano .NET Framework 4. Wyszukaj w następującym katalogu dla wersji v 4.0 (lub nowszej): **\Windows\Microsoft.NET\Framework**
 
-3. Jeśli nie zainstalowano programu Visual Studio 2012 i system operacyjny nie jest systemem Windows Server 2008 z dodatkiem SP2 lub nowszym, należy zainstalować [poprawkę 251798](https://go.microsoft.com/fwlink/?LinkId=184693).
+3. Upewnij się, że masz zainstalowany program Visual Studio 2012 lub nowszy, albo system operacyjny to Windows Server 2008 z dodatkiem SP2 lub nowszym.
 
 4. Uruchom następujące polecenia. Aby uzyskać więcej informacji na temat tego, dlaczego te polecenia muszą być uruchamiane, zobacz [usługa hostowana usług IIS kończy się niepowodzeniem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).
 

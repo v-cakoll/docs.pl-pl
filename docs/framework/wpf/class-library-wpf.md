@@ -1,19 +1,19 @@
 ---
-title: Biblioteka klas (WPF)
+title: Biblioteka klas
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-ms.openlocfilehash: d43b46be2e05561eadcba12c744368db056a3ce5
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: bd099cbbbf96c71749375dab0aadfe84412ca103
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859709"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742293"
 ---
 # <a name="class-library-wpf"></a>Biblioteka klas (WPF)
-Poniższe linki odnoszą się do przestrzeni nazw, która zawiera [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] interfejsów API.  
+Poniższe linki odnoszą się do przestrzeni nazw, które zawierają [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] interfejsy API.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
@@ -21,19 +21,19 @@ Poniższe linki odnoszą się do przestrzeni nazw, która zawiera [!INCLUDE[TLA#
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   
-- <xref:Microsoft.Win32> (wspólna)  
+- <xref:Microsoft.Win32> (udostępniony)  
   
 - <xref:Microsoft.Windows.Themes>  
   
-- <xref:System.Collections.ObjectModel> (wspólna)  
+- <xref:System.Collections.ObjectModel> (udostępniony)  
   
-- <xref:System.Collections.Specialized> (wspólna)  
+- <xref:System.Collections.Specialized> (udostępniony)  
   
-- <xref:System.ComponentModel> (wspólna)  
+- <xref:System.ComponentModel> (udostępniony)  
   
-- <xref:System.Diagnostics> (wspólna)  
+- <xref:System.Diagnostics> (udostępniony)  
   
-- <xref:System.IO> (wspólna)  
+- <xref:System.IO> (udostępniony)  
   
 - <xref:System.IO.Packaging>  
   
@@ -43,7 +43,7 @@ Poniższe linki odnoszą się do przestrzeni nazw, która zawiera [!INCLUDE[TLA#
   
 - <xref:System.Printing.Interop>  
   
-- <xref:System.Security.Permissions> (wspólna)  
+- <xref:System.Security.Permissions> (udostępniony)  
   
 - <xref:System.Security.RightsManagement>  
   
@@ -85,7 +85,7 @@ Poniższe linki odnoszą się do przestrzeni nazw, która zawiera [!INCLUDE[TLA#
   
 - <xref:System.Windows.Interop>  
   
-- <xref:System.Windows.Markup> (wspólna)  
+- <xref:System.Windows.Markup> (udostępniony)  
   
 - <xref:System.Windows.Markup.Localizer>  
   
@@ -123,10 +123,10 @@ Poniższe linki odnoszą się do przestrzeni nazw, która zawiera [!INCLUDE[TLA#
   
 - <xref:UIAutomationClientsideProviders>  
   
-## <a name="xaml-support-in-net-4"></a>Obsługa XAML na platformie .NET 4  
- Następujące przestrzenie nazw zawierają typy z zestawu System.Xaml. System.Xaml zapewnia wsparcie języka XAML dla platform, takich jak WPF, które są oparte na programie .NET Framework 4.  
+## <a name="xaml-support-in-net-4"></a>Obsługa języka XAML w programie .NET 4  
+ Następujące przestrzenie nazw zawierają typy z zestawu System. XAML. System. XAML oferuje powszechną obsługę języka XAML dla platform, takich jak WPF, które są oparte na .NET Framework 4.  
   
-- <xref:System.Windows.Markup> (wspólna)  
+- <xref:System.Windows.Markup> (udostępniony)  
   
 - <xref:System.Xaml>  
   

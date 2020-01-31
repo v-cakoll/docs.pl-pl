@@ -1,5 +1,6 @@
 ---
-title: 'Wskazówki: Hosting złożonego formantu 3D WPF w Windows Forms'
+title: Kontrolka złożona dla hosta 3W WPF w Windows Forms
+titleSuffix: ''
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: f33adf6bac5efab87fecd9e95437ac8cff6d1f16
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: 07222809d62b207730ddad3c87b8fb60e1602bc3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976554"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744452"
 ---
-# <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>Wskazówki: Hosting złożonego formantu 3D WPF w Windows Forms
+# <a name="walkthrough-host-a-3d-wpf-composite-control-in-windows-forms"></a>Przewodnik: hostowanie złożonego formantu 3D WPF w Windows Forms
 
 W tym instruktażu pokazano, jak można utworzyć formant złożony [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i hostować go w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolkach i formularzach za pomocą kontrolki <xref:System.Windows.Forms.Integration.ElementHost>.
 
-W tym instruktażu zaimplementowano <xref:System.Windows.Controls.UserControl> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], który zawiera dwie kontrolki podrzędne. <xref:System.Windows.Controls.UserControl> wyświetla stożek trójwymiarowy (3-D). Renderowanie obiektów 3-D jest znacznie łatwiejsze w przypadku [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] niż z [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. W związku z tym warto hostować [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klasę <xref:System.Windows.Controls.UserControl> w celu utworzenia grafiki trójwymiarowej w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+W tym instruktażu zaimplementowano <xref:System.Windows.Controls.UserControl> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], który zawiera dwie kontrolki podrzędne. <xref:System.Windows.Controls.UserControl> wyświetla stożkowy wymiar trójwymiarowy (3W). Renderowanie obiektów 3W jest znacznie łatwiejsze dzięki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] niż z [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. W związku z tym warto hostować [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klasę <xref:System.Windows.Controls.UserControl> w celu utworzenia grafiki 3D w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
 
 Zadania przedstawione w tym instruktażu obejmują:
 
@@ -46,7 +47,7 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
      [!code-xaml[HostingWpfUserControlInWf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]
 
-     Ten kod definiuje <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>, który zawiera dwa kontrolki podrzędne. Pierwszy formant podrzędny jest formantem <xref:System.Windows.Controls.Label?displayProperty=nameWithType>; drugim jest formant <xref:System.Windows.Controls.Viewport3D>, który wyświetla stożkowy 3-D.
+     Ten kod definiuje <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>, który zawiera dwa kontrolki podrzędne. Pierwszy formant podrzędny jest formantem <xref:System.Windows.Controls.Label?displayProperty=nameWithType>; drugim jest formant <xref:System.Windows.Controls.Viewport3D>, który wyświetla stożkowy 3W.
 
 <a name="To_Create_the_Windows_Forms_Host_Project"></a>
 ## <a name="create-the-host-project"></a>Utwórz projekt hosta
@@ -61,7 +62,7 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
     - Platformie docelowej
 
-    - 'Windowsbase
+    - WindowsBase
 
 4. Dodaj odwołanie do projektu `HostingWpfUserControlInWf`.
 

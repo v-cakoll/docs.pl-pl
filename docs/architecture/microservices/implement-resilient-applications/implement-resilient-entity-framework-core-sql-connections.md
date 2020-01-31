@@ -2,12 +2,12 @@
 title: Zaimplementuj odporne Entity Framework Core połączenia SQL
 description: Dowiedz się, jak zaimplementować odporne Entity Framework Core połączenia SQL. Ta technika jest szczególnie ważna w przypadku korzystania z Azure SQL Database w chmurze.
 ms.date: 10/16/2018
-ms.openlocfilehash: 7899fc263ab3cde6ac2410ca614a7e5fa285576b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 0ded30469bb4985fed7b60938756046531c8feea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732727"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777060"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>Zaimplementuj odporne Entity Framework Core połączenia SQL
 
@@ -41,7 +41,7 @@ public class Startup
 
 ## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Strategie wykonywania i jawne transakcje przy użyciu BeginTransaction i wielu dbcontexts
 
-Po włączeniu ponownych prób w EF Core połączeniach każda operacja wykonywana przy użyciu EF Core będzie własną operacją wywołały. Każde zapytanie i każde wywołanie `SaveChanges` zostanie ponowione w przypadku wystąpienia błędu przejściowego.
+Po włączeniu ponownych prób w EF Core połączeniach każda operacja wykonywana przy użyciu EF Core będzie własną operacją ponawiania. Każde zapytanie i każde wywołanie `SaveChanges` zostanie ponowione w przypadku wystąpienia błędu przejściowego.
 
 Jeśli jednak kod inicjuje transakcję przy użyciu `BeginTransaction`, definiujesz własną grupę operacji, która musi być traktowana jako jednostka. Jeśli wystąpi awaria, wszystkie elementy wewnątrz transakcji należy wycofać.
 

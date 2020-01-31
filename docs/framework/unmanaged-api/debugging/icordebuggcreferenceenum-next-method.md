@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 91b1345c-a94f-4ef8-9696-3823d06c6d05
 topic_type:
 - apiref
-ms.openlocfilehash: 43408486fec9cd50222eed08ec2d3397bc11bc18
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3a8e967a3ecc452ebda08872d8bcd9e9d08c766f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134622"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777690"
 ---
 # <a name="icordebuggcreferenceenumnext-method"></a>ICorDebugGCReferenceEnum::Next — Metoda
-Pobiera określoną liczbę wystąpień [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) , które zawierają informacje o obiektach, które będą zbierane jako elementy bezużyteczne.  
+Pobiera określoną liczbę wystąpień [COR_GC_REFERENCE](cor-gc-reference-structure.md) , które zawierają informacje o obiektach, które będą zbierane jako elementy bezużyteczne.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,10 +39,10 @@ HRESULT Next(
  podczas Liczba katalogów głównych do pobrania.  
   
  główny  
- określoną Tablica wskaźników, z których każdy wskazuje obiekt [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) , który reprezentuje element główny obiektu, który ma zostać odrzucony.  
+ określoną Tablica wskaźników, z których każdy wskazuje obiekt [COR_GC_REFERENCE](cor-gc-reference-structure.md) , który reprezentuje element główny obiektu, który ma zostać pobrany jako bezużyteczny.  
   
  pceltFetched  
- określoną Wskaźnik do liczby obiektów [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) faktycznie zwróconych w `roots`. Ta wartość może być `null`, jeśli `celt` wynosi 1.  
+ określoną Wskaźnik do liczby obiektów [COR_GC_REFERENCE](cor-gc-reference-structure.md) faktycznie zwróconych w `roots`. Ta wartość może być `null`, jeśli `celt` wynosi 1.  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -57,5 +57,5 @@ HRESULT Next(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugGCReferenceEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugGCReferenceEnum, interfejs](icordebuggcreferenceenum-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

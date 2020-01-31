@@ -1,5 +1,5 @@
 ---
-title: TabControl — Formant (Formularze systemu Windows)
+title: TabControl — Formant
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TabControl control [Windows Forms]
@@ -10,41 +10,41 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-ms.openlocfilehash: d00dbe1e450a2d4316709e92eff7dab488b36045
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4f310629342e5302021bbc7dc5f92d473377397
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755379"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742812"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl — Formant (Formularze systemu Windows)
-Formularze Windows `TabControl` wyświetla wiele kart, takich jak separatorów w notesie lub etykiet w zestawie folderów w pliku cabinet zgłoszenia. Karty mogą zawierać obrazów i innych kontrolek. Użyj `TabControl` do tworzenia stron właściwości.  
+`TabControl` Windows Forms wyświetla wiele kart, takich jak rozdzielacze w notesie lub etykietach w zestawie folderów w pliku cabinet. Karty mogą zawierać obrazy i inne kontrolki. Użyj `TabControl`, aby utworzyć strony właściwości.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [TabControl, kontrolka — omówienie](tabcontrol-control-overview-windows-forms.md)  
- Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
+ Wyjaśnia, czym jest ta kontrolka i jej najważniejsze funkcje i właściwości.  
   
- [Instrukcje: Dodawanie kontrolki do karty](how-to-add-a-control-to-a-tab-page.md)  
- Zawiera wskazówki dotyczące wyświetlania formantów na kartach.  
+ [Instrukcje: dodawanie kontrolki do karty](how-to-add-a-control-to-a-tab-page.md)  
+ Wyświetla wskazówki dotyczące wyświetlania kontrolek na stronach karty.  
   
- [Instrukcje: Dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
- Zapewnia wskazówek umożliwiających dodawanie i usuwanie kart za pomocą projektanta lub w kodzie.  
+ [Instrukcje: dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
+ Zawiera wskazówki dotyczące dodawania i usuwania kart w projektancie lub w kodzie.  
   
- [Instrukcje: Zmienianie wyglądu kontrolki TabControl formularzy Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
- Zawiera wskazówki dotyczące dostosowywania właściwości, które wpływają na wygląd poszczególnych kart.  
+ [Instrukcje: zmienianie wyglądu kontrolki TabControl formularzy Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
+ Daje wskazówki dotyczące dostosowywania właściwości, które wpływają na wygląd poszczególnych kart.  
   
- [Instrukcje: Wyłączanie kart](how-to-disable-tab-pages.md)  
- Wyjaśnia, jak ograniczyć dostęp do strony karty, prawdopodobnie na podstawie poświadczeń użytkownika.  
+ [Instrukcje: wyłączanie kart](how-to-disable-tab-pages.md)  
+ Wyjaśnia, jak ograniczyć dostęp do strony karty, prawdopodobnie w oparciu o poświadczenia użytkownika.  
   
- Zobacz też [jak: Dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy Windows, za pomocą projektanta](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md), [jak: Dodawanie kontrolki do karty przy użyciu narzędzia Projektant](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
+ Zobacz również [instrukcje: Dodawanie i usuwanie kart z Windows Formsm TabControl przy użyciu narzędzia Projektant](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md), [jak: Dodawanie kontrolki do strony karty przy użyciu narzędzia Projektant](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.TabControl> Klasa  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Klasa <xref:System.Windows.Forms.TabControl>  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Okna dialogowe w formularzach Windows Forms](../dialog-boxes-in-windows-forms.md)  
- Zawiera listę zadań dla okien dialogowych, które są często wyświetlane karty.  
+ Zawiera listę zadań dla okien dialogowych, które często wyświetlają karty.  
   
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.
+ Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.

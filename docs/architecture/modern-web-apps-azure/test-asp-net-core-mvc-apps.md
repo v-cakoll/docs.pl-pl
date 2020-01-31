@@ -4,19 +4,19 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 82c9815abdd5140340f9a8ea39be23496d433889
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0cb5c5c604d4a82798d4af736ff278b096621588
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738380"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777106"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testowanie aplikacji ASP.NET Core MVC
 
 > *"Jeśli nie podoba Ci się testowanie jednostkowe produktu, najprawdopodobniej nie chcesz przetestować go."*
  > \_-Anonymous-
 
-Oprogramowanie dowolnej złożoności może zakończyć się niepowodzeniem na nieoczekiwanych sposobach w reakcji na zmiany. W ten sposób testowanie po wprowadzeniu zmian jest wymagane dla wszystkich, ale najbardziej prostych (lub najmniej krytycznych) aplikacji. Testowanie ręczne to najwolniejsze, najmniej niezawodne, najbardziej kosztowne rozwiązanie do testowania oprogramowania. Niestety, jeśli aplikacje nie mają być weryfikowalne, może to być tylko dostępne. Aplikacje, które zostały wykonane zgodnie z zasadami architektury określonymi w [rozdziale 4](architectural-principles.md) , powinny być weryfikowalne jednostkowe, a aplikacje ASP.NET Core obsługują również zautomatyzowaną integrację i testowanie funkcjonalne.
+Oprogramowanie dowolnej złożoności może zakończyć się niepowodzeniem na nieoczekiwanych sposobach w reakcji na zmiany. W ten sposób testowanie po wprowadzeniu zmian jest wymagane dla wszystkich, ale najbardziej prostych (lub najmniej krytycznych) aplikacji. Testowanie ręczne to najwolniejsze, najmniej niezawodne, najbardziej kosztowne rozwiązanie do testowania oprogramowania. Niestety, jeśli aplikacje nie mają być weryfikowalne, może to być tylko dostępne. Aplikacje przygotowane do przestrzegania zasad architektonicznych, które zostały określone w [rozdziale 4](architectural-principles.md) powinny być weryfikowalne jednostkowym. Aplikacje ASP.NET Core obsługują zautomatyzowaną integrację i testowanie funkcjonalne.
 
 ## <a name="kinds-of-automated-tests"></a>Rodzaje testów automatycznych
 
@@ -58,7 +58,7 @@ Różne warstwy ostrosłupa i ich względne rozmiary reprezentują różne rodza
 
 ### <a name="what-to-test"></a>Co należy przetestować
 
-Typowy problem dla deweloperów, którzy są niedoświadczeni z pisaniem zautomatyzowanych testów, jest tworzony z przeznaczeniem do przetestowania. Dobrym punktem początkowym jest Testowanie logiki warunkowej. Wszędzie tam, gdzie masz metodę z zachowaniem, które zmienia się w zależności od instrukcji warunkowej (if-else, Switch itp.), powinna być dostępna co najmniej kilka testów, które potwierdzają poprawne zachowanie określonych warunków. Jeśli kod zawiera warunki błędu, warto napisać co najmniej jeden test dla "silnej ścieżki" przez kod (bez błędów) i co najmniej jeden test dla "ścieżki sad" (z błędami lub nietypowymi wynikami), aby potwierdzić, że aplikacja działa zgodnie z oczekiwaniami w przypadku błędów. Na koniec spróbuj skupić się na testowaniu rzeczy, które mogą się nie powieść, zamiast skupić się na metrykach, takich jak pokrycie kodu. Większa ilość pokrycia kodu jest lepsza niż mniej, ogólnie. Jednak zapisanie kilku dodatkowych testów bardzo złożonej i krytycznej dla firmy jest zwykle lepszym sposobem korzystania z czasu niż podczas pisania testów dla właściwości samodzielnych, co pozwala ulepszyć metryki pokrycia kodu testowego.
+Typowy problem dla deweloperów, którzy są niedoświadczeni z pisaniem zautomatyzowanych testów, jest tworzony z przeznaczeniem do przetestowania. Dobrym punktem początkowym jest Testowanie logiki warunkowej. Wszędzie tam, gdzie masz metodę z zachowaniem, która zmienia się na podstawie instrukcji warunkowej (if-else, Switch itd.), powinna być dostępna co najmniej kilka testów, które potwierdzają poprawne zachowanie określonych warunków. Jeśli kod zawiera warunki błędu, warto napisać co najmniej jeden test dla "silnej ścieżki" przez kod (bez błędów) i co najmniej jeden test dla "ścieżki sad" (z błędami lub nietypowymi wynikami), aby potwierdzić, że aplikacja działa zgodnie z oczekiwaniami w przypadku błędów. Na koniec spróbuj skupić się na testowaniu rzeczy, które mogą się nie powieść, zamiast skupić się na metrykach, takich jak pokrycie kodu. Większa ilość pokrycia kodu jest lepsza niż mniej, ogólnie. Jednak zapisanie kilku dodatkowych testów złożonej i krytycznej dla firmy jest zwykle lepszym wykorzystaniem czasu niż podczas pisania testów dla właściwości autoproperties tylko w celu poprawy metryk pokrycia kodu testowego.
 
 ## <a name="organizing-test-projects"></a>Organizowanie projektów testowych
 
@@ -102,7 +102,7 @@ Jeśli przestrzegasz konwencji nazewnictwa, takiej jak powyżej, która tworzy w
 
 **Rysunek 9-4.** Organizowanie klas testowych według folderu na podstawie testowanej klasy.
 
-Oczywiście, jeśli określona Klasa aplikacji ma wiele metod do przetestowania (i w ten sposób wiele klas testowych), warto je umieścić w folderze odpowiadającym klasie aplikacji. Ta organizacja nie różni się od sposobu, w jaki można organizować pliki w folderach w innym miejscu. Jeśli masz więcej niż trzy lub cztery powiązane pliki w folderze zawierającym wiele innych plików, często warto przenieść je do własnego podfolderu.
+Jeśli określona Klasa aplikacji ma wiele metod do przetestowania (i w ten sposób wiele klas testowych), warto je umieścić w folderze odpowiadającym klasie aplikacji. Ta organizacja nie różni się od sposobu, w jaki można organizować pliki w folderach w innym miejscu. Jeśli masz więcej niż trzy lub cztery powiązane pliki w folderze zawierającym wiele innych plików, często warto przenieść je do własnego podfolderu.
 
 ## <a name="unit-testing-aspnet-core-apps"></a>Testowanie jednostkowe ASP.NET Core aplikacji
 

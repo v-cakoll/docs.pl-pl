@@ -1,5 +1,5 @@
 ---
-title: ICorDebugClass2 — Interfejs
+title: ICorDebugClass2, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugClass2
@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 5416de70-43f2-4cdf-a11f-d570759c9c0c
 topic_type:
 - apiref
-ms.openlocfilehash: cb2ab28824d209dd1eed627600e30e9ddb0d7c7a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 795e9f4862992d95eeef98a986545cca47d828c6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125723"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784141"
 ---
-# <a name="icordebugclass2-interface"></a>ICorDebugClass2 — Interfejs
+# <a name="icordebugclass2-interface"></a>ICorDebugClass2, interfejs
 
-Reprezentuje klasę generyczną lub klasę z parametrem metody typu <xref:System.Type>. Ten interfejs rozszerza [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md).  
+Reprezentuje klasę generyczną lub klasę z parametrem metody typu <xref:System.Type>. Ten interfejs rozszerza [ICorDebugClass](icordebugclass-interface.md).  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetParameterizedType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|Pobiera deklarację typu dla tej klasy.|  
-|[SetJMCStatus, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|Dla każdej metody tej klasy ustawia wartość wskazującą, czy metoda jest kodem zdefiniowanym przez użytkownika.|  
+|[GetParameterizedType, metoda](icordebugclass2-getparameterizedtype-method.md)|Pobiera deklarację typu dla tej klasy.|  
+|[SetJMCStatus, metoda](icordebugclass2-setjmcstatus-method.md)|Dla każdej metody tej klasy ustawia wartość wskazującą, czy metoda jest kodem zdefiniowanym przez użytkownika.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -48,5 +48,5 @@ Reprezentuje klasę generyczną lub klasę z parametrem metody typu <xref:System
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugClass, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugClass, interfejs](icordebugclass-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

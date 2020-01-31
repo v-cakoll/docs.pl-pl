@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy systemu Windows'
+title: Dodawanie lub usuwanie obrazów ze składnikiem ImageList
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,24 +13,24 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: 430b7f573b115c21b9e2fa87f0ace74205717285
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f531003377395bf219775e5ddb48ceb0822ff0ea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925119"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741501"
 ---
-# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Instrukcje: dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy systemu Windows
-Składnik Windows Forms <xref:System.Windows.Forms.ImageList> jest zwykle wypełniany obrazami przed skojarzeniem z kontrolką. Można jednak dodawać i usuwać obrazy po skojarzeniu listy obrazów z kontrolką.  
+# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Porady: dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy systemu Windows
+Składnik <xref:System.Windows.Forms.ImageList> Windows Forms jest zwykle wypełniany przy użyciu obrazów, zanim zostanie on skojarzony z kontrolką. Można jednak dodawać i usuwać obrazy po skojarzeniu listy obrazów z kontrolką.  
   
 > [!NOTE]
-> Po usunięciu obrazów Sprawdź, czy <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> Właściwość wszystkich skojarzonych kontrolek jest nadal ważna.  
+> Po usunięciu obrazów Sprawdź, czy właściwość <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> wszystkich skojarzonych kontrolek jest nadal ważna.  
   
 ### <a name="to-add-images-programmatically"></a>Aby programowo dodać obrazy  
   
-- <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> Użyj metody <xref:System.Windows.Forms.ImageList.Images%2A> właściwości lista obrazów.  
+- Użyj metody <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> właściwości <xref:System.Windows.Forms.ImageList.Images%2A> listy obrazów.  
   
-     W poniższym przykładzie kodu ścieżką ustawioną dla lokalizacji obrazu jest folder **Moje dokumenty** . Ta lokalizacja jest używana, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać ten folder. Wybranie tej lokalizacji pozwala także użytkownikom, którzy mają minimalny poziom dostępu do systemu, bezpieczniejsze uruchamianie aplikacji. Poniższy przykład kodu wymaga, aby formularz z <xref:System.Windows.Forms.ImageList> kontrolką został już dodany.  
+     W poniższym przykładzie kodu ścieżką ustawioną dla lokalizacji obrazu jest folder **Moje dokumenty** . Ta lokalizacja jest używana, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać ten folder. Wybranie tej lokalizacji pozwala także użytkownikom, którzy mają minimalny poziom dostępu do systemu, bezpieczniejsze uruchamianie aplikacji. Poniższy przykład kodu wymaga, aby formularz z kontrolką <xref:System.Windows.Forms.ImageList> został już dodany.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -76,9 +76,9 @@ Składnik Windows Forms <xref:System.Windows.Forms.ImageList> jest zwykle wypeł
   
 ### <a name="to-add-images-with-a-key-value"></a>, Aby dodać obrazy z wartością klucza.  
   
-- Użyj jednej z <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> metod <xref:System.Windows.Forms.ImageList.Images%2A> właściwości list obrazu, która przyjmuje wartość klucza.  
+- Użyj jednej z <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> metod właściwości <xref:System.Windows.Forms.ImageList.Images%2A> listy obrazu, która przyjmuje wartość klucza.  
   
-     W poniższym przykładzie kodu ścieżką ustawioną dla lokalizacji obrazu jest folder **Moje dokumenty** . Ta lokalizacja jest używana, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać ten folder. Wybranie tej lokalizacji pozwala także użytkownikom, którzy mają minimalny poziom dostępu do systemu, bezpieczniejsze uruchamianie aplikacji. Poniższy przykład kodu wymaga, aby formularz z <xref:System.Windows.Forms.ImageList> kontrolką został już dodany.  
+     W poniższym przykładzie kodu ścieżką ustawioną dla lokalizacji obrazu jest folder **Moje dokumenty** . Ta lokalizacja jest używana, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać ten folder. Wybranie tej lokalizacji pozwala także użytkownikom, którzy mają minimalny poziom dostępu do systemu, bezpieczniejsze uruchamianie aplikacji. Poniższy przykład kodu wymaga, aby formularz z kontrolką <xref:System.Windows.Forms.ImageList> został już dodany.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -107,11 +107,11 @@ public void addImage()
   
 ### <a name="to-remove-all-images-programmatically"></a>Aby programowo usunąć wszystkie obrazy  
   
-- <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> Używanie metody do usuwania pojedynczego obrazu  
+- Użyj metody <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A>, aby usunąć pojedynczy obraz  
   
      ,-lub-  
   
-     Użyj metody <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> , aby wyczyścić wszystkie obrazy z listy obrazów.  
+     Użyj metody <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A>, aby wyczyścić wszystkie obrazy z listy obrazów.  
   
     ```vb  
     ' Removes the first image in the image list  
@@ -129,7 +129,7 @@ imageList1.Images.Clear();
   
 ### <a name="to-remove-images-by-key"></a>Aby usunąć obrazy według klucza  
   
-- <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> Użyj metody, aby usunąć pojedynczy obraz według swojego klucza.  
+- Użyj metody <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A>, aby usunąć pojedynczy obraz według jego klucza.  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  

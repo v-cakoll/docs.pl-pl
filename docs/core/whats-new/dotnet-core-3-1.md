@@ -6,20 +6,20 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: eba3d21cfc787c5d388de31f988b835522118151
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 0905cbebb2d966570be4ac3aefb40f4377b97061
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936927"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742586"
 ---
 # <a name="whats-new-in-net-core-31"></a>Co nowego w programie .NET Core 3.1
 
 W tym artykule opisano nowości w programie .NET Core 3,1. Ta wersja zawiera drobne ulepszenia programu .NET Core 3,0, skupiając się na małych, ale ważnych poprawkach. Najważniejszym elementem na platformie .NET Core 3,1 jest to, że jest to wersja [długoterminowa (LTS)](#long-term-support) .
 
-W przypadku korzystania z programu Visual Studio 2019 należy zaktualizować program do [wersji Visual studio 2019 wersja 16,4](https://visualstudio.microsoft.com/downloads/) , aby działał z projektami .net Core 3,1. Aby uzyskać więcej informacji na temat Nowości w programie Visual Studio, zobacz [Blog programu Visual Studio](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/).
+W przypadku korzystania z programu Visual Studio 2019 należy zaktualizować program do [wersji Visual studio 2019 wersja 16,4](https://visualstudio.microsoft.com/downloads/) , aby działał z projektami .net Core 3,1. Aby uzyskać więcej informacji na temat Nowości w programie Visual Studio, zobacz [co nowego w programie Visual studio 2019 w wersji 16,4](/visualstudio/releases/2019/release-notes#whats-new-in-visual-studio-2019-version-164).
 
-Visual Studio dla komputerów Mac obsługuje również program .NET Core 3,1 i zawiera go w kanale Visual Studio dla komputerów Mac 8,4 w wersji zapoznawczej. Aby korzystać z platformy .NET Core 3,1, należy wybrać kanał w wersji zapoznawczej.
+Visual Studio dla komputerów Mac obsługuje również program .NET Core 3,1 w Visual Studio dla komputerów Mac 8,4.
 
 Aby uzyskać więcej informacji o wersji, zobacz [anons programu .NET Core 3,1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/).
 
@@ -64,7 +64,7 @@ Zalecamy zaktualizowanie aplikacji do programu .NET Core 3,1 i przejście do kon
 
 Dodano obsługę tworzenia C++projektów/CLI (znanych również jako "zarządzane C++"). Pliki binarne wytworzone z tych projektów są zgodne z platformą .NET Core 3,0 i nowszymi wersjami.
 
-Aby dodać obsługę C++/CLI w programie Visual Studio 2019 16,4, zainstaluj [Programowanie aplikacji klasycznych C++ za pomocą obciążenia](https://docs.microsoft.com/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads). To obciążenie dodaje dwa szablony do programu Visual Studio:
+Aby dodać obsługę C++/CLI w programie Visual Studio 2019 w wersji 16,4, zainstaluj [Programowanie aplikacji klasycznych za pomocą C++ obciążenia](/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads). To obciążenie dodaje dwa szablony do programu Visual Studio:
 
 - Biblioteka klas CLR (.NET Core)
 - Pusty projekt CLR (.NET Core)
@@ -72,4 +72,4 @@ Aby dodać obsługę C++/CLI w programie Visual Studio 2019 16,4, zainstaluj [Pr
 ## <a name="next-steps"></a>Następne kroki
 
 - [Zapoznaj się z istotnymi zmianami między programem .NET Core 3,0 i 3,1.](../compatibility/3.0-3.1.md)
-- [Zapoznaj się z istotnymi zmianami między programem .NET Core 3,1 dla aplikacji Windows Forms.](../compatibility/winforms.md#net-core-31)
+- [Zapoznaj się z istotnymi zmianami w programie .NET Core 3,1 dla aplikacji Windows Forms.](../compatibility/winforms.md#net-core-31)

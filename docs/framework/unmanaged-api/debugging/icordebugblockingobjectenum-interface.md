@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 208e5c2d-3f3f-404e-8b3c-7cccc14ddb16
 topic_type:
 - apiref
-ms.openlocfilehash: bfd61d985eac3ab56d8a5df9474b2b1a9f641f3e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: be1e1cd0d38ad71de43478af5565bb1ac98a8c0d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122844"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778001"
 ---
 # <a name="icordebugblockingobjectenum-interface"></a>ICorDebugBlockingObjectEnum — Interfejs
-Dostarcza moduł wyliczający listę struktur [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) . Ten interfejs jest podklasą interfejsu ICorDebugEnum.  
+Dostarcza moduł wyliczający listę struktur [CorDebugBlockingObject](cordebugblockingobject-structure.md) . Ten interfejs jest podklasą interfejsu ICorDebugEnum.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-next-method.md)|Wylicza listę struktur [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) .|  
+|[Next, metoda](icordebugblockingobjectenum-next-method.md)|Wylicza listę struktur [CorDebugBlockingObject](cordebugblockingobject-structure.md) .|  
   
 ## <a name="remarks"></a>Uwagi  
  Każda struktura `CorDebugBlockingObject` reprezentuje obiekt, który blokuje wątek.  
@@ -47,5 +47,5 @@ Dostarcza moduł wyliczający listę struktur [CorDebugBlockingObject](../../../
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

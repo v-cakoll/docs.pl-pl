@@ -2,12 +2,12 @@
 title: Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 4862ae0e5151177e74da0f94d06b5b39205ed4c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8a4b4ff6c0482ed8a09fe30b7d03afc1f84db581
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283291"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739898"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 Model programowania HTTP sieci WEB w programie Windows Communication Foundation (WCF) udostępnia podstawowe elementy wymagane do kompilowania usług HTTP sieci WEB za pomocą programu WCF. Usługi HTTP sieci WEB w programie WCF są przeznaczone do uzyskiwania dostępu do szerokiego zakresu potencjalnych klientów, w tym przeglądarek sieci Web, i mają następujące unikatowe wymagania:  
@@ -127,7 +127,7 @@ interface ICustomer
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>Formaty i model programowania HTTP sieci WEB w programie WCF  
  Model programowania HTTP sieci WEB w programie WCF udostępnia nowe funkcje do pracy z wieloma różnymi formatami danych. W warstwie powiązań <xref:System.ServiceModel.WebHttpBinding> mogą odczytywać i zapisywać następujące różne rodzaje danych:  
   
-- XML  
+- {1&gt;XML&lt;1}  
   
 - JSON  
   
@@ -138,7 +138,8 @@ interface ICustomer
  .NET Framework 3,5 zapewnia obsługę danych JSON (AJAX), a także źródeł zespolonych (w tym ATOM i RSS). Aby uzyskać więcej informacji o tych funkcjach, zobacz[Omówienie](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) integracji z programem WCF w [sieci Web](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)i [Obsługa technologii AJAX oraz obsługi JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>Model programowania i zabezpieczenia protokołu HTTP w sieci WEB WCF  
- Ponieważ model programowania HTTP sieci WEB w programie WCF nie obsługuje protokołów WS-*, jedynym sposobem zabezpieczenia usługi HTTP sieci WEB w programie WCF jest udostępnienie usługi za pośrednictwem protokołu HTTPS przy użyciu protokołu SSL. Aby uzyskać więcej informacji na temat konfigurowania protokołu SSL w usługach IIS 7,0, zobacz [jak zaimplementować protokół SSL w usługach IIS](https://go.microsoft.com/fwlink/?LinkId=131613) .  
+
+Ponieważ model programowania HTTP sieci WEB w programie WCF nie obsługuje protokołów WS-*, jedynym sposobem zabezpieczenia usługi HTTP sieci WEB w programie WCF jest udostępnienie usługi za pośrednictwem protokołu HTTPS przy użyciu protokołu SSL. Aby uzyskać więcej informacji na temat konfigurowania protokołu SSL w usługach IIS 7,0, zobacz [jak zaimplementować protokół SSL w usługach IIS](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis).
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>Rozwiązywanie problemów z modelem programowania HTTP sieci WEB w programie WCF  
  Podczas wywoływania usług HTTP sieci WEB w programie WCF przy użyciu <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> do utworzenia kanału <xref:System.ServiceModel.Description.WebHttpBehavior> wykorzystuje <xref:System.ServiceModel.EndpointAddress> ustawione w pliku konfiguracji, nawet jeśli do <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>zostanie przeniesiona inna <xref:System.ServiceModel.EndpointAddress>.  

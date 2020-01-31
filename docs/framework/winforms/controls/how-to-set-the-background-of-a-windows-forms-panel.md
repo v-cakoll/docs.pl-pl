@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ustawianie tła panelu formularzy Windows'
+title: ustawianie tła panelu
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: 9336be2aebb10e5c0bd0bf4648cae34a3b5fe7c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba2619354403793aea7ca15d43649da9637079a6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013182"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744742"
 ---
-# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Instrukcje: Ustawianie tła panelu formularzy Windows
-Formularze Windows <xref:System.Windows.Forms.Panel> formant może wyświetlić kolor tła i obraz tła. <xref:System.Windows.Forms.Control.BackColor%2A> Właściwość ustawia kolor tła dla zawartych w nim formantów, takich jak etykiety i przycisków radiowych. Jeśli <xref:System.Windows.Forms.Control.BackgroundImage%2A> nie ustawiono właściwości <xref:System.Windows.Forms.Control.BackColor%2A> wybór wypełni całą panelu. Jeśli <xref:System.Windows.Forms.Control.BackgroundImage%2A> właściwość jest ustawiona, obraz, który pojawi się za zaporą zawartych w nim formantów.  
+# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Porady: ustawianie tła panelu formularzy systemu Windows
+Kontrolka <xref:System.Windows.Forms.Panel> Windows Forms może wyświetlać zarówno kolor tła, jak i obraz tła. Właściwość <xref:System.Windows.Forms.Control.BackColor%2A> ustawia kolor tła zawartych kontrolek, takich jak etykiety i przyciski radiowe. Jeśli właściwość <xref:System.Windows.Forms.Control.BackgroundImage%2A> nie jest ustawiona, wybór <xref:System.Windows.Forms.Control.BackColor%2A> wypełni cały panel. Jeśli właściwość <xref:System.Windows.Forms.Control.BackgroundImage%2A> jest ustawiona, obraz zostanie wyświetlony za zawartymi kontrolkami.  
   
 ### <a name="to-set-the-background-programmatically"></a>Aby programowo ustawić tło  
   
-1. Ustaw panelu <xref:System.Windows.Forms.Control.BackColor%2A> właściwości na wartość typu <xref:System.Drawing.Color?displayProperty=nameWithType>.  
+1. Ustaw właściwość <xref:System.Windows.Forms.Control.BackColor%2A> panelu na wartość typu <xref:System.Drawing.Color?displayProperty=nameWithType>.  
   
     ```vb  
     Panel1.BackColor = Color.AliceBlue  
@@ -37,7 +37,7 @@ Formularze Windows <xref:System.Windows.Forms.Panel> formant może wyświetlić 
     panel1->BackColor = Color::AliceBlue;  
     ```  
   
-2. Ustaw panelu <xref:System.Windows.Forms.Control.BackgroundImage%2A> właściwość za pomocą <xref:System.Drawing.Image.FromFile%2A> metody <xref:System.Drawing.Image?displayProperty=nameWithType> klasy.  
+2. Ustaw właściwość <xref:System.Windows.Forms.Control.BackgroundImage%2A> panelu przy użyciu metody <xref:System.Drawing.Image.FromFile%2A> klasy <xref:System.Drawing.Image?displayProperty=nameWithType>.  
   
     ```vb  
     ' You should replace the bolded image   

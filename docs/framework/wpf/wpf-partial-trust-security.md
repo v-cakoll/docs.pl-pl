@@ -1,5 +1,5 @@
 ---
-title: Zabezpieczenie częściowej relacji zaufania WPF
+title: Zabezpieczenia częściowej relacji zaufania
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: ce9341a45b43c4af4543cf473597c273c33701fc
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 0d9bbcc32eea49afc6ecc713b0cf005b4434a67d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636552"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743340"
 ---
 # <a name="wpf-partial-trust-security"></a>Zabezpieczenie częściowej relacji zaufania WPF
 <a name="introduction"></a>Ogólnie rzecz biorąc, aplikacje internetowe powinny być ograniczone przez bezpośredni dostęp do krytycznych zasobów systemowych, aby zapobiec złośliwym szkodom. Domyślnie języki skryptów HTML i po stronie klienta nie mogą uzyskać dostępu do krytycznych zasobów systemowych. Ponieważ aplikacje hostowane w przeglądarce Windows Presentation Foundation (WPF) mogą być uruchamiane z przeglądarki, powinny one być zgodne z podobnym zestawem ograniczeń. Aby wymusić te ograniczenia, WPF korzysta z zabezpieczeń dostępu kodu (CAS) i ClickOnce (zobacz [strategia zabezpieczeń WPF-platforma Security](wpf-security-strategy-platform-security.md)). Domyślnie aplikacje hostowane w przeglądarce żądają zestawu uprawnień strefy Internetu, niezależnie od tego, czy są uruchamiane z Internetu, lokalnego intranetu, czy komputera lokalnego. Aplikacje działające z dowolnym elementem mniejszym niż pełny zestaw uprawnień są uznawane za działające z częściowym zaufaniem.  
@@ -43,10 +43,10 @@ ms.locfileid: "75636552"
   
 |Obszar funkcji|Funkcja|  
 |------------------|-------------|  
-|Ogólne|Okno przeglądarki<br /><br /> Dostęp do lokacji pochodzenia<br /><br /> IsolatedStorage (limit 512 KB)<br /><br /> Dostawcy UIAutomation<br /><br /> Polecenia<br /><br /> Edytory Input Method Editor (IME)<br /><br /> Pióro i atrament<br /><br /> Symulowane przeciąganie/upuszczanie przy użyciu funkcji przechwytywania i przenoszenia myszy<br /><br /> OpenFileDialog<br /><br /> Deserializacja XAML (za pośrednictwem XamlReader. Load)|  
+|Ogólne|Okno przeglądarki<br /><br /> Dostęp do lokacji pochodzenia<br /><br /> IsolatedStorage (limit 512 KB)<br /><br /> Dostawcy UIAutomation<br /><br /> Przegląd<br /><br /> Edytory Input Method Editor (IME)<br /><br /> Pióro i atrament<br /><br /> Symulowane przeciąganie/upuszczanie przy użyciu funkcji przechwytywania i przenoszenia myszy<br /><br /> OpenFileDialog<br /><br /> Deserializacja XAML (za pośrednictwem XamlReader. Load)|  
 |Integracja z siecią Web|Okno dialogowe pobierania przeglądarki<br /><br /> Nawigacja zainicjowana przez użytkownika najwyższego poziomu<br /><br /> mailto: linki<br /><br /> Parametry Uniform Resource Identifier<br /><br /> HTTPWebRequest<br /><br /> Zawartość WPF hostowana w elemencie IFRAME<br /><br /> Hosting stron HTML na tej samej stronie przy użyciu ramki<br /><br /> Hosting tych samych stron HTML witryny przy użyciu przeglądarki WebBrowser<br /><br /> Usługi sieci Web (ASMX)<br /><br /> Usługi sieci Web (przy użyciu Windows Communication Foundation)<br /><br /> Obsługa skryptów<br /><br /> Document Object Model|  
-|Wizualizacje|2D i 3W<br /><br /> Animacja<br /><br /> Nośnik (lokacja źródłowa i międzydomenowa)<br /><br /> Przetwarzanie obrazów/audio/wideo|  
-|Czytanie|FlowDocuments<br /><br /> Dokumenty XPS<br /><br /> Osadzone & czcionki systemowe<br /><br /> CFF & czcionki TrueType|  
+|Wizualizacji|2D i 3W<br /><br /> Animacja<br /><br /> Nośnik (lokacja źródłowa i międzydomenowa)<br /><br /> Przetwarzanie obrazów/audio/wideo|  
+|Odczytu|FlowDocuments<br /><br /> Dokumenty XPS<br /><br /> Osadzone & czcionki systemowe<br /><br /> CFF & czcionki TrueType|  
 |Edytowanie|Sprawdzanie pisowni<br /><br /> RichTextBox<br /><br /> Obsługa przezroczystego tekstu i schowka<br /><br /> Wklej zainicjowany przez użytkownika<br /><br /> Kopiowanie wybranej zawartości|  
 |Formanty|Formanty ogólne|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75636552"
 |Obszar funkcji|Funkcja|  
 |------------------|-------------|  
 |Ogólne|Okno (zdefiniowane przez aplikację okna i okna dialogowe)<br /><br /> SaveFileDialog<br /><br /> System plików<br /><br /> Dostęp do rejestru<br /><br /> Przeciągnij i opuść<br /><br /> Serializacja XAML (za pośrednictwem XamlWriter. Save)<br /><br /> UIAutomation klienci<br /><br /> Dostęp do okna źródłowego (HwndHost)<br /><br /> Pełna pomoc techniczna mowy<br /><br /> Współdziałanie Windows Forms|  
-|Wizualizacje|Efekty mapy bitowej<br /><br /> Kodowanie obrazu|  
+|Wizualizacji|Efekty mapy bitowej<br /><br /> Kodowanie obrazu|  
 |Edytowanie|Schowek formatu tekstu sformatowanego<br /><br /> Pełna obsługa XAML|  
   
 <a name="Partial_Trust_Programming"></a>   
@@ -133,7 +133,7 @@ ms.locfileid: "75636552"
 |systemem DNS,|Dostęp do serwerów DNS|Tak|Nie|  
 |Zmienne środowiskowe|Odczyt|Tak|Nie|  
 |Okna dialogowe plików|Otwarcie|Tak|Tak|  
-|Okna dialogowe plików|Bez ograniczeń|Tak|Nie|  
+|Okna dialogowe plików|Nieograniczone|Tak|Nie|  
 |Izolowany magazyn|Izolacja zestawu przez użytkownika|Tak|Nie|  
 |Izolowany magazyn|Nieznana izolacja|Tak|Tak|  
 |Izolowany magazyn|Nieograniczony limit przydziału użytkowników|Tak|Nie|  
@@ -143,7 +143,7 @@ ms.locfileid: "75636552"
 |Odbicie|Wysyłać|Tak|Nie|  
 |Zabezpieczenia|Wykonywanie kodu zarządzanego|Tak|Tak|  
 |Zabezpieczenia|Potwierdzenie przyznanych uprawnień|Tak|Nie|  
-|Interfejs użytkownika|Bez ograniczeń|Tak|Nie|  
+|Interfejs użytkownika|Nieograniczone|Tak|Nie|  
 |Interfejs użytkownika|Bezpieczne okna najwyższego poziomu|Tak|Tak|  
 |Interfejs użytkownika|Własny schowek|Tak|Tak|  
 |Przeglądarki sieci Web|Bezpieczne nawigowanie po ramce do kodu HTML|Tak|Tak|  

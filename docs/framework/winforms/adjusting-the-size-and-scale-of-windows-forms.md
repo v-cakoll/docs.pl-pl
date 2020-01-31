@@ -1,23 +1,23 @@
 ---
-title: Dopasowanie rozmiaru i skali Windows Forms
+title: Dostosuj rozmiar i skalę
 ms.date: 04/07/2017
 helpviewer_keywords:
 - Windows Forms, changing size
 - Windows Forms, adjusting size
 - Windows Forms, changing scale
 ms.assetid: a014d2b3-3273-4521-95e1-00171033bf58
-ms.openlocfilehash: 1334d87b3c911edc6a416ca004581025b0de8fb9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: db82e290de93fb24ccd4f3a504fe8fdfba3b2e1b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916734"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739793"
 ---
 # <a name="adjusting-the-size-and-scale-of-windows-forms"></a>Dopasowanie rozmiaru i skali Windows Forms
 Ten temat zawiera linki do informacji o zmianie rozmiarów Windows Forms.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Zmień rozmiar Windows Forms](how-to-resize-windows-forms.md)  
+ [Instrukcje: zmienianie rozmiarów formularzy Windows Forms](how-to-resize-windows-forms.md)  
  Zawiera instrukcje dotyczące określania rozmiaru Windows Forms.  
   
  [Automatyczne skalowanie w formularzach Windows Forms](automatic-scaling-in-windows-forms.md)  

@@ -1,16 +1,16 @@
 ---
-title: Przegląd Lokalizacja i globalizacja WPF
+title: Przegląd globalizacji i lokalizacji
 ms.date: 03/30/2017
 helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: c2b78b990969fb5bc9814ebda8ffcf38efa458b1
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 9be6245d7429466490d9dac93c5b94d70bde30bd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559927"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744474"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Przegląd Lokalizacja i globalizacja WPF
 
@@ -184,8 +184,8 @@ Użyj ulubionego edytora CSV, który obsługuje kodowanie Unicode, aby edytować
 |Button_2:System.Windows.Controls.Button.$Content|Przycisk|Anuluj|
 |Button_3:System.Windows.Controls.Button.$Content|Przycisk|Przeglądaj...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Tekst|Wpisz nazwę programu, folderu, dokumentu lub zasobu internetowego, a system Windows go otworzy.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Tekst|Otwarty:|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Tekst|Wpisz nazwę programu, folderu, dokumentu lub zasobu internetowego, a system Windows otworzy go.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Tekst|Otwórz|
 |Window_1:System.Windows.Window.Title|Tytuł|Uruchom|
 
 Lokalizowanie aplikacji do wersji niemieckiej wymaga następujących tłumaczeń:

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3fdf523-274a-449c-920b-9fcb0aed1d97
 topic_type:
 - apiref
-ms.openlocfilehash: 6c74a6c371ababb21bfda9b8dd2910d6a7881e6a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 373df8a47bdcbc833ffaea05bb205a63b5f583ec
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125541"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777771"
 ---
 # <a name="icordebugcode4-interface"></a>ICorDebugCode4, interfejs
 Zapewnia metodę, która umożliwia debugerowi Wyliczenie zmiennych lokalnych i argumentów w funkcji.  
@@ -28,7 +28,7 @@ Zapewnia metodę, która umożliwia debugerowi Wyliczenie zmiennych lokalnych i 
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[EnumerateVariableHomes, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md)|Pobiera moduł wyliczający do zmiennych lokalnych i argumentów w funkcji.|  
+|[EnumerateVariableHomes, metoda](icordebugcode4-enumeratevariablehomes-method.md)|Pobiera moduł wyliczający do zmiennych lokalnych i argumentów w funkcji.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -46,5 +46,5 @@ Zapewnia metodę, która umożliwia debugerowi Wyliczenie zmiennych lokalnych i 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugCode3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugCode3, interfejs](icordebugcode3-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

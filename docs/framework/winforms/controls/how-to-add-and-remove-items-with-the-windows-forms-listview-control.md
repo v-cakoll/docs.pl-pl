@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ListView formularzy systemu Windows'
+title: Dodawanie i usuwanie elementów z kontrolką ListView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - list views [Windows Forms], adding list items
 - ListView control [Windows Forms], adding list items
 ms.assetid: 1b35a80a-edd8-495f-a807-a28c4aae52c6
-ms.openlocfilehash: 8a97d73b9b2c46d02ae0794ad66b20a04db58af6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbfe99db857ebe3a80bf99926f3ce0bec38a1f3f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011128"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743139"
 ---
-# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ListView formularzy systemu Windows
-Proces dodawania elementu do formularzy Windows <xref:System.Windows.Forms.ListView> kontroli składa się przede wszystkim określenie elementu i przypisywanie właściwości do niego. Dodawanie lub usuwanie pozycji listy może odbywać się w dowolnym momencie.  
+# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>Porady: dodawanie i usuwanie elementów za pomocą formantu ListView formularzy systemu Windows
+Proces dodawania elementu do kontrolki <xref:System.Windows.Forms.ListView> Windows Forms składa się głównie z określania elementu i przypisywania do niego właściwości. Dodawanie lub usuwanie elementów listy można wykonać w dowolnym momencie.  
   
 ### <a name="to-add-items-programmatically"></a>Aby programowo dodać elementy  
   
-1. Użyj <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> metody <xref:System.Windows.Forms.ListView.Items%2A> właściwości.  
+1. Użyj metody <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> właściwości <xref:System.Windows.Forms.ListView.Items%2A>.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#11)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#11)]  
   
 ### <a name="to-remove-items-programmatically"></a>Aby programowo usunąć elementy  
   
-1. Użyj <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> lub <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> metody <xref:System.Windows.Forms.ListView.Items%2A> właściwości. <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> Metoda usuwa pojedynczy element; <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> metoda usuwa wszystkie elementy z listy.  
+1. Użyj metody <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> lub <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> właściwości <xref:System.Windows.Forms.ListView.Items%2A>. Metoda <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> usuwa pojedynczy element; Metoda <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> usuwa wszystkie elementy z listy.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#12)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#12)]  
@@ -36,5 +36,5 @@ Proces dodawania elementu do formularzy Windows <xref:System.Windows.Forms.ListV
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.ListView>
-- [Kontrolka ListView](listview-control-windows-forms.md)
+- [ListView, kontrolka](listview-control-windows-forms.md)
 - [ListView, kontrolka — omówienie](listview-control-overview-windows-forms.md)

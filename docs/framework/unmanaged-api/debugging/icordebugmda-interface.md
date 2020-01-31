@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ecbb854-295c-4dd4-b9fc-01ebeac46e06
 topic_type:
 - apiref
-ms.openlocfilehash: 4201fe23bf54388510088e21471edce91809e94c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a147aee1ebba57b86dbbf8a7648456b8d7494936
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129799"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793194"
 ---
 # <a name="icordebugmda-interface"></a>ICorDebugMDA — Interfejs
 Reprezentuje komunikat asystenta zarządzanego debugowania (MDA).  
@@ -28,11 +28,11 @@ Reprezentuje komunikat asystenta zarządzanego debugowania (MDA).
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetDescription, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getdescription-method.md)|Pobiera ciąg zawierający opis tego elementu MDA.|  
-|[GetFlags, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getflags-method.md)|Pobiera flagi skojarzone z tym zdarzeniem MDA.|  
-|[GetName, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getname-method.md)|Pobiera ciąg zawierający nazwę tego elementu MDA.|  
-|[GetOSThreadId, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|Pobiera identyfikator wątku systemu operacyjnego, na którym jest wykonywane zdarzenie MDA.|  
-|[GetXML, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getxml-method.md)|Pobiera pełny strumień XML skojarzony z tym MDA.|  
+|[GetDescription, metoda](icordebugmda-getdescription-method.md)|Pobiera ciąg zawierający opis tego elementu MDA.|  
+|[GetFlags, metoda](icordebugmda-getflags-method.md)|Pobiera flagi skojarzone z tym zdarzeniem MDA.|  
+|[GetName, metoda](icordebugmda-getname-method.md)|Pobiera ciąg zawierający nazwę tego elementu MDA.|  
+|[GetOSThreadId, metoda](icordebugmda-getosthreadid-method.md)|Pobiera identyfikator wątku systemu operacyjnego, na którym jest wykonywane zdarzenie MDA.|  
+|[GetXML, metoda](icordebugmda-getxml-method.md)|Pobiera pełny strumień XML skojarzony z tym MDA.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -50,5 +50,5 @@ Reprezentuje komunikat asystenta zarządzanego debugowania (MDA).
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

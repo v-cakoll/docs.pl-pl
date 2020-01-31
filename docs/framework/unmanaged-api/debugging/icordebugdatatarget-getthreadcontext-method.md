@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8954268-1821-4b23-b665-dbb55f2af31b
 topic_type:
 - apiref
-ms.openlocfilehash: 278320391615eddaa8ba878ef87f802f30cddb95
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3eace2d91b3bb6e637a659b8b49a31450ebc2c42
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122025"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783730"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext — Metoda
 Zwraca bieżący kontekst wątku dla określonego wątku.  
@@ -49,7 +49,7 @@ HRESULT GetThreadContext(
  określoną Bufor, w którym będzie przechowywany kontekst wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- Na platformach Windows `pContext` musi być strukturą `CONTEXT` (zdefiniowaną w WinNT. h), która jest odpowiednia dla typu maszyny określonego przez metodę [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) . `contextFlags` muszą mieć te same wartości, co pole `ContextFlags` struktury `CONTEXT`. Struktura `CONTEXT` jest specyficzna dla procesora; Szczegóły można znaleźć w pliku WinNT. h.  
+ Na platformach Windows `pContext` musi być strukturą `CONTEXT` (zdefiniowaną w WinNT. h), która jest odpowiednia dla typu maszyny określonego przez metodę [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) . `contextFlags` muszą mieć te same wartości, co pole `ContextFlags` struktury `CONTEXT`. Struktura `CONTEXT` jest specyficzna dla procesora; Szczegóły można znaleźć w pliku WinNT. h.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -62,6 +62,6 @@ HRESULT GetThreadContext(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugDataTarget, interfejs](icordebugdatatarget-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

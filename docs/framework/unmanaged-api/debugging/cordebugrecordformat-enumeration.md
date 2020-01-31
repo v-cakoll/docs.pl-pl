@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d680c1c0-16ab-4ccc-9444-39cf8e0e05ee
 topic_type:
 - apiref
-ms.openlocfilehash: 239b1a9f258f435e6dcca6e00cc20df5b5c01188
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 99fc89d1aee6c9f0fbffc193e12ce563e820f268
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097453"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789283"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>Wyliczenie CorDebugRecordFormat
 Opisuje format danych w tablicy bajtów, który zawiera informacje na temat natywnego zdarzenia debugowania wyjątku.  
@@ -37,7 +37,7 @@ typedef enum CorDebugRecordFormat {
 |`FORMAT_WINDOWS_EXCEPTIONRECORD64`|Dane to 64-bitowy rekord wyjątku systemu Windows.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element członkowski wyliczenia `CorDebugRecordFormat` jest przenoszona do metody [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) , aby wskazać format tablicy bajtowej w argumencie `pRecord`.  
+ Element członkowski wyliczenia `CorDebugRecordFormat` jest przenoszona do metody [DecodeEvent](icordebugprocess6-decodeevent-method.md) , aby wskazać format tablicy bajtowej w argumencie `pRecord`.  
   
 > [!NOTE]
 > To wyliczenie jest przeznaczone do użycia tylko w scenariuszach debugowania .NET Native.  
@@ -53,4 +53,4 @@ typedef enum CorDebugRecordFormat {
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debugowanie, wyliczenia](debugging-enumerations.md)

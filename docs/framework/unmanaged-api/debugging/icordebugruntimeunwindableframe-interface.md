@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: cd6a3982-6ed3-4909-808d-a66055e813e0
 topic_type:
 - apiref
-ms.openlocfilehash: 2902744b6af3c7b2bd4def73b04807ce3333a8a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 26b0c78d5b34b920decc8c549d90ba8147e3f323
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131893"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791920"
 ---
 # <a name="icordebugruntimeunwindableframe-interface"></a>ICorDebugRuntimeUnwindableFrame — Interfejs
 Zapewnia obsługę niezarządzanych metod, które wymagają środowiska uruchomieniowego języka wspólnego (CLR), aby zwolnić ramkę.  
   
 ## <a name="remarks"></a>Uwagi  
- `ICorDebugRuntimeUnwindableFrame` to wyspecjalizowana wersja interfejsu ICorDebugFrame. Jest on używany przez metody niezarządzane, które wymagają wykonania przez środowisko uruchomieniowe ramki na bieżącym stosie. Istniejące konwencje odwinięcia nie działają, ponieważ nie używają kodu skompilowanego JIT. Gdy debuger widzi niewidocznyą ramkę, powinien użyć metody [ICorDebugStackWalk:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md) , aby ją rozwinięcie, ale powinien wykonać inspekcję. Gdy debuger otrzymuje `ICorDebugRuntimeUnwindableFrame`, może wywołać metodę [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) w celu pobrania kontekstu ramki.  
+ `ICorDebugRuntimeUnwindableFrame` to wyspecjalizowana wersja interfejsu ICorDebugFrame. Jest on używany przez metody niezarządzane, które wymagają wykonania przez środowisko uruchomieniowe ramki na bieżącym stosie. Istniejące konwencje odwinięcia nie działają, ponieważ nie używają kodu skompilowanego JIT. Gdy debuger widzi niewidocznyą ramkę, powinien użyć metody [ICorDebugStackWalk:: Next](icordebugstackwalk-next-method.md) , aby ją rozwinięcie, ale powinien wykonać inspekcję. Gdy debuger otrzymuje `ICorDebugRuntimeUnwindableFrame`, może wywołać metodę [ICorDebugStackWalk:: GetContext](icordebugstackwalk-getcontext-method.md) w celu pobrania kontekstu ramki.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -38,5 +38,5 @@ Zapewnia obsługę niezarządzanych metod, które wymagają środowiska uruchomi
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

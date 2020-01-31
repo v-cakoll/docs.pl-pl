@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740266"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794272"
 ---
 # <a name="threading-model"></a>Model wątkowości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zaprojektowano w celu zaoszczędzenia deweloperom trudności związanych z wątkami. W związku z tym większość deweloperów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie będzie musiała pisać interfejsu, który używa więcej niż jednego wątku. Ponieważ programy wielowątkowe są skomplikowane i trudne do debugowania, należy je unikać, gdy istnieją rozwiązania jednowątkowe.
@@ -177,7 +177,7 @@ ms.locfileid: "75740266"
 
  `GetWeatherAsync` użyje jednej z opisanych wcześniej technik, takich jak tworzenie wątku w tle, do wykonywania pracy asynchronicznej, bez blokowania wątku wywołującego.
 
- Jedną z najważniejszych części tego wzorca jest wywołanie metody *MethodName*`Completed` w tym samym wątku, który wywołał metodę *MethodName*`Async`, aby rozpocząć od. Można to zrobić za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dość łatwo, przez przechowywanie <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>, a następnie składnika niegraficznego można używać tylko w aplikacjach [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], a nie w programach [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i ASP.NET.
+ Jedną z najważniejszych części tego wzorca jest wywołanie metody *MethodName*`Completed` w tym samym wątku, który wywołał metodę *MethodName*`Async`, aby rozpocząć od. Można to zrobić za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dość łatwo, przez przechowywanie <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>, a następnie składnika niegraficznego można używać tylko w aplikacjach [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], a nie w programach Windows Forms i ASP.NET.
 
  Klasa <xref:System.Windows.Threading.DispatcherSynchronizationContext> zaspokaja tę potrzebę — należy traktować ją jako uproszczoną wersję <xref:System.Windows.Threading.Dispatcher>, która współpracuje z innymi środowiskami [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].
 

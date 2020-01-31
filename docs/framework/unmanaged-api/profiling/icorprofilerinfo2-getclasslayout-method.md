@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3a36987-5666-4e2f-95b5-d0cb246502ec
 topic_type:
 - apiref
-ms.openlocfilehash: 37400e3b69b3884e31479fd7cdfccb473408bfbf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 85319a45861b2b48f7690f69bb8f9f9469af014c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433395"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862805"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>ICorProfilerInfo2::GetClassLayout — Metoda
 Pobiera informacje o układzie, w pamięci, pól zdefiniowanych przez określoną klasę. Oznacza to, że ta metoda pobiera przesunięcia pól klasy.  
@@ -55,7 +55,7 @@ HRESULT GetClassLayout(
 ## <a name="remarks"></a>Uwagi  
  Metoda `GetClassLayout` zwraca tylko pola zdefiniowane przez samą klasę. Jeśli Klasa nadrzędna klasy ma również zdefiniowane pola, profiler musi wywołać `GetClassLayout` w klasie nadrzędnej, aby uzyskać te pola.  
   
- Jeśli używasz `GetClassLayout` z klasami ciągów, metoda zakończy się niepowodzeniem z kodem błędu E_INVALIDARG. Użyj [ICorProfilerInfo2:: GetStringLayout —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) , aby uzyskać informacje na temat układu ciągu. `GetClassLayout` również zakończy się niepowodzeniem w przypadku wywołania z klasą Array.  
+ Jeśli używasz `GetClassLayout` z klasami ciągów, metoda zakończy się niepowodzeniem z kodem błędu E_INVALIDARG. Użyj [ICorProfilerInfo2:: GetStringLayout —](icorprofilerinfo2-getstringlayout-method.md) , aby uzyskać informacje na temat układu ciągu. `GetClassLayout` również zakończy się niepowodzeniem w przypadku wywołania z klasą Array.  
   
  Po powrocie `GetClassLayout` należy sprawdzić, czy bufor `rFieldOffset` był wystarczająco duży, aby zawierał wszystkie dostępne struktury `COR_FIELD_OFFSET`. W tym celu należy porównać wartość `pcFieldOffset` punkty z rozmiarem `rFieldOffset` podzielonym przez rozmiar struktury `COR_FIELD_OFFSET`. Jeśli `rFieldOffset` nie jest wystarczająco duży, Przydziel większy bufor `rFieldOffset`, zaktualizuj `cFieldOffset` przy użyciu nowego, większego rozmiaru i ponownie wywołaj `GetClassLayout`.  
   
@@ -72,7 +72,7 @@ HRESULT GetClassLayout(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo, interfejs](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interfejs](icorprofilerinfo2-interface.md)
+- [Interfejsy profilowania](profiling-interfaces.md)
+- [Profilowanie](index.md)

@@ -2,12 +2,12 @@
 title: Metoda ICorDebugAssembly3::EnumerateContainedAssemblies
 ms.date: 03/30/2017
 ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
-ms.openlocfilehash: 032f32a08efa92cea682b0e2fc974dc607a9dca4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 616675f839e562227558ece440bdfdf497747572
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133943"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784564"
 ---
 # <a name="icordebugassembly3enumeratecontainedassemblies-method"></a>Metoda ICorDebugAssembly3::EnumerateContainedAssemblies
 Pobiera moduł wyliczający dla zestawów zawartych w tym zestawie.  
@@ -24,7 +24,7 @@ HRESULT EnumerateContainedAssemblies(
  `ppAssemblies`  
  określoną Wskaźnik do adresu obiektu interfejsu ICorDebugAssemblyEnum, który jest modułem wyliczającym.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  `S_OK`, jeśli ten obiekt `ICorDebugAssembly3` jest kontenerem; w przeciwnym razie `S_FALSE`i Wyliczenie jest puste.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -44,5 +44,5 @@ HRESULT EnumerateContainedAssemblies(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugAssembly3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugAssembly3, interfejs](icordebugassembly3-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

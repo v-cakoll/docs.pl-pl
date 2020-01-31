@@ -1,5 +1,5 @@
 ---
-title: ICorDebugNativeFrame — Interfejs
+title: ICorDebugNativeFrame, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugNativeFrame
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 04819c58-7246-4b32-befb-680cf1dbc436
 topic_type:
 - apiref
-ms.openlocfilehash: 04bdbc49217236bc6c05a718cb4d42067cafd8bf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41ac0b29ade2f78b893df72e8a17624373f6dd78
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096671"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792794"
 ---
-# <a name="icordebugnativeframe-interface"></a>ICorDebugNativeFrame — Interfejs
+# <a name="icordebugnativeframe-interface"></a>ICorDebugNativeFrame, interfejs
 
 Wyspecjalizowana implementacja ICorDebugFrame używana w przypadku ramek natywnych.  
   
@@ -29,15 +29,15 @@ Wyspecjalizowana implementacja ICorDebugFrame używana w przypadku ramek natywny
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[CanSetIP, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-cansetip-method.md)|Pobiera wartość wskazującą, czy można bezpiecznie ustawić wskaźnik instrukcji na określoną lokalizację przesunięcia w kodzie natywnym.|  
-|[GetIP, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getip-method.md)|Pobiera przesunięcie ramki stosu do kodu natywnego.|  
-|[GetLocalDoubleRegisterValue, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocaldoubleregistervalue-method.md)|Pobiera wskaźnik do elementu ICorDebugValue, który reprezentuje wartość argumentu lub zmiennej lokalnej przechowywanej w dwóch rejestrach pamięci ramki natywnej.|  
-|[GetLocalMemoryRegisterValue, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocalmemoryregistervalue-method.md)|Pobiera wskaźnik do `ICorDebugValue`, który reprezentuje wartość zmiennej lokalnej, w której niskie bity są przechowywane w określonym rejestrze, a duże bity są przechowywane przy określonym adresie pamięci.|  
-|[GetLocalMemoryValue, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocalmemoryvalue-method.md)|Pobiera wskaźnik do `ICorDebugValue`, który reprezentuje wartość zmiennej lokalnej przechowywanej w określonym adresie pamięci.|  
-|[GetLocalRegisterMemoryValue, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocalregistermemoryvalue-method.md)|Pobiera wskaźnik do `ICorDebugValue`, który reprezentuje wartość zmiennej lokalnej, w której duże bity są przechowywane w określonym rejestrze, a niskie bity są przechowywane w określonym adresie pamięci|  
-|[GetLocalRegisterValue, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocalregistervalue-method.md)|Pobiera wskaźnik do `ICorDebugValue`, który reprezentuje wartość argumentu lub zmiennej lokalnej przechowywanej w określonym rejestrze macierzystym.|  
-|[GetRegisterSet, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getregisterset-method.md)|Pobiera wskaźnik do elementu [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) , który reprezentuje zestaw rejestru dla tego `ICorDebugNativeFrame`.|  
-|[SetIP, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)|Ustawia wskaźnik instrukcji na określoną lokalizację przesunięcia w kodzie natywnym.|  
+|[CanSetIP, metoda](icordebugnativeframe-cansetip-method.md)|Pobiera wartość wskazującą, czy można bezpiecznie ustawić wskaźnik instrukcji na określoną lokalizację przesunięcia w kodzie natywnym.|  
+|[GetIP, metoda](icordebugnativeframe-getip-method.md)|Pobiera przesunięcie ramki stosu do kodu natywnego.|  
+|[GetLocalDoubleRegisterValue, metoda](icordebugnativeframe-getlocaldoubleregistervalue-method.md)|Pobiera wskaźnik do elementu ICorDebugValue, który reprezentuje wartość argumentu lub zmiennej lokalnej przechowywanej w dwóch rejestrach pamięci ramki natywnej.|  
+|[GetLocalMemoryRegisterValue, metoda](icordebugnativeframe-getlocalmemoryregistervalue-method.md)|Pobiera wskaźnik do `ICorDebugValue`, który reprezentuje wartość zmiennej lokalnej, w której niskie bity są przechowywane w określonym rejestrze, a duże bity są przechowywane przy określonym adresie pamięci.|  
+|[GetLocalMemoryValue, metoda](icordebugnativeframe-getlocalmemoryvalue-method.md)|Pobiera wskaźnik do `ICorDebugValue`, który reprezentuje wartość zmiennej lokalnej przechowywanej w określonym adresie pamięci.|  
+|[GetLocalRegisterMemoryValue, metoda](icordebugnativeframe-getlocalregistermemoryvalue-method.md)|Pobiera wskaźnik do `ICorDebugValue`, który reprezentuje wartość zmiennej lokalnej, w której duże bity są przechowywane w określonym rejestrze, a niskie bity są przechowywane w określonym adresie pamięci|  
+|[GetLocalRegisterValue, metoda](icordebugnativeframe-getlocalregistervalue-method.md)|Pobiera wskaźnik do `ICorDebugValue`, który reprezentuje wartość argumentu lub zmiennej lokalnej przechowywanej w określonym rejestrze macierzystym.|  
+|[GetRegisterSet, metoda](icordebugnativeframe-getregisterset-method.md)|Pobiera wskaźnik do elementu [ICorDebugRegisterSet](icordebugregisterset-interface.md) , który reprezentuje zestaw rejestru dla tego `ICorDebugNativeFrame`.|  
+|[SetIP, metoda](icordebugnativeframe-setip-method.md)|Ustawia wskaźnik instrukcji na określoną lokalizację przesunięcia w kodzie natywnym.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -55,4 +55,4 @@ Wyspecjalizowana implementacja ICorDebugFrame używana w przypadku ramek natywny
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

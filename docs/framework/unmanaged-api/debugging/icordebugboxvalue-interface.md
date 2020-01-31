@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBoxValue — Interfejs
+title: ICorDebugBoxValue, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBoxValue
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 3d3ae7e2-97d4-46de-a2c3-cb78f3490f9d
 topic_type:
 - apiref
-ms.openlocfilehash: a40e12655106cca01add065c2f95384b0eb1a286
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1ec54f4fe36aaf38d7c0ce0586733729bd2fddea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122809"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784467"
 ---
-# <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue — Interfejs
+# <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue, interfejs
 
 Podklasa elementu "ICorDebugHeapValue" reprezentująca obiekt klasy wartości w ramce.  
   
@@ -29,7 +29,7 @@ Podklasa elementu "ICorDebugHeapValue" reprezentująca obiekt klasy wartości w 
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetObject, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Pobiera wskaźnik interfejsu do zapakowanego wystąpienia "ICorDebugObjectValue".|  
+|[GetObject, metoda](icordebugboxvalue-getobject-method.md)|Pobiera wskaźnik interfejsu do zapakowanego wystąpienia "ICorDebugObjectValue".|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -47,4 +47,4 @@ Podklasa elementu "ICorDebugHeapValue" reprezentująca obiekt klasy wartości w 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

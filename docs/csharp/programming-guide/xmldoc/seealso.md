@@ -12,35 +12,40 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: 600affdfd8cb524a7fba479d3a68ad8b3e40098c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ad22b423d085a152f47c4e34d7ee4247ef9836b8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694923"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789682"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso — > (C# Przewodnik programowania)
-## <a name="syntax"></a>Składnia  
-  
-```xml  
-<seealso cref="member"/>  
-```  
-  
-## <a name="parameters"></a>Parametry  
- cref = "`member`"  
- Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i przekazuje `member` do nazwy elementu w wyjściowym kodzie XML.`member` musi znajdować się w podwójnym cudzysłowie ("").  
-  
- Aby uzyskać informacje na temat sposobu tworzenia odwołania cref do typu ogólnego, zobacz [\<see >](./see.md).  
-  
-## <a name="remarks"></a>Uwagi  
- Tag \<seealso — > umożliwia określenie tekstu, który ma być wyświetlany w sekcji Zobacz też. Użyj [\<zobacz >](./see.md) , aby określić łącze z tekstu.  
-  
- Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
-  
-## <a name="example"></a>Przykład  
- Zobacz [\<podsumowanie >](./summary.md) , aby uzyskać przykład użycia \<seealso — >.  
-  
+
+## <a name="syntax"></a>Składnia
+
+```xml
+<seealso cref="member"/>
+```
+
+## <a name="parameters"></a>Parametry
+
+- cref = "`member`"
+
+  Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i przekazuje `member` do nazwy elementu w wyjściowym kodzie XML.`member` musi znajdować się w podwójnym cudzysłowie ("").
+
+  Aby uzyskać informacje na temat sposobu tworzenia odwołania cref do typu ogólnego, zobacz [\<see >](./see.md).
+
+## <a name="remarks"></a>Uwagi
+
+Tag \<seealso — > umożliwia określenie tekstu, który ma być wyświetlany w sekcji Zobacz też. Użyj [\<zobacz >](./see.md) , aby określić łącze z tekstu.
+
+Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.
+
+## <a name="example"></a>Przykład
+
+Zobacz [\<podsumowanie >](./summary.md) , aby uzyskać przykład użycia \<seealso — >.
+
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../index.md)
-- [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)
+- [C#Przewodnik programowania](../index.md)
+- [Zalecane Tagi dla komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

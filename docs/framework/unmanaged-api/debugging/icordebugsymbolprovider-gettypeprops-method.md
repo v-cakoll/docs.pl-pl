@@ -2,12 +2,12 @@
 title: 'ICorDebugSymbolProvider:: GetTypeProps, Metoda'
 ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
-ms.openlocfilehash: c87d9f6d0a719dae5e532e9c0369a7f9fc03748a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5fa091eaf2cf93b0c645effeec3c959d42665fc9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133669"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791547"
 ---
 # <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider:: GetTypeProps, Metoda
 Zwraca informacje o właściwościach typu, takich jak liczba podpisów jego parametrów ogólnych, z uwzględnieniem względnego adresu wirtualnego (RVA) w tabeli jednoelementowej.  
@@ -53,6 +53,6 @@ HRESULT GetTypeProps(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [GetMethodProps, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodprops-method.md)
-- [ICorDebugSymbolProvider, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [GetMethodProps, metoda](icordebugsymbolprovider-getmethodprops-method.md)
+- [ICorDebugSymbolProvider, interfejs](icordebugsymbolprovider-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

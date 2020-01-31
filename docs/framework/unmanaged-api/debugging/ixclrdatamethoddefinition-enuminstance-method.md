@@ -1,5 +1,5 @@
 ---
-title: Metoda IXCLRDataMethodDefinition::EnumInstance
+title: 'IXCLRDataMethodDefinition:: EnumInstance, Metoda'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodDefinition::EnumInstance Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7ad1a9957e9bffd7b28aa241723dedba1d11f4cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b6393d7fa4853c230203521e665bbe89d7b228e2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775869"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790444"
 ---
-# <a name="ixclrdatamethoddefinitionenuminstance-method"></a>Metoda IXCLRDataMethodDefinition::EnumInstance
+# <a name="ixclrdatamethoddefinitionenuminstance-method"></a>IXCLRDataMethodDefinition:: EnumInstance, Metoda
 
-Wylicza wystąpień tę definicję metody.
+Wylicza wystąpienia tej definicji metody.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,25 +40,25 @@ HRESULT EnumInstance(
 ## <a name="parameters"></a>Parametry
 
 `handle`\
-[out w] Dojście do wyliczania wystąpień.
+[in. out] Dojście do wyliczania wystąpień.
 
 `instance`\
-[out] Wystąpienie wyliczany.
+określoną Wyliczane wystąpienie.
 
 ## <a name="remarks"></a>Uwagi
 
-Podana metoda jest częścią `IXCLRDataMethodDefinition` interfejs i odpowiada czwarte miejsce tabeli wirtualnej metody.
+Podana metoda jest częścią interfejsu `IXCLRDataMethodDefinition` i odpowiada czwartemu gnieździe tabeli metody wirtualnej.
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-**Nagłówek:** Brak  
-**Biblioteka:** Brak  
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Nagłówek:** Dawaj  
+**Biblioteka:** Dawaj  
+**Wersje .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wyliczenie CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfejs IXCLRDataMethodDefinition](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)
-- [Interfejs IXCLRDataMethodInstance](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)
+- [CLRDataSourceType, Wyliczenie](clrdatasourcetype-enumeration.md)
+- [Debugowanie](index.md)
+- [IXCLRDataMethodDefinition, interfejs](ixclrdatamethoddefinition-interface.md)
+- [IXCLRDataMethodInstance, interfejs](ixclrdatamethodinstance-interface.md)

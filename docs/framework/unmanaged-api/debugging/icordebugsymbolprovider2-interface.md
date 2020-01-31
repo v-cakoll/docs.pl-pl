@@ -2,22 +2,22 @@
 title: ICorDebugSymbolProvider2, interfejs
 ms.date: 03/30/2017
 ms.assetid: 1c9c3d92-f0de-4d4d-87f1-0c702a4808af
-ms.openlocfilehash: fbf6e8ecaf877ac1948b2abbed58526e7a1eec93
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca5bb822be515c936560eb4888c72ea306888ff3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133561"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791488"
 ---
 # <a name="icordebugsymbolprovider2-interface"></a>ICorDebugSymbolProvider2, interfejs
-Logicznie rozszerza interfejs [ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md) w celu pobrania dodatkowych informacji o symbolach debugowania.  
+Logicznie rozszerza interfejs [ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md) w celu pobrania dodatkowych informacji o symbolach debugowania.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetFrameProps, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-getframeprops-method.md)|Zwraca metodę rozpoczynającą względny adres wirtualny metody i ramkę nadrzędną, w której znajduje się adres wirtualny względem kodu.|  
-|[GetGenericDictionaryInfo, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-getgenericdictionaryinfo-method.md)|Pobiera mapę ogólnego słownika.|  
+|[GetFrameProps, metoda](icordebugsymbolprovider2-getframeprops-method.md)|Zwraca metodę rozpoczynającą względny adres wirtualny metody i ramkę nadrzędną, w której znajduje się adres wirtualny względem kodu.|  
+|[GetGenericDictionaryInfo, metoda](icordebugsymbolprovider2-getgenericdictionaryinfo-method.md)|Pobiera mapę ogólnego słownika.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -35,6 +35,6 @@ Logicznie rozszerza interfejs [ICorDebugSymbolProvider](../../../../docs/framewo
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugSymbolProvider, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugSymbolProvider, interfejs](icordebugsymbolprovider-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

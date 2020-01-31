@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaf5938d-179c-4eaa-8d35-8523a4fadded
 topic_type:
 - apiref
-ms.openlocfilehash: fa317e1217ac0a9ca46bfeb312446534b1fca63a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 482afd09ce370fb1247864b9ac2032ee7e3a1dca
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131561"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788276"
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>ICorDebugManagedCallback2::ExceptionUnwind — Metoda
 Udostępnia powiadomienie o stanie podczas procesu odwracania wyjątku.  
@@ -47,7 +47,7 @@ HRESULT ExceptionUnwind (
  podczas Wartość wyliczenia CorDebugExceptionUnwindCallbackType —, która określa zdarzenie, które jest sygnalizowane przez wywołanie zwrotne w fazie unwind.  
   
  `dwFlags`  
- podczas Wartość wyliczenia [CorDebugExceptionFlags —](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) , która określa dodatkowe informacje o wyjątku.  
+ podczas Wartość wyliczenia [CorDebugExceptionFlags —](cordebugexceptionflags-enumeration.md) , która określa dodatkowe informacje o wyjątku.  
   
 ## <a name="remarks"></a>Uwagi  
  `ExceptionUnwind` jest wywoływana w różnych punktach w fazie unwind procesu obsługi wyjątków. `ExceptionUnwind` może być wywoływana więcej niż jeden raz podczas odwinięcia pojedynczego wyjątku.  
@@ -65,5 +65,5 @@ HRESULT ExceptionUnwind (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugManagedCallback2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2, interfejs](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback, interfejs](icordebugmanagedcallback-interface.md)

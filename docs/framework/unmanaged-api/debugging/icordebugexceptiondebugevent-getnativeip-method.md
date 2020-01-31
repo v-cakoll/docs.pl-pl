@@ -2,12 +2,12 @@
 title: 'ICorDebugExceptionDebugEvent:: GetNativeIP, Metoda'
 ms.date: 03/30/2017
 ms.assetid: 12e6a262-d9ac-49b8-9b80-1e653a2a3819
-ms.openlocfilehash: 42fedd20d7560dd84a2abf0efce227393035bc38
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 31af92dae47027b7285b422a05014b081d7e39a2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084746"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788682"
 ---
 # <a name="icordebugexceptiondebugeventgetnativeip-method"></a>ICorDebugExceptionDebugEvent:: GetNativeIP, Metoda
 Pobiera wskaźnik natywnej instrukcji dla tego zdarzenia debugowania wyjątku.  
@@ -29,12 +29,12 @@ HRESULT GetNativeIP(
   
 |Typ zdarzenia|Znaczenie wartości `pStackPointer`|  
 |----------------|--------------------------------------|  
-|[MANAGED_EXCEPTION_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|Adres instrukcji powodującej błąd.|  
-|[MANAGED_EXCEPTION_USER_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|Adres kodu w ramce wskazywanym przez metodę [GetStackPointer](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getstackpointer-method.md) , w której wykonywanie zostało wznowione, jeśli żaden wyjątek nie został zgłoszony. Wyjątek może lub nie może spowodować innego kodu, takiego jak blok catch klauzuli `try/catch/finally`, do wykonania w tej ramce.|  
-|[MANAGED_EXCEPTION_CATCH_HANDLER_FOUND](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|Adres kodu, w którym `catch` wykonywania procedury obsługi rozpocznie się w ramce wskazywanym przez metodę [GetStackPointer](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getstackpointer-method.md) .|  
-|[MANAGED_EXCEPTION_UNHANDLED](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|`pIP` jest równa 0.|  
+|[MANAGED_EXCEPTION_FIRST_CHANCE](cordebugrecordformat-enumeration.md)|Adres instrukcji powodującej błąd.|  
+|[MANAGED_EXCEPTION_USER_FIRST_CHANCE](cordebugrecordformat-enumeration.md)|Adres kodu w ramce wskazywanym przez metodę [GetStackPointer](icordebugexceptiondebugevent-getstackpointer-method.md) , w której wykonywanie zostało wznowione, jeśli żaden wyjątek nie został zgłoszony. Wyjątek może lub nie może spowodować innego kodu, takiego jak blok catch klauzuli `try/catch/finally`, do wykonania w tej ramce.|  
+|[MANAGED_EXCEPTION_CATCH_HANDLER_FOUND](cordebugrecordformat-enumeration.md)|Adres kodu, w którym `catch` wykonywania procedury obsługi rozpocznie się w ramce wskazywanym przez metodę [GetStackPointer](icordebugexceptiondebugevent-getstackpointer-method.md) .|  
+|[MANAGED_EXCEPTION_UNHANDLED](cordebugrecordformat-enumeration.md)|`pIP` jest równa 0.|  
   
- Typ zdarzenia jest dostępny w metodzie [ICorDebugDebugEvent:: GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) .  
+ Typ zdarzenia jest dostępny w metodzie [ICorDebugDebugEvent:: GetEventKind](icordebugdebugevent-geteventkind-method.md) .  
   
 > [!NOTE]
 > Ta metoda jest dostępna tylko z .NET Native.  
@@ -50,5 +50,5 @@ HRESULT GetNativeIP(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugExceptionDebugEvent, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugExceptionDebugEvent, interfejs](icordebugexceptiondebugevent-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

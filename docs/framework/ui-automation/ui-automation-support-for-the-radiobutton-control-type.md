@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Radio Button control type
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
-ms.openlocfilehash: 416d6d6b9d8e7fbd3b3bb5483ddd8dc22380166c
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 037f237537980f1c68855decf468da54e9a22d14
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741559"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76786099"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu RadioButton
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741559"
   
  Przycisk radiowy składa się z przycisku zaokrąglonego i tekstu zdefiniowanego przez aplikację (etykiety), ikony lub mapy bitowej, która wskazuje wybór przez użytkownika, wybierając przycisk. Aplikacja zwykle używa przycisków radiowych w polu grupy, aby zezwolić użytkownikowi na wybór z zestawu powiązanych, ale wzajemnie wykluczających się opcji. Na przykład aplikacja może przedstawić grupę przycisków radiowych, z których użytkownik może wybrać preferencję formatu dla tekstu wybranego w obszarze klienta. Użytkownik może wybrać format wyrównany do lewej, wyrównany do prawej lub wyorodkowany, zaznaczając odpowiedni przycisk radiowy. Zazwyczaj użytkownik może wybrać tylko jedną opcję z zestawu przycisków radiowych.  
   
- Poniższe sekcje definiują wymaganą strukturę drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], właściwości, wzorce formantów i zdarzenia dla typu formantu RadioButton. Wymagania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] są stosowane do wszystkich kontrolek listy, czy [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 czy [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ Poniższe sekcje definiują wymaganą strukturę drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], właściwości, wzorce formantów i zdarzenia dla typu formantu RadioButton. Wymagania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] są stosowane do wszystkich kontrolek listy, czy [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 czy Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Wymagana struktura drzewa automatyzacji interfejsu użytkownika  

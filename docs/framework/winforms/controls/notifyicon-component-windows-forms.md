@@ -1,5 +1,5 @@
 ---
-title: NotifyIcon — Składnik (Formularze systemu Windows)
+title: NotifyIcon, składnik
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application icons [Windows Forms], background processes
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - NotifyIcon component
 - SysTray icons
 ms.assetid: 20312268-1d67-494a-8601-5c43b7f1b513
-ms.openlocfilehash: b1237a1280142cf65002ca307179b054a8fb7dd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61fc4a53a16c3e7df8e0141cecb497a6a85fc5cb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627814"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744948"
 ---
 # <a name="notifyicon-component-windows-forms"></a>NotifyIcon — Składnik (Formularze systemu Windows)
-Formularze Windows `NotifyIcon` Wyświetla ikony w obszarze stanu powiadomień paska zadań dla procesów, które są uruchomione w tle, a w przeciwnym razie nie będzie mieć interfejsów użytkownika. Przykładem może być program ochrony przed wirusami, który jest możliwy, klikając ikonę w obszarze stanu powiadomień paska zadań.  
+Składnik `NotifyIcon` Windows Forms wyświetla ikony w obszarze powiadomień o stanie na pasku zadań dla procesów, które są uruchamiane w tle i w przeciwnym razie nie mają interfejsów użytkownika. Przykładem będzie program ochrony przed wirusami, do którego można uzyskać dostęp, klikając ikonę w obszarze powiadomień o stanie na pasku zadań.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [NotifyIcon, składnik — omówienie](notifyicon-component-overview-windows-forms.md)  
- Ogólne pojęcia związane z `NotifyIcon` składnik, który umożliwia użytkownikom wyświetlanie ikon dla procesów uruchomiona w tle, które nie mają interfejsu użytkownika.  
+ Wprowadza ogólne koncepcje składnika `NotifyIcon`, który umożliwia użytkownikom wyświetlanie ikon procesów uruchomionych w tle, które nie mają interfejsu użytkownika.  
   
- [Instrukcje: Dodawanie ikon aplikacji do paska zadań za pomocą składnika NotifyIcon formularzy Windows](app-icons-to-the-taskbar-with-wf-notifyicon.md)  
- Zawiera opis kroków ikona wyświetlana przez ustawienie `NotifyIcon` składnika.  
+ [Instrukcje: dodawanie ikon aplikacji do elementu TaskBar za pomocą składnika NotifyIcon formularzy Windows Forms](app-icons-to-the-taskbar-with-wf-notifyicon.md)  
+ Zawiera instrukcje dotyczące ustawiania ikony wyświetlanej przez składnik `NotifyIcon`.  
   
- [Instrukcje: Kojarzenie Menu skrótów za pomocą składnika NotifyIcon formularzy Windows](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
- Zawiera instrukcje dotyczące dodawania menu skrótów, aby `NotifyIcon` składnika.  
+ [Instrukcje: kojarzenie menu skrótów za pomocą składnika NotifyIcon formularzy Windows Forms](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
+ Zawiera kroki umożliwiające dodanie menu skrótów do składnika `NotifyIcon`.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.NotifyIcon>  
- Zawiera dodatkowe informacje na temat klasy i jej elementów członkowskich.  
+ Zawiera informacje referencyjne dotyczące klasy i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.
+ Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bca7a5b4-c207-4894-918c-0733926296dd
 topic_type:
 - apiref
-ms.openlocfilehash: d6af5aec4f1a012b6ec33cf80b1de62a7397262d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5bea1b75e94d8011d3582d4f07d36bbc7a560502
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442987"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862220"
 ---
 # <a name="icorprofilerinfo4enumthreads-method"></a>ICorProfilerInfo4::EnumThreads — Metoda
 Zwraca moduł wyliczający, który dostarcza metody sekwencyjnie iteracji przez kolekcję wszystkich zarządzanych wątków w profilowanym procesie.  
@@ -34,7 +34,7 @@ HRESULT EnumThreads([out]
   
 ## <a name="parameters"></a>Parametry  
  `ppEnum`  
- określoną Wskaźnik do interfejsu [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) .  
+ określoną Wskaźnik do interfejsu [ICorProfilerThreadEnum](icorprofilerthreadenum-interface.md) .  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -49,7 +49,7 @@ HRESULT EnumThreads([out]
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerThreadEnum, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [ICorProfilerInfo4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerThreadEnum, interfejs](icorprofilerthreadenum-interface.md)
+- [ICorProfilerInfo4, interfejs](icorprofilerinfo4-interface.md)
+- [Interfejsy profilowania](profiling-interfaces.md)
+- [Profilowanie](index.md)

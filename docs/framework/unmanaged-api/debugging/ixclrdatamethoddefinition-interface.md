@@ -15,41 +15,41 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 4b1e8cb1cf34bb1c5ade1353351aab953e2b734a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 708c681a98113a406249a360c2fc81087e5b97f8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670108"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790428"
 ---
 # <a name="ixclrdatamethoddefinition-interface"></a>IXCLRDataMethodDefinition, interfejs
 
-Udostępnia metody do wykonywania zapytań o definicję metody.
+Zapewnia metody wykonywania zapytań dotyczących informacji o definicji metody.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
 ## <a name="methods"></a>Metody
 
-Poniższych metod przedstawiono niektóre z dostępnych metod w interfejsie.
+Poniżej przedstawiono metody dostępne w interfejsie.
 
 | Metoda                                                                                                                          | Opis                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| [StartEnumInstances](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-startenuminstances-method.md) | Udostępnia dojścia wyliczania wystąpień metody dla danego `IXCLRDataAppDomain`. |
-| [EnumInstance](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-enuminstance-method.md)             | Wylicza wystąpień tę definicję metody.                                         |
-| [EndEnumInstances](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-endenuminstances-method.md)     | Zwalnia zasoby używane przez Iteratory wewnętrzny używany podczas wyliczania wystąpień.         |
+| [StartEnumInstances](ixclrdatamethoddefinition-startenuminstances-method.md) | Zapewnia obsługę wyliczania wystąpień metody dla danego `IXCLRDataAppDomain`. |
+| [EnumInstance](ixclrdatamethoddefinition-enuminstance-method.md)             | Wylicza wystąpienia tej definicji metody.                                         |
+| [EndEnumInstances](ixclrdatamethoddefinition-endenuminstances-method.md)     | Zwalnia zasoby używane przez Iteratory wewnętrzne używane podczas wyliczania wystąpień.         |
 
 ## <a name="remarks"></a>Uwagi
 
-Ten interfejs znajduje się wewnątrz środowiska uruchomieniowego i nie jest dostępna za pośrednictwem wszystkich nagłówków lub pliki biblioteki. Jednak jest interfejsem COM, która pochodzi od klasy `IUnknown` o identyfikatorze GUID `AAF60008-FB2C-420b-8FB1-42D244A54A97` , można uzyskać za pośrednictwem zwykłych mechanizmów COM.
+Ten interfejs jest wewnątrz środowiska uruchomieniowego i nie jest udostępniany przez żadne nagłówki lub pliki bibliotek. Jest to jednak interfejs COM, który pochodzi od `IUnknown` z identyfikatorem GUID `AAF60008-FB2C-420b-8FB1-42D244A54A97`, który można uzyskać za pomocą zwykłych mechanizmów COM.
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-**Nagłówek:** Brak  
-**Biblioteka:** Brak  
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Nagłówek:** Dawaj  
+**Biblioteka:** Dawaj  
+**Wersje .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie](index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

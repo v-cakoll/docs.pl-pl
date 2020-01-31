@@ -2,12 +2,12 @@
 title: 'ICorDebugSymbolProvider:: GetObjectSize —, Metoda'
 ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
-ms.openlocfilehash: a5c0fe6d73302abbfabe2272cc878d6fd8f5fdec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fce7410b5ae9571af0c8a5963596e2af41737798
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138816"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791571"
 ---
 # <a name="icordebugsymbolprovidergetobjectsize-method"></a>ICorDebugSymbolProvider:: GetObjectSize —, Metoda
 Zwraca rozmiar obiektu na podstawie jego podpisu elementu TypeSpec.  
@@ -48,5 +48,5 @@ HRESULT GetObjectSize(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugSymbolProvider, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider, interfejs](icordebugsymbolprovider-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

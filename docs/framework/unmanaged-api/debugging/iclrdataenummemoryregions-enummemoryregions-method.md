@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22d2e339-f174-40b5-a478-0b744501566f
 topic_type:
 - apiref
-ms.openlocfilehash: 693ec07176f80711709cd9b85c6886bea8be74b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f2b2bbe8bcecf71f6d3016fb35dfbf5ba1353aea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122963"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785639"
 ---
 # <a name="iclrdataenummemoryregionsenummemoryregions-method"></a>ICLRDataEnumMemoryRegions::EnumMemoryRegions — Metoda
 Wylicza określone obszary pamięci.  
@@ -37,7 +37,7 @@ HRESULT EnumMemoryRegions (
   
 ## <a name="parameters"></a>Parametry  
  `callback`  
- podczas Wskaźnik do wystąpienia [ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) , który jest wywoływany przez tę metodę dla każdego regionu pamięci, który jest wyliczany w celu powiadomienia debugera wyniku.  
+ podczas Wskaźnik do wystąpienia [ICLRDataEnumMemoryRegionsCallback](iclrdataenummemoryregionscallback-interface.md) , który jest wywoływany przez tę metodę dla każdego regionu pamięci, który jest wyliczany w celu powiadomienia debugera wyniku.  
   
  Wyliczenie regionów pamięci jest kontynuowane nawet wtedy, gdy wywołanie zwrotne wskazuje na błąd.  
   
@@ -45,10 +45,10 @@ HRESULT EnumMemoryRegions (
  podczas Nieużywane.  
   
  `clrFlags`  
- podczas Wartość wyliczenia [CLRDataEnumMemoryFlags](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md) , która określa regiony pamięci do wyliczenia.  
+ podczas Wartość wyliczenia [CLRDataEnumMemoryFlags](clrdataenummemoryflags-enumeration.md) , która określa regiony pamięci do wyliczenia.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda używa określonego wystąpienia [ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) do powiadomienia obiektu wywołującego wyniki.  
+ Ta metoda używa określonego wystąpienia [ICLRDataEnumMemoryRegionsCallback](iclrdataenummemoryregionscallback-interface.md) do powiadomienia obiektu wywołującego wyniki.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -61,4 +61,4 @@ HRESULT EnumMemoryRegions (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICLRDataEnumMemoryRegions, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-interface.md)
+- [ICLRDataEnumMemoryRegions, interfejs](iclrdataenummemoryregions-interface.md)

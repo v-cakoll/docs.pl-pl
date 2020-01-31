@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFunction2 — Interfejs
+title: ICorDebugFunction2, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunction2
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 2b936bef-9b75-48bf-859f-42e419c65f1c
 topic_type:
 - apiref
-ms.openlocfilehash: da440b7d2da57511545d3b63700662eb544660fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5364e39f7e0a9b6c9cd10cd8f17bab4a03a4b7af
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137779"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794481"
 ---
-# <a name="icordebugfunction2-interface"></a>ICorDebugFunction2 — Interfejs
+# <a name="icordebugfunction2-interface"></a>ICorDebugFunction2, interfejs
 
 Logicznie rozszerza interfejs ICorDebugFunction w celu zapewnienia Tylko mój kod obsługi debugowania krok po kroku, który pomija kod niebędący użytkownikiem.  
   
@@ -29,10 +29,10 @@ Logicznie rozszerza interfejs ICorDebugFunction w celu zapewnienia Tylko mój ko
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[EnumerateNativeCode, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-enumeratenativecode-method.md)|(Jeszcze nie zaimplementowano). Pobiera wskaźnik interfejsu do ICorDebugCodeEnum, który zawiera instrukcje kodu natywnego w funkcji, do której odwołuje się ten obiekt ICorDebugFunction2.|  
-|[GetJMCStatus, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getjmcstatus-method.md)|Pobiera wartość wskazującą, czy ta funkcja jest oznaczona jako kod użytkownika.|  
-|[GetVersionNumber, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md)|Pobiera wersję Edytuj i Kontynuuj tej funkcji.|  
-|[SetJMCStatus, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-setjmcstatus-method.md)|Oznacza tę funkcję do Tylko mój kod taktowania.|  
+|[EnumerateNativeCode, metoda](icordebugfunction2-enumeratenativecode-method.md)|(Jeszcze nie zaimplementowano). Pobiera wskaźnik interfejsu do ICorDebugCodeEnum, który zawiera instrukcje kodu natywnego w funkcji, do której odwołuje się ten obiekt ICorDebugFunction2.|  
+|[GetJMCStatus, metoda](icordebugfunction2-getjmcstatus-method.md)|Pobiera wartość wskazującą, czy ta funkcja jest oznaczona jako kod użytkownika.|  
+|[GetVersionNumber, metoda](icordebugfunction2-getversionnumber-method.md)|Pobiera wersję Edytuj i Kontynuuj tej funkcji.|  
+|[SetJMCStatus, metoda](icordebugfunction2-setjmcstatus-method.md)|Oznacza tę funkcję do Tylko mój kod taktowania.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -50,4 +50,4 @@ Logicznie rozszerza interfejs ICorDebugFunction w celu zapewnienia Tylko mój ko
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

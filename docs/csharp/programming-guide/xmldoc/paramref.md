@@ -8,33 +8,38 @@ helpviewer_keywords:
 - <paramref> C# XML tag
 - paramref C# XML tag
 ms.assetid: 756c24c1-f591-40e8-a838-559761539b0b
-ms.openlocfilehash: 42c428b74f0df9d4ca37e85d805db8012670521c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 12df257271369dc7f0a5c066b712a8d8e6c38761
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696548"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793403"
 ---
 # <a name="paramref-c-programming-guide"></a>\<paramref > (C# Przewodnik programowania)
-## <a name="syntax"></a>Składnia  
-  
-```xml  
-<paramref name="name"/>  
-```  
-  
-## <a name="parameters"></a>Parametry  
- `name`  
- Nazwa parametru, do którego się odwołuje. Ujmij nazwę w znaki podwójnego cudzysłowu ("").  
-  
-## <a name="remarks"></a>Uwagi  
- Tag \<paramref > umożliwia wskazanie, że słowo w komentarzach do kodu, na przykład w \<podsumowania > lub \<uwagi > bloku odwołuje się do parametru. Plik XML można przetworzyć, aby sformatować ten wyraz w sposób niezależny, na przykład za pomocą czcionki pogrubionej lub kursywy.  
-  
- Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
-  
-## <a name="example"></a>Przykład  
- [!code-csharp[csProgGuideDocComments#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#7)]  
-  
+
+## <a name="syntax"></a>Składnia
+
+```xml
+<paramref name="name"/>
+```
+
+## <a name="parameters"></a>Parametry
+
+- `name`
+
+  Nazwa parametru, do którego się odwołuje. Ujmij nazwę w znaki podwójnego cudzysłowu ("").
+
+## <a name="remarks"></a>Uwagi
+
+Tag \<paramref > umożliwia wskazanie, że słowo w komentarzach do kodu, na przykład w \<podsumowania > lub \<uwagi > bloku odwołuje się do parametru. Plik XML można przetworzyć, aby sformatować ten wyraz w sposób niezależny, na przykład za pomocą czcionki pogrubionej lub kursywy.
+
+Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.
+
+## <a name="example"></a>Przykład
+
+[!code-csharp[csProgGuideDocComments#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#7)]
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
-- [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)
+- [Zalecane Tagi dla komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

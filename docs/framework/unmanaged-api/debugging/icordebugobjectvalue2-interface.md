@@ -1,5 +1,5 @@
 ---
-title: ICorDebugObjectValue2 — Interfejs
+title: ICorDebugObjectValue2, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugObjectValue2
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: f93cc2ec-0a12-4499-9bf6-405dc58c9a81
 topic_type:
 - apiref
-ms.openlocfilehash: 34886b8f99715abe1f1abaa062d465002fbf98a7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 566d4323bfd76a2189e1a8280465eb2dcde2a03a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129733"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792679"
 ---
-# <a name="icordebugobjectvalue2-interface"></a>ICorDebugObjectValue2 — Interfejs
+# <a name="icordebugobjectvalue2-interface"></a>ICorDebugObjectValue2, interfejs
 
 Rozszerza interfejs "ICorDebugObjectValue" w celu obsługi dziedziczenia i zastąpień.  
   
@@ -29,7 +29,7 @@ Rozszerza interfejs "ICorDebugObjectValue" w celu obsługi dziedziczenia i zast�
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetVirtualMethodAndType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` jeszcze nie zaimplementowano.|  
+|[GetVirtualMethodAndType, metoda](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` jeszcze nie zaimplementowano.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -47,4 +47,4 @@ Rozszerza interfejs "ICorDebugObjectValue" w celu obsługi dziedziczenia i zast�
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

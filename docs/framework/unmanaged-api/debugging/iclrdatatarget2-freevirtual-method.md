@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26fb69f8-1467-4711-bd24-cb117c63938f
 topic_type:
 - apiref
-ms.openlocfilehash: c084a3fcbbc02504124a511c6e136be32f408d21
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7eda9bfff6de6b386c16ad0a188931d9d3adcb93
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73112323"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793656"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>ICLRDataTarget2::FreeVirtual — Metoda
 Wywoływane przez usługi dostępu do danych środowiska uruchomieniowego języka wspólnego (CLR) do wolnej pamięci, która została wcześniej przydzielone w przestrzeni adresowej procesu docelowego.  
@@ -61,5 +61,5 @@ HRESULT FreeVirtual(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICLRDataTarget2, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
-- [AllocVirtual, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)
+- [ICLRDataTarget2, interfejs](iclrdatatarget2-interface.md)
+- [AllocVirtual, metoda](iclrdatatarget2-allocvirtual-method.md)

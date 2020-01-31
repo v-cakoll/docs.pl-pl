@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16caf02f-c71e-486c-90b0-f0e54357d8f0
 topic_type:
 - apiref
-ms.openlocfilehash: 57d83d1f301cbfd43f8f553d9aef4beb3baf95f8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6a02b080739d00667893008be4a19b4fa9a6ef2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131083"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788594"
 ---
 # <a name="icordebugilframecansetip-method"></a>ICorDebugILFrame::CanSetIP — Metoda
 Pobiera wartość HRESULT, która wskazuje, czy można bezpiecznie ustawić wskaźnik instrukcji na określoną lokalizację przesunięcia w kodzie języka pośredniego (MSIL) firmy Microsoft.  
@@ -38,7 +38,7 @@ HRESULT CanSetIP (
  podczas Odpowiednie ustawienie wskaźnika instrukcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Przed wywołaniem metody [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) użyj metody `CanSetIP`. Jeśli `CanSetIP` zwraca wszystkie HRESULT inne niż S_OK, nadal można wywołać `ICorDebugILFrame::SetIP`, ale nie ma gwarancji, że debuger będzie kontynuował bezpieczne i prawidłowe wykonywanie debugowanego kodu.  
+ Przed wywołaniem metody [ICorDebugILFrame:: SetIP](icordebugilframe-setip-method.md) użyj metody `CanSetIP`. Jeśli `CanSetIP` zwraca wszystkie HRESULT inne niż S_OK, można nadal wywoływać `ICorDebugILFrame::SetIP`, ale nie ma żadnej gwarancji, że debuger będzie kontynuował bezpieczne i prawidłowe wykonywanie debugowanego kodu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

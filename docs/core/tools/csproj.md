@@ -2,12 +2,12 @@
 title: Dodatki do formatu csproj dla platformy .NET Core
 description: Dowiedz się więcej o różnicach między istniejącymi a plikami csproj programu .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 9d6a7a388cb51bf08996adc654db5722a5ef1303
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 126f5b10999e65d9715e9b52cb54a2bf1dbd3933
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733341"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787877"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -15,7 +15,7 @@ Ten dokument zawiera opis zmian, które zostały dodane do plików projektu w ra
 
 ## <a name="implicit-package-references"></a>Odwołania do pakietów niejawnych
 
-Elementy pakietu są niejawnie przywoływane na podstawie platform docelowych określonych we właściwości `<TargetFramework>` lub `<TargetFrameworks>` pliku projektu. `<TargetFrameworks>` jest ignorowany, jeśli określono `<TargetFramework>`, niezależnie od kolejności. Aby uzyskać więcej informacji, zobacz [pakiety, aplikacje i struktury](../packages.md). 
+Elementy pakietu są niejawnie przywoływane na podstawie platform docelowych określonych we właściwości `<TargetFramework>` lub `<TargetFrameworks>` pliku projektu. `<TargetFrameworks>` jest ignorowany, jeśli określono `<TargetFramework>`, niezależnie od kolejności. Aby uzyskać więcej informacji, zobacz [pakiety, aplikacje i struktury](../packages.md).
 
 ```xml
  <PropertyGroup>
@@ -248,7 +248,7 @@ W projektach w stylu zestawu SDK Użyj elementu docelowego programu MSBuild o na
 ```
 
 > [!NOTE]
->Możesz użyć dowolnej nazwy dla celów programu MSBuild, ale środowisko IDE programu Visual Studio rozpoznaje `PreBuild` i `PostBuild` targets, dlatego zalecamy używanie tych nazw, aby można było edytować polecenia w środowisku IDE programu Visual Studio. 
+>Możesz użyć dowolnej nazwy dla celów programu MSBuild, ale środowisko IDE programu Visual Studio rozpoznaje `PreBuild` i `PostBuild` targets, dlatego zalecamy używanie tych nazw, aby można było edytować polecenia w środowisku IDE programu Visual Studio.
 
 ## <a name="nuget-metadata-properties"></a>Właściwości metadanych NuGet
 
@@ -321,7 +321,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 Ścieżka do pliku licencji w pakiecie, jeśli używasz licencji, która nie ma przypisanego identyfikatora SPDX lub jest licencją niestandardową (w przeciwnym razie `PackageLicenseExpression` jest preferowana)
 
-Zastępuje `PackageLicenseUrl`, nie można go łączyć z `PackageLicenseExpression` i wymaga programu Visual Studio 15.9.4, zestawu .NET SDK 2.1.502 lub nowszego.
+Zastępuje `PackageLicenseUrl`, nie można go łączyć z `PackageLicenseExpression`i wymaga programu Visual Studio w wersji 15.9.4 i .NET SDK 2.1.502 lub 2.2.101 lub nowszego.
 
 Należy upewnić się, że plik licencji jest spakowany przez dodanie go jawnie do projektu, przykładowe użycie:
 
@@ -427,7 +427,7 @@ Rozdzielana średnikami lista par klucz = wartość.
 
 ### <a name="properties-per-attribute"></a>Właściwości na atrybut
 
-Każdy atrybut ma właściwość, która kontroluje jej zawartość i drugą do wyłączania jej generacji, jak pokazano w poniższej tabeli:
+Jak pokazano w poniższej tabeli, każdy atrybut ma właściwość, która kontroluje jej zawartość, a druga, która wyłącza jej generowanie:
 
 | Atrybut                                                      | Właściwość               | Właściwość do wyłączenia                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|

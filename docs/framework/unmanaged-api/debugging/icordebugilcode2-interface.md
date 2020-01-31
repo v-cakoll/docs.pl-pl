@@ -10,24 +10,24 @@ api_type:
 ms.assetid: f9dc2afd-df8a-464d-bdbf-5af0a1d4bf85
 topic_type:
 - apiref
-ms.openlocfilehash: 9c1a5cde5a39a334d655d865c5e44a5eb0c1766a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 30008d6cc98f7d0d0501d67e18703ed5a344d43a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131042"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794366"
 ---
 # <a name="icordebugilcode2-interface"></a>Interfejs ICorDebugILCode2
 [Obsługiwane w .NET Framework 4.5.2 i nowszych wersjach]  
   
- Logicznie rozszerza interfejs [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) w celu zapewnienia metod, które zwracają token dla sygnatury zmiennej lokalnej funkcji, i mapuje przesunięcia języka pośredniego (IL) narzędzia profilera do oryginalnej metody do przesunięcia Il.  
+ Logicznie rozszerza interfejs [ICorDebugILCode](icordebugilcode-interface.md) w celu zapewnienia metod, które zwracają token dla sygnatury zmiennej lokalnej funkcji, i mapuje przesunięcia języka pośredniego (IL) narzędzia profilera do oryginalnej metody do przesunięcia Il.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetInstrumentedILMap, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)|Zwraca mapę z przesunięć Instrumentacji IL do metody oryginalnej dla tego wystąpienia.|  
-|[GetLocalVarSigToken, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getlocalvarsigtoken-method.md)|Pobiera token metadanych lokalnej zmiennej sygnatury dla funkcji reprezentowanej przez to wystąpienie.|  
+|[GetInstrumentedILMap, metoda](icordebugilcode2-getinstrumentedilmap-method.md)|Zwraca mapę z przesunięć Instrumentacji IL do metody oryginalnej dla tego wystąpienia.|  
+|[GetLocalVarSigToken, metoda](icordebugilcode2-getlocalvarsigtoken-method.md)|Pobiera token metadanych lokalnej zmiennej sygnatury dla funkcji reprezentowanej przez to wystąpienie.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -40,6 +40,6 @@ ms.locfileid: "73131042"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugILCode, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugILCode, interfejs](icordebugilcode-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

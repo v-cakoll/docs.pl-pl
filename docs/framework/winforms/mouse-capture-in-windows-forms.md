@@ -1,25 +1,25 @@
 ---
-title: Przechwytywanie myszy w formularzach systemu Windows
+title: Przechwytywanie myszy
 ms.date: 03/30/2017
 helpviewer_keywords:
 - mouse [Windows Forms], capture
 ms.assetid: 8911d4b0-a4f8-4f93-8246-371aebd27d0c
-ms.openlocfilehash: 30432c6978f60cc9ad47d5df5dafc7aa45229f3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10583f074831b16dce3c713b4ac9a76c7005c9f5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800961"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741021"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Przechwytywanie myszy w formularzach systemu Windows
-*Przechwytywanie myszy* odwołuje się do polecenia myszy wszystkich danych wejściowych podczas kontrolki. Po przechwyceniu myszy kontrolkę odbiera wejście myszy czy kursor znajduje się w jego granicach.  
+*Przechwytywanie myszy* odnosi się do sytuacji, gdy kontrolka wykonuje polecenie wszystkich danych wejściowych myszy. Gdy kontrolka przechwytuje mysz, odbiera ona dane wejściowe za pomocą myszy niezależnie od tego, czy wskaźnik znajduje się w jego granicach.  
   
-## <a name="setting-mouse-capture"></a>Przechwytywanie myszy ustawienie  
- W formularzach Windows Forms myszy są przechwytywane przez kontrolkę, użytkownik naciśnie przycisk myszy na kontrolce, gdy wskaźnik myszy jest zwalniany przez kontrolkę, gdy użytkownik zwolni przycisk myszy.  
+## <a name="setting-mouse-capture"></a>Ustawianie przechwytywania myszy  
+ W Windows Forms wskaźnik myszy jest przechwytywany przez kontrolkę, gdy użytkownik naciśnie przycisk myszy na kontrolce, a mysz zostanie wydana przez kontrolkę, gdy użytkownik zwolni przycisk myszy.  
   
- <xref:System.Windows.Forms.Control.Capture%2A> Właściwość <xref:System.Windows.Forms.Control> klasa określa, czy formant został przechwycony myszy. Aby określić, kiedy traci przechwytywanie myszy w kontrolce, obsługi <xref:System.Windows.Forms.Control.MouseCaptureChanged> zdarzeń.  
+ Właściwość <xref:System.Windows.Forms.Control.Capture%2A> klasy <xref:System.Windows.Forms.Control> określa, czy kontrolka przechwytuje mysz. Aby określić, kiedy formant utraci przechwytywanie myszy, obsłuż zdarzenie <xref:System.Windows.Forms.Control.MouseCaptureChanged>.  
   
- Tylko okna pierwszoplanowego możliwość przechwytywania myszą. Gdy próbuje oknem tła do przechwytywania myszą, okno odbiera wiadomości tylko w przypadku zdarzenia myszy, które występują, gdy wskaźnik myszy znajduje się w obrębie widoczne części okna. Ponadto nawet wtedy, gdy przechwyceniu myszy okna pierwszoplanowego użytkownik może nadal kliknąć innego okna, wprowadzić ją na pierwszym planie. Po przechwyceniu myszy klawiszy skrótów nie działa.  
+ Tylko okno pierwszego planu może przechwycić mysz. Gdy okno tła próbuje przechwycić myszą, okno odbiera komunikaty tylko dla zdarzeń myszy, które występują, gdy wskaźnik myszy znajduje się w widocznej części okna. Ponadto, nawet jeśli okno programu na pierwszym planie przechwytuje mysz, użytkownik może nadal klikać inne okna, umieszczając je na pierwszym planie. Gdy mysz zostanie przechwycona, klawisze skrótów nie działają.  
   
 ## <a name="see-also"></a>Zobacz także
 

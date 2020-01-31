@@ -1,5 +1,5 @@
 ---
-title: ICorDebugObjectEnum — Interfejs
+title: ICorDebugObjectEnum, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugObjectEnum
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9ffb4498-7719-49d3-8890-df2c22248a0c
 topic_type:
 - apiref
-ms.openlocfilehash: b77d5859986c90d6ef61c02547014d0bec354106
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0526c050bcf1316eccf2c756a404fbb971e6d7d0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096140"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792744"
 ---
-# <a name="icordebugobjectenum-interface"></a>ICorDebugObjectEnum — Interfejs
+# <a name="icordebugobjectenum-interface"></a>ICorDebugObjectEnum, interfejs
 
 Implementuje metody ICorDebugEnum i wylicza tablice obiektów według ich względnych adresów wirtualnych (RVA).  
   
@@ -29,7 +29,7 @@ Implementuje metody ICorDebugEnum i wylicza tablice obiektów według ich wzglę
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-next-method.md)|Pobiera RVA określoną liczbę obiektów z wyliczenia, rozpoczynając od bieżącego położenia.|  
+|[Next, metoda](icordebugobjectenum-next-method.md)|Pobiera RVA określoną liczbę obiektów z wyliczenia, rozpoczynając od bieżącego położenia.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -47,4 +47,4 @@ Implementuje metody ICorDebugEnum i wylicza tablice obiektów według ich wzglę
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

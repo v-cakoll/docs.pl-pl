@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: ecd340d00e7f02655dfdcd8eee548309d424a5ea
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f47eccac4e960bd6869da0da139803cd4e433393
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458744"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794305"
 ---
 # <a name="routed-events-overview"></a>Przegląd Zdarzenia trasowane
 
@@ -64,7 +64,7 @@ Poniżej przedstawiono krótkie podsumowanie scenariuszy, które podlegają konc
 
 **Układ i hermetyzacja formantu:** Różne kontrolki w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mają bogaty model zawartości. Na przykład można umieścić obraz wewnątrz <xref:System.Windows.Controls.Button>, co skutecznie rozszerza drzewo wizualne przycisku. Jednak dodany obraz nie może przerwać działania testowania trafień, które powoduje, że przycisk reaguje na <xref:System.Windows.Controls.Primitives.ButtonBase.Click> treści, nawet jeśli użytkownik kliknie piksele, które są technicznie częścią obrazu.
 
-**Punkty załącznika procedury obsługi pojedynczej:** W [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]należy dodać tę samą procedurę obsługi wiele razy, aby przetwarzać zdarzenia, które mogą być wywoływane z wielu elementów. Zdarzenia kierowane umożliwiają dołączenie tego programu obsługi tylko raz, jak pokazano w poprzednim przykładzie, i użycie logiki obsługi do określenia, w razie potrzeby zdarzenia, z którego pochodzi. Na przykład może to być procedura obsługi dla poprzednio pokazanej [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:
+**Punkty załącznika procedury obsługi pojedynczej:** W Windows Forms należy dodać tę samą procedurę obsługi wiele razy, aby przetwarzać zdarzenia, które mogą być wywoływane z wielu elementów. Zdarzenia kierowane umożliwiają dołączenie tego programu obsługi tylko raz, jak pokazano w poprzednim przykładzie, i użycie logiki obsługi do określenia, w razie potrzeby zdarzenia, z którego pochodzi. Na przykład może to być procedura obsługi dla poprzednio pokazanej [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:
 
 [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
 [!code-vb[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]
@@ -98,7 +98,7 @@ Zdarzenia kierowane korzystają z jednej z trzech strategii routingu:
 
 - **Propagacja:** Procedury obsługi zdarzeń w źródle zdarzeń są wywoływane. Rozesłane zdarzenie następnie kieruje do kolejnych elementów nadrzędnych do momentu osiągnięcia katalogu głównego drzewa elementów. Większość przesłanych zdarzeń korzysta z strategii routingu propagacji. Propagacja zdarzeń kierowanych jest zwykle używana do raportowania zmian wprowadzonych lub stanu z różnych kontrolek lub innych elementów interfejsu użytkownika.
 
-- **Bezpośrednie:** Tylko element źródłowy ma możliwość wywołania programów obsługi w odpowiedzi. Jest to analogiczne do "routingu", którego [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] używa dla zdarzeń. Jednak, w przeciwieństwie do standardowego zdarzenia CLR, obsługiwane są zdarzenia kierowane do obsługi klas (obsługa klasy została omówiona w nadchodzącej sekcji) i mogą być używane przez <xref:System.Windows.EventSetter> i <xref:System.Windows.EventTrigger>.
+- **Bezpośrednie:** Tylko element źródłowy ma możliwość wywołania programów obsługi w odpowiedzi. Jest to analogiczne do "routingu", którego Windows Forms używa dla zdarzeń. Jednak, w przeciwieństwie do standardowego zdarzenia CLR, obsługiwane są zdarzenia kierowane do obsługi klas (obsługa klasy została omówiona w nadchodzącej sekcji) i mogą być używane przez <xref:System.Windows.EventSetter> i <xref:System.Windows.EventTrigger>.
 
 - **Tunelowanie:** Początkowo procedury obsługi zdarzeń w katalogu głównym drzewa elementów są wywoływane. Rozesłane zdarzenie następnie kieruje trasę przez kolejne elementy podrzędne wzdłuż trasy do elementu węzła, który jest kierowanym źródłem zdarzeń (element, który zgłosił zdarzenie kierowane). Tunelowanie zdarzeń kierowanych jest często używane lub obsługiwane jako część składu kontrolki, tak że zdarzenia z części złożonych można celowo pominąć lub zastąpić zdarzeniami, które są specyficzne dla całej kontroli. Zdarzenia wejściowe podane w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] często są implementowane jako para tunelowania/propagacji. Zdarzenia tunelowania są również czasami określane jako zdarzenia w wersji zapoznawczej ze względu na konwencję nazewnictwa, która jest używana dla par.
 
@@ -179,7 +179,7 @@ Oprócz zachowania, które <xref:System.Windows.RoutedEventArgs.Handled%2A> stan
 
   - Wykonaj kod w odpowiedzi na zdarzenie. Oznacz zdarzenie jako obsłużone w danych zdarzenia przekazaniu do procedury obsługi, ponieważ podjęta akcja została uznana za wystarczającą do oznaczania jako przewidzianą. Zdarzenie nadal kieruje do następnego odbiornika, ale z <xref:System.Windows.RoutedEventArgs.Handled%2A>=`true` w swoich danych zdarzeń, dlatego tylko `handledEventsToo` detektory mają możliwość wywołania dalszych programów obsługi.
 
-Ten projekt koncepcyjny został wzmocniony przez zachowanie routingu wymienione wcześniej: jest trudniejsze (chociaż nadal możliwe w kodzie lub w stylu) do dołączania obsługi zdarzeń kierowanych, które są wywoływane nawet wtedy, gdy wcześniej została ustawiona Poprzednia procedura obsługi trasy <xref:System.Windows.RoutedEventArgs.Handled%2A> do `true`.
+Ten projekt koncepcyjny został wzmocniony przez zachowanie routingu wymienione wcześniej: jest trudniejsze (chociaż nadal możliwe w kodzie lub w stylu) do dołączania obsługi zdarzeń kierowanych, które są wywoływane nawet wtedy, gdy poprzednia procedura obsługi w marszrucie już ustawił <xref:System.Windows.RoutedEventArgs.Handled%2A>, aby `true`.
 
 Aby uzyskać więcej informacji na temat <xref:System.Windows.RoutedEventArgs.Handled%2A>, klasy obsługi zdarzeń kierowanych i zaleceń dotyczących sytuacji, w których odpowiednie jest oznaczenie zdarzenia kierowanego jako <xref:System.Windows.RoutedEventArgs.Handled%2A>, zobacz [oznaczanie zdarzeń kierowanych jako obsłużone i obsługa klas](marking-routed-events-as-handled-and-class-handling.md).
 
@@ -257,7 +257,7 @@ Aby uzyskać więcej informacji na temat danych wejściowych i sposobu współdz
 
 ## <a name="eventsetters-and-eventtriggers"></a>EventSetters i eventtriggers
 
-W obszarze Style można uwzględnić pewną wstępnie zadeklarowaną składnię obsługi zdarzeń [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] w znaczniku przy użyciu <xref:System.Windows.EventSetter>. Po zastosowaniu stylu do wystąpienia z stylem zostanie dodany przywoływany program obsługi. <xref:System.Windows.EventSetter> można zadeklarować tylko dla zdarzenia kierowanego. Oto przykład. Należy pamiętać, że metoda `b1SetColor`, do której odwołuje się tutaj, znajduje się w pliku związanym z kodem.
+W obszarze Style można uwzględnić pewną wstępnie zadeklarowaną składnię obsługi zdarzeń [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] w znaczniku przy użyciu <xref:System.Windows.EventSetter>. Po zastosowaniu stylu do wystąpienia z stylem zostanie dodany przywoływany program obsługi. <xref:System.Windows.EventSetter> można zadeklarować tylko dla zdarzenia kierowanego. Poniżej przedstawiono przykład. Należy pamiętać, że metoda `b1SetColor`, do której odwołuje się tutaj, znajduje się w pliku związanym z kodem.
 
 [!code-xaml[EventOvwSupport#XAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/page2.xaml#xaml2)]
 

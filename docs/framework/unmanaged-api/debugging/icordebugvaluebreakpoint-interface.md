@@ -1,5 +1,5 @@
 ---
-title: ICorDebugValueBreakpoint — Interfejs
+title: ICorDebugValueBreakpoint, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugValueBreakpoint
@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: c02338fe-da6c-467f-9567-70ebb387e901
 topic_type:
 - apiref
-ms.openlocfilehash: cee421ef7d7c856ba90dc21f4e9dc25ae6fe1a9b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e1bb5a6fd0550f7c25d46fa31ca11a10cec54986
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140190"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791074"
 ---
-# <a name="icordebugvaluebreakpoint-interface"></a>ICorDebugValueBreakpoint — Interfejs
+# <a name="icordebugvaluebreakpoint-interface"></a>ICorDebugValueBreakpoint, interfejs
 Rozszerza interfejs ICorDebugBreakpoint w celu zapewnienia dostępu do określonych wartości.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetValue, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvaluebreakpoint-getvalue-method.md)|Pobiera wskaźnik interfejsu do obiektu ICorDebugValue, który reprezentuje wartość obiektu, na którym jest ustawiony punkt przerwania.|  
+|[GetValue, metoda](icordebugvaluebreakpoint-getvalue-method.md)|Pobiera wskaźnik interfejsu do obiektu ICorDebugValue, który reprezentuje wartość obiektu, na którym jest ustawiony punkt przerwania.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -46,4 +46,4 @@ Rozszerza interfejs ICorDebugBreakpoint w celu zapewnienia dostępu do określon
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

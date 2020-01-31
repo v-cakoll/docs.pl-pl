@@ -2,12 +2,12 @@
 title: 'ICorDebugVirtualUnwinder:: GetContext — Metoda'
 ms.date: 03/30/2017
 ms.assetid: fe502a76-3068-47e5-a0a0-85ccb72dfac3
-ms.openlocfilehash: ce54bfd01abb8bd4efd5e46eff1ef831a9f0c8fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ff5e5bdd66ec44a0931b51212f07485718507576
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121897"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790844"
 ---
 # <a name="icordebugvirtualunwindergetcontext-method"></a>ICorDebugVirtualUnwinder:: GetContext — Metoda
 Pobiera bieżący kontekst tego elementu unwiatrer.  
@@ -36,11 +36,11 @@ HRESULT GetContext(
  `contextBuf`  
  określoną Tablica bajtów, która zawiera bieżący kontekst tego elementu unwiatrer.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  Wszystkie niepowodzenie wartości HRESULT otrzymanej przez mscordbi jest uznawane za krytyczne i spowoduje, że interfejsy API ICorDebug zwracają `CORDBG_E_DATA_TARGET_ERROR`.  
   
 ## <a name="remarks"></a>Uwagi  
- Należy ustawić początkową wartość argumentu `contextBuf` w buforze kontekstu zwracanym przez wywołanie metody [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) .  
+ Należy ustawić początkową wartość argumentu `contextBuf` w buforze kontekstu zwracanym przez wywołanie metody [ICorDebugStackWalk:: GetContext](icordebugstackwalk-getcontext-method.md) .  
   
 > [!NOTE]
 > Ta metoda jest dostępna tylko z .NET Native.  
@@ -58,5 +58,5 @@ HRESULT GetContext(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugMemoryBuffer, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMemoryBuffer, interfejs](icordebugmemorybuffer-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

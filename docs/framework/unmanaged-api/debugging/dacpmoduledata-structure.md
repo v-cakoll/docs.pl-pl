@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 2e27082ba4c35bc10eb65139b2af6c81c10d79a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b46a04d67f59c5031b5bd195cef4cc2275e1e5e0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739121"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793806"
 ---
 # <a name="dacpmoduledata-structure"></a>DacpModuleData, struktura
 
-Definiuje bufora transportu dla informacje czasu wykonywania modułu.
+Definiuje bufor transportu dla informacji o środowisku uruchomieniowym modułu.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -45,21 +45,21 @@ struct DacpModuleData
 | Element członkowski    | Opis                                                             |
 | --------- | ----------------------------------------------------------------------- |
 | `Address` | Adres obiektu modułu.                                           |
-| `File`    | Wskaźnik do plików przenośnych plików wykonywalnych (PE).                       |
-| `ilBase`  | Adres załadowanego obrazu podstawowego adresu.                                 |
-| `payLoad` | Bufor ładunku modułu dodatkowe informacje używane przez środowisko uruchomieniowe. |
+| `File`    | Wskaźnik do przenośnego pliku wykonywalnego (PE).                       |
+| `ilBase`  | Adres bazy załadowanego obrazu.                                 |
+| `payLoad` | Bufor ładunku dla dodatkowych informacji modułu używanych przez środowisko uruchomieniowe. |
 
 ## <a name="remarks"></a>Uwagi
 
-Ta struktura znajduje się wewnątrz środowiska uruchomieniowego i nie jest dostępna za pośrednictwem wszystkich nagłówków lub pliki biblioteki. Aby go użyć, definiują strukturę, jak określono powyżej.
+Ta struktura jest w czasie wykonywania i nie jest udostępniana za pomocą żadnych plików nagłówkowych ani bibliotek. Aby go użyć, Zdefiniuj strukturę zgodnie z powyższym opisem.
 
 ## <a name="requirements"></a>Wymagania
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-**Nagłówek:** Brak  
-**Biblioteka:** Brak  
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Nagłówek:** Dawaj  
+**Biblioteka:** Dawaj  
+**Wersje .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debugowanie](index.md)
+- [Struktury debugowania](debugging-structures.md)

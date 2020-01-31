@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea38ae20-7e0a-427a-be77-d78fae719d82
 topic_type:
 - apiref
-ms.openlocfilehash: 20315dfc426b63f2d526f3481756e165b388b41e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8632799b68ae8f92835d1774472bc1432d886f3b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137608"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793481"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>ICorDebugEval2::CreateValueForType — Metoda
 Pobiera wskaźnik do nowego ICorDebugValue określonego typu z początkową wartością zero lub null.  
@@ -42,7 +42,7 @@ HRESULT CreateValueForType (
  określoną Wskaźnik na adres `ICorDebugValue` obiektu, który reprezentuje wartość.  
   
 ## <a name="remarks"></a>Uwagi  
- `CreateValueForType` generalizes [:: SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) , umożliwiając określenie dowolnego typu obiektu, w tym typów skonstruowanych, takich jak `List<int>`. Jedynym celem tej metody jest wygenerowanie wartości, która może zostać przeniesiona do oceny funkcji.  
+ `CreateValueForType` generalizes [:: SetValue](icordebugeval-createvalue-method.md) , umożliwiając określenie dowolnego typu obiektu, w tym typów skonstruowanych, takich jak `List<int>`. Jedynym celem tej metody jest wygenerowanie wartości, która może zostać przeniesiona do oceny funkcji.  
   
  Typ musi być klasą lub typem wartości. Nie można użyć tej metody do tworzenia wartości tablicy lub wartości ciągu.  
   

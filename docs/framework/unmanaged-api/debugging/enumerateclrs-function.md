@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: 69288e995ec789091bf089368cd9a60f003df86e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cdf88ef193df71a638fff43add1a9648d8631731
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122973"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789128"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs — Funkcja
 Zapewnia mechanizm wyliczania CLRs w procesie.  
@@ -50,7 +50,7 @@ HRESULT EnumerateCLRs (
  `pdwArrayLengthOut`  
  określoną Wskaźnik do typu DWORD, który zawiera długość równomiernie dopasowane `ppHandleArrayOut` i `pdwArrayLengthOut`.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  S_OK  
  Liczba CLRs w procesie została pomyślnie określona, a odpowiednie tablice uchwytów i ścieżek zostały prawidłowo wypełnione.  
   
@@ -68,7 +68,7 @@ HRESULT EnumerateCLRs (
   
  W systemie operacyjnym Windows `debuggeePID` mapuje na identyfikator procesu systemu operacyjnego.  
   
- Pamięć dla `ppHandleArrayOut` i `ppStringArrayOut` są przydzielone przez tę funkcję. Aby zwolnić przydzieloną pamięć, należy wywołać [funkcję CloseCLREnumeration](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md).  
+ Pamięć dla `ppHandleArrayOut` i `ppStringArrayOut` są przydzielone przez tę funkcję. Aby zwolnić przydzieloną pamięć, należy wywołać [funkcję CloseCLREnumeration](closeclrenumeration-function.md).  
   
  Tę funkcję można wywołać z parametrami tablicy ustawionymi na wartość null, aby można było zwrócić liczbę CLRs w procesie docelowym. Z tego licznika obiekt wywołujący może wnioskować o rozmiar buforu, który zostanie utworzony: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   

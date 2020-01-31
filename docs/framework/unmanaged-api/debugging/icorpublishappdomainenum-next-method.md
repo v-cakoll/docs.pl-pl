@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: 0553d8b07e3a16dc31474b5470ba2dd8ba365cb2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c8866e98be0dd064138acdf5e0f6fb9c339fb3d2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140503"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790647"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next — Metoda
 Pobiera określoną liczbę domen aplikacji, które aktualnie istnieją w procesie, rozpoczynając od bieżącego położenia.  
@@ -41,10 +41,10 @@ HRESULT Next (
  podczas Liczba elementów, które mają zostać pobrane.  
   
  `objects`  
- określoną Wskaźnik do tablicy pobranych obiektów [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) , z których każdy reprezentuje domenę aplikacji.  
+ określoną Wskaźnik do tablicy pobranych obiektów [ICorPublishAppDomain](icorpublishappdomain-interface.md) , z których każdy reprezentuje domenę aplikacji.  
   
  `pceltFetched`  
- określoną Wskaźnik na liczbę domen aplikacji, które faktycznie zostały zwrócone. Ta wartość może być równa null, jeśli `celt` to jeden.  
+ określoną Wskaźnik na liczbę domen aplikacji, które faktycznie zostały zwrócone. Ta wartość może być równa null, jeśli `celt`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -57,4 +57,4 @@ HRESULT Next (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorPublishAppDomainEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)
+- [ICorPublishAppDomainEnum, interfejs](icorpublishappdomainenum-interface.md)

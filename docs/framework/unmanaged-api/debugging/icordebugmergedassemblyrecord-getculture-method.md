@@ -2,12 +2,12 @@
 title: 'ICorDebugMergedAssemblyRecord:: getculture — Metoda'
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
-ms.openlocfilehash: f39a1f17c80d27a38c0f2a8a516405f72c79bbcf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 77ad8ee7977096e87b9fd2e131920a042243560e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131425"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793155"
 ---
 # <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord:: getculture — Metoda
 Pobiera ciąg nazwy kultury zestawu.  
@@ -49,5 +49,5 @@ HRESULT GetCulture(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugMergedAssemblyRecord, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMergedAssemblyRecord, interfejs](icordebugmergedassemblyrecord-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

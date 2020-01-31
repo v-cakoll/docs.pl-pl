@@ -8,16 +8,16 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 94d175ec58f35b7e807786c221437d05c605c0bc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c076937d6431adf1750793d47ece88dc82edf95c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974224"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794102"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Wskazówki: mapowanie właściwości z użyciem elementu WindowsFormsHost
 
-W tym instruktażu przedstawiono sposób użycia właściwości <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> do mapowania właściwości [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] do odpowiednich właściwości w hostowanej kontroli [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+W tym instruktażu przedstawiono sposób użycia właściwości <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> do mapowania właściwości [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] do odpowiednich właściwości w hostowanej kontroli Windows Forms.
 
 Zadania przedstawione w tym instruktażu obejmują:
 
@@ -35,7 +35,7 @@ Zadania przedstawione w tym instruktażu obejmują:
 
 Aby uzyskać pełną listę kodów zadań przedstawionych w tym instruktażu, zobacz [Mapowanie właściwości przy użyciu przykładu elementu WindowsFormsHost](https://go.microsoft.com/fwlink/?LinkID=160019).
 
-Po zakończeniu będzie możliwe mapowanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości do odpowiednich właściwości w hostowanej kontrolce [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+Po zakończeniu będzie możliwe mapowanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości do odpowiednich właściwości w hostowanej kontrolce Windows Forms.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -53,7 +53,7 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 ## <a name="defining-the-application-layout"></a>Definiowanie układu aplikacji
 
-Aplikacja oparta na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]używa elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost> do hostowania kontrolki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+Aplikacja oparta na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]używa elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost> do hostowania kontrolki Windows Forms.
 
 ### <a name="to-define-the-application-layout"></a>Aby zdefiniować układ aplikacji
 
@@ -83,7 +83,7 @@ Element <xref:System.Windows.Forms.Integration.WindowsFormsHost> zawiera kilka d
 
      Metoda `AddClipMapping` dodaje nowe mapowanie dla właściwości <xref:System.Windows.UIElement.Clip%2A>.
 
-     Metoda `OnClipChange` przekształca Właściwość <xref:System.Windows.UIElement.Clip%2A> na Właściwość [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A>.
+     Metoda `OnClipChange` przekształca Właściwość <xref:System.Windows.UIElement.Clip%2A> na Właściwość Windows Forms<xref:System.Windows.Forms.Control.Region%2A>.
 
      Metoda `Window1_SizeChanged` obsługuje zdarzenie <xref:System.Windows.FrameworkElement.SizeChanged> okna i rozmiary obszaru przycinania w celu dopasowania go do okna aplikacji.
 
@@ -113,7 +113,7 @@ Zastąp domyślne mapowanie właściwości, usuwając mapowanie domyślne i wywo
 
      Metoda `ReplaceFlowDirectionMapping` zastępuje domyślne mapowanie dla właściwości <xref:System.Windows.FrameworkElement.FlowDirection%2A>.
 
-     Metoda `OnFlowDirectionChange` przekształca Właściwość <xref:System.Windows.FrameworkElement.FlowDirection%2A> na Właściwość [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A>.
+     Metoda `OnFlowDirectionChange` przekształca Właściwość <xref:System.Windows.FrameworkElement.FlowDirection%2A> na Właściwość Windows Forms<xref:System.Windows.Forms.Control.RightToLeft%2A>.
 
      Metoda `cb_CheckedChanged` obsługuje zdarzenie <xref:System.Windows.Forms.CheckBox.CheckedChanged> w kontrolce <xref:System.Windows.Forms.CheckBox>. Przypisuje Właściwość <xref:System.Windows.FrameworkElement.FlowDirection%2A> na podstawie wartości właściwości <xref:System.Windows.Forms.CheckBox.CheckState%2A>
 
@@ -145,7 +145,7 @@ Skonfiguruj mapowania właściwości, wywołując poprzednio opisane metody w ob
 
      Metoda `WindowLoaded` obsługuje zdarzenie <xref:System.Windows.FrameworkElement.Loaded> i wykonuje następujące inicjalizacje.
 
-    - Tworzy kontrolkę <xref:System.Windows.Forms.CheckBox> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+    - Tworzy kontrolkę<xref:System.Windows.Forms.CheckBox> Windows Forms.
 
     - Wywołuje metody zdefiniowane wcześniej w przewodniku, aby skonfigurować mapowania właściwości.
 

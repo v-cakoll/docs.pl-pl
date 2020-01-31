@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 97079b824dbd0e056374af4173e49304babd6c32
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc54664ea8ad61005de3f3fae7407946d1c861b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739132"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793844"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData, struktura
 
-Definiuje bufora transportu dla metody środowiska uruchomieniowego informacje.
+Definiuje bufor transportu dla informacji o środowisku uruchomieniowym metody.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -56,35 +56,35 @@ struct DacpMethodDescData
 
 | Element członkowski                       | Opis                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
-| `bHasNativeCode`             | Wskazuje, czy środowisko uruchomieniowe jest kodu natywnego, które są dostępne dla danego wystąpienia metody. |
-| `bIsDynamic`                 | Wskazuje, jeśli metoda jest generowany dynamicznie za pośrednictwem generowania kodu uproszczone.           |
+| `bHasNativeCode`             | Wskazuje, czy środowisko uruchomieniowe ma kod natywny dla danego wystąpienia metody. |
+| `bIsDynamic`                 | Wskazuje, czy metoda jest generowana dynamicznie przy użyciu uproszczonego generowania kodu.           |
 | `wSlotNumber`                | Numer gniazda metody w tabeli metod.                                                   |
-| `NativeCodeAddr`             | Metoda początkowej adresu natywnego.                                                            |
-| `data`                       | Wskaźnik do buforu używana wewnętrznie w czasie wykonywania.                                             |
+| `NativeCodeAddr`             | Początkowy adres macierzysty metody.                                                            |
+| `data`                       | Wskaźnik do bufora używanego wewnętrznie przez środowisko uruchomieniowe.                                             |
 | `MethodDescPtr`              | Wskaźnik do `MethodDesc` w środowisku uruchomieniowym.                                                     |
-| `nativeCodeInfo`             | Wskaźnik do buforu używana wewnętrznie przez środowisko uruchomieniowe w celu śledzenia metody.                            |
-| `moduleInfo`                 | Wskaźnik do buforu używana wewnętrznie przez środowisko uruchomieniowe, aby uzyskać informacje o module.                      |
-| `MDToken`                    | Token skojarzony z danej metody.                                                         |
-| `payloadGC`                  | Wskaźnik do buforu kolekcji wyrzucania elementów używana wewnętrznie w czasie wykonywania.                          |
-| `payloadGC2`                 | Wskaźnik do buforu kolekcji wyrzucania elementów używana wewnętrznie w czasie wykonywania.                          |
-| `managedDynamicMethodObject` | Jeśli metoda jest dynamiczny, środowisko wykonawcze używa tego buforu wewnętrznie informacji śledzenia.     |
-| `requestedIP`                | Używany do wypełniania struktury na żądanie, gdy podano adres kodu natywnego.                    |
-| `rejitDataCurrent`           | Informacje o najnowszych instrumentowanej wersji metody.                                   |
-| `rejitDataRequested`         | Rejit informacji dla żądanego adresu natywnego.                                             |
-| `cJittedRejitVersions`       | Liczba przypadków, gdy metoda została rejitted za pomocą Instrumentacji.                           |
+| `nativeCodeInfo`             | Wskaźnik do buforu używany wewnętrznie przez środowisko uruchomieniowe do śledzenia metod.                            |
+| `moduleInfo`                 | Wskaźnik do buforu używany wewnętrznie przez środowisko uruchomieniowe w celu uzyskania informacji o modułach.                      |
+| `MDToken`                    | Token skojarzony z daną metodą.                                                         |
+| `payloadGC`                  | Wskaźnik do buforu wyrzucania elementów bezużytecznych używanego wewnętrznie przez środowisko uruchomieniowe.                          |
+| `payloadGC2`                 | Wskaźnik do buforu wyrzucania elementów bezużytecznych używanego wewnętrznie przez środowisko uruchomieniowe.                          |
+| `managedDynamicMethodObject` | Jeśli metoda jest dynamiczna, środowisko uruchomieniowe używa tego buforu wewnętrznie do śledzenia informacji.     |
+| `requestedIP`                | Służy do wypełniania struktury na żądanie, gdy zostanie udzielony adres kodu natywnego.                    |
+| `rejitDataCurrent`           | Informacje o najnowszej wersji Instrumentacji metody.                                   |
+| `rejitDataRequested`         | ReJIT informacje o żądanym adresie macierzystym.                                             |
+| `cJittedRejitVersions`       | Liczba przypadków, gdy metoda została rejitted przez instrumentację.                           |
 
 ## <a name="remarks"></a>Uwagi
 
-Ta struktura znajduje się wewnątrz środowiska uruchomieniowego i nie jest dostępna za pośrednictwem wszystkich nagłówków lub pliki biblioteki. Aby go użyć, definiują strukturę, jak określono powyżej.
+Ta struktura jest w czasie wykonywania i nie jest udostępniana za pomocą żadnych plików nagłówkowych ani bibliotek. Aby go użyć, Zdefiniuj strukturę zgodnie z powyższym opisem.
 
 ## <a name="requirements"></a>Wymagania
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-**Nagłówek:** Brak  
-**Biblioteka:** Brak  
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Nagłówek:** Dawaj  
+**Biblioteka:** Dawaj  
+**Wersje .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debugowanie](index.md)
+- [Struktury debugowania](debugging-structures.md)
 - [Standardowe typy danych](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)

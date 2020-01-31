@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 94249397-861b-4294-a538-cf01466a66d3
 topic_type:
 - apiref
-ms.openlocfilehash: 1f0f4331302e56a90b4aefd657e07981994022ec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bdc8378a129dd5bb1d9fdcb080c7b5cd53d34091
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73112310"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789074"
 ---
 # <a name="iclrdatatarget2-interface"></a>ICLRDataTarget2 — Interfejs
-Podklasa elementu [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) , która jest używana przez warstwę usług dostępu do danych do manipulowania regionami pamięci wirtualnej w procesie docelowym.  
+Podklasa elementu [ICLRDataTarget](iclrdatatarget-interface.md) , która jest używana przez warstwę usług dostępu do danych do manipulowania regionami pamięci wirtualnej w procesie docelowym.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[AllocVirtual, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)|Przydziela pamięć w przestrzeni adresowej procesu docelowego.|  
-|[FreeVirtual, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)|Zwalnia pamięć, która została wcześniej przypisana w przestrzeni adresowej procesu docelowego.|  
+|[AllocVirtual, metoda](iclrdatatarget2-allocvirtual-method.md)|Przydziela pamięć w przestrzeni adresowej procesu docelowego.|  
+|[FreeVirtual, metoda](iclrdatatarget2-freevirtual-method.md)|Zwalnia pamięć, która została wcześniej przypisana w przestrzeni adresowej procesu docelowego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Klient API (tzn. debuger) musi implementować ten interfejs stosownie do określonego procesu docelowego. Na przykład żywy proces miałby inną implementację od tej ze zrzutu pamięci. Cel może nie obsługiwać modyfikacji regionów pamięci.  
@@ -45,5 +45,5 @@ Podklasa elementu [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debu
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICLRDataTarget, interfejs](iclrdatatarget-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

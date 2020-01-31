@@ -2,12 +2,12 @@
 title: ICorDebugAppDomain4::GetObjectForCCW — metoda
 ms.date: 03/30/2017
 ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
-ms.openlocfilehash: 8b046eb5926bb9aa4738e8fff8e61b0b7c23a3aa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 50f46394c809321f0bd256e4c8d75b76fc7c2c70
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088828"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784853"
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>ICorDebugAppDomain4::GetObjectForCCW — metoda
 Pobiera obiekt zarządzany z wskaźnika otoki (CCW) modelu COM.  
@@ -41,5 +41,5 @@ HRESULT GetObjectForCCW(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugAppDomain4, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugAppDomain4, interfejs](icordebugappdomain4-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

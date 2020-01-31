@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 429d8fce-b1b1-49d7-895c-28c1c1aa2dbd
 topic_type:
 - apiref
-ms.openlocfilehash: 6506b11d97490f796486729dbeb612e47762b60a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9a768535c3bf69b5127777de4cee27054943091d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111437"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793642"
 ---
 # <a name="iclrdebugging-interface"></a>ICLRDebugging — Interfejs
 Zapewnia metody obsługujące ładowanie i wyładowanie modułów do debugowania.  
@@ -28,8 +28,8 @@ Zapewnia metody obsługujące ładowanie i wyładowanie modułów do debugowania
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[OpenVirtualProcess, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)|Pobiera interfejs "ICorDebugProcess", który odnosi się do modułu środowiska uruchomieniowego języka wspólnego (CLR), który jest ładowany w procesie.|  
-|[CanUnloadNow, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)|Określa, czy biblioteka, która została dostarczona przez interfejs [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) , jest nadal używana, czy może zostać zwolniona.|  
+|[OpenVirtualProcess, metoda](iclrdebugging-openvirtualprocess-method.md)|Pobiera interfejs "ICorDebugProcess", który odnosi się do modułu środowiska uruchomieniowego języka wspólnego (CLR), który jest ładowany w procesie.|  
+|[CanUnloadNow, metoda](iclrdebugging-canunloadnow-method.md)|Określa, czy biblioteka, która została dostarczona przez interfejs [ICLRDebuggingLibraryProvider](iclrdebugginglibraryprovider-interface.md) , jest nadal używana, czy może zostać zwolniona.|  
   
 ## <a name="remarks"></a>Uwagi  
  Wystąpienie interfejsu `ICLRDebugging` można uzyskać przy użyciu funkcji [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) .  
@@ -45,5 +45,5 @@ Zapewnia metody obsługujące ładowanie i wyładowanie modułów do debugowania
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

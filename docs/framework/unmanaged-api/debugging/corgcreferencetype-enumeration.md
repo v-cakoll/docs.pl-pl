@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: eafae181c74d9f3842f7f0d547bcccbbb28c09e6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 17d47b6242bb12ff5ca3cfbde3e4ec183b9c19fc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132121"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793876"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType — Wyliczenie
 Określa źródło obiektu, które ma zostać pobrane jako elementy bezużyteczne.  
@@ -60,16 +60,16 @@ typedef enum {
 |`CorHandleStrongSizedByref`|Silne dojście, które utrzymuje przybliżony rozmiar całego rozłącznego zamykania wszystkich obiektów i katalogów głównych obiektów w czasie odzyskiwania pamięci.|  
 |`CorReferenceStack`|Odwołanie z zarządzanego stosu.|  
 |`CorReferenceFinalizer`|Odwołanie z kolejki finalizatora.|  
-|CorHandleStrongOnly|Zwróć tylko silne odwołania z tabeli uchwytów. Ta wartość jest używana tylko przez metodę [ICorDebugProcess5:: EnumerateHandles —](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) .|  
-|`CorHandleWeakOnly`|Zwróć tylko słabe odwołania z tabeli dojścia. Ta wartość jest używana tylko przez metodę [ICorDebugProcess5:: EnumerateHandles —](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) .|  
-|`CorHandleAll`|Zwróć wszystkie odwołania z tabeli uchwytów. Ta wartość jest używana tylko przez metodę [ICorDebugProcess5:: EnumerateHandles —](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) .|  
+|CorHandleStrongOnly|Zwróć tylko silne odwołania z tabeli uchwytów. Ta wartość jest używana tylko przez metodę [ICorDebugProcess5:: EnumerateHandles —](icordebugprocess5-enumeratehandles-method.md) .|  
+|`CorHandleWeakOnly`|Zwróć tylko słabe odwołania z tabeli dojścia. Ta wartość jest używana tylko przez metodę [ICorDebugProcess5:: EnumerateHandles —](icordebugprocess5-enumeratehandles-method.md) .|  
+|`CorHandleAll`|Zwróć wszystkie odwołania z tabeli uchwytów. Ta wartość jest używana tylko przez metodę [ICorDebugProcess5:: EnumerateHandles —](icordebugprocess5-enumeratehandles-method.md) .|  
   
 ## <a name="remarks"></a>Uwagi  
  Wyliczenie `CorGCReferenceType` jest używane w następujący sposób:  
   
-- Jako wartość pola `type` struktury [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) wskazuje Źródło odwołania lub dojścia.  
+- Jako wartość pola `type` struktury [COR_GC_REFERENCE](cor-gc-reference-structure.md) , wskazuje on źródło odwołania lub dojścia.  
   
-- Jako argument `types` metody [ICorDebugProcess5:: EnumerateHandles —](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) określa typy dojść do uwzględnienia w wyliczeniu.  
+- Jako argument `types` metody [ICorDebugProcess5:: EnumerateHandles —](icordebugprocess5-enumeratehandles-method.md) określa typy dojść do uwzględnienia w wyliczeniu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -82,4 +82,4 @@ typedef enum {
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debugowanie, wyliczenia](debugging-enumerations.md)

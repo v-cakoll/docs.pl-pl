@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-ms.openlocfilehash: 6ea9dee6e83870d1f2e0fdccffa53f16e6f18dba
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 66195ea9df4c8e9ce847b38f7d020a3bebffcd37
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430107"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865184"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError — Metoda
 Powiadamia profiler, że kompilator just in Time (JIT) napotkał błąd w procesie ponownej kompilacji.  
@@ -48,7 +48,7 @@ HRESULT ReJITError(
  `hrStatus`  
  podczas WYNIK HRESULT wskazujący charakter błędu. Zapoznaj się z sekcją stan HRESULTs, aby zapoznać się z listą wartości.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  Zwracane wartości z tego wywołania zwrotnego są ignorowane.  
   
 ## <a name="status-hresults"></a>Stan HRESULT  
@@ -73,5 +73,5 @@ HRESULT ReJITError(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ICorProfilerCallback4, interfejs](icorprofilercallback4-interface.md)

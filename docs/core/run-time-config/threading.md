@@ -3,12 +3,12 @@ title: Ustawienia konfiguracji wątkowości
 description: Informacje na temat ustawień czasu wykonywania, które konfigurują wątki dla aplikacji platformy .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: ed7688d4d8f7178440fe59afc6e2f5e0a11b2a5c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 68b8e93ca6ec3f708a7a627307655ada1955500a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733434"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789854"
 ---
 # <a name="run-time-configuration-options-for-threading"></a>Opcje konfiguracji czasu wykonywania dla wątków
 
@@ -24,7 +24,7 @@ ms.locfileid: "76733434"
 
 ## <a name="minimum-threads"></a>Minimalna liczba wątków
 
-- Określa minimalną liczbę wątków puli wątków roboczych.
+- Określa minimalną liczbę wątków dla puli wątków roboczych.
 - Odpowiada metodzie <xref:System.Threading.ThreadPool.SetMinThreads%2A?displayProperty=nameWithType>.
 
 | | Nazwa ustawienia | Wartości |
@@ -61,7 +61,7 @@ Plik projektu:
 
 ## <a name="maximum-threads"></a>Maksymalna liczba wątków
 
-- Określa maksymalną liczbę wątków puli wątków roboczych.
+- Określa maksymalną liczbę wątków dla puli wątków roboczych.
 - Odpowiada metodzie <xref:System.Threading.ThreadPool.SetMaxThreads%2A?displayProperty=nameWithType>.
 
 | | Nazwa ustawienia | Wartości |

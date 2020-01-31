@@ -2,12 +2,12 @@
 title: Wykaz identyfikatorów środowiska uruchomieniowego platformy .NET Core (RID)
 description: Dowiedz się więcej o identyfikatorze środowiska uruchomieniowego (RID) i sposobie używania identyfikatorów RID w programie .NET Core.
 ms.date: 02/22/2019
-ms.openlocfilehash: b4e0226afa3f68d7c0d17b19e66489d70b759cf8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 4369e263f1f46c73f04c65e4124f63c68d133520
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733553"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789908"
 ---
 # <a name="net-core-rid-catalog"></a>Katalog programu .NET Core RID
 
@@ -108,7 +108,7 @@ Wyświetlane są tylko typowe wartości. Aby uzyskać najnowszą i pełną wersj
   - `win10-arm`
   - `win10-arm64`
 
-Aby uzyskać więcej informacji [, zobacz zależności i wymagania dotyczące platformy .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-windows) .
+Aby uzyskać więcej informacji, zobacz [zależności i wymagania dotyczące platformy .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 ## <a name="linux-rids"></a>Identyfikatory RID systemu Linux
 
@@ -126,7 +126,7 @@ Wyświetlane są tylko typowe wartości. Aby uzyskać najnowszą i pełną wersj
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-Aby uzyskać więcej informacji [, zobacz zależności i wymagania dotyczące platformy .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-linux) .
+Aby uzyskać więcej informacji, zobacz [zależności i wymagania dotyczące platformy .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-linux).
 
 ## <a name="macos-rids"></a>macOS RID
 
@@ -145,7 +145,7 @@ macOS RID używają starszej marki "OSX". Wyświetlane są tylko typowe wartośc
 - macOS 10,14 Mojave (wersja .NET Core 1,1 lub nowsza)
   - `osx.10.14-x64`
 
-Aby uzyskać więcej informacji [, zobacz zależności i wymagania dotyczące platformy .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-macos) .
+Aby uzyskać więcej informacji, zobacz [zależności i wymagania dotyczące platformy .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-macos).
 
 ## <a name="see-also"></a>Zobacz także
 

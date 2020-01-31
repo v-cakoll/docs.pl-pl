@@ -2,12 +2,12 @@
 title: Wyrażenia obliczeń
 description: Dowiedz się, jak utworzyć wygodną składnię do F# pisania obliczeń w programie, które mogą być sekwencjonowane i łączone przy użyciu konstrukcji przepływu sterowania i powiązań.
 ms.date: 11/04/2019
-ms.openlocfilehash: 4ff7def0ed3a46acd1b0b83b111f26f5d556071f
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 55406cc12d9e6e890fe69d712f79486d23b84452
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569457"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794551"
 ---
 # <a name="computation-expressions"></a>Wyrażenia obliczeń
 
@@ -15,7 +15,7 @@ Wyrażenia obliczeń w F# programie zapewniają wygodną składnię do pisania o
 
 ## <a name="overview"></a>Omówienie
 
-Obliczenia mogą mieć wiele form. Najbardziej powszechną formą obliczeń jest wykonywanie jednowątkowe, które można łatwo zrozumieć i zmodyfikować. Jednak nie wszystkie formy obliczeń są tak proste jak wykonywanie jednowątkowe. Oto kilka przykładów:
+Obliczenia mogą mieć wiele form. Najbardziej powszechną formą obliczeń jest wykonywanie jednowątkowe, które można łatwo zrozumieć i zmodyfikować. Jednak nie wszystkie formy obliczeń są tak proste jak wykonywanie jednowątkowe. Oto niektóre przykłady:
 
 - Obliczenia niedeterministyczne
 - Obliczenia asynchroniczne
@@ -232,7 +232,7 @@ Można zdefiniować charakterystykę własnych wyrażeń obliczeniowych, tworzą
 
 W poniższej tabeli opisano metody, których można użyć w klasie Konstruktor przepływu pracy.
 
-|**Method**|**Typowe sygnatury**|**Opis**|
+|**— Metoda**|**Typowe sygnatury**|**Opis**|
 |----|----|----|
 |`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|Wywoływana dla `let!` i `do!` w wyrażeniach obliczeniowych.|
 |`Delay`|`(unit -> M<'T>) -> M<'T>`|Zawija wyrażenie obliczeń jako funkcję.|
@@ -271,7 +271,7 @@ W powyższym kodzie wywołania `Run` i `Delay` są pomijane, jeśli nie są zdef
 |<code>{ return! expr }</code>|`builder.ReturnFrom(expr)`|
 |<code>{ use pattern = expr in cexpr }</code>|<code>builder.Using(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
 |<code>{ use! value = expr in cexpr }</code>|<code>builder.Bind(expr, (fun value -> builder.Using(value, (fun value -> { cexpr }))))</code>|
-|<code>{ if expr then cexpr0 &#124;}</code>|<code>if expr then { cexpr0 } else binder.Zero()</code>|
+|<code>{ if expr then cexpr0 &#124;}</code>|<code>if expr then { cexpr0 } else builder.Zero()</code>|
 |<code>{ if expr then cexpr0 else cexpr1 &#124;}</code>|<code>if expr then { cexpr0 } else { cexpr1 }</code>|
 |<code>{ match expr with &#124; pattern_i -> cexpr_i }</code>|<code>match expr with &#124; pattern_i -> { cexpr_i }</code>|
 |<code>{ for pattern in expr do cexpr }</code>|<code>builder.For(enumeration, (fun pattern -> { cexpr }))</code>|

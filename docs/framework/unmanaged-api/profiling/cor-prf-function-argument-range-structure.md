@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f469eac-ac66-419b-8668-fe705bc1a51f
 topic_type:
 - apiref
-ms.openlocfilehash: 223ad57f0b317bf75778d4e5355ec129185f5a29
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dae5ed7c25f85051d1a28681fb88b056617c4de0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449489"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867254"
 ---
 # <a name="cor_prf_function_argument_range-structure"></a>COR_PRF_FUNCTION_ARGUMENT_RANGE — Struktura
 Reprezentuje blok argumentów funkcji przechowywanych w sposób ciągły w kolejności od lewej do prawej w pamięci.  
@@ -33,9 +33,9 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
 } COR_PRF_FUNCTION_ARGUMENT_RANGE;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
-|Members|Opis|  
+|Elementy członkowskie|Opis|  
 |-------------|-----------------|  
 |`startAddress`|Adres początkowy bloku.|  
 |`length`|Długość bloku ciągłego.|  
@@ -51,4 +51,4 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Profiling — struktury](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [Profiling — struktury](profiling-structures.md)

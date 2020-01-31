@@ -8,16 +8,16 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 7d1cf353f7e6c4b87c13598e7e6029960cd0f715
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 7ff4ff607ab70b55cda1e2c4736ff773d4907a22
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197817"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794117"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Wskazówki: mapowanie właściwości z użyciem formantu ElementHost
 
-W tym instruktażu przedstawiono sposób użycia właściwości <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> do mapowania właściwości [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] na odpowiednie właściwości w hostowanym elemencie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+W tym instruktażu przedstawiono sposób użycia właściwości <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> do mapowania właściwości Windows Forms na odpowiednie właściwości w hostowanym elemencie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 Zadania przedstawione w tym instruktażu obejmują:
 
@@ -31,7 +31,7 @@ Zadania przedstawione w tym instruktażu obejmują:
 
 Aby uzyskać pełną listę kodów zadań przedstawionych w tym instruktażu, zobacz [Mapowanie właściwości przy użyciu przykładu kontrolki ElementHost](https://go.microsoft.com/fwlink/?LinkID=160018).
 
-Po zakończeniu będzie możliwe mapowanie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] właściwości do odpowiednich [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości w hostowanym elemencie.
+Po zakończeniu będzie możliwe mapowanie Windows Forms właściwości do odpowiednich [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości w hostowanym elemencie.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -51,7 +51,7 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
     - Platformie docelowej
 
-    - 'Windowsbase
+    - WindowsBase
 
     - WindowsFormsIntegration
 

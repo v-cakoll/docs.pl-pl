@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5b132ef1-8d4b-4525-89b3-54123596c194
 topic_type:
 - apiref
-ms.openlocfilehash: c6def272ecc7bd2b6e946e2c9623f0b60587d317
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41c5116d23655730f3586dc656aa69c8ae817b6c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128807"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792624"
 ---
 # <a name="icordebugprocessgetthreadcontext-method"></a>ICorDebugProcess::GetThreadContext — Metoda
 Pobiera kontekst dla danego wątku w tym procesie.  
@@ -48,7 +48,7 @@ HRESULT GetThreadContext(
  Kontekst określa architekturę procesora, w którym wykonywany jest wątek.  
   
 ## <a name="remarks"></a>Uwagi  
- Debuger powinien wywołać tę metodę, a nie metodę `GetThreadContext` Win32, ponieważ wątek może być w stanie "przejęte", w którym jego kontekst został tymczasowo zmieniony. Ta metoda powinna być używana tylko wtedy, gdy wątek znajduje się w kodzie natywnym. Użyj [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) dla wątków w kodzie zarządzanym.  
+ Debuger powinien wywołać tę metodę, a nie metodę `GetThreadContext` Win32, ponieważ wątek może być w stanie "przejęte", w którym jego kontekst został tymczasowo zmieniony. Ta metoda powinna być używana tylko wtedy, gdy wątek znajduje się w kodzie natywnym. Użyj [ICorDebugRegisterSet](icordebugregisterset-interface.md) dla wątków w kodzie zarządzanym.  
   
  Zwrócone dane są strukturą kontekstu dla bieżącej platformy. Podobnie jak w przypadku metody `GetThreadContext` Win32, obiekt wywołujący powinien inicjować parametr `context` przed wywołaniem tej metody.  
   

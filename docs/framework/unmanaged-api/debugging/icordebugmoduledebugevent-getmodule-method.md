@@ -2,12 +2,12 @@
 title: 'ICorDebugModuleDebugEvent:: GetModule — Metoda'
 ms.date: 03/30/2017
 ms.assetid: b1141c35-4253-4e34-b3e4-ed406a9dea4f
-ms.openlocfilehash: 5dc26d0367d01bc8da957c3ce648c3e529dddb08
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4d9eea8fb5c42002763a0ae52a186bf2c1e6d2ee
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096939"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792910"
 ---
 # <a name="icordebugmoduledebugeventgetmodule-method"></a>ICorDebugModuleDebugEvent:: GetModule — Metoda
 Pobiera scalony moduł, który został właśnie załadowany lub zwolniony.  
@@ -25,7 +25,7 @@ HRESULT GetModule(
  określoną Wskaźnik do adresu obiektu ICorDebugModule, który reprezentuje scalony moduł, który został właśnie załadowany lub zwolniony.  
   
 ## <a name="remarks"></a>Uwagi  
- Można wywołać metodę [GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) , aby określić, czy moduł został załadowany, czy zwolniony.  
+ Można wywołać metodę [GetEventKind](icordebugdebugevent-geteventkind-method.md) , aby określić, czy moduł został załadowany, czy zwolniony.  
   
 > [!NOTE]
 > Ta metoda jest dostępna tylko z .NET Native.  
@@ -41,5 +41,5 @@ HRESULT GetModule(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugModuleDebugEvent, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugModuleDebugEvent, interfejs](icordebugmoduledebugevent-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

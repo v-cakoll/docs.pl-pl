@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: sortowanie zawartości kontrolki ComboBox, ListBox lub CheckedListBox formularzy systemu Windows'
+title: Sortuj zawartość kontrolki ComboBox, ListBox lub CheckedListBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CheckedListBox control [Windows Forms], sorting
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - list boxes [Windows Forms], sorting contents
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
-ms.openlocfilehash: bd26d396c238bfc53858320b8f4487df84b3436a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dee969d777edf76434622fe632f7e934987a1dc3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902996"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742955"
 ---
-# <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Instrukcje: sortowanie zawartości kontrolki ComboBox, ListBox lub CheckedListBox formularzy systemu Windows
-Kontrolek formularzy Windows Forms bez sortowania, gdy są one powiązane z danymi. Aby wyświetlić posortowane dane, korzystanie ze źródła danych, który obsługuje sortowanie, a następnie ją posortować źródła danych. Źródła danych, które obsługują sortowanie widoków danych, dane wyświetlić menedżerów i posortowane tablic.  
+# <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Porady: sortowanie zawartości formantu ComboBox, ListBox lub CheckedListBox formularzy systemu Windows
+Kontrolki Windows Forms nie sortują się, gdy są powiązane z danymi. Aby wyświetlić posortowane dane, użyj źródła danych, które obsługuje sortowanie, a następnie posortuj je ze źródłem danych. Źródłami danych, które obsługują sortowanie, są widoki danych, menedżerów widoku danych i posortowane tablice.  
   
- Jeśli formant nie jest powiązany z danymi, należy ją posortować.  
+ Jeśli formant nie jest powiązany z danymi, można go posortować.  
   
 ### <a name="to-sort-the-list"></a>Aby posortować listę  
   
 1. Ustaw `Sorted` właściwość `true`.  
   
-     To ustawienie powoduje przeniesienie wszystkie istniejące elementy listy w kolejności posortowanej.  
+     To ustawienie zmienia położenie wszystkich istniejących elementów listy w kolejności sortowania.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -32,6 +32,6 @@ Kontrolek formularzy Windows Forms bez sortowania, gdy są one powiązane z dany
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
 - [Wiązanie danych formularzy Windows Forms](../windows-forms-data-binding.md)
-- [Instrukcje: Dodawanie i usuwanie elementów z Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka](add-and-remove-items-from-a-wf-combobox.md)
+- [Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ComboBox, ListBox lub CheckedListBox formularzy Windows Forms](add-and-remove-items-from-a-wf-combobox.md)
 - [Kiedy należy używać kontrolki ComboBox formularzy Windows Forms zamiast ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
 - [Kontrolki formularzy Windows Forms używane do obsługi opcji list](windows-forms-controls-used-to-list-options.md)

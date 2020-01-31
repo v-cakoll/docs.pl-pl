@@ -2,12 +2,12 @@
 title: ICorDebugStaticFieldSymbol, interfejs
 ms.date: 03/30/2017
 ms.assetid: c0b93609-631e-4b15-878a-189ede922631
-ms.openlocfilehash: 0891df1fc0528ff485605b2c4168fcff0adff990
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b50b9c8435f19e1a77229f01dc85514f5f75c9f5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131703"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791805"
 ---
 # <a name="icordebugstaticfieldsymbol-interface"></a>ICorDebugStaticFieldSymbol, interfejs
 Przedstawia informacje o symbolu debugowania dla pola statycznego.  
@@ -16,9 +16,9 @@ Przedstawia informacje o symbolu debugowania dla pola statycznego.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetAddress, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getaddress-method.md)|Pobiera adres pola statycznego.|  
-|[GetName, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getname-method.md)|Pobiera nazwę pola statycznego.|  
-|[GetSize, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getsize-method.md)|Pobiera rozmiar w bajtach pola statycznego.|  
+|[GetAddress, metoda](icordebugstaticfieldsymbol-getaddress-method.md)|Pobiera adres pola statycznego.|  
+|[GetName, metoda](icordebugstaticfieldsymbol-getname-method.md)|Pobiera nazwę pola statycznego.|  
+|[GetSize, metoda](icordebugstaticfieldsymbol-getsize-method.md)|Pobiera rozmiar w bajtach pola statycznego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Interfejs `ICorDebugStaticFieldSymbol` służy do pobierania informacji o symbolach debugowania dla pola statycznego.  
@@ -37,6 +37,6 @@ Przedstawia informacje o symbolu debugowania dla pola statycznego.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugInstanceFieldSymbol, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugInstanceFieldSymbol, interfejs](icordebuginstancefieldsymbol-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

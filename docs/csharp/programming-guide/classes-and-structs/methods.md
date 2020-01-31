@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714771"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743903"
 ---
 # <a name="methods-c-programming-guide"></a>Metody (Przewodnik programowania w języku C#)
 
@@ -44,7 +44,7 @@ Definicja metody Określa nazwy i typy wymaganych parametrów. Gdy Wywoływanie 
 
 ## <a name="passing-by-reference-vs-passing-by-value"></a>Przekazywanie przez odwołanie a przekazywanie przez wartość
 
-Domyślnie, gdy typ wartości jest przenoszona do metody, jest przenoszona kopia zamiast samego obiektu. W związku z tym zmiany argumentu nie mają wpływu na oryginalną kopię w wywołaniu metody. Można przekazać typ wartości przez odwołanie za pomocą słowa kluczowego ref. Aby uzyskać więcej informacji, zobacz [przekazywanie parametrów typu wartości](./passing-value-type-parameters.md). Aby zapoznać się z listą wbudowanych typów wartości, zobacz [tabela typy wartości](../../language-reference/keywords/value-types-table.md).
+Domyślnie, gdy wystąpienie [typu wartości](../../language-reference/builtin-types/value-types.md) jest przenoszone do metody, jego kopia jest przenoszona zamiast samego wystąpienia. W związku z tym zmiany argumentu nie mają wpływu na oryginalne wystąpienie w metodzie wywołującej. Aby przekazać wystąpienie typu wartości przez odwołanie, użyj słowa kluczowego `ref`. Aby uzyskać więcej informacji, zobacz [przekazywanie parametrów typu wartości](./passing-value-type-parameters.md).
 
 Gdy obiekt typu referencyjnego jest przenoszona do metody, odwołanie do obiektu jest przesyłane. Oznacza to, że metoda nie odbiera samego obiektu, ale argument, który wskazuje lokalizację obiektu. Jeśli zmienisz element członkowski obiektu za pomocą tego odwołania, zmiana zostanie odzwierciedlona w argumencie metody wywołującej, nawet jeśli przekażesz obiekt przez wartość.
 

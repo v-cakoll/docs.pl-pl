@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7018a0e-880e-4b68-b52a-1cd22c7aad62
 topic_type:
 - apiref
-ms.openlocfilehash: 456a79ec290964df8e9f74fc6ca19ef9aabe1230
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2d8fa00a1a998430a55b913cfa25624246eab967
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130678"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788360"
 ---
 # <a name="icordebugmanagedcallbacknamechange-method"></a>ICorDebugManagedCallback::NameChange — Metoda
 Powiadamia debuger o zmianie nazwy domeny aplikacji lub wątku.  
@@ -52,4 +52,4 @@ HRESULT NameChange (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback, interfejs](icordebugmanagedcallback-interface.md)

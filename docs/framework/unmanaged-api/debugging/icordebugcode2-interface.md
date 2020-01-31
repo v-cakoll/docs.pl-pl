@@ -1,5 +1,5 @@
 ---
-title: ICorDebugCode2 — Interfejs
+title: ICorDebugCode2, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCode2
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9321903b-7dea-40d8-ba32-99016c00cc46
 topic_type:
 - apiref
-ms.openlocfilehash: 7f0570b668cc33ca509c8522d1ba35ebcfca2453
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a9ce778cfa1aed4dcf6117c4fe2eca23ccda37a3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125574"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777950"
 ---
-# <a name="icordebugcode2-interface"></a>ICorDebugCode2 — Interfejs
+# <a name="icordebugcode2-interface"></a>ICorDebugCode2, interfejs
 
 Dostarcza metody, które zwiększają możliwości programu "ICorDebugCode".  
   
@@ -29,8 +29,8 @@ Dostarcza metody, które zwiększają możliwości programu "ICorDebugCode".
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetCodeChunks, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)|Pobiera fragmenty kodu, z których składa się ten obiekt kodu.|  
-|[GetCompilerFlags, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcompilerflags-method.md)|Pobiera flagi określające warunki, w których ten obiekt kodu był skompilowany lub generowany przy użyciu natywnego generatora obrazu (Ngen. exe).|  
+|[GetCodeChunks, metoda](icordebugcode2-getcodechunks-method.md)|Pobiera fragmenty kodu, z których składa się ten obiekt kodu.|  
+|[GetCompilerFlags, metoda](icordebugcode2-getcompilerflags-method.md)|Pobiera flagi określające warunki, w których ten obiekt kodu był skompilowany lub generowany przy użyciu natywnego generatora obrazu (Ngen. exe).|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -48,5 +48,5 @@ Dostarcza metody, które zwiększają możliwości programu "ICorDebugCode".
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugCode3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugCode3, interfejs](icordebugcode3-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

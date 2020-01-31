@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d4755569-85b8-4ff4-bf50-0e608e76429f
 topic_type:
 - apiref
-ms.openlocfilehash: 5a451218e0fdc32132a4e79d091ada8355d32fe7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9e333d71505a055cfe27df2c79a102c939bafc9d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122689"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788476"
 ---
 # <a name="icordebuginternalframe2-interface"></a>ICorDebugInternalFrame2 — Interfejs
 Zawiera informacje o ramkach wewnętrznych, łącznie z adresem stosu i pozycją w odniesieniu do obiektów ICorDebugFrame.  
@@ -28,8 +28,8 @@ Zawiera informacje o ramkach wewnętrznych, łącznie z adresem stosu i pozycją
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetFrameAddress, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-getframeaddress-method.md)|Zwraca adres stosu ramki wewnętrznej.|  
-|[IsCloserToLeaf, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-isclosertoleaf-method.md)|Sprawdza, czy `this` wewnętrzna ramka jest bliżej liścia niż określony obiekt ICorDebugFrame.|  
+|[GetFrameAddress, metoda](icordebuginternalframe2-getframeaddress-method.md)|Zwraca adres stosu ramki wewnętrznej.|  
+|[IsCloserToLeaf, metoda](icordebuginternalframe2-isclosertoleaf-method.md)|Sprawdza, czy `this` wewnętrzna ramka jest bliżej liścia niż określony obiekt ICorDebugFrame.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten interfejs rozszerza interfejs ICorDebugInternalFrame.  
@@ -48,5 +48,5 @@ Zawiera informacje o ramkach wewnętrznych, łącznie z adresem stosu i pozycją
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COR_ENABLE_PROFILING environment variable
 - profiling API [.NET Framework], enabling
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
-ms.openlocfilehash: 86720cb1739e3f193cd1d5081577d69bca1cf0f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 04b9abd8ffe04a24c08ad89ff48b037c9b003359
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427054"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860982"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Konfigurowanie środowiska profilowania
 > [!NOTE]
@@ -55,23 +55,23 @@ ms.locfileid: "74427054"
   
 ## <a name="additional-considerations"></a>Dodatkowe zagadnienia  
   
-- Klasa profilera implementuje interfejsy [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) i [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) . W .NET Framework w wersji 2,0, profiler musi implementować `ICorProfilerCallback2`. Jeśli tak nie jest, `ICorProfilerCallback2` nie zostanie załadowany.  
+- Klasa profilera implementuje interfejsy [ICorProfilerCallback](icorprofilercallback-interface.md) i [ICorProfilerCallback2](icorprofilercallback2-interface.md) . W .NET Framework w wersji 2,0, profiler musi implementować `ICorProfilerCallback2`. Jeśli tak nie jest, `ICorProfilerCallback2` nie zostanie załadowany.  
   
 - Tylko jeden profiler może jednocześnie profilować proces w danym środowisku. W różnych środowiskach można rejestrować dwa różne, ale muszą one profilować oddzielne procesy. Profiler musi być zaimplementowany jako biblioteka DLL serwera COM w procesie, która jest mapowana na tę samą przestrzeń adresową co proces, który jest profilowany. Oznacza to, że profiler jest uruchamiany w procesie. .NET Framework nie obsługuje żadnego innego typu serwera COM. Na przykład, jeśli profiler chce monitorować aplikacje z komputera zdalnego, musi zaimplementować agentów modułu zbierającego na każdym komputerze. Ci agenci będą przekazywać wyniki wsadowe i komunikować się z centralnym komputerem zbierania danych.  
   
 - Ponieważ Profiler jest obiektem COM, który jest tworzony w procesie, każda profilowana aplikacja będzie miała własną kopię profilera. W związku z tym pojedyncze wystąpienie profilera nie musi obsługiwać danych z wielu aplikacji. Należy jednak dodać logikę do kodu rejestrowania profilera, aby zapobiec zastępowaniu pliku dziennika z innych profilowanych aplikacji.  
   
 ## <a name="initializing-the-profiler"></a>Inicjowanie profilera  
- Gdy obie zmienne środowiskowe sprawdzają przebieg, środowisko CLR tworzy wystąpienie profilera w podobny sposób do funkcji COM `CoCreateInstance`. Profiler nie jest ładowany przez bezpośrednie wywołanie do `CoCreateInstance`. W związku z tym, wywołanie do `CoInitialize`, które wymaga ustawienia modelu wątkowości, jest unikane. Środowisko CLR następnie wywołuje metodę [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) w profilera. Sygnatura tej metody jest następująca.  
+ Gdy obie zmienne środowiskowe sprawdzają przebieg, środowisko CLR tworzy wystąpienie profilera w podobny sposób do funkcji COM `CoCreateInstance`. Profiler nie jest ładowany przez bezpośrednie wywołanie do `CoCreateInstance`. W związku z tym, wywołanie do `CoInitialize`, które wymaga ustawienia modelu wątkowości, jest unikane. Środowisko CLR następnie wywołuje metodę [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) w profilera. Sygnatura tej metody jest następująca.  
   
 ```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
- Profiler musi zbadać `pICorProfilerInfoUnk` dla wskaźnika interfejsu [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) lub [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) i zapisać go, aby można było zażądać dalszych informacji później podczas profilowania.  
+ Profiler musi zbadać `pICorProfilerInfoUnk` dla wskaźnika interfejsu [ICorProfilerInfo](icorprofilerinfo-interface.md) lub [ICorProfilerInfo2](icorprofilerinfo2-interface.md) i zapisać go, aby można było zażądać dalszych informacji później podczas profilowania.  
   
 ## <a name="setting-event-notifications"></a>Ustawianie powiadomień o zdarzeniach  
- Profiler wywołuje następnie metodę [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) , aby określić, które kategorie powiadomień interesują. Na przykład, jeśli Profiler jest interesujący tylko funkcja wprowadzanie i pozostawianie powiadomień i powiadomień o wyrzucaniu elementów bezużytecznych, określa następujące kwestie.  
+ Profiler wywołuje następnie metodę [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) , aby określić, które kategorie powiadomień interesują. Na przykład, jeśli Profiler jest interesujący tylko funkcja wprowadzanie i pozostawianie powiadomień i powiadomień o wyrzucaniu elementów bezużytecznych, określa następujące kwestie.  
   
 ```cpp  
 ICorProfilerInfo* pInfo;  
@@ -91,8 +91,8 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
   
  Należy pamiętać, że te zmiany spowodują profilowanie na podstawie całego systemu. Aby zapobiec przetwarzaniu przez każdą aplikację zarządzaną, która następnie jest uruchamiana, należy usunąć systemowe zmienne środowiskowe po ponownym uruchomieniu komputera docelowego.  
   
- Ta technika prowadzi również do każdego procesu CLR, w którym zawarto pliki. Profiler powinien dodać logikę do jej [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) wywołania zwrotnego w celu wykrycia, czy bieżący proces jest interesujący. Jeśli tak nie jest, profiler może zakończyć wywołanie zwrotne bez wykonywania inicjalizacji.  
+ Ta technika prowadzi również do każdego procesu CLR, w którym zawarto pliki. Profiler powinien dodać logikę do jej [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) wywołania zwrotnego w celu wykrycia, czy bieżący proces jest interesujący. Jeśli tak nie jest, profiler może zakończyć wywołanie zwrotne bez wykonywania inicjalizacji.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Omówienie profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)
+- [Omówienie profilowania](profiling-overview.md)

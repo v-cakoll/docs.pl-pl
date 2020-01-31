@@ -1,5 +1,5 @@
 ---
-title: Interfejs IXCLRDataModule
+title: IXCLRDataModule, interfejs
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule Interface
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: c8d6e36687fd43bbc59304eee64dd42eb78101e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8757642db6c4375cf55d1f7288669c4c8a752a38
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676526"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790393"
 ---
-# <a name="ixclrdatamodule-interface"></a>Interfejs IXCLRDataModule
+# <a name="ixclrdatamodule-interface"></a>IXCLRDataModule, interfejs
 
-Udostępnia metody do wykonywania zapytań o załadowanym module.
+Zapewnia metody wykonywania zapytania o informacje o załadowanym module.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -32,22 +32,22 @@ Udostępnia metody do wykonywania zapytań o załadowanym module.
 
 | Metoda                                                                                                                                | Opis                                                         |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| [GetMethodDefinitionByToken](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-getmethoddefinitionbytoken-method.md) | Pobiera definicję metody odpowiadającej token określonych metadanych. |
-| [Żądanie](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-request-method.md)                                       | Żądania do buforu, biorąc pod uwagę przy użyciu danych modułu wypełniania.       |
-| [GetVersionId](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-getversionid-method.md)                             | Pobiera identyfikatorem wersji modułu.                                       |
+| [GetMethodDefinitionByToken](ixclrdatamodule-getmethoddefinitionbytoken-method.md) | Pobiera definicję metody odpowiadającą danemu tokenowi metadanych. |
+| [Żądanie](ixclrdatamodule-request-method.md)                                       | Żądania wypełnienia buforu podanego za pomocą danych modułu.       |
+| [GetVersionId](ixclrdatamodule-getversionid-method.md)                             | Pobiera identyfikator wersji modułu.                                       |
 
 ## <a name="remarks"></a>Uwagi
 
-Ten interfejs znajduje się wewnątrz środowiska uruchomieniowego i nie jest dostępna za pośrednictwem wszystkich nagłówków lub pliki biblioteki. Jednak jest interfejsem COM, która pochodzi od klasy `IUnknown` o identyfikatorze GUID `88E32849-0A0A-4cb0-9022-7CD2E9E139E2` , można uzyskać za pośrednictwem zwykłych mechanizmów COM.
+Ten interfejs jest wewnątrz środowiska uruchomieniowego i nie jest udostępniany przez żadne nagłówki lub pliki bibliotek. Jest to jednak interfejs COM, który pochodzi od `IUnknown` z identyfikatorem GUID `88E32849-0A0A-4cb0-9022-7CD2E9E139E2`, który można uzyskać za pomocą zwykłych mechanizmów COM.
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-**Nagłówek:** Brak  
-**Biblioteka:** Brak  
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Nagłówek:** Dawaj  
+**Biblioteka:** Dawaj  
+**Wersje .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie](index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
